@@ -1,7 +1,7 @@
 ---
 title: Cálculos en modelos multidimensionales | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 12/10/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83ecb7544152ec91f2f9428dcb8f5f5894c84722
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046624"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537177"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Cálculos en modelos multidimensionales
   Use la pestaña **Cálculos** del Diseñador de cubos para crear miembros calculados, conjuntos con nombre y otros cálculos de expresiones multidimensionales (MDX).  
@@ -40,13 +39,13 @@ ms.locfileid: "67046624"
 -   El panel de las expresiones de cálculo admite una vista de formulario y otra de script.  
   
 > [!NOTE]  
->  Para obtener más información acerca del scripting de MDX, vea [Introducción a Scripting de MDX en Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)y consulte la sección recursos adicionales sobre la [SQL Server 2005: Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) página en el Sitio Web de Microsoft TechNet. Para obtener más información acerca de los problemas de rendimiento relacionados con el diseño de cubos, vea la [guía de rendimiento de SQL Server 2005 Analysis Services](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
+>  Para obtener más información acerca del scripting MDX, vea [Introducción al scripting MDX en Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892), y consulte la sección recursos adicionales en la página [SQL Server 2005-Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) en el sitio web de Microsoft TechNet. Para obtener más información acerca de los problemas de rendimiento relacionados con el diseño de cubos, vea la [guía de rendimiento de SQL Server 2005 Analysis Services](https://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
   
 ## <a name="creating-a-new-calculation"></a>Crear un cálculo  
  Para crear un cálculo, en la pestaña **Cálculos** del Diseñador de cubos, en el menú **Cubo** , haga clic en **Nuevo miembro calculado**, **Nuevo conjunto con nombre**, o **Nuevo comando de script**, según el tipo de cálculo que desee crear. También se puede hacer clic en cualquiera de los botones correspondientes de la barra de herramientas, o bien hacer clic con el botón derecho en cualquier punto del panel **Organizador de scripts** y, después, hacer clic en uno de los comandos del menú contextual. Esta acción agrega un nuevo cálculo al panel **Organizador de script** y muestra los campos correspondientes del formulario de cálculos del panel de las expresiones de cálculo. Si crea un nuevo script, esta acción abre la Vista de script del panel de las expresiones de cálculo. Para más información sobre cómo crear los tres tipos de cálculos, vea [Crear miembros calculados](create-calculated-members.md), [Crear conjuntos con nombre](create-named-sets.md)y [Definir asignaciones y otros comandos de script](define-assignments-and-other-script-commands.md).  
   
 ## <a name="editing-scripts"></a>Editar scripts  
- Edite los scripts en el panel de las expresiones de cálculo de la pestaña **Cálculos** . El panel de las expresiones de cálculo tiene dos vistas: Vista de script y Vista de formulario. En la vista de formulario se muestran las expresiones y propiedades para un solo comando. Al editar un script MDX, un cuadro de expresión llena toda la Vista de formulario.  
+ Edite los scripts en el panel de las expresiones de cálculo de la pestaña **cálculos** . El panel de las expresiones de cálculo tiene dos vistas: vista de script y vista de formulario. En la vista de formulario se muestran las expresiones y propiedades para un solo comando. Al editar un script MDX, un cuadro de expresión llena toda la Vista de formulario.  
   
  La Vista de script proporciona un editor de códigos en el que se editan los scripts. Cuando el panel de las expresiones de cálculo se encuentra en la Vista de script, el panel **Organizador de script** se encuentra oculto. La Vista de script proporciona codificación de color, coincidencia de paréntesis, autocompletar y regiones de código MDX. Las regiones de código MDX se pueden contraer o expandir para facilitar la edición.  
   

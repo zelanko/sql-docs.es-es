@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfb4e2004cab7e1b1a2d097d57ef3b8a66eba508
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060240"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437912"
 ---
 # <a name="create-a-user-defined-role"></a>Crear un rol definido por el usuario
     
@@ -41,6 +40,6 @@ ms.locfileid: "66060240"
   
 10. Opcionalmente, haga clic en **Propiedades extendidas** y configure las propiedades extendidas.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
   

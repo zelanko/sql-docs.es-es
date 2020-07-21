@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050316"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
   La copia de seguridad de las tablas con optimización para memoria se realiza como parte de las copias de seguridad periódicas de las bases de datos. En cuanto a las tablas basadas en disco, la función CHECKSUM de los pares de archivos de datos y delta se valida como parte de la copia de seguridad de la base de datos para detectar si hay daños en el almacenamiento.  
@@ -32,14 +31,14 @@ ms.locfileid: "62468331"
 |--------------------------------|------------|  
 |PRECREATED|Solo metadatos de archivo|  
 |UNDER CONSTRUCTION|Solo metadatos de archivo|  
-|Activo|Metadatos de archivo y bytes usados|  
+|Active|Metadatos de archivo y bytes usados|  
 |Merge source|Metadatos de archivo y bytes usados|  
 |Merge target|Solo metadatos de archivo|  
 |REQUIRED FOR BACKUP/HA|Metadatos de archivo y bytes usados|  
 |IN TRANSITION TO TOMBSTONE|Solo metadatos de archivo|  
 |TOMBSTONE|Solo metadatos de archivo|  
   
- El tamaño de las copias de seguridad de base de datos con una o más tablas optimizadas para memoria suele ser mayor que su tamaño en memoria pero menor que el almacenamiento en disco. El tamaño adicional dependerá del número de filas eliminadas y el número de pares de archivos de punto de comprobación que estén en los estados Merge source y REQUIRED FOR BACKUP/HA, lo que depende indirectamente de la carga de trabajo. Para obtener descripciones de los Estados de pares de archivos de punto de comprobación, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ El tamaño de las copias de seguridad de base de datos con una o más tablas optimizadas para memoria suele ser mayor que su tamaño en memoria pero menor que el almacenamiento en disco. El tamaño adicional dependerá del número de filas eliminadas y el número de pares de archivos de punto de comprobación que estén en los estados Merge source y REQUIRED FOR BACKUP/HA, lo que depende indirectamente de la carga de trabajo. Para obtener descripciones de los Estados de los pares de archivos de punto de comprobación, vea [Sys. dm_db_xtp_checkpoint_files &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Estimar el tamaño de una copia de seguridad completa de base de datos  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62468331"
   
  El primer escenario de carga de trabajo es (principalmente) para operaciones de inserción. En este escenario, la mayoría de los archivos de datos estarán en el estado Active, totalmente cargados y con muy pocas filas eliminadas. El tamaño de la copia de seguridad de base de datos será similar al tamaño de los datos en memoria.  
   
- El segundo escenario de carga de trabajo es para las operaciones de actualización, eliminación y frecuentes de inserción: En el peor de los casos, cada uno de los pares de archivos de punto de comprobación se carga al 50 %, después de tener en cuenta las filas eliminadas. Por tanto, el tamaño de la copia de seguridad de base de datos será al menos el doble que el tamaño de los datos en memoria. Además, habrá pocos pares de archivos de punto de comprobación en los estados Merge source y Required for backup/high availability que aumenten el tamaño de la copia de seguridad de base de datos.  
+ El segundo escenario de carga de trabajo es para operaciones frecuentes de inserción, eliminación y actualización: en el peor de los casos, cada uno de los pares de archivos de punto de comprobación están cargados al 50 %, después de contar las filas eliminadas. Por tanto, el tamaño de la copia de seguridad de base de datos será al menos el doble que el tamaño de los datos en memoria. Además, habrá pocos pares de archivos de punto de comprobación en los estados Merge source y Required for backup/high availability que aumenten el tamaño de la copia de seguridad de base de datos.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Copias de seguridad diferenciales de bases de datos con tablas con optimización para memoria  
  El almacenamiento de las tablas optimizadas para memoria consta de archivos delta y de datos como se describe en [Durabilidad de las tablas optimizadas para memoria](memory-optimized-tables.md). La copia de seguridad diferencial de una base de datos con tablas optimizadas para memoria contiene los datos siguientes:  
@@ -67,7 +66,7 @@ ms.locfileid: "62468331"
   
  Para las cargas de trabajo OLTP habituales, las copias de seguridad diferenciales serán mucho menores que las copias de seguridad completas de base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

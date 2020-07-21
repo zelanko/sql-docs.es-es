@@ -1,5 +1,5 @@
 ---
-title: Usar parámetros de instrucciones | Documentos de Microsoft
+title: Usar parámetros de instrucción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +16,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1168c81d8eeb6a25b84f473858bc924f529a572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 34c1af011a373e2baa221df28184085814747f12
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058674"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010614"
 ---
 # <a name="using-statement-parameters"></a>Usar parámetros de instrucciones
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Un parámetro es una variable en una instrucción SQL que puede habilitar una aplicación ODBC:  
   
@@ -36,9 +34,9 @@ ms.locfileid: "68058674"
   
 -   Mejorando la interacción del usuario para construir criterios de consulta.  
   
--   Administrar **texto**, **ntext**, y **imagen** datos y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipos de datos C específicos.  
+-   Administrar datos de tipo **Text**, **ntext**e **Image** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de C específicos.  
   
- Por ejemplo, un **partes** tabla tiene columnas denominadas **PartID**, **descripción**, y **precio**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
+ Por ejemplo, una tabla **Parts** tiene columnas **denominadas**el nombre del campo, la **Descripción**y el **precio**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,7 +56,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Enlazar parámetros](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución de consultas &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ejecutar consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

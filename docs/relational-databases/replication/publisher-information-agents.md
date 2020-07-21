@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728281"
 ---
 # <a name="publisher-information-agents"></a>Información de publicador, Agentes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La pestaña **Agentes** muestra información sobre los agentes y trabajos de mantenimiento asociados con el publicador:  
   
 -   Agente de instantáneas, que se muestra en todas las publicaciones.  
@@ -49,11 +49,11 @@ ms.locfileid: "68769731"
 ## <a name="options"></a>Opciones  
  Para mostrar información sobre un agente o trabajo, seleccione la opción correspondiente en el menú desplegable **Tipos de agente y trabajo** . Para obtener información más detallada y ver cuáles son las tareas relacionadas con un agente o un trabajo, haga clic con el botón secundario en la fila del agente o el trabajo correspondiente y después elija una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
--   **Ordenar**: ordene por una o más columnas en el cuadro de diálogo **Ordenar columnas**.  
+-   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
   
--   **Elegir columnas para mostrar**: seleccione las columnas que se van a mostrar y el orden en el que lo harán en el cuadro de diálogo **Elegir columnas**.  
+-   **Elegir columnas para mostrar**: seleccione las columnas que se mostrarán y el orden en el que se mostrarán en el cuadro de diálogo **Elegir columnas** .  
   
--   **Filtro**: filtre las filas de la cuadrícula en función de los valores de columna del cuadro de diálogo **Configuración del filtro**.  
+-   **Filtro**: filtre filas en la cuadrícula basándose en los valores de columna en el cuadro de diálogo **Configuración del filtro** .  
   
 -   **Borrar filtro**: borre cualquier configuración de filtro para la cuadrícula.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "68769731"
   
 -   Error  
   
--   Reintentar  
+-   Reintento  
   
 -   En ejecución  
   
--   Completado  
+-   Completed  
   
  **Publicación**  
  Nombre de la publicación a la que está asociada el agente.  
@@ -79,7 +79,7 @@ ms.locfileid: "68769731"
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Tiempo de ejecución del agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -100,7 +100,7 @@ ms.locfileid: "68769731"
   
 -   Error  
   
--   Reintentar  
+-   Reintento  
   
 -   En ejecución  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68769731"
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Tiempo de ejecución del agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -121,7 +121,7 @@ ms.locfileid: "68769731"
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los cambios en la base de datos de distribución.  
   
- **Latencia**  
+ **Latency**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
  **#Trans**  
@@ -139,7 +139,7 @@ ms.locfileid: "68769731"
   
 -   Error  
   
--   Reintentar  
+-   Reintento  
   
 -   En ejecución  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68769731"
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Tiempo de ejecución del agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -160,7 +160,7 @@ ms.locfileid: "68769731"
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los cambios en la base de datos de distribución.  
   
- **Latencia**  
+ **Latency**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en una base de datos de suscripciones y el comando correspondiente que se confirma en la base de datos de publicación.  
   
  **#Trans**  
@@ -178,7 +178,7 @@ ms.locfileid: "68769731"
   
 -   Error  
   
--   Reintentar  
+-   Reintento  
   
 -   En ejecución  
   
@@ -190,7 +190,7 @@ ms.locfileid: "68769731"
  **Última hora de inicio**  
  Última hora en que se inició el trabajo.  
   
- **Duración**  
+ **Duration**  
  Tiempo durante el que se ha ejecutado el trabajo. El tiempo representa el tiempo transcurrido si el trabajo se está ejecutando y el tiempo total si el trabajo se ha ejecutado anteriormente.  
   
  **Última acción**  

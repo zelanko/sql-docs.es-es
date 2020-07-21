@@ -1,5 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2014 | Microsoft Docs
+description: En estas notas de la versión se describen los problemas conocidos con los que familiarizarse antes de instalar cualquier versión de Microsoft SQL Server 2014 (12.x) o solucionar problemas en ella.
 ms.custom: ''
 ms.date: 03/15/2018
 ms.prod: sql
@@ -7,15 +8,15 @@ ms.technology: install
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155690"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001145"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ En la ruta de acceso de SQL Server media /ISO/CAB se encuentra la versión incor
   
 **Solución alternativa:** descargue e instale la versión correcta del paquete de descarga de [SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
-### <a name="ProdDoc"></a>Documentación del producto RTM
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>Documentación del producto RTM
   
 El contenido del Generador de informes y de PowerPivot no está disponible en algunos idiomas. 
 
@@ -148,7 +149,7 @@ En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], este contenido estaba disponi
   
 **Solución alternativa:** Ninguno.  
   
-### <a name="DBEngine"></a>Motor de base de datos (RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>Motor de base de datos (RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>Cambios realizados en la edición Standard de SQL Server 2014 RTM  
 SQL Server 2014 Standard incluye los cambios siguientes:  
@@ -233,7 +234,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 + @v1 + @v2 + ... + @v199  
     ```  
   
-    Escribir:  
+    Escritura:  
   
     ```  
     SELECT((@v0 + ... + @v49) + (@v50 + ... + @v99)) + ((@v100 + ... + @v149) + (@v150 + ... + @v199))  
@@ -245,7 +246,7 @@ optimized table or natively compiled stored procedure with object ID
     SELECT @v0 +@v1 +@v2 +...+@v199  
     ```  
   
-    Escribir:  
+    Escritura:  
   
     ```  
     SELECT @v0 +@v1  
@@ -288,7 +289,7 @@ Si ya tiene el problema con valores no coincidentes de instance_id, la única ma
   
     `update` sysdac_history_internal `set` instance_id = '\<valor del paso 3\>' `where` \<expresión que coincide con las filas que desea actualizar\>  
   
-### <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>El servidor de informes en modo nativo de SQL Server 2012 Reporting Services no puede ejecutarse en paralelo con los componentes de SharePoint de SQL Server 2014 Reporting Services  
 **Problema:** el servicio de Windows de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo "SQL Server Reporting Services" (ReportingServicesService.exe) no se puede iniciar si hay componentes de SharePoint de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instalados en el mismo servidor.  
@@ -299,10 +300,10 @@ Si ya tiene el problema con valores no coincidentes de instance_id, la única ma
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo no se puede ejecutar en paralelo bajo ninguna de las siguientes condiciones:  
   
--   Complemento de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint    
--   Servicio compartido de SharePoint de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
+-   Complemento de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint    
+-   Servicio compartido de SharePoint de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
-La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Aparecerán mensajes de error, similares a los que se muestran aquí, en el registro de eventos de Windows:  
+La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aparecerán mensajes de error, similares a los que se muestran aquí, en el registro de eventos de Windows:  
   
 ```  
 Log Name:   Application  
@@ -334,7 +335,7 @@ Para obtener más información, vea [Sugerencias, trucos y solución de problema
   
 Para obtener más información, vea [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM en máquinas virtuales de Azure  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>SQL Server 2014 RTM en máquinas virtuales de Azure  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>El Asistente para agregar réplicas de Azure devuelve un error al configurar un agente de escucha del grupo de disponibilidad en Azure  
 **Problema:** Si un grupo de disponibilidad tiene un agente de escucha, el Asistente para crear réplicas de Azure devolverá un error al intentar configurar el agente de escucha en Azure.  
@@ -349,7 +350,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad AlwaysOn en Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
   
-### <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>Se debe descargar, instalar y registrar MSOLAP.5 para una nueva granja de SharePoint 2010 configurada con SQL Server 2014  
 **Problema:**  
@@ -394,10 +395,10 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 -    Si la longitud serializada de la programación de actualización es menor que la de la programación original, al actualizar una programación de actualización de datos para un libro, el tamaño de búfer no se actualiza correctamente y la nueva información de programación se combina con la información de programación anterior, dando lugar a una programación dañada.  
   
-### <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>No hay compatibilidad entre versiones con Data Quality Services de Master Data Services  
-**Problema:** Los escenarios siguientes no se admiten:  
+**Problema:** Los siguientes escenarios no se admiten:  
   
 -   Master Data Services 2012 hospedado en una base de datos de motor de base de datos de SQL Server en SQL Server 2012 con Data Quality Services 2012 instalado.  
   
@@ -405,7 +406,7 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 **Solución alternativa:** use la misma versión de Master Data Services que la base de datos del motor de base de datos y Data Quality Services.  
   
-### <a name="UA"></a>Problemas del Asesor de actualizaciones (RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>Problemas del Asesor de actualizaciones (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>El Asesor de actualizaciones de SQL Server 2014 notifica problemas irrelevantes de actualización de SQL Server Reporting Services  
 **Problema:** el Asesor de actualizaciones de SQL Server (SSUA) incluido con SQL Server 2014 notifica incorrectamente varios errores al analizar el servidor de SQL Server Reporting Services.  

@@ -1,5 +1,5 @@
 ---
-title: Trabajar con instrucciones y conjuntos de resultados | Microsoft Docs
+title: Trabajo con instrucciones y conjuntos de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 57ecb70e98b4b0a82d18c2ca9e9ac417a53addca
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025363"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923864"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Trabajo con instrucciones y conjuntos de resultados
 
@@ -29,7 +29,7 @@ Si usa uno de los objetos Statement del controlador JDBC, como [SQLServerStateme
 
 - Si no tiene parámetros OUT, no necesita usar el objeto SQLServerCallableStatement. En su lugar, use el objeto SQLServerStatement o SQLServerPreparedStatement.
 
-- Si no tiene previsto ejecutar la instrucción más de una vez o no tiene parámetros IN o OUT, no es necesario usar el objeto SQLServerCallableStatement o SQLServerPreparedStatement. En su lugar, use el objeto SQLServerStatement.
+- Si no va a ejecutar la instrucción más de una vez o no tiene parámetros IN u OUT, no necesita usar el objeto SQLServerCallableStatement o SQLServerPreparedStatement. En su lugar, use el objeto SQLServerStatement.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Usar la simultaneidad correcta para los objetos ResultSet
 
@@ -37,7 +37,7 @@ No solicite una simultaneidad actualizable si va a crear instrucciones que gener
 
 ## <a name="limit-the-size-of-your-result-sets"></a>Limitar el tamaño de los conjuntos de resultados
 
-Considere la posibilidad de usar el método [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (o la sintaxis SET ROWCOUNT o SELECT TOP N SQL) para limitar el número de filas devueltas por conjuntos de resultados posiblemente grandes. Si es necesario administrar conjuntos de resultados grandes, considere la posibilidad de usar almacenamiento en búfer de respuesta adaptable configurando la propiedad de cadena de conexión responseBuffering=adaptive, que es el modo predeterminado. Este enfoque permite a la aplicación procesar conjuntos de resultados grandes sin requerir los cursores del lado del servidor, minimizando el uso de memoria de la aplicación. Para obtener más información, vea [usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).
+Considere la posibilidad de usar el método [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (o la sintaxis SET ROWCOUNT o SELECT TOP N SQL) para limitar el número de filas devueltas por conjuntos de resultados posiblemente grandes. Si es necesario administrar conjuntos de resultados grandes, considere la posibilidad de usar almacenamiento en búfer de respuesta adaptable configurando la propiedad de cadena de conexión responseBuffering=adaptive, que es el modo predeterminado. Este enfoque permite a la aplicación procesar conjuntos de resultados grandes sin requerir los cursores del lado del servidor, minimizando el uso de memoria de la aplicación. Para obtener más información, consulte [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).
 
 ## <a name="use-the-appropriate-fetch-size"></a>Usar el tamaño de captura correcto
 
@@ -47,6 +47,6 @@ En el caso de los cursores de servidor de solo lectura, el inconveniente son los
 
 Use secuencias o BLOB y CLOB materializados de forma incremental para controlar la actualización de valores de columnas grandes o el envío de parámetros IN grandes. El controlador JDBC los "fragmenta" en el servidor en varios ciclos de ida y vuelta, lo que permite establecer y actualizar valores mayores que los que puede contener la memoria.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

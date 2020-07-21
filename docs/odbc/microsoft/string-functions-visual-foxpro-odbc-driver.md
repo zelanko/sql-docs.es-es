@@ -1,5 +1,5 @@
 ---
-title: Funciones (controlador ODBC de Visual FoxPro) de cadena | Microsoft Docs
+title: Funciones de cadena (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], string functions
 - FoxPro ODBC driver [ODBC], string functions
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 988ba23b95f6b138148b1fa17ad303d7aa2dc895
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948774"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299195"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Funciones de cadena (el controlador ODBC de Visual FoxPro)
-En la tabla siguiente se muestra funciones de manipulación de cadena ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
+En la tabla siguiente se enumeran las funciones de manipulación de cadenas ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis de ODBC, se muestra el equivalente de Visual FoxPro.  
   
-|Gramática ODBC|Gramática Visual FoxPro|  
+|Gramática de ODBC|Gramática de Visual FoxPro|  
 |------------------|---------------------------|  
 |ASCII *(string_exp)*|ASC *(string_exp)*|  
 |CHAR *(código)*|CHR *(string_exp)*|  
-|CONCAT *(string_exp1, string_exp2)*|*string_exp1 + string_exp2*|  
+|CONCAt *(string_exp1, string_exp2)*|*string_exp1 + string_exp2*|  
 |DIFERENCIA *(string_exp1, string_exp2)*||  
-|Insertar *(string_exp1, inicio, longitud, string_exp2)*|MATERIAL *(string_exp1, inicio, longitud, string_exp2)*|  
-|LCASE *(string_exp)*|INFERIOR *(string_exp)*|  
-|IZQUIERDA *(string_exp, recuento)*||  
-|LENGTH *(string_exp)*|LEN *(string_exp)*|  
+|INSERT *(string_exp1, Inicio, longitud string_exp2)*|COSAS *(string_exp1, Inicio, longitud string_exp2)*|  
+|LCASE *(string_exp)*|LOWER *(string_exp)*|  
+|LEFT *(string_exp, Count)*||  
+|LONGITUD *(string_exp)*|LEN *(string_exp)*|  
 |LTRIM *(string_exp)*||  
-|Repita *(string_exp, recuento)*|REPLICAR *(string_exp, recuento)*|  
-|Reemplace *(string_exp1, string_exp2, string_exp3)*|STRTRAN *(string_exp1, string_exp2, string_exp3)*|  
-|DERECHA *(string_exp, recuento)*||  
+|REPEAT *(string_exp, Count)*|REPLICAte *(string_exp, Count)*|  
+|Replace *(string_exp1, string_exp2, string_exp3)*|STRTRAN *(string_exp1, string_exp2, string_exp3)*|  
+|RIGHT *(string_exp, Count)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  
 |ESPACIO *(recuento)*||  
-|SUBCADENA *(string_exp, inicio, longitud)*|SUBSTR *(string_exp, inicio, longitud)*|  
-|UCASE *(string_exp)*|SUPERIOR *(string_exp)*|
+|Substring *(string_exp, Inicio, longitud)*|SUBSTR *(string_exp, Inicio, longitud)*|  
+|UCASE *(string_exp)*|UPPER *(string_exp)*|

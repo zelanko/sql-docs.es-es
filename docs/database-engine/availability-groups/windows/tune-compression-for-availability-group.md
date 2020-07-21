@@ -1,5 +1,6 @@
 ---
 title: Optimizar la compresión en los grupos de disponibilidad | Microsoft Docs
+description: Obtenga información sobre cómo SQL Server comprime los flujos de datos para los grupos de disponibilidad, lo que reduce el tráfico, aumenta la carga de la CPU y puede inducir latencia.
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3891d30ef5bfffb19ca1d4bfcaab290e3903816b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f8af4702abe127dc0bf5b53be7618515c21cd13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888016"
 ---
 # <a name="tune-compression-for-availability-group"></a>Tune compression for availability group (Optimizar la compresión para los grupos de disponibilidad)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 De forma predeterminada, SQL Server comprime flujos de datos cuando sea apropiado para los grupos de disponibilidad. La compresión reduce el tráfico de red, aumenta la carga de CPU y puede inducir la latencia. Para habilitar la compresión, debe ser miembro del rol fijo de servidor sysadmin. En la siguiente tabla se muestra cuándo SQL Server usa la compresión para las secuencias de registro de los grupos de disponibilidad:
 
 | Escenario | Configuración de compresión
@@ -24,6 +25,7 @@ De forma predeterminada, SQL Server comprime flujos de datos cuando sea apropiad
 | Réplica de confirmación sincrónica | No comprimida
 | Réplicas de confirmación asincrónica | Compressed
 | Durante la propagación automática | No comprimida
+| TDE habilitado en la base de datos  | No comprimida
 
 ## <a name="trace-flags-for-availability-group-compression"></a>Marcas de seguimiento de la compresión de los grupos de disponibilidad 
 

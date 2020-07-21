@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8299e334ff3219c41a3a4adfcc29f238d0ed81b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021049"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891267"
 ---
-# <a name="spvalidatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ofrece información acerca de los usuarios y grupos de Windows asignados a entidades de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ya no existen en el entorno de Windows.  
   
@@ -43,18 +43,18 @@ sp_validatelogins
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary(85)**|Identificador de seguridad (SID) de Windows del usuario o grupo de Windows.|  
-|**Inicio de sesión de NT**|**sysname**|Nombre del usuario o grupo de Windows.|  
+|**Junction**|**varbinary(85)**|Identificador de seguridad (SID) de Windows del usuario o grupo de Windows.|  
+|**NT Login**|**sysname**|Nombre del usuario o grupo de Windows.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si la entidad de seguridad a nivel de servidor huérfana es propietaria de un usuario de base de datos, es necesario quitar el usuario de la base de datos antes de quitar la entidad de seguridad de servidor huérfana. Para quitar un usuario de base de datos, use [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Si la entidad de seguridad a nivel de servidor es propietaria de elementos protegibles en la base de datos, la propiedad de estos elementos debe transferirse o quitarse. Para transferir la propiedad de los elementos protegibles de base de datos, utilice [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Si la entidad de seguridad a nivel de servidor huérfana es propietaria de un usuario de base de datos, es necesario quitar el usuario de la base de datos antes de quitar la entidad de seguridad de servidor huérfana. Para quitar un usuario de base de datos, utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md). Si la entidad de seguridad a nivel de servidor es propietaria de elementos protegibles en la base de datos, la propiedad de estos elementos debe transferirse o quitarse. Para transferir la propiedad de los elementos protegibles de base de datos, use [ALTER Authorization](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Para quitar las asignaciones a los usuarios de Windows y grupos que ya no existen, use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
+ Para quitar las asignaciones a los usuarios y grupos de Windows que ya no existen, utilice [Drop login](../../t-sql/statements/drop-login-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** o **securityadmin** rol fijo de servidor.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o **securityadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se muestran los usuarios y los grupos de Windows que ya no existen pero que siguen disponiendo de acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -64,7 +64,7 @@ EXEC sp_validatelogins;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   

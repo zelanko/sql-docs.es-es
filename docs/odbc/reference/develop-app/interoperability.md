@@ -11,27 +11,27 @@ helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 434b27bffe3b32aa9fa0c5c6fd3a7100e8c7ea8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138863"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306226"
 ---
 # <a name="interoperability"></a>Interoperabilidad
-*Interoperabilidad* es la capacidad de una sola aplicación para que funcione con muchos DBMS diferentes. La necesidad de escribir aplicaciones interoperables genéricas fue uno de los principales factores que conducen al desarrollo de ODBC. Sin embargo, interoperabilidad no es una ruta de acceso simple seguido de "no es interoperable" a "completamente interoperable". La ruta de acceso tiene muchas bifurcaciones y cada uno requiere equilibrios entre características, velocidad, complejidad del código y el tiempo de desarrollo.  
+La *interoperabilidad* es la capacidad de una sola aplicación para operar con muchos DBMS diferentes. La necesidad de escribir aplicaciones genéricas interoperables era uno de los principales factores que conducen al desarrollo de ODBC. Sin embargo, la interoperabilidad no es una ruta de acceso simple seguida de "no interoperable" a "completamente interoperable". La ruta de acceso tiene muchas bifurcaciones y cada una de ellas requiere ventajas e inconvenientes entre las características, la velocidad, la complejidad del código y el tiempo de desarrollo.  
   
- El proceso de escribir una aplicación interoperable sigue varios pasos:  
+ El proceso de escritura de una aplicación interoperable sigue varios pasos:  
   
-1.  Decidir si la aplicación usará ODBC.  
+1.  Decidir si la aplicación va a utilizar ODBC.  
   
-2.  Elegir un nivel de interoperabilidad y decidir qué ventajas y desventajas son necesarios para llegar a ese nivel.  
+2.  Elección de un nivel de interoperabilidad y decisión de qué ventajas es necesario para alcanzar ese nivel.  
   
-3.  Escribir código interoperable y su prueba más completa posible.  
+3.  Escribir código interoperable y probarlo lo máximo posible.  
   
- Debe tenerse en cuenta que la interoperabilidad es principalmente el dominio de la escritura de la aplicación. Los controladores están diseñados para funcionar con un DBMS único y, por definición, no son interoperables. Juegan un rol en interoperabilidad implementando correctamente y exposición de ODBC a través de un DBMS único.  
+ Debe tenerse en cuentan que la interoperabilidad es principalmente el dominio del escritor de la aplicación. Los controladores están diseñados para funcionar con un solo DBMS y, por definición, no son interoperables. Desempeñan un papel en la interoperabilidad implementando y exponiendo ODBC correctamente a través de un DBMS único.  
   
  Esta sección contiene los temas siguientes.  
   

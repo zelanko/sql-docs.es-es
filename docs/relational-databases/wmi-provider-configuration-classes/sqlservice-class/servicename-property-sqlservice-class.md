@@ -1,6 +1,6 @@
 ---
-title: Propiedad ServiceName (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Propiedad ServiceName (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a024219fc72566cd612091cb5241b77266b3b9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a279d9447f31965935a4bb600f96b5982b1387f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119943"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888375"
 ---
 # <a name="servicename-property-sqlservice-class"></a>Propiedad ServiceName (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre del servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +44,7 @@ object.ServiceName [= value]
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

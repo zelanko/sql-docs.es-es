@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098176"
 ---
-# <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Método RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
+# <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Método RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
   Quita un enlace de certificado SSL.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -62,13 +62,13 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente; un código de error indica que la llamada no se realizó correctamente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este método quita el enlace específico del archivo rsreportserver.config y opcionalmente HTTP.SYS.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

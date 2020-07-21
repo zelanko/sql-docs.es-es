@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 79bea49705c4f2fb66b8c9866be335433cbb783f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049260"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
@@ -34,7 +34,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Count*  
+ *Recuento*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
  *Numeric_Expression*  
@@ -49,20 +49,20 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  Palabra clave para que los miembros calculados puedan estar incluidos en la obtención de detalles.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifica una expresión numérica, la **DrilldownMemberBottom** función clasifica, en orden ascendente, los elementos secundarios de cada miembro del primer conjunto, según el valor de la expresión numérica, según se ha evaluado sobre el conjunto de secundarios miembros. Si no se especifica una expresión numérica, la función clasifica, en orden ascendente, los elementos secundarios de cada miembro del primer conjunto de acuerdo con los valores de las celdas representadas por el conjunto de miembros secundarios, según determina el contexto de la consulta. Este comportamiento es similar a las funciones Tail (MDX) y BottomCount que devuelven un conjunto de miembros en orden natural, sin ninguna ordenación.  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica una expresión numérica, la función **DrilldownMemberBottom** ordena, en orden ascendente, los elementos secundarios de cada miembro del primer conjunto, según el valor de la expresión numérica, según se ha evaluado sobre el conjunto de miembros secundarios. Si no se especifica una expresión numérica, la función clasifica, en orden ascendente, los elementos secundarios de cada miembro del primer conjunto de acuerdo con los valores de las celdas representadas por el conjunto de miembros secundarios, según determina el contexto de la consulta. Este comportamiento es similar a las funciones Tail (MDX) y BottomCount que devuelven un conjunto de miembros en orden natural, sin ninguna ordenación.  
   
- Después de la clasificación, el **DrilldownMemberBottom** función devuelve un conjunto que contiene los miembros primarios y el número de miembros secundarios especificados en *recuento,* con el valor más bajo y que están contenidos en ambos se establece.  
+ Después de la ordenación, la función **DrilldownMemberBottom** devuelve un conjunto que contiene los miembros primarios y el número de miembros secundarios, especificados en *Count,* con el valor más bajo y que están incluidos en ambos conjuntos.  
   
- Si **RECURSIVA** se especifica, la función ordena el primer conjunto como se describió anteriormente, a continuación, compara de forma recursiva los miembros del primer conjunto, organizados en una jerarquía, con el segundo conjunto. La función recupera el número inferior de miembros secundarios de cada miembro del primer conjunto que también están presentes en el segundo conjunto.  
+ Si se especifica **Recursive** , la función ordena el primer conjunto como se ha descrito anteriormente y, a continuación, compara de forma recursiva los miembros del primer conjunto, organizados en una jerarquía, en el segundo conjunto. La función recupera el número inferior de miembros secundarios de cada miembro del primer conjunto que también están presentes en el segundo conjunto.  
   
- El primer conjunto puede contener tuplas en vez de miembros. Obtención de detalles de tupla es una extensión de OLE DB y devuelve un conjunto de tuplas en vez de miembros.  
+ El primer conjunto puede contener tuplas en vez de miembros. La obtención de detalles de tupla es una extensión de OLE DB y devuelve un conjunto de tuplas en lugar de miembros.  
   
- El **DrilldownMemberBottom** función es similar a la [DrilldownMember](../mdx/drilldownmember-mdx.md) función, pero en lugar de incluir todos los elementos secundarios para cada miembro del primer conjunto que también están presentes en el segundo conjunto, la  **DrilldownMemberBottom** función devuelve el número más bajo de miembros secundarios de cada miembro.  
+ La función **DrilldownMemberBottom** es similar a la función [DrilldownMember](../mdx/drilldownmember-mdx.md) , pero en lugar de incluir todos los elementos secundarios de cada miembro del primer conjunto que también está presente en el segundo conjunto, la función **DrilldownMemberBottom** devuelve el número más bajo de miembros secundarios de cada miembro.  
   
- Consultar la propiedad XMLA MdpropMdxDrillFunctions le permite comprobar el nivel de compatibilidad que proporciona el servidor para las funciones de obtención de detalles; consulte [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) para obtener más información.  
+ La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

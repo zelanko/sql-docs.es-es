@@ -10,15 +10,14 @@ helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcbdbeef226b59f4d30e51458e5ecc77950b4896
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898090"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428912"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (expresión de SSIS)
   Devuelve el número de límites de fecha y hora entre dos fechas especificadas. El parámetro *datepart* identifica los límites de fecha y hora que se van a comparar.  
@@ -43,21 +42,21 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se incluyen las partes de fecha y las abreviaturas reconocidas por el evaluador de expresiones.  
   
-|datepart|Abreviaturas|  
+|parte de fecha|Abreviaturas|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Trimestre|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Día|dd, d|  
 |Semana|wk, ww|  
-|Weekday|dw, w|  
+|Día de la semana|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|Second|ss, s|  
+|Segundo|ss, s|  
 |Millisecond|Ms|  
   
  DATEDIFF devuelve un resultado NULL si alguno de los argumentos es NULL.  
@@ -81,13 +80,13 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- Este ejemplo devuelve el número de semanas entre la fecha de la columna **ModifiedDate** y la variable **YearEndDate** . Si **YearEndDate** tiene un `date` tipo de datos, se requiere ninguna conversión explícita.  
+ Este ejemplo devuelve el número de semanas entre la fecha de la columna **ModifiedDate** y la variable **YearEndDate** . Si **YearEndDate** tiene un `date` tipo de datos, no se requiere ninguna conversión explícita.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DATEADD &#40;expresión de SSIS&#41;](dateadd-ssis-expression.md)   
  [DATEPART &#40;expresión de SSIS&#41;](datepart-ssis-expression.md)   
  [DAY &#40;expresión de SSIS&#41;](day-ssis-expression.md)   

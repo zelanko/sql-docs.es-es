@@ -1,5 +1,5 @@
 ---
-title: Configuración del servidor (Administrador de configuración de MDS) | Microsoft Docs
+title: Configuración del servidor
 ms.custom: ''
 ms.date: 01/26/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 91386e4464f02b3ce03f6c09c4cba01ade6260ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2ae7fb9683c3e56bc848d3203abfc56a38cde2a9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811402"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>Configuración del servidor (Administrador de configuración de MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilice la página **Configuración del servidor** para ver información de configuración del equipo del servidor local.  
   

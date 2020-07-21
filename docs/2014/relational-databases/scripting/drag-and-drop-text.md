@@ -1,6 +1,6 @@
 ---
-title: Arrastrar y colocar texto | Microsoft Docs
-ms.custom: ''
+title: Arrastrar y colocar texto
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c103672bbc8dcb6028190a624c1f9ecdb3caf3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5104db8ce520b8a98ffe223fd8832806564d5f12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056804"
 ---
 # <a name="drag-and-drop-text"></a>Arrastrar y colocar texto
   Se puede seleccionar texto para arrastrarlo y colocarlo en otra ubicación. Se puede arrastrar y colocar texto:  
@@ -43,7 +42,7 @@ ms.locfileid: "66064138"
   
  Al arrastrar texto se mueve, es decir, se borra de la ubicación anterior y se mueve a la nueva ubicación. Al presionar la tecla CTRL mientras se arrastra, el texto se copia a la nueva ubicación. Sin embargo, si arrastra un objeto desde el Explorador de objetos esta norma no se cumple, ya que el nombre del objeto no se elimina del Explorador de objetos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Navegar por código y texto](navigate-code-and-text.md)  
   
   

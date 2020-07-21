@@ -1,5 +1,5 @@
 ---
-title: TCP - propiedades de IP (pestaña protocolos) | Microsoft Docs
+title: Propiedades TCP/IP (pestaña protocolos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 388b13ad4c381c89eeaeae2f61778161830ea895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040456"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - propiedades de IP (pestaña protocolos)
+# <a name="tcp---ip-properties-protocols-tab"></a>Propiedades de TCP-IP (pestaña protocolos)
   Use el cuadro de diálogo **Propiedades de TCP/IP** para configurar las opciones para el protocolo TCP/IP. Haga clic en **TCP/IP** en el panel izquierdo para mostrar configuraciones de direcciones IP individuales en el panel de detalles.  
   
  Es necesario reiniciar Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se apliquen los cambios.  
@@ -37,7 +36,7 @@ ms.locfileid: "63150456"
  **No Delay**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa cambios en esta propiedad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Crear una cadena de conexión válida con TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   

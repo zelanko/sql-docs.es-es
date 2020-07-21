@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7204d2f20c7c299a2bcefcc66409182c8846affc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dc3dff306b63f6e6dd6026e46ff83474cde34cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755450"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934796"
 ---
 # <a name="sql-writer-service"></a>servicio del objeto de escritura de SQL
   El servicio del objeto de escritura de SQL proporciona otras funciones para la realización de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el marco del Servicio de instantáneas de volumen.  
   
  El servicio del objeto de escritura de SQL se instala automáticamente. Se debe ejecutar cuando la aplicación Servicio de instantáneas de volumen (VSS) solicita una copia de seguridad o una restauración. Para configurar el servicio, utilice el applet Servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. El servicio SQL Writer se instala en todos los sistemas operativos.  
   
-## <a name="purpose"></a>Finalidad  
+## <a name="purpose"></a>Propósito  
  Durante la ejecución, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] bloquea los archivos de datos y tiene acceso exclusivo a estos. Cuando no se ejecuta el servicio del objeto de escritura de SQL, los programas de copia de seguridad que se estén ejecutando en Windows no tendrán acceso a los archivos de datos, y se deberán realizar las copias de seguridad mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Utilice el servicio del objeto de escritura de SQL para que los programas de copia de seguridad de Windows puedan copiar archivos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mientras se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

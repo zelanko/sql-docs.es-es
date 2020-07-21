@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de informes: Informes sobre mapas (Generador de informes y SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104637"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: Informes de mapa (generador de informes y SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a> Problemas con el tamaño de la definición de informe  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a>Problemas de tamaño de la definición de informe  
  Utilice esta sección para ayudar a resolver problemas relacionados con el tamaño de la definición de informe.  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>¿Cómo reduzco el tamaño de la definición de informe?  
@@ -49,7 +49,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Spatial"></a> Problemas con los datos espaciales  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a>Problemas con los datos espaciales  
  Utilice esta sección como ayuda para resolver problemas relacionados con los datos espaciales.  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>En la superficie de diseño, veo el ejemplo de datos espaciales  
@@ -102,7 +102,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Viewport"></a> Problemas de las vistas y del centro de las ventanillas  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>Centro de la ventanilla y ver problemas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de las ventanillas.  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>No puedo establecer el centro y la vista en un elemento de mapa incrustado.  
@@ -126,7 +126,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Layers"></a> Problemas con las capas  
+##  <a name="layer-issues"></a><a name="Layers"></a>Problemas con las capas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de las capas.  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>No veo una o varias capas de un mapa.  
@@ -148,7 +148,7 @@ ms.locfileid: "66104637"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Establecí un filtro en la capa de mapa y no tiene ningún efecto.  
  Para filtrar los datos de una capa, se debe especificar el tipo de datos de la expresión de filtro. Compruebe que ha especificado el tipo de datos subyacente correcto para que la ecuación de filtro evalúe correctamente la condición especificada. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Problemas con la leyenda, la escala de colores y la regla  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a>Problemas con la leyenda, la escala de colores y la regla  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de regla, leyenda y escala de colores.  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>¿Cómo controlo los valores de la leyenda del mapa?  
@@ -181,7 +181,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Tile"></a> Problemas con el mosaico  
+##  <a name="tile-issues"></a><a name="Tile"></a>Problemas con los mosaicos  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones del fondo de mosaico.  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>No puedo ver el fondo de mosaicos de Bing Maps.  
@@ -204,7 +204,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Tooltip"></a> Problemas con la información sobre herramientas y las etiquetas  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a>Información sobre herramientas y problemas de etiqueta  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de Información sobre herramientas o de etiquetas.  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Aparece un error de expresión sobre el ámbito del conjunto de datos al establecer una etiqueta o Información sobre herramientas en una expresión.  
@@ -214,7 +214,7 @@ ms.locfileid: "66104637"
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Solucionar problemas del Generador de informes](../troubleshoot-report-builder.md)  
   

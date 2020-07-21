@@ -1,5 +1,5 @@
 ---
-title: Seleccione un modelo de minería de datos y un visor de minería de datos | Microsoft Docs
+title: Seleccionar un modelo de minería de datos y un visor de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3ab24c6ccb8a87879cbab8439d06d625e304061
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082879"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520443"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Seleccionar un modelo de minería de datos y un visor de minería de datos
   Para explorar un modelo de minería de datos puede utilizar uno de los visores de la pestaña **Visor de modelos de minería de datos** en el Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  
   
 -   El cuadro de lista desplegable **Modelo de minería de datos** en la pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene una lista de todos los modelos de minería de datos que se encuentran en la estructura de minería de datos actual.  
   
--   Se proporcionan visores personalizados para cada tipo de modelo. Para obtener información general de todos los visores personalizados, vea [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md). Para ver un tutorial sobre cómo usar los visores personalizados para entender un modelo, vea [lección 4: Explorar los modelos de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
+-   Se proporcionan visores personalizados para cada tipo de modelo. Para obtener información general de todos los visores personalizados, vea [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md). Para obtener un tutorial sobre cómo usar los visores personalizados para entender un modelo, vea [Lección 4: Explorar los modelos de correo directo &#40;tutorial básico de minería de datos&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md).  
   
 -   El Visor de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] muestra los patrones detectados por el algoritmo en una representación estándar de los nodos de un árbol. Aunque la vista de árbol genérica muestra todo el contenido para el modelo con mucho detalle, es más difícil interpretar. Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66082879"
   
  El modelo de minería de datos seleccionado se abre en el visor proporcionado para ese tipo de modelo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)  
   
   

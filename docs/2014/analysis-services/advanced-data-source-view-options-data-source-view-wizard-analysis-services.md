@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de opciones (Asistente para vistas de origen de datos) de datos origen vista avanzada (Analysis Services) | Microsoft Docs
+title: Cuadro de diálogo Opciones avanzadas de la vista del origen de datos (Asistente para vistas del origen de datos) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9512d0986b862b5865f8873b75a607f549cdac39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062852"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528191"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Cuadro de diálogo Opciones avanzadas de la vista del origen de datos (Asistente para vistas del origen de datos) (Analysis Services)
   El cuadro de diálogo **Opciones avanzadas de la vista del origen de datos** le proporciona control adicional sobre cómo la vista del origen de datos extrae esquemas y relaciones del origen de datos para generar la vista.  
@@ -31,8 +30,8 @@ ms.locfileid: "66062852"
  **Restringir a esquemas**  
  Utilice esta opción para especificar una lista con los nombres de esquema separados por coma que restringe los esquemas recuperados del origen de datos. Si no se muestran nombres de esquema para esta opción, no pueden utilizarse restricciones en los esquemas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Orígenes de datos en modelos multidimensionales](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Orígenes de datos admitidos &#40;&#41;de SSAS multidimensionales](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

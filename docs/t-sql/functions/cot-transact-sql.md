@@ -16,18 +16,18 @@ helpviewer_keywords:
 - COT function
 - cotangent
 ms.assetid: c87a9dac-e398-4125-80c3-7df3c2ce6b63
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2a571663ed1987f9eb9e847f6065e3efd30ae56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6388253bcdc7bacecdcb544885e4e22fecc48fc1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914953"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011527"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Una función matemática que devuelve la cotangente trigonométrica del ángulo especificado, expresada en radianes, en la expresión **float** especificada.
   
@@ -35,7 +35,7 @@ Una función matemática que devuelve la cotangente trigonométrica del ángulo 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 COT ( float_expression )  
 ```  
   
@@ -50,9 +50,9 @@ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) d
 El ejemplo siguiente devuelve el valor `COT` del ángulo específico:
   
 ```sql
-DECLARE @angle float;  
+DECLARE @angle FLOAT;  
 SET @angle = 124.1332;  
-SELECT 'The COT of the angle is: ' + CONVERT(varchar,COT(@angle));  
+SELECT 'The COT of the angle is: ' + CONVERT(VARCHAR, COT(@angle));  
 GO  
 ```  
   
@@ -64,7 +64,7 @@ The COT of the angle is: -0.040312
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

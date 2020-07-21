@@ -1,5 +1,5 @@
 ---
-title: Crear una sesión de eventos extendidos utilizando el Asistente (Explorador de objetos) | Microsoft Docs
+title: Crear una sesión de eventos extendidos con el asistente (Explorador de objetos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934510"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Crear una sesión de Extended Events utilizando el asistente (Explorador de objetos)
   Para ayudarle a seleccionar y capturar eventos en el servidor, los eventos extendidos incluyen un Asistente para nueva sesión que le guía a través de los pasos necesarios para crear una sesión de eventos extendidos. El Asistente para nueva sesión expone la mayor parte de la funcionalidad de Extended Events. El [cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) también permite definir una sesión de Eventos extendidos que capture, presente y analice los datos. El cuadro de diálogo Nueva sesión expone toda la funcionalidad de Extended Events.  
@@ -51,7 +50,7 @@ ms.locfileid: "66065058"
   
 -   [Introducción](#BKMK_Welcome)  
   
--   [Establecer propiedades de sesión](#BKMK_SetSessionProperties)  
+-   [Establecer propiedades de la sesión](#BKMK_SetSessionProperties)  
   
 -   [Elegir plantilla](#BKMK_ChooseTemplate)  
   
@@ -59,43 +58,43 @@ ms.locfileid: "66065058"
   
 -   [Capturar campos globales](#BKMK_CaptureGlobalFields)  
   
--   [Establecer filtros de eventos de sesión](#BKMK_SetSessionEventFilters)  
+-   [Establecer filtros de eventos de la sesión](#BKMK_SetSessionEventFilters)  
   
--   [Especificar almacenamiento de datos de sesión](#BKMK_SpecifySessionDataOutput)  
+-   [Especificar almacenamiento de datos de la sesión](#BKMK_SpecifySessionDataOutput)  
   
 -   [Resumen](#BKMK_Summary)  
   
 -   [Crear sesión de eventos](#BKMK_CreateEventSession)  
   
-##  <a name="BKMK_Welcome"></a> Introducción  
+##  <a name="introduction"></a><a name="BKMK_Welcome"></a>Aparición  
  En la página **Introducción** realice lo siguiente:  
   
 -   En la página **Introducción** del Asistente para nueva sesión, haga clic en **Siguiente**.  
   
      Active la casilla **No volver a mostrar esta página** si va a usar el asistente más de una vez y no quiere leer la introducción cada vez que se inicie el asistente.  
   
-##  <a name="BKMK_SetSessionProperties"></a> Establecer propiedades de sesión  
+##  <a name="set-session-properties"></a><a name="BKMK_SetSessionProperties"></a>Establecer propiedades de sesión  
  En la página **Establecer propiedades de la sesión** realice lo siguiente:  
   
 -   En el cuadro **Nombre de sesión** , escriba un nombre descriptivo para la sesión de eventos.  
   
      Si desea que la sesión se inicie al iniciarse el servidor, active la casilla **Iniciar la sesión de eventos al iniciar el servidor** y, a continuación, haga clic en **Siguiente**.  
   
-##  <a name="BKMK_ChooseTemplate"></a> Elegir plantilla  
+##  <a name="choose-template"></a><a name="BKMK_ChooseTemplate"></a>Elegir plantilla  
  En la página **Elegir plantilla** realice los pasos siguientes:  
   
 -   Seleccione la opción **Usar esta plantilla de sesión de eventos** para seleccionar entre un conjunto de plantillas preconfiguradas diseñadas para solucionar problemas comunes. Seleccione la plantilla que quiera usar en la lista desplegable y, después, haga clic en **Siguiente**.  
   
-     -O bien-  
+     O  
   
 -   Seleccione la opción **No usar una plantilla** si no quiere usar una plantilla preconfigurada y, después, haga clic en **Siguiente**.  
   
-##  <a name="BKMK_SelectEventsToCapture"></a> Seleccionar eventos para capturar  
+##  <a name="select-events-to-capture"></a><a name="BKMK_SelectEventsToCapture"></a>Seleccionar eventos para capturar  
  En la página **Seleccionar eventos para capturar** realice lo siguiente:  
   
 1.  Seleccione los eventos que desee capturar de la **Biblioteca de eventos**y, a continuación, haga clic en la flecha derecha. Puede seleccionar varios eventos en la biblioteca de eventos con Mayúsculas+Clic o Ctrl+Clic.  
   
-     Puede seleccionar cómo desea que se busquen los eventos que desea capturar del cuadro de lista desplegable. Por ejemplo, puede buscar nombres de evento o nombres de evento con sus descripciones. Puede buscar cualquier palabra en la tabla especificando el texto que desea buscar en el cuadro **Biblioteca de eventos** . Por ejemplo, si quiere buscar el evento **lock_acquired** , puede especificar **lock**o **lock acquire**.  
+     Puede seleccionar cómo desea que se busquen los eventos que desea capturar del cuadro de lista desplegable. Por ejemplo, puede buscar nombres de evento o nombres de evento con sus descripciones. Puede buscar cualquier palabra en la tabla especificando el texto que desea buscar en el cuadro **Biblioteca de eventos** . Por ejemplo, si desea buscar el evento **lock_acquired** , puede especificar **Lock**o **Lock acquire**.  
   
      Los eventos que seleccione aparecerán en el cuadro **Eventos seleccionados** . Para quitar eventos del cuadro **Eventos seleccionados** , haga clic en la flecha izquierda.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66065058"
     > [!NOTE]  
     >  Los eventos del canal **Depurar** permanecen ocultos de forma predeterminada. Para mostrar eventos de depuración, seleccione **Depurar** en la lista desplegable **Canal** .  
   
-##  <a name="BKMK_CaptureGlobalFields"></a> Capturar campos globales  
+##  <a name="capture-global-fields"></a><a name="BKMK_CaptureGlobalFields"></a>Capturar campos globales  
  Los campos globales (también denominados acciones) se utilizan para asociar una o varias acciones para los eventos seleccionados. Si se selecciona una plantilla en la página **Elegir plantilla** , todos los campos que están definidas en la plantilla se muestran en esta página.  
   
  En la página **Capturar campos globales** realice lo siguiente:  
@@ -116,7 +115,7 @@ ms.locfileid: "66065058"
     > [!NOTE]  
     >  Las acciones seleccionadas se ordenan por **Nombre** permitiéndole ver las acciones asociadas en orden alfabético. Puede ordenar por descripción o por estado habilitado/deshabilitado haciendo clic en el encabezado de columna situado junto al nombre de campo.  
   
-##  <a name="BKMK_SetSessionEventFilters"></a> Establecer filtros de eventos de sesión  
+##  <a name="set-session-event-filters"></a><a name="BKMK_SetSessionEventFilters"></a>Establecer filtros de eventos de sesión  
  Puede aplicar filtros (también denominados predicados) para limitar los eventos que desee capturar. En la página **Establecer filtros de eventos de la sesión** realice lo siguiente:  
   
 1.  Si no usa una plantilla preconfigurada, cree los criterios de filtro y, después, haga clic en **Siguiente**.  
@@ -130,8 +129,8 @@ ms.locfileid: "66065058"
     > [!NOTE]  
     >  Cuando configure una cláusula de grupo para el filtro, se quitarán los paréntesis redundantes del filtro después de guardar el resultado. Por ejemplo, si crea un filtro que agrupe **Cláusula 1** y **Cláusula 2**, aparecerán paréntesis alrededor de las cláusulas. Después de guardar el filtro, se quitan los paréntesis redundantes. La eliminación de los paréntesis no afecta a la lógica del filtro.  
   
-##  <a name="BKMK_SpecifySessionDataOutput"></a> Especificar almacenamiento de datos de sesión  
- Utilice la página **Especificar almacenamiento de datos de la sesión** para especificar cómo desea recopilar los datos para el análisis. SQL Server Extended Events utiliza destinos para la salida de datos. Los destinos almacenan los datos de evento y pueden realizar acciones como escribir en un archivo y agregar datos de evento. Decida cómo desea recopilar los datos para el análisis y, en la página **Especificar almacenamiento de datos de la sesión** , realice lo siguiente:  
+##  <a name="specify-session-data-storage"></a><a name="BKMK_SpecifySessionDataOutput"></a>Especificar el almacenamiento de datos de sesión  
+ Utilice la página **Especificar almacenamiento de datos de la sesión** para especificar cómo desea recopilar los datos para el análisis. SQL Server Extended Events utiliza destinos para la salida de datos. Los destinos almacenan los datos de evento y pueden realizar acciones como escribir en un archivo y agregar datos de evento. Decida cómo desea recopilar los datos para el análisis y, en la página **Especificar almacenamiento de datos de la sesión**, realice lo siguiente:  
   
 1.  Para los conjuntos de datos grandes y para la creación de registros históricos, active la casilla **Guardar los datos en un archivo para su posterior análisis** y, a continuación, realice lo siguiente:  
   
@@ -153,7 +152,7 @@ ms.locfileid: "66065058"
   
     4.  En el cuadro **Número de eventos para mantener (por tipo)** , escriba o seleccione el número de eventos (por tipo) que quiere mantener al usar las flechas arriba y abajo.  
   
-##  <a name="BKMK_Summary"></a> Resumen  
+##  <a name="summary"></a><a name="BKMK_Summary"></a>Resumen  
  En la página **Resumen** realice lo siguiente:  
   
 1.  Asegúrese de que las selecciones sean correctas. Expanda los nodos de la sesión de eventos para comprobar que todas las selecciones se incluirán en la sesión de eventos.  
@@ -162,14 +161,14 @@ ms.locfileid: "66065058"
   
 3.  Haga clic en **Finalizar** para crear la sesión de eventos.  
   
-##  <a name="BKMK_CreateEventSession"></a> Crear sesión de eventos  
+##  <a name="create-event-session"></a><a name="BKMK_CreateEventSession"></a>Crear sesión de eventos  
  En la página **Crear sesión de eventos** , una vez creada correctamente la sesión de eventos, realice lo siguiente:  
   
 1.  Haga clic en **Iniciar la sesión de eventos inmediatamente después de crear la sesión** para iniciar la sesión después de cerrar el asistente. Debe iniciar la sesión de eventos inmediatamente después de crear la sesión para poder observar datos en directo.  
   
 2.  Haga clic en **Observar datos en directo en la pantalla mientras se capturan** para ver los datos en directo de la sesión de eventos. Los datos en directo iniciarán la presentación del seguimiento inmediatamente después de crearse la sesión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una sesión de eventos extendidos utilizando el cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

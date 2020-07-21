@@ -1,6 +1,6 @@
 ---
-title: 'Configuración del SMB de almacenamiento de la instancia de clúster de conmutación por error: SQL Server en Linux'
-description: ''
+title: 'Configuración de FCI para almacenamiento SMB: SQL Server en Linux'
+description: Obtenga información sobre cómo configurar una instancia de clúster de conmutación por error (FCI) mediante almacenamiento SMB para SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032324"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902349"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuración de la instancia de clúster de conmutación por error: SMB; SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se explica cómo configurar el almacenamiento SMB de una instancia de clúster de conmutación por error (FCI) en Linux. 
  
@@ -96,7 +96,7 @@ Aquí tiene algunas sugerencias y notas para usar SMB correctamente:
       ls <TempDir>
       ```
       
-      \<TempDir> es el nombre de la carpeta del paso d.
+      \<TempDir> es el nombre de la carpeta del paso d.
       
    1. Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
       
@@ -184,13 +184,13 @@ Aquí tiene algunas sugerencias y notas para usar SMB correctamente:
       sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
       ```
       
-      \<IPAddressOrServerName> es la dirección IP o el nombre del host de SMB.
+      \<IPAddressOrServerName> es la dirección IP o nombre del host de SMB.
       
       \<ShareName> es el nombre del recurso compartido.
       
       \<FolderMountedIn> es el nombre de la carpeta donde se ha montado SMB.
       
-5. Para comprobar otros aspectos que no sean las bases de datos del sistema (por ejemplo, las bases de datos de usuario o las copias de seguridad), siga estos pasos. Si solo usa la ubicación predeterminada, vaya al paso 14.
+5. Para comprobar otros aspectos que no sean las bases de datos del sistema (por ejemplo, las bases de datos de usuario o las copias de seguridad), siga estos pasos. Si solo usa la ubicación predeterminada, vaya al paso 14.
    
    1. Cambie para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
       
@@ -242,7 +242,7 @@ Aquí tiene algunas sugerencias y notas para usar SMB correctamente:
       sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
       ```
       
-      \<IPAddressOrServerName> es la dirección IP o el nombre del host de SMB.
+      \<IPAddressOrServerName> es la dirección IP o nombre del host de SMB.
       
       \<ShareName> es el nombre del recurso compartido.
       

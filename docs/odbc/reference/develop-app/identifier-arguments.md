@@ -12,27 +12,27 @@ helpviewer_keywords:
 - catalog functions [ODBC], arguments
 - arguments in catalog functions [ODBC], identifier
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138998"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300165"
 ---
 # <a name="identifier-arguments"></a>Argumentos de identificador
-Si una cadena en un argumento de identificador está entre comillas, el controlador quita iniciales y finales de los espacios en blanco y literalmente trata la cadena entre comillas. Si la cadena no está entre comillas, el controlador quita subconjuntos y espacios en blanco finales a la cadena a mayúsculas. Al establecer un argumento de identificador a un puntero null devuelve SQL_ERROR y SQLSTATE HY009 (uso no válido del puntero null), a menos que el argumento es un nombre de catálogo y no se admiten los catálogos.  
+Si una cadena de un argumento de identificador está entre comillas, el controlador quita los espacios en blanco iniciales y finales y trata literalmente la cadena entre comillas. Si la cadena no está entre comillas, el controlador quita los espacios en blanco finales y dobla la cadena a mayúsculas. Si se establece un argumento de identificador en un puntero nulo, se devuelve SQL_ERROR y SQLSTATE HY009 (uso no válido de puntero nulo), a menos que el argumento sea un nombre de catálogo y no se admitan catálogos.  
   
- Si el atributo de instrucción de SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, estos argumentos se tratan como argumentos de identificador. En este caso, el carácter de subrayado (_) y el porcentaje de sesión (%) se tratará como el carácter real, no como un carácter de patrón de búsqueda. Estos argumentos se tratan como un argumento normal o un argumento de patrón, dependiendo del argumento, si este atributo se establece en SQL_FALSE.  
+ Estos argumentos se tratan como argumentos de identificador si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE. En este caso, el carácter de subrayado (_) y el signo de porcentaje (%) se tratará como el carácter real, no como un carácter de patrón de búsqueda. Estos argumentos se tratan como un argumento normal o un argumento de patrón, dependiendo del argumento, si este atributo se establece en SQL_FALSE.  
   
- Aunque los identificadores que contienen caracteres especiales se deben escribir entre comillas en instrucciones SQL, deba no ir entre comillas cuando se pasan como argumentos de función de catálogo, porque los caracteres de comillas pasados a funciones de catálogo se interpretan literalmente. Por ejemplo, suponga que el identificador de carácter de comilla (que es específico del controlador y se devuelven a través de **SQLGetInfo**) es un signo de comillas doble ("). La primera llamada a **SQLTables** devuelve un conjunto que contiene información acerca de la tabla de cuentas por pagar, mientras que la segunda llamada devuelve información acerca de la tabla "Cuentas por pagar", que es probablemente no lo que se pretendía de resultados.  
+ Aunque los identificadores que contienen caracteres especiales deben ir entre comillas en las instrucciones SQL, no deben ir entre comillas cuando se pasan como argumentos de la función de catálogo, ya que los caracteres de Comillas pasadas a las funciones de catálogo se interpretan literalmente. Por ejemplo, supongamos que el carácter de comilla de identificador (que es específico del controlador y que se devuelve a través de **SQLGetInfo**) es una comilla doble ("). La primera llamada a **SQLTables** devuelve un conjunto de resultados que contiene información sobre la tabla Accounts Payable, mientras que la segunda llamada devuelve información acerca de la tabla "Accounts Payable", que probablemente no sea lo que se pretendía.  
   
 ```  
 SQLTables(hstmt1, NULL, 0, NULL, 0, "Accounts Payable", SQL_NTS, NULL, 0);  
 SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);  
 ```  
   
- Los identificadores entre comillas se usan para distinguir un nombre de columna true desde una pseudocolumna del mismo nombre, como ROWID en Oracle. Si se pasa un argumento de una función de catálogo "ROWID", la función funcionará con la pseudocolumna ROWID si existe. Si no existe la pseudocolumna, la función funcionará con la columna "ROWID". Si se pasa un argumento de una función de catálogo ROWID, la función funcionará con la columna ROWID.  
+ Los identificadores entre comillas se usan para distinguir un nombre de columna verdadero de una columna con el mismo nombre, como ROWID en Oracle. Si se pasa "ROWID" en un argumento de una función de catálogo, la función funcionará con la pseudocolumna ROWID si existe. Si la pseudocolumna no existe, la función funcionará con la columna "ROWID". Si se pasa ROWID en un argumento de una función de catálogo, la función funcionará con la columna ROWID.  
   
- Para obtener más información acerca de los identificadores entre comillas, vea [identificadores entre comillas](../../../odbc/reference/develop-app/quoted-identifiers.md).
+ Para obtener más información sobre los identificadores entre comillas, vea [identificadores entre comillas](../../../odbc/reference/develop-app/quoted-identifiers.md).

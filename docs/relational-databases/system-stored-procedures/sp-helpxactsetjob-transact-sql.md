@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9f5a32c9706947471908966be59378a0d34147e1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899434"
 ---
-# <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información acerca del trabajo Xactset para un publicador de Oracle. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -37,22 +37,21 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre de la que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador al que pertenece el trabajo. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece el trabajo. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**jobnumber**|**int**|Número de trabajo de Oracle.|  
-|**lastdate**|**varchar(22)**|Fecha en que se ejecutó el trabajo por última vez.|  
-|**thisdate**|**varchar(22)**|Hora de cambio.|  
-|**nextdate**|**varchar(22)**|Fecha en que se ejecutará el trabajo de nuevo.|  
+|**lastdate**|**VARCHAR (22)**|Fecha en que se ejecutó el trabajo por última vez.|  
+|**thisdate**|**VARCHAR (22)**|Hora de cambio.|  
+|**nextdate**|**VARCHAR (22)**|Fecha en que se ejecutará el trabajo de nuevo.|  
 |**broken**|**varchar(1)**|Marca de interrupción del trabajo.|  
-|**interval**|**varchar(200)**|Intervalo del trabajo.|  
-|**failures**|**int**|Número de errores del trabajo.|  
-|**xactsetjobwhat**|**varchar(200)**|Nombre del procedimiento ejecutado por el trabajo.|  
-|**xactsetjob**|**varchar(1)**|Estado del trabajo, que puede ser uno de los siguientes:<br /><br /> **1** -el trabajo está habilitado.<br /><br /> **0** -el trabajo está deshabilitado.|  
+|**interval**|**VARCHAR (200)**|Intervalo del trabajo.|  
+|**falla**|**int**|Número de errores del trabajo.|  
+|**xactsetjobwhat**|**VARCHAR (200)**|Nombre del procedimiento ejecutado por el trabajo.|  
+|**xactsetjob**|**varchar(1)**|Estado del trabajo, que puede ser uno de los siguientes:<br /><br /> **1** : el trabajo está habilitado.<br /><br /> **0** : el trabajo está deshabilitado.|  
 |**xactsetlonginterval**|**int**|Intervalo largo del trabajo.|  
 |**xactsetlongthreshold**|**int**|Umbral largo del trabajo.|  
 |**xactsetshortinterval**|**int**|Intervalo corto del trabajo.|  
@@ -62,15 +61,15 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_helpxactsetjob** se utiliza en la replicación de instantáneas y transaccional para los publicadores de Oracle.  
+ **sp_helpxactsetjob** se utiliza en la replicación de instantáneas y en la replicación transaccional para un publicador de Oracle.  
   
  **sp_helpxactsetjob** siempre devuelve la configuración actual del trabajo Xactset (HREPL_XactSetJob) en el publicador. Si el trabajo Xactset se encuentra en la cola de trabajos, devuelve además los atributos del trabajo de la vista de diccionario de datos USER_JOB creada con la cuenta de administrador en el publicador de Oracle.  
   
 ## <a name="permissions"></a>Permisos  
- Solo un miembro de la **sysadmin** rol fijo de servidor puede ejecutar **sp_helpxactsetjob**.  
+ Solo un miembro del rol fijo de servidor **sysadmin** puede ejecutar **sp_helpxactsetjob**.  
   
-## <a name="see-also"></a>Vea también  
- [Configuración del trabajo del conjunto de transacciones para un publicador de Oracle&#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar el trabajo del conjunto de transacciones para un publicador de Oracle &#40;la programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [sp_publisherproperty &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

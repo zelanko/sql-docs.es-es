@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 45c83c4f-649a-4cd6-9d44-d38524758bb8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc000039be5ca8a9699100f9bbe4672af26b0530
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7ce3dc8ca370af841298a012f4848942318dabdc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969585"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928147"
 ---
 # <a name="supportsconvert-method-"></a>Método supportsConvert ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public boolean supportsConvert()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si es compatible. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método supportsConvert se especifica mediante el método supportsConvert en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método supportsConvert especifica este método supportsConvert en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método supportsConvert &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

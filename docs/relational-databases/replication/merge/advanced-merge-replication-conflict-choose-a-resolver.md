@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 297580770800c7cd251d604e67884a2b069f52f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896302"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflictos de replicación de mezcla avanzada: elegir un solucionador
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Al elegir un solucionador, tenga en cuenta la importancia que tiene la resolución de conflictos en la aplicación y considere si debe utilizar el solucionador de conflictos predeterminado basado en prioridad o un solucionador de artículos.  
   
  Si los datos están divididos sin que varios usuarios escriban en las mismas particiones, y la topología de replicación es relativamente básica (un publicador y unos pocos suscriptores), los conflictos serán escasos o inexistentes. En estos entornos, es probable que no necesite una estrategia de resolución de conflictos compleja. Se recomienda una estrategia que utilice la configuración predeterminada para la resolución de conflictos, por medio de suscripciones en el cliente y una directiva de prioridad. Si la topología es más compleja (por ejemplo, si utiliza suscriptores de republicación), es posible que sea más apropiado utilizar suscripciones en el servidor con prioridades específicas.  
@@ -35,7 +35,7 @@ ms.locfileid: "68033439"
   
 |Problema de resolución de conflictos|Recomendación|  
 |-------------------------------|--------------------|  
-|Diferentes categorías de usuarios necesitan diferentes valores de prioridad.|Utilice el solucionador predeterminado y cree suscripciones en el servidor con diferentes valores de prioridad.<br /><br /> o bien<br /><br /> Utilice un solucionador de artículos que reconozca una columna de valor de autoridad en el artículo para ayudar a solucionar el conflicto.|  
+|Diferentes categorías de usuarios necesitan diferentes valores de prioridad.|Utilice el solucionador predeterminado y cree suscripciones en el servidor con diferentes valores de prioridad.<br /><br /> Or<br /><br /> Utilice un solucionador de artículos que reconozca una columna de valor de autoridad en el artículo para ayudar a solucionar el conflicto.|  
 |Se desea una solución del conflicto basada en la prioridad.|Utilice el solucionador predeterminado y cree suscripciones de cliente.|  
 |Es aceptable que varios usuarios cambien la misma fila de datos, siempre que no se hagan cambios conflictivos en la misma columna.|Utilice el solucionador predeterminado o un solucionador de artículos con el seguimiento por columnas habilitado.|  
 |Marcar como conflicto cualquier cambio múltiple en los valores de una fila.|Utilice el solucionador predeterminado o un solucionador de artículos con el seguimiento por filas habilitado.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68033439"
 |Los datos resultantes del conflicto deben ser diferentes de los datos originales en conflicto.|Utilice un solucionador de artículos que calcule nuevos valores.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Detectar y solucionar conflictos en registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Detección y resolución de conflictos de replicación de mezcla avanzada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Volver a publicar datos](../../../relational-databases/replication/republish-data.md)  
   

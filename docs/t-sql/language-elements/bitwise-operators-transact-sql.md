@@ -17,15 +17,15 @@ ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d96dbfc519a831508b7e56fad1b6909a37f672d3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943053"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004008"
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operadores bit a bit (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los operadores bit a bit realizan manipulaciones de bits entre dos expresiones de cualquiera de los tipos de datos de la categoría del tipo de datos entero.  
   Los operadores bit a bit convierten dos valores enteros en bits binarios y llevan a cabo la operación AND, OR o NOT correspondiente en cada bit, lo cual genera un resultado. Luego, convierten el resultado en un entero.  
@@ -33,7 +33,7 @@ ms.locfileid: "67943053"
   Por ejemplo, el entero 170 se convierte en el binario 1010 1010
 y el entero 75 lo hace en el binario 0100 1011.
 
-|operador|cálculo bit a bit|
+|operator|cálculo bit a bit|
 |---- |---- |
 |y <br> Si los dos bits, en cualquier ubicación, son 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
 |O BIEN <br> Si cualquiera de los dos bits, en cualquier ubicación, es 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
@@ -52,7 +52,7 @@ Vea los siguientes temas:
   
 |Operando izquierdo|Operando derecho|  
 |------------------|-------------------|  
-|[binario](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** o **tinyint**|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** o **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** o **bit**|  
 |[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**bigint**, **int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  

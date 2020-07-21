@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c00b08d40bc8c17013e6af19b5d11b0b7ad78c4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058986"
 ---
 # <a name="resolving-upgrade-issues"></a>Resolver problemas de la actualización
   En los temas de esta sección se describen problemas de actualización que se pueden detectar, así como los que no se pueden detectar, pero que podrían afectar a la actualización o al uso de la aplicación tras su actualización. Los problemas se han organizado por componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -50,7 +49,7 @@ ms.locfileid: "66092499"
   
 -   [Problemas de actualización de replicación](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Problemas de actualización de Reporting Services &#40;Asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [Reporting Services problemas de actualización &#40;el asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
 -   [Problemas de actualización del Agente SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66092499"
   
 -   [Utilizar sp_rename para cambiar el nombre de índice duplicado](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

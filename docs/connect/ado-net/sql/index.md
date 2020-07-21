@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: fa2e608851f3e66f0f6e77b4cf1ddf69c5537ee5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bacd59fc2fd6cd12476b02c6ea7cc52a9b289bb0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907160"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924349"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server y ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 ## <a name="microsoftdatasqlclient"></a>Microsoft.Data.SqlClient
 

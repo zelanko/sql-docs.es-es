@@ -1,5 +1,5 @@
 ---
-title: Estado, propiedad (clase SqlService) | Microsoft Docs
+title: Propiedad State (clase SqlService) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd91cccfdeef2cab9e4fdfae73bc69a996d652fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62912190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013637"
 ---
 # <a name="state-property-sqlservice-class"></a>Propiedad State (clase SqlService)
   Obtiene o establece el estado actual del servicio.  
@@ -68,7 +67,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

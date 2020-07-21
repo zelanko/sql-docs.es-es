@@ -40,15 +40,15 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bba300b88a8028bee1793247a80d93fd4c6fe691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721222"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En esta sección se ofrece información acerca de las siguientes páginas del Asistente para nueva publicación:  
   
 -   [Publicador de Oracle](../../relational-databases/replication/oracle-publisher.md)  

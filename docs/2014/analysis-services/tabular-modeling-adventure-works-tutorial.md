@@ -1,5 +1,5 @@
 ---
-title: Modelos (Tutorial de Adventure Works) tabulares | Microsoft Docs
+title: Modelado tabular (tutorial de Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d914595c5c62016efca26dece908ee28b7010706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940016"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
   En este tutorial se proporcionan lecciones sobre cómo crear un modelo tabular de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "66067800"
   
  Para satisfacer mejor las necesidades de análisis de datos de los equipos de ventas y marketing, y de los directivos, le encargan que cree un modelo tabular para que los usuarios analicen datos de las ventas por Internet de la base de datos de ejemplo AdventureWorksDW.  
   
- Para completar el tutorial, y el modelo tabular Ventas por Internet de Adventure Works, debe realizar una serie de lecciones. Dentro de cada lección hay varias tareas; la realización de cada tarea en orden es necesaria para completar la lección. Mientras que en una determinada lección puede haber varias tareas con las que se obtiene un resultado similar, el modo en que se completa cada tarea puede ser ligeramente diferente. Es decir, a menudo hay varias formas de completar una determinada tarea, y para su realización tendrá que poner en práctica los conocimientos que aprendió en tareas anteriores.  
+ Para completar el tutorial, y el modelo tabular Ventas por Internet de Adventure Works, debe realizar una serie de lecciones. Cada lección incluye una serie de tareas, y es necesario completar todas las tareas en orden para completar la lección. Mientras que en una determinada lección puede haber varias tareas con las que se obtiene un resultado similar, el modo en que se completa cada tarea puede ser ligeramente diferente. Es decir, a menudo hay varias formas de completar una determinada tarea, y para su realización tendrá que poner en práctica los conocimientos que aprendió en tareas anteriores.  
   
  El propósito de las lecciones es guiarle por la creación de un modelo tabular básico que se ejecute en modo en memoria usando muchas de las características incluidas en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Como cada lección se basa en la anterior, debe completar las lecciones en orden. Cuando haya completado todas las lecciones, habrá creado e implementado el modelo tabular de ejemplo Venta por Internet de Adventure Works en un servidor de Análisis Services.  
   
@@ -56,29 +55,29 @@ ms.locfileid: "66067800"
   
 -   Instancia de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services que se ejecuta en modo Tabular.  
   
--   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]  
+-   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, consulte [ https://go.microsoft.com/fwlink/?LinkID=335807 ](https://go.microsoft.com/fwlink/?LinkID=335807).  
+-   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, vea [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) .  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
   
 ## <a name="lessons"></a>Lecciones  
  Este tutorial incluye las siguientes lecciones:  
   
-|Lección|Tiempo estimado para completar la lección|  
+|Lección|Tiempo estimado para completarla|  
 |------------|--------------------------------|  
-|[Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
-|[Lección 2: Agregar datos](lesson-2-add-data.md)|20 minutos|  
-|[Lección 3: Cambiar el nombre de columnas](rename-columns.md)|20 minutos|  
+|[Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
+|[Lección 2: Agregar datos](lesson-2-add-data.md)|20 minutos|  
+|[Lección 3: Cambiar el nombre de las columnas](rename-columns.md)|20 minutos|  
 |[Lección 4: Marcar como tabla de fechas](lesson-3-mark-as-date-table.md)|3 minutos|  
 |[Lección 5: Crear relaciones](lesson-4-create-relationships.md)|10 minutos|  
 |[Lección 6: Crear columnas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|  
 |[Lección 7: Crear medidas](lesson-6-create-measures.md)|30 minutos|  
-|[Lección 8: Creación de indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md)|15 minutos|  
+|[Lección 8: Crear indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md)|15 minutos|  
 |[Lección 9: Crear perspectivas](lesson-8-create-perspectives.md)|5 minutos|  
 |[Lección 10: Crear jerarquías](lesson-9-create-hierarchies.md)|20 minutos|  
-|[Lección 11: Creación de particiones](lesson-10-create-partitions.md)|15 minutos|  
-|[Lección 12: Crear Roles](lesson-11-create-roles.md)|15 minutos|  
+|[Lección 11: Crear particiones](lesson-10-create-partitions.md)|15 minutos|  
+|[Lección 12: Crear roles](lesson-11-create-roles.md)|15 minutos|  
 |[Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md)|20 minutos|  
 |[Lección 14: Implementar](lesson-13-deploy.md)|5 minutos|  
   
@@ -87,12 +86,12 @@ ms.locfileid: "66067800"
   
  Este tutorial incluye las siguientes lecciones complementarias:  
   
-|Lección|Tiempo estimado para completar la lección|  
+|Lección|Tiempo estimado para completarla|  
 |------------|--------------------------------|  
 |[Implementar seguridad dinámica utilizando filtros de filas](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
-|[Configurar propiedades de informes para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurar propiedades de informes para informes de Power View|30 minutos|  
+|[Configurar propiedades de informes para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Configurar propiedades de informes para informes de Power View|30 minutos|  
   
-## <a name="next-step"></a>Paso siguiente  
- Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
+## <a name="next-step"></a>siguiente paso  
+ Para empezar el tutorial, vaya a la primera lección: [Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md).  
   
   

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 70556dd6365c6c3b204456db2877fdbc61e53d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: fbebb46cc091d8a4a033480237827cf95b6b0c59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914753"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822417"
 ---
-# <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
+# <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Devuelve el nombre del esquema de la base de datos para los objetos de ámbito de esquema. Para obtener una lista de los objetos de ámbito de esquema, vea [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "67914753"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 OBJECT_SCHEMA_NAME ( object_id [, database_id ] )  
 ```  
@@ -49,7 +49,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
  *database_id*  
  Identificador de la base de datos donde se va a buscar el objeto. *database_id* es **int**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sysname**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -60,7 +60,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ANY en el objeto. Para especificar un identificador de base de datos, también se requiere el permiso CONNECT en la base de datos o se debe habilitar la cuenta de invitado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las funciones del sistema se pueden usar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión. Para obtener más información, vea [Expressions](../../t-sql/language-elements/expressions-transact-sql.md) y [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  El conjunto de resultados que devuelve esta función del sistema usa la intercalación de la base de datos actual.  

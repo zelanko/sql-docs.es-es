@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4561b52049da9c051b7e8eda3835545f600c0e70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0faef07f7473c004bbb30358e501082cedb0c80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120776"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701749"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **STSrid** es un entero que representa el identificador de referencia espacial (SRID) de la instancia.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68120776"
 .STSrid  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo CLR: **SqlInt32**  
+ Tipo de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta propiedad se puede modificar.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b2754366a8272785ddfc9e11053d3b805ce6938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2ce0b738d9295cf294e59d85744d57e48a8b6ecc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976522"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914497"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>Método ownUpdatesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public boolean othersUpdatesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Tipo*  
+ *type*  
   
  Un entero que indica el tipo de conjunto de resultados, el cual puede ser uno de los siguientes valores tal como quede definido en java.sql.ResultSet o SQLServerResultSet:  
   
@@ -63,8 +63,8 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método ownUpdatesAreVisible se especifica mediante el método ownUpdatesAreVisible en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método ownUpdatesAreVisible especifica este método ownUpdatesAreVisible en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

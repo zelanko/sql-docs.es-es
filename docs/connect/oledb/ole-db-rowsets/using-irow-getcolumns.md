@@ -1,6 +1,6 @@
 ---
-title: 'Usar IRow:: GetColumns | Microsoft Docs'
-description: 'Usar IRow:: GetColumns para tener acceso a todas las columnas de una fila'
+title: Uso de IRow::GetColumns | Microsoft Docs
+description: Uso de IRow::GetColumns para acceder a todas las columnas de una fila
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ddec5950f9dd8acc55c8bf1b6fe751bd0f34ac1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015329"
 ---
 # <a name="using-irowgetcolumns"></a>Usar IRow::GetColumns

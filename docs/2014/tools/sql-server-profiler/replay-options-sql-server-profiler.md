@@ -1,5 +1,5 @@
 ---
-title: Reproducir las opciones (SQL Server Profiler) | Microsoft Docs
+title: Opciones de reproducción (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 068a6aaeba1af8c456c77fd45ecdc2a52719b0f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063984"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opciones de reproducción (SQL Server Profiler)
   Antes de reproducir un seguimiento capturado con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede reproducir las opciones en el cuadro de diálogo **Configuración de reproducción** . Para iniciar este cuadro de diálogo, abra el archivo o tabla de seguimiento en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], y en el menú **Reproducir** , haga clic en **Inicio**. Para obtener información acerca de los permisos necesarios para reproducir un seguimiento, vea [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  
@@ -77,9 +76,9 @@ ms.locfileid: "63025744"
 ## <a name="about-the-health-monitor"></a>Acerca del monitor de estado  
  El monitor de estado es un subproceso de aplicación que supervisa los procesos simulados que participan en la reproducción de un seguimiento y finaliza los procesos que están bloqueados en la reproducción. En la pestaña **Opciones avanzadas de reproducción** del cuadro de diálogo **Configuración de reproducción** , puede especificar cuánto tiempo en segundos debe esperar el monitor de mantenimiento antes de finalizar un proceso bloqueado (**Intervalo de espera del monitor de mantenimiento**). Si el intervalo se configura en 0, el monitor de estado nunca finaliza los procesos de bloqueo simulados en el seguimiento de reproducción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reproducir seguimientos](replay-traces.md)   
- [Replay Requirements](replay-requirements.md)   
+ [Requisitos de reproducción](replay-requirements.md)   
  [Consideraciones para reproducir seguimientos &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

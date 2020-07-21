@@ -1,6 +1,6 @@
 ---
-title: Ejecutar archivos de scripts Transact-SQL mediante sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Ejecutar archivos de scripts Transact-SQL mediante sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46f4a1660fd2b33581482025cd5a9cf3bb16f770
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267650"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253210"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Ejecutar archivos de scripts Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68267650"
   
 ## <a name="run-the-script-file"></a>Ejecutar el archivo de script  
   
-1.  Abra una ventana del símbolo del sistema.  
+1.  Abra una ventana de símbolo del sistema.  
   
 2.  En la ventana de símbolo del sistema, escriba: **sqlcmd -S myServer\instanceName -i C:\myScript.sql**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68267650"
 
 ## <a name="save-the-output-to-a-text-file"></a>Guardar los resultados en un archivo de texto
   
-1.  Abra una ventana del símbolo del sistema.  
+1.  Abra una ventana de símbolo del sistema.  
   
 2.  En la ventana de símbolo del sistema, escriba: **sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt**.  
   
@@ -69,6 +69,6 @@ ms.locfileid: "68267650"
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-start-the-utility.md)   
- [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)  
+ [Utilidad sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

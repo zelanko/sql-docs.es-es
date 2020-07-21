@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8a071caf6eb989758564731fd68f424821b6681
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762787"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551080"
 ---
-# <a name="mssqlserver7903"></a>MSSQLSERVER_7903
+# <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7903|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7903|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_ORPHANED_FILE|  
-|Texto del mensaje|Error de tabla: Se encontró el archivo huérfano 'FILE' en el directorio de Filestream para el objeto ID O_ID, ID. de índice de partición PN_ID, columna C_ID del ID.|  
+|Texto del mensaje|Error de tabla: se encontró el archivo huérfano "FILE" en el id. de directorio FileStream para el id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID e id. de columna C_ID.|  
   
 ## <a name="explanation"></a>Explicación  
  Había un archivo de FILESTREAM en el directorio de columna de FILESTREAM, pero falta el valor de columna correspondiente en la partición.  

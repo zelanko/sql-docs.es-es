@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710827"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900001"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite tener un control preciso de la configuración de la seguridad de la sincronización web. En este tema se proporciona una lista exhaustiva de todos los componentes que pueden incluirse en una configuración de la sincronización web e información acerca de las conexiones entre los componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite un control preciso sobre la configuración de la seguridad de la sincronización web. En este tema se proporciona una lista exhaustiva de todos los componentes que pueden incluirse en una configuración de la sincronización web e información acerca de las conexiones entre los componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  En la siguiente ilustración se muestran todas las conexiones posibles, aunque es posible que no todas las conexiones sean necesarias en una determinada topología. Por ejemplo, una conexión a un servidor FTP solamente es necesaria si la instantánea se entrega mediante FTP.  
   
- ![Componentes y conexiones en la sincronización web](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Componentes y conexiones en la sincronización web")  
+ ![Componentes y conexiones de la sincronización web](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Componentes y conexiones de la sincronización web")  
   
  En las siguientes tablas se describen los componentes y las conexiones que se muestran en la ilustración.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "71710827"
 |Tipo de cuenta|Dónde se especifica la cuenta|  
 |---------------------|------------------------------------|  
 |Usuario de Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los parámetros `@job_login` y `@job_password` de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): las propiedades <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> para <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Administrador de configuración de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrador de configuración|  
 |Aplicación independiente|El Agente de mezcla se ejecuta en el contexto del usuario de Windows que ejecuta la aplicación.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Conexión al suscriptor  
@@ -67,7 +67,7 @@ ms.locfileid: "71710827"
  <sup>1</sup> La autenticación integrada solo puede usarse si todos los equipos están en el mismo dominio o están en varios dominios que tienen relaciones de confianza entre sí.  
   
 > [!NOTE]  
->  La delegación es necesaria si se usa la autenticación integrada. Se recomienda usar la autenticación básica y SSL para las conexiones del suscriptor a IIS.  
+>  La delegación es necesaria si se usa la autenticación integrada. Se recomienda usar la autenticación básica y TLS para las conexiones del suscriptor a IIS.  
   
 ## <a name="e-connection-to-the-publisher"></a>E. Conexión al publicador  
  Los componentes del Reconciliador de replicación de mezcla y de la Escucha de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se hospedan en el equipo en el que se ejecuta IIS. Estos componentes realizan las siguientes acciones:  
@@ -80,7 +80,7 @@ ms.locfileid: "71710827"
   
  El Reconciliador de replicación de mezcla se conecta al publicador mediante la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El usuario de Windows o el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que especifique debe cumplir lo siguiente:  
   
--   Estar en la lista de acceso a la publicación (PAL). Para más información, vea [Proteger el publicador](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   Estar en la lista de acceso a la publicación (PAL). Para obtener más información, vea [Proteger el publicador](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 -   Estar asociado a un usuario en la base de datos de publicaciones.  
   

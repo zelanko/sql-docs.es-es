@@ -1,10 +1,8 @@
 ---
-title: Name (DTA, elemento de Table) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Name (DTA, elemento de Table)
+description: En la utilidad DTA, el elemento Name de Table especifica un nombre de tabla para la optimización. En este artículo se describe ese elemento.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde36fc8bc0ffb442d641abb49f842ead832fc57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: cb397cf7642f4b523c0919ac70c06f6a3442ef46
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034589"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151856"
 ---
 # <a name="name-element-for-table-dta"></a>Name (DTA, elemento de Table)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica el nombre de una tabla para optimizar.  
+
+Especifica el nombre de una tabla para optimizar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +44,7 @@ ms.locfileid: "68034589"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|**string**, entre 1 y 255 caracteres.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Requerido. Una por cada elemento **Table** .|  
+|**Repetición**|Necesario. Una por cada elemento **Table** .|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

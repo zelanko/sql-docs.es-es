@@ -12,24 +12,23 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927556"
 ---
 # <a name="view-file-history"></a>Ver el historial de un archivo
-  Puede usar el **historial** comando para ver un historial de versiones para los archivos controlados por código fuente. Este historial incluye la fecha y la hora en que el archivo se agregó al control de código fuente o se protegió en él.  
+  Puede usar el comando **historial** para ver un historial de versiones de los archivos controlados por código fuente. Este historial incluye la fecha y la hora en que el archivo se agregó al control de código fuente o se protegió en él.  
   
 ### <a name="to-view-the-history-of-a-file"></a>Para ver el historial de un archivo  
   
 1.  En el Explorador de soluciones, seleccione el archivo.  
   
-2.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **historial**.  
+2.  En el menú **archivo** , seleccione **control de código fuente** y haga clic en **historial**.  
   
-3.  En el **historial de archivo** diálogo cuadro, lleve a cabo cualquiera de las siguientes acciones:  
+3.  En el cuadro **de diálogo historial de archivo** , realice cualquiera de las siguientes acciones:  
   
 4.  Vea la versión seleccionada.  
   
@@ -43,13 +42,13 @@ ms.locfileid: "62773301"
   
 9. Exporte el informe de historial a una impresora, a un archivo o al Portapapeles de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- Para obtener información sobre cómo realizar estas tareas, haga clic en el **ayuda** situado en la **historial de archivo** cuadro de diálogo.  
+ Para obtener información sobre cómo realizar estas tareas, haga clic en el botón **ayuda** del cuadro **de diálogo historial del archivo** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Ver el historial de proyecto](../../2014/database-engine/view-project-history.md)   
- [Ver el estado de archivo](../../2014/database-engine/view-file-status.md)   
- [Recuperar archivos](../../2014/database-engine/retrieve-files.md)   
+ [Ver el historial del proyecto](../../2014/database-engine/view-project-history.md)   
+ [Ver el estado del archivo](../../2014/database-engine/view-file-status.md)   
+ [Recuperación de archivos](../../2014/database-engine/retrieve-files.md)   
  [Comparar archivos](../../2014/database-engine/compare-files.md)  
   
   

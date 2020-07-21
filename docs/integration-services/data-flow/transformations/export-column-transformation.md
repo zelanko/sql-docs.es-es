@@ -22,10 +22,10 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297944"
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
@@ -38,7 +38,7 @@ ms.locfileid: "71297944"
 ## <a name="append-and-truncate-options"></a>Opciones de anexar y truncar  
  En la tabla siguiente se describe cómo afectan a los resultados las opciones para anexar y truncar.  
   
-|Anexar|Truncamiento|El archivo existe|Resultado|  
+|Append|Truncate|El archivo existe|Results|  
 |------------|--------------|-----------------|-------------|  
 |False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
 |True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
@@ -61,7 +61,7 @@ ms.locfileid: "71297944"
     > [!NOTE]  
     >  Solo se escribe una BOM cuando no se anexan los datos a un archivo existente y cuando los datos tienen el tipo de datos DT_NTEXT.  
   
- La transformación usa pares de columnas de entrada: una columna contiene un nombre de archivo y la otra columna contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La transformación utiliza pares de columnas de entrada: una columna contiene un nombre de archivo y la otra contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Esta transformación tiene una entrada, una salida y una salida de error.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "71297944"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

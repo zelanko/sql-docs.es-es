@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sysschemaarticles system table
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bd511eb6eeff5cd412504373e7214703c845cd0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 89a9c9e8034fecad29cdd1f1c6c469e40c613436
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881295"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Realiza un seguimiento de los artículos de solo esquema para publicaciones transaccionales y de instantáneas. Esta tabla se almacena en la base de datos de publicación.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|IDENTIFICADOR del artículo.|  
 |**creation_script**|**nvarchar(255)**|Ruta de acceso y nombre de un script del esquema del artículo que se utiliza para crear la tabla de destino.|  
@@ -44,8 +44,8 @@ ms.locfileid: "68811343"
 |**schema_option**|**Binary(8**|Máscara de bits de la opción de generación del esquema para el artículo dado. Especifica la creación automática del procedimiento almacenado en la base de datos de destino para todas las sintaxis CALL/MCALL/XCALL, y puede ser el resultado OR bit a bit lógico de uno o más de estos valores:<br /><br /> **0x00** = deshabilita el scripting por el agente de instantáneas y usa *creation_script*.<br /><br /> **0x01** = genera la creación de objetos (CREATE TABLE, CREATE PROCEDURE, etc.). Este valor es el predeterminado en los artículos de procedimientos almacenados.<br /><br /> **0x02** = genera procedimientos almacenados personalizados para el artículo, si se han definido.<br /><br /> **0x10** = genera el índice clúster correspondiente.<br /><br /> **0x20** = convierte los tipos de datos definidos por el usuario en tipos de datos base.<br /><br /> **0x40**= genera los índices no clúster correspondientes.<br /><br /> **0x80**= incluye la integridad referencial declarada en las claves principales.<br /><br /> **0x73** = genera la instrucción CREATE TABLE, crea índices agrupados y no agrupados, convierte los tipos de datos definidos por el usuario en tipos de datos base y genera scripts de procedimientos almacenados personalizados que se van a aplicar en el suscriptor. Este valor es el predeterminado en todos los artículos excepto en los de procedimientos almacenados.<br /><br /> **0x100**= replica los desencadenadores de usuario en un artículo de tabla, si se define.<br /><br /> **0x200**= Replica las restricciones Foreign Key. Si la tabla a la que se hace referencia no forma parte de una publicación, no se replicará ninguna restricción de clave externa de una tabla publicada.<br /><br /> **0x400**= Replica las restricciones check.<br /><br /> **0x800**= replica los valores predeterminados.<br /><br /> **0x1000**= Replica la intercalación de nivel de columna.<br /><br /> **0x2000**= Replica las propiedades extendidas asociadas con el objeto de origen del artículo publicado.<br /><br /> **0x4000**= Replica claves únicas si están definidas en un artículo de tabla.<br /><br /> **0x8000**= Replica la clave principal y las claves únicas de un artículo de tabla como restricciones mediante instrucciones ALTER TABLE.|  
 |**dest_owner**|**sysname**|Propietario de la tabla de la base de datos de destino.|  
   
-## <a name="see-also"></a>Vea también  
- [Tablas &#40;de replicación de TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

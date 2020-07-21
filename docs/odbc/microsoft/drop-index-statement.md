@@ -11,18 +11,18 @@ helpviewer_keywords:
 - DROP INDEX [ODBC]
 - SQL grammar [ODBC], DROP INDEX
 ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 638bae6491c020519a0123ff56fe31e9a9ca1cf7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071857"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303436"
 ---
 # <a name="drop-index-statement"></a>Instrucción DROP INDEX
-Cuando se usa el controlador de Paradox, dBASE o Microsoft Access, la sintaxis de la instrucción DROP INDEX es "DROP INDEX a b en" donde "a" es el nombre del índice y "b" es el nombre de la tabla (DROP INDEX no *nombre del índice*).  
+Cuando se utiliza el controlador de Microsoft Access, dBASE o Paradox, la sintaxis de la instrucción DROP INDEX es "DROP INDEX a en b", donde "a" es el nombre del índice y "b" es el nombre de la tabla (no DROP INDEX *nombre de índice*).  
   
  Cuando se usa el controlador de Paradox, la instrucción DROP INDEX elimina los archivos de índice secundario de Paradox.  
   
- La instrucción DROP INDEX no se admite para los controladores de Microsoft Excel o texto.
+ La instrucción DROP INDEX no es compatible con los controladores de texto o de Microsoft Excel.

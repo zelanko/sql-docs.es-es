@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63566d7759c3a88f6c088707d6c7724cb4087f05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050067"
 ---
 # <a name="memory-optimized-tables"></a>Tablas con optimización para memoria
   OLTP en memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a mejorar el rendimiento de las aplicaciones OLTP mediante un acceso a los datos eficiente y optimizado para memoria, compilación nativa de la lógica de negocios, y algoritmos sin bloqueos y bloqueos temporales. La característica OLTP en memoria incluye tablas optimizadas para memoria y tipos de tablas, así como la compilación nativa de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] para un acceso eficiente a estas tablas.  
@@ -34,7 +33,7 @@ ms.locfileid: "63158753"
   
      Directrices para la actualización de tablas optimizadas para memoria (incluye el cambio de columnas de tabla, índices y bucket_count).  
   
--   [Descripción de las transacciones en tablas optimizadas para memoria](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [Descripción de las transacciones en tablas con optimización para memoria](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      En esta sección se proporcionan varios temas relacionados con la realización de transacciones en tablas optimizadas para memoria, incluidos los niveles de aislamiento de las transacciones y las transacciones entre contenedores.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "63158753"
   
      Proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

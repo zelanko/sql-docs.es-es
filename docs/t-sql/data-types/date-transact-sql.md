@@ -22,21 +22,22 @@ ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b23927e12bbfeb6fb49240322babb392c6970cb7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113710"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008074"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Define una fecha en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
+
 ## <a name="date-description"></a>Descripción de date
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |--------------|-----------|  
 |Sintaxis|**date**|  
 |Uso|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
@@ -57,7 +58,7 @@ Define una fecha en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 ## <a name="supported-string-literal-formats-for-date"></a>Formatos de literales de cadena compatibles para date
 En las tablas siguientes se muestran los formatos de literales de cadena válidos para el tipo de datos **date**.
   
-|Numérico|Descripción|  
+|Numeric|Descripción|  
 |-------------|-----------------|  
 |mdy<br /><br /> [m]m/dd/[aa]aa<br /><br /> [m]m-dd-[aa]aa<br /><br /> [m]m.dd.[aa]aa<br /><br /> mad<br /><br /> mm/[aa]aa/dd<br /><br /> mm-[aa]aa/dd<br /><br /> [m]m.[aa]aa.dd<br /><br /> dma<br /><br /> dd/[m]m/[aa]aa<br /><br /> dd-[m]m-[aa]aa<br /><br /> dd.[m]m.[aa]aa<br /><br /> dam<br /><br /> dd/[aa]aa/[m]m<br /><br /> dd-[aa]aa-[m]m<br /><br /> dd.[aa]aa.[m]m<br /><br /> amd<br /><br /> [aa]aa/[m]m/dd<br /><br /> [aa]aa-[m]m-dd<br /><br /> [aa]aa-[m]m-dd|[m]m, dd, y [aa]aa representan el mes, el día y el año en una cadena con marcas de barra diagonal (/), guiones (-) o puntos (.) como separadores.<br /><br /> Solo se admiten los años de dos o cuatro dígitos. Siempre que sea posible utilice los años de cuatro dígitos. Use la opción Fecha límite de año de dos dígitos (vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)) para especificar un número entero entre 0001 y 9999 que represente el año límite para interpretar años de dos dígitos como años de cuatro dígitos.<br /><br /> **Nota:** Para Informatica, YYYY se limita al intervalo entre 1582 y 9999.<br /><br /> Un año de dos dígitos menor o igual que los últimos dos dígitos del año límite pertenece al mismo siglo que el año límite. Un año de dos dígitos mayor que los últimos dos dígitos del año límite pertenece al siglo anterior al año límite. Por ejemplo, si el valor del año límite de dos dígitos es 2049 (el valor predeterminado), el año de dos dígitos 49 se interpreta como 2049 y el año de dos dígitos 50 se interpreta como 1950.<br /><br /> La configuración de idioma actual está determinada por el formato de fecha predeterminado. Para cambiar el formato de fecha, use las instrucciones [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> No se admite el formato **ydm** para **date**.|  
   
@@ -206,7 +207,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Tipo de datos|Salida|  
+|Tipo de datos|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -214,8 +215,10 @@ SELECT
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
-  
-## <a name="see-also"></a>Vea también
+
+Incorporado por primera vez en SQL Server 2008.
+
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -1,6 +1,7 @@
 ---
-title: Herramientas útiles para solucionar problemas de grupos de disponibilidad Always On (SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: Herramientas de solución de problemas del grupo de disponibilidad (índice de contenido)
+description: Referencia de artículos en los que se describen herramientas que se pueden usar para supervisar y solucionar problemas de los grupos de disponibilidad.
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 435a20941a6827aea7e6e3709b5123b059d8735a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a8407d450b653c8476b152904c586996f53d55a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013458"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882354"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>Herramientas útiles para solucionar problemas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
  En este artículo se enumeran vínculos útiles a las herramientas para solucionar problemas y ajustar el rendimiento de grupos de disponibilidad Always On.  
   

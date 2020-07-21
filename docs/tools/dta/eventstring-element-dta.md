@@ -1,10 +1,8 @@
 ---
-title: EventString (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: EventString (DTA, elemento)
+description: En la utilidad DTA, el elemento EventString especifica una carga de trabajo de script de Transact-SQL directamente en el archivo de entrada XML.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: f9944a2e9d9dc1ec8aad069aa74b90a6a420fad4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008801"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826530"
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica una carga de trabajo de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] directamente en el archivo de entrada XML.  
+
+Especifica una carga de trabajo de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] directamente en el archivo de entrada XML.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,9 +42,9 @@ ms.locfileid: "68008801"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|**Weight**|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos **float** para especificar el peso. Por ejemplo, **Weight**="100.01". El valor mínimo que se puede especificar para **Weight** es "0".|  
+|**Peso**|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos **float** para especificar el peso. Por ejemplo, **Weight**="100.01". El valor mínimo que se puede especificar para **Weight** es "0".|  
   
 ## <a name="element-characteristics"></a>Características de los elementos  
   

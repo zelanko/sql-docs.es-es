@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893105"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669951"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,17 +28,17 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \<columna de tabla >, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  \<> de expresión de tabla  
   
-## <a name="remarks"></a>Comentarios  
- El valor que proporciona la expresión de \<rango > argumento determina el orden decreciente de rango para las filas que se proporcionan en la \<expresión de tabla > argumento y el número de filas de nivel superior que se especifica en el \<se devuelve el argumento Count >.  
+## <a name="remarks"></a>Observaciones  
+ El valor proporcionado por la expresión de \< rango> argumento determina el orden decreciente de rango para las filas que se proporcionan en la \< expresión de tabla> argumento, y se devuelve el número de filas de nivel superior que se especifica en el \< argumento Count>.  
   
  La función Topcount se introdujo originalmente para habilitar las predicciones asociativas y, en general, genera los mismos resultados que una instrucción que incluye las cláusulas **Select Top** y **order by** . Obtendrá un mejor rendimiento para las predicciones asociativas si usa la función **PREDICT (DMX)** , que admite la especificación de un número de predicciones para devolver.  
   
- Sin embargo, hay situaciones en las que es posible que siga necesitando usar el número de recuentos. Por ejemplo, DMX no admite el calificador **Top** en una instrucción Sub-SELECT. La [función &#40;de&#41; DMX de PredictHistogram](../dmx/predicthistogram-dmx.md) tampoco admite la adición de **Top**.  
+ Sin embargo, hay situaciones en las que es posible que siga necesitando usar el número de recuentos. Por ejemplo, DMX no admite el calificador **Top** en una instrucción Sub-SELECT. La función [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) tampoco admite la adición de la **parte superior**.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes son consultas de predicción en el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero en el primer ejemplo se usa Topcount y en el segundo ejemplo se usa la función PREDICT.  
@@ -56,20 +56,20 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 > [!NOTE]  
 >  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, vea [crear una consulta Singleton en el diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |Modelo|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291283016|0.252695851|  
-|Water Bottle|2866|0.192620472|0.175205052|  
-|Patch kit|2113|0.142012232|0.132389356|  
-|Mountain Tire Tube|1992|0.133879965|0.125304948|  
-|Mountain-200|1755|0.117951475|0.111260823|  
-|Road Tire Tube|1588|0.106727603|0.101229538|  
-|Cycling Cap|1473|0.098998589|0.094256014|  
-|Fender Set - Mountain|1415|0.095100477|0.090718432|  
-|Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|Sport-100|4334|0,291283016|0,252695851|  
+|Water Bottle|2866|0,192620472|0,175205052|  
+|Patch kit|2113|0,142012232|0,132389356|  
+|Mountain Tire Tube|1992|0,133879965|0,125304948|  
+|Mountain-200|1755|0,117951475|0,111260823|  
+|Road Tire Tube|1588|0,106727603|0,101229538|  
+|Cycling Cap|1473|0,098998589|0,094256014|  
+|Fender Set - Mountain|1415|0,095100477|0,090718432|  
+|Mountain Bottle Cage|1367|0,091874454|0,087780332|  
+|Road Bottle Cage|1195|0,080314537|0,077173962|  
   
  La función Topcount toma los resultados de esta consulta y devuelve el número especificado de las filas con valores más pequeños.  
   
@@ -86,13 +86,13 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- El primer argumento de la función Topcount es el nombre de una columna de la tabla. En este ejemplo, la tabla anidada se devuelve mediante una llamada a la función PREDICT y el uso del argumento INCLUDE_STATISTICS.  
+ El primer argumento de la función Topcount es el nombre de una columna de la tabla. En este ejemplo, la tabla anidada se devuelve llamando a la función PREDICT y usando el argumento INCLUDE_STATISTICS.  
   
  El segundo argumento de la función Topcount es la columna de la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT para clasificar los resultados.  
   
  El tercer argumento de la función Topcount especifica el número de filas que se van a devolver, como un entero. Para obtener los tres productos de la parte superior, ordenados por $SUPPORT, se escribe 3.  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |Modelo|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
@@ -108,13 +108,13 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- Los resultados contienen las tres primeras predicciones ordenadas por el valor de compatibilidad. Puede reemplazar $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY para devolver predicciones clasificadas por probabilidad o ajustar la probabilidad. Para obtener más información, vea **PREDICT (DMX)** .  
+ Los resultados contienen las tres primeras predicciones ordenadas por el valor de compatibilidad. Puede reemplazar $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY para devolver predicciones clasificadas por probabilidad o ajustar la probabilidad. Para obtener más información, vea **PREDICT (DMX)**.  
   
-## <a name="see-also"></a>Vea también  
- [DMX &#40;de funciones&#41;](../dmx/functions-dmx.md)   
- [Funciones &#40;de predicción generales DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX &#40;BottomCount&#41;](../dmx/bottomcount-dmx.md)   
- [DMX de &#40;porcentaje&#41;](../dmx/toppercent-dmx.md)   
- [&#40;DMX de tops&#41;](../dmx/topsum-dmx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [&#41;BottomCount &#40;DMX](../dmx/bottomcount-dmx.md)   
+ [&#40;DMX&#41;](../dmx/toppercent-dmx.md)   
+ [&#40;DMX&#41;](../dmx/topsum-dmx.md)  
   
   

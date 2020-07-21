@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 210df5d533908e75e83b348ac6c9a84a22198f4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 004cc1e60158b96813ade8c5fc0f5612293f38f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780879"
 ---
-# <a name="mssqlserver17128"></a>MSSQLSERVER_17128
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|17128|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|17128|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|INIT_NOBUFSPACE|  
 |Texto del mensaje|initdata: memoria insuficiente para los búferes del kernel.|  

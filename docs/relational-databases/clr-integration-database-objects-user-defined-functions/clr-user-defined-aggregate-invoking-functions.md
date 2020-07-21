@@ -1,5 +1,6 @@
 ---
-title: Invocar funciones de agregado definido por el usuario CLR | Microsoft Docs
+title: Invocar funciones de agregado definidas por el usuario de CLR | Microsoft Docs
+description: En SQL Server integración CLR, use Transact-SQL SELECT para invocar los agregados definidos por el usuario CLR, sujetos a las reglas que se aplican a las funciones de agregado del sistema.
 ms.custom: ''
 ms.date: 01/15/2019
 ms.prod: sql
@@ -17,26 +18,26 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727888"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregado definido por el usuario de CLR: invocar funciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En las instrucciones SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede invocar agregados definidos por el usuario de Common Language Runtime (CLR), siguiendo todas las reglas que se aplican a las funciones de agregado del sistema.  
   
  Se aplican las siguientes reglas adicionales:  
   
--   El usuario actual debe tener **EXECUTE** permiso en el agregado definido por el usuario.  
+-   El usuario actual debe tener el permiso **Execute** en el agregado definido por el usuario.  
   
--   Agregados definidos por el usuario se deben invocar utilizando un nombre de dos partes en forma de *nombre_esquema.nombre_agrdu*.  
+-   Los agregados definidos por el usuario se deben invocar mediante un nombre de dos partes con el formato *schema_name. udagg_name*.  
   
--   El tipo de argumento del agregado definido por el usuario debe coincidir con o ser implícitamente convertible a la *input_type* del agregado, tal como se define en el **CREATE AGGREGATE** instrucción.  
+-   El tipo de argumento del agregado definido por el usuario debe coincidir o ser implícitamente convertible al *INPUT_TYPE* del agregado, como se define en la instrucción **Create Aggregate** .  
   
--   El tipo de valor devuelto del agregado definido por el usuario debe coincidir con el *return_type* en el **CREATE AGGREGATE** instrucción.  
+-   El tipo de valor devuelto del agregado definido por el usuario debe coincidir con el *return_type* en la instrucción **Create Aggregate** .  
   
 ## <a name="example-1"></a>Ejemplo 1  
  A continuación figura un ejemplo de una función de agregado definida por el usuario que concatena un conjunto de valores de cadena obtenido de una columna de una tabla:  
@@ -196,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sigue:  
+ Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manera siguiente:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se admite la ejecución de objetos de base de datos de Visual C++, como las funciones escalares, que se han compilado con la opción /clr:pure del compilador.  
   
- Al igual que con la mayoría de los agregados, la mayor parte de la lógica en el **Accumulate** método. Aquí, la cadena que se pasa como un parámetro a la **Accumulate** método se anexa a la **StringBuilder** objeto que se inicializó en el **Init** método. Suponiendo que esto no es la primera vez el **Accumulate** ha llamado al método, también se anexa una coma a la **StringBuilder** antes de anexar la cadena pasada. Al finalizar las tareas de cálculo, el **Terminate** llama el método, que devuelve el **StringBuilder** como una cadena.  
+ Al igual que con la mayoría de los agregados, la mayor parte de la lógica está en el método **ACCUMULATE** . Aquí, la cadena que se pasa como parámetro al método **ACCUMULATE** se anexa al objeto **StringBuilder** que se inicializó en el método **init** . Suponiendo que esta no es la primera vez que se ha llamado al método **ACCUMULATE** , también se anexa una coma a **StringBuilder** antes de anexar la cadena pasada. Al finalizar las tareas de cálculo, se llama al método **Terminate** , que devuelve **StringBuilder** como una cadena.  
   
  Considere, por ejemplo, una tabla con el siguiente esquema:  
   
@@ -241,7 +242,7 @@ GROUP BY BookID;
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>Ejemplo 2  
- El ejemplo siguiente muestra un agregado que tiene dos parámetros en la **Accumulate** método.  
+ En el ejemplo siguiente se muestra un agregado que tiene dos parámetros en el método **ACCUMULATE** .  
   
  [C#]  
   
@@ -441,7 +442,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregados definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9c2962ab632ba9ac8464fdd1c9ae8f2bda30744
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935136"
 ---
 # <a name="remote-servers"></a>Servidores remotos
   Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "62809880"
   
  La mayoría de las veces, no debe establecer opciones de configuración para los servidores remotos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece valores predeterminados en los equipos local y remoto a fin de permitir conexiones de servidores remotos.  
   
- Para que el acceso al servidor remoto funcione correctamente, la opción de configuración **remote access** se debe establecer en 1 tanto en el equipo local como en el remoto. (Esta es la configuración predeterminada).  **remote access** controla los inicios de sesión desde servidores remotos. Es posible restablecer esta opción de configuración con el procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para establecer la opción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la página **Conexiones de Propiedades del servidor** , use **Permitir conexiones remotas con este servidor**. Para llegar a la página **Conexiones de Propiedades del servidor** , en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, luego, haga clic en **Propiedades**. En la página **Propiedades del servidor** , haga clic en la página **Conexiones** .  
+ Para que el acceso al servidor remoto funcione correctamente, la opción de configuración **remote access** se debe establecer en 1 tanto en el equipo local como en el remoto. (Esta es la configuración predeterminada).  **remote access** controla los inicios de sesión desde servidores remotos. Es posible restablecer esta opción de configuración con el procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]sp_configure**de** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para establecer la opción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la página **Conexiones de Propiedades del servidor** , use **Permitir conexiones remotas con este servidor**. Para llegar a la página **Conexiones de Propiedades del servidor** , en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, luego, haga clic en **Propiedades**. En la página **Propiedades del servidor** , haga clic en la página **Conexiones** .  
   
  Desde el servidor local, puede deshabilitar una configuración de servidor remoto para impedir el acceso a ese servidor local por parte de usuarios que se encuentran en el servidor remoto con el que se complementa.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62809880"
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
 ### <a name="remote-server-security-example"></a>Ejemplo de seguridad para servidores remotos  
- Considere las instalaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguientes: **serverSend** and **serverReceive**. **serverReceive** está configurado para asignar un inicio de sesión entrante de **serverSend**, denominado **Sales_Mary**, a un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado de **serverReceive**, llamado **Alice**. Otro inicio de sesión entrante de **serverSend**, llamado **Joe**, está asignado a un inicio de sesión autenticado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **serverReceive**_,_ llamado **Joe**.  
+ Considere las instalaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siguientes: **serverSend** and **serverReceive**. **serverReceive** está configurado para asignar un inicio de sesión entrante de **serverSend**, denominado **Sales_Mary**, a un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticado de **serverReceive**, llamado **Alice**. Otro inicio de sesión entrante de **serverSend**, llamado **Joe**, está asignado a un inicio de sesión autenticado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en **serverReceive** _,_ llamado **Joe**.  
   
  En el siguiente ejemplo de código de Transact-SQL se configura `serverSend` para realizar llamadas RPC en `serverReceive`.  
   

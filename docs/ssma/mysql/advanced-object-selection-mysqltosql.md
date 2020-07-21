@@ -10,42 +10,42 @@ ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2e00eece4d8a3064806b401975aa299e76518f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061205"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Selección avanzada de objetos (MySQLToSQL)
-El **avanzada objeto sección** cuadro de diálogo le permite filtrar los objetos de base de datos mediante el uso de cadenas y las subcadenas en el nombre del objeto y, a continuación, seleccione o anule la selección de esos objetos. SSMA realiza operaciones de conversión y la migración en los objetos seleccionados.  
+El cuadro de diálogo **sección de objeto avanzado** permite filtrar los objetos de base de datos mediante cadenas y subcadenas en el nombre del objeto y, a continuación, seleccionar o anular la selección de esos objetos. SSMA realiza operaciones de conversión y migración en objetos seleccionados.  
   
-Para acceder a este cuadro de diálogo, haga clic en un explorador de metadatos y, a continuación, seleccione **selección avanzada de objeto**.  
+Para obtener acceso a este cuadro de diálogo, haga clic con el botón derecho en un explorador de metadatos y seleccione **selección avanzada de objetos**.  
   
-Al abrir el cuadro de diálogo, haga clic en **mostrar elementos de subcategorías** para mostrar todos los objetos que tienen los metadatos que se cargan en el proyecto. A continuación, puede escribir cadenas para filtrar los elementos. Por ejemplo, escriba la cadena "company" Mostrar todos los elementos con nombres que contengan esa cadena.  
+Cuando abra por primera vez el cuadro de diálogo, haga clic en **Mostrar elementos de subcategorías** para mostrar todos los objetos que tienen metadatos cargados en el proyecto. Después, puede escribir cadenas para filtrar los elementos. Por ejemplo, escriba la cadena "Company" para mostrar todos los elementos cuyos nombres incluyan esa cadena.  
   
-Antes de utilizar este cuadro de diálogo, puede forzar SSMA para cargar todos los metadatos de conversión de esquemas o guardar el proyecto.  
+Antes de utilizar este cuadro de diálogo, puede forzar a SSMA para cargar todos los metadatos, ya sea convirtiendo los esquemas o guardando el proyecto.  
   
 ## <a name="options"></a>Opciones  
-**Compruebe todos los elementos**  
-Agrega una marca de verificación junto a todos los elementos. Estos elementos se seleccionará inmediatamente en el Explorador de metadatos.  
+**Comprobar todos los elementos**  
+Agrega una marca de verificación junto a todos los elementos. Estos elementos se seleccionarán inmediatamente en el explorador de metadatos.  
   
-**Desactive todos los elementos**  
-Quita la marca de verificación junto a todos los elementos. Estos elementos se borrará inmediatamente en el Explorador de metadatos.  
+**Desactivar todos los elementos**  
+Quita la marca de verificación junto a todos los elementos. Estos elementos se borrarán inmediatamente en el explorador de metadatos.  
   
 **Modo de vista de lista**  
-Muestra elementos filtrados en una lista.  
+Muestra los elementos filtrados en una lista.  
   
 **Modo de vista de tabla**  
-Muestra elementos filtrados en una tabla.  
+Muestra los elementos filtrados en una tabla.  
   
-**Mostrar elementos sólo cargados**  
-Alterna la visualización de categorías o elementos. Cuando se selecciona este botón, SSMA muestra todos los elementos que coinciden con los criterios de filtro y los que se cargaron previamente. Cuando no se selecciona este botón, SSMA muestra las carpetas de categoría.  
+**Solo se muestran los elementos cargados**  
+Alterna la presentación de categorías o elementos. Cuando se selecciona este botón, SSMA muestra todos los elementos que coinciden con los criterios de filtro y los que se cargaron previamente. Cuando no se selecciona este botón, SSMA muestra las carpetas de categorías.  
   
 **Filter**  
-Escriba la cadena que desea usar para filtrar los elementos. Por ejemplo, para buscar los elementos disponibles que contienen la cadena "Id." en el nombre del elemento, escriba la cadena "ID" en el **filtro** cuadro.  
+Escriba la cadena que desea utilizar para filtrar elementos. Por ejemplo, para buscar todos los elementos disponibles que contengan la cadena "ID" en el nombre del elemento, escriba la cadena "ID" en el cuadro de **filtro** .  
   
-Si los elementos que coincidan con los criterios de filtro, aparecerán las categorías o elementos a medida que escribe la cadena. Para ver los elementos que coinciden, se recomienda que haga clic en el **muestra sólo los elementos cargados** botón.  
+Si los elementos coinciden con los criterios de filtro, las categorías o elementos aparecerán a medida que se escribe la cadena. Para ver los elementos coincidentes, se recomienda hacer clic en el botón **solo elementos cargados mostrados** .  
   
 **Borrar filtro**  
-Borra la **filtro** cuadro.  
+Borra el cuadro de **filtro** .  
   

@@ -1,5 +1,5 @@
 ---
-title: GetPermissions y SetPermissions métodos ejemplo (VB) | Microsoft Docs
+title: Ejemplo de métodos GetPermissions y SetPermissions (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], Visual Basic example
 - GetPermissions method [ADOX], Visual Basic example
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f87e7f9b32c123cae2918f89b92ac2928bb65c65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966243"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764899"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Ejemplo de métodos GetPermissions y SetPermissions (VB)
-Este ejemplo se muestra el [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) métodos. El código siguiente proporciona acceso completo para la tabla Orders para el usuario administrador.  
+En este ejemplo se muestran los métodos [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . El código siguiente proporciona acceso completo para la tabla Orders al usuario administrador.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -94,9 +94,9 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions (método, ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions (método, ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [GetPermissions (método) (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
+ [SetPermissions (método) (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
+ [Objeto user (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

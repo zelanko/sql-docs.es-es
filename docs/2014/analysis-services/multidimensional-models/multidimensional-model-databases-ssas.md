@@ -1,5 +1,5 @@
 ---
-title: Las bases de datos de modelos multidimensionales (SSAS) | Microsoft Docs
+title: Bases de datos de modelos multidimensionales (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966403d15843d7b2b572581d930f1c37416ddbe5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073516"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546057"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de datos de modelos multidimensionales (SSAS)
   Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una colección del orígenes de datos, vistas del origen de datos, cubos, dimensiones y roles. Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también puede incluir estructuras de minería de datos y ensamblados personalizados que proporcionan un método para agregar funciones definidas por el usuario a la base de datos.  
@@ -51,7 +50,7 @@ ms.locfileid: "66073516"
   
  [Cambie el nombre de una base de datos multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [Establecer la compatibilidad de nivel de base de datos Multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [Establecer el nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
  [Establecer propiedades de bases de datos multidimensionales &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
@@ -59,9 +58,9 @@ ms.locfileid: "66073516"
   
  [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>Vea también  
- [Conectar con una base de datos de Analysis Services en modo en línea](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Crear un proyecto de Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conectar en modo en línea a una base de datos de Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Cree un proyecto de Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [Consultar datos multidimensionales con MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

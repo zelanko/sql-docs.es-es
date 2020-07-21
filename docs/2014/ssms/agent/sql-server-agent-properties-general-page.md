@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245778"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058713"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Propiedades de Agente SQL Server (página General)
-  Utilice esta página para ver y modificar las propiedades generales del servicio del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y modificar las propiedades generales del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente.  
   
 ## <a name="options"></a>Opciones  
- **Estado del servicio**  
+ **Estado de servicio**  
  Muestra el estado actual del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Reiniciar SQL Server si se detiene inesperadamente**  
@@ -32,7 +31,7 @@ ms.locfileid: "63245778"
  **Reiniciar el Agente SQL Server automáticamente si se detiene inesperadamente**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reinicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene de forma inesperada.  
   
- **Nombre de archivo**  
+ **Extensión**  
  Especifica el nombre de archivo del registro de errores.  
   
  **...**  
@@ -47,7 +46,7 @@ ms.locfileid: "63245778"
  **Destinatario de NET SEND**  
  Escribe el nombre de un operador que recibirá una notificación mediante NET SEND de los mensajes que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe en el archivo de registro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores](operators.md)   
  [Registro de errores del Agente SQL Server](sql-server-agent-error-log.md)  
   

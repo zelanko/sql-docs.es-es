@@ -11,33 +11,33 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68256657"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Consola de SSMA para Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versión de Migration Assistant (SSMA) para Oracle ahora es accesible a través de una aplicación de consola en línea de comandos. La entrada a la aplicación para ejecutar los comandos de formulario de los archivos de script. Como una aplicación de consola, SSMA permite la comunicación de nivel de script, reduce el ciclo de migración y escala el esfuerzo de migración.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La versión de Migration Assistant (SSMA) para Oracle ahora es accesible a través de una aplicación de consola en la línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como aplicación de consola, SSMA habilita la interconexión de nivel de script, reduce el ciclo de migración y escala el trabajo de migración.  
   
-Esta sección explica el procedimiento para migrar la base de datos de Oracle mediante la aplicación de consola de SSMA.  
+En esta sección se explica el procedimiento para migrar la base de datos de Oracle mediante la aplicación de consola SSMA.  
   
-Los temas de esta sección incluyen:  
+Los temas descritos en esta sección incluyen:  
   
 |||  
 |-|-|  
-|**Temas**|**Descripción**|  
-|[Introducción a SSMA para Oracle consola &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explica el procedimiento para ejecutar la aplicación de consola.|  
-|[Opciones de línea de comandos en la consola SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Describe las opciones de línea de comandos y parámetros para que funcione la aplicación de consola SSMA.|  
-|[Creación de archivos de Script &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explica cómo crear un archivo de script.|  
-|[Creación de archivos de valor Variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|Explica cómo crear un archivo de valores de variable.|  
-|[Creación de los archivos de conexión de servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|Explica cómo crear un archivo de conexión de servidor.|  
-|[Ejecución de la consola SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|Describe la secuencia de comandos de archivo para que funcione la aplicación de consola SSMA.|  
-|[Trabajar con los archivos de Script de la consola de ejemplo &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|Describe la manera de personalizar con facilidad las secuencias de comandos que se han proporcionado en los archivos de ejemplo junto con el producto|  
-|[Administración de contraseñas &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|Describe sobre cifrado de contraseña y el descifrado y la información de contraseña de importación / exportación.|  
-|[Generación de informes &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Enumera los comandos para generar informes.|  
-|[Solución de problemas &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Proporciona información breve acerca de cómo solucionar problemas de migración.|  
+|**Tratados**|**Descripción**|  
+|[Introducción con SSMA para la consola de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explica el procedimiento para ejecutar la aplicación de consola.|  
+|[Opciones de la línea de comandos en la consola de SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Describe las opciones y los parámetros de la línea de comandos para utilizar la aplicación de consola SSMA.|  
+|[Crear archivos de script &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explica cómo crear un archivo de script.|  
+|[Crear archivos de valores de variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|Explica cómo crear un archivo de valores de variable.|  
+|[Crear los archivos de conexión del servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|Explica cómo crear un archivo de conexión de servidor.|  
+|[Ejecución de la consola de SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|Describe los comandos del archivo de script para que funcione la aplicación de consola SSMA.|  
+|[Trabajar con los archivos de script de la consola de ejemplo &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|Describe la manera de personalizar fácilmente los scripts que se han proporcionado en los archivos de ejemplo junto con el producto.|  
+|[Administrar contraseñas &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|Describe el cifrado y descifrado de contraseñas, así como la importación o exportación de información de contraseñas.|  
+|[Generar informes &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|Muestra los comandos para generar informes.|  
+|[Solución de problemas de &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Proporciona información breve acerca de cómo corregir problemas de migración.|  
   
-## <a name="see-also"></a>Vea también  
-[Introducción a SSMA para la consola de Oracle](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Introducción con SSMA para la consola de Oracle](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   

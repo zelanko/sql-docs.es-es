@@ -1,6 +1,6 @@
 ---
-title: Propiedades de memoria compartida | Microsoft Docs
-ms.custom: ''
+title: Propiedades de Memoria compartida
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: dc1704da-eacd-4d26-b529-c996f958ca4b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17a251e25eaf02ee0733f6d00a077bd4706db29a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f7c8a4dd37c0283fa6c122a7be4a7eb1f6b849fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058327"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306925"
 ---
 # <a name="shared-memory-properties"></a>Propiedades de Memoria compartida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

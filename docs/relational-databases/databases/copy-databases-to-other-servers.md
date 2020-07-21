@@ -1,5 +1,6 @@
 ---
 title: Copia de bases de datos en otros servidores | Microsoft Docs
+description: Obtenga información sobre cómo copiar una base de datos de SQL Server de un equipo a otro para realizar pruebas, para que esté disponible para las operaciones de ramas remotas o por otras razones.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a16eb1e7d6c94f87d77cac93c4f07f6ae251cd4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a347556196ff6732ef979fd36e93aff06611448
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763595"
 ---
 # <a name="copy-databases-to-other-servers"></a>Copiar bases de datos en otros servidores
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En ocasiones resulta útil copiar una base de datos de un equipo a otro para realizar pruebas, comprobar la coherencia, desarrollar software, ejecutar informes, crear una base de datos de reflejo o, quizás, poner la base de datos a disposición de las actividades de oficinas remotas.  
   
  Hay varias maneras de copiar una base de datos:  

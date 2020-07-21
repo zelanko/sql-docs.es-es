@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d75b811ba670c72aa4ce1ed15041b0b628f3f529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 595c4a12b32c6c456a1de27f8164c0ebf3629691
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898487"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Funciones FILESTREAM y FileTable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se describen las funciones del sistema relacionadas con las características FILESTREAM y FileTable.  
   

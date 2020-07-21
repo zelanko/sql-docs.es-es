@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ceda2ac8c7d5280515d28e489b0c568804a41242
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108351"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868411"
 ---
-# <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cierra el archivo de registro de errores actual del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y continúa el ciclo de números de extensión de registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como ocurre al reiniciar el servidor. El nuevo registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene una línea que indica que se ha creado el registro nuevo.  
   
@@ -44,13 +44,13 @@ sp_cycle_agent_errorlog
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente se inicia, actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cambia el nombre de registro de errores del agente a **SQLAgent.1**; **SQLAgent.1** se convierte en **SQLAgent.2**, **SQLAgent.2** se convierte en **SQLAgent.3**, y así sucesivamente. **sp_cycle_agent_errorlog** permite ciclo de archivos de registro de errores sin tener que detener e iniciar el servidor.  
+## <a name="remarks"></a>Observaciones  
+ Cada vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se inicia el agente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cambia el nombre del registro de errores actual del agente a **SQLAgent. 1**; **SQLAgent. 1** se convierte en **SQLAgent. 2**, **SQLAgent. 2** se convierte en **SQLAgent. 3**, etc. **sp_cycle_agent_errorlog** permite recorrer los archivos de registro de errores sin tener que detener e iniciar el servidor.  
   
- Este procedimiento almacenado se debe ejecutar desde la **msdb** base de datos.  
+ Este procedimiento almacenado se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de **sp_cycle_agent_errorlog** están restringidos a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para **sp_cycle_agent_errorlog** están restringidos a los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se realiza el ciclo del registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ EXEC dbo.sp_cycle_agent_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_cycle_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_cycle_errorlog &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cycle-errorlog-transact-sql.md)  
   
   

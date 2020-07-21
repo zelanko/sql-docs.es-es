@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_available_backups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140670"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052893"
 ---
-# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Devuelve una tabla de 0, una o más filas de los archivos de copia de seguridad disponibles para la base de datos especificada. Los archivos de copia de seguridad devueltos son copias de seguridad creadas por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
@@ -40,19 +39,19 @@ ms.locfileid: "68140670"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @database_name  
- El nombre de la base de datos. El @database_name es nvarchar (512).  
+ El nombre de la base de datos. Es de tipo @database_name nvarchar (512).  
   
 ## <a name="table-returned"></a>Tabla devuelta  
  La tabla tiene una restricción de clúster único en (database_guid, backup_start_date, first_lsn y backup_type).   
 Si se quita y se vuelve a crear una base de datos, se devuelven los conjuntos de copia de seguridad de todas las bases de datos. La salida se ordena por el database_guid, que identifica de forma única cada base de datos.   
 Si faltan datos en LSN que indican que hay una interrupción en la cadena de registros, la tabla contendrá una fila especial para cada segmento de LSN que falte.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|La dirección URL del archivo de copia de seguridad.|  
-|backup_type|NVARCHAR(6)|'DB' de la base de datos de copia de seguridad 'LOG' de la copia de seguridad del registro|  
+|backup_type|NVARCHAR (6)|' DB ' para la copia de seguridad de base de datos ' LOG ' para la copia de seguridad de registros|  
 |expiration_date|DATETIME|Fecha en la que se espera que este archivo sea eliminado. Esto se determina según la capacidad de recuperar la base de datos a un momento dado durante el período de retención especificado.|  
 |database_guid|UNIQUEIDENTIFIER|Valor GUID para la base de datos especificada.  El GUID identifica de forma única una base de datos.|  
 |first_lsn|NUMERIC(25, 0)|Número de secuencia de registro de la primera entrada de registro del conjunto de copia de seguridad o de la más antigua. Puede ser NULL.|  
@@ -63,7 +62,7 @@ Si faltan datos en LSN que indican que hay una interrupción en la cadena de reg
 |last_recovery_fork_id|UNIQUEIDENTIFIER|Número de identificación de la bifurcación de recuperación final.|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|Id. de la bifurcación de recuperación inicial. Para las copias de seguridad de datos, first_recovery_fork_guid es igual a last_recovery_fork_guid.|  
 |fork_point_lsn|NUMERIC(25, 0)|Si first_recovery_fork_id no es igual que last_recovery_fork_id, este es el número de secuencia de registro del punto de bifurcación. De lo contrario, este valor es NULL.|  
-|availability_group_guid|UNIQUEIDENTIFIER|Si una base de datos es una base de datos Always On, este es el GUID del grupo de disponibilidad. En caso contrario, este valor es NULL.|  
+|availability_group_guid|UNIQUEIDENTIFIER|Si una base de datos es una base de datos Always On, este es el GUID del grupo de disponibilidad. De lo contrario, este valor es NULL.|  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error).  
@@ -71,19 +70,19 @@ Si faltan datos en LSN que indican que hay una interrupción en la cadena de reg
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere **seleccione** permisos en esta función.  
+ Requiere permisos **Select** en esta función.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se enumeran todas las copias de seguridad disponibles a través de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos 'MyDB'  
+ En el ejemplo siguiente se enumeran todas las copias de seguridad disponibles a través [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de para la base de datos ' MyDB '  
   
 ```  
 SELECT *   
-FROM managed_backup.fn_available_backups ('MyDB')  
+FROM msdb.managed_backup.fn_available_backups ('MyDB')  
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad administrada de SQL Server para Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server copia de seguridad administrada en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Restaurar a partir de copias de seguridad archivadas en Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

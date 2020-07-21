@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 827f060b309a7a620fd448554b074f45d78d3cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059136"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>Quitar UDT&#39;s con el nombre de los tipos de datos de fecha y hora reservados
   El Asesor de actualizaciones detectó un tipo definido por el usuario (UDT) que se denomina después de un término reservado para los tipos de datos `date` o `time`.  

@@ -1,5 +1,6 @@
 ---
 title: PH timeout (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción "Tiempo de espera de PH". Vea cómo limita el tiempo que el controlador de protocolo de texto completo asigna a la conexión a una base de datos de SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - protocols [SQL Server], timing out
 - ph timeout option
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 3d918c816bc4a4053435fcd5d71f94c09f9c4ace
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0173d6e5c5b10ac05b757f483518999fc526992
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730961"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH timeout (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use la opción ph timeout para especificar el tiempo, en segundos, que el controlador de protocolo de texto completo debe esperar para conectarse a una base de datos antes de que se agote el tiempo de espera. El valor predeterminado es 60 segundos. Aumente el valor de ph timeout cuando se esté agotando el tiempo de espera de los intentos de conexión debido a problemas de red temporales.  
   

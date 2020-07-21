@@ -1,7 +1,7 @@
 ---
 title: Unión de SQL Server en Linux a Active Directory
 titleSuffix: SQL Server
-description: ''
+description: En este artículo se proporcionan instrucciones para unir un equipo host Linux con SQL Server a un dominio de AD. Puede usar un paquete SSSD integrado, o bien proveedores de AD de terceros.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -9,25 +9,25 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: ff058b2e326399fa6d04503d984d540fba8efc1b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305280"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896969"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Unión de SQL Server en un host de Linux a un dominio de Active Directory
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se proporcionan instrucciones generales para unir un equipo host de Linux de SQL Server a un dominio de Active Directory (AD). Hay dos métodos: usar un paquete SSSD integrado o emplear proveedores ajenos de Active Directory. Ejemplos de productos de unión a dominio ajenos son [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) y [Centrify](https://www.centrify.com/). En esta guía se incluyen los pasos necesarios para comprobar la configuración de Active Directory, aunque no está concebida para proporcionar instrucciones sobre cómo unir un equipo a un dominio cuando se usan utilidades de terceros.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de configurar la autenticación de Active Directory, debe configurar un controlador de dominio de Active Directory, Windows, en la red. Luego, una el host de SQL Server en Linux a un dominio de Active Directory.
 
 > [!IMPORTANT]
-> Los pasos de ejemplo de este artículo sirven solo como orientación. Los pasos reales pueden diferir ligeramente en cada entorno en función de cómo esté configurado el entorno global. Póngase en contacto con los administradores del sistema y del dominio del entorno para obtener información concreta de configuración, de personalización y de solución de problemas necesaria.
+> Los pasos de ejemplo que se describen en este artículo son solo para instrucciones y hacen referencia a los sistemas operativos Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x y SUSE Enterprise Linux (SLES) 12. Los pasos reales pueden diferir ligeramente en cada entorno en función de cómo esté configurado el entorno global y la versión del sistema operativo. Por ejemplo, Ubuntu 18.04 usa netplan, mientras que Red Hat Enterprise Linux (RHEL) 8.x usa nmcli, entre otras herramientas, para administrar y configurar la red. Se recomienda que se ponga en contacto con los administradores del sistema y del dominio del entorno para obtener información concreta de utillaje, configuración, personalización y solución de problemas necesaria.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Comprobación de la conexión a un controlador de dominio
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 Si se produce un error en cualquiera de estas comprobaciones de nombre, actualice la lista de búsqueda de dominios. En las secciones siguientes se proporcionan instrucciones para Ubuntu, Red Hat Enterprise Linux (RHEL) y SUSE Linux Enterprise Server (SLES), respectivamente.
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Edite el archivo **/etc/network/interfaces** para que el dominio de Active Directory esté en la lista de búsqueda de dominios:
 
@@ -71,7 +71,7 @@ Si se produce un error en cualquiera de estas comprobaciones de nombre, actualic
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Edite el archivo **/etc/sysconfig/network-scripts/ifcfg-eth0** para que el dominio de Active Directory esté en la lista de búsqueda de dominios. O bien edite otro archivo de configuración de interfaz según corresponda:
 
@@ -100,7 +100,7 @@ Si se produce un error en cualquiera de estas comprobaciones de nombre, actualic
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Edite el archivo **/etc/sysconfig/network/config** para que la dirección IP del controlador de dominio de Active Directory se use para las consultas de DNS y el dominio de Active Directory esté en la lista de búsqueda de dominios:
 
@@ -129,7 +129,7 @@ Una vez comprobada la configuración básica y la conectividad con el controlado
 - [Opción 1: usar un paquete SSSD](#option1)
 - [Opción 2: usar utilidades de proveedor de openldap de terceros](#option2)
 
-### <a id="option1"></a> Opción 1: usar un paquete SSSD para unir a dominio de AD
+### <a name="option-1-use-sssd-package-to-join-ad-domain"></a><a id="option1"></a> Opción 1: usar un paquete SSSD para unir a dominio de AD
 
 Este método une el host de SQL Server a un dominio de AD mediante paquetes **realmd** y **sssd**.
 
@@ -203,14 +203,14 @@ Siga los pasos siguientes para unir un host de SQL Server a un dominio de Active
 
 Para obtener más información, vea la documentación de Red Hat para [detectar y unir dominios de identidad](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Opción 2: usar utilidades de proveedor de openldap de terceros
+### <a name="option-2-use-third-party-openldap-provider-utilities"></a><a id="option2"></a> Opción 2: usar utilidades de proveedor de openldap de terceros
 
 Puede usar utilidades de terceros como [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) o [Centrify](https://www.centrify.com/). En este artículo no se consignan los pasos para cada utilidad individual. Antes de continuar, debe usar una de estas utilidades para unir el host de Linux para SQL Server al dominio.  
 
 SQL Server no usa el código ni la biblioteca del integrador de terceros para las consultas relacionadas con AD. SQL Server siempre consulta AD mediante llamadas a la biblioteca openldap directamente en esta configuración. Los integradores de terceros solo se usan para unir el host de Linux al dominio de AD; SQL Server no tiene ninguna comunicación directa con estas utilidades.
 
 > [!IMPORTANT]
-> Vea las recomendaciones sobre el uso de la opción de configuración **mssql-conf** `network.disablesssd` en la sección **Opciones de configuración adicionales** del artículo [Usar la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
+> Vea las recomendaciones sobre el uso de la opción de configuración **mssql-conf** `network.disablesssd` en la sección **Opciones de configuración adicionales** del artículo [Uso de la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
 
 Compruebe que **/etc/krb5.conf** se ha configurado correctamente. En el caso de la mayoría de los proveedores de Active Directory ajenos, esta configuración se realiza automáticamente. No obstante, busque los siguientes valores en **/etc/krb5.conf** para evitar problemas futuros:
 

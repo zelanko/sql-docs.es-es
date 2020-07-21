@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe7c390f650a505ff79eb0be5bdfdac2eb9d9186
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750969"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar el tamaño de la tabla y el archivo de seguimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Los resultados de Seguimiento de SQL difieren en cuanto a tamaño en función de las clases de evento que se incluyen en el seguimiento y la forma en que se utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Si realiza el seguimiento de clases de evento que se producen con frecuencia, puede minimizar la cantidad de datos que recopila el seguimiento estableciendo el tamaño máximo del archivo o el número máximo de filas. Si especifica el tamaño máximo del archivo o las filas, se garantiza que el archivo o la tabla de seguimiento no crecerán más allá del límite especificado.  
   
 > [!NOTE]  
 >  Si guarda datos del seguimiento en un archivo que ya existe, puede anexar datos al archivo o sobrescribirlo. Si decide anexar datos al archivo y el archivo de seguimiento ya ha alcanzado o supera el tamaño máximo de archivo especificado, se le ofrece la posibilidad de aumentar el tamaño máximo de archivo o especificar un archivo nuevo. Lo mismo ocurre con las tablas de seguimiento.  
   
-## <a name="maximum-file-size"></a>Tamaño máximo del archivo  
+## <a name="maximum-file-size"></a>Tamaño de archivo máximo  
  Un seguimiento con un tamaño máximo de archivo deja de guardar información de seguimiento en el archivo una vez que se ha alcanzado el tamaño máximo del archivo. Esta opción le permite agrupar eventos en archivos más pequeños y más fáciles de administrar. Además, al limitar el tamaño del archivo, la ejecución de seguimientos desatendidos es más segura, ya que el seguimiento se detiene al alcanzar el tamaño máximo del archivo. Para establecer el tamaño máximo de archivo de los seguimientos creados puede utilizar procedimientos almacenados de Transact-SQL o el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Hay un límite superior de 1 gigabyte (GB) para la opción de tamaño máximo del archivo. El tamaño máximo predeterminado de archivo es de 5 megabytes (MB).  

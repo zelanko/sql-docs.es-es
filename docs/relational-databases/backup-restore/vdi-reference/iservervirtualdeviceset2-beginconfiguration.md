@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: fea109e55b9efa5619bdccb11d692ffebd1a6847
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: d188c79a558fcfe03b713a973cf0681822e24ba5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847486"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887614"
 ---
 # <a name="iservervirtualdeviceset2beginconfiguration-vdi"></a>IServerVirtualDeviceSet2::BeginConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 El servidor invoca la función **BeginConfiguration** para empezar la configuración del conjunto de dispositivos virtuales.
 
@@ -54,7 +54,7 @@ HRESULT IServerVirtualDeviceSet2::BeginConfiguration (
 | VD_E_ABORT | Se ha invocado SignalAbort. |
 | VD_E_PROTOCOL | El conjunto de dispositivos virtuales no se encuentra en el estado Conectado. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Después de invocar esta función, el conjunto de dispositivos virtuales pasa al estado Configurable, en el que se decide el diseño del búfer.
 Una vez establecida la configuración básica (según los parámetros), estos valores permanecen fijos durante la vida del conjunto de dispositivos virtuales. La propiedad de alineación del conjunto de dispositivos virtuales se usa para controlar la alineación de los búferes de datos. Este valor establece un valor de alineación mínimo que se puede invalidar de forma individual en cada búfer.

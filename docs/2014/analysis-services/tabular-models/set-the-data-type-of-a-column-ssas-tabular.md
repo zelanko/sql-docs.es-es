@@ -1,5 +1,5 @@
 ---
-title: Establezca el tipo de datos de una columna (SSAS Tabular) | Microsoft Docs
+title: Establecer el tipo de datos de una columna (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938666"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Establecer el tipo de datos de una columna (SSAS tabular)
   Cuando se importan o se pegan datos en un modelo, el diseñador de modelos detecta automáticamente los tipos de datos y los aplica. Después de haber agregado los datos al modelo, puede modificar manualmente el tipo de datos de una columna para cambiar el modo en que se almacenan los datos. Si solo desea cambiar el formato de visualización de los datos sin cambiar la forma de almacenarlos, puede hacer eso en su lugar.  
@@ -50,7 +49,7 @@ ms.locfileid: "66066611"
   
 |Tipos de datos de los modelos|  
 |----------------------|  
-|Texto<br /><br /> Decimal Number<br /><br /> Whole Number<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> date|  
+|Texto<br /><br /> Decimal Number<br /><br /> Whole Number<br /><br /> Moneda<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  Si encuentra que sus datos tienen un tipo de datos equivocado, o al menos diferente al que deseaba, tiene varias opciones:  
   
@@ -65,9 +64,9 @@ ms.locfileid: "66066611"
   
  Si se admite el tipo de datos, pero el diseñador de modelos detecta valores que no se admiten en el nuevo tipo de datos, obtendrá otro error y deberá corregir los valores de datos antes de continuar.  
   
- Para obtener información detallada sobre los tipos de datos que se usan en los modelos semánticos de Business Intelligence, cómo se convierten implícitamente y cómo se usan los diferentes tipos de datos en las fórmulas, vea [Data Types Supported &#40;SSAS Tabular&#41;](data-types-supported-ssas-tabular.md).  
+ Para obtener información detallada sobre los tipos de datos que se usan en los modelos semánticos de Business Intelligence, cómo se convierten implícitamente y cómo se usan los diferentes tipos de datos en las fórmulas, vea [Tipos de datos compatibles &#40;SSAS tabular&#41;](data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de datos compatibles &#40;SSAS tabular&#41;](data-types-supported-ssas-tabular.md)  
   
   

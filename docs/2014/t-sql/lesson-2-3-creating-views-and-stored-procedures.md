@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76f6ecec446536191e8be4b05547ba5fd44c9d8d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040543"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Crear vistas y procedimientos almacenados
   Ahora que Mary puede tener acceso a la base de datos **TestData** , puede que desee crear algunos objetos de base de datos, como una vista o un procedimiento almacenado y concederle a Mary acceso a los mismos. Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
@@ -79,7 +78,7 @@ ms.locfileid: "68211186"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Conceder acceso a un objeto de base de datos](lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   

@@ -1,10 +1,9 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/10/2017
+description: Referencia de Transact-SQL para la instrucción CREATE TRIGGER, que se usa para crear un desencadenador DML, DDL o logon.
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: mathoma
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -28,15 +27,16 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 245342ac9495e1e4331453f8869e2e6df46a1c1e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.reviewer: mathoma
+ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190364"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766950"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 Crea un desencadenador DML, DDL o logon. Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento en el servidor de bases de datos. Los desencadenadores DML se ejecutan cuando un usuario intenta modificar datos mediante un evento de lenguaje de manipulación de datos (DML). Los eventos DML son instrucciones INSERT, UPDATE o DELETE de una tabla o vista. Estos desencadenadores se activan cuando se desencadena cualquier evento válido, con independencia de que las filas de la tabla se vean o no afectadas. Para más información, consulte [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
@@ -53,9 +53,9 @@ Los desencadenadores LOGON se activan en respuesta al evento LOGON que se genera
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="sql-server-syntax"></a>Sintaxis de SQL Server  
   
-``` 
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -77,7 +77,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-``` 
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -96,7 +96,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-``` 
+```syntaxsql
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -112,7 +112,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```syntaxsql
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -127,9 +127,9 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>Sintaxis  
+## <a name="azure-sql-database-syntax"></a>Sintaxis de Azure SQL Database  
   
-``` 
+```syntaxsql
 -- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -145,7 +145,7 @@ ON { table | view }
   
 ```  
   
-```  
+```syntaxsql
 -- Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -179,12 +179,12 @@ DATABASE
 Aplica el ámbito de un desencadenador DDL a la base de datos actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en la base de datos actual.  
   
 ALL SERVER  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 Aplica el ámbito de un desencadenador DDL o logon al servidor actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en cualquier lugar del servidor actual.  
   
 WITH ENCRYPTION  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 Ofusca el texto de la instrucción CREATE TRIGGER. El uso de WITH ENCRYPTION impide que el desencadenador se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION no se puede especificar para desencadenadores CLR.  
   
@@ -206,9 +206,7 @@ Garantiza que las tablas a las que un desencadenador hace referencia no se pueda
 Esta opción es necesaria para desencadenadores en tablas optimizadas para memoria y no se admite en desencadenadores de tablas tradicionales.  
   
 FOR | AFTER  
-AFTER especifica que el desencadenador DML solo se activa cuando todas las operaciones especificadas en la instrucción SQL desencadenadora se han iniciado correctamente. Además, todas las acciones referenciales en cascada y las comprobaciones de restricciones también deben ser correctas para que este desencadenador se active.  
-  
-AFTER es el valor predeterminado cuando solo se especifica la palabra clave FOR.  
+FOR o AFTER especifica que el desencadenador DML solo se activa cuando todas las operaciones especificadas en la instrucción SQL desencadenadora se han iniciado correctamente. Además, todas las acciones referenciales en cascada y las comprobaciones de restricciones también deben ser correctas para que este desencadenador se active.  
   
 No puede definir desencadenadores AFTER en vistas.  
   
@@ -217,7 +215,7 @@ Especifica que se inicia el desencadenador DML *en lugar de* la instrucción SQL
   
 Como máximo, puede definir un desencadenador INSTEAD OF por cada instrucción INSERT, UPDATE o DELETE en una tabla o vista. También puede definir otras vistas en las vistas que tengan su propio desencadenador INSTEAD OF.  
   
-No puede definir desencadenadores INSTEAD OF en vistas actualizables que usan WITH CHECK OPTION. Al hacerlo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se agrega un desencadenador INSTEAD OF a una vista actualizable para la que se especificó WITH CHECK OPTION. Puede quitar esta opción mediante ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
+No puede definir desencadenadores INSTEAD OF en vistas actualizables que usan WITH CHECK OPTION. Al hacerlo se genera un error cuando se agrega un desencadenador INSTEAD OF a una vista actualizable para la que se ha especificado WITH CHECK OPTION. Puede quitar esta opción mediante ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Especifica las instrucciones de modificación de datos que activan el desencadenador DML cuando se intenta en esta tabla o vista. Especifique al menos una opción. Use cualquier combinación de estas opciones en cualquier orden en la definición del desencadenador.  
@@ -238,7 +236,7 @@ El nombre de un agrupamiento predefinido de eventos de lenguaje [!INCLUDE[tsql](
 Una vez que CREATE TRIGGER ha terminado de ejecutarse, *event_group* también actúa como una macro al agregar los tipos de eventos que comprende a la vista de catálogo sys.trigger_events.  
   
 NOT FOR REPLICATION  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 Indica que el desencadenador no debe ejecutarse cuando un agente de replicación modifica la tabla involucrada en el mismo.  
   
@@ -266,7 +264,8 @@ Los desencadenadores DDL y logon capturan información acerca del evento desenca
   
 Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   
-\< method_specifier > **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+\< method_specifier > 
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 En el caso de un desencadenador CLR, especifica el método de enlace de un ensamblado con el desencadenador. El método no debe tomar argumentos y debe devolver void. *class_name* debe ser un identificador válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe existir como clase en el ensamblado con visibilidad de ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza '.' para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por delimitadores de tipo [ ] o " ". La clase no puede ser anidada.  
   
@@ -514,7 +513,7 @@ GO
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. Usar un desencadenador DDL con ámbito de servidor  
 En el ejemplo siguiente se utiliza un desencadenador DDL para imprimir un mensaje si se produce un evento CREATE DATABASE en la instancia actual del servidor, y se utiliza la función `EVENTDATA` para recuperar el texto de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente. Para obtener más ejemplos que usan EVENTDATA en desencadenadores DDL, vea [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md).  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -532,7 +531,7 @@ GO
 ### <a name="f-using-a-logon-trigger"></a>F. Usar un desencadenador LOGON  
 El ejemplo siguiente de desencadenador logon rechaza un intento de iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como miembro del inicio de sesión *login_test* si ya hay tres sesiones de usuario ejecutándose con ese inicio de sesión.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql  
 USE master;  

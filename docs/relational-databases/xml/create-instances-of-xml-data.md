@@ -1,5 +1,6 @@
 ---
 title: Creación de instancias de datos XML | Microsoft Docs
+description: Obtenga información sobre cómo crear instancias de datos XML mediante la carga masiva, las asignaciones de constantes, la instrucción SELECT y la cláusula FOR XML, o en función de las instancias de cadenas de conversión de tipos.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac342c20eb38411c4b0d1d689c34a70cda04b873
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752575"
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo generar las instancias XML.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podrá generar instancias XML de las formas siguientes:  
@@ -216,7 +217,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="see-also"></a>Consulte también  
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

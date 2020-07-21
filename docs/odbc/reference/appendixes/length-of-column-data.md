@@ -14,22 +14,22 @@ helpviewer_keywords:
 - cursor library [ODBC], cache
 - cache [ODBC]
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2998eace4772624a1e6590ab2541577147f5c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0b7ad515661cce4c5b1d407be768cc3da131bb4
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041613"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304936"
 ---
 # <a name="length-of-column-data"></a>Longitud de datos de columna
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- La biblioteca de cursores crea un búfer en la memoria caché para cada búfer de longitud/indicador enlazado para el conjunto de resultados con **SQLBindCol**. Lo utiliza los valores de estos búferes para construir un **donde** cláusula cuando emula posicionada update o delete. Cuando recupera los datos de origen de datos y cuando ejecuta las instrucciones update posicionadas actualiza estos búferes de los búferes de conjunto de filas.  
+ La biblioteca de cursores crea un búfer en la memoria caché para cada búfer de longitud/indicador enlazado al conjunto de resultados con **SQLBindCol**. Usa los valores de estos búferes para construir una cláusula **Where** cuando emula instrucciones UPDATE o DELETE posicionadas. Actualiza estos búferes de los búferes del conjunto de filas cuando captura datos del origen de datos y cuando ejecuta instrucciones Update posicionadas.  
   
- Si el tipo C de un búfer de datos es SQL_C_CHAR o SQL_C_BINARY y el valor de longitud/indicador es SQL_NTS, la longitud de cadena de los datos se coloca en el búfer de longitud/indicador.  
+ Si el tipo C de un búfer de datos es SQL_C_CHAR o SQL_C_BINARY y el valor de longitud/indicador es SQL_NTS, la longitud de la cadena de los datos se coloca en el búfer de longitud/indicador.  
   
 > [!NOTE]  
->  La biblioteca de cursores no actualiza su caché para una columna si **StrLen_or_IndPtr* en el conjunto de filas correspondiente búfer es SQL_DATA_AT_EXEC ni el resultado de la macro SQL_LEN_DATA_AT_EXEC.
+>  La biblioteca de cursores no actualiza su memoria caché para una columna si **StrLen_or_IndPtr* en el búfer del conjunto de filas correspondiente es SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC.

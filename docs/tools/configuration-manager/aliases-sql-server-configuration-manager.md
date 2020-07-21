@@ -1,6 +1,6 @@
 ---
-title: Alias (Administrador de configuración de SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Alias (Administrador de configuración de SQL Server)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 7dc5d029-a1ed-4c13-a5c2-2aafb0f7866f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ba080ecb9d93a36c28f730ac8f77f3f040d0312
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 15624da8e22932f90dadfd7568c9266824f26afb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010390"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306591"
 ---
 # <a name="aliases-sql-server-configuration-manager"></a>Alias (Administrador de configuración de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

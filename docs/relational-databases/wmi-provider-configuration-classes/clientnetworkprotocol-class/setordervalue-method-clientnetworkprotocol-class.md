@@ -1,6 +1,6 @@
 ---
-title: Método SetOrderValue (clase ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Método SetOrderValue (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 161e733e89bfcd8593897483c97dd0d49dab8f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6599e11cbcbebebf01a3859353df366b46c85994
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040821"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881073"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Método SetOrderValue (clase ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Selecciona el protocolo con el valor de orden especificado en la lista de protocolos del cliente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -37,7 +37,7 @@ object.SetOrderValue(OrderValue)
   
 ## <a name="parts"></a>Partes  
  *object*  
- Objeto de la [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ A [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parámetros  
   
@@ -50,7 +50,7 @@ object.SetOrderValue(OrderValue)
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de los protocolos de cliente (pestaña Ordenar)](https://technet.microsoft.com/library/ms187884.aspx)  
   
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072587"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535796"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Agregar o eliminar una jerarquía definida por el usuario
   Las jerarquías definidas por el usuario se pueden agregar a una dimensión o quitar de ella en la pestaña **Estructura de dimensión** del Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Al agregar una jerarquía definida por el usuario, no está a disposición de los usuarios hasta que se crea una instancia de ella en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y se procesa la dimensión. Para obtener más información, consulte [bases de datos modelo multidimensionales &#40;SSAS&#41; ](multidimensional-model-databases-ssas.md) y [procesamiento del objeto de modelo Multidimensional](processing-a-multidimensional-model-analysis-services.md).  
+ Al agregar una jerarquía definida por el usuario, no está a disposición de los usuarios hasta que se crea una instancia de ella en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y se procesa la dimensión. Para obtener más información, vea bases de datos de [modelos multidimensionales &#40;SSAS&#41;](multidimensional-model-databases-ssas.md) y [procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>Para agregar una jerarquía definida por el usuario a una dimensión  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66072587"
   
 5.  Si lo desea, puede modificar las propiedades de la jerarquía definida por el usuario o sus niveles.  
   
-     Por ejemplo, quizá quiera especificar un nombre para la jerarquía definida por el usuario, cambiar el nombre de alguno de sus niveles y definir un nombre personalizado para el nivel Todos. Para obtener más información, consulte [propiedades de la jerarquía de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md), y [propiedades &#91;Paved sobre&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
+     Por ejemplo, quizá quiera especificar un nombre para la jerarquía definida por el usuario, cambiar el nombre de alguno de sus niveles y definir un nombre personalizado para el nivel Todos. Para obtener más información, vea [propiedades de jerarquía de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)y propiedades de [nivel &#91;Paved sobre&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md).  
   
     > [!NOTE]  
     >  De forma predeterminada, una jerarquía definida por el usuario simplemente es una ruta de acceso que permite a los usuarios profundizar para obtener información. Sin embargo, si hay relaciones entre los niveles, puede mejorar el rendimiento de las consultas configurando relaciones de atributo entre los niveles. Para obtener más información, vea [Relaciones de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) y [Definir relaciones de atributo](attribute-relationships-define.md).  
@@ -53,15 +52,15 @@ ms.locfileid: "66072587"
   
 -   En la pestaña **Estructura de dimensión** , haga clic en la jerarquía definida por el usuario que quiera quitar en el panel **Jerarquías** . En la barra de herramientas, haga clic en **Eliminar**.  
   
-     - O bien  
+     - O  
   
 -   Haga clic con el botón derecho en la jerarquía definida por el usuario que quiera quitar en el panel **Jerarquías** y, después, haga clic en **Eliminar**.  
   
-     - O bien  
+     - O  
   
 -   Arrastre la jerarquía definida por el usuario fuera de de la superficie de diseño.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Crear jerarquías definidas por el usuario](user-defined-hierarchies-create.md)  
   

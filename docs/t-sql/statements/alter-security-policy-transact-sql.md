@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 6aefcef269a1eb361473f46471812fb85209cb4a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72173857"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381099"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Modifica una directiva de seguridad.  
   
@@ -35,7 +35,7 @@ Modifica una directiva de seguridad.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql  
+```syntaxsql
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -55,7 +55,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 security_policy_name  
 El nombre de la directiva de seguridad. Los nombres de directivas de seguridad deben seguir las reglas de los identificadores y deben ser únicos en la base de datos y para su esquema.  
   
@@ -88,7 +91,7 @@ Indica que la directiva de seguridad no debe ejecutarse cuando un agente de repl
 table_schema_name.table_name  
 Es la tabla de destino del predicado de seguridad aplicado. Puede haber varias directivas de seguridad deshabilitadas que tengan como destino una sola tabla, pero no puede haber varias de ellas habilitadas al mismo tiempo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La instrucción ALTER SECURITY POLICY está en el ámbito de una transacción. Si se revierte la transacción, también se revierte la instrucción.  
   
 Al utilizar las funciones de predicado con tablas optimizadas para memoria, las directivas de seguridad deben incluir **SCHEMABINDING** y utilizar la sugerencia de compilación **WITH NATIVE_COMPILATION**. El argumento SCHEMABINDING no se puede intercambiar por la instrucción ALTER porque se aplica a todos los predicados. Para cambiar la vinculación del esquema, debe quitar y volver a crear la directiva de seguridad.  

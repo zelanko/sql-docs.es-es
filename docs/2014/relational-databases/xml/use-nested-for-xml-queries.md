@@ -11,18 +11,17 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60c4198697f8d19c9b2e5bc1b415e0787861d40a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061229"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML anidadas
-  El `xml` tipo de datos y el [directiva TYPE en consultas FOR XML](type-directive-in-for-xml-queries.md) permiten que el XML devuelto por las consultas FOR XML para procesarse en el servidor, así como en el cliente.  
+  El `xml` tipo de datos y la [Directiva Type en las consultas for XML](type-directive-in-for-xml-queries.md) permiten que el XML devuelto por las consultas for XML se procese en el servidor y en el cliente.  
   
 ## <a name="processing-with-xml-type-variables"></a>Procesar con variables de tipo xml  
  Puede asignar el resultado de la consulta FOR XML a una variable de tipo `xml`, o utilizar XQuery para consultar el resultado y asignarlo a una variable de tipo `xml` para seguir procesándolo.  
@@ -57,7 +56,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <myRoot>  
@@ -76,7 +75,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  

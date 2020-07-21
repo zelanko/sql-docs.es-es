@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 918890142acb736976d642161e2e7cc1f54e3533
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784584"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cifra los datos usando una clave simétrica.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68135853"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }  
     [, { add_authenticator | @add_authenticator }  
@@ -65,14 +65,14 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  @authenticator  
  Es una variable que contiene los datos de los que se derivará un autenticador.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary** con un tamaño máximo de 8000 bytes.  
   
  Devuelve NULL si la clave no está abierta, si la clave no existe o si se trata de una clave RC4 desusada y la base de datos no está en el nivel de compatibilidad 110 o superior.  
  
  Devuelve NULL si el valor *cleartext* es NULL.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  EncryptByKey usa una clave simétrica. Esta clave debe estar abierta. Si la clave simétrica ya está abierta en la sesión actual, no tiene que abrirla de nuevo en el contexto de la consulta.  
   
  El autenticador le ayudará a impedir la sustitución de todo el valor de los campos cifrados. Por ejemplo, considere la siguiente tabla de datos de nóminas:  
@@ -95,12 +95,12 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 >  El uso de las funciones de cifrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] junto con el valor ANSI_PADDING OFF podría provocar la pérdida de datos debido a las conversiones implícitas. Para más información sobre ANSI_PADDING, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
- La funcionalidad ilustrada en los siguientes ejemplos se basa en claves y certificados que se crean en [Cómo: Cifrar una columna de datos](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
+ Las funciones que se muestran en estos ejemplos se basan en claves y certificados creados en [Cómo cifrar una columna de datos](../../relational-databases/security/encryption/encrypt-a-column-of-data.md).  
   
 ### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>A. Cifrar una cadena con una clave simétrica  
  En el ejemplo siguiente se agrega una columna a la tabla `Employee` y, a continuación, se cifra el valor del número de seguridad social almacenado en la columna `NationalIDNumber`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -123,7 +123,7 @@ GO
   
 ### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>B. Cifrar un registro junto con un valor de autenticación  
   
-```  
+```sql 
 USE AdventureWorks2012;  
   
 -- Create a column in which to store the encrypted data.  

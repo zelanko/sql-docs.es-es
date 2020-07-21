@@ -1,5 +1,5 @@
 ---
-title: Usar SQL Server Profiler para crear un conjunto de recopilación de seguimiento SQL (SQL Server Management Studio) | Microsoft Docs
+title: Usar SQL Server Profiler para crear un conjunto de recopilación de seguimiento de SQL (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddfb1b83ccb225122edc19860c45480ec1c0c00a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970423"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  
@@ -38,7 +37,7 @@ ms.locfileid: "62873349"
   
 2.  En el cuadro de diálogo **Conectar con el servidor** , haga clic en **Cancelar**.  
   
-3.  Para este escenario, asegúrese de que los valores de duración estén configurados para mostrarse en milisegundos (valor predeterminado). Para ello, siga estos pasos:  
+3.  Para este escenario, asegúrese de que los valores de duración estén configurados para mostrarse en milisegundos (valor predeterminado). Para ello, siga estos pasos.  
   
     1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62873349"
   
     1.  En la lista de filtros, haga clic en **Duración**.  
   
-    2.  En la ventana de operadores booleanos, expanda el **igual o mayor que** nodo, escriba `80` como valor y, a continuación, haga clic en **Aceptar**.  
+    2.  En la ventana de operadores booleanos, expanda el nodo **mayor o igual que** , escriba `80` como valor y, a continuación, haga clic en **Aceptar**.  
   
 9. Haga clic en **Ejecutar** para iniciar el seguimiento.  
   
@@ -100,13 +99,13 @@ ms.locfileid: "62873349"
   
 4.  Haga clic en **Ejecutar** para ejecutar la consulta y crear el conjunto de recopilación.  
   
-5.  En el Explorador de objetos, compruebe que se ha creado el conjunto de recopilación. Para ello, siga estos pasos:  
+5.  En el Explorador de objetos, compruebe que se ha creado el conjunto de recopilación. Para ello, siga estos pasos.  
   
     1.  Haga clic con el botón derecho en **Administración**y, después, haga clic en **Actualizar**.  
   
     2.  Expanda **Administración**y, a continuación, expanda **Recopilación de datos**.  
   
-     El `SPROC_CollectionSet` conjunto de recopilación aparece en el mismo nivel que el **conjuntos de recopilación de datos del sistema** nodo. De manera predeterminada, el conjunto de recopilación está deshabilitado.  
+     El `SPROC_CollectionSet` conjunto de recopilación aparece en el mismo nivel que el nodo **conjuntos de recopilación de datos del sistema** . De manera predeterminada, el conjunto de recopilación está deshabilitado.  
   
 6.  Use el Explorador de objetos para editar las propiedades de SPROC_CollectionSet, como el modo de recopilación y la programación de carga. Realice los mismos procedimientos que usaría para los conjuntos de recopilación de datos del sistema que se proporcionan con el recopilador de datos.  
   

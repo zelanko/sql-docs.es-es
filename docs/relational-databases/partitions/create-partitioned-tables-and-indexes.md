@@ -29,15 +29,15 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 147a5490d2940caebc9184e8049e7c430959b081
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787545"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Puede crear una tabla o índice con particiones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos en tablas e índices con particiones se dividen horizontalmente en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
   
  La creación de una tabla o índice con particiones tiene lugar normalmente en cuatro partes:  
@@ -64,17 +64,17 @@ ms.locfileid: "68024901"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El ámbito de una función y un esquema de partición se limita a la base de datos en la que se han creado. En la base de datos, las funciones de partición residen en un espacio de nombres independiente de las demás funciones.  
   
 -   Si algunas filas de una función de partición tienen columnas de partición con valores NULL, estas filas se asignan a la partición situada más a la izquierda. Sin embargo, si se especifica NULL como valor de límite y se indica RIGHT, la partición situada más a la izquierda permanece vacía y los valores NULL se colocan en la segunda partición.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La creación de una tabla con particiones requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla. Crear un índice con particiones requiere el permiso ALTER en la tabla o vista donde se crea el índice. Crear una tabla o índice con particiones requiere alguno de los permisos adicionales siguientes:  
   
 -   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
@@ -83,14 +83,14 @@ ms.locfileid: "68024901"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se está creando la función de partición y el esquema de partición.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Siga los pasos de este procedimiento para crear uno o más grupos de archivos, los archivos correspondientes y una tabla. Hará referencia a estos objetos en el siguiente procedimiento al crear la tabla con particiones.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Para crear nuevos grupos de archivos en una tabla con particiones  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos en la que quiere crear una tabla con particiones y seleccione **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de la base de datos -** *nombre_base_de_datos*, en **Seleccionar una página**, haga clic en **Grupos de archivos**.  
+2.  En el cuadro de diálogo **Propiedades de la base de datos -** *nombre de base de datos*, en **Seleccionar una página**, seleccione **Grupos de archivos**.  
   
 3.  En **Filas**, haga clic en **Agregar**. En la nueva fila, escriba el nombre del grupo de archivos.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68024901"
   
 4.  Continúe agregando filas hasta que haya creado todos los grupos de archivos que la tabla con particiones.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  En **Seleccionar una página**, seleccione **Archivos**.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68024901"
   
     6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-    7.  Haga clic en **Aceptar**.  
+    7.  Haga clic en **OK**.  
   
      Después de completar esta página, haga clic en **Siguiente**.  
   
@@ -238,10 +238,10 @@ ms.locfileid: "68024901"
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  
@@ -260,7 +260,7 @@ ms.locfileid: "68024901"
   
  El Asistente para la creación de particiones crea la función y el esquema de partición y aplica las particiones a la tabla especificada. Para comprobar las particiones de tabla, en el Explorador de objetos, haga clic con el botón derecho en la tabla y seleccione **Propiedades**. Haga clic en la página **Almacenamiento** . La página muestra información como el nombre de la función y el esquema de partición y el número de particiones.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
@@ -409,7 +409,7 @@ ms.locfileid: "68024901"
     GO  
     ```  
   
- Para obtener más información, vea:  
+ Para más información, consulte:  
   
 -   [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

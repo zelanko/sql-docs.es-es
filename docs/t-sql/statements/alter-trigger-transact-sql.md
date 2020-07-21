@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 144a0391926bc695d3693bf6d04294e5a8eb101d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a038026afd2e15ffda6f5f78a63704fa1d6bcad4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155667"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380948"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica la definición de un desencadenador logon, DDL o DML creado anteriormente por una instrucción CREATE TRIGGER. Los desencadenadores se crean con CREATE TRIGGER. Se pueden crear directamente a partir de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o métodos de ensamblados creados en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y cargados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre los parámetros que se usan en la instrucción ALTER TRIGGER, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70155667"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
 
@@ -107,7 +107,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >
     assembly_name.class_name.method_name  
 ```  
   
-```  
+```syntaxsql
 -- Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)   
   
@@ -135,7 +135,9 @@ AS { sql_statement
     [ <EXECUTE AS Clause> ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *schema_name*  
  Es el nombre del esquema al que pertenece un desencadenador DML. Los desencadenadores DML tienen como ámbito el esquema de la tabla o la vista donde se crean. *schema**_name* es opcional únicamente si el desencadenador DML y su tabla o vista correspondiente pertenecen al esquema predeterminado. *schema_name* no se puede especificar para los desencadenadores DDL o de inicio de sesión.  
   
@@ -149,12 +151,12 @@ AS { sql_statement
  Aplica el ámbito de un desencadenador DDL a la base de datos actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en la base de datos actual.  
   
  ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Aplica el ámbito de un desencadenador DDL o logon al servidor actual. Si se especifica, el desencadenador se activa cada vez que *event_type* o *event_group* tienen lugar en cualquier lugar del servidor actual.  
   
  WITH ENCRYPTION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Cifra las entradas sys.syscomments y sys.sql_modules que contienen el texto de la instrucción ALTER TRIGGER. El uso de WITH ENCRYPTION impide que el desencadenador se publique como parte de la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. WITH ENCRYPTION no se puede especificar para desencadenadores CLR.  
   
@@ -202,7 +204,7 @@ AS { sql_statement
  Es el nombre de un agrupamiento predefinido de eventos de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El desencadenador DDL se activa tras la ejecución de cualquier evento de lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que pertenezca a *event_group*. Los grupos de eventos válidos para los desencadenadores DDL se enumeran en [Grupos de eventos DDL](../../relational-databases/triggers/ddl-event-groups.md). Una vez que ALTER TRIGGER ha terminado de ejecutarse, *event_group* actúa también como una macro al agregar los tipos de eventos que abarca a la vista de catálogo sys.trigger_events.  
   
  NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Indica que el desencadenador no debe ejecutarse cuando un Agente de replicación modifica la tabla utilizada en el desencadenador.  
   
@@ -212,11 +214,11 @@ AS { sql_statement
  Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   
  EXTERNAL NAME \<method_specifier>  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica el método de un ensamblado que se enlaza al desencadenador. El método no debe tomar argumentos y debe devolver void. *class_name* debe ser un identificador válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe existir como clase en el ensamblado con visibilidad de ensamblado. La clase no puede ser anidada.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para más información sobre ALTER TRIGGER, vea la sección Comentarios de [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  

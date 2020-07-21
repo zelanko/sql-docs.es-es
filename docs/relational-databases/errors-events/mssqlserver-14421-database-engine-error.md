@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 495150983eefbd40515bbd35985d31f9ae3f3769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca55049ca6aa33e2412cb771d9f7f430caaa7cad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033532"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781032"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14421|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14421|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum14421|  
 |Texto del mensaje|La base de datos secundaria de trasvase de registros %s.%s tiene un umbral de restauración de %d minutos y no está sincronizada. No se ha realizado ninguna operación de restauración durante %d minutos. La latencia restaurada es de %d minutos. Compruebe la información del registro de agente y del monitor de trasvase de registros.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68033532"
 ## <a name="explanation"></a>Explicación  
 Este mensaje indica que el trasvase de registros no está sincronizado más allá del umbral de restauración. El umbral de restauración es la cantidad de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere un mensaje.  
   
-### <a name="possible-causes"></a>Posibles causas  
+### <a name="possible-causes"></a>Causas posibles  
 Este mensaje no indica necesariamente un problema en el trasvase de registros. En su lugar, puede indicar uno de los siguientes problemas:  
   
 -   El trabajo de restauración no está en ejecución.  

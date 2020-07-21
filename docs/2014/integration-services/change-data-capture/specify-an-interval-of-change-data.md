@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70b9c14d609f2db69ee5751eca18acb5262a07a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771223"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435432"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en calcular los extremos del intervalo de cambios. Estos extremos son valores `datetime` y se almacenarán en variables de paquete para su uso posterior en el paquete.  
@@ -73,7 +72,7 @@ ms.locfileid: "62771223"
   
 -   **Calcular la fecha y hora de inicio**. Utilice la fecha y hora de finalización de la carga anterior como los valores actuales. Si utiliza un intervalo fijo para las cargas incrementales, puede calcular este valor mediante las funciones de `datetime` de Transact-SQL o del lenguaje de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. De lo contrario, es posible que tenga que conservar los extremos entre las ejecuciones y utilizar una tarea Ejecutar SQL o una tarea Script para cargar el extremo anterior.  
   
--   **Calcular la fecha y hora de finalización**. Si utiliza un intervalo fijo para las cargas incrementales, calcule la fecha y hora de finalización actuales como un desplazamiento de la fecha y hora de inicio. De nuevo, puede calcular este valor utilizando la `datetime` funciones de Transact-SQL o de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] lenguaje de expresiones.  
+-   **Calcular la fecha y hora de finalización**. Si utiliza un intervalo fijo para las cargas incrementales, calcule la fecha y hora de finalización actuales como un desplazamiento de la fecha y hora de inicio. De nuevo, puede calcular este valor mediante las `datetime` funciones de Transact-SQL o del lenguaje de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expresiones.  
   
  En el procedimiento siguiente, el intervalo de cambios utiliza un intervalo fijo y da por supuesto que el paquete de la carga incremental se ejecuta diariamente sin excepciones. De lo contrario, se perderían los datos modificados para los intervalos que faltan. El punto inicial del intervalo es la medianoche de anteayer, es decir, hace unas 24 a 48 horas. El punto final del intervalo es la medianoche de ayer, es decir, la noche anterior, hace unas 0 a 24 horas.  
   
@@ -102,12 +101,12 @@ ms.locfileid: "62771223"
     > [!NOTE]  
     >  Al usar una expresión para establecer el valor de una variable de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], dicha expresión se evalúa cada vez que se accede al valor de la variable.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Una vez calculados los puntos inicial y final de un intervalo de cambios, el paso siguiente consiste en determinar si están listos los datos modificados.  
   
  **Tema siguiente:** [Determinar si los datos modificados están preparados](determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar variables en paquetes](../use-variables-in-packages.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)   
  [Tarea Ejecutar SQL](../control-flow/execute-sql-task.md)   

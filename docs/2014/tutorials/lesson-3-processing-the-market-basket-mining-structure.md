@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Procesar la estructura de minería de datos Market Basket | Microsoft Docs'
+title: 'Lección 3: procesar la estructura de minería de datos Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653867"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lección 3: Procesar la estructura de minería de datos Market Basket
-  En esta lección, usará el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción y el vAssocSeqLineItems y vAssocSeqOrders de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelos de datos de ejemplo para procesar las estructuras de minería de datos y la minería de datos creado en [lección 1: Creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) y [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
+  En esta lección, usará la instrucción [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) y los VAssocSeqLineItems y vAssocSeqOrders de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de datos de ejemplo para procesar las estructuras de minería de datos y los modelos de minería de datos creados en la [Lección 1: crear la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) y la [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
- Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Al procesar un modelo de minería de datos, los datos definidos por la estructura de minería de datos se pasan por el algoritmo de minería de datos que haya elegido. El algoritmo busca tendencias y patrones y, a continuación, almacena esta información en el modelo de minería de datos. Por consiguiente, el modelo de minería de datos no contiene los datos de origen reales, sino la información descubierta por el algoritmo. Para obtener más información acerca de cómo procesar modelos de minería de datos, vea [consideraciones y requisitos de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+ Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Al procesar un modelo de minería de datos, los datos definidos por la estructura de minería de datos se pasan por el algoritmo de minería de datos que haya elegido. El algoritmo busca tendencias y patrones y, a continuación, almacena esta información en el modelo de minería de datos. Por consiguiente, el modelo de minería de datos no contiene los datos de origen reales, sino la información descubierta por el algoritmo. Para obtener más información sobre el procesamiento de modelos de minería de datos, vea [requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Solo debe volver a procesar una estructura de minería de datos si cambia una columna de la estructura o los datos de origen. Si agrega un modelo de minería de datos a una estructura de minería de datos que ya se ha procesado, puede usar la instrucción `INSERT INTO MINING MODEL` para entrenar el nuevo modelo de minería de datos en los datos existentes.  
   
  La estructura de minería de datos Market Basket contiene una tabla anidada, por lo que deberá definir las columnas de minería de datos que deben entrenarse usando la estructura de tablas anidadas y usar el comando `SHAPE` para definir las consultas que extraen los datos de aprendizaje de las tablas de origen.  
   
 ## <a name="insert-into-statement"></a>Instrucción INSERT INTO  
- Con el fin de entrenar la estructura de minería de datos Market Basket y los modelos de minería de datos asociados, use el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción. El código de la instrucción se puede dividir en las partes siguientes.  
+ Para entrenar la estructura de minería de datos Market Basket y sus modelos de minería de datos asociados, utilice la instrucción [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) . El código de la instrucción se puede dividir en las partes siguientes.  
   
 -   Identificación de la estructura de minería de datos  
   
@@ -60,7 +60,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- Las líneas siguientes del código especifican las columnas definidas por la estructura de minería de datos. Debe incluir en la lista cada una de las columnas de la estructura de minería de datos, y cada columna debe estar asignada a una columna incluida en los datos de la consulta de origen: Puede usar `SKIP` para omitir columnas de los datos de origen que no existen en la estructura de minería de datos. Para obtener más información sobre cómo usar `SKIP`, consulte [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
+ Las líneas siguientes del código especifican las columnas definidas por la estructura de minería de datos. Debe incluir en la lista cada una de las columnas de la estructura de minería de datos, y cada columna debe estar asignada a una columna incluida en los datos de la consulta de origen: Puede usar `SKIP` para omitir columnas de los datos de origen que no existen en la estructura de minería de datos. Para obtener más información sobre cómo usar `SKIP`, vea [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx).  
   
 ```  
 (  
@@ -83,7 +83,7 @@ RELATE [<case key>] TO [<foreign key>]
 ) AS [<nested table>]  
 ```  
   
- En esta lección usará `OPENQUERY` para definir los datos de origen. Para obtener información acerca de otros métodos de definir una consulta en el origen de datos, vea [ &#60;consulta de origen de datos&#62;](/sql/dmx/source-data-query).  
+ En esta lección usará `OPENQUERY` para definir los datos de origen. Para obtener información sobre otros métodos para definir una consulta en los datos de origen, vea [&#60;&#62;de consultas de datos de origen ](/sql/dmx/source-data-query).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  En esta lección realizará la tarea siguiente:  
@@ -94,7 +94,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>Para procesar la estructura de minería de datos con INSERT INTO  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -106,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Market Basket  
@@ -120,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [OrderNumber],  
@@ -143,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     SHAPE {  
@@ -158,7 +158,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-     Las referencias de la consulta de origen el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] origen de datos definido en el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] proyecto de ejemplo. Utiliza este origen de datos para obtener acceso a las vistas vAssocSeqLineItems y vAssocSeqOrders. Estas vistas contienen los datos de origen que se utilizarán para entrenar el modelo de minería de datos. Si no ha creado este proyecto o estas vistas, consulte [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
+     La consulta de origen hace [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] referencia al origen de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] definido en el proyecto de ejemplo. Utiliza este origen de datos para obtener acceso a las vistas vAssocSeqLineItems y vAssocSeqOrders. Estas vistas contienen los datos de origen que se utilizarán para entrenar el modelo de minería de datos. Si no ha creado este proyecto o estas vistas, vea el [tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
      En el comando `SHAPE`, usará `OPENQUERY` para definir dos consultas. La primera consulta define la tabla primaria y la segunda, la tabla anidada. Las dos tablas se relacionan mediante la columna OrderNumber, que existe en ambas tablas.  
   
@@ -181,17 +181,17 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+6.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Process Market Basket.dmx`.  
+7.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Process Market Basket.dmx`al archivo.  
   
-8.  En la barra de herramientas, haga clic en el **Execute** botón.  
+8.  En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
- Después de que la consulta haya terminado de ejecutarse, puede ver los modelos y los conjuntos de elementos encontrados, ver asociaciones o filtrar por conjunto de elementos, probabilidad o importancia. Para ver esta información, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic en el nombre del modelo de datos y, a continuación, haga clic en **examinar**.  
+ Después de que la consulta haya terminado de ejecutarse, puede ver los modelos y los conjuntos de elementos encontrados, ver asociaciones o filtrar por conjunto de elementos, probabilidad o importancia. Para ver esta información, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic con el botón secundario en el nombre del modelo de datos y, a continuación, haga clic en **examinar**.  
   
  En la siguiente lección creará varias predicciones basadas en los modelos de minería de datos que ha agregado a la estructura Market Basket.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Predicciones de cesta de la ejecución](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lección 4: Ejecución de predicciones de cesta de la compra](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

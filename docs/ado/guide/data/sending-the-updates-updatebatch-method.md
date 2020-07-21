@@ -1,5 +1,5 @@
 ---
-title: 'Envío de actualizaciones: Método UpdateBatch | Microsoft Docs'
+title: 'Enviar las actualizaciones: método UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -8,19 +8,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924257"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760891"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Envío de actualizaciones: Método UpdateBatch
-El código siguiente abre un conjunto de registros en modo por lotes estableciendo la propiedad LockType en adLockBatchOptimistic y CursorLocation adUseClient. Agrega dos registros nuevos y cambia el valor de un campo en un registro existente y guarda los valores originales y, a continuación, llama al método UpdateBatch para enviar que los cambios de vuelta al origen de datos.  
+El código siguiente abre un conjunto de registros en modo por lotes estableciendo la propiedad LockType en adLockBatchOptimistic y CursorLocation en adUseClient. Agrega dos nuevos registros y cambia el valor de un campo en un registro existente, guarda los valores originales y, a continuación, llama a UpdateBatch para devolver los cambios al origen de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ```  
 'BeginBatchUpdate  
@@ -52,7 +52,7 @@ El código siguiente abre un conjunto de registros en modo por lotes establecien
 'EndBatchUpdate  
 ```  
   
- Si está modificando el registro actual o agregando un nuevo registro cuando se llama al método UpdateBatch, ADO llamará automáticamente al método Update para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor.  
+ Si está editando el registro actual o agregando un nuevo registro cuando se llama al método UpdateBatch, ADO llamará automáticamente al método Update para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor.  
   
-## <a name="see-also"></a>Vea también  
- [Modo por lotes](../../../ado/guide/data/batch-mode.md)
+## <a name="see-also"></a>Consulte también  
+ [Batch Mode](../../../ado/guide/data/batch-mode.md)

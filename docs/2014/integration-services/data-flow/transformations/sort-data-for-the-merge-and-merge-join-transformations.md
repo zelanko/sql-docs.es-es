@@ -10,15 +10,14 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0abc9f9e93a8acf2ca4e660c0732baa09659dfbd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900379"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430192"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
   En [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], las transformaciones Mezclar y Combinación de mezcla requieren datos ordenados en sus entradas. Los datos de entrada deben estar ordenados físicamente, y se deben establecer opciones de ordenación en las salidas y en las columnas de salida del origen o en la transformación de nivel superior. Si las opciones de ordenación indican que los datos están ordenados, pero en realidad no lo están, los resultados de la operación de mezcla o combinación de mezcla son impredecibles.  
@@ -38,7 +37,7 @@ ms.locfileid: "62900379"
   
      La transformación Ordenar utiliza la intercalación de Windows para ordenar los valores de cadena.  
   
-     -o bien-  
+     O bien  
   
 -   Utilice el operador CAST de Transact-SQL para convertir primero los valores `varchar` en valores `nvarchar` y, a continuación, utilice la cláusula ORDER BY de Transact-SQL para ordenar los datos.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62900379"
   
 5.  Haga clic en la pestaña **Propiedades de entrada y salida** .  
   
-6.  Haga clic en  **\<nombre de componente > salida**y establezca el `IsSorted` propiedad `True`.  
+6.  Haga clic en ** \<component name> salida**y establezca la `IsSorted` propiedad en `True` .  
   
     > [!NOTE]  
     >  Si establece manualmente la propiedad `IsSorted` de la salida en `True` y los datos no están ordenados, es posible que falten datos o haya comparaciones de datos no válidas en la transformación de nivel inferior Mezclar o Combinación de mezcla al ejecutar el paquete.  
@@ -102,11 +101,11 @@ ms.locfileid: "62900379"
   
 9. Repita el paso 8 para cada columna ordenada.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Mezclar](merge-transformation.md)   
  [Transformación Combinación de mezcla](merge-join-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 078e125136643958a1cd9203d07f632c3023a9de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053075"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph, clase de eventos
   La clase de eventos **Deadlock Graph** proporciona la descripción en formato XML de un interbloqueo. Esta clase de eventos se produce al mismo tiempo que la clase de eventos **Lock:Deadlock** .  
@@ -28,8 +27,8 @@ ms.locfileid: "62662923"
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**EventClass**|**int**|Tipo de evento = 148.|27|Sin|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|Sin|  
+|**EventClass**|**int**|Tipo de evento = 148.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario. El valor para esta clase de eventos siempre es 1.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario). Este valor siempre es el usuario de sistema de este evento.|11|Sí|  
 |**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor. Este valor siempre es el SID del usuario de sistema de este evento.|41|Sí|  
@@ -40,7 +39,7 @@ ms.locfileid: "62662923"
 |**TextData**|**ntext**|Descripción en formato XML del interbloqueo.|1|Sí|  
 |**TransactionID**|**bigint**|No se usa.|4|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Lock:Deadlock (clase de eventos)](lock-deadlock-event-class.md)  
   

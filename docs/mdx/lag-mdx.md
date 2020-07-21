@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905779"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
@@ -31,19 +31,19 @@ Member_Expression.Lag(Index)
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
- *Index*  
+ *Índice*  
  Expresión numérica válida que especifica el número de posiciones que se van a retrasar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las posiciones de los miembros en un nivel se determinan por el orden natural de la jerarquía de atributo. La numeración de las posiciones tiene como base cero.  
   
- Si el retraso especificado es cero, el **Lag** función devuelve el propio miembro especificado.  
+ Si el retraso especificado es cero, la función **lag** devuelve el propio miembro especificado.  
   
- Si el retraso especificado es negativo, el **Lag** función devuelve un miembro subsiguiente.  
+ Si el retraso especificado es negativo, la función **lag** devuelve un miembro subsiguiente.  
   
- `Lag(1)` es equivalente a la [PrevMember](../mdx/prevmember-mdx.md) función. `Lag(-1)` es equivalente a la [NextMember](../mdx/nextmember-mdx.md) función.  
+ `Lag(1)`es equivalente a la función [PrevMember](../mdx/prevmember-mdx.md) . `Lag(-1)`es equivalente a la función [NextMember](../mdx/nextmember-mdx.md) .  
   
- El **Lag** función es similar a la [provocar](../mdx/lead-mdx.md) funcione, salvo que el **provocar** función busca en la dirección opuesta a la **Lag** función. Es decir, `Lag(n)` es equivalente a `Lead(-n)`.  
+ La función **lag** es similar a la función [Lead](../mdx/lead-mdx.md) , salvo que la función **Lead** busca en la dirección opuesta a la función **lag** . Es decir, `Lag(n)` es equivalente a `Lead(-n)`.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve el valor para diciembre de 2001:  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

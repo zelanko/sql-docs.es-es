@@ -1,5 +1,5 @@
 ---
-title: Método valueto (DateTimeOffset) | Microsoft Docs
+title: Método valueOf (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 38692b3e-ca7f-4e26-8787-1a34bb13c996
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25f5b108451e4e256283d9d72cce8c2c65665538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 63bb902784279b58b42cacaa595dec454b4f8fa8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001559"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919484"
 ---
 # <a name="valueof-method-datetimeoffset"></a>Método valueOf (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

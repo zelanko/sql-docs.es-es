@@ -1,5 +1,5 @@
 ---
-title: Conectarse a un servidor de remoto de Integration Services (servicio SSIS) | Microsoft Docs
+title: Conectarse a un servidor de Integration Services remoto (servicio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060420"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279481"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectarse a un servidor remoto de Integration Services (servicio SSIS)
     
@@ -42,7 +41,7 @@ ms.locfileid: "66060420"
   
 3.  Seleccione **Integration Services** en la lista **Tipo de servidor** .  
   
-4.  Escriba el nombre de un servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el cuadro de texto **Nombre del servidor** .  
+4.  Escriba el nombre de un servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el cuadro de texto **Nombre del servidor**.  
   
     > [!NOTE]  
     >  El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no es específico de la instancia. La conexión al servicio se realiza utilizando el nombre del equipo en el que el servicio de Integration Services se está ejecutando.  
@@ -57,11 +56,11 @@ ms.locfileid: "66060420"
   
 #### <a name="to-configure-rights-for-remote-users-on-windows-server-2003-or-windows-xp"></a>Para configurar derechos para usuarios remotos en Windows Server 2003 o Windows XP  
   
-1.  Si el usuario no es miembro del grupo de administradores local, agregue el usuario al grupo de usuarios de COM distribuido. Puede hacerlo en el complemento Administración de equipos de MMC, en el menú **Herramientas administrativas** .  
+1.  Si el usuario no es miembro del grupo de administradores local, agregue el usuario al grupo de usuarios de COM distribuido. Puede hacerlo en el complemento Administración de equipos de MMC, en el menú **Herramientas administrativas**.  
   
 2.  Abra el Panel de control, haga doble clic en **Herramientas administrativas** y en **Servicios de componente** para iniciar el complemento Servicios de componentes de MMC.  
   
-3.  Expanda el nodo **Servicios de componente** en el panel izquierdo de la consola. Expanda los nodos **Equipos** y **Mi PC**y, a continuación, haga clic en el nodo **Configuración DCOM** .  
+3.  Expanda el nodo **Servicios de componente** en el panel izquierdo de la consola. Expanda los nodos **Equipos** y **Mi PC** y, a continuación, haga clic en el nodo **Configuración DCOM**.  
   
 4.  Seleccione el nodo **Configuración DCOM** y, a continuación, seleccione SQL Server Integration Services 11.0 en la lista de aplicaciones que pueden configurarse.  
   
@@ -98,14 +97,7 @@ ms.locfileid: "66060420"
 ## <a name="connecting-by-using-a-local-account"></a>Conectarse con una cuenta local  
  Si se trabaja en una cuenta local de Windows en un equipo cliente, solo es posible conectarse al servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un equipo remoto si en el equipo remoto existe una cuenta local con el mismo nombre y contraseña, y con los derechos adecuados.  
   
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>De forma predeterminada, el servicio SSIS no admite la delegación  
-De forma predeterminada, el servicio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no admite la delegación de credenciales, a veces denominada salto doble. En este escenario, se trabaja con un equipo cliente, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se ejecuta en un segundo equipo y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecuta en un tercer equipo. Primero, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pasa correctamente las credenciales del equipo cliente al segundo equipo en el que se ejecuta el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Pero, después, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no puede delegar las credenciales del segundo equipo al tercero, en el que se ejecuta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
-
-Puede habilitar la delegación de credenciales si concede el derecho **Confiar en este usuario para la delegación a cualquier servicio (solo Kerberos)** a la cuenta de servicio de SQL Server, que inicia el servicio Integration Services (ISServerExec.exe) como un proceso secundario. Antes de conceder este derecho, considere si cumple los requisitos de seguridad de su organización.
-
-Para obtener más información, vea [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Conseguir que la delegación y Kerberos entre dominios funcionen con el paquete SSIS).
-  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar Firewall de Windows para el acceso al servicio SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

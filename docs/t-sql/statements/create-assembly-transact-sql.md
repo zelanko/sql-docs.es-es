@@ -23,12 +23,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 55324ac26eef5f685339b21162360544a4ae5af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141108"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807908"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68141108"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CREATE ASSEMBLY assembly_name  
 [ AUTHORIZATION owner_name ]  
 FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }  
@@ -110,7 +110,7 @@ Especifica la ruta de acceso local o ubicación de red en la que se encuentra el
   
  Para obtener más información sobre los conjuntos de permisos de ensamblado, vea [Diseño de ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  CREATE ASSEMBLY carga un ensamblado que ha sido compilado anteriormente como un archivo .dll desde código administrado para su uso dentro de una instancia de SQL Server.  
  
 Cuando se habilita, la opción `PERMISSION_SET` en las instrucciones `CREATE ASSEMBLY` y `ALTER ASSEMBLY` se omite en tiempo de ejecución, pero las opciones `PERMISSION_SET` se conservan en los metadatos. Si la opción se omite, se reduce el riesgo de romper las instrucciones de código existentes.
@@ -128,7 +128,7 @@ Cuando se intenta obtener acceso al ensamblado especificado en \<especificador_d
   
 -   El binario del ensamblado está formado por metadatos y segmentos de código válidos; los segmentos de código tienen instrucciones MSIL (Lenguaje intermedio de Microsoft) válidas.  
   
--   El conjunto de ensamblados del sistema al que hace referencia es uno de los siguientes ensamblados admitidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll y System.Xml.Linq.dll. Se puede hacer referencia a otros ensamblados del sistema, pero deben estar registrados de forma explícita en la base de datos.  
+-   El conjunto de ensamblados del sistema al que se hace referencia es uno de los siguientes ensamblados admitidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll y System.Xml.Linq.dll. Se puede hacer referencia a otros ensamblados del sistema, pero deben estar registrados de forma explícita en la base de datos.  
   
 -   Para ensamblados creados mediante los conjuntos de permisos SAFE o EXTERNAL ACCESS:  
   
@@ -167,28 +167,28 @@ Los siguientes permisos son necesarios para crear un ensamblado CLR cuando la op
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Ejemplo A: Creación de un ensamblado desde un archivo DLL  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Ejemplo A: creación de un ensamblado desde un archivo dll  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  En el ejemplo siguiente se asume que los ejemplos del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se han instalado en la ubicación predeterminada del equipo local y que la aplicación de ejemplo HelloWorld.csproj se ha compilado. Para más información, vea [Ejemplo de Hola a todos](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld   
-FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
+FROM '<system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll'  
 WITH PERMISSION_SET = SAFE;  
 ```  
 
 > [!IMPORTANT]
 > Azure SQL Database no admite la creación de un ensamblado desde un archivo.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Ejemplo B: Creación de un ensamblado desde bits de ensamblado  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Ejemplo B: creación de un ensamblado a partir de bits de ensamblado  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Reemplace los bits de ejemplo (que no son completos o válidos) con sus bits de ensamblado.  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld  
     FROM 0x4D5A900000000000  
 WITH PERMISSION_SET = SAFE;  

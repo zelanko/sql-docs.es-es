@@ -1,5 +1,5 @@
 ---
-title: 'Introducción: Exportación de datos (Master Data Services) | Microsoft Docs'
+title: Exporting Data
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db511e86162ff841e9ec97d8f696a3f37c4c75f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b58dca3531ba535c48c6dc6134c660ca4fed7be
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904005"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812891"
 ---
-# <a name="overview-exporting-data-master-data-services"></a>Introducción: Exportar datos (Master Data Services)
+# <a name="overview-exporting-data-master-data-services"></a>Información general: exportar datos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este artículo se presentan los tipos de formatos de vistas de suscripciones y cómo determinar cuándo hay que editar las vistas debido a cambios en los objetos del modelo.  
   
  Cree una vista de suscripciones para exportar datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a un sistema de suscripción como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use el sistema de suscripción para ver los datos de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  Para obtener información sobre cómo crear la vista de suscripciones, consulte [Crear una vista de suscripciones para exportar datos &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
- Para obtener más información sobre las vistas, consulte [Vistas](../relational-databases/views/views.md).  
+ Para obtener más información acerca de las vistas, consulte [Vistas](../relational-databases/views/views.md).  
   
 ## <a name="subscription-view-formats"></a>Formatos de vista de suscripciones  
  Al crear una vista en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], elige entre un conjunto de formatos de vistas estándar proporcionados por [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Puede utilizar estos formatos para crear vistas que muestren:  

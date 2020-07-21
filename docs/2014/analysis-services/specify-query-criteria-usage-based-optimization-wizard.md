@@ -1,5 +1,5 @@
 ---
-title: Especifique los criterios de consulta (Asistente para optimización basada en uso) | Microsoft Docs
+title: Especificar criterios de consulta (Asistente para optimización basada en el uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba9e131a8986b01a6bb897e35b2e45b2bb70ccd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940351"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar los criterios de consulta (Asistente para optimización basada en el uso)
   Use la página **Especificar los criterios de consulta** para elegir una o más opciones de filtro con objeto de identificar las consultas que se deben optimizar.  
@@ -32,7 +31,7 @@ ms.locfileid: "66068222"
 |Término|Definición|  
 |----------|----------------|  
 |**Total de consultas**|Muestra el número total de consultas almacenadas en el registro de consultas para las particiones seleccionadas.|  
-|**Consultas distintivas**|Muestra el número de consultas distintivas almacenadas en el registro de consultas para las particiones seleccionadas.|  
+|**Consultas DISTINCT**|Muestra el número de consultas distintivas almacenadas en el registro de consultas para las particiones seleccionadas.|  
 |**Usuarios distintivos**|Muestra el número total de usuarios distintivos asociados con las consultas almacenadas en el registro de consultas para las particiones seleccionadas.|  
 |**Tiempo medio de respuesta**|Muestra el tiempo de respuesta promedio para las consultas distintivas almacenadas en el registro de consultas para las particiones seleccionadas.|  
   
@@ -40,22 +39,22 @@ ms.locfileid: "66068222"
  Filtra consultas en el registro de consultas basándose en una fecha y hora de inicio. Elija o escriba una fecha en la lista desplegable.  
   
 > [!NOTE]  
->  Si no se selecciona la **Fecha de finalización** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o posteriores a esta.  
+>   Si no se selecciona **Fecha de finalización** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o posteriores a ésta.  
   
  **Fecha de finalización**  
  Filtra consultas en el registro de consultas basándose en una fecha y hora de finalización. Elija o escriba una fecha en la lista desplegable.  
   
 > [!NOTE]  
->  Si no se selecciona la **Fecha de inicio** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o anteriores a esta.  
+>   Si no se selecciona **Fecha de inicio** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o anteriores a ésta.  
   
  **Usuarios**  
- Filtra consultas en el registro de consultas basándose en un conjunto de usuarios especificado. Haga clic en el botón de puntos suspensivos ( **...** ) para mostrar el cuadro de diálogo **Selección de usuarios** y elegir los usuarios sobre los que filtrar las consultas. Para obtener más información sobre el cuadro de diálogo **Selección de usuarios**, vea [Cuadro de diálogo Selección de usuarios &#40;Analysis Services - Datos multidimensionales&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
+ Filtra consultas en el registro de consultas basándose en un conjunto de usuarios especificado. Haga clic en el botón de puntos suspensivos (**...**) para mostrar el cuadro de diálogo **Selección de usuarios** y elegir los usuarios sobre los que filtrar las consultas. Para obtener más información sobre el cuadro de diálogo **Selección de usuarios**, vea [Cuadro de diálogo Selección de usuarios &#40;Analysis Services - Datos multidimensionales&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consultas más frecuentes**  
  Filtra consultas en el registro de consultas basándose en el porcentaje más alto de consultas distintas que se han ejecutado con más frecuencia en las particiones seleccionadas. Elija o escriba un valor de porcentaje en el cuadro de texto.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para optimización basada en uso](usage-based-optimization-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para optimización basada en el uso (ayuda F1)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

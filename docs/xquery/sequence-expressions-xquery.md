@@ -1,5 +1,6 @@
 ---
-title: Secuencia de expresiones (XQuery) | Microsoft Docs
+title: Expresiones de secuencias (XQuery) | Microsoft Docs
+description: Obtenga información sobre las expresiones de secuencia XQuery que crean, filtran y combinan una secuencia de elementos.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31402792c4e2a203c7894753612485409d5eaf1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759475"
 ---
 # <a name="sequence-expressions-xquery"></a>Expresiones de secuencias (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite los operadores XQuery que se utilizan para generar, filtrar y combinar una secuencia de elementos. Un elemento puede ser un nodo o un valor atómico.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite los operadores XQuery que se utilizan para generar, filtrar y combinar una secuencia de elementos. Un elemento puede ser un valor atómico o un nodo.  
   
 ## <a name="constructing-sequences"></a>Generar secuencias  
  El operador de comas se puede utilizar para generar una secuencia que concatene los elementos en una única secuencia.  
@@ -88,7 +89,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- Puede contar los elementos de la secuencia mediante el **fn:Count()** función.  
+ Puede contar los elementos de la secuencia mediante la función **FN: Count ()** .  
   
 ```  
 declare @x xml  
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Ejemplo C  
- La siguiente consulta se especifica en la columna AdditionalContactInfo de la **xml** tipo en la tabla Contact. Esta columna almacena información de contacto adicional, como uno o más números de teléfono adicionales, números de buscapersonas y direcciones. El \<telephoneNumber >, \<buscapersonas >, y otros nodos pueden aparecer en cualquier lugar en el documento. La consulta genera una secuencia que contiene todos los \<telephoneNumber > elementos secundarios del nodo de contexto, seguido por el \<buscapersonas > elementos secundarios. Observe el uso del operador de comas de la secuencia en la expresión devuelta, `($a//act:telephoneNumber, $a//act:pager)`.  
+ La siguiente consulta se especifica en la columna AdditionalContactInfo del tipo **XML** de la tabla Contact. Esta columna almacena información de contacto adicional, como uno o más números de teléfono adicionales, números de buscapersonas y direcciones. Los \<telephoneNumber> \<pager> nodos, y pueden aparecer en cualquier parte del documento. La consulta crea una secuencia que contiene todos los \<telephoneNumber> elementos secundarios del nodo de contexto, seguidos de los \<pager> elementos secundarios. Observe el uso del operador de comas de la secuencia en la expresión devuelta, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -113,7 +114,7 @@ FROM Person.Contact
 WHERE ContactID=3  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <act:telephoneNumber xmlns:act="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>Filtrar secuencias  
- Es posible filtrar la secuencia devuelta por una expresión si se agrega un predicado a la expresión. Para obtener más información, consulte [expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Por ejemplo, la siguiente consulta devuelve una secuencia de tres <`a`> los nodos de elemento:  
+ Es posible filtrar la secuencia devuelta por una expresión si se agrega un predicado a la expresión. Para obtener más información, vea [expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md). Por ejemplo, la consulta siguiente devuelve una secuencia de tres <`a` nodos elemento>:  
   
 ```  
 declare @x xml  
@@ -143,7 +144,7 @@ set @x = '<root>
 SELECT @x.query('/root/a')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <a attrA="1">111</a>  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Para recuperar sólo <`a`> elementos que tienen el atributo attrA, puede especificar un filtro en el predicado. La secuencia resultante tendrá un único <`a`> elemento.  
+ Para recuperar solo <`a`> elementos que tengan el atributo ATTRA, puede especificar un filtro en el predicado. La secuencia resultante tendrá solo un <`a` elemento>.  
   
 ```  
 declare @x xml  
@@ -163,13 +164,13 @@ set @x = '<root>
 SELECT @x.query('/root/a[@attrA]')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <a attrA="1">111</a>  
 ```  
   
- Para obtener más información sobre cómo especificar predicados en una expresión de ruta de acceso, consulte [especificar predicados en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-predicates.md).  
+ Para obtener más información sobre cómo especificar predicados en una expresión de ruta de acceso, vea [Especificar predicados en un paso de expresión de ruta](../xquery/path-expressions-specifying-predicates.md)de acceso.  
   
  En el ejemplo siguiente se genera una expresión de secuencia de subárboles y, después, se aplica un filtro al flujo.  
   
@@ -195,14 +196,14 @@ SELECT @x.query('
 ')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <c>C under a</c>  
 <c>C under b</c>  
 ```  
   
- En el ejemplo siguiente se aplica un filtro de predicado. La expresión busca elementos <`a`> y <`b`> que contienen el elemento <`c`>.  
+ En el ejemplo siguiente se aplica un filtro de predicado. La expresión busca elementos <`a`> y <`b`> que contengan el elemento <> `c` .  
   
 ```  
 declare @x xml  
@@ -222,7 +223,7 @@ SELECT @x.query('
 ')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <a>  
@@ -242,7 +243,7 @@ SELECT @x.query('
   
 -   No se admite la combinación de secuencias de nodos por medio del operador UNION, INTERSECT o EXCEPT.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   
   

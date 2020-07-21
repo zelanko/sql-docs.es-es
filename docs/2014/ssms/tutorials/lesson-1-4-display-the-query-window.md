@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3aecc41-4d79-49b2-a11c-7b2203fa79bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e357d8767178e2fb95c484d78248a08b51c2ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3753014d3a30b92b77bfd2b836224a7edf1d2dbf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058261"
 ---
 # <a name="display-the-query-window"></a>Mostrar la ventana Consulta
   Cuando se abren varias ventanas de consulta. se muestran como ventanas de organización por fichas.  
@@ -26,11 +25,11 @@ ms.locfileid: "63281991"
   
 1.  En la barra de herramientas principal, haga clic en **Consulta de motor de base de datos**. En el cuadro de diálogo **Conectar al motor de base de datos** , haga clic en **Conectar**.  
   
-2.  En el Explorador de objetos, haga clic con el botón secundario en el servidor y, después, en **Nueva consulta**. En este caso, el Editor de consultas utiliza la información de conexión del servidor registrado.  
+2.  En Explorador de objetos, haga clic con el botón secundario en el servidor y haga clic en **nueva consulta**. En este caso, el Editor de consultas utiliza la información de conexión del servidor registrado.  
   
      Observe que las ventanas aparecen como ventanas con fichas a la derecha del Explorador de objetos.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Mostrar la página Detalles del Explorador de objetos](lesson-1-5-show-the-object-explorer-details-page.md)  
+ [Mostrar la página de detalles del Explorador de objetos](lesson-1-5-show-the-object-explorer-details-page.md)  
   
   

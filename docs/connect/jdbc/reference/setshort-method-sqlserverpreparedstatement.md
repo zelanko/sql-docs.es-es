@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6a9171a4-3e44-44ea-a453-23f57e5320e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d0311bb060214b6fb654fd1794185cbf081866c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f193d6c663e262623ee75f8dd32a3b11bcd13a27
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972860"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927768"
 ---
 # <a name="setshort-method-sqlserverpreparedstatement"></a>Método setShort (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,18 +36,18 @@ public final void setShort(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el número de parámetro.  
   
  *x*  
   
- Valor **Short** .  
+ Un valor **short**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método setShort especifica este método setShort en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

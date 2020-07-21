@@ -10,15 +10,14 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10d2eeb6991c0c75e8dbe8102f94148f60f0a361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 05369b52c6bfa120e5db2d3ab8e567e9a866f7dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769382"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429012"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (expresión de SSIS)
   Devuelve el punto de código Unicode del primer carácter de la izquierda de una expresión de caracteres.  
@@ -37,7 +36,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_UI2  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  *character_expression* necesita tener el tipo de datos DT_WSTR.  
   
  CODEPOINT devuelve un resultado NULL si *character_expression* es NULL o una cadena vacía.  
@@ -55,7 +54,7 @@ CODEPOINT("Mountain Bike")
 CODEPOINT(@Name)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   
   

@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ranking rows
 - RANK function [Transact-SQL]
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 1aa1ab1466776af502249c43d005af896827de85
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661444"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003763"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Devuelve el rango de cada fila en la partición de un conjunto de resultados. El rango de una fila es uno más el número de rangos anteriores a la fila en cuestión.  
 
@@ -48,12 +48,12 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="arguments"></a>Argumentos  
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden de los datos antes de que se aplique la función. *order_by_clause* es obligatorio. La \<cláusula rows o range> de la cláusula OVER no se puede especificar para la función RANK. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden de los datos antes de que se aplique la función. *order_by_clause* es obligatorio. El elemento \<rows or range clause/> de la cláusula OVER no se puede especificar para la función RANK. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si dos o más filas se enlazan en un rango, cada fila enlazada recibe el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tienen el rango uno. El vendedor con el siguiente valor más alto de SalesYTD recibe el rango tres, porque ya hay dos filas con un rango superior. Por tanto, la función RANK no siempre devuelve enteros consecutivos.  
   
  El criterio de ordenación empleado por la consulta global determina el orden en que aparecen las filas en el conjunto de resultados.  
@@ -129,7 +129,7 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-ranking-rows-within-a-partition"></a>C. Clasificar filas dentro de una partición  
  En el siguiente ejemplo se clasifican los representantes de ventas de cada territorio de ventas según sus ventas totales. Se crean particiones del conjunto de filas por `SalesTerritoryGroup` y se ordenan por `SalesAmountQuota`.  

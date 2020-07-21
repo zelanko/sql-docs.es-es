@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c357384a3de683c05b2922149e2b61630881922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d172e86659496332ec02bb87af6e237061edc571
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926202"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761381"
 ---
-# <a name="ado-run-time-errors"></a>Errores de tiempo de ejecución de ADO
-Errores de ADO se notifican al programa como errores de tiempo de ejecución. Puede usar el mecanismo de intercepción de errores de su lenguaje de programación para interceptar y controlarlos. Por ejemplo, en Visual Basic, utilice el **On Error** instrucción. En Visual C++, lo depende del método que se usa para tener acceso a las bibliotecas de ADO. Con #import, utilice un **try-catch** bloque. En caso contrario, deben recuperar explícitamente el objeto de error mediante una llamada a los programadores de C++ **GetErrorInfo**. El siguiente procedimiento sub de Visual Basic muestra cómo interceptar un error de ADO:
+# <a name="ado-run-time-errors"></a>Errores en tiempo de ejecución de ADO
+Los errores de ADO se envían al programa como errores en tiempo de ejecución. Puede usar el mecanismo de captura de errores del lenguaje de programación para interceptarlos y controlarlos. Por ejemplo, en Visual Basic, use la instrucción **on error** . En Visual C++, depende del método que use para tener acceso a las bibliotecas de ADO. Con #import, use un bloque **try-catch** . De lo contrario, los programadores de C++ deben recuperar explícitamente el objeto de error llamando a **GetErrorInfo**. En el siguiente procedimiento Sub Visual Basic se muestra cómo interceptar un error de ADO:
 
 ```
 ' BeginErrorHandlingVB01
@@ -78,7 +78,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- Esto **Form_Load** procedimiento de evento intencionadamente crea un error al intentar abrir el mismo **conexión** objeto dos veces. La segunda vez el **abierto** se llama al método, se activa el controlador de errores. En este caso, el error es de tipo **adErrObjectOpen**, por lo que el controlador de errores muestra el siguiente mensaje antes de reanudar la ejecución del programa:
+ Este procedimiento de eventos **Form_Load** crea intencionadamente un error al intentar abrir el mismo objeto de **conexión** dos veces. La segunda vez que se llama al método **Open** , se activa el controlador de errores. En este caso, el error es de tipo **adErrObjectOpen**, por lo que el controlador de errores muestra el siguiente mensaje antes de reanudar la ejecución del programa:
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -86,15 +86,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- El mensaje de error incluye cada parte de la información proporcionada por Visual Basic **Err** objeto, excepto el **LastDLLError** valor, que no se aplica aquí. El número de error indica qué error se ha producido. La descripción es útil en casos en los que no desea controlar el error por sí mismo. Puede pasar simplemente lo al usuario. Aunque normalmente es conveniente utilizar mensajes personalizados para su aplicación, no se puede prever cada error; la descripción proporciona algunas pistas sobre qué salió mal. En el código de ejemplo, se notificó el error por el **conexión** objeto. Verá el objeto tipo o identificador de programación: no un nombre de variable.
+ El mensaje de error incluye cada parte de la información proporcionada por el Visual Basic objeto **Err** , excepto el valor **LastDllError** , que no se aplica aquí. El número de error indica el error que se ha producido. La descripción es útil en los casos en los que no desea controlar el error usted mismo. Simplemente puede pasarlo al usuario. Aunque normalmente querrá usar mensajes personalizados para su aplicación, no puede prever cada error; la descripción proporciona alguna pista sobre el problema. En el código de ejemplo, el objeto de **conexión** comunicó el error. Verá el tipo de objeto o el identificador de programación aquí, no un nombre de variable.
 
 > [!NOTE]
->  Visual Basic **Err** objeto sólo contiene información sobre el error más reciente. ADO **errores** colección de la **conexión** objeto contiene uno **Error** objeto por cada error generado por la operación más reciente de ADO. Use la **errores** colección en lugar de **Err** objeto para controlar varios errores. Para obtener más información sobre la **errores** colección, consulte [errores del proveedor](../../../ado/guide/data/provider-errors.md). Sin embargo, si no es válido no **conexión** objeto, el **Err** objeto es el único origen para obtener información acerca de los errores de ADO.
+>  El objeto Visual Basic **Err** solo contiene información sobre el error más reciente. La colección de **errores** de ADO del objeto de **conexión** contiene un objeto de **error** para cada error generado por la operación de ADO más reciente. Utilice la colección de **errores** en lugar del objeto **Err** para controlar varios errores. Para obtener más información sobre la colección de **errores** , vea [errores de proveedor](../../../ado/guide/data/provider-errors.md). Sin embargo, si no hay ningún objeto de **conexión** válido, el objeto **Err** es el único origen de información sobre los errores de ADO.
 
- ¿Qué tipos de operaciones pueden provocar errores de ADO? Errores comunes de ADO pueden implicar la apertura de un objeto, como un **conexión** o **Recordset**, intentar actualizar los datos o una llamada a un método o propiedad que no es compatible con su proveedor.
+ ¿Es probable que se produzcan errores de ADO en los tipos de operaciones? Los errores comunes de ADO pueden implicar la apertura de un objeto, como una **conexión** o un **conjunto de registros**, el intento de actualizar datos o la llamada a un método o una propiedad que no admite el proveedor.
 
- Errores de OLE DB también se pueden pasar a la aplicación como errores de tiempo de ejecución en el **errores** colección.
+ Los errores de OLE DB también se pueden pasar a la aplicación en forma de errores en tiempo de ejecución en la colección de **errores** .
 
- El siguiente tema proporciona más información sobre los errores de ADO.
+ En el tema siguiente se proporciona más información acerca de los errores de ADO.
 
 -   [Errores de ADO](../../../ado/guide/data/ado-error-reference.md)

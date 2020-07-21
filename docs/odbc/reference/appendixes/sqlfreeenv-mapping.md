@@ -11,26 +11,26 @@ helpviewer_keywords:
 - SQLFreeEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLFreeEnv
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef89943f95a6492614972c3e89fe2129becc1aa5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1f56bfeaee32e83ded6d8269873c9c4c33ed434e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086421"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302036"
 ---
 # <a name="sqlfreeenv-mapping"></a>Asignación de SQLFreeEnv
-Cuando una aplicación llama **SQLFreeEnv** a través de un ODBC *3.x* controlador, la llamada a  
+Cuando una aplicación llama a **SQLFreeEnv** a través de un controlador ODBC *3. x* , la llamada a  
   
 ```  
 SQLFreeEnv(henv)   
 ```  
   
- se asigna a  
+ está asignado a  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_ENV,Handle)  
 ```  
   
- con el *controlar* argumento establecido en el valor de *henv*.
+ con el argumento *Handle* establecido en el valor de *HENV*.

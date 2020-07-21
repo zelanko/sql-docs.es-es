@@ -1,5 +1,6 @@
 ---
 title: Directiva TYPE en consultas FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo usar la directiva TYPE con la cláusula FOR XML para solicitar que el resultado de una consulta se devuelva como datos XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36c5f8a3178d82f899b7128434af4467d4f6f846
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729840"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) ofrece la posibilidad de solicitar la devolución del resultado de una consulta FOR XML como tipo de datos **xml** mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a una variable de tipo **xml** o escribir consultas [FOR XML anidadas](../../relational-databases/xml/use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
@@ -51,7 +52,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Asignar resultados de consultas FOR XML a una variable de tipo xml  
- En el ejemplo siguiente, se asigna un resultado de FOR XML a una variable de tipo **xml**, `@x`. La consulta recupera información de contacto, como `BusinessEntityID`, `FirstName` o `LastName`, y números de teléfono adicionales, de la columna `AdditionalContactInfo` de **xml** `TYPE`. Puesto que la cláusula `FOR XML` especifica la directiva `TYPE`, se devuelve XML en forma de tipo **xml** y se asigna a una variable.  
+ En el ejemplo siguiente, se asigna un resultado de FOR XML a una variable de tipo **xml** , `@x`. La consulta recupera información de contacto, como `BusinessEntityID`, `FirstName` o `LastName`, y números de teléfono adicionales, de la columna `AdditionalContactInfo` de **xml**`TYPE`. Puesto que la cláusula `FOR XML` especifica la directiva `TYPE` , se devuelve XML en forma de tipo **xml** y se asigna a una variable.  
   
 ```  
 USE AdventureWorks2012;  
@@ -74,7 +75,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>Consultar los resultados de una consulta FOR XML  
  Las consultas FOR XML devuelven XML. Por tanto, puede aplicar métodos del tipo **xml** , como **query()** y **value()** , al resultado XML devuelto por las consultas FOR XML.  
   
- En la consulta siguiente, se usa el método `query()` del tipo de datos **xml** para consultar el resultado de la consulta `FOR XML`. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
+ En la consulta siguiente, se usa el método `query()` del tipo de datos **xml** para consultar el resultado de la consulta `FOR XML` . Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  
@@ -88,7 +89,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- La consulta `SELECT ... FOR XML` interna devuelve un resultado de tipo **xml** al que la instrucción `SELECT` externa aplica el método `query()` al tipo **xml**. Observe la directiva `TYPE` especificada.  
+ La consulta `SELECT ... FOR XML` interna devuelve un resultado de tipo **xml** al que la instrucción `SELECT` externa aplica el método `query()` al tipo **xml** . Observe la directiva `TYPE` especificada.  
   
  El resultado es el siguiente:  
   
@@ -104,7 +105,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- En la consulta siguiente, el método `value()` del tipo de datos **xml** se usa para recuperar un valor del resultado XML devuelto por la consulta `SELECT...FOR XML`. Para obtener más información, vea [value&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
+ En la consulta siguiente, el método `value()` del tipo de datos **xml** se usa para recuperar un valor del resultado XML devuelto por la consulta `SELECT...FOR XML` . Para obtener más información, vea [value&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/value-method-xml-data-type.md).  
   
 ```  
 USE AdventureWorks2012;  

@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813173"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Agrega una firma digital a un procedimiento almacenado, una función, un ensamblado o un desencadenador. También agrega una contrafirma a un procedimiento almacenado, una función, un ensamblado o un desencadenador.  
-  
-  
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+Agrega una firma digital a un procedimiento almacenado, una función, un ensamblado o un desencadenador. También agrega una contrafirma a un procedimiento almacenado, una función, un ensamblado o un desencadenador.
+
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Sintaxis
+
+```syntaxsql
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>Argumentos  
- *module_class*  
- Es la clase del módulo al que se agrega la firma. El valor predeterminado para módulos de ámbito de esquema es OBJECT.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
+*module_class*  
+Es la clase del módulo al que se agrega la firma. El valor predeterminado para módulos de ámbito de esquema es OBJECT.  
   
  *module_name*  
  Es el nombre de un procedimiento almacenado, una función, un ensamblado o un desencadenador que se firmará o contrafirmará.  
@@ -58,7 +61,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  Es el nombre de un certificado con el que está firmado o contrafirmado el procedimiento almacenado, la función, el ensamblado o el desencadenador.  
   
  WITH PASSWORD ='*password*'  
- Es la contraseña necesaria para descifrar la clave privada del certificado o la clave simétrica. Esta cláusula solo se requiere si la clave privada no está protegida por la clave maestra de la base de datos.  
+ Es la contraseña necesaria para descifrar la clave privada del certificado o la clave simétrica. Esta cláusula solo se requiere si la clave privada no la protege la clave maestra de la base de datos.  
   
  SIGNATURE =*signed_blob*  
  Especifica el objeto binario grande (BLOB) firmado del módulo. Esta cláusula es útil si desea enviar un módulo sin enviar la clave privada. Si utiliza esta cláusula, solo se necesitan el módulo, la firma y la clave pública para agregar el objeto binario grande firmado a una base de datos. *signed_blob* es el propio blob en formato hexadecimal.  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Es el nombre de una clave asimétrica con el que está firmado o contrafirmado el procedimiento almacenado, la función, el ensamblado o el desencadenador.  
   
-## <a name="remarks"></a>Notas  
- El módulo que se va a firmar o contrafirmar, y el certificado o la clave simétrica utilizada para firmarlo ya deben existir. En el cálculo de la firma se incluyen todos los caracteres del módulo. Esto incluye saltos de línea y retornos de carro iniciales.  
+## <a name="remarks"></a>Observaciones
+
+El módulo que se va a firmar o contrafirmar, y el certificado o la clave simétrica utilizada para firmarlo ya deben existir. En el cálculo de la firma se incluyen todos los caracteres del módulo. Esto incluye saltos de línea y retornos de carro iniciales.  
   
  Un módulo se puede firmar y contrafirmar por diversos certificados y claves simétricas.  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  Si un módulo contiene una cláusula EXECUTE AS, el Id. de seguridad (SID) de la entidad de seguridad también se incluye como parte del proceso de firma.  
   
-> [!CAUTION]  
->  La firma de módulos solo se debe utilizar para conceder permisos, nunca para denegarlos ni revocarlos.  
+> [!CAUTION]
+> La firma de módulos solo se debe utilizar para conceder permisos, nunca para denegarlos ni revocarlos.  
   
  No se puede firmar las funciones con valores de tabla insertadas.  
   
  Para obtener más información acerca de las firmas, vea la vista de catálogo sys.crypt_properties.  
   
-> [!WARNING]  
+> [!WARNING]
 >  Al crear un procedimiento para la firma, todas las instrucciones del lote original deben coincidir con el lote de regeneración. Si alguna parte del lote es diferente, incluso en los espacios o los comentarios, la firma resultante será distinta.  
   
 ## <a name="countersignatures"></a>Contrafirmas  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Si firmamos procSelectT1, procSelectT1 puede tener acceso a T1 y entonces Alice puede invocar a procSelectT1 directamente y no tiene que llamar a ProcSelectT1ForAlice.  
   
--   Podríamos denegar el permiso EXCEUTE en procSelectT1 a Alice, pero entonces Alice no podría llamar a procSelectT1 a través de ProcSelectT1ForAlice.  
+-   Podríamos denegar el permiso EXCEUTE en procSelectT1 a Alice, pero entonces Alice no podría llamar a procSelectT1 a través de ProcSelectT1ForAlice.
   
 -   Si solo se firma ProcSelectT1ForAlice, no funcionaría, porque la firma se perdería en la llamada a procSelectT1.  
   
 Pero al contrafirmar procSelectT1 con el mismo certificado que se usó para firmar ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantendrá la firma a través de la cadena de llamadas y permitirá el acceso a T1. Si Alice intenta llamar directamente a procSelectT1, no puede tener acceso a T1, porque la contrafirma no concede ningún derecho. El ejemplo C siguiente muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] para este ejemplo.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso ALTER para el objeto y el permiso CONTROL para el certificado o la clave asimétrica. Si una clave privada asociada está protegida por una contraseña, el usuario también debe tener la contraseña.  
+
+Requiere el permiso ALTER para el objeto y el permiso CONTROL para el certificado o la clave asimétrica. Si una clave privada asociada está protegida por una contraseña, el usuario también debe tener la contraseña.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Firmar un procedimiento almacenado mediante el uso de un certificado  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Firmar un procedimiento almacenado mediante el uso de un certificado
+
  En el siguiente ejemplo se firma el procedimiento almacenado `HumanResources.uspUpdateEmployeeLogin` con el certificado `HumanResourcesDP`.  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Firmar un procedimiento almacenado mediante el uso de un BLOB firmado  
- En el siguiente ejemplo se crea una base de datos nueva y un certificado que se utilizará en el ejemplo. El ejemplo crea y firma un procedimiento almacenado simple y recupera la firma BLOB de `sys.crypt_properties`. La firma se quita y se agrega otra vez. En el ejemplo se firma el procedimiento utilizando la sintaxis WITH SIGNATURE.  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Firmar un procedimiento almacenado mediante el uso de un BLOB firmado
+
+En el siguiente ejemplo se crea una base de datos nueva y un certificado que se utilizará en el ejemplo. El ejemplo crea y firma un procedimiento almacenado simple y recupera la firma BLOB de `sys.crypt_properties`. La firma se quita y se agrega otra vez. En el ejemplo se firma el procedimiento utilizando la sintaxis WITH SIGNATURE.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Acceder a un procedimiento utilizando una contrafirma  
- El siguiente ejemplo muestra el modo en que la contrafirma puede ayudar a controlar el acceso a un objeto.  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. Acceder a un procedimiento utilizando una contrafirma
+
+El siguiente ejemplo muestra el modo en que la contrafirma puede ayudar a controlar el acceso a un objeto.  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

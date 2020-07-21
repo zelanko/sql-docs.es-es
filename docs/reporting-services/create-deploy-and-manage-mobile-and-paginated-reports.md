@@ -1,5 +1,5 @@
 ---
-title: Qué es SQL Server Reporting Services (SSRS) | Microsoft Docs
+title: Qué es SQL Server Reporting Services | Microsoft Docs
 description: Obtenga información sobre herramientas y servicios para informes de Reporting Services móviles y paginados en local.
 ms.date: 05/06/2019
 ms.prod: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2654fba3904788e1eefa2aaa17d4defbad4039a8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571566"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082628"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>¿Qué es SQL Server Reporting Services (SSRS)?
 
@@ -30,7 +30,7 @@ ms.locfileid: "65571566"
 
 SQL Server Reporting Services (SSRS) ofrece un conjunto de servicios y herramientas locales que permiten crear, implementar y administrar informes móviles y paginados.
 
-![Todo SQL Server Reporting Services](../reporting-services/media/ss-reporting-services-all-together.png "Todo SQL Server Reporting Services")
+![SQL Server Reporting Services todos juntos](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services todos juntos")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>Crear, implementar y administrar informes paginados y móviles
 
@@ -91,7 +91,7 @@ El contenido en el portal web está organizado por tipo:
 * Informes móviles 
 * KPI
 * Libros de Excel
-* Conjuntos de datos compartidos
+* conjuntos de datos compartidos
 * orígenes de datos compartidos
 
 Puede almacenarlos y administrarlos con seguridad aquí, en la jerarquía de carpetas tradicional. Etiquete sus informes como favoritos para acceder a ellos con rapidez. Los usuarios con los permisos apropiados puede administrar el contenido de SSRS.
@@ -110,7 +110,7 @@ Más información sobre el [Servidor de informes de Reporting Services en el mod
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>Características de programación de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
+## <a name="ssrsnoversion-programming-features"></a>Características de programación de[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
 
 Benefíciese de las características de programación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para poder ampliar y personalizar la funcionalidad de informes. Use las API de SSRS para integrar o ampliar el procesamiento de datos e informes en las aplicaciones personalizadas.
 
@@ -119,7 +119,7 @@ Más [documentación para desarrolladores de Reporting Services](../reporting-se
 ## <a name="next-steps"></a>Pasos siguientes
 
 * [Instalar Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Descargar SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [Descargar las últimas herramientas de datos SQL Server](https://go.microsoft.com/fwlink/?LinkID=616714)
 * [Instalación del Generador de informes](../reporting-services/install-windows/install-report-builder.md)
 
 * ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

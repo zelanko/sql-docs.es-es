@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137659"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881535"
 ---
-# <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información de partición para la publicación de combinación especificada. Este procedimiento almacenado se ejecuta en el publicador de cualquier base de datos.  
   
@@ -39,25 +39,25 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @suser_sname = ] 'suser_sname'` Es el valor SUSER_SNAME utilizado para definir una partición. *SUSER_SNAME* es **sysname**, su valor predeterminado es null. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que SUSER_SNAME se resuelve en el valor suministrado.  
-  
-> [!NOTE]  
->  Cuando *suser_sname* se proporciona, *host_name* debe ser NULL  
-  
-`[ @host_name = ] 'host_name'` Es el valor HOST_NAME utilizado para definir una partición. *HOST_NAME* es **sysname**, su valor predeterminado es null. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que HOST_NAME se resuelve en el valor suministrado.  
+`[ @suser_sname = ] 'suser_sname'`Es el valor de SUSER_SNAME que se usa para definir una partición. *SUSER_SNAME* es de **tipo sysname y su**valor predeterminado es NULL. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que SUSER_SNAME se resuelve en el valor suministrado.  
   
 > [!NOTE]  
->  Cuando *suser_sname* se proporciona, *host_name* debe ser NULL  
+>  Cuando se proporciona *SUSER_SNAME* , *host_name* debe ser null.  
+  
+`[ @host_name = ] 'host_name'`Es el valor de HOST_NAME que se usa para definir una partición. *host_name* es de **tipo sysname y su**valor predeterminado es NULL. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que HOST_NAME se resuelve en el valor suministrado.  
+  
+> [!NOTE]  
+>  Cuando se proporciona *SUSER_SNAME* , *host_name* debe ser null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**partition**|**int**|Identifica la partición del suscriptor.|  
-|**host_name**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor.|  
-|**suser_sname**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor.|  
+|**host_name**|**sysname**|Valor utilizado al crear la partición para una suscripción filtrada por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor.|  
+|**suser_sname**|**sysname**|Valor utilizado al crear la partición para una suscripción filtrada por el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Ubicación de la instantánea de datos filtrados para la partición del suscriptor.|  
 |**date_refreshed**|**datetime**|Última fecha en que el trabajo de instantáneas se ha ejecutado para generar la instantánea de datos filtrados para la partición.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica el trabajo que crea la instantánea de datos filtrados para una partición.|  
@@ -69,10 +69,10 @@ sp_helpmergepartition [ @publication= ] 'publication'
  **sp_helpmergepartition** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpmergepartition**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** y del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpmergepartition**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_addmergepartition &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+ [sp_dropmergepartition &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - events [ADO], instantiation by language
 - event handlers [ADO], instantiation by language
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c1288075391501c78bfee686fc4a0d8cfbc533b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926177"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761351"
 ---
 # <a name="ado-event-instantiation-by-language"></a>Creación de instancias de eventos de ADO según el lenguaje
-Cada lenguaje de programación crea instancias de eventos de ADO de forma diferente. Todos los ejemplos siguientes crean un **ConnectComplete** controlador de eventos.  
+Cada lenguaje de programación crea instancias de eventos de ADO de manera diferente. En todos los ejemplos siguientes se crea un controlador de eventos **ConnectComplete** .  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   

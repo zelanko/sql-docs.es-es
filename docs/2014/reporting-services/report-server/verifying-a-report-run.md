@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103140"
 ---
 # <a name="verifying-a-report-run"></a>Comprobar la ejecución de un informe
@@ -40,11 +40,11 @@ ms.locfileid: "66103140"
   
 |Para este tipo de informe|La información de fecha y hora se halla en|Para ver la información, haga lo siguiente|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Un informe que se ejecuta como una instantánea de informe.|En la página Contenido. Para más información, vea [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md).|1) Vaya a la carpeta que contiene el informe.<br />2) Establezca la carpeta en la vista Detalles.<br />(3) 3) anote la fecha y hora en la **cuando ejecute** columna.|  
+|Un informe que se ejecuta como una instantánea de informe.|En la página Contenido. Para más información, vea [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md).|1) Vaya a la carpeta que contiene el informe.<br />2) Establezca la carpeta en la vista Detalles.<br />3) 3) Anote la fecha y la hora de la columna **When Run** .|  
 |Una instantánea del historial del informe.|En la página de propiedades Historial. Para más información, vea [Página de propiedades de opciones de instantánea &#40;Administrador de informes&#41;](../snapshot-options-properties-page-report-manager.md).|1) Abra el informe.<br />2) Haga clic en la página **Propiedades** .<br />3) Haga clic en la pestaña **Historial** .<br />4) Anote la fecha y hora indicadas en la columna **When Run** (Cuándo se ejecuta).|  
 |Un informe en la memoria caché.|En la programación utilizada para crear y actualizar el informe en la memoria caché.|1) Abra el informe.<br />2) Haga clic en la página **Propiedades** .<br />3) Haga clic en la pestaña **Ejecución** .<br />4) Abra la programación.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)  

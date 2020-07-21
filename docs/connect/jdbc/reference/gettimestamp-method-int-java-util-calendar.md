@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50aa202837bee9e091cbb2ad31f56da6ea15eef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3a86f7c3b9483257a38095adfff6969c04d43fb4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978873"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927347"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>Método getTimestamp (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,24 +36,24 @@ public java.sql.Timestamp getTimestamp(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Un valor **int** que indica el índice del parámetro.  
   
  *cal*  
   
- Un objeto de calendario.  
+ Un objeto Calendar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto timestamp.  
+ Un objeto Timestamp.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getTimestamp especifica este método getTimestamp en la interfaz java.sql.CallableStatement.  
   
- Este método solamente devuelve valores de columnas **datetime** y **smalldatetime** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este método solamente devuelve valores de columnas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** y **smalldatetime**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

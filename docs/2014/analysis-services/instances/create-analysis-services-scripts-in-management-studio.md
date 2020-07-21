@@ -1,5 +1,5 @@
 ---
-title: Crear Scripts de Analysis Services en Management Studio | Microsoft Docs
+title: Crear scripts de Analysis Services en Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 689fe598cff74873c0a31f0e7aa47b15f760a789
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080108"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543997"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Crear scripts de Analysis Services en Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye características, plantillas y editores de generación de script que se pueden usar para incluir objetos y tareas de Analysis Services en un script.  
@@ -35,7 +34,7 @@ ms.locfileid: "66080108"
   
 2.  Haga clic con el botón derecho en una base de datos y haga clic en **Copia de seguridad**. Se abre el cuadro de diálogo Copia de seguridad de la base de datos. Especifique un nombre de archivo de copia de seguridad y elija las opciones que desee para esta copia de seguridad.  
   
-3.  Haga clic en **Script** en la parte superior del cuadro de diálogo. La característica Script forma parte de todos los cuadros de diálogo basados en tareas en Management Studio. Tiene las siguientes opciones: **Script de acción en ventana nueva consulta** para abrir la ventana del editor de consultas, **acción de Script en archivo** para guardar el script XMLA en un archivo, o **acción de Script en Portapapeles** para guardar el script XMLA para el Portapapeles.  
+3.  Haga clic en **Script** en la parte superior del cuadro de diálogo. La característica Script forma parte de todos los cuadros de diálogo basados en tareas en Management Studio. Tiene las opciones siguientes: **Generar script de acción en la ventana Nueva consulta** para abrir la ventana del editor de consultas, **Generar script de acción en archivo** para guardar el script XMLA en un archivo o **Generar script de acción en Portapapeles** para guardar el script XMLA en el Portapapeles.  
   
      Tenga en cuenta que la opción **Generar script de acción en trabajo** que aparece como una opción de script en Management Studio no se admite para los scripts de Analysis Services.  
   
@@ -59,12 +58,12 @@ ms.locfileid: "66080108"
   
 2.  Busque el objeto para el que desee crear un script que cree, altere o elimine objetos.  
   
-3.  Haga clic en el objeto, elija **incluir cubo como**, apunte a **CREATE To**, **ALTER To**, o **Delete To**y, a continuación, haga clic en uno de los siguientes opciones: **Nueva ventana del Editor de consultas** para abrir la ventana del editor de consultas, **archivo** para guardar el script XMLA en un archivo, o **Portapapeles** para guardar el script XMLA en el Portapapeles.  
+3.  Haga clic con el botón derecho en el objeto, seleccione **Generar script del cubo como**, elija **CREATE To**, **ALTER To**o **Delete To**y, después, haga clic en una de las siguientes opciones: **Nueva ventana del Editor de consultas** para abrir la ventana del editor de consultas, **Archivo** para guardar el script XMLA en un archivo o **Portapapeles** para guardarlo en el Portapapeles.  
   
     > [!NOTE]  
     >  Normalmente se selecciona **Archivo** para crear versiones diferentes del archivo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
  [Editor de consultas XMLA &#40;Analysis Services: datos multidimensionales&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   

@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68e02c4933f559bff62b8e352016a911990049a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049565"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
-  La administración basada en directivas permite supervisar los procedimientos recomendados para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona un conjunto de archivos de directivas que puede importar como mejor las directivas de prácticas y, a continuación, evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Puede evaluar manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  
+  La administración basada en directivas permite supervisar los procedimientos recomendados para [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona un conjunto de archivos de directivas que puede importar como directivas de prácticas recomendadas y, a continuación, evaluar las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Puede evaluar manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Directivas y reglas para el motor de base de datos  
- En la tabla siguiente se muestra las directivas que se incluyen con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluye información sobre las reglas de prácticas recomendadas que evalúa cada directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](import-a-policy-based-management-policy.md).  
+ En la tabla siguiente se enumeran las directivas que se incluyen con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se incluye información sobre las reglas de procedimientos recomendados que evalúa cada Directiva. Las directivas se almacenan como archivos XML y se deben importar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo importar directivas, vea [Importar una directiva de administración basada en directivas](import-a-policy-based-management-policy.md).  
   
 |Nombre de la directiva|Regla de práctica recomendada|  
 |-----------------|------------------------|  
@@ -38,8 +37,8 @@ ms.locfileid: "62626052"
 |Permisos de invitado|[Permisos de invitado en bases de datos de usuario](guest-permissions-on-user-databases.md)|  
 |Fecha de la última copia de seguridad correcta|[Copia de seguridad no actualizada](outdated-backup.md)|  
 |Permisos de servidor público no concedidos|[Permisos públicos de servidor](server-public-permissions.md)|  
-|Superposición de máscara de afinidad de 32 bits SQL Server|[Máscara de afinidad correcto y superposición de máscara de afinidad de entrada y salida](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|Solapamiento de máscara de afinidad de SQL Server de 64 bits|[Máscara de afinidad correcto y superposición de máscara de afinidad de entrada y salida](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server superposición de máscara de afinidad de 32 bits|[Superposición correcta de la máscara de afinidad y de salida de entrada de afinidad](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Solapamiento de máscara de afinidad de SQL Server de 64 bits|[Superposición correcta de la máscara de afinidad y de salida de entrada de afinidad](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Máscara de afinidad de SQL Server|[Mantener el valor predeterminado de la máscara de afinidad](keep-the-affinity-mask-default-value.md)|  
 |Umbral de procesos bloqueados de SQL Server|[Aumentar o deshabilitar el umbral de procesos bloqueados](increase-or-disable-blocked-process-threshold.md)|  
 |Seguimiento predeterminado de SQL Server|[Archivos de registro de seguimiento predeterminados deshabilitados](default-trace-log-files-disabled.md)|  
@@ -60,14 +59,14 @@ ms.locfileid: "62626052"
 |Error por daños en recursos de disco de clúster del registro de eventos de Windows|[Detectar problemas de adaptadores de host SCSI](detect-scsi-host-adapter-issues.md)|  
 |Error del control de controlador de dispositivo del registro de eventos de Windows|[Error de control del controlador de dispositivo](device-driver-control-error.md)|  
 |Error por dispositivo no listo del registro de eventos de Windows|[Error por dispositivo no listo](device-not-ready-error.md)|  
-|Error en comprobación de solicitud de E/S del registro de eventos de Windows|[Detectar solicitud de entrada y salida con error](detect-failed-input-and-output-requests.md)|  
-|Advertencia por retraso de E/S del registro de eventos de Windows|[Comprobación del subsistema de entrada y salida de disco para problemas de retraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Error de E/S durante error de página en disco del registro de eventos de Windows|[Error de entrada y salida durante otro error de página en disco](input-and-output-error-during-hard-page-fault.md)|  
+|Error en comprobación de solicitud de E/S del registro de eventos de Windows|[Detectar solicitud de salida de entrada con errores](detect-failed-input-and-output-requests.md)|  
+|Advertencia por retraso de E/S del registro de eventos de Windows|[Check Disk Input and Output Subsystem for IO Delay Problems](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Error de E/S durante error de página en disco del registro de eventos de Windows|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
 |Error por reintento de lectura del registro de evento de Windows|[Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Error por superación de tiempo de espera de E/S en sistema de registro de eventos de Windows|[Tiempo de espera de entrada y salida del sistema de almacenamiento](storage-system-input-output-time-out.md)|  
 |Error del sistema del registro de eventos de Windows|[Errores del sistema inesperados](unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con facetas de administración basada en directivas](working-with-policy-based-management-facets.md)  
   
   

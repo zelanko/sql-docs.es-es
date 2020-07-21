@@ -1,5 +1,6 @@
 ---
 title: Preprocesamiento de un esquema para combinar esquemas incluidos | Microsoft Docs
+description: Obtenga información sobre cómo se pueden procesar previamente los esquemas XML que incluyen la directiva xsd:include para copiar y combinar el contenido de todos estos esquemas incluidos en uno solo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757513"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Preprocesar un esquema para combinar esquemas incluidos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  
   
- Para solucionar este problema, los esquemas XML que incluyen la directiva \<xsd:include> se pueden procesar previamente para copiar y combinar el contenido de todos los esquemas incluidos en un solo esquema para cargarlo en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
+ Para solucionar este problema, los esquemas XML que incluyen la directiva \<xsd:include> se pueden procesar previamente a fin de copiar y combinar el contenido de todos estos esquemas incluidos en uno solo para cargarlo en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -191,7 +192,7 @@ public class XmlSchemaIncludeNormalizer
 ## <a name="testing-the-preprocessor-tool"></a>Probar la herramienta de preprocesador  
  Puede utilizar los esquemas XSD siguientes para probar la herramienta de preprocesador:  
   
-### <a name="bookscommonxsd"></a>books_common.xsd  
+### <a name="books_commonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

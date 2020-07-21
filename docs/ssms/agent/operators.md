@@ -1,10 +1,9 @@
 ---
-title: Operadores | Microsoft Docs
-ms.custom: ''
+title: Operadores
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,13 +22,15 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c4059bda6f761171292f2977f7d8e6a3f6896451
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260081"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247631"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ La información de contacto de un operador define cómo se va a notificar a dich
   
         Si todos los operadores comparten el mismo proveedor de buscapersonas, puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar el formato especial de correo electrónico necesario para el sistema de conversión del buscapersonas a correo electrónico. El formato especial puede ser un prefijo o un sufijo y puede incluirse en las siguientes líneas del mensaje de correo electrónico:  
   
-        **Asunto:**  
+        **Firmante:**  
   
         **CC**:  
   
@@ -123,7 +124,7 @@ Debe configurar al menos uno de los elementos siguientes para poder notificar a 
   
 |||  
 |-|-|  
-|**Tareas**|**Tema**|  
+|**Tareas**|**Tema.**|  
 |Tareas relacionadas con la creación de un operador|[Crear un operador](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

@@ -1,21 +1,20 @@
 ---
 title: Extensión de importación de SQL Server
-titleSuffix: Azure Data Studio
 description: Instalación y uso de la extensión de importación de SQL Server (versión preliminar) para Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758339"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extensión de importación de SQL Server (versión preliminar)
 
@@ -26,7 +25,7 @@ Para obtener más información sobre la versión de SSMS de esta característica
 
 ## <a name="install-the-sql-server-import-extension"></a>Instalación de la extensión de importación de SQL Server
 
-1. Para abrir el administrador de extensiones y acceder a las extensiones disponibles, seleccione el icono extensiones, o bien seleccione **Extensiones** en el menú **Ver**.
+1. Para abrir el administrador de extensiones y acceder a las extensiones disponibles, seleccione el icono de extensiones, o bien seleccione **Extensiones** en el menú **Ver**.
 2. Seleccione una extensión disponible para ver sus detalles.
 
    ![Administrador de la extensión de importación](media/sql-server-import-extension/import-wizard-install.png)

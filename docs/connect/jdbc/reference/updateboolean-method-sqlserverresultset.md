@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb459d663bd48bd5d2a0f6a63667e37fb55e90f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15e0996b22655cc26f6f44b3391a51bdf2ec9013
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996947"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926007"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>Método updateBoolean (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: Permisos de hoja (Master Data Services) | Microsoft Docs
+title: Permisos de hoja
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813303"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Los permisos de hoja se aplican a los valores de atributo de todos los miembros hoja de una entidad.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "68007193"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros hoja y atributos.|  
-|**Crear**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Creación**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
 |**Update**|El usuario puede actualizar miembros hoja y atributos.|  
 |**Eliminar**|El usuario puede eliminar miembros hoja.|  
-|**Denegar**|Denegar todo el acceso a los miembros hoja.|  
+|**Deny**|Denegar todo el acceso a los miembros hoja.|  
   
  Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
@@ -53,28 +53,28 @@ ms.locfileid: "68007193"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer atributos.|  
-|**Crear**|El usuario puede asignar valores al crear miembros.|  
+|**Creación**|El usuario puede asignar valores al crear miembros.|  
 |**Update**|El usuario puede actualizar atributos.|  
 |**Eliminar**|Ningún efecto.|  
-|**Denegar**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
+|**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
-|NOMBRE|Código|Subcategory (actualizar)|  
+|Nombre|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Bicicletas de montaña|  
-|Mountain-100|BK-M201|{5} Bicicletas de montaña|  
+|Mountain-100|BK-M101|{5}Bicicletas de montaña|  
+|Mountain-100|BK-M201|{5}Bicicletas de montaña|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   
 > [!NOTE]  
 >  En este ejemplo, Subcategory es un atributo basado en dominio, que depende de la entidad SubcategoryList. Puede seleccionar una subcategoría diferente para Mountain-100, pero no puede agregar o eliminar miembros en la entidad SubcategoryList.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   

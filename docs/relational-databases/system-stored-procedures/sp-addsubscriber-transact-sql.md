@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fa4ea771197f08fc16989176f486d6a29c8c9940
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716358"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Agrega un suscriptor nuevo a un publicador, habilitándolo para recibir publicaciones. Para las publicaciones de instantáneas y transaccionales, este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones; para las publicaciones de combinación que utilizan un distribuidor remoto, lo hace en el distribuidor.  
   
@@ -66,17 +66,17 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0** (valor predeterminado)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suscriptor de|  
+|**0** (valor predeterminado)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Suscriptor de|  
 |**1**|Servidor del origen de datos ODBC|  
 |**2**|Base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Proveedor OLE DB|  
   
-`[ @login = ] 'login'`Es el identificador de inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión para la autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el identificador de inicio de sesión para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
-`[ @password = ] 'password'`Es la contraseña para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación. *password* es de tipo **nvarchar (524)** y su valor predeterminado es NULL.  
+`[ @password = ] 'password'`Es la contraseña para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *password* es de tipo **nvarchar (524)** y su valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura.  
@@ -105,9 +105,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4**|Diario|  
+|**8**|Cada semana|  
+|**16**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64** (valor predeterminado)|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -115,8 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
- [ **@frequency_interval=** ] *frequency_interval*  
- Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es 1.  
+`[ @frequency_interval = ] frequency_interval`Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es 1.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
@@ -125,7 +124,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1** (predeterminado)|Primero|  
+|**1** (predeterminado)|First|  
 |**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
@@ -143,10 +142,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
+|**1**|Una sola vez|  
 |**2**|Second|  
 |**4** (valor predeterminado)|Minute|  
-|**8**|Hour|  
+|**8**|Hora|  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
@@ -171,7 +170,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
-`[ @active_end_date = ] active_end_date`Es la fecha en la que el agente de replicación deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es 99991231, que significa el 31 de diciembre de 9999.  
+`[ @active_end_date = ] active_end_date`Es la fecha en la que el agente de replicación deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**, con un valor predeterminado de 99991231, que significa el 31 de diciembre de 9999.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
@@ -183,12 +182,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
-`[ @encrypted_password = ] encrypted_password`Este parámetro está en desuso y solo se proporciona para la compatibilidad con versiones anteriores si se establece *encrypted_password* en cualquier valor, pero **0** producirá un error.  
+`[ @encrypted_password = ] encrypted_password`Este parámetro ha quedado desusado y solo se proporciona para la configuración de compatibilidad con versiones anteriores *encrypted_password* en cualquier valor, pero **0** producirá un error.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el publicador al publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un publicador.  
+>  no se debe usar el *publicador* al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -198,16 +197,16 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
  **sp_addsubscriber** no es necesario cuando el suscriptor solo tendrá suscripciones anónimas a publicaciones de combinación.  
   
- **sp_addsubscriber** escribe en la tabla [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) de la base de datos de **distribución** .  
+ **sp_addsubscriber** escribe en la tabla de [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) de la base de datos de **distribución** .  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_addsubscriber**.  
   
-## <a name="see-also"></a>Vea también  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

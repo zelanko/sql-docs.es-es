@@ -11,15 +11,14 @@ f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: afae7bd794f0d795bcb49ae58aaad908e4644b69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62836120"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439102"
 ---
 # <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
   Utilice el cuadro de diálogo **Configurar** para configurar parámetros, administradores de conexión y referencias a los entornos, para los paquetes y los proyectos.  
@@ -32,7 +31,7 @@ ms.locfileid: "62836120"
   
 -   [Establecer las opciones de la página Referencias](#references)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar.  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62836120"
   
 5.  Haga clic con el botón derecho en el paquete o proyecto y, después, haga clic en **Configurar**.  
   
-##  <a name="parameter"></a> Establecer las opciones de la página Parámetros  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Establecer las opciones de la página Parámetros  
  Use la página **Parámetros** para ver los nombres de los parámetros y valores, así como para modificar los valores.  
   
  Seleccione el ámbito de los parámetros que aparecen en las pestañas **Parámetros** y **Administradores de conexiones** , en la lista desplegable **Ámbito** .  
@@ -56,10 +55,10 @@ ms.locfileid: "62836120"
  **Contenedor**  
  Muestra el objeto que contiene el parámetro.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de parámetro.  
   
- **Value**  
+ **Valor**  
  Muestra el valor del parámetro. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** .  
   
  La siguiente es una lista de las opciones de la pestaña de **Administradores de conexiones** . Use esta pestaña para cambiar los valores de las propiedades del administrador de conexiones. En el servidor SSIS se generan automáticamente parámetros para las propiedades.  
@@ -67,16 +66,16 @@ ms.locfileid: "62836120"
  **Contenedor**  
  Muestra el objeto que contiene el administrador de conexiones.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del administrador de conexiones.  
   
- **Nombre de la propiedad**  
+ **Nombre de propiedad**  
  Muestra el nombre de la propiedad del administrador de conexiones.  
   
  **Valor**  
  Muestra el valor asignado a la propiedad del administrador de conexiones. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** . Puede especificar un valor literal, asignar una variable de entorno que contiene el valor que desea usar o emplear el valor predeterminado del paquete.  
   
-##  <a name="references"></a> Establecer las opciones de la página Referencias  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Establecer las opciones de la página Referencias  
  Use la página **Referencias** para agregar y quitar las referencias a los entornos y a las propiedades del entorno de acceso.  
   
  Un entorno especifica los valores en tiempo de ejecución para los paquetes contenidos en los proyectos que ha implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -90,12 +89,12 @@ ms.locfileid: "62836120"
  **Abrir**  
  Haga clic para abrir el cuadro de diálogo de **Propiedades del entorno** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una referencia a un entorno. En el cuadro de diálogo **Examinar entornos** , haga clic en un entorno y después en **Aceptar**.  
   
  Puede seleccionar un entorno contenido en cualquier carpeta del proyecto bajo el nodo de **SSISDB** .  
   
- **Quitar**  
+ **Remove**  
  Haga clic en un entorno que se muestra en el área de **Referencias** y, después, haga clic **Quitar**.  
   
   

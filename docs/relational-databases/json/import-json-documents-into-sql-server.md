@@ -1,25 +1,25 @@
 ---
-title: Importar documentos JSON en SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2019
+title: Importación de documentos JSON
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: ed2924ae8b839bd414f036b389bf1298d51ed452
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70910822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755774"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON en SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este artículo se describe cómo importar archivos JSON en SQL Server. Actualmente, hay muchos documentos JSON almacenados en archivos. Las aplicaciones registran información en archivos JSON, los sensores generan información que se almacena en archivos JSON, etc. Es importante ser capaz de leer los datos JSON almacenados en archivos, cargar los datos en SQL Server y analizarlos.
 
@@ -51,23 +51,6 @@ SELECT BulkColumn
 
 Después de cargar el contenido del archivo JSON, puede guardar el texto JSON en una tabla.
 
-## <a name="import-multiple-json-documents"></a>Importar varios documentos JSON
-
-Puede usar el mismo enfoque para cargar un conjunto de archivos JSON desde el sistema de archivos a una variable local de uno en uno. Supongamos que los archivos se llaman `book<index>.json`.
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Importar documentos JSON desde Azure File Storage
 
@@ -164,9 +147,9 @@ En este ejemplo, OPENROWSET(BULK) lee el contenido del archivo y pasa ese conten
 
 |Identificador|Nombre|price|pages_i|Autor|
 |---|---|---|---|---|
-|978-0641723445|The Lightning Thief|12,5|384|Rick Riordan| 
+|978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters|6,49|304|Rick Riordan| 
-|978-1857995879|Sophie's World: The Greek Philosophers|3,07|64|Jostein Gaarder| 
+|978-1857995879|Sophie's World : The Greek Philosophers|3,07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30,5|475|Michael McCandless|
 ||||||
 

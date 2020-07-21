@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4e5d97f3b4b47e111da7c4a9efd9edeb87f168c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8b277bd02624ea22030cb36c54588476ffe8d058
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976792"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914784"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>Método nativeSQL (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,8 +48,8 @@ public java.lang.String nativeSQL(java.lang.String sql)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método nativeSQL se especifica mediante el método nativeSQL en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método nativeSQL especifica este método nativeSQL en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

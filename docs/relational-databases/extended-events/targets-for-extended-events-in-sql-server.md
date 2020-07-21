@@ -1,6 +1,6 @@
 ---
-title: Destinos para eventos extendidos en SQL Server | Microsoft Docs
-ms.custom: ''
+title: Destinos para eventos extendidos en SQL Server
+description: En este artículo se explican los destinos package0 para eventos extendidos en SQL Server. Obtenga información sobre las funciones de destino en la recopilación y generación de informes de datos y parámetros de destino.
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,16 +11,16 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c4bf57fb080c7f634256364e9ce1ac0d601ad589
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756831"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 En este artículo se explica cuándo y cómo usar los destinos package0 para eventos extendidos en SQL Server. Para cada destino, en el presente artículo se explican:
@@ -35,7 +35,7 @@ En este artículo se explica cuándo y cómo usar los destinos package0 para eve
 En la [sección ring_buffer](#h2_target_ring_buffer) se incluye un ejemplo de cómo usar [XQuery en Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) para copiar una cadena de XML en un conjunto de filas relacional.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerrequisitos
 
 
 - Es necesario estar familiarizado de forma general con los aspectos básicos de los eventos extendidos, como se describe en [Inicio rápido: eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
@@ -76,9 +76,9 @@ Puede ver los parámetros, campos y acciones que se usan en el contexto de una i
 ## <a name="etw_classic_sync_target-target"></a>Destino etw_classic_sync_target
 
 
-Los eventos extendidos de SQL Server pueden interoperar con Seguimiento de eventos para Windows (ETW) a fin de supervisar la actividad del sistema. Para obtener más información, vea:
+Los eventos extendidos de SQL Server pueden interoperar con Seguimiento de eventos para Windows (ETW) a fin de supervisar la actividad del sistema. Para más información, consulte:
 
-- [Seguimiento de eventos para Windows de destino](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Seguimiento de eventos para Windows como destino](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Supervisar la actividad del sistema mediante eventos extendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
@@ -676,7 +676,7 @@ Para ver el código XML anterior, puede emitir la instrucción SELECT siguiente 
 
 ```sql
 SELECT
-        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
+        CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml
     INTO
         #XmlAsTable
     FROM

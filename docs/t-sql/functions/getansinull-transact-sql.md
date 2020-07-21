@@ -18,17 +18,17 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c8343a24f892c5b0058f1bd1a7c001221c8ff65f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d67d058e089ce00308382d0b52ecc102b062cba2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631599"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve la nulabilidad predeterminada para la base de datos para esta sesión.  
   
@@ -45,10 +45,10 @@ GETANSINULL ( [ 'database' ] )
  "*database*"  
  Es el nombre de la base de datos para la que se devuelve información sobre nulabilidad. *database es **char** o **nchar**. Si **char**, *database* se convierte implícitamente en **nchar**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 GETANSINULL devuelve 1 si la nulabilidad de la base de datos permite valores null. Este valor devuelto también requiere que la nulabilidad del tipo de dato o columna no se defina explícitamente. El valor predeterminado NULL de ANSI es 1. 
   
  Para habilitar el comportamiento predeterminado de ANSI NULL, se debe establecer una de las siguientes condiciones:  
@@ -79,6 +79,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

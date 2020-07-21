@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63dbc19502ef0d22362008c67a17448bfa48d7f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 143063fc0d65c67206d3ae6fa3d2c571612f8202
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981521"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905651"
 ---
 # <a name="getnclob-method-int"></a>Método getNClob (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,10 +40,10 @@ public java.sql.NClob getNClob(int parameterIndex)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getNClob especifica este método getNClob en la interfaz java.sql.CallableStatement.  
   
- Este método solo admite la recuperación de parámetros **nchar**, **nvarchar**, **ntext**y **XML** . Si estos métodos se llaman en otros parámetros del tipo de datos, se producirá una excepción.  
+ Este método solo admite la recuperación de los parámetros **NCHAR**, **NVARCHAR**, **NTEXT** y **XML**. Si estos métodos se llaman en otros parámetros del tipo de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getNClob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

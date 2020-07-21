@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 34223d46b9c66f28f1dad82bda0125c06d0e08ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11868bd313afa40e371cf37a74214b627f5548ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940511"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749497"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Cuadro de diálogo Crear nueva condición o Abrir condición, página Descripción
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice este cuadro de diálogo para agregar una descripción a una condición de la administración basada en directivas.  
   
 ## <a name="options"></a>Opciones  

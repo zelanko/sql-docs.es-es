@@ -1,5 +1,5 @@
 ---
-title: Soluciones de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Soluciones de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a403aa28660252b78cc2c5c0c76f248e2fd1105
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939986"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluciones de modelos tabulares (SSAS tabular)
   En los temas de esta sección se proporciona información sobre la creación de modelos tabulares usando el diseñador de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-model-designer-ssas-tabular.md)  
+ [Diseñador de modelos tabulares &#40;&#41;tabular de SSAS](tabular-model-designer-ssas-tabular.md)  
   
  [Base de datos de área de trabajo &#40;SSAS tabular&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
- [Nivel de compatibilidad &#40;SSAS Tabular SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Nivel de compatibilidad &#40;SSAS tabular SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
  [Proyectos de modelos tabulares &#40;SSAS tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
   

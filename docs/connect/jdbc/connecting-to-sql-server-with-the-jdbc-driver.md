@@ -1,5 +1,6 @@
 ---
 title: Conexión a SQL Server con el controlador JDBC | Microsoft Docs
+description: Al conectarse a la base de datos mediante el controlador Microsoft JDBC Driver para SQL Server, toda la interacción con la base de datos pasa por el objeto SQLServerConnection.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028178"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487970"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Conexión a SQL Server con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +45,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Usar la autenticación integrada de Kerberos para conectar con SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Describe una implementación Java para que las aplicaciones se conecten con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación integrada de Kerberos.|  
 |[Conectarse a una instancia de Azure SQL Database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Explica los problemas de conectividad con bases de datos en SQL Azure.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

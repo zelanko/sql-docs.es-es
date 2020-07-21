@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4fc6b91f78b9465b091e3179f8ae5105da2cadda
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62834581"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435162"
 ---
 # <a name="use-the-new-instance-wizard"></a>Usar el Asistente para nueva instancia
   El Asistente para nueva instancia sirve para crear una instancia nueva de un servicio CDC. Abra el asistente Crear una instancia CDC de Oracle desde la Consola del diseñador CDC. Puede hacer lo siguiente en el Asistente para nueva instancia.  
@@ -34,11 +33,11 @@ ms.locfileid: "62834581"
   
 -   [Generar y ejecutar el Script de registro complementario ](generate-and-run-the-supplemental-logging-script.md)  
   
--   [Generar tablas reflejadas e instancias de captura CDC](generate-mirror-tables-and-cdc-capture-instances.md)  
+-   [Generar tablas reflejadas e instancias de captura CDC ](generate-mirror-tables-and-cdc-capture-instances.md)  
   
 -   [Finalizar](finish.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)  
   
   

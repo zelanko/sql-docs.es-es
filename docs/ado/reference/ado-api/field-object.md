@@ -1,5 +1,5 @@
 ---
-title: Objeto Field | Microsoft Docs
+title: Objeto de campo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,46 +13,46 @@ f1_keywords:
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a50d9f3354f9d5eb5a7615c244d8a8990ffc0c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918683"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758771"
 ---
 # <a name="field-object"></a>Objeto Field
 Representa una columna de datos con un tipo de datos común.  
   
-## <a name="remarks"></a>Comentarios  
- Cada **campo** objeto corresponde a una columna de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad de **campo** objetos para establecer o devolver datos para el registro actual. Dependiendo de la funcionalidad expone el proveedor, algunas colecciones, métodos o propiedades de un **campo** objeto no esté disponible.  
+## <a name="remarks"></a>Observaciones  
+ Cada objeto de **campo** corresponde a una columna del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). La propiedad [valor](../../../ado/reference/ado-api/value-property-ado.md) de los objetos de **campo** se utiliza para establecer o devolver datos del registro actual. Dependiendo de la funcionalidad que expone el proveedor, puede que algunas colecciones, métodos o propiedades de un objeto de **campo** no estén disponibles.  
   
- Con las colecciones, métodos y propiedades de un **campo** objeto, puede hacer lo siguiente:  
+ Con las colecciones, los métodos y las propiedades de un objeto de **campo** , puede hacer lo siguiente:  
   
--   Devolver el nombre de un campo con el [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad.  
+-   Devuelve el nombre de un campo con la propiedad [nombre](../../../ado/reference/ado-api/name-property-ado.md) .  
   
--   Ver o cambiar los datos en el campo con el **valor** propiedad. **Valor** es la propiedad predeterminada de la **campo** objeto.  
+-   Ver o cambiar los datos del campo con la propiedad **valor** . **Value** es la propiedad predeterminada del objeto **Field** .  
   
--   Devolver las características básicas de un campo con el [tipo](../../../ado/reference/ado-api/type-property-ado.md), [precisión](../../../ado/reference/ado-api/precision-property-ado.md), y [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) propiedades.  
+-   Devuelve las características básicas de un campo con las propiedades [Type](../../../ado/reference/ado-api/type-property-ado.md), [Precision](../../../ado/reference/ado-api/precision-property-ado.md)y [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) .  
   
--   Devolver el tamaño declarado de un campo con el [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedad.  
+-   Devuelve el tamaño declarado de un campo con la propiedad [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) .  
   
--   Devolver el tamaño real de los datos en un campo determinado con el [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) propiedad.  
+-   Devuelve el tamaño real de los datos de un campo determinado con la propiedad [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) .  
   
--   Determinar qué tipos de funcionalidad son compatibles con un campo dado con la [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad y [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+-   Determine qué tipos de funcionalidad se admiten para un campo determinado con la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) y la colección [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
--   Manipular los valores de los campos que contienen datos de caracteres largos o binarios largos con la [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) métodos.  
+-   Manipular los valores de los campos que contienen datos binarios largos o de caracteres largos con los métodos [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) .  
   
--   Si el proveedor admite las actualizaciones por lotes, solucionar discrepancias en los valores de campo durante la actualización por lotes con el [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propiedades.  
+-   Si el proveedor admite las actualizaciones por lotes, resuelva las discrepancias en los valores de campo durante la actualización por lotes con las propiedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Todas las propiedades de metadatos (**nombre**, **tipo**, **DefinedSize**, **precisión**, y **NumericScale**) están disponibles antes de abrir el **campo** del objeto **Recordset**. Establecerlas en ese momento es útil para la creación dinámica de formularios.  
+ Todas las propiedades de metadatos (**Name**, **Type**, **DefinedSize**, **Precision**y **NumericScale**) están disponibles antes de abrir el conjunto de **registros**del objeto de **campo** . Establecerlos en ese momento es útil para la creación dinámica de formularios.  
   
  Esta sección contiene el siguiente tema.  
   
--   [Los eventos, métodos y propiedades del objeto de campo](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos del objeto Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Colección Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

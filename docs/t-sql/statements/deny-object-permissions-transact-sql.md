@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766682"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (permisos de objeto de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deniega permisos para un miembro de la clase OBJECT de elementos protegibles. Éstos son los miembros de la clase OBJECT: tablas, vistas, funciones con valores de tabla, procedimientos almacenados, procedimientos almacenados extendidos, funciones escalares, funciones de agregado, colas de servicio y sinónimos.  
 
@@ -32,7 +32,7 @@ ms.locfileid: "68114800"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DENY <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
         TO <database_principal> [ ,...n ]   
@@ -76,7 +76,7 @@ PRIVILEGES
 >  Un permiso DENY de nivel de tabla no tiene prioridad sobre uno GRANT de nivel de columna. Se ha conservado esta incoherencia en la jerarquía de permisos para mantener la compatibilidad con versiones anteriores.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- Especifica el objeto en el que se va a denegar el permiso. La frase OBJECT es opcional si especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito ( **::** ). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se requiere el calificador de ámbito de esquema ( **.** ).  
+ Especifica el objeto en el que se va a denegar el permiso. La frase OBJECT es opcional si se especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito ( **::** ). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema ( **.** ).  
   
  TO \<database_principal>  
  Especifica la entidad de seguridad a la que se deniega el permiso.  
@@ -84,7 +84,7 @@ PRIVILEGES
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
   
- AS \<database_principal>  
+ AS \<database_principal>.  
  Especifica una entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
  *Database_user*  
@@ -111,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede ver la información acerca de objetos en varias vistas de catálogo. Para más información, vea [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md) [Vistas de catálogo de objetos &#40;Transact-SQL&#41;].  
   
  Un objeto es un elemento protegible de nivel de esquema que contiene el esquema que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en un objeto se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

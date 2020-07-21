@@ -1,5 +1,5 @@
 ---
-title: Aspectos básicos de consulta MDX (Analysis Services) | Microsoft Docs
+title: Aspectos básicos de las consultas MDX (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42c4d8581374c9805c28ce577249995427fd5c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a2a9a4f564bc33cc7a1b41a1a4c766c7a76a2cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546227"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Aspectos básicos de las consultas MDX (Analysis Services)
   Las expresiones multidimensionales (MDX) permiten consultar objetos multidimensionales, como los cubos, y devolver conjuntos de celdas multidimensionales que contengan los datos del cubo. Este tema y los temas secundarios proporcionan información general sobre las consultas MDX.  
@@ -31,7 +30,7 @@ ms.locfileid: "66073888"
  En los temas siguientes se describen las consultas MDX y los conjuntos de celdas que generan, y proporcionan información más detallada acerca de la sintaxis básica de MDX.  
   
 > [!NOTE]  
->  Para obtener más información acerca de los problemas de rendimiento relacionados con los cálculos y consultas MDX, vea la sección "Escritura de MDX eficaz" en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
+>  Para obtener más información acerca de los problemas de rendimiento relacionados con las consultas y los cálculos de MDX, vea la sección sobre escritura de MDX eficaz en la [Guía de rendimiento de SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66073888"
 |[Modificar datos &#40;MDX&#41;](mdx-data-modification-modifying-data.md)|Describe cómo utilizar las reescrituras para cambiar temporal o permanentemente datos multidimensionales.|  
 |[Usar variables y parámetros &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Describe cómo utilizar las variables y los parámetros en consultas MDX.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294129"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
@@ -40,14 +40,14 @@ ms.locfileid: "71294129"
 |---------------|-----------------|  
 |Copiar directorio|Copia una carpeta de una ubicación a otra.|  
 |Copiar archivo|Copia un archivo de una ubicación a otra.|  
-|Crear directorio|Crea una carpeta en una ubicación especificada.|  
+|Creación del directorio|Crea una carpeta en una ubicación especificada.|  
 |Eliminar directorio|Elimina una carpeta de una ubicación especificada.|  
 |Eliminar contenido de directorio|Elimina todos los archivos y carpetas de una carpeta.|  
 |Eliminar archivo|Elimina un archivo de una ubicación especificada.|  
 |Mover directorio|Mueve una carpeta de una ubicación a otra.|  
 |Mover archivo|Mueve un archivo de una ubicación a otra.|  
 |Cambiar nombre de archivo|Cambia el nombre de un archivo de una ubicación especificada.|  
-|Establecer atributos|Establece atributos de archivos y carpetas. Estos atributos son Archivar, Oculto, Normal, Solo lectura y Sistema. El atributo Normal indica que no hay atributos establecidos; no se puede combinar con otros atributos. Todos los demás atributos se pueden usar en combinación.|  
+|Definir atributos|Establece atributos de archivos y carpetas. Estos atributos son Archivar, Oculto, Normal, Solo lectura y Sistema. El atributo Normal indica que no hay atributos establecidos; no se puede combinar con otros atributos. Todos los demás atributos se pueden usar en combinación.|  
   
  La tarea Sistema de archivos trabaja con un solo archivo o directorio. Por consiguiente, esta tarea no admite el uso de caracteres comodín para realizar la misma operación en varios archivos. Para hacer que la tarea Sistema de archivos realice una determinada operación sobre varios archivos o directorios, coloque la tarea Sistema de archivos en un contenedor de bucles Foreach, como se describe en los pasos siguientes.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "71294129"
  **IsDestinationPathVariable**  
  Indica si la ruta de acceso de destino está almacenada en una variable. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
 |**False**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica, **DestinationConnection**.|  
@@ -116,10 +116,10 @@ ms.locfileid: "71294129"
  **Descripción**  
  Escriba una descripción de la tarea Sistema de archivos.  
   
- **Operación**  
+ **operación**  
  Seleccione la operación del sistema de archivos que se debe llevar a cabo. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Copiar directorio**|Copie un directorio. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.|  
 |**Copiar archivo**|Copie un archivo. Al seleccionar este valor se muestran las opciones dinámicas para un origen y un destino.|  
@@ -135,7 +135,7 @@ ms.locfileid: "71294129"
  **IsSourcePathVariable**  
  Indica si la ruta de acceso de destino está almacenada en una variable. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor||  
+|Value||  
 |-----------|-|  
 |**True**|La ruta de destino está almacenada en una variable. Si selecciona este valor, se mostrará la opción dinámica **SourceVariable**.|  
 |**False**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
@@ -174,10 +174,10 @@ ms.locfileid: "71294129"
  **Oculto**  
  Indique si el archivo o el directorio está visible.  
   
- **Solo lectura**  
+ **ReadOnly**  
  Indique si el archivo es de solo lectura.  
   
- **Archive**  
+ **Archivar**  
  Indique si el archivo o el directorio está listo para archivar.  
   
  **Sistema**  

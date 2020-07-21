@@ -1,5 +1,5 @@
 ---
-title: Objeto SqlPipe | Microsoft Docs
+title: SqlPipe (objeto) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91ac39b10cc5670a7b6a8a5243c19334d15989f3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955120"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
   En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]es muy común escribir un procedimiento almacenado (o un procedimiento almacenado extendido) que envía resultados o parámetros de salida al cliente que realiza la llamada.  
@@ -29,7 +28,7 @@ ms.locfileid: "62920052"
  En los objetos de base de datos de Common Language Runtime (CLR) que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede enviar los resultados a la canalización conectada mediante los métodos `Send` del objeto `SqlPipe`. Para obtener el objeto `Pipe`, debe obtener acceso a la propiedad `SqlContext` del objeto `SqlPipe`. La clase `SqlPipe` es conceptualmente similar a la clase `Response` incluida en ASP.NET. Para obtener más información, vea la documentación de referencia de la clase SqlPipe en el kit de desarrollo de software de .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
- `SqlPipe` incluye un método `Send`, que cuenta con tres sobrecargas. Estas sobrecargas son:  
+ `SqlPipe` incluye un método `Send`, que cuenta con tres sobrecargas. Son las siguientes:  
   
 -   `void Send(string message)`  
   
@@ -138,9 +137,9 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [SqlDataRecord, objeto](sqldatarecord-object.md)   
- [Procedimientos almacenados de CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objeto SqlDataRecord](sqldatarecord-object.md)   
+ [Procedimientos almacenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

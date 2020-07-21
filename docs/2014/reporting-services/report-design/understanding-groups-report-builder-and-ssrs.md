@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104538"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104538"
   
  Para poder visualizar lo que es un grupo, consulte la ilustración siguiente que muestra la región de datos Tablix en la vista previa. En esta ilustración, los grupos de filas ordenan el conjunto de datos por tipo de producto y los grupos de columnas ordenan el conjunto de datos por región geográfica y año.  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Descripción de las áreas de la región de datos Tablix](../media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
   
  Las secciones siguientes sirven de ayuda para describir los distintos aspectos de los grupos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66104538"
  Un grupo tiene un nombre y un conjunto de expresiones de grupo especificadas por el usuario. El conjunto de expresiones de grupo puede ser una referencia a un único campo de conjunto de datos o una combinación de varias expresiones. En tiempo de ejecución, las expresiones de grupo se combinan, si el grupo tiene varias expresiones, y se aplican a los datos de un grupo. Por ejemplo, imagine que tiene un grupo que usa un campo de fecha para organizar los datos de la región de datos. En tiempo de ejecución, los datos se organizan por fecha y, a continuación, se muestran con los totales de otros valores del conjunto de datos para cada fecha.  
   
 ## <a name="when-do-i-create-groups"></a>¿Cuándo debo crear grupos?  
- En la mayoría de los casos, el Generador de informes y el Diseñador de informes crean automáticamente un grupo al diseñar una región de datos. En una tabla, matriz o lista, se crean grupos al colocar campos en el panel Agrupación. En un gráfico, se crean grupos al colocar campos en las zonas de colocación del gráfico. En un medidor, debe usar el cuadro de diálogo de propiedades de medidor. En una tabla, matriz o lista, también es posible crear un grupo manualmente. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para ver un ejemplo de cómo agregar grupos al crear un informe, consulte el [Tutorial: Creación de un informe de tabla básico &#40;Generador de informes&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) o [Creación de un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ En la mayoría de los casos, el Generador de informes y el Diseñador de informes crean automáticamente un grupo al diseñar una región de datos. En una tabla, matriz o lista, se crean grupos al colocar campos en el panel Agrupación. En un gráfico, se crean grupos al colocar campos en las zonas de colocación del gráfico. En un medidor, debe usar el cuadro de diálogo de propiedades de medidor. En una tabla, matriz o lista, también es posible crear un grupo manualmente. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para obtener un ejemplo de cómo agregar grupos al crear un informe, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>¿Cómo puedo modificar un grupo?  
  Después de crear un grupo, puede establecer propiedades específicas de las regiones de datos, como expresiones de filtro y de ordenación, saltos de página y variables de grupo que contengan datos específicos del ámbito. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "66104538"
 > [!NOTE]  
 >  Aunque los grupos tienen nombres diferentes en regiones de datos diferentes, los principios en los que se basa la creación y el uso de los grupos son los mismos. Cuando se crea un grupo para una región de datos, se especifica una manera de organizar los datos detallados del conjunto de datos que está vinculado a la región de datos. Cada región de datos admite una estructura de grupo en la que mostrar los datos agrupados.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos de una región de datos Tablix: grupos de detalles, filas y columnas  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos de una región de datos Tablix: grupos de detalles, de filas y de columnas  
  Como se explicó anteriormente en este tema, una región de datos Tablix le permite organizar los datos en grupos por filas o por columnas. Sin embargo, los grupos de filas y de columnas no son los únicos grupos disponibles en una región de datos Tablix. Esta región de datos puede tener los tipos de grupos siguientes:  
   
 -   **Grupo de detalles** : el grupo de detalles está compuesto por todos los datos de un conjunto de datos de informe después de que el Generador de informes o el Diseñador de informes apliquen filtros de conjuntos de datos y de regiones de datos. Por lo tanto, el grupo de detalles es el único grupo que no tiene ninguna expresión de grupo.  
@@ -98,7 +98,7 @@ ms.locfileid: "66104538"
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Descripción de la pertenencia a grupo para las celdas de Tablix  
  Las celdas de una fila o columna de una región de datos de Tablix pueden pertenecer a varios grupos de filas y de columnas. Al definir una expresión en el cuadro de texto de una celda que usa una función de agregado (por ejemplo, `=Sum(Fields!FieldName.Value`), el ámbito de grupo predeterminado para una celda es el grupo secundario más interior al que pertenece. Cuando una celda pertenece a grupos de filas y de columnas, el ámbito lo forman los dos grupos más interiores. También puede escribir expresiones que calculen subtotales agregados en el ámbito de un grupo relativo a otro conjunto de datos. Por ejemplo, puede calcular el porcentaje de un grupo relativo al grupo de columnas o a todos los datos de la región de datos (como `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Para más información, vea [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   

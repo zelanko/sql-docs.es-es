@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ef07d4a60e3d32faaaabee923c1c23a79ce8b91a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980462"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928096"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Método getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de referencia.  
+ Un objeto Reference.  
   
-## <a name="remarks"></a>Notas  
- Este método getReference se especifica mediante el método getReference en la interfaz javax. naming. Referenceable.  
+## <a name="remarks"></a>Observaciones  
+ El método getReference especifica este método getReference en la interfaz javax.naming.Referenceable.  
   
  Antes del controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], si se llamaba a SQLServerDataSource.setTrustStorePassword en un objeto SQLServerDataSource, la contraseña aparecería en el objeto que devuelve SQLServerDataSource.getReference, lo cual haría posible utilizar el objeto para realizar conexiones adicionales. Con el controlador JDBC 3.0, se necesitará establecer la contraseña en el objeto que devuelve SQLServerDataSource.getReference antes de realizar las conexiones con el objeto.  
   

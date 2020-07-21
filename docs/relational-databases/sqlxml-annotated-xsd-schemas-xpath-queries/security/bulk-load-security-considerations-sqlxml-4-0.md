@@ -1,6 +1,6 @@
 ---
-title: Consideraciones de seguridad de carga (SQLXML 4.0) de forma masiva | Microsoft Docs
-ms.custom: ''
+title: Consideraciones de seguridad de carga masiva (SQLXML)
+description: Obtenga información sobre las instrucciones de seguridad para utilizar la carga masiva XML en SQLXML 4,0.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +15,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43cf00aef7e1ce571f41c08d4d9033aee7bd43a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775262"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Consideraciones de seguridad sobre la carga masiva (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   A continuación se muestran una serie de instrucciones de seguridad para utilizar la carga masiva XML:  
   
--   Cuando se especifica que la carga masiva es operación debe realizarse como una transacción, use la **TempFilePath** propiedad para especificar una carpeta en la que se va a crear los archivos temporales.  
+-   Cuando se especifica que la operación de carga masiva debe realizarse como una transacción, se usa la propiedad **TempFilePath** para especificar una carpeta en la que crear los archivos temporales.  
   
      El proceso de carga masiva crea estos archivos temporales con los siguientes permisos:  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68027001"
   
 -   Si el usuario establece un archivo de registro de errores para que SQLXML escriba errores en él, cada vez se ejecute la carga masiva, el archivo se sobrescribirá con los datos del último proceso de carga masiva.  
   
-## <a name="see-also"></a>Vea también  
- [Realizar la carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f74855074ac4d362c1505a0e3a4ebff416ed4b5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060982"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435082"
 ---
 # <a name="character-map-transformation-editor"></a>Editor de transformación Mapa de caracteres
   Use el cuadro de diálogo **Editor de transformación Mapa de caracteres** para seleccionar las funciones de cadena que se van a aplicar a datos de columna y para especificar si la asignación es una modificación en contexto o se agrega como una columna nueva.  
@@ -36,18 +35,18 @@ ms.locfileid: "66060982"
  **Destino**  
  Especifique si se guardan los resultados de las operaciones de cadena en contexto, utilizando la columna existente, o se guardan los datos modificados como una columna nueva.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Nueva columna|Guardar los datos en una columna nueva. Asigne el nombre de columna en **Alias de salida**.|  
 |Modificación en contexto|Guardar los datos modificados en la columna existente.|  
   
- **Operación**  
+ **operación**  
  Seleccione de la lista las funciones de cadena que se aplicarán a los datos de la columna.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Minúsculas|Convertir en minúsculas.|  
-|Mayúsculas|Convertir en mayúsculas.|  
+|Uppercase|Convertir en mayúsculas.|  
 |Inversión de byte|Convertir invirtiendo el orden de los bytes.|  
 |Hiragana|Convertir caracteres japoneses katakana en caracteres hiragana.|  
 |Katakana|Convertir caracteres japoneses hiragana en caracteres katakana.|  
@@ -63,7 +62,7 @@ ms.locfileid: "66060982"
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores de esta transformación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

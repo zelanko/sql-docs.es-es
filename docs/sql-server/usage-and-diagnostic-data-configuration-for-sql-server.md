@@ -9,10 +9,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
 ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69028934"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server (CEIP)
@@ -26,7 +26,7 @@ De forma predeterminada, Microsoft SQL Server recopila información sobre cómo 
 En concreto, Microsoft no envía ninguno de los tipos de información siguientes a través de este mecanismo:
 - Valores de dentro de las tablas de usuario
 - Credenciales de inicio de sesión u otra información de autenticación
-- Información de identificación personal (PII)
+- Información de identificación personal
 
 En el escenario de ejemplo siguiente se incluye información de uso de características que ayuda a mejorar el producto.
 
@@ -55,7 +55,7 @@ Para SQL Server en Linux, consulte [Customer Feedback for SQL Server on Linux](h
 > [!NOTE]
 > Puede deshabilitar el envío de información a Microsoft solo en versiones de pago de SQL Server.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
  - No se admite la eliminación o deshabilitación del servicio CEIP de SQL. 
  - No se admite la eliminación de los recursos de CEIP de SQL del Grupo de clúster. 
 
@@ -84,7 +84,7 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
     
     Nombre EntradaRegistro = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 es no participar; 1 es participar
+    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
     
     {InstanceID} hace referencia al tipo de instancia y a la instancia, como en los ejemplos siguientes:
 
@@ -98,7 +98,7 @@ Los clientes empresariales pueden establecer la configuración de directiva de g
     
     Nombre EntradaRegistro = CustomerFeedback
     
-    Tipo de entrada DWORD: 0 es no participar; 1 es participar
+    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
 
 > [!NOTE]
 > {Versión principal} hace referencia a la versión de SQL Server, por ejemplo 140 para SQL Server 2017.
@@ -115,7 +115,7 @@ De forma similar al comportamiento en una versión anterior de SQL Server, los c
 
     Nombre EntradaRegistro = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 es no participar; 1 es participar
+    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
  
     {InstanceID} hace referencia al tipo de instancia y a la instancia, como en los ejemplos siguientes: 
 
@@ -130,7 +130,7 @@ De forma similar al comportamiento en una versión anterior de SQL Server, los c
 
     Nombre EntradaRegistro = EnableErrorReporting
 
-    Tipo de entrada DWORD: 0 es no participar; 1 es participar
+    Tipo de entrada DWORD: 0 para no utilizar el CEIP; 1 para utilizarlo
 
 > [!NOTE]
 > {Major Version} hace referencia a la versión de SQL Server. Por ejemplo, "140" hace referencia a SQL Server 2017.

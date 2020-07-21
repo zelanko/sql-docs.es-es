@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68054634"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Ejecutar paquetes de SQL Server Integration Services (SSIS) implementados en Azure
@@ -42,11 +42,11 @@ Puede ejecutar los paquetes SSIS implementados en el catálogo de SSISDB en un s
 > [!NOTE]
 > La ejecución de un paquete con `dtexec.exe` no se ha probado con paquetes implementados en Azure.
 
-## <a name="ssms"></a> Ejecutar un paquete con SSMS
+## <a name="run-a-package-with-ssms"></a><a name="ssms"></a> Ejecutar un paquete con SSMS
 
 En SQL Server Management Studio (SSMS), puede hacer clic con el botón derecho en un paquete implementado en la base de datos del catálogo de SSIS, SSISDB, y seleccionar **Ejecutar** para abrir el cuadro de diálogo **Ejecutar paquete**. Para obtener más información, consulte [Run an SSIS package with SQL Server Management Studio (SSMS) (Ejecutar un paquete de SSIS con SQL Server Management Studio [SSMS])](../ssis-quickstart-run-ssms.md).
 
-## <a name="sproc"></a> Ejecutar un paquete con procedimientos almacenados
+## <a name="run-a-package-with-stored-procedures"></a><a name="sproc"></a> Ejecutar un paquete con procedimientos almacenados
 
 En cualquier entorno desde el que se pueda conectar a Azure SQL Database y ejecutar código de Transact-SQL, puede ejecutar un paquete mediante la llamada a los procedimientos almacenados siguientes:
 
@@ -62,7 +62,7 @@ Para obtener más información, vea los ejemplos siguientes:
 
 - [Run an SSIS package from Visual Studio Code with Transact-SQL](../ssis-quickstart-run-tsql-vscode.md) (Ejecutar un paquete de SSIS desde Visual Studio Code con Transact-SQL)
 
-## <a name="script"></a> Ejecutar un paquete con un script o código
+## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> Ejecutar un paquete con un script o código
 
 En cualquier entorno de desarrollo desde el que se pueda llamar a una API administrada, se puede ejecutar un paquete mediante una llamada al método `Execute` del objeto `Package` en el espacio de nombres `Microsoft.SQLServer.Management.IntegrationServices`.
 
@@ -72,11 +72,11 @@ Para obtener más información, vea los ejemplos siguientes:
 
 - [Run an SSIS package with C# code in a .NET app](../ssis-quickstart-run-dotnet.md) (Ejecutar un paquete SSIS con código C# en una aplicación .NET)
 
-## <a name="exec_activity"></a> Ejecutar un paquete con la actividad Ejecutar paquete de SSIS
+## <a name="run-a-package-with-the-execute-ssis-package-activity"></a><a name="exec_activity"></a> Ejecutar un paquete con la actividad Ejecutar paquete de SSIS
 
 Para obtener más información, vea [Ejecutar un paquete SSIS con la actividad Ejecutar paquete de SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-## <a name="sproc_activity"></a> Ejecutar un paquete con la actividad de procedimiento almacenado
+## <a name="run-a-package-with-the-stored-procedure-activity"></a><a name="sproc_activity"></a> Ejecutar un paquete con la actividad de procedimiento almacenado
 
 Para obtener más información, vea [Ejecutar un paquete SSIS con la actividad de procedimiento almacenado en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 

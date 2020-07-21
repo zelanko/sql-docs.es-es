@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107338"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Propiedades del conjunto de datos (cuadro de diálogo), Filtros
   Seleccione **Filtros** en el cuadro de diálogo **Propiedades del conjunto de datos** para crear filtros para el conjunto de datos.  
   
 ## <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una nueva cláusula de filtro a la lista.  
   
  **Eliminar**  
@@ -36,10 +36,10 @@ ms.locfileid: "66107338"
  **Flecha abajo**  
  Mueve el filtro seleccionado hacia abajo en la lista.  
   
- **Expresión**  
+ **Expression**  
  Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
- **Data type**  
+ **Tipo de datos**  
  Elija el tipo de datos para **Valor**. Si es posible, elija un tipo de datos que coincida con el tipo de datos de **Expresión**. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](../report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
  **Operador**  
@@ -48,8 +48,8 @@ ms.locfileid: "66107338"
  **Valor**  
  Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
   
   

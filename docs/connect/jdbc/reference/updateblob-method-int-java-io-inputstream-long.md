@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cee317d725b730f50eeef0502f63d7fca6d2c4b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19c042913d3072a36b7b3caad1dffd2d4fafcda6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997119"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903501"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>Método updateBlob (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void updateBlob(int columnIndex,
   
  *inputStream*  
   
- Objeto InputStream.  
+ Un objeto InputStream.  
   
  *length*  
   
@@ -47,7 +47,7 @@ public void updateBlob(int columnIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateBlob especifica este método updateBlob en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

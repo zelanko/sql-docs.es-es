@@ -1,5 +1,6 @@
 ---
 title: Creación de archivos de formato (SQL Server) | Microsoft Docs
+description: Al importar en bloque o exportar de forma masiva una tabla de SQL Server, un archivo de formato permite escribir archivos de datos sin necesidad de leer o editar en gran medida archivos de datos de otros programas.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035817"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009928"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Cuando se realiza una importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una exportación masiva de datos desde una tabla, se puede utilizar un archivo de formato para un sistema flexible de escribir archivos de datos que requiera poca o ninguna modificación para adaptarlos a otros formatos de datos o para leer archivos de datos de otros programas de software.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de archivos de formato: XML y no XML. El formato no XML es el formato original compatible con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +35,7 @@ ms.locfileid: "68035817"
  En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada ( **-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Crear un archivo de formato no XML  
- Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f** , como:  
+ Si quiere usar un comando **BCP** para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f** , como:  
   
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
@@ -166,7 +167,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
 ```  
   
 ## <a name="creating-an-xml-format-file"></a>Crear un archivo de formato XML  
- Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** siempre requiere la opción **-f** y, para crear un archivo de formato XML, también debe especificar la opción **-x** , como:  
+ Si quiere usar un comando **BCP** para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos. La opción **format** siempre requiere la opción **-f** y, para crear un archivo de formato XML, también debe especificar la opción **-x** , como:  
   
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
@@ -266,7 +267,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  Para obtener más información sobre la sintaxis de este archivo de formato, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Para obtener más información sobre cómo usar datos nativos, vea [Usar el formato nativo para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Asignar campos de datos a columnas de tabla  
- Al igual que cuando se crea mediante **bcp**, un archivo de formato describe todas las columnas de tabla en orden. Puede modificar un archivo de formato para reorganizar u omitir filas de la tabla. Esto permite personalizar un archivo de formato en un archivo de datos cuyos campos no se asignan directamente a las columnas de la tabla. Para obtener más información, consulte los temas siguientes:  
+ Al igual que cuando se crea mediante **bcp**, un archivo de formato describe todas las columnas de tabla en orden. Puede modificar un archivo de formato para reorganizar u omitir filas de la tabla. Esto permite personalizar un archivo de formato en un archivo de datos cuyos campos no se asignan directamente a las columnas de la tabla. Para obtener más información, vea los temas siguientes:  
   
 -   [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

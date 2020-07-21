@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 99b71a1c-a72d-4ca9-9d00-4230c9042ba5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7f4bc66c40cb6940694c1a25c4430ba3cc83e7c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8df350d50971d239dd166456b547e8e0f1af537
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781250"
 ---
-# <a name="mssqlserver11409"></a>MSSQLSERVER_11409
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_11409"></a>MSSQLSERVER_11409
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|11409|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|11409|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|ALTERCOL_COLSET_DROP|  
 |Texto del mensaje|No se puede quitar el conjunto de columnas '%.*ls' de la tabla '%.\*ls' porque la tabla contiene más de 1025 columnas.|  

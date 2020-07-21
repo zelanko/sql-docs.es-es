@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a154f730885f4fa5380451e98ecdda11672cbfc8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952823"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923356"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>Método getConcurrency (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,8 +44,8 @@ public int getConcurrency()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getConcurrency se especifica mediante el método getConcurrency de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getConcurrency especifica este método getConcurrency en la interfaz java.sql.ResultSet.  
   
  El objeto [SQLServerStatementque](../../../connect/jdbc/reference/sqlserverstatement-class.md) creó el conjunto de resultados determina simultaneidad que se utiliza.  
   

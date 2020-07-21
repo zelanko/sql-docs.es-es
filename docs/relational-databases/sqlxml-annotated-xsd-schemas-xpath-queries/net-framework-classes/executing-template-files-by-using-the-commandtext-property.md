@@ -1,6 +1,6 @@
 ---
-title: Ejecutar archivos de plantilla mediante la propiedad CommandText | Microsoft Docs
-ms.custom: ''
+title: Ejecutar archivos de plantilla con la propiedad CommandText
+description: Vea un ejemplo de cómo usar la propiedad CommandText de SQLXML para especificar el nombre de un archivo de plantilla que contiene consultas SQL o XPath.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,17 +16,18 @@ helpviewer_keywords:
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2ad966d5a6cc4a624310d7c20ed60ea8a9210137
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649424"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En este ejemplo se muestra cómo se pueden especificar los archivos de plantilla que están compuestos de consultas SQL o XPath mediante el uso de CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType. TemplateFile.  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  En este ejemplo se muestra cómo se pueden especificar los archivos de plantilla que están compuestos de consultas SQL o XPath utilizando la propiedad CommandText. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType. TemplateFile.  
   
  La aplicación de ejemplo ejecuta esta plantilla:  
   
@@ -81,7 +82,7 @@ class Test
   
 2.  Guarde la plantilla XML (TemplateFile.xml) que se proporciona en este ejemplo en una carpeta.  
   
-3.  Guarde el C# código (DocSample.CS) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
+3.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
   
 4.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   
@@ -93,7 +94,7 @@ class Test
   
 5.  En el símbolo del sistema, ejecute DocSample.exe.  
 
- Si pasa un parámetro a una plantilla, el nombre del parámetro debe comenzar con arroba (@); por ejemplo, p.Name = "\@ContactID", donde p es un objeto SqlXmlParameter.  
+ Si pasa un parámetro a una plantilla, el nombre del parámetro debe comenzar con arroba (@); por ejemplo, p.Name = " \@ ContactID", donde p es un objeto SqlXmlParameter.  
   
  Ésta es la plantilla actualizada que toma un parámetro.  
   

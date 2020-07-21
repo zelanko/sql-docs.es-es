@@ -1,5 +1,5 @@
 ---
-title: Ver y detener los paquetes que se ejecutan en la integración de servicios de servidor | Microsoft Docs
+title: Ver y detener los paquetes que se ejecutan en el servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e63839d4ab5d8d50f7d86eea05c8d58107d6799
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054597"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439872"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Ver y detener los paquetes en ejecución en el Servidor de Integration Services
   La base de datos de `SSISDB` almacena el historial de ejecuciones en tablas internas que no son visibles para los usuarios. Sin embargo, expone la información que necesita a través de vistas públicas que puede consultar. También proporciona procedimientos almacenados a los que puede llamar para realizar tareas frecuentes relacionadas con los paquetes.  
@@ -60,7 +59,7 @@ ms.locfileid: "66054597"
  Acceso mediante programación a través de la API administrada  
  Vea el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices> y sus clases.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)   
  [Solucionar problemas de informes para la ejecución de paquetes](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   

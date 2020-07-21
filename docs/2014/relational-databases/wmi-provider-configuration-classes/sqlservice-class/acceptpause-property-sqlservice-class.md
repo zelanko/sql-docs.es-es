@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f28c72a291c145171f7084524fe5dd5cce7c12a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 930c82f6e4538f7f2e916deaa374e928b756909b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002308"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propiedad AcceptPause (clase SqlService)
   Obtiene el valor de propiedad booleano que especifica si se puede poner en pausa el servicio.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

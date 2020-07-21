@@ -1,5 +1,6 @@
 ---
 title: Permisos (motor de base de datos) | Microsoft Docs
+description: Consulte esta lista completa de permisos de SQL Server para saber cuáles se aplican a las plataformas que usa.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995855"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009397"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Los permisos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se administran en el nivel de servidor asignados a los inicios de sesión y roles de servidor, y en el nivel de base de datos asignados a usuarios de base de datos y roles base de datos. El modelo para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tiene el mismo sistema para los permisos de base de datos, pero los permisos de nivel de servidor no están disponibles. Este tema contiene una lista completa de los permisos. Para una implementación típica de los permisos, consulte [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -40,7 +41,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
 Para obtener consejos acerca de cómo planificar un sistema de permisos, consulte [Introducción a los permisos de los motores de bases de datos](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
   
-##  <a name="_conventions"></a> Convenciones de nomenclatura de permisos  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a> Convenciones de nomenclatura de permisos  
  A continuación se describen las convenciones generales que se siguen en la nomenclatura de permisos:  
   
 -   CONTROL  
@@ -96,14 +97,14 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-##  <a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a> Permisos aplicables a elementos protegibles específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
   
 |Permiso|Se aplica a|  
 |----------------|----------------|  
 |ALTER|Todas las clases de objetos excepto TYPE.|  
-|CONTROL|Todas las clases de objetos: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW y<br />XML SCHEMA COLLECTION|  
-|Delete|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION y SERVER.|  
+|CONTROL|Todas las clases de objetos: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW y<br />XML SCHEMA COLLECTION|  
+|Delete|Todas las clases de objetos excepto DATABASE SCOPED CONFIGURATION, SERVER y TYPE.|  
 |Ejecute|Tipos de CLR, scripts externos, procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR) y sinónimos|  
 |IMPERSONATE|Inicios de sesión y usuarios|  
 |INSERT|Sinónimos, tablas y columnas, vistas y columnas. El permiso se puede conceder en el nivel de base de datos, en el de esquema o en el de objeto.|  
@@ -118,7 +119,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 > [!CAUTION]  
 >  Los permisos predeterminados que se conceden a objetos del sistema en el momento de la instalación se evalúan detenidamente frente a posibles amenazas y no necesitan modificarse como parte de la protección de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cambios a los permisos de los objetos del sistema podrían limitar o interrumpir la funcionalidad y dejar potencialmente a su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado no admitido.  
   
-##  <a name="_permissions"></a> Permisos de SQL Server  
+##  <a name="sql-server-permissions"></a><a name="_permissions"></a> Permisos de SQL Server  
  La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
   
 |Elemento protegible base|Permisos granulares del elemento protegible base|Código del tipo de permiso|Elemento protegible que contiene un elemento protegible base|Permiso para el elemento protegible contenedor que implica permiso granular para el elemento protegible base|  
@@ -140,11 +141,11 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |AVAILABILITY GROUP|CONTROL|CL|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
 |AVAILABILITY GROUP|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
-|CERTIFICATE|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
-|CERTIFICATE|CONTROL|CL|DATABASE|CONTROL|  
-|CERTIFICATE|REFERENCES|RF|DATABASE|REFERENCES|  
-|CERTIFICATE|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
-|CERTIFICATE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|CERTIFICADO|ALTER|AL|DATABASE|ALTER ANY CERTIFICATE|  
+|CERTIFICADO|CONTROL|CL|DATABASE|CONTROL|  
+|CERTIFICADO|REFERENCES|RF|DATABASE|REFERENCES|  
+|CERTIFICADO|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
+|CERTIFICADO|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |CONTRACT|ALTER|AL|DATABASE|ALTER ANY CONTRACT|  
 |CONTRACT|CONTROL|CL|DATABASE|CONTROL|  
 |CONTRACT|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -247,10 +248,10 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Login|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -350,10 +351,10 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|User|ALTER|AL|DATABASE|ALTER ANY USER|  
-|User|CONTROL|CL|DATABASE|CONTROL|  
-|User|IMPERSONATE|IM|DATABASE|CONTROL|  
-|User|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|Ejecute|EX|SCHEMA|Ejecute|  
@@ -361,7 +362,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Resumen del algoritmo de comprobación de permiso  
  Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso**y el **permiso necesario**.  
   
 > [!NOTE]  
@@ -373,7 +374,7 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
   
     -   El inicio de sesión  
   
-    -   El usuario  
+    -   Usuario  
   
     -   Pertenecientes al rol  
   
@@ -417,13 +418,13 @@ Para obtener consejos acerca de cómo planificar un sistema de permisos, consult
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Consideraciones especiales sobre los permisos de nivel de columna
 
-Los permisos de nivel de columna se conceden con la sintaxis *<nombre_tabla> (<nombre_columna\<)* . Por ejemplo:
+Los permisos de nivel de columna se conceden con la sintaxis *<nombre_tabla>(\<column _name>)* . Por ejemplo:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Un permiso DENY en la tabla se reemplaza por un permiso GRANT en una columna. Pero un permiso DENY subsiguiente en la tabla quitará la columna GRANT. 
   
-##  <a name="_examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="_examples"></a> Ejemplos  
  En los ejemplos de esta sección se muestra cómo se recupera la información sobre permisos.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Devolver la lista completa de los permisos que pueden concederse.  

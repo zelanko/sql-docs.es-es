@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015544"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar datos de blob a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
@@ -34,7 +34,7 @@ ms.locfileid: "68015544"
   
  Dado que DBTYPE_IUNKNOWN se especifica como tipo de datos del enlace, debe coincidir con el tipo de la columna o parámetro de destino. No se pueden realizar conversiones cuando se envían datos a través de ISequentialStream desde interfaces de conjunto de filas. En el caso de los parámetros, se debe evitar el uso de ICommandWithParameters::SetParameterInfo y especificar un tipo diferente para forzar una conversión; para ello, el proveedor debe almacenar en la memoria caché local todos los datos BLOB a fin de proceder a su conversión antes de enviarlos a SQL Server. El rendimiento no es bueno si se almacenan en la memoria caché datos BLOB grandes y se convierten localmente.  
   
- Para obtener más información, vea [blobs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Para obtener más información, consulte [BLOB y objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

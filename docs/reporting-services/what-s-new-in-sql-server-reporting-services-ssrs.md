@@ -1,5 +1,5 @@
 ---
-title: Novedades de Reporting Services (SSRS) | Microsoft Docs
+title: Novedades de Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,51 +8,67 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 08/27/2019
-ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/05/2019
+ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123112"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079611"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Obtenga información sobre las novedades de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Este artículo abarca las principales áreas de características y se actualiza a medida que se lanzan nuevos elementos.
-
-Para ver las notas de la versión actual, consulte [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
+Obtenga información sobre las novedades de las distintas versiones de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Este artículo abarca las principales áreas de características y se actualiza a medida que se lanzan nuevos elementos.
 
 Para obtener información sobre Power BI Report Server, vea [¿Qué es Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Descarga** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
-
-Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
-
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-reporting-services-preview"></a>Versión preliminar de SQL Server 2019 Reporting Services
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services vista previa está disponible para su descarga desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=100122).
+**Descarga** ![descarga](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "descarga")
+
+[SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) está disponible para descarga en el Centro de descarga de Microsoft.
 
 ### <a name="azure-sql-managed-instance-support"></a>Compatibilidad con la Instancia administrada de Azure SQL
 
-Ahora puede hospedar un catálogo de base de datos usado para SQL Server Reporting Services (SSRS) en Azure SQL Instancia administrada (MI) hospedado en una máquina virtual o en su centro de datos. La compatibilidad se limita al uso de credenciales de base de datos para la conexión a SQL MI.
+Ahora puede hospedar un catálogo de base de datos usado para SQL Server Reporting Services (SSRS) en una Instancia administrada (MI) de Azure SQL hospedada en una máquina virtual o en su centro de datos. La compatibilidad se limita al uso de credenciales de base de datos para la conexión a MI de SQL.
 
-### <a name="power-bi-premium-dataset-support"></a>Compatibilidad de Power BI Premium DataSet
+### <a name="power-bi-premium-dataset-support"></a>Compatibilidad del conjunto de datos de Power BI Premium
 
-Puede conectarse a los conjuntos de valores de Power BI mediante Microsoft Generador de informes o SQL Server Data Tools (SSDT). Después, puede publicar esos informes en SSRS 2019 con la conectividad de SQL Server Analysis Services. Los usuarios deben usar un nombre de usuario y una contraseña de Windows almacenados para habilitar el escenario.
+Puede conectarse a los conjuntos de datos de Power BI mediante el Generador de informes de Microsoft o SQL Server Data Tools (SSDT). Después, puede publicar esos informes en SSRS 2019 con la conectividad de SQL Server Analysis Services. Los usuarios deben usar un nombre de usuario y una contraseña de Windows almacenados para permitir el escenario.
 
 ### <a name="alttext-alternative-text-support-for-report-elements"></a>Compatibilidad de AltText (texto alternativo) con los elementos de informe
 
 Al crear informes, puede utilizar la información sobre herramientas para especificar el texto de cada elemento del informe. La tecnología de lector de pantalla identifica correctamente esta información sobre herramientas.
 
+### <a name="azure-active-directory-application-proxy-support"></a>Compatibilidad con Azure Active Directory Application Proxy
+
+Con Azure Active Directory Application Proxy, ya no necesita administrar su propio proxy de aplicación web para permitir el acceso seguro a través de las aplicaciones web o móviles.
+
+### <a name="custom-headers"></a>Encabezados personalizados
+
+Establece los valores de encabezado para todas las direcciones URL que coinciden con el patrón de expresión regular especificado. Los usuarios pueden actualizar el valor de encabezado personalizado con XML válido para establecer los valores de encabezado de las direcciones URL de solicitud seleccionadas. Los administradores pueden agregar cualquier número de encabezados en el XML. Para detalles, consulte [Encabezados personalizados](tools/server-properties-advanced-page-reporting-services.md#customheaders) el artículo **Página Opciones avanzadas de las propiedades del servidor**.
+
+### <a name="transparent-database-encryption"></a>Cifrado de base de datos transparente
+
+SQL Server 2019 ahora admite el Cifrado de base de datos transparente para la base de datos del catálogo de SSRS de las ediciones Enterprise y Standard. 
+
+### <a name="microsoft-report-builder-update"></a>Actualización de Generador de informes de Microsoft
+
+La versión recién publicada del Generador de informes es totalmente compatible con las versiones 2016, 2017 y 2019 de Reporting Services. También es compatible con todas las versiones publicadas y compatibles de Power BI Report Server.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="ssrs-2017"></a>SSRS 2017
+## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+**Descarga** ![descarga](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "descarga")
+
+Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
 ### <a name="comments-on-reports"></a>Comentarios en los informes
 
@@ -68,7 +84,7 @@ En las versiones más recientes del Generador de informes y SQL Server Data Tool
 
 ### <a name="rest-api-support"></a>Compatibilidad con la API de REST
 
-Para habilitar el desarrollo y personalización de aplicaciones modernas, SQL Server Reporting Services admite ahora una API de RESTful totalmente compatible con OpenAPI. La especificación y la documentación completas de la API se pueden encontrar en [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+Para habilitar el desarrollo y personalización de aplicaciones modernas, SQL Server Reporting Services admite ahora una API de RESTful totalmente compatible con OpenAPI. La especificación y la documentación completas de la API se pueden encontrar en [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Compatibilidad con el diseñador de consultas para DAX ahora en el Generador de informes y SQL Server Data Tools
 
@@ -85,13 +101,13 @@ Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sql
 
 ## <a name="ssrs-2016"></a>SSRS 2016
 
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### <a name="reporting-services-ssrswebportal-non-markdown"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. El portal web actualizado incluye
+Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. El portal web actualizado incluye
 - KPI
 - Mobile Reports (Informes móviles)
 - Paginated Reports (Informes paginados)
-- Archivos de Excel
+- archivos de Excel
 - Archivos de Power BI Desktop
 
 El [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] reemplaza al Administrador de informes de versiones anteriores.
@@ -102,19 +118,19 @@ Para más información sobre el [!INCLUDE[ssRSWebPortal-Non-Markdown](../include
 
 ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
 
-#### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Personalización de marca para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+#### <a name="custom-branding-for-the-ssrswebportal-non-markdown"></a>Personalización de marca para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 Puede personalizar el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] con el logotipo y los colores de su organización con un paquete de personalización de marca.  
 
 Para más información sobre la personalización de marca, consulte [Personalización de marca del portal web](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
 
-#### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicadores de rendimiento clave (KPI) en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
+#### <a name="key-performance-indicators-kpi-in-the-ssrswebportal-non-markdown"></a>Indicadores de rendimiento clave (KPI) en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
 Cree KPI directamente en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] que sean contextuales a la carpeta actual. Al crear los KPI, puede elegir campos de conjunto de datos y resumir sus valores. También puede seleccionar contenido relacionado para profundizar y exponer más detalles.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
-Para más información, vea [Uso de los KPI en Reporting Services](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
+Para obtener más información, vea [Uso de los KPI en Reporting Services](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
 
 ### <a name="mobile-reports"></a>Mobile Reports (Informes móviles)
 
@@ -127,7 +143,7 @@ Los informes móviles de Reporting Services son informes dedicados optimizados p
 
 #### <a name="mobile-report-publisher"></a>Publicador de informes móviles  
 
-El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+El [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] le permite crear y publicar informes móviles de SQL Server en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
 
 ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
 
@@ -143,9 +159,9 @@ No puede conectarse de forma predeterminada sin realizar algunos cambios en la c
 
 ### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>Compatibilidad del modo de SharePoint y SharePoint 2016  
 
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite la integración con SharePoint 2013 y SharePoint 2016.
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite la integración con SharePoint 2013 y SharePoint 2016.
 
-Para obtener más información, vea:  
+Para más información, consulte:  
 
 - [Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services &#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 
@@ -165,11 +181,11 @@ Para más información sobre la compatibilidad de exploradores, vea [Compatibili
 
 **Informes paginados modernos**: diseñe informes paginados modernos y muy atractivos con nuevos estilos modernos para gráficos, medidores, mapas y otras visualizaciones de datos.
 
-**Gráficos de rectángulos y proyección solar**: mejore sus informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
+**Gráficos de rectángulos y proyección solar:** mejore sus informes con gráficos de rectángulos ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") y proyección solar ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon"), formas estupendas para mostrar datos jerárquicos. Para obtener más información, consulte [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
 **Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con los parámetros de dirección URL.  
 
-**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede hacer lo siguiente:
+**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede:
 
 1. Seleccione el grupo que contiene el panel al que desea anclar.
 2. Seleccione el panel al que quiere anclar el elemento.
@@ -206,7 +222,7 @@ Para más información, vea [Habilitar y deshabilitar la impresión del lado cli
 |**Habilitar y deshabilitar suscripciones**. Hay opciones nuevas de interfaz de usuario para habilitar y deshabilitar rápidamente las suscripciones. Las suscripciones deshabilitadas mantienen sus otras propiedades de configuración, como la programación, y pueden habilitarse fácilmente.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para obtener más información, consulte [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|en modo nativo|  
 |**Descripción de la suscripción**. Cuando crea una nueva suscripción, ahora puede incluir una descripción del informe como parte de las propiedades de la suscripción. La descripción se incluye en la página de resumen de la suscripción.|Modo nativo y SharePoint|  
 |**Cambiar el propietario de la suscripción**. Se ha mejorado la interfaz de usuario para poder cambiar rápidamente el propietario de una suscripción. Las versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] permiten a los administradores cambiar los propietarios de la suscripción con un script. A partir de la versión de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , puede cambiar los propietarios de la suscripción con la interfaz de usuario o con un script. El cambio del propietario de una suscripción es una tarea administrativa común cuando los usuarios dejan la organización o cuando cambian sus roles.|Modo nativo y SharePoint|  
-|**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se puede usar para varias suscripciones. La cuenta del recurso compartido de archivos está configurada en el administrador de configuración de modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Especificar una cuenta de recurso compartido de archivos**. En la página de configuración de la suscripción, los usuarios seleccionan **Usar la cuenta de recurso compartido de archivos**.<br /><br /> Configure las suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usen credenciales específicas.|en modo nativo|
+|**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se puede usar para varias suscripciones. La cuenta del recurso compartido de archivos está configurada en el administrador de configuración de modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]**Especificar una cuenta de recurso compartido de archivos**. En la página de configuración de la suscripción, los usuarios seleccionan **Usar la cuenta de recurso compartido de archivos**.<br /><br /> Configure las suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usen credenciales específicas.|en modo nativo|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

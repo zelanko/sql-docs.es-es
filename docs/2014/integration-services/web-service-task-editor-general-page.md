@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de servicio Web (página General) | Microsoft Docs
+title: Editor de la tarea servicio Web (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c642c100e41574a525578c3392aedbc82ac419a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054540"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439852"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor de la tarea Servicio web (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar un administrador de conexiones de HTTP, especificar la ubicación del archivo de Lenguaje de descripción de servicios web (WSDL) que usa la tarea Servicio web, describir la tarea Servicios web y descargar el archivo WSDL.  
@@ -28,15 +27,15 @@ ms.locfileid: "66054540"
   
 ## <a name="options"></a>Opciones  
  **HTTPConnection**  
- Seleccione un administrador de conexiones de la lista, o bien haga clic en \<**Nueva conexión…** > para crear uno.  
+ Seleccione un administrador de conexiones de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- **Temas relacionados:**  [Administrador de conexiones HTTP](connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Temas relacionados: **  [Administrador de conexiones HTTP](connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md).  
   
  **WSDLFile**  
- Escriba la ruta de acceso completa de un archivo WSDL local del equipo, o bien haga clic en el botón Examinar **(…)** y busque el archivo.  
+ Escriba la ruta de acceso completa de un archivo WSDL que sea local para el equipo o haga clic en el botón examinar **(...)** y busque este archivo.  
   
  Si ya ha descargado manualmente el archivo WSDL en el equipo, seleccione este archivo. Sin embargo, si el archivo WSDL todavía no se ha descargado, siga estos pasos:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66054540"
   
 -   Seleccione este archivo vacío para la opción **WSDLFile** .  
   
--   Establezca el valor de **OverwriteWSDLFile** a `True` para permitir que el archivo vacío se sobrescriba con el archivo WSDL real.  
+-   Establezca el valor de **OverwriteWSDLFile** en `True` para permitir que el archivo vacío se sobrescriba con el archivo WSDL real.  
   
 -   Haga clic en **Descargar WSDL** para descargar el archivo WSDL real y sobrescribir el archivo vacío.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "66054540"
  **OverwriteWSDLFile**  
  Indica si el archivo WSDL de la tarea Servicio web se puede sobrescribir.  
   
- Si va a descargar el archivo WSDL utilizando el **descargar WSDL** botón, establezca este valor en `True`.  
+ Si tiene previsto descargar el archivo WSDL mediante el botón **Descargar WSDL** , establezca este valor en `True` .  
   
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para la tarea Servicio web. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -70,10 +69,10 @@ ms.locfileid: "66054540"
   
  Este botón no se habilita hasta que se proporciona el nombre de un archivo local existente en el cuadro **WSDLFile** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Servicio web &#40;página Entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
- [Editor de la tarea Servicio web &#40;página Salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor de la tarea servicio Web &#40;página de entrada&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
+ [Editor de la tarea servicio Web &#40;página salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

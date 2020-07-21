@@ -1,5 +1,5 @@
 ---
-title: Comando de eliminaciones de SET | Microsoft Docs
+title: ESTABLECER comando eliminado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET DELETED command [ODBC]
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54900f00e03e1f236baf0b6eef152081b1f384a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997736"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300885"
 ---
 # <a name="set-deleted-command"></a>Comando de eliminaciones de Set
 Especifica si se procesan los registros marcados para su eliminación y si están disponibles para su uso en otros comandos.  
@@ -30,17 +30,17 @@ SET DELETED ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ON  
- (Valor predeterminado para el controlador; el valor predeterminado de Visual FoxPro es OFF). Especifica que los comandos que operan en los registros (incluidos los registros en las tablas relacionadas) con un ámbito de omitir los registros marcados para su eliminación.  
+ ACTIVAR  
+ (Valor predeterminado para el controlador; el valor predeterminado para Visual FoxPro es OFF). Especifica que los comandos que operan en registros (incluidos los registros de las tablas relacionadas) mediante un ámbito omiten los registros marcados para su eliminación.  
   
- OFF  
- Especifica que los registros marcados para eliminación puede tener acceso a los comandos que funcionan en los registros (incluidos los registros en las tablas relacionadas) con un ámbito.  
+ Apagado  
+ Especifica que los comandos que operan en registros (incluidos los registros de las tablas relacionadas) pueden tener acceso a los registros marcados para su eliminación mediante un ámbito.  
   
-## <a name="remarks"></a>Comentarios  
- Consulta que use () eliminado para probar el estado de registros puede optimizarse mediante tecnología Rushmore de Visual FoxPro si la tabla está indizada en () eliminado.  
+## <a name="remarks"></a>Observaciones  
+ Las consultas que usan DELETEd () para probar el estado de los registros se pueden optimizar mediante la tecnología Rushmore de Visual FoxPro si la tabla está indizada en DELETEd ().  
   
 > [!IMPORTANT]  
->  ESTABLECER eliminado se omite si el ámbito predeterminado para el comando es el registro actual, o si incluye un ámbito de un único registro. ÍNDICE siempre omite SET DELETED e indexa todos los registros de la tabla.  
+>  SET DELETEd se omite si el ámbito predeterminado del comando es el registro actual o si se incluye un ámbito de un único registro. INDEX siempre omite SET DELETEd y indexa todos los registros de la tabla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ELIMINAR, comando SQL](../../odbc/microsoft/delete-sql-command.md)

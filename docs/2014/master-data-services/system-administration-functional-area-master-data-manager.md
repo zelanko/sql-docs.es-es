@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3dc7d153bb9e680d1948f5cddc118d51a2b1e792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c7b269b3dcea8dee30f149ece8541ba1f7e0e54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971035"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Área funcional de Administración del sistema (Master Data Manager)
   En el área funcional de Administración del sistema, los administradores pueden crear un modelo y todos sus objetos. También pueden crear reglas de negocios y crear e implementar paquetes de modelos. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "65482750"
   
  [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
- [Habilitar una entidad para jerarquías explícitas y colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
+ [Habilitar una entidad para colecciones y jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)  
   
  [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
@@ -60,7 +59,7 @@ ms.locfileid: "65482750"
   
  [Acciones de reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rule-actions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

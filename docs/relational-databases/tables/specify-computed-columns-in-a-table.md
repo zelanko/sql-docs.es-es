@@ -13,16 +13,16 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47d4cb0991bde851fbc6c6f3273a673dfdecf919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731581"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar columnas calculadas en una tabla
 
-[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb.md)]
 
 Una columna calculada es una columna virtual que no está almacenada físicamente en la tabla, a menos que la columna esté marcada con PERSISTED. Las expresiones de columnas calculadas pueden utilizar datos de otras columnas al calcular un valor para la columna a la que pertenecen. Puede especificar una expresión para una columna calculada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
@@ -40,22 +40,22 @@ Una columna calculada es una columna virtual que no está almacenada físicament
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar
 
-### <a name="Limitations"></a> Limitaciones y restricciones
+### <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitaciones y restricciones
 
 - Una columna calculada no puede utilizarse como definición de restricción DEFAULT o FOREIGN KEY ni como NOT NULL. No obstante, si el valor de columna calculada lo define una expresión determinista y se permite el tipo de datos del resultado en columnas de índice, se puede utilizar una columna calculada como columna de clave en un índice o como parte de cualquier restricción PRIMARY KEY o UNIQUE. Por ejemplo, si la tabla tiene las columnas de tipo entero a y b, la columna calculada a + b se puede indizar, pero la columna calculada a + DATEPART(dd, GETDATE()) no, porque el valor podría variar en llamadas posteriores.
 - Una columna calculada no puede ser el destino de una instrucción INSERT o UPDATE.
 
-### <a name="Security"></a> Seguridad
+### <a name="security"></a><a name="Security"></a> Seguridad
 
-#### <a name="Permissions"></a> Permisos
+#### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 Requiere el permiso ALTER en la tabla.
 
-## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
 
-### <a name="NewColumn"></a> Para agregar una nueva columna calculada
+### <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Para agregar una nueva columna calculada
 
 1. En el **Explorador de objetos**, expanda la tabla para la que desea agregar la nueva columna calculada. Haga clic con el botón derecho en **Columnas** y seleccione **Nueva columna**.
 2. Escriba el nombre de columna y acepte el tipo de datos predeterminado (**nchar**(10)). El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el tipo de datos de la columna calculada aplicando las reglas de prioridad de tipo de datos a las expresiones especificadas en la fórmula. Por ejemplo, si la fórmula hace referencia a una columna de tipo **money** y una columna de tipo **int**, la columna calculada será de tipo **money** porque ese tipo de datos tiene mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
@@ -67,15 +67,15 @@ Requiere el permiso ALTER en la tabla.
 
 5. Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente** .
 
-6. En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.
+6. En el menú **Archivo**, haga clic en **Guardar** _nombre de tabla_.
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para agregar una definición de columna calculada a una columna existente
 
 1. En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que contenga la columna que quiera cambiar y expanda la carpeta **Columnas** .
-2. Haga clic con el botón derecho en la columna para la que quiera especificar una fórmula de columna calculada y haga clic en **Eliminar**. Haga clic en **Aceptar**.
+2. Haga clic con el botón derecho en la columna para la que quiera especificar una fórmula de columna calculada y haga clic en **Eliminar**. Haga clic en **OK**.
 3. Agregue una nueva columna y especifique la fórmula de columna calculada siguiendo el procedimiento anterior para agregar una nueva columna calculada.
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
 
 ### <a name="to-add-a-computed-column-when-creating-a-table"></a>Para agregar una columna calculada al crear una tabla
 

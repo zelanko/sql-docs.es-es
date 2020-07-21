@@ -1,5 +1,6 @@
 ---
-title: Habilitar y deshabilitar la captura de datos modificados (SQL Server) | Microsoft Docs
+title: Habilitar y deshabilitar la captura de datos modificados
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e46578c4d06d430a037a6af066903faa7a6a8e1
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: aefc7bb8f812951d7b8fcdac7b28549984faa7fb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846529"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889112"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar la captura de datos modificados en una base de datos  
- Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor **sysadmin** habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) en el contexto de la base de datos. Para saber si una base de datos ya está habilitada, consulte la columna **is_cdc_enabled** en la vista de catálogo **sys.databases**.  
+ Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor **sysadmin** habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) en el contexto de la base de datos. Para saber si una base de datos ya está habilitada, consulte la columna **is_cdc_enabled** en la vista de catálogo **sys.databases** .  
   
  Al habilitar una base de datos para la captura de datos modificados, se crean para la base de datos el esquema **cdc** , el usuario **cdc** , las tablas de metadatos y otros objetos de sistema. El esquema **cdc** contiene las tablas de metadatos de la captura de datos modificados y, una vez que las tablas de origen han sido habilitadas para esta captura, también contiene las tablas de cambios individuales que sirven como repositorio de los datos de cambios. Este esquema **cdc** también contiene las funciones de sistema asociadas que se usan para consultar los datos modificados.  
   

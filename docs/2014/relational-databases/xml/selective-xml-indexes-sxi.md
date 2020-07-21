@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 868716608c14f233473ebe1413b04e2a5e35d4b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62679826"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065457"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Índices XML selectivos (SXI)
   Los índices XML selectivos son otro tipo de índice XML disponible además de los índices XML normales. Los objetivos de la característica de índice XML selectivo son los siguientes:  
@@ -32,7 +31,7 @@ ms.locfileid: "62679826"
   
  La característica de índice XML selectivo también admite índices XML selectivos secundarios sobre nodos que se han indizado mediante un índice XML selectivo. Estos índices selectivos secundarios son eficaces y mejoran aún más el rendimiento de las consultas.  
   
-##  <a name="benefits"></a> Ventajas de los índices XML selectivos  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> Ventajas de los índices XML selectivos  
  Los índices XML selectivos proporcionan las ventajas siguientes:  
   
 1.  Rendimiento de consultas mejorado considerablemente sobre el tipo de datos XML para cargas típicos de consulta.  
@@ -45,7 +44,7 @@ ms.locfileid: "62679826"
   
 
   
-##  <a name="compare"></a> Índices XML selectivos e índices XML principales  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> Índices XML selectivos e índices XML principales  
   
 > [!IMPORTANT]  
 >  Cree un índice XML selectivo en lugar de un índice XML normal en la mayoría de los casos para mejorar el rendimiento y lograr un almacenamiento más eficiente.  
@@ -58,7 +57,7 @@ ms.locfileid: "62679826"
   
 
   
-##  <a name="example"></a> Ejemplo simple de un índice XML selectivo  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> Ejemplo simple de un índice XML selectivo  
  Considere el siguiente fragmento XML como un documento XML de una tabla de aproximadamente 500.000 filas:  
   
 ```xml  
@@ -103,7 +102,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>Características admitidas, requisitos previos y limitaciones  
   
-###  <a name="features"></a> Características XML admitidas  
+###  <a name="supported-xml-features"></a><a name="features"></a> Características XML admitidas  
  Los índices XML selectivos admiten XQuery admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de los métodos exist(), value() y nodes().  
   
 -   Para los métodos exist(), value() y nodes(), los índices XML selectivos contienen información suficiente para transformar toda la expresión.  
@@ -116,14 +115,14 @@ FOR
   
 
   
-###  <a name="unsupported"></a> Características XML no admitidas  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> Características XML no admitidas  
  Los índices XML selectivos no admiten las siguientes características compatibles con la implementación de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Indizar nodos con tipos XS complejos: tipos de unión, tipos de secuencia y tipos de lista.  
   
 -   Indizar nodos con tipos XS binarios: por ejemplo, base64Binary y hexBinary.  
   
--   Especificar los nodos para indizar con expresiones XPath que contienen el carácter comodín `*` al final, por ejemplo, `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
+-   Especificar los nodos para indizar con expresiones Xpath que contienen el carácter comodín `*` al final. Por ejemplo,  `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
   
 -   Indizar cualquier eje distinto de secundario, atributo o descendiente. El caso `//<step>` se permite como un caso especial.  
   
@@ -133,7 +132,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
  Los siguientes requisitos previos deben existir antes de poder crear un índice XML selectivo en una columna XML en una tabla de usuario:  
   
 -   Debe existir un índice clúster en la clave principal de la tabla de usuario.  
@@ -144,7 +143,7 @@ FOR
   
 
   
-###  <a name="limits"></a> Limitaciones  
+###  <a name="limitations"></a><a name="limits"></a> Limitaciones  
  **Requisitos generales y limitaciones**  
   
 -   Cada índice XML selectivo solamente puede crearse en una única columna XML.  
@@ -197,11 +196,11 @@ FOR
   
 
   
-##  <a name="reltasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tareas relacionadas  
   
 |||  
 |-|-|  
-|**Tarea**|**Tema**|  
+|**Task**|**Tema.**|  
 |Especificar las rutas de acceso del nodo que desea indizar y las sugerencias opcionales de optimización cuando cree o modifique un índice XML selectivo.|[Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos](specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Crear, modificar o quitar un índice XML selectivo.|[Crear, modificar y quitar índices XML selectivos](create-alter-and-drop-selective-xml-indexes.md)|  
 |Crear, modificar o quitar un índice XML selectivo secundario.|[Crear, modificar y quitar índices XML selectivos secundarios](create-alter-and-drop-secondary-selective-xml-indexes.md)|  

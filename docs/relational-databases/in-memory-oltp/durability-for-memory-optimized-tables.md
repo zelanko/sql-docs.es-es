@@ -1,5 +1,6 @@
 ---
 title: Durabilidad de las tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre cómo OLTP en memoria proporciona durabilidad total de las tablas optimizadas para memoria mediante el registro de transacciones y guardando los cambios de datos en el almacenamiento en disco.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abd3180e88d1950719ba07b4ef49def277655217
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723255"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "67942803"
 ## <a name="populating-data-and-delta-files"></a>Rellenar los archivos delta y de datos  
  Los archivos delta y de datos se rellenan según los registros de transacciones generados por las transacciones confirmadas en las tablas optimizadas para memoria y se anexa información sobre las filas insertadas y eliminadas en los archivos de datos y delta correspondientes. A diferencia de las tablas basadas en disco donde las páginas de índice o datos se vacían con E/S aleatoria cuando se realiza el punto de comprobación, la persistencia de la tabla optimizada para memoria es una operación en segundo plano continua. Se obtiene acceso a varios archivos delta porque una transacción puede eliminar o actualizar cualquier fila que fuera insertada por alguna transacción anterior. La información de eliminación siempre se anexa al final del archivo delta. Por ejemplo, una transacción con una marca de tiempo de confirmación de 600 inserta una nueva fila y elimina las filas insertadas por las transacciones con una marca de tiempo de confirmación de 150, 250 y 450, como se muestra en la imagen siguiente. Las cuatro operaciones de E/S de archivo (tres para las filas eliminadas y 1 para las filas recién insertadas) son operaciones de solo anexar para los archivos de datos y delta correspondientes.  
   
- ![Lectura de registros de tablas optimizadas para memoria.](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Lectura de registros de tablas optimizadas para memoria.")  
+ ![Leer las entradas de registro de las tablas optimizadas para memoria.](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Leer las entradas de registro de las tablas optimizadas para memoria.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Acceso a los archivos delta y de datos  
  Se tiene acceso a los pares de archivos delta y de datos cuando ocurre lo siguiente.  
@@ -82,11 +83,11 @@ ms.locfileid: "67942803"
   
  En el ejemplo siguiente, el grupo de archivos de tabla optimizada para memoria tiene cuatro pares de archivos delta y de datos en la marca de tiempo 500 que contiene los datos de transacciones anteriores. Por ejemplo, las filas del primer archivo de datos corresponden a las transacciones con marca de tiempo mayor que 100 y menor o igual que 200; de forma alternativa, se representan como (100, 200]. Los archivos de datos segundo y tercero están completos menos de un 50 por ciento tras tener en cuenta las filas marcadas como eliminadas. La operación de combinación combina estos dos CFP y crea un nuevo CFP que contiene las transacciones con marca de tiempo mayor que 200 y menor o igual que 400, que es el intervalo combinado de estos dos CFP. Puede ver otro CFP con intervalo (500, 600] y el archivo delta no vacío para el intervalo de transacción (200, 400] muestra que la operación de combinación se puede realizar de forma simultanea a la actividad transaccional que incluye la eliminación de varias filas de los CFP de origen.  
   
- ![El diagrama muestra el grupo de archivos de tabla con optimización para memoria](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "El diagrama muestra el grupo de archivos de tabla con optimización para memoria")  
+ ![Diagrama que muestra grupo de archivos de tabla optimizada para memoria](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "Diagrama que muestra grupo de archivos de tabla optimizada para memoria")  
   
  Un subproceso en segundo plano evalúa todos los CFP cerrados mediante una directiva de combinación y después inicia una o varias solicitudes para los CFP aptos. Estas solicitudes de combinación se procesan mediante el subproceso de punto de comprobación sin conexión. La evaluación de la directiva de combinación se realiza periódicamente y también cuando se cierra un punto de comprobación.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Directiva de combinación  
+### <a name="ssnoversion-merge-policy"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Directiva de combinación  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa la directiva de combinación siguiente:  
   
 -   Se programa una combinación si se pueden consolidar 2 o más CFP consecutivos, después de tener en cuenta las filas eliminadas, de forma que las filas resultantes quepan en 1 CFP con el tamaño de destino. El tamaño de destino de los archivos delta y de datos se corresponde con el tamaño original indicado anteriormente.  
@@ -109,6 +110,6 @@ ms.locfileid: "67942803"
  Puede forzar manualmente el punto de comprobación seguido de una copia de seguridad de registros para acelerar la recolección de elementos no utilizados. En escenarios de producción, los puntos de comprobación automáticos y las copias de seguridad de registros realizados como parte de la estrategia de copia de seguridad simplificarán la transición de los CFP por estas fases sin que sea necesaria ninguna intervención manual. El efecto del proceso de recolección de elementos no utilizados es que las bases de datos con tablas optimizadas para memoria pueden tener un tamaño de almacenamiento máximo respecto a su tamaño en memoria. Si no se realizan puntos de comprobación ni copias de seguridad de registros, la superficie en disco de los archivos de punto de comprobación seguirá creciendo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [Crear y administrar el almacenamiento de objetos optimizados para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

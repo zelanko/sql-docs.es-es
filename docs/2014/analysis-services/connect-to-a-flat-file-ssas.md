@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087360"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527201"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectarse a un archivo plano (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con un archivo plano (.txt), un archivo separado por caracteres de tabulación (.tab) o un archivo delimitado por comas (.csv). Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -27,11 +26,11 @@ ms.locfileid: "66087360"
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar un archivo en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer el archivo seleccionado.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
- **Ruta del archivo**  
+ **Ruta de acceso del archivo**  
  Especifique la ruta de acceso completa del archivo.  
   
  **Examinar**  
@@ -40,7 +39,7 @@ ms.locfileid: "66087360"
  **Separador de columnas**  
  Seleccione los delimitadores de columna disponibles en la lista. Elija un delimitador que no sea probable encontrar en el texto.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Tabulador (t)|Un tabulador (t) separa las columnas.|  
 |Coma (,)|Las columnas se separan mediante una coma (,).|  
@@ -52,7 +51,7 @@ ms.locfileid: "66087360"
  **Avanzadas**  
  Especifique las opciones de configuración regional y codificación para el archivo plano.  
   
- **Usar la primera fila como encabezados de columna**  
+ **Usar primera fila como encabezados de columna**  
  Especifique si utilizar la primera fila de datos como encabezados de columna de la tabla de destino.  
   
  **Vista previa de datos**  
@@ -63,7 +62,7 @@ ms.locfileid: "66087360"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Casilla de verificación en el encabezado de columna**|Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.|  
+|**Casilla en el encabezado de columna**|Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.|  
 |**Botón de flecha abajo en el encabezado de columna**|Ordene y filtre los datos de la columna.|  
   
  **Borrar filtros de fila**  

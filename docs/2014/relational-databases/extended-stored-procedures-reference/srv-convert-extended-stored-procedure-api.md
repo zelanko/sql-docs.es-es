@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050788"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procedimiento almacenado extendido)
     
@@ -87,7 +86,7 @@ destlen
  *destlen*  
  Especifica la longitud, en bytes, de la variable de destino. Este parámetro se pasa por alto en los tipos de datos de longitud fija. Para una variable de destino de tipo SRVCHAR, el valor de *destlen* debe ser la longitud total del espacio en búfer de destino. Una longitud de -1 para una variable de destino de tipo SRVCHAR o SRVBINARY indica que hay suficiente espacio disponible. Para una variable de destino de tipo *srvchar*, una longitud de -1 hace que la cadena de caracteres termine en NULL.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La longitud de los datos convertidos, en bytes, si la conversión de tipos de datos es correcta. Cuando **srv_convert** encuentra una solicitud de conversión que no admite, llama al controlador de errores proporcionado por el desarrollador, si lo hubiera, establece un número de error global y devuelve -1.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -114,8 +113,8 @@ destlen
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vea también  
- [srv_setutype &#40;API de procedimiento almacenado extendido&#41;](srv-setutype-extended-stored-procedure-api.md)   
+## <a name="see-also"></a>Consulte también  
+ [srv_setutype API de procedimiento almacenado extendido &#40;&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert &#40;API de procedimiento almacenado extendido&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

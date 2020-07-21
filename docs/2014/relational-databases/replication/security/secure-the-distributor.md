@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f1a649addeb0642ba5fc799aeff48e50044677a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004825"
 ---
 # <a name="secure-the-distributor"></a>Proteger el distribuidor
   Al distribuidor se conectan los siguientes agentes de replicación: el Agente de registro del LOG, el Agente de instantáneas, el Agente de lectura de cola, el Agente de distribución y el Agente de mezcla. Es importante proporcionar un inicio de sesión adecuado para cada uno de estos agentes respetando el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas:  
@@ -42,12 +41,12 @@ ms.locfileid: "62960288"
 >  No cambie manualmente la contraseña de **distributor_admin** . Use siempre el procedimiento almacenado **sp_changedistributor_password** o los cuadros de diálogo **Propiedades del distribuidor** o **Actualizar contraseñas de replicación** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ya que los cambios de contraseña se aplican a las publicaciones locales automáticamente.  
   
 ## <a name="snapshot-folder-security"></a>Seguridad de la carpeta de instantáneas  
- Asegúrese de que el recurso compartido de instantáneas tiene acceso de lectura a la cuenta con la que se ejecutan el Agente de mezcla (para la replicación de mezcla) o el Agente de distribución (para la replicación transaccional o de instantáneas), así como acceso de escritura a la cuenta con la que se ejecuta el Agente de instantáneas. Para más información sobre la carpeta de instantáneas, vea [Proteger la carpeta de instantáneas](secure-the-snapshot-folder.md).  
+ Asegúrese de que el recurso compartido de instantáneas tiene acceso de lectura a la cuenta con la que se ejecutan el Agente de mezcla (para la replicación de mezcla) o el Agente de distribución (para la replicación transaccional o de instantáneas), así como acceso de escritura a la cuenta con la que se ejecuta el Agente de instantáneas. Para obtener más información sobre la carpeta de instantáneas, vea [Proteger la carpeta de instantáneas](secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>Vea también  
- [Ver y modificar la configuración de seguridad de la replicación](view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>Consulte también  
+ [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)  
+ [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)  
   
   

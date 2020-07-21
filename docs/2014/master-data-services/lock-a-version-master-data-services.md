@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3048a3845e3e65c305abdde3f75a30f777ed1ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482872"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971285"
 ---
 # <a name="lock-a-version-master-data-services"></a>Bloquear una versión (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], bloquee una versión de un modelo para impedir cambios en los miembros del modelo y en sus atributos.  
@@ -31,7 +30,7 @@ ms.locfileid: "65482872"
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   El estado de la versión debe ser **Abierta**.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "65482872"
   
 -   [Confirmar una versión &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Desbloquear una versión &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)  
   

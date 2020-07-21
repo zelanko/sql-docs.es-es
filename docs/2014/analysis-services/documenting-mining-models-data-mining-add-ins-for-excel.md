@@ -1,5 +1,5 @@
 ---
-title: Documentar modelos de minería de datos (complementos de minería de datos para Excel de datos) | Microsoft Docs
+title: Documentar modelos de minería de datos (complementos de minería de datos para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,32 +14,31 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081587"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528491"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentar modelos de minería de datos (Complementos de minería de datos para Excel)
-  ![Botón de documento modelo, cinta de opciones minería de datos](media/dmc-docmodel.gif "botón documentar modelo, cinta de opciones minería de datos")  
+  ![Botón Documentar modelo, cinta de opciones Minería de datos](media/dmc-docmodel.gif "Botón Documentar modelo, cinta de opciones Minería de datos")  
   
- El **documentar modelo** asistente crea un informe que proporciona información útil acerca de los modelos de minería de datos que ha creado. Si documenta un modelo, podrá realizar un seguimiento de los datos usados para generarlo, obtener información adicional sobre el momento en que se procesó y realizar un seguimiento de los cambios en los parámetros que afectan a los resultados del mismo.  
+ El Asistente para **documentar modelo** crea un informe que proporciona información útil sobre los modelos de minería de datos que ha creado. Si documenta un modelo, podrá realizar un seguimiento de los datos usados para generarlo, obtener información adicional sobre el momento en que se procesó y realizar un seguimiento de los cambios en los parámetros que afectan a los resultados del mismo.  
   
 ## <a name="using-the-document-model-wizard"></a>Usar el asistente para Documentar modelo  
   
-1.  Haga clic en el **minería de datos** ficha.  
+1.  Haga clic en la pestaña **minería de datos** .  
   
-2.  En el **uso del modelo** grupo, haga clic en **documentar modelo**.  
+2.  En el grupo **uso del modelo** , haga clic en modelo de **documento**.  
   
-3.  En el **Seleccionar modelo** cuadro de diálogo, seleccione el modelo en el que al informe y, a continuación, haga clic en **siguiente**. Debe ejecutar el **documentar modelo** asistente por separado para cada modelo que desee documentar.  
+3.  En el cuadro de diálogo **Seleccionar modelo** , seleccione el modelo en el que desea generar el informe y, a continuación, haga clic en **siguiente**. Debe ejecutar el Asistente para **documentar modelo** por separado para cada modelo que desee documentar.  
   
-4.  En el **seleccionar detalles de la documentación** diálogo cuadro, elija una de las dos opciones: **Complete la información** o **información de resumen**.  
+4.  En el cuadro de diálogo **seleccionar detalles** de la documentación, elija una de estas dos opciones: **información completa** o **información de Resumen**.  
   
-5.  Haga clic en **Finalizar**.  
+5.  Haga clic en **Finalizar**  
   
-6.  El asistente crea automáticamente una nueva hoja de cálculo que contiene el informe especificado, denominado **documentación del modelo**,  
+6.  El asistente crea automáticamente una nueva hoja de cálculo que contiene el informe especificado, titulado **documentación del modelo**,  
   
 ## <a name="understanding-the-report"></a>Descripción del informe  
  En el momento de crear un informe para documentar un modelo de minería de datos, puede optar por crear un resumen, que contiene información básica como el nombre y la descripción del modelo, o un informe completo, que contiene detalles sobre la estructura subyacente e información avanzada sobre el modelo de minería de datos.  
@@ -55,12 +54,12 @@ ms.locfileid: "66081587"
   
 ||||  
 |-|-|-|  
-|**Metadatos**|Nombre del modelo<br /><br /> Descripción del modelo<br /><br /> Nombre del algoritmo<br /><br /> Fecha del último procesamiento||  
+|**Metadata**|Nombre del modelo<br /><br /> Descripción del modelo<br /><br /> Nombre del algoritmo<br /><br /> Fecha del último procesamiento||  
 |**Resultados del modelo**|Asociación|Número de conjuntos de elementos<br /><br /> Número de reglas|  
 ||Agrupación en clústeres|Número de clústeres<br /><br /> Compatibilidad con el clúster|  
 ||Árbol de decisión|Número de árboles<br /><br /> Número de nodos en cada árbol|  
 ||Regresión lineal|Número de árboles (siempre 1)<br /><br /> Número de nodos (siempre 1)|  
-||naive Bayes|Atributos importantes|  
+||Bayes Naive|Atributos importantes|  
 ||Red neuronal|Número de nodos de entrada<br /><br /> Número de nodos de salida<br /><br /> Número de nodos ocultos|  
 ||Agrupación en clústeres de secuencia|Número de clústeres|  
   
@@ -69,15 +68,15 @@ ms.locfileid: "66081587"
   
 ||||  
 |-|-|-|  
-|**Metadatos**|Metadatos del modelo|Parámetros de algoritmo y valores|  
-||Metadatos de columna|Nombre de columna<br /><br /> Uso<br /><br /> Tipo de datos<br /><br /> Tipo de contenido<br /><br /> Valores (lista de valores discretos o rango de valores)|  
-|**Estadísticas del modelo**|Columnas continuas|Valor promedio<br /><br /> Valor mínimo<br /><br /> Valor máximo<br /><br /> Error cuadrático medio<br /><br /> Desviación media<br /><br /> Logaritmo<br /><br /> Fórmula de regresión (solo para modelos de regresión lineal)|  
+|**Metadata**|Metadatos del modelo|Parámetros de algoritmo y valores|  
+||Metadatos de columna|Nombre de la columna<br /><br /> Uso<br /><br /> Tipo de datos<br /><br /> Tipo de contenido<br /><br /> Valores (lista de valores discretos o rango de valores)|  
+|**Estadísticas del modelo**|Columnas continuas|Valor medio<br /><br /> Valor mínimo<br /><br /> Valor máximo<br /><br /> Error cuadrático medio<br /><br /> Desviación media<br /><br /> Logaritmo<br /><br /> Fórmula de regresión (solo para modelos de regresión lineal)|  
 ||Columnas discretas [DMX]|Número sin errores<br /><br /> Número con errores<br /><br /> Logaritmo<br /><br /> Mejora respecto al modelo predictivo|  
   
 > [!NOTE]  
->  Puede documentar cualquier tipo de modelo compatible con SQL Server Analysis Services. Por consiguiente, la tabla contiene algunos tipos de modelos que no se pueden crear con las Herramientas de análisis de tabla ni con los asistentes del Cliente de minería de datos. Sin embargo, puede crear todos los tipos de modelo mediante el **Editor de consultas avanzadas de minería de datos**. Para obtener más información, consulte [consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+>  Puede documentar cualquier tipo de modelo compatible con SQL Server Analysis Services. Por consiguiente, la tabla contiene algunos tipos de modelos que no se pueden crear con las Herramientas de análisis de tabla ni con los asistentes del Cliente de minería de datos. Sin embargo, puede crear todos los tipos de modelos mediante el **Editor de consultas avanzadas de minería de datos**. Para obtener más información, vea [&#40;de consultas SQL Server complementos de minería de datos&#41;](query-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vea también  
- [Implementar y ampliar modelos de minería de datos &#40;datos complementos de minería de datos para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementar y escalar modelos de minería de datos &#40;complementos de minería de datos para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

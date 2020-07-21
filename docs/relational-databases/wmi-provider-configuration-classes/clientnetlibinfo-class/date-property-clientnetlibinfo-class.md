@@ -1,6 +1,6 @@
 ---
-title: Fecha de la propiedad (clase ClientNetLibInfo) | Microsoft Docs
-ms.custom: ''
+title: Propiedad Date (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa616acc636c40780925ea9966712a2d5cc6b3a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02d556ea93328a6a162be5e53358b20824c64d5c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995469"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881168"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Propiedad Date (clase ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene la fecha del archivo de biblioteca de red del cliente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +44,7 @@ object.Date [= value]
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

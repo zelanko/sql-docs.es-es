@@ -13,15 +13,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6198e73fa7f22be92a45ea9de8c02d82bc768dd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62886941"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420592"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Herramientas para solucionar problemas con el desarrollo de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que se pueden usar para solucionar problemas de los paquetes mientras estos se desarrollan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "62886941"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye las siguientes características adicionales para ayudarle a evitar los errores de validación:  
   
--   **Establezca todo el paquete y todas las conexiones para trabajar sin conexión cuando los orígenes de datos no estén disponibles**. Puede habilitar **Trabajar sin conexión** en el menú **SSIS** . A diferencia de la `DelayValidation` propiedad, el **trabajar sin conexión** opción está disponible incluso antes de abrir un paquete. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.  
+-   **Establezca todo el paquete y todas las conexiones para trabajar sin conexión cuando los orígenes de datos no estén disponibles**. Puede habilitar **Trabajar sin conexión** en el menú **SSIS** . A diferencia de la `DelayValidation` propiedad, la opción **trabajar sin conexión** está disponible incluso antes de abrir un paquete. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.  
   
 -   **Configure la propiedad DelayValidation para los elementos del paquete que no son válidos hasta el tiempo de ejecución**. Se puede establecer `DelayValidation` en `True` para los elementos del paquete cuya configuración no sea válida en tiempo de diseño a fin de evitar errores de validación. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. La propiedad `DelayValidation` se puede habilitar en el nivel de paquete o en el de tareas y contenedores individuales incluidos en el paquete. Por lo general, se debe mantener el valor de esta propiedad en `True` para los mismos elementos del paquete cuando se implementa el paquete, a fin de evitar los mismos errores de validación en tiempo de ejecución.  
   
@@ -83,12 +82,12 @@ ms.locfileid: "62886941"
     > [!NOTE]  
     >  Al depurar un paquete que contiene varias tareas Script, el depurador alcanzará los puntos de interrupción solo en una de las tareas Script y omitirá los puntos de interrupción del resto. Si una tarea Script forma parte de un contenedor de bucles Foreach o For, el depurador omite los puntos de interrupción en la tarea Script después de la primera iteración del bucle.  
   
- Para más información, consulte [Debugging Script](debugging-script.md). Para obtener sugerencias sobre cómo depurar el componente de Script, consulte [codificar y depurar el componente de Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+ Para más información, consulte [Debugging Script](debugging-script.md). Para obtener sugerencias sobre cómo depurar el componente de script, vea [codificar y depurar el componente de script] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>Solucionar problemas de errores sin descripción  
  Si se encuentra con un número de error de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sin una descripción asociada durante el desarrollo de un paquete, puede ver la descripción en [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md). En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting-tools-for-package-execution.md)   
  [Características de rendimiento del flujo de datos](../data-flow/data-flow-performance-features.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Power ver propiedades de informes (SSAS Tabular) | Microsoft Docs
+title: Propiedades de informes de Power View (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d91578e5c3f4b47f56eeb86aa738e37e8f59b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938766"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Propiedades de informes de Vista avanzada (SSAS tabular)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] permite la creación de informes ad hoc intuitiva para los usuarios profesionales como analistas de datos, responsables de la toma de decisiones empresariales y trabajadores de la información. Los informes pueden crearse con facilidad y se puede interactuar con vistas de datos de los modelos tabulares basados en los libros de PowerPivot publicados en una galería de PowerPivot o los modelos tabulares creados con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e implementados en las instancias de Analysis Services de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación de Silverlight basada en explorador que se inicia desde SharePoint Server 2010 o versiones posteriores.  

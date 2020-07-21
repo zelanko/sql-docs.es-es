@@ -27,12 +27,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f8d83f950ef19df467bc0bf63203c2b610152045
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006509"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633970"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -43,7 +43,7 @@ ms.locfileid: "68006509"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  Establece el propietario de la ruta en el usuario o el rol de base de datos que se ha especificado. *owner_name* puede ser el nombre de cualquier usuario o rol válidos si el usuario actual es un miembro del rol fijo de base de datos **db_owner** o del rol fijo de servidor **sysadmin**. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permisos IMPERSONATE o el nombre de un rol al que pertenece el usuario actual. Si se omite esta cláusula, la ruta pertenece al usuario actual.  
   
- por  
+ WITH  
  Presenta las cláusulas que definen la ruta creada.  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -104,10 +104,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Cuando una ruta especifica **"LOCAL"** para *dirección_de_próximo_salto*, el mensaje se entrega a un servicio en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Si una ruta especifica **'TRANSPORT'** para *next_hop_address*, la dirección de red se determina en función de la dirección de red del nombre del servicio. Una ruta que especifica **'TRANSPORT'** podría no especificar un nombre de servicio o instancia de agente.  
+ Cuando una ruta especifica **"TRANSPORT"** para *dirección_de_próximo_salto*, la dirección de red se determina en función de la dirección de red del nombre del servicio. Una ruta que especifica **'TRANSPORT'** podría no especificar un nombre de servicio o instancia de agente.  
   
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
- Especifica la dirección de red de una base de datos reflejada con una base de datos reflejada hospedada en *next_hop_address*. *next_hop_mirror_address* especifica una dirección TCP/IP en el siguiente formato:  
+ Especifica la dirección de red de una base de datos reflejada con una base de datos reflejada hospedada en *next_hop_address*. En *dirección_de_reflejo_de_próximo_salto* se especifica una dirección TCP/IP en el formato siguiente:  
   
  **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
@@ -123,12 +123,12 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Si se especifica MIRROR_ADDRESS, la ruta debe especificar la cláusula SERVICE_NAME y la cláusula BROKER_INSTANCE. Es posible que una ruta que especifica **"LOCAL"** o **"TRANSPORT"** para *dirección_de_próximo_salto* no especifique una dirección de reflejo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La tabla de enrutamiento que almacena las rutas es una tabla de metadatos que se puede leer con la vista de catálogo **sys.routes**. Esta vista de catálogo solo se puede actualizar mediante las instrucciones CREATE ROUTE, ALTER ROUTE y DROP ROUTE.  
   
  De forma predeterminada, la tabla de enrutamiento de cada base de datos de usuario contiene una ruta. Esta ruta se llama **AutoCreatedLocal**. La ruta especifica **'LOCAL'** para *next_hop_address* y coincide con todos los nombres de servicio e identificadores de instancia de agente.  
   
- Si una ruta especifica **'TRANSPORT'** para *next_hop_address*, la dirección de red se determina en función del nombre del servicio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede procesar de forma correcta nombres de servicio que comienzan con una dirección de red en un formato válido para *dirección_de_próximo_salto*.  
+ Cuando una ruta especifica **"TRANSPORT"** para *dirección_de_próximo_salto*, la dirección de red se determina en función del nombre del servicio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede procesar de forma correcta nombres de servicio que comienzan con una dirección de red en un formato válido para *dirección_de_próximo_salto*.  
   
  La tabla de enrutamiento puede contener un número indeterminado de rutas que especifican el mismo servicio, dirección de red e identificador de instancia de agente. En este caso, [!INCLUDE[ssSB](../../includes/sssb-md.md)] elige una ruta mediante un procedimiento diseñado para buscar la coincidencia más exacta entre la información especificada en la conversación y la información de la tabla de enrutamiento.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_enable_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98258dbee3e2afa59314e340b27661a816a48b0f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106502"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891136"
 ---
-# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita la captura de datos modificados en la base de datos actual. Este procedimiento se debe ejecutar para una base de datos antes de que se puedan habilitar las tablas para la captura de datos modificados de esa base de datos. La captura de datos modificados registra las operaciones de inserción, actualización y eliminación aplicadas a las tablas habilitadas, proporcionando los detalles de los cambios en un formato relacional de uso sencillo. Para las filas modificadas, se captura la información de columna que duplica la estructura de las columnas de una tabla de origen sometida a seguimiento, junto con los metadatos necesarios para aplicar los cambios a un entorno de destino.  
   
@@ -51,10 +51,10 @@ sys.sp_cdc_enable_db
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Captura de datos modificados no se puede habilitar en [las bases de datos del sistema](../../relational-databases/databases/system-databases.md) o bases de datos de distribución.  
+## <a name="remarks"></a>Observaciones  
+ No se puede habilitar la captura de datos modificados en [las bases de datos del sistema](../../relational-databases/databases/system-databases.md) o en las bases de datos de distribución.  
   
- sys.sp_cdc_enable_db crea los objetos de captura de datos modificados con un ámbito aplicable a toda la base de datos, incluidas las tablas de metadatos y los desencadenadores DDL. También crea el esquema cdc y el usuario de base de datos cdc y establece la columna is_cdc_enabled de la entrada de la base de datos en el [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) en 1 la vista de catálogo.  
+ sys.sp_cdc_enable_db crea los objetos de captura de datos modificados con un ámbito aplicable a toda la base de datos, incluidas las tablas de metadatos y los desencadenadores DDL. También crea el esquema CDC y el usuario de la base de datos CDC, y establece la columna is_cdc_enabled para la entrada de la base de datos en la vista de catálogo [Sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) en 1.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor sysadmin.  
@@ -69,7 +69,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

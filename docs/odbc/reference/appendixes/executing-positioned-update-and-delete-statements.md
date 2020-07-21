@@ -1,5 +1,5 @@
 ---
-title: Ejecutar coloca instrucciones Update y Delete | Microsoft Docs
+title: Ejecutando instrucciones Update y DELETE posicionadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,54 +13,54 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursor library [ODBC], positioned update or delete
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 96a1aa891ef8ba26c6c239cf35e62a8f36018e65
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913621"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307006"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Ejecución de instrucciones de eliminación y actualización Positioned
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Después de una aplicación ha capturado un bloque de datos con **SQLFetchScroll**, puede actualizar o eliminar los datos en el bloque. Para ejecutar una actualización por posición o delete, la aplicación:  
+ Una vez que una aplicación ha capturado un bloque de datos con **SQLFetchScroll**, puede actualizar o eliminar los datos del bloque. Para ejecutar una actualización o eliminación posicionada, la aplicación:  
   
-1.  Las llamadas **SQLSetPos** para colocar el cursor en la fila para actualizarse o eliminarse.  
+1.  Llama a **SQLSetPos** para colocar el cursor en la fila que se va a actualizar o eliminar.  
   
-2.  Crea una actualización por posición o la instrucción delete con la sintaxis siguiente:  
+2.  Construye una instrucción UPDATE o DELETE posicionada con la siguiente sintaxis:  
   
-     **ACTUALIZACIÓN** *nombre de tabla*  
+     **Actualizar** *tabla-nombre*  
   
-     **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+     **Establecer** *el identificador de columna* **=** {*expresión* &#124; **null**}  
   
-     [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
+     [**,** *identificador de columna* **=** {*expresión* &#124; **null**}]  
   
-     **WHERE CURRENT OF** *nombre de cursor*  
+     **WHERE CURRENT of** *cursor-Name*  
   
-     **DELETE FROM** *nombre-tabla* **WHERE CURRENT OF** *nombre de cursor*  
+     **Eliminar de** *TABLE-Name* **donde Current of** *cursor-Name*  
   
-     La manera más fácil de construir el **establecer** cláusula en una instrucción de actualización posicionada consiste en usar marcadores de parámetros para cada columna se puede actualizar y usar **SQLBindParameter** para enlazar a los búferes del conjunto de filas de la se actualizó la fila. En este caso, el tipo de datos de C del parámetro será el mismo que el tipo de datos de C del búfer del conjunto de filas.  
+     La forma más fácil de construir la cláusula **set** en una instrucción UPDATE posicionada es usar marcadores de parámetros para que se actualice cada columna y usar **SQLBindParameter** para enlazarlos a los búferes del conjunto de filas para que se actualice la fila. En este caso, el tipo de datos C del parámetro será el mismo que el tipo de datos C del búfer del conjunto de filas.  
   
-3.  Actualiza los búferes del conjunto de filas de la fila actual si se ejecutará una instrucción update posicionadas. Después de ejecutar correctamente una instrucción de actualización por posición, la biblioteca de cursores copia los valores de cada columna en la fila actual a su memoria caché.  
-  
-    > [!CAUTION]  
-    >  Si la aplicación no actualizar correctamente los búferes del conjunto de filas antes de ejecutar una instrucción de actualización posicionada, los datos en la memoria caché serán incorrectos después de ejecutar la instrucción.  
-  
-4.  Ejecuta la actualización por posición o la instrucción delete usando una instrucción diferente que la instrucción asociada con el cursor.  
+3.  Actualiza los búferes del conjunto de filas de la fila actual si va a ejecutar una instrucción UPDATE posicionada. Después de ejecutar correctamente una instrucción UPDATE posicionada, la biblioteca de cursores copia los valores de cada columna de la fila actual a su memoria caché.  
   
     > [!CAUTION]  
-    >  El **donde** cláusula construido por la biblioteca de cursores para identificar la fila actual no puede identificar las filas, identificar una fila diferente o más de una fila. Para obtener más información, consulte [construir busca instrucciones](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+    >  Si la aplicación no actualiza correctamente los búferes del conjunto de filas antes de ejecutar una instrucción UPDATE posicionada, los datos de la memoria caché serán incorrectos después de que se ejecute la instrucción.  
   
- Toda actualización por posición y las instrucciones delete requieren un nombre de cursor. Para especificar el nombre del cursor, una aplicación llama a **SQLSetCursorName** antes de abrir el cursor. Para usar el nombre del cursor generado por el controlador, una aplicación llama a **SQLGetCursorName** después de abrir el cursor.  
+4.  Ejecuta la instrucción UPDATE o DELETE posicionada con una instrucción diferente de la instrucción asociada al cursor.  
   
- Después del cursor biblioteca ejecuta una actualización por posición o la instrucción delete, la matriz de estado, búferes de conjunto de filas y caché mantenida por la biblioteca de cursores contienen los valores mostrados en la tabla siguiente.  
+    > [!CAUTION]  
+    >  La cláusula **Where** construida por la biblioteca de cursores para identificar la fila actual puede no identificar filas, identificar una fila diferente o identificar más de una fila. Para obtener más información, vea [crear instrucciones de búsqueda](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
-|Instrucción que se utiliza|Valor de matriz de estado de fila|Valores de<br /><br /> búferes del conjunto de filas|Valores de<br /><br /> búferes de memoria caché|  
+ Todas las instrucciones Update y DELETE posicionadas requieren un nombre de cursor. Para especificar el nombre del cursor, una aplicación llama a **SQLSetCursorName** antes de que se abra el cursor. Para usar el nombre de cursor generado por el controlador, una aplicación llama a **SQLGetCursorName** después de abrir el cursor.  
+  
+ Después de que la biblioteca de cursores ejecute una instrucción UPDATE o DELETE posicionada, la matriz de estado, los búferes del conjunto de filas y la caché mantenida por la biblioteca de cursores contienen los valores que se muestran en la tabla siguiente.  
+  
+|Instrucción usada|Valor en la matriz de estado de fila|Valores de<br /><br /> búferes de conjunto de filas|Valores de<br /><br /> búferes de caché|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
 |Actualización posicionada|SQL_ROW_UPDATED|Nuevos valores [1]|Nuevos valores [1]|  
-|Delete posicionada|SQL_ROW_DELETED|Valores anteriores|Valores anteriores|  
+|Eliminación posicionada|SQL_ROW_DELETED|Valores anteriores|Valores anteriores|  
   
- [1] en la aplicación debe actualizar los valores de los búferes de conjunto de filas antes de ejecutar la instrucción de actualización por posición; Después de ejecutar la instrucción de actualización por posición, la biblioteca de cursores copia los valores de los búferes de conjunto de filas en su memoria caché.
+ [1] la aplicación debe actualizar los valores de los búferes del conjunto de filas antes de ejecutar la instrucción UPDATE posicionada; después de ejecutar la instrucción UPDATE posicionada, la biblioteca de cursores copia los valores de los búferes del conjunto de filas a su memoria caché.

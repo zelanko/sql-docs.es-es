@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades (Analysis Services - datos multidimensionales) de dimensiones | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la dimensión (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0523220c76c11280165bc825c5c00c5eb9e23be6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081836"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528621"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Propiedades de la dimensión (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Propiedades de la dimensión** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de una dimensión en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades de la dimensión** , haga clic con el botón derecho en una dimensión del Explorador de objetos y seleccione **Propiedades**.  
@@ -28,18 +27,18 @@ ms.locfileid: "66081836"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|Muestra el nombre de la dimensión.|  
-|**ID**|Muestra el identificador de la dimensión.|  
+|**Nombre**|Muestra el nombre de la dimensión.|  
+|**Id**|Muestra el identificador de la dimensión.|  
 |**Descripción**|Muestra la descripción de la dimensión.|  
 |**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la dimensión.|  
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la dimensión.|  
 |**Modo de procesamiento**|Seleccione el modo de procesamiento que usará la dimensión. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>.|  
-|**Estado**|Muestra el estado de procesamiento de la dimensión. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**State**|Muestra el estado de procesamiento de la dimensión. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Procesado por última vez**|Muestra la fecha y hora en que se procesó por última vez la dimensión.|  
 |**Modo de almacenamiento actual**|Muestra el modo de almacenamiento actual de la dimensión. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

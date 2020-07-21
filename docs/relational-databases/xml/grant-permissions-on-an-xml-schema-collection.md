@@ -1,5 +1,6 @@
 ---
 title: Conceder permisos para una colección de esquemas XML | Microsoft Docs
+description: Obtenga información sobre cómo conceder permisos para crear una colección de esquemas XML y también para concederlos en un objeto de colección de esquemas XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e400caa800f4e3dcb38750513216918d2b8b1d3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986436"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772102"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permisos para una colección de esquemas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Puede conceder permisos para crear una colección de esquemas XML y también puede concederlos para un objeto de colección de esquemas XML.  
   
 ## <a name="granting-permission-to-create-an-xml-schema-collection"></a>Conceder permisos para crear una colección de esquemas XML  

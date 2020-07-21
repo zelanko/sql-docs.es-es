@@ -13,19 +13,18 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
-ms.translationtype: MT
+ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304813"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002721"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>Sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Devuelve una fila por cada conjunto de filas que realiza un seguimiento de los datos internos de los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y realizan un seguimiento de las filas eliminadas, las asignaciones de filas y el filas de almacenamiento Delta. Realizan un seguimiento de los datos para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
+  Devuelve una fila por cada conjunto de filas que realiza un seguimiento de los datos internos de los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y realizan un seguimiento de las filas eliminadas, las asignaciones de filas y el filas de almacenamiento Delta. Realizan un seguimiento de los datos para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|IDENTIFICADOR de partición para esta partición. Es único en la base de datos.|  
 |object_id|**int**|IDENTIFICADOR de objeto de la tabla que contiene la partición.|  
@@ -44,12 +43,12 @@ ms.locfileid: "72304813"
  Requiere la pertenencia al rol `public`. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Notas generales  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a crear nuevos índices internos de almacén de columnas cada vez que crea o vuelve a generar un índice de almacén de columnas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear nuevos índices internos de almacén de columnas cada vez que crea o vuelve a generar un índice de almacén de columnas.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. Ver todos los conjuntos de filas internos de una tabla  
- En este ejemplo se devuelven todos los conjuntos de filas de almacén de columnas internos de una tabla. También puede usar hobt_id para obtener más información sobre el conjunto de filas específico.  
+ En este ejemplo se devuelven todos los conjuntos de filas de almacén de columnas internos de una tabla. También puede usar el hobt_id para obtener más información sobre el conjunto de filas específico.  
   
 ```sql  
 SELECT i.object_id, i.index_id, i.name, p.hobt_id, p.internal_object_type_id, p.internal_object_type_desc  
@@ -59,9 +58,9 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

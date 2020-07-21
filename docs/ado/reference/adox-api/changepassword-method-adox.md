@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5b5ebf8304e4826d04d971e91606f8e9b0f4ead9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967038"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759431"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword (método, ADOX)
-Cambia la contraseña para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) cuenta.  
+Cambia la contraseña de una cuenta de [usuario](../../../ado/reference/adox-api/user-object-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,18 +35,18 @@ User.ChangePassword OldPassword, NewPassword
   
 #### <a name="parameters"></a>Parámetros  
  *OldPassword*  
- Un **cadena** valor que especifica la contraseña del usuario existente. Si el usuario no tiene actualmente una contraseña, use una cadena vacía ("") para *OldPassword*.  
+ Valor de **cadena** que especifica la contraseña existente del usuario. Si el usuario no tiene actualmente una contraseña, use una cadena vacía ("") para *OldPassword*.  
   
  *NewPassword*  
- Un **cadena** valor que especifica la nueva contraseña.  
+ Valor de **cadena** que especifica la nueva contraseña.  
   
 ## <a name="remarks"></a>Comentarios  
  Por motivos de seguridad, se debe especificar la contraseña anterior además de la nueva contraseña.  
   
- Se producirá un error si el proveedor no admite la administración de propiedades de confianza.  
+ Se producirá un error si el proveedor no admite la administración de las propiedades de confianza.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de métodos Append y ChangePassword de grupos y usuarios (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

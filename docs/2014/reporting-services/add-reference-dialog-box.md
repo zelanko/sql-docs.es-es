@@ -1,5 +1,5 @@
 ---
-title: Agregar cuadro de diálogo referencia | Microsoft Docs
+title: Agregar referencia (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110020"
 ---
 # <a name="add-reference-dialog-box"></a>Agregar referencia (cuadro de diálogo)
@@ -34,10 +34,10 @@ ms.locfileid: "66110020"
 > [!NOTE]  
 >  Cuando se publica un informe que incluye una referencia a un ensamblado externo, el ensamblado se debe instalar en el servidor de informes antes de que se pueda procesar el informe correctamente.  
   
- **Recent**  
+ **Recientes**  
  Utilice esta opción para seleccionar el nombre de un ensamblado utilizado recientemente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar ensamblados personalizados con informes](custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Agregar código a un informe &#40;SSRS&#41;](report-design/add-code-to-a-report-ssrs.md)  
   

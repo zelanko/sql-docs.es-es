@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 77608294b06025d5c265e67f71f9b0b228732729
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070342"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871110"
 ---
-# <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve la información de la columna, una fila por columna, de las tablas del servidor vinculado especificado. **sp_columns_ex** devuelve información de solo la columna específica si *columna* se especifica.  
+  Devuelve la información de la columna, una fila por columna, de las tablas del servidor vinculado especificado. **sp_columns_ex** devuelve información de columna únicamente para la columna específica si se especifica *Column* .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,57 +44,57 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado que se va a devolver información de columna. *table_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'`Es el nombre del servidor vinculado cuya información de columna se va a devolver. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de la tabla para que se va a devolver información de columna. *table_name* es **sysname**, su valor predeterminado es null.  
+`[ @table_name = ] 'table_name'`Es el nombre de la tabla para la que se va a devolver información de columna. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_schema = ] 'table_schema'` Es el nombre del esquema de la tabla para que se va a devolver información de columna. *TABLE_SCHEMA* es **sysname**, su valor predeterminado es null.  
+`[ @table_schema = ] 'table_schema'`Es el nombre de esquema de la tabla para la que se va a devolver información de columna. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Es el nombre del catálogo de la tabla para que se va a devolver información de columna. *TABLE_CATALOG* es **sysname**, su valor predeterminado es null.  
+`[ @table_catalog = ] 'table_catalog'`Es el nombre de catálogo de la tabla para la que se va a devolver información de columna. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @column_name = ] 'column'` Es el nombre de la columna de base de datos para el que se va a proporcionar información. *columna* es **sysname**, su valor predeterminado es null.  
+`[ @column_name = ] 'column'`Es el nombre de la columna de base de datos para la que se va a proporcionar información. la *columna* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @ODBCVer = ] 'ODBCVer'` Es la versión de ODBC que se está usando. *ODBCVer* es **int**, con el valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para obtener información acerca de las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación ODBC SQLColumns.  
+`[ @ODBCVer = ] 'ODBCVer'`Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para obtener información acerca de las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de la tabla o vista. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_ **.** _propietario_ **.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esta columna representa el nombre de base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de la tabla o vista. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esta columna representa el nombre de base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla o vista. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla o vista. Este campo siempre devuelve un valor.|  
-|**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna de la **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
-|**DATA_TYPE**|**smallint**|Valor de tipo entero correspondiente a indicadores de tipo ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo de ODBC, el valor es NULL. Se devuelve el nombre de tipo de datos nativos en el **TYPE_NAME** columna.|  
-|**TYPE_NAME**|**varchar(** 13 **)**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
-|**COLUMN_SIZE**|**int**|Número de dígitos significativos. El valor devuelto para la **precisión** columna es en base 10.|  
+|**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna del **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
+|**DATA_TYPE**|**smallint**|Valor de tipo entero correspondiente a indicadores de tipo ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo de ODBC, el valor es NULL. El nombre del tipo de datos nativo se devuelve en la columna **TYPE_NAME** .|  
+|**TYPE_NAME**|**VARCHAR (** 13 **)**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
+|**COLUMN_SIZE**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
 |**BUFFER_LENGTH**|**int**|Tamaño de transferencia de los datos.1|  
 |**DECIMAL_DIGITS**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**NUM_PREC_RADIX**|**smallint**|Base para los tipos de datos numéricos.|  
-|**QUE ACEPTA VALORES NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
-|**COMENTARIOS**|**varchar(** 254 **)**|Este campo siempre devuelve NULL.|  
-|**COLUMN_DEF**|**varchar(** 254 **)**|Valor predeterminado de la columna.|  
-|**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es el mismo que el **DATA_TYPE** columna, excepto para el **datetime** y SQL-92 **intervalo** tipos de datos. Esta columna siempre devuelve un valor.|  
-|**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para **datetime** y SQL-92 **intervalo** tipos de datos. Para otros tipos de datos, esta columna devuelve NULL.|  
+|**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
+|**COMENTARIOS**|**VARCHAR (** 254 **)**|Este campo siempre devuelve NULL.|  
+|**COLUMN_DEF**|**VARCHAR (** 254 **)**|Valor predeterminado de la columna.|  
+|**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos de **intervalo** **DateTime** y SQL-92. Esta columna siempre devuelve un valor.|  
+|**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para los tipos de datos de **intervalo** **DateTime** y SQL-92. Para otros tipos de datos, esta columna devuelve NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de una columna de tipos de datos de caracteres o enteros. Para los demás tipos de datos, esta columna devuelve NULL.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna en la tabla. La primera columna de la tabla es 1. Esta columna siempre devuelve un valor.|  
-|**IS_NULLABLE**|**varchar(** 254 **)**|Nulabilidad de la columna de la tabla. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> Devuelve el valor de esta columna es diferente del valor devuelto para la **NULLABLE** columna.|  
+|**IS_NULLABLE**|**VARCHAR (** 254 **)**|Nulabilidad de la columna de la tabla. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> El valor devuelto para esta columna es diferente del valor devuelto para la columna que **acepta valores NULL** .|  
 |**SS_DATA_TYPE**|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado por los procedimientos almacenados extendidos.|  
   
  Para obtener más información, vea la documentación de Microsoft ODBC.  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_columns_ex** se ejecuta al consultar el conjunto de filas COLUMNS de la **IDBSchemaRowset** interfaz del proveedor OLE DB correspondiente a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* los parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
+ **sp_columns_ex** se ejecuta consultando el conjunto de filas Columns de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
- **sp_columns_ex** devuelve un resultado vacío se establece si el proveedor OLE DB del servidor vinculado especificado no es compatible con el conjunto de filas COLUMNS de la **IDBSchemaRowset** interfaz.  
+ **sp_columns_ex** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas Columns de la interfaz **IDBSchemaRowset** .  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_columns_ex** cumple los requisitos para los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+ **sp_columns_ex** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo devuelve el tipo de datos de la columna `JobTitle` de la tabla `HumanResources.Employee` en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] del servidor vinculado `Seattle1`.  
@@ -107,14 +107,14 @@ EXEC sp_columns_ex 'Seattle1',
    'JobTitle';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_catalogs &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

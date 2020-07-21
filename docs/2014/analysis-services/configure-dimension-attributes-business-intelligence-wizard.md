@@ -1,5 +1,5 @@
 ---
-title: Configurar los atributos de dimensión (Asistente de Business Intelligence) | Microsoft Docs
+title: Configurar atributos de dimensión (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bdc4a0245ffa98dd89840a8746e828fd1660706
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087444"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527321"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurar los atributos de dimensión (Asistente de Business Intelligence)
   Use la página **Configurar los atributos de dimensión** para asignar atributos de dimensión a los tipos de atributo que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para identificar atributos para dimensiones de cuentas.  
@@ -27,12 +26,12 @@ ms.locfileid: "66087444"
  Muestra el tipo de dimensión seleccionado.  
   
 > [!NOTE]  
->  Esta opción no está disponible porque el `Type` propiedad de la dimensión no se puede cambiar a un valor distinto de *cuenta* para las dimensiones de cuenta.  
+>  Esta opción no está disponible porque la `Type` propiedad de la dimensión no se puede cambiar a un valor distinto de *cuenta* para las dimensiones de la cuenta.  
   
  **Atributos de dimensión**  
  Muestra los tipos de atributo válidos que se pueden asignar a los atributos de dimensión existentes en la dimensión.  
   
- **Include**  
+ **Inclui**  
  Active una casilla para incluir el tipo de atributo correspondiente en la dimensión.  
   
  **Tipo de atributo**  
@@ -41,15 +40,15 @@ ms.locfileid: "66087444"
  **Atributo de dimensión**  
  Active el atributo de dimensión que debe asignarse al tipo de atributo correspondiente.  
   
- **Establecer medidas en suma parcial en función de tipo de cuenta**  
+ **Establecer medidas en suma parcial en función del tipo de cuenta**  
  Seleccione esta opción para cambiar cada medida asociada con esta dimensión para que se agregue con el tipo de cuenta.  
   
 > [!NOTE]  
 >  Esta opción no aparece si se ha iniciado el Asistente de Business Intelligence desde el Diseñador de dimensiones o haciendo clic con el botón secundario en una dimensión del Explorador de soluciones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente de Business Intelligence (ayuda F1)](business-intelligence-wizard-f1-help.md)   
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Diseñador de dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

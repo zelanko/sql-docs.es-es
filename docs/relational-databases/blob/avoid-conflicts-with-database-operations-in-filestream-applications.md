@@ -1,7 +1,8 @@
 ---
-title: Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Evitar conflictos: operaciones de base de datos de FILESTREAM | Microsoft Docs'
+description: Las aplicaciones que leen o escriben datos BLOB de FILESTREAM pueden encontrar errores de conflicto con instrucciones de Transact-SQL. Sepa cómo evitar estos tipos de conflictos.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 22c0c0771c3e4566ba2f3f1cef6e2dd4d921f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743933"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las aplicaciones que usan SqlOpenFilestream() para abrir los identificadores de archivos de Win32 con el fin de leer o escribir datos BLOB de FILESTREAM pueden encontrar errores de conflictos con las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se administran en una transacción común. Esto incluye las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] o MARS que tardan mucho en finalizar la ejecución. Las aplicaciones deben diseñarse cuidadosamente para ayudar a evitar estos tipos de conflictos.  
   
  Cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o las aplicaciones intentan abrir BLOB de FILESTREAM, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba el contexto de transacciones asociado. [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite o deniega la solicitud en función de si la operación abierta opera con instrucciones DDL, instrucciones DML, la recuperación de los datos o la administración de las transacciones. La tabla siguiente muestra cómo [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina si una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] se permitirá o denegará según el tipo de archivos que se abran en la transacción.  
   
 |Instrucciones Transact-SQL|Abierto para lectura|Abierto para escritura|  
 |------------------------------|---------------------|----------------------|  
-|Instrucciones DDL que trabajan con los metadatos de la base de datos, como CREATE TABLE, CREATE INDEX, DROP TABLE y ALTER TABLE.|Permitido|Se bloquean y agotan el tiempo de espera con un error.|  
-|Instrucciones DML que trabajan con los datos que están almacenados en la base de datos, como UPDATE, DELETE e INSERT.|Permitido|Denegado|  
-|SELECT|Permitido|Permitido|  
+|Instrucciones DDL que trabajan con los metadatos de la base de datos, como CREATE TABLE, CREATE INDEX, DROP TABLE y ALTER TABLE.|Permitida|Se bloquean y agotan el tiempo de espera con un error.|  
+|Instrucciones DML que trabajan con los datos que están almacenados en la base de datos, como UPDATE, DELETE e INSERT.|Permitida|Denegado|  
+|SELECT|Permitida|Permitida|  
 |COMMIT TRANSACTION|Denegado*|Denegado*|  
 |SAVE TRANSACTION|Denegado*|Denegado*|  
 |ROLLBACK|Permitido*|Permitido*|  

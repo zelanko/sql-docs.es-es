@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b7b8bf219c62734398d387e63f86d8a2d9a11662
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: b893108ba79952fe803fceea64387c06f05190ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553271"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898013"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Deshabilita las marcas de seguimiento especificados.
   
@@ -37,7 +37,7 @@ Deshabilita las marcas de seguimiento especificados.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   
@@ -51,7 +51,7 @@ Deshabilita las marcas de seguimiento de forma global.
 WITH NO_INFOMSGS  
 Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las marcas de seguimiento se usan para personalizar algunas características que controlan el funcionamiento de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

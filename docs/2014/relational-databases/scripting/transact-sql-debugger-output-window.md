@@ -1,6 +1,6 @@
 ---
-title: Resultados (ventana) | Microsoft Docs
-ms.custom: ''
+title: Ventana de salida
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,17 +10,16 @@ helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68ad1919122e2131c548d88edb212302828a15d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d490f4355f1dac4c337002e22f2d4dae82a7e9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063304"
 ---
-# <a name="output-window"></a>Resultados (ventana)
+# <a name="output-window"></a>Resultados (Ventana)
   Esta ventana muestra mensajes de estado de varias características de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los resultados se muestran en paneles especiales de la ventana **Resultados** del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , características de herramientas externas o comandos que se ejecutan en el depurador de **Ventana de comandos**. También están disponibles los resultados que suelen mostrarse en la ventana Símbolo del sistema de herramientas externas, como los archivos .bat o .com.  
   
  **Para tener acceso a la ventana Resultados**  
@@ -34,5 +33,5 @@ ms.locfileid: "66063462"
  **Panel de resultados**  
  Muestra los resultados del panel seleccionado en la **lista de paneles de resultados**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)  

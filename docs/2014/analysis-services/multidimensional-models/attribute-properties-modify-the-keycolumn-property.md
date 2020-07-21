@@ -1,5 +1,5 @@
 ---
-title: Modificar la propiedad KeyColumns de un atributo | Microsoft Docs
+title: Modifique la propiedad KeyColumn de un atributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad5674f576f7a6cf42b396d3e76db457f068e1ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077248"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544767"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificar la propiedad KeyColumns de un atributo
   Puede modificar la propiedad **KeyColumns** de un atributo. Por ejemplo, es posible que desee especificar una clave compuesta en lugar de una sola clave como clave del atributo.  
@@ -32,9 +31,9 @@ ms.locfileid: "66077248"
   
     -   En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** y, después, haga clic en **Abrir** o en **Diseñador de vistas**.  
   
-         -o bien-  
+         o bien  
   
-    -   En el Diseñador de cubos, en el **estructura de cubo** , expanda la dimensión de cubo en el **dimensiones** panel y haga clic en **editar \<dimensión >** .  
+    -   En el diseñador de cubos, en la pestaña **estructura de cubo** , expanda la dimensión de cubo en el panel **dimensiones** y haga clic en **Editar \<dimension> **.  
   
 3.  En el panel **Atributos** de la pestaña **Estructura de dimensión** , haga clic en el atributo cuya propiedad **KeyColumns** desee modificar.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66077248"
   
 8.  Para cambiar el orden de las columnas de clave, seleccione una columna y, después, haga clic en el botón **Subir** o **Bajar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de las propiedades de los atributos de dimensión](dimension-attribute-properties-reference.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Trabajar con el proveedor WMI para eventos de servidor | Microsoft Docs
+title: Trabajar con el proveedor WMI para eventos de servidor
+description: Tenga en cuenta estas directrices para programar con el proveedor WMI para eventos de servidor. Obtenga información sobre cómo habilitar Service Broker, cadenas de conexión y permisos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53d14ec8fe32ef665571dde0b7cd4aa4c17c7388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a4ef3abd90b4e75ce584816846f30c5bc8553a4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095490"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888132"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Trabajar con el proveedor WMI para eventos de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se proporcionan instrucciones que deben tenerse en cuenta antes de programar con el proveedor WMI para eventos del servidor.  
   
 ## <a name="enabling-service-broker"></a>Habilitar Service Broker  
@@ -47,7 +48,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  Para habilitar [!INCLUDE[ssSB](../../includes/sssb-md.md)] en una base de datos, use la opción ENABLE_BROKER SET de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) .  
   
 ## <a name="specifying-a-connection-string"></a>Especificar una cadena de conexión  
- Las aplicaciones dirigen el proveedor WMI para eventos del servidor a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión a un espacio de nombres WMI definido por el proveedor. El servicio WMI de Windows asigna este espacio de nombres al archivo DLL del proveedor, Sqlwep.dll, y lo carga en memoria. Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene su propio espacio de nombres WMI, cuyo valor predeterminado es: \\ \\.\\ *raíz*\Microsoft\SqlServer\ServerEvents\\*instance_name*. *nombre_de_instancia* toma el valor predeterminado MSSQLSERVER en una instalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las aplicaciones dirigen el proveedor WMI para eventos del servidor a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión a un espacio de nombres WMI definido por el proveedor. El servicio WMI de Windows asigna este espacio de nombres al archivo DLL del proveedor, Sqlwep.dll, y lo carga en memoria. Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene su propio espacio de nombres WMI, cuyo valor predeterminado es: \\ \\ . \\ *root* \\ *instance_name*raíz \Microsoft\SqlServer\ServerEvents. *nombre_de_instancia* toma el valor predeterminado MSSQLSERVER en una instalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions-and-server-authentication"></a>Permisos y autenticación del servidor  
  Para obtener acceso al proveedor WMI para eventos del servidor, el cliente donde se origina una aplicación de administración WMI debe corresponderse con el grupo o el inicio de sesión autenticado de Windows de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada en la cadena de conexión de la aplicación.  
@@ -110,9 +111,9 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY o REVOKE (solo se aplica a los permisos ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION o CREATE TRACE EVENT NOTIFICATION).  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Trabajar con datos de eventos en el cliente  
- Una vez que el proveedor WMI para eventos de servidor crea la notificación de eventos necesaria en la base de datos de destino, la notificación de eventos envía datos de eventos para el servicio de destino en msdb denominado **notificaciones/SQL/ProcessWMIEventProviderNotification /V1.0**. El servicio de destino coloca el evento en una cola de **msdb** denominada **WMIEventProviderNotificationQueue**. (El servicio y la cola se crean dinámicamente por el proveedor cuando se conecta primero al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) El proveedor, a continuación, lee los datos XML del evento de la cola y lo transforma managed object Format (MOF) antes de devolverlo a la aplicación cliente. Los datos MOF se componen de las propiedades del evento solicitado por la consulta WQL como una definición de clase del Modelo de información común (CIM). Cada propiedad tiene un tipo CIM correspondiente. Por ejemplo, la propiedad `SPID` se devuelve como un tipo CIM **Sint32**. Los tipos CIM de cada propiedad se muestran debajo de cada clase de eventos en [Proveedor WMI de clases y propiedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Una vez que el proveedor WMI de eventos de servidor crea la notificación de eventos necesaria en la base de datos de destino, la notificación de eventos envía los datos de evento al servicio de destino en msdb que se denomina **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. El servicio de destino coloca el evento en una cola de **msdb** denominada **WMIEventProviderNotificationQueue**. (El servicio y la cola los crea dinámicamente el proveedor cuando se conecta por primera vez a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). A continuación, el proveedor Lee los datos de evento XML de esta cola y los transforma en Managed Object Format (MOF) antes de devolverlos a la aplicación cliente. Los datos MOF se componen de las propiedades del evento solicitado por la consulta WQL como una definición de clase del Modelo de información común (CIM). Cada propiedad tiene un tipo CIM correspondiente. Por ejemplo, la propiedad `SPID` se devuelve como un tipo CIM **Sint32**. Los tipos CIM de cada propiedad se muestran debajo de cada clase de eventos en [Proveedor WMI de clases y propiedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos del proveedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)  
   
   

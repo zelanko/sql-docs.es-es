@@ -1,7 +1,7 @@
 ---
-title: Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad
+title: Generación y análisis de CLUSTER.LOG para grupos de disponibilidad
 description: 'Se describe cómo generar y analizar el registro de clúster para un grupo de disponibilidad Always On. '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,23 +10,21 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991294"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896118"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Como recurso de clúster de conmutación por error, existen las interacciones externas entre SQL Server, el Servicio de clúster de conmutación por error de Windows Server (WSFC) y el DLL del recurso de SQL Server (hadrres.dll), que no se pueden supervisar en SQL Server. El registro de WSFC, CLUSTER.LOG, puede diagnosticar problemas en el clúster de WSFC o en el DLL de recursos de SQL Server.  
-  
- En el diagrama siguiente se demuestra la relación entre aplicaciones como SQL Server y Windows Cluster Manager, que inician la creación, la destrucción o los cambios de estado de los recursos del grupo de disponibilidad.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Como recurso de clúster de conmutación por error, existen las interacciones externas entre SQL Server, el Servicio de clúster de conmutación por error de Windows Server (WSFC) y el DLL del recurso de SQL Server (hadrres.dll), que no se pueden supervisar en SQL Server. El registro de WSFC, CLUSTER.LOG, puede diagnosticar problemas en el clúster de WSFC o en el DLL de recursos de SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Generar el registro del clúster  
  Puede generar los registros del clúster de dos maneras:  
   
-1.  Ejecute el comando `cluster /log /g` en el símbolo del sistema. Este comando genera los registros del clúster en el directorio \windows\cluster\reports en cada nodo de WSFC. La ventaja de este método es que puede especificar el nivel de detalle en los registros generados mediante la opción `/level`. La desventaja es que no se puede especificar el directorio de destino para los registros de clúster generados. Para obtener más información, consulte [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Cómo crear el archivo cluster.log en clústeres de conmutación por error de Windows Server 2008).  
+1.  Ejecute el comando `cluster /log /g` en el símbolo del sistema. Este comando genera los registros del clúster en el directorio \windows\cluster\reports en cada nodo de WSFC. La ventaja de este método es que puede especificar el nivel de detalle en los registros generados mediante la opción `/level`. La desventaja es que no se puede especificar el directorio de destino para los registros de clúster generados. Para obtener más información, consulte [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283) (Cómo crear el archivo cluster.log en clústeres de conmutación por error de Windows Server 2008).  
   
 2.  Use el cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) de PowerShell. La ventaja de este método es que le permite generar el registro de clúster desde todos los nodos a un directorio de destino en el nodo en que se ejecuta el cmdlet. La desventaja es que no le permite especificar el nivel de detalle en los registros generados.  
   
@@ -46,11 +44,11 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  En el panel de detalles, haga clic con el botón derecho en el recurso del grupo de disponibilidad y haga clic en **Propiedades**.  
   
-4.  Haga clic en la pestaña **Propiedades** .  
+4.  Haga clic en la pestaña **Propiedades**.  
   
 5.  Modifique la propiedad **VerboseLogging**. De forma predeterminada, **VerboseLogging** se establece en `0`, lo cual notifica la información, las advertencias y los errores. **VerboseLogging** se establece en un valor entre `0` y `2`.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  Vuelva a hacer clic con el botón derecho en el recurso del grupo de disponibilidad y haga clic en **Dejar este recurso sin conexión**.  
   
@@ -61,7 +59,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Identificador|Source|Ejemplo de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Mensajes precedidos por `[RES]` y `[hadrag]`|hadrres.dll (DLL de recursos Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` Solicitud sin conexión.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` El subproceso de la concesión ha terminado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` Instrucción SQL libre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` Desconecte de SQL Server|  
+|Mensajes precedidos por `[RES]` y `[hadrag]`|hadrres.dll (DLL de recursos Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` Solicitud sin conexión.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` El subproceso de la concesión ha terminado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` Instrucción SQL libre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Grupo de disponibilidad \<ag> de SQL Server: `[hadrag]` Desconecte de SQL Server|  
 |Mensajes precedidos por `[RHS]`|RHS. EXE (Subsistema de hospedaje de recursos, proceso de host de hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO [RHS] El recurso ag está sin conexión. RHS está a punto de informar del estado del recurso a RCM.|  
 |Mensajes precedidos por `[RCM]`|Supervisión del control de recursos (servicio de clúster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Primero se devuelve el grupo "ag" al estado sin conexión...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO [RCM] TransitionToState(ag) en línea --> OfflineCallIssued.|  
 |RcmApi/ClusAPI|Una llamada API, que significa principalmente que SQL Server está solicitando la acción|000011d0.00000f80::2011/08/05-13:47:42.465 INFO [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  

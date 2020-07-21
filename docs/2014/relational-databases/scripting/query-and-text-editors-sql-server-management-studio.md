@@ -1,6 +1,6 @@
 ---
-title: Editores de consultas y texto (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editores de texto y consultas
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -22,15 +22,14 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009664"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas y texto (SQL Server Management Studio)
   Es posible usar uno de los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar y probar de forma interactiva un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A o un archivo XML o de texto sin formato. Cada editor depende de un servicio específico del lenguaje que colorea las palabras clave y comprueba si hay errores de sintaxis y de uso. El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] incluye un depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] que puede usar para corregir los problemas de código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -46,7 +45,7 @@ ms.locfileid: "68891758"
   
  En el panel de código se pueden establecer opciones que afecten al comportamiento del texto y que estén relacionadas con sangrías aplicadas, tabuladores, arrastrar y colocar texto, etc. Las ventanas de consulta se pueden configurar para que funcionen como pestañas de la ventana de documento, o en documentos independientes.  
   
- **Margen de la selección**  
+ **Margen de selección**  
  Columna de espacio en blanco entre la barra indicadora al margen y el texto del código donde se puede hacer clic para seleccionar líneas de texto. Puede ocultar o mostrar el margen de selección.  
   
  **Barras de desplazamiento horizontal y vertical**  
@@ -55,13 +54,13 @@ ms.locfileid: "68891758"
  **Numeración de línea**  
  Muestra los números de línea a la izquierda del texto o el código en el editor. Puede navegar a números de línea específicos.  
   
- **Ajuste de línea**  
+ **Ajuste de palabra**  
  Muestra las líneas largas de texto o código como varias líneas, lo que permite ver todo el texto de la línea. El ajuste de línea no afecta al modo en que aparece el texto al ejecutarse o imprimirse. El ajuste de línea se activa desde el cuadro de diálogo **Opciones**, en **Herramientas** , ya sea en la página Editor de texto, Todos los lenguajes, General o en una página específica del editor.  
   
 ## <a name="code-editor-components"></a>Componentes del editor de código  
  Los editores de código contienen estas características además de las que se comparten con los editores de texto y XML:  
   
- **Resultado**  
+ **Resultados**  
  Esta ventana se usa para ver los resultados de una consulta. La ventana puede mostrar los resultados en una cuadrícula o en el texto, o los resultados se pueden dirigir a un archivo. Las cuadrículas de resultados se pueden mostrar como ventanas independientes con pestañas.  
   
  **IntelliSense**  
@@ -85,7 +84,7 @@ ms.locfileid: "68891758"
 ## <a name="database-engine-query-editor-components"></a>Componentes del editor de consultas del motor de base de datos  
  Estos componentes solo están disponibles en el editor de consultas del motor de base de datos:  
   
- **Depurador**  
+ **instantáneas**  
  Permite pausar la ejecución de código en instrucciones concretas. A continuación, puede ver datos e información del sistema para facilitar la búsqueda de errores en el código.  
   
  **Lista de errores**  
@@ -108,8 +107,8 @@ ms.locfileid: "68891758"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo ver y usar las características básicas del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Describe cómo ver y usar las características básicas del editor de consultas de MDX.|[Editor de consultas MDX &#40;Analysis Services: datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
-|Describe cómo ver y usar las características básicas del editor de consultas de DMX.|[Editor de consultas DMX &#40;Analysis Services: minería de datos&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
+|Describe cómo ver y usar las características básicas del editor de consultas de MDX.|[Editor de consultas MDX &#40;Analysis Services: datos multidimensionales&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
+|Describe cómo ver y usar las características básicas del editor de consultas de DMX.|[Editor de consultas DMX &#40;Analysis Services: minería de datos&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |Describe cómo ver y usar las características básicas del editor XML/A.|[Editor XML &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Describe cómo configurar las opciones de los diferentes editores, como la numeración de líneas y las opciones de IntelliSense.|[Configurar editores &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |Describe las distintas formas en que puede abrir los editores en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Abrir un editor &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  
@@ -128,5 +127,5 @@ ms.locfileid: "68891758"
 |Describe cómo usar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código y consultar la información de depuración, como los valores de variables y parámetros.|[Depurador de Transact-SQL](transact-sql-debugger.md)|  
 |Describe cómo definir colores personalizados para diferentes instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]y establecerlos como el fondo de la barra de estado en las ventanas del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra de estado &#40;Editor de consultas del motor de base de datos&#41;](status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -11,20 +11,19 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b432398f7151f5cd08546a5145d43b41f085bd1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62889801"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422882"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerar los paquetes disponibles mediante programación
   Cuando trabaja mediante programación con paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede determinar si existe un paquete o una carpeta individual o enumerar los paquetes guardados que están disponible para cargarse y ejecutarse. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.  
   
-##  <a name="exists"></a> Determinar si existe un paquete o una carpeta  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Determinar si existe un paquete o una carpeta  
  Para determinar mediante programación si existe un paquete guardado, llame a uno de los métodos siguientes antes de intentar cargarlo y ejecutarlo:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -39,9 +38,9 @@ ms.locfileid: "62889801"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|  
   
- [Volver al principio](#top)  
+ [Volver arriba](#top)  
   
-##  <a name="listing"></a> Enumerar los paquetes disponibles  
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Enumerar los paquetes disponibles  
  Para obtener una lista de los paquetes guardados mediante programación, llame a uno de los métodos siguientes:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -51,7 +50,7 @@ ms.locfileid: "62889801"
   
  Los ejemplos siguientes son aplicaciones de consola que muestran el uso de estos métodos.  
   
-###  <a name="listing_store"></a> Ejemplo (almacén de paquetes SSIS)  
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Ejemplo (almacén de paquetes SSIS)  
  Utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> para enumerar los paquetes almacenados en el almacén de paquetes SSIS. Las ubicaciones de almacenamiento predeterminadas que administra el almacén de paquetes SSIS son Sistema de archivos y MSDB. Puede crear carpetas lógicas adicionales dentro de estas ubicaciones.  
   
 ```vb  
@@ -155,9 +154,9 @@ namespace EnumeratePackagesSSIS_CS
 }  
 ```  
   
- [Volver al principio](#top)  
+ [Volver arriba](#top)  
   
-###  <a name="listing_sql"></a> Ejemplo (SQL Server)  
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Ejemplo (SQL Server)  
  Utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> para enumerar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacenados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```vb  
@@ -236,11 +235,11 @@ namespace EnumeratePackagesSql_CS
 }  
 ```  
   
- [Volver al principio](#top)  
+ [Volver arriba](#top)  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md)  
   
   

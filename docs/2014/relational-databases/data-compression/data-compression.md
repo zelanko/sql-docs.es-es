@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970389"
 ---
 # <a name="data-compression"></a>Data Compression
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la compresión de fila y de página para las tablas e índices de almacén de filas, y admite la compresión de almacén de columnas y de archivo de almacén de columnas para las tablas e índices de almacén de columnas.  
@@ -57,13 +56,13 @@ ms.locfileid: "62873555"
   
 -   Los detalles de la compresión de datos se pueden cambiar sin previo aviso en los Service Pack o versiones posteriores.  
   
--   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   La compresión no está disponible para las tablas del sistema.  
   
 -   La compresión puede permitir que se almacenen más filas en una página, pero no cambia el tamaño máximo de filas de una tabla o índice.  
   
--   Una tabla no se puede habilitar para su compresión cuando el tamaño máximo de filas más la sobrecarga de compresión supera el tamaño máximo de filas de 8060 bytes. Por ejemplo, una tabla que tiene las columnas c1`char(8000)` y c2`char(53)` no se puede comprimir debido a la sobrecarga de compresión adicional. Cuando se utiliza el formato de almacenamiento vardecimal, la comprobación del tamaño de filas se realiza cuando se habilita el formato. Para la compresión de filas y páginas, la comprobación del tamaño de filas se realiza cuando el objeto se comprime inicialmente, y después se comprueba cuando se inserta o modifica cada fila. La compresión exige las dos reglas siguientes:  
+-   Una tabla no se puede habilitar para su compresión cuando el tamaño máximo de filas más la sobrecarga de compresión supera el tamaño máximo de filas de 8060 bytes. Por ejemplo, una tabla que tiene las columnas C1 `char(8000)` y C2 `char(53)` no se puede comprimir debido a la sobrecarga de compresión adicional. Cuando se utiliza el formato de almacenamiento vardecimal, la comprobación del tamaño de filas se realiza cuando se habilita el formato. Para la compresión de filas y páginas, la comprobación del tamaño de filas se realiza cuando el objeto se comprime inicialmente, y después se comprueba cuando se inserta o modifica cada fila. La compresión exige las dos reglas siguientes:  
   
     -   Una actualización a un tipo de longitud fija siempre debe tener éxito.  
   
@@ -108,9 +107,9 @@ ms.locfileid: "62873555"
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
-### <a name="basics"></a>Conceptos básicos  
+### <a name="basics"></a>Aspectos básicos  
  Las tablas y los índices de almacén de columnas siempre se almacenan con compresión de almacén de columnas. El tamaño de los datos de almacén de columnas se puede reducir más configurando una compresión adicional denominada compresión de archivo.  Para realizar la compresión de archivo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta el algoritmo de compresión de Microsoft XPRESS en los datos. La compresión de archivo se agrega o se quita mediante los tipos de compresión de datos siguientes:  
   
 -   Use la compresión de datos de `COLUMNSTORE_ARCHIVE` para comprimir los datos de almacén de columnas con la compresión de archivo.  
@@ -167,9 +166,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Metadatos  
  Las vistas del sistema siguientes contienen información sobre la compresión de datos para los índices clúster:  
   
--   [Sys.Indexes &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) : la `type` y `type_desc` columnas incluyen CLUSTERED COLUMNSTORE y NONCLUSTERED COLUMNSTORE.  
+-   [Sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) : las `type` `type_desc` columnas y incluyen el almacén de columnas en clúster y el almacén de columnas no agrupado.  
   
--   [Sys.Partitions &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : la `data_compression` y `data_compression_desc` columnas incluyen COLUMNSTORE y COLUMNSTORE_ARCHIVE.  
+-   [Sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) : las `data_compression` `data_compression_desc` columnas y incluyen el almacén de columnas y COLUMNSTORE_ARCHIVE.  
   
  El procedimiento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) no se aplica a los índices de almacén de columnas.  
   
@@ -251,11 +250,11 @@ REBUILD PARTITION = ALL WITH (
   
 -   Al habilitar la compresión, se puede hacer que los planes de consulta cambien porque los datos se almacenan utilizando un número diferente de páginas y de filas por cada página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de la compresión de fila](row-compression-implementation.md)   
  [Implementación de la compresión de página](page-compression-implementation.md)   
  [Implementación de la compresión Unicode](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CREAR esquema de partición &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

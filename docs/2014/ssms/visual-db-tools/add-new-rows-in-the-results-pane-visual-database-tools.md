@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d56b0bbf39a083e7deb6d168246f1f0136a482c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63460003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067242"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Agregar nuevas filas en el panel Resultados (Visual Database Tools)
   Puede agregar datos nuevos escribiéndolos manualmente o pegándolos desde otro programa, como el Bloc de notas o Excel. La fila que se vaya a pegar deberá tener exactamente el mismo número y tipos de columnas que la tabla en la que se pegue. Puede pegar varias filas en el panel Resultados de una vez.  
@@ -53,8 +52,8 @@ ms.locfileid: "63460003"
   
 -   Cancelar la modificación presionando la tecla ESC. Si presiona ESC cuando está en una celda que ha cambiado, se cancelan los cambios de esa celda. Si presiona ESC cuando está en una celda que no ha cambiado, se cancelan los cambios de toda la celda.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con datos en el panel de resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con datos en el panel resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

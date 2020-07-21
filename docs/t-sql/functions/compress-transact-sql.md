@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f9493d8002ef8dac72cf4a2b94fba7f84c64e798
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732608"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ Un
 * **varbinary(***n***)**
 * **ntext**
 
-o Administrador de configuración de
+or
 
 * **varchar(***n***)**
 
@@ -57,7 +57,7 @@ expression: Para más información, vea [Expresiones &#40;Transact-SQL&#41;](../
 ## <a name="return-types"></a>Tipos de valores devueltos
 **varbinary(max)** representa el contenido comprimido de la entrada.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los datos comprimidos no se pueden indexar.
   
 La función `COMPRESS` comprime los datos de la expresión de entrada. Debe invocar esta función para cada sección de datos que se vaya a comprimir. Vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md) para obtener más información acerca de la compresión de datos automática durante el almacenamiento en el nivel de fila o página.
@@ -86,7 +86,7 @@ INTO dbo.inactivePlayers
 WHERE datemodified < @startOfYear; 
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 [DECOMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/decompress-transact-sql.md)
   

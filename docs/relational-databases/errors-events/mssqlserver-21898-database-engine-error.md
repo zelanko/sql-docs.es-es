@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 79b6637bcfa0c3484de5d4438c48abbec35e40d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba4350b6fc8b9b39833bdf5bdf0c7f7a8613ee7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780490"
 ---
-# <a name="mssqlserver21898"></a>MSSQLSERVER_21898
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_21898"></a>MSSQLSERVER_21898
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|21898|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|21898|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum21898|  
 |Texto del mensaje|El publicador '%s' usa la base de datos de distribución '%s' y no '%s', que se requiere para hospedar la base de datos de publicación '%s'. Ejecute **sp_changedistpublisher** en el distribuidor '%s' para cambiar la base de datos de distribución que usa el publicador por '%s'.|  

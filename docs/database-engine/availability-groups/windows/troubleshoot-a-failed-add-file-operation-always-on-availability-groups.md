@@ -1,6 +1,7 @@
 ---
-title: Solucionar problemas relativos a una operación de agregar archivos con error (Grupos de disponibilidad AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Errores de operación de adición de archivos de grupo de disponibilidad
+description: Solucione problemas relativos a una operación de agregar archivos con error en un grupo de disponibilidad Always On. Las rutas de acceso de archivo pueden diferir entre sistemas que hospedan las réplicas principal y secundaria.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07561af07d0a682b4fa99076cc774e0c3fbb2590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d2cffb3b857e7d75bc8429876fd30b5a66f54c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900681"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>Solucionar problemas relativos a una operación de agregar archivos con error (grupos de disponibilidad AlwaysOn)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   En algunas implementaciones de grupos de disponibilidad AlwaysOn, las rutas de acceso de archivo difieren entre el sistema que hospeda la réplica principal y los sistemas que hospedan una réplica secundaria. Si la ruta de acceso a un archivo de una operación add-file no existe en una replicación secundaria, la operación add-file se realizará correctamente en la base de datos principal. Pero la operación add-file ocasionará la suspensión de la base de datos secundaria. Esto, a su vez, hace que la réplica secundaria entre en el estado NOT SYNCHRONIZING.  
   
 > [!NOTE]  
 >  Se recomienda que, si es posible, la ruta de acceso de archivo (incluida la letra de unidad) de una base de datos secundaria determinada sea idéntica a la de la base de datos principal correspondiente.  
   
-## <a name="problem-resolution"></a>Resolución del problema  
+## <a name="problem-resolution"></a>Resolución de problemas  
  Para resolver este problema, el propietario debe completar los siguientes pasos:  
   
 1.  Quitar la base de datos secundaria del grupo de disponibilidad. Para obtener más información, vea [Quitar una base de datos secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  

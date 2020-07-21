@@ -10,31 +10,31 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: d4a3f3fb6e03b1be3550caf15ab694d93caa2374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673132"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información sobre los mensajes que se registraron durante las operaciones.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|BIGINT|Identificador único del mensaje de evento.|  
-|Operation_id|BIGINT|Tipo de operación.<br /><br /> Para obtener una lista de los tipos de operaciones, consulte [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Event_message_ID|bigint|Identificador único del mensaje de evento.|  
+|Operation_id|bigint|Tipo de operación.<br /><br /> Para obtener una lista de los tipos de operaciones, consulte [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Hora de creación del mensaje.|  
 |Message_type|SMALLINT|Tipo del mensaje mostrado. Para obtener más información acerca de los tipos de mensaje, consulte [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|SMALLINT|Origen del mensaje.|  
 |message|nvarchar(max)|Texto del mensaje.|  
-|Extended_info_id|BIGINT|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [catalog.extended_operation_info &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
+|Extended_info_id|bigint|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [catalog.extended_operation_info &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Nombre del archivo de paquete.|  
 |Event_name|nvarchar(1024)|Evento de tiempo de ejecución asociado al mensaje.|  
 |Message_source_name|nvarchar(4000)|Componente del paquete que constituye el origen del mensaje.|  
@@ -42,10 +42,10 @@ ms.locfileid: "71296646"
 |Subcomponent_name|nvarchar(4000)|Componente de flujo de datos que es el origen del mensaje.<br /><br /> Cuando el motor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] devuelve mensajes, aparece SSIS.Pipeline en esta columna.|  
 |Package_path|nvarchar(max)|Ruta de acceso del componente dentro del paquete.|  
 |Execution_path|nvarchar(max)|Ruta de acceso completa del paquete primario al punto en el que se ejecuta el componente.<br /><br /> Esta ruta de acceso también captura iteraciones de un componente.|  
-|threadID|INT|Identificador del subproceso que se ejecuta cuando se registra el mensaje.|  
-|Message_code|INT|Código asociado al mensaje.|  
+|threadID|int|Identificador del subproceso que se ejecuta cuando se registra el mensaje.|  
+|Message_code|int|Código asociado al mensaje.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra los siguientes tipos de origen de mensaje:  
   
 |**message_source_type**|Descripción|  

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68e1fbe1681f394beaaf6a9036214a79cf844fa3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478870"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971055"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formatos de vista de suscripciones (Master Data Services)
   Según la entidad o la jerarquía derivada que seleccione, están disponibles los formatos siguientes para la vista de suscripciones.  
   
 ## <a name="subscription-view-formats"></a>Formatos de vista de suscripciones  
   
-|NOMBRE|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
 |**Miembros hoja**|Contiene miembros hoja y sus valores de atributo asociados.|  
 |**Miembros consolidados**|Contiene miembros consolidados y sus valores de atributo asociados.|  
@@ -33,8 +32,8 @@ ms.locfileid: "65478870"
 |**Elemento secundario/primario derivado (Vista de jerarquía derivada)**|Contiene una estructura de jerarquía derivada en formato elemento secundario y primario.|  
 |**Niveles derivados (Vista de jerarquía derivada)**|Contiene una estructura de jerarquía derivada en formato de nivel.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Exportar datos &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
- [Crear una vista de suscripciones &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
+ [Cree una vista de suscripciones &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

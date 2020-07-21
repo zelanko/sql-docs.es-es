@@ -1,5 +1,5 @@
 ---
-title: SELECCIONADAS diferentes limitaciones | Microsoft Docs
+title: Seleccione limitaciones distintas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, SELECT DISTINCT limitations
 - SELECT DISTINCT limitations [ODBC]
 ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69a69e43bd98e9421e3197439c9f0376884c23ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1623c950f7df6b7ee0854e270d58fee65e7a1f9e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987893"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303976"
 ---
 # <a name="select-distinct-limitations"></a>Seleccione diferentes limitaciones
-La palabra clave DISTINCT no se aplica a los datos binarios.
+La palabra clave DISTINCt no se aplica a los datos binarios.

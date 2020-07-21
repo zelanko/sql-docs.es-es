@@ -1,5 +1,6 @@
 ---
-title: Versiones (Master Data Services) | Microsoft Docs
+title: Versiones
+description: Puede crear varias versiones de los datos maestros dentro de un modelo en Master Data Services. Obtenga información sobre las versiones y cuándo usarlas.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985714657ef87050b6273599013f0dbc5db83196
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811720"
 ---
 # <a name="versions-master-data-services"></a>Versiones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede crear varias versiones de los datos maestros dentro de un modelo. Las versiones se pueden bloquear mientras se validan los datos y confirmarse una vez validados los datos. Las versiones confirmadas forman un registro auditable de cambios. Cada versión que cree contendrá todos los miembros, valores de atributo, miembros de jerarquía, relaciones de jerarquía y colecciones del modelo.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68017313"
   
 1.  La versión inicial se crea automáticamente cuando crea un modelo y rellena la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con los datos maestros de la compañía. Según los permisos, los usuarios pueden realizar cambios en esta versión según sea necesario.  
   
-2.  Cuando desee confirmar una versión de un modelo, bloquee la versión para que solo los administradores del mismo puedan actualizar los datos. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Si se configuran las notificaciones, se envía una notificación por correo electrónico a los administradores del modelo cada vez que el estado de la versión cambia. Para obtener más información, consulte [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Cuando desee confirmar una versión de un modelo, bloquee la versión para que solo los administradores del mismo puedan actualizar los datos. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Si se configuran las notificaciones, se envía una notificación por correo electrónico a los administradores del modelo cada vez que el estado de la versión cambia. Para obtener más información, consulte [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Aplique reglas de negocios a los datos de la versión bloqueada y revise cualquier problema de la validación. Si fuera necesario, puede rellenar la información que falte o revertir la transacción que provocó el problema. También puede desbloquear la versión para que los usuarios efectúen modificaciones.  
   

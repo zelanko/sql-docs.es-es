@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068088"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Rellenar una tabla con los datos jerárquicos existentes
-  Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **EmployeeDemo**. Esta tarea consta de los pasos siguientes:  
+   Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **EmployeeDemo**. Esta tarea consta de los pasos siguientes:  
   
 -   Cree una nueva tabla que contenga una columna `hierarchyid`. Esta columna podría reemplazar a las columnas **EmployeeID** y **ManagerID** existentes. Sin embargo, usted conservará esas columnas. La razón de ello es porque alguna de las aplicaciones existentes podría hacer referencia a esas columnas, y también para ayudarle a entender los datos una vez realizada la transferencia. La definición de tabla especifica que **OrgNode** es la clave principal, que requiere que la columna contenga valores únicos. El índice agrupado sobre la columna **OrgNode** almacenará la fecha en secuencia **OrgNode** .  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66110167"
   
      `10        4         2`  
   
-3.  Rellene la tabla **NewOrg** . Utilice los métodos GetRoot y ToString para concatenar la **Num** valores en el `hierarchyid` dar formato y, a continuación, actualice el **OrgNode** columna con los valores jerárquicos resultantes:  
+3.  Rellene la tabla **NewOrg** . Use los métodos GetRoot y ToString para concatenar los valores **numéricos** en el `hierarchyid` formato y, a continuación, actualice la columna **OrgNode** con los valores jerárquicos resultantes:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +150,7 @@ ms.locfileid: "66110167"
   
     ```  
   
-     El **LogicalNode** columna convierte la `hierarchyid` columna en un formato de texto más legible que representa la jerarquía. En las tareas restantes, utilizará el método `ToString()` para mostrar el formato lógico de las columnas `hierarchyid`.  
+     La columna **LogicalNode** convierte la `hierarchyid` columna en un formato de texto más legible que representa la jerarquía. En las tareas restantes, utilizará el método `ToString()` para mostrar el formato lógico de las columnas `hierarchyid`.  
   
 5.  Elimine la tabla temporal, que ya no se necesita:  
   

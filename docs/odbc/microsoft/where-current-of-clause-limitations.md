@@ -1,5 +1,5 @@
 ---
-title: DONDE actual de la cláusula limitaciones | Microsoft Docs
+title: Limitaciones de la cláusula WHERE CURRENT OF | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - WHERE CURRENT OF clause limitations [ODBC]
 - ODBC SQL grammar, WHERE CURRENT OF clause limitations
 ms.assetid: 12404fd7-ae11-4017-85cd-792ce20931f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e1c1a625e3dd21ef8217bbac95d8317ca1113f1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52705b15cfbec38a0c7f5f45bb27386a567db554
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911394"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307556"
 ---
 # <a name="where-current-of-clause-limitations"></a>DONDE actual de las limitaciones de la cláusula
-No compatible.
+No se admite.

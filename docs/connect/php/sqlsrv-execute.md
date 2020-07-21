@@ -15,16 +15,16 @@ helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_execute
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17ffebebcefd7d70114ce9b278431fa6dbf57f95
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992754"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923026"
 ---
-# <a name="sqlsrvexecute"></a>sqlsrv_execute
+# <a name="sqlsrv_execute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Ejecuta una instrucción preparada previamente. Consulte [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) para obtener información sobre cómo preparar una instrucción para ejecutarla.  
@@ -46,7 +46,7 @@ sqlsrv_execute( resource $stmt)
 Se devuelve un valor booleano **True** si la instrucción se ha ejecutado correctamente. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se ejecuta una instrucción que actualiza un campo de la tabla *Sales.SalesOrderDetail* de la base de datos de [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) . En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el ejemplo siguiente se ejecuta una instrucción que actualiza un campo de la tabla *Sales.SalesOrderDetail* de la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works). En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  

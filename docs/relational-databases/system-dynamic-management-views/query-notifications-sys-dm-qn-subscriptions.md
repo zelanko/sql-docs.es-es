@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
+title: Sys. dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061922"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894690"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar las notificaciones - sys.dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificaciones de consulta: sys. dm_qn_subscriptions
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de las suscripciones de notificaciones de consultas activas en el servidor. Puede usar esta vista para comprobar si hay suscripciones activas en el servidor o en una base de datos especificada, o para comprobar una entidad de seguridad de servidor especificada.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de una suscripción.|  
 |**database_id**|**int**|Id. de la base de datos en la que se ha ejecutado la notificación. Esta base de datos almacena información relacionada con esta suscripción.|  
 |**sid**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
 |**object_id**|**int**|Id. de la tabla interna que almacena información acerca de los parámetros de suscripción.|  
 |**created**|**datetime**|Fecha y hora en que se creó la suscripción.|  
-|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. Sin embargo, si un cambio que invalida la suscripción se produce después del tiempo de espera especificado, pero antes de que se desencadena la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación se produce en el momento en que se realizó el cambio.|  
+|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: el tiempo de activación real puede ser mayor que el tiempo de espera especificado. Sin embargo, si se produce un cambio que invalida la suscripción después del tiempo de espera especificado, pero antes de que se desencadene la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que se produzca la activación en el momento en que se realizó el cambio.|  
 |**status**|**int**|Indica el estado de la suscripción. Vea la tabla bajo las notas para obtener la lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Activado|Type|  
+|De|En|Activado|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Varios a uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Varios a uno|  
@@ -52,12 +52,12 @@ ms.locfileid: "68061922"
   
  Los siguientes códigos de estado indican que una suscripción se desencadenó debido a un cambio:  
   
-|Código|Estado secundario|Info|  
+|Código|Estado secundario|Información|  
 |----------|------------------|----------|  
 |65798|La suscripción se desencadenó porque los datos cambiaron|La suscripción se activó al realizar la inserción|  
 |65799|La suscripción se desencadenó porque los datos cambiaron|Eliminar|  
 |65800|La suscripción se desencadenó porque los datos cambiaron|Actualizar|  
-|65801|La suscripción se desencadenó porque los datos cambiaron|Mezcla|  
+|65801|La suscripción se desencadenó porque los datos cambiaron|Merge|  
 |65802|La suscripción se desencadenó porque los datos cambiaron|Truncar tabla|  
 |66048|La suscripción se desencadenó porque el tiempo de espera expiró|Modo de información indefinido|  
 |66315|La suscripción se desencadenó porque el objeto cambió|Se quitó el objeto o el usuario|  
@@ -69,7 +69,7 @@ ms.locfileid: "68061922"
   
  Los siguientes códigos de estado indican que una suscripción no pudo crearse:  
   
-|Código|Estado secundario|Info|  
+|Código|Estado secundario|Información|  
 |----------|------------------|----------|  
 |132609|Se produjo un error en la creación de la suscripción porque no se admite la instrucción|La consulta es demasiado compleja|  
 |132610|Se produjo un error en la creación de la suscripción porque no se admite la instrucción|Instrucción no válida para la suscripción|  
@@ -80,7 +80,7 @@ ms.locfileid: "68061922"
   
  Los siguientes códigos de estado se utilizan internamente y se clasifican como modos de iniciación y de comprobación de eliminación:  
   
-|Código|Estado secundario|Info|  
+|Código|Estado secundario|Información|  
 |----------|------------------|----------|  
 |198656|Se utiliza internamente: modos de iniciación y de comprobación de eliminación|Modo de información indefinido|  
 |198928|La subscription se destruyó|La suscripción se desencadenó porque la base de datos se adjuntó|  
@@ -107,7 +107,7 @@ FROM sys.dm_qn_subscriptions;
 GO  
 ```  
   
-### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>b. Devolver las suscripciones de notificación de consultas activas del usuario especificado  
+### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B. Devolver las suscripciones de notificación de consultas activas del usuario especificado  
  En el ejemplo siguiente se devuelven las suscripciones de notificación de consultas activas suscritas por el inicio de sesión `Ruth0`.  
   
 ```  
@@ -130,7 +130,7 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con notificaciones de consulta &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  

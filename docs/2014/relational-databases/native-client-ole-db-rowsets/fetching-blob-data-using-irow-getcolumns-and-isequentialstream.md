@@ -12,15 +12,14 @@ helpviewer_keywords:
 - GetColumns method
 - BLOBs, fetching
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 36ba98d8c2257a55c7c61ed5d93125bc1957d576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62511380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055953"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream
   La función siguiente utiliza **IRow::GetColumns** e **ISequentialStream** para capturar datos grandes:  
@@ -84,7 +83,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Capturar datos BLOB mediante IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
   
   

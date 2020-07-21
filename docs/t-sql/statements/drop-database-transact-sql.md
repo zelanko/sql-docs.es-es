@@ -25,12 +25,12 @@ ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fcda20d3efa458808ad9313965feb279a0010c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33d646e553f10b10e0dcae65bc931b250f5900e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898093"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626493"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -42,12 +42,12 @@ Quita una o varias bases de datos de usuario o instantáneas de base de datos de
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 -- SQL Server Syntax
 DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ] [;]
 ```
 
-```
+```syntaxsql
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
@@ -62,7 +62,7 @@ Quita la base de datos condicionalmente solo si ya existe.
 *database_name* Especifica el nombre de la base de datos que se va a quitar. Para mostrar una lista de bases de datos, use la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 *database_snapshot_name*
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores
 
 Especifica el nombre de la instantánea de base de datos que se va a quitar.
 
@@ -77,7 +77,7 @@ Cuando se quita una base de datos, debe realizarse una copia de seguridad de la 
 Al quitar una base de datos, se elimina la base de datos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como los archivos de disco físico que usa. Si la base de datos o alguno de sus archivos están sin conexión cuando se quita, no se eliminan los archivos de disco. Estos archivos se pueden eliminar manualmente en el Explorador de Windows. Para quitar una base de datos del servidor actual sin eliminar los archivos del sistema de archivos, use [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).
 
 > [!WARNING]
-> La acción de quitar una base de datos que tenga asociadas copias de seguridad de FILE_SNAPSHOT se llevará a cabo correctamente, pero no se eliminarán los archivos de base de datos que tengan instantáneas asociadas para evitar que se invaliden las copias de seguridad que hagan referencia a dichos archivos de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658).
+> La acción de quitar una base de datos que tenga asociadas copias de seguridad de FILE_SNAPSHOT se llevará a cabo correctamente, pero no se eliminarán los archivos de base de datos que tengan instantáneas asociadas para evitar que se invaliden las copias de seguridad que hagan referencia a dichos archivos de base de datos. El archivo se truncará, pero no se eliminará físicamente con el fin de mantener intactas las copias de seguridad de FILE_SNAPSHOT. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -146,7 +146,7 @@ DROP DATABASE Sales;
 
 ### <a name="b-dropping-multiple-databases"></a>B. Quitar varias bases de datos
 
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 En el ejemplo siguiente se quita cada una de las bases de datos enumeradas.
 
@@ -156,7 +156,7 @@ DROP DATABASE Sales, NewSales;
 
 ### <a name="c-dropping-a-database-snapshot"></a>C. Quitar una instantánea de la base de datos
 
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 En el ejemplo siguiente se quita una instantánea de base de datos, denominada `sales_snapshot0600`, sin que la base de datos de origen se vea afectada.
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047224"
 ---
 # <a name="synonyms-database-engine"></a>Usar sinónimos (motor de base de datos)
   Un sinónimo es un objeto de base de datos que sirve para los siguientes objetivos:  
@@ -64,7 +63,7 @@ ms.locfileid: "62736245"
   
 |||  
 |-|-|  
-|CONTROL|SUPRIMIR|  
+|CONTROL|Delete|  
 |Ejecute|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +74,7 @@ ms.locfileid: "62736245"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|SUPRIMIR|  
+|UPDATE|Delete|  
 |Ejecute|Subselecciones|  
   
  Al trabajar con sinónimos en los contextos indicados anteriormente, el objeto base se ve afectado. Por ejemplo, si un sinónimo hace referencia a un objeto base que es una tabla e inserta una fila en el sinónimo, realmente está insertando una fila en la tabla a la que se hace referencia.  
@@ -98,7 +97,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|DENEGAR|  
 |REVOKE||  
   
  Los sinónimos no están enlazados al esquema, por lo que los siguientes contextos de expresión enlazados al esquema no pueden hacer referencia a sinónimos:  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Para obtener más información sobre las funciones enlazadas a esquema, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Obtener información acerca de sinónimos  
- La vista de catálogo sys.synonyms contiene una entrada para cada sinónimo de una base de datos determinada. Esta vista de catálogo expone metadatos de sinónimos, como el nombre del sinónimo y el nombre del objeto base. Para obtener más información sobre la `sys.synonyms` vista de catálogo, vea [sys.synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ La vista de catálogo sys.synonyms contiene una entrada para cada sinónimo de una base de datos determinada. Esta vista de catálogo expone metadatos de sinónimos, como el nombre del sinónimo y el nombre del objeto base. Para obtener más información acerca de la `sys.synonyms` vista de catálogo, vea [Sys. sinónimos &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Mediante las propiedades extendidas, puede agregar texto descriptivo o instrucciones, máscaras de entrada y reglas de formato como propiedades de un sinónimo. Puesto que la propiedad se almacena en la base de datos, todas las aplicaciones que leen la propiedad pueden evaluar el objeto de la misma manera. Para obtener más información, vea [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

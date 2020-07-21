@@ -1,12 +1,13 @@
 ---
-title: Habilitar conexiones cifradas en el motor de base de datos | Microsoft Docs
-ms.custom: ''
+title: Habilitación de conexiones cifradas | Microsoft Docs
+ms.custom: contperfq4
 ms.date: 08/29/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
+description: Cifre los datos a través de los canales de comunicación. Habilite las conexiones cifradas para una instancia del Motor de base de datos de SQL Server mediante el Administrador de configuración de SQL Server.
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -23,38 +24,46 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772507"
 ---
-# <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitación de conexiones cifradas en el Motor de base de datos
 
-  En este tema se describe cómo habilitar conexiones cifradas para una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mediante la especificación de un certificado para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El equipo servidor debe tener un certificado y el equipo cliente debe estar configurado para confiar en la entidad de certificación raíz del certificado. La puesta en servicio es el proceso de instalar un certificado mediante su importación en Windows.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+  Obtenga información sobre cómo cifrar datos a través de canales de comunicación.  Puede habilitar conexiones cifradas para una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar un certificado.
+ 
+ El equipo de servidor debe tener un certificado aprovisionado. Para aprovisionar el certificado en el equipo de servidor, debe [importarlo en Windows](#single-server). El equipo cliente se debe configurar para que [confíe en la entidad de certificación raíz del certificado](#about).  
   
 > [!IMPORTANT]
 > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ya no se incluye Capa de sockets seguros (SSL). En su lugar use Seguridad de la capa de transporte (TLS).
 
 ## <a name="transport-layer-security-tls"></a>Seguridad de la capa de transporte (TLS)
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar Seguridad de la capa de transporte (TLS) para cifrar los datos transmitidos a través de una red entre una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una aplicación cliente. El cifrado TLS se realiza en la capa del protocolo y está disponible para todos los clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidos.
-Se puede usar TLS para la validación del servidor cuando una conexión cliente solicita cifrado. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo al que se ha asignado un certificado emitido por una entidad de certificación pública, la identidad del equipo y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se certifica mediante la cadena de certificados que conducen a la entidad emisora raíz de confianza. Esta validación de servidor requiere que el equipo en el que se ejecuta la aplicación cliente se configure para confiar en la entidad emisora raíz del certificado que usa el servidor. Se permite el cifrado con un certificado autofirmado y se describe en la sección siguiente, aunque este tipo de certificado solo ofrece protección limitada.
+
+Se puede usar TLS para la validación del servidor cuando una conexión cliente solicita cifrado. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo al que se ha asignado un certificado emitido por una entidad de certificación pública, la identidad del equipo y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se certifica mediante la cadena de certificados que conducen a la entidad emisora raíz de confianza. Esta validación de servidor requiere que el equipo en el que se ejecuta la aplicación cliente se configure para confiar en la entidad emisora raíz del certificado que utiliza el servidor. 
+
+En la sección siguiente se describe cómo se puede realizar el cifrado con un certificado autofirmado, aunque este tipo de certificado solo ofrece protección limitada.
 El nivel de cifrado que se usa en TLS, de 40 o 128 bits, depende de la versión del sistema operativo Microsoft Windows que se ejecute en los equipos de la aplicación y de la base de datos.
 
 > [!WARNING]
 > El uso del nivel de cifrado de 40 bits se considera no seguro.
 
 > [!WARNING]
-> Las conexiones TLS cifradas mediante un certificado autofirmado no proporcionan una gran seguridad. Son susceptibles de ataques de tipo "Man-in-the-middle". No debe confiar en TLS con certificados autofirmados en un entorno de producción ni en servidores conectados a Internet.
+> Las conexiones TLS cifradas mediante un certificado autofirmado no proporcionan una gran seguridad. Son susceptibles de sufrir ataques de tipo "Man in the middle". No debe confiar en TLS con certificados autofirmados en un entorno de producción ni en servidores conectados a Internet.
 
 Al habilitar el cifrado TLS aumenta la seguridad de los datos que se transmiten a través de redes entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las aplicaciones. Pero cuando todo el tráfico entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una aplicación cliente se cifra mediante TLS, es necesario el procesamiento adicional siguiente:
--  Se requiere un recorrido de ida y vuelta de red adicional en el momento de la conexión.
+-  Se requiere un ciclo adicional de ida y vuelta de red en el momento de la conexión.
 -  Los paquetes enviados desde la aplicación a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los debe cifrar la pila TLS de cliente y los debe descifrar la pila TLS de servidor.
 -  Los paquetes enviados desde la aplicación a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los debe cifrar la pila TLS de servidor y los debe descifrar la pila TLS de cliente.
 
-## <a name="remarks"></a>Notas
+## <a name="about-certificates"></a><a name="about"></a> Acerca de los certificados
+
  El certificado debe estar emitido para la **Autenticación de servidor**. El nombre del certificado debe ser el nombre de dominio completo (FQDN) del equipo.  
   
  Los certificados se almacenan localmente para los usuarios del equipo. Para instalar un certificado para usarlo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe ejecutar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una cuenta que tenga privilegios de administrador local.
@@ -62,12 +71,13 @@ Al habilitar el cifrado TLS aumenta la seguridad de los datos que se transmiten 
  El cliente debe ser capaz de comprobar la propiedad del certificado utilizado por el servidor. Si el cliente tiene el certificado de clave pública de la entidad de certificación que firmó el certificado del servidor, no es necesario realizar una mayor configuración. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows incluye los certificados de clave pública de muchas entidades de certificación. Si el certificado del servidor lo firmó una entidad de certificación pública o privada para la que el cliente no tiene certificado de clave pública, debe instalar el certificado de clave pública de esta entidad de certificación.  
   
 > [!NOTE]  
-> Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son ***test1.\*\<su empresa>\*.com*** y ***test2.\*\<su empresa>\*.com***, y un servidor virtual llamado ***virtsql***, tendrá que instalar un certificado para ***virtsql.\*\<su empresa>\*.com*** en los dos nodos. Puede establecer el valor de la opción **ForceEncryption** en el cuadro de propiedades **Protocolos para virtsql** de **Configuración de red de SQL Server** en **Sí**.
+> Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son ***test1.\*\<your company>\*.com*** y ***test2.\*\<your company>\*.com***, y un servidor virtual denominado ***virtsql***, debe instalar un certificado para ***virtsql.\*\<your company>\*.com*** en los dos nodos. Puede establecer el valor de la opción **ForceEncryption** en el cuadro de propiedades **Protocolos para virtsql** de **Configuración de red de SQL Server** en **Sí**.
 
 > [!NOTE]
 > Al crear conexiones cifradas para un indexador de Azure Search en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual de Azure, vea [Configuración de una conexión desde un indexador de Azure Search a SQL Server en una máquina virtual de Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
 
-## <a name="certificate-requirements"></a>Requisitos de certificado
+## <a name="certificate-requirements"></a>Requisitos de certificados
+
 Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cargue un certificado TLS, el certificado debe cumplir las condiciones siguientes:
 
 - El certificado debe estar en un almacén de certificados del equipo local o en el almacén de certificados del usuario actual.
@@ -82,13 +92,14 @@ Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cargue un cer
 
 - La propiedad **Asunto** del certificado debe indicar que el nombre común (CN) es el mismo que el nombre del host o nombre de dominio completo (FQDN) del servidor. Si se usa el nombre de host, se debe especificar el sufijo DNS en el certificado. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un clúster de conmutación por error, el nombre común debe coincidir con el del host o FQDN del servidor virtual, y los certificados se deben aprovisionar en todos los nodos del clúster de conmutación por error.
 
-- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) admiten los certificados comodín. SNAC ha quedado en desuso y se ha reemplazado por [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) y [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Es posible que otros clientes no admitan los certificados comodín. Para más información, vea la documentación del cliente y [KB 258858](http://support.microsoft.com/kb/258858).       
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) admiten los certificados comodín. SNAC ha quedado en desuso y se ha reemplazado por [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) y [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Es posible que otros clientes no admitan los certificados comodín. Para más información, vea la documentación del cliente y [KB 258858](https://support.microsoft.com/kb/258858).       
   El certificado comodín no se puede seleccionar con el Administrador de configuración de SQL Server. Para usar un certificado comodín, debe editar la clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` y escribir la huella digital del certificado, sin espacios en blanco, en el valor **Certificado**.  
 
   > [!WARNING]  
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
-## <a name="to-provision-install-a-certificate-on-a-single-server"></a>Para aprovisionar (instalar) un certificado en un solo servidor  
+## <a name="install-on-single-server"></a><a name="single-server"></a>Instalación en un solo servidor
+
 Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la administración de certificados se integra en el Administrador de configuración de SQL Server. Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] se puede usar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vea [Administración de certificados (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/manage-certificates.md) para agregar un certificado a una única instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no está disponible, siga estos pasos:
@@ -113,34 +124,39 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
   
 10. Finalice el **Asistente para importación de certificados**para agregar un certificado al equipo y cierre la consola MMC. Para obtener más información acerca de cómo agregar un certificado a un equipo, vea la documentación de Windows.  
   
-## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>Para aprovisionar (instalar) un certificado en varios servidores
+## <a name="install-across-multiple-servers"></a>Instalación en varios servidores
+
 Con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], la administración de certificados se integra en el Administrador de configuración de SQL Server. Administrador de configuración de SQL Server para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] se puede usar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consulte [Administración de certificados (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/manage-certificates.md) para agregar un certificado en una configuración de clúster de conmutación por error o de grupo de disponibilidad.
 
-Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para no está disponible para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], siga los pasos de la sección [Para aprovisionar (instalar) un certificado en un solo servidor](#to-provision-install-a-certificate-on-a-single-server) para cada servidor.
+Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y Administrador de configuración de SQL Server para no está disponible para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], siga los pasos de la sección [Para aprovisionar (instalar) un certificado en un solo servidor](#single-server) para cada servidor.
 
-## <a name="to-export-the-server-certificate"></a>Para exportar el certificado del servidor  
+## <a name="export-server-certificate"></a>Exportación del certificado de servidor  
   
-1. En el complemento **Certificados** , busque el certificado en la carpeta **Certificados** / **Personal** , haga clic con el botón secundario en **Certificado**, seleccione **Todas las tareas**y, a continuación, en **Exportar**.  
+1. En el complemento **Certificados** , busque el certificado en la carpeta **Certificados** / **Personal** , haga clic con el botón derecho en **Certificado**, seleccione **Todas las tareas**y, luego, haga clic en **Exportar**.  
   
 2. Complete el **Asistente para exportación de certificados**y guarde el archivo del certificado en una ubicación adecuada.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Para configurar el servidor para forzar conexiones cifradas
+## <a name="configure-server"></a>Configuración del servidor
+
+Configure el servidor para forzar conexiones cifradas.
 
 > [!IMPORTANT]
-> La cuenta de servicio de SQL Server debe tener permisos de lectura en el certificado que se usa para forzar el cifrado en el servidor de SQL Server. En el caso de una cuenta de servicio sin privilegios, será necesario agregar permisos de lectura al certificado. Si no lo hace, se puede producir un error en el reinicio del servicio SQL Server.
+> La cuenta de servicio de SQL Server debe tener permisos de lectura en el certificado que se usa para forzar el cifrado en la instancia de SQL Server. En el caso de una cuenta de servicio sin privilegios, será necesario agregar permisos de lectura al certificado. Si no lo hace, se puede producir un error en el reinicio del servicio SQL Server.
   
-1. En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<instancia de servidor>_ y, después, seleccione **Propiedades**.  
+1. En el **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<server instance>_ y, después, seleccione **Propiedades**.  
   
-2. En el cuadro de diálogo **Protocolos de** _\<nombre de instancia>_ **Propiedades**, en la pestaña **Certificado**, seleccione el certificado que quiera en el menú desplegable del cuadro **Certificado** y, después, haga clic en **Aceptar**.  
+2. En el cuadro de diálogo **Propiedades** de **Protocolos de** _\<instance name>_ , en la pestaña **Certificado**, seleccione el certificado que quiera en el cuadro desplegable **Certificado** y haga clic en **Aceptar**.  
   
 3. En la pestaña **Marcas** , en el cuadro **ForceEncryption** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 4. Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 > [!NOTE]
-> Para garantizar que la conectividad entre el cliente y el servidor es segura, configure el cliente para que solicite conexiones cifradas. Se explican más detalles [más adelante en este artículo](#to-configure-the-client-to-request-encrypted-connections).
+> Para garantizar que la conectividad entre el cliente y el servidor es segura, configure el cliente para que solicite conexiones cifradas. Se explican más detalles [más adelante en este artículo](#configure-client).
 
-## <a name="to-configure-the-client-to-request-encrypted-connections"></a>Para configurar el cliente de modo que solicite conexiones cifradas  
+## <a name="configure-client"></a><a name="configure-client"></a>Configuración del cliente
+
+Configure el cliente para que solicite conexiones cifradas.
 
 1. Copie el certificado original o el archivo del certificado exportado en el equipo cliente.  
   
@@ -150,8 +166,10 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
   
 4. En la página **Marcas** , en el cuadro **Forzar cifrado de protocolo** , haga clic en **Sí**.  
   
-## <a name="to-encrypt-a-connection-from-sql-server-management-studio"></a>Para cifrar una conexión desde SQL Server Management Studio  
+## <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
   
+Para cifrar una conexión desde SQL Server Management Studio:  
+
 1. En la barra de herramientas del Explorador de objetos, haga clic en **Conectar**y, a continuación, en **Motor de base de datos**.  
   
 2. En el cuadro de diálogo **Conectar al servidor** , rellene la información de conexión y, a continuación, haga clic en **Opciones**.  
@@ -159,9 +177,9 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
 3. En la pestaña **Propiedades de conexión** , haga clic en **Cifrar conexión**.  
 
 ## <a name="internet-protocol-security-ipsec"></a>Protocolo de seguridad de Internet (IPSec)
-Los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden cifrar durante la transmisión mediante IPSec. Los sistemas operativos del cliente y del servidor proporcionan IPSec, que no requiere configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información sobre IPSec, vea la documentación de Windows o de la red.
+Los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden cifrar durante la transmisión mediante IPSec. Los sistemas operativos del cliente y del servidor proporcionan IPSec, que no requiere configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información acerca de IPSec, vea la documentación de Windows o de la red.
 
-## <a name="see-also"></a>Consulte también
-[Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
-[Configuración de Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-[Cifrado de SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)
+## <a name="next-steps"></a>Pasos siguientes
+
++ [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
++ [Configure the Windows Firewall to Allow SQL Server Access (Configurar el Firewall de Windows para permitir el acceso a SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     

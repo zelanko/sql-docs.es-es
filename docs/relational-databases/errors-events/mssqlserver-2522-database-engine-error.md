@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 19b9b00c-330f-4dd3-9052-9d88bce83849
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1f75b058e4b1068dce554bc38b86df8c33b22102
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56bdc5ad4416fd75223c071040d2ef1c4f7417cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780377"
 ---
-# <a name="mssqlserver2522"></a>MSSQLSERVER_2522
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_2522"></a>MSSQLSERVER_2522
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2522|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2522|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_INDEX_FILEGROUP_IS_INVALID|  
 |Texto del mensaje|No se puede procesar el índice I_NAME de la tabla O_NAME porque el grupo de archivos F_NAME no es válido.|  

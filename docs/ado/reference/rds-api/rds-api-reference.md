@@ -1,5 +1,5 @@
 ---
-title: Referencia de API de RDS | Microsoft Docs
+title: Referencia de la API de RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS API reference [ADO]
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14df0a3e29068b671f9320e90fac624b2aabbddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5caa1944cbc9246fed50d60557ea376082c0c78
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963786"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751468"
 ---
 # <a name="rds-api-reference"></a>Referencia de la API de RDS
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Esta sección de la documentación de ADO contiene temas de referencia para cada objeto RDS, propiedad, método, y ejemplos de código de evento, así como en RDS:  
+ Esta sección de la documentación de ADO contiene temas de referencia para cada objeto, propiedad, método y evento de RDS, así como ejemplos de código de RDS:  
   
 -   [Objetos RDS](../../../ado/reference/rds-api/rds-objects.md)  
   

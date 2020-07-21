@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones de caché | Microsoft Docs
+title: Editor del administrador de conexiones de caché | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d22744bd83daa70994e552965ea96d148800afef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061077"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439152"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor del administrador de conexiones de caché
   El administrador de conexiones de caché lee un conjunto de datos de referencia a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Los datos siempre se almacenan en memoria.  
@@ -29,13 +28,13 @@ ms.locfileid: "66061077"
   
  En el cuadro de diálogo **Editor del administrador de conexiones de caché** se incluyen estas pestañas:  
   
--   [Ficha general](#generaltab)  
+-   [Pestaña General](#generaltab)  
   
 -   [Pestaña columnas](#columnstab)  
   
- Para obtener más información acerca del administrador de conexiones de caché, vea [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
+ Para obtener más información sobre el administrador de conexiones de caché, vea [Administrador de conexiones de caché](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a> Pestaña General  
+##  <a name="general-tab"></a><a name="generaltab"></a>Pestaña General  
  Use la pestaña **General** del cuadro de diálogo **Editor del administrador de conexiones de caché** para indicar si la memoria caché se leerá desde un archivo o se guardará en un archivo.  
   
 ### <a name="options"></a>Opciones  
@@ -66,7 +65,7 @@ ms.locfileid: "66061077"
  **Actualizar los metadatos**  
  Elimine los metadatos de columna del administrador de conexiones de caché y vuelva a llenar el administrador de conexiones de caché con los metadatos de la columna del archivo caché seleccionado.  
   
-##  <a name="columnstab"></a> Pestaña Columnas  
+##  <a name="columns-tab"></a><a name="columnstab"></a>Pestaña columnas  
  Utilice la pestaña **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de caché** para configurar las propiedades de cada columna en la caché.  
   
 ### <a name="options"></a>Opciones  
@@ -98,7 +97,7 @@ ms.locfileid: "66061077"
  `Code Page`  
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la `Code Page`.  
   
-## <a name="see-also"></a>Vea también  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Consulte también  
+ [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
   
   

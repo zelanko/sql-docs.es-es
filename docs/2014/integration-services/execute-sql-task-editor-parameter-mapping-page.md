@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el Editor de la tarea SQL (página de asignación de parámetros) | Microsoft Docs
+title: Editor de la tarea ejecutar SQL (página asignación de parámetros) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfbb4468cb69947dfa54fb519b7698286393d578
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059041"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437372"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor de la tarea Ejecutar SQL (página Asignación de parámetros)
   Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar variables a los parámetros de la instrucción SQL.  
@@ -28,7 +27,7 @@ ms.locfileid: "66059041"
   
 ## <a name="options"></a>Opciones  
  **Nombre de variable**  
- Tras agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione en la lista una variable del sistema o definida por el usuario, o haga clic en \<**Nueva variable…** > para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable**.  
+ Después de agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione una variable del sistema o definida por el usuario en la lista o haga clic \<**New variable...**> para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable** .  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66059041"
  **Tipo de datos**  
  Seleccione el tipo de datos del parámetro. La lista de tipos de datos disponibles es específica del proveedor seleccionado en el administrador de conexiones utilizado por la tarea.  
   
- **Nombre de parámetro**  
+ **Nombre del parámetro**  
  Proporcione un nombre de parámetro.  
   
  Dependiendo del tipo de administrador de conexiones que utiliza la tarea, se utilizarán números o nombres de parámetro. Algunos tipos de administradores de conexión requieren que el primer carácter del nombre del parámetro sea el signo \@, nombres específicos como \@Param1 o nombres de columnas como nombres de parámetro.  
@@ -50,16 +49,16 @@ ms.locfileid: "66059041"
   
  Este valor garantiza que el proveedor asigna el espacio suficiente para los valores de parámetro de longitud variable.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una asignación de parámetros.  
   
  **Quitar**  
  Seleccione una asignación de parámetros de la lista y después haga clic en **Quitar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ejecutar el Editor de la tarea SQL &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Ejecutar el Editor de la tarea SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
+ [Editor de la tarea ejecutar SQL &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea ejecutar SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference)  
   
   

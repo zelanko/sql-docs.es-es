@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo de minería de datos para los modelos de clústeres (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,20 @@ helpviewer_keywords:
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12f298a9368425c063bec3e730eab7e95cc9c9a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083678"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521571"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services - Minería de datos)
-  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de Microsoft. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de Microsoft. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>Descripción de la estructura de un modelo de agrupación en clústeres  
  Un modelo de agrupación en clústeres tiene una estructura simple. Cada modelo tiene un único nodo primario que representa el modelo y sus metadatos, y cada nodo primario tiene una lista plana de clústeres (NODE_TYPE = 5). Esta organización se muestra en la imagen siguiente.  
   
- ![estructura del contenido del modelo de agrupación en clústeres](../media/modelcontentstructure-clust.gif "estructura del contenido del modelo de agrupación en clústeres")  
+ ![estructura del contenido del modelo para la agrupación en clústeres](../media/modelcontentstructure-clust.gif "estructura del contenido del modelo para la agrupación en clústeres")  
   
  Cada nodo secundario representa un único clúster y contiene estadísticas detalladas sobre los atributos de los casos de ese clúster. Esto incluye un recuento del número de casos del clúster y la distribución de los valores que diferencian ese clúster de los demás.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66083678"
 ## <a name="model-content-for-a-clustering-model"></a>Contenido del modelo para un modelo de agrupación en clústeres  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de agrupación en clústeres.  
   
- Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -103,7 +102,7 @@ ms.locfileid: "66083678"
  NODE_DESCRIPTION  
  Descripción del nodo.  
   
- **Nodo primario** Siempre **(Todos)** .  
+ **Nodo primario** Siempre **(Todos)**.  
   
  **Nodos de clúster** Lista separada por comas de los atributos primarios que diferencian el clúster de los otros clústeres.  
   
@@ -148,18 +147,18 @@ ms.locfileid: "66083678"
  MSOLAP_NODE_SHORT_CAPTION  
  Etiqueta que se utiliza para la visualización. Este título no se puede cambiar.  
   
- **Nodo primario** el tipo de modelo: Modelo de clúster  
+ **Nodo primario** : el tipo de modelo, modelo de clústeres.  
   
- **Nodos de clúster** : el nombre del clúster. Ejemplo: Clúster 1.  
+ **Nodos de clúster** : el nombre del clúster. Por ejemplo, Clúster 1.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para crear un modelo de agrupación en clústeres. Si desconoce el método utilizado para crear el modelo con el que está trabajando, puede recuperar los metadatos del modelo mediante programación, utilizando un cliente ADOMD o AMO, o consultando el conjunto de filas de esquema de minería de datos. Para más información, vea [Consultar los parámetros usados para crear un modelo de minería de datos](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La estructura y el contenido del modelo permanecen invariables, independientemente del método de agrupación en clústeres o de los parámetros utilizados.  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)  

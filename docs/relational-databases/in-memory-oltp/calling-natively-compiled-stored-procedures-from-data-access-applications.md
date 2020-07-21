@@ -1,6 +1,7 @@
 ---
-title: Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos | Microsoft Docs
-ms.custom: ''
+title: 'Procedimientos almacenados compilados de forma nativa: aplicaciones de acceso a datos'
+description: Busque instrucciones para llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos, con un ejemplo que utiliza el controlador ODBC de SQL Server Native Client.
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,16 +12,16 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723369"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Este tema describe instrucciones para llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos.
 
@@ -39,7 +40,7 @@ Este tema describe instrucciones para llamar a procedimientos almacenados compil
 - SqlClient no admite la recuperación de información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa (CommandType.SchemaOnly).
   - Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="includessnoversionincludesssnoversion-mdmd-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
 
 - La versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no permiten recuperar información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa.
   - Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
@@ -48,7 +49,7 @@ Este tema describe instrucciones para llamar a procedimientos almacenados compil
 
 Las siguientes recomendaciones se aplican a las llamadas a procedimientos almacenados compilados de forma nativa con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 
-*Llamada una vez:* La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con **SQLExecDirect** y cláusulas ODBC CALL. No use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.
+*Llamada una vez:* La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con **SQLExecDirect** y cláusulas ODBC CALL. No use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.
 
 *Llamada muchas veces:* La forma más eficaz de llamar a un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más de una vez es a través de llamadas a procedimientos RPC preparadas. Las llamadas a RPC preparadas se realizan como se indica a continuación con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:
 

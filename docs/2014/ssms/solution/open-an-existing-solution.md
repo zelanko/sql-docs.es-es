@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80f13a2818810c71703fb5cccb82a1066361c3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcb855ffda34bb1e407117a4b3efcc4a875f3aae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061126"
 ---
 # <a name="open-an-existing-solution"></a>Abrir una solución existente
   En el Explorador de soluciones solamente se puede tener abierta una solución cada vez.  
@@ -29,7 +28,7 @@ ms.locfileid: "63154644"
   
 2.  En el cuadro de diálogo **Abrir proyecto** , navegue a la solución que desee, haga clic en ella y, luego, haga clic en **Abrir**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Crear una nueva solución](create-a-new-solution.md)  
   

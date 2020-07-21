@@ -1,6 +1,5 @@
 ---
-title: Las conversiones realizan de cliente a servidor | Documentos de Microsoft
-ms.custom: ''
+title: Conversiones realizadas de cliente a servidor
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -10,26 +9,25 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3828ebeff5740d066a55d85f5676ffdbf6e613af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 5621df514df7ae00f28371336cac8a8727487eef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107072"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998196"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversiones realizadas de cliente a servidor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este tema se describen las conversiones de fecha y hora realizadas entre una aplicación cliente escrita con OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior).  
   
 ## <a name="conversions"></a>Conversiones  
  En este tema se describen las conversiones realizadas en el cliente. Si el cliente especifica una precisión de fracciones de segundos para un parámetro que difiere de la definida en el servidor, la conversión del cliente puede producir un error cuando el servidor permita llevar a cabo la operación. En concreto, el cliente trata cualquier truncamiento de fracciones de segundo como un error, mientras que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redondea los valores de hora al segundo entero más próximo.  
   
- Si no se llama a ICommandWithParameters:: SetParameterInfo, los enlaces DBTYPE_DBTIMESTAMP se convierten como si fueran **datetime2**.  
+ Si no se llama a ICommandWithParameters::SetParameterInfo, los enlaces de DBTYPE_DBTIMESTAMP se convierten como si fueran **datetime2**.  
   
 |A -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -51,7 +49,7 @@ ms.locfileid: "68107072"
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor:: CreateAccessor, se devuelve DBBINDSTATUS_UPSUPPORTEDCONVERSION en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
+|-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor::CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION se devuelve en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
 |N/D|No aplicable.|  
 |1|Si los datos proporcionados no son válidos, se establece DBSTATUS_E_CANTCONVERTVALUE. Los datos de entrada se validan antes de que se apliquen las conversiones, de modo que aunque un componente vaya a ser omitido por una conversión subsiguiente, deberá seguir siendo válido para que la conversión se produzca con éxito.|  
 |2|Se omiten los campos de hora.|  
@@ -66,18 +64,18 @@ ms.locfileid: "68107072"
 |11|El número de dígitos de fracciones de segundo (la escala) se determina según el tamaño de la columna de destino, de acuerdo con la tabla siguiente. Si el tamaño de las columnas es mayor que el intervalo de la tabla, se presupone una escala de 9. Esta conversión debería permitir hasta nueve dígitos en las fracciones de segundo, que es el máximo permitido por OLE DB.<br /><br /> Sin embargo, si el tipo de origen es DBTIMESTAMP y las fracciones de segundo son cero, no se generan dígitos de fracciones de segundo ni separador decimal. Este comportamiento asegura la compatibilidad con versiones anteriores para aplicaciones desarrolladas utilizando proveedores OLE DB anteriores.<br /><br /> Un tamaño de columna de ~0 implica un tamaño ilimitado en OLE DB (9 dígitos, a menos que sea aplicable la regla de 3 dígitos para DBTIMESTAMP).|  
 |12|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_DATE. Las fracciones de segundo se truncan en cero.|  
 |13|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para DBTYPE_FILETIME. Si usa la API FileTimeToSystemTime de Windows, la precisión de fracciones de segundo se limita a 1 milisegundo.|  
-|14|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para **smalldatetime** . Los segundos se establecen en cero.|  
-|15|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para **datetime** . Los segundos se redondean a la fracción 1/300 de segundo más próxima.|  
+|14|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para **smalldatetime**. Los segundos se establecen en cero.|  
+|15|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para **datetime**. Los segundos se redondean a la fracción 1/300 de segundo más próxima.|  
 |16|El comportamiento de conversión de un valor (de un tipo determinado) incrustado en una estructura de cliente de SSVARIANT y el comportamiento del mismo valor y tipo cuando no está incrustado en una estructura de cliente de SSVARIANT son iguales.|  
   
 ||||  
 |-|-|-|  
-|Type|Longitud (en caracteres)|Escala|  
+|Tipo|Longitud (en caracteres)|Escala|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Enlaces y conversiones &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
   
   

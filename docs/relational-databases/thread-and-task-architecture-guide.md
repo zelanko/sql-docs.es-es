@@ -1,7 +1,8 @@
 ---
 title: Guía de arquitectura de subprocesos y tareas | Microsoft Docs
+description: Obtenga información sobre la arquitectura de subprocesos y tareas en SQL Server, incluida la programación de tareas, la adición de CPU en caliente y procedimientos recomendados para el uso de equipos con más de 64 CPU.
 ms.custom: ''
-ms.date: 10/11/2019
+ms.date: 07/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +15,15 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305199"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158923"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="operating-system-task-scheduling"></a>Programación de tareas del sistema operativo
 Los subprocesos son las unidades de procesamiento más pequeñas que puede ejecutar un sistema operativo y permiten que la lógica de la aplicación se separe en varias rutas de acceso de ejecución simultáneas. Los subprocesos son útiles cuando se trabaja con aplicaciones complejas que tienen muchas tareas que pueden ejecutarse a la vez. 
@@ -34,19 +35,122 @@ Los subprocesos permiten a las aplicaciones complejas hacer más eficaz el uso d
 ## <a name="sql-server-task-scheduling"></a>Programación de tareas de SQL Server
 En el ámbito de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], una **solicitud** es la representación lógica de una consulta o lote. Una solicitud también representa las operaciones requeridas por los subprocesos del sistema, como el punto de control o el escritor de registros. Las solicitudes existen en varios estados a lo largo de su duración y pueden acumular esperas cuando no están disponibles los recursos necesarios para ejecutar la solicitud, como [bloqueos](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) o [bloqueos temporales](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Para más información sobre los estados de la solicitud, consulte [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-Una **tarea** representa la unidad de trabajo que se debe completar para satisfacer la solicitud. Se pueden asignar una o varias tareas a una solicitud única. Las solicitudes paralelas tendrán varias tareas activas que se ejecutan de manera simultánea y no en serie. Una solicitud que se ejecuta en serie solo tendrá una tarea activa en un momento dado. Las tareas existen en varios estados a lo largo de su duración. Para más información sobre los estados de la tarea, consulte [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Las tareas con un estado SUSPENDED están a la espera de que los recursos necesarios para ejecutar la tarea estén disponibles. Para más información sobre las tareas en espera, consulte [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Una **tarea** representa la unidad de trabajo que se debe completar para satisfacer la solicitud. Se pueden asignar una o varias tareas a una solicitud única. 
+-  Las solicitudes paralelas tendrán varias tareas activas que se ejecutan simultáneamente en lugar de ejecutarse en serie, con una **tarea primaria** (o una tarea de coordinación) y varias **tareas secundarias**. Un plan de ejecución para una solicitud paralela puede tener áreas o ramas en serie del plan con operadores que no se ejecutan en paralelo. La tarea primaria también es responsable de ejecutar esos operadores en serie.
+-  Las solicitudes en serie solo tendrán una tarea activa en cualquier momento dado durante la ejecución.     
+Las tareas existen en varios estados a lo largo de su duración. Para más información sobre los estados de la tarea, consulte [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Las tareas con un estado SUSPENDED están a la espera de que los recursos necesarios para ejecutar la tarea estén disponibles. Para obtener más información sobre las tareas en espera, consulte [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-Un **subproceso de trabajo** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], también conocido como trabajo o subproceso, es una representación lógica de un subproceso de sistema operativo. Cuando se ejecutan solicitudes en serie, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] generará un trabajo para ejecutar la tarea activa. Cuando se ejecutan solicitudes en serie en [modo de fila](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna un trabajo para coordinar los trabajos secundarios responsables de completar las tareas que tienen asignadas. El número de subprocesos de trabajo generados para cada tarea depende de:
--   Si la solicitud es válida para el paralelismo según lo determinado por el optimizador de consultas.
--   El [grado de paralelismo (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) disponible real en el sistema en función de la carga actual. Esto puede diferir del DOP estimado que está basado en la configuración del servidor para alcanzar el grado máximo de paralelismo (MAXDOP). Por ejemplo, la configuración de servidor para MAXDOP puede ser 8, pero el DOP disponible en tiempo de ejecución solo puede ser 2, lo que impacta en el rendimiento de la consulta. 
+Un **subproceso de trabajo** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], también conocido como trabajo o subproceso, es una representación lógica de un subproceso de sistema operativo. Cuando se ejecutan **solicitudes en serie**, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] generará un trabajo para ejecutar la tarea activa (1:1). Cuando se ejecutan **solicitudes en paralelo** en [modo de fila](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna un trabajo para coordinar los trabajos secundarios responsables de completar las tareas que tienen asignadas (también 1:1), denominado **subproceso primario** (o subproceso de coordinación). El subproceso primario tiene una tarea primaria asociada. El subproceso primario es el punto de entrada de la solicitud y existe incluso antes de que el motor analice una consulta. Las principales responsabilidades del subproceso principal son las siguientes: 
+-  Coordinar un examen en paralelo.
+-  Iniciar trabajos secundarios en paralelo.
+-  Recopilar filas de subprocesos en paralelo y enviarlas al cliente.
+-  Realizar agregaciones locales y globales.    
 
 > [!NOTE]
-> El límite del **grado máximo de paralelismo (MAXDOP)** se establece por tarea, no por solicitud. Esto significa que durante una ejecución de consulta en paralelo, una solicitud única puede generar varias tareas y cada tarea puede usar varios trabajos hasta alcanzar el límite MAXDOP. Para más información sobre MAXDOP, consulte [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+> Si un plan de consulta tiene ramas en serie y en paralelo, una de las tareas en paralelo se encargará de ejecutar la rama en serie. 
+
+El número de subprocesos de trabajo generados para cada tarea depende de:
+-   Si la solicitud es válida para el paralelismo según lo determinado por el optimizador de consultas.
+-   El [grado de paralelismo (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) disponible real en el sistema en función de la carga actual. Esto puede diferir del DOP estimado, que está basado en la configuración del servidor para alcanzar el grado máximo de paralelismo (MAXDOP). Por ejemplo, la configuración de servidor para MAXDOP puede ser 8, pero el DOP disponible en tiempo de ejecución solo puede ser 2, lo que impacta en el rendimiento de la consulta. 
+
+> [!NOTE]
+> El límite del **grado máximo de paralelismo (MAXDOP)** se establece por tarea, no por solicitud. Esto significa que durante una ejecución de consulta en paralelo, una solicitud única puede generar varias tareas hasta alcanzar el límite MAXDOP, y que cada tarea usará un trabajo. Para más información sobre MAXDOP, consulte [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 Un **programador**, conocido también como programador de SOS, administra los subprocesos de trabajo que requieren tiempo de procesamiento para hacer el trabajo en nombre de las tareas. Cada programador está asignado a un procesador individual (CPU). El tiempo que un trabajo puede permanecer activo en un programador se es el denominado cuanto del SO, con un máximo de 4 ms. Una vez que expira el tiempo de cuanto, un trabajo suspende su tiempo en favor de otros trabajos que necesitan acceder a los recursos de la CPU y cambia su estado. Esta cooperación entre los trabajos para maximizar el acceso a los recursos de la CPU se denomina **programación cooperativa**, también conocida como programación no preferente. A su vez, el cambio en el estado del trabajo se propaga a la tarea asociada con ese trabajo y a la solicitud asociada con la tarea. Para más información sobre los estados del trabajo, consulte [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Para más información sobre los programados, consulte [sys.dm_os_schedulers ](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
+En resumen, una **solicitud** puede generar una o varias **tareas** para llevar a cabo las unidades de trabajo. Cada tarea se asigna a un **subproceso de trabajo** responsable de completar la tarea. Cada subproceso de trabajo debe estar programado (ubicado en un **programador**) para la ejecución activa de la tarea. 
+
+### <a name="scheduling-parallel-tasks"></a>Programación de tareas paralelas
+Imagine un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurado con MaxDOP 8 y que la afinidad de CPU se ha configurado para 24 CPU (programadores) en los nodos NUMA 0 y 1. Los programadores del 0 al 11 pertenecen al nodo NUMA 0, y los programadores del 12 al 23 pertenecen al nodo NUMA 1. Una aplicación envía la siguiente consulta (solicitud) al [!INCLUDE[ssde_md](../includes/ssde_md.md)]:
+
+```sql
+SELECT h.SalesOrderID, h.OrderDate, h.DueDate, h.ShipDate
+FROM Sales.SalesOrderHeaderBulk AS h 
+INNER JOIN Sales.SalesOrderDetailBulk AS d ON h.SalesOrderID = d.SalesOrderID 
+WHERE (h.OrderDate >= '2014-3-28 00:00:00');
+```
+
+> [!TIP]
+> La consulta de ejemplo se puede ejecutar con la [base de datos de ejemplo AdventureWorks2016_EXT](../samples/adventureworks-install-configure.md). Las tablas `Sales.SalesOrderHeader` y `Sales.SalesOrderDetail` se han agrandado 50 veces y se les ha cambiado el nombre a `Sales.SalesOrderHeaderBulk` y `Sales.SalesOrderDetailBulk`.
+
+El plan de ejecución muestra una [combinación hash](../relational-databases/performance/joins.md#hash) entre dos tablas, y cada uno de los operadores se ejecutan en paralelo, tal y como se indica mediante el círculo amarillo con dos flechas. Cada operador de paralelismo es una rama diferente del plan. Por lo tanto, hay tres ramas en el plan de ejecución siguiente. 
+
+![Plan de consulta en paralelo](../relational-databases/media/schedule-parallel-query-plan.png)
+
+> [!NOTE]
+> Si considera un plan de ejecución como un árbol, una **rama** es un área del plan que agrupa uno o más operadores entre operadores de paralelismo, también denominados iteradores de Exchange. Para obtener más información sobre los operadores de plan, consulte [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
+
+Aunque hay tres ramas en el plan de ejecución, en cualquier momento durante la ejecución solo se pueden ejecutar de forma simultánea dos ramas en este plan de ejecución:
+1.  La rama en la que se utiliza un *Examen de índice agrupado* en `Sales.SalesOrderHeaderBulk` (entrada de compilación de la combinación) se ejecuta sola.
+2.  Posteriormente, la rama en la que se utiliza un *Examen de índice agrupado* en `Sales.SalesOrderDetailBulk` (entrada de sondeo de la combinación) se ejecuta simultáneamente con la rama en la que se ha creado el *mapa de bits* y en la que actualmente se ejecuta la *coincidencia de hash*.
+
+El XML del plan de presentación muestra que en el nodo NUMA 0 se han reservado y usado 16 subprocesos de trabajo:
+
+```xml
+<ThreadStat Branches="2" UsedThreads="16">
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
+</ThreadStat>
+```
+
+La reserva de subprocesos garantiza que [!INCLUDE[ssde_md](../includes/ssde_md.md)] tenga suficientes subprocesos de trabajo para llevar a cabo todas las tareas necesarias para la solicitud. Los subprocesos se pueden reservar en varios nodos NUMA o en uno solo. La reserva de subprocesos se realiza en tiempo de ejecución antes de que se inicie la ejecución y depende de la carga del programador. El número de subprocesos de trabajo reservados se deriva genéricamente a partir de la fórmula ***ramas simultáneas* * *DOP en tiempo de ejecución*** y excluye el subproceso de trabajo primario. Cada rama está limitada a la cantidad de subprocesos de trabajo equivalente a MaxDOP. En este ejemplo hay dos ramas simultáneas y MaxDOP se establece en 8, por lo que **2 * 8 = 16**.
+
+Como referencia, observe el plan de ejecución activo de [Estadísticas de consultas activas](../relational-databases/performance/live-query-statistics.md), donde se ha completado una rama y se están ejecutando dos ramas simultáneamente.
+
+![Plan de consultas en paralelo activas](../relational-databases/media/schedule-parallel-query-live-plan.png)
+
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asignará un subproceso de trabajo para ejecutar una tarea activa (1:1), que se puede observar durante la ejecución de la consulta consultando la DMV [sys. dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md), como se observa en el ejemplo siguiente:
+
+```sql
+SELECT parent_task_address, task_address, 
+       task_state, scheduler_id, worker_address
+FROM sys.dm_os_tasks
+WHERE session_id = <insert_session_id>
+ORDER BY parent_task_address, scheduler_id;
+```
+
+> [!TIP]
+> La columna `parent_task_address` siempre es NULL para la tarea primaria. 
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)] Observe que hay 17 tareas activas para las ramas que se están ejecutando actualmente: 16 tareas secundarias correspondientes a los subprocesos reservados, más la tarea primaria o tarea de coordinación.
+
+|parent_task_address|task_address|task_state|scheduler_id|worker_address|
+|--------|--------|--------|--------|--------|
+|NULL|**0x000001EF4758ACA8**|SUSPENDED|3|0x000001EFE6CB6160|
+|0x000001EF4758ACA8|0x000001EFE43F3468|SUSPENDED|0|0x000001EF6DB70160|
+|0x000001EF4758ACA8|0x000001EEB243A4E8|SUSPENDED|0|0x000001EF6DB7A160|
+|0x000001EF4758ACA8|0x000001EC86251468|SUSPENDED|5|0x000001EEC05E8160|
+|0x000001EF4758ACA8|0x000001EFE3023468|SUSPENDED|5|0x000001EF6B46A160|
+|0x000001EF4758ACA8|0x000001EFE3AF1468|SUSPENDED|6|0x000001EF6BD38160|
+|0x000001EF4758ACA8|0x000001EFE4AFCCA8|SUSPENDED|6|0x000001EF6ACB4160|
+|0x000001EF4758ACA8|0x000001EFDE043848|SUSPENDED|7|0x000001EEA18C2160|
+|0x000001EF4758ACA8|0x000001EF69038108|SUSPENDED|7|0x000001EF6AEBA160|
+|0x000001EF4758ACA8|0x000001EFCFDD8CA8|SUSPENDED|8|0x000001EFCB6F0160|
+|0x000001EF4758ACA8|0x000001EFCFDD88C8|SUSPENDED|8|0x000001EF6DC46160|
+|0x000001EF4758ACA8|0x000001EFBCC54108|SUSPENDED|9|0x000001EFCB886160|
+|0x000001EF4758ACA8|0x000001EC86279468|SUSPENDED|9|0x000001EF6DE08160|
+|0x000001EF4758ACA8|0x000001EFDE901848|SUSPENDED|10|0x000001EFF56E0160|
+|0x000001EF4758ACA8|0x000001EF6DB32108|SUSPENDED|10|0x000001EFCC3D0160|
+|0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
+|0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
+
+> [!TIP]
+> En un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muy ocupado, es posible ver una cantidad de tareas activas superior al límite establecido por los subprocesos reservados. Estas tareas pueden pertenecer a una rama que ya no se está usando y que se encuentra en un estado transitorio, esperando la limpieza. 
+
+Observe que cada una de las 16 tareas secundarias tiene un subproceso de trabajo diferente asignado (indicado en la columna `worker_address`), pero que todos los trabajos están asignados al mismo grupo de ocho programadores (0, 5, 6, 7, 8, 9, 10, 11) y que la tarea primaria está asignada a un programador fuera de este grupo (3).
+
+> [!IMPORTANT]
+> Una vez que se programa el primer conjunto de tareas paralelas en una rama determinada, [!INCLUDE[ssde_md](../includes/ssde_md.md)] usará el mismo grupo de programadores para cualquier tarea adicional en otras ramas. Esto significa que se utilizará el mismo conjunto de programadores para todas las tareas paralelas en todo el plan de ejecución, limitado únicamente por MaxDOP.  
+> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] siempre intentará asignar programadores desde el mismo nodo NUMA para la ejecución de la tarea y los asignará secuencialmente (en modo Round-Robin) si hay programadores disponibles. Sin embargo, el subproceso de trabajo asignado a la tarea primaria se puede ubicar en un nodo NUMA diferente desde otras tareas.
+
+Un subproceso de trabajo solo puede permanecer activo en el programador mientras dure su cuanto (4 ms) y debe ceder su programador después de que haya transcurrido ese cuanto, de modo que un subproceso de trabajo asignado a otra tarea se pueda activar. Cuando el cuanto de un trabajo expira y ya no está activo, la tarea correspondiente se coloca en una cola FIFO en estado EJECUTABLE hasta pasar de nuevo al estado EN EJECUCIÓN, suponiendo que la tarea no requiera acceso a recursos que no están disponibles en ese momento, como un bloqueo temporal o un bloqueo, en cuyo caso la tarea se colocaría en estado SUSPENDIDO en lugar de EJECUTABLE, hasta que dichos recursos estén disponibles.  
+
+> [!TIP] 
+> Para la salida de la DMV anterior, todas las tareas activas están en estado SUSPENDIDO. Para obtener más información sobre las tareas en espera, consulte la DMV [sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
+
+En resumen, una solicitud paralela generará varias tareas, donde cada tarea debe estar asignada a un único subproceso de trabajo y cada subproceso de trabajo debe estar asignado a un solo programador. Por lo tanto, el número de programadores en uso no puede superar el número de tareas paralelas por rama, establecido por MaxDOP. 
+
 ### <a name="allocating-threads-to-a-cpu"></a>Asignación de subprocesos a una CPU
-De manera predeterminada, cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicia cada subproceso, y el sistema operativo distribuye los subprocesos de las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre los procesadores (las CPU) de un equipo en función de la carga. Si se ha habilitado la afinidad de proceso en el nivel de sistema operativo, el sistema operativo asigna cada subproceso a una CPU concreta. Por el contrario, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna los **subprocesos de trabajo** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a los **programadores** que distribuyen los subprocesos de manera uniforme entre las CPU.
+De manera predeterminada, cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicia cada subproceso, y el sistema operativo distribuye los subprocesos de las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre los procesadores (las CPU) de un equipo en función de la carga. Si se ha habilitado la afinidad de proceso en el nivel de sistema operativo, el sistema operativo asigna cada subproceso a una CPU concreta. Por el contrario, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna los **subprocesos de trabajo** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a los **programadores** que distribuyen los subprocesos de manera uniforme entre las CPU, en modo Round-Robin.
     
 Para llevar a cabo la multitarea, por ejemplo cuando varias aplicaciones acceden el mismo conjunto de CPU, en ocasiones el sistema operativo mueve los subprocesos de trabajo del entre diferentes CPU. Aunque esta actividad es eficaz desde el punto de vista del sistema operativo, puede reducir el rendimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuando la carga del sistema es grande, ya que la memoria caché de cada procesador se carga repetidamente con datos. La asignación de CPU a subprocesos específicos puede mejorar el rendimiento en estas condiciones al eliminar las operaciones de repetición de carga del procesador y reducir la migración de subprocesos entre CPU (con lo que se reduce el cambio de contexto); dicha asociación entre un subproceso y un procesador se denomina afinidad del procesador. Si se ha habilitado la afinidad, el sistema operativo asigna cada subproceso a una CPU concreta. 
 

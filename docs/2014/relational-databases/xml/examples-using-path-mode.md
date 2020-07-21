@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplos: Uso del modo PATH | Microsoft Docs'
+title: 'Ejemplos: Usar el modo PATH | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d4357c3ca7290484d1dc38e54f677a8cd987fd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287782"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054919"
 ---
-# <a name="examples-using-path-mode"></a>Ejemplos: Uso del modo PATH
+# <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
   El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Especificar una consulta sencilla de modo PATH  
@@ -111,7 +110,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +134,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `< ProductModelData id="122">`  
   
@@ -200,7 +199,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- El resultado parcial es el siguiente. Dado que la consulta especifica ManuInstr como nombre de columna, el XML devuelto por la `query()` método se encapsula en un <`ManuInstr`> etiqueta como se muestra en la siguiente:  
+ El resultado parcial es el siguiente. Dado que la consulta especifica ManuInstr como nombre de columna, el XML devuelto por el `query()` método se ajusta en una <`ManuInstr`> etiqueta como se muestra a continuación:  
   
  `<Root>`  
   
@@ -244,7 +243,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- Observe que el prefijo `MI` también se define en `WITH XMLNAMESPACES`. Como resultado, el método `query()` del tipo `xml` especificado no define el prefijo en el prólogo de la consulta. Éste es el resultado:  
+ Observe que el prefijo `MI` también se define en `WITH XMLNAMESPACES`. Como resultado, el método `query()` del tipo `xml` especificado no define el prefijo en el prólogo de la consulta. El resultado es el siguiente:  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -395,7 +394,7 @@ GO
   
  El atributo `@xml:lang` agregado al elemento <`English`> se define en el espacio de nombres xml predefinido.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<Translation>`  
   
@@ -432,7 +431,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   
@@ -464,7 +463,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85c6268d58cf96eb086399bf41c05526f8c1593a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571261"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>Propiedad de ConfigurationSetting: DatabaseLogonTimeout

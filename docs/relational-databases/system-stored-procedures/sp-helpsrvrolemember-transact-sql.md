@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010765"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899440"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de los miembros de un rol fijo de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,9 +39,9 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'` Es el nombre del rol fijo de servidor. *rol* es **sysname**, su valor predeterminado es null. Si *rol*no se especifica, el conjunto de resultados incluye información acerca de todos los roles fijos de servidor.  
+`[ @srvrolename = ] 'role'`Es el nombre de un rol fijo de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role*, el conjunto de resultados incluye información sobre todos los roles fijos de servidor.  
   
- *rol* puede ser cualquiera de los siguientes valores.  
+ *role* puede ser cualquiera de los siguientes valores.  
   
 |Rol fijo de servidor|Descripción|  
 |-----------------------|-----------------|  
@@ -59,20 +59,20 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nombre del rol de servidor|  
 |MemberName|**sysname**|Nombre de un miembro de ServerRole|  
 |MemberSID|**varbinary(85)**|Identificador de seguridad de MemberName|  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice sp_helprolemember para mostrar a los miembros de un rol de base de datos.  
+ Para presentar los miembros de un rol de base de datos, utilice sp_helprolemember.  
   
- Todos los inicios de sesión están miembro del público. sp_helpsrvrolemember no reconoce el rol público porque, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa pública como un rol.  
+ Todos los inicios de sesión son miembros de Public. sp_helpsrvrolemember no reconoce el rol Public porque, internamente, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa Public como role.  
   
- Para agregar o quitadas miembros de los roles de servidor, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ Para agregar o quitar miembros de roles de servidor, vea [ALTER Server ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- sp_helpsrvrolemember no tiene un rol de servidor definido por el usuario como argumento. Para determinar los miembros del rol de servidor definido por el usuario, vea los ejemplos de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
+ sp_helpsrvrolemember no toma como argumento un rol de servidor definido por el usuario. Para determinar los miembros de un rol de servidor definido por el usuario, vea los ejemplos de [ALTER Server role &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
@@ -84,9 +84,9 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_helprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

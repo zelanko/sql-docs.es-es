@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de cuadro de texto, alineación (generador de informes y SSRS) | Microsoft Docs
+title: Propiedades de cuadro de texto (cuadro de diálogo), alineación (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 750a4cefffe2baaefadf7266e94800374834ad85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100528"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de cuadro de texto, Alineación (Generador de informes y SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66100528"
  **Right**  
  Especifique el relleno (o espacio) que hay entre el borde derecho de una celda y el valor mostrado dentro de la celda. El valor predeterminado es 2 puntos. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
- **Top**  
+ **Arriba**  
  Especifique el relleno (o espacio) que hay entre el borde superior de una celda y el valor mostrado dentro de la celda. El valor predeterminado es 2 puntos. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
- **parte inferior**  
+ **Descendente**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda y el valor mostrado dentro de la celda. El valor predeterminado es 2 puntos. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   

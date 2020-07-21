@@ -1,35 +1,36 @@
 ---
-title: Agrupación de conexiones dependientes del controlador en ODBC Driver for SQL Server | Microsoft Docs
+title: Agrupación de conexiones dependientes del controlador ODBC
+description: Obtenga información sobre las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for SQL Server en Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009970"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922083"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows:  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows:  
   
 -   Con independencia de las propiedades de conexión, las conexiones que usan `SQLDriverConnect` forman parte de un grupo independiente de las conexiones que usan `SQLConnect`.
 - Al usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la agrupación de conexiones dependientes del controlador, el controlador no emplea el contexto de seguridad del usuario de Windows para el subproceso actual con el fin de separar las conexiones del grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.
-- Al usar Azure Active Directory y la agrupación de conexiones que reconocen el controlador, el controlador también usa el valor de autenticación para determinar la pertenencia al grupo de conexiones.
+- Al usar Azure Active Directory y la agrupación de conexiones dependiente del controlador, el controlador también usa el valor de autenticación para determinar la pertenencia al grupo de conexiones.
   
 -   La característica de agrupación de conexiones dependientes del controlador impide que se devuelva una conexión incorrecta del grupo.  
   
--   Asimismo, reconoce los atributos de conexión específicos del controlador. Por lo tanto, si una `SQL_COPT_SS_APPLICATION_INTENT` conexión utiliza establecido en solo lectura, esa conexión obtiene su propio grupo de conexiones.
--   Al establecer `SQL_COPT_SS_ACCESS_TOKEN` el atributo, se agrupa una conexión por separado. 
+-   Asimismo, reconoce los atributos de conexión específicos del controlador. Por lo tanto, si una conexión usa `SQL_COPT_SS_APPLICATION_INTENT` establecido en solo lectura, dicha conexión obtendrá su propio grupo de conexiones.
+-   Al establecer el atributo `SQL_COPT_SS_ACCESS_TOKEN`, una conexión se agrupa por separado. 
   
 Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena de conexión difiere entre la cadena de conexión y la cadena de conexión agrupada, el controlador utilizará una conexión agrupada. Sin embargo, se obtendrá un mejor rendimiento si coinciden todos los id. del atributo de conexión o palabras clave de cadena de conexión (para que coincida una conexión en el grupo, el controlador restablece el atributo). El rendimiento será peor, ya que, para restablecer los siguientes parámetros, se requiere una llamada de red adicional.  
   
@@ -67,7 +68,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     
 - Si hay una diferencia en cualquiera de los siguientes atributos de conexión entre la cadena de conexión y una cadena de conexión agrupada, no se utilizará una conexión agrupada.  
   
-    |Attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sí|Sí|
     |`SQL_ATTR_PACKET_SIZE`|Sí|Sí|
@@ -107,7 +108,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
      Si cambia uno de los siguientes atributos de conexión, se puede reutilizar una conexión existente.  El controlador restablecerá el valor según proceda. El controlador puede restablecer estos atributos en el cliente sin realizar una llamada de red adicional.  
   
-    |Attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |Todos los atributos de instrucción|Sí|Sí|
     |`SQL_ATTR_AUTOCOMMIT`|Sí|Sí|

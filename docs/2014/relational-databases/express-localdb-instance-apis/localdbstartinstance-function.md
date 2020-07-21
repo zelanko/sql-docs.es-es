@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 881c332e2f9c7d2958e001c04b1b6281adc23999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027534"
 ---
 # <a name="localdbstartinstance-function"></a>Función LocalDBStartInstance
   Inicia la instancia de SQL Server Express LocalDB especificada.  
@@ -52,7 +51,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Entrada/Salida] En la entrada contiene el tamaño de búfer de *wszSqlConnection* en caracteres, incluidos los valores NULL finales. En la salida, si el tamaño de búfer proporcionado es demasiado pequeño, contiene el tamaño de búfer necesario en caracteres, lo cual incluye los valores NULL finales.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -102,21 +101,21 @@ HRESULT LocalDBStartInstance(
  No se puede crear una instancia automática. Vea el registro de eventos de aplicación de Windows para obtener los detalles del error.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="details"></a>Detalles  
  Ell argumento del búfer de conexión (*wszSqlConnection*) y el argumento del tamaño de búfer de conexión (*lpcchSqlConnection*) son opcionales. La tabla siguiente muestra las opciones de uso de estos argumentos y sus resultados.  
   
-|Búfer|Tamaño de búfer|Análisis razonado|Acción|  
+|Buffer|Tamaño de búfer|Análisis razonado|Acción|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|Usuario desea iniciar la instancia y no necesita una canalización de nombre.|Inicia una instancia (sin devolución de canalización y no se requiere la devolución de tamaño de búfer).|  
-|NULL|Mostrar|El usuario solicita el tamaño de búfer de salida. (En la llamada siguiente el usuario probablemente solicitará un inicio real).|Devuelve el tamaño de búfer necesario (sin inicio y sin devolución de canalización). El resultado es S_OK.|  
-|Mostrar|NULL|No está permitido; entrada no correcta.|El resultado devuelto es LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Mostrar|Mostrar|El usuario desea iniciar la instancia y necesita el nombre de la canalización para conectarse una vez se haya iniciado.|Comprueba el tamaño de búfer, inicia la instancia y devuelve el nombre de la canalización en el búfer. <br />El argumento de tamaño de búfer devuelve la longitud de la "servidor =" cadena, sin incluir valores NULL finales.|  
+|NULL|NULL|El usuario desea iniciar la instancia y no necesita un nombre de canalización.|Inicia una instancia (sin devolución de canalización y no se requiere la devolución de tamaño de búfer).|  
+|NULL|Presente|El usuario solicita el tamaño de búfer de salida. (En la llamada siguiente el usuario probablemente solicitará un inicio real).|Devuelve el tamaño de búfer necesario (sin inicio y sin devolución de canalización). El resultado es S_OK.|  
+|Presente|NULL|No está permitido; entrada no correcta.|El resultado devuelto es LOCALDB_ERROR_INVALID_PARAMETER.|  
+|Presente|Presente|El usuario desea iniciar la instancia y necesita el nombre de la canalización para conectarse una vez se haya iniciado.|Comprueba el tamaño de búfer, inicia la instancia y devuelve el nombre de la canalización en el búfer. <br />El argumento de tamaño de búfer devuelve la longitud de la cadena "Server =", sin incluir los valores NULL de terminación.|  
   
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

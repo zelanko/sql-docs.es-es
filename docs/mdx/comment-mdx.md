@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006273"
 ---
 # <a name="comment-mdx"></a>Comentario (MDX)
@@ -31,8 +31,8 @@ ms.locfileid: "68006273"
  *Comment_Text*  
  Cadena que contiene el texto del comentario.  
   
-## <a name="remarks"></a>Comentarios  
- El servidor no evalúa el texto situado entre los caracteres de comentario / * y \*/. Los comentarios pueden insertarse en una línea distinta o como parte de una instrucción de Expresiones multidimensionales (MDX). Los comentarios de varias líneas deben indicarse con /\* y \*/.  
+## <a name="remarks"></a>Observaciones  
+ El servidor no evalúa el texto entre los caracteres de comentario,/* y \*/. Los comentarios pueden insertarse en una línea distinta o como parte de una instrucción de Expresiones multidimensionales (MDX).  Los comentarios de varias líneas deben indicarse mediante\* / \*y/.  
   
  No hay límite de longitud para los comentarios. Los comentarios pueden anidarse; por ejemplo, `/* Test /*Comment*/ Text*/` es un ejemplo de un comentario anidado.  
   
@@ -52,9 +52,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [&#40;Comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [-- &#40;Comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [&#40;comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [--&#40;comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

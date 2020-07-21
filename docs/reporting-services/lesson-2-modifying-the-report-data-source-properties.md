@@ -9,10 +9,10 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651742"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
@@ -20,12 +20,12 @@ En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)
   
 También modificará el conjunto de datos y el informe para usar un parámetro que filtrar el informe en `[Order]` de modo que la suscripción pueda dar como resultado diferentes instancias del informe para pedidos concretos y formatos de representación.  
   
-## <a name="bkmk_modify_datasource"></a>Para modificar el origen de datos de modo que use credenciales almacenadas  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>Para modificar el origen de datos de modo que use credenciales almacenadas  
   
 1.  Vaya al portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegios de administrador, por ejemplo, haga clic con el botón derecho en el icono de Internet Explorer y haga clic en **Ejecutar como administrador**.  
  
 2.    Vaya a la dirección URL del portal web.  Por ejemplo:   
-    Columnas en la tabla de origen capturadas`https://<server name>/reports`  
+    `https://<server name>/reports`.  
     `https://localhost/reports`
  **Nota:** La dirección URL del *portal* web es "Reports", no la dirección URL del *servidor* de informes de "Reportserver".  
 3.  Busque la carpeta que contiene el informe **Sales Orders** y, en el menú contextual del informe, haga clic en **Administrar**.  
@@ -49,12 +49,12 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
     
 9. Haga clic en **Probar conexión** para comprobar que puede conectarse al origen de datos.  
   
-10. Haga clic en **Guardar**.
+10. Haga clic en **Save**(Guardar).
 11. Haga clic en **Cancelar**  
   
 11. Visualice el informe para comprobar que se ejecuta con las credenciales que ha especificado. .  
   
-## <a name="bkmk_modify_dataset"></a>Para modificar AdventureWorksDataset  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Para modificar AdventureWorksDataset  
  En los pasos siguientes modificará el conjunto de datos para usar un parámetro para filtrar el conjunto de datos según un número de pedido.
 1.  Abra el informe **Sales Orders** en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -79,9 +79,9 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **Aceptar**  
  En los pasos siguientes, agregará un parámetro al informe.  El parámetro de informe proporciona el parámetro de conjunto de datos. 
-## <a name="bkmk_add_reportparameter"></a>Para agregar un parámetro de informe y volver a publicarlo  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Para agregar un parámetro de informe y volver a publicarlo  
   
 1.  En el panel **Datos del informe** , expanda la carpeta de parámetros y haga doble clic en el parámetro **Ordernumber** .  Se creó automáticamente como parte de los pasos anteriores cuando se agregó el parámetro al conjunto de datos. haga clic en **Nuevo** y, después, en **Parámetro...**  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -93,9 +93,9 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
   
 5.  Seleccione **Permitir valor NULL**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
-7.  Haga clic en la pestaña **Vista previa** para ejecutar el informe. Observe el cuadro de entrada de parámetros en la parte superior del informe. Puede elegir entre lo siguiente:  
+7.  Haga clic en la pestaña **Vista previa** para ejecutar el informe. Observe el cuadro de entrada de parámetros en la parte superior del informe. Puede:  
   
     -   Haga clic en Ver informe para ver el informe completo sin usar un parámetro.  
   
@@ -103,13 +103,13 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>Volver a implementar el informe  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Volver a implementar el informe  
   
 1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección "Para publicar el informe en el servidor de informes (opcional)" de la [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  En la barra de herramientas, haga clic en **Generar** y, a continuación, haga clic en **Tutorial de implementación**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 + Configuró correctamente el informe para obtener datos usando credenciales almacenadas y los datos se pueden filtrar con un parámetro. 
 + En la siguiente lección, configurará la suscripción mediante las páginas del portal web Suscripción controlada por datos. Consulte la [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   

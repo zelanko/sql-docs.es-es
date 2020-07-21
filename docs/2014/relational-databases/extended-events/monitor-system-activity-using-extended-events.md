@@ -10,15 +10,14 @@ helpviewer_keywords:
 - xe
 - extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4890c043f64c359e5cc4ddd5b11d01dfb3756a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638729"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027324"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Supervisar la actividad del sistema mediante eventos extendidos
   En el siguiente procedimiento se muestra el uso de Extended Events con el Seguimiento de eventos para Windows (ETW) para supervisar la actividad del sistema. El procedimiento también muestra el uso de las instrucciones CREATE EVENT SESSION, ALTER EVENT SESSION y DROP EVENT SESSION.  
@@ -94,7 +93,7 @@ ms.locfileid: "62638729"
 7.  En el símbolo del sistema, ejecute los comandos siguientes para ver los datos ETW.  
   
     > [!NOTE]  
-    >  Para obtener ayuda sobre el comando **tracerpt** , escriba `tracerpt /?`en el símbolo del sistema.  
+    >   Para obtener ayuda sobre el comando **tracerpt** , en el símbolo del sistema, escriba `tracerpt /?`.  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -115,8 +114,8 @@ ms.locfileid: "62638729"
     go  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
  [Vistas de catálogo de eventos extendidos &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  

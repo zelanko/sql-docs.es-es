@@ -1,5 +1,6 @@
 ---
 title: Replicación transaccional punto a punto | Microsoft Docs
+description: En SQL Server, la replicación punto a punto proporciona una solución de escalabilidad horizontal y alta disponibilidad manteniendo copias de datos en varias instancias de servidor.
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710721"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901244"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Replicación transaccional punto a punto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   La replicación punto a punto proporciona una solución escalada y de alta disponibilidad manteniendo copias de datos en varias instancias de servidor, también denominadas *nodos*. Generada en la base de replicación transaccional, la replicación punto a punto propaga transaccionalmente los cambios coherentes en tiempo casi real. Esto permite a las aplicaciones que requieran una escalada de las operaciones de lectura distribuir las lecturas de los clientes en varios nodos. Dado que los datos se mantienen en los nodos en tiempo casi real, la replicación punto a punto proporciona redundancia de datos, lo que aumenta la disponibilidad de los mismos.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "71710721"
  En los siguientes escenarios se ilustran los usos típicos de la replicación punto a punto.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topología en la que participan dos bases de datos  
- ![Replicación punto a punto: dos nodos](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Replicación punto a punto: dos nodos")  
+ ![Replicación punto a punto, dos nodos](../../../relational-databases/replication/transactional/media/repl-multinode-01.gif "Replicación punto a punto, dos nodos")  
   
  En las ilustraciones anteriores se muestran dos bases de datos participantes, con tráfico de usuario dirigido a las bases de datos a través de un servidor de aplicaciones. Esta configuración se puede usar en varias aplicaciones, desde sitios web hasta aplicaciones de grupos de trabajo, y proporciona las siguientes ventajas:  
   
@@ -68,7 +69,7 @@ ms.locfileid: "71710721"
  La replicación punto a punto puede admitir este método, pero el ejemplo de actualización centralizada de la derecha también se utiliza frecuentemente con la replicación transaccional estándar.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topología en la que participan tres o más bases de datos  
- ![Replicación punto a punto en ubicaciones dispersas](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Replicación punto a punto en ubicaciones dispersas")  
+ ![Replicación punto a punto a ubicaciones dispersas](../../../relational-databases/replication/transactional/media/repl-multinode-02.gif "Replicación punto a punto a ubicaciones dispersas")  
   
  En la ilustración anterior se muestran tres bases de datos participantes que proporcionan datos para una organización de soporte de software internacional, con oficinas en Los Ángeles, Londres y Taipei. Los ingenieros de soporte de cada oficina reciben llamadas de clientes e incluyen y actualizan la información de las llamadas de los clientes. Las zonas horarias de las tres oficinas tienen una diferencia de ocho horas, por lo que no se superponen en la jornada laboral. Cuando la oficina de Taipei cierra, se abre la oficina de Londres. Si hay una llamada en curso cuando se cierra una oficina, la llamada se transfiere a un representante de la siguiente oficina abierta.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "71710721"
   
 -   Alta disponibilidad en caso de error o para permitir el mantenimiento en una o más de las bases de datos participantes.  
   
-     ![Replicación punto a punto: tres y cuatro nodos](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Replicación punto a punto: tres y cuatro nodos")  
+     ![Replicación punto a punto, tres y cuatro nodos](../../../relational-databases/replication/transactional/media/repl-multinode-04.gif "Replicación punto a punto, tres y cuatro nodos")  
   
  La ilustración anterior muestra la adición de un nodo a la topología de tres nodos. Se podría agregar un nodo en este escenario por las razones siguientes:  
   
@@ -158,7 +159,7 @@ ms.locfileid: "71710721"
   
 ||Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
-|Agregar un nodo a la topología|Dos nodos en una topología completa: no es necesario aplicar inactividad. Utilice `sync_type = 'initialize with backup'`.|Más de dos nodos: es necesario aplicar inactividad.|`sync_type = 'replication support only'`: es necesario aplicar inactividad.|`sync_type = 'initialize with backup'` y `'initialize from lsn'`: no es necesario aplicar inactividad.|  
+|Agregar un nodo a la topología|Dos nodos en una topología completa: no es necesario aplicar inactividad. Mediante `sync_type = 'initialize with backup'`.|Más de dos nodos: es necesario aplicar inactividad.|`sync_type = 'replication support only'`: es necesario aplicar inactividad.|`sync_type = 'initialize with backup'` y `'initialize from lsn'`: no es necesario aplicar inactividad.|  
   
  Los cambios de esquema de la topología (agregar o quitar un artículo) requieren la aplicación de inactividad. Para obtener más información, consulte [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md).  
   

@@ -1,5 +1,6 @@
 ---
 title: Conservar el formato de fecha para Analysis Services en los informes para dispositivos móviles | Reporting Services | Microsoft Docs
+description: En el Publicador de informes móviles, agregue una medida a un conjunto de datos compartido en el Generador de informes para que las fechas de los orígenes de datos de Analysis Services conserven su tipo de datos.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 17294f4e7f26b3402655e0033cddedeb7bc69a3c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503002"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448457"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>Conservar el formato de fecha para Analysis Services en los informes para dispositivos móviles
 Agregue una medida a un conjunto de datos compartido en el Generador de informes para que las fechas de los orígenes de datos de [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] conserven su tipo de datos en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)].
@@ -36,7 +37,7 @@ Para solucionar esto, agregue un miembro calculado al crear un conjunto de datos
 
    ![ssas-query-designer-calculated-member-report-builder](../../reporting-services/mobile-reports/media/ssas-query-designer-calculated-member-report-builder.png) 
    
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
--  [Datos para informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
--  [Preparar datos para informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
+-  [Datos para informes móviles de Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Preparación de datos para informes móviles de Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

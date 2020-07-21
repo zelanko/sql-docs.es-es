@@ -1,5 +1,5 @@
 ---
-title: Herramientas de implementación y administración de Integration Services (SSIS) | Microsoft Docs
+title: Herramientas de desarrollo y administración | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ef390245e632b3e2c39bcc9ab27450839dcab2e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8df702e1b77a551e1073e4d5834535e27b4ea43f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284366"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903854"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>Herramientas de implementación y administración de Integration Services (SSIS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "71284366"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrar paquetes en un entorno de producción.  
   
-## <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server  
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Al trabajar en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se pueden realizar las siguientes tareas:  
   
 -   Ejecutar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para crear paquetes básicos que copian datos de un origen en un destino.  

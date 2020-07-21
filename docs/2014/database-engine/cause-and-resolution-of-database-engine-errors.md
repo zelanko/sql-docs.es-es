@@ -1,5 +1,5 @@
 ---
-title: Causa y solución de base de datos del motor de errores | Microsoft Docs
+title: Causa y resolución de errores de Motor de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 3c52de15f5f5d06590b74182819804750a957e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea86bbaa7c998d6f32b48ac1b9a43a0366e36fd9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936066"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Causa y resolución de errores del motor de base de datos
   Este tema incluye información sobre la causa y la resolución de una serie de errores relacionados con [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -26,7 +25,7 @@ ms.locfileid: "66065190"
 ## <a name="reference"></a>Referencia  
  [Descripción de errores del motor de base de datos](../relational-databases/native-client-ole-db-errors/errors.md)  
   
-## <a name="see-also"></a>Vea también  
- [Eventos y errores del motor de base de datos](../relational-databases/errors-events/database-engine-events-and-errors.md)  
+## <a name="see-also"></a>Consulte también  
+ [Eventos y errores de Motor de base de datos](../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

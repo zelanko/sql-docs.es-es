@@ -1,5 +1,6 @@
 ---
 title: Procedimientos almacenados del sistema XML | Microsoft Docs
+description: Obtenga información sobre los procedimientos almacenados del sistema XML que proporciona SQL Server utilizados para escribir consultas con OPENXML.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b07b7f782c534c7d98e6e20047f58787fe32e8e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e3b6a8e61befce3dd68bd692976b25d0d9d7259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729759"
 ---
 # <a name="xml-system-stored-procedures"></a>Procedimientos almacenados del sistema XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQL Server proporciona los siguientes procedimientos almacenados que se utilizan junto con OPENXML:  
   
 -   [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  

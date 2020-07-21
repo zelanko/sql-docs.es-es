@@ -1,5 +1,5 @@
 ---
-title: 'Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS) | Microsoft Docs'
+title: 'Solucionar problemas de informes: Informes de mapa (Generador de informes) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,24 +8,24 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574476"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080842"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
     
    ## <a name="need-more-help"></a>¿Necesita ayuda?  
    
-  Pruebe:  
+  Pruebe lo siguiente:  
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) en Stack Overflow  
  * Registre un problema o sugerencia en [UserVoice de Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
 
   
-##  <a name="Embedded"></a> Problemas con el tamaño de la definición de informe  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a> Problemas con el tamaño de la definición de informe  
  Utilice esta sección para ayudar a resolver problemas relacionados con el tamaño de la definición de informe.  
   
 ## <a name="how-do-i-reduce-the-report-definition-size"></a>¿Cómo reduzco el tamaño de la definición de informe?  
@@ -49,7 +49,7 @@ ms.locfileid: "65574476"
   
  Los elementos de mapa de un informe de la Galería de mapas siempre se incrustarán en una capa de mapa.  
   
-##  <a name="Spatial"></a> Problemas con los datos espaciales  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a> Problemas con los datos espaciales  
  Utilice esta sección como ayuda para resolver problemas relacionados con los datos espaciales.  
   
 ## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>En la superficie de diseño, veo el ejemplo de datos espaciales  
@@ -100,7 +100,7 @@ ms.locfileid: "65574476"
   
 -   Si los datos espaciales proceden de una base de datos de SQL Server, cambie la consulta para utilizar funciones espaciales con el fin de limitar los datos a un área más pequeña.  
   
-##  <a name="Viewport"></a> Problemas de las vistas y del centro de las ventanillas  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a> Problemas de las vistas y del centro de las ventanillas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de las ventanillas.  
   
 ## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>No puedo establecer el centro y la vista en un elemento de mapa incrustado.  
@@ -122,7 +122,7 @@ ms.locfileid: "65574476"
   
 -   Incrustar los datos espaciales en el informe y eliminar las ubicaciones que no se desea incluir.  
   
-##  <a name="Layers"></a> Problemas con las capas  
+##  <a name="layer-issues"></a><a name="Layers"></a> Problemas con las capas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de las capas.  
   
 ## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>No veo una o varias capas de un mapa.  
@@ -144,7 +144,7 @@ ms.locfileid: "65574476"
 ## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Establecí un filtro en la capa de mapa y no tiene ningún efecto.  
  Para filtrar los datos de una capa, se debe especificar el tipo de datos de la expresión de filtro. Compruebe que ha especificado el tipo de datos subyacente correcto para que la ecuación de filtro evalúe correctamente la condición especificada. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a> Problemas con la leyenda, la escala de colores y la regla  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a> Problemas con la leyenda, la escala de colores y la regla  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de regla, leyenda y escala de colores.  
   
 ## <a name="how-do-i-control-the-values-in-the-map-legend"></a>¿Cómo controlo los valores de la leyenda del mapa?  
@@ -175,7 +175,7 @@ ms.locfileid: "65574476"
   
  Para mostrar la escala de colores, especifique las reglas de colores para una capa o un elemento de mapa incrustado. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-##  <a name="Tile"></a> Problemas con el mosaico  
+##  <a name="tile-issues"></a><a name="Tile"></a> Problemas con el mosaico  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones del fondo de mosaico.  
   
 ## <a name="i-cannot-see-the-bing-maps-tile-background"></a>No puedo ver el fondo de mosaicos de Bing Maps.  
@@ -187,7 +187,7 @@ ms.locfileid: "65574476"
   
 -   La proyección del mapa debe ser **Mercator**.  
   
--   Para la vista previa local, debe tener acceso a Internet. Si el informe se ejecuta desde el servidor de informes, este debe configurarse para ser compatible con el fondo de mosaico. Para obtener más información, vea la sección sobre cómo planear la compatibilidad con los mapas, en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
+-   Para la vista previa local, debe tener acceso a Internet. Si el informe se ejecuta desde el servidor de informes, este debe configurarse para ser compatible con el fondo de mosaico. Para más información, consulte [Planeamiento de un informe de asignaciones](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para más información sobre cómo agregar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -196,7 +196,7 @@ ms.locfileid: "65574476"
   
  Para incluir una capa de mosaico sin texto, seleccione la vista **Aérea** .  
   
-##  <a name="Tooltip"></a> Problemas con la información sobre herramientas y las etiquetas  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a> Problemas con la información sobre herramientas y las etiquetas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de Información sobre herramientas o de etiquetas.  
   
 ## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Aparece un error de expresión sobre el ámbito del conjunto de datos al establecer una etiqueta o Información sobre herramientas en una expresión.  
@@ -206,6 +206,6 @@ ms.locfileid: "65574476"
   
 ## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas del Generador de informes](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Solucionar problemas del Generador de informes](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

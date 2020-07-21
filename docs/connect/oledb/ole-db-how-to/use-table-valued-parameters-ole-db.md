@@ -1,5 +1,5 @@
 ---
-title: Usar parámetros con valores de tabla (OLE DB) | Microsoft Docs
+title: Uso de parámetros con valores de tabla (OLE DB) | Microsoft Docs
 description: Usar parámetros con valores de tabla (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994596"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar parámetros con valores de tabla (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994596"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o posterior. En el ejemplo se realizan las tareas siguientes:  
+  En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o posterior. En este ejemplo se realizan lo siguientes pasos:  
   
 -   Se crean parámetros con valores de tabla usando la detección dinámica mediante IOpenRowset::OpenRowset.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "67994596"
   
 -   Se usan propiedades de parámetro personalizadas utilizando ISSCommandWithParameters.  
   
--   Muestra el control de errores para los errores MSOLEDBSQL.  
+-   Muestra el control de errores de los errores de MSOLEDBSQL.  
   
- Para obtener más información sobre los parámetros con valores de tabla, consulte [parámetros &#40;con valores de tabla&#41;OLE DB driver for SQL Server](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Para más información sobre los parámetros con valores de tabla, consulte [Parámetros con valores de tabla &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) crea la base de datos que se usa en el ejemplo.  

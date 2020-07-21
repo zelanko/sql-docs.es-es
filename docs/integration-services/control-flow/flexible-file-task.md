@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 83ef614593641b762a628838354a6a3bef9dfadd
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807414"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607854"
 ---
 # <a name="flexible-file-task"></a>Tarea de archivo flexible
 
@@ -44,18 +44,19 @@ Para la operación de **copia**, están disponibles las propiedades siguientes.
 - **SourceConnectionType:** especifica el tipo del administrador de conexiones de origen.
 - **SourceConnection:** especifica el administrador de conexiones de origen.
 - **SourceFolderPath:** especifica la ruta de acceso a la carpeta de origen.
-- **SourceFileName:** especifica el nombre de archivo de origen. Si se deja en blanco, se copiará en la carpeta de origen.
+- **SourceFileName:** especifica el nombre de archivo de origen. Si se deja en blanco, se copiará en la carpeta de origen. Se permiten los siguientes caracteres comodín en el nombre del archivo de origen: `*` (coincide con cero o más caracteres), `?` (coincide con cero o un solo carácter) y `^` (carácter de escape).
 - **SearchRecursively:** especifica si las subcarpetas se copian recursivamente.
 - **DestinationConnectionType:** especifica el tipo del administrador de conexiones de destino.
 - **DestinationConnection:** especifica el administrador de conexiones de destino.
 - **DestinationFolderPath:** especifica la ruta de acceso a la carpeta de destino.
-- **DestinationFileName:** especifica el nombre de archivo de destino.
+- **DestinationFileName:** especifica el nombre de archivo de destino. Si se deja en blanco, se usarán los nombres de archivo de origen.
 
 Para la operación de **eliminación**, están disponibles las propiedades siguientes.
 - **ConnectionType:** especifica el tipo del administrador de conexiones.
 - **Connection:** especifica el administrador de conexiones.
 - **FolderPath:** especifica la ruta de acceso a la carpeta.
-- **FileName:** especifica el nombre de archivo. Si se deja en blanco, se eliminará la carpeta. En Azure Blob Storage no se admite la eliminación de la carpeta.
+- **FileName:** especifica el nombre de archivo. Si se deja en blanco, se eliminará la carpeta. En Azure Blob Storage no se admite la eliminación de la carpeta. Se permiten los siguientes caracteres comodín en el nombre del archivo: `*` (coincide con cero o más caracteres), `?` (coincide con cero o un solo carácter) y `^` (carácter de escape).
+- **DeleteRecursively:** especifica si los archivos se eliminan de forma recursiva.
 
 ***Notas sobre la configuración de permisos de la entidad de servicio***
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25b7af05-2721-4b24-9083-fb671e8bf4e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47408b2b9559d33da4563c6fc9560d20338ee01d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004699"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
   La replicación por Internet puede proporcionar flexibilidad, en especial a los suscriptores móviles, pero debe configurarla de forma correcta para garantizar la seguridad adecuada. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda utilizar una de estas dos técnicas para compartir información de forma segura en Internet:  
@@ -37,8 +36,8 @@ ms.locfileid: "62960039"
 ## <a name="web-synchronization-through-iis"></a>Sincronización web mediante IIS  
  La opción de sincronización web en la replicación de mezcla proporciona la capacidad de replicar datos utilizando el protocolo HTTPS, que puede ser un método cómodo para replicar datos a través de un firewall. Para más información sobre la seguridad en la sincronización web, vea [Configure Web Synchronization](../configure-web-synchronization.md) (Configurar la sincronización web) y [Security Architecture for Web Synchronization](security-architecture-for-web-synchronization.md) (Arquitectura de seguridad para la sincronización web).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)  
+ [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)  
   
   

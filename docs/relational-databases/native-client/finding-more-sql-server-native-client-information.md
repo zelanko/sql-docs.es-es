@@ -1,5 +1,5 @@
 ---
-title: Buscar más información sobre cliente nativo de SQL Server | Documentos de Microsoft
+title: Buscar más información
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +10,17 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b025cad8d248c4a2e801010546e7443c42216a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 15ee24d21a770476d956b7265b3a204ad1c04717
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046761"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009803"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Buscar más información sobre SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y otros tipos de programación de acceso a datos, vea los siguientes recursos en línea:  
   
@@ -38,7 +36,7 @@ ms.locfileid: "68046761"
  El SDK de DAC para Windows incluye la documentación de Objetos de datos ActiveX (ADO), OLE DB y Conectividad abierta de bases de datos (ODBC).  
   
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

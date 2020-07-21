@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Adición y configuración del contenedor de bucles Foreach | Microsoft Docs'
+title: 'Paso 2: Agregar y configurar el contenedor de bucles Para cada uno | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 77aac43aa6fc00a408c049ea7f6d078417a8d4dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767527"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440622"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Paso 2: Adición y configuración del contenedor de bucles Foreach
   En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
@@ -24,9 +23,9 @@ ms.locfileid: "62767527"
   
  Actualmente, el administrador de conexiones de archivos planos de la lección 1 se conecta a un único archivo plano específico. Para conectarse de forma iterativa a cada uno de los archivos planos de la carpeta, deberá configurar el contenedor de bucles Foreach y el administrador de conexiones de archivos planos de este modo:  
   
--   **Contenedor de bucles Foreach:** asignará el valor enumerado del contenedor a una variable de paquete definida por el usuario. El contenedor utilizará esta variable definida por el usuario para modificar de forma dinámica la propiedad `ConnectionString` del administrador de conexiones de archivos planos y conectar de forma iterativa cada uno de los archivos planos de la carpeta.  
+-   **Contenedor de bucles Foreach:** Asignará el valor enumerado del contenedor a una variable de paquete definida por el usuario. El contenedor utilizará esta variable definida por el usuario para modificar de forma dinámica la propiedad `ConnectionString` del administrador de conexiones de archivos planos y conectar de forma iterativa cada uno de los archivos planos de la carpeta.  
   
--   **Administrador de conexiones de archivos planos:** Modificará el Administrador de conexiones que se creó en la lección 1 mediante el uso de una variable definida por el usuario para rellenar el Administrador de conexiones `ConnectionString` propiedad.  
+-   **Administrador de conexiones de archivos planos:** Modificará el administrador de conexiones creado en la lección 1 mediante una variable definida por el usuario para rellenar la propiedad del administrador de conexiones `ConnectionString` .  
   
  En los procedimientos de esta tarea se muestra cómo crear y modificar el contenedor de bucles Foreach para utilizar una variable de paquete definida por el usuario y agregar la tarea de flujo de datos al bucle. Aprenderá a modificar el administrador de conexiones de archivos planos para utilizar una variable definida por el usuario en la siguiente tarea.  
   
@@ -43,9 +42,9 @@ ms.locfileid: "62767527"
   
 3.  Haga clic con el botón derecho en el **Contenedor de bucles Foreach** que acaba de agregar y seleccione **Editar**.  
   
-4.  En el **Editor de bucles Foreach** cuadro de diálogo el **General** página, para **nombre**, escriba `Foreach File in Folder`. Haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Editor de bucles foreach** , en la página **General** , en **nombre**, escriba `Foreach File in Folder` . Haga clic en **OK**.  
   
-5.  Haga clic en el contenedor de bucles Foreach, haga clic en **propiedades**y en la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** .  
+5.  Haga clic con el botón secundario en el contenedor de bucles foreach, haga clic en **propiedades**y, en el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)**.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Para configurar el enumerador para el contenedor de bucles Foreach  
   
@@ -63,9 +62,9 @@ ms.locfileid: "62767527"
   
     1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
+    2.  Haga clic en la pestaña **descargas** .  
   
-    3.  Haga clic en el hipervínculo "http://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012. Archivo Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
+    3.  Haga clic en el hipervínculo " https://msftisprodsamples.codeplex.com/downloads/get/578097 " SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip archivo.  
   
 6.  En el cuadro **Archivos**, escriba **Currency_\*.txt**.  
   
@@ -73,26 +72,25 @@ ms.locfileid: "62767527"
   
 1.  Haga clic en **Asignaciones de variables**.  
   
-2.  En la página **Asignaciones de variables**, en la columna **Variable**, haga clic en la celda vacía y seleccione **\<Nueva variable…>** .  
+2.  En la página **asignaciones de variables** , en la columna **variable** , haga clic en la celda vacía y seleccione **\<New Variable...>** .  
   
-3.  En el **agregar Variable** cuadro de diálogo para **nombre**, tipo `varFileName`.  
+3.  En el cuadro de diálogo **Agregar variable** , en **nombre**, escriba `varFileName` .  
   
     > [!IMPORTANT]  
     >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  Haga clic de nuevo en **Aceptar** para salir del cuadro de diálogo **Editor de bucles Foreach** .  
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>Para agregar la tarea de flujo de datos al bucle  
   
--   Arrastre el **Extract Sample Currency Data** tarea de flujo de datos en el contenedor de bucles Foreach que ahora se denomina `Foreach File in Folder`.  
+-   Arrastre la tarea de flujo de datos **Extract Sample Currency Data** al contenedor de bucles foreach cuyo nombre ha cambiado `Foreach File in Folder` .  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
  [Paso 3: Modificación del Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>Vea también  
- [Configurar un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar un contenedor de bucles foreach](control-flow/foreach-loop-container.md)   
  [Usar variables en paquetes](use-variables-in-packages.md)  
-  
   

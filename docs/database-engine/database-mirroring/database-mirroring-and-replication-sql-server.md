@@ -1,5 +1,6 @@
 ---
 title: Replicación y creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo utilizar la creación de reflejo de la base de datos conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 8d54e8831218a64d854ae6b42955f59de8728518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789691"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
   
  La conmutación por error de replicación en un reflejo se admite totalmente para las bases de datos de publicación, con compatibilidad limitada con las bases de datos de suscripciones. La creación de reflejo de la base de datos no se admite para la base de datos de distribución. Para obtener información sobre la recuperación de una base de datos de distribución o una base de datos de suscripciones sin necesidad de volver configurar la replicación, vea [Back Up and Restore Replicated Databases (Realizar copias de seguridad y restaurar bases de datos replicadas)](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).   
@@ -92,11 +93,11 @@ ms.locfileid: "68661430"
   
      El Agente de distribución y el Control ActiveX de distribución de SQL no tienen este parámetro porque no se conectan al publicador.  
   
-     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para obtener más información, vea:  
+     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para más información, consulte:  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      Se recomienda agregar el parámetro **-PublisherFailoverPartner** a un perfil de agente y, después, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
   

@@ -1,6 +1,7 @@
 ---
-title: Suscripciones actualizables para la replicación transaccional | Microsoft Docs
-ms.custom: ''
+title: Suscripciones actualizables (transaccional)
+description: Describe la característica de suscripciones actualizables disponible para la replicación transaccional en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2dca69a0378f8e5cf1aa6006ec0ef7a905639507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aac257eefed1d3c04054c0369fc4d503e2daf05d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883202"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Suscripciones actualizables para la replicación transaccional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!NOTE]  

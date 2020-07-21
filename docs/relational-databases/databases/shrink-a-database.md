@@ -1,5 +1,6 @@
 ---
 title: Reducir una base de datos | Microsoft Docs
+description: Obtenga información sobre cómo reducir una base de datos con un objeto de SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715509"
 ---
 # <a name="shrink-a-database"></a>Reducir una base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo reducir una base de datos mediante objetos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La reducción de los archivos de datos permite recuperar espacio moviendo páginas de datos del final del archivo a espacio desocupado próximo al principio del archivo. Cuando se crea suficiente espacio libre al final del archivo, las páginas de datos situadas al final del archivo pueden desasignarse y devolverse al sistema de archivos.  
@@ -50,9 +51,9 @@ ms.locfileid: "72909617"
   
 -   **Seguimiento:**  [reducir una base de datos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El tamaño de la base de datos no puede ser menor que el tamaño mínimo de la base de datos. El tamaño mínimo es el tamaño especificado cuando se creó la base de datos o el último tamaño establecido explícitamente mediante una operación de modificación del tamaño del archivo, como DBCC SHRINKFILE. Por lo tanto, si se creó una base de datos con un tamaño de 10 MB y ha crecido hasta llegar a 100 MB, solo podrá reducirla hasta un tamaño de 10 MB, aunque se hayan eliminado todos los datos de la base de datos.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "72909617"
   
 -   DBCC SHRINKDATABASE producirá un error cuando encuentra un índice de almacén de columnas optimizado de memoria xVelocity. El trabajo realizado antes de encontrar el índice de almacén de columnas se llevará a cabo correctamente, por lo que es posible que la base de datos sea más pequeña. Para completar DBCC SHRINKDATABASE, deshabilite todos los índices de almacén de columnas antes de ejecutar DBCC SHRINKDATABASE y, a continuación, vuelva a generar los índices de almacén de columnas.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Para ver la cantidad actual de espacio disponible (sin asignar) en la base de datos. Para obtener más información, consulte [Mostrar la información del espacio ocupado por los datos y el registro de una base de datos](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
@@ -74,12 +75,12 @@ ms.locfileid: "72909617"
   
     -   A menos que tenga un requisito específico, no establezca la opción de base de datos AUTO_SHRINK en ON.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>Para reducir una base de datos  
   
@@ -104,9 +105,9 @@ ms.locfileid: "72909617"
      **Cantidad máxima de espacio disponible en los archivos tras la reducción**  
      Especifique el porcentaje máximo de espacio disponible que se va a dejar en los archivos de base de datos después de reducirla. Los valores válidos están comprendidos entre 0 y 99.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Para reducir una base de datos  
   
@@ -118,7 +119,7 @@ ms.locfileid: "72909617"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> Seguimiento: después de reducir una base de datos  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a> Seguimiento: después de reducir una base de datos  
  Los datos que se mueven para reducir un archivo se pueden dispersar en cualquier ubicación disponible en el archivo. Esto produce la fragmentación de índices y puede reducir el rendimiento de las consultas que buscan un intervalo del índice. Para eliminar la fragmentación, considere la posibilidad de volver a generar los índices en el archivo después de la reducción.  
   
 ## <a name="see-also"></a>Consulte también  

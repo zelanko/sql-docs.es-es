@@ -1,11 +1,11 @@
 ---
-title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+title: Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor
@@ -20,20 +20,20 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: f94cc3ccd0278a3ae2f46707f2680f8d198db58a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70873919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627309"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 minutos (128 archivos en total) de las estadísticas de grupos de recursos para un Azure SQL Database.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|Identificador del grupo de recursos. No admite valores NULL.
 |**name**|sysname|Nombre del grupo de recursos. No admite valores NULL.|
@@ -84,26 +84,26 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 |**max_vcores**|decimal (5, 2)|La configuración actual del ancho banda de la CPU promedio máximo permitido para todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU.  En unidad de núcleos virtuales|
 |**cap_vcores**|decimal (5, 2)|El límite máximo de ancho de banda de la CPU que recibirán todas las solicitudes en el grupo de recursos.  En unidad en núcleos virtuales|
 |**instance_cpu_count**|int|Número de CPU configuradas para la instancia|
-|**instance_cpu_percent|decimal (5, 2)|Porcentaje de CPU configurado para la instancia|
+|**instance_cpu_percent**|decimal (5, 2)|Porcentaje de CPU configurado para la instancia|
 |**instance_vcores**|decimal (5, 2)|Número de núcleos virtuales configurados para la instancia|
 |**delta_log_bytes_used**|decimal (5, 2)|Generación total de registros (en bytes) en el nivel de grupo desde la última instantánea|
 |**avg_login_rate_percent**|decimal (5, 2)|Número de inicios de sesión desde la última instantánea, en comparación con el límite de inicio de sesión|
 |**delta_vcores_used**|decimal (5, 2)|Uso de Compute en el recuento de núcleos virtuales desde la última instantánea.|
-|**cap_vcores_used_percent**|decimal (5, 2)|Uso de proceso promedio en porcentaje del límite del grupo.|
+|**cap_vcores_used_percent**|decimal (5, 2)|Uso de proceso medio en porcentaje del límite del grupo.|
 |**instance_vcores_used_percent**|decimal (5, 2)|Uso de proceso promedio en porcentaje del límite de la instancia de SQL.|
-|**avg_data_io_percent**|decimal (5, 2)|Uso de e/s promedio en porcentaje según el límite del grupo.|
-|**avg_log_write_percent**|decimal (5, 2)|Uso de recursos de escritura promedio en porcentaje del límite del grupo.|
+|**avg_data_io_percent**|decimal (5, 2)|Uso de E/S medio en porcentaje basado en el límite del grupo.|
+|**avg_log_write_percent**|decimal (5, 2)|Uso de recursos de escritura medio en porcentaje del límite del grupo.|
 |**avg_storage_percent**|decimal (5, 2)|Uso de almacenamiento medio en porcentaje del límite de almacenamiento del grupo.|
-|**avg_allocated_storage_percent**|decimal (5, 2)|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico. Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico. Para obtener más información, consulte: Administración del espacio de archivo en SQL Database|
-|**max_worker_percent**|decimal (5, 2)|Número máximo de trabajos simultáneos (solicitudes) en porcentaje según el límite del grupo.|
-|**max_session_percent**|decimal (5, 2)|Número máximo de sesiones simultáneas en porcentaje según el límite del grupo.|
+|**avg_allocated_storage_percent**|decimal (5, 2)|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico. Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico. Para obtener más información, vea Administración del espacio de archivo en SQL Database.|
+|**max_worker_percent**|decimal (5, 2)|Cantidad máxima de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del grupo.|
+|**max_session_percent**|decimal (5, 2)|Cantidad máxima de sesiones simultáneas en porcentaje basado en el límite del grupo.|
 |||
 
 ## <a name="permissions"></a>Permisos
 
 Esta vista requiere el permiso VIEW SERVER STATE.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los usuarios pueden tener acceso a esta vista de administración dinámica para supervisar el consumo de recursos casi en tiempo real para el grupo de cargas de trabajo de usuario, así como los grupos internos del sistema de la instancia de Azure SQL Database.
 
@@ -132,8 +132,8 @@ select snapshot_time, name, cap_vcores_used_percent,
     from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Límites de recursos de DTU de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Límites de recursos de núcleo virtual de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Límites de recursos de DTU de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Límites de recursos de núcleo virtual de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

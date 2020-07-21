@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ef55fb04372451cb3481956c2d30e4626427c49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de86e2b2b2bb958fcd57999bf8f7984078c3a48a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731179"
 ---
 # <a name="extended-static-geography-methods"></a>Métodos de geografía estáticos extendidos
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varias extensiones para los métodos de geografía estáticos de Open Geospatial Consortium (OGC).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67930396"
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos de agregado de geografía estáticos](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
- [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   

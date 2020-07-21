@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4931c3aff70758113b6a0250319d6dec722d8650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082002"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528761"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir el comportamiento de suma parcial (Asistente de Business Intelligence)
   Use la página **Definir el comportamiento de suma parcial** para habilitar o deshabilitar el comportamiento de suma parcial en medidas. Este comportamiento determina cómo se agregan a una dimensión de tiempo las medidas que contiene un cubo.  
@@ -29,21 +28,21 @@ ms.locfileid: "66082002"
  **Desactivar el comportamiento de suma parcial**  
  Deshabilita el comportamiento de suma parcial en todas las medidas del cubo.  
   
- **El asistente ha detectado el \<nombre de la dimensión > dimensión de cuenta, que contiene miembros semiaditivos. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
+ **El asistente ha detectado la \<dimension name> dimensión de cuenta, que contiene miembros de suma parcial. El servidor agregará los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
  Habilita el comportamiento de suma parcial para las dimensiones de cuentas que contienen miembros de suma parcial. Al seleccionar esta opción, la función de agregación de todas las medidas de los grupos de medida que hacen referencia a la dimensión de cuentas se establece en `ByAccount`.  
   
  Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
   
- **Definir el comportamiento de suma parcial para medidas individuales**  
+ **Definir el comportamiento de suma parcial para miembros individuales**  
  Habilita el comportamiento de suma parcial y especifica la función de agregación de suma parcial para medidas específicas. La función de agregación se aplica a todas las dimensiones a las que se hace referencia en el grupo de medida que contiene la medida.  
   
- **Medidas**  
+ **Cuantas**  
  Muestra el nombre de la medida que contiene el cubo.  
   
  **Función de suma parcial**  
  Seleccione la función de agregación para la medida seleccionada. En la tabla siguiente se enumeran las funciones de agregación disponibles.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Se agrega devolviendo el promedio de los miembros secundarios de la medida.|  
 |`ByAccount`|Se agrega mediante la función de agregación asociada con el tipo de cuenta especificado de un atributo en una dimensión de cuentas.|  
@@ -55,15 +54,15 @@ ms.locfileid: "66082002"
 |**LastNonEmpty**|Se agrega devolviendo el último miembro no vacío de la medida en una dimensión de tiempo.|  
 |`Max`|Se agrega mediante la función `Max`.|  
 |`Min`|Se agrega mediante la función `Min`.|  
-|**Ninguno**|No se realiza ningún tipo de agregación.|  
+|**None**|No se realiza ningún tipo de agregación.|  
 |`Sum`|Se agrega mediante la función `Sum`.|  
   
 > [!NOTE]  
 >  Las selecciones realizadas para esta opción solo se aplican si se ha seleccionado **Define semiadditive behavior for individual members (Definir el comportamiento de suma parcial para miembros individuales)** .  
   
-## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente de Business Intelligence (ayuda F1)](business-intelligence-wizard-f1-help.md)   
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Diseñador de dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4a7d33e8-e98a-49f5-8d4b-8224f3c8e22d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c40fac771d44445511810f2e0d9df041a6cfe700
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3b16fb8497464acb469fb1c9be12c7c58baa0af
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916129"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554000"
 ---
-# <a name="mssqlserver10773"></a>MSSQLSERVER_10773
+# <a name="mssqlserver_10773"></a>MSSQLSERVER_10773
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|10773|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|10773|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P3_HEKATON_PROC_IMP|  
 |Texto del mensaje|*construct* '*feature*'no se ha implementado con procedimientos almacenados compilados de forma nativa.|  

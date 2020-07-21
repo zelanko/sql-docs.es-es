@@ -1,5 +1,5 @@
 ---
-title: Revise los resultados de la reproducción | Microsoft Docs
+title: Revisar los resultados de la reproducción | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011585"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
-  Una vez que la característica de reproducción distribuida de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay**. Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Una vez que la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  El elemento XML `<ResultDirectory>` del archivo de configuración del cliente, `DReplayClient.xml`, ubicado en cada cliente, especifica la ubicación donde se almacenan los archivos de seguimiento de resultados. Los archivos de seguimiento del directorio de resultados del cliente se sobrescriben en cada reproducción.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "63149705"
 ## <a name="event-class-column-mapping"></a>Asignación de columnas de clase de eventos  
  La figura siguiente muestra las columnas del seguimiento de resultados que están disponibles para cada tipo de clase de eventos que se captura durante la reproducción.  
   
- ![Event class column mapping](../../database-engine/media/eventclassmappings.gif "Event class column mapping")  
+ ![Asignación de columnas de clase de eventos](../../database-engine/media/eventclassmappings.gif "Asignación de columnas de clase de eventos")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Descripciones de columna para el seguimiento de resultados  
  En la tabla siguiente se describen las columnas de los datos de seguimiento de resultados.  
@@ -62,7 +61,7 @@ ms.locfileid: "63149705"
 |EventSequence|`bigint`|Para los errores de proveedor y los errores internos y advertencias, este es el flujo de eventos de captura que corresponde al error o advertencia.<br /><br /> Para todas las demás clase de eventos, esta es la secuencia del evento en los datos de seguimiento originales.|2|  
 |ReplaySequence|`bigint`|Para los errores de proveedor y los errores internos y advertencias, esta es el flujo de eventos de reproducción que corresponde al error o advertencia.<br /><br /> Para todas las demás clases de eventos, esta es la secuencia del evento que se asignó durante la reproducción.|3|  
 |TextData|`ntext`|El contenido de TextData depende de EventClass.<br /><br /> En Audit Login y ExistingConnection, estas son las opciones de conjunto para la conexión.<br /><br /> En SQL:BatchStarting, este es el cuerpo de la solicitud del lote.<br /><br /> En RPC:Starting, este es el procedimiento almacenado al que se llamó.<br /><br /> En el evento de configuración de reproducción, esta columna contiene los valores que se definen en el archivo de configuración de reproducción.<br /><br /> En el evento de estadísticas de reproducción, esto contiene la información siguiente:<br />El servidor SQL Server del destino de reproducción<br />El número total de eventos reproducibles<br />El número de errores de proveedor<br />El número de errores internos<br />Advertencias internas<br />Número total de errores<br />Tasa de paso general<br />El tiempo de reproducción (HH:MM:SS:MMM)<br /><br /> En el evento de reproducción de conjunto de resultados, esto muestra la lista de encabezados de columna de resultados devueltos.<br /><br /> En el evento de reproducción de fila de resultados, esto muestra el valor devuelto de todas las columnas para esa fila.<br /><br /> En la advertencia interna de reproducción y el error de proveedor de reproducción, esta columna contiene las advertencias o errores de proveedor.|4|  
-|Attention|`bigint`|La duración de la atención (en microsegundos) para el evento. Esto se calcula a partir del evento de atención del seguimiento de captura. Si no se ha especificado el tiempo de espera de consulta para el evento, esta columna no está rellena (es null).|5|  
+|Atención|`bigint`|La duración de la atención (en microsegundos) para el evento. Esto se calcula a partir del evento de atención del seguimiento de captura. Si no se ha especificado el tiempo de espera de consulta para el evento, esta columna no está rellena (es null).|5|  
 |SubmitTime|`datetime`|La hora en que el evento se envió a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|6|  
 |IsSuccessful|`int`|Una marca booleana que indica si un evento determinado se ejecutó correctamente y que los conjuntos de resultados se devolvieron al lado cliente.<br /><br /> Un evento que genera una advertencia (por ejemplo, cuando se cancela un evento debido a un evento de atención o al tiempo de espera especificado por el usuario) se considera correcto.<br /><br /> IsSuccessful puede ser uno de los valores siguientes:<br /><br /> 1 = correcto<br /><br /> 0 = error|7|  
 |Duration [microsegundos]|`bigint`|Duración del tiempo de respuesta (en microsegundos) para el evento. La medición comienza cuando se envía el evento logon/log off/RPC/Language a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Si el evento se ejecuta correctamente, la medición comienza cuando se ha consumido el conjunto de resultados completo.<br /><br /> Si el evento no se ejecuta correctamente, la medición finaliza en el momento del error o cancelación del evento.|8|  
@@ -76,7 +75,7 @@ ms.locfileid: "63149705"
 |ReplayHostName|`nvarchar`|El nombre del equipo en el que se ejecuta el cliente durante la reproducción.|16|  
 |ApplicationName|`nvarchar`|El nombre de la aplicación cliente que creó la conexión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante la captura.|17|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](distributed-replay-requirements.md)   
  [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   

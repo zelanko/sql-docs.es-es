@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918184"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754365"
 ---
 # <a name="maxrecords-property-example-vb"></a>Ejemplo de la propiedad MaxRecords (VB)
-Este ejemplo se usa el [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propiedad para abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los títulos más caros 10 en el ***títulos*** tabla.  
+En este ejemplo se usa la propiedad [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los 10 títulos más caros en la tabla ***titles*** .  
   
 ```  
 'BeginMaxRecordsVB  
@@ -87,6 +87,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

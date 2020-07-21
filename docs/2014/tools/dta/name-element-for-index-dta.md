@@ -1,5 +1,5 @@
 ---
-title: Nombre de elemento para el índice (DTA) | Microsoft Docs
+title: Name (DTA, elemento de index) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbf267591ccd85b31bd8436a773e2337e292d0b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72db4beceba50cac053e3d3a6fcadafa3cf28663
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62866220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011514"
 ---
 # <a name="name-element-for-index-dta"></a>Name (DTA, elemento de Index)
   Establece un nombre para un índice en la configuración especificada por el usuario.  
@@ -51,7 +50,7 @@ ms.locfileid: "62866220"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

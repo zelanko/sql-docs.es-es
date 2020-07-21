@@ -1,6 +1,8 @@
 ---
-title: Configuración de la replicación de SQL Server de recursos compartidos de carpetas de instantáneas en Linux
-description: En este artículo, se describe cómo configurar una replicación de SQL Server de recursos compartidos de carpetas de instantáneas en Linux.
+title: Configuración de la carpeta de instantáneas de replicación (puertos no predeterminados)
+titleSuffix: SQL Server on Linux
+description: Obtenga información sobre cómo configurar los recursos compartidos de la carpeta de instantáneas con puertos no predeterminados para la replicación de SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,23 +11,26 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882681"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>Configurar la replicación con puertos no predeterminados
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configuración de la replicación con puertos no predeterminados (SQL Server en Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Puede configurar la replicación con SQL Server en instancias de Linux que escuchen en cualquier puerto configurado con la opción network.tcpport mssql-conf. Si se cumplen las condiciones siguientes, es necesario anexar el puerto al nombre del servidor durante la configuración:
 
 1. En la configuración de replicación, se usa una instancia de SQL Server en Linux.
 2. Cualquier instancia (Windows o Linux) escucha en un puerto no predeterminado. 
 
-El nombre del servidor de una instancia se puede averiguar si se ejecuta @@servername en la instancia.
+El nombre del servidor de una instancia se puede averiguar si se ejecuta @@servername en la instancia. No use la dirección IP en lugar del nombre del servidor. El uso de la dirección IP para el publicador, el distribuidor o el suscriptor puede producir un error.
+
+> [!NOTE]
+> La creación de la replicación de SQL Server en Linux con un puerto no predeterminado solo funcionará con SQL Server 2019 y versiones posteriores.
 
 ## <a name="examples"></a>Ejemplos
 

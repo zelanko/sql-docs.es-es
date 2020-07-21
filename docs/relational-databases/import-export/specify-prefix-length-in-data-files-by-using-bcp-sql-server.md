@@ -1,6 +1,6 @@
 ---
-title: Especificar la longitud de prefijo en los archivos de datos mediante bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Especificación de la longitud de prefijo en archivos de datos con bcp
+description: En este artículo se describe el campo Prefijo, que codifica la longitud de un campo para proporcionar almacenamiento de archivo compacto para la exportación masiva en formato nativo a un archivo de datos.
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,15 +16,16 @@ ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58a3aa4fba82638e262800f458f4b7d73298ddfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e6692984d0383a671ed66b9a7b36032e185aea0b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062465"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003145"
 ---
-# <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar la longitud de prefijo en los archivos de datos mediante bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Especificación de la longitud de prefijo en archivos de datos con bcp (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Para proporcionar el almacenamiento en archivo más compacto para exportar de forma masiva datos en formato nativo a un archivo de datos, el comando **bcp** precede cada campo con uno o varios caracteres que indican la longitud del campo. Estos caracteres se denominan *caracteres de prefijo de longitud*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Petición bcp de longitud de prefijo  
@@ -43,7 +44,7 @@ ms.locfileid: "68062465"
 > [!IMPORTANT]  
 >  Cuando utilice el formato nativo, use prefijos de longitud en lugar de terminadores de campo. El formato de datos nativo puede entrar en conflicto con los terminadores porque en el formato de datos binario interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se almacena un archivo de datos en formato nativo.  
   
-##  <a name="PrefixLengthsExport"></a> Longitudes de prefijo para la exportación masiva  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Longitudes de prefijo para la exportación masiva  
   
 > [!NOTE]  
 >  El valor predeterminado que se proporciona en la solicitud de longitud de prefijo cuando exporta un campo indica la longitud de prefijo más eficaz para el campo.  
@@ -60,7 +61,7 @@ ms.locfileid: "68062465"
 |**nvarchar**|2|2|2|2|  
 |**text***|4|4|4|4|  
 |**ntext***|4|4|4|4|  
-|**binario**|2|2|2|2|  
+|**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
 |**datetime**|0|1|0|1|  
@@ -78,7 +79,7 @@ ms.locfileid: "68062465"
 |**bit**|0|1|0|1|  
 |**uniqueidentifier**|1|1|0|1|  
 |**timestamp**|1|1|1|1|  
-|**varchar(max)**|8|8|8|8|  
+|**ntext**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (un tipo de datos definido por el usuario)|8|8|8|8|  
 |**XML**|8|8|8|8|  
@@ -86,7 +87,7 @@ ms.locfileid: "68062465"
   
  \*Los tipos de datos **ntext**, **text**e **image** se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use **nvarchar(max)** , **varchar(max)** y **varbinary(max)** en su lugar.  
   
-##  <a name="PrefixLengthsImport"></a> Longitudes de prefijo para la importación masiva  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longitudes de prefijo para la importación masiva  
  Cuando los datos se importan de manera masiva, la longitud de prefijo es el valor que se especificó cuando se creó originalmente el archivo de datos. Si el archivo de datos no se creó con un comando **bcp** , probablemente no existan los caracteres de prefijo de longitud. En tal caso, especifique 0 como longitud de prefijo.  
   
 > [!NOTE]  

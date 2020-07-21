@@ -9,20 +9,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 80513addcc1683b6238734bd72c0ddee3608c61d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900007"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429972"
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos `Object`. Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
   
- Puede utilizar el destino de conjunto de registros en muchos escenarios diferentes. A continuación se muestran algunos ejemplos:  
+ Puede utilizar el destino de conjunto de registros en muchos escenarios diferentes. Estos son algunos ejemplos:  
   
 -   Puede usar una tarea Enviar correo y el lenguaje de expresiones [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para enviar un mensaje de correo personalizado por cada fila del conjunto de registros.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "62900007"
   
 1.  En la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , agregue una tarea Flujo de datos a la superficie de diseño.  
   
-2.  En la pestaña **Flujo de datos** tab, add an OLE DB source to the Flujo de datos task, and then open the **Editor de origen de OLE DB**.  
+2.  En la pestaña **Flujo de datos** pestaña, añadir un origen de OLE DB a la tarea de flujo de datos, y luego abrir el **Editor de origen de OLE DB.**  
   
 3.  En la página **Administrador de conexiones** del editor, configure el origen con los valores siguientes:  
   
@@ -121,7 +120,7 @@ ms.locfileid: "62900007"
   
 5.  Abra el **Editor de destino de conjunto de registros**y configure el destino con los valores siguientes:  
   
-    1.  En el **propiedades de componente** ficha, para `VariableName` propiedad, seleccione `User::BonusRecordset`.  
+    1.  En la pestaña **propiedades de componente** , en `VariableName` propiedad, `User::BonusRecordset` Seleccione.  
   
     2.  En la pestaña **Columnas de entrada** , seleccione las tres columnas disponibles.  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62900007"
   
 2.  Abra el **Editor de bucles Foreach**y configure el contenedor con los valores siguientes:  
   
-    1.  En el **colección** página, para **enumerador**, seleccione **enumerador de ADO para Foreach**y para **variable de origen de objeto ADO**, seleccione `User::BonusRecordset`.  
+    1.  En la página **colección** , en **enumerador**, seleccione **enumerador de ADO para foreach**y, en variable de origen de **objeto ADO**, seleccione `User::BonusRecordset` .  
   
-    2.  En el **asignaciones de variables** página, asigne `User::EmailAddress` al índice 0, `User::FirstName` al índice 1 y `User::Bonus` al índice 2.  
+    2.  En la página **asignaciones de variables** , asigne `User::EmailAddress` al índice 0, `User::FirstName` al índice 1 y `User::Bonus` al índice 2.  
   
 3.  En la pestaña **Flujo de control** , en el contenedor de bucles Foreach, agregue una tarea Enviar correo.  
   

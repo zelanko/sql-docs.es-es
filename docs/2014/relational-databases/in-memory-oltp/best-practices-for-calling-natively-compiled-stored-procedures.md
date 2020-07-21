@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f88ef6c0b39bb51e4c1ba54388b37e04983b00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050333"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Prácticas recomendadas para llamar a un procedimiento almacenado compilado de forma nativa
   Los procedimientos almacenados compilados de forma nativa:  
@@ -50,9 +49,9 @@ ms.locfileid: "63156773"
   
  Asimismo, puede detectar el uso de tipos no coincidentes a través del mismo XEvent `hekaton_slow_parameter_passing`, con `reason=parameter_conversion`.  
   
- Puesto que necesitará implementar lógica de reintentos cuando use tablas optimizadas para memoria (en varios escenarios), y como necesitará evitar ciertas limitaciones de la característica, puede ser conveniente crear un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado por el contenedor. Para obtener un ejemplo, vea [Guidelines for Retry Logic para las transacciones en tablas optimizadas para memoria](memory-optimized-tables.md).  
+ Puesto que necesitará implementar lógica de reintentos cuando use tablas optimizadas para memoria (en varios escenarios), y como necesitará evitar ciertas limitaciones de la característica, puede ser conveniente crear un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado por el contenedor. Para obtener un ejemplo, vea [instrucciones para la lógica de reintento para las transacciones en tablas optimizadas para memoria](memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

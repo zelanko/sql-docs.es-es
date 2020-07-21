@@ -1,5 +1,5 @@
 ---
-title: Stream eventos, métodos y propiedades del objeto | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto Stream | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c79f2b1e35b263c61f9af5b3e309b9b72a930d53
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930675"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759631"
 ---
-# <a name="stream-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto Stream
+# <a name="stream-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Stream
 ## <a name="properties"></a>Propiedades  
- [Propiedad del juego de caracteres](../../../ado/reference/ado-api/charset-property-ado.md)  
+ [Charset (propiedad)](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [Propiedad EOS](../../../ado/reference/ado-api/eos-property.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67930675"
  [Propiedad Type (objeto Stream de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Métodos  
- [Cancel (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [CANCEL (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Close (método)](../../../ado/reference/ado-api/close-method-ado.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67930675"
   
  [Open (método) (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
- [Método Read](../../../ado/reference/ado-api/read-method.md)  
+ [Read (método)](../../../ado/reference/ado-api/read-method.md)  
   
  [Método ReadText](../../../ado/reference/ado-api/readtext-method.md)  
   
@@ -62,12 +62,12 @@ ms.locfileid: "67930675"
   
  [Stat (método)](../../../ado/reference/ado-api/stat-method.md)  
   
- [Método Write](../../../ado/reference/ado-api/write-method.md)  
+ [Write (método)](../../../ado/reference/ado-api/write-method.md)  
   
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05bc721be827fc9f72317874d32de8815a38a412
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069633"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538167"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Seleccionar método de creación (Asistente para cubos)
   Use la página **Seleccionar método de creación** para especificar cómo se crea el cubo.  
@@ -33,7 +32,7 @@ ms.locfileid: "66069633"
 >  Esta opción solo está disponible cuando trabaja con un proyecto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y no está disponible cuando está conectado directamente a una base de datos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Generar tablas en el origen de datos**  
- Seleccione esta opción para crear en primer lugar un cubo primero y, a continuación, generar nuevas tablas en el origen de datos basado en la definición de cubo.  
+ Seleccione esta opción para crear en primer lugar un cubo primero y, a continuación, generar nuevas tablas en el origen de datos basado** en la definición de cubo.  
   
 > [!NOTE]  
 >  Para usar esta opción, debe tener permiso para crear objetos en el origen de datos subyacente.  
@@ -41,13 +40,13 @@ ms.locfileid: "66069633"
  Si selecciona esta opción, se habilitará la opción **Plantilla** .  
   
  **Plantilla**  
- Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo profesional específico.  
+ Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo** profesional específico.  
   
 > [!NOTE]  
 >  Esta opción solo está disponible cuando se ha activado la opción **Generar tablas en el origen de datos** .  
   
-## <a name="see-also"></a>Vea también  
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

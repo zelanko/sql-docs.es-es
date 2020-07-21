@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 561c0fc56e1f1749c57876f16c4d24dadfe4931d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024457"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
   Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -49,7 +48,7 @@ ms.locfileid: "63184546"
  **Servidores**  
  Muestra el cuadro de diálogo **Servidores** , que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md).  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del plan de mantenimiento. En los nuevos planes de mantenimiento, el nombre se especifica en un cuadro de diálogo antes de que se abra el diseñador de planes de mantenimiento. Para cambiar el nombre de un plan de mantenimiento, haga clic con el botón derecho en el plan en el Explorador de objetos y, luego, haga clic en **Cambiar nombre**.  
   
  **Descripción**  
@@ -68,7 +67,7 @@ ms.locfileid: "63184546"
   
  Después de que una tarea de mantenimiento se coloque en la superficie de diseño, sus propiedades pueden editarse cuando sea necesario. Por ejemplo, la base de datos específica de la que se va a hacer copia de seguridad en una tarea Copia de seguridad de la base de datos se especifica después de que la tarea se haya agregado al plan. Las tareas de la superficie de diseño que no se han configurado correctamente contienen un icono rojo con una x blanca.  
   
- Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, elija **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** . Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
+ Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, seleccione **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Vista**de**. Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
   
  Para eliminar una tarea de un plan, seleccione la tarea en la superficie del diseñador y pulse la tecla **SUPR** o haga clic con el botón derecho en la tarea y luego haga clic en **Eliminar**.  
   
@@ -86,13 +85,13 @@ ms.locfileid: "63184546"
  **Agregar anotación**  
  Agrega una nota descriptiva al área de diseño.  
   
- **Editar**  
+ **Edición**  
  Abre el cuadro de diálogo de propiedades de la tarea.  
   
  **Deshabilitar**  
  De esta manera, la tarea no está disponible temporalmente.  
   
- **Habilitar**  
+ **Habilitación**  
  Restaura una tarea deshabilitada.  
   
  **Grupo**  
@@ -113,7 +112,7 @@ ms.locfileid: "63184546"
  **Zoom**  
  Cambia el tamaño de las tareas en el área de diseño.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](maintenance-plans.md)   
  [Crear un plan de mantenimiento](create-a-maintenance-plan.md)  
   

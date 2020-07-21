@@ -1,6 +1,6 @@
 ---
-title: Reemplazo en archivos | Microsoft Docs
-ms.custom: ''
+title: Reemplazar en archivos
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -12,12 +12,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b53a95f29495388f31ca833b992f8afe3fd9450c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265983"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261684"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68265983"
 ## <a name="find-what"></a>Buscar  
  Estos controles de la pestaña **Reemplazar en archivos** permiten especificar la cadena o expresión para la búsqueda de coincidencias.  
   
- **Find what**  
+ **Buscar**  
  Escriba el texto que desea buscar. El cuadro de diálogo intentará rellenar el texto de búsqueda probable utilizando el texto seleccionado con el cursor antes de abrir el cuadro de diálogo, o bien texto cercano o texto que se haya buscado con anterioridad. Podrá reutilizar una de las últimas 20 cadenas de búsqueda seleccionándola en esta lista desplegable.  
   
  **[cadena con caracteres comodín]**  
@@ -40,7 +40,7 @@ ms.locfileid: "68265983"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Buscar** , estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se elige un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Buscar** .  
   
-## <a name="replace-with"></a>Reemplazar con  
+## <a name="replace-with"></a>Reemplazar por  
  Estos controles le permiten especificar qué debe insertarse en lugar de la cadena o expresión coincidente.  
   
  **Replace with**  
@@ -49,7 +49,7 @@ ms.locfileid: "68265983"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Reemplazar con** estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se hace clic un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Reemplazar con** .  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en el cuadro **Reemplazar con** y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Reemplazar todo**  
@@ -99,7 +99,7 @@ ms.locfileid: "68265983"
  **Solo palabras completas**  
  Cuando esta casilla se activa, las ventanas Resultados de la búsqueda solo mostrarán las instancias de la cadena especificada en **Buscar** cuyas palabras completas coincidan. Por ejemplo, una búsqueda de **MyObject** devolverá "MyObject", pero no devolverá "CMyObject" ni "MyObjectC".  
   
- **Usar**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
  **Regular Expressions**  
@@ -154,4 +154,4 @@ ms.locfileid: "68265983"
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

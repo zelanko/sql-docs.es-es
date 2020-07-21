@@ -1,10 +1,9 @@
 ---
-title: Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Temas de procedimientos de diseño de consultas y vistas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -21,12 +20,14 @@ helpviewer_keywords:
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8c5b0ae7cd72a7a2f6f3eb7fda9ac707d249829
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2b19f1152ad5db39d60592fb23d29234db0d00fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263810"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254674"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +52,7 @@ Describe lo que puede hacer con los resultados devueltos por una consulta o vist
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 Muestra temas en los que se trata la creación, modificación, ejecución y copia de consultas junto con temas básicos acerca de cómo clasificar, ordenar e imprimir los resultados de la búsqueda.  
   
-[Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 Muestra reglas y convenciones para crear consultas y procedimientos acerca de cómo utilizar los criterios para obtener unos resultados concretos.  
   
 [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  

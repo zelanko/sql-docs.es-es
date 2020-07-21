@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7dbb0c4b512741f97dbce2794c83d3667142324
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 662fcb31c7a633be5186f93943af318316e7ff8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296064"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900968"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lección 1: Creación de un proyecto y un paquete básico con SSIS
 
@@ -27,7 +27,7 @@ En esta lección, se crea un paquete ETL sencillo que extrae datos de un único 
   
 Antes de crear un paquete, debe entender el formato que se usa en los datos de origen y de destino. Después, estará listo para definir las transformaciones necesarias para asignar los datos de origen al destino.  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Este tutorial se basa en Microsoft SQL Server Data Tools, un conjunto de paquetes de ejemplo y una base de datos de ejemplo.
 
@@ -35,7 +35,7 @@ Este tutorial se basa en Microsoft SQL Server Data Tools, un conjunto de paquete
   
 * Para descargar todos los paquetes de la lección de este tutorial:
 
-    1.  Vaya a los [archivos de tutorial de Integration Services](https://www.microsoft.com/en-us/download/details.aspx?id=56827).
+    1.  Vaya a los [archivos de tutorial de Integration Services](https://www.microsoft.com/download/details.aspx?id=56827).
 
     2.  Haga clic en el botón **DOWNLOAD** (DESCARGAR).
 
@@ -50,7 +50,8 @@ En este tutorial, los datos de origen son un conjunto de datos de moneda histór
   
 Este es un ejemplo de los datos de origen del archivo SampleCurrencyData.txt:  
   
-<pre>1.00070049USD9/3/05 0:001.001201442  
+```
+1.00070049USD9/3/05 0:001.001201442  
 1.00020004USD9/4/05 0:001  
 1.00020004USD9/5/05 0:001.001201442  
 1.00020004USD9/6/05 0:001  
@@ -59,14 +60,15 @@ Este es un ejemplo de los datos de origen del archivo SampleCurrencyData.txt:
 1.00070049USD9/9/05 0:001.001502253  
 1.00070049USD9/10/05 0:000.99990001  
 1.00020004USD9/11/05 0:001.001101211  
-1.00020004USD9/12/05 0:000.99970009</pre>  
+1.00020004USD9/12/05 0:000.99970009
+```
   
 Cuando se trabaja con datos de origen de un archivo plano, es importante entender el modo en el que el administrador de conexiones de archivos planos interpreta los datos del archivo plano. Si el origen de archivo plano es Unicode, el administrador de conexiones de archivos planos define todas las columnas como [DT_WSTR], con un ancho de columna predeterminado de 50. Si el origen de archivo plano tiene la codificación ANSI, las columnas se definen como [DT_STR], con un ancho de columna predeterminado de 50. Es probable que tenga que cambiar estos valores predeterminados para que los tipos de columna de cadena sean más adecuados para los datos. Debe examinar el tipo de datos de destino y, después, elegir ese tipo en el Administrador de conexiones de archivos planos.  
   
 ## <a name="look-at-the-destination-data"></a>Examen de los datos de destino
 El destino de los datos de origen es una copia de la tabla de hechos **FactCurrencyRate** de **AdventureWorksDW**. La tabla de hechos **FactCurrencyRate** tiene cuatro columnas y tiene relaciones con dos tablas de dimensiones, como se muestra en la tabla siguiente.  
   
-|Nombre de la columna|Tipo de datos|Tabla de búsqueda|Columna de búsqueda|  
+|Nombre de columna|Tipo de datos|Tabla de búsqueda|columna de búsqueda|  
 |---------------|-------------|----------------|-----------------|  
 |AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
@@ -76,11 +78,11 @@ El destino de los datos de origen es una copia de la tabla de hechos **FactCurre
 ## <a name="map-the-source-data-to-the-destination"></a>Asignación de los datos de origen al destino  
 El análisis de los formatos de datos de origen y de destino indica que se necesitan búsquedas para los valores **CurrencyKey** y **DateKey**. Las transformaciones que realizan estas búsquedas obtienen esos valores mediante las claves alternativas de las tablas de dimensiones **DimCurrency** y **DimDate**.  
   
-|Columna de archivo plano|Nombre de tabla|Nombre de la columna|Tipo de datos|  
+|Columna de archivo plano|Nombre de la tabla|Nombre de columna|Tipo de datos|  
 |--------------------|--------------|---------------|-------------|  
-|0|FactCurrencyRate|AverageRate|float|  
+|0|FactCurrencyRate|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|Date|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrencyRate|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
@@ -88,7 +90,7 @@ Esta lección contiene las siguientes tareas:
   
 -   [Paso 1: Creación de un proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Paso 2: Incorporación y configuración de un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Paso 3: Adición y configuración de un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   

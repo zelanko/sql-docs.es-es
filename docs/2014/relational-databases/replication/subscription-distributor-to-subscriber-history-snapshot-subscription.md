@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b0b2e21176a050f98a284d3fb0627d6ce19e67b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998063"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (suscripción de instantánea)
   La pestaña **Historial de Distribuidor a suscriptor** muestra información detallada sobre el Agente de distribución, incluidos el estado, el historial, los mensajes informativos y cualquier mensaje de error.  
@@ -33,13 +32,13 @@ ms.locfileid: "62628780"
   
 -   Error  
   
--   Completada  
+-   Completado  
   
 -   Intentando de nuevo  
   
 -   En ejecución  
   
- **Start Time**  
+ **Hora de inicio**  
  Muestra la hora de inicio de la sesión.  
   
  **Hora de finalización**  
@@ -60,10 +59,10 @@ ms.locfileid: "62628780"
  **Detalles del error o mensaje de la sesión seleccionada**  
  Solo se muestra si la sesión seleccionada presenta un valor de **Error** en la columna **Estado** . El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
   
-## <a name="see-also"></a>Vea también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
+## <a name="see-also"></a>Consulte también  
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Supervisión de la replicación](monitoring-replication.md)   
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   
   

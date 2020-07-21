@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764281"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una tabla de cero, una o más filas para los documentos cuyo contenido de las columnas especificadas sea similar semánticamente a un documento indicado.  
   
@@ -44,7 +44,7 @@ SEMANTICSIMILARITYTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  **table**  
  Nombre de una tabla con indización de texto completo y semántica habilitada.  
   
@@ -53,7 +53,7 @@ SEMANTICSIMILARITYTABLE
  **column**  
  Nombre de la columna indizada para la que deben devolverse resultados. La columna debe tener habilitada la indización semántica.  
   
- **column_list**  
+ **lista_de_columnas**  
  Indica varias columnas, separadas por comas y escritas entre paréntesis. Todas las columnas deben tener habilitada la indización semántica.  
   
  **\***  
@@ -69,18 +69,18 @@ SEMANTICSIMILARITYTABLE
   
  Los documentos coincidentes se devuelven por columna si se solicitan resultados de más de una columna.  
   
-|Column_name|Type|Descripción|  
+|Column_name|Tipo|Descripción|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|Identificador de la columna de la que se usó un documento de origen para buscar documentos similares.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
 |**matched_column_id**|**int**|Identificador de la columna de la que se encontró un documento similar.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
 |**matched_document_key**|**\***<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave única de extracción semántica y de texto completo del documento o la fila que resultaron ser similares al documento especificado en la consulta.|  
-|**score**|**REAL**|Valor relativo de similitud para este documento en su relación con todos los demás documentos similares.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una coincidencia más próxima y 1.0 es una puntuación perfecta.|  
+|**carácter**|**IMPUESTOS**|Valor relativo de similitud para este documento en su relación con todos los demás documentos similares.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una coincidencia más próxima y 1.0 es una puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
- Para obtener más información, consulte [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
+ Para obtener más información, vea [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
- No se puede consultar en varias columnas para documentos similares. El **SEMANTICSIMILARITYTABLE** función solo recupera documentos similares de la misma columna que la columna de origen, que se identifica mediante el **source_key** argumento.  
+ No se puede consultar en varias columnas para documentos similares. La función **SEMANTICSIMILARITYTABLE** solo recupera documentos similares de la misma columna que la columna de origen, que se identifica mediante el argumento **source_key** .  
   
 ## <a name="metadata"></a>Metadatos  
  Para obtener información y estado sobre la extracción y el rellenado de similitud semánticos, consulte las siguientes vistas de administración dinámica:  

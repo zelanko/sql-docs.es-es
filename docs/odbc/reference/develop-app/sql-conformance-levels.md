@@ -1,5 +1,5 @@
 ---
-title: Niveles de compatibilidad de SQL | Microsoft Docs
+title: Niveles de cumplimiento de SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 875330ac78588566b4b1c212f7a65d2841127a61
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107520"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301386"
 ---
 # <a name="sql-conformance-levels"></a>Niveles de compatibilidad de SQL
-El nivel de gramática de SQL-92 compatible con un controlador se indica mediante el valor devuelto por una llamada a **SQLGetInfo** con el tipo de información SQL_SQL_CONFORMANCE. Indica si el controlador se ajusta a los niveles de entrada, la transición de FIPS, intermedio o completo definidos en SQL-92.  
+El nivel de gramática SQL-92 compatible con un controlador se indica mediante el valor devuelto por una llamada a **SQLGetInfo** con el tipo de información SQL_SQL_CONFORMANCE. Esto indica si el controlador se ajusta a la entrada, a los niveles de transición de FIPS, intermedio o completo definidos en SQL-92.  
   
- Todos los controladores ODBC deben admitir la gramática mínima de SQL que se describe en [gramática mínima de SQL](../../../odbc/reference/appendixes/sql-minimum-grammar.md) en el apéndice C: Gramática de SQL. Esta gramática es un subconjunto del nivel de entrada de SQL-92. Los controladores pueden admite SQL adicional y ser conforme al nivel básico de SQL-92, intermedio o completo, así como el estándar FIPS 127-2 nivel de transición. Los controladores que cumplan con un nivel determinado de SQL-92 o FIPS 127-2 pueden admitir características adicionales en cualquiera de los niveles más altos aún no sea totalmente compatible con ese nivel. Para determinar si se admite una característica, una aplicación debe llamar a **SQLGetInfo** con el tipo de información. El nivel de cumplimiento de una característica SQL se describe en el tipo de información correspondiente. (Consulte la [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción de la función.)
+ Todos los controladores ODBC deben ser compatibles con la gramática mínima de SQL descrita en la gramática [mínima de SQL](../../../odbc/reference/appendixes/sql-minimum-grammar.md) en el Apéndice C: gramática de SQL. Esta gramática es un subconjunto del nivel de entrada de SQL-92. Los controladores pueden admitir SQL adicional y ser conformes con la entrada SQL-92, el nivel intermedio o completo, o con el nivel de transición FIPS 127-2. Los controladores que cumplen un nivel determinado de SQL-92 o FIPS 127-2 pueden admitir características adicionales en cualquiera de los niveles superiores, pero no se ajustan totalmente a ese nivel. Para determinar si se admite una característica, una aplicación debe llamar a **SQLGetInfo** con el tipo de información adecuado. El nivel de conformidad de una característica SQL se describe en el tipo de información correspondiente. (Vea la descripción de la función [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) ).

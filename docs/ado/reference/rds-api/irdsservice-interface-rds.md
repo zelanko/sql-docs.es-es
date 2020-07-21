@@ -11,22 +11,22 @@ apitype: COM
 helpviewer_keywords:
 - IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16a1a97f08ff15e1b19573f35e81a1e10d5c7331
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1759596c515b3bb41d1f52a5e8b0577314495bb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963857"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751806"
 ---
 # <a name="irdsservice-interface-rds"></a>Interfaz IRDSService (RDS)
-Expone el [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) método, que se usa para devolver un puntero a la interfaz solicitada en una versión con más capacidad del objeto.  
+Expone el método [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) , que se usa para devolver un puntero a la interfaz solicitada en una versión más capaz del objeto.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objetos RDS](../../../ado/reference/rds-api/rds-objects.md)
 
 

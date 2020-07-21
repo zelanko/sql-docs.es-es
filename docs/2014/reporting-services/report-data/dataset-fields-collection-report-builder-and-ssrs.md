@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 234ebb8b4490d496731e4fb33db8e73a978f7f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107389"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Colección Campos del conjunto de datos (Generador de informes y SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66107389"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Fields"></a> Campos y consultas de conjunto de datos  
+##  <a name="dataset-fields-and-queries"></a><a name="Fields"></a> Campos y consultas de conjunto de datos  
  Los campos de los conjuntos de datos se especifican mediante un comando de consulta de conjunto de datos y mediante los campos calculados que se definan. La colección de campos que se ven en un informe depende del tipo de conjunto de datos que tenga:  
   
 -   **Conjunto de datos compartidos.** La colección de campos es la lista de campos de la consulta en la definición del conjunto de datos compartido en el momento en que lo agregó directamente a un informe, o cuando agregó un elemento de informe que lo incluía. La colección de campos local no cambia cuando la definición del conjunto de datos compartida cambia en el servidor de informes. Debe actualizar la lista del conjunto de datos compartido local para actualizar la colección de campos local.  
@@ -64,7 +64,7 @@ ms.locfileid: "66107389"
   
 
   
-##  <a name="Defaults"></a> Descripción de las expresiones predeterminadas para campos  
+##  <a name="understanding-default-expressions-for-fields"></a><a name="Defaults"></a> Descripción de las expresiones predeterminadas para campos  
  Un cuadro de texto puede ser un elemento de informe de cuadro de texto en el cuerpo del informe o un cuadro de texto en una celda de una región de datos Tablix. Al vincular un campo con un cuadro de texto, la ubicación del cuadro de texto determina la expresión predeterminada para la referencia del campo. En el cuerpo del informe, una expresión de valor de cuadro de texto debe especificar un agregado y un conjunto de datos. Si solo existe un conjunto de datos en el informe, esta expresión predeterminada se crea automáticamente. Para un campo que representa un valor numérico, la función de agregado predeterminada es Sum. Para un campo que representa un valor no numérico, el agregado predeterminado es First.  
   
  En una región de datos Tablix, la expresión de campo predeterminada depende de la pertenencia a una fila o a un grupo del cuadro de texto al que se agrega el campo. La expresión de campo para el campo Sales, cuando se agrega a un cuadro de texto en la fila de detalles de una tabla, es `[Sales]`. Si agrega el mismo campo a un cuadro de texto de un encabezado de grupo, la expresión predeterminada es `(Sum[Sales])`, porque el encabezado de grupo muestra valores de resumen para el grupo, en lugar de valores detallados. Cuando se ejecuta el informe, el procesador de informes evalúa cada expresión y sustituye el resultado en el informe.  
@@ -73,7 +73,7 @@ ms.locfileid: "66107389"
   
 
   
-##  <a name="DataTypes"></a> Tipos de datos de campo  
+##  <a name="field-data-types"></a><a name="DataTypes"></a> Tipos de datos de campo  
  Al crear un conjunto de datos, es posible que los tipos de datos de los campos del origen de datos no coincidan exactamente con los tipos de datos que se usan en un informe. Los tipos de datos pueden pasar por uno o dos niveles de asignación. La extensión de procesamiento de datos o el proveedor de datos pueden asignar los tipos de datos del origen de datos a tipos de datos de Common Language Runtime (CLR). Los tipos de datos devueltos por las extensiones de procesamiento de datos se asignan a un subconjunto de los tipos de datos de Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  En el origen de datos, los datos se almacenan en tipos de datos admitidos por el origen de datos. Por ejemplo, los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben ser de uno de los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidos, como `nvarchar` o `datetime`. Cuando se recuperan datos del origen de datos, éstos pasan por la extensión de procesamiento de datos o por el proveedor de datos que está asociado al tipo de origen de datos. Dependiendo de la extensión de procesamiento de datos, los datos se pueden convertir desde los tipos de datos utilizados por el origen de datos en los tipos de datos admitidos por la extensión de procesamiento de datos. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los tipos de datos admitidos por la versión de Common Language Runtime (CLR) instalada con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. El proveedor de datos asigna cada columna del conjunto de resultados del tipo de datos nativo a un tipo de datos de CLR (Common Language Runtime) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
@@ -108,14 +108,14 @@ ms.locfileid: "66107389"
   
 
   
-##  <a name="MissingFields"></a> Detectar los campos que faltan en tiempo de ejecución  
+##  <a name="detecting-missing-fields-at-run-time"></a><a name="MissingFields"></a> Detectar los campos que faltan en tiempo de ejecución  
  Cuando se procesa el informe, es posible que el conjunto de resultados para un conjunto de datos no contenga valores para todas las columnas especificadas porque éstas ya no existen en el origen de datos. Puede usar la propiedad de campo IsMissing para detectar si se devolvieron valores para un campo en tiempo de ejecución. Para obtener más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  
   
 
   
-## <a name="see-also"></a>Vea también  
- [Propiedades del conjunto de datos (cuadro de diálogo), Campos &#40;Generador de informes&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
- [Elementos de informe y conjuntos de datos en el Generador de informes](report-parts-and-datasets-in-report-builder.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo Propiedades del conjunto de propiedades, campos &#40;Generador de informes&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [Elementos de informe y conjuntos de valores en Generador de informes](report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Guía del procesamiento de consultas para tablas con optimización para memoria | Microsoft Docs
-ms.custom: ''
+title: Procesamiento de consultas para tablas optimizadas para memoria
+description: Obtenga información sobre el procesamiento de consultas para tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa en OLTP en memoria en SQL Server.
+ms.custom: seo-dt-2019
 ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668879"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "72908727"
   
 -   Formas de solucionar los planes de consulta no válidos.  
   
-## <a name="example-query"></a>Ejemplo de consulta  
+## <a name="example-query"></a>Consulta de ejemplo  
  El ejemplo siguiente se utilizará para mostrar los conceptos del procesamiento de consultas descritos en este artículo.  
   
  Consideramos dos tablas, Customer y Order. El siguiente script de [!INCLUDE[tsql](../../includes/tsql-md.md)] contiene las definiciones de estas dos tablas y los índices asociados, en su formato basado en disco (tradicional):  
@@ -63,7 +64,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- Para crear los planes de consulta mostrados en este artículo, las dos tablas se rellenaron con datos de ejemplo de la base de datos de ejemplo Northwind, que puede descargar desde [Bases de datos de ejemplo Northwind y pubs para SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
+ Para crear los planes de consulta mostrados en este artículo, las dos tablas se rellenaron con datos de ejemplo de la base de datos de ejemplo Northwind, que puede descargar desde [Bases de datos de ejemplo Northwind y pubs para SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Considere la siguiente consulta, que combina las tablas Customer y Order y devuelve el identificador del pedido y la información del cliente asociada:  
   
@@ -97,7 +98,7 @@ Plan de consulta para una combinación hash de tablas basadas en disco.
   
  En esta consulta, las filas de la tabla Order se recuperan con el índice clúster. Ahora se utiliza el operador físico **Hash Match** para **Inner Join**. El índice clúster en la tabla Order no está ordenado en CustomerID y, por lo tanto, **Merge Join** requeriría un operador de ordenación, lo que afectaría al rendimiento. Tenga en cuenta el costo relativo del operador **Hash Match** (75 %) en comparación con el costo del operador **Merge Join** del ejemplo anterior (46 %). El optimizador habría considerado el operador **Hash Match** también en el ejemplo anterior pero concluyó que el operador **Merge Join** proporcionaba un rendimiento mejor.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
  El siguiente diagrama muestra el flujo de procesamiento de consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas ad hoc:  
   
  ![Canalización de procesamiento de consultas de SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Canalización de procesamiento de consultas de SQL Server")  
@@ -119,7 +120,7 @@ Canalización de procesamiento de consultas de SQL Server
 
  Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice agrupado en la tabla Customer y el índice no agrupado en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] también se denominan [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpretado hace referencia al hecho de que el plan de consulta es interpretado por el motor de ejecución de consulta para cada operador del plan de consultas. El motor de ejecución lee el operador y sus parámetros y realiza la operación.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado se puede utilizar para tener acceso a tablas optimizadas para memoria y a tablas basadas en disco. La ilustración siguiente muestra el procesamiento de consultas para el acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria:  
@@ -225,7 +226,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
   
-1.  El usuario emite una instrucción **EXEC**_usp_myproc_ .  
+1.  El usuario emite una instrucción **EXEC** _usp_myproc_.  
   
 2.  El analizador extrae los parámetros del nombre y del procedimiento almacenado.  
   
@@ -258,7 +259,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operadores de consulta en procedimientos almacenados compilados de forma nativa  
  En la tabla siguiente se resumen los operadores de consulta admitidos dentro de procedimientos almacenados compilados de forma nativa:  
   
-|Operador|Consulta de ejemplo|Notas|  
+|Operator|Consulta de ejemplo|Notas|  
 |--------------|------------------|-----------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
@@ -303,6 +304,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tablas optimizadas para la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

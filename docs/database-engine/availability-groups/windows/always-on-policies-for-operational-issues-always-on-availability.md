@@ -1,7 +1,7 @@
 ---
-title: Administración basada en directivas de problemas operativos con grupos de disponibilidad
+title: 'Administración basada en directivas: Grupos de disponibilidad'
 description: El modelo de estados de Grupos de disponibilidad Always On evalúa un conjunto de directivas predefinidas de administración basada en directivas (PBM). Puede usarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8b43794783253ced81466ac7974e40c0ec05840
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991555"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900937"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Administración basada en directivas de problemas operativos con grupos de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   El modelo de estados de Grupos de disponibilidad Always On evalúa un conjunto de directivas predefinidas de administración basada en directivas (PBM). Puede usarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en SQL Server.  
   
   
-##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Términos y definiciones  
  Directivas predefinidas AlwaysOn  
  Un conjunto de directivas integradas que permiten que un administrador de base de datos pueda comprobar un grupo de disponibilidad, así como sus réplicas y bases de datos de disponibilidad, para probar el cumplimiento de los estados definidos por las directivas de AlwaysOn.  
   
- [Grupos de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa en el nivel de empresa a la creación de reflejo de la base de datos.  
   
  grupo de disponibilidad  
@@ -45,7 +45,7 @@ ms.locfileid: "67991555"
  Panel AlwaysOn  
  Un panel [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] que proporciona una vista global del estado de un grupo de disponibilidad. Para obtener más información, vea [Panel AlwaysOn](#Dashboard), más adelante en este tema.  
   
-##  <a name="Always OnPBM"></a> Directivas predefinidas y problemas  
+##  <a name="predefined-policies-and-issues"></a><a name="Always OnPBM"></a> Directivas predefinidas y problemas  
  En la siguiente tabla se resumen las directivas predefinidas.  
   
 |Nombre de la directiva|Problema|Categoría **&#42;**|Faceta|  
@@ -68,7 +68,7 @@ ms.locfileid: "67991555"
 > [!IMPORTANT]
 >  **&#42;** Para las directivas Always On, los nombres de categoría se usan como identificadores. La acción de cambiar el nombre de una categoría de AlwaysOn interrumpirá la funcionalidad de la evaluación de estado. Por consiguiente, no modifique los nombres de las categorías de AlwaysOn.  
   
-##  <a name="Dashboard"></a> Panel AlwaysOn  
+##  <a name="always-on-dashboard"></a><a name="Dashboard"></a> Panel AlwaysOn  
  El panel AlwaysOn proporciona una vista global del estado de un grupo de disponibilidad. El panel AlwaysOn incluye las siguientes características:  
   
 -   Permite mostrar fácilmente los detalles sobre un grupo de disponibilidad determinado, sus réplicas de disponibilidad y sus bases de datos.  
@@ -83,14 +83,14 @@ ms.locfileid: "67991555"
   
 -   Si la conmutación por error del grupo de disponibilidad es una solución posible para un problema, proporciona un punto de inicio para los vínculos del[Asistente para grupo de disponibilidad de conmutación por error](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). Este asistente usa un administrador de bases de datos a través del proceso de conmutación por error manual.  
   
-##  <a name="ExtendHealthModel"></a> Extender el modelo de estados AlwaysOn  
+##  <a name="extending-the-always-on-health-model"></a><a name="ExtendHealthModel"></a> Extender el modelo de estados AlwaysOn  
  Extender el modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es simplemente cuestión de crear sus propias directivas definidas por el usuario y ponerlas en determinadas categorías según el tipo de objeto que se está supervisando.  Después de modificar algunos valores, el panel AlwaysOn evaluará automáticamente sus propias directivas definidas por el usuario, junto con las directivas predefinidas AlwaysOn.  
   
  Una directiva definida por el usuario puede usar cualquiera de las facetas PBM disponibles, incluidas las utilizadas por las directivas predefinidas AlwaysOn (vea [Directiva predefinidas y problemas](#Always OnPBM), anteriormente en este tema). La faceta de servidor proporciona las propiedades siguientes para supervisar el estado de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** y **HadrManagerStatus**). La faceta de servidor también proporciona a las propiedades las directivas siguientes para supervisar la configuración de clúster de WSFC: **ClusterQuorumType** y **ClusterQuorumState**.  
   
  Para obtener más información, vea el blog del equipo de SQL Server AlwaysOn [Modelo de estado de AlwaysOn, parte 2: extender el modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) .  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "67991555"
   
 -   [Solucionar problemas relativos a una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Modelo de estado AlwaysOn, parte 1: arquitectura del modelo de estado](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
@@ -116,6 +116,6 @@ ms.locfileid: "67991555"
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
- [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+ [Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

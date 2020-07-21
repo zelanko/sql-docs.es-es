@@ -1,10 +1,9 @@
 ---
-title: Seleccionar filas que no coinciden con un valor (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Buscar filas que no coincidan con un valor
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +14,14 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b664c5a99e362ca09096e745cb1fae49799ef81e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: ba594307277060abd6ddedb9dd7fda7c1a8bebee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266871"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255095"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Seleccionar filas que no coinciden con un valor (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +40,6 @@ NOT LIKE 'A%'
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Reglas para especificar valores de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[Reglas para especificar valores de búsqueda](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[Especificar criterios de búsqueda](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2e9f01a-2e51-47e5-90bf-43c62d1be74d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8f2cf03eb2eeaa3bb742a1f0d665c360e0d5f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: be0d32d8dbb8dea35d354426c75c5cdd1af3f3f9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981039"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904679"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>Método getPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public int getPacketSize()
 ## <a name="return-value"></a>Valor devuelto  
  Valor de tipo **int** que contiene el tamaño del paquete de red actual.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si no se establece la propiedad packetSize, el método getPacketSize devuelve el valor predeterminado 8000.  
   
 ## <a name="see-also"></a>Consulte también  

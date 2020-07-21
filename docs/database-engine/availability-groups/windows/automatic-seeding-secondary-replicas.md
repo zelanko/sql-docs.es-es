@@ -1,8 +1,7 @@
 ---
-title: Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad
-description: Use la propagación automática para inicializar réplicas secundarias como parte de un grupo de disponibilidad Always On con SQL 2016 y versiones posteriores.
-services: data-lake-analytics
-ms.custom: seodec18
+title: Propagación automática de réplicas secundarias
+description: Obtenga información sobre cómo la propagación automática puede inicializar réplicas secundarias como parte de un grupo de disponibilidad AlwaysOn con SQL 2016 y versiones posteriores.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934925"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900904"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 En SQL Server 2012 y 2014, la única manera de inicializar una réplica secundaria en un grupo de disponibilidad AlwaysOn de SQL Server es recurriendo a los trabajos de copia de seguridad, copia y restauración. SQL Server 2016 incorpora una característica nueva para inicializar una réplica secundaria: la *propagación automática*. La propagación automática emplea el transporte de secuencia de registro para transmitir la copia de seguridad con VDI a la réplica secundaria de cada base de datos del grupo de disponibilidad que use los puntos de conexión configurados. Esta nueva característica se puede usar durante la creación inicial de un grupo de disponibilidad o cuando una base de datos se agrega a uno de estos grupos. La propagación automática se incluye en todas las ediciones de SQL Server que admiten grupos de disponibilidad AlwaysOn, y se puede usar tanto con los grupos de disponibilidad tradicionales como con los [grupos de disponibilidad distribuidos](distributed-availability-groups.md).
 
@@ -47,7 +46,7 @@ La propagación automática es un proceso de un único subproceso que puede asum
 
 La compresión se puede usar en la propagación automática, pero está deshabilitada de forma predeterminada. Si la compresión se activa, se reducirá el ancho de banda de red y, posiblemente, el proceso se acelere, pero a cambio habrá una mayor sobrecarga del procesador. Para usar la compresión durante la propagación automática, habilite la marca de seguimiento 9567; vea [Tune compression for availability group](tune-compression-for-availability-group.md) (Optimizar la compresión para los grupos de disponibilidad).
 
-## <a name = "disklayout"></a> Diseño de disco
+## <a name="disk-layout"></a><a name = "disklayout"></a> Diseño de disco
 
 En SQL Server 2016 y versiones anteriores, la carpeta donde se creará la base de datos mediante la propagación automática ya debe existir y ser la misma que la ruta de acceso de la réplica principal. 
 
@@ -110,7 +109,7 @@ En el caso de una instancia que pasa a ser una réplica secundaria, una vez que 
 
 >La réplica de disponibilidad local para el grupo de disponibilidad "NombreGD" no tiene permiso para crear bases de datos, pero su modo `SEEDING_MODE` se definió como `AUTOMATIC`. Use `ALTER AVAILABILITY GROUP ... GRANT CREATE ANY DATABASE` para permitir la creación de bases de datos propagadas por la réplica de disponibilidad principal.
 
-### <a name = "grantCreate"></a> Permitir que un grupo de disponibilidad cree permisos de creación de bases de datos en réplicas secundarias
+### <a name="grant-create-database-permission-on-secondary-replica-to-availability-group"></a><a name = "grantCreate"></a> Permitir que un grupo de disponibilidad cree permisos de creación de bases de datos en réplicas secundarias
 
 Después de la unión, conceda permiso al grupo de disponibilidad para crear bases de datos en la instancia de réplica de SQL Server. Para que la propagación automática funcione, el grupo de disponibilidad necesita permiso para crear una base de datos. 
 
@@ -248,7 +247,7 @@ En la siguiente tabla se enumeran los eventos extendidos relacionados con la pro
 |hadr_automatic_seeding_failure|Se produce cuando se realiza una operación de propagación automática incorrectamente.|
 |hadr_automatic_seeding_timeout|Se produce cuando se agota el tiempo de espera de una operación de propagación automática.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 

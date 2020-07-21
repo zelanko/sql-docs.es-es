@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2729c884f93defe9f920105134f68652a00ae628
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908527"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86158943"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Replication Management Objects (RMO) es un ensamblado de código administrado que encapsula las funcionalidades de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. RMO se implementa mediante el espacio de nombres <xref:Microsoft.SqlServer.Replication>.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72908527"
  [Configurar distribución](../../../relational-databases/replication/configure-distribution.md)  
  Los temas de esta sección muestran cómo utilizar RMO para configurar la publicación y la distribución.  
   
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Creación de una publicación)  
  Los temas de esta sección muestran cómo utilizar RMO para crear, eliminar y modificar las publicaciones y los artículos.  
   
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  

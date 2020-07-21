@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786255"
 ---
-# <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Agrega un nuevo trabajo de agente que se utiliza para programar la sincronización de una suscripción de inserción con una publicación de combinación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -68,16 +68,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica autenticación. Si es **1**, especifica la autenticación de Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si es **1**, especifica la autenticación de Windows.  
   
-`[ @subscriber_login = ] 'subscriber_login'`Es el inicio de sesión del suscriptor que se va a utilizar al conectarse a un suscriptor durante la sincronización. se requiere *subscriber_login* si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @subscriber_login = ] 'subscriber_login'`Es el inicio de sesión del suscriptor que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_login* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. se requiere *subscriber_password* si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
+`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica autenticación. Si es **1**, especifica la autenticación de Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si es **1**, especifica la autenticación de Windows.  
   
 `[ @publisher_login = ] 'publisher_login'`Es el inicio de sesión que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -101,9 +101,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4**|Diario|  
+|**8**|Cada semana|  
+|**16**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -123,7 +123,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**8**|Day|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
@@ -132,7 +132,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Primero|  
+|**1**|First|  
 |**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
@@ -145,10 +145,10 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
+|**1**|Una sola vez|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -161,13 +161,13 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date`Es la fecha en la que el Agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_addmergepushsubscription_agent** se utiliza en la replicación de mezcla y utiliza una funcionalidad similar a [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
+## <a name="remarks"></a>Observaciones  
+ **sp_addmergepushsubscription_agent** se utiliza en la replicación de mezcla y utiliza una funcionalidad similar a la de [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepushsubscript_1.sql)]  
@@ -175,12 +175,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergepushsubscription_agent**.  
   
-## <a name="see-also"></a>Vea también  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_changemergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_helpmergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

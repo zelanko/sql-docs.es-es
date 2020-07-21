@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 05b11804630de6bd57681a569225971864c15814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036899"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Claves de cifrado (Modo nativo de SSRS)
   Utilice la página Claves de cifrado para administrar la clave simétrica que se usa para cifrar y descifrar datos en un servidor de informes. La administración de las claves de cifrado es una parte importante de la configuración de servidores de informes. La clave simétrica se crea y se aplica automáticamente al crear la base de datos del servidor de informes. Cree una copia de seguridad de la clave simétrica para poder realizar operaciones de mantenimiento rutinarias. Para las siguientes tareas de mantenimiento es necesario tener una copia válida de la clave simétrica:  
@@ -28,7 +27,7 @@ ms.locfileid: "71952169"
   
 -   Configurar una nueva instancia de servidor de informes para compartir o utilizar una base de datos de servidor de informes existente.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
 > [!IMPORTANT]  
 >  Cambiar periódicamente la clave de cifrado de Reporting Services es una práctica recomendada de seguridad. El momento recomendado para cambiar la clave es el inmediatamente posterior a una actualización de versión principal de Reporting Services. Si se cambia la clave después de una actualización se minimiza la interrupción del servicio adicional que ocasiona el cambio de la clave de cifrado de Reporting Services fuera del ciclo de actualización.  
@@ -45,15 +44,15 @@ ms.locfileid: "71952169"
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione el vínculo en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
- **Copiar**  
+ **Backup**  
  Copia la clave simétrica al archivo especificado. La clave simétrica nunca se almacena en texto simple. Debe escribir una contraseña para proteger el archivo.  
   
- **Restauración**  
+ **Restaurar**  
  Aplica una copia guardada anteriormente de la clave simétrica a la base de datos de servidor de informes. Debe proporcionar la contraseña para desbloquear el archivo.  
   
- La copia anterior de la clave simétrica para la instancia de servidor de informes a la que se encuentra conectado actualmente es sobrescrita por la versión restaurada. Después de restaurar la clave simétrica, debe inicializar todos los servidores de informes que utilizan la base de datos del servidor de informes. Para obtener más información sobre cómo inicializar servidores de informes, vea [inicializar un servidor &#40;de informes SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ La copia anterior de la clave simétrica para la instancia de servidor de informes a la que se encuentra conectado actualmente es sobrescrita por la versión restaurada. Después de restaurar la clave simétrica, debe inicializar todos los servidores de informes que utilizan la base de datos del servidor de informes. Para obtener más información sobre cómo inicializar servidores de informes, vea [inicializar un servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
- **Cambios**  
+ **Cambio**  
  Vuelve a crear la clave simétrica y a cifrar todos los valores cifrados en la base de datos de servidor de informes. Asegúrese de detener el servicio Servidor de informes antes de volver a crear la clave simétrica.  
   
  En una implementación escalada, todas las copias de la clave simétrica son reemplazadas por versiones más recientes. Antes de cambiar la clave simétrica, asegúrese de consultar la lista de servidores combinados con la implementación escalada para comprobar que solo tienen acceso a la nueva clave instancias de servidor de informes válidas. Los servidores que forman parte de una implementación escalada se muestran en la página **Implementación escalada** . Detenga el servicio en cada servidor de informes en la implementación antes de volver a crear la clave.  
@@ -67,10 +66,10 @@ ms.locfileid: "71952169"
   
  No hay ninguna manera automatizada de actualizar esta información. Los informes, suscripciones y orígenes de datos compartidos que utilizan credenciales almacenadas y cadenas de conexión deben actualizarse uno por uno.  
   
-## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de configuración de Reporting Services temas de la ayuda F1 &#40;el modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Copia de seguridad y restauración de claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminar y volver a crear claves de cifrado &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de ADO NET (página columnas) | Microsoft Docs
+title: Editor de orígenes de ADO NET (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 339f3de18df4a06533f97eaef8c69d01e6294491
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061700"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439552"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Editor de orígenes de ADO NET (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de orígenes de ADO NET** para asignar una columna de salida a cada columna externa (origen).  
@@ -42,9 +41,9 @@ ms.locfileid: "66061700"
  **Columna de salida**  
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre proporcionado se mostrará en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de orígenes de ADO NET &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [Editor de orígenes de ADO NET &#40;página Salida de error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor de orígenes de ADO NET &#40;página salida de error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67929314"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de datos Geometry)
@@ -38,7 +38,7 @@ ms.locfileid: "67929314"
  *distance*  
  Es un valor de tipo **float** que indica la distancia máxima a la que los puntos que forman el búfer pueden estar de la instancia de **geometry**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Tipo de valor devuelto de SQL Server: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
@@ -52,7 +52,7 @@ Tipo de valor devuelto de SQL Server: **geometry**
   
 -   **NULL** se pasa al método, como en `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente ilustración se muestra un ejemplo de una instancia de geometría devuelta por este método.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -62,7 +62,7 @@ Tipo de valor devuelto de SQL Server: **geometry**
 |Valor de distancia|Dimensiones de tipo|Tipo espacial devuelto|  
 |--------------------|---------------------|---------------------------|  
 |distancia < 0|Cero o uno|Instancia de **GeometryCollection** vacía|  
-|distancia < 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo. **Nota:** un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|  
+|distancia < 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo. **Note:** Un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|  
 |distancia = 0|Todas las dimensiones|Copia de la instancia de **geometry** que hace la llamada|  
 |distancia > 0|Todas las dimensiones|Instancia de **CurvePolygon** o **GeometryCollection**|  
   

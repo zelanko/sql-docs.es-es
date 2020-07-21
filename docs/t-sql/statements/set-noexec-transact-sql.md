@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765776"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compila cada consulta, pero no la ejecuta.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "68034941"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando SET NOEXEC es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila cada lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pero no las ejecuta. Cuando SET NOEXEC es OFF, todos los lotes se ejecutan después de su compilación.  
   
  La ejecución de instrucciones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene dos fases: compilación y ejecución. Esta opción es útil para hacer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide la sintaxis y los nombres de objeto del código [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la ejecución. También es útil para depurar instrucciones que normalmente serían parte de un lote de instrucciones mayor.  
@@ -56,7 +56,7 @@ SET NOEXEC { ON | OFF }
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente utiliza `NOEXEC` con una consulta válida, una consulta con un nombre de objeto no válido y una consulta con sintaxis incorrecta.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

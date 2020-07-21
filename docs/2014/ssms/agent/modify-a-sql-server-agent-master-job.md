@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 087dd85d21eb42dce62803d704d2c3de9de61a02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062162"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>Modificar un trabajo maestro del Agente SQL Server
-  En los temas siguientes se describe cómo modificar un trabajo maestro del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  En los temas siguientes se describe cómo modificar un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo maestro del agente.  
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
- [Agregar pasos a un trabajo maestro del Agente SQL Server](../object/add-steps-to-a-sql-server-agent-master-job.md)  
+ [Add Steps to a SQL Server Agent Master Job](../object/add-steps-to-a-sql-server-agent-master-job.md)  
   
  [Change Steps of a SQL Server Agent Master Job](change-steps-of-a-sql-server-agent-master-job.md)  
   

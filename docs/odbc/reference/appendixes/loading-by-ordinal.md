@@ -1,5 +1,5 @@
 ---
-title: Cargar por Ordinal | Microsoft Docs
+title: Cargando por ordinal | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compatibility [ODBC], loading by ordinal
 - loading by ordinal [ODBC]
 ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fdc7728fe06df708efd973423f5c8c05333ce189
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 64bff8dcdd3802f75dc402c9ada60f82580aca5c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041601"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288725"
 ---
 # <a name="loading-by-ordinal"></a>Cargar por ordinal
-En ODBC *2.x*, se pudo realizar la carga por ordinal para mejorar el rendimiento del proceso de conexión. Un ODBC *2.x* controlador exporta una función con el ordinal 199 ficticia; cuando el Administrador de controladores lo detecta, resuelve las direcciones de las funciones ODBC por ordinal, no por nombre. Esta funcionalidad todavía se admite para ODBC *2.x* controladores, pero no es compatible con ODBC *3.x* controladores.
+En ODBC *2. x*, se puede realizar la carga por ordinal para mejorar el rendimiento del proceso de conexión. Un controlador ODBC *2. x* exporta una función ficticia con el ordinal 199; Cuando el administrador de controladores lo detecta, resuelve las direcciones de las funciones ODBC por ordinal, no por nombre. Esta funcionalidad todavía se admite para los controladores ODBC *2. x* , pero no se admite para los controladores ODBC *3. x* .

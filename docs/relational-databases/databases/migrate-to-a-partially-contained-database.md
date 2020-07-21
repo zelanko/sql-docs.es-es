@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cb7fbdc8085fbf068ddc4f97587e919b1872971f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726431"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo preparar el cambio al modelo de base de datos parcialmente independiente y, a continuación, se proporcionan los pasos de migración.  
   
  **En este tema:**  
@@ -33,7 +33,7 @@ ms.locfileid: "72908090"
   
 -   [Migrar usuarios a usuarios de base de datos independiente](#users)  
   
-##  <a name="prepare"></a> Preparar la migración de una base de datos  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> Preparar la migración de una base de datos  
  Revise los siguientes aspectos cuando vaya a migrar una base de datos al modelo de base de datos parcialmente independiente.  
   
 -   Debe entender el modelo de base de datos parcialmente independiente. Para más información, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "72908090"
   
 -   Supervise el XEvent **database_uncontained_usage** para ver cuándo se usan características sin contención.  
   
-##  <a name="enable"></a> Habilitar bases de datos independientes  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> Habilitar bases de datos independientes  
  Las bases de datos independientes deben estar habilitadas en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]para poder crear bases de datos independientes.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Habilitar las bases de datos independientes mediante Transact-SQL  
@@ -70,7 +70,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="convert"></a> Convertir una base de datos en parcialmente independiente  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> Convertir una base de datos en parcialmente independiente  
  Una base de datos se convierte en base de datos independiente cambiando la **CONTAINMENT** opción.  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Convertir una base de datos en parcialmente independiente mediante Transact-SQL  
@@ -92,7 +92,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> Migrar usuarios a usuarios de base de datos independiente  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> Migrar usuarios a usuarios de base de datos independiente  
  En el siguiente ejemplo, se realiza la migración de todos los usuarios basados en inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usuarios de base de datos independiente con contraseñas. En el ejemplo se excluyen los inicios de sesión que no están habilitados. El ejemplo se debe ejecutar en la base de datos independiente.  
   
 ```sql  
@@ -119,7 +119,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Contained Databases](../../relational-databases/databases/contained-databases.md)   
+ [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

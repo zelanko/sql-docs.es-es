@@ -1,6 +1,6 @@
 ---
-title: 'Inicio rápido: Copia de seguridad y restauración de SQL en el servicio Azure Blob Storage | Microsoft Docs'
-ms.custom: ''
+title: 'Inicio rápido: Copia de seguridad y restauración en el servicio Azure Blob Storage'
+ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,22 +10,22 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906978"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74165524"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL en el servicio Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Con este inicio rápido, entenderá mejor cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este servicio.  En el artículo se explica cómo crear un contenedor de blobs de Azure, escribir una copia de seguridad en el Blob service y, luego, realizar una restauración.
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Para completar este inicio rápido, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL.  Necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS) y acceso a un servidor que ejecute SQL Server o a una instancia administrada de Azure SQL Database. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 
 - Obtenga una [cuenta de Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratis.
-- Cree una [cuenta de Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Cree una [cuenta de almacenamiento de Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) o implemente una [instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started) con conectividad establecida mediante una [máquina virtual de Azure SQL](/azure/sql-database/sql-database-managed-instance-configure-vm) o de [punto a sitio](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
@@ -93,7 +93,7 @@ ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;
 GO
 ```
 
-## <a name="create-credential"></a>Creación de credenciales
+## <a name="create-credential"></a>Crear una credencial
 
 Use la GUI de SQL Server Management Studio para crear la credencial siguiendo estos pasos. De manera alternativa, también puede crear la credencial [mediante programación](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature). 
 
@@ -113,7 +113,7 @@ Use la GUI de SQL Server Management Studio para crear la credencial siguiendo e
 1. Seleccione el contenedor que creó anteriormente en el menú desplegable. 
 1. Seleccione **Crear credencial** para generar la *firma de acceso compartido (SAS)* .  **Guarde este valor, ya que lo necesitará para la restauración.**
 
-   ![Creación de credenciales](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
+   ![Crear una credencial](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/create-credential.png)
 
 1. Haga clic en **Aceptar** para cerrar la ventana **Conectarse a una suscripción de Microsoft**. Con esto se rellena el valor del *contenedor de almacenamiento de Azure* en el cuadro de diálogo **Seleccionar destino de copia de seguridad**. Seleccione **Aceptar** para elegir el contenedor de almacenamiento seleccionado y cierre el cuadro de diálogo. 
 1. En este momento, puede ir directamente al paso 4 de la sección siguiente para realizar la copia de seguridad de la base de datos, o bien cerrar el Asistente para la **copia de seguridad de base de datos** si en su lugar quiere seguir usando Transact-SQL para crear la copia de seguridad de la base de datos. 
@@ -122,7 +122,7 @@ Use la GUI de SQL Server Management Studio para crear la credencial siguiendo e
 ## <a name="back-up-database"></a>Copia de seguridad de base de datos
 En este paso, cree una copia de seguridad de la base de datos `SQLTestDB` en la cuenta de Azure Blob Storage con la GUI dentro de SQL Server Management Studio o con Transact-SQL (T-SQL). 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Si el Asistente para la **copia de seguridad de base de datos** todavía no está abierto, expanda el nodo **Bases de datos** dentro del **Explorador de objetos** de [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 1. Haga clic con el botón derecho en la base de datos `SQLTestDB` nueva, mantenga el puntero del mouse sobre **Tareas** y seleccione **Copia de seguridad…** para iniciar el Asistente de **copia de seguridad de base de datos**. 
@@ -141,7 +141,7 @@ En este paso, cree una copia de seguridad de la base de datos `SQLTestDB` en la 
    > Puede generar un script de la instancia de Transact-SQL detrás de este comando si selecciona **Script** en la parte superior del Asistente para la **copia de seguridad de base de datos**: ![Comando de script](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/script-backup-command.png)
 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Cree una copia de seguridad de la base de datos con Transact-SQL mediante la ejecución del comando siguiente: 
 
@@ -160,12 +160,12 @@ GO
 ## <a name="delete-database"></a>Eliminar base de datos
 En este paso, elimine la base de datos antes de realizar la restauración. Este paso solo es necesario para este tutorial, pero no es probable que se use en procedimientos normales de administración de bases de datos. Puede omitir este paso, pero tendrá que cambiar el nombre de la base de datos durante la restauración en una instancia administrada, o bien ejecutar el comando de restauración `WITH REPLACE` para restaurar correctamente la base de datos en el entorno local. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Expanda el nodo **Bases de datos** en el **Explorador de objetos**, haga clic con el botón derecho en la base de datos `SQLTestDB` y seleccione Eliminar para iniciar el Asistente para **eliminar el objeto**. 
 1. En una instancia administrada, seleccione **Aceptar** para eliminar la base de datos. En el entorno local, active la casilla junto a **Cerrar conexiones existentes** y seleccione **Aceptar** para eliminar la base de datos. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Para eliminar la base de datos, ejecute el comando de Transact-SQL siguiente:
 
@@ -192,7 +192,7 @@ GO
 ## <a name="restore-database"></a>Restaurar base de datos 
 En este paso, restaure la base de datos con la GUI de SQL Server Management Studio o con Transact-SQL. 
 
-# <a name="ssmstabssms"></a>[SSMS](#tab/SSMS)
+# <a name="ssms"></a>[SSMS](#tab/SSMS)
 
 1. Haga clic con el botón secundario en el nodo **Bases de datos** en el **Explorador de objetos** dentro de SQL Server Management Studio y seleccione **Restaurar base de datos**. 
 1. Seleccione **Dispositivo** y, luego, los puntos suspensivos (…) para elegir el dispositivo. 
@@ -216,7 +216,7 @@ En este paso, restaure la base de datos con la GUI de SQL Server Management Stu
 1. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad**. 
 1. Seleccione **Aceptar** para restaurar la base de datos. 
 
-# <a name="transact-sqltabtsql"></a>[Transact-SQL](#tab/tsql)
+# <a name="transact-sql"></a>[Transact-SQL](#tab/tsql)
 
 Para restaurar la base de datos local desde Azure Blob Storage, modifique el comando de Transact-SQL siguiente para usar su propia cuenta de almacenamiento y, luego, ejecútelo dentro de una ventana de consulta nueva. 
 
@@ -229,9 +229,9 @@ URL = N'https://msftutorialstorage.blob.core.windows.net/sql-backup/sqltestdb_ba
 ---
 
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 Estas son algunas lecturas recomendadas para comprender mejor los conceptos y los procedimientos recomendados al usar el servicio Azure Blob Storage para copias de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
--   [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+-   [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+-   [Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   

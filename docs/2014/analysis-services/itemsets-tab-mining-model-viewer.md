@@ -1,5 +1,5 @@
 ---
-title: Pestaña conjuntos de elementos (Visor de modelos de minería de datos) | Microsoft Docs
+title: Pestaña conjuntos (visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,26 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 800e14fb360feef3f03804f5d57ed36c57142744
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543697"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Pestaña Conjuntos de elementos (Visor de modelos de minería de datos)
   Puede utilizar el panel **Conjuntos de elementos** para ver los conjuntos de elementos frecuentes que contiene un modelo de minería de datos de reglas de asociación. Dado que un modelo de asociación puede contener muchos conjuntos de elementos, el visor dispone de controles para ayudarle a filtrar los conjuntos de elementos que se muestran en el visor.  
   
- **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opciones  
- **Actualizar el contenido del Visor**  
+ **Actualizar el contenido del visor**  
  Vuelva a cargar el modelo de minería de datos en el visor.  
   
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Viewer**  
+ **Visor**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de los modelos de asociación o el visor de árbol de contenido genérico de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Soporte mínimo**  
@@ -74,12 +73,12 @@ ms.locfileid: "66079559"
  **Tamaño**  
  Muestra el número de elementos que existe en cada conjunto de elementos.  
   
- **Itemset**  
+ **Conjunto de elementos**  
  Muestra la descripción de cada conjunto de elementos. De forma predeterminada, los conjuntos de elementos se presentan en una lista de atributos y sus valores delimitada por comas. Puede cambiar la manera en que se muestran utilizando la opción **Mostrar** .  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   
   

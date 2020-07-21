@@ -1,6 +1,6 @@
 ---
-title: Cambiar la conexión asociada a una consulta | Microsoft Docs
-ms.custom: ''
+title: Cambiar la conexión asociada a una consulta
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df01100b7e98d9891aae39a3e5f85ac0358f3e44
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: bc8164e2c47c1224610183274c460ede9df00ad5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258048"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251976"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>Cambiar la conexión asociada a una consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb2c9c381bc02c043e253aa66f43001f48ebd9e4
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065818"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301814"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!NOTE]
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.
 
-Controla la creación de reflejo de la base de datos. Los valores especificados con las opciones de creación de reflejo de la base de datos se aplican a las dos copias de la base de datos y a la sesión de creación de reflejo de la base de datos en conjunto. Solo se permite una \<database_mirroring_option> por instrucción ALTER DATABASE.
+Controla la creación de reflejo de la base de datos. Los valores especificados con las opciones de creación de reflejo de la base de datos se aplican a las dos copias de la base de datos y a la sesión de creación de reflejo de la base de datos en conjunto. Solo se permite una opción \<database_mirroring_option> por instrucción ALTER DATABASE.
 
 > [!NOTE]
 > Es recomendable configurar la creación de reflejo de la base de datos durante las horas de menor actividad, ya que la configuración puede afectar al rendimiento.
@@ -42,7 +42,7 @@ Para más información sobre las opciones de ALTER DATABASE, consulte [ALTER DAT
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 
 ALTER DATABASE database_name
 SET { <partner_option> | <witness_option> }
@@ -62,6 +62,8 @@ SET { <partner_option> | <witness_option> }
             }
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -91,12 +93,12 @@ Esta opción se especifica una vez por sesión en cada asociado. Para iniciar un
 
 El valor de *partner_server* es una dirección de red de servidor. Tiene la siguiente sintaxis:
 
-TCP **://** _\<dirección del sistema>_ **:** _\<puerto>_
+TCP **://** _\<system-address>_ **:** _\<port>_
 
-donde
+, donde
 
 - *\<system-address>* es una cadena, como un nombre de sistema, un nombre de dominio completo o una dirección IP, que identifica sin ambigüedad el equipo de destino.
-- *\<port>* es un número de puerto que está asociado al extremo de reflejo de la instancia del servidor asociado.
+- *\<port>* es un número de puerto que está asociado al punto de conexión de reflejo de la instancia del servidor asociado.
 
 Para obtener más información, vea [Especificar una dirección de red de servidor - Creación de reflejo de la base de datos](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
@@ -185,7 +187,7 @@ En una instrucción SET WITNESS **='** _witness_server_ **'** , la sintaxis de *
 
 OFF Quita el testigo de la sesión de creación de reflejo de la base de datos. Si se establece el testigo en OFF, se deshabilita la conmutación automática por error. Si la base de datos se establece en FULL SAFETY y el testigo se establece en OFF, un error del servidor reflejado hace que el servidor principal anule la disponibilidad de la base de datos.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 ## <a name="examples"></a>Ejemplos
 

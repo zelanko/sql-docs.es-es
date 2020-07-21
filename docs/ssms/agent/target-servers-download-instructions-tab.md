@@ -1,10 +1,9 @@
 ---
-title: Servidores de destino (pestaña Descargar instrucciones) | Microsoft Docs
-ms.custom: ''
+title: Servidores de destino (pestaña Descargar instrucciones)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7609b8f6dd7e5ab4b63b04fe2c559aae10745a3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dd210b4c51707da7350ff83fd9b9c51566109c1e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256251"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257871"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de destino (pestaña Descargar instrucciones)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ Seleccione el trabajo del que desea ver o modificar instrucciones.
 **Servidor de destino**  
 Vea el nombre del servidor al que se aplicarán las instrucciones de descarga.  
   
-**Operación**  
+**operación**  
 Vea la operación que realizará la instrucción de descarga.  
   
 **Nombre de objeto**  
@@ -56,7 +57,7 @@ Vea el estado más reciente de la instrucción de descarga seleccionada.
 **Eliminar**  
 Elimina la instrucción de descarga seleccionada.  
   
-**Desactivar**  
+**Borrar**  
 Borra el estado de la instrucción de descarga seleccionada.  
   
 ## <a name="see-also"></a>Consulte también  

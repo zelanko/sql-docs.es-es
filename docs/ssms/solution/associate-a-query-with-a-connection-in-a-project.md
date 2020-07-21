@@ -1,6 +1,6 @@
 ---
-title: Asociar una consulta a una conexión de un proyecto | Microsoft Docs
-ms.custom: ''
+title: Asociar una consulta a una conexión de un proyecto
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 247258298acbe8af4a68c0cd0b981cd04deb26ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f5e26bcc445f563c08a8d0dcc933918ded7057aa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258144"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241877"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Asociar una consulta a una conexión de un proyecto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

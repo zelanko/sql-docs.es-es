@@ -1,5 +1,5 @@
 ---
-title: Pausa y reanudación de la migración de datos (Stretch Database) | Microsoft Docs
+title: Pausa y reanudación de la migración de datos
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -11,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 064685860315af633d0fbba8c250ca23cef46873
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136088"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73844541"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Pausa y reanudación de la migración de datos (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "68136088"
 
 ## <a name="pause-data-migration"></a>Pausa de la migración de datos  
   
-### <a name="use-sql-server-management-studio-to-pause-data-migration"></a>Use SQL Server Management Studio para pausar la migración de datos  
+### <a name="use-sql-server-management-studio-to-pause-data-migration"></a>Uso de SQL Server Management Studio para pausar la migración de datos  
   
 1.  En el Explorador de objetos de SQL Server Management Studio, seleccione la tabla habilitada para Stretch para la que desea pausar la migración de datos.  
   
@@ -47,14 +48,14 @@ GO
   
 ## <a name="resume-data-migration"></a>Reanudación de la migración de datos  
   
-### <a name="use-sql-server-management-studio-to-resume-data-migration"></a>Use SQL Server Management Studio para reanudar la migración de datos  
+### <a name="use-sql-server-management-studio-to-resume-data-migration"></a>Uso de SQL Server Management Studio para reanudar la migración de datos  
   
 1.  En el Explorador de objetos de SQL Server Management Studio, seleccione la tabla habilitada para Stretch para la que desea reanudar la migración de datos.  
   
 2.  Haga clic con el botón derecho y seleccione **Stretch**; después, seleccione **Reanudar**.  
   
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Use Transact-SQL para reanudar la migración de datos  
- Ejecute el siguiente comando.  
+ Ejecute el siguiente comando:  
   
 ```sql  
 USE <Stretch-enabled database name>;

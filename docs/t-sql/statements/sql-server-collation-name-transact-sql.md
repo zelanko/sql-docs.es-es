@@ -17,16 +17,16 @@ ms.assetid: 56483d24-add7-483d-9b96-c6fda460ddbc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e867584c9c9a0e50022d0964a1772ac2c3a1b1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94fa842b9af3fed45e9ad40e04c0029ffc135097
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099983"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009223"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>Nombre de intercalación de SQL Server (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Es una cadena que especifica el nombre de intercalación de una intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -36,7 +36,7 @@ Es una cadena que especifica el nombre de intercalación de una intercalación d
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 <SQL_collation_name> :: =
 SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 
@@ -60,7 +60,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **BIN** Especifica el criterio de ordenación binario que se va a utilizar.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Para enumerar las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidas por el servidor, ejecute la consulta siguiente.
 

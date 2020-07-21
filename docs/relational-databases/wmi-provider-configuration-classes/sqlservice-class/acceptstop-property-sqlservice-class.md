@@ -1,6 +1,6 @@
 ---
-title: Propiedad AcceptStop (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Propiedad AcceptStop (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff1d3f0a184c928a103abeaa6e957ebd5f9ba314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8036e4c21b7cc79744fc8c04411b0866ea1fce22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929766"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888408"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Propiedad AcceptStop (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el valor de propiedad booleano que especifica si se puede detener el servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,14 +36,14 @@ object.AcceptStop [= value]
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) objeto que representa el servicio  
+ Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Un valor booleano que especifica si se puede detener el servicio: **true** si se puede detener el servicio, o **false** si no se puede detener el servicio.  
+ Valor booleano que especifica si el servicio puede detenerse: **true** si el servicio se puede detener o **false** si no se puede detener el servicio.  
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Revocación de los permisos en una colección de esquemas XML | Microsoft Docs
+description: Aprenda a denegar permisos para crear una colección de esquemas XML nueva o utilizar una existente.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17174d9fc10ad522e006c6a90936341856be52df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633157"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Denegar permisos en una colección de esquemas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Es posible denegar permisos para crear una colección de esquemas XML nueva o utilizar una existente.  
   
 ## <a name="denying-permission-to-create-an-xml-schema-collection"></a>Denegar permisos para crear una colección de esquemas XML  

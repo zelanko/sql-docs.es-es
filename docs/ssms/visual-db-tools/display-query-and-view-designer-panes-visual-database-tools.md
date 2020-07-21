@@ -1,10 +1,9 @@
 ---
-title: Mostrar los paneles del Diseñador de consultas y vistas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Visualización de los paneles del Diseñador de consultas y vistas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 27d29536d74f59b9477259ea9f5e335c1c0eae6d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7ce2afd0dd8fd7c63e348b72c9499314494c49ae
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254856"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244172"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

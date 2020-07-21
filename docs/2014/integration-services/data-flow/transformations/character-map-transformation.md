@@ -14,15 +14,14 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00c66af1d609e2e1730be8b7647bdc881d129caf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770427"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431022"
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
   La transformación Mapa de caracteres se aplica a funciones de cadena que operan sobre datos de caracteres, como la conversión de minúsculas a mayúsculas. Esta transformación solo opera en datos de columnas con un tipo de datos de cadena.  
@@ -47,19 +46,19 @@ ms.locfileid: "62770427"
 |Minúsculas|Conversión de caracteres a minúsculas.|  
 |Chino simplificado|Asigna caracteres de chino tradicional a caracteres de chino simplificado.|  
 |Chino tradicional|Asigna caracteres de chino simplificado a caracteres de chino tradicional.|  
-|Mayúsculas|Conversión de caracteres a mayúsculas.|  
+|Uppercase|Conversión de caracteres a mayúsculas.|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>Operaciones de asignación mutuamente exclusivas  
  En una transformación pueden realizarse varias operaciones. Sin embargo, algunas operaciones son mutuamente exclusivas. La siguiente tabla enumera las restricciones que se aplican al usar varias operaciones sobre la misma columna. Las operaciones sobre las columnas Operación A y Operación B son mutuamente exclusivas.  
   
 |Operación A|Operación B|  
 |-----------------|-----------------|  
-|Minúsculas|Mayúsculas|  
+|Minúsculas|Uppercase|  
 |Hiragana|Katakana|  
 |Formato medio|Formato completo|  
 |Chino tradicional|Chino simplificado|  
 |Minúsculas|Hiragana, katakana, formato medio, formato completo|  
-|Mayúsculas|Hiragana, katakana, formato medio, formato completo|  
+|Uppercase|Hiragana, katakana, formato medio, formato completo|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configuración de la transformación Mapa de caracteres  
  Puede configurar la transformación Mapa de caracteres de las maneras siguientes:  
@@ -82,6 +81,6 @@ ms.locfileid: "62770427"
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Servidores remotos | Microsoft Docs
+description: Obtenga información sobre los servidores remotos, que se han reemplazado por servidores vinculados en SQL Server. Vea información sobre la funcionalidad, la configuración y la seguridad.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651578"
 ---
 # <a name="remote-servers"></a>Servidores remotos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Una configuración de servidor remoto permite a un cliente conectado a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutar un procedimiento almacenado en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin necesidad de establecer una conexión individual. En cambio, el servidor al que está conectado el cliente acepta la solicitud de cliente y la envía al servidor remoto en nombre del cliente. El servidor remoto procesa la solicitud y devuelve todos los resultados al servidor original. Este servidor, a su vez, pasa esos resultados al cliente. Cuando configura un servidor remoto, también debe tener en cuenta los aspectos de seguridad.  
@@ -36,7 +37,7 @@ ms.locfileid: "67938182"
   
  La mayoría de las veces, no debe establecer opciones de configuración para los servidores remotos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece valores predeterminados en los equipos local y remoto a fin de permitir conexiones de servidores remotos.  
   
- Para que el acceso al servidor remoto funcione correctamente, la opción de configuración **remote access** se debe establecer en 1 tanto en el equipo local como en el remoto. (Esta es la configuración predeterminada).  **remote access** controla los inicios de sesión desde servidores remotos. Es posible restablecer esta opción de configuración con el procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para establecer la opción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la página **Conexiones de Propiedades del servidor** , use **Permitir conexiones remotas con este servidor**. Para llegar a la página **Conexiones de Propiedades del servidor** , en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, luego, haga clic en **Propiedades**. En la página **Propiedades del servidor** , haga clic en la página **Conexiones** .  
+ Para que el acceso al servidor remoto funcione correctamente, la opción de configuración **remote access** se debe establecer en 1 tanto en el equipo local como en el remoto. (Esta es la configuración predeterminada).  **remote access** controla los inicios de sesión desde servidores remotos. Es posible restablecer esta opción de configuración con el procedimiento almacenado **sp_configure** de [!INCLUDE[tsql](../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para establecer la opción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en la página **Conexiones de Propiedades del servidor** , use **Permitir conexiones remotas con este servidor**. Para llegar a la página **Conexiones de Propiedades del servidor** , en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y, luego, haga clic en **Propiedades**. En la página **Propiedades del servidor** , haga clic en la página **Conexiones** .  
   
  Desde el servidor local, puede deshabilitar una configuración de servidor remoto para impedir el acceso a ese servidor local por parte de usuarios que se encuentran en el servidor remoto con el que se complementa.  
   

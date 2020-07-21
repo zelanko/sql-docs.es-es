@@ -1,5 +1,5 @@
 ---
-title: Uso de la retención | Microsoft Docs
+title: Empleo de la capacidad de alojamiento | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c126385955ce6e9fa9098ec5a09ba115b94ffb0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026198"
 ---
 # <a name="using-holdability"></a>Empleo de la capacidad de alojamiento
@@ -35,6 +35,6 @@ En el siguiente ejemplo, se configura la capacidad de alojamiento del conjunto d
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

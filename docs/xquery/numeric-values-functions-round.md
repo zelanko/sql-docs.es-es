@@ -1,5 +1,6 @@
 ---
-title: Round (función) (XQuery) | Microsoft Docs
+title: Round (función de XQuery) | Microsoft Docs
+description: Obtenga información sobre la función de XQuery Round () que devuelve el número que no tiene una parte fraccionaria más cercana al argumento especificado.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7433ab9f3bd6bcadda324db1a5907f4d83040575
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720008"
 ---
 # <a name="numeric-values-functions---round"></a>Funciones de valores numéricos: round
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número que no tiene una parte fraccionaria más próxima al valor del argumento. Si hay más de un número con esta característica, se devuelve el más próximo al infinito positivo. Por ejemplo:  
   
- Si el argumento es la 2.5, **round()** devuelve 3.  
+ Si el argumento es 2,5, **Round ()** devuelve 3.  
   
- Si el argumento es 2.4999, **round()** devuelve 2.  
+ Si el argumento es 2,4999, **Round ()** devuelve 2.  
   
- Si el argumento es -2,5, **round()** devuelve -2.  
+ Si el argumento es-2,5, **Round ()** devuelve-2.  
   
- Si el argumento es una secuencia vacía, **round()** devuelve una secuencia vacía.  
+ Si el argumento es una secuencia vacía, **Round ()** devuelve la secuencia vacía.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,26 +48,26 @@ fn:round ( $arg as numeric?) as numeric?
  Número al que se aplica la función.  
   
 ## <a name="remarks"></a>Comentarios  
- Si el tipo de *$arg* es uno de los tres tipos bases numéricos, **xs: float**, **xs: Double**, o **xs: decimal**, el tipo de valor devuelto es el mismo que el *$arg* tipo. Si el tipo de *$arg* es un tipo derivado de uno de los tipos numéricos, el tipo de valor devuelto es el tipo base numérico.  
+ Si el tipo de *$arg* es uno de los tres tipos base numéricos, **xs: Float**, **xs: Double**o **xs: decimal**, el tipo de valor devuelto es el mismo que el tipo de *$arg* . Si el tipo de *$arg* es un tipo derivado de uno de los tipos numéricos, el tipo de valor devuelto es el tipo numérico base.  
   
- Si como entrada para el **fn: Floor**, **fn**, o **fn: Round** functions es **xdt: untypedAtomic**, datos sin tipo, se convierte implícitamente a **xs: Double**.  
+ Si la entrada de las funciones **FN: Floor**, **FN: Ceiling**o **FN: Round** es **XDT: untypedAtomic**, datos sin tipo, se convierte implícitamente a **xs: Double**.  
   
  Cualquier otro tipo genera un error estático.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
- Puede usar el ejemplo funcional de la [función ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) para el **round()** función de XQuery. Lo único que debe hacer es sustituir el **ceiling()** función en la consulta con el **round()** función.  
+ Puede usar el ejemplo de trabajo de la [función Ceiling (XQuery)](../xquery/numeric-values-functions-ceiling.md) para la función **Round ()** de XQuery. Todo lo que tiene que hacer es sustituir la función **Ceiling ()** de la consulta por la función **Round ()** .  
   
 ## <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   El **round()** función asigna valores enteros a xs: decimal.  
+-   La función **Round ()** asigna valores enteros a XS: decimal.  
   
--   El **round()** función de los valores xs: Double y xs: float entre - 0.5e0 y - 0e0 a 0e0 en lugar de - 0e0.  
+-   La función **Round ()** de los valores XS: Double y XS: Float entre-0.5 E0 y-0e0 se asignan a 0e0 en lugar de-0e0.  
   
-## <a name="see-also"></a>Vea también  
- [Función FLOOR &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [Función CEILING &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
+## <a name="see-also"></a>Consulte también  
+ [Función Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
+ [Función Ceiling &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   
   

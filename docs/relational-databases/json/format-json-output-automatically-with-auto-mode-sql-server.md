@@ -1,9 +1,7 @@
 ---
-title: Aplicar formato a la salida JSON automáticamente con el modo AUTO (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/17/2017
+title: Aplicar formato a la salida JSON automáticamente con el modo AUTO
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 284da6ca5e2d94feca65a6d57fbbd7a8ee2d79b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 083e8503b659be0f03af08c5f514e30baf012ae8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722296"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Aplicar formato a la salida JSON automáticamente con el modo AUTO (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Para aplicar formato a la salida de la cláusula **FOR JSON** automáticamente en función de la estructura de la instrucción **SELECT**, especifique la opción **AUTO**.  
   
@@ -37,7 +37,7 @@ Estos son algunos ejemplos de la cláusula **FOR JSON** con la opción **AUTO** 
 ## <a name="examples"></a>Ejemplos
 
 ### <a name="example-1"></a>Ejemplo 1
- **Consulta**  
+ **Consultar**  
   
 Cuando una consulta hace referencia solo a una tabla, los resultados de la cláusula FOR JSON AUTO son similares a los resultados de FOR JSON PATH. En este caso, FOR JSON AUTO no crea objetos anidados. La única diferencia es que FOR JSON AUTO genera alias separados por puntos (por ejemplo, `Info.MiddleName` en el siguiente ejemplo) como claves con puntos, no como objetos anidados.  
   
@@ -83,7 +83,7 @@ SELECT TOP 5
 
 ### <a name="example-2"></a>Ejemplo 2
 
-**Consulta**  
+**Consultar**  
   
 Al unir tablas, las columnas de la primera tabla se generan como propiedades del objeto raíz. Las columnas de la segunda tabla se generan como propiedades de un objeto anidado. El nombre de tabla o alias de la segunda tabla (por ejemplo, `D` en el ejemplo siguiente) se usa como el nombre de la matriz anidada.  
   
@@ -121,7 +121,7 @@ FOR JSON AUTO
 
 ### <a name="example-3"></a>Ejemplo 3
  
-**Consulta**  
+**Consultar**  
 En lugar de usar FOR JSON AUTO, puede anidar una subconsulta FOR JSON PATH en la instrucción SELECT, como se muestra en el ejemplo siguiente. Este ejemplo produce el mismo resultado que el ejemplo anterior.  
   
 ```sql  

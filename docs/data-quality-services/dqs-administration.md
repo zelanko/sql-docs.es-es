@@ -1,6 +1,5 @@
 ---
-title: Administración de DQS | Microsoft Docs
-ms.custom: ''
+title: dqs, administración
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,18 +11,18 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: b801dd3792755c93006c1c6a48cfa9dc5af9cc37
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152461"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888101"
 ---
 # <a name="dqs-administration"></a>dqs, administración
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite administrar diversas actividades de DQS realizadas en [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurar las propiedades del servidor relacionadas con las actividades de DQS, configurar los valores de Reference Data Service y configurar los valores del registro de DQS. Todo esto se realizan a través de la característica **Administración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. En función del acceso de seguridad (rol) en DQS, se le concede o deniega el acceso a diversas funcionalidades de esta área.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "70152461"
   
 -   Configure el registro según el nivel de gravedad de los eventos.  
   
-##  <a name="AdminUsingClent"></a> Actividades de administración con el cliente de calidad de datos  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Actividades de administración mediante el uso de Data Quality Client  
  Estas actividades se realizan mediante la característica de **Administración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Supervisión de actividades  
@@ -52,21 +51,21 @@ ms.locfileid: "70152461"
 ### <a name="configuration"></a>Configuración  
  La pantalla de **Configuración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite al administrador de DQS hacer lo siguiente:  
   
--   **Datos de referencia**: configurar los proveedores de servicios de datos de referencia: Azure Marketplace o proveedores de servicios de datos de referencia directos. Una vez haya establecido los proveedores de servicios de datos de referencia, podrá asignar un dominio o un dominio compuesto a los datos de referencia durante la actividad de administración de dominios en una base de conocimiento y, posteriormente, usar la misma base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos. También permite especificar la configuración de proxy para conectarse a Internet para usar Azure Marketplace.  
+-   **Datos de referencia**: configuración de proveedores de servicios de datos de referencia: Azure Marketplace o proveedores de servicios de datos de referencia directos. Una vez haya establecido los proveedores de servicios de datos de referencia, podrá asignar un dominio o un dominio compuesto a los datos de referencia durante la actividad de administración de dominios en una base de conocimiento y, posteriormente, usar la misma base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos. También permite especificar la configuración de proxy para conectarse a Internet para usar Azure Marketplace.  
   
--   **Configuración general**: especifique los valores del umbral para la limpieza de datos y la coincidencia de datos, además de si quiere habilitar las notificaciones para la generación de perfiles en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Estos umbrales los utiliza DQS durante la limpieza asistida por PC y las actividades de búsqueda de coincidencias en un proyecto de calidad de datos.  
+-   **Configuración general**: especifique el umbral para la limpieza de datos y la coincidencia de datos, además de si habilitar las notificaciones para la generación de perfiles en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Estos umbrales los utiliza DQS durante la limpieza asistida por PC y las actividades de búsqueda de coincidencias en un proyecto de calidad de datos.  
   
--   **Configuración de registro**: en los archivos de registro de DQS, se registran las actividades realizadas en DQS y resultan útiles para realizar el seguimiento de problemas operativos durante los procesos de mantenimiento y solución de problemas. Puede filtrar los mensajes que desee registrar para varias características de DQS (administración de dominios, detección del conocimiento, limpieza, coincidencias y servicios de datos de referencia) y módulos de DQS según el nivel de gravedad de los eventos.  
+-   **Configuración de registro**: los archivos de registro en DQS registran las actividades realizadas en DQS y resultan útiles para llevar el seguimiento de problemas operativos durante los procesos de mantenimiento y solución de problemas. Puede filtrar los mensajes que desee registrar para varias características de DQS (administración de dominios, detección del conocimiento, limpieza, coincidencias y servicios de datos de referencia) y módulos de DQS según el nivel de gravedad de los eventos.  
   
 > [!NOTE]  
 >  La pantalla de **Configuración** solo está disponible para los usuarios que tengan el rol dqs_administrator en la base de datos de DQS_MAIN.  
   
-##  <a name="AdminOutsideClient"></a> Actividades de administración fuera de Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Actividades de administración fuera de Data Quality Client  
  Estas actividades se realizan fuera de Data Quality Client:  
   
--   **Copia de seguridad y restauración de bases de datos de DQS**: las copias de seguridad y restauración de bases de datos de DQS son iguales que para cualquier base de datos de SQL Server, excepto algunas diferencias específicas de DQS.  
+-   **Copia de seguridad y restauración de bases de datos de DQS**: las copias de seguridad y restauración de bases de datos de DQS son iguales que para cualquier base de datos de SQL Server salvando algunas diferencias propias de DQS.  
   
--   **Asociar y desasociar bases de datos de DQS**: los pasos para asociar y desasociar bases de datos de DQS son los mismos que para cualquier base de datos de SQL Server, excepto algunas diferencias específicas de DQS.  
+-   **Separar y adjuntar bases de datos de DQS**: los pasos para separar y adjuntar bases de datos de DQS son los mismos que para cualquier base de datos de SQL Server salvando algunas diferencias propias de DQS.  
   
  Para más información, consulte [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   
@@ -75,17 +74,17 @@ ms.locfileid: "70152461"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo supervisar actividades en DQS.|[Supervisar las actividades de DQS](../data-quality-services/monitor-dqs-activities.md)|  
-|Describe cómo configurar valores de datos de referencia en DQS.|[Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
-|Describe cómo configurar los umbrales para las actividades de limpieza y búsqueda de coincidencias.|[Configurar los valores de umbral para la limpieza y la coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Describe cómo configurar valores de datos de referencia en DQS.|[Configurar DQS para utilizar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Describe cómo configurar los umbrales para las actividades de limpieza y búsqueda de coincidencias.|[Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Describe cómo habilitar o deshabilitar las notificaciones en DQS.|[Habilitar o deshabilitar notificaciones de generación de perfiles en DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
 |Describe cómo configurar el registro de DQS basado en el nivel de gravedad de los eventos.|[Configurar los niveles de gravedad de los archivos de registro de DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Describe cómo configurar las configuraciones avanzadas del registro de DQS.|[Configurar las opciones avanzadas de los archivos de registro de DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
 |Describe cómo realizar copias de seguridad y restaurar bases de datos de DQS.|[Realizar copias de seguridad de bases de datos de DQS y restaurarlas](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Describe cómo adjuntar y separar bases de datos de DQS.|[Separar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de datos de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Data Services de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Administrar archivos de registro de DQS](../data-quality-services/manage-dqs-log-files.md)   
- [Administrar bases de datos de DQS](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

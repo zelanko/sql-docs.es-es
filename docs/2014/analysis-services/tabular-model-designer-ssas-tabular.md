@@ -1,5 +1,5 @@
 ---
-title: Diseñador de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Diseñador de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb2a248ea8fa0205f1db11df0589ab2b3da0ab9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067825"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940186"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Diseñador de modelos tabulares (SSAS tabular)
   El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 o posterior, con plantillas adicionales de tipo de proyecto específicamente para desarrollar soluciones de modelos tabulares profesionales.  
@@ -28,16 +27,16 @@ ms.locfileid: "66067825"
   
 -   [Plantillas de proyecto](#bkmk_proj_temp)  
   
--   [Windows y menús](#bkmk_wind_men)  
+-   [Ventanas y menús](#bkmk_wind_men)  
   
 -   [Integración de Visual Studio](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Ventajas  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se agregan nuevas plantillas de proyecto para crear modelos tabulares a los tipos de proyecto disponibles. Una vez creado un proyecto de modelo tabular mediante una de las plantillas, puede empezar a crear modelos mediante las herramientas y los asistentes del diseñador de modelos tabulares.  
   
  Además de las nuevas plantillas y herramientas para crear soluciones de modelos tabulares y multidimensionales profesionales, el entorno de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proporciona funciones para la depuración y el ciclo de vida de los proyectos que le permiten asegurarse de que crea las soluciones BI más eficaces para su organización. Para obtener más información sobre [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], vea [Introducción a Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a> Plantillas de proyectos  
+##  <a name="project-templates"></a>Plantillas del proyecto <a name="bkmk_proj_temp"></a>  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se agregan las siguientes plantillas de proyectos de modelos tabulares a los tipos de proyecto de Business Intelligence:  
   
  **Proyecto tabular de Analysis Services**  
@@ -52,7 +51,7 @@ ms.locfileid: "66067825"
 > [!NOTE]  
 >  Los proyectos de modelo tabular requieren que una instancia del servidor de Analysis Services se ejecute en modo tabular localmente o en la red.  
   
-##  <a name="bkmk_wind_men"></a> Ventanas y menús  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a> Ventanas y menús  
  El entorno de creación de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] incluye lo siguiente:  
   
 ### <a name="designer-window"></a>Ventana del diseñador  
@@ -78,9 +77,9 @@ ms.locfileid: "66067825"
   
 -   Model.bim  
   
--   Table  
+-   Tabla  
   
--   columna  
+-   Columna  
   
 -   Measure  
   
@@ -103,10 +102,10 @@ ms.locfileid: "66067825"
   
  De forma predeterminada, la **Lista de errores** no aparecerá a menos que se devuelva un error. No obstante, puede ver la ventana **Lista de errores** en cualquier momento. Para ver la ventana **Lista de errores** , haga clic en el menú **Ver** y, a continuación, haga clic en **Lista de errores**.  
   
-### <a name="output"></a>Salida  
+### <a name="output"></a>Resultados  
  En la ventana de **Salida** se muestra información sobre la generación e implementación (además del diálogo de progreso modal). Para ver la ventana **Salida** , haga clic en el menú **Ver** y, a continuación, haga clic en Salida.  
   
-### <a name="menu-items"></a>Elementos del menú  
+### <a name="menu-items"></a>Elementos de menú  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se agregan a la barra de menús de Visual Studio elementos de menú adicionales específicos para la creación de modelos tabulares. El menú **Modelo** se puede utilizar para iniciar el Asistente para la importación de datos, ver las conexiones existentes, procesar los datos del área de trabajo y examinar el área de trabajo del modelo en [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel. El menú **Tabla** se utiliza para crear y administrar las relaciones entre las tablas, crear y administrar medidas, especificar valores de tablas de datos, así como para especificar opciones de cálculo y otras propiedades de las tablas. En el menú **Columna** , puede agregar y eliminar columnas de una tabla, ocultar y mostrar columnas, y especificar otras propiedades de las columnas, como tipos de datos y filtros. En el menú **Compilar** , puede compilar e implementar soluciones de modelos tabulares. Las funciones de copiar y pegar se incluyen en el menú **Edición** .  
   
  Además de estos elementos de menú, se han agregado valores adicionales a las opciones de Analysis Services en los elementos del menú Herramientas.  
@@ -114,7 +113,7 @@ ms.locfileid: "66067825"
 ### <a name="toolbar"></a>Barra de herramientas  
  La barra de herramientas de Analysis Services proporciona un acceso rápido y fácil a los comandos de creación de modelos usados con más frecuencia.  
   
-##  <a name="bkmk_vsint"></a> Integración de Visual Studio  
+##  <a name="visual-studio-integration"></a>Integración de <a name="bkmk_vsint"></a> Visual Studio  
  **Control de código fuente**  
  Los proyectos de Analysis Services se integran con el complemento de control de código fuente seleccionado. Si ha configurado Visual Studio para usar el control de código fuente, puede usar las funciones de protección/desprotección desde el Explorador de soluciones. Para configurar el uso de Team Foundation Server, vea [Configurar Visual Studio con el control de versiones de Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). También se admiten muchos complementos de control de código fuente de terceros.  
   
@@ -124,8 +123,8 @@ ms.locfileid: "66067825"
  **Métodos abreviados de teclado**  
  Los métodos abreviados de teclado de Analysis Services se pueden configurar/reasignar con el cuadro de diálogo Herramientas->Opciones->Teclado. Algunos métodos abreviados globales de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , como compilar, guardar, depurar, nuevo proyecto, etc. se admiten en el contexto del diseñador de modelos tabulares. Otros métodos abreviados específicos del diseñador de modelos tabulares se encuentran en el contexto de Analysis Services.  
   
-## <a name="see-also"></a>Vea también  
- [Proyectos de modelos tabulares &#40;SSAS tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Proyectos de modelos tabulares &#40;&#41;tabular de SSAS](tabular-models/tabular-model-projects-ssas-tabular.md)   
  [Propiedades &#40;SSAS tabular&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

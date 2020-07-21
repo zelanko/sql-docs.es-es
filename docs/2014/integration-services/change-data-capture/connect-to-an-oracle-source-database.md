@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e82b9d2621b034b9b5a6d19aaec856ab6ec81a48
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835767"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438782"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  
@@ -41,7 +40,7 @@ ms.locfileid: "62835767"
 > [!NOTE]
 >  Un usuario debe tener concedidos los privilegios siguientes en la base de datos de Oracle para poder ser un usuario de minería de registros.  
 > 
->  -   SELECT en \<any-captured-table>  
+>  -   SELECCIONAR activado\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE en DBMS LOGMNR  
 > -   SELECT en V$LOGMNR CONTENTS  
@@ -65,7 +64,7 @@ ms.locfileid: "62835767"
   
  Cuando termine de especificar información en esta página, haga clic en **Siguiente** para [Select Oracle Tables and Columns](select-oracle-tables-and-columns.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Editar propiedades de la instancia](edit-instance-properties.md)  
   

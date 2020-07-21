@@ -11,32 +11,31 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d3f751d0547c3b335eb71b55370c8e8cb1e5529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937916"
 ---
 # <a name="create-a-domain"></a>Crear un dominio
   En este tema se describe cómo crear un dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los valores del dominio son una representación semántica de los datos de un campo. Para más información sobre los dominios, vea [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
  Hay dos maneras de crear un nuevo dominio. La primera es durante el paso de asignación de la actividad de detección de conocimiento, cuando se analiza una muestra de los datos para agregar conocimiento a una base de conocimiento nueva o a una ya existente. La segunda es durante la actividad de administración de dominios, cuando se crea un nuevo dominio en lugar de modificar uno ya existente.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio, debe haber creado y abierto una base de conocimiento.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio.  
   
-##  <a name="Discovery"></a> Crear un dominio en la actividad Detección de conocimiento  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a> Crear un dominio en la actividad Detección de conocimiento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento** y seleccione una base de conocimiento, o haga clic en **Nueva base de conocimiento** y especifique las propiedades para la nueva base de conocimiento.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "65480960"
   
 5.  En la tabla **Asignaciones** , seleccione una columna de origen en la lista desplegable para la columna **Columna de origen** de una fila vacía. Si no existe ningún dominio correspondiente, haga clic en el icono **Crear un dominio** .  
   
-##  <a name="DomainManagement"></a> Crear un dominio en la actividad Administración de dominios  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Crear un dominio en la actividad administración de dominios  
   
 1.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento** y seleccione una base de conocimiento, o haga clic en **Nueva base de conocimiento** y especifique las propiedades para la nueva base de conocimiento.  
   
@@ -54,12 +53,12 @@ ms.locfileid: "65480960"
   
 3.  En la página **Administración de dominios** , haga clic en el icono **Crear un dominio** situado sobre la lista de dominios.  
   
-##  <a name="Properties"></a> Establecer las propiedades de dominio  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>Establecer propiedades de dominio  
   
 1.  En el cuadro de diálogo **Crear dominio** , escriba un nombre que sea único en la base de conocimiento y una descripción con una longitud máxima de 256 caracteres.  
   
     > [!NOTE]  
-    >  Para obtener más información acerca de las propiedades de dominio, vea [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >   Para obtener más información acerca de las propiedades de dominio, vea [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  En la lista **Tipo de datos** , seleccione un tipo de datos para los valores del dominio. El tipo de datos puede ser **Cadena** (el valor predeterminado), **Fecha**, **Entero**o **Decimal**.  
   
@@ -85,11 +84,11 @@ ms.locfileid: "65480960"
   
 8.  Si el tipo de datos es **Cadena**, seleccione **Deshabilitar algoritmos de error de sintaxis** para rellenar el dominio sin comprobar la existencia de errores de sintaxis en los valores de cadena.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear un dominio  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a> Seguimiento: después de crear un dominio  
  Una vez creado el dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

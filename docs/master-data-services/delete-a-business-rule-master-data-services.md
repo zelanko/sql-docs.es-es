@@ -1,5 +1,5 @@
 ---
-title: Eliminar una regla de negocios (Master Data Services) | Microsoft Docs
+title: Eliminar una regla de negocios
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec560acba23c5423c295f569745da1f8d6bc86e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 475af6465a5e79e6577c60ac88a312fb5d0d4cf9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812784"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Eliminar una regla de negocios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una regla de negocios cuando ya no se necesite.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68094400"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-business-rule"></a>Eliminar una regla de negocios  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68094400"
   
 2.  En la barra de menús, seleccione **Administrar** y haga clic en **Reglas de negocios**.  
   
-3.  En la página **Reglas de negocios** , en la lista desplegable **Modelo** , seleccione un modelo.  
+3.  En la página **reglas de negocios** , en la lista desplegable **modelo** , seleccione un modelo.  
   
 4.  En la lista desplegable **Entidad** , seleccione una entidad.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68094400"
   
 10. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. La regla de negocios eliminada ya no aparece en la cuadrícula.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Excluir una regla de negocios &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

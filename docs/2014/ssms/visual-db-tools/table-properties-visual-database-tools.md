@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df4a0332ebc622b069c468e51c461b7cba20aa36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044197"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
   Estas propiedades aparecen en la ventana Propiedades cuando se hace clic con el botón secundario en el Diseñador de tablas y se selecciona Propiedades. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades cuando la tabla esté seleccionada.  
@@ -34,7 +33,7 @@ ms.locfileid: "63204690"
  **Categoría Identidad**  
  Se expande para mostrar las propiedades **Nombre**, **Descripción**y **Esquema**.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la tabla. Para editar el nombre, escriba en el cuadro de texto.  
   
 > [!CAUTION]  
@@ -70,7 +69,7 @@ ms.locfileid: "63204690"
  **(Tipo de espacio de datos)**  
  Indica si la tabla se almacena utilizando un grupo de archivos o un esquema de partición.  
   
- **Nombre de esquema de partición o grupo de archivos**  
+ **Nombre de esquema de partición o grupo de archivo**  
  Muestra el nombre del grupo de archivos o esquema de partición.  
   
  **Lista de columnas de particiones**  
@@ -82,7 +81,7 @@ ms.locfileid: "63204690"
  **Grupo de archivos Text/Image**  
  Proporciona una lista desplegable en la que se puede elegir el grupo de archivos para columnas que tienen tipos de datos text o image. Si la tabla se almacena utilizando un esquema de partición, deje este campo en blanco.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñar tablas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

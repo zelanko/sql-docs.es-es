@@ -1,5 +1,6 @@
 ---
 title: Modificar tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre cómo la instrucción ALTER TABLE realiza los cambios de esquema y de índice en las tablas optimizadas para memoria. Combine las operaciones ADD, DROP y ALTER en una única instrucción.
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776076"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Los cambios de esquema y de índice en las tablas optimizadas para memoria pueden realizarse mediante la instrucción ALTER TABLE. En SQL Server 2016 y Azure SQL Database, las operaciones ALTER TABLE en tablas optimizadas para memoria son sin conexión, lo que significa que la tabla no está disponible para realizar consultas mientras la operación está en curso. La aplicación de base de datos puede seguir ejecutándose, y cualquier operación que tenga acceso a la tabla se bloqueará hasta que se complete el proceso de modificación. Es posible combinar varias operaciones ADD, DROP o ALTER en una sola instrucción ALTER TABLE.
 
@@ -137,4 +138,4 @@ GO
 
 ## <a name="see-also"></a>Consulte también  
 
-[Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Tablas optimizadas para la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

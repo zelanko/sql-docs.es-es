@@ -1,5 +1,6 @@
 ---
 title: Orígenes de datos y métodos de conexión | Microsoft Docs
+description: En Report Services, puede usar estos métodos para establecer y administrar las credenciales y las conexiones a un origen de datos.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c30b5343041c2fd8f1916d560a8ca2556990be09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62512597"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198262"
 ---
 # <a name="data-sources-and-connection-methods"></a>Orígenes de datos y métodos de conexión
   Puede utilizar estos métodos para establecer y administrar las credenciales y las conexiones a un origen de datos.  

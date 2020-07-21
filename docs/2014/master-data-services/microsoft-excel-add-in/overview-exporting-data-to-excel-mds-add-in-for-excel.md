@@ -1,5 +1,5 @@
 ---
-title: Carga de datos (complemento MDS para Excel) | Microsoft Docs
+title: Carga de datos (Complemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40c16c0afd90bd7042f387fd40f48dbb0237027e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482799"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961015"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Cargar datos (complemento MDS para Excel)
-  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe cargar datos desde el repositorio MDS en una hoja de cálculo de Excel activa para poder trabajar con él. Cuando termine de trabajar con los datos, publíquelos en el repositorio MDS para que otros usuarios puedan compartirlos.  
+  En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] , debe cargar los datos del repositorio MDS en una hoja de cálculo de Excel activa para poder trabajar con ellos. Cuando termine de trabajar con los datos, publíquelos en el repositorio MDS para que otros usuarios puedan compartirlos.  
   
  Los datos que puede cargar se limitan a aquellos para los que tiene permiso de acceso. El permiso de acceso a datos se establece en la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] o mediante programación.  
   
@@ -28,7 +27,7 @@ ms.locfileid: "65482799"
 >  Es preciso abrir un libro habilitado para MDS y actualizarlo solo en Excel con un complemento de MDS para Excel. Cuando se abre un libro habilitado para MDS en Excel en un equipo en el que no esté instalado el complemento de MDS para Excel, o no se admita, podría dañarse el archivo del libro. Si desea compartir datos con otra persona, envíele por correo electrónico un archivo de consulta de acceso directo, en lugar de guardar la hoja de cálculo y enviarla por correo electrónico. Para obtener más información sobre la consulta, consulte [Enviar por correo electrónico un archivo de consulta de acceso directo &#40;complemento MDS para Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md).  
   
 ## <a name="filtering-data"></a>Filtrado de datos  
- Puede filtrar datos antes de cargarlos para limitar la cantidad de datos que se va a descargar. Esto incluye elegir qué atributos (columnas) desea cargar, el orden que desea mostrar los atributos y los miembros (filas de datos) con los que desea trabajar. Para obtener más información, consulte [filtrar datos antes de la carga &#40;complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
+ Puede filtrar los datos antes de cargarlos para limitar la cantidad de datos que va a descargar. Esto incluye elegir qué atributos (columnas) desea cargar, el orden que desea mostrar los atributos y los miembros (filas de datos) con los que desea trabajar. Para obtener más información, vea [filtrar datos antes de cargar &#40;Complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md).  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>Conectar automáticamente y cargar datos utilizados con frecuencia  
  Si desea conectarse al mismo servidor y cargar siempre el mismo conjunto de datos, puede crear archivos de consulta de acceso directo, que contienen la información de conexión y filtro. Para obtener más información sobre los archivos de consulta, consulte [Archivos de consulta de acceso directo &#40;complemento MDS para Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "65482799"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Filtrar los datos MDS antes de cargarlos en Excel.|[Filtrar datos antes de cargarlos &#40;complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
+|Filtrar los datos MDS antes de cargarlos en Excel.|[Filtre los datos antes de cargar &#40;Complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Cargar datos MDS en Excel.|[Cargar datos de MDS en Excel](export-data-to-excel-from-master-data-services.md)|  
 |Cambiar el orden de las columnas antes de descargar datos.|[Reordenar columnas &#40;complemento MDS para Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   

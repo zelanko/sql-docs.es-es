@@ -1,6 +1,7 @@
 ---
-title: Creación de objetos de base de datos con la integración de Common Language Runtime (CLR) | Microsoft Docs
-ms.custom: ''
+title: Objetos de base de datos de compilación de Common Language Runtime (CLR)
+description: Cree objetos de base de datos mediante la integración de SQL Server con el Common Language Runtime de .NET Framework (CLR).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7037105391425632dba0af3646635305e510f207
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138666"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885916"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Generar objetos de base de datos con la integración de Common Language Runtime (CLR)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Puede generar objetos de base de datos mediante la integración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con .NET Framework Common Language Runtime (CLR). El código administrado que se ejecuta dentro de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce como una "rutina CLR". Estas rutinas incluyen:  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Puede generar objetos de base de datos mediante la integración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con .NET Framework Common Language Runtime (CLR). El código administrado que se ejecuta dentro de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce como "rutina de CLR". Estas rutinas incluyen:  
   
 -   Funciones definidas por el usuario con valores escalares (UDF escalares)  
   
@@ -59,19 +60,19 @@ ms.locfileid: "68138666"
  [Información general de los atributos personalizados de la integración CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  Proporciona información sobre los atributos personalizados de integración CLR.  
   
- [Funciones CLR definidas por el usuario](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [Funciones definidas por el usuario de CLR](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Describe cómo implementar y usar los distintos tipos de funciones CLR: funciones de agregado definidas por el usuario, escalares y con valores de tabla.  
   
- [Tipos definidos por el usuario de CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Describe cómo implementar y usar los tipos definidos por el usuario CLR.  
   
- [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [Procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
  Describe cómo implementar y usar los procedimientos almacenados CLR.  
   
- [Desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [Desencadenadores de CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  Describe cómo implementar y usar los desencadenadores CLR.  
   
-## <a name="see-also"></a>Vea también  
- [Common Language Runtime &#40;CLR&#41; Introducción a la integración](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general sobre la integración de Common Language Runtime &#40;CLR&#41;](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

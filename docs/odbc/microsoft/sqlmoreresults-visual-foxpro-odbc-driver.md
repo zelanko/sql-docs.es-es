@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLMoreResults function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a21e2145e10c5ed9364a392f6cb888b676ec18e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68b9c0b698156af480db322ce349986e8936d7a0
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002250"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81299505"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel 2  
+ Conformidad con la API de ODBC: nivel 2  
   
- Determina si más resultados están pendientes en un identificador de instrucción, *hstmt*, que contiene las instrucciones SELECT, UPDATE, INSERT o DELETE y si es así, inicializa el procesamiento de esos resultados.  
+ Determina si hay más resultados pendientes en un identificador de instrucción, *hstmt*, que contiene las instrucciones SELECT, Update, INSERT o DELETE, y si es así, inicializa el procesamiento de esos resultados.  
   
- Para obtener más información, consulte [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) en la *Referencia del programador de ODBC*.

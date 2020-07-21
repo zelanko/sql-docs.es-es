@@ -1,5 +1,6 @@
 ---
-title: Solución de problemas de representación de informes de Reporting Services | Microsoft Docs
+title: Solución de problemas de representación de informes de Reporting Services
+description: En este artículo, diagnosticará y corregirá problemas de visualización cuando el informe compilado y los datos de diseño se envían a un representador de informes en SQL Server Reporting Services.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f8c5029d66a068d43ebc659592697fd2914fd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 3a834ee415fd725c26314b95d507b86ff5280f78
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574685"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662780"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solución de problemas de representación de informes de Reporting Services
 Una vez combinados los datos y la información de diseño, el informe compilado se envía a un representador de informes. Por ejemplo, al obtener una vista previa de un informe localmente, se utiliza el representador de HTML para ver el informe compilado. Utilice este tema para ayudar a solucionar problemas concretos de la representación de informes.   
@@ -60,7 +61,7 @@ Cuando el origen de datos se configura para un tipo de conexión de Lista de Mic
   
 **Para evitar este problema:** modifique el origen de datos para usar las credenciales almacenadas en lugar de las credenciales de Windows.  
   
-**Este problema se aplica a:** exploradores configurados para pedir credenciales.  
+**Este problema se aplica a:** exploradores configurados para solicitar credenciales.  
   
 ## <a name="see-also"></a>Consulte también  
 [Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

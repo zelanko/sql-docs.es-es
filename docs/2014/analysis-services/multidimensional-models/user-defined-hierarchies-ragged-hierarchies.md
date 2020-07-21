@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889331"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535637"
 ---
 # <a name="ragged-hierarchies"></a>Jerarquías desiguales
   Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
@@ -36,7 +35,7 @@ ms.locfileid: "68889331"
   
 -   [Establecer MDX Compatibility para determinar cómo se representan los marcadores de posición en las aplicaciones cliente](#bkmk_Mdx)  
   
-##  <a name="bkmk_approach"></a> Enfoques para modificar la navegación de obtención de detalles en una jerarquía desigual  
+##  <a name="approaches-for-modifying-drilldown-navigation-in-a-ragged-hierarchy"></a><a name="bkmk_approach"></a> Enfoques para modificar la navegación de obtención de detalles en una jerarquía desigual  
  La presencia de una jerarquía desigual se convierte en un problema cuando la navegación de obtención de detalles no devuelve los valores esperados o se percibe como difícil de usar. Para corregir los problemas de navegación resultantes de jerarquías desiguales, considere las siguientes opciones:  
   
 -   Use una jerarquía normal pero establezca la propiedad `HideMemberIf` en cada nivel para especificar si un nivel que falta se muestra al usuario. Al establecer `HideMemberIf`, debe establecer también `MDXCompatibility` en la cadena de conexión para reemplazar los comportamientos de navegación predeterminados. En este tema se ofrecen instrucciones para establecer estas propiedades.  
@@ -45,7 +44,7 @@ ms.locfileid: "68889331"
   
  Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer `HideMemberIf`. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Vea [las jerarquías desiguales (blog) de Martin Mason de la parte 1A del cubo financiero de SSAS](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para más información sobre esta técnica.  
   
-##  <a name="bkmk_Hide"></a> Establecer HideMemberIf para ocultar miembros en una jerarquía normal  
+##  <a name="set-hidememberif-to-hide-members-in-a-regular-hierarchy"></a><a name="bkmk_Hide"></a> Establecer HideMemberIf para ocultar miembros en una jerarquía normal  
  En la tabla de una dimensión desigual, los miembros que faltan de manera lógica se pueden representar de distintos modos. Las celdas de la tabla pueden contener valores NULL o cadenas vacías o bien pueden contener el mismo valor que su elemento primario para servir de marcador de posición. La representación de los marcadores de posición está determinada por el estado de los marcadores de posición de los miembros secundarios, según determina la propiedad `HideMemberIf`, y la propiedad de cadena de conexión `MDX Compatibility` de la aplicación cliente.  
   
  En aplicaciones cliente que admiten la visualización de jerarquías desiguales, puede usar estas propiedades para ocultar de forma lógica los miembros que faltan.  
@@ -62,7 +61,7 @@ ms.locfileid: "68889331"
     |**NoName**|Un miembro del nivel está oculto cuando su nombre está vacío.|  
     |**ParentName**|Un miembro del nivel está oculto cuando su nombre es idéntico al de su primario.|  
   
-##  <a name="bkmk_Mdx"></a> Establecer MDX Compatibility para determinar cómo se representan los marcadores de posición en las aplicaciones cliente  
+##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>Establecer la compatibilidad de MDX para determinar cómo se representan los marcadores de posición en las aplicaciones cliente  
  Después de establecer `HideMemberIf` en un nivel de jerarquía, debe establecer también la propiedad `MDX Compatibility` en la cadena de conexión enviada desde la aplicación cliente. El valor de `MDX Compatibility` determina si se usa `HideMemberIf` o no.  
   
 |Valor de MDX Compatibility|Descripción|Uso|  
@@ -70,7 +69,7 @@ ms.locfileid: "68889331"
 |**1**|Mostrar un valor de marcador de posición.|Es el valor predeterminado utilizado por Excel, SSDT y SSMS. Indica al servidor que devuelva los valores de marcador de posición al obtener detalles de niveles vacíos en una jerarquía desigual. Si hace clic en el valor de marcador de posición, puede seguir profundizando hasta obtener los nodos secundarios (hoja).<br /><br /> Excel posee la cadena de conexión usada para conectarse a Analysis Services y siempre establece `MDX Compatibility` en 1 en todas las conexiones nuevas. Este comportamiento conserva la compatibilidad con versiones anteriores.|  
 |**2**|Ocultar un valor de marcador de posición (un valor NULL o un duplicado del nivel primario), pero mostrar otros niveles y nodos que tengan los valores pertinentes.|`MDX Compatibility`=2 se suele considerar el valor preferido para las jerarquías desiguales. Un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y algunas aplicaciones cliente de terceros pueden conservar este valor.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear jerarquías definidas por el usuario](user-defined-hierarchies-create.md)   
  [Jerarquías de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Jerarquía de elementos primarios y secundarios](parent-child-dimension.md)   

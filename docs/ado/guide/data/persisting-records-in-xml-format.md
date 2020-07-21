@@ -1,5 +1,5 @@
 ---
-title: Almacenar registros en formato XML | Microsoft Docs
+title: Guardar registros en formato XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924590"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763616"
 ---
 # <a name="persisting-records-in-xml-format"></a>Almacenar registros en formato XML
-Al igual que con formato ADTG, **Recordset** persistencia en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y solo lectura desde un archivo XML o una secuencia que contiene la información de esquema generada por ADO guardado. De forma similar, puede tardar un ADO **Recordset**, generar XML y guárdelo en un archivo o cualquier objeto que implementa el COM **IStream** interfaz. (De hecho, un archivo es sólo otro ejemplo de un objeto que admite **IStream**.) Para las versiones 2.5 y versiones posteriores, ADO se basa en Microsoft XML Parser (MSXML) para cargar el XML en el **Recordset**; por lo tanto, MSXML se.  
+Al igual que el formato ADTG, la persistencia del **conjunto de registros** en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y de solo lectura desde un archivo o secuencia XML guardado que contiene la información de esquema generada por ADO. Del mismo modo, puede tomar un **conjunto de registros**ADO, generar XML y guardarlo en un archivo o en cualquier objeto que implemente la interfaz **IStream** com. (De hecho, un archivo es simplemente otro ejemplo de un objeto que admite **IStream**). En las versiones 2,5 y posteriores, ADO se basa en el analizador de Microsoft XML (MSXML) para cargar el XML en el **conjunto de registros**; por lo tanto, se requiere MSXML. dll.  
   
 > [!NOTE]
->  Existen algunas limitaciones al guardar jerárquica **conjuntos de registros** (formas de datos) en formato XML. No se puede guardar en XML si el jerárquica **Recordset** contiene las actualizaciones pendientes, y no se puede guardar un con parámetros jerárquicos **Recordset**. Para obtener más información, consulte [conservar filtrados y conjuntos de registros jerárquicos](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Se aplican algunas limitaciones al guardar **conjuntos de registros** jerárquicos (formas de datos) en formato XML. No se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros**jerárquico con parámetros. Para obtener más información, vea [Guardar conjuntos de registros jerárquicos y filtrados](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
- La manera más fácil para conservar datos en XML y cargarlo de nuevo del nuevo a través de ADO es con el **guardar** y **abierto** métodos, respectivamente. El siguiente ejemplo de código ADO muestra cómo guardar los datos en el **títulos** tabla a un archivo que se denomina titles.sav.  
+ La forma más fácil de conservar los datos en XML y volver a cargarlos a través de ADO es con los métodos **Save** y **Open** , respectivamente. En el siguiente ejemplo de código ADO se muestra cómo guardar los datos de la tabla **titles** en un archivo denominado titles. sav.  
   
 ```  
 Dim rs as new Recordset  
@@ -59,14 +59,14 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO siempre conserva toda la **Recordset** objeto. Si desea conservar un subconjunto de filas de la **Recordset** de objeto, utilice el **filtro** método para reducir el número de filas o cambie la cláusula de selección. Sin embargo, debe abrir un **Recordset** objeto con un cursor de cliente (**CursorLocation** = **adUseClient**) para usar el **filtrar** método para guardar un subconjunto de filas. Por ejemplo, para recuperar los títulos que empiezan por la letra "b", puede aplicar un filtro a una apertura **Recordset** objeto:  
+ ADO siempre conserva todo el objeto de **conjunto de registros** . Si desea conservar un subconjunto de filas del objeto de **conjunto de registros** , use el método **Filter** para restringir las filas o cambiar la cláusula de selección. Sin embargo, debe abrir un objeto de **conjunto de registros** con un cursor del lado cliente (**CursorLocation**  =  **adUseClient**) para utilizar el método de **filtro** para guardar un subconjunto de filas. Por ejemplo, para recuperar títulos que comienzan por la letra "b", puede aplicar un filtro a un objeto de **conjunto de registros** abierto:  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO siempre utiliza el conjunto de filas del motor de Cursor de cliente para generar un desplazable es **Recordset** objeto encima de los datos de solo avance generados por el proveedor de persistencia.  
+ ADO siempre usa el conjunto de filas del motor de cursor de cliente para generar un objeto de **conjunto de registros** desplazable y seleccionable sobre los datos de solo avance generados por el proveedor de persistencia.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68082136"
 ---
 # <a name="integration-services-scale-out-manager"></a>Administrador de escalabilidad horizontal de Integration Services
@@ -71,7 +71,7 @@ Escriba el nombre del equipo del trabajo de escalabilidad horizontal que quiera 
 
 ![Conectar el trabajo](media/connect-worker-new.PNG)
 
-Si la validación es correcta, el Administrador de escalabilidad horizontal intentará leer el archivo de configuración del servidor del trabajo y obtener la huella digital del certificado de este. Para obtener más información, vea [Trabajo de escalabilidad horizontal](integration-services-ssis-scale-out-worker.md). Si no es capaz de leer el archivo de configuración del trabajo, existen dos alternativas que puede utilizar para proporcionar el certificado de trabajo. 
+Si la validación es correcta, el Administrador de escalabilidad horizontal intentará leer el archivo de configuración del servidor del trabajo y obtener la huella digital del certificado de este. Para obtener más información, vea [Trabajador de escalabilidad horizontal](integration-services-ssis-scale-out-worker.md). Si no es capaz de leer el archivo de configuración del trabajo, existen dos alternativas que puede utilizar para proporcionar el certificado de trabajo. 
 
 - Puede especificar directamente la huella digital del certificado de trabajo.
 
@@ -103,6 +103,6 @@ Para editar la descripción de un trabajo de escalabilidad horizontal, seleccion
 ![Guardar el trabajo en el portal](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, vea los artículos siguientes:
+Para más información, consulte los siguientes artículos:
 -   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

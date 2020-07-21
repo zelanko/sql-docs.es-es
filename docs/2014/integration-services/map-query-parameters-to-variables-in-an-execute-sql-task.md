@@ -1,5 +1,5 @@
 ---
-title: Asignar parámetros de consulta a Variables en una tarea Ejecutar SQL | Microsoft Docs
+title: Asignar parámetros de consulta a variables en una tarea ejecutar SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2e105e2ccccce912965cbfc0662a380ea1a6264
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057796"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440272"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>asignar parámetros de consulta a variables en una tarea Ejecutar SQL
 
@@ -38,7 +37,7 @@ ms.locfileid: "66057796"
   
 3.  Haga clic en la pestaña **Flujo de control** .  
   
-4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+4.  Si el paquete no incluye en ese momento una tarea Ejecutar SQL, agregue una al flujo de control del paquete. Para obtener más información, vea [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 5.  Haga doble clic en la tarea Ejecutar SQL.  
@@ -58,7 +57,7 @@ ms.locfileid: "66057796"
     |Tipo de conexión|Marcador de parámetro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET y SQLMOBILE|@\<nombre de parámetro>|  
+    |ADO.NET y SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL y OLE DB|?|  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66057796"
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|`SELECT* FROM Production.Product WHERE ProductId > @parmMinProductID AND ProductID < @parmMaxProductID`|  
   
-     Para obtener ejemplos de cómo usar parámetros con procedimientos almacenados, vea [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
+     Para obtener ejemplos de cómo usar parámetros con procedimientos almacenados, vea [Parameters and Return Codes in the Execute SQL Task](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 7.  Haga clic en **Asignación de parámetros**.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66057796"
     |Tipo de conexión|Nombre de parámetro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2…|  
-    |ADO.NET y SQLMOBILE|@\<nombre de parámetro>|  
+    |ADO.NET y SQLMOBILE|@\<parameter name>|  
     |ODBC|1, 2, 3…|  
     |EXCEL y OLE DB|0, 1, 2, 3…|  
   
@@ -101,11 +100,11 @@ ms.locfileid: "66057796"
     > [!IMPORTANT]  
     >  El orden de las asignaciones de parámetros debe ser el mismo que el orden en que aparecen los parámetros en la instrucción SQL.  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
- [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
- [Los parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tarea ejecutar SQL](control-flow/execute-sql-task.md)   
+ [Parámetros y códigos de retorno en la tarea ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

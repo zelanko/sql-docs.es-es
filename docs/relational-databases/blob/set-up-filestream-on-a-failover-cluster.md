@@ -1,5 +1,6 @@
 ---
 title: Configurar FILESTREAM en un clúster de conmutación por error | Microsoft Docs
+description: Descubra cómo configurar FILESTREAM en un clúster de conmutación por error en SQL Server y obtenga información sobre lo que debe habilitar antes de configurarlo.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ef524c6ee823b80b25fa5cf5ee4584ba8b8d00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58ea828b434abbaaa939df25b9f6c59d26e3d144
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765472"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>Configurar FILESTREAM en un clúster de conmutación por error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo habilitar FILESTREAM en un clúster de conmutación por error. Antes de probar este procedimiento, debería conocer los [clústeres de conmutación por error](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) y tener habilitado FILESTREAM. Para obtener información sobre cómo habilitar FILESTREAM, vea [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md).  
   
 ### <a name="to-set-up-filestream-on-a-failover-cluster"></a>Para configurar FILESTREAM en un clúster de conmutación por error  

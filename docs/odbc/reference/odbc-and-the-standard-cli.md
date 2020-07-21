@@ -14,68 +14,68 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 56dc0ac73c77cbbb77943d2e9ba308796b259dbb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944845"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305146"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC y la CLI estándar
-ODBC se alinea con las siguientes especificaciones y estándares que tratan con la interfaz de nivel de llamada (CLI). (Las funciones ODBC son un superconjunto de cada uno de estos estándares).  
+ODBC se alinea con las siguientes especificaciones y estándares que se ocupan de la interfaz de nivel de llamada (CLI). (Las características ODBC son un superconjunto de cada una de estas normas).  
   
--   La especificación de Open Group CAE "administración de datos: Interfaz de nivel de llamada SQL (CLI)"  
+-   La especificación de Open Group CAE "Administración de datos: interfaz de nivel de llamada de SQL (CLI)"  
   
--   ISO/IEC 9075-3:1995 (E) interfaz de nivel de llamada (SQL/CLI)  
+-   Interfaz de nivel de llamada ISO/IEC 9075-3:1995 (E) (SQL/CLI)  
   
- Como resultado de esta alineación, las siguientes afirmaciones son ciertas:  
+ Como resultado de esta alineación, se cumplen las condiciones siguientes:  
   
--   Una aplicación creada a las especificaciones de Open Group y ISO CLI funcionará con un ODBC *3.x* controlador o un controlador compatible con los estándares cuando se compila con ODBC *3.x* archivos de encabezado y enlazan con ODBC *3.x* bibliotecas, y cuando obtiene acceso al controlador a través de ODBC *3.x* Administrador de controladores.  
+-   Una aplicación escrita en las especificaciones Open Group e ISO CLI funcionará con un controlador ODBC *3. x* o con un controlador compatible con los estándares cuando se compila con los archivos de encabezado ODBC *3.* x y se vincula con bibliotecas ODBC *3. x* , y cuando obtiene acceso al controlador a través del administrador de controladores ODBC *3. x* .  
   
--   Un controlador que se escriben en las especificaciones de Open Group y ISO CLI funcionará con un ODBC *3.x* aplicación o una aplicación estándar cuando se compila con ODBC *3.x* archivos de encabezado y vinculado con ODBC *3.x* bibliotecas, y cuando la aplicación obtiene acceso al controlador a través de ODBC *3.x* Administrador de controladores. (Para obtener más información, consulte [controladores y aplicaciones compatibles con estándares](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Un controlador escrito en las especificaciones Open Group e ISO CLI funcionará con una aplicación ODBC *3. x* o conforme a los estándares cuando se compila con los archivos de encabezado ODBC *3.* x y se vinculan a las bibliotecas ODBC *3. x* , y cuando la aplicación obtiene acceso al controlador a través del administrador de controladores ODBC *3. x* . (Para obtener más información, vea [aplicaciones y controladores compatibles con los estándares](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- El nivel de conformidad de interfaz Core abarca todas las características de la CLI de ISO y todas las características no opcionales de la CLI de grupo abierto. Características opcionales de la CLI de grupo abierto aparecen en los niveles más altos de conformidad de interfaz. Dado que ODBC todas *3.x* controladores son necesarios para admitir las características en el nivel de conformidad de interfaz de núcleo, los siguientes son verdaderas:  
+ El nivel de conformidad de la interfaz principal engloba todas las características de la CLI ISO y todas las características no opciones de la CLI de apertura de grupos. Las características opcionales de la CLI de grupo abierto aparecen en niveles de compatibilidad de interfaz más altos. Dado que todos los controladores ODBC *3. x* son necesarios para admitir las características en el nivel de conformidad de la interfaz principal, se cumplen las siguientes condiciones:  
   
--   Un ODBC *3.x* controlador será compatible con todas las características usadas por una aplicación compatible con los estándares.  
+-   Un controlador ODBC *3. x* admitirá todas las características que usa una aplicación compatible con los estándares.  
   
--   Un ODBC *3.x* aplicación utilizando sólo las características de ISO CLI y las funciones no opcionales de la CLI de grupo abierto funcionará con cualquier controlador compatible con los estándares.  
+-   Una aplicación ODBC *3. x* que use solo las características de la CLI ISO y las características no opciones de la CLI Open Group funcionarán con cualquier controlador compatible con los estándares.  
   
- Además de las especificaciones de interfaz de nivel de llamada contenidas en los estándares ISO/IEC y la CLI de grupo abierta, ODBC implementa las características siguientes. (Algunas de estas características existían en versiones de ODBC antes de ODBC *3.x*.)  
+ Además de las especificaciones de la interfaz de nivel de llamada contenidas en los estándares ISO/IEC y Open Group CLI, ODBC implementa las características siguientes. (Algunas de estas características existían en las versiones de ODBC anteriores a ODBC *3. x*).  
   
--   Capturas de varias filas mediante una llamada de función única  
+-   Una única llamada de función realiza capturas de varias filas  
   
 -   Enlazar a una matriz de parámetros  
   
--   Compatibilidad con marcadores incluidos capturando por marcador, los marcadores de longitud variable y bulk update y delete por las operaciones de marcador en filas no contiguas  
+-   Compatibilidad con marcadores, incluida la captura por marcador, marcadores de longitud variable y actualización y eliminación masivas por operaciones de marcador en filas no contiguas  
   
 -   Enlace de modo de fila  
   
 -   Desplazamientos de enlace  
   
--   Compatibilidad con lotes de instrucciones SQL, en un procedimiento almacenado o como una secuencia de instrucciones SQL ejecutadas a través de **SQLExecute** o **SQLExecDirect**  
+-   Compatibilidad con lotes de instrucciones SQL, ya sea en un procedimiento almacenado o como una secuencia de instrucciones SQL ejecutadas a través de **SQLExecute** o **SQLExecDirect**  
   
--   Recuentos de filas del cursor exacto o aproximado  
+-   Recuentos de filas de cursor exactas o aproximadas  
   
--   Coloca la actualización y las operaciones de eliminación y por lotes de las actualizaciones y eliminaciones por llamada de función (**SQLSetPos**)  
+-   Operaciones de actualización y eliminación posicionadas y actualizaciones por lotes y eliminaciones por llamada a función (**SQLSetPos**)  
   
--   Funciones de catálogo que extracción la información del esquema de información sin necesidad de compatibilidad con vistas de esquema de información  
+-   Funciones de catálogo que extraen información del esquema de información sin necesidad de admitir las vistas de esquema de información  
   
--   Secuencias de escape para procedimientos almacenados, funciones escalares, literales de fecha y hora, literales de intervalo y combinaciones externas  
+-   Secuencias de escape para combinaciones externas, funciones escalares, literales de fecha y hora, literales de intervalo y procedimientos almacenados  
   
 -   Bibliotecas de traducción de páginas de códigos  
   
--   Informes de nivel de conformidad con ANSI y la compatibilidad de SQL con un controlador  
+-   Informes del nivel de conformidad con ANSI de un controlador y la compatibilidad con SQL  
   
--   Rellenado automático y a petición del descriptor de parámetro de implementación  
+-   Rellenado automático a petición de descriptor de parámetros de implementación  
   
--   Diagnósticos mejorados y matrices de estado de fila y de parámetro  
+-   Matrices mejoradas de estado de parámetros y filas y diagnósticos  
   
--   Fecha y hora, intervalo, numérico o decimal y tipos de búfer de aplicación de entero de 64 bits  
+-   Tipos de búfer de aplicación de tipo entero DateTime, Interval, Numeric/decimal y 64 bits  
   
 -   Ejecución asincrónica  
   
--   Compatibilidad con los procedimientos almacenados, incluidas las secuencias de escape, mecanismos de enlace de parámetro de salida y funciones de catálogo  
+-   Compatibilidad con procedimientos almacenados, incluidas secuencias de escape, mecanismos de enlace de parámetros de salida y funciones de catálogo  
   
--   Mejoras de conexión, incluida la compatibilidad con los atributos de conexión y la exploración de atributo
+-   Mejoras en la conexión, incluida la compatibilidad con los atributos de conexión y la exploración de atributos

@@ -1,5 +1,5 @@
 ---
-title: Essentials de paquetes SSIS | Microsoft Docs
+title: Aspectos básicos de los paquetes SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4e3f6637c4e9fd65b0218b8489372355b3608f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055416"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421053"
 ---
 # <a name="ssis-package-essentials"></a>Fundamentos de los paquetes de SSIS
-  Un paquete es el objeto que implementa la funcionalidad de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para extraer, transformar y cargar datos. Un paquete se crea utilizando el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. También puede crear un paquete ejecutando el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o el Asistente para proyectos de conexiones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información, [crear paquetes en SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) en el Diseñador SSIS y [Asistente para importar proyectos](../../2014/integration-services/import-project-wizard.md).  
+  Un paquete es el objeto que implementa la funcionalidad de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para extraer, transformar y cargar datos. Un paquete se crea utilizando el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. También puede crear un paquete ejecutando el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o el Asistente para proyectos de conexiones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información, [cree paquetes en SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) en el diseñador SSIS y en el [Asistente para importar proyectos](../../2014/integration-services/import-project-wizard.md).  
   
  Un paquete básico incluye los elementos siguientes:  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66055416"
   
  Para más información, consulte [Data Flow](data-flow/data-flow.md).  
   
- Para obtener un ejemplo de cómo crear un paquete básico, consulte [lección 1: Crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
+ Para obtener un ejemplo de cómo crear un paquete básico, vea [Lección 1: crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -50,8 +49,8 @@ ms.locfileid: "66055416"
   
 1.  Vídeo, [Crear un paquete básico (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023), en MSDN.Microsoft.com  
   
-## <a name="see-also"></a>Vea también  
- [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;paquetes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Restricciones de precedencia](control-flow/precedence-constraints.md)  
   
   

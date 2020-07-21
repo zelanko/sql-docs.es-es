@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a8d3d3f24bcbd2b94dd8d4c0c84eff9d513e6cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790032"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Comprueba la coherencia de las estructuras de asignación de espacio en disco de una base de datos determinada.
   
@@ -42,7 +42,7 @@ Comprueba la coherencia de las estructuras de asignación de espacio en disco de
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```syntaxsql
 DBCC CHECKALLOC   
 [  
     ( database_name | database_id | 0   
@@ -82,7 +82,7 @@ Los nombres de las bases de datos deben cumplir las reglas de los [identificador
  No aplicable.  
  Utilice las opciones REPAIR solo como último recurso. Para reparar errores, se recomienda restaurar a partir de una copia de seguridad. Las operaciones de reparación no tienen en cuenta ninguna de las restricciones que puede haber en las tablas o entre ellas. Si la tabla especificada está implicada en una o más restricciones, se recomienda ejecutar DBCC CHECKCONSTRAINTS tras una operación de reparación. Si debe utilizar REPAIR, ejecute DBCC CHECKDB sin una opción de reparación para localizar el nivel de reparación que se va a utilizar. Si utiliza el nivel REPAIR_ALLOW_DATA_LOSS, se recomienda realizar una copia de seguridad de la base de datos antes de ejecutar DBCC CHECKDB con esta opción.
 
- por  
+ WITH  
  Habilita la especificación de opciones.
 
  ALL_ERRORMSGS  
@@ -94,10 +94,10 @@ Los nombres de las bases de datos deben cumplir las reglas de los [identificador
  TABLOCK  
  Hace que el comando DBCC obtenga un bloqueo de base de datos exclusivo.
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  Muestra la cantidad estimada de espacio de tempdb que se necesita para ejecutar DBCC CHECKALLOC cuando todas las demás opciones están especificadas.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC CHECKALLOC comprueba la asignación de todas las páginas de la base de datos, independientemente del tipo de página u objeto al que pertenezcan. También valida las diversas estructuras internas que se utilizan para realizar un seguimiento de estas páginas y de las relaciones entre ellas.
 Si no se especifica NO_INFOMSGS, DBCC CHECKALLOC recopila información sobre uso de espacio de todos los objetos de la base de datos. Esta información se imprime junto con los errores encontrados.
   

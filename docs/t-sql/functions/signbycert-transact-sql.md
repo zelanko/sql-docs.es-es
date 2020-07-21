@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 2a677a65aeebff4c37688dfbdb2f80d1f6ae1265
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714920"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Firma texto con un certificado y devuelve la firma.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71314579"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
@@ -54,10 +54,10 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  **'** *password* **'**  
  Es la contraseña con la que se cifró la clave privada del certificado. *password* es **nvarchar(128)** .  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Requiere el permiso CONTROL en el certificado.  
   
 ## <a name="examples"></a>Ejemplos  

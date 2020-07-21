@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72251911"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
@@ -93,7 +93,7 @@ La sección interface se desglosa en las siguientes agrupaciones:
   
 |Sección|Descripción|  
 |---|---|  
-|primary|Colores de los botones y de desplazamiento.|  
+|Principal|Colores de los botones y de desplazamiento.|  
 |Secundario|Color de la barra de título, la barra de búsqueda, el menú izquierdo (si se muestra) y el texto.|  
 |neutralPrimary|Fondos del área del informe y de inicio.|  
 |neutralSecondary|Fondos de opciones de carpeta y cuadro de texto, así como del menú de configuración.|  
@@ -123,7 +123,7 @@ Para agregar, descargar o quitar un paquete de marca, puede hacer lo siguiente:
   
     ![ssRSGearMenu](../reporting-services/media/ssrsgearmenu.png)  
   
-3.  Seleccione **Branding**(Personalización de marca).  
+3.  Seleccione la **personalización de marca**.  
   
     ![ssRSBranding](../reporting-services/media/ssrsbranding.png)  
   

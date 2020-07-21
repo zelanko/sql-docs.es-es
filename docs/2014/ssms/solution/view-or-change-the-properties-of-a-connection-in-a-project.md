@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e4b1de28ca94e244d4a172e37672260d65b9d54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058275"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Ver o cambiar las propiedades de una conexión en un proyecto
   Puede ver las propiedades de una conexión guardada en un proyecto e incluso modificar algunas.  
@@ -32,9 +31,9 @@ ms.locfileid: "62704721"
   
 2.  Vea las propiedades de la conexión en la ventana Propiedades. Puede cambiar las propiedades **Tiempo de espera de ejecución**, **Base de datos**y **Tiempo de espera de inicio de sesión** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
- [Asociar una consulta con una conexión en un proyecto](associate-a-query-with-a-connection-in-a-project.md)   
+ [Asociar una consulta a una conexión de un proyecto](associate-a-query-with-a-connection-in-a-project.md)   
  [Cambiar la conexión asociada a una consulta](change-the-connection-associated-with-a-query.md)  
   
   

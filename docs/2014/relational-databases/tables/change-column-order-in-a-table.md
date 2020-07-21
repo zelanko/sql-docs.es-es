@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63ac48034879edc245a429778de8347bed2de13e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047207"
 ---
 # <a name="change-column-order-in-a-table"></a>Cambiar el orden de las columnas de una tabla
   Puede cambiar el orden de las columnas en el Diseñador de tablas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "62736322"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-change-the-column-order"></a>Para cambiar el orden de las columnas  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62736322"
   
 3.  Arrastre la columna a otra ubicación en la tabla.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para cambiar el orden de las columnas**  
   
  Esta tarea no se puede realizar mediante instrucciones Transact-SQL.  

@@ -1,5 +1,5 @@
 ---
-title: Asistente de Business Intelligence F1 Ayuda | Microsoft Docs
+title: Asistente de Business Intelligence (ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088400"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527685"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Asistente de Business Intelligence (Ayuda F1)
   Utilice el Asistente de Business Intelligence para definir características de Business Intelligence y establecer opciones avanzadas para cubos y dimensiones. El asistente permite establecer propiedades en objetos existentes, crear objetos y generar scripts de expresiones multidimensionales (MDX) a fin de proporcionar características tales como inteligencia de dimensiones y conversión de moneda.  
@@ -46,25 +45,25 @@ ms.locfileid: "66088400"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Elegir mejora &#40;Asistente de Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
+-   [Elija mejora &#40;Asistente de Business Intelligence&#41;](choose-enhancement-business-intelligence-wizard.md)  
   
 -   [Elegir cálculos de tiempo &#40;Asistente de Business Intelligence&#41;](choose-time-calculations-business-intelligence-wizard.md)  
   
 -   [Definir el ámbito de los cálculos &#40;Asistente de Business Intelligence&#41;](define-scope-of-calculations-business-intelligence-wizard.md)  
   
--   [Definir la inteligencia de cuentas &#40;dimensión&#41; &#40;Asistente de Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
+-   [Definir la inteligencia de cuentas &#40;&#41; &#40;Asistente de Business Intelligence&#41;](define-account-intelligence-dimension-business-intelligence-wizard.md)  
   
--   [Configurar los atributos de dimensión &#40;Asistente de Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
+-   [Configurar atributos de dimensión &#40;Asistente de Business Intelligence&#41;](configure-dimension-attributes-business-intelligence-wizard.md)  
   
 -   [Definir la inteligencia de cuentas &#40;Asistente de Business Intelligence&#41;](define-account-intelligence-business-intelligence-wizard.md)  
   
--   [Establecer las opciones de inteligencia de dimensiones &#40;Asistente de Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
+-   [Establecer opciones de inteligencia de dimensiones &#40;Asistente de Business Intelligence&#41;](set-dimension-intelligence-options-business-intelligence-wizard.md)  
   
 -   [Definir la inteligencia de dimensiones &#40;Asistente de Business Intelligence&#41;](define-dimension-intelligence-business-intelligence-wizard.md)  
   
--   [Especificar un operador unario &#40;dimensión&#41; &#40;Asistente de Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
+-   [Especifique un operador unario &#40;dimensión&#41; &#40;Asistente de Business Intelligence&#41;](specify-a-unary-operator-dimension-business-intelligence-wizard.md)  
   
--   [Especificar un operador unario &#40;Asistente de Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
+-   [Especifique un operador unario &#40;Asistente de Business Intelligence&#41;](specify-a-unary-operator-business-intelligence-wizard.md)  
   
 -   [Crear una fórmula de miembro personalizado &#40;dimensión&#41; &#40;Asistente de Business Intelligence&#41;](create-a-custom-member-formula-dimension-business-intelligence-wizard.md)  
   
@@ -86,19 +85,19 @@ ms.locfileid: "66088400"
   
 -   [Seleccione el tipo de conversión &#40;Asistente de Business Intelligence&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
--   [Definir la referencia de moneda Local &#40;Asistente de Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
+-   [Definir referencia de moneda local &#40;Asistente de Business Intelligence&#41;](define-local-currency-reference-business-intelligence-wizard.md)  
   
 -   [Especificar monedas del informe &#40;Asistente de Business Intelligence&#41;](specify-reporting-currencies-business-intelligence-wizard.md)  
   
 -   [Definir la conversión de moneda &#40;Asistente de Business Intelligence&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [Seleccione una columna del cuadro de diálogo &#40;Asistente de Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [Cuadro de diálogo Seleccionar una columna &#40;Asistente de Business Intelligence&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
 -   [Finalización del asistente &#40;Asistente de Business Intelligence&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Diseñador de dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

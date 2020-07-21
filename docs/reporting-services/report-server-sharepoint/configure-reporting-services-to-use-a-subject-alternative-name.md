@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580018"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487028"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar Reporting Services para usar un nombre alternativo del asunto
 
@@ -20,11 +20,11 @@ En este tema se explica cómo configurar Reporting Services (SSRS) para usar un 
 
 Las instrucciones son válidas para la dirección URL del servicio de generación de informes y para la dirección URL del servicio web.
 
-Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, firmado y tener la clave privada. No puede utilizar un certificado autofirmado  
+Para utilizar el SAN, el certificado TLS/SSL debe estar registrado en el servidor y firmado y tener la clave privada. No puede utilizar un certificado autofirmado  
   
- Las direcciones URL en Reporting Services se pueden configurar para usar un certificado SSL. Normalmente, un certificado solo tiene un nombre de asunto, lo que permite solo una dirección URL para una sesión SSL (Secure Sockets Layer). El SAN es un campo adicional del certificado que permite a un servicio SSL escuchar varias direcciones URL y compartir el puerto SSL con otras aplicaciones. El SAN tiene un aspecto similar a `www.s2.com`.  
+ Las direcciones URL en Reporting Services se pueden configurar para usar un certificado TLS/SSL. Normalmente, un certificado solo tiene un nombre de asunto, que permite solo una dirección URL para una sesión de Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL). El SAN es un campo adicional del certificado que permite a un servicio TLS escuchar varias direcciones URL y compartir el puerto TLS con otras aplicaciones. El SAN tiene un aspecto similar a `www.s2.com`.  
   
- Para más información sobre la configuración de SSL para Reporting Services, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para más información sobre la configuración de TLS para Reporting Services, vea [Configuración de conexiones TLS en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Configurar SSRS para usar un nombre alternativo del asunto para la dirección URL del servicio web
   
@@ -32,11 +32,11 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
      Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  En la página **Dirección URL del servicio web** , seleccione un puerto SSL y un certificado SSL.  
+2.  En la página **Dirección URL del servicio web**, seleccione un puerto TLS/SSL y un certificado TLS/SSL.  
   
      ![Administrador de configuración de Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Administrador de configuración de Reporting Services")  
   
-     El administrador de configuración registra el certificado SSL para el puerto.  
+     El administrador de configuración registra el certificado TLS/SSL para el puerto.  
   
 3.  Abra el archivo rsreportserver.config.  
   
@@ -117,7 +117,7 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
 10. En la página **Estado del servidor de informes** del Administrador de configuración de Reporting Services, haga clic en **Detener** y, a continuación, haga clic en **Iniciar** para reiniciar el servidor de informes.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

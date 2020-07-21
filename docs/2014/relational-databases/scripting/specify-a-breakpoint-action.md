@@ -1,6 +1,6 @@
 ---
-title: Especificar una acción del punto de interrupción | Microsoft Docs
-ms.custom: ''
+title: Especificar una acción del punto de interrupción
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97454a06f4b03b3148984697e0056aa87dff1200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 36b0f97ab4c6f36f5fc3f95e3eed3418ee0d88b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049005"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
   Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Consideraciones sobre las acciones  
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> Consideraciones sobre las acciones  
  La acción predeterminada para un punto de interrupción es que se detenga la ejecución cuando se hayan satisfecho el número de llamadas y la condición de punto de interrupción. El uso principal de una acción **Cuando se llama** en el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste, sin embargo, en imprimir información en la **ventana de salida** del depurador, donde se especificará un mensaje de impresión.  
   
  Los mensajes de impresión se especifican en la opción **Imprimir un mensaje** como una cadena de texto que incluye expresiones con información de la instancia de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está depurando. Estas expresiones pueden ser:  
@@ -34,7 +33,7 @@ ms.locfileid: "66090150"
   
     1.  $ADDRESS devuelve el nombre del procedimiento almacenado o la función definida por el usuario donde se ha establecido el punto de interrupción. Si el punto de interrupción está establecido en la ventana del editor, $ADDRESS devuelve el nombre del archivo de script que se está editando. $ADDRESS y $FUNCTION devuelven la misma información en el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER devuelve el nombre de la unidad de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] encargada de llamar a un procedimiento almacenado o una función. Si el punto de interrupción se encuentra en la ventana del editor, $CALLER devuelve un mensaje que indica \<No hay ningún autor de llamada disponible>. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde el código de la ventana del editor, $CALLER devuelve el nombre del archivo que se está editando. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde otro procedimiento almacenado o función, $CALLER devuelve el nombre del procedimiento o la función de llamada.  
+    2.  $CALLER devuelve el nombre de la unidad de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] encargada de llamar a un procedimiento almacenado o una función. Si el punto de interrupción está en la ventana del editor, $CALLER devuelve \<No caller available> . Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde el código de la ventana del editor, $CALLER devuelve el nombre del archivo que se está editando. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde otro procedimiento almacenado o función, $CALLER devuelve el nombre del procedimiento o la función de llamada.  
   
     3.  $CALLSTACK devuelve la pila de llamadas de las funciones de la cadena que llamaron al procedimiento almacenado o la función definida por el usuario actual. Si el punto de interrupción está establecido en la ventana del editor, $CALLSTACK devuelve en nombre del archivo de script que se está editando.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66090150"
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, en el menú contextual, haga clic en **Cuando se llama** .  
   
-     -o bien-  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, en el menú contextual, haga clic en **Cuando se llama** .  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66090150"
   
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)   
  [Especificar un número de llamadas](specify-a-hit-count.md)  

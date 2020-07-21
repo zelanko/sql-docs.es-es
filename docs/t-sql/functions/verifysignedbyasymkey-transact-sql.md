@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d32728a6c8dd282628642739cfbf67a79bba0bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85709828"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Comprueba si se han cambiado los datos firmados digitalmente desde que se firmaron.  
   
@@ -53,12 +53,12 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  *signature*  
  Es la firma adjunta a los datos firmados. *signature* es **varbinary**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
  Devuelve 1 cuando las firmas coinciden; de lo contrario devuelve 0.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  **VerifySignedByAsymKey** descifra la firma de los datos utilizando la clave pública de la clave asimétrica especificada y compara el valor descifrado con un hash MD5 calculado recientemente de los datos. Si los valores coinciden, se confirma que la firma es válida.  
   
 ## <a name="permissions"></a>Permisos  

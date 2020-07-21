@@ -22,12 +22,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2af9386dc25fec5309d13d64f02ec8997f60792d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927202"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81626987"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67927202"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server (starting with 2012) and Azure SQL Database  
   
 ALTER ROLE  role_name  
@@ -54,7 +54,7 @@ ALTER ROLE  role_name
 ```  
   
  
-```  
+```syntaxsql
 -- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  
@@ -65,12 +65,12 @@ ALTER ROLE role_name
   
 ## <a name="arguments"></a>Argumentos  
  *role_name*  
- **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica el rol de base de datos que cambiar.  
   
- ADD MEMBER *database_principal*l  
- **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ ADD MEMBER *database_principal*  
+ **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica que se agregue la entidad de seguridad de base de datos a la pertenencia de un rol de base de datos.  
   
@@ -79,7 +79,7 @@ ALTER ROLE role_name
 -   *database_principal* no puede ser un rol fijo de base de datos ni una entidad de seguridad del servidor.  
   
 DROP MEMBER *database_principal*  
- **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica que se quite la entidad de seguridad de base de datos de la pertenencia de un rol de base de datos.  
   
@@ -88,7 +88,7 @@ DROP MEMBER *database_principal*
 -   *database_principal* no puede ser un rol fijo de base de datos ni una entidad de seguridad del servidor.  
   
 WITH NAME = *new_name*  
- **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica que se cambie el nombre de un rol de base de datos definido por el usuario. El nuevo nombre no debe existir en la base de datos.  
   
@@ -118,7 +118,7 @@ Además, para cambiar la pertenencia a un rol fijo de base de datos, se necesita
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Cambiar el nombre de un rol de base de datos  
- **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  En el ejemplo siguiente se cambia el nombre del rol `buyers` a `purchasing`.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   
@@ -127,7 +127,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ```  
   
 ### <a name="b-add-or-remove-role-members"></a>B. Agregar o quitar a miembros del rol  
- **SE APLICA A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  En este ejemplo se crea el rol de base de datos `Sales`. Se agrega un usuario de base de datos denominado Barry a la pertenencia y, luego, se indica cómo quitar el miembro Barry.   Este ejemplo se puede ejecutar en la base de datos de ejemplo [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
   

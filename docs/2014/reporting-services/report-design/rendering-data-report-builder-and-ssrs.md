@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e50d9ae91ef6e21f01c585cedc6fe32a1e22ad8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105361"
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Representar datos (Generador de informes y SSRS)
@@ -45,12 +45,12 @@ ms.locfileid: "66105361"
   
  El archivo XML con la opción de exportación de los datos del informe guarda el informe como un archivo XML. El esquema XML para el informe es específico del informe. La opción de exportación XML no guarda la información de diseño del informe. El XML que se genera mediante esta opción se puede importar a una base de datos, se puede utilizar como mensaje de datos XML o se puede enviar a una aplicación personalizada. Para más información sobre cómo representar el informe en el tipo de archivo XML, vea [Exportar a XML &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
- [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Enumera &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Configuración de información de dispositivos de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=102515)  
   
   

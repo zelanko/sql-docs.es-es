@@ -1,5 +1,5 @@
 ---
-title: Determinar el número correcto de depósitos para los índices Hash | Microsoft Docs
+title: Determinar el número correcto de depósitos para los índices de hash | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933786"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
   Debe especificar un valor para el parámetro `BUCKET_COUNT` al crear la tabla optimizada para memoria. En este tema se hacen recomendaciones para determinar el valor adecuado para el parámetro `BUCKET_COUNT`. Si no puede determinar el número de cubos correcto, utilice un índice no clúster en su lugar.  Un valor incorrecto de `BUCKET_COUNT`, especialmente si es demasiado bajo, puede afectar significativamente el rendimiento de la carga de trabajo, así como afectar el tiempo de recuperación de la base de datos. Es mejor sobrestimar el número de cubos.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754247"
   
  Para obtener más información sobre índices de hash no clúster, vea [Hash Indexes](hash-indexes.md) y [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Se asigna una tabla hash para cada índice de hash de una tabla optimizada para memoria. El tamaño de la tabla hash asignada para un índice especificado por el `BUCKET_COUNT` parámetro [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). El número de cubos se redondeará internamente hasta la siguiente potencia de dos. Por ejemplo, especificar un número de cubos de 300.000 producirá un número real de cubos de 524.288.  
+ Se asigna una tabla hash para cada índice de hash de una tabla optimizada para memoria. El tamaño de la tabla hash asignada para un índice se especifica mediante el `BUCKET_COUNT` parámetro en [CREATE TABLE &#40;&#41;de TRANSACT-SQL](/sql/t-sql/statements/create-table-transact-sql) o el [tipo Create &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). El número de cubos se redondeará internamente hasta la siguiente potencia de dos. Por ejemplo, especificar un número de cubos de 300.000 producirá un número real de cubos de 524.288.  
   
  Para ver vínculos a un artículo y vídeo en el número de cubos, consulte [Cómo determinar el número de cubos adecuado para índices de hash (OLTP en memoria)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -63,7 +62,7 @@ FROM
  Para el índice de ejemplo en (SpecialOfferID, ProductID), esto da como resultado 121317 / 484 = 251. Esto significa que los valores de clave de índice tienen una media de 251 y por consiguiente debe ser un índice no clúster.  
   
 ## <a name="troubleshooting-the-bucket-count"></a>Solucionar problemas del número de depósitos  
- Para solucionar problemas de recuento de depósitos en tablas optimizadas para memoria, use [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) para obtener estadísticas sobre los depósitos vacíos y la longitud de cadenas de fila. La siguiente consulta se puede utilizar para obtener estadísticas sobre todos los índices de hash de la base de datos actual. La consulta puede tardar varios minutos en ejecutarse si hay tablas de gran tamaño en la base de datos.  
+ Para solucionar problemas de número de cubos en tablas optimizadas para memoria, use [Sys. dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) para obtener estadísticas sobre los cubos vacíos y la longitud de las cadenas de filas. La siguiente consulta se puede utilizar para obtener estadísticas sobre todos los índices de hash de la base de datos actual. La consulta puede tardar varios minutos en ejecutarse si hay tablas de gran tamaño en la base de datos.  
   
 ```sql  
 SELECT   
@@ -132,16 +131,16 @@ GO
 |nombre de índice|total_bucket_count|empty_bucket_count|empty_bucket_percent|avg_chain_length|max_chain_length|  
 |----------------|--------------------------|--------------------------|----------------------------|------------------------|------------------------|  
 |IX_Status|8|4|50|65536|65536|  
-|IX_OrderSequence|32768|13|0|8|26|  
-|PK_SalesOrd_B14003C3F8FB3364|262144|96319|36|1|8|  
+|IX_OrderSequence|32 768|13|0|8|26|  
+|PK_SalesOrd_B14003C3F8FB3364|262 144|96319|36|1|8|  
   
  Considere los tres índices de hash en esta tabla:  
   
--   IX_Status: 50 por ciento de los depósitos están vacíos, lo que es bueno. Sin embargo, el promedio de longitud de cadena es muy elevado (65.536). Esto indica un gran número de valores duplicados. Por consiguiente, el uso de un índice de hash no clúster no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
+-   IX_Status: el 50 por ciento de los cubos están vacíos, que es bueno. Sin embargo, el promedio de longitud de cadena es muy elevado (65.536). Esto indica un gran número de valores duplicados. Por consiguiente, el uso de un índice de hash no clúster no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
   
--   IX_OrderSequence: 0 por ciento de los depósitos están vacíos, que es demasiado bajo. Además, el promedio de longitud de cadena es 8. Como los valores de este índice son únicos, esto significa que por término medio están asignados 8 valores a cada cubo. El número de cubos se debe aumentar. Como la clave de índice tiene 262.144 valores únicos, el número de cubos debe ser al menos 262.144. Si se espera un aumento futuro, el número debe ser superior.  
+-   IX_OrderSequence: el 0 por ciento de los cubos están vacíos, que es demasiado bajo. Además, el promedio de longitud de cadena es 8. Como los valores de este índice son únicos, esto significa que por término medio están asignados 8 valores a cada cubo. El número de cubos se debe aumentar. Como la clave de índice tiene 262.144 valores únicos, el número de cubos debe ser al menos 262.144. Si se espera un aumento futuro, el número debe ser superior.  
   
--   Índice de clave principal (PK__SalesOrder...): 36 por ciento de los depósitos están vacíos, lo que es bueno. Además el promedio de longitud de cadena es 1, que también es bueno. No es necesario ningún cambio.  
+-   Índice de clave principal (PK__SalesOrder...): el 36 por ciento de los cubos están vacíos, que es bueno. Además el promedio de longitud de cadena es 1, que también es bueno. No es necesario ningún cambio.  
   
  Para obtener más información sobre problemas de solución de problemas con los índices de hash optimizados para memoria, vea [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   
@@ -177,7 +176,7 @@ GO
 -   Si las exploraciones completas de índice son las predominantes de rendimiento crítico, use un número de cubos cercano al número real de valores de clave de índice.  
   
 ### <a name="big-tables"></a>Tablas grandes  
- Para las tablas grandes, el uso de memoria podría llegar a ser un problema. Por ejemplo, con una tabla de 250 millones de filas que tiene 4 índices de hash, cada uno con un número de depósitos de mil millones, la sobrecarga de las tablas hash es 4 índices * mil millones de 1 depósitos \* 8 bytes = 32 gigabytes de uso de memoria. Al elegir un número de cubos de 250 millones para cada uno de los índices, la sobrecarga total de las tablas hash será de 8 gigabytes. Tenga en cuenta que esto es además de los 8 bytes del uso de memoria de cada índice agrega a cada fila individual, que es 8 GB en este escenario (4 índices \* 8 bytes \* 250 millones de filas).  
+ Para las tablas grandes, el uso de memoria podría llegar a ser un problema. Por ejemplo, con una tabla de filas 250 millones con 4 índices de hash, cada uno con un número de depósitos de 1 mil millones, la sobrecarga de las tablas hash es 4 índices * 1 mil millones depósitos \* 8 bytes = 32 gigabytes de uso de memoria. Al elegir un número de cubos de 250 millones para cada uno de los índices, la sobrecarga total de las tablas hash será de 8 gigabytes. Tenga en cuenta que esto se suma a los 8 bytes de uso de memoria que cada índice agrega a cada fila individual, que es 8 gigabytes en este escenario (4 índices \* 8 bytes \* 250 millones filas).  
   
  Las exploraciones de tabla completas no están generalmente en la ruta de acceso de rendimiento crítico para las cargas de trabajo de OLTP. Por consiguiente, la elección está entre el uso de memoria frente al rendimiento de operaciones de búsqueda de puntos e inserción:  
   
@@ -185,7 +184,7 @@ GO
   
 -   Al optimizar el rendimiento de las búsquedas de puntos, un número mayor de cubos de dos o incluso tres veces el número de valores de índice único sería adecuado. Un número mayor de cubos significaría una mayor uso de memoria y un incremento del tiempo necesario para una exploración completa del índice.  
   
-## <a name="see-also"></a>Vea también  
- [Índices de las tablas con optimización para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Índices en tablas optimizadas para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

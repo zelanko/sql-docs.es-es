@@ -1,5 +1,6 @@
 ---
 title: Creación de vistas sobre columnas XML | Microsoft Docs
+description: Obtenga información sobre cómo crear una vista en la que se recupera el valor de una columna de tipo xml por medio del método value() del tipo de datos xml.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 64b11563f05347e772d7979c3cb07c9a31f306e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d4a9d8d0aa40f8454a2bd0fd089022630c34ca2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112879"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691532"
 ---
 # <a name="create-views-over-xml-columns"></a>Crear vistas sobre columnas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Puede utilizar una columna de tipo **xml** para crear vistas. En el siguiente ejemplo se crea una vista en la que se recupera el valor de una columna de tipo `xml` por medio del método **value()** del tipo de datos **xml** .  
   
 ```  

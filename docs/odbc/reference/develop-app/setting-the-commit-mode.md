@@ -12,14 +12,14 @@ helpviewer_keywords:
 - committing transactions [ODBC]
 - commit modes [ODBC]
 ms.assetid: b60d0d74-0655-4013-8d5a-bc1866eaa166
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a43a78ad9453f65d9b12595851bd622f720b409a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f05aaca2349a612cda7c5b6b257e7a1d5a5ea9c5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094224"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299825"
 ---
 # <a name="setting-the-commit-mode"></a>Establecer el modo de confirmación
-Las aplicaciones especificar el modo de transacción con el atributo de conexión SQL_ATTR_AUTOCOMMIT. De forma predeterminada, las transacciones de ODBC están en modo de confirmación automática (a menos que **SQLSetConnectAttr** y **SQLSetConnectOption** no son compatibles, que es poco probable). Cambiar del modo de confirmación manual al modo de confirmación automática automáticamente confirma cualquier transacción abierta en la conexión.
+Las aplicaciones especifican el modo de transacción con el SQL_ATTR_AUTOCOMMIT atributo de conexión. De forma predeterminada, las transacciones ODBC están en modo de confirmación automática (a menos que no se admitan **SQLSetConnectAttr** y **SQLSetConnectOption** , lo que es improbable). El cambio del modo de confirmación manual al modo de confirmación automática confirma automáticamente cualquier transacción abierta en la conexión.

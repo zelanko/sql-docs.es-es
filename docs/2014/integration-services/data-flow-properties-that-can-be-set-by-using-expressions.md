@@ -1,5 +1,5 @@
 ---
-title: Las propiedades que se pueden establecer mediante expresiones de flujo de datos | Microsoft Docs
+title: Propiedades de flujo de datos que se pueden establecer mediante expresiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,14 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cf52a4488cb90d65c373111babd359da612668d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059939"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432472"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propiedades de flujo de datos que se pueden establecer utilizando expresiones
   Los valores de ciertas propiedades de objetos de flujo de datos se pueden especificar utilizando expresiones de propiedades disponibles en el contenedor de tareas Flujo de Datos.  
@@ -35,14 +34,14 @@ ms.locfileid: "66059939"
   
  Para especificar una expresión de propiedades para una de las propiedades de los objetos de flujo de datos mencionados en este tema, muestre la ventana **Propiedades** para la tarea Flujo de Datos seleccionando la tarea Flujo de Datos en la superficie **Flujo de control** del diseñador o seleccionando la pestaña **Flujo de datos** del diseñador sin seleccionar ningún componente o ruta de acceso individual. Seleccione la propiedad **Expresiones** y haga clic en los puntos suspensivos (…) para mostrar el cuadro de diálogo **Editor de expresiones de propiedad** . Despliegue la lista **Propiedad** para seleccionar una propiedad y, después, escriba una expresión en el cuadro de texto **Expresión** o haga clic en los puntos suspensivos (…) para mostrar el cuadro de diálogo **Generador de expresiones** .  
   
- La lista **Propiedad** muestra las propiedades disponibles solo para aquellos objetos de flujo de datos que ya haya colocado en la superficie **Flujo de datos** del diseñador. Por consiguiente, no puede utilizar la lista **Propiedad** para ver todas las posibles propiedades de los objetos de flujo de datos que admiten expresiones de propiedades. Por ejemplo, si ha colocado un origen de ADO NET en la superficie del diseñador, el **propiedad** lista contiene una entrada para el `[ADO NET Source].[SqlCommand]` propiedad. La lista también muestra muchas propiedades de la propia tarea Flujo de Datos.  
+ La lista **Propiedad** muestra las propiedades disponibles solo para aquellos objetos de flujo de datos que ya haya colocado en la superficie **Flujo de datos** del diseñador. Por consiguiente, no puede utilizar la lista **Propiedad** para ver todas las posibles propiedades de los objetos de flujo de datos que admiten expresiones de propiedades. Por ejemplo, si ha colocado un origen de ADO NET en la superficie del diseñador, la lista de **propiedades** contiene una entrada para la `[ADO NET Source].[SqlCommand]` propiedad. La lista también muestra muchas propiedades de la propia tarea Flujo de Datos.  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>Propiedades de objetos de flujo de datos que admiten las expresiones de propiedades  
  Los valores de las propiedades de la siguiente lista se pueden especificar mediante expresiones de propiedades.  
   
 ### <a name="data-flow-sources"></a>Orígenes de flujo de datos  
   
-|Objeto Flujo de datos|Property|  
+|Objeto Flujo de datos|Propiedad|  
 |----------------------|--------------|  
 |Origen ADO NET|Propiedad TableOrViewName<br /><br /> Propiedad SQLCommand|  
 |Origen XML|Propiedad XMLData<br /><br /> Propiedad XMLSchemaDefinition|  
@@ -50,7 +49,7 @@ ms.locfileid: "66059939"
 ### <a name="data-flow-transformations"></a>Transformaciones Flujo de datos  
  Para obtener más información acerca de estas propiedades personalizadas, vea [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
-|Objeto Flujo de datos|Property|  
+|Objeto Flujo de datos|Propiedad|  
 |----------------------|--------------|  
 |División condicional, transformación|Propiedad FriendlyExpression|  
 |Transformación Columna derivada|Propiedad FriendlyExpression|  
@@ -66,7 +65,7 @@ ms.locfileid: "66059939"
   
 ### <a name="data-flow-destinations"></a>Destinos de flujo de datos  
   
-|Objeto Flujo de datos|Property|  
+|Objeto Flujo de datos|Propiedad|  
 |----------------------|--------------|  
 |Destino ADO NET|Propiedad TableOrViewName<br /><br /> Propiedad BatchSize<br /><br /> Propiedad CommandTimeOut|  
 |Destino de archivo plano|Propiedad Header|  
@@ -80,10 +79,10 @@ ms.locfileid: "66059939"
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), en pragmaticworks.com  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md)   
  [Propiedades comunes](../../2014/integration-services/common-properties.md)   
- [Propiedades personalizadas de transformación](data-flow/transformations/transformation-custom-properties.md)   
+ [Propiedades personalizadas de la transformación](data-flow/transformations/transformation-custom-properties.md)   
  [Propiedades de la ruta de acceso](../../2014/integration-services/path-properties.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Propiedad AcceptPause (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Propiedad AcceptPause (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6c6f79d468cefa3c9487a9827fc62c917bb39dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80e68dada9ec917ed6c47d0ab1e38e6e608ce209
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888421"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propiedad AcceptPause (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el valor de propiedad booleano que especifica si se puede poner en pausa el servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,7 +43,7 @@ object.AcceptPause [= value]
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

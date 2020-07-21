@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935810"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
   En este tema se describe cómo configurar un firewall de Windows para el acceso al motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para obtener acceso a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso.  
@@ -52,10 +51,10 @@ ms.locfileid: "62812307"
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  El hecho de abrir puertos en el firewall puede dejar el servidor expuesto a ataques malintencionados. Asegúrese de que conoce los sistemas de firewall antes de abrir puertos. Para obtener más información, consulte [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
  Se aplica a Windows Vista, Windows 7 y Windows Server 2008  
   
  El siguiente procedimiento configura el Firewall de Windows mediante el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada. El Firewall de Windows con seguridad avanzada solo configura el perfil actual. Para obtener más información sobre Firewall de Windows con seguridad avanzada, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
@@ -68,13 +67,13 @@ ms.locfileid: "62812307"
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Puerto**y, a continuación, haga clic en **Siguiente**.  
   
-4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)], tales como `1433` para la instancia predeterminada. Haga clic en **Siguiente**.  
+4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , por ejemplo, `1433` para la instancia predeterminada. Haga clic en **Next**.  
   
 5.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   
 6.  En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee conectarse a [!INCLUDE[ssDE](../../includes/ssde-md.md)]y, a continuación, haga clic en **Siguiente**.  
   
-7.  En el cuadro de diálogo **Nombre** , escriba un nombre y una descripción para esta regla. Después, haga clic en **Finalizar**.  
+7.  En el cuadro de diálogo **Nombre**, escriba el nombre y la descripción de esta regla y haga clic en **Finalizar**.  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>Para abrir el acceso a SQL Server cuando se usen puertos dinámicos  
   
@@ -84,12 +83,12 @@ ms.locfileid: "62812307"
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.  
   
-4.  En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa**. Haga clic en **Examinar**y navegue a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desee obtener acceso a través del firewall y, a continuación, haga clic en **Abrir**. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en **C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Haga clic en **Siguiente**.  
+4.  En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa**. Haga clic en **Examinar**y navegue a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desee obtener acceso a través del firewall y, a continuación, haga clic en **Abrir**. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en **C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Haga clic en **Next**.  
   
 5.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   
 6.  En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee conectarse a [!INCLUDE[ssDE](../../includes/ssde-md.md)]y, a continuación, haga clic en **Siguiente**.  
   
-7.  En el cuadro de diálogo **Nombre** , escriba un nombre y una descripción para esta regla. Después, haga clic en **Finalizar**.  
+7.  En el cuadro de diálogo **Nombre**, escriba el nombre y la descripción de esta regla y haga clic en **Finalizar**.  
   
   

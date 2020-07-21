@@ -1,10 +1,8 @@
 ---
-title: Schema (DTA, elemento de Database) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Schema (DTA, elemento de Database)
+description: En la utilidad DTA, el elemento Schema de Database especifica el esquema de la base de datos que se quiere optimizar.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d41a77ace5608acd649bc91f420fe65c9eb7a563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: ee28954c4206e2e26edfa567bae5a1b282d41dea
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034563"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151819"
 ---
 # <a name="schema-element-for-database-dta"></a>Schema (DTA, elemento de Database)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica el esquema de la base de datos que se desea optimizar.  
+
+Especifica el esquema de la base de datos que se desea optimizar.  
   
 ## <a name="syntax"></a>Sintaxis  
   

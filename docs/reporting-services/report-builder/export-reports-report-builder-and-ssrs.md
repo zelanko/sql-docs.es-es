@@ -1,5 +1,6 @@
 ---
-title: Exportación de informes (Generador de informes y SSRS) | Microsoft Docs
+title: Exportación de informes (Generador de informes) | Microsoft Docs
+description: Puede exportar un informe de Reporting Services a otro formato de archivo, como PowerPoint o PDF, mediante Generador de informes, Diseñador de informes o el servidor de informes.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-builder
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a97450563aa62e7b8179b7c5a0d2bead5f156f1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580815"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342927"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportación de informes (Generador de informes y SSRS)
 
@@ -37,19 +38,19 @@ ms.locfileid: "65580815"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-## <a name="bkmk_export_from_rb"></a> Para exportar un informe del Generador de informes
+## <a name="to-export-a-report-from-report-builder"></a><a name="bkmk_export_from_rb"></a> Para exportar un informe del Generador de informes
 
 1.  Ejecute el informe u obtenga una vista previa.  
   
 2.  Haga clic en **Exportar**en la cinta.  
   
-     ![Exportación del Generador de informes](../../reporting-services/report-builder/media/ssrb-export.png "Exportación del Generador de informes")  
+     ![Ayuda de Report Builder](../../reporting-services/report-builder/media/ssrb-export.png "Ayuda de Report Builder")  
   
 3.  Seleccione el formato que desea usar.  
   
      Se abre el cuadro de diálogo **Guardar como** . De forma predeterminada, aparece el nombre de archivo del informe que exportó. Si lo desea, puede cambiar el nombre de archivo.  
   
-##  <a name="bkmk_export_from_rm"></a> Para exportar un informe desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+##  <a name="to-export-a-report-from-the-ssrsnoversion-web-portal"></a><a name="bkmk_export_from_rm"></a> Para exportar un informe desde el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  En la página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Inicio **del portal web de** , vaya al informe que quiere exportar.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "65580815"
   
      El informe se muestra o se guarda mediante la aplicación asociada al formato elegido. Si hace clic en **Guardar**, se le solicitará una ubicación para guardar el informe.  
   
-##  <a name="bkmk_export_from_sharepoint"></a> Para exportar un informe desde una biblioteca de SharePoint  
+##  <a name="to-export-a-report-from-a-sharepoint-library"></a><a name="bkmk_export_from_sharepoint"></a> Para exportar un informe desde una biblioteca de SharePoint  
   
 1.  Obtenga una vista previa del informe.  
   
@@ -91,22 +92,22 @@ ms.locfileid: "65580815"
   
      **Nota** : si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
   
-##  <a name="RendererTypes"></a> Tipos de extensión de presentación  
+##  <a name="rendering-extension-types"></a><a name="RendererTypes"></a> Tipos de extensión de presentación  
  Hay tres tipos de extensiones de presentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Extensiones de presentador de datos:** las extensiones de presentación de datos quitan del informe toda la información de formato y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel, en otra base de datos, en un mensaje de datos XML o en una aplicación personalizada. Los presentadores de datos no admiten los saltos de página.  
   
-     Se admiten las siguientes extensiones de presentación de datos: CSV, XML y Atom.  
+     Las extensiones de presentación de datos admitidas son las siguientes: CSV, XML y Atom.  
   
 -   **Extensiones del representador de saltos de página automáticos:** las extensiones del representador de saltos de página automáticos mantienen el diseño y el formato del informe. El archivo resultante se optimiza para la visualización y la entrega basadas en pantalla, como en una página web o en los controles **ReportViewer** .  
   
-     Se admiten las siguientes extensiones de presentador de saltos de página automáticos: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word y archivos de web (MHTML).  
+     Las extensiones de presentación de saltos de página admitidas son las siguientes: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word y archivos de web (MHTML).  
   
 -   **Extensiones del representador de saltos de página manuales:** las extensiones del representador de saltos de página manuales mantienen el diseño y el formato del informe. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro.  
   
-     Se admiten las siguientes extensiones de presentador de saltos de página duros: TIFF y PDF.  
+     Las extensiones de presentación de saltos de página forzados admitidas son las siguientes: TIFF y PDF.  
   
-##  <a name="ExportFormats"></a> Formatos que puede exportar durante la visualización de informes  
+##  <a name="formats-you-can-export-while-viewing-reports"></a><a name="ExportFormats"></a> Formatos que puede exportar durante la visualización de informes  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona extensiones de presentación que presentan los informes en formatos diferentes. Debería optimizar el diseño de informe para el formato de archivo elegido.  En la tabla siguiente se enumeran los formatos que puede exportar desde la interfaz de usuario.  Existen formatos adicionales que puede utilizar con suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o si va a exportar desde el acceso de la dirección URL.  Vea la sección [Otras maneras de exportar Informes](#OtherWaysExportingReports)de este tema.  
   
 |Formato|Tipo de extensión de presentación|Descripción|  
@@ -116,17 +117,17 @@ ms.locfileid: "65580815"
 |CSV|data|La extensión de representación de valores separados por comas (CSV) representa los informes como una representación sin estructura jerárquica de los datos a partir de un informe estándar y sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.<br /><br /> Para más información, vea [Exportar a un archivo CSV](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Salto de página automático|Se muestra como "Excel" en los menús de exportación al revisar informes. La extensión de representación en Excel representa un informe como un documento de Excel (.xlsx) compatible con [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Para más información, vea [Exportar a Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Salto de página duro|La extensión de representación de PowerPoint representa un informe como un documento de PowerPoint (.pptx) que es compatible con PowerPoint 2013.|  
-|Archivo TIFF|Salto de página duro|La extensión de presentación en imágenes presenta un informe en un mapa de bits o metarchivo. De manera predeterminada, una extensión de representación en imágenes genera un archivo TIFF del informe, que se puede ver en varias páginas. Cuando el cliente recibe la imagen, se puede mostrar en un visor de imágenes y se puede imprimir.<br /><br /> La extensión de presentación en imágenes puede generar archivos en cualquiera de los formatos que admite [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG y TIFF.<br /><br /> Para más información, vea [Exportar a un archivo de imagen](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|Archivo TIFF|Salto de página duro|La extensión de presentación en imágenes presenta un informe en un mapa de bits o metarchivo. De manera predeterminada, una extensión de representación en imágenes genera un archivo TIFF del informe, que se puede ver en varias páginas. Cuando el cliente recibe la imagen, se puede mostrar en un visor de imágenes y se puede imprimir.<br /><br /> La extensión de presentación de imágenes puede generar archivos en cualquiera de los formatos compatibles con [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG y TIFF.<br /><br /> Para más información, vea [Exportar a un archivo de imagen](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Archivo web|Salto de página automático|La extensión de representación en HTML representa un informe en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.<br /><br /> La extensión de presentación en HTML es la predeterminada para los informes que se visualizan en el Generador de informes y en un explorador, lo que incluye también cuando se ejecutan en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Para más información, vea [Representar en HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Salto de página automático|Se muestra como "Word" en el menú de exportación al visualizar informes. La extensión de representación de Word representa un informe como un documento de Word (.docx) compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Para más información, vea [Exportar a Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
-|XML|Datos|La extensión de presentación en XML devuelve un informe en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.<br/><br/> Para más información, vea [Exportar a XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
+|XML|data|La extensión de presentación en XML devuelve un informe en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.<br/><br/> Para más información, vea [Exportar a XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  
   
-##  <a name="GeneratingDataFeedsFromReport"></a> Generar fuentes de distribución de datos desde un informe  
+##  <a name="generating-data-feeds-from-a-report"></a><a name="GeneratingDataFeedsFromReport"></a> Generar fuentes de distribución de datos desde un informe  
  Para generar las fuentes de distribución de datos desde un informe, ejecute el informe en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y, después, haga clic en el icono **Generar fuente de distribución de datos** en la barra de herramientas del portal web. Se le solicita que decida si guardar o abrir el archivo. Si elige **Abrir**, el documento de servicio de Atom se abre en la aplicación que está asociada a la extensión de archivo .atomsvc. Si elige **Guardar**, el documento se guarda como un archivo .atomsvc. De forma predeterminada, el nombre del archivo es el nombre del informe. Puede cambiar el nombre a uno que sea más significativo.  
   
  Guarde el documento de servicio de Atom en su equipo. Después puede cargarlo a un servidor de informes o a otro servidor para que esté disponible para que otros lo utilicen. Para más información, vea [Generar fuentes de distribución de datos a partir de informes](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md) y [Generar fuentes de distribución de datos a partir de un informe](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
-##  <a name="Troubleshooting"></a> Solucionar problemas de informes exportados  
+##  <a name="troubleshooting-exported-reports"></a><a name="Troubleshooting"></a> Solucionar problemas de informes exportados  
  A veces, los informes parecen diferentes o no funcionan como desea tras exportarlos a un formato diferente. Esto se debe a que podrían aplicarse ciertas reglas y limitaciones al representador. Puede solucionar muchas limitaciones teniéndolas en cuenta al crear el informe. Podría necesitar usar un diseño ligeramente diferente en el informe, alinear cuidadosamente los elementos dentro del mismo, restringir los pies de página del informe a una sola línea de texto, etc.  
   
  Si un informe contiene texto Unicode y números arábigos, o contiene fechas arábigas, las fechas y los números no se representan correctamente cuando el informe se imprime o cuando se exporta cualquiera de los formatos siguientes.  
@@ -163,8 +164,8 @@ ms.locfileid: "65580815"
   
  Además, puede usar la función RenderFormat integrada para aplicar condicionalmente diseños de informe diferentes para representadores distintos. Para más información, vea [Referencias a campos globales y de usuario integrados](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
-##  <a name="OtherWaysExportingReports"></a> Otras maneras de exportar Informes  
- La exportación de un informe es una tarea a petición que se realiza cuando el informe está abierto en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el Generador de informes. Si desea automatizar una operación de exportación (por ejemplo, exportar periódicamente un informe a una carpeta compartida como un tipo de archivo específico), cree una suscripción que entregue el informe a una carpeta compartida. Para obtener más información, consulte [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
+##  <a name="other-ways-of-exporting-reports"></a><a name="OtherWaysExportingReports"></a> Otras maneras de exportar Informes  
+ La exportación de un informe es una tarea a petición que se realiza cuando el informe está abierto en el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o el Generador de informes. Si desea automatizar una operación de exportación (por ejemplo, exportar periódicamente un informe a una carpeta compartida como un tipo de archivo específico), cree una suscripción que entregue el informe a una carpeta compartida. Para obtener más información, vea [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
  De forma predeterminada, los informes cuya vista previa se obtiene en las herramientas de elaboración de informes o que se abren en una aplicación de explorador, como el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , siempre se presentan primero en HTML. No es posible especificar una extensión de representación diferente como opción predeterminada para la vista. Sin embargo, puede crear una suscripción que genere un informe en el formato de representación que desee para que se envíe posteriormente a una bandeja de entrada de correo electrónico o una carpeta compartida. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md) y [Crear, modificar y eliminar una suscripción controlada por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
   

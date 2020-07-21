@@ -1,5 +1,5 @@
 ---
-title: Precision (propiedad, ADOX) | Microsoft Docs
+title: Propiedad Precision (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,30 +17,30 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADOX]
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 67512b74e4c2b869cb7b1f9397462ce5566557a8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965562"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763726"
 ---
 # <a name="precision-property-adox"></a>Precision (propiedad, ADOX)
-Indica la precisión máxima de valores de datos en el [columna](../../../ado/reference/adox-api/column-object-adox.md).  
+Indica la precisión máxima de los valores de datos de la [columna](../../../ado/reference/adox-api/column-object-adox.md).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece y devuelve un **largo** valor que es la precisión máxima de valores de datos en la columna cuando la [tipo](../../../ado/reference/adox-api/type-property-column-adox.md) propiedad es un tipo numérico. **Precisión** se omite para todos los demás tipos de datos.  
+ Establece y devuelve un valor **Long** que es la precisión máxima de los valores de datos de la columna cuando la propiedad [Type](../../../ado/reference/adox-api/type-property-column-adox.md) es un tipo numérico. La **precisión** se omite para todos los demás tipos de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor predeterminado es cero (**0**).  
   
- Esta propiedad es de solo lectura para [columna](../../../ado/reference/adox-api/column-object-adox.md) ya anexados a una colección de objetos.  
+ Esta propiedad es de solo lectura para los objetos de [columna](../../../ado/reference/adox-api/column-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de código ADOX: NumericScale y Precision propiedades (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Tipo de propiedad (columna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de código ADOX: ejemplo de propiedades NumericScale y Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Type (propiedad, Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

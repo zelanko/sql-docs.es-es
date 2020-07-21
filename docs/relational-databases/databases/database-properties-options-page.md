@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Opciones) | Microsoft Docs
+description: Obtenga información sobre cómo utilizar la pestaña Opciones del cuadro de diálogo Propiedades de la base de datos para ver o modificar la intercalación, el modelo de recuperación y otros valores de la base de datos.
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630948"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Utilice esta página para ver o modificar opciones de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -121,10 +122,10 @@ Cuando se conecta a Azure SQL Database, esta sección tiene opciones para cont
  Habilita o deshabilita el examen de parámetros en los elementos secundarios, si procede. Es equivalente a la [Marca de seguimiento 4136](https://support.microsoft.com/kb/980653).  
   
  **Correcciones del optimizador de consultas**  
- Habilita o deshabilita las revisiones de optimización de consulta en el elemento principal, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/kb/974006).  
+ Habilita o deshabilita las revisiones de optimización de consulta en el elemento principal, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Para obtener más información, consulte [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
  **Correcciones del optimizador de consultas para secundaria**  
- Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](https://support.microsoft.com/kb/974006).  
+ Habilita o deshabilita las revisiones de optimización de consulta en los elementos secundarios, si procede, independientemente del nivel de compatibilidad de la base de datos. Es equivalente a la [Marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Para obtener más información, consulte [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nombre de directorio de FILESTREAM**  
@@ -221,7 +222,7 @@ Identificador de solo lectura.
  Especifique si la base de datos es de solo lectura. Los valores posibles son **True** o **False**. Con el valor **True**, los usuarios solo pueden leer los datos de la base de datos. Los usuarios no pueden modificar los objetos de datos ni de base de datos, pero la base de datos propiamente dicha se puede eliminar con la instrucción `DROP DATABASE`. La base de datos no puede estar en uso cuando se especifica un nuevo valor para la opción **Base de datos de solo lectura** . La base de datos maestra representa una excepción, y solo el administrador del sistema puede utilizar master mientras está habilitada la opción.  
   
  **Estado de la base de datos**  
- Muestra el estado actual de la base de datos. No se puede editar. Para obtener más información acerca del **Estado de base de datos**, vea [Database States](../../relational-databases/databases/database-states.md).  
+ Muestra el estado actual de la base de datos. Esta directiva no es editable Para obtener más información acerca del **Estado de base de datos**, vea [Database States](../../relational-databases/databases/database-states.md).  
 
  **Cifrado habilitado**  
  Cuando es **True**, el cifrado está habilitado para esta base de datos. Se requiere el uso de una Clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586737"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885833"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
@@ -38,10 +38,10 @@ La característica de recomendaciones de SKU le permite identificar el mínimo r
 
 Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de SKU de Azure SQL Database y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
-- Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información acerca de cómo findoug qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información sobre cómo averiguar qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Asegúrese de que el equipo tiene instalado el módulo de Azure PowerShell. Para obtener más información, vea el artículo [instalar el módulo de Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript. PS1**, que es necesario para recopilar los contadores de rendimiento, está instalado en la carpeta DMA.
 - Asegúrese de que el equipo en el que va a realizar este proceso tenga permisos de administrador en el equipo que hospeda las bases de datos de.
@@ -102,7 +102,7 @@ Además, seleccione uno de los argumentos siguientes:
     - **/AzureAuthenticationTenantId**: el inquilino de autenticación.
     - **/AzureAuthenticationClientId**: el identificador de cliente de la aplicación de AAD que se usa para la autenticación.
     - Una de las siguientes opciones de autenticación:
-      - Interactiva
+      - Interactive
         - **AzureAuthenticationInteractiveAuthentication**: establézcalo en true para una ventana emergente de autenticación.
       - Basado en certificados
         - **AzureAuthenticationCertificateStoreLocation**: se establece en la ubicación del almacén de certificados (por ejemplo, "CurrentUser").
@@ -115,7 +115,7 @@ Además, seleccione uno de los argumentos siguientes:
 
 Por último, hay un argumento opcional que puede usar para especificar las bases de datos para las que desea recomendaciones: 
 
-- **/SkuRecommendationDatabasesToRecommend**: una lista de bases de datos para las que se van a hacer recomendaciones. Los nombres de base de datos distinguen mayúsculas de minúsculas y deben (1) encontrarse en Input. csv, (2) cada una entre comillas dobles y (3) separadas por un solo espacio entre los nombres (por ejemplo,/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") . Omitir este parámetro garantiza que se proporcionen recomendaciones para todas las bases de datos de usuario identificadas en el archivo Input. csv.  
+- **/SkuRecommendationDatabasesToRecommend**: una lista de bases de datos para las que se van a hacer recomendaciones. Los nombres de las bases de datos distinguen mayúsculas de minúsculas y deben (1) encontrarse en Input. csv, (2) cada una de ellas entre comillas dobles y (3) separadas por un solo espacio entre los nombres (por ejemplo,/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3"). Omitir este parámetro garantiza que se proporcionen recomendaciones para todas las bases de datos de usuario identificadas en el archivo Input. csv.  
 
 A continuación se muestran algunas invocaciones de ejemplo:
 
@@ -184,7 +184,7 @@ A continuación se muestra una descripción de cada columna del archivo de salid
 - **ExclusionReasons** : este valor está en blanco si se recomienda un nivel. Para cada nivel que no se recomienda, se proporcionan las razones por las que no se ha seleccionado.
 - **AppliedRules** : notación breve de las reglas que se aplicaron.
 
-El nivel final recomendado (es decir, **MetricType**) y el valor (es decir, **MetricValue**): se encontró donde la columna **IsTierRecommended** es true, refleja la SKU mínima necesaria para que las consultas se ejecuten en Azure con una tasa de éxito similar a la bases de datos locales. En el caso de la instancia administrada, DMA actualmente admite recomendaciones para el 8vcore que se usa con más frecuencia para 40vcore SKU. Por ejemplo, si la SKU mínima recomendada es S4 para el nivel estándar, la elección de S3 o inferior hará que las consultas agoten el tiempo de espera o no se ejecuten.
+El nivel final recomendado (es decir, **MetricType**) y el valor (es decir, **MetricValue**): se encuentra donde la columna **IsTierRecommended** es true, refleja la SKU mínima necesaria para que las consultas se ejecuten en Azure con una tasa de éxito similar a las bases de datos locales. En el caso de la instancia administrada, DMA actualmente admite recomendaciones para el 8vcore que se usa con más frecuencia para 40vcore SKU. Por ejemplo, si la SKU mínima recomendada es S4 para el nivel estándar, la elección de S3 o inferior hará que las consultas agoten el tiempo de espera o no se ejecuten.
 
 El archivo HTML contiene esta información en un formato gráfico. Proporciona un medio descriptivo para ver la recomendación final y aprovisionar la siguiente parte del proceso. En la sección siguiente se muestra más información sobre la salida HTML.
 
@@ -206,7 +206,7 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre del servidor** : el servidor de Azure SQL Database en el que desea implementar las bases de datos. Si escribe un nombre de servidor que no existe, se creará.
     - **Nombre de usuario de administrador** : nombre de usuario del administrador del servidor.
-    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener al menos ocho caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: Letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #,%, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
+    - **Contraseña de administrador** : la contraseña de administrador del servidor. La contraseña debe tener al menos ocho caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
 
 2. Revise las recomendaciones para cada base de datos y modifique el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos según sea necesario. Asegúrese de anular la selección de las bases de datos que no quiera aprovisionar actualmente.
 
@@ -224,7 +224,7 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     - **Región** : la región en la que se aprovisionan las bases de datos. Asegúrese de que la suscripción admite la región seleccionada.
     - **Nombre de instancia** : la instancia de Azure SQL instancia administrada a la que desea migrar las bases de datos. El nombre de instancia solo puede contener letras minúsculas, números y '-', pero no puede comenzar ni terminar con '-' ni tener más de 63 caracteres.
     - **Nombre de usuario de administrador de instancia** : nombre de usuario de administrador de instancia. Asegúrese de que el nombre de inicio de sesión cumple los requisitos siguientes: es un identificador de SQL y no un nombre de sistema típico (por ejemplo, administrador, administrador, SA, raíz, dbmanager, LoginManager, etc.) o un usuario o rol de base de datos integrado (por ejemplo, DBO, invitado, público, etc.). Asegúrese de que su nombre no contenga espacios en blanco, caracteres Unicode o caracteres no alfabéticos, y que no empiece por números o símbolos. 
-    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener al menos 16 caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: Letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #,%, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
+    - **Contraseña de administrador de instancia** : la contraseña de administrador de la instancia. La contraseña debe tener al menos 16 caracteres y no más de 128 caracteres de longitud. La contraseña debe contener caracteres de tres de las siguientes categorías: letras en mayúsculas del alfabeto inglés, letras en minúscula del alfabeto inglés, números (0-9) y caracteres no alfanuméricos (!, $, #, %, etc.). La contraseña no puede contener ninguna o una parte (3 + letras consecutivas) del nombre de usuario.
     - **Nombre de la red virtual** : el nombre de la red virtual con la que se debe aprovisionar la instancia administrada. Escriba un nombre de red virtual existente.
     - **Nombre de subred** : el nombre de subred en el que se debe aprovisionar la instancia administrada. Escriba un nombre de subred existente.
 
@@ -235,6 +235,6 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     > [!NOTE]
     > La creación de instancias administradas en una subred (especialmente por primera vez) puede tardar varias horas en completarse. Después de ejecutar el script de aprovisionamiento a través de PowerShell, puede comprobar el estado de la implementación en Azure portal.
 
-## <a name="next-step"></a>Paso siguiente
+## <a name="next-step"></a>Siguiente paso
 
 - Para obtener una lista completa de los comandos para ejecutar DMA desde la CLI, consulte el artículo [ejecución de Data Migration Assistant desde la línea de comandos](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).

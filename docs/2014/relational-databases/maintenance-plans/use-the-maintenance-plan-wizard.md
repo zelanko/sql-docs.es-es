@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023830"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
@@ -52,22 +51,22 @@ ms.locfileid: "70153822"
   
      [Seguridad](#Security)  
   
--   [Crear un plan de mantenimiento mediante el Asistente para planes de mantenimiento en SQL Server Management Studio](#SSMSProcedure)  
+-   [Crear un plan de mantenimiento con el Asistente para planes de mantenimiento en SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Para crear un plan de mantenimiento multiservidor, se debe configurar un entorno multiservidor que contenga un servidor maestro y uno o varios servidores de destino. Los planes de mantenimiento multiservidor se deben crear y mantener en el servidor maestro. Estos planes se pueden ver, pero no mantener, en servidores de destino.  
   
 -   Los miembros de los roles **db_ssisadmin** y **dc_admin** quizá puedan elevar sus privilegios a **sysadmin**. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; estos paquetes los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de **sysadmin** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a>Usar el Asistente para planes de mantenimiento  
+##  <a name="using-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a>Usar el Asistente para planes de mantenimiento  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>Para iniciar el Asistente para planes de mantenimiento  
   
@@ -126,7 +125,7 @@ ms.locfileid: "70153822"
   
                 -   Si selecciona **Sucede una vez a las**, escriba la hora concreta en que debe ejecutarse la programación de trabajo en el cuadro **Sucede una vez a las** . Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   
-                -   Si selecciona **Sucede cada**, especifique la frecuencia con que se ejecuta la programación de trabajo durante el día seleccionado en **Frecuencia**. Por ejemplo, si quiere que la programación de trabajo se repita cada dos horas al día cuando se ejecuta, seleccione **Sucede cada**, escriba "2" en el primer cuadro y, después, seleccione **horas** en la lista. En esta lista también puede seleccionar **minutos** y **segundos**. Tenga en cuenta que el mayor número permitido en el primer cuadro es "100".  
+                -   Si selecciona **Sucede cada**, especifique la frecuencia con que se ejecuta la programación de trabajo durante el día seleccionado en **Frecuencia**. Por ejemplo, si desea que la programación de trabajo se repita cada 2 horas durante el día en que se ejecuta la programación de trabajo, seleccione **sucede cada**, escriba "2" en el primer cuadro y, a continuación, seleccione **horas** en la lista. En esta lista también puede seleccionar **minutos** y **segundos**. Tenga en cuenta que el mayor número permitido en el primer cuadro es "100".  
   
                      En el cuadro **A partir de** , especifique la hora en que la programación de trabajo debe iniciar su ejecución. En el cuadro **Finaliza** , especifique la hora en que la programación de trabajo debe dejar de repetirse. Especifique la hora, minuto y segundo del día, así como a.m. o p.m.  
   
@@ -136,9 +135,9 @@ ms.locfileid: "70153822"
   
         6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-        7.  Haga clic en **Aceptar**.  
+        7.  Haga clic en **OK**.  
   
-    6.  Haga clic en **Next**.  
+    6.  Haga clic en **Siguiente**.  
   
 6.  En la página **Seleccionar servidores de destino** , seleccione los servidores en los que desea ejecutar el plan de mantenimiento. Esta página solo está visible en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuradas como servidores maestros.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "70153822"
   
     -   **Todas las bases de datos**  
   
-         Genera un plan de mantenimiento que ejecuta esta tarea en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a excepción de **tempdb**.  
+         Genere un plan de mantenimiento que ejecute esta tarea en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a excepción de **tempdb**.  
   
     -   **Bases de datos del sistema**  
   
@@ -205,7 +204,7 @@ ms.locfileid: "70153822"
      La base de datos se comprime en páginas contiguas, pero no se cancela la asignación de las páginas y los archivos de la base de datos no se comprimen. Utilice esta opción si espera que la base de datos se expanda de nuevo y no desea reasignar el espacio. Con esta opción, los archivos de la base de datos no se comprimen lo máximo posible. Utiliza la opción NOTRUNCATE.  
   
      **Devolver espacio liberado al sistema operativo**  
-     La base de datos se comprime en páginas contiguas y las páginas se devuelven al sistema operativo para que otros programas puedan utilizarlas. Estos archivos de base de datos se comprimen lo máximo posible. Utiliza la opción TRUNCATEONLY. Esta es la opción predeterminada.  
+     La base de datos se comprime en páginas contiguas y las páginas se devuelven al sistema operativo para que otros programas puedan utilizarlas. Estos archivos de base de datos se comprimen lo máximo posible. Utiliza la opción TRUNCATEONLY. Ésta es la opción predeterminada.  
   
 #### <a name="define-the-index-tasks"></a>Definir las tareas de índice  
   
@@ -216,33 +215,33 @@ ms.locfileid: "70153822"
      Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Lista**Objeto**  
+     Lista de **objetos**  
      Limita la lista **Selección** para mostrar tablas, vistas o ambas cosas. Esta lista solo está disponible si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Lista**Selección**  
+     Lista de **selección**  
      Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
      Casilla**Compactar objetos grandes**  
      Cancela la asignación de espacio para tablas y vistas cuando es posible. Esta opción utiliza `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  En la página **Definir la tarea Volver a generar índice** , seleccione una o varias bases de datos donde va a volver a crear varios índices. Esta tarea usa la instrucción `ALTER INDEX ... REBUILD PARTITION`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Cuando termine, haga clic en **Siguiente**.  
+2.  En la página **Definir la tarea Volver a generar índice** , seleccione una o varias bases de datos donde va a volver a crear varios índices. Esta tarea usa la instrucción `ALTER INDEX ... REBUILD PARTITION`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)). Cuando haya terminado, haga clic en **siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
      Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Lista**Objeto**  
+     Lista de **objetos**  
      Limita la lista **Selección** para mostrar tablas, vistas o ambas cosas. Esta lista solo está disponible si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Lista**Selección**  
+     Lista de **selección**  
      Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
      Área**Opciones de espacio disponible**  
      Muestra opciones para aplicar un factor de relleno a índices y tablas.  
   
      **Espacio disponible predeterminado por página**  
-     Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Esta es la opción predeterminada.  
+     Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Ésta es la opción predeterminada.  
   
      Cuadro**Cambiar el espacio disponible por página a**  
      Quita los índices de las tablas de la base de datos y vuelve a crearlos con un nuevo factor de relleno calculado automáticamente, de forma que reserva la cantidad de espacio disponible especificada en las páginas de índice. Cuanto mayor sea el porcentaje, más espacio disponible se reservará en las páginas de índice y mayor tamaño tendrá el índice. Los valores válidos son de 0 a 100. Usa la opción `FILLFACTOR` .  
@@ -253,11 +252,11 @@ ms.locfileid: "70153822"
      Casilla**Ordenar resultados de tempdb**  
      Usa la opción `SORT_IN_TEMPDB` que determina dónde se almacenan temporalmente los resultados de ordenación intermedios, generados durante la creación de índices. En caso de que sea necesario realizar una operación de ordenación o de que esta pueda realizarse en la memoria, se omitirá la opción `SORT_IN_TEMPDB` .  
   
-     Casilla**Mantener el índice en línea al volver a indizar**  
-     Usa la opción `ONLINE` para permitir a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster y a todos los índices no clúster asociados durante las operaciones de índice. La selección de esta opción activa opciones adicionales para volver a crear índices que no permiten volver a generarlos en línea: **No volver a generar índices** y **Volver a generar índices sin conexión**.  
+     Casilla**Mantener el índice en línea al volver a indexar**  
+     Usa la opción `ONLINE` para permitir a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster y a todos los índices no clúster asociados durante las operaciones de índice. La selección de esta opción activa opciones adicionales para volver a crear índices que no permiten volver a generarlos en línea: **No volver a generar los índices** y **Volver a generar los índices sin conexión**.  
   
     > [!NOTE]  
-    >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+    >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 #### <a name="define-the-update-statistics-task"></a>Definir la tarea Actualizar estadísticas  
   
@@ -268,10 +267,10 @@ ms.locfileid: "70153822"
      Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Lista**Objeto**  
+     Lista de **objetos**  
      Limita la lista **Selección** para mostrar tablas, vistas o ambas cosas. Esta lista solo está disponible si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Lista**Selección**  
+     Lista de **selección**  
      Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
      **Todas las estadísticas existentes**  
@@ -283,10 +282,10 @@ ms.locfileid: "70153822"
      **Solo estadísticas de índice**  
      Solo actualiza las estadísticas de los índices. Usa la opción `WITH INDEX` .  
   
-     **Tipo de recorrido**  
+     **Tipo de examen**  
      Tipo de recorrido usado para obtener estadísticas actualizadas.  
   
-     **Recorrido completo**  
+     **Examen completo**  
      Lee todas las filas de la tabla o vista para obtener las estadísticas.  
   
      **Muestrear por**  
@@ -319,33 +318,33 @@ ms.locfileid: "70153822"
   
 #### <a name="define-backup-tasks"></a>Definir las tareas Copia de seguridad  
   
-1.  En la página **Definir la tarea Copia de seguridad de BD (completa)** , seleccione una o varias bases de datos en la que quiere ejecutar una copia de seguridad completa. Esta tarea usa la instrucción `BACKUP DATABASE`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Copia de seguridad de BD (completa)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad completa. Esta tarea usa la instrucción `BACKUP DATABASE`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando termine, haga clic en **Siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Tipo de copia de seguridad**  
+     Lista **Tipo de copia de seguridad**  
      Muestra el tipo de copia de seguridad que se va a realizar. Es de solo lectura.  
   
      Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
      **Componente de copia de seguridad**  
-     Seleccione **Base de datos** para realizar una copia de seguridad de toda la base de datos. Seleccione **Archivo y grupos de archivos** para realizar una copia de seguridad únicamente de una parte de la base de datos. Si selecciona esta opción, debe especificar el nombre del archivo o del grupo de archivos. Cuando se seleccionan varias bases de datos en el cuadro **Bases de datos** , solo hay que especificar **Bases de datos** para **Componente de copia de seguridad**. Para realizar copias de seguridad de un archivo o grupo de archivos, cree una tarea para cada base de datos. Estas opciones solo están disponibles si se elige una sola base de datos en la lista **Bases de datos** anterior.  
+     Seleccione **Base de datos** para realizar una copia de seguridad de toda la base de datos. Seleccione **Archivo y grupos de archivos** para realizar una copia de seguridad únicamente de una parte de la base de datos. Si selecciona esta opción, debe especificar el nombre del archivo o del grupo de archivos. Cuando se seleccionan varias bases de datos en el cuadro **Bases de datos**, solo hay que especificar **Bases de datos** para **Componente de copia de seguridad**. Para realizar copias de seguridad de un archivo o grupo de archivos, cree una tarea para cada base de datos. Estas opciones solo están disponibles si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Casilla**El conjunto de copia de seguridad expira**  
+     Casilla **El conjunto de copia de seguridad expira**  
      Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Seleccione **Después de** y escriba un número de días para la expiración o seleccione **El** y especifique una fecha de expiración. Esta opción se deshabilita si la opción **Dirección URL** se selecciona como destino de la copia de seguridad.  
   
      **Copia de seguridad en**  
      Especifica el medio en el que se va a realizar la copia de seguridad de la base de datos. Seleccione **Disco**, **Cinta**o **Dirección URL**. Solo están disponibles los dispositivos de cinta conectados al equipo que contiene la base de datos.  
   
      **Realizar copia de seguridad de las bases de datos en uno o varios archivos**  
-     Haga clic en **Agregar** para abrir el cuadro de diálogo **Seleccionar destino de la copia de seguridad** . Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
+     Haga clic en **Agregar** para abrir el cuadro de diálogo **Seleccionar destino de la copia de seguridad**. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
      Haga clic en **Quitar** para quitar un archivo del cuadro.  
   
      Haga clic en **Contenido** para leer el encabezado de archivo y mostrar el contenido de copia de seguridad actual del archivo.  
   
-     Cuadro de diálogo**Seleccionar destino de la copia de seguridad**  
+     Cuadro de diálogo **Seleccionar destino de la copia de seguridad**  
      Seleccione el archivo, la unidad de cinta o el dispositivo de copia de seguridad que será el destino de la copia de seguridad. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
      Lista**Si existen copias de seguridad**  
@@ -364,18 +363,18 @@ ms.locfileid: "70153822"
      Especifica la carpeta que va a contener los archivos de base de datos creados de forma automática. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
      **Credencial SQL**  
-     Seleccione una credencial SQL usada para autenticarse en Azure Storage. Si no tiene una credencial existente de SQL que se pueda usar, haga clic en el botón **Crear** para crear una nueva credencial SQL.  
+     Seleccione una credencial SQL utilizada para autenticarse en Azure Storage. Si no tiene una credencial existente de SQL que se pueda usar, haga clic en el botón **Crear** para crear una nueva credencial SQL.  
   
     > [!IMPORTANT]  
     >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo del tema [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) para crear una credencial mediante TRANSACT-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
   
      **Contenedor de almacenamiento de Windows Azure**  
-     Especificar el nombre del contenedor de almacenamiento de Azure  
+     Especifique el nombre del contenedor de Azure Storage.  
   
      **Prefijo URL:**  
-     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<cuenta de almacenamiento>.blob.core.windows.net**.  
+     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que use un formato distinto de ** \<storage account> . BLOB.Core.Windows.net**.  
   
-     Cuadro**Extensión del archivo de copia de seguridad**  
+     Cuadro **Extensión del archivo de copia de seguridad**  
      Especifique la extensión que se va a utilizar para los archivos de copia de seguridad. El valor predeterminado es .bak.  
   
      Casilla**Comprobar integridad de copia de seguridad**  
@@ -404,16 +403,16 @@ ms.locfileid: "70153822"
     |||  
     |-|-|  
     |**Usar la configuración de servidor predeterminada**|Haga clic para utilizar el valor predeterminado de nivel de servidor. La opción de la configuración del servidor **Compresión de copia de seguridad predeterminada** establece este valor predeterminado. Para obtener más información sobre cómo ver la configuración actual de esta opción, vea [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> **\*\* Importante \*\*** De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar negativamente a las operaciones simultáneas. Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el regulador de recursos limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
+    |**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> Importante de forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional consumida por el proceso de compresión puede afectar negativamente a las operaciones simultáneas. ** \* \* \* \* ** Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el regulador de recursos limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
     |**No comprimir copia de seguridad**|Haga clic para crear una copia de seguridad sin comprimir, independientemente del valor predeterminado de nivel de servidor.|  
   
-2.  En la página **Definir la tarea Copia de seguridad de BD (diferencial)** , seleccione una o varias bases de datos en la que quiera ejecutar una copia de seguridad parcial. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Cuando termine, haga clic en **Siguiente**.  
+2.  En la página **Definir la tarea Copia de seguridad de BD (diferencial)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad parcial. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Cuando termine, haga clic en **Siguiente**.  
   
-3.  En la página **Definir la tarea Copia de seguridad de BD (reg. trans.)** , seleccione una o varias bases de datos en la que quiere ejecutar una copia de seguridad del registro de transacciones. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP LOG`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando termine, haga clic en **Siguiente**.  
+3.  En la página **Definir la tarea Copia de seguridad de BD (reg. trans.)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad de un registro de transacciones. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP LOG`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando termine, haga clic en **Siguiente**.  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definir las tareas Limpieza de mantenimiento  
   
-1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file` . Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file`. Cuando termine, haga clic en **Siguiente**.  
   
     > [!IMPORTANT]  
     >  Esta tarea no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta precaución reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, hay que seleccionar **Incluir subcarpetas de primer nivel**.  
@@ -491,10 +490,10 @@ ms.locfileid: "70153822"
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  

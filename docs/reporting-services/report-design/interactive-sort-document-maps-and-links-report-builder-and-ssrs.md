@@ -1,5 +1,5 @@
 ---
-title: Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS) | Microsoft Docs
+title: Ordenación interactiva, mapas de documento y vínculos (Generador de informes) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 838214206101337a35245e3a9f6fee461a47933d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 472f2d2962bab1f8a3fc576558012f08946a3755
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580173"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082002"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>Ordenación interactiva, mapas de documento y vínculos (Generador de informes y SSRS)
   En entornos basados en web, puede agregar varias características que permitan a los usuarios interactuar con los informes. Los usuarios pueden cambiar el criterio de ordenación de los valores del informe, mostrar u ocultar elementos del informe o hacer clic en vínculos que llevan a otros informes con páginas web. También puede agregar una tabla de contenido o mapa de documento. Los usuarios de los informes pueden hacer clic en los elementos de la tabla de contenido o el mapa de documento para desplazarse a las distintas áreas de un informe.  
@@ -27,7 +27,7 @@ ms.locfileid: "65580173"
 -   **Vínculos de informe detallado** : saltan a otros informes del mismo servidor de informes. Para más información, vea [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Los vínculos que se enlazan a los campos de conjunto de datos pueden ser vulnerables a la alteración con fines malintencionados. Para más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md) en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  
+>  Los vínculos que se enlazan a los campos de conjunto de datos pueden ser vulnerables a la alteración con fines malintencionados. Para obtener más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
  Si también desea permitir que los usuarios controlen la presentación y el contenido del informe, diseñe expresiones de ordenación, filtrado y visibilidad que incluyan referencias a los parámetros. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) y [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104228"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Dominios de aplicación para las aplicaciones del servidor de informes
@@ -58,7 +58,7 @@ ms.locfileid: "66104228"
   
  Los dominios de aplicación para el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento de fondo se podrían reciclar de manera conjunta o individualmente, dependiendo de las circunstancias que hacen que se produzca el reciclaje:  
   
--   Reciclar las operaciones iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] solamente afectan a la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicaciones: Servicio Web del servidor de informes y el Administrador de informes. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará los dominios de aplicación basándose en si hay cambios en los archivos que supervisa. Las operaciones de reciclaje que se inician a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] normalmente son independientes de las operaciones de reciclaje para la aplicación de procesamiento de fondo.  
+-   Las operaciones de reciclaje iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] afectan únicamente a las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]: servicio web del servidor de informes y Administrador de informes. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará los dominios de aplicación basándose en si hay cambios en los archivos que supervisa. Las operaciones de reciclaje que se inician a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] normalmente son independientes de las operaciones de reciclaje para la aplicación de procesamiento de fondo.  
   
 -   Las operaciones de reciclaje iniciadas por el servidor de informes afectan normalmente al servicio web del servidor de informes, al Administrador de informes y a la aplicación de procesamiento de fondo. Las operaciones de reciclaje se producen en respuesta a los cambios a los valores de configuración y se reinicia el servicio.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66104228"
 > [!NOTE]  
 >  Aunque el servicio web del servidor de informes y el Administrador de informes son aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , ninguna aplicación responde al reciclaje de dominio de aplicación programado que se podría especificar en machine.config para aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] hospedadas en IIS.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md)  

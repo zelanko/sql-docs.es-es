@@ -1,5 +1,5 @@
 ---
-title: Ejemplo UpdateBatch y CancelBatch métodos (VC ++) | Microsoft Docs
+title: Ejemplo de los métodos UpdateBatch y CancelBatch (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a487ce96f20f574d5b3996e9e3948e423601cb10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8e467e41d77012d3366ded54c7e20b01121bec8d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942919"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759471"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>Ejemplo de los métodos UpdateBatch y CancelBatch (VC ++)
-Este ejemplo se muestra el [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método junto con el [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) método.  
+En este ejemplo se muestra el método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) junto con el método [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -210,6 +210,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CancelBatch (método) (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

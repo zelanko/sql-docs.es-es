@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de una jerarquía explícita (Master Data Services) | Microsoft Docs
+title: Cambiar el nombre de una jerarquía explícita
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0e73afa32b07f6d66fc6689215733fea35548f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31f93bbb8aa214a1353fce1a571f555c94055ccd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812040"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Cambiar el nombre de una jerarquía explícita (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de una jerarquía explícita.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68006334"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-the-name-of-an-explicit-hierarchy"></a>Cambiar el nombre de una jerarquía explícita  
   
@@ -46,11 +46,11 @@ ms.locfileid: "68006334"
   
 6.  En el cuadro **Nombre** , escriba el nombre actualizado de la jerarquía.  
   
-7.  Haga clic en **Guardar**.  
+7.  Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Crear una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Cree una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Eliminar una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Transacciones (Master Data Services) | Microsoft Docs
+title: Transacciones
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b9f2eeec0e5936d215595755bbc92bb5b9a8c42
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812684"
 ---
 # <a name="transactions-master-data-services"></a>Transacciones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 
 

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cf5e7ba15416be16b494b36859838e52aff7ce1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064911"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Definiciones de consulta diferentes (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo notifica que no se puede representar gráficamente la consulta en los paneles Diagrama y Criterios, y que solo se puede modificar la consulta en el panel SQL.  
@@ -50,7 +49,7 @@ ms.locfileid: "63294457"
 > [!NOTE]  
 >  Si la instrucción es correcta, pero el Diseñador de consultas y vistas no la admite gráficamente, podrá ejecutarla aunque no se pueda representar en los paneles Diagrama y Criterios. Por ejemplo, si indica una consulta de unión, se podrá ejecutar la instrucción, pero no se podrá representar en los otros paneles.  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas Diseñador de consultas y vistas (Visual Database Tools)](visual-database-tools.md)  
+## <a name="see-also"></a>Consulte también  
+ [Herramientas Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

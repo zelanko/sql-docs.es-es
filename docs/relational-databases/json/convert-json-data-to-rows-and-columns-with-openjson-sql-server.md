@@ -1,9 +1,7 @@
 ---
-title: Análisis y transformación de datos JSON con OPENJSON (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2017
+title: Análisis y transformación de datos JSON con OPENJSON
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e09a24d4f75c0b559a247176a7d57516cf75e43e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 496e49a866bb477139078b0797c6390b42df3192
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909440"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009597"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Análisis y transformación de datos JSON con OPENJSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 La función de conjunto de filas **OPENJSON** convierte texto JSON en un conjunto de filas y columnas. Una vez que transforma una colección de JSON en un conjunto de filas con **OPENJSON**, puede ejecutar cualquier consulta SQL en los datos devueltos o insertarlos en una tabla de SQL Server. 
   
@@ -53,11 +53,11 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**Resultado**
+**Resultados**
   
-|Key|value|Tipo|  
+|key|value|type|  
 |---------|-----------|----------|  
-|NAME|John|1|  
+|name|John|1|  
 |surname|Doe|1|  
 |age|45|2|  
 |skills|["SQL","C#","MVC"]|4|
@@ -114,9 +114,9 @@ WITH (
  ) 
 ```  
   
-**Resultado**
+**Resultados**
   
-|Number|date|Customer|Cantidad|  
+|Number|Date|Customer|Cantidad|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|  

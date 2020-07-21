@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afdf1beffd6099fce84f03a8ba65f7de9abb8f0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001948"
 ---
 # <a name="monitor-and-respond-to-events"></a>Supervisar y responder a eventos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente puede supervisar y responder automáticamente a *eventos*, como, por ejemplo, mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condiciones de rendimiento específicas y eventos de Instrumental de administración de Windows (WMI).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente  puede supervisar y responder automáticamente a *eventos*, por ejemplo, mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condiciones de rendimiento específicas y eventos de Instrumental de administración de Windows (WMI).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Alertas](alerts.md)  
@@ -67,7 +66,7 @@ ms.locfileid: "62720128"
   
  Independientemente del origen del evento, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde al evento realizando las tareas especificadas en la alerta del evento.  
   
-## <a name="see-also"></a>Vea también  
- [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [sp_altermessage &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

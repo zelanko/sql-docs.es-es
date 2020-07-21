@@ -12,15 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe1f2ffa56e7cebfc31f2f5bf935fc74dfd57f23
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828881"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437942"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Crear paquetes en herramientas de datos de SQL Server
   Los paquetes que creó en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] se guardan en el sistema de archivos. Para guardar un paquete en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el almacén de paquetes, necesita guardar una copia del paquete. Para más información, vea [Guardar una copia de un paquete](../../2014/integration-services/save-a-copy-of-a-package.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "62828881"
   
 -   Usar la plantilla de paquete que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye.  
   
--   Usar una plantilla personalizada  
+-   Utilización de una plantilla personalizada  
   
      Para utilizar paquetes personalizados como plantillas en la creación de nuevos paquetes, solo tiene que copiarlos en la carpeta DataTransformationItems. De forma predeterminada, esta carpeta se encuentra en C:\Archivos de programa\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\ProjectItems\DataTransformationProject.  
   

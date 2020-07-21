@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8efc581eebd7d8fa7fa265abb54168af78b57ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057651"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
   La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.  
@@ -183,21 +182,21 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Un identificador único que identifica un extremo de conversación en una aplicación. Los identificadores de conversación son únicos para cada extremo de la conversación; los extremos de destino e iniciador tienen identificadores de conversación independientes.  
   
- Identificadores de conversación se devuelven a las aplicaciones la *@dialog_handle* parámetro de la **BEGIN DIALOG** instrucción y el `conversation_handle` conjunto de columnas en el resultado de una **recepción**  instrucción.  
+ Los identificadores de conversación se devuelven a las aplicaciones mediante el *@dialog_handle* parámetro de la instrucción **Begin Dialog** y la `conversation_handle` columna en el conjunto de resultados de una instrucción **Receive** .  
   
- Identificadores de conversación se presentan en el `conversation_handle` columna de la **sys.transmission_queue** y **sys.conversation_endpoints** vistas de catálogo.  
+ Los identificadores de conversación se muestran en la `conversation_handle` columna de las vistas de catálogo **sys. transmission_queue** y **Sys. conversation_endpoints** .  
   
  *conversation_group_id*  
  El identificador único que identifica un grupo de conversación.  
   
- Se devuelven los identificadores de conversación a las aplicaciones la *@conversation_group_id* parámetro de la **GET CONVERSATION GROUP** instrucción y el `conversation_group_id` columna del conjunto de resultados de una **Recepción** instrucción.  
+ Los identificadores de grupo de conversación se devuelven a las aplicaciones mediante el *@conversation_group_id* parámetro de la instrucción **Get Conversation Group** y la `conversation_group_id` columna en el conjunto de resultados de una instrucción **Receive** .  
   
- Los identificadores de conversación se notifican en la `conversation_group_id` columnas de la **sys.conversation_groups** y **sys.conversation_endpoints** vistas de catálogo.  
+ Los identificadores de grupo de conversación se muestran en las `conversation_group_id` columnas de las vistas de catálogo **sys. conversation_groups** y **Sys. conversation_endpoints** .  
   
  *conversation_id*  
  El identificador único que identifica una conversación. Los identificadores de conversación son los mismos para los extremos de destino e iniciador de una conversación.  
   
- Los identificadores de conversación se presentan en el `conversation_id` columna de la **sys.conversation_endpoints** vista de catálogo.  
+ Los identificadores de conversación se muestran en la `conversation_id` columna de la vista de catálogo **sys. conversation_endpoints** .  
   
  **-TIMEOUT** *timeout_interval*  
  Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera. **-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  
@@ -230,7 +229,7 @@ WHERE database_id = DB_ID();
  Si se especifica la opción **-P** sin una contraseña, **ssbdiagnose** usa la contraseña predeterminada (NULL).  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Para obtener más información, consulte [Contraseñas seguras](../../relational-databases/security/strong-passwords.md).  
   
  El mensaje de contraseña se muestra en la consola de la siguiente manera: `Password:`  
   
@@ -243,7 +242,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Especifica la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contiene los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se van a analizar.  
   
- Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Especifique *server_name***\\***instance_name* para conectar con una instancia con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Si no se especifica **-S** , **ssbdiagnose** usa el valor de la variable de entorno SQLCMDSERVER. Si tampoco se establece SQLCMDSERVER, **ssbdiagnose** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el equipo local.  
+ Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Especifique *server_name ***\\*** instance_name* para conectarse a una instancia con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Si no se especifica **-S** , **ssbdiagnose** usa el valor de la variable de entorno SQLCMDSERVER. Si tampoco se establece SQLCMDSERVER, **ssbdiagnose** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el equipo local.  
   
  **-d** *database_name*  
  Especifica la base de datos que contiene los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se van a analizar. Si la base de datos no existe, se genera un mensaje de error. Si no se especifica **-d** , el valor predeterminado es la base de datos especificada en la propiedad de base de datos predeterminada del inicio de sesión.  
@@ -254,7 +253,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Muestra la ayuda de la línea de comandos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use **ssbdiagnose** para lo siguiente:  
   
 -   Confirmar que no hay errores de configuración en una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se acaba de configurar.  
@@ -329,7 +328,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Comprobar la configuración de dos servicios en equipos independientes que usan un mismo inicio de sesión  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Comprobar la configuración de dos servicios en equipos independientes que usan un mismo inicio de sesión  
  En el ejemplo siguiente se muestra cómo solicitar un informe de configuración cuando el servicio iniciador y el servicio de destino están en equipos distintos, pero se puede obtener acceso a ellos usando el mismo inicio de sesión con autenticación de Windows.  
   
 ```  
@@ -445,7 +444,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/begin-dialog-conversation-transact-sql)   
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-broker-priority-transact-sql)   

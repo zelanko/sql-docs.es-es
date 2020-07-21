@@ -1,6 +1,6 @@
 ---
-title: Obtener un cursor FAST_FORWARD | Microsoft Docs
-description: Obtener un cursor FAST_FORWARD mediante OLE DB controlador para SQL Server
+title: Obtención de un cursor FAST_FORWARD | Microsoft Docs
+description: Obtención de un cursor FAST_FORWARD mediante OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994741"
 ---
-# <a name="obtain-a-fastforward-cursor"></a>Obtener un cursor FAST_FORWARD
+# <a name="obtain-a-fast_forward-cursor"></a>Obtener un cursor FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67994741"
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-### <a name="to-obtain-fastforward-cursor"></a>Para obtener el cursor FAST_FORWARD  
+### <a name="to-obtain-fast_forward-cursor"></a>Para obtener el cursor FAST_FORWARD  
   
 1.  Establezca una conexión con el origen de datos.  
   

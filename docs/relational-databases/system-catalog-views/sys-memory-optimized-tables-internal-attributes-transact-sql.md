@@ -1,5 +1,5 @@
 ---
-title: Sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
+title: Sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,19 +20,18 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 636bacd800bc75d0b7a087683e1aef34584d596e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102380"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004808"
 ---
-# <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Contiene una fila para cada tabla interna optimizada para memoria que se usa para almacenar tablas de usuario optimizadas para memoria. Cada tabla de usuario corresponde a una o varias tablas internas. Se usa solo una tabla para el almacén de datos central. Las tablas internas adicionales se usan para admitir características como almacenamiento temporal, almacenamiento de índice de almacén de columnas y almacenamiento no consecutivo (LOB) para tablas optimizadas para memoria.
  
-| Nombre de columna  | Tipo de datos  | Descripción |
+| Nombre de la columna  | Tipo de datos  | Descripción |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Identificador de la tabla de usuario. Las tablas internas optimizadas para memoria que existen para admitir una tabla de usuario (como almacenamiento no consecutivo o filas eliminadas, en el caso de las combinaciones de Hk/almacén de columnas) tienen el mismo valor object_id como principal. |
 |xtp_object_id  |**bigint**|    Identificador de objeto de OLTP en memoria que corresponde a la tabla interna optimizada para memoria que se usa para admitir la tabla de usuario. Es un identificador único dentro de la base de datos y puede cambiar a lo largo de la duración del objeto. 
@@ -75,7 +74,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>b. Devolver el consumo de memoria de todas las columnas que se almacenan de manera no consecutiva
+### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>B. Devolver el consumo de memoria de todas las columnas que se almacenan de manera no consecutiva
 
 Para más detalles sobre el consumo de memoria de las columnas que se almacenan de manera no consecutiva, puede usar la consulta siguiente que muestra el consumo de memoria de todas las tablas internas y los índices que se usan para almacenar las columnas no consecutivas:
 
@@ -97,7 +96,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. Devolver el consumo de memoria de los índices de almacén de columnas en las tablas optimizadas para memoria
 
-Utilice la siguiente consulta para mostrar el consumo de memoria de los índices de almacén de columnas en tablas optimizadas para memoria:
+Use la siguiente consulta para mostrar el consumo de memoria de los índices de almacén de columnas en las tablas optimizadas para memoria:
 
 ```Transact-SQL
 SELECT
@@ -113,7 +112,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Use la siguiente consulta desglosa el consumo de memoria a través de las estructuras internas que se usa para los índices de almacén de columnas en tablas optimizadas para memoria:
+Use la siguiente consulta para desglosar el consumo de memoria en las estructuras internas usadas para los índices de almacén de columnas en las tablas optimizadas para memoria:
 
 ```Transact-SQL
 SELECT

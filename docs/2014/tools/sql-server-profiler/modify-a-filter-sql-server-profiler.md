@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db6d6220fbb0f756b539e63dc2496d9ddb46d9f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7bab18952820a3dc49c9479797a411521f8e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057691"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>Modificar un filtro (SQL Server Profiler)
   Se agregan filtros a las plantillas de seguimiento, que contienen las definiciones de los seguimiento, para limitar el número de eventos que recopila un seguimiento. Esta limitación puede reducir las consecuencias sobre el rendimiento de las trazas. Si establece filtros para una plantilla de seguimiento y averigua que el seguimiento no recopila el tipo de información que necesita, puede modificar el filtro.  
@@ -40,7 +39,7 @@ ms.locfileid: "63228490"
   
 6.  Haga clic en **Aceptar** y guarde la plantilla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

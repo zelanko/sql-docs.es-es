@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 90aec5f7dbf3d3c69a7faa6a98e98232069f9513
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768701"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437002"
 ---
 # <a name="year-ssis-expression"></a>YEAR (expresión de SSIS)
   Devuelve un entero que representa la parte del año de una fecha.  
@@ -37,7 +36,7 @@ YEAR(date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  YEAR devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
@@ -66,7 +65,7 @@ YEAR(ModifiedDate)
 YEAR(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DATEADD &#40;expresión de SSIS&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expresión de SSIS&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;expresión de SSIS&#41;](datepart-ssis-expression.md)   

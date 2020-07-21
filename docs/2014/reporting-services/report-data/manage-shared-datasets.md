@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107210"
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
@@ -36,7 +36,7 @@ ms.locfileid: "66107210"
  Para utilizar un conjunto de datos compartido en un informe, abra una aplicación como el Generador de informes, busque el servidor de informes o el sitio de SharePoint y seleccione el conjunto de datos compartido. De este modo, agrega una instancia del conjunto de datos compartido al informe. En el informe, no puede ver ni cambiar la consulta o el origen de datos compartido para el conjunto de datos compartido. Puede especificar un conjunto adicional de valores de propiedad del conjunto de datos que se apliquen a la instancia en el informe. Por ejemplo, puede agregar un filtro o cambiar opciones de datos como la distinción entre mayúsculas y minúsculas. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en la [documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
 ## <a name="managing-shared-datasets"></a>Administrar los conjuntos de datos compartidos  
- Para administrar las propiedades de un conjunto de datos compartidos publicado, puede usar el Administrador de informes para un servidor de informes en modo nativo o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
+ Para administrar las propiedades de un conjunto de datos compartidos publicado, puede usar el Administrador de informes para un servidor de informes en modo nativo o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
   
  Puede administrar las propiedades de elementos de conjuntos de datos compartidas, incluido el origen de datos compartido que se utilizará, independientemente del informe que use el conjunto de datos compartido o el origen de datos compartido del que dependa. Para cambiar la consulta u otras propiedades de conjunto de datos que forman parte de la definición del conjunto de datos compartido, debe modificar la definición.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66107210"
   
  Se configuran automáticamente la siguientes propiedades de conjunto de datos compartidas adicionales:  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |HasDataSourceCredentials|Si el origen de datos compartido asociado tiene las credenciales guardadas en el servidor de informes.|  
 |HasUserProfileDependencies|Si el informe tiene una referencia a la colección Usuario global en su consulta o en expresiones de filtro.|  
@@ -81,7 +81,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
  Para más información sobre qué tareas y permisos controlan el acceso a las propiedades del origen de datos en un servidor de informes en modo nativo, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
   
- El administrador del sitio determina los permisos para ver y modificar las propiedades de los elementos de una biblioteca de SharePoint. Para más información, vea [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ El administrador del sitio determina los permisos para ver y modificar las propiedades de los elementos de una biblioteca de SharePoint. Para obtener más información, vea [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>Trabajar con las propiedades del conjunto de datos compartido en un servidor de informes  
  Puede utilizar diversas herramientas para trabajar con conjuntos de datos compartidos. En la tabla siguiente se resumen los enfoques y las herramientas, y se proporciona un vínculo a instrucciones adicionales.  
@@ -119,8 +119,8 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Siguen las mismas reglas para especificar los valores de parámetros que las suscripciones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Concesión de permisos en un servidor de informes en modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

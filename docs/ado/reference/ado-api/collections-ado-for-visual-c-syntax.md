@@ -15,14 +15,14 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919917"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748875"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Colecciones (ADO para la sintaxis Visual C++)
 ## <a name="parameters"></a>Parámetros  
@@ -56,7 +56,7 @@ get_Item(VARIANT Index, _ADOParameter **ppvObject);
   
 -   [Propiedad Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="fields"></a>Fields  
+## <a name="fields"></a>Campos  
   
 ### <a name="methods"></a>Métodos  
   
@@ -140,8 +140,8 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Propiedad Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: El Administrador de informes (Ayuda F1) | Microsoft Docs
+title: Administrador de informes ayuda de F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104465"
 ---
 # <a name="report-manager-f1-help"></a>Administrador de informes (Ayuda F1)
-  Los temas siguientes ofrecen ayuda para las páginas del Administrador de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Hay un tema para cada página de la aplicación. Puede que no todas las páginas estén disponibles. La configuración de seguridad determina las páginas a las que se puede obtener acceso. Para obtener acceso a estos temas desde el Administrador de informes, haga clic en **Ayuda** en la barra de herramientas principal.  
+  En los temas siguientes se proporciona ayuda en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nivel de página para Administrador de informes. Hay un tema para cada página de la aplicación. Puede que no todas las páginas estén disponibles. La configuración de seguridad determina las páginas a las que se puede obtener acceso. Para obtener acceso a estos temas desde el Administrador de informes, haga clic en **Ayuda** en la barra de herramientas principal.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -42,15 +42,15 @@ ms.locfileid: "66104465"
   
 -   [Página Error](../../2014/reporting-services/error-page-report-manager.md)  
   
--   [Página Propiedades generales (carpetas)](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+-   [Página propiedades generales (carpetas)](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
--   [Página Propiedades generales (modelos)](../../2014/reporting-services/general-properties-page-models-report-manager.md)  
+-   [Página propiedades generales (modelos)](../../2014/reporting-services/general-properties-page-models-report-manager.md)  
   
--   [Página de propiedades generales (informes)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
+-   [Página propiedades generales (informes)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)  
   
--   [Página Propiedades generales (recursos)](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
+-   [Página propiedades generales (recursos)](../../2014/reporting-services/general-properties-page-resources-report-manager.md)  
   
--   [Página de propiedades General (orígenes de datos compartidos)](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
+-   [Página propiedades generales (orígenes de datos compartidos)](../../2014/reporting-services/general-properties-page-shared-data-sources-report-manager.md)  
   
 -   [Página Seguridad de elemento de modelo](../../2014/reporting-services/model-item-security-page-report-manager.md)  
   
@@ -66,21 +66,21 @@ ms.locfileid: "66104465"
   
 -   [Página Nuevo modelo](../../2014/reporting-services/new-model-page-report-manager.md)  
   
--   [Nueva asignación de roles y editar la página de asignación de rol](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
+-   [Páginas Nueva asignación de roles y Editar asignación de roles](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)  
   
--   [Nueva programación / Editar programación página](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
+-   [Páginas Nueva programación y Editar programación](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [Nueva suscripción / Editar página de suscripción](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [Páginas Nueva suscripción y Editar suscripción](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
--   [Nueva asignación de roles de sistema y editar la página de asignaciones de roles de sistema](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+-   [Páginas Nueva asignación de roles del sistema y Editar asignaciones de roles del sistema](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
 -   [Página de propiedades Parámetros](../../2014/reporting-services/parameters-properties-page-report-manager.md)  
   
--   [Página de propiedades Opciones de procesamiento](../../2014/reporting-services/processing-options-properties-page-report-manager.md)  
+-   [Página de propiedades de opciones de procesamiento](../../2014/reporting-services/processing-options-properties-page-report-manager.md)  
   
 -   [Página Historial del informe](../../2014/reporting-services/report-history-page-report-manager.md)  
   
--   [Página de resultados de búsqueda](../../2014/reporting-services/search-page-report-manager.md)  
+-   [Página Resultados de la búsqueda](../../2014/reporting-services/search-page-report-manager.md)  
   
 -   [Página de seguridad (Configuración del sitio)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
@@ -96,17 +96,17 @@ ms.locfileid: "66104465"
   
 -   [Página Cargar archivo](../../2014/reporting-services/upload-file-page-report-manager.md)  
   
--   [Página Ver (informes)](../../2014/reporting-services/view-page-reports-report-manager.md)  
+-   [Página ver (informes)](../../2014/reporting-services/view-page-reports-report-manager.md)  
   
--   [Página Ver (recursos)](../../2014/reporting-services/view-page-resources-report-manager.md)  
+-   [Página ver (recursos)](../../2014/reporting-services/view-page-resources-report-manager.md)  
   
  Para obtener más información acerca del Administrador de informes y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en MSDN.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Referencia de características (Reporting Services)](feature-reference-reporting-services.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Administrador de informes](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Información general del componente de Reporting Services](tools/reporting-services-tools.md)  
+ [Información general de componentes de Reporting Services](tools/reporting-services-tools.md)  
   
   

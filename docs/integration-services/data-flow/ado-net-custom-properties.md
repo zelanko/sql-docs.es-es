@@ -11,10 +11,10 @@ ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a4e670cf37550734d672047f2d7cf4a9f8045473
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293496"
 ---
 # <a name="ado-net-custom-properties"></a>Propiedades personalizadas de ADO NET
@@ -46,8 +46,8 @@ ms.locfileid: "71293496"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|BatchSize|Integer|Número de filas de un lote que se envía al servidor. El valor **0** indica que el tamaño del lote coincide con el tamaño del búfer interno. El valor predeterminado de esta propiedad es **0**.|  
-|CommandTimeOut|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
+|BatchSize|Entero|Número de filas de un lote que se envía al servidor. El valor **0** indica que el tamaño del lote coincide con el tamaño del búfer interno. El valor predeterminado de esta propiedad es **0**.|  
+|CommandTimeOut|Entero|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
 |TableOrViewName|String|Nombre de la tabla o vista de destino.|  
   
  Para más información, consulte [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  

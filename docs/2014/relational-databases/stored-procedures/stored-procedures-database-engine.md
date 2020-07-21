@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68197112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047463"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
-  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
+  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
   
 -   Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.  
   
@@ -52,14 +51,14 @@ ms.locfileid: "68197112"
  Mantenimiento más sencillo  
  Cuando las aplicaciones cliente llaman a procedimientos y mantienen las operaciones de base de datos en la capa de datos, solo deben actualizarse los cambios de los procesos en la base de datos subyacente. El nivel de aplicación permanece independiente y no tiene que tener conocimiento sobre los cambios realizados en los diseños, las relaciones o los procesos de la base de datos.  
   
- Rendimiento mejorado  
+ rendimiento mejorado.  
  De forma predeterminada, un procedimiento se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesar el procedimiento.  
   
  Si ha habido cambios importantes en las tablas o datos a los que se hace referencia en el procedimiento, el plan precompilado podría hacer que el procedimiento se ejecutara con mayor lentitud. En este caso, volver a crear el procedimiento y forzar un nuevo plan de ejecución puede mejorar el rendimiento.  
   
 ## <a name="types-of-stored-procedures"></a>Tipos de procedimientos almacenados  
- Definidos por el usuario  
- Un procedimiento definido por el usuario se puede crear en una base de datos definida por el usuario o en todas las bases de datos del sistema excepto en la base de datos **Resource** . El procedimiento se puede desarrollar en [!INCLUDE[tsql](../../includes/tsql-md.md)] o como una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Definidas por el usuario  
+ Un procedimiento definido por el usuario se puede crear en una base de datos definida por el usuario o en todas las bases de datos del sistema excepto en la base de datos **Resource** . El procedimiento se puede desarrollar en [!INCLUDE[tsql](../../includes/tsql-md.md)] o como una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  Temporales  
  Los procedimientos temporales son una forma de procedimientos definidos por el usuario. Los procedimientos temporales son iguales que los procedimientos permanentes salvo porque se almacenan en **tempdb**. Hay dos tipos de procedimientos temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Los procedimientos temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles en la conexión actual del usuario y se eliminan cuando se cierra la conexión. Los procedimientos temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan al final de la última sesión en la que se usa el procedimiento.  
@@ -79,7 +78,7 @@ ms.locfileid: "68197112"
   
 |||  
 |-|-|  
-|**Descripción de la tarea**|**Tema**|  
+|**Descripción de la tarea**|**Tema.**|  
 |Describe cómo se crea un procedimiento almacenado.|[Crear un procedimiento almacenado](../stored-procedures/create-a-stored-procedure.md)|  
 |Describe cómo se modifica un procedimiento almacenado.|[Modificar un procedimiento almacenado](../stored-procedures/modify-a-stored-procedure.md)|  
 |Describe cómo se elimina un procedimiento almacenado.|[Eliminar un procedimiento almacenado](../stored-procedures/delete-a-stored-procedure.md)|  
@@ -92,6 +91,6 @@ ms.locfileid: "68197112"
 |Describe cómo se consultan las dependencias de un procedimiento almacenado.|[Ver las dependencias de un procedimiento almacenado](view-the-dependencies-of-a-stored-procedure.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Procedimientos almacenados de CLR](../../database-engine/dev-guide/clr-stored-procedures.md)  
+ [Procedimientos almacenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md)  
   
   

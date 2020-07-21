@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un paquete en el servidor SSIS con SQL Server Management Studio | Microsoft Docs
+title: Ejecutar un paquete en el servidor SSIS mediante SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56dc1bf8-99d4-41dc-bdc4-f64f1ccfd688
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d17009988dea54621d4fd7ef542cf452bfe95c6e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056376"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422962"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Ejecutar un paquete en el servidor SSIS con SQL Server Management Studio
   Después de implementar el proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puede ejecutar el paquete en el servidor.  
@@ -30,11 +29,11 @@ ms.locfileid: "66056376"
   
 3.  Haga clic con el botón derecho en el nombre del paquete y seleccione **Ejecutar**.  
   
-4.  Configure la ejecución del paquete mediante las opciones de las pestañas **Parámetros**, **Administradores de conexión**y **Avanzadas** del cuadro de diálogo **Ejecutar paquete** .  
+4.  Configure la ejecución del paquete con los valores de las pestañas **parámetros**, **administradores de conexión**y **Opciones avanzadas** del cuadro de diálogo **Ejecutar paquete** .  
   
 5.  Haga clic en **Aceptar** para ejecutar el paquete.  
   
-     -o bien-  
+     o bien  
   
      Utilice procedimientos almacenados para ejecutar el paquete. Haga clic en **Script** para generar la instrucción Transact-SQL que crea una instancia de la ejecución y la inicia. La instrucción incluye una llamada a los procedimientos almacenados catalog.create_execution, catalog.set_execution_parameter_value y catalog.start_execution. Para obtener más información sobre estos procedimientos almacenados, vea [catalog.create_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [catalog.set_execution_parameter_value &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) y [catalog.start_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).  
   

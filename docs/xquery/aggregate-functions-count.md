@@ -1,5 +1,5 @@
 ---
-title: Count, función (XQuery) | Microsoft Docs
+title: Función Count (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643717"
 ---
 # <a name="aggregate-functions---count"></a>Funciones de agregado: count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve el número de elementos incluidos en la secuencia especificada por *$arg*.  
+  Devuelve el número de elementos contenidos en la secuencia especificada por *$arg*.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ fn:count($arg as item()*) as xs:integer
  Devuelve 0 si *$arg* es una secuencia vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Utilizar la función count() de XQuery para contar el número de centros de trabajo en la fabricación de un modelo de producto  
  La consulta siguiente cuenta el número de centros de trabajo que participan en el proceso de fabricación de un modelo de producto (ProductModelID=7).  
@@ -62,13 +62,13 @@ WHERE Production.ProductModel.ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   El **espacio de nombres** palabra clave en [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define un prefijo de espacio de nombres. El prefijo, a continuación, se usa en el cuerpo de XQuery.  
+-   La palabra clave **namespace** en el [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define un prefijo de espacio de nombres. A continuación, el prefijo se usa en el cuerpo de XQuery.  
   
--   La consulta genera XML que incluye el <`NoOfWorkStations`> elemento.  
+-   La consulta crea XML que incluye el elemento <`NoOfWorkStations`>.  
   
--   El **count()** funcione en los recuentos de cuerpo de XQuery, el número de <`Location`> elementos.  
+-   La función **Count ()** del cuerpo de XQuery cuenta el número de elementos de> de <`Location` .  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -91,14 +91,14 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- En lugar de la instancia XML, puede devolver estos valores con un tipo distinto de xml, tal y como se muestra en la consulta siguiente. La consulta utiliza la [método value() (tipo de datos xml)](../t-sql/xml/value-method-xml-data-type.md) para recuperar el recuento de centros de trabajo.  
+ En lugar de la instancia XML, puede devolver estos valores con un tipo distinto de xml, tal y como se muestra en la consulta siguiente. La consulta utiliza el [método Value () (tipo de datos XML)](../t-sql/xml/value-method-xml-data-type.md) para recuperar el recuento de la ubicación del centro de trabajo.  
   
 ```  
 SELECT  ProductModelID,   
@@ -109,7 +109,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductModelID    Name            WorkCtrCount  
@@ -117,7 +117,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

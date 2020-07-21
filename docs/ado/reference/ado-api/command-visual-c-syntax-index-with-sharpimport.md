@@ -1,5 +1,5 @@
 ---
-title: 'Comando (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
+title: 'Comando (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Command collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dfde0a07bee9f169fea3c0041afe0ac4d490a292
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919778"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760461"
 ---
-# <a name="command-visual-c-syntax-index-with-import"></a>Comando (Visual C++ índice de sintaxis con #import)
+# <a name="command-visual-c-syntax-index-with-import"></a>Comando (Visual C++ Índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  
   
 ```  
@@ -59,5 +59,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

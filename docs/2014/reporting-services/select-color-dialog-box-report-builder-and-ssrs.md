@@ -1,5 +1,5 @@
 ---
-title: Seleccione el cuadro de diálogo Color (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Seleccionar color (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101382"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Seleccionar color (Generador de informes y SSRS)
@@ -45,8 +45,8 @@ ms.locfileid: "66101382"
   
  Cuando se elige un color, el centro del cuadrado determina el color. Use el control deslizante de color para cambiar la gama del color elegido. Las coordenadas x e y representan los otros dos colores. Por ejemplo, si elige el color verde, el control deslizante muestra la gama de valores de verde, y las coordenadas x e y representan los valores para el rojo y el azul, respectivamente.  
   
- **Paleta de colores estándar**  
- Uso de colores con nombre desde el [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeración.  
+ **Color de la paleta estándar**  
+ Se usa para los colores con [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` nombre de la enumeración.  
   
  **Sistema de colores**  
  Especifique si desea colores RGB o HSB. Esta opción cambia la presentación para mostrar valores RGB o HSB que se actualizan interactivamente cuando se utiliza un círculo o un cuadrado de colores para el **Selector de colores**.  
@@ -59,13 +59,13 @@ ms.locfileid: "66101382"
  **Verde**  
  El valor decimal para la parte verde del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Blue**  
+ **Azul**  
  El valor decimal para la parte azul del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
  **Alpha**  
  El valor decimal para alfa o la transparencia del color. Cuando este valor está habilitado, puede usar el control deslizante para ajustar el grado de transparencia que desee.  
   
- **Matiz**  
+ **Hue**  
  El valor decimal para el matiz del color HSB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
  **Saturación**  
@@ -74,10 +74,10 @@ ms.locfileid: "66101382"
  **Brillo**  
  El valor decimal para la luminosidad del color HSB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Ejemplo de color**  
+ **Muestra de color**  
  Muestra el color actual en la mitad izquierda del panel e interactivamente muestra el nuevo color que se está eligiendo en la mitad derecha del panel. Si no hay ningún color predeterminado, la mitad izquierda del panel es blanca. La mayoría de las propiedades RDL no tienen ningún color predeterminado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   

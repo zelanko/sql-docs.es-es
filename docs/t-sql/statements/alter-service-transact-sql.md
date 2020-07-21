@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: ed739b0994f6637729c2edf6a2f2da26097fbe44
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745295"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380968"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia un servicio existente.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "70745295"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
@@ -47,7 +47,10 @@ ALTER SERVICE service_name
    ADD CONTRACT contract_name | DROP CONTRACT contract_name  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *service_name*  
  Es el nombre del servicio que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
@@ -60,7 +63,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  Especifica un contrato que se eliminará del conjunto de contratos expuesto por este servicio. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envía un mensaje de error si hay conversaciones existentes con este servicio que utilicen este contrato.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando la instrucción ALTER SERVICE elimina un contrato de un servicio, este último no puede ser el destino de conversaciones que utilicen ese contrato. Por tanto, [!INCLUDE[ssSB](../../includes/sssb-md.md)] no permite que se establezcan conversaciones nuevas con el servicio basadas en ese contrato. Las conversaciones existentes que utilizan el contrato no se ven afectadas.  
   
  Para modificar AUTHORIZATION para un servicio, utilice la instrucción ALTER AUTHORIZATION.  

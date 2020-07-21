@@ -1,6 +1,7 @@
 ---
-title: Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Adición o reemplazo de un testigo del reflejo (SSMS)
+description: Obtenga información sobre cómo agregar o reemplazar un testigo de creación de reflejos de bases de datos mediante SQL Server Management Studio cuando los puntos de conexión de creación de reflejos de bases de datos usan la autenticación de Windows.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf7d77550f96c72867ecc8133df3cb4f64b7300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763932"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Si los extremos de la creación de reflejo de la base de datos usan la Autenticación de Windows, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agregar o reemplazar un testigo. Cuando se agrega un testigo en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , se cambia también el modo de operación al modo de alta seguridad con conmutación automática por error.  
   
 > [!NOTE]  
@@ -41,15 +42,15 @@ ms.locfileid: "67947957"
   
 6.  En el cuadro de diálogo **Incluir servidor testigo** , haga clic en **Sí**y, después, en **Siguiente**.  
   
-7.  En el cuadro de diálogo **Elegir los servidores para configurar** , se marcará automáticamente la casilla **Instancia del servidor testigo** . Haga clic en **Siguiente**.  
+7.  En el cuadro de diálogo **Elegir los servidores para configurar** , se marcará automáticamente la casilla **Instancia del servidor testigo** . Haga clic en **Next**.  
   
-8.  En el cuadro de diálogo **Instancia del servidor principal** , conserve las opciones existentes de puerto y extremos. Haga clic en **Siguiente**.  
+8.  En el cuadro de diálogo **Instancia del servidor principal** , conserve las opciones existentes de puerto y extremos. Haga clic en **Next**.  
   
 9. En el cuadro de diálogo **Instancia del servidor testigo** , haga clic en **Conectar**.  
   
 10. En el cuadro de diálogo **Conectar al servidor** , especifique la instancia del servidor testigo en el campo **Nombre del servidor** y use la Autenticación de Windows (opción predeterminada). Haga clic en **Conectar**.  
   
-11. Una vez que se haya establecido una conexión, en el cuadro de diálogo **Instancia del servidor testigo** se mostrará el puerto de escucha y el extremo de la creación de reflejo de la base de datos de la instancia del servidor testigo. Haga clic en **Siguiente**.  
+11. Una vez que se haya establecido una conexión, en el cuadro de diálogo **Instancia del servidor testigo** se mostrará el puerto de escucha y el extremo de la creación de reflejo de la base de datos de la instancia del servidor testigo. Haga clic en **Next**.  
   
 12. El cuadro de diálogo **Cuentas de servicio** contiene campos para las cuentas de servicio de dominio de las instancias del servidor reflejado, principal y testigo.  
   
@@ -57,11 +58,11 @@ ms.locfileid: "67947957"
   
     -   Si la instancia del servidor testigo usa una cuenta de servicio diferente de las de los asociados, llene los campos **Principal**, **Reflejado**y **Testigo** con el nombre de la cuenta:  
   
-         *DOMAINNAME* **\\** *username*  
+         *DOMAINNAME* **\\** *nombre de usuario*  
   
          El nombre de dominio debe estar en mayúsculas.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 13. Si lo desea, en la pantalla de resumen **Finalización del asistente** , compruebe la configuración del testigo y haga clic en **Finalizar**.  
   

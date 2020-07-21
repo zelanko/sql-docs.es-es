@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e5f68a89ef0579df0de314c3215ade147d62d0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704356"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve un objeto que representa la envolvente convexa de una instancia de **geography**.  
   
@@ -33,12 +33,12 @@ ms.locfileid: "68042472"
 .STConvexHull ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Devuelve un objeto `FullGlobe` para una instancia de **geography** que tiene un ángulo envolvente mayor de 90 grados.  
   
  Devuelve una colección vacía de **geography** para una instancia vacía de **geography**.  

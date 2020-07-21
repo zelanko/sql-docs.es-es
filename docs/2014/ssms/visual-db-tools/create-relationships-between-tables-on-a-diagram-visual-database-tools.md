@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebc443cd44ca439497d11936b732141ae3f5a960
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058040"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Crear relaciones entre tablas en un diagrama (Visual Database Tools)
   Puede crear relaciones entre columnas de diferentes tablas en el Diseñador de diagramas si se arrastran las columnas entre las tablas.  
@@ -46,9 +45,9 @@ ms.locfileid: "63184279"
   
      El Diseñador de bases de datos muestra una relación entre las columnas que haya elegido.  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas y columnas, cuadro de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Restricciones UNIQUE y restricciones Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo tablas y columnas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Trabajar con tablas en diagramas de base de datos &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

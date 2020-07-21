@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e28bcfb7a5478dd90053094dbf38d79a41a42021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141122"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391800"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Agrega un rol de aplicación a la base de datos actual.  
   
@@ -39,13 +39,15 @@ ms.locfileid: "68141122"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE APPLICATION ROLE application_role_name   
     WITH PASSWORD = 'password' [ , DEFAULT_SCHEMA = schema_name ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *application_role_name*  
  Especifica el nombre del rol de aplicación. Ninguna entidad de seguridad de la base de datos debe utilizar este nombre.  
   
@@ -55,7 +57,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este rol. Si DEFAULT_SCHEMA se deja sin definir, el rol de aplicación utilizará DBO como esquema predeterminado. *schema_name* puede ser un esquema que no exista en la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Al establecer las contraseñas de los roles de aplicación se comprueba la complejidad de la contraseña. Las aplicaciones que invocan roles de aplicación deben almacenar sus propias contraseñas. Las contraseñas de roles de aplicación deben almacenarse cifradas.  
@@ -73,7 +75,7 @@ CREATE APPLICATION ROLE application_role_name
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea un rol de aplicación denominado `weekly_receipts` con la contraseña `987Gbv876sPYY5m23` y con el esquema predeterminado `Sales`.  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

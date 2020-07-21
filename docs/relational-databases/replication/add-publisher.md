@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ac60bbbed5a14c0ec891b2794620c1492cdb0fb5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726087"
 ---
 # <a name="add-publisher"></a>Agregar publicador
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores en el panel izquierdo del Monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
   
 ## <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en para seleccionar el tipo de publicador que se agregará a fin de abrir el cuadro de diálogo **Conectar al servidor** . Las opciones son:  
   
 -   **Agregar publicador de SQL Server...**  
@@ -36,7 +36,7 @@ ms.locfileid: "68768852"
   
 -   **Agregar publicador de Oracle...**  
   
-     Conéctese al distribuidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle mediante el cuadro de diálogo **Conectar al servidor** .  
+     Conéctese al distribuidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle mediante el cuadro de diálogo **Conectar al servidor**.  
   
 -   **Especificar un distribuidor y agregar sus publicadores…**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68768852"
 > [!NOTE]  
 >  El distribuidor y el publicador normalmente se ejecutan en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero el distribuidor puede ejecutarse en otra instancia (esta configuración se conoce como distribuidor remoto).  
   
- **Quitar**  
+ **Remove**  
  Seleccione un publicador en la cuadrícula de la parte superior del cuadro de diálogo y haga clic en **Quitar** para quitar el publicador de la lista de publicadores que se van a agregar.  
   
 > [!NOTE]  

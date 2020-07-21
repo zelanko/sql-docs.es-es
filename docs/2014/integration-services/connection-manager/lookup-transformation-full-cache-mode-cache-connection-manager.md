@@ -1,5 +1,5 @@
 ---
-title: Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché | Microsoft Docs
+title: Implementar una transformación búsqueda en el modo de caché completa mediante el administrador de conexiones de caché | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdb9b2efad17bf4db069473878585cfb61daade0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833717"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438392"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché
   Puede configurar la transformación de búsqueda para utilizar el modo de caché completa y un Administrador de conexiones de caché. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -61,7 +60,7 @@ ms.locfileid: "62833717"
   
 -   [Contenedor de secuencias](../control-flow/sequence-container.md)  
   
- Para ver un vídeo donde se muestra cómo implementar una transformación Búsqueda en el modo de caché completa mediante el administrador de conexiones de caché, vea [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031) (Cómo implementar una transformación Búsqueda en modo de memoria caché completa [vídeo de SQL Server]).  
+ Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Implementar una transformación Búsqueda en el modo de caché completa en un paquete utilizando el Administrador de conexiones de caché y un origen de datos del flujo de datos  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62833717"
   
      Configure el origen de datos según sea necesario.  
   
-4.  Haga doble clic en Transformación de caché y, después, en el **Editor de transformación Caché**, en la página **Administrador de conexiones** , haga clic en **Nuevo** para crear un administrador de conexiones de caché.  
+4.  Haga doble clic en la transformación de caché y, después, en el **Editor de transformación Caché**, en la página **Administrador de conexiones** , haga clic en **Nuevo** para crear un administrador de conexiones de caché.  
   
 5.  Haga clic en la pestaña **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de caché** y, a continuación, utilice la opción **Posición de índice** para especificar cuáles son las columnas de índice.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62833717"
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Haga clic en **Aceptar** para guardar los cambios realizados en la transformación Búsqueda.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "62833717"
   
      Configure el origen de datos según sea necesario.  
   
-4.  Haga doble clic en Transformación de caché y, después, en el **Editor de transformación Caché**, en la página **Administrador de conexiones** , haga clic en **Nuevo** para crear un administrador de conexiones de caché.  
+4.  Haga doble clic en la transformación de caché y, después, en el **Editor de transformación Caché**, en la página **Administrador de conexiones** , haga clic en **Nuevo** para crear un administrador de conexiones de caché.  
   
 5.  En el **Editor del administrador de conexiones de caché**, en la pestaña **General** , configure el administrador estableciendo las opciones siguientes:  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62833717"
          Si escribe una ruta de acceso para un archivo que no existe, el sistema crea el archivo al ejecutar el paquete.  
   
     > [!NOTE]  
-    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
+    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
   
 6.  Haga clic en la pestaña **Columnas** e indique qué columnas son las columnas de índice mediante la opción **Posición de índice** .  
   
@@ -158,7 +157,7 @@ ms.locfileid: "62833717"
     > [!NOTE]  
     >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas. Para obtener más información, vea [Cache Connection Manager Editor](../cache-connection-manager-editor.md).  
   
-7.  Configure la transformación de caché según sea necesario. Para más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../cache-transformation-editor-connection-manager-page.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../cache-transformation-editor-mappings-page.md).  
+7.  Configure la transformación de caché según sea necesario. Para obtener más información, vea [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../cache-transformation-editor-connection-manager-page.md) y [Editor de transformación Caché &#40;página Asignaciones&#41;](../cache-transformation-editor-mappings-page.md).  
   
 8.  Realice una de las siguientes acciones para rellenar el administrador de conexiones de caché que se utiliza en el segundo paquete:  
   
@@ -208,7 +207,7 @@ ms.locfileid: "62833717"
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Haga clic en **Aceptar** para guardar los cambios realizados en la transformación Búsqueda.  
   
@@ -235,7 +234,7 @@ ms.locfileid: "62833717"
     -   En **Nombre de archivo**, escriba la ruta de acceso al archivo o haga clic en **Examinar** para seleccionar el archivo.  
   
     > [!NOTE]  
-    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
+    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  
   
 6.  Haga clic en la pestaña **Columnas** e indique qué columnas son las columnas de índice mediante la opción **Posición de índice** .  
   
@@ -273,14 +272,14 @@ ms.locfileid: "62833717"
   
     8.  En la lista **Columnas de búsqueda disponibles** , seleccione las columnas. A continuación, en la lista **Operación de búsqueda** , especifique si los valores de las columnas de búsqueda reemplazan los valores de la columna de entrada o se escriben en una nueva columna.  
   
-    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../lookup-transformation-editor-error-output-page.md).  
+    9. Para configurar la salida de errores, haga clic en la página **Salida de error** y establezca las opciones de control de errores. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../lookup-transformation-editor-error-output-page.md).  
   
     10. Haga clic en **Aceptar** para guardar los cambios realizados en la transformación Búsqueda.  
   
 9. Ejecute el paquete.  
   
-## <a name="see-also"></a>Vea también  
- [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Implementación de una transformación Búsqueda en el modo Caché completa con el administrador de conexiones OLE DB](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   

@@ -19,10 +19,10 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295705"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Ayuda F1 del Asistente para actualización del paquete SSIS
@@ -52,7 +52,7 @@ ms.locfileid: "71295705"
  **Origen del paquete**  
  Seleccione la ubicación de almacenamiento que contiene los paquetes que se van a actualizar. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Sistema de archivos**|Indica que los paquetes que se van a actualizar están en una carpeta en el equipo local.<br /><br /> Para hacer que el asistente realice una copia de seguridad de los paquetes originales antes de actualizarlos, estos deben estar almacenados en el sistema de archivos. Para obtener más información, vea el tema de procedimientos.|  
 |**Almacén de paquetes SSIS**|Indica que los paquetes que se van a actualizar están en el almacén de paquetes. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra. Para obtener más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas de **Origen del paquete** correspondientes.|  
@@ -61,7 +61,7 @@ ms.locfileid: "71295705"
  **Carpeta**  
  Escriba el nombre de una carpeta que contenga los paquetes que quiere actualizar o haga clic en **Examinar** y busque la carpeta.  
   
- **Examinar**  
+ **Browse**  
  Busque la carpeta que contiene los paquetes que desea actualizar.  
   
 ### <a name="package-source-dynamic-options"></a>Opciones dinámicas de Origen del paquete  
@@ -80,7 +80,7 @@ ms.locfileid: "71295705"
  **Utilizar autenticación de SQL Server**  
  Seleccione esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **User name**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario que la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usará para conectarse al servidor.  
   
  **Contraseña**  
@@ -104,16 +104,16 @@ ms.locfileid: "71295705"
  **Origen del paquete**  
  Especifique dónde se van a almacenar los paquetes de actualización. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Sistema de archivos**|Indica que los paquetes actualizados se van a guardar en una carpeta en el equipo local.|  
-|**Almacén de paquetes SSIS**|Indica que los paquetes actualizados se van a guardar en el almacén de paquetes de Integration Services. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio Integration Services administra. Para más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
+|**Almacén de paquetes SSIS**|Indica que los paquetes actualizados se van a guardar en el almacén de paquetes de Integration Services. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio Integration Services administra. Para obtener más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](../integration-services/service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
 |**Microsoft SQL Server**|Indica que los paquetes actualizados se guardarán en una instancia existente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
   
  **Carpeta**  
  Escriba el nombre de una carpeta en la que se guardarán los paquetes actualizados, o bien haga clic en **Examinar** y busque la carpeta.  
   
- **Examinar**  
+ **Browse**  
  Busque la carpeta en la que se guardarán los paquetes actualizados.  
   
 ### <a name="package-source-dynamic-options"></a>Opciones dinámicas de Origen del paquete  
@@ -132,7 +132,7 @@ ms.locfileid: "71295705"
  **Utilizar autenticación de SQL Server**  
  Seleccione esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **User name**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario que se usará con la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor.  
   
  **Contraseña**  
@@ -230,13 +230,13 @@ ms.locfileid: "71295705"
  **Estado**  
  Vea el resultado de cada acción.  
   
- **de mensaje**  
+ **Mensaje**  
  Vea los mensajes de error generados por cada acción.  
   
- **Detener**  
+ **Detención**  
  Detenga la actualización del paquete.  
   
- **Informe**  
+ **Report**  
  Seleccione lo que desea hacer con el informe que contiene los resultados de la actualización del paquete:  
   
 -   Ver el informe en línea.  

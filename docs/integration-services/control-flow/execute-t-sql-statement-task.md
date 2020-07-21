@@ -17,10 +17,10 @@ ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0e7b51e71feef1dcd30b3e63c38b6cf10598cd80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294160"
 ---
 # <a name="execute-t-sql-statement-task"></a>Tarea Ejecutar instrucción T-SQL

@@ -42,13 +42,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fddd9efeea8d0cb00bbe421e5638b60cc508d832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060652"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   En esta sección se ofrece información acerca de las siguientes páginas del Asistente para nueva publicación:  
@@ -79,7 +78,7 @@ ms.locfileid: "63022576"
   
 -   [Agente de instantáneas &#40;Asistente para nueva publicación&#41;](snapshot-agent-new-publication-wizard.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](publish/create-a-publication.md)   
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
 

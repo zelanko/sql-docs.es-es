@@ -1,9 +1,7 @@
 ---
-title: Usar OPENJSON con el esquema predeterminado (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: Uso de OPENJSON con el esquema predeterminado
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,48 +9,50 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbf15d6ce6e0993d570f882bde8fb303a66ccaec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 595323d28f50100936447a9077af361017cca922
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074219"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008708"
 ---
-# <a name="use-openjson-with-the-default-schema-sql-server"></a>Uso de OPENJSON con el esquema predeterminado (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="use-openjson-with-the-default-schema"></a>Uso de OPENJSON con el esquema predeterminado 
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Use **OPENJSON** con el esquema predeterminado para devolver una tabla con una fila por cada propiedad del objeto o por cada elemento de la matriz.  
   
  Estos son algunos ejemplos que utilizan **OPENJSON** con el esquema predeterminado. Para obtener más información y más ejemplos, vea [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
 ## <a name="example---return-each-property-of-an-object"></a>Ejemplo: Devolución de cada propiedad de un objeto  
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
   
- **Resultado**  
+ **Resultados**  
   
-|Key|Valor|  
+|Clave|Value|  
 |---------|-----------|  
-|NAME|John|  
+|name|John|  
 |surname|Doe|  
 |age|45|  
   
 ## <a name="example---return-each-element-of-an-array"></a>Ejemplo: Devolución de cada elemento de una matriz  
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
   
- **Resultado**  
+ **Resultados**  
   
-|Key|Valor|  
+|Clave|Value|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -83,11 +83,11 @@ SELECT *
 FROM OPENJSON(@json,N'lax $.info')
 ```  
   
- **Resultado**  
+ **Resultados**  
   
-|Key|Valor|Tipo|  
+|Clave|Value|Tipo|  
 |---------|-----------|----------|  
-|Tipo|1|0|  
+|type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
 |etiquetas|[ "Sport", "Water polo" ]|4|  
   

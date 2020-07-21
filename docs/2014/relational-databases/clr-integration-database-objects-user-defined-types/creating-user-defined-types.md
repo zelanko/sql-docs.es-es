@@ -1,5 +1,5 @@
 ---
-title: Creación de un tipo definido por el usuario | Microsoft Docs
+title: Crear un tipo definido por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fb949573b73463712e9981cad90e9c7fad9c7c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970695"
 ---
 # <a name="creating-a-user-defined-type"></a>Crear un tipo definido por el usuario
   Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
@@ -40,9 +39,9 @@ Reconfigure
  Muestra las técnicas de codificación implicadas en la creación de tipos definidos por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
- La lista de código siguiente define el UDT Point, que se describe en detalle en [codificación de tipos](creating-user-defined-types-coding.md).  
+ La siguiente lista de código define el UDT Point, que se describe en detalle en [codificación de tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
- Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones acerca de cómo instalar estos ejemplos, consulte [ejemplos de motor de base de datos de SQL Server](http://msftengprodsamples.codeplex.com/).  
+ Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones sobre cómo instalar estos ejemplos, vea [ejemplos de motor de base de datos de SQL Server](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -84,7 +83,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +232,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -330,7 +329,6 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipos definidos por el usuario de CLR](clr-user-defined-types.md)  
-  
+## <a name="see-also"></a>Consulte también  
+ [Tipos CLR definidos por el usuario](clr-user-defined-types.md)  
   

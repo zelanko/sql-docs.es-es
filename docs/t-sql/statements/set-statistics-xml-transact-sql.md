@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765667"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Hace que Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecute instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] y genere información detallada sobre cómo se ejecutaron las instrucciones en un documento XML definido correctamente.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "68004713"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de SET STATISTICS XML se establece en tiempo de ejecución, no en tiempo de análisis.  
   
  Si SET STATISTICS XML es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información sobre la ejecución de cada instrucción después de ejecutarla. Cuando esta opción está establecida en ON, se devuelve información acerca de todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes hasta que se vuelve a establecer en OFF. Tenga en cuenta que SET STATISTICS XML no tiene que ser la única instrucción de un lote.  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>Ejemplos  
  Las dos instrucciones siguientes utilizan la opción SET STATISTICS XML para mostrar la forma en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analiza y optimiza el uso de índices en las consultas. La primera consulta utiliza el operador de comparación Es igual a (=) en la cláusula WHERE de una columna indizada. La segunda consulta utiliza el operador LIKE en la cláusula WHERE. De este modo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe utilizar un recorrido de índice clúster para encontrar los datos que satisfacen la condición de la cláusula WHERE. Los valores de los atributos **EstimateRows** y **EstimatedTotalSubtreeCost** son inferiores en la primera consulta indizada, lo que indica que se procesa mucho más rápidamente y que usa menos recursos que la no indizada.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  
@@ -95,6 +95,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [Utilidad sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

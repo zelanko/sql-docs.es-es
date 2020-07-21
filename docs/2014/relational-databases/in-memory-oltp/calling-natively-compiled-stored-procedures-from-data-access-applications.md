@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5583137d4c159756246938a83bf8c8e1fad6cdea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050337"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
   Este tema describe instrucciones para llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos.  
@@ -36,7 +35,7 @@ ms.locfileid: "63156834"
   
  Las siguientes recomendaciones se aplican a las llamadas a procedimientos almacenados compilados de forma nativa con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con `SQLExecDirect` y cláusulas ODBC CALL. No utilice el [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrucción. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
+ La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con `SQLExecDirect` y cláusulas ODBC CALL. No utilice la [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrucción. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
   
  La forma más eficaz de llamar a un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] más de una vez es a través de llamadas a procedimientos RPC preparadas. Las llamadas a RPC preparadas se realizan como se indica a continuación con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -392,7 +391,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Consulte también  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

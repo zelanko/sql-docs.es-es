@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método GetRows (ADO) | Microsoft Docs
+title: GetRows (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Getrows method [ADO]
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918450"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760041"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
-Recupera varios registros de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto en una matriz.  
+Recupera varios registros de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en una matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,32 +34,32 @@ array = recordset.GetRows(Rows, Start, Fields )
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un **Variant** cuyo valor es una matriz bidimensional.  
+ Devuelve una **variante** cuyo valor es una matriz bidimensional.  
   
 #### <a name="parameters"></a>Parámetros  
  *Filas*  
- Opcional. Un [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valor que indica el número de registros para recuperar. El valor predeterminado es **adGetRowsRest**.  
+ Opcional. Valor de [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) que indica el número de registros que se van a recuperar. El valor predeterminado es **adGetRowsRest**.  
   
  *Iniciar*  
- Opcional. Un **cadena** valor o **Variant** que se evalúa como el marcador para el registro desde el que el **GetRows** debe comenzar la operación. También puede usar un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
+ Opcional. Un valor de **cadena** o una **variante** que se evalúa como el marcador del registro del que debe comenzar la operación de **GetRows** . También puede usar un valor de [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
  *Fields*  
- Opcional. Un **Variant** que representa un nombre de campo único o la posición ordinal o una matriz de nombres de campo o números de posición ordinal. ADO devuelve sólo los datos en estos campos.  
+ Opcional. **Variante** que representa un nombre de campo único o una posición ordinal, o una matriz de nombres de campo o números de posición ordinal. ADO solo devuelve los datos de estos campos.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **GetRows** método para copiar registros de un **Recordset** en una matriz bidimensional. El primer subíndice identifica el campo y el segundo el número de registro. El *matriz* variable se ajusta automáticamente para el valor correcto de tamaño cuando el **GetRows** método devuelve los datos.  
+ Utilice el método **GetRows** para copiar registros de un **conjunto de registros** en una matriz bidimensional. El primer subíndice identifica el campo y el segundo identifica el número de registro. La variable de *matriz* se dimensiona automáticamente con el tamaño correcto cuando el método **GetRows** devuelve los datos.  
   
- Si no especifica un valor para el *filas* argumento, el **GetRows** método recupera automáticamente todos los registros de la **Recordset** objeto. Si se solicita más registros que están disponibles, **GetRows** devuelve solo el número de registros disponibles.  
+ Si no especifica un valor para el argumento *Rows* , el método **GetRows** recupera automáticamente todos los registros del objeto de conjunto de **registros** . Si solicita más registros de los que están disponibles, **GetRows** solo devuelve el número de registros disponibles.  
   
- Si el **Recordset** objeto admite marcadores, puede especificar en qué registro el **GetRows** método debería empezar a recuperar datos pasando el valor de ese registro [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)propiedad en el *iniciar* argumento.  
+ Si el objeto de **conjunto de registros** admite marcadores, puede especificar en qué registro el método **GetRows** debe empezar a recuperar datos pasando el valor de la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) del registro en el argumento *Start* .  
   
- Si desea restringir los campos que el **GetRows** devuelve la llamada, puede pasar un nombre o número de campo único o una matriz de números y nombres de campo en el *campos* argumento.  
+ Si desea restringir los campos que devuelve la llamada **GetRows** , puede pasar un nombre o número de campo único o una matriz de nombres de campo/números en el argumento *campos* .  
   
- Después de llamar a **GetRows**, el siguiente registro sin leer se convierte en el registro actual, o la [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedad está establecida en **True** si no hay más registros.  
+ Después de llamar a **GetRows**, el registro unread siguiente se convierte en el registro actual, o la propiedad [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se establece en **true** si no hay más registros.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo del método GetRows (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [Ejemplo del método GetRows (VC ++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

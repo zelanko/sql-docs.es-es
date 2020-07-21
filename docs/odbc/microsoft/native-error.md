@@ -12,14 +12,14 @@ helpviewer_keywords:
 - native error codes [ODBC]
 - positive error codes [ODBC]
 ms.assetid: b662fab5-c236-4895-a64f-00c9c6c652c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 494c400ff5ead94c6bf8fdcd4be06652824b236f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d12f86b577d587490f66143a5b18e14adc6d39a2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044997"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298185"
 ---
 # <a name="native-error"></a>Error nativo
-Códigos de error nativo positivo se generan los controladores de base de datos de escritorio. Códigos de error negativos se generan por Microsoft Jet. Para obtener más información, consulte el *Guía del programador del motor de base de datos Jet de Microsoft*.
+Los controladores de base de datos de escritorio generan códigos de error nativos positivos. Microsoft Jet genera códigos de error negativos. Para obtener más información, vea la *Guía del programador de Microsoft Jet motor de base de datos*.

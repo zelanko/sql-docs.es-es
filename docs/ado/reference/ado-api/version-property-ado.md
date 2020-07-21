@@ -1,5 +1,5 @@
 ---
-title: Propiedad Version (ADO) | Microsoft Docs
+title: Version (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,29 +15,29 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938734"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758611"
 ---
 # <a name="version-property-ado"></a>Propiedad Version (ADO)
 Indica el número de versión de ADO.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un **cadena** valor que indica la versión.  
+ Devuelve un valor de **cadena** que indica la versión.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **versión** propiedad para devolver el número de versión de la implementación de ADO.  
+ Utilice la propiedad **version** para devolver el número de versión de la implementación de ADO.  
   
- La versión del proveedor estará disponible como una propiedad dinámica en el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+ La versión del proveedor estará disponible como una propiedad dinámica en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la propiedad Version (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de la propiedad version (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Ejemplo de la propiedad de versión (VC ++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

@@ -1,5 +1,5 @@
 ---
-title: Registro actual y el tamaño del conjunto de registros | Microsoft Docs
+title: Registro y tamaño actuales del conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,39 +11,39 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925695"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761131"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro actual y el tamaño del conjunto de registros
-En esta sección se describe cómo buscar la posición actual del cursor en el ejemplo **Recordset** en [ejemplo de código JScript para devolver un conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
+En esta sección se describe cómo buscar la posición actual del cursor en el **conjunto de registros** de ejemplo en el [ejemplo de código JScript para devolver un conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Registro actual  
- El registro actual en el conjunto de datos corresponde al que apunta a la posición del cursor de la **Recordset** objeto. Cuando un **Recordset** objeto se devuelve desde el origen de datos como resultado de llamar a **Recordset.Open**, **Command.Execute**, o **Connection.Execute**  (incluidos **Connection.NamedCommand** y **Connection.StoredProcedure**), el cursor se establece para que señale al primer registro. En el conjunto de datos de ejemplo, el registro inicial actual es la "de Bob tío secos orgánicos Peras" elemento.  
+ El registro actual del conjunto de registros corresponde a que apunta a la posición del cursor del objeto de **conjunto de registros** . Cuando se devuelve un objeto de **conjunto de registros** desde el origen de datos como resultado de llamar a **Recordset. Open**, **Command. Execute**o **Connection. Execute** (incluidos **Connection. NamedCommand** y **Connection. StoredProcedure**), el cursor se establece para apuntar al primer registro. En el conjunto de registros de ejemplo, el registro actual inicial es el elemento "de la" tripas orgánicas orgánicos ".  
   
 ## <a name="size-of-recordset"></a>Tamaño del conjunto de registros  
- Para averiguar el tamaño de un **Recordset** de objeto, obtener el valor de la **Recordset.RecordCount** propiedad. Este valor es un entero largo que indica el número de registros en el **Recordset**. Si se devuelve el conjunto de datos desde el proveedor OLEDB de Microsoft SQL Server, este valor proporciona el número de filas devueltas. Leer el **RecordCount** propiedad en un cerrado **Recordset** produce un error.  
+ Para averiguar el tamaño de un objeto de **conjunto de registros** , obtenga el valor de la propiedad **Recordset. RecordCount** . Este valor es un entero largo que indica el número de registros del **conjunto**de registros. Si el proveedor OLEDB devuelve el DataSet para Microsoft SQL Server, este valor proporciona el número de filas devueltas. La lectura de la propiedad **RecordCount** en un **conjunto de registros** cerrado produce un error.  
   
- Si no se puede determinar el número de registros, el valor de la propiedad es -1.  
+ Si no se puede determinar el número de registros, el valor de la propiedad es-1.  
   
- El valor de la **RecordCount** propiedad también depende de las capacidades del proveedor y el tipo de cursor que se utiliza. Para un cursor de solo avance, el valor es -1. Para un cursor estático o de conjunto de claves, el valor es el número real de los registros devueltos en la **Recordset** objeto. Para un cursor dinámico, el valor es -1 o el número real de registros, dependiendo del origen de datos.  
+ El valor de la propiedad **RecordCount** también depende de las capacidades del proveedor y el tipo de cursor utilizado. Para un cursor de solo avance, el valor es-1. Para un cursor estático o de conjunto de claves, el valor es el número real de registros devueltos en el objeto de **conjunto de registros** . Para un cursor dinámico, el valor es-1 o el número real de registros, dependiendo del origen de datos.  
   
- Un cursor que admite **Recordcount** debe trabajo de más difícil y, por tanto, requiere más capacidad de proceso, que no se admite un cursor **Recordcount**. Si no necesita saber el número de registros, utilizando el tipo de cursor diferente podría ayudar a mejorar el rendimiento de la aplicación, especialmente si se debe tratar con un gran conjunto de datos.  
+ Un cursor que admita **RecordCount** debe ser más difícil y, por tanto, requiere más potencia de computación, que un cursor no admite **RecordCount**. Si no necesita conocer el número de registros, el uso de diferentes tipos de cursor puede ayudar a mejorar el rendimiento de la aplicación, sobre todo si debe tratar con un conjunto de datos grande.  
   
- En algunos casos, un proveedor o el cursor no puede determinar el **RecordCount** valor sin obtener primero todos los registros desde el origen de datos. Para garantizar un recuento preciso, llame a la **Recordset**. **MoveLast** método antes de llamar a **Recordset.RecordCount**.  
+ En algunos casos, un proveedor o cursor no puede determinar el valor de **RecordCount** sin obtener primero todos los registros del origen de datos. Para garantizar un recuento preciso, llame al **conjunto de registros**. Método **MoveLast** antes de llamar a **Recordset. RecordCount**.  
   
- El ejemplo **Recordset** objeto obtenido mediante la [ejemplo de código JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utiliza un cursor de solo avance, por lo que una llamada a **RecordCount** en este objeto siempre da lugar a -1. Si cambia la línea de código que llama el **Recordset**. **Abra** método tal como se muestra en el ejemplo siguiente, la **RecordCount** propiedad devolverá el número real de registros recuperados.  
+ El objeto de **conjunto de registros** de ejemplo obtenido mediante el ejemplo de [código JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utiliza un cursor de solo avance, por lo que llamar a **RecordCount** en este objeto siempre da como resultado-1. Si cambia la línea de código que llama al **conjunto de registros**. **Open** Method tal y como se muestra en el ejemplo siguiente, la propiedad **RecordCount** devolverá el número real de registros capturados.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- Esto es estática porque los cursores con el [proveedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) admite **RecordCount**. En este ejemplo, hay cinco registros y, por tanto, **RecordCount** debe obtener el valor de 5.  
+ Esto se debe a que los cursores estáticos con el [proveedor de OLE DB de Microsoft para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) admiten **RecordCount**. En este ejemplo, hay cinco registros y, por tanto, **RecordCount** debe proporcionar el valor de 5.  
   
  Esta sección contiene el siguiente tema.  
   

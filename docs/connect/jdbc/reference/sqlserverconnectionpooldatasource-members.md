@@ -1,5 +1,5 @@
 ---
-title: Miembros de SQLServerConnectionPoolDataSource | Microsoft Docs
+title: Miembros SQLServerConnectionPoolDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e5f75ad27e2e6a346adc098f59f5c54144bafb4d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67971593"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921995"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Miembros SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67971593"
 |----------|-----------------|  
 |[SQLServerConnectionPoolDataSource ()](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructor.md)|Inicializa una nueva instancia de la clase [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md).|  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

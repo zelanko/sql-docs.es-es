@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cc7a4fd33dba71723a353d8ca3cb0d3f9e21e9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63144649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024706"
 ---
 # <a name="log-file-viewer"></a>Visor de archivos de registro
   El Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se usa para obtener acceso a la información sobre los errores y eventos capturados en los archivos de registro.  
@@ -48,10 +47,10 @@ ms.locfileid: "63144649"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo abrir el visor del archivo de registros dependiendo de la información que se desee ver.|[Abrir el Visor de archivos de registro](open-log-file-viewer.md)|  
-|Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver sin conexión archivos de registro](view-offline-log-files.md)|  
+|Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver archivos del registro sin conexión](view-offline-log-files.md)|  
 |Proporciona la Ayuda F1 del visor del archivo de registro.|[Ayuda F1 del Visor de archivos de registro](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Audit &#40;motor de base de datos&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Registro de errores del Agente SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   

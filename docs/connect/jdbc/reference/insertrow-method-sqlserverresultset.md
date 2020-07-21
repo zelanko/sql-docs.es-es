@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f2e6148572d6ec6c7e9b52a704d79e8a9124ccf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 194df3470eead10c0f32288f54b36a82e807e576
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977886"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909931"
 ---
 # <a name="insertrow-method-sqlserverresultset"></a>Método insertRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +37,8 @@ public void insertRow()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método insertRow se especifica mediante el método insertRow en la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método insertRow especifica este método insertRow en la interfaz java.sql.ResultSet.  
   
  Cuando se llama a este método, el cursor debe estar en la fila de inserción. Una vez se llame a este método, el cursor permanece en la fila de inserción y el conjunto de resultados permanece en modo de inserción.  
   

@@ -1,5 +1,5 @@
 ---
-title: Directrices para usar los métodos del tipo de datos xml | Microsoft Docs
+title: Directrices para utilizar los métodos del tipo de datos xml
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051301"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393083"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Directrices para utilizar los métodos del tipo de datos xml
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describen instrucciones para usar los métodos de tipo de datos **xml**.
 

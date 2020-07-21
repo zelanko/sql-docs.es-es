@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971615"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], utilice la herramienta MDSModelDeploy para implementar un paquete que contiene:  
@@ -36,7 +35,7 @@ ms.locfileid: "65483071"
   
 -   Debe existir un paquete de implementación de modelo. Para obtener más información, consulte [Crear un paquete de implementación de modelo mediante el asistente](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
--   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Si va a actualizar un modelo con datos, la versión que se va a implementar no puede tener los valores **Bloqueado** o **Confirmado**.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "65483071"
   
 2.  Abra un símbolo del sistema y navegue a MDSModelDeploy.exe.  
   
-    -   Si MDS se ha instalado en la ubicación predeterminada, la herramienta está disponible en *unidad*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
+    -   Si MDS está instalado en la ubicación predeterminada, la herramienta está disponible en *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
   
     -   Si MDS no se ha instalado en la ubicación predeterminada, busque en el equipo local MDSModelDeploy.exe.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "65483071"
   
  **Notas:**  
   
--   Si una vista de suscripciones en el paquete tiene el mismo nombre que una vista de suscripciones en un modelo existente, se crea la vista como *modelname.subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
+-   Si una vista de suscripciones del paquete tiene el mismo nombre que una vista de suscripciones de un modelo existente, la vista se crea como *modelname. subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
   
 -   El proceso de implementación tiene cuatro pasos:  
   
@@ -110,13 +109,13 @@ ms.locfileid: "65483071"
      Al actualizar un modelo, si el proceso sufre un error durante los tres primeros pasos, no continúa; sin embargo, los cambios ya realizados no se revierten. Si el proceso sufre un error en el paso 4, los miembros que se pueden actualizar se actualizan.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Los metadatos definidos por el usuario, atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para obtener más información, vea:  
+ Los metadatos definidos por el usuario, atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para más información, consulte:  
   
 -   [Agregar metadatos &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

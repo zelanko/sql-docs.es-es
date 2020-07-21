@@ -17,18 +17,18 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 86ec4ba1a3dce9ec818c9756261d19a775d3a1da
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123182"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003716"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve la parte derecha de una cadena de caracteres con el número de caracteres especificado.  
   
@@ -36,18 +36,21 @@ ms.locfileid: "70123182"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 RIGHT ( character_expression , integer_expression )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *character_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos binarios o de caracteres. *character_expression* puede ser una constante, una variable o una columna. *character_expression* puede ser cualquier tipo de datos (excepto **text** o **ntext**) que se pueda convertir implícitamente a **varchar** o **nvarchar**. De lo contrario, use la función [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
+   
+> [!NOTE]  
+> Si *string_expression* es de tipo **binary** o **varbinary**, RIGHT realizará una conversión implícita a **varchar** y, por tanto, no conservará la entrada binaria.  
   
  *integer_expression*  
  Es un entero positivo que especifica cuántos caracteres de *character_expression* se van a devolver. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño, como **varchar(max)** .  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve **varchar** cuando *character_expression* es de un tipo de datos de caracteres no Unicode.  
   
  Devuelve **nvarchar** cuando *character_expression* es de un tipo de datos de caracteres Unicode.  
@@ -82,7 +85,7 @@ Rob
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-right-with-a-column"></a>B. Usar RIGHT con una columna  
  En el siguiente ejemplo se devuelven los cinco caracteres situados más a la derecha de cada apellido de la tabla `DimEmployee`.  

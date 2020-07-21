@@ -1,5 +1,6 @@
 ---
-title: 'Ejemplo: restauración en línea de un archivo de solo lectura (modelo de recuperación completa) | Microsoft Docs'
+title: Restauración en línea de un archivo de solo lectura (modelo de recuperación completa)
+description: En este ejemplo se muestra una restauración en línea en SQL Server de un archivo de solo lectura para una base de datos que usa el modelo de recuperación completa con varios grupos de archivos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ea2d2af-086f-48dc-9636-38dc194c7090
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a446bcd7c90c35176bd9853bec3780386e98310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55cf92ac9a4c2324449e27840782a6930478e953
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747770"
 ---
 # <a name="example-online-restore-of-a-read-only-file-full-recovery-model"></a>Ejemplo: Restauración en línea de un archivo de solo lectura (modelo de recuperación completa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema solo es de interés para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contengan varios archivos o grupos de archivos con el modelo de recuperación completa.  
   

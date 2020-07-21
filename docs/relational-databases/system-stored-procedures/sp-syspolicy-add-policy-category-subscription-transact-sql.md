@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892768"
 ---
-# <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una suscripción de categoría de directiva a la base de datos especificada.  
   
@@ -42,15 +42,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @target_type = ] 'target_type'` Es el tipo de destino de la suscripción de categoría. *target_type* es **sysname**, es obligatorio y debe establecerse en 'DATABASE'.  
+`[ @target_type = ] 'target_type'`Es el tipo de destino de la suscripción de categoría. *target_type* es **sysname**, es obligatorio y debe establecerse en ' Database '.  
   
-`[ @target_object = ] 'target_object'` Es el nombre de la base de datos que se suscribirá a la categoría. *target_object* es **sysname**y es necesario.  
+`[ @target_object = ] 'target_object'`Es el nombre de la base de datos que se suscribirá a la categoría. *target_object* es **sysname**y es obligatorio.  
   
-`[ @policy_category = ] 'policy_category'` Es el nombre de la categoría de directiva para suscribirse a. *categoría_de_directiva* es **sysname**y es necesario.  
+`[ @policy_category = ] 'policy_category'`Es el nombre de la categoría de directiva a la que se va a suscribir. *policy_category* es **sysname**y es obligatorio.  
   
- Para obtener los valores de *categoría_de_directiva*, consulte la vista del sistema msdb.dbo.syspolicy_policy_categories.  
+ Para obtener los valores de *policy_category*, consulte la vista del sistema policy_policy_categories msdb.dbo.sys.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Es el identificador de la suscripción de categoría. *policy_category_subscription_id* es **int**y se devuelve como OUTPUT.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`Es el identificador de la suscripción de categoría. *policy_category_subscription_id* es de **tipo int**y se devuelve como salida.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -74,9 +74,9 @@ EXEC msdb.dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DAT
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+ [sp_syspolicy_update_policy_category_subscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

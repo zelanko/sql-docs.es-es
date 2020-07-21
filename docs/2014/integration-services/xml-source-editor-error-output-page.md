@@ -1,5 +1,5 @@
 ---
-title: Editor de origen XML (página salida de Error) | Microsoft Docs
+title: Editor de origen de XML (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d25aea1c1b42015c0384460a166d937d8c4919c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054309"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419592"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Editor de origen de XML (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de XML** para seleccionar las opciones de control de errores y para establecer las propiedades en las columnas de salida de errores.  
@@ -50,10 +49,10 @@ ms.locfileid: "66054309"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de XML &#40;página Administrador de conexiones&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de origen de XML &#40;página Columnas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de origen de XML &#40;página columnas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Extraer datos mediante el origen de XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

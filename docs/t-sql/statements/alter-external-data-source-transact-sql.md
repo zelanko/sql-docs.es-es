@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227155"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669945"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "71227155"
 
 ## <a name="syntax"></a>Sintaxis  
 
-```  
+```syntaxsql
 -- Modify an external data source
 -- Applies to: SQL Server (2016 or later) and APS
 ALTER EXTERNAL DATA SOURCE data_source_name SET
     {   
-        LOCATION = 'server_name_or_IP' [,] |
+        LOCATION = '<prefix>://<path>[:<port>]' [,] |
         RESOURCE_MANAGER_LOCATION = <'IP address;Port'> [,] |
         CREDENTIAL = credential_name
     }  
@@ -61,7 +61,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="arguments"></a>Argumentos  
  data_source_name especifica el nombre definido por el usuario para el origen de datos. El nombre debe ser único.
 
- LOCATION = "nombre_del_servidor_o_dirección_IP" Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos externo.
+ LOCATION = "<prefix>://<path>[:<port>]" proporciona el protocolo de conectividad, la ruta de acceso y el puerto al origen de datos externo. Vea [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport) para obtener las opciones de ubicación válidas.
 
  RESOURCE_MANAGER_LOCATION = "\<dirección IP;Puerto>" (No se aplica a Azure SQL Data Warehouse) Especifica la ubicación del Administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas podría preprocesar los datos de una consulta de PolyBase mediante el uso de las funciones de cálculo de Hadoop. Esta es una decisión basada en el costo. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.
 
@@ -74,13 +74,13 @@ La credencial usada debe crearse mediante el uso de `SHARED ACCESS SIGNATURE` co
 
   
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
  Solo puede modificarse un único origen de cada vez. Las solicitudes simultáneas para modificar el mismo origen hacen que una instrucción tenga que esperar. Aun así, es posible modificar varios orígenes al mismo tiempo. Esta instrucción se puede ejecutar simultáneamente con otras instrucciones.
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
- > El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite obtener acceso a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
+ > El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite acceder a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
 
 
 ## <a name="examples"></a>Ejemplos  

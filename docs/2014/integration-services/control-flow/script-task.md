@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 024c499d882a515286904229a9d9f7942d9b8056
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830566"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438212"
 ---
 # <a name="script-task"></a>Tarea Script
-  La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
+  La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
   
  Puede usar la tarea Script para los siguientes fines:  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62830566"
  Puede establecer estas propiedades a través del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurar la tarea Script en el Diseñador  
- En la tabla siguiente se describe el evento `ScriptTaskLogEntry` que se puede registrar para la tarea Script. El `ScriptTaskLogEntry` se selecciona el evento para su registro en el **detalles** pestaña de la **configurar registros de SSIS** cuadro de diálogo. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ En la tabla siguiente se describe el evento `ScriptTaskLogEntry` que se puede registrar para la tarea Script. El `ScriptTaskLogEntry` evento se selecciona para el registro en la pestaña **detalles** del cuadro de diálogo **configurar registros de SSIS** . Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -89,6 +88,6 @@ ms.locfileid: "62830566"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](https://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
+-   Artículo técnico [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
   
   

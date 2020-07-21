@@ -1,5 +1,6 @@
 ---
-title: 'Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services) | Microsoft Docs'
+title: 'Lección 3: Definición de un conjunto de datos para el informe de tabla | Microsoft Docs'
+description: Después de definir el origen de datos para el informe paginado, necesita definir un conjunto de datos. En SQL Server Reporting Services, los datos que usa en los informes proceden de un conjunto de datos.
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 25c62e0cd615748a764937d6dc2b8e4c952e59a1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106030"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244308"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
+# <a name="lesson-3-define-a-dataset-for-the-table-report---sql-server-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla: SQL Server Reporting Services
 
-Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, los campos calculados y las variables.
+Después de definir el origen de datos para el informe paginado, necesita definir un conjunto de datos. En [!INCLUDE[ssrsnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, los campos calculados y las variables.
 
 Use el Diseñador de consultas del Diseñador de informes para definir el conjunto de datos. En este tutorial, va a crear una consulta que recupera la información sobre los pedidos de ventas de la base de datos AdventureWorks2016.
 
@@ -72,10 +73,10 @@ El panel **Datos de informe** muestra el conjunto de datos y los campos de Adven
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, va a crear el diseño del informe. Continúe con la [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
+Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, va a crear el diseño del informe. Continúe con [Lección 4: Adición de una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Herramientas de diseño de consulta &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)
-[Tipo de conexión de SQL Server &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
+[Tipo de conexión de SQL Server &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)
 [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)

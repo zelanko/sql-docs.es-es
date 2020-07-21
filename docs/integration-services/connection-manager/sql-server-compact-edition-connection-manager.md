@@ -18,10 +18,10 @@ ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62c5a0400918ffe86cca4ec9ff98dd9254d29621
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294351"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Administrador de conexiones con SQL Server Compact Edition
@@ -62,7 +62,7 @@ ms.locfileid: "71294351"
  **Especifique el nombre y la ruta del archivo de base de datos**  
  Escriba la ruta de acceso y el nombre de archivo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- **Examinar**  
+ **Browse**  
  Busque el archivo de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact deseado mediante el cuadro de diálogo **Select SQL Server Compact Edition database** (Seleccionar la base de datos de SQL Server Compact Edition).  
   
  **Escriba la contraseña de la base de datos**  
@@ -100,7 +100,7 @@ ms.locfileid: "71294351"
   
  La opción Modo tiene cuatro valores, tal como se describe en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Solo lectura**|Especifica acceso de solo lectura a la base de datos.|  
 |**Lectura y escritura**|Especifica permiso de lectura/escritura a la base de datos.|  
@@ -113,7 +113,7 @@ ms.locfileid: "71294351"
  **Temp File Directory**  
  Especifique la ubicación del archivo de base de datos temporal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
  **Contraseña**  

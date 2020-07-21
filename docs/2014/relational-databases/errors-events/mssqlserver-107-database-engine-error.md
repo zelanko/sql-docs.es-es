@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bea6901e999f1bb236e94e220c3cfeac53119e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f43490c8896442f81309b292206f97ecd13bbf02
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870561"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554070"
 ---
-# <a name="mssqlserver107"></a>MSSQLSERVER_107
+# <a name="mssqlserver_107"></a>MSSQLSERVER_107
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|107|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|107|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P_NOCORRMATCH|  
 |Texto del mensaje|El prefijo de columna '%.*ls' no coincide con un nombre de tabla o un nombre de alias utilizado en la consulta.|  
@@ -56,13 +55,13 @@ ms.locfileid: "62870561"
 SELECT T1.* FROM dbo.ErrorLog AS T1;  
 ```  
   
- o Administrador de configuración de  
+ or  
   
 ```  
 SELECT ErrorLog.* FROM dbo.ErrorLog;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [MSSQLSERVER_4104](mssqlserver-4104-database-engine-error.md)  
   
   

@@ -14,24 +14,24 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006637"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertir, cargar y migrar (AccessToSQL)
-El **convertir, cargar y migrar** cuadro de diálogo notifica el estado de la migración al usar el botón de Convert, carga y migre o el Asistente para migración.  
+El cuadro de diálogo **convertir, cargar y migrar** informa del estado de la migración cuando se usa el botón convertir, cargar y migrar o el Asistente para migración.  
   
-Una vez completada la migración, puede ver informativo, advertencia y mensajes de error, haga clic en el vínculo de cada sección. El vínculo muestra cuántas error, advertencia y mensajes informativos disponibles, como "0 errores, 4 advertencias."  
+Una vez completada la migración, puede ver mensajes informativos, de advertencia y de error haciendo clic en el vínculo de cada sección. El vínculo muestra el número de mensajes de error, advertencia e informativos que están disponibles, como "0 errores, 4 Advertencias".  
   
-El **migrar los datos para los objetos seleccionados** sección de la página también contiene un **informe** botón. Puede hacer clic en este botón para ver un informe de migración de datos.  
+La sección **migrar datos para objetos seleccionados** de la página también contiene un botón de **Informe** . Puede hacer clic en este botón para ver un informe de migración de datos.  
   
 ## <a name="options"></a>Opciones  
 **Informe**  
-Muestra el informe de conversión ni migración asociado.  
+Muestra el informe de conversión o migración asociado.  
   
-## <a name="see-also"></a>Vea también  
-[Reference(Access) de interfaz de usuario](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>Consulte también  
+[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [Asistente para la migración](migration-wizard-accesstosql.md)  
   

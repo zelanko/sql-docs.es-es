@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Expresión | Microsoft Docs
+title: Expresión (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,25 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109197"
 ---
 # <a name="expression-dialog-box"></a>Expresión (cuadro de diálogo)
   Use el cuadro de diálogo **Expresión** para escribir expresiones de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para las propiedades de los elementos de informe. Puede usar expresiones para establecer muchas propiedades, como el color, la fuente y los bordes. En tiempo de ejecución, el procesador de informes evalúa las expresiones y usa el resultado como valor de la propiedad.  
   
- Una expresión puede ser sencilla o compleja. Puede escribir directamente las expresiones simples en un cuadro de texto en la superficie de diseño o en un cuadro de diálogo. Para crear expresiones complejas, use el **expresión** cuadro de diálogo. Puede crear una expresión cada vez. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ Una expresión puede ser sencilla o compleja. Puede escribir directamente las expresiones simples en un cuadro de texto en la superficie de diseño o en un cuadro de diálogo. Para crear expresiones complejas, use el cuadro de diálogo **expresión** . Puede crear una expresión cada vez. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
- Para abrir el cuadro de diálogo **Expresión** , haga clic en el botón Expresión (**fx**) de los cuadros de diálogo o seleccione **Expresión** en el menú contextual o en las listas desplegables del panel de propiedades. Para obtener más información, consulte [usar expresiones en informes &#40;generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+ Para abrir el cuadro de diálogo **Expresión** , haga clic en el botón Expresión (**fx**) de los cuadros de diálogo o seleccione **Expresión** en el menú contextual o en las listas desplegables del panel de propiedades. Para obtener más información, vea [uso de expresiones en informes &#40;generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
  El cuadro de diálogo **Expresión** incluye una ventana de código, un árbol de categorías, elementos de categoría, un panel de descripción y un panel de ejemplo.  
   
  El cuadro de diálogo **Expresión** depende del contexto; los elementos y las descripciones de categorías cambian de acuerdo con la categoría de expresiones con la que se está trabajando. Admite IntelliSense, la finalización de instrucciones, ejemplos de llamadas a funciones y colores de sintaxis que ayudan a detectar errores de sintaxis.  
   
 ## <a name="expression-constructs"></a>Construcciones de expresiones  
- Las expresiones comienzan por un signo igual (=) y pueden incluir constantes, literales, operadores y referencias a campos integrados, colecciones integradas, funciones integradas, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], clases de Common Language Runtime de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y funciones personalizadas. En la lista siguiente se describen las categorías y los valores que puede agregar a una expresión.  
+ Las expresiones comienzan por un signo igual (=) y pueden incluir constantes, literales, operadores y referencias a campos integrados, colecciones integradas, funciones integradas, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , clases de Common Language Runtime de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y funciones personalizadas. En la lista siguiente se describen las categorías y los valores que puede agregar a una expresión.  
   
  **Establecer expresión para:**  _\<PropertyName>_  
  Nombre de la propiedad cuya expresión está definiendo. También puede establecer esta propiedad, por nombre, en el panel de propiedades.  
@@ -50,7 +50,7 @@ ms.locfileid: "66109197"
  **Parámetros**  
  Proporciona una lista de parámetros de informe.  
   
- **Campos (**  _\<conjunto de datos seleccionado >_ **)**  
+ **Campos (** _ \<conjunto de>seleccionado_ **)**  
  Muestra la lista de campos para el conjunto de datos seleccionado en la categoría Conjuntos de datos. Haga doble clic en un campo para copiarlo en el cuadro **Expresión** .  
   
  **Conjuntos de datos**  
@@ -65,7 +65,7 @@ ms.locfileid: "66109197"
  **Funciones comunes**  
  Muestra funciones comunes, agrupadas por tipos. Al seleccionar una función en el panel Elemento, aparecen una descripción y un ejemplo.  
   
- Entre las funciones comunes se incluyen funciones integradas de informe y de agregado, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] y clases de Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] en los espacios de nombres <xref:System.Math> y <xref:System.Convert>. También puede agregar referencias a clases de CLR y ensamblados externos que no aparecen en la lista de categorías. Para obtener más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Entre las funciones comunes se incluyen funciones integradas de informe y de agregado, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] y clases de Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] en los espacios de nombres <xref:System.Math> y <xref:System.Convert>. También puede agregar referencias a clases de CLR y ensamblados externos que no aparecen en la lista de categorías. Para obtener más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)subyacente.  
   
 ## <a name="options"></a>Opciones  
  Ventana de código  
@@ -78,7 +78,7 @@ ms.locfileid: "66109197"
  Al escribir un nombre de función seguido por un paréntesis izquierdo, verá una información sobre herramientas que proporciona información sobre los parámetros y valores devueltos por la función.  
   
  **Categoría**  
- Muestra categorías de expresiones. Si se elige una categoría, se establece un contexto para crear una expresión y se cambia la lista de valores válidos en el panel Elemento. Por ejemplo, para una expresión para un valor del cuadro de texto, expanda funciones comunes y seleccione funciones de agregado para mostrar `Avg`, `Count`y otras funciones en el **elemento** panel.  
+ Muestra categorías de expresiones. Si se elige una categoría, se establece un contexto para crear una expresión y se cambia la lista de valores válidos en el panel Elemento. Por ejemplo, para una expresión para un valor de cuadro de texto, expanda funciones comunes y seleccione funciones de `Avg`agregado `Count`para mostrar, y otras funciones en el panel **elemento** .  
   
  **Elemento**  
  Muestra la lista de valores válidos para la categoría seleccionada. Haga doble clic en un elemento para agregar el texto de la expresión para este elemento en el punto de inserción en la ventana de código.  
@@ -86,13 +86,13 @@ ms.locfileid: "66109197"
  **Valores**  
  En función de la categoría y el elemento que seleccione, el tercer panel contiene una descripción, una expresión de ejemplo o una lista de valores válidos. Arrastre el borde del cuadro de diálogo para ampliar el área de ejemplo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [La expresión usa en los informes &#40;Generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Usar referencias a la colección de parámetros &#40;generador de informes y SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Referencias a la colección Parameters &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Ejemplos de expresiones de grupo &#40;Generador de informes y SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   

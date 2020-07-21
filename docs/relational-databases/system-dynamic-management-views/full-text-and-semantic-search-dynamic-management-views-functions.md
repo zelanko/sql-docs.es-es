@@ -1,5 +1,5 @@
 ---
-title: Vistas de administración dinámica de búsqueda de texto completo y semántica - funciones | Microsoft Docs
+title: 'Vistas de administración dinámica de búsqueda de texto completo y semántica: funciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21b65e4d9f12457c0291c5b43b24924b94c289f1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130768"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894673"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Vistas de administración dinámica de búsqueda de texto completo y semántica - funciones
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Vistas de administración dinámica de búsqueda de texto completo y semántica: funciones
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se incluyen las siguientes funciones y vistas de administración dinámica que están relacionadas con la búsqueda de texto completo y la búsqueda semántica.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68130768"
  Devuelve todo el contenido relacionado con propiedades en el índice de texto completo de una tabla determinada. Esto incluye todos los datos que pertenecen a cualquier propiedad registrados por la lista de propiedades de búsqueda asociada a ese índice de texto completo.  
   
  sys.dm_fts_index_keywords_position_by_document  
- Devuelve la posición de las palabras clave en un documento.  
+ Devuelve la posición de las palabras clave de un documento.  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  Devuelve información acerca de los rellenados de índices de texto completo actualmente en progreso.  
@@ -67,7 +67,7 @@ ms.locfileid: "68130768"
  [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  Devuelve una fila de información de estado sobre el rellenado del índice de similitud de documentos para cada índice de similitud en cada tabla que tiene un índice semántico asociado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

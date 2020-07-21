@@ -1,5 +1,5 @@
 ---
-title: Evento EndOfRecordset (ADO) | Microsoft Docs
+title: EndOfRecordset (evento) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918938"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765556"
 ---
 # <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
-El **EndOfRecordset** se llama al evento cuando hay un intento de mover una fila más allá del final de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Se llama al evento **EndOfRecordset** cuando se intenta moverse a una fila más allá del final del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,23 +35,23 @@ EndOfRecordset fMoreData, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parámetros  
  *fMoreData*  
- Un **VARIANT_BOOL** valor que, si se establece en VARIANT_TRUE, indica que se han agregado filas más a la **Recordset**.  
+ Un valor **VARIANT_BOOL** que, si se establece en VARIANT_TRUE, indica que se han agregado más filas al **conjunto de registros**.  
   
  *adStatus*  
- Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado.  
+ Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
- Cuando **EndOfRecordset** es llama, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación que provocó este evento.  
+ Cuando se llama a **EndOfRecordset** , este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación que provocó este evento.  
   
- Antes de **EndOfRecordset** devuelve, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  
+ Antes de que **EndOfRecordset** vuelva, establezca este parámetro en **adStatusUnwantedEvent** para evitar las notificaciones posteriores.  
   
  *pRecordset*  
- Un **Recordset** objeto. El **Recordset** para que se produjo este evento.  
+ Objeto de **conjunto de registros** . **Conjunto de registros** para el que se produjo este evento.  
   
 ## <a name="remarks"></a>Comentarios  
- Un **EndOfRecordset** evento puede producirse si el [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) se produce un error de operación.  
+ Un evento **EndOfRecordset** puede producirse si se produce un error en la operación [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
- Este controlador de eventos se llama cuando se intenta mover más allá del final de la **Recordset** objeto, quizás como resultado de llamar a **MoveNext**. Sin embargo, mientras que en este caso, podría recuperar registros de más de una base de datos y anexarlos al final de la **Recordset**. En ese caso, establezca *fMoreData* en VARIANT_TRUE y devuelven desde **EndOfRecordset**. A continuación, llame a **MoveNext** nuevamente para tener acceso a los registros recién recuperados.  
+ Se llama a este controlador de eventos cuando se realiza un intento de moverse más allá del final del objeto de **conjunto de registros** , quizás como resultado de llamar a **MoveNext**. Sin embargo, mientras que en este evento, podría recuperar más registros de una base de datos y anexarlos al final del **conjunto de registros**. En ese caso, establezca *fMoreData* en VARIANT_TRUE y vuelva de **EndOfRecordset**. A continuación, llame de nuevo a **MoveNext** para acceder a los registros recién recuperados.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de modelo de eventos de ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)

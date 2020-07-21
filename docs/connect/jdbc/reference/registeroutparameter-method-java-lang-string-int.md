@@ -1,5 +1,5 @@
 ---
-title: Método registerOutParameter al tipo | Microsoft Docs
+title: Método registerOutParameter para tipo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5d00242c-4d9c-42cc-86bb-b76f5ef876b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cdd197be6327b84a6c299239f1198fe005dff0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b081cef7e687ce54a7e3be4b2e8b3b4a7e1eb8a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975902"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904161"
 ---
 # <a name="registeroutparameter-method-javalangstring-int"></a>Método registerOutParameter (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,8 +47,8 @@ public void registerOutParameter(java.lang.String s,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método registerOutParameter se especifica mediante el método registerOutParameter de la interfaz java. SQL. CallableStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método registerOutParameter especifica este método registerOutParameter en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método registerOutParameter &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

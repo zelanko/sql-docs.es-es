@@ -1,5 +1,6 @@
 ---
 title: Configuración de la publicación y la distribución | Microsoft Docs
+description: Obtenga información sobre cómo configurar la publicación y distribución en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -14,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774000"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  En este tema se describe cómo configurar la publicación y distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).
 
-##  <a name="BeforeYouBegin"></a> Antes de comenzar 
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar 
 
-###  <a name="Security"></a> Seguridad 
-Para más información, vea [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
+###  <a name="security"></a><a name="Security"></a> Seguridad 
+Para más información, consulte [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio 
-Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos `db_owner` puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio 
+Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor: \<Distributor>** . Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos `db_owner` puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.
 
 #### <a name="to-configure-distribution"></a>Para configurar la distribución 
 
-1. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte con el servidor que será el distribuidor (en muchos casos, el publicador y el distribuidor están en el mismo servidor) y, a continuación, expanda el nodo de servidor.
+1. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conecte con el servidor que vaya a ser el distribuidor (en muchos casos, el publicador y el distribuidor son el mismo servidor) y expanda el nodo de servidor.
 
 2. Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, en **Configurar distribución**.
 
@@ -54,7 +55,7 @@ Configure la distribución con el Asistente para nueva publicación o el Asisten
 
   - Opcionalmente, genere un script de opciones de configuración. Para más información, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL 
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL 
 La publicación y distribución de replicaciones se puede configurar mediante programación usando procedimientos almacenados de replicación.
 ### <a name="to-configure-publishing-using-a-local-distributor"></a>Para configurar la publicación mediante un distribuidor local
 1. Ejecute [sp_get_distributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-distributor-transact-sql.md) para determinar si el servidor ya está configurado como un distribuidor.
@@ -77,7 +78,7 @@ La publicación y distribución de replicaciones se puede configurar mediante pr
 
    - Si el valor de `distribution db installed` en el conjunto de resultados es `0`, ejecute [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) en el distribuidor en la base de datos maestra. Especifique el nombre de la base de datos de distribución para `@database`. Opcionalmente, puede especificar el período de retención de transacción máximo para `@max_distretention` y el período de retención del historial para `@history_retention`. Si se está creando una nueva base de datos, especifique los parámetros de propiedad de la base de datos que desee.
 
-2. En el distribuidor, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para `@working_directory`. Si el distribuidor va a utilizar Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse al publicador, también debe especificar el valor `0` para `@security_mode` y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `@login` y `@password`.
+2. En el distribuidor, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para `@working_directory`. Si el distribuidor va a usar autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse al publicador, también debe especificar el valor `0` para `@security_mode` y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para `@login` y `@password`.
 
    Para un distribuidor en Instancia administrada de SQL Database, use una cuenta de Azure Storage para `@working_directory` y la clave de acceso de almacenamiento para `@storage_connection_string`. 
 
@@ -85,26 +86,26 @@ La publicación y distribución de replicaciones se puede configurar mediante pr
 
 4. En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Especifique la base de datos que se está publicando para `@dbname`, el tipo de replicación para `@optname` y el valor true para `@value`.
 
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL) 
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL) 
 El ejemplo siguiente muestra cómo configurar mediante programación la publicación y la distribución. En este ejemplo, se proporciona el nombre del servidor que se está configurando como un publicador y un distribuidor local mediante las variables de scripting. La publicación y distribución de replicaciones se puede configurar mediante programación usando procedimientos almacenados de replicación.
 
 [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/configure-publishing-and_1.sql)] 
 
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO) 
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO) 
 
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>Para configurar la publicación y distribución en un único servidor 
 
 1. Cree una conexión al servidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.
+2. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.
 
-3. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> en el nombre de la base de datos y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.
 
-5. Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Transfiera el objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3.
+5. Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Pase el objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3.
 
-6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Establezca las siguientes propiedades de <xref:Microsoft.SqlServer.Replication.DistributionPublisher>: 
 
@@ -124,9 +125,9 @@ El ejemplo siguiente muestra cómo configurar mediante programación la publicac
 
 1. Cree una conexión al servidor del distribuidor remoto mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-2. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.
+2. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.
 
-3. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase> .
+3. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionDatabase>.
 
 4. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> en el nombre de la base de datos y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en el <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.
 
@@ -134,7 +135,7 @@ El ejemplo siguiente muestra cómo configurar mediante programación la publicac
 
    > `IMPORTANT!!` Cuando sea posible, pida a los usuarios que especifiquen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.
 
-6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher> .
+6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.
 
 7. Establezca las siguientes propiedades de <xref:Microsoft.SqlServer.Replication.DistributionPublisher>: 
 
@@ -152,14 +153,14 @@ El ejemplo siguiente muestra cómo configurar mediante programación la publicac
 
 9. Cree una conexión al servidor publicador local mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .
 
-10. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Transfiera el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 9.
+10. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Transfiera el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 9.
 
 11. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Pase el nombre del distribuidor remoto y la contraseña para el distribuidor remoto especificado en el paso 5.
 
 > [!IMPORTANT]
 > Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por Windows .NET Framework.
 
-###  <a name="PShellExample"></a> Ejemplo (RMO) 
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Ejemplo (RMO) 
 Puede configurar la publicación y distribución de replicación mediante programación utilizando Replication Management Objects (RMO).
 
 [!code-cs[HowTo#rmo_AddDistPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_adddistpub)] 

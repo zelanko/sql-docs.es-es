@@ -8,14 +8,14 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 86c48e9cb3d34eb4ac499ff5f58df77367faeec0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212341"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761361"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creación de instancias de eventos de ADO: ADO y WFC
 ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de ADO y presenta una interfaz de programación de aplicaciones simplificada. En general, ADO/WFC intercepta eventos de ADO, consolida los parámetros de evento en una única clase de eventos y, a continuación, llama al controlador de eventos.  
@@ -58,9 +58,9 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
   
 6.  Vuelva del controlador de eventos al controlador de ADO/WFC para el evento de ADO. ADO/WFC copia los miembros de datos de eventos ADO/WFC pertinentes de nuevo a los parámetros de evento de ADO y, a continuación, devuelve el controlador de eventos de ADO.  
   
-7.  Cuando haya terminado el procesamiento, quite el controlador de la lista de controladores de eventos ADO/WFC. Use el método con un nombre como renameon_eventName_(*controlador*).  
+7.  Cuando haya terminado el procesamiento, quite el controlador de la lista de controladores de eventos ADO/WFC. Use el método con un **nombre como renameon**_eventName_(*controlador*).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO: índice de sintaxis de WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Parámetros de evento](../../../ado/guide/data/event-parameters.md)   

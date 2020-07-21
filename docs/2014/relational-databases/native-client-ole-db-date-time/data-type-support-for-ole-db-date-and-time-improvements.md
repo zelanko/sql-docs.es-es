@@ -10,15 +10,14 @@ helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72bc879e1c04199f5e8e8cbdc1d630cf43113520
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1559b96f382abd86246553e26173c1eca0d3abca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62718112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043743"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB
   En este tema se proporciona información sobre los tipos OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) que admiten tipos de datos de fecha y hora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -31,11 +30,11 @@ ms.locfileid: "62718112"
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (sqlncli.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli.h)|  
+|time|DBTYPE_DBTIME2|145 (SQLNCLI. h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (SQLNCLI. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
-## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Las cadenas y literales  
+## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Cadenas y literales  
   
 |Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de datos de OLE DB|Formato de cadena para conversiones de cliente|  
 |-----------------------------------------|----------------------|------------------------------------------|  
@@ -67,11 +66,11 @@ ms.locfileid: "62718112"
   
 -   El intervalo de minutos va de 0 a 59.  
   
--   El intervalo de segundos va de 0 a 59. Esto permite incluir hasta dos segundos intercalares para mantener la sincronización con la hora sideral.  
+-   El intervalo de segundos va de 0 a 59. Esto permite incluir hasta dos segundos intercalares para mantener la sincronización con el tiempo sidéreo.  
   
  Las implementaciones de las siguientes estructuras existentes de OLE DB se han modificado para admitir los nuevos tipos de datos de fecha y hora de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las definiciones, sin embargo, no han cambiado.  
   
--   DBTYPE_DATE (Es un tipo DATE de automatización. Se representa internamente como una `double`... La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día. Este tipo tiene una exactitud de 1 segundo, de modo que tiene una escala efectiva de 0.)  
+-   DBTYPE_DATE (Es un tipo DATE de automatización. Se representa internamente como `double` .. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día. Este tipo tiene una exactitud de 1 segundo, de modo que tiene una escala efectiva de 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62718112"
   
 -   DBTYPE_FILETIME  
   
-### <a name="dbtypedbtime2"></a>DBTYPE_DBTIME2  
+### <a name="dbtype_dbtime2"></a>DBTYPE_DBTIME2  
  Esta estructura se rellena hasta los 12 bytes en sistemas operativos de 32 bits y 64 bits.  
   
 ```  
@@ -93,7 +92,7 @@ typedef struct tagDBTIME2 {
     } DBTIME2;  
 ```  
   
-### <a name="dbtype-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
+### <a name="dbtype_-dbtimestampoffset"></a>DBTYPE_ DBTIMESTAMPOFFSET  
   
 ```  
 typedef struct tagDBTIMESTAMPOFFSET {  
@@ -168,18 +167,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
- Se utiliza la siguiente asignación de tipo con estructuras DBCOLUMNDESC utilizadas por ITableDefinition::CreateTable:  
+ La siguiente asignación de tipos se usa con las estructuras DBCOLUMNDESC que se emplean en ITableDefinition::CreateTable:  
   
-|Tipo de datos OLE DB (*wType*)|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Notas|  
+|Tipo de datos de OLE DB (*wType*)|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Notas|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
-|DBTYPE_DBTIME2|`time`(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor inspecciona la DBCOLUMDESC *bScale* miembro para determinar la precisión de fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *BSCALE* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIME2|`time`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *BSCALE* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *BSCALE* de miembros para determinar la precisión de las fracciones de segundo.|  
   
- Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a `datetime2` proporcionando un nombre de tipo *pwszTypeName*. Si `datetime` se especifica, *bScale* debe ser 3. Si `smalldatetime` se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
+ Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a proporcionando `datetime2` un nombre de tipo en *pwszTypeName*. Si `datetime` se especifica, *bScale* debe ser 3. Si `smalldatetime` se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

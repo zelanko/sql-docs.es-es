@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c848740aa1ac3f391081b07087eeca3e4c032c80
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898180"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897970"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un objeto de especificación de auditoría de base de datos usando la característica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67898180"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DROP DATABASE AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
@@ -44,7 +44,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nombre de un objeto de especificación de auditoría existente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una instrucción DROP DATABASE AUDIT SPECIFICATION quita los metadatos para la especificación de auditoría, pero no los datos de auditoría recopilados antes de la emisión del comando DROP. Debe establecer primero el estado de una especificación de auditoría de base de datos en OFF usando `ALTER DATABASE AUDIT SPECIFICATION` para poderlos quitar.  
   
 ## <a name="permissions"></a>Permisos  

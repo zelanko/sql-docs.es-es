@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1ba568309bcea7f760d2f4c7f7a691048a4bf84
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067304"
 ---
 # <a name="script-a-table"></a>Incluir una tabla en un script
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede crear scripts para seleccionar, insertar, actualizar y eliminar tablas, y para crear, modificar, quitar o ejecutar procedimientos almacenados.  
@@ -28,7 +27,7 @@ ms.locfileid: "63316395"
   
 1.  En el Explorador de objetos, expanda el servidor, **Bases de datos**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]y **Tablas**; haga clic con el botón derecho en **HumanResources.Employee**y, después, señale **Incluir tabla como**.  
   
-2.  El menú contextual tiene siete opciones de scripting disponibles: **CREAR a**, **DROP a**, **DROP y CREATE To**, **Seleccione esta opción para**, **Insertar a**, **actualización**, y **eliminar a**. Seleccione **UPDATE To**y haga clic en **Nueva ventana del Editor de consultas**.  
+2.  El menú contextual tiene siete opciones de scripting disponibles: **CREATE To**, **DROP To**, **DROP y CREATE To**, **SELECT To**, **INSERT To**, **UPDATE To**y **DELETE To**. Seleccione **UPDATE To**y haga clic en **Nueva ventana del Editor de consultas**.  
   
 3.  Se abre una ventana nueva del Editor de consultas que establece una conexión y presenta la instrucción completa actualizada.  
   

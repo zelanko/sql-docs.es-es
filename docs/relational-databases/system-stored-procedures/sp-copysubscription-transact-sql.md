@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771207"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
     
 > [!IMPORTANT]  
@@ -43,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'file_name'` es la cadena que especifica la ruta de acceso completa, incluido el nombre de archivo, en la que se guarda una copia del archivo de datos (. MDF). *el nombre de archivo* es **nvarchar (260)** y no tiene ningún valor predeterminado.  
+`[ @filename = ] 'file_name'`Es la cadena que especifica la ruta de acceso completa, incluido el nombre de archivo, en la que se guarda una copia del archivo de datos (. MDF). *el nombre de archivo* es **nvarchar (260)** y no tiene ningún valor predeterminado.  
   
-`[ @temp_dir = ] 'temp_dir'` es el nombre del directorio que contiene los archivos temporales. *temp_dir* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Si es NULL, se utilizará el directorio de datos predeterminado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
+`[ @temp_dir = ] 'temp_dir'`Es el nombre del directorio que contiene los archivos temporales. *temp_dir* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Si es NULL, se [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizará el directorio de datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` es una marca booleana opcional que especifica si se sobrescribirá o no un archivo existente con el mismo nombre especificado en **\@filename**. *overwrite_existing_file*es de **bit**y su valor predeterminado es **0**. Si es **1**, sobrescribe el archivo especificado por **\@filename**, si existe. Si es **0**, se produce un error en el procedimiento almacenado si el archivo existe y el archivo no se sobrescribe.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Es una marca booleana opcional que especifica si se sobrescribirá o no un archivo existente con el mismo nombre especificado en ** \@ filename**. *overwrite_existing_file*es de **bit**y su valor predeterminado es **0**. Si es **1**, sobrescribe el archivo especificado por ** \@ filename**, si existe. Si es **0**, se produce un error en el procedimiento almacenado si el archivo existe y el archivo no se sobrescribe.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,13 +57,13 @@ sp_copysubscription [ @filename = ] 'file_name'
   
  El tamaño de la base de datos de suscripciones que se va a copiar debe ser inferior a 2 gigabytes (GB).  
   
- **sp_copysubscription** solo se admite para las bases de datos con suscripciones de cliente y no se puede ejecutar cuando la base de datos tiene suscripciones de servidor.  
+ **sp_copysubscription** solo se admite para bases de datos con suscripciones de cliente y no se puede ejecutar cuando la base de datos tiene suscripciones de servidor.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_copysubscription**.  
   
-## <a name="see-also"></a>Vea también  
- [Ubicaciones alternativas para las carpetas de instantáneas](../../relational-databases/replication/snapshot-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ubicaciones de carpeta de instantáneas alternativas](../../relational-databases/replication/snapshot-options.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098862"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de mapa (generador de informes)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
   Este tutorial le ayudará a obtener información sobre las características de mapa que puede utilizar para mostrar los datos de informe sobre un fondo geográfico.  
   
  Los mapas están basados en datos espaciales que normalmente está compuestos de puntos, líneas y polígonos. Por ejemplo, un polígono puede representar el perfil de un condado, una línea puede representar una carretera y un punto puede representar la ubicación de una ciudad. Cada tipo de datos espaciales se muestra en una capa de mapa independiente, como un conjunto de elementos de mapa.  
@@ -26,12 +26,12 @@ ms.locfileid: "66098862"
   
  En este tutorial, compilará un informe de mapa que muestre ubicaciones de almacenes en los condados del Estado de Nueva York.  
   
-##  <a name="BackToTop"></a> Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
 1.  [Crear un mapa con una capa de polígono desde el Asistente para mapas](#Map)  
   
-2.  [Agregar una capa de punto de mapa para mostrar Store ubicaciones](#PointLayer)  
+2.  [Agregar una capa de punto de mapa para mostrar las ubicaciones del almacén](#PointLayer)  
   
 3.  [Agregar una capa de línea de mapa para mostrar una ruta](#LineLayer)  
   
@@ -41,35 +41,35 @@ ms.locfileid: "66098862"
   
 6.  [Variar los colores de condado de acuerdo con las ventas](#Vary)  
   
-    1.  [Crear una relación entre datos espaciales y analíticos](#Relationship)  
+    1.  [Compilar una relación entre los datos espaciales y los datos analíticos](#Relationship)  
   
-    2.  [Especificar reglas de Color para polígonos](#ColorRules)  
+    2.  [Especificar las reglas de color para polígonos](#ColorRules)  
   
-    3.  [Dar formato a los datos de la escala de Color como moneda](#ColorScale)  
+    3.  [Dar formato a los datos en la escala de color como moneda](#ColorScale)  
   
     4.  [Crear una nueva leyenda](#NewLegend)  
   
-    5.  [Asociar la leyenda y las reglas de Color](#Associate)  
+    5.  [Asociar la leyenda y las reglas de color](#Associate)  
   
-    6.  [Borrar el Color en los condados sin datos](#NoData)  
+    6.  [Borrar el color en los condados sin datos](#NoData)  
   
 7.  [Agregar un punto personalizado](#CustomPoint)  
   
-8.  [Centro de la vista del mapa](#CenterView)  
+8.  [Centrar la vista de mapa](#CenterView)  
   
 9. [Agregar un título de informe](#Title)  
   
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 30 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Map"></a> 1. Crear un mapa con una capa de polígono desde el Asistente para mapas  
+##  <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1. crear un mapa con una capa de polígono desde el Asistente para mapas  
  Agregar un mapa al informe desde la galería de mapas. El mapa tiene una capa que muestra los condados del Estado de Nueva York. La forma de cada condado es un polígono basado en los datos espaciales que se incrustan en el mapa desde la galería de mapas.  
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>Para agregar un mapa con el Asistente para mapas en un informe nuevo  
@@ -79,7 +79,7 @@ ms.locfileid: "66098862"
      Aparecerá el cuadro de diálogo Introducción.  
   
     > [!NOTE]  
-    >  Si el cuadro de diálogo Introducción no aparece, en el botón Generador de informes, haga clic en **Nuevo**.  
+    >   Si el cuadro de diálogo Introducción no aparece, en el botón Generador de informes, haga clic en **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Informe** .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66098862"
   
 12. Si está seleccionada, desactive la opción **Mapa de un color** .  
   
-13. En la lista desplegable **Campo de datos** , haga clic en #COUNTYNAME. El panel Vista previa del mapa del asistente muestra los elementos siguientes:  
+13. En la lista desplegable **campo de datos** , haga clic en #COUNTYNAME. El panel Vista previa del mapa del asistente muestra los elementos siguientes:  
   
     -   Un título con el texto **Título del mapa**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66098862"
   
     -   Una escala de distancia que muestra kilómetros (km) y millas (mi).  
   
-14. Haga clic en **Finalizar**.  
+14. Haga clic en **Finalizar**  
   
      Se agrega el mapa a la superficie de diseño.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "66098862"
   
  La leyenda de mapa y la escala del color no aparecen todavía, porque no hay datos analíticos asociados a cada condado. Agregará los datos analíticos posteriormente en este tutorial.  
   
-##  <a name="PointLayer"></a> 2. Agregar una capa de punto de mapa para mostrar las ubicaciones del almacén  
+##  <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2. agregar una capa de punto de mapa para mostrar las ubicaciones del almacén  
  Utilice el asistente para capas de mapa para agregar una capa de punto que muestre las ubicaciones de almacenes.  
   
 > [!NOTE]  
@@ -148,9 +148,9 @@ ms.locfileid: "66098862"
   
 1.  Cambie a la vista de diseño.  
   
-2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en el botón **Asistente para nueva capa** ![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
+2.  Haga doble clic en el mapa para mostrar el panel **Capa de mapa** . En la barra de herramientas, haga clic en el botón **Asistente para nueva capa**![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
-3.  En la página **Elegir un origen de datos espaciales** , seleccione **Consulta espacial de SQL Server**y haga clic en **Siguiente**.  
+3.  En la página **elegir un origen de datos espaciales** , seleccione **SQL Server consulta espacial**y haga clic en **siguiente**.  
   
 4.  En la página **Elija un conjunto de datos con datos espaciales de SQL Server** , haga clic en **Agregar un nuevo conjunto de datos con datos espaciales de SQL Server**y después haga clic en **Siguiente**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66098862"
   
 6.  Haga clic en **Siguiente**.  
   
-7.  En la página Diseñar una consulta, haga clic en **Editar como texto**.  
+7.  En la página diseñar una consulta, haga clic en **Editar como texto**.  
   
 8.  Pegue el texto siguiente en el panel de consulta:  
   
@@ -191,7 +191,7 @@ ms.locfileid: "66098862"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ).  
+9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**).  
   
      El conjunto de resultados muestra siete columnas: StoreKey, StoreName, SellingArea, City, County, Sales y SpatialLocation. Estos datos representan un conjunto de almacenes del Estado de Nueva York que venden bienes de consumo. Cada fila del conjunto de resultados contiene un identificador de almacén, un nombre de almacén, el área disponible para la exhibición del producto, la ciudad y el condado donde se encuentra el almacén, el total de ventas y la ubicación espacial en longitud y latitud. El área de exhibición va de 455 a 1.125 pies cuadrados.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "66098862"
   
      Se ha creado el conjunto de datos de informe denominado DataSet1. Después de completar el asistente, puede usar el panel Datos de informe para ver esta colección de campos.  
   
-11. En el **elegir los datos espaciales y las opciones de vista del mapa** , comprueba que el **campo espacial** es `SpatialLocation` y que la **tipo de capa** es **punto**. Acepte los demás valores predeterminados de esta página.  
+11. En la página **elegir opciones de datos espaciales y vista de mapa** , compruebe que el **campo espacial** es `SpatialLocation` y que el tipo de **capa** es **punto**. Acepte los demás valores predeterminados de esta página.  
   
      La vista de mapa muestra círculos que marcan la ubicación de cada almacén.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098862"
   
 17. En **Campo de datos**, seleccione `[Sum(SellingArea)]` para variar los tipos de marcador de acuerdo con el tamaño del área que un almacén separa para mostrar productos.  
   
-18. Haga clic en **Finalizar**.  
+18. Haga clic en **Finalizar**  
   
      La capa de mapa se agrega al informe. La leyenda muestra los tipos de marcador según los valores de SellingArea.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098862"
   
 19. Agregue un título a la leyenda. Haga clic con el botón secundario en el título de la leyenda y, a continuación, haga clic en **Propiedades del título de la leyenda**.  
   
-20. Elimine el título y escriba **Área de presentación (pies cuadrados)** .  
+20. Elimine el título y escriba **Área de presentación (pies cuadrados)**.  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -237,7 +237,7 @@ ms.locfileid: "66098862"
   
  El mapa muestra las ubicaciones de los almacenes del Estado de Nueva York. El tipo de marcador para cada almacén está basado en el área de presentación. Se calcularon automáticamente para usted cinco rangos de área de presentación.  
   
-##  <a name="LineLayer"></a> 3. Agregar una capa de línea de mapa para mostrar una ruta  
+##  <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3. agregar una capa de línea de mapa para mostrar una ruta  
  Use el Asistente para capas de mapa para agregar una capa de mapa que muestre una ruta entre dos almacenes. En este tutorial, la ruta de acceso se crea a partir de tres ubicaciones de almacén. En una aplicación empresarial, la ruta podría ser la ruta mejor entre los almacenes.  
   
 #### <a name="to-add-a-line-layer-to-map"></a>Para agregar una capa de línea al mapa  
@@ -254,7 +254,7 @@ ms.locfileid: "66098862"
   
 6.  Haga clic en **Siguiente**.  
   
-7.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**. El diseñador de consultas cambia al modo basado en texto.  
+7.  En la página **diseñar una consulta** , haga clic en **Editar como texto**. El diseñador de consultas cambia al modo basado en texto.  
   
 8.  Pegue el texto siguiente en el panel de consulta:  
   
@@ -279,11 +279,11 @@ ms.locfileid: "66098862"
   
 13. En **Elegir tema de color y visualización de datos**, seleccione la opción **Mapa de un color**. La ruta aparece en un color basado en el tema seleccionado.  
   
-14. Haga clic en **Finalizar**.  
+14. Haga clic en **Finalizar**  
   
  El mapa muestra una nueva capa de línea con el tipo de origen de datos espaciales **DataSet**. En este ejemplo, los datos espaciales proceden de un conjunto de datos, pero ningún dato analítico se asocia a la línea.  
   
-##  <a name="TileLayer"></a> 4. Agregar un fondo de mosaico de Bing Maps  
+##  <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4. agregar un fondo de mosaico de Bing Maps  
  Agregue una capa de mapa que muestre un fondo de mosaico de Bing Maps.  
   
 #### <a name="to-add-a-virtual-earth-tile-background"></a>Para agregar un fondo de mosaico Virtual Earth  
@@ -305,7 +305,7 @@ ms.locfileid: "66098862"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Transparent"></a> 5. Hacer una capa transparente  
+##  <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5. hacer una capa transparente  
  Para permitir que los elementos de una capa se muestren a través de otra capa, puede ajustar el orden de las capas y la transparencia de cada una para obtener el efecto que desea.  
   
 #### <a name="to-set-the-transparency-of-a-layer"></a>Para establecer la transparencia de una capa  
@@ -318,18 +318,18 @@ ms.locfileid: "66098862"
   
 4.  Haga clic en **Visibilidad**.  
   
-5.  En **Transparencia (%)** , escriba **30**.  
+5.  En **Transparencia (%)**, escriba **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
  La superficie de diseño muestra los condados como semitransparentes.  
   
-##  <a name="Vary"></a> 6. Variar los colores de condado de acuerdo con las ventas  
+##  <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. variar el color del condado en función de las ventas  
  Cada condado de la capa de polígono tiene un color diferente porque el procesador de informes asigna automáticamente un valor de color de la paleta de colores en función del tema que eligió en la última página del Asistente para mapas.  
   
  En los pasos siguientes, especifique una regla de color para asociar colores concretos a un rango de valores de almacén para cada condado. Los colores rojo, verde y amarillo indican unas ventas anuales altas, medias o bajas relativas. Dé formato a la escala de colores para mostrar la moneda. Muestre los rangos de ventas anuales en una nueva leyenda. En los condados que no contengan almacenes, no use ningún color para mostrar que no hay ningún dato asociado.  
   
-###  <a name="Relationship"></a> 6a. Compilar una relación entre los datos espaciales y los datos analíticos  
+###  <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6. Compilar una relación entre los datos espaciales y los datos analíticos  
  Para variar las formas del condado por el color según los datos analíticos, debe asociar primero los datos analíticos a los datos espaciales. En este tutorial, utilizará el nombre del condado para la coincidencia.  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>Para generar una relación entre los datos espaciales y los datos analíticos  
@@ -358,7 +358,7 @@ ms.locfileid: "66098862"
   
  Cada condado que contiene un almacén tiene un color que está basado en la paleta de colores correspondiente el estilo que eligió en el asistente.  
   
-###  <a name="ColorRules"></a> 6b. Especificar las reglas de color para polígonos  
+###  <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6. Especificar las reglas de color para polígonos  
  Para crear una regla que varía el color de cada condado basándose en las ventas por almacén, debe especificar los valores de rango, el número de divisiones dentro de ese rango que desea mostrar y los colores que se van a usar.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Especificar las reglas de color para todos los polígonos que tienen datos asociados  
@@ -395,7 +395,7 @@ ms.locfileid: "66098862"
   
  La escala de colores muestra cinco colores: rojo, naranja, amarillo, verde amarillento y verde. Cada color representa un rango de ventas que se calcula automáticamente de acuerdo con las ventas por condado.  
   
-###  <a name="ColorScale"></a> 6c. Dar formato a los datos en la escala de color como moneda  
+###  <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6C. Dar formato a los datos en la escala de color como moneda  
  De forma predeterminada, los datos tienen un formato general. Puede aplicar formatos personalizados.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>Establecer el formato de la escala de colores  
@@ -414,7 +414,7 @@ ms.locfileid: "66098862"
   
  La escala de colores muestra las ventas anuales en el formato de moneda para cada rango.  
   
-###  <a name="NewLegend"></a> 6d. Crear una nueva leyenda  
+###  <a name="6d-create-a-new-legend"></a><a name="NewLegend"></a>6D. Crear una nueva leyenda  
  De forma predeterminada, todas las reglas se muestran en la primera leyenda. Para mejorar la presentación de un mapa, puede agregar leyendas.  
   
  Cambiar la presentación predeterminada requiere dos pasos: crear una nueva leyenda y, a continuación, asociar los resultados de la regla para una capa de mapa con la nueva leyenda.  
@@ -437,7 +437,7 @@ ms.locfileid: "66098862"
   
  La leyenda se expande para mostrar el título.  
   
-###  <a name="Associate"></a> 6e. Asociar la leyenda y las reglas de color  
+###  <a name="6e-associate-legend-and-color-rules"></a><a name="Associate"></a>6e. Asociar la leyenda y las reglas de color  
  Cada leyenda puede mostrar uno o más conjuntos de resultados de la regla.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>Asociar una leyenda a reglas de color  
@@ -452,7 +452,7 @@ ms.locfileid: "66098862"
   
 5.  En **Opciones de leyenda**, en la lista desplegable, seleccione Legend2. Aparece la opción de texto de la leyenda. De forma predeterminada, se da formato al texto de la leyenda con una cadena de formato [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] general. Los 0 en N0 no especifican dígitos decimales.  
   
-6.  En **texto de leyenda**, use el siguiente formato para especificar la moneda sin los dígitos decimales: `#FROMVALUE {C0} - #TOVALUE {C0}`  
+6.  En **texto de leyenda**, use el siguiente formato para especificar la moneda sin dígitos decimales:`#FROMVALUE {C0} - #TOVALUE {C0}`  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -462,7 +462,7 @@ ms.locfileid: "66098862"
   
  Los condados que tienen asociados almacenes y ventas se muestran e acuerdo con las reglas de color. Los condados que no tienen ventas tampoco tienen un color.  
   
-###  <a name="NoData"></a> 6f. Cambiar el color en los condados sin datos  
+###  <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6F. Cambiar el color en los condados sin datos  
  Puede configurar las opciones de presentación predeterminadas para todos los elementos de mapa de una capa. Las reglas de color tienen prioridad sobre estas opciones de presentación.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Para establecer las propiedades de presentación de todos los elementos de una capa  
@@ -485,7 +485,7 @@ ms.locfileid: "66098862"
   
  Los condados que no tienen datos asociados se presentan como azul. Solo los condados que tienen datos analíticos asociados aparecen en los colores **Rojo** a **Verde** de las reglas de color que especificó.  
   
-##  <a name="CustomPoint"></a> 7. Agregar un punto personalizado  
+##  <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7. agregar un punto personalizado  
  Para representar un nuevo almacén que no se ha generado todavía, especifique un punto y utilice el tipo de marcador **Pin** .  
   
 #### <a name="to-add-a-custom-point"></a>Para agregar un punto personalizado  
@@ -502,7 +502,7 @@ ms.locfileid: "66098862"
   
 5.  Haga clic en la ubicación del mapa donde desee agregar un punto. En este tutorial, haga clic en una ubicación de un condado próxima al inicio de la ruta. Un punto marcado por un círculo se agrega a la capa en la ubicación donde hizo clic. De forma predeterminada, el punto se selecciona.  
   
-6.  Haga clic con el botón secundario en el punto que agregó y, a continuación, haga clic en **Propiedades de punto incrustado**.  
+6.  Haga clic con el botón derecho en el punto que ha agregado y, después, haga clic en **Propiedades de punto incrustado**.  
   
 7.  Seleccione la opción **Invalidar opciones de punto para esta capa**. Aparecen páginas adicionales en el cuadro de diálogo. Los valores que establece aquí tienen prioridad sobre las opciones de presentación de la capa o sobre las reglas de color.  
   
@@ -534,7 +534,7 @@ ms.locfileid: "66098862"
   
  Aparece la etiqueta sobre la ubicación del almacén.  
   
-##  <a name="CenterView"></a> Centro de la vista del mapa  
+##  <a name="center-the-map-view"></a><a name="CenterView"></a>Centrar la vista del mapa  
  Cambie el centro de la ventanilla de mapas y la capa de zoom.  
   
 #### <a name="to-change-the-viewport"></a>Para cambiar la ventanilla  
@@ -555,7 +555,7 @@ ms.locfileid: "66098862"
   
  En la vista Diseño, el mapa de la superficie de presentación y la vista se basan en los datos de ejemplo. En el informe representado, la vista del mapa se centra en la vista que especificó.  
   
-##  <a name="Title"></a> Agregar un título de informe  
+##  <a name="add-a-report-title"></a><a name="Title"></a>Agregar un título de informe  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
@@ -565,27 +565,27 @@ ms.locfileid: "66098862"
   
  Este título aparecerá en la parte superior del informe. Cuando no hay ningún encabezado de página definido, los elementos de la parte superior del cuerpo del informe son el equivalente a un encabezado de informe.  
   
-##  <a name="Save"></a> Guardar el informe  
+##  <a name="save-the-report"></a><a name="Save"></a>Guardar el informe  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el botón Generador de informes, haga clic en **Guardar como**.  
+2.  En el botón Generador de informes , haga clic en **Guardar como**.  
   
 3.  En **Nombre**, escriba **Ventas de almacenes en Nueva York**.  
   
  Haga clic en **Guardar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  De esta forma se concluye el tutorial sobre cómo agregar un mapa a un informe.  
   
- Para obtener más información, consulte [mapas &#40;generador de informes y SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md) y la entrada de blog [ajuste cartográfico de datos espaciales de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) en blogs.msdn.com.  
+ Para obtener más información, consulte [Maps &#40;generador de informes and SSRS&#41;](report-design/maps-report-builder-and-ssrs.md) y la entrada de blog sobre el [ajuste de datos espaciales para SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=152771) en blogs.msdn.com.  
   
- Para obtener más tutoriales, vea [tutoriales &#40;Report Builder&#41;](report-builder-tutorials.md).  
+ Para obtener más tutoriales, vea [tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md)   
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  

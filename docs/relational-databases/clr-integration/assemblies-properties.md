@@ -1,5 +1,6 @@
 ---
-title: Propiedades del ensamblado (página General) | Microsoft Docs
+title: Propiedades del ensamblado (página general) | Microsoft Docs
+description: Puede ver o modificar las propiedades de un ensamblado hospedado en SQL Server. Esto incluye el nombre y el propietario del ensamblado, el conjunto de permisos y otras propiedades.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c667434348cfcb8a7f901b69bc7df86c09a34c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789590"
 ---
 # <a name="assemblies---properties"></a>Ensamblados: propiedades
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para ver o modificar propiedades del ensamblado.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>Options  
  **Nombre del ensamblado**  
  Muestra el nombre del ensamblado, que coincide con el nombre del ensamblado CRL.  
   
@@ -30,9 +31,9 @@ ms.locfileid: "68027975"
  Escriba el nombre del propietario o del esquema, o bien selecciónelo en la lista.  
   
  **Conjunto de permisos**  
- Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Seguro**, **acceso externo**, y **Unsafe** acceso.  
+ Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Safe**, **external Access**y **Unsafe** Access.  
   
- **Ruta de acceso al ensamblado**  
+ **Ruta al ensamblado**  
  Escriba la ruta de acceso al archivo de ensamblado.  
   
  **Examinar**  
@@ -43,12 +44,12 @@ ms.locfileid: "68027975"
  Muestra la fecha de creación o registro del ensamblado.  
   
  **Nombre seguro**  
- Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no lo ha firmado digitalmente.  
+ Muestra **true** si el ensamblado está firmado digitalmente, **false** si no se ha firmado digitalmente.  
   
  **Versión**  
  Muestra el número de versión del ensamblado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

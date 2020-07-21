@@ -23,22 +23,21 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545677"
 ---
 # <a name="assl-xml-conventions"></a>Convenciones XML de ASSL
   Analysis Services Scripting Language (ASSL) representa la jerarquía de objetos como un conjunto de tipos de elemento, cada uno de los cuales define los elementos secundarios que puede contener.  
   
  Para representar la jerarquía de objetos, ASSL utiliza las siguientes convenciones XML:  
   
--   Todos los objetos y propiedades se representan como elementos, salvo los atributos XML estándar, como "XML: lang".  
+-   Todos los objetos y propiedades se representan como elementos, excepto los atributos XML estándar como ' XML: lang '.  
   
--   Nombres de elementos y valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework de Pascal las mayúsculas y minúsculas sin caracteres de subrayado.  
+-   Tanto los nombres de elemento como los valores de enumeración siguen la convención de nomenclatura de Microsoft .NET Framework del método Pascal de mayúsculas y minúsculas sin caracteres de subrayado.  
   
 -   Se conserva el uso de mayúsculas o minúsculas de todos los valores. Los valores de las enumeraciones también distinguen entre mayúsculas y minúsculas.  
   
@@ -117,14 +116,14 @@ ms.locfileid: "62736398"
   
  ``  
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  Analysis Services utiliza los siguientes tipos de datos del lenguaje de definición de esquema XML (XSD) estándar:  
   
  `Int`  
- Valor entero en el intervalo de -231 a 231-1.  
+ Un valor entero en el intervalo de-231 a 231-1.  
   
  `Long`  
- Un valor entero del intervalo de-263 a 263-1.  
+ Un valor entero comprendido entre-263 y 263-1.  
   
  `String`  
  Valor de cadena que se ajusta a las reglas globales siguientes:  
@@ -135,10 +134,10 @@ ms.locfileid: "62736398"
   
 -   Se conserva el espacio en blanco interno.  
   
- Las propiedades `Name` e `ID` tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener más información acerca de `Name` y `ID` convenciones, vea [ASSL y características de objetos](assl-objects-and-object-characteristics.md).  
+ Las propiedades `Name` e `ID` tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener más información sobre las `Name` convenciones de y `ID` , consulte [objetos y características](assl-objects-and-object-characteristics.md)de objetos de ASSL.  
   
  `DateTime`  
- Un `DateTime` estructura a partir de .NET Framework. Un valor `DateTime` no puede ser NULL. La fecha más antigua que admite el tipo de datos `DataTime` es el 1 de enero de 1601, disponible para los programadores como `DateTime.MinValue`. La fecha más antigua admitida indica que falta un valor `DateTime`.  
+ `DateTime`Estructura del .NET Framework. Un valor `DateTime` no puede ser NULL. La fecha más antigua que admite el tipo de datos `DataTime` es el 1 de enero de 1601, disponible para los programadores como `DateTime.MinValue`. La fecha más antigua admitida indica que falta un valor `DateTime`.  
   
  `Boolean`  
  Enumeración con solo dos valores, como {true, false} o {0, 1}.  
@@ -151,7 +150,7 @@ ms.locfileid: "62736398"
 |`Boolean`|False|  
 |`String`|"" (cadena vacía)|  
 |`Integer` o `Long`|0 (cero)|  
-|`Timestamp`|12:00:00 A.M., 1/1/0001 (correspondiente a una las versiones de .NET Framework `System.DateTime` con 0 tics)|  
+|`Timestamp`|12:00:00 AM, 1/1/0001 (correspondiente a .NET Framework `System.DateTime` con 0 TICs)|  
   
  Para un elemento que está presente pero vacío se interpreta que tiene un valor de cadena nula, no el valor predeterminado.  
   
@@ -178,6 +177,6 @@ ms.locfileid: "62736398"
   
  `</Dimension>`  
   
- Para obtener más información sobre los valores predeterminados heredados, vea [ASSL y características de objetos](assl-objects-and-object-characteristics.md).  
+ Para obtener más información sobre los valores predeterminados heredados, vea [objetos y características](assl-objects-and-object-characteristics.md)de objetos de ASSL.  
   
   

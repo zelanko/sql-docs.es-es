@@ -1,31 +1,28 @@
 ---
 title: Extensión Schema Compare
-titleSuffix: Azure Data Studio
-description: Instalación y uso de la extensión Schema Compare (versión preliminar) para Azure Data Studio
+description: Instalación y uso de la extensión Schema Compare para Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/03/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.date: 11/04/2019
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758407"
 ---
-# <a name="schema-compare-extension-preview"></a>Extensión Comparación de esquemas (versión preliminar)
+# <a name="schema-compare-extension"></a>Extensión Schema Compare
 La extensión Comparación de esquemas proporciona una experiencia fácil de usar para comparar dos definiciones de bases de datos y aplicar las diferencias del origen al destino.
-
-Esta experiencia está actualmente en su versión preliminar inicial. Puede notificar cualquier problema y solicitar nuevas características [aquí](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Características
 
-* Comparar esquemas de dos archivos o bases de datos .dacpac.
+* Comparar esquemas de dos archivos o bases de datos dacpac.
 * Ver los resultados como un conjunto de acciones que deben tomarse en el destino para que coincida con el origen.
 * Excluir selectivamente las acciones enumeradas en los resultados.
 * Establecer las opciones que controlan el ámbito de la comparación.
@@ -72,3 +69,4 @@ Puede resultar tedioso administrar y sincronizar manualmente versiones distintas
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre la comparación de esquemas, consulte [nuestra documentación](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
+Puede notificar cualquier problema y solicitar nuevas características [aquí](https://github.com/microsoft/azuredatastudio/issues).

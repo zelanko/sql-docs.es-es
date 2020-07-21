@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc8a8277147dd2dc136379471f6a4f7df789c3ee
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025582"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923937"
 ---
 # <a name="wrappers-and-interfaces"></a>Contenedores e interfaces
 
@@ -27,7 +27,7 @@ ms.locfileid: "69025582"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite la interfaz java.sql.Wrapper. Esta interfaz proporciona un mecanismo para acceder a extensiones para la API de JDBC que son específicas de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] mediante una interfaz de proxy.
 
-La interfaz java. SQL. wrapper define dos métodos: **isWrapperFor** y **Unwrap**. El método **isWrapperFor** comprueba si el objeto de entrada especificado implementa esta interfaz. El método **unwrap** devuelve un objeto que implementa esta interfaz para permitir el acceso a los métodos específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**. El método **isWrapperFor** comprueba si el objeto de entrada especificado implementa esta interfaz. El método **unwrap** devuelve un objeto que implementa esta interfaz para permitir el acceso a los métodos específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
 los métodos **isWrapperFor** y **Unwrap** se exponen de la siguiente manera:
 
@@ -41,7 +41,7 @@ los métodos **isWrapperFor** y **Unwrap** se exponen de la siguiente manera:
 
 - [Método isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [Unwrap ( &#40;método) SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [Método unwrap &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [Método isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -49,11 +49,11 @@ los métodos **isWrapperFor** y **Unwrap** se exponen de la siguiente manera:
 
 - [Método isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [Unwrap ( &#40;método) SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [Método unwrap &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [Método isWrapperFor &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [Unwrap ( &#40;método) SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [Método unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>Interfaces
 
@@ -81,7 +81,7 @@ Se agregaron las siguientes interfaces:
 
 En este ejemplo se muestra cómo acceder a una función específica de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] desde un objeto DataSource. Es posible que un servidor de aplicaciones haya encapsulado esta clase DataSource. Para acceder a la función o constante específica del controlador JDBC, puede desencapsular el origen de datos en una interfaz ISQLServerDataSource y usar las funciones que se declaran en esta interfaz.
 
-### <a name="code"></a>código
+### <a name="code"></a>Código
 
 ```java
 import javax.sql.*;  
@@ -111,6 +111,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

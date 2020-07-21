@@ -13,26 +13,25 @@ helpviewer_keywords:
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21bbf20dfdc15470adc6277149679d2e5b403d9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073549"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546031"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implementación de soluciones de modelos multidimensionales
-  Una vez completado el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Se enumeran los métodos aquí en orden de ventaja: Automatización AMO, XMLA, Asistente para la implementación, utilidad de implementación, sincronizar el Asistente para copia de seguridad y restauración.  
+  Una vez completado el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Estos son los métodos de implementación, por orden de ventaja: automatización AMO, XMLA, Asistente para la implementación, Utilidad de implementación, Asistente para sincronizar y Copia de seguridad y restauración.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
  [Métodos de implementación](#bkmk_meth)  
   
- [Consideraciones de implementación](#bkmk_considerations)  
+ [Consideraciones de la implementación](#bkmk_considerations)  
   
  [Tareas relacionadas](#bkmk_rel)  
   
-##  <a name="bkmk_meth"></a> Métodos de implementación  
+##  <a name="deployment-methods"></a><a name="bkmk_meth"></a>Métodos de implementación  
   
 |Método|Descripción|Vínculo|  
 |------------|-----------------|----------|  
@@ -41,12 +40,12 @@ ms.locfileid: "66073549"
 |**Asistente para la implementación**|Use el Asistente para la implementación cuando desee usar los archivos de salida XMLA generados por un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implementar los metadatos del proyecto en un servidor de destino. Con el Asistente para la implementación, puede implementar directamente desde el archivo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , tal como lo creó el directorio de salida en la compilación del proyecto.<br /><br /> La principal ventaja de usar el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es la comodidad. Al igual que se puede guardar un script XMLA para su uso posterior en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se pueden guardar los scripts del Asistente para la implementación. El Asistente para la implementación se puede ejecutar interactivamente y desde el símbolo del sistema mediante la utilidad de implementación.|[Implementar soluciones con el Asistente para la implementación](deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Utilidad de implementación**|La utilidad de implementación le permite iniciar el motor de implementación de Analysis Services desde un símbolo del sistema.|[Implementar soluciones de modelos con la utilidad de implementación](deploy-model-solutions-with-the-deployment-utility.md)|  
 |**Asistente para sincronizar bases de datos**|Use el Asistente para sincronizar bases de datos cuando desee sincronizar los metadatos y los datos de dos bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cualquiera.<br /><br /> El Asistente para sincronizar se puede usar para copiar datos y metadatos de un servidor de origen en un servidor de destino. Si el servidor de destino no tiene una copia de la base de datos que desea implementar, se copia una nueva base de datos en el servidor de destino. Si el servidor de destino ya tiene una copia de la misma base de datos, la base de datos del servidor de destino se actualiza para que use los metadatos y los datos de la base de datos de origen.|[Sincronizar bases de datos de Analysis Services](synchronize-analysis-services-databases.md)|  
-|**Copias de seguridad y restauración**|La copia de seguridad es la forma más simple de transferir bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Desde el cuadro de diálogo **Copia de seguridad** , puede establecer la configuración de las opciones y, a continuación, puede ejecutar la copia de seguridad desde el mismo cuadro de diálogo. O bien, puede crear un script que se puede guardar y ejecutar con la frecuencia necesaria.<br /><br /> Las copias de seguridad y restauración no se usan con la misma frecuencia que los otros métodos de implementación, pero es una forma de completar rápidamente una implementación con requisitos mínimos de infraestructura.|[Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](backup-and-restore-of-analysis-services-databases.md)|  
+|**Copia de seguridad y restauración**|La copia de seguridad es la forma más simple de transferir bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Desde el cuadro de diálogo **Copia de seguridad**, puede establecer la configuración de las opciones y, a continuación, puede ejecutar la copia de seguridad desde el mismo cuadro de diálogo. O bien, puede crear un script que se puede guardar y ejecutar con la frecuencia necesaria.<br /><br /> Las copias de seguridad y restauración no se usan con la misma frecuencia que los otros métodos de implementación, pero es una forma de completar rápidamente una implementación con requisitos mínimos de infraestructura.|[Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](backup-and-restore-of-analysis-services-databases.md)|  
   
-##  <a name="bkmk_considerations"></a> Consideraciones de implementación  
+##  <a name="deployment-considerations"></a><a name="bkmk_considerations"></a>Consideraciones de implementación  
  Antes de implementar un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , considere cuáles de estas preguntas se aplican a la solución y luego revise el vínculo relacionado para saber cómo solucionar el problema:  
   
-|Consideraciones|Más información|  
+|Consideración|Más información|  
 |-------------------|------------------------------|  
 |¿Qué recursos de hardware y software se requieren para esta solución?|[Requisitos y consideraciones para la implementación de Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |¿Cómo implementará los objetos relacionados que se encuentran fuera del ámbito del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , como paquetes, informes o esquemas de las bases de datos relacionales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ?||  
@@ -56,7 +55,7 @@ ms.locfileid: "66073549"
 |¿Desea implementar objetos en un entorno distribuido mediante el uso de objetos vinculados o particiones remotas?|[Crear y administrar una partición local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md), [Crear y administrar una partición remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) y [Grupos de medida vinculados](linked-measure-groups.md).|  
 |¿Cómo protegerá los datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ?|[Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
-##  <a name="bkmk_rel"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> Tareas relacionadas  
  [Requisitos y consideraciones para la implementación de Analysis Services](requirements-and-considerations-for-analysis-services-deployment.md)  
   
  [Implementar soluciones de modelo mediante XMLA](deploy-model-solutions-using-xmla.md)  

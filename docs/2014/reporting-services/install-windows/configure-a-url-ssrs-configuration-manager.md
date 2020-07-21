@@ -12,12 +12,12 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108859"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "80380706"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder utilizar el Administrador de informes o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación. Si tiene un servidor de informes que está configurado para utilizar el modo integrado de SharePoint y actualiza la dirección URL del servicio web del servidor de informes utilizando la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , también debe actualizar la dirección URL en la Administración central de SharePoint.  
@@ -34,9 +34,9 @@ ms.locfileid: "66108859"
   
 -   Establecer propiedades avanzadas de las direcciones URL para definir más direcciones URL.  
   
- Para obtener más información acerca de cómo se almacenan y mantienen las direcciones URL o problemas de interoperabilidad, consulte [sobre reservas de direcciones URL y el registro &#40;SSRS Configuration Manager&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md) y [Install Reporting Services e Internet Information Services Side-by-Side &#40;modo nativo de SSRS&#41;](install-reporting-and-internet-information-services-side-by-side.md)en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla. Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
+ Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL, o problemas de interoperabilidad, vea [acerca de las reservas de direcciones URL y el registro &#40;ssrs Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) e [instalar Reporting Services y Internet Information Services en paralelo &#40;el modo nativo de SSRS ](install-reporting-and-internet-information-services-side-by-side.md)&#41;en los libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
   
 -   Debe ser miembro del grupo local de administradores en el equipo del servidor de informes.  
@@ -95,7 +95,7 @@ ms.locfileid: "66108859"
   
 10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Además, si su servidor de informes se configura para utilizar el modo integrado de SharePoint, debe configurar la dirección URL del servicio web del servidor de informes en la Administración central de SharePoint. Para obtener más información sobre cómo actualizar la dirección URL del servicio Web del servidor de informes en Administración Central de SharePoint, vea [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41; ](../configure-administer-report-server-reporting-services-sharepoint-mode.md) y [Servidor de reporting Services informe &#40;el modo de SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Además, si su servidor de informes se configura para utilizar el modo integrado de SharePoint, debe configurar la dirección URL del servicio web del servidor de informes en la Administración central de SharePoint. Para obtener más información sobre cómo actualizar la dirección URL del servicio Web del servidor de informes en administración central de SharePoint, vea [configuración y administración de un servidor de informes &#40;Reporting Services modo sharepoint&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) y [Reporting Services servidor de informes &#40;modo SharePoint&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>Para crear una reserva de direcciones URL para el Administrador de informes  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66108859"
   
 2.  Haga clic en **Dirección URL del Administrador de informes**.  
   
-3.  Especifique el directorio virtual. El Administrador de informes escucha en la misma dirección IP y puerto que el servicio web del servidor de informes. Si configuró el Administrador de informes para señalar a un servicio web del servidor de informes diferente, debe modificar la configuración de la dirección URL del Administrador de informes en el archivo RSReportServer.config. Para obtener instrucciones, consulte [configurar el Administrador de informes &#40;modo nativo&#41; ](../report-server/configure-web-portal.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+3.  Especifique el directorio virtual. El Administrador de informes escucha en la misma dirección IP y puerto que el servicio web del servidor de informes. Si configuró el Administrador de informes para señalar a un servicio web del servidor de informes diferente, debe modificar la configuración de la dirección URL del Administrador de informes en el archivo RSReportServer.config. Para obtener instrucciones, vea [configurar Administrador de informes &#40;el modo nativo&#41;](../report-server/configure-web-portal.md) en los libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 4.  Si instaló un certificado SSL, puede seleccionarlo para requerir que todas las solicitudes para el Administrador de informes se enruten a través de HTTP.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "66108859"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>Establecer las propiedades avanzadas para especificar direcciones URL adicionales  
  Puede reservar varias direcciones URL para el servicio web del servidor de informes o el Administrador de informes especificando puertos diferentes o nombres de host (una dirección IP o un nombre de encabezado de host que un servidor de nombres de dominio pueda resolver como una dirección IP asignada al equipo). Si se crean varias direcciones URL, puede establecer rutas de acceso diferentes a la misma instancia del servidor de informes. Por ejemplo, para permitir el acceso desde la intranet y la extranet a un servidor de informes, podría utilizar la dirección URL predeterminada para el acceso a través de la intranet y un nombre de host completo adicional para el acceso desde la extranet:  
   
--   http://myserver01/reportserver  
+-   `http://myserver01/reportserver`
   
--   http://www.adventure-works.com/reportserver  
+-   `http://www.adventure-works.com/reportserver`  
   
  No puede establecer varios nombres de directorios virtuales para la misma instancia de aplicación. A cada instancia de aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se le asigna un único nombre de directorio virtual. Si tiene varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el mismo equipo, el nombre del directorio virtual para una aplicación debería incluir el nombre de instancia para asegurarse de que cada solicitud llega a su destino pretendido.  
   
@@ -132,14 +132,14 @@ ms.locfileid: "66108859"
   
 4.  Especifique el puerto. Si especifica un puerto personalizado, la dirección URL de la aplicación siempre debe incluir el número de puerto.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para probar la dirección URL, abra una ventana del explorador y escriba la dirección URL.  
   
 ## <a name="urls-for-multiple-report-server-instances-on-the-same-computer"></a>Direcciones URL para varias instancias del servidor de informes en el mismo equipo  
  Si está reservando direcciones URL para varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debería seguir las convenciones de nomenclatura para poder evitar conflictos de nombres. Para obtener más información, vea [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md).  
   
-##  <a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
+##  <a name="examples-of-url-configurations"></a><a name="URLExamples"></a> Ejemplos de configuraciones de direcciones URL  
  En la lista siguiente se muestran algunos ejemplos de la apariencia que puede tener una dirección URL del servidor de informes:  
   
 -   http://localhost/reportserver  
@@ -150,9 +150,9 @@ ms.locfileid: "66108859"
   
 -   http://sales01:8080/reportserver  
   
--   https://sales.adventure-works.com/reportserver  
+-   `https://sales.adventure-works.com/reportserver`  
   
--   https://www.adventure-works.com:8080/reportserver01  
+-   `https://www.adventure-works.com:8080/reportserver01`  
   
  Las direcciones URL que se utilizan para obtener acceso al Administrador de informes comparten un formato similar y suelen crearse en el mismo sitio web que hospeda al servidor de informes. La única diferencia es el nombre del directorio virtual (en este caso es **reports** , pero se puede configurar para que se use el nombre que se prefiera):  
   
@@ -164,11 +164,11 @@ ms.locfileid: "66108859"
   
 -   http://sales01:8080/reports  
   
--   https://sales.adventure-works.com/reports  
+-   `https://sales.adventure-works.com/reports`  
   
--   https://www.adventure-works.com:8080/reports  
+-   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   

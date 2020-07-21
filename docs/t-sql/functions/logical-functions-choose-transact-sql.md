@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c2894f44ca54d26c8a0a4392e91d052de3a55aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784468"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>Funciones lógicas - CHOOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el elemento en el índice especificado de una lista de valores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -33,13 +33,13 @@ ms.locfileid: "68059744"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *index*  
+ *índice*  
  Expresión entera que representa un índice de base uno de la lista de elementos que le siguen.  
   
  Si el valor de índice proporcionado tiene un tipo de datos numérico distinto de **int**, el valor se convierte implícitamente en un entero. Si el valor de índice supera los límites de la matriz de valores, CHOOSE devuelve NULL.  
@@ -47,10 +47,10 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
  *val_1 … val_n*  
  Lista de valores separados por comas de cualquier tipo de datos.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el tipo de datos con la mayor prioridad del conjunto de tipos pasados a la función. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  CHOOSE actúa como un índice de una matriz, donde la matriz consta de los argumentos que siguen al argumento de índice. El argumento de índice determina cuál de los valores siguientes se devolverá.  
   
 ## <a name="examples"></a>Ejemplos  

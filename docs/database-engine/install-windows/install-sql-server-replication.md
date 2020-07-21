@@ -1,5 +1,6 @@
 ---
 title: Instalar la replicación de SQL Server | Microsoft Docs
+description: Para instalar los componentes de replicación, use el Asistente para la instalación de SQL Server o una ventana de símbolo del sistema.
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 336566cdcdedd378199716cc1369e148e0239863
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5635065e77921b661d5b60e5ebcd0aad850295b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991047"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883495"
 ---
 # <a name="install-sql-server-replication"></a>Instalar la replicación de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Los componentes de replicación se pueden instalar mediante el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en un símbolo del sistema. Instale la replicación al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o al modificar una instancia existente.  
   
@@ -44,7 +45,7 @@ Después de instalar los componentes de replicación, debe configurar el servido
   
 - Consulte [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server](../../database-engine/install-windows/install-sql-server.md)   
  [Instalar SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Características compatibles con las ediciones de SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md)  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015208"
 ---
 # <a name="stored-procedures"></a>Procedimientos almacenados
@@ -27,7 +27,7 @@ ms.locfileid: "68015208"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Un procedimiento almacenado ([procedimientos &#40;almacenados motor de base de datos&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
+  Un procedimiento almacenado ([Procedimientos almacenados &#40;Motor de base de datos&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos de. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
   
 -   Procedimientos almacenados  
   

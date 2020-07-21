@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VB) de la propiedad de origen | Microsoft Docs
+title: Ejemplo de la propiedad Source (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], Visual Basic example
 ms.assetid: 7c83eb01-71c7-4c5d-9778-6270471c8164
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5161dc2aa0a0a213095a160cf0473c138cdf2cf5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f652b23e65b4f5669c6d369595933df4c5c6b9a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930918"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759801"
 ---
 # <a name="source-property-example-vb"></a>Ejemplo de la propiedad Source (VB)
-Este ejemplo se muestra el [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad abriendo tres [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos basados en orígenes de datos diferentes.  
+En este ejemplo se muestra la propiedad de [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) abriendo tres objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basados en orígenes de datos diferentes.  
   
 ```  
 'BeginSourceVB  
@@ -126,6 +126,6 @@ End Sub
 'EndSourceVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad Source (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

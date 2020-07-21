@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523651"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validación cruzada (Analysis Services - Minería de datos)
-  La *validación cruzada* es una herramienta estándar de análisis que resulta muy útil a la hora de desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  
+  La *validación cruzada* es una herramienta estándar de Analytics y es una característica importante para ayudarle a desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  
   
 -   Validar la solidez de un modelo de minería de datos determinado.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "68809855"
   
  El ejemplo del diagrama muestra el uso de los datos si se especifican tres plegamientos.  
   
- ![Cómo segmenta los datos los segmentos de validación cruzada](../media/xvoverviewmain.gif "Cómo segmenta los datos los segmentos de validación cruzada")  
+ ![Cómo segmenta la validación cruzada los datos](../media/xvoverviewmain.gif "Cómo segmenta la validación cruzada los datos")  
   
  En el escenario del diagrama, la estructura de minería de datos contiene un conjunto de datos de exclusión que se usa para pruebas, pero el conjunto de datos de pruebas no se ha incluido para la validación cruzada. Como resultado, todos los datos del conjunto de datos de aprendizaje, el 70 por ciento de los datos de la estructura de minería de datos, se usan para validación cruzada. El informe de validación cruzada muestra el número total de casos usados en cada partición.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "68809855"
 ### <a name="choosing-models-and-columns-to-validate"></a>Elegir los modelos y columnas para la validación  
  Al utilizar la pestaña **Validación cruzada** del Diseñador de minería de datos, debe seleccionar primero la columna de predicción de la lista. Normalmente, una estructura de minería de datos puede admitir muchos modelos de minería, de los cuales no todos utilizan la misma columna de predicción. Al ejecutar una validación cruzada, solo se podrán incluir en el informe aquellos modelos que utilicen la misma columna de predicción.  
   
- Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada mediante el formato \<de nombre de tabla anidada > (clave).\< > De columna anidada. Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<el nombre de tabla anidado > (clave).  
+ Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada con el formato \<Nested Table Name> (clave). \<Nested Column> Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<Nested Table Name> (clave).  
   
  Después de seleccionar el atributo de predicción, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prueba todos los modelos que utilizan el mismo atributo de predicción automáticamente. Si el atributo de destino contiene valores discretos, después de haber seleccionado la columna de predicción, puede escribir un estado de destino, en caso de que haya un valor concreto que desee predecir.  
   
@@ -190,7 +189,7 @@ ms.locfileid: "68809855"
 |Vea los ejemplos de otros tipos de gráficos de precisión.|[Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - Minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Describe los pasos para crear varios gráficos de precisión.|[Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

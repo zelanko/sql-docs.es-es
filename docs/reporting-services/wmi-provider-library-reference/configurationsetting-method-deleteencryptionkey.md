@@ -16,10 +16,10 @@ ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e40c53c5c46d37a996805105563b809ad278b9a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570800"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>Método ConfigurationSetting - DeleteEncryptionKey
@@ -50,7 +50,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve HRESULT que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método *DeleteEncryptionKey* elimina las entradas en la tabla de claves de todos los servidores de informes que tienen acceso a la información segura en la base de datos del servidor de informes. Si el parámetro *InstallationID* especificado no se corresponde con un identificador de instalación en la base de datos, el método devuelve un error.  
   
 ## <a name="requirements"></a>Requisitos  

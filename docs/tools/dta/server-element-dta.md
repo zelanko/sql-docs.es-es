@@ -1,10 +1,8 @@
 ---
-title: Server (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Server (DTA, elemento)
+description: En la utilidad DTA, el elemento Server contiene la información de identificación del servidor en el que residen las bases de datos que se quieren optimizar.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 848096ce3a40a2e441c9a1fc275fff8b126d6381
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 3485f4c4179726eafccb51496003c1c02cc2b4c6
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034542"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151803"
 ---
 # <a name="server-element-dta"></a>Server (DTA, elemento)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contiene la información de identificación del servidor en el que residen las bases de datos que se desean optimizar.  
+
+Contiene la información de identificación del servidor en el que residen las bases de datos que se desean optimizar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +54,7 @@ ms.locfileid: "68034542"
 |**Elemento primario**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
 |**Elementos secundarios**|[Name &#40;DTA, elemento de Server&#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Elemento Database para servidor &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Solo es posible especificar un elemento **Server** para el elemento **DTAInput** . Este elemento tiene el nombre **ServerDetailsTypecomplexType** en el esquema XML DTA. No confunda este elemento **Server** con el elemento secundario de **Configuration** . Para obtener más información, vea [Server &#40;DTA, elemento de Configuration&#41;](../../tools/dta/server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Ejemplo  

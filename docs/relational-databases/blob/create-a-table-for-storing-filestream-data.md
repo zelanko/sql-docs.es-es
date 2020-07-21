@@ -1,5 +1,6 @@
 ---
 title: Creación de una tabla para almacenar datos FILESTREAM | Microsoft Docs
+description: Obtenga información sobre cómo crear una tabla para almacenar datos FILESTREAM en SQL Server. Vea qué columnas y atributos debe usar en el código de Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 029c3059-5c83-43e2-a859-9027031b7de1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 54c3acef29036c8178b9103e31c7e01e7a02595b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98b1cdbda13816e0d118c170dd3b10dd4784f0d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768034"
 ---
 # <a name="create-a-table-for-storing-filestream-data"></a>Crear una tabla para almacenar datos FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se muestra cómo crear una tabla para almacenar datos FILESTREAM.  
   
  Cuando la base de datos tiene un grupo de archivos FILESTREAM, es posible crear o modificar tablas para almacenar datos FILESTREAM. Para especificar que una columna contiene datos FILESTREAM, se debe crear una columna **varbinary(max)** y agregar el atributo FILESTREAM.  

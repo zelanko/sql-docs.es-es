@@ -10,15 +10,14 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a834ce32959e81293a29d45613f941903e37f7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769332"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428812"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   Divide la primera expresión numérica por la segunda.  
@@ -33,7 +32,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>Argumentos  
  *dividend*  
- Es la expresión numérica que se va a dividir. *dividend* puede ser cualquier expresión numérica. Para más información, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
+ Es la expresión numérica que se va a dividir. *dividend* puede ser cualquier expresión numérica. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  *divisor*  
  Es la expresión numérica entre la que se va a dividir el dividendo. *divisor* puede ser cualquier expresión numérica excepto cero.  
@@ -41,7 +40,7 @@ dividend / divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si alguno de los operandos es NULL, el resultado será NULL.  
   
  No se permite dividir por cero. En función de cómo se evalúe la subexpresión *divisor* , se producirá uno de los siguientes errores:  
@@ -65,7 +64,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   

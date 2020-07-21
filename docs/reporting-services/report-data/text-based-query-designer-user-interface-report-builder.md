@@ -13,10 +13,10 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6fd76ce7d20349301d3bfeb70b4ed1c24325cbdc
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "72251207"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
@@ -38,7 +38,7 @@ ms.locfileid: "72251207"
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No todos los tipos de orígenes de datos admiten diseñadores gráficos de consultas.|  
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo sql y rdl.|  
-|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
+|![Ejecución de la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecución de la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
 |**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario. La compatibilidad del tipo de comando varía en función del tipo de origen de datos. Por ejemplo, solamente OLE DB y ODBC son compatibles con **TableDirect**.<br /><br /> Nota: Si un procedimiento almacenado devuelve más de un conjunto de resultados, solo se usa el primero para rellenar el conjunto de datos.|  
   
 ### <a name="command-type-text"></a>Tipo de comando Text  
@@ -100,7 +100,7 @@ uspGetWhereUsedProductID
   
  `Person.ContactType`  
   
- Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT * FROM Person.ContactType`.  
+ Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]`SELECT * FROM Person.ContactType`.  
   
 ## <a name="see-also"></a>Consulte también  
  [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   

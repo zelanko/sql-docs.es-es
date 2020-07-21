@@ -18,16 +18,16 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640768"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
   El tipo de datos **hierarchyid** integrado facilita el almacenamiento y la consulta de datos jerárquicos. **hierarchyid** se optimiza para representar los árboles, que son el tipo más común de datos jerárquicos.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72304953"
   
  Use [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) como tipo de datos para crear tablas con una estructura jerárquica o para describir la estructura jerárquica de datos almacenados en otra ubicación. Use las [funciones hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) de [!INCLUDE[tsql](../includes/tsql-md.md)] para consultar y administrar los datos jerárquicos.  
   
-##  <a name="keyprops"></a> Propiedades principales de hierarchyid  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Propiedades principales de hierarchyid  
  Un valor del tipo de datos **hierarchyid** representa una posición en una jerarquía de árbol. Los valores de **hierarchyid** tienen las siguientes propiedades.  
   
 -   Muy compactos  
@@ -61,7 +61,7 @@ ms.locfileid: "72304953"
      Con el método [GetDescendant](../t-sql/data-types/getdescendant-database-engine.md) siempre es posible generar un miembro del mismo nivel a la derecha de cualquier nodo determinado, a la izquierda de cualquier nodo determinado, o entre dos miembros cualesquiera del mismo nivel. Se mantiene la propiedad comparison cuando se inserta o elimina un número arbitrario de nodos de la jerarquía. La mayoría de las inserciones y eliminaciones conservan la propiedad compactness. Sin embargo, las inserciones entre dos nodos generarán valores hierarchyid con una representación ligeramente menos compacta.  
   
   
-##  <a name="limits"></a> Limitaciones de hierarchyid  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> Limitaciones de hierarchyid  
  El tipo de datos **hierarchyid** tiene las siguientes limitaciones:  
   
 -   Una columna de tipo **hierarchyid** no representa automáticamente un árbol. Dependerá de la aplicación generar y asignar los valores **hierarchyid** de tal forma que la relación deseada entre las filas se refleje en los valores. Algunas aplicaciones pueden tener una columna de tipo **hierarchyid** que indica la ubicación en una jerarquía definida en otra tabla.  
@@ -71,7 +71,7 @@ ms.locfileid: "72304953"
 -   Las relaciones jerárquicas representadas por valores **hierarchyid** no se aplican como una relación de clave externa. Es posible, y a veces adecuado, establecer una relación jerárquica donde A tiene un elemento secundario B, de forma que A se elimina dejando a B con una relación con un registro no existente. Si este comportamiento no es aceptable, la aplicación debe consultar a los descendientes antes de eliminar los miembros primarios.  
   
   
-##  <a name="alternatives"></a> Cuándo utilizar alternativas a hierarchyid  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> Cuándo utilizar alternativas a hierarchyid  
  Dos alternativas a **hierarchyid** para representar los datos jerárquicos son:  
   
 -   Elemento primario/secundario  
@@ -148,7 +148,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> Estrategias de indización para los datos jerárquicos  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> Estrategias de indización para los datos jerárquicos  
  Hay dos estrategias para indizar datos jerárquicos:  
   
 -   **Con prioridad a la profundidad**  
@@ -163,7 +163,7 @@ GO
   
      En un índice con prioridad a la amplitud, todos los elementos secundarios directos de un nodo se ubican conjuntamente. Por lo tanto, los índices con prioridad a la amplitud son eficaces para responder a las consultas sobre elementos secundarios inmediatos, como "Buscar todos los empleados que informan directamente a este gerente".  
   
- Saber si es mejor tener un índice con prioridad de profundidad, con prioridad de amplitud, o ambos, y cuál de estos se debe establecer como clave de agrupación en clústeres (cuando proceda), depende de la importancia relativa de los tipos de consultas anteriores y de la importancia relativa de las operaciones SELECT frente a las de DML. Para obtener un ejemplo detallado de las estrategias de indización, vea [Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Saber si es mejor tener un índice con prioridad de profundidad, con prioridad de amplitud, o ambos, y cuál de estos se debe establecer como clave de agrupación en clústeres (cuando proceda), depende de la importancia relativa de los tipos de consultas anteriores y de la importancia relativa de las operaciones SELECT frente a las de DML. Para obtener un ejemplo detallado de las estrategias de indización, consulte [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Crear índices  
@@ -268,13 +268,13 @@ INSERT SimpleDemo
     VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="tasks"></a> Tareas relacionadas  
   
-###  <a name="migrating"></a> Migrar de elemento primario/secundario a hierarchyid  
- La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil de migrar de una estructura de elemento primario y secundario a una tabla que use **hierarchyid** consiste en usar una columna temporal o una tabla temporal para realizar el seguimiento del número de nodos en cada nivel de la jerarquía. Para obtener un ejemplo sobre cómo migrar una tabla de elemento primario/secundario, vea la lección 1 de [Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> Migrar de elemento primario/secundario a hierarchyid  
+ La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil de migrar de una estructura de elemento primario y secundario a una tabla que use **hierarchyid** consiste en usar una columna temporal o una tabla temporal para realizar el seguimiento del número de nodos en cada nivel de la jerarquía. Para ver un ejemplo sobre la migración de una tabla de elemento primario/secundario, consulte la lección 1 de [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
-###  <a name="BKMK_ManagingTrees"></a> Administrar un árbol mediante hierarchyid  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> Administrar un árbol mediante hierarchyid  
  Aunque una columna de **hierarchyid** no representa necesariamente un árbol, una aplicación puede exigir fácilmente que sí lo haga.  
   
 -   Cuando genere nuevos valores, realice una de las siguientes operaciones:  
@@ -379,7 +379,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> Exigir un árbol  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> Exigir un árbol  
  Los ejemplos anteriores muestran cómo una aplicación puede asegurarse de que se mantenga un árbol. Para exigir un árbol mediante restricciones, se puede crear una columna calculada que defina el elemento primario de cada nodo con una restricción de clave externa respecto al identificador de clave principal.  
   
 ```sql
@@ -397,7 +397,7 @@ GO
  Se prefiere este método que exige una relación cuando el código que no es de confianza para mantener el árbol jerárquico tiene acceso DML directo a la tabla. No obstante, este método puede reducir el rendimiento porque es necesario comprobar la restricción para cada operación DML.  
   
   
-###  <a name="findclr"></a> Buscar antecesores mediante CLR  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> Buscar antecesores mediante CLR  
  Una operación común, en la que se implican dos nodos en una jerarquía, es buscar el antecesor común más bajo. Esto se puede escribir en [!INCLUDE[tsql](../includes/tsql-md.md)] o CLR porque el tipo de **hierarchyid** está disponible en ambos. Se recomienda CLR porque la ejecución es más rápida.  
   
  Use el siguiente código de CLR para hacer una lista de los antecesores y buscar el antecesor común más bajo:  
@@ -450,7 +450,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> Enumerar antecesores  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> Enumerar antecesores  
  La creación de una lista de antecesores de un nodo es una operación común que sirve, por ejemplo, para mostrar la posición en una organización. Esto se puede realizar, por ejemplo, mediante una función con valores de tabla que use la clase **HierarchyId_Operations** definida anteriormente:  
   
  Usar [!INCLUDE[tsql](../includes/tsql-md.md)]:  
@@ -479,7 +479,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> Buscar el antecesor común más bajo  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> Buscar el antecesor común más bajo  
  Use la clase **HierarchyId_Operations** definida anteriormente para crear la siguiente función de [!INCLUDE[tsql](../includes/tsql-md.md)] a fin de buscar el antecesor común más bajo que implica dos nodos en una jerarquía:  
   
 ```sql
@@ -511,7 +511,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  El nodo resultante es /1/1/  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> Mover los subárboles  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Mover los subárboles  
  Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **\@oldMgr** y lo convierte (incluido **\@oldMgr**) en un subárbol de **\@newMgr**.  
   
 ```sql
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

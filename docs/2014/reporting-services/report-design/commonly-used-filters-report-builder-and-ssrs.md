@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106241"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtros de uso frecuente (Generador de informes y SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106241"
 ## <a name="filter-examples"></a>Ejemplos de filtros  
  En la tabla siguiente, se muestran ejemplos de ecuaciones de filtro que usan tipos de datos y operadores diferentes. El elemento de informe para el que se define un filtro determina el ámbito de la comparación. Por ejemplo, para un filtro definido en un conjunto de datos, **TOP % 10** es el 10 por ciento de los valores más altos del conjunto de datos; para un filtro definido en un grupo, **TOP% 10** es el 10 por ciento de los valores más altos del grupo.  
   
-|Expresión simple|Tipo de datos|Operador|Valor|Descripción|  
+|Expresión simple|Tipo de datos|Operator|Value|Descripción|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Incluye valores de datos que son mayores que 7.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Incluye los 10 valores de datos más altos.|  
@@ -46,15 +46,15 @@ ms.locfileid: "66106241"
 ## <a name="examples-with-report-parameters"></a>Ejemplos con parámetros de informe  
  En la tabla siguiente, se proporcionan ejemplos de expresiones de filtro que incluyen una referencia a un parámetro con un solo valor o con varios valores.  
   
-|Tipo de parámetro|Expresión (Filtro)|Operador|Valor|Tipo de datos|  
+|Tipo de parámetro|Expresión (Filtro)|Operator|Value|Tipo de datos|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|Un solo valor|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
-|Varios valores|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
+|Un solo valor|`[EmployeeID]`|=|`[@EmployeeID]`|Entero|  
+|Varios valores|`[EmployeeID]`|IN|`[@EmployeeID]`|Entero|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [La expresión usa en los informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298344"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
@@ -68,14 +68,14 @@ ms.locfileid: "71298344"
   
  Para obtener más información sobre cómo utilizar estas entradas de registro para supervisar y mejorar el rendimiento del flujo de datos, vea uno de los temas siguientes:  
   
--   [Performance Counters](../../integration-services/performance/performance-counters.md)  
+-   [Contadores de rendimiento](../../integration-services/performance/performance-counters.md)  
   
 -   [Características de rendimiento del flujo de datos](../../integration-services/data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>Mensajes de ejemplo de una tarea Flujo de trabajo  
  En la tabla siguiente se muestran mensajes de ejemplo de entradas de registro de un paquete muy sencillo. El paquete utiliza un origen OLE DB para extraer datos de una tabla, una transformación Ordenar para ordenar los datos y un destino OLE DB para escribir los datos en una tabla diferente.  
   
-|Entrada del registro|Mensajes|  
+|Entrada del registro|error de Hadoop|  
 |---------------|--------------|  
 |**BufferSizeTuning**|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |**OnPipelinePostEndOfRowset**|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -90,9 +90,9 @@ ms.locfileid: "71298344"
   
  Muchos eventos de registro escriben varias entradas, y los mensajes de un gran número de entradas del registro contienen datos complejos. Para facilitar la comprensión y comunicar el contenido de mensajes complejos, puede analizar el texto del mensaje. En función de la ubicación de los registros, puede usar instrucciones Transact-SQL o un componente de script para separar el texto complejo en columnas u otros formatos que considere más útiles.  
   
- Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185: Salida de origen de OLE DB: 1180: Ordenar: 1181: Entrada de ordenación: 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
+ Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185 : Salida de origen de OLE DB : 1180 : Ordenar : 1181 : Entrada de ordenación : 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
   
-|columna|Descripción|Valor|  
+|Columna|Descripción|Value|  
 |------------|-----------------|-----------|  
 |**PathID**|Valor de la propiedad **ID** de la ruta entre el origen de OLE DB y la transformación Ordenar.|1185|  
 |**PathName**|Valor de la propiedad **Name** de la ruta.|Salida de origen de OLE DB|  

@@ -21,15 +21,15 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948247"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012588"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Limita las filas devueltas en un conjunto de resultados de la consulta a un número o porcentaje de filas especificado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al usar TOP con la cláusula ORDER BY, el conjunto de resultados se limita al primer número *N* de filas ordenadas. De lo contrario, TOP devuelve el primer número *N* de filas en un orden indefinido. Use esta cláusula para especificar el número de filas devueltas de una instrucción SELECT. O bien, use TOP para especificar las filas afectadas por una instrucción INSERT, UPDATE, MERGE o DELETE.  
   
@@ -67,7 +67,7 @@ Devuelve dos o más filas que ocupan el último lugar en el conjunto de resultad
   
 Puede especificar la cláusula TOP con el argumento WITH TIES solo en instrucciones SELECT y solo si también ha especificado la cláusula ORDER BY. El orden devuelto de los registros enlazados es arbitrario. ORDER BY no afecta a esta regla.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 En una instrucción SELECT, utilice siempre una cláusula ORDER BY con la cláusula TOP. Porque es la única manera de indicar previsiblemente a qué filas afecta TOP.  
   
 Utilice OFFSET y FETCH en la cláusula ORDER BY en lugar de la cláusula TOP para implementar una solución de paginación de consulta. Una solución de paginación (es decir, el envío de fragmentos o "páginas" de datos al cliente) es más fácil de implementar mediante OFFSET y FETCH. Para obtener más información, vea [ORDER BY &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
@@ -137,7 +137,7 @@ GO
   
 Utilizando TOP y ORDER BY en una operación de subselección, se puede asegurar de que los resultados de la cláusula ORDER BY se apliquen a la cláusula TOP y no a ordenar el resultado de la operación UNION.  
   
- El conjunto de resultados es el siguiente.  
+ El conjunto de resultados es el siguiente:  
   
  ```
  Model         Color      Price  
@@ -155,13 +155,13 @@ No puede combinar TOP con OFFSET y FETCH en la misma expresión de consulta (en 
   
 ## <a name="examples"></a>Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|TOP • PERCENT|  
 |[Incluir valores equivalentes](#tie)|WITH TIES|  
 |[Limitar las filas afectadas por DELETE, INSERT o UPDATE](#DML)|DELETE • INSERT • UPDATE|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
 En los ejemplos de esta sección se muestra la funcionalidad básica de la cláusula ORDER BY con la sintaxis mínima requerida.  
   
 #### <a name="a-using-top-with-a-constant-value"></a>A. Utilizar TOP con un valor constante  
@@ -206,7 +206,7 @@ ORDER BY HireDate DESC;
 GO    
 ```  
   
-###  <a name="tie"></a> Incluir valores equivalentes  
+###  <a name="including-tie-values"></a><a name="tie"></a> Incluir valores equivalentes  
   
 #### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>A. Utilizar WITH TIES para incluir las filas que coinciden con los valores de la última fila  
 En el ejemplo siguiente se obtiene el primer `10` por ciento de los empleados que tienen los salarios más altos y se devuelven en orden descendente de acuerdo con su salario. La especificación de `WITH TIES` garantiza que también se incluyan en el conjunto de resultados los empleados con salarios iguales al salario más bajo devuelto (la última fila), aun cuando esto exceda el `10` por ciento de los empleados.  
@@ -225,7 +225,7 @@ ORDER BY Rate DESC;
 GO    
 ```  
   
-###  <a name="DML"></a> Limitar las filas afectadas por DELETE, INSERT o UPDATE  
+###  <a name="limiting-the-rows-affected-by-delete-insert-or-update"></a><a name="DML"></a> Limitar las filas afectadas por DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizar TOP para limitar el número de filas eliminadas  
 Cuando usa una cláusula TOP (*n*) con DELETE, la operación de eliminación se realiza en una selección sin definir del número *n* de filas. Es decir, la instrucción DELETE elige cualquier número (*n*) de filas que cumplen los criterios definidos en la cláusula WHERE. En el ejemplo siguiente se eliminan `20` filas de la tabla `PurchaseOrderDetail` cuyas fechas de vencimiento son anteriores al 1 de julio de 2002.  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 En el ejemplo siguiente se devuelven las primeras 31 filas que coinciden con los criterios de búsqueda. La cláusula **ORDER BY** se asegura de que las 31 filas devueltas son las primeras 31 filas según una ordenación alfabética de la columna `LastName`.  
   
 Use **TOP** sin especificar valores equivalentes.  

@@ -1,5 +1,5 @@
 ---
-title: Detalles de implementación de API de ODBC | Microsoft Docs
+title: Detalles de implementación de la API de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,19 @@ helpviewer_keywords:
 - ODBC, SQL Server-specific behaviors
 - functions [ODBC]
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022926"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   En esta sección se documentan las funciones ODBC que exhiben comportamientos concretos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se utilizan con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. No todas las funciones ODBC se documentan aquí. Los temas individuales solamente discuten cuestiones específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una función ODBC. No son una referencia completa de las funciones ODBC.  
   
- El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple la especificación ODBC 3.51 y, si está utilizando el SDK de Windows 7, la especificación ODBC 3.8. Para obtener una referencia completa de ODBC, vea el [referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en línea.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple la especificación ODBC 3.51 y, si está utilizando el SDK de Windows 7, la especificación ODBC 3.8. Para obtener una referencia completa de ODBC, vea la [Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en línea.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -131,8 +130,8 @@ ms.locfileid: "62715092"
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server Native Client &#40;ODBC&#41; referencia](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server Native Client &#40;referencia de&#41; ODBC](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [Generar aplicaciones con SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

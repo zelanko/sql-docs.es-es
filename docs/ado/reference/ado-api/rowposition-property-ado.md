@@ -17,17 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a333a2be2728f3c0b412246b0a793dae64096ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f2621e82fef8d7e9baffa9d6cc8c30c65ea476ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931222"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756208"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition (propiedad, ADO)
-Obtiene o establece OLE DB **RowPosition** objeto desde/en un **ADORecordsetConstruction** objeto. Cuando se usa **put_RowPosition** para establecer el **RowPosition** objeto resultante **Recordset** de objeto usa la **RowPosition** objeto determinar la fila actual.  
+Obtiene o establece un objeto **RowPosition** OLE DB de/en un objeto **ADORecordsetConstruction** . Cuando se usa **put_RowPosition** para establecer el objeto **rowposition** , el objeto de **conjunto de registros** resultante utiliza el objeto **rowposition** para determinar la fila actual.  
   
  Lectura/escritura  
   
@@ -40,16 +40,16 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
   
 ## <a name="parameters"></a>Parámetros  
  *ppRowPos*  
- Puntero a OLE DB **RowPosition** objeto.  
+ Puntero a un objeto **RowPosition** de OLE DB.  
   
  *PRowPos*  
- OLE DB **RowPosition** objeto.  
+ Objeto **RowPosition** OLE DB.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se establece esta propiedad, si el **conjunto de filas** objeto en el **RowPosition** objeto es diferente de la **conjunto de filas** objeto en el **Recordset**objeto, el primero sobrescribe al segundo. El mismo comportamiento se aplica a la actual **capítulo** de la **RowPosition** también.  
+ Cuando se establece esta propiedad, si el objeto de **conjunto de filas** del objeto **RowPosition** es diferente del objeto de conjunto de **filas** del objeto de **conjunto de registros** , el primero invalida el último. También se aplica el mismo comportamiento al **capítulo** actual de **RowPosition** .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Interfaz ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

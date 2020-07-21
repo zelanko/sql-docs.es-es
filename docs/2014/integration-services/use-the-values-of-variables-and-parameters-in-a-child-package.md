@@ -1,5 +1,5 @@
 ---
-title: Use los valores de Variables y parámetros de un paquete secundario | Microsoft Docs
+title: Usar los valores de variables y parámetros en un paquete secundario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054729"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420202"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  
@@ -78,7 +77,7 @@ ms.locfileid: "66054729"
   
 4.  En el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Habilitar configuraciones de paquetes**y haga clic en **Agregar**.  
   
-5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **Siguiente**.  
+5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **siguiente.**  
   
 6.  En la página Seleccionar tipo de configuración, en la lista **Tipo de configuración** , seleccione **Variable de paquete primario** y realice una de las siguientes acciones:  
   
@@ -89,11 +88,11 @@ ms.locfileid: "66054729"
   
     -   Seleccione **La ubicación de configuración se almacena en una variable de entorno** y luego, en la **lista Variable de entorno**, seleccione la variable de entorno que contenga el nombre de la variable.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Seleccionar propiedad de destino, expanda el nodo **Variable** y expanda el nodo **Propiedades** de la variable para configurarla, y luego haga clic en la propiedad que establecerá la configuración.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página Finalización del asistente, también puede modificar el nombre predeterminado de la configuración y revisar la información de configuración.  
   
@@ -103,10 +102,10 @@ ms.locfileid: "66054729"
   
 13. Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)   
- [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)  
   
   

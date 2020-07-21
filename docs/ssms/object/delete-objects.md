@@ -1,6 +1,6 @@
 ---
-title: Eliminar objetos | Microsoft Docs
-ms.custom: ''
+title: Eliminar objetos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 17a400e737a5df73c996db861ab00d72954c748a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 91ff60508e0c22ae202cd6984b5c8d5ad84cc879
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259375"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257199"
 ---
 # <a name="delete-objects"></a>Eliminar objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

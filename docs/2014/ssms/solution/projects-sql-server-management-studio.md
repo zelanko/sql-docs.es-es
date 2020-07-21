@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19d059d411f6d07ae48b8a4b8e1d851a17ca67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067335"
 ---
 # <a name="projects-sql-server-management-studio"></a>Proyectos (SQL Server Management Studio)
   Un proyecto de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] es una colección de scripts y archivos relacionados lógicamente que se pueden guardar juntos para la administración y el desarrollo de bases de datos.  
@@ -55,7 +54,7 @@ ms.locfileid: "63035693"
 |Describe cómo cambiar la información de conexión para una consulta.|[Cambiar la conexión asociada a una consulta](change-the-connection-associated-with-a-query.md)|  
 |Describe cómo cambiar las propiedades de conexión.|[Ver o cambiar las propiedades de una conexión en un proyecto](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Soluciones &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Control de código fuente del Explorador de soluciones](../../database-engine/solution-explorer-source-control.md)  

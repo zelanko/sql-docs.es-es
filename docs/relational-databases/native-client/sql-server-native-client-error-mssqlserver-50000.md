@@ -9,29 +9,27 @@ ms.topic: reference
 helpviewer_keywords:
 - 50000 [SQL Server Native Client setup error]
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63431d2f8f20159d65a02833c2f24e08d180321a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: a61882a9972016c30224e59524f897e92602ae1f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031731"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009973"
 ---
-# <a name="sql-server-native-client-error-mssqlserver50000"></a>Error de SQL Server Native Client MSSQLSERVER_50000
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+# <a name="sql-server-native-client-error-mssqlserver_50000"></a>Error de SQL Server Native Client MSSQLSERVER_50000
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
+|Nombre de producto|SQL Server|  
 |Versión del producto|11.0|  
-|Identificador del evento|50000|  
-|Origen del evento|SETUP|  
+|Id. de evento|50000|  
+|Origen de eventos|SETUP|  
 |Componente|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |Nombre simbólico||  
 |Texto del mensaje|Error de red al intentar leer el archivo '%.*ls'.|  

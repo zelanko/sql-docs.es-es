@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72909889"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
@@ -48,14 +48,14 @@ ms.locfileid: "72909889"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La utilización de `sp_helptext` para devolver la definición de una vista requiere la pertenencia al rol **público** . La utilización de `sys.sql_expression_dependencies` para buscar todas las dependencias de una vista requiere el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en `sys.sql_expression_dependencies` para la base de datos. Las definiciones de objeto del sistema, como las que se devuelven en SELECT OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72909889"
      **Server**  
      Nombre de la instancia de servidor actual.  
   
-     **Usuario**  
+     **User**  
      Nombre del usuario de esta conexión.  
   
      **Fecha de creación**  
@@ -111,7 +111,7 @@ ms.locfileid: "72909889"
      **(Nombre)**  
      Nombre de la vista actual.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Nombre de la base de datos que contiene esta vista.  
   
      **Descripción**  
@@ -120,7 +120,7 @@ ms.locfileid: "72909889"
      **Esquema**  
      Muestra el esquema al que pertenece la vista.  
   
-     **Nombre del servidor**  
+     **Nombre de servidor**  
      Nombre de la instancia de servidor actual.  
   
      **Enlace a esquema**  
@@ -147,7 +147,7 @@ ms.locfileid: "72909889"
      **(Superior)**  
      Especifica que la vista incluirá una cláusula TOP, que solo devuelve las primeras n filas o el primer n por cierto de filas en el conjunto de resultados. De forma predeterminada, la vista devolverá las diez primeras filas en el conjunto de resultados. Use esto para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente.  
   
-     **Expresión**  
+     **Expression**  
      Muestra qué porcentaje (si **Porcentaje** está establecido en **Sí**) o registros (si **Porcentaje** está establecido en **No**) devolverá la vista.  
   
      **Porcentaje**  
@@ -177,7 +177,7 @@ ms.locfileid: "72909889"
   
 4.  Seleccione **Objetos de los que depende [nombre de vista]** para mostrar los objetos a los que hace referencia la vista.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obtener la definición y propiedades de una vista  
   

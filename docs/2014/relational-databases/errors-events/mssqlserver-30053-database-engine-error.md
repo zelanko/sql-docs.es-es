@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b753397b4791d658692a8cb63dbc6a3d779c621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b53e86df555ea5e9e9abc3e3afbf959dde74e0b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914362"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551860"
 ---
-# <a name="mssqlserver30053"></a>MSSQLSERVER_30053
+# <a name="mssqlserver_30053"></a>MSSQLSERVER_30053
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|30053|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|30053|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
 |Texto del mensaje|Se agotó el tiempo de espera de separación de palabras para la cadena de consulta de texto completo. Esto puede ocurrir si el divisor de palabras tarda mucho tiempo en procesar la cadena de consulta de texto completo, o si se está ejecutando un gran número de consultas en el servidor. Intente ejecutar de nuevo la consulta con menos carga.|  
@@ -56,10 +55,10 @@ ms.locfileid: "62914362"
 |La configuración del proceso de demonio de filtro es incorrecta.|Asegúrese de que está utilizando la contraseña actual y que una directiva de dominio no está evitando que la cuenta de demonio de filtro se registre.|  
 |Se está ejecutando un alto volumen de carga de trabajo de consultas en la instancia de servidor.|Intente ejecutar de nuevo la consulta con menos carga.|  
   
-## <a name="see-also"></a>Vea también  
- [Establecer la cuenta del servicio para el selector del demonio de filtro completo](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
+## <a name="see-also"></a>Consulte también  
+ [Establecer la cuenta de servicio para el selector de demonio de filtro de texto completo](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Búsqueda de texto completo](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [sp_help_fulltext_system_components &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar filtros para búsquedas](../search/configure-and-manage-filters-for-search.md)  
   

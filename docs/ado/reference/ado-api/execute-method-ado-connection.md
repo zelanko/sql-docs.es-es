@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el método (conexión de ADO) | Microsoft Docs
+title: Método execute (conexión ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932890"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755094"
 ---
 # <a name="execute-method-ado-connection"></a>Execute (método) (conexión de ADO)
-Ejecuta la consulta especificada, instrucción SQL, procedimiento almacenado o texto específico del proveedor.  
+Ejecuta la consulta, la instrucción SQL, el procedimiento almacenado o el texto específico del proveedor especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,35 +35,35 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un [conjunto de registros ADO (objetos)](../../../ado/reference/ado-api/recordset-object-ado.md) referencia de objeto.  
+ Devuelve una referencia de objeto de [objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 #### <a name="parameters"></a>Parámetros  
  *CommandText*  
- Un **cadena** valor que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o el texto específico del proveedor para ejecutar. **Opcionalmente,** , se pueden usar los nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo si un nombre de tabla de "Clientes" se utiliza, ADO antepondrá automáticamente la sintaxis estándar Select de SQL para formar y pasar "SELECT * FROM Customers" como un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
+ Valor de **cadena** que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o un texto específico del proveedor que se va a ejecutar. **Opcionalmente**, se pueden usar nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo, si se usa un nombre de tabla "Customers", ADO agregará automáticamente la sintaxis de Select de SQL estándar para formar y pasar "SELECT * FROM Customers" como una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
   
  *RecordsAffected*  
- Opcional. Un **largo** variable a la que el proveedor devuelve el número de registros que se ven afectados por la operación.  
+ Opcional. Variable **larga** a la que el proveedor devuelve el número de registros a los que afecta la operación.  
   
  *Opciones*  
- Opcional. Un **largo** valor que indica cómo el proveedor debe evaluar el argumento CommandText. Puede ser una máscara de bits de uno o varios [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valores.  
+ Opcional. Un valor **Long** que indica cómo el proveedor debe evaluar el argumento CommandText. Puede ser una máscara de máscara de uno o más valores [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
- **Tenga en cuenta** uso el **ExecuteOptionEnum** valor **adExecuteNoRecords** para mejorar el rendimiento, ya que minimiza el procesamiento interno y para las aplicaciones que se va a trasladar desde Visual Basic 6.0.  
+ **Nota:** Use el valor **adExecuteNoRecords** de **ExecuteOptionEnum** para mejorar el rendimiento al minimizar el procesamiento interno y las aplicaciones que va a migrar desde Visual Basic 6,0.  
   
- No use **adExecuteStream** con el **Execute** método de un **conexión** objeto.  
+ No utilice **adExecuteStream** con el método **Execute** de un objeto **Connection** .  
   
- No utilice los valores adCmdFile ni adCmdTableDirect con Execute. Solo se pueden usar estos valores como opciones con la [método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) y [método Requery](../../../ado/reference/ado-api/requery-method.md) métodos de un **Recordset**.  
+ No use los valores CommandTypeEnum de adCmdFile o adCmdTableDirect con Execute. Estos valores solo se pueden usar como opciones con el [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) y los métodos de [método Requery](../../../ado/reference/ado-api/requery-method.md) de un **conjunto de registros**.  
   
 ## <a name="remarks"></a>Comentarios  
- Mediante el **Execute** método en un [conexión ADO (objetos)](../../../ado/reference/ado-api/connection-object-ado.md) objeto ejecuta cualquier consulta que se pase al método en el argumento CommandText en la conexión especificada. Si el argumento CommandText especifica una consulta que devuelva filas, los resultados que genera la ejecución se almacenan en un nuevo **Recordset** objeto. Si el comando no está diseñado para devolver resultados (por ejemplo, una consulta UPDATE de SQL) el proveedor devuelve **nada** siempre que la opción **adExecuteNoRecords** especificado; en caso contrario, Execute devuelve un cerrado **Recordset**.  
+ El uso del método **Execute** en un objeto de [objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) ejecuta la consulta que se pasa al método en el argumento CommandText en la conexión especificada. Si el argumento CommandText especifica una consulta que devuelve filas, los resultados generados por la ejecución se almacenan en un nuevo objeto de **conjunto de registros** . Si el comando no está pensado para devolver resultados (por ejemplo, una consulta de actualización de SQL), el proveedor no devuelve **nada** mientras se especifique la opción **adExecuteNoRecords** ; de lo contrario, Execute devuelve un **conjunto de registros**cerrado.  
   
- El valor devuelto **Recordset** objeto siempre es un cursor de solo lectura, solo hacia delante. Si necesita un **Recordset** con más funcionalidad, cree primero un **Recordset** objeto con la configuración de la propiedad deseada y, después, usar el **Recordset** objeto [ Método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para ejecutar la consulta y devolver el tipo de cursor deseados.  
+ El objeto de **conjunto de registros** devuelto siempre es un cursor de solo lectura y de solo avance. Si necesita un objeto de **conjunto de registros** con más funcionalidad, cree primero un objeto de conjunto de **registros** con los valores de propiedad deseados y, a continuación, use el método [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) del objeto de **conjunto de registros** para ejecutar la consulta y devolver el tipo de cursor deseado.  
   
- El contenido de la *CommandText* argumento son específico del proveedor y puede ser una sintaxis SQL estándar o cualquier formato de comando especial que admite el proveedor.  
+ El contenido del argumento *CommandText* es específico del proveedor y puede ser una sintaxis SQL estándar o cualquier formato de comando especial que admita el proveedor.  
   
- Se emitirá un evento ExecuteComplete cuando finalice esta operación.  
+ Cuando finalice esta operación, se emitirá un evento ExecuteComplete.  
   
 > [!NOTE]
->  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

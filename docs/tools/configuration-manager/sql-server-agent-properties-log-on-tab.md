@@ -1,6 +1,6 @@
 ---
-title: Propiedades de Agente SQL Server (pestaña Iniciar sesión) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de Agente SQL Server (pestaña Iniciar sesión)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ce0cf176198a0b26c4812583c4ea89411fedab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 1b9ec7ce2d0280f551953bf14f8494b7bd80becb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024221"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307157"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Propiedades de Agente SQL Server (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68024221"
  **Iniciar**  
  Inicie el servicio.  
   
- **Detener**  
+ **Detención**  
  Detenga el servicio.  
   
  **Pausar**  

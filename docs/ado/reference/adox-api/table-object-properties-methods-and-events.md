@@ -1,5 +1,5 @@
 ---
-title: Propiedades de objetos, métodos y eventos de tabla | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto Table | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Table object [ADOX], members
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c52e65ffe7d258b3707927b1f996be3a3a5f3dd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fc0ccdc8747b69cff4e9b57ae27c030dbdb9be16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965177"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763296"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Table
-## <a name="propertiescollections"></a>Propiedades y colecciones  
+## <a name="propertiescollections"></a>Propiedades/colecciones  
  [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
  [DateCreated (propiedad, ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
@@ -42,8 +42,8 @@ ms.locfileid: "67965177"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

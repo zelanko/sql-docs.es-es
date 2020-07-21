@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058215"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436902"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar una directiva de firma estableciendo un valor del Registro
   Se puede usar un valor opcional del Registro para administrar la directiva de una organización para la carga de paquetes firmados o sin firmar. Si utiliza este valor del Registro, debe crearlo en cada equipo en el que se ejecutarán los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y en el que desea exigir el cumplimiento de la directiva. Una vez establecido el valor del Registro, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprobará las firmas antes de cargar los paquetes.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058215"
   
  En la tabla siguiente se enumeran los valores válidos de los datos DWORD y su directiva asociada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|Sin restricción administrativa.|  
 |1|Bloquear firmas no válidas.<br /><br /> Este valor no bloquea los paquetes sin firmar.|  
@@ -46,9 +45,9 @@ ms.locfileid: "66058215"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar una directiva de firma para paquetes  
   
-1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
+1.  En el menú **Inicio**, haga clic en **Ejecutar**.  
   
-2.  En el cuadro de diálogo Ejecutar, escriba `Regedit`y, a continuación, haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo Ejecutar, escriba `Regedit` y, a continuación, haga clic en **Aceptar**.  
   
 3.  Busque la clave del Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,16 +55,16 @@ ms.locfileid: "66058215"
   
 5.  Actualice el nombre del nuevo valor a `BlockedSignatureStates`.  
   
-6.  Haga clic en `BlockedSignatureStates` y haga clic en **modificar**.  
+6.  Haga clic con el botón secundario `BlockedSignatureStates` y haga clic en **modificar**.  
   
 7.  En el cuadro de diálogo **Editar valor DWORD** , escriba el valor 0, 1, 2 o 3.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En el menú **Archivo** , haga clic en **Salir**.  
   
-## <a name="see-also"></a>Vea también  
- [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

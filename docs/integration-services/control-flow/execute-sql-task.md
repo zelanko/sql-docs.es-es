@@ -21,10 +21,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298304"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
@@ -147,7 +147,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Administrador de conexiones con SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Conexión**  
+ **Connection**  
  Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…** >.  
   
  **SQLSourceType**  
@@ -157,7 +157,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para una instrucción Transact-SQL. Si selecciona este valor, se mostrará la opción dinámica **SQLStatement**.|  
 |**Conexión de archivos**|Seleccione un archivo que contenga una instrucción Transact-SQL. Si selecciona esta opción, se mostrará la opción dinámica **FileConnection**.|  
@@ -171,7 +171,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
   
  **Temas relacionados:**  [Ejecución preparada](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **Examinar**  
+ **Browse**  
  Busque un archivo que contenga una instrucción SQL en el cuadro de diálogo **Abrir** . Seleccione el archivo en el que desea copiar el contenido del archivo como una instrucción SQL en la propiedad **SQLStatement** .  
   
  **Generar consulta**  
@@ -225,10 +225,10 @@ Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de
   
  Este valor garantiza que el proveedor asigna el espacio suficiente para los valores de parámetro de longitud variable.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una asignación de parámetros.  
   
- **Quitar**  
+ **Remove**  
  Seleccione una asignación de parámetros de la lista y después haga clic en **Quitar**.  
  
 ## <a name="result-set-page---execute-sql-task-editor"></a>Página Conjunto de resultados: Editor de la tarea Ejecutar SQL
@@ -246,14 +246,14 @@ Utilice la página **Conjunto de resultados** del cuadro de diálogo **Editor de
  **Nombre de variable**  
  Para asignar el conjunto de resultados a una variable, seleccione una variable o haga clic en \<**Nueva variable…** > para agregar una variable nueva con el cuadro de diálogo **Agregar variable**.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una asignación de conjuntos de resultados.  
   
- **Quitar**  
+ **Remove**  
  Seleccione de la lista una asignación de conjuntos de resultados y, después, haga clic en **Quitar**.  
  
 ## <a name="parameters-in-the-execute-sql-task"></a>Parámetros en la tarea Ejecutar SQL
-Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de **input** , parámetros de **output** entrada y códigos de retorno. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la tarea Ejecutar SQL admite los tipos de parámetros **Input**, **Output** y **ReturnValue**. Utilice el tipo **Input** para parámetros de entrada, **Output** para parámetros de salida y **ReturnValue** para códigos de retorno.  
+Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de **input** , parámetros de **output** entrada y códigos de retorno. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la tarea Ejecutar SQL admite los tipos de parámetros **Input**, **Output**y **ReturnValue** . Utilice el tipo **Input** para parámetros de entrada, **Output** para parámetros de salida y **ReturnValue** para códigos de retorno.  
   
 > [!NOTE]  
 >  Solo puede usar parámetros en una tarea Ejecutar SQL si el proveedor de datos los admite.  
@@ -272,14 +272,14 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   [Obtener valores de códigos de retorno](#Return_codes)    
   
-###  <a name="Parameter_names_and_markers"></a> Nombres y marcadores de parámetros  
+###  <a name="parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a> Nombres y marcadores de parámetros  
  En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el tipo de administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que el comando SQL use un marcador de parámetro con el formato **\@varParameter**, mientras que el tipo de conexión OLE DB necesita el signo de interrogación (?) como marcador de parámetro.  
   
  Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo \@, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
   
  La tabla siguiente resume los requisitos de los comandos SQL para los tipos de Administrador de conexiones que puede utilizar la tarea Ejecutar SQL.  
   
-|Tipo de conexión|Marcador de parámetro|Nombre del parámetro|Comando SQL (ejemplo)|  
+|Tipo de conexión|Marcador de parámetro|Nombre de parámetro|Comando SQL (ejemplo)|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nombre de parámetro>|\@\<nombre de parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
@@ -307,14 +307,14 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
  Cuando se usa un Administrador de conexiones OLE DB, no se pueden utilizar subconsultas con parámetros, ya que la tarea Ejecutar SQL no puede derivar la información de los parámetros a través del proveedor OLE DB. Sin embargo, puede utilizar una expresión para concatenar los valores de los parámetros en la cadena de consulta y establecer la propiedad SqlStatementSource de la tarea.  
   
-###  <a name="Date_and_time_data_types"></a> Usar parámetros con tipos de datos de fecha y hora  
+###  <a name="use-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a> Usar parámetros con tipos de datos de fecha y hora  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexiones ADO y ADO.NET  
  Al leer datos de los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( **time** y **datetimeoffset**), una tarea Ejecutar SQL que usa el Administrador de conexiones ADO o [!INCLUDE[vstecado](../../includes/vstecado-md.md)] tiene los requisitos adicionales siguientes:  
   
--   Para los datos de **time**, un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que estos datos se almacenen en un parámetro cuyo tipo sea **Input** o **Output**, y cuyo tipo de datos sea **string**.  
+-   Para los datos de **time** , un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que estos datos se almacenen en un parámetro cuyo tipo sea **Input** o **Output**, y cuyo tipo de datos sea **string**.  
   
--   Con los datos de **datetimeoffset**, un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que estos datos estén almacenados en uno de los parámetros siguientes:  
+-   Con los datos de **datetimeoffset** , un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] necesita que estos datos estén almacenados en uno de los parámetros siguientes:  
   
     -   Un parámetro cuyo tipo de parámetro es **Input** y cuyo tipo de datos es **string**.  
   
@@ -351,12 +351,12 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> -O bien-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> O bien<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  
   
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  
   
-###  <a name="WHERE_clauses"></a> Usar parámetros en cláusulas WHERE  
+###  <a name="use-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a> Usar parámetros en cláusulas WHERE  
  Los comandos SELECT, INSERT, UPDATE y DELETE suelen incluir cláusulas WHERE para especificar filtros que definen las condiciones que debe cumplir cada fila de las tablas de origen con el fin de satisfacer los requisitos de un comando SQL. Los parámetros proporcionan los valores de filtro en las cláusulas WHERE.  
   
  Puede utilizar marcadores de parámetros para proporcionar valores de parámetros de forma dinámica. Las reglas para los marcadores y nombres de parámetros que se pueden utilizar en la instrucción SQL dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL.  
@@ -377,10 +377,10 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   El tipo de conexión de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] utiliza los nombres de parámetros \@parmMinProductID y \@parmMaxProductID.  
   
-###  <a name="Stored_procedures"></a> Usar parámetros con procedimientos almacenados  
+###  <a name="use-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a> Usar parámetros con procedimientos almacenados  
  Los comandos SQL que ejecutan procedimientos almacenados también pueden usar la asignación de parámetros. Las reglas sobre el uso de marcadores y nombres de parámetros dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL, del mismo modo que sucede con las consultas con parámetros.  
   
- La tabla siguiente enumera ejemplos del comando EXEC por tipo de Administrador de conexiones. Los ejemplos ejecutan el procedimiento almacenado **uspGetBillOfMaterials** en [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. El procedimiento almacenado usa los parámetros de `@StartProductID` entrada `@CheckDate` **y** .  
+ La tabla siguiente enumera ejemplos del comando EXEC por tipo de Administrador de conexiones. Los ejemplos ejecutan el procedimiento almacenado **uspGetBillOfMaterials** en [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]. El procedimiento almacenado usa los parámetros de **entrada** `@StartProductID` y `@CheckDate`.  
   
 |Tipo de conexión|Sintaxis de EXEC|  
 |---------------------|-----------------|  
@@ -462,9 +462,9 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
     > [!IMPORTANT]  
     >  El orden de las asignaciones de parámetros debe ser el mismo que el orden en que aparecen los parámetros en la instrucción SQL.  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
 
-##  <a name="Return_codes"></a> Obtener los valores de códigos de retorno  
+##  <a name="get-the-values-of-return-codes"></a><a name="Return_codes"></a> Obtener los valores de códigos de retorno  
  Un procedimiento almacenado puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Para implementar códigos de retorno en la tarea Ejecutar SQL, debe utilizar los parámetros del tipo **ReturnValue** .  
   
  La tabla siguiente enumera, por tipo de conexión, algunos ejemplos de comandos EXEC que implementan códigos de retorno. Todos los ejemplos utilizan un parámetro de **input** . Las reglas del uso de marcadores y nombres de parámetros son las mismas para todos los tipos de parámetros: **Input**, **Output** y **ReturnValue**.  
@@ -493,7 +493,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
   
 -   [Rellenar una variable con un conjunto de resultados](#Populate_variable_with_result_set)  
   
-###  <a name="Result_set_type"></a> Especificar un tipo de conjunto de resultados  
+###  <a name="specify-a-result-set-type"></a><a name="Result_set_type"></a> Especificar un tipo de conjunto de resultados  
  La tarea Ejecutar SQL admite los siguientes tipos de conjuntos de resultados:  
   
 -   El conjunto de resultados **Ninguno** se usa cuando la consulta no devuelve ningún resultado. Por ejemplo, este conjunto de resultados se utiliza para consultas que agregan, cambian y eliminan registros de una tabla.  
@@ -506,7 +506,7 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
   
  Si la tarea Ejecutar SQL utiliza el conjunto de resultados **Conjunto de resultados completo** y la consulta devuelve varios conjuntos de filas, la tarea solo devuelve el primero de ellos. Si el primer conjunto de filas genera un error, la tarea lo notifica. Si otros conjuntos de filas generan errores, la tarea no los notifica.  
   
-###  <a name="Populate_variable_with_result_set"></a> Rellenar una variable con un conjunto de resultados  
+###  <a name="populate-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a> Rellenar una variable con un conjunto de resultados  
  Puede enlazar el conjunto de resultados devuelto por una consulta con una variable definida por el usuario si el tipo del conjunto de resultados es una fila individual, un conjunto de filas o XML.  
   
  Si el tipo de conjunto de resultados es **Fila única**, puede enlazar una columna del resultado devuelto a una variable utilizando el nombre de la columna como nombre del conjunto de resultados, o puede utilizar la posición ordinal de la columna en la lista de columnas como dicho nombre. Por ejemplo, el nombre del conjunto de resultados para la consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` puede ser **Color** o **0**. Si la consulta devuelve varias columnas y desea obtener acceso a los valores de todas ellas, debe enlazar cada columna a una variable distinta. Si asigna columnas a variables utilizando números como nombre de los conjuntos de resultados, los números reflejan el orden de aparición de las columnas en la lista de columnas de la consulta. Por ejemplo, en la consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, puede utilizar 0 para la columna **Color** y 1 para la columna **ListPrice** . La capacidad de utilizar un nombre de columna como nombre del conjunto de resultados dependerá del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  
@@ -526,9 +526,9 @@ En esta sección se describe cómo utilizar una instrucción SQL con parámetros
 |Tipo de conjunto de resultados|Tipo de datos de variable|Tipo de objeto|  
 |---------------------|---------------------------|--------------------|  
 |Fila única|Cualquier tipo que sea compatible con la columna de tipo del conjunto de resultados.|No aplicable|  
-|Conjunto de resultados completo|**Objeto**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un **Recordset**de ADO.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], el objeto devuelto es un objeto **System.Data.DataSet**.<br /><br /> Puede utilizar una tarea Script para tener acceso al objeto **System.Data.DataSet** , tal como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
+|Conjunto de resultados completo|**Object**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un **Recordset**de ADO.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , el objeto devuelto es un objeto **System.Data.DataSet**.<br /><br /> Puede utilizar una tarea Script para tener acceso al objeto **System.Data.DataSet** , tal como se muestra en el ejemplo siguiente.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
 |XML|**String**|**String**|  
-|XML|**Objeto**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un objeto **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], el objeto devuelto es un objeto **System.Xml.XmlDocument**.|  
+|XML|**Object**|Si la tarea usa un administrador de conexiones nativo, incluidos los administradores de conexiones ADO, OLE DB, Excel y ODBC, el objeto devuelto es un objeto **MSXML6.IXMLDOMDocument**.<br /><br /> Si la tarea usa un administrador de conexiones administrado, como el administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , el objeto devuelto es un objeto **System.Xml.XmlDocument**.|  
   
  La variable puede definirse en el ámbito de la tarea Ejecutar SQL o en el ámbito del paquete. Si la variable tiene ámbito de paquete, el conjunto de resultados estará disponible para otras tareas y otros contenedores del paquete, así como para cualquier paquete ejecutado por la tarea Ejecutar paquete o Ejecutar paquete DTS 2000.  
   
@@ -563,7 +563,7 @@ En esta sección se describe cómo crear una asignación entre un conjunto de re
   
      En general, puede usar el nombre de columna como nombre del conjunto de resultados, o puede usar la posición ordinal de la columna en la lista de columnas como conjunto de resultados. La posibilidad de usar un nombre de columna como el nombre del conjunto de resultados depende del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
 
 ## <a name="troubleshoot-the-execute-sql-task"></a>Solucionar problemas de la tarea Ejecutar SQL  
  Puede registrar las llamadas que realiza la tarea Ejecutar SQL a proveedores de datos externos. Puede usar esta capacidad de registro para solucionar problemas relacionados con los comandos SQL que ejecuta la tarea Ejecutar SQL. Para registrar las llamadas realizadas por la tarea Ejecutar SQL a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  

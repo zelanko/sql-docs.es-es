@@ -1,20 +1,20 @@
 ---
-title: Asociados de desarrollo de SQL Server | Microsoft Docs
+title: Asociados de desarrollo de SQL Server
 description: Listas de asociados externos que cuentan con soluciones de desarrollo para Server.
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c1f3a1e85fa9d6b8e762a5d3fa68e65b098f9cdd
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68132865"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75656822"
 ---
 # <a name="sql-server-development-partners"></a>Asociados de desarrollo de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ Para admitir el desarrollo de soluciones de base de datos de SQL Server, elija e
 Para más información sobre otros asociados, consulte los artículos sobre [asociados de alta disponibilidad y recuperación ante desastres][hadr_partners], [asociados de administración][management_partners] y [asociados de supervisión][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -42,7 +42,7 @@ Para más información sobre otros asociados, consulte los artículos sobre [aso
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.com/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

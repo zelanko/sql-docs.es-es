@@ -10,15 +10,14 @@ helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 541531de470991c84d04a60d6829e3333c78ae3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc2cef2a298b78d3f2186b269b0feb21d3400bcb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897502"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437242"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (expresión de SSIS)
   Devuelve una expresión de caracteres tras quitar todos los espacios iniciales en blanco.  
@@ -40,7 +39,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  LTRIM solo funciona con el tipo de datos DT_WSTR. Un argumento *character_expression* que sea un literal de cadena o una columna de datos con el tipo de datos DT_STR se convertirá implícitamente al tipo de datos DT_WSTR antes de que LTRIM realice su operación. Los otros tipos de datos deben convertirse explícitamente al tipo de datos DT_WSTR. Para obtener más información, vea [Tipos de datos de Integration Services](../data-flow/integration-services-data-types.md) y [Conversión &#40;expresión de SSIS&#41;](cast-ssis-expression.md).  
   
  LTRIM devuelve un resultado NULL si el valor del argumento es NULL.  
@@ -64,7 +63,7 @@ LTRIM(FirstName)
 LTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RTRIM &#40;expresión de SSIS&#41;](trim-ssis-expression.md)   
  [TRIM &#40;expresión de SSIS&#41;](trim-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  

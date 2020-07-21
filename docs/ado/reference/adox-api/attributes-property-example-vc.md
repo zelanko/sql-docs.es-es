@@ -1,5 +1,5 @@
 ---
-title: Atributos de ejemplo de la propiedad (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad Attributes (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1a234817f40809185c3c4cdb8fbcd2d10e5833db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b1d3da3d5228345f6f6ae995718b641ecaead89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967094"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763986"
 ---
 # <a name="attributes-property-example-vc"></a>Ejemplo de propiedad Attributes (VC++)
-Este ejemplo se muestra el [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). Si se establece en **adColNullable** permite al usuario establecer el valor de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro que no se conocen los datos y un registro donde los datos no se aplican.  
+En este ejemplo se muestra la propiedad [attributes](../../../ado/reference/adox-api/attributes-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md). Si se establece en **adColNullable** , el usuario puede establecer el valor de un [campo](../../../ado/reference/ado-api/field-object.md) de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro en el que no se conocen los datos y un registro en el que los datos no se aplican.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -179,7 +179,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in AttributesX...." << endl;  
+      cout << "Error occurred in AttributesX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -202,6 +202,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Atributos (propiedad, ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
+## <a name="see-also"></a>Consulte también  
+ [Attributes (propiedad, ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

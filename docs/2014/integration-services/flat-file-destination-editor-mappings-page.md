@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de archivo (página asignaciones) planos | Microsoft Docs
+title: Editor de destino de archivos planos (página asignaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31caf9655f95b2f1083e1ed48fb482d7eed7cb6c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058679"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425512"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de destino de archivos planos (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de archivos planos** para asignar columnas de entrada a columnas de destino.  
@@ -34,12 +33,12 @@ ms.locfileid: "66058679"
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles a columnas de entrada.  
   
  **Columna de entrada**  
- Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione **\<omitir>** para excluir la columna de los resultados.  
+ Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione esta **\<ignore>** información para excluir la columna de la salida.  
   
  **Columna de destino**  
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de archivos planos &#40;página Administrador de conexiones&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   

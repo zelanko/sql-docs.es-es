@@ -10,27 +10,27 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: c8094953924958f8f00db6d03ebafef0435223de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673243"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información sobre las condiciones asociadas a los mensajes de eventos de ejecución, para las ejecuciones en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|Context_id|BIGINT|Identificador único del contexto del error.|  
-|Event_message_id|BIGINT|Identificador único del mensaje con el que el contexto se relaciona.|  
-|Context_depth|INT|A medida que la profundidad aumenta, el contexto se elija del error. Cuando se produce un error, la profundidad del contexto comienza en 1. El valor 0 indica el estado del paquete antes de que se inicie la ejecución.|  
+|Context_id|bigint|Identificador único del contexto del error.|  
+|Event_message_id|bigint|Identificador único del mensaje con el que el contexto se relaciona.|  
+|Context_depth|int|A medida que la profundidad aumenta, el contexto se elija del error. Cuando se produce un error, la profundidad del contexto comienza en 1. El valor 0 indica el estado del paquete antes de que se inicie la ejecución.|  
 |Package_path|Nvarchar(max)|Ruta de acceso del origen del contexto.|  
 |Context_type|SMALLINT|Tipo del objeto que es el origen del contexto. Consulte la sección **Comentarios** para obtener una lista de tipos de contexto.|  
 |Context_source_name|Nvarchar(4000)|Nombre del objeto que es el origen del contexto.|  
@@ -38,7 +38,7 @@ ms.locfileid: "71296674"
 |Property_name|Nvarchar(4000)|Nombre de la propiedad asociada al origen del contexto.|  
 |Property_value|Sql_variant|Valor de la propiedad asociada al origen del contexto.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se muestran los tipos de contexto.  
   
 ||||  

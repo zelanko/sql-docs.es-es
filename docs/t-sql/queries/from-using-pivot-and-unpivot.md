@@ -1,6 +1,6 @@
 ---
 title: Uso de PIVOT y UNPIVOT | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para los operadores relacionales PIVOT y UNPIVOT. Use estos operadores en instrucciones SELECT para modificar una expresión con valores de tabla en otra tabla.
 ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,16 +24,16 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 0ffc3d6b3ec03d8903124e1fd75515a93fd43cd3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305179"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999197"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: uso de PIVOT y UNPIVOT
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Se pueden usar los operadores relacionales `PIVOT` y `UNPIVOT` para modificar una expresión con valores de tabla en otra tabla. `PIVOT` gira una expresión con valores de tabla al convertir los valores únicos de una columna en la expresión en varias columnas en la salida. Y `PIVOT` ejecuta agregaciones donde se requieren en los valores de columna restantes que se desean en la salida final. `UNPIVOT` realiza la operación contraria a PIVOT girando las columnas de una expresión con valores de tabla a valores de columna.  
   
@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los identificadores de columna de la cláusula `UNPIVOT` siguen la intercalación del catálogo. Para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], la intercalación es siempre `SQL_Latin1_General_CP1_CI_AS`. Para las bases de datos parcialmente independientes de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], la intercalación es siempre `Latin1_General_100_CI_AS_KS_WS_SC`. Si la columna se combina con otras columnas, se necesita una cláusula COLLATE (`COLLATE DATABASE_DEFAULT`) para evitar conflictos.  
 
   
@@ -157,6 +157,8 @@ Los valores únicos devueltos por la columna `EmployeeID` se convierten en campo
   
 > [!IMPORTANT]  
 >  Cuando se usan funciones de agregado con `PIVOT`, la presencia de valores NULL en la columna de valores no se tiene en cuenta cuando se calcula una agregación.  
+
+## <a name="unpivot-example"></a>Ejemplo de UNPIVOT
   
 `UNPIVOT` realiza casi la operación inversa de `PIVOT`, girando columnas en filas. Suponga que la tabla producida en el ejemplo anterior se almacena en la base de datos como `pvt` y que desea girar los identificadores de columna `Emp1`, `Emp2`, `Emp3`, `Emp4` y `Emp5` a valores de fila que correspondan a un determinado proveedor. Como tal, debe identificar dos columnas adicionales. La columna que contendrá los valores de columna que se están girando (`Emp1`, `Emp2`,...) se denominará `Employee` y la columna que contendrá los valores que existen actualmente en las columnas que se giran se denominará `Orders`. Estas columnas corresponden a *columna_dinámica* y *columna_de_valor*, respectivamente, en la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta es la consulta.  
   

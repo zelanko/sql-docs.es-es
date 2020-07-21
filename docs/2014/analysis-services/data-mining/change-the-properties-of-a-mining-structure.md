@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b56fc1d00fe639d78d5f01fe44554b7fe2d7cc7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085862"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524961"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>Cambiar las propiedades de una estructura de minería de datos
   Hay dos tipos de propiedades en una estructura de minería de datos que pueden modificarse:  
@@ -40,7 +39,7 @@ ms.locfileid: "66085862"
   
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
   
   

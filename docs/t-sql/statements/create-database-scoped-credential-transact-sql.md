@@ -22,29 +22,31 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 233068e84dca3d7d61e10867443cf30bbf942a59
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 0283446412b8556646aed49b4f27ebc4e22c68da
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798361"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392773"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Crea una credencial de base de datos. Una credencial de base de datos no está asignada a un usuario de base de datos o de inicio de sesión de servidor. La base de datos utiliza la credencial para acceder a la ubicación externa siempre que la base de datos realice una operación que requiera acceso.
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis
 
-``` 
+```syntaxsql
 CREATE DATABASE SCOPED CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -52,11 +54,14 @@ WITH IDENTITY = 'identity_name'
 
 IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
+> [!NOTE]
+WITH IDENTITY no es necesario si el contenedor de Azure Blob Storage está habilitado para el acceso anónimo. Para ver un ejemplo en el que se consulta Azure Blob Storage, consulte [Importación en una tabla desde un archivo almacenado en Azure Blob Storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
+
 SECRET **="** _secreto_ **"** Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar datos de Azure Blob Storage a SQL DW o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.
 > [!WARNING]
 > El valor de clave SAS debe empezar con un signo de interrogación (“?”). Cuando use la clave SAS, debe quitar el símbolo “?” inicial. Si no lo hace, puede que se bloquee su trabajo.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una credencial con ámbito de base de datos es un registro que contiene la información de autenticación necesaria para conectarse a un recurso fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La mayoría de las credenciales incluyen un usuario y una contraseña de Windows.
 
@@ -107,7 +112,8 @@ En el ejemplo siguiente se crea una credencial con ámbito de base de datos que 
 -- Create a db master key if one does not already exist, using your own password.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 
--- Create a database scoped credential.CREATE DATABASE SCOPED CREDENTIAL MyCredentials
+-- Create a database scoped credential.
+CREATE DATABASE SCOPED CREDENTIAL MyCredentials
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ```
@@ -126,7 +132,7 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 -- Create a database scoped credential.
 CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
-    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
+    IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>',
     SECRET = '<key>'
 ;
 ```

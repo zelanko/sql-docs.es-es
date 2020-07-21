@@ -1,5 +1,5 @@
 ---
-title: Importación de SQL Server y el Asistente para exportación | Microsoft Docs
+title: Asistente para importación y exportación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,23 +20,22 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 726be9118269eb15e0741c1611a75071a88f667a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768172"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425122"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>Asistente para importación y exportación de SQL Server
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard ofrece el método más sencillo para crear un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete que copia datos de un origen a un destino.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación de ofrece el método más sencillo para crear un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete que copia datos de un origen a un destino.  
   
 > [!NOTE]  
 >  En un equipo de 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala la versión de 64 bits del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Sin embargo, algunos orígenes de datos, como Access o Excel, solo tienen un proveedor de 32 bits disponible. Para trabajar con estos orígenes de datos, podría tener que instalar y ejecutar la versión de 32 bits del asistente. Para instalar la versión de 32 bits del asistente, seleccione Herramientas cliente o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la instalación.  
   
- Puede iniciar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el menú Inicio, desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o en el símbolo del sistema. Para obtener más información, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Puede iniciar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el menú Inicio, desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o en el símbolo del sistema. Para obtener más información, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede copiar datos entre orígenes de datos para los que esté disponible un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] administrado o un proveedor OLE DB nativo. La lista de proveedores disponibles incluye los orígenes de datos siguientes:  
   
@@ -50,18 +49,18 @@ ms.locfileid: "62768172"
   
  Algunas características del asistente funcionan de forma diferente dependiendo del entorno en el que se inicie:  
   
--   Si inicia el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importación y exportación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecutar el paquete inmediatamente activando la **ejecutar inmediatamente** casilla de verificación. Esta casilla está activada de forma predeterminada y el paquete se ejecuta de inmediato.  
+-   Si inicia el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ejecute el paquete inmediatamente seleccionando la casilla **Ejecutar inmediatamente** . Esta casilla está activada de forma predeterminada y el paquete se ejecuta de inmediato.  
   
-     También puede decidir si desea guardar el paquete en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el sistema de archivos. Si selecciona guardar el paquete, también debe especificar un nivel de protección de paquetes. Para obtener más información acerca de los niveles de protección de paquetes, consulte [Control del acceso a datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
+     También puede decidir si desea guardar el paquete en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el sistema de archivos. Si selecciona guardar el paquete, también debe especificar un nivel de protección de paquetes. Para obtener más información acerca de los niveles de protección de paquetes, consulte [Access Control de datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
   
      Una vez que el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haya creado el paquete y copiado los datos, puede utilizar el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para abrir y cambiar el paquete guardado agregando tareas, transformaciones y lógica controlada por eventos.  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  
+    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , la opción para guardar el paquete creado por el asistente no está disponible.  
   
 -   Si inicia el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el paquete no puede ejecutarse como paso para completar el asistente. En lugar de ello, el paquete se agrega al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde el cual se inició el asistente. Seguidamente, puede ejecutar el paquete o ampliarlo agregando tareas, transformaciones y lógica controlada por eventos usando el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
- Para obtener más información, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para obtener más información, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
 ## <a name="permissions-required-by-the-import-and-export-wizard"></a>Permisos requeridos por el Asistente para importación y exportación  
  Para completar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correctamente, se debe disponer como mínimo de los siguientes permisos:  
@@ -74,12 +73,12 @@ ms.locfileid: "62768172"
   
 -   Si se desea crear una base de datos o tabla de destino, o un archivo de destino, se requieren permisos suficientes para crear una base de datos, una tabla o un archivo. Para ello, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se requieren permisos CREATE DATABASE o CREATE TABLE.  
   
--   Si desea guardar el paquete creado por el asistente, se requieren permisos suficientes para escribir en la base de datos msdb o en el sistema de archivos. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se requieren permisos INSERT en la base de datos msdb.  
+-   Para guardar el paquete creado con el asistente, se requieren permisos suficientes para escribir en la base de datos msdb o en el sistema de archivos. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , esto requiere permisos de inserción en la base de datos msdb.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>Asignar tipos de datos en el Asistente para importación y exportación  
  El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona capacidades de transformación mínimas. Salvo para establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite ninguna transformación en el nivel de columna.  
   
- El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los archivos de asignación que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona para asignar tipos de datos de una versión de base de datos o sistema a otro. Por ejemplo, puede crear una asignación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en C:\Archivos de programa\Microsoft SQL Server\100\DTS\MappingFiles. Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar las asignaciones para que tengan efecto en las asignaciones que realiza el asistente. Por ejemplo, si desea que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **nchar** tipo de datos para asignar a DB2 **gráfico** tipo de datos en lugar de DB2 **VARGRAPHIC** al transferir datos de tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, debe cambiar la **nchar** asignación en el archivo de asignación SqlClientToIBMDB2.xml para usar **gráfico** en lugar de **VARGRAPHIC.**  
+ El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los archivos de asignación que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona para asignar tipos de datos de una versión de base de datos o sistema a otro. Por ejemplo, puede crear una asignación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en C:\Archivos de programa\Microsoft SQL Server\100\DTS\MappingFiles. Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar las asignaciones para que tengan efecto en las asignaciones que realiza el asistente. Por ejemplo, si desea que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **nchar** se asigne al tipo de datos **Graphic** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al transferir datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, debe cambiar la asignación de **nchar** en el archivo de asignación de SqlClientToIBMDB2.xml para que use un **gráfico** en lugar de **VARGRAPHIC.**  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye asignaciones entre varias combinaciones de orígenes y destinos habitualmente utilizadas, y puede agregar nuevos archivos de asignaciones al directorio de archivos de asignación para admitir destinos y orígenes adicionales. Los nuevos archivos de asignaciones deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino.  
   
@@ -88,8 +87,8 @@ ms.locfileid: "62768172"
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo, [exportar datos de SQL Server a Excel (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkID=200975), en technet.microsoft.com  
+-   Vídeo, [exportación de datos de SQL Server a Excel (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkID=200975), en TechNet.Microsoft.com  
   
--   Ejemplo CodePlex, [exportar de ODBC a un archivo plano utilizando un Tutorial de asistente: Paquetes de lecciones](https://go.microsoft.com/fwlink/?LinkId=217657), en msftisprodsamples.codeplex.com  
+-   Ejemplo de CodePlex, [exportar desde ODBC a un archivo plano mediante un asistente Tutorial: paquetes de lecciones](https://go.microsoft.com/fwlink/?LinkId=217657), en msftisprodsamples.codeplex.com  
   
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e24efe4204d9117af0d3743f91fe028b305a36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25ed0a2ce97310389f53238e81f16ab8b1482b3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706532"
 ---
 # <a name="cursors-transact-sql"></a>Cursores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Las instrucciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producen un conjunto completo de resultados, pero hay ocasiones en que los resultados se procesan mejor de fila en fila. Abrir un cursor sobre un conjunto de resultados permite procesar el conjunto de resultados de fila en fila. Puede asignar un cursor a una variable o parámetro con un tipo de datos **cursor**.  
+  Las instrucciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producen un conjunto de resultados completo, pero hay ocasiones en que los resultados se procesan mejor de fila en fila. Abrir un cursor sobre un conjunto de resultados permite procesar el conjunto de resultados de fila en fila. Puede asignar un cursor a una variable o parámetro con un tipo de datos **cursor**.  
   
  Las operaciones de cursor están admitidas en las siguientes instrucciones:  
   

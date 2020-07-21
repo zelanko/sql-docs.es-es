@@ -20,10 +20,10 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292157"
 ---
 # <a name="partition-processing-destination"></a>Destino de procesamiento de particiones
@@ -31,7 +31,7 @@ ms.locfileid: "71292157"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  El destino de procesamiento de particiones incluye las siguientes características:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "71292157"
   
 -   Asignación de columnas de entrada para columnas de particiones.  
   
- Para más información sobre los objetos de procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
+ Para más información sobre el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
   
 > [!NOTE]  
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
@@ -71,7 +71,7 @@ ms.locfileid: "71292157"
  **Connection manager**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Lista de particiones disponibles**  
@@ -80,7 +80,7 @@ ms.locfileid: "71292157"
  **Método de procesamiento**  
  Seleccione el método de procesamiento. El valor predeterminado de esta opción es **Completa**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Agregar (incremental)|Realiza un procesamiento incremental de la partición.|  
 |Completo|Realiza un procesamiento completo de la partición.|  
@@ -118,7 +118,7 @@ ms.locfileid: "71292157"
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convierte el valor de clave no aceptable en el valor Unknown.|  
 |**DiscardRecord**|Descarta el registro.|  
@@ -135,7 +135,7 @@ ms.locfileid: "71292157"
  **Acción ante el error**  
  Especifica la acción que debe llevarse a cabo cuando se alcanza el umbral de error, en caso de que se haya seleccionado **Detenerse ante errores**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
@@ -143,7 +143,7 @@ ms.locfileid: "71292157"
  **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -152,7 +152,7 @@ ms.locfileid: "71292157"
  **Clave duplicada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -161,7 +161,7 @@ ms.locfileid: "71292157"
  **Clave NULL convertida en desconocida**  
  Especifica la acción que debe llevarse a cabo cuando una clave NULL se ha convertido al valor Unknown. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -170,7 +170,7 @@ ms.locfileid: "71292157"
  **Clave NULL no permitida**  
  Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  

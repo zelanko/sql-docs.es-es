@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e5bfe3faf83b0873a8b47c348df9cfd8138dacb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50bdca11c1e56e0e35c68efe79986c621da94825
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771641"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439032"
 ---
 # <a name="set-parameter-value-dialog-box"></a>Cuadro de diálogo Establecer valor de parámetro
   Utilice el cuadro de diálogo **Establecer valor de parámetro** para establecer los valores de los parámetros y las propiedades de administrador de conexiones, para los proyectos y los paquetes.  
@@ -26,7 +25,7 @@ ms.locfileid: "62771641"
   
 -   [Configurar las opciones](#option)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Establecer valor de parámetro  
+##  <a name="open-the-set-parameter-value-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Establecer valor de parámetro  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62771641"
   
 4.  Haga clic con el botón derecho en un paquete o proyecto, haga clic en **Configurar**y, luego, haga clic en el botón de puntos suspensivos de la pestaña **Parámetros** o en la pestaña **Administradores de conexiones** .  
   
-##  <a name="option"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="option"></a> Configurar las opciones  
  **Parámetro**  
  Muestra el nombre de parámetro.  
   

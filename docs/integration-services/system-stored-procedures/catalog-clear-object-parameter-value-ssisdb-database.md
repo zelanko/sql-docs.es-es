@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ad9b1900c3933b2756d376f152ac714af91cc3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0b980121d808fc51a251af802314f3ad719fe16b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749722"
 ---
 # <a name="catalogclear_object_parameter_value-ssisdb-database"></a>catalog.clear_object_parameter_value (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Borra el valor de un parámetro para un paquete o proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existente almacenado en el servidor.  
   
@@ -50,7 +50,7 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
  Nombre del paquete. *object _name* es **nvarchar(260)** .  
   
  [ \@parameter_ name = ] *parameter_name*  
- Nombre del parámetro. *parameter_ name* es **nvarchar(128)** .  
+ El nombre del parámetro. *parameter_ name* es **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

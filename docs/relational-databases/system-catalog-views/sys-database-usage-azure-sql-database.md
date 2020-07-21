@@ -20,23 +20,23 @@ ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4b68fbc20fb220af49036890edc2b67d1a4f7b65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724680"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  **Tenga en cuenta Esto solo se aplica a Azure SQL Database v11.**  
+  **Nota: esto solo se aplica a Azure SQL Database v11.**  
   
- Muestra el número, el tipo y la duración de las bases de datos [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el servidor.  
+ Muestra el número, el tipo y la duración de las bases de datos en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor.  
   
  La vista **Sys. database_usage** contiene las columnas siguientes.  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |time|Fecha en que se produjeron los eventos de uso.|  
 |sku|El tipo de nivel de servicio para la base de datos: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -48,8 +48,8 @@ ms.locfileid: "70155543"
 ## <a name="remarks"></a>Comentarios  
  La vista **Sys. database_usage** devuelve una fila por cada día de la suscripción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Detalles de precios de SQL Database](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Cuentas y facturación en Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [Cuentas y facturación en Base de datos SQL de Azure](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

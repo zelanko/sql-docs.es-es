@@ -1,6 +1,6 @@
 ---
-title: Vistas del sistema - almacenamiento de datos paralelos de Analytics Platform System | Microsoft Docs
-description: Vistas del sistema para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
+title: Vistas del sistema
+description: Vistas del sistema para el sistema de plataforma analítica (APS) SQL Server almacenamiento de datos paralelos (PDW).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c459b3656f4b7a2d61cbe0109a78848894600fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959962"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74399804"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Vistas del sistema para el almacenamiento de datos paralelos de Analytics Platform System
-Vistas del sistema para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
+Vistas del sistema para el sistema de plataforma analítica (APS) SQL Server almacenamiento de datos paralelos (PDW).
 
-## <a name="parallel-data-warehouse-catalog-views"></a>Vistas de catálogo de almacén de datos paralelas
+## <a name="parallel-data-warehouse-catalog-views"></a>Vistas de catálogo de almacenamiento de datos paralelos
 * [sys.pdw_column_distribution_properties](https://msdn.microsoft.com/library/mt204022.aspx)
 * [sys.pdw_database_mappings](https://msdn.microsoft.com/library/mt203891.aspx)
 * [sys.pdw_distributions](https://msdn.microsoft.com/library/mt203892.aspx)
@@ -36,7 +37,7 @@ Vistas del sistema para analíticas Platform System (APS) Parallel Data Warehous
 * [sys.pdw_table_distribution_properties](https://msdn.microsoft.com/library/mt203896.aspx)
 * [sys.pdw_table_mappings](https://msdn.microsoft.com/library/mt203876.aspx)
 
-## <a name="parallel-data-warehouse-dynamic-management-views-dmvs"></a>Vistas de administración dinámica de Parallel Data Warehouse (DMV)
+## <a name="parallel-data-warehouse-dynamic-management-views-dmvs"></a>Vistas de administración dinámica (DMV) de almacenamiento de datos paralelos
 * [sys.dm_pdw_dms_cores](https://msdn.microsoft.com/library/mt203911.aspx)
 * [sys.dm_pdw_dms_external_work](../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-external-work-transact-sql.md)
 * [sys.dm_pdw_dms_workers](https://msdn.microsoft.com/library/mt203878.aspx)
@@ -56,8 +57,8 @@ Vistas del sistema para analíticas Platform System (APS) Parallel Data Warehous
 * [sys.dm_pdw_wait_stats](https://msdn.microsoft.com/library/mt203909.aspx)
 * [sys.dm_pdw_waits](https://msdn.microsoft.com/library/mt203909.aspx)
 
-## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>DMV de SQL Server aplicables para el almacenamiento de datos paralelos
-Las siguientes DMV son aplicables al almacenamiento de datos paralelos, pero se debe ejecutar mediante la conexión a la **maestro** base de datos.
+## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>SQL Server DMV aplicables al almacenamiento de datos paralelos
+Las DMV siguientes se aplican al almacenamiento de datos paralelos, pero se deben ejecutar conectándose a la base de datos **maestra** .
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
 * [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
@@ -129,17 +130,17 @@ Las siguientes DMV son aplicables al almacenamiento de datos paralelos, pero se 
 * [sys.types](https://msdn.microsoft.com/library/ms188021.aspx)
 * [sys.views](https://msdn.microsoft.com/library/ms190334.aspx)
 
-## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server DMV disponibles en el almacenamiento de datos paralelos
-Almacenamiento de datos paralelos expone muchas de las vistas de administración dinámica (DMV) de SQL Server. Estas vistas, cuando se consultan en el almacenamiento de datos paralelos, están informando del estado de las bases de datos de SQL Server que se ejecutan en las distribuciones.
+## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server DMV disponibles en almacenamiento de datos paralelos
+El almacenamiento de datos paralelos expone muchas de las vistas de administración dinámica (DMV) de SQL Server. Estas vistas, cuando se consultan en el almacenamiento de datos paralelo, informan del estado de las bases de datos de SQL Server que se ejecutan en las distribuciones.
 
-Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este es el identificador del nodo de ejecución. 
+Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este es el identificador del nodo de proceso. 
 
 > [!NOTE]
-> Para utilizar estas vistas, inserte "pdw_nodes_" en el nombre, como se muestra en la tabla siguiente.
+> Para utilizar estas vistas, inserte ' pdw_nodes_ ' en el nombre, tal como se muestra en la tabla siguiente.
 > 
 > 
 
-| Nombre de DMV en almacenamiento de datos paralelos | Vínculo al tema de SQL Server Transact-SQL |
+| Nombre DMV en almacenamiento de datos paralelos | Vínculo a SQL Server tema T-SQL |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](https://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](https://msdn.microsoft.com/library/ms188755.aspx) |
@@ -162,7 +163,7 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 | sys.dm_pdw_nodes_os_child_instances |[sys.dm_os_child_instances](https://msdn.microsoft.com/library/ms165698.aspx) |
 | sys.dm_pdw_nodes_os_cluster_nodes |[sys.dm_os_cluster_nodes](https://msdn.microsoft.com/library/ms187341.aspx) |
 | sys.dm_pdw_nodes_os_dispatcher_pools |[sys.dm_os_dispatcher_pools](https://msdn.microsoft.com/library/bb630336.aspx) |
-| sys.dm_pdw_nodes_os_dispatchers |Documentación de Transact-SQL no está disponible. |
+| sys.dm_pdw_nodes_os_dispatchers |La documentación de Transact-SQL no está disponible. |
 | sys.dm_pdw_nodes_os_hosts |[sys.dm_os_hosts](https://msdn.microsoft.com/library/ms187800.aspx) |
 | sys.dm_pdw_nodes_os_latch_stats |[sys.dm_os_latch_stats](https://msdn.microsoft.com/library/ms175066.aspx) |
 | sys.dm_pdw_nodes_os_memory_brokers |[sys.dm_os_memory_brokers](https://msdn.microsoft.com/library/bb522548.aspx) |
@@ -171,7 +172,7 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 | sys.dm_pdw_nodes_os_memory_cache_entries |[sys.dm_os_memory_cache_entries](https://msdn.microsoft.com/library/ms189488.aspx) |
 | sys.dm_pdw_nodes_os_memory_cache_hash_tables |[sys.dm_os_memory_cache_hash_tables](https://msdn.microsoft.com/library/ms182388.aspx) |
 | sys.dm_pdw_nodes_os_memory_clerks |[sys.dm_os_memory_clerks](https://msdn.microsoft.com/library/ms175019.aspx) |
-| sys.dm_pdw_nodes_os_memory_node_access_stats |Documentación de Transact-SQL no está disponible. |
+| sys.dm_pdw_nodes_os_memory_node_access_stats |La documentación de Transact-SQL no está disponible. |
 | sys.dm_pdw_nodes_os_memory_nodes |[sys.dm_os_memory_nodes](https://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_memory_objects |[sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) |
 | sys.dm_pdw_nodes_os_memory_pools |[sys.dm_os_memory_pools](https://msdn.microsoft.com/library/ms175022.aspx) |
@@ -179,7 +180,7 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 | sys.dm_pdw_nodes_os_performance_counters |[sys.dm_os_performance_counters](https://msdn.microsoft.com/library/ms187743.aspx) |
 | sys.dm_pdw_nodes_os_process_memory |[sys.dm_os_process_memory](https://msdn.microsoft.com/library/bb510747.aspx) |
 | sys.dm_pdw_nodes_os_schedulers |[sys.dm_os_schedulers](https://msdn.microsoft.com/library/ms177526.aspx) |
-| sys.dm_pdw_nodes_os_spinlock_stats |Documentación de Transact-SQL no está disponible. |
+| sys.dm_pdw_nodes_os_spinlock_stats |La documentación de Transact-SQL no está disponible. |
 | sys.dm_pdw_nodes_os_sys_info |[sys.dm_os_sys_info](https://msdn.microsoft.com/library/ms175048.aspx) |
 | sys.dm_pdw_nodes_os_sys_memory |[sys.dm_os_memory_nodes](https://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_tasks |[sys.dm_os_tasks](https://msdn.microsoft.com/library/ms174963.aspx) |
@@ -200,7 +201,7 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](https://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](https://msdn.microsoft.com/library/ms188778.aspx) |
 
-## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 2016 PolyBase DMV disponibles en el almacenamiento de datos paralelos
+## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>SQL Server las DMV de polybase 2016 disponibles en almacenamiento de datos paralelos
 * [sys.dm_exec_compute_node_errors](https://msdn.microsoft.com/library/mt146380.aspx)
 * [sys.dm_exec_compute_node_status](https://msdn.microsoft.com/library/mt146382.aspx)
 * [sys.dm_exec_compute_nodes](../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
@@ -212,7 +213,7 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 * [sys.dm_exec_external_operations](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
-## <a name="sql-server-informationschema-views"></a>Vistas INFORMATION_SCHEMA de SQL Server
+## <a name="sql-server-information_schema-views"></a>Vistas INFORMATION_SCHEMA de SQL Server
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
 * [COLUMNAS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
 * [PARÁMETROS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
@@ -221,10 +222,10 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 * [TABLAS](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
+* [VISTAS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información de referencia, consulte [elementos del lenguaje T-SQL](tsql-language-elements.md) y [instrucciones T-SQL](tsql-statements.md).
+Para obtener más información de referencia, vea [elementos del lenguaje t-SQL](tsql-language-elements.md) e [instrucciones t-SQL](tsql-statements.md).
 
 <!--Image references-->
 

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009353"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296275"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entradas del registro para los orígenes de datos
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "70009353"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- La clave que se usa depende de si el origen de datos es un origen de datos *del sistema,* que está disponible para todos los usuarios o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Los orígenes de datos del sistema se almacenan en el árbol HKEY_LOCAL_MACHINE y los orígenes de datos del usuario se almacenan en el árbol HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
+ La clave que se usa depende de si el origen de datos es un origen de datos *del sistema,* que está disponible para todos los usuarios o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Los orígenes de datos del sistema se almacenan en el árbol de HKEY_LOCAL_MACHINE y los orígenes de datos de usuario se almacenan en el árbol de HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
   
  Esta sección contiene los temas siguientes.  
   

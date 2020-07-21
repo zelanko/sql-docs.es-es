@@ -15,31 +15,31 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherconstraints system table
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e20a8a8145bad532ecc7dfad04d5358ff393136d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990252"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890257"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **IHpublisherconstraints** tabla del sistema contiene una fila por cada restricción replicada desde publicadores que no son: SQL Server utilizando el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla del sistema **IHpublisherconstraints** contiene una fila por cada restricción replicada desde publicadores que no son de SQL Server mediante el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publisherconstraint_id**|**int**|Identifica una restricción publicada.|  
-|**table_id**|**int**|Identifica la tabla de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) al que pertenece la restricción.|  
-|**publisher_id**|**smallint**|Identifica el no publicador de SQL Server desde el que se publica la columna.|  
-|**Name**|**sysname**|Nombre de la restricción publicada.|  
-|**Tipo**|**nvarchar(255)**|Tipo de restricción admitido de la [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) tabla del sistema.|  
+|**table_id**|**int**|Identifica la tabla de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a la que pertenece la restricción.|  
+|**publisher_id**|**smallint**|Identifica el publicador que no es de SQL Server desde el que se publica la columna.|  
+|**Name**|**Predeterminado**|Nombre de la restricción publicada.|  
+|**Type**|**nvarchar(255)**|Un tipo de restricción compatible de la tabla del sistema [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) .|  
   
-## <a name="see-also"></a>Vea también  
- [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

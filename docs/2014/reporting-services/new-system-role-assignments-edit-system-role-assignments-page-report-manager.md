@@ -1,5 +1,5 @@
 ---
-title: 'Asignaciones de nuevo rol del sistema: Editar página de asignaciones de rol de sistema (Administrador de informes) | Microsoft Docs'
+title: 'Nuevas asignaciones de roles del sistema: página Editar asignaciones de roles del sistema (Administrador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108128"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Asignaciones de nuevo rol del sistema: Editar página de asignaciones de rol de sistema (Administrador de informes)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nueva asignación de roles del sistema y Editar asignaciones de roles del sistema (páginas del Administrador de informes)
   Use la página Nueva asignación de roles del sistema o Editar asignaciones de roles del sistema para definir la seguridad del servidor de informes. Toda la seguridad se define a través de asignaciones de roles, que asocian usuarios o grupos específicos a las tareas que pueden realizar. La lista de tareas se presenta como una definición de roles que se selecciona cuando se realiza una asignación de roles.  
   
  Las asignaciones de roles que se crean o modifican en el nivel de sistema se aplican al servidor de informes como un conjunto. Por ejemplo, la posibilidad de crear programaciones compartidas se especifica en el nivel de sistema porque estas programaciones se utilizan en todo el sistema.  
@@ -37,13 +37,13 @@ ms.locfileid: "66108128"
   
 2.  En la esquina superior derecha, haga clic en **Configuración del sitio**. Esto abre la página de propiedades General del sitio.  
   
-3.  Seleccione la pestaña **Seguridad** . Debe tener los permisos Administrador de contenido y Administrador del sistema para tener acceso a esta página.  
+3.  Seleccione la pestaña **seguridad** . Debe disponer de permisos de administrador de contenido y administrador del sistema para tener acceso a esta página.  
   
 4.  Para crear una nueva asignación de roles, haga clic en **Nueva asignación de roles** en la barra de herramientas. Para editar una asignación de roles existente, haga clic en **Editar** junto a un grupo o usuario en la página de propiedades Seguridad.  
   
 ## <a name="options"></a>Opciones  
  **Grupo o usuario**  
- Escriba el nombre de una cuenta de usuario o grupo de su dominio. Si el servidor de informes se ejecuta con una cuenta local, debe especificar usuarios o grupos locales. Si el servidor de informes se ejecuta con una cuenta de dominio, debe especificar usuarios o grupos de dominio. Escriba la cuenta con este formato: \<dominio >\\< cuenta\>.  
+ Escriba el nombre de una cuenta de usuario o grupo de su dominio. Si el servidor de informes se ejecuta con una cuenta local, debe especificar usuarios o grupos locales. Si el servidor de informes se ejecuta con una cuenta de dominio, debe especificar usuarios o grupos de dominio. Escriba la cuenta con este formato: \<>\\ de dominio<\>cuenta.  
   
 > [!NOTE]  
 >  Este cuadro solo está disponible en la página Nueva asignación de roles.  
@@ -64,8 +64,8 @@ ms.locfileid: "66108128"
 > [!NOTE]  
 >  Este botón solo está disponible en la página Editar asignación de roles.  
   
-## <a name="see-also"></a>Vea también  
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
  [Asignaciones de roles](security/role-assignments.md)   
  [Definiciones de roles](security/role-definitions.md)  
   

@@ -9,23 +9,23 @@ ms.topic: reference
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85de85cae9ee90e5a3a28b3a3b069ae76553237d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b97623e425600484db78afe2cdd629dc3353ad28
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640935"
 ---
-# <a name="localdberrorxeventfailed"></a>LOCALDB_ERROR_XEVENT_FAILED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="localdb_error_xevent_failed"></a>LOCALDB_ERROR_XEVENT_FAILED
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|279|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|279|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|No se pudo iniciar el motor XEvent en la API de la instancia de Local Database.|  
   

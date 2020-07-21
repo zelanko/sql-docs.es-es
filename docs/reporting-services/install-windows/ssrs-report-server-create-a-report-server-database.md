@@ -1,20 +1,21 @@
 ---
-title: Creación de una base de datos del servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs
+title: Creación de una base de datos del servidor de informes (Administrador de configuración) | Microsoft Docs
+description: El modo nativo de SQL Server Reporting Services usa dos bases de datos relacionales de SQL Server Reporting Services para almacenar metadatos y objetos del servidor de informes. Una base de datos se utiliza para el almacenamiento principal y la otra para almacenar datos temporales.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123016"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253314"
 ---
-# <a name="create-a-report-server-database"></a>Creación de una base de datos del servidor de informes 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Creación de una base de datos del servidor de informes (Administrador de configuración de SSRS)  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -26,7 +27,7 @@ Las bases de datos se crean juntas y se enlazan mediante el nombre. Con una inst
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-El **modo SharePoint** de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una tercera base de datos que se usa para los metadatos de alerta de datos. Las tres bases de datos se crean para cada aplicación de servicio de SSRS. Los nombres de base de datos incluyen de forma predeterminada un GUID que representa la aplicación de servicio. 
+El [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modo SharePoint**de SQL Server** incluye una tercera base de datos que se usa para los metadatos de alerta de datos. Las tres bases de datos se crean para cada aplicación de servicio de SSRS. Los nombres de base de datos incluyen de forma predeterminada un GUID que representa la aplicación de servicio. 
 
 A continuación, se indican nombres de ejemplo de las tres bases de datos en modo de SharePoint:
 

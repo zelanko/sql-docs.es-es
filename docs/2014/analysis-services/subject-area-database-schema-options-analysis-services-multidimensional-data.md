@@ -1,5 +1,5 @@
 ---
-title: Opciones de esquema de base de datos (Asistente para generación de esquema) de área de asunto (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Opciones de esquema de la base de datos del área de asunto (Asistente para generar esquemas) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7edc1fc89e9463c7482b47866aa3d12e1bc231a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940246"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Opciones de esquema de la base de datos del área de asunto (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
   Use la página **Opciones de esquema de la base de datos del área de asunto** para controlar cómo se genera el esquema y definir cómo se mantienen los datos.  
@@ -32,28 +31,28 @@ ms.locfileid: "66067976"
 > [!NOTE]  
 >  Si no selecciona esta opción, se exige integridad referencial.  
   
- **Crear índices**  
+ **Creación de índices**  
  Crea índices en columnas de clave externa en el esquema generado.  
   
  **Exigir integridad referencial**  
  Exige integridad referencial en el esquema generado. Si no selecciona esta opción, las relaciones se crean, pero no se exigen.  
   
- **Conservar los datos al volver a generar**  
+ **Mantener los datos al volver a generar**  
  Mantiene la base de datos del área de asunto cuando el asistente termina. Si no selecciona esta opción, todos los datos de la base de datos del área de asunto se pueden eliminar sin previo aviso.  
   
- **Rellenar tablas de tiempos**  
+ **Llenar la tabla de tiempos**  
  Especifica cómo rellena el asistente las tablas de tiempos. En la siguiente tabla se describen los posibles valores para esta opción.  
   
 > [!NOTE]  
 >  Esta opción solo está habilitada si se realiza una llamada al Asistente para generar esquemas desde un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en modo de proyecto.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Llenar|Las tablas de tiempos del área de asunto se llenan.|  
 |No llenar|Las tablas de tiempos del área de asunto no se llenan.|  
 |Llenar solamente si está vacía|Las tablas de tiempos del área de asunto se llenan solo si están vacías.|  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda F1 de Asistente para generación de esquema &#40;Analysis Services - datos multidimensionales&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para generar esquemas ayuda F1 &#40;Analysis Services-datos multidimensionales&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

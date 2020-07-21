@@ -21,22 +21,21 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f65b7bfd4563bbc9ada1d615f0d48af225895d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62889817"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423412"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
   
- Puede configurar el ámbito del registro que se realiza durante la ejecución de un paquete en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
+ Puede configurar el ámbito del registro que se realiza durante la ejecución de un paquete en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
- También puede incluir el registro al ejecutar un paquete con la utilidad del símbolo del sistema **dtexec** . Para obtener información acerca de los argumentos del símbolo del sistema que admiten registro, vea [dtexec Utility](../packages/dtexec-utility.md).  
+ También puede incluir el registro al ejecutar un paquete con la utilidad del símbolo del sistema **dtexec**. Para obtener información acerca de los argumentos del símbolo del sistema que admiten registro, vea [dtexec Utility](../packages/dtexec-utility.md).  
   
 ## <a name="configure-logging-in-sql-server-data-tools"></a>Configurar el registro en SQL Server Data Tools  
  Los registros se asocian a paquetes y se configuran en el nivel de paquete. Cada tarea o contenedor de un paquete puede registrar información en cualquier registro del paquete. Es posible habilitar las tareas y contenedores de un paquete para registro aunque el paquete no lo esté. Por ejemplo, puede habilitar el registro en una tarea Ejecutar SQL sin habilitar el registro en el paquete primario. Un paquete, un contenedor o una tarea pueden escribir en varios registros. Puede habilitar el registro solamente en el paquete, o en cualquier tarea o contenedor individual que incluya el paquete.  
@@ -52,7 +51,7 @@ ms.locfileid: "62889817"
     > [!NOTE]  
     >  No se puede usar el proveedor de registro de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] en un paquete que se ejecute en modo de 64 bits.  
   
--   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro, que escribe entradas de registro en el `sysssislog` de tabla en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
+-   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro, que escribe entradas de registro en la `sysssislog` tabla de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
   
 -   El proveedor de registro de eventos de Windows, que escribe entradas en el registro de aplicación del registro de eventos de Windows en el equipo local.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62889817"
 |Elemento|Descripción|  
 |-------------|-----------------|  
 |Computer|Nombre del equipo en el que ocurrió el evento del registro.|  
-|Operador|La identidad del usuario que inició el paquete.|  
+|Operator|La identidad del usuario que inició el paquete.|  
 |SourceName|Nombre del contenedor o la tarea en los que ocurrió el evento del registro.|  
 |SourceID|Identificador único del paquete; el contenedor de bucles For, bucles Foreach o secuencias, o bien la tarea en la que ocurrió el evento del registro.|  
 |ExecutionID|GUID de la instancia de ejecución del paquete.<br /><br /> Nota: Al ejecutar un paquete único, se podrían crear entradas de registro con valores diferentes para el elemento ExecutionID. Por ejemplo, al ejecutar un paquete en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase de validación podría crear entradas de registro con un elemento ExecutionID que corresponda a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sin embargo, la fase de ejecución podría crear entradas de registro con un elemento ExecutionID que corresponda a dtshost.exe. Otro ejemplo de esta situación es cuando se ejecuta un paquete que contiene tareas Ejecutar paquete, cada una de las cuales ejecuta un paquete secundario. Estos paquetes secundarios podrían crear entradas de registro que tengan un elemento ExecutionID diferente al de las entradas de registro que crea el paquete principal.|  
@@ -113,7 +112,7 @@ ms.locfileid: "62889817"
   
  En la tabla siguiente se describen los eventos predefinidos que se pueden habilitar para escribir entradas del registro cuando se producen eventos en tiempo de ejecución. Estas entradas del registro se aplican a los ejecutables, al paquete y a las tareas y contenedores que incluye el paquete. El nombre de la entrada del registro es el nombre del evento que se produjo en tiempo de ejecución y que originó la entrada del registro.  
   
-|Events|Descripción|  
+|Eventos|Descripción|  
 |------------|-----------------|  
 |**OnError**|Escribe una entrada del registro cuando se produce un error.|  
 |**OnExecStatusChanged**|Escribe una entrada del registro cuando una tarea (no un contenedor) se suspende o se reanuda durante la depuración.|  
@@ -130,7 +129,7 @@ ms.locfileid: "62889817"
 |**PipelineComponentTime**|Por cada componente de flujo de datos, escribe una entrada de registro de cada fase de validación y ejecución. La entrada del registro especifica el tiempo de procesamiento para cada fase.|  
 |**Diagnostic**|Escribe una entrada de registro que proporciona información de diagnóstico.<br /><br /> Por ejemplo, puede registrar un mensaje antes y después de cada llamada a un proveedor de datos externo. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
   
- El paquete y muchas tareas poseen entradas del registro personalizadas que se pueden habilitar para el registro. Por ejemplo, la tarea Enviar correo proporciona la entrada de registro personalizada **SendMailTaskBegin** , que registra información cuando se inicia la ejecución de la tarea Enviar correo, pero antes de que la tarea envíe un mensaje de correo. Para más información, vea [Custom Messages for Logging](../custom-messages-for-logging.md).  
+ El paquete y muchas tareas poseen entradas del registro personalizadas que se pueden habilitar para el registro. Por ejemplo, la tarea Enviar correo proporciona la entrada de registro personalizada **SendMailTaskBegin** , que registra información cuando se inicia la ejecución de la tarea Enviar correo, pero antes de que la tarea envíe un mensaje de correo. Para obtener más información, consulte [Custom messages for Logging](../custom-messages-for-logging.md).  
   
 ### <a name="differentiating-package-copies"></a>Diferenciar copias de paquetes  
  Los datos del registro incluyen el nombre y GUID del paquete al que pertenecen las entradas del registro. Si crea un nuevo paquete mediante la copia de un paquete existente, también se copian el nombre y GUID del paquete existente. Como resultado, puede tener dos paquetes con el mismo nombre y GUID, lo que dificulta la diferenciación entre los paquetes en los datos del registro.  
@@ -147,14 +146,14 @@ ms.locfileid: "62889817"
   
 1.  Habilite el paquete y sus tareas para el registro. El registro se puede producir en el nivel de paquete, de contenedor y de tarea. Puede especificar diferentes registros para paquetes, contenedores y tareas.  
   
-2.  Seleccione un proveedor de registro y agregue un registro para el paquete. Solo se pueden crear registros en el nivel de paquete y una tarea o un contenedor deben utilizar uno de los registros creados para el paquete. Cada registro está asociado con uno de los proveedores de registros siguientes: Archivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registro de eventos de Windows o archivo XML. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Seleccione un proveedor de registro y agregue un registro para el paquete. Solo se pueden crear registros en el nivel de paquete y una tarea o un contenedor deben utilizar uno de los registros creados para el paquete. Cada registro está asociado a uno de los proveedores de registro siguientes: archivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Registro de eventos de Windows o archivo XML. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Seleccione los eventos y la información del esquema de registro de cada evento que desee capturar en el registro. Para más información, vea [Configurar el registro usando un archivo de configuración guardado](../configure-logging-by-using-a-saved-configuration-file.md).  
   
 ### <a name="configuration-of-log-provider"></a>Configuración de un proveedor de registro  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
- Un proveedor de registro se crea y configura como un paso en la implementación de registros en un paquete. Para obtener más información, consulte [registro de servicios de integración](integration-services-ssis-logging.md).  
+ Un proveedor de registro se crea y configura como un paso en la implementación de registros en un paquete. Para obtener más información, vea [registro de Integration Services](integration-services-ssis-logging.md).  
   
  Después de crear un proveedor de registro, puede ver y modificar sus propiedades en la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -168,7 +167,7 @@ ms.locfileid: "62889817"
   
 |Paso|Descripción|  
 |----------|-----------------|  
-|Validar|El componente comprueba los valores de configuración y los valores de propiedad válidos.|  
+|Validación|El componente comprueba los valores de configuración y los valores de propiedad válidos.|  
 |PreExecute|El componente realiza el procesamiento único antes de empezar a procesar filas de datos.|  
 |PostExecute|El componente realiza el procesamiento único después de haber procesado todas las filas de datos.|  
 |ProcessInput|El componente de transformación o de destino procesa las filas de datos entrantes que un origen o una transformación de nivel superior le han pasado.|  
@@ -203,7 +202,7 @@ ms.locfileid: "62889817"
 ## <a name="related-tasks"></a>Related Tasks  
  La lista siguiente contiene vínculos a temas que muestran cómo realizar tareas relacionadas con la característica de registro.  
   
--   [Configurar el cuadro de diálogo Registros de SSIS](../configure-ssis-logs-dialog-box.md)  
+-   [Configurar registros de SSIS, cuadro de diálogo](../configure-ssis-logs-dialog-box.md)  
   
 -   [Habilitar el registro de paquetes en SQL Server Data Tools](../enable-package-logging-in-sql-server-data-tools.md)  
   
@@ -214,7 +213,7 @@ ms.locfileid: "62889817"
 ## <a name="related-content"></a>Contenido relacionado  
  [Herramienta DTLoggedExec para el registro completo y detallado (proyecto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver entradas del registro en la ventana Registrar eventos](../view-log-entries-in-the-log-events-window.md)  
   
   

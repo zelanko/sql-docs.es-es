@@ -1,5 +1,5 @@
 ---
-title: Core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
+title: Core. sp_create_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6b3ffe874615e58d276428548cb1c2ad318f111d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898231"
 ---
-# <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserta una fila en una vista core.snapshots del almacén de administración de datos. Se llama a este procedimiento cada vez que un paquete de carga empieza a cargar los datos en el almacén de administración de datos.  
   
@@ -48,22 +48,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_set_uid =] '*collection_set_uid*'  
- GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier** con ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
+ GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- El GUID de un tipo de recopilador. *collector_type_uid* es **uniqueidentifier** con ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collector_types en la base de datos msdb.  
+ El GUID de un tipo de recopilador. *collector_type_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collector_types en la base de datos msdb.  
   
- [ @machine_name=] '*nombre_equipo*'  
- Nombre del servidor en el que reside el conjunto de recopilación. *nombre_equipo* es **sysname**, sin valor predeterminado.  
+ [ @machine_name =] '*machine_name*'  
+ Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @named_instance=] '*instanciaconnombre*'  
- Nombre de la instancia del conjunto de recopilación. *instanciaconnombre* es **sysname**, sin valor predeterminado.  
+ [ @named_instance =] '*named_instance*'  
+ Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  [ @log_id =] *log_id*  
- Identificador único que se asigna al registro de eventos de conjunto de recopilación en el servidor que recopiló los datos. *log_id* es **bigint** con ningún valor predeterminado. Para obtener el valor de *log_id*, consulte la vista dbo.syscollector_execution_log en la base de datos msdb.  
+ Identificador único que se asigna al registro de eventos de conjunto de recopilación en el servidor que recopiló los datos. *log_id* es de tipo **BIGINT** y no tiene ningún valor predeterminado. Para obtener el valor de *log_id*, consulte la vista collector_execution_log dbo.sysen la base de datos msdb.  
   
  [ @snapshot_id =] *snapshot_id*  
- El identificador único para una fila que se inserta en la vista core.snapshots. *snapshot_id* es **int** y se devuelve como OUTPUT.  
+ Identificador único de una fila que se inserta en la vista Core. snapshots. *snapshot_id* es de **tipo int** y se devuelve como salida.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -80,7 +80,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Si alguna de las comprobaciones anteriores no es correcta, se produce un error en el procedimiento y se devuelve un error.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **mdw_writer** (con permiso EXECUTE) rol fijo de base de datos.  
+ Requiere la pertenencia al rol fijo de base de datos **mdw_writer** (con permiso Execute).  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea una instantánea para el conjunto de recopilación Uso de disco, se agrega al almacén de administración de datos y se devuelve al identificador de la instantánea. En este ejemplo se usa la instancia predeterminada.  
@@ -97,9 +97,9 @@ EXEC core.sp_create_snapshot
     @snapshot_id = @snapshot_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

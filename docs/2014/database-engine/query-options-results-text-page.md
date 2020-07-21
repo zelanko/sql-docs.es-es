@@ -1,5 +1,5 @@
 ---
-title: Opciones (página texto) de los resultados de consulta | Microsoft Docs
+title: Resultados de opciones de consulta (página texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fc3737a8d992ab05fe96cf6c7d61dc1b01b3f2ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929466"
 ---
 # <a name="query-options-results-text-page"></a>Resultados de Opciones de consulta (página Texto)
   Utilice esta página para especificar las opciones para mostrar el conjunto de resultados de una consulta en formato de texto. La configuración de esta página también se aplica cuando está seleccionada la opción **Resultados a archivo** .  

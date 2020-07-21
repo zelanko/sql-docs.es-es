@@ -1,5 +1,5 @@
 ---
-title: Herramientas de solución de problemas de conectividad entre paquetes | Microsoft Docs
+title: Solución de problemas de conectividad de paquetes de herramientas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fce781a80b03e937f875214a74c60aeacf016246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766168"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420462"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Herramientas para solucionar problemas de conectividad entre paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que pueden usarse para solucionar problemas de conectividad entre los paquetes y los orígenes de datos desde los que los paquetes extraen y cargan los datos.  
@@ -68,8 +67,8 @@ ms.locfileid: "62766168"
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas de la ejecución de paquetes](troubleshooting-tools-for-package-execution.md)  
   
   

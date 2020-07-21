@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ecdcafb1cb2d2b78a63dbd15ecec148e5eb1b2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057951"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir o agregar los valores de todas las filas de una tabla (Visual Database Tools)
-  Mediante una función de agregado, puede crear un resumen de todos los valores de una tabla. Por ejemplo, se puede crear una consulta como la que se muestra a continuación para mostrar el precio total de todos los libros de la tabla `titles`:  
+  Mediante una función de agregado, puede crear un resumen de todos los valores de una tabla. Por ejemplo, se puede crear una consulta como la que se muestra a continuación para mostrar el precio total de todos los libros de la tabla `titles` :  
   
 ```  
 SELECT SUM(price)  
 FROM titles  
 ```  
   
- Puede crear varios tipos de agregaciones en la misma consulta utilizando funciones de agregado con varias columnas. Puede crear, por ejemplo, una consulta que calcule el total de la columna `price` y el valor medio de la columna `discount`.  
+ Puede crear varios tipos de agregaciones en la misma consulta utilizando funciones de agregado con varias columnas. Puede crear, por ejemplo, una consulta que calcule el total de la columna `price` y el valor medio de la columna `discount` .  
   
- También se puede agregar la misma columna de maneras diferentes (como calculando el total, contando y calculando el promedio) en la misma consulta. Por ejemplo, la siguiente consulta calcula el promedio y resume la columna `price` de la tabla `titles`:  
+ También se puede agregar la misma columna de maneras diferentes (como calculando el total, contando y calculando el promedio) en la misma consulta. Por ejemplo, la siguiente consulta calcula el promedio y resume la columna `price` de la tabla `titles` :  
   
 ```  
 SELECT AVG(price), SUM(price)  
@@ -51,7 +50,7 @@ FROM titles
   
 1.  Asegúrese de que la tabla que desea agregar ya esté presente en el panel Diagrama.  
   
-2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agrupar por** en el menú contextual. El [Diseñador de consultas y vistas](query-and-view-designer-tools-visual-database-tools.md) agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
+2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agrupar por** en el menú contextual. El [Diseñador de consultas y vistas](query-and-view-designer-tools-visual-database-tools.md) agrega una columna **Agrupar por** a la cuadrícula en el panel criterios.  
   
 3.  Agregue la columna que desee al panel Criterios. Asegúrese de que la columna está marcada para el resultado.  
   
@@ -77,8 +76,8 @@ FROM titles
 > [!NOTE]  
 >  El Diseñador de consultas y vistas mantiene las funciones de agregado como parte de la instrucción SQL en el panel SQL hasta que se desactiva explícitamente el modo Agrupar por. Por tanto, si se modifica una columna asignándole otro tipo distinto o cambiando las tablas o los objetos con valores de tablas que aparecen en el panel Diagrama, la consulta resultante podría incluir funciones de agregado no válidas.  
   
-## <a name="see-also"></a>Vea también  
- [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

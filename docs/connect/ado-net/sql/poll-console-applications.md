@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 8d067dc5f72bb1534ec75e248fd9df34c2452f77
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452101"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924272"
 ---
 # <a name="polling-in-console-applications"></a>Sondeo de aplicaciones de consola
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Las operaciones asincrónicas en ADO.NET permiten iniciar operaciones de base de datos que consumen mucho tiempo en un subproceso mientras se realizan otras tareas en otro subproceso. Sin embargo, en la mayoría de los escenarios llegará a un punto en el que la aplicación no debería continuar hasta que se complete la operación de base de datos. En estos casos, resulta útil sondear la operación asincrónica para determinar si la operación se ha completado o no.  
   
 Puede usar la propiedad <xref:System.IAsyncResult.IsCompleted%2A> para averiguar si se ha completado o no la operación.  
   
 ## <a name="example"></a>Ejemplo  
-La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks** y lo hace de forma asincrónica. Para emular un proceso de ejecución prolongada, en este ejemplo se inserta una instrucción WAITFOR en el texto del comando. Normalmente, no intentaría que los comandos se ejecutaran más lentamente, pero en este caso resulta más fácil demostrar el comportamiento asincrónico.  
+La siguiente aplicación de consola actualiza los datos de la base de datos de ejemplo **AdventureWorks** y lo hace de forma asincrónica. Para emular un proceso de ejecución prolongada, en este ejemplo se inserta una instrucción WAITFOR en el texto del comando. Normalmente, no intentaría que los comandos se ejecutaran más lentamente, pero en este caso facilita la demostración del comportamiento asincrónico.  
   
 ```csharp  
 using System;  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d37145856da6c4b3ff6def1620de443b20faebfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0f0d3760be13b157f7e711539c0be88bd9856d1d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936192"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919049"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve el valor True si la llamada al método se realizó correctamente; en caso contrario, se devuelve False.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 El valor de PDO::ATTR_AUTOCOMMIT no afecta a PDO::rollback.  
   
 Consulte [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) para ver un ejemplo donde se utiliza PDO::rollback.  

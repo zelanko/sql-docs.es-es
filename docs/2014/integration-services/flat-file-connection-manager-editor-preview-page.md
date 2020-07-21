@@ -1,5 +1,5 @@
 ---
-title: Flat File Connection Manager Editor (página de versión preliminar) | Microsoft Docs
+title: Editor del administrador de conexiones de archivos planos (página vista previa) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efcfde9920aa50e7df6a4b9de59aebf066092c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058740"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425552"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor del administrador de conexiones de archivos planos (página Vista previa)
   Utilice el nodo **Vista previa** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para ver el contenido del archivo de origen en formato tabular.  
@@ -42,10 +41,10 @@ ms.locfileid: "66058740"
  **Vista previa de filas**  
  Presenta datos de ejemplo del archivo plano, divididos en columnas y filas según las opciones seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](general-page-of-integration-services-designers-options.md)   
+ [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

@@ -1,8 +1,10 @@
 ---
-title: Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+title: Configuración de la cuenta de ejecución desatendida (Administrador de configuración) | Microsoft Docs
+description: Reporting Services proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -15,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502932"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866322"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
   
--   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para obtener más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) en los Libros en pantalla de SQL Server.  
-  
+-   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
+
 -   Recuperar archivos de imagen externos utilizados en el informe. Si desea utilizar un archivo de imagen y no puede obtener acceso al mismo a través de un acceso anónimo, puede configurar la cuenta de procesamiento de informes en modo desatendido y conceder el permiso de cuenta para obtener acceso al archivo.  
   
  El procesamiento de informes en modo desatendido hace referencia a cualquier proceso de ejecución de informe activado por un evento (sea un evento controlado por programación o de actualización de datos) y no por la solicitud de un usuario. El servidor de informes utiliza la cuenta de procesamiento de informes en modo desatendido para iniciar una sesión en el equipo que hospeda el origen de datos externo. Esta cuenta es necesaria porque las credenciales de la cuenta del servicio del servidor de informes no se han utilizado nunca para conectarse a otros equipos.  
@@ -46,7 +48,7 @@ ms.locfileid: "65502932"
 3.  Especifique la cuenta y la contraseña, vuelva a especificar esta última y, a continuación, haga clic en **Aplicar**.  
   
 ### <a name="using-rsconfig-utility"></a>Usar la utilidad RSCONFIG  
- Otra manera de establecer la cuenta es usar la utilidad **rsconfig** . Para especificar la cuenta, use el argumento **-e** de **rsconfig**. Al especificar el argumento **-e** de **rsconfig** , se indica a la utilidad que escriba la información de la cuenta en el archivo de configuración. No es necesario especificar una ruta de acceso para RSreportserver.config. Siga estos pasos para configurar la cuenta.  
+ Otra manera de establecer la cuenta es usar la utilidad **rsconfig** . Para especificar la cuenta, use el argumento **-e** de **rsconfig**. Al especificar el argumento **-e** de **rsconfig** , se indica a la utilidad que escriba la información de la cuenta en el archivo de configuración. No necesita especificar una ruta de acceso a RSreportserver.config. Siga estos pasos para configurar la cuenta.  
   
 1.  Cree o seleccione una cuenta de dominio que tenga acceso a los equipos y servidores que proporcionen datos o servicios a un servidor de informes. Debe utilizar una cuenta que tenga permisos reducidos (por ejemplo, permisos de solo lectura).  
   
@@ -56,8 +58,8 @@ ms.locfileid: "65502932"
   
      **rsconfig -e -u\<dominio/nombreDeUsuario> -p\<password>**  
   
- **rsconfig -e** admite argumentos adicionales. Para obtener más información sobre la sintaxis y para ver ejemplos de comandos, consulte [rsconfig (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
-  
+ **rsconfig -e** admite argumentos adicionales. Para obtener más información sobre la sintaxis y para ver ejemplos de comandos, consulte [rsconfig (utilidad) (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ 
 ### <a name="how-account-information-is-stored"></a>Cómo se almacena la información de la cuenta  
  Al establecer la cuenta, la configuración siguiente se especifica en forma de valores cifrados en el archivo RSreportserver.config de una instancia local o remota del servidor de informes:  
   
@@ -104,6 +106,6 @@ ms.locfileid: "65502932"
  La información de cuenta se quita del archivo RSReportServer.config.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

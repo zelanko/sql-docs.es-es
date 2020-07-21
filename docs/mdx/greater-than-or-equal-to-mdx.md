@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e8599378367dd47bd5858c09327795a25852105
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005839"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (Mayor o igual que) (MDX)
@@ -34,11 +34,11 @@ MDX_Expression >= MDX_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano basado en las condiciones siguientes:  
   
--   **True** si el primer parámetro tiene un valor que es mayor o igual que el valor del segundo parámetro.  
+-   **true** si el primer parámetro tiene un valor que es mayor o igual que el valor del segundo parámetro.  
   
 -   **false** si el primer parámetro tiene un valor que es menor que el valor del segundo parámetro.  
   
--   **True** si ambos parámetros son null o si un parámetro es null y el otro parámetro es 0.  
+-   **true** si ambos parámetros son NULL o si un parámetro es NULL y el otro es 0.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra el uso de este operador.  
@@ -60,7 +60,7 @@ WHERE
     ([Measures].[HighGPM])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

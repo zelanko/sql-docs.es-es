@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8301bfe9073a31020fe4481edfff24d89b68994
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946966"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655634"
 ---
 # <a name="create-a-new-plan-guide"></a>Crear una nueva guía de plan
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo. En la guía de plan, se especifica la instrucción que se desea optimizar y una cláusula OPTION que contiene sugerencias de consulta que desea utilizar. o un plan de consulta específico que desea usar para optimizar la consulta. Cuando la consulta se ejecuta, el optimizador de consultas hace coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan y además asocia en tiempo de ejecución la cláusula OPTION a la consulta o utiliza el plan de consulta especificado.  
 
 Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, a una consulta.
   
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
 -   Los argumentos de sp_create_plan_guide deben indicarse en el orden que se muestra. Cuando se incluyen valores para los parámetros de **sp_create_plan_guide**, deben especificarse todos los nombres de parámetro de forma explícita, o bien no especificarse ninguno. Por ejemplo, si se especifica **@name =** , también deben especificarse **@stmt =** , **@type =** , etc. Del mismo modo, si se omite **@name =** y solo se indica el valor del parámetro, también deben omitirse los demás nombres de parámetro y solo se indicará su valor. Los nombres de argumento solo se incluyen con fines de descripción, para ayudar a entender la sintaxis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no comprueba si el nombre del parámetro especificado coincide con el nombre del parámetro en la posición donde se utiliza.  
   
 -   Puede crearse más de una guía de plan OBJECT o SQL para la misma consulta y lote o módulo. Sin embargo, en un momento dado, solo puede estar habilitada una guía de plan.  
@@ -36,10 +36,10 @@ Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, 
   
 -   Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia. También se producirá un error si se intenta quitar una tabla que tenga definido un desencadenador al que haga referencia una guía de plan.  
 
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear una guía de plan de tipo OBJECT necesita el permiso ALTER en el objeto al que se hace referencia. Para crear una guía de plan de tipo SQL o TEMPLATE necesita el permiso ALTER en la base de datos actual.  
   
-##  <a name="SSMSProcedure"></a> Creación de una guía de plan mediante SSMS  
+##  <a name="create-a-plan-guide-using-ssms"></a><a name="SSMSProcedure"></a> Creación de una guía de plan mediante SSMS  
 1.  Haga clic en el signo más para expandir la base de datos en la que desea crear una guía de plan y, a continuación, haga clic en el signo más para expandir la carpeta **Programación** .  
   
 2.  Haga clic con el botón derecho en la carpeta **Guías de plan** y seleccione **Nueva guía de plan…** . ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
@@ -66,11 +66,11 @@ Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, 
   
 10. En el cuadro **Sugerencias** , escriba las sugerencias de consulta o el plan de consulta que se va a aplicar a la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para especificar una o varias sugerencias de consulta, escriba una cláusula OPTION válida.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
 
 ![plan_guide](../../relational-databases/performance/media/plan-guide.png)  
 
-##  <a name="TsqlProcedure"></a> Crear una guía de plan mediante T-SQL  
+##  <a name="create-a-plan-guide-using-t-sql"></a><a name="TsqlProcedure"></a> Crear una guía de plan mediante T-SQL  
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abeeac1dc2c6d06a0b1ce89f4dff35415f7189fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d94a7b4a73c264c1fb3a950aa1c9615a73db956
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285622"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060181"
 ---
 # <a name="view-filter-information-transact-sql"></a>Ver la información del filtro (Transact-SQL)
   En este tema se describe cómo utilizar las funciones integradas para ver la información del filtro de seguimiento.  
@@ -37,7 +36,7 @@ ms.locfileid: "63285622"
     FROM ::fn_trace_getfilterinfo(trace_id)  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   
  [Procedimientos almacenados de SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)  

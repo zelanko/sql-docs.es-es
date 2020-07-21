@@ -1,5 +1,5 @@
 ---
-title: Opciones (consulta ejecución SQL Server página General) | Microsoft Docs
+title: Opciones (ejecución de consultas-SQL Server-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97fe66f317db25ab36f3e55cf2396f1252f66571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930223"
 ---
-# <a name="options-query-execution-sql-server-general-page"></a>Opciones (consulta ejecución SQL Server página General)
+# <a name="options-query-execution-sql-server-general-page"></a>Opciones (ejecución de consultas-SQL Server-página general)
   Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de una consulta actual, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  
   
 ## <a name="options"></a>Opciones  
@@ -30,12 +29,12 @@ ms.locfileid: "66089992"
  El valor predeterminado de 2.147.483.647 bytes indica que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionará campos de datos completos hasta el límite de los campos de datos `text` y `ntext`. Especifique un número menor para limitar los resultados en caso de que los valores sean elevados. Las columnas que superen el número especificado se truncarán.  
   
  **Tiempo de espera de ejecución**  
- Establece el valor predeterminado en el cuadro de diálogo **Nueva conexión** . Utilice este cuadro de número para indicar a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el número de segundos que debe esperar antes de cancelar la consulta. El valor 0 indica una espera infinita o que no hay tiempo de espera. Este valor será 0 en una nueva instalación.  
+ Establece el valor predeterminado en el cuadro de diálogo **Nueva conexión** . Utilice este cuadro de número para indicar a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el número de segundos que debe esperar antes de cancelar la consulta. Un valor de 0 indica una espera infinita o ningún tiempo de espera. Este valor es 0 en una nueva instalación.  
   
  **Separador de lotes**  
  Escriba la palabra que utilice para separar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] en lotes. El separador predeterminado es GO.  
   
- **De manera predeterminada, abrir nuevas consultas en modo SQLCMD**  
+ **De forma predeterminada, abrir nuevas consultas en modo SQLCMD**  
  Active esta casilla para abrir nuevas consultas en modo SQLCMD. Para obtener más información sobre el modo SQLCMD, consulte [Modificar scripts SQLCMD con el Editor de consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Cuando seleccione esta opción, tenga en cuenta las siguientes limitaciones:  
@@ -49,7 +48,7 @@ ms.locfileid: "66089992"
  **Valores predeterminados**  
  Haga clic en esta opción para restablecer todos los valores de esta página a los valores predeterminados originales.  
   
-## <a name="see-also"></a>Vea también  
- [sqlcmd Utility](../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Consulte también  
+ [Utilidad sqlcmd](../tools/sqlcmd-utility.md)  
   
   

@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 26e5e3cbf02191edd84b26505120ee2470e65d24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3058bc8d53207b9925daac9c4d08e3f325722b10
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62868939"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551951"
 ---
-# <a name="mssqlserver2576"></a>MSSQLSERVER_2576
+# <a name="mssqlserver_2576"></a>MSSQLSERVER_2576
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2576|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2576|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_IAM_PARENT_PAGE_WAS_NOT_SEEN|  
 |Texto del mensaje|El puntero anterior de la página IAM (Mapa de asignación de índices) P_ID2 [Id. de objeto O_ID, Id. de partición PN_ID, unidad de asignación A_ID (tipo TYPE)] apunta a la página IAM P_ID1, pero no se detectó en el recorrido.|  

@@ -1,6 +1,5 @@
 ---
-title: Características en desuso de búsqueda de texto completo en SQL Server 2016 | Microsoft Docs
-ms.custom: ''
+title: Características de búsqueda de texto completo en desuso en SQL Server 2016
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -15,15 +14,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea901179d5011744f1b44609ccb9c19c27c514e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f74c1a7f5dbae4ce7d3fb1fe874cfb6ee170063e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758053"
 ---
-# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Características en desuso de búsqueda de texto completo en SQL Server 2016
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="deprecated-full-text-search-features-in-sql-server-2016"></a>Características de búsqueda de texto completo en desuso en SQL Server 2016
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describen las características de búsqueda de texto completo en desuso que todavía están disponibles en SQL Server. Está previsto quitar estas características en una versión futura. No use características en desuso en aplicaciones nuevas.  
   
 Puede supervisar el uso de características en desuso mediante el contador de rendimiento del objeto **SQL Server:Deprecated Features** (SQL Server: características en desuso) y los eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  

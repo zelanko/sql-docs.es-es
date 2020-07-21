@@ -10,17 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014458"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882570"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Uso de escalado de lectura con grupos de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Un grupo de disponibilidad es una solución integral que ofrece funcionalidades de alta disponibilidad para SQL Server, así como soluciones de escalado integradas. En una aplicación de base de datos típica, varios clientes ejecutan varios tipos de cargas de trabajo. En ocasiones, se pueden desarrollar cuellos de botella debido a las restricciones de recursos. Puede liberar recursos y así lograr un mayor rendimiento de la carga de trabajo de OLTP. También puede proporcionar mayor rendimiento y escalabilidad en las cargas de trabajo de solo lectura. Aproveche la tecnología de replicación más rápida de SQL Server y cree un grupo de bases de datos replicadas para descargar cargas de trabajo de informes y análisis en réplicas de solo lectura.
+Un grupo de disponibilidad es una solución integral que ofrece funcionalidades de alta disponibilidad para SQL Server, así como soluciones de escalado integradas. En una aplicación de base de datos típica, varios clientes ejecutan varios tipos de cargas de trabajo. En ocasiones, se pueden desarrollar cuellos de botella debido a las restricciones de recursos. 
+
+En el contexto de un grupo de disponibilidad, el escalado de lectura descarga las cargas de trabajo de lectura en las réplicas secundarias. Puede liberar recursos y así lograr un mayor rendimiento de la carga de trabajo de OLTP. También puede proporcionar mayor rendimiento y escalabilidad en las cargas de trabajo de solo lectura. Aproveche la tecnología de replicación más rápida de SQL Server y cree un grupo de bases de datos replicadas para descargar cargas de trabajo de informes y análisis en réplicas de solo lectura.
 
 Con los grupos de disponibilidad, se pueden configurar una o varias réplicas secundarias para admitir el acceso de solo lectura a las bases de datos secundarias.
 
@@ -52,6 +54,6 @@ Un único grupo de disponibilidad distribuido puede tener hasta 17 réplicas sec
 
 [Configurar un grupo de disponibilidad de escalado de lectura en Windows](../../../database-engine/availability-groups/windows/configure-read-scale-availability-groups.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)

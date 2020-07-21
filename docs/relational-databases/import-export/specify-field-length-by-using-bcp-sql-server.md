@@ -1,5 +1,6 @@
 ---
 title: Especificar la longitud de campo mediante bcp (SQL Server) | Microsoft Docs
+description: En SQL Server, si es necesario, bcp solicita la longitud del campo, las longitudes del campo predeterminadas y el impacto de la longitud del campo en el almacenamiento de datos en los archivos que contienen datos de tipo char.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e39c277ac7fb0c09baca8bb98058c0ddc8766a55
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062534"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000380"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos **int** ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **bcp** le solicitará la longitud del campo, las longitudes predeterminadas de los campos y los efectos de la longitud del campo en el almacenamiento de datos en los archivos de datos que contienen datos de tipo **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Solicitud bcp para la longitud de campo  
@@ -66,9 +67,9 @@ ms.locfileid: "68062534"
 |**Texto**|0|  
 |**ntext**|0|  
 |**bit**|1|  
-|**binario**|Dos veces la longitud definida para la columna + 1|  
+|**binary**|Dos veces la longitud definida para la columna + 1|  
 |**varbinary**|Dos veces la longitud definida para la columna + 1|  
-|**imagen**|0|  
+|**image**|0|  
 |**datetime**|24|  
 |**smalldatetime**|24|  
 |**float**|30|  
@@ -100,9 +101,9 @@ ms.locfileid: "68062534"
 |Tipo de datos|Longitud predeterminada (caracteres)|  
 |---------------|-----------------------------------|  
 |**bit**|1|  
-|**binario**|Longitud definida para la columna|  
+|**binary**|Longitud definida para la columna|  
 |**varbinary**|Longitud definida para la columna|  
-|**imagen**|0|  
+|**image**|0|  
 |**datetime**|8|  
 |**smalldatetime**|4|  
 |**float**|8|  

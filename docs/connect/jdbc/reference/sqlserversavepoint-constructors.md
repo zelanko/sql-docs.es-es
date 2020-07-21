@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f9b1be55-6c2b-4568-a768-5294675ae35f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b8f11b05f2e10fe5d0569f4f8b4565aa438abb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a40938debf99318ef2cd41c601c4a58c3f7672e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970414"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927039"
 ---
 # <a name="sqlserversavepoint-constructors"></a>Constructores SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obtener información sobre los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [miembros de SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-members.md).  
+  Para información sobre los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), vea [SQLServerSavepoint Members](../../../connect/jdbc/reference/sqlserversavepoint-members.md).  
   
   

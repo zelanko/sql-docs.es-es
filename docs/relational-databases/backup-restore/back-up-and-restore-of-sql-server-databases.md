@@ -1,5 +1,6 @@
 ---
 title: Realizar copias de seguridad y restaurar bases de datos de SQL Server | Microsoft Docs
+description: En este artículo se describen las ventajas de realizar copias de seguridad de las bases de datos de SQL Server y se presentan estrategias de copia de seguridad y restauración y consideraciones de seguridad.
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -22,22 +23,22 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c948c6e26655b8a450aee22f1ca6a6a178e0db76
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a39bffb27177281b5e5c89330bb605ce7fd90acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771728"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este artículo se describen las ventajas de realizar copias de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los términos de copias de seguridad y restauración básicos, y se presentan las estrategias de copias de seguridad y restauración para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como consideraciones de seguridad para las copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > En este artículo se presentan las copias de seguridad de SQL Server. Para conocer los pasos específicos para realizar copias de seguridad de bases de datos de SQL Server, consulte [Crear copias de seguridad](#creating-backups).
   
- El componente de copia de seguridad y restauración de SQL Server ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de pérdida de datos catastrófica, debe realizar copias de seguridad de las bases de datos para conservar las modificaciones en los datos de forma periódica. Una estrategia de copias de seguridad y restauración correctamente planeada contribuye a la protección de las bases de datos de la pérdida de datos derivada de daños causados por diferentes errores. Pruebe la estrategia mediante la restauración de las copias de seguridad y la posterior recuperación de la base de datos para estar preparado y poder responder de forma eficaz ante un desastre.
+ El componente de copia de seguridad y restauración de SQL Server ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de una pérdida de datos catastrófica, debe realizar de forma periódica copias de seguridad de las bases de datos para conservar las modificaciones realizadas en los datos. Una estrategia bien diseñada de copia de seguridad y restauración le ayuda a proteger las bases de datos frente a la pérdida de datos provocada por diversos errores. Pruebe su estrategia con la restauración de un conjunto de copias de seguridad y, después, recupere la base de datos para prepararse para dar una respuesta eficaz en caso de desastre.
   
- Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el servicio Azure Blob Storage. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] proporciona la opción de usar instantáneas de Azure para copias de seguridad casi instantáneas y restauraciones más rápidas. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+ Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el servicio Azure Blob Storage. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] proporciona la opción de usar instantáneas de Azure para copias de seguridad casi instantáneas y restauraciones más rápidas. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure ofrece también una solución de copia de seguridad de clase empresarial para las instancias de SQL Server que se ejecutan en máquinas virtuales de Azure. Una solución de copia de seguridad totalmente administrada admite Grupos de disponibilidad Always On, retención a largo plazo, recuperación a un momento dado y administración y supervisión centrales. Para obtener más información, vea [Azure Backup para SQL Server en máquina virtual de Azure](https://docs.microsoft.com/azure/backup/backup-azure-sql-database).
   
 ##  <a name="why-back-up"></a>Por qué realizar copias de seguridad  
 -   La copia de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la ejecución de procedimientos de restauración de prueba de las copias de seguridad y el almacenamiento de las copias en una ubicación segura y fuera del sitio contribuyen a protegerse ante una pérdida de datos catastrófica. **Las copias de seguridad son la única forma de proteger los datos.**
@@ -59,7 +60,7 @@ ms.locfileid: "70176324"
  Copia de los datos que se puede usar para restaurar y recuperar los datos después de un error. Las copias de seguridad de una base de datos también se pueden usar para restaurar una copia de la base de datos en una nueva ubicación.  
   
 dispositivo de**copia de seguridad**  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 **medio de copia de seguridad**  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  
@@ -79,7 +80,7 @@ dispositivo de**copia de seguridad**
 **copia de seguridad de registros**  
  Copia de seguridad de los registros de transacciones que incluye todos los registros no guardados en una copia de seguridad de registros anterior. (modelo de recuperación completa)  
   
-**recuperar**  
+**recover**  
  Devolver una base de datos a un estado estable y coherente.  
   
 **recovery**  
@@ -88,29 +89,32 @@ dispositivo de**copia de seguridad**
 **modelo de recuperación**  
  Propiedad de la base de datos que controla el mantenimiento del registro de transacciones de una base de datos. Existen tres modelos de recuperación: simple, completa y por medio de registros de operaciones masivas. El modelo de recuperación de la base de datos determina sus requisitos de copias de seguridad y restauración.  
   
-**restaurar**  
+**restore**  
  Proceso de varias fases que copia todos los datos y páginas del registro desde una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada a una base de datos especificada y, a continuación, pone al día todas las transacciones registradas en la copia de seguridad mediante la aplicación de los cambios registrados para poner los datos al día.  
   
  ##  <a name="backup-and-restore-strategies"></a>Estrategias de copias de seguridad y restauración  
- Las operaciones de copia de seguridad y restauración deben personalizarse para un entorno concreto y funcionar con los recursos disponibles. Por tanto, un uso confiable del proceso de copia de seguridad y restauración para la recuperación de datos requiere una estrategia de copia de seguridad y restauración. Una estrategia bien diseñada maximiza la disponibilidad de los datos y minimiza la pérdida de los mismos, teniendo en cuenta los requisitos concretos de su empresa.  
+ Las operaciones de copia de seguridad y restauración deben personalizarse para un entorno concreto y funcionar con los recursos disponibles. Por lo tanto, un uso confiable de las copias de seguridad y la restauración para la recuperación requiere una estrategia de copia de seguridad y restauración. Una estrategia de copia de seguridad y restauración bien diseñada equilibra los requisitos empresariales de disponibilidad máxima de los datos y la pérdida mínima de datos, al tiempo que se tiene en cuenta el costo de mantenimiento y almacenamiento de las copias de seguridad.  
+
+ Una estrategia de copia de seguridad y restauración contiene una parte de copia de seguridad y una parte de restauración. La parte de copia de seguridad de la estrategia define el tipo y la frecuencia de las copias de seguridad, la naturaleza y la velocidad del hardware necesaria, cómo se prueban las copias de seguridad, y dónde y cómo se almacenan los medios de copia de seguridad (incluidas las consideraciones de seguridad). La parte de restauración de la estrategia define quién es responsable de llevar a cabo las operaciones de restauración, cómo se deben realizar para satisfacer sus objetivos de disponibilidad de la base de datos y minimizar la pérdida de datos, y cómo se prueban las restauraciones. 
   
-  > [!IMPORTANT] 
-  > Coloque la base de datos y las copias de seguridad en dispositivos separados. De lo contrario, si se produce un error en el dispositivo que contiene la base de datos, las copias de seguridad no estarán disponibles. El hecho de colocar la base de datos y las copias de seguridad en distintos dispositivos también mejora el rendimiento de E/S de la escritura de las copias de seguridad y el uso de producción de la base de datos.**  
+ Diseñar una estrategia de copia de seguridad y restauración eficaz requiere mucho cuidado en el planeamiento, la implementación y las pruebas. Es necesario realizar pruebas: no tendrá una estrategia de copia de seguridad hasta que haya restaurado correctamente las copias de seguridad en todas las combinaciones incluidas en su estrategia de restauración y haya probado la base de datos restaurada en busca de coherencia física. Debe tener en cuenta varios factores. Entre ellas se incluyen las siguientes:  
   
- Una estrategia de copia de seguridad y restauración contiene una parte de copia de seguridad y una parte de restauración. La parte de copia de seguridad de la estrategia define el tipo y la frecuencia de las copias de seguridad, la naturaleza y la velocidad del hardware necesaria, cómo se prueban las copias de seguridad, y dónde y cómo se almacenan los medios de copia de seguridad (incluidas las consideraciones de seguridad). La parte de restauración de la estrategia define quién es responsable de llevar a cabo las operaciones de restauración y cómo se deben realizar para satisfacer sus objetivos de disponibilidad de la base de datos y minimizar la pérdida de datos. Se recomienda documentar los procedimientos de copia de seguridad y restauración, y mantener una copia de la documentación en su libro de documentación de procesos.  
+- Los objetivos de la organización con respecto a las bases de datos de producción, especialmente los requisitos de disponibilidad y protección de datos frente a pérdidas o daños.  
   
- Diseñar una estrategia de copia de seguridad y restauración eficaz requiere mucho cuidado en el planeamiento, la implementación y las pruebas. Es necesario realizar pruebas. No tendrá una estrategia de copia de seguridad hasta que haya restaurado correctamente las copias de seguridad en todas las combinaciones incluidas en su estrategia de restauración. Debe tener en cuenta varios factores. Entre ellas, figuran:  
-  
--   Los objetivos de producción de la organización para las bases de datos, especialmente los requisitos de disponibilidad y protección de datos frente a pérdidas.  
-  
--   La naturaleza de cada una de las bases de datos: el tamaño, los patrones de uso, la naturaleza del contenido, los requisitos de los datos, etc.  
+-  La naturaleza de cada una de las bases de datos: el tamaño, los patrones de uso, la naturaleza del contenido, los requisitos de los datos, etc.  
   
 -   Restricciones de los recursos, como hardware, personal, espacio para almacenar los medios de copia de seguridad, seguridad física de los medios almacenados, etc.  
 
-### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>Impacto del modelo de recuperación en copias de seguridad y restauración  
- Las operaciones de copias de seguridad y restauración se producen en el contexto de un modelo de recuperación. El modelo de recuperación es una propiedad de la base de datos que controla la forma en que se administra el registro de transacciones. Además, el modelo de recuperación de una base de datos determina qué tipos de copias de seguridad y qué escenarios de restauración se admiten para la base de datos. Normalmente, en las bases de datos se usa el modelo de recuperación simple o el modelo de recuperación completa. El modelo de recuperación completa puede complementarse cambiando al modelo de recuperación optimizado para cargas masivas de registros antes de las operaciones masivas. Para ver una introducción sobre estos modelos de recuperación y cómo afectan a la administración del registro de transacciones, vea [El registro de transacciones (SQL Server)](../logs/the-transaction-log-sql-server.md).  
+## <a name="best-practice-recommendations"></a>Mejores prácticas recomendadas
+
+### <a name="use-separate-storage"></a>Uso de almacenamiento independiente 
+> [!IMPORTANT] 
+> Asegúrese de colocar las copias de seguridad de las bases de datos en una ubicación física o un dispositivo independiente de los archivos de la base de datos. Si la unidad física que almacena las bases de datos no funciona correctamente o se bloquea, la capacidad de recuperación depende de la capacidad de acceder a la unidad o el dispositivo remoto independiente que almacenó las copias de seguridad para realizar una restauración. Tenga en cuenta que puede crear varios volúmenes lógicos o particiones a partir de una misma unidad de disco físico. Estudie detenidamente los diseños de partición de disco y de volumen lógico antes de elegir una ubicación de almacenamiento para las copias de seguridad.
+
+### <a name="choose-appropriate-recovery-model"></a>Elección del modelo de recuperación adecuado
+ Las operaciones de copias de seguridad y restauración se producen en el contexto de un [modelo de recuperación](../backup-restore/recovery-models-sql-server.md). El modelo de recuperación es una propiedad de la base de datos que controla la forma en que se administra el registro de transacciones. Por tanto, el modelo de recuperación de una base de datos determina qué tipos de copias de seguridad y qué escenarios de restauración se admiten para la base de datos, así como el tamaño de las copias de seguridad del registro de transacciones. Normalmente, en las bases de datos se usa el modelo de recuperación simple o el modelo de recuperación completa. El modelo de recuperación completa puede aumentarse cambiando al modelo de recuperación optimizado para cargas masivas de registros antes de las operaciones masivas. Para ver una introducción sobre estos modelos de recuperación y cómo afectan a la administración del registro de transacciones, vea [El registro de transacciones (SQL Server)](../logs/the-transaction-log-sql-server.md).  
   
- La mejor elección de modelo de recuperación para la base de datos depende de sus requisitos empresariales. Para evitar la administración del registro de transacciones y simplificar la realización de copias de seguridad y restauración, utilice el modelo de recuperación simple. Para minimizar el riesgo de pérdida de trabajo, a costa de una sobrecarga de trabajo administrativo, utilice el modelo de recuperación completa. Para obtener información sobre el efecto de los modelos de recuperación en las copias de seguridad y restauración, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
+ La mejor elección de modelo de recuperación para la base de datos depende de sus requisitos empresariales. Para evitar la administración del registro de transacciones y simplificar la realización de copias de seguridad y restauración, utilice el modelo de recuperación simple. Para minimizar el riesgo de pérdida de trabajo, a costa de una sobrecarga de trabajo administrativo, utilice el modelo de recuperación completa. Para minimizar el impacto en el tamaño del registro durante las operaciones de registro masivo, a la vez que permite la recuperación de dichas operaciones, use el modelo de recuperación optimizado para cargas masivas de registros. Para obtener información sobre el efecto de los modelos de recuperación en las copias de seguridad y restauración, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 ### <a name="design-your-backup-strategy"></a>Diseñar la estrategia de copia de seguridad  
  Una vez seleccionado un modelo de recuperación que cumpla los requisitos de su empresa para una base de datos específica, debe planear e implementar una estrategia de copias de seguridad. La estrategia de copias de seguridad óptima depende de distintos factores, de entre los cuales destacan los siguientes:  
@@ -132,9 +136,13 @@ dispositivo de**copia de seguridad**
      Para una base de datos grande en la que los cambios se concentran en una parte de los archivos o grupos de archivos, las copias de seguridad parciales o de archivos pueden ser útiles. Para obtener más información, vea [Copias de seguridad parciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md) y [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md).  
   
 -   ¿Cuánto espacio en disco necesitará una copia de seguridad completa de la base de datos?  
+-   ¿Hasta qué punto en el pasado su empresa requiere que se mantengan las copias de seguridad? 
+
+    Asegúrese de que tiene una programación de copia de seguridad adecuada establecida en función de las necesidades de la aplicación y los requisitos empresariales. El riesgo de pérdida de datos en las copias de seguridad antiguas aumenta a medida que pasa el tiempo, a menos que tenga una manera de regenerar todos los datos hasta el momento del error. Antes de optar por desechar las copias de seguridad antiguas debido a limitaciones de recursos de almacenamiento, valore si será necesaria la capacidad de recuperación hasta ese punto en el pasado.
+
   
  ### <a name="estimate-the-size-of-a-full-database-backup"></a>Calcular el tamaño de una copia de seguridad completa de base de datos  
- Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused**. Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
+ Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused** . Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).  
   
 ### <a name="schedule-backups"></a>Programar copias de seguridad  
  La realización de una operación de copia de seguridad tiene un efecto mínimo en las transacciones que se están ejecutando, por lo que se puede efectuar al mismo tiempo que otras operaciones periódicas. Puede realizar una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un efecto mínimo en las cargas de trabajo de producción.  
@@ -144,9 +152,16 @@ dispositivo de**copia de seguridad**
  Una vez decididos los tipos de copias de seguridad necesarios y la frecuencia de realización de cada tipo de copia, se recomienda programar copias de seguridad regulares como parte de un plan de mantenimiento de la base de datos. Para obtener información acerca de los planes de mantenimiento y de cómo crearlos para las copias de seguridad de bases de datos y las copias de seguridad de registros, vea [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).
   
 ### <a name="test-your-backups"></a>Probar las copias de seguridad  
- No tendrá una estrategia de restauración hasta que compruebe las copias de seguridad. Es muy importante comprobar cuidadosamente la estrategia de copia de seguridad de cada una de las bases de datos restaurando una copia de la base de datos en un sistema de prueba. Debe comprobar la restauración de cada tipo de copia de seguridad que pretenda utilizar.
-  
- Se recomienda mantener un manual de operaciones para cada base de datos. Este manual de operaciones debe documentar la ubicación de las copias de seguridad, los nombres de dispositivos de copia de seguridad (si los hay) y el tiempo necesario para restaurar las copias de seguridad de prueba.
+ No tendrá una estrategia de restauración hasta que compruebe las copias de seguridad. Es muy importante comprobar cuidadosamente la estrategia de copia de seguridad de cada una de las bases de datos restaurando una copia de la base de datos en un sistema de prueba. Debe comprobar la restauración de cada tipo de copia de seguridad que pretenda utilizar. También se recomienda que, una vez restaurada la copia de seguridad, realice comprobaciones de coherencia de la base de datos a través de DBCC CHECKDB de la base de datos para validar que el medio de copia de seguridad no se ha dañado. 
+
+### <a name="verify-media-stability-and-consistency"></a>Comprobación de la estabilidad y la coherencia de los medios
+Use las opciones de comprobación proporcionadas por las utilidades de copia de seguridad (comando BACKUP de T-SQL, planes de mantenimiento de SQL Server, su solución o software de copia de seguridad, etc.). Para obtener un ejemplo, vea [RESTORE VERIFYONLY] (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) Uso de características avanzadas como BACKUP CHECKSUM para detectar problemas con el medio de copia de seguridad en sí. Para más información, vea [Errores posibles de medios durante copia de seguridad y restauración (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)
+
+### <a name="document-backuprestore-strategy"></a>Estrategia de copia de seguridad y restauración de documentos 
+Se recomienda documentar los procedimientos de copia de seguridad y restauración, y mantener una copia de la documentación en su libro de documentación de procesos.
+También se recomienda mantener un manual de operaciones para cada base de datos. Este manual de operaciones debe documentar la ubicación de las copias de seguridad, los nombres de dispositivos de copia de seguridad (si los hay) y el tiempo necesario para restaurar las copias de seguridad de prueba.
+
+
 
 ## <a name="monitor-progress-with-xevent"></a>Supervisar el progreso con xEvent
 Las operaciones de copia de seguridad y restauración pueden durar bastante tiempo debido al tamaño de una base de datos y a la complejidad de las operaciones implicadas. Si surgen problemas con cualquiera de las operaciones, puede usar el evento extendido **backup_restore_progress_trace** para supervisar el progreso en directo. Para más información sobre los eventos extendidos, vea [Eventos extendidos](../extended-events/extended-events.md).

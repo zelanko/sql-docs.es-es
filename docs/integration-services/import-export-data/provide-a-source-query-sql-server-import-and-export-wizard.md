@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285125"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
@@ -32,7 +32,7 @@ En este sencillo ejemplo, el usuario ha introducido la consulta `SELECT * FROM S
 -   `SELECT *` significa que se copiarán todas las columnas.
 -   La ausencia de una cláusula `WHERE` significa que se copiarán todas las filas.
   
- ![Página de consultas de origen del asistente para importación y exportación](../../integration-services/import-export-data/media/source-query.png "Source query page of the Import and Export Wizard")  
+ ![Página Consulta de origen del Asistente para importar y exportar](../../integration-services/import-export-data/media/source-query.png "Página Consulta de origen del Asistente para importar y exportar")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>Proporcionar la consulta y comprobar su sintaxis
 **Instrucción SQL**  
@@ -56,10 +56,10 @@ Si el origen de datos es Excel, consulte [Proporcionar una consulta de origen pa
 > [!NOTE]
 > Si el tiempo necesario para comprobar la sintaxis de la instrucción supera el valor de tiempo de espera de 30 segundos, el análisis se detiene y se genera un error. No podrá pasar esta página del asistente hasta que el análisis se realice correctamente. Una solución para evitar el tiempo de espera es crear una vista de base de datos basada en la consulta que quiere usar y luego consultar la vista desde el asistente, en lugar de escribir directamente el texto de la consulta.  
   
- **Examinar**  
+ **Browse**  
  Seleccione un archivo guardado que contenga el texto de una consulta de SQL mediante el cuadro de diálogo **Abrir**. Al seleccionar un archivo se copiará el texto del archivo en el cuadro de texto **Instrucción SQL** .  
  
-## <a name="excelQueries"></a> Proporcionar una consulta de origen para Excel
+## <a name="provide-a-source-query-for-excel"></a><a name="excelQueries"></a> Proporcionar una consulta de origen para Excel
 
 > [!IMPORTANT]
 > Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

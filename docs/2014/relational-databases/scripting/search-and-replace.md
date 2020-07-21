@@ -1,6 +1,6 @@
 ---
-title: Buscar y reemplazar | Microsoft Docs
-ms.custom: ''
+title: Buscar y reemplazar
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -25,18 +25,17 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 55422fa7201213477426c7bc25c45ff05acf8945
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009352"
 ---
 # <a name="search-and-replace"></a>Buscar y reemplazar
-  Existen varias maneras de buscar y reemplazar texto. En el menú **Editar**, **Buscar y reemplazar** ofrece cuatro opciones: **Búsqueda rápida**, **Reemplazo rápido**, **Buscar en archivos** o **Reemplazar en archivos**. Cada una abre versiones del cuadro de diálogo **Buscar y reemplazar** . También es posible buscar sin un cuadro de diálogo mediante los métodos abreviados de teclado para búsqueda incremental. Estas técnicas permiten controlar el ámbito de búsqueda y reemplazo y elegir el método de revisión de las coincidencias de búsqueda y los reemplazos.  
+  Existen varias maneras de buscar y reemplazar texto. En el menú **Editar** , **Buscar y reemplazar** ofrece cuatro opciones: **Búsqueda rápida**, **Reemplazo rápido**, **Buscar en archivos**o **Reemplazar en archivos**. Cada una abre versiones del cuadro de diálogo **Buscar y reemplazar** . También es posible buscar sin un cuadro de diálogo mediante los métodos abreviados de teclado para búsqueda incremental. Estas técnicas permiten controlar el ámbito de búsqueda y reemplazo y elegir el método de revisión de las coincidencias de búsqueda y los reemplazos.  
   
  A la hora de buscar y reemplazar texto, es necesario tener en cuenta lo siguiente:  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66090202"
   
  Normalmente no es posible buscar elementos mediante vistas gráficas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar en un documento activo de forma incremental](search-an-active-document-incrementally.md)   
  [Buscar documentos de forma interactiva](search-documents-interactively.md)   
  [Buscar en documentos mediante las listas de resultados](search-documents-using-results-lists.md)   

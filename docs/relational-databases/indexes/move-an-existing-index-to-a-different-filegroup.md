@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a2eaffb39868737c955224b3ccd3ba39366d6f92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 01b7f9191c34e9c83c472abfb560c365e9e5f9b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771707"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo mover un índice existente de su grupo de archivos actual a otro distinto en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -42,20 +42,20 @@ ms.locfileid: "72906382"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si una tabla base tiene un índice clúster, al mover el índice clúster a un nuevo grupo de archivos se mueve también la tabla a ese grupo de archivos.  
   
 -   No puede mover los índices creados mediante una restricción UNIQUE o PRIMARY KEY con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para mover estos índices, use la instrucción [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) con la opción (DROP_EXISTING=ON) en [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Para mover un índice existente a un grupo de archivos diferente usando el Diseñador de tablas  
   
@@ -99,9 +99,9 @@ ms.locfileid: "72906382"
   
      En equipos multiprocesador que usan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede configurar el número de procesadores que desea usar para ejecutar la instrucción de índice; para ello, especifique un valor máximo de grado de paralelismo. La característica Operaciones indizadas en paralelo no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Características compatibles con las ediciones de SQL Server 2016. Para obtener más información sobre las operaciones indexadas en paralelo, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
- La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** _nombre_índice_:  
+ La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** _nombre de índice_:  
   
  **Grupo de archivos**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos.  
@@ -143,7 +143,7 @@ ms.locfileid: "72906382"
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Para mover un índice existente a un grupo de archivos diferente  
   

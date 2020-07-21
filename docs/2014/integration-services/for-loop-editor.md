@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca06230922be4fe1c6ecbf8f3e941ab8cf7728fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058564"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425372"
 ---
 # <a name="for-loop-editor"></a>Editor de bucles For
   Use la página **Bucle For** del cuadro de diálogo **Editor de bucles For** para configurar un bucle que repita un flujo de trabajo hasta que una condición específica se evalúe como False.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058564"
  **AssignExpression**  
  Opcionalmente, escriba una expresión que cambie una condición cada vez que se repita el bucle.  
   
- **Name**  
+ **Nombre**  
  Escriba un nombre único para el contenedor de bucles For. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -43,10 +42,10 @@ ms.locfileid: "66058564"
  **Descripción**  
  Escriba una descripción del contenedor de bucles For.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Página Expresiones](expressions/expressions-page.md)   
- [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   
+ [Página expresiones](expressions/expressions-page.md)   
+ [Contenedor de bucles foreach](control-flow/foreach-loop-container.md)   
  [Configurar un contenedor de bucles For](../../2014/integration-services/configure-a-for-loop-container.md)  
   
   

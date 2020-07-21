@@ -1,5 +1,5 @@
 ---
-title: Parámetros con valores de tabla (ODBC) | Documentos de Microsoft
+title: Parámetros con valores de tabla (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,27 +11,25 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3af4180f248fe11087b7c60636336652652dc5a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 290678e11a292304d8c7b3ed3493a66870b52b29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129007"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999733"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parámetros con valores de tabla (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La compatibilidad con ODBC para parámetros con valores de tabla permite a una aplicación cliente enviar datos parametrizados al servidor más eficazmente, enviando varias filas al servidor con una llamada.  
   
- Para obtener información acerca de los parámetros con valores de tabla en el servidor, consulte [usar parámetros &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Para obtener información sobre los parámetros con valores de tabla en el servidor, vea [usar parámetros con valores de tabla &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  En ODBC, hay dos formas de enviar parámetros con valores de tabla al servidor:  
   
--   Todos los datos de parámetro con valores de tabla pueden estar en memoria en el momento en que se llama a SQLExecDirect o SQLExecute. Estos datos se almacenan en matrices si hay varias filas en el valor de tabla.  
+-   Todos los datos de parámetros con valores de tabla pueden estar en memoria en el momento en que se llama a SQLExecDirect o SQLExecute. Estos datos se almacenan en matrices si hay varias filas en el valor de tabla.  
   
 -   Una aplicación puede especificar datos en ejecución para un parámetro con valores de tabla cuando se llama a SQLExecDirect o SQLExecute. En este caso, las filas de datos para el valor de tabla se pueden proporcionar en lotes o de uno en uno para reducir los requerimientos de memoria.  
   
@@ -67,7 +65,7 @@ ms.locfileid: "68129007"
  Describe cómo una aplicación puede obtener metadatos para una llamada a procedimiento preparada.  
   
  [Metadatos de parámetros con valores de tabla adicionales](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- Describe cómo utilizar SQLColumns, SQLProcedureColumns y SQLTables para recuperar metadatos para un parámetro con valores de tabla.  
+ Describe cómo usar SQLProcedureColumns, SQLTables y SQLColumns para recuperar los metadatos de un parámetro con valores de tabla.  
   
  [Conversión de datos de parámetros con valores de tabla y otros errores y advertencias](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Describe cómo procesar los errores en valores de columna de parámetro con valores de tabla.  
@@ -81,7 +79,7 @@ ms.locfileid: "68129007"
  [Ejemplos de programación de parámetros con valores de tabla ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
  Describe cómo realizar tareas comunes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   

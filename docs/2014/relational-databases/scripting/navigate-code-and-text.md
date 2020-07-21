@@ -1,6 +1,6 @@
 ---
-title: Exploración de código y texto | Microsoft Docs
-ms.custom: ''
+title: Navegar por código y texto
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,15 +18,14 @@ helpviewer_keywords:
 - navigating code
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad05ca7d33e8c2d6d976ea57aace43ff2ab076f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b392042d29b900760294bdd95a99ee656553bc00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009647"
 ---
 # <a name="navigate-code-and-text"></a>Navegar por código y texto
   Para moverse por el texto utilice:  

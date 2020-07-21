@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6c4a3e51745ab0f2c67dcba88f71b79f031d7ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058589"
 ---
-# <a name="name-not-found-dialog-box"></a>Nombre no encontrado (cuadro de diálogo)
+# <a name="name-not-found-dialog-box"></a>Nombre no encontrado, cuadro de diálogo
   No se ha podido encontrar uno o varios nombres de objetos en el cuadro de diálogo. Seleccione una opción para continuar.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Corregir esta información y buscar de nuevo**  
  Seleccione esta opción para habilitar el área de **Seleccionar este tipo de objeto**, **Tipo de objeto**y **Escriba el nombre de objeto** .  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62999552"
  **Escriba el nombre de objeto**  
  Contiene el nombre del objeto que no se ha encontrado. Corrija el nombre del objeto o escriba un nuevo nombre.  
   
- **Quitar** *\<nombre de objeto >* **de selección**  
+ **Quitar** *\<object name>* **desde la selección**      
  Seleccione esta opción para cerrar el cuadro de diálogo **Nombre no encontrado** y quitar el elemento del cuadro de diálogo **Seleccionar objetos** .  
   
   

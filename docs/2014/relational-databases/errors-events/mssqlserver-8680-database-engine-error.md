@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec3b671b397b296e00e0f3da6aaeafa6b754cc45
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62912602"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553140"
 ---
-# <a name="mssqlserver8680"></a>MSSQLSERVER_8680
+# <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8680|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8680|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|REMOTE_ERR|  
 |Texto del mensaje|Error interno del procesador de consultas: error inesperado al procesar una fase de consulta remota.|  

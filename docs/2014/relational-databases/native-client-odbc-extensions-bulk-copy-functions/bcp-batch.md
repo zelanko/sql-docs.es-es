@@ -15,17 +15,16 @@ topic_type:
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a028ed31ff2f4936d5d7bd45ba7809467939718b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019898"
 ---
-# <a name="bcpbatch"></a>bcp_batch
+# <a name="bcp_batch"></a>bcp_batch
   Confirma todas las filas previamente copiadas de forma masiva desde variables de programa y enviadas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +41,7 @@ hdbc
  *hdbc*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  El número de filas guardado después de la última llamada a **bcp_batch**, o-1 en caso de error.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -50,7 +49,7 @@ hdbc
   
  Puede llamar a **bcp_batch** una vez cada *n* filas o cuando se produzcan períodos de inactividad en la entrada de datos (como en una aplicación de telemetría). Si una aplicación no llama a **bcp_batch** , las filas copiadas de forma masiva solo se confirmarán cuando se llame a **bcp_done** .  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

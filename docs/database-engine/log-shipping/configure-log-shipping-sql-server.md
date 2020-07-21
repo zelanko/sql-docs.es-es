@@ -1,5 +1,6 @@
 ---
 title: Configurar el trasvase de registros (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo configurar el trasvase de registros mediante SQL Server Management Studio o Transact-SQL en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9735e45e834f60cff3a9d7fa25360b8935ed9b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696264"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo configurar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
@@ -42,20 +43,20 @@ ms.locfileid: "68057892"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   En la base de datos principal se debe utilizar el modelo de recuperación optimizado para cargas masivas de registros; el cambio de la base de datos al modelo de recuperación simple provocará que el trasvase de registros deje de funcionar.  
   
 -   Antes de configurar el trasvase de registros, debe crear un recurso compartido para que las copias de seguridad de los registros de transacciones estén disponibles para el servidor secundario. Se trata de un recurso compartido del directorio donde se generarán las copias de seguridad de los registros de transacciones. Por ejemplo, si realiza una copia de seguridad de los registros de transacciones en el directorio c:\data\tlogs\\, puede crear el recurso compartido \\\\*servidor_principal*\tlogs de ese directorio.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-log-shipping"></a>Para configurar el trasvase de registros  
   
@@ -80,7 +81,7 @@ ms.locfileid: "68057892"
   
 9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad** o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. En **Instancias de servidores secundarios y bases de datos**, haga clic en **Agregar**.  
   
@@ -109,7 +110,7 @@ ms.locfileid: "68057892"
   
 21. Tenga presente la programación de la restauración que aparece en el cuadro **Programación** bajo **Trabajo de restauración**. Si desea personalizar la programación de su instalación, haga clic en **Programar** y, a continuación, ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades. El programa debe parecerse al de la copia de seguridad.  
   
-22. Haga clic en **Aceptar**.  
+22. Haga clic en **OK**.  
   
 23. En **Instancia del servidor de supervisión**, active la casilla **Utilizar una instancia del servidor de supervisión** y, a continuación, haga clic en **Configuración**.  
   
@@ -122,11 +123,11 @@ ms.locfileid: "68057892"
   
 26. En **Retención de historial**, elija el período de tiempo que desea retener un registro del historial de trasvase de registros.  
   
-27. Haga clic en **Aceptar**.  
+27. Haga clic en **OK**.  
   
 28. En el cuadro de diálogo **Propiedades de la base de datos** , haga clic en **Aceptar** para comenzar el proceso de configuración.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-log-shipping"></a>Para configurar el trasvase de registros  
   
@@ -150,7 +151,7 @@ ms.locfileid: "68057892"
   
 10. En el servidor secundario, habilite los trabajos de copia y restauración. Para obtener más información, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Actualización del trasvase de registros a SQL Server 2016 &#40;Transact-SQL&#41;](../../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

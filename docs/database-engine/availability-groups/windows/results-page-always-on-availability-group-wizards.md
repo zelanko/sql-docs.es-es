@@ -1,5 +1,6 @@
 ---
-title: Página Resultados (asistentes para grupos de disponibilidad Always On) | Microsoft Docs
+title: Página Resultados (asistentes para grupos de disponibilidad Always On)
+description: Describe las opciones de la página "Resultados" del Asistente para grupo de disponibilidad de AlwaysOn en la GUI de SQL Server Management Studio.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,19 +15,19 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d0397fced5420ccd25d8d74fecb47f2ae5ed343
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014240"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893117"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Página Resultados (asistentes para grupos de disponibilidad Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   En este tema de Ayuda se describen las opciones de la página **Resultados** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]y [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilice esta página para ver los resultados del asistente.  
   
-##  <a name="PageOptions"></a> Opciones de la página Resultados  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> Opciones de la página Resultados  
  La cuadrícula **Resumen** contiene las columnas siguientes:  
   
  **Nombre**  
@@ -38,9 +39,9 @@ ms.locfileid: "68014240"
 |Resultado|Descripción|  
 |------------|-----------------|  
 |**Error**|Indica que se produjo un error en el paso de la validación. Haga clic en el vínculo para ver el mensaje de error.|  
-|**Correcto**|Indica que el paso de la validación se completó correctamente.|  
+|**Success**|Indica que el paso de la validación se completó correctamente.|  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

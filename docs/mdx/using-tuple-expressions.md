@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135129"
 ---
 # <a name="using-tuple-expressions"></a>Usar expresiones de tupla
@@ -36,15 +36,15 @@ ms.locfileid: "68135129"
   
 -   Si la jerarquía a la que se hace referencia implícitamente tiene un miembro predeterminado, éste se agrega a la tupla.  
   
--   Si la jerarquía con referencia implícita no tiene ningún miembro predeterminado, el **(All)** se utiliza el miembro de la jerarquía de forma predeterminada.  
+-   Si la jerarquía a la que se hace referencia implícitamente no tiene ningún miembro predeterminado, se utiliza el miembro **(All)** de la jerarquía predeterminada.  
   
 -   Cuando la jerarquía con referencia implícita no tiene ningún miembro predeterminado, se utiliza el primer miembro del nivel superior de la jerarquía.  
   
 ## <a name="one-member-tuples"></a>Tuplas de un miembro  
  Si la expresión de tupla tiene un solo miembro, MDX convierte el miembro en una tupla de un solo miembro a fin de evaluar la expresión. Es decir, funcionalmente es lo mismo utilizar la expresión de miembro `[Measures].[TestMeasure]` en lugar de la expresión de tupla que utilizar la expresión de tupla `( [Measures].[TestMeasure] ).`.  
   
-## <a name="see-also"></a>Vea también  
- [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,10 +1,7 @@
 ---
-title: 'Propiedades de paso de trabajo: nuevo paso de trabajo (página General) | Microsoft Docs'
-ms.custom: ''
-ms.date: 01/19/2017
+title: 'Propiedades de nuevo paso de trabajo: (página general)'
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,21 +9,26 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 173f317ba66a9b05bfa6d99bf28f60ecf518ae19
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7c8c707e8a1916041b32a2509e54d6150ea8df9a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267574"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242224"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propiedades de paso de trabajo - Nuevo paso de trabajo (página General)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
-Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para definir un nuevo paso de trabajo.  
+Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bien para definir un nuevo paso de trabajo.  
   
 Para navegar a esta página, en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en **Trabajos**, haga clic en **Nuevo trabajo**, seleccione la página **Pasos** y haga clic en **Nuevo**. También puede navegar a esta página si hace clic con el botón derecho en un trabajo en el Explorador de objetos, hace clic en **Propiedades**, selecciona la página **Pasos** y hace clic en **Nuevo**, **Insertar**o **Editar**.  
   
@@ -43,7 +45,7 @@ Establece la cuenta de proxy del paso de trabajo. Los miembros del rol fijo de s
 **Base de datos**  
 Establece la base de datos en la que se ejecuta el paso de trabajo. Esta opción no está disponible para todos los tipos de pasos de trabajo.  
   
-**Command**  
+**Comando**  
 Establece el comando que ejecuta el paso de trabajo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opciones de pasos de trabajo Transact-SQL  
@@ -53,7 +55,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado al Portapapeles.  
   
 **Pegar**  
@@ -73,7 +75,7 @@ Especifica [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scri
 **JScript**  
 Especifica JScript como lenguaje de los pasos de trabajo.  
   
-**Otro**  
+**Otros**  
 Escriba el nombre del lenguaje para los pasos de trabajo escritos en otro lenguaje de scripts.  
   
 **Abrir**  
@@ -82,7 +84,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -98,7 +100,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -111,7 +113,7 @@ Carga el script desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del script.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -121,7 +123,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -131,7 +133,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -144,7 +146,7 @@ La base de datos que se utiliza en el paso de trabajo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -154,7 +156,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -164,7 +166,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -180,7 +182,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -199,7 +201,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copiar**  
+**Copy**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -211,7 +213,7 @@ Pega el contenido del Portapapeles.
 Especifique dónde se encuentra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) y qué método de autenticación se va a utilizar. Cuando seleccione esta pestaña, aparecerán las opciones siguientes.  
   
 **Origen del paquete**  
-Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Elija una de las siguientes opciones:  
+Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis_md.md)] . Elija alguna de las acciones siguientes:  
   
 -   **SQL Server**  
   
@@ -231,7 +233,7 @@ Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona por motivos de compatibilidad con versiones anteriores. Para mejorar la seguridad, utilice la autenticación de Windows siempre que sea posible.  
   
-**Paquete**  
+**Package**  
 Escriba la ubicación del paquete.  
   
 > [!IMPORTANT]  
@@ -243,10 +245,10 @@ Especifique las opciones de configuración del paquete [!INCLUDE[ssIS](../../inc
 **Archivos de configuración**  
 Presenta una lista de los archivos de configuración del paquete.  
   
-**Agregar**  
+**Add (Agregar)**  
 Agrega un archivo de configuración para el paquete.  
   
-**Quitar**  
+**Remove**  
 Quita un archivo de configuración del paquete.  
   
 **Subir**  
@@ -261,10 +263,10 @@ Seleccione los archivos de comandos del paquete. Estos archivos se procesan en e
 **Archivos de comandos**  
 Presenta una lista de los archivos de comandos del paquete.  
   
-**Agregar**  
+**Add (Agregar)**  
 Agrega un archivo de comandos.  
   
-**Quitar**  
+**Remove**  
 Quita el archivo de comandos seleccionado.  
   
 **Subir**  
@@ -321,7 +323,7 @@ Seleccione el valor de ClassID del proveedor de registro.
 **Cadena de configuración**  
 Escriba la cadena de configuración del proveedor de registro.  
   
-**Quitar**  
+**Remove**  
 Quita el proveedor de registro.  
   
 ### <a name="set-values-tab"></a>Valores establecidos (pestaña)  
@@ -330,10 +332,10 @@ En esta pestaña puede consultar o cambiar valores de propiedades del paquete.
 **Ruta de acceso de la propiedad**  
 Permite ver o cambiar la ruta de acceso de la propiedad.  
   
-**Value**  
+**Valor**  
 Permite ver o cambiar el valor de la propiedad.  
   
-**Quitar**  
+**Remove**  
 Quita la propiedad.  
   
 ### <a name="verification-tab"></a>Comprobación (pestaña)  

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 298ba469c565765b524b17a58f464b5a3ee909c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050394"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Por lo general, esto sería un escenario donde se almacenan datos en función de una clave `datetime`.  
@@ -34,7 +33,7 @@ ms.locfileid: "62466097"
   
 -   Agregue la partición activa.  
   
- ![Cambio de partición.](../../database-engine/media/hekaton-partitioned-tables.gif "Cambio de partición.")  
+ ![Conmutación de particiones](../../database-engine/media/hekaton-partitioned-tables.gif "Conmutación de particiones")  
 Mantenimiento de datos activo  
   
  Después de eliminar ActiveOrders, las acciones tienen que realizarse durante una ventana de mantenimiento para evitar que las consultan pierdan datos durante el tiempo que transcurre entre la eliminación de los datos y el cambio a la tabla de ensayo.  
@@ -209,7 +208,7 @@ SELECT OBJECT_NAME( object_id) , partition_number , row_count  FROM sys.dm_db_pa
   WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold') AND index_id = 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
   
   

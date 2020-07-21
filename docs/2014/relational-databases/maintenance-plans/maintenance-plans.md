@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5678208e8b7aebdeae98959bb50631e801c6c865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024242"
 ---
 # <a name="maintenance-plans"></a>Planes de mantenimiento
   Los planes de mantenimiento crean un flujo de trabajo de las tareas necesarias para asegurarse de que la base de datos está optimizada, se realizan copias de seguridad de la misma con regularidad y no tiene incoherencias. El Asistente para planes de mantenimiento también crea planes de mantenimiento principales, pero la creación manual de planes le da mucha más flexibilidad.  
@@ -63,7 +62,7 @@ ms.locfileid: "68206851"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo crear un plan de mantenimiento mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Crear un plan de mantenimiento](create-a-maintenance-plan.md)|  
 |Describe cómo crear un plan de mantenimiento mediante la superficie de diseño Plan de mantenimiento.|[Crear un plan de mantenimiento &#40;superficie de diseño del plan de mantenimiento&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
 |Documenta la funcionalidad de los planes de mantenimiento disponible en el Explorador de objetos.|[Planes de mantenimiento &#40;nodo del Explorador de objetos&#41;](../../ssms/object/object-explorer.md)|  

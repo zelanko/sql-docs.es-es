@@ -1,6 +1,7 @@
 ---
-title: 'Lección 2: Especificar información de conexión (Reporting Services) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'Lección 2: Especificación de información de conexión (Reporting Services) | Microsoft Docs'
+description: En esta lección, va a definir un origen de datos, la información de conexión que el informe usa para acceder a los datos desde una base de datos relacional u otros orígenes.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9d4e12a0322a35e96bd930c4fa6f1f852daf2bdd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106052"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258463"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificar información de conexión (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificación de información de conexión (Reporting Services)
 
 En la lección 1, agregó un informe paginado de [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] al proyecto Tutorial.
   
@@ -62,8 +63,8 @@ El Diseñador de informes agrega el origen de datos AdventureWorks2016 al panel 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En esta lección, ha definido correctamente una conexión a la base de datos de ejemplo AdventureWorks2016. Continúe con la [Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) para definir un conjunto de datos para el informe.
+En esta lección, ha definido correctamente una conexión a la base de datos de ejemplo AdventureWorks2016. Continúe con [Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) para definir un conjunto de datos para el informe.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)
+[Creación de cadenas de conexión de datos - Generador de informes y SSRS](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

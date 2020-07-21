@@ -17,10 +17,10 @@ ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296445"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
@@ -82,7 +82,7 @@ ms.locfileid: "71296445"
  Para obtener más información acerca de la página **Script** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Script Page&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md) (Editor de transformación Script [página Script]).  
   
 ## <a name="scripting-a-source-component-in-code-design-mode"></a>Generar script en un componente de origen en modo de diseño de código  
- Después de configurar los metadatos para el componente, abra el IDE de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Aplicaciones (VSTA) para programar el script personalizado. Para abrir VSTA, haga clic en **Editar script** en la página **Script** del **Editor de transformación Script**. Puede escribir el script mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#, dependiendo del lenguaje de script seleccionado para la propiedad **ScriptLanguage**.  
+ Después de configurar los metadatos para el componente, abra el IDE de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) para programar el script personalizado. Para abrir VSTA, haga clic en **Editar script** en la página **Script** del **Editor de transformación Script**. Puede escribir el script mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#, dependiendo del lenguaje de script seleccionado para la propiedad **ScriptLanguage**.  
   
  Para obtener información importante aplicable a todos los tipos de componentes creados mediante el componente de script, vea [Coding and Debugging the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md) (Programación y depuración del componente de script).  
   

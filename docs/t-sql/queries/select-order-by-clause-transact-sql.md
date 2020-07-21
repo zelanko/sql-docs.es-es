@@ -39,16 +39,16 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11aac623d6648fb08e65cff12cdfcf3beaaa2499
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419641"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999773"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT: Cláusula ORDER BY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Ordena los datos devueltos por una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use esta cláusula para lo siguiente:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68419641"
 
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -81,7 +81,7 @@ ORDER BY order_by_expression
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ ORDER BY   
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  Especifica el número de filas que se deben omitir antes de comenzar a devolver filas de la expresión de consulta. El valor puede ser una expresión o constante entera mayor o igual que cero.  
   
-**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  *offset_row_count_expression* puede ser una variable, un parámetro o una subconsulta escalar constante. Cuando se utiliza una subconsulta, no puede hacer referencia a ninguna columna definida en el ámbito de la consulta externa. Es decir, no se puede poner en correlación con la consulta externa.  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Especifica el número de filas que se devolverán después de procesar la cláusula OFFSET. El valor puede ser una expresión o constante entera mayor o igual que uno.  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  *fetch_row_count_expression* puede ser una variable, un parámetro o una subconsulta escalar constante. Cuando se utiliza una subconsulta, no puede hacer referencia a ninguna columna definida en el ámbito de la consulta externa. Es decir, no se puede poner en correlación con la consulta externa.  
   
@@ -137,7 +137,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  En los planes de ejecución de consultas, el valor de recuento de filas de desplazamiento se muestra en el atributo **Rows** o **Top** del operador de consulta TOP.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Evite especificar enteros en la cláusula ORDER BY como representaciones posicionales de las columnas en la lista de selección. Por ejemplo, aunque una instrucción como `SELECT ProductID, Name FROM Production.Production ORDER BY 2` es válida, otros usuarios no la entenderán tan bien como si especificase el nombre de la columna real. Además, para realizar cambios en la lista de selección, como modificar el orden de las columnas o agregar otras nuevas, es necesario modificar la cláusula ORDER BY a fin de evitar resultados inesperados.  
   
  En una instrucción SELECT TOP (*N*), use siempre una cláusula ORDER BY. Esta es la única manera de indicar previsiblemente a qué filas afecta TOP. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -199,7 +199,7 @@ ORDER BY SchemaName + ''; -- wrong
   
 ## <a name="examples"></a>Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|ORDER BY|  
 |[Especificar orden ascendente y descendente](#SortOrder)|DESC • ASC|  
@@ -209,7 +209,7 @@ ORDER BY SchemaName + ''; -- wrong
 |[Limitar el número de filas devueltas](#Offset)|OFFSET • FETCH|  
 |[Usar ORDER BY con UNION, EXCEPT e INTERSECT](#Union)|UNION|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
  En los ejemplos de esta sección se muestra la funcionalidad básica de la cláusula ORDER BY con la sintaxis mínima requerida.  
   
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. Especificar una sola columna definida en la lista de selección  
@@ -260,7 +260,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ```  
   
-###  <a name="SortOrder"></a> Especificar un criterio de ordenación ascendente y descendente  
+###  <a name="specifying-ascending-and-descending-sort-order"></a><a name="SortOrder"></a> Especificar un criterio de ordenación ascendente y descendente  
   
 #### <a name="a-specifying-a-descending-order"></a>A. Especificar un orden descendente  
  En el siguiente ejemplo se ordena el conjunto de resultados en sentido descendente según la columna numérica `ProductID`.  
@@ -298,7 +298,7 @@ ORDER BY FirstName ASC, LastName DESC ;
   
 ```  
   
-###  <a name="Collation"></a> Especificar una intercalación  
+###  <a name="specifying-a-collation"></a><a name="Collation"></a> Especificar una intercalación  
  En el siguiente ejemplo se muestra cómo especificar una intercalación en la cláusula ORDER BY puede cambiar el orden en que se devuelven los resultados de la consulta. Se crea una tabla que contiene una columna definida mediante una intercalación que no distingue entre mayúsculas y minúsculas, ni las tildes. Los valores se insertan con diversas diferencias de uso de mayúsculas, minúsculas y tildes. Dado que no se especifica ninguna intercalación en la cláusula ORDER BY, la primera consulta utiliza la intercalación de la columna al ordenar los valores. En la segunda consulta, se especifica una intercalación que distingue entre mayúsculas y minúsculas y las tildes; en consecuencia, cambia el orden en el que se devuelven las filas.  
   
 ```sql
@@ -319,8 +319,8 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
   
 ```  
   
-###  <a name="Case"></a> Especificar un orden condicional  
- En los ejemplos siguientes se usa la expresión CASE en una cláusula ORDER BY para determinar de manera condicional el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'United States' y según la columna `CountryRegionName` en las demás filas.  
+###  <a name="specifying-a-conditional-order"></a><a name="Case"></a> Especificar un orden condicional  
+ En los ejemplos siguientes se usa la expresión CASE en una cláusula ORDER BY para determinar de manera condicional el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'Estados Unidos' y según la columna `CountryRegionName` en las demás filas.  
   
 ```sql
 SELECT BusinessEntityID, SalariedFlag  
@@ -340,7 +340,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
   
 ```  
   
-###  <a name="Rank"></a> Usar ORDER BY en una función de categoría  
+###  <a name="using-order-by-in-a-ranking-function"></a><a name="Rank"></a> Usar ORDER BY en una función de categoría  
  En el siguiente ejemplo se utiliza la cláusula ORDER BY en las funciones de categoría ROW_NUMBER, RANK, DENSE_RANK y NTILE.  
   
 ```sql
@@ -361,10 +361,10 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ```  
   
-###  <a name="Offset"></a> Limitar el número de filas devueltas  
+###  <a name="limiting-the-number-of-rows-returned"></a><a name="Offset"></a> Limitar el número de filas devueltas  
  En los siguientes ejemplos se utiliza OFFSET y FETCH para limitar el número de filas devueltas por una consulta.  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Especificar constantes enteras para los valores de OFFSET y FETCH  
  En el siguiente ejemplo se especifica una constante entera como valor para las cláusulas OFFSET y FETCH. La primera consulta devuelve todas las filas ordenadas según la columna `DepartmentID`. Compare los resultados devueltos por esta consulta con los de las dos consultas siguientes. La consulta siguiente utiliza la cláusula `OFFSET 5 ROWS` para omitir las primeras 5 filas y devolver todas las restantes. La última consulta utiliza la cláusula `OFFSET 0 ROWS` para comenzar por la primera fila y, a continuación, utiliza `FETCH NEXT 10 ROWS ONLY` para limitar las filas devueltas a 10 filas del conjunto de resultados ordenado.  
@@ -392,20 +392,19 @@ ORDER BY DepartmentID
 ```  
   
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Especificar variables para los valores de OFFSET y FETCH  
- En el siguiente ejemplo se declaran las variables `@StartingRowNumber` y `@FetchRows`, y se especifican estas variables en las cláusulas OFFSET y FETCH.  
+ En el siguiente ejemplo se declaran las variables `@RowsToSkip` y `@FetchRows`, y se especifican estas variables en las cláusulas OFFSET y FETCH.  
   
 ```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
-DECLARE @StartingRowNumber tinyint = 1  
+DECLARE @RowsToSkip tinyint = 2
       , @FetchRows tinyint = 8;  
 SELECT DepartmentID, Name, GroupName  
 FROM HumanResources.Department  
 ORDER BY DepartmentID ASC   
-    OFFSET @StartingRowNumber ROWS   
+    OFFSET @RowsToSkip ROWS   
     FETCH NEXT @FetchRows ROWS ONLY;  
-  
 ```  
   
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. Especificar expresiones para los valores de OFFSET y FETCH  
@@ -489,7 +488,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-###  <a name="Union"></a> Usar ORDER BY con UNION, EXCEPT e INTERSECT  
+###  <a name="using-order-by-with-union-except-and-intersect"></a><a name="Union"></a> Usar ORDER BY con UNION, EXCEPT e INTERSECT  
  Cuando una consulta utiliza los operadores UNION, EXCEPT o INTERSECT, la cláusula ORDER BY se debe especificar al final de la instrucción y se ordenan los resultados de las consultas combinadas. En el siguiente ejemplo se devuelven todos los productos que son rojos o amarillos y la lista combinada se ordena según la columna `ListPrice`.  
   
 ```sql
@@ -506,7 +505,7 @@ WHERE Color = 'Yellow'
 ORDER BY ListPrice ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se muestra la ordenación de un conjunto de resultados en sentido ascendente según la columna numérica `EmployeeKey`.  
   
 ```sql

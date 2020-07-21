@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;nombre del servicio&gt; propiedades (pestaña iniciar sesión) | Microsoft Docs
+title: '&lt;Propiedades de NS $ nombre &gt; de servicio (pestaña iniciar sesión) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008005"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Propiedades de NS$&lt;nombre de servicio&gt; (pestaña Iniciar sesión)
   Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Notification Services** para especificar la cuenta que utiliza el servicio [!INCLUDE[ssNS](../../includes/ssns-md.md)] así como para iniciar y detener el servicio.  
@@ -39,7 +38,7 @@ ms.locfileid: "63049244"
  **Iniciar**  
  Inicie el servicio.  
   
- **Detener**  
+ **Detención**  
  Detenga el servicio.  
   
  **Pausar**  

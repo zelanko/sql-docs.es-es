@@ -1,5 +1,6 @@
 ---
 title: Estimar el tamaño de una base de datos | Microsoft Docs
+description: Al diseñar una base de datos en SQL Server, la estimación del tamaño puede ayudarle a determinar la configuración del hardware que necesita para obtener un buen rendimiento y suficiente espacio en disco.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a11d6d83b4c2c56d6448431028beec89265a0d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 444513824770954f44919051d96a0a573f63b84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934482"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008207"
 ---
 # <a name="estimate-the-size-of-a-database"></a>Estimar el tamaño de una base de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Cuando diseña una base de datos, puede que necesite realizar una estimación del tamaño que tendrá la base de datos cuando esté llena. Esta estimación puede ayudarle a determinar la configuración de hardware que necesitará para realizar lo siguiente:  
   
 -   Conseguir el rendimiento que necesitan las aplicaciones.  

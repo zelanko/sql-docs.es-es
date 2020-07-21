@@ -10,15 +10,14 @@ helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 521ed3f1c817f687bfbddc497f638ee4eed4a834
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7eddb6d15d495edf4b9562e01494ac4b81356cf3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897552"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428395"
 ---
 # <a name="ln-ssis-expression"></a>LN (expresión de SSIS)
   Devuelve el logaritmo natural de una expresión numérica.  
@@ -37,7 +36,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La expresión numérica se convierte al tipo de datos DT_R8 antes de que se calcule el logaritmo. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Si la evaluación de *numeric_expression* devuelve cero o un valor negativo, el resultado devuelto será NULL.  
@@ -61,7 +60,7 @@ LN(Length)
 LN(@Length)   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [LOG &#40;expresión de SSIS&#41;](log-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   

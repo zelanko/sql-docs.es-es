@@ -24,10 +24,10 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d4c44f8920fc3a8060dcff6112eb41055f1584d2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291260"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
@@ -90,7 +90,7 @@ ms.locfileid: "71291260"
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***El archivo caché se puede compartir entre varios paquetes. Para obtener más información, consulte***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -124,11 +124,11 @@ ms.locfileid: "71291260"
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para obtener información detallada, vea los siguientes temas.  
   
--   [Implementar una búsqueda en modo No hay caché o Caché parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
 -   [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "71291260"
  **Sin caché**  
  Genere el conjunto de datos de referencia durante la ejecución de la transformación Búsqueda. No se carga ningún dato en la caché.  
   
- **Administrador de conexiones de caché**  
+ **Cache connection manager**  
  Configure la transformación Búsqueda para utilizar un administrador de conexiones de caché. Esta opción solo está disponible si también está seleccionada la opción Caché completa.  
   
  **Administrador de conexiones OLE DB**  
@@ -182,7 +182,7 @@ ms.locfileid: "71291260"
  **Cache connection manager**  
  Seleccione un administrador de conexiones de caché de la lista o cree una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una conexión mediante el cuadro de diálogo **Editor del administrador de conexiones de caché** .  
   
  Las opciones siguientes están disponibles al seleccionar **Caché completa**, **Caché parcial**o **Sin caché**, y **Administrador de conexiones OLE DB**en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
@@ -190,7 +190,7 @@ ms.locfileid: "71291260"
  **Administrador de conexiones OLE DB**  
  Seleccione un administrador de conexiones OLE DB de la lista o cree una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Usar una tabla o una vista**  
@@ -199,7 +199,7 @@ ms.locfileid: "71291260"
 > [!NOTE]  
 >  Si especifica una instrucción SQL en la página **Avanzadas** del **Editor de transformación Búsqueda**, esa instrucción SQL invalida y reemplaza el nombre de tabla seleccionado aquí. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
  **Usar los resultados de una consulta SQL**  
@@ -208,13 +208,13 @@ ms.locfileid: "71291260"
  **Generar consulta**  
  Cree la instrucción Transact-SQL para ejecutarla mediante el **Generador de consultas**, herramienta gráfica que se usa para crear consultas examinando datos.  
   
- **Examinar**  
+ **Browse**  
  Utilice esta opción para examinar una consulta preexistente guardada como un archivo.  
   
  **Analizar consulta**  
  Compruebe la sintaxis de la consulta.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . Esta opción muestra hasta 200 filas.  
   
 ### <a name="external-resources"></a>Recursos externos  

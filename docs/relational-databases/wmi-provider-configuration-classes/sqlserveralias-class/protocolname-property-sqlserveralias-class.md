@@ -1,6 +1,6 @@
 ---
-title: Propiedad ProtocolName (clase SqlServerAlias) | Microsoft Docs
-ms.custom: ''
+title: Propiedad ProtocolName (SqlServerAlias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74c78cd8f90890814921d7b1ce78e65ab8c78a08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8903cae5b92ae4ce4da5771e09ed89d8f827dbab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052433"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888457"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>Propiedad ProtocolName (clase SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre del protocolo utilizado por el alias de conexión del servidor.  
   
 ## <a name="syntax"></a>Sintaxis  

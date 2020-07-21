@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993928"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "67993928"
   El controlador OLE DB para SQL Server también permite devolver información del esquema de un servidor vinculado al procesar consultas distribuidas de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite sinónimos, OLE DB controlador no devuelve los metadatos de los sinónimos para SQL Server.  
+>  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los sinónimos, OLE DB Driver for SQL Server no devuelve metadatos de sinónimos.  
   
  En las tablas siguientes, se enumeran los conjuntos de filas de esquema y las columnas de restricción que admite el controlador OLE DB para SQL Server.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61dad1f375a60fa22f4ee38f7023b5836bc3d5a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84b4d21dd9f4c01827569824f652662e7ec6bd9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121914"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883383"
 ---
 # <a name="operators-transact-sql"></a>Operadores (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Un operador es un símbolo que especifica una acción que se realiza en una o más expresiones. En las siguientes tablas se incluyen las categorías de operadores que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

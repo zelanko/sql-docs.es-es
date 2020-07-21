@@ -1,5 +1,5 @@
 ---
-title: Ver paquetes en SQL Server Management Studio (servicio SSIS) Integration Services | Microsoft Docs
+title: Ver paquetes de Integration Services en SQL Server Management Studio (servicio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d8196a46437975a2b8e00bb2fbe8d183540025c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 190ba24d6f13d51233e21f8a829e3ce05d31b4b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054612"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420162"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>Ver paquetes de Integration Services en SQL Server Management Studio (servicio SSIS)
     
@@ -44,7 +43,7 @@ ms.locfileid: "66054612"
   
 2.  Expanda las subcarpetas de Paquetes almacenados para mostrar los paquetes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de paquetes &#40;servicio SSIS&#41;](service/package-management-ssis-service.md)   
  [Usar SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4fa442a237001d7b78e95fd443ec36336c1e769
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061403"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyIdx (clase ClientNetworkProtocolProperty)
-  Obtiene o establece el valor de índice de la propiedad en la matriz de propiedades al que hace referencia el [propiedad Properties (clase ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) de la [clase ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) objeto.  
+  Obtiene o establece el valor de índice de la propiedad en la matriz de propiedades a la que hace referencia la [propiedad Properties (clase ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) del objeto de la [clase ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,14 +37,14 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) objeto que representa un atributo del protocolo de red utilizado por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
+ Objeto de la [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de `uint32` que especifica el valor de índice de matriz de la propiedad actual.  
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+## <a name="see-also"></a>Consulte también  
+ [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

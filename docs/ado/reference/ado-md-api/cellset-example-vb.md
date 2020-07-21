@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de conjunto de celdas (VB) | Microsoft Docs
+title: Ejemplo de Cellset (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Cellset object [ADO MD], Visual Basic example
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 943e36057478cbb6acfcabc0fa2ad713b4e43ac5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911579"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761783"
 ---
 # <a name="cellset-example-vb"></a>Ejemplo de conjunto de celdas (VB)
-Este proyecto de Visual Basic muestra los conceptos básicos del uso de ADO MD para acceder a los datos de cubo. Muestra los títulos de elementos para los encabezados de columna y fila, a continuación, muestra los valores de celdas específicas en el conjunto de celdas con formato.  
+En este Visual Basic proyecto se muestran los aspectos básicos del uso de ADO MD para tener acceso a los datos del cubo. Muestra los títulos de miembro de los encabezados de columna y de fila y, a continuación, muestra los valores con formato de las celdas específicas del interior del elemento Cellset.  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

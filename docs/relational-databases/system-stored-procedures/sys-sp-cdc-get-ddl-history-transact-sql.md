@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083735"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891106"
 ---
-# <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el historial del lenguaje de definición de datos (DDL, Data Definition Language) asociado con la instancia de captura especificada desde que se habilitó la captura de datos de cambio para dicha instancia de captura. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -44,14 +44,14 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>Argumentos  
  [ @capture_instance =] '*capture_instance*'  
- Es el nombre de la instancia de captura asociada a una tabla de origen. *capture_instance* es **sysname** y no puede ser NULL.  
+ Es el nombre de la instancia de captura asociada a una tabla de origen. *capture_instance* es de **tipo sysname** y no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nombre del esquema de la tabla de origen.|  
 |source_table|**sysname**|Nombre de la tabla de origen.|  
@@ -62,7 +62,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|Hora asociada al cambio de DDL.|  
   
 ## <a name="remarks"></a>Comentarios  
- Modificaciones de DDL en la tabla de origen que cambian la estructura de columnas de tabla de origen, como agregar o quitar una columna o cambiar el tipo de datos de una columna existente, se mantienen en el [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) tabla. Se puede crear un informe de estos cambios usando este procedimiento almacenado. Las entradas en cdc.ddl_history se realizan cuando el proceso de captura lee la transacción de DDL en el registro.  
+ Las modificaciones de DDL en la tabla de origen que cambian la estructura de las columnas de la tabla de origen, como agregar o quitar una columna, o cambiar el tipo de datos de una columna existente, se mantienen en la tabla [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Se puede crear un informe de estos cambios usando este procedimiento almacenado. Las entradas en cdc.ddl_history se realizan cuando el proceso de captura lee la transacción de DDL en el registro.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de base de datos db_owner para devolver filas para todas las instancias de captura de la base de datos. Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos.  
@@ -84,7 +84,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

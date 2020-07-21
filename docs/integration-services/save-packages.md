@@ -19,10 +19,10 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295741"
 ---
 # <a name="save-packages"></a>Guardar paquetes
@@ -62,7 +62,7 @@ ms.locfileid: "71295741"
   
 2.  En el menú **Archivo**, haga clic en **Guardar copia de \<archivo de paquete> como**.  
   
-3.  En el cuadro de diálogo **Guardar copia del paquete** , seleccione una ubicación de paquete en la lista **Ubicación del paquete** . Las siguientes opciones están disponibles:  
+3.  En el cuadro de diálogo **Guardar copia del paquete** , seleccione una ubicación de paquete en la lista **Ubicación del paquete** . Están disponibles las siguientes opciones:  
     -   SQL Server
     -   Sistema de archivos 
     -   Almacén de paquetes SSIS 
@@ -85,9 +85,9 @@ ms.locfileid: "71295741"
   
     -   En el cuadro de diálogo **Nivel de protección de paquetes** , seleccione un nivel de protección diferente.  
   
-    -   Haga clic en **Aceptar**.  
+    -   Haga clic en **OK**.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
 
 ## <a name="save-a-package-as-a-package-template"></a>Guardar un paquete como una plantilla de paquete
  En esta sección se describe cómo designar y usar paquetes personalizados como plantillas cuando se crean nuevos paquetes de Integration Services en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. De forma predeterminada, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa una plantilla de paquetes que crea un paquete vacío cuando se agrega un nuevo paquete a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . No puede reemplazar esta plantilla predeterminada, pero puede agregar nuevas plantillas.  

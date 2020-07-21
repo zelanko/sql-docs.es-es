@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d84bb8722fd31a08ff7788ad31c601b377c23d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099720"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Script con la utilidad rs.exe y el servicio Web
@@ -30,13 +30,13 @@ ms.locfileid: "66099720"
   
  Para obtener ejemplos de script, vea lo siguiente:  
   
- [Ejemplo de Reporting Services rs.exe Script para migrar contenido entre servidores de informes](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Ejemplo Reporting Services script RS. exe para migrar contenido entre servidores de informes](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
  [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Script para tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
- [servicio web del servidor de informes](../report-server-web-service/report-server-web-service.md)   
+ [Servicio web del servidor de informes](../report-server-web-service/report-server-web-service.md)   
  [Referencia técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)   
  [Utilidad RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   

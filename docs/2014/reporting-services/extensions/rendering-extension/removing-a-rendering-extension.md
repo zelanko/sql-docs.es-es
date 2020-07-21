@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62988060"
 ---
 # <a name="removing-a-rendering-extension"></a>Quitar una extensión de representación
-  Para quitar un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensión de representación, basta con quitar el `Extension` (elemento) para la extensión de representación del archivo rsreportserver.config, situado en **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Nombre de instancia > \Reporting** carpeta. Si efectuó entradas para un diseñador de informes, así como un servidor de informes, quite el `Extension` elemento desde el [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md) también. Después de quitar la información de configuración, la extensión de representación de datos ya no estará disponible en el componente.  
+  Para quitar una [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensión de representación, solo tiene que `Extension` quitar el elemento de la extensión de representación del archivo Rsreportserver. config, ubicado en **%ProgramFiles%\Microsoft SQL Server \ MSRS10_50\< . Nombre de instancia> carpeta Services\ReportServer de \Reporting** . Si ha realizado entradas para un Diseñador de informes, así como un servidor de informes, quite `Extension` también el elemento del [archivo de configuración RSReportDesigner](../../report-server/rsreportdesigner-configuration-file.md) . Después de quitar la información de configuración, la extensión de representación de datos ya no estará disponible en el componente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de configuración de Reporting Services](../../report-server/reporting-services-configuration-files.md)   
  [Implementar una extensión de representación](implementing-a-rendering-extension.md)   
  [Información general de las extensiones de representación](rendering-extensions-overview.md)   

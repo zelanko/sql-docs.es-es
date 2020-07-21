@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101925"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "66101925"
  Un administrador del servidor o de una colección de sitios puede establecer opciones que determinen si otros propietarios de sitios pueden establecer permisos. En función del nivel de permiso que tenga, es posible que no pueda crear o personalizar los grupos de SharePoint o los niveles de permiso.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>Usar grupos de SharePoint y niveles de permiso predefinidos  
- En las recomendaciones de la documentación del producto de [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] se recomienda usar los grupos estándar de SharePoint ( *Nombre del sitio* **Propietarios**, *Nombre del sitio* **Miembros**y *Nombre del sitio* **Visitantes**) y asignar permisos en el nivel de sitio. La mayoía de los usuarios a los que asigna permisos deben ser miembros de los grupos *Nombre del sitio* **Visitantes** o *Nombre del sitio* **Miembros** . Los permisos del sitio primario se heredan en toda la jerarquía de sitios. Puede anular la herencia de permisos para elementos específicos que requieran restricciones adicionales.  
+ En las recomendaciones de la documentación del producto de [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] se aconseja usar los grupos estándar de SharePoint (que son *Nombre del sitio* **Propietarios**, *Nombre del sitio* **Miembros** y *Nombre del sitio* **Visitantes**) y asignar permisos en el nivel del sitio. La mayoría de los usuarios a los que asigna permisos deben ser miembros de los grupos *Nombre del sitio* **Visitantes** o *Nombre del sitio* **Miembros**. Los permisos del sitio primario se heredan en toda la jerarquía de sitios. Puede anular la herencia de permisos para elementos específicos que requieran restricciones adicionales.  
   
  Los siguientes grupos de SharePoint tienen los siguientes niveles de permiso predefinidos:  
   
@@ -75,22 +75,22 @@ ms.locfileid: "66101925"
  Para usar las características de seguridad integradas, debe asignar cuentas de usuario o de grupo de Windows a los grupos de SharePoint. Excepto en el caso del administrador del servidor y el propietario del sitio del portal, con acceso automático a [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] una vez instalado el software, se deben conceder permisos a los demás usuarios para que tengan acceso al servidor.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Uso de la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Explica cómo se pueden usar los grupos de SharePoint y los niveles de permiso predefinidos para tener acceso a los elementos del servidor de informes.  
   
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Proporciona una referencia de todos los permisos de los productos de SharePoint que se pueden usar para tener acceso a las operaciones del servidor de informes.  
   
- [Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Establecimiento de permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Describe los requisitos de permisos de la notificación ad hoc y recomienda enfoques para que las características estén disponibles.  
   
- [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Comparación de roles y tareas en Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  Proporciona un breve resumen de cómo comparar los grupos de SharePoint con las definiciones de roles predefinidas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Proporciona instrucciones para crear grupos de SharePoint nuevos con permiso para iniciar el Generador de informes y establecer la seguridad de elementos de modelo. En este tema también se incluyen instrucciones generales acerca de cómo establecer permisos personalizados para cualquier elemento u operación del servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)  
   

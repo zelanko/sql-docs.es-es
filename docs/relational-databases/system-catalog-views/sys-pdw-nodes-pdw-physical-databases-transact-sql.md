@@ -1,6 +1,6 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,28 +12,28 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001136"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74399917"
 ---
-# <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>Sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene una fila por cada base de datos física en un nodo de proceso. Agregar información de la base de datos física para obtener información detallada acerca de las bases de datos. Para combinar la información, unir el `sys.pdw_nodes_pdw_physical_databases` a la `sys.pdw_database_mappings` y `sys.databases` tablas.  
+  Contiene una fila para cada base de datos física en un nodo de proceso. Agregue información de base de datos física para obtener información detallada acerca de las bases de datos. Para combinar información, combine el `sys.pdw_nodes_pdw_physical_databases` en las `sys.pdw_database_mappings` tablas `sys.databases` y.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|El identificador de objeto para la base de datos. Tenga en cuenta que este valor no es igual que un database_id en el [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vista.|  
-|physical_name|**sysname**|El nombre físico de la base de datos en los nodos de proceso o de Shell. Este valor es igual que un valor en la columna physical_name el [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) vista.|  
+|database_id|**int**|IDENTIFICADOR de objeto de la base de datos. Tenga en cuenta que este valor no es el mismo que un database_id de la vista [Sys. databases &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
+|physical_name|**sysname**|El nombre físico de la base de datos en los nodos de proceso o shell. Este valor es igual que un valor de la columna physical_name de la vista [Sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
 |pdw_node_id|**int**|Identificador numérico único asociado al nodo.|  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>A. Devolver  
- La consulta siguiente devuelve el nombre e identificador de cada base de datos en master y el nombre de base de datos correspondiente en cada nodo de proceso.  
+### <a name="a-returning"></a>A. Volver  
+ La siguiente consulta devuelve el nombre y el identificador de cada base de datos de Master y el nombre de la base de datos correspondiente en cada nodo de proceso.  
   
 ```  
 SELECT D.database_id AS DBID_in_master, D.name AS UserDatabaseName,   
@@ -46,8 +46,8 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>b. Usar sys.pdw_nodes_pdw_physical_databases para recopilar información detallada del objeto  
- La consulta siguiente muestra información acerca de los índices e incluye información útil acerca de la base de datos de los objetos que pertenecen a los objetos de la base de datos.  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Usar sys. pdw_nodes_pdw_physical_databases para recopilar información detallada del objeto  
+ La siguiente consulta muestra información acerca de los índices e incluye información útil acerca de la base de datos a la que pertenecen los objetos de la base de datos.  
   
 ```  
 SELECT D.name AS UserDatabaseName, D.database_id AS DBIDinMaster,  
@@ -63,7 +63,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>C. Uso de sys.pdw_nodes_pdw_physical_databases para determinar el estado de cifrado  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Usar sys. pdw_nodes_pdw_physical_databases para determinar el estado de cifrado  
  La siguiente consulta proporciona el estado de cifrado de la base de datos AdventureWorksPDW2012.  
   
 ```  
@@ -85,10 +85,10 @@ SELECT TOP 1 encryption_state
        ORDER BY (CASE encryption_state WHEN 3 THEN -1 ELSE encryption_state END) DESC;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [Sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

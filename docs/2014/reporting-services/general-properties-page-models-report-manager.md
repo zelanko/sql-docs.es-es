@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades generales, modelos (Administrador de informes) | Microsoft Docs
+title: Página propiedades generales, modelos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109107"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propiedades generales, Modelos (Administrador de informes)
@@ -34,16 +34,16 @@ ms.locfileid: "66109107"
 3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página Propiedades generales correspondiente al modelo.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Especifica el nombre del modelo. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No utilice los caracteres siguientes al especificar un nombre:  
   
- ; ? : \@ & = + , $ / * \< > | " /  
+ ; ? : \@ & = +, $/* \< > | " /  
   
  **Descripción**  
  Escriba una descripción del modelo. Esta descripción se mostrará en la página Contenido a los usuarios que tengan permiso de acceso al modelo.  
   
  **Oculto en la vista de lista**  
- Active esta casilla para ocultar el elemento cuando la carpeta se establece en la vista de lista. La vista de lista es un modo de visualización del contenido de la carpeta compatible con el Administrador de informes. Puede establecer esta opción en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir el modo de visualización de este elemento en el Administrador de informes. Para obtener más información acerca de los modos de vista en el Administrador de informes, vea [página contenido &#40;el Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Active esta casilla para ocultar el elemento cuando la carpeta se establece en la vista de lista. La vista de lista es un modo de visualización del contenido de la carpeta compatible con el Administrador de informes. Puede establecer esta opción en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para definir el modo de visualización de este elemento en el Administrador de informes. Para obtener más información sobre los modos de vista en Administrador de informes, consulte la [Página contenido &#40;Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Aplicar**  
  Haga clic para guardar los cambios.  
@@ -51,8 +51,8 @@ ms.locfileid: "66109107"
  **Eliminar**  
  Haga clic para quitar el modelo de la base de datos del servidor de informes. Al eliminar un modelo, no se elimina el origen de datos compartido dependiente que proporciona información de conexión, ni se eliminan informes que usan el modelo como un origen de datos. Sin embargo, una vez eliminado el modelo, ya no se ejecutarán los informes que usan el modelo.  
   
- **Mover**  
- Haga clic para cambiar la posición de un modelo en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta. Para obtener más información, consulte [página Mover elementos &#40;el Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Move**  
+ Haga clic para cambiar la posición de un modelo en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta. Para obtener más información, vea [Página de elementos de movimiento &#40;Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Guardar**  
  Haga clic para guardar una copia de solo lectura de la definición del modelo. En función de las asociaciones de archivos definidas en su equipo, el archivo se abrirá en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o en otra aplicación. En la mayoría de los casos, el modelo se abre como un archivo XML.  
@@ -63,14 +63,14 @@ ms.locfileid: "66109107"
   
  Tenga en cuenta que si desea abrir el modelo de informe en el Diseñador de modelos, debería guardar el modelo como archivo .smdl y, a continuación, agregar el archivo .smdl a un proyecto en el Diseñador de modelos.  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic para reemplazar la definición de modelo por otra diferente de un archivo .smdl que se encuentra en el sistema de archivos. Si actualiza una definición de modelo, debe restablecer la configuración del origen de datos compartido cuando la actualización haya finalizado.  
   
  **Regenerar el modelo**  
  Haga clic para regenerar un modelo predeterminado que reemplaza la versión actual. Esta opción aparece una vez se ha generado el modelo. El modelo generado se basa en el origen de datos compartido. No se puede personalizar antes de generarse. Sin embargo, después de generarlo, puede hacer clic en **Editar** para abrir la definición de modelo, guardarlo en el sistema de archivos y, a continuación, agregarla a un proyecto en el Diseñador de modelos. Después de precisar el modelo, puede cargarlo en el servidor de informes como un nuevo elemento o hacer clic en **Actualizar** en esta página para reemplazar el modelo generado por la versión revisada en el Diseñador de modelos.  
   
-## <a name="see-also"></a>Vea también  
- [Enlazar un informe o un modelo con un origen de datos compartido &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Servidor de informes en Management Studio (Ayuda F1)](tools/report-server-in-management-studio-f1-help.md)  
+## <a name="see-also"></a>Consulte también  
+ [Enlazar un informe o un modelo a un origen de datos compartido &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Servidor de informes en Management Studio ayuda F1](tools/report-server-in-management-studio-f1-help.md)  
   
   

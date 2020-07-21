@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890739"
 ---
-# <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Informa de la configuración de seguridad de inicio de sesión de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -43,36 +43,36 @@ xp_loginconfig ['config_name']
   
 ## <a name="arguments"></a>Argumentos  
  **'** *config_name* **'**  
- Es el valor de configuración que se va a mostrar. Si *config_name* no es se especifica, se notifican todos los valores de configuración. *config_name* es **sysname**, su valor predeterminado es null, y puede tener uno de estos valores.  
+ Es el valor de configuración que se va a mostrar. Si no se especifica *config_name* , se registran todos los valores de configuración. *config_name* es de **tipo sysname, su**valor predeterminado es NULL y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**modo de inicio de sesión**|Modo de seguridad de inicio de sesión. Los valores posibles son **mixto** y **Windows autenticación**.<br /><br /> Se reemplaza por:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
-|**inicio de sesión predeterminado**|Nombre del Id. de inicio de sesión predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuarios autorizados de conexiones de confianza (para usuarios sin nombre de inicio de sesión). El inicio de sesión predeterminado es **invitado**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**login mode**|Modo de seguridad de inicio de sesión. Los valores posibles son **mixto** y **autenticación de Windows**.<br /><br /> Se reemplaza por:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
+|**default login**|Nombre del Id. de inicio de sesión predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usuarios autorizados de conexiones de confianza (para usuarios sin nombre de inicio de sesión). El inicio de sesión predeterminado es **invitado**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
 |**Dominio predeterminado**|Nombre del dominio de Windows predeterminado para los usuarios de red de conexiones de confianza. El dominio predeterminado es el dominio del que es miembro el equipo de Windows que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
-|**nivel de auditoría**|Nivel de auditoría. Los valores posibles son **ninguno**, **éxito**, **error**, y **todas**. Las auditorías se escriben en el registro de errores y en el Visor de eventos de Windows.|  
-|**nombre de host de conjunto**|Indica si el nombre del host desde el que se registra el cliente se sustituye por el nombre de usuario de la red de Windows. Los valores posibles son **true** o **false**. Si se establece, el nombre de usuario de red aparece en la salida de **sp_who**.|  
-|**asignar _**|Informa de los caracteres especiales de Windows asignados al carácter de subrayado (_) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio** (valor predeterminado), **espacio**, **null**, o cualquier carácter individual. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
-|**asignar $**|Informa de los caracteres especiales de Windows asignados al carácter de dólar ($) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es **espacio**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
-|**asignar #**|Informa de los caracteres especiales de Windows asignados al carácter de número (#) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es el guión. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**nivel de auditoría**|Nivel de auditoría. Los valores posibles son **None**, **Success**, **Failure**y **All**. Las auditorías se escriben en el registro de errores y en el Visor de eventos de Windows.|  
+|**set hostname**|Indica si el nombre del host desde el que se registra el cliente se sustituye por el nombre de usuario de la red de Windows. Los valores posibles son **true** o **false**. Si se establece, el nombre de usuario de red aparece en la salida de **sp_who**.|  
+|**conectarse**|Informa de los caracteres especiales de Windows asignados al carácter de subrayado (_) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador de dominios** (predeterminado), **espacio**, **nulo**o cualquier carácter individual. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**map $**|Informa de los caracteres especiales de Windows asignados al carácter de dólar ($) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador de dominio**, **espacio**, **null**o cualquier carácter individual. El valor predeterminado es **Space**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**conectarse #**|Informa de los caracteres especiales de Windows asignados al carácter de número (#) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador de dominio**, **espacio**, **null**o cualquier carácter individual. El valor predeterminado es el guión. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Valor de configuración|  
-|**valor de configuración**|**sysname**|Ajuste de valor de configuración|  
+|**config value**|**sysname**|Ajuste de valor de configuración|  
   
 ## <a name="remarks"></a>Comentarios  
- **xp_loginconfig** no se puede usar para establecer los valores de configuración.  
+ no se puede usar **xp_loginconfig** para establecer valores de configuración.  
   
  Para establecer el modo de inicio de sesión y el nivel de auditoría, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso CONTROL en el **maestro** base de datos.  
+ Requiere el permiso CONTROL en la base de datos **maestra** .  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -84,7 +84,7 @@ EXEC xp_loginconfig;
 GO  
 ```  
   
-### <a name="b-how-to-report-a-specific-configuration-value"></a>b. Cómo presentar un valor de configuración específico  
+### <a name="b-how-to-report-a-specific-configuration-value"></a>B. Cómo presentar un valor de configuración específico  
  En el ejemplo siguiente solo se muestra la configuración del modo de inicio de sesión.  
   
 ```  
@@ -92,11 +92,11 @@ EXEC xp_loginconfig 'login mode';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_denylogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [sp_revokelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [xp_logininfo &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: dd95d96e-8963-4aa9-bdcc-3e4b1bc002d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9793b26bbd45e08aa3bc488071bd3b26a3f1cfc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca0d81b9e8c08fc25c86303d4f3fe7cf02013498
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140457"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879934"
 ---
-# <a name="spaddlogshippingalertjob-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_log_shipping_alert_job-transact-sql"></a>sp_add_log_shipping_alert_job (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Este procedimiento almacenado comprueba si se ha creado un trabajo de alerta en este servidor. Si no existe un trabajo de alerta, este procedimiento almacenado crea el trabajo de alerta y agrega su Id. de trabajo para el **log_shipping_monitor_alert** tabla. El trabajo de alerta está habilitado de forma predeterminada y se ejecuta según un programa de una vez cada dos minutos.  
+  Este procedimiento almacenado comprueba si se ha creado un trabajo de alerta en este servidor. Si no existe un trabajo de alerta, este procedimiento almacenado crea el trabajo de alerta y agrega su identificador de trabajo a la tabla **log_shipping_monitor_alert** . El trabajo de alerta está habilitado de forma predeterminada y se ejecuta según un programa de una vez cada dos minutos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_add_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_job_id = ] alert_job_id OUTPUT` El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Id. de trabajo del agente del trabajo de alerta de trasvase de registros.  
+`[ @alert_job_id = ] alert_job_id OUTPUT`El [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID. de trabajo del agente del trabajo de alerta de trasvase de registros.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -48,11 +48,11 @@ sp_add_log_shipping_alert_job
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_add_log_shipping_alert_job** se debe ejecutar desde la **maestro** base de datos del servidor de supervisión.  
+## <a name="remarks"></a>Observaciones  
+ **sp_add_log_shipping_alert_job** se debe ejecutar desde la base de datos **maestra** del servidor de supervisión.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se muestra la ejecución de **sp_add_log_shipping_alert_job** para crear un identificador de trabajo de alerta.  
@@ -63,7 +63,7 @@ GO
 EXEC sp_add_log_shipping_alert_job;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e806db63799d57ae935f2288c11b70ff35d20a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01998cb0542f63371d93cbb652c4b15bdf81d6b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981215"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904933"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>Método getObject (java.lang.String, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.lang.Object getObject(java.lang.String colName,
   
  *map*  
   
- Objeto de mapa.  
+ Un objeto Map.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Valor **Object**.  
@@ -53,7 +53,7 @@ public java.lang.Object getObject(java.lang.String colName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getObject especifica este método getObject en la interfaz java.sql.ResultSet.  
   
  Este método devolverá el valor de la columna determinada como un objeto de Java. El tipo del objeto de Java será el tipo de objeto de Java predeterminado que corresponde al tipo SQL de la columna, tras la asignación para los tipos integrados que se indica en las especificaciones de JDBC. Si el valor es NULL de SQL, el controlador devuelve un NULL de Java.  

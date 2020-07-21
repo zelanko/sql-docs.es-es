@@ -82,7 +82,7 @@
           href: how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
         - name: Cómo crear la instancia de base de datos de cambios de SQL Server
           href: how-to-create-the-sql-server-change-database-instance.md
-        - name: Cómo administrar una instancia CDC
+        - name: How to Manage a CDC Instance
           href: how-to-manage-a-cdc-instance.md
         - name: Cómo editar las propiedades de la instancia CDC
           href: how-to-edit-the-cdc-instance-properties.md
@@ -124,7 +124,7 @@
           href: connection-to-sql-server-for-delete.md
         - name: Crear y editar un servicio CDC de Oracle
           href: create-and-edit-an-oracle-cdc-service.md
-        - name: Administrar un servicio CDC de Oracle
+        - name: Manage an Oracle CDC Service
           href: manage-an-oracle-cdc-service.md
         - name: Preparar SQL Server para CDC
           href: prepare-sql-server-for-cdc.md
@@ -197,7 +197,7 @@
           href: ../data-flow/look-up-infoobject.md
         - name: Crear InfoSource
           href: ../data-flow/create-infosource.md
-        - name: Crear InfoSource para datos de transacción
+        - name: Crear Infosource para datos de transacción
           href: ../data-flow/create-infosource-for-transaction-data.md
         - name: Crear InfoSource para datos maestros
           href: ../data-flow/create-infosource-for-master-data.md

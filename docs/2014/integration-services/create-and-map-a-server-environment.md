@@ -12,15 +12,14 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.permissions.f1
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02fecbe0a98770a116a0ae2558dc354ddae24755
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060147"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437882"
 ---
 # <a name="create-and-map-a-server-environment"></a>Crear y asignar un entorno de servidor
   Los entornos de servidor se crean con el fin de especificar valores en tiempo de ejecución para los paquetes contenidos en un proyecto implementado en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Después puede asignar las variables de entorno a parámetros para un paquete concreto, para los paquetes de punto de entrada o para todos los paquetes de un proyecto determinado. Un paquete de punto de entrada suele ser un paquete primario que ejecuta un paquete secundario.  
@@ -32,7 +31,7 @@ ms.locfileid: "66060147"
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para crear y utilizar un entorno de servidor  
   
-1.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expanda el nodo Catálogos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]> **SSISDB** en el Explorador de objetos y busque la carpeta **Entornos** del proyecto para el que quiera crear un entorno.  
+1.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , expanda el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nodo catálogos> **SSISDB** en explorador de objetos y busque la carpeta **entornos** del proyecto para el que desea crear un entorno.  
   
 2.  Haga clic con el botón derecho en la carpeta **Entornos** y, después, haga clic en **Crear entorno**.  
   

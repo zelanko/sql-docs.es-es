@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98228b5e666642221e56960c6e6161804b264d3a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991142"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893180"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>Conectar con réplicas secundarias existentes: grupos de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema de Ayuda se describen las opciones de la página **Conectar con réplicas secundarias existentes** . Este tema se usa en [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  **Columnas de cuadrícula:**  
@@ -31,7 +31,7 @@ ms.locfileid: "67991142"
  **Conectado como**  
  Muestra la cuenta que está conectada a la instancia de servidor, una vez que se ha establecido la conexión. Si esta columna muestra “**No conectado**” para una instancia de servidor determinada, deberá hacer clic en el botón **Conectar** o **Conectar todo** .  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí si esta instancia de servidor se ejecuta en una cuenta diferente a las de otras instancias de servidor a las que necesite conectarse.  
   
  **Conectar todo**  
@@ -40,7 +40,7 @@ ms.locfileid: "67991142"
  **Cancelar**  
  Haga clic en esta opción para finalizar el asistente. En la página **Conectar a la réplica secundaria existente** , al cancelar el asistente se sale sin realizar ninguna acción.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

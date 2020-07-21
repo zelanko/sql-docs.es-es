@@ -1,6 +1,6 @@
 ---
-title: Buscar documentos de forma interactiva | Microsoft Docs
-ms.custom: ''
+title: Buscar documentos de forma interactiva
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f93fd39957a2fc6f0c22e1bcfdddd06e3b441440
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009297"
 ---
 # <a name="search-documents-interactively"></a>Buscar documentos de forma interactiva
   Mediante el cuadro de diálogo **Buscar y reemplazar** , puede buscar en uno o más archivos o ventanas abiertos y desplazarse por las coincidencias una a una. Esta técnica permite revisar cada coincidencia individual en el contexto en que se encuentra. El cuadro de diálogo **Buscar y reemplazar** también ofrece la opción de realizar operaciones de búsqueda masiva y revisión de coincidencias en formato de informe.  
@@ -55,13 +54,13 @@ ms.locfileid: "66063787"
   
 5.  Haga clic en **Reemplazar**y siga haciendo clic en **Reemplazar** hasta que haya reemplazado la última coincidencia del última archivo. Haga clic en **Buscar siguiente** para omitir una coincidencia que no desea reemplazar.  
   
-     -o bien-  
+     O bien  
   
      Elija **Reemplazar todo** para reemplazar todas las coincidencias. Aparecerá un cuadro de mensaje indicando el número total de reemplazos.  
   
  El comando **Reemplazar todo** reemplaza todas las coincidencias de la búsqueda, incluidas aquellas que se han omitido mediante el botón **Buscar siguiente** . Para cancelar **Reemplazar todo**, haga clic en **Deshacer** en el menú **Editar** antes de cerrar cualquiera de los archivos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar en un documento activo de forma incremental](search-an-active-document-incrementally.md)   
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar en documentos mediante las listas de resultados](search-documents-using-results-lists.md)   

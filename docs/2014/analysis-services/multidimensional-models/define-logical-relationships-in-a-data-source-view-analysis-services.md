@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a356fa721f6e95289ab92579bbc580900f32f507
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546977"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relaciones lógicas en una vista del origen de datos (Analysis Services)
   El Asistente para vistas del origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista del origen de datos (DSV), en función de las relaciones de la base de datos subyacente o de los criterios de coincidencia de nombres que se especifiquen.  
@@ -39,7 +38,7 @@ ms.locfileid: "66075618"
   
  Las relaciones incluyen una dirección. A cada valor de la columna de origen le corresponde un valor de la columna de destino. En un diagrama de la vista del origen de datos, como el diagrama que aparece en el panel **Diagrama** , una flecha sobre la línea entre dos tablas indica la dirección de la relación.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
  [Para agregar una relación entre tablas, consultas con nombre o vistas](#bkmk_addRel)  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66075618"
   
  [Para ver o modificar una relación en el panel Tablas](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a> Para agregar una relación entre tablas, consultas con nombre o vistas  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>Para agregar una relación entre tablas, consultas con nombre o vistas  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto o conéctese a la base de datos que contiene la vista del origen de datos en que desea agregar una relación lógica.  
   
@@ -72,11 +71,11 @@ ms.locfileid: "66075618"
   
     4.  Si lo desea, en el cuadro **Descripción** , escriba una descripción de la relación.  
   
-##  <a name="bkmk_diagrampane"></a> Para ver o modificar una relación en el panel Diagrama  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a>Para ver o modificar una relación en el panel Diagrama  
   
 -   En el panel **Diagrama** del **Diseñador de vistas del origen de datos**, haga clic con el botón derecho en la relación que quiere ver y haga clic en **Editar relación** (o simplemente haga doble clic en la flecha de la relación).  Use el cuadro de diálogo **Editar relación** para modificar la relación.  
   
-##  <a name="bkmk_tablespane"></a> Para ver o modificar una relación en el panel Tablas  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a>Para ver o modificar una relación en el panel tablas  
   
 1.  En el panel **Tablas** del **Diseñador de vistas del origen de datos**, busque y expanda la tabla, vista o consulta con nombre que contiene la relación que desea ver o modificar.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66075618"
   
 3.  Haga clic con el botón derecho en la relación que quiere modificar y, después, haga clic en **Editar relación**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)  
   
   

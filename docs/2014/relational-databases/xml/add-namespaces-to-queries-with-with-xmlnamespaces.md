@@ -18,15 +18,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ed5d719a845996215fffc18af64401779f848cd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287716"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059585"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Agregar espacios de nombres a consultas con WITH XMLNAMESPACES
   [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) proporciona compatibilidad con los URI de espacio de nombres de la siguiente manera:  
@@ -45,7 +44,7 @@ WHERE  ProductID=316 or ProductID=317
 FOR XML RAW  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row ProductID="316" Name="Blade" />  
@@ -192,7 +191,7 @@ go
   
  Los atributos @xml:lang usan el espacio de nombres xml predefinido. Debido a que la versión 1.0 de XML no requiere la declaración explícita del enlace del espacio de nombres xml, el resultado no incluirá una declaración explícita del enlace de espacio de nombres.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Translation>  
@@ -242,7 +241,7 @@ Go
   
  Debe tenerse en cuenta que una declaración explícita en el prólogo de una consulta XQuery reemplazará el prefijo de espacio de nombres y el espacio de nombres predeterminado del elemento definidos en la cláusula WITH.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [métodos del tipo de datos xml](/sql/t-sql/xml/xml-data-type-methods)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](/sql/t-sql/xml/with-xmlnamespaces)   

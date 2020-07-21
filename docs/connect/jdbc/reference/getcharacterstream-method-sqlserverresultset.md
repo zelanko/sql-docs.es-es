@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f16880bdeca2afb2512ae84b72266a57b6dd38e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f3f7e37f19a871f248687a62553390e01861d1e8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953184"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907572"
 ---
 # <a name="getcharacterstream-method-sqlserverresultset"></a>Método getCharacterStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

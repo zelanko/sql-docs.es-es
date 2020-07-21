@@ -1,5 +1,6 @@
 ---
 title: Usar ensamblados personalizados con informes | Microsoft Docs
+description: Desarrolle un ensamblado de código personalizado mediante Microsoft .NET Framework para poder hacer referencia al ensamblado desde los archivos de definición de informe.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94fdcbb6219aefb0cf38f0d77c0c3437ccf19915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 526f80fe202c14773aeafce6b5889116b975e3c2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194098"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80217059"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Usar ensamblados personalizados con informes
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede escribir código personalizado para los valores de elementos de informe, estilos y formato. Por ejemplo, puede utilizar código personalizado para dar formato a las monedas según la configuración regional, marcar ciertos valores con formato especial o aplicar otras reglas de negocios en vigor en la compañía. Una manera de incluir este código en los informes es crear un ensamblado de código personalizado mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] al que puede hacer referencia desde dentro de los archivos de definición de informe. El servidor llama a las funciones de los ensamblados personalizados cuando se ejecuta un informe. Los ensamblados personalizados se pueden utilizar para recuperar funciones especializadas que piensa utilizar en los informes.  
@@ -41,7 +42,7 @@ ms.locfileid: "63194098"
  [Inicialización de objetos de ensamblados personalizados](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)  
  Describe cómo inicializar los valores para los objetos de ensamblado personalizados llamados desde un informe.  
   
- [Depuración de ensamblados personalizados](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
+ [Cómo: Depurar ensamblados personalizados](../../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md)  
  Describe cómo depurar el código de ensamblado personalizado.  
   
 ## <a name="see-also"></a>Consulte también  

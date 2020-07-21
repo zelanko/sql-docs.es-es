@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e164c8ac-a0ae-4638-affb-ed454e7c0708
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14e7341e2245a5fcdd6fa8a314e2845236e45d99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8823b4a5adf39c962f0e8e20c1fd50867e445f9f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975571"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920206"
 ---
 # <a name="setapplicationintent-method-sqlserverdatasource"></a>Método setApplicationIntent (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el valor de la propiedad de conexión **applicationIntent** .  
+  Establece el valor de la propiedad de conexión **applicationIntent**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,10 +31,10 @@ public void setApplicationIntent(java.lang.String applicationIntent);
 #### <a name="parameters"></a>Parámetros  
  *applicationIntent*  
   
- Nuevo valor de la propiedad de conexión **applicationIntent** .  
+ El nuevo valor de la propiedad de conexión **applicationIntent**.  
   
-## <a name="remarks"></a>Notas  
- Para obtener más información sobre la propiedad de conexión **applicationIntent** , vea [establecer las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
+## <a name="remarks"></a>Observaciones  
+ Para más información sobre la propiedad de conexión **applicationIntent**, consulte [Establecimiento de las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLServerDataSource.getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)   

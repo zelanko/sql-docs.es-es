@@ -12,41 +12,40 @@ helpviewer_keywords:
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64093c4a0db4a4fc31f287fe908757de13a3462e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972302"
 ---
 # <a name="add-metadata-master-data-services"></a>Agregar metadatos (Master Data Services)
-  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], agregue los metadatos definidos por el usuario para el **metadatos** modelo para describir los objetos de modelo.  
+  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , agregue los metadatos definidos por el usuario al modelo de **metadatos** para describir los objetos del modelo.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
   
--   Para el **metadatos** modelo, debe tener **agregar** permiso para el tipo de miembro de entidad u hoja de metadatos que desea agregar.  
+-   Para el modelo de **metadatos** , debe tener el permiso **Agregar** para la entidad de metadatos o el tipo de miembro hoja que desee agregar.  
   
 -   El estado de la versión debe ser **Abierta**.  
   
 ### <a name="to-add-metadata"></a>Para agregar metadatos  
   
-1.  En el [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] página, principal desde el **modelo** lista, seleccione el **metadatos** modelo.  
+1.  En la [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Página principal, en la lista **modelo** , seleccione el modelo de **metadatos** .  
   
 2.  En la lista **Versión** , seleccione una versión.  
   
 3.  Haga clic en **Explorador**.  
   
-4.  En la barra de menús, seleccione **entidades** y haga clic en la entidad de metadatos que desea agregar.  
+4.  En la barra de menús, seleccione **entidades** y haga clic en la entidad de metadatos que desee agregar.  
   
-5.  Haga clic en el **Add Member** botón. El **Agregar nuevo miembro** se mostrará la página de la derecha de esta página.  
+5.  Haga clic en el botón **Agregar miembro** . La página **Agregar nuevo miembro** se mostrará a la derecha de esta página.  
   
 6.  Escriba el nuevo nombre, el código y la descripción y, a continuación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Metadatos &#40;Master Data Services&#41;](metadata-master-data-services.md)  
   
   

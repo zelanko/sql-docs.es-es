@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715948"
 ---
-# <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia un parámetro de un perfil de agente de replicación almacenado en la tabla del sistema [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Este procedimiento almacenado se ejecuta en el distribuidor en el que se está ejecutando el agente, en cualquier base de datos.  
   
@@ -42,9 +42,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 `[ @parameter_name = ] 'parameter_name'`Es el nombre del parámetro. *parameter_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Para los perfiles del sistema, los parámetros que se pueden cambiar dependen del tipo de agente. Para averiguar qué tipo de agente representa este *profile_id* , busque la columna *profile_id* en la tabla **Msagent_profiles** y anote el valor de *agent_type* .  
   
 > [!NOTE]  
->  Si un parámetro es compatible con un *agent_type*determinado, pero no se ha definido en el perfil del agente, se devuelve un error. Para agregar un parámetro a un perfil de agente, debe ejecutar [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+>  Si un parámetro es compatible con una *agent_type*determinada, pero no se ha definido en el perfil del agente, se devuelve un error. Para agregar un parámetro a un perfil de agente, debe ejecutar [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- En el caso de una agente de instantáneas (*agent_type*=**1**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
+ En el caso de una Agente de instantáneas (*agent_type* = **1**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
   
 -   **70Subscribers**  
   
@@ -58,7 +58,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **Genere**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- En el caso de una agente de registro del log (*agent_type*=**2**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
+ En el caso de una Agente de registro del LOG (*agent_type* = **2**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
   
 -   **HistoryVerboseLevel**  
   
@@ -78,7 +78,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Genere**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- En el caso de una agente de distribución (*agent_type*=**3**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
+ En el caso de una agente de distribución (*agent_type* = **3**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
   
 -   **BcpBatchSize**  
   
@@ -110,11 +110,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxBcpThreads**  
   
--   **MaxDeliveredTransactions**  
+-   **Maxdeliveredtransactions como**  
   
 -   **MessageInterval**  
   
--   **Genere**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- En el caso de una agente de mezcla (*agent_type*=**4**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
+ En el caso de una agente de mezcla (*agent_type* = **4**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
   
 -   **AltSnapshotFolder**  
   
@@ -178,7 +178,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **Genere**  
+-   **Salida**  
   
 -   **OutputMessageFile**  
   
@@ -216,17 +216,17 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Validar**  
+-   **Validación**  
   
 -   **ValidateInterval**  
   
- En el caso de una agente de lectura de cola (*agent_type*=**9**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
+ En el caso de una agente de lectura de cola (*agent_type* = **9**), si se define en el perfil, se pueden cambiar las siguientes propiedades:  
   
 -   **HistoryVerboseLevel**  
   
 -   **LoginTimeout**  
   
--   **Genere**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -238,7 +238,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Para ver qué parámetros se han definido para un perfil determinado, ejecute **sp_help_agent_profile** y tenga en cuenta el *profile_name* asociado con *profile_id*. Con el *profile_id*adecuado, ejecute **sp_help_agent_parameters** con ese *profile_id* para ver los parámetros asociados al perfil. Los parámetros se pueden agregar a un perfil ejecutando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Para ver qué parámetros se han definido para un perfil determinado, ejecute **sp_help_agent_profile** y tenga en cuenta el *profile_name* asociado a la *profile_id*. Con el *profile_id*adecuado, ejecute **sp_help_agent_parameters** con ese *profile_id* para ver los parámetros asociados al perfil. Los parámetros se pueden agregar a un perfil ejecutando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
 `[ @parameter_value = ] 'parameter_value'`Es el nuevo valor del parámetro. *parameter_value* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado.  
   
@@ -251,16 +251,16 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_change_agent_parameter**.  
   
-## <a name="see-also"></a>Vea también  
- [Perfiles del Agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+## <a name="see-also"></a>Consulte también  
+ [Perfiles del agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)   
+ [Agente de distribución de replicación](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+ [sp_add_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

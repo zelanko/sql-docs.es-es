@@ -1,5 +1,5 @@
 ---
-title: 'Constructor de SQLServerSavepoint: punto de retorno | Microsoft Docs'
+title: 'Constructor SQLServerSavepoint: punto de retorno | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5a27f7be74b8b4bf471095cacd97b246df12608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d7ab6862ce9eefbdecb8534649f679229132531
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970438"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927046"
 ---
 # <a name="sqlserversavepoint-constructor-sqlserverconnection-javalangstringname"></a>Constructor SQLServerSavepoint (SQLServerConnection, java.lang.StringName)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

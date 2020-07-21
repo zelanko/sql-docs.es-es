@@ -14,15 +14,14 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b86869a2b5d2e1ecd93227355509170db2bd5c7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061900"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439672"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Agregar expresiones a las restricciones de precedencia
   Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  
@@ -31,11 +30,11 @@ ms.locfileid: "66061900"
   
  En la ilustración siguiente, la tarea A y la tarea B están vinculadas por una restricción de precedencia que usa un resultado de ejecución y una expresión. El valor de restricción se establece en `Success` y la expresión es `@X >== @Z`. La tarea B, la tarea restringida, se ejecuta solamente si la tarea A se completa correctamente y el valor de la variable `X` es mayor o igual al valor de la variable `Z`.  
   
- ![Restricciones de precedencia entre dos tareas](media/mw-dts-03.gif "Precedence constraint between two tasks")  
+ ![Restricciones de precedencia entre dos tareas](media/mw-dts-03.gif "Restricciones de precedencia entre dos tareas")  
   
  Los ejecutables también se pueden vincular mediante varias restricciones de precedencia que contienen diferentes expresiones. Por ejemplo, en la siguiente ilustración, las tareas B y C están vinculadas a la tarea A por restricciones de precedencia que usan resultados de ejecución y expresiones. Ambos valores de restricción se establecen en `Success.` Una restricción de precedencia incluye la expresión `@X >== @Z`, y la otra restricción de precedencia la expresión `@X < @Z`. Según los valores de la variable `X` y la variable `Z`, se ejecuta la tarea C o la tarea B.  
   
- ![Expresiones en restricciones de precedencia](media/mw-dts-04.gif "Expressions on precedence constraints")  
+ ![Expresiones en restricciones de precedencia](media/mw-dts-04.gif "Expresiones en restricciones de precedencia")  
   
  Puede agregar o modificar una expresión mediante el **Editor de restricciones de precedencia** en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , o en la ventana Propiedades que proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Sin embargo, la ventana Propiedades no proporciona ninguna comprobación de la sintaxis de la expresión.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66061900"
 ## <a name="external-resources"></a>Recursos externos  
  Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Varias restricciones de precedencia](../../2014/integration-services/multiple-precedence-constraints.md)   
  [Restricciones de precedencia](control-flow/precedence-constraints.md)  
   

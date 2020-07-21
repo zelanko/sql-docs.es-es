@@ -9,20 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3abd9f9c0e5b2b76a2966e7c8da5583c5364d133
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767907"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424852"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Operación en curso (Asistente para importación y exportación de SQL Server)
-  Use la **realizando operación** página para ver el progreso y los resultados de la operación de importación y exportación y para interrumpir la operación si es necesario.  
+  Use la página **realizando operación** para ver el progreso y los resultados de la operación de importación y exportación, y para interrumpir la operación si es necesario.  
   
- Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La finalidad del Asistente para importación y exportación de SQL Server es copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -33,16 +32,16 @@ ms.locfileid: "62767907"
  **Estado**  
  Indica para cada acción si se completó correctamente o no.  
   
- **de mensaje**  
+ **Mensaje**  
  Muestra mensajes de información o de error generados por la acción.  
   
  **Filter**  
- Puede elegir si desea que se muestren únicamente los errores, las advertencias o las acciones que finalizaron sin error. Puede revertir a la presentación predeterminada eligiendo **mostrar todas las acciones**.  
+ Puede elegir si desea que se muestren únicamente los errores, las advertencias o las acciones que finalizaron sin error. Puede revertir a la pantalla predeterminada seleccionando **Mostrar todas las acciones**.  
   
- **Detener**  
- Interrumpir la operación, si es necesario, mediante el uso de la **detener** botón.  
+ **Detención**  
+ Interrumpa la operación, si es necesario, mediante el botón **detener** .  
   
- **Informe**  
+ **Report**  
  Permite ver un informe de los resultados, guardarlo en un archivo, copiarlo al portapapeles o enviarlo por correo electrónico.  
   
   

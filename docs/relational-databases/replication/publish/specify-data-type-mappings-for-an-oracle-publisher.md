@@ -1,6 +1,7 @@
 ---
-title: Especificar asignaciones de tipos de datos para un publicador de Oracle | Microsoft Docs
-ms.custom: ''
+title: Asignaciones de tipos de datos para un publicador de Oracle
+description: Describe cómo especificar asignaciones de tipos de datos para un publicador de Oracle en SQL Server mediante SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1f86c97036c74024c47d71150586135022543588
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: a58c4a27a90a36acc47c3338b39a802a2209060d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900652"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar asignaciones de tipos de datos para un publicador de Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo especificar asignaciones de tipos de datos para un publicador de Oracle en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Aunque se proporciona un conjunto de asignaciones de tipo de datos predeterminado para los publicadores de Oracle, es posible que sea necesario especificar las diferentes asignaciones para una publicación determinada.  
   
  **En este tema**  
@@ -33,16 +34,16 @@ ms.locfileid: "68661314"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Especifique asignaciones de tipos de datos en la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>** . Está disponible en la página **Artículos** del Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación a partir de una base de datos de Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Especifique asignaciones de tipos de datos en la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<Article>** . Está disponible en la página **Artículos** del Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación a partir de una base de datos de Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Para especificar una asignación de tipos de datos  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla y luego haga clic en **Propiedades del artículo**.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla y haga clic en **Propiedades del artículo**.  
   
 2.  Haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , seleccione las asignaciones de la columna **Tipo de datos del suscriptor**:  
+3.  En la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<Article>** , seleccione las asignaciones de la columna **Tipo de datos del suscriptor**:  
   
     -   Para algunos tipos de datos, solo hay una asignación posible, en cuyo caso la columna de la cuadrícula de propiedades es de solo lectura.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68661314"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede especificar asignaciones de tipo de datos personalizadas mediante programación con los procedimientos almacenados de la replicación. También puede establecer las asignaciones predeterminadas que se usan al asignar los tipos de datos entre [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y un sistema de administración de bases de datos (DBMS) que no sea de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para más información, consulte [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Para definir las asignaciones de tipo de datos personalizadas al crear un artículo que pertenece a una publicación de Oracle  
@@ -81,7 +82,7 @@ ms.locfileid: "68661314"
   
 1.  En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md). Especifique un valor de **ORACLE** para **\@source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se cambia una columna con un tipo de datos de Oracle NUMBER, de modo que se asigna al tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (38,38) de **ssNoVersion**, en lugar del tipo de datos predeterminado **float**.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_1.sql)]  

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades (SSAS - Tabular) tabla | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la tabla (SSAS-tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3ca6d787616821532b30af0fe3591f79d6dbea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940168"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de tabla (SSAS - tabular)
   Use el cuadro de diálogo **Propiedades de tabla** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ver las propiedades de una tabla de una base de datos de modelo tabular. Todas las propiedades son de solo lectura.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067848"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|Muestra el nombre de la tabla.|  
+|**Nombre**|Muestra el nombre de la tabla.|  
 |**ID**|Muestra el identificador de la tabla.|  
 |**Descripción**|Muestra la descripción de la tabla.|  
 |**Marca de tiempo de creación**|Muestra la fecha y la hora de creación de la tabla.|  

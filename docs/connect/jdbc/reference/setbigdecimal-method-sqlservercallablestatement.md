@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a541ae426a450c23af98cf47fba3f3fff85f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 327a455a8763d44173d56591ed0a89871b353f74
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975253"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924454"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>Método setBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,13 +42,13 @@ public void setBigDecimal(java.lang.String sCol,
   
  *bd*  
   
- Objeto BigDecimal.  
+ Un objeto BigDecimal.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setBigDecimal se especifica mediante el método setBigDecimal de la interfaz java. SQL. CallableStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método setBigDecimal especifica este método setBigDecimal en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

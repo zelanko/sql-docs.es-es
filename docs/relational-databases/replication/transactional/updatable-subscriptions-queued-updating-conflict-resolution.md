@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9364de40aed4218d1abf73dac1502413c3509edf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895489"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883206"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Suscripciones actualizables: Resolución de conflictos de actualización en cola
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Como las suscripciones de actualización en cola permiten realizar modificaciones en los mismos datos en múltiples ubicaciones, pueden producirse conflictos cuando se sincronizan los datos en el publicador. La replicación detecta los conflictos cuando se sincronizan los cambios con el publicador y resuelve esos conflictos utilizando la directiva de resolución que ha seleccionado al crear la publicación. Pueden producirse los siguientes conflictos:  
   
 -   Conflictos de actualización e inserción. Tienen lugar cuando se modifican los mismos datos en dos ubicaciones. Una de las modificaciones "gana", mientras que la otra "pierde".  

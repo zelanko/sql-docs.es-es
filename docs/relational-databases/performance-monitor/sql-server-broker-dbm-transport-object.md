@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf22e4f825d29a107f86fb486924b40da5af3752
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787322"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>Broker - DBM Transport (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto de rendimiento **Broker / DBM Transport** contiene contadores de rendimiento que proporcionan información de red sobre Service Broker y sobre la creación de reflejo de la base de datos. En la siguiente tabla se enumeran los contadores incluidos en este objeto.  
   
 |Contador de Broker / DBM Transport de SQL Server|Descripción|  
@@ -42,9 +42,9 @@ ms.locfileid: "67987066"
 |**Recepciones de fragmentos de mensajes/s**|Este contador informa del número de fragmentos de mensajes recibidos a través de la red por segundo.|   
 |**Envíos de fragmentos de mensajes/seg.**|Este contador informa del número de fragmentos de mensajes con todas las prioridades enviados a través de la red por segundo.|  
 |**Promedio de tamaño de recepciones de fragmentos de mensajes**|Este contador informa del tamaño medio de los fragmentos de mensajes recibidos a través de la red.|  
-|**Base promedio de tamaño de fragmentos de mensaje recibidos**|Exclusivamente para uso interno.| 
+|**Base promedio de tamaño de fragmentos de mensaje recibidos**|Solo para uso interno.| 
 |**Promedio de tamaño de fragmentos de mensaje enviados**|Este contador informa del tamaño medio de los fragmentos de mensajes enviados a través de la red.|  
-|**Base promedio de tamaño de fragmentos de mensaje enviados**|Exclusivamente para uso interno.|
+|**Base promedio de tamaño de fragmentos de mensaje enviados**|Solo para uso interno.|
 |**Recuento de conexiones abiertas**|Este contador informa del número de conexiones de red que Service Broker tiene abiertas.|  
 |**Bytes pendientes para E/S de recepción**|Este contador informa del número de bytes incluidos en fragmentos de mensajes que se han recibido a través de la red, pero que todavía no se han colocado en una cola ni se han descartado.|  
 |**Bytes pendientes para E/S de envío**|Este contador informa del número total de bytes de fragmentos de mensajes que están listos para ser enviados a través de la red.|  
@@ -53,14 +53,14 @@ ms.locfileid: "67987066"
 |**Bytes de E/S de recepción/seg.**|Este contador informa del número de bytes por segundo recibidos a través de la red por extremos de Service Broker y extremos de creación de reflejo de base de datos.|  
 |**Total de bytes de E/S de recepción**|Este contador informa del número total de bytes recibidos a través de la red por extremos de Service Broker y extremos de creación de reflejo de base de datos.|  
 |**Promedio de longitud de E/S de recepción**|Este contador informa del promedio de bytes para una operación de recepción de transporte.|  
-|**Base promedio de longitud de E/de recepción**|Exclusivamente para uso interno.|
+|**Base promedio de longitud de E/de recepción**|Solo para uso interno.|
 |**E/S de recepción/s**|Este contador informa del número de operaciones de E/S de recepción de transporte por segundo que la capa de trasporte de Service Broker / DBM ha finalizado. Tenga en cuenta que una operación de recepción de transporte puede incluir varios fragmentos de mensajes.|  
 |**Bytes de copias de búfer de E/S de recepción/s**|Velocidad a la que las operaciones de E/S de recepción de transporte han tenido que mover fragmentos de búfer en la memoria.|
 |**Recuento de copias de búfer de E/S de recepción**|Número de veces que las operaciones de E/S de recepción de transporte han tenido que mover fragmentos de búfer en la memoria.| 
 |**Bytes de E/S de envío/seg.**|Este contador informa del número de bytes por segundo enviados a través de la red por extremos de Service Broker y extremos de creación de reflejo de base de datos.|   
 |**Total de bytes de E/S de envío**|Este contador informa del número total de bytes enviados a través de la red por extremos de Service Broker y extremos de creación de reflejo de base de datos.| 
 |**Promedio de longitud de E/S de envío**|Este contador informa del tamaño medio de bytes de cada operación de envío de transporte. Tenga en cuenta que una operación de envío de transporte puede incluir varios fragmentos de mensajes.|  
-|**Base de longitud promedio de E/S de envío**|Exclusivamente para uso interno.|
+|**Base de longitud promedio de E/S de envío**|Solo para uso interno.|
 |**E/S de envío/seg.**|Este contador informa del número de operaciones de E/S de envío de transporte por segundo que han finalizado. Tenga en cuenta que una operación de envío de transporte puede incluir varios fragmentos de mensajes.|  
   
 ## <a name="see-also"></a>Consulte también  

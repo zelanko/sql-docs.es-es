@@ -21,15 +21,14 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b32c9ffdf6f4d8acd5ee7e1d18583cd00536c70e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896133"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427052"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Provocar y definir eventos en una tarea personalizada
   El motor en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] facilita una colección de eventos que proporciona el estado del progreso de una tarea cuando esta se valida y ejecuta. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> define estos eventos y se proporciona a las tareas como un parámetro para los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -43,7 +42,7 @@ ms.locfileid: "62896133"
   
  En el siguiente ejemplo de código se muestra el método `InitializeTask` de una tarea personalizada, donde se crean dos eventos personalizados y se establecen sus propiedades. Los nuevos eventos se agregan a la colección <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- El primer evento personalizado tiene un *eventName* de "**OnBeforeIncrement**" y una *description* de "**Se activa una vez actualizado el valor inicial**". El parámetro siguiente, el valor `true`, indica que este evento debe permitir la creación de un contenedor de controladores de eventos para controlar el evento. El controlador de eventos es un contenedor que proporciona estructura en un paquete y sirve a las tareas, como otros contenedores tales como el paquete, Sequence, ForLoop y ForEachLoop. Cuando el *allowEventHandlers* parámetro es `true`, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> se crean objetos para el evento. Cualquier parámetro definido para el evento está ahora disponible a <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> en la colección de variables de <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ El primer evento personalizado tiene un *eventName* de "**OnBeforeIncrement**" y una *description* de "**Se activa una vez actualizado el valor inicial**". El parámetro siguiente, el valor `true`, indica que este evento debe permitir la creación de un contenedor de controladores de eventos para controlar el evento. El controlador de eventos es un contenedor que proporciona estructura en un paquete y sirve a las tareas, como otros contenedores tales como el paquete, Sequence, ForLoop y ForEachLoop. Cuando el parámetro *allowEventHandlers* es `true` , <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> se crean objetos para el evento. Cualquier parámetro definido para el evento está ahora disponible a <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> en la colección de variables de <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -116,7 +115,7 @@ Me.onBeforeIncrement.Description, arguments, _
 Nothing,  bFireOnBeforeIncrement)  
 ```  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el ejemplo siguiente se muestra una tarea que define un evento personalizado en el método `InitializeTask`, agrega el evento personalizado a la colección <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> y, a continuación, genera el evento personalizado durante su método `Execute` llamando al método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>.  
   
 ```csharp  
@@ -189,10 +188,10 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md)   
- [Agregar un controlador de eventos a un paquete](../../add-an-event-handler-to-a-package.md)  
+## <a name="see-also"></a>Consulte también  
+ [Controladores de eventos Integration Services &#40;SSIS&#41;](../../integration-services-ssis-event-handlers.md)   
+ [agregar un controlador de eventos a un paquete](../../add-an-event-handler-to-a-package.md)  
   
   

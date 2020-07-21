@@ -1,5 +1,6 @@
 ---
 title: AVG (función de XQuery) | Microsoft Docs
+description: Obtenga información sobre la función de XQuery AVG () que devuelve el promedio de una secuencia especificada de números.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726794"
 ---
 # <a name="aggregate-functions---avg"></a>Funciones de agregado: avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el promedio de una secuencia de números.  
   
@@ -39,36 +40,36 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  Secuencia de valores atómicos cuyo promedio se va a calcular.  
   
 ## <a name="remarks"></a>Comentarios  
- Todos los tipos de valores atomizados que se pasan a **avg()** tiene que ser un subtipo de exactamente uno de los tres tipos numéricos base integrados o xdt: untypedAtomic. No se pueden mezclar. Los valores de tipo xdt:untypedAtomic se tratan como xs:double. El resultado de **avg()** recibe el tipo base de los tipos pasados, como xs: double en el caso de xdt: untypedAtomic.  
+ Todos los tipos de los valores atomizados que se pasan a **AVG ()** deben ser un subtipo de exactamente uno de los tres tipos base numéricos integrados o XDT: untypedAtomic. No se pueden mezclar. Los valores de tipo xdt:untypedAtomic se tratan como xs:double. El resultado de **AVG ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic.  
   
- Si la entrada está estáticamente vacía, se considera implícitamente vacía y se produce un error estático.  
+ Si la entrada está vacía estáticamente, el vacío es implícito y se genera un error estático.  
   
- El **avg()** función devuelve el promedio de los números calculados. Por ejemplo:  
+ La función **AVG ()** devuelve el promedio de los números calculados. Por ejemplo:  
   
- **SUM (** *$arg* **) div count (** *$arg* **)**  
+ **SUM (** *$arg* **) número de div (** *$arg* **)**  
   
- Si *$arg* es una secuencia vacía, se devuelve una secuencia vacía.  
+ Si *$arg* es una secuencia vacía, se devuelve la secuencia vacía.  
   
- Si no se puede convertir un valor xdt: untypedAtomic a xs: Double, se descarta el valor en la secuencia de entrada *$arg*.  
+ Si un valor XDT: untypedAtomic no se puede convertir a XS: Double, el valor se descarta en la secuencia de entrada, *$arg*.  
   
  En los demás casos, la función devuelve un error estático.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Utilizar la función avg() de XQuery para buscar los centros de trabajo del proceso de fabricación cuyas horas de trabajo son superiores al promedio de todos los centros de trabajo  
- Puede volver a escribir la consulta proporcionada en [min (función de XQuery)](../xquery/aggregate-functions-min.md) para usar el **avg()** función.  
+ Puede volver a escribir la consulta proporcionada en la [función min (XQuery)](../xquery/aggregate-functions-min.md) para usar la función **AVG ()** .  
   
 ## <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   El **avg()** función asigna todos los enteros a xs: decimal.  
+-   La función **AVG ()** asigna todos los enteros a XS: decimal.  
   
--   El **avg()** no se admite la función con valores de tipo xs: Duration.  
+-   No se admite la función **AVG ()** en valores de tipo XS: Duration.  
   
 -   No se admiten las secuencias que mezclan tipos en límites de tipo base.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

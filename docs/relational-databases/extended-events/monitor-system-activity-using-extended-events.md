@@ -1,6 +1,6 @@
 ---
-title: Supervisión de la actividad del sistema mediante eventos extendidos | Microsoft Docs
-ms.custom: ''
+title: Supervisar la actividad del sistema mediante eventos extendidos
+description: Use los eventos extendidos con el seguimiento de eventos para Windows a fin de supervisar la actividad del sistema. Obtenga información sobre CREATE EVENT SESSION, ALTER EVENT SESSION y DROP EVENT SESSION.
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,16 @@ ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56286a2684f5b8b7f7af9915f3148c0a4c99771e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d80d0e1deee504d4dd5a2d8ce49303a799f66fb8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906090"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790852"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Supervisar la actividad del sistema mediante eventos extendidos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En el siguiente procedimiento se muestra el uso de Extended Events con el Seguimiento de eventos para Windows (ETW) para supervisar la actividad del sistema. El procedimiento también muestra el uso de las instrucciones CREATE EVENT SESSION, ALTER EVENT SESSION y DROP EVENT SESSION.  
   

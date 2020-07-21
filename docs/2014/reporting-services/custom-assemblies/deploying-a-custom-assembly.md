@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264728"
 ---
 # <a name="deploying-a-custom-assembly"></a>Implementar un ensamblado personalizado
-  Para implementar un ensamblado personalizado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], coloque el ensamblado en las carpetas de aplicaciones del Diseñador de informes y el servidor de informes. De forma predeterminada, a los ensamblados personalizados se les concede el permiso `Execution` en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para conceder privilegios a los ensamblados personalizados a parte del permiso Ejecutar, tendrá que modificar el archivo de configuración rssrvpolicy.config para el servidor de informes y el archivo de configuración rspreviewpolicy.config para la ventana de vista previa del Diseñador de informes. Otra opción es instalar el ensamblado personalizado en la memoria caché de ensamblados global (GAC).  
+  Para implementar un ensamblado personalizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]en, coloque el ensamblado en las carpetas de aplicación de diseñador de informes y del servidor de informes. De forma predeterminada, a los ensamblados personalizados se les concede el permiso `Execution` en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para conceder privilegios a los ensamblados personalizados a parte del permiso Ejecutar, tendrá que modificar el archivo de configuración rssrvpolicy.config para el servidor de informes y el archivo de configuración rspreviewpolicy.config para la ventana de vista previa del Diseñador de informes. Otra opción es instalar el ensamblado personalizado en la memoria caché de ensamblados global (GAC).  
   
 > [!NOTE]  
 >  Hay dos modos de vista previa para el Diseñador de informes: la pestaña Vista previa y la ventana de vista previa emergente que se inician cuando se inicia el proyecto de informe en modo `DebugLocal`. La pestaña Vista previa ejecuta todas las expresiones de informe usando el conjunto de permisos `FullTrust` y no aplica la configuración de la directiva de seguridad. La ventana de vista previa emergente está pensada para simular la funcionalidad del servidor de informes y, por consiguiente, tiene un archivo de configuración de directiva que usted o un administrador deben modificar para utilizar ensamblados en el Diseñador de informes. Esta vista previa emergente también bloquea el ensamblado personalizado. Por consiguiente, es necesario cerrar la ventana de vista previa para modificar o actualizar el código de ensamblado personalizado.  
@@ -61,8 +61,8 @@ ms.locfileid: "63264728"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)   
- [Trabajar con ensamblados y la memoria caché de ensamblados global](https://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Trabajar con ensamblados y la memoria caché global de ensamblados](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

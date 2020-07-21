@@ -1,10 +1,9 @@
 ---
-title: 'Propiedades del trabajo: Nuevo trabajo (página Destinos) | Microsoft Docs'
-ms.custom: ''
+title: Propiedades del trabajo - Nuevo trabajo (página Destinos)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7823252fe434c7aea8aaae408023c38445a7ed3e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 218965b18f6b94551334cc960e6be7219c8ccc1d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265553"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242248"
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propiedades del trabajo - Nuevo trabajo (página Destinos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

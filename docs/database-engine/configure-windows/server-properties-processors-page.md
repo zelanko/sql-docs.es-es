@@ -1,5 +1,6 @@
 ---
 title: Propiedades del servidor (página Procesadores) | Microsoft Docs
+description: Familiarícese con la configuración de procesador en SQL Server. Obtenga información sobre qué opciones controlan el número de subprocesos de trabajo, la asignación del procesador y otras propiedades.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 42eaf4bc1742c5d9ff101c308d6c120ceb8f3ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3652ee3b01383d8d029bb0eb7aeefaa4f8cc045
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726605"
 ---
 # <a name="server-properties---processors-page"></a>Propiedades del servidor - Página Procesadores
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para ver o modificar las opciones del procesador. Los valores de configuración de la afinidad del procesador solo se habilitan si hay más de un procesador instalado.  
   
 ## <a name="options"></a>Opciones  

@@ -1,9 +1,7 @@
 ---
-title: Inclusión de valores Null en JSON - Opción INCLUDE_NULL_VALUES | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: Inclusión de valores Null en JSON - Opción INCLUDE_NULL_VALUES
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6abe1bbad1f1c6e5c1f2e200c58e4ae865c1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6a7de04cf998910402f271426d5fe8020972a1e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755750"
 ---
-# <a name="include-null-values-in-json---includenullvalues-option"></a>Inclusión de valores Null en JSON - Opción INCLUDE_NULL_VALUES
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="include-null-values-in-json---include_null_values-option"></a>Inclusión de valores Null en JSON - Opción INCLUDE_NULL_VALUES
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Para incluir valores NULL en la salida JSON de la cláusula **FOR JSON** , especifique la opción **INCLUDE_NULL_VALUES** .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67909302"
   
  Este es otro ejemplo de una cláusula **FOR JSON** con la opción **INCLUDE_NULL_VALUES** .  
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT name, surname  

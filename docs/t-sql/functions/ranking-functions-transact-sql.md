@@ -15,17 +15,18 @@ helpviewer_keywords:
 - functions [SQL Server], ranking
 - ranking rows
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f7b8e84e35e2af64a83c323474bfc46a81553c7c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927763"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003753"
 ---
 # <a name="ranking-functions-transact-sql"></a>Funciones de categoría (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Las funciones de categoría devuelven un valor de categoría para cada fila de una partición. Según la función que se utilice, algunas filas pueden recibir el mismo valor que otras. Las funciones de categoría son no deterministas.  
   
@@ -59,7 +60,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|Nombre|Apellidos|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
 |Michael|Blythe|1|1|1|1|4 557 045,0459|98027|  
 |Linda|Mitchell|2|1|1|1|5 200 475,2313|98027|  

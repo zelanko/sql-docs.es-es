@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 269990d534a2357d1931b1cff79718323e08db41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025338"
 ---
 # <a name="how-online-index-operations-work"></a>Cómo funcionan las operaciones de índice en línea
   En este tema se definen las estructuras que existen durante una operación de índice en línea y se muestran las actividades asociadas a ellas.  
@@ -51,7 +50,7 @@ ms.locfileid: "63162163"
   
  En la ilustración siguiente se muestra el proceso para crear un índice clúster inicial en línea. El objeto de origen (el montón) no dispone de otros índices. Se muestran las actividades de las estructuras de origen y destino en cada fase; también se muestran las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación. Las fases de preparación, generación y final se indican con los modos de bloqueo empleados en cada una de ellas.  
   
- ![Actividades realizadas durante la operación de índice en línea](../../database-engine/media/online-index.gif "Actividades realizadas durante la operación de índice en línea")  
+ ![Actividades realizadas durante operación de índice en línea](../../database-engine/media/online-index.gif "Actividades realizadas durante operación de índice en línea")  
   
 ## <a name="source-structure-activities"></a>Actividades de la estructura de origen  
  En la tabla siguiente se muestran las actividades relacionadas con las estructuras de origen durante cada fase de la operación de índice y la estrategia de bloqueo correspondiente.  
@@ -59,7 +58,7 @@ ms.locfileid: "63162163"
 |Fase|Actividad de origen|Bloqueos de origen|  
 |-----------|---------------------|------------------|  
 |Preparación<br /><br /> Fase muy breve|Preparación de los metadatos del sistema para crear la nueva estructura de índice vacía.<br /><br /> Se define una instantánea de base de datos. Es decir, se utilizan las versiones de fila para proporcionar coherencia de lectura en la transacción.<br /><br /> Las operaciones de usuario simultáneas de escritura se bloquean durante un período muy breve.<br /><br /> No se admiten las operaciones DDL simultáneas, excepto la creación de varios índices no clúster.|S (Compartido) en la tabla*<br /><br /> IS (Intención compartida)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Compilar<br /><br /> Fase principal|Los datos se recorren, ordenan, combinan e insertan en el destino en operaciones de carga masiva.<br /><br /> Las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación se aplican a los índices preexistentes y a los nuevos índices que se generan.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Build<br /><br /> Fase principal|Los datos se recorren, ordenan, combinan e insertan en el destino en operaciones de carga masiva.<br /><br /> Las operaciones de usuario simultáneas de selección, inserción, actualización y eliminación se aplican a los índices preexistentes y a los nuevos índices que se generan.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Final<br /><br /> Fase muy breve|Antes de iniciar esta fase deben completarse todas las transacciones de actualización no confirmadas. Según el bloqueo aplicado, se bloquean brevemente las nuevas transacciones de lectura y escritura de usuario hasta que finaliza esta fase.<br /><br /> Se actualizan los metadatos del sistema para reemplazar el origen con el destino.<br /><br /> Si es preciso, el origen se quita. Por ejemplo, después de regenerar o quitar un índice clúster.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S en la tabla si se crea un índice no agrupado.\*<br /><br /> SCH-M (Modificación del esquema) si se quita alguna estructura de origen (índice o tabla).\*|  
   
  \* La operación de índice esperará a que se completen las transacciones de actualización no confirmadas antes de aplicar un bloqueo S o SCH-M a la tabla.  
@@ -74,8 +73,8 @@ ms.locfileid: "63162163"
 |Fase|Actividad de destino|Bloqueos de destino|  
 |-----------|---------------------|------------------|  
 |Preparación|Se crea un nuevo índice y se define como de solo escritura.|IS|  
-|Compilar|Se insertan datos del origen.<br /><br /> Se aplican las modificaciones de usuario (inserciones, actualizaciones, eliminaciones) aplicadas al origen.<br /><br /> Esta actividad resulta transparente para el usuario.|IS|  
-|Final|Se actualizan los metadatos de índice.<br /><br /> El índice se establece en un estado de lectura/escritura.|S<br /><br /> o Administrador de configuración de<br /><br /> SCH-M|  
+|Build|Se insertan datos del origen.<br /><br /> Se aplican las modificaciones de usuario (inserciones, actualizaciones, eliminaciones) aplicadas al origen.<br /><br /> Esta actividad resulta transparente para el usuario.|IS|  
+|Final|Se actualizan los metadatos de índice.<br /><br /> El índice se establece en un estado de lectura/escritura.|S<br /><br /> or<br /><br /> SCH-M|  
   
  Las instrucciones SELECT del usuario no tienen acceso al destino hasta que finaliza la operación de índice.  
   

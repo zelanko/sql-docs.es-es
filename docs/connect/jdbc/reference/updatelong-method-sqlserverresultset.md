@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d6d978861f8f321d5c4aaaa3580b2e05a8c6310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 65e887d892f51d188dac7ff853ecee1f58129dc7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999015"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928385"
 ---
 # <a name="updatelong-method-sqlserverresultset"></a>Método updateLong (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

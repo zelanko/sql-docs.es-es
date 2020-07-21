@@ -1,7 +1,8 @@
 ---
-title: Errores posibles de medios durante copia de seguridad y restauración (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2017
+title: 'Errores de medios: copia de seguridad y restauración | Microsoft Docs'
+description: En SQL Server 2019, se puede recuperar una base de datos a pesar de los errores detectados. Use RESTORE y RESTORE VERIFYONLY con una suma de comprobación de copia de seguridad para comprobar si hay errores.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -23,22 +24,22 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c364c7dca1e8ea7a74a526bdb69dc8a7b3cf296d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670105"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ofrece la opción de recuperación de una base de datos a pesar de los errores detectados. Un importante mecanismo de detección de errores nuevo es la creación opcional de una suma de comprobación de copia de seguridad que se puede crear mediante una operación de copia de seguridad y validar mediante una operación de restauración. Puede controlar si una operación comprueba si hay errores y si la operación se detiene o continúa al encontrar un error. Si una copia de seguridad contiene una suma de comprobación de copia de seguridad, las instrucciones RESTORE y RESTORE VERIFYONLY pueden comprobar si hay errores.  
   
 > [!NOTE]  
 >  Las copias de seguridad reflejadas proporcionan hasta cuatro copias (reflejos) de un conjunto de medios, ofreciendo copias alternativas para recuperar el sistema de los errores provocados por los medios dañados. Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
   
-##  <a name="BckChecksums"></a> Comprobaciones de copia de seguridad  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Comprobaciones de copia de seguridad  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite tres tipos de sumas de comprobación: una suma de comprobación de páginas, una de bloques de registro y una de copia de seguridad. Al generar una suma de comprobación de copia de seguridad, BACKUP comprueba que los datos que se leen de la base de datos son coherentes con cualquier suma de comprobación o indicación de página rasgada de la base de datos.  
   
  La instrucción BACKUP calcula opcionalmente una suma de comprobación de copia de seguridad en el flujo de copia de seguridad; si hay una suma de comprobación de página o información de página rasgada en determinada página, al hacer la copia de seguridad de la página, BACKUP comprueba también el estado de página rasgada, la suma de comprobación y el Id. de la página. Al crear una suma de comprobación de copia de seguridad, una operación de copia de seguridad no agrega sumas de comprobación a las páginas. Las páginas se copian tal y como están en la base de datos y la copia de seguridad no las modifica.  
@@ -67,7 +68,7 @@ ms.locfileid: "72908868"
   
  Si una operación BACKUP continúa después de encontrar errores, la operación realiza los siguientes pasos:  
   
-1.  Indica en el conjunto de copia de seguridad de los medios de copia de seguridad que hay errores y realiza el seguimiento de la página en la tabla **suspect_pages** de la base de datos **msdb**. Para obtener más información, vea [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
+1.  Indica en el conjunto de copia de seguridad de los medios de copia de seguridad que hay errores y realiza el seguimiento de la página en la tabla **suspect_pages** de la base de datos **msdb** . Para obtener más información, vea [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
   
 2.  Registra el error en el registro de errores de SQL Server.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "72908868"
   
 4.  Emite un mensaje que indica que la copia de seguridad se generó correctamente, pero contiene errores de página.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para habilitar o deshabilitar sumas de comprobación de copia de seguridad**  
   
 -   [Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante copia de seguridad o restauración &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 82830fdf3143b5cc50f203f625560a5e48fc7294
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732635"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve información de la columna o el parámetro.
   
@@ -49,18 +49,18 @@ Una expresión que contiene el nombre de la columna o del parámetro.
 *property*  
 Para el argumento *id*, el argumento *propiedad* especifica el tipo de información que devolverá la función `COLUMNPROPERTY`. El argumento *propiedad* puede tener uno de estos valores:
   
-|Valor|Descripción|Valor devuelto|  
+|Value|Descripción|Valor devuelto|  
 |---|---|---|
 |**AllowsNull**|Permite valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**ColumnId**|Valor del Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** Cuando se consultan varias columnas, pueden aparecer espacios en la secuencia de valores de los Id. de columna.|  
 |**FullTextTypeColumn**|El valor TYPE COLUMN de la tabla que contiene la información del tipo de documento de la *columna*.|Id. de TYPE COLUMN de texto completo para la expresión de nombre de columna que se pasa como segundo parámetro de esta función.|  
-|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: no siempre se genera.<br /><br /> 1: se genera siempre como comienzo de fila.<br /><br /> 2: se genera siempre como fin de fila.|  
+|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> 0: no siempre se genera.<br /><br /> 1: se genera siempre como comienzo de fila.<br /><br /> 2: se genera siempre como fin de fila.|  
 |**IsColumnSet**|La columna es un conjunto de columnas. Para obtener más información, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsComputed**|La columna es una columna calculada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsCursorType**|El parámetro de procedimiento es del tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsDeterministic**|La columna es determinista. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida No es una columna calculada o una columna de vista.|  
 |**IsFulltextIndexed**|La columna se registra para la indización de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
-|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: no está oculto<br /><br /> 1: Hidden|  
+|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Válido para** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] y versiones posteriores.<br /><br /> 0: no está oculto<br /><br /> 1: oculto|  
 |**IsIdentity**|La columna utiliza la propiedad IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIdNotForRepl**|La columna comprueba el valor IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIndexable**|La columna se puede indizar.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
@@ -85,7 +85,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como `COLUMNPROPERTY`, es posible que devuelvan NULL si el usuario no tiene el permiso correcto para el objeto. Vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md) para obtener más información.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Cuando se comprueba la propiedad determinista de una columna, primero se comprueba si se trata de una columna calculada. El argumento **IsDeterministic** devuelve NULL para las columnas no calculadas. Las columnas calculadas se pueden especificar como columnas de índice.
   
 ## <a name="examples"></a>Ejemplos  
@@ -106,7 +106,7 @@ Column Length
 50
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   

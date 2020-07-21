@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54959f89172d0d382c20c60d46dac11df5837137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ca841fd5c1e0b6c2fcd25e1476f8dfa8a7b26e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766619"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY (permisos de objeto de sistema de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deniega permisos en objetos de sistema, como procedimientos almacenados, procedimientos almacenados extendidos, funciones y vistas.  
   
@@ -33,14 +33,14 @@ ms.locfileid: "67984412"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  [ **sys.** ]  
- Solo se requiere el calificador **sys** para hacer referencia a vistas de catálogo y vistas de administración dinámica.  
+ Solo se necesita el calificador **sys** para hacer referencia a vistas de catálogo y vistas de administración dinámica.  
   
  *system_object*  
  Especifica el objeto en el que se va a denegar el permiso.  
@@ -48,7 +48,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Especifica la entidad de seguridad desde la que se revoca el permiso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede utilizar esta instrucción para denegar permisos para determinados procedimientos almacenados, procedimientos almacenados extendidos, funciones con valores de tabla, funciones escalares, vistas, vistas de catálogo, vistas de compatibilidad, vistas INFORMATION_SCHEMA, vistas de administración dinámica y tablas del sistema instalados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada objeto de sistema existe como un registro único en la base de datos de recursos (**mssqlsystemresource**). La base de datos de recursos es de solo lectura. Se muestra un vínculo al objeto como registro en el esquema **sys** de todas las bases de datos.  
   
  La resolución predeterminada de nombres resuelve los nombres no calificados de procedimiento para la base de datos de recursos. Por tanto, solo se requiere el calificador **sys** para especificar vistas de catálogo y vistas de administración dinámica.  
@@ -86,7 +86,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [Permisos de objeto de sistema GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
- [Permisos de objeto de sistema REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
+ [GRANT &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   
+ [REVOKE &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1acc36c3e8054d4e3555401bc4ba5f4f62196f83
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066273"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Ajustar automáticamente el tamaño de las tablas seleccionadas en diagramas (Visual Database Tools)
   Las tablas de su diagrama se pueden ajustar rápidamente para que adopten el tamaño más pequeño posible de modo que aparezcan todos los campos.  
@@ -31,7 +30,7 @@ ms.locfileid: "63297570"
   
 2.  Haga clic con el botón derecho en una de las tablas seleccionadas y, en el menú contextual, elija **Ajustar automáticamente tablas seleccionadas**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

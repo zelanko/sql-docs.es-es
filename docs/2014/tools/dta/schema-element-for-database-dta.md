@@ -1,5 +1,5 @@
 ---
-title: Elemento de esquema de base de datos (DTA) | Microsoft Docs
+title: Schema (DTA, elemento de Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74e72deb65d3f693e309926870174ebe72817c3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb89a55e8e4568af00854fc487c51dcdff0658dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057713"
 ---
 # <a name="schema-element-for-database-dta"></a>Schema (DTA, elemento de Database)
   Especifica el esquema de la base de datos que se desea optimizar.  
@@ -51,7 +50,7 @@ ms.locfileid: "63273329"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo del uso de este elemento, vea [Elemento Server &#40;DTA&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

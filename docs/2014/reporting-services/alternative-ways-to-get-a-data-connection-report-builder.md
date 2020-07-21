@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109988"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Maneras alternativas de obtener una conexión de datos (Generador de informes)
@@ -37,7 +37,7 @@ ms.locfileid: "66109988"
   
 3.  Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**. Aparece un mensaje que indica que la conexión se ha creado correctamente. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Haga clic en **Siguiente**.  
+4.  Haga clic en **Next**.  
   
      Si es necesario, escriba sus credenciales. Para guardar las credenciales de forma local, seleccione **Guardar contraseña con conexión**. Si no selecciona esta opción, se le pedirán las credenciales cada vez que ejecute el informe  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66109988"
   
      Aparece un mensaje que indica que la conexión se ha creado correctamente. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  Si se le solicita un nombre de usuario y contraseña, escriba sus credenciales. Para guardar las credenciales de forma local, seleccione **Guardar contraseña con conexión**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>Consulte también  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md)  
   
   

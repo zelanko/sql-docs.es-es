@@ -1,5 +1,5 @@
 ---
-title: El contenido de página (Administrador de informes) | Microsoft Docs
+title: Página contenido (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109727"
 ---
 # <a name="contents-page-report-manager"></a>Contenido (página del Administrador de informes)
@@ -32,10 +32,10 @@ ms.locfileid: "66109727"
  **Generador de informes**  
  Haga clic para iniciar el Generador de informes. Para tener acceso al Generador de informes desde el Administrador de informes, el Generador de informes debe estar habilitado en el servidor de informes y debe tener permiso para usarlo. Para más información, vea [Configurar el acceso al Generador de informes](report-server/configure-report-builder-access.md).  
   
- **Configuración de la carpeta**  
+ **Configuración de carpeta**  
  Haga clic para abrir y administrar las propiedades de la carpeta actual.  
   
- **Cargar archivo**  
+ **Upload File (Cargar archivo)**  
  Haga clic para abrir la página Cargar archivo, que se usa para copiar un archivo del sistema de archivos en un servidor de informes. Puede cargar archivos para agregar informes y recursos, como gráficos, documentos o cualquier otro contenido colateral que desee guardar con el informe. Los archivos cargados se almacenan y se administran en una base de datos del servidor de informes. Para cargar un informe, seleccione un archivo con extensión .rdl.  
   
  **Vista de detalles**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109727"
   
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  
   
- **Vista en mosaico**  
+ **Vista de mosaico**  
  Haga clic para mostrar la página Contenido sin detalles como en la vista **Detalles**. La Vista de lista es la vista predeterminada cuando se abre una carpeta o se obtiene acceso a la página Inicio del Administrador de informes.  
   
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  
@@ -51,10 +51,10 @@ ms.locfileid: "66109727"
  **Eliminar**  
  Haga clic para quitar una carpeta u otro elemento. Antes de hacer clic en **Eliminar**, active la casilla situada junto a cada elemento que desee eliminar.  
   
- **Mover**  
+ **Move**  
  Haga clic para cambiar la posición de un elemento dentro de la jerarquía de carpetas. Antes de hacer clic en **Mover**, active la casilla situada junto a cada elemento que desee mover. Al hacerlo, se abre la página para mover elementos, en la que puede examinar las carpetas para seleccionar una nueva ubicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -1,5 +1,5 @@
 ---
-title: Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0) | Microsoft Docs
+title: Especificar funciones de conversión explícitas en consultas XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,25 +12,24 @@ helpviewer_keywords:
 - number function
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07e2e67c1c30302c6d3e758f76805e92e509f6c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002874"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0)
-  En los siguientes ejemplos se muestra cómo especificar funciones de conversión explícita en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  En los siguientes ejemplos se muestra cómo especificar funciones de conversión explícita en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Usar la función de conversión explícita number()  
  La función `number()` convierte un argumento en un número.  
   
- Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** a un número y lo compara con el valor 4. A continuación, la consulta devuelve todos  **\<empleado >** elementos secundarios del nodo de contexto con el **ContactID** atributo que tiene un valor numérico de 4:  
+ Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** en un número y lo compara con el valor 4. A continuación, la consulta devuelve todos los **\<Employee>** elementos secundarios del nodo de contexto con el atributo **ContactID** que tiene un valor numérico de 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -46,7 +45,7 @@ ms.locfileid: "66010698"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (ExplicitConversionA.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66010698"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados de ejecución de esta plantilla:  
   
@@ -76,10 +75,10 @@ ms.locfileid: "66010698"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>b. Usar la función de conversión explícita string()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>B. Usar la función de conversión explícita string()  
  La función `string()` convierte un argumento en una cadena.  
   
- La siguiente consulta convierte **ContactID** en una cadena y lo compara con la cadena de valor "4". La consulta devuelve todos los  **\<empleado >** elementos secundarios del nodo de contexto con un **ContactID** con un valor de cadena "4":  
+ La siguiente consulta convierte **ContactID** en una cadena y lo compara con el valor de cadena "4". La consulta devuelve todos los **\<Employee>** elementos secundarios del nodo de contexto con un **ContactID** con un valor de cadena de "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
@@ -95,7 +94,7 @@ ms.locfileid: "66010698"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (ExplicitConversionB.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "66010698"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados de ejecución de la plantilla:  
   

@@ -1,6 +1,6 @@
 ---
-title: Mantenimiento de valores NULL o uso de valores predeterminados durante la importación en bloque (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Mantenimiento de valores NULL o predeterminados durante la importación en bloque
+description: Para la importación en bloque en SQL Server, tanto bcp como BULK INSERT cargan valores predeterminados para reemplazar los valores NULL. Para ambos, puede optar por conservar los valores NULL.
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,15 +21,16 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: ca3b994cb831e78807b8aeb44c5fe6f8fc454f41
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896669"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001200"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Mantenimiento de valores NULL o predeterminados durante la importación en bloque (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 De manera predeterminada, cuando se importan datos en una tabla, el comando [BCP](../../tools/bcp-utility.md) y la instrucción [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) aplican los valores predeterminados definidos para las columnas de la tabla.  Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna.  El comando [BCP](../../tools/bcp-utility.md) y la instrucción [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) permiten especificar que se mantengan los valores NULL.
 
@@ -39,10 +40,10 @@ Por el contrario, una instrucción INSERT normal mantiene el valor NULL en lugar
 |---|
 |[Mantener valores NULL](#keep_nulls)<br />[Usar valores predeterminados con INSERT... SELECT * FROM OPENROWSET(BULK...)](#keep_default)<br />[Condiciones de prueba de ejemplo](#etc)<br />&emsp;&#9679;&emsp;[Tabla de ejemplo](#sample_table)<br />&emsp;&#9679;&emsp;[Archivo de datos de ejemplo](#sample_data_file)<br />&emsp;&#9679;&emsp;[Archivo de formato no XML de ejemplo](#nonxml_format_file)<br />[Mantener valores NULL o usar valores predeterminados durante la importación masiva](#import_data)<br />&emsp;&#9679;&emsp;[Uso de BCP y mantenimiento de valores NULL sin un archivo de formato](#bcp_null)<br />&emsp;&#9679;&emsp;[Uso de BCP y mantenimiento de valores NULL con un archivo de formato no XML](#bcp_null_fmt)<br />&emsp;&#9679;&emsp;[Uso de BCP y uso de valores predeterminados sin un archivo de formato](#bcp_default)<br />&emsp;&#9679;&emsp;[Uso de BCP y uso de valores predeterminados con un archivo de formato no XML](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[Uso de BULK INSERT y mantenimiento de valores NULL sin un archivo de formato](#bulk_null)<br />&emsp;&#9679;&emsp;[Uso de BULK INSERT y mantenimiento de valores NULL con un archivo de formato no XML](#bulk_null_fmt)<br />&emsp;&#9679;&emsp;[Uso de BULK INSERT y uso de valores predeterminados sin un archivo de formato](#bulk_default)<br />&emsp;&#9679;&emsp;[Uso de BULK INSERT y uso de valores predeterminados con un archivo de formato no XML](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[Uso de OPENROWSET(BULK...) y mantenimiento de valores NULL con un archivo de formato no XML](#openrowset__null_fmt)<br />&emsp;&#9679;&emsp;[Uso de OPENROWSET(BULK...) y uso de valores predeterminados con un archivo de formato no XML](#openrowset__default_fmt)
 
-## Mantener valores NULL<a name="keep_nulls"></a>  
+## <a name="keeping-null-values"></a>Mantener valores NULL<a name="keep_nulls"></a>  
 Los siguientes calificadores especifican que un campo vacío del archivo de datos mantiene su valor NULL durante la operación de importación masiva, en lugar de heredar un valor predeterminado (si existe) para las columnas de la tabla.  De manera predeterminada, para [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), cualquier columna no especificada en la operación de carga masiva se establece como NULL.
   
-|Comando|Qualifier|Tipo de calificador|  
+|Get-Help|Qualifier|Tipo de calificador|  
 |-------------|---------------|--------------------|  
 |BCP|-k|Switch|  
 |BULK INSERT|KEEPNULLS\*|Argumento|  
@@ -53,16 +54,16 @@ Los siguientes calificadores especifican que un campo vacío del archivo de dato
 > [!NOTE]
 > Estos calificadores deshabilitan la comprobación de definiciones DEFAULT en una tabla mediante los comandos de importación masiva.  Sin embargo, para cualquier instrucción INSERT simultánea, se esperan definiciones DEFAULT.
  
-## Usar valores predeterminados con INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
+## <a name="using-default-values-with-insert--select--from-openrowsetbulk"></a>Usar valores predeterminados con INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
 Puede especificar que para un campo vacío del archivo de datos, la columna de tabla correspondiente use su valor predeterminado (si existe).  Para usar valores predeterminados, use la sugerencia de tabla [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md).
  
 > [!NOTE]
 >  Para más información, vea [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md) y [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).
 
-## Condiciones de prueba de ejemplo<a name="etc"></a>  
+## <a name="example-test-conditions"></a>Condiciones de prueba de ejemplo<a name="etc"></a>  
 Los ejemplos de este tema se basan en la tabla, en el archivo de datos y en el archivo de formato definidos a continuación.
 
-### **Tabla de ejemplo**<a name="sample_table"></a>
+### <a name="sample-table"></a>**Tabla de ejemplo**<a name="sample_table"></a>
 El script siguiente crea una base de datos de prueba y una tabla llamada `myNulls`.  Tenga en cuenta que la cuarta columna de la tabla, `Kids`, tiene un valor predeterminado.  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -79,7 +80,7 @@ CREATE TABLE dbo.myNulls (
    );
 ```
 
-### **Archivo de datos de ejemplo**<a name="sample_data_file"></a>
+### <a name="sample-data-file"></a>**Archivo de datos de ejemplo**<a name="sample_data_file"></a>
 Mediante el Bloc de notas, cree un archivo vacío `D:\BCP\myNulls.bcp` e inserte los datos siguientes.  Tenga en cuenta que no hay ningún valor en el registro tercero, cuarta columna.
 
 ```
@@ -117,7 +118,7 @@ Get-Content -Path $bcpFile;
 Invoke-Item $bcpFile;
 ```
   
-### **Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
+### <a name="sample-non-xml-format-file"></a>**Archivo de formato no XML de ejemplo**<a name="nonxml_format_file"></a>
 SQL Server admite dos tipos de archivos de formato: XML y no XML.  El formato no XML es el formato original compatible con versiones anteriores de SQL Server.  Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada.  El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myNulls.fmt`, basado en el esquema de `myNulls`.  Si quiere usar un comando [BCP](../../tools/bcp-utility.md) para crear un archivo de formato, especifique el argumento **format** y use **null** en lugar de una ruta de acceso de archivo de datos.  La opción format también requiere la opción **-f** .  Además, en este ejemplo, el calificador **c** se usa para especificar los datos de caracteres, **t,** se usa para especificar una coma como [terminador de campo](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)y **T** se usa para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -135,10 +136,10 @@ Notepad D:\BCP\myNulls.fmt
 
  Para obtener más información sobre cómo crear archivos de formato, vea [Crear un archivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
-## Mantener valores NULL o usar valores predeterminados durante la importación masiva<a name="import_data"></a>
+## <a name="keep-nulls-or-use-default-values-during-bulk-import"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva<a name="import_data"></a>
 Los ejemplos siguientes usan la base de datos, el archivo de datos y los archivos de formato que se han creado anteriormente.
 
-### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL sin un archivo de formato**<a name="bcp_null"></a>
+### <a name="using-bcp-and-keeping-null-values-without-a-format-file"></a>**Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL sin un archivo de formato**<a name="bcp_null"></a>
 
 Modificador **-k** .  En el símbolo del sistema, escriba el siguiente comando:
 
@@ -153,7 +154,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
+### <a name="using-bcp-and-keeping-null-values-with-a-non-xml-format-file"></a>**Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 Modificadores **-k** y **-f** . En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -167,7 +168,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
-### **Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados sin un archivo de formato**<a name="bcp_default"></a>
+### <a name="using-bcp-and-using-default-values-without-a-format-file"></a>**Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados sin un archivo de formato**<a name="bcp_default"></a>
 En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -181,7 +182,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
+### <a name="using-bcp-and-using-default-values-with-a-non-xml-format-file"></a>**Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 Modificador **-f** .  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -195,7 +196,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
 
-### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y mantener valores NULL sin un archivo de formato**<a name="bulk_null"></a>
+### <a name="using-bulk-insert-and-keeping-null-values-without-a-format-file"></a>**Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y mantener valores NULL sin un archivo de formato**<a name="bulk_null"></a>
 Argumento**KEEPNULLS** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -214,7 +215,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
+### <a name="using-bulk-insert-and-keeping-null-values-with-a-non-xml-format-file"></a>**Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 El argumento**KEEPNULLS** y **FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -233,7 +234,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y usar valores predeterminados sin un archivo de formato**<a name="bulk_default"></a>
+### <a name="using-bulk-insert-and-using-default-values-without-a-format-file"></a>**Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y usar valores predeterminados sin un archivo de formato**<a name="bulk_default"></a>
 Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -252,7 +253,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
+### <a name="using-bulk-insert-and-using-default-values-with-a-non-xml-format-file"></a>**Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -270,7 +271,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
+### <a name="using-openrowsetbulk-and-keeping-null-values-with-a-non-xml-format-file"></a>**Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -289,7 +290,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
+### <a name="using-openrowsetbulk-and-using-default-values-with-a-non-xml-format-file"></a>**Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 Sugerencia de tabla**KEEPDEFAULTS** y argumento **FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -310,7 +311,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

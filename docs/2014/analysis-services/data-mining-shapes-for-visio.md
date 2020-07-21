@@ -14,35 +14,34 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086394"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525781"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formas de minería de datos para Visio
   Las Formas de minería de datos para Visio proporcionan plantillas personalizadas para mostrar modelos de minería de datos. Mediante estas plantillas, puede conectarse a un modelo que ha creado y crear presentaciones interactivas para ilustrar los resultados de la minería de datos.  
   
- Las plantillas ofrecen muchas ventajas respecto a los gráficos estáticos y capturas de pantalla: interactúan con los modelos de minería de datos subyacente, que se almacenan en una instancia de Analysis Services, y le permiten personalizar la forma en que se muestran los patrones en el modelo de minería de datos. Puede contraer y expandir un modelo de árbol, filtrar en los nodos de datos o por atributos, y mostrar las estadísticas del modelo como las probabilidades y los coeficientes.  
+ Las plantillas ofrecen muchas ventajas con respecto a las capturas de pantalla y los gráficos estáticos: interactúan con los modelos de minería de datos subyacentes, que se almacenan en una instancia de Analysis Services, y permiten personalizar la forma en que se muestran los patrones del modelo de minería de datos. Puede contraer y expandir un modelo de árbol, filtrar en los nodos de datos o por atributos, y mostrar las estadísticas del modelo como las probabilidades y los coeficientes.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Las plantillas de Visio incluyen estos asistentes:  
   
--   **Diagrama de red de dependencias:** Utilice a este asistente para crear gráficos de árboles de decisión y redes neuronales.  
+-   **Diagrama de red de dependencias:** Use este asistente para crear gráficos para árboles de decisión y redes neuronal.  
   
--   **Diagrama de árbol de decisión:** Use este asistente para crear diagramas que muestran los puntos de decisión y las fórmulas asociadas con los modelos de árboles de decisión. Este diagrama se puede utilizar también con modelos de regresión.  
+-   **Diagrama de árbol de decisión:** Use este asistente para crear diagramas que muestren los puntos de decisión y las fórmulas asociadas a los modelos de árbol de decisión. Este diagrama se puede utilizar también con modelos de regresión.  
   
 -   **Diagrama del clúster:** Use este asistente para crear gráficos multicolor para los modelos de segmentación. Se puede alternar entre las vistas como distinción del atributo, perfiles del clúster y dependencias, y personalizar la apariencia de los clústeres.  
   
 ## <a name="installation"></a>Instalación  
- Al instalar las plantillas de minería de datos para Visio, de forma predeterminada los siguientes archivos se instalan en \<unidad > \Program Files\Microsoft SQL Server 2012 DM Add-Ins (o \<unidad > \ o (x86) de archivos de programa \Microsoft SQL Server 2012 DM Add-Ins):  
+ Al instalar las plantillas de minería de datos para Visio, los siguientes archivos se instalan de forma predeterminada en la carpeta \<drive> \Archivos de programa\microsoft SQL Server 2012 DM Add-Ins (o \<drive> en los archivos de programa (x86) \microsoft SQL Server 2012 DM-ins):  
   
--   **Microsoft Data mining.vst:** esta plantilla contiene formato, diseño y asistentes que le ayudarán a trabajar con las formas de minería de datos prediseñados.  
+-   **Minería de datos de Microsoft. VST** Esta plantilla contiene formato, diseño y asistentes prediseñados para ayudarle a trabajar con las formas de minería de datos.  
   
--   **Microsoft Data Mining Shape Studio.VSS:** este archivo de galería de símbolos contiene formas asociadas a la plantilla.  
+-   **Microsoft Data Mining Shape Studio. VSS** Este archivo de galería de símbolos contiene formas asociadas a la plantilla.  
   
 ## <a name="how-to-use-the-templates"></a>Cómo usar las plantillas  
  Para abrir las plantillas, puede hacer doble clic en el archivo de forma o puede abrir Visio y, a continuación, abrir la plantilla de formas.  
@@ -55,9 +54,9 @@ ms.locfileid: "66086394"
   
 4.  Establezca las opciones que determinan cómo deben mostrarse los datos y el formato que deben tener.  
   
-5.  Después de haber completado la **Data Mining Shape Wizard**, tiene un diagrama que puede modificar y mejorar el uso de las características de Visio.  
+5.  Después de haber completado el **Asistente para crear formas de minería de datos**, tiene un diagrama que puede modificar y mejorar mediante las características de Visio.  
   
- Para obtener más información sobre cómo trabajar con y mejorar los diagramas de modelo de Visio, consulte [ver datos de modelos de minería en Visio &#40;complementos de minería de datos&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ Para obtener más información sobre cómo trabajar con diagramas de modelos de Visio y cómo mejorarlos, vea [ver modelos de minería de datos en visio &#40;complementos de minería de datos&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -65,10 +64,10 @@ ms.locfileid: "66086394"
   
      El asistente le pedirá que seleccione un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y que especifique la base de datos que contiene el modelo de minería de datos.  
   
-     Para obtener información sobre cómo crear una conexión, consulte [conectarse a los datos de origen &#40;cliente de minería de datos para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+     Para obtener información sobre cómo crear una conexión, vea [conectarse a los datos de origen &#40;cliente de minería de datos para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 -   Si utiliza las Herramientas de análisis de tablas, asegúrese de guardar los modelos en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y no utilice modelos temporales.  
   
--   El modelo se debe haber creado mediante uno de los algoritmos admitidos: agrupación en clústeres, regresión logística, Naïve Bayes, redes neurales o árboles de decisión.  
+-   El modelo se debe haber creado con uno de los algoritmos admitidos: agrupación en clústeres, árboles de decisión, redes neuronal, Bayes Naive o regresión logística.  
   
   

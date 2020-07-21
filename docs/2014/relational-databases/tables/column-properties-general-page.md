@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29a82df217eef719b4f0efffb3fc0c24b36a27aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047278"
 ---
 # <a name="column-properties-general-page"></a>Propiedades de columna (página General)
   Utilice esta página para ver propiedades de la columna seleccionada.  
@@ -25,7 +24,7 @@ ms.locfileid: "62854907"
  La información de esta página es de solo lectura. Para modificar la columna, cierre el cuadro de diálogo **Propiedades de columna** , expanda la tabla y las columnas en el Explorador de objetos, haga clic con el botón derecho en la columna y, después, haga clic en **Diseño**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Nombre de la columna.  
   
  **Tipo de datos**  
@@ -53,7 +52,7 @@ ms.locfileid: "62854907"
  Indica el valor de fila inicial de una columna de identidad.  
   
  **Incremento de identidad**  
- La propiedad **Incremento de identidad** especifica el valor que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrega al valor superior de identidad de fila existente cuando genera un valor de identidad para una fila que se inserta.  
+ La propiedad **Incremento de identidad** especifica el valor que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrega al valor superior de identidad de fila existente cuando genera un valor de identidad para una fila que se va a insertar.  
   
  **Enlace predeterminado**  
  El valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enlazado a la columna. Esta opción está en blanco si no existe ningún valor predeterminado enlazado.  

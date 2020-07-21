@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_renamedb
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eebf9be216d61163c018e0d43075e636cb383d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006925"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891478"
 ---
-# <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia el nombre de una base de datos.  
   
@@ -42,15 +42,15 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'old_name'` Es el nombre de la base de datos actual. *old_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @dbname = ] 'old_name'`Es el nombre actual de la base de datos. *old_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @newname = ] 'new_name'` Es el nuevo nombre de la base de datos. *new_name* debe seguir las reglas para identificadores. *new_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @newname = ] 'new_name'`Es el nuevo nombre de la base de datos. *new_name* debe seguir las reglas de los identificadores. *new_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** o **dbcreator** roles fijos de servidor.  
+ Requiere la pertenencia a los roles fijos de servidor **sysadmin** o **dbcreator** .  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo crea la base de datos `Accounting` y, a continuación, cambia el nombre de la base de datos a `Financial`. La vista de catálogo `sys.databases` se consulta entonces para comprobar el nuevo nombre de la base de datos.  
@@ -68,11 +68,11 @@ WHERE name = N'Financial';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_changedbowner &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [sp_helpdb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

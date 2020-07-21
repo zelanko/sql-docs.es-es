@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de partición (Analysis Services - datos multidimensionales) de mezcla | Microsoft Docs
+title: Cuadro de diálogo partición de mezcla (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07fb8bf093d4a6e0dfa7f73e771bd667a6383a79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077827"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545497"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Partición de mezcla (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Partición de mezcla** de **SQL Server Management Studio** para mezclar las particiones de un grupo de medida en un cubo. Para mostrar el cuadro de diálogo **Partición de mezcla** , haga clic con el botón derecho en la carpeta Particiones o en una partición del **Explorador de objetos** y seleccione **Partición de mezcla** en el menú contextual.  
@@ -26,7 +25,7 @@ ms.locfileid: "66077827"
  **Server**  
  Seleccione el nombre de la instancia de Analysis Services que contiene la partición de destino.  
   
- **Name**  
+ **Nombre**  
  Seleccione el nombre de la partición existente que se utilizará como partición de destino.  
   
  **Carpeta**  
@@ -40,14 +39,14 @@ ms.locfileid: "66077827"
   
  La cuadrícula contiene las columnas siguientes:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
-|**Mezcla**|Seleccione esta columna para mezclar la partición de origen con la de destino.|  
-|**Nombre de partición**|Muestra el nombre de la partición de origen.|  
+|**Combinar**|Seleccione esta columna para mezclar la partición de origen con la de destino.|  
+|**Nombre de la partición**|Muestra el nombre de la partición de origen.|  
 |**Procesado por última vez**|Muestra la fecha y la hora en que la partición de origen se procesó por última vez.|  
   
-## <a name="see-also"></a>Vea también  
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Mezclar particiones en Analysis Services &#40;SSAS - Multidimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

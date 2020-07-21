@@ -1,5 +1,6 @@
 ---
 title: Dispositivo de copia de seguridad (página Contenido de los medios) | Microsoft Docs
+description: Utilice el cuadro de diálogo Dispositivo de copia de seguridad para ver la información acerca de la copia de seguridad. Esta información describe el dispositivo, el medio, el conjunto de medios y los conjuntos de copias de seguridad.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43bb11503e312ca9a92251c1e77524e68077ccd9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987764"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728524"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de copia de seguridad (página Contenido de los medios)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el cuadro de diálogo **Dispositivo de copia de seguridad** para ver la información acerca de la copia de seguridad. Esta información describe el dispositivo, el medio, el conjunto de medios y los conjuntos de copias de seguridad.  
   
  **Para utilizar SQL Server Management Studio a fin de ver el contenido de un dispositivo de copia de seguridad**  
@@ -32,7 +33,7 @@ ms.locfileid: "67987764"
 ## <a name="options"></a>Opciones  
  Vea la información acerca del medio individual, el conjunto de medios y los conjuntos de copias de seguridad.  
   
- **Multimedia**  
+ **Elementos multimedia**  
  Disco o conjunto de cintas donde se almacena la información de la copia de seguridad.  
   
  **Secuencia del medio**  
@@ -59,7 +60,7 @@ ms.locfileid: "67987764"
 |Encabezado|Valores|  
 |------------|------------|  
 |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-|**Tipo**|Objeto del que se ha realizado una copia de seguridad: Base de datos, Archivo o en *\<blanco>* (para registros de transacciones).|  
+|**Tipo**|Objeto del que se ha realizado una copia de seguridad: base de datos, archivo o *\<blank>* (para registros de transacciones).|  
 |**Componente**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
@@ -69,7 +70,7 @@ ms.locfileid: "67987764"
 |**Nombre de usuario**|Nombre del usuario que realizó la operación de copia de seguridad.|  
 |**Expiración**|Fecha y hora de expiración del conjunto de copias de seguridad.|  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

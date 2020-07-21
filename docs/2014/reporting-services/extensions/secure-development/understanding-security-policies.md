@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990132"
 ---
 # <a name="understanding-security-policies"></a>Descripción de las directivas de seguridad
@@ -75,7 +75,7 @@ ms.locfileid: "62990132"
   
  En algunos casos, puede que necesite realizar una operación que requiera permisos de código concretos en una expresión de informe. Normalmente, esto significa que una expresión de informe tiene que realizar una llamada a un método de biblioteca CLR protegido (como uno que tiene acceso a archivos o al Registro del sistema). La documentación de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] describe los permisos de código que se exigen para realizar esta llamada segura; para ejecutar la llamada, al código de llamada se le deben conceder estos permisos concretos y seguros. Si realiza la llamada desde una expresión de informe o el elemento **Code**, al ensamblado de expresiones se le deben conceder los permisos adecuados. Sin embargo, una vez que concede los permisos al ensamblado de expresiones, a todo el código que se ejecuta en cualquier expresión de cualquier informe se le concede dicho permiso concreto. Es mucho más seguro realizar la llamada desde un ensamblado personalizado y conceder los permisos concretos a dicho ensamblado personalizado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de acceso del código en Reporting Services](code-access-security-in-reporting-services.md)   
  [Desarrollo seguro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   

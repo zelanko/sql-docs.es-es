@@ -10,15 +10,14 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0a688a1c244e54bb66668aaad97ec64ca81036b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62899023"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437332"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  
@@ -43,7 +42,7 @@ ms.locfileid: "62899023"
   
     -   Escriba o cambie directamente la expresión de propiedad en la columna **Expresión** y, a continuación, haga clic en **Aceptar**.  
   
-         -o bien-  
+         O bien  
   
     -   Haga clic en los puntos suspensivos (…) en la fila de expresión de la propiedad para abrir el **Generador de expresiones**.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62899023"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   

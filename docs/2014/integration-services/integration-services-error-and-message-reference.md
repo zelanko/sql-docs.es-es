@@ -11,18 +11,17 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfe6ed509cfa14ab97379df64f21562cb58d30b9
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62892663"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469310"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
-  En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
+  En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase [Microsoft. SqlServer. DTS. Runtime. HRESULTS](/dotnet/api/microsoft.sqlserver.dts.runtime.hresults) en el <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres.  
   
  Esta lista puede resultarle útil si encuentra un código de error sin su descripción. En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62892663"
   
 -   [Mensajes de error de componentes de flujo de datos (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> mensajes de error  
+##  <a name="error-messages"></a><a name="msgError"></a> mensajes de error  
  Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_E_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -66,7 +65,7 @@ ms.locfileid: "62892663"
 |0xC0010007|-1073676281|DTS_E_PACKAGEDESCRIPTIONTOOLONG|La descripción del paquete es demasiado larga. El límite es de 1024 caracteres. Acorte la descripción del paquete.|  
 |0xC0010008|-1073676280|DTS_E_VERCOMMENTSTOOLONG|La propiedad VersionComments es demasiado larga. El límite es de 1024 caracteres. Intente acortar VersionComments.|  
 |0xC0010009|-1073676279|DTS_E_ELEMENTNOTFOUND|No se encuentra el elemento en una colección. Este error se produce si, durante la ejecución del paquete, se intenta recuperar un elemento de una colección de un contenedor y no se encuentra.|  
-|0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|No se pudo cargar el paquete especificado de la base de datos de SQL Server.|  
+|0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|No se pudo cargar el paquete especificado de la base de datos de SQL Server. |  
 |0xC001000C|-1073676276|DTS_E_INVALIDVARIABLEVALUE|El valor asignado a la variable no es válido. Este error se produce si el cliente o una tarea asignan un objeto en tiempo de ejecución a un valor de la variable.|  
 |0xC001000D|-1073676275|DTS_E_RESERVEDNAMESPACE|Error al asignar un espacio de nombres a la variable. El espacio de nombres "System" está reservado para uso del sistema. Este error se produce si un componente o tarea intenta crear una variable con un espacio de nombres "System".|  
 |0xC001000E|-1073676274|DTS_E_CONNECTIONNOTFOUND|No se encuentra la conexión "%1". La colección Connections envía este error cuando no se encuentra el elemento de conexión específico.|  
@@ -136,8 +135,8 @@ ms.locfileid: "62892663"
 |0xC001400E|-1073659890|DTS_E_NOSQLPROFILERDLL|El proveedor de registro de SQL Server Profiler no pudo cargar el archivo pfclnt.dll. Compruebe que SQL Server Profiler está instalado.|  
 |0xC001400F|-1073659889|DTS_E_LOGFAILED|Error en la infraestructura de registro de SSIS. Código de error: 0x%1!8.8X!. Este error indica que el error de registro no es atribuible a un proveedor de registro concreto.|  
 |0xC0014010|-1073659888|DTS_E_LOGPROVIDERFAILED|Error del proveedor de registro de SSIS. Código de error: 0x%2!8.8X! (%3).  Este código indica que el error de registro se atribuye al proveedor de registro especificado.|  
-|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|El método SaveToSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida.|  
-|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|El método LoadFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida.|  
+|0xC0014011|-1073659887|DTS_E_SAVETOSQLSERVER_OLEDB|El método SaveToSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida. |  
+|0xC0014012|-1073659886|DTS_E_LOADFROMSQLSERVER_OLEDB|El método LoadFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2).  Error en la instrucción SQL emitida. |  
 |0xC0014013|-1073659885|DTS_E_REMOVEFROMSQLSERVER_OLEDB|El método RemoveFromSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2) Error en la instrucción SQL emitida.|  
 |0xC0014014|-1073659884|DTS_E_EXISTSONSQLSERVER_OLEDB|El método ExistsOnSQLServer encontró el código de error de OLE DB 0x%1!8.8X! (%2). Error en la instrucción SQL emitida.|  
 |0xC0014015|-1073659883|DTS_E_CONNECTIONSTRING|OLE DB no pudo establecer una conexión de base de datos con la cadena de conexión proporcionada.|  
@@ -164,7 +163,7 @@ ms.locfileid: "62892663"
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|No se puede tener acceso a los datos de la matriz (error: %1). Este error puede producirse dondequiera que se llame a GetDataFromSafeArray.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|No se pudo crear el objeto de asistente administrado por SSIS. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en CoCreateInstance CLSID_DTSManagedHelper.|  
 |0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|El objeto de tiempo de ejecución de SSIS no pudo dar de alta la conexión OLE DB en una transacción distribuida. Error: 0x%1!8.8X! "%2".|  
-|0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument.|  
+|0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|Error de firma del paquete: 0x%1!8.8X! "%2". Esto sucede si hay un error en el método ManagedHelper.SignDocument. |  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|Error al comprobar la envolvente de la firma XML en el paquete. Error: 0x%1!8.8X! "%2". Esto sucede en CPackage::LoadFromXML.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|No se pudo obtener el origen XML del objeto DOM XML. Error: 0x%1!8.8X! "%2". Esto ocurre cuando se produce un error en IXMLDOMDocument::get_xml.|  
 |0xC0014030|-1073659856|DTS_E_PACKAGEVERIFICATIONFAILED|No se pudo comprobar la firma criptográfica del paquete. Error: 0x%1!8.8X! "%2". Esto sucede si hay un error en la operación de comprobación de firma.|  
@@ -193,7 +192,7 @@ ms.locfileid: "62892663"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|La ruta de acceso del paquete especificada no contiene un nombre de paquete. Esto sucede si la ruta no contiene al menos una barra diagonal inversa o una barra diagonal.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|No se encuentra la carpeta "%1".|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|Error de OLE DB al intentar buscar una carpeta en SQL. Código de error: 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro. Código de error: 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|El proveedor de registro de SSIS no pudo abrir el registro.  Código de error: 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Error al obtener la colección ConnectionInfos: 0x%1!8.8X! "%2". Este error se produce cuando no se puede llamar a IDTSApplication100::get_ConnectionInfos.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Se detectó un interbloqueo al intentar bloquear las variables. Los bloqueos no pueden adquirirse después de 16 intentos. Se agotó el tiempo de espera de los bloqueos.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|No se ha devuelto la colección Variables de VariableDispenser. Se intentó realizar una operación que solo se permite en colecciones dispensadas.|  
@@ -1094,7 +1093,7 @@ ms.locfileid: "62892663"
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|La función SQRT no puede ejecutarse con valores negativos y se ha pasado un valor negativo a la función SQRT.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|La función LN no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LN.|  
 |0xC00470E1|-1073450783|DTS_E_EXPREVALLOGINVALIDPARAM|La función LOG no puede ejecutarse con valores negativos o cero, y se ha pasado un cero o un valor negativo a la función LOG.|  
-|0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Los parámetros pasados a la función POWER no pueden evaluarse y han producido un resultado indeterminado.|  
+|0xC00470E2|-1073450782|DTS_E_EXPREVALPOWERINVALIDPARAM|Los parámetros pasados a la función POWER no pueden evaluarse y han producido un resultado indeterminado. |  
 |0xC00470E3|-1073450781|DTS_E_NOCANCELEVENT|El objeto de tiempo de ejecución no puede proporcionar un evento de cancelación a causa del error 0x%1!8.8X!.|  
 |0xC00470E4|-1073450780|DTS_E_CANCELRECEIVED|La canalización recibió una solicitud de cancelación y se está cerrando.|  
 |0xC00470E5|-1073450779|DTS_E_EXPREVALUNARYOPOVERFLOW|El resultado de la operación de negación unaria "%1" supera el tamaño máximo del tipo de datos de resultados "%2". El tamaño del resultado de la operación desborda el tipo de resultado.|  
@@ -1236,7 +1235,7 @@ ms.locfileid: "62892663"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|El usuario solicitó la cancelación de la transformación de búsquedas.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|El procesamiento de los datos de caracteres u objetos binarios grandes (LOB) se ha detenido porque se ha alcanzado el límite de 4 GB.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|No se pudo cargar el componente de canalización administrado "%1".  Excepción: %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de error de SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: el Administrador de conexiones de Excel no se admite en la versión de 64 bits de SSIS, dado que no hay ningún proveedor OLE DB disponible.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de error SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: El Administrador de conexiones con Excel no es compatible con la versión de 64 bits de SSIS debido a que no hay ningún proveedor OLE DB disponible.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|El archivo caché está dañado o no se creó mediante el administrador de conexiones de caché.  Proporcione un archivo caché válido.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|El comando SQL no se ha establecido correctamente. Compruebe la propiedad SQLCommand.|  
 |0xC0202002|-1071636478|DTS_E_COMERROR|Información del objeto de error COM disponible.  Origen: código de error "%1": 0x%2!8.8X!  Descripción: "%3".|  
@@ -1413,7 +1412,7 @@ ms.locfileid: "62892663"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|El número de filas %2!ld! no es válido para la propiedad "%1". Debe ser mayor que 0.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|Se pidió al adaptador que escribiera una cadena de %1!I64d! bytes de longitud, pero todos los datos deben tener menos de 4294967295 bytes de longitud.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|No se asignó ninguna entrada a una salida. "%1" debe tener al menos una columna de entrada asignada a una columna de salida.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversión de "%1" con página de códigos %2!d! en "%3" con página de códigos %4!d! no se admite.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversión de "%1" con página de códigos %2!d! en "%3" con página de códigos %4!d! no está permitida.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|La asignación de columna de metadatos externos a %1 no es válida.  El Id. de columna de metadatos externos no puede ser cero.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|Se ha asignado %1 a una columna de metadatos externa que no existe.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Error al escribir datos de objeto long de tipo DT_TEXT, DT_NTEXT o DT_IMAGE en el búfer de la tarea Flujo de datos para la columna "%1".|  
@@ -2017,7 +2016,7 @@ ms.locfileid: "62892663"
 |||DTS_E_GETCATMANAGERFAILED|Error al crear el administrador de categorías del componente COM debido al error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Componente %1!s! no se pudo inicializar debido al error 0x%2!8.8X! "%3!s!".|  
   
-##  <a name="msgWarning"></a> Mensajes de advertencia  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> Mensajes de advertencia  
  Los nombres simbólicos de los mensajes de advertencia de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_W_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2163,7 +2162,7 @@ ms.locfileid: "62892663"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|No se ha asignado ninguna columna de entrada a %1.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La tabla "%1" ha cambiado. Es posible que se hayan agregado nuevas columnas a la tabla.|  
   
-##  <a name="msgInfo"></a> Mensajes informativos  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> Mensajes informativos  
  Los nombres simbólicos de los mensajes de informativos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_I_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2262,7 +2261,7 @@ ms.locfileid: "62892663"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 ha escrito la caché en el archivo "%2".|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propiedad de tamaño máximo de confirmación de inserción del destino de OLE DB "%1" está establecida en 0. Este valor de la propiedad puede hacer que el paquete en ejecución deje de responder. Para obtener más información, vea el tema de Ayuda F1 del Editor de destino de OLE DB (página Administrador de conexiones).|  
   
-##  <a name="msgGeneral"></a> Mensajes generales y de eventos  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> Mensajes generales y de eventos  
  Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_MSG_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2301,7 +2300,7 @@ ms.locfileid: "62892663"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
   
-##  <a name="msgSuccess"></a> Mensajes de aprobación  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Mensajes de aprobación  
  Los nombres simbólicos de los mensajes de aprobación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_S_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2310,7 +2309,7 @@ ms.locfileid: "62892663"
 |0x40005|262149|DTS_S_TRUNCATED|El valor de cadena se ha truncado. El búfer recibió una cadena demasiado larga para la columna y truncó la cadena.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Se produjo un truncamiento al evaluar la expresión. El truncamiento se produjo durante la evaluación, que puede incluir cualquier punto de un paso intermedio.|  
   
-##  <a name="msgPipeline"></a> Mensajes de error de componentes de flujo de datos  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> Mensajes de error de componentes de flujo de datos  
  Los nombres simbólicos de mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTSBC_E_`, donde "BC" hace referencia a la clase base nativa de la que se derivan la mayoría de los componentes de flujo de datos de Microsoft.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  

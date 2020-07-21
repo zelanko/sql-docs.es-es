@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108167"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Nuevo informe vinculado (página del Administrador de informes)
@@ -44,8 +44,8 @@ ms.locfileid: "66108167"
 4.  En la barra de herramientas del elemento, haga clic en **Crear informe vinculado**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
- Especifique el nombre del informe vinculado. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. Sin embargo, no deben utilizarse los caracteres ; ? : \@ & = +, $ / * \< > | "o / al especificar un nombre.  
+ **Nombre**  
+ Especifique el nombre del informe vinculado. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. Sin embargo, no deben utilizarse los caracteres ; ? : \@ & = +, $/* \< > | "o/al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del contenido del informe. Esta descripción se mostrará en la página Contenido a los usuarios que tengan permisos de acceso al informe.  
@@ -56,7 +56,7 @@ ms.locfileid: "66108167"
  **Aceptar**  
  Haga clic en **Aceptar** para guardar los cambios y volver a la página de propiedades General del informe base.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un informe vinculado](reports/create-a-linked-report.md)   
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

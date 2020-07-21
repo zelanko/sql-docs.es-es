@@ -1,6 +1,6 @@
 ---
-title: Ejecutar consultas SQL (clases administradas de SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Ejecutar consultas SQL (SQLXML)
+description: Obtenga información sobre cómo ejecutar consultas SQL mediante clases administradas de SQLXML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: a561ae83-a8b6-4b9b-a819-9b86839546b4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ef6d18b4d302cd551db8e7e3e5ab7e96f077a20
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: dcb35f21b2208d2d5f924102a48ba1364eb9c154
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649552"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ejecutar consultas SQL (clases administradas de SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   En este ejemplo se muestra:  
   
 -   Crear parámetros (objetos SqlXmlParameter).  

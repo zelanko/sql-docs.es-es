@@ -1,5 +1,5 @@
 ---
-title: 'Conexión (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
+title: 'Connection (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Connection collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 350d8dc7a52aa5b906f57799d51297073cb588e6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933515"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760271"
 ---
-# <a name="connection-visual-c-syntax-index-with-import"></a>Conexión (Visual C++ índice de sintaxis con #import)
+# <a name="connection-visual-c-syntax-index-with-import"></a>Connection (índice de sintaxis de Visual C++ con #import)
 ## <a name="methods"></a>Métodos  
   
 ```  
@@ -87,5 +87,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

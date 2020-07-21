@@ -1,5 +1,5 @@
 ---
-title: Cambiar un nombre de entidad (Master Data Services) | Microsoft Docs
+title: Cambiar el nombre de una entidad (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 801d5b38b765a559ac2c6ca3cdb617b3779a9baa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961785"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>Cambiar el nombre de una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de una entidad.  
@@ -30,7 +29,7 @@ ms.locfileid: "65483885"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-an-entity-name"></a>Para cambiar el nombre de una entidad  
   
@@ -44,12 +43,12 @@ ms.locfileid: "65483885"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **nombre de entidad** , escriba el nombre actualizado de la entidad.  
+6.  En el cuadro **nombre de entidad** , escriba el nombre actualizado de la entidad.  
   
 7.  Haga clic en **Guardar entidad**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una entidad &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree una entidad &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)   
  [Eliminar una entidad &#40;Master Data Services&#41;](delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](entities-master-data-services.md)  
   

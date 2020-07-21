@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica (Master Data Services) | Microsoft Docs
+title: Referencia técnica
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f6eeba7adb9d1716120f046a3b937e0e9a0e21a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc96e3289c7e1c0013e08531b77994a76650907
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812710"
 ---
 # <a name="technical-reference-master-data-services"></a>Referencia técnica (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Buscar información de referencia técnica sobre componentes de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
  
 -   [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)  
   
--   [Aplicación web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
+-   [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

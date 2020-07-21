@@ -14,10 +14,10 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5e1c394cd8b58fccdae23e83b163164776de3948
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288700"
 ---
 # <a name="operator-precedence-and-associativity"></a>Precedencia y capacidad de asociación de operadores
@@ -31,12 +31,12 @@ ms.locfileid: "71288700"
   
 |Símbolo del operador|Tipo de operación|Capacidad de asociación|  
 |---------------------|-----------------------|-------------------|  
-|( )|Expresión|De izquierda a derecha|  
+|( )|Expression|De izquierda a derecha|  
 |-, !, ~|Unario|De derecha a izquierda|  
 |conversiones de tipos|Unario|De derecha a izquierda|  
 |*, / ,%|Multiplicativa|De izquierda a derecha|  
 |+, -|Aditiva|De izquierda a derecha|  
-|\<, >, \<=, >=|Relacionales|De izquierda a derecha|  
+|\<, >, \<=, >=|Relacional|De izquierda a derecha|  
 |==, !=|Igualdad|De izquierda a derecha|  
 |&|AND bit a bit|De izquierda a derecha|  
 |^|OR exclusivo bit a bit|De izquierda a derecha|  

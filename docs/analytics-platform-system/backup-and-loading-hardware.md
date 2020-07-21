@@ -1,6 +1,6 @@
 ---
-title: Copia de seguridad y la carga de hardware - almacenamiento de datos paralelos
-description: Para implementar los datos de extremo a otro con el almacenamiento de datos paralelos (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, deberá crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos. Use esta guía para adquirir y configurar los servidores de carga y copia de seguridad que satisfacen sus requisitos empresariales.
+title: Copia de seguridad & carga de hardware
+description: Para implementar una solución de almacenamiento de datos de un extremo a otro en Analytics Platform System (APS) con almacenamiento de datos paralelos (PDW), debe crear un plan para realizar una copia de seguridad del almacenamiento de datos y cargar los datos. Use esta guía para adquirir y configurar servidores de copia de seguridad y carga que cumplan los requisitos empresariales.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,27 +8,28 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 90f142a8bb86f99ed5cf5d9ff926bdf849060324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4dd4fba91b1507f711a66a88f40b2fa2ea35e1ae
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961414"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401360"
 ---
-# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Copia de seguridad y la carga de información general de hardware: almacenamiento de datos paralelos
-Para implementar los datos de extremo a otro con el almacenamiento de datos paralelos (PDW) de la solución en Analytics Platform System (APS) de almacenamiento, deberá crear un plan de copia de seguridad del almacenamiento de datos y cargar los datos. Use esta guía para adquirir y configurar los servidores de carga y copia de seguridad que satisfacen sus requisitos empresariales.  
+# <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Información general del hardware de copia de seguridad y carga: almacenamiento de datos paralelos
+Para implementar una solución de almacenamiento de datos de un extremo a otro en Analytics Platform System (APS) con almacenamiento de datos paralelos (PDW), debe crear un plan para realizar una copia de seguridad del almacenamiento de datos y cargar los datos. Use esta guía para adquirir y configurar servidores de copia de seguridad y carga que cumplan los requisitos empresariales.  
   
 ## <a name="acquire-and-configure-backup-servers"></a>Adquirir y configurar servidores de copia de seguridad  
-![Proceso de copia de seguridad](media/backup-process.png "proceso de copia de seguridad")  
+![Proceso de copia de seguridad](media/backup-process.png "Proceso de copia de seguridad")  
   
-Para una base de datos PDW de copia de seguridad, necesita uno o más servidores de copia de seguridad. Puede usar su propio hardware existente o adquirir nuevo hardware. Para obtener más información, consulte [adquirir y configurar un servidor de copia de seguridad](acquire-and-configure-backup-server.md). Estas instrucciones incluyen un [hoja de planificación de capacidad de servidor de copia de seguridad](backup-capacity-planning-worksheet.md) le ayudará a planear la solución adecuada para la copia de seguridad.  
+Para realizar una copia de seguridad de una base de datos de PDW, se necesitan uno o varios servidores de copia de seguridad. Puede usar su propio hardware existente o adquirir hardware nuevo. Para obtener más información, vea [adquirir y configurar un servidor de copia de seguridad](acquire-and-configure-backup-server.md). Estas instrucciones incluyen una [hoja de cálculo de planeamiento](backup-capacity-planning-worksheet.md) de la capacidad del servidor de copia de seguridad para ayudarle a planear la solución adecuada para la copia de seguridad.  
   
 ## <a name="acquire-and-configure-loading-servers"></a>Adquirir y configurar servidores de carga  
-![Proceso de carga](media/loading-process.png "proceso de carga")  
+![Proceso de carga](media/loading-process.png "Cargando proceso")  
   
-Para cargar datos, necesita uno o más servidores de carga. Puede usar su propio ETL existente u otros servidores, o puede comprar nuevos servidores. Para obtener más información, consulte [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md). Estas instrucciones incluyen un [al cargar la hoja de cálculo de planeación de capacidad servidor](loading-server-capacity-planning-worksheet.md) le ayudará a planear la solución adecuada para la carga.  
+Para cargar datos, necesita uno o más servidores de carga. Puede usar su propio ETL existente u otros servidores, o puede adquirir nuevos servidores. Para obtener más información, vea [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md). Estas instrucciones incluyen una [hoja de cálculo de planeamiento](loading-server-capacity-planning-worksheet.md) de la capacidad del servidor de carga para ayudarle a planear la solución adecuada para la carga.  
   
-## <a name="see-also"></a>Vea también  
-[Información general de copia de seguridad y restauración](backup-and-restore-overview.md)  
-[Información general de carga](load-overview.md)  
+## <a name="see-also"></a>Consulte también  
+[información general sobre la copia de seguridad y la restauración](backup-and-restore-overview.md)  
+[Información general sobre la carga](load-overview.md)  
   

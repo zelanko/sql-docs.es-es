@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f48d933dec2dc87d0171641146f652a4e881045e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735676"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS (cláusula de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede definir el contexto de ejecución de los siguientes módulos definidos por el usuario: funciones (excepto funciones con valores de tabla insertadas), procedimientos, colas y desencadenadores.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "70155057"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -58,7 +58,7 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
+```syntaxsql
   
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
@@ -105,12 +105,12 @@ DDL Triggers with Database Scope
   
  *login_name* no puede ser un grupo, rol, certificado, clave o cuenta integrada, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Como [!INCLUDE[ssDE](../../includes/ssde-md.md)] evalúa los permisos en los objetos a los que el módulo hace referencia, depende de la cadena de propiedad que existe entre los objetos que llaman y los objetos a los que se hace referencia. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la cadena de propiedad era el único método disponible para evitar tener que conceder al usuario que llama acceso a todos los objetos a los que se hace referencia.  
   
  La cadena de propiedad tiene las siguientes limitaciones:  
   
--   Se aplica solamente a instrucciones DML: SELECT, INSERT, UPDATE y DELETE.  
+-   Solo se aplica a instrucciones DML: SELECT, INSERT, UPDATE y DELETE.  
   
 -   Los propietarios de los objetos que llaman y llamados deben ser los mismos.  
   
@@ -184,7 +184,7 @@ GO
   
  Para ver la definición del módulo con el contexto de ejecución especificado, use la vista de catálogo [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
-## <a name="best-practice"></a>Práctica recomendada  
+## <a name="best-practice"></a>Procedimiento recomendado  
  Especifique un inicio de sesión o usuario que tenga al menos los privilegios requeridos para realizar las operaciones definidas en el módulo. Por ejemplo, no especifique una cuenta de propietario de base de datos a menos que tenga los permisos requeridos.  
   
 ## <a name="permissions"></a>Permisos  

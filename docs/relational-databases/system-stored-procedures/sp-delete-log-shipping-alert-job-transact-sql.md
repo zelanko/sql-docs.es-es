@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6fe49ce56f5df6dffd8616b1ddc6015ed25fb1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085321"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85863642"
 ---
-# <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un trabajo de alerta del servidor de supervisión de trasvase de registros si el trabajo existe y no hay más bases de datos principales o secundarias que supervisar.  
   
@@ -49,10 +49,10 @@ sp_delete_log_shipping_alert_job
  Ninguno.  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_delete_log_shipping_alert_job** se debe ejecutar desde la **maestro** base de datos del servidor de supervisión.  
+ **sp_delete_log_shipping_alert_job** se debe ejecutar desde la base de datos **maestra** del servidor de supervisión.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se muestra la ejecución de **sp_delete_log_shipping_alert_job** para eliminar un trabajo de alerta.  
@@ -63,7 +63,7 @@ GO
 EXEC sp_delete_log_shipping_alert_job;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

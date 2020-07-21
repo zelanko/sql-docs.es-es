@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0ff06e9001c943c294b9c7ba8f93d9cad21e9c3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054515"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439842"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor de la tarea Servicio web (página Entrada)
   Use la página **Entrada** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar el servicio web, el método web y los valores que se deben proporcionar como entrada para el método web. Los valores se pueden proporcionar mediante la especificación directa de cadenas o la selección de variables en la columna Valor.  
@@ -27,7 +26,7 @@ ms.locfileid: "66054515"
  Para obtener información sobre esta tarea, vea [Tarea Servicio web](control-flow/web-service-task.md).  
   
 ## <a name="options"></a>Opciones  
- **ssNoVersion**  
+ **Servicio**  
  Seleccione en la lista un servicio web para ejecutar el método web.  
   
  **Método**  
@@ -36,7 +35,7 @@ ms.locfileid: "66054515"
  **Documentación del método web**  
  Escriba una descripción del método web, o bien haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web**.  
   
- **Name**  
+ **Nombre**  
  Muestra los nombres de las entradas del método web.  
   
  **Tipo**  
@@ -51,10 +50,10 @@ ms.locfileid: "66054515"
  **Valor**  
  Si las casillas de Variable están activadas, seleccione las variables de la lista para proporcionar entradas; en caso contrario, escriba los valores que se usarán en las entradas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Servicio web &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea Servicio web &#40;página Salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
+ [Editor de la tarea servicio Web &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea servicio Web &#40;página salida&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Página Expresiones](expressions/expressions-page.md)  
   
   

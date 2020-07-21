@@ -1,5 +1,6 @@
 ---
 title: Administración de FileTables | Microsoft Docs
+description: Explore las tareas administrativas comunes que se pueden usar para administrar FileTables y obtenga información sobre la seguridad, la copia de seguridad y la auditoría de FileTable.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3ebab9c25ea864c20c6fbf0d4c601f9f01cd7e20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631271"
 ---
 # <a name="manage-filetables"></a>Administrar FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe las tareas administrativas comunes para administrar FileTables.  
   
-##  <a name="HowToEnumerate"></a> Procedimientos para: obtener una lista de FileTables y de objetos relacionados  
+##  <a name="how-to-get-a-list-of-filetables-and-related-objects"></a><a name="HowToEnumerate"></a> Procedimientos para: obtener una lista de FileTables y de objetos relacionados  
  Para obtener una lista de FileTables, consulte una de las siguientes vistas de catálogo:  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -47,7 +48,7 @@ FROM sys.filetable_system_defined_objects;
 GO  
 ```  
   
-##  <a name="BasicsDisabling"></a> Deshabilitar o volver a habilitar el acceso no transaccional en el nivel de base de datos.  
+##  <a name="disabling-and-re-enabling-non-transactional-access-at-the-database-level"></a><a name="BasicsDisabling"></a> Deshabilitar o volver a habilitar el acceso no transaccional en el nivel de base de datos.  
  Con el fin de adquirir el acceso exclusivo necesario para ciertas tareas administrativas, quizá deba deshabilitar el acceso no transaccional temporalmente.  
   
  **Comportamiento de la instrucción ALTER DATABASE cuando se cambia el nivel del acceso no transaccional**  
@@ -62,7 +63,7 @@ GO
   
      Si se cancela el comando ALTER DATABASE o finaliza con un tiempo de espera, no se cambia el nivel de acceso transaccional.  
   
--   Si llama a la instrucción ALTER DATABASE con una cláusula WITH \<terminación> (ROLLBACK AFTER entero [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos los identificadores de archivo no transaccionales abiertos se eliminan.  
+-   Si llama a la instrucción ALTER DATABASE con una cláusula WITH \<termination> (ROLLBACK AFTER entero [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT), todos los identificadores de archivo no transaccionales abiertos se eliminan.  
   
 > [!WARNING]  
 >  Eliminar los identificadores de archivos abiertos puede hacer que los usuarios pierdan los datos no guardados. Este comportamiento es coherente con el comportamiento del propio sistema de archivos.  
@@ -79,7 +80,7 @@ GO
   
 -   Ninguno de los directorios de nivel de base de datos de la instancia se ve si se deshabilita FILESTREAM en el nivel de instancia.  
   
-###  <a name="HowToDisable"></a> Procedimientos para: deshabilitar o volver a habilitar el acceso no transaccional en el nivel de base de datos  
+###  <a name="how-to-disable-and-re-enable-non-transactional-access-at-the-database-level"></a><a name="HowToDisable"></a> Procedimientos para: deshabilitar o volver a habilitar el acceso no transaccional en el nivel de base de datos  
  Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Para deshabilitar el acceso no transaccional total**  
@@ -106,7 +107,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> Procedimientos para: asegurar la visibilidad de FileTables en una base de datos  
+###  <a name="how-to-ensure-the-visibility-of-the-filetables-in-a-database"></a><a name="visible"></a> Procedimientos para: asegurar la visibilidad de FileTables en una base de datos  
  Un directorio de nivel de base de datos y sus directorios FileTable cuando se cumplen todas las condiciones siguientes:  
   
 1.  FILESTREAM se habilita en el nivel de instancia.  
@@ -115,7 +116,7 @@ GO
   
 3.  Un directorio válido se ha especificado en la base de datos.  
 
-##  <a name="BasicsEnabling"></a> Deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
+##  <a name="disabling-and-re-enabling-the-filetable-namespace-at-the-table-level"></a><a name="BasicsEnabling"></a> Deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
  Si se deshabilita el espacio de nombres de FileTable, se deshabilitan todas las restricciones y los desencadenadores definidos por el sistema que se crearon con FileTable. Esto es útil en los casos en los que FileTable necesite reorganizarse a gran escala mediante operaciones [!INCLUDE[tsql](../../includes/tsql-md.md)] sin tener que aplicar la semántica de FileTable. Aunque estas operaciones pueden dejar FileTable en un estado incoherente, y pueden impedir volver a habilitar el espacio de nombres de FileTable.  
   
  Deshabilitar un espacio de nombres FileTable tiene los siguientes resultados:  
@@ -138,7 +139,7 @@ GO
   
 -   El directorio de FileTable y los archivos y directorios que este contiene se vuelve visible en el sistema de archivos y están disponibles para el acceso E/S del archivo.  
   
-###  <a name="HowToEnableNS"></a> Procedimientos para: deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
+###  <a name="how-to-disable-and-re-enable-the-filetable-namespace-at-the-table-level"></a><a name="HowToEnableNS"></a> Procedimientos para: deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
  Se llama a la instrucción ALTER TABLE con la opción **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para deshabilitar el espacio de nombres de FileTable**  
@@ -155,13 +156,13 @@ ENABLE FILETABLE_NAMESPACE;
 GO  
 ```  
   
-##  <a name="BasicsKilling"></a> Eliminar los identificadores de archivos abiertos asociados con FileTable  
+##  <a name="killing-open-file-handles-associated-with-a-filetable"></a><a name="BasicsKilling"></a> Eliminar los identificadores de archivos abiertos asociados con FileTable  
  Los identificadores abiertos en los archivos almacenados en FileTable pueden impedir el acceso exclusivo necesario para ciertas tareas administrativas. Para habilitar tareas urgentes, quizá deba eliminar los identificadores de archivos abiertos asociados con una o más FileTables.  
   
 > [!WARNING]  
 >  Eliminar los identificadores de archivos abiertos puede hacer que los usuarios pierdan los datos no guardados. Este comportamiento es coherente con el comportamiento del propio sistema de archivos.  
   
-###  <a name="HowToListOpen"></a> Procedimientos para: obtener una lista de los identificadores de archivos abiertos asociados con FileTable  
+###  <a name="how-to-get-a-list-of-open-file-handles-associated-with-a-filetable"></a><a name="HowToListOpen"></a> Procedimientos para: obtener una lista de los identificadores de archivos abiertos asociados con FileTable  
  Consulte la vista de catálogo [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ```sql  
@@ -169,7 +170,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Procedimientos para: eliminar los identificadores de archivos abiertos asociados con FileTable  
+###  <a name="how-to-kill-open-file-handles-associated-with-a-filetable"></a><a name="HowToKill"></a> Procedimientos para: eliminar los identificadores de archivos abiertos asociados con FileTable  
  Llame al procedimiento almacenado [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) con los argumentos apropiados para eliminar todos los identificadores de archivo abiertos de la base de datos o de FileTable, o bien eliminar un identificador específico.  
   
 ```sql  
@@ -188,7 +189,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Procedimientos para: identificar los bloqueos de FileTables  
+###  <a name="how-to-identify-the-locks-held-by-filetables"></a><a name="HowToIdentifyLocks"></a> Procedimientos para: identificar los bloqueos de FileTables  
  La mayoría de los bloqueos de FileTables corresponden a archivos abiertos por aplicaciones.  
   
  **Para identificar los archivos abiertos y los bloqueos asociados**  
@@ -202,7 +203,7 @@ WHERE fcb_id IN
 GO  
 ```  
   
-##  <a name="BasicsSecurity"></a> Seguridad de FileTable  
+##  <a name="filetable-security"></a><a name="BasicsSecurity"></a> Seguridad de FileTable  
  Los archivos y directorios almacenados en FileTables están protegidos solo por la seguridad de SQL Server. La seguridad basada en tabla y columna se aplica para el acceso al sistema de archivos así como para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . No se admiten las API de seguridad del sistema de archivo de Windows ni la configuración de ACL.  
   
  La seguridad y los permisos de acceso que son aplicables a los grupos de archivo y contenedores de FILESTREAM también son aplicables a FileTables, ya que los datos de archivos se almacenan como columna FILESTREAM en FileTable.  
@@ -213,7 +214,7 @@ GO
  **Seguridad de FileTable y acceso al sistema de archivos**  
  Las API del sistema de archivos requieren los permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apropiados para toda la fila de FileTable (es decir, permiso en el nivel de tabla) para abrir un identificador de un archivo o directorio almacenado en FileTable. Si el usuario no tiene el permiso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adecuado en alguna columna de FileTable, se deniega el acceso al sistema de archivos.  
   
-##  <a name="OtherBackup"></a> Copia de seguridad y FileTables  
+##  <a name="backup-and-filetables"></a><a name="OtherBackup"></a> Copia de seguridad y FileTables  
  Cuando se utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para realizar una copia de seguridad en FileTable, se realiza una copia de seguridad de los datos de FILESTREAM con los datos estructurados en la base de datos. Si no desea realizar una copia de seguridad de los datos FILESTREAM con datos relacionales, puede usar una copia de seguridad parcial para excluir los grupos de archivos FILESTREAM.  
   
  **Coherencia transaccional de copias de seguridad de FileTable**  
@@ -222,13 +223,13 @@ GO
   
  No obstante, cuando se habilita el acceso no transaccional total, una FileTable podría contener datos actualizados más recientemente (a través de una actualización no transaccional) que la transacción que la herramienta o el proceso están leyendo desde el registro de transacciones. Es decir, una operación de restauración "a un momento dado" en una transacción específica puede contener datos de FILESTREAM más recientes que los de esa transacción. Este es el comportamiento esperado cuando se permiten actualizaciones no transaccionales en las FileTables.  
   
-##  <a name="Monitor"></a> SQL Server Profiler y FileTables  
+##  <a name="sql-server-profiler-and-filetables"></a><a name="Monitor"></a> SQL Server Profiler y FileTables  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler puede capturar las operaciones de apertura y de cierre del archivo de Windows en el resultado de seguimiento de los archivos almacenados en una FileTable.  
   
-##  <a name="OtherAuditing"></a> Auditoría y FileTables  
+##  <a name="auditing-and-filetables"></a><a name="OtherAuditing"></a> Auditoría y FileTables  
  La FileTable se puede auditar como cualquier otra tabla. Pero los modelos de acceso de Win32 no son operaciones basadas en conjunto. Una sola acción del sistema de archivos se traduce en varias operaciones DML de Transact-SQL. Por ejemplo, la apertura de un archivo en Microsoft Word se traduce en varias operaciones de apertura, cierre, creación, cambio de nombre o eliminación, así como en las actividades DML de Transact-SQL correspondientes. El resultado son registros de auditoría detallados en los que es difícil poner en correlación los registros entre las acciones del sistema de archivos y los registros de auditoría de DML de Transact-SQL correspondientes.  
   
-##  <a name="OtherDBCC"></a> DBCC y FileTables  
+##  <a name="dbcc-and-filetables"></a><a name="OtherDBCC"></a> DBCC y FileTables  
  Puede usar DBCC CHECKCONSTRAINTS para validar las restricciones de una FileTable, incluidas las restricciones definidas por el sistema.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,10 +11,10 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296053"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Lección 2: Adición de bucles con SSIS
@@ -52,7 +52,7 @@ En esta lección, se modifica el paquete ETL de ejemplo de la lección 1 para us
 En esta lección, no modificará el flujo de datos, solamente modificará el de control.  
   
 > [!NOTE]  
-> Si todavía no lo ha hecho, vea los [requisitos previos de la lección 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
+> Si todavía no lo ha hecho, consulte los [requisitos previos de la lección 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites).
 
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  
@@ -61,14 +61,14 @@ Esta lección contiene las siguientes tareas:
   
 -   [Paso 2: Adición y configuración del contenedor de bucles Foreach](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Paso 3: Modificación del Administrador de conexiones de archivos planos](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Paso 3: Modificación del administrador de conexiones de archivos planos](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 -   [Paso 4: Prueba del paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
 [Paso 1: Copia del paquete de la lección 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Contenedor de bucles For](../integration-services/control-flow/for-loop-container.md)  
   
   

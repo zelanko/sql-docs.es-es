@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e67b6e058304cf898d2818ab5a6ea2675e0c9825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071123"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009267"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Agrega una o varias filas a una tabla o una vista en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener ejemplos, vea [Ejemplos](#InsertExamples).  
@@ -49,7 +49,7 @@ Agrega una o varias filas a una tabla o una vista en [!INCLUDE[ssNoVersion](../.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -143,14 +143,14 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  Es una palabra clave opcional que se puede utilizar entre INSERT y la tabla de destino.  
   
  *server_name*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Es el nombre del servidor vinculado en el que se encuentra la tabla o la vista. *server_name* se puede especificar como un nombre de [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o usando la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
  Cuando *server_name* se especifica como un servidor vinculado, se requiere *database_name* y *schema_name*. Cuando *server_name* se especifica con OPENDATASOURCE, es posible que *database_name* y *schema_name* no se apliquen a todos los orígenes de datos y dependan de las capacidades del proveedor OLE DB que accede al objeto remoto.  
   
  *database_name*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Es el nombre de la base de datos.  
   
@@ -165,7 +165,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  La vista a la que hace referencia *table_or_view_name* debe poderse actualizar y debe hacer referencia exactamente a una tabla base de la cláusula FROM de la vista. Por ejemplo, la instrucción INSERT de una vista de varias tablas debe usar una *column_list* que solamente haga referencia a columnas de una tabla base. Para más información sobre las vistas actualizables, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica la función [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) u [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). El uso de estas funciones está sujeto a las capacidades del proveedor OLE DB que tiene acceso al objeto remoto.  
   
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Cláusula OUTPUT  
  Devuelve las filas insertadas como parte de la operación de inserción. Los resultados se pueden devolver a la aplicación de procesamiento o insertarse en una tabla o variable de tabla para su nuevo procesamiento.  
   
- La [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) no se admite en las instrucciones DML que hacen referencia a vistas locales con particiones, vistas distribuidas con particiones, tablas remotas o instrucciones INSERT que contengan una *execute_statement*. La cláusula OUTPUT INTO no se admite en instrucciones INSERT que contengan una cláusula \<dml_table_source>. 
+ La cláusula OUTPUT no se admite en las instrucciones DML que hacen referencia a vistas locales con particiones, vistas distribuidas con particiones, tablas remotas o instrucciones INSERT que contengan una función *execute_statement*. La cláusula OUTPUT INTO no se admite en instrucciones INSERT que contengan una cláusula \<dml_table_source>. Para más información sobre los argumentos y el comportamiento de esta cláusula, vea [Cláusula OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Presenta la lista o listas de valores de datos que se van a insertar. Debe haber un valor de datos por cada columna en *column_list*, si se especifica, o en la tabla. La lista de valores debe ir entre paréntesis.  
@@ -233,7 +233,7 @@ Cláusula OUTPUT
  No puede especificar un parámetro con valores de tabla como el destino de una instrucción INSERT EXEC; sin embargo, se puede especificar como un origen en la cadena o procedimiento almacenado INSERT EXEC. Para obtener más información, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  \<dml_table_source>  
- Especifica que las filas insertadas en la tabla de destino son las que ha devuelto la cláusula OUTPUT de una instrucción INSERT, UPDATE, DELETE o MERGE, filtradas opcionalmente por una cláusula WHERE. Si se especifica \<dml_table_source>, el destino de la instrucción INSERT externa debe cumplir las siguientes restricciones: 
+ Especifica que las filas insertadas en la tabla de destino son las que ha devuelto la cláusula OUTPUT de una instrucción INSERT, UPDATE, DELETE o MERGE, filtradas opcionalmente por una cláusula WHERE. Si se especifica \<dml_table_source>, el destino de la instrucción INSERT externa debe cumplir las restricciones siguientes: 
   
 -   Debe ser una tabla base, no una vista.  
   
@@ -251,36 +251,36 @@ Cláusula OUTPUT
  Es una lista separada por comas que especifica las columnas devueltas por la cláusula OUTPUT que se tienen que insertar. Las columnas de \<select_list> deben ser compatibles con las columnas en las que se insertan los valores. \<select_list> no puede hacer referencia a funciones de agregado ni a TEXTPTR. 
   
 > [!NOTE]  
->  Las variables enumeradas en la lista SELECT hacen referencia a sus valores originales, sin tener en cuenta los cambios realizados en ellos en \<dml_statement_with_output_clause>.  
+>  Las variables enumeradas en la lista SELECT hacen referencia a sus valores originales, con independencia de los cambios realizados en ellas en \<dml_statement_with_output_clause>.  
   
  \<dml_statement_with_output_clause>  
  Es una instrucción INSERT, UPDATE, DELETE o MERGE válida que devuelve las filas afectadas en una cláusula OUTPUT. La instrucción no puede contener una cláusula WITH y no puede tener como destino tablas remotas o vistas con particiones. Si se especifica UPDATE o DELETE, no puede ser una instrucción UPDATE o DELETE basada en cursores. No se puede hacer referencia a las filas de origen como instrucciones DML anidadas.  
   
  WHERE \<search_condition>  
- Es cualquier cláusula WHERE que contiene una condición \<search_condition> válida que filtra las filas devueltas por \<dml_statement_with_output_clause>. Para más información, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Cuando se usa en este contexto, \<search_condition> no puede contener subconsultas, funciones escalares definidas por el usuario que realicen acceso a datos, funciones de agregado, TEXTPTR ni predicados de búsqueda de texto completo. 
+ Es cualquier cláusula WHERE que contiene una condición \<search_condition> válida que filtra las filas devueltas por \<dml_statement_with_output_clause>. Para más información, vea [Condición de búsqueda &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Cuando se usa en este contexto, \<search_condition> no puede contener subconsultas, funciones escalares definidas por el usuario que accedan a datos, funciones de agregado, TEXTPTR ni predicados de búsqueda de texto completo. 
   
  DEFAULT VALUES  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Hace que la nueva fila contenga los valores predeterminados definidos para cada columna.  
   
  BULK  
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  La usan las herramientas externas para cargar un flujo de datos binarios. Esta opción no está diseñada para usarse con herramientas tales como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL ni interfaces de programación de aplicaciones de acceso a datos como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  FIRE_TRIGGERS  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica que se ejecutarán todos los desencadenadores de inserción definidos en la tabla de destino durante la operación de carga de flujos de datos binarios. Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica que deben comprobarse todas las restricciones de la tabla o vista de destino durante la operación de carga de flujos de datos binarios. Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica que las columnas vacías deben conservar un valor nulo durante la operación de carga de flujos de datos binarios. Para obtener más información, vea [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
@@ -288,54 +288,60 @@ Cláusula OUTPUT
  Especifica el número aproximado de kilobytes (KB) de datos por lote como *kilobytes_per_batch*. Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  ROWS_PER_BATCH =*rows_per_batch*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Indica el número aproximado de filas de datos del flujo de datos binarios. Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 > [!NOTE]
 >  Si no se proporciona una lista de columnas, se produce un error de sintaxis.  
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Para obtener información específica sobre cómo insertar datos en tablas de SQL Graph, vea [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Use la función @@ROWCOUNT para devolver el número de filas insertadas a la aplicación cliente. Para más información, vea [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Prácticas recomendadas para la importación masiva de datos  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Usar INSERT INTO…SELECT para realizar una importación masiva de datos con registro mínimo  
- Puede usar `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` para transferir eficazmente un gran número de filas de una tabla, como una tabla de ensayo, a otra tabla con registro mínimo. El registro mínimo puede mejorar el rendimiento de la instrucción y reducir la posibilidad de que la operación rellene el espacio del registro de transacciones disponible durante la transacción.  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>Usar INSERT INTO…SELECT para realizar una importación masiva de datos con registros y paralelismos mínimos 
+Puede usar `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` para transferir eficazmente un gran número de filas de una tabla, como una tabla de ensayo, a otra tabla con registro mínimo. El registro mínimo puede mejorar el rendimiento de la instrucción y reducir la posibilidad de que la operación rellene el espacio del registro de transacciones disponible durante la transacción.  
   
- El registro mínimo para esta instrucción tiene los requisitos siguientes:  
-  
+El registro mínimo para esta instrucción tiene los requisitos siguientes:  
 -   El modelo de recuperación de la base de datos está establecido en registro simple o masivo.  
-  
 -   La tabla de destino es un montón vacío o no vacío.  
-  
 -   La tabla de destino no se usa en la replicación.  
-  
--   La sugerencia TABLOCK se especifica para la tabla de destino.  
+-   La sugerencia `TABLOCK` se especifica para la tabla de destino.  
   
 Las filas que se insertan en un montón como el resultado de una acción de inserción en una instrucción MERGE también se pueden registrar con un nivel mínimo.  
   
- A diferencia de la instrucción BULK INSERT, que contiene un bloqueo Bulk Update menos restrictivo, INSERT INTO…SELECT con la sugerencia TABLOCK retiene un bloqueo exclusivo (X) en la tabla. Esto significa que no se pueden insertar filas mediante operaciones de inserción en paralelo.  
+A diferencia de la instrucción `BULK INSERT`, que contiene un bloqueo de actualización masiva (BU) menos restrictivo, `INSERT INTO … SELECT` con la sugerencia `TABLOCK` retiene un bloqueo exclusivo (X) en la tabla. Esto significa que no se pueden insertar filas mediante varias operaciones de inserción que se ejecutan simultáneamente. 
+
+Sin embargo, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y del nivel de compatibilidad de la base de datos 130, una única instrucción `INSERT INTO … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados. Las inserciones paralelas son posibles cuando se usa la sugerencia `TABLOCK`.  
+
+El paralelismo de la instrucción anterior tiene los siguientes requisitos, que son similares a los requisitos para el registro mínimo:  
+-   La tabla de destino es un montón vacío o no vacío.  
+-   La tabla de destino tiene un índice de almacén de columnas agrupado (CCI), pero no índices no agrupados.  
+-   La tabla de destino no tiene una columna de identidad con IDENTITY_INSERT establecido en OFF.  
+-   La sugerencia `TABLOCK` se especifica para la tabla de destino.
+
+En los escenarios en los que se cumplen los requisitos de registro mínimo y de inserción en paralelo, ambas mejoras funcionarán juntas para garantizar el máximo rendimiento de las operaciones de carga de datos.
+
+> [!NOTE]
+> Las inserciones en las tablas temporales locales (identificadas por el prefijo #) y las tablas temporales globales (identificadas por prefijos ##) también se habilitan para el paralelismo mediante la sugerencia TABLOCK.
   
-#### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Usar OPENROWSET y BULK para datos de importación masiva  
+#### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Usar OPENROWSET y BULK para datos de importación en bloque  
  La función OPENROWSET puede aceptar las siguientes sugerencias de tabla, que proporcionan optimizaciones de carga masiva con la instrucción INSERT:  
   
--   La sugerencia TABLOCK puede reducir al mínimo el número de registros para la operación de inserción. El modelo de recuperación de la base de datos debe establecerse en registro simple o masivo, y la tabla de destino no se puede utilizar en la replicación. Para más información, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   La sugerencia `TABLOCK` puede reducir al mínimo el número de registros para la operación de inserción. El modelo de recuperación de la base de datos debe establecerse en registro simple o masivo, y la tabla de destino no se puede utilizar en la replicación. Para más información, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   La sugerencia `TABLOCK` puede habilitar operaciones de inserción paralelas. La tabla de destino es un montón o un índice de almacén de columnas agrupado (CCI) sin índices no agrupados, y la tabla de destino no puede tener una columna de identidad especificada.  
+-   La sugerencia `IGNORE_CONSTRAINTS` puede deshabilitar temporalmente la comprobación de restricciones FOREIGN KEY y CHECK.  
+-   La sugerencia `IGNORE_TRIGGERS` puede deshabilitar temporalmente la ejecución de desencadenadores.  
+-   La sugerencia `KEEPDEFAULTS` permite la inserción del valor predeterminado de la columna de una tabla, si existe, en lugar de NULL, cuando falta el valor del registro de datos de esa columna.  
+-   La sugerencia `KEEPIDENTITY` permite que se usen los valores de identidad en el archivo de datos importado para la columna de identidad en la tabla de destino.  
   
--   La sugerencia IGNORE_CONSTRAINTS puede deshabilitar temporalmente la comprobación de restricciones FOREIGN KEY y CHECK.  
+Estas optimizaciones son similares a las que están disponibles con el comando `BULK INSERT`. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   La sugerencia IGNORE_TRIGGERS puede deshabilitar temporalmente la ejecución de desencadenadores.  
-  
--   La sugerencia KEEPDEFAULTS permite la inserción del valor predeterminado de la columna de una tabla, si existe, en lugar de NULL, cuando falta el valor del registro de datos de esa columna.  
-  
--   La sugerencia KEEPIDENTITY permite que se usen los valores de identidad en el archivo de datos importado para la columna de identidad en la tabla de destino.  
-  
-Estas optimizaciones son similares a las que están disponibles con el comando BULK INSERT. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
-  
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  Al insertar filas, considere el comportamiento de los tipos de datos siguientes:  
   
 -   Si se va a cargar un valor en columnas con un tipo de datos **char**, **varchar** o **varbinary**, el relleno o el truncamiento de los espacios en blanco finales (espacios para **char** y **varchar**, ceros para **varbinary**) se determinan a partir del valor de la opción SET ANSI_PADDING definida para la columna al crear la tabla. Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
@@ -385,7 +391,7 @@ Estas optimizaciones son similares a las que están disponibles con el comando B
  Cuando una instrucción INSERT detecta un error aritmético (desbordamiento, división entre cero o error de dominio) al evaluar una expresión, [!INCLUDE[ssDE](../../includes/ssde-md.md)] trata dichos errores como si SET ARITHABORT estuviera establecido en ON. El lote se detiene y se devuelve un mensaje de error. Al evaluar una expresión con SET ARITHABORT y SET ANSI_WARNINGS en OFF, si una instrucción INSERT, DELETE o UPDATE encuentra un error aritmético, desbordamiento, división entre cero o error de dominio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserta o actualiza un valor NULL. Si la columna de destino no acepta valores NULL, no se puede efectuar la acción de inserción o actualización y el usuario recibe un error.  
   
 ## <a name="interoperability"></a>Interoperabilidad  
- Cuando se define un desencadenador INSTEAD OF en las acciones INSERT en una tabla o vista, se ejecuta el desencadenador en lugar de la instrucción INSERT. Para más información sobre los desencadenadores INSTEAD OF, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Cuando se define un desencadenador `INSTEAD OF` en las acciones INSERT en una tabla o vista, se ejecuta el desencadenador en lugar de la instrucción INSERT. Para obtener más información sobre los desencadenadores `INSTEAD OF`, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Cuando se insertan valores en tablas remotas y no se especifican todos los valores de todas las columnas, debe identificar las columnas en las que se deben insertar los valores especificados.  
@@ -407,13 +413,13 @@ En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIE
 ### <a name="permissions"></a>Permisos  
  El permiso INSERT es obligatorio en la tabla de destino.  
   
- Los permisos INSERT corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin**, de los roles fijos de base de datos **db_owner** y **db_datawriter** y al propietario de la tabla. Los miembros de los roles **sysadmin**, **db_owner** y **db_securityadmin** y el propietario de la tabla pueden transferir permisos a otros usuarios.  
+ Los permisos para INSERT se adjudican de forma predeterminada a los miembros del rol fijo de servidor `sysadmin`, a los roles fijos de base de datos `db_owner` y `db_datawriter`, y al propietario de la tabla. Los miembros de los roles `sysadmin`, `db_owner` y `db_securityadmin` y el propietario de la tabla pueden transferir permisos a otros usuarios.  
   
- Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor **sysadmin** o **bulkadmin**.  
+ Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor `sysadmin` o `bulkadmin`.  
   
-##  <a name="InsertExamples"></a> Ejemplos  
+##  <a name="examples"></a><a name="InsertExamples"></a> Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|INSERT • constructor con valores de tabla|  
 |[Tratar los valores de columna](#ColumnValues)|IDENTITY • NEWID • valores predeterminados • tipos definidos por el usuario|  
@@ -424,7 +430,7 @@ En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIE
 |[Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias](#TableHints)|Sugerencias de tabla|  
 |[Capturar los resultados de la instrucción INSERT](#CaptureResults)|Cláusula OUTPUT|  
   
-###  <a name="BasicSyntax"></a> Sintaxis básica  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> Sintaxis básica  
  Los ejemplos de esta sección demuestran la funcionalidad básica de la instrucción INSERT usando la sintaxis mínima requerida.  
   
 #### <a name="a-inserting-a-single-row-of-data"></a>A. Insertar una sola fila de datos  
@@ -453,7 +459,7 @@ INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,
 VALUES (N'Square Yards', N'Y2', GETDATE());  
 ```  
   
-###  <a name="ColumnValues"></a> Tratar los valores de columna  
+###  <a name="handling-column-values"></a><a name="ColumnValues"></a> Tratar los valores de columna  
  Los ejemplos de esta sección muestran métodos para insertar valores en columnas que se definen con una propiedad IDENTITY, un valor DEFAULT o se definen con tipos de datos como **uniqueidentifer** o columnas de un tipo definido por el usuario.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Insertar datos en una tabla con columnas que tienen valores predeterminados  
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Insertar datos en columnas de tipo definido por el usuario  
@@ -529,7 +534,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
 ```  
   
-###  <a name="OtherTables"></a> Insertar datos de otras tablas  
+###  <a name="inserting-data-from-other-tables"></a><a name="OtherTables"></a> Insertar datos de otras tablas  
  Los ejemplos de esta sección demuestran métodos para insertar filas de una tabla en otra.  
   
 #### <a name="h-using-the-select-and-execute-options-to-insert-data-from-other-tables"></a>H. Usar las opciones SELECT y EXECUTE para insertar datos de otras tablas  
@@ -666,7 +671,7 @@ INSERT INTO dbo.EmployeeSales
     ORDER BY sp.SalesYTD DESC;  
 ```  
   
-###  <a name="TargetObjects"></a> Especificar objetos de destino que no sean tablas estándar  
+###  <a name="specifying-target-objects-other-than-standard-tables"></a><a name="TargetObjects"></a> Especificar objetos de destino que no sean tablas estándar  
  En los ejemplos de esta sección se muestra cómo insertar filas especificando una variable de tabla o vista.  
   
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. Insertar datos especificando una vista  
@@ -712,13 +717,13 @@ SELECT * FROM @MyTableVar;
 GO  
 ```  
   
-###  <a name="RemoteTables"></a> Insertar filas en una tabla remota  
+###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Insertar filas en una tabla remota  
  Los ejemplos de esta sección demuestran cómo insertar filas en una tabla de destino remota usando un [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [función de conjunto de filas](../../t-sql/functions/rowset-functions-transact-sql.md) para hacer referencia a la tabla remota.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Insertar datos en una tabla remota mediante un servidor vinculado  
- El ejemplo siguiente inserta filas en una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
+ El ejemplo siguiente inserta filas en una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato*server.catalog.schema.object*.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql
 USE master;  
@@ -744,10 +749,10 @@ VALUES (N'Public Relations', N'Executive General and Administration');
 GO  
 ```  
   
-#### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. Insertar datos en una tabla remota con una función OPENQUERY  
+#### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>Hora Insertar datos en una tabla remota con una función OPENQUERY  
  En el siguiente ejemplo se inserta una fila en una tabla remota especificando la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -760,7 +765,7 @@ GO
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. Insertar datos en una tabla remota con una función OPENDATASOURCE  
  En el ejemplo siguiente se inserta una fila en una tabla remota mediante la especificación de la función de conjunto de filas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique un nombre de servidor válido para el origen de datos con el formato *server_name* o *server_name\instance_name*.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -804,7 +809,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-###  <a name="BulkLoad"></a> Cargar datos de forma masiva de tablas o archivos de datos  
+###  <a name="bulk-loading-data-from-tables-or-data-files"></a><a name="BulkLoad"></a> Cargar datos de forma masiva de tablas o archivos de datos  
  Los ejemplos de esta sección muestran dos métodos para cargar datos de forma masiva en una tabla mediante la instrucción INSERT.  
   
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. Insertar datos en un montón con registro mínimo  
@@ -853,7 +858,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. Usar la función OPENROWSET con BULK para cargar datos de forma masiva en una tabla  
  En el ejemplo siguiente se insertan filas de un archivo de datos en una tabla especificando la función OPENROWSET. La sugerencia de tabla IGNORE_TRIGGERS se especifica para la optimización del rendimiento. Para obtener más ejemplos, vea [Importación en bloque de datos mediante las instrucciones BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -864,7 +869,7 @@ FROM OPENROWSET (
     ROWS_PER_BATCH = 15000)AS b ;  
 ```  
   
-###  <a name="TableHints"></a> Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias  
+###  <a name="overriding-the-default-behavior-of-the-query-optimizer-by-using-hints"></a><a name="TableHints"></a> Invalidar el comportamiento predeterminado del optimizador de consultas mediante sugerencias  
  Los ejemplos de esta sección demuestran cómo usar [sugerencias de tabla](../../t-sql/queries/hints-transact-sql-table.md) para invalidar de forma temporal el comportamiento predeterminado del optimizador de consultas cuando se procesa la instrucción INSERT.  
   
 > [!CAUTION]  
@@ -881,7 +886,7 @@ INSERT INTO Production.Location WITH (XLOCK)
 VALUES ( N'Final Inventory', 15.00, 80.00);  
 ```  
   
-###  <a name="CaptureResults"></a> Capturar los resultados de la instrucción INSERT  
+###  <a name="capturing-the-results-of-the-insert-statement"></a><a name="CaptureResults"></a> Capturar los resultados de la instrucción INSERT  
  Los ejemplos de esta sección demuestran cómo usar la [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) para devolver información de cada fila afectada por una instrucción INSERT o de expresiones que se basan en esta instrucción. Estos resultados se pueden devolver a la aplicación de procesamiento para que los utilice en mensajes de confirmación, archivado y otros requisitos similares de una aplicación.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>T. Usar OUTPUT con una instrucción INSERT  
@@ -970,7 +975,7 @@ GO
 SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
 ```  
 
-#### <a name="w-inserting-data-using-the-select-option"></a>W. Insertar datos con la opción SELECT  
+#### <a name="w-inserting-data-using-the-select-option"></a>Hora Insertar datos con la opción SELECT  
  En el siguiente ejemplo se muestra cómo insertar varias filas de datos usando una instrucción INSERT con una opción SELECT. En la primera instrucción `INSERT` se usa directamente una instrucción `SELECT` para recuperar datos de la tabla de origen y, luego, almacenar el conjunto de resultados en la tabla `EmployeeTitles`.  
   
 ```sql

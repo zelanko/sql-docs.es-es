@@ -12,15 +12,14 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6e24010eeff6509d7b7b5ae538d8501f16b2432
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770708"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430762"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de columna mediante la transformación Columna derivada
   Para agregar y configurar una transformación Columna derivada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770708"
     > [!NOTE]  
     >  Si la expresión no es válida, el texto de la expresión se resalta y la información sobre herramientas de la columna describe los errores.  
   
-7.  En la lista **Columna derivada**, seleccione **\<agregar como columna nueva>** para escribir el resultado de evaluación de la expresión en una nueva columna, o seleccione una columna existente para actualizarla con el resultado de la evaluación.  
+7.  En la lista **columna derivada** , seleccione **\<add as new column>** para escribir el resultado de evaluación de la expresión en una nueva columna, o seleccione una columna existente para actualizarla con el resultado de la evaluación.  
   
      Si se decide usar una columna nueva, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa la expresión y asigna un tipo de datos a la columna, en función del tipo de datos, la longitud, precisión, escala y página de códigos.  
   
@@ -52,13 +51,13 @@ ms.locfileid: "62770708"
   
 9. Opcionalmente, modifique los valores de la columna **Nombre de columna derivada** .  
   
-10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
+10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Tipos de datos de Integration Services](../integration-services-data-types.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   

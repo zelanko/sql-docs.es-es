@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0539fc5af006a20cf554776c014da66c1120d129
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 37c0eb073ee8284f349a4efb269491734bcf524e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749619"
 ---
 # <a name="catalogdelete_environment-ssisdb-database"></a>catalog.delete_environment (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina un entorno de una carpeta en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
+catalog.delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

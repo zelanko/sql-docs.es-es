@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VB) de la propiedad de elemento | Microsoft Docs
+title: Ejemplo de la propiedad Item (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b9929c6c8547836131df61ae2d2576fae5aee38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918338"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765476"
 ---
 # <a name="item-property-example-vb"></a>Ejemplo de la propiedad Item (VB)
-Este ejemplo se muestra cómo el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad tiene acceso a miembros de una colección. El ejemplo se abre el ***autores*** tabla de la ***Pubs*** base de datos con un comando con parámetros.  
+En este ejemplo se muestra cómo la propiedad del [elemento](../../../ado/reference/ado-api/item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors*** de la base de datos ***pubs*** con un comando con parámetros.  
   
- El parámetro del comando emitido en la base de datos se accede desde el [comando](../../../ado/reference/ado-api/command-object-ado.md) del objeto [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección por índice y el nombre. Los campos de devuelto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , a continuación, se accede desde ese objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección por índice y el nombre.  
+ Se tiene acceso al parámetro del comando emitido en la base de datos desde la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) del objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) por índice y nombre. A continuación, se obtiene acceso a los campos del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) devuelto desde la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) del objeto por índice y nombre.  
   
 ```  
 'BeginItemVB  
@@ -134,9 +134,9 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Propiedad Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Item (propiedad) (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
+ [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

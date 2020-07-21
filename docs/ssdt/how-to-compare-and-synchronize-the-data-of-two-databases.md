@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Comparar y sincronizar los datos de dos bases de datos | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Comparación y sincronización de los datos de dos bases de datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929473"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241579"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedimientos: Comparación y sincronización de los datos de dos bases de datos
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Cómo: Comparar y sincronizar los datos de dos bases de datos
+
 Puede comparar los datos contenidos en dos bases de datos. Las bases de datos que se comparan se conocen como el *origen* y el *destino*.  
   
 > [!NOTE]  
@@ -38,9 +39,9 @@ Una vez finalizada la comparación, puede realizar otras acciones:
 Para más información, consulte [Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> También puede comparar el *esquema* de dos bases de datos o de dos versiones de la misma base de datos. Para más información, vea: [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> También puede comparar el *esquema* de dos bases de datos o de dos versiones de la misma base de datos. Para más información, consulte [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
-## <a name="CompareDatabaseData"></a>Comparar datos de bases de datos  
+## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Comparar datos de bases de datos  
   
 #### <a name="to-compare-data-by-using-the-new-data-comparison-wizard"></a>Para comparar datos utilizando el Nuevo asistente de comparación de datos  
   
@@ -61,7 +62,7 @@ Para más información, consulte [Comparar y sincronizar datos de una o más tab
   
 4.  Si más de una clave está presente, puede utilizar la columna de **Clave de comparación** para especificar la clave en la que se basará la comparación de los datos. Por ejemplo, puede especificar si desea basar la comparación en la columna de clave principal o en otra columna de clave (identificable de forma única).  
   
-5.  Haga clic en **Finalizar**.  
+5.  Haga clic en **Finalizar**  
   
     La comparación comienza.  
   
@@ -86,7 +87,7 @@ Para más información, consulte [Comparar y sincronizar datos de una o más tab
   
     Los datos de las bases de datos de origen y de destino especificadas se comparan. Los resultados aparecen en la sesión Comparar datos. Para más información sobre cómo ver los resultados o sincronizar los datos, consulte [Ver diferencias de los datos](#ViewDifferences) y [Sincronizar datos de la base de datos](#Synchronize).  
   
-## <a name="ViewDifferences"></a>Ver las Diferencias de los datos  
+## <a name="viewing-data-differences"></a><a name="ViewDifferences"></a>Ver las Diferencias de los datos  
 Al comparar los datos de dos bases de datos, Comparar datos enumera cada *objeto de base de datos* que se comparó y su estado. También puede ver los resultados de los registros dentro de cada objeto, agrupados por estado. Para más información sobre las designaciones de estado, consulte [Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 Una vez haya visto las diferencias, puede actualizar el destino para que coincida con el origen de algunos o todos los objetos o registros que son diferentes, faltan o son nuevos. Para más información, consulte [Sincronizar datos de bases de datos](#Synchronize).  
@@ -101,7 +102,7 @@ Una vez haya visto las diferencias, puede actualizar el destino para que coincid
   
     -   Para ver los resultados de los registros en un objeto determinado, haga clic en el objeto en el panel de resultados principal y, a continuación, haga clic en la pestaña en el panel vista de registros. Cada pestaña muestra todos los registros en ese objeto que tienen un estado específico: diferente, solo en origen, solo en destino e idénticos. Los datos aparecen en el registro y la columna.  
   
-## <a name="Synchronize"></a>Sincronizar los datos de bases de datos  
+## <a name="synchronizing-database-data"></a><a name="Synchronize"></a>Sincronizar los datos de bases de datos  
 Al comparar los datos de dos bases de datos, puede sincronizarlas actualizando todo o parte del destino para que coincida con el origen. Puede comparar los datos en dos tipos de objetos de base de datos: tablas y vistas.  
   
 #### <a name="to-update-target-data-by-using-the-write-updates-command"></a>Para actualizar datos de destino mediante el comando Escribir actualizaciones  

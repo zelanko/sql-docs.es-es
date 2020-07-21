@@ -1,5 +1,6 @@
 ---
 title: Elegir un método de actualización del motor de base de datos | Microsoft Docs
+description: En este artículo se describen las rutas de actualización del Motor de base de datos en SQL Server, incluida la actualización local, la migración a una nueva instalación y una actualización gradual.
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
@@ -10,30 +11,30 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 7331bc542db301e519b8a75c43b47129c845bb45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149987"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901581"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Planear y probar el plan de actualización del Motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
- ![Árbol de decisión del método de actualización de motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización de motor de base de datos")  
+ ![Árbol de decisión del método de actualización del motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización del motor de base de datos")  
   
  **Descargar**  
   
 -   Para descargar [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** para poner en marcha una máquina virtual con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition ya instalado.  
+-   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** para poner en marcha una máquina virtual con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition ya instalado.  
   
 > [!NOTE]  
 >  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos artículos están fuera del ámbito de este artículo, pero aquí incluimos algunos vínculos:
->   - [Información general de SQL Server en máquinas virtuales de Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>   - [Información general sobre SQL Server en Azure Virtual Machines](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selección de una opción de SQL Server en Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ## <a name="upgrade-in-place"></a>Actualización local  
@@ -62,11 +63,11 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
  Para más información detallada, vea [Actualización a SQL Server mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="migrate-to-a-new-installation"></a>Migración a una nueva instalación  
- Con este enfoque, conserva el entorno actual a la vez que crea un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuevo, con frecuencia en nuevo hardware y con una nueva versión del sistema operativo. Después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nuevo entorno, debe realizar una serie de pasos a fin de prepararlo para poder migrar las bases de datos de usuario existentes desde el entorno antiguo al nuevo y minimizar el tiempo de inactividad. En estos pasos se incluye la migración de los siguientes elementos:  
+ Con este método, conserva el entorno actual a la vez que crea un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con frecuencia en nuevo hardware y con una nueva versión del sistema operativo. Después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nuevo entorno, debe realizar una serie de pasos a fin de prepararlo para poder migrar las bases de datos de usuario existentes desde el entorno antiguo al nuevo y minimizar el tiempo de inactividad. En estos pasos se incluye la migración de los siguientes elementos:  
   
 -   **Objetos del sistema:** Algunas aplicaciones dependen de información, entidades u objetos que se encuentran fuera del ámbito de una base de datos de usuario único. Normalmente, una aplicación depende de las bases de datos maestra y msdb, así como la de usuario. Cualquier elemento almacenado fuera de la base de datos de usuario que sea necesario para el funcionamiento correcto de dicha base de datos debe estar disponible en la instancia de servidor de destino. Por ejemplo, los inicios de sesión de una aplicación se almacenan como metadatos en la base de datos maestra y se deben volver a crear en el servidor de destino. Si una aplicación o un plan de mantenimiento de bases de datos dependen de trabajos del Agente SQL Server, cuyos metadatos estén almacenados en la base de datos msdb, dichos trabajos se deben volver a crear en la instancia de servidor de destino. De forma similar, los metadatos de un desencadenador de servidor se almacenan en la base de datos maestra.  
  
-   Si mueve la base de datos de una aplicación a otra instancia de servidor, debe volver a crear todos los metadatos de las entidades y objetos dependientes de las bases de datos maestra y msdb en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos maestra. Para más información detallada, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+   Si mueve la base de datos de una aplicación a otra instancia de servidor, debe volver a crear todos los metadatos de las entidades y los objetos dependientes de las bases de datos maestra y msdb en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos maestra. Para más información detallada, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 -   **Paquetes de Integration Services almacenados en MSDB:** si almacena paquetes en MSDB, debe incluirlos en un script mediante la [utilidad dtutil](../../integration-services/dtutil-utility.md) o volver a implementarlos en el nuevo servidor. Antes de usar los paquetes en el nuevo servidor, debe actualizarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
@@ -95,11 +96,11 @@ Los pasos necesarios realizar una actualización mediante una nueva instalación
   
 -   **Entorno de almacenamiento conectado:** si tiene un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se usa almacenamiento conectado, el diagrama siguiente y los vínculos que incluye le servirán de guía para seguir los pasos necesarios para realizar una actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a través de una nueva instalación.  
   
-     ![Método de actualización de nueva instalación con copia de seguridad y restauración del almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Método de actualización de nueva instalación con copia de seguridad y restauración del almacenamiento conectado")  
+     ![Nuevo método de actualización de instalación con copias de seguridad y restauración para el almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Nuevo método de actualización de instalación con copias de seguridad y restauración para el almacenamiento conectado")  
   
 -   **Entorno de almacenamiento SAN:**  si tiene un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se usa almacenamiento SAN, el diagrama siguiente y los vínculos que incluye le servirán de guía para seguir los pasos necesarios para realizar una actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a través de una nueva instalación.  
   
-     ![Método de actualización de nueva instalación por medio de separar y adjuntar en el almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Método de actualización de nueva instalación por medio de separar y adjuntar en el almacenamiento conectado")  
+     ![Nuevo método de actualización de instalación mediante Separar y Adjuntar para almacenamiento SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nuevo método de actualización de instalación mediante Separar y Adjuntar para almacenamiento SAN")  
   
 ## <a name="rolling-upgrade"></a>Actualización gradual  
  Se requiere una actualización gradual en entornos de soluciones de SQL Server donde se deba actualizar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado para maximizar el tiempo de actividad, minimizar los riesgos y conservar determinada funcionalidad. Una actualización gradual consiste básicamente en la actualización de varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado, ya sea mediante una actualización local en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente o efectuando una actualización con una nueva instalación a fin de facilitar la actualización del hardware o el sistema operativo como parte del proyecto de actualización. Hay una serie de escenarios en los que deberá poner en práctica el enfoque de actualización gradual. Estos se documentan en los siguientes artículos:  

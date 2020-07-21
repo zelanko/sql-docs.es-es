@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750920"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Los orígenes de eventos pueden ser cualquier origen que genere el evento de seg
 Los términos siguientes describen los conceptos clave de Seguimiento de SQL.  
   
  **Evento**  
- Repetición de una acción en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+ Repetición de una acción en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
  **Columna de datos**  
  Atributo de un evento.  
@@ -82,10 +82,10 @@ Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para d
 |**ClientProcessID**|9|Id. que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|  
 |**ColumnPermissions**|44|Indica si se estableció un permiso de columna. Puede analizar el texto de la instrucción para determinar los permisos que se aplicaron a las columnas.|  
 |**CPU**|18|Cantidad de tiempo de CPU (en milisegundos) utilizada por el evento.|  
-|**Id. de base de datos**|3|Identificador de la base de datos especificada mediante la instrucción USE *database_name* o el identificador de la base de datos predeterminada si no se emite la instrucción USE *database_name*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|  
+|**Identificador de base de datos**|3|Identificador de la base de datos especificada mediante la instrucción USE *database_name* o el identificador de la base de datos predeterminada si no se emite la instrucción USE *database_name*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|  
 |**DatabaseName**|35|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|  
 |**DBUserName**|40|Nombre de usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|  
-|**Duración**|13|Duración (en microsegundos) del evento.<br /><br /> El servidor informa de la duración del evento en microsegundos (una millonésima parte de un segundo o 10<sup>-6</sup>segundos) y la cantidad de tiempo de CPU que usa el evento en milisegundos (una milésima de segundo o 10<sup>-3</sup>segundos). La interfaz gráfica de usuario de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra la columna **Duración** en milisegundos de manera predeterminada, pero cuando se guarda un seguimiento en un archivo o en una tabla de base de datos, el valor de la columna **Duración** se escribe en microsegundos.|  
+|**Duration**|13|Duración (en microsegundos) del evento.<br /><br /> El servidor informa de la duración del evento en microsegundos (una millonésima parte de un segundo o 10<sup>-6</sup>segundos) y la cantidad de tiempo de CPU que usa el evento en milisegundos (una milésima de segundo o 10<sup>-3</sup>segundos). La interfaz gráfica de usuario de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra la columna **Duración** en milisegundos de manera predeterminada, pero cuando se guarda un seguimiento en un archivo o en una tabla de base de datos, el valor de la columna **Duración** se escribe en microsegundos.|  
 |**EndTime**|15|Hora a la que finalizó el evento. Esta columna no se rellena para las clases de eventos que hacen referencia al inicio de un evento, como **SQL:BatchStarting** o **SP:Starting**.|  
 |**Error**|31|Número de error de un evento específico. A menudo, es el número de error almacenado en **sysmessages**.|  
 |**EventClass**|27|Tipo de clase de evento capturado.|  
@@ -124,13 +124,13 @@ Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para d
 |**RowCounts**|48|Número de filas del lote.|  
 |**ServerName**|26|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|  
 |**SessionLoginName**|64|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
-|**Severity**|20|Nivel de gravedad del evento de excepción.|  
+|**Gravedad**|20|Nivel de gravedad del evento de excepción.|  
 |**SourceDatabaseID**|62|Id. de la base de datos en la que se está el origen del objeto.|  
 |**SPID**|12|Id. de proceso de servidor (SPID) que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|  
 |**SqlHandle**|63|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |**StartTime**|14|Hora a la que se inició el evento, si está disponible.|  
 |**State**|30|Código de estado de error.|  
-|**Correcto**|23|Indica si el evento se realizó correctamente. Los valores son:<br /><br /> **1** = Correcto<br /><br /> **0** = Error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
+|**Success**|23|Indica si el evento se realizó correctamente. Los valores son:<br /><br /> **1** = Correcto<br /><br /> **0** = Error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
 |**TargetLoginName**|42|Para acciones que se dirigen a un inicio de sesión, el nombre del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetLoginSid**|43|Para acciones que se dirigen a un inicio de sesión, el SID del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetUserName**|39|Para acciones que se dirigen a un usuario de base de datos, el nombre del usuario; por ejemplo, conceder permiso a un usuario.|  

@@ -12,10 +12,10 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499943"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
@@ -113,7 +113,7 @@ ms.locfileid: "66499943"
   
 8.  Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a> Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
  En un servidor de informes que esté configurado para usar la autenticación Kerberos o Negotiate, se producirá un error en una conexión de cliente con el servidor de informes si hay un error de autenticación Kerberos. Se producen errores de autenticación Kerberos cuando:  
   
 -   El servicio del servidor de informes se ejecuta como una cuenta de usuario de dominio de Windows y no se registró un nombre de la entidad de seguridad del servicio (SPN) para la cuenta.  
@@ -210,6 +210,6 @@ ms.locfileid: "66499943"
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Configurar la autenticación de formularios o personalizada en el servidor de informes](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Protección ampliada para la autenticación con Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

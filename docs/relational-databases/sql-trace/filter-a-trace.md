@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751002"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento. Por ejemplo, si limita los nombres de usuarios de Windows de un seguimiento para usuarios específicos, los datos de la salida se limitarán solo a aquellos usuarios.  
   
  No es obligatorio establecer un filtro para un seguimiento. Sin embargo, un filtro minimiza la sobrecarga que comporta un seguimiento. Un filtro devuelve los datos relativos y, de este modo, facilita el análisis del rendimiento y las auditorías.  
@@ -63,9 +63,9 @@ ms.locfileid: "72909487"
   
 |Operador relacional|Símbolo del operador|Descripción|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
+|Like|LIKE|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
 |No es como|No es como|Especifica que los datos del evento de seguimiento no deben ser como el texto escrito. Acepta varios valores.|  
-|Es igual a|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
+|Equals|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
 |No es igual a|<>|Especifica que los datos del evento de seguimiento deben ser distintos del valor escrito. Acepta varios valores.|  
 |Mayor que|>|Especifica que los datos del evento de seguimiento deben ser mayores que el valor escrito.|  
 |Mayor o igual que|>=|Especifica que los datos del evento de seguimiento deben ser mayores o iguales que el valor escrito.|  
@@ -86,7 +86,7 @@ ms.locfileid: "72909487"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Duración**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -122,13 +122,13 @@ ms.locfileid: "72909487"
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Gravedad**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**Correcto**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  

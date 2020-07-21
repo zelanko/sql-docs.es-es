@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a0f2fc8c2af69832150ab5ab229ffc50c84e831
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fffb842f8d9f1140f018c50951462b1b8ab647e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732719"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el valor de una propiedad de certificado especificada.
   
@@ -35,7 +35,7 @@ Devuelve el valor de una propiedad de certificado especificada.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 CertProperty ( Cert_ID , '<PropertyName>' )  
   
 <PropertyName> ::=  
@@ -59,7 +59,7 @@ El nombre del emisor de certificado.
 *Cert_Serial_Number*  
 El número de serie del certificado.
   
-*Asunto*  
+*Subject*  
 El asunto del certificado.
   
  *SID*  
@@ -76,7 +76,7 @@ El tipo de valor devuelto depende de la propiedad especificada en la llamada de 
 -   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* y *Subject* devuelven **nvarchar**.  
 -   *SID* devuelve **varbinary**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Consulte la información de los certificados en la vista de catálogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Permisos  
@@ -101,7 +101,7 @@ PRINT CONVERT(nvarchar, @CertSubject);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)

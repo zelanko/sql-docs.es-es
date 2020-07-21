@@ -9,10 +9,10 @@ ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651365"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario
@@ -40,11 +40,11 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
   
     3.  En la lista desplegable **Seleccione o escriba un nombre de base de datos** , haga clic en **AdventureWorks2014**.  
   
-    4.  Seleccione **Aceptar**y luego seleccione **Siguiente**.  
+    4.  Seleccione **Aceptar** y después **Siguiente**.  
   
 6.  Si ha seleccionado **Usar autenticación de SQL Server** en el paso 5 (b), seleccione la opción si quiere incluir la información confidencial en la cadena o establecer la información en su código de aplicación.  
   
-7.  En la página **Guardar la cadena de conexión en el archivo de configuración de la aplicación** , escriba el nombre de la cadena de conexión o acepte el predeterminado **AdventureWorks2014ConnectionString**. Seleccione **Siguiente**.  
+7.  En la página **Guardar la cadena de conexión en el archivo de configuración de la aplicación** , escriba el nombre de la cadena de conexión o acepte el predeterminado **AdventureWorks2014ConnectionString**. Seleccione **Next** (Siguiente).  
   
 8.  En la página **Elegir un tipo de comando** , seleccione **Usar instrucciones SQL**y, después, haga clic en **Siguiente**.  
   

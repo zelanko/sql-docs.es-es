@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1c1fedfc0c21d78e73f38b5bfdf084eb37e5311d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f73b48f0ec2255760b4ee55acfaf91dc02af7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063557"
 ---
 # <a name="move-a-workload-group"></a>Mover un grupo de cargas de trabajo
   Puede mover un grupo de cargas de trabajo del regulador de recursos a un grupo de recursos de servidor diferente utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
@@ -29,16 +28,16 @@ ms.locfileid: "63209748"
   
 -   **Para mover un grupo de cargas de trabajo con:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  No puede mover un grupo de cargas de trabajo si hay una operación de configuración del regulador de recursos pendiente.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede mover un grupo de cargas de trabajo si hay una operación de configuración del regulador de recursos pendiente. Es posible determinar si existe una configuración pendiente consultando la vista de administración dinámica [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) para obtener el estado actual de is_configuration_pending.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Mover un grupo de cargas de trabajo requiere un permiso CONTROL SERVER.  
   
-##  <a name="MoveWGSSMS"></a> Mover un grupo de cargas de trabajo mediante SQL Server Management  
+##  <a name="move-a-workload-group-using-sql-server-management-studio"></a><a name="MoveWGSSMS"></a> Mover un grupo de cargas de trabajo mediante SQL Server Management  
  **Para mover un grupo de cargas de trabajo utilizando [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**  
   
 1.  En el Explorador de objetos, expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
@@ -55,7 +54,7 @@ ms.locfileid: "63209748"
   
 7.  Si la operación de creación o cambio de configuración sobre el grupo de recursos de servidor o el grupo de cargas de trabajo produce un error, aparecerá un informe de error debajo del título de la página de propiedades. Para ver un mensaje de error más detallado, haga clic en la flecha abajo que aparece en el mensaje de error.  
   
-##  <a name="MoveWGTSQL"></a> Mover un grupo de cargas de trabajo mediante Transact-SQL  
+##  <a name="move-a-workload-group-using-transact-sql"></a><a name="MoveWGTSQL"></a> Mover un grupo de cargas de trabajo mediante Transact-SQL  
  **Para mover un grupo de cargas de trabajo utilizando Transact-SQL**  
   
 1.  Ejecute la instrucción `ALTER WORKLOAD GROUP` especificando el nombre del grupo de cargas de trabajo que se va a mover y el grupo de recursos de servidor al que se debería mover.  
@@ -73,7 +72,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
  [Crear un grupo de recursos de servidor](create-a-resource-pool.md)   

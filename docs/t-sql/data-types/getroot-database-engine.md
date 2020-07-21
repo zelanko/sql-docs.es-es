@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbc5bd95c10c89da4fb6fc6cbd1400f2e310927b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738196"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve la raíz del árbol de jerarquía. GetRoot() es un método estático.
   
@@ -41,12 +41,12 @@ hierarchyid::GetRoot ( )
 static SqlHierarchyId GetRoot ( )   
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **Tipo de valor devuelto de SQL Server: hierarchyid**
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Se utiliza para determinar el nodo raíz de un árbol de jerarquía.
   
 ## <a name="examples"></a>Ejemplos  
@@ -67,7 +67,7 @@ En el fragmento de código siguiente se llama al método GetRoot():
 SqlHierarchyId.GetRoot()  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b96b1d6f1229dba624076abc4cb0c82e49249a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752357"
 ---
 # <a name="what-are-the-sql-database-functions"></a>¿Cuáles son las funciones de base de datos SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Obtenga información sobre las categorías de las funciones integradas que se pu
   
 ## <a name="aggregate-functions"></a>Funciones de agregado
 
-Las funciones de agregado realizan un cálculo sobre un conjunto de valores y devuelven un solo valor. Se pueden usar en la lista de selección o en la cláusula HAVING de una instrucción SELECT. Puede usar una agregación en combinación con la cláusula GROUP BY para calcular la agregación en las categorías de filas. Use la cláusula OVER para calcular la agregación en un intervalo de valor específico. La cláusula OVER no puede seguir las agregaciones GROUPING o GROUPING_ID.
+Las funciones de agregado realizan un cálculo en un conjunto de valores y devuelven un valor único. Se pueden usar en la lista de selección o en la cláusula HAVING de una instrucción SELECT. Puede usar una agregación en combinación con la cláusula GROUP BY para calcular la agregación en las categorías de filas. Use la cláusula OVER para calcular la agregación en un intervalo de valor específico. La cláusula OVER no puede seguir las agregaciones GROUPING o GROUPING_ID.
 
 Todas las funciones de agregación son deterministas; es decir, siempre devuelven el mismo resultado cuando se ejecutan con los mismos valores de entrada. Para más información, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
@@ -64,7 +64,7 @@ Operan sobre un valor y después devuelven otro valor. Las funciones escalares s
 |[Funciones de metadatos](metadata-functions-transact-sql.md)|Devuelven información acerca de la base de datos y los objetos de la base de datos.|  
 |[Funciones de seguridad](security-functions-transact-sql.md)|Devuelven información acerca de usuarios y roles.|  
 |[Funciones de cadena](string-functions-transact-sql.md)|Realizan operaciones en el valor de entrada de una cadena (**char** o **varchar**) y devuelven una cadena o un valor numérico.|  
-|[Funciones del sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Realizan operaciones y devuelven información acerca de valores, objetos y configuraciones de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Funciones del sistema](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Realizan operaciones y devuelven información acerca de valores, objetos y configuraciones de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funciones estadísticas del sistema](system-statistical-functions-transact-sql.md)|Devuelven información estadística acerca del sistema.|  
 |[Funciones de texto e imagen](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Realizan operaciones sobre los valores de entrada o columnas de texto o imagen, y devuelven información acerca del valor.|  
   

@@ -20,23 +20,23 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98257dc148bbcedf58365267914704fb1f9e006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073145"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197149"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Crea una tabla externa y, después, exporta en paralelo los resultados de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] a Hadoop o a Azure Storage Blob.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] table_name   
     WITH (   
@@ -61,7 +61,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ [ *database_name*. [ *schema_name* ]. ] | *schema_name*. ] *table_name*  
+ [ [ *database_name*. [ *schema_name* ] . ] | *schema_name*. ] *table_name*  
  Nombre de una, dos o tres partes de la tabla que se va a crear en la base de datos. En el caso de una tabla externa, solo los metadatos de la tabla se almacenan en la base de datos relacional.  
   
  LOCATION =  '*hdfs_folder*'  
@@ -70,12 +70,12 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  Los archivos externos escriben en *hdfs_folder* y se denominan *QueryID_date_time_ID.format*, donde *ID* es un identificador incremental y *format*, el formato de los datos exportados. Por ejemplo, QID776_20160130_182739_0.orc.  
   
  DATA_SOURCE = *external_data_source_name*  
- Especifica el nombre del objeto de origen de datos externo que contiene la ubicación en donde se almacenan (o se almacenarán) los datos externos. La ubicación es un clúster de Hadoop o un blob de Azure Storage Blob. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ Especifica el nombre del objeto de origen de datos externo que contiene la ubicación en donde se almacenan (o se almacenarán) los datos externos. La ubicación es un clúster de Hadoop o un blob de Azure Storage Blob. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
- Especifica el nombre del objeto de formato de archivo externo que contiene el formato del archivo de datos externos. Para crear un formato de archivo de datos externos, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
+ Especifica el nombre del objeto de formato de archivo externo que contiene el formato del archivo de datos externos. Para crear un formato de archivo externo, use [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
- Rechazar opciones  
+ Opciones de Reject  
  Las opciones de rechazo no son aplicables en el momento en que se ejecuta esta instrucción CREATE EXTERNAL TABLE AS SELECT. En su lugar, se especifican aquí para que la base de datos pueda usarlas en un momento posterior, cuando importe datos de la tabla externa. Más adelante, cuando la instrucción CREATE TABLE AS SELECT seleccione datos de la tabla externa, la base de datos usará las opciones de rechazo para determinar el número o el porcentaje de filas que pueden no importarse antes de que la importación se detenga.  
   
  REJECT_VALUE = *reject_value*  
@@ -110,14 +110,14 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   La base de datos intenta cargar las 100 primeras filas; esta vez, 25 se importan y 75 no.  
   
--   El porcentaje de filas con errores se recalcula en un 50%. El porcentaje de filas con errores supera pues el valor de rechazo de 30 %.  
+-   El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores supera pues el valor de rechazo de 30 %.  
   
 -   La carga no se efectúa y refleja un 50 % de filas con errores después de intentar cargar 200 filas, lo cual es superior al límite de 30 % especificado.  
   
  WITH *common_table_expression*  
  Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT \<select_criteria> Rellena la nueva tabla con los resultados de una instrucción SELECT. *select_criteria* es el cuerpo de la instrucción SELECT que determina qué datos se copian en la nueva tabla. Para más información sobre las instrucciones SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> Rellena la tabla nueva con los resultados de una instrucción SELECT. *select_criteria* es el cuerpo de la instrucción SELECT que determina qué datos se copian en la nueva tabla. Para más información sobre las instrucciones SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar este comando, el **usuario de base de datos** necesita todos estos permisos o pertenencias a grupos:  
@@ -139,7 +139,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 -   El inicio de sesión debe tener permiso de escritura para leer y escribir en la carpeta externa en el clúster de Hadoop o Azure Storage Blob.  
  
  > [!IMPORTANT]  
- >  El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite obtener acceso a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
+ >  El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite acceder a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  Cuando CREATE EXTERNAL TABLE AS SELECT exporta los datos a un archivo delimitado de texto, no hay ningún archivo de rechazo para las filas que no se pueden exportar.  
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  La base de datos notificará los errores de Java que se producen en el origen de datos externo durante la exportación de datos.  
   
-##  <a name="GeneralRemarks"></a> Notas generales  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> Notas generales  
  Una vez finalizada la instrucción CREATE EXTERNAL TABLE AS SELECT, se pueden ejecutar consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la tabla externa. Estas operaciones importarán datos a la base de datos el tiempo que dure la consulta, a menos que la importación se realice con la instrucción CREATE TABLE AS SELECT.  
   
  La definición y el nombre de tabla externa se almacenan en los metadatos de la base de datos. Los datos se almacenan en el origen de datos externo.  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>Bloqueo  
  Toma un bloqueo compartido en el objeto SCHEMARESOLUTION.  
   
-##  <a name="Examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. Crear una tabla de Hadoop con CREATE EXTERNAL TABLE AS SELECT  
  En el siguiente ejemplo se crea una tabla externa denominada `hdfsCustomer`, usando para ello los datos y las definiciones de columna de la tabla de origen `dimCustomer`.  

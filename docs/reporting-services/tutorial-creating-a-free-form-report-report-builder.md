@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499561"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
@@ -27,7 +27,7 @@ Tiempo estimado para completar este tutorial: 20 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="BlankReport"></a>1. Crear un informe en blanco, un origen de datos y un conjunto de datos  
+## <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. Crear un informe en blanco, un origen de datos y un conjunto de datos  
   
 > [!NOTE]  
 > En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
@@ -58,7 +58,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 5.  Haga clic en **Credenciales**e introduzca las credenciales necesarias para conectarse a la instancia del Motor de base de datos de SQL Server.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ### <a name="to-create-a-new-dataset"></a>Para crear un nuevo conjunto de datos  
   
@@ -115,7 +115,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="List"></a>2. Agregar y configurar una lista  
+## <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. Agregar y configurar una lista  
 En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , la región de datos de lista es perfecta para crear informes de forma libre. Se basa en la región de datos *tablix* , ya que son tablas y matrices. Para obtener más información, consulte [Crear facturas y formularios con listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 Usará una lista para mostrar la información de ventas sobre los territorios de ventas en un informe con el formato de un boletín. La información está agrupada por territorio. Agregará un nuevo grupo de filas que agrupa los datos por territorio y, a continuación, eliminará el grupo de filas de detalles integrado.  
@@ -167,7 +167,7 @@ Usará una lista para mostrar la información de ventas sobre los territorios de
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Graphics"></a>3. Agregar elementos gráficos  
+## <a name="3-add-graphic-elements"></a><a name="Graphics"></a>3. Agregar elementos gráficos  
 Una de las ventajas de las regiones de datos de la lista es que puede agregar en cualquier parte los elementos de informe, como rectángulos y cuadros de texto, en lugar de limitarse a un diseño tabular. Mejorará la apariencia del informe agregando un gráfico (un rectángulo relleno con un color).  
   
 ### <a name="to-add-graphic-elements-to-the-report"></a>Para agregar elementos gráficos al informe  
@@ -190,7 +190,7 @@ La parte izquierda del informe tiene ahora un gráfico vertical compuesto por un
   
 ![report-builder-free-form-gray-rectangle](../reporting-services/media/report-builder-free-form-gray-rectangle.png)
  
-## <a name="Text"></a>4. Agregar texto en forma libre  
+## <a name="4-add-free-form-text"></a><a name="Text"></a>4. Agregar texto en forma libre  
 Puede agregar cuadros de texto para mostrar texto estático que se repite en cada página del informe, así como campos de datos.  
   
 ### <a name="to-add-text-to-the-report"></a>Para agregar texto al informe  
@@ -282,7 +282,7 @@ El informe muestra el texto estático y cada página del informe incluye datos q
   
 ![report-builder-newsletter-page-preview](../reporting-services/media/report-builder-newsletter-page-preview.png)
   
-## <a name="Table"></a>5. Agregar una tabla para mostrar los detalles de ventas  
+## <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. Agregar una tabla para mostrar los detalles de ventas  
 Utilice el nuevo Asistente para tablas y matrices para agregar una tabla al informe de la forma libre. Después de completar el asistente, agregará manualmente una fila para los totales.  
   
 ### <a name="to-add-a-table"></a>Para agregar una tabla  
@@ -295,15 +295,15 @@ Utilice el nuevo Asistente para tablas y matrices para agregar una tabla al info
   
 5.  Repita el paso 3 para SalesDate, Quantity y Sales. Coloque SalesDate bajo Product, Quantity bajo SalesDate y Sales bajo SalesDate.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Elegir el diseño** , vea el diseño de la tabla.  
   
     La tabla es simple: cinco columnas sin grupos de filas o columnas. Dado que no tiene ningún grupo, las opciones de diseño relacionadas con los grupos no están disponibles. Actualizará manualmente la tabla para incluir un total en una fase posterior del tutorial.  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
-9. Haga clic en **Finalizar**.  
+9. Haga clic en **Finalizar**  
   
 11. Arrastre la tabla bajo el cuadro de texto que agregó en la lección 4.  
   
@@ -328,7 +328,7 @@ El informe muestra una tabla con detalles y totales de ventas.
   
 ![report-builder-free-form-with-table](../reporting-services/media/report-builder-free-form-with-table.png)
    
-## <a name="Save"></a>6. Guardar el informe  
+## <a name="6-save-the-report"></a><a name="Save"></a>6. Guardar el informe  
 Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo.  
   
 En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
@@ -345,7 +345,7 @@ En este tutorial, guarde el informe en un servidor de informes. Si no tiene acce
   
 4.  En **Nombre**, reemplace el nombre predeterminado por **SalesInformationByTerritory**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -357,9 +357,9 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **SalesInformationByTerritory**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
-## <a name="Line"></a>7. (Opcional) Agregar una línea para separar áreas del informe  
+## <a name="7-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>7. (Opcional) Agregar una línea para separar áreas del informe  
 Agregue una línea para separar las áreas de editorial y detalles del informe.  
   
 ### <a name="to-add-a-line"></a>Para agregar una línea  
@@ -374,7 +374,7 @@ Agregue una línea para separar las áreas de editorial y detalles del informe.
      * **Ancho** seleccione **3** pt.
      * **Color** seleccione **Tomate**.  
   
-## <a name="Visualization"></a>8. (Opcional) Agregar visualizaciones de datos resumidos  
+## <a name="8-optional-add-summary-data-visualizations"></a><a name="Visualization"></a>8. (Opcional) Agregar visualizaciones de datos resumidos  
 Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque un grafo circular y de columnas dentro de un rectángulo para asegurarse de que el informe se representa del modo que desea.  
   
 ### <a name="to-add-a-rectangle"></a>Para agregar un rectángulo  
@@ -399,7 +399,7 @@ Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque u
   
 5.  Arrastre Quantity hasta **Valores**y, después, haga clic en **Siguiente**.  
   
-6.  Haga clic en **Finalizar**.  
+6.  Haga clic en **Finalizar**  
   
 8.  Cambie el tamaño del gráfico que aparece en la esquina superior izquierda del informe, para que tenga aproximadamente 2,25 pulgadas de ancho y 3,6 de alto.  
   
@@ -436,7 +436,7 @@ Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque u
   
     Valores se muestra en el eje vertical.  
   
-6.  Haga clic en **Finalizar**.  
+6.  Haga clic en **Finalizar**  
   
     Un gráfico de columnas se agrega a la esquina superior izquierda del informe.  
   
@@ -497,7 +497,7 @@ El informe muestra ahora los datos de ventas resumidos en gráficos circulares y
   
 
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Esto concluye el tutorial sobre cómo crear un informe de forma libre.  
   
 Para obtener más información sobre las listas, consulte: 

@@ -1,5 +1,5 @@
 ---
-title: SQL Server extendida Events Targets | Microsoft Docs
+title: SQL Server destinos de eventos extendidos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75270f5ce03de820828da65c765044a7dafdcb8f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928872"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   Los destinos de Extended Events de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] son los consumidores de eventos. Los destinos escriben en un archivo, almacenan los datos de evento en un búfer de memoria o agregan los datos de evento. Los destinos procesan los datos de forma sincrónica o asincrónica.  
@@ -43,7 +42,7 @@ ms.locfileid: "66088869"
   
      Se usa para establecer correlaciones entre los eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y los datos de evento de la aplicación o del sistema operativo Windows. Es un destino sincrónico.  
   
--   [Histogram](../../2014/database-engine/histogram-target.md)  
+-   [Histograma](../../2014/database-engine/histogram-target.md)  
   
      Se usa para contar el número de veces que se produce el evento especificado en función de la acción o columna de evento indicada. Es un destino asincrónico.  
   
@@ -51,10 +50,10 @@ ms.locfileid: "66088869"
   
      Se usa para mantener los datos de evento en memoria con un orden FIFO (primero en entrar, primero en salir) o con un orden FIFO por evento. Es un destino asincrónico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../relational-databases/extended-events/extended-events.md)   
- [SQL Server extendida Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
- [SQL Server Extended Events Sessions](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+ [Paquetes de SQL Server Extended Events](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQL Server sesiones de eventos extendidos](../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motor de SQL Server Extended Events](../relational-databases/extended-events/sql-server-extended-events-engine.md)  
   
   

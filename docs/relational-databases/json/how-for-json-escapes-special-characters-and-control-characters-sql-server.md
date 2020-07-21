@@ -1,9 +1,7 @@
 ---
-title: Cómo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: Cómo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +9,19 @@ helpviewer_keywords:
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 939e9d4782fec818df387844841f58e9e45f0da6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70910813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722250"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Cómo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este tema se describe cómo la cláusula **FOR JSON** de una instrucción **SELECT** de SQL Server inserta caracteres de escape en caracteres especiales y representa caracteres de control en la salida JSON.  
 
@@ -38,7 +38,7 @@ Si los datos de origen contienen caracteres especiales, la cláusula **FOR JSON*
 |Barra diagonal (/)|\\/|  
 |Retroceso|\b|  
 |Avance de página|\f|  
-|Nueva línea|\n|  
+|Línea nueva|\n|  
 |Retorno de carro|\r|  
 |Tabulación horizontal|\t|  
   

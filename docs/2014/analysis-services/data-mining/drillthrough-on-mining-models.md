@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084594"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522533"
 ---
 # <a name="drillthrough-on-mining-models"></a>Obtención de detalles en modelos de minería de datos
   La*obtención de detalles* se refiere a la capacidad de consultar un modelo o una estructura de minería de datos y obtener datos detallados que no se exponen en el modelo.  
@@ -23,7 +22,7 @@ ms.locfileid: "66084594"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos opciones diferentes para obtener detalles sobre los datos de los casos. Puede obtener detalles tanto de los casos usados para generar los datos como de los casos de la estructura de minería de datos.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Obtención de detalles de los casos del modelo frente a obtención de detalles de la estructura  
- La obtención de detalles de los **casos del modelo** resulta útil para buscar detalles adicionales sobre las reglas, los patrones o los clústeres de un modelo. Por ejemplo, no utilizaría información de contacto de cliente para el análisis en un modelo de agrupación en clústeres, incluso si los datos estuvieran disponibles, mediante el uso de obtención de detalles, puede obtener acceso a esa información desde el modelo.  
+ La obtención de detalles de los **casos del modelo** resulta útil para buscar detalles adicionales sobre las reglas, los patrones o los clústeres de un modelo. Por ejemplo, no usaría información de contacto del cliente para el análisis en un modelo de agrupación en clústeres, incluso si los datos estuvieran disponibles, mediante la obtención de detalles, puede obtener acceso a esa información desde el modelo.  
   
  En cambio, la **obtención de detalles de los datos de la estructura** pretende proporcionar acceso a la información que no está disponible en el modelo. Por ejemplo, algunas columnas de la estructura se han excluido de un modelo porque el tipo de datos era compatible o los datos no eran útiles para el análisis.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66084594"
 |Ver ejemplos de consultas de obtención de detalles para tipos de modelos concretos.|[Consultas de minería de datos](data-mining-queries.md)|  
 |Habilitar la obtención de detalles en el Asistente para modelo de minería de datos|[Finalización del asistente &#40;Asistente para minería de datos&#41;](../completing-the-wizard-data-mining-wizard.md).|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtención de detalles en estructuras de minería de datos](drillthrough-on-mining-structures.md)  
   
   

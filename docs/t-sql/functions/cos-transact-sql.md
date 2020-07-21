@@ -16,18 +16,18 @@ helpviewer_keywords:
 - cosine
 - COS function
 ms.assetid: c9fa8ae1-3373-4f3e-9b97-fa05077c1040
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85a2162e2b1973032e4e4678ef2eb9d7b6ac6dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86e2f212d2ca94be08db1cf223673bdbc4009bdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026544"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011517"
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Una función matemática que devuelve el coseno trigonométrico del ángulo especificado, expresado en radianes, en la expresión dada.
   
@@ -35,7 +35,7 @@ Una función matemática que devuelve el coseno trigonométrico del ángulo espe
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 COS ( float_expression )  
 ```  
   
@@ -81,7 +81,7 @@ cosCalc1  cosCalc2
 -0.58     0.99
 ```
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

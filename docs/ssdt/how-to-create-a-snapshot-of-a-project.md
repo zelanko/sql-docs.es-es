@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Crear una instantánea de un proyecto | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creación de una instantánea de un proyecto
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 40111c8807c0a0aa6162e8ad6a03d796406d5c1d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897203"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241533"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Procedimientos: Creación de una instantánea de un proyecto
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Cómo: Crear una instantánea de un proyecto
+
 Un archivo de **Aplicación de capa de datos** ofrece una representación de solo lectura del esquema de la base de datos en el momento de su creación. Básicamente se considera un esquema de la base de datos desde el que puede volver a importar los objetos de esquema en un proyecto. También puede compararla con el esquema de una base de datos o de un proyecto y actualizar la base de datos o el proyecto para reflejar el esquema definido en la instantánea.  
   
 En caso de que se produzca un error de usuario en un proyecto de base de datos de origen, puede revertir el proyecto de origen al estado en que se encontraba cuando se creó la instantánea. También puede establecer instantáneas en diversas etapas del desarrollo para definir líneas base.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4583fd37837c9703325fd577b6bd984505fbd98e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44b62d04c52ddb707bfd094d3b29fbfe84cf5bb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762402"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve 1 si una instancia de **geometry** está vacía. Devuelve 0 si una instancia de **geometry** no está vacía.
   
@@ -36,7 +36,7 @@ Devuelve 1 si una instancia de **geometry** está vacía. Devuelve 0 si una inst
 .STIsEmpty ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  

@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions | Documentos de Microsoft
+title: SQLGetFunctions | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,24 +11,22 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLGetFunctions function
 ms.assetid: d42349c4-0a3c-4bd1-9d10-0fe53f699924
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e255476f8ab196613e65bf0c2cc9960dc5f6a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 4f9e6c26b028566311a7dcda8d19916b63f79462
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131436"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003448"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La interfaz del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple los tres niveles de compatibilidad definidos para ODBC (ISO, Open Group y ODBC nivel 2). **SQLGetFunctions** informa que todas las funciones ODBC son compatibles con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vea también  
- [Función SQLGetFunctions](https://go.microsoft.com/fwlink/?LinkId=59353)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLGetFunctions función)](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

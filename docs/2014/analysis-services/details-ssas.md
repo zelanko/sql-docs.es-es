@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e450059-a083-428d-80a2-e52750f65f9f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6642024b7283c0302d58e77d7657844c27178f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af429cd3237b35d75802c327de0592baa2e342d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081814"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528691"
 ---
 # <a name="details-ssas"></a>Detalles (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite ver información sobre una operación de importación de datos que concluyó correctamente o en la que se produjo un error. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

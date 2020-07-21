@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101666"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
@@ -71,13 +71,13 @@ ms.locfileid: "66101666"
 >  En versiones anteriores de la documentación, se incluía un ejemplo de cómo crear una consulta dinámica como una expresión. Este tipo de consulta genera vulnerabilidad a los ataques por inyección de código SQL y, por lo tanto, no se recomienda.  
   
 ## <a name="securing-confidential-reports"></a>Proteger informes confidenciales  
- Los informes que contienen información confidencial deberían protegerse en el nivel de acceso a datos requiriendo que los usuarios proporcionen credenciales para tener acceso a datos confidenciales. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). También puede proteger una carpeta para que no resulte accesible a usuarios no autorizados. Para obtener más información, vea [Proteger carpetas](secure-folders.md).  
+ Los informes que contienen información confidencial deberían protegerse en el nivel de acceso a datos requiriendo que los usuarios proporcionen credenciales para tener acceso a datos confidenciales. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). También puede proteger una carpeta para que no resulte accesible a usuarios no autorizados. Para obtener más información, vea [Proteger carpetas](secure-folders.md).  
   
-## <a name="see-also"></a>Vea también  
- (crear-y-administrar-rol-assignments.md)   
- [Configurar el acceso al Generador de informes](../report-server/configure-report-builder-access.md)   
+## <a name="see-also"></a>Consulte también  
+ (create-and-manage-role-assignments.md)   
+ [Configurar el acceso a Generador de informes](../report-server/configure-report-builder-access.md)   
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
- [Protección de elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
+ [Proteger elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

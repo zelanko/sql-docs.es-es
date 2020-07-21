@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0d1c9ec4a0f26a48f281b3f9d91fdbbc745a5391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3b8b4b8cf0a20579d88cb49a9cbe9d4e23523ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054415"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773098"
 ---
 # <a name="view-facets-dialog-box"></a>Ver facetas (cuadro de diálogo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice este cuadro de diálogo para ver las propiedades de una faceta de administración basada en directivas. Las propiedades de una faceta se definen cuando se crea y no se pueden cambiar utilizando este cuadro de diálogo.  
   
 ## <a name="options"></a>Opciones  

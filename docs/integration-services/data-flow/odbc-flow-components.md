@@ -11,10 +11,10 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292286"
 ---
 # <a name="odbc-flow-components"></a>Componentes del flujo de ODBC
@@ -48,7 +48,7 @@ ms.locfileid: "71292286"
   
  Puede conectar el origen ODBC a un destino o transformar el componente que admite SSIS.  
   
- **Vea también:**  
+ **Consulte también:**  
   
  Origen ODBC  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71292286"
   
 -   El destino ODBC carga los datos en una base de datos que admite ODBC. Puede conectar el destino a un origen o transformar el componente que admite SSIS.  
   
- **Vea también:**  
+ **Consulte también:**  
   
  Destino ODBC  
   

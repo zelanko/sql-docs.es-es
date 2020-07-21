@@ -1,5 +1,5 @@
 ---
-title: (Minería de datos) de la selección de características | Microsoft Docs
+title: Selección de características (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084417"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522519"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
-  *Selección de características* es un término usado habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño apropiado para su procesamiento y análisis. Selección de características implica no solo *reducción de cardinalidad*, lo que significa que impone un límite arbitrario o predefinido en el número de atributos que se pueden considerar al crear un modelo, sino también la elección de atributos, lo que significa que el analista o la herramienta de modelado activamente selecciona o descarta los atributos según su utilidad para el análisis.  
+  La *selección de características* es un término que se usa habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño manejable para el procesamiento y el análisis. La selección de características implica no solo la *reducción de cardinalidad*, lo que significa imponer un límite arbitrario o predefinido en el número de atributos que se pueden tener en cuenta al crear un modelo, pero también la elección de atributos, lo que significa que el analista o la herramienta de modelado seleccionan o descartan atributos en función de su utilidad para el análisis.  
   
  La capacidad de aplicar la selección de características es esencial para un análisis eficiente, ya que los conjuntos de datos suelen contener mucha más información de la necesaria para la generación del modelo. Por ejemplo, un conjunto de datos puede contener 500 columnas que describen las características de los clientes, pero si los datos de algunas de ellas están muy dispersos, no obtendrá muchas ventajas al agregarlas al modelo. Si mantiene las columnas innecesarias durante la generación del modelo, se necesitarán más CPU y memoria durante el proceso de entrenamiento, así como más espacio de almacenamiento para el modelo completado.  
   
@@ -67,9 +66,9 @@ ms.locfileid: "66084417"
  En la sección siguiente se describe cada uno de los métodos de selección de características.  
   
 #### <a name="interestingness-score"></a>Puntuación interestingness  
- Una característica es interesante si ofrece información útil. Dado que la definición de lo que es útil varía según el escenario, el sector de la minería de datos ha desarrollado diversas maneras de medir *interestingness*. Por ejemplo, *novedad* podría ser interesante detectar valores atípicos, pero la capacidad de diferenciar entre elementos estrechamente relacionados, o *diferenciar su importancia*, podría resultar más interesante para clasificación.  
+ Una característica es interesante si ofrece información útil. Dado que la definición de lo que resulta útil varía en función del escenario, el sector de minería de datos ha desarrollado varias maneras de medir la *interés*. Por ejemplo, la *novedad* podría ser interesante en la detección de valores atípicos, pero la capacidad de discriminar entre elementos estrechamente relacionados, o *peso discriminador*, podría ser más interesante para la clasificación.  
   
- La medida del grado de interés que se usa en SQL Server Analysis Services es *basada en entropía*, lo que significa que los atributos con distribuciones aleatorias tienen una entropía más alta y obtienen menos información; por lo tanto, esos atributos son menos interesante. La entropía para cualquier atributo se compara con la entropía de todos los demás atributos de la manera siguiente:  
+ La medida de interés que se usa en SQL Server Analysis Services se basa en la *entropía*, lo que significa que los atributos con distribuciones aleatorias tienen una entropía más alta y una ganancia inferior de la información. por lo tanto, estos atributos son menos interesantes. La entropía para cualquier atributo se compara con la entropía de todos los demás atributos de la manera siguiente:  
   
  Interestingness(Atributo) = - (m - Entropy(Atributo)) * (m - Entropy(Atributo))  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66084417"
   
  Esta puntuación se utiliza de forma predeterminada cada vez que la columna contiene datos numéricos continuos no binarios.  
   
-#### <a name="shannons-entropy"></a>entropía de Shannon  
+#### <a name="shannons-entropy"></a>Entropía de Shannon  
  La entropía de Shannon mide la incertidumbre de una variable aleatoria para un determinado resultado. Por ejemplo, la entropía de lanzar una moneda al aire para decidir algo a cara o cruz se puede representar como una función de la probabilidad de que salga cara.  
   
  Analysis Services usa la fórmula siguiente para calcular la entropía de Shannon:  
@@ -111,24 +110,24 @@ ms.locfileid: "66084417"
 |Regresión logística|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Aunque el algoritmo de regresión logística de Microsoft se basa en el algoritmo de red neuronal de Microsoft, no se pueden personalizar los modelos de regresión logística para controlar el comportamiento de la selección de características; por lo tanto, la selección de características siempre usa de manera predeterminada el método más apropiado para el atributo.<br /><br /> Si todos los atributos son discretos o de datos discretos, el valor predeterminado es BDEU.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Agrupación en clústeres|Puntuación interestingness|El algoritmo de clústeres de Microsoft puede usar datos discretos o discretizados. Sin embargo, dado que la puntuación de cada atributo se calcula como una distancia y se representa como un número continuo, se debe usar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).|  
 |Regresión lineal|Puntuación interestingness|El algoritmo de regresión lineal de Microsoft solo puede usar la puntuación interestingness porque solamente admite columnas continuas.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md).|  
-|Reglas de asociación<br /><br /> Agrupación en clústeres de secuencia|No se utiliza|La selección de características no se invoca con estos algoritmos.<br /><br /> Sin embargo, se puede controlar el comportamiento del algoritmo y reducir el tamaño de los datos de entrada, si es necesario, al establecer el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.<br /><br /> Para obtener más información, consulte [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) y [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
-|Serie temporal|No se utiliza|La selección de características no se aplica a los modelos de serie temporal.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).|  
+|Reglas de asociación<br /><br /> Agrupación en clústeres de secuencia|No se usa|La selección de características no se invoca con estos algoritmos.<br /><br /> Sin embargo, se puede controlar el comportamiento del algoritmo y reducir el tamaño de los datos de entrada, si es necesario, al establecer el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.<br /><br /> Para obtener más información, consulte [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) y [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
+|Serie temporal|No se usa|La selección de características no se aplica a los modelos de serie temporal.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).|  
   
 ## <a name="feature-selection-parameters"></a>Parámetros de selección de características  
  En los algoritmos que admiten la selección de características se puede controlar cuándo se encuentra activada dicha selección usando los parámetros siguientes. Cada algoritmo tiene un valor predeterminado para el número de entradas permitidas, pero se puede invalidar este valor y especificar el número de atributos. En esta sección se enumeran los parámetros que se proporcionan para administrar la selección de características.  
   
-#### <a name="maximuminputattributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
+#### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
  Si un modelo contiene más columnas que el número especificado en el parámetro *MAXIMUM_INPUT_ATTRIBUTES* , el algoritmo pasa por alto cualquier columna que determina como no interesante.  
   
-#### <a name="maximumoutputattributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
+#### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  De forma similar, si un modelo contiene más columnas de predicción que el número especificado en el parámetro *MAXIMUM_OUTPUT_ATTRIBUTES* , el algoritmo pasa por alto cualquier columna que determina como no interesante.  
   
-#### <a name="maximumstates"></a>MAXIMUM_STATES  
+#### <a name="maximum_states"></a>MAXIMUM_STATES  
  Si un modelo contiene más casos de los especificados en el parámetro *MAXIMUM_STATES* , los estados con menor popularidad se agrupan y se tratan como estados que faltan. Si alguno de estos parámetros se establece en 0, la selección de características se desactiva. Esto afecta al tiempo de procesamiento y al rendimiento.  
   
  Además de estos métodos para la selección de características, es posible mejorar la capacidad del algoritmo para identificar o promover atributos significativos estableciendo *marcas de modelado* en el modelo o *marcas de distribución* en la estructura. Para más información sobre estos conceptos, vea [Marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md) y [Distribuciones de columnas &#40;minería de datos&#41;](column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Personalizar la estructura y los modelos de minería de datos](customize-mining-models-and-structure.md)  
   
   

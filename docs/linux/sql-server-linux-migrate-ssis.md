@@ -8,16 +8,16 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67943818"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882724"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extracción, transformación y carga de datos en Linux con SSIS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS resuelve problemas de integración de datos complejos mediante la extracción de datos de varios orígenes y formatos, así como la transformación y limpieza de los datos y la carga de datos en varios destinos. 
 
@@ -71,7 +71,7 @@ Hay tres formas de ejecutar un paquete SSIS cifrado con una contraseña:
 
 ## <a name="design-packages"></a>Diseñar paquetes
 
-**Conectarse a orígenes de datos ODBC**. Con SSIS en la actualización de CTP 2.1 de Linux y versiones posteriores, los paquetes SSIS pueden usar conexiones ODBC en Linux. Esta funcionalidad se ha probado con SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador ODBC de Unicode que respete la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; también puede usar la autenticación de Windows. Para obtener más información, consulte [la entrada de blog que anuncia la compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Conectarse a orígenes de datos ODBC**. Con SSIS en la actualización de CTP 2.1 de Linux y versiones posteriores, los paquetes SSIS pueden usar conexiones ODBC en Linux. Esta funcionalidad se ha probado con SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador ODBC de Unicode que respete la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; también puede usar la autenticación de Windows. Para obtener más información, vea [la entrada de blog que anuncia la compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 **Rutas**. Proporcione rutas de estilo Windows en los paquetes SSIS. SSIS en Linux no admite rutas de estilo Linux, sino que asigna rutas de estilo Windows a rutas de estilo Linux en tiempo de ejecución. Después, por ejemplo, SSIS en Linux asigna la ruta de estilo Windows `C:\test` a la ruta de estilo Linux `/test`.
 
@@ -111,7 +111,7 @@ Para más información sobre SSIS, vea los siguientes artículos:
 - [Tutoriales de SQL Server Integration Services](../integration-services/integration-services-tutorials.md)
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
--   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
--   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
--   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)
+-   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

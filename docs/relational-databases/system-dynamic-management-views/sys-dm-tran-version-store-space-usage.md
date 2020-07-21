@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
+title: Sys. dm_tran_version_store_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262660"
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>Sys. dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Devuelve una tabla que muestra el espacio total en tempdb usado por los registros del almacén de versión para cada base de datos. **Sys.dm_tran_version_store_space_usage** es eficaz y económica de ejecutar, ya que no vaya a través de los registros del almacén de versión individual y devuelve agregadas espacio utilizado en tempdb por base de datos del almacén de versión.
+Devuelve una tabla que muestra el espacio total en tempdb utilizado por los registros del almacén de versiones para cada base de datos. **Sys. dm_tran_version_store_space_usage** es eficaz y no es caro de ejecutar, ya que no navega por los registros individuales del almacén de versiones y devuelve el espacio de almacén de versiones agregado consumido en tempdb por base de datos.
   
-Cada registro de versión se almacena como datos binarios, junto con cierta información de estado o seguimiento. Al igual que los registros en tablas de base de datos, los registros del almacén de versiones se almacenan en páginas de 8.192 bytes. Si un registro supera los 8.192 bytes, se dividirá en dos registros diferentes.  
+Cada registro con versión se almacena como datos binarios, junto con algún seguimiento o información de estado. Al igual que los registros en tablas de base de datos, los registros del almacén de versiones se almacenan en páginas de 8.192 bytes. Si un registro supera los 8.192 bytes, se dividirá en dos registros diferentes.  
   
-Puesto que el registro de versiones se almacena como binario, no existen problemas con las diferentes intercalaciones de bases de datos distintas. Use **sys.dm_tran_version_store_space_usage** para supervisar y planear tamaño de tempdb según el uso del espacio de almacén de versión de las bases de datos en una instancia de SQL Server.
+Puesto que el registro de versiones se almacena como binario, no existen problemas con las diferentes intercalaciones de bases de datos distintas. Use **Sys. dm_tran_version_store_space_usage** para supervisar y planear el tamaño de tempdb según el uso del espacio del almacén de versiones de las bases de datos en una instancia de SQL Server.
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Id. de base de datos de la base de datos.|  
-|**reserved_page_count**|**bigint**|Recuento total de las páginas reservadas en tempdb para la versión almacenar registros de la base de datos.|  
-|**reserved_space_kb**|**bigint**|Espacio total usado en kilobytes en tempdb para la versión almacenar registros de la base de datos.|  
+|**database_id**|**int**|IDENTIFICADOR de base de datos de la base de datos.|  
+|**reserved_page_count**|**bigint**|Recuento total de las páginas reservadas en tempdb para los registros de almacén de versiones de la base de datos.|  
+|**reserved_space_kb**|**bigint**|Espacio total utilizado en kilobytes en tempdb para los registros del almacén de versiones de la base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
 
 ## <a name="examples"></a>Ejemplos  
-La consulta siguiente puede utilizarse para determinar el espacio utilizado en tempdb, por almacén de versiones de cada base de datos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia. 
+La siguiente consulta se puede utilizar para determinar el espacio consumido en tempdb, por almacén de versiones de cada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos en una instancia de. 
   
 ```sql  
 SELECT 
@@ -67,7 +67,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

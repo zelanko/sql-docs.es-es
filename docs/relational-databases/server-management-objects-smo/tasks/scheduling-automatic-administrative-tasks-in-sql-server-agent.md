@@ -1,6 +1,6 @@
 ---
-title: Programar tareas administrativas automáticas en Agente SQL Server | Microsoft Docs
-ms.custom: ''
+title: Programar tareas administrativas automáticas en el Agente SQL Server
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,15 +15,14 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MT
+ms.openlocfilehash: 9b455db0d597e4b7affb6da98497ae3638b095e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148326"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005970"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Programar tareas administrativas automáticas en el Agente SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Los objetos siguientes representan al Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en SMO:  
   
@@ -38,9 +37,9 @@ ms.locfileid: "70148326"
  Los objetos del Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se encuentran en el espacio de nombres <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-En el caso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los programas que utilizan el agente, debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
+En el caso de los programas que utilizan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el agente, debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +167,7 @@ $jbsch.Create();
   
  **ObjectName | Nombre de | Instancia de | ComparisionOp | CompValue**  
   
- Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el operador [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] es una palabra clave.  
+ Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el **operador** es una [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palabra clave.  
   
 ```csharp  
 {  
@@ -201,7 +200,7 @@ $jbsch.Create();
   
  **ObjectName | Nombre de | Instancia de | ComparisionOp | CompValue**  
   
- Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el operador [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] es una palabra clave.  
+ Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el **operador** es una [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palabra clave.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,7 +265,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agente SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Implementar trabajos](../../../ssms/agent/implement-jobs.md)  
   

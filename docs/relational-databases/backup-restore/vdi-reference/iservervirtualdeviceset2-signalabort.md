@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b61a972d7b379ff40440124c875d8d49a7af1835
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: ee70ef059e80d9c8a31281ce50f451e7787f637a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847176"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895945"
 ---
 # <a name="iservervirtualdeviceset2signalabort-vdi"></a>IServerVirtualDeviceSet2::SignalAbort (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **SignalAbort** indica que se debe producir una finalización anómala.
 
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::SignalAbort ();
 
 Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de NOERROR indica que la llamada al método se ha realizado correctamente. Un valor distinto de cero indica que se ha producido un error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 En cualquier momento, el servidor puede optar por anular la operación BACKUP o RESTORE.
 

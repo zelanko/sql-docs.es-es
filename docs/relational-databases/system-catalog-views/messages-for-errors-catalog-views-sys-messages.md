@@ -1,5 +1,5 @@
 ---
-title: sys.messages (Transact-SQL) | Microsoft Docs
+title: Sys. Messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,37 +19,37 @@ helpviewer_keywords:
 - sys.messages catalog view
 - error numbers [SQL Server]
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6f54b68f7775910a7e25b858bd7579e751a75b98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127932"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897137"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Vistas de catálogo de mensajes (para errores): sys.messages
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una fila para cada **message_id** o **language_id** los mensajes de error en el sistema, para los mensajes definidos por el usuario y definido por el sistema. Para obtener más información, vea [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
+  Contiene una fila para cada **message_id** o **language_id** de los mensajes de error del sistema, tanto para los mensajes definidos por el sistema como para los definidos por el usuario. Para obtener más información, vea [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|Id. del mensaje. Es único en todo el servidor. Los Id. de mensaje inferiores a 50000 son mensajes del sistema.|  
-|**language_id**|**smallint**|Id. de idioma para el que el texto en **texto** se usa, como se define en **syslanguages**. Debe ser único para un determinado **message_id**.|  
-|**severity**|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25. Esto es lo mismo para todos los idiomas del mensaje un **message_id**.|  
-|**is_event_logged**|**bit**|1 = Cuando hay un error, el mensaje se registra en el registro de eventos. Esto es lo mismo para todos los idiomas del mensaje un **message_id**.|  
-|**texto**|**nvarchar(2048)**|Texto del mensaje utilizado para el correspondiente **language_id** está activo.|  
+|**language_id**|**smallint**|IDENTIFICADOR de idioma para el que se utiliza el texto en el **texto** , tal como se define en **syslanguages**. Es único para un **message_id**especificado.|  
+|**severity**|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25. Es lo mismo para todos los idiomas de los mensajes dentro de un **message_id**.|  
+|**is_event_logged**|**bit**|1 = Cuando hay un error, el mensaje se registra en el registro de eventos. Es lo mismo para todos los idiomas de los mensajes dentro de un **message_id**.|  
+|**text**|**nvarchar(2048)**|Texto del mensaje que se utiliza cuando el **language_id** correspondiente está activo.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Mensajes &#40;errores&#41; vistas de catálogo &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
- [Mensaje de excepción cuadro programación](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
+ [Mensajes &#40;los errores&#41; vistas de catálogo &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
+ [Programación de cuadros de mensajes de excepción](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [Mensajes de error](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [Eventos y errores del motor de base de datos](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
+ [Eventos y errores de Motor de base de datos](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

@@ -10,136 +10,136 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028662"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configuración del proyecto (asignación de tipo) (SybaseToSQL)
-La página de asignación de tipos de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte tipos de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
+La página asignación de tipos del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA convierte los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase Adaptive Server Enterprise (ASE) en tipos de datos.  
   
-Está disponible en la página de asignación de tipos de la **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+La página asignación de tipos está disponible en los cuadros de diálogo **configuración del proyecto** y **configuración predeterminada del proyecto** .  
   
--   Para especificar la configuración de asignación de tipo para todos los proyectos SSMA futuros, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para que la configuración es necesaria para verse o ha cambiado de **versión de destino de migración** lista desplegable y, a continuación, seleccione **Type Mapping** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración de asignación de tipos para todos los proyectos de SSMA futuros, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione tipo de proyecto de migración para el que se deben ver o cambiar los valores de configuración en la lista desplegable de la **versión de destino** de la migración y, a continuación, seleccione **asignación de tipos** en la parte inferior del panel izquierdo.  
   
--   Para especificar la configuración para el proyecto actual, en el **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, seleccione **Type Mapping** en la parte inferior del panel izquierdo.  
+-   Para especificar la configuración del proyecto actual, en el menú **herramientas** , seleccione **configuración del proyecto**y, a continuación, seleccione **asignación de tipos** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Tipo de origen**  
-El tipo de datos asignado de ASE.  
+El tipo de datos ASE asignado.  
   
 **Tipo de destino**  
-El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos para el tipo de datos especificado de ASE.  
+El tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos de destino para el tipo de datos ase especificado.  
   
-Consulte la tabla en la sección siguiente para el valor predeterminado SSMA para Sybase asignación de tipos.  
+Vea la tabla de la siguiente sección para obtener la asignación de tipo de SSMA para Sybase predeterminada.  
   
-**Agregar**  
-Haga clic para agregar un tipo de datos a la lista de asignación.  
+**Add (Agregar)**  
+Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Editar**  
-Haga clic para editar el tipo de datos seleccionado en la lista de asignación.  
+**Edición**  
+Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
-**Quitar**  
-Haga clic para quitar la asignación de tipos de datos seleccionados de la lista de asignación.  
+**Remove**  
+Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 **Valores predeterminados**  
-Haga clic para restablecer la lista de asignación de tipo para los valores predeterminados SSMA.  
+Haga clic en esta opción para restablecer la lista asignación de tipos a los valores predeterminados de SSMA.  
   
 ## <a name="default-type-mapping"></a>Asignación de tipos predeterminados  
-La tabla siguiente contiene la asignación de tipos predeterminada entre ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
+La tabla siguiente contiene la asignación de tipos predeterminada entre ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los tipos de datos.  
   
-|Tipo de datos de ASE|Tipo de datos de SQL Server|  
+|Tipo de datos ASE|Tipo de datos de SQL Server|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
-|**binario**|**binario**|  
-|**binario [\*... 8000]**|**binario [\*]**|  
-|**binario [8001..\*]**|**varbinary(max)**|  
+|**binary**|**binary**|  
+|**binario\*[.. 8000]**|**binario\*[]**|  
+|**binario [8001.\*.]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char varying [\*... 8000]**|**varchar [\*]**|  
-|**char varying [8001..\*]**|**ntext**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**char[8001..\*;]**|**ntext**|  
-|**character**|**char**|  
-|**variable de carácter**|**varchar**|  
-|**variable de carácter [\*... 8000]**|**varchar [\*]**|  
-|**variable de carácter [8001..\*]**|**ntext**|  
-|**caracteres [\*... 8000]**|**char[\*]**|  
-|**character[8001..\*]**|**ntext**|  
+|**char varying [\*.. 8000]**|**VARCHAR [\*]**|  
+|**char varying [8001..\*.]**|**ntext**|  
+|**Char [\*.. 8000]**|**Char [\*]**|  
+|**Char [8001..\*;]**|**ntext**|  
+|**óptico**|**char**|  
+|**variar caracteres**|**varchar**|  
+|**variación de caracteres\*[.. 8000]**|**VARCHAR [\*]**|  
+|**variación de caracteres [8001.\*.]**|**ntext**|  
+|**carácter [\*.. 8000]**|**Char [\*]**|  
+|**carácter [8001..\*]**|**ntext**|  
 |**date**|**date**|  
-|**datetime**|**datetime2[3]**|  
-|**dec**|**decimal**|  
-|**DEC [\*... \*]**|**decimal[\*]**|  
-|**DEC [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
+|**datetime**|**datetime2 [3]**|  
+|**Dec**|**decimal**|  
+|**Dec [\*.. \*]**|**decimal [\*]**|  
+|**Dec [\*.. \*][\*.. \*]**|**decimal [\*] [\*]**|  
 |**decimal**|**decimal**|  
-|**decimal[\*..\*]**|**decimal[\*]**|  
-|**decimal[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**doble precisión**|**float[53]**|  
-|**float**|**float[53]**|  
-|**float [\*... 15]**|**float[24]**|  
-|**float[16..\*]**|**float[53]**|  
+|**decimal [\*.. \*]**|**decimal [\*]**|  
+|**decimal [\*.. \*][\*.. \*]**|**decimal [\*] [\*]**|  
+|**precisión doble**|**Float [53]**|  
+|**float**|**Float [53]**|  
+|**Float [\*.. 4,5**|**Float [24]**|  
+|**Float [16..\*]**|**Float [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
-|**longsysname**|**nvarchar[255]**|  
+|**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**carácter nacional**|**nchar**|  
-|**carácter nacional [\*... 4000]**|**nchar[\*]**|  
-|**variable de Car. nacional**|**nvarchar**|  
-|**National char varying [\*... 4000]**|**nvarchar [\*]**|  
-|**National char varying [4001..\*]**|**nvarchar(max)**|  
-|**carácter nacional [4001..\*]**|**nvarchar(max)**|  
+|**carácter nacional [\*.. 4000]**|**nchar [\*]**|  
+|**National char varying**|**nvarchar**|  
+|**National char varying [\*.. 4000]**|**nvarchar [\*]**|  
+|**National char varying [4001..\*.]**|**nvarchar(max)**|  
+|**National Char [4001..\*.]**|**nvarchar(max)**|  
 |**carácter nacional**|**nchar**|  
-|**carácter nacional [\*... 4000]**|**nchar[\*]**|  
-|**carácter nacional [4001..\*]**|**nvarchar(max)**|  
-|**national character varying de**|**nvarchar**|  
-|**national character varying de [\*... 4000]**|**nvarchar [\*]**|  
-|**national character varying de [4001..\*]**|**nvarchar(max)**|  
-|**varchar nacional**|**nvarchar**|  
-|**National varchar [\*... 4000]**|**nvarchar [\*]**|  
-|**National varchar [4001..\*]**|**nvarchar(max)**|  
+|**carácter nacional [\*.. 4000]**|**nchar [\*]**|  
+|**carácter nacional [4001..\*.]**|**nvarchar(max)**|  
+|**variable de carácter nacional**|**nvarchar**|  
+|**variable Nacional de caracteres\*[.. 4000]**|**nvarchar [\*]**|  
+|**carácter nacional variable [4001..\*.]**|**nvarchar(max)**|  
+|**VARCHAR nacional**|**nvarchar**|  
+|**National VARCHAR [\*.. 4000]**|**nvarchar [\*]**|  
+|**National VARCHAR [4001..\*.]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar varying**|**nvarchar**|  
-|**nchar varying [\*... 4000]**|**nvarchar [\*]**|  
-|**nchar varying [4001..\*]**|**nvarchar(max)**|  
-|**nchar[\*..4000]**|**nchar[\*]**|  
-|**nchar[4001..\*]**|**nvarchar(max)**|  
+|**nchar varying [\*.. 4000]**|**nvarchar [\*]**|  
+|**nchar varying [4001..\*.]**|**nvarchar(max)**|  
+|**nchar [\*.. 4000]**|**nchar [\*]**|  
+|**nchar [4001..\*.]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numérico [\*... \*]**|**numeric[\*]**|  
-|**numérico [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
+|**Numeric [\*.. \*]**|**Numeric [\*]**|  
+|**Numeric [\*.. \*][\*.. \*]**|**Numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar[\*..4000]**|**nvarchar [\*]**|  
-|**nvarchar[4001..\*]**|**nvarchar(max)**|  
-|**real**|**float[24]**|  
+|**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
+|**nvarchar [4001..\*.]**|**nvarchar(max)**|  
+|**real**|**Float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar[128]**|  
-|**sysname [\*... \*]**|**nvarchar[255]**|  
-|**texto**|**texto**|  
-|**time**|**time[3]**|  
+|**sysname**|**nvarchar [128]**|  
+|**sysname [\*.. \*]**|**nvarchar [255]**|  
+|**text**|**text**|  
+|**time**|**hora [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
-|**unichar**|**nchar**|  
-|**variable UNICHAR**|**nvarchar**|  
-|**variable UNICHAR [\*... 4000]**|**nvarchar [\*]**|  
-|**variable UNICHAR [4001..\*]**|**nvarchar(max)**|  
-|**unichar[\*..4000]**|**nchar[\*]**|  
-|**unichar[4001..\*]**|**nvarchar(max)**|  
-|**unitext**|**nvarchar(max)**|  
+|**UNICHAR**|**nchar**|  
+|**variables UNICHAR**|**nvarchar**|  
+|**variables UNICHAR [\*.. 4000]**|**nvarchar [\*]**|  
+|**UNICHAR varying [4001..\*.]**|**nvarchar(max)**|  
+|**UNICHAR [\*.. 4000]**|**nchar [\*]**|  
+|**UNICHAR [4001..\*.]**|**nvarchar(max)**|  
+|**texto unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar[\*..4000]**|**nvarchar [\*]**|  
-|**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**bigint sin signo**|**numeric[20][0]**|  
-|**int sin signo**|**bigint**|  
+|**univarchar [\*.. 4000]**|**nvarchar [\*]**|  
+|**univarchar [4001..\*.]**|**nvarchar(max)**|  
+|**BIGINT sin signo**|**Numeric [20] [0]**|  
+|**unsigned int**|**bigint**|  
 |**smallint sin signo**|**int**|  
 |**tinyint sin signo**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*... 8000]**|**varbinary[\*]**|  
+|**varbinary [\*.. 8000]**|**varbinary [\*]**|  
 |**varbinary [8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*... 8000]**|**varchar [\*]**|  
-|**varchar[8001..\*]**|**ntext**|  
+|**VARCHAR [\*.. 8000]**|**VARCHAR [\*]**|  
+|**VARCHAR [8001..\*]**|**ntext**|  
   

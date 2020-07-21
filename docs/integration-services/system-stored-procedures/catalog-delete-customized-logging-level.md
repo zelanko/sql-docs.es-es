@@ -10,27 +10,23 @@ ms.topic: language-reference
 ms.assetid: 0aec1e34-f30b-4e5f-bba1-c26665cf2da6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b35576dc6a583f21f88547b40bc68ff23644cc72
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b7239a3ce8d5995320c5b5546b38e82e1b9c4282
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295488"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053741"
 ---
 # <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Elimina un nivel de registro personalizado existente. Para obtener más información sobre los niveles de registro personalizados, consulte [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-delete_customized_logging_level [ @level_name = ] level_name  
-  
+catalog.delete_customized_logging_level [ @level_name = ] level_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -39,7 +35,7 @@ delete_customized_logging_level [ @level_name = ] level_name
   
  *level_name* es **nvarchar(128)** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (correcto)  

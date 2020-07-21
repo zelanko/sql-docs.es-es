@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4639ac643e1a7650a55ad9415b3ebd5f02d4388
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 3c64f4f9f9ce8af6f7626e6da0c3bbabb10084e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880347"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita un objeto de especificación de auditoría de servidor usando la característica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "70745343"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DROP SERVER AUDIT SPECIFICATION audit_specification_name  
 [ ; ]  
@@ -45,7 +45,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nombre de un objeto de especificación de auditoría de servidor existente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una instrucción DROP SERVER AUDIT SPECIFICATION quita los metadatos de la especificación de auditoría, pero no los datos de auditoría recopilados antes de la emisión del comando DROP. Para poder quitarlos, primero se debe establecer el estado de una especificación de auditoría de servidor en OFF usando la instrucción ALTER SERVER AUDIT SPECIFICATION.  
   
 ## <a name="permissions"></a>Permisos  

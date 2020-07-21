@@ -1,5 +1,5 @@
 ---
-title: 'Lección 10: Definir roles administrativos | Microsoft Docs'
+title: 'Lección 10: definir roles administrativos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: c1a68d36c46d4d3b25bdb75736679d355051f003
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543577"
 ---
-# <a name="lesson-10-defining-administrative-roles"></a>Lección 10: Definición de roles administrativos
+# <a name="lesson-10-defining-administrative-roles"></a>Lección 10: definir roles administrativos
   En esta lección, aprenderá a definir roles de seguridad para tareas administrativas.  
   
 > [!NOTE]  
@@ -28,7 +27,7 @@ ms.locfileid: "69530872"
  [Conceder permisos Procesar base de datos](lesson-10-granting-process-database-permissions.md)  
  En esta tarea, definirá un rol de seguridad que tiene permisos para procesar la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, probará dicho rol de seguridad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   
  [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   

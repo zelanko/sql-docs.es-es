@@ -1,5 +1,5 @@
 ---
-title: Destino de búfer de anillo | Microsoft Docs
+title: Destino de búfer en anillo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 186e847bb9f9b621543119c25510dc5d6107e274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929447"
 ---
 # <a name="ring-buffer-target"></a>Destino de búfer de anillo
   El destino de búfer de anillo guarda datos de eventos en la memoria durante un corto espacio de tiempo. Este destino puede administrar los eventos de uno de los dos modos siguientes.  
@@ -31,9 +30,9 @@ ms.locfileid: "66088958"
   
 |Opción|Valores permitidos|Descripción|  
 |------------|--------------------|-----------------|  
-|max_memory|Cualquier entero de 32 bits. Este valor es opcional.|La cantidad de memoria máxima en kilobytes (kB) que se va a usar. Los eventos existentes se quitan en función del límite que se alcance primero: max_event_limit o max_memory. El valor máximo es 4194303 KB. Una consideración cuidadosa debe realizarse antes de establecer el tamaño del búfer de anillo en los límites del intervalo de GB, ya que puede afectar a otros consumidores de memoria en SQL Server|  
+|max_memory|Cualquier entero de 32 bits. Este valor es opcional.|La cantidad de memoria máxima en kilobytes (kB) que se va a usar. Los eventos existentes se quitan en función del límite que se alcance primero: max_event_limit o max_memory. El valor máximo es 4194303 KB. Antes de establecer el tamaño del búfer de anillo en límites en el intervalo de GB, se debe tener en cuenta una consideración cuidadosa, ya que puede afectar a otros consumidores de memoria en SQL Server|  
 |max_event_limit|Cualquier entero de 32 bits. Este valor es opcional.|El número máximo de eventos que se mantiene en el búfer en anillo. Los eventos existentes se quitan en función del límite que se alcance primero: max_event_limit o max_memory. Valor predeterminado = 1000.|  
-|occurrence_number|Los valores pueden ser los siguientes:<br /><br /> 0 (valor predeterminado) = El evento más antiguo se descarta cuando se usa toda la memoria asignada al destino.<br /><br /> Cualquier entero de 32 bits = el número de eventos de cada tipo que se conserva antes de descartarse siguiendo un orden FIFO por evento.<br /><br /> <br /><br /> Este valor es opcional.|Modo FIFO que se va a usar y, si se establece en un valor mayor que 0, el número preferido de eventos de cada tipo que se desea conservar en el búfer.|
+|occurrence_number|Uno de los siguientes valores:<br /><br /> 0 (valor predeterminado) = El evento más antiguo se descarta cuando se usa toda la memoria asignada al destino.<br /><br /> Cualquier entero de 32 bits = el número de eventos de cada tipo que se conservarán antes de que se descarten por cada FIFO.<br /><br /> <br /><br /> Este valor es opcional.|Modo FIFO que se va a usar y, si se establece en un valor mayor que 0, el número preferido de eventos de cada tipo que se desea conservar en el búfer.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
@@ -74,7 +73,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

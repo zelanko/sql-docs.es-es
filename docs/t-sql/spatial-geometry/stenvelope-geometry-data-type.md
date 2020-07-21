@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 781d22e9-38df-4c23-836f-6dd0bdef49c5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: de184826e93903629679c273b226cb1e143f850e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c2d8650f5a0ab1f8fe30569f9f5a096cf006605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762519"
 ---
 # <a name="stenvelope-geometry-data-type"></a>STEnvelope (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el rectángulo delimitador mínimo alineado con el eje de la instancia.
   
@@ -36,7 +36,7 @@ Devuelve el rectángulo delimitador mínimo alineado con el eje de la instancia.
 STEnvelope ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  

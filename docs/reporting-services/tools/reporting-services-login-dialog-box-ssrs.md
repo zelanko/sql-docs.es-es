@@ -1,5 +1,5 @@
 ---
-title: Inicio de sesión de Reporting Services (cuadro de diálogo de SSRS) | Microsoft Docs
+title: Cuadro de diálogo de inicio de sesión de Reporting Services | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25d2741a8449875852c733aa763322011834a6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 3d60450f0f4c7feb7d6a00f66fcedeb89c764bf5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581279"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082172"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Inicio de sesión de Reporting Services (cuadro de diálogo de SSRS)
   Utilice el cuadro de diálogo **Inicio de sesión de Reporting Services** para proporcionar credenciales para publicar informes en el servidor de informes.  
@@ -26,14 +26,14 @@ ms.locfileid: "65581279"
  **Server**  
  Muestra el nombre del servidor de informes. Por ejemplo, `https://localhost/reportserver`. Si los servidores de informes usan un puerto distinto del predeterminado, el puerto 80, incluya el número de puerto. Por ejemplo, `https://localhost:81/reportserver`.  
   
- **User name**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario con el que iniciar sesión en el servicio web.  
   
  **Contraseña**  
  Escriba la contraseña con la que iniciar sesión en el servicio web.  
   
 ## <a name="see-also"></a>Consulte también  
- [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Diseñador de informes (Ayuda F1)](../../reporting-services/tools/report-designer-f1-help.md)  
   

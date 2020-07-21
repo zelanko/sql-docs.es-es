@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98069f3b907d923a7eeca295b1c2a0d983c2edc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbe5407948691ebe8d551e274e9ed29ace96350c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974558"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927114"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>Método setClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public final void setClob(java.lang.String parameterName,
   
  *value*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
  *length*  
   
@@ -47,7 +47,7 @@ public final void setClob(java.lang.String parameterName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setClob especifica este método setClob en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

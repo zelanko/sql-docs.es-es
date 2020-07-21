@@ -1,5 +1,5 @@
 ---
-title: Origen de datos de la página de selección (Administrador de informes) | Microsoft Docs
+title: Página selección de origen de datos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109438"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Selección de origen de datos (página del Administrador de informes)
@@ -45,11 +45,11 @@ ms.locfileid: "66109438"
  **Aceptar**  
  Haga clic en Aceptar para copiar la selección de origen de datos en la página de propiedades Orígenes de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Página de propiedades orígenes de datos &#40;Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [Nueva página de origen de datos &#40;Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571129"
 ---
 # <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)
@@ -68,6 +68,6 @@ ms.locfileid: "65571129"
 ## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Administración de un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

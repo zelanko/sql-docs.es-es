@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 1: Definir una directiva de coincidencia | Microsoft Docs'
+title: 'Tarea 1: definir una directiva de coincidencia | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,63 +9,62 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064838"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarea 1: Definición de una directiva de coincidencia
-  En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Nombre de proveedor** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con **similitud** valor establecido en **30%** .  
+  En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **ID. de proveedor**, lo que significa que los identificadores de proveedor deben coincidir antes de usar los demás dominios de la regla. La regla usa otros dos dominios: el **nombre del proveedor con el** valor de **similitud** establecido en **70%** y el **correo electrónico de contacto** con el valor de **similitud** establecido en **30%**.  
   
-1.  En la página principal de **cliente DQS**, haga clic en **flecha derecha** junto a **proveedores** knowledge base y, a continuación, seleccione **directiva de coincidencia**.  
+1.  En la Página principal del **cliente DQS**, haga clic en la **flecha a la derecha** junto a la base de conocimiento **proveedores** y seleccione **Directiva de coincidencia**.  
   
-     ![Menú principal de directiva de coincidencia página](../../2014/tutorials/media/et-definingamatchingpolicy-01.jpg "menú principal de directiva de coincidencia página")  
+     ![Menú Directiva de coincidencia en la página principal](../../2014/tutorials/media/et-definingamatchingpolicy-01.jpg "Menú Directiva de coincidencia en la página principal")  
   
-2.  En el **mapa** página, seleccione **archivo de Excel** para **origen de datos**.  
+2.  En la página **asignación** , seleccione **archivo de Excel** como **origen de datos**.  
   
-3.  Haga clic en **examinar**, asegúrese de que el filtro se establece en **libro de Excel**y seleccione **Cleansed Supplier List.xls** que exportó cuando realizó la actividad de limpieza de archivos.  
+3.  Haga clic en **examinar**, asegúrese de que filtro está establecido en **libro de Excel**y, a continuación, seleccione **proveedor limpiado List.xls** archivo que exportó después de realizar la actividad de limpieza.  
   
     > [!NOTE]  
     >  Al final de esta actividad, no puede exportar los resultados porque esta actividad se centra principalmente en la definición de una directiva de coincidencia. En la próxima lección creará un proyecto de calidad de datos para la actividad de coincidencia y lo ejecutará para quitar duplicados de la lista de proveedores usando esta directiva de coincidencia.  
   
-4.  Mapa **SupplierID** columna **Id. de proveedor** dominio, **Supplier Name** columna **Supplier Name** dominio,  **ContactEmailAddress** columna **correo electrónico de contacto** dominio. Solo necesita asignar columnas de origen a los dominios que desee usar en la definición de la directiva de coincidencia. En este caso, está haciendo que los dominios Id. de proveedor, Nombre de proveedor y Correo electrónico de contacto estén disponibles para la actividad de directiva de coincidencia.  
+4.  Asigne la columna **SupplierID** al dominio **ID. de proveedor** , la columna **nombre de proveedor** al dominio nombre de **proveedor** , la columna **ContactEmailAddress** al dominio **correo electrónico de contacto** . Solo necesita asignar columnas de origen a los dominios que desee usar en la definición de la directiva de coincidencia. En este caso, está haciendo que los dominios Id. de proveedor, Nombre de proveedor y Correo electrónico de contacto estén disponibles para la actividad de directiva de coincidencia.  
   
-     ![Asignar la página del proceso de definición de directiva de coincidencia](../../2014/tutorials/media/et-definingamatchingpolicy-02.jpg "asignar la página del proceso de definición de directiva de coincidencia")  
+     ![Asignar página de Proceso de definición de la directiva de coincidencia](../../2014/tutorials/media/et-definingamatchingpolicy-02.jpg "Asignar página de Proceso de definición de la directiva de coincidencia")  
   
-5.  Haga clic en **siguiente** para mover a la **directiva de coincidencia** página donde definirá una directiva de coincidencia con una regla en ella.  
+5.  Haga clic en **siguiente** para ir a la página **Directiva de coincidencia** , donde definirá una directiva de coincidencia con una regla.  
   
-6.  Haga clic en **crear una regla de coincidencia** en la barra de herramientas para crear una regla en la directiva.  
+6.  Haga clic en el botón **crear una regla de coincidencia** en la barra de herramientas para crear una regla en la Directiva.  
   
-     ![Crear un botón de barra de herramientas de regla coincidente](../../2014/tutorials/media/et-definingamatchingpolicy-03.jpg "crear un botón de barra de herramientas de regla coincidente")  
+     ![Botón de la barra de herramientas Crear una regla de coincidencia](../../2014/tutorials/media/et-definingamatchingpolicy-03.jpg "Botón de la barra de herramientas Crear una regla de coincidencia")  
   
-7.  En el **detalles de la regla** panel de la derecha, escriba **quitar proveedores duplicados** para el **nombre de la regla**.  
+7.  En el panel Detalles de la **regla** de la derecha, escriba **quitar proveedores duplicados** para el nombre de la **regla**.  
   
-8.  Haga clic en **agregar un nuevo elemento de dominio** en la barra de herramientas en el panel derecho.  
+8.  Haga clic en **Agregar un nuevo elemento de dominio** en la barra de herramientas del panel derecho.  
   
-     ![Regla detalles - agregar un nuevo botón de elemento de dominio](../../2014/tutorials/media/et-definingamatchingpolicy-04.jpg "regla detalles - agregar un nuevo botón de elemento de dominio")  
+     ![Detalles de la regla - Botón Agregar un nuevo elemento de dominio](../../2014/tutorials/media/et-definingamatchingpolicy-04.jpg "Detalles de la regla - Botón Agregar un nuevo elemento de dominio")  
   
-9. Seleccione **Id. de proveedor** para el **dominio** y seleccione el **requisitos previos** casilla de verificación. Tenga en cuenta que **similitud** se establece automáticamente en **Exact**. Estableciendo **Id. de proveedor** como el **requisitos previos**, especifica que los valores para este campo en los dos registros deben devolver una coincidencia del 100%, de lo contrario, los registros no se consideran una coincidencia y las demás cláusulas de la regla no se devuelven.  
+9. Seleccione **ID** . de proveedor para el **dominio** y active la casilla **requisito previo** . Observe que la **similitud** se establece automáticamente en **Exact**. Al establecer el **identificador de proveedor** como **requisito previo**, se especifica que los valores de este campo en los dos registros deben devolver una coincidencia del 100%; de lo contrario, los registros no se consideran una coincidencia y las demás cláusulas de la regla no se tienen en cuenta.  
   
-     ![Quite la definición de regla de proveedores duplicados](../../2014/tutorials/media/et-definingamatchingpolicy-05.jpg "quitar proveedores duplicados definición de regla")  
+     ![Eliminar la definición de regla de proveedores duplicados](../../2014/tutorials/media/et-definingamatchingpolicy-05.jpg "Eliminar la definición de regla de proveedores duplicados")  
   
-10. Haga clic en **agregar un nuevo elemento de dominio** desde la barra de herramientas.  
+10. Haga clic de nuevo en **Agregar un nuevo elemento de dominio** de la barra de herramientas.  
   
-11. Seleccione **Supplier Name** dominio, seleccione **Similar** para **similitud**y el tipo **70** para el **peso**.  Aquí, está especificando que los nombres de proveedor no deben ser idénticos, sino que pueden ser similares, para que los registros se consideren una coincidencia. La ponderación indica la contribución de puntuación de este campo a la puntuación de coincidencia total.  
+11. Seleccione **proveedor nombre** dominio, seleccione **similar** para **similitud**y escriba **70** para el **peso**.  Aquí, está especificando que los nombres de proveedor no deben ser idénticos, sino que pueden ser similares, para que los registros se consideren una coincidencia. La ponderación indica la contribución de la puntuación de este campo a la puntuación de coincidencia total.  
   
-12. Repita los dos pasos anteriores para agregar **correo electrónico de contacto** dominio con **30** para el **peso**.  
+12. Repita los dos pasos anteriores para agregar el dominio de **correo electrónico de contacto** con **30** para el **peso**.  
   
-13. Tenga en cuenta que el **min puntuación de coincidencia** está establecido en **80%** , que es el valor que aparece en el **General** pestaña de la **configuración** página de **Administración de DQS**. Solo puede aumentar esta puntuación por encima de este valor de umbral aquí.  
+13. Observe que la **puntuación de coincidencia mínima** está establecida en **80%**, que es el valor que se ve en la pestaña **General** de la página **configuración** de **Administración de DQS**. Solo puede aumentar esta puntuación por encima de este valor de umbral aquí.  
   
-14. Tenga en cuenta que **clústeres superpuestos** está seleccionada. Con esta opción, un registro puede aparecer en varios clústeres. Si cambia el valor a Clústeres no superpuestos, los clústeres que tienen registros comunes se combinan en un único clúster.  
+14. Observe que la opción **clústeres superpuestos** está seleccionada. Con esta opción, un registro puede aparecer en varios clústeres. Si cambia el valor a Clústeres no superpuestos, los clústeres que tienen registros comunes se combinan en un único clúster.  
   
-15. El **iniciar** botón en esta página le permite probar cada regla en la directiva por separado, mientras que el botón de inicio en la página siguiente permite probar directiva completa (todas las reglas de la directiva).  
+15. El botón **Inicio** de esta página le permite probar cada regla de la Directiva por separado, mientras que el botón iniciar de la página siguiente le permite probar toda la Directiva (todas las reglas de la Directiva).  
   
-16. Haga clic en **siguiente** para cambiar a la **resultados coincidentes** página.  
+16. Haga clic en **siguiente** para cambiar a la página **resultados de búsqueda de coincidencias** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 2: Probar y publicar la directiva de coincidencia](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 2: Prueba y publicación de la directiva de coincidencia](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

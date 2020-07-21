@@ -1,10 +1,9 @@
 ---
-title: Propiedades de tabla (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de tabla
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b53bed28d05d490b9b6d603260917f7ffbb4d047
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261575"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242180"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ Se expande para mostrar las propiedades de **(Tipo de espacio de datos)** , **No
 **(Tipo de espacio de datos)**  
 Indica si la tabla se almacena utilizando un grupo de archivos o un esquema de partición.  
   
-**Nombre de esquema de partición o grupo de archivos**  
+**Nombre de esquema de partición o grupo de archivo**  
 Muestra el nombre del grupo de archivos o esquema de partición.  
   
 **Lista de columnas de particiones**  
@@ -84,5 +85,5 @@ Muestra la columna utilizada por Microsoft SQL Server como columna ROWGUID de la
 Proporciona una lista desplegable en la que se puede elegir el grupo de archivos para columnas que tienen tipos de datos text o image. Si la tabla se almacena utilizando un esquema de partición, deje este campo en blanco.  
   
 ## <a name="see-also"></a>Consulte también  
-[Diseñar tablas (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[Diseñar tablas](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

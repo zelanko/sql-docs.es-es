@@ -1,6 +1,6 @@
 ---
-title: Copiar elementos de una solución | Microsoft Docs
-ms.custom: ''
+title: Copiar elementos de una solución
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aae60868de366c26af77c3f52906f23280177969
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0967c82b537bb733bce8933f379320ceb37511d8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258297"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251949"
 ---
 # <a name="copy-items-in-a-solution"></a>Copiar elementos de una solución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

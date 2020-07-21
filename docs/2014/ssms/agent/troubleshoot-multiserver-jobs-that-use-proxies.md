@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19de975ef5e1f22c93cec72a5014a01da5b03dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067465"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Solucionar problemas de trabajos multiservidor que usan servidores proxy
   Los trabajos distribuidos que tienen pasos asociados a un proxy se ejecutan en el contexto de la cuenta de proxy del servidor de destino. Si se producen errores en los pasos de trabajo que utilizan cuentas de proxy cuando se descargan desde el servidor maestro, busque en la columna **error_message** de la tabla **sysdownloadlist** de la base de datos **msdb** los siguientes mensajes de error:  
   
 -   "Este trabajo requiere una cuenta de proxy, pero la coincidencia de proxy se ha deshabilitado en el servidor de destino."  
   
-     Para solucionar este error, establezca la subclave del registro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** en **1 (true)** . De forma predeterminada, esta subclave está establecida en **0** (`false`). El valor de **MSSQL.** \<*n*> es el nombre de la instancia; por ejemplo, **MSSQL.1** o **MSSQL.3**.  
+     Para resolver este error, establezca el valor de **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\Mssql.** _ \<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** la subclave del registro en **1 (true)**. De forma predeterminada, esta subclave se establece en **0** ( `false` ). El valor de **MSSQL.**\<*n*> es el nombre de la instancia; por ejemplo, **MSSQL. 1** o **MSSQL. 3**.  
   
 -   "No se encontró el proxy".  
   
@@ -34,7 +33,7 @@ ms.locfileid: "63245421"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un entorno multiservidor](create-a-multiserver-environment.md)  
   
   

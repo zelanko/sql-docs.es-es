@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69a0a462f4c265e6992f27286377f7bcaa3b2dad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6354ca6d5326e4b38e18f38be3b6e5095ad8d1b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749646"
 ---
 # <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina una referencia de entorno de un proyecto en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-delete_environment_reference [ @reference_id = ] reference_id  
+catalog.delete_environment_reference [ @reference_id = ] reference_id  
 ```  
   
 ## <a name="arguments"></a>Argumentos  

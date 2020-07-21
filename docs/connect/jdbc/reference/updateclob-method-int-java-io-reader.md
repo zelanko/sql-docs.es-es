@@ -1,5 +1,5 @@
 ---
-title: Método updateClob (int, Java. IO. Reader) | Microsoft Docs
+title: Método updateClob (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: df60fbf1-44b2-4658-84a5-5cb129ce2dc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4aebc496766fbf8358e7e18004cd74779cbbfafa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fc006e494fa6e1c4d667daaf17b89945502cac3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996636"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919926"
 ---
 # <a name="updateclob-method-int-javaioreader"></a>Método updateClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,16 +33,16 @@ public void updateClob(int columnIndex,
 #### <a name="parameters"></a>Parámetros  
  *columnIndex*  
   
- Valor **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *reader*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateClob especifica este método updateClob en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1177449ee7828c86c6d7803d5052b9d6e95c24ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62911483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064268"
 ---
 # <a name="named-pipes-properties"></a>Propiedades de Canalizaciones con nombre
   Utilice la página **Protocolo**del cuadro de diálogo **Named Pipes Properties** (Propiedades de canalizaciones con nombre) para ver o cambiar la canalización con nombre que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha, cuando se utiliza el protocolo Canalizaciones con nombre.  
@@ -29,7 +28,7 @@ ms.locfileid: "62911483"
   
 ## <a name="options"></a>Opciones  
  **Enabled**  
- Los valores posibles **Yes** y **No**.  
+ Los valores posibles son **Yes** y **No**.  
   
  **Nombre de canalización**  
  Especifica la canalización con nombre en la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha. De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en: `\\.\pipe\sql\query` para la instancia predeterminada y `\\.\pipe\MSSQL$<instancename>\sql\query` para una instancia con nombre. Este campo tiene un límite de 2.047 caracteres.  
@@ -42,7 +41,7 @@ ms.locfileid: "62911483"
   
  Escriba **\\\\.\pipe\acct** para escuchar en la canalización **acct** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Crear una cadena de conexión válida con canalizaciones con nombre](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  

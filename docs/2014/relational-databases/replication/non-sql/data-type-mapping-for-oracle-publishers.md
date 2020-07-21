@@ -13,50 +13,49 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b143b0a96045bd9d442beb225047d674c569c92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005374"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
-  Los tipos de datos de Oracle y de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no siempre coinciden de forma exacta. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
+  Los tipos de datos de Oracle y los de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no siempre coinciden exactamente. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
   
  En la siguiente tabla se muestra cómo se asignan los tipos de datos de manera predeterminada entre Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando se mueven datos del publicador de Oracle al distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La columna Alternativas indica si existen asignaciones alternativas disponibles.  
   
-|Tipo de datos de Oracle|Tipo de datos de SQL Server|Alternativas|  
+|Tipo de datos de Oracle|Tipos de datos de SQL Server|Alternativas|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|Sí|  
 |BLOB|VARBINARY(MAX)|Sí|  
 |CHAR([1-2000])|CHAR([1-2000])|Sí|  
 |CLOB|VARCHAR(MAX)|Sí|  
 |DATE|DATETIME|Sí|  
-|FLOAT|FLOAT|Sin |  
-|FLOAT([1-53])|FLOAT([1-53])|Sin |  
+|FLOAT|FLOAT|No|  
+|FLOAT([1-53])|FLOAT([1-53])|No|  
 |FLOAT([54-126])|FLOAT|No|  
 |INT|NUMERIC(38)|Sí|  
 |INTERVAL|DATETIME|Sí|  
 |LONG|VARCHAR(MAX)|Sí|  
-|LONG RAW|IMAGE|Sí|  
-|NCHAR([1-1000])|NCHAR([1-1000])|Sin |  
+|LONG RAW|IMAGEN|Sí|  
+|NCHAR([1-1000])|NCHAR([1-1000])|No|  
 |NCLOB|NVARCHAR(MAX)|Sí|  
 |NUMBER|FLOAT|Sí|  
-|NUMBER([1-38])|NUMERIC([1-38])|Sin |  
+|NUMBER([1-38])|NUMERIC([1-38])|No|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sí|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
 |RAW([1-2000])|VARBINARY([1-2000])|No|  
-|REAL|FLOAT|Sin |  
-|ROWID|CHAR(18)|Sin |  
+|real|FLOAT|No|  
+|ROWID|CHAR(18)|No|  
 |timestamp|DATETIME|Sí|  
 |MARCA DE TIEMPO(0-7)|DATETIME|Sí|  
 |TIMESTAMP(8-9)|DATETIME|Sí|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|Sin |  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|No|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sin |  
-|UROWID|CHAR(18)|Sin |  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|No|  
+|UROWID|CHAR(18)|No|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sí|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Consideraciones para la asignación de tipos de datos  
@@ -65,7 +64,7 @@ ms.locfileid: "63022643"
 ### <a name="unsupported-data-types"></a>Tipos de datos no compatibles  
  Los siguientes tipos de datos no son compatibles; las columnas que tienen estos tipos de datos no se pueden replicar:  
   
--   Tipos de objetos  
+-   Tipos de objeto  
   
 -   Tipos XML  
   
@@ -81,7 +80,7 @@ ms.locfileid: "63022643"
 ### <a name="float-and-number-types"></a>Tipos FLOAT y NUMBER  
  La escala y precisión especificadas durante la asignación de tipos de datos FLOAT y NUMBER depende de la escala y precisión especificadas para la columna mediante el tipo de datos de la base de datos de Oracle. La precisión es el número de dígitos de un número. La escala es el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una precisión de 5 y una escala de 2.  
   
- Oracle permite que se definan números con una escala mayor que la precisión, como NUMBER(4,5), pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que la precisión sea igual o mayor que la escala. Para garantizar que no hay ningún truncamiento de datos, si la escala es mayor que la precisión en el publicador de Oracle, la precisión se establece igual que la escala cuando se asigna el tipo de datos: Number (4,5) se asignaría como numeric (5,5).  
+ Oracle permite que se definan números con una escala mayor que la precisión, como NUMBER(4,5), pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere que la precisión sea igual o mayor que la escala. Para garantizar que no hay truncamiento de datos, si la escala es mayor que la precisión en el publicador de Oracle, se define la precisión para que sea igual a la escala al asignar el tipo de datos: NUMBER(4,5) se asignaría como NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Si no se especifica una escala y una precisión para NUMBER, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza de forma predeterminada la escala (8) y precisión (38) máximas. Recomendamos definir una escala y precisión específicas en Oracle para mejorar el almacenamiento y el rendimiento al replicar los datos.  
@@ -104,7 +103,7 @@ ms.locfileid: "63022643"
   
  Para especificar asignaciones de datos alternativas, vea [Especificar asignaciones de tipos de datos para un publicador de Oracle](../publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   
  [Consideraciones y limitaciones de diseño de los publicadores de Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Información general de la publicación de Oracle](oracle-publishing-overview.md)  

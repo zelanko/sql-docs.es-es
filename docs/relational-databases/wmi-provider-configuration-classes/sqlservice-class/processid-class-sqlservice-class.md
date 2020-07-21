@@ -1,6 +1,6 @@
 ---
-title: Clase ProcessId (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: ProcessId (clase) (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d6e523c7f0037c027cafc27651cd131614c314c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 226530ebb5347ab2ace2804fc8e293d1c5899793
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120001"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888389"
 ---
 # <a name="processid-class-sqlservice-class"></a>Clase ProcessId (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el id. del proceso del sistema que identifica un servicio de forma inequívoca.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -40,7 +40,7 @@ object.ProcessId [= value]
  Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Un **uint32** valor que especifica el Id. que identifica el proceso.  
+ Valor **UInt32** que especifica el identificador que identifica de forma única el proceso.  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -50,7 +50,7 @@ object.ProcessId [= value]
 mysqlservice.ProcessId = 324  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

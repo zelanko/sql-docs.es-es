@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100885"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100885"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
 ## <a name="e-mail-delivery-options"></a>Opciones de entrega por correo electrónico  
  La entrega por correo electrónico del servidor de informes puede entregar informes de las siguientes maneras:  
@@ -37,9 +37,9 @@ ms.locfileid: "66100885"
   
 -   Enviar una notificación en la línea Asunto: de un mensaje de correo electrónico. De forma predeterminada, la línea Asunto: de la definición de suscripción incluye las variables siguientes que se reemplazan con información específica del informe cuando se procesa la suscripción:  
   
-     **@ReportName** especifica el nombre del informe.  
+     **@ReportName**especifica el nombre del informe.  
   
-     **@ExecutionTime** especifica cuándo se ejecutó el informe.  
+     **@ExecutionTime**Especifica cuándo se ejecutó el informe.  
   
      Puede combinar estas variables con texto estático o modificar el texto de la línea Asunto: para cada suscripción.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66100885"
   
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no comprueba el tamaño de los datos adjuntos ni del mensaje antes de enviar el informe. Si los datos adjuntos o el mensaje superan el límite máximo permitido por el servidor de correo, el informe no se entrega. Elija una de las otras opciones de entrega (como dirección URL o notificación) si el informe es de gran tamaño.  
   
- Establezca las opciones de entrega que determinarán cómo se entrega un informe al crear la suscripción. Por ejemplo, si selecciona **Incluir vínculo** en la suscripción, el mensaje de correo electrónico incluye un hipervínculo al informe.  
+ Establezca las opciones de entrega que determinarán cómo se entrega un informe al crear la suscripción. Por ejemplo, si selecciona **Incluir vínculo** en la suscripción, en el mensaje de correo se incluirá un hipervínculo al informe.  
   
 ## <a name="role-based-e-mail-settings"></a>Configuración de correo electrónico basado en roles  
  Cuando se suscriba a un informe, la configuración de entrega por correo electrónico con la que trabaje variará en función de que su rol incluya la tarea "Administrar suscripciones individuales" o la tarea "Administrar todas las suscripciones".  
@@ -71,18 +71,18 @@ ms.locfileid: "66100885"
   
  Para obtener información sobre cómo configurar un servidor de informes en modo nativo, vea lo siguiente:  
   
--   [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [Configurar un servidor de informes para la entrega por correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [Configuración - Administrador de configuración de correo electrónico &#40;modo nativo de SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Configuración de correo electrónico: Configuration Manager &#40;modo nativo de SSRS&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  Para obtener información sobre cómo configurar un servidor de informes en modo de SharePoint, vea lo siguiente:  
   
 -   [Configurar el correo electrónico para una aplicación de servicio de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y permisos](../security/tasks-and-permissions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Suscripciones controladas por datos](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Asignaciones de roles](../security/role-assignments.md)  
   
   

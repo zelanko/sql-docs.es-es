@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005396"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar un publicador de Oracle
   Las publicaciones de publicadores de Oracle se crean de la misma forma que las publicaciones de instantáneas y transaccionales típicas, pero antes de crear una publicación desde un publicador de Oracle, debe completar los siguientes pasos (los pasos uno, tres y cuatro se describen con todo detalle en este tema):  
@@ -26,22 +25,22 @@ ms.locfileid: "63022594"
   
 2.  En las tablas que publique, conceda permiso SELECT directamente en cada una de ellas (no mediante un rol) al usuario administrativo de Oracle que ha creado en el paso uno.  
   
-3.  Instale el software de cliente de Oracle y el proveedor OLE DB en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si el distribuidor se ejecuta en una plataforma de 64 bits, debe utilizar la versión de 64 bits del proveedor OLE DB de Oracle.  
+3.  Instale el software cliente de Oracle y el proveedor OLE DB en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y luego detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si el distribuidor se ejecuta en una plataforma de 64 bits, debe utilizar la versión de 64 bits del proveedor OLE DB de Oracle.  
   
 4.  Configure la base de datos de Oracle como un publicador en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Para obtener una lista de objetos que se pueden replicar desde una base de datos de Oracle, vea [Consideraciones y limitaciones de diseño de los publicadores de Oracle](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
->  Debe ser miembro del rol fijo de servidor **sysadmin** para habilitar un publicador o distribuidor y para crear una publicación de Oracle o una suscripción desde una publicación de Oracle.  
+>   Debe ser miembro del rol fijo de servidor **sysadmin** para habilitar un publicador o distribuidor y para crear una publicación de Oracle o una suscripción desde una publicación de Oracle.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Crear el esquema de usuario administrativo de replicación dentro de la base de datos de Oracle  
- Los agentes de replicación se conectan a la base de datos de Oracle y realizan operaciones en el contexto del esquema de usuario que debe crear. A este esquema deben concederse diversos permisos, que se enumeran en la sección siguiente. Este esquema es propietario de todos los objetos creados por el proceso de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el publicador de Oracle, excepto de un sinónimo público, **MSSQLSERVERDISTRIBUTOR**. Para obtener más información sobre los objetos creados en la base de datos de Oracle, vea [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
+ Los agentes de replicación se conectan a la base de datos de Oracle y realizan operaciones en el contexto del esquema de usuario que debe crear. A este esquema deben concederse diversos permisos, que se enumeran en la sección siguiente. Este esquema es propietario de todos los objetos creados por el proceso de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el publicador de Oracle, excepto un sinónimo público, **MSSQLSERVERDISTRIBUTOR**. Para obtener más información sobre los objetos creados en la base de datos de Oracle, vea [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
->  Al quitar el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** se quitan todos los objetos de replicación del publicador de Oracle.  
+>   Al quitar el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** se quitan todos los objetos de replicación del publicador de Oracle.  
   
- Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el directorio siguiente después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidad>* :\\\Archivos de programa\Microsoft SQL Server\\ *\<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. También está incluido en el tema [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
+ Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el siguiente directorio después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<drive>* : \\ \Archivos de programa\Microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.SQL. También está incluido en el tema [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
  Conéctese a la base de datos de Oracle utilizando una cuenta con privilegios DBA y ejecute el script. Este script solicita el nombre usuario y la contraseña del esquema de usuario administrativo de replicación y también el espacio de tablas predeterminado donde crear los objetos (el espacio de tablas debe existir en la base de datos de Oracle). Para información sobre cómo especificar otros espacios de tablas para objetos, vea [Administrar espacios de tabla de Oracle](manage-oracle-tablespaces.md). Elija un nombre de usuario y una contraseña segura, pero anótelos porque esta información se le pedirá más tarde al configurar la base de datos de Oracle como un publicador. Se recomienda utilizar el esquema solo para los objetos requeridos por la replicación; no cree tablas para publicarlas en este esquema.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "63022594"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Por ejemplo, `sqlplus replication/$tr0ngPasswerd@Oracle90Server`.  
+     Por ejemplo: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  Si la configuración de red es correcta, se iniciará la sesión y verá el símbolo de `SQL` .  
   
@@ -122,16 +121,16 @@ ms.locfileid: "63022594"
 > [!NOTE]  
 >  Un publicador de Oracle no puede tener el mismo nombre que su distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni el mismo nombre que ninguno de los publicadores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilizan el mismo distribuidor.  
   
- Al identificar la base de datos de Oracle como publicador, se debe elegir una opción de publicación de Oracle: Completa o Puerta de enlace de Oracle. Después de identificar un publicador, esta opción no se puede cambiar sin quitar y volver a configurar el publicador. La opción Completo está diseñada para proporcionar publicaciones de instantáneas y transaccionales con el conjunto completo de características compatibles para la publicación de Oracle. La opción Puerta de enlace proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirve como puerta de enlace entre sistemas.  
+ Al identificar la base de datos de Oracle como un publicador, se debe elegir una opción de publicación de Oracle: Oracle o Puerta de enlace de Oracle. Después de identificar un publicador, esta opción no se puede cambiar sin quitar y volver a configurar el publicador. La opción Completo está diseñada para proporcionar publicaciones de instantáneas y transaccionales con el conjunto completo de características compatibles para la publicación de Oracle. La opción Puerta de enlace proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirve como puerta de enlace entre sistemas.  
   
- Después de identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la replicación crea un servidor vinculado con el mismo nombre que el nombre del servicio TNS en la base de datos de Oracle. Este servidor vinculado solo lo puede utilizar la replicación. Si necesita conectarse al publicador de Oracle a través de una conexión con el servidor vinculado, cree otro nombre de servicio TNS y utilícelo para llamar a [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
+ Después de identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la replicación crea un servidor vinculado con el mismo nombre que el nombre del servicio TNS en la base de datos de Oracle. Este servidor vinculado solo lo puede utilizar la replicación. Si necesita conectarse al publicador de Oracle a través de una conexión con el servidor vinculado, cree otro nombre de servicio TNS y después úselo para llamar a [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
  Para configurar un publicador de Oracle y crear una publicación, vea [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones administrativas para los publicadores de Oracle](administrative-considerations-for-oracle-publishers.md)   
- [Asignar tipos de datos para publicadores de Oracle](data-type-mapping-for-oracle-publishers.md)   
- [Glosario de términos de publicaciones de Oracle](glossary-of-terms-for-oracle-publishing.md)   
+ [Asignación de tipos de datos para publicadores de Oracle](data-type-mapping-for-oracle-publishers.md)   
+ [Glosario de términos para la publicación de Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Información general de la publicación de Oracle](oracle-publishing-overview.md)  
   
   

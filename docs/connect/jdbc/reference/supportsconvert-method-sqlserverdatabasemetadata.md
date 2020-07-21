@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a5dbb5d8-41c2-48af-9b71-93a22f6a9b33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b46b0c7e4ae412fe925a7397f12e8f84e038e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ad8a452fbf46ec316a2a24b4494170eca619a5f0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67969618"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911901"
 ---
 # <a name="supportsconvert-method-sqlserverdatabasemetadata"></a>Método supportsConvert (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

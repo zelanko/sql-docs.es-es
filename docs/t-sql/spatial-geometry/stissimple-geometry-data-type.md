@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d0118528aa926b5750f8e2f1f587cc6e9c14844
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762394"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve 1 si una instancia de **geometry** es sencilla, según la definición de Open Geospatial Consortium (OGC). Devuelve 0 si una instancia de **geometry** no es sencilla.
   
@@ -36,12 +36,12 @@ Devuelve 1 si una instancia de **geometry** es sencilla, según la definición d
 .STIsSimple ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para que una instancia de **geometry** sea sencilla, debe cumplir estos requisitos:  
   
 -   Cada figura de la instancia no debe cortarse, excepto en sus extremos.  

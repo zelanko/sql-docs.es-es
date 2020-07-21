@@ -5,6 +5,8 @@
 - name: Novedades de APS
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
+    - name: APS CU7.6
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.6'
     - name: APS CU7.5
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
     - name: APS CU7.4
@@ -82,7 +84,7 @@
     - name: Permisos de PDW
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: Conceder permisos
+        - name: Concesión de permisos
           href: ../analytics-platform-system/grant-permissions.md
     - name: Mensajes de error
       href: ../analytics-platform-system/error-messages.md

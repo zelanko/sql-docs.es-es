@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - systargetservergroupmembers system table
 ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee6aba8417570c9d75f683efdbfcf10c54b82792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d6b61dac079e612e447b98010bd297b8a848b349
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095873"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750232"
 ---
 # <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Registra los servidores de destino dados de alta actualmente en este grupo multiservidor.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Id. del grupo de servidores.|  
-|**server_id**|**int**|Id. del servidor.|  
+|**server_id**|**int**|Id. de servidor|  
   
   

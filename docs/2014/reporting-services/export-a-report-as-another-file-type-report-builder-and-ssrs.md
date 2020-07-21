@@ -1,5 +1,5 @@
 ---
-title: Exportar un informe como otro tipo de archivo (generador de informes y SSRS) | Microsoft Docs
+title: Exportar un informe como otro tipo de archivo (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109178"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar un informe como otro tipo de archivo (Generador de informes y SSRS)
@@ -27,11 +27,11 @@ ms.locfileid: "66109178"
   
 1.  Obtenga una vista previa del informe.  
   
-2.  Haga clic en **Exportar**en la cinta.  
+2.  En la cinta, haga clic en **Exportar**.  
   
 3.  Seleccione el formato que desea usar.  
   
-     Se abre el cuadro de diálogo **Guardar como** . De forma predeterminada, aparece el nombre de archivo del informe que exportó. Si lo desea, puede cambiar el nombre de archivo.  
+     Se abre el cuadro de diálogo **Guardar como**. De forma predeterminada, aparece el nombre de archivo del informe que exportó. Si lo desea, puede cambiar el nombre de archivo.  
   
 4.  Navegue hasta la ubicación donde guardó el informe exportado y ábralo.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66109178"
   
      **Nota** : si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
   
-## <a name="see-also"></a>Vea también  
- [Exportar informes &#40;generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;generador de informes y SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
+ [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](report-builder/interactive-functionality-different-report-rendering-extensions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento de tabla de esquema (DTA) | Microsoft Docs
+title: Table (DTA, elemento de Schema) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007584"
 ---
 # <a name="table-element-for-schema-dta"></a>Table (DTA, elemento de Schema)
   Especifica la tabla que se va a optimizar.  
@@ -35,7 +34,7 @@ ms.locfileid: "63138787"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Attribute|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |`NumberOfRows`|Opcional. Entero que permite simular tablas de diferentes tamaños.|  
   
@@ -54,13 +53,13 @@ ms.locfileid: "63138787"
 |**Elemento primario**|[Schema &#40;DTA, elemento de Database&#41;](schema-element-for-database-dta.md)|  
 |**Elementos secundarios**|[Elemento Name de Table &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no se especifica un elemento `Table`, el Asistente para la optimización de motor de base de datos asumirá que todas las tablas de la base de datos especificada se pueden optimizar.  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso, vea [Server &#40;DTA, elemento&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

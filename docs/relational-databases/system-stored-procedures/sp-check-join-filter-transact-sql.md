@@ -19,17 +19,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771327"
 ---
-# <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Se utiliza para comprobar un filtro de combinación entre dos tablas a fin de determinar si la cláusula del filtro de combinación es válida. Este procedimiento almacenado también devuelve información sobre el filtro de combinación proporcionado, incluso si se puede utilizar con particiones precalculadas para la tabla dada. Este procedimiento almacenado se ejecuta en el publicador de la publicación. Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
@@ -53,13 +53,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Es si la publicación es apta para las particiones precalculadas; donde **1** significa que se pueden usar las particiones especifica y **0** significa que no se pueden usar.|  
 |**has_dynamic_filters**|**bit**|Indica si la cláusula de filtro proporcionada incluye al menos una función de filtrado con parámetros; donde **1** significa que se utiliza una función de filtrado con parámetros y **0** significa que no se utiliza dicha función.|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|Lista de las funciones de la cláusula de filtro que definen un filtro con parámetros para un artículo; las funciones están separadas por puntos y comas.|  
-|**uses_host_name**|**bit**|Si se usa la función [host_name ()](../../t-sql/functions/host-name-transact-sql.md) en la cláusula de filtro, donde **1** significa que esta función está presente.|  
-|**uses_suser_sname**|**bit**|Si se usa la función [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) en la cláusula de filtro, donde **1** significa que esta función está presente.|  
+|**dynamic_filters_function_list**|**nvarchar (500)**|Lista de las funciones de la cláusula de filtro que definen un filtro con parámetros para un artículo; las funciones están separadas por puntos y comas.|  
+|**uses_host_name**|**bit**|Si se utiliza la función [host_name ()](../../t-sql/functions/host-name-transact-sql.md) en la cláusula de filtro, donde **1** significa que esta función está presente.|  
+|**uses_suser_sname**|**bit**|Si se utiliza la función [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) en la cláusula de filtro, donde **1** significa que esta función está presente.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -67,12 +67,12 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="remarks"></a>Comentarios  
  **sp_check_join_filter** se utiliza en la replicación de mezcla.  
   
- **sp_check_join_filter** se puede ejecutar en cualquier tabla relacionada, incluso si no están publicadas. Este procedimiento almacenado se puede utilizar para comprobar una cláusula de filtro de combinación antes de definir un filtro de combinación entre dos artículos.  
+ **sp_check_join_filter** se pueden ejecutar en cualquier tabla relacionada, incluso si no están publicadas. Este procedimiento almacenado se puede utilizar para comprobar una cláusula de filtro de combinación antes de definir un filtro de combinación entre dos artículos.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_check_join_filter**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006499"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392883"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un objeto denominado regla. Cuando se enlaza a una columna o a un tipo de datos de alias, la regla especifica los valores aceptables que se pueden insertar en esa columna.  
   
@@ -50,14 +50,16 @@ ms.locfileid: "68006499"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE RULE [ schema_name . ] rule_name   
 AS condition_expression  
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *schema_name*  
  Es el nombre del esquema al que pertenece la regla.  
   
@@ -72,7 +74,7 @@ AS condition_expression
 > [!NOTE]  
 >  Evite crear reglas en expresiones que utilicen tipos de datos de alias. Aunque es posible crear reglas en expresiones que utilicen tipos de datos de alias, después de enlazar las reglas a las columnas o a los tipos de datos de alias, cuando se hace referencia a las expresiones, éstas no se compilan.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  CREATE RULE no se puede combinar con otras instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un único lote. Las reglas no se aplican a los datos ya existentes en la base de datos en el momento en que se crean las reglas y no se pueden enlazar a los tipos de datos del sistema.  
   
  Una regla solo se puede crear en la base de datos actual. Una vez creada la regla, ejecute **sp_bindrule** para enlazarla a una columna o a un tipo de datos de alias. Una regla debe ser compatible con el tipo de datos de la columna. Por ejemplo, no se puede usar "\@value LIKE A%" como regla para una columna numérica. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
@@ -87,10 +89,10 @@ AS condition_expression
   
  Una nueva regla se puede enlazar a una columna o tipo de datos sin cancelar el enlace de la anterior; la nueva regla anula la anterior. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos de alias. Enlazar una regla a una columna sustituye una regla ya enlazada al tipo de datos de alias de esa columna. Sin embargo, el enlace de una regla a un tipo de datos no sustituye una regla enlazada a una columna de ese tipo de datos de alias. La tabla siguiente muestra la prioridad cuando se enlazan reglas a columnas y a tipos de datos de alias en los que ya existen reglas.  
   
-|Nueva regla enlazada a|Regla antigua enlazada a<br /><br /> Tipo de datos de alias|Regla antigua enlazada a<br /><br /> columna|  
+|Nueva regla enlazada a|Regla antigua enlazada a<br /><br /> Tipo de datos de alias|Regla antigua enlazada a<br /><br /> Columna|  
 |-----------------------|-------------------------------------------|----------------------------------|  
 |Tipo de datos de alias|Regla antigua sustituida|Sin cambios|  
-|columna|Regla antigua sustituida|Regla antigua sustituida|  
+|Columna|Regla antigua sustituida|Regla antigua sustituida|  
   
  Si una columna tiene un valor predeterminado y una regla asociada a ella, el valor predeterminado debe encontrarse en el dominio definido por la regla. Un valor predeterminado que esté en conflicto con una regla no se inserta nunca. El motor de base de datos de SQL Server genera un mensaje de error cada vez que intenta insertar un valor predeterminado con esas características.  
   
@@ -132,7 +134,7 @@ AS
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  (Expressions [Transact-SQL])  
+ [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   

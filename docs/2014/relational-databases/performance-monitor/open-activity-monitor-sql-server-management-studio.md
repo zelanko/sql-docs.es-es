@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdff4dcefb1fb6113869fa01e41f3c8690cfaf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998234"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir el Monitor de actividad (SQL Server Management Studio)
   En este tema se describe cómo abrir el Monitor de actividad para obtener información sobre los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la forma en que estos procesos afectan a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se describe cómo establecer el intervalo de actualización del Monitor de actividad.  
@@ -35,19 +34,19 @@ ms.locfileid: "63032009"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Para establecer el intervalo de actualización utilizando:**  [SQL Server Management Studio](#Refresh)  
+-   **Configuración del intervalo de actualización utilizando lo siguiente:**  [SQL Server Management Studio](#Refresh)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  El Monitor de actividad ejecuta consultas en la instancia supervisada para obtener información de sus paneles de información. Cuando el intervalo de actualización se establece en menos de 10 segundos, el tiempo utilizado para ejecutar estas consultas puede afectar al rendimiento del servidor  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para ver el Monitor de actividad, el usuario debe tener el permiso VIEW SERVER STATE. Para ver la sección de E/S de archivo de datos del Monitor de actividad, debe tener permisos CREATE DATABASE, ALTER ANY DATABASE o VIEW ANY DEFINITION además de VIEW SERVER STATE.  
   
  Para detener (KILL) un proceso, el usuario debe ser miembro de los roles fijos de servidor sysadmin o processadmin.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Para abrir el Monitor de actividad en SQL Server Management Studio  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63032009"
   
 4.  Para activar los cambios, cierre y vuelva a abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Para establecer el intervalo de actualización del Monitor de actividad  
+###  <a name="to-set-the-activity-monitor-refresh-interval"></a><a name="Refresh"></a>Para establecer el intervalo de actualización del monitor de actividad  
   
 -   Abra el Monitor de actividad.  
   

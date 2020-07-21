@@ -1,6 +1,6 @@
 ---
-title: incluir archivo
-description: incluir archivo
+title: archivo de inclusión
+description: archivo de inclusión
 services: ''
 author: maggiesMSFT
 ms.service: ''
@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 12/06/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: c877913260071e1cfabd86afd10dc92a0ab15701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d098b4f0ff3d6c5ecf5806381db478cc8475a161
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68212948"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75776453"
 ---
-Generador de informes 
+Generador de informes

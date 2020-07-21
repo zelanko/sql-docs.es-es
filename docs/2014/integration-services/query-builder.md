@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81be066d92ef1e19a141414dad4359b60efca2f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056640"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423162"
 ---
 # <a name="query-builder"></a>Generador de consultas
   Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta para su uso en la tarea Ejecutar SQL, el origen de OLE DB y el destino de OLE DB, y la transformación de búsqueda.  
@@ -43,14 +42,14 @@ ms.locfileid: "66056640"
  Las transformaciones de búsqueda Aproximada y Búsqueda también pueden utilizar variables con parámetros y códigos de retorno. Además, la información relativa al origen OLE DB se puede aplicar a estas dos transformaciones.  
   
 ## <a name="options"></a>Opciones  
- **Barra de herramientas**  
+ **Barra**  
  Use la barra de herramientas para administrar conjuntos de datos, seleccionar los paneles que desea mostrar y controlar funciones de consulta.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Mostrar u ocultar panel de diagrama**|Muestra u oculta el panel **Diagrama** .|  
 |**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el panel **Cuadrícula** .|  
-|**Mostrar u ocultar panel de SQL**|Muestra u oculta el panel de **SQL** .|  
+|**Mostrar u ocultar panel de SQL**|Muestra u oculta el panel **SQL** .|  
 |**Mostrar u ocultar panel de resultados**|Muestra u oculta el panel **Resultados** .|  
 |**Ejecutar**|Ejecuta la consulta. Los resultados se mostrarán en el panel de resultados.|  
 |**Comprobar SQL**|Comprueba que la instrucción SQL sea válida.|  
@@ -65,17 +64,17 @@ ms.locfileid: "66056640"
   
 |Panel|Descripción|  
 |----------|-----------------|  
-|Panel**Diagrama**|Muestra la consulta en un diagrama. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.<br /><br /> Cuando agrega tablas a la consulta, el Generador de consultas crea combinaciones entre las tablas basadas en tablas, según las claves de la tabla. Para agregar una combinación, arrastre un campo de una de las tablas a un campo de otra tabla. Para administrar una combinación, haga clic con el botón secundario en la combinación y, a continuación, seleccione una opción de menú.<br /><br /> Haga clic con el botón derecho en el panel **Diagrama** para agregar o quitar tablas, seleccionar todas las tablas y mostrar u ocultar paneles.|  
-|Panel**Cuadrícula**|Muestra la consulta en una cuadrícula. Puede utilizar este panel para agregar y quitar columnas de una consulta y cambiar la configuración de cada columna.|  
-|Panel**SQL**|Muestra la consulta como texto SQL. Los cambios que se realicen en el panel **Diagrama** y en el panel **Cuadrícula** aparecerán aquí, y los cambios que se realicen aquí aparecerán en el panel **Diagrama** y en el panel **Cuadrícula** .|  
-|Panel**Resultados**|Muestra los resultados de la consulta al hacer clic en **Ejecutar** en la barra de herramientas.|  
+|Panel **Diagrama**|Muestra la consulta en un diagrama. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.<br /><br /> Cuando agrega tablas a la consulta, el Generador de consultas crea combinaciones entre las tablas basadas en tablas, según las claves de la tabla. Para agregar una combinación, arrastre un campo de una de las tablas a un campo de otra tabla. Para administrar una combinación, haga clic con el botón secundario en la combinación y, a continuación, seleccione una opción de menú.<br /><br /> Haga clic con el botón secundario en el panel **Diagrama** para agregar o quitar tablas, seleccionar todas las tablas y mostrar u ocultar paneles.|  
+|Panel **cuadrícula**|Muestra la consulta en una cuadrícula. Puede utilizar este panel para agregar y quitar columnas de una consulta y cambiar la configuración de cada columna.|  
+|Panel **SQL**|Muestra la consulta como texto SQL. Los cambios que se realicen en el panel **Diagrama** y en el panel **Cuadrícula** aparecerán aquí, y los cambios que se realicen aquí aparecerán en el panel **Diagrama** y en el panel **Cuadrícula** .|  
+|Panel de **resultados**|Muestra los resultados de la consulta al hacer clic en **Ejecutar** en la barra de herramientas.|  
   
-## <a name="see-also"></a>Vea también  
- [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tarea ejecutar SQL](control-flow/execute-sql-task.md)   
  [Origen de OLE DB](data-flow/ole-db-source.md)   
  [Destino de OLE DB](data-flow/ole-db-destination.md)   
- [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)   
- [Servicios de integración &#40;SSIS&#41; consultas](integration-services-ssis-queries.md)   
+ [Transformación búsqueda](data-flow/transformations/lookup-transformation.md)   
+ [Integration Services &#40;consultas&#41; SSIS](integration-services-ssis-queries.md)   
  [MERGE en paquetes de Integration Services](control-flow/merge-in-integration-services-packages.md)  
   
   

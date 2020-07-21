@@ -1,6 +1,7 @@
 ---
-title: Procedimientos almacenados compilados de forma nativa y opciones SET de ejecución | Microsoft Docs
-ms.custom: ''
+title: Procedimientos almacenados compilados de forma nativa y opciones SET
+description: Las opciones SET de una sesión no afectan a la ejecución de un procedimiento almacenado, salvo que determinadas opciones SET hacen que los procedimientos almacenados no se ejecuten.
+ms.custom: seo-dt-2019
 ms.date: 10/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d6e405e4a550aaa4c93f265ddeb6fb8358611a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e92014f68ad400183bf2e0332a9ea7d2f1a7b2d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722435"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>Procedimientos almacenados compilados de forma nativa y opciones SET de ejecución.
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Las opciones de sesión se fijan en bloques atomic, como se describe en [Bloques ATOMIC](atomic-blocks-in-native-procedures.md). La ejecución de un procedimiento almacenado no se ve afectada por las opciones SET de una sesión, puesto que se necesitan bloques atomic. Sin embargo, ciertas opciones SET, como SET NOEXEC y SET SHOWPLAN_XML, causan que no se ejecuten los procedimientos almacenados (incluidos los compilados de forma nativa).   
   

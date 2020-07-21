@@ -16,18 +16,18 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aefe95893f9fc352b4c4b1909b849679fd302ab8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071592"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010348"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve el valor exponencial de la expresión **float** especificada.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68071592"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 EXP ( float_expression )  
 ```  
   
@@ -43,15 +43,15 @@ EXP ( float_expression )
  *float_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que se puede convertir en **float** de manera implícita.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **float**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La constante **e** (2.718281…) es la base de los logaritmos naturales.  
   
  El exponente de un número es la constante **e** elevada a la potencia del número. Por ejemplo, EXP(1,0) = e^1,0 = 2,71828182845905 y EXP(10) = e^10 = 22026,4657948067.  
   
- El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Y el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
+ El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Asimismo, el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -59,9 +59,9 @@ EXP ( float_expression )
  En el ejemplo siguiente se declara una variable y se devuelve el valor exponencial de la variable especificada (`10`) con una descripción de texto.  
   
 ```  
-DECLARE @var float  
+DECLARE @var FLOAT  
 SET @var = 10  
-SELECT 'The EXP of the variable is: ' + CONVERT(varchar,EXP(@var))  
+SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
 GO  
 ```  
   
@@ -77,7 +77,7 @@ The EXP of the variable is: 22026.5
  En el ejemplo siguiente se devuelve el valor exponencial del logaritmo natural de `20` y el logaritmo natural del valor exponencial de `20`. Dado que estas funciones son funciones inversas entre sí, el valor devuelto en ambos casos es `20`.  
   
 ```  
-SELECT EXP( LOG(20)), LOG( EXP(20))  
+SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
   
@@ -90,7 +90,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-finding-the-exponent-of-a-number"></a>C. Obtener el exponente de un número  
  En el siguiente ejemplo se devuelve el valor exponencial del valor especificado (`10`).  

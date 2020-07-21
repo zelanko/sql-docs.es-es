@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DROP INDEX statement limitations [ODBC]
 - ODBC SQL grammar, DROP INDEX statement limitations
 ms.assetid: a8ab9259-af47-438f-9fff-042e8ebb1c58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c9f578d632ab999edb6064fcbb949ba6f4e1b60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c1a8cf3bcb52258cad072efaa52245725850d931
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303446"
 ---
 # <a name="drop-index-statement-limitations"></a>QUITAR las limitaciones de la instrucción de índice
-La instrucción DROP INDEX no se admite para el controlador de Microsoft Excel o texto.
+La instrucción DROP INDEX no es compatible con el controlador de texto o de Microsoft Excel.

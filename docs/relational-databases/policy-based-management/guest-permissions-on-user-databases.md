@@ -1,5 +1,6 @@
 ---
 title: Permisos de invitado en bases de datos de usuario | Microsoft Docs
+description: Determine si el usuario invitado tiene permiso para acceder a las bases de datos de usuarios en SQL Server. Revoque el permiso del usuario invitado si no se requiere.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbe3efe2337b8e967ea7b5ced9fc6b3890d989e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b6a911c84574c0b064c1c71bf9ff68aa725fc9c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749373"
 ---
 # <a name="guest-permissions-on-user-databases"></a>Permisos de invitado en bases de datos de usuario
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regla determina si el usuario invitado tiene permiso de acceso a la base de datos. Esta regla solo se aplica a las bases de datos de usuario.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

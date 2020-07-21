@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación de caché (página asignaciones) | Microsoft Docs
+title: Editor de transformación caché (página asignaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4af49bf776757d2cbbad389d6faf4ac1afce9352
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061176"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439112"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor de transformación de caché (página Asignaciones)
   Utilice la página **Asignaciones** del **Editor de transformación Caché** para asignar las columnas de entrada de la transformación de caché a las columnas de destino del administrador de conexiones de caché.  
@@ -46,7 +45,7 @@ ms.locfileid: "66061176"
  **Columna de destino**  
  Muestra cada columna de destino disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

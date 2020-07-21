@@ -1,6 +1,6 @@
 ---
-title: Iniciar la utilidad sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Iniciar la utilidad sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfc32e9ec7b4c56faf11c8cc675ae5ab2096416d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2571401f408babd0d3fe0ce114dbabbf3deeed26
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267660"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243471"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd - Iniciar la utilidad
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

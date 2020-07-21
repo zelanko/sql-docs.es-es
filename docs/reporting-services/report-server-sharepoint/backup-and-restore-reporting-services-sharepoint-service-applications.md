@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574347"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services
@@ -26,7 +26,7 @@ En este tema se explica cómo hacer una copia de seguridad y restaurar una aplic
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
-## <a name="before-you-begin"></a>Antes de comenzar
+## <a name="before-you-begin"></a>Antes de empezar
 
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
 
@@ -63,7 +63,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 2.  En el nodo **Servicios compartidos** , expanda **Aplicaciones de servicios compartidos** y seleccione la aplicación de servicio. Tendrá un tipo de **Aplicación del servicio SQL Server Reporting Services**.  
   
-3.  Seleccione **Siguiente**.  
+3.  Seleccione **Next** (Siguiente).  
   
 4.  Escriba la ruta de acceso en **Ubicación de copia de seguridad:** y seleccione **Iniciar copia de seguridad**.  
   
@@ -159,6 +159,6 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 5.  Escriba la cuenta y la contraseña. Seleccione **Usar como credenciales de Windows** si procede.  
   
-6.  Seleccione **Aceptar**.
+6.  Seleccione **OK** (Aceptar).
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

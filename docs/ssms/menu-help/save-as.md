@@ -1,6 +1,6 @@
 ---
-title: Guardar como | Microsoft Docs
-ms.custom: ''
+title: Guardar como
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ef6bd7f10ba88988b02dce010f7cce235ad2c751
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 75a385cb2898c48e980f7f6b539d9a21879d8c56
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256994"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75240520"
 ---
 # <a name="save-as"></a>Guardar como
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

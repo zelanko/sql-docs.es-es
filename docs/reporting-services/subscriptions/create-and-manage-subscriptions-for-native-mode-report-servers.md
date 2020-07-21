@@ -1,5 +1,6 @@
 ---
 title: Crear y administrar suscripciones para servidores de informes en modo nativo | Microsoft Docs
+description: Aprenda a crear y administrar una suscripción estándar como un usuario individual que quiere recibir un informe por correo electrónico o en una carpeta compartida.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403254"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742298"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -33,7 +34,7 @@ ms.locfileid: "66403254"
   
 -   [Para eliminar una suscripción](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a> Requisitos generales de las suscripciones  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_create_subscription"></a> Requisitos generales de las suscripciones  
  En el contenido de este artículo se explica cómo se crean suscripciones en un servidor de informes en modo nativo mediante el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Una vez definida una suscripción, puede tener acceso a ella en el portal web mediante la página Mis suscripciones o la pestaña **Suscripciones** de un informe específico.  
   
  En[Crear y administrar suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) se explica cómo se usan las páginas de aplicación de un sitio de SharePoint para suscribirse a los informes de un servidor de informes que se ejecuta en el modo de SharePoint.  
@@ -46,7 +47,7 @@ ms.locfileid: "66403254"
   
  En este artículo no se explica cómo crear una suscripción controlada por datos. Para obtener instrucciones sobre cómo crear una suscripción controlada por datos, consulte [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> Para crear una suscripción a recursos compartidos de archivos  
+## <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a> Para crear una suscripción a recursos compartidos de archivos  
   
 1. Examine [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -68,10 +69,10 @@ ms.locfileid: "66403254"
   
 8. En **Opciones de entrega (Recurso compartido de archivos de Windows)** , especifique:  
    - **Nombre de archivo**: escriba un nombre de archivo para el informe.
-   - **Agregar una extensión de archivo cuando se crea el archivo**: esta opción agrega una extensión de archivo de tres caracteres al nombre de archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
+   - **Agregar una extensión de archivo cuando se crea el archivo**: Esta opción agrega una extensión de archivo de tres caracteres al nombre del archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
    - **Ruta de acceso**: escriba una ruta UNC (convención de nomenclatura universal) para una carpeta existente en la que quiera entregar los informes (por ejemplo, \\<nombreDeServidor\>\<misInformes>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
   
-     ![Suscripción a un recurso compartido de archivos](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Suscripción a un recurso compartido de archivos")  
+     ![Suscripción a recurso compartido de archivos](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Suscripción a recurso compartido de archivos")  
   
    - **Formato de representación**: seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
@@ -86,7 +87,7 @@ ms.locfileid: "66403254"
   
 El informe se entrega como un archivo estático. Si el informe contiene características interactivas, como por ejemplo, vínculos a otras filas y columnas, éstas no estarán disponibles.  
   
-###  <a name="bkmk_create_email_subscription"></a> Para crear una suscripción de correo electrónico  
+##  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a> Para crear una suscripción de correo electrónico  
   
 1. Examine [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -112,9 +113,9 @@ El informe se entrega como un archivo estático. Si el informe contiene caracter
      >[!NOTE]  
      > Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  
   
-   - **Asunto**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
+   - **Firmante**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
   
-     ![suscripción de correo electrónico](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "e-mail subscription")  
+     ![suscripción de correo electrónico](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Suscripción de correo electrónico")  
 
    - **Incluir informe**: seleccione esta opción para insertar o adjuntar una copia del informe. El formato del informe lo determina el formato de representación de informes seleccionado. No elija esta opción si cree que el tamaño del informe superará el límite definido para el sistema de correo electrónico.  
   
@@ -132,10 +133,10 @@ El informe se entrega como un archivo estático. Si el informe contiene caracter
   
 9. En el caso de informes con parámetros, especifique los parámetros que se van a utilizar en el informe de esta suscripción. Los parámetros especificados pueden ser diferentes de los que se utilizaron para ejecutar el informe a petición o en otras operaciones programadas.  
   
-##  <a name="bkmk_modify_subscription"></a> Para modificar una suscripción  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a> Para modificar una suscripción  
  Puede modificar una suscripción en cualquier momento. Si modifica una suscripción mientras se está procesando, la configuración actualizada se usará si se guarda en el servidor de informes antes de que la extensión de entrega reciba los datos de la suscripción. De lo contrario, se utilizará la configuración existente.  
   
- El usuario que crea una suscripción es su propietario. Cada usuario puede modificar o eliminar las suscripciones de las que sea propietario. Puede cambiar el propietario del informe desde la página de propiedades de la suscripción o puede cambiar la propiedad mediante programación. Para obtener más información, vea:  
+ El usuario que crea una suscripción es su propietario. Cada usuario puede modificar o eliminar las suscripciones de las que sea propietario. Puede cambiar el propietario del informe desde la página de propiedades de la suscripción o puede cambiar la propiedad mediante programación. Para obtener más información, vea lo siguiente:  
   
 -   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
@@ -148,7 +149,7 @@ El informe se entrega como un archivo estático. Si el informe contiene caracter
 >[!NOTE]  
 > El administrador de un servidor de informes no puede administrar desde un lugar todas las suscripciones individuales que estén utilizándose en un servidor de informes determinado. Sin embargo, los administradores del servidor de informes pueden tener acceso a cada suscripción individual para modificarla o eliminarla.  
   
-##  <a name="bkmk_delete_subscription"></a> Para eliminar una suscripción  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a> Para eliminar una suscripción  
 Para eliminar una suscripción:  
   
 1. Examine [el portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
@@ -163,11 +164,10 @@ Para cancelar una suscripción que se está procesando actualmente en el servido
   
  La suscripción se elimina automáticamente si se elimina el informe subyacente. Si elimina una suscripción mientras se está procesando, ésta se detiene si la operación de eliminación se produce antes de que la extensión de entrega reciba los datos de la suscripción. De lo contrario, se continúa procesando la suscripción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación y administración de suscripciones para servidores de informes en modo de SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
  [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [Usar Mis suscripciones &#40;servidor de informes en modo nativo&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

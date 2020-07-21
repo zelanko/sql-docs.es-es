@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Cadenas de propiedad y cambios de contexto | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Ownership Chains and Context Switching'
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5f010b08f4e9bb7687d45175a70f8d619758e561
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 30c7428fce515869979e26b54af43b95bd31652d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752625"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadenas de propiedad y cambio de contexto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, ac
 Para obtener instrucciones sobre cómo restaurar una base de datos en SQL Server Management Studio, vea [Restauración de una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurar el entorno  
-Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y el código siguiente para abrir la base de datos `AdventureWorks2017` y use la instrucción `CURRENT_USER` de [!INCLUDE[tsql](../includes/tsql-md.md)] para comprobar que el usuario dbo se muestra como contexto.  
+Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y el código siguiente para abrir la base de datos `AdventureWorks2017` y use la instrucción `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] para comprobar que el usuario dbo se muestra como contexto.  
   
 ```sql
 USE AdventureWorks2017;  
@@ -210,7 +210,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="CompleteExample"></a>Ejemplo completo  
+## <a name="complete-example"></a><a name="CompleteExample"></a>Ejemplo completo  
 En esta sección se muestra el código de ejemplo completo.  
   
 > [!NOTE]  
@@ -332,7 +332,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

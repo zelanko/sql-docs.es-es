@@ -21,15 +21,15 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb3802578b7eb500d6b5fd64725a1a03f86fb9c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fdcb278eabde4d7b6b4324c4f8aaafe7905fd90
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232153"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380978"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Especifica las propiedades de una columna que se agregan a una tabla mediante [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68232153"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 column_name <data_type>  
 [ FILESTREAM ]  
 [ COLLATE collation_name ]   
@@ -80,7 +80,9 @@ column_name <data_type>
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *column_name*  
  Es el nombre de la columna que se va a modificar, agregar o quitar. *column_name* puede tener entre 1 y 128 caracteres. Si se trata de columnas nuevas creadas con un tipo de datos de marca de tiempo, *column_name* se puede omitir. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.  
   
@@ -106,7 +108,7 @@ column_name <data_type>
 *precisión*  
  Es la precisión del tipo de datos especificado. Para obtener más información sobre los valores de precisión válidos, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-*escala*  
+*scale*  
  Es la escala del tipo de datos especificado. Para obtener más información sobre los valores de escala válidos, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 **max**  
@@ -119,7 +121,7 @@ DOCUMENT
  Especifica que cada instancia del tipo de datos **xml** en *column_name* puede incluir un solo elemento de nivel superior. DOCUMENT se aplica solamente al tipo de datos **xml** y únicamente se puede especificar si también se especifica *xml_schema_collection*.  
   
  *xml_schema_collection*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Solo se aplica al tipo de datos **xml** para asociar una colección de esquemas XML al tipo. Antes de escribir una columna **xml** para un esquema, primero debe crear el esquema en la base de datos mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
@@ -178,12 +180,12 @@ IDENTITY
  Es el valor incremental que se agrega al valor de identidad de la fila cargada anteriormente.  
   
 NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Se puede especificar para la propiedad IDENTITY. Si se especifica esta cláusula para la propiedad IDENTITY, los valores de las columnas de identidad no aumentan cuando los agentes de replicación realizan operaciones de inserción.  
   
 ROWGUIDCOL  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica que la columna es una columna de identificador único global de la fila. ROWGUIDCOL solo se puede asignar a una columna **uniqueidentifier** y solo es posible designar una columna **uniqueidentifier** por tabla como columna ROWGUIDCOL. ROWGUIDCOL no se puede asignar a columnas con tipos de datos definidos por el usuario.  
   
@@ -213,14 +215,14 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
  Las columnas deben ser de un tipo de datos aplicable.  
   
 ALGORITHM  
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 Debe ser **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Para más información, incluidas restricciones de características, vea [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Especifica una máscara dinámica de datos. *mask_function* es el nombre de la función de máscara con los parámetros adecuados. Las siguientes funciones están disponibles:  
   
@@ -234,7 +236,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  Para conocer más parámetros de función, vea [Enmascaramiento de datos dinámicos](../../relational-databases/security/dynamic-data-masking.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se agrega una columna que tiene un tipo de datos **uniqueidentifier**, se puede definir con un valor predeterminado que use la función NEWID() para proporcionar los valores de identificador único de la nueva columna para cada fila existente en la tabla.  
   
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no aplica un orden para especificar DEFAULT, IDENTITY, ROWGUIDCOL o las restricciones de columna en una definición de columna.  

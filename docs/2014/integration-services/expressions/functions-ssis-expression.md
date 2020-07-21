@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2023cccadefaf3274a7032fe188b7d887a23b3d0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769131"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428662"
 ---
 # <a name="functions-ssis-expression"></a>Funciones (expresión de SSIS)
   El lenguaje de expresiones incluye un conjunto de funciones que pueden usarse en las expresiones. Las expresiones pueden usar una sola función, pero generalmente utilizan varias funciones, combinándolas con operadores.  
@@ -94,7 +93,7 @@ ms.locfileid: "62769131"
   
  Los nombres de expresión se muestran en mayúsculas, pero no se distinguen mayúsculas de minúsculas. Por ejemplo, "null" es equivalente a "NULL".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)   
  [Ejemplos de expresiones avanzadas de Integration Services](examples-of-advanced-integration-services-expressions.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  

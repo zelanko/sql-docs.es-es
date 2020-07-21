@@ -1,5 +1,5 @@
 ---
-title: Directiva de soporte técnico de SQL Server Management Studio (SSMS) | Microsoft Docs
+title: Directiva de soporte técnico de SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
 ms.technology: ssms
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2be5846150a28ea76b48bab0434ab01ee9eee1d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267042"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245669"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Directiva de soporte técnico de SQL Server Management Studio (SSMS)
 

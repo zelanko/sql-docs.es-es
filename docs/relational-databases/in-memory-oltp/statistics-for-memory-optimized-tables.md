@@ -1,5 +1,6 @@
 ---
 title: Estadísticas para las tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre cómo el optimizador de consultas utiliza las estadísticas de las columnas de las tablas optimizadas para memoria para crear planes de consulta que mejoren el rendimiento de las consultas para OLTP en memoria.
 ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47e5ae11ff712dae493b4f836998138f42f06f67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734962"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estadísticas para las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El optimizador de consultas utiliza las estadísticas de las columnas para crear planes de consulta que mejoren el rendimiento de las consultas. Las estadísticas se recopilan de las tablas de la base de datos y se almacenan en los metadatos de la base de datos.  
   
@@ -49,7 +50,7 @@ Haga lo siguiente para habilitar la actualización automática de estadísticas 
 
 3. Vuelva a compilar los procedimientos almacenados compilados de forma nativa para aprovechar las estadísticas actualizadas.
 
-*Script único para estadísticas:* en el caso de las tablas optimizadas para memoria creadas en un nivel de compatibilidad inferior, se puede ejecutar el siguiente script Transact-SQL una vez para actualizar las estadísticas de todas esas tablas optimizadas para memoria y habilitar la actualización automática de estadísticas desde ese momento (suponiendo que AUTO_UPDATE_STATISTICS se ha habilitado para la base de datos):
+*Script único para estadísticas:* en el caso de las tablas optimizadas para memoria creadas en un nivel de compatibilidad inferior, se puede ejecutar el siguiente script Transact-SQL una vez para actualizar las estadísticas de todas esas tablas optimizadas para memoria y habilitar la actualización automática de estadísticas desde ese momento (suponiendo que AUTO_UPDATE_STATISTICS esté habilitado para la base de datos):
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -99,6 +100,6 @@ WHERE o.is_memory_optimized=1
  El hecho de crear procedimientos almacenados compilados de forma nativa después de cargar los datos garantiza que el optimizador va a disponer de estadísticas para las tablas optimizadas para memoria. Esto garantizará planes de consulta eficaces cuando se compile el procedimiento.  
 
 ## <a name="see-also"></a>Consulte también  
- [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tablas optimizadas para la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

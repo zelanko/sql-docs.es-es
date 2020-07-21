@@ -1,5 +1,5 @@
 ---
-title: 'Instalación de hardware: Analytics Platform System (APS) | Microsoft Docs'
+title: Instalación de hardware
 description: En este artículo se describe cómo migrar, desempaquetar e instalar el hardware para el dispositivo PDW de SQL Server. Este artículo es meramente informativo y está pensado para ayudarle a comprender el proceso. El dispositivo debe desempaquetarse, instalarse y comprobarse antes de que se le convierta. La participación del cliente es necesaria para elementos como el acceso al centro de datos, la alimentación eléctrica y las conexiones Ethernet.
 author: mzaman1
 ms.prod: sql
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc57311ae38977643be697eea5fc095ce514b0d2
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176144"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401125"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Instalación de hardware para el dispositivo de Analytics Platform System (APS)
 En este artículo se describe cómo migrar, desempaquetar e instalar el hardware para el dispositivo PDW de SQL Server. Este artículo es meramente informativo y está pensado para ayudarle a comprender el proceso. El dispositivo debe desempaquetarse, instalarse y comprobarse antes de que se le convierta. La participación del cliente es necesaria para elementos como el acceso al centro de datos, la alimentación eléctrica y las conexiones Ethernet.  
   
-## <a name="BeforeMoving"></a>Antes de trasladar los componentes del muelle de carga  
+## <a name="before-you-move-any-components-from-the-loading-dock"></a><a name="BeforeMoving"></a>Antes de trasladar los componentes del muelle de carga  
 Realice las tareas siguientes antes de trasladar, desempaquetar o colocar en bastidor cualquiera de los componentes del dispositivo.  
   
 |Tarea|Descripción|  
@@ -31,7 +32,7 @@ Realice las tareas siguientes antes de trasladar, desempaquetar o colocar en bas
 |Proteger el bastidor del centro de datos|Proteja el bastidor del centro de datos mediante equipos adicionales según sea necesario para la ubicación del centro de datos, como las correas de los terremotos en las zonas geográficas propensas a terremotos.|  
 |Preparación para la ayuda con el transporte de componentes|Determine de antemano la asistencia, los equipos y las herramientas que necesitará para controlar cada componente de forma segura y sin causar daños.|  
   
-## <a name="Moving"></a>Mueva los bastidores del muelle de carga al centro de datos  
+## <a name="move-the-racks-from-the-loading-dock-into-the-data-center"></a><a name="Moving"></a>Mueva los bastidores del muelle de carga al centro de datos  
 Cada pallet contiene todos los componentes de un bastidor de dispositivo, incluidos nodos, cables, cables, etc.  
   
 Use la siguiente lista de comprobación para desplace cada bastidor del dispositivo desde el palet en el muelle de carga hasta la ubicación del bastidor en el centro de datos. Mueva el bastidor del control primero y, a continuación, mueva los demás bastidores de datos del dispositivo.  
@@ -50,7 +51,7 @@ Use la siguiente lista de comprobación para desplace cada bastidor del disposit
 |Protección del nodo en el bastidor del centro de datos|Proteja el nodo en su lugar en el bastidor del centro de datos.|  
 |Repita estos pasos para el siguiente nodo o componente|Repita estos pasos para trasladar el siguiente nodo u otro componente del dispositivo al centro de datos.|  
   
-## <a name="AfterMoving"></a>Instalar componentes adicionales  
+## <a name="install-additional-components"></a><a name="AfterMoving"></a>Instalar componentes adicionales  
 Use la siguiente lista de comprobación para instalar los componentes adicionales.  
   
 |Tarea|Descripción||  

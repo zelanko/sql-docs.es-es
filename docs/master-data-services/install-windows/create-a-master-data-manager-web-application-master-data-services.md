@@ -1,25 +1,26 @@
 ---
-title: Crear una aplicación web de Master Data Manager (Master Data Services) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Crear aplicación Web de Master Data Manager
+description: La aplicación Web Master Data Manager proporciona una interfaz para que los usuarios trabajen con datos maestros y para que los administradores configuren y administren MDS.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fa6834a853a82067418a2ea5270e59ebdaa7dc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f7504244f658af94cccb42bead95de60b2c409e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882107"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Crear una aplicación web de Master Data Manager (Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Crear una aplicación Web de Master Data Manager (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] proporciona una interfaz a los usuarios para trabajar con datos maestros y a los administradores para configurar y administrar MDS.  
   
@@ -78,9 +79,9 @@ ms.locfileid: "67945034"
   
 -   Asocie la aplicación web a una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para obtener más información, vea [Asociar una base de datos y una aplicación web de Master Data Services](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md).  
   
--   También puede configurar el sitio web en el que se hospeda la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] de forma que use un enlace HTTPS para cifrar el contenido con Capa de sockets seguros (SSL). Debe utilizar una herramienta de Internet Information Services (IIS), por ejemplo Administrador de IIS, para configurar el certificado de servidor para el servidor web y para configurar un enlace HTTPS y los parámetros de SSL para el sitio. Para más información, consulte [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
+-   Opcionalmente, configure el sitio web que hospeda la [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] aplicación web para que use un enlace HTTPS si desea cifrar el contenido mediante el uso de seguridad de la capa de transporte (TLS), conocido anteriormente como capa de sockets seguros (SSL). Debe utilizar una herramienta de Internet Information Services (IIS), como el administrador de IIS, para configurar el certificado de servidor para el servidor Web y para configurar un enlace HTTPS y la configuración de TLS para el sitio. Para más información, consulte [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

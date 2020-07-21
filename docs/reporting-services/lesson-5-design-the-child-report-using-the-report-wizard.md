@@ -9,10 +9,10 @@ ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62512649"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lección 5: Diseñar el informe secundario usando el Asistente para informes
@@ -32,7 +32,7 @@ Después de crear una conexión de datos y una tabla de datos para el informe se
   
     El cuadro **Conjuntos de datos disponibles** se actualiza automáticamente con el elemento DataTable que ha creado.  
   
-5.  Seleccione **Siguiente**.  
+5.  Seleccione **Next** (Siguiente).  
   
 6.  En la página **Organizar campos** , haga lo siguiente:  
   
@@ -52,7 +52,7 @@ Después de crear una conexión de datos y una tabla de datos para el informe se
   
     3.  Confirme que **Entero** está seleccionado en el cuadro de lista **Tipo de datos** .  
   
-    4.  Haga clic en **Aceptar**.  
+    4.  Haga clic en **OK**.  
   
 9. Guarde el archivo .rdlc.  
   

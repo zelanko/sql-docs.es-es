@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68262352"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de informes de Reporting Services (modo de SharePoint)
@@ -126,7 +126,7 @@ ms.locfileid: "68262352"
 
  En la tabla siguiente se resumen las tareas relacionadas con un servidor de informes en modo de SharePoint de Reporting Services:  
   
-|**Tarea**|**Vínculo**|  
+|**Task**|**Vínculo**|  
 |--------------|--------------|  
 |Pasos detallados para instalar y configurar Reporting Services en el modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) y [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Escale la implementación de SharePoint de Reporting Services al agregar servidores de informes adicionales.|[Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [Topologías de implementación para las características BI de SQL Server en SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  

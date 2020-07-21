@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832612"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433762"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de patrón de columnas** seleccionadas en el panel de solicitudes. Un perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle a identificar problemas en los datos, como cadenas no válidas, y puede sugerir expresiones regulares que se pueden utilizar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.  
@@ -32,7 +31,7 @@ ms.locfileid: "62832612"
   
 -   **Delimiters** De forma predeterminada, la lista de delimitadores contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
--   **¿Símbolos** de forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'`~ = & / @!? [] de <> (){}| #* ^ %`. For example, if the symbols are "`()-'", se convierte el valor"(425) 123-4567"["(","425",")","123","-","4567",") "].  
+-   **Símbolos** de De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% `. For example, if the symbols are "` ()-' ", el valor" (425) 123-4567 "se ha acortado como [" ("," 425 ",") "," 123 ","-"," 4567 ",") "].  
   
  Un carácter no puede ser delimitador y símbolo a la vez.  
   
@@ -46,9 +45,9 @@ ms.locfileid: "62832612"
 |Etiqueta|Término|  
 |---------|----------|  
 |Dirección|East|  
-|Direction|West|  
-|Direction|North|  
-|Direction|South|  
+|Dirección|West|  
+|Dirección|North|  
+|Dirección|South|  
   
  Podría utilizar otra etiqueta para agrupar las diferentes palabras que expresan la noción de "calle" en una dirección:  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62832612"
 |Calle|Calle|  
 |Calle|Avenida|  
 |Calle|Lugar|  
-|Calle|Vía|  
+|Calle|Función|  
   
  Según esta combinación de etiquetas, el patrón resultante para una dirección podría parecerse al siguiente:  
   
@@ -86,8 +85,8 @@ ms.locfileid: "62832612"
   
  Para obtener más información, vea la sección "Opciones de TableorView" en este tema.  
   
- **Column**  
- Seleccione la columna existente de la que se va a generar un perfil. Seleccione **(\*)** para generar un perfil de todas las columnas.  
+ **Columna**  
+ Seleccione la columna existente de la que se va a generar un perfil. Seleccione **( \* )** para generar un perfil de todas las columnas.  
   
  Para obtener más información, vea la sección "Opciones de Column" en este tema.  
   
@@ -95,21 +94,21 @@ ms.locfileid: "62832612"
  **Esquema**  
  Especifica el esquema al que pertenece la tabla seleccionada. Esta opción es de solo lectura.  
   
- **Table**  
+ **Tabla**  
  Muestra el nombre de la tabla seleccionada. Esta opción es de solo lectura.  
   
 #### <a name="column-options"></a>Opciones de Column  
  **IsWildCard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **( \* )** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
- Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  
+ Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **( \* )** para generar perfiles de todas las columnas. Esta opción es de solo lectura.  
   
  **StringCompareOptions**  
  Esta opción no se aplica al perfil de patrón de columnas.  
   
 ### <a name="general-options"></a>Opciones generales  
- **IdSolicitud**  
+ **RequestID**  
  Escriba un nombre descriptivo para identificar esta solicitud de perfil. Generalmente, no tiene que cambiar el valor generado automáticamente.  
   
 ### <a name="options"></a>Opciones  
@@ -122,13 +121,13 @@ ms.locfileid: "62832612"
  **CaseSensitive**  
  Indica si los patrones deberían distinguir entre mayúsculas y minúsculas. El valor predeterminado de esta opción es **False**.  
   
- **Delimiters**  
+ **Delimitadores**  
  Muestra los caracteres que se deben tratar como equivalente de espacios entre las palabras al dividir el texto en tokens. De forma predeterminada, la lista **Delimiters** contiene los caracteres siguientes: espacio, tabulador horizontal (\t), nueva línea (\n) y retorno de carro (\r). Puede especificar delimitadores adicionales, pero no puede quitar los predeterminados.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
- **Symbols**  
- Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y " @ " para las direcciones de correo electrónico.  ¿De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'`~ = & / @!? [] de <> (){}| #* ^ %'.  
+ **Símbolos**  
+ Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% '.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
@@ -142,8 +141,8 @@ ms.locfileid: "62832612"
   
  Para obtener más información al respecto, vea "Uso de la tabla de etiquetas" anteriormente en este tema.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de tareas de generación de perfiles de datos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

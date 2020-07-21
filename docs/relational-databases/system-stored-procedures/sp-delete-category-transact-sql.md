@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120051"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864354"
 ---
-# <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita del servidor actual la categoría especificada de trabajos, alertas u operadores.  
   
@@ -40,15 +40,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` La clase de la categoría. *clase* es **varchar (8)** , no tiene ningún valor predeterminado y debe tener uno de estos valores.  
+`[ @class = ] 'class'`Clase de la categoría. la *clase* es **VARCHAR (8)**, no tiene ningún valor predeterminado y debe tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**JOB**|Elimina una categoría de trabajo.|  
-|**ALERTA**|Elimina una categoría de alerta.|  
-|**OPERADOR**|Elimina una categoría de operador.|  
+|**TRABAJO**|Elimina una categoría de trabajo.|  
+|**ONALERT**|Elimina una categoría de alerta.|  
+|**OPERATOR**|Elimina una categoría de operador.|  
   
-`[ @name = ] 'name'` El nombre de la categoría que se va a quitar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'`Nombre de la categoría que se va a quitar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -56,13 +56,13 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_delete_category** se debe ejecutar desde la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_delete_category** se debe ejecutar desde la base de datos **msdb** .  
   
  Si se elimina una categoría, se establecerán nuevas clasificaciones de trabajos, alertas u operadores de esa categoría en función de la categoría predeterminada para la clase.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se elimina la categoría de trabajo denominada `AdminJobs`.  
@@ -78,9 +78,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Vinculado objeto Asistente F1 Ayuda | Microsoft Docs
+title: Asistente para objetos vinculados (ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: af7df609-5e38-40c5-b176-28450792409f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ac7ca54d8db398cf93e83e93c8f7d87c81f9d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cac085621f80df6f03d34443765e30f041d5d48
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078066"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542097"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Asistente para objetos vinculados (Ayuda F1)
-  Use el Asistente para objetos vinculados para vincular o importar objetos de otras bases de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde la misma instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , o desde otra instancia, al proyecto actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Los objetos vinculados reflejan los cambios en la base de datos de origen de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mientras que los objetos importados no reflejan los cambios realizados en la base de datos de origen. Es posible vincular dimensiones y grupos de medida, incluidas las medidas asociadas. Es posible importar acciones, indicadores clave de rendimiento (KPI) y cálculos.  
+  Use el Asistente para objetos vinculados para vincular o importar objetos de otras [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bases de datos, desde la misma [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia o desde otra instancia, al [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto actual en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Los objetos vinculados reflejan los cambios en la base de datos de origen de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mientras que los objetos importados no reflejan los cambios realizados en la base de datos de origen. Es posible vincular dimensiones y grupos de medida, incluidas las medidas asociadas. Es posible importar acciones, indicadores clave de rendimiento (KPI) y cálculos.  
   
  El Asistente para objetos vinculados le guiará por los siguientes pasos:  
   

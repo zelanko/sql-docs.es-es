@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 278950bac7589b8a6b02d894c8133a699c3bd1ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 779c519f720027aea3a6f6cf2587d3c6e0b59b52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071805"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303426"
 ---
 # <a name="drop-table-command"></a>Comando DROP TABLE
-Quita una tabla de la base de datos especificado con el origen de datos y lo elimina del disco.  
+Quita una tabla de la base de datos especificada con el origen de datos y la elimina del disco.  
   
- El controlador ODBC de Visual FoxPro admite la sintaxis del lenguaje Visual FoxPro nativa para este comando. Para obtener información específica del controlador, vea la sección Comentarios.  
+ El controlador ODBC de Visual FoxPro admite la sintaxis nativa del lenguaje Visual FoxPro para este comando. Para obtener información específica del controlador, consulte la sección Comentarios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,21 +33,21 @@ DROP TABLE TableName | FileName | ?
   
 ## <a name="settings"></a>Configuración  
  *TableName*  
- Especifica la tabla para quitar de la base de datos especificado con el origen de datos y eliminar del disco.  
+ Especifica la tabla que se va a quitar de la base de datos especificada con el origen de datos y que se va a eliminar del disco.  
   
  *FileName*  
- Especifica una tabla para eliminar del disco libre.  
+ Especifica una tabla libre que se va a eliminar del disco.  
   
  ?  
- Muestra el cuadro de diálogo Quitar desde el que puede elegir una tabla para quitar de la base de datos especificado con el origen de datos y eliminar del disco.  
+ Muestra el cuadro de diálogo quitar en el que puede elegir una tabla para quitarla de la base de datos especificada con el origen de datos y eliminar del disco.  
   
-## <a name="remarks"></a>Comentarios  
- Cuando se emite DROP TABLE, también se quitan todos los índices principales, los valores predeterminados y reglas de validación asociadas a la tabla. DROP TABLE también afecta a otras tablas en la base de datos especificada con el origen de datos si las tablas tienen reglas o las relaciones asociadas con la tabla que se va a quitar. Las relaciones y reglas ya no son válidas cuando se quita la tabla de la base de datos.  
+## <a name="remarks"></a>Observaciones  
+ Cuando se emite DROP TABLE, también se quitan todos los índices principales, los valores predeterminados y las reglas de validación asociadas a la tabla. DROP TABLE también afecta a otras tablas de la base de datos especificada con el origen de datos si esas tablas tienen reglas o relaciones asociadas a la tabla que se va a quitar. Las reglas y las relaciones ya no son válidas cuando se quita la tabla de la base de datos.  
   
-## <a name="driver-remarks"></a>Comentarios del controlador  
- Cuando la aplicación envía la instrucción DROP TABLE de SQL de ODBC para el origen de datos, el controlador ODBC de Visual FoxPro convierte el comando en el comando de la tabla de FoxProDROP Visual mediante la sintaxis mostrada en la tabla siguiente.  
+## <a name="driver-remarks"></a>Notas del controlador  
+ Cuando la aplicación envía la instrucción DROP TABLE de ODBC SQL al origen de datos, el controlador ODBC de Visual FoxPro convierte el comando en el comando de la tabla FoxProDROP de visual mediante la sintaxis que se muestra en la tabla siguiente.  
   
 |Sintaxis de ODBC|Origen de datos|Sintaxis de Visual FoxPro|  
 |-----------------|-----------------|--------------------------|  
-|DROP TABLE *nombre de la tabla de base*|Base de datos (archivo .dbc)|Quitar tabla *TableName* eliminar|  
-||Directorio de tablas libres (archivos)|Borrar *dbfName*<br /><br /> Borrar *cdxName*<br /><br /> Borrar *fptName*|
+|DROP TABLE *base-TABLE-Name*|Base de datos (archivo. DBC)|QUITAR tabla *TableName* Delete|  
+||Directorio de tablas libres (archivos. dbf)|BORRAR *dbfName*<br /><br /> BORRAR *cdxName*<br /><br /> BORRAR *fptName*|

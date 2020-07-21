@@ -1,5 +1,5 @@
 ---
-title: Sys. syslanguages (Transact-SQL) | Microsoft Docs
+title: Lenguajes sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,29 +21,28 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MT
+ms.openlocfilehash: 62491475c51fcfc879415bb53f3d5cb08447a427
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874870"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012203"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contiene una fila por cada idioma presente en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Id. de idioma único.|  
 |dateformat|**nchar(3)**|Orden de la fecha (por ejemplo, DMA).|  
-|datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para Domingo.|  
+|datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
 |upgrade|**int**|Reservado para uso del sistema.|  
 |name|**sysname**|Nombre del idioma oficial, por ejemplo, Français.|  
 |alias|**sysname**|Nombre alternativo del idioma (por ejemplo, francés).|  
-|meses|**nvarchar(372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
-|shortmonths|**nvarchar(132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
-|days|**nvarchar(217)**|Lista separada por comas con los nombres de los días, de lunes a domingo, en la que cada nombre puede contener hasta 30 caracteres.|  
+|meses|**nvarchar (372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
+|shortmonths|**nvarchar (132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
+|days|**nvarchar (217)**|Lista separada por comas con los nombres de los días, de lunes a domingo, en la que cada nombre puede contener hasta 30 caracteres.|  
 |lcid|**int**|Id. de configuración regional de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
 |msglangid|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
@@ -55,22 +54,22 @@ ms.locfileid: "70874870"
 |Alemán|1031|1031|  
 |Francés|1036|1036|  
 |Japonés|1041|1041|  
-|Danish|1030|1030|  
+|Danés|1030|1030|  
 |Español|3082|3082|  
 |Italiano|1040|1040|  
 |Neerlandés|1043|1043|  
 |Noruego|2068|2068|  
 |Portugués|2070|2070|  
-|Finlandés|1035|1035|  
+|Finés|1035|1035|  
 |Sueco|1053|1053|  
-|Czech|1029|1029|  
+|Checo|1029|1029|  
 |Húngaro|1038|1038|  
 |Polaco|1045|1045|  
 |Rumano|1048|1048|  
 |Croata|1050|1050|  
 |Eslovaco|1051|1051|  
-|Slovene|1060|1060|  
-|Greek|1032|1032|  
+|Esloveno|1060|1060|  
+|Griego|1032|1032|  
 |Búlgaro|1026|1026|  
 |Ruso|1049|1049|  
 |Turco|1055|1055|  
@@ -85,8 +84,8 @@ ms.locfileid: "70874870"
 |Árabe|1025|1025|  
 |Tailandés|1054|1054|  
   
-## <a name="see-also"></a>Vea también  
- [Vistas &#40;de compatibilidad de TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Asignar tablas del sistema a las &#40;vistas del sistema TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

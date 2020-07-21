@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010543"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892796"
 ---
-# <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza un tipo de recopilador para un elemento de recopilación. Dado el nombre y GUID de un tipo de recopilador, actualiza la configuración del tipo de recopilador, incluida la colección y el paquete de carga, el esquema de parámetros y el esquema del formateador de parámetros.  
   
@@ -44,21 +44,21 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collector_type_uid = ] 'collector_type_uid'` Es el GUID para el tipo de recopilador. *collector_type_uid* es **uniqueidentifier**, y si es NULL, se crea y devuelve como OUTPUT automáticamente.  
+`[ @collector_type_uid = ] 'collector_type_uid'`Es el GUID del tipo de recopilador. *collector_type_uid* es de tipo **uniqueidentifier**y si es null, se creará automáticamente y se devolverá como salida.  
   
-`[ @name = ] 'name'` Es el nombre del tipo de recopilador. *nombre* es **sysname** y deben especificarse.  
+`[ @name = ] 'name'`Es el nombre del tipo de recopilador. *Name* es **sysname** y debe especificarse.  
   
-`[ @parameter_schema = ] 'parameter_schema'` Es el esquema XML para este tipo de recopilador. *parameter_schema* es **xml** y puede ser necesario para determinados tipos de recopilador. Si no es necesario, este argumento puede ser NULL.  
+`[ @parameter_schema = ] 'parameter_schema'`Es el esquema XML para este tipo de recopilador. *parameter_schema* es **XML** y puede ser necesario para determinados tipos de recopilador. Si no es necesario, este argumento puede ser NULL.  
   
-`[ @collection_package_id = ] collection_package_id` Es un identificador local único que apunta a la [!INCLUDE[ssIS](../../includes/ssis-md.md)] utilizado por el conjunto de recopilación de paquete de recopilación. *collection_package_id* es **uniqueidentifier** y es necesario. Para obtener el valor de *collection_package_id*, consulte la vista de sistema dbo.syscollector_collector_types en la base de datos msdb.  
+`[ @collection_package_id = ] collection_package_id`Es un identificador local único que apunta al paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] colección utilizado por el conjunto de recopilación. *collection_package_id* es **uniqueidentifier** y es obligatorio. Para obtener el valor de *collection_package_id*, consulte la vista del sistema collector_collector_types dbo.sysen la base de datos msdb.  
   
-`[ @upload_package_id = ] upload_package_id` Es un identificador local único que apunta a la [!INCLUDE[ssIS](../../includes/ssis-md.md)] Cargar paquete utilizado por el conjunto de recopilación. *upload_package_id* es **uniqueidentifier** y es necesario. Para obtener el valor de *upload_package_id*, consulte la vista de sistema dbo.syscollector_collector_types en la base de datos msdb.  
+`[ @upload_package_id = ] upload_package_id`Es un identificador local único que apunta al paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] carga usado por el conjunto de recopilación. *upload_package_id* es **uniqueidentifier** y es obligatorio. Para obtener el valor de *upload_package_id*, consulte la vista del sistema collector_collector_types dbo.sysen la base de datos msdb.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **dc_admin** (con permiso EXECUTE) rol fijo de base de datos.  
+ Requiere la pertenencia al rol fijo de base de datos **dc_admin** (con permiso Execute).  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo actualiza el tipo de recopilador Consultas T-SQL genérico. (En el ejemplo se usa el esquema predeterminado para el tipo de recopilador Consultas T-SQL genérico).  
@@ -100,7 +100,7 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   

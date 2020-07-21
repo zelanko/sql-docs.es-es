@@ -8,16 +8,16 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077444"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196744"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creación y configuración de un grupo de disponibilidad para SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este tutorial se habla de cómo crear y configurar un grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux. A diferencia de [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] y versiones anteriores en Windows, puede habilitar grupos de disponibilidad al crear primero el clúster de Pacemaker subyacente o sin hacerlo. La integración con el clúster, si fuera necesaria, no se realiza hasta más tarde.
 
@@ -59,7 +59,7 @@ También puede modificar el archivo `mssql.conf`, que se encuentra en la carpeta
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
+### <a name="restart-ssnoversion-md"></a>Reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 Después de habilitar los grupos de disponibilidad, como en Windows, debe reiniciar [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Lo puede hacer con el siguiente código:
 
 ```bash
@@ -316,7 +316,7 @@ En este ejemplo se crean certificados para una configuración de tres nodos. Los
 
 En esta sección se explica cómo usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL para crear el grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-ssmanstudiofull-md"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo de clúster Externo mediante SSMS con el Asistente para nuevo grupo de disponibilidad.
 
@@ -324,11 +324,11 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 2.  En el cuadro de diálogo Introducción, haga clic en **Siguiente**.
 
-3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNO o NINGUNO en la lista desplegable. Debe usarse Externo cuando se vaya a implementar Pacemaker. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. La selección de la opción para la detección del estado del nivel de la base de datos es opcional. Para obtener más información sobre esta opción, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Siguiente**.
+3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNO o NINGUNO en la lista desplegable. Debe usarse Externo cuando se vaya a implementar Pacemaker. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. La selección de la opción para la detección del estado del nivel de la base de datos es opcional. Para obtener más información sobre esta opción, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Next**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Creación de Grupo de disponibilidad 03](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que van a participar en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa para que se pueda agregar a un grupo de disponibilidad. Haga clic en **Siguiente**.
+4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que van a participar en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa para que se pueda agregar a un grupo de disponibilidad. Haga clic en **Next**.
 
 5.  En el cuadro de diálogo Especificar réplicas, haga clic en **Agregar réplica**.
 
@@ -340,31 +340,31 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
     En el ejemplo siguiente se muestra un grupo de disponibilidad con dos réplicas, un tipo de clúster Externo y una réplica de solo configuración.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Creación de grupo de disponibilidad 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     En el ejemplo siguiente se muestra un grupo de disponibilidad con dos réplicas, un tipo de clúster Ninguno y una réplica de solo configuración.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Creación de grupo de disponibilidad 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  Si quiere modificar las preferencias de copia de seguridad, haga clic en la pestaña Preferencias de copia de seguridad. Para obtener más información sobre las preferencias de copia de seguridad con grupos de disponibilidad, vea [Configuración de copias de seguridad en las réplicas secundarias de un grupo de disponibilidad](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. Si usa secundarias legibles o crea un grupo de disponibilidad con un tipo de clúster Ninguno para escalado de lectura, puede crear un cliente de escucha si selecciona la pestaña Agente de escucha. También se puede agregar un cliente de escucha más adelante. Para crear un cliente de escucha, seleccione la opción **Crear un agente de escucha del grupo de disponibilidad** y escriba un nombre, un puerto TCP/IP y si va a usar una dirección IP DHCP estática o asignada automáticamente. Recuerde que en un grupo de disponibilidad con un tipo de clúster Ninguno, la dirección IP debe ser estática y establecerse en la dirección IP del principal.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Creación de grupo de disponibilidad 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. Si se crea un cliente de escucha para escenarios legibles, SSMS 17.3 o posterior permite la creación del enrutamiento de solo lectura en el asistente. También se puede agregar más adelante mediante SSMS o Transact-SQL. Para agregar enrutamiento de solo lectura ahora:
 
-    A.  Seleccione la pestaña Enrutamiento de solo lectura.
+    a.  Seleccione la pestaña Enrutamiento de solo lectura.
 
-    B.  Escriba las direcciones URL de las réplicas de solo lectura. Estas direcciones URL son similares a los puntos de conexión, salvo que usan el puerto de la instancia, no el punto de conexión.
+    b.  Escriba las direcciones URL de las réplicas de solo lectura. Estas direcciones URL son similares a los puntos de conexión, salvo que usan el puerto de la instancia, no el punto de conexión.
 
     c.  Seleccione cada dirección URL y, en la parte inferior, seleccione las réplicas legibles. Para realizar una selección múltiple, mantenga presionada la tecla MAYÚS o haga clic y arrastre.
 
-12. Haga clic en **Siguiente**.
+12. Haga clic en **Next**.
 
-13. Elija cómo se van a inicializar las réplicas secundarias. El valor predeterminado es usar [propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), que requiere la misma ruta de acceso en todos los servidores que participan en el grupo de disponibilidad. También puede hacer que el asistente realice una copia de seguridad, copie y restaure (la segunda opción); la una si ha realizado una copia de seguridad de la base de datos, la ha copiado y restaurado manualmente en las réplicas (tercera opción); o agregue la base de datos más adelante (última opción). Al igual que con los certificados, si realiza copias de seguridad de forma manual y las copia, se deben establecer los permisos de los archivos de copia de seguridad en las otras réplicas. Haga clic en **Siguiente**.
+13. Elija cómo se van a inicializar las réplicas secundarias. El valor predeterminado es usar [propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), que requiere la misma ruta de acceso en todos los servidores que participan en el grupo de disponibilidad. También puede hacer que el asistente realice una copia de seguridad, copie y restaure (la segunda opción); la una si ha realizado una copia de seguridad de la base de datos, la ha copiado y restaurado manualmente en las réplicas (tercera opción); o agregue la base de datos más adelante (última opción). Al igual que con los certificados, si realiza copias de seguridad de forma manual y las copia, se deben establecer los permisos de los archivos de copia de seguridad en las otras réplicas. Haga clic en **Next**.
 
-14. En el cuadro de diálogo Validación, si todo no se devuelve como Correcto, investigue. Algunas advertencias son aceptables y no son graves, por ejemplo si no se crea un cliente de escucha. Haga clic en **Siguiente**.
+14. En el cuadro de diálogo Validación, si todo no se devuelve como Correcto, investigue. Algunas advertencias son aceptables y no son graves, por ejemplo si no se crea un cliente de escucha. Haga clic en **Next**.
 
 15. En el cuadro de diálogo Resumen, haga clic en **Finalizar**. El proceso de creación del grupo de disponibilidad ya comienza.
 
@@ -533,7 +533,7 @@ En este ejemplo se muestra la creación de una configuración de dos réplicas c
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Crear el inicio de sesión de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y los permisos para Pacemaker
+## <a name="create-the-ssnoversion-md-login-and-permissions-for-pacemaker"></a>Crear el inicio de sesión de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y los permisos para Pacemaker
 
 Un clúster de alta disponibilidad de Pacemaker subyacente a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux necesita acceso a la instancia de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], así como permisos en el propio grupo de disponibilidad. Estos pasos crean el inicio de sesión y los permisos asociados, junto con un archivo que indica a Pacemaker cómo iniciar sesión en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
@@ -582,7 +582,9 @@ Un clúster de alta disponibilidad de Pacemaker subyacente a [!INCLUDE[ssnoversi
 
 Después de crear un grupo de disponibilidad en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], se deben crear los recursos correspondientes en Pacemaker si se ha especificado un tipo de clúster Externo. Hay dos recursos asociados a un grupo de disponibilidad: el propio grupo de disponibilidad y una dirección IP. La configuración del recurso de dirección IP es opcional si no se usa la funcionalidad del cliente de escucha, pero se recomienda.
 
-El recurso de grupo de disponibilidad que se crea es un tipo especial de recurso denominado clon. El recurso de grupo de disponibilidad básicamente tiene copias en cada nodo y hay un recurso que controla denominado maestro. El maestro está asociado al servidor que hospeda la réplica principal. Las réplicas secundarias (normales o de solo configuración) se consideran esclavas y se pueden promover a maestras en una conmutación por error.
+El recurso de grupo de disponibilidad que se crea es un tipo especial de recurso denominado clon. El recurso de grupo de disponibilidad básicamente tiene copias en cada nodo y hay un recurso que controla denominado maestro. El maestro está asociado al servidor que hospeda la réplica principal. El resto de recursos hospedan réplicas secundarias (normales o de solo configuración) y se pueden promover a maestras en una conmutación por error.
+
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 1.  Cree el recurso de grupo de disponibilidad con la siguiente sintaxis:
 

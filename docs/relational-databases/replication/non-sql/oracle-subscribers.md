@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 40942d92f30790f896888bd71cf4523a14d1cc48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907987"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883043"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite las suscripciones de inserción a Oracle a través del proveedor Oracle OLE DB suministrado por Oracle.  
   
 ## <a name="configuring-an-oracle-subscriber"></a>Configurar un suscriptor de Oracle  
@@ -32,7 +32,7 @@ ms.locfileid: "72907987"
   
 1.  Instale y configure el software de red de cliente de Oracle y el proveedor OLE DB de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a fin de que el distribuidor pueda realizar conexiones al suscriptor de Oracle. Debe utilizarse la versión más reciente del software de red de cliente de Oracle. Oracle recomienda que los usuarios instalen las versiones más recientes del software de cliente. Por tanto, la versión del software de cliente suele ser más reciente que la del software de base de datos. La manera más sencilla de instalar el software es utilizar Oracle Universal Installer, que se encuentra en el disco de cliente de Oracle. En Oracle Universal Installer proporcione la siguiente información:  
   
-    |Información|Descripción|  
+    |Information|Descripción|  
     |-----------------|-----------------|  
     |Oracle Home (Directorio de inicio de Oracle)|Es la ruta de acceso al directorio de instalación del software de Oracle. Acepte el valor predeterminado (C:\oracle\ora90 o similar) o escriba otra ruta de acceso. Para obtener más información sobre el directorio de inicio de Oracle, vea la sección "Consideraciones sobre el directorio de inicio de Oracle" más adelante en este tema.|  
     |Oracle home name (Nombre del directorio de inicio de Oracle)|Un alias para la ruta de acceso del directorio de inicio de Oracle.|  
@@ -67,7 +67,7 @@ ms.locfileid: "72907987"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Por ejemplo, `sqlplus replication/$tr0ngPasswerd@Oracle90Server`.  
+     Por ejemplo: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  Si la configuración de red es correcta, se iniciará la sesión y verá el símbolo de `SQL` .  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72907987"
 ## <a name="mapping-data-types-from-sql-server-to-oracle"></a>Asignar tipos de datos desde SQL Server a Oracle  
  En la tabla siguiente se muestran las asignaciones de tipos de datos que se utilizan cuando se replican datos en un suscriptor que está ejecutando Oracle.  
   
-|Tipo de datos de SQL Server|Tipo de datos de Oracle|  
+|Tipos de datos de SQL Server|Tipo de datos de Oracle|  
 |--------------------------|----------------------|  
 |**bigint**|NUMBER(19,0)|  
 |**binary(1-2000)**|RAW(1-2000)|  
@@ -114,7 +114,7 @@ ms.locfileid: "72907987"
 |**geography**|BLOB|  
 |**geometry**|BLOB|  
 |**hierarchyid**|BLOB|  
-|**imagen**|BLOB|  
+|**image**|BLOB|  
 |**int**|NUMBER(10,0)|  
 |**money**|NUMBER(19,4)|  
 |**nchar(1-1000)**|CHAR(1-1000)|  
@@ -130,7 +130,7 @@ ms.locfileid: "72907987"
 |**smallmoney**|NUMBER(10,4)|  
 |**sql_variant**|N/D|  
 |**sysname**|VARCHAR2(128)|  
-|**varchar(max)**|CLOB|  
+|**text**|CLOB|  
 |**time(0-7)**|VARCHAR(16)|  
 |**timestamp**|RAW (8)|  
 |**tinyint**|NUMBER(3,0)|  

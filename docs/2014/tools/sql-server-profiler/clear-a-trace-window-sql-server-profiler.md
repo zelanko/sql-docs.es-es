@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea83e4c25babf437158706df2c4cfeb1780777a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316209"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064065"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>Borrar el contenido de una ventana de seguimiento (SQL Server Profiler)
   En este tema se describe cómo borrar el contenido de la ventana de un seguimiento en ejecución mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "63316209"
   
      Se quitará el contenido de la ventana de seguimiento. Tenga en cuenta que si se ha guardado el archivo o la tabla de seguimiento, el contenido del archivo o la tabla permanecerá intacto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

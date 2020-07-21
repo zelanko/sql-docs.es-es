@@ -1,5 +1,5 @@
 ---
-title: Tabla (cuadro de diálogo origen de partición) de detalle del enlace (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Detalle del enlace de tablas (cuadro de diálogo origen de la partición) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca06f4267edd65885bf4fec1838ecc4360c304fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940156"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Detalle del enlace de tablas (cuadro de diálogo Origen de la partición) (Analysis Services - Datos multidimensionales)
   Use la opción **Enlace de tablas** del cuadro de diálogo **Origen de la partición** para especificar la tabla de hechos que proporciona los datos para la partición. Puede mostrar este panel seleccionando **Enlace de tablas** en la opción **Tipo de enlace** del cuadro de diálogo **Origen de la partición** .  
@@ -26,7 +25,7 @@ ms.locfileid: "66067867"
  **Grupo de medida**  
  Muestra el grupo de medida para esta partición.  
   
- **Look in**  
+ **Buscar en**  
  Seleccione el origen de datos o la vista del origen de datos que contiene las tablas de origen para la partición. La vista del origen de datos utilizada por el grupo de medida seleccionado es el valor seleccionado de manera predeterminada.  
   
  **Tablas de filtros**  
@@ -42,7 +41,7 @@ ms.locfileid: "66067867"
   
  Si se especifica un filtro en **Tablas de filtros**, la lista se restringe aún más mediante la comparación del filtro con los nombres de tabla que cumplen los criterios mencionados anteriormente. Solo se mostrarán las tablas que contengan la cadena especificada en **Tablas de filtros** .  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo origen de la partición &#40;Analysis Services - datos multidimensionales&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo origen de la partición &#40;Analysis Services de datos multidimensionales&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

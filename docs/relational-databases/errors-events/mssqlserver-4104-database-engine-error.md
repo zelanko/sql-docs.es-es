@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_4104 | Microsoft Docs
+description: El identificador formado por varias partes especificado no se ha podido asignar a una entidad existente. Vea una explicación del error y las posibles resoluciones.
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -11,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f6dfb6a41bab31fb716671f431115468d8bd86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d3cac9c566928baac5a32fe0aa318fbb823c57d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763067"
 ---
-# <a name="mssqlserver4104"></a>MSSQLSERVER_4104
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_4104"></a>MSSQLSERVER_4104
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|4104|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|4104|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|ALG_MULTI_ID_BAD|  
 |Texto del mensaje|El identificador formado por varias partes "%.*ls" no se pudo enlazar.|  
@@ -113,7 +114,7 @@ El error 4104 indica que el identificador formado por varias partes especificado
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    o Administrador de configuración de  
+    or  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

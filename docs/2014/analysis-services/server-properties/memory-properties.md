@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f1ffd3bd5a41b141e81fcb37b064e5cc4f35f84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940646"
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de memoria de servidor que aparecen en la siguiente tabla. Para obtener información orientativa acerca de estas propiedades, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Los valores comprendidos entre 1 y 100 representan porcentajes de **Memoria física total** o de **Espacio de direcciones virtuales**, lo que sea menor. Los valores superiores a 100 representan límites de memoria en bytes.  
   
- **Se aplica a:** Modo de servidor multidimensional y Tabular, a menos que se indique lo contrario.  
+ **Se aplica a:** Modo de servidor multidimensional y tabular, a menos que se indique lo contrario.  
   
 ## <a name="properties"></a>Propiedades  
  `LowMemoryLimit`  
@@ -110,7 +109,7 @@ ms.locfileid: "66068893"
  `WaitCountIfHighMemory`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

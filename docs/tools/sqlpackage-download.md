@@ -1,20 +1,21 @@
 ---
-title: Descarga e instalación de sqlpackage | Microsoft Docs
+title: Descarga e instalación de sqlpackage
 description: Descarga e instalación de sqlpackage para Windows, macOS o Linux
 ms.custom: tools|sos
-ms.date: 06/20/2018
 ms.prod: sql
-ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
-ms.translationtype: MTE75
+ms.reviewer: alayu; sstein
+ms.date: 06/20/2018
+ms.openlocfilehash: 6490dd15619c315288be6a094ceb26e68c0179d1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016865"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151539"
 ---
 # <a name="download-and-install-sqlpackage"></a>Descarga e instalación de sqlpackage
 
@@ -22,14 +23,14 @@ sqlpackage se ejecuta en Windows, macOS y Linux.
 
 Descargue e instale la versión más reciente de .NET Framework y las versiones preliminares de macOS y Linux:
 
-|Plataforma|Descargar|Fecha de la versión|Versión|Compilar
+|Plataforma|Descargar|Fecha de la versión|Versión|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|13 de septiembre de 2019|18.3.1|15.0.4538.1|
-|macOS .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2102894)|13 de septiembre de 2019| 18.3.1|15.0.4538.1|
-|Linux .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2102978)|13 de septiembre de 2019| 18.3.1|15.0.4538.1|
-|Windows .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2102979)|13 de septiembre de 2019| 18.3.1|15.0.4538.1|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2128142)|28 de abril de 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2128145)|28 de abril de 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2128144)|28 de abril de 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2128143)|28 de abril de 2020| 18.5|15.0.4769.1|
 
-Para más información sobre la última versión, consulte las [notas de la versión](release-notes-sqlpackage.md).
+Para más información sobre la última versión, consulte las [notas de la versión](release-notes-sqlpackage.md). Para descargar idiomas adicionales, consulte la sección de [idiomas disponibles](#available-languages).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -37,53 +38,46 @@ Para más información sobre la última versión, consulte las [notas de la vers
 
 En esta versión de sqlpackage se incluye una experiencia de instalación estándar de Windows y un archivo .zip: 
 
-1. Descargue y ejecute el [instalador de DacFramework.msi para Windows](https://go.microsoft.com/fwlink/?linkid=2102893).
+1. Descargue y ejecute el [instalador de DacFramework.msi para Windows](https://go.microsoft.com/fwlink/?linkid=2128142).
 2. Abra una nueva ventana del símbolo del sistema y ejecute sqlpackage.exe.
     - sqlpackage se instala en la carpeta ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```.
-    - Si se instala la versión x86 en una máquina x64, sqlpackage se instala en la carpeta ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```.
 
-## <a name="get-sqlpackage-net-core-preview-for-windows"></a>Obtener sqlpackage .NET Core (versión preliminar) para Windows
+## <a name="get-sqlpackage-net-core-for-windows"></a>Descarga de sqlpackage .NET Core para Windows
 
-1. Descargue [sqlpackage para Windows](https://go.microsoft.com/fwlink/?linkid=2102979).
-2. Para extraer el archivo, haga clic con el botón derecho en el archivo en el explorador de Windows y seleccione "extraer todo..." y seleccione el directorio de destino.
+1. Descargue [sqlpackage para Windows](https://go.microsoft.com/fwlink/?linkid=2128143).
+2. Para extraer el archivo, haga clic con el botón derecho en el archivo en el explorador de Windows, seleccione "Extraer todo..." y seleccione el directorio de destino.
 3. Abra una nueva ventana de terminal y el CD en la ubicación donde se extrajo sqlpackage:
 
-   **Instalación del archivo .zip:**
-
-   ```bash
-   sqlpackage
+   ```cmd
+   > sqlpackage
    ```
 
-## <a name="get-sqlpackage-net-core-preview-for-macos"></a>Obtener sqlpackage .NET Core (versión preliminar) para macOS
+## <a name="get-sqlpackage-net-core-for-macos"></a>Descarga de sqlpackage .NET Core para macOS
 
-1. Descargue [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=2102894).
+1. Descargue [sqlpackage para macOS](https://go.microsoft.com/fwlink/?linkid=2128145).
 2. Para extraer el archivo e iniciar sqlpackage, abra una nueva ventana de terminal y escriba los siguientes comandos:
 
-   **Instalación del archivo .zip:**
-
    ```bash
-   mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
-   echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
-   source ~/.bash_profile
-   sqlpackage
+   $ mkdir sqlpackage
+   $ unzip ~/Downloads/sqlpackage-osx-<version string>.zip -d ~/sqlpackage 
+   $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
+   $ source ~/.bash_profile
+   $ sqlpackage
    ```
 
-## <a name="get-sqlpackage-net-core-preview-for-linux"></a>Obtención de sqlpackage .NET Core (versión preliminar) para Linux
+## <a name="get-sqlpackage-net-core-for-linux"></a>Descarga de sqlpackage .NET Core para Linux
 
-1. Descargue [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=2102978) mediante uno de los instaladores o el archivo tar.gz:
+1. Descargue [sqlpackage para Linux](https://go.microsoft.com/fwlink/?linkid=2128144) mediante uno de los instaladores o el archivo tar.gz:
 2. Para extraer el archivo e iniciar sqlpackage, abra una nueva ventana de terminal y escriba los siguientes comandos:
 
-   **Instalación del archivo .zip:**
-
    ```bash
-   cd ~
-   mkdir sqlpackage
-   unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
-   echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
-   chmod a+x ~/sqlpackage/sqlpackage
-   source ~/.bashrc
-   sqlpackage
+   $ cd ~
+   $ mkdir sqlpackage
+   $ unzip ~/Downloads/sqlpackage-linux-<version string>.zip -d ~/sqlpackage 
+   $ echo "export PATH=\"\$PATH:$HOME/sqlpackage\"" >> ~/.bashrc
+   $ chmod a+x ~/sqlpackage/sqlpackage
+   $ source ~/.bashrc
+   $ sqlpackage
    ```
 
    > [!NOTE]
@@ -92,35 +86,35 @@ En esta versión de sqlpackage se incluye una experiencia de instalación están
    **Debian:**
 
    ```bash
-   sudo apt-get install libunwind8
+   $ sudo apt-get install libunwind8
    ```
 
    **Redhat:**
 
    ```bash
-   yum install libunwind
-   yum install libicu
+   $ yum install libunwind
+   $ yum install libicu
    ```
 
    **Ubuntu:**
 
    ```bash
-   sudo apt-get install libunwind8
+   $ sudo apt-get install libunwind8
 
    # install the libicu library based on the Ubuntu version
-   sudo apt-get install libicu52      # for 14.x
-   sudo apt-get install libicu55      # for 16.x
-   sudo apt-get install libicu57      # for 17.x
-   sudo apt-get install libicu60      # for 18.x
+   $ sudo apt-get install libicu52      # for 14.x
+   $ sudo apt-get install libicu55      # for 16.x
+   $ sudo apt-get install libicu57      # for 17.x
+   $ sudo apt-get install libicu60      # for 18.x
    ```
 
 ## <a name="uninstall-sqlpackage-preview"></a>Desinstalación de sqlpackage (versión preliminar)
 
 Si ha instalado sqlpackage con el instalador de Windows, desinstale de la misma manera que quita cualquier aplicación de Windows.
 
-Si ha instalado sqlpackage con un archivo .zip u otro archivo, basta con eliminar los archivos.
+Si ha instalado sqlpackage con un archivo .zip u otro archivo, elimine los archivos.
 
-## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
+## <a name="supported-operating-systems"></a>Sistemas operativos compatibles
 
 sqlpackage se ejecuta en Windows, macOS y Linux, y es compatible con las siguientes plataformas:
 
@@ -128,12 +122,10 @@ sqlpackage se ejecuta en Windows, macOS y Linux, y es compatible con las siguien
 
 - Windows 10
 - Windows 8.1
-- Windows 8
 - Windows 7 SP1
-- Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
 - Windows Server 2008 R2
+- Windows Server 2012 R2
+- Windows Server 2016
 
 ### <a name="macos"></a>macOS
 
@@ -147,7 +139,23 @@ sqlpackage se ejecuta en Windows, macOS y Linux, y es compatible con las siguien
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
-## <a name="next-steps"></a>Next Steps
+## <a name="available-languages"></a>Idiomas disponibles
+
+Esta versión de sqlpackage puede instalarse en los idiomas siguientes:
+
+sqlpackage para Windows:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2128142&clcid=0x40a)
+
+sqlpackage .NET Core para Windows:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2128143&clcid=0x40a)
+
+sqlpackage .NET Core para macOS:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2128145&clcid=0x40a)
+
+sqlpackage .NET Core para Linux:  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2128144&clcid=0x40a)
+
+## <a name="next-steps"></a>Pasos siguientes
 
 - Mas información sobre [sqlpackage](sqlpackage.md)
 

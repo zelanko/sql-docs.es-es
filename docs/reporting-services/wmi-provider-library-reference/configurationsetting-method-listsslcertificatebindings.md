@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: d12d280c-9b6f-47a8-bcd9-34cde31c8886
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3184d9dff106628e09491852690da9f667570ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9fccf663b91dfba2c7b68da1c882c6c6f701e42f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579883"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636195"
 ---
 # <a name="configurationsetting-method---listsslcertificatebindings"></a>Método ConfigurationSetting - ListSSLCertificateBindings
-  Devuelve una lista de los certificados SSL instalados en el equipo.  
+  Devuelve una lista de los certificados TLS/SSL instalados en el equipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

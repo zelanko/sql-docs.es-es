@@ -1,6 +1,6 @@
 ---
-title: Importar de forma masiva datos de objetos de gran tamaño mediante el proveedor de conjuntos de filas BULK OPENROWSET | Microsoft Docs
-ms.custom: ''
+title: Importación en bloque de datos de objetos de gran tamaño mediante el proveedor de conjuntos de filas BULK OPENROWSET
+description: El proveedor de conjuntos de filas BULK OPENROWSET de SQL Server permite realizar la importación en bloque como datos de objetos grandes. Los tipos admitidos son varbinary(max), varchar(max) y nvarchar(max).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: 171cdd5c-1e47-4bd7-b99a-4f0fd4e10526
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c567cfbe90cad610655deae600f986a73c50d80d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3c998b1efeb6fff7726161ffb02e240e8a8847f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640710"
 ---
-# <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>Importar de forma masiva datos de objetos de gran tamaño mediante el proveedor de conjuntos de filas BULK OPENROWSET
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider-sql-server"></a>Importación en bloque de datos de objetos de gran tamaño mediante el proveedor de conjuntos de filas BULK OPENROWSET (SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El proveedor de conjuntos de filas BULK OPENROWSET de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite realizar la importación masiva de un archivo de datos como datos de objetos grandes.  
   

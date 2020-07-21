@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Convertir el proyecto al modelo de implementación del proyecto | Microsoft Docs'
+title: 'Paso 2: Convertir el proyecto al modelo de implementación de proyectos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cf03c77aba7544667073799f5b315eb959b0d155
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767357"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440352"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Paso 2: Convertir el proyecto al modelo de implementación del proyectos
   En esta tarea, usará al Asistente para conversión de proyectos de Integration Services para convertir el proyecto en el modelo de implementación del proyecto.  
@@ -51,6 +50,6 @@ ms.locfileid: "62767357"
 13. Haga clic en la ficha Parámetros y compruebe que el paquete contiene un parámetro para VarFolderName, y que el valor es la misma ruta de acceso especificada para la carpeta Nuevos datos de ejemplo del archivo de configuración Lesson 5.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: Probar el paquete de la lección 6](lesson-6-3-testing-the-lesson-6-package.md)  
+ [Paso 3: Prueba del paquete de la lección 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

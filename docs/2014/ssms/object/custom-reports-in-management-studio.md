@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a70109d082f88092945223fdecec44711a7bc710
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067399"
 ---
 # <a name="custom-reports-in-management-studio"></a>Informes personalizados en Management Studio
   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], muchos nodos del Explorador de objetos muestran un conjunto de informes estándar creados por [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Estos informes incluyen un resumen de la información que se suele solicitar al servidor. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, los administradores pueden ejecutar los informes personalizados que se crearon en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -72,9 +71,9 @@ ms.locfileid: "68188287"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar un informe personalizado a Management Studio](add-a-custom-report-to-management-studio.md)   
- [Anular la supresión de advertencias de ejecutar informe personalizado](unsuppress-run-custom-report-warnings.md)   
+ [No suprimir advertencias de ejecutar informe personalizado](unsuppress-run-custom-report-warnings.md)   
  [Usar informes personalizados con las propiedades de nodo del Explorador de objetos](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], VBScript
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd5d6a54bd36b62c9aec6492a66e4a451ead25f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921282"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760621"
 ---
 # <a name="addnew-method-example-vbscript"></a>Ejemplo del método AddNew (VBScript)
-Este ejemplo se usa el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para crear un nuevo registro con el nombre especificado.  
+En este ejemplo se usa el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para crear un nuevo registro con el nombre especificado.  
   
- Utilice el siguiente ejemplo en una página Active Server (ASP). Usar **buscar** para localizar el archivo Adovbs.inc y colocarlo en el directorio que se va a usar. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **AddNewVBS.asp**. Puede ver el resultado en cualquier explorador cliente.  
+ Use el ejemplo siguiente en una página de Active Server (ASP). Use **Buscar** para buscar el archivo adovbs. Inc y colóquelo en el directorio que piensa usar. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **AddNewVBS. asp**. Puede ver el resultado en cualquier explorador cliente.  
   
- Para ejecutar el ejemplo, agregue un nuevo registro en el formulario HTML. Haga clic en **Agregar nuevo**. Consulte la [ejemplo del método Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) para quitar los registros no deseados.  
+ Para practicar el ejemplo, agregue un nuevo registro en el formulario HTML. Haga clic en **Agregar nuevo**. Vea el [ejemplo del método Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) para quitar registros no deseados.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -212,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [AddNew (método, ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [AddNew (método) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

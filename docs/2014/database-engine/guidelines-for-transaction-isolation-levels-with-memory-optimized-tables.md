@@ -1,5 +1,5 @@
 ---
-title: Directrices para los niveles de aislamiento de transacciones con tablas optimizadas para memoria | Microsoft Docs
+title: Directrices para los niveles de aislamiento de transacción con tablas con optimización para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932896"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instrucciones para los niveles de aislamiento de transacciones con tablas con optimización para memoria
   En muchos casos, debe especificar el nivel de aislamiento de transacción. El aislamiento de transacción para las tablas optimizadas para memoria difiere de las tablas basadas en disco.  
@@ -24,7 +23,7 @@ ms.locfileid: "62779160"
   
 -   TRANSACTION ISOLATION LEVEL es una opción necesaria para el bloque ATOMIC que comprende el contenido de un procedimiento almacenado compilado de forma nativa.  
   
--   Debido a las restricciones de uso del nivel de aislamiento en las transacciones entre contenedores, el uso de tablas optimizadas para memoria en [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado debe ir acompañado con frecuencia de una sugerencia de tabla que especifique el nivel de aislamiento usado para el acceso a la tabla. Para obtener más información sobre sugerencias de nivel de aislamiento y transacciones entre contenedores, consulte [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
+-   Debido a las restricciones de uso del nivel de aislamiento en las transacciones entre contenedores, el uso de tablas optimizadas para memoria en [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado debe ir acompañado con frecuencia de una sugerencia de tabla que especifique el nivel de aislamiento usado para el acceso a la tabla. Para obtener más información sobre las sugerencias de nivel de aislamiento y las transacciones entre contenedores, vea [niveles de aislamiento de transacción](../../2014/database-engine/transaction-isolation-levels.md).  
   
 -   El nivel de aislamiento de transacción deseado debe declararse explícitamente. No es posible utilizar sugerencias de bloqueo (como XLOCK) para garantizar el aislamiento de algunas filas o tablas de la transacción.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "62779160"
   
 -   Deben evitarse transacciones de ejecución prolongada con tablas optimizadas para memoria. Estas transacciones aumentan la probabilidad de conflictos y la terminación de las siguientes transacciones. Una transacción de larga duración también pospone la recolección de elementos no utilizados. Cuanto más tiempo dure la ejecución de una transacción, más tiempo conserva OLTP en memoria las versiones de filas recién eliminadas, lo que puede reducir el rendimiento de la búsqueda de transacciones nuevas.  
   
- Las tablas basadas en disco se suelen basar en el bloqueo y en el bloqueo del aislamiento de las transacciones. Las tablas con optimización para memoria dependen del control de varias versiones y de la detección de conflictos para garantizar el aislamiento. Para obtener más información, vea la sección sobre la detección de conflictos, validación y comprobaciones de dependencia de confirmación en [transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Las tablas basadas en disco se suelen basar en el bloqueo y en el bloqueo del aislamiento de las transacciones. Las tablas con optimización para memoria dependen del control de varias versiones y de la detección de conflictos para garantizar el aislamiento. Para obtener más información, vea la sección sobre detección de conflictos, validación y comprobaciones de dependencias de confirmación en [transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Las tablas basadas en disco permiten el control de varias versiones con los niveles de aislamiento SNAPSHOT y READ_COMMITTED_SNAPSHOT. En el caso de tablas optimizadas para memoria, todos los niveles de aislamiento se basan en el control de varias versiones, incluidos REPEATABLE READ y SERIALIZABLE.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62779160"
   
  La garantía que proporciona el nivel de aislamiento SNAPSHOT (el menor nivel de aislamiento que se admite en las tablas optimizadas para memoria) incluye las garantías de READ COMMITTED. Cada instrucción de la transacción lee la misma versión coherente de la base de datos. No solo todas las filas leídas por la transacción se confirman en la base de datos, sino que todas las operaciones de lectura ven el conjunto de cambios realizados por el mismo conjunto de transacciones.  
   
- **Directriz**: Si solo se requiere la garantía de aislamiento READ COMMITTED, use el aislamiento SNAPSHOT con procedimientos almacenados compilados de forma nativa y obtener acceso a tablas optimizadas para memoria mediante interpreta [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Directriz**: si solo se requiere la garantía de aislamiento de lectura confirmada, use el aislamiento de instantánea con procedimientos almacenados compilados de forma nativa y el acceso a tablas optimizadas para memoria mediante interpretado [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  En las transacciones de confirmación automática, el nivel de aislamiento READ COMMITTED se asigna implícitamente en SNAPSHOT para las tablas optimizadas para memoria. Por tanto, si la configuración de sesión TRANSACTION ISOLATION LEVEL se establece en READ COMMITTED, no es necesario especificar el nivel de aislamiento mediante una sugerencia de tabla al tener acceso a tablas optimizadas para memoria.  
   
@@ -91,13 +90,13 @@ COMMIT
   
      Algunas aplicaciones pueden suponer que los lectores siempre esperan hasta que los escritores confirmen la operación, especialmente si hay algún tipo de sincronización entre las dos transacciones en el nivel de aplicación.  
   
-     **Instrucciones:** Las aplicaciones no pueden confiar en comportamiento de bloqueo. Si una aplicación necesita sincronización entre transacciones simultáneas, esa lógica se puede implementar en la capa de aplicación o en el nivel de base de datos a través de [sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Directriz:** Las aplicaciones no pueden basarse en el comportamiento de bloqueo. Si una aplicación necesita sincronización entre transacciones simultáneas, dicha lógica se puede implementar en la capa de aplicación o en el nivel de base de datos, a través de [sp_getapplock &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
   
 -   En las transacciones que utilizan el aislamiento READ COMMITTED, cada instrucción ve la versión más reciente de las filas de la base de datos. Por consiguiente, las instrucciones posteriores ven los cambios en el estado de la base de datos.  
   
      Sondear una tabla con un bucle WHILE hasta que se encuentra una nueva fila es un ejemplo de un patrón de aplicación que utiliza esta suposición. Con cada iteración del bucle, la consulta verá las últimas actualizaciones de la base de datos.  
   
-     **Instrucciones:** Si una aplicación debe sondear una tabla optimizada en memoria para obtener las filas más recientes que se escriben en la tabla, mueva el bucle de sondeo fuera del ámbito de la transacción.  
+     **Directriz:** Si una aplicación necesita sondear una tabla optimizada para memoria para obtener las filas más recientes escritas en la tabla, mueva el bucle de sondeo fuera del ámbito de la transacción.  
   
      A continuación se muestra un patrón de aplicación de ejemplo que utiliza esta suposición. Sondear una tabla con un bucle WHILE hasta encontrar una nueva fila. En cada iteración del bucle, la consulta tendrá acceso a las últimas actualizaciones de la base de datos.  
   
@@ -123,15 +122,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Sugerencias de bloqueo de tabla  
- Sugerencias de bloqueo ([sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) como HOLDLOCK y XLOCK se pueden usar con las tablas basadas en disco para tener [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realice más bloqueos de los necesarios para el nivel de aislamiento especificado.  
+ Las sugerencias de bloqueo ([sugerencias de tabla &#40;&#41;de Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table)) como HOLDLOCK y xlock se pueden usar con tablas basadas en disco para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tomar más bloqueos de los necesarios para el nivel de aislamiento especificado.  
   
  Las tablas con optimización para memoria no usan bloqueos. Se pueden usar niveles de aislamiento superiores como REPEATABLE READ y SERIALIZABLE para declarar las garantías deseadas.  
   
  Las sugerencias de bloqueo no se admiten. En su lugar, declare las garantías necesarias a través de los niveles de aislamiento de transacción. (Se admite NOLOCK porque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no adopta bloqueos en las tablas optimizadas para memoria. Tenga en cuenta que, a diferencia de las tablas basadas en disco, NOLOCK no implica el comportamiento READ UNCOMMITTED para las tablas optimizadas para memoria).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Directrices para la lógica de reintento de transacciones en tablas optimizadas para memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+ [Instrucciones para la lógica de reintento de transacciones en tablas optimizadas para memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Niveles de aislamiento de transacción](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

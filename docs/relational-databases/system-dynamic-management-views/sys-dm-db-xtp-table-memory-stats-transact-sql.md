@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - sys.dm_db_xtp_table_memory_stats
 - dm_db_xtp_table_memory_stats
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830759"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Devuelve estadísticas del uso de memoria para cada tabla de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (usuario y sistema) de la base de datos actual. Las tablas del sistema tienen identificadores de objetos negativos y se emplean para almacenar información en tiempo de ejecución para el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A diferencia de los objetos de usuario, las tablas del sistema son internas y solo existen en memoria; por tanto, no son visible mediante vistas de catálogo. Las tablas del sistema se usan para almacenar información como metadatos para todos los archivos de datos y delta del almacenamiento, solicitudes de combinación, marcas de agua de archivos delta para filtrar filas, tablas quitadas e información pertinente para la recuperación y las copias de seguridad. Puesto que el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] puede tener hasta 8.192 pares de archivos de datos y delta, para las bases de datos en memoria grandes, la memoria que ocupan las tablas del sistema puede ser de algunos megabytes.  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador de objeto de la tabla. Es NULL para las tablas del sistema de OLTP en memoria.|  
 |memory_allocated_for_table_kb|**bigint**|La memoria asignada para esta tabla.|  
@@ -212,7 +212,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

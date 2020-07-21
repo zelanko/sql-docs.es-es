@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPControl (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPControl (OLE DB) | Microsoft Docs
 description: IBCPSession::BCPControl (OLE DB)
 ms.custom: ''
 ms.date: 07/03/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 69944fc78ecfe45869ec59c37db20fdb09b2896e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015522"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
@@ -38,23 +38,23 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método **BCPControl** establece varios parámetros de control para operaciones de copia masiva, incluidos el número de errores permitidos antes de cancelar una copia masiva, los números de la primera y última filas que se copian de un archivo de datos y el tamaño del lote.  
   
  Este método se utiliza también para especificar la instrucción SELECT que se utiliza en la copia masiva de datos desde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede establecer el argumento **eOption** en BCP_OPTION_HINTS y el argumento **iValue** para tener un puntero a una cadena de caracteres anchos que contenga la instrucción SELECT.  
   
- Los valores posibles para *eOption* son:  
+ Los valores posibles de *eOption* son:  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|BCP_OPTION_ABORT|Detiene una operación de copia masiva que ya está en curso. Puede llamar al método **BCPControl** con un argumento *eOption* de BCP_OPTION_ABORT desde otro subproceso para detener una operación de copia masiva en ejecución. Se omite el argumento *iValue* .|  
+|BCP_OPTION_ABORT|Detiene una operación de copia masiva que ya está en curso. Puede llamar al método **BCPControl** con un argumento *eOption* de BCP_OPTION_ABORT desde otro subproceso para detener una operación de copia masiva en ejecución. El argumento *iValue* se pasa por alto.|  
 |BCP_OPTION_BATCH|El número de filas por lote. El valor predeterminado es 0, que indica todas las filas de una tabla cuando se están extrayendo datos, o todas las filas del archivo de datos del usuario cuando los datos se están copiando en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Un valor menor que 1 restablece BCP_OPTION_BATCH al valor predeterminado.|  
-|BCP_OPTION_DELAYREADFMT|Un valor booleano, si se establece en true, hace que [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) se lea durante la ejecución. Si es false (el valor predeterminado), IBCPSession:: BCPReadFmt leerá inmediatamente el archivo de formato. Se producirá un error de secuencia si **BCP_OPTION_DELAYREADFMT** es true y se llama a IBCPSession:: BCPColumns o IBCPSession:: BCPColFmt.<br /><br /> También se producirá un error de secuencia si `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` se llama `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` después de llamar a y IBCPSession:: BCPWriteFmt.<br /><br /> Para obtener más información, vea [Detección de metadatos](../../oledb/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Un valor booleano, si se establece en true, hace que [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) se lea durante la ejecución. Si es false (el valor predeterminado), IBCPSession::BCPReadFmt leerá inmediatamente el archivo de formato. Se producirá un error de secuencia si **BCP_OPTION_DELAYREADFMT** es true y puede llamar a IBCPSession::BCPColumns o IBCPSession::BCPColFmt.<br /><br /> También se producirá un error de secuencia si se llama a `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` después de llamar a `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` e IBCPSession::BCPWriteFmt.<br /><br /> Para obtener más información, vea [Detección de metadatos](../../oledb/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|El argumento *iValue* contiene el número de la página de códigos del archivo de datos. Puede especificar el número de la página de códigos, como 1252 u 850, o uno de los valores siguientes:<br /><br /> BCP_FILECP_ACP: los datos del archivo están en la página de códigos de Microsoft Windows® del cliente.<br /><br /> BCP_FILECP_OEMCP: los datos del archivo están en la página de códigos OEM del cliente (valor predeterminado).<br /><br /> BCP_FILECP_RAW: los datos del archivo están en la página de códigos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|Número de versión del formato de archivo de datos. Puede ser 80 ([!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]) o 110 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]). 110 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor.  Por ejemplo, para importar datos obtenidos de una columna de texto en un servidor [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] a una columna **varchar(max)** de un servidor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior, debe especificar 80. Del mismo modo, si especifica 80 al exportar datos de una columna **varchar(max)** , se guardan de la misma forma que las columnas de texto en el formato de [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] y se pueden importar en una columna de texto de un servidor [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)].|  
 |BCP_OPTION_FIRST|La primera fila de datos del archivo o la tabla que se copia. El valor predeterminado es 1; un valor menor que 1 reinicializa esta opción a su valor predeterminado.|  
 |BCP_OPTION_FIRSTEX|En operaciones de salida de BCP, especifica la primera fila de la tabla de base de datos que se copia en el archivo de datos.<br /><br /> En operaciones de entrada de BCP, especifica la primera fila del archivo de datos que se copia en la tabla de base de datos.<br /><br /> Se espera que el parámetro *iValue* sea la dirección de un entero de 64 bits con signo que contiene el valor. El valor máximo que se puede pasar a BCPFIRSTEX es 2^63-1.|  
-|BCP_OPTION_FMTXML|Se utiliza para especificar que el archivo de formato generado debe estar en un formato XML. Está apagado de forma predeterminada y de forma predeterminada los archivos de formato se guardan como archivos de texto. El formato de archivo XML proporciona mayor flexibilidad, pero con algunas restricciones más. Por ejemplo, no puede especificar el prefijo ni el terminador de un campo simultáneamente, lo que es posible en archivos de formatos anteriores.<br /><br /> Nota: los archivos de formato XML solo se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten cuando se instalan herramientas junto con OLE DB controlador para SQL Server.|  
+|BCP_OPTION_FMTXML|Se utiliza para especificar que el archivo de formato generado debe estar en un formato XML. Está apagado de forma predeterminada y de forma predeterminada los archivos de formato se guardan como archivos de texto. El formato de archivo XML proporciona mayor flexibilidad, pero con algunas restricciones más. Por ejemplo, no puede especificar el prefijo ni el terminador de un campo simultáneamente, lo que es posible en archivos de formatos anteriores.<br /><br /> Nota: Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con OLE DB Driver for SQL Server.|  
 |BCP_OPTION_HINTS|El argumento *iValue* contiene un puntero de cadena de caracteres anchos. La cadena a la que apunta especifica sugerencias de procesamiento de copia masiva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o una instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] que devuelve un conjunto de resultados. Si se especifica una instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] que devuelve más de un conjunto de resultados, se omiten todos los conjuntos de resultados posteriores al primero.|  
 |BCP_OPTION_KEEPIDENTITY|Cuando el argumento *iValue* está establecido en TRUE, esta opción especifica que los métodos de copia masiva insertan valores de datos proporcionados para las columnas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] definidas con una restricción de identidad. El archivo de entrada debe proporcionar valores para las columnas de identidad. Si no se establece, se generan nuevos valores de identidad para las filas insertadas. No se tiene en cuenta ningún dato presente en el archivo para las columnas de identidad.|  
 |BCP_OPTION_KEEPNULLS|Especifica si los valores de datos vacíos del archivo se convertirán en valores NULL en la tabla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cuando el argumento *iValue* está establecido en TRUE, los valores vacíos se convierten en NULL en la tabla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Con el valor predeterminado, los valores vacíos se convierten en un valor predeterminado para la columna en la tabla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si existe un valor predeterminado.|  
@@ -77,7 +77,7 @@ HRESULT BCPControl(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
  No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) antes de llamar a esta función.  
@@ -86,7 +86,7 @@ HRESULT BCPControl(
  Error de memoria insuficiente.  
   
 ## <a name="see-also"></a>Consulte también  
- [OLE DB &#40;IBCPSession&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../oledb/features/performing-bulk-copy-operations.md)  
   
   

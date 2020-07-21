@@ -1,5 +1,5 @@
 ---
-title: 'Servicios de Excel no admite las siguientes características y puede que no se muestren o se muestren solo parcialmente: Los comentarios, formas u otros objetos | Microsoft Docs'
+title: 'Los servicios de Excel no admiten las siguientes características y es posible que no se muestren o se muestren solo parcialmente: comentarios, formas u otros objetos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: ade92e15-dfbf-496b-9378-a00bd83ba750
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03411134eb1350adcd37badd458e7f7a0198a9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5f3da5eb53683e0c02655ad49bb36431d7e0b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071917"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547608"
 ---
-# <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Servicios de Excel no admite las siguientes características y puede que no se muestren o se muestren solo parcialmente: Comentarios, formas o otros objetos
+# <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Las siguientes características no se admiten en Servicios de Excel y puede que no se muestren o que se muestren solo parcialmente: comentarios, formas u otros objetos
   Este error se produce al agregar segmentaciones a un libro PowerPivot desde una lista de campos de PowerPivot.  
   
 ## <a name="details"></a>Detalles  
@@ -30,7 +29,7 @@ ms.locfileid: "66071917"
 |Texto del mensaje|Servicios de Excel no admite las siguientes características y puede que no se muestren o se muestren solo parcialmente:<br /><br /> Comentarios, formas o otros objetos<br /><br /> Algunas características, como las consultas de datos externos, muestran datos en caché que solo pueden actualizarse en Microsoft Excel.|  
   
 ## <a name="explanation"></a>Explicación  
- Excel Web Access muestra este error al abrir un libro PowerPivot en un explorador y hace clic en el **detalles** botón para el mensaje, **no admitido características libro es posible que no se muestre como está previsto**.  
+ Excel Web Access muestra este error al abrir un libro PowerPivot en un explorador y hacer clic en el botón **detalles** del mensaje, **es posible que no se muestren las características no admitidas de este libro como se pretende**.  
   
  Este error se produce porque el libro PowerPivot contiene segmentaciones cuyo diseño es controlado por un objeto Forma oculto en Excel. El objeto Forma controla el formato y la posición de las segmentaciones en la posición horizontal y vertical.  
   

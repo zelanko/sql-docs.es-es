@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7fca859273c5eff58cde02b98f98699307ff1b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f6a96d7bde4301c5789da402ebb58ab2a38295be
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979583"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926285"
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>Método getStatement (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public java.sql.Statement getStatement()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto SQLServerStatement.  
+ Un objeto SQLServerStatement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getStatement se especifica mediante el método getStatement de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getStatement especifica este método getStatement en la interfaz java.sql.ResultSet.  
   
  Si el conjunto de resultados se generara de alguna otra forma, por ejemplo, mediante un método [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), este devolverá el valor NULL.  
   

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d1265a48fbe07bdf59616026a069fda05723f10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 533fcfc93946714d957fb7e410864f0c6d27f3ed
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955332"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927689"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>Método createSQLXML (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,13 +30,13 @@ public java.sql.SQLXML createSQLXML()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto SQLXML.  
+ Un objeto SQLXML.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método createSQLXML se especifica mediante el método createSQLXML en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método createSQLXML especifica este método createSQLXML en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

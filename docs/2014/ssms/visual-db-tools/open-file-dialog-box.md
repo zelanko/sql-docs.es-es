@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1baf7d4b4d8c232bfd350cc942d90a4b8631d6f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001285"
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
   Use el cuadro de diálogo **Abrir archivo** para abrir un archivo existente en el disco. Este cuadro de diálogo también se puede utilizar para abrir un archivo ya abierto mediante opciones de codificación de lenguaje distintas.  
@@ -73,7 +72,7 @@ ms.locfileid: "63138902"
  **Vistas en miniatura**  
  Muestra vistas en miniatura de los elementos del panel de información.  
   
- **Mosaicos**  
+ **Iconos**  
  Muestra archivos y carpetas como iconos grandes.  
   
  **Iconos**  
@@ -85,7 +84,7 @@ ms.locfileid: "63138902"
  **Detalles**  
  Muestra el nombre, el tamaño, el tipo y la fecha de última modificación de los archivos y carpetas en formato de lista. Para ordenar según un detalle determinado, haga clic en su encabezado de columna.  
   
- **Vista web**  
+ **WebView**  
  Este comando no está disponible.  
   
 ## <a name="tools"></a>Herramientas  

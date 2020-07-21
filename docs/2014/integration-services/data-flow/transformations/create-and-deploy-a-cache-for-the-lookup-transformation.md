@@ -11,15 +11,14 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d53f0e72f909d2c12d8f3be8050175394aee7252
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900650"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430912"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
   Puede crear e implementar un archivo caché (.caw) para la transformación Búsqueda. El conjunto de datos de referencia está almacenado en el archivo caché.  
@@ -51,7 +50,7 @@ ms.locfileid: "62900650"
      El sistema crea el archivo al ejecutar el paquete.  
   
     > [!NOTE]  
-    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../access-to-files-used-by-packages.md).  
+    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../access-to-files-used-by-packages.md).  
   
 6.  Haga clic en la pestaña **Columnas** e indique qué columnas son las columnas de índice mediante la opción **Posición de índice** .  
   
@@ -86,11 +85,11 @@ ms.locfileid: "62900650"
   
 4.  Configure el proyecto para crear una utilidad de implementación y, a continuación, genere el proyecto. Para más información, consulte [Create a Deployment Utility](../../create-a-deployment-utility.md).  
   
-     Se crea un archivo de manifiesto \<*nombre de proyecto*>.SSISDeploymentManifest.xml que enumera los diferentes archivos del proyecto, los paquetes y las configuraciones de los paquetes.  
+     Se crea un archivo de manifiesto, \<*project name*>.SSISDeploymentManifest.xml, que enumera los archivos varios del proyecto, los paquetes y las configuraciones de paquetes.  
   
 5.  Implemente el paquete en el sistema de archivos. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una utilidad de implementación](../../create-a-deployment-utility.md)  
   
   

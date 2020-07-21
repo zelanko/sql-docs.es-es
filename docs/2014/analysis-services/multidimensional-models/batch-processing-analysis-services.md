@@ -1,5 +1,5 @@
 ---
-title: Lote de procesamiento (Analysis Services) | Microsoft Docs
+title: Procesamiento por lotes (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb5ef5f0f9d662f66b9fb3203e518316d87c21b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544627"
 ---
 # <a name="batch-processing-analysis-services"></a>Procesamiento por lotes (Analysis Services)
   En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el comando Batch para enviar varios comandos de procesamiento al servidor en una única solicitud. El procesamiento por lotes ofrece una forma de controlar qué objetos se deben procesar y en qué orden. Además, un lote se puede ejecutar como una serie de trabajos independientes o como una transacción en la que un error en un proceso causa la reversión del lote completo.  
@@ -26,13 +25,13 @@ ms.locfileid: "66076938"
   
  Los procedimientos de este tema muestran los pasos para procesar completamente dimensiones y particiones. El procesamiento por lotes también puede incluir otras opciones de procesamiento, como el procesamiento incremental. Para que estos procedimientos funcionen correctamente, debe usar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente que contenga al menos dos dimensiones y una partición.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
  [Procesamiento por lotes en SQL Server Data Tools](#bkmk_ssdt)  
   
  [Procesamiento por lotes con XMLA en Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a> Procesamiento por lotes en SQL Server Data Tools  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a> Procesamiento por lotes en SQL Server Data Tools  
  Para poder procesar objetos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], se debe implementar el proyecto que contiene los objetos. Para más información, vea [Implementar proyectos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Abra [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -59,7 +58,7 @@ ms.locfileid: "66076938"
   
     -   En **Objetos afectados**, active la casilla **Procesar objetos afectados** .  
   
-10. Haga clic en la pestaña **Errores de clave de dimensión** . Compruebe que la opción **Utilizar la configuración de error predeterminada** esté activada.  
+10. Haga clic en la pestaña **errores de clave de dimensión** . Compruebe que esté seleccionada la **opción usar configuración de error predeterminada** .  
   
 11. Haga clic en **Aceptar** para cerrar la pantalla **Cambiar configuración** .  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66076938"
   
 14. Haga clic en **Cerrar** en la pantalla **Procesar objetos** .  
   
-##  <a name="bkmk_xmla"></a> Procesamiento por lotes con XMLA en Management Studio  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Procesamiento por lotes mediante XMLA en Management Studio  
  Puede crear un script XMLA que realice el procesamiento por lotes. Comience por generar un script XMLA en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para cada objeto y, a continuación combínelos en una única consulta XMLA que puede ejecutar interactivamente o en una tarea programada.  
   
- Para obtener enstrucciones paso a paso, vea **Ejemplo 2** en [Schedule SSAS Admenistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
+ Para obtener instrucciones paso a paso, consulte el **ejemplo 2** en [programación de tareas administrativas de SSAS con Agente SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
-## <a name="see-also"></a>Vea también  
- [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Procesamiento de objetos del modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

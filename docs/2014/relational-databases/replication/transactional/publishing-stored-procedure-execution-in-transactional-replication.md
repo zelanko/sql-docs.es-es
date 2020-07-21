@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997851"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicar la ejecución de procedimientos almacenados en la replicación transaccional
   Si tiene uno o más procedimientos almacenados que se ejecutan en el publicador y afectan a las tablas publicadas, considere la posibilidad de incluir esos procedimientos en la publicación como artículos de ejecución de procedimientos almacenados. La definición del procedimiento (la instrucción CREATE PROCEDURE) se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede proporcionar un rendimiento significativamente mejor en los casos en los que se llevan a cabo grandes operaciones por lotes, debido a que únicamente se replica la ejecución del procedimiento, evitando la necesidad de replicar los cambios individuales de cada fila. Por ejemplo, supongamos que crea el siguiente procedimiento almacenado en la base de datos de publicaciones:  
@@ -52,7 +51,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publicar la ejecución de un procedimiento almacenado en una publicación transaccional &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programación de la replicación con Transact-SQL: ejecute [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) y especifique un valor "serializable proc exec" (recomendado) o "proc exec" para el parámetro **@type** . Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../publish/define-an-article.md).  
+-   Programación de la replicación con Transact-SQL: ejecute [sp_addarticle &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) y especifique un valor de ' serializable proc exec ' (recomendado) o ' proc exec ' para el parámetro **@type** . Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modificar el procedimiento en el suscriptor  
  De forma predeterminada, la definición del procedimiento almacenado del publicador se propaga a todos los suscriptores. No obstante, también puede modificar el procedimiento almacenado en el suscriptor. Esto es útil si desea ejecutar una lógica diferente en el publicador y en el suscriptor. Por ejemplo, observe **sp_big_delete**, un procedimiento almacenado en el publicador que tiene dos funciones: elimina 1.000.000 de filas de la tabla replicada **big_table1** y actualiza la tabla no replicada **big_table2**. Para reducir la demanda de recursos de red, debe propagar la eliminación del millón de filas como un procedimiento almacenado mediante la publicación de **sp_big_delete**. En el suscriptor, puede modificar **sp_big_delete** de forma que solamente elimine el millón de filas y no haga la posterior actualización de la tabla **big_table2**.  
@@ -88,12 +87,12 @@ COMMIT TRANSACTION T2
   
  Los bloqueos se mantendrán hasta que ejecute el procedimiento en una transacción serializable y puede dar como resultado una simultaneidad reducida.  
   
-## <a name="the-xactabort-setting"></a>Configuración de XACT_ABORT  
+## <a name="the-xact_abort-setting"></a>Configuración de XACT_ABORT  
  Al replicar la ejecución del procedimiento almacenado, la configuración de la sesión que ejecuta el procedimiento almacenado debe especificar XACT_ABORT ON. Si XACT_ABORT se establece en OFF, y se produce un error durante la ejecución del procedimiento en el publicador, el mismo error ocurrirá en el suscriptor y el Agente de distribución no funcionará. Si se especifica XACT_ABORT ON, se garantiza que cualquier error que se produzca durante la ejecución en el publicador hará que toda la ejecución se revierta, con lo que se evita que se produzca un error en el Agente de distribución. Para obtener más información sobre la configuración de XACT_ABORT, vea [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
  Si necesita una configuración de XACT_ABORT OFF, especifique el parámetro **-SkipErrors** para el Agente de distribución. De esta forma permitirá que el agente continúe aplicando cambios en el suscriptor incluso si se produce un error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

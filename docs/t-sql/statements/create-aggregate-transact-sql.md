@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2235751cc4c198a39a3e3c368f4d07f5451dedd7
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141129"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380818"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea una función de agregado definida por el usuario con la implementación definida en una clase de un ensamblado en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] enlace la función de agregado con su implementación, el ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contiene la implementación debe cargarse primero en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una instrucción CREATE ASSEMBLY.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68141129"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE AGGREGATE [ schema_name . ] aggregate_name  
         (@param_name <input_sqltype>   
@@ -53,7 +53,9 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *schema_name*  
  Es el nombre del esquema al que pertenece la función de agregado definida por el usuario.  
   
@@ -81,7 +83,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *nombre_del_ensamblado* [ **.** _nombre_de_la_clase_ ]  
  Especifica el ensamblado que se va a vincular con la función de agregado definida por el usuario y, opcionalmente, el nombre del esquema al que pertenece el ensamblado y el nombre de la clase del ensamblado que implementa el agregado definido por el usuario. El ensamblado debe haberse creado con antelación en la base de datos mediante una instrucción CREATE ASSEMBLY. *class_name* debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y coincidir con el nombre de una clase que exista en el ensamblado. *class_name* puede ser un nombre completo de espacio de nombres si el lenguaje de programación usado para escribir la clase usa espacios de nombres, como C#. Si no se especifica *class_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que es el mismo que *aggregate_name*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  De manera predeterminada, la capacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ejecutar código CLR está desactivada. Puede crear, modificar y quitar objetos de base de datos que hacen referencia a módulos de código administrado, pero el código de estos módulos no se ejecutará en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que la opción [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) esté habilitada con [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  La clase del ensamblado al que se hace referencia en *assembly_name* y sus métodos deben satisfacer todos los requisitos para implementar una función de agregado definida por el usuario en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Agregados definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
@@ -94,7 +96,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  En el ejemplo se crea un agregado `Concatenate`. Antes de crear el agregado, el ensamblado `StringUtilities.dll` se registra en la base de datos local.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

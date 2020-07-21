@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f9ec0453bc56c0918d4959ec68924eca6e573dc2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980325"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921822"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>Método getResultSetHoldability (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final int getResultSetHoldability()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getResultSetHoldability se especifica mediante el método getResultSetHoldability en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ Este método getResultSetHoldability se especifica mediante el método getResultSetHoldability en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

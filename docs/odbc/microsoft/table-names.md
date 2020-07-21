@@ -1,5 +1,5 @@
 ---
-title: Los nombres de tabla | Microsoft Docs
+title: Nombres de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - SQL grammar [ODBC], table names
 - table names [ODBC]
 ms.assetid: f7a5cb0a-3be7-4f46-82f9-64ffdbceaa9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5dd8de055521f4a1831d20a9a34bedb9309d1de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 91a415cd456186f18ef358b9d504145f78152774
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939787"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303126"
 ---
 # <a name="table-names"></a>Nombres de tabla
-Cuando dBASE, Microsoft Excel, Paradox, o texto que se usa el controlador, los nombres de tabla que se producen en la cláusula FROM de SELECT o DELETE, después de la cláusula INTO en INSERT y UPDATE, CREATE TABLE y DROP TABLE pueden contener una ruta de acceso válida, nombre principal y archivo de extensión de nombre .  
+Cuando se usa el controlador dBASE, Microsoft Excel, Paradox o Text, los nombres de tabla que aparecen en la cláusula FROM de SELECT o DELETE, después de la cláusula INTO de INSERT y después de UPDATE, CREATE TABLE y DROP TABLE pueden contener una ruta de acceso válida, un nombre principal y una extensión de nombre de archivo.  
   
- Uso de un nombre de tabla en otra parte de una instrucción SQL no admite el uso de rutas de acceso o extensiones pero aceptará solo el nombre principal (por ejemplo, EMP desde C:\ABC\EMP).  
+ El uso de un nombre de tabla en otra parte de una instrucción SQL no admite el uso de rutas de acceso o extensiones, pero solo aceptará el nombre principal (por ejemplo, EMP de C:\ABC\EMP).  
   
  Se pueden usar nombres de correlación (alias). Por ejemplo:  
   

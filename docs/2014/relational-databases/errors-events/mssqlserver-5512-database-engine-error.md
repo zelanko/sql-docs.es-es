@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 781167cf6f2c31491d032ec1bb71632c6b5ebdb0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913626"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551170"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|5512|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|5512|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|FS_TRUNCATEDIR_FAILED|  
 |Texto del mensaje|Error 0x%x (%ls) al truncar el directorio ''%.*ls''.|  
@@ -36,6 +35,6 @@ ms.locfileid: "62913626"
  Se ha producido un error en la operación de truncamiento.  
   
 ## <a name="user-action"></a>Acción del usuario  
- La causa del error, vea el código de estado de Windows específico. Para obtener más información sobre este código de estado, vea [eventos y mensajes de Error en Microsoft Support](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
+ Para ver la causa del error, vea el código de estado de Windows específico. Para obtener más información acerca de este código de estado, consulte [los mensajes de error y de eventos en soporte técnico de Microsoft](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

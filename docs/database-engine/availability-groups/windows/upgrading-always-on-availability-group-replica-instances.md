@@ -1,6 +1,7 @@
 ---
-title: Actualización de instancias de la réplica del grupo de disponibilidad Always On | Microsoft Docs
-ms.custom: ''
+title: Actualización de réplicas de un grupo de disponibilidad
+description: Obtenga información sobre cómo reducir el tiempo de inactividad de la réplica principal durante las actualizaciones de SQL Server mediante la realización de una actualización gradual.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 0acb31fb6669213aed14721eb52c55b457ec1f2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910785"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894192"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Si actualiza una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda un grupo de disponibilidad Always On (AG) a una nueva versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o bien si la instala en una nueva versión acumulativa o un nuevo Service Pack de Windows, podrá reducir el tiempo de inactividad de la réplica principal a solo una conmutación por error manual mediante una actualización gradual (o dos conmutaciones por error manuales en caso de efectuarla por recuperación en la base de datos principal original). Durante el proceso de actualización, no habrá una réplica secundaria disponible para la conmutación por error o para operaciones de solo lectura. Después de la actualización, puede pasar algún tiempo antes de que la réplica secundaria se ponga al día con el nodo de la réplica principal, según el volumen de actividad del nodo de la réplica principal, así que debe esperar un tráfico de red elevado. Además, debe tener en cuenta que, después de llevar a cabo la conmutación por error inicial en una réplica secundaria en la que se ejecuta una versión más reciente de SQL Server, las bases de datos de ese grupo de disponibilidad se ejecutarán en un proceso de actualización a la versión más reciente. Durante este proceso, no habrá disponible ninguna réplica legible para ninguna de estas bases de datos. El tiempo de inactividad después de la conmutación por error inicial dependerá del número de bases de datos que haya en el grupo de disponibilidad. Si tiene pensado efectuar la conmutación por recuperación en la base de datos principal original, este paso no se repetirá durante dicho proceso.
   
 >[!NOTE]  
 >En este artículo nos limitamos a explicar el proceso de actualización de SQL Server. No trataremos la actualización del sistema operativo que contiene el clúster de conmutación por error de Windows Server (WSFC). No se puede actualizar el sistema operativo Windows que hospeda el clúster de conmutación por error en sistemas operativos anteriores a Windows Server 2012 R2. Para actualizar un nodo de clúster que se ejecute en Windows Server 2012 R2, consulte [Cluster Operating System Rolling Upgrade](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)(Actualización gradual del sistema operativo de clústeres).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Antes de empezar, revise la siguiente información importante:  
   
 - [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -75,7 +76,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 ## <a name="rolling-upgrade-process"></a>Proceso de actualización gradual  
  En la práctica, el proceso exacto depende de factores como la topología de implementación de los AG y del modo de confirmación de cada réplica. Pero, en un escenario más sencillo, una actualización gradual es un proceso de varias fases que en su forma más sencilla implica los pasos siguientes:  
   
- ![Escenario de actualización de AG en HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Escenario de actualización de AG en HADR")  
+ ![Actualización de un AG en un escenario de HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Actualización de un AG en un escenario de HADR")  
   
 1.  Quitar la conmutación por error automática en todas las réplicas de confirmación sincrónica  
   
@@ -100,7 +101,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 ## <a name="ag-with-one-remote-secondary-replica"></a>AG con una réplica secundaria remota  
  Si ha implementado un AG para la recuperación de desastres, puede que tenga que conmutar por error el AG en una réplica secundaria de confirmación asincrónica. Tal configuración se muestra en la ilustración siguiente:  
   
- ![Escenario de actualización de AG en DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Escenario de actualización de AG en DR")  
+ ![Actualización de un AG en un escenario de DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Actualización de un AG en un escenario de DR")  
   
  En esta situación, debe conmutar por error el AG en la réplica secundaria de confirmación asincrónica durante la actualización gradual. Para impedir la pérdida de datos, cambie el modo de confirmación a sincrónica y espere a que la réplica secundaria se sincronice antes de realizar la conmutación por error en el AG. Por lo tanto, el proceso de actualización puede ser similar al siguiente:  
   
@@ -127,7 +128,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>AG con nodos de instancia de clúster de conmutación por error  
  Si un AG contiene nodos de instancia de clúster de conmutación por error (FCI), debe actualizar los nodos inactivos antes de actualizar los nodos activos. En la ilustración siguiente se muestra un escenario de AG común con FCI para la confirmación asincrónica y una alta disponibilidad local entre los FCI para la recuperación de desastres remota y la secuencia de actualización.  
   
- ![Actualización de AG con FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Actualización de AG con FCI")  
+ ![Actualización de un AG con FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Actualización de un AG con FCI")  
   
 1.  Actualizar REMOTE2  
   

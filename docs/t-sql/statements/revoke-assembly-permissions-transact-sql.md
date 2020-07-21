@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a96fda9eea349abef5b53701556148ae56225a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897072"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE (permisos de ensamblado de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revoca permisos sobre un ensamblado.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68082384"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ASSEMBLY :: assembly_name   
@@ -97,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un ensamblado es un elemento protegible de base de datos incluido en la base de datos primaria en la jerarquía de permisos. A continuación, se enumeran los permisos más específicos y limitados que se pueden revocar para un ensamblado, además de los permisos más generales que los incluyen implícitamente.  
   
 |Permiso de ensamblado|Implícito en permiso de ensamblado|Implícito en el permiso de base de datos|  

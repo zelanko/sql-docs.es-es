@@ -1,5 +1,6 @@
 ---
-title: Generar fuentes de distribución de datos a partir de un informe (Generador de informes y SSRS) | Microsoft Docs
+title: Generación de fuentes de distribución de datos a partir de un informe (Generador de informes) | Microsoft Docs
+description: Puede generar fuentes de distribución de datos compatibles con Atom a partir de informes paginados. Use las fuentes en aplicaciones, como Power Pivot o Power BI, que pueden consumir fuentes de distribución de datos.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a94df8959adf40edfe2e78c7c281dd5d57f90266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 6eedf7ae96f41a75a8690162de01473d7e2e5664
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580770"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342791"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de un informe (Generador de informes y SSRS)
 

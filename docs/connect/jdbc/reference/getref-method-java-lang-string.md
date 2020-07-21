@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a8ff2dd5-923b-4a2f-ab33-665574b2dfda
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd5b2019d31e84406d9386d180b87213273d0389
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 002334d8f0ef907122e0f0ba205ac78ad38892d7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980570"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925140"
 ---
 # <a name="getref-method-javalangstring"></a>Método getRef (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public java.sql.Ref getRef(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto Ref.  
+ Un objeto Ref.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getRef especifica este método getRef en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

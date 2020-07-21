@@ -1,23 +1,22 @@
 ---
-title: Empleo de widgets de información en Azure Data Studio para supervisar servidores y bases de datos
-titleSuffix: Azure Data Studio
+title: Uso de widgets de información para supervisar servidores y bases de datos
 description: Obtenga información sobre los widgets de información en Azure Data Studio.
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1568251dba79998c07e05b78b2d156cebbb0e7fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774604"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administración de servidores y bases de datos con widgets de información en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-azure-data-studio"></a>Administración de servidores y bases de datos con widgets de información en Azure Data Studio
 
 Los widgets de información toman las consultas de Transact-SQL (T-SQL) que se usan para supervisar los servidores y las bases de datos y las convierten en visualizaciones llenas de información.
 
@@ -27,7 +26,6 @@ Puede compilar espectaculares paneles de administración de servidores y bases d
 
 ![Panel de base de datos](media/insight-widgets/database-dashboard.png)
 
-
 Para lanzarse y comenzar a crear distintos tipos de widgets de información, vea los siguientes tutoriales:
 
 - [Compilación de un widget de información personalizada](tutorial-build-custom-insight-sql-server.md)
@@ -35,10 +33,9 @@ Para lanzarse y comenzar a crear distintos tipos de widgets de información, vea
   - [Habilitación de la información de supervisión de rendimiento](tutorial-qds-sql-server.md)
   - [Habilitación de la información de uso de espacio de tabla](tutorial-table-space-sql-server.md)
 
-
 ## <a name="sql-queries"></a>Consultas SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] intenta evitar la incorporación de otro lenguaje u otra interfaz de usuario pesada, así que intenta usar T-SQL lo máximo posible con una configuración de JSON mínima. La configuración de widgets de información con T-SQL aprovecha el incontable número de orígenes existentes de consultas de T-SQL útiles que se pueden convertir en widgets llenos de información.
+Azure Data Studio intenta evitar la incorporación de otro lenguaje u otra interfaz de usuario pesada, así que intenta usar T-SQL lo máximo posible con una configuración de JSON mínima. La configuración de widgets de información con T-SQL aprovecha el incontable número de orígenes existentes de consultas de T-SQL útiles que se pueden convertir en widgets llenos de información.
 
 Los widgets de información se componen de una o dos consultas de T-SQL:
 * La *consulta de widget de información* es obligatoria y es la que devuelve los datos que aparecen en el widget.
@@ -46,7 +43,7 @@ Los widgets de información se componen de una o dos consultas de T-SQL:
 
 Una consulta de widget de información define un conjunto de datos que representa un recuento o un gráfico. La consulta de detalles de información se usa para presentar información de detalles relevante en formato tabular en el panel de detalles de información. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ejecuta consultas de widget de información y asigna el conjunto de resultados de la consulta al conjunto de datos de un gráfico que luego representa. Cuando los usuarios abren los detalles de la información, se ejecuta la consulta de detalles de información y se imprime el resultado en una vista de cuadrícula en el cuadro de diálogo.
+Azure Data Studio ejecuta consultas de widget de información y asigna el conjunto de resultados de la consulta al conjunto de datos de un gráfico que luego representa. Cuando los usuarios abren los detalles de la información, se ejecuta la consulta de detalles de información y se imprime el resultado en una vista de cuadrícula en el cuadro de diálogo.
 
 La idea básica es escribir una consulta de T-SQL de forma que se pueda usar como conjunto de datos de un recuento, un gráfico y un widget gráfico. 
 

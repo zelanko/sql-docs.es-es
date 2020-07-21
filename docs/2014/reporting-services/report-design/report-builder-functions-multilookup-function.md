@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105210"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Función Multilookup (Generador de informes y SSRS)
@@ -38,18 +38,18 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`Variant`) Una expresión que se evalúa para cada fila de un conjunto de datos y que especifica el nombre o la clave que se hará coincidir. Por ejemplo, `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Una expresión que se evalúa para la fila del conjunto de datos donde *source_expression* = *destination_expression*, y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!Name.Value`.  
+ (`Variant`) Una expresión que se evalúa para la fila del conjunto de DataSet donde *source_expression* = *destination_expression*y que especifica el valor que se va a recuperar. Por ejemplo, `=Fields!Name.Value`.  
   
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "Colores".  
   
-## <a name="return"></a>Devolución  
+## <a name="return"></a>Valor devuelto  
  Devuelve `VariantArray` o `Nothing` si no hay ninguna coincidencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use `Multilookup` para recuperar un conjunto de valores de un conjunto de datos para los pares de nombre-valor donde cada par tiene una relación 1 a 1. `MultiLookup` es equivalente de llamar `Lookup` para un conjunto de nombres o de claves. Por ejemplo, para un parámetro de varios valores que se base en identificadores de clave principal, puede usar `Multilookup` en una expresión de un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no esté enlazado al parámetro ni a la tabla.  
   
- `Multilookup` hace lo siguiente:  
+ `Multilookup` realiza las operaciones siguientes:  
   
 -   Evalúa la expresión de origen en el ámbito actual y genera una matriz de objetos de variantes.  
   
@@ -59,7 +59,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Para recuperar un único valor de un conjunto de datos con pares de nombre y valor para un nombre especificado donde hay una relación de uno a uno, use la [función Lookup &#40;Generador de informes y SSRS&#41;](report-builder-functions-lookup-function.md). Para recuperar varios valores de un conjunto de datos con pares de nombre y valor para un nombre donde hay una relación de uno a varios, use la [Función LookupSet &#40;Generador de informes y SSRS&#41;](report-builder-functions-lookupset-function.md).  
   
- Se aplican las siguientes restricciones:  
+ Se aplican las restricciones que se indican a continuación:  
   
 -   Se evalúa `Multilookup` después de aplicar todas las expresiones de filtro.  
   
@@ -90,7 +90,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  El conjunto de datos CategoryNames contiene el identificador y el nombre de la categoría, tal como se muestra en la siguiente tabla.  
   
-|Id.|Name|  
+|id|Nombre|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
@@ -122,7 +122,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   

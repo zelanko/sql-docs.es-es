@@ -9,31 +9,30 @@ ms.topic: conceptual
 ms.assetid: 3d2814a4-318a-45ed-b093-1e852fab561f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 9a12f39bc399e2c46e61fc290bb20ad2c43e4de9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012551"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>Exploración directa del servidor de informes (Asesor de actualizaciones)
-  El asesor de actualizaciones ha detectado la instalación actual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está explorando directamente el directorio virtual del servidor de informes.  
+  El asesor de actualizaciones ha detectado que la instalación actual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está navegando directamente al directorio virtual del servidor de informes.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t el modo de SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
- El asesor de actualizaciones ha detectado la instalación actual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está navegando directamente al directorio virtual del servidor de informes, por ejemplo, **http://\<server nombre de la >/ReportServer**. Esto no se admite en las versiones actuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ El asesor de actualizaciones ha detectado que la instalación actual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está navegando directamente al directorio virtual del servidor de informes, por ejemplo, **http:// \<server name> /ReportServer**. Esto no se admite en las versiones actuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  Esta regla es una advertencia y la actualización no se bloquea.  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Examine el uso de la interfaz de usuario de SharePoint para bibliotecas de documentos o use **http://\<server nombre >/SharePoint sitio >/_vti_bin/ReportServer**.  
+ Examine el uso de la interfaz de usuario de SharePoint para bibliotecas de documentos o use el ** \<server name>> del sitio/sharepoint de http:///_vti_bin/ReportServer**.  
   
   

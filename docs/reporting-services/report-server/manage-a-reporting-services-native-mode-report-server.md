@@ -13,10 +13,10 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66499595"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
@@ -48,7 +48,7 @@ ms.locfileid: "66499595"
  [Entrega por correo electrónico en Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  Ofrece pasos para configurar un servidor de informes para la distribución por correo electrónico.  
   
- [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+ [Configurar un firewall para el acceso del Servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
  Explica cómo abrir los puertos que se usan para las solicitudes entrantes y las respuestas salientes desde un servidor de informes.  
   
  [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "66499595"
  [Configuración de un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explica cómo configurar una instancia del servidor de informes remota para que pueda conectarse y configurarla desde un equipo diferente.  
   
- [Activar o desactivar las características de Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)  
+ [Activación o desactivación de las características de Reporting Services](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)  
  Explica cómo quitar las características que no se usan en una instalación de Reporting Services.  
   
  [Habilitar los errores remotos &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)  

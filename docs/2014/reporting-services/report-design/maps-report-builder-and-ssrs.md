@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826545"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "67826545"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Process"></a> Agregar un mapa al informe  
+##  <a name="adding-a-map-to-your-report"></a><a name="Process"></a> Agregar un mapa al informe  
  Para agregar un mapa a un informe, a continuación se enumeran los pasos generales que hay que seguir:  
   
 -   Determine qué datos analíticos desea mostrar y qué tipos de datos espaciales necesita. Por ejemplo, para mostrar el almacén anual relativo de ventas en un mapa de burbujas, necesita el nombre y las ventas del almacén para los datos analíticos, y el nombre y la ubicación del almacén con la latitud y la longitud para los datos espaciales.  
@@ -56,7 +56,7 @@ ms.locfileid: "67826545"
   
 
   
-##  <a name="AddingData"></a> Agregar datos a un mapa  
+##  <a name="adding-data-to-a-map"></a><a name="AddingData"></a> Agregar datos a un mapa  
  Un mapa utiliza dos tipos de datos: espaciales y analíticos. Los datos espaciales definen la apariencia del mapa, mientras que los datos analíticos proporcionan los valores asociados al mapa. Por ejemplo, los datos espaciales definen las ubicaciones de las ciudades de un área mientras que los datos analíticos proporcionan la población de cada ciudad.  
   
  Un mapa debe tener datos espaciales; los datos analíticos son opcionales. Por ejemplo, puede agregar un mapa que muestre simplemente las ubicaciones de los almacenes de una ciudad.  
@@ -77,10 +77,10 @@ ms.locfileid: "67826545"
 #### <a name="sources-of-spatial-data"></a>Orígenes de datos espaciales  
  Se admiten los orígenes siguientes de datos espaciales:  
   
--   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la Galería de mapas se instala en *\<unidad>* :\Archivos de programa\Microsoft SQL Server\Report Builder\MapGallery.  
+-   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la galería de mapas se instala en * \<la unidad>*: \Archivos de programa\Microsoft SQL Server\Report Builder builder\mapgallery.  
   
     > [!NOTE]  
-    >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para más información acerca de los archivos de forma TIGER/Line, vaya a [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentación técnica de los archivos de forma TIGER/Line y los archivos TIGER/Line). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
+    >  Esta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] característica de asignación utiliza datos de Tiger/line archivos ESRI proporcionados por cortesía de la oficina[http://www.census.gov/](http://www.census.gov/)del censo de EE. UU. (). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para más información acerca de los archivos de forma TIGER/Line, vaya a [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentación técnica de los archivos de forma TIGER/Line y los archivos TIGER/Line). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
 -   **Archivos de forma ESRI.** Los archivos de forma ESRI contienen datos que cumplen con el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). Hacen referencia a un conjunto de archivos. Los datos del archivo .shp especifican las formas geográficas o geométricas. Los datos del archivo .dbf proporcionan los atributos para las formas. Para ver un mapa en la vista de diseño o ejecutar un mapa desde el servidor de informes, ambos archivos deben estar en la misma carpeta. Al agregar los datos espaciales de un archivo .shp al sistema de archivos local, los datos espaciales se incrustan en el informe. Para recuperar los datos espaciales de forma dinámica en tiempo de ejecución, cargue los archivos de forma en el servidor de informes y especifíquelos como el origen de los datos espaciales. Para obtener más información, vea [Buscar archivos de forma ESRI para un mapa](https://go.microsoft.com/fwlink/?linkid=178814).  
   
@@ -131,41 +131,41 @@ ms.locfileid: "67826545"
   
     -   **Datos espaciales.** Campo con datos espaciales que especifica la latitud y longitud de la ciudad.  
   
-    -   **Nombre.** Campo que contiene el nombre de la ciudad.  
+    -   **Name.** Campo que contiene el nombre de la ciudad.  
   
-    -   **Área.** Campo que contiene el nombre de la región.  
+    -   **Áreas.** Campo que contiene el nombre de la región.  
   
 -   Del origen de datos analíticos:  
   
-    -   **Población.** Campo que contiene la población de la ciudad.  
+    -   **Llenado.** Campo que contiene la población de la ciudad.  
   
     -   **Ciudad.** Campo que contiene el nombre de la ciudad.  
   
-    -   **Área.** Campo que contiene el nombre del territorio, estado o región.  
+    -   **Áreas.** Campo que contiene el nombre del territorio, estado o región.  
   
  En este ejemplo, el nombre de la ciudad por sí solo no es suficiente para identificar la población de forma unívoca. Por ejemplo, hay muchas ciudades denominadas Albany en los Estados Unidos. Para denominar una ciudad concreta, debe especificar el área además del nombre de la ciudad.  
   
 
   
-##  <a name="Viewport"></a> Descripción de la ventanilla de mapa  
+##  <a name="understanding-the-map-viewport"></a><a name="Viewport"></a> Descripción de la ventanilla de mapa  
  Después de especificar los datos de un mapa para un informe, puede limitar el área de presentación del mapa especificando una *ventanilla*del mapa. De forma predeterminada, la ventanilla es la misma área que todo el mapa. Para recortar el mapa, puede especificar el centro, el nivel de zoom y las coordenadas máxima y mínima que definen el área que desea incluir en el informe. Para mejorar la presentación del mapa en el informe, puede mover las leyendas, escala de distancia y escala de colores fuera de la ventanilla. La figura siguiente muestra una ventanilla:  
   
  ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   
   
   
-##  <a name="TileLayer"></a> Agregar una capa de mosaico de Bing Map  
+##  <a name="adding-a-bing-map-tiles-layer"></a><a name="TileLayer"></a> Agregar una capa de mosaico de Bing Map  
  Puede agregar una capa para los mosaicos de Bing Maps que proporcione un fondo geográfico para la vista del mapa actual tal y como se define en la ventanilla. Para agregar una capa de mosaico, debe especificar el sistema de coordenadas **geográfico** y el tipo de proyección **Mercator**. Los mosaicos que coinciden con el centro de la ventanilla y el nivel de zoom que selecciona se recuperan automáticamente en Servicios web de Bing Maps.  
   
  Puede personalizar la capa mediante las siguientes opciones:  
   
 -   Tipo de mosaico. Se admiten los estilos siguientes:  
   
-    -   **Carretera.** Muestra un estilo de mapa de carreteras que tiene un fondo blanco, caminos y texto de etiqueta.  
+    -   **Viario.** Muestra un estilo de mapa de carreteras que tiene un fondo blanco, caminos y texto de etiqueta.  
   
     -   **Aéreo.** Muestra un estilo de imagen aérea sin texto.  
   
-    -   **Híbrido.** Muestra una combinación de los estilos **Carretera** y **Aéreo** .  
+    -   **Mixta.** Muestra una combinación de los estilos **Carretera** y **Aéreo** .  
   
 -   Idioma del texto de la presentación en los mosaicos.  
   
@@ -173,11 +173,11 @@ ms.locfileid: "67826545"
   
  Para obtener instrucciones paso a paso, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
+ Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?linkid=147315).  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
  
   
-##  <a name="MapLayers"></a> Descripción de las capas de mapa y los elementos de mapa  
+##  <a name="understanding-map-layers-and-map-elements"></a><a name="MapLayers"></a>Descripción de las capas de mapa y los elementos de mapa  
  Un mapa puede tener varias capas. Hay tres tipos de capas. Cada capa muestra un tipo de datos espaciales:  
   
 -   **Capa de polígono.** Muestra los contornos de áreas o marcadores para el punto central del polígono, que se calcula automáticamente para cada polígono.  
@@ -225,7 +225,7 @@ ms.locfileid: "67826545"
   
 
   
-##  <a name="Legends"></a> Descripción de las leyendas de mapa, la escala de colores y la escala de distancia  
+##  <a name="understanding-map-legends-color-scale-and-distance-scale"></a><a name="Legends"></a> Descripción de las leyendas de mapa, la escala de colores y la escala de distancia  
  Puede agregar diversas leyendas a un informe para ayudar a los usuarios a interpretar un mapa. Los mapas pueden incluir los elementos siguientes:  
   
 -   **Leyendas.** Puede crear varias leyendas. Los elementos enumerados en una leyenda se generan automáticamente según las reglas que especifique para los elementos de un mapa en cada capa. Para cada regla, se especifica la leyenda que se utilizará para mostrar sus elementos relacionados. De esta manera, puede asignar elementos de varias capas a la misma leyenda o a leyendas diferentes.  
@@ -238,16 +238,16 @@ ms.locfileid: "67826545"
   
   
   
-##  <a name="Troubleshooting"></a> Solución de problemas de los mapas  
+##  <a name="troubleshooting-maps"></a><a name="Troubleshooting"></a>Solución de problemas de mapas  
  Los informes de mapas utilizan datos espaciales y datos analíticos de diversos orígenes de datos. Cada capa de mapa puede utilizar orígenes diferentes de datos. Las propiedades de presentación de cada capa siguen una prioridad concreta según las propiedades de la capa, reglas y propiedades de los elementos de la capa.  
   
  Si no obtiene el resultado deseado cuando vea un informe de un mapa, las causas pueden derivarse de problemas diversos. Para ayudarle a aislar y entender cada problema, es útil trabajar con una capa cada vez. Utilice el panel Mapa para seleccionar una capa y alternar su visibilidad con facilidad.  
   
- Para más información sobre los problemas de asignación de informes, consulte [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ Para obtener más información sobre los problemas de los informes de un mapa, vea [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
 
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Temas de procedimientos  
  En esta sección se enumeran procedimientos que muestran, paso a paso, cómo trabajar con mapas y asignar capas de mapa a un informe.  
   
 -   [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
@@ -258,7 +258,7 @@ ms.locfileid: "67826545"
   
  
   
-##  <a name="Section"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="Section"></a>En esta sección  
  [Planear un informe de mapa &#40;Generador de informes y SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

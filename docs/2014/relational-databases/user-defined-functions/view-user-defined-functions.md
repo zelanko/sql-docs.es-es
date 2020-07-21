@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5248f75540b72b489a7605b2cca34144dfcfedbf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054981"
 ---
 # <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
   Puede obtener información sobre la definición o las propiedades de una función definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la función para entender cómo se derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
@@ -43,14 +42,14 @@ ms.locfileid: "68211683"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  El uso de **sys.sql_expression_dependencies** para buscar todas las dependencias de una función necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en **sys.sql_expression_dependencies** para la base de datos. Las definiciones de objetos del sistema, como las que se devuelven en OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Para mostrar las propiedades de una función definida por el usuario  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211683"
   
 4.  Haga clic con el botón derecho en la función cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-     Las propiedades siguientes aparecen en el cuadro de diálogo **Propiedades de la función:** _nombre_función_.  
+     Las propiedades siguientes aparecen en el cuadro de diálogo **Propiedades de la función:** _nombre de función_.  
   
      **Base de datos**  
      Nombre de la base de datos que contiene esta función.  
@@ -76,7 +75,7 @@ ms.locfileid: "68211683"
      **Server**  
      Nombre de la instancia de servidor actual.  
   
-     **Usuario**  
+     **User**  
      Nombre del usuario de esta conexión.  
   
      **Fecha de creación**  
@@ -85,7 +84,7 @@ ms.locfileid: "68211683"
      **Ejecutar como**  
      Contexto de ejecución para la función.  
   
-     **Name**  
+     **Nombre**  
      Nombre de la función actual.  
   
      **Esquema**  
@@ -109,7 +108,7 @@ ms.locfileid: "68211683"
      **Enlazada a un esquema**  
      Indica si la función está enlazada a un esquema. Los valores son True y False. Para obtener más información sobre las funciones enlazadas a esquema, vea la sección SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-function"></a>Para obtener la definición y propiedades de una función  
   

@@ -1,10 +1,9 @@
 ---
-title: Cuadro de diálogo Guardar (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Guardar
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b7e883a5b4ea87e98faec08f58edb2743cb9a72
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 161621a6ac3df5c27cb7285febe9f4758d4be59b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266898"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255127"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Guardar (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

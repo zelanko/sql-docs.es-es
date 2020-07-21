@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940116"
 ---
 # <a name="imdembedded-interface"></a>Interfaz IMDEmbedded
   La interfaz IMDEmbedded es una interfaz pública utilizada para administrar una base de datos incrustada de PowerPivot o una base de datos de modelo tabular. La interfaz hereda de la interfaz `IPersistStream`. La interfaz permite las siguientes operaciones:  
@@ -39,7 +38,7 @@ ms.locfileid: "62757775"
 -   Guarde la base de datos local o en proceso en el flujo incrustado en el documento contenedor. Se hereda de `IPersistStream`.  
   
 ## <a name="reference"></a>Referencia  
- La siguiente referencia documenta la `IMDEmbedded` tal como se presenta en la interfaz **msmd.h** archivo de encabezado.  
+ La siguiente referencia documenta la `IMDEmbedded` interfaz, tal como se presenta en el archivo de encabezado **msmd. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Archivo de origen: PXOEmbeddedData.idl  
   
@@ -103,13 +102,13 @@ HRESULT GetStreamIdentifier (
   
  Los valores posibles de DBPROP_MSMD_EMBEDDED_DATA son:  
   
-|NOMBRE|Valor|Definición|  
+|Nombre|Value|Definición|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|No hay ninguna base de datos incrustada|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|La aplicación actual contiene la base de datos incrustada|  
 |DBPROPVAL_EMBED_LINKED|0x02|La base de datos incrustada se hospeda en una aplicación remota (es decir, el servidor de SharePoint)|  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -139,7 +138,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Se produjo un error al establecer la dirección URL del elemento contenedor.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -169,7 +168,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Se produjo un error al establecer la marca.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -199,7 +198,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Se produjo un error al establecer la ruta de acceso.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -229,7 +228,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Se produjo un error al cancelar la operación incrustada.  
   
-#### <a name="source"></a>`Source`  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -268,9 +267,9 @@ HRESULT IsDirty ( void )
  Comprueba si la base de datos incrustada ha cambiado desde que se guardó por última vez. Se hereda de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parámetros  
- none  
+ ninguno  
   
-#### <a name="return-values"></a>Devolver valores  
+#### <a name="return-values"></a>Valores devueltos  
  `S_OK`  
  La base de datos ha cambiado desde que se guardó por última vez.  
   
@@ -295,7 +294,7 @@ HRESULT Load (
  *in_pStm*  
  Puntero a una interfaz de flujo desde donde cargar la base de datos incrustada.  
   
-#### <a name="return-values"></a>Devolver valores  
+#### <a name="return-values"></a>Valores devueltos  
  `S_OK`  
  La base de datos se cargó correctamente.  
   
@@ -324,7 +323,7 @@ HRESULT Save (
  *in_fClearDirty*  
  Marca que indica si la marca modificada se debería borrar después de esta operación.  
   
-#### <a name="return-values"></a>Devolver valores  
+#### <a name="return-values"></a>Valores devueltos  
  `S_OK`  
  La base de datos se guardó correctamente.  
   

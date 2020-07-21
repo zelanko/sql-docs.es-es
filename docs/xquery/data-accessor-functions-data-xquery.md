@@ -1,5 +1,6 @@
 ---
-title: datos (función de XQuery) | Microsoft Docs
+title: Data (función de XQuery) | Microsoft Docs
+description: Obtenga información sobre cómo usar los datos de la función XQuery () para devolver el valor con tipo de cada elemento de una secuencia especificada de elementos.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5d0940f6e182d477d2c0660f4c93aaa9fedeb6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038970"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643552"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funciones del descriptor de acceso a datos: data (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve el valor con tipo para cada elemento especificado por *$arg*.  
+  Devuelve el valor con tipo de cada elemento especificado por *$arg*.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,19 +56,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   Si un nodo de atributo se escribe con un tipo de esquema XML, su valor con tipo será el valor con tipo en consecuencia.  
   
--   Si el nodo de atributo no tiene tipo, su valor con tipo es igual al valor de cadena que se devuelve como una instancia de **xdt: untypedAtomic**.  
+-   Si el nodo de atributo no tiene tipo, su valor con tipo es igual a su valor de cadena que se devuelve como una instancia de **XDT: untypedAtomic**.  
   
--   Si el nodo de elemento no se ha escrito, su valor con tipo es igual al valor de cadena que se devuelve como una instancia de **xdt: untypedAtomic**.  
+-   Si el nodo de elemento no tiene tipo, su valor con tipo será igual a su valor de cadena que se devuelve como una instancia de **XDT: untypedAtomic**.  
   
- La siguiente información se aplica a los nodos de elemento con tipo:  
+ La siguiente información se aplica a los nodos de elemento con tipo:    
   
--   Si el elemento tiene un tipo de contenido simple, **data()** devuelve el valor con tipo del elemento.  
+-   Si el elemento tiene un tipo de contenido simple, **Data ()** devuelve el valor con tipo del elemento.  
   
--   Si el nodo es de tipo complejo, como xs: anyType, **data()** devuelve un error estático.  
+-   Si el nodo es de tipo complejo, incluido XS: anyType, **Data ()** devuelve un error estático.  
   
- Aunque el uso de la **data()** función es suele ser opcional, como se muestra en los ejemplos siguientes, especificando el **data()** función explícitamente aumenta la legibilidad de la consulta. Para obtener más información, consulte [conceptos básicos de XQuery](../xquery/xquery-basics.md).  
+ Aunque el uso de la función **Data ()** suele ser opcional, como se muestra en los ejemplos siguientes, si se especifica la función **Data ()** , se aumenta explícitamente la legibilidad de la consulta. Para obtener más información, vea [conceptos básicos de XQuery](../xquery/xquery-basics.md).  
   
- No puede especificar **data()** en XML generado, como se muestra en la siguiente:  
+ No se pueden especificar **datos ()** en XML construido, como se muestra a continuación:  
   
 ```  
 declare @x xml  
@@ -76,10 +77,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Utilizar la función data() de XQuery para extraer el valor con tipo de un nodo  
- La consulta siguiente muestra cómo el **data()** función se utiliza para recuperar los valores de atributo, un elemento y un nodo de texto:  
+ La consulta siguiente muestra cómo se usa la función **Data ()** para recuperar valores de un atributo, un elemento y un nodo de texto:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -98,13 +99,13 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Como se mencionó, la **data()** función es opcional cuando se crean atributos. Si no especifica la **data()** función, se supone implícitamente. La siguiente consulta genera los mismos resultados que la consulta anterior:  
+ Como se mencionó, la función **Data ()** es opcional cuando se construyen atributos. Si no se especifica la función **Data ()** , se asume implícitamente. La siguiente consulta genera los mismos resultados que la consulta anterior:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +124,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Los siguientes ejemplos ilustran casos en los que el **data()** función es necesaria.  
+ En los siguientes ejemplos se muestran instancias en las que se requiere la función **Data ()** .  
   
- En la siguiente consulta, **$pd / P1: Specifications / Material** devuelve el <`Material`> elemento. Además, **datos ($pd/P1: Specifications/Material)** devuelve caracteres de datos de tipo xdt: untypedAtomic, porque <`Material`> no tiene ningún tipo. Cuando la entrada es sin tipo, el resultado de **data()** es de tipo **xdt: untypedAtomic**.  
+ En la consulta siguiente, **$PD/P1: Specifications/material** devuelve el `Material` elemento> <. Además, los **datos ($PD/P1: Specifications/material)** devuelven datos de caracteres con el tipo XDT: untypedAtomic, porque <`Material`> no tiene tipo. Cuando la entrada no tiene tipo, el resultado de **Data ()** se escribe como **XDT: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -141,7 +142,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Root>  
@@ -149,7 +150,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- En la siguiente consulta, **data($pd/p1:Features/wm:Warranty)** devuelve un error estático, porque <`Warranty`> es un elemento de tipo complejo.  
+ En la consulta siguiente, **Data ($PD/P1: Features/WM: garantía)** devuelve un error estático, porque <`Warranty`> es un elemento de tipo complejo.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -166,7 +167,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

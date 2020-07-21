@@ -11,29 +11,29 @@ helpviewer_keywords:
 - outer join escape sequences [ODBC]
 - escape sequences [ODBC], outer join
 ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 81988d34dca38d5c041ff9f87e9674d7c97d76cc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987815"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282455"
 ---
 # <a name="outer-joins"></a>Combinaciones externas
-ODBC admite el SQL-92 dejado, sintaxis de combinación externa completa y correcta. Es la secuencia de escape para las combinaciones externas  
+ODBC admite la sintaxis de combinación externa izquierda, derecha y completa de SQL-92. La secuencia de escape para las combinaciones externas es  
   
- **{oj** _outer-join_ **}**  
+ **{do** _outer join_**}**  
   
- donde *combinación externa* es  
+ donde *outer-join* es  
   
- *referencia de tabla* {**izquierda &#124; derecha &#124; completa} OUTER JOIN** {*referencia de tabla* &#124; *combinación externa*} **ON**  _condición de búsqueda_  
+ *referencia de tabla* {**LEFT &#124; Right &#124; Full} combinación externa** {*referencia de tabla* &#124; *outer-join*} **en** _la condición de búsqueda_  
   
- *referencia de tabla* especifica un nombre de tabla y *condición de búsqueda* especifica la condición de combinación entre la *referencias de tabla*.  
+ *TABLE-Reference* especifica un nombre de tabla, y la *condición de búsqueda* especifica la condición de combinación entre las *referencias de tabla*.  
   
- Una solicitud de combinación externa debe aparecer después de la **FROM** palabra clave y antes de la **donde** cláusula (si existe). Para obtener información de la sintaxis completa, consulte [secuencia de Escape de combinación externa](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) en el apéndice C: Gramática de SQL.  
+ Una solicitud de combinación externa debe aparecer después de la palabra clave **from** y antes de la cláusula **Where** (si existe). Para obtener información sobre la sintaxis completa, vea [secuencia de escape de combinación externa](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) en el Apéndice C: gramática de SQL.  
   
- Por ejemplo, las siguientes instrucciones SQL crean el mismo conjunto de resultados que muestra a todos los clientes e indica que tiene pedidos pendientes. La primera instrucción usa la sintaxis de la secuencia de escape. La segunda instrucción utiliza la sintaxis nativa para Oracle y no es interoperable.  
+ Por ejemplo, las siguientes instrucciones SQL crean el mismo conjunto de resultados que muestra todos los clientes y muestra los pedidos abiertos. La primera instrucción usa la sintaxis de secuencia de escape. La segunda instrucción usa la sintaxis nativa para Oracle y no es interoperable.  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- Para determinar los tipos de combinaciones externas que admiten un origen de datos y el controlador, una aplicación llama a **SQLGetInfo** con el SQL_OJ_CAPABILITIES indicador. Los tipos de combinaciones externas que pudieran ser compatibles son izquierdos, derecha, completo o combinaciones externas; anidadas combinaciones externas en que los nombres de columna en la **ON** cláusula no tiene el mismo orden que sus nombres de tabla correspondiente en el **OUTER JOIN** cláusula; las combinaciones internas, junto con las combinaciones externas; y combinaciones externas mediante cualquier operador de comparación ODBC. Si el tipo de información SQL_OJ_CAPABILITIES devuelve 0, no se admite ninguna cláusula de combinación externa.
+ Para determinar los tipos de combinaciones externas que admite un origen de datos y un controlador, una aplicación llama a **SQLGetInfo** con la marca SQL_OJ_CAPABILITIES. Los tipos de combinaciones externas que se pueden admitir son Left, Right, Full o outer join anidadas. combinaciones externas en las que los nombres de columna de la cláusula **on** no tienen el mismo orden que sus respectivos nombres de tabla en la cláusula **outer join** ; combinaciones internas junto con combinaciones externas; y combinaciones externas con cualquier operador de comparación de ODBC. Si el tipo de información SQL_OJ_CAPABILITIES devuelve 0, no se admite ninguna cláusula outer join.

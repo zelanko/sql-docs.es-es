@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0560bee16adc28205e5f05250c477ccea6a9683d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757240"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Muestra la última instrucción enviada desde un cliente a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -39,7 +39,7 @@ Muestra la última instrucción enviada desde un cliente a una instancia de [!IN
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC INPUTBUFFER ( session_id [ , request_id ])  
 [WITH NO_INFOMSGS ]  
 ```  
@@ -57,7 +57,7 @@ SELECT request_id
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
-por  
+WITH  
 Habilita la especificación de opciones.  
   
 NO_INFOMSGS  
@@ -66,7 +66,7 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 DBCC INPUTBUFFER devuelve un conjunto de filas con las siguientes columnas.
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Tipo de evento. Puede ser **RPC Event** o **Language Event**. La salida será **No Event** si no se detectó el último evento.|  
 |**Parámetros**|**smallint**|0 = Texto<br /><br /> 1- *n* = Parámetros|  

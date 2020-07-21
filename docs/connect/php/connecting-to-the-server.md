@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 669a80ce744306cd12379af134951bde7936798e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015143"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920264"
 ---
 # <a name="connecting-to-the-server"></a>Conexión al servidor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,17 +28,17 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] pueden conectarse 
 
 |Tema|Descripción|  
 |---------|---------------|  
-|[Cómo conectarse mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Describe cómo establecer una conexión mediante la autenticación de Windows.|  
-|[Cómo conectarse mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Describe cómo establecer una conexión con autenticación de SQL Server.|  
-|[Conexión con la autenticación de Azure Active Directory](../../connect/php/azure-active-directory.md)|Describe cómo establecer el modo de autenticación y conectarse mediante identidades de Azure Active Directory.|  
+|[Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Describe cómo establecer una conexión mediante la autenticación de Windows.|  
+|[Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Describe cómo establecer una conexión con autenticación de SQL Server.|  
+|[Conexión con la autenticación de Azure Active Directory](../../connect/php/azure-active-directory.md)|Se describe cómo establecer el modo de autenticación y conectarse mediante identidades de Azure Active Directory.|  
 |[Conexión a un puerto específico](../../connect/php/how-to-connect-on-a-specified-port.md)|Describe cómo conectarse al servidor en un puerto específico.|  
-|[Agrupar conexiones](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Proporciona información acerca de la agrupación de conexiones en el controlador.|  
+|[Agrupación de conexiones](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Proporciona información acerca de la agrupación de conexiones en el controlador.|  
 |[Deshabilitar los conjuntos de resultados activos múltiples (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Describe cómo deshabilitar la característica MARS al establecer una conexión.|  
 |[Opciones de conexión](../../connect/php/connection-options.md)|Enumera las opciones que se permiten en la matriz asociativa que contiene atributos de conexión.|  
 |[Compatibilidad con LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Describe la compatibilidad de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con la característica LocalDB, que se agregó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |[Compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |[Conexión a Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Trata sobre cómo conectar a Azure SQL Database.|  
-|[Resistencia de conexión](../../connect/php/connection-resiliency.md)|Describe la característica de resistencia de conexión que restablece las conexiones interrumpidas.|  
+|[Resistencia de la conexión](../../connect/php/connection-resiliency.md)|Se describe la característica de resistencia de conexión que restablece las conexiones interrumpidas.|  
 
 ## <a name="see-also"></a>Consulte también  
 [Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

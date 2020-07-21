@@ -1,5 +1,6 @@
 ---
 title: Preguntas más frecuentes en PolyBase | Microsoft Docs
+description: Compare PolyBase y los servidores vinculados, y compare PolyBase en clústeres de macrodatos y en instancias independientes. Descubra las novedades de PolyBase 2019.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -7,16 +8,16 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.openlocfilehash: 9d4cda6dd0fdade80521a801799e5ee53a80c140
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 5083228cc44b859faec866eca7d36aae9626e8fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760440"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="polybase-vs-linked-servers"></a>PolyBase frente a servidores vinculados
 En la tabla siguiente se resaltan las diferencias entre las características de servidor vinculado y PolyBase:

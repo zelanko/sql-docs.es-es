@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ac43e9206619117c1fc090a594ca32ccbeeeb31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074214"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546337"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Usar reescrituras de cubos (MDX)
   Los cubos pueden actualizarse mediante la instrucción [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Esta instrucción permite actualizar una tupla con un valor específico. Para utilizar de forma eficaz la instrucción UPDATE CUBE a fin de actualizar, un cubo es preciso comprender la sintaxis de la instrucción, las condiciones de error que pueden generarse y el efecto de las actualizaciones en el cubo.  
@@ -41,7 +40,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  Podría decirse que la instrucción UPDATE CUBE es una subrutina que genera una serie de operaciones de reescritura individuales en celdas atómicas. Todas estas operaciones de reescritura individuales se acumulan después en la suma especificada.  
   
 > [!NOTE]  
->  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión `Update Isolation Level` para mejorar el rendimiento de UPDATE CUBE. Para obtener más información, consulta <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+>  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión `Update Isolation Level` para mejorar el rendimiento de UPDATE CUBE. Para obtener más información, vea <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  Puede probar UPDATE CUBE con el grupo de medida Sales Targets del cubo Adventure Works. Este grupo de medida consta de las medidas agregadas mediante SUM, que es un requisito de UPDATE CUBE.  
@@ -116,7 +115,7 @@ USE_EQUAL_ALLOCATION
   
 -   Cambiar la granularidad de dimensión de una dimensión incluida en la reescritura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modificar datos &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

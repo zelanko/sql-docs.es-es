@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260746"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configuración de la extensión de entrega de Reporting Services
@@ -38,33 +38,33 @@ ms.locfileid: "63260746"
 ## <a name="e-mail-delivery-settings"></a>Configuración de entrega por correo electrónico  
  En la tabla siguiente se enumeran las opciones de configuración de la entrega por correo electrónico para las suscripciones que utilizan el correo electrónico del servidor de informes.  
   
-|Parámetro|Valor|  
+|Valor|Value|  
 |-------------|-----------|  
-|**TO**|Dirección de correo electrónico que aparece en la línea `To` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Requerido.|  
-|**CC**|Dirección de correo electrónico que aparece en la línea `Cc` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Opcional.|  
+|**Para**|Dirección de correo electrónico que aparece en la línea `To` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Necesario.|  
+|**CORREOS**|Dirección de correo electrónico que aparece en la línea `Cc` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Opcional.|  
 |**BCC**|Dirección de correo electrónico que aparece en la línea `Bcc` del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Opcional.|  
 |**ReplyTo**|Dirección de correo electrónico que aparece en el encabezado `Reply-To` del mensaje. El valor debe ser una dirección de correo electrónico única. Opcional.|  
 |`IncludeReport`|Valor que indica si incluir el informe en la entrega por correo electrónico. El valor `true` indica que el informe se entrega en el cuerpo del mensaje de correo electrónico.|  
 |**RenderFormat**|Nombre de la extensión de representación que se usa para generar el informe representado. El nombre debe corresponder a una de las extensiones de representación visibles instaladas en el servidor de informes. Se requiere este valor si el valor `IncludeReport` está establecido en `true`.|  
 |**Prioridad**|Prioridad con la que se envía el mensaje de correo electrónico. Valores válidos son `LOW`, `NORMAL` y `HIGH`. El valor predeterminado es `NORMAL`.|  
-|**Asunto**|El texto de la línea de asunto del mensaje de correo electrónico.|  
-|**Comentario**|Texto incluido en el cuerpo del mensaje de correo electrónico.|  
+|**Subject**|El texto de la línea de asunto del mensaje de correo electrónico.|  
+|**Comment**|Texto incluido en el cuerpo del mensaje de correo electrónico.|  
 |**IncludeLink**|Valor que indica si incluir un vínculo al informe en el cuerpo del correo electrónico.|  
   
 ## <a name="file-share-delivery-settings"></a>Configuración de la entrega a recursos compartidos de archivos  
  En la tabla siguiente se enumeran las opciones de configuración de la entrega a recursos compartidos de archivos para las suscripciones.  
   
-|Parámetro|Valor|  
+|Valor|Value|  
 |-------------|-----------|  
-|**FILENAME**|Nombre del archivo que se va a guardar en disco.|  
+|**EXTENSIÓN**|Nombre del archivo que se va a guardar en disco.|  
 |**FILEEXTN**|Indica si incluir una extensión de archivo para el informe representado. El valor es `true` o `false`.|  
-|**PATH**|Ruta de acceso a la carpeta o al recurso compartido de archivos UNC donde guardar el informe.|  
+|**CAMINO**|Ruta de acceso a la carpeta o al recurso compartido de archivos UNC donde guardar el informe.|  
 |**RENDER_FORMAT**|Formato del informe que se guarda en el disco.|  
-|**USERNAME**|Nombre de usuario necesario para tener acceso al recurso de la red o disco.|  
-|**PASSWORD**|Contraseña necesaria para tener acceso al recurso de la red o disco.|  
+|**NOMBRE**|Nombre de usuario necesario para tener acceso al recurso de la red o disco.|  
+|**CONTRASEÑA**|Contraseña necesaria para tener acceso al recurso de la red o disco.|  
 |**WRITEMODE**|Modo de escritura que utilizar al tener acceso al disco. Valores válidos son `None`, `Overwrite` y `AutoIncrement`.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)   
  [Creación de aplicaciones con el servicio web y .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   

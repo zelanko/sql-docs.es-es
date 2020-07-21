@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5d835a317f2968775f0cc94df19866c0d083d69d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775862"
 ---
 # <a name="sql-server-general-statistics-object"></a>General Statistics (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  El objeto **SQLServer:General Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la actividad general en el servidor, como el número de conexiones actuales y el número de usuarios que se conectan y se desconectan de equipos en los que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por segundo. Esto resulta útil cuando se trabaja en sistemas de procesamiento de transacciones en línea (OLTP) grandes, con un gran número de clientes que se conectan y se desconectan de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  El objeto **SQLServer:General Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la actividad general en el servidor, como el número de conexiones actuales y el número de usuarios que se conectan y se desconectan de equipos en los que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]por segundo. Esto resulta útil cuando se trabaja en sistemas de procesamiento de transacciones en línea (OLTP) grandes, con un gran número de clientes que se conectan y se desconectan de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Esta tabla describe los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** .  
+ Esta tabla describe los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]General Statistics**de**.  
   
 |Contadores de Estadísticas generales de SQL Server|Descripción|  
 |--------------------------------------------|-----------------|  
@@ -50,7 +50,7 @@ ms.locfileid: "68093526"
 |**Identificador de unidad de recuperación de tempdb**|El número de identificador de unidad de recuperación tempdb duplicado que se generó.|
 |**Identificador de conjunto de filas de tempdb**|El número de identificador de conjunto de filas tempdb duplicado que se generó.| 
 |**Cola de notificación de eventos de seguimiento**|Número de instancias de notificación de eventos de seguimiento que esperan en la cola interna para ser enviados a través de Service Broker.|  
-|**Transacciones**|Número de altas de transacciones (locales, DTC y enlazadas juntas).|  
+|**Transactions**|Número de altas de transacciones (locales, DTC y enlazadas juntas).|  
 |**Conexiones de usuario**|Cuenta el número de usuarios actualmente conectados a SQL Server.|  
   
 ## <a name="see-also"></a>Consulte también  

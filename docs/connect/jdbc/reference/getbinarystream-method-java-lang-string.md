@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cee701502468d1067ef188c82d29d6af56e031a7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953692"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928736"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>Método getBinaryStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  Valor **String** que contiene el nombre de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto InputStream.  
+ Un objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getBinaryStream se especifica mediante el método getBinaryStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getBinaryStream especifica este método getBinaryStream en la interfaz java.sql.ResultSet.  
   
  Este método solamente se puede utilizar con tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) e image. Si se intenta utilizar con cualquier otro tipo de datos, provocará una excepción.  
   

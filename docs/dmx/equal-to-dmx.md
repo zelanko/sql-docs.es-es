@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa06adc7f81341c96b44bde6da3b32f2f6a477ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0633540153f2dd9dfd60831a58744ea2d6331fbd
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074042"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670288"
 ---
 # <a name="-equal-to-dmx"></a>= (Igual a) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,9 +34,9 @@ DMX_Expression = DMX_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que contiene TRUE si ambos parámetros son no NULL y el valor del primer parámetro es igual que el valor del segundo parámetro. El valor booleano contiene FALSE si ambos parámetros son no NULL y el valor del primer parámetro es distinto del valor del segundo parámetro. El valor booleano contiene un valor NULL si uno de los parámetros o ambos parámetros se evalúan como un valor NULL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores de comparación &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Referencia de operadores &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

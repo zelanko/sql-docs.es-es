@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc4a45ab8a2241e719fd71598461fa6deb43814c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120090"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864995"
 ---
-# <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia el idioma predeterminado de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,39 +43,39 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'` Es el nombre de inicio de sesión. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* puede ser una existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o un usuario de Windows o grupo.  
+`[ @loginame = ] 'login'`Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows.  
   
-`[ @language = ] 'language'` Es el idioma predeterminado del inicio de sesión. *lenguaje* es **sysname**, su valor predeterminado es null. *lenguaje* debe ser un idioma válido en el servidor. Si *lenguaje* no se especifica, *lenguaje* se establece en el idioma predeterminado del servidor; idioma predeterminado se define mediante el **sp_configure** variable de configuración **idioma predeterminado**. El cambio del idioma predeterminado del servidor no cambia el idioma predeterminado de los inicios de sesión existentes.  
+`[ @language = ] 'language'`Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su**valor predeterminado es NULL. *Language* debe ser un idioma válido en el servidor. Si no se especifica *Language* , *Language* se establece en el idioma predeterminado del servidor; el idioma predeterminado se define mediante el **idioma predeterminado**de la variable de configuración **sp_configure** . El cambio del idioma predeterminado del servidor no cambia el idioma predeterminado de los inicios de sesión existentes.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_defaultlanguage** llama a ALTER LOGIN, que admite opciones adicionales. Para obtener información acerca de cómo cambiar otros valores predeterminados de inicio de sesión, vea [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
+## <a name="remarks"></a>Observaciones  
+ **sp_defaultlanguage** llama a Alter login, que admite opciones adicionales. Para obtener información sobre cómo cambiar otros valores predeterminados de inicio de sesión, vea [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Use la instrucción SET LANGUAGE para cambiar el idioma de la sesión actual. Use el @@LANGUAGE función para mostrar la configuración de idioma actual.  
+ Use la instrucción SET LANGUAGE para cambiar el idioma de la sesión actual. Use la @LANGUAGE función @ para mostrar la configuración de idioma actual.  
   
- Si el idioma predeterminado de un inicio de sesión se quita del servidor, el inicio de sesión adquiere el idioma predeterminado del servidor. **sp_defaultlanguage** no se puede ejecutar dentro de una transacción definida por el usuario.  
+ Si el idioma predeterminado de un inicio de sesión se quita del servidor, el inicio de sesión adquiere el idioma predeterminado del servidor. **sp_defaultlanguage** no se puede ejecutar en una transacción definida por el usuario.  
   
- Información acerca de los idiomas instalados en el servidor está visible en el **sys.syslanguages** vista de catálogo.  
+ La información acerca de los idiomas instalados en el servidor es visible en la vista de catálogo de **sys.sysidiomas** .  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se utiliza `ALTER LOGIN` para cambiar el idioma predeterminado del inicio de sesión `Fathima` a Árabe. Éste es el método preferido.  
+ En el ejemplo siguiente se utiliza `ALTER LOGIN` para cambiar el idioma predeterminado del inicio de sesión `Fathima` a Árabe. Este es el método preferido.  
   
 ```  
 ALTER LOGIN Fathima WITH DEFAULT_LANGUAGE = Arabic;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [Lenguajessys.sys&#40;&#41;de Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

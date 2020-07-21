@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 855107f263d2c55010a9ab9d8523970047a24791
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62890761"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440362"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Paso 1: Copia del paquete de la lección 5
   En esta tarea, creará una copia del paquete que ha creado en la lección 5, denominado Lesson 5.dtsx. También puede agregar al proyecto el paquete completado de la lección 5 que se incluye con el tutorial y, a continuación, copiar dicho paquete. Utilizará esta nueva copia en toda la lección 6.  
@@ -38,7 +37,7 @@ ms.locfileid: "62890761"
   
 7.  En la ventana Propiedades, actualice la propiedad Nombre a Lesson 6.  
   
-8.  Haga clic en el cuadro de la propiedad ID y, a continuación, haga clic en la flecha desplegable y, a continuación, haga clic en \<generar nuevo Id. >.  
+8.  Haga clic en el cuadro de la propiedad Id., haga clic en la flecha desplegable y luego haga clic en \<Generate New ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Para agregar el paquete de la lección 5 completada  
   
@@ -48,13 +47,13 @@ ms.locfileid: "62890761"
   
 3.  En el cuadro de diálogo Agregar copia de paquete existente, en Ubicación del paquete, seleccione Sistema de archivos.  
   
-4.  Haga clic en el botón Examinar (…), vaya a Lesson 5.dtsx en el equipo y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar (...), Lección 5. DTSX en el equipo y, a continuación, haga clic en **abrir**.  
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
     1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
+    2.  Haga clic en la pestaña **descargas** .  
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "62890761"
      Después de copiar el paquete de la lección 5, si tiene actualmente los paquetes de las lecciones anteriores en la solución, haga clic con el botón secundario en cada paquete de las lecciones 1 a 5 y, a continuación, haga clic en Excluir del proyecto. Cuando termine, debe tener solo Lesson 6.dtsx en la solución.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: Convertir el proyecto al modelo de implementación de proyectos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Paso 2: Convertir el proyecto al modelo de implementación del proyectos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933866"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881788"
 ---
-# <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Quita un mensaje de error definido por el usuario especificado de una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mensajes definidos por el usuario pueden verse mediante la **sys.messages** vista de catálogo.  
+  Quita un mensaje de error definido por el usuario especificado de una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Los mensajes definidos por el usuario se pueden ver mediante la vista de catálogo **Sys. Messages** .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,9 +40,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msgnum = ] message_number` Es el número de mensaje va a quitar. *message_number* debe ser un mensaje definido por el usuario que tiene un número de mensaje superior a 50000. *message_number* es **int**, su valor predeterminado es null.  
+`[ @msgnum = ] message_number`Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario con un número de mensaje superior a 50000. *message_number* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @lang = ] 'language'` Es el idioma del mensaje que se va a quitar. Si **todas** se especifica, todas las versiones de idioma de *message_number* se quitan. *lenguaje* es **sysname**, su valor predeterminado es null.  
+`[ @lang = ] 'language'`Es el idioma del mensaje que se va a quitar. Si se especifica **All** , se quitan todas las versiones de idioma de *message_number* . *Language* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,15 +51,15 @@ sp_dropmessage [ @msgnum = ] message_number
  Ninguno.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** y **serveradmin** roles fijos de servidor.  
+ Requiere la pertenencia a los roles fijos de servidor **sysadmin** y **ServerAdmin** .  
   
 ## <a name="remarks"></a>Comentarios  
- A menos que **todos los** se especifica para *lenguaje*todo localizado versiones de un mensaje deben quitarse antes de Estados Unidos Se puede quitar la versión en inglés del mensaje.  
+ A menos que se especifique **All** para *Language*, todas las versiones localizadas de un mensaje deben quitarse antes de que se pueda quitar la versión en Inglés de Estados Unidos del mensaje.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Quitar un mensaje definido por el usuario  
- En el ejemplo siguiente se quita un mensaje definido por el usuario, el número `50001`, desde **sys.messages**.  
+ En el ejemplo siguiente se quita un mensaje definido por el usuario, número `50001` , de **Sys. Messages**.  
   
 ```  
 USE master;  
@@ -67,7 +67,7 @@ GO
 EXEC sp_dropmessage 50001;  
 ```  
   
-### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>b. Quitar un mensaje definido por el usuario que incluya una versión traducida  
+### <a name="b-dropping-a-user-defined-message-that-includes-a-localized-version"></a>B. Quitar un mensaje definido por el usuario que incluya una versión traducida  
  En el ejemplo siguiente se quita un mensaje definido por el usuario (número `60000`) que incluye una versión traducida del mensaje.  
   
 ```  
@@ -130,10 +130,10 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Propiedades de la dimensión de base de datos | Microsoft Docs
+title: Propiedades de dimensión de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 504e190f4c513a8c999c4d7d7ab9eaabb83298c3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62728508"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545197"
 ---
 # <a name="database-dimension-properties"></a>Propiedades de la dimensión de base de datos
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las características de una dimensión se definen mediante los metadatos de la dimensión, basándose en la configuración de varias propiedades de dimensión y en los atributos o jerarquías que están incluidas en la dimensión. En la siguiente tabla se describen las propiedades de dimensión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , las características de una dimensión se definen mediante los metadatos de la dimensión, en función de la configuración de varias propiedades de dimensión y de los atributos o las jerarquías que contiene la dimensión. En la siguiente tabla se describen las propiedades de dimensión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Property|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|Especifica el nombre del miembro Todos de los atributos de una dimensión.|  
 |`Collation`|Determina la intercalación utilizada por la dimensión.|  
@@ -49,9 +48,9 @@ ms.locfileid: "62728508"
 |`WriteEnabled`|Indica si las reescrituras de dimensión están disponibles (sujetas a permisos de seguridad).|  
   
 > [!NOTE]  
->  Para obtener más información acerca de cómo establecer valores para las propiedades ErrorConfiguration y UnknownMember cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obtener más información acerca de cómo establecer los valores de las propiedades ErrorConfiguration y UnknownMember al trabajar con valores NULL y otros problemas de integridad de datos, vea [control de problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos y jerarquías de atributos](attributes-and-attribute-hierarchies.md)   
  [Jerarquías de usuario](user-hierarchies.md)   
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

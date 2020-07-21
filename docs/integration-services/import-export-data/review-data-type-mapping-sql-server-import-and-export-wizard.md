@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296268"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
@@ -36,7 +36,7 @@ Si ha especificado una asignación de tipo de datos que puede que no se complete
  -   El icono de advertencia en la fila de la lista **Tabla** indica que hay un problema al convertir, como mínimo, una columna de datos de los resultados de la consulta a un tipo de datos compatible en la tabla de destino.
  -   El icono de advertencia de la primera fila de la lista **Asignación de tipo de datos** indica que la asignación del tipo de datos **int** de la columna de origen al tipo de datos **smalldatetime** de la columna de destino podría provocar una pérdida de datos.
  
- ![Página Revisar asignación de tipos de datos del Asistente para importación y exportación](../../integration-services/import-export-data/media/review-mapping.png "Página Revisar asignación de tipos de datos del Asistente para importación y exportación") 
+ ![Revisar página de asignación de tipos de datos del Asistente para importar y exportar de SQL Server](../../integration-services/import-export-data/media/review-mapping.png "Revisar página de asignación de tipos de datos del Asistente para importar y exportar de SQL Server") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Revisar las tablas de origen y destino  
  En la sección superior de la página **Revisar asignación de tipos de datos** se muestra la lista **Tabla** , que contiene una lista de las tablas que se van a copiar del origen al destino. Para ver información de conversión sobre una tabla individual, seleccione una tabla en la lista **Tabla** . La información de conversión de las columnas individuales de la tabla seleccionada aparece en la cuadrícula **Asignación de tipo de datos** de la parte inferior de la página.
@@ -47,7 +47,7 @@ En este ejemplo, los resultados de la consulta que el usuario proporcionó se co
   
  En la tabla siguiente se describen las columnas de la lista **Tabla** .  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |(Icono de origen)|Indica la probabilidad de que las conversiones de tipos de datos sean correctas:<br /> - Un icono de marca de verificación **verde** indica que el asistente espera que todas las conversiones de tipos de datos para esta tabla sean correctas.<br />- Un icono de advertencia **amarillo** indica que necesita revisar las conversiones individuales que realizará el asistente. Para revisar estas conversiones, seleccione la tabla y, a continuación, revise las conversiones para las columnas individuales en la lista **Asignación de tipo de datos** .<br />- Un icono de error **rojo** indica que el asistente no puede realizar algunas de las conversiones para esta tabla de forma confiable.|  
 |**Origen**|El nombre de la tabla de origen.|  
@@ -63,7 +63,7 @@ En este ejemplo, cada una de las columnas del origen se copiará en una columna 
 
 En la tabla siguiente se describen las columnas de la lista **Asignación de tipo de datos** . 
 
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |(Icono de conversión)|Indica la probabilidad de que las conversiones de tipos de datos sean correctas:<br /> - Un icono de marca de verificación **verde** indica que el asistente espera que la conversión de tipos de datos de esta columna sea correcta.<br />- Un icono de advertencia **amarillo** indica que necesita revisar la conversión que va a realizar el asistente. Para revisar la conversión, haga doble clic en la columna para ver el cuadro de diálogo **Detalles de conversión de columna** . Para más información, vea [Cuadro de diálogo Detalles de conversión de columna](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />- Un icono de error **rojo** indica que el asistente no puede realizar la conversión de forma confiable.|  
 |**Columna de origen**|El nombre de la columna de origen.|  
@@ -97,6 +97,6 @@ En este ejemplo se muestran los valores predeterminados para las dos opciones de
 ## <a name="whats-next"></a>¿Qué sigue?  
  Después de revisar las advertencias, de especificar las opciones de conversión y de especificar cómo prefiere administrar los errores, en la página **Revisar asignación de tipos de datos** se volverá a mostrar el cuadro de diálogo **Asignaciones de columnas** . Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 [Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

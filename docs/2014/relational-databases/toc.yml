@@ -17,7 +17,7 @@
       href: views/views.md
     - name: Procedimientos almacenados +
       href: stored-procedures/stored-procedures-database-engine.md
-    - name: Buscar
+    - name: Search
       href: ../database-engine/search-sql-server.md
       items:
         - name: Búsqueda de texto completo +
@@ -208,9 +208,9 @@
           href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
           items:
             - name: Crear la directiva Finance Name
-              href: policy-based-management/lesson-2-1-create-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
             - name: 'Suscribirse a, y comprobar, la directiva Finance Name'
-              href: policy-based-management/lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md
+              href: policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
     - name: 'Tutorial: Evaluación de los procedimientos recomendados mediante administración basada en directivas'
       href: ../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md
       items:

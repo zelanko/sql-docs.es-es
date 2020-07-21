@@ -14,15 +14,15 @@ ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f166963f1325379d4545f9d8a334e7b77590a14f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b752acb72d4dd0a02f69670e181014e9aa596006
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757707"
 ---
 # <a name="ddl-events"></a>Eventos DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En las tablas siguientes se indican los eventos DDL que se pueden utilizar para activar un desencadenador DDL o una notificación de eventos. Tenga en cuenta que cada evento corresponde a una instrucción o un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , con la sintaxis modificada para que incluya un carácter de subrayado (_) entre las palabras clave.  
   
 > [!IMPORTANT]  

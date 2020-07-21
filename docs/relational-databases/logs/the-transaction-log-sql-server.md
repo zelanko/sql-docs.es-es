@@ -1,5 +1,6 @@
 ---
 title: El registro de transacciones (SQL Server) | Microsoft Docs
+description: Obtenga información sobre el registro de transacciones. Cada base de datos de SQL Server registra todas las transacciones y las modificaciones de base de datos que necesita si se produce un error del sistema.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916029"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834766"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos.
   
 El registro de transacciones es un componente esencial de la base de datos. Si hay un error del sistema, ese registro será necesario para devolver la base de datos a un estado coherente. 
@@ -47,7 +48,7 @@ Para obtener información sobre la arquitectura del registro de transacciones y 
 ### <a name="individual-transaction-recovery"></a>Recuperación de transacciones individuales
 Si una aplicación emite una instrucción `ROLLBACK` o si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta un error, como la pérdida de comunicación con un cliente, los registros se utilizan para revertir todas las modificaciones efectuadas por una transacción incompleta. 
 
-### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="recovery-of-all-incomplete-transactions-when-ssnoversion-is-started"></a>Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 Si un servidor produce errores, las bases de datos pueden quedar en un estado en que algunas modificaciones no han llegado a escribirse desde la caché del búfer a los archivos de datos; estos pueden contener modificaciones como resultado de transacciones incompletas. Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ejecuta la recuperación de todas las bases de datos. Todas las modificaciones del registro que no se hayan podido escribir en los archivos de datos se ponen al día. Las transacciones incompletas que se encuentren en el registro de transacciones se revierten para asegurar la integridad de la base de datos. Para más información, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Puesta al día de una base de datos, un archivo, un grupo de archivos o una página restaurados hasta el momento exacto del error
@@ -67,7 +68,7 @@ En un **escenario de trasvase de registros**, el servidor principal envía el re
 
 En un **escenario de creación de reflejo de la base de datos**, las actualizaciones de una base de datos (la principal) se reproducen inmediatamente en una copia completa e independiente de la base de datos (la base de datos reflejada). La instancia de servidor principal envía de forma inmediata los registros a la instancia del servidor reflejado, que los aplica a la base de datos reflejada, poniéndola al día de forma continua. Para obtener más información, consulte [Creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Características del registro de transacciones
+##  <a name="transaction-log-characteristics"></a><a name="Characteristics"></a>Características del registro de transacciones
 Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
 -  El registro de transacciones se implementa como un archivo o un grupo de archivos separado en la base de datos. La caché del registro se administra por separado respecto a la caché del búfer para las páginas de datos, lo cual da lugar a un código sencillo, rápido y sólido en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Para obtener más información, consulte [Arquitectura física del registro de transacciones](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
 
@@ -79,7 +80,7 @@ Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../..
 
 Para obtener información sobre la arquitectura del registro de transacciones y los elementos internos, vea la [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
-##  <a name="Truncation"></a> Truncamiento del registro de transacciones  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> Truncamiento del registro de transacciones  
 El truncamiento del registro libera el espacio en el archivo de registro para que lo pueda reutilizar el registro de transacciones. Debe truncar el registro de transacciones periódicamente para evitar que se llene el espacio asignado. Varios factores pueden retrasar el truncamiento del registro, por lo que es importante supervisar su tamaño. Algunas operaciones se pueden registrar mínimamente para reducir su impacto sobre el tamaño del registro de transacciones.  
  
 El truncamiento del registro elimina los [archivos de registro virtuales (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) inactivos del registro de transacciones lógico de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], liberando espacio en el registro lógico para que lo reutilice el registro de transacciones físico. Si un registro de transacciones no se trunca nunca, acabará ocupando todo el espacio de disco asignado a los archivos de registro físicos.  
@@ -95,7 +96,7 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 > El truncamiento del registro no reduce el tamaño del archivo de registro físico. Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Para obtener información sobre cómo reducir el tamaño de un archivo de registro físico, vea [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Pero tenga en cuenta los [Factores que pueden ralentizar el truncamiento del registro](#FactorsThatDelayTruncation). Si se requiere el espacio de almacenamiento de nuevo después de reducir un registro, el registro de transacciones volverá a crecer y esto implicará una sobrecarga de rendimiento durante las operaciones de ampliación de registro.
   
-##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
  Cuando las entradas de registro permanecen activas durante una transacción de larga duración, se retrasa el truncamiento del registro y es posible que se llene el registro de transacciones, como ya hemos mencionado anteriormente en este tema largo.  
   
 > [!IMPORTANT]
@@ -106,12 +107,12 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 |valor log_reuse_wait|valor log_reuse_wait_desc|Descripción|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Hay actualmente uno o más [archivos de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) reutilizables.|  
-|1|CHECKPOINT|No se ha producido ningún punto de comprobación desde el último truncamiento o el encabezado del registro no se ha movido más allá de un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual para retrasar el truncamiento. Para obtener más información, vea [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
+|1|CHECKPOINT|No se ha producido ningún punto de comprobación desde el último truncamiento o el encabezado del registro no se ha movido más allá de un [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual para retrasar el truncamiento. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |2|LOG_BACKUP|Se requiere una copia de seguridad del registro para que se pueda truncar el registro de transacciones. (Solo modelos de recuperación completa u optimizada para cargas masivas de registros)<br /><br /> Cuando se completa la siguiente copia de seguridad de registros, es posible que se pueda reutilizar parte del espacio de registro.|  
 |3|ACTIVE_BACKUP_OR_RESTORE|Existe una recuperación o copia de seguridad de datos en curso (todos los modelos de recuperación).<br /><br /> Si la copia de seguridad de una base de datos impide el truncamiento del registro, la cancelación de la operación de copia de seguridad podría ayudar a solucionar el problema inmediato.|  
 |4|ACTIVE_TRANSACTION|Existe una transacción activa (todos los modelos de recuperación):<br /><br /> Podría existir una transacción de larga duración en el inicio de la copia de seguridad del registro. En este caso, para liberar espacio se podría requerir otra copia de seguridad del registro. Tenga en cuenta que las transacciones de ejecución prolongada impiden el truncamiento del registro en todos los modelos de recuperación, incluido el modelo de recuperación simple, en el que, por lo general, el registro de transacciones se trunca en cada punto de comprobación automático.<br /><br /> Una transacción está diferida. Una *transacción diferida* es efectivamente una transacción activa cuya reversión se bloquea debido a algún recurso no disponible. Para obtener más información sobre las causas de las transacciones diferidas y cómo sacarlas del estado diferido, vea [Transacciones diferidas &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).<br /> <br /> Las transacciones de larga ejecución también podrían llenar el registro de transacciones de tempdb. Las transacciones de usuario usan implícitamente tempdb para objetos internos como tablas de trabajo para ordenar, archivos de trabajo para crear valores hash, tablas de trabajo de cursor y versiones de fila. Incluso si la transacción de usuario incluye datos de solo lectura (consultas de `SELECT`), los objetos internos se pueden crear y usar en las transacciones de usuario. Después, se puede rellenar el registro de transacciones de tempdb.|  
 |5|DATABASE_MIRRORING|Se realiza una pausa en la creación de reflejo de la base de datos o, en el modo de alto rendimiento, la base de datos reflejada está notablemente detrás de la base de datos principal. (Solo para el modelo de recuperación completa)<br /><br /> Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
-|6|REPLICATION|Durante las replicaciones transaccionales, las transacciones pertinentes para las publicaciones no se han entregado aún a la base de datos de distribución. (Solo para el modelo de recuperación completa)<br /><br /> Para obtener información acerca de la replicación transaccional, vea [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
+|6|REPLICACIÓN|Durante las replicaciones transaccionales, las transacciones pertinentes para las publicaciones no se han entregado aún a la base de datos de distribución. (Solo para el modelo de recuperación completa)<br /><br /> Para obtener información acerca de la replicación transaccional, vea [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md).|  
 |7|DATABASE_SNAPSHOT_CREATION|Se está creando una instantánea de base de datos. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual, por lo general breve, para retrasar el truncamiento del registro.|  
 |8|LOG_SCAN|Se está realizando un examen de registro. (Todos los modelos de recuperación)<br /><br /> Este es un motivo habitual, por lo general breve, para retrasar el truncamiento del registro.|  
 |9|AVAILABILITY_REPLICA|Una réplica secundaria de un grupo de disponibilidad está aplicando entradas del registro de transacciones de esta base de datos a una base de datos secundaria correspondiente. (Modelo de recuperación completa)<br /><br /> Para obtener más información, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
@@ -120,8 +121,9 @@ Para evitar quedarse sin espacio, a menos que el truncamiento del registro se re
 |12|-|Exclusivamente para uso interno.|  
 |13|OLDEST_PAGE|Si una base de datos está configurada para usar puntos de comprobación indirectos, la página más antigua de la base de datos podría ser anterior al [número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del punto de comprobación. En este caso, la página más antigua puede retrasar el truncamiento del registro. (Todos los modelos de recuperación)<br /><br /> Para obtener más información sobre los puntos de comprobación indirectos, vea [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|No se utiliza este valor actualmente.|  
+|16|XTP_CHECKPOINT|Es necesario realizar un punto de comprobación de OLTP en memoria. En el caso de las tablas optimizadas para memoria, se toma un punto de comprobación automático cuando el archivo de registro de transacciones es mayor que 1,5 GB desde el último punto de control (incluye tablas basadas en disco y optimizadas para memoria).<br /> Para obtener más información, vea [Funcionamiento de los puntos de comprobación para tablas con optimización para memoria](../../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md) y [Proceso de registro y punto de comprobación para las tablas optimizadas en memoria] (https://blogs.msdn.microsoft.com/sqlcat/2016/05/20/logging-and-checkpoint-process-for-memory-optimized-tables-2/)
   
-##  <a name="MinimallyLogged"></a> Operaciones que se pueden registrar mínimamente  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a> Operaciones que se pueden registrar mínimamente  
 El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el [modelo de recuperación](../backup-restore/recovery-models-sql-server.md) optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
   
 > [!NOTE]
@@ -156,9 +158,12 @@ Cuando la replicación transaccional está habilitada, las operaciones `SELECT I
         > [!WARNING]
         > La instrucción `DBCC DBREINDEX` ha quedado **en desuso**, de modo que no conviene usarla en las aplicaciones nuevas.  
   
-    -   Regeneración del nuevo montón [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (si procede). La desasignación de páginas de índice durante una operación `DROP INDEX` **siempre** se registra completamente.
-  
-##  <a name="RelatedTasks"></a> Related tasks  
+        > [!NOTE]
+        > Las operaciones de generación de índices usan un registro insignificante, pero se pueden retrasar cuando una copia de seguridad se ejecuta simultáneamente. Este retraso se debe a los requisitos de sincronización de las páginas del grupo de búferes registradas mínimamente cuando se usa el modelo de recuperación simple u optimizado para cargas masivas de registros. 
+      
+    -   Regeneración del nuevo montón [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (si procede). La desasignación de páginas de índice durante una operación `DROP INDEX`**siempre** se registra completamente.
+
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Administrar el registro de transacciones**  
   
 -   [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  
@@ -175,10 +180,10 @@ Cuando la replicación transaccional está habilitada, las operaciones `SELECT I
   
 -   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md)   
-[Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+[Requisitos previos para el registro mínimo durante la importación masiva](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
 [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
 [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   

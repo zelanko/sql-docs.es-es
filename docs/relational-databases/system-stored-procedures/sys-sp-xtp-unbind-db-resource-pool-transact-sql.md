@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
+title: Sys. sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d7cfca8eea2051ab8c1f070e0da9603604c5296a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041001"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829947"
 ---
-# <a name="sysspxtpunbinddbresourcepool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
+# <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Este procedimiento del sistema quita un enlace existente entre una base de datos y un grupo de recursos con el fin de llevar un seguimiento del uso de la memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  Si no hay ningún grupo actualmente enlazado a la base de datos especificada, la operación se realizará correctamente. Cuando la base de datos no está enlazada, la memoria previamente asignada para los objetos optimizados para memoria se mantiene para el grupo de recursos de servidor anterior. Debe reiniciar la base de datos para liberar la memoria asignada. Una vez que se haya quitado el enlace de una base de datos al grupo de recursos de servidor, el enlace recurre al grupo de recursos de servidor DEFAULT.  
@@ -46,7 +46,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 #### <a name="parameters"></a>Parámetros  
   
-## <a name="messages"></a>Mensajes  
+## <a name="messages"></a>error de Hadoop  
  Si la base de datos se ha enlazado a un grupo de recursos de servidor con nombre, el procedimiento se realiza correctamente. Sin embargo, debe reiniciar la base de datos para que surta efecto la eliminación del enlace.  
  Si no hay enlaces para la base de datos especificada, `sp_xtp_unbind_db_resource_pool` se ejecuta correctamente, pero genera el mensaje informativo:  
   
@@ -69,8 +69,8 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 -   Requiere el permiso CONTROL SERVER.  
   
-## <a name="see-also"></a>Vea también  
- [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+## <a name="see-also"></a>Consulte también  
+ [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296862"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
@@ -45,7 +45,7 @@ Puede usar las herramientas gráficas [!INCLUDE[ssISnoversion](../includes/ssisn
 
 Para información sobre cómo instalar SQL Server Integration Services con SQL Server y sobre las descargas adicionales que podría querer o necesitar, use [Instalar Integration Services](install-windows/install-integration-services.md).
 
-##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) Recursos
+##  <a name="info_tip-resources"></a>![info_tip](../sql-server/media/info-tip.png) Recursos
 -   [Obtener ayuda en el foro de SSIS](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [Obtener ayuda en Stack Overflow](https://stackoverflow.com/questions/tagged/ssis)  
 -   [Seguir el blog del equipo de SSIS](https://blogs.msdn.microsoft.com/ssis/)

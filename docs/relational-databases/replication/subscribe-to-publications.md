@@ -1,5 +1,6 @@
 ---
 title: Suscribirse a publicaciones | Microsoft Docs
+description: Obtenga información sobre los tipos de suscripciones de la replicación de SQL Server, cómo elegir el tipo que necesita y cómo crear una suscripción.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5c1734fba82d819b9bce8e253d780d44952dbea7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768359"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765162"
 ---
 # <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   Una suscripción es una solicitud de copia de datos y objetos de base de datos en una publicación. Una suscripción define qué publicación se recibirá, dónde y cuándo. Al planear suscripciones, tenga en cuenta dónde se realizará el proceso del agente. El tipo de suscripción que elige controla dónde se ejecuta el agente. Con una suscripción de inserción, el Agente de mezcla o el Agente de distribución se ejecutan en el distribuidor, mientras que en una suscripción de extracción los agentes se ejecutan en los suscriptores. Después de crear una suscripción, no se puede cambiar de un tipo a otro.  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "68768359"
   
  **Para crear una suscripción de inserción**  
   
- [Crear una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md)  
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) (Creación de una suscripción de inserción)  
   
  **Para ver o modificar las propiedades de una suscripción de inserción**  
   

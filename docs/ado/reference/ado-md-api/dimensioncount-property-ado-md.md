@@ -1,5 +1,5 @@
 ---
-title: DimensionCount (propiedad, ADO MD) | Microsoft Docs
+title: Propiedad DimensionCount (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionCount property [ADO MD]
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ccb2ae99761ecfa1fc52cef44e4cf35a5600531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc7916ee2ccaea4875b4021b559d9d22eb8f9c77
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938499"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764286"
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount (propiedad, ADO MD)
-Indica el número de dimensiones en un [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+Indica el número de dimensiones de un [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **largo** entero y es de solo lectura.  
+ Devuelve un entero **largo** y es de solo lectura.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de eje (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Objeto de dimensión (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

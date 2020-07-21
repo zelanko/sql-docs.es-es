@@ -1,5 +1,5 @@
 ---
-title: Buscando información adicional del controlador JDBC | Microsoft Docs
+title: Más información sobre el controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75047e8c2ea7589247e0c32c7a4710eb6a6e7dbc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0dfcd615b0021c16fa159d51ebc0b0c76e36973e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028190"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918066"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Más información sobre el controlador JDBC
 
@@ -23,15 +23,15 @@ ms.locfileid: "69028190"
 
   Para más información sobre el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] y el desarrollo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en general, vea los siguientes recursos en línea:  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
-|[Controlador JDBC para SQL Server repositorio de GitHub](https://github.com/microsoft/mssql-jdbc)|Este repositorio contiene el código fuente del controlador JDBC para SQL Server. Use este sitio para interactuar directamente con los miembros del equipo del controlador JDBC. Aquí puede archivar problemas, proporcionar comentarios y colaborar directamente con el controlador.|
+|[Repositorio de GitHub de JDBC Driver para SQL Server](https://github.com/microsoft/mssql-jdbc)|Este repositorio incluye el código fuente de JDBC Driver para SQL Server. Use este sitio para interactuar directamente con miembros del equipo del controlador JDBC. Aquí puede archivar problemas, proporcionar comentarios y contribuir directamente al controlador.|
 |[Centro para desarrolladores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink?linkid=4173)|Este sitio contiene documentación, artículos técnicos, código de ejemplo y otros recursos relativos a todas las tecnologías de acceso a datos de [!INCLUDE[msCoName](../../includes/msconame_md.md)].|  
 |[Foro para el acceso a los datos de SQL Server](https://go.microsoft.com/fwlink/?LinkId=70651)|Este sitio es un foro de la comunidad para obtener acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, OLE DB, ODBC, ADO, MDAC, JDBC o SOAP/HTTP.|  
-|[Blog de JDBC](https://go.microsoft.com/fwlink/?LinkId=124746)|Este blog se usa para proporcionar información sobre el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
+|[Blog de JDBC](https://go.microsoft.com/fwlink/?LinkId=124746)|Este blog se usa para proporcionar información sobre [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

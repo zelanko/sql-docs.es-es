@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7712605a27a5cec798633bf9846a23a31e95a17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057715"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referencia del archivo de entrada XML (Asistente para la optimización de motor de base de datos)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede utilizar un archivo de entrada XML para optimizar una base de datos. Este archivo XML designa las bases de datos, las tablas, los archivos o las tablas de carga de trabajo y las opciones de optimización que se van a utilizar durante la sesión de optimización. También se puede utilizar este archivo para definir una configuración especificada por el usuario para realizar análisis de escenarios condicionales.  
@@ -48,31 +47,31 @@ ms.locfileid: "62509987"
   
 -   [Workload &#40;DTA, elemento&#41;](workload-element-dta.md)  
   
--   [Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)  
+-   [TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)  
   
 -   [Elemento Configuration &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Elementos Server  
   
--   [Elemento Name de Server &#40;DTA&#41;](name-element-for-server-dta.md)  
+-   [Name &#40;DTA, elemento de Server&#41;](name-element-for-server-dta.md)  
   
--   [Elemento Database de Server &#40;DTA&#41;](database-element-for-server-dta.md)  
+-   [Elemento Database para servidor &#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Elementos Workload  
   
--   [Elemento File &#40;DTA&#41;](file-element-dta.md)  
+-   [File &#40;DTA, elemento&#41;](file-element-dta.md)  
   
 -   [Database &#40;DTA, elemento de Workload&#41;](database-element-for-workload-dta.md)  
   
--   [Elemento EventString &#40;DTA&#41;](eventstring-element-dta.md)  
+-   [EventString &#40;DTA, elemento&#41;](eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>Elementos de opciones de optimización  
   
--   [Elemento TuningTimeInMin &#40;DTA&#41;](tuningtimeinmin-element-dta.md)  
+-   [TuningTimeInMin &#40;DTA, elemento&#41;](tuningtimeinmin-element-dta.md)  
   
--   [Elemento StorageBoundInMB &#40;DTA&#41;](storageboundinmb-element-dta.md)  
+-   [StorageBoundInMB &#40;DTA, elemento&#41;](storageboundinmb-element-dta.md)  
   
--   [Elemento TestServer &#40;DTA&#41;](testserver-element-dta.md)  
+-   [TestServer &#40;DTA, elemento&#41;](testserver-element-dta.md)  
   
 -   [FeatureSet &#40;DTA, elemento&#41;](featureset-element-dta.md)  
   
@@ -84,13 +83,13 @@ ms.locfileid: "62509987"
   
 -   [OnlineIndexOperation &#40;DTA, elemento&#41;](onlineindexoperation-element-dta.md)  
   
--   [Elemento DatabaseToConnect &#40;DTA&#41;](databasetoconnect-element-dta.md)  
+-   [DatabaseToConnect &#40;DTA, elemento&#41;](databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>Elementos Configuration  
   
 -   [Server &#40;DTA, elemento de Configuration&#41;](server-element-for-configuration-dta.md)  
   
--   [Elemento Database de Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [Database &#40;DTA, elemento de Configuration&#41;](database-element-for-configuration-dta.md)  
   
 -   [Elemento Recommendation &#40;DTA&#41;](recommendation-element-dta.md)  
   
@@ -108,17 +107,17 @@ ms.locfileid: "62509987"
   
 ## <a name="database-elements"></a>Elementos Database  
   
--   [Elemento Name de Database &#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [Name &#40;DTA, elemento de Database&#41;](name-element-for-database-dta.md)  
   
--   [Elemento Schema de Database &#40;DTA&#41;](schema-element-for-database-dta.md)  
+-   [Schema &#40;DTA, elemento de Database&#41;](schema-element-for-database-dta.md)  
   
--   [Elemento Name de Schema &#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [Name &#40;DTA, elemento de Schema&#41;](name-element-for-schema-dta.md)  
   
--   [Elemento Table de Schema &#40;DTA&#41;](table-element-for-schema-dta.md)  
+-   [Table &#40;DTA, elemento de Schema&#41;](table-element-for-schema-dta.md)  
   
 -   [Elemento Name de Table &#40;DTA&#41;](name-element-for-table-dta.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

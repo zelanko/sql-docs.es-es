@@ -1,5 +1,6 @@
 ---
 title: Comentarios en XQuery | Microsoft Docs
+description: Obtenga información sobre la sintaxis y los delimitadores para agregar comentarios a una consulta XQuery.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67f2ad02eb9486508840f0b731b1d6e705d94f7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039017"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726749"
 ---
 # <a name="comments-in-xquery"></a>Comentarios en XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Se pueden agregar comentarios a XQuery. Las cadenas de comentarios se agregan utilizando los delimitadores "`(:`" y "`:)`". Por ejemplo:  
   
@@ -36,7 +37,7 @@ SELECT @x.query('
 ')  
 ```  
   
- La siguiente es otro ejemplo en el que se especifica una consulta en una columna Instruction del **xml** tipo:  
+ A continuación se indica otro ejemplo en el que se especifica una consulta en una columna de instrucciones del tipo **XML** :  
   
 ```  
 SELECT Instructions.query('  

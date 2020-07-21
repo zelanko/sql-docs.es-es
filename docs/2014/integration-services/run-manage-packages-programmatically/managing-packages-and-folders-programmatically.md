@@ -11,20 +11,19 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5baa8949fc74d92c3a4bcae46dbe4f9c7e1b9f40
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766857"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422702"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Administrar paquetes y carpetas mediante programación
   Cuando trabaja con paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación, puede que desee determinar si existe un paquete o carpeta individual, o administrar las carpetas en las que se almacenan los paquetes. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.  
   
-##  <a name="exists"></a> Determinar si existe un paquete o una carpeta  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Determinar si existe un paquete o una carpeta  
  Para determinar mediante programación si existe un paquete guardado, llame a uno de los métodos siguientes antes de intentar cargar y ejecutar el paquete:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -41,10 +40,10 @@ ms.locfileid: "62766857"
   
 
   
-##  <a name="managing"></a> Administrar paquetes y carpetas  
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Administrar paquetes y carpetas  
  La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona métodos adicionales para administrar paquetes y las carpetas en las que están almacenados.  
   
-###  <a name="managing_rempkg"></a> Quitar un paquete  
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Quitar un paquete  
  Para quitar mediante programación un paquete guardado, llame a uno de los métodos siguientes:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -54,7 +53,7 @@ ms.locfileid: "62766857"
   
 
   
-###  <a name="managing_create"></a> Crear una carpeta  
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Crear una carpeta  
  Para crear mediante programación una carpeta de almacenamiento, llame a uno de los métodos siguientes:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -64,7 +63,7 @@ ms.locfileid: "62766857"
   
 
   
-###  <a name="managing_remfldr"></a> Quitar una carpeta  
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Quitar una carpeta  
  Para quitar mediante programación una carpeta de almacenamiento, llame a uno de los métodos siguientes:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -74,7 +73,7 @@ ms.locfileid: "62766857"
   
   
   
-###  <a name="managing_rename"></a> Cambiar el nombre de una carpeta  
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Cambiar el nombre de una carpeta  
  Para cambiar el nombre de una carpeta de almacenamiento mediante programación, llame a uno de los métodos siguientes:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -84,9 +83,9 @@ ms.locfileid: "62766857"
   
 
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md)   
  [Enumerar los paquetes disponibles mediante programación](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   

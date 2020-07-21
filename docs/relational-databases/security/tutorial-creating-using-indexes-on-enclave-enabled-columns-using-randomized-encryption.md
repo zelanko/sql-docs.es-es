@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Creación y uso de índices en columnas basadas en enclave mediante el cifrado aleatorio | Microsoft Docs'
-ms.custom: ''
-ms.date: 06/26/2019
+title: Índices en columnas habilitadas para enclave con cifrado aleatorio (Tutorial)
+description: En este tutorial se describe cómo crear y usar índices en columnas habilitadas para enclave mediante el cifrado aleatorio admitido en Always Encrypted con enclaves seguros para SQL Server.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,28 +13,28 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddfb9836650028c0f6aae150a2f70e4758b6ca2
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126796"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279305"
 ---
-# <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Creación y uso de índices en columnas basadas en enclave mediante cifrado aleatorio
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Creación y uso de índices en columnas habilitadas para enclave que usan cifrado aleatorio
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Este tutorial le enseña a crear y usar índices en columnas habilitadas para enclave que usan el cifrado aleatorio admitido en [Always Encrypted con enclaves seguros](encryption/always-encrypted-enclaves.md). En él encontrará:
 
 - Cómo crear un índice cuando tiene acceso a las claves (la clave maestra de columna y la clave de cifrado de columna) que protegen la columna.
 - Cómo crear un índice cuando no tiene acceso a las claves que protegen la columna.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Este tutorial es la continuación del [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](./tutorial-getting-started-with-always-encrypted-enclaves.md). Asegúrese de haberlo completado antes de seguir los pasos siguientes.
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Paso 1: Habilitación de la recuperación de base de datos acelerada (ADR) en la base de datos
 
-Microsoft recomienda encarecidamente habilitar ADR en la base de datos antes de crear el primer índice en una columna habilitada para enclave que usa cifrado aleatorio. Consulte la sección [Recuperación de la base de datos](./encryption/always-encrypted-enclaves.md##database-recovery) del tutorial [Always Encrypted con enclaves seguros](./encryption/always-encrypted-enclaves.md).
+Microsoft recomienda encarecidamente habilitar ADR en la base de datos antes de crear el primer índice en una columna habilitada para enclave que usa cifrado aleatorio. Vea la sección [Recuperación de la base de datos](./encryption/always-encrypted-enclaves.md#database-recovery) del tutorial [Always Encrypted con enclaves seguros](./encryption/always-encrypted-enclaves.md).
 
 1. Cierre todas las instancias SSMS que usó en el tutorial anterior. Las conexiones abiertas de base de datos se cerrarán, lo que es necesario para habilitar ADR.
 1. Abra una nueva instancia de SSMS y conéctese a la instancia de SQL Server como sysadmin **sin** Always Encrypted habilitado para la conexión de base de datos.
@@ -172,5 +173,7 @@ En este paso, creará un índice en una columna cifrada, que simula ser dos usua
    1. En **Estadísticas de consultas dinámicas** (en la parte inferior de la ventana de consulta), observe que la consulta utiliza el índice.
 
 ## <a name="next-steps"></a>Pasos siguientes
+- [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-- Consulte [Configuración de Always Encrypted con enclaves seguros](encryption/configure-always-encrypted-enclaves.md) para más información sobre otros casos de uso de Always Encrypted con enclaves seguros.
+## <a name="see-also"></a>Consulte también
+- [Creación y uso de índices en columnas mediante Always Encrypted con enclaves seguros](encryption/always-encrypted-enclaves-create-use-indexes.md)

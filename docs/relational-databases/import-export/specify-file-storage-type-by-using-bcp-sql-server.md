@@ -1,6 +1,6 @@
 ---
-title: Especificar el tipo de almacenamiento en archivo mediante bcp (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Especificación del tipo de almacenamiento de archivo mediante bcp
+description: Use bcp para exportar datos a un archivo como su tipo de tabla de base de datos, en su representación de caracteres o como un tipo de datos que admite la conversión implícita.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,15 +17,16 @@ ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 874326a9eb3673a0b091e06fe5e9ba3f04e1c3b2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062523"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003156"
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="specify-file-storage-type-using-bcp-sql-server"></a>Especificación del tipo de almacenamiento de archivo mediante bcp (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. La información se puede exportar a un archivo de datos como el tipo de tabla de base de datos correspondiente (formato nativo), como su representación en caracteres (formato de caracteres) o como cualquier tipo de datos que admita la conversión implícita (por ejemplo, si copia un elemento **smallint** como **int**). Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Comando bcp para el tipo de almacenamiento en archivo  
@@ -47,11 +48,11 @@ ms.locfileid: "68062523"
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**texto**|**T**[**ext**]|  
+    |**text**|**T**[**ext**]|  
     |**ntext2**|**W**|  
-    |**binario**|**x**|  
+    |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**imagen**|**I**[**mage**]|  
+    |**image**|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -88,11 +89,11 @@ ms.locfileid: "68062523"
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**texto**|SQLCHAR|  
+|**text**|SQLCHAR|  
 |**ntext**|SQLNCHAR|  
-|**binario**|SQLBINARY|  
+|**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**imagen**|SQLBINARY|  
+|**image**|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  

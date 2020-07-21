@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060542"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
-  La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando realice cualquiera de los siguientes cambios de esquema en el objeto publicado correspondiente en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ese cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -85,11 +84,11 @@ ms.locfileid: "68199449"
   
 #### <a name="adding-columns"></a>Agregar columnas  
   
--   Para agregar una columna nueva a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<tabla> ADD \<columna>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
+-   Para agregar una nueva columna a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<Table> Add \<Column> . De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
   
--   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
+-   Para agregar una nueva columna a una tabla y no incluir esa columna en una publicación existente, deshabilite la replicación de cambios de esquema y, a continuación, ejecute ALTER TABLE \<Table> Add \<Column> .  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)o el cuadro **de diálogo Propiedades \<Publication> de la publicación:** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
@@ -97,9 +96,9 @@ ms.locfileid: "68199449"
   
 #### <a name="dropping-columns"></a>Quitar columnas  
   
--   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
+-   Para quitar una columna de una publicación existente y quitar la columna de la tabla en el publicador, ejecute ALTER TABLE \<Table> Drop \<Column> . De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para quitar una columna de una publicación existente, pero conservar la columna en la tabla del publicador, use [sp_articlecolumn &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)o el cuadro **de diálogo \<Publication> propiedades de la publicación:** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "68199449"
         |`filestream`|Permitir cambio|Bloquear cambio|Bloquear cambio|  
         |`date`, `time`, `datetime2` y `datetimeoffset`.|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
   
-         <sup>1</sup> suscriptores de SQL Server Compact convierten estos tipos de datos en el suscriptor.  
+         <sup>1</sup> SQL Server Compact los suscriptores convierten estos tipos de datos en el suscriptor.  
   
 -   En caso de error al aplicar un cambio de esquema (por ejemplo, un error que se produce por agregar una clave externa que hace referencia a una tabla que no está disponible en el suscriptor), se produce un error en la sincronización y es necesario reinicializar la suscripción.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "68199449"
   
 -   La replicación de mezcla proporciona procedimientos almacenados para omitir los cambios de esquema durante la solución de problemas. Para obtener más información, vea [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) y [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   

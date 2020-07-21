@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3bb2150899e930272e16d7488f792dc384cc7232
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973649"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913701"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>Método setNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public final void setNString(int parameterIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método se debe usar para los tipos de datos **nchar**, **nvarchar**, **ntext**y **XML** .  
+## <a name="remarks"></a>Observaciones  
+ Este método se debe usar para los tipos de datos **NCHAR**, **NVARCHAR**, **NTEXT** y **XML**.  
   
  El método setNString especifica este método setNString en la interfaz java.sql.PreparedStatement.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106437"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referencias a campos globales y de usuario integrados (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106437"
 |**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|Fecha y hora en que se empezó a ejecutar el informe.|  
-|PageNumber|`Integer`|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de los saltos de página para un rectángulo, una región de datos, un grupo de regiones de datos o una asignación, en la propiedad PageBreak, establezca la propiedad ResetPageNumber `True`. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
+|PageNumber|`Integer`|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de los saltos de página para un rectángulo, una región de datos, un grupo de regiones de datos o un mapa, en la `True`propiedad PageBreak, establezca la propiedad ResetPageNumber en. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
 |ReportFolder|`String`|Ruta de acceso completa a la carpeta en la que se halla el informe. No incluye la dirección URL del servidor de informes.|  
 |ReportName|`String`|Nombre del informe tal como se almacena en la base de datos del servidor de informes.|  
 |ReportServerUrl|`String`|Dirección URL del servidor de informes en el que se ejecuta el informe.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66106437"
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de `RenderFormat`.  
   
-|Miembro|Tipo|Descripción|  
+|Member|Tipo|Descripción|  
 |------------|----------|-----------------|  
-|NOMBRE|`String`|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
+|Nombre|`String`|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
 |IsInteractive|`Boolean`|Si la solicitud de representación actual utiliza un formato de representación interactivo.|  
 |DeviceInfo|Colección nombre/valor de solo lectura|Pares clave/valor para los parámetros de deviceinfo para la solicitud de representación actual.<br /><br /> Los valores de cadena se pueden especificar utilizando la clave o un índice en la colección.|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66106437"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Esta expresión devuelve el nombre del informe y la hora a la que se ejecutó. A la hora se le aplica formato con la cadena de formato de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para fechas cortas:  
+-   Esta expresión devuelve el nombre del informe y la hora a la que se ejecutó. A la hora se le aplica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] formato con la cadena de formato para la fecha corta:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
@@ -72,9 +72,9 @@ ms.locfileid: "66106437"
   
  En la siguiente tabla, se describen los miembros de la colección `User`.  
   
-|**Miembro**|**Tipo**|**Descripción**|  
+|**Member**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Idioma del usuario que ejecuta el informe. Por ejemplo, `en-US`.|  
+|`Language`|`String`|Idioma del usuario que ejecuta el informe. Por ejemplo: `en-US`.|  
 |`UserID`|`String`|Identificador del usuario que ejecuta el informe. Si está utilizando la autenticación de Windows, este valor será la cuenta de dominio del usuario actual. El valor viene determinado por la extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , que puede utilizar la autenticación de Windows o una autenticación personalizada.|  
   
  Para obtener más información sobre el uso de varios idiomas en un informe, vea "Consideraciones de diseño de soluciones para las implementaciones plurilingües o globales" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  
@@ -88,9 +88,9 @@ ms.locfileid: "66106437"
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>Identificar el identificador de usuario para informes de historial o instantánea  
  En algunas ocasiones, los informes que incluyen la variable *User!UserID* no podrán mostrar los datos de informe específicos del usuario que está viendo el informe en ese momento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](../expression-dialog-box-report-builder.md)   
+ [Cuadro de diálogo expresión &#40;Generador de informes&#41;](../expression-dialog-box-report-builder.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

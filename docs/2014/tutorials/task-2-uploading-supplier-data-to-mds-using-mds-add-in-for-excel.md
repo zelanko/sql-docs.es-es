@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 2: Cargar datos de proveedor en MDS con el complemento MDS para Excel | Microsoft Docs'
+title: 'Tarea 2: carga de datos de proveedor en MDS mediante Complemento MDS para Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,60 +9,59 @@ ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e825829eb70b695a619df8caaa59788d0ad413f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064769"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Tarea 2: Carga de datos de proveedor en MDS con el complemento MDS para Excel
-  En esta tarea, publica los datos limpios y de proveedor a **MDS** utilizando el **complemento MDS para Excel**. Crear una entidad denominada **proveedor** en el **proveedores** modelo que creó en la lección anterior. La entidad tendrá un atributo para cada columna del archivo de Excel. Los atributos de código y el nombre de la entidad proveedor corresponden a la **SupplierID** y **Supplier Name** las columnas de Excel.  
+  En esta tarea, publicará los datos limpios y de proveedor en **MDS** mediante el **complemento MDS para Excel**. Cree una entidad denominada **Supplier** en el modelo **proveedores** que creó en la lección anterior. La entidad tendrá un atributo para cada columna del archivo de Excel. Los atributos Code y Name de la entidad Supplier corresponden a las columnas **SupplierID** y **Supplier Name** de Excel.  
   
-1.  Abra **limpios y Matched Suppliers.xls** en **Excel**.  
+1.  Abra **Suppliers.xlslimpiadas y coincidentes** en **Excel**.  
   
-2.  Presione **CTRL+A** para seleccionar todos los datos. Es **importante** que seleccione todos los datos en la hoja de cálculo.  
+2.  Presione **Ctrl +** a para seleccionar todos los datos. Es **importante** que seleccione todos los datos en la hoja de cálculo.  
   
 3.  Haga clic en **Datos maestros** en la barra de menús.  
   
-4.  Haga clic en **crear entidad** botón en la cinta de opciones.  
+4.  Haga clic en el botón **crear entidad** de la cinta de opciones.  
   
-     ![Excel - pestaña de datos maestros - botón Crear entidad](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel - pestaña de datos maestros - botón Crear entidad")  
+     ![Excel - Pestaña de datos maestros - Botón Crear entidad](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel - Pestaña de datos maestros - Botón Crear entidad")  
   
 5.  En el cuadro de diálogo **Administrar conexiones** , si no ve la conexión al **servidor MDS local** bajo **Conexiones existentes**, haga lo siguiente:  
   
     1.  Seleccione **Crear una nueva conexión**y haga clic en el botón **Nuevo** .  
   
-    2.  En el **agregar nueva conexión** cuadro de diálogo, escriba **servidor MDS Local** para **descripción** y **http://localhost/MDS** para  **Dirección del servidor MDS**y haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    2.  En el cuadro de diálogo **Agregar nueva conexión** , escriba **servidor MDS local** para **Descripción** y **http: \/ /localhost/MDS** para la **dirección del servidor MDS**y haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-6.  En **administrar conexiones** cuadro de diálogo, seleccione **servidor MDS Local** (http://localhost/MDS), haga clic en **probar** para probar la conexión. Haga clic en **Aceptar** en el cuadro de mensaje.  
+6.  En el cuadro de diálogo **Administrar conexiones** , seleccione **servidor MDS local** ( `http://localhost/MDS` ), haga clic en **probar** para probar la conexión. Haga clic en **Aceptar** en el cuadro de mensaje.  
   
-7.  Haga clic en **Connect** para conectarse al servidor de MDS.  
+7.  Haga clic en **conectar** para conectarse al servidor de MDS.  
   
-8.  En el **crear entidad** cuadro de diálogo, seleccione **proveedores** para el **modelo**.  
+8.  En el cuadro de diálogo **crear entidad** , seleccione **proveedores** para el **modelo**.  
   
-9. Asegúrese de que **VERSION_1** está seleccionada para **versión**.  
+9. Asegúrese de que **VERSION_1** está seleccionado para **versión**.  
   
-10. Escriba **proveedor** para **nuevo nombre de entidad**.  
+10. Escriba **proveedor** para **el nuevo nombre de entidad**.  
   
-11. Seleccione **SupplierID** para **la columna que contiene un identificador único** campo (también puede generar un código automáticamente). Básicamente, esto se asigna el **SupplierID** columna en **Excel** a la **código** atributo de **proveedor** entidad.  
+11. Seleccione **IdProveedor** en **la columna que contiene un identificador único** (también puede generar un código automáticamente). Básicamente está asignando la columna **SupplierID** en **Excel** al atributo **code** de la entidad **Supplier** .  
   
-12. Seleccione **Supplier Name** para **la columna que contiene los nombres** campo. Básicamente, esto se asigna el **Supplier Name** columna en **Excel** a la **nombre** atributo de la **proveedor** entidad. El **código** y **nombre** atributos son obligatorios para una entidad en MDS.  
+12. Seleccione **nombre de proveedor** para **la columna que contiene el campo nombres** . Básicamente está asignando la columna **Supplier Name** de **Excel** al atributo **Name** de la entidad **Supplier** . Los atributos **code** y **Name** son atributos obligatorios para una entidad en MDS.  
   
-     ![Crear el cuadro de diálogo entidad](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "crear el cuadro de diálogo entidad")  
+     ![Cuadro de diálogo Crear entidad](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "Cuadro de diálogo Crear entidad")  
   
-13. Haga clic en **Aceptar** para crear la entidad en MDS, publicar los datos maestros en la entidad y cerrar **crear entidad** cuadro de diálogo.  
+13. Haga clic en **Aceptar** para crear la entidad en MDS, publicar los datos maestros en la entidad y cerrar el cuadro de diálogo **crear entidad** .  
   
-14. Ahora, debería ver una nueva hoja denominada **proveedor**, que es el nombre de la entidad, se agrega a la hoja de cálculo de Excel y en la parte superior de la hoja de cálculo verá que la hoja de cálculo está conectado al servidor de MDS. Tenga en cuenta que la hoja de cálculo original (titulada **Sheet1**) sigue existiendo.  
+14. Ahora debería ver una nueva hoja titulada **proveedor**, que es el nombre de la entidad, agregada a la hoja de cálculo de Excel y en la parte superior de la hoja de cálculo debería ver que la hoja de cálculo está conectada al servidor MDS. Observe que la hoja de cálculo original (titulada **Hoja1**) sigue existiendo.  
   
-     ![Excel - pestañas proveedor y Hoja1](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel - pestañas proveedor y Hoja1")  
+     ![Excel - Pestañas Proveedor y Hoja1](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel - Pestañas Proveedor y Hoja1")  
   
-     ![Excel - mostrar detalles de conexión de MDS](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel - mostrar detalles de conexión de MDS")  
+     ![Excel - Mostrar detalles de conexión MDS](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel - Mostrar detalles de conexión MDS")  
   
-15. Mantener **Excel** abrir.  
+15. Mantenga abierto **Excel** .  
   
 ## <a name="next-task"></a>Tarea siguiente  
- [Tarea 3: Comprobar los datos en Master Data Manager](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [Tarea 3: Comprobación de los datos en Master Data Manager](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

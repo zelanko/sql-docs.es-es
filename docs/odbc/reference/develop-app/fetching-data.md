@@ -1,5 +1,5 @@
 ---
-title: Captura de datos | Microsoft Docs
+title: Capturando datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - result sets [ODBC], fetching
 - fetches [ODBC], defined
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea322346b955fc8e252dc14b78b055d491d14f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 04e1f562868d2a38bebd7dc0ffcaefaa8ebf5ee0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069855"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305666"
 ---
 # <a name="fetching-data"></a>Obtener datos
-El proceso de recuperar filas del conjunto de resultados y devolverlas a la aplicación se denomina *capturando*. En esta sección se describe cómo capturar los datos.  
+El proceso de recuperar filas del conjunto de resultados y devolverlas a la aplicación se denomina *captura*. En esta sección se describe cómo capturar datos.  
   
  Esta sección contiene los temas siguientes.  
   

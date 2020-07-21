@@ -1,5 +1,5 @@
 ---
-title: Configurar reglas de negocios para enviar notificaciones (Master Data Services) | Microsoft Docs
+title: Configurar reglas de negocios para enviar notificaciones
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fe7bdd3ab79987f4f45a4a50d818ce454914e608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941097"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812030"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar reglas de negocios para enviar notificaciones (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure reglas de negocios para enviar notificaciones cuando desee notificar a los usuarios los cambios de los valores de los atributos.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67941097"
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales de **Permisos de usuario y de grupo** y de **Administración del sistema** . Si no tiene permiso para el área funcional de **Permisos de usuario y grupo** , no puede ver la lista de usuarios y grupos a los que enviar las notificaciones.  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Ya debe existir una regla de negocio que use una acción de validación. Para obtener más información, consulte [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67941097"
   
 7.  Marque la casilla **Enviar notificaciones** y, en la lista desplegable, seleccione un usuario o grupo al que enviar una notificación por correo electrónico.  
   
-8.  Haga clic en **Guardar**.  
+8.  Haga clic en **Save**(Guardar).  
   
 9. Haga clic en **Publish All**(Publicar todo).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "67941097"
   
     -   [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

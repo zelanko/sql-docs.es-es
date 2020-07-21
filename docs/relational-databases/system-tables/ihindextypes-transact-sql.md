@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - IHindextypes system table
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4c7c1bca0f400085ad55ac69b692e5a5fc1ec4c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6bb1a749b5bc293c306136f806cd6558b1192688
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990371"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890307"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **IHindextypes** tabla del sistema contiene una fila por cada tipo de índice que no son de SQL Server admitido para publicadores que no son: SQL Server. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla del sistema **IHindextypes** contiene una fila por cada tipo de índice no SQL Server admitido para los publicadores que no son de SQL Server. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**type**|**nvarchar(255)**|El nombre de un tipo de índice admitido que no son de SQL Server.|  
+|**type**|**nvarchar(255)**|Nombre de un tipo de índice admitido que no es de SQL Server.|  
   
-## <a name="see-also"></a>Vea también  
- [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

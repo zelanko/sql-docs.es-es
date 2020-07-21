@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62938587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065852"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
   El Visor de conflictos de replicación le permite ver los conflictos que hayan podido producirse durante la sincronización de la replicación. Los conflictos ocurren cuando los mismos datos se modifican en dos servidores diferentes, por ejemplo, en un publicador y en un suscriptor, o en dos suscriptores diferentes. La replicación soluciona automáticamente los conflictos mediante el solucionador de conflictos seleccionado durante la creación del artículo. Sin embargo, el Visor de conflictos de replicación le permite elegir una resolución diferente para el conflicto si fuese necesario. Pueden producirse los siguientes conflictos:  
@@ -58,7 +57,7 @@ ms.locfileid: "62938587"
  **Seleccionar todo**  
  Haga clic para seleccionar todos los conflictos mostrados en la cuadrícula.  
   
- **No seleccionar nada**  
+ **Seleccione ninguno**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
  **Quitar**  
@@ -70,8 +69,8 @@ ms.locfileid: "62938587"
  **Mostrar las primeras cinco columnas y el resto de las columnas con datos en conflicto**  
  Seleccione esta opción para mostrar las cinco primeras columnas y otras columnas con conflictos. Resulta útil si las tablas presentan un número elevado de columnas y solo desea ver las columnas más importantes para solucionar el conflicto. Las cinco primeras columnas se incluyen en esta vista, como campos que identifican una fila, como la clave principal o campos de nombre, que con frecuencia se encuentran entre las cinco primeras columnas de la tabla.  
   
- **Mostrar información de columna** ( **...** )  
- Haga clic para ver la información de columna: **Nombre de la tabla**, **Nombre de columna**, **Tipo de datos** y **Valor de la columna**. Es posible editar**Valor de columna** excepto en el caso de que el valor se muestre como de solo lectura.  
+ **Mostrar información de columna** (**...**)  
+ Haga clic para ver la información de la columna: **Nombre de tabla**, **Nombre de columna**, **Tipo de datos**y **Valor de columna**. Es posible editar**Valor de columna** excepto en el caso de que el valor se muestre como de solo lectura.  
   
  **Enviar ganador**  
  Haga clic en esta opción para conservar la fila que el solucionador de conflictos determinó ser la ganadora. Es posible cambiar el valor de las columnas que no se muestran como de solo lectura antes de hacer clic en este botón.  
@@ -80,10 +79,10 @@ ms.locfileid: "62938587"
  Haga clic en esta opción para aceptar la fila que el solucionador de conflictos determinó ser la perdedora. Es posible cambiar el valor de las columnas que no se muestran como de solo lectura antes de hacer clic en este botón.  
   
  **Registrar los detalles de este conflicto**  
- Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda ( **...** ) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
+ Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda (**...**) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
   
-## <a name="see-also"></a>Vea también  
- [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ver y resolver conflictos de datos para publicaciones de combinación &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Replicación de mezcla avanzada: detección y resolución de conflictos](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

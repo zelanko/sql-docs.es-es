@@ -1,5 +1,5 @@
 ---
-title: Los índices y claves en el cuadro de diálogo (Visual Database Tools) | Microsoft Docs
+title: Índices y claves (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68c9022f3ea7803f372e7c349e0dc75b1fc56adc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048644"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Índices y claves (cuadro de diálogo, Visual Database Tools)
   Utilice este cuadro de diálogo para crear o modificar índices, claves principales y claves únicas. Para tener acceso a este cuadro de diálogo, abra la definición de la tabla que tiene el índice o la clave, haga clic con el botón derecho en la cuadrícula de la definición de tabla y, a continuación, haga clic en **Índices o claves**.  
@@ -30,7 +29,7 @@ ms.locfileid: "63015427"
  **Índice o clave Primary/Unique seleccionados**  
  Enumera los índices y las claves principales o únicas. Seleccione uno de estos elementos para ver sus propiedades en la cuadrícula que aparece a la derecha. Si la lista está vacía, no se ha definido ninguna para la tabla.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea un nuevo índice o una nueva clave principal o única.  
   
  **Eliminar**  
@@ -51,8 +50,8 @@ ms.locfileid: "63015427"
  **Categoría Identidad**  
  Expandido, muestra los campos de propiedades de **Nombre** y **Descripción**.  
   
- **Name**  
- Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
+ **Nombre**  
+ Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Puede cambiar el nombre en cualquier momento.  
   
  **Descripción**  
  Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -113,8 +112,8 @@ ms.locfileid: "63015427"
  **Bloqueos de fila permitidos**  
  Especifique si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos. El valor recomendado es **Sí**.  
   
-## <a name="see-also"></a>Vea también  
- [Restricciones UNIQUE y restricciones Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>Consulte también  
+ [Restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

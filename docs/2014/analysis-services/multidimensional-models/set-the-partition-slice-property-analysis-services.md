@@ -1,5 +1,5 @@
 ---
-title: Establezca la propiedad Slice de particiones (Analysis Services) | Microsoft Docs
+title: Establecer la propiedad segmento de partición (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f42c4536b99ba3fecf9b947942b881a3be72784f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547367"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Establecer la propiedad Slice de particiones (Analysis Services)
   Un segmento de datos es una característica de optimización importante que ayuda a dirigir consultas a los datos de las particiones adecuadas. Establecer explícitamente la propiedad Slice puede mejorar el rendimiento de las consultas invalidando los sectores predeterminados generados para las particiones MOLAP y ROLAP. Además, la propiedad Slice proporciona una comprobación de validación adicional al procesar la partición.  
   
- Puede especificar un segmento de datos después de crear una partición, pero antes de procesarla, mediante la propiedad Slice. En la pestaña Particiones, expanda un grupo de medida, haga clic con el botón secundario en una partición y seleccione **Propiedades**.  
+ Puede especificar un segmento de datos después de crear una partición, pero antes de procesarla, mediante la propiedad Slice. En la pestaña Particiones, expanda un grupo de medida, haga clic con el botón derecho en una partición y seleccione **Propiedades**.  
   
 ## <a name="defining-a-slice"></a>Definir un segmento  
  Los valores válidos para una propiedad Slice es un miembro, un conjunto o una tupla de MDX. En los ejemplos siguientes se ilustra la sintaxis válida de Slice:  
@@ -41,11 +40,11 @@ ms.locfileid: "66072936"
 > [!NOTE]  
 >  Tenga en cuenta que las funciones MDX dinámicas (como [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) no son compatibles con la propiedad Slice para particiones. Debe definir el segmento utilizando tuplas explícitas o referencias de miembro.  
 >   
->  Por ejemplo, en lugar de usar el [: &#40;intervalo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) función para definir un intervalo, necesitaría enumerar cada miembro por los años específicos.  
+>  Por ejemplo, en lugar de utilizar el [intervalo: &#40;&#41; &#40;función MDX&#41;](/sql/mdx/range-mdx) para definir un intervalo, necesitaría enumerar cada miembro por los años específicos.  
 >   
 >  Si necesita definir un segmento complejo, se recomienda definir las tuplas del segmento con un script Alter de XMLA. Después, puede usar la herramienta de línea de comandos ascmd o la tarea SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) para ejecutar el script y crear el conjunto de miembros especificado inmediatamente antes de procesar la partición.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y administrar una partición local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

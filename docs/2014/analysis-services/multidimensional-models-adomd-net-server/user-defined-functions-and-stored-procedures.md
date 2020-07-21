@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a49aa41d158bf2c9fd1ebb1a711d6ff35c0df98b
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727861"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469020"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Funciones definidas por el usuario y procedimientos almacenados
-  Con objetos de servidor ADOMD.NET, puede crear funciones definidas por el usuario (UDF) o procedimientos almacenados para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que interactúan con los metadatos y datos del servidor. Se llama a estos métodos incrustados a través de instrucciones de expresiones multidimensionales (MDX) o extensiones de minería de datos (DMX) para proporcionar una funcionalidad adicional sin las latencias asoció a las comunicaciones de red.  
+  Con los objetos de servidor ADOMD.net, puede crear funciones definidas por el usuario (UDF) o procedimientos almacenados para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que interactúen con metadatos y datos del servidor. Se llama a estos métodos incrustados a través de instrucciones de expresiones multidimensionales (MDX) o extensiones de minería de datos (DMX) para proporcionar una funcionalidad adicional sin las latencias asoció a las comunicaciones de red.  
   
 ## <a name="udf-examples"></a>Ejemplos de UDF  
  UDF es un método al que se puede llamar en el contexto de una instrucción MDX o DMX, admite cualquier número de parámetros y devuelve cualquier tipo de datos.  
   
- Un UDF que se crea mediante MDX es similar al que se crea para DMX. La diferencia principal reside en que ciertas propiedades del objeto <xref:Microsoft.AnalysisServices.AdomdServer.Context>, como las propiedades <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentCube%2A> y <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentMiningModel%2A>, únicamente están disponibles para un lenguaje de scripting o para el otro.  
+ Un UDF que se crea mediante MDX es similar al que se crea para DMX. La principal diferencia es que determinadas propiedades del objeto [Microsoft. AnalysisServices. AdomdServer. Context](/previous-versions/sql/sql-server-2014/ms143353(v=sql.120)) , como las propiedades [Microsoft. AnalysisServices. AdomdServer. Context. CurrentCube *](/previous-versions/sql/sql-server-2014/ms137081(v=sql.120)) y [Microsoft. AnalysisServices. AdomdServer. Context. CurrentMiningModel *](/previous-versions/sql/sql-server-2014/ms137178(v=sql.120)) , solo están disponibles para un lenguaje de scripting o para el otro.  
   
  En los ejemplos siguientes se muestra cómo usar un método UDF para devolver una descripción del nodo, filtrar tuplas y aplican un filtro a una tupla.  
   
@@ -81,7 +80,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- Se llama al ejemplo anterior en el ejemplo MDX siguiente. En este ejemplo MDX, se recuperan cinco estados o provincias aleatorios de la **Adventure Works** base de datos.  
+ Se llama al ejemplo anterior en el ejemplo MDX siguiente. En este ejemplo de MDX, se recuperan cinco Estados o provincias aleatorios de la base de datos de **Adventure Works** .  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

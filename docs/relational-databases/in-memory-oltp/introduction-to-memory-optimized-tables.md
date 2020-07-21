@@ -1,5 +1,6 @@
 ---
 title: Introducción a las tablas con optimización para memoria | Microsoft Docs
+description: Obtenga información sobre las tablas optimizadas para memoria, que son duraderas y admiten transacciones atómicas, coherentes, aisladas y duraderas.
 ms.custom: ''
 ms.date: 12/02/2016
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723117"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las tablas optimizadas para memoria se crean con [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
   
@@ -86,12 +87,12 @@ Los siguientes factores afectarán a las mejoras del rendimiento que se pueden l
   
 En la tabla siguiente se enumeran los problemas de rendimiento y escalabilidad que se suelen encontrar en las bases de datos relacionales y el modo en que OLTP en memoria puede mejorar el rendimiento.  
   
-|Problema|Impacto de OLTP en memoria|  
+|Incidencia|Impacto de OLTP en memoria|  
 |-----------|----------------------------|  
-|Rendimiento<br /><br /> Uso elevado de los recursos (CPU, E/S, red o memoria).|CPU<br /> Los procedimientos almacenados compilados de forma nativa pueden reducir el uso de la CPU de forma significativa porque requieren muchas menos instrucciones para ejecutar una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] si se compara con los procedimientos almacenados interpretados.<br /><br /> OLTP en memoria puede ayudar a reducir la inversión en hardware en las cargas de trabajo con escalado horizontal, ya que un servidor podría ofrecer el rendimiento de entre cinco y diez servidores.<br /><br /> E/S<br /> Si encuentra un cuello de botella de E/S desde el procesamiento hasta las páginas de datos o de índices, OLTP en memoria puede reducir el cuello de botella. Además, la comprobación de los objetos de OLTP en memoria es continua y no produce incrementos súbitos de las operaciones de E/S. Sin embargo, si el espacio de trabajo de las tablas de rendimiento crítico no cabe en la memoria, OLTP en memoria no mejorará el rendimiento porque requiere que los datos residan en la memoria. Si encuentra un cuello de botella de E/S en el registro, OLTP en memoria puede reducirlo porque realiza menos tareas de registro. Si una o más tablas optimizadas para memoria se configuran como tablas no durables, puede eliminar el registro de los datos.<br /><br /> Memoria<br /> OLTP en memoria no proporciona ninguna ventaja de rendimiento. OLTP en memoria puede suponer una presión adicional sobre la memoria, ya que los objetos deben residir en la memoria.<br /><br /> red<br /> OLTP en memoria no proporciona ninguna ventaja de rendimiento. Los datos tienen que comunicarse desde la capa de datos en el nivel de aplicación.|  
+|Rendimiento<br /><br /> Uso elevado de los recursos (CPU, E/S, red o memoria).|CPU<br /> Los procedimientos almacenados compilados de forma nativa pueden reducir el uso de la CPU de forma significativa porque requieren muchas menos instrucciones para ejecutar una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] si se compara con los procedimientos almacenados interpretados.<br /><br /> OLTP en memoria puede ayudar a reducir la inversión en hardware en las cargas de trabajo con escalado horizontal, ya que un servidor podría ofrecer el rendimiento de entre cinco y diez servidores.<br /><br /> E/S<br /> Si encuentra un cuello de botella de E/S desde el procesamiento hasta las páginas de datos o de índices, OLTP en memoria puede reducir el cuello de botella. Además, la comprobación de los objetos de OLTP en memoria es continua y no produce incrementos súbitos de las operaciones de E/S. Sin embargo, si el espacio de trabajo de las tablas de rendimiento crítico no cabe en la memoria, OLTP en memoria no mejorará el rendimiento porque requiere que los datos residan en la memoria. Si encuentra un cuello de botella de E/S en el registro, OLTP en memoria puede reducirlo porque realiza menos tareas de registro. Si una o más tablas optimizadas para memoria se configuran como tablas no durables, puede eliminar el registro de los datos.<br /><br /> Memoria<br /> OLTP en memoria no proporciona ninguna ventaja de rendimiento. OLTP en memoria puede suponer una presión adicional sobre la memoria, ya que los objetos deben residir en la memoria.<br /><br /> Red<br /> OLTP en memoria no proporciona ninguna ventaja de rendimiento. Los datos tienen que comunicarse desde la capa de datos en el nivel de aplicación.|  
 |Escalabilidad<br /><br /> La mayoría de los problemas de escala de las aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son causados por problemas de simultaneidad como la contención de bloqueos, bloqueos temporales y bloqueos por subproceso.|Contención de bloqueos temporales<br /> Un escenario típico es la contención en la última página de un índice al insertar filas simultáneamente en el orden de clave. Dado que OLTP en memoria no adopta bloqueos temporales para tener acceso a los datos, los problemas de escalabilidad relacionados con las contenciones de bloqueos temporales desaparecen por completo.<br /><br /> Contención de bloqueo por subproceso<br /> Dado que OLTP en memoria no adopta bloqueos temporales para tener acceso a los datos, los problemas de escalabilidad relacionados con las contenciones de bloqueos por subproceso desaparecen por completo.<br /><br /> Contención relacionada con el bloqueo<br /> Si la aplicación de base de datos encuentra problemas de bloqueo entre las operaciones de lectura y escritura, OLTP en memoria evita dichos problemas porque usa un nuevo formato de control de simultaneidad optimista para implementar todos los niveles de aislamiento de las transacciones. OLTP en memoria no usa TempDB para almacenar las versiones de fila.<br /><br /> Si el problema de escala se debe al conflicto entre dos operaciones de escritura, como dos transacciones simultáneas que intenten actualizar la misma fila, OLTP en memoria permite que una transacción sea correcta y que la otra dé error. La transacción errónea debe volver a enviarse ya sea de forma explícita o implícita, volviendo a intentar la transacción. En cualquier caso, debe realizar cambios en la aplicación.<br /><br /> Si la aplicación experimenta conflictos frecuentes entre dos operaciones de escritura, el valor de bloqueo optimista se reduce. La aplicación no es adecuada para OLTP en memoria. La mayoría de las aplicaciones OLTP no tienen conflictos de escritura a menos que el conflicto sea inducido por la extensión de bloqueo.|  
   
-##  <a name="rls"></a> Seguridad de nivel de fila en tablas con optimización para memoria  
+##  <a name="row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> Seguridad de nivel de fila en tablas con optimización para memoria  
 
 La[seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) es compatible con las tablas optimizadas para memoria. La aplicación de directivas de seguridad de nivel de fila a las tablas optimizadas para memoria es esencialmente igual que para las tablas basadas en disco, con la excepción de que las funciones con valores de tabla en línea que se usan como predicados seguros deben compilarse de manera nativa (se deben crear con la opción WITH NATIVE_COMPILATION). Para obtener más información, vea la sección [Compatibilidad entre características](../../relational-databases/security/row-level-security.md#Limitations) del tema [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) .  
   

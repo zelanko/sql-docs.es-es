@@ -1,5 +1,5 @@
 ---
-title: Definir los datos de un origen de vista (Analysis Services) | Microsoft Docs
+title: Definir una vista del origen de datos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546947"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
-  Una vista del origen de datos contiene el modelo lógico del esquema utilizado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos multidimensional objetos a saber, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
+  Una vista del origen de datos contiene el modelo lógico del esquema utilizado por los [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos de base de datos multidimensionales, es decir, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
   
 -   Contiene los metadatos que representan objetos seleccionados de uno o varios orígenes de datos subyacentes, o los metadatos que se usarán para generar un almacén de datos relacional subyacente si emplea el enfoque de arriba abajo para la generación de esquemas.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66075400"
   
  Una DSV es un componente necesario de un modelo multidimensional. La mayoría de los desarrolladores de Analysis Services crean una DSV durante las fases iniciales de diseño de los modelos, y generan al menos una DSV basada en una base de datos relacional externa que proporciona los datos subyacentes. Sin embargo, también puede crear la DSV en una fase posterior, generando las estructuras de esquema y de base de datos subyacente una vez creadas las dimensiones y los cubos. En ocasiones, este segundo método se denomina diseño de arriba abajo y se usa a menudo para crear prototipos y modelos de análisis. Cuando se emplea este método, se usa el Asistente para generar esquemas con el fin de crear la vista del origen de datos y los objetos de origen de datos subyacentes basados en los objetos OLAP definidos en un proyecto o base de datos de Analysis Services. Independientemente de cómo y cuándo se cree una DSV, cada modelo debe tener una para que se pueda procesar.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
  [Composición de la vista del origen de datos](#bkmk_dsvdef)  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66075400"
   
  [Agregar un origen de datos secundario](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a> Composición de la vista del origen de datos  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>Composición de la vista del origen de datos  
  Una vista del origen de datos se compone de los siguientes elementos:  
   
 -   Un nombre y una descripción.  
@@ -78,7 +77,7 @@ ms.locfileid: "66075400"
   
     -   Relaciones entre claves principales lógicas y claves externas entre tablas, vistas y consultas con nombre.  
   
-##  <a name="bkmk_startWiz"></a> Crear una DSV mediante el Asistente para vistas del origen de datos  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>Crear una DSV mediante el Asistente para vistas del origen de datos  
  Para crear una DSV, ejecute el Asistente para vistas del origen de datos desde el Explorador de soluciones en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 > [!NOTE]  
@@ -100,18 +99,18 @@ ms.locfileid: "66075400"
   
 4.  **Filtrar objetos disponibles**  
   
-     Si la lista de objetos disponibles contiene un gran número de objetos, puede reducir su tamaño aplicando un filtro sencillo que especifique una cadena como criterio de selección. Por ejemplo, si escribe **dbo** y hace clic en el botón **Filtro** , en la lista **Objetos disponibles** solo se mostrarán los elementos que empiecen por "dbo". El filtro puede ser una cadena parcial (por ejemplo, "sal" devuelve saldo y salario) pero no puede incluir varias cadenas ni operadores.  
+     Si la lista de objetos disponibles contiene un gran número de objetos, puede reducir su tamaño aplicando un filtro sencillo que especifique una cadena como criterio de selección. Por ejemplo, si escribe **dbo** y hace clic en el botón **Filtro** , en la lista **Objetos disponibles** solo se mostrarán los elementos que empiecen por "dbo". El filtro puede ser una cadena parcial (por ejemplo, "sal" devuelve sales y salario) pero no puede incluir varias cadenas u operadores.  
   
 5.  Para los orígenes de datos relacionales que no tienen definidas relaciones entre tablas, aparece una página **Coincidencia de nombres** para que seleccione el método de coincidencia de nombres adecuado. Para obtener más información, vea la sección [Especificar criterios de coincidencia de nombres para las relaciones](#bkmk_NameMatch) en este tema.  
   
-##  <a name="bkmk_secondaryDS"></a> Agregar un origen de datos secundario  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>Agregar un origen de datos secundario  
  Al definir una vista del origen de datos con tablas, vistas o columnas de varios orígenes de datos, el primer origen de datos desde el que agrega objetos a la vista del origen de datos se designa como origen de datos principal (una vez que se ha definido, no se puede cambiar). Después de definir una vista del origen de datos basada en objetos de un solo origen de datos, puede agregar objetos de otros orígenes de datos.  
   
  Si una consulta de procesamiento OLAP o de minería de datos requiere datos de varios orígenes de datos en una sola consulta, el origen de datos principal debe admitir consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, si designa una dimensión OLAP que contenga atributos enlazados a columnas de varios orígenes de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará una consulta `OpenRowset` para llenar esta dimensión durante el procesamiento. Sin embargo, si un objeto OLAP se puede llenar o una consulta de minería de datos se puede resolver desde un solo origen de datos, no se creará una consulta `OpenRowset`. En ciertas situaciones, podría definir relaciones de atributo entre atributos para que no sea necesaria una consulta `OpenRowset`. Para más información sobre las relaciones de atributos, vea [Relaciones de atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) y [Definir relaciones de atributo](attribute-relationships-define.md).  
   
  Para agregar tablas y columnas de un segundo origen de datos, haga doble clic en la DSV en el Explorador de soluciones para abrirla en el Diseñador de vistas del origen de datos y, a continuación, use el cuadro de diálogo Agregar o quitar tablas para incluir objetos de otros orígenes de datos que estén definidos en el proyecto. Para más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_NameMatch"></a> Especificar criterios de coincidencia de nombres para las relaciones  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>Especificar criterios de coincidencia de nombres para las relaciones  
  Cuando se crea una DSV, se crean relaciones entre las tablas basadas en las restricciones de clave externa del origen de datos. Estas relaciones son necesarias para que el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genere las consultas adecuadas de minería de datos y de procesamiento OLAP. A veces, sin embargo, el origen de datos tiene varias tablas que no tienen restricciones de clave externa. Si el origen de datos no tiene restricciones de clave externa, el Asistente para vistas del origen de datos le pide que defina el modo en que desea que el asistente trate de hacer coincidir los nombres de columna de las diferentes tablas.  
   
 > [!NOTE]  
@@ -130,14 +129,14 @@ ms.locfileid: "66075400"
 > [!NOTE]  
 >  Cuando complete el Asistente para vistas del origen de datos, puede agregar o quitar relaciones en el panel de esquema del Diseñador de vistas del origen de datos. Para más información, vea [Definir relaciones lógicas en una vista del origen de datos &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Definir claves principales lógicas en una vista del origen de datos &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Definir consultas con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
  [Reemplazar una tabla o una consulta con nombre en una vista del origen de datos &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [Explorar datos en una vista del origen de datos &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
+ [Trabajar con diagramas en el diseñador de vistas del origen de datos &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [Explorar los datos de una vista del origen de datos &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [Eliminar una vista del origen de datos &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [Actualizar el esquema de una vista del origen de datos &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   

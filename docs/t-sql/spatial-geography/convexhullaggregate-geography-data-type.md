@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b973e39b4e402bbe5fb970a57478587ac240daf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67980ca0f7e58a9a3051cfd28d3d120acaabeb47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736175"
 ---
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una forma convexa para un conjunto determinado de objetos de **geography**.
   
@@ -40,13 +40,13 @@ ConvexHullAggregate ( geography_operand )
  *geography_operand*  
  Columna de tabla de tipo **geography** que representa un conjunto de objetos **geography**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 ## <a name="exception"></a>Excepción  
  Produce una excepción `FormatException` cuando hay valores de entrada no válidos. Vea [STIsValid &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md) (STIsValid [tipo de datos geography]).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método devuelve **null** cuando la entrada está vacía o esta tiene unos SRID diferentes. Vea [Identificadores de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
  El método omite las entradas **null**.  

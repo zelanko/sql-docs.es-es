@@ -1,5 +1,6 @@
 ---
 title: Certificados y claves asimétricas de SQL Server | Microsoft Docs
+description: Obtenga información sobre los certificados y las claves asimétricas en SQL Server, incluidos los certificados, las herramientas y las tareas relacionadas que se hayan generado externamente o mediante SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126825"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001024"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  La criptografía de clave pública es un método para mantener la confidencialidad de los mensajes mediante el cual el usuario crea una clave *pública* y una clave *privada*. La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se puede usar para cifrar los datos que solamente la clave privada correspondiente podrá descifrar. Esto puede usarse para cifrar los mensajes al propietario de la clave privada. Del mismo modo, el propietario de una clave privada puede cifrar los datos que solo pueden descifrarse con la clave pública. Este uso constituye la base de los certificados digitales en los que se cifra la información contenida en el certificado por parte del propietario de una clave privada, garantizando así el autor del contenido. Dado que las claves de cifrado y descifrado son diferentes, se conocen como claves *asimétricas*.
   
@@ -65,12 +66,13 @@ ms.locfileid: "68126825"
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Muestra las opciones para firmar objetos.|  
   
 ## <a name="tools"></a>Herramientas  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona herramientas y utilidades para generar certificados y archivos de clave de nombre seguro. Estas herramientas proporcionan una mayor flexibilidad en el proceso de generación de claves que la sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede utilizar estas herramientas para crear claves RSA con longitudes de clave más complejas y, a continuación, importarlas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En la tabla siguiente se explica dónde se encuentran estas herramientas.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona herramientas y utilidades para generar certificados y archivos de clave de nombre seguro. Estas herramientas proporcionan una mayor flexibilidad en el proceso de generación de claves que la sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede utilizar estas herramientas para crear claves RSA con longitudes de clave más complejas y, a continuación, importarlas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En la tabla siguiente se muestra dónde se encuentran estas herramientas.  
   
 |||  
 |-|-|  
-|Herramienta|Finalidad|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|Crea certificados.|  
+|Herramienta|Propósito|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Crea certificados autofirmados.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Crea certificados. En desuso en favor de **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Crea nombres seguros para claves simétricas.|  
   
 ## <a name="related-tasks"></a>Related Tasks  

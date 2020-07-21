@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d125e9dad6d5c6f82ff177abdaced9d784295c11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c69570a365d27728e2cbaaac729b1bd824ba096
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981922"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906401"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>Método getMaxTablesInSelect (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxTablesInSelect()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMaxTablesInSelect se especifica mediante el método getMaxTablesInSelect en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getMaxTablesInSelect especifica este método getMaxTablesInSelect en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 788075ce45ca09da585fd3675258062ef2e8a054
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057948"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440252"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor de transformación Búsqueda (página Conexión)
   Utilice la página **Conexión** del cuadro de diálogo **Editor de transformación Búsqueda** para seleccionar un administrador de conexiones. Si selecciona un administrador de conexiones OLE DB, también selecciona una consulta, tabla o vista para generar el conjunto de datos de referencia.  
@@ -29,27 +28,27 @@ ms.locfileid: "66057948"
 ## <a name="options"></a>Opciones  
  Las opciones siguientes están disponibles al seleccionar **Caché completa** y **Administrador de conexiones de caché** en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
   
- **Cache connection manager**  
+ **Administrador de conexiones de caché**  
  Seleccione un administrador de conexiones de caché de la lista o cree una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una conexión mediante el cuadro de diálogo **Editor del administrador de conexiones de caché** .  
   
  Las opciones siguientes están disponibles al seleccionar **Caché completa**, **Caché parcial**o **Sin caché**, y **Administrador de conexiones OLE DB**en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
   
- **Administrador de conexiones OLE DB**  
+ **Administrador de conexiones de OLE DB**  
  Seleccione un administrador de conexiones OLE DB de la lista o cree una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Usar una tabla o una vista**  
- Seleccione una tabla o vista de la lista o cree una tabla haciendo clic en **Nueva**.  
+ Seleccione una tabla o vista existente de la lista o cree una nueva tabla haciendo clic en **nueva**.  
   
 > [!NOTE]  
 >  Si especifica una instrucción SQL en la página **Avanzadas** del **Editor de transformación Búsqueda**, esa instrucción SQL invalida y reemplaza el nombre de tabla seleccionado aquí. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
  **Usar los resultados de una consulta SQL**  
@@ -64,17 +63,17 @@ ms.locfileid: "66057948"
  **Analizar consulta**  
  Compruebe la sintaxis de la consulta.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . Esta opción muestra hasta 200 filas.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Entrada del blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
   
-## <a name="see-also"></a>Vea también  
- [Editor de transformación Búsqueda &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de transformación Búsqueda &#40;página Columnas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
- [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Transformación Búsqueda aproximada](data-flow/transformations/fuzzy-lookup-transformation.md)  
+## <a name="see-also"></a>Consulte también  
+ [Editor de transformación búsqueda &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de transformación búsqueda &#40;página columnas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Editor de transformación búsqueda &#40;página avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformación búsqueda &#40;página salida de error&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Búsqueda aproximada, transformación](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

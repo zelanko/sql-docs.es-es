@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1b941f251c9093f10abbced8c3522f1719a1580e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 2a636eceb321d254e76cbb5d84311a983775a8c9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895151"
 ---
 # <a name="iservervirtualdeviceset2requestbuffers-vdi"></a>IServerVirtualDeviceSet2::RequestBuffers (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **RequestBuffers** informa a VDI de que el servidor necesitará un número determinado de búferes con un requisito de tamaño y alineación determinado.
 
@@ -49,7 +49,7 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 | VD_E_PROTOCOL | El conjunto no se encuentra en un estado en el que se puedan declarar las asignaciones de búfer (vea la matriz de transición de estado). |
 | VD_E_MEMORY | No se ha podido obtener la memoria solicitada. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Este método se debe usar antes de que los búferes se asignen con AllocateBuffer. Los conjuntos de búferes con un tamaño y una alineación determinados se solicitan con RequestBuffers y, después, los búferes individuales se asignan con AllocateBuffer.
 

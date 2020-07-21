@@ -1,6 +1,8 @@
 ---
-title: '[ ] (caracteres comodín para coincidencia) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: Carácter comodín [] para hacer coincidir caracteres
+description: Use un carácter comodín para hacer coincidir uno o varios caracteres.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,18 +23,19 @@ ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838777ff87f9d6d7f2584642fcaa82b08a3266b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82876d2f0e749163ced821bdc24797a6f71b6e7e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000324"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "76831586"
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (caracteres comodín para coincidencia) (Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (caracteres comodín para coincidir) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Halla coincidencias con cada uno de los caracteres del intervalo o conjunto especificado entre corchetes `[ ]`. Estos caracteres comodín se pueden usar en comparaciones de cadenas donde se buscan coincidencias de patrón, como sucede con `LIKE` y `PATINDEX`.  
-  
+
+ 
 ## <a name="examples"></a>Ejemplos  
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo   
 En el siguiente ejemplo se devuelven los nombres que comienzan por la letra `m`. `[n-z]` especifica que la segunda letra debe estar en alguna parte del intervalo entre `n` y `z`. El carácter comodín de porcentaje `%` permite cualquier carácter que comience por el tercer carácter. Las bases de datos `model` y `msdb` cumplen este criterio, pero no la base de datos `master`, de modo que se excluye del conjunto de resultados.
@@ -66,7 +69,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- A continuación se muestra el conjunto de resultados.  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  
@@ -74,8 +77,26 @@ EmployeeID      FirstName      LastName      PostalCode
 290             Lynn           Tsoflias      3000  
 ```  
 
+### <a name="c-using-a-set-that-combines-ranges-and-single-characters"></a>C. Uso de un conjunto que combine intervalos y caracteres únicos
 
+Un conjunto de caracteres comodín puede incluír caracteres únicos e intervalos. El siguiente ejemplo usa el operador [] para buscar una cadena que empieza por un número o una serie de caracteres especiales.
 
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[0-9!@#$.,;_]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name                         name  column_id
+---------     -----------                         ----  ---------
+615673241     vSalesPersonSalesByFiscalYears      2002  5
+615673241     vSalesPersonSalesByFiscalYears      2003  6
+615673241     vSalesPersonSalesByFiscalYears      2004  7
+1591676718    JunkTable                           _xyz  1
+```
   
 ## <a name="see-also"></a>Consulte también  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

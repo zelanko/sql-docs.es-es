@@ -13,10 +13,10 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294120"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
@@ -49,7 +49,7 @@ ms.locfileid: "71294120"
   
  Al incorporar la tarea de generación de perfiles de datos al flujo de trabajo de un paquete, tenga en cuenta estas dos características de dicha tarea:  
   
--   **Resultado de la tarea**. La tarea de generación de perfiles de datos escribe su resultado en un archivo o en una variable de paquete en el formato XML, de acuerdo con el esquema DataProfile.xsd. Por lo tanto, si desea usar los resultados del perfil en el flujo de trabajo condicional del paquete, debe realizar una consulta en los resultados XML. Para ello, puede usar el lenguaje para consultas Xpath. Para estudiar la estructura de estos resultados XML, puede abrir un archivo de resultados de ejemplo o el propio esquema. Para abrir el archivo de resultados o el esquema, puede usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], otro editor XML o un editor de texto, como el Bloc de notas.  
+-   **Resultado de la tarea**. La tarea de generación de perfiles de datos escribe su resultado en un archivo o en una variable de paquete en el formato XML, de acuerdo con el esquema DataProfile.xsd. Por lo tanto, si desea usar los resultados del perfil en el flujo de trabajo condicional del paquete, debe realizar una consulta en los resultados XML. Para ello, puede usar el lenguaje para consultas Xpath. Para estudiar la estructura de estos resultados XML, puede abrir un archivo de resultados de ejemplo o el propio esquema. Para abrir el archivo de salida o el esquema, puede usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], otro editor XML o un editor de texto, como el Bloc de notas.  
   
     > [!NOTE]  
     >  Algunos de los resultados del perfil que se muestran en el Visor de perfil de datos son valores calculados que no se encuentran directamente en la salida. Por ejemplo, la salida del perfil de proporción de columnas nulas contiene el número total de filas y el número de filas que contienen valores NULL. Para obtener la proporción de columnas nulas, debe usar estos dos valores con objeto de calcular el porcentaje de filas que contienen valores NULL.  

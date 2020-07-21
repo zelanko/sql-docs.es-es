@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de9035c84862bcde78c3a6f42133d8cbd52ae9b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048860"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764968"
 ---
 # <a name="event-notifications"></a>Notificaciones de eventos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las notificaciones de eventos envían información acerca de los eventos a un servicio [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las notificaciones de eventos se ejecutan como respuesta a una variedad de instrucciones del lenguaje de definición de datos (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] y eventos de Seguimiento de SQL enviando información acerca de esos eventos a un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Las notificaciones de eventos se pueden usar para realizar lo siguiente:  
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |El mismo propietario posee los desencadenadores DML y las tablas en que se aplican.|El propietario de una notificación de eventos en una cola puede tener un propietario diferente que el objeto en el que se aplica.|  
 |Los desencadenadores admiten la cláusula EXECUTE AS.|Las notificaciones de eventos no admiten la cláusula EXECUTE AS.|  
 |Se puede capturar la información de eventos del desencadenador DDL mediante la función EVENTDATA, que devuelve un tipo de datos **xml** .|Las notificaciones de eventos envían información de eventos **xml** a un servicio de Service Broker. El formato de la información usa el mismo esquema que la función EVENTDATA.|  
-|Los metadatos sobre los desencadenadores se encuentran en las vistas de catálogo **sys.triggers** y **sys.server_triggers** .|Los metadatos sobre las notificaciones de eventos se encuentran en las vistas de catálogo **sys.event_notifications** y **sys.server_event_notifications**.|  
+|Los metadatos sobre los desencadenadores se encuentran en las vistas de catálogo **sys.triggers** y **sys.server_triggers** .|Los metadatos sobre las notificaciones de eventos se encuentran en las vistas de catálogo **sys.event_notifications** y **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificaciones de eventos y Seguimiento de SQL  
  En la siguiente tabla se compara y contrasta el uso de notificaciones de eventos y de la Seguimiento de SQL para supervisar eventos de servidor.  

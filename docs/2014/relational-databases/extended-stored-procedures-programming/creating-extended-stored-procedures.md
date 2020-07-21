@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcdfcc3ca1999e01b29e7b0c7abdd77f710aae9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62512639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050874"
 ---
 # <a name="creating-extended-stored-procedures"></a>Crear procedimientos almacenados extendidos
     
@@ -29,7 +28,7 @@ ms.locfileid: "62512639"
   
  Un procedimiento almacenado extendido es una función con un prototipo:  
   
- SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
+ *Xp_extendedProcName* SRVRETCODE **(** SRVPROC ** \* );**  
   
  El uso del prefijo xp_ es opcional. Los nombres de procedimiento almacenado extendido distinguen mayúsculas de minúsculas cuando se hace referencia a ellos en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], independientemente de la página de códigos o criterio de ordenación que se haya instalado en el servidor. Cuando genere un archivo DLL:  
   
@@ -39,7 +38,7 @@ ms.locfileid: "62512639"
   
 -   Deben exportarse todas las funciones a las que se llama desde el exterior del archivo DLL (todas las funciones Efunction de procedimiento almacenado extendido).  
   
-     Puede exportar una función indicando su nombre en la sección EXPORTS de un archivo .def o se puede anteponer al nombre de función en el código fuente con __declspec (dllexport), una extensión de compilador de Microsoft (tenga en cuenta que \__declspec() comienza con dos caracteres de subrayado).  
+     Puede exportar una función enumerando su nombre en la sección Exports de un archivo. def o puede anteponer el nombre de función en el código fuente con __declspec (dllexport), una extensión de compilador de Microsoft (tenga en cuenta que \_ _declspec () comienza con dos guiones bajos).  
   
  Estos archivos son necesarios para crear un archivo DLL de procedimientos almacenados extendidos.  
   
@@ -62,18 +61,18 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) es una extensión de compilador específica de Microsoft. Si el compilador no admite esta directiva, debe exportar esta función en el archivo DEF, bajo la sección EXPORTS.  
   
- Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia con el seguimiento de la marca - T260 o si un usuario con privilegios de administrador del sistema ejecuta DBCC TRACEON (260) y almacena extendido DLL de procedimiento no admite __GetXpVersion (), un mensaje de advertencia (Error 8131: Procedimiento almacenado extendido '%' DLL no exporta \__GetXpVersion().) se imprime en el registro de errores. (Tenga en cuenta que \__GetXpVersion() comienza con dos caracteres de subrayado.)  
+ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia con la marca de seguimiento-T260 o si un usuario con privilegios de administrador del sistema ejecuta DBCC TRACEON (260), y si la dll de procedimiento almacenado extendido no admite __GetXpVersion (), un mensaje de advertencia (Error 8131: el archivo dll de procedimientos almacenados extendidos '% ' no exporta \_ _GetXpVersion ().) se imprime en el registro de errores. (Tenga en cuenta que \_ _GetXpVersion () comienza con dos guiones bajos).  
   
- Si el archivo DLL de procedimientos almacenados extendidos exporta __GetXpVersion() pero la versión devuelta por la función es menor que la que requiere el servidor, en el registro de errores se imprime un mensaje de advertencia que indica la versión devuelta por la función y la versión esperada por el servidor. Si recibe este mensaje, se devuelve un valor incorrecto de \__GetXpVersion(), o bien se compila con una versión anterior de srv.h.  
+ Si el archivo DLL de procedimientos almacenados extendidos exporta __GetXpVersion() pero la versión devuelta por la función es menor que la que requiere el servidor, en el registro de errores se imprime un mensaje de advertencia que indica la versión devuelta por la función y la versión esperada por el servidor. Si recibe este mensaje, devuelve un valor incorrecto de \_ _GetXpVersion () o está compilando con una versión anterior de SRV. h.  
   
 > [!NOTE]  
 >  No debe llamarse a SetErrorMode, una función Win32 de [!INCLUDE[msCoName](../../includes/msconame-md.md)], en procedimientos almacenados extendidos.  
   
  Se recomienda que un procedimiento almacenado extendido de ejecución prolongada llame periódicamente a srv_got_attention para que el procedimiento pueda finalizarse si se elimina la conexión o se anula el lote.  
   
- Para depurar un archivo DLL de procedimientos almacenados extendidos, cópielo en el directorio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Para especificar el archivo ejecutable para la sesión de depuración, escriba la ruta de acceso y el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo ejecutable (por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Para obtener información acerca de los argumentos de sqlservr, vea [sqlservr (aplicación)](../../tools/sqlservr-application.md).  
+ Para depurar un archivo DLL de procedimientos almacenados extendidos, cópielo en el directorio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Para especificar el archivo ejecutable para la sesión de depuración, escriba la ruta de acceso y el nombre del archivo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutable (por ejemplo, C:\Archivos de programa\microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Para obtener información acerca de los argumentos de sqlservr, vea [sqlservr Application](../../tools/sqlservr-application.md).  
   
-## <a name="see-also"></a>Vea también  
- [srv_got_attention &#40;API procedimiento almacenado extendido&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Consulte también  
+ [srv_got_attention API de procedimiento almacenado extendido &#40;&#41;](../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

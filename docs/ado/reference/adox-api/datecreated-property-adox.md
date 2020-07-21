@@ -15,23 +15,23 @@ f1_keywords:
 helpviewer_keywords:
 - DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 566e815350bd59effc4802495bda4846e9a77691
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966574"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759221"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated (propiedad, ADOX)
-Indica la fecha en que se creó el objeto.  
+Indica la fecha de creación del objeto.  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **Variant** valor que especifica la fecha de creación. El valor es null si **DateCreated** no es compatible con el proveedor.  
+ Devuelve un valor **Variant** que especifica la fecha de creación. El valor es NULL si el proveedor no admite **DateCreated** .  
   
-## <a name="remarks"></a>Comentarios  
- El **DateCreated** propiedad es null para los objetos recién anexados. Después de anexar una nueva [vista](../../../ado/reference/adox-api/view-object-adox.md) o [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md), debe llamar a la [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método de la [vistas](../../../ado/reference/adox-api/views-collection-adox.md) o [procedimientos ](../../../ado/reference/adox-api/procedures-collection-adox.md) colección para obtener valores para la **DateCreated** propiedad.  
+## <a name="remarks"></a>Observaciones  
+ La propiedad **DateCreated** es null para los objetos recién anexados. Después de anexar una nueva [vista](../../../ado/reference/adox-api/view-object-adox.md) o [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md), debe llamar al método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) de la colección [views](../../../ado/reference/adox-api/views-collection-adox.md) o [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) para obtener los valores de la propiedad **DateCreated** .  
   
 ## <a name="applies-to"></a>Se aplica a  
   
@@ -39,6 +39,6 @@ Indica la fecha en que se creó el objeto.
 |-|-|-|  
 |[Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo DateCreated y DateModified propiedades (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de propiedades DateCreated y DateModified (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateModified (propiedad, ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)

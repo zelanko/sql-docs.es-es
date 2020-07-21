@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2986749f21982e5eee75772e794a9461545b967
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890837"
 ---
-# <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_start_sp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inicia el Correo electrónico de base de datos iniciando los objetos de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que usa el programa externo.  
   
@@ -47,21 +47,21 @@ sysmail_start_sp
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La característica Correo electrónico de base de datos no se habilita o ni se instala con la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilice el Asistente para configuración de Correo electrónico de base de datos con el fin de habilitar e instalar los objetos de Correo electrónico de base de datos.  
   
- Este procedimiento almacenado se encuentra en la **msdb** base de datos. Este procedimiento almacenado inicia la cola de Correo electrónico de base de datos que contiene las solicitudes de mensajes salientes y habilita la activación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para el programa externo.  
+ Este procedimiento almacenado está en la base de datos **msdb** . Este procedimiento almacenado inicia la cola de Correo electrónico de base de datos que contiene las solicitudes de mensajes salientes y habilita la activación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para el programa externo.  
   
- Cuando las colas se inician, el programa externo de Correo electrónico de base de datos puede procesar mensajes. Este procedimiento permite reiniciar las colas después de las colas se han detenido con la **sysmail_stop_sp** procedimiento almacenado.  
+ Cuando las colas se inician, el programa externo de Correo electrónico de base de datos puede procesar mensajes. Este procedimiento permite reiniciar las colas una vez detenidas las colas con el **sysmail_stop_sp** procedimiento almacenado.  
   
 > [!NOTE]  
 >  Este procedimiento almacenado solamente inicia las colas del Correo electrónico de base de datos. No activa la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] en la base de datos.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente muestra a partir de correo electrónico de base de datos la **msdb** base de datos. En este ejemplo se da por supuesto que el Correo electrónico de base de datos está habilitado.  
+ En el ejemplo siguiente se muestra el inicio de Correo electrónico de base de datos en la base de datos **msdb** . En este ejemplo se da por supuesto que el Correo electrónico de base de datos está habilitado.  
   
 ```  
 USE msdb ;  
@@ -71,10 +71,10 @@ EXECUTE dbo.sysmail_start_sp ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Opción de configuración del servidor de base de datos Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
- [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos opción de configuración del servidor XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)   
+ [sysmail_stop_sp &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)   
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cubo de la Ayuda F1 del Asistente para | Microsoft Docs
+title: Asistente para cubos (ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,43 +11,42 @@ helpviewer_keywords:
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 333a812963bf58ada0450243d3fced6891f08915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2495d6159a2fd76e0278ea101eb35d770b9162e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086560"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526141"
 ---
 # <a name="cube-wizard-f1-help"></a>Asistente para cubos (Ayuda F1)
-  Utilice el Asistente para cubos para crear un cubo para un proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+  Use el Asistente para cubos para crear un cubo para un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto de en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
- **Para abrir al Asistente para cubos**  
+ **Abrir el Asistente para cubos**  
   
  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Cubos** de un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, después, haga clic en **Nuevo cubo**. Después de crear un cubo utilizando el Asistente para cubos, puede utilizar el Diseñador de cubos para modificar sus propiedades en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Seleccionar método de creación &#40;Asistente del cubo&#41;](select-creation-method-cube-wizard.md)  
+-   [Seleccionar método de creación &#40;Asistente para cubos&#41;](select-creation-method-cube-wizard.md)  
   
--   [Seleccione una vista del origen de datos &#40;Asistente del cubo&#41;](select-a-data-source-view-cube-wizard.md)  
+-   [Seleccionar una vista del origen de datos &#40;Asistente para cubos&#41;](select-a-data-source-view-cube-wizard.md)  
   
--   [Seleccione el grupo de medida tablas &#40;Asistente del cubo&#41;](select-measure-group-tables-cube-wizard.md)  
+-   [Seleccionar tablas de grupos de medida &#40;Asistente para cubos&#41;](select-measure-group-tables-cube-wizard.md)  
   
--   [Seleccionar medidas &#40;Asistente del cubo&#41;](select-measures-cube-wizard.md)  
+-   [Seleccione medidas &#40;Asistente para cubos&#41;](select-measures-cube-wizard.md)  
   
--   [Definir nuevas medidas &#40;Asistente del cubo&#41;](define-new-measures-cube-wizard.md)  
+-   [Definir nuevas medidas &#40;Asistente para cubos&#41;](define-new-measures-cube-wizard.md)  
   
--   [Seleccionar dimensiones existentes &#40;Asistente del cubo&#41;](select-existing-dimensions-cube-wizard.md)  
+-   [Seleccionar dimensiones existentes &#40;Asistente para cubos&#41;](select-existing-dimensions-cube-wizard.md)  
   
--   [Seleccionar nuevas dimensiones &#40;Asistente del cubo&#41;](select-new-dimensions-cube-wizard.md)  
+-   [Seleccionar nuevas dimensiones &#40;Asistente para cubos&#41;](select-new-dimensions-cube-wizard.md)  
   
--   [Seleccionar claves de dimensiones ausentes &#40;Asistente del cubo&#41;](select-missing-dimension-keys-cube-wizard.md)  
+-   [Seleccione las claves de dimensión que faltan &#40;Asistente para cubos&#41;](select-missing-dimension-keys-cube-wizard.md)  
   
--   [Finalización del asistente &#40;Asistente del cubo&#41;](completing-the-wizard-cube-wizard.md)  
+-   [Finalización del asistente &#40;Asistente para cubos&#41;](completing-the-wizard-cube-wizard.md)  
   
-## <a name="see-also"></a>Vea también  
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

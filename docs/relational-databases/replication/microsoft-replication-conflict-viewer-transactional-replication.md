@@ -1,6 +1,7 @@
 ---
-title: Visor de conflictos de replicación de Microsoft (Replicación transaccional) | Microsoft Docs
-ms.custom: ''
+title: Visor de conflictos de replicación (punto a punto)
+description: Obtenga información sobre el visor de conflictos de replicación y cómo usarlo para ver los conflictos surgidos en la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola al actualizar las suscripciones.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,15 +14,15 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 35138719e779da2301ab635e29e9adcaacf2fdec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722022"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación transaccional)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="replication-conflict-viewer-transactional-replication"></a>Visor de conflictos de replicación de Microsoft (replicación transaccional)
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   El Visor de conflictos de replicación permite ver los conflictos surgidos durante la sincronización de la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola. Para obtener más información, vea [Ver conflictos de datos para publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
 > [!NOTE]  
@@ -38,7 +39,7 @@ ms.locfileid: "68770581"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Tabla**  
+ **Table**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -53,7 +54,7 @@ ms.locfileid: "68770581"
  **No seleccionar nada**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
- **Quitar**  
+ **Remove**  
  Haga clic en esta opción para quitar los conflictos seleccionados del visor y los metadatos asociados de las tablas del sistema de replicación.  
   
  **Mostrar todas las columnas**  
@@ -63,7 +64,7 @@ ms.locfileid: "68770581"
  Seleccione esta opción para mostrar las cinco primeras columnas y otras columnas con conflictos. Resulta útil si las tablas presentan un número elevado de columnas y solo desea ver las columnas más importantes para solucionar el conflicto. Las cinco primeras columnas se incluyen en esta vista, como campos que identifican una fila, como la clave principal o campos de nombre, que con frecuencia se encuentran entre las cinco primeras columnas de la tabla.  
   
  **Mostrar información de columna** ( **…** )  
- Haga clic para ver la información de columna: **Nombre de la tabla**, **Nombre de columna**, **Tipo de datos** y **Valor de la columna**.  
+ Haga clic para ver la información de la columna: **Nombre de tabla**, **Nombre de columna**, **Tipo de datos**y **Valor de columna**.  
   
  **Registrar los detalles de este conflicto**  
  Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda ( **...** ) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  

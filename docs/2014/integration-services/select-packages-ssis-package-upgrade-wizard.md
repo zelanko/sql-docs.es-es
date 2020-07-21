@@ -1,5 +1,5 @@
 ---
-title: Seleccione los paquetes (Asistente actualización del paquete SSIS) | Microsoft Docs
+title: Seleccionar paquetes (Asistente para actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2db10085a886342511e6f2fd65ec1bcd38323803
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056020"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421922"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Seleccionar paquetes (Asistente para actualización del paquete SSIS)
   Utilice la página **Seleccionar paquetes** para seleccionar los paquetes que se van a actualizar. Esta página enumera los paquetes que se almacenan en la ubicación que se especificó en la página **Seleccionar ubicación de origen** del asistente.  
@@ -42,8 +41,8 @@ ms.locfileid: "66056020"
  **Aplicar a la selección**  
  Aplique la contraseña especificada para descifrar los paquetes de la actualización seleccionados.  
   
-## <a name="see-also"></a>Vea también  
- [Seleccionar ubicación de origen &#40;Asistente para actualización del paquete SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
+## <a name="see-also"></a>Consulte también  
+ [Seleccione la ubicación de origen &#40;Asistente para actualización del paquete SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

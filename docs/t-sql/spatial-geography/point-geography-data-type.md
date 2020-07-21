@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 36b39355ad9d2983945fcc7710d23b5e18e792d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72260161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705814"
 ---
 # <a name="point-geography-data-type"></a>Point (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Construye una instancia de **geography** que representa una instancia de **Point** a partir de sus valores de latitud y longitud y de un identificador de referencia espacial (SRID).
   
@@ -39,21 +39,21 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *Lat*  
- Es una expresión **float** que representa la coordenada X del elemento **Point** que se está generando.  
+ Es una expresión **float** que representa la coordenada Y del elemento **Point** que se está generando.  
   
  *Long*  
- Es una expresión **float** que representa la coordenada Y del elemento **Point** que se está generando. Para más información sobre los valores de latitud y longitud correctos, vea [Punto](../../relational-databases/spatial/point.md).  
+ Es una expresión **float** que representa la coordenada X del elemento **Point** que se está generando. Para más información sobre los valores de latitud y longitud correctos, vea [Punto](../../relational-databases/spatial/point.md).  
   
  *SRID*  
  Es una expresión **int** que representa el [identificador de referencia espacial](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) de la instancia de **geografía** que quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+> [!NOTE]  
+>  Los argumentos para el método de punto (tipo de datos de geografía) tienen coordenadas invertidas en comparación con WKT.  
+  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
-  
-> [!NOTE]  
->  Los argumentos para el método de punto (tipo de datos de geografía) tienen coordenadas invertidas en comparación con WKT.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `Point()` para crear una instancia de `geography`.  
@@ -66,5 +66,3 @@ SELECT @g.ToString();
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos extendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
-  
-  

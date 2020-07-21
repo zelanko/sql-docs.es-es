@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110056"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068047"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Rellenar una tabla jerárquica usando métodos jerárquicos
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tiene 8 empleados que trabajan en el departamento de marketing. La jerarquía de empleados ofrece el siguiente aspecto:  
@@ -64,7 +63,7 @@ ms.locfileid: "66110056"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Para insertar a un empleado subordinado  
   
-1.  **Sariya** notifica a **David**. Para insertar **Sariya** nodo, debe crear un adecuado **OrgNode** valor de tipo de datos `hierarchyid`. El código siguiente crea una variable de tipo de datos de `hierarchyid` y lo rellena con el valor raíz OrgNode de la tabla. Después, usa esa variable con el método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para insertar una fila que es un nodo subordinado. `GetDescendant` toma dos argumentos. Revise las opciones siguientes de los valores de argumento:  
+1.  **Sariya** notifica a **David**. Para insertar el nodo **de Sariya** , debe crear un valor **OrgNode** adecuado del tipo de datos `hierarchyid` . El código siguiente crea una variable de tipo de datos de `hierarchyid` y lo rellena con el valor raíz OrgNode de la tabla. Después, usa esa variable con el método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para insertar una fila que es un nodo subordinado. `GetDescendant` toma dos argumentos. Revise las opciones siguientes de los valores de argumento:  
   
     -   Si el elemento primario es NULL, `GetDescendant` devolverá NULL.  
   

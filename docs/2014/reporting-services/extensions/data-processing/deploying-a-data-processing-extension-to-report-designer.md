@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos: Implementar una extensión de procesamiento de datos en el Diseñador de informes | Microsoft Docs'
+title: Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164329"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procedimientos: Implementar una extensión de procesamiento de datos en el Diseñador de informes
@@ -39,13 +39,13 @@ ms.locfileid: "63164329"
     </Extensions>  
     ```  
   
-4.  Agregue una entrada para la extensión de procesamiento de datos que incluya un **extensión** elemento con los valores para el `Name`, `Type`, y `Visible` atributos. La entrada podría tener la apariencia siguiente:  
+4.  Agregue una entrada para la extensión de procesamiento de datos que incluya un elemento **Extension** con valores `Name`para `Type`los atributos `Visible` , y. La entrada podría tener la apariencia siguiente:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     El valor de `Name` es el nombre único de la extensión de procesamiento de datos. El valor de `Type` es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la clase que implementa las interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> y <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de procesamiento de datos están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo, el Diseñador de informes, agregue un `Visible` atributo a la **extensión** elemento y establézcalo en `false`.  
+     El valor de `Name` es el nombre único de la extensión de procesamiento de datos. El valor de `Type` es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la clase que implementa las interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> y <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de procesamiento de datos están visibles. Para ocultar una extensión de las interfaces de usuario, como Diseñador de informes, agregue `Visible` un atributo al elemento **Extension** y establézcalo en `false`.  
   
 5.  Finalmente, agregue un grupo de código para el ensamblado personalizado que conceda el permiso **FullTrust** para la extensión. Para ello, se agrega el grupo de código al archivo rspreviewpolicy.config, que se encuentra de forma predeterminada en la carpeta C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies. El grupo de código podría tener la apariencia siguiente:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63164329"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>Para habilitar el diseñador de consultas genérico para una extensión personalizada  
   
--   Agregue la siguiente entrada al archivo RSReportDesigner.config bajo el **diseñador** elemento, reemplazando el `Name` atributo con el nombre que proporcionó en las entradas anteriores.  
+-   Agregue la siguiente entrada al archivo RSReportDesigner. config bajo el elemento **Designer** , reemplazando el `Name` atributo por el nombre que proporcionó en las entradas anteriores.  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -78,7 +78,7 @@ ms.locfileid: "63164329"
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Para poder comprobar la implementación, debe cerrar todas las instancias de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en el equipo local. Una vez que haya finalizado todas las sesiones actuales, puede comprobar si la extensión de procesamiento de datos se implementó correctamente para el Diseñador de informes creando un proyecto de informe nuevo en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. La extensión se debe incluir en la lista de tipos de orígenes de datos disponibles al crear un conjunto de datos nuevo para el informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de una extensión de procesamiento de datos](deploying-a-data-processing-extension.md)   
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](implementing-a-data-processing-extension.md)   

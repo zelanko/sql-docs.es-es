@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055016"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de columnas
   Las tablas que utilizan columnas dispersas pueden designar un conjunto de columnas que devuelva todas las columnas dispersas de la tabla. Un conjunto de columnas es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. Un conjunto de columnas se asemeja a una columna calculada en que el conjunto no se almacena físicamente en la tabla. Un conjunto de columnas difiere de una columna calculada en que el conjunto de columnas se puede actualizar directamente.  
@@ -106,10 +105,10 @@ GO
   
  En este ejemplo, no se ha especificado ningún valor para la columna `i`, pero se ha insertado el valor `0` .  
   
-## <a name="using-the-sqlvariant-data-type"></a>Usar el tipo de datos sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Usar el tipo de datos sql_variant  
  El tipo de datos `sql_variant` puede almacenar varios tipos de datos distintos, como `int`, `char` y `date`. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor `sql_variant`, como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
   
-|Tipo de datos|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longitud máxima|Precisión|Escala|  
+|Tipo de datos|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longitud máxima|Precision|Escala|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |`char`, `varchar`, `binary`|-1|'Default'|0|0|8000|No aplicable**|No aplicable|  
 |`nvarchar`|-1|'Default'|0|0|4000|No aplicable|No aplicable|  
@@ -123,7 +122,7 @@ GO
   
  \*  Un valor -1 en localeID significa la configuración regional predeterminada. La configuración regional en inglés es 1033.  
   
- ** No aplicable = No se genera ningún valor para estos atributos durante una operación de selección en el conjunto de columnas. Genera un error cuando el autor de la llamada especifica un valor para este atributo en la representación XML proporcionada para un conjunto de columnas durante una operación de inserción o actualización.  
+ No aplicable = No se genera ningún valor para estos atributos durante una operación de selección en el conjunto de columnas. Genera un error cuando el autor de la llamada especifica un valor para este atributo en la representación XML proporcionada para un conjunto de columnas durante una operación de inserción o actualización.  
   
 ## <a name="security"></a>Seguridad  
  El modelo de seguridad para un conjunto de columnas funciona de forma similar al modelo de seguridad existente entre la tabla y columnas. Los conjuntos de columnas se pueden visualizar en forma de minitabla, en la que una operación de selección funciona como una operación SELECT *. Pero la relación entre el conjunto de columnas y las columnas dispersas es una relación de agrupación en lugar de ser estrictamente un contenedor. El modelo de seguridad comprueba la seguridad en la columna del conjunto de columnas y respeta las operaciones DENY en las columnas dispersas subyacentes. Las características adicionales del modelo de seguridad son las siguientes:  
@@ -160,7 +159,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>b. Insertar datos en una tabla usando los nombres de las columnas dispersas  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Insertar datos en una tabla usando los nombres de las columnas dispersas  
  En los ejemplos siguientes se insertan dos filas en la tabla creada en el ejemplo A. Estos ejemplos utilizan los nombres de las columnas dispersas y no hacen referencia al conjunto de columnas.  
   
 ```  
@@ -255,7 +254,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar columnas dispersas](use-sparse-columns.md)  
   
   

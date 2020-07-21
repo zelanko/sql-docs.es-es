@@ -18,15 +18,15 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 32014323cf9921cdbff9db6235e6625b4dc431ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725874"
 ---
 # <a name="spatial-data-sql-server"></a>Datos espaciales (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Los datos espaciales representan información sobre la ubicación física y la forma de objetos geométricos. Estos objetos pueden ser ubicaciones de punto u objetos más complejos como países, carreteras o lagos.  
   
@@ -38,24 +38,24 @@ ms.locfileid: "72278142"
   
  Ambos tipos de datos se implementan como tipos de datos .NET Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="reltasks"></a> Tareas relacionadas  
- [Crear, construir y consultar instancias de Geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tareas relacionadas  
+ [Creación, construcción y consulta de instancias de Geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  Describe métodos que puede usar con instancias del tipo de datos geometry.  
   
- [Crear, construir y consultar instancias de Geography](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
+ [Creación, construcción y consulta de instancias de Geography](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  Describe métodos que puede usar con instancias del tipo de datos geography.  
   
- [Consultar datos espaciales para el vecino más próximo](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
+ [Consulta de datos espaciales para el vecino más próximo](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  Describe el modelo de consulta común que se usa para buscar los objetos espaciales más cercanos a un objeto espacial concreto.  
   
- [Crear, modificar y quitar índices espaciales](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
+ [Creación, modificación y eliminación de índices espaciales](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  Proporciona información acerca de cómo crear, modificar y quitar un índice espacial.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)  
  Presenta los tipos de datos espaciales.  
   
--   [Punto](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72278142"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [Polígono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "72278142"
   
 -   [MultiPolígono](../../relational-databases/spatial/multipolygon.md)  
   
--   [Colección Geometry](../../relational-databases/spatial/geometrycollection.md)  
+-   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
   
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
  Presenta los índices espaciales, y describe la teselación y los esquemas de teselación.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1feffb9116294c6dc77af5bae2552362fd8e532b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0a53e3eca76e5798b891943aff775844618dbf8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107838"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748673"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve la dimensión máxima de una instancia de **geometry**.
   
@@ -36,12 +36,12 @@ Devuelve la dimensión máxima de una instancia de **geometry**.
 .STDimension ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STDimension()` devuelve -1 si la instancia de **geometry** está vacía.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -58,7 +58,7 @@ FROM @temp;
   
  A continuación, el ejemplo devuelve las dimensiones de cada instancia de `geometry`.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
 |Punto|0|  
 |LineString|1|  

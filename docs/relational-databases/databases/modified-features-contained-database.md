@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726403"
 ---
 # <a name="modified-features-contained-database"></a>Características modificadas (base de datos contenida)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las siguientes características se han modificado de forma que las bases de datos parcialmente independientes las admitan. Normalmente, las características se modifican de modo que no crucen el límite de la base de datos.  
   
  Para más información, consulte [Contained Databases](../../relational-databases/databases/contained-databases.md).  
@@ -46,13 +46,13 @@ ms.locfileid: "68067339"
  Las tablas temporales no pueden hacer referencia a tipos definidos por el usuario, colecciones de esquemas XML ni funciones definidas por el usuario.  
   
 ## <a name="collation"></a>Intercalación  
- En el modelo de base de datos dependiente, hay tres tipos distintos de intercalación: intercalación de base de datos, intercalación de instancia e intercalación de TempDB. Las bases de datos contenidas solo usan dos intercalaciones, la intercalación de base de datos y la nueva intercalación de catálogo. Vea [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) para obtener más información sobre la intercalación de base de datos contenida.  
+ En el modelo de base de datos dependiente, hay tres tipos distintos de intercalación: intercalación de base de datos, intercalación de instancia e intercalación de tempdb. Las bases de datos contenidas solo usan dos intercalaciones, la intercalación de base de datos y la nueva intercalación de catálogo. Vea [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) para obtener más información sobre la intercalación de base de datos contenida.  
   
 ## <a name="user-options"></a>Opciones de usuario  
  Al habilitar bases de datos independientes, la opción [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) se debe establecer en 0 para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Contained Databases](../../relational-databases/databases/contained-databases.md)  
+ [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)   
+ [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)  
   
   

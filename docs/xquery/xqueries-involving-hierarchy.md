@@ -1,5 +1,6 @@
 ---
-title: Consultas XQuery con jerarquía | Microsoft Docs
+title: Consultas XQuery que implica jerarquía | Microsoft Docs
+description: Vea ejemplos de consultas XQuery que implican jerarquías.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21348f838ab51f2352ea975b81688ac0777fe277
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946101"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730716"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Consultas XQuery con jerarquía
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-  La mayoría **xml** escriba columnas en el **AdventureWorks** base de datos son documentos semiestructurados. Por lo tanto, los documentos almacenados en cada fila pueden tener un aspecto diferente. Los ejemplos de consultas incluidos en este tema muestran cómo extraer información de estos documentos.  
+  La mayoría de las columnas de tipo **XML** de la base de datos **AdventureWorks** son documentos semiestructurados. Por lo tanto, los documentos almacenados en cada fila pueden tener un aspecto diferente. Los ejemplos de consultas incluidos en este tema muestran cómo extraer información de estos documentos.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. A partir de los documentos de instrucciones de fabricación, recupere ubicaciones de los centros de trabajo junto con el primer paso del proceso de fabricación en esas ubicaciones  
- Para el modelo de producto 7, la consulta genera XML que incluye el <`ManuInstr`> elemento, con **ProductModelID** y **ProductModelName** atributos y uno o varios <`Location`> elementos secundarios.  
+ En el modelo de producto 7, la consulta crea XML que incluye el `ManuInstr` elemento <>, con los atributos **ProductModelID** y **ProductModelName** , y uno o varios <`Location`> elementos secundarios.  
   
- Cada <`Location`> elemento tiene su propio conjunto de atributos y un <`step`> elemento secundario. Esto <`step`> elemento secundario es el primer paso de fabricación en la ubicación de centro de trabajo.  
+ Cada <`Location` elemento> tiene su propio conjunto de atributos y un <`step`> elemento secundario. Esta <`step`> elemento secundario es el primer paso de fabricación en la ubicación del centro de trabajo.  
   
 ```sql
 SELECT Instructions.query('  
@@ -55,15 +56,15 @@ WHERE ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   El **espacio de nombres** palabra clave en el [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define un prefijo de espacio de nombres. Este prefijo se utiliza posteriormente en el cuerpo de la consulta.  
+-   La palabra clave **namespace** del [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define un prefijo de espacio de nombres. Este prefijo se utiliza posteriormente en el cuerpo de la consulta.  
   
 -   Los tokens de contexto, {) y (}, se utilizan para cambiar la consulta de construcción de XML a evaluación de consulta.  
   
--   El **SQL:Column()** se usa para incluir un valor relacional en el XML que se está construyendo.  
+-   **SQL: column ()** se usa para incluir un valor relacional en el XML que se está construyendo.  
   
--   En la construcción de la <`Location`> elemento, $wc/@* recupera todos los atributos de ubicación de centro de trabajo.  
+-   Al construir el `Location` elemento> de <, $WC/@ * recupera todos los atributos de ubicación del centro de trabajo.  
   
--   El **string()** función devuelve el valor de cadena desde el <`step`> elemento.  
+-   La función **String ()** devuelve el valor de cadena del `step` elemento <>.  
   
  Éste es un resultado parcial:  
   
@@ -83,8 +84,8 @@ WHERE ProductModelID=7
 </ManuInstr>   
 ```  
   
-### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>b. Buscar todos los números de teléfono de la columna AdditionalContactInfo  
- La siguiente consulta recupera números de teléfono adicionales para un contacto de cliente específico buscando en toda la jerarquía para el <`telephoneNumber`> elemento. Dado que el <`telephoneNumber`> elemento puede aparecer en cualquier lugar en la jerarquía, la consulta utiliza el operador descendant y self (/ /) en la búsqueda.  
+### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Buscar todos los números de teléfono de la columna AdditionalContactInfo  
+ La siguiente consulta recupera números de teléfono adicionales para un contacto de cliente específico buscando en toda la jerarquía el elemento de> de <`telephoneNumber` . Dado que el `telephoneNumber` elemento de> de <puede aparecer en cualquier parte de la jerarquía, la consulta utiliza el operador descendiente y self (//) en la búsqueda.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -98,7 +99,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```xml
 \<act:number   
@@ -111,13 +112,13 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Para recuperar únicamente los números de teléfono de nivel superior, específicamente el <`telephoneNumber`> elementos secundarios de <`AdditionalContactInfo`>, la expresión FOR de la consulta cambia a  
+ Para recuperar solo los números de teléfono de nivel superior, específicamente el <`telephoneNumber`> elementos secundarios de <`AdditionalContactInfo`>, la expresión for de la consulta cambia a  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)   
- [Construcción de XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
+ [Construcción XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

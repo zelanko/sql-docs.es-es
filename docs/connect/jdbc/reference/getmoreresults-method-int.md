@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: db242def83e840e3518aa4036a66f823585f80b2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981771"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906181"
 ---
 # <a name="getmoreresults-method-int"></a>Método getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,8 +51,8 @@ public final boolean getMoreResults(int mode)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMoreResults se especifica mediante el método getMoreResults en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ Este método getMoreResults especifica este método getMoreResults en la interfaz java.sql.Statement.  
   
  Si se llama al método getMoreResults antes de que se recuperen los resultados, se comporta tal como especificó el argumento *mode* y avanza al resultado siguiente.  
   

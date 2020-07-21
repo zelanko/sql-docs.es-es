@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d7d86080444e06aeaa50a274323805c31e12566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950765"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminar un grupo de atributos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine un grupo de atributos cuando ya no necesite que la pestaña se muestre en el área funcional del **explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -30,29 +29,29 @@ ms.locfileid: "65479564"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute-group"></a>Para eliminar un grupo de atributos  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En el **vista de modelo** página, en la barra de menús, seleccione **administrar** y haga clic en **grupos de atributos**.  
+2.  En la página **vista de modelo** , en la barra de menús, seleccione **administrar** y haga clic en grupos de **atributos**.  
   
 3.  En la lista **Modelo** , seleccione un modelo.  
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Haga clic en el signo más para expandir **grupos hoja**, **grupos consolidados**, o **grupos de colecciones**, según el tipo de grupo que desea eliminar.  
+5.  Haga clic en el signo más para expandir **grupos hoja**, **grupos consolidados**o **grupos de recopilación**, según el tipo de grupo que desee eliminar.  
   
 6.  Haga clic en el grupo de atributos que desea eliminar.  
   
-7.  Haga clic en **eliminar grupo seleccionado**.  
+7.  Haga clic en **Eliminar grupo seleccionado**.  
   
 8.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
 9. En el cuadro de diálogo de confirmación adicional, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Grupos de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Crear un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   

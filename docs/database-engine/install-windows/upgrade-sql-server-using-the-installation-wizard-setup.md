@@ -1,7 +1,8 @@
 ---
-title: Actualizar SQL Server con el Asistente para instalación (programa de instalación) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: 'Actualización: Asistente para instalación (configuración)'
+description: El Asistente para instalación de SQL Server proporciona un único árbol de características para la actualización local de componentes de SQL Server a la versión más reciente de SQL Server.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bcbc5be852e2eed6b22689c8745210dd840e7e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934694"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900207"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Actualizar SQL Server con el Asistente para instalación (programa de instalación)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 El Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la actualización local de componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -41,7 +42,7 @@ El Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 > * [Actualizar Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Actualización de PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, debe usar una cuenta de dominio que tenga permisos de lectura y ejecución para el recurso compartido remoto y que sea de un administrador local.  
   
 > [!WARNING]  
@@ -70,7 +71,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 ## <a name="procedure"></a>Procedimiento  
   
-### <a name="to-upgrade-includessnoversionincludesssnoversion-mdmd"></a>Para actualizar [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
+### <a name="to-upgrade-ssnoversion"></a>Para actualizar [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, vaya a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
@@ -86,7 +87,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 7.  En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** .  
   
-8.  En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y se especifica que debe incluirse, esa actualización también se instalará.  
+8.  En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se especifica que debe incluirse, esa actualización también se instalará.  
   
 9. En la ventana Reglas de actualización, el procedimiento de instalación avanzará automáticamente hasta la ventana Seleccionar instancia si no hay ningún error de regla.  
   
@@ -97,7 +98,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
     > [!NOTE]  
-    >  Si ha optado por actualizar las características compartidas seleccionando **\<Actualizar solo características compartidas>** en la página **Seleccionar instancia**, todas las características compartidas estarán ya seleccionadas en la página Selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
+    >  Si optó por actualizar las características compartidas seleccionando **\<Upgrade shared features only>** en la página **Seleccionar instancia**, todas las características compartidas estarán ya seleccionadas en la página Selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
   
 12. En la página Configuración de instancia, especifique el identificador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -131,7 +132,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 20. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
  Después de actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete las tareas siguientes:  
   
 -   **Registrar los servidores**: la actualización quita la configuración del Registro de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tras la actualización, debe volver a registrar los servidores.  

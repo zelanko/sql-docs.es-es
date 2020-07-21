@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543094"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordenar los miembros de atributo en función de un atributo secundario
   En la lección 3, aprendió a ordenar los miembros de atributo en función de su nombre o valor de clave. También aprendió a utilizar una clave de miembro compuesta que afectaba a todos los miembros de atributo y al criterio de ordenación. Para obtener más información, consulte [Modificar la dimensión Date](lesson-3-4-modifying-the-date-dimension.md). Sin embargo, si ni el nombre ni la clave del atributo ofrecen el orden que desea, puede usar un atributo secundario para conseguir el criterio de ordenación deseado. Definir una relación entre los atributos, puede usar el segundo atributo para ordenar los miembros del primer atributo.  
@@ -79,7 +78,7 @@ ms.locfileid: "69493905"
   
      En la imagen siguiente se muestran los miembros de la jerarquía de atributo **Commute Distance** , ordenados según los valores ASCII de la clave de miembro.  
   
-     ![Jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Jerarquía de atributo Commute Distance")  
+     ![Jerarquía del atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Jerarquía del atributo Commute Distance")  
   
 2.  Cambie a la pestaña **Estructura de dimensión** del Diseñador de dimensiones de la dimensión Customer, haga clic con el botón secundario en **CommuteDistanceSort** en la tabla **Customer** del panel **Vista del origen de datos** y, después, haga clic en **Nuevo atributo de columna**.  
   
@@ -115,7 +114,7 @@ ms.locfileid: "69493905"
   
      Observe que los miembros de la jerarquía de atributo ahora están clasificados en un orden lógico en función de una distancia cada vez mayor, como es muestra en la imagen siguiente.  
   
-     ![Jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "Jerarquía de atributo Commute Distance")  
+     ![Jerarquía del atributo Commute Distance ordenada de nuevo](../../2014/tutorials/media/l4-memberproperties-5.gif "Jerarquía del atributo Commute Distance ordenada de nuevo")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

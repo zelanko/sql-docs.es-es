@@ -1,5 +1,5 @@
 ---
-title: Opciones (página entorno-ayuda-General) | Microsoft Docs
+title: Opciones (entorno-ayuda-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 155d3d70144c28a050c6d309c1dd3a484d6b3201
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188542"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048724"
 ---
-# <a name="options-environment-help-general-page"></a>Opciones (entorno-ayuda-General, página)
-  Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas internamente en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o externamente en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
+# <a name="options-environment-help-general-page"></a>Opciones (entorno-ayuda-página general)
+  Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas de forma interna en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o de forma externa en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
   
 > [!NOTE]  
 >  Los cambios realizados en las opciones de esta página no tendrán efecto hasta que se reinicie el entorno.  

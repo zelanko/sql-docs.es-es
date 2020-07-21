@@ -1,5 +1,5 @@
 ---
-title: Las intercalaciones y páginas de códigos | Microsoft Docs
+title: Intercalaciones y páginas de códigos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62786740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936016"
 ---
 # <a name="collations-and-code-pages"></a>Intercalaciones y páginas de códigos
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] tiene restricciones en cuanto a las páginas de códigos compatibles para las columnas (var)char en las tablas optimizadas para memoria y las intercalaciones compatibles empleadas en índices y procedimientos almacenados compilados de forma nativa.  
@@ -82,7 +81,7 @@ GO
   
 -   Todas las expresiones y operaciones de ordenación dentro de procedimientos almacenados compilados de forma nativa deben utilizar intercalaciones BIN2. La implicación es que todas las comparaciones y las operaciones de ordenación están basadas en los puntos de código Unicode de los caracteres (representaciones binarias). Por ejemplo, toda la clasificación distingue entre mayúsculas y minúsculas (la “Z” va antes de la “a”). Si fuera necesario, utilice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado para la ordenación sin distinción entre mayúsculas y minúsculas y la comparación.  
   
--   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que char n (var) (*n*) los valores no se puede convertir al tipo n (var) char (*i*), si *i* < *n*, si el intercalación tiene la propiedad _SC. Por ejemplo, la siguiente vista no se admite:  
+-   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que los valores n (var) Char (*n*) no se pueden convertir al tipo n (var) Char (*i*) *, si*  <  *n*, si la intercalación tiene _SC propiedad. Por ejemplo, la siguiente vista no se admite:  
   
     ```sql  
     -- column definition using an _SC collation  
@@ -142,7 +141,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

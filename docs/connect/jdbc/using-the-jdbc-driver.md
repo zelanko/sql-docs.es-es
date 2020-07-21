@@ -1,21 +1,22 @@
 ---
 title: Empleo del controlador JDBC | Microsoft Docs
+description: En esta sección se proporciona una serie de instrucciones rápidas para establecer una conexión sencilla a una base de datos de SQL Server mediante el controlador Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d1c14f81c22442f37ec026310edf228124e8911
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025772"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488304"
 ---
 # <a name="using-the-jdbc-driver"></a>Empleo del controlador JDBC
 
@@ -26,6 +27,8 @@ En esta sección se proporciona una serie de instrucciones rápidas para estable
 ## <a name="choosing-the-right-jar-file"></a>Elegir el archivo JAR adecuado
 
 El controlador Microsoft JDBC Driver proporciona diferentes archivos JAR que se usarán en función de su configuración preferida de Java Runtime Environment (JRE), del modo siguiente:
+
+El controlador Microsoft JDBC Driver 8.2 para SQL Server proporciona los archivos de biblioteca de clases **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** y **mssql-jdbc-8.2.2.jre13.jar**.
 
 El controlador Microsoft JDBC Driver 7.4 para SQL Server proporciona los archivos de biblioteca de clases **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** y **mssql-jdbc-7.4.1.jre12.jar**.
 
@@ -59,7 +62,31 @@ Si usa el controlador JDBC Driver 7.2, configure la ruta de clases para incluir 
 
 Si usa el controlador JDBC Driver 7.4, establezca la ruta de clases para incluir **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** o **mssql-jdbc-7.4.1.jre12.jar**.
 
+Si usa JDBC Driver 8.2, establezca la ruta de clases para incluir **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** o **mssql-jdbc-8.2.2.jre13.jar**.
+
 Si falta una entrada en la ruta de clases para el archivo JAR adecuado, una aplicación lanzará la excepción común `Class not found`.  
+
+### <a name="for-microsoft-jdbc-driver-82"></a>Para el controlador Microsoft JDBC Driver 8.2
+
+Los archivos **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** o **mssql-jdbc-8.2.2.jre13.jar** se instalan en las ubicaciones siguientes:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.2.jre13.jar
+```
+
+El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Windows:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.2.jre11.jar`
+
+El siguiente fragmento de código es un ejemplo de la instrucción CLASSPATH usada para una aplicación Unix/Linux:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.2.jre11.jar`
+
+Asegúrese de que la instrucción CLASSPATH solo contenga un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], como **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** o **mssql-jdbc-8.2.2.jre13.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Para el controlador Microsoft JDBC Driver 7.4
 
@@ -231,6 +258,6 @@ Cuando se llama al método getConnection de la clase DriverManager, se busca un 
 
 Para obtener más información sobre cómo conectar con orígenes de datos y usar una dirección URL de conexión, vea [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md) y [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8f18e047b11bee4093ce7a6e494c1ae1bf3d0ada
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef5cba5778c17be419dc5b237059da8b2024f623
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483386"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961747"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Excluir una regla de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], excluya una regla de negocios cuando no desee eliminar la regla permanentemente, pero no desee validar los datos con ella.  
@@ -27,7 +26,7 @@ ms.locfileid: "65483386"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-exclude-a-business-rule"></a>Para excluir una regla de negocios  
   
@@ -39,17 +38,17 @@ ms.locfileid: "65483386"
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Desde el **tipo de miembro** lista, seleccione un tipo de miembro.  
+5.  En la lista **tipo de miembro** , seleccione un tipo de miembro.  
   
 6.  En la lista **Atributo** , seleccione un atributo o deje el valor predeterminado de **Todos**.  
   
-7.  En la cuadrícula, en la fila de la regla de negocios, seleccione la casilla de verificación en la **excluir** columna. El valor de la **estado** columna es **exclusión pendiente**.  
+7.  En la cuadrícula, en la fila de la regla de negocios, active la casilla en la columna **excluir** . El valor de la columna **Estado** es **exclusión pendiente**.  
   
 8.  Haga clic en **Publicar reglas de negocios**.  
   
-9. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El valor de la **estado** columna es **excluidos**.  
+9. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. Se **excluye**el valor de la columna **Estado** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eliminar una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-business-rule-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  

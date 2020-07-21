@@ -1,6 +1,7 @@
 ---
-title: 'Configuración del NFS de almacenamiento de la instancia de clúster de conmutación por error: SQL Server en Linux'
-description: ''
+title: 'Configuración de FCI para almacenamiento NFS: SQL Server en Linux'
+description: Aprenda a configurar una instancia de clúster de conmutación por error (FCI) mediante almacenamiento NFS para SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,16 +9,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 47c2e816219ebbb4a4b3fefea2974ef511cdaee2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032357"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897280"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Configuración de la instancia de clúster de conmutación por error: NFS: SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se explica cómo configurar el almacenamiento NFS de una instancia de clúster de conmutación por error (FCI) en Linux. 
 
@@ -39,7 +40,7 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
 
 ## <a name="instructions"></a>Instructions
 
-1. Seleccione uno de los servidores que van a participar en la configuración de la FCI. No importa cuál. 
+1. Elija uno de los servidores que participarán en la configuración de la FCI. No importa el que elija. 
 
 2. Compruebe que el servidor puede ver los montajes en el servidor NFS.
 
@@ -57,19 +58,19 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-   * Cambie por completo para ser el superusuario. No se recibe ninguna confirmación si se realiza correctamente.
+   * Cambie por completo para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     sudo -i
     ```
 
-   * Cambie para ser el usuario de mssql. No se recibe ninguna confirmación si se realiza correctamente.
+   * Cambie para ser el usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     su mssql
     ```
 
-   * Cree un directorio temporal para almacenar los archivos de registro y los datos de SQL Server. No se recibe ninguna confirmación si se realiza correctamente.
+   * Cree un directorio temporal para almacenar los archivos de registro y los datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     mkdir <TempDir>
@@ -81,7 +82,7 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
     mkdir /var/opt/mssql/tmp
     ```
 
-   * Copie los archivos de registro y los datos de SQL Server en el directorio temporal. No se recibe ninguna confirmación si se realiza correctamente.
+   * Copie los archivos de registro y los datos de SQL Server en el directorio temporal. No recibirá ninguna confirmación si se realiza correctamente.
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
@@ -95,9 +96,9 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
     ls TempDir
     ```
 
-    \<TempDir> es el nombre de la carpeta del paso d.
+    \<TempDir> es el nombre de la carpeta del paso d.
 
-   * Elimine los archivos del directorio de datos existente de SQL Server. No se recibe ninguna confirmación si se realiza correctamente.
+   * Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     rm - f /var/opt/mssql/data/*
@@ -111,7 +112,7 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
     
    * Escriba exit para volver al usuario raíz.
 
-   * Monte el recurso compartido de NFS en la carpeta de datos de SQL Server. No se recibe ninguna confirmación si se realiza correctamente.
+   * Monte el recurso compartido de NFS en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -133,13 +134,13 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
 
     ![10-mountnoswitches][2]
 
-   * Cambie al usuario de mssql. No se recibe ninguna confirmación si se realiza correctamente.
+   * Cambie al usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     su mssql
     ```
 
-   * Copie los archivos del directorio temporal /var/opt/mssql/data. No se recibe ninguna confirmación si se realiza correctamente.
+   * Copie los archivos del directorio temporal /var/opt/mssql/data. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
@@ -187,13 +188,13 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
 
 4. Para comprobar otros aspectos que no sean las bases de datos del sistema (por ejemplo, las bases de datos de usuario o las copias de seguridad), siga estos pasos. Si solo usa la ubicación predeterminada, vaya al paso 5.
 
-   * Cambie para ser el superusuario. No se recibe ninguna confirmación si se realiza correctamente.
+   * Cambie para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     sudo -i
     ```
 
-   * Cree una carpeta que va a usar SQL Server. 
+   * Cree una carpeta que usará SQL Server. 
 
     ```bash
     mkdir <FolderName>
@@ -205,7 +206,7 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
     mkdir /var/opt/mssql/userdata
     ```
 
-   * Monte el recurso compartido de NFS en la carpeta creada en el paso anterior. No se recibe ninguna confirmación si se realiza correctamente.
+   * Monte el recurso compartido de NFS en la carpeta creada en el paso anterior. No recibirá ninguna confirmación si se realiza correctamente.
 
     ```bash
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
@@ -225,11 +226,11 @@ Asegúrese de que los estándares de seguridad se aplican para el acceso. Al con
   
    * Escriba exit para dejar de ser el superusuario.
 
-   * Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a ella y comprobar que los archivos existen en el nivel del sistema operativo, y después se elimina la ubicación temporal. Puede usar SSMS.
+   * Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a ella y comprobar que los archivos existen en el nivel del sistema operativo; después, se elimina la ubicación temporal. Puede usar SSMS.
 
     ![15-createtestdatabase][4]
  
-   * Desmonte el recurso compartido. 
+   * Desmontaje del recurso compartido 
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>

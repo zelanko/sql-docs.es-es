@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056371"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891549"
 ---
-# <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Inserta operaciones (filas) en el **sysdownloadlist** tabla del sistema para servidores de destino descargar y ejecutar.  
+  Inserta operaciones (filas) en la tabla del sistema **sysdownloadlist** para que los servidores de destino los descarguen y ejecuten.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,23 +45,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @operation = ] 'operation'` El tipo de operación para la operación expuesta. *operación*es **varchar(64)** , no tiene ningún valor predeterminado. Las operaciones válidas dependen *object_type*.  
+`[ @operation = ] 'operation'`Tipo de operación de la operación expuesta. la *operación*es **VARCHAR (64)** y no tiene ningún valor predeterminado. Las operaciones válidas dependen de *object_type*.  
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> SUPRIMIR<br /><br /> START<br /><br /> STOP|  
-|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> SUPRIMIR|  
+|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
+|**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**PLANEA**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
-`[ @object_type = ] 'object'` El tipo de objeto para el que se expone una operación. Los tipos válidos son **trabajo**, **SERVER**, y **programación**. *objeto* es **varchar(64)** , su valor predeterminado es **trabajo**.  
+`[ @object_type = ] 'object'`Tipo de objeto para el que se va a exponer una operación. Los tipos válidos son **Job**, **Server**y **Schedule**. el *objeto* es **VARCHAR (64)** y su valor predeterminado es **Job**.  
   
-`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo al que se aplica la operación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. **0 x 00** indica todos los trabajos. Si *objeto* es **SERVER**, a continuación, *job_id*no es necesario.  
+`[ @job_id = ] job_id`Número de identificación del trabajo al que se aplica la operación. *job_id* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. **0x00** indica todos los trabajos. Si el *objeto* es **Server**, *job_id*no es necesario.  
   
-`[ @specific_target_server = ] 'target_server'` El nombre del servidor de destino que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los trabajos del trabajo de los servidores. *target_server* es **nvarchar (30)** , su valor predeterminado es null.  
+`[ @specific_target_server = ] 'target_server'`Nombre del servidor de destino para el que se aplica la operación especificada. Si se especifica *job_id* , pero no se especifica *target_server* , las operaciones se exponen para todos los servidores de trabajo del trabajo. *target_server* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
   
-`[ @value = ] value` El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si *operación* es **SET-POLL**.  
+`[ @value = ] value`El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si la *operación* es **set-Poll**.  
   
-`[ @schedule_uid = ] schedule_uid` El identificador único para el plan al que se aplica la operación. *valor schedule_uid* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
+`[ @schedule_uid = ] schedule_uid`Identificador único de la programación a la que se aplica la operación. *schedule_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -69,28 +69,28 @@ sp_post_msx_operation
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_post_msx_operation** se debe ejecutar desde la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_post_msx_operation** se debe ejecutar desde la base de datos **msdb** .  
   
- **sp_post_msx_operation** siempre se puede llamar sin ningún riesgo porque primero determina si el servidor actual es un agente de Microsoft SQL Server multiservidor y, si es así, si *objeto*es un trabajo multiservidor.  
+ siempre se puede llamar a **sp_post_msx_operation** de forma segura porque primero determina si el servidor actual es un agente de Microsoft SQL Server multiservidor y, si es así, si el *objeto*es un trabajo multiservidor.  
   
- Una vez que se ha registrado una operación, aparece en el **sysdownloadlist** tabla. Después de crear y exponer un trabajo, también se deben comunicar los cambios siguientes de ese trabajo a los servidores de destino (TSX). Esto también se realiza mediante la lista de descarga.  
+ Una vez que se ha publicado una operación, aparece en la tabla **sysdownloadlist** . Después de crear y exponer un trabajo, también se deben comunicar los cambios siguientes de ese trabajo a los servidores de destino (TSX). Esto también se realiza mediante la lista de descarga.  
   
- Es muy recomendable administrar la lista de descarga con SQL Server Management Studio. Para obtener más información, consulte [ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md).  
+ Es muy recomendable administrar la lista de descarga con SQL Server Management Studio. Para obtener más información, vea [ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md).  
   
 ## <a name="permissions"></a>Permisos  
- Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
+ Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_delete_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_resync_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
- [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_delete_targetserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_resync_targetserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
+ [sp_start_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_stop_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

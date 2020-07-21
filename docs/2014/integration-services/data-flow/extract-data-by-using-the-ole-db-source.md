@@ -11,15 +11,14 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ca00dfe612f5735f767d50c66ebbb0e079bc39c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62902611"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432182"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraer datos mediante el origen de OLE DB
   Para agregar y configurar un origen de OLE DB, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  
@@ -56,15 +55,15 @@ ms.locfileid: "62902611"
   
 8.  Opcionalmente, actualice los nombres de las columnas de salida modificando los valores en la lista **Columna de salida** .  
   
-9. Para configurar la salida de error, haga clic en **Salida de error**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Para configurar la salida de error, haga clic en **Salida de error**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
   
 10. Puede hacer clic en **Vista previa** para ver hasta 200 filas de los datos extraídos por el origen de OLE DB.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Origen de OLE DB](ole-db-source.md)   
  [Transformaciones de Integration Services](transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](integration-services-paths.md)   

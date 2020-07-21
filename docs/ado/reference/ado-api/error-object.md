@@ -1,5 +1,5 @@
 ---
-title: Objeto de error | Microsoft Docs
+title: Error (objeto) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,52 +13,52 @@ f1_keywords:
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932964"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764536"
 ---
 # <a name="error-object"></a>Objeto de error
-Contiene detalles sobre los errores de acceso de datos que pertenecen a una única operación que implica al proveedor.  
+Contiene detalles sobre los errores de acceso a datos que pertenecen a una única operación que implica al proveedor.  
   
 ## <a name="remarks"></a>Comentarios  
- Cualquier operación que implica objetos ADO puede generar uno o varios errores del proveedor. Cuando se produce cada error, uno o varios **Error** objetos se colocan en el [errores](../../../ado/reference/ado-api/errors-collection-ado.md) colección de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Cuando otra operación ADO genera un error, el **errores** se borra la colección y el nuevo conjunto de **Error** objetos se coloca en el **errores** colección.  
+ Cualquier operación relacionada con objetos ADO puede generar uno o más errores de proveedor. Cuando se produce cada error, se colocan uno o varios objetos de **error** en la colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) del objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . Cuando otra operación de ADO genera un error, la colección de **errores** se borra y el nuevo conjunto de objetos de **error** se coloca en la colección de **errores** .  
   
 > [!NOTE]
->  Cada **Error** objeto representa un error de proveedor específico, no un error de ADO. Errores de ADO se exponen en el mecanismo de control de excepciones de tiempo de ejecución. Por ejemplo, en Microsoft Visual Basic, la aparición de un error específico de ADO desencadenará una **On Error** eventos y aparecen en la **Error** objeto. Para obtener una lista completa de errores de ADO, vea el [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) tema.  
+>  Cada objeto de **error** representa un error de proveedor concreto, no un error de ADO. Los errores de ADO se exponen al mecanismo de control de excepciones en tiempo de ejecución. Por ejemplo, en Microsoft Visual Basic, la aparición de un error específico de ADO desencadenará un evento **on error** y aparecerá en el objeto **error** . Para obtener una lista completa de los errores de ADO, vea el tema [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) .  
   
- Puede leer un **Error** propiedades del objeto para obtener detalles específicos sobre cada error, incluido lo siguiente:  
+ Puede leer las propiedades de un objeto de **error** para obtener detalles específicos de cada error, incluido lo siguiente:  
   
--   El [descripción](../../../ado/reference/ado-api/description-property.md) propiedad, que contiene el texto del error. Se trata de la propiedad predeterminada.  
+-   La propiedad [Description](../../../ado/reference/ado-api/description-property.md) , que contiene el texto del error. Esta es la propiedad predeterminada.  
   
--   El [número](../../../ado/reference/ado-api/number-property-ado.md) propiedad, que contiene el **largo** valor entero de la constante del error.  
+-   La propiedad [Number](../../../ado/reference/ado-api/number-property-ado.md) , que contiene el valor entero **largo** de la constante de error.  
   
--   El [origen](../../../ado/reference/ado-api/source-property-ado-error.md) propiedad, que identifica el objeto que provocó el error. Esto es especialmente útil cuando hay varias **Error** objetos en el **errores** después de una solicitud a un origen de datos de colección.  
+-   Propiedad de [origen](../../../ado/reference/ado-api/source-property-ado-error.md) , que identifica el objeto que ha generado el error. Esto es especialmente útil cuando hay varios objetos de **error** en la colección de **errores** después de una solicitud a un origen de datos.  
   
--   El [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) y [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md) propiedades, que proporcionan información de orígenes de datos SQL.  
+-   Las propiedades [SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md) y [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md) , que proporcionan información de los orígenes de datos SQL.  
   
- Cuando se produce un error de proveedor, se coloca en el **errores** colección de la **conexión** objeto. ADO admite la devolución de varios errores por una sola operación de ADO para permitir la información de error específico del proveedor. Para obtener esta información de error enriquecida en un controlador de errores, utilice las características de interceptación de errores apropiadas del lenguaje o entorno que esté trabajando y, a continuación, use bucles anidados para enumerar las propiedades de cada **Error** objeto en el **Errores** colección.  
+ Cuando se produce un error de proveedor, se coloca en la colección de **errores** del objeto de **conexión** . ADO admite la devolución de varios errores mediante una única operación de ADO para permitir información de error específica del proveedor. Para obtener esta información de error enriquecida en un controlador de errores, utilice las características de detección de errores adecuadas del lenguaje o entorno con el que está trabajando y, a continuación, use bucles anidados para enumerar las propiedades de cada objeto de **error** en la colección de **errores** .  
   
 > [!NOTE]
->  **Microsoft Visual Basic y los usuarios de VBScript** si no es válido no **conexión** objeto, deberá recuperar la información de error desde el **Error** objeto.  
+>  **Usuarios de Microsoft Visual Basic y VBScript** Si no hay ningún objeto de **conexión** válido, tendrá que recuperar la información de error del objeto de **error** .  
   
- Al igual que los proveedores de hacer, ADO borra el **información de Error OLE** objeto antes de realizar una llamada que pueda generar un nuevo error de proveedor. Sin embargo, el **errores** colección en el **conexión** objeto está desactivado y se rellena únicamente cuando el proveedor genera un nuevo error, o cuando el [clara](../../../ado/reference/ado-api/clear-method-ado.md) se llama al método.  
+ Del mismo modo que los proveedores, ADO borra el objeto de **información de error OLE** antes de realizar una llamada que podría generar un error de proveedor nuevo. Sin embargo, la colección de **errores** en el objeto de **conexión** se borra y rellena solo cuando el proveedor genera un nuevo error o cuando se llama al método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) .  
   
- Algunos métodos y propiedades devuelven advertencias que aparecen como **Error** objetos en el **errores** colección pero no detienen la ejecución de un programa. Antes de llamar a la [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto; el [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método en un **conexión** objeto; o establecer el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad en un **Recordset** de objeto, llame a la **borrar**método en el **errores** colección. De este modo, puede leer el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad de la **errores** devuelve de colección para probar las advertencias.  
+ Algunas propiedades y métodos devuelven advertencias que aparecen como objetos de **error** en la colección de **errores** , pero no detienen la ejecución de un programa. Antes de llamar a los métodos [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ; el método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) en un objeto **Connection** ; o bien, establezca la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) en un objeto de **conjunto de registros** , llame al método **Clear** en la colección de **errores** . De este modo, puede leer la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) de la colección de errores para probar si **hay** advertencias devueltas.  
   
- El **Error** objeto no es seguro para scripting.  
+ El objeto de **error** no es seguro para el scripting.  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Eventos, métodos y propiedades del objeto Error](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
- [Descripción, HelpContext, HelpFile, NativeError, número, origen y ejemplo de las propiedades SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Descripción, HelpContext, HelpFile, NativeError, número, origen y ejemplo de las propiedades SQLState (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

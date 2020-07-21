@@ -11,15 +11,15 @@ ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde97833b8d2a3cfc56756b26f7d74cddf77b2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c182953e765581382db207a421f7a199073f21ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750833"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Biblioteca que admite la funcionalidad de SQL Server en Visual Studio.  
   
 ## <a name="syntax"></a>Sintaxis  

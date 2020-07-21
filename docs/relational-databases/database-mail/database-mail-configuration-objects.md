@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 681fd78830589d680924b2d1b7d6d71c3692a7ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726540"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Correo electrónico de base de datos tiene dos objetos de configuración: los objetos de configuración de base de datos proporcionan una manera de configurar los valores que Correo electrónico de base de datos debe usar al enviar un correo electrónico de la aplicación de base de datos o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Cuentas de Correo electrónico de base de datos  
@@ -48,13 +48,13 @@ ms.locfileid: "68134429"
 -   Perfiles de Correo electrónico de base de datos  
   
   
-##  <a name="VisualElement"></a> Relación de objetos de configuración de Correo electrónico de base de datos  
+##  <a name="database-mail-configuration-object-relationship"></a><a name="VisualElement"></a> Relación de objetos de configuración de Correo electrónico de base de datos  
  En la siguiente ilustración se muestran dos perfiles, tres cuentas y tres usuarios. El usuario 1 tiene acceso al perfil 1, que usa la cuenta 1 y la cuenta 2. El usuario 3 tiene acceso al perfil 2, que usa la cuenta 2 y la cuenta 3. El usuario 2 tiene acceso al perfil 1 y al perfil 2.  
   
  ![Relación de usuarios, perfiles y cuentas](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relación de usuarios, perfiles y cuentas")  
   
   
-##  <a name="DBAccount"></a> Cuenta de Correo electrónico de base de datos  
+##  <a name="database-mail-account"></a><a name="DBAccount"></a> Cuenta de Correo electrónico de base de datos  
  Una cuenta del Correo electrónico de base de datos contiene la información que Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para enviar mensajes de correo electrónico a un servidor SMTP. Cada cuenta contiene información para un servidor de correo electrónico.  
   
  Correo electrónico de base de datos permite el uso de tres métodos de autenticación para comunicarse con un servidor SMTP:  
@@ -79,11 +79,11 @@ ms.locfileid: "68134429"
   
 -   El nombre del servidor de correo electrónico.  
   
--   El tipo de servidor de correo electrónico. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siempre es el Protocolo simple de transferencia de correo (SMTP).  
+-   El tipo de servidor de correo electrónico. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siempre es el Protocolo simple de transferencia de correo (SMTP).  
   
 -   El número de puerto del servidor de correo electrónico.  
   
--   Una columna de tipo bit que indica si se ha realizado la conexión al servidor de correo SMTP con SSL (Capa de sockets seguros).  
+-   Una columna de tipo bit que indica si se ha realizado la conexión al servidor de correo SMTP mediante la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL).  
   
 -   Una columna de tipo bit que indica si se ha realizado la conexión al servidor SMTP con las credenciales configuradas para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68134429"
  El Asistente para configuración de Correo electrónico de base de datos proporciona una forma adecuada de crear y administrar cuentas. También puede usar los procedimientos almacenados de configuración de **msdb** para crear y administrar cuentas.  
   
   
-##  <a name="DBProfile"></a> Perfil de Correo electrónico de base de datos  
+##  <a name="database-mail-profile"></a><a name="DBProfile"></a> Perfil de Correo electrónico de base de datos  
  Un perfil del Correo electrónico de base de datos es una colección ordenada de cuentas relacionadas del Correo electrónico de base de datos. Las aplicaciones que envían correo electrónico a través de Correo electrónico de base de datos especifican perfiles, en lugar de usar cuentas directamente. Separar la información acerca de los servidores de correo electrónico individuales de los objetos que utiliza la aplicación supone una mejora de flexibilidad y confiabilidad: los perfiles proporcionan conmutación automática por error, de modo que, si un servidor deja de responder, Correo electrónico de base de datos puede enviar automáticamente correo a otro servidor de correo electrónico. Los administradores de bases de datos pueden agregar, quitar o volver a configurar cuentas sin tener que modificar el código de aplicación o los pasos de trabajo.  
   
  Los perfiles también ayudan a los administradores de bases de datos a controlar el acceso al correo electrónico. Para poder enviar Correo electrónico de base de datos, es necesario ser miembro de la función **DatabaseMailUserRole** . Los perfiles proporcionan a los administradores mayor flexibilidad para controlar quién envía correo y qué cuentas se usan.  
@@ -110,18 +110,18 @@ ms.locfileid: "68134429"
  Si hay más de una cuenta con el mismo número de secuencia, el Correo electrónico de base de datos solo utiliza una de estas cuentas para un mensaje de correo electrónico determinado. En este caso, el Correo electrónico de base de datos no confirma qué cuenta se va a usar para el número de secuencia o que se vaya a usar la misma cuenta de un mensaje a otro.  
   
   
-##  <a name="RelatedTasks"></a> Tareas de configuración de Correo electrónico de base de datos  
+##  <a name="database-mail-configuration-tasks"></a><a name="RelatedTasks"></a> Tareas de configuración de Correo electrónico de base de datos  
  En la tabla siguiente se describen las tareas de configuración de Correo electrónico de base de datos.  
   
 |Tarea de configuración|Vínculo de tema|  
 |------------------------|----------------|  
-|Describe cómo crear cuentas de Correo electrónico de base de datos|[Crear una nueva cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
+|Describe cómo crear cuentas de Correo electrónico de base de datos|[Crear una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)|  
 |Describe cómo crear perfiles de Correo electrónico de base de datos|[Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md)|  
 |Describe cómo configurar Correo electrónico de base de datos|[Configuración de Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md)|  
 |Describe cómo crear un script para la configuración de Correo electrónico de base de datos mediante plantillas||  
   
   
-##  <a name="Add_Tasks"></a> Tareas de configuración adicionales de base de datos (procedimientos almacenados del sistema)  
+##  <a name="additional-database-configuration-tasks-system-stored-procedures"></a><a name="Add_Tasks"></a> Tareas de configuración adicionales de base de datos (procedimientos almacenados del sistema)  
  Los procedimientos almacenados de configuración del Correo electrónico de base de datos se encuentran en la base de datos **msdb** .  
   
  En las siguientes tablas se indican los procedimientos almacenados que se usan para configurar y administrar el Correo electrónico de base de datos.  
@@ -165,7 +165,7 @@ ms.locfileid: "68134429"
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Detiene el programa externo de Correo electrónico de base de datos y la cola asociada de SQL Service Broker.|  
 |[sysmail_help_status_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql.md)|Indica si se ha iniciado el Correo electrónico de base de datos.|  
   
-##  <a name="RelatedContent"></a> Referencias adicionales  
+##  <a name="additional-references"></a><a name="RelatedContent"></a> Referencias adicionales  
   
 -   [Registro y auditorías del Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   

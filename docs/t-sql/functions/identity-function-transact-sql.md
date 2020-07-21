@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a4711f9673ba5acf7a4a7398588c6e27f80a9179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6584b472749d1e0e773e4d0fee6bfc45d98db95f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024488"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894304"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (Función) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Solo se usa en una instrucción SELECT con una cláusula INTO *table* para insertar una columna de identidad en una nueva tabla. Aunque es similar, la función IDENTITY no es la propiedad IDENTITY que se utiliza con CREATE TABLE y ALTER TABLE.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68024488"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
@@ -58,10 +58,10 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
  *column_name*  
  Se trata del nombre de la columna que se va a insertar en la nueva tabla.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve lo mismo que *data_type*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Debido a que esta función crea una columna en una tabla, se debe especificar un nombre para la columna en la lista de selección de una de las formas siguientes:  
   
 ```  

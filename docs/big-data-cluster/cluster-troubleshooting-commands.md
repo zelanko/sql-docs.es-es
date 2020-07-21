@@ -1,7 +1,7 @@
 ---
-title: Supervisión y solución de problemas
+title: Solución de problemas de Kubernetes
 titleSuffix: SQL Server big data clusters
-description: En este artículo se proporcionan comandos útiles para supervisar y solucionar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]problemas de.
+description: En este artículo se proporcionan comandos útiles para supervisar y solucionar problemas de un clúster de macrodatos de SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153631"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606407"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Supervisión y solución de problemas[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Solución de problemas de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describen varios comandos de Kubernetes útiles que puede usar para supervisar y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]solucionar problemas de. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
+En este artículo se describen varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
 
 > [!TIP]
-> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos de [**Estado de azdata BDC**](deployment-guidance.md#status) o los cuadernos de [solución de problemas](manage-notebooks.md) integrados en proporcionados con Azure Data Studio.
+> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos [**azdata bdc status**](deployment-guidance.md#status) o los [cuadernos de solución de problemas](notebooks-manage-bdc.md) integrados proporcionados con Azure Data Studio.
 
 > [!TIP]
 > Ejecute los siguientes comandos de **kubectl** en un equipo cliente Windows (cmd o PS) o Linux (bash). Requieren la autenticación previa en el clúster y un contexto de clúster en el que ejecutarse. Por ejemplo, para un clúster de AKS creado anteriormente, puede ejecutar `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` para descargar el archivo de configuración del clúster de Kubernetes y establecer el contexto del clúster.
@@ -98,7 +98,7 @@ Puede recuperar los registros de los contenedores que se ejecutan en un pod. El 
 kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
-## <a id="services"></a> Obtención del estado de los servicios
+## <a name="get-status-of-services"></a><a id="services"></a> Obtención del estado de los servicios
 
 Ejecute el siguiente comando para obtener los detalles de los servicios del clúster de macrodatos. Estos detalles incluyen su tipo y las IP asociadas a los servicios y puertos correspondientes. Tenga en cuenta que los servicios del clúster de macrodatos de SQL Server se crean en un nuevo espacio de nombres creado cuando se arranca el clúster en función del nombre del clúster especificado en el archivo de configuración de la implementación.
 
@@ -138,7 +138,7 @@ En el ejemplo siguiente se recuperan los detalles del servicio **master-svc-exte
 kubectl describe service master-svc-external -n mssql-cluster
 ```
 
-## <a id="copy"></a> Copia de archivos
+## <a name="copy-files"></a><a id="copy"></a> Copia de archivos
 
 Si necesita copiar archivos del contenedor en el equipo local, use el comando `kubectl cp` con la siguiente sintaxis:
 
@@ -152,7 +152,7 @@ Del mismo modo, puede usar `kubectl cp` para copiar archivos del equipo local en
 kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <container_name>  -n <namespace_name>
 ```
 
-### <a id="copyfrom"></a> Copia de archivos desde un contenedor
+### <a name="copy-files-from-a-container"></a><a id="copyfrom"></a> Copia de archivos desde un contenedor
 
 En el ejemplo siguiente se copian los archivos de registro de SQL Server del contenedor en la ruta de acceso `~/temp/sqlserverlogs` del equipo local (en este ejemplo, el equipo local es un cliente Linux):
 
@@ -160,7 +160,7 @@ En el ejemplo siguiente se copian los archivos de registro de SQL Server del co
 kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
-### <a id="copyinto"></a> Copia de archivos en un contenedor
+### <a name="copy-files-into-container"></a><a id="copyinto"></a> Copia de archivos en un contenedor
 
 En el ejemplo siguiente se copia el archivo **AdventureWorks2016CTP3.bak** del equipo local en el contenedor de instancias maestras de SQL Server (`mssql-server`) en el pod `master-0`. El archivo se copia en el directorio `/tmp` del contenedor. 
 
@@ -168,7 +168,7 @@ En el ejemplo siguiente se copia el archivo **AdventureWorks2016CTP3.bak** del e
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
-## <a id="forcedelete"></a> Forzamiento de la eliminación de un pod
+## <a name="force-delete-a-pod"></a><a id="forcedelete"></a> Forzamiento de la eliminación de un pod
  
 No se recomienda forzar la eliminación de un pod. Pero, para probar la disponibilidad, la resistencia o la persistencia de los datos, puede eliminar un pod para simular un error del pod con el comando `kubectl delete pods`.
 
@@ -182,7 +182,7 @@ En el ejemplo siguiente se elimina el pod del bloque de almacenamiento `storage-
 kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
-## <a id="getip"></a> Obtención de la IP del pod
+## <a name="get-pod-ip"></a><a id="getip"></a> Obtención de la IP del pod
  
 Para solucionar problemas, es posible que tenga que obtener la IP del nodo en el que se está ejecutando actualmente un pod. Para obtener la dirección IP, use el comando `kubectl get pods` con la siguiente sintaxis:
 
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.

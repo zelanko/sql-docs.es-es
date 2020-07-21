@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5b7a8add7f890dcd6e273597f1a43d612d6c5af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105699"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Imágenes (Generador de informes y SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105699"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ComparingImages"></a> Comparar imágenes externas, incrustadas y enlazadas a datos  
+##  <a name="comparing-external-embedded-and-data-bound-images"></a><a name="ComparingImages"></a> Comparar imágenes externas, incrustadas y enlazadas a datos  
  Al utilizar una imagen que está en un servidor o en una ubicación externa, el elemento de imagen contiene una ruta de acceso que señala a una imagen del servidor de informes o de su ubicación en Internet. No obstante, si se utiliza una imagen incrustada, los datos de dicha imagen se almacenan en la definición de informe y no existe en este caso un archivo independiente.  
   
  Las imágenes basadas en servidor están especialmente indicadas para los logotipos e imágenes estáticas que comparten varios informes o páginas web. Las imágenes incrustadas, por su parte, garantizan una disponibilidad permanente en el informe, pero no se pueden compartir. Las definiciones de informe con imágenes externas son más pequeñas que las definiciones con imágenes incrustadas.  
@@ -36,22 +36,22 @@ ms.locfileid: "66105699"
   
 
   
-##  <a name="ImagesReportParts"></a> Imágenes como elementos de informe  
+##  <a name="images-as-report-parts"></a><a name="ImagesReportParts"></a> Imágenes como elementos de informe  
  Puede guardar imágenes por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  
   
-##  <a name="EmbedImages"></a> Incrustar imágenes  
+##  <a name="embedding-images"></a><a name="EmbedImages"></a> Incrustar imágenes  
  Se pueden incrustar imágenes en un informe de manera que todos los datos de imagen se almacenen en la definición de informe. Cuando se incrusta una imagen, esta se codifica como MIME y se almacena como texto en la definición de informe. El uso de imágenes incrustadas garantiza su disponibilidad permanente en el informe, pero también aumenta el tamaño de la definición de informe.  
   
  Para obtener más información sobre cómo insertar una imagen, vea [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="ExternalImages"></a> Imágenes externas  
+##  <a name="external-images"></a><a name="ExternalImages"></a> Imágenes externas  
  Puede incluir imágenes almacenadas en un informe especificando una dirección URL para la imagen. Cuando se utiliza una imagen externa en un informe, el origen de la imagen se establece en `External` y el valor de la imagen es su dirección URL o ruta de acceso.  
   
- Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
+ Para más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
  Cuando el informe se ejecuta en el Generador de informes o en el Diseñador de informes, la vista previa usa las credenciales del usuario para mostrar la imagen. Cuando el informe se ejecuta en el servidor de informes, no se puede mostrar la imagen del informe si las credenciales del servidor no son suficientes para tener acceso a la imagen. En ese caso, póngase en contacto con su administrador del sistema.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66105699"
   
  
   
-##  <a name="BackgroundImages"></a> Imágenes de fondo  
+##  <a name="background-images"></a><a name="BackgroundImages"></a> Imágenes de fondo  
  Puede utilizarse una imagen como imagen de fondo en el cuerpo del informe o en el interior de un rectángulo, cuadro de texto, lista, matriz o tabla. Las imágenes de fondo tienen propiedades similares a las de las demás imágenes. También es posible especificar el modo de repetición de una imagen para rellenar el fondo de un elemento.  
   
 > [!NOTE]  
@@ -69,12 +69,12 @@ ms.locfileid: "66105699"
   
  
   
-##  <a name="DataboundImages"></a> Imágenes enlazadas a datos  
+##  <a name="data-bound-images"></a><a name="DataboundImages"></a> Imágenes enlazadas a datos  
  Es posible agregar imágenes almacenadas en una base de datos a los informes. Se puede usar el mismo elemento de informe de imagen que para las imágenes estáticas, pero con un conjunto de propiedades que indica que la imagen está almacenada en una base de datos. Para obtener instrucciones sobre cómo trabajar con imágenes enlazadas a datos, vea [Agregar una imagen enlazada a datos &#40;Generador de informes y SSRS&#41;](add-a-data-bound-image-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Temas de procedimientos  
  [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)  
   
  [Incrustar una imagen en un informe &#40;Generador de informes y SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)  
@@ -85,7 +85,7 @@ ms.locfileid: "66105699"
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Exportar a un archivo de imagen &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   

@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b05013b888978d268d30a31dc6375b0f70d625d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d147f5373c1284f25ee9ffbe6b71f2c7b237ec6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762106"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551038"
 ---
-# <a name="mssqlserver7931"></a>MSSQLSERVER_7931
+# <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7931|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7931|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Texto del mensaje|Error de base de datos: El directorio FileStream F_ID de identificador para una partición se ha visto dos veces.|  
+|Texto del mensaje|Error de base de datos: el id. de directorio FILESTREAM F_ID para una partición se ha visto dos veces.|  
   
 ## <a name="explanation"></a>Explicación  
  Se ha encontrado en los metadatos el mismo identificador de partición para un directorio FILESTREAM.  

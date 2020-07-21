@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: da30e8a7-1c5a-4140-98ee-f84528ac3140
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65a1a6ef73336a8e47db19984be62e3c132bfaa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99dea85dc12475aa785799231c67f217b162e0f6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869610"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553580"
 ---
-# <a name="mssqlserver17660"></a>MSSQLSERVER_17660
+# <a name="mssqlserver_17660"></a>MSSQLSERVER_17660
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|17660|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|17660|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DEMO_BOOTNORECOVERY|  
 |Texto del mensaje|Iniciando sin recuperación. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.|  

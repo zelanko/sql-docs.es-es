@@ -1,5 +1,6 @@
 ---
 title: Reglas de escape y caracteres no válidos | Microsoft Docs
+description: Aprenda de qué manera la cláusula FOR XML controla los caracteres XML no válidos y conozca las reglas de escape para los caracteres que no son válidos en nombres XML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 35c3537371df1cb9fc83976605b65fdcfedd1000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 592aa9b31ce957500210a9a4d3caa7f780bf588d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738426"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Reglas de escape y caracteres no válidos
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo la cláusula FOR XML controla los caracteres XML no válidos y se enumeran las reglas de escape para los caracteres que no son válidos en los nombres XML.  
   
 ## <a name="for-xml-and-invalid-characters"></a>FOR XML y los caracteres no válidos  

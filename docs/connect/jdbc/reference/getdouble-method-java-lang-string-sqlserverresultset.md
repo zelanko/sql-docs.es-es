@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e82f85941899fc05fc8fdf35cd7ae65870100ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9e8b1ea89c36e142245d09719f797e0c6efa3c63
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983575"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917381"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>Método getDouble (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public double getDouble(java.lang.String columnName)
  Valor **String** que contiene el nombre de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Valor **Double** .  
+ Un valor **double**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getDouble especifica este método getDouble en la interfaz java.sql.ResultSet.  
   
  Este método devuelve todos los tipos de datos basados en número con fidelidad **double** de Java.  

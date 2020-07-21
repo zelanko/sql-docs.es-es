@@ -1,5 +1,5 @@
 ---
-title: En el clúster de ejemplo de la propiedad (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad Clustered (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33ef2ac09d81d85c6b9170c84bffbc8491dbd995
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8039f07bfdb750a5ed3632d2f7c28b51a02b8ec9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966945"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759391"
 ---
 # <a name="clustered-property-example-vc"></a>Ejemplo de propiedad Clustered (VC++)
-Este ejemplo se muestra el [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propiedad de un [índice](../../../ado/reference/adox-api/index-object-adox.md). Tenga en cuenta que las bases de datos Microsoft Jet no admiten índices agrupados, por lo que este ejemplo devolverá **False** para el **Clustered** propiedad de todos los índices de la *Northwind* base de datos.  
+En este ejemplo se muestra la propiedad [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) de un [Índice](../../../ado/reference/adox-api/index-object-adox.md). Tenga en cuenta que las bases de datos de Microsoft Jet no admiten índices clúster, por lo que en este ejemplo se devolverá **false** para la propiedad **Clustered** de todos los índices de la base de datos *Northwind* .  
   
 ```  
 // BeginClusteredCpp.cpp  
@@ -82,11 +82,11 @@ void ClusteredX() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ClusteredX...."<< endl;  
+      cout << "Error occurred in ClusteredX...."<< endl;  
    }  
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
+## <a name="see-also"></a>Consulte también  
+ [Clustered (propiedad, ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

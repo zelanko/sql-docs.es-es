@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 08223a62-6489-44e4-85e8-b45bfbb11cfc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed2fa6801b1d81c209abeadece0f463b489091f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 347f0eb1d35c2a9662fa4384d6f6bab46bae5003
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974010"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925725"
 ---
 # <a name="setlong-method-sqlserverpreparedstatement"></a>Método setLong (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,12 +42,12 @@ public final void setLong(int n,
   
  *x*  
   
- Un valor **Long** .  
+ Un valor **long**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setLong especifica este método setLong en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

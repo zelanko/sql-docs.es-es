@@ -1,5 +1,5 @@
 ---
-title: Funcionalidad interactiva para diferentes informes (generador de informes y SSRS) de extensiones de representación | Microsoft Docs
+title: Funcionalidad interactiva para diferentes extensiones de representación de informes (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c66e8e8ce302044cac8caf488ca27a0c0c07651e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107799"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes (Generador de informes y SSRS)
@@ -108,8 +108,8 @@ ms.locfileid: "66107799"
 |Word|El servidor de informes exporta el informe a Word utilizando los datos filtrados en el informe actual.|  
 |Otros|El servidor de informes exporta el informe a otros formatos utilizando los datos filtrados en el informe actual.|  
   
-## <a name="see-also"></a>Vea también  
- [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

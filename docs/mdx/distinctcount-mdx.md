@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68077265"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
@@ -31,8 +31,8 @@ DistinctCount(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- El **DistinctCount** es equivalente a la función `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
+## <a name="remarks"></a>Observaciones  
+ La función **DistinctCount** es equivalente a `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
   
 ## <a name="examples"></a>Ejemplos  
  La consulta siguiente muestra el modo de usar la función DistinctCount:  
@@ -61,8 +61,8 @@ DistinctCount(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [Count &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

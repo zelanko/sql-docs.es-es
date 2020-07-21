@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 172f01bdde0f792cd9ed72ad371e5811b8de8885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063596"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
   Puede deshabilitar el regulador de recursos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
@@ -26,7 +25,7 @@ ms.locfileid: "63209713"
   
 -   **Para deshabilitar Resource Governor con:**  [Explorador de objetos](#RGOffObjEx), [Propiedades de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Deshabilitar el regulador de recursos tiene como consecuencia lo siguiente:  
   
 -   No se ejecuta la función clasificadora.  
@@ -43,20 +42,20 @@ ms.locfileid: "63209713"
   
 -   Al reiniciar SQL Server, el regulador de recursos no cargará su configuración, sino que tendrá únicamente los grupos de cargas de trabajo y los grupos de recursos de servidor predeterminados e internos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción `ALTER RESOURCE GOVERNOR` para deshabilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Deshabilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
-##  <a name="RGOffObjEx"></a> Deshabilitar el regulador de recursos mediante el Explorador de objetos  
+##  <a name="disable-resource-governor-using-object-explorer"></a><a name="RGOffObjEx"></a> Deshabilitar el regulador de recursos mediante el Explorador de objetos  
  **Para deshabilitar el regulador de recursos utilizando el Explorador de objetos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
 2.  Haga clic con el botón derecho en **Regulador de recursos**y, luego, haga clic en **Deshabilitar**.  
   
-##  <a name="RGOffProp"></a> Deshabilitar el regulador de recursos mediante Propiedades del regulador de recursos  
+##  <a name="disable-resource-governor-using-resource-governor-properties"></a><a name="RGOffProp"></a> Deshabilitar el regulador de recursos mediante Propiedades del regulador de recursos  
  **Para deshabilitar el regulador de recursos mediante la página Propiedades del regulador de recursos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
@@ -65,7 +64,7 @@ ms.locfileid: "63209713"
   
 3.  Haga clic en la casilla **Habilitar regulador de recursos** , asegúrese de que la casilla no está activada, y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="RGOffTSQL"></a> Deshabilitar el regulador de recursos mediante Transact-SQL  
+##  <a name="disable-resource-governor-using-transact-sql"></a><a name="RGOffTSQL"></a> Deshabilitar el regulador de recursos mediante Transact-SQL  
  **Para deshabilitar el regulador de recursos mediante Transact-SQL**  
   
 1.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR DISABLE** .  
@@ -78,7 +77,7 @@ ALTER RESOURCE GOVERNOR DISABLE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   

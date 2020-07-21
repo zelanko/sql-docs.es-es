@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b12069d84e00738e3ddac8c414f33903f4f0999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063040"
 ---
 # <a name="point"></a>Punto
   En los datos espaciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un `Point` es un objeto no dimensional que representa una ubicación única y contiene valores Z (elevación) y M (medida).  
@@ -59,10 +58,10 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [MultiPoint](multipoint.md)   
- [STX &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
- [STY &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
+## <a name="see-also"></a>Consulte también  
+ [Point](multipoint.md)   
+ [STX &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
+ [STY &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   
  [Datos espaciales &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

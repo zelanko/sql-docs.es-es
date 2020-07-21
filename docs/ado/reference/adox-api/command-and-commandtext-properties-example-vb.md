@@ -1,5 +1,5 @@
 ---
-title: Comando y ejemplo de las propiedades CommandText (VB) | Microsoft Docs
+title: Ejemplo de propiedades Command y CommandText (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 848fffdaabaf0a7f783969d7e44d7612bb2f92dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 116aaa974255352e0d51171f804e86ac02191737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966782"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759321"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Ejemplo de propiedades Command y CommandText (VB)
-El código siguiente muestra cómo usar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad para actualizar el texto de un procedimiento.  
+En el código siguiente se muestra cómo utilizar la propiedad [Command](../../../ado/reference/adox-api/command-property-adox.md) para actualizar el texto de un procedimiento.  
   
 ```  
 ' BeginProcedureTextVB  
@@ -75,9 +75,9 @@ End Sub
 ' EndProcedureTextVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Comando (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Command (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Procedure (objeto) (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Colección de procedimientos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

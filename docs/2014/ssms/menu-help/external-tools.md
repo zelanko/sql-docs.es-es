@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9725997a5e5f8e40a10ecc6b845068432c4393c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067393"
 ---
 # <a name="external-tools"></a>Herramientas externas
   Utilice este cuadro de diálogo para agregar herramientas externas, como el Administrador de configuración de SQL Server o el Bloc de notas, al menú **Herramientas** . La adición de herramientas externas facilita el inicio de otras aplicaciones mientras se trabaja con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando inicie la herramienta, podrá especificar argumentos y un directorio de trabajo. Además, los resultados de algunas herramientas pueden mostrarse en la ventana Resultados. El cuadro de diálogo **Herramientas externas** está disponible en el menú **Herramientas** .  
@@ -32,16 +31,16 @@ ms.locfileid: "62649703"
  **Bajar**  
  Mueva la herramienta seleccionada a una posición inferior en la lista de herramientas que aparece en el menú **Herramientas** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Borra los cuadros de texto de modo que se pueda especificar una herramienta nueva.  
   
  **Eliminar**  
  Quite la herramienta o el comando de la lista **Contenido del menú** y del menú **Herramientas** .  
   
- **Title**  
+ **Título**  
  Nombre de la herramienta o del comando que aparecerá en el submenú **Herramientas externas** del menú **Herramientas** . Coloque una "y" comercial (&) antes de una letra del nombre de la herramienta para utilizar dicha letra como tecla de aceleración de la herramienta. Por ejemplo, `&Spy++` aparecería como **Spy++** en el menú **Herramientas** .  
   
- **Command**  
+ **Comando**  
  Especifica la ruta de acceso al archivo .exe, .com, .pif, .bat, .cmd u otro que se intente iniciar. Si activa la casilla `.bat`Usar la ventana de resultados `.com`, podrá ver el resultado de los archivos **,** y de otros archivos en la ventana Resultados.  
   
  **Argumentos**  
@@ -70,9 +69,9 @@ ms.locfileid: "62649703"
   
 2.  En el cuadro **Título** , escriba **Administrador de configuración de SQL Server**.  
   
-3.  En el **comando** , escriba la ruta de acceso a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] ejecutable, como consola de administración `C:\WINNT\system32\mmc.exe`  
+3.  En el cuadro **comando** , escriba la ruta de acceso al [!INCLUDE[msCoName](../../includes/msconame-md.md)] archivo ejecutable de la consola de administración, como`C:\WINNT\system32\mmc.exe`  
   
-4.  En el **argumentos** , escriba la ruta de acceso al archivo .msc, por ejemplo, `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  En el cuadro **argumentos** , escriba la ruta de acceso al archivo. msc, como`"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  Vea las propiedades del acceso directo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en el menú **Inicio** para confirmar la ubicación de los archivos en el equipo.  

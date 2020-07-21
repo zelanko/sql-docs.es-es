@@ -12,22 +12,21 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2851d5b0f8681b46a8c5b4efc714620fa5cd64f0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897364"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428312"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (expresión de SSIS)
   En esta sección se describen los operadores que proporciona el lenguaje de expresiones, así como la precedencia y la capacidad de asociación de los operadores que el evaluador de expresiones utiliza.  
   
  En la tabla siguiente se muestran temas relacionados con los operadores de esta sección.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |[Conversión &#40;expresión de SSIS&#41;](cast-ssis-expression.md)|Convierte una expresión de un tipo de datos a otro.|  
 |[&#40;&#41; &#40;Paréntesis&#41; &#40;expresión de SSIS&#41;](parentheses-ssis-expression.md)|Identifica el orden de evaluación de las expresiones.|  
@@ -53,9 +52,9 @@ ms.locfileid: "62897364"
 |[&#60;= &#40;Menor o igual que&#41; &#40;expresión de SSIS&#41;](less-than-or-equal-to-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es menor o igual que la segunda.|  
 |[? : &#40;Condicional&#41; &#40;expresión de SSIS&#41;](conditional-ssis-expression.md)|Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana.|  
   
- Para obtener información sobre la posición de cada operador en la jerarquía de precedencia, vea [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md).  
+ Para obtener información sobre la posición de cada operador en la jerarquía de precedencia, vea [Operator Precedence and Associativity](operator-precedence-and-associativity.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)   
  [Ejemplos de expresiones avanzadas de Integration Services](examples-of-advanced-integration-services-expressions.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  

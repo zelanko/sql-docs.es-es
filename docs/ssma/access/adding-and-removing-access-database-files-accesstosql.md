@@ -1,5 +1,6 @@
 ---
-title: Agregar y quitar el acceso a archivos (AccessToSQL) de base de datos. | Microsoft Docs
+title: Agregar y quitar archivos de base de datos de Access (AccessToSQL) | Microsoft Docs
+description: Obtenga información sobre cómo agregar o quitar bases de datos de Access en o desde el proyecto de SSMA para migrar datos de Access a SQL Server o Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,109 +29,109 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104212"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293692"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Agregar y quitar archivos de base de datos de Access (AccessToSQL)
-Para migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe agregar uno o más bases de datos de Access al proyecto SSMA. Estas bases de datos deben ser Access 97 o versiones posteriores. Si tiene bases de datos desde una versión anterior de acceso, debe convertir las bases de datos a una versión más reciente. Para ello, abriendo y guardando las bases de datos en Access 97 o una versión posterior antes de agregarlos a SSMA.  
+Para migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe agregar una o varias bases de datos de Access al proyecto SSMA. Estas bases de datos deben ser Access 97 o versiones posteriores. Si tiene bases de datos de una versión anterior de Access, debe convertir las bases de datos en una versión más reciente. Para ello, abra y guarde las bases de datos en Access 97 o una versión posterior antes de agregarlas a SSMA.  
   
-## <a name="what-happens-when-you-add-access-database-files"></a>¿Qué ocurre cuando se agregan archivos de base de datos de acceso?  
-Al agregar una base de datos de Access a un proyecto SSMA, SSMA lee los metadatos de la base de datos y, a continuación, agrega estos metadatos al archivo de proyecto. Estos metadatos describen la base de datos y sus objetos. SSMA usa los metadatos cuando convierte objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintaxis de SQL Azure, y cuando migra los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede examinar estos metadatos en el Explorador de metadatos de acceso y revisar las propiedades de objetos de base de datos individual.  
+## <a name="what-happens-when-you-add-access-database-files"></a>¿Qué ocurre cuando se agregan archivos de base de datos de Access?  
+Al agregar una base de datos de Access a un proyecto de SSMA, SSMA Lee los metadatos de la base de datos y, a continuación, agrega estos metadatos al archivo de proyecto. Estos metadatos describen la base de datos y sus objetos. SSMA usa los metadatos cuando convierte objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis o SQL Azure, y cuando migra datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede examinar estos metadatos en el explorador de metadatos de acceso y revisar las propiedades de cada uno de los objetos de base de datos.  
   
 > [!NOTE]  
-> Una base de datos de Access se puede dividir en varios archivos: una base de datos de back-end que contiene las tablas y bases de datos front-end que contienen consultas, formularios, informes, macros, módulos y los accesos directos. Si desea migrar una base de datos división [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, agregue la base de datos front-end para SSMA.  
+> Una base de datos de Access se puede dividir en varios archivos: una base de datos back-end que contiene tablas y bases de datos front-end que contienen consultas, formularios, informes, macros, módulos y accesos directos. Si desea migrar una base de datos dividida a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, agregue la base de datos de front-end a SSMA.  
   
-## <a name="permissions-that-are-required-by-ssma"></a>Permisos necesarios de SSMA  
-Para migrar una base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, el grupo de usuarios y el usuario administrador deben tener permisos de administración. Para obtener información sobre cómo migrar bases de datos con protección de grupo de trabajo, consulte [preparar bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md).  
+## <a name="permissions-that-are-required-by-ssma"></a>Permisos requeridos por SSMA  
+Para migrar una base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, el grupo usuarios y el usuario administrador deben tener permisos para administrar. Para obtener información sobre cómo migrar bases de datos con protección de grupo de trabajo, vea [preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md).  
   
-## <a name="selecting-databases-to-add"></a>Seleccionar bases de datos para agregar  
-Si desea agregar una o varias bases de datos a un proyecto SSMA, y los archivos están en una ubicación conocida, puede agregar los archivos mediante el procedimiento siguiente.  
+## <a name="selecting-databases-to-add"></a>Seleccionar las bases de datos que se van a agregar  
+Si desea agregar una o varias bases de datos a un proyecto de SSMA y todos los archivos están en una ubicación conocida, puede Agregar los archivos mediante el procedimiento siguiente.  
   
-**Para agregar archivos de base de datos individual**  
+**Para agregar archivos de base de datos individuales**  
   
-1.  En el **archivo** menú, haga clic en **agregar bases de datos**.  
+1.  En el menú **archivo** , haga clic en **Agregar bases de datos**.  
   
-2.  En el **abierto** diálogo cuadro, busque la carpeta que contiene el archivo de base de datos o archivos.  
+2.  En el cuadro de diálogo **abrir** , busque la carpeta que contiene el archivo o los archivos de la base de datos.  
   
-3.  Seleccione los archivos que desea agregar y, a continuación, haga clic en **abierto**.  
+3.  Seleccione los archivos que desea agregar y, a continuación, haga clic en **abrir**.  
   
-## <a name="finding-databases-to-add"></a>Buscar bases de datos para agregar  
-Si desea agregar varias bases de datos de Access desde diferentes carpetas a un proyecto de SSMA, o desea agregar un único archivo, pero tiene que buscar el archivo, puede seguir estos pasos para buscar uno de varios archivos y agregarlos al proyecto.  
+## <a name="finding-databases-to-add"></a>Buscar bases de datos que agregar  
+Si desea agregar varias bases de datos de Access de distintas carpetas a un proyecto de SSMA o desea agregar un solo archivo, pero tiene que buscar el archivo, puede seguir estos pasos para buscar uno de más archivos y agregarlos al proyecto.  
   
-**Para buscar y agregar las bases de datos**  
+**Para buscar y agregar bases de datos**  
   
-1.  En el **archivo** menú, haga clic en **buscar bases de datos**.  
+1.  En el menú **archivo** , haga clic en **Buscar bases de datos**.  
   
-2.  En el Asistente para buscar las bases de datos, escriba el nombre de la unidad, ruta de acceso de archivo o la ruta de acceso UNC que desea buscar. Como alternativa, haga clic en **examinar** para buscar la carpeta de red o la unidad.  
+2.  En el asistente buscar bases de datos, escriba el nombre de la unidad, la ruta de acceso del archivo o la ruta de acceso UNC en la que desea realizar la búsqueda. O bien, haga clic en **examinar** para buscar la unidad o carpeta de red.  
   
-3.  Haga clic en **agregar** para agregar la ubicación a la lista.  
+3.  Haga clic en **Agregar** para agregar la ubicación a la lista.  
   
     Repita los dos pasos anteriores para agregar más ubicaciones de búsqueda.  
   
-4.  Opcionalmente, agregue los criterios de búsqueda para restringir la lista de bases de datos que se devuelven.  
+4.  Opcionalmente, agregue criterios de búsqueda para refinar la lista de bases de datos que se devuelven.  
   
     > [!IMPORTANT]  
-    > El **todo o parte del nombre de archivo** cuadro de texto no admite caracteres comodín.  
+    > El cuadro **de texto todo o parte del nombre de archivo** no admite caracteres comodín.  
   
-5.  Haga clic en **Scan**.  
+5.  Haz clic en **Examen**.  
   
-    Aparece la página de análisis. Esto muestra las bases de datos que se han encontrado y el progreso de la búsqueda. Para detener la búsqueda, haga clic en **detener**.  
+    Aparece la página digitalizar. Esto muestra las bases de datos que se han encontrado y el progreso de la búsqueda. Para detener la búsqueda, haga clic en **detener**.  
   
-6.  En la página Seleccionar archivos, seleccione las bases de datos que desea agregar al proyecto.  
+6.  En la página seleccionar archivos, seleccione las bases de datos que desea agregar al proyecto.  
   
-    Puede usar el **seleccionar todo** y **Borrar todo** botones en la parte superior de la lista para seleccionar o borrar todas las bases de datos. Puede presionada la tecla CTRL para seleccionar varias bases de datos, o mantenga presionada la tecla MAYÚS hacia abajo para seleccionar un intervalo de bases de datos.  
+    Puede usar los botones **seleccionar todo** y **Borrar todo** de la parte superior de la lista para seleccionar o borrar todas las bases de datos. Puede mantener presionada la tecla CTRL para seleccionar varias bases de datos o mantener presionada la tecla Mayús para seleccionar un intervalo de bases de datos.  
   
 7.  Haga clic en **Next**.  
   
-8.  En la página de comprobación, haga clic en **finalizar**.  
+8.  En la página comprobar, haga clic en **Finalizar**.  
   
-## <a name="browsing-access-metadata"></a>Examinar los metadatos de acceso  
-Después de agregar una base de datos de Access a un proyecto, los metadatos del proyecto aparecen en el Explorador de metadatos de acceso. Puede examinar la jerarquía de las bases de datos y objetos de base de datos en el explorador.  
+## <a name="browsing-access-metadata"></a>Examinar metadatos de acceso  
+Después de agregar una base de datos de Access a un proyecto, los metadatos del proyecto aparecen en el explorador de metadatos de Access. Puede examinar la jerarquía de bases de datos y objetos de base de datos en el explorador.  
   
 **Para examinar los metadatos**  
   
-1.  En el Explorador de metadatos de acceso, expanda **acceso de metabase**y, a continuación, expanda **bases de datos**.  
+1.  En el explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
   
 2.  Expanda la base de datos que desea revisar y, a continuación, expanda **consultas**.  
   
-    Tenga en cuenta la lista de consultas. Si selecciona una consulta, un **SQL** ficha y un **propiedades** ficha aparece en el panel derecho.  
+    Observe la lista de consultas. Si selecciona una consulta, aparece una pestaña **SQL** y una pestaña **propiedades** en el panel derecho.  
   
 3.  Expanda **tablas** y, a continuación, seleccione una tabla.  
   
-    Observe que aparecen cuatro pestañas: **Tabla**, **asignación de tipos de**, **propiedades**, y **datos**.  
+    Observe que aparecen cuatro pestañas: **tabla**, **asignación de tipos**, **propiedades**y **datos**.  
   
-4.  Expanda una tabla, **claves**y, a continuación, seleccione una clave.  
+4.  Expanda una tabla, expanda **claves**y, a continuación, seleccione una clave.  
   
-    Las propiedades de clave aparecen en el panel derecho.  
+    Las propiedades clave aparecen en el panel derecho.  
   
 5.  Expanda **índices**y, a continuación, seleccione un índice.  
   
-    Las propiedades de índice aparecen en el panel derecho.  
+    Las propiedades del índice aparecen en el panel derecho.  
   
-## <a name="refreshing-databases"></a>Actualizar las bases de datos  
-Si una base de datos de Access cambia después de agregar el archivo, puede actualizar los metadatos de la base de datos de Access.  
+## <a name="refreshing-databases"></a>Actualización de bases de datos  
+Si una base de datos de Access cambia después de agregar su archivo, puede actualizar los metadatos de la base de datos de Access.  
   
-**Para actualizar los metadatos de acceso**  
+**Para actualizar los metadatos de Access**  
   
--   En el Explorador de metadatos de acceso, haga clic en la base de datos y, a continuación, seleccione **actualizar desde la base de datos**.  
+-   En el explorador de metadatos de Access, haga clic con el botón derecho en la base de datos y seleccione **actualizar desde base de**datos.  
   
 ## <a name="removing-databases"></a>Quitar bases de datos  
-Puede quitar una base de datos de Access desde un proyecto siguiendo estos pasos.  
+Puede quitar una base de datos de Access de un proyecto siguiendo estos pasos.  
   
 **Para quitar una base de datos de un proyecto**  
   
-1.  En el Explorador de metadatos de acceso, expanda **acceso de metabase**y, a continuación, expanda **bases de datos**.  
+1.  En el explorador de metadatos de Access, expanda **Access-metabase**y, a continuación, expanda **bases**de datos.  
   
-2.  Haga clic en la base de datos y, a continuación, seleccione **Quitar base de datos**.  
+2.  Haga clic con el botón secundario en la base de datos y seleccione **quitar base de datos**.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [conectarse a SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso del proceso de migración consiste en [conectarse a SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Crear y administrar proyectos](creating-and-managing-projects-accesstosql.md)  
+[Creación y administración de proyectos](creating-and-managing-projects-accesstosql.md)  
   

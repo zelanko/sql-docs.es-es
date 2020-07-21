@@ -1,10 +1,9 @@
 ---
-title: Trabajos que hacen referencia a una programación | Microsoft Docs
-ms.custom: ''
+title: Trabajos que hacen referencia a una programación
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 872073d09b98ac2075d6221263043b073713023e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3e79eb5c5a3d556d0c5887da32967165efb5da94
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258113"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242233"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Trabajos que hacen referencia a una programación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

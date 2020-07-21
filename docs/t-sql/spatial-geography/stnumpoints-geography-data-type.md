@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 320118e7844dfe40e45be9a893ad7bf45faff8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26d1e0fc71a43dabeb1c02737180766cbe840f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702606"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el número total de puntos de cada una de las figuras de una instancia de **geography**.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68120899"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método cuenta los puntos de la descripción de una instancia de **geography**. Se cuentan los puntos duplicados; sin embargo, los puntos de conexión entre segmentos se cuentan solo una vez. Si esta instancia es una colección, este método devuelve el número total de puntos de la colección.  
   
 ## <a name="examples"></a>Ejemplos  

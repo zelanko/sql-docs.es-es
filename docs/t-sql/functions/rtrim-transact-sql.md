@@ -18,18 +18,18 @@ helpviewer_keywords:
 - blank characters [SQL Server]
 - trailing blanks
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42fc593c953df13800a0ba49177f5fa71347acd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb85e014f600ea2d88f4022694a490ef5d4a8c6c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089887"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003688"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una cadena de caracteres después de truncar todos los espacios finales.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68089887"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 RTRIM ( character_expression )  
 ```  
   
@@ -47,7 +47,7 @@ RTRIM ( character_expression )
   
  *character_expression* debe ser de un tipo de datos que se pueda convertir implícitamente a **varchar**. De lo contrario, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varchar** o **nvarchar**  
   
 ## <a name="examples"></a>Ejemplos  
@@ -55,7 +55,7 @@ RTRIM ( character_expression )
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo  
  El siguiente ejemplo toma una cadena de caracteres que tiene espacios al final de la frase y devuelve el texto sin esos espacios.  
   
-```  
+```sql  
 SELECT RTRIM('Removes trailing spaces.   ');  
 ```  
   
@@ -66,7 +66,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
 ### <a name="b-simple-example"></a>B. Ejemplo sencillo  
  En el ejemplo siguiente se muestra cómo utilizar `RTRIM` para quitar los espacios finales. En este caso hay otra cadena concatenada a la primera cadena para mostrar que los espacios han desaparecido.  
   
-```  
+```sql  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
 ```  
   
@@ -77,7 +77,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
 ### <a name="c-using-rtrim-with-a-variable"></a>C. Usar RTRIM con una variable  
  En el ejemplo siguiente se muestra cómo utilizar `RTRIM` para quitar los espacios finales de una variable de caracteres.  
   
-```  
+```sql  
 DECLARE @string_to_trim varchar(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
@@ -87,18 +87,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```sql   
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence.     Next string.  
- 
- (1 row(s) affected)`  
- 
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence. Next string.  
- 
- (1 row(s) affected)
- ```  
-  
+```
+Four spaces are after the period in this sentence.     Next string.
+
+Four spaces are after the period in this sentence. Next string.
+```
 
   
 ## <a name="see-also"></a>Consulte también  

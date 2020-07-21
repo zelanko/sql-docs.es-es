@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0b70fdfc02e876310841bde3646aab9620c56951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896586"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Instrucciones RESTORE: REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Rebobina y cierra los dispositivos de cinta especificados que se quedaron abiertos con las instrucciones BACKUP o RESTORE ejecutadas con la opción NOREWIND. Este comando solo se admite para dispositivos de cinta.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68082505"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 RESTORE REWINDONLY   
 FROM <backup_device> [ ,...n ]  
@@ -61,7 +61,7 @@ FROM <backup_device> [ ,...n ]
  Especifica los dispositivos de copia de seguridad físicos o lógicos que se utilizarán para la operación de restauración.  
   
  { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
- Es el nombre lógico, que debe seguir las reglas de los identificadores, del dispositivo de copia de seguridad creado por **sp_addumpdevice** desde el que se restaura la base de datos. Si se proporciona como una variable ( **@** _logical\_backup\_device\_name\_var_), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.  
+ Es el nombre lógico, que debe seguir las reglas de los identificadores, del dispositivo de copia de seguridad creado por **sp_addumpdevice** desde el que se restaura la base de datos. Si se proporciona como una variable ( **@** _logical\_backup\_device\_name\_var_), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
  Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta se deben especificar con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: DISK = "C:\Archivos de programa\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak" o TAPE = "\\\\.\TAPE0". Si se especifica como una variable ( **@** _physical\_backup\_device\_name\_var_), el nombre del dispositivo se puede especificar como una constante de cadena ( **@** _physical\_backup\_device\_name\_var_ = "*physical_backup_device_name*") o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
@@ -89,7 +89,7 @@ FROM <backup_device> [ ,...n ]
  Especifica que la cinta no se descargue automáticamente de la unidad de cinta después de una operación RESTORE. NOUNLOAD permanece establecido hasta que se especifica UNLOAD.  
   
 ## <a name="general-remarks"></a>Notas generales  
- RESTORE REWINDONLY es una alternativa a RESTORE LABELONLY FROM TAPE = \<nombre> WITH REWIND. Se puede encontrar una lista de las unidades de cinta abiertas si se consulta la vista de administración dinámica [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
+ RESTORE REWINDONLY es una alternativa a RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. Se puede encontrar una lista de las unidades de cinta abiertas si se consulta la vista de administración dinámica [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   

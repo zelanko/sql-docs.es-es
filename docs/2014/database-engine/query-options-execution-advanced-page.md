@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034924"
 ---
 # <a name="query-options-execution-advanced-page"></a>Opciones de ejecución de consulta (página Avanzadas)
 
@@ -29,24 +28,24 @@ ms.locfileid: "71199324"
 
 **establecer PARSEONLY** Comprueba la sintaxis de cada consulta, pero no ejecuta las consultas. Esta opción está desactivada de forma predeterminada.  
 
-**establecer CONCAT_NULL_YIELDS_NULL** Cuando se activa esta casilla, las consultas que concatenan un valor existente con un `NULL`, siempre `NULL` devuelven como resultado. Cuando se desactiva esta casilla, un valor existente concatenado con un valor `NULL`, devuelve el valor existente. Esta opción está activada de forma predeterminada.
+**establecer CONCAT_NULL_YIELDS_NULL** Cuando se activa esta casilla, las consultas que concatenan un valor existente con un `NULL` , siempre devuelven `NULL` como resultado. Cuando se desactiva esta casilla, un valor existente concatenado con un valor `NULL`, devuelve el valor existente. Esta opción está seleccionada de forma predeterminada.
 
-**establecer ARITHABORT** Cuando se activa esta casilla, cuando una `INSERT`instrucción, `DELETE` o `UPDATE` encuentra un error aritmético (desbordamiento, división por cero o error de dominio) durante la evaluación de la expresión, se finaliza la consulta o el lote. Cuando se desactiva esta casilla, se proporciona un valor `NULL` para ese valor si es posible, la consulta continúa y se incluye un mensaje con el resultado. Vea los Libros en pantalla para una descripción más detallada de este comportamiento. Esta opción está activada de forma predeterminada.
+**establecer ARITHABORT** Cuando se activa esta casilla, cuando una `INSERT` instrucción, `DELETE` o encuentra `UPDATE` un error aritmético (desbordamiento, división por cero o error de dominio) durante la evaluación de la expresión, se finaliza la consulta o el lote. Cuando se desactiva esta casilla, se proporciona un valor `NULL` para ese valor si es posible, la consulta continúa y se incluye un mensaje con el resultado. Vea los Libros en pantalla para una descripción más detallada de este comportamiento. Esta opción está seleccionada de forma predeterminada.
   
-**SET SHOWPLAN_TEXT** Cuando se activa esta casilla, el plan de consulta se devuelve en formato de texto con cada consulta. Esta opción está desactivada de forma predeterminada.
+**establecer SHOWPLAN_TEXT** Cuando se activa esta casilla, el plan de consulta se devuelve en formato de texto con cada consulta. Esta opción está desactivada de forma predeterminada.
   
-**establecer hora de estadísticas** Cuando se activa esta casilla, las estadísticas de tiempo se devuelven con cada consulta. Esta opción está desactivada de forma predeterminada.
+**SET STATISTICS TIME** Cuando se activa esta casilla, las estadísticas de tiempo se devuelven con cada consulta. Esta opción está desactivada de forma predeterminada.
   
 **establecer e/s de estadísticas** Cuando se activa esta casilla, las estadísticas relacionadas con la entrada/salida (e/s) se devuelven con cada consulta. Esta opción está desactivada de forma predeterminada.
   
-**establecer el nivel de aislamiento de transacción** De forma predeterminada, se establece el nivel de aislamiento de transacción de lectura confirmada. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). El nivel de aislamiento de transacción de instantánea no está disponible. Para utilizar el aislamiento SNAPSHOT, agregue la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] siguiente:
+**SET TRANSACTION ISOLATION LEVEL** Se ha establecido de forma predeterminada el nivel de aislamiento de transacción READ COMMITTED. Para obtener más información, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql). El nivel de aislamiento de transacción de instantánea no está disponible. Para utilizar el aislamiento SNAPSHOT, agregue la instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] siguiente:
   
   ```sql
   SET TRANSACTION ISOLATION LEVEL SNAPSHOT;
   GO
   ```
 
-**establecer prioridad de INTERbloqueo** El valor predeterminado de **normal** permite que cada consulta tenga la misma prioridad cuando se produce un interbloqueo. Seleccione la prioridad Baja en la lista desplegable si desea que esta consulta pierda los conflictos de interbloqueo y se seleccione cuando la consulta haya finalizado.
+**SET DEADLOCK PRIORITY** El valor predeterminado de **Normal** permite que cada consulta tenga la misma prioridad cuando tiene lugar un interbloqueo. Seleccione la prioridad Baja en la lista desplegable si desea que esta consulta pierda los conflictos de interbloqueo y se seleccione cuando la consulta haya finalizado.
 
 **establecer tiempo de espera de bloqueo** El valor predeterminado-1 indica que los bloqueos se mantienen hasta que se completen las transacciones. El valor de 0 significa no esperar en absoluto y devolver un mensaje en cuanto se encuentre un bloqueo. Proporcione un valor mayor que 0 milisegundos para finalizar una transacción si los bloqueos para transacción deben mantenerse durante un intervalo mayor.
 
@@ -54,7 +53,7 @@ ms.locfileid: "71199324"
 
 **Suprimir encabezados de mensaje de proveedor** Cuando se activa esta casilla, no se muestran los mensajes de estado del proveedor (como el proveedor de OLE DB). Esta casilla está activada de forma predeterminada. Desactive esta casilla para ver los mensajes del proveedor cuando la solución de las consultas presente errores en el nivel del proveedor.
 
-**Desconectar después de la ejecución de la consulta** Cuando se activa esta casilla, la conexión a SQL Server finaliza una vez finalizada la consulta. Esta opción está desactivada de forma predeterminada.
+**Desconectar tras la ejecución de la consulta** Cuando se activa esta casilla, la conexión a SQL Server finaliza una vez que termina la consulta. Esta opción está desactivada de forma predeterminada.
 
 **Mostrar la hora de finalización** Permite imprimir la hora en que se completó la ejecución de la consulta después de los resultados de la consulta o en la pestaña mensajes.
 

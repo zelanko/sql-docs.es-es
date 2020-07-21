@@ -1,5 +1,5 @@
 ---
-title: Referencia de las propiedades de atributo de dimensión | Microsoft Docs
+title: Referencia de propiedades de atributo de dimensión | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3437c8edaa0ffeb2d647ec2dc111106b8ef81030
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075191"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546817"
 ---
 # <a name="dimension-attribute-properties-reference"></a>Referencia de las propiedades de los atributos de dimensión
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], existen numerosas propiedades que determinan el funcionamiento de las dimensiones y sus atributos. En la siguiente tabla se enumeran y describen cada una de estas propiedades de los atributos.  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , hay muchas propiedades que determinan cómo funcionan las dimensiones y los atributos de dimensión. En la siguiente tabla se enumeran y describen cada una de estas propiedades de los atributos.  
   
-|Property|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`AttributeHierarchyDisplayFolder`|Identifica la carpeta en la que se va a mostrar la jerarquía de atributos asociada a los usuarios finales.|  
 |`AttributeHierarchyEnabled`|Determina si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ha generado una jerarquía de atributos para el atributo. Si la jerarquía de atributos no está habilitada, no es posible utilizar el atributo en una jerarquía definida por el usuario ni se puede hacer referencia a la jerarquía de atributos en instrucciones MDX (expresiones multidimensionales).|  
-|`AttributeHierarchyOptimizedState`|Determina el nivel de optimización aplicado a la jerarquía de atributos. De forma predeterminada, una jerarquía de atributos está `FullyOptimized`, lo que significa que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera índices para ella a fin de mejorar el rendimiento de las consultas. La otra opción, `NotOptimized`, significa que no se generan índices para la jerarquía de atributos. Uso de `NotOptimized` es útil si la jerarquía de atributo se usa para propósitos distintos de la consulta, porque no se construye ningún índice adicional para el atributo. Las jerarquías de atributos se pueden utilizar también para ordenar otro atributo.|  
+|`AttributeHierarchyOptimizedState`|Determina el nivel de optimización aplicado a la jerarquía de atributos. De forma predeterminada, una jerarquía de atributos está `FullyOptimized`, lo que significa que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera índices para ella a fin de mejorar el rendimiento de las consultas. La otra opción, `NotOptimized`, significa que no se generan índices para la jerarquía de atributos. `NotOptimized`El uso de es útil si la jerarquía de atributo se usa para fines distintos a la consulta, porque no se generan índices adicionales para el atributo. Las jerarquías de atributos se pueden utilizar también para ordenar otro atributo.|  
 |`AttributeHierarchyOrdered`|Determina si la jerarquía de atributos asociada está ordenada. El valor predeterminado es `True`. Sin embargo, si una jerarquía de atributos no se va a utilizar para realizar consultas, es posible ahorrar tiempo de procesamiento cambiando el valor de esta propiedad a `False`.|  
 |`AttributeHierarchyVisible`|Determina si la jerarquía de atributos es visible para las aplicaciones cliente. El valor predeterminado es `True`. Sin embargo, si una jerarquía de atributos no se va a utilizar para realizar consultas, es posible ahorrar tiempo de procesamiento cambiando el valor de esta propiedad a `False`.|  
 |`CustomRollupColumn`|Especifica la columna que define una fórmula de resumen personalizado.|  
@@ -48,21 +47,21 @@ ms.locfileid: "66075191"
 |`Name`|Contiene el nombre descriptivo del atributo.|  
 |`NameColumn`|Identifica la columna que proporciona el nombre del atributo que se muestra a los usuarios, en lugar del valor de la columna de clave del atributo. Esta columna se utiliza cuando el valor de la columna de clave de un miembro de atributo es críptico o no útil para el usuario, o bien cuando la columna de clave está basada en una clave compuesta. La propiedad `NameColumn` no se utiliza en jerarquías primaria-secundaria, en lugar de ello, se utiliza la propiedad `NameColumn` para miembros secundarios como nombres de miembro en una jerarquía de atributos primarios y secundarios.|  
 |`NamingTemplate`|Define cómo se denominan los niveles en una jerarquía de elementos primarios y secundarios construida para el atributo primario. Este valor de propiedad se utiliza únicamente cuando el valor de la propiedad `Usage` se ha establecido en Parent. Esto significa que se ha definido una jerarquía de atributos primarios y secundarios.|  
-|`OrderBy`|Describe cómo ordenar los miembros incluidos en la jerarquía de atributos. El valor predeterminado es Nombre, que especifica que la clasificación de los miembros de atributo está basada en el valor de la propiedad `NameColumn`, si existe. En caso contrario, los miembros se ordenan por el valor de la columna de clave. Las opciones disponibles son las siguientes:<br /><br /> `NameColumn` Ordena por el valor de la `NameColumn` propiedad.<br /><br /> **Key** Se ordena por el valor de la columna de clave del miembro del atributo.<br /><br /> **AttributeKey** Se ordena por el valor de la clave de miembro de un atributo especificado, que debe tener una relación de atributo con el atributo.<br /><br /> **AttributeName** Se ordena por el valor del nombre de miembro de un atributo especificado, que debe tener una relación de atributo con el atributo.|  
+|`OrderBy`|Describe cómo ordenar los miembros incluidos en la jerarquía de atributos. El valor predeterminado es Nombre, que especifica que la clasificación de los miembros de atributo está basada en el valor de la propiedad `NameColumn`, si existe. En caso contrario, los miembros se ordenan por el valor de la columna de clave. Las opciones disponibles son las siguientes:<br /><br /> `NameColumn`Ordene por el valor de la `NameColumn` propiedad.<br /><br /> **Key** Se ordena por el valor de la columna de clave del miembro del atributo.<br /><br /> **AttributeKey** Se ordena por el valor de la clave de miembro de un atributo especificado, que debe tener una relación de atributo con el atributo.<br /><br /> **AttributeName** Se ordena por el valor del nombre de miembro de un atributo especificado, que debe tener una relación de atributo con el atributo.|  
 |`OrderByAttribute`|Identifica el atributo por el que se van a ordenar los miembros de la jerarquía de atributos.|  
-|`RootMemberIf`|Determina cómo se identifican los miembros raíz o superiores de una jerarquía de elementos primarios y secundarios. Este valor de propiedad se utiliza únicamente cuando el valor de la propiedad `Usage` se ha establecido en Parent. Esto significa que se ha definido una jerarquía de atributos primarios y secundarios. El valor predeterminado es `ParentIsBlankSelfOrMissing`, lo que significa que solo se tratan como miembros raíz los miembros que cumplen una o más de las condiciones descritas para `ParentIsBlank`, `ParentIsSelf` o `ParentIsMissing`. También están disponibles los siguientes valores:<br /><br /> `ParentIsBlank` Solo los miembros con un valor null, cero o una cadena vacía en la columna o columnas se tratan como miembros raíz.<br /><br /> `ParentIsSelf` Solo los miembros como elementos primarios se tratan como miembros raíz.<br /><br /> `ParentIsMissing` Solo los miembros cuyos elementos primarios no se puede encontrar se tratan como miembros raíz.|  
+|`RootMemberIf`|Determina cómo se identifican los miembros raíz o superiores de una jerarquía de elementos primarios y secundarios. Este valor de propiedad se utiliza únicamente cuando el valor de la propiedad `Usage` se ha establecido en Parent. Esto significa que se ha definido una jerarquía de atributos primarios y secundarios. El valor predeterminado es `ParentIsBlankSelfOrMissing`, lo que significa que solo se tratan como miembros raíz los miembros que cumplen una o más de las condiciones descritas para `ParentIsBlank`, `ParentIsSelf` o `ParentIsMissing`. También están disponibles los siguientes valores:<br /><br /> `ParentIsBlank`Solo los miembros con un valor null, cero o una cadena vacía en la columna o columnas de clave se tratan como miembros raíz.<br /><br /> `ParentIsSelf`Solo los miembros con ellos mismos como elementos primarios se tratan como miembros raíz.<br /><br /> `ParentIsMissing`Solo los miembros con elementos primarios que no se pueden encontrar se tratan como miembros raíz.|  
 |`Type`|Contiene el tipo del atributo. Para más información, vea [Configurar tipos de atributos](attribute-properties-configure-attribute-types.md).|  
 |`UnaryOperatorColumn`|Especifica la columna que proporciona operadores unarios. Es un enlace del tipo DataItem que define los detalles de una columna que proporciona un operador unario.|  
-|`Usage`|Describe cómo se utiliza un atributo.<br /><br /> Las opciones disponibles son las siguientes:<br /><br /> `Regular` El atributo es un atributo normal. Este es el valor predeterminado.<br /><br /> **Key** El atributo es un atributo clave.<br /><br /> **Parent** El atributo es un atributo primario.|  
+|`Usage`|Describe cómo se utiliza un atributo.<br /><br /> Las opciones disponibles son las siguientes:<br /><br /> `Regular`El atributo es un atributo normal. Este es el valor predeterminado.<br /><br /> **Key** El atributo es un atributo clave.<br /><br /> **Parent** El atributo es un atributo primario.|  
 |`ValueColumn`|Identifica la columna que proporciona el valor del atributo. Si se especifica el elemento `NameColumn` del atributo, se utilizan los mismos valores `DataItem` como valores predeterminados para el elemento `ValueColumn`. Si no se especifica el elemento `NameColumn` del atributo y la colección `KeyColumns` del mismo contiene un único elemento `KeyColumn` que representa una columna de clave con un tipo de datos de cadena, se utilizan los mismos valores de `DataItem` como valores predeterminados para el elemento `ValueColumn`.|  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo establecer valores para el `KeyColumn` propiedad cuando se trabaja con valores nulos y otros problemas de integridad de datos, vea [controlar problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
+>  Para obtener más información sobre cómo establecer los valores de la `KeyColumn` propiedad cuando se trabaja con valores NULL y otros problemas de integridad de datos, vea [control de problemas de integridad de datos en Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
 > [!NOTE]  
 >  El miembro predeterminado en un jerarquía de atributo se usa para evaluar expresiones cuando un miembro de una jerarquía de atributo no se incluye explícitamente en una consulta. El miembro predeterminado de un atributo se especifica mediante la propiedad `DefaultMember` del atributo. Siempre que se incluya una jerarquía de una dimensión en una consulta, se omiten todos los miembros predeterminados de los atributos correspondientes a los niveles de la jerarquía. Si no se incluye ninguna jerarquía de una dimensión en una consulta, se usan los miembros predeterminados para todos los atributos de la dimensión. Para más información sobre los miembros predeterminados, vea [Definir un miembro predeterminado](attribute-properties-define-a-default-member.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos y jerarquías de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

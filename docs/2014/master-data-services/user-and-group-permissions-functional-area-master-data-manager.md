@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9de9cb5e23f14d0033040aa5111e3caa51137ae6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970957"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Área funcional de Permisos de usuario y grupo (Master Data Manager)
   En el área funcional de Permisos de usuario y grupo, los administradores pueden conceder permisos para áreas funcionales, atributos (en la pestaña Modelos) y miembros (en la pestaña Miembros de la jerarquía). Se resuelven los permisos superpuestos para determinar el permiso de un usuario para cada valor de atributo individual.  
@@ -46,7 +45,7 @@ ms.locfileid: "65482553"
   
  [Solucionar problemas de seguridad de Master Data Manager](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

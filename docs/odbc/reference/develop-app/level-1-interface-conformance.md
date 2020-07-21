@@ -1,5 +1,5 @@
 ---
-title: Cumplimiento de la interfaz de nivel 1 | Microsoft Docs
+title: Conformidad con la interfaz de nivel 1 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d31d5fe8aea1df4e7937104580efb820ba6f031
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135012"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306186"
 ---
 # <a name="level-1-interface-conformance"></a>Cumplimiento de la interfaz de nivel 1
-El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel de conformidad de interfaz de Core además de características adicionales, como las transacciones, que suelen estar disponibles en un DBMS relacional OLTP. Un controlador de función de la interfaz de nivel 1 permite que la aplicación haga lo siguiente, además de las características en el nivel de conformidad de interfaz de núcleo:  
+El nivel de conformidad de la interfaz de nivel 1 incluye la funcionalidad del nivel de conformidad de la interfaz básica más características adicionales, como transacciones, que suelen estar disponibles en un DBMS relacional de OLTP. Un controlador compatible con la interfaz de nivel 1 permite que la aplicación realice lo siguiente, además de las características del nivel de conformidad de la interfaz principal:  
   
 |||  
 |-|-|  
-|101|Especifique el esquema de base de datos de las tablas y vistas (con nombres de dos partes). (Para obtener más información, vea la nomenclatura de tres partes característica 201 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
-|102|Invocar true ejecución asincrónica de las funciones ODBC, donde las funciones ODBC aplicables son todas sincrónicas o todas asincrónicas en una conexión determinada.|  
-|103|Usar cursores desplazables y, por tanto, obtener acceso a un conjunto de resultados en los métodos que no sea de solo avance, mediante una llamada a **SQLFetchScroll** con el *FetchOrientation* argumento distinto de SQL_FETCH_NEXT. (El SQL_FETCH_BOOKMARK *FetchOrientation* está en la característica 204 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
-|104|Obtener las claves principales de tablas, mediante una llamada a **SQLPrimaryKeys**.|  
-|105|Utilice los procedimientos almacenados, a través de la secuencia de escape ODBC para las llamadas de procedimiento y consultar el diccionario de datos con respecto a los procedimientos almacenados, mediante una llamada a **SQLProcedureColumns** y **SQLProcedures**. (El proceso por el que los procedimientos se crean y almacenan en el origen de datos está fuera del ámbito de este documento).|  
-|106|Conectarse a un origen de datos a través de forma interactiva los servidores disponibles, mediante una llamada a **SQLBrowseConnect**.|  
-|107|Utilice las funciones ODBC en lugar de instrucciones SQL para realizar determinadas operaciones de base de datos: **SQLSetPos** con SQL_POSITION y SQL_REFRESH.|  
-|108|Obtener acceso al contenido de varios conjuntos de resultados generados por lotes y procedimientos almacenados, mediante una llamada a **SQLMoreResults**.|  
-|109|Delimitar las transacciones que abarcan varias funciones ODBC, con atomicidad y la capacidad de especificar SQL_ROLLBACK en **SQLEndTran**.|
+|101|Especifique el esquema de las tablas y vistas de base de datos (con nombres de dos partes). (Para obtener más información, vea la característica de nomenclatura de tres partes 201 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).|  
+|102|Invocar la ejecución asincrónica verdadera de funciones ODBC, donde las funciones ODBC aplicables son todas sincrónicas o asincrónicas en una conexión determinada.|  
+|103|Utilice cursores desplazables y, por tanto, conseguirá el acceso a un conjunto de resultados en métodos que no sean de solo avance, llamando a **SQLFetchScroll** con el argumento *FetchOrientation* que no sea SQL_FETCH_NEXT. (El SQL_FETCH_BOOKMARK *FetchOrientation* está en la característica 204 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).|  
+|104|Obtener las claves principales de las tablas mediante una llamada a **SQLPrimaryKeys**.|  
+|105|Use procedimientos almacenados, a través de la secuencia de escape ODBC para llamadas a procedimientos, y consulte el Diccionario de datos con respecto a los procedimientos almacenados llamando a **SQLProcedureColumns** y **SQLProcedures**. (El proceso por el que se crean y almacenan los procedimientos en el origen de datos está fuera del ámbito de este documento).|  
+|106|Conéctese a un origen de datos mediante la exploración interactiva de los servidores disponibles mediante una llamada a **SQLBrowseConnect**.|  
+|107|Usar funciones de ODBC en lugar de instrucciones SQL para realizar determinadas operaciones de base de datos: **SQLSetPos** con SQL_POSITION y SQL_REFRESH.|  
+|108|Obtener acceso al contenido de varios conjuntos de resultados generados por lotes y procedimientos almacenados mediante una llamada a **SQLMoreResults**.|  
+|109|Delimite las transacciones que abarcan varias funciones ODBC, con verdadera atomicidad y la capacidad de especificar SQL_ROLLBACK en **SQLEndTran**.|

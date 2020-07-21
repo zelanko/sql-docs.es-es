@@ -1,6 +1,6 @@
 ---
-title: Extended eventos herramientas | Documentos de Microsoft
-ms.custom: ''
+title: Herramientas de eventos extendidos
+description: Estas herramientas crean y administran sesiones de eventos extendidos de SQL Server. Además de las sesiones que cree, existe una sesión de estado del sistema predeterminada en el servidor.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,16 @@ ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8daf9891191b79a2b5c37a37671fa8e38813cdeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3fa4511be07d5bb0e9a69d0db4515926824600cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717693"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Puede utilizar las siguientes herramientas para crear y administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68021869"
   
 -   El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Es una herramienta eficaz que puede usar para crear, modificar y administrar sesiones de eventos extendidos. Para obtener más información, vea [Usar el proveedor de PowerShell para eventos extendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).  
   
--   Columnas en la tabla de origen capturadas[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Le permite crear y ejecutar los ejemplos de código que se proporcionan en los temas de eventos extendidos. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le permite crear y ejecutar los ejemplos de código que se proporcionan en los temas de eventos extendidos. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md).  
   
  Además de las sesiones que cree, existe una sesión de estado del sistema predeterminada en el servidor. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [Usar la sesión system_health](../../relational-databases/extended-events/use-the-system-health-session.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68021869"
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|Enumera todas las definiciones de sesión de eventos.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|Devuelve una fila por cada acción en cada evento de una sesión de eventos.|  
-|[sys.server_event_session_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql.md)|Devuelve una fila para cada evento de una sesión de eventos.|  
+|[sys.server_event_session_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql.md)|Devuelve una fila por cada evento de una sesión de eventos.|  
 |[sys.server_event_session_fields &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|Devuelve una fila para cada columna personalizable que se estableció explícitamente en los eventos y destinos.|  
 |[sys.server_event_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|Devuelve una fila para cada destino de evento de una sesión de eventos.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68021869"
 |[sys.dm_xe_object_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)|Devuelve la información del esquema para todos los objetos.|  
 |[sys.dm_xe_packages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql.md)|Enumera todos los paquetes registrados en el motor de eventos extendidos.|  
 |[sys.dm_xe_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql.md)|Devuelve información sobre una sesión de eventos extendidos activa.|  
-|[sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)|Devuelve información sobre los destinos de la sesión.|  
+|[sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)|Devuelve información acerca de los destinos de la sesión.|  
 |[sys.dm_xe_session_events &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-events-transact-sql.md)|Devuelve información sobre los eventos de la sesión.|  
 |[sys.dm_xe_session_event_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-event-actions-transact-sql.md)|Devuelve información sobre las acciones de la sesión de eventos.|  
 |[sys.dm_xe_map_values &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-map-values-transact-sql.md)|Proporciona una asignación de claves numéricas internas a texto legible.|  

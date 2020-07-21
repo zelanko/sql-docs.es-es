@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ecf9c330ef81a37a70237061f039db29b17576d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716734"
 ---
 # <a name="replication-monitor"></a>Monitor de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Esta sección de la documentación incluye información sobre el Monitor de replicación. Las páginas y cuadros de diálogo mostrados en el monitor son diferentes según el tipo de replicación y la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervise.  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Esta sección de la documentación incluye información sobre el Monitor de replicación. Las páginas y los cuadros de diálogo mostrados en el monitor difieren según el tipo de replicación y la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervise.  
   
 -   [Monitor de replicación, página Principal](../../relational-databases/replication/replication-monitor-main-page.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68769679"
   
 -   [Configuración del publicador](../../relational-databases/replication/publisher-settings.md)  
   
--   [Información del publicador, Publicaciones](../../relational-databases/replication/publisher-information-publications.md)  
+-   [Información del publicador, publicaciones](../../relational-databases/replication/publisher-information-publications.md)  
   
 -   [Información del publicador, Lista de supervisión de suscripciones &#40;Publicación transaccional, SQL Server 2005 y posteriores&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68769679"
   
 -   [Información de publicador, Lista de supervisión de suscripciones &#40;Publicación de instantáneas, SQL Server 2005 y posteriores&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)  
   
--   [Información de publicador, Agentes](../../relational-databases/replication/publisher-information-agents.md)  
+-   [Información del publicador, agentes](../../relational-databases/replication/publisher-information-agents.md)  
   
 -   [Información de publicación, Todas las suscripciones &#40;Publicación transaccional&#41;](../../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68769679"
   
 -   [Agente de instantáneas](../../relational-databases/replication/snapshot-agent.md)  
   
--   [Configuración del filtro](../../relational-databases/replication/filter-settings.md)  
+-   [Filter Settings](../../relational-databases/replication/filter-settings.md)  
   
 -   [Ordenar columnas](../../relational-databases/replication/sort-columns.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos: Implementar una extensión de procesamiento de datos en un servidor de informes | Microsoft Docs'
+title: Cómo implementar una extensión de procesamiento de datos en un servidor de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164075"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procedimientos: Implementar una extensión de procesamiento de datos en un servidor de informes
@@ -44,7 +44,7 @@ ms.locfileid: "63164075"
     </Extensions>  
     ```  
   
-4.  Agregue una entrada para su extensión de procesamiento de datos. La entrada debería incluir un `Extension` elemento con los valores para `Name` y `Type` y podría parecerse a lo siguiente:  
+4.  Agregue una entrada para su extensión de procesamiento de datos. La entrada debe incluir un `Extension` elemento con valores para `Name` y `Type` y podría ser similar al siguiente:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
@@ -67,12 +67,12 @@ ms.locfileid: "63164075"
     </CodeGroup>  
     ```  
   
- La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de procesamiento de datos. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+ La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de procesamiento de datos. Para más información sobre la seguridad de acceso del código en [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41](../secure-development/secure-development-reporting-services.md);.  
   
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede comprobar si la extensión de procesamiento de datos se implementó correctamente en el servidor de informes utilizando el método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servicio web. Puede abrir también Administrador de informes y comprobar que su extensión está incluida en la lista de orígenes de datos disponibles. Para más información sobre el Administrador de informes y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de una extensión de procesamiento de datos](deploying-a-data-processing-extension.md)   
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](implementing-a-data-processing-extension.md)   

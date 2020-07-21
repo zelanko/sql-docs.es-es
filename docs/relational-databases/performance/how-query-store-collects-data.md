@@ -13,15 +13,15 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f60ded18e88d57c5a2975b567fa246923ece7ebe
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 23b3d551d11ee09875f49be1bd553adcb9d9759c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974360"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005994"
 ---
 # <a name="how-query-store-collects-data"></a>Cómo recopila datos el almacén de consultas
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 El almacén de consultas de SQL Server funciona como una caja negra de datos y recopila en todo momento información de compilación y tiempo de ejecución relacionada con las consultas y los planes. Los datos relacionados con las consultas se guardan en las tablas internas y se presentan a los usuarios a través de un conjunto de vistas.
   
@@ -57,7 +57,7 @@ El almacén de consultas de SQL Server funciona como una caja negra de datos y r
   
  ![Proceso del almacén de consultas](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor") 
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
  Para minimizar la sobrecarga de E/S, los nuevos datos se capturan en memoria. Las operaciones de escritura se ponen en cola y se vacían posteriormente en el disco. La información de consulta y del plan (que se muestra como Planear el almacén en el diagrama siguiente) se vacían con una latencia mínima. Las estadísticas en tiempo de ejecución (mostradas como Estadísticas en tiempo de ejecución) se mantienen en memoria durante un período de tiempo definido con la opción `DATA_FLUSH_INTERVAL_SECONDS` de la instrucción `SET QUERY_STORE`. Puede usar el cuadro de diálogo Almacén de consultas de [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] para especificar un valor para **Intervalo del vaciado de datos (minutos)** , que de forma interna se convierte a segundos. 
   
  ![Plan de proceso del almacén de consultas](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan") 
@@ -76,8 +76,8 @@ El almacén de consultas de SQL Server funciona como una caja negra de datos y r
   
  ![Información del plan de proceso del almacén de consultas](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
-## <a name="see-also"></a>Vea también
- [Supervisión del rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+## <a name="see-also"></a>Consulte también
+ [Supervisión del rendimiento mediante el Almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Procedimiento recomendado con el almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Query Store Catalog Views (Vistas de catálogo del almacén de consultas) &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md) 
   

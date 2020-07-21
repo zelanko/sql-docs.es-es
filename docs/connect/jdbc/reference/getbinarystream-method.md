@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd4742b7c327899d8f3f7a0ce2a6d091a74eee03
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953622"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921667"
 ---
 # <a name="getbinarystream-method-"></a>Método getBinaryStream ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.io.InputStream getBinaryStream()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getBinaryStream se especifica mediante el método getBinaryStream de la interfaz java. SQL. BLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método getBinaryStream especifica este método getBinaryStream en la interfaz java.sql.Blob.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

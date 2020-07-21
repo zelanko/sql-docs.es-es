@@ -16,15 +16,14 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2914c6a23a326f4d312c2784eaad2b84fdad0b0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900161"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430652"
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
   La transformación Exportar columna lee datos de un flujo de datos e inserta dichos datos en un archivo. Por ejemplo, si el flujo de datos contiene información de productos, como una foto de cada producto, puede usar la transformación Exportar columna para guardar las imágenes en archivos.  
@@ -32,12 +31,12 @@ ms.locfileid: "62900161"
 ## <a name="append-and-truncate-options"></a>Opciones de anexar y truncar  
  En la tabla siguiente se describe cómo afectan a los resultados las opciones para anexar y truncar.  
   
-|Anexar|Truncamiento|El archivo existe|Resultado|  
+|Append|Truncate|El archivo existe|Results|  
 |------------|--------------|-----------------|-------------|  
-|False|False|Sin|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
 |True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|False|True|Sin|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|True|Sin|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
+|False|True|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|True|No|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
 |False|False|Sí|Se produce un error en tiempo de ejecución. El archivo existe, pero la transformación no puede escribir en él.|  
 |False|True|Sí|La transformación elimina y vuelve a crear el archivo, y escribe los datos en el archivo.|  
 |True|False|Sí|La transformación abre el archivo y escribe los datos al final del archivo.|  
@@ -55,7 +54,7 @@ ms.locfileid: "62900161"
     > [!NOTE]  
     >  Solo se escribe una BOM cuando no se anexan los datos a un archivo existente y cuando los datos tienen el tipo de datos DT_NTEXT.  
   
- La transformación usa pares de columnas de entrada: una columna contiene un nombre de archivo y la otra columna contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
+ La transformación utiliza pares de columnas de entrada: una columna contiene un nombre de archivo y la otra contiene datos. Cada fila del conjunto de datos puede especificar un archivo diferente. Cuando la transformación procesa una fila, los datos de dicha fila se insertan en el archivo especificado. En tiempo de ejecución, la transformación crea los archivos (si no existen) y después escribe los datos en dichos archivos. Los datos deben tener un tipo de datos DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
   
  Esta transformación tiene una entrada, una salida y una salida de error.  
   

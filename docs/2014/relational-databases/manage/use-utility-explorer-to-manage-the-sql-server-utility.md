@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fee3411a65d7e2b5f91e503b1314aa004b6a12bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023183"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
   El explorador de Utilidad, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se conecta a instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para proporcionar una vista de árbol de todos los objetos de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El panel de contenido del explorador de la utilidad proporciona varias maneras para ver datos de resumen y detallados sobre el estado de las instancias administradas de SQL Server. El explorador de la utilidad también proporciona una interfaz de usuario para ver y administrar las definiciones de directiva. Las capacidades del explorador de la utilidad varían ligeramente dependiendo de los objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero, generalmente, incluyen objetos, datos y directivas administrados por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "63191693"
 ### <a name="sql-server-utility-navigation-pane"></a>Panel de navegación de la utilidad de SQL Server  
  El panel de navegación del explorador de la utilidad proporciona una vista de árbol de objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , agrupada por punto de control de la utilidad. Para expandir las carpetas, haga clic en el signo más (+) o en el nombre de UCP en el panel de navegación del explorador de la utilidad. Haga clic con el botón secundario en las carpetas o en los objetos para realizar tareas comunes. Los nodos de la vista de árbol son como sigue:  
   
--   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre de nodo se construye como: "Nombre_utilidad" (Nombreequipo\nombre_instancia_ucp). Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
+-   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre de nodo se crea como se indica a continuación: "Nombre_Utilidad (NombreEquipo\nombre_instancia_UCP)." Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md).  
   
      Haga clic con el botón secundario en el nodo UCP para actualizar los datos en el panel.  
   
@@ -60,11 +59,11 @@ ms.locfileid: "63191693"
  Cuando un nodo contiene un gran número de objetos, puede resultar difícil encontrar el que se busca. En estos casos, use la característica de filtro del explorador de la utilidad a fin de reducir la lista. Por ejemplo, puede que desee encontrar una instancia concreta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o solo los equipos con espacio de archivo infrautilizado. Haga clic con el botón derecho en la carpeta que quiere filtrar y, después, haga clic en **Configuración del filtro** para abrir el cuadro de diálogo Configuración del filtro del Explorador de Utilidad. Puede filtrar la lista por nombre, CPU del equipo, CPU de instancia, espacio de archivos, espacio de volumen, configuración de invalidación de directiva u hora de última notificación. Las columnas **Operador** y **Valor** proporcionan operadores de filtrado adicionales en una lista desplegable.  
   
 ### <a name="starting-powershell"></a>Iniciar PowerShell  
- Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte el artículo sobre [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
  PowerShell no tiene ayuda F1, pero incluye un cmdlet **Get-Help** que proporciona información sobre el uso de PowerShell. Para obtener más información sobre el uso de Get-Help, vea [Obtener ayuda de SQL Server PowerShell](../../database-engine/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md)   
  [Configurar las directivas de mantenimiento &#40;Utilidad de SQL Server&#41;](configure-health-policies-sql-server-utility.md)   
  [Explorador de objetos](../../ssms/object/object-explorer.md)  

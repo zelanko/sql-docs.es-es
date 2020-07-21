@@ -1,6 +1,6 @@
 ---
-title: Uso de un diagrama de actualización en una aplicación de ASP de ejemplo (SQLXML 4.0) | Documentos de Microsoft
-ms.custom: ''
+title: Usar diagrama en una aplicación ASP de ejemplo (SQLXML)
+description: Vea un ejemplo de cómo usar SQLXML diagrama en una aplicación de páginas Active Server (ASP).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61ad2bae525acfe7b461e2e89bf9477ff73513ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733639"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Utilizar un diagrama de actualización en una aplicación ASP de ejemplo (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Esta aplicación ASP (Páginas Active Server) le permite actualizar la información del cliente en la tabla Person.Contact de la base de datos de ejemplo AdventureWorks de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La aplicación hace lo siguiente:  
   
 -   Solicita al usuario que escriba un identificador de contacto.  
@@ -34,7 +35,7 @@ ms.locfileid: "68046530"
   
  A continuación, el usuario puede actualizar la información de contacto, pero no el identificador de contacto (puesto que ContactID es la clave principal). Después de que el usuario envíe la información, se ejecuta un diagrama de actualización y todos los parámetros del formulario se pasan al diagrama de actualización.  
   
- La siguiente plantilla es la primera plantilla (GetContact.xml). Guarde esta plantilla en el directorio que está asociado con el nombre virtual del **plantilla** tipo.  
+ La siguiente plantilla es la primera plantilla (GetContact.xml). Guarde esta plantilla en el directorio asociado al nombre virtual del tipo de **plantilla** .  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -50,7 +51,7 @@ ms.locfileid: "68046530"
 </root>  
 ```  
   
- La siguiente plantilla es la segunda plantilla (UpdateContact.xml). Guarde esta plantilla en el directorio que está asociado con el nombre virtual del **plantilla** tipo.  
+ La siguiente plantilla es la segunda plantilla (UpdateContact.xml). Guarde esta plantilla en el directorio asociado al nombre virtual del tipo de **plantilla** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -160,7 +161,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

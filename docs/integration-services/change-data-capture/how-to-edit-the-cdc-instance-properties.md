@@ -11,10 +11,10 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8662905f72262cede8913c2a549cbca0df470875
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294713"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Cómo editar las propiedades de la instancia CDC
@@ -38,11 +38,11 @@ ms.locfileid: "71294713"
   
 5.  En el editor de propiedades, edite las propiedades en las pestañas siguientes:  
   
-    -   **Oracle**: use la pestaña **Oracle** del editor de propiedades para realizar cambios en la descripción que proporcionó en la página de creación de la base de datos CDC del Asistente para nueva instancia y para realizar cambios en la información de conexión a bases de datos de minería de registros de Oracle.  
+    -   **Oracle**: use la pestaña **Oracle** del editor de propiedades para realizar cambios en la descripción que proporcionó en la página Crear base de datos CDC del Asistente para nueva instancia y para realizar cambios en la información de conexión a bases de datos de Oracle Log Mining.  
   
          Para obtener información acerca de lo que puede editar en esta pestaña, vea [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
-    -   **Tablas**: Use la pestaña **Tablas** para realizar cambios en las tablas y columnas que seleccionó en la base de datos de origen de Oracle.  
+    -   **Tablas**: use la pestaña **Tablas** para realizar cambios en las tablas y columnas que seleccionó en la base de datos de origen de Oracle.  
   
          Para obtener información acerca de lo que puede editar en esta pestaña, vea [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71294713"
   
          Para obtener información acerca de lo que puede hacer en esta pestaña, vea [Review and Generate Supplemental Logging Scripts](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md).  
   
-    -   **Avanzadas**: Use la pestaña **Avanzadas** para agregar propiedades especiales a la instancia CDC.  
+    -   **Avanzadas**: use la pestaña **Avanzadas** para agregar propiedades especiales a la instancia CDC.  
   
          Para obtener información acerca de lo que puede hacer en esta pestaña, vea [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

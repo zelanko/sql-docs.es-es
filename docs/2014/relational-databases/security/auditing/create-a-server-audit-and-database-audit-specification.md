@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cad01eae45d534f0f74911ce8f57827858cc920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063232"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Crear una especificación de auditoría de servidor y de auditoría de base de datos
   En este tema se describe cómo crear una especificación de auditoría de servidor y de auditoría de base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -41,30 +40,30 @@ ms.locfileid: "68211983"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Las especificaciones de auditoría de base de datos son objetos no protegibles que residen en una base de datos determinada. Cuando se crea una especificación de auditoría de servidor de base de datos, está en un estado deshabilitado.  
   
  Cuando cree o modifique una especificación de auditoría de base de datos en una base de datos de usuario, no incluya acciones de auditoría en objetos del ámbito de servidor, como las vistas del sistema. Si los objetos del ámbito de servidor están incluidos, se creará la auditoría. Sin embargo, los objetos del ámbito de servidor no están incluidos y no se devolverá ningún error. Para auditar objetos del ámbito de servidor, utilice una especificación de auditoría de base de datos en la base de datos maestra.  
   
  Las especificaciones de auditoría de base de datos residen en la base de datos en la que se crearon, con la excepción de la base de datos del sistema `tempdb`.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   Los usuarios con el permiso ALTER ANY DATABASE AUDITpueden crear las especificaciones de auditoría de base de datos y enlazarlas a cualquier auditoría.  
   
 -   Después de crearse una especificación de auditoría de base de datos, podrá ser vista por las entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY DATABASE AUDIT, o por la cuenta sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Para crear una auditoría de servidor  
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...** . Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md).  
+2.  Haga clic con el botón secundario en la carpeta **auditorías** y seleccione **nueva auditoría.**... Para obtener más información, vea [crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Cuando termine de seleccionar opciones, haga clic en **Aceptar**.  
   
@@ -74,14 +73,14 @@ ms.locfileid: "68211983"
   
 2.  Expanda la carpeta **Seguridad** .  
   
-3.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de base de datos** y seleccione **Nueva especificación de auditoría de base de datos...** .  
+3.  Haga clic con el botón secundario en la carpeta **Especificaciones de auditoría de base de datos** y seleccione **nueva especificación de auditoría de base de datos.**  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de base de datos** .  
   
-     **Name**  
+     **Nombre**  
      El nombre de la especificación de auditoría de base de datos. Se genera automáticamente al crear una nueva especificación de auditoría de servidor, pero se puede modificar.  
   
-     **Auditar**  
+     **Auditoría**  
      El nombre de una auditoría de base de datos existente. Escriba el nombre de la auditoría o selecciónelo en la lista.  
   
      **Tipo de acción de auditoría**  
@@ -104,7 +103,7 @@ ms.locfileid: "68211983"
   
 4.  Cuando termine de seleccionar opciones, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>Para crear una auditoría de servidor  
   
@@ -133,7 +132,7 @@ ms.locfileid: "68211983"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se crea una especificación de auditoría de base de datos denominada `Audit_Pay_Tables` que audita las instrucciones SELECT e INSERT por el usuario `dbo`, para la tabla `HumanResources.EmployeePayHistory` basándose en la auditoría de servidor definida anteriormente.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se crea una especificación de auditoría de base de datos denominada `Audit_Pay_Tables` que audita las instrucciones SELECT e INSERT por el usuario `dbo` , para la tabla `HumanResources.EmployeePayHistory` basándose en la auditoría de servidor definida anteriormente.  
   
     ```  
     USE AdventureWorks2012 ;   

@@ -1,6 +1,7 @@
 ---
-title: Visualización de información y realización de tareas mediante el Monitor de replicación | Microsoft Docs
-ms.custom: ''
+title: Visualización de información y realización de tareas (Monitor de replicación)
+description: Aprenda a ver información y a realizar varias tareas mediante el Monitor de replicación de SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: be851d2ff0919125699a4e33c4b4d1d6445c0fc6
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766899"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159633"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualización de información y realización de tareas mediante el Monitor de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 El Monitor de replicación proporciona una serie de pestañas y opciones para ver información y realizar diversas tareas. En este artículo se describe todo lo que se puede ver y realizar con el Monitor de replicación. 
 
 
@@ -96,7 +97,7 @@ El Monitor de replicación proporciona las siguientes pestañas que muestran inf
   
 1.  Expanda un grupo de publicador en el panel izquierdo y, a continuación, haga clic en un publicador.    
 2.  Para ver información acerca de las suscripciones, haga clic en la pestaña **Lista de supervisión de suscripciones** .    
-3.  Seleccione el tipo de suscripción que quiere mostrar en la lista desplegable **Mostrar suscripciones \<TipoDeSuscripción>** . Para ver solamente aquellas suscripciones que se encuentren en un estado determinado, por ejemplo sincronizando, seleccione una opción de la lista desplegable **Mostrar** .    
+3.  Seleccione el tipo de suscripción que quiere mostrar en la lista desplegable **Mostrar suscripciones \<SubscriptionType>** . Para ver solamente aquellas suscripciones que se encuentren en un estado determinado, por ejemplo sincronizando, seleccione una opción de la lista desplegable **Mostrar** .    
 4.  Para ver y modificar las propiedades de una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Propiedades**. En esta pestaña, también puede realizar tareas y tener acceso a información más detallada. 
   
   

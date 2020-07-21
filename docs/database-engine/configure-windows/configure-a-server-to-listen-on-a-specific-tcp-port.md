@@ -1,5 +1,6 @@
 ---
 title: Configurar un servidor para que escuche en un puerto TCP específico | Microsoft Docs
+description: Aprenda a usar el Administrador de configuración de SQL Server para configurar el Motor de base de datos para que escuche en un puerto fijo específico que no sea el predeterminado, 1433.
 ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 15d1d1ab04adb47772706f8b1495b8ddef8b4fa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789840"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar un servidor para que escuche en un puerto TCP específico
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo configurar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para escuchar en un puerto fijo específico mediante el Administrador de configuración de SQL Server. Si está habilitada, la instancia predeterminada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha en el puerto TCP 1433. Las instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssEW](../../includes/ssew-md.md)] están configuradas para [puertos dinámicos](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). Esto significa que seleccionan un puerto disponible cuando se inicia el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecte a una instancia con nombre a través de un firewall, configure el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que escuche en un puerto específico, de modo que el puerto adecuado pueda abrirse en el firewall.  
 
@@ -40,11 +41,11 @@ Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../..
 >  El Motor de base de datos empieza a escuchar en un puerto nuevo cuando se reinicia. Sin embargo, el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser supervisa el Registro e informa del nuevo número de puerto en cuanto cambia la configuración, incluso aunque el Motor de base de datos no lo use. Reinicie el Motor de base de datos para asegurar la coherencia y evitar errores de conexión.  
   
   
-##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Para asignar un número de puerto TCP/IP al Motor de base de datos de SQL Server  
   
-1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
+1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server**, **Protocolos de \<instance name>** y, después, haga doble clic en **TCP/IP**.  
   
     > [!NOTE]  
     >  Si tiene problemas para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).  
@@ -53,9 +54,9 @@ Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../..
   
 3.  Si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, que indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos, elimine el 0.  
   
-     ![puertos_TCP](../../database-engine/configure-windows/media/tcp-ports.png "puertos_TCP")  
+     ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  En el cuadro de diálogo **Propiedades de**_IP_ **n** , en el cuadro **Puerto TCP** box, type the port number you want this Propiedades de address to listen on, and then click **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
+4.  En el cuadro **Propiedades** de **IP_n_**, en **Puerto TCP**, escriba el número de puerto en el que quiere que esta dirección IP escuche y haga clic en **Aceptar**. Para especificar varios puertos, sepárelos con una coma.
 
     > [!NOTE] 
     > Si la opción **Escuchar todo** de la pestaña **Protocolo** está establecida en "Sí", solo se usarán los valores de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se ignorarán las secciones individuales **IP**_n_ en su totalidad. Si la opción **Escuchar todo** está establecida en "No", se ignorarán los ajustes de **Puerto TCP** y **Puerto dinámico TCP** de la sección **IPAll** y se usarán los valores de **Puerto TCP**, **Puerto dinámico TCP** y **Habilitado** de las secciones individuales **IP**_n_ en su lugar.
@@ -63,7 +64,7 @@ Dado que el puerto 1433 es el estándar conocido de [!INCLUDE[ssNoVersion](../..
   
 5.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   
-6.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (** \<nombre de instancia> **)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (** \<instance name> **)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="connecting"></a>Connecting  
 Después de haber configurado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que escuche en un puerto específico, dispone de tres métodos para conectarse a un puerto específico con una aplicación cliente:  

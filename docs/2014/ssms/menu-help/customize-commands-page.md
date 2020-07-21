@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e95604c907e16d5173d1f523cf31693416f0e119
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067382"
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
   Este cuadro de diálogo permite agregar comandos en las barras de herramientas y menús, y eliminarlos de éstos; también permite cambiar las imágenes que se utilizan para los botones de barra de herramientas o los comandos de los menús. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Categorías**  
  Especifica el conjunto de comandos que se muestran en el cuadro de lista **Comandos** . Las categorías de los comandos se basan en los títulos de menú proporcionados por las herramientas y los diseñadores admitidos por el entorno. Esta lista de títulos es dinámica, por lo que el orden de las categorías y los títulos de los menús cambian en función de las herramientas y del diseñador, así como de las personalizaciones que hayan podido efectuarse. Por consiguiente, es posible que dos menús de dos diseñadores distintos tengan el mismo nombre y que el mismo título aparezca dos veces, pero ofrezca distintos conjuntos de comandos.  
   
@@ -38,5 +37,5 @@ ms.locfileid: "62470022"
  **Teclado**  
  Muestra la página **Teclado** del cuadro de diálogo **Opciones** , que permite especificar combinaciones de teclas de método abreviado de los comandos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Personalizar los menús y los métodos abreviados de teclado](../customize-menus-and-shortcut-keys.md)  

@@ -9,23 +9,23 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d8f7b561a6aba4539964d73dacfd9e45db2dd6aa
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: ee951094ad3042e1d2fa31bdf35fa7e5b32f1d2c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452173"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924358"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Inserción de una imagen desde un archivo
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Puede escribir un objeto binario grande (BLOB) en una base de datos como datos binarios o de caracteres, dependiendo del tipo de campo del origen de datos. BLOB es un término genérico que hace referencia a los tipos de datos `text`, `ntext` y `image`, que suelen contener documentos e imágenes.  
+Puede escribir un objeto binario grande (BLOB) en una base de datos como datos binarios o de caracteres, dependiendo del tipo de campo del origen de datos. BLOB es un término genérico que hace referencia a los tipos de datos `text`, `ntext`y `image`, que suelen contener documentos e imágenes.  
   
-Para escribir un valor BLOB en la base de datos, emita la instrucción INSERT o UPDATE correspondiente y pase el valor BLOB como parámetro de entrada. Si el BLOB se almacena como texto, como un SQL Server campo `text`, puede pasar el BLOB como un parámetro de cadena. Si el BLOB se almacena en formato binario, como un SQL Server campo `image`, puede pasar una matriz de tipo `byte` como parámetro binario.
+Para escribir un valor BLOB en la base de datos, emita la instrucción INSERT o UPDATE correspondiente y pase el valor BLOB como parámetro de entrada. Si el BLOB se almacena como texto, como un campo `text` de SQL Server, puede pasar el BLOB como un parámetro de cadena. Si el BLOB se almacena en formato binario, como un campo `image` de SQL Server, puede pasar una matriz de tipo `byte` como parámetro binario.
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo de código siguiente se agrega información de empleado a la tabla Employees de la base de datos Northwind. Una foto del empleado se lee de un archivo y se agrega al campo Photo de la tabla, que es un campo de imagen.  

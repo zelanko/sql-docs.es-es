@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 543055aaed5d8991ed2c913a6ae46575c774e216
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083116"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520897"
 ---
 # <a name="prediction-queries-data-mining"></a>Consultas de predicción (minería de datos)
   El objetivo de un proyecto de minería de datos típico es usar el modelo de minería de datos para realizar predicciones. Por ejemplo, quizás desee predecir el tiempo de inactividad esperado para un clúster de servidores determinado, o generar una puntuación que indique si es probable que los segmentos de clientes respondan a una campaña de publicidad. Para hacer todas estas cosas, crearía una consulta de predicción.  
@@ -30,7 +29,7 @@ ms.locfileid: "66083116"
   
  En las secciones siguientes se describen la sintaxis general de las consultas de predicción, los diferentes tipos de consultas de predicción y cómo trabajar con los resultados de estas consultas.  
   
- [Diseño de una consulta de predicción básica](#bkmk_PredQuery)  
+ [Diseño de consulta de predicción básica](#bkmk_PredQuery)  
   
 -   [Agregar funciones de predicción](#bkmk_PredFunc)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66083116"
   
  [Trabajar con los resultados de las consultas](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a> Diseño de una consulta de predicción básica  
+##  <a name="basic-prediction-query-design"></a><a name="bkmk_PredQuery"></a> Diseño de una consulta de predicción básica  
  Cuando se crea una predicción, normalmente se proporcionan algunos datos nuevos y se pide al modelo que genere la predicción basándose en dichos datos.  
   
 -   En una consulta de predicción por lotes, puede asignar el modelo a un origen externo de datos mediante una *combinación de predicción*.  
@@ -55,22 +54,22 @@ ms.locfileid: "66083116"
   
  Para los modelos de serie temporal, los datos de entrada no siempre son necesarios; es posible realizar predicciones simplemente utilizando los datos que ya se encuentran en el modelo. Sin embargo, si especifica nuevos datos de entrada, debe decidir si utilizará los nuevos datos para actualizar y ampliar el modelo, o reemplazar la serie de datos original que se utilizó en el modelo.  Para obtener más información acerca de estas opciones, consulte [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
-###  <a name="bkmk_PredFunc"></a> Agregar funciones de predicción  
+###  <a name="adding-prediction-functions"></a><a name="bkmk_PredFunc"></a>Agregar funciones de predicción  
  Además de predecir un valor concreto, puede personalizar una consulta de predicción para que devuelva diversos tipos de información relacionados con la predicción. Por ejemplo, si la predicción crea una lista de productos para recomendar a un cliente, es posible que también desee devolver la probabilidad de cada predicción, de modo que pueda clasificarlas y mostrar únicamente las principales recomendaciones al usuario.  
   
- Para ello, agregue *funciones de predicción* a la consulta. Cada modelo o tipo de consulta admite unas determinadas funciones. Por ejemplo, los modelos de agrupación en clústeres admiten funciones de predicción especiales que proporcionan detalles adicionales sobre los clústeres creados por el modelo, mientras que los modelos de serie temporal tienen funciones que calculan las diferencias a lo largo del tiempo. También existen funciones de predicción generales que funcionan con casi todos los tipos de modelos. Para obtener una lista de las funciones de predicción admitidas en los diferentes tipos de consultas, vea este tema en la referencia DMX:  [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
+ Para ello, agregue *funciones de predicción* a la consulta. Cada modelo o tipo de consulta admite unas determinadas funciones. Por ejemplo, los modelos de agrupación en clústeres admiten funciones de predicción especiales que proporcionan detalles adicionales sobre los clústeres creados por el modelo, mientras que los modelos de serie temporal tienen funciones que calculan las diferencias a lo largo del tiempo. También existen funciones de predicción generales que funcionan con casi todos los tipos de modelos. Para obtener una lista de las funciones de predicción admitidas en los diferentes tipos de consultas, vea este tema en la referencia de DMX: [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
-###  <a name="bkmk_SingletonQuery"></a> Crear consultas de predicción singleton  
+###  <a name="creating-singleton-prediction-queries"></a><a name="bkmk_SingletonQuery"></a>Crear consultas de predicción singleton  
  Las consultas de predicción singleton resultan de gran utilidad para crear predicciones rápidas en tiempo real. Un escenario habitual podría ser en el que ha obtenido información de un cliente, quizás mediante un formulario en un sitio web, y desea enviar dicha información como entrada a una consulta de predicción singleton. Por ejemplo, cuando un cliente elige un producto de una lista, podría utilizar esa selección como la entrada a una consulta que prediga los mejores productos que puede recomendar.  
   
  Las consultas de predicción singleton no requieren ninguna tabla independiente que contenga la entrada. En su lugar, se proporcionan una o varias filas de valores como entrada para el modelo, y las predicciones se devuelven en tiempo real.  
   
 > [!WARNING]  
->  A pesar del nombre, consultas de predicción singleton no solamente predicciones únicas-puede generar varias predicciones para cada conjunto de entradas. Puede proporcionar varios casos de entrada creando una instrucción SELECT para cada caso de entrada y combinándolas con el operador UNION.  
+>  A pesar del nombre, las consultas de predicción singleton no solo realizan predicciones únicas: puede generar varias predicciones para cada conjunto de entradas. Puede proporcionar varios casos de entrada creando una instrucción SELECT para cada caso de entrada y combinándolas con el operador UNION.  
   
  Al crear una consulta de predicción singleton, debe proporcionar los nuevos datos al modelo con el formato PREDICTION JOIN. Esto significa que, aunque no se esté realizando una asignación a una tabla real, hay que asegurarse de que los nuevos datos coinciden con las columnas existentes en el modelo de minería de datos. Si las nuevas columnas de datos y los nuevos datos coinciden exactamente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asignará las columnas. Esto se denomina *NATURAL PREDICTION JOIN*. Sin embargo, si las columnas no coinciden, o si los nuevos datos no contienen el mismo tipo y cantidad de datos que hay en el modelo, deberá especificar qué columnas del modelo se asignan a los nuevos datos, o especificar los valores que faltan.  
   
-###  <a name="bkmk_BatchQuery"></a> Consultas de predicción por lotes  
+###  <a name="batch-prediction-queries"></a><a name="bkmk_BatchQuery"></a> Consultas de predicción por lotes  
  Una consulta de predicción por lotes resulta útil si tiene datos externos que desea utilizar para realizar predicciones. Por ejemplo, podría haber compilado un modelo que categorice los clientes por su actividad en línea y el historial de compras. Podría aplicar ese modelo a una lista de contactos de ventas obtenidos recientemente, para crear proyecciones de ventas o identificar objetivos de las campañas propuestas.  
   
  Al realizar una unión de predicción, debe asignar las columnas del modelo a las columnas del nuevo origen de datos. Por consiguiente, el origen de datos que elija para una entrada deberá tener datos que sean en cierto modo similares a los datos del modelo. La nueva información no tiene porqué coincidir exactamente y puede estar incompleta. Por ejemplo, suponga que el modelo se entrenó con información sobre los ingresos y la edad, pero la lista de clientes que utiliza para las predicciones incluye la edad pero no los ingresos. En este escenario, podría asignar los nuevos datos al modelo y crear una predicción para cada cliente. Sin embargo, si los ingresos fueran un elemento de predicción importante para el modelo, la falta de información completa afectaría a la calidad de las predicciones.  
@@ -84,7 +83,7 @@ ms.locfileid: "66083116"
   
  Si utiliza DMX para crear una combinación de predicción, puede especificar el origen de datos externo utilizando los comandos OPENQUERY, OPENROWSET o SHAPE. El método de acceso a datos predeterminado en las plantillas DMX es OPENQUERY. Para más información sobre estos métodos, vea [&#60;source data query&#62;](/sql/dmx/source-data-query).  
   
-###  <a name="bkmk_TSQuery"></a> Predicciones en modelos de minería de datos de serie temporal  
+###  <a name="predictions-in-time-series-mining-models"></a><a name="bkmk_TSQuery"></a> Predicciones en modelos de minería de datos de serie temporal  
  Los modelos de serie temporal son diferentes de otros tipos de modelos; puede utilizar el modelo tal como está para crear predicciones, o puede proporcionar nuevos datos al modelo para actualizarlo y crear predicciones basadas en tendencias recientes. Si agrega nuevos datos, puede especificar la manera en que se deberían utilizar los nuevos datos.  
   
 -   *Ampliar los casos del modelo* significa agregar los nuevos datos a la serie de datos existente en el modelo de serie temporal. De ahora en adelante, las predicciones se basarán en la nueva serie combinada. Esta opción es adecuada si solamente desea agregar algunos puntos de datos a un modelo existente.  
@@ -99,7 +98,7 @@ ms.locfileid: "66083116"
   
  Para más información sobre cómo crear combinaciones de predicción en modelos de serie temporal, vea [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md) o [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-##  <a name="bkmk_WorkResults"></a> Trabajar con los resultados de una consulta de predicción  
+##  <a name="working-with-the-results-of-a-prediction-query"></a><a name="bkmk_WorkResults"></a> Trabajar con los resultados de una consulta de predicción  
  Las opciones para guardar los resultados de una consulta de predicción de minería de datos serán diferentes en función de cómo se cree la consulta.  
   
 -   Al crear una consulta mediante el Generador de consultas de predicción en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se pueden guardar los resultados de una consulta de predicción en un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente. Para más información, vea [Ver y guardar los resultados de una consulta de predicción](view-and-save-the-results-of-a-prediction-query.md).  
@@ -125,11 +124,11 @@ FROM
   
  **PredictedAmount**  
   
-|$TIME|Amount|  
+|$TIME|Importe|  
 |-----------|------------|  
 |201101|172067.11|  
   
-|$TIME|Amount|  
+|$TIME|Importe|  
 |-----------|------------|  
 |201102|363390.68|  
   
@@ -145,7 +144,7 @@ FROM
   
  Si el proveedor no puede procesar conjuntos de filas jerárquicos, se puede eliminar la estructura de los resultados utilizando la palabra clave FLATTEN en la consulta de predicción. Para más información y ejemplos de conjuntos de filas planas, vea [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultas de contenido &#40;minería de datos&#41;](content-queries-data-mining.md)   
  [Consultas de definición de datos &#40;minería de datos&#41;](data-definition-queries-data-mining.md)  
   

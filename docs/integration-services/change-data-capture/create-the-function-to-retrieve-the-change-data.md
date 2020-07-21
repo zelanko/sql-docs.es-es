@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72251987"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
@@ -210,17 +210,17 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Recuperar metadatos adicionales con los datos modificados  
  Aunque la función con valores de tabla creada por el usuario y mostrada anteriormente solo usa la columna **__$operation**, la función **cdc.fn_cdc_get_net_changes_<capture_instance>** devuelve cuatro columnas de metadatos por cada fila de datos modificados. Si desea utilizar estos valores en el flujo de datos, puede devolverlos como columnas adicionales desde la función contenedora con valores de tabla.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Número de secuencia de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de actualización en la tabla de origen modifica dos filas diferentes, la tabla de cambios contendrá cuatro filas (dos con los valores anteriores y dos con los valores nuevos), cada una con el mismo valor **__$start_lsn** .|  
 |**__$seqval**|**binary(10)**|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
-|**__$operation**|**int**|Operación del lenguaje de manipulación de datos (DML) asociada al cambio. Puede ser uno de los valores siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores antes de la operación de actualización)<br /><br /> 4 = actualizar (valores después de la operación de actualización)|  
+|**__$operation**|**int**|Operación del lenguaje de manipulación de datos (DML) asociada al cambio. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores antes de la operación de actualización)<br /><br /> 4 = actualizar (valores después de la operación de actualización)|  
 |**__$update_mask**|**varbinary(128)**|Máscara de bits basada en los ordinales de las columnas de la tabla de cambios que identifica las columnas que han cambiado. Puede examinar este valor para determinar las columnas que han cambiado.|  
-|**\<columnas de la tabla de origen capturadas>**|varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
+|**\<columnas de la tabla de origen capturadas>**|Varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
  Para obtener más información, vea [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Una vez que haya creado la función con valores de tabla que consulta los datos modificados, el paso siguiente consiste en comenzar a diseñar el flujo de datos del paquete.  
   
  **Tema siguiente:** [Recuperar y describir datos modificados](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  

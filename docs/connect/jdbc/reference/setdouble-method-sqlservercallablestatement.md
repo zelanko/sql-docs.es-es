@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b103bae2e7de26997545d0158ec2e3c440a0c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d4ba5cce322b9fe925f3455929f0a040e05b3aa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213687"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925794"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>Método setDouble (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,12 +42,12 @@ public void setDouble(java.lang.String sCol,
   
  *d*  
   
- Valor **Double** .  
+ Un valor **double**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setDouble especifica este método setDouble en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

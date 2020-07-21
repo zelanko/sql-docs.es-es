@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Creación de la estructura de minería de datos Market Basket | Microsoft Docs'
+title: 'Lección 1: crear la estructura de minería de datos Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676271"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lección 1: Creación de la estructura de minería de la cesta de la compra
-  En esta lección creará una estructura de minería de datos que permita predecir qué productos de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiende a adquirir un cliente simultáneamente. Si no está familiarizado con las estructuras de minería de datos y su función en la minería de datos, vea [estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
+  En esta lección creará una estructura de minería de datos que permita predecir qué productos de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiende a adquirir un cliente simultáneamente. Si no está familiarizado con las estructuras de minería de datos y su rol en la minería de datos, vea estructuras de minería de datos [&#40;Analysis Services-data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
- La estructura de minería de datos de asociación que creará en esta lección admite la adición de modelos de minería de datos según la [Microsoft Association Algorithm](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). En lecciones posteriores utilizará los modelos de minería de datos para predecir el tipo de productos que un cliente tiende a adquirir simultáneamente, lo que se denomina análisis de cesta de mercado (Market Basket). Por ejemplo, es posible que averigüe que los clientes tienden a comprar bicicletas de montaña, ruedas y cascos simultáneamente.  
+ La estructura de minería de datos de asociación que creará en esta lección permite agregar modelos de minería de datos basados en el [algoritmo de Asociación de Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). En lecciones posteriores utilizará los modelos de minería de datos para predecir el tipo de productos que un cliente tiende a adquirir simultáneamente, lo que se denomina análisis de cesta de mercado (Market Basket). Por ejemplo, es posible que averigüe que los clientes tienden a comprar bicicletas de montaña, ruedas y cascos simultáneamente.  
   
- En esta lección se define la estructura de minería de datos utilizando tablas anidadas. Se utilizan tablas anidadas porque el dominio de datos que definirá la estructura se incluye en dos tablas de origen distintas. Para obtener más información sobre las tablas anidadas, vea [tablas anidadas &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
+ En esta lección se define la estructura de minería de datos utilizando tablas anidadas. Se utilizan tablas anidadas porque el dominio de datos que definirá la estructura se incluye en dos tablas de origen distintas. Para obtener más información sobre las tablas anidadas, vea [tablas anidadas &#40;Analysis Services-&#41;de minería de datos ](../../2014/analysis-services/data-mining/nested-tables-analysis-services-data-mining.md).  
   
 ## <a name="create-mining-structure-statement"></a>Instrucción CREATE MINING STRUCTURE  
- Para crear una estructura de minería de datos que contiene una tabla anidada, se utiliza el [CREATE MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/create-mining-structure-dmx) instrucción. El código de la instrucción se puede dividir en las partes siguientes:  
+ Para crear una estructura de minería de datos que contenga una tabla anidada, use la instrucción [Create Mining structure &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx) . El código de la instrucción se puede dividir en las partes siguientes:  
   
 -   Asignación de un nombre a la estructura  
   
@@ -55,7 +55,7 @@ CREATE MINING STRUCTURE [<Mining Structure Name>]
 CREATE MINING STRUCTURE [Mining Structure Name]  
 ```  
   
- Para obtener información sobre la nomenclatura de un objeto en DMX, vea [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Para obtener información sobre cómo asignar un nombre a un objeto en DMX, consulte [identifiers &#40;dmx&#41;](/sql/dmx/identifiers-dmx).  
   
  En la siguiente línea del código se define la columna de clave para la estructura de minería de datos, que identifica de forma única una entidad de los datos de origen:  
   
@@ -77,7 +77,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
    <nested mining structure columns> )  
 ```  
   
- Para obtener información sobre los tipos de columnas que se pueden definir de la estructura de minería de datos, vea [columnas de estructura de minería de datos](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
+ Para obtener información acerca de los tipos de columnas de estructura de minería de datos que puede definir, vea [columnas de estructura de minería de datos](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
 > [!NOTE]  
 >  De forma predeterminada, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crea un conjunto de datos de exclusión del 30 por ciento para cada estructura de minería de datos; sin embargo, al utilizar DMX para crear una estructura de minería de datos, debe agregar el conjunto de datos de exclusiones manualmente, si así se desea.  
@@ -89,7 +89,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 -   Modificar la consulta para crear la estructura de minería de datos  
   
--   Ejecutar la consulta  
+-   Ejecución de la consulta  
   
 ## <a name="creating-the-query"></a>Crear la consulta  
  El primer paso es conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y crear una consulta DMX en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -98,9 +98,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  En el **conectar al servidor** cuadro de diálogo para **tipo de servidor**, seleccione **Analysis Services**. En **nombre del servidor**, tipo `LocalHost`, o el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que desea conectarse a esta lección. Haga clic en **Conectar**.  
+2.  En el cuadro de diálogo **conectar con el servidor** , en **tipo de servidor**, seleccione **Analysis Services**. En **nombre del servidor**, `LocalHost`escriba o el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que desea conectarse para esta lección. Haga clic en **Conectar**.  
   
-3.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
+3.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -109,7 +109,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 #### <a name="to-customize-the-create-mining-structure-statement"></a>Para personalizar la instrucción CREATE MINING STRUCTURE  
   
-1.  En el Editor de consultas, copie el ejemplo genérico de la instrucción CREATE MINING STRUCTURE en la consulta en blanco.  
+1.  En el editor de consultas, copie el ejemplo genérico de la instrucción CREATE MINING STRUCTURE en la consulta en blanco.  
   
 2.  Reemplace lo siguiente:  
   
@@ -117,7 +117,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     [mining structure name]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Market Basket]  
@@ -129,7 +129,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     <key column>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     OrderNumber TEXT KEY  
@@ -143,7 +143,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
        <nested mining structure columns> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Products] TABLE (  
@@ -164,29 +164,29 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     )  
     ```  
   
-5.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+5.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-6.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Market Basket Structure.dmx`.  
+6.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Market Basket Structure.dmx`al archivo.  
   
 ## <a name="executing-the-query"></a>Ejecutar la consulta  
- El último paso es ejecutar la consulta. Después de crear y guardar una consulta, debe ejecutarse (es decir, debe ejecutarse la instrucción) para crear la estructura de minería de datos en el servidor. Para obtener más información acerca de cómo ejecutar consultas en el Editor de consultas, vea [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
+ El último paso es ejecutar la consulta. Después de crear y guardar una consulta, debe ejecutarse (es decir, debe ejecutarse la instrucción) para crear la estructura de minería de datos en el servidor. Para obtener más información acerca de la ejecución de consultas en el editor de consultas, vea [motor de base de datos editor de consultas &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md).  
   
 #### <a name="to-execute-the-query"></a>Para ejecutar la consulta  
   
--   En el Editor de consultas, en la barra de herramientas, haga clic en **Execute**.  
+-   En el editor de consultas, en la barra de herramientas, haga clic en **Ejecutar**.  
   
-     El estado de la consulta se muestra en el **mensajes** en la parte inferior del Editor de consultas de una vez que finaliza la ejecución de la instrucción. En Mensajes, debe aparecer lo siguiente:  
+     El estado de la consulta se muestra en la pestaña **mensajes** , en la parte inferior del editor de consultas, una vez finalizada la ejecución de la instrucción. En Mensajes, debe aparecer lo siguiente:  
   
     ```  
     Executing the query   
     Execution complete  
     ```  
   
-     Una nueva estructura denominada **cesta** ahora existe en el servidor.  
+     Ahora hay una nueva estructura denominada cesta de la **compra** en el servidor.  
   
  En la siguiente lección agregará modelos de minería de datos a la estructura de minería de datos Market Basket que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería a la estructura de minería cesta de la compra](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

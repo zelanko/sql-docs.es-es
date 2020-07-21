@@ -1,5 +1,5 @@
 ---
-title: Escribir el método | Microsoft Docs
+title: Write (método) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Write method [ADO]
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 911a9dfb21c054dc95c54d9fb429d628d8e01fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945909"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764436"
 ---
 # <a name="write-method"></a>Método Write
-Escribe datos binarios en un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Escribe datos binarios en un objeto de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,21 +34,21 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *búfer*  
- Un **Variant** que contiene una matriz de bytes que se escribirán.  
+ *Búfer*  
+ **Variante** que contiene una matriz de bytes que se va a escribir.  
   
 ## <a name="remarks"></a>Comentarios  
- Se escriben los bytes especificados en el **Stream** objeto sin espacios intermedios entre cada byte.  
+ Los bytes especificados se escriben en el objeto de **secuencia** sin ningún espacio intermedio entre cada byte.  
   
- Actual [posición](../../../ado/reference/ado-api/position-property-ado.md) está establecido en el byte que sigue a los datos escritos. El **escribir** método no trunca el resto de los datos en una secuencia. Si desea truncar estos bytes, llame a [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ La [posición](../../../ado/reference/ado-api/position-property-ado.md) actual se establece en el byte que sigue a los datos escritos. El método **Write** no trunca el resto de los datos de una secuencia. Si desea truncar estos bytes, llame a [seteos](../../../ado/reference/ado-api/seteos-method.md).  
   
- Si escribe más allá de la actual [EOS](../../../ado/reference/ado-api/eos-property.md) posición, el [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **Stream** se incrementará para contener los bytes nuevos, y **EOS** moverá hasta el último byte nuevo en el **Stream**.  
+ Si escribe más allá de la posición actual de [EOS](../../../ado/reference/ado-api/eos-property.md) , se aumentará el [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **secuencia** para que contenga cualquier byte nuevo y **EOS** se moverá al nuevo último byte de la **secuencia**.  
   
 > [!NOTE]
->  El **escribir** método se utiliza con secuencias binarias ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeBinary**). Para las secuencias de texto (**tipo** es **adTypeText**), utilice [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
+>  El método **Write** se usa con secuencias binarias ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeBinary**). En el caso de secuencias de texto (el**tipo** es **adTypeText**), use [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método WriteText](../../../ado/reference/ado-api/writetext-method.md)

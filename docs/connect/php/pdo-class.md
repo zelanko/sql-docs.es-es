@@ -1,5 +1,5 @@
 ---
-title: PDO (clase) | Microsoft Docs
+title: Clase PDO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b016d850286daf0c2cda9604302d78faa6cc6ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbacc1c79789a21b0dbb76ff6f13007ad6368d22
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936285"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919438"
 ---
 # <a name="pdo-class"></a>Clase PDO
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-La clase PDO contiene métodos que permiten a una aplicación PHP conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+La clase PDO contiene métodos que permiten a una aplicación PHP conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,7 +29,7 @@ La clase PDO contiene métodos que permiten a una aplicación PHP conectarse a u
 PDO {}  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La clase PDO contiene los siguientes métodos:  
   
 [PDO::__construct](../../connect/php/pdo-construct.md)  

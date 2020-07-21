@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError - Error de Reporting Services | Microsoft Docs
+description: 'En esta página de referencia de error, obtenga información sobre el identificador de evento "rsProcessingError": Se produjeron errores en el procesamiento de informes de SQL Server Reporting Services.'
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573820"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487224"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
     
@@ -23,16 +24,16 @@ ms.locfileid: "65573820"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rsProcessingError|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rsProcessingError|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|Error al procesar el informe.|  
   
 ## <a name="explanation"></a>Explicación  
  Se encontraron uno o varios errores al publicar, procesar, obtener una vista previa localmente, ver desde el servidor de informes, o crear una suscripción para un informe. Este mensaje de error indica que se ha detectado, como mínimo, un error.  
   
-### <a name="possible-causes"></a>Posibles causas  
+### <a name="possible-causes"></a>Causas posibles  
  Las causas posibles incluyen:  
   
 -   Se ha producido un error de procesamiento en el servidor de informes.  
@@ -53,7 +54,7 @@ ms.locfileid: "65573820"
   
 -   Se ha detectado que un parámetro con el conjunto de propiedades que admite valores NULL establecido en **False** tiene un valor NULL en el parámetro.  
   
--   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no definida a una instancia de un objeto.  
+-   Una presión para la propiedad Hidden de una región de datos contiene un error: Referencia a objeto no establecida como instancia de un objeto.  
   
 -   Una expresión incluía una llamada de función no válida o un error de sintaxis.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193851"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488592"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
   La autenticación es el proceso de establecer el derecho de un usuario en una identidad. Hay muchas técnicas que puede utilizar para autenticar a un usuario. La manera más común es mediante contraseñas. Por ejemplo, al implementar la autenticación de formularios, desea una implementación que consulte las credenciales (normalmente con alguna interfaz que solicita un nombre de inicio de sesión y una contraseña) de los usuarios y, a continuación, valida los usuarios con un almacén de datos, como una tabla de base de datos o un archivo de configuración. Si no se pueden validar las credenciales, se produce un error en el proceso de autenticación y el usuario asumirá una identidad anónima.  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  Cuando el servicio web autentica correctamente a un usuario a través de la extensión de seguridad, genera una cookie que se utiliza para las solicitudes subsiguientes. La cookie puede no conservarse dentro de la entidad de seguridad personalizada porque el servidor de informes no posea la entidad de seguridad. El método del servicio web <xref:ReportService2010.ReportingService2010.LogonUser%2A> devuelve la cookie y se utiliza en las siguientes llamadas al método de servicio web y en el acceso URL.  
   
 > [!NOTE]  
->  Para evitar poner en peligro la cookie durante la transmisión, las cookies de autenticación que devuelve <xref:ReportService2010.ReportingService2010.LogonUser%2A> se deberían transmitir protegidas utilizando el cifrado de Capa de sockets seguros (SSL).  
+>  Para evitar poner en peligro la cookie durante la transmisión, las cookies de autenticación que devuelve <xref:ReportService2010.ReportingService2010.LogonUser%2A> se deberían transmitir protegidas utilizando el cifrado de la Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL).  
   
  Si tiene acceso al servidor de informes a través del acceso URL cuando se instala una extensión de seguridad personalizada, Internet Information Services (IIS) y [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] administran automáticamente la transmisión del vale de autenticación. Si va a tener acceso al servidor de informes a través de la API SOAP, la implementación de la clase de proxy debe incluir compatibilidad adicional para administrar el vale de autenticación. Para obtener más información sobre cómo utilizar la API SOAP y administrar el vale de autenticación, vea "Usar el servicio web con seguridad personalizada".  
   
 ## <a name="forms-authentication"></a>Autenticación de formularios  
  La autenticación de formularios es un tipo de autenticación de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] en la que un usuario no autenticado se dirige a un formulario HTML. Cuando el usuario proporciona las credenciales, el sistema emite una cookie que contiene un vale de autenticación. En las solicitudes posteriores, el sistema comprueba primero la cookie para ver si el servidor de informes autenticó ya al usuario.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se puede extender para admitir la autenticación de formularios utilizando las interfaces de extensibilidad de seguridad disponibles a través de la API de Reporting Services. Si extiende [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para utilizar la autenticación de formularios, utilice Capa de sockets seguros (SSL) para todas las comunicaciones con el servidor de informes, con el fin de evitar que los usuarios malintencionados obtengan acceso a la cookie de otro usuario. SSL permite que los clientes y un servidor de informes se autentiquen entre sí y asegurarse de que ningún otro equipo pueda leer el contenido de las comunicaciones entre los dos equipos. Todos los datos enviados desde un cliente a través de una conexión SSL se cifran para que los usuarios malintencionados no puedan interceptar las contraseñas o los datos que se envían a un servidor de informes.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se puede extender para admitir la autenticación de formularios utilizando las interfaces de extensibilidad de seguridad disponibles a través de la API de Reporting Services. Si extiende [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para utilizar la autenticación de formularios, utilice la Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), para todas las comunicaciones con el servidor de informes, con el fin de evitar que los usuarios malintencionados obtengan acceso a la cookie de otro usuario. TLS permite que los clientes y un servidor de informes se autentiquen entre sí y asegurarse de que ningún otro equipo pueda leer el contenido de las comunicaciones entre los dos equipos. Todos los datos enviados desde un cliente a través de una conexión TLS se cifran para que los usuarios malintencionados no puedan interceptar las contraseñas o los datos que se envían a un servidor de informes.  
   
  La autenticación de formularios se implementa generalmente para admitir cuentas y la autenticación para plataformas distintas de Windows. Cuando un usuario solicita acceso a un servidor de informes, se presenta una interfaz gráfica y las credenciales proporcionadas se envían a una entidad de seguridad para la autenticación.  
   

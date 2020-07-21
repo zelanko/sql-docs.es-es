@@ -1,5 +1,5 @@
 ---
-title: Navegar por los datos | Microsoft Docs
+title: Desplazarse por los datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - searching data [ADO]
 - navigating data [ADO]
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924782"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748442"
 ---
 # <a name="navigating-through-data"></a>Navegar por los datos
-**Conjunto de registros** admite varios métodos y propiedades para navegar por el conjunto de datos resultante. Examinaremos esta funcionalidad a través de algunos escenarios con nuestro ejemplo **Recordset** objetos.  
+**Recordset** admite varios métodos y propiedades para navegar por el conjunto de resultados. Examinaremos esta funcionalidad pasando por algunos escenarios con nuestros objetos de **conjunto de registros** de ejemplo.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67924782"
   
 -   [Otras formas de mover en un conjunto de registros](../../../ado/guide/data/more-ways-to-move-in-a-recordset.md)  
   
--   [Utilizar marcadores](../../../ado/guide/data/using-bookmarks.md)  
+-   [Usar marcadores](../../../ado/guide/data/using-bookmarks.md)  
   
 -   [Usando las páginas](../../../ado/guide/data/using-pages.md)  
   

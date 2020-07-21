@@ -11,10 +11,10 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292995"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propiedades personalizadas del destino DataReader
@@ -30,7 +30,7 @@ ms.locfileid: "71292995"
 |-------------------|---------------|-----------------|  
 |DataReader|String|Nombre de clase del destino DataReader.|  
 |FailOnTimeout|Boolean|Indica si generar un error cuando se produce un **ReadTimeout** . El valor predeterminado de esta propiedad es **False**.|  
-|ReadTimeout|Integer|Número de milisegundos que transcurren antes de que se agote el tiempo de espera. El valor predeterminado de esta propiedad es 30000 (30 segundos).|  
+|ReadTimeout|Entero|Número de milisegundos que transcurren antes de que se agote el tiempo de espera. El valor predeterminado de esta propiedad es 30000 (30 segundos).|  
   
  La entrada y las columnas de entrada del destino DataReader no tienen ninguna propiedad personalizada.  
   

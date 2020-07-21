@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
 - sql12.ssis.ssms.isprojectvalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8cc9d54c449be6764349fa0267f1171206945468
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439002"
 ---
 # <a name="validate-dialog-box"></a>Validar, cuadro de diálogo
   Use el cuadro de diálogo **Validar** para comprobar si hay problemas comunes en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un proyecto o paquete.  
@@ -31,7 +30,7 @@ ms.locfileid: "62771658"
   
 -   [Establecer las opciones de la página General](#general)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Validar  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Validar  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62771658"
   
 5.  Haga clic con el botón derecho en el paquete o proyecto y, después, haga clic en **Validar**.  
   
-##  <a name="general"></a> Establecer las opciones de la página General  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  **Entorno**  
  Seleccione el entorno que desea usar para validar el proyecto o el paquete.  
   
@@ -70,10 +69,10 @@ ms.locfileid: "62771658"
  **Contenedor**  
  Muestra el objeto que contiene el administrador de conexiones.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del administrador de conexiones.  
   
- **Nombre de la propiedad**  
+ **Nombre de propiedad**  
  Muestra el nombre de la propiedad del administrador de conexiones.  
   
  **Valor**  

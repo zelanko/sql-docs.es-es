@@ -1,5 +1,5 @@
 ---
-title: Las instrucciones INSERT, DELETE y UPDATE | Microsoft Docs
+title: Instrucciones UPDATE, DELETE e INSERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,40 +14,40 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942839"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284265"
 ---
 # <a name="update-delete-and-insert-statements"></a>Las instrucciones INSERT, DELETE y UPDATE
-Las aplicaciones basadas en SQL realizar cambios en las tablas mediante la ejecución de la **actualización**, **eliminar**, y **insertar** instrucciones. Estas instrucciones forman parte del nivel de conformidad de gramática mínima de SQL y deben ser compatibles con todos los controladores y orígenes de datos.  
+Las aplicaciones basadas en SQL realizan cambios en las tablas mediante la ejecución de las instrucciones **Update**, **Delete**e **Insert** . Estas instrucciones forman parte del nivel mínimo de cumplimiento de la gramática de SQL y deben ser compatibles con todos los controladores y orígenes de datos.  
   
- Es la sintaxis de estas instrucciones:  
+ La sintaxis de estas instrucciones es:  
   
- **ACTUALIZACIÓN** _nombre de tabla_  
+ **Actualizar** _tabla-nombre_  
   
- **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
+ **Establecer** _el identificador de columna_ **=** {*expresión* &#124; **null**}  
   
- [ **,** _identificador de columna_ **=** {*expresión* &#124; **NULL**}]...  
+ [**,** _identificador de columna_ **=** {*expresión* &#124; **null**}]...  
   
- [**Donde** _condición de búsqueda_]  
+ [**Where** _-condición de búsqueda_]  
   
- **DELETE FROM** _nombre-tabla_[**donde** _condición de búsqueda_]  
+ **Eliminar de** _TABLE-Name_[**Where** _Search-Condition_]  
   
- **INSERT INTO** _nombre-tabla_[ **(** _identificador de columna_ [ **,** _deidentificadordecolumna_]... **)** ]  
+ **Inserte en** _el nombre de tabla_[**(** _columna-identificador_ [**,** _columna-identificador_]... **)**]  
   
- {*especificación de consulta* &#124; **valores (** _Insertar valor_ [ **,** _Insertar valor_]... **)** }  
+ {*especificación de consulta* &#124; **valores (** _Insert-Value_ [**,** _Insert-Value_]... **)**}  
   
- Tenga en cuenta que el *especificación de consulta* elemento es válido solo en las gramáticas de Core y SQL extendido y que la *expresión* y *condición de búsqueda* elementos se convierten en más complejas en las gramáticas de Core y SQL extendido.  
+ Tenga en cuenta que el elemento de *especificación de consultas* solo es válido en las gramáticas SQL básicas y extendidas, y que los elementos de la *expresión* y la *condición de búsqueda* son más complejos en las gramáticas de SQL básicas y extendidas.  
   
- Al igual que otras instrucciones SQL, **actualización**, **eliminar**, y **insertar** instrucciones suelen ser más eficaces cuando se usan parámetros. Por ejemplo, la siguiente instrucción puede preparada y se ejecuta varias veces para insertar varias filas en la tabla Orders:  
+ Al igual que otras instrucciones SQL, las instrucciones **Update**, **Delete**e **Insert** suelen ser más eficaces cuando utilizan parámetros. Por ejemplo, la instrucción siguiente se puede preparar y ejecutar repetidamente para insertar varias filas en la tabla Orders:  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Esta eficiencia puede aumentarse al pasar matrices de valores de parámetro. Para obtener más información acerca de los parámetros de la instrucción y matrices de valores de parámetros, vea [parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md).
+ Esta eficacia se puede aumentar pasando matrices de valores de parámetro. Para obtener más información sobre los parámetros de instrucciones y las matrices de valores de parámetro, vea [parámetros de instrucción](../../../odbc/reference/develop-app/statement-parameters.md).

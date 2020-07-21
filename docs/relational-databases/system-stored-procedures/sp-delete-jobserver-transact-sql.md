@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf97ac7ffd72cf6f3d8b0d04987fa1eacce47835
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864051"
 ---
-# <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita el servidor de destino especificado.  
   
@@ -40,14 +40,14 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo desde el que se quitará el servidor de destino especificado. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo del que se va a quitar el servidor de destino especificado. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` El nombre del trabajo desde el que se quitará el servidor de destino especificado. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo del que se va a quitar el servidor de destino especificado. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse; no se pueden especificar ambos.  
+>  Se debe especificar *job_id* o *job_name* ; no se pueden especificar ambos.  
   
-`[ @server_name = ] 'server'` El nombre del servidor de destino para quitar del trabajo especificado. *servidor* es **nvarchar (30)** , no tiene ningún valor predeterminado. *servidor* puede ser **(LOCAL)** o el nombre de un servidor de destino remoto.  
+`[ @server_name = ] 'server'`Nombre del servidor de destino que se va a quitar del trabajo especificado. el *servidor* es de tipo **nvarchar (30)** y no tiene ningún valor predeterminado. el *servidor* puede ser **(local)** o el nombre de un servidor de destino remoto.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -56,10 +56,10 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="permissions"></a>Permisos  
- Para ejecutar este procedimiento almacenado, los usuarios deben ser miembros de la **sysadmin** rol fijo de servidor.  
+ Para ejecutar este procedimiento almacenado, los usuarios deben ser miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se quita el servidor `SEATTLE2` del procesamiento del `Weekly Sales Backups`trabajo.  
+ En el ejemplo siguiente se quita el servidor `SEATTLE2` del procesamiento del `Weekly Sales Backups` trabajo.  
   
 > [!NOTE]  
 >  En este ejemplo se da por supuesto que el trabajo `Weekly Sales Backups` se creó con anterioridad.  
@@ -74,9 +74,9 @@ EXEC sp_delete_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

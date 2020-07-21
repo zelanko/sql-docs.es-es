@@ -1,5 +1,5 @@
 ---
-title: Indicadores de rendimiento (KPI) en modelos multidimensionales clave | Microsoft Docs
+title: Indicadores clave de rendimiento (KPI) en modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546647"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicadores clave de rendimiento (KPI) en modelos multidimensionales
   En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para identificar los éxitos empresariales.  
@@ -37,7 +36,7 @@ ms.locfileid: "66074799"
   
  En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para identificar los éxitos empresariales. Un KPI se evalúa con frecuencia a lo largo del tiempo. Por ejemplo, el departamento de ventas de una organización puede utilizar el beneficio bruto mensual como un KPI, pero el departamento de recursos humanos de la misma organización puede utilizar la rotación de personal trimestral. Cada uno de ellos es un ejemplo de KPI. Los ejecutivos de una compañía suelen utilizar KPI agrupados en una pestaña empresarial para obtener un resumen histórico rápido y preciso de los éxitos empresariales.  
   
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI es un conjunto de cálculos asociados a un grupo de medida de un cubo, que se usa para evaluar el éxito empresarial. Normalmente, estos cálculos son una combinación de expresiones MDX (Expresiones multidimensionales) y miembros calculados. Los KPI también tienen metadatos adicionales que proporcionan información acerca de cómo deberían las aplicaciones cliente mostrar los resultados de un cálculo de los KPI.  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un KPI es una colección de cálculos, que están asociados a un grupo de medida de un cubo, que se usan para evaluar el éxito empresarial. Normalmente, estos cálculos son una combinación de expresiones MDX (Expresiones multidimensionales) y miembros calculados. Los KPI también tienen metadatos adicionales que proporcionan información acerca de cómo deberían las aplicaciones cliente mostrar los resultados de un cálculo de los KPI.  
   
  Una ventaja fundamental de los KPI de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es que son KPI basados en el servidor que pueden ser usados por diferentes aplicaciones cliente. Un KPI basado en el servidor presenta una única versión de veracidad, en comparación con versiones independientes de la veracidad de aplicaciones cliente independientes. Además, al realizar esos cálculos que en ocasiones pueden ser complejos en el servidor, en lugar de en cada equipo cliente se pueden obtener tener algunas ventajas de rendimiento.  
   
@@ -47,15 +46,15 @@ ms.locfileid: "66074799"
 |Término|Definición|  
 |----------|----------------|  
 |Objetivo|Expresión numérica MDX o cálculo que devuelve el valor de destino del KPI.|  
-|Valor|Expresión númerica MDX que devuelve el valor real del KPI.|  
+|Value|Expresión númerica MDX que devuelve el valor real del KPI.|  
 |Estado|Expresión MDX que representa el estado del KPI en un punto temporal específico.<br /><br /> La expresión MDX de estado debe devolver un valor normalizado entre -1 y 1. Los valores iguales o inferiores a -1 se interpretarán como "malos" o "bajos". El valor cero (0) se interpreta como "aceptable" o "medio." Los valores iguales o superiores a 1 se interpretarán como "correctos" o "altos".<br /><br /> Opcionalmente puede devolverse un número ilimitado de valores intermedios que se pueden utilizar para mostrar gran cantidad de estados adicionales, si la aplicación cliente lo admite.|  
-|Tendencia|Expresión MDX que evalúa el valor del KPI con el paso del tiempo. La tendencia puede ser cualquier criterio basado en el tiempo que sea útil en determinado contexto empresarial.<br /><br /> La expresión MDX de tendencia permite a un usuario corporativo determinar si el KPI mejora o empeora a lo largo del tiempo.|  
+|Tendencia|Una expresión MDX que evalúa el valor del KPI en el tiempo. La tendencia puede ser cualquier criterio basado en el tiempo que sea útil en determinado contexto empresarial.<br /><br /> La expresión MDX de tendencia permite a un usuario corporativo determinar si el KPI mejora o empeora a lo largo del tiempo.|  
 |Indicador de estado|Elemento visual que proporciona una indicación rápida del estado de un KPI. La visualización del elemento se determina con el valor de la expresión MDX que evalúa el estado.|  
 |Indicador de tendencia|Elemento visual que proporciona una indicación rápida de la tendencia de un KPI. La visualización del elemento se determina con el valor de la expresión MDX que evalúa la tendencia.|  
 |Carpeta para mostrar|Carpeta en la que aparecerá el KPI cuando el usuario examine el cubo.|  
 |KPI primario|Referencia a un KPI existente que utiliza el valor del KPI secundario como parte del cálculo del KPI primario. En ocasiones, un solo KPI será un cálculo compuesto por los valores de otros KPI. Esta propiedad facilita la visualización de los KPI secundarios situados por debajo del KPI primario en las aplicaciones cliente.|  
 |Miembro de hora actual|Expresión MDX que devuelve el miembro que identifica el contexto temporal del KPI.|  
-|Weight|Expresión numérica MDX que asigna una importancia relativa a un KPI. Si el KPI se asigna a un KPI primario, el peso se utiliza para ajustar proporcionalmente los resultados del valor del KPI secundario al calcular el valor del KPI primario.|  
+|Peso|Expresión numérica MDX que asigna una importancia relativa a un KPI. Si el KPI se asigna a un KPI primario, el peso se utiliza para ajustar proporcionalmente los resultados del valor del KPI secundario al calcular el valor del KPI primario.|  
   
 ## <a name="parent-kpis"></a>KPI primarios  
  Una organización puede realizar el seguimiento de distintas métricas empresariales a varios niveles. Por ejemplo, solo pueden utilizarse dos o tres KPI para medir el éxito empresarial de toda una compañía, pero estos KPI de toda la compañía pueden basarse en otros tres o cuatro KPI de los que las unidades empresariales de la compañía han realizado un seguimiento. Asimismo, las unidades empresariales de una compañía pueden utilizar estadísticas diferentes para calcular el mismo KPI, cuyos resultados se acumulan en el KPI de toda la compañía.  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103186"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activar o desactivar las características de Reporting Services
@@ -25,7 +25,7 @@ ms.locfileid: "66103186"
   
  En los procedimientos de este tema, se muestra cómo desactivar características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. Las características se pueden configurar de varias maneras: editando directamente el archivo `RsReportServer.config` o con la faceta **Configuración de área expuesta para Reporting Services** de la administración basada en directivas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use los vínculos para buscar el procedimiento o los procedimientos en los que se explica cómo activar o desactivar una característica:  
   
--   [servicio web del servidor de informes](#RSWebSvc)  
+-   [Servicio Web del servidor de informes](#RSWebSvc)  
   
 -   [Eventos y procesamiento programados](#Sched)  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66103186"
   
 -   [Generador de informes](#ReportBuilder)  
   
--   [Seguridad integrada de Windows para los orígenes de datos de informes](#WinIntSec)  
+-   [Seguridad integrada de Windows para orígenes de datos de informe](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Report Server Web Service  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a>Servicio Web del servidor de informes  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Para activar o desactivar el servicio web del servidor de informes editando la configuración  
   
@@ -59,19 +59,19 @@ ms.locfileid: "66103186"
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conéctese a la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desea configurar.  
   
-2.  En el Explorador de objetos, haga clic con el botón derecho en el nodo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , seleccione **Directivas**y, después, haga clic en **Facetas**.  
+2.  En Explorador de objetos, haga clic con el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] botón secundario en el nodo, seleccione **directivas**y haga clic en **aspectos**.  
   
 3.  En la lista **Faceta** , seleccione **Configuración de área expuesta para Reporting Services**.  
   
 4.  En **Propiedades de faceta**:  
   
-    -   Para activar el servicio Web del servidor de informes, establezca **WebServiceAndHTTPAccessEnabled** a `True`.  
+    -   Para activar el servicio Web del servidor de informes, **WebServiceAndHTTPAccessEnabled** establezca WebServiceAndHTTPAccessEnabled `True`en.  
   
-    -   Para desactivar el servicio Web del servidor de informes, establezca **WebServiceAndHTTPAccessEnabled** a `False`.  
+    -   Para desactivar el servicio Web del servidor de informes, **WebServiceAndHTTPAccessEnabled** establezca WebServiceAndHTTPAccessEnabled `False`en.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Eventos programados y entrega programada  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Eventos programados y entrega programada  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Para activar o desactivar los eventos programados y la entrega programada editando la configuración  
   
@@ -102,22 +102,22 @@ ms.locfileid: "66103186"
   
 1.  Abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conéctese a la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desea configurar.  
   
-2.  En el Explorador de objetos, haga clic con el botón derecho en el nodo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , seleccione **Directivas**y, después, haga clic en **Facetas**.  
+2.  En Explorador de objetos, haga clic con el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] botón secundario en el nodo, seleccione **directivas**y haga clic en **aspectos**.  
   
 3.  En la lista **Faceta** , seleccione **Configuración de área expuesta para Reporting Services**.  
   
 4.  En **Propiedades de faceta**:  
   
-    -   Para activar los eventos programados y entrega, establezca **ScheduleEventsAndReportDeliveryEnabled** a `True`.  
+    -   Para activar los eventos programados y la entrega **ScheduleEventsAndReportDeliveryEnabled** , establezca `True`ScheduleEventsAndReportDeliveryEnabled en.  
   
-    -   Para desactivar los eventos programados y entrega, establezca **ScheduleEventsAndReportDeliveryEnabled** a `False`.  
+    -   Para desactivar los eventos programados y la entrega **ScheduleEventsAndReportDeliveryEnabled** , establezca `False`ScheduleEventsAndReportDeliveryEnabled en.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  No puede desactivar completamente ningún procesamiento en segundo plano porque proporciona la funcionalidad de mantenimiento de las bases de datos que se requiere para las operaciones de servidor.  
   
-##  <a name="ReportManager"></a> Administrador de informes  
+##  <a name="report-manager"></a><a name="ReportManager"></a>Administrador de informes  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>Para activar o desactivar el Administrador de informes editando la configuración  
   
@@ -147,13 +147,13 @@ ms.locfileid: "66103186"
   
 4.  En **Propiedades de faceta**:  
   
-    -   Para desactivar el Administrador de informes, establezca **ReportManagerEnabled** a `True`.  
+    -   Para activar Administrador de informes, establezca **ReportManagerEnabled** en `True`.  
   
-    -   Para desactivar el Administrador de informes, establezca **ReportManagerEnabled** a `False`.  
+    -   Para desactivar Administrador de informes, establezca **ReportManagerEnabled** en `False`.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a> Generador de informes  
+##  <a name="report-builder"></a>Generador de informes de <a name="ReportBuilder"></a>  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>Para activar o desactivar el Generador de informes con SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103186"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a> Seguridad integrada de Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Seguridad integrada de Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Para activar o desactivar la seguridad integrada de Windows con SQL Server Management Studio  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66103186"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

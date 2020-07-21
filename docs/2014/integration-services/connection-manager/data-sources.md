@@ -9,18 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fa4a428c1d1f290ceadee19d21f3b8f0b8bd942
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe18c331a1fe1786392f94fa2a3d2623ce13d0bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833852"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434352"
 ---
 # <a name="data-sources"></a>Orígenes de datos
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un objeto de tiempo de diseño que puede usar en los paquetes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : el origen de datos.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]incluye un objeto en tiempo de diseño que puede usar en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los paquetes: el origen de datos.  
   
  Un objeto de origen de datos es una referencia a una conexión y, como mínimo, incluye una cadena de conexión y un identificador de origen de datos. También puede incluir metadatos adicionales tales como descripción, nombre, nombre de usuario y contraseña.  
   

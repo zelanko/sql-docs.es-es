@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ad183871e58f5dc64cf763c540e1629a09b4f320
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce3513c67a0087dd00021de75f360b19819b46db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876100"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957875"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>Conjuntos de medios de copia de seguridad reflejados (SQL Server)
     
@@ -43,7 +42,7 @@ ms.locfileid: "62876100"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="OverviewofMirroredMediaSets"></a> Información general sobre conjuntos de medios reflejados  
+##  <a name="overview-of-mirrored-media-sets"></a><a name="OverviewofMirroredMediaSets"></a> Información general sobre conjuntos de medios reflejados  
  La creación de reflejos de medios es una propiedad del conjunto de medios. Un *conjunto de medios reflejado* consta de varias copias (*reflejos*) de los conjuntos de medios. Un conjunto de medios incluye una o varias familias de medios, cada una de las cuales se corresponde con un dispositivo de copia de seguridad. Por ejemplo, si la cláusula TO de una instrucción BACKUP DATABASE incluye tres dispositivos, BACKUP reparte los datos entre las tres familias de medios, una por dispositivo. El número de familias de medios y reflejos se define al crear el conjunto de medios (mediante una instrucción BACKUP DATABASE que especifica WITH FORMAT).  
   
  Un conjunto de medios reflejado contiene entre dos y cuatro reflejos. Cada reflejo incluye todas las familias de medios del conjunto de medios. Los reflejos requieren el mismo número de dispositivos, uno por familia de medios. Cada reflejo requiere un dispositivo de copia de seguridad diferente por cada familia de medios. Por ejemplo, un conjunto de medios reflejado que consta de cuatro familias de medios con tres reflejos requiere doce dispositivos de copia de seguridad. Todos estos dispositivos deben ser equivalentes. Por ejemplo, unidades de cinta que tienen el mismo número de modelo del mismo fabricante.  
@@ -61,17 +60,17 @@ ms.locfileid: "62876100"
   
  Las operaciones de copias de seguridad y restauración imponen distintos requisitos sobre la presencia de todos los reflejos. Para que una operación de copia de seguridad escriba (es decir, cree o extienda) un conjunto de medios reflejado, todos los reflejos deben estar presentes. Por el contrario, si se restaura una copia de seguridad desde un conjunto de medios reflejado, solo puede especificar un reflejo para cada familia de medios. Puede realizar restauraciones a partir de menos dispositivos que familias, pero cada familia de medios se procesará una sola vez. No obstante, si hay errores, el hecho de tener otros reflejos habilita la resolución de algunos problemas de restauración rápidamente. Puede sustituir un volumen de medios dañado con el volumen correspondiente de otro reflejo. Esto se debe a que RESTORE y RESTORE VERIFYONLY admiten la sustitución de medios dañados por el volumen de medios de copia de seguridad correspondiente de otro reflejo.  
   
-##  <a name="HardwareReqs"></a> Requisitos de hardware para reflejos de copia de seguridad  
+##  <a name="hardware-requirements-for-backup-mirrors"></a><a name="HardwareReqs"></a> Requisitos de hardware para reflejos de copia de seguridad  
  La creación de reflejos se aplica tanto a los discos como a las cintas (los discos no admiten cintas de continuación). Todos los dispositivos de copia de seguridad de una sola operación de copia de seguridad o restauración deben ser del mismo tipo, disco o cinta.  
   
  Dentro de estas clases generales, se deben utilizar dispositivos similares con las mismas propiedades. Si los dispositivos no son lo suficientemente parecidos, aparecerá el mensaje de error 3212. Para evitar problemas de disparidad, use dispositivos equivalentes, como unidades con el mismo número de modelo del mismo fabricante.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para realizar copias de seguridad en dispositivos de copia de seguridad reflejados**  
   
 -   [Realizar una copia de seguridad en un conjunto de medios reflejado &#40;Transact-SQL&#41;](back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Errores posibles de medios durante copia de seguridad y restauración &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)   
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md)   

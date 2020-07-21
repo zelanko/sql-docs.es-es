@@ -1,7 +1,6 @@
 ---
-title: Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Visualización o cambio de programaciones de conjuntos de recopilación
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -18,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c5aa31c50a4589c3ba5087333522955f8bd9110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8e72be7c753db0871191e44bbc431d755ddfa193
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733810"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Puede ver o cambiar las programaciones del conjunto de recopilación mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  El modo de recopilación, con almacenamiento en caché o sin almacenamiento en caché, determina cómo se puede hacer cambios en una programación. El modo de almacenamiento en caché utiliza programaciones independientes para la recopilación y para la carga. El modo sin almacenamiento en caché utiliza la misma programación para la recopilación y para la carga. El tipo de modo de recopilación para cada uno de los conjuntos de recopilación de datos del sistema es el siguiente:  
@@ -49,7 +49,7 @@ ms.locfileid: "67999903"
   
 2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo de almacenamiento en memoria caché, como **Estadísticas de consultas**y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
-3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos:  
+3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos.  
   
     1.  En el panel de detalles, haga doble clic en el número que se muestra para la columna **Frecuencia de recopilación (s)** en la tabla **Elementos de recopilación** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "67999903"
   
 6.  Haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo **Propiedades del conjunto de recopilación de datos** .  
   
-####  <a name="CollectionSet"></a> Cuadro de diálogo Propiedades del conjunto de recopilación de datos  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Cuadro de diálogo Propiedades del conjunto de recopilación de datos  
  **Página General**  
   
  Utilice esta página para configurar la recopilación y carga de datos, las programaciones y los períodos de retención de datos en el almacén de administración de datos. Esta página también proporciona información sobre los conjuntos de recopilación, como los tipos de recopilador y las frecuencias de recopilación, así como sobre los parámetros de entrada que se utilizan para un conjunto de recopilación.  
@@ -110,10 +110,11 @@ ms.locfileid: "67999903"
  **Recopilación y carga de datos**  
  Especifica cómo se recopilan y cargan los datos en el almacén de administración de datos. Elija una de las opciones siguientes.  
   
-|||  
-|-|-|  
+| Opción | Descripción |
+| :----- | :---------- |
 |**Sin caché. Recopilación y carga de datos en la misma programación.**|Si la selecciona, especifique una de las siguientes opciones:<br /><br /> **Programación**. Los datos se recopilan y se cargan de acuerdo con una programación. Haga clic en **Seleccionar** para seleccionar entre una lista predefinida de programaciones o en **Nueva** para crear una nueva programación.<br /><br /> **A petición**. Los datos se recopilan y se cargan a petición.|  
 |**En caché. Recopilar y almacenar en caché los datos en un conjunto de frecuencias de recopilación. Cargar los datos en caché según una programación independiente.**|Recopilar y almacenar en caché los datos para una frecuencia de recopilación especificada. Cargar los datos recopilados según una programación independiente.|  
+|||
   
  **Elementos de recopilación**  
  Muestra los elementos de recopilación del conjunto de recopilación. Se proporciona la información siguiente para cada elemento de recopilación:  
@@ -133,11 +134,12 @@ ms.locfileid: "67999903"
  **Establecer cuánto tiempo se retendrán los datos recopilados en el almacén de administración de datos.**  
  Especifica cuánto tiempo se retienen los datos recopilados. Elija una de las opciones siguientes.  
   
-|||  
-|-|-|  
+| Opción | Descripción |
+| :----- | :---------- |
 |**Retener datos para**|Esta opción está seleccionada de forma predeterminada y el período de retención predeterminado es de 14 días.|  
 |**Retener datos indefinidamente**|No hay ningún límite en la cantidad de tiempo que se retienen los datos.|  
-  
+|||
+
  **Página Cargas**  
   
  Utilice esta página para configurar la programación de carga para los datos recogidos por este conjunto de recopilación.  

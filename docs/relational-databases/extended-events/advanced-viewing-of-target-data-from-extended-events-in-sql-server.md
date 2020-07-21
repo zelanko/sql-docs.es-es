@@ -1,6 +1,6 @@
 ---
-title: Visualización avanzada de datos de destino de eventos extendidos en SQL Server | Microsoft Docs
-ms.custom: ''
+title: Visualización avanzada de datos de destino de eventos extendidos
+description: Use las características avanzadas de SQL Server Management Studio para ver los datos de destino de eventos extendidos con todo detalle. Puede ver, exportar y manipular los datos.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,17 +10,18 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 16671290ed86def1b013a77d991487dfdad26a10
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85779500"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 En este artículo se explica cómo usar las características avanzadas de SQL Server Management Studio (SSMS.exe) para ver los datos de destino de eventos extendidos con todo detalle. En este artículo se explica cómo:
@@ -32,7 +33,7 @@ En este artículo se explica cómo usar las características avanzadas de SQL Se
 
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerrequisitos
 
 En este artículo se da por hecho que ya sabe cómo crear e iniciar una sesión de eventos. En este artículo encontrará instrucciones sobre cómo crear una sesión de eventos:
 
@@ -91,7 +92,7 @@ Existen varias maneras de incorporar datos de destino del archivo event_file a l
 
 
 - Cada vez que se inicia la sesión de eventos, el sistema inserta un número entero grande al nuevo nombre de archivo para que ese nombre de archivo sea único y diferente de la ocasión anterior en que se inició la sesión.
-  - *Ejemplo:* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *Ejemplo*: Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - El contenido de un .XEL no es texto sin formato que puede verse con Notepad.exe.
@@ -318,7 +319,7 @@ El evento **query_post_execution_showplan** permite ver el plan de consulta real
 
 ![Plan de consulta con la lista de propiedades de un nodo](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [XELite: biblioteca multiplataforma para leer XEvents de archivos XEL o secuencias en directo de SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/); publicada en mayo de 2019.
 

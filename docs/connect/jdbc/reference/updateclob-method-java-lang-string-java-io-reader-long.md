@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6b8f759a-ce5d-41b2-b6cc-24a3ab299f1f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5fd7344227bdaa2ba7f0dccb1dd823d210b66ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99c97a4d7e176e5f1eab0ebc1185df527e4fe15c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999217"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919894"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader-long"></a>Método updateClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void updateClob(java.lang.String columnLabel,
   
  *reader*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
  *length*  
   
@@ -47,7 +47,7 @@ public void updateClob(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateClob especifica este método updateClob en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -1,5 +1,6 @@
 ---
 title: Características y tareas de la utilidad de SQL Server | Microsoft Docs
+description: Familiarícese con la Utilidad de SQL Server. Obtenga información sobre sus características y descubra cómo puede usarla para supervisar un entorno de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c48779de7f7edccd4401e1d60740b7cff6a046cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755690"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Características y tareas de la utilidad de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesitan administrar su entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en conjunto, requisito cubierto en esta versión por medio del concepto de administración de aplicaciones y de varios servidores de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>Ventajas de la Utilidad de SQL Server  
  La Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modela las entidades relacionadas con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de una organización en una vista unificada. Los puntos de vista del Explorador de Utilidad y de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) proporcionan a los administradores una vista global del estado de los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que actúa como punto de control de la utilidad (UCP). La combinación del resumen y los datos detallados presentados por el UCP sobre directivas de infrautilización o sobreutilización, y sobre diversidad de parámetros clave, habilita posibilidades de consolidación de recursos y de fácil identificación de sobreutilización. Las directivas de mantenimiento se pueden configurar y ajustarse para modificar umbrales de uso mayor o menor de los recursos. Es posible cambiar las directivas de supervisión globales o configurar directivas de supervisión individuales para cada entidad administrada en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="typical_scenarios"></a> Introducción a la Utilidad de SQL Server  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Introducción a la Utilidad de SQL Server  
  El escenario de usuario típico comienza con la creación de un punto de control de la utilidad  que establece el punto de razonamiento central para la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El UCP proporciona una vista global del estado de los recursos, tomada de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una vez creado el UCP, inscriba instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que el UCP las pueda administrar.  
   
  Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicación de capa de datos administrada por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden supervisar dependiendo de definiciones de directiva globales o basándose definiciones de directiva individuales.  
@@ -41,7 +42,7 @@ ms.locfileid: "68115313"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe las consideraciones para configurar un servidor que ejecute los conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Consideraciones para ejecutar conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Describe cómo crear un punto de control de la Utilidad de SQL Server.|[Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Describe cómo conectarse a una Utilidad de SQL Server.|[Conectarse a una utilidad de SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

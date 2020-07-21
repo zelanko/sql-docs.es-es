@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68016052"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que generan resultados de varios conjuntos de filas
@@ -29,14 +29,14 @@ ms.locfileid: "68016052"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador de OLE DB para SQL Server puede devolver varios conjuntos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] filas a partir de instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
+  OLE DB Driver for SQL Server puede devolver varios conjuntos de filas a partir de instrucciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las instrucciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
   
 -   Las instrucciones SQL por lotes se envían como un comando único.  
   
 -   Los procedimientos almacenados implementan un lote de instrucciones SQL.  
   
-## <a name="batches"></a>Lotes  
- El controlador de OLE DB para SQL Server reconoce el carácter de punto y coma como delimitador de lotes para las instrucciones SQL:  
+## <a name="batches"></a>Instancias de Batch  
+ OLE DB Driver for SQL Server reconoce el carácter de punto y coma como un delimitador de lotes en las instrucciones SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

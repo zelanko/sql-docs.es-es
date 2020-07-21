@@ -1,6 +1,6 @@
 ---
-title: Otras anotaciones (SQLXML 4.0) | Documentos de Microsoft
-ms.custom: ''
+title: Otras anotaciones (SQLXML)
+description: Vea una lista de anotaciones SQLXML con una descripción de cómo la carga masiva XML interpreta cada una de ellas.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,16 +21,17 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a965ee5772ea3c2855a08d838c1d89da343e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6780a99b5bca826a9e92890ebe317f32c93300fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724735"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>Interpretación de anotaciones: otras anotaciones
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Además de las anotaciones descritas en los temas anteriores de esta sección, la carga masiva de XML interpreta estas otras anotaciones del modo siguiente:  
   
  **sql:id-prefix**  
@@ -51,7 +52,7 @@ ms.locfileid: "68066862"
  **sql:key-fields**  
  La carga masiva de XML omite siempre esta anotación.  
   
-## <a name="see-also"></a>Vea también  
- [Interpretación de anotaciones &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Interpretación de anotaciones &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

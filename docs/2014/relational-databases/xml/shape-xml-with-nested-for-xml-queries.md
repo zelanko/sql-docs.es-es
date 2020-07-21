@@ -11,15 +11,14 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16614a3ab0cc3b60bc53e594d5461eebeb403be3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046589"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Dar forma a XML con consultas FOR XML anidadas
   En el ejemplo siguiente se consulta la tabla `Production.Product` para recuperar los valores `ListPrice` y `StandardCost` de un producto específico. Para hacer interesante la consulta, se devuelven ambos precios en un elemento <`Price`>, y cada elemento <`Price`> tiene un atributo `PriceType`.  
@@ -88,7 +87,7 @@ FOR XML AUTO, TYPE
   
  En el ejemplo anterior se utiliza el método `query()` del tipo de datos `xml` para consultar el XML devuelto por la consulta FOR XML interna y construir el resultado esperado.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Production.Product ProductID="520">  
@@ -97,7 +96,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar consultas FOR XML anidadas](use-nested-for-xml-queries.md)  
   
   

@@ -11,30 +11,30 @@ helpviewer_keywords:
 - Excel driver [ODBC], SQLStatistics
 - SQLStatistics function [ODBC], Excel Driver
 ms.assetid: 02506664-8dcc-4bd0-a8bb-d49fcbdd5722
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c36d68f42b9b7f76310c453d704c6815ee6de22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51b7e59fa811dd7b4ac69f1e9c8d39b4d482c437
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132469"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299345"
 ---
 # <a name="sqlstatistics-excel-driver"></a>SQLStatistics (controlador de Excel)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador de Excel. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de Excel. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|columna|Comentarios|  
+|Columna|Comentarios|  
 |------------|--------------|  
-|TABLE_QUALIFIER|La ruta de acceso a un directorio.<br /><br /> No se admite la coincidencia de patrones en el *szTableQualifier* argumento.|  
+|TABLE_QUALIFIER|La ruta de acceso a un directorio.<br /><br /> No se admite la coincidencia de patrones en el argumento *szTableQualifier* .|  
 |TABLE_OWNER|Se devuelve NULL en esta columna porque no se admite el nombre del propietario.|  
-|TABLE_NAME|Nombre de tabla no delimitado.<br /><br /> No se admite la coincidencia de patrones en el *szTableName* argumento.|  
+|TABLE_NAME|Nombre de tabla no delimitado.<br /><br /> No se admite la coincidencia de patrones en el argumento *szTableName* .|  
 |INDEX_QUALIFIER|Siempre se devuelve NULL.|  
-|INDEX_NAME|Dependientes del índice.|  
-|TYPE|Para el tipo se devolverá sólo SQL_TABLE_STAT o SQL_INDEX_OTHER.|  
-|SEQ_IN_INDEX|Dependientes del índice.|  
-|COLUMN_NAME|Dependientes del índice.|  
-|COLLATION|Dependientes del índice.|  
+|INDEX_NAME|Dependiente del índice.|  
+|TYPE|Solo se devolverá SQL_TABLE_STAT o SQL_INDEX_OTHER para el tipo.|  
+|SEQ_IN_INDEX|Dependiente del índice.|  
+|COLUMN_NAME|Dependiente del índice.|  
+|COLLATION|Dependiente del índice.|  
 |PAGES|Siempre se devuelve NULL.|  
   
- El filtrado se basa en la unicidad (la *fUnique* argumento). El *fAccuracy* parámetro se omite.
+ El filtrado se basa en la unicidad (el argumento *fUnique* ). Se omite el parámetro *fAccuracy* .

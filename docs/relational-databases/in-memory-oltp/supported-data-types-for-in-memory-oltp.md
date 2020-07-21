@@ -1,5 +1,6 @@
 ---
 title: Tipos de datos admitidos para OLTP en memoria | Microsoft Docs
+description: Obtenga información sobre los tipos de datos que no se admiten en las características de OLTP en memoria, las tablas optimizadas para memoria y los módulos T-SQL compilados de forma nativa.
 ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 324d9c27608bd5ee3e93a6987cec7b81407f048a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075889"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650928"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipos de datos admitidos para OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este artículo se enumeran los tipos de datos que no son compatibles para las características de OLTP en memoria de:  
   
--   Tablas con optimización para memoria  
+-   Tablas optimizadas para memoria  
   
 -   Módulos T-SQL compilados de manera nativa  
   
@@ -54,7 +55,7 @@ A partir de SQL Server 2016, cabe destacar lo siguiente en relación con los tip
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificar las columnas de LOB y otras columnas no consecutivas
 
-A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas optimizadas para memoria. Tenga en cuenta lo siguiente:
+A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas optimizadas para memoria. Observe lo siguiente:
 
 - Todas las columnas de clave de índice se almacenan en filas consecutivas.
   - Las claves de índice no únicas ahora pueden incluir columnas que aceptan valores NULL en tablas optimizadas para memoria.

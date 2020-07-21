@@ -1,5 +1,5 @@
 ---
-title: Editar una conexión de origen de datos existente (SSAS Tabular) | Microsoft Docs
+title: Editar una conexión de origen de datos existente (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd8ac9a27d1bcf46ba14b5f49fee3cc9b3b3b4e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081453"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528461"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Editar una conexión de origen de datos existente (SSAS tabular)
   Este tema describe cómo editar las propiedades de una conexión de origen de datos existente en un modelo tabular.  
@@ -77,7 +76,7 @@ ms.locfileid: "66081453"
   
      Cuando guarde el conjunto actual de propiedades de la tabla, es posible que aparezca un mensaje indicando que debe procesar las tablas. Haga clic en **Procesar** para cargar los datos actualizados en el modelo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)   
  [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   

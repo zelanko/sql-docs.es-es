@@ -16,15 +16,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 567c5d95c2ee7c15ea5c541f7fe2010d46ba36f5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900291"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430462"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -59,7 +58,7 @@ ms.locfileid: "62900291"
   
 -   Si hay varias coincidencias en la tabla de referencia, la transformación Búsqueda devuelve solo la primera coincidencia devuelta por la consulta de búsqueda. Si se encuentran varias coincidencias, la transformación Búsqueda genera un error o advertencia solo cuando la transformación se ha configurado para cargar todo el conjunto de datos de referencia en la memoria caché. En este caso, la transformación Búsqueda genera una advertencia cuando detecta varias coincidencias mientras la transformación llena la memoria caché.  
   
- La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
+ La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services tipos de datos](../integration-services-data-types.md).  
   
  Normalmente, los valores del conjunto de datos de referencia se agregan a la salida de transformación. Por ejemplo, la transformación Búsqueda puede extraer un nombre de producto de una tabla mediante un valor de una columna de entrada y, después, agregar el nombre del producto a la salida de transformación. Los valores de la tabla de referencia pueden reemplazar valores de columnas o agregarse a nuevas columnas.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62900291"
 -   Resultado no coincidente. El resultado no coincidente administra las filas de la entrada que no coinciden como mínimo con una entrada del conjunto de datos de referencia. Si configura la transformación Búsqueda para que trate como errores las filas sin entradas coincidentes, las filas se redirigirán a la salida de errores. En los demás casos, la transformación redirigiría dichas filas al resultado no coincidente.  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformación Búsqueda solo tenía un resultado. Para obtener más información sobre cómo ejecutar una transformación de búsqueda que se creó en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [actualizar transformaciones de búsqueda](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  En [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformación Búsqueda solo tenía un resultado. Para obtener más información sobre cómo ejecutar una transformación búsqueda creada en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , vea actualización de [transformaciones de búsqueda](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Resultado de errores  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62900291"
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -121,7 +120,7 @@ ms.locfileid: "62900291"
   
 -   [Implementar una búsqueda en modo No hay caché o Caché parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -129,19 +128,19 @@ ms.locfileid: "62900291"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo [ Cómo implementar una transformación Búsqueda en modo de memoria caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
 -   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
--   Entrada de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Patrón de búsqueda: falta de distinción entre mayúsculas y minúsculas), en blogs.msdn.com  
+-   Entrada de blog, [Patrón de búsqueda: sin distinción de mayúsculas y minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
   
 -   Ejemplo, [Transformación de búsqueda](https://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
   
      Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda aproximada](fuzzy-lookup-transformation.md)   
- [Transformación Búsqueda de términos](term-lookup-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación búsqueda aproximada](fuzzy-lookup-transformation.md)   
+ [Transformación búsqueda de términos](term-lookup-transformation.md)   
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

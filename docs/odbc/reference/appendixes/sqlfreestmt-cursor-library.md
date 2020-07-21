@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC], Cursor Library
 ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfe5c91a90f874b514abb661ea06631be87e69c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d78075593926c15dbaeb1904603b08e990f64983
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086413"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302026"
 ---
 # <a name="sqlfreestmt-cursor-library"></a>SQLFreeStmt (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLFreeStmt** función en la biblioteca de cursores. Para obtener información general sobre **SQLFreeStmt**, consulte [función SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md).  
+ En este tema se describe el uso de la función **SQLFreeStmt** en la biblioteca de cursores. Para obtener información general sobre **SQLFreeStmt**, consulte la [función SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md).  
   
- Si una aplicación llama a **SQLFreeStmt** con la opción SQL_UNBIND después de llamar al **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**, la biblioteca de cursores devuelve un error. Antes de que pueden separar las columnas del conjunto de resultados, una aplicación debe llamar a **SQLCloseCursor** o **SQLFreeStmt** con la opción de SQL_CLOSE.
+ Si una aplicación llama a **SQLFreeStmt** con la opción SQL_UNBIND después de llamar a **SQLExtendedFetch**, **SQLFetch**o **SQLFetchScroll**, la biblioteca de cursores devuelve un error. Antes de poder desenlazar las columnas del conjunto de resultados, una aplicación debe llamar a **SQLCloseCursor** o **SQLFreeStmt** con la opción SQL_CLOSE.

@@ -1,5 +1,6 @@
 ---
 title: Compatibilidad de FOR XML con el tipo de datos xml | Microsoft Docs
+description: Obtenga información sobre el uso de consultas FOR XML en columnas de SQL Database del tipo de datos XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 230492cc44948b169d52a09ee628c424e9840e82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943260"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729886"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Compatibilidad de FOR XML con el tipo de datos xml
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si una consulta FOR XML especifica una columna de tipo **xml** en la cláusula SELECT, los valores de columna se asignan como elementos en el XML devuelto, aunque no se especifique la directiva ELEMENTS. Las declaraciones XML en la columna de tipo **xml** no se serializan.  
   
  Por ejemplo, la consulta siguiente recupera información de contacto de clientes, como las columnas `BusinessEntityID`, `FirstName`y `LastName` , y los números de teléfono de la columna `AdditionalContactInfo` de tipo **xml** .  
@@ -205,6 +206,6 @@ select @x;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Compatibilidad con FOR XML para varios tipos de datos de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
+ [Compatibilidad de FOR XML con varios tipos de datos de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

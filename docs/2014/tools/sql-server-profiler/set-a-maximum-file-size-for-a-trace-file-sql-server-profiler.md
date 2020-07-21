@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd437dec39566ae01e03df5414e29cac0c28a5d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048300"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>Establecer un tamaño máximo de archivo para un archivo de seguimiento (SQL Server Profiler)
   Utilice el siguiente procedimiento para establecer el tamaño máximo de archivo para un archivo de seguimiento.  
@@ -47,7 +46,7 @@ ms.locfileid: "63267320"
     > [!NOTE]  
     >  El sistema de archivos FAT32 limita los archivos a un poco menos de 4 GB. Cuando el archivo de seguimiento alcanza ese tamaño, el seguimiento se detiene con el error "Espacio insuficiente en disco". Para crear archivos de mayor tamaño, utilice el sistema de archivos NTFS.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

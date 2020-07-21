@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar bucle | Microsoft Docs'
+title: 'Lección 2: agregar bucles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4023db85af32babf04de54efbceb6130d7f979ea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767567"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440592"
 ---
 # <a name="lesson-2-adding-looping"></a>Lección 2: Adición de bucles
-  En la [Lección 1: Crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extraía datos de origen de un único archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en el **FactCurrency** tabla de hechos de la **AdventureWorksDW2012** base de datos de ejemplo.  
+  En [la lección 1: crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extrajo datos de un único origen de archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en la tabla de hechos **FactCurrency** de la base de datos de ejemplo **AdventureWorksDW2012** .  
   
  No obstante, no es muy habitual utilizar un solo archivo plano para el proceso de extracción, transformación y carga (ETL). Un proceso ETL típico utilizaría datos extraídos de varios orígenes de archivos planos. Para extraer datos de varios orígenes, se requiere un flujo de control iterativo. Una de las características más esperadas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es la capacidad de agregar fácilmente una iteración o un bucle a los paquetes.  
   
@@ -47,23 +46,23 @@ ms.locfileid: "62767567"
  En esta lección, no modificará el flujo de datos, solamente modificará el flujo de control.  
   
 > [!IMPORTANT]  
->  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre cómo instalar e implementar **AdventureWorksDW2012**, consulte [Ejemplos de productos de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
+>  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre cómo instalar e implementar **AdventureWorksDW2012**, vea [Ejemplos de productos de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=526910).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: Copiar el paquete de la lección 1](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [Paso 1: Copia del paquete de la lección 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Paso 2: Agregar y configurar el contenedor de bucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Paso 2: Adición y configuración del contenedor de bucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
 -   [Paso 3: Modificación del Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Paso 4: Probar el paquete del Tutorial lección 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Paso 4: Prueba del paquete del tutorial de la lección 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
- [Paso 1: Copiar el paquete de la lección 1](lesson-2-1-copying-the-lesson-1-package.md)  
+ [Paso 1: Copia del paquete de la lección 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Contenedor de bucles For](control-flow/for-loop-container.md)  
   
   

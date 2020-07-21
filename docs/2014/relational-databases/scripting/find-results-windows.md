@@ -1,6 +1,6 @@
 ---
-title: Ventanas Resultados de la búsqueda | Microsoft Docs
-ms.custom: ''
+title: Ventanas Resultados de la búsqueda
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 06f26cb7b606052b2183c90713f0ab0470351ffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049041"
 ---
 # <a name="find-results-windows"></a>Ventanas Resultados de la búsqueda
   Las dos ventanas Resultados de la búsqueda muestran las coincidencias encontradas utilizando las pestañas **Buscar en archivos** o **Reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar** . El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
@@ -43,7 +42,7 @@ ms.locfileid: "66090496"
  **Borrar todo**  
  Quita todas las coincidencias de la lista **Resultados** .  
   
-## <a name="shortcut-keys"></a>Teclas de acceso directo  
+## <a name="shortcut-keys"></a>Teclas de método abreviado  
  Las teclas de acceso directo que se muestran a continuación le ayudarán a navegar rápidamente por las coincidencias encontradas.  
   
  CTRL+INICIO  

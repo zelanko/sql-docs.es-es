@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5bfbff70d29e2b7b18c82b323d3ab34a3c6c60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d0244eda0c337fe0f0ea4c361cca899fbb2ca8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835480"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438662"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Generar y ejecutar el script de registro complementario
   Use la página Configurar tablas para capturar cambios con el fin de ejecutar un script en la base de datos de origen de Oracle que configurará el registro complementario.  
@@ -36,8 +35,8 @@ ms.locfileid: "62835480"
   
  Haga clic en **Siguiente** para [Generate Mirror Tables and CDC Capture Instances](generate-mirror-tables-and-cdc-capture-instances.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
- [Revisar y generar scripts de registro complementario](review-and-generate-supplemental-logging-scripts.md)  
+ [Revisar y generar Scripts de registro complementario](review-and-generate-supplemental-logging-scripts.md)  
   
   

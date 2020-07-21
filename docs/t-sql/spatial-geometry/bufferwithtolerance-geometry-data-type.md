@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1f071250b80ce1368b7a30ae9ca8ea66a3e7194
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700716"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve un objeto geométrico que representa la unión de todos los valores de puntos cuya distancia desde una instancia de **geometry** es menor o igual que un valor especificado, lo que posibilita una tolerancia especificada.
   
@@ -50,7 +50,7 @@ Devuelve un objeto geométrico que representa la unión de todos los valores de 
  *relative*  
  Es un valor **bit** que especifica si el valor *tolerance* es relativo o absoluto. Si es TRUE o 1, la tolerancia es relativa y se calcula como el producto del parámetro *tolerance* por el diámetro del cuadro de límite de la instancia. Si es FALSE o 0, la tolerancia es absoluta y el valor *tolerance* es la variación máxima absoluta en la distancia del búfer ideal para la aproximación lineal devuelta.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
@@ -61,7 +61,7 @@ Devuelve un objeto geométrico que representa la unión de todos los valores de 
 > [!NOTE]  
 >  Puesto que *tolerance* es un tipo **float**, se puede generar una excepción `System.Runtime.InteropServices.COMException` si el valor dado para la tolerancia es muy pequeño, debido a problemas de redondeo con los tipos de punto flotante.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  

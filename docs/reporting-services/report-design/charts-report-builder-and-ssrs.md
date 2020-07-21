@@ -1,5 +1,5 @@
 ---
-title: Gráficos (Generador de informes y SSRS) | Microsoft Docs
+title: Gráficos (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e2b3e519a55d23b524582bef8bb7a677023e704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: bc2a48d56c5d603714353974b0a775b93140fd7a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581612"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080590"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Generador de informes y SSRS)
 Lea sobre el uso de las regiones de datos de gráfico para ayudar a los lectores de los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a comprender grandes volúmenes de datos agregados de un vistazo.  
@@ -37,7 +37,7 @@ Cuanto más tiempo se dedique a preparar y entender cuidadosamente los datos ant
  Puede publicar gráficos con independencia de un informe como *elementos de informe*. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).
   
  
-##  <a name="DesigningChart"></a> Diseñar un gráfico  
+##  <a name="designing-a-chart"></a><a name="DesigningChart"></a> Diseñar un gráfico  
  Después de agregar una región de datos de gráfico a la superficie de diseño, puede arrastrar los campos de conjunto de datos de informe para los datos numéricos y no numéricos hasta el panel de Datos del gráfico en el gráfico. Al hacer clic en el gráfico en la superficie de diseño, aparece el panel Datos del gráfico, con tres áreas: Grupos de categorías, Grupos de series y Valores. Si el informe tiene un conjunto de datos compartido o incrustado, los campos del conjunto de datos aparecen en el panel Datos de informe. Arrastre los campos del conjunto de datos al área apropiada del panel Datos del gráfico. De forma predeterminada, cuando se agrega un campo a una de las áreas del gráfico, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula un agregado para dicho campo. También puede usar agrupaciones de series para generar series dinámicamente. Un gráfico se [organiza como una matriz](#SimilarMatrix).  
   
  ![rs_chartwSeriesCategories](../../reporting-services/report-design/media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
@@ -45,7 +45,7 @@ Cuanto más tiempo se dedique a preparar y entender cuidadosamente los datos ant
 > [!NOTE]  
 >  Los datos del gráfico en tiempo de diseño son diferentes de los datos del gráfico cuando se procesa el informe. No son los datos reales. Se trata de datos generados que se han agregado para que pueda diseñar el gráfico y se haga una idea del aspecto que tendrá.  
   
-##  <a name="SimilarMatrix"></a> En qué se parece un gráfico a una matriz  
+##  <a name="how-a-chart-is-like-a-matrix"></a><a name="SimilarMatrix"></a> En qué se parece un gráfico a una matriz  
  Una forma de analizar el trabajo de los gráficos es compararlos con las matrices.  
   
  ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
@@ -59,7 +59,7 @@ Cuanto más tiempo se dedique a preparar y entender cuidadosamente los datos ant
 -   El área Datos de la matriz es como el área Valores del gráfico.  
   
  
-##  <a name="AddingData"></a> Agregar datos al gráfico  
+##  <a name="adding-data-to-the-chart"></a><a name="AddingData"></a> Agregar datos al gráfico  
  Imagine que tiene un informe que muestra ventas por nombre. A continuación, coloca el campo Full Name en el área Grupos de categorías y el campo Sales en el área Valores.  
   
  Al agregar el campo Sales al área Valores, el texto del campo de datos aparece en la leyenda y los datos de este campo numérico se agregarán en un valor. De forma predeterminada, el valor se agrega mediante la función integrada Sum. El panel Datos del gráfico contendrá una expresión simple para el campo. En nuestro ejemplo, aparecerá `[Sum(Sales)]` para la expresión de campo `=Sum(Fields!Sales.Value)`. Si no se especifica ningún grupo, el gráfico únicamente mostrará un punto de datos. Para mostrar varios puntos de datos, debe agrupar los datos agregando un campo de agrupación. Al agregar el campo Name al área Grupos de categorías, se agrega automáticamente al gráfico un campo de agrupación con el mismo nombre que el campo. Cuando se agregan los campos que definen los valores a lo largo de los ejes X e Y, el gráfico tiene suficiente información para trazar correctamente los datos.  
@@ -69,7 +69,7 @@ Cuanto más tiempo se dedique a preparar y entender cuidadosamente los datos ant
  Cuando el área Grupos de series se deja vacía, el número de series se fija en tiempo de diseño. En este ejemplo, Sales es la única serie que aparece en el gráfico.  
   
  
-##  <a name="GroupsInChart"></a> Grupos de categorías y de series en un gráfico  
+##  <a name="category-and-series-groups-in-a-chart"></a><a name="GroupsInChart"></a> Grupos de categorías y de series en un gráfico  
  Un gráfico admite grupos de categorías y de series anidados. Los gráficos no muestran datos detallados. Agregue grupos a un gráfico arrastrando campos de conjunto de datos hasta las zonas de colocación de categorías y de series para un gráfico seleccionado.  
   
  Los gráficos de formas, como los gráficos circulares, admiten grupos de categorías y grupos de categorías anidados. Otros gráficos, como los de barras, admiten grupos de categorías y grupos de series. Puede anidar grupos, pero debe asegurarse de que los números de categorías o de series no ocultan la presentación de información en el gráfico.  
@@ -77,14 +77,14 @@ Cuanto más tiempo se dedique a preparar y entender cuidadosamente los datos ant
 ### <a name="adding-series-grouping-to-a-chart"></a>Agregar agrupaciones de series a un gráfico  
  Si agrega un campo al área Grupos de series, el número de series dependerá de los datos que contiene dicho campo. En el ejemplo anterior, imagine que agrega un campo Year al área Grupos de series. El número de valores del campo Year determinará cuántas series aparecerán en el gráfico. Si el campo Year contiene los años 2004, 2005 y 2006, el gráfico mostrará tres series para cada campo del área Valores.  
   
-##  <a name="DatasetConsiderations"></a> Consideraciones de los conjuntos de datos antes de crear el gráfico  
+##  <a name="dataset-considerations-before-creating-a-chart"></a><a name="DatasetConsiderations"></a> Consideraciones de los conjuntos de datos antes de crear el gráfico  
  Los gráficos proporcionan una vista resumida de los datos. Sin embargo, con conjuntos de datos grandes, la información de los gráficos puede quedar oculta o ilegible. Puntos de datos ausentes o nulos, tipos de datos inadecuados para el tipo de gráfico y aplicaciones avanzadas como combinar gráficos con tablas pueden afectar a la legibilidad de los gráficos. Antes de diseñar un gráfico, debería preparar y entender cuidadosamente los datos para que el diseño se realice rápida y eficazmente.  
   
- En un informe puede incluir tantos gráficos como desee. Un gráfico, como cualquier otra región de datos como una matriz o una tabla, está enlazado a un único conjunto de datos. Si desea mostrar varios conjuntos de datos en el mismo gráfico, puede crear un conjunto de datos adicional que use una instrucción JOIN o UNION en la consulta SQL antes de agregar datos al gráfico. Para obtener más información sobre la instrucción UNION y JOIN, vea los Libros en pantalla u otra referencia de SQL.  
+ En un informe puede incluir tantos gráficos como desee. Un gráfico, como cualquier otra región de datos como una matriz o una tabla, está enlazado a un único conjunto de datos. Si desea mostrar varios conjuntos de datos en el mismo gráfico, puede crear un conjunto de datos adicional que use una instrucción JOIN o UNION en la consulta SQL antes de agregar datos al gráfico.  
   
  Considere la posibilidad de agregar los datos previamente en la consulta del conjunto de datos si no necesita datos detallados o estos no resultarán útiles. Para mostrar cada punto de datos con más claridad, reduzca el número de categorías del conjunto de datos. Puede filtrar el conjunto de datos o agregar una condición a la consulta que reduzca el número de filas devueltas. 
   
-##  <a name="BestPractices"></a> Prácticas recomendadas para mostrar datos en un gráfico  
+##  <a name="best-practices-when-displaying-data-in-a-chart"></a><a name="BestPractices"></a> Prácticas recomendadas para mostrar datos en un gráfico  
  Los gráficos son más efectivos cuando el número de elementos mostrados presenta una imagen clara de la información subyacente. Algunos gráficos, como los gráficos de dispersión, mejoran cuando contienen numerosos puntos de datos, mientras que otros, como los gráficos circulares, son más efectivos con menos puntos de datos. Elija cuidadosamente un tipo de gráfico basándose en los valores del conjunto de datos y en cómo desea mostrar esta información. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
   
  Existen varias formas de consolidar los datos en un gráfico:  
@@ -97,14 +97,14 @@ Cuanto más tiempo se dedique a preparar y entender cuidadosamente los datos ant
   
 -   Para mostrar datos de proporción en una plantilla de tabla o de matriz, considere la posibilidad de usar un medidor lineal en lugar de un gráfico de barras. Los medidores son más adecuados para mostrar un solo valor dentro de una celda. Para más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md).  
    
-##  <a name="AggregateValues"></a> Agregar valores de un campo de datos en el gráfico  
+##  <a name="aggregating-values-from-a-data-field-on-the-chart"></a><a name="AggregateValues"></a> Agregar valores de un campo de datos en el gráfico  
  De forma predeterminada, cuando se agrega un campo al área Valores del gráfico, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] calcula un agregado para dicho campo. Si se arrastra un campo hasta el gráfico sin colocarlo en un área concreta, el gráfico determinará si este campo pertenece al eje de categorías (X) o al eje de valores (Y) en función del tipo de datos del campo. Los campos numéricos que se colocan en el área Valores se agregan mediante la función SUM. Si el tipo de datos del campo de valor es String en el área Valores, el gráfico no puede mostrar valores numéricos, incluso si los campos incluyen números, de modo que el gráfico usa la función COUNT. Para evitar este comportamiento, asegúrese de que los campos que usa tienen tipos de datos numéricos, en lugar de cadenas que contienen números con formato. Puede usar una expresión de Visual Basic para convertir los valores de cadena en un tipo de datos numérico usando la constante **CDbl** o **CInt** . Por ejemplo, la expresión compleja siguiente convierte un campo denominado `MyField` que contiene valores numéricos a los que se ha dado formato de cadena.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  Para más información sobre las expresiones de agregado, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
    
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Describe los primeros pasos para agregar un gráfico a su informe.  
   

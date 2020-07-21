@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eca0c3f3c03438c9bcc6a715bf06b4aa58f8690a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733238"
 ---
-# <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve las propiedades del distribuidor. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -38,7 +38,7 @@ sp_helpdistributor_properties
   
 ## <a name="result-set"></a>Tipo de cursor  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**heartbeat_interval**|**int**|Número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso.|  
   
@@ -49,9 +49,9 @@ sp_helpdistributor_properties
  **sp_helpdistributor_properties** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de servidor **sysadmin** , los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución y los usuarios de la lista de acceso a la publicación (PAL) para una publicación que usa este distribuidor pueden Ejecute **sp_helpdistributor_properties**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución y los usuarios de la lista de acceso a la publicación (PAL) para una publicación que usa este distribuidor pueden ejecutar **sp_helpdistributor_properties**.  
   
-## <a name="see-also"></a>Vea también  
- [Transact &#40;-SQL de sp_changedistributor_property&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_changedistributor_property &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

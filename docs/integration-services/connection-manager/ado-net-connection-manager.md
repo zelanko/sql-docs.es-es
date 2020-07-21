@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d61b7423bb39267fe4171d661e8fe7a74fbc6faa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294487"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74687272"
 ---
 # <a name="adonet-connection-manager"></a>Administrador de conexiones de ADO.NET
 
@@ -31,7 +31,7 @@ ms.locfileid: "71294487"
 
 Un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite a un paquete tener acceso a orígenes de datos mediante un proveedor .NET. Normalmente, se usa este administrador de conexiones para acceder a orígenes de datos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede acceder a orígenes de datos expuestos a través de OLE DB y XML en tareas personalizadas escritas en código administrado mediante un lenguaje como C#.  
   
-Cuando se agrega un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve como una conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] en tiempo de ejecución. Establece las propiedades del administrador de conexiones y agrega este a la colección **Connections** del paquete.  
+Cuando se agrega un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve como una conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] en tiempo de ejecución. Establece las propiedades del administrador de conexiones y agrega este a la colección **Connections** del paquete.  
   
 La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ADO.NET`. El valor de `ConnectionManagerType` se califica para incluir el nombre del proveedor .NET que usa el administrador de conexiones.  
   
@@ -40,7 +40,7 @@ Puede registrar las llamadas realizadas por el administrador de conexiones [!INC
   
 Al ser leídos por un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)], los datos de ciertos tipos de datos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generan los resultados que se muestran en la tabla siguiente.  
   
-|Tipo de datos de SQL Server|Resultado|  
+|Tipos de datos de SQL Server|Resultado|  
 |--------------------------|------------|  
 |**time**, **datetimeoffset**|Se produce un error en el paquete a menos que el paquete utilice comandos SQL parametrizados. Para utilizar comandos SQL parametrizados, utilice la tarea Ejecute SQL en el paquete. Para más información, vea [Tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
 |**datetime2**|El administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] trunca el valor de milisegundos.|  
@@ -78,7 +78,7 @@ Seleccione una conexión de datos ADO.NET de la lista.
 **Propiedades de conexión de datos**  
 Vea las propiedades y los valores de la conexión de datos ADO.NET seleccionada.  
   
-**Nueva**  
+**Nuevo**  
 Cree una conexión de datos ADO.NET mediante el cuadro de diálogo **Administrador de conexiones** .  
   
 **Eliminar**  
@@ -92,54 +92,40 @@ Al ejecutar paquetes SSIS en el [entorno de ejecución de integración de Azure-
 
 Para usar la autenticación de la identidad administrada en Azure SQL Database, siga estos pasos para configurar la base de datos:
 
-1. Cree un grupo en Azure AD. Convierta la identidad administrada en miembro del grupo.
-    
-   1. [Busque la identidad administrada de la factoría de datos en Azure Portal](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Vaya a **Propiedades** en la factoría de datos. Copie el **Id. del objeto de identidad administrada**.
-    
-   1. Instale el módulo de [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2). Inicie sesión con el comando `Connect-AzureAD`. Ejecute los comandos siguientes para crear un grupo y agregue la identidad administrada como miembro.
-      ```powershell
-      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
-      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
-      ```
-    
-1. [Aprovisione un administrador de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) para Azure SQL Server en Azure Portal, si aún no lo ha hecho. El administrador de Azure AD puede ser un usuario o un grupo de Azure AD. Si concede un rol de administrador al grupo con identidad administrada, omita los pasos 3 y 4. El administrador tendrá acceso completo a la base de datos.
+1. [Aprovisione un administrador de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) para Azure SQL Server en Azure Portal, si aún no lo ha hecho. El administrador de Azure AD puede ser un usuario o un grupo de Azure AD. Si concede un rol de administrador al grupo con identidad administrada, omita los pasos 2 y 3. El administrador tendrá acceso completo a la base de datos.
 
-1. [Cree usuarios de base de datos independiente](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) para el grupo de Azure AD. Conéctese a la base de datos en la que va a copiar o pegar datos mediante herramientas como SSMS, con una identidad de Azure AD que tenga al menos el permiso ALTER ANY USER. Ejecute el T-SQL siguiente: 
+1. [Cree usuarios de bases de datos independientes](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) para la identidad administrada de Data Factory. Conéctese a la base de datos en la que va a copiar o pegar datos mediante herramientas como SSMS, con una identidad de Azure AD que tenga al menos el permiso ALTER ANY USER. Ejecute el T-SQL siguiente: 
     
     ```sql
-    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Conceda los permisos necesarios al grupo de Azure AD como lo haría normalmente para los usuarios de SQL y otros. Consulte [Roles de nivel de base de datos](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) para conocer los roles adecuados. Por ejemplo, ejecute el siguiente código:
+1. Conceda a la identidad administrada de Data Factory los permisos necesarios, tal como lo haría normalmente para los usuarios de SQL y otros usuarios. Consulte [Roles de nivel de base de datos](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) para conocer los roles adecuados. Ejecute el código siguiente: Para más opciones, consulte [este documento](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
 
     ```sql
-    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
 Para usar la autenticación de identidad administrada en la instancia administrada de Azure SQL Database, siga estos pasos para configurar la base de datos:
     
-1. [Aprovisione un administrador de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) para la instancia administrada en Azure Portal, si aún no lo ha hecho. El administrador de Azure AD puede ser un usuario o un grupo de Azure AD. Si concede un rol de administrador al grupo con identidad administrada, omita los pasos 2-5. El administrador tendrá acceso completo a la base de datos.
+1. [Aprovisione un administrador de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) para la instancia administrada en Azure Portal, si aún no lo ha hecho. El administrador de Azure AD puede ser un usuario o un grupo de Azure AD. Si concede un rol de administrador al grupo con identidad administrada, omita los pasos 2-4. El administrador tendrá acceso completo a la base de datos.
 
-1. [Busque la identidad administrada de la factoría de datos en Azure Portal](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). Vaya a **Propiedades** en la factoría de datos. Copie el valor de **Id. de aplicación de identidad administrada** (no el valor de **Id. del objeto de identidad administrada**).
+1. [Cree inicios de sesión](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) para la identidad administrada de Data Factory. En SQL Server Management Studio (SSMS), conéctese a la instancia administrada con una cuenta de SQL Server que sea **sysadmin**. En la base de datos **maestra**, ejecute el siguiente script T-SQL:
 
-1. Convierta la identidad administrada de la factoría de datos al tipo binario. Conéctese a la base de datos **maestra** de su instancia administrada con herramientas como SSMS o con su cuenta de administrador de SQL o Active Directory. Ejecute el siguiente comando T-SQL en la base de datos **maestra** para obtener el identificador de la aplicación de identidad administrada como un archivo binario:
-    
     ```sql
-    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
-    select CAST(@applicationId AS varbinary)
+    CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Agregue la identidad administrada de la factoría de datos como un usuario de la instancia administrada de Azure SQL Database. Ejecute el siguiente comando T-SQL en la base de datos **maestra**:
-    
+1. [Cree usuarios de bases de datos independientes](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) para la identidad administrada de Data Factory. Conéctese a la base de datos de origen o destino de copia de los datos y ejecute el siguiente script T-SQL: 
+  
     ```sql
-    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Conceda los permisos necesarios a la identidad administrada de la factoría de datos. Consulte [Roles de nivel de base de datos](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) para conocer los roles adecuados. Ejecute el siguiente comando T-SQL en la base de datos en la que va a copiar o pegar datos:
+1. Conceda a la identidad administrada de Data Factory los permisos necesarios, tal como lo haría normalmente para los usuarios de SQL y otros usuarios. Ejecute el código siguiente: Para más opciones, consulte [este documento](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
 
     ```sql
-    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
     ```
 
 Por último, configure la autenticación de la identidad administrada para el administrador de conexiones ADO.NET. Estas son las opciones para hacerlo:
@@ -155,7 +141,7 @@ Por último, configure la autenticación de la identidad administrada para el ad
 > [!NOTE]
 >  Para configurar la autenticación de identidad administrada en paquetes existentes, la manera preferida es volver a generar el proyecto SSIS con el [Diseñador SSIS más reciente](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) al menos una vez. Vuelva a implementar el proyecto SSIS en su entorno de ejecución de integración de Azure SSIS, de modo que la nueva propiedad del administrador de conexiones `ConnectUsingManagedIdentity` se agregue automáticamente a todos los administradores de conexiones ADO.NET del proyecto SSIS. La manera alternativa es usar directamente la invalidación de propiedades con la ruta de acceso a la propiedad **\Package.Connections[{el nombre del administrador de conexiones}].Properties[ConnectUsingManagedIdentity]** en tiempo de ejecución.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

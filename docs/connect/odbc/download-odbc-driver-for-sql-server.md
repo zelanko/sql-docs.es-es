@@ -1,110 +1,121 @@
 ---
-title: Descarga de ODBC Driver for SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 03/13/2018
+title: Descargar controlador ODBC para SQL Server
+description: Descargue Microsoft ODBC Driver for SQL Server para desarrollar aplicaciones de código nativo que se conectan a SQL Server y Azure SQL Database.
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57ba9918769655c6823e8837641342f75f3795e5
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c9a1b33348729aca9a0f77628e51f1c7d4c0e051
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974324"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153241"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Descargar controlador ODBC para SQL Server
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-### <a name="windows"></a>Windows
+Microsoft ODBC Driver for SQL Server es una biblioteca de vínculos dinámicos (DLL) compatible con el entorno de ejecución para aplicaciones que usan API de código nativo para conectarse a SQL Server. Use Microsoft ODBC Driver 17 for SQL Server para crear aplicaciones, o bien para mejorar las existentes que deban aprovechar las ventajas de las características más recientes de SQL Server.
 
-- [Descargar Microsoft ODBC Driver 17 for SQL Server en Windows](https://www.microsoft.com/download/details.aspx?id=56567)
+## <a name="download-for-windows"></a>Descargar para Windows
 
-### <a name="linux-and-macos"></a>Linux y macOS
+El instalador redistribuible de Microsoft ODBC Driver 17 for SQL Server instala los componentes de cliente, que son necesarios durante el tiempo de ejecución para aprovechar las características más recientes de SQL Server. Opcionalmente, instala los archivos de encabezado necesarios para desarrollar una aplicación que use la API ODBC. A partir de la versión 17.4.2, el instalador también incluye e instala la Biblioteca de autenticación de Microsoft Active Directory (ADAL.dll).
 
-#### <a name="debian"></a>Debian
-- [Paquetes Debian 10. deb](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
-- [Paquetes Debian 9. deb](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Paquetes Debian 8. deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+La versión 17.5.2 es la versión de disponibilidad general (GA) más reciente. Si tiene instalada una versión anterior de Microsoft ODBC Driver 17 para SQL Server, al instalar la versión 17.5.2 se actualizará a esta última.
 
-#### <a name="redhat"></a>RedHat
-- [Paquetes de RedHat 8 .rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/8/prod/)
-- [Paquetes de RedHat 7 .rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [Paquetes de RedHat 6 .rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/6/prod/)
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft ODBC Driver 17 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2120137)**  
+**[![Descargar](../../ssms/media/download-icon.png) Descarga de Microsoft ODBC Driver 17 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2120140)**  
 
-#### <a name="suse"></a>Suse
-- [Paquetes de SuSE 15 .rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/15/prod/)
-- [Paquetes de SuSE 12 .rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [Paquetes de SuSE 11 .rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+### <a name="version-information"></a>Información de la versión
 
-#### <a name="ubuntu"></a>Ubuntu
-- [Paquetes Ubuntu 19,04. deb](https://packages.microsoft.com/ubuntu/19.04/prod/pool/main/m/msodbcsql17/)
-- [Paquetes Ubuntu 18,10. deb](https://packages.microsoft.com/ubuntu/18.10/prod/pool/main/m/msodbcsql17/)
-- [Paquetes Ubuntu 18,04. deb](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Paquetes Ubuntu 16,04. deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Paquetes Ubuntu 14,04. deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
+- Número de versión: 17.5.2.1
+- Fecha de publicación: 6 de marzo de 2020
 
-#### <a name="macos"></a>macOS
-- [macOS 10,12, 10,13, 10,14 homebrew fórmulas](https://github.com/Microsoft/homebrew-mssql-release)
+> [!Note]
+> Si accede a esta página desde una versión de idioma que no es el inglés y quiere ver el contenido más actualizado, visite la [versión en inglés de EE. UU. del sitio](https://aka.ms/downloadmsodbcsqlenglish). Puede descargar distintos idiomas en el sitio de la versión en inglés de EE. UU. si selecciona [idiomas disponibles](#available-languages).
 
-Vea también [instalar el controlador](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+## <a name="available-languages"></a>Idiomas disponibles
 
-## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server
+Esta versión de Microsoft ODBC Driver for SQL Server se puede instalar en los idiomas siguientes:
 
-### <a name="windows"></a>Windows
+Microsoft ODBC Driver 17.5.2 for SQL Server (x64):  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)
 
-- [Descargar Microsoft ODBC Driver 13.1 for SQL Server en Windows](https://www.microsoft.com/download/details.aspx?id=53339)
-- [Descargar Utilidades de la línea de comandos 13.1 de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
+Microsoft ODBC Driver 17.5.2 for SQL Server (x86):  
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40a)
 
-### <a name="linux-and-macos"></a>Linux y macOS
+### <a name="release-notes-for-windows"></a>Notas de la versión para Windows
 
-#### <a name="debian"></a>Debian
-- [Paquetes Debian 8. deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+Para obtener detalles sobre esta versión en Windows, vea las [notas de la versión de Windows](windows\release-notes-odbc-sql-server-windows.md).
 
-#### <a name="redhat"></a>RedHat
-- [Paquetes de RedHat 7 .rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [Paquetes de RedHat 6 .rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+### <a name="previous-releases-for-windows"></a>Versiones anteriores para Windows
 
-#### <a name="suse"></a>Suse
-- [Paquetes de SuSE 12 .rpm (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
-- [Paquetes de SuSE 11 .rpm (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
+Para descargar versiones anteriores para Windows, vea las [versiones anteriores de Microsoft ODBC Driver for SQL Server](windows\release-notes-odbc-sql-server-windows.md#previous-releases).
 
-#### <a name="ubuntu"></a>Ubuntu
-- [Paquetes Ubuntu 17,04. deb](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
-- [Paquetes Ubuntu 16,04. deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Paquetes Ubuntu 16,10. deb](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-- [Paquetes Ubuntu 15,10. deb](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Paquetes Ubuntu 14,04. deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
+## <a name="download-for-linux-and-macos"></a>Descarga para Linux y macOS
 
-#### <a name="macos"></a>macOS
-- [OS X 10,11 y macOS 10,12, 10,13 homebrew fórmulas](https://github.com/Microsoft/homebrew-mssql-release)
+Microsoft ODBC Driver for SQL Server se puede descargar e instalar mediante administradores de paquetes para Linux y macOS con las instrucciones de instalación pertinentes:  
+[Instalación de ODBC para SQL Server (Linux)](linux-mac\installing-the-microsoft-odbc-driver-for-sql-server.md)  
+[Instalación de ODBC para SQL Server (macOS)](linux-mac\install-microsoft-odbc-driver-sql-server-macos.md)  
 
-Vea también [instalar el controlador](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Si tiene que descargar los paquetes para la instalación sin conexión, todas las versiones están disponibles a través de los vínculos siguientes.
 
-## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server  
+> [!Note]
+> Los paquetes denominados `msodbcsql17-*` son la versión más reciente. Los paquetes denominados `msodbcsql-*` son la versión 13 del controlador.
 
-### <a name="all-platforms"></a>Todas las plataformas  
+### <a name="alpine"></a>Alpine
 
-- [Descargar Microsoft ODBC Driver 13 for SQL Server - Todas las plataformas](https://www.microsoft.com/download/details.aspx?id=50420)
+- [Paquete 17.5.2.2 para Alpine](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))
+- [Paquete 17.5.2.1 para Alpine](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [Paquete 17.5.1.1 para Alpine](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk) ([firma PGP](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig))
 
-### <a name="windows"></a>Windows
+### <a name="debian"></a>Debian
 
-- [Descargar Utilidades de la línea de comandos 13 de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
+- [Paquetes de Debian 10 .deb](https://packages.microsoft.com/debian/10/prod/pool/main/m/msodbcsql17/)
+- [Paquetes de Debian 9 .deb](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
+- [Paquetes de Debian 8 .deb](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+- [Paquetes .deb de Debian 8 (msodbcsql 13.x)](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
-## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Controlador ODBC 11 de Microsoft para SQL Server  
+### <a name="redhat"></a>RedHat
 
-### <a name="windows"></a>Windows
+- [Paquetes .rpm de RedHat 8](https://packages.microsoft.com/rhel/8/prod/)
+- [Paquetes .rpm de RedHat 7](https://packages.microsoft.com/rhel/7/prod/)
+- [Paquetes .rpm de RedHat 6](https://packages.microsoft.com/rhel/6/prod/)
 
-- [Descargar Microsoft ODBC Driver 11 for SQL Server en Windows](https://www.microsoft.com/download/details.aspx?id=36434)  
-- [Descargar Utilidades de la línea de comandos 11 de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
+### <a name="suse"></a>Suse
 
-### <a name="linux"></a>Linux
+- [Paquetes .rpm de SuSE 15](https://packages.microsoft.com/sles/15/prod/)
+- [Paquetes .rpm de SuSE 12](https://packages.microsoft.com/sles/12/prod/)
+- [Paquetes .rpm de SuSE 11](https://packages.microsoft.com/sles/11/prod/)
 
-- **Red Hat Enterprise Linux 5 y 6 (64 bits)**  - [Descargar Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
+### <a name="ubuntu"></a>Ubuntu
 
+- [Paquetes .deb de Ubuntu 19.10](https://packages.microsoft.com/ubuntu/19.10/prod/pool/main/m/msodbcsql17/)
+- [Paquetes de Ubuntu 18.04 .deb](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
+- [Paquetes de Ubuntu 16.04 .deb](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Paquetes de Ubuntu 14.04 .deb](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/)
+- [Paquetes .deb de Ubuntu 16.04 (msodbcsql 13.x)](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
+- [Paquetes .deb de Ubuntu 14.04 (msodbcsql 13.x)](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/)
+
+Vea también [Instalación del controlador de Linux](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+
+### <a name="macos"></a>macOS
+
+- Para obtener más información, vea [Fórmulas de Homebrew](https://github.com/Microsoft/homebrew-mssql-release).
+
+Vea también [Instalación del controlador para macOS](linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+
+### <a name="older-linux-releases"></a>Versiones anteriores de Linux
+
+- **Red Hat Enterprise Linux 5 y 6 (64 bits)**  - [Descargar Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
 - **SUSE Linux Enterprise 11 Service Pack 2 (64 bits)**  - [Descargar Microsoft ODBC Driver 11 Preview for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)
+
+### <a name="release-notes-for-linux-and-macos"></a>Notas de la versión para Linux y macOS
+
+Para más información sobre las versiones de Linux y macOS, vea [las notas de la versión de Linux y macOS](linux-mac\release-notes-odbc-sql-server-linux-mac.md).

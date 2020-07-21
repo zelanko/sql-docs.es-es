@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b409d8d1597fa738aacf180c45dd3eb5af36cf1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65201802047aad31bb64a612035b4ef610ff0463
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065564"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>Propiedad FlagValue (clase ClientSettingsGeneralFlag)
   Obtiene el valor de la marca.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

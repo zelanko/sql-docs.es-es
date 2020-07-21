@@ -1,5 +1,5 @@
 ---
-title: Correlacionar un seguimiento con datos de registro de rendimiento de Windows (SQL Server Profiler) | Microsoft Docs
+title: Correlacionar un seguimiento con los datos del registro de rendimiento de Windows (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934586"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] puede establecer corelaciones de contadoes del Monito de sistema de Microsoft Windows con eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El Monitor del sistema de Windows registra la actividad del sistema para contadores específicos en registros de rendimiento.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]puede poner en correlación los contadores del monitor de sistema de Microsoft Windows con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] eventos o. El Monitor del sistema de Windows registra la actividad del sistema para contadores específicos en registros de rendimiento.  
   
 > [!NOTE]  
 >  Para obtener más información acerca de compartir registros entre diferentes versiones de Windows, vea el procedimiento al final de este tema.  
@@ -29,11 +28,11 @@ ms.locfileid: "66065049"
   
 1.  En [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], abra un archivo de seguimiento o una tabla de seguimiento guardados. No puede establecer correlaciones de un seguimiento en ejecución que aún está recopilando datos de eventos. Para lograr una correlación precisa con los datos del Monitor de sistema, el seguimiento debe contener las columnas de datos **StartTime** y **EndTime** .  
   
-2.  En el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **del** , haga clic en **Importar datos de rendimiento**.  
+2.  En el menú  **Archivo** de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], haga clic en **Importar datos de rendimiento**.  
   
 3.  En el cuadro de diálogo **Abrir** , seleccione un archivo que contenga un registro de rendimiento. Los datos del registro de rendimiento deben haber sido capturados durante el mismo período de tiempo en que se capturaron los datos de seguimiento.  
   
-4.  En el cuadro de diálogo **Límite de contadores de rendimiento** , active las casillas que corresponden a los objetos y contadores del Monitor del sistema que desea mostrar junto con el seguimiento. Haga clic en **Aceptar.**  
+4.  En el cuadro de diálogo **Límite de contadores de rendimiento** , active las casillas que corresponden a los objetos y contadores del Monitor del sistema que desea mostrar junto con el seguimiento. Haga clic en **Aceptar**.  
   
 5.  Seleccione un evento en la ventana de eventos de seguimiento o navegue por varias filas adyacentes en la ventana de eventos de seguimiento utilizando las teclas de flecha. La barra vertical roja de la ventana **Datos del Monitor de sistema** indica los datos del registro de rendimiento correlacionados con el evento de seguimiento seleccionado.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66065049"
   
 11. Haga clic en **Aceptar** para crear el registro de rendimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Iniciar SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

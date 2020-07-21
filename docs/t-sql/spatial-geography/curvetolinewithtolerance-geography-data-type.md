@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d8eab0f281349dd1602525c8d64976b6a15c37f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736165"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (tipo de datos Geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una aproximación poligonal de una instancia de **geography** que contiene segmentos de arco circulares.  
   
@@ -43,7 +43,7 @@ Expresión **double** que define el error máximo entre el segmento del arco cir
 _relative_  
 Expresión **bool** que indica si se va a usar un máximo relativo para la desviación. Si relative está establecido en falso (0), se establece un máximo absoluto para la desviación que puede tener una aproximación lineal. Cuando relative es true (1), la tolerancia se calcula como un producto del parámetro de tolerancia y el diámetro del cuadro de límite para el objeto espacial.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 Tipo de valor devuelto de CLR: **SqlGeography**  
@@ -51,7 +51,7 @@ Tipo de valor devuelto de CLR: **SqlGeography**
 ## <a name="exceptions"></a>Excepciones  
 Si se establece la tolerancia <= 0, se produce una excepción **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Este método permite especificar una cantidad de tolerancia a errores para el valor **LineString** resultante.  
   
 El método **CurveToLineWithTolerance** devolverá una instancia de **LineString** para una instancia de **CircularString** o **CompoundCurve** y una instancia de **Polygon** para una instancia de **CurvePolygon**.  

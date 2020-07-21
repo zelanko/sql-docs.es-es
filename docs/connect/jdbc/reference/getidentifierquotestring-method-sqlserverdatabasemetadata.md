@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 85a7b4b32c0c66e5825dc2728a5783c028410d45
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982850"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921528"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>Método getIdentifierQuoteString (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getIdentifierQuoteString se especifica mediante el método getIdentifierQuoteString en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getIdentifierQuoteString especifica este método getIdentifierQuoteString en la interfaz java.sql.DatabaseMetaData.  
   
  Al utilizar el controlador JDBC de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devolverá comillas **double** ("").  
   

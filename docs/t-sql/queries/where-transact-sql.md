@@ -22,15 +22,15 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b27eaa16660058c37cac34173787c7ad51341c87
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948215"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011339"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Especifica la condición de búsqueda de las filas devueltas por la consulta.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67948215"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 [ WHERE <search_condition> ]  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de consulta calcula miembros (MDX) | Microsoft Docs
+title: Crear miembros calculados de ámbito de consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c0b3e7184f3cc6abd189344bbce1b6e1f948ebb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546479"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Crear miembros calculados en el ámbito de consulta (MDX)
   Si un miembro calculado solamente es necesario para una consulta de Expresiones multidimensionales (MDX) única, puede definir ese miembro calculado mediante la palabra clave WITH. Un miembro calculado que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  
@@ -90,9 +89,9 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [Instrucción SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Crear miembros calculados de ámbito de sesión &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

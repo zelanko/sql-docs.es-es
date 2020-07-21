@@ -13,30 +13,30 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1413ab35860b20a80e1fcae07a0aa5534c1e3965
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758887"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de cargas de trabajo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto SQLServer:Estadísticas de grupo de cargas de trabajo contiene contadores de rendimiento que notifican información sobre las estadísticas de grupo de cargas de trabajo del regulador de recursos.  
   
  Cada grupo de cargas de trabajo activo crea una instancia del objeto de rendimiento SQLServer:Estadísticas de grupo de cargas de trabajo que tiene el mismo nombre de instancia que el grupo de cargas de trabajo del regulador de recursos. En la tabla siguiente se describen los contadores admitidos en esta instancia.  
   
-|Nombre de contador|Descripción|  
+|Nombre del contador|Descripción|  
 |------------------|-----------------|  
 |**Subprocesos paralelos activos**|Recuento actual de uso de subprocesos paralelos.|  
 |**Solicitudes activas**|El número de solicitudes que están ejecutándose actualmente en este grupo de cargas de trabajo. Este número debería ser equivalente al recuento de filas procedentes de sys.dm_exec_requests filtrado por identificador de grupo.|  
 |**Solicitudes bloqueadas**|Número actual de solicitudes bloqueadas en el grupo de cargas de trabajo. Este número se puede utilizar para determinar las características de la carga de trabajo.|  
 |**% de CPU retrasada**|CPU del sistema retrasada para todas las solicitudes de la instancia especificada del objeto de rendimiento como porcentaje del tiempo total activo.| 
-|**Base de % de CPU retrasada**|Exclusivamente para uso interno.| 
+|**Base de % de CPU retrasada**|Solo para uso interno.| 
 |**% efectivo de la CPU**|Uso de CPU del sistema por todas las solicitudes de la instancia especificada del objeto de rendimiento como porcentaje del tiempo total activo.| 
-|**Base de % efectivo de la CPU**|Exclusivamente para uso interno.| 
+|**Base de % efectivo de la CPU**|Solo para uso interno.| 
 |**% de uso de CPU**|Uso del ancho banda de CPU por parte de todas las solicitudes en este grupo de cargas de trabajo medidas en relación al equipo y normalizadas con respecto a todas las CPU del sistema. Este valor cambiará a medida que la cantidad de CPU disponible para el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] varíe. No se normaliza respecto a lo que el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe.| 
-|**Base de % de uso de la CPU**|Exclusivamente para uso interno.| 
+|**Base de % de uso de la CPU**|Solo para uso interno.| 
 |**% de CPU infringida**|Diferencia entre la reserva de CPU y el porcentaje de programación efectiva.|  
 |**Tiempo máximo de CPU por solicitud (ms)**|Tiempo de CPU máximo, en milisegundos, utilizado por una solicitud actualmente en ejecución en el grupo de cargas de trabajo.|  
 |**Concesión máxima de memoria de solicitud (KB)**|Valor máximo de concesión de memoria, en kilobytes (KB), para una consulta.|  

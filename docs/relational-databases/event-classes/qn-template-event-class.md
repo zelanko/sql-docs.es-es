@@ -12,15 +12,15 @@ ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdc25063da64321b0be4cbcbd078e8cf5792c932
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9c1d26fb993544fd58ecb6dd9e33f6d6fd26cd2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727401"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   El evento QN:Template ofrece información acerca del uso interno de plantillas de consulta. Las plantillas de consulta son el mecanismo que utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para compartir las definiciones de una consulta para su notificación. Estas plantillas se crean junto con tablas de parámetros. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un evento de este tipo cuando se crea, utiliza o destruye una plantilla de consulta.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Columnas de datos de la clase de eventos QN:Template  
@@ -33,16 +33,16 @@ ms.locfileid: "68100253"
 |DatabaseName|**nvarchar**|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|**int**|Tipo de evento = 201.|27|No|  
 |EventSequence|**int**|Número de secuencia de este evento.|51|No|  
-|EventSubClass|**nvarchar**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Template created: indica que se ha creado una plantilla de notificación de consulta en la base de datos.<br /><br /> Template matched: indica cuándo se reutiliza una plantilla de notificación de consulta.<br /><br /> Template dropped: indica cuándo se elimina una plantilla de notificación de consulta de la base de datos.|21|Sí|  
+|EventSubClass|**nvarchar**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Template created (Plantilla creada): indica que se ha creado una plantilla de notificación de consulta en la base de datos.<br /><br /> Template matched (Plantilla coincidente): indica cuándo se reutiliza una plantilla de notificación de consulta.<br /><br /> Template dropped (Plantilla quitada): indica cuándo se elimina una plantilla de notificación de consulta de la base de datos.|21|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  
 |LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows en formato *DOMINIO\nombreDeUsuario*).|11|No|  
-|LoginSID|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|LoginSID|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
-|IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|RequestID|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|nombreDeServidor|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si una aplicación se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra "inicioDeSesión1" y LoginName muestra "inicioDeSesión2". En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  

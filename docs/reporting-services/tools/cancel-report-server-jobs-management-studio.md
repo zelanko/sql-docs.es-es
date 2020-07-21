@@ -11,10 +11,10 @@ ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574219"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Cancelar trabajos del servidor de informes (Management Studio)
@@ -49,12 +49,12 @@ ms.locfileid: "65574219"
  **Estado**  
  Muestra el estado del trabajo. Los valores válidos son **Nuevo** y **En ejecución**. Estado siempre es **Nuevo** cuando comienza el trabajo. Después de 60 segundos, el estado cambia a **En ejecución**. Debe actualizar la página para que se refleje el cambio.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Cancele un trabajo único o varios trabajos. Los trabajos se cancelan inmediatamente y no se pueden reanudar. Si cancela un trabajo por error, debe solicitar de nuevo el informe o la suscripción para iniciar un nuevo trabajo.  
   
 ## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
+ [Administración de un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

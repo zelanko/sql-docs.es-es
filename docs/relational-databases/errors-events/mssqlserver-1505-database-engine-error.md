@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b581fd45021820039b09edc69151ebea34a913e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e30483860b6bdd29f485d90ef1145150910e0e31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780975"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|1505|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|1505|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DUP_KEY|  
 |Texto del mensaje|La instrucción CREATE UNIQUE INDEX terminó porque se encontró una clave duplicada para el nombre de objeto "%.\*ls" y el nombre de índice "%.\*ls".  El valor de la clave duplicada es %ls.|  
@@ -37,7 +37,7 @@ Este error se produce cuando se intenta crear un índice único y más de una fi
   
 Considere los datos de la tabla **Employee** siguiente:  
   
-|LastName|FirstName|JobTitle|HireDate|  
+|Apellidos|Nombre|JobTitle|HireDate|  
 |------------|-------------|------------|------------|  
 |Walters|Rob|Senior Tool Designer|2004-11-19|  
 |Brown|Kevin|Marketing Assistant|NULL|  

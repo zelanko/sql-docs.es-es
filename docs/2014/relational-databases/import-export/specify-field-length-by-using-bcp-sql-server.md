@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13343b4f3778df1bbe7ef1c99b3d06338f18631c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050423"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
-  La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos `int` ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el **bcp** comando le pide para longitud de campo, las longitudes de campo predeterminadas y el impacto de la longitud de campo en el almacenamiento de datos en los archivos de datos que contienen `char` datos.  
+  La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos `int` ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **BCP** le solicitará la longitud del campo, las longitudes de campo predeterminadas y el impacto de la longitud de campo en el almacenamiento de datos en los archivos de datos que contienen `char` datos.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Solicitud bcp para la longitud de campo  
  Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**), el comando solicita la longitud de campo de cada campo, de la manera siguiente:  
@@ -47,10 +46,10 @@ ms.locfileid: "66011841"
 ## <a name="using-default-field-lengths"></a>Usar longitudes de campo predeterminadas  
  Por lo general, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda aceptar los valores predeterminados que sugiere **bcp**para la longitud de campo. Cuando se crea un archivo de datos en modo de carácter, si especifica la longitud de campo predeterminada, los datos no se truncan ni se producirán errores de desbordamiento numérico.  
   
- Si especifica una longitud de campo incorrecta, pueden producirse problemas. Por ejemplo, si copia datos numéricos y especifica una longitud de campo demasiado corta para los datos, la utilidad **bcp** imprime un mensaje de desbordamiento y no copia los datos. Además, si exporta `datetime` datos y especificar una longitud de campo de inferior a 26 bytes para la cadena de caracteres, el **bcp** utilidad trunca los datos sin un mensaje de error.  
+ Si especifica una longitud de campo incorrecta, pueden producirse problemas. Por ejemplo, si copia datos numéricos y especifica una longitud de campo demasiado corta para los datos, la utilidad **bcp** imprime un mensaje de desbordamiento y no copia los datos. Además, si exporta `datetime` datos y especifica una longitud de campo inferior a 26 bytes para la cadena de caracteres, la utilidad **BCP** trunca los datos sin un mensaje de error.  
   
 > [!IMPORTANT]  
->  Cuando se utiliza la opción de tamaño predeterminado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espera leer una cadena entera. En algunos casos, el uso de la longitud de campo predeterminada puede provocar un error del tipo "fin de archivo inesperado". Normalmente, este error se produce con la `money` y `datetime` los tipos de datos cuando solo parte del campo esperado tiene lugar en el archivo de datos; por ejemplo, cuando un `datetime` valor *mm*/*dd*  / *yy* se especifica sin el componente de tiempo y es, por lo tanto, más corta que la longitud de 24 caracteres esperados de un `datetime` valor en `char` formato. Para evitar este tipo de error, puede utilizar terminadores de campo o campos de datos de longitud fija o cambiar la longitud de campo predeterminada especificando otro valor.  
+>  Cuando se utiliza la opción de tamaño predeterminado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espera leer una cadena entera. En algunos casos, el uso de la longitud de campo predeterminada puede provocar un error del tipo "fin de archivo inesperado". Normalmente, este error se produce con `money` los `datetime` tipos de datos y cuando solo parte del campo esperado tiene lugar en el archivo de datos; por ejemplo, cuando `datetime` se especifica un valor de *mm* / *DD* / *AA* sin el componente de hora y, por tanto, es menor que la longitud de 24 caracteres esperada de un `datetime` valor en `char` formato. Para evitar este tipo de error, puede utilizar terminadores de campo o campos de datos de longitud fija o cambiar la longitud de campo predeterminada especificando otro valor.  
   
 ### <a name="default-field-lengths-for-character-file-storage"></a>Longitudes de campo predeterminadas para el almacenamiento de archivos de caracteres  
  En la siguiente tabla se enumeran las longitudes de campo predeterminadas de los datos que se almacenan como tipo de almacenamiento de archivo de caracteres. Los datos que aceptan valores NULL tienen la misma longitud que los datos que no aceptan valores NULL.  
@@ -87,7 +86,7 @@ ms.locfileid: "66011841"
 |UDT|Longitud de la columna del término definido por el usuario (UDT)|  
 |XML|0|  
   
- \*Para obtener más información sobre la `decimal` y `numeric` tipos de datos, vea [decimal y numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
+ \*Para obtener más información sobre `decimal` los `numeric` tipos de datos y, vea [decimal y Numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
   
 > [!NOTE]  
 >  Una columna de tipo `tinyint` puede contener valores entre 0 y 255; el número máximo de caracteres necesarios para representar cualquier número de este intervalo es tres (que representa valores entre 100 y 255).  
@@ -111,16 +110,16 @@ ms.locfileid: "66011841"
 |`tinyint`|1|  
 |`money`|8|  
 |`smallmoney`|4|  
-|`decimal` <sup>1</sup>|<sup>*</sup>|  
-|`numeric` <sup>1</sup>|<sup>*</sup>|  
+|`decimal`<sup>1</sup>|<sup>*</sup>|  
+|`numeric`<sup>1</sup>|<sup>*</sup>|  
 |`uniqueidentifier`|16|  
 |`timestamp`|8|  
   
- <sup>1</sup> para obtener más información sobre la `decimal` y `numeric` tipos de datos, vea [decimal y numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
+ <sup>1</sup> para obtener más información sobre `decimal` los `numeric` tipos de datos y, vea [decimal y numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql).  
   
  En todos los casos anteriores, si desea crear un archivo de datos para recargarlo posteriormente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y mantener el espacio de almacenamiento mínimo, use un prefijo de longitud con el tipo de almacenamiento en archivo y la longitud de campo predeterminados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786870"
 ---
-# <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Devuelve información sobre las asignaciones de tipos de datos definidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sistemas de administración de bases de datos (DBMS) que no son de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
+  Devuelve información sobre las asignaciones de tipos de datos definidos entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los sistemas de administración de bases de datos (DBMS) que no son de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,15 +84,15 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_helpdatatypemap** define las asignaciones de tipos de datos tanto de los publicadores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no son de SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como de los publicadores que no son de.  
+ **sp_helpdatatypemap** define las asignaciones de tipos de datos tanto de los publicadores que no son de SQL Server como de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando no se admite la combinación especificada de DBMS de origen y de destino, **sp_helpdatatypemap** devuelve un conjunto de resultados vacío.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor o los miembros del rol fijo de base de datos **db_owner** en la base de datos de distribución pueden ejecutar **sp_helpdatatypemap**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_getdefaultdatatypemapping &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

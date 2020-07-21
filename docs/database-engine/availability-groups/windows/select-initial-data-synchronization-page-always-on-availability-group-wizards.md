@@ -1,6 +1,7 @@
 ---
-title: Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On) | Microsoft Docs
-ms.custom: ''
+title: Página Seleccionar sincronización de datos iniciales (asistente para grupos de disponibilidad)
+description: Descripción de la página "Seleccionar sincronización de datos iniciales" del Asistente para grupo de disponibilidad AlwaysOn en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,21 +14,21 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 995191f37a40bbc1b3cd0fb11ddf79f3952527ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883151"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Use la página de AlwaysOn **Seleccionar sincronización de datos iniciales** para indicar sus preferencias para la sincronización de datos inicial de las nuevas bases de datos secundarias. Esta página es compartida por tres asistentes: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], el [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
   
  Las opciones posibles son **Propagación automática**, **Copia de seguridad completa de registros y bases de datos**, **Solo unirse** u **Omitir la sincronización de datos iniciales**. Antes de seleccionar **Propagación automática**, **Copia de seguridad completa de registros y bases de datos** o **Solo unirse**, asegúrese de que el entorno cumple los requisitos previos.  
     
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Suspenda las tareas de copia de seguridad de registros para las bases de datos principales durante la sincronización de datos inicial.  
   
@@ -37,11 +38,11 @@ ms.locfileid: "68014179"
   
      Si las operaciones de copia de seguridad y restauración deben estar muy protegidas, se recomienda seleccionar la opción **Solo unión** u **Omitir la sincronización de datos iniciales** .  
   
-## <a name="Auto"></a> Propagación automática
+## <a name="automatic-seeding"></a><a name="Auto"></a> Propagación automática
  
  SQL Server crea automáticamente las réplicas secundarias de cada base de datos del grupo. La propagación automática requiere que la ruta de acceso del archivo de datos y de registro sea la misma en cada instancia de SQL Server que participe en el grupo. Disponible en [!INCLUDE[sssql15-md.md](../../../includes/sssql15-md.md)] y en versiones posteriores. Vea [Inicializar automáticamente grupos de disponibilidad Always On](automatically-initialize-always-on-availability-group.md).
 
-##  <a name="Full"></a> Copia de seguridad completa de registros y bases de datos 
+##  <a name="full-database-and-log-backup"></a><a name="Full"></a> Copia de seguridad completa de registros y bases de datos 
  En cada base de datos principal, la opción **Copia de seguridad completa de registros y bases de datos** realiza varias operaciones en un flujo de trabajo: crear una copia de seguridad completa y de registros de la base de datos principal, crear las bases de datos secundarias correspondientes restaurando estas copias de seguridad en cada instancia de servidor que está hospedando una réplica secundaria y unir cada base de datos secundaria al grupo de disponibilidad.  
   
  Seleccione esta opción solo si su entorno cumple los requisitos previos para utilizar la sincronización de datos inicial completa y desea que el asistente inicie automáticamente la sincronización de datos.  
@@ -74,18 +75,18 @@ ms.locfileid: "68014179"
 > [!IMPORTANT]  
 >  Las copias de seguridad de registros serán parte de la cadena de copias de seguridad de registros. Almacene adecuadamente los archivos de copia de seguridad.  
   
-##  <a name="Joinonly"></a> Solo unión  
+##  <a name="join-only"></a><a name="Joinonly"></a> Solo unión  
  Seleccione esta opción solo si las nuevas bases de datos secundarias ya existen en cada instancia de servidor que hospeda una réplica secundaria del grupo de disponibilidad. Para obtener información sobre cómo preparar las bases de datos secundarias, vea la sección [Para preparar las bases de datos secundarias manualmente](#PrepareSecondaryDbs), más adelante en esta sección.  
   
  Si selecciona **Solo unión**, el asistente intentará unir cada base de datos secundaria existente al grupo de disponibilidad.  
   
-## <a name="Skip"></a> Omitir la sincronización de datos iniciales  
+## <a name="skip-initial-data-synchronization"></a><a name="Skip"></a> Omitir la sincronización de datos iniciales  
  Seleccione esta opción si desea realizar sus propias copias de seguridad de bases de datos y registros de cada base de datos principal, y restaurarlas en cada instancia del servidor que hospeda una réplica secundaria. Después de salir del asistente, tendrá que unir todas las base de datos secundaria en todas las réplicas secundarias.  
   
 > [!NOTE]  
 >  Para obtener más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a> Para preparar una base de datos secundaria manualmente  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a> Para preparar una base de datos secundaria manualmente  
  Para preparar las bases de datos secundarias independientemente de cualquier asistente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , puede utilizar cualquiera de los métodos siguientes:  
   
 -   Restaure manualmente una copia de seguridad reciente de la base de datos principal utilizando RESTORE WITH NORECOVERY y restaure después cada copia de seguridad de registros posterior utilizando RESTORE WITH NORECOVERY. Si las bases de datos principal y secundaria tienen distintas rutas de acceso, debe utilizar la opción WITH MOVE. Realice esta secuencia de restauración en cada instancia del servidor que hospeda una réplica secundaria del grupo de disponibilidad.  Puede utilizar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para realizar este operaciones de copias de seguridad y restauración.  
@@ -109,7 +110,7 @@ ms.locfileid: "68014179"
   
  Opcionalmente, puede preparar todas las bases de datos secundarias antes de ejecutar el asistente. Entonces, en la página **Especificar la sincronización de datos iniciales** del asistente, seleccione **Solo unión** para unir automáticamente las nuevas bases de datos secundarias al grupo de disponibilidad.  
   
-##  <a name="LaunchWiz"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

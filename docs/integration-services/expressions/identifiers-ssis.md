@@ -21,10 +21,10 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ddde15e9ca4fac2fd98b598ee8334f3ff28d6df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297557"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)

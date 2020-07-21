@@ -1,5 +1,6 @@
 ---
 title: Visor de archivos de registro | Microsoft Docs
+description: Use el Visor del archivo de registro de SQL Server Management Studio para obtener información sobre los errores y eventos capturados en los archivos de registro.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7425bb2175b9a2e7b813f63e7d78aec7e73ef5ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668125"
 ---
 # <a name="log-file-viewer"></a>Visor de archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se usa para obtener acceso a la información sobre los errores y eventos capturados en los archivos de registro.  
   
 ## <a name="benefits-of-using-log-file-viewer"></a>Ventajas de usar el visor del archivo de registro  
@@ -49,7 +50,7 @@ ms.locfileid: "68084071"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo abrir el visor del archivo de registros dependiendo de la información que se desee ver.|[Abrir el Visor de archivos de registro](../../relational-databases/logs/open-log-file-viewer.md)|  
-|Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)|  
+|Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)|  
 |Proporciona la Ayuda F1 del visor del archivo de registro.|[Ayuda F1 del Visor de archivos de registro](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
 ## <a name="see-also"></a>Consulte también  

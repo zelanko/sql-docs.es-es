@@ -22,22 +22,21 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97fc758c754f5fc8803e988d55147670fc3ff45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055442"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
-  En este tema se describe cómo crear un usuario de base de datos asignado a un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, vea [crear un inicio de sesión](create-a-login.md).  
+  En este tema se describe cómo crear un usuario de base de datos asignado a un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, consulte [crear un inicio de sesión](create-a-login.md).  
   
  **En este tema**  
   
 -   **Antes de empezar:**  
   
-     [Información previa](#Restrictions)  
+     [Fondo](#Restrictions)  
   
      [Seguridad](#Security)  
   
@@ -47,9 +46,9 @@ ms.locfileid: "68211966"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Información previa  
+###  <a name="background"></a>Información previa de <a name="Restrictions"></a>  
  Un usuario es una entidad de seguridad de la base de datos. Los inicios de sesión deben estar asignados a un usuario de base de datos para poder conectarse a una base de datos. Un inicio de sesión se puede asignar a bases de datos diferentes como usuarios diferentes pero solo se puede asignar como un usuario en cada base de datos. En una base de datos parcialmente independiente, puede crearse un usuario que no tenga un inicio de sesión. Para obtener más información sobre los usuarios de la base de datos independiente, vea [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Si el usuario invitado de una base de datos está habilitado, un inicio de sesión que no esté asignado a un usuario de la base de datos puede entrar en la base de datos como el usuario invitado.  
   
 > [!IMPORTANT]  
@@ -57,12 +56,12 @@ ms.locfileid: "68211966"
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe tener el permiso `ALTER ANY USER` para la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>Para crear un usuario de base de datos  
   
@@ -70,9 +69,9 @@ ms.locfileid: "68211966"
   
 2.  Expanda la base de datos en la que se va a crear el usuario de la misma.  
   
-3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...** .  
+3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...**.  
   
-4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo**, en la página **General**, seleccione uno de los tipos de usuario siguientes de la lista **Tipo de usuario**: **Usuario SQL con inicio de sesión**, **usuario SQL sin inicio de sesión**, **usuario asignado a un certificado**, **usuario asignado a una clave asimétrica**, o **usuario de Windows** .  
+4.  En el cuadro de diálogo **usuario de base de datos-nuevo** , en la página **General** , seleccione uno de los siguientes tipos de usuario de la lista **tipo de usuario** : **usuario SQL con inicio de sesión**, **usuario SQL sin inicio de sesión**, **usuario asignado a un certificado**, **usuario asignado a una clave asimétrica**o **usuario de Windows**.  
   
 5.  En el cuadro **Nombre de usuario** , escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "68211966"
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### <a name="additional-options"></a>Opciones adicionales  
+### <a name="additional-options"></a>Additional Options  
  En el cuadro de diálogo **Usuario de la base de datos - Nuevo** también se proporcionan opciones en cuatro páginas adicionales: **Esquemas de propiedad**, **Pertenencia**, **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Esquemas de propiedad** enumera todos los esquemas posibles que pueden ser propiedad del nuevo usuario de base de datos. Para agregar o quitar esquemas en un usuario de base de datos, en **Esquemas propiedad de este usuario**, active o desactive las casillas situadas junto a los esquemas.  
@@ -107,12 +106,12 @@ ms.locfileid: "68211966"
      Muestra o especifica las propiedades extendidas del objeto. Cada propiedad extendida está formada por un par nombre/valor de metadatos asociados al objeto.  
   
      **Puntos suspensivos (...)**  
-     Haga clic en los puntos suspensivos **(...)** situados detrás de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida**. Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
+     Haga clic en los puntos suspensivos **(...)** que aparecen después de **valor** para abrir el cuadro **de diálogo valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>Para crear un usuario de base de datos  
   
@@ -135,7 +134,7 @@ ms.locfileid: "68211966"
   
  Para obtener más información, vea [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](principals-database-engine.md)  
   
   

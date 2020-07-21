@@ -1,28 +1,27 @@
 ---
-title: Notas de la versión de ODBC a SQL Server en Windows | Microsoft Docs
+title: Notas de la versión de ODBC Driver for SQL Server en Windows
+description: En este artículo sobre notas de la versión se describen los cambios de cada versión de Microsoft ODBC Driver para SQL Server en Windows.
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041159"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728461"
 ---
-# <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas de la versión de ODBC a SQL Server en Windows
+# <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows
 
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
-
-En este artículo de notas de la versión se describen las novedades de Microsoft ODBC Driver para SQL Server en Windows.
+En este artículo sobre notas de la versión se describen las novedades de Microsoft ODBC Driver para SQL Server en Windows.
 
 <!--
 PLEASE USE THE STANDARD 2-COLUMN TABLE FORMAT!
@@ -44,26 +43,107 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
-## <a name="1742-october-2019"></a>17.4.2, octubre de 2019
+## <a name="1752"></a>17.5.2
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120137)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120140)  
+
+Número de versión: 17.5.2.1  
+Fecha de publicación: 6 de marzo de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120140&clcid=0x40a)  
+
+### <a name="features-added-in-1752"></a>Características agregadas en la versión 17.5.2
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Compatibilidad de la autenticación con Identidad administrada en Azure Key Vault | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Compatibilidad con puntos de conexión de Azure Key Vault adicionales | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Versiones anteriores
+
+Para descargar las versiones anteriores del controlador ODBC, haga clic en los vínculos de descarga de las secciones siguientes:
+
+## <a name="175"></a>17.5
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120248)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120353)  
+
+Número de versión: 17.5.1.1  
+Fecha de publicación: 31 de enero de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120353&clcid=0x40a)  
+
+### <a name="features-added-in-175"></a>Características agregadas en la versión 17.5
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Atributo de conexión SQL_COPT_SS_SPID para recuperar el SPID sin recorrido de ida y vuelta al servidor | Consulte [Atributos y palabras clave de cadena de conexión y DNS](../dsn-connection-string-attribute.md). |
+| Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="1742"></a>17.4.2
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120354)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120249)  
+
+Número de versión: 17.4.2.1  
+Fecha de publicación: Octubre de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120354&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120249&clcid=0x40a)  
+
+### <a name="features-added-in-1742"></a>Características agregadas en la versión 17.4.2
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Compatibilidad con puntos de conexión de Azure Key Vault adicionales | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Compatibilidad con la configuración de la versión de clasificación de datos | Vea [Clasificación de datos](../data-classification.md#bkmk-version). |
-| El controlador instalará ahora la biblioteca de autenticación de Azure Active Drirectory (Adal. dll) que se usa para la autenticación en Azure | |
+| Incluye la biblioteca de autenticación de Azure Active Directory (ADAL) y el instalador. | Ahora incluido en la instalación del controlador base, el instalador ODBC actualizará las instalaciones existentes de la Biblioteca de autenticación de Microsoft Active Directory para SQL Server, y las quita de la lista de aplicaciones instaladas en Windows. |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="174-july-2019"></a>17.5, julio de 2019
+## <a name="174"></a>17.4
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120149)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120150)  
+
+Número de versión: 17.4.1.1  
+Fecha de publicación: Julio de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120149&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120150&clcid=0x40a)  
+
+### <a name="features-added-in-174"></a>Características agregadas en la versión 17.4
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Always Encrypted con enclaves seguros. | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
-| Configuración de mantenimiento de conexión TCP configurable. | Consulte [Conectarse a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
+| Configuración de Mantener conexión TCP configurable. | Consulte [Conectarse a SQL Server](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md). |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="173-february-2019"></a>17.3, febrero de 2019
+## <a name="173"></a>17.3
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120355)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120356)  
+
+Número de versión: 17.3.1.1  
+Fecha de publicación: Febrero de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120355&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120356&clcid=0x40a)  
+
+### <a name="features-added-in-173"></a>Características agregadas en la versión 17.3
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
@@ -73,7 +153,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="172-july-2018"></a>17.2, julio de 2018
+## <a name="172"></a>17.2
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120250)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120357)  
+
+Número de versión: 17.2.0.1  
+Fecha de publicación: Julio de 2018
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120250&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120357&clcid=0x40a)  
+
+### <a name="features-added-in-172"></a>Características agregadas en la versión 17.2
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
@@ -82,7 +174,19 @@ GeneMi (and CraigG).  2019/03/30.
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="171-march-2018"></a>17.1, marzo de 2018
+## <a name="171"></a>17.1
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120151)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120443)  
+
+Número de versión: 17.1.0.1  
+Fecha de publicación: Marzo de 2018
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120151&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120443&clcid=0x40a)  
+
+### <a name="features-added-in-171"></a>Características agregadas en la versión 17.1
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
@@ -91,13 +195,25 @@ GeneMi (and CraigG).  2019/03/30.
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="17-february-2018"></a>17, febrero de 2018
+## <a name="170"></a>17.0
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120444)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120152)  
+
+Número de versión: 17.0.1.1  
+Fecha de publicación: Febrero de 2018
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120444&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120152&clcid=0x40a)  
+
+### <a name="features-added-in-170"></a>Características agregadas en la versión 17.0
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Compatibilidad con Always Encrypted para la API de BCP. | &nbsp; |
 | Nuevo atributo de cadena de conexión.`UseFMTOnly` | Hace que el controlador use los metadatos heredados en casos especiales que requieren tablas temporales. |
-| Compatibilidad con Instancia administrada de Azure SQL. | Versión preliminar privada ampliada.<br/><br/>Vea la siguiente lista de [diferencias al usar Instancia administrada (versión 17 de ODBC)](#diffs-managed-instance-17). |
+| Compatibilidad con Instancia administrada de Azure SQL. | Vea la siguiente lista de [diferencias al usar Instancia administrada (versión 17 de ODBC)](#diffs-managed-instance-17). |
 | &nbsp; | &nbsp; |
 
 | Dependencia modificada | Detalles |
@@ -105,9 +221,9 @@ GeneMi (and CraigG).  2019/03/30.
 | Se eliminó el ayudante para el inicio de sesión de Microsoft Online Services | Se ha eliminado la dependencia. |
 | &nbsp; | &nbsp; |
 
-### <a name="diffs-managed-instance-17"></a> Diferencias cuando se usa Instancia administrada (versión 17 de ODBC)
+### <a name="differences-when-using-managed-instance-odbc-version-17"></a><a name="diffs-managed-instance-17"></a> Diferencias cuando se usa Instancia administrada (versión 17 de ODBC)
 
-Esta versión es compatible con Instancia administrada de Azure SQL (versión preliminar privada ampliada). Vea la siguiente lista de diferencias cuando se usa Instancia administrada.
+Esta versión de ODBC es compatible con Instancia administrada de Azure SQL. Vea la siguiente lista de diferencias cuando se usa Instancia administrada.
 
 > [!NOTE]
 > Hay varias diferencias cuando se usa Instancia administrada:
@@ -125,13 +241,39 @@ Esta versión es compatible con Instancia administrada de Azure SQL (versión p
 
 ## <a name="131"></a>13.1
 
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2121020)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120923)  
+
+Número de versión: 13.1  
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2121020&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120923&clcid=0x40a)  
+
+[Descargar Utilidades de la línea de comandos 13.1 de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591)
+
+### <a name="features-added-in-131"></a>Características agregadas en la versión 13.1
+
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| La versión 13.1 del controlador ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrega compatibilidad para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) y [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Estas compatibilidades agregadas están disponibles al conectarse a Microsoft SQL Server 2016 o a una versión posterior. |
-| Hay atributos y palabras clave de agrupaciones de conexiones, que corresponden a las compatibilidades para Always Encrypted y Azure Active Directory. | Estas palabras clave y atributos se describen en [Agrupación de conexiones dependientes de controlador en el controlador ODBC para SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| La versión 13.1 del controlador ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrega compatibilidad para [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) y [Azure Active Directory](../using-azure-active-directory.md). | Estas compatibilidades agregadas están disponibles al conectarse a Microsoft SQL Server 2016 o a una versión posterior. |
+| Hay atributos y palabras clave de agrupaciones de conexiones, que corresponden a las compatibilidades para Always Encrypted y Azure Active Directory. | Estas palabras clave y atributos se describen en [Agrupación de conexiones dependientes de controlador en el controlador ODBC para SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2121118)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120924)  
+
+Número de versión: 13  
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2121118&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120924&clcid=0x40a)  
+
+[Descargar Utilidades de la línea de comandos 13 de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)
+
+### <a name="features-added-in-13"></a>Características agregadas en la versión 13
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
@@ -139,6 +281,19 @@ Esta versión es compatible con Instancia administrada de Azure SQL (versión p
 | &nbsp; | &nbsp; |
 
 ## <a name="11"></a>11
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2121206)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2121021)  
+
+Número de versión: 11  
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2121206&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2121021&clcid=0x40a)  
+
+[Descargar Utilidades de la línea de comandos 11 de Microsoft para SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)  
+
+### <a name="features-added-in-11"></a>Características agregadas en la versión 11
 
 | Característica agregada | Detalles |
 | :------------ | :------ |

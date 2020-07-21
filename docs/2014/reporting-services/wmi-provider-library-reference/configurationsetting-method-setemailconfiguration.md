@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 142fd8bf2116d4cc672aeb607938ea8c1c73bf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097984"
 ---
-# <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Método SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
+# <a name="setemailconfiguration-method-wmi-msreportserver_configurationsetting"></a>Método SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
   Configura la extensión de entrega de correo electrónico utilizada por el servidor de informes para enviar el correo electrónico.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +44,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
   
 ## <a name="parameters"></a>Parámetros  
  *SendUsingSMTPServer*  
- Valor booleano que indica si el servidor utilizará el servidor SMTP para enviar el correo electrónico. Este valor solamente se puede establecer en true. El valor predeterminado es false.  
+ Valor booleano que indica si el servidor utilizará el servidor SMTP para enviar el correo electrónico. Este valor solamente se puede establecer en true. El valor predeterminado es False.  
   
  *SMTPServer*  
  Cadena que contiene el nombre o dirección IP de un servidor SMTP.  
@@ -58,15 +58,15 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
- Cuando el *SendUsingSMTPServer* parámetro está establecido en `true`, **SendUsing** entrada en el archivo de configuración del servidor de informes está establecido en 1. Cuando *SendUsingSMTPServer* está establecido en `false`, **SendUsing** entrada no está configurada.  
+## <a name="remarks"></a>Observaciones  
+ Cuando el parámetro *SendUsingSMTPServer* se establece en `true`, la entrada **SendUsing** del archivo de configuración del servidor de informes se establece en 1. Cuando *SendUsingSMTPServer* se establece en `false`, la entrada **SendUsing** no está configurada.  
   
  Este método no proporciona una manera para que los usuarios establezcan la entrada de **SendUsing** en el archivo de configuración del servidor de informes en un valor distinto de 1. Para configurar el servidor de informes para algo distinto del correo SMTP, debe modificar manualmente el archivo de configuración.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

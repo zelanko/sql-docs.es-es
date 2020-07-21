@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015441"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
@@ -27,9 +27,9 @@ ms.locfileid: "68015441"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Devuelve un puntero a un controlador de OLE DB para SQL Server estructura SSERRORINFO que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene los detalles del error.  
+  Devuelve un puntero a una estructura SSERRORINFO de OLE DB Driver for SQL Server que contiene los detalles del error [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- El controlador de OLE DB para SQL Server define la interfaz de error **ISQLServerErrorInfo** . Esta interfaz devuelve los detalles de un error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], incluso la gravedad y el estado.  
+ OLE DB Driver for SQL Server define la interfaz de errores **ISQLServerErrorInfo**. Esta interfaz devuelve los detalles de un error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], incluso la gravedad y el estado.  
 
   
 ## <a name="syntax"></a>Sintaxis  
@@ -53,12 +53,12 @@ HRESULT GetErrorInfo(
  El método se ha llevado a cabo de forma correcta.  
   
  E_INVALIDARG  
- El argumento *ppSSErrorInfo* o *ppErrorStrings* era null.  
+ El argumento *ppSSErrorInfo* o *ppErrorStrings* era NULL.  
   
  E_OUTOFMEMORY  
- El controlador de OLE DB para SQL Server no pudo asignar memoria suficiente para completar la solicitud.  
+ OLE DB Driver for SQL Server no pudo asignar memoria suficiente para completar la solicitud.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El controlador OLE DB para SQL Server asigna memoria para las cadenas SSERRORINFO y OLECHAR devueltas a través de los punteros pasados por el consumidor. El consumidor debe desasignar esta memoria mediante el método **IMalloc::Free** cuando ya no requiera tener acceso a los datos de error.  
   
  La estructura SSERRORINFO se define como sigue:  
@@ -77,7 +77,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |*pwszMessage*|El mensaje de error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El mensaje se devuelve a través del método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|El nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se ha producido el error.|  

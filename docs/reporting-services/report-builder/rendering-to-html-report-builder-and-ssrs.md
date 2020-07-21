@@ -1,5 +1,6 @@
 ---
-title: Representar en HTML (Generador de informes y SSRS) | Microsoft Docs
+title: Representación en HTML (Generador de informes) | Microsoft Docs
+description: En el Generador de informes, la extensión de representación de HTML representa los informes paginados en formato HTML. Puede generar páginas o fragmentos HTML completos para insertarlos en otras páginas.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,30 +9,30 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 5862081622d9d5c1a42fa8806ae482f02919a7b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580654"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290877"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe paginado en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
 
  La extensión de representación en HTML es la predeterminada para los informes que se visualizan en un explorador, lo que incluye cuando se ejecutan en el portal web de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . La extensión de representación en HTML puede representar HTML como un fragmento o como un documento HTML completo. Si el HTML es un fragmento, se quitan las etiquetas **HEAD**, **HTML**y **BODY** del documento HTML. Solo se representa el contenido de la etiqueta **BODY** . Esto resulta de gran utilidad para incrustar el HTML en HTML generado en otra aplicación.  
   
- En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
+ En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  
   
  Para más información sobre exploradores, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Representación en MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Representación en MHTML  
  La extensión de representación en HTML también puede representar informes en MHTML (Encapsulación MIME de documentos HTML agregados). MHTML extiende HTML para incrustar objetos codificados, como imágenes, en el documento HTML. Con la extensión de representación en MHTML, puede incrustar en un único archivo recursos tales como imágenes, documentos u otros archivos binarios como estructuras MIME incluidas en el informe HTML. Los informes MHTML también resultan útiles para incrustarlos en mensajes de correo electrónico porque todos los recursos se incluyen en el informe. Aunque la extensión de representación en HTML es la que en realidad representa el MHTML, esta funcionalidad también se denomina extensión de representación en MHTML.  
   
   
-##  <a name="BrowserSupport"></a> Compatibilidad con exploradores  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a> Compatibilidad con exploradores  
  Esta extensión de representación admite las versiones siguientes de los exploradores:  
   
 -   Internet Explorer 5.5 y versiones posteriores  
@@ -43,7 +44,7 @@ ms.locfileid: "65580654"
  Debido a los distintos comportamientos de los exploradores, el informe representado puede variar ligeramente de un explorador a otro. Por ejemplo, el cuadro de texto contiene una propiedad denominada WritingMode. Esta propiedad no es compatible con Firefox.  
   
   
-##  <a name="HTMLSpecificRenderingRules"></a> Reglas de representación específicas de HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a> Reglas de representación específicas de HTML  
  Durante la representación se aplican las siguientes reglas específicas de HTML:  
   
 -   El representador genera una estructura de tabla HTML en la que se alojarán todos los elementos existentes en cada colección **ReportItems** , si hubiera más de uno.  
@@ -61,7 +62,7 @@ ms.locfileid: "65580654"
 -   Todas las coordenadas y los tamaños de los elementos de informe se convierten a milímetros. Todos los demás tamaños, incluidas las propiedades de estilo, conservan sus unidades originales. Cuando la diferencia entre el tamaño y la posición es inferior a 0,2 mm se trata como si fuera 0 mm.  
   
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactividad  
  Algunos elementos interactivos se admiten en HTML. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -79,13 +80,15 @@ ms.locfileid: "65580654"
 ### <a name="hyperlinks-and-drillthrough"></a>Hipervínculos y obtención de detalles  
  Los hipervínculos y los vínculos de obtención de detalles se representan como hipervínculos en los elementos de informe que usan las etiquetas de delimitador HTML (\<a>) alrededor del elemento en el que están definidas.  
   
-### <a name="search"></a>Buscar  
+### <a name="search"></a>Search  
  La característica Buscar permite a los usuarios buscar una cadena de texto dentro del informe.  
   
  El control ReportViewer de formularios Web Forms proporciona funcionalidad adicional de búsqueda.  
   
+##  <a name="fonts-on-the-client-computer"></a><a name="FontsOnClient"></a> Fuentes en el equipo cliente
+ Cuando una fuente personalizada se usa en el informe, el equipo que se usa para ver el informe (equipo cliente) debe tener la fuente personalizada instalada para que el informe se muestre correctamente. Si la fuente no está instalada en el equipo cliente, el informe mostrará una fuente predeterminada del sistema en lugar de la fuente personalizada.
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Para cambiar algunos valores de configuración predeterminados para este representador, incluido el modo de representación, solo tiene que cambiar la configuración de la información del dispositivo. Para más información, consulte [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md).  
   
   

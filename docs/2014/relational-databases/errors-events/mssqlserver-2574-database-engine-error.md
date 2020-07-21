@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48e5aeab043fcfd0e65150ea3a1008d726cb0ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88e3d0edb06c88fbdd443add2e2ceac0b987b362
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869268"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551980"
 ---
-# <a name="mssqlserver2574"></a>MSSQLSERVER_2574
+# <a name="mssqlserver_2574"></a>MSSQLSERVER_2574
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2574|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2574|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Texto del mensaje|Error de tabla: Page P_ID está vacía en el objeto ID O_ID, ID. de índice de partición PN_ID, unidad de asignación A_ID (tipo TYPE). Esto no se permite en el nivel LEVEL del árbol b.|  
+|Texto del mensaje|Error de tabla: la página P_ID está vacía en el id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE). Esto no se permite en el nivel LEVEL del árbol b.|  
   
 ## <a name="explanation"></a>Explicación  
  Una página de árbol B por encima del nivel hoja del índice especificado está vacía, es decir, no tiene ninguna fila. Este comportamiento es posible para las páginas de nivel de hoja de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], pero nunca ha sido posible en los niveles de árbol.  

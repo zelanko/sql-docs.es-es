@@ -1,6 +1,7 @@
 ---
-title: Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012 | Microsoft Docs
-ms.date: 01/25/2018
+title: 'Actualice instancias de SQL Server: Windows Server 2012 y clústeres anteriores'
+description: Describe cómo actualizar las instancias de clúster de conmutación por error de SQL Server que se ejecutan en Windows Server 2008, Windows Server 2008 R2 y Windows Server 2012.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904961"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242854"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
 [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] y [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] impiden que los clústeres de conmutación por error de Windows Server realicen actualizaciones del sistema de operativo locales, por lo que limitan la versión permitida de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para un clúster. Una vez que el clúster se actualice al menos a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)], podrá permanecer actualizado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 -   Antes de realizar cualquiera de las estrategias de migración, se debe preparar un clúster de conmutación por error de Windows Server paralelo con Windows Server 2016/2012 R2. Todos los nodos que contengan instancias de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben estar unidas al clúster de Windows con los FCI instalados. Cualquier equipo independiente **no debe** combinarse con el clúster de conmutación por error de Windows Server antes de la migración. Las bases de datos de usuario deberán estar sincronizadas con el nuevo entorno antes de la migración.
 -   Todas las instancias de destino deberán estar ejecutando la misma versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como su instancia paralela en el entorno original, con los mismos nombres de instancia e identificadores. Además, deberán estar instaladas con las mismas características. Las rutas de acceso de instalación y la estructura del directorio deberán ser idénticas en los equipos de destino. Esto no incluye los nombres de red virtual de FCI, que deben ser diferentes antes de la migración. Las funciones habilitadas por la instancia original (como Always On y FILESTREAM) deberán estar habilitadas en la instancia de destino.
@@ -116,7 +117,7 @@ Si tiene un entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.m
     >[!NOTE]
     >Los errores derivados de nombres que ya se hayan usado en otros equipos desparecerán cuando se eliminen los registros DNS del nombre en cuestión.
 
-11. Una vez que se haya cambiado el nombre de todos las FCI, reinicie cada uno de los equipos en el nuevo clúster.
+11. Una vez que se haya cambiado el nombre de todas las FCI, reinicie cada uno de los equipos en el nuevo clúster.
 
 12. Cuando los equipos se reinicien y vuelvan a conectarse, inicie cada uno de los roles de FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el Administrador de clústeres de conmutación por error.
 
@@ -282,9 +283,9 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Los enlaces de servicio remoto funcionarán adecuadamente después de la migración, ya que se realizará correctamente la migración de cualquier usuario que use esta función.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+### <a name="ssnoversion-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
--   **Jobs**
+-   **Trabajos**
 
     Se realizará correctamente la migración de los trabajos junto con las bases de datos del sistema. Cualquier usuario que ejecute un trabajo del agente de SQL o el propio agente tendrá los mismos permisos en el equipo de destino, tal como se especifica en los requisitos previos.
 
@@ -320,6 +321,6 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 - [Completar la actualización motor de base de datos](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Aprovechamiento de las nuevas características de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
-- [Actualizar una instancia del clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
+- [Actualización de una instancia del clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md).
 - [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Agregar características a una instancia de SQL Server 2016 (programa de instalación)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

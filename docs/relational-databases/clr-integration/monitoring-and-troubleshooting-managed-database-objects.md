@@ -1,6 +1,7 @@
 ---
-title: Supervisión y solución de problemas de los objetos de base de datos administran | Microsoft Docs
-ms.custom: ''
+title: Supervisión y solución de problemas de objetos de base de datos administrados
+description: Información sobre las herramientas que se pueden utilizar para supervisar y solucionar problemas de objetos y ensamblados de base de datos administrados (CLR).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8762f13eab6cf56e85cb4802db0d3b8fa962a306
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118529"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728447"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Supervisar y solucionar problemas de objetos de base de datos administrados
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se proporciona información sobre las herramientas que se pueden utilizar para supervisar y solucionar problemas de los objetos de base de datos administrados y ensamblados que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="profiler-trace-events"></a>Eventos de seguimiento del Analizador  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye Seguimiento de SQL y notificaciones de evento para supervisar los eventos que se generan en el motor de base de datos. Al registrar los eventos especificados, Seguimiento de SQL ayuda a solucionar los problemas de rendimiento, auditar la actividad de la base de datos, obtener datos de muestra para un entorno de prueba, depurar instrucciones y procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] y recopilar datos para las herramientas de análisis del rendimiento. Para obtener más información, consulte [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) y [Extended Events](../../relational-databases/extended-events/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye Seguimiento de SQL y notificaciones de evento para supervisar los eventos que se generan en el motor de base de datos. Al registrar los eventos especificados, Seguimiento de SQL ayuda a solucionar los problemas de rendimiento, auditar la actividad de la base de datos, obtener datos de muestra para un entorno de prueba, depurar instrucciones y procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] y recopilar datos para las herramientas de análisis del rendimiento. Para obtener más información, vea [seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md) y [eventos extendidos](../../relational-databases/extended-events/extended-events.md).  
   
 |Evento|Descripción|  
 |-----------|-----------------|  
 |[Assembly Load (clase de eventos)](/sql/database-engine/assembly-load-event-class)|Se utiliza para supervisar las solicitudes de carga de ensamblados (correctas y no realizadas).|  
-|[Clase de eventos SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [clase de eventos SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Proporciona información sobre los lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se han iniciado o completado.|  
-|[SP: Starting, clase de evento](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed, clase de evento](../../relational-databases/event-classes/sp-completed-event-class.md)|Se utiliza para supervisar la ejecución de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|[Clase de eventos SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [StmtCompleted clase de eventos](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Se utiliza para supervisar la ejecución de rutinas de CLR y [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|[SQL: BatchStarting (clase de eventos](../../relational-databases/event-classes/sql-batchstarting-event-class.md)), [SQL: BatchCompleted (clase de eventos](../../relational-databases/event-classes/sql-batchcompleted-event-class.md) )|Proporciona información sobre los lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se han iniciado o completado.|  
+|[SP: Starting (clase de eventos](../../relational-databases/event-classes/sp-starting-event-class.md)), [SP: Completed (clase de eventos](../../relational-databases/event-classes/sp-completed-event-class.md) )|Se utiliza para supervisar la ejecución de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|[SQL: StmtStarting, clase de eventos](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL: StmtCompleted (clase de eventos](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md) )|Se utiliza para supervisar la ejecución de rutinas de CLR y [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="performance-counters"></a>Performance Counters  
+## <a name="performance-counters"></a>Contadores de rendimiento  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye objetos y contadores que puede utilizar el Monitor de sistema para supervisar la actividad de los equipos en los que se ejecute una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un objeto es cualquier recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como un bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un proceso de Windows. Cada objeto contiene uno o más contadores que determinan diversos aspectos de los objetos que se van a supervisar. Para obtener más información, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 |Object|Descripción|  
@@ -55,22 +56,22 @@ ms.locfileid: "68118529"
 ## <a name="catalog-views"></a>Vistas de catálogo  
  Las vistas de catálogo devuelven información que utiliza el motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda utilizar las vistas de catálogo porque son la interfaz más general para los metadatos del catálogo y proporcionan el método más eficaz para obtener, transformar y presentar formas personalizadas de esta información. Todos los metadatos del catálogo disponibles para el usuario se exponen mediante las vistas de catálogo. Para obtener más información, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Vista de catálogo|Descripción|  
+|Datos del catálogo|Descripción|  
 |------------------|-----------------|  
-|[sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Devuelve información sobre los ensamblados registrados en una base de datos.|  
-|[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
+|[Sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Devuelve información sobre los ensamblados registrados en una base de datos.|  
+|[Sys. assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Devuelve información sobre cada función, procedimiento almacenado y desencadenador definidos en un ensamblado.|  
-|[sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Devuelve información sobre los archivos de ensamblado registrados en la base de datos.|  
-|[sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifica los tipos definidos por el usuario (UDT) definidos por un ensamblado.|  
-|[sys.module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los módulos CLR.|  
+|[Sys. assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Devuelve información sobre los archivos de ensamblado registrados en la base de datos.|  
+|[Sys. assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifica los tipos definidos por el usuario (UDT) definidos por un ensamblado.|  
+|[Sys. module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los módulos CLR.|  
 |[sys.parameter_type_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|Devuelve información sobre los parámetros que son tipos definidos por el usuario.|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|Identifica el ensamblado donde se define un desencadenador CLR.|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|Identifica los desencadenadores DDL en el nivel de servidor de un servidor, incluidos los desencadenadores CLR.|  
-|[sys.type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los tipos definidos por el usuario.|  
+|[Sys. type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|Identifica los ensamblados donde se definen los tipos definidos por el usuario.|  
 |[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|Devuelve los tipos definidos por el usuario y de sistema registrados en la base de datos.|  
   
 ## <a name="dynamic-management-views"></a>Vistas de administración dinámica  
- Las funciones y vistas de administración dinámica devuelven información sobre el estado del servidor que se puede utilizar para controlar el estado de una instancia del servidor, para diagnosticar problemas y para optimizar el rendimiento. Para obtener más información, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Las funciones y vistas de administración dinámica devuelven información sobre el estado del servidor que se puede utilizar para controlar el estado de una instancia del servidor, para diagnosticar problemas y para optimizar el rendimiento. Para obtener más información, vea [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 |DMV|Descripción|  
 |---------|-----------------|  
@@ -83,7 +84,7 @@ ms.locfileid: "68118529"
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Devuelve información acerca de cada solicitud que se está ejecutando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Devuelve todos los distribuidores de memoria activos actualmente en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidos los distribuidores de memoria CLR.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

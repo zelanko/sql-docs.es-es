@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518958"
 ---
 # <a name="data-sources-and-connection-methods"></a>Orígenes de datos y métodos de conexión
@@ -39,7 +39,7 @@ ms.locfileid: "62518958"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Prueba la conexión para un origen de datos. Este método admite las pruebas directas del origen de datos.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Prueba la conexión para un origen de datos. Este método admite las pruebas de los orígenes de datos publicados que son utilizados por los informes o modelos, y por orígenes de datos compartidos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](report-server-web-service-methods.md)   

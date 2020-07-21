@@ -1,5 +1,5 @@
 ---
-title: Método Seek y ejemplo de la propiedad Index (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad index y el método Seek (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Seek method [ADO], VC++ example
 - index property [ADO]
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931076"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765416"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Ejemplo del método Seek y de la propiedad Index (VC ++)
-Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [Seek](../../../ado/reference/ado-api/seek-method.md) método y [índice](../../../ado/reference/ado-api/index-property.md) propiedad junto con un determinado ***Id. de empleado***, para buscar el nombre del empleado en el ***empleados*** tabla de la base de datos Neptuno.  
+En este ejemplo se usa el método de [búsqueda](../../../ado/reference/ado-api/seek-method.md) y la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) junto con un identificador de ***empleado***determinado para buscar el nombre del empleado en la tabla ***Employees*** de la base de datos nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -225,7 +225,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad Index](../../../ado/reference/ado-api/index-property.md)   
+## <a name="see-also"></a>Consulte también  
+ [Index (propiedad)](../../../ado/reference/ado-api/index-property.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [El método de búsqueda](../../../ado/reference/ado-api/seek-method.md)
+ [Seek (método)](../../../ado/reference/ado-api/seek-method.md)

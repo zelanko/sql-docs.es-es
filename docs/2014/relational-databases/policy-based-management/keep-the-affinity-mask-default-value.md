@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bafa51979ac618dbc4a15672ff77b7d2454c24f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063847"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>Mantener el valor predeterminado de la máscara de afinidad
   Esta regla comprueba si el valor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente a la máscara de afinidad está establecido en 0, que es el valor predeterminado. La opción affinity mask controla dinámicamente la afinidad de la CPU.  
@@ -25,7 +24,7 @@ ms.locfileid: "62704953"
 ## <a name="for-more-information"></a>Para obtener más información  
  [affinity mask (opción de configuración del servidor)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

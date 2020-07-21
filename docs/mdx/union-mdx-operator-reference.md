@@ -1,5 +1,5 @@
 ---
-title: + (Unión) (MDX) | Microsoft Docs
+title: + Unión (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097353"
 ---
-# <a name="union---mdx-operator-reference"></a>Unión - referencia de operadores de MDX
+# <a name="union---mdx-operator-reference"></a>Union: referencia de operadores MDX
 
 
   Realiza una operación de conjunto que devuelve una unión entre dos conjuntos y elimina los miembros duplicados.  
@@ -34,8 +34,8 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un conjunto que contiene los miembros de ambos conjuntos especificados.  
   
-## <a name="remarks"></a>Comentarios  
- El **+ (unión)** operador es funcionalmente equivalente a la [unión &#40;MDX&#41; ](../mdx/union-mdx.md) función.  
+## <a name="remarks"></a>Observaciones  
+ El operador **+ (Unión)** es funcionalmente equivalente a la función [Union &#40;MDX&#41;](../mdx/union-mdx.md) .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra el uso de este operador.  
@@ -52,7 +52,7 @@ WHERE
     ([Measures].[Gross Profit Margin])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

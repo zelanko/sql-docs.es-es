@@ -1,8 +1,8 @@
 ---
-title: Configuración de un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux
-titleSuffix: SQL Server
-description: Aprenda a crear un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux.
+title: Configuración del grupo de disponibilidad para SQL Server en Linux
+description: Obtenga información sobre cómo crear un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux.
 author: MikeRayMSFT
+ms.custom: seo-lt-2019
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 08/26/2019
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030304"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892316"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configuración de un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se explica cómo crear un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux. Hay dos tipos de configuración de grupos de disponibilidad. Una configuración de *alta disponibilidad* usa un administrador de clústeres para proporcionar continuidad empresarial. Esta configuración también puede incluir réplicas de escalado de lectura. En este documento se explica cómo crear un grupo de disponibilidad para alta disponibilidad.
 
@@ -29,9 +29,9 @@ Las configuraciones que garantizan una alta disponibilidad y la protección de l
 
 Todos los servidores deben ser físicos o virtuales, y los servidores virtuales deben estar en la misma plataforma de virtualización. Este requisito se debe a que los agentes de barrera son específicos de la plataforma. Vea [Directivas de clústeres invitados](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Hoja de ruta
+## <a name="roadmap"></a>Plan de desarrollo
 
-Los pasos necesarios para crear un grupo de disponibilidad en servidores Linux de alta disponibilidad son diferentes a los de un clúster de conmutación por error de Windows Server. En la siguiente lista se describen los pasos de alto nivel: 
+Los pasos necesarios para crear un grupo de disponibilidad en servidores Linux de alta disponibilidad son diferentes a los de un clúster de conmutación por error de Windows Server. En la lista siguiente, se describen los pasos generales: 
 
 1. [Configure SQL Server en tres servidores de clústeres](sql-server-linux-setup.md).
 
@@ -49,7 +49,7 @@ Los pasos necesarios para crear un grupo de disponibilidad en servidores Linux d
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
-   >Para la alta disponibilidad, los entornos de producción requieren un agente de barrera, como, por ejemplo, STONITH. En los ejemplos de esta documentación, no se usan agentes de barrera. Los ejemplos solo se proporcionan con fines de prueba y validación. 
+   >Para alcanzar una alta disponibilidad, los entornos de producción necesitan un agente de barrera (por ejemplo, STONITH). En los ejemplos de esta documentación, no se usan agentes de barrera. Los ejemplos solo se proporcionan con fines de prueba y validación. 
    
    >Un clúster de Linux usa barreras para devolver el clúster a un estado conocido. La forma de configurar las barreras depende de la distribución y del entorno. Actualmente, las barreras no están disponibles en algunos entornos de nube. Para más información, vea [Directivas de soporte para clústeres de alta disponibilidad de RHEL: plataformas de virtualización](https://access.redhat.com/articles/29440).
    

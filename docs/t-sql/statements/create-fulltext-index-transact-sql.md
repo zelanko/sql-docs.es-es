@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912770"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392903"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un índice de texto completo en una tabla o una vista indizada de una base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Solo se permite un índice de texto completo por cada tabla o vista indizada, y cada índice de texto completo se aplica a una única tabla o vista indizada. El índice de texto completo puede contener hasta 1.024 columnas.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67912770"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CREATE FULLTEXT INDEX ON table_name  
    [ ( { column_name   
              [ TYPE COLUMN type_column_name ]  
@@ -66,6 +66,8 @@ CREATE FULLTEXT INDEX ON table_name
  }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 *table_name*       
 Es el nombre de la tabla o vista indizada que contiene la columna o columnas incluidas en el índice de texto completo.  
@@ -103,7 +105,7 @@ Para las columnas no BLOB y no XML que contienen datos de texto en varios idioma
 Para los documentos almacenados en columnas de tipo XML o BLOB, la codificación de idioma del documento se utilizará en el momento de la indización. Por ejemplo, en las columnas XML, el atributo **xml:lang** de los documentos XML identifica el idioma. En el momento de la consulta, el valor especificado previamente en *language_term* se convierte en el idioma predeterminado que se usa para las consultas de texto completo, a menos que *language_term* se especifique como parte de una consulta de texto completo.  
   
 STATISTICAL_SEMANTICS       
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) 
   
 Crea los índices adicionales de similitud de documentos y frases clave que forman parte de la indización semántica estadística. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -133,7 +135,7 @@ La opción NO POPULATION se puede utilizar únicamente si CHANGE_TRACKING es OFF
 STOPLIST [ = ] { OFF | **SYSTEM** | *stoplist_name* }       
 Asocia una lista de palabras irrelevantes de texto completo al índice. El índice no se rellena con ningún token que forme parte de la lista de palabras irrelevantes especificada. Si no se especifica STOPLIST, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asocia la lista de palabras irrelevantes de texto completo del sistema al índice.  
   
-OFF       
+Apagado       
 Especifica que no se asocie al índice de texto completo ninguna lista de palabras irrelevantes.  
   
 **SYSTEM**       
@@ -143,32 +145,32 @@ Especifica que la lista de palabras irrelevantes predeterminada de texto complet
 Especifica el nombre de la lista de palabras irrelevantes que se va a asociar al índice de texto completo.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores)  
   
 Asocia una lista de propiedades de búsqueda al índice.  
  
-OFF       
+Apagado       
 Especifica que no se asocie al índice de texto completo ninguna lista de propiedades.  
   
 *property_list_name*       
 Especifica el nombre de la lista de propiedades de búsqueda que se va a asociar al índice de texto completo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Para más información sobre índices de texto completo, vea [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
-En las columnas **xml**, puede crear un índice de texto completo que indique el contenido de los elementos XML, pero omita el marcado XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se utilizan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas. Para obtener más información, vea [Usar la búsqueda de texto completo con columnas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
+En las columnas **xml**, puede crear un índice de texto completo que indique el contenido de los elementos XML, pero omita el marcado XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se usan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas. Para obtener más información, vea [Usar la búsqueda de texto completo con columnas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
 Recomendamos que la columna de clave de índice sea de un tipo de datos entero. Esto proporciona optimizaciones en el momento de ejecución de la consulta.  
   
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interacciones del seguimiento de cambios y del parámetro NO POPULATION  
  Que se rellene el índice de texto completo depende de si el seguimiento de cambios está habilitado y si se especifica WITH NO POPULATION en la instrucción ALTER FULLTEXT INDEX. En la tabla siguiente se resume el resultado de su interacción.  
   
-|Seguimiento de los cambios|WITH NO POPULATION|Resultado|  
+|Seguimiento de cambios|WITH NO POPULATION|Resultado|  
 |---------------------|------------------------|------------|  
-|No se ha habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
+|No se ha habilitado|Sin especificar|Se realiza un rellenado completo en el índice.|  
 |No se ha habilitado|Specified|No se produce el rellenado del índice hasta que se emite una instrucción ALTER FULLTEXT INDEX...START POPULATION.|  
-|Habilitado|Specified|Se produce un error y no se altera el índice.|  
-|Habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
+|habilitado|Specified|Se produce un error y no se altera el índice.|  
+|habilitado|Sin especificar|Se realiza un rellenado completo en el índice.|  
   
  Para más información sobre rellenar índices de texto completo, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   

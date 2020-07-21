@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295e5f0ab4747cfb06b86525a1649a5fa7a39068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107672"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Cuadro de diálogo Secciones del informe (Generador de informes)
-  Al abrir un informe, el Generador de informes comprueba que el informe contenga solo un elemento **\<Section>** del lenguaje RDL (Report Definition Language). No se permite abrir un informe con varios elementos **\<Section>** .  
+  Al abrir un informe, generador de informes comprueba que el informe contiene solo una sección de lenguaje RDL (Report Definition Language) ** \<>** elemento. No se admite la apertura de un informe con varias ** \<secciones>** elementos.  
   
  Aunque se puede generar una definición de informe con varias secciones mediante programación, no se admite la edición del informe en un entorno de creación de informes.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66107672"
   
  Haga clic en **Aceptar** para continuar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

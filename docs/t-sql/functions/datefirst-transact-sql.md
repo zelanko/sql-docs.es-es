@@ -29,18 +29,18 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fc2ca71731fa632db2a857e1b727574722058c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 247b91b8f222ba1fd06c2ca265aee9a16b2ea02f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119176"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011399"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve el valor actual de [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) para una sesión específica.
   
@@ -54,10 +54,10 @@ Vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-
 @@DATEFIRST  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
 **tinyint**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 SET DATEFIRST *n* especifica el primer día (DOMINGO, LUNES, MARTES, etc.) de la semana. El valor *n* puede oscilar entre 1 y 7.
 
 ```sql
@@ -107,7 +107,7 @@ First Day         Today
 SELECT @@DATEFIRST;  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   

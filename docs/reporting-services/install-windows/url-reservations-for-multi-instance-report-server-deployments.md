@@ -10,10 +10,10 @@ ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62513287"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias
@@ -22,7 +22,7 @@ ms.locfileid: "62513287"
  Las direcciones URL duplicadas se detectan durante el registro de direcciones URL, que tiene lugar cuando se inicia el servicio. Si crea reservas de direcciones URL que no son únicas, el conflicto entre nombres no se puede detectar hasta que inicie el servicio. Por esta razón, debe seguir las reglas o convenciones de nomenclatura para garantizar que todos los valores son únicos.  
   
 ## <a name="default-naming-conventions"></a>Convenciones de nomenclatura predeterminadas  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar en una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al instalar o configurar un servidor de informes en una instancia con nombre, el nombre de la instancia se incluye automáticamente en el directorio virtual en la reserva de direcciones URL predeterminada proporcionada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La tabla siguiente muestra las reservas de direcciones URL para una instancia predeterminada y una instancia con nombre.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede instalar en una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al instalar o configurar un servidor de informes en una instancia con nombre, el nombre de la instancia se incluye automáticamente en el directorio virtual en la reserva de direcciones URL predeterminada proporcionada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La tabla siguiente muestra las reservas de direcciones URL para una instancia predeterminada y una instancia con nombre.  
   
 |Instancia de SQL Server|Reserva de direcciones URL predeterminada|  
 |-------------------------|-----------------------------|  

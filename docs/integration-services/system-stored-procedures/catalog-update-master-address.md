@@ -10,26 +10,26 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d9373bcb994614a1726801c6cd8c85a9bc46bced
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afcd5083c5b0132d2594c45690b10f2a69371e70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673979"
 ---
-# <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (base de datos SSISDB)
+# <a name="catalogupdate_master_address-ssisdb-database"></a>catalog.update_master_address (base de datos SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
 
 Actualice el punto de conexión de patrón de escalabilidad horizontal de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 ## <a name="syntax"></a>Sintaxis
 
 ```sql
-catalog.update_master_address [@MasterAddress = ] masterAddress
+catalog.update_master_address [ @MasterAddress = ] masterAddress
 ```
 
 ## <a name="arguments"></a>Argumentos

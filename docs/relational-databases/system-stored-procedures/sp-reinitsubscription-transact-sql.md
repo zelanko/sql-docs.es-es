@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8bc377c269eeb6034ebbe0e5753f2605464ecd8a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68762530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645780"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Marca las suscripciones para reinicialización. Este procedimiento almacenado se ejecuta en el publicador para suscripciones de inserción.  
   
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`Indica si la reinicialización se produce como resultado de un cambio de esquema en la base de datos de publicación. *for_schema_change* es de **bit**y su valor predeterminado es 0. Si es **0**, las suscripciones activas para publicaciones que permiten la actualización inmediata se reactivan siempre y cuando se reinicialice toda la publicación y no solo algunos de sus artículos. Esto significa que la reinicialización se produce como resultado de un cambio de esquema. Si es **1**, las suscripciones activas no se reactivan hasta que se ejecuta el agente de instantáneas.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el publicador para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los publicadores.  
+>  no se debe usar el *publicador* para los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`Permite la reinicialización incluso si el distribuidor no existe o está sin conexión. *ignore_distributor_failure* es de **bit**y su valor predeterminado es 0. Si es **0**, se produce un error en la reinicialización si el distribuidor no existe o está sin conexión.  
   
@@ -91,7 +91,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** , los miembros del rol fijo de base de datos **db_owner** o el creador de la suscripción pueden ejecutar **sp_reinitsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

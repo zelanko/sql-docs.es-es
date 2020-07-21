@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd49c2d32a5a3035bb76aa73a56d31e00a95549a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874683"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955099"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord, objeto
   El objeto `SqlDataRecord` representa una fila única de datos, junto con sus metadatos relacionados.  
   
  Los procedimientos almacenados administrados se pueden enviar a los conjuntos de resultados del cliente que no son de `SqlDataReader`. La clase `SqlDataRecord`, junto con los métodos `SendResultsStart`, `SendResultsRow` y `SendResultsEnd` del objeto `SqlPipe`, permite a los procedimientos almacenados enviar conjuntos de resultados personalizados al cliente.  
   
- Para obtener más información, consulte el `Microsoft.SqlServer.Server.SqlDataRecord` documentación de referencia en la documentación del SDK de .NET Framework de la clase.  
+ Para obtener más información, vea la `Microsoft.SqlServer.Server.SqlDataRecord` documentación de referencia de la clase en la documentación del SDK de .NET Framework.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea un nuevo registro de empleado y se devuelve al autor de la llamada.  
@@ -86,7 +85,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto SqlPipe](sqlpipe-object.md)  
+## <a name="see-also"></a>Consulte también  
+ [SqlPipe, objetos](sqlpipe-object.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Administración de soluciones de minería de datos y objetos | Microsoft Docs
+title: Administración de objetos y soluciones de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084202"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522181"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
@@ -35,7 +34,7 @@ ms.locfileid: "66084202"
 ## <a name="location-of-data-mining-objects"></a>Ubicación de los objetos de minería de datos  
  Las estructuras y los modelos de minería de datos que se han procesado se almacenan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Si crea una conexión a un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos `Immediate` objetos modo al desarrollar la minería de datos, los objetos que cree se agregan inmediatamente al servidor mientras trabaja. Sin embargo, si diseña los objetos de minería de datos en modo **Sin conexión** , que es el predeterminado cuando se trabaja en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los objetos de minería que cree solo serán contenedores de metadatos, hasta que los implemente en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por lo tanto, siempre que realice un cambio en un objeto, deberá volver a implementarlo en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre la arquitectura de minería de datos, vea [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Si crea una conexión a una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de en `Immediate` modo al desarrollar los objetos de minería de datos, los objetos que cree se agregarán inmediatamente al servidor mientras trabaja. Sin embargo, si diseña los objetos de minería de datos en modo **Sin conexión** , que es el predeterminado cuando se trabaja en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los objetos de minería que cree solo serán contenedores de metadatos, hasta que los implemente en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por lo tanto, siempre que realice un cambio en un objeto, deberá volver a implementarlo en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre la arquitectura de minería de datos, vea [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Algunos clientes, como los complementos de minería de datos para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, también permiten crear modelos de minería de datos y estructuras de minería de datos de sesión que usan una conexión a una instancia, aunque solo almacenan la estructura y los modelos de minería de datos en el servidor durante el transcurso de la sesión. Aun así, podrá administrar estos modelos a través del cliente, al igual que si las estructuras y los modelos estuvieran almacenados en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sin embargo, los objetos no se conservarán después de que se desconecte de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "66084202"
   
  Los vínculos siguientes proporcionan información sobre cómo puede modificar objetos de minería de datos utilizando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
--   [Editar la vista del origen de datos usada para una estructura de minería de datos](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modifique la vista del origen de datos utilizada para una estructura de minería de datos](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Cambiar las propiedades de una estructura de minería de datos](change-the-properties-of-a-mining-structure.md)  
   
@@ -79,21 +78,21 @@ ms.locfileid: "66084202"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restricciones:** Ninguno.  
+ **Restricciones:** ninguna.  
   
 ### <a name="data-mining-extensions-dmx"></a>Extensiones de minería de datos (DMX)  
  Las extensiones de minería de datos (DMX) se pueden utilizar con otras interfaces de comandos, como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net para crear, eliminar y consultar estructuras y modelos de minería de datos.  
   
 -   [Instrucciones de definición de datos de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/dmx-statements-data-definition)  
   
- **Restricciones:** Algunas propiedades no se puede cambiar utilizando DMX.  
+ **Restricciones:** algunas propiedades no se pueden cambiar utilizando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) es el lenguaje de definición de datos para todos los Analysis Services. XMLA proporciona control sobre la mayoría de los objetos de minería de datos y las operaciones del servidor. Todas las operaciones de administración entre el cliente y el servidor se pueden realizar usando XMLA. Para su comodidad, puede usar el lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) para encapsular el XML.  
   
  **Restricciones:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genera algunas instrucciones XMLA que solo se admiten para uso interno y que no se pueden utilizar en scripts DDL de XML.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guía del desarrollador &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

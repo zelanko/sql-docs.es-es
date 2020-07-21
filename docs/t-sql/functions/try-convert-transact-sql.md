@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 41931f94fdd887c453fefb490fe721de1b3605cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70151961"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832809"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "70151961"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  
@@ -53,10 +53,10 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
  El intervalo de valores aceptables está determinado por el valor de *data_type*. Si *style* es NULL, **TRY_CONVERT** devuelve NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve una conversión de valor al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  **TRY_CONVERT** toma el valor que se le ha pasado e intenta convertirlo al *data_type* especificado. Si la conversión se realiza correctamente, **TRY_CONVERT** devuelve el valor como el *data_type* especificado; si se produce un error, se devuelve NULL. Pero si se solicita una conversión que no se permite explícitamente, **TRY_CONVERT** generará un error.  
   
  **TRY_CONVERT** es una palabra clave reservada en el nivel de compatibilidad 110 y posteriores.  

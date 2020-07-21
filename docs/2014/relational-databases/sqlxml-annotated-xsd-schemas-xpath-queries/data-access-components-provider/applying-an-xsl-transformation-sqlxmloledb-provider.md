@@ -13,35 +13,34 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39c36831838ef222b4c98befded8af55045a86ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd5686299751d6ae10b9407deee36b8aeea31468
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015773"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicar una transformación XSL (proveedor SQLXMLOLEDB)
-  En esta aplicación ADO de ejemplo, se ejecuta una consulta SQL y se aplica una transformación XSL al resultado. Establecer el clientsidexml, propiedad en True, exige el procesamiento del conjunto de filas en el lado cliente. El lenguaje de comandos se establece en {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque la consulta SQL se especifica en una plantilla y se debe especificar este lenguaje al ejecutar una plantilla. La propiedad xsl especifica el archivo XSL debe usar para aplicar la transformación. El valor de propiedad de ruta de acceso Base se usa para buscar el archivo XSL. Si especifica una ruta de acceso en el valor de la propiedad xsl, la ruta de acceso es relativa a la ruta de acceso que se especifica en la propiedad de ruta de acceso Base.  
+  En esta aplicación ADO de ejemplo, se ejecuta una consulta SQL y se aplica una transformación XSL al resultado. Al establecer la propiedad Clientsidexml, en true, se exige el procesamiento del conjunto de filas en el lado cliente. El lenguaje de comandos se establece en {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque la consulta SQL se especifica en una plantilla y se debe especificar este lenguaje al ejecutar una plantilla. La propiedad XSL especifica el archivo XSL que se va a utilizar para aplicar la transformación. El valor de la propiedad ruta de acceso base se utiliza para buscar el archivo XSL. Si especifica una ruta de acceso en el valor de la propiedad XSL, la ruta de acceso es relativa a la ruta de acceso especificada en la propiedad ruta de acceso base.  
   
  En este ejemplo se muestra cómo utilizar las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
   
--   ClientSideXML  
+-   Clientsidexml,  
   
 -   xsl  
   
  En esta aplicación de ejemplo ADO del lado cliente, se ejecuta en el servidor una plantilla XML que consta de una consulta SQL.  
   
- Dado que el clientsidexml, propiedad se establece en True, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera el documento XML.  
+ Dado que la propiedad Clientsidexml, está establecida en true, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera el documento XML.  
   
- La propiedad xsl se especifica en la aplicación. por lo tanto, se aplica la transformación XSL al documento XML que se genera en el cliente y el resultado es una tabla de dos columnas.  
+ La propiedad XSL se especifica en la aplicación; por lo tanto, la transformación XSL se aplica al documento XML que se genera en el cliente y el resultado es una tabla de dos columnas.  
   
- Para ejecutar el comando de la plantilla, se debe especificar el lenguaje de plantilla XML: {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
+ Para ejecutar el comando de plantilla, se debe especificar la plantilla XML Dialect-{5d531cb2-e6ed-11D2-b252-00c04f681b71}-.  
   
 > [!NOTE]  
->  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para el proveedor de datos, que exige la instalación de software cliente de red adicional. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para el proveedor de datos, que exige la instalación de software cliente de red adicional. Para obtener más información, vea [requisitos del sistema para SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

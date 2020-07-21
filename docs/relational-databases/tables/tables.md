@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127374"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79287749"
 ---
 # <a name="tables"></a>Tablas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -30,7 +30,7 @@ Las tablas son objetos de base de datos que contienen todos sus datos. En las ta
 
 - Puede asignar propiedades a la tabla y a cada columna de la tabla para controlar los datos admitidos y otras propiedades. Por ejemplo, puede crear restricciones en una columna para no permitir valores nulos o para proporcionar un valor predeterminado si no se especifica un valor, o puede asignar una restricción de clave en la tabla que exige la unicidad o definir una relación entre las tablas. 
 
-- Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). 
+- Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). 
 
 ## <a name="types-of-tables"></a>Tipos de tablas
  Además del rol estándar de las tablas básicas definidas por el usuario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona los siguientes tipos de tabla que permiten llevar a cabo objetivos especiales en una base de datos: 
@@ -44,9 +44,9 @@ Las tablas con particiones son tablas cuyos datos se han dividido horizontalment
 Las tablas temporales se almacenan en **tempdb**. Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 
-#### <a name="ctp23"></a> Recompilaciones reducidas para cargas de trabajo mediante tablas temporales en varios ámbitos
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Recompilaciones reducidas para cargas de trabajo mediante tablas temporales en varios ámbitos
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] reduce recompilaciones para cargas de trabajo mediante tablas temporales en varios ámbitos. Antes de esta característica, al hacer referencia a una tabla temporal con una instrucción de lenguaje de manipulación de datos DML (`SELECT`, `INSERT`, `UPDATE` o `DELETE`), si la tabla temporal se había creado mediante un lote de ámbito externo, el resultado era una recompilación de la instrucción DML en cada ejecución. Con esta mejora, SQL Server realiza comprobaciones ligeras adicionales para evitar recompilaciones innecesarias:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)], en todos los niveles de compatibilidad de la base de datos, reduce las recompilaciones para cargas de trabajo mediante tablas temporales en varios ámbitos. Esta característica también está habilitada en Azure SQL Database en el nivel de compatibilidad de la base de datos 150 para todos los modelos de implementación.  Antes de esta característica, al hacer referencia a una tabla temporal con una instrucción de lenguaje de manipulación de datos DML (`SELECT`, `INSERT`, `UPDATE` o `DELETE`), si la tabla temporal se había creado mediante un lote de ámbito externo, el resultado era una recompilación de la instrucción DML en cada ejecución. Con esta mejora, SQL Server realiza comprobaciones ligeras adicionales para evitar recompilaciones innecesarias:
 
 - Se comprueba si el módulo de ámbito externo que se usa para crear la tabla temporal en tiempo de compilación es el mismo que el de las ejecuciones consecutivas. 
 - Se realiza el seguimiento de los cambios de lenguaje de definición de datos (DDL) realizados en la compilación inicial y se comparan con las operaciones DDL para ejecuciones consecutivas.
@@ -82,7 +82,7 @@ Las tablas anchas tienen las siguientes implicaciones de rendimiento.
 |-----------------|-----------|
 |Describe cómo crear una tabla.|[Crear tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/create-tables-database-engine.md)|
 |Describe cómo eliminar una tabla.|[Eliminar tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/delete-tables-database-engine.md)|
-|Describe cómo crear una nueva tabla que contenga algunas o todas las columnas de una tabla existente.|[Tablas duplicadas](../../relational-databases/tables/duplicate-tables.md)|
+|Describe cómo crear una nueva tabla que contenga algunas o todas las columnas de una tabla existente.|[Duplicar tablas](../../relational-databases/tables/duplicate-tables.md)|
 |Describe cómo cambiar el nombre de una tabla.|[Cambiar el nombre a las tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|
 |Describe cómo ver las propiedades de la tabla.|[Ver la definición de tabla](../../relational-databases/tables/view-the-table-definition.md)|
 |Describe cómo determinar si otros objetos como una vista o un procedimiento almacenado dependen de una tabla.|[Ver las dependencias de una tabla](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|
@@ -101,6 +101,6 @@ Las tablas anchas tienen las siguientes implicaciones de rendimiento.
 |Describe cómo especificar un valor predeterminado de una columna. Este valor se usa si no se proporciona otro.|[Especificar valores predeterminados para las columnas](../../relational-databases/tables/specify-default-values-for-columns.md)|
 
 ## <a name="see-also"></a>Consulte también
- [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md) y [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
+ [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [Restricciones UNIQUE y restricciones CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 
 

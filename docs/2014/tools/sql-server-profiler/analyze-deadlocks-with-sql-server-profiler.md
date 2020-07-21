@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3414cda74d75dbacf10ed98b6fc6d50da2feaa18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064078"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizar interbloqueos con SQL Server Profiler
   Use el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar la causa de un interbloqueo. Un interbloqueo se produce cuando hay una dependencia cíclica entre dos o más subprocesos o procesos para algún conjunto de recursos en SQL Server. El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]le permite crear un seguimiento que registra, reproduce y muestra eventos de interbloqueo para su análisis.  
@@ -46,8 +45,8 @@ ms.locfileid: "63316326"
  Nodo de recurso  
  Un objeto de la base de datos; por ejemplo, una tabla, un índice o una fila.  
   
- Borde  
- Una relación entre un proceso y un recurso. Un borde `request` se produce cuando un proceso espera un recurso. Un borde `owner` se produce cuando un recurso espera un proceso. El modo de bloqueo se incluye en la descripción del borde. Por ejemplo, **modo: X**.  
+ perimetral  
+ Una relación entre un proceso y un recurso. Un borde `request` se produce cuando un proceso espera un recurso. Un borde `owner` se produce cuando un recurso espera un proceso. El modo de bloqueo se incluye en la descripción del borde. Por ejemplo, **Modo: X**.  
   
 ## <a name="deadlock-process-node"></a>Nodo de proceso de interbloqueo  
  En un gráfico de espera, el nodo de proceso contiene información acerca del proceso. En la tabla siguiente se explican los componentes de un proceso.  
@@ -61,8 +60,8 @@ ms.locfileid: "63316326"
 |Registro utilizado|Cantidad de espacio del registro utilizado por el proceso.|  
 |Id. de propietario|Id. de transacción de los procesos que están usando transacciones y que actualmente están esperando en un bloqueo.|  
 |Descriptor de transacción|Puntero al descriptor de transacción que describe el estado de la transacción.|  
-|Búfer de entrada|Búfer de entrada del proceso actual; define el tipo de evento y la instrucción que se está ejecutando. Los valores posibles incluyen:<br /><br /> **Lenguaje**<br /><br /> **RPC**<br /><br /> **Ninguno**|  
-|.|Tipo de instrucción. Los valores posibles son:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Desconocido**|  
+|Búfer de entrada|Búfer de entrada del proceso actual; define el tipo de evento y la instrucción que se está ejecutando. Los valores posibles son:<br /><br /> **Lenguaje**<br /><br /> **RPC**<br /><br /> **None**|  
+|.|Tipo de instrucción. Los valores posibles son:<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>Nodo de recurso de interbloqueo  
  En un interbloqueo, dos procesos están esperando un recurso retenido por el otro recurso. En un gráfico de interbloqueo, los recursos se muestran como nodos de recursos.  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e0db2871-3a5f-4fcc-af61-92333042dcd1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0fb1020b2e3ebfdc17520110fedf87eb0e6f816e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1077f1a75328075138b5221af463f0e5b7186990
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976124"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913949"
 ---
 # <a name="preparestatement-method-javalangstring-javalangstring"></a>Método prepareStatement (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,16 +42,16 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  *columnNames*  
   
- Matriz de **cadenas** de nombres de columna.  
+ Matriz **String** de nombres de columnas.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto PreparedStatement.  
+ Un objeto PreparedStatement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método prepareStatement se especifica mediante el método prepareStatement en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método prepareStatement especifica este método prepareStatement en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método prepareStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

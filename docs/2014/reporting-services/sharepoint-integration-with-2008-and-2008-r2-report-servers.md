@@ -1,5 +1,5 @@
 ---
-title: Integración de SharePoint con 2008 y 2008 R2 servidores de informes | Microsoft Docs
+title: Integración de SharePoint con servidores de informes de 2008 y 2008 R2 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101203"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>Integración de SharePoint con servidores de informes 2008 y 2008 R2
-  En la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se introdujo una arquitectura en la que el modo de SharePoint se basa ahora en un servicio compartido de SharePoint. Administración de la nueva funcionalidad se ha completado en Administración Central de SharePoint en el **administrar servicios** y **administrar aplicaciones de servicio** páginas. El [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] arquitectura anterior para la integración de SharePoint sigue siendo compatible con la [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento para productos de SharePoint 2010 para SharePoint 2010 que pueda integrar con versiones anteriores de un servidor de informes.  
+  En la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se introdujo una arquitectura en la que el modo de SharePoint se basa ahora en un servicio compartido de SharePoint. La administración de la nueva funcionalidad se completa en administración central de SharePoint en las páginas **administrar servicios** y **aplicaciones de servicio de administrador** . La [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] arquitectura anterior para la integración de SharePoint sigue siendo compatible [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con el complemento para los productos de SharePoint 2010, de modo que puede integrar SharePoint 2010 con versiones anteriores de un servidor de informes.  
   
  Las páginas de Administración central de SharePoint que utilizaría para administrar la arquitectura anterior se encuentran en las siguientes ubicaciones:  
   
-1.  Haga clic en Administración Central de SharePoint **configuración General de la aplicación**.  
+1.  En administración central de SharePoint, haga clic en **configuración de aplicación general**.  
   
-2.  El grupo **SQL Server Reporting Services (2008 y 2008 R2)** contiene los vínculos y páginas de administración de la arquitectura anterior  
+2.  El SQL Server Reporting Services de grupo **(2008 y 2008 R2)** contiene los vínculos y las páginas de administración de la arquitectura anterior  
   
 ## <a name="server-integration-architecture"></a>Arquitectura de integración de servidor  
  Cuando se integra un servidor de informes con una instancia de un producto de SharePoint, los elementos y propiedades se almacenan en las bases de datos de contenido de SharePoint. Esto proporciona un mayor nivel de integración entre las tecnologías de servidor que afecta a la forma de almacenar, proteger y obtener acceso al contenido.  

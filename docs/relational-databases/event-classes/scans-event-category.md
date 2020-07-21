@@ -14,15 +14,15 @@ ms.assetid: 657aabe4-d3da-475e-87e5-cf9d33c976b1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4aad7f741d5a2a509c9be67cea7636942204399b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ee3196894bbb3c5455d7598a6535a4969ed78d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727378"
 ---
 # <a name="scans-event-category"></a>Recorridos, categoría de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La categoría de eventos **Recorridos** contiene eventos de recorrido.  
   
 ## <a name="in-this-section"></a>En esta sección  

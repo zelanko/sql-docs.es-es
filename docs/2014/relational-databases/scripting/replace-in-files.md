@@ -1,6 +1,6 @@
 ---
-title: Reemplazo en archivos | Microsoft Docs
-ms.custom: ''
+title: Reemplazar en archivos
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 997df4fb0756bc684c9d2ca3e3d08d074faf8f93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a70e5af5cd46abab1980ed0c9f84c3fe309d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009500"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
   La pestaña **Reemplazar en archivos** de la ventana Buscar y reemplazar permite buscar una cadena o expresión en el código de un conjunto específico de archivos y cambiar algunas o todas las coincidencias halladas. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66063894"
 ## <a name="find-what"></a>Buscar  
  Estos controles de la pestaña **Reemplazar en archivos** permiten especificar la cadena o expresión para la búsqueda de coincidencias.  
   
- **Find what**  
+ **Buscar**  
  Escriba el texto que desea buscar. El cuadro de diálogo intentará rellenar el texto de búsqueda probable utilizando el texto seleccionado con el cursor antes de abrir el cuadro de diálogo, o bien texto cercano o texto que se haya buscado con anterioridad. Podrá reutilizar una de las últimas 20 cadenas de búsqueda seleccionándola en esta lista desplegable.  
   
  **[cadena con caracteres comodín]**  
@@ -39,7 +38,7 @@ ms.locfileid: "66063894"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Buscar** , estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se elige un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Buscar** .  
   
-## <a name="replace-with"></a>Reemplazar con  
+## <a name="replace-with"></a>Reemplazar por  
  Estos controles le permiten especificar qué debe insertarse en lugar de la cadena o expresión coincidente.  
   
  **Replace with**  
@@ -48,7 +47,7 @@ ms.locfileid: "66063894"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Reemplazar con** estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se hace clic un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Reemplazar con** .  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en el cuadro **Reemplazar con** y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Reemplazar todo**  
@@ -98,7 +97,7 @@ ms.locfileid: "66063894"
  **Solo palabras completas**  
  Cuando esta casilla se activa, las ventanas Resultados de la búsqueda solo mostrarán las instancias de la cadena especificada en **Buscar** cuyas palabras completas coincidan. Por ejemplo, una búsqueda de **MyObject** devolverá "MyObject", pero no devolverá "CMyObject" ni "MyObjectC".  
   
- **Usar**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
  **Regular Expressions**  
@@ -152,5 +151,5 @@ ms.locfileid: "66063894"
  **Cambiar a Buscar símbolo**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

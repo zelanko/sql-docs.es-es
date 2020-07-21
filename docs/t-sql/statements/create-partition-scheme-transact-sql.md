@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048152"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392983"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un esquema en la base de datos actual que asigna a grupos de archivos las particiones de una tabla o índice con particiones. El número y el dominio de las particiones de una tabla o índice con particiones se determinan en una función de partición. Antes de crear un esquema de partición, es necesario crear una función de partición de una instrucción [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md).  
 
@@ -47,14 +47,16 @@ ms.locfileid: "68048152"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CREATE PARTITION SCHEME partition_scheme_name  
 AS PARTITION partition_function_name  
 [ ALL ] TO ( { file_group_name | [ PRIMARY ] } [ ,...n ] )  
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *partition_scheme_name*  
  Es el nombre del esquema de partición. Los nombres de esquema de partición deben ser únicos en la base de datos y cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -157,7 +159,7 @@ Se ha creado correctamente el esquema de partición "myRangePS4". "test5fg" tien
   
  Si la función de partición `myRangePF4` se cambia para agregar una partición, el grupo de archivos `test5fg` recibe la partición que acaba de crearse.  
 
-### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-includesqldbesaincludessqldbesa-mdmd"></a>E. Crear un esquema de partición solo en PRIMARY ([!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] solo admite PRIMARY)
+### <a name="e-creating-a-partition-schema-only-on-primary---only-primary-is-supported-for-sqldbesa"></a>E. Crear un esquema de partición solo en PRIMARY ([!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] solo admite PRIMARY)
 
  En el ejemplo siguiente se crea una función de partición para crear cuatro particiones en una tabla o en un índice. Después, se crea un esquema de partición que especifica todas las particiones que se crean en el grupo de archivos PRIMARY.  
   

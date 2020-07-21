@@ -1,5 +1,5 @@
 ---
-title: Detalles de traducción (pestaña traducciones, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Detalles de traducción (pestaña traducciones, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938316"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalles de la traducción (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services – Datos multidimensionales)
   Use el panel de **Detalles de la traducción** de la pestaña **Traducciones** del Diseñador de dimensiones para definir y administrar traducciones para la dimensión seleccionada actualmente.  
   
- **Para mostrar el panel de detalles de las traducciones**  
+ **Para mostrar el panel Detalles de la traducción**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, abra la dimensión que desea.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66065851"
   
      Propiedades `Caption` y `AttributeAllMember`  
   
--   Attribute  
+-   Atributo  
   
      Propiedades `Caption`, `AttributeHierarchyDisplayFolder` y `NamingTemplate`.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66065851"
      Propiedad `Caption`  
   
  **\<Language>**  
- Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos ( **…** ), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
+ Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos (**…**), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
   
 -   Propiedad `NamingTemplate`  
   
@@ -87,7 +86,7 @@ ms.locfileid: "66065851"
  Seleccione esta opción para mostrar el cuadro de diálogo **Traducción de datos de atributos** y modificar una columna de leyendas existente al modificar un atributo en la cuadrícula **Detalles de traducción** .  
   
 > [!NOTE]  
->  La opción solo se habilita si se ha seleccionado una celda de una columna traducción que contiene una columna de leyenda de un atributo en la cuadrícula **Detalles de traducción** .  
+>   La opción solo se habilita si se ha seleccionado una celda de una columna traducción que contiene una columna de leyenda de un atributo en la cuadrícula **Detalles de traducción** .  
   
  **Eliminar columna de leyenda**  
  Elija esta opción para eliminar la columna de leyendas del atributo seleccionado en la cuadrícula **Detalles de traducción** .  
@@ -98,7 +97,7 @@ ms.locfileid: "66065851"
  **Mostrar todos los atributos**  
  Seleccione esta opción para alternar la visualización de todos los atributos definidos para la dimensión seleccionada. Entre ellos se incluyen los atributos en los que se han deshabilitado las jerarquías de atributo.  
   
-## <a name="see-also"></a>Vea también  
- [Traducciones &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

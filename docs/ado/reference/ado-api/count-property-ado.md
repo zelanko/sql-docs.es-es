@@ -1,5 +1,5 @@
 ---
-title: Count (propiedad, ADO) | Microsoft Docs
+title: Propiedad Count (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,27 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919354"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760241"
 ---
 # <a name="count-property-ado"></a>Count (propiedad, ADO)
 Indica el número de objetos de una colección.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un **largo** valor.  
+ Devuelve un valor **Long** .  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **recuento** propiedad para determinar cuántos objetos se encuentran en una colección determinada.  
+ Utilice la propiedad **Count** para determinar el número de objetos que hay en una colección determinada.  
   
- Dado que la numeración de los miembros de una colección comienza con cero, siempre se deben codificar bucles empezando por el miembro cero y terminando con el valor de la **recuento** propiedad menos 1. Si está utilizando Microsoft Visual Basic y desea recorrer los miembros de una colección sin comprobar en el **recuento** propiedad, utilice el **For Each... Siguiente** comando.  
+ Dado que la numeración de los miembros de una colección comienza con cero, siempre debe codificar los bucles empezando por el miembro cero y terminando con el valor de la propiedad **Count** menos 1. Si usa Microsoft Visual Basic y desea crear un bucle a través de los miembros de una colección sin comprobar la propiedad Count, utilice el **parámetro** **for each... Comando siguiente** .  
   
- Si el **recuento** propiedad es cero, no hay ningún objeto en la colección.  
+ Si la propiedad **Count** es cero, no hay ningún objeto en la colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
@@ -47,7 +47,7 @@ Indica el número de objetos de una colección.
 |[Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la propiedad de recuento (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Ejemplo de la propiedad Count (VC ++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de la propiedad Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
+ [Ejemplo de la propiedad Count (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Actualizar (método, ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

@@ -15,10 +15,10 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65619621"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder a un usuario acceso a un servidor de informes
@@ -37,7 +37,7 @@ ms.locfileid: "65619621"
 
     Los dos tipos de roles se complementan entre sí y deben usarse juntos. Por esta razón, agregar un usuario a un servidor de informes es una operación con dos partes implicadas. Si asigna un usuario a un rol de nivel de elemento, también deberá asignarlo a un rol de nivel de sistema. Al asignar un usuario a un rol, debe seleccionar un rol que ya esté definido. Para crear, modificar o eliminar roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Revise la lista siguiente antes de agregar usuarios a un servidor de informes en modo nativo.
 
@@ -95,7 +95,7 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Creación y administración de asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [Asignaciones de roles](../../reporting-services/security/role-assignments.md)  
 [Definiciones de roles](../../reporting-services/security/role-definitions.md)  
 

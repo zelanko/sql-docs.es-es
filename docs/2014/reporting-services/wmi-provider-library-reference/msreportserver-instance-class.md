@@ -20,13 +20,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097220"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance, clase
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance, clase
   La clase MSReportServer_Instance proporciona la información básica necesaria para que un cliente se conecte a un servidor de informes instalado.  
   
  Para consultar una lista de todos los miembros de este tipo, vea [Miembros de MSReportServer_Instance](msreportserver-instance-members.md).  
@@ -49,7 +49,7 @@ public class MSReportServer_Instance
   
  **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de MSReportServer_Instance](msreportserver-instance-members.md)  
+## <a name="see-also"></a>Consulte también  
+ [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

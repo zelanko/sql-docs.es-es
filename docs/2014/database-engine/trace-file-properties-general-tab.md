@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de propiedades de archivo (pestaña General) | Microsoft Docs
+title: Propiedades del archivo de seguimiento (pestaña general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f9dfa0d120460ea6a2d6501ba93bab9e00ea4be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928366"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propiedades del archivo de seguimiento (pestaña General)
   Utilice la pestaña **General** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de un archivo de seguimiento.  
@@ -45,11 +44,11 @@ ms.locfileid: "66089609"
  **Creado**  
  Fecha y hora en que se creó el archivo de seguimiento.  
   
- **Modificado**  
+ **Cambia**  
  Fecha y hora en que se modificó el archivo de seguimiento.  
   
-## <a name="see-also"></a>Vea también  
- [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte también  
+ [Abra un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

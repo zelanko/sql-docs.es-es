@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102142"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar la autenticación de formularios o personalizada en el servidor de informes
@@ -47,7 +47,7 @@ ms.locfileid: "66102142"
     </Authentication>  
     ```  
   
-4.  Péguela sobre las entradas existentes para <`Authentication`>.  
+4.  Péguelo en las entradas existentes para <`Authentication`>.  
   
      Observe que no puede utilizar `Custom` con otros tipos de autenticación.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66102142"
   
 6.  Abra el archivo Web.config para el servidor de informes. De forma predeterminada, se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer.  
   
-7.  Buscar `authentication mode` y establézcala como `Forms`.  
+7.  Busque `authentication mode` y establézcalo `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -69,7 +69,7 @@ ms.locfileid: "66102142"
   
 9. Abra el archivo Web.config del Administrador de informes. De forma predeterminada, se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager.  
   
-10. Buscar `authentication mode` y establézcala como `Forms`.  
+10. Busque `authentication mode` y establézcalo `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -89,11 +89,11 @@ ms.locfileid: "66102142"
   
 15. Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
   
-## <a name="see-also"></a>Vea también  
- [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
+## <a name="see-also"></a>Consulte también  
+ [Implementación de una extensión de seguridad](../extensions/security-extension/implementing-a-security-extension.md)   
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Configurar la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)   
- [Configurar la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
+ [Configuración de la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
   
   

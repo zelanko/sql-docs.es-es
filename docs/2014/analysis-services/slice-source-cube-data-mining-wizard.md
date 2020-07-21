@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940506"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Segmentar el cubo de origen (Asistente para minería de datos)
   Puede utilizar el cuadro de diálogo **Segmentar el cubo de origen** para restringir los datos usados para entrenar el modelo. Un cubo suele contener datos relacionados con muchas dimensiones y atributos diferentes, como todas las tiendas, todas las regiones y todos los productos. No resulta práctico entrenar un modelo en combinaciones ilimitadas de atributos, por lo que debe utilizar este cuadro de diálogo para elegir un conjunto específico que se empleará para entrenar un modelo.  
@@ -26,21 +25,21 @@ ms.locfileid: "66068596"
   
  Si no está familiarizado con los segmentos y los cubos, se recomienda que revise los siguientes artículos:  
   
--   [Establezca la propiedad de segmento de partición &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
+-   [Establezca la propiedad segmento de partición &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
 -   [Crear y administrar una partición local &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Tenga en cuenta que las funciones MDX dinámicas (como [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) o [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) no son compatibles con la propiedad Slice para particiones. Debe definir el segmento utilizando tuplas explícitas o referencias de miembro.  
 >   
->  Por ejemplo, en lugar de usar [: &#40;intervalo&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) para definir un intervalo, necesitaría enumerar cada miembro por los años específicos.  
+>  Por ejemplo, en lugar de usar [: &#40;intervalo&#41; &#40;MDX&#41;](/sql/mdx/range-mdx) para definir un intervalo, necesitaría enumerar cada miembro por los años específicos.  
 >   
 >  Si necesita definir un segmento complejo, se recomienda definir las tuplas del segmento con un script Alter de XMLA. Después, puede usar la herramienta de línea de comandos ascmd o la tarea SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) para ejecutar el script y crear el conjunto de miembros especificado inmediatamente antes de procesar la partición.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
- **Dimension**  
+ **Dimensión**  
  Seleccione la dimensión que desea segmentar.  
   
  **Hierarchy**  
@@ -51,7 +50,7 @@ ms.locfileid: "66068596"
  **Operador**  
  Seleccione el operador que desea utilizar para generar una expresión de segmentación.  
   
- Por ejemplo, si elige Geography como jerarquía, puede seleccionar el operador = y, a continuación, escribir "Europe" como filtro para obtener solo los datos de cubo para Europa.  
+ Por ejemplo, si elige Geography como jerarquía, puede seleccionar el operador = y, a continuación, escribir "Europe" como filtro para obtener datos del cubo solo para Europa.  
   
  **Expresión de filtro**  
  Escriba una expresión que se usará como criterio para filtrar el cubo en la dimensión seleccionada.  
@@ -59,9 +58,9 @@ ms.locfileid: "66068596"
  **Parámetros**  
  Esta opción no se utiliza para los modelos de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Finalización del asistente &#40;Asistente para minería de datos&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Especificar el uso de la columna de modelo de minería de datos &#40;Asistente para minería de datos&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+ [Asistente para minería de datos (ayuda F1) &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Especificar el uso de la columna del modelo de minería de datos &#40;Asistente para minería de datos&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

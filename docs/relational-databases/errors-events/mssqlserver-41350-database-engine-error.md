@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5c981a4a2bd74fe7cfa374310c4bbe240b4846a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d28442aa32fcccef08a7c9d145bd4c0e910abc7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765330"
 ---
-# <a name="mssqlserver41350"></a>MSSQLSERVER_41350
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|41350|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|41350|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_CREATE_TABLE_WITH_ENCRYPTION|  
 |Texto del mensaje|Advertencia: se ha creado una tabla optimizada de memoria con durabilidad SCHEMA_AND_DATA en la base de datos que se ha habilitado para el cifrado. No se cifrarán los datos de la tabla con optimización para memoria.|  

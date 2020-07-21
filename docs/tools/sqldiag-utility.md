@@ -1,6 +1,7 @@
 ---
-title: SQLdiag, utilidad | Microsoft Docs
-ms.custom: ''
+title: SQLdiag , utilidad
+description: Use la utilidad SQLdiag para recopilar registros y archivos de datos de SQL Server y otros tipos de servidores, y supervisar los servidores a lo largo del tiempo o solucionar problemas.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MTE75
+ms.openlocfilehash: fdeeb1b5d16612415b1661df257f0530d8749df5
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251369"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151645"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -228,10 +229,10 @@ sqldiag
   
  El argumento **/A** , que especifica una instancia con nombre de **SQLdiag**, es el único que se puede usar con **START**, **STOP**o **STOP_ABORT** para controlar una instancia específica del servicio **SQLdiag** . Por ejemplo:  
   
- **SQLDIAG START /A** _SQLdiag_nombre_aplicación_  
+ **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>Requisitos de seguridad  
- A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** fixed server role. De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ A menos que **SQLdiag** se ejecute en modo genérico (especificando el argumento de la línea de comandos **/G** ), el usuario que ejecuta **SQLdiag** debe ser miembro del grupo **Administradores** de Windows y del rol fijo de servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin**. De forma predeterminada, **SQLdiag** conecta con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante la autenticación de Windows, pero también admite la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  Los efectos sobre el rendimiento de la ejecución de **SQLdiag** dependen del tipo de datos de diagnóstico cuya recopilación se haya configurado. Por ejemplo, si ha configurado **SQLdiag** para recopilar la información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , cuanto mayor sea el número de clases de eventos de las que decida realizar un seguimiento, más se verá afectado el rendimiento del servidor.  
@@ -260,7 +261,7 @@ sqldiag
   
  Si usa **SQLdiag** para diagnosticar un problema que puede reproducir, espere hasta que reciba este mensaje antes de reproducir el problema en el servidor.  
   
- **SQLdiag** recopila la mayor parte de los datos de diagnóstico en paralelo. Para recopilar toda la información de diagnóstico se conecta con herramientas, como la utilidad [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **de** o el procesador de comandos de Windows, excepto cuando la información se recopila de los registros de rendimiento y de los registros de eventos de Windows. **SQLdiag** usa un subproceso de trabajo por cada equipo para supervisar la recopilación de datos de diagnóstico de esas otras herramientas y, a menudo, espera simultáneamente a que varias herramientas completen su proceso. Durante el proceso de recopilación, **SQLdiag** enruta la salida de cada diagnóstico a la carpeta de salida.  
+ **SQLdiag** recopila la mayor parte de los datos de diagnóstico en paralelo. Para recopilar toda la información de diagnóstico se conecta con herramientas, como la utilidad [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** o el procesador de comandos de Windows, excepto cuando la información se recopila de los registros de rendimiento y de los registros de eventos de Windows. **SQLdiag** usa un subproceso de trabajo por cada equipo para supervisar la recopilación de datos de diagnóstico de esas otras herramientas y, a menudo, espera simultáneamente a que varias herramientas completen su proceso. Durante el proceso de recopilación, **SQLdiag** enruta la salida de cada diagnóstico a la carpeta de salida.  
   
 ## <a name="stopping-data-collection"></a>Detener la recopilación de datos  
  Cuando **SQLdiag** empieza a recopilar los datos de diagnóstico, continua haciéndolo a menos que el usuario lo detenga o que se configure para que se detenga a una hora especificada. Puede configurar **SQLdiag** para que se detenga a una hora especificada mediante el argumento **/E** , que permite especificar una hora de detención, o mediante el argumento **/X** , que hace que **SQLdiag** se ejecute en el modo de instantánea.  

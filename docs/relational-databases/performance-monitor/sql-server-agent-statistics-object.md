@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff7d2c619a1dad619676092b8f2c937890d681f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787366"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Statistics (objeto del Agente SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto de rendimiento **Statistics** del Agente SQL Server contiene contadores de rendimiento que proporcionan información acerca del Agente SQL Server.  
   
  La tabla siguiente muestra los contadores **SQLAgent:Statistics** .  
@@ -32,6 +32,6 @@ ms.locfileid: "67987268"
   
 ## <a name="see-also"></a>Consulte también  
  [Usar objetos de rendimiento](../../ssms/agent/use-performance-objects.md)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
+ [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

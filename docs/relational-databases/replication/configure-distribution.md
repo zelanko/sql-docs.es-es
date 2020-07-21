@@ -1,5 +1,6 @@
 ---
 title: Configurar la distribución | Microsoft Docs
+description: El distribuidor de SQL Server hospeda la base de datos de distribución, en la que se almacenan metadatos y el historial de replicación, y transacciones de replicación transaccional.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 36e89b7092ea497f3ad2ca0267e7f5dab99056e7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 21364f104674ec081da5c49d229a5c04a09af016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774037"
 ---
 # <a name="configure-distribution"></a>Configurar la distribución
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   El distribuidor es un servidor que contiene la base de datos de distribución, que almacena metadatos y datos del historial de todos los tipos de replicación y transacciones para la replicación transaccional. Para configurar la replicación, debe configurar un distribuidor. Un publicador solamente se puede asignar a una instancia del distribuidor, aunque varios publicadores pueden compartir un distribuidor. El distribuidor utiliza estos recursos adicionales en el servidor en el que se encuentra:  
   
 -   Espacio de disco adicional, si los archivos de instantáneas de la publicación se almacenan en el distribuidor (la situación habitual)  
@@ -40,7 +41,7 @@ ms.locfileid: "68768668"
   
  El servidor seleccionado como distribuidor debe disponer del espacio en disco y la capacidad de proceso adecuados para la replicación y cualquier otra actividad asignada a ese servidor. Al configurar el distribuidor, debe especificar:  
   
--   Una carpeta de instantáneas que se utiliza, de manera predeterminada, para todos los publicadores que usen este distribuidor. Asegúrese de que la carpeta esté compartida y tenga establecidos los permisos adecuados. Para más información, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+-   Una carpeta de instantáneas que se utiliza, de manera predeterminada, para todos los publicadores que usen este distribuidor. Asegúrese de que la carpeta esté compartida y tenga establecidos los permisos adecuados. Para obtener más información, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 -   El nombre y la ubicación de los archivos de la base de datos de distribución. No se puede cambiar el nombre de la base de datos de distribución una vez creada. Si desea utilizar un nombre distinto para la base de datos, debe deshabilitar la distribución y volver a configurar la base de datos.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68768668"
   
 -   El distribuidor tiene un rol más amplio en la replicación transaccional porque todas las transacciones replicadas se escriben y se leen en la base de datos de distribución.  
   
--   Las topologías de replicación de mezcla usan por lo general suscripciones de extracción, de forma que los agentes se ejecutan en cada suscriptor en lugar de ejecutarse todos en el distribuidor. Para más información, vea [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md) (Suscribirse a publicaciones). En la mayoría de los casos, debe usar un distribuidor local para la replicación de mezcla.  
+-   Las topologías de replicación de mezcla usan por lo general suscripciones de extracción, de forma que los agentes se ejecutan en cada suscriptor en lugar de ejecutarse todos en el distribuidor. Para obtener más información, vea [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md). En la mayoría de los casos, debe usar un distribuidor local para la replicación de mezcla.  
   
  Para configurar la publicación y la distribución, vea [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   

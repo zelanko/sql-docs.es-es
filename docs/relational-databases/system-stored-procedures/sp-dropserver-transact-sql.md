@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropserver
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a28fc7481c310ebd1f051f620fbcc7d691653301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124832"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891936"
 ---
-# <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita un servidor de la lista de servidores remotos y vinculados conocidos de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,18 +41,18 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>Argumentos  
  *servidor*  
- Es el servidor que se va a quitar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. *servidor* debe existir.  
+ Es el servidor que se va a quitar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. el *servidor* debe existir.  
   
  *droplogins*  
- Indica que los inicios de sesión de servidor remoto o vinculado para *server* también deben quitarse si **droplogins** se especifica. **`@droplogins`** es **char (10)** , su valor predeterminado es null.  
+ Indica que también se deben quitar los inicios de sesión de servidores remotos y vinculados relacionados para el *servidor* si se especifica **droplogins** . **`@droplogins`** es de tipo **Char (10)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Si ejecuta **sp_dropserver** en un servidor que tiene asociados a las entradas de inicio de sesión de servidor remoto o vinculado, o se configura como un publicador de replicación, se devuelve un mensaje de error. Para quitar todos los inicios de sesión de servidor remoto o vinculado para un servidor cuando se quita el servidor, use la **droplogins** argumento.  
+## <a name="remarks"></a>Observaciones  
+ Si ejecuta **sp_dropserver** en un servidor que tiene asociadas entradas de inicio de sesión de servidor vinculado y remoto, o que está configurada como publicador de replicación, se devuelve un mensaje de error. Para quitar todos los inicios de sesión de servidor remoto y vinculado de un servidor al quitar el servidor, use el argumento **droplogins** .  
   
- **sp_dropserver** no se puede ejecutar dentro de una transacción definida por el usuario.  
+ no se puede ejecutar **sp_dropserver** dentro de una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY LINKED SERVER en el servidor.  
@@ -64,12 +64,12 @@ sp_dropserver [ @server = ] 'server'
 sp_dropserver 'ACCOUNTS', 'droplogins';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_addserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

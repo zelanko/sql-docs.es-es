@@ -13,29 +13,29 @@ ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910685"
 ---
 # <a name="assessment-report-accesstosql"></a>Informe de evaluación (AccessToSQL)
-La ventana Informe de evaluación muestra los resultados de la conversión de objetos de base de datos a [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis, y también puede ayudarle a estimar la complejidad y el costo de los proyectos de migración.  
+La ventana Informe de evaluación muestra los resultados de la conversión de objetos de [!INCLUDE[tsql](../../includes/tsql-md.md)] base de datos a sintaxis y también puede ayudarle a calcular la complejidad y el costo de los proyectos de migración.  
   
-Para crear un informe de evaluación, seleccionar objetos para convertir en el Explorador de metadatos de origen, haga clic en **bases de datos**y, a continuación, seleccione **crear informe**. Este informe también se puede mostrar automáticamente después de convertir los esquemas. Sin embargo, el nombre del informe será el informe de conversión. Para obtener más información, consulte [configuración de proyecto (GUI) (SSMA comunes)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+Para crear un informe de evaluación, seleccione los objetos que desea convertir en el explorador de metadatos de origen, haga clic con el botón derecho en **bases**de datos y, a continuación, seleccione **crear informe**. También puede mostrar este informe automáticamente después de convertir los esquemas. Sin embargo, el nombre del informe será informe de conversión. Para obtener más información, vea [configuración del proyecto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   
 ## <a name="options"></a>Opciones  
-**Panel del explorador**  
-Contiene una jerarquía de objetos en el informe de evaluación. Expanda las carpetas para ver los subcomponentes y objetos individuales. Al hacer clic en una categoría o un objeto, aparecen las estadísticas de conversión para esa categoría o el objeto en el panel de detalles.  
+**Panel Explorador**  
+Contiene una jerarquía de objetos en el informe de evaluación. Expanda carpetas para ver objetos y subcomponentes individuales. Al hacer clic en una categoría o un objeto, las estadísticas de conversión de esa categoría u objeto aparecen en el panel de detalles.  
   
 **Panel de detalles**  
-Muestra mensajes de las estadísticas o error y advertencia para el objeto seleccionado de conversión. Por ejemplo, si se selecciona la carpeta tablas, el panel de detalles mostrará los números de las claves externas, índices, claves principales y las tablas que se han convertido.  
+Muestra estadísticas de conversión o mensajes de error y advertencia para el objeto seleccionado. Por ejemplo, si se selecciona la carpeta tablas, el panel detalles mostrará los números de claves externas, índices, claves principales y tablas que se han convertido.  
   
-**Panel de mensajes**  
-Muestra los errores, advertencias y mensajes de información que se generaron cuando se creó el informe de evaluación. Los mensajes se agrupan por número.  
+**Panel Mensajes**  
+Muestra los errores, las advertencias y los mensajes de información que se generaron cuando se creó el informe de evaluación. Los mensajes se agrupan por número.  
   
-Para ver los detalles del mensaje, haga clic en **errores**, **advertencias**, o **mensajes**y, a continuación, expanda un mensaje. SSMA mostrará la lista de objetos que tienen este error. Haga clic en un objeto para mostrar todos los detalles de conversión para el objeto.  
+Para ver los detalles del mensaje, haga clic en **errores**, **advertencias**o **mensajes**y, a continuación, expanda un mensaje. SSMA mostrará la lista de objetos que tienen este error. Haga clic en un objeto para mostrar todos los detalles de conversión del objeto.  
   
-## <a name="see-also"></a>Vea también  
-[Reference(Access) de interfaz de usuario](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>Consulte también  
+[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

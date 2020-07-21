@@ -11,22 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91c35defd543ae33ed45903e7888da905812d1fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056318"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422452"
 ---
 # <a name="save-copy-of-package"></a>Guardar copia del paquete
   Utilice el cuadro de diálogo **Guardar copia del paquete** , disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], para guardar una copia de un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] desde [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en una ubicación diferente y, opcionalmente, modificar el nivel de protección del paquete.  
   
 ## <a name="options"></a>Opciones  
  **Ubicación del paquete**  
- Seleccione el tipo de ubicación de almacenamiento en que desea guardar la copia del paquete. Las siguientes opciones están disponibles:  
+ Seleccione el tipo de ubicación de almacenamiento en que desea guardar la copia del paquete. Están disponibles las siguientes opciones:  
   
  **SQL Server**  
   
@@ -46,19 +45,19 @@ ms.locfileid: "66056318"
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
- **Ruta de acceso del paquete**  
- Escriba la ruta de acceso del paquete o haga clic en el **(...)**  y busque la carpeta donde desea almacenar el paquete.  
+ **Ruta de acceso de paquete**  
+ Escriba la ruta de acceso del paquete o haga clic en el botón examinar **(...)** y busque la carpeta en la que desea almacenar el paquete.  
   
  **Nivel de protección**  
- Haga clic en el **(...)**  y actualice el nivel de protección en el **nivel de protección de paquetes** cuadro de diálogo. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Haga clic en el botón examinar **(...)** y actualice el nivel de protección en el cuadro de diálogo **nivel de protección de paquetes** . Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   

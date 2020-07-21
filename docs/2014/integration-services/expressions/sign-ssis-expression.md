@@ -11,15 +11,14 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2822c1390b7807c60eecfad1d4ba41eaa232b16a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897311"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437122"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (expresión de SSIS)
   Devuelve el signo positivo (+1), negativo (-1) o cero (0) de una expresión numérica.  
@@ -38,7 +37,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  SIGN devuelve un resultado NULL si el valor del argumento es NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
@@ -54,7 +53,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   
   

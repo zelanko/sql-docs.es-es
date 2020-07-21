@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_MShasdbaccess
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 69651cedfa45df20d3a16966dbb8cd5574436bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 00ecddd29afe6b8f34c8096c20a6a0b3f51c2269
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995508"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893491"
 ---
-# <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra una lista con el nombre y el propietario de todas las bases de datos a las que tiene acceso el usuario.  
   
@@ -42,9 +42,9 @@ sp_MShasdbaccess
  0 (correcto) o 1 (error)  
   
 ## <a name="permissions"></a>Permisos  
- Ejecutar permiso se concede a los **pública** rol.  
+ Se concede el permiso Execute al rol **Public** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

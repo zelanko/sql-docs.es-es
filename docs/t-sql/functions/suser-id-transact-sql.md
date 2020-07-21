@@ -23,15 +23,15 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1b3e67e84738532baee8f0413dd3896c2a19f26d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ebf42b9f8495690472e57baf6ccde33ef94aefd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139122"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897950"
 ---
-# <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+# <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve el número de identificación de inicio de sesión del usuario.  
   
@@ -51,10 +51,10 @@ SUSER_ID ( [ 'login' ] )
  **'** *login* **'**  
  Nombre de inicio de sesión del usuario. *login* es **nchar**. Si se especifica *login* como **char**, *login* se convierte implícitamente en **nchar**. *login* puede ser cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cualquier grupo o usuario de Windows con permiso para conectarse con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se especifica *login*, se devuelve el número de identificación de inicio de sesión para el usuario actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SUSER_ID devuelve un número de identificación solo para los inicios de sesión aprovisionados de forma explícita en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este Id. se utiliza en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para realizar un seguimiento de la propiedad y los permisos. Este Id. no equivale al SID del inicio de sesión devuelto por SUSER_SID. Si *login* es un inicio de sesión de SQL Server, el SID se asigna a un GUID. Si *login* es un inicio de sesión o un grupo de Windows, el SID se asigna a un identificador de seguridad de Windows.  
   
  SUSER_SID solo devuelve el SUID de los inicios de sesión que tengan una entrada en la tabla de sistema **syslogins**.  
@@ -71,6 +71,6 @@ SELECT SUSER_ID('sa');
 ## <a name="see-also"></a>Consulte también  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

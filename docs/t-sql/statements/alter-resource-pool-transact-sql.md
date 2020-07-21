@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a51d04f848e86c5b8dc242cd959aef6da393aa38
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927192"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381149"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia la configuración del grupo de recursos de servidor del regulador de recursos existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ALTER RESOURCE POOL { pool_name | "default" }  
 [WITH  
     ( [ MIN_CPU_PERCENT = value ]  
@@ -58,7 +58,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 {NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  { *pool_name* |  **"default"** }  
  Es el nombre de un grupo de recursos de servidor definido por el usuario ya existente o el grupo de recursos de servidor predeterminado creado al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -74,7 +77,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Especifica el promedio máximo de ancho banda de CPU que recibirán todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
  CAP_CPU_PERCENT =*value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
@@ -82,7 +85,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  Debido a la naturaleza estadística de la gobernanza de la CPU, es posible que observe picos ocasionales que superen el valor especificado en CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Adjunte el grupo de recursos de servidor a los programadores específicos. El valor predeterminado es AUTO.  
   
@@ -105,18 +108,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
  Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
  Especifica el número mínimo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben reservar para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 si no desea indicar un umbral mínimo para el grupo.  
   
  MAX_IOPS_PER_VOLUME =*value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
  Especifica el número máximo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben permitir para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 para establecer un umbral ilimitado para el grupo. El valor predeterminado es 0.  
   
  Si MAX_IOPS_PER_VOLUME se establece en 0 para un grupo, este no está regulado y puede tomar todas las IOPS del sistema, incluso aunque otros grupos tengan establecido un valor MIN_IOPS_PER_VOLUME. En este caso, se recomienda establecer el valor de MAX_IOPS_PER_VOLUME para este grupo en un número alto (por ejemplo, el valor máximo 2^31-1) si desea que se regule la E/S de este grupo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  MAX_CPU_PERCENT y MAX_MEMORY_PERCENT deben ser mayores o iguales que MIN_CPU_PERCENT y MIN_MEMORY_PERCENT, respectivamente.  
   
  MAX_CPU_PERCENT puede usar la capacidad de CPU por encima del valor de MAX_CPU_PERCENT si está disponible. Aunque puede haber picos periódicos por encima de CAP_CPU_PERCENT, las cargas de trabajo no pueden exceder CAP_CPU_PERCENT durante períodos de tiempo prolongados, incluso cuando se dispone de capacidad de CPU adicional.  
@@ -127,7 +130,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Cuando se cambia un plan que afecta al valor, el valor nuevo solo se aplica a los planes previamente almacenados en caché después de ejecutar DBCC FREEPROCCACHE (*pool_name*), donde *pool_name* es el nombre de un grupo de recursos de Resource Governor.  
   
--   Si se va a cambiar AFFINITY de varios programadores a uno solo, la ejecución de DBCC FREEPROCCACHE no es necesaria porque los planes paralelos se pueden ejecutar en serie. Pero es posible que no sea tan eficaz como un plan compilado como un plan en serie.  
+-   Si se va a cambiar AFFINITY de varios programadores a uno solo, la ejecución de DBCC FREEPROCCACHE no es necesaria porque los planes paralelos se pueden ejecutar en serie. Pero puede que no sea tan eficaz como un plan compilado como un plan en serie.  
   
 -   Si se va a cambiar AFFINITY de un programador a varios, la ejecución de DBCC FREEPROCCACHE no es necesaria. Pero los planes en serie no se pueden ejecutar en paralelo, así que el borrado de la memoria caché respectiva permite compilar potencialmente nuevos planes mediante paralelismo.  
   
@@ -151,7 +154,7 @@ GO
   
  En el ejemplo siguiente, `CAP_CPU_PERCENT` establece el límite máximo en 80 % y `AFFINITY SCHEDULER` se establece según un valor individual de 8 y un intervalo de 12 a 16.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 ```  
 ALTER RESOURCE POOL Pool25  

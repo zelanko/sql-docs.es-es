@@ -2,20 +2,20 @@
 title: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server | Microsoft Docs
 description: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
-ms.translationtype: MTE75
+ms.reviewer: v-kaywon
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: c18870d1d252ba849e11ce0bd040bbce89bd5855
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70392018"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928273"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "70392018"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 El controlador OLE DB de Microsoft para SQL Server (versión 18.2.1) agrega compatibilidad con la codificación del servidor UTF-8. Para obtener información sobre la compatibilidad con UTF-8 de SQL Server, consulte:
-- [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
+- [Compatibilidad con la intercalación y Unicode](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [Compatibilidad con UTF-8](#ctp23)
 
 > [!IMPORTANT]
-> Microsoft OLE DB driver for SQL Server usa la función [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) para determinar la codificación del búfer de entrada DBTYPE_STR. No se admiten los escenarios en los que GetACP devuelve una codificación UTF-8. Si el búfer necesita almacenar datos Unicode, el tipo de datos del búfer debe establecerse en DBTYPE_WSTR (codificación UTF-16).
+> Microsoft OLE DB Driver for SQL Server usa la función [GetACP](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) para determinar la codificación del búfer de entrada DBTYPE_STR. No se admiten los escenarios en los que GetACP devuelve una codificación UTF-8. Si el búfer necesita almacenar datos Unicode, el tipo de datos de búfer debe establecerse en DBTYPE_WSTR (codificación UTF-16).
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserción de datos en una columna CHAR o VARCHAR codificada con UTF-8
 Al crear un búfer de parámetro de entrada para la inserción, se describe el búfer mediante el uso de una matriz de [estructuras DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Cada estructura DBBINDING asocia un solo parámetro al búfer del consumidor y contiene información como la longitud y el tipo del valor de datos. Para un búfer de parámetro de entrada de tipo CHAR, el valor *wType* de la estructura DBBINDING debe establecerse en DBTYPE_STR. Para un búfer de parámetro de entrada de tipo WCHAR, el valor *wType* de la estructura DBBINDING debe establecerse en DBTYPE_WSTR.

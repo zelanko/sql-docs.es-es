@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4262b850a2afc9799c15d3a4155c9ab85432366
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065891"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301950"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifica un objeto de especificación de auditoría de base de datos usando la característica Auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68065891"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ALTER DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
@@ -55,7 +55,10 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *audit_specification_name*  
  Nombre de la especificación de auditoría.  
   
@@ -83,7 +86,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Habilita o deshabilita la recopilación de registros por parte de la auditoría para esta especificación de auditoría. Los cambios de estado de la especificación de auditoría se deben realizar fuera de una transacción de usuario y no puede haber otros cambios en la misma instrucción cuando la transición es de ON a OFF.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las especificaciones de auditoría de base de datos son objetos no protegibles que residen en una base de datos determinada. Para poder realizar cambios en una especificación de auditoría de base de datos, es necesario establecer su estado en OFF. Si se ejecuta ALTER DATABASE AUDIT SPECIFICATION cuando una auditoría está habilitada con opciones distintas de STATE=OFF, aparecerá un mensaje de error. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ## <a name="permissions"></a>Permisos  

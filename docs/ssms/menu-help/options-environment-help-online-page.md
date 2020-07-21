@@ -1,6 +1,6 @@
 ---
-title: Opciones (Entorno - Ayuda - página En línea) | Microsoft Docs
-ms.custom: ''
+title: Opciones (Entorno - Ayuda - Página En línea)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 252acb0bc5e3d7fbbd66c0c41fdbd97b59b64f24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7be77c2ce856a1940197a7b1d52550beac011e4b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68257124"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252343"
 ---
 # <a name="options-environment---help---online-page"></a>Opciones (Entorno - Ayuda - Página En línea)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  
+El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  
   
 **Cuando cargue contenido de la Ayuda**  
 Establece el orden en que deben utilizarse los orígenes de la Ayuda F1 y especifica cuáles deben utilizarse.  

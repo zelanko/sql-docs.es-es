@@ -1,6 +1,6 @@
 ---
-title: Base de datos master - almacenamiento de datos paralelos | Microsoft Docs
-description: Obtenga información sobre la base de datos maestra en el almacenamiento de datos paralelos.
+title: Base de datos maestra
+description: Obtenga información sobre la base de datos maestra en almacenamiento de datos paralelos.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,45 +8,46 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960650"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74400987"
 ---
-# <a name="master-database---parallel-data-warehouse"></a>Base de datos master - almacenamiento de datos paralelos
-La base de datos master PDW de SQL Server almacena información de inicio de sesión de nivel de dispositivo y el catálogo de base de datos. Es una base de datos maestra de SQL Server reside en el nodo de Control. Por lo tanto, proporciona una funcionalidad similar a SQL Server PDW como maestros proporciona a SQL Server.  
+# <a name="master-database---parallel-data-warehouse"></a>Base de datos maestra: almacenamiento de datos paralelos
+La base de datos maestra de PDW de SQL Server almacena la información de inicio de sesión de nivel de dispositivo y el catálogo de base de datos. Se trata de una SQL Server base de datos maestra que se encuentra en el nodo de control. Como tal, proporciona una funcionalidad similar a PDW de SQL Server que proporciona Master a SQL Server.  
   
-Para obtener más información acerca de las bases de datos del sistema, consulte [las bases de datos del sistema](system-databases.md).  
+Para obtener más información acerca de las bases de datos del sistema, vea bases de datos [del sistema](system-databases.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-La lista siguiente describe las operaciones que no se puede realizar en la base de datos maestra de SQL Server PDW.  
+En la lista siguiente se describen las operaciones que no se pueden realizar en la base de datos maestra de PDW de SQL Server.  
   
-Le *no se puede:*  
+*No se puede:*  
   
--   Realizar una copia de seguridad diferencial de patrón.  
+-   Realice una copia de seguridad diferencial de Master.  
   
--   Crear objetos de usuario en la rama maestra.  
+-   Cree objetos de usuario en Master.  
   
--   Cambiar la intercalación de patrón.  
+-   Cambiar la intercalación de Master.  
   
--   Cambiar el propietario del maestro.  
+-   Cambiar el propietario de Master.  
   
--   Quite o cambie el nombre de patrón.  
+-   Quite o cambie el nombre de la maestra.  
   
--   Modificar los permisos de master.  
+-   Modificar permisos en maestra.  
   
--   Ejecutar **DBCC SHRINKLOG**.  
+-   Ejecute **DBCC SHRINKLOG**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Tarea|Descripción|  
 |--------|---------------|  
-|Crear una copia de seguridad completa de patrón.|Ejemplo:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Para obtener más información, consulte [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
-|Restauración de la base de datos maestra|Para restaurar la base de datos maestra, use el [restaurar la base de datos Master](restore-the-master-database.md) página en la herramienta Administrador de configuración.|  
+|Cree una copia de seguridad completa de Master.|Ejemplo:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Para obtener más información, vea [backup Database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Restauración de la base de datos maestra|Para restaurar la base de datos maestra, use la página [restaurar la base de datos maestra](restore-the-master-database.md) en la herramienta Configuration Manager.|  
 |Ver información del catálogo de base de datos.|`SELECT * FROM master.sys.databases;`|  
-|Ver información de inicio de sesión y el permiso de todo el sistema.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
+|Ver información de permisos e inicio de sesión en todo el sistema.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

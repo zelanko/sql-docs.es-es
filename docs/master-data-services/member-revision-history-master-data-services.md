@@ -1,5 +1,5 @@
 ---
-title: Historial de revisiones de miembro (Master Data Services) | Microsoft Docs
+title: Historial de revisiones de miembro
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ee2921a8e7178385651dc52c48b7bf82866dc49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ab7e110b66f27ecb738585215567e1aa96f9788
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812720"
 ---
 # <a name="member-revision-history-master-data-services"></a>Historial de revisiones de miembro (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cada vez que un miembro cambia, si el tipo de registro de transacciones de la entidad es miembro, se registra un historial de revisiones de miembro.  
   
@@ -70,8 +70,8 @@ ms.locfileid: "68092577"
 |----------------------|-----------|  
 |Revertir el historial de revisiones de miembro|[Reversión del historial de revisiones de miembro &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

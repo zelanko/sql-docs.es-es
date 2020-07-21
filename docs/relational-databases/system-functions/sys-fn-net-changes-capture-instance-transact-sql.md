@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: Sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122570"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898324"
 ---
-# <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>Sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Contenedores para la **net cambios** funciones de consulta. El procedimiento almacenado sys.sp_cdc_generate_wrapper_function genera los scripts necesarios para crear estas funciones.  
+  Contenedores para las funciones de consulta **net Changes** . El procedimiento almacenado sys.sp_cdc_generate_wrapper_function genera los scripts necesarios para crear estas funciones.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,31 +50,31 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="arguments"></a>Argumentos  
  *start_time*  
- El **datetime** valor que representa el extremo inferior del intervalo de las entradas de tabla para incluir en el conjunto de resultados.  
+ Valor **DateTime** que representa el extremo inferior del intervalo de entradas de la tabla de cambios que se va a incluir en el conjunto de resultados.  
   
- Solo las filas de los cdc. < instancia_de_captura > _CT tabla de cambios que tienen un tiempo de confirmación asociado estrictamente mayor que *start_time* se incluyen en el conjunto de resultados.  
+ Solo se incluyen en el conjunto de resultados las filas de la tabla de cambios CDC. <capture_instance>_CT que tienen un tiempo de confirmación asociado estrictamente mayor que *start_time* .  
   
  Si se proporciona un valor NULL para este argumento, el extremo inferior del intervalo de consulta se corresponderá con el extremo inferior del intervalo válido de la instancia de captura.  
   
  *end_time*  
- El **datetime** valor que representa el extremo superior del intervalo de las entradas de tabla para incluir en el conjunto de resultados.  
+ Valor **DateTime** que representa el extremo superior del intervalo de entradas de la tabla de cambios que se va a incluir en el conjunto de resultados.  
   
- Este parámetro puede tomar uno de dos significados posibles, según el valor elegido para @closed_high_end_point cuando se llama a sys.sp_cdc_generate_wrapper_function para generar el script para crear la función contenedora:  
+ Este parámetro puede tomar uno de dos significados, según el valor elegido para @closed_high_end_point cuando se llama a sys. sp_cdc_generate_wrapper_function para generar el script con el fin de crear la función de contenedor:  
   
 -   @closed_high_end_point = 1  
   
-     Solo las filas de los cdc. < instancia_de_captura > _CT tabla de cambios que tienen un valor en \_ \_$start_lsn y un confirmación correspondiente menor o igual a hora **start_time** se incluyen en el conjunto de resultados.  
+     Solo se incluyen en el conjunto de resultados las filas de la tabla de cambios CDC. <capture_instance>_CT que tengan un valor en \_ \_ $Start _lsn y un tiempo de confirmación correspondiente menor o igual que **start_time** .  
   
 -   @closed_high_end_point = 0  
   
-     Solo las filas de los cdc. < instancia_de_captura > _CT tabla de cambios que tienen un valor en \_ \_$start_lsn y un tiempo de confirmación estrictamente menor que **start_time** se incluyen en el conjunto de resultados.  
+     Solo se incluyen en el conjunto de resultados las filas de la tabla de cambios CDC. <capture_instance>_CT que tengan un valor en \_ \_ $Start _lsn y un tiempo de confirmación correspondiente estrictamente inferior a **start_time** .  
   
  Si se proporciona un valor NULL para este argumento, el extremo superior del intervalo de consulta se corresponderá con el extremo superior del intervalo válido de la instancia de captura.  
   
- *< row_filter_option >* :: = {todos | todos con máscara | todos con combinación}  
+ *<row_filter_option>* :: = {ALL | ALL with Mask | All with Merge}  
  Una opción que rige el contenido de las columnas de metadatos y las filas devueltas en el conjunto de resultados. Puede ser una de las siguientes opciones:  
   
- all  
+ todo  
  Devuelve el contenido final de una fila cambiada en las columnas de contenido y la operación que se necesita para aplicar la fila en la columna de metadatos __CDC_OPERATION.  
   
  all with mask  
@@ -95,12 +95,12 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
-|\<columnas de @column_list>|**Varía**|Las columnas que se identifican en el **column_list** argumento a la función sp_cdc_generate_wrapper_function cuando se llama para generar el script que crea el contenedor. Si *column_list* es NULL, todas las columnas de origen sometidas a seguimiento aparecerán en el conjunto de resultados.|  
-|__CDC_OPERATION|**nvarchar(2)**|Un código de operación que indica qué operación se debe aplicar la fila en el entorno de destino. La operación variará en función del valor del argumento *row_filter_option* que se proporciona en la siguiente llamada:<br /><br /> *row_filter_option* = 'all', 'all with mask'<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - operación de actualización<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - operación de eliminación<br /><br /> 'M' - operación de inserción o de actualización|  
-|\<columnas de @update_flag_list>|**bit**|Marca de bits que se denomina anexando _uflag al nombre de columna. La marca acepta un valor distinto de null solo cuando *row_filter_option* **= 'all with mask'** y \__CDC_OPERATION **'UN ='** . Se establece en 1 si la columna correspondiente se modificó dentro de la ventana de consulta. En caso contrario, es 0.|  
+|\<columns from @column_list>|**varía**|Las columnas que se identifican en el argumento **column_list** en el sp_cdc_generate_wrapper_function cuando se llama a para generar el script con el fin de crear el contenedor. Si *column_list* es null, todas las columnas de origen sometidas a seguimiento aparecerán en el conjunto de resultados.|  
+|__CDC_OPERATION|**nvarchar (2)**|Código de operación que indica la operación necesaria para aplicar la fila al entorno de destino. La operación variará en función del valor del argumento *row_filter_option* que se proporciona en la llamada siguiente:<br /><br /> *row_filter_option* = ' All ', ' All with Mask '<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - operación de actualización<br /><br /> *row_filter_option* = ' All with Merge '<br /><br /> 'D' - operación de eliminación<br /><br /> 'M' - operación de inserción o de actualización|  
+|\<columns from @update_flag_list>|**bit**|Marca de bits que se denomina anexando _uflag al nombre de columna. La marca solo toma un valor no nulo cuando *row_filter_option* **= ' All with mask '** y \_ _CDC_OPERATION **= ' un '**. Se establece en 1 si la columna correspondiente se modificó dentro de la ventana de consulta. De lo contrario, es 0.|  
   
 ## <a name="remarks"></a>Comentarios  
- La función fn_net_changes_ < instancia_de_captura > actúa como contenedor para la función de consulta cdc.fn_cdc_get_net_changes_ < capture_instance >. El procedimiento almacenado sys.sp_cdc_generate_wrapper se utiliza para crear el script del contenedor.  
+ La fn_net_changes_<capture_instance función> actúa como contenedor de la función de consulta CDC. fn_cdc_get_net_changes_<capture_instance>. El procedimiento almacenado sys.sp_cdc_generate_wrapper se utiliza para crear el script del contenedor.  
   
  Las funciones contenedoras no se crean automáticamente. Para crear funciones contenedoras hay que seguir dos pasos:  
   
@@ -108,18 +108,18 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 2.  Ejecutar el script para crear realmente la función contenedora.  
   
- Las funciones contenedoras permiten a los usuarios consultar cambios ocurridos durante un intervalo limitado por **datetime** valores en lugar de por valores LSN. Las funciones contenedoras realizan todas las conversiones necesarias entre proporcionado **datetime** valores y los valores LSN necesarios internamente como argumentos a las funciones de consulta. Cuando las funciones contenedoras se utilizan en serie para procesar un flujo de datos modificados, asegúrese de que ningún dato se pierde o se repite siempre que se adopte la convención siguiente: el @end_time se proporciona el valor del intervalo asociado a una llamada como el @start_time valor para el intervalo de la llamada siguiente.  
+ Las funciones contenedoras permiten a los usuarios consultar de forma sistemática los cambios que se produjeron dentro de un intervalo delimitado por valores de **fecha y hora** en lugar de los valores de LSN. Las funciones de contenedor realizan todas las conversiones necesarias entre los valores **DateTime** proporcionados y los valores de LSN necesarios internamente como argumentos para las funciones de consulta. Cuando las funciones de contenedor se utilizan en serie para procesar un flujo de datos modificados, garantizan que no se pierden ni se repiten datos siempre que se siga la Convención siguiente: el @end_time valor del intervalo asociado a una llamada se proporciona como el @start_time valor para el intervalo asociado a la llamada subsiguiente.  
   
  Si se usa el parámetro @closed_high_end_point al crear el script, se pueden generar contenedores para admitir un límite superior cerrado o un límite superior abierto en la ventana de consulta especificada. Es decir, puede decidir si las entradas que tienen un tiempo de confirmación igual al límite superior del intervalo de extracción se incluirán en el intervalo. De forma predeterminada, se incluye el límite superior.  
   
- El conjunto de resultados devuelven por la **net cambios** contenedor función devuelve solo las columnas que se encontraban en sometidas a seguimiento los @column_list cuando se generó el contenedor. Si @column_list es NULL, se devuelven todas las columnas de origen sometidas a seguimiento. Las columnas de origen van seguidas de una columna de operación, __CDC_OPERATION, que es una columna de uno o dos caracteres que identifica la operación.  
+ El conjunto de resultados devuelto por la función de contenedor **net Changes** devuelve solo las columnas sometidas a seguimiento que estaban en @column_list cuando se generó el contenedor. Si @column_list es NULL, se devuelven todas las columnas de origen sometidas a seguimiento. Las columnas de origen van seguidas de una columna de operación, __CDC_OPERATION, que es una columna de uno o dos caracteres que identifica la operación.  
   
- Las marcas de bits, a continuación, se anexan al conjunto de resultados para cada columna que se identifica en el parámetro @update_flag_list. Para el **net cambios** contenedor, el bit de marcas will siempre es NULL si el @row_filter_option que es utilizada en la llamada a la función contenedora es 'all' o 'all with merge'. Si el @row_filter_option se establece en 'todos con máscara' y __CDC_OPERATION es tenía ' o 'I', el valor de la marca también será NULL. Si \__CDC_OPERATION 'UN es ', la marca se establecerá en 1 ó 0, dependiendo de si el **net** provocada un cambio en la columna de la operación de actualización.  
+ A continuación, las marcas de bits se anexan al conjunto de resultados para cada columna que se identifica en el parámetro @update_flag_list . En el caso del contenedor de **cambios netos** , los marcadores de bits siempre serán NULL si el @row_filter_option que se usa en la llamada a la función contenedora es ' All ' o ' All with Merge '. Si @row_filter_option se establece en ' All with Mask ' y __CDC_OPERATION es ' d ' o ' I ', el valor de la marca también será null. Si \_ _CDC_OPERATION es ' un ', la marca se establecerá en 1 o 0, dependiendo de si la operación de actualización de **red** provocó un cambio en la columna.  
   
- Plantilla de configuración de captura de datos modificados 'Instantiate el CDC Wrapper TVFs for Schema' muestra cómo usar el procedimiento almacenado sp_cdc_generate_wrapper_function para obtener scripts CREATE para todas las funciones de contenedor para las funciones de consulta definidas de un esquema. A continuación, la plantilla crea esos scripts. Para obtener más información acerca de las plantillas, consulte [Explorador de plantillas](../../ssms/template/template-explorer.md).  
+ La plantilla de configuración de captura de datos modificados ' Create CDC wrapper TVF for Schema ' muestra cómo usar el sp_cdc_generate_wrapper_function procedimiento almacenado para obtener scripts de creación para todas las funciones de contenedor para las funciones de consulta definidas de un esquema. A continuación, la plantilla crea esos scripts. Para obtener más información acerca de las plantillas, vea [Explorador de plantillas](../../ssms/template/template-explorer.md).  
   
-## <a name="see-also"></a>Vea también  
- [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0c4060aa1508da72d9b0bd0eb23977074ecac067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763078"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  **Auto Stats** también se desencadena cuando se cargan las estadísticas para que las use el optimizador.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Columnas de datos de la clase de evento Auto Stats  
@@ -30,7 +30,7 @@ ms.locfileid: "67913252"
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**Duración**|**bigint**|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
+|**Duration**|**bigint**|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |**EndTime**|**datetime**|Hora a la que finalizó el evento.|15|Sí|  
 |**Error**|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo **sys.messages** .|31|Sí|  
 |**EventClass**|**int**|Tipo de evento = 58.|27|No|  
@@ -43,7 +43,7 @@ ms.locfileid: "67913252"
 |**IntegerData2**|**int**|Número de secuencia de trabajo.|55|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de Windows en formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
@@ -52,8 +52,8 @@ ms.locfileid: "67913252"
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|**Correcto**|**int**|0 = error.<br /><br /> 1 = correcto.<br /><br /> 2 = omisión debida a la limitación del servidor (MSDE).|23|Sí|  
-|**TextData**|**ntext**|El contenido de esta columna depende de si las estadísticas se actualizan de forma sincrónica (**EventSubClass** 1) o asincrónica (**EventSubClass** 2, 3 o 4):<br /><br /> 1: Enumera las estadísticas actualizadas o creadas<br /><br /> 2, 3 o 4: NULL; la columna **IndexID** se rellena con el id. de índice o estadística de las estadísticas actualizadas.|1|Sí|  
+|**Success**|**int**|0 = error.<br /><br /> 1 = correcto.<br /><br /> 2 = omisión debida a la limitación del servidor (MSDE).|23|Sí|  
+|**TextData**|**ntext**|El contenido de esta columna depende de si las estadísticas se actualizan de forma sincrónica (**EventSubClass** 1) o asincrónica (**EventSubClass** 2, 3 o 4):<br /><br /> 1: Enumera las estadísticas actualizadas o creadas<br /><br /> 2, 3 o 4: NULL; la columna **IndexID** se rellena con el identificador de índice o estadística de las estadísticas actualizadas.|1|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**Tipo**|**int**|Tipo de trabajo.|57|Sí|  
   

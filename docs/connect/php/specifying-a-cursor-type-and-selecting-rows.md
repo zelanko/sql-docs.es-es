@@ -1,5 +1,5 @@
 ---
-title: Especificar un tipo de cursor y seleccionar filas | Microsoft Docs
+title: Especificación de un tipo de cursor y selección de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursor types
 - scrollable cursors
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adc776d009a6836a6ce46207d0d426f7e444259b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ae3d54f71c70b06601309ea490377241b84598b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935876"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923784"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>Especificación de un tipo de cursor y selección de filas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

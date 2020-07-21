@@ -10,17 +10,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 3d77ac6d-5eb5-4cd6-ab60-46290ac4d9ce
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eeb1d9072874b24cf73c93eb3113417c66ee4f0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: be86c1b21efc84269f659a08a3dc1e3bc5fa4907
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714562"
 ---
 # <a name="trigger-functions-transact-sql"></a>Funciones de desencadenador (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Las siguientes funciones escalares se pueden usar en la definición de un desencadenador para probar los cambios de los valores de datos o para devolver otros datos.  
   

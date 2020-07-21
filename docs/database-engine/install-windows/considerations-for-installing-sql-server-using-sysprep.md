@@ -1,7 +1,8 @@
 ---
-title: Consideraciones acerca de la instalación de SQL Server con SysPrep | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2017
+title: Instalar SQL Server con SysPrep
+description: SQL Server SysPrep permite preparar una instancia independiente de SQL Server en un equipo y completar la configuración más adelante.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0d2b063af4e9cc0c78a5bfe10c9aa6b2c1367743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67c6dd12c7c4829c2dc615ce8e440f8518d5fd09
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054201"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883236"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Consideraciones acerca de la instalación de SQL Server con SysPrep
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep permite preparar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo y completar la configuración en un momento posterior. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep emplea un proceso de dos pasos para obtener una instancia independiente configurada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los pasos son los siguientes:  
   
@@ -33,7 +34,7 @@ ms.locfileid: "68054201"
   
 Para más información sobre cómo instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con SysPrep, vea [Instalar SQL Server mediante SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md).  
   
-## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>Usos comunes de SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="common-uses-for-ssnoversion-sysprep"></a>Usos comunes de SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 Puede usar la funcionalidad de SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de cualquiera de las maneras siguientes:  
   
 - Si realiza el paso Preparar imagen, puede preparar una o varias instancias sin configurar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo. Puede configurar estas instancias preparadas efectuando el paso Completar imagen en el mismo equipo.  
@@ -59,7 +60,7 @@ Puede usar la funcionalidad de SysPrep de [!INCLUDE[ssNoVersion](../../includes/
   
     - No puede especificar los identificadores de producto de una instancia preparada de las ediciones Express de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="supported-includessnoversionincludesssnoversion-mdmd-installations"></a>Instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles  
+## <a name="supported-ssnoversion-installations"></a>Instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles  
 SysPrep de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite para todas las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidas las herramientas.  
   
 Puede preparar varias instancias para instalaciones en paralelo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o versiones anteriores. Las características de estas instancias deben admitir SysPrep.  
@@ -74,10 +75,10 @@ Puede realizar una actualización de la edición si configura una instancia prep
   
 A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite instalaciones de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la línea de comandos.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Limitaciones de SysPrep  
+## <a name="ssnoversion-sysprep-limitations"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Limitaciones de SysPrep  
 No se admite la reparación de una instancia preparada. Si se produce un error del programa de instalación durante el paso de preparación o de compleción de la imagen, debe ejecutar la desinstalación.  
   
-##  <a name="BKMK_PrepareImage"></a> Preparar imagen  
+##  <a name="prepare-image"></a><a name="BKMK_PrepareImage"></a> Preparar imagen  
 El paso Preparar imagen instala el producto y las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero no configura la instalación.  
   
 Las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se van a instalar y la ubicación de instalación de los archivos de instalación del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden especificar durante este paso. Puede preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la opción de **preparación de la imagen de una instancia independiente para la implementación de SysPrep** en la página **Avanzadas** del **Centro de instalación** o desde el símbolo del sistema.  
@@ -88,7 +89,7 @@ Las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
   
  Después de preparar la instancia, dispone de un acceso directo en el menú **Inicio** para completar la configuración de la instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="BKMK_CompleteImage"></a> Completar imagen  
+##  <a name="complete-image"></a><a name="BKMK_CompleteImage"></a> Completar imagen  
 Puede completar las instancias preparadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante cualquiera de los métodos siguientes:  
   
 - Usar el acceso directo del menú Inicio.  

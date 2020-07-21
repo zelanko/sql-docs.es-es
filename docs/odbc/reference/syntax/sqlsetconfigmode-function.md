@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c36da48fa1493f61131d23a07f7a820b67ebac82
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018917"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81293285"
 ---
 # <a name="sqlsetconfigmode-function"></a>Función SQLSetConfigMode
 **Conformidad**  
- Versión de introducción: ODBC 3.0  
+ Versión introducida: ODBC 3,0  
   
  **Resumen**  
- **SQLSetConfigMode** establece el modo de configuración que indica que la entrada del archivo Odbc.ini enumerar valores DSN de la información del sistema.  
+ **SQLSetConfigMode** establece el modo de configuración que indica dónde se encuentra la entrada ODBC. ini que enumera los valores DSN en la información del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ BOOL SQLSetConfigMode(
   
 ## <a name="arguments"></a>Argumentos  
  *wConfigMode*  
- [Entrada] El modo de configuración del instalador (vea "Comentarios"). El valor de *wConfigMode* puede ser:  
+ Entradas El modo de configuración del instalador (vea "Comentarios"). El valor de *wConfigMode* puede ser:  
   
  ODBC_USER_DSN  
   
@@ -55,26 +55,26 @@ BOOL SQLSetConfigMode(
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLSetConfigMode** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLSetConfigMode** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Secuencia de parámetros no válidos|El *wConfigMode* argumento no contenía ODBC_USER_DSN, ODBC_SYSTEM_DSN o ODBC_BOTH_DSN.|  
+|ODBC_ERROR_INVALID_PARAM_SEQUENCE|Secuencia de parámetros no válida|El argumento *wConfigMode* no contenía ODBC_USER_DSN, ODBC_SYSTEM_DSN o ODBC_BOTH_DSN.|  
   
 ## <a name="comments"></a>Comentarios  
- Esta función se usa para establecer la entrada del archivo Odbc.ini enumerar valores DSN se encuentra en la información del sistema. Si *wConfigMode* es ODBC_USER_DSN, el DSN es un DSN de usuario y la función lee la entrada del archivo Odbc.ini en HKEY_CURRENT_USER. Si es ODBC_SYSTEM_DSN, el DSN es un DSN de sistema y la función lee la entrada del archivo Odbc.ini en HKEY_LOCAL_MACHINE. Si es ODBC_BOTH_DSN, se ha intentado HKEY_CURRENT_USER y, a continuación, si se produce un error, se utiliza HKEY_LOCAL_MACHINE.  
+ Esta función se usa para establecer dónde se encuentra la entrada de ODBC. ini que enumera los valores DSN en la información del sistema. Si *wConfigMode* es ODBC_USER_DSN, el DSN es un DSN de usuario y la función Lee de la entrada ODBC. ini en HKEY_CURRENT_USER. Si se ODBC_SYSTEM_DSN, el DSN es un DSN del sistema y la función Lee de la entrada ODBC. ini en HKEY_LOCAL_MACHINE. Si se ODBC_BOTH_DSN, se intenta HKEY_CURRENT_USER y, si se produce un error, se usa HKEY_LOCAL_MACHINE.  
   
- Esta función no afecta a **SQLCreateDataSource** y **SQLDriverConnect**. El modo de configuración debe establecerse cuando un controlador que se lee desde el registro mediante una llamada a **SQLGetPrivateProfileString** o escribe en el registro mediante una llamada a **SQLWritePrivateProfileString**. Las llamadas a **SQLGetPrivateProfileString** y **SQLWritePrivateProfileString** utilizan el modo de configuración para saber qué parte del registro para operar en.  
+ Esta función no afecta a **SQLCreateDataSource** ni a **SQLDriverConnect**. El modo de configuración debe establecerse cuando un controlador Lee del registro llamando a **SQLGetPrivateProfileString** o escribe en el registro llamando a **SQLWritePrivateProfileString**. Las llamadas a **SQLGetPrivateProfileString** y **SQLWritePrivateProfileString** usan el modo de configuración para saber en qué parte del registro se va a operar.  
   
 > [!CAUTION]  
->  **SQLSetConfigMode** debe llamarse solo cuando sea necesario; si el modo está establecido incorrectamente, puede producir un error en el instalador de ODBC funcionar correctamente.  
+>  Solo se debe llamar a **SQLSetConfigMode** cuando sea necesario; Si el modo no se ha establecido correctamente, puede que el instalador de ODBC no funcione correctamente.  
   
- **SQLSetConfigMode** hace una modificación directa del registro del modo de configuración. Se trata aparte del proceso de modificar el modo de configuración mediante una llamada a **SQLConfigDataSource**. Una llamada a **SQLConfigDataSource** establece el modo de configuración para distinguir los DSN del sistema y usuario cuando se modifica un DSN. Antes de devolver, **SQLConfigDataSource** BOTHDSN restablece el modo de configuración.  
+ **SQLSetConfigMode** realiza una modificación directa del registro del modo de configuración. Esto se diferencia del proceso de modificación del modo de configuración mediante una llamada a **SQLConfigDataSource**. Una llamada a **SQLConfigDataSource** establece el modo de configuración para distinguir los DSN del usuario y del sistema al modificar un DSN. Antes de devolver, **SQLConfigDataSource** restablece el modo de configuración en BOTHDSN.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Creación de un origen de datos|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
-|Conectarse a un origen de datos mediante un cuadro de diálogo o la cadena de conexión|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Recuperar el modo de configuración|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|
+|Crear un origen de datos|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|  
+|Conectar con un origen de datos mediante una cadena de conexión o un cuadro de diálogo|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Recuperación del modo de configuración|[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|

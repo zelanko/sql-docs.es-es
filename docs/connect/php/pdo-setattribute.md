@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 091cdf12600ca5244a6feef8062522b903edf787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bdf399d03a74aabfd703507b185a95c5b14f50c2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993162"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918955"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,12 +36,13 @@ bool PDO::setAttribute ( $attribute, $value );
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve True si la operación se realiza correctamente; de lo contrario, False.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-|Attribute|Procesado mediante|Valores admitidos|Descripción|  
+|Atributo|Procesado mediante|Valores admitidos|Descripción|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Especifica la mayúsculas en los nombres de columna.<br /><br />PDO::CASE_LOWER aplica minúsculas a los nombres de columna.<br /><br />PDO::CASE_NATURAL (el valor predeterminado) muestra los nombres de columna con el mismo uso de mayúsculas y minúsculas que aparece en la base de datos.<br /><br />PDO::CASE_UPPER aplica mayúsculas a los nombres de columna.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|Consulte la documentación de PDO.|Consulte la documentación de PDO.|  
+|PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|Para más información, consulte los ejemplos en [PDO::quote](../../connect/php/pdo-quote.md).|
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Especifica cómo el controlador informa de errores.<br /><br />PDO::ERRMODE_SILENT (el valor predeterminado) establece la información y los códigos de los errores.<br /><br />PDO::ERRMODE_WARNING genera una advertencia E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION genera una excepción.<br /><br />Este atributo también puede establecerse utilizando PDO::setAttribute.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|Consulte la documentación de PDO.|Especifica cómo se deben devolver los valores Null.<br /><br />PDO::NULL_NATURAL no realiza ninguna conversión.<br /><br />PDO::NULL_EMPTY_STRING convierte el valor de una cadena vacía en Null.<br /><br />PDO::NULL_TO_STRING convierte el valor de una cadena vacía en Null.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|Consulte la documentación de PDO.|Establece que la clase de la instrucción proporcionada por el usuario se obtenga de PDOStatement.<br /><br />Se requiere `array(string classname, array(mixed constructor_args))`.<br /><br />Para obtener más información, vea la documentación de PDO.|  

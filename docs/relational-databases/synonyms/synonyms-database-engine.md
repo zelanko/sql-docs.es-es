@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787261"
 ---
 # <a name="synonyms-database-engine"></a>Usar sinónimos (motor de base de datos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Un sinónimo es un objeto de base de datos que sirve para los siguientes objetivos:  
   
 -   Proporciona un nombre alternativo para otro objeto de base de datos, denominado objeto base, que puede existir en un servidor local o remoto.  
@@ -100,7 +100,7 @@ Las siguientes instrucciones de permisos solo están asociadas al sinónimo, no 
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|DENEGAR|  
 |REVOKE||  
   
 Los sinónimos no están enlazados al esquema, por lo que los siguientes contextos de expresión enlazados al esquema no pueden hacer referencia a sinónimos:  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892112"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
@@ -30,7 +30,7 @@ ms.locfileid: "68892112"
   
  MDX es compatible con los operadores que se indican en la siguiente tabla:  
   
-|Para realizar este tipo de operación|Usar|  
+|Para realizar este tipo de operación|Uso|  
 |---------------------------------------|---------|  
 |Asignar un valor a una variable o asociar una columna de un conjunto de resultados a un alias.|[Operadores de asignación](../mdx/assignment-operators.md)|  
 |Sumar, restar, multiplicar, dividir.|[Operadores aritméticos](../mdx/arithmetic-operators.md)|  
@@ -71,13 +71,13 @@ ms.locfileid: "68892112"
   
 -   NOT  
   
--   Y  
+-   y  
   
 -   XOR  
   
--   OR  
+-   O BIEN  
   
- Para obtener más información sobre los operadores en MDX, vea MDX [ &#40;Operator&#41;Reference MDX](../mdx/mdx-operator-reference-mdx.md).  
+ Para obtener más información acerca de los operadores de MDX, vea [MDX Operator Reference &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinar los resultados  
  Cuando se combinan expresiones simples para crear una más compleja, el tipo de datos del valor resultante viene determinado por la combinación de las reglas de los operadores con las reglas de precedencia para los tipos de datos.  
@@ -86,19 +86,19 @@ ms.locfileid: "68892112"
   
  También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
-## <a name="converting-data-types"></a>Convertir tipos de datos  
+## <a name="converting-data-types"></a>Conversión de tipos de datos  
  MDX convierte implícitamente un objeto a un tipo distinto cuando el objeto se usa en una expresión que requiere un tipo diferente. En la siguiente tabla se definen las reglas de conversión de cada objeto.  
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
-|Nivel|Establecer|\<Level >. Members|  
+|Nivel|Set|\<Level>. Members|  
 |Hierarchy|Member|\<> de jerarquía. DefaultMember|  
-|Member|Tuple|(\<> Miembro)|  
-|Tuple|Member|\<tuple>.item(0)|  
-|Tuple|Escalar|\<tuple>.value|  
+|Member|Tuple|(\<> miembro)|  
+|Tuple|Member|\<tupla>. Item (0)|  
+|Tuple|Escalar|\<> de tupla. valor|  
   
-## <a name="see-also"></a>Vea también  
- [MDX de referencia &#40;de operadores MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX (elementos &#40;de sintaxis MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Elementos de la sintaxis de MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

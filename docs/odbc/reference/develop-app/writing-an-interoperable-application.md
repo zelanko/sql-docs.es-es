@@ -1,5 +1,5 @@
 ---
-title: Escribir una aplicación Interoperable | Microsoft Docs
+title: Escritura de una aplicación interoperable | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,25 +13,25 @@ helpviewer_keywords:
 - feature support in interoperable applications [ODBC]
 - feature variability in interoperable applications [ODBC]
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078984"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81289087"
 ---
 # <a name="writing-an-interoperable-application"></a>Escribir una aplicación Interoperable
-Cada vez que una aplicación utiliza el mismo código con más de un controlador, que el código debe ser interoperable entre esos controladores. En la mayoría de los casos, esto es una tarea fácil. Por ejemplo, el código para capturar las filas con un cursor de solo avance es el mismo para todos los controladores. En algunos casos, esto puede ser más difícil. Por ejemplo, el código para construir los identificadores para su uso en instrucciones SQL debe considerar el caso del identificador entrecomillado y las convenciones de nomenclatura de tres partes, dos partes y una parte.  
+Cada vez que una aplicación utiliza el mismo código en más de un controlador, ese código debe ser interoperable entre estos controladores. En la mayoría de los casos, se trata de una tarea sencilla. Por ejemplo, el código para capturar filas con un cursor de solo avance es el mismo para todos los controladores. En algunos casos, esto puede ser más difícil. Por ejemplo, el código para construir identificadores para su uso en las instrucciones SQL debe tener en cuenta las convenciones de nomenclatura de mayúsculas y minúsculas de identificadores, y de una parte, dos partes y tres partes.  
   
- En general, debe hacer frente código interoperable con problemas de compatibilidad de las características y la variabilidad de característica. *Compatibilidad con las características* se refiere a si o no se admite una característica determinada. Por ejemplo, no todos los DBMS admiten las transacciones y código interoperable debe funcionar correctamente con independencia de la compatibilidad con transacciones. *Característica variabilidad* hace referencia a la variación de la manera en que se admite una característica determinada. Por ejemplo, los nombres de catálogo se colocan al principio de los identificadores en algunos de los DBMS y al final de los identificadores en otras.  
+ En general, el código interoperable debe afrontar problemas de compatibilidad de características y variabilidad de características. La *compatibilidad con características* se refiere a si se admite o no una característica determinada. Por ejemplo, no todos los DBMS admiten transacciones, y el código interoperable debe funcionar correctamente independientemente de la compatibilidad con transacciones. La *variabilidad de características* hace referencia a la variación de la manera en que se admite una característica determinada. Por ejemplo, los nombres de catálogo se colocan al principio de los identificadores en algunos DBMS y al final de los identificadores en otros.  
   
- Pueden tratar las aplicaciones con compatibilidad con las características y la variabilidad de característica en tiempo de diseño o en tiempo de ejecución. Para tratar con compatibilidad con las características y variabilidad en tiempo de diseño, un desarrollador examina el DBMS de destino y los controladores y se asegura que el mismo código serán interoperable entre ellos. Esto suele ser la manera en que las aplicaciones con interoperabilidad baja o limitado tratan estos problemas.  
+ Las aplicaciones pueden hacer frente a la compatibilidad de características y la variabilidad de características en tiempo de diseño o en tiempo de ejecución. Para tratar con la compatibilidad y la variabilidad de las características en tiempo de diseño, un desarrollador examina los DBMS y los controladores de destino, y se asegura de que el mismo código sea interoperable entre ellos. Por lo general, se trata de la forma en que las aplicaciones con una interoperabilidad baja o limitada abordan estos problemas.  
   
- Por ejemplo, si el programador garantiza que una aplicación vertical solo funcionarán con cuatro DBMS determinados y cada uno de los DBMS admite transacciones, la aplicación no necesita código para comprobar la compatibilidad con transacciones en tiempo de ejecución. Puede suponer siempre las transacciones están disponibles debido a la decisión de tiempo de diseño para usar solo cuatro DBMS, cada uno de los cuales admite transacciones.  
+ Por ejemplo, si el desarrollador garantiza que una aplicación vertical solo funcionará con cuatro DBMS determinados y si cada uno de esos DBMS admite transacciones, la aplicación no necesita código para comprobar la compatibilidad con transacciones en tiempo de ejecución. Siempre puede suponer que las transacciones están disponibles debido a la decisión en tiempo de diseño de usar solo cuatro DBMS, cada una de las cuales admite transacciones.  
   
- Para tratar con compatibilidad con las características y variabilidad en tiempo de ejecución, la aplicación debe probar para distintas capacidades en tiempo de ejecución y actuar en consecuencia. Esto suele ser la manera en que las aplicaciones muy interoperables tratan estos problemas. Para problemas de compatibilidad de característica, esto significa escribir código que hace que el código de función opcional o escribir que emula la característica cuando no esté disponible. Para los problemas de la variabilidad de característica, esto significa escribir código que es compatible con todas las variaciones posibles.  
+ Para tratar con la compatibilidad y la variabilidad de las características en tiempo de ejecución, la aplicación debe probar las distintas funcionalidades en tiempo de ejecución y actuar en consecuencia. Por lo general, es la forma en que las aplicaciones altamente interoperables abordan estos problemas. En el caso de problemas de compatibilidad de características, esto significa escribir código que hace que la característica sea opcional o escribir código que eMule la característica cuando no está disponible. En el caso de problemas de variabilidad de características, esto significa escribir código que admita todas las variaciones posibles.  
   
  Esta sección contiene los temas siguientes.  
   

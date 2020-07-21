@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1e85062ff6902b7a39770f517fc61f920413e673
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974776"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929085"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>Método setCharacterStream (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setCharacterStream(int n,
   
  *reader*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
  *length*  
   
@@ -52,8 +52,8 @@ public final void setCharacterStream(int n,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setCharacterStream se especifica mediante el método setCharacterStream de la interfaz java. SQL. PreparedStatement.  
+## <a name="remarks"></a>Observaciones  
+ El método setCharacterStream especifica este método setCharacterStream en la interfaz java.sql.PreparedStatement.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

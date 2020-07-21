@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036675"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
@@ -34,7 +34,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifica una expresión numérica, ésta se evalúa en el conjunto y, a continuación, se suma. Si no se especifica una expresión numérica, el conjunto especificado se evalúa en el contexto actual de los miembros del conjunto y, a continuación, se suma. Si la función SUM se aplica a una expresión no numérica, los resultados quedarán sin definir.  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- En el ejemplo siguiente se usa la palabra clave WITH MEMBER y **suma** función para definir un miembro calculado en la dimensión Measures que contiene la suma de la medida Reseller Sales Amount para los miembros Canada y United States de la Jerarquía de atributo Country de la dimensión Geography.  
+ En el ejemplo siguiente se usa la palabra clave WITH MEMBER y la función **SUM** para definir un miembro calculado en la dimensión Measures que contiene la suma de la medida reseller sales amount para los miembros Canada y Estados Unidos de la jerarquía de atributo Country de la dimensión Geography.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -80,7 +80,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- A menudo, el **suma** función se utiliza con el **CURRENTMEMBER** función o funciones como **YTD** que devuelve un conjunto que varía según el miembro actual de una jerarquía. Por ejemplo, la siguiente consulta devuelve la suma de la medida Internet Sales Amount para todas las fechas desde principio del año natural hasta la fecha mostrada en el eje de filas:  
+ A menudo, la función **SUM** se usa con la función **CurrentMember** o con funciones como el **año actual** que devuelven un conjunto que varía en función del CURRENTMEMBER de una jerarquía. Por ejemplo, la siguiente consulta devuelve la suma de la medida Internet Sales Amount para todas las fechas desde principio del año natural hasta la fecha mostrada en el eje de filas:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   
@@ -92,7 +92,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

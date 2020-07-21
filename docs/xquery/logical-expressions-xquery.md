@@ -1,5 +1,6 @@
 ---
 title: Expresiones lógicas (XQuery) | Microsoft Docs
+description: Obtenga información sobre las expresiones lógicas admitidas en XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140a1631cfd4b7068e4729004f7aa41d9535a904
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717181"
 ---
 # <a name="logical-expressions-xquery"></a>Expresiones lógicas (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  XQuery admite la operación lógica **y** y **o** operadores.  
+  XQuery admite los operadores **lógicos and y** **or** .  
   
 ```  
 expression1 and expression2  
 expression1 or expression2  
 ```  
   
- Las expresiones de prueba, `expression1,``expression2`, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede dar lugar a una secuencia vacía, una secuencia de uno o más nodos o un único valor booleano. En función del resultado, se determinará su valor booleano efectivo de la forma siguiente:  
+ Las expresiones de prueba, `expression1,``expression2` , en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden dar como resultado una secuencia vacía, una secuencia de uno o más nodos o un solo valor booleano. En función del resultado, se determinará su valor booleano efectivo de la forma siguiente:    
   
 -   Si la expresión de prueba da como resultado una secuencia vacía, el resultado será False.  
   
@@ -45,9 +46,9 @@ expression1 or expression2
   
 -   De lo contrario, se generará un error estático.  
   
- La operación lógica **y** y **o** operador, a continuación, se aplica a los valores booleanos resultantes de las expresiones con la semántica lógica estándar.  
+ A continuación, se aplican los **operadores lógicos and y** **or** a los valores booleanos resultantes de las expresiones con la semántica lógica estándar.  
   
- La consulta siguiente recupera el catálogo de productos, las imágenes pequeñas de ángulo frontal, el <`Picture`> elemento para un modelo de producto específico. Tenga en cuenta que para cada documento de descripción de productos, se pueden almacenar en el catálogo una o varias imágenes de producto con distintos atributos, como el tamaño y el ángulo.  
+ La siguiente consulta recupera del catálogo de productos las imágenes pequeñas de ángulo delantero, el elemento <`Picture`> para un modelo de producto específico. Tenga en cuenta que para cada documento de descripción de productos, se pueden almacenar en el catálogo una o varias imágenes de producto con distintos atributos, como el tamaño y el ángulo.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -61,7 +62,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <PD:Picture   
@@ -73,7 +74,7 @@ where ProductModelID=19
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   
   

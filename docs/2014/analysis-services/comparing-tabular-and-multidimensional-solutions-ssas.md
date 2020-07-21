@@ -9,49 +9,48 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087772"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527431"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparar soluciones tabulares y multidimensionales (SSAS)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona dos enfoques distintos para el modelado de datos: tabular y multidimensional. Aunque existe una superposición significativa entre ellos, también hay diferencias importantes que influirán en su decisión sobre cómo avanzar. En este tema se ofrecen comparaciones de características y se explica cómo cada enfoque aborda los requisitos de proyecto comunes. Por ejemplo, si la compatibilidad de un origen de datos concreto es una consideración fundamental, la sección sobre orígenes de datos puede servirle de guía para tomar la decisión sobre qué enfoque de modelado usar.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]proporciona dos enfoques distintos para el modelado de datos: tabular y multidimensional. Aunque existe una superposición significativa entre ellos, también hay diferencias importantes que influirán en su decisión sobre cómo avanzar. En este tema se ofrecen comparaciones de características y se explica cómo cada enfoque aborda los requisitos de proyecto comunes. Por ejemplo, si la compatibilidad de un origen de datos concreto es una consideración fundamental, la sección sobre orígenes de datos puede servirle de guía para tomar la decisión sobre qué enfoque de modelado usar.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
 -   [Información general de modelado en Analysis Services](#bkmk_overview)  
   
--   [Compatibilidad de origen de datos por tipo de solución](#bkmk_ds)  
+-   [Compatibilidad del origen de datos según el tipo de solución](#bkmk_ds)  
   
--   [Características del modelo](#bkmk_models)  
+-   [Características de modelo](#bkmk_models)  
   
 -   [Tamaño del modelo](#bkmk_modelsize)  
   
--   [Programabilidad y experiencia de desarrollador](#bkmk_ext)  
+-   [Programabilidad y experiencia del desarrollador](#bkmk_ext)  
   
--   [Compatibilidad con el lenguaje de Scripting y consulta](#bkmk_lang)  
+-   [Compatibilidad con lenguajes de scripting y consulta](#bkmk_lang)  
   
--   [Compatibilidad con características de seguridad](#bkmk_sec)  
+-   [Compatibilidad con las características de seguridad](#bkmk_sec)  
   
 -   [Herramientas de diseño](#bkmk_designer)  
   
--   [Cliente y las aplicaciones de informes](#bkmk_client)  
+-   [Aplicaciones cliente y de informes](#bkmk_client)  
   
 -   [Plataformas de hospedaje](#bkmk_sharePoint)  
   
--   [Modos de implementación de servidor para las soluciones multidimensionales y tabulares](#bkmk_deploymentmode)  
+-   [Modos de implementación de servidor para soluciones multidimensionales y tabulares](#bkmk_deploymentmode)  
   
--   [Paso siguiente: Crear una solución](#bkmk_Next)  
+-   [Siguiente paso: Compilar una solución](#bkmk_Next)  
   
- En este artículo técnico de MSDN se puede encontrar información adicional: [Elegir una experiencia de modelado Tabular o Multidimensional en SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588).  
+ Puede encontrar información adicional en este artículo técnico de MSDN: [Choosing a Tabular or Multidimensional Modeling Experience in SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588).  
   
-##  <a name="bkmk_overview"></a> Información general de modelado en Analysis Services  
+##  <a name="overview-of-modeling-in-analysis-services"></a><a name="bkmk_overview"></a>Información general sobre el modelado en Analysis Services  
  Analysis Services proporciona una experiencia de desarrollo de modelo, así como la implementación de modelos a través de base de datos hospedada en una instancia de Analysis Services. Se incluyen los tipos de modelos tabular y multidimensional. Como cabría esperar, el hospedaje de base de datos es compatible con las soluciones tabulares y multidimensionales que cree, pero también incluye PowerPivot para SharePoint.  
   
- PowerPivot para SharePoint es *Analysis Services en modo SharePoint*, donde Analysis Services funciona como un servicio adjuntos a SharePoint, lo que ayuda a alojar y administrar modelos de datos de Excel creados anteriormente en Excel y guardados en SharePoint. La función de Analysis Services en este contexto es cargar el modelo de datos en memoria, actualizar los datos de orígenes de datos externos y ejecutar consultas en el modelo. En esta configuración, Analysis Services funciona en segundo plano. Todas las solicitudes y conexiones a Analysis Services las realiza SharePoint, y sólo cuando un libro de Excel contiene un modelo de datos (los modelos de datos son opcionales en los libros de Excel). Si la creación de un modelo de datos en Excel y el hospedaje en SharePoint, se alinea con los requisitos del proyecto, vea [Power Pivot: Análisis de datos eficaz y modelado de datos en Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) y [PowerPivot para SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) para obtener más información.  
+ PowerPivot para SharePoint es *Analysis Services en modo SharePoint*, donde Analysis Services funciona como un servicio adjuntos a SharePoint, lo que ayuda a alojar y administrar modelos de datos de Excel creados anteriormente en Excel y guardados en SharePoint. La función de Analysis Services en este contexto es cargar el modelo de datos en memoria, actualizar los datos de orígenes de datos externos y ejecutar consultas en el modelo. En esta configuración, Analysis Services funciona en segundo plano. Todas las solicitudes y conexiones a Analysis Services las realiza SharePoint, y sólo cuando un libro de Excel contiene un modelo de datos (los modelos de datos son opcionales en los libros de Excel). Si crea un modelo de datos en Excel y lo hospeda en SharePoint, se alinea con los requisitos del proyecto, vea [Power Pivot: potente análisis de datos y modelado de datos en Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b) y [PowerPivot para SharePoint &#40;SSAS&#41;](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md) para obtener más información.  
   
 > [!NOTE]  
 >  Los modelos de datos de Excel y los modelos tabulares son similares en su arquitectura. Puede importar un modelo de datos de Excel en un modelo tabular si necesita admitir grandes cantidades de datos o usar otras características del modelo que no están disponibles en Excel.  
@@ -66,12 +65,12 @@ ms.locfileid: "66087772"
   
  Para los proyectos nuevos, tenga en cuenta en primer lugar el método tabular. Se agiliza el diseño, la prueba y la implementación; y funcionará mejor con las aplicaciones BI de autoservicio más recientes de Microsoft.  
   
-##  <a name="bkmk_ds"></a> Compatibilidad de origen de datos por tipo de solución  
+##  <a name="data-source-support-by-solution-type"></a><a name="bkmk_ds"></a>Compatibilidad del origen de datos por tipo de solución  
  Los modelos multidimensionales y tabulares usan datos importados de orígenes externos. La mayoría de los desarrolladores usan un almacén de datos, pensado para ser compatible con estructuras de datos para la elaboración de informes, como el origen de datos principal detrás de un modelo. El almacén de datos se suele basar en un esquema de estrella o copo de nieve, y se usa SSIS para cargar datos de soluciones OLTP en el almacén de datos. El modelado es más sencillo cuando se utiliza un almacén de datos como origen de datos back-end.  
   
-|**Vínculo**|**Resumen de las opciones admitidas**|  
+|**Vínculo**|**Resumen de opciones admitidas**|  
 |--------------|--------------------------------------|  
-|[Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Los modelos multidimensionales utilizan datos de orígenes de datos relacionales.|  
+|[Orígenes de datos admitidos &#40;&#41;de SSAS multidimensionales](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|Los modelos multidimensionales utilizan datos de orígenes de datos relacionales.|  
 |[Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Los modelos tabulares admiten una gama más amplia de orígenes de datos, incluidos archivos sin formato, fuentes de datos y orígenes de datos a los que se obtiene acceso a través de proveedores de datos ODBC.|  
   
  Ambos enfoques de modelado pueden usar datos de varios orígenes de datos en el mismo modelo.  
@@ -86,49 +85,49 @@ ms.locfileid: "66087772"
   
  Para algunos proyectos, los requisitos de datos pueden ser tan grandes que se conviertan en un factor que tener en cuenta al elegir entre los tipos de modelos. Si los datos que necesita cargar tienen un tamaño de muchos terabytes, una solución tabular podría no cumplir los requisitos si la memoria disponible no puede contener los datos. Hay una opción de paginación que intercambia los datos en memoria en el disco, pero si las cantidades de datos son muy grandes se hospedan mejor en soluciones multidimensionales. Las bases de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] más grandes de producción son hoy multidimensionales. Para obtener más información sobre las opciones de paginación de memoria para las soluciones tabulares, vea [Memory Properties](server-properties/memory-properties.md). Para obtener más información acerca de cómo escalar una solución multidimensional, vea [Consulta con ampliación horizontal de Analysis Services con bases de datos de solo lectura](https://go.microsoft.com/fwlink/?LinkId=251711).  
   
-##  <a name="bkmk_models"></a> Características de modelo  
+##  <a name="model-features"></a><a name="bkmk_models"></a>Características del modelo  
  En la tabla siguiente se resume la disponibilidad de características en el nivel de modelo. Si ya instaló Analysis Services, puede utilizar esta información para conocer las capacidades del modo de servidor que instaló. Si ya conoce las características de modelo de Analysis Services y sus requisitos empresariales incluyen una o varias de estas características, puede revisar esta lista para asegurarse de que la característica que desea utilizar está disponible en el tipo de modelo que tiene previsto crear.  
   
  Para obtener más información acerca de la comparación de las características según el enfoque de modelado, vea el artículo técnico sobre la [elección de una experiencia tabular o multidimensional de modelado en SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588) , en MSDN.  
   
 > [!NOTE]  
->  El modelado tabular se admite en ediciones concretas de SQL Server. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  El modelado tabular se admite en ediciones concretas de SQL Server. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ||||  
 |-|-|-|  
-||**Multidimensional**|**Tabular**|  
+||**Multidimensionales**|**Tabla**|  
 |Acciones|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|No|  
-|Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Sin|  
+|Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
 |Medidas calculadas|[Sí](multidimensional-models/create-calculated-members.md)|Sí|  
 |Ensamblados personalizados|[Sí](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
-|Resúmenes personalizados|Sí|Sin|  
-|Distinct Count|[Sí](multidimensional-models/use-aggregate-functions.md)|Sí (mediante DAX) *|  
+|Resúmenes personalizados|Sí|No|  
+|Distinct Count|[Sí](multidimensional-models/use-aggregate-functions.md)|Sí (a través de DAX) *|  
 |Obtención de detalles|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|Sí|  
 |Jerarquías|[Sí](multidimensional-models/user-defined-hierarchies-create.md)|Sí|  
 |KPI|[Sí](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Sí|  
 |Grupos de medida vinculados|[Sí](multidimensional-models/linked-measure-groups.md)|No|  
-|Relaciones varios a varios|[Sí](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
+|Relaciones de varios a varios|[Sí](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
 |Jerarquías de elementos primarios y secundarios|[Sí](multidimensional-models/parent-child-dimension.md)|Sí (mediante DAX)|  
 |Particiones|[Sí](tabular-models/partitions-ssas-tabular.md)|  
-|perspectivas|[Sí](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sí](tabular-models/partitions-ssas-tabular.md)|  
+|Perspectivas|[Sí](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sí](tabular-models/partitions-ssas-tabular.md)|  
 |Medidas de suma parcial|[Sí](multidimensional-models/define-semiadditive-behavior.md)|Sí (mediante DAX)|  
 |Translations|[Sí](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
 |Jerarquías definidas por el usuario|[Sí](multidimensional-models/user-defined-hierarchies-create.md)|Sí|  
-|Reescritura|[Sí](multidimensional-models/set-partition-writeback.md)|Sin|  
+|Reescritura|[Sí](multidimensional-models/set-partition-writeback.md)|No|  
   
- \* Si la solución debe admitir un gran número de recuentos distintivos (por ejemplo, muchos millones de identificadores de cliente), considere primero Tabular. Suele tener un mejor rendimiento en esta situación. Consulte la sección sobre recuentos distintivos en las notas del producto, [caso práctico de Analysis Services: Uso de modelos tabulares en soluciones comerciales a gran escala](https://msdn.microsoft.com/library/dn751533.aspx).  
+ * Si la solución debe admitir un número muy grande de recuentos distintivos (por ejemplo, muchos millones de identificadores de cliente), considere tabular primero. Suele tener un mejor rendimiento en esta situación. Vea la sección sobre recuentos distintivos en las notas del producto, [Caso práctico de Analysis Services: uso de modelos tabulares en soluciones comerciales a gran escala](https://msdn.microsoft.com/library/dn751533.aspx).  
   
-##  <a name="bkmk_modelsize"></a> Tamaño del modelo  
+##  <a name="model-size"></a><a name="bkmk_modelsize"></a>Tamaño del modelo  
  El tamaño del modelo, en cuanto al número total de objetos, no varía según el tipo de la solución. Sin embargo, las herramientas de diseño que se usan para compilar cada solución varían en el modo en que se adaptan a trabajar con un gran número de objetos. Un modelo mayor es algo más fácil de crear en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] porque proporciona más funciones para los objetos de diagramas y listas por tipo del Explorador de objetos y el explorador de soluciones.  
   
- Los modelos muy grandes, que constan de muchos cientos de tablas o dimensiones, a menudo se generan mediante programación en Visual Studio y no en las herramientas de diseño. Para obtener más información sobre el número máximo de objetos en un modelo, vea [especificaciones de capacidad máxima &#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md).  
+ Los modelos muy grandes, que constan de muchos cientos de tablas o dimensiones, a menudo se generan mediante programación en Visual Studio y no en las herramientas de diseño. Para obtener más información sobre el número máximo de objetos de un modelo, vea [Especificaciones de capacidad máxima &#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md).  
   
-##  <a name="bkmk_ext"></a> Programabilidad y experiencia de desarrollador  
+##  <a name="programmability-and-developer-experience"></a><a name="bkmk_ext"></a>Experiencia de programación y desarrollo  
  Para los modelos tabulares y multidimensionales, hay un modelo de objetos compartido para ambas modalidades. AMO y ADOMD.NET admiten ambos modos. Ninguna de las dos bibliotecas cliente se ha revisado para las construcciones tabulares por lo que deberá entender el modo en que las estructuras multidimensionales y tabulares y las convenciones de nomenclatura se relacionan entre sí. En primer lugar, revise el ejemplo de programación de AMO a tabular para obtener la programación de AMO con un modelo tabular. Para obtener más información, descargue el ejemplo del [sitio web de codeplex](https://go.microsoft.com/fwlink/?LinkID=221036).  
   
  Las soluciones tabulares solo admiten un archivo model.bim por solución, lo que significa que todo el trabajo debe hacerse en un solo archivo. Es posible que los equipos de desarrollo acostumbrados a trabajar con varios proyectos en una única solución tengan que revisar cómo trabajan para generar una solución tabular compartida.  
   
-##  <a name="bkmk_lang"></a> Compatibilidad con lenguaje de scripting y consulta  
+##  <a name="query-and-scripting-language-support"></a><a name="bkmk_lang"></a>Compatibilidad con lenguajes de scripting y consultas  
  Analysis Services incluye MDX, DMX, DAX, XML/A y ASSL. La compatibilidad con estos idiomas varía ligeramente según el tipo de modelo. Si debe tener en cuenta requisitos del lenguaje de scripting y consulta, revise la lista siguiente.  
   
 -   Las bases de datos modelo tabulares admiten los cálculos DAX, consultas DAX y consultas MDX.  
@@ -141,7 +140,7 @@ ms.locfileid: "66087772"
   
  Todas las bases de datos admiten XML/A.  
   
-##  <a name="bkmk_sec"></a> Compatibilidad con características de seguridad  
+##  <a name="security-feature-support"></a><a name="bkmk_sec"></a>Compatibilidad con características de seguridad  
  Todas las soluciones de Analysis Services se pueden proteger en la base de datos. Las opciones de seguridad más específicas varían según el modo. Si debe tener en cuenta requisitos de configuración de seguridad específicos en su solución, revise la lista siguiente para asegurarse de que el nivel de seguridad que desea se admite en el tipo de solución que desea crear:  
   
 -   Las bases de datos modelo tabulares pueden utilizar la seguridad de nivel de fila, mediante los permisos basados en roles de Analysis Services.  
@@ -150,15 +149,15 @@ ms.locfileid: "66087772"
   
  Los modelos de datos de Excel pueden restaurarse en un servidor de modo tabular. Una vez que se restaura el archivo, se separa de SharePoint (suponiendo que se ha restaurado desde una ubicación de SharePoint), lo que permite usar casi todas las características tabulares de modelado, incluida la seguridad del nivel de fila. La única característica de modelado tabular que no puede usar en un libro restaurado son las tablas vinculadas.  
   
-##  <a name="bkmk_designer"></a> Herramientas de diseño  
+##  <a name="design-tools"></a><a name="bkmk_designer"></a>Herramientas de diseño  
  Los conocimientos sobre el modelado de datos y la capacidad técnica pueden variar enormemente según los usuarios encargados de generar modelos analíticos. Si debe tener en cuenta el conocimiento de la herramienta o la experiencia del usuario en su solución, compare las experiencias siguientes para la creación del modelo.  
   
 |**Herramienta de modelado**|**Cómo se utiliza**|  
 |-----------------------|------------------|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Se utiliza para crear soluciones tabulares, multidimensionales y de minería de datos. Este entorno de creación utiliza el shell de Visual Studio para proporcionar áreas de trabajo, paneles de propiedades y la navegación de objetos. Los usuarios que ya la utilizan en Visual Studio probablemente preferirán esta herramienta para crear aplicaciones de Business Intelligence. Para obtener información detallada, vea [Tools and applications used in Analysis Services](tools-and-applications-used-in-analysis-services.md) .|  
-|Excel 2013 y posterior, con el complemento PowerPivot para Excel|PowerPivot para Excel es una herramienta que se utiliza para editar y mejorar un modelo de datos de Excel. Tiene un área de trabajo de aplicación independiente que se abre sobre Excel, pero utiliza las mismas metáforas visuales (páginas con pestañas, diseño de cuadrícula y barra de fórmulas) que Excel. Los usuarios que sean expertos en Excel preferirán esta herramienta en lugar de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Consulte [PowerPivot: Análisis de datos eficaz y modelado de datos en Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
+|Excel 2013 y posterior, con el complemento PowerPivot para Excel|PowerPivot para Excel es una herramienta que se utiliza para editar y mejorar un modelo de datos de Excel. Tiene un área de trabajo de aplicación independiente que se abre sobre Excel, pero utiliza las mismas metáforas visuales (páginas con pestañas, diseño de cuadrícula y barra de fórmulas) que Excel. Los usuarios que sean expertos en Excel preferirán esta herramienta en lugar de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Consulte [Power Pivot: análisis de datos eficaz y modelado de datos en Excel](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b).|  
   
-##  <a name="bkmk_client"></a> Cliente y las aplicaciones de informes  
+##  <a name="client-and-reporting-applications"></a><a name="bkmk_client"></a>Aplicaciones cliente y de informes  
  En versiones anteriores, la elección del tipo de modelo influía en las aplicaciones cliente que se podían utilizar, pero esta distinción ha disminuido con el tiempo. Los modelos tabulares y multidimensionales ofrecen una compatibilidad prácticamente equivalente con respecto a las aplicaciones cliente que se conectan a datos de Analysis Services. En la tabla siguiente se muestra una lista de las aplicaciones de cliente de Microsoft que pueden utilizarse con modelos de datos de Analysis Services.  
   
 |**Aplicación**|**Descripción**|  
@@ -166,10 +165,10 @@ ms.locfileid: "66087772"
 |Informes de tabla dinámica de Excel|La funcionalidad de Excel es la misma para los modelos tabulares y multidimensionales, aunque solo se admite la reescritura (una capacidad de Analysis Services que implementa Excel) en el caso de modelos multidimensionales.|  
 |Informes RDL de Reporting Services|Los informes RDL, creados en el Generador de informes o en el Diseñador de informes, pueden utilizar cualquier modelo de Analysis Services, así como modelos de datos de Excel alojados en PowerPivot para SharePoint.|  
 |Paneles de PerformancePoint|En SharePoint, los paneles de PerformancePoint pueden conectarse a todas las bases de datos de Analysis Services, incluidos los modelos de datos de Excel. Para obtener más información, vea [Crear conexiones de datos (servicios de PerformancePoint)](https://go.microsoft.com/fwlink/?linkdID=218155).|  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] en los sitios Office 365 o Power BI|Sólo modelos tabulares.|  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]en Office 365 o sitios Power BI|Sólo modelos tabulares.|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] en SharePoint local|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], como aplicación ClickOnce desde SharePoint, puede utilizar un cubo o un modelo tabular de Analysis Services.|  
   
-##  <a name="bkmk_deploymentmode"></a> Modos de implementación de servidor para soluciones multidimensionales y tabulares  
+##  <a name="server-deployment-modes-for-multidimensional-and-tabular-solutions"></a><a name="bkmk_deploymentmode"></a> Modos de implementación de servidor para soluciones multidimensionales y tabulares  
  Una instancia de Analysis Services se instala en uno de los tres modos que establece el contexto operativo del servidor. El modo del servidor que instale determinará el tipo de soluciones que se pueden implementar en ese servidor. La arquitectura de memoria y de almacenamiento constituye la diferencia principal entre los modos, pero hay otras diferencias. Los tres modos de servidor se describen brevemente en la tabla siguiente. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
 |Modo de implementación|Descripción|  
@@ -180,7 +179,7 @@ ms.locfileid: "66087772"
   
  Tenga en cuenta que los modelos de servidor no son intercambiables. Durante la instalación deberá elegir un modo de funcionamiento del servidor. Deberá instalar varias instancias, una para cada modo de servidor, para poder admitir todas las cargas de trabajo.  
   
-##  <a name="bkmk_sharePoint"></a> Plataformas de hospedaje  
+##  <a name="hosting-platforms"></a><a name="bkmk_sharePoint"></a>Plataformas de hospedaje  
  Microsoft dispone de varias metodologías disponibles para hospedar datos, aplicaciones, informes y colaboración. En esta sección trataremos la interoperabilidad de Analysis Services con respecto a cada plataforma de hospedaje.  
   
 |**Plataforma**|**Descripción**|  
@@ -190,7 +189,7 @@ ms.locfileid: "66087772"
 |Sitios de Power BI en Office 365|En un sitio de Power BI, los informes de Power View pueden conectarse a modelos de datos tabulares que se ejecutan en local.|  
 |Servidores locales (instancias de SQL Server y SharePoint)|Un servidor de base de datos local (es decir, una instancia de SQL Server que tenga instalado Analysis Services) sigue siendo el medio principal de ofrecer disponibilidad de los datos de Analysis Services para informes y aplicaciones cliente. Las soluciones tabulares, multidimensionales y de minería de datos se ejecutan en las instancias de Analysis Services en una red, sin dependencia de SharePoint.<br /><br /> SQL Server se integra con SharePoint agregando compatibilidad para el acceso a datos PowerPivot y el acceso a datos tabulares. La inversión en la integración de SharePoint y SQL Server crece cuando se maximiza el número de características utilizadas de cada producto. Si tiene SharePoint, puede instalar SQL Server PowerPivot para SharePoint para habilitar el acceso a datos PowerPivot y obtener los archivos de conexión .bism de PowerPivot utilizados para tener acceso a las bases de datos tabulares que se ejecutan en una instancia externa de Analysis Services en un servidor de red.<br /><br /> Si tiene SQL Server y SharePoint, puede admitir la siguiente combinación de servicios y aplicaciones:<br /><br /> Modelos de Analysis Services (tabulares o multidimensionales)<br /><br /> Servicios de SharePoint de nivel intermedio (Servicios de Excel, Reporting Services en SharePoint o servicios en PerformancePoint)<br /><br /> Clientes de explorador o clientes avanzados (Excel) para una exploración y análisis más profundos.|  
   
-##  <a name="bkmk_Next"></a> Paso siguiente: Crear una solución  
+##  <a name="next-step-build-a-solution"></a><a name="bkmk_Next"></a>Siguiente paso: compilar una solución  
  Ahora que conoce los fundamentos de una comparación de las soluciones, siga los tutoriales para conocer los pasos que permiten crear cada una. Los siguientes vínculos señalan a tutoriales que explican los pasos.  
   
 -   Generar un modelo tabular mediante la [Creación de modelos tabulares &#40;tutorial de Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  
@@ -201,13 +200,13 @@ ms.locfileid: "66087772"
   
 -   Generar un modelo de PowerPivot mediante el [Tutorial de PowerPivot para Excel](https://go.microsoft.com/fwlink/?LinkId=251135).  
   
-## <a name="see-also"></a>Vea también  
- [Administración de una instancia de Analysis Services](instances/analysis-services-instance-management.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administración de instancias de Analysis Services](instances/analysis-services-instance-management.md)   
  [Novedades de Analysis Services y Business Intelligence](what-s-new-in-analysis-services.md)   
- [¿Qué novedades &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
+ [Novedades &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
  [Novedades de PowerPivot](https://go.microsoft.com/fwlink/?LinkId=238141)   
  [Ayuda de PowerPivot para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=220946)   
- [Conexión de modelo semántico de BI PowerPivot &#40;.bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
+ [Conexión de modelo semántico de BI PowerPivot &#40;. Bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
   

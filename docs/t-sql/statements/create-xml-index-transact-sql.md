@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766887"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un índice XML en una tabla especificada. Se puede crear un índice antes de que la tabla posea datos. Es posible crear índices XML sobre tablas de otra base de datos si se especifica un nombre de base de datos completo.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67948065"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
@@ -110,7 +110,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Especifica el tipo de índice XML secundario.  
   
- Value  
+ VALOR  
  Crea un índice XML secundario en las columnas en las que se encuentran las columnas de clave (ruta y valor del nodo) del índice XML principal.  
   
  PATH  
@@ -139,7 +139,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PAD_INDEX **=** { ON | **OFF** }  
  Especifica el relleno del índice. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  El porcentaje de espacio disponible especificado por *fillfactor* se aplica a páginas de nivel intermedio del índice.  
   
  No se especifica OFF ni *fillfactor*.  
@@ -163,10 +163,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  Indica si deben almacenarse resultados temporales de orden en **tempdb**. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
- OFF  
+ Apagado  
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
   
  Además del espacio necesario en la base de datos del usuario para crear el índice, **tempdb** debe tener la misma cantidad de espacio adicional para almacenar los resultados de orden intermedio. Para más información, vea [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
@@ -177,10 +177,10 @@ CREATE [ PRIMARY ] XML INDEX index_name
  DROP_EXISTING **=** { ON | **OFF** }  
  Especifica que se quite y vuelva a generarse el índice XML con nombre preexistente. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  El índice existente se quita y se vuelve a generar. El nombre de índice especificado debe ser el mismo que el de un índice actualmente existente; sin embargo, la definición se puede modificar. Por ejemplo, puede especificar columnas, criterio de ordenación, esquema de particionamiento u opciones de índice diferentes.  
   
- OFF  
+ Apagado  
  Se muestra un error si ya existe el nombre de índice especificado.  
   
  El tipo de índice no puede cambiarse utilizando DROP_EXISTING. Asimismo, un índice XML principal no puede volver a definirse como un índice XML secundario, o viceversa.  
@@ -196,19 +196,19 @@ CREATE [ PRIMARY ] XML INDEX index_name
  ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
- ON  
+ ACTIVAR  
  Los bloqueos de fila se admiten al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.  
   
- OFF  
+ Apagado  
  No se usan los bloqueos de fila.  
   
  ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
- ON  
+ ACTIVAR  
  Los bloqueos de página se permiten al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.  
   
- OFF  
+ Apagado  
  No se utilizan bloqueos de página.  
   
  MAXDOP **=** _max_degree_of_parallelism_  
@@ -233,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las columnas calculadas derivadas de los tipos de datos **xml** se puede indizar como una columna de clave o como una columna sin clave incluida, siempre que el tipo de datos de la columna calculada esté disponible como columna de clave de índice o columna sin clave. No puede crear un índice XML principal en una columna **xml** calculada.  
   
  Para ver información sobre los índices XML, use la vista de catálogo [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md).  

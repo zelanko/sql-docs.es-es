@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101808"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Crear, eliminar o modificar un rol (Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "66101808"
   
  Para crear, modificar o eliminar roles, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Solo puede eliminar roles que no se usan.  
   
- Para asignar usuarios y grupos a los roles que crea, use el Administrador de informes. Para más información, consulte [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
+ Para asignar usuarios y grupos a los roles que crea, use el Administrador de informes. Para obtener más información, vea [conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
   
 > [!NOTE]  
 >  Si el servidor de informes se configura para el modo integrado de SharePoint, y se conectó al sitio de SharePoint con el que se integra el servidor de informes, puede ver y modificar los niveles de permisos que controlan el acceso a las operaciones y el contenido del servidor de informes.  
@@ -45,7 +45,7 @@ ms.locfileid: "66101808"
   
      O bien, si está creando una definición de roles de nivel de sistema, haga clic con el botón derecho en **Roles del sistema**y seleccione **Nuevo rol del sistema**.  
   
-4.  Escriba un nombre único para el rol. El nombre debe incluir al menos un carácter. También puede incluir espacios y determinados símbolos, pero no los caracteres ; ? : \@ & = +, $ / * \< > | "o /.  
+4.  Escriba un nombre único para el rol. El nombre debe incluir al menos un carácter. También puede incluir espacios y determinados símbolos, pero no los caracteres ; ? : \@ & = +, $/* \< > | "o/.  
   
 5.  Si lo desea, escriba una descripción. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , esta descripción solo resulta visible en esta página. Los usuarios que ven este elemento a través del Administrador de informes pueden ver esta descripción en esa herramienta.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66101808"
   
 2.  Expanda la carpeta Seguridad.  
   
-3.  Para eliminar o modificar una definición de roles de nivel de elemento, expanda la carpeta Roles. Realice una de las siguientes acciones:  
+3.  Para eliminar o modificar una definición de roles de nivel de elemento, expanda la carpeta Roles. Realice una de las operaciones siguientes:  
   
     1.  Para eliminar una definición de roles, haga clic con el botón derecho en el elemento y haga clic en **Eliminar**. Aparece el cuadro de diálogo **Eliminar objeto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66101808"
   
          Seleccione las tareas que pueden realizar los miembros de este rol y haga clic en **Aceptar**.  
   
-4.  Para eliminar o modificar una definición de roles de nivel de sistema, expanda la carpeta **Roles del sistema** . Realice una de las siguientes acciones:  
+4.  Para eliminar o modificar una definición de roles de nivel de sistema, expanda la carpeta **Roles del sistema** . Realice una de las operaciones siguientes:  
   
     1.  Para eliminar una definición de roles de sistema, haga clic con el botón derecho en el elemento y haga clic en **Eliminar**. Aparece el cuadro de diálogo **Eliminar objeto** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66101808"
   
          Seleccione las tareas que pueden realizar los miembros de este rol y haga clic en **Aceptar** para aplicar los cambios.  
   
-## <a name="see-also"></a>Vea también  
- [Conectar con un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
- (crear-y-administrar-rol-assignments.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conectarse a un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
+ (create-and-manage-role-assignments.md)   
  [Reporting Services en SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

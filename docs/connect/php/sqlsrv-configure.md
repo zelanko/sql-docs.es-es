@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sqlsrv_configure
 - API Reference, sqlsrv_configure
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17c0024e75dacc56b2f5a10d26a899256dbad7fc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935803"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902791"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cambia la configuración para el control de errores y las opciones de registro.  
@@ -36,7 +36,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-*$setting*: el nombre del valor que se va a configurar. Vea la tabla siguiente para obtener una lista de opciones de configuración.  
+*$setting*: el nombre del valor que se va a configurar. Consulte la siguiente tabla, en la que se incluye una lista de opciones de configuración.  
   
 *$value*: el valor que se va a aplicar a la configuración especificada en el parámetro *$setting* . Los valores posibles para este parámetro dependen de la configuración especificada. En la siguiente tabla se incluyen las posibles combinaciones:  
   
@@ -50,7 +50,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>Valor devuelto  
 Si se llama a **sqlsrv_configure** con un valor o una configuración no compatibles, la función devuelve el valor **False**. De lo contrario, devuelve **True**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 1\) Para obtener más información sobre las consultas de cliente, vea [Cursor Types &#1;SQLSRV Driver&#40;](../../connect/php/cursor-types-sqlsrv-driver.md) (Tipos de cursor &#40;Controlador SQLSRV&#41;).  
   
 2\) Para obtener más información sobre la actividad de registro, consulte [Logging Activity](../../connect/php/logging-activity.md) (Actividad de registro).  

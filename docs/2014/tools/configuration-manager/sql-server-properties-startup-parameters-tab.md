@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f45a017ab1d04643b4bc85454f9dfe0db0d17792
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62679185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000518"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
   Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "62679185"
   
 -   Todos los parámetros de inicio empiezan con un guion (–) y el segundo valor es una letra.  
   
-## <a name="required-parameters"></a>Parámetros necesarios  
+## <a name="required-parameters"></a>Parámetros obligatorios  
  Los parámetros siguientes son necesarios. Se pueden cambiar pero no quitar.  
   
 -   -d es la ruta de acceso al archivo **master.mdf** (el archivo de datos de la base de datos maestra).  
@@ -69,7 +68,7 @@ ms.locfileid: "62679185"
 > [!CAUTION]  
 >  Algunos parámetros opcionales pueden cambiar el comportamiento del servidor y afectar al rendimiento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El uso de esta página está restringido a los usuarios que pueden cambiar las entradas relacionadas en el Registro. Esto incluye a los usuarios siguientes.  
   
 -   Miembros del grupo local de administradores.  
@@ -77,6 +76,6 @@ ms.locfileid: "62679185"
 -   La cuenta de dominio utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para ejecutarse bajo una cuenta de dominio.  
   
 ## <a name="books-online-references"></a>Referencias de los Libros en pantalla  
- Para información adicional sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte "Cómo: Configurar las opciones de inicio del servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager) "en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+ Para más información sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea "Cómo configurar opciones de inicio del servidor (Administrador de configuración de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 'Ejemplo: Especificación de la directiva XMLTEXT | Microsoft Docs'
+description: Obtenga información sobre cómo abordar la parte sin consumir de un documento XML especificando la directiva XMLTEXT en una instrucción SELECT mediante el modo EXPLICIT.
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 93e6735f9b4e30a97d86366b512c27489a921f2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632317"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este ejemplo se muestra cómo se tratan los datos de la columna de desbordamiento con la directiva **XMLTEXT** en una instrucción `SELECT` con el modo EXPLICIT.  
   
  Considere la tabla `Person` . Esta tabla dispone de una columna `Overflow` que almacena la parte no utilizada del documento XML.  
@@ -127,7 +128,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- En este elemento de consulta, se especifica *directive* para el atributo `PersonName`. De este modo, `PersonName` se agrega como subelemento del elemento <`Parent`> que lo incluye. Los atributos de <`xmltext`> se siguen agregando al elemento <`Parent`> que lo incluye. El contenido del elemento <`overflow`> (los subelementos) se antepone a otros subelementos de los elementos <`Parent`> que lo incluyen.  
+ En este elemento de consulta, se especifica *directive* para el atributo `PersonName` . De este modo, `PersonName` se agrega como subelemento del elemento <`Parent`> que lo incluye. Los atributos de <`xmltext`> se siguen agregando al elemento <`Parent`> que lo incluye. El contenido del elemento <`overflow`> (los subelementos) se antepone a otros subelementos de los elementos <`Parent`> que lo incluyen.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  

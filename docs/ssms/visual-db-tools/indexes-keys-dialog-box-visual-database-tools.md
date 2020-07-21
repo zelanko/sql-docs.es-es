@@ -1,10 +1,9 @@
 ---
-title: Índices o claves (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: 'Cuadro de diálogo Índices: claves'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254340"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75224922"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Índices o claves (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ Utilice este cuadro de diálogo para crear o modificar índices, claves principa
 **Índice o clave Primary/Unique seleccionados**  
 Enumera los índices y las claves principales o únicas. Seleccione uno de estos elementos para ver sus propiedades en la cuadrícula que aparece a la derecha. Si la lista está vacía, no se ha definido ninguna para la tabla.  
   
-**Agregar**  
+**Add (Agregar)**  
 Crea un nuevo índice o una nueva clave principal o única.  
   
 **Eliminar**  
@@ -53,7 +54,7 @@ Especifique si el elemento seleccionado en la lista **Índice o clave Primary/Un
 Expandido, muestra los campos de propiedades de **Nombre** y **Descripción**.  
   
 **Nombre**  
-Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
+Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Puede cambiar el nombre en cualquier momento.  
   
 **Descripción**  
 Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -115,6 +116,6 @@ Especifica si [!INCLUDE[ssDE](../../includes/ssde_md.md)] que subyace calcula la
 Especifique si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos. El valor recomendado es **Sí**.  
   
 ## <a name="see-also"></a>Consulte también  
-[Trabajar con restricciones (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[Trabajar con claves (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[Trabajar con restricciones(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[Trabajar con claves(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

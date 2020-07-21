@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017087"
 ---
 # <a name="and-mdx"></a>AND (MDX)
@@ -28,7 +28,7 @@ Expression1 AND Expression2
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Expression1*  
+ *Argumento*  
  Una expresión MDX (Expresiones multidimensionales) válida que devuelve un valor numérico.  
   
  *Expression2*  
@@ -37,10 +37,10 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que devuelve true si ambos parámetros se evalúan como **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Comentarios  
- El **AND** operador trata ambas expresiones como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la conjunción lógica. La tabla siguiente se muestra cómo el **AND** operador realiza la conjunción lógica.  
+## <a name="remarks"></a>Observaciones  
+ El operador **and** trata ambas expresiones como valores booleanos (cero, 0, como **false**; de lo contrario, **true**) antes de que el operador realice la conjunción lógica. En la tabla siguiente se muestra cómo el operador **and** realiza la conjunción lógica.  
   
-|*Expression1*|*Expression2*|Valor devuelto|  
+|*Argumento*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**false**|  
@@ -67,7 +67,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

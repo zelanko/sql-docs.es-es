@@ -10,21 +10,21 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 901f430f09621c6ad9be20759cddb757e2e96ee7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: a93801d7d17ff8952d02b5351c1cf0dd9bce4486
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749670"
 ---
 # <a name="catalogcreate_execution_dump"></a>catalog.create_execution_dump 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Hace que un paquete en ejecución pause y cree un archivo de volcado. El archivo se almacena en la carpeta *\<unidad>* :\Archivos de programa\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Hace que un paquete en ejecución pause y cree un archivo de volcado. El archivo se almacena en la carpeta *\<drive>* :\Archivos de programa\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -1,10 +1,9 @@
 ---
-title: 'Categorías de trabajo: Administrar categorías de trabajo | Microsoft Docs'
-ms.custom: ''
+title: Categorías de trabajo - Administrar categorías de trabajo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -14,13 +13,15 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 792191baaa7b1b0ae8cae65471946104e17b13de
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dac1ce3e62ad1a6b11212273df9cf21d6fbbce19
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262342"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242297"
 ---
 # <a name="job-categories---manage-job-categories"></a>Categorías de trabajo - Administrar categorías de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ Número de trabajos definidos para esta categoría.
 **Ver trabajos**  
 Abre el cuadro de diálogo **Propiedades** de la categoría seleccionada para mostrar todos los trabajos actualmente definidos para dicha categoría.  
   
-**Agregar**  
+**Add (Agregar)**  
 Abre el cuadro de diálogo **Nueva categoría de trabajo** para agregar una nueva categoría de trabajo.  
   
 **Eliminar**  

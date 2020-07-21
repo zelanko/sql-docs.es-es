@@ -1,5 +1,5 @@
 ---
-title: Método Position (Java. SQL. CLOB, Long) | Microsoft Docs
+title: Método position (java.sql.Clob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b2fb34d5-1d34-4764-a795-712d9c6aa313
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57b9af31e7701633e7cd73e8aaf0eb498b26c02c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b12c91fa08deb7856bb3a14158f8d02be5659a61
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976409"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914200"
 ---
 # <a name="position-method-javasqlclob-long"></a>Método position (java.sql.Clob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +50,11 @@ public long position(java.sql.Clob searchstr,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método de posición se especifica mediante el método Position en la interfaz java. SQL. CLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método position especifica este método position en la interfaz java.sql.Clob.  
   
 ## <a name="see-also"></a>Consulte también  
- [Position ( &#40;método) SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
+ [Método position &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Clase SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

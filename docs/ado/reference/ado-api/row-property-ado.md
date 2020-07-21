@@ -1,5 +1,5 @@
 ---
-title: Fila (propiedad, ADO) | Microsoft Docs
+title: Row (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,19 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9752510e51f8486f40a16f353b603a8f8e3c7596
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917113"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756226"
 ---
 # <a name="row-property-ado"></a>Propiedad de las filas (ADO)
-Obtiene o establece OLE DB **fila** objeto desde o en un [Interfaz ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objeto. Cuando usas **put_Row** para establecer un **fila** objeto, una fila se convierte en ADO **registro** objeto.  
+Obtiene o establece un objeto de **fila** de OLE DB desde o en un objeto de [interfaz ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Cuando se usa **put_Row** para establecer un objeto **Row** , una fila se convierte en un objeto **Record** de ADO.  
   
-## <a name="readwritesyntax"></a>Read/write.Syntax  
+## <a name="readwritesyntax"></a>Lectura/escritura. Sintáctica  
   
 ```  
 HRESULT get_Row([out, retval] IUnknown** ppRow);  
@@ -38,10 +38,10 @@ HRESULT put_Row([in] IUnknown* pRow);
   
 ## <a name="parameters"></a>Parámetros  
  *ppRow*  
- Puntero a OLE DB **fila** objeto.  
+ Puntero a un objeto de **fila** OLE DB.  
   
  *PRow*  
- OLE DB **fila** objeto.  
+ Objeto de **fila** de OLE DB.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  

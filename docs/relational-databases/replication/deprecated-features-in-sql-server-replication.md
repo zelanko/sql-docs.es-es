@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 039f8dcdf408d269684b513bf01539692b38444d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9e95b509ceac733ce540ecac067d78a757697af1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768632"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653839"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Características que ya no se utilizan en la replicación de SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Este tema describe las características de replicación desusadas que siguen estando disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
-## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Elementos desusados en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="items-deprecated-in-sssql15"></a>Elementos desusados en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 |Característica|Descripción|  
 |-------------|-----------------|  

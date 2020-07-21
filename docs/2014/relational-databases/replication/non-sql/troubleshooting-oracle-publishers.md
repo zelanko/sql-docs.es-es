@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4097b2c185b6dde307cd9b295d3b5b32f5797649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021906"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065833"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
   En este tema se describen varios problemas que pueden surgir al configurar y utilizar un publicador de Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Aparece un error referente al cliente Oracle y al software de red  
- La cuenta con la que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor debe tener permisos de lectura y escritura para el directorio (y todos los subdirectorios) en el que está instalado el software de red del cliente Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  
+ La cuenta con la que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor debe tener permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que está instalado el software de red del cliente de Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  
   
  "Error de conexión al servidor con [Proveedor Microsoft OLE DB para Oracle]. No se encontraron los componentes de cliente y de red de Oracle. Oracle Corporation proporciona estos componentes, que forman parte de la instalación del software de cliente de Oracle, versión 7.3.3 o posterior. El proveedor no funcionará hasta que se instalen estos componentes."  
   
@@ -66,9 +65,9 @@ ms.locfileid: "63021906"
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>El publicador de Oracle está asociado con otro distribuidor  
  Un publicador de Oracle solamente se puede asociar con un distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si se asocia un distribuidor distinto con el publicador de Oracle, deberá quitarse para poder usar otro distribuidor. Si no se quita primero el distribuidor, aparecerá uno de los siguientes mensajes de error:  
   
--   "La instancia del servidor de Oracle "\<*NombrePublicadorOracle*>" se ha configurado previamente para usar "\<*NombreDistribuidorSQLServer*>" como distribuidor. Para empezar a usar "\<*NewSQLServerDistributorName*>" como distribuidor, debe quitar la configuración de replicación actual de la instancia del servidor de Oracle, lo que eliminará todas las publicaciones existentes en esa instancia del servidor".  
+-   "La instancia del servidor de Oracle ' ' se ha \<*OraclePublisherName*> configurado previamente para utilizar ' \<*SQLServerDistributorName*> ' como distribuidor. Para empezar a usar ' \<*NewSQLServerDistributorName*> ' como distribuidor, debe quitar la configuración de replicación actual de la instancia del servidor de Oracle, lo que eliminará todas las publicaciones en esa instancia del servidor. "  
   
--   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>. *\<NombreBaseDatosDistribución>* ". Quite el publicador o el sinónimo público " *\<NombreSinónimo>* " para volver a crearlo".  
+-   "El servidor de Oracle ' \<*OracleServerName*> ' ya está definido como publicador ' \<*OraclePublisherName*> ' en el distribuidor ' \<*SQLServerDistributorName*> . *\<DistributionDatabaseName>* '. Quite el publicador o quite el sinónimo público ' *\<SynonymName>* ' para volver a crearlo ".  
   
  Al quitar un publicador de Oracle, los objetos de replicación de la base de datos de Oracle se limpian automáticamente. Sin embargo, en algunos casos es necesario limpiar manualmente los objetos de replicación de Oracle. Para limpiar manualmente los objetos de replicación de Oracle creados por la replicación:  
   
@@ -81,14 +80,14 @@ ms.locfileid: "63021906"
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Aparece el error 21663 de SQL Server referente a la falta de una clave principal  
  Los artículos de las publicaciones transaccionales deben tener una clave principal válida. Si no tienen una clave principal válida, aparecerá el siguiente mensaje de error cuando intente agregar un artículo:  
   
- "No valid primary key found for source table [\<*TableOwner*>].[\<*TableName*>]" (No se encuentra ninguna clave principal válida para la tabla de origen [<PropietarioTabla>].[<NombreTabla>])  
+ "No se encontró ninguna clave principal válida para la tabla de origen [ \<*TableOwner*> ]. [ \<*TableName*> ]"  
   
  Para obtener información acerca de los requisitos para las claves principales, vea la sección sobre índices y restricciones únicos en el tema [Design Considerations and Limitations for Oracle Publishers](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Aparece el error 21642 de SQL Server referente a un inicio de sesión duplicado en el servidor vinculado  
  Al configurar inicialmente el publicador de Oracle, se crea una entrada de servidor vinculado para la conexión entre el publicador y el distribuidor. El servidor vinculado tiene el mismo nombre que el servicio TNS de Oracle. Si intenta crear un servidor vinculado con el mismo nombre, aparecerá el siguiente mensaje de error:  
   
- "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre " *\<NombreServidorVinculado>* ". Quítelo o elija otro nombre de publicador."  
+ "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre ' *\<LinkedServerName>* '. Quítelo o elija otro nombre de publicador."  
   
  Este error puede aparecer si intenta crear el servidor vinculado directamente o si quitó anteriormente la relación entre el publicador de Oracle y el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y está intentando volver a configurarla. Si recibe este error al intentar volver a configurar el publicador, quite el servidor vinculado con [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -133,7 +132,7 @@ ms.locfileid: "63021906"
   
  Si el proveedor Oracle OLEDB está instalado, asegúrese de que está registrado. Para registrar el archivo DLL del proveedor, ejecute el siguiente comando desde el directorio en que esté instalado el archivo DLL y, a continuación, detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  `regsvr32 OraOLEDB10.dll` o bien `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll` o `regsvr32 OraOLEDB.dll`.  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>Aparece el error 21626 o 21627 de SQL Server  
  Para comprobar que el entorno de la publicación de Oracle está configurado correctamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trata de conectarse al publicador de Oracle con las credenciales de inicio de sesión especificadas durante la configuración. Si el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede conectar al publicador de Oracle, se muestra el siguiente mensaje de error:  
@@ -155,7 +154,7 @@ ms.locfileid: "63021906"
   
 2.  En el cuadro de diálogo **Ejecutar** , escriba **regedit**y, a continuación, haga clic en **Aceptar**.  
   
-3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<nombreInstancia>* \Providers.  
+3.  Vaya a HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Microsoft SQL Server \\ *\<InstanceName>* \Providers.  
   
      Se debe incluir en Proveedores una carpeta denominada OraOLEDB.Oracle. En esta carpeta debe encontrarse el nombre de valor DWORD **AllowInProcess**, con un valor de **1**.  
   
@@ -239,13 +238,13 @@ ms.locfileid: "63021906"
   
 3.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** , desactive la casilla del publicador de Oracle.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
  **Para quitar un publicador de Oracle (Transact-SQL)**  
   
--   Ejecute **sp_dropdistpublisher**. Para más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql).  
+-   Ejecute **sp_dropdistpublisher**. Para obtener más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](oracle-publishing-overview.md)  
   

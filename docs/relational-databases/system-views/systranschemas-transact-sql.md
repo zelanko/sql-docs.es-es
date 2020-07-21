@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3ba5516920cee6cb2f6f18f0120844e4320afe5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094756"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881191"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **systranschemas** tabla se utiliza para realizar un seguimiento de cambios de esquema en los artículos publicados en publicaciones de instantáneas y transaccionales. Esta tabla se almacena en las bases de datos de publicaciones y suscripciones.  
+  La tabla **systranschemas** se usa para realizar el seguimiento de los cambios de esquema en los artículos publicados en publicaciones transaccionales y de instantáneas. Esta tabla se almacena en las bases de datos de publicaciones y suscripciones.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|Identifica el artículo de la tabla en la que se produjo el cambio de esquema.|  
-|**startlsn**|**binario**|Valor LSN al inicio del cambio de esquema.|  
-|**endlsn**|**binario**|Valor LSN al final del cambio de esquema.|  
-|**typeid**|**int**|Tipo de cambio de esquema.|  
+|**LSN**|**binary**|Valor LSN al inicio del cambio de esquema.|  
+|**endlsn**|**binary**|Valor LSN al final del cambio de esquema.|  
+|**TypeId**|**int**|Tipo de cambio de esquema.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 71582dbdccc331ec4b43d87071952879f304395c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292272"
 ---
 # <a name="parsing-data"></a>Analizar datos
@@ -28,7 +28,7 @@ ms.locfileid: "71292272"
   Los flujos de datos de paquetes extraen y cargan datos entre almacenes de datos heterogéneos, que pueden usar diversos tipos de datos estándar y personalizados. En un flujo de datos, los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] realizan el trabajo de extraer datos, analizar datos de cadenas y convertir datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden analizar datos para convertirlos en un tipo de datos diferentes, o bien crear copias de columnas con diferentes tipos de datos. Las expresiones usadas en los componentes también pueden convertir argumentos y operandos en diferentes tipos de datos. Finalmente, cuando se cargan los datos en un almacén de datos, el destino puede analizar los datos para convertirlos en un tipo de datos que usa el destino. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="two-types-of-parsing"></a>Dos tipos de análisis  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos tipos de análisis para convertir los datos: análisis rápido y análisis estándar.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos tipos de análisis para convertir los datos: el análisis rápido y el análisis estándar.  
   
 -   El análisis rápido es un conjunto rápido y simple de rutinas de análisis que no admite conversiones de tipos de datos específicos de la configuración regional sino solo los formatos de fecha y hora usados con mayor frecuencia. 
   
@@ -94,7 +94,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Los formatos básico y extendido para un año de cuatro dígitos, un mes de dos dígitos y un día de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
     |YYYY-MM|Formatos básico y extendido de precisión reducida para un año de cuatro dígitos y un mes de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
-    |YYYY|El formato de precisión reducida es un año de cuatro dígitos.|  
+    |AAAA|El formato de precisión reducida es un año de cuatro dígitos.|  
   
  El análisis rápido no admite los siguientes formatos para datos de fecha:  
   
@@ -112,7 +112,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
   
  Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-### <a name="time-data-type"></a>Tipo de datos de hora
+### <a name="time-data-type"></a>Tipo de datos Time
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de hora:  
   
 -   Formatos de hora con espacios en blanco iniciales. Por ejemplo, el valor " 10:24" es válido.  
@@ -183,7 +183,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
 |Segundos|Agregar 00.|  
 |Minutos|Agregar 00:00.|  
 |Hour|Agregar 00:00:00.|  
-|Day|Agregar 01 para el día del mes.|  
+|Día|Agregar 01 para el día del mes.|  
 |Month|Agregar 01 para el mes del año.|  
   
  Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -199,10 +199,10 @@ La propiedad de análisis rápido debe configurarse para cada columna del origen
   
 4.  En la ventana Propiedades, expanda el nodo **Propiedades personalizadas** y establezca la propiedad **FastParse** en **True**.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
 
 ## <a name="standard-parse"></a>Standard Parse
-El análisis estándar es un conjunto de rutinas de análisis dependientes de la configuración regional y que admiten todas las conversiones de tipo de datos proporcionadas por las API de conversión de tipo de datos de automatización disponibles en Oleaut32.dll y Ole2dsip.dll. El análisis estándar es equivalente a las API de análisis de OLE DB.  
+El análisis estándar es un conjunto de rutinas de análisis dependientes de la configuración regional y que admiten todas las conversiones de tipo de datos proporcionadas por las API de conversión de tipo de datos de Automation disponibles en Oleaut32.dll y Ole2dsip.dll. El análisis estándar es equivalente a las API de análisis de OLE DB.  
   
  El análisis estándar proporciona conversión de tipo de datos internacionales y se debe usar si el análisis rápido no admite el formato de datos. Para obtener más información sobre la conversión API de los tipos de automatización de datos, vea "Los tipos de conversión de datos API" en la [biblioteca MSDN](https://go.microsoft.com/fwlink/?LinkId=79427). 
  

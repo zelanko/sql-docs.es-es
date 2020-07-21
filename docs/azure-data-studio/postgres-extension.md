@@ -1,21 +1,20 @@
 ---
 title: Extensión de PostgreSQL (versión preliminar)
-titleSuffix: Azure Data Studio
 description: Extensión PostgreSQL (versión preliminar) para Azure Data Studio
 ms.custom: seodec18
 ms.date: 03/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 2ecdd3cb918013a4ae26869679576bafd003756e
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5c5c12a45ee49456ff0b4742e258ee5ad2936600
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735289"
 ---
 # <a name="postgresql-extension-preview"></a>Extensión de PostgreSQL (versión preliminar)
 

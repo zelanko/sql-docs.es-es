@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ba62b4908c73b018ae4cdda1a9b2bda3098f1ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 108331bfdff6734b7f5a8d64a4983f2c54490ec5
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281767"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74947121"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implementar un proyecto de SSIS con PowerShell
 
@@ -24,7 +24,7 @@ En este inicio rápido se muestra cómo usar un script de PowerShell para conect
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
+Un servidor de Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -32,7 +32,7 @@ Puede usar la información que aparece en este inicio rápido para implementar u
 
 -   SQL Server en Windows.
 
--   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
@@ -46,6 +46,10 @@ Para implementar el proyecto en Azure SQL Database, debe obtener la información
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 5. Haga clic en **Mostrar las cadenas de conexión de la base de datos**.
 6. Revise la cadena de conexión **ADO.NET** completa.
+
+## <a name="supported-authentication-method"></a>Método de autenticación compatible
+
+Consulte [Métodos de autenticación para la implementación](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="ssis-powershell-provider"></a>Proveedor PowerShell de SSIS
 Proporcione los valores adecuados para las variables en la parte superior del script siguiente y, a continuación, ejecute el script para implementar el proyecto de SSIS.
@@ -123,11 +127,11 @@ Write-Host "Done."
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de implementar un paquete.
     - [Implementar un paquete SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Implementar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md) [Implementar un paquete SSIS con Transact-SQL (SSMS)]
     - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md) [Implementar un paquete SSIS con Transact-SQL (VSCode)]
-    - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-deploy-cmdline.md)
-    - [Implementar un paquete SSIS con C#](./ssis-quickstart-deploy-dotnet.md) 
-- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para obtener más información, vea los artículos siguientes:
+    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md) (Implementar un paquete SSIS desde el símbolo del sistema)
+    - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) (Implementar un paquete SSIS con C#) 
+- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para más información, consulte los siguientes artículos:
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

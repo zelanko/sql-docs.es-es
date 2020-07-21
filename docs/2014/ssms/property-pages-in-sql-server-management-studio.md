@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fae6a07fbaa2a259fcca5c3807094b31e0d52d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058489"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propiedades de SQL Server Management Studio
   Los cuadros de diálogo de las páginas de propiedades de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] utilizan un formato común para mostrar la información con categorías que se expanden y se contraen. Los campos que aparecen dependen de la propiedad concreta. Las propiedades atenuadas son de solo lectura. Muy cerca de la parte superior de cada página de propiedades se encuentran los botones Por categorías y Alfabético.  

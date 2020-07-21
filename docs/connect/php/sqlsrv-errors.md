@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sqlsrv_errors
 - errors and warnings
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08879880e93307a496969b79c3aa05144f7aef62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015063"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928216"
 ---
-# <a name="sqlsrverrors"></a>sqlsrv_errors
+# <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Devuelve información ampliada de las advertencias o los errores de la última operación de **sqlsrv** realizada.  
@@ -55,9 +55,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-*$errorsAndOrWarnings*[OPCIONAL]: constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
+*$errorsAndOrWarnings*[OPTIONAL]: Una constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Se devuelven los errores y las advertencias generados en la última llamada a una función de **sqlsrv** .|  
 |SQLSRV_ERR_ERRORS|Se devuelven los errores generados en la última llamada a una función de **sqlsrv** .|  
@@ -68,9 +68,9 @@ Si no se especifica ningún valor de parámetro, se devuelven los errores y las 
 ## <a name="return-value"></a>Valor devuelto  
 Una **matriz** de matrices, o bien el valor **Null**. Cada **matriz** de la **matriz** devuelta contiene tres pares clave-valor. En la siguiente tabla se muestra cada una de las claves con su descripción:  
   
-|Key|Descripción|  
+|Clave|Descripción|  
 |-------|---------------|  
-|SQLSTATE|En los errores que se originan desde el controlador ODBC, el valor de SQLSTATE que devuelve ODBC. Para obtener información sobre los valores de SQLSTATE para ODBC, consulte los [códigos de error ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para los errores que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de IMSSP.<br /><br />Para las advertencias que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de 01SSP.|  
+|SQLSTATE|En los errores que se originan desde el controlador ODBC, el valor de SQLSTATE que devuelve ODBC. Para obtener información sobre los valores de SQLSTATE para ODBC, vea [Códigos de error ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para los errores que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de IMSSP.<br /><br />Para las advertencias que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de 01SSP.|  
 |código|Para los errores que se originan desde SQL Server, el código de error de SQL Server nativo.<br /><br />Para los errores que se originan desde el controlador ODBC, el código de error que devuelve ODBC.<br /><br />Para los errores que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], el código de error de dichos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Para obtener más información, consulte [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Descripción del error.|  
   

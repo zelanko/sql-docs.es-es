@@ -1,5 +1,5 @@
 ---
-title: Especificar una versión como última versión | Microsoft Docs
+title: Especifique una versión como la versión más reciente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773481"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928886"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Especificar una versión como última versión
   Al proteger un archivo en el control de código fuente, la versión protegida se convierte en la última; los usuarios que desprotegen o recuperan la última versión reciben copias locales del elemento protegido más recientemente.  
@@ -28,39 +27,39 @@ ms.locfileid: "62773481"
   
  Para designar la última versión puede:  
   
--   **Fijar una versión**. Al fijar una versión de un archivo, las versiones más recientes que la fijada no se eliminan. Además, es posible liberar un archivo que se ha fijado anteriormente. Al hacer esto, la versión del archivo que se ha protegido más recientemente se convierte en la última. No obstante, no es posible desproteger un archivo fijado.  
+-   **Anclar una versión**. Al fijar una versión de un archivo, las versiones más recientes que la fijada no se eliminan. Además, es posible liberar un archivo que se ha fijado anteriormente. Al hacer esto, la versión del archivo que se ha protegido más recientemente se convierte en la última. No obstante, no es posible desproteger un archivo fijado.  
   
 -   **Revertir a una versión especificada**. Al revertir a una versión, todas las versiones posteriores se eliminan del control de código fuente. A continuación, se puede desproteger la última versión que queda.  
   
 ### <a name="to-pin-a-version"></a>Para fijar una versión  
   
-1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], abra la solución.  
+1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , abra la solución.  
   
 2.  En el Explorador de soluciones, seleccione el archivo que desea especificar como última versión.  
   
-3.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **ViewHistory**.  
+3.  En el menú **archivo** , seleccione **control de código fuente** y haga clic en **ViewHistory**.  
   
-4.  En el **historial de** \<archivo > cuadro de diálogo, seleccione la versión que desea especificar como última y haga clic en **Pin**.  
+4.  En el cuadro **de diálogo historial de** \<file> , seleccione la versión que desea especificar como última y haga clic en **anclar**.  
   
      Aparece un símbolo junto a la versión seleccionada que indica que ésta es la versión actual del archivo. Si tiene cargada una versión distinta en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], se le pedirá que vuelva a cargar el archivo.  
   
 ### <a name="to-roll-back-to-a-version"></a>Para revertir a una versión  
   
-1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], abra la solución.  
+1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , abra la solución.  
   
 2.  En el Explorador de soluciones, seleccione el elemento que desea especificar como última versión.  
   
-3.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **historial**.  
+3.  En el menú **archivo** , seleccione **control de código fuente** y haga clic en **historial**.  
   
-4.  En el **opciones del historial** cuadro de diálogo, haga clic en **Aceptar** para mostrar el **historial de archivo** cuadro de diálogo.  
+4.  En el cuadro de diálogo **Opciones de historial** , haga clic en **Aceptar** para mostrar el cuadro **de diálogo historial del archivo** .  
   
-5.  En el **historial de archivo** , seleccione la versión que desea especificar como la versión más reciente y haga clic en **reversión**.  
+5.  En el cuadro **historial de archivo** , seleccione la versión que desea especificar como última versión y haga clic en **revertir**.  
   
      Aparece un mensaje diciendo que todas las versiones siguientes a la seleccionada serán eliminadas.  
   
-6.  Haga clic en **Sí** para revertir a la versión seleccionada.  
+6.  Haga clic en **sí** para revertir a la versión seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar protecciones](../../2014/database-engine/manage-checkins.md)   
  [Proteger archivos](../../2014/database-engine/check-in-files.md)  
   

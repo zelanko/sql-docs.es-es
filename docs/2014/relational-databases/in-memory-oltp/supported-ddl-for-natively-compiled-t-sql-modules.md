@@ -1,5 +1,5 @@
 ---
-title: Admite construcciones en procedimientos almacenados compilados de forma nativa | Microsoft Docs
+title: Construcciones admitidas en procedimientos almacenados compilados de forma nativa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ba83dbb706b674581a35d5927639208adc061122
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62467879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025654"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
   En este tema se enumeran las construcciones admitidas en procedimientos almacenados compilados de forma nativa.  
@@ -40,11 +39,11 @@ ms.locfileid: "62467879"
 ## <a name="security"></a>Seguridad  
  Se admite lo siguiente:  
   
--   Para conocer los procedimientos: EXECUTE AS OWNER, SELF y usuario.  
+-   Para procedimientos: EXECUTE AS OWNER, SELF y usuario.  
   
 -   GRANT (conceda) y DENY (deniegue) permisos a las tablas y los procedimientos.  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Consulte también  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

@@ -1,21 +1,20 @@
 ---
 title: 'Tutorial: Compilación de un widget de información personalizada'
-titleSuffix: Azure Data Studio
 description: En este tutorial se muestra cómo crear widgets de información personalizada y agregarlos a los paneles de la base de datos y el servidor en Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 14f3e502c3370056515f17915a370473d10b3b2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661142"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Compilación de un widget de información personalizada
 
@@ -28,12 +27,12 @@ Durante este tutorial aprenderá a realizar lo siguiente:
 > * Adición del gráfico a un panel del servidor o de la base de datos
 > * Adición de detalles al widget de información personalizada
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
-En este tutorial se requiere la instancia de SQL Server o Azure SQL Database *TutorialDB*. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
-- [Conectarse y consultar SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Conectarse y consultar Azure SQL Database con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Ejecución de su propia consulta y visualización del resultado en una vista de gráfico
@@ -163,7 +162,7 @@ En este paso, ejecute un script SQL para consultar las sesiones activas actuales
     ![Información de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-En este tutorial ha aprendido a realizar lo siguiente:
+En este tutorial, ha aprendido a:
 > [!div class="checklist"]
 > * Ejecución de su propia consulta y su visualización en un gráfico
 > * Compilación de un widget de información personalizada a partir del gráfico

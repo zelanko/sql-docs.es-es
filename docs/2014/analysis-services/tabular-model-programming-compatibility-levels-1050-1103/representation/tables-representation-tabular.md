@@ -1,5 +1,5 @@
 ---
-title: Las tablas (Tabular) de representación | Microsoft Docs
+title: Representación de tablas (tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46ede058446778ad7e0d1a980bdd93bf5d72b966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939996"
 ---
 # <a name="tables-representation-tabular"></a>Representación de tablas (tabular)
   En los modelos tabulares, una tabla es la representación base de los datos.  

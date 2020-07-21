@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902845"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392763"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea un objeto denominado valor predeterminado. Cuando se enlaza a una columna o a un tipo de datos de alias, un valor predeterminado especifica un valor que debe insertarse en la columna a la que está enlazado el objeto, o en todas las columnas, en el caso de un tipo de datos de alias, si no se proporciona explícitamente un valor durante la inserción.  
   
@@ -40,13 +40,15 @@ Crea un objeto denominado valor predeterminado. Cuando se enlaza a una columna o
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE DEFAULT [ schema_name . ] default_name   
 AS constant_expression [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *schema_name*  
  El nombre del esquema al que pertenece el valor predeterminado.  
   
@@ -56,7 +58,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene solo valores constantes (no puede contener el nombre de ninguna columna u otros objetos de base de datos). Puede utilizar cualquier constante, función integrada o expresión matemática, excepto las que contienen tipos de datos de alias. No es posible utilizar funciones definidas por el usuario. Incluya las constantes de caracteres y fechas entre comillas simples ( **'** ); las constantes de moneda, de enteros y de coma flotante no necesitan comillas. Los datos binarios deben precederse de 0x y los datos de moneda deben precederse de un signo de dólar ($). El valor predeterminado debe ser compatible con el tipo de datos de la columna.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Solo puede crear un nombre predeterminado en la base de datos actual. En una base de datos, los nombres predeterminados deben ser únicos para cada esquema. Al crear un valor predeterminado, use **sp_bindefault** para enlazarlo a una columna o a un tipo de datos de alias.  
   
  Si el valor predeterminado no es compatible con la columna a la que está enlazado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un mensaje de error al intentar insertar el valor predeterminado. Por ejemplo, N/A no se puede usar como valor predeterminado para una columna **numérica**.  
@@ -79,8 +81,8 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que 
   
 |Definición de columna|Sin entrada, sin valor predeterminado|Sin entrada, valor predeterminado|Entrada NULL, sin valor predeterminado|Entrada NULL, valor predeterminado|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
-|**NULL**|NULL|predeterminados|NULL|NULL|  
-|**NOT NULL**|Error|predeterminados|error|error|  
+|**NULL**|NULL|default|NULL|NULL|  
+|**NOT NULL**|Error|default|error|error|  
   
  Para cambiar el nombre de un valor predeterminado, use **sp_rename**. Para obtener un informe sobre un valor predeterminado, use **sp_help**.  
   

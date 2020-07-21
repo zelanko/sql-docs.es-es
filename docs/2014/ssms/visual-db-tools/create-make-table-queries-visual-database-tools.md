@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f44097ef41a4dc1a115dbdad9f9ff7940a1c2880
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058145"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Crear consultas de creación de tabla (Visual Database Tools)
   Puede copiar filas en una nueva tabla mediante una consulta de creación de tabla, que sirve para crear subconjuntos de datos con los que trabajar o para copiar el contenido de una tabla de una base de datos a otra. La consulta de creación de tabla es similar a la consulta de inserción de resultados, con la diferencia de que en la primera se crea una nueva tabla en la que se copian las filas.  
@@ -65,7 +64,7 @@ WHERE country = 'UK'
   
      Para crear una tabla de destino en otra base de datos, especifique un nombre de tabla completo, incluido el nombre de la base de datos de destino, el propietario (si es necesario) y el nombre de la tabla.  
   
-4.  Defina las columnas que se van a copiar agregándolas a la consulta. Para detalles, consulte [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md). Las columnas se copian solo si se agregan a la consulta. Para copiar filas enteras, elija  **\* (todas las columnas)** .  
+4.  Defina las columnas que se van a copiar agregándolas a la consulta. Para detalles, consulte [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md). Las columnas se copian solo si se agregan a la consulta. Para copiar filas enteras, elija ** \* (todas las columnas)**.  
   
      El Diseñador de consultas y vistas agrega las columnas elegidas a la columna **Columna** del panel Criterios.  
   
@@ -82,8 +81,8 @@ WHERE country = 'UK'
   
  Cuando se ejecuta una consulta de creación de tabla, los resultados no se incluyen en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Tipos de consultas (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   
   

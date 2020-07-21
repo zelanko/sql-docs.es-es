@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed7c88520657d822da288a7b66c1f99f2a5bfa50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 75c4aea03dccb50dda43116323eb1d24dfa8f2ab
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982609"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921389"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>Método getLabel (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

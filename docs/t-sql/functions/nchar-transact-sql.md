@@ -16,18 +16,18 @@ helpviewer_keywords:
 - NCHAR function
 - Unicode [SQL Server], NCHAR function
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e2994f4b141a9c162101e3bbfb2fe25f0710d89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130158"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005080"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve el carácter Unicode correspondiente al código entero dado, tal como se define en el estándar Unicode.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68130158"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 NCHAR ( integer_expression )  
 ```  
   
@@ -45,7 +45,7 @@ NCHAR ( integer_expression )
   
  Cuando la intercalación de la base de datos admite la marca SC, se trata de un entero positivo de 0 a 1114111 (de 0 a 0x10FFFF). Si se especifica un valor fuera de este rango, se devuelve NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nchar(1)** cuando la intercalación de la base de datos predeterminada no admite caracteres complementarios.  
   
  **nvarchar(2)** cuando la intercalación de la base de datos predeterminada admite caracteres complementarios.  
@@ -54,7 +54,7 @@ NCHAR ( integer_expression )
   
 ```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
-DECLARE @d nvarchar(10) = N'𣅿';
+DECLARE @d NVARCHAR(10) = N'𣅿';
 -- Old style method.  
 SELECT NCHAR(0xD84C) + NCHAR(0xDD7F);   
   
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
  En el siguiente ejemplo se utilizan las funciones `UNICODE` y `NCHAR` para imprimir el valor `UNICODE` y `NCHAR` (carácter Unicode) del segundo carácter de la cadena de caracteres `København`, y para imprimir el segundo carácter real, `ø`.  
   
 ```sql  
-DECLARE @nstring nchar(8);  
+DECLARE @nstring NCHAR(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
    NCHAR(UNICODE(SUBSTRING(@nstring, 2, 1)));  
@@ -93,7 +93,7 @@ GO
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  
-DECLARE @position int, @nstring nchar(9);  
+DECLARE @position INT, @nstring NCHAR(9);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
 SET @position = 1;  

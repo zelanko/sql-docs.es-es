@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5cd144cf02dcfacf0cfca3a3e4623809266250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038345"
 ---
 # <a name="view-policies-dialog-box"></a>Cuadro de diálogo Ver directivas
   Utilice este cuadro de diálogo para ver las directivas que están vigentes para este destino. Este cuadro de diálogo muestra directivas relevantes, sus categorías de directiva e información sobre las directivas.  
@@ -41,13 +40,13 @@ ms.locfileid: "62676846"
  **Historial**  
  Haga clic en el hipervínculo para mostrar el informe de historial de ejecución.  
   
- **Evaluar**  
+ **Evaluación**  
  Haga clic en el hipervínculo para abrir el cuadro de diálogo **Evaluar directivas** y ejecutar la directiva.  
   
  **Última ejecución**  
  Fecha y hora en que la directiva se ejecutó por última vez.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

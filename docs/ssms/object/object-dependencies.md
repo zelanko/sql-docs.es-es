@@ -1,6 +1,6 @@
 ---
-title: Dependencias del objeto | Microsoft Docs
-ms.custom: ''
+title: Dependencias del objeto
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264091"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257157"
 ---
 # <a name="object-dependencies"></a>Dependencias del objeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ Algunos objetos de base de datos dependen de otros objetos de base de datos. Por
 Use este cuadro de diálogo para saber qué dependencias existen antes de cambiar o eliminar el objeto seleccionado.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
-**Objetos que dependen del** _\<objeto seleccionado>_  
+**Objetos que dependen de** _\<objeto seleccionado>_  
 Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y que dependen del objeto seleccionado.  
   
-**Objetos de los que** **depende** el _\<objeto seleccionado>_  
+**Objetos de los que** _depende\<_ **objeto seleccionado>**  
 Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y de los que depende el objeto seleccionado.  
   
 **Dependencias**  
-Si se hace clic en **Objetos que dependen de** *<selected object>* , aquí se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en **Objetos de los que**  *<selected object>* **depende**, se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado.  
+Si se hace clic en **Objetos que dependen de** *<selected object>* , aquí se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en **Objetos de los que** *<selected object>* **depende**, se muestra una vista jerárquica objetos de los cuales depende el objeto seleccionado.  
   
 **Nombre**  
 Muestra el nombre del objeto seleccionado en la vista de árbol **Dependencias** anterior.  
@@ -43,7 +43,7 @@ Muestra el nombre del objeto seleccionado en la vista de árbol **Dependencias**
 **Tipo**  
 Muestra el tipo del objeto seleccionado en la vista de árbol **Dependencias** anterior.  
   
-**Fecha de la última sincronización**  
+**Hora de última sincronización**  
 > [!NOTE]  
 > Esta opción solo está disponible en la página **Opciones avanzadas** .  
   
@@ -53,7 +53,7 @@ Especifica la fecha y hora en que se actualizó por última vez la información 
 > [!NOTE]  
 > Esta opción solo está disponible en la página **General** .  
   
-Muestra el tipo de dependencia entre dos objetos. Puede ser uno de los valores siguientes:  
+Muestra el tipo de dependencia entre dos objetos. Puede ser uno de los siguientes:  
   
 -   Dependencia enlazada a esquema  
   

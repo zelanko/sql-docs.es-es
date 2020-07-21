@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 3647994f8593ccbbc535a7d2781758e2b42c653d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006067"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381159"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Modifica las opciones de configuración global del servidor actual en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +36,7 @@ Modifica las opciones de configuración global del servidor actual en [!INCLUDE[
   
 ## <a name="syntax"></a>Sintaxis  
 
-```  
+```syntaxsql
 ALTER SERVER CONFIGURATION  
 SET <optionspec>   
 [;]  
@@ -111,7 +111,10 @@ SET <optionspec>
    }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 **\<process_affinity> ::=**  
   
 PROCESS AFFINITY  
@@ -146,14 +149,14 @@ Es la lista de uno o varios nodos NUMA. Los identificadores del nodo NUMA comien
 DIAGNOSTICS LOG  
 Inicia o detiene el registro de datos de diagnóstico que captura el procedimiento sp_server_diagnostics. Este argumento también establece los parámetros de configuración del registro SQLDIAG como el recuento de sustitución incremental de archivos de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener más información, vea [Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ON  
+ACTIVAR  
 Inicia el registro de datos de diagnóstico de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en la ubicación especificada en la opción de archivo PATH. Este es el argumento predeterminado.  
   
-OFF  
+Apagado  
 Detiene el registro de datos de diagnóstico.  
   
 PATH = { 'os_file_path' | DEFAULT }  
-Ruta de acceso que indica la ubicación de los registros de diagnóstico. La ubicación predeterminada es \<\MSSQL\Log> en la carpeta de instalación de la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Ruta de acceso que indica la ubicación de los registros de diagnóstico. La ubicación predeterminada es \<\MSSQL\Log> en la carpeta de instalación de la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 MAX_SIZE = { 'log_max_size' MB | DEFAULT }  
 Tamaño máximo en megabytes que cada registro de diagnóstico puede alcanzar. El valor predeterminado es 100 MB.  
@@ -177,8 +180,10 @@ Establece el nivel de registro para clústeres de conmutación por error de SQL 
   
 -   2: errores y advertencias  
   
+En escenarios de conmutación por error de recursos, la DLL de recursos de SQL Server puede obtener un archivo de volcado antes de que se produzca una conmutación por error. Esto se aplica a las tecnologías FCI y de grupo de disponibilidad. Cuando el archivo DLL de recurso de SQL Server determina que se ha producido un error en un recurso de SQL Server, la DLL usa la utilidad Sqldumper.exe para obtener un archivo de volcado de memoria del proceso de SQL Server. Para asegurarse de que la utilidad Sqldumper.exe genera correctamente el archivo de volcado de memoria tras la conmutación por error del recurso, debe establecer las tres propiedades siguientes como requisitos previos: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
+
 SQLDUMPEREDUMPFLAGS  
-Determina el tipo de archivos de volcado generados por la utilidad SQLDumper de SQL Server. El valor predeterminado es 0. Para obtener más información, vea el artículo de Knowledgebase sobre la [utilidad SQLDumper de SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Determina el tipo de archivos de volcado generados por la utilidad SQLDumper de SQL Server. El valor predeterminado es 0. Para esta configuración se usan valores decimales, en lugar de hexadecimales. Para el minivolcado use 288, para el minivolcado con memoria indirecta 296 y, para el volcado filtrado, 33024. Para obtener más información, vea el artículo de Knowledgebase sobre la [utilidad SQLDumper de SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
 Ubicación donde la utilidad SQLDumper almacena los archivos de volcado. Para obtener más información, vea el artículo de Knowledgebase sobre la [utilidad SQLDumper de SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
@@ -220,7 +225,7 @@ Para obtener más información, consulte [Cambiar el contexto de clúster de HAD
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ON  
+ACTIVAR  
 Habilita la opción de extensión del grupo de búferes. Esta opción extiende el tamaño del grupo de búferes con almacenamiento permanente. El almacenamiento permanente, como las unidades de estado sólido (SSD), conservan las páginas de datos limpias en el grupo. Para obtener más información sobre esta característica, vea [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md). La extensión del grupo de búferes no está disponible en todas las ediciones de SQL Server. Para obtener más información, consulte [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -231,7 +236,7 @@ Define el tamaño de la memoria caché. La especificación de tamaño predetermi
   
 Desactive BUFFER POOL EXTENSION para poder modificar el tamaño del archivo. Para especificar un tamaño menor que el actual, la instancia de SQL Server debe reiniciarse para reclamar memoria. De lo contrario, el tamaño especificado debe ser igual o mayor que el actual.  
   
-OFF  
+Apagado  
 Deshabilita la opción de extensión del grupo de búferes. Deshabilite la opción de extensión del grupo de búferes antes de modificar los parámetros asociados como el tamaño o el nombre de archivo. Cuando esta opción está deshabilitada, toda la información de configuración relacionada se quita del Registro.  
   
 > [!WARNING]  
@@ -241,10 +246,10 @@ Deshabilita la opción de extensión del grupo de búferes. Deshabilite la opci�
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ON  
+ACTIVAR  
 Permite la creación automática de particiones para dividir grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
   
-OFF  
+Apagado  
 Deshabilita la creación automática de particiones de software de grandes nodos de hardware NUMA en nodos NUMA más pequeños. Para cambiar el valor de ejecución, es necesario reiniciar el motor de base de datos.  
 
 > [!WARNING]
@@ -260,10 +265,10 @@ Deshabilita la creación automática de particiones de software de grandes nodos
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ON <br>
+ACTIVAR <br>
 Habilita todas las características en el nivel de instancia que forman parte de la familia de características de la [base de datos en memoria](../../relational-databases/in-memory-database.md). Esto incluye los [metadatos tempdb optimizados para memoria](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) y el [grupo de búferes híbrido](../../database-engine/configure-windows/hybrid-buffer-pool.md). Es necesario llevar a cabo un reinicio para que surta efecto.
 
-OFF <br>
+Apagado <br>
 Deshabilita todas las características en el nivel de instancia que forman parte de la familia de características de la base de datos en memoria. Es necesario llevar a cabo un reinicio para que surta efecto.
 
 TEMPDB_METADATA = ON | OFF <br>
@@ -294,7 +299,7 @@ La DLL de recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 ## <a name="examples"></a>Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Configuración de una afinidad de proceso](#Affinity)|CPU • NUMANODE • AUTO|  
 |[Configuración de opciones de registro de diagnóstico](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
@@ -304,7 +309,7 @@ La DLL de recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |[Configurar las opciones de base de datos en memoria](#MemoryOptimized)|MEMORY_OPTIMIZED|
 
   
-###  <a name="Affinity"></a> Configuración de la afinidad de proceso  
+###  <a name="setting-process-affinity"></a><a name="Affinity"></a> Configuración de la afinidad de proceso  
 En los ejemplos de esta sección se muestra cómo establecer la afinidad de proceso en las CPU y nodos NUMA. En los ejemplos se supone que el servidor contiene 256 CPU organizadas en cuatro grupos de 16 nodos NUMA cada una. Los subprocesos no se asignan a ningún nodo NUMA ni a ninguna CPU.  
   
 -   Grupo 0: nodos NUMA del 0 al 3, CPU de la 0 a la 63  
@@ -351,7 +356,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  
   
-###  <a name="Diagnostic"></a> Setting diagnostic log options  
+###  <a name="setting-diagnostic-log-options"></a><a name="Diagnostic"></a> Setting diagnostic log options  
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).    
   
@@ -387,7 +392,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-###  <a name="Failover"></a> Configuración de las propiedades de clúster de conmutación por error  
+###  <a name="setting-failover-cluster-properties"></a><a name="Failover"></a> Configuración de las propiedades de clúster de conmutación por error  
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).   
   
@@ -401,7 +406,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-###  <a name="ChangeClusterContextExample"></a> B. Cambiar el contexto de clúster de una réplica de disponibilidad  
+###  <a name="b-changing-the-cluster-context-of-an-availability-replica"></a><a name="ChangeClusterContextExample"></a> B. Cambiar el contexto de clúster de una réplica de disponibilidad  
 En el ejemplo siguiente se cambia el contexto de clúster de HADR de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para especificar el clúster de destino de WSFC, `clus01`, el ejemplo especifica el nombre de objeto completo del clúster, `clus01.xyz.com`.  
   
 ```sql  
@@ -410,7 +415,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
   
 ### <a name="setting-buffer-pool-extension-options"></a>Establecer las opciones de extensión del grupo de búferes  
   
-####  <a name="BufferPoolExtension"></a> A. Establecer la opción de extensión del grupo de búferes  
+####  <a name="a-setting-the-buffer-pool-extension-option"></a><a name="BufferPoolExtension"></a> A. Establecer la opción de extensión del grupo de búferes  
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
@@ -439,7 +444,7 @@ SET BUFFER POOL EXTENSION ON
 GO   
 ```  
 
-### <a name="MemoryOptimized"></a> Configurar las opciones de base de datos en memoria
+### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Configurar las opciones de base de datos en memoria
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 

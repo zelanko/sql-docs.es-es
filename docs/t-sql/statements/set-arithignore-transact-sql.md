@@ -23,15 +23,15 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d2cfda829d014f85f933aaa476507252ca056e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99e72754414674f0617956e6be2ac2711ca0f850
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929107"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999394"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Controla si se devuelven mensajes de error al producirse errores de desbordamiento o división por cero durante una consulta.  
   
@@ -39,19 +39,19 @@ ms.locfileid: "67929107"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET ARITHIGNORE { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La opción SET ARITHIGNORE solo controla si se devuelve un mensaje de error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL en un cálculo en que se invoca un error de desbordamiento o de división por cero con independencia de esta opción. La opción SET ARITHABORT se puede utilizar para determinar si la consulta ha finalizado o no. Esta opción no afecta a los errores producidos al ejecutar las instrucciones INSERT, UPDATE y DELETE.  
   
  Si SET ARITHABORT o SET ARITHIGNORE es OFF y SET ANSI_WARNINGS es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error cuando haya errores de división por cero o desbordamiento.  
@@ -99,7 +99,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo se muestran los errores de división entre cero y de desbordamiento. No se devuelve un mensaje de error relativo a estos errores porque ARITHIGNORE está establecido en OFF.  
   
 ```  

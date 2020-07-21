@@ -1,5 +1,5 @@
 ---
-title: Dar formato al texto en un cuadro de texto (Generador de informes y SSRS) | Microsoft Docs
+title: Formato de texto en un cuadro de texto (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f50e170276a67e819524e5c9e255ac6801a4091c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f7448ee783e1e4a747942ef774a9106de09487fe
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576016"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079960"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Dar formato al texto en un cuadro de texto (Generador de informes y SSRS)
   Puede dar formato por separado a cualquier parte del texto de un cuadro de texto, y usar texto de marcador de posición y texto estático en un mismo cuadro de texto. Esta capacidad de mezclar formatos y agregar texto de marcador de posición permite crear combinaciones de correspondencia o plantillas para el texto del informe. Podrá definir y dar formato a cualquier expresión de forma independiente mediante un marcador de posición.  
@@ -39,7 +39,7 @@ ms.locfileid: "65576016"
   
          **HTML**  : muestra el texto seleccionado como HTML. Si el valor de expresión del marcador de posición contiene etiquetas HTML válidas, estas etiquetas se representarán como HTML. Para más información, vea [Importar HTML en un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md).  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Repita los pasos del 2 al 5 para el texto restante al que desea dar formato.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65576016"
   
      Para obtener más opciones de formato, haga clic con el botón derecho en el texto del marcador de posición y, después, haga clic en **Propiedades del marcador de posición**.  
   
-6.  Haga clic en **Aceptar**. En la vista de diseño de informe, el cuadro de texto debe contener "**Mi campo**: [*FieldName*]", donde *FieldName* es el nombre del campo.  
+6.  Haga clic en **OK**. En la vista de diseño de informe, el cuadro de texto debe contener "**Mi campo**: [*FieldName*]", donde *FieldName* es el nombre del campo.  
   
 7.  Haga clic en **Ejecutar**.  
   

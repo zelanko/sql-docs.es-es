@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985755"
 ---
 # <a name="reporting-services-extension-library"></a>Biblioteca de extensiones de Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "62985755"
  `Microsoft.ReportingServices.ReportRendering`  
  Contiene clases e interfaces que permiten extender las capacidades de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Utilizando los miembros de este espacio de nombres junto con los miembros del espacio de nombres <xref:Microsoft.ReportingServices.Interfaces>, puede construir sus propias extensiones de representación personalizadas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](reporting-services-extensions.md)  
   
   

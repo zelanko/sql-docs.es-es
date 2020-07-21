@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63161909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049904"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "63161909"
   
  [Propiedades del índice (página Filtro)](#Filter)  
   
-##  <a name="General"></a> Propiedades del índice (página General)  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Propiedades del índice (página General)  
  Use la página General para ver o modificar las propiedades del índice para la tabla o vista seleccionada. Las opciones para cada página pueden cambiar según el tipo de índice seleccionado.  
   
  **Nombre de la tabla**  
@@ -52,7 +51,7 @@ ms.locfileid: "63161909"
  Muestra el nombre del índice. Este campo es de solo lectura para un índice existente. Si está creando un nuevo índice, escriba el nombre del índice.  
   
  **Tipo de índice**  
- Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **Nonclustered**, **XML principal**, **XML secundario**, **espacial**, **en clúster almacén de columnas**, o **Nonclustered Columnstore**.  
+ Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **No agrupado**, **XML principal**, **XML secundario**, **Espacial**o **Almacén de columnas en clúster**o **Almacén de columnas no clúster**.  
   
  **Nota** : solo se permite un índice clúster por tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "63161909"
   
  Un índice espacial solo se puede definir en una única columna que contenga un tipo de datos espaciales (una *columna espacial*).  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna que participa en la clave de índice.  
   
  **Criterio de ordenación**  
@@ -92,10 +91,10 @@ ms.locfileid: "63161909"
  **Permitir valores NULL**  
  Muestra si la columna que participa en la clave de índice permite almacenar valores NULL en la columna de vista o tabla.  
   
- **Agregar**  
- Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<nombre de tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
+ **Add (Agregar)**  
+ Agrega una columna a la clave de índice. Seleccione columnas de tabla en el cuadro de diálogo **seleccionar columnas de** *\<table name>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
   
- **Quitar**  
+ **Remove**  
  Quita la columna seleccionada de la clave de índice.  
   
  **Subir**  
@@ -110,13 +109,13 @@ ms.locfileid: "63161909"
  **Columnas incluidas**  
  Incluye columnas sin clave en el índice no clúster. Esta opción le permite superar los límites actuales del índice relativos al tamaño total de una clave de índice y el número máximo de columnas que participan en una clave de índice agregando columnas como columnas sin clave en el nivel hoja del índice no clúster. Para obtener más información, vea [Crear índices con columnas incluidas](create-indexes-with-included-columns.md).  
   
-##  <a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
  Use esta página para agregar columnas a la página General de **Propiedades del índice** cuando cree o modifique un índice.  
   
  **casilla**  
  Seleccione esta opción para agregar columnas.  
   
- **Name**  
+ **Nombre**  
  Nombre de la columna.  
   
  **Tipo de datos**  
@@ -128,10 +127,10 @@ ms.locfileid: "63161909"
  **Identidad**  
  Muestra **Sí** para columnas de identidad y **No** cuando la columna no es una columna de identidad.  
   
- **Allow Nulls**  
+ **Permitir valores NULL**  
  Muestra **Sí** cuando la definición de la tabla permite valores NULL para la columna. Muestra **No** cuando la definición de la tabla no permite valores NULL para la columna.  
   
-##  <a name="Storage"></a> Opciones de la página Almacenamiento  
+##  <a name="storage-page-options"></a><a name="Storage"></a> Opciones de la página Almacenamiento  
  Utilice esta página para ver o modificar las propiedades del grupo de archivos o del esquema de partición para el índice seleccionado. Solo muestra las opciones relacionadas con el tipo de índice.  
   
  **Grupo de archivos**  
@@ -145,7 +144,7 @@ ms.locfileid: "63161909"
   
  La opción de esquema de partición no estará disponible si no hay ningún esquema de partición en la base de datos.  
   
- **Esquema de partición Filestream**  
+ **Esquema de partición de FileStream**  
  Especifica el esquema de partición de los datos FILESTREAM. El esquema de partición debe ser simétrico al esquema especificado en la opción **Esquema de partición** .  
   
  Si no tiene particiones, el campo está en blanco.  
@@ -156,11 +155,11 @@ ms.locfileid: "63161909"
  **Columna de la tabla**  
  Seleccione la tabla o vista que se asignará al esquema de partición.  
   
- **Tipo de datos de la columna**  
+ **Tipo de datos de columna**  
  Muestra información de tipo de datos de la columna.  
   
 > [!NOTE]  
->  Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
+>   Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
   
  **Permitir procesamiento en línea de instrucciones DML al mover el índice**  
  Permite a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster, así como a todos los índices no clúster asociados durante las operaciones de índice. Para más información, consulte [Perform Index Operations Online](perform-index-operations-online.md).  
@@ -174,13 +173,13 @@ ms.locfileid: "63161909"
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  
   
-##  <a name="Spatial"></a> Opciones de índice de la página Espacial  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> Opciones de índice de la página Espacial  
  Use la página **Espacial** para ver o especificar los valores de las propiedades espaciales. Para obtener más información, vea [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
- El panel muestra la **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** las coordenadas del rectángulo. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
+ El panel muestra las coordenadas **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
   
  `X-min`  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
@@ -232,13 +231,13 @@ ms.locfileid: "63161909"
  **Nivel 4**  
  La densidad de la cuadrícula del cuarto nivel.  
   
-##  <a name="Filter"></a> Página Filtro  
+##  <a name="filter-page"></a><a name="Filter"></a> Página Filtro  
  Use esta página para especificar el predicado de filtro para un índice filtrado. Para obtener más información, consulte [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Expresión de filtro**  
- Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Define qué filas de datos para incluir en el índice filtrado. Por ejemplo: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de índice](set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

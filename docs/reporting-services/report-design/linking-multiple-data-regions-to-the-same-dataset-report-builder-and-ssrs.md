@@ -1,5 +1,5 @@
 ---
-title: Vincular varias regiones de datos al mismo conjunto de datos (Generador de informes y SSRS) | Microsoft Docs
+title: Vinculación de varias regiones de datos al mismo conjunto de datos (Generador de informes) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c67ddcb48847d3618c9544c50868b555e263fd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d282c2c84060fb205dc0421d531a5fe23003b77e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580146"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081959"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Vincular varias regiones de datos al mismo conjunto de datos (Generador de informes y SSRS)
 

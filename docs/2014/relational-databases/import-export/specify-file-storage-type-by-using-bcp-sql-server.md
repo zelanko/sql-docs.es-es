@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026489"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
   El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. La información se puede exportar a un archivo de datos como el tipo de tabla de base de datos correspondiente (formato nativo), como su representación en caracteres (formato de caracteres) o como cualquier tipo de datos que admita la conversión implícita (por ejemplo, si copia datos `smallint` como datos `int`). Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
@@ -41,15 +40,15 @@ ms.locfileid: "66011818"
   
     |tipo de almacenamiento en archivo|Escriba en el símbolo del sistema|  
     |-----------------------|-----------------------------|  
-    |`char` <sup>1</sup>|`c`[`har`]|  
+    |`char`<sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text` <sup>2</sup>|`T`[`ext`]|  
+    |`text`<sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`image`<sup>2</sup>|`I`[`mage`]|  
     |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
@@ -73,24 +72,24 @@ ms.locfileid: "66011818"
     |`UDT`(un tipo de datos definido por el usuario)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> la interacción de longitud de campo, longitud de prefijo y terminadores determina la cantidad de espacio de almacenamiento que se asigna en un archivo de datos para los datos que no son caracteres que se exportan como el `char` el tipo de almacenamiento de archivo.  
+     <sup>1</sup> la interacción de longitud de campo, longitud de prefijo y terminadores determina la cantidad de espacio de almacenamiento que se asigna en un archivo de datos para datos que no son de caracteres que se exporta como `char` tipo de almacenamiento de archivos.  
   
-     <sup>2</sup> el `ntext`, `text`, y `image` tipos de datos se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En proyectos de desarrollo nuevos evite el uso de estos tipos de datos y planee la modificación de las aplicaciones que los utilicen actualmente. Use `nvarchar(max)`, `varchar(max)`, y `varbinary(max)` en su lugar.  
+     <sup>2</sup> los `ntext` `text` tipos de datos, y se `image` quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En proyectos de desarrollo nuevos evite el uso de estos tipos de datos y planee la modificación de las aplicaciones que los utilicen actualmente. `nvarchar(max)` `varchar(max)` En su lugar, use, y `varbinary(max)` .  
   
 ## <a name="native-file-storage-types"></a>Tipos de almacenamiento en archivo nativos  
  Cada tipo de almacenamiento en archivo nativo se registra en el archivo de formato como el tipo de datos de archivo host correspondiente.  
   
 |tipo de almacenamiento en archivo|Tipo de datos del archivo host|  
 |-----------------------|-------------------------|  
-|`char` <sup>1</sup>|SQLCHAR|  
+|`char`<sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text` <sup>2</sup>|SQLCHAR|  
-|`ntext` <sup>2</sup>|SQLNCHAR|  
+|`text`<sup>2</sup>|SQLCHAR|  
+|`ntext`<sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image` <sup>2</sup>|SQLBINARY|  
+|`image`<sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -109,23 +108,23 @@ ms.locfileid: "66011818"
 |`timestamp`|SQLBINARY|  
 |UDT (un tipo de datos definido por el usuario)|SQLUDT|  
   
- <sup>1</sup> archivos de datos que se almacenan en el carácter de formato utilizan `char` como el tipo de almacenamiento de archivo. Por consiguiente, para archivos de datos de caracteres, SQLCHAR es el único tipo de datos que aparece en un archivo de formato.  
+ <sup>1</sup> los archivos de datos que se almacenan en formato de caracteres utilizan `char` como tipo de almacenamiento de archivos. Por consiguiente, para archivos de datos de caracteres, SQLCHAR es el único tipo de datos que aparece en un archivo de formato.  
   
- <sup>2</sup> no se puede importar masivamente datos en `text`, `ntext`, y `image` las columnas que tienen valores predeterminados.  
+ <sup>2</sup> no se pueden importar datos de `text` forma masiva en `ntext` columnas, y `image` que tengan valores predeterminados.  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>Consideraciones adicionales para los tipos de almacenamiento de archivos  
  Cuando exporta datos de forma masiva desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un archivo de datos:  
   
 -   Siempre puede especificar `char` como tipo de almacenamiento en archivo.  
   
--   Si especifica un tipo de almacenamiento de archivo que representa una conversión implícita no válida, **bcp** se produce un error; por ejemplo, aunque puede especificar `int` para `smallint` datos, si especifica `smallint` para `int` datos, resultado de errores de desbordamiento.  
+-   Si especifica un tipo de almacenamiento en archivo que representa una conversión implícita no válida, se produce un error en **BCP** ; por ejemplo, aunque puede especificar `int` para los `smallint` datos, si especifica `smallint` para los `int` datos, se producirán errores de desbordamiento.  
   
 -   Si se almacenan tipos de datos que no son de caracteres (por ejemplo, `float`, `money`, `datetime` o `int` como los tipos de bases de datos correspondientes, los datos se escribirán con el formato nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el archivo de datos.  
   
     > [!NOTE]  
     >  Después de que se especifiquen de forma interactiva todos los campos de un comando **bcp**, el comando solicita que guarde sus respuestas para cada campo en un archivo que no tenga el formato XML. Para obtener más información sobre los archivos con formato distinto de XML, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   

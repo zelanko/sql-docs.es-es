@@ -1,9 +1,7 @@
 ---
-title: Cómo convierte FOR JSON tipos de datos de SQL Server en tipos de datos JSON (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2016
+title: Conversión por parte de FOR JSON de tipos de datos de SQL Server en tipos de datos JSON
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,20 +9,22 @@ helpviewer_keywords:
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f45621bc4bf5bd2af93c52257c9ca3128da6a77d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56ef56aa22a67a3286b544211d161568dae5e8d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722294"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>Conversión por parte de FOR JSON de tipos de datos de SQL Server en tipos de datos JSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   La cláusula **FOR JSON** usa las siguientes reglas para convertir tipos de datos SQL Server en tipos JSON en la salida JSON.  
   
-|Categoría|Tipo de datos de SQL Server|Tipo de datos JSON|  
+|Category|Tipos de datos de SQL Server|Tipo de datos JSON|  
 |--------------|--------------|---------------|  
 |Tipos de carácter y cadena|char, nchar, varchar, nvarchar|string|  
 |Tipos numéricos|int, bigint, float, decimal, numeric|number|  

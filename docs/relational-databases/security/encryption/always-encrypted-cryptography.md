@@ -1,7 +1,8 @@
 ---
-title: Criptografía de Always Encrypted | Microsoft Docs
+title: Criptografía de Always Encrypted | Microsoft Docs
+description: Obtenga información sobre los mecanismos y algoritmos de cifrado que extraen el material criptográfico que se usa en la característica Always Encrypted de SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70a18e569b43066bd64fe56593c47980a6894b09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 364dbefa72708910d54977600ecb47942a5d96e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043290"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627561"
 ---
-# <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
   En este documento se describen los mecanismos y algoritmos de cifrado de los que extraer el material criptográfico que se usa en la característica [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Claves, almacenes de claves y algoritmos de cifrado de claves
  En Always Encrypted se usan dos tipos de claves: claves maestras de columna y claves de cifrado de columna.  
   
- Una clave maestra de columna (CMK) es una clave de cifrado de claves (por ejemplo, una clave que se usa para cifrar otras claves) que se encuentra siempre bajo el control del cliente y se almacena en un almacén de claves externo. Un controlador de cliente habilitado para Always Encrypted interactúa con el almacén de claves a través de un proveedor de almacén de CMK, que puede formar parte de la biblioteca de controladores (un proveedor del sistema o de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) o de la aplicación de cliente (un proveedor personalizado). Actualmente, las bibliotecas de controladores cliente incluyen proveedores de almacén de claves de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para el [almacén de certificados de Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) y módulos de seguridad de hardware (HSM).  Para obtener la lista actual de proveedores, vea [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Un desarrollador de aplicaciones puede proporcionar un proveedor personalizado para un almacén arbitrario.  
+ Una clave maestra de columna (CMK) es una clave de cifrado de claves (por ejemplo, una clave que se usa para cifrar otras claves). Asimismo, se encuentra siempre bajo el control del cliente y se almacena en un almacén de claves externo. Un controlador de cliente habilitado para Always Encrypted interactúa con el almacén de claves a través de un proveedor de almacén de CMK, que puede formar parte de la biblioteca de controladores (un proveedor del sistema o de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) o de la aplicación de cliente (un proveedor personalizado). Actualmente, las bibliotecas de controladores cliente incluyen proveedores de almacén de claves de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para el [almacén de certificados de Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) y módulos de seguridad de hardware (HSM). Para obtener la lista actual de proveedores, consulte [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md). Un desarrollador de aplicaciones puede proporcionar un proveedor personalizado para un almacén arbitrario.  
   
  Una clave de cifrado de columna (CEK) es una clave de cifrado de contenido (por ejemplo, una clave que se utiliza para proteger los datos) que está protegida por una CMK.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "68043290"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- En el caso del cifrado determinista, el IV no se genera de forma aleatoria, sino que se deriva a partir del valor de texto no cifrado mediante el siguiente algoritmo:  
+ En el caso del cifrado determinista, el IV no se genera de forma aleatoria, sino que se genera a partir del valor de texto no cifrado mediante el siguiente algoritmo:  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -72,7 +73,7 @@ Como resultado, el cifrado determinista siempre genera el mismo texto cifrado pa
   
  El cifrado determinista resulta más eficaz para ocultar los patrones, en comparación con las alternativas (como el uso de un valor de IV predefinido).  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Paso 2: Cálculo del texto cifrado AES_256_CBC  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>Paso 2: Cálculo del texto cifrado AES_256_CBC  
  Tras calcular el IV, se genera el texto cifrado **AES_256_CBC** :  
   
 ```  
@@ -99,7 +100,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Paso 4: Concatenation  
+### <a name="step-4-concatenation"></a>Paso 4: Concatenación  
  Por último, el valor cifrado se genera mediante la concatenación del byte de la versión del algoritmo, la dirección MAC, el IV y el texto de cifrado AES_256_CBC:  
   
 ```  
@@ -140,7 +141,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |Tipo de datos|Longitud del texto cifrado [bytes]|  
 |---------------|---------------------------------|  
 |**bigint**|65|  
-|**binario**|Varía. Utilice la fórmula anterior.|  
+|**binary**|Varía. Utilice la fórmula anterior.|  
 |**bit**|65|  
 |**char**|Varía. Utilice la fórmula anterior.|  
 |**date**|65|  
@@ -152,7 +153,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**geography**|N/D (no compatible).|  
 |**geometry**|N/D (no compatible).|  
 |**hierarchyid**|N/D (no compatible).|  
-|**imagen**|N/D (no compatible).|  
+|**image**|N/D (no compatible).|  
 |**int**|65|  
 |**money**|65|  
 |**nchar**|Varía. Utilice la fórmula anterior.|  
@@ -165,7 +166,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**smallmoney**|65|  
 |**sql_variant**|N/D (no compatible).|  
 |**sysname**|N/D (no compatible).|  
-|**texto**|N/D (no compatible).|  
+|**text**|N/D (no compatible).|  
 |**time**|65|  
 |**timestamp**<br /><br /> (**rowversion**)|N/D (no compatible).|  
 |**tinyint**|65|  
@@ -175,10 +176,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/D (no compatible).|  
   
 ## <a name="net-reference"></a>Referencia de .NET  
- Para obtener más información sobre los algoritmos que se han visto en este documento, vea los archivos **SqlAeadAes256CbcHmac256Algorithm.cs** y **SqlColumnEncryptionCertificateStoreProvider.cs** en la [referencia de .NET](https://referencesource.microsoft.com/).  
+ Para obtener más información sobre los algoritmos que se han visto en este documento, consulte los archivos **SqlAeadAes256CbcHmac256Algorithm.cs**, **SqlColumnEncryptionCertificateStoreProvider.cs** y **SqlColumnEncryptionCertificateStoreProvider.cs** en la [referencia de .NET](https://referencesource.microsoft.com/).  
   
 ## <a name="see-also"></a>Consulte también  
- [Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;desarrollo de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Desarrollo de aplicaciones con Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

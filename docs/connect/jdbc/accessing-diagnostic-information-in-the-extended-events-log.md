@@ -1,31 +1,32 @@
 ---
-title: Acceso a información de diagnóstico en el registro de eventos extendidos | Microsoft Docs
+title: Acceso a información de diagnóstico en el registro de eventos extendidos
+description: Obtenga información sobre cómo acceder a eventos extendidos en el servidor que guardan relación con eventos de Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f4dfb22027ca448848d7027232e41359ff1664d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028491"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922252"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acceso a información de diagnóstico en el registro de eventos extendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  En [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], el seguimiento ([Seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md)) se ha actualizado para facilitar la correlación de eventos de cliente con la información de diagnóstico, como los errores de conexión, a partir del búfer en anillo de conectividad del servidor y la información de rendimiento de aplicación en el registro de eventos extendidos. Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx).  
+  En [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], el seguimiento ([Seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md)) se ha actualizado para facilitar la correlación de eventos de cliente con la información de diagnóstico, como los errores de conexión, a partir del búfer en anillo de conectividad del servidor y la información de rendimiento de aplicación en el registro de eventos extendidos. Para obtener más información sobre cómo leer el registro de eventos extendidos, vea [Eventos extendidos](../../relational-databases/extended-events/extended-events.md).  
   
 ## <a name="details"></a>Detalles  
- Para las operaciones de conexión, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://go.microsoft.com/fwlink/?LinkId=207752)) y buscar el campo **ClientConnectionID** para obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede buscar el identificador de conexión del cliente en la salida de destino de eventos extendidos si se agrega la acción **client_connection_id** a los eventos de una sesión de eventos extendidos. Si necesita más ayuda de diagnóstico del controlador cliente, puede habilitar el seguimiento, volver a ejecutar el comando de conexión y observar el campo **ClientConnectionID** en el seguimiento.  
+ Para las operaciones de conexión, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) y buscar el campo **ClientConnectionID** para obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede buscar el identificador de conexión del cliente en la salida de destino de eventos extendidos si se agrega la acción **client_connection_id** a los eventos de una sesión de eventos extendidos. Si necesita más ayuda de diagnóstico del controlador cliente, puede habilitar el seguimiento, volver a ejecutar el comando de conexión y observar el campo **ClientConnectionID** en el seguimiento.  
   
- Puede obtener el identificador de conexión de cliente mediante programación con la [interfaz ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). El identificador de conexión también estará presente en cualquier excepción relacionada con la conexión.  
+ Puede obtener el identificador de conexión de cliente mediante programación con [Interfaz ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). El identificador de conexión también estará presente en cualquier excepción relacionada con la conexión.  
   
  Cuando se produzca un error de conexión, el identificador de conexión de cliente en la información de seguimiento de diagnósticos integrados (BID) del servidor y en el búfer en anillo de conectividad puede ayudar a correlacionar las conexiones de cliente con las conexiones en el servidor. Para más información sobre los seguimientos de BID en el servidor, vea [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Seguimiento de acceso de datos). Tenga en cuenta que el artículo de seguimiento del acceso a los datos también contiene información sobre el seguimiento del acceso a los datos que no se aplica a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; vea [Seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md) para obtener información sobre cómo realizar un seguimiento del acceso a los datos mediante [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+[Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

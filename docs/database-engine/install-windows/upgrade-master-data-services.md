@@ -1,5 +1,6 @@
 ---
 title: Actualizar Master Data Services | Microsoft Docs
+description: Descubra los cuatro escenarios para actualizar Microsoft SQL Server Master Data Services. Obtenga información sobre las ubicaciones de archivos y la solución de problemas de las actualizaciones.
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1b9131442160969e7511f42b91ed09a3b4001e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b0ea07dc97ac7573934112dd3969cadb53c26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934826"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900270"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Estos son los escenarios para actualizar Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   
@@ -38,7 +39,7 @@ ms.locfileid: "67934826"
 > -   Los paquetes de implementación de modelos solo se pueden usar en la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se crearon. No puede implementar los paquetes de implementación de modelos que se crearon en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
 > -   Después de actualizar Quality Data Services y Master Data Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ya no funcionará ninguna versión anterior del complemento Master Data Services para Excel. Puede descargar el complemento de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Services para Excel desde [Complemento Master Data Services para Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
-##  <a name="fileLocation"></a> Ubicación del archivo  
+##  <a name="file-location"></a><a name="fileLocation"></a> Ubicación del archivo  
   
 -   En [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)], los archivos se instalan de forma predeterminada en *unidad*:\Archivos de programa\Microsoft SQL Server\140\Master Data Services.  
 
@@ -50,7 +51,7 @@ ms.locfileid: "67934826"
   
 -   En [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], los archivos se instalan de forma predeterminada en *unidad*:\Archivos de programa\Microsoft SQL Server\Master Data Services.  
   
-##  <a name="noengine"></a> Actualizar sin actualización del motor de base de datos  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a> Actualizar sin actualización del motor de base de datos  
  En este escenario se sigue usando [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para hospedar la base de datos de MDS. No obstante, hay que actualizar el esquema de la base de datos de MDS y, posteriormente, crear una aplicación web de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] actual para tener acceso a la base de datos de MDS. Tras la actualización, la aplicación web anterior ya no podrá tener acceso a la base de datos de MDS.  
   
  Puede instalar la versión actual de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] y una versión anterior de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] en el mismo equipo. Los archivos se instalan en distintas ubicaciones, como se muestra en [Ubicación del archivo](#fileLocation).  
@@ -107,7 +108,7 @@ ms.locfileid: "67934826"
   
     3.  Haga clic en **Aplicar**.  
   
-##  <a name="engine"></a> Actualizar con actualización del motor de base de datos  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Actualizar con actualización del motor de base de datos  
  En este escenario, actualizará tanto el motor de base de datos como la aplicación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] desde una versión anterior a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)].  
   
  **Actualizar con actualización del motor de base de datos**  
@@ -118,7 +119,7 @@ ms.locfileid: "67934826"
   
 3.  Complete todos los pasos en [Actualizar sin actualización del motor de base de datos](#noengine) .  
   
-##  <a name="twocomputer"></a> Actualización en un escenario de dos equipos  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Actualización en un escenario de dos equipos  
  Este escenario conlleva que actualice un sistema en el que SQL Server está instalado en dos equipos: uno con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] y otro con una versión anterior de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)].  
   
  Si hay instalada una versión anterior de [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)], hay que seguir usando esa versión anterior para hospedar la base de datos MDS en un equipo. Pero debe actualizar el esquema de la base de datos de MDS y, posteriormente, usar la aplicación web de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] respectivamente para tener acceso a la base de datos de MDS. La aplicación web de la versión anterior ya no podrá tener acceso a la base de datos de MDS.  
@@ -127,7 +128,7 @@ ms.locfileid: "67934826"
   
 -   Complete todos los pasos en [Actualizar sin actualización del motor de base de datos](#noengine).  
   
-##  <a name="restore"></a> Actualización con restauración de una base de datos desde la copia de seguridad  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Actualización con restauración de una base de datos desde la copia de seguridad  
  En este escenario, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] está instalado junto con una versión anterior en el mismo equipo o en dos equipos diferentes. Se hizo una copia de seguridad de una base de datos en una versión anterior a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] o [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)], antes de la actualización, y hay que restaurar la base de datos.  
   
  **Actualizar con restauración de una base de datos desde la copia de seguridad**  
@@ -148,7 +149,7 @@ ms.locfileid: "67934826"
   
 3.  Actualice el esquema de la base de datos de MDS, cree una aplicación web y asocie la nueva aplicación web con la base de datos de MDS actualizada. Para obtener instrucciones, vea los pasos 2-4 en [Actualizar sin actualización del motor de base de datos](#noengine).  
   
-## <a name="troubleshooting"></a>Solucionar problemas  
+## <a name="troubleshooting"></a>Solución de problemas  
  **Problema:** al abrir la aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se muestra un mensaje de error similar a "La versión del cliente no es compatible con la versión de la base de datos".  
   
  **Solución:** este problema se produce cuando una aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager intenta acceder a una base de datos que se ha actualizado a [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Debe usar una aplicación web de [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] en su lugar.  

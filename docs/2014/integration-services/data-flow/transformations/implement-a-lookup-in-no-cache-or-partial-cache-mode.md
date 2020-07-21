@@ -12,15 +12,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 345709e7f43f3d644fbb2c25a56589e4ab60ab89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770745"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430492"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar una búsqueda en modo No hay caché o Caché parcial
   Puede configurar la transformación Búsqueda para utilizar el modo Caché parcial o el modo Sin caché:  
@@ -54,17 +53,17 @@ ms.locfileid: "62770745"
   
 7.  En la página **Conexión** , seleccione un administrador de conexiones en la lista **Administradores de conexión OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md).  
   
-8.  Realice uno de los pasos siguientes:  
+8.  Realice uno de los siguientes pasos:  
   
     -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
     -   Haga clic en **Usar los resultados de una consulta SQL**y, a continuación, genere una consulta en la ventana **Comando SQL** .  
   
-         -o bien-  
+         O bien  
   
          Haga clic en **Generar consulta** para generar una consulta con las herramientas gráficas que proporciona el **Generador de consultas** .  
   
-         -o bien-  
+         O bien  
   
          Haga clic en **Examinar** para importar una instrucción SQL de un archivo.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "62770745"
   
 14. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   
   

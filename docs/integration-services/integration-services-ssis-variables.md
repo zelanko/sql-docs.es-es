@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296160"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "71296160"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
+  Las variables almacenan valores que un paquete [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
   
  Puede usar variables en paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los siguientes fines:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71296160"
 > [!NOTE]  
 >  La única opción configurable en las variables del sistema es especificar si activan un evento cuando cambian de valor.  
   
- **Description**    
+ **Descripción**    
  Especifica la descripción de la variable.  
   
  **EvaluateAsExpression**    
@@ -104,7 +104,7 @@ ms.locfileid: "71296160"
 **RaiseChangedEvent**  
  Cuando la propiedad está establecida en **True**, se produce el evento **OnVariableValueChanged** si el valor de la variable cambia.  
   
- **Solo lectura**  
+ **ReadOnly**  
  Cuando la propiedad está establecida en **False**, la variable es de lectura/escritura.  
   
 **Ámbito**    
@@ -138,7 +138,7 @@ El valor de una variable definida por el usuario puede ser un literal o una expr
 | Boolean | False |
 | Tipos de datos numeric y binary | 0 (cero) |
 | Tipos de datos char y string | (cadena vacía) |
-| Objeto | System.Object |
+| Object | System.Object |
 | | |
 
 Una variable tiene opciones para establecer el valor de la variable y el tipo de datos del valor. Las dos propiedades deben ser compatibles: por ejemplo, el uso de un valor de cadena junto con el tipo de datos de número entero no es válido.  
@@ -160,7 +160,7 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
   
  **Expresiones de restricción de precedencia** Se deben proporcionar valores para su uso en restricciones de precedencia para determinar si se ejecuta el ejecutable restringido. Las expresiones se pueden usar con un resultado de la ejecución (satisfactoria, errónea, terminada), o en lugar de un resultado de la ejecución. Por ejemplo, si la expresión `@varMax > @varMin`se evalúa como **true**, se ejecuta el ejecutable. Para obtener más información, vea [Agregar expresiones a las restricciones de precedencia](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
   
- **Parámetros y códigos de retorno** Se deben proporcionar valores para los parámetros de entrada, o almacenar los valores de los parámetros de salida y los códigos de retorno. Para ello, se asignan las variables a los parámetros y códigos de retorno. Por ejemplo, si se establece la variable `varProductId` en 23 y se ejecuta la instrucción SQL `SELECT * from Production.Product WHERE ProductID = ?`, la consulta recupera el producto cuyo `ProductID` sea 23. Para obtener más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
+ **Parámetros y códigos de retorno** Se deben proporcionar valores para los parámetros de entrada, o almacenar los valores de los parámetros de salida y los códigos de retorno. Para ello, se asignan las variables a los parámetros y códigos de retorno. Por ejemplo, si se establece la variable `varProductId` en 23 y se ejecuta la instrucción SQL `SELECT * from Production.Product WHERE ProductID = ?`, la consulta recupera el producto cuyo `ProductID` sea 23. Para más información, vea [Tarea Ejecutar SQL](../integration-services/control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).  
   
  **Expresiones del bucle For** Se deben proporcionar valores para su uso en las expresiones de inicialización, evaluación y asignación del bucle For. Por ejemplo, si la variable `varCount` es 2 y `varMaxCount` es 10, la expresión de inicialización es `@varCount`, la expresión de evaluación es  `@varCount < @varMaxCount`y la expresión de asignación es `@varCount =@varCount +1`, el bucle se repite 8 veces. Para más información, vea [Contenedor de bucles For](../integration-services/control-flow/for-loop-container.md).  
   
@@ -208,7 +208,7 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
  **Tipo de valor**  
  Seleccione un tipo de datos.  
   
- **Value**  
+ **Valor**  
  Escriba un valor. El valor debe ser compatible con el tipo de datos especificado en la opción **Tipo de valor** .  
   
  **Solo lectura**  
@@ -251,7 +251,7 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
   
 -   Ventana Variables.  
   
--   Ventana Propiedades. En la ventana **Propiedades** se enumeran las propiedades para configurar variables que no están disponibles en la ventana **Variables**: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
+-   Ventana Propiedades. En la ventana **Propiedades** se muestra una lista de propiedades para configurar variables que no están disponibles en la ventana **Variables** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType yIncludeInDebugDump.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también proporciona un conjunto de variables del sistema cuyas propiedades no se pueden actualizar, excepto la propiedad de RaiseChangedEvent.  
@@ -322,6 +322,6 @@ Utilice el cuadro de diálogo **Agregar variable** para especificar las propieda
  Para actualizar dinámicamente las variables, puede crear configuraciones para las variables, implementar las configuraciones con el paquete y después, actualizar los valores de las variables en el archivo de configuración al implementar los paquetes. El paquete utiliza los valores actualizados de las variables en tiempo de ejecución. Para obtener más información, vea [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md).  
 
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar los valores de variables y parámetros en un paquete secundario](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
+ [Uso de los valores de variables y parámetros en un paquete secundario](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Asignar parámetros de consulta a variables en un componente de flujo de datos](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

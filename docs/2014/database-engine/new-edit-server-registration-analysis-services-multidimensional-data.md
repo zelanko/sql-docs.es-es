@@ -1,5 +1,5 @@
 ---
-title: Nuevo o editar el registro del servidor (pestaña General) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Nuevo o editar el registro de servidor (pestaña general) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ca6aed42-8940-4f41-beb7-619e084cd850
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f10267bc90b30f2dbc46622a6e46fa44e1838b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930586"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General) (Analysis Services - Datos multidimensionales)
   Utilice esta pestaña para especificar opciones cuando registre una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "62774919"
  **Autenticación**  
  La autenticación de Windows permite a un usuario conectarse mediante sus credenciales de [!INCLUDE[msCoName](../includes/msconame-md.md)] , como un usuario de Windows o como miembro de un grupo de Windows.  
   
- **User name**  
+ **Nombre de usuario**  
  Esta opción no está disponible en esta versión.  
   
  **Contraseña**  

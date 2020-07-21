@@ -18,22 +18,21 @@ ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 903ea22a3895f142f10ff9026a919067b8e60c95
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MT
+ms.openlocfilehash: ed3e7bb0f116cb24b100d6b4e660bbc11046655a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148573"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012253"
 ---
 # <a name="smo-programming-languages"></a>Lenguajes de programación de SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  En esta sección se describe cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programar objetos de administración de ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] SMO C# ) en visual .net.
+  En esta sección se describe cómo programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de administración de (SMO) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .net.
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Introducción en Visual C&#35; .net](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Proporciona información sobre cómo empezar a escribir un programa de SMO en C# visual .net|  
+|[Introducción en Visual C&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Proporciona información sobre cómo empezar a escribir un programa de SMO en Visual C# .NET.|  
   
- SMO es un ensamblado de .NET. Para programar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, debe elegir un lenguaje que sea compatible con Common Language Runtime. En la referencia de SMO, hay sintaxis para los lenguajes administrados C# como visual .net.  
+ SMO es un ensamblado de .NET. Para programar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, debe elegir un lenguaje que sea compatible con Common Language Runtime. En la referencia de SMO, hay sintaxis para los lenguajes administrados como Visual C# .NET.  
   
   

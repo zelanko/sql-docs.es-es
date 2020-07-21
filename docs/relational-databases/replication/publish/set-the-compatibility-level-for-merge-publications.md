@@ -1,6 +1,7 @@
 ---
-title: Establecer el nivel de compatibilidad para publicaciones de mezcla | Microsoft Docs
-ms.custom: ''
+title: Establecimiento del nivel de compatibilidad para publicaciones de combinación
+description: Obtenga información sobre cómo establecer el nivel de compatibilidad para las publicaciones de combinación mediante SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3506974f6eb1bc22aa6a20833b9205c3507c113c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 90d7522219e39f7ab31b19380a1bcfe6f084b6ab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904899"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882496"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>Establecer el nivel de compatibilidad para publicaciones de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo establecer el nivel de compatibilidad para las publicaciones de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La replicación de mezcla emplea el nivel de compatibilidad de la publicación para determinar qué características pueden usar las publicaciones de una base de datos determinada.  
   
  **En este tema**  
@@ -33,8 +34,8 @@ ms.locfileid: "72904899"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Establezca el nivel de compatibilidad en la página **Tipos de suscriptor** del Asistente para nueva publicación. Para obtener más información acerca de cómo obtener acceso a este asistente, vea [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md). Después de crear una publicación de instantáneas, el nivel de compatibilidad se puede aumentar pero no se puede reducir. Aumente el nivel de compatibilidad en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Si aumenta el nivel de compatibilidad, las suscripciones existentes en los servidores que se ejecuten con versiones anteriores al nivel de compatibilidad no se podrán sincronizar.  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Establezca el nivel de compatibilidad en la página **Tipos de suscriptor** del Asistente para nueva publicación. Para obtener más información acerca de cómo obtener acceso a este asistente, vea [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md). Después de crear una publicación de instantáneas, el nivel de compatibilidad se puede aumentar pero no se puede reducir. Aumente el nivel de compatibilidad en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Si aumenta el nivel de compatibilidad, las suscripciones existentes en los servidores que se ejecuten con versiones anteriores al nivel de compatibilidad no se podrán sincronizar.  
   
 > [!NOTE]  
 >  Debido a que el nivel de compatibilidad tiene implicaciones en otras propiedades de la publicación y en cuanto a qué propiedades del artículo son válidas, no cambie el nivel de compatibilidad ni otras propiedades en el mismo uso del cuadro de diálogo. La instantánea de la publicación se volverá a generar después de cambiar la propiedad.  
@@ -45,9 +46,9 @@ ms.locfileid: "72904899"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>Para aumentar el nivel de compatibilidad de la publicación  
   
--   En la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione el valor deseado para **Nivel de compatibilidad**.  
+-   En la página **General** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione el valor para **Nivel de compatibilidad**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  El nivel de compatibilidad para una publicación de combinación se puede establecer mediante programación cuando una publicación se crea o bien, se puede modificar mediante programación en un momento posterior. Puede usar procedimientos almacenados de replicación para establecer o cambiar esta propiedad de publicación.  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>Para establecer el nivel de compatibilidad de la publicación para una publicación de combinación  
@@ -64,7 +65,7 @@ ms.locfileid: "72904899"
   
 2.  Busque el nivel de compatibilidad de la publicación en la columna **de backward_comp_level** en el conjunto de resultados.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este ejemplo crea una publicación de combinación y establece el nivel de compatibilidad de la publicación.  
   
 ```sql  
@@ -130,6 +131,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Creación de una publicación)  
   
   

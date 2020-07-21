@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17e505ebf3bab38b17d6b4ed554928f0f08cb50f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762410"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve 1 si una instancia de **geometry** cumple los siguientes requisitos:
 -   Es una instancia de **LineString**.  
@@ -42,12 +42,12 @@ Devuelve 1 si una instancia de **geometry** cumple los siguientes requisitos:
 .STIsRing ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método devuelve NULL si la instancia de **LineString** no es un polígono.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083837"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521708"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
   El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
@@ -48,7 +47,7 @@ ms.locfileid: "66083837"
   
 |Tipo de modelo|Método de selección de características|Comentarios|  
 |----------------|------------------------------|--------------|  
-|Agrupación en clústeres de secuencia|No se utiliza|No se invoca la selección de características; sin embargo, se puede controlar el comportamiento del algoritmo estableciendo el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.|  
+|Agrupación en clústeres de secuencia|No se usa|No se invoca la selección de características; sin embargo, se puede controlar el comportamiento del algoritmo estableciendo el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.|  
 |Agrupación en clústeres|Puntuación interestingness|Aunque el algoritmo de clústeres puede utilizar algoritmos discretos o de datos discretos, la puntuación de cada atributo se calcula como una distancia y es continua; por consiguiente, se utiliza la puntuación de grado de interés.|  
   
  Para más información, consulte [Feature Selection](../../sql-server/install/feature-selection.md).  
@@ -99,7 +98,7 @@ ms.locfileid: "66083837"
  El valor predeterminado es 64.  
   
  MAXIMUM_STATES  
- Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los estados más populares del atributo y tratará los restantes `Missing`.  
+ Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los Estados más populares del atributo y trata los Estados restantes como `Missing` .  
   
  El valor predeterminado es 100.  
   
@@ -127,24 +126,24 @@ ms.locfileid: "66083837"
 >  Si crea un modelo que usa el algoritmo de clústeres de secuencia de Microsoft pero no emplea una columna de secuencia, el modelo resultante no contendrá ninguna secuencia, sino que simplemente creará clústeres de casos en función de otros atributos incluidos en el modelo.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
+ El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table y Ordered|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
--   Use la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no admite el uso del lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite la obtención de detalles y el uso de modelos de minería de datos OLAP y de dimensiones de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
- [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
+ [Ejemplos de consultas de modelos de agrupación en clústeres de secuencia](clustering-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

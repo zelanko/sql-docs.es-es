@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61ecaa07074ed21d6f0b93c7cc544f4487431a64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827566"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432192"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  
@@ -84,8 +83,8 @@ ms.locfileid: "62827566"
   
  Si no usa la tarea Control CDC con la persistencia automática de estado, debe cargar el valor de la variable del almacenamiento persistente donde se guardó su valor la última vez que el paquete se ejecutó y escribirlo de nuevo en el almacenamiento persistente cuando procesamiento del intervalo de procesamiento actual se complete.  
   
-## <a name="see-also"></a>Vea también  
- [CDC Control Task](../control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../cdc-control-task-editor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tarea control CDC](../control-flow/cdc-control-task.md)   
+ [Editor de la tarea Control de CDC](../cdc-control-task-editor.md)  
   
   

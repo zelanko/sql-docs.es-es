@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Usar el Diseñador de tablas para administrar tablas y relaciones | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Uso del Diseñador de tablas para administrar tablas y relaciones
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097477"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75226832"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedimientos: Uso el Diseñador de tablas para administrar tablas y relaciones
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Cómo: Usar el Diseñador de tablas para administrar tablas y relaciones
+
 El Diseñador de tablas proporciona una experiencia visual junto con el Editor de Transact\-SQL para crear y editar estructuras de tablas, incluidos objetos de programación específicos de tablas, para bases de datos de SQL Server.  Se inicia al crear una nueva tabla para una base de datos conectada o un proyecto, o al hacer doble clic para editar una tabla en el Explorador de objetos de SQL Server o en el Explorador de soluciones.  
   
 El diseñador consta de la cuadrícula de columnas, el panel de scripts y el panel Contexto. La cuadrícula de columnas muestra todas las columnas de la tabla. En esta cuadrícula se pueden agregar, editar y eliminar columnas.  El panel de contexto le ofrece una vista lógica de la definición de tabla (claves, índices, restricciones, desencadenadores, etc.) y le permite seleccionar un objeto para resaltar sus relaciones con las columnas individuales. También puede agregar objetos nuevos a la tabla en este panel, así como editar las propiedades de un objeto seleccionado en la cuadrícula de propiedades. El panel de scripts muestra la definición de la estructura de tabla, y resalta el script del objeto seleccionado en el panel Contexto o en la cuadrícula de columnas. Es posible editar el script viendo en paralelo la cuadrícula de columnas y el panel Contexto. Los cambios realizados en cualquiera de los tres paneles se propagarán a los otros dos inmediatamente.  

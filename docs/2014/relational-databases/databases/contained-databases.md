@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3efd231a1aa4d2b348bcfe887bd05825fcd40c90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952200"
 ---
 # <a name="contained-databases"></a>Bases de datos independientes
   Una*base de datos independiente* es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ayuda al usuario a aislar su base de datos de la instancia de 4 maneras.  
@@ -41,13 +40,13 @@ ms.locfileid: "62917574"
   
 -   [Contención](#containment)  
   
--   [Ventajas de usar parcialmente las bases de datos](#benefits)  
+-   [Ventajas del uso de bases de datos parcialmente independientes](#benefits)  
   
 -   [Limitaciones](#Limitations)  
   
 -   [Identificar la contención de base de datos](#Identifying)  
   
-##  <a name="Concepts"></a> Conceptos de las bases de datos parcialmente independientes  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Conceptos de las bases de datos parcialmente independientes  
  Una base de datos totalmente independiente incluye todos los metadatos y opciones de configuración necesarios para definirla y no tiene dependencias de configuración en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] donde esté instalada. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la separación de una base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría necesitar mucho tiempo y un conocimiento detallado de la relación entre la base de datos y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las bases de datos parcialmente independientes facilitan la separación de una base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de otras bases de datos.  
   
  La base de datos independiente considera las características en lo que se refiere a la contención. Cualquier entidad definida por el usuario que solo se base en las funciones que residen dentro de la base de datos se considera totalmente independiente. Cualquier entidad definida por el usuario que se base en funciones que residen fuera de la base de datos se considera dependiente. (Para obtener más información, vea la sección [Contención](#containment) más adelante en este tema).  
@@ -83,7 +82,7 @@ ms.locfileid: "62917574"
  A los usuarios basados en inicios de sesión en la base de datos **maestra** se les puede conceder acceso a una base de datos independiente, pero eso crearía una dependencia en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por consiguiente, la creación de usuarios basados en inicios de sesión ve el comentario para las bases de datos parcialmente independientes.  
   
 > [!IMPORTANT]  
->  La habilitación de bases de datos parcialmente independientes delega el control sobre el acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los propietarios de la base de datos. Para más información, consulte [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
+>  La habilitación de bases de datos parcialmente independientes delega el control sobre el acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los propietarios de la base de datos. Para más información, vea [Security Best Practices with Contained Databases](security-best-practices-with-contained-databases.md).  
   
  Límite de la base de datos  
  Dado que las bases de datos parcialmente independientes separan la funcionalidad de la base de datos de las de la instancia, hay una línea definida claramente entre estos dos elementos que se conoce como *límite de la base de datos*.  
@@ -92,7 +91,7 @@ ms.locfileid: "62917574"
   
  Fuera del límite de la base de datos está el *modelo de administración*, que tiene que ver con la administración y las funciones del nivel de instancia. Algunos ejemplos de entidades situadas fuera del límite de la base de datos son las tablas del sistema como **sys.endpoints**, los usuarios asignados a los inicios de sesión y las tablas de usuario de otra base de datos a la que se hace referencia mediante un nombre de tres partes.  
   
-##  <a name="containment"></a> Contención  
+##  <a name="containment"></a><a name="containment"></a> Contención  
  Las entidades de usuario que residen completamente dentro de la base de datos se consideran *independientes*. Cualquier entidad de usuario que resida fuera de la base de datos o se base en la interacción con funciones externas a la base de datos se considera *dependiente*.  
   
  En general, las entidades de usuario entran en las siguientes categorías de contención:  
@@ -101,17 +100,17 @@ ms.locfileid: "62917574"
   
 -   Las entidades de usuario dependientes (aquellas que cruzan el límite de la base de datos), por ejemplo sys.server_principals o una entidad de seguridad del servidor (inicio de sesión) propiamente dicha. Cualquier código que utilice estas entidades o cualquier función que haga referencia a estas entidades también es dependiente.  
   
-###  <a name="partial"></a> Partially Contained Database  
+###  <a name="partially-contained-database"></a><a name="partial"></a> Partially Contained Database  
  La característica de base de datos independiente solo está disponible actualmente en un estado contenido de forma parcial. Una base de datos parcialmente independiente es una base de datos independiente que permite el uso de características no contenidas.  
   
  Use las vistas [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) y [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) para devolver información sobre características u objetos dependientes. Mediante la determinación del estado de contención de los elementos de la base de datos, se puede detectar qué objetos o características deben reemplazarse o alterarse para promover la contención.  
   
 > [!IMPORTANT]  
->  Dado que ciertos objetos tienen la configuración de contención predeterminada **NONE**, esta vista puede devolver falsos positivos.  
+>   Dado que ciertos objetos tienen la configuración de contención predeterminada **NONE**, esta vista puede devolver falsos positivos.  
   
  El comportamiento de las bases de datos parcialmente independientes difiere del que se observa en las bases de datos dependientes en lo que respecta a la intercalación. Para obtener más información acerca de los problemas de intercalación, vea [Contained Database Collations](contained-database-collations.md).  
   
-##  <a name="benefits"></a> Ventajas del uso de bases de datos parcialmente independientes  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a> Ventajas del uso de bases de datos parcialmente independientes  
  Las bases de datos dependientes tienen problemas y complicaciones asociados que se pueden resolver utilizando una base de datos parcialmente independiente.  
   
 ### <a name="database-movement"></a>Movimiento de la base de datos  
@@ -133,7 +132,7 @@ ms.locfileid: "62917574"
 ### <a name="database-administration"></a>Administración de bases de datos  
  El mantenimiento de los valores de configuración de la base de datos en la base de datos, en lugar de en la base de datos maestra, permite a cada propietario de la base de datos tener un mayor control sobre ella, sin proporcionar al propietario de la base de datos el permiso **sysadmin** .  
   
-##  <a name="Limitations"></a> Limitaciones  
+##  <a name="limitations"></a><a name="Limitations"></a> Limitaciones  
  Las bases de datos parcialmente independientes no permiten las siguientes características.  
   
 -   Las bases de datos parcialmente independientes no pueden utilizar la replicación, la captura de datos modificados ni el seguimiento de cambios.  
@@ -149,13 +148,13 @@ ms.locfileid: "62917574"
 > [!WARNING]  
 >  Los procedimientos almacenados temporales se admiten ahora. Dado que los procedimientos almacenados temporales incumplen la contención, no está previsto que se admitan en las versiones futuras de una base de datos independiente.  
   
-##  <a name="Identifying"></a> Identificar la contención de base de datos  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a> Identificar la contención de base de datos  
  Hay dos herramientas para ayudar a identificar el estado de contención de la base de datos. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql)es una vista que muestra todas las entidades potencialmente no contenidas de la base de datos. El evento database_uncontained_usage se produce cuando se identifica una entidad real no contenida en tiempo de ejecución.  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  Esta vista muestra las entidades de la base de datos que tienen el potencial de ser dependientes, como por ejemplo, las que cruzan los límites de la base de datos. Esto incluye las entidades del usuario que pueden utilizar objetos fuera del modelo de base de datos. Sin embargo, dado que la contención de ciertas entidades (por ejemplo, aquellas que usan SQL dinámico) no se puede determinar hasta el tiempo de ejecución, la vista puede mostrar algunas entidades que realmente no están contenidas. Para obtener más información, vea [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql).  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage, evento  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage, evento  
  Este XEvent tiene lugar siempre que una entidad dependiente se identifica en tiempo de ejecución. Esto incluye las entidades originadas en el código de cliente. Este Xevent solo tendrá lugar para las entidades dependientes reales. Sin embargo, el evento solo se produce en tiempo de ejecución. Por consiguiente, este XEvent no identificará las entidades de usuario dependientes que no se hayan ejecutado.  
   
 ## <a name="related-content"></a>Contenido relacionado  

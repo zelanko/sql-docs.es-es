@@ -1,5 +1,5 @@
 ---
-title: Crear un cubo desde una plantilla sin usar una vista del origen de datos | Microsoft Docs
+title: Crear un cubo a partir de una plantilla sin usar una vista del origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83b301239264351da33d0b22379f00c48b08c836
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076510"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536703"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
   Seleccione **Generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin usar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "66076510"
 ## <a name="selecting-dimensions"></a>Seleccionar dimensiones  
  Use la página **Seleccionar dimensiones** del asistente para agregar dimensiones existentes al cubo. Esta página solo aparece si ya existen dimensiones compartidas sin un origen de datos en el proyecto o en la base de datos. No muestra las dimensiones que tienen un origen de datos.  
   
- Para agregar dimensiones existentes, seleccione una o varias dimensiones en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha (**>**) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de flecha doble (**>>**) si quiere mover todas las dimensiones de la lista.  
+ Para agregar dimensiones existentes, selecciónelas en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha (**>**) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de flecha doble ( **>>** ) para desplace todas las dimensiones de la lista.  
   
 ## <a name="defining-new-measures"></a>Definir nuevas medidas  
  Use la página **Definir nuevas medidas** del asistente para especificar las medidas y grupos de medida del nuevo cubo. Los grupos de medida que especifique aquí se corresponderán con las tablas de hechos del esquema generado. Las medidas que especifique aquí se corresponderán con las columnas numéricas sin clave de las tablas.  
@@ -39,26 +38,26 @@ ms.locfileid: "66076510"
   
  Las cuadrículas **Seleccionar medidas de plantilla** y **Agregar nuevas medidas** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**Nombre de medida**|Cada valor de esta columna define el nombre de una medida del cubo. Haga clic en un valor de esta columna para escribir un nombre. Haga clic en **Agregar nueva medida** en esta columna para crear una nueva medida. Esta columna establece la propiedad `Name` del objeto de medida.|  
 |**Grupo de medida**|El nombre del grupo de medida que contiene la medida. Haga clic en este valor para elegir o escribir un nombre. Si elimina todas las medidas que pertenecen a un grupo de medida determinado, se quita el grupo de medida. Esta columna establece la propiedad `Name` del objeto de grupo de medida.|  
 |**Tipo de datos**|El tipo de datos de la medida. Haga clic en este valor para cambiar el tipo de datos. El valor predeterminado cuando se crea una medida es `Single`. Esta columna establece la propiedad `DataType` del objeto de medida.|  
-|**Agregación**|La agregación estándar de la medida. Haga clic en esta celda para especificar una de las agregaciones estándar para la medida (o **Ninguna**). El valor predeterminado cuando se crea una medida es `Sum`. Esta columna establece la propiedad `AggregationFunction` del objeto de medida.|  
+|**Concentrado**|La agregación estándar de la medida. Haga clic en esta celda para especificar una de las agregaciones estándar para la medida (o **Ninguna**). El valor predeterminado cuando se crea una medida es `Sum`. Esta columna establece la propiedad `AggregationFunction` del objeto de medida.|  
   
 ## <a name="defining-new-dimensions"></a>Definir nuevas dimensiones  
  Use la página **Definir nuevas dimensiones** del asistente para especificar las dimensiones del nuevo cubo.  
   
  Si usa una plantilla para crear el cubo, las cuadrícula situada debajo de **Seleccionar dimensiones de plantilla** mostrará las dimensiones de la plantilla. Puede desactivar la casilla situada junto a cualquier dimensión para quitarla del cubo. Para quitar todas las dimensiones de la lista, desactive la casilla situada en la barra de título de la cuadrícula. Si no usa una plantilla, la cuadrícula muestra solo la dimensión de tiempo.  
   
- Para agregar dimensiones al cubo, use la cuadrícula situada debajo de **Agregar nuevas dimensiones**. Para agregar una dimensión, haga clic en la celda en la `Name` columna que contiene el texto **agregar nueva dimensión**y, a continuación, escriba un nombre para la dimensión. Para quitar una fila de la lista, haga clic en el icono de eliminar (**X**).  
+ Para agregar dimensiones al cubo, use la cuadrícula situada debajo de **Agregar nuevas dimensiones**. Para agregar una dimensión, haga clic en la celda de la `Name` columna que contiene el texto **Agregar nueva dimensión**y, a continuación, escriba un nombre para la dimensión. Para quitar una fila de la lista, haga clic en el icono de eliminar (**X**).  
   
  Las cuadrículas **Seleccionar dimensiones de plantilla** y **Agregar nuevas dimensiones** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
-|**Tipo**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
-|`Name`|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la `Name` propiedad del objeto de dimensión.|  
+|**Type**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
+|`Name`|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la `Name` propiedad para el objeto Dimension.|  
 |**DVL**|Especifica que se trata de una dimensión de variación lenta (DVL). Si se activa esta casilla, se agregan los atributos Fecha de inicio de DVL, Id. original de DVL y Estado de DVL a la dimensión. La opción**DVL** aparece seleccionada de forma predeterminada si se usa una plantilla para crear el cubo y el asistente detecta estos cuatro tipos de atributos en una dimensión de plantilla.|  
 |**Atributos**|Muestra los atributos que se crearán para la dimensión. Cada nombre de atributo de la lista está precedido del nombre de la dimensión. Esta lista es de solo lectura. Puede editar los atributos con el Diseñador de dimensiones una vez completado el asistente.|  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66076510"
  Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el 1 de enero del primer año de los datos y que incluya hasta unos años antes de la transacción más reciente. Las transacciones que queden fuera del intervalo no aparecerán o, si lo hacen, aparecerán como miembros desconocidos de la dimensión en función del valor de la propiedad `UnknownMemberVisible` de la dimensión. La propiedad `UnknownMemberName` especifica el título del miembro desconocido. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
   
 > [!NOTE]  
->  La página **Definir períodos de tiempo** solo aparece si incluye una dimensión de tiempo en el cubo en la página **Definir nuevas dimensiones** del asistente.  
+>   La página **Definir períodos de tiempo** solo aparece si incluye una dimensión de tiempo en el cubo en la página **Definir nuevas dimensiones** del asistente.  
   
  Seleccione los períodos de tiempo (**Año**, **Semestre**, **Trimestre**, **Cuatrimestre**, **Mes**, **Diez días**, **Semana**y **Fecha**) que quiere incluir en el esquema. Es necesario que seleccione el período de tiempo Fecha. El atributo Fecha es el atributo clave de la dimensión, por lo que esta no puede funcionar sin él. También puede cambiar el idioma usado para etiquetar los miembros de la dimensión.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66076510"
 |Calendario|Descripción|  
 |--------------|-----------------|  
 |Calendario fiscal|Calendario fiscal de doce meses. Si selecciona este calendario, especifique el día y el mes de inicio del año fiscal que usa la organización.|  
-|Calendario de informe (o marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral periódico. Si selecciona este calendario, especifique el primer día y mes, el patrón de tres meses de 4-4-5, 4-5-4 o 5-4-4 semanas, donde cada dígito representa el número de semanas en un mes.|  
+|Calendario de informe (o marketing)|Calendario de informes de doce meses que incluye dos meses de cuatro semanas y un mes de cinco semanas en un patrón trimestral periódico. Si selecciona este calendario, especifique el día y el mes de inicio y el patrón de tres meses de 4-4-5, 4-5-4 o 5-4-4 semanas, donde cada dígito representa el número de semanas de un mes.|  
 |Calendario de fabricación|Calendario que usa 13 períodos de cuatro semanas, divididos en tres trimestres de cuatro periodos y un trimestre de cinco períodos. Si selecciona este calendario, especifique la semana (entre 1 y 4) y el mes de inicio del año de fabricación, y el trimestre con períodos adicionales.|  
 |Calendario ISO 8601|Calendario estándar (8601) de Representación de fechas y horas de la Organización internacional de normalización (ISO). Este calendario tiene un número integral de semanas de siete días. Para evitar dividir una semana, este calendario inicia un nuevo año varios días antes o después del 1 de enero.|  
   

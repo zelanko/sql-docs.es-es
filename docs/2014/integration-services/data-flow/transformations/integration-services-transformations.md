@@ -18,15 +18,14 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dbaa8ae33bb299cf524589e1e883577950d7c294
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900297"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430432"
 ---
 # <a name="integration-services-transformations"></a>Transformaciones de Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son los componentes en el flujo de datos de un paquete que agregan, combinan, distribuyen y modifican datos. Las transformaciones también pueden realizar operaciones de búsqueda y generar conjuntos de datos de ejemplo. Esta sección describe las transformaciones que incluye [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y explica cómo funcionan.  
@@ -68,7 +67,7 @@ ms.locfileid: "62900297"
 |[Transformación Muestreo de porcentaje](percentage-sampling-transformation.md)|Transformación que crea un conjunto de datos de ejemplo mediante un porcentaje para especificar el tamaño del ejemplo.|  
 |[Transformación Muestreo de fila](row-sampling-transformation.md)|Transformación que crea un conjunto de datos de ejemplo especificando la cantidad de filas en la muestra.|  
 |[Transformación dinámica](pivot-transformation.md)|Transformación que crea una versión menos normalizada de una tabla normalizada.|  
-|[Transformación Anulación de dinamización](unpivot-transformation.md)|Transformación que crea una versión más normalizada de una tabla no normalizada.|  
+|[Transformación Anular dinamización](unpivot-transformation.md)|Transformación que crea una versión más normalizada de una tabla no normalizada.|  
   
 ## <a name="split-and-join-transformations"></a>Transformaciones de división y combinación  
  Las siguientes transformaciones distribuyen filas a diferentes salidas, crean copias de las entradas de transformación, combinan varias entradas en una salida y realizan operaciones de búsqueda.  
@@ -82,7 +81,7 @@ ms.locfileid: "62900297"
 |[Transformación Combinación de mezcla](merge-join-transformation.md)|Transformación que combina dos conjuntos de datos mediante una combinación FULL, LEFT o INNER.|  
 |[Transformación Búsqueda](lookup-transformation.md)|Transformación que busca valores en una tabla de referencia con una coincidencia exacta.|  
 |[Transformación de caché](cache-transform.md)|La transformación que escribe los datos procedentes de un origen de datos conectado del flujo de datos en un administrador de conexiones de caché que guarda los datos en un archivo caché. La transformación de búsqueda realiza búsquedas en los datos del archivo caché.|  
-|[Transformación Balanced Data Distributor](balanced-data-distributor-transformation.md)|La transformación distribuye uniformemente los búferes de filas entrantes entre los resultados de subprocesos independientes para mejorar el rendimiento de los paquetes de SSIS que se ejecutan en servidores con varios núcleos y varios procesadores.|  
+|[Transformación Distribuidor de datos equilibrado](balanced-data-distributor-transformation.md)|La transformación distribuye uniformemente los búferes de filas entrantes entre los resultados de subprocesos independientes para mejorar el rendimiento de los paquetes de SSIS que se ejecutan en servidores con varios núcleos y varios procesadores.|  
   
 ## <a name="auditing-transformations"></a>Auditar transformaciones  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye las transformaciones siguientes para agregar filas de recuento e información.  

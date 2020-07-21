@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed23f08d40e23b1d43c1b642f4089fe77646b675
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025843"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauración por etapas de bases de datos con tablas con optimización para memoria
   La restauración por etapas se admite en bases de datos con tablas optimizadas para memoria, a excepción de una restricción que describe más adelante. Para obtener más información sobre la restauración y la copia de seguridad por etapas, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) y [Restauraciones por etapas &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "62806697"
   
     -   Mediante la reparación de página, puede corregir daños en una página restaurando específicamente esa página. Para obtener más información, vea [Restaurar páginas &#40;SQL Server&#41;](../backup-restore/restore-pages-sql-server.md).  
   
-## <a name="samples"></a>Muestras  
+## <a name="samples"></a>Ejemplos  
  En los ejemplos se usa el esquema siguiente:  
   
 ```  
@@ -75,7 +74,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### <a name="restore"></a>Restaurar  
+### <a name="restore"></a>Restauración  
  En el ejemplo siguiente se muestra cómo restaurar conjuntamente el grupo de archivos principal y el grupo de archivos optimizados para memoria.  
   
 ```  
@@ -95,7 +94,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](../../database-engine/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   
   

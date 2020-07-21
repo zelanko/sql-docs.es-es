@@ -1,5 +1,6 @@
 ---
 title: Función false (XQuery) | Microsoft Docs
+description: Obtenga información sobre la función false () que devuelve el valor booleano false.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bacbbf8314f52276a6859b1a75da1d3f6bf23899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726766"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>Funciones de constructor booleano: false (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el valor xs:boolean False. Es equivalente a `xs:boolean("0")`.  
   
@@ -34,12 +35,12 @@ fn:false() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. Usar la función booleana false() de XQuery  
- Para obtener un ejemplo funcional, consulte [true función &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
+ Para obtener un ejemplo funcional, vea [función true &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md).  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de Constructor booleano &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones de constructor booleano &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

@@ -16,15 +16,14 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c13c1d4cdf7b1bbc72c956652bb89c2014103d76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059454"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   Una consulta SELECT devuelve los resultados como un conjunto de filas. Opcionalmente, se pueden recuperar resultados formales de una consulta SQL como XML especificando la cláusula FOR XML en la consulta. La cláusula FOR XML puede usarse en consultas de nivel superior y en subconsultas. La cláusula FOR XML de nivel superior solo puede usarse en la instrucción SELECT. En el caso de las subconsultas, FOR XML puede usarse en las instrucciones INSERT, UPDATE y DELETE. También puede usarse en instrucciones de asignación.  
@@ -39,7 +38,7 @@ ms.locfileid: "63288268"
   
 -   PATH  
   
- El modo RAW genera un único elemento \<row> por cada fila del conjunto de filas devuelto por la instrucción SELECT. Para generar una jerarquía XML se pueden escribir consultas FOR XML anidadas.  
+ El modo RAW genera un único \<row> elemento por cada fila del conjunto de filas devuelto por la instrucción SELECT. Para generar una jerarquía XML se pueden escribir consultas FOR XML anidadas.  
   
  El modo AUTO genera anidamiento en el XML resultante utilizando heurística basada en la forma en que se especifica la instrucción SELECT. El control sobre la forma del XML generado es mínimo. Es posible escribir consultas FOR XML anidadas para generar una jerarquía XML más allá de la forma del XML generado mediante la heurística del modo AUTO.  
   
@@ -106,13 +105,13 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Sintaxis básica de la cláusula FOR XML](basic-syntax-of-the-for-xml-clause.md)   
  [Usar el modo RAW con FOR XML](use-raw-mode-with-for-xml.md)   
  [Usar el modo AUTO con FOR XML](use-auto-mode-with-for-xml.md)   
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)   
  [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md)   
- [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)   
+ [&#41;de SQL Server de &#40;OPENXML](openxml-sql-server.md)   
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

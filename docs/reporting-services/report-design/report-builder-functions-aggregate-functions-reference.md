@@ -1,5 +1,5 @@
 ---
-title: Referencia de funciones de agregado (Generador de informes y SSRS) | Microsoft Docs
+title: Referencia de funciones de agregado (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893762"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081318"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funciones del Generador de informes: referencia de funciones de agregado
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -47,41 +47,41 @@ ms.locfileid: "68893762"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CalculatingAggregates"></a> Funciones de agregado integradas  
+##  <a name="built-in-aggregate-functions"></a><a name="CalculatingAggregates"></a> Funciones de agregado integradas  
  Las funciones integradas siguientes calculan valores de resumen para un conjunto de datos numéricos no NULL del ámbito predeterminado o el ámbito con nombre.  
   
-|**Función**|**Descripción**|  
+|**Function**|**Descripción**|  
 |------------------|---------------------|  
 |[Avg](../../reporting-services/report-design/report-builder-functions-avg-function.md)|Devuelve el promedio de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
-|[Count](../../reporting-services/report-design/report-builder-functions-count-function.md)|Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.|  
+|[Recuento](../../reporting-services/report-design/report-builder-functions-count-function.md)|Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.|  
 |[CountDistinct](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md)|Devuelve un recuento de todos los valores no NULL distintos especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
-|[Max](../../reporting-services/report-design/report-builder-functions-max-function.md)|Devuelve el valor máximo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor máximo para el eje del gráfico para controlar la escala.|  
-|[Min](../../reporting-services/report-design/report-builder-functions-min-function.md)|Devuelve el valor mínimo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor mínimo para el eje del gráfico para controlar la escala.|  
+|[Máx.](../../reporting-services/report-design/report-builder-functions-max-function.md)|Devuelve el valor máximo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor máximo para el eje del gráfico para controlar la escala.|  
+|[Mín.](../../reporting-services/report-design/report-builder-functions-min-function.md)|Devuelve el valor mínimo de todos los valores numéricos no NULL especificados por la expresión, en el contexto del ámbito especificado. Puede usarla para especificar un valor mínimo para el eje del gráfico para controlar la escala.|  
 |[StDev](../../reporting-services/report-design/report-builder-functions-stdev-function.md)|Devuelve la desviación estándar de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
 |[StDevP](../../reporting-services/report-design/report-builder-functions-stdevp-function.md)|Devuelve la desviación estándar de población de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
 |[Sum](../../reporting-services/report-design/report-builder-functions-sum-function.md)|Devuelve la suma de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
-|[Union](../../reporting-services/report-design/report-builder-functions-union-function.md)|Devuelve la unión de todos los valores de datos espaciales no NULL del tipo **SqlGeometry** o **SqlGeography** especificados por la expresión, que se evalúa en el ámbito especificado.|  
+|[Unión](../../reporting-services/report-design/report-builder-functions-union-function.md)|Devuelve la unión de todos los valores de datos espaciales no NULL del tipo **SqlGeometry** o **SqlGeography** especificados por la expresión, que se evalúa en el ámbito especificado.|  
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|Devuelve la varianza de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|Devuelve la varianza de población de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="Restrictions"></a> Restricciones en los campos integrados, colecciones y funciones de agregado  
+##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Restricciones en los campos integrados, colecciones y funciones de agregado  
  La tabla siguiente resume las restricciones de las ubicaciones de informes donde puede agregar expresiones que contienen referencias a las colecciones integradas globales.  
   
-|Ubicación en informe|Campos|Parámetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
+|Ubicación en informe|Fields|Parámetros|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Encabezado de página<br /><br /> Pie de página|Sí|Sí|A lo sumo uno<br /><br /> Nota 1|Sí|Sí|Sí|Sí|  
-|Cuerpo|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|No|Sí|Sí|Sí|  
+|Body|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|No|Sí|Sí|Sí|  
 |Parámetro de informe|No|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|No|No|No|No|No|  
 |Campo|Sí|Sí|No|No|No|No|No|  
 |Parámetro de consulta|No|Sí|No|No|No|No|No|  
 |Expresión de grupo|Sí|Sí|No|No|Sí|No|No|  
 |Expresión de ordenación|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 5|No|  
 |Expresión de filtro|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 6|No|  
-|código|No|Sí<br /><br /> Nota 7|No|No|No|No|No|  
+|Código|No|Sí<br /><br /> Nota 7|No|No|No|No|No|  
 |Idioma de los informes|No|Sí|No|No|No|No|No|  
-|Variables|Sí|Sí|No|No|Sí|Ámbito actual o que lo contiene|No|  
+|variables|Sí|Sí|No|No|Sí|Ámbito actual o que lo contiene|No|  
 |Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|No|No|  
 |Funciones de búsqueda|Sí|Sí|Sí|No|Sí|No|No|  
   
@@ -103,10 +103,10 @@ ms.locfileid: "68893762"
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="NestedRestrictions"></a> Restricciones en agregados anidados  
+##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Restricciones en agregados anidados  
  En la tabla siguiente se resumen las restricciones en las que las funciones de agregados pueden especificar otras funciones de agregado como agregados anidados.  
   
-|Contexto|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
+|Context|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
 |Valor actual|No|No|No|No|Sí|No|Sí|No|  
 |Primero<br /><br /> Último|No|No|No|No|Sí|No|No|No|  
@@ -120,29 +120,29 @@ ms.locfileid: "68893762"
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="CalculatingRunningValues"></a> Calcular valores actuales  
+##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Calcular valores actuales  
  Las siguientes funciones incorporadas calculan los valores actuales para un conjunto de datos. **RowNumber** se parece a **RunningValue** en que devuelve el valor actual de un recuento que se incrementa por cada fila del ámbito contenedor. El parámetro de ámbito para estas funciones debe especificar un ámbito contenedor, que controla cuándo se reinicia el recuento.  
   
-|**Función**|**Descripción**|  
+|**Function**|**Descripción**|  
 |------------------|---------------------|  
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Devuelve un recuento actualizado del número de filas para el ámbito especificado. La función **RowNumber** reinicia el recuento en 1, no en 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Devuelve un agregado actualizado de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.|  
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="RetrievingRowCounts"></a> Recuperar recuentos de filas  
+##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Recuperar recuentos de filas  
  La función integrada siguiente calcula el número de filas existentes en el ámbito especificado. Use esta función para contar todas las filas, incluso las filas con valores NULL.  
   
-|**Función**|**Descripción**|  
+|**Function**|**Descripción**|  
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Devuelve el número de filas del ámbito especificado, incluidas las filas con valores NULL.|  
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="LookupFunctions"></a> Buscar valores de otro conjunto de datos  
+##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Buscar valores de otro conjunto de datos  
  Las siguientes funciones de búsqueda recuperan valores de un conjunto de datos especificado.  
   
-|**Función**|**Descripción**|  
+|**Function**|**Descripción**|  
 |------------------|---------------------|  
 |[Función Lookup](../../reporting-services/report-design/report-builder-functions-lookup-function.md)|Devuelve un valor de un conjunto de datos para una expresión especificada.|  
 |[Función LookupSet](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Devuelve un conjunto de valores de un conjunto de datos para una expresión especificada.|  
@@ -150,27 +150,27 @@ ms.locfileid: "68893762"
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="RetrievingPostsortValues"></a> Recuperar valores dependientes de la ordenación  
+##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Recuperar valores dependientes de la ordenación  
  Las funciones integradas siguientes devuelven el primer valor, el último valor o el valor anterior dentro de un ámbito determinado. Estas funciones dependen del criterio de ordenación de los valores de datos. Por ejemplo, use estas funciones para encontrar el primer y el último valor de una página para crear un encabezado de página de estilo diccionario. Use **Previous** para comparar un valor de una fila con el valor de la fila anterior dentro de un ámbito específico, como por ejemplo, para encontrar los valores de los porcentajes de año a año en una tabla.  
   
-|**Función**|**Descripción**|  
+|**Function**|**Descripción**|  
 |------------------|---------------------|  
 |[Primero](../../reporting-services/report-design/report-builder-functions-first-function.md)|Devuelve el primer valor de la expresión especificada en el ámbito especificado.|  
 |[Último](../../reporting-services/report-design/report-builder-functions-last-function.md)|Devuelve el último valor de la expresión especificada en el ámbito especificado.|  
-|[Previous](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.|  
+|[Anterior](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.|  
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="RetrievingServerAggregates"></a> Recuperar agregados de servidor  
+##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Recuperar agregados de servidor  
  La función integrada siguiente recupera agregados personalizados del proveedor de datos. Por ejemplo, usando un tipo de origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede recuperar agregados calculados en el servidor del origen de datos para su uso en un encabezado de grupo.  
   
-|**Función**|**Descripción**|  
+|**Function**|**Descripción**|  
 |------------------|---------------------|  
-|[Agregado](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.|  
+|[Agregada](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.|  
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="TestingforScope"></a> Comprobar el ámbito  
+##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Comprobar el ámbito  
  La función integrada siguiente comprueba el contexto actual de un elemento de informe para ver si es un miembro de un ámbito determinado.  
   
 |Función|Descripción|  
@@ -179,12 +179,12 @@ ms.locfileid: "68893762"
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   
-##  <a name="RetrievingRecursiveLevel"></a> Recuperar nivel recursivo  
+##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Recuperar nivel recursivo  
  La función integrada siguiente recupera el nivel actual cuando se procesa una jerarquía recursiva. Use el resultado de esta función con la propiedad **Padding** de un cuadro de texto para controlar el nivel de sangría de una jerarquía visual para un grupo recursivo. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|[Nivel](../../reporting-services/report-design/report-builder-functions-level-function.md)|Devuelve el nivel actual de profundidad de una jerarquía recursiva.|  
+|[Level](../../reporting-services/report-design/report-builder-functions-level-function.md)|Devuelve el nivel actual de profundidad de una jerarquía recursiva.|  
   
  ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")Volver al principio  
   

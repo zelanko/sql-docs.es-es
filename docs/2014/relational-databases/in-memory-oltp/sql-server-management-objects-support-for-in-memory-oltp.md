@@ -8,14 +8,13 @@ ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.author: jroth
+ms.openlocfilehash: 08f3d9bd62459ecab124fb740a4fe64875af464a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050004"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria
   En este tema se describen los cambios de los Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) para OLTP en memoria.  
@@ -55,7 +54,7 @@ ms.locfileid: "63066443"
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
 ## <a name="code-sample"></a>Ejemplo de código  
- En el ejemplo se realizan las tareas siguientes:  
+ En este ejemplo se realizan lo siguientes pasos:  
   
 -   Crear una base de datos con un grupo de archivos optimizados para memoria y un archivo optimizado para memoria.  
   
@@ -171,7 +170,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de SQL Server con OLTP en memoria](sql-server-support-for-in-memory-oltp.md)  
   
   

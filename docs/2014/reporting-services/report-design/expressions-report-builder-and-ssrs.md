@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 3660ecee1271d4fd2673b0dfe9107a8fb5c52e88
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413014"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ Cuando diseña un informe, muchas expresiones de los elementos de informe se est
 
 Al obtener una vista previa del informe, el procesador de informes combina la región de datos de la tabla con los datos reales de la conexión de datos y muestra una fila en la tabla para cada fila del conjunto de resultados.  
 
-Para escribir expresiones manualmente, seleccione un elemento en la superficie de diseño y use los menús contextuales y los cuadros de diálogo para establecer las propiedades del elemento. Cuando vea el botón ***(fx)*** o el valor `<Expression>` en una lista desplegable, sabrá que puede establecer la propiedad en una expresión. Para obtener más información, vea [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Para escribir expresiones manualmente, seleccione un elemento en la superficie de diseño y use los menús contextuales y los cuadros de diálogo para establecer las propiedades del elemento. Cuando vea el botón ***(fx)*** o el valor `<Expression>` en una lista desplegable, sabrá que puede establecer la propiedad en una expresión. Para obtener más información, vea [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)subyacente.  
 
 Para obtener más información y ejemplos, vea los siguientes temas:  
 
@@ -41,7 +41,7 @@ Para obtener más información y ejemplos, vea los siguientes temas:
 
 -   [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
 
--   [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)  
+-   [Tutoriales &#40;Generador de informes&#41;](../report-builder-tutorials.md)  
 
 -   [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
 
@@ -52,7 +52,7 @@ Para desarrollar expresiones complejas o expresiones que utilizan código person
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
 
-##  <a name="Types"></a> Descripción de las expresiones simples y complejas  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> Descripción de las expresiones simples y complejas  
 Las expresiones comienzan por un signo igual (=) y se escriben en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Las expresiones pueden incluir una combinación de constantes, operadores y referencias a valores integrados (campos, colecciones y funciones) y a código externo o personalizado.  
 
 Puede utilizarlas para especificar el valor de muchas propiedades de elementos de informe. Las propiedades más comunes son los valores de los cuadros de texto y el texto de los marcadores de posición. Normalmente, si un cuadro de texto contiene solo una expresión, esta es el valor de la propiedad de cuadro de texto. Si un cuadro de texto contiene varias expresiones, cada una es el valor de texto del marcador de posición en el cuadro de texto.  
@@ -73,7 +73,7 @@ Para mostrar valores de ejemplo en lugar del texto de las expresiones, aplique e
 
 Para más información, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
 
-## <a name="DisplayText"></a> Descripción de los símbolos de prefijo en expresiones simples  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a>Descripción de los símbolos de prefijo en expresiones simples  
 
 Las expresiones simples usan símbolos para indicar si la referencia es a un campo, un parámetro, una colección integrada o la colección ReportItems. En la tabla siguiente, se muestran ejemplos de texto mostrado junto con el texto de la expresión correspondiente:  
 
@@ -86,7 +86,7 @@ Las expresiones simples usan símbolos para indicar si la referencia es a un cam
 
 
 
-##  <a name="References"></a> Escribir expresiones complejas  
+##  <a name="writing-complex-expressions"></a><a name="References"></a>Escribir expresiones complejas  
 Las expresiones pueden incluir referencias a funciones, operadores, constantes, campos, parámetros, elementos de colecciones integradas y referencias a código personalizado incrustado o a ensamblados personalizados.  
 
 > [!NOTE]
@@ -104,7 +104,7 @@ En la tabla siguiente se enumeran los tipos de referencias que se pueden incluir
 
 
 
-##  <a name="Valid"></a> Validar las expresiones  
+##  <a name="validating-expressions"></a><a name="Valid"></a>Validar expresiones  
 Cuando cree una expresión para una propiedad de elemento de informe determinada, las referencias que puede incluir en una expresión dependen de los valores que la propiedad del elemento de informe pueda aceptar y del ámbito en el que se evalúa la propiedad. Por ejemplo:  
 
 -   De forma predeterminada, la expresión [Suma] calcula la suma de los datos que están en el ámbito en el momento en que se evalúa la expresión. Para una celda de la tabla, el ámbito depende de la fila y las pertenencias a los grupos de columnas. Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
@@ -115,7 +115,7 @@ Cuando cree una expresión para una propiedad de elemento de informe determinada
 
 Para obtener más información, vea [Referencia de expresiones &#40;Generador de informes y SSRS&#41;](expression-reference-report-builder-and-ssrs.md)subyacente.  
 
-## <a name="Section"></a> En esta sección
+## <a name="in-this-section"></a><a name="Section"></a>En esta sección
 
 [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
 
@@ -125,7 +125,7 @@ Para obtener más información, vea [Referencia de expresiones &#40;Generador de
 
 [Referencia de expresiones &#40;Generador de informes y SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Expresión (cuadro de diálogo)](../expression-dialog-box.md)   
 - [Expresión &#40;cuadro de diálogo del Generador de informes&#41;](../expression-dialog-box-report-builder.md)

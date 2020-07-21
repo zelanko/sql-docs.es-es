@@ -1,5 +1,5 @@
 ---
-title: Nombre de propiedad (clase SecurityCertificate) | Microsoft Docs
+title: Propiedad Name (clase SecurityCertificate) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09886571f98fcb36218c0dcb7a40e06b6b34b34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8383cbf5b6d0661449c2d184bcfa995b2758accc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059994"
 ---
 # <a name="name-property-securitycertificate-class"></a>Propiedad Name (clase SecurityCertificate)
   Obtiene el nombre del certificado de seguridad.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

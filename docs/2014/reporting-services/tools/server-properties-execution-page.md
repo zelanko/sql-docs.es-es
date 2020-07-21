@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0ec8725a0cec9e15cb6d8402f8d654320c38471
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099600"
 ---
 # <a name="server-properties-execution-page"></a>Propiedades del servidor (página Ejecución)
@@ -31,11 +31,11 @@ ms.locfileid: "66099600"
  **Limitar la ejecución de informes al siguiente número de segundos**  
  Establezca una restricción horaria en la ejecución de informes. El período de tiempo empieza cuando se solicita el informe. Si el período finaliza antes de que el informe se haya procesado completamente, el servidor de informes cancela el proceso y todas las consultas en proceso para orígenes de datos externos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Establecer las propiedades del procesamiento de informes](../report-server/set-report-processing-properties.md)   
  [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
- [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio (Ayuda F1)](report-server-in-management-studio-f1-help.md)  
   
   

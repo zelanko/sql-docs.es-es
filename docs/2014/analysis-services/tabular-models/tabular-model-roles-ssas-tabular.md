@@ -1,5 +1,5 @@
 ---
-title: Roles de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Roles de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 28658862-dce2-459f-8868-29ee31c879bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 433dc3dcde3a0cee2652baa5f1a59997ec7bf55b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be10a321ba511953bc16f893bf37035ec66d495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938548"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Roles de modelos tabulares (SSAS tabular)
   La información de este tema y las tareas relacionadas están dirigidas a administradores de bases de datos de modelo tabular que crearán y administrarán los roles de los modelos tabulares implementados mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener información sobre los roles en modelos tabulares, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md). Para obtener información sobre cómo crear y administrar roles en un proyecto de modelo tabular mediante el Administrador de roles en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Crear y administrar roles &#40;SSAS tabular&#41;](create-and-manage-roles-ssas-tabular.md).  

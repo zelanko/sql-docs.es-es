@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 594b725b873124042dfa8afdc9253499d703999b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97dccd39e74cdadad30edee265d8ec2183b183be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774155"
 ---
 # <a name="storage-system-input-output-time-out"></a>Tiempo de espera de entrada y salida del sistema de almacenamiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regla comprueba el identificador EventId 9 se encuentra en el registro de eventos del sistema. Este mensaje indica que se ha superado el tiempo de espera de E/S en el sistema de almacenamiento.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

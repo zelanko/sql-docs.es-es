@@ -1,6 +1,6 @@
 ---
-title: Propiedades de canalizaciones con nombre | Microsoft Docs
-ms.custom: ''
+title: Propiedades de Canalizaciones con nombre
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +16,12 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c42b3846ce4e2eda1e7aaf40eeb47ea76babf0af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010142"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306445"
 ---
 # <a name="named-pipes-properties"></a>Propiedades de Canalizaciones con nombre
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68010142"
   
 ## <a name="options"></a>Opciones  
  **Enabled**  
- Los valores posibles **Yes** y **No**.  
+ Los valores posibles son **Yes** y **No**.  
   
  **Nombre de canalización**  
  Especifica la canalización con nombre en la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha. De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en: `\\.\pipe\sql\query` para la instancia predeterminada y `\\.\pipe\MSSQL$<instancename>\sql\query` para una instancia con nombre. Este campo tiene un límite de 2.047 caracteres.  

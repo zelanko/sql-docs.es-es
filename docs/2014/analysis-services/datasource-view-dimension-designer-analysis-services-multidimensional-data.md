@@ -1,5 +1,5 @@
 ---
-title: (Pestaña estructura de dimensión, Diseñador de dimensiones) de la vista del origen de datos (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Vista del origen de datos (pestaña estructura de dimensión, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082346"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528921"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el panel **Vista del origen de datos** para ver las tablas y columnas desde la vista del origen de datos asociada a la dimensión seleccionada. Este panel se utiliza para crear atributos, propiedades de miembros, jerarquías y niveles al arrastrar las columnas del panel **Vista del origen de datos** al panel **Atributos** o **Jerarquías y niveles** .  
@@ -53,17 +52,17 @@ ms.locfileid: "66082346"
  **Organizar tablas**  
  Para organizar los objetos del panel conforme al diseño especificado, seleccione **Cambiar a diseño diagonal** o **Cambiar a diseño rectangular**.  
   
- **Cambiar a diseño Diagonal**  
+ **Cambiar a diseño diagonal**  
  Seleccione esta opción para organizar los objetos en un patrón diagonal.  
   
 > [!NOTE]  
->  Esta opción solo se muestra si selecciona **Cambiar a diseño rectangular** .  
+>   Esta opción solo se muestra si selecciona **Cambiar a diseño rectangular** .  
   
- **Cambiar a diseño Rectangular**  
+ **Cambiar a diseño rectangular**  
  Seleccione esta opción para organizar los objetos en un patrón rectangular.  
   
 > [!NOTE]  
->  Esta opción solo se muestra si selecciona **Cambiar a diseño diagonal** .  
+>   Esta opción solo se muestra si selecciona **Cambiar a diseño diagonal** .  
   
  **Editar vista del origen de datos**  
  Muestra el **Diseñador de vistas del origen de datos** para la vista del origen de datos asociada a la dimensión. Para más información sobre el **Diseñador de vistas del origen de datos**, vea [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
@@ -75,7 +74,7 @@ ms.locfileid: "66082346"
   
      Muestra un diagrama de las tablas y columnas asociadas a la dimensión actual.  
   
--   trEE  
+-   Árbol  
   
      Muestra una vista de árbol que contiene las tablas y columnas asociadas a la dimensión actual.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66082346"
  Muestra el cuadro de diálogo **Explorar datos** para la tabla que contiene la columna seleccionada.  
   
  **Editar vista del origen de datos**  
- Muestra el **Diseñador de vistas del origen de datos** correspondiente a la vista del origen de datos que contiene la tabla seleccionada. Para más información sobre el **Diseñador de vistas del origen de datos**, vea [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Muestra el **Diseñador de vistas del origen de datos** para la vista del origen de datos que contiene la columna seleccionada. Para más información sobre el **Diseñador de vistas del origen de datos**, vea [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propiedades**  
  Muestra la ventana **Propiedades** en **Herramientas de datos de SQL Server** para la columna seleccionada.  
@@ -125,15 +124,15 @@ ms.locfileid: "66082346"
  Las opciones mostradas en la siguiente tabla se encuentran disponibles en el menú contextual si hace clic con el botón derecho en una relación del panel **Vista del origen de datos** .  
   
  **Editar vista del origen de datos**  
- Muestra el **Diseñador de vistas del origen de datos** correspondiente a la vista del origen de datos que contiene la relación seleccionada. Para más información sobre el **Diseñador de vistas del origen de datos**, vea [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Muestra el **Diseñador de vistas del origen de datos** para la vista del origen de datos que contiene la relación seleccionada. Para más información sobre el **Diseñador de vistas del origen de datos**, vea [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Propiedades**  
  Muestra la ventana **Propiedades** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para la relación seleccionada.  
   
-## <a name="see-also"></a>Vea también  
- [Estructura de dimensión &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
- [Atributos &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [Jerarquías &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Estructura de dimensión &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
+ [Atributos &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Jerarquías &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

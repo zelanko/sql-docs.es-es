@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675e2d24cb84b2a68922528dcdaa09fb6b675605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067145"
 ---
 # <a name="results-pane-visual-database-tools"></a>Panel Resultados (Visual Database Tools)
   El panel Resultados muestra los resultados de la consulta SELECT que se ha ejecutado más recientemente (Los resultados de otros tipos de consultas se muestran en cuadros de mensaje). Para abrir el panel de resultados, abra o cree una consulta, o vea o devuelva los datos de una tabla. Si el panel de resultados no aparece de manera predeterminada, en el menú **Diseñador de consultas** , elija **Panel**y, a continuación, haga clic en **Resultados**.  
@@ -62,11 +61,11 @@ ms.locfileid: "63067811"
   
  Si se cambia una consulta, aparecerá un icono de alerta y el texto "Consulta cambiada" en la esquina inferior derecha del panel de resultados. El icono aparecerá repetido en la esquina superior izquierda del panel.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear consultas &#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
  [Ejecutar consultas &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Panel de diagrama &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Panel Diagrama &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [Panel criterios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   

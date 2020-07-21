@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c83ebac20a86cd490fbfdf2dbd099e103d404ced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d9bf18bfbf1cb8ff5c2cb99840b9632c795141
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62650540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028822"
 ---
 # <a name="query-notifications-event-category"></a>Notificaciones de consulta (categoría de eventos)
   La categoría de eventos **Notificaciones de consulta** contiene clases de eventos que proporcionan información que los programadores y administradores pueden usar para supervisar y solucionar problemas de las notificaciones de consulta.  
@@ -37,7 +36,7 @@ ms.locfileid: "62650540"
  [QN:Template (clase de eventos)](qn-template-event-class.md)  
  Ofrece información acerca del uso interno de las plantillas de consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de SQL](../sql-trace/sql-trace.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  

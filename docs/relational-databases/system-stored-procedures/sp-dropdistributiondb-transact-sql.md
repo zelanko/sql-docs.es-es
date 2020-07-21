@@ -1,5 +1,6 @@
 ---
 title: sp_dropdistributiondb (Transact-SQL) | Microsoft Docs
+description: Quita una base de datos de distribución y los archivos utilizados por él si no se utilizan en otra base de datos. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9d9290b02c149889a488452d71ae800134d38f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786969"
 ---
-# <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita una base de datos de distribución. Quita los archivos físicos que utiliza la base de datos si no son usados por ninguna otra base de datos. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -45,7 +46,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="remarks"></a>Comentarios  
  **sp_dropdistributiondb** se utiliza en todos los tipos de replicación.  
   
- Este procedimiento almacenado debe ejecutarse antes de quitar el distribuidor ejecutando **sp_dropdistributor**.  
+ Este procedimiento almacenado debe ejecutarse antes de quitar el distribuidor mediante la ejecución de **sp_dropdistributor**.  
   
  **sp_dropdistributiondb** también quita un trabajo agente de lectura de cola para la base de datos de distribución, si existe.  
   
@@ -57,11 +58,11 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_dropdistributiondb**.  
   
-## <a name="see-also"></a>Vea también  
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [sp_adddistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

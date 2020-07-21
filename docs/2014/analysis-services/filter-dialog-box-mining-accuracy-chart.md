@@ -1,5 +1,5 @@
 ---
-title: Filtrar (gráfico de precisión de minería de datos) del cuadro de diálogo | Microsoft Docs
+title: Cuadro de diálogo filtrar (gráfico de precisión de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6102fe9c623e785c0ca207660697bffebce82bb5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544489"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Filtrar (gráfico de precisión de minería de datos)
   El cuadro de diálogo **Filtrar** ayuda a generar las condiciones que se pueden aplicar a un conjunto de datos. El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas o los datos del caso que se usen para entrenar un modelo de minería de datos. Este cuadro de diálogo ayuda a generar criterios que se pueden guardar como parte de criterios de filtro más complejos en los cuadros de diálogo **Filtro de conjunto de datos** o **Filtro del modelo** .  
@@ -32,21 +31,21 @@ ms.locfileid: "66081171"
   
  Si aplica el filtro al conjunto de datos nuevo, el modelo de minería de datos existente se usa para evaluar solo los casos en el conjunto de datos que cumplen las condiciones. Sin embargo, si aplica el filtro al propio modelo de minería de datos, la exactitud del modelo se evalúa solo para los casos dentro del modelo que cumplen esos criterios.  
   
- **Para obtener más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
  **Condiciones**  
  Una cuadrícula que contenga columnas en las que se especifiquen condiciones de las columnas de la tabla que se seleccionó en el cuadro de diálogo **Filtro de conjunto de datos** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Y/O**|Haga clic en esta opción para especificar si se aplica el operador Y o el operador O a la condición en esta línea. Estos valores solo están disponibles después de haber seleccionado una columna en la lista **Columna de la estructura de minería de datos** .|  
-|**Columna de estructura de minería de datos**|Haga clic en esta opción para seleccionar una columna de la lista de columnas de la tabla que seleccionó en el origen de datos, en el cuadro de diálogo **Filtro de conjunto de datos** .|  
+|**Y/o**|Haga clic en esta opción para especificar si se aplica el operador Y o el operador O a la condición en esta línea. Estos valores solo están disponibles después de haber seleccionado una columna en la lista **Columna de la estructura de minería de datos** .|  
+|**Columna de la estructura de minería de datos**|Haga clic en esta opción para seleccionar una columna de la lista de columnas de la tabla que seleccionó en el origen de datos, en el cuadro de diálogo **Filtro de conjunto de datos** .|  
 |**Operador**|Seleccione un operador de la lista. Los operadores que están disponibles dependen del tipo de datos de la columna.<br /><br /> Si la columna contiene valores discretos, solo están disponibles los operadores siguientes:<br /><br /> = (equal to), <> (not equal to), IS NOT NULL, IS NULL.<br /><br /> Si la columna contiene valores continuos, también se admiten los operadores correspondientes a operaciones de tipo mayor que y menor que.|  
 |**Valor**|Escriba un valor que utilizar como condición.|  
   
-## <a name="see-also"></a>Vea también  
- [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo IsolationLevel y Mode propiedades (VC ++) | Microsoft Docs
+title: Ejemplo de las propiedades IsolationLevel y MODE (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1f9cb93ff669b5636497c10972baf64373e7f06e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932317"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758671"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vc"></a>Ejemplo IsolationLevel y Mode propiedades (VC ++)
-Este ejemplo se usa el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad para abrir una conexión exclusiva y el [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propiedad para abrir una transacción que se lleva a cabo de forma aislada de otras transacciones.  
+# <a name="isolationlevel-and-mode-properties-example-vc"></a>Ejemplo de las propiedades IsolationLevel y MODE (VC + +)
+En este ejemplo se usa la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) para abrir una conexión exclusiva y la propiedad [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) para abrir una transacción que se lleva a cabo en el aislamiento de otras transacciones.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -223,26 +223,26 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Modo de conexión es exclusivo**  
-**La transacción está aislado**  
-**Guía de base de datos del ocupado ejecutivo - empresarial**  
-**Cocinar con equipos: Encubierta balances - empresarial**  
-**¡Para combatir el estrés del equipo! -empresarial**  
-**Recta hablar sobre equipos - empresarial**  
-**Trata de Silicon Valley gastronomía - mod_cook**  
-**El microondas Gourmet - mod_cook**  
-**La psicología del equipo cocinar - no se ha decidido**  
-**¿Pero es fácil de usar? -popular_comp**  
-**Secretos de Silicon Valley - popular_comp**  
-**Etiqueta de NET - popular_comp**  
-**Personas Phobic y no que no disfrutan de equipo: Variaciones de comportamiento - self_help**  
-**¿Es ira el enemigo? -self_help**  
-**Vida sin temor - self_help**  
-**Prolonga la privación de datos: Cuatro casos prácticos - self_help**  
-**Seguridad emocional: Un nuevo algoritmo - self_help**  
-**Las cebollas, los puerros y ajo: Cocinar los secretos de los mares Mediterráneo - trad_cook**  
-**Años cincuenta en Buckingham Palacio cocinas - trad_cook**  
-**¿Identidad (phishing), cualquier persona? -trad_cook**   
-## <a name="see-also"></a>Vea también  
+ **El modo de conexión es exclusivo**  
+**La transacción está aislada**  
+**Guía de base de datos del ejecutivo ocupado-empresa**  
+**Cocina con equipos: surreptitious balance Sheets-Business**  
+**Puede combatir el estrés del equipo. -empresa**  
+**Hablar directamente acerca de los equipos-empresa**  
+**Gastronomic de Silicon Valley trata: mod_cook**  
+**El mod_cook de la plataforma gourmet**  
+**La psicología del equipo cocina-no DECIDIda**  
+**¿Pero es fácil de utilizar? -popular_comp**  
+**Secretos de Silicon Valley-popular_comp**  
+**Etiqueta de red: popular_comp**  
+**Phobic de equipo y usuarios que no son de phobic: variaciones de comportamiento: self_help**  
+**¿Es enojo el enemigo? -self_help**  
+**Vida sin miedo: self_help**  
+**Privación de datos prolongada: cuatro casos prácticos: self_help**  
+**Seguridad emocional: un nuevo algoritmo-self_help**  
+**Cebollas, Leeks y ajos: secretos de cocina de la trad_cook mediterránea**  
+**50 años en cocinas de Buckingham Palacio-trad_cook**  
+**Sushi, cualquiera? -trad_cook**   
+## <a name="see-also"></a>Consulte también  
  [Propiedad IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Propiedad Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919930"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748919"
 ---
 # <a name="close-method-ado"></a>Close (método) (ADO)
 Cierra un objeto abierto y los objetos dependientes.  
@@ -35,23 +35,23 @@ object.Close
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **cerrar** método para cerrar un [conexión](../../../ado/reference/ado-api/connection-object-ado.md), un [registro](../../../ado/reference/ado-api/record-object-ado.md), un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), o un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto para liberar los recursos del sistema asociados. Cerrar un objeto no quita de la memoria; puede cambiar la configuración de sus propiedades y abrirlo de nuevo más tarde. Para eliminar completamente un objeto de la memoria, cierre el objeto y, a continuación, establezca la variable de objeto en *nada* (en Visual Basic).  
+ Use el método **Close** para cerrar una [conexión](../../../ado/reference/ado-api/connection-object-ado.md), un [registro](../../../ado/reference/ado-api/record-object-ado.md), un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)o un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y volver a abrirla más tarde. Para eliminar completamente un objeto de la memoria, cierre el objeto y, a continuación, establezca la variable de objeto en *Nothing* (en Visual Basic).  
   
 ## <a name="connection"></a>Conexión  
- Mediante el **cerrar** método para cerrar un **conexión** objeto también cierra cualquier activo **Recordset** objetos asociados con la conexión. Un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto asociado con el **conexión** está cerrando el objeto se conservará, pero ya no se asociará con un **conexión** objeto; es decir, su [ ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad se establecerá en **nada**. Además, el **comando** del objeto [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) se borrará la colección de todos los parámetros definidos por el proveedor.  
+ El uso del método **Close** para cerrar un objeto de **conexión** también cierra todos los objetos de **conjunto de registros** activos asociados a la conexión. Se conservará un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) asociado al objeto de **conexión** que se va a cerrar, pero ya no se asociará a un objeto de **conexión** . es decir, su propiedad [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) se establecerá en **Nothing**. Además, la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) del objeto de **comando** se borrará de los parámetros definidos por el proveedor.  
   
- Posteriormente, puede llamar el [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método para volver a establecer la conexión con el mismo u otro origen de datos. Mientras el **conexión** objeto está cerrado, llamar a cualquier método que requiera una conexión abierta para el origen de datos genera un error.  
+ Después, puede llamar al método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) para volver a establecer la conexión con el mismo origen de datos u otro distinto. Mientras se cierra el objeto de **conexión** , al llamar a los métodos que requieren una conexión abierta con el origen de datos se genera un error.  
   
- Cerrar un **conexión** objeto mientras hay abierto **Recordset** objetos en la conexión se deshacen los cambios pendientes en todos los **Recordset** objetos. Cerrar explícitamente una **conexión** objeto (una llamada a la **cerrar** método) mientras una transacción está en curso, generará un error. Si un **conexión** objeto queda fuera del ámbito mientras una transacción en curso, ADO revierte automáticamente la transacción.  
+ Al cerrar un objeto de **conexión** mientras hay objetos de **conjunto de registros** abiertos en la conexión, se revierten los cambios pendientes en todos los objetos de **conjunto de registros** . Al cerrar explícitamente un objeto de **conexión** (llamando al método **Close** ) mientras una transacción está en curso, se genera un error. Si un objeto de **conexión** cae fuera del ámbito mientras una transacción está en curso, ADO revierte automáticamente la transacción.  
   
-## <a name="recordset-record-stream"></a>Conjunto de registros, registro, Stream  
- Mediante el **cerrar** método para cerrar un **Recordset**, **registro**, o **Stream** objeto libera los datos asociados y cualquier acceso exclusivo Puede que haya tenido a los datos a través de este objeto concreto. Posteriormente, puede llamar el [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) atributos de método para volver a abrir el objeto con el mismo o modificada.  
+## <a name="recordset-record-stream"></a>Conjunto de registros, registro, secuencia  
+ Al usar el método **Close** para cerrar un objeto de **conjunto de registros**, **registro**o **secuencia** , se liberan los datos asociados y cualquier acceso exclusivo que haya tenido a los datos a través de este objeto concreto. Después, puede llamar al método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) para volver a abrir el objeto con los mismos atributos, o modificados.  
   
- Mientras un **Recordset** objeto está cerrado, llamar a cualquier método que requiera un cursor activo genera un error.  
+ Mientras se cierra un objeto de **conjunto de registros** , al llamar a cualquier método que requiera un cursor activo, se genera un error.  
   
- Si es una edición en curso en el modo de actualización inmediata, la llamada a la **cerrar** método genera un error; en su lugar, llame a la [actualizar](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método primero. Si cierra el **Recordset** objeto mientras esté en modo de actualización por lotes, todos los cambios desde la última [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) llamada se pierden.  
+ Si una edición está en curso mientras está en modo de actualización inmediata, al llamar al método **Close** se genera un error; en su lugar, llame primero al método [Update](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) . Si cierra el objeto de **conjunto de registros** mientras está en modo de actualización por lotes, se perderán todos los cambios realizados desde la última llamada a [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
- Si usas el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de una abierta **Recordset** de objetos, cierre el original o un clon no afecta a cualquiera de las demás copias.  
+ Si usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear copias de un objeto de **conjunto de registros** abierto, el cierre del original o de un clon no afectará a ninguna de las demás copias.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
@@ -60,10 +60,10 @@ object.Close
 |[Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de los métodos de apertura y cierre (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de los métodos Open y Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Ejemplo de los métodos Open y Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Ejemplo de los métodos Open y Close (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Método Open (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Ejemplo de los métodos Open y Close (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Save (método)](../../../ado/reference/ado-api/save-method.md)

@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd0da4260d4c080b3c8fa1e4a2f8ccc6c187fd67
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055962"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381069"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega componentes de esquema nuevos a una colección de esquemas XML ya existente.  
   
@@ -49,7 +49,9 @@ ms.locfileid: "68055962"
 ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Component'  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *relational_schema*  
  Identifica el nombre del esquema relacional. Si no se especifica, se usará el esquema relacional predeterminado.  
   
@@ -59,10 +61,10 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  **'** *Schema Component* **'**  
  Es el componente de esquema que se va a insertar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Utilice la instrucción ALTER XML SCHEMA COLLECTION para agregar esquemas XML nuevos cuyos espacios de nombre no se encuentren todavía en la colección de esquemas XML o para agregar componentes nuevos a espacios de nombre ya existentes en la colección.  
   
- En el siguiente ejemplo se agrega un \<element> nuevo al espacio de nombres `https://MySchema/test_xml_schema` ya existente en la colección `MyColl`.  
+ En el siguiente ejemplo se agrega un \<element> nuevo al espacio de nombres `https://MySchema/test_xml_schema` existente en la colección `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  

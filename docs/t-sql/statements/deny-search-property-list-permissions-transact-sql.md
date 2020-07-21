@@ -1,6 +1,8 @@
 ---
-title: DENY (permisos de lista de propiedades de búsqueda de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de lista de propiedades de búsqueda DENY
+description: Deniegue los permisos en una lista de propiedades de búsqueda.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49c28bdc297ebf8292fabd3bc69ff4eab8461e15
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114810"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633105"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Denegar permisos de lista de propiedades de búsqueda (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "68114810"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
     TO database_principal [ ,...n ] [ CASCADE ]  
@@ -76,7 +78,7 @@ CASCADE
 -   usuario de base de datos asignado a una clave asimétrica  
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="search-property-list-permissions"></a>Permisos de lista de propiedades de búsqueda  
  Una lista de propiedades de búsqueda es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más limitados y específicos que se pueden denegar en una lista de propiedades de búsqueda se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

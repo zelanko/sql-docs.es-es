@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades de meridiano de mapa, etiquetas de mapa | Microsoft Docs
+title: Cuadro de diálogo Propiedades de meridiano de mapa, etiquetas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108268"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de meridiano de mapa, Etiquetas
-  Use la **MapMeridian propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula vertical en la ventanilla del mapa. Un meridiano representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
+  Use el cuadro de diálogo **propiedades de MapMeridian** para cambiar las opciones de etiqueta de la cuadrícula vertical en la ventanilla de mapa. Un meridiano representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
   
 -   **Planar**. Coordenada Y.  
   
@@ -30,13 +30,13 @@ ms.locfileid: "66108268"
  Haga clic en el botón **Expresión** (*fx*) para modificar una expresión que establezca el valor de la opción.  
   
 ## <a name="options"></a>Opciones  
- **Interval**  
+ **Intervalo**  
  Escriba un valor entero, en grados, que especifica el intervalo entre los meridianos. La opción seleccionada de forma predeterminada es **Automático** . **Automático** indica que los datos espaciales determinan automáticamente el valor.  
   
  **Mostrar etiquetas**  
  Seleccione esta opción para mostrar etiquetas para los meridianos.  
   
- **Placement**  
+ **Ubicación**  
  Seleccione una ubicación para mostrar las etiquetas en relación con la parte superior, central e inferior de la ventanilla. La posición predeterminada es **Cerca**.  
   
 -   **Cerca** Muestra las etiquetas en el borde izquierdo.  
@@ -49,7 +49,7 @@ ms.locfileid: "66108268"
   
 -   **Lejos** Muestra las etiquetas en el borde derecho.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

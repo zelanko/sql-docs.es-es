@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059383"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Se han detectado extensiones personalizadas en el servidor de informes (Asesor de actualizaciones)
   El Asesor de actualizaciones ha detectado valores de extensiones personalizadas en los archivos de configuración, lo que significa que la instalación incluye una o más extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad o la autenticación de datos. La actualización moverá la configuración de la extensión con el servidor de informes actualizado. Sin embargo, si las extensiones personalizadas se instalan en la carpeta de instalación de servidor de informes existente, los archivos de ensamblado para esas extensiones personalizadas no se moverán a la nueva carpeta de instalación durante el proceso de actualización. Una vez completada la actualización, debe mover los archivos de ensamblado a la nueva carpeta de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "71952596"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una arquitectura extensible que permite a los desarrolladores crear extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad y la autenticación de los datos.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]proporciona una arquitectura extensible que permite a los desarrolladores crear extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad y la autenticación de los datos.  
   
  Si se utilizan extensiones personalizadas o ensamblados en la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede utilizar la instalación para realizar una actualización, pero es posible que necesite mover las extensiones a la nueva ubicación de instalación una vez que se complete la actualización, o que necesite realizar algún paso antes de la actualización.  
   
@@ -46,9 +45,9 @@ ms.locfileid: "71952596"
 ## <a name="corrective-action"></a>Acción correctora  
  Utilice las secciones siguientes para determinar los pasos para realizar además de o antes de realizar una actualización de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
- [Procesamiento de datos personalizado o extensiones de entrega](#dataprocdeliver)  
+ [Extensiones de entrega o procesamiento de datos personalizados](#dataprocdeliver)  
   
- [Extensiones de representación personalizadas](#render)  
+ [Extensiones de entrega personalizadas](#render)  
   
  [Seguridad personalizada o extensiones de autenticación en un servidor de informes de SQL Server 2000](#secauth2000)  
   
@@ -66,16 +65,16 @@ ms.locfileid: "71952596"
   
  Si decide no continuar con la actualización, quizá decida migrar a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en su lugar. Para conocer los pasos para migrar extensiones personalizadas, vea [migrar extensiones personalizadas](#migrcustext) en este tema.  
   
-###  <a name="dataprocdeliver"></a>Procesamiento de datos personalizado o extensiones de entrega  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>Procesamiento de datos personalizado o extensiones de entrega  
  Si el Asesor de actualizaciones detecta procesamiento de datos personalizado o extensiones de entrega personalizadas, el proceso de actualización no se bloqueará. No obstante, después de completar la actualización, quizá necesite completar pasos adicionales antes de que la funcionalidad personalizada que proporcionan estas extensiones esté operativa. Por ejemplo, debe completar pasos adicionales cuando los archivos de la extensión personalizada estén instalados en la carpeta de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Pasos de tras la actualización para procesamiento de datos personalizado o extensiones de entrega personalizadas  
   
-1.  Mueva los archivos de extensión a la nueva carpeta de programas para el servidor de informes. De forma predeterminada, la carpeta de programas del servidor de informes se encuentra en \Archivos de Programa\microsoft SQL Server\MSRS10_50. \<*instance_name*> servidor \report.  
+1.  Mueva los archivos de extensión a la nueva carpeta de programas para el servidor de informes. De forma predeterminada, la carpeta de programas del servidor de informes se encuentra en \Archivos de Programa\microsoft SQL Server \ MSRS10_50. \<*instance_name*> servidor de \report.  
   
  Para obtener más información, vea "Implementar una extensión de procesamiento de datos" e "Implementar una extensión de entrega" en Libros en pantalla de SQL Server.  
   
-###  <a name="render"></a>Extensiones de representación personalizadas  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>Extensiones de representación personalizadas  
  Si el Asesor de actualizaciones detecta extensiones de representación personalizadas, el proceso de actualización se bloquea. Puede continuar con el proceso de actualización quitando las entradas de configuración de extensión personalizadas del archivo de configuración. Sin embargo, esto hará que las extensiones personalizadas no estén disponible para los usuarios una vez completada la actualización. Si necesita extensiones de representación personalizadas después de la actualización, debe generar extensiones de representación actualizadas u obtener extensiones de representación actualizadas de un proveedor de extensiones personalizadas.  
   
  Debe hacer lo necesario para habilitar una actualización o, en su lugar, migrar a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -95,7 +94,7 @@ ms.locfileid: "71952596"
   
  Para obtener más información, vea "Implementar una extensión de representación" en los Libros en pantalla de SQL Server.  
   
-###  <a name="secauth2000"></a>Seguridad personalizada o extensiones de autenticación en un servidor de informes de SQL Server 2000  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>Seguridad personalizada o extensiones de autenticación en un servidor de informes de SQL Server 2000  
  Si el Asesor de actualizaciones detecta seguridad o extensiones de autenticación personalizadas en un servidor de informes [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], el proceso de actualización se bloquea. Debe hacer lo necesario para habilitar una actualización o, en su lugar, migrar a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En cualquier caso, debe actualizar y volver a compilar las extensiones con las interfaces más recientes de Microsoft.ReportingServices.Interfaces.dll, porque las interfaces han cambiado entre [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 > [!IMPORTANT]  
@@ -115,7 +114,7 @@ ms.locfileid: "71952596"
   
  Para obtener más información, vea "Implementar una extensión de seguridad" en los Libros en pantalla de SQL Server.  
   
-###  <a name="secauth2005"></a>Seguridad personalizada o extensiones de autenticación en un servidor de informes de SQL Server 2005  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>Seguridad personalizada o extensiones de autenticación en un servidor de informes de SQL Server 2005  
  Si el Asesor de actualizaciones detecta seguridad o extensiones de autenticación personalizadas en un servidor de informes [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el proceso de actualización se bloquea. Debe hacer lo necesario para habilitar una actualización o, en su lugar, migrar a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>Para actualizar seguridad o extensiones de autenticación personalizadas de un servidor de informes de SQL Server 2005  
@@ -130,7 +129,7 @@ ms.locfileid: "71952596"
   
  Para obtener más información, vea "Implementar una extensión de seguridad" en los Libros en pantalla de SQL Server.  
   
-###  <a name="migrcustext"></a>Migrar extensiones personalizadas  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>Migrar extensiones personalizadas  
  Si decide migrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en lugar de realizar una actualización, utilice los pasos para migrar extensiones personalizadas a la nueva instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>Para migrar extensiones personalizadas a una nueva instancia de Reporting Services  
@@ -141,7 +140,7 @@ ms.locfileid: "71952596"
   
 3.  Configure las extensiones en la nueva instancia.  
   
-## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones &#40;de Reporting Services upgrade issues&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Reporting Services problemas de actualización &#40;el asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Incorporación y cambio de un diagrama de base de datos | Microsoft Docs'
+title: 'Tutorial: Agregar y modificar un diagrama de base de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7314598bffe53b6db1c24ecaaec2cf32ee06cb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273743"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008603"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Incorporación y cambio de un diagrama de base de datos
   En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para completar esta visita guiada, necesitará:  
   
 -   Acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -70,17 +69,17 @@ ms.locfileid: "63273743"
   
 1.  Haga clic con el botón derecho en una zona del Diseñador de diagramas que no sea una tabla existente y elija **Nueva tabla**.  
   
-2.  En el **Elegir nombre** cuadro de diálogo, haga clic en **Aceptar** para aceptar el nombre predeterminado `Table1`.  
+2.  En el cuadro de diálogo **elegir nombre** , haga clic en **Aceptar** para aceptar el nombre predeterminado `Table1` .  
   
      Aparecerá una nueva cuadrícula de tabla con tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
   
-3.  Agregue la siguiente información para `Table1`:  
+3.  Agregue la siguiente información a `Table1` :  
   
     |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|activado|  
-    |`T1col2`|`varchar(50)`|activado|  
-    |`T1col3`|`float`|activado|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
+    |`T1col3`|`float`|Activado|  
   
 4.  Haga clic con el botón derecho en `T1col1` y seleccione **Establecer clave principal**.  
   
@@ -88,9 +87,9 @@ ms.locfileid: "63273743"
   
 5.  En el menú **Archivo** , haga clic en **Guardar Diagram1**.  
   
-6.  En el **Elegir nombre** cuadro de diálogo, haga clic en **Aceptar** para aceptar el nombre predeterminado `Diagram1`.  
+6.  En el cuadro de diálogo **elegir nombre** , haga clic en **Aceptar** para aceptar el nombre predeterminado `Diagram1` .  
   
-7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que**  se guardará en la base de datos. Haga clic en **Sí**.  
+7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que ** se guardará en la base de datos. Haga clic en **Sí**.  
   
 ## <a name="modifying-table-structure"></a>Modificar la estructura de la tabla  
  Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el Diseñador de diagramas.  
@@ -119,18 +118,18 @@ ms.locfileid: "63273743"
   
 1.  Cree una nueva tabla en el Diseñador de diagramas con el nombre `Table2` y con las siguientes columnas:  
   
-    |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
+    |**Nombre de columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|no seleccionado|  
-    |`T2col2`|`varchar(50)`|activado|  
-    |`T2col3`|`xml`|activado|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  Las columnas del lado de la clave principal de una relación de clave externa deben participar en una restricción PRIMARY KEY o UNIQUE.  
   
 2.  Arrastre `T2col1` hasta `T1col1`.  
   
-     Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** en primer plano.  
+     Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** , en primer plano.  
   
 3.  Haga clic en **Aceptar** para guardar la nueva relación.  
   
@@ -191,7 +190,7 @@ ms.locfileid: "63273743"
   
      Aparecerá el cuadro de diálogo **Guardar** . Si selecciona la opción **Advertir sobre las tablas afectadas** , se proporcionará información acerca de las tablas nuevas o modificadas.  
   
-2.  Haga clic en **Aceptar**.  
+2.  Haga clic en **OK**.  
   
 3.  Si se produce algún error, aparecerá el cuadro de diálogo **Notificaciones después de guardar** con los errores y las causas. Solucione los errores y guarde el diagrama de nuevo.  
   
@@ -206,13 +205,13 @@ ms.locfileid: "63273743"
   
 -   Copiar el diagrama en un mapa de bits  
   
-## <a name="see-also"></a>Vea también  
- [Personalizar la cantidad de información mostrada en los diagramas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Personalizar la cantidad de información que se muestra en los diagramas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Configurar el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [Agregar tablas a diagramas &#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
  [Crear relaciones entre tablas en un diagrama &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [Crear índices XML](../../relational-databases/xml/create-xml-indexes.md)   
- [Copiar una imagen de un diagrama de base de datos en el Portapapeles &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Copiar una imagen de un diagrama de base de datos en el portapapeles &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [Trabajar con el diseño de diagramas &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_is_master_switch_on (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_is_master_switch_on (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: e8c2108d-b104-46cb-9645-a15f46112c86
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 044cdc1b334732a0730cd2c223d5690e4089a0cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: a697cff22257c49774c91dc0b5c646034e34fba1
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140643"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053421"
 ---
-# <a name="managedbackupfnismasterswitchon-transact-sql"></a>managed_backup.fn_is_master_switch_on (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="managed_backupfn_is_master_switch_on-transact-sql"></a>managed_backup. fn_is_master_switch_on (Transact-SQL)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Devuelve el estado de las operaciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la instancia de SQL Server.  
   
@@ -43,11 +42,11 @@ ms.locfileid: "68140643"
 managed_backup.fn_is_master_switch_on ()  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  None  
   
-## <a name="return-type"></a>Tipo devuelto  
- **BIT**  
+## <a name="return-type"></a>Tipo de valor devuelto  
+ **POCO**  
   
  1 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está activa, 0 = [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está pausada.  
   
@@ -56,7 +55,7 @@ managed_backup.fn_is_master_switch_on ()
 ### <a name="permissions"></a>Permisos  
  Requiere permisos SELECT en la función.  
   
-## <a name="see-also"></a>Vea también  
- [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a>Consulte también  
+ [Copia de seguridad administrada en Microsoft Azure para SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

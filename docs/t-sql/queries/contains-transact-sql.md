@@ -1,6 +1,6 @@
 ---
 title: CONTAINS (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para el elemento de lenguaje CONTAINS. Se usa para buscar palabras o frases dentro de otra expresión.
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f088f9340c0441b15eea7382ff49b1b87181479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736320"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   Busca coincidencias precisas o aproximadas (menos precisas) de palabras o frases, palabras que se encuentran a cierta distancia de otra o coincidencias ponderadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS es un predicado que se usa en la [cláusula WHERE](../../t-sql/queries/where-transact-sql.md) de una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar una búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las columnas indizadas de texto completo que contienen tipos de datos basados en caracteres.  
@@ -65,7 +65,7 @@ ms.locfileid: "67902126"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CONTAINS (   
      {   
         column_name | ( column_list )   
@@ -151,7 +151,7 @@ CONTAINS (
  Especifica que la consulta busca la condición de búsqueda especificada en todas las columnas indizadas de texto completo de la tabla especificada en la cláusula FROM. Las columnas de la cláusula CONTAINS deben proceder de una tabla única que tenga un índice de texto completo. A menos que se especifique *language_term*, el idioma de todas las columnas de la tabla debe ser el mismo.  
   
  PROPERTY ( *column_name*, '*property_name*')  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  Especifica la propiedad de un documento por la que buscar la condición de búsqueda especificada.  
   
@@ -217,7 +217,7 @@ Especifica una coincidencia para una palabra o frase exactas. Ejemplos de térmi
  \<prefix_term>  
  Especifica la coincidencia de palabras o frases que comiencen con el texto especificado. Incluya un término prefijo entre comillas dobles ("") y agregue un asterisco (\*) delante de las comillas de cierre, de modo que se haga coincidir con cualquier texto que comience con el término sencillo especificado antes del asterisco. La cláusula debe especificarse de esta manera:`CONTAINS (column, '"text*"')`. El asterisco representa cero, uno o más caracteres (de la palabra raíz o de las palabras de la palabra o la frase). Si el texto y el asterisco no se delimitan con comillas dobles de modo que el predicado sea `CONTAINS (column, 'text*')`, la búsqueda de texto completo considera el asterisco un carácter y busca coincidencias exactas con `text*`. El motor de texto completo no encontrará palabras con el carácter de asterisco (\*) porque los separadores de palabras suelen omitir dichos caracteres.  
   
- Cuando *\<prefix_term>* es una frase, todas las palabras de dicha frase se consideran prefijos. Por tanto, una consulta que especifique el prefijo "local wine*" hace que se devuelvan todas las filas que contengan el texto "local winery", "locally wined and dined", etc.  
+ Cuando *\<prefix_term>* es una frase, todas las palabras que contiene se consideran prefijos independientes. Por tanto, una consulta que especifique el prefijo "local wine*" hace que se devuelvan todas las filas que contengan el texto "local winery", "locally wined and dined", etc.  
   
  \<generation_term>  
  Especifica la coincidencia de palabras cuando los términos simples incluyen variaciones de la palabra original que se busca.  
@@ -228,7 +228,7 @@ Especifica una coincidencia para una palabra o frase exactas. Ejemplos de térmi
  Un *\<simple_term>* determinado dentro de un *\<generation_term>* no coincidirá con nombres y verbos.  
   
  THESAURUS  
- Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones más largos de *\<simple_term>* se hacen coincidir con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra ninguna coincidencia para todo o parte de *\<simple_term>* , la parte no coincidente se trata como un *simple_term*. Para más información sobre los sinónimos de búsqueda de texto completo, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones más largos de *\<simple_term>* se hacen coincidir con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra ninguna coincidencia para la totalidad o parte de *\<simple_term>* , la parte que no coincide se trata como un elemento *simple_term*. Para más información sobre los sinónimos de búsqueda de texto completo, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Especifica una coincidencia de palabras o frases que deben estar en el documento en el que se busca.  
@@ -246,7 +246,7 @@ Especifica una coincidencia para una palabra o frase exactas. Ejemplos de térmi
  Para más información sobre los términos de proximidad genéricos, vea [Buscar palabras cerca de otra palabra con NEAR](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md).  
   
  \<custom_proximity_term>  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  Especifica una coincidencia entre palabras o frases y, opcionalmente, la distancia máxima permitida entre los términos de búsqueda. También se puede especificar que los términos de búsqueda deben estar en el orden exacto en que se indican (\<match_order>).  
   
@@ -285,12 +285,12 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Observe que no se cuenta el término de búsqueda interno, `CC`.  
   
  **MAX**  
- Devuelve todas las filas que contengan los términos especificados sin tener en cuenta la distancia a la que se encuentran. Ésta es la opción predeterminada.  
+ Devuelve todas las filas que contengan los términos especificados sin tener en cuenta la distancia a la que se encuentran. Este es el valor predeterminado.  
   
  \<match_order>  
  Especifica si los términos deben encontrarse en el orden especificado para que los devuelva una consulta de búsqueda. Para especificar \<match_order>, también debe especificar \<maximum_distance>.  
   
- \<match_order> puede tener uno de los siguientes valores:  
+ \<match_order> toma uno de los valores siguientes:  
   
  **TRUE**  
  Exige que los términos estén en el orden especificado. Por ejemplo, `NEAR(A,B)` solo consideraría como coincidencia `A ... B`.  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  No tiene en cuenta el orden especificado. Por ejemplo, `NEAR(A,B)` consideraría como coincidencias `A ... B` y `B ... A`.  
   
- Ésta es la opción predeterminada.  
+ Este es el valor predeterminado.  
   
  Por ejemplo, el siguiente término de proximidad busca las palabras "`Monday`", "`Tuesday`" y "`Wednesday`" en el orden especificado, sin tener en cuenta la distancia a la que se encuentren:  
   
@@ -315,7 +315,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Especifica la palabra clave *\<weighted_term>* .  
   
  WEIGHT(*weight_value*)  
- Especifica el valor de ponderación como un número entre 0,0 y 1,0. Cada componente de *\<weighted_term>* puede incluir un *weight_value*. *weight_value* es una forma de modificar cómo varias partes de una consulta afectan al valor de rango asignado a cada fila que coincide con la consulta. WEIGHT no influye en los resultados de las consultas CONTAINS, pero sí en el rango de las consultas [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
+ Especifica el valor de ponderación como un número entre 0,0 y 1,0. Cada componente de *\<weighted_term>* puede incluir un elemento *weight_value*. *weight_value* es una forma de modificar cómo varias partes de una consulta afectan al valor de rango asignado a cada fila que coincide con la consulta. WEIGHT no influye en los resultados de las consultas CONTAINS, pero sí en el rango de las consultas [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
   
 > [!NOTE]  
 >  El separador decimal siempre es un punto, independientemente de la configuración regional del sistema operativo.  
@@ -371,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. Usar CONTAINS con \<simple_term>  
+### <a name="a-using-contains-with-simple_term"></a>A. Uso de CONTAINS con \<simple_term>  
  En este ejemplo se buscan todos los productos con un precio de `$80.99` que contengan la palabra `Mountain`.  
   
 ```sql  
@@ -384,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usar CONTAINS y una frase con \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. Uso de CONTAINS y una frase con \<simple_term>  
  En el siguiente ejemplo se obtienen todos los productos que contienen la palabra `Mountain` o `Road`.  
   
 ```sql  
@@ -396,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. Usar CONTAINS con \<prefix_term>  
+### <a name="c-using-contains-with-prefix_term"></a>C. Uso de CONTAINS con \<prefix_term>  
  En el siguiente ejemplo se obtienen todos los nombres de producto con una palabra como mínimo que empiece por el prefijo "chain" en la columna `Name`.  
   
 ```sql  
@@ -408,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. Usar CONTAINS y OR con \<prefix_term>  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. Uso de CONTAINS y OR con \<prefix_term>  
  En el siguiente ejemplo se obtienen todas las descripciones de categorías que contienen cadenas con los prefijos `chain` o `full`.  
   
 ```sql  
@@ -420,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. Usar CONTAINS con \<proximity_term>  
+### <a name="e-using-contains-with-proximity_term"></a>E. Uso de CONTAINS con \<proximity_term>  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  En el siguiente ejemplo se buscan en la tabla `Production.ProductReview` todos los comentarios que contengan la palabra `bike` a una distancia de diez términos de la palabra "`control`" y en el orden especificado (es decir, donde "`bike`" preceda a "`control`").  
   
@@ -435,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. Usar CONTAINS con \<generation_term>  
+### <a name="f-using-contains-with-generation_term"></a>F. Uso de CONTAINS con \<generation_term>  
  En el siguiente ejemplo se buscan todos los productos que tengan palabras derivadas de `ride`: riding, ridden, etc.  
   
 ```sql  
@@ -447,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. Usar CONTAINS con \<weighted_term>  
+### <a name="g-using-contains-with-weighted_term"></a>G. Uso de CONTAINS con \<weighted_term>  
  En el siguiente ejemplo se buscan todos los nombres de productos que contengan las palabras `performance`, `comfortable` o `smooth`. Cada palabra tiene asignado un peso distinto.  
   
 ```sql  
@@ -519,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. Realizar consultas por una propiedad de documento  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  La siguiente consulta busca una propiedad indizada, `Title`, en la columna `Document` de la tabla `Production.Document`. La consulta solo devuelve documentos cuya propiedad `Title` contengan las cadenas `Maintenance` o `Repair`.  
   

@@ -1,6 +1,6 @@
 ---
-title: Administración de formato de código | Microsoft Docs
-ms.custom: ''
+title: Administrar formato de código
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -26,12 +26,12 @@ ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c971543a87645c1c4a25d181fa7cef478eef0f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6d1c9bd306cf30ee0974aff2396946c131bfb824
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265415"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261870"
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "68265415"
   
 5.  Haga clic en una de las opciones siguientes:  
   
-    -   **Ninguna**. El cursor va al comienzo de la línea siguiente.  
+    -   **No**. El cursor va al comienzo de la línea siguiente.  
   
-    -   **Bloque**. El cursor alinea la línea siguiente con la anterior.  
+    -   **Bloqueo**. El cursor alinea la línea siguiente con la anterior.  
   
     -   **Inteligente** (valor predeterminado). El servicio de lenguaje determina el estilo de sangría adecuado.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68265415"
 3.  Para convertir texto en minúsculas, pulse CTRL+MAYÚS+L o haga clic en **Poner en minúsculas** en el submenú **Avanzado** del menú **Editar** .  
   
 > [!NOTE]  
->  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="displaying-and-linking-to-urls"></a>Mostrar direcciones URL y crear vínculos  
  En el código, puede crear y mostrar direcciones URL en las que se puede hacer clic. De manera predeterminada, las direcciones URL:  

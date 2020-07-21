@@ -1,5 +1,5 @@
 ---
-title: 'Lección 7: Mueva los archivos de datos a Azure Storage | Microsoft Docs'
+title: 'Lección 7: trasladar los archivos de datos a Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 5ae5b92ace65f255aacff5b49fe789a31d3a69e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70175454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049797"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lección 7: Mueva los archivos de datos a Azure Storage
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lección 7: Mover los archivos de datos a Azure Storage
   En esta lección, obtendrá información sobre cómo migrar los archivos de datos a Azure Storage (pero no a la instancia de SQL Server). Para seguir esta lección, no es necesario completar las lecciones 4, 5 y 6.  
   
- Para trasladar los archivos de datos a Azure Storage, puede usar `ALTER DATABASE` la instrucción, ya que ayuda a cambiar la ubicación de los archivos de datos.  
+ Para trasladar los archivos de datos a Azure Storage, puede usar la `ALTER DATABASE` instrucción, ya que ayuda a cambiar la ubicación de los archivos de datos.  
   
  En esta lección se supone que ya completó los pasos siguientes:  
   
@@ -63,7 +62,7 @@ ms.locfileid: "70175454"
   
     ```  
   
-3.  Al ejecutarlo, verá este mensaje: "El archivo" TestDB1Alter "se ha modificado en el catálogo del sistema. La nueva ruta de acceso se utilizará la próxima vez que se inicie la base de datos ".  
+3.  Al ejecutarlo, verá este mensaje: "el archivo" TestDB1Alter "se ha modificado en el catálogo del sistema. La nueva ruta de acceso se utilizará la próxima vez que se inicie la base de datos ".  
   
 4.  Después, establezca la base de datos sin conexión.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "70175454"
   
     ```  
   
-5.  Ahora, debe copiar los archivos de datos en Azure Storage con uno de los métodos siguientes: [Herramienta AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Página Put](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referencia](https://msdn.microsoft.com/library/azure/dn261237.aspx)de la biblioteca de cliente de almacenamiento o una herramienta del explorador de almacenamiento de terceros.  
+5.  Ahora, debe copiar los archivos de datos en Azure Storage con uno de los métodos siguientes: [herramienta AzCopy](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs), [Página Put](https://msdn.microsoft.com/library/azure/ee691975.aspx), referencia de la [biblioteca de cliente de almacenamiento](https://msdn.microsoft.com/library/azure/dn261237.aspx)o una herramienta de explorador de almacenamiento de terceros.  
   
      **Importante:** Al usar esta nueva mejora, asegúrese siempre de que crea un BLOB en páginas y no un BLOB en bloques.  
   
@@ -89,6 +88,6 @@ ms.locfileid: "70175454"
   
  **Lección siguiente:**  
   
- [Lección 8: Restaurar una base de datos a Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [Lección 8. Restaurar una base de datos a Azure Storage](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

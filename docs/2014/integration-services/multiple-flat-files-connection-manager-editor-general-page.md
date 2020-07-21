@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones (página General) varios archivos planos | Microsoft Docs
+title: Editor del administrador de conexiones de varios archivos planos (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53d684e6f48f3f81ae23c34c23eed11789d4a1fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057481"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440122"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de varios archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para seleccionar un grupo de archivos que tengan el mismo formato de datos y para especificar su formato de datos. Una conexión de varios archivos planos permite que un paquete se conecte a un grupo de archivos de texto que tengan el mismo formato.  
@@ -33,7 +32,7 @@ ms.locfileid: "66057481"
  **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Nombres de archivos**  
+ **Nombres de archivo**  
  Escriba la ruta de acceso y los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede especificar varios archivos mediante el uso de caracteres comodín, como en el ejemplo "C:\\*.txt", o mediante el uso del carácter de barra vertical (|) para separar varios nombres de archivo. Todos los archivos deben tener el mismo formato de datos.  
   
  **Examinar**  
@@ -48,10 +47,10 @@ ms.locfileid: "66057481"
  **Página de códigos**  
  Especifique la página de códigos para el texto no Unicode.  
   
- **Formato**  
+ **Format**  
  Indique si se utiliza formato delimitado, de ancho fijo o derecho irregular. Todos los archivos deben tener el mismo formato de datos.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores, que se especifican en la página **Columnas** .|  
 |Ancho fijo|Las columnas tienen un ancho fijo, que se especifica arrastrando líneas de marcador en la página **Columnas** .|  
@@ -63,14 +62,14 @@ ms.locfileid: "66057481"
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
+|**COMPRA**|La fila de encabezado está delimitada por un retorno de carro.|  
 |**{LF}**|La fila de encabezado está delimitada por un avance de línea.|  
 |**Punto y coma {;}**|La fila de encabezado está delimitada por un punto y coma.|  
 |**Dos puntos {:}**|La fila de encabezado está delimitada por dos puntos.|  
-|**Coma {,}**|La fila de encabezado está delimitada por una coma.|  
+|**Unas{,}**|La fila de encabezado está delimitada por una coma.|  
 |**Tabulación {t}**|La fila de encabezado está delimitada por una tabulación.|  
 |**Barra vertical {&#124;}**|La fila de encabezado está delimitada por una barra vertical.|  
   
@@ -80,10 +79,10 @@ ms.locfileid: "66057481"
  **Nombres de columna de la primera fila de datos**  
  Indica si deben esperarse o deben especificarse nombres de columna en la primera fila de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [&#40;página columnas del editor del administrador de conexiones de varios archivos planos&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
  [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

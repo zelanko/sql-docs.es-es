@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580415"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar un servidor de informes para la administración remota
@@ -68,7 +68,7 @@ ms.locfileid: "65580415"
   
 1.  Inicie sesión como administrador local en el equipo para el que desea habilitar la administración remota.  
   
-2.  Abra un símbolo del sistema con privilegios administrativos.  
+2.  Abra un símbolo del sistema con privilegio de administración.  
   
 3.  Ejecute el siguiente comando:  
   

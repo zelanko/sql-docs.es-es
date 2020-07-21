@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be3d21665d41fe7748e6a3a4d070f4001ca306a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4fac1af45571023b718ec474cb69a78a272d0ad
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762039"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551040"
 ---
-# <a name="mssqlserver7933"></a>MSSQLSERVER_7933
+# <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7933|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7933|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texto del mensaje|Error de tabla: Un directorio Filestream que f_id identificador existe para una partición, pero la partición correspondiente no existe en la base de datos.|  
+|Texto del mensaje|Error de tabla: existe un id. de directorio de secuencia de archivos F_ID para una partición, pero la partición correspondiente no existe en la base de datos.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se ha encontrado un directorio de conjunto de filas en el espacio de datos FILESTREAM; sin embargo, falta su partición correspondiente en la base de datos.  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211534"
 ---
 # <a name="implementing-a-security-extension"></a>Implementar una extensión de seguridad
@@ -37,7 +37,7 @@ ms.locfileid: "68211534"
  [Autorización en Reporting Services](authorization-in-reporting-services.md)  
  Trata la autorización en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.ReportingServices.Interfaces>   
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  

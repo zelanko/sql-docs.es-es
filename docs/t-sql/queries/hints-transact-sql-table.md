@@ -1,7 +1,7 @@
 ---
 title: Sugerencias de tabla (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731335"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las sugerencias de tabla invalidan el comportamiento predeterminado del optimizador de consultas mientras dura la instrucción del lenguaje de manipulación de datos (DML) especificando un método de bloqueo, uno o varios índices, una operación de procesamiento de la consulta como un recorrido de tabla o una búsqueda de índice, u otras opciones. Las sugerencias de tabla se especifican en la cláusula FROM de la instrucción DML y solo afectan a la tabla o a la vista a la que se hace referencia en esa cláusula.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67901963"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ Con algunas excepciones, las sugerencias de tabla se admiten en la cláusula FRO
 > [!IMPORTANT]  
 > Omitir la palabra clave WITH es una característica obsoleta: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Las siguientes sugerencias de tabla se permiten con y sin la palabra clave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT y NOEXPAND. Cuando estas sugerencias de tabla se especifican sin la palabra clave WITH, deben especificarse solas. Por ejemplo:  
+Las siguientes sugerencias de tabla están permitidas con y sin la palabra clave `WITH`: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` y `NOEXPAND`. Cuando estas sugerencias de tabla se especifican sin la palabra clave WITH, deben especificarse solas. Por ejemplo:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -221,7 +221,7 @@ Cuando FORCESEEK se especifica con parámetros de índice, se aplican las siguie
 > [!CAUTION]  
 > Al especificar FORCESEEK con parámetros se limita el número de planes que el optimizador puede considerar en comparación con cuando se especifica FORCESEEK sin parámetros. Esto puede provocar que se produzca un error `Plan cannot be generated` en más casos. En una versión futura, las modificaciones internas realizadas en el plan pueden permitir que se consideren más planes.  
   
-FORCESCAN **Se aplica a**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **Se aplica a**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 y versiones posteriores
 Especifica que el optimizador de consultas use solamente una operación de búsqueda de índice como la ruta de acceso a la vista o la tabla a la que se hace referencia. La sugerencia FORCESCAN puede ser útil para consultas en las que el optimizador subestima el número de filas afectadas y elige una operación de búsqueda en lugar de una operación de examen. Cuando esto ocurre, la cantidad de memoria asignada a la operación es demasiado pequeña y el rendimiento de la consulta se ve afectado.  
   
 FORCESCAN se puede especificar con o sin una sugerencia INDEX. Cuando se combina con una sugerencia de índice, (`INDEX = index_name, FORCESCAN`), el optimizador de consultas solo considera el examen de rutas de acceso mediante el índice especificado al tener acceso a la tabla a la que se hace referencia. Se puede especificar FORCESCAN con la sugerencia de índice INDEX(0) para forzar una operación de recorrido de tabla en la tabla base.  
@@ -261,7 +261,7 @@ Equivalente a READUNCOMMITTED. Para obtener más información, vea READUNCOMMITT
 > Para las instrucciones UPDATE o DELETE: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Indica a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que devuelva un mensaje cuando encuentre un bloqueo en la tabla. NOWAIT equivale a especificar SET LOCK_TIMEOUT 0 para una tabla específica. La sugerencia NOWAIT no funciona cuando también se incluye la sugerencia TABLOCK. Para terminar una consulta sin esperas cuando se usa la sugerencia TABLOCK, preceda el nombre de la consulta con `SETLOCK_TIMEOUT 0;` en su lugar.  
+Indica a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que devuelva un mensaje cuando encuentre un bloqueo en la tabla. NOWAIT equivale a especificar `SET LOCK_TIMEOUT 0` para una tabla específica. La sugerencia NOWAIT no funciona cuando también se incluye la sugerencia TABLOCK. Para terminar una consulta sin esperas cuando se usa la sugerencia TABLOCK, preceda el nombre de la consulta con `SETLOCK_TIMEOUT 0;` en su lugar.  
   
 PAGLOCK  
 Aplica bloqueos de página en los casos en que se suelen aplicar bloqueos individuales en filas o claves, o bien en los casos en los que se suele aplicar un único bloqueo de tabla. De manera predeterminada, utiliza el modo de bloqueo apropiado para la operación. Cuando se especifica en transacciones que funcionan con el nivel de aislamiento SNAPSHOT, no se utilizan bloqueos de página a menos que se combine PAGLOCK con otras sugerencias de tabla que requieran bloqueos, como UPDLOCK y HOLDLOCK.  
@@ -317,7 +317,7 @@ SERIALIZABLE
 Equivalente a HOLDLOCK. Hace que los bloqueos compartidos sean más restrictivos, manteniéndolos hasta la finalización de la transacción, en lugar de liberarlos cuando la tabla o página de datos deja de ser necesaria, se haya completado la transacción o no. El recorrido se hace con la misma semántica que una transacción que se ejecuta con el nivel de aislamiento SERIALIZABLE. Para más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 SNAPSHOT  
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores. 
   
 Se tiene acceso a la tabla optimizada para memoria con aislamiento SNAPSHOT. SNAPSHOT solo se puede utilizar con tablas optimizadas para memoria (no con tablas basadas en disco). Para obtener más información, vea [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *entero*  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
 Especifica el número máximo de celdas que se van a usar para teselar un objeto de geometría o geografía. *number* es un valor entre 1 y 8192.  
   
 Esta opción permite optimizar el tiempo de ejecución de la consulta ajustando el equilibrio entre el tiempo de ejecución del filtro primario y secundario. Un número mayor reduce el tiempo de ejecución del filtro secundario, pero aumenta el tiempo de ejecución del filtro primario y un número menor disminuye el tiempo de ejecución del filtro primario, pero aumenta el tiempo de ejecución del filtro secundario. En el caso de datos espaciales más densos, un número mayor debe producir un tiempo de ejecución más rápido proporcionando una mejor aproximación con el filtro primario y reduciendo el tiempo de ejecución del filtro secundario. Si se trata de datos más dispersos, un número menor disminuirá el tiempo de ejecución del filtro primario.  
@@ -339,7 +339,7 @@ Esta opción permite optimizar el tiempo de ejecución de la consulta ajustando 
 TABLOCK  
 Especifica que el bloqueo adquirido se aplique en el nivel de tabla. El tipo de bloqueo que se ha adquirido depende de la instrucción que se esté ejecutando. Por ejemplo, una instrucción SELECT puede adquirir un bloqueo compartido. Al especificar TABLOCK, el bloqueo compartido se aplica a toda la tabla, no en el nivel de fila o de página. Si también se especifica HOLDLOCK, el bloqueo de tabla se mantiene hasta el final de la transacción.  
   
-Al importar los datos a un montón mediante la instrucción INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>, puede habilitar el registro y el bloqueo optimizados para la instrucción al especificar la sugerencia TABLOCK para la tabla de destino. Además, el modelo de recuperación de la base de datos debe establecerse en registro simple o masivo. Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Al importar los datos a un montón mediante la instrucción `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`, puede habilitar el registro mínimo y el bloqueo optimizado para la instrucción al especificar la sugerencia TABLOCK para la tabla de destino. Además, el modelo de recuperación de la base de datos debe establecerse en registro simple o masivo. La sugerencia TABLOCK también permite inserciones paralelas en montones o en índices de almacén de columnas agrupados. Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 Cuando se usa con el proveedor de conjuntos de filas BULK [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) para importar los datos a una tabla, TABLOCK permite que varios clientes carguen datos de forma simultánea en la tabla de destino con el bloqueo y el registro optimizados. Para más información, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
@@ -354,7 +354,7 @@ Cuando se especifica UPDLOCK, las sugerencias de nivel de aislamiento READCOMMIT
 XLOCK  
 Especifica que se apliquen bloqueos exclusivos y se mantengan hasta que se complete la transacción. Si se especifica junto con ROWLOCK, PAGLOCK o TABLOCK, los bloqueos exclusivos se aplican al nivel de granularidad apropiado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las sugerencias de tabla se pasan por alto si el plan de consulta no tiene acceso a la tabla. Esto puede deberse a que el optimizador elija no tener acceso a la tabla o a que, en su lugar, se tenga acceso a una vista indizada. En el último caso, el acceso a una vista indizada puede evitarse con la sugerencia de consulta OPTION (EXPAND VIEWS).  
   
 Todas las sugerencias de bloqueo se propagan a todas las tablas y vistas a las que tiene acceso el plan de consulta, incluidas las tablas y vistas a las que se hace referencia en una vista. Asimismo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lleva a cabo las comprobaciones de coherencia de bloqueo correspondientes.  

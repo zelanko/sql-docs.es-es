@@ -17,15 +17,14 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b349710494d52d01ba82c572b4646057b8d52a02
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770321"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430122"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -56,15 +55,15 @@ ms.locfileid: "62770321"
   
  Cuando un elemento de búsqueda contiene términos que se superponen en el conjunto de referencia (es decir, un subtérmino se encuentra en más de un registro de referencia), la transformación Búsqueda de términos solo devuelve un resultado de búsqueda. En el siguiente ejemplo se muestra el resultado cuando un elemento de la búsqueda contiene un subtérmino que se superpone. El subtérmino que se superpone en este caso es *Windows*, que se encuentra en dos términos de referencia. Sin embargo, la transformación no devuelve dos resultados, sino únicamente un solo término de referencia, *Windows*. No se devuelve el segundo término de referencia, *Windows 7 Professional*.  
   
-|Elemento|Valor|  
+|Elemento|Value|  
 |----------|-----------|  
 |Término de entrada|Windows 7 Professional|  
 |Términos de referencia|Windows, Windows 7 Professional|  
-|Salida|Windows|  
+|Output|Windows|  
   
- La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
+ La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes:%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "y".  
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  La transformación Búsqueda de términos solo puede usar una columna que tenga el tipo de datos DT_WSTR o DT_NTEXT. Si una columna contiene texto, pero no tiene uno de estos tipos de datos, la transformación Conversión de datos puede agregar una columna con el tipo de datos DT_WSTR o DT_NTEXT al flujo de datos y copiar los valores de columnas en la nueva columna. La salida de transformación Conversión de datos posteriormente se puede usar como la entrada para la transformación Búsqueda de términos. Para más información, consulte [Data Conversion Transformation](data-conversion-transformation.md).  
   
 ## <a name="configuration-the-term-lookup-transformation"></a>Configuración de la transformación Búsqueda de términos  

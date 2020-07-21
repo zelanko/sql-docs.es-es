@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 44aac3d7e22e94a247f5530c889a28dcd08bba78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831429"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433112"
 ---
 # <a name="expression-task"></a>Texto Expresión
   La tarea de expresión crea y evalúa expresiones que establecen valores de variables en tiempo de ejecución, mediante el Generador de expresiones. Cuando se edita la tarea, se inicia [Expression Builder](../expressions/expression-builder.md) .  
@@ -30,7 +29,7 @@ ms.locfileid: "62831429"
  Para obtener ejemplos de cómo usar expresiones para establecer propiedades, vea la sección **Ejemplo de expresiones de propiedad** de [Use Property Expressions in Packages](../expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), en pragmaticworks.com  

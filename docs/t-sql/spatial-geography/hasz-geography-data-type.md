@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8aae17057d9b4b114ed7ad03fd7e29ad61f127b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f1a31c807c14fa047eff5bd244563cbfcc7e955
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731175"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve 1 (true) si un objeto espacial contiene al menos un valor Z; de lo contrario, devuelve 0 (false).  
   
@@ -36,12 +36,12 @@ ms.locfileid: "67930242"
 .HasZ  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de valor devuelto de CLR: **Boolean**  
+ Tipo de valor devuelto de CLR: **booleano**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899d7e1a00a18f320bfecd508e8d0c65be85a57c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999853"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importar una plantilla de seguimiento (SQL Server Profiler)
   En este tema se describe cómo importar un archivo de plantilla de seguimiento (.tdf) mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -32,7 +31,7 @@ ms.locfileid: "63228407"
   
      Este archivo se agregará a las plantillas disponibles de la lista **Usar la plantilla** del cuadro de diálogo **Propiedades de seguimiento** . Las plantillas definidas por el usuario tienen **(user)** anexado al nombre.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   

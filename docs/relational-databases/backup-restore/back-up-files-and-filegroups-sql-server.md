@@ -1,5 +1,6 @@
 ---
 title: Copia de seguridad de archivos y grupos de archivos | Microsoft Docs
+description: En este artículo se describe cómo realizar una copia de seguridad de archivos y grupos de archivos en SQL Server mediante SQL Server Management Studio, Transact-SQL o PowerShell.
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf87d09eed5b955c1773c46270f25cb0a2d57eaa
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: db9345dd3411a28d2bfd72b64b4917c93d6567b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725223"
 ---
 # <a name="back-up-files-and-filegroups"></a>Realizar copias de seguridad de archivos y grupos de archivos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo realizar copias de seguridad de archivos y grupos de archivos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell. Cuando el tamaño y los requisitos de rendimiento de la base de datos hagan que no sea práctico realizar una copia de seguridad completa de la base de datos, puede crear una copia de seguridad de archivo en su lugar. Una *copia de seguridad de archivos* contiene todos los datos de uno o varios archivos (o grupos de archivos).
   
 Para obtener más información sobre las copias de seguridad de archivos, vea [Copias de seguridad de archivos completas &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) y [Copias de seguridad diferenciales &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
 
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 - La instrucción BACKUP no se permite en una transacción explícita o implícita.  
   
@@ -39,17 +40,17 @@ Para obtener más información sobre las copias de seguridad de archivos, vea [C
   
 Para obtener más información sobre las limitaciones y restricciones, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-###  <a name="Recommendations"></a> Recomendaciones
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
   
 De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si se hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro con la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
 
-###  <a name="Permissions"></a> Permisos
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` se corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**.  
   
  Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. En cambio, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que estos problemas con el archivo físico del dispositivo de copia de seguridad no aparezcan hasta que se tenga acceso al recurso físico, al intentar la copia de seguridad o la restauración.
 
-## <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio   
+## <a name="using-sql-server-management-studio"></a>Uso de SQL Server Management Studio   
   
 1. Después de conectarse a la instancia apropiada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
@@ -67,7 +68,7 @@ De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` se corres
   
 1. Acepte el nombre del conjunto de copia de seguridad predeterminado sugerido en el cuadro de texto **Nombre** o especifique otro nombre.  
   
-1. (Opcional) En el cuadro de texto **Descripción**, describa el conjunto de copia de seguridad.  
+1. Opcionalmente, en el cuadro de texto **Descripción**, describa el conjunto de copia de seguridad.  
   
 1. Especifique cuándo expirará el conjunto de copia de seguridad:  
   
@@ -94,7 +95,7 @@ De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` se corres
   
          - Opcionalmente, seleccione **Comprobar nombre de conjunto de medios y fecha de expiración del conjunto de copia de seguridad** para que la operación de copia de seguridad compruebe la fecha y la hora en que expiran el conjunto de medios y el conjunto de copia de seguridad.  
   
-         - Opcionalmente, escriba un nombre en el cuadro de texto **Nombre del conjunto de medios**. Si no especifica ningún nombre, se creará un conjunto de medios con un nombre en blanco. Si especifica un nombre para el conjunto, se comprueban los medios (cinta o disco) para ver si el nombre real coincide con el nombre especificado aquí.  
+         - También puede escribir un nombre en el cuadro de texto **Nombre del conjunto de medios**. Si no especifica ningún nombre, se creará un conjunto de medios con un nombre en blanco. Si especifica un nombre para el conjunto, se comprueban los medios (cinta o disco) para ver si el nombre real coincide con el nombre especificado aquí.  
   
          Si deja el nombre del conjunto de medios en blanco y selecciona la casilla para comprobarlo con los medios, el resultado correcto significará que el nombre del conjunto en los medios también está en blanco.  
   
@@ -154,7 +155,7 @@ Con el modelo de recuperación completa, también debe realizar copias de seguri
 
 Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="TsqlExample"></a> Ejemplos
+###  <a name="examples"></a><a name="TsqlExample"></a> Ejemplos
 Los siguientes ejemplos realizan copias de seguridad de uno o más archivos de los grupos de archivos secundarios de la base de datos `Sales` . Esta base de datos utiliza el modelo de recuperación completa y contiene los siguientes grupos de archivos secundarios:  
   
 - Un grupo de archivos denominado `SalesGroup1` , con los archivos `SGrp1Fi1` y `SGrp1Fi2`.  
@@ -199,9 +200,9 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-## <a name="PowerShellProcedure"></a> Usar PowerShell
+## <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell
 
-Configure y use el [proveedor de SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
+Configure y use el [Proveedor de SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md).
   
 Use el cmdlet **Backup-SqlDatabase** y especifique **Files** como valor del parámetro **-BackupAction** . Especifique también uno de los parámetros siguientes:  
   

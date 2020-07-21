@@ -1,5 +1,5 @@
 ---
-title: Crear predicciones para los modelos de centro de llamadas (Tutorial de minería de datos intermedios) | Microsoft Docs
+title: Crear predicciones para los modelos del centro de llamadas (tutorial intermedio de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217883"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Crear predicciones para los modelos de centro de llamadas (Tutorial intermedio de minería de datos)
-  Ahora que ha aprendido algo acerca de las interacciones entre los turnos, el número de operadores, las llamadas y el grado de servicio, está en disposición de crear algunas consultas de predicción que se puedan usar en el análisis y el planeamiento empresarial. Primero, creará algunas predicciones en el modelo de exploración para probar varias suposiciones. A continuación, creará predicciones masivas usando el modelo de regresión logística.  
+  Ahora que ha aprendido algo acerca de las interacciones entre los turnos, el número de operadores, las llamadas y el grado de servicio, está en disposición de crear algunas consultas de predicción que se puedan usar en el análisis y el planeamiento empresarial. Primero, creará algunas predicciones en el modelo de exploración para probar varias suposiciones. A continuación, creará predicciones masivas mediante el modelo de regresión logística.  
   
  En esta lección se presupone que ya está familiarizado con el concepto de consultas de predicción.  
   
@@ -29,33 +29,33 @@ ms.locfileid: "63217883"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra la solución que contiene el modelo que desea usar.  
   
-2.  En el Diseñador de minería de datos, haga clic en el **predicción de modelo de minería de datos** ficha.  
+2.  En el diseñador de minería de datos, haga clic en la pestaña **predicción de modelo de minería** de datos.  
   
-3.  En el **Mining Model** panel, haga clic en **Seleccionar modelo**.  
+3.  En el panel **modelo de minería de datos** , haga clic en **Seleccionar modelo**.  
   
-4.  El **Seleccionar modelo de minería de datos** cuadro de diálogo muestra una lista de estructuras de minería de datos. Expanda la estructura de minería de datos para ver una lista de modelos de minería de datos asociados con esa estructura.  
+4.  En el cuadro de diálogo **Seleccionar modelo de minería de datos** se muestra una lista de estructuras de minería de datos. Expanda la estructura de minería de datos para ver una lista de modelos de minería de datos asociados con esa estructura.  
   
 5.  Expanda la estructura de minería de datos Call Center Default y seleccione el modelo de red neuronal Call Center - LR.  
   
 6.  En el menú **Modelo de minería de datos** , seleccione **Consulta singleton**.  
   
-     El **entrada de consulta Singleton** aparece el cuadro de diálogo, con columnas asignadas a las columnas en el modelo de minería de datos.  
+     Aparece el cuadro de diálogo **entrada de consulta singleton** con las columnas asignadas a las columnas del modelo de minería de datos.  
   
-7.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en la fila de la tecla MAYÚS y, a continuación, seleccione *medianoche*.  
+7.  En el cuadro de diálogo **entrada de consulta singleton** , haga clic en la fila correspondiente a Shift y seleccione *medianoche*.  
   
-8.  Haga clic en la fila para los operadores de nivel 2 y tipo `6`.  
+8.  Haga clic en la fila de los operadores de tipo `6`de la columna 2 y escriba.  
   
-9. En la parte inferior de la mitad el **predicción de modelo de minería de datos** pestaña, haga clic en la primera fila de la cuadrícula.  
+9. En la mitad inferior de la pestaña **predicción de modelo de minería de datos** , haga clic en la primera fila de la cuadrícula.  
   
-10. En el **origen** columna, haga clic en la flecha hacia abajo y seleccione **función de predicción**. En el **campo** columna, seleccione **PredictHistogram**.  
+10. En la columna **origen** , haga clic en la flecha abajo y seleccione **función de predicción**. En la columna **campo** , seleccione **PredictHistogram**.  
   
-     Aparece una lista de argumentos que se pueden utilizar con esta función de predicción automáticamente en el **criterios o argumentos** cuadro.  
+     Una lista de argumentos que puede usar con esta función de predicción aparece automáticamente en el cuadro **criterios y argumentos** .  
   
-11. Arrastre la columna ServiceGrade de la lista de columnas en el **Mining Model** panel a la **criterios o argumentos** cuadro.  
+11. Arrastre la columna ServiceGrade de la lista de columnas del panel **modelo de minería de datos** al cuadro **criterios y argumentos** .  
   
      El nombre de la columna se inserta automáticamente como argumento. Puede elegir cualquier columna de atributo de predicción para arrastrarla a este cuadro de texto.  
   
-12. Haga clic en el botón **cambiar a la consulta da como resultado de la vista**, en la esquina superior del generador de consultas de predicción.  
+12. Haga clic en el botón **cambiar a vista de resultados**de la consulta, en la esquina superior de la generador de consultas de predicción.  
   
  Los resultados esperados contienen los posibles valores de predicción de cada grado de servicio, dadas estas entradas, junto con los valores de compatibilidad y probabilidad de cada predicción. Puede volver a la vista de diseño en cualquier momento y cambiar las entradas o agregar más.  
   
@@ -71,19 +71,19 @@ ms.locfileid: "63217883"
   
 ##### <a name="to-generate-input-data-for-a-bulk-prediction-query"></a>Para generar datos de entrada de una consulta de predicción masiva  
   
-1.  En el Explorador de soluciones, haga clic en **vistas del origen de datos**y, a continuación, seleccione **nueva vista del origen de datos**.  
+1.  En Explorador de soluciones, haga clic con el botón secundario en **vistas del origen de datos**y seleccione **nueva vista del origen de datos**.  
   
-2.  En el Asistente para la vista del origen de datos, seleccione [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] como origen de datos y, a continuación, haga clic en **siguiente**.  
+2.  En el Asistente para vistas del origen de [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] datos, seleccione como origen de datos y, a continuación, haga clic en **siguiente**.  
   
-3.  En el **seleccionar tablas y vistas** página, haga clic en **siguiente** sin seleccionar ninguna tabla.  
+3.  En la página **seleccionar tablas y vistas** , haga clic en **siguiente** sin seleccionar ninguna tabla.  
   
-4.  En el **completando el Asistente para** página, escriba el nombre, `Shifts`.  
+4.  En la página **finalización del asistente** , escriba el nombre `Shifts`,.  
   
      Este nombre aparecerá en el Explorador de soluciones como nombre de la vista del origen de datos.  
   
-5.  Haga clic en el panel de diseño vacía y luego seleccione **nueva consulta con nombre**.  
+5.  Haga clic con el botón secundario en el panel diseño vacío y seleccione **nueva consulta con nombre**.  
   
-6.  En el **crear consulta con nombre** cuadro de diálogo para **nombre**, tipo `Shifts for Call Center`.  
+6.  En el cuadro de diálogo **crear consulta con** nombre **Name**, en nombre `Shifts for Call Center`, escriba.  
   
      Este nombre aparecerá en el diseñador de vistas del origen de datos como nombre de la consulta con nombre.  
   
@@ -99,52 +99,52 @@ ms.locfileid: "63217883"
     GROUP BY Shift, WageType  
     ```  
   
-8.  En el panel de diseño, haga clic en la tabla turnos del centro de llamadas y seleccione **explorar datos** para obtener una vista previa de los datos tal como lo devuelve la consulta de Transact-SQL.  
+8.  En el panel de diseño, haga clic con el botón secundario en la tabla, cambie a centro de llamadas y seleccione **explorar datos** para obtener una vista previa de los datos devueltos por la consulta T-SQL.  
   
-9. Haga clic en la ficha, **turnos.DSV (diseño),** y, a continuación, haga clic en **guardar** para guardar la nueva definición de vista del origen de datos.  
+9. Haga clic con el botón secundario en la pestaña, **ShiftS. DSV (diseño)** y, a continuación, haga clic en **Guardar** para guardar la definición de la nueva vista del origen de datos.  
   
 ### <a name="predicting-service-metrics-for-each-shift"></a>Predecir la métrica de servicio de cada turno  
  Ahora que ha generado algunos valores para cada turno, los usará como entrada del modelo de regresión logística que ha creado, con el fin de generar algunas predicciones que se puedan usar en la planificación empresarial.  
   
 ##### <a name="to-use-the-new-dsv-as-input-to-a-prediction-query"></a>Para utilizar el nuevo DSV como entrada de una consulta de predicción  
   
-1.  En el Diseñador de minería de datos, haga clic en el **predicción de modelo de minería de datos** ficha.  
+1.  En el diseñador de minería de datos, haga clic en la pestaña **predicción de modelo de minería** de datos.  
   
-2.  En el **Mining Model** panel, haga clic en **Seleccionar modelo**y elija Call Center - LR en la lista de modelos disponibles.  
+2.  En el panel **modelo de minería de datos** , haga clic en **Seleccionar modelo**y elija centro de llamadas-LR en la lista de modelos disponibles.  
   
-3.  Desde el **Mining Model** menú, desactive la opción, **consulta Singleton**. Una advertencia indica que se perderán las entradas de la consulta singleton. Haga clic en **Aceptar**.  
+3.  En el menú **modelo de minería de datos** , desactive la opción **consulta singleton**. Una advertencia indica que se perderán las entradas de la consulta singleton. Haga clic en **Aceptar**.  
   
-     El **entrada de consulta Singleton** cuadro de diálogo se reemplaza por la **Seleccionar tabla (s) de entrada** cuadro de diálogo.  
+     El cuadro de diálogo **entrada de consulta singleton** se reemplaza por el cuadro de diálogo **seleccionar tabla (s) de entrada** .  
   
 4.  Haga clic en **Seleccionar tabla de casos**.  
   
-5.  En el **Seleccionar tabla** cuadro de diálogo, selectShifts en la lista de orígenes de datos. En el **nombre de tabla o vista** lista, seleccione turnos del centro de llamadas (podría seleccionarse automáticamente) y, a continuación, haga clic en **Aceptar.**  
+5.  En el cuadro de diálogo **seleccionar tabla** , selectShifts de la lista de orígenes de datos. En la lista **nombre de tabla o vista** , seleccione desplazamientos para el centro de llamadas (puede que se seleccione automáticamente) y, a continuación, haga clic en **Aceptar.**  
   
-     El **predicción de modelo de minería de datos** superficie de diseño se actualiza para mostrar las asignaciones creadas según los tipos de datos y los nombres de las columnas de los datos de entrada y el modelo.  
+     La superficie de diseño de **predicción de modelo de minería** de datos se actualiza para mostrar las asignaciones que se crean en función de los nombres y los tipos de datos de las columnas de los datos de entrada y del modelo.  
   
-6.  Haga clic en una de las líneas de combinación y, a continuación, seleccione **modificar conexiones**.  
+6.  Haga clic con el botón secundario en una de las líneas de combinación y, a continuación, seleccione **modificar conexiones**.  
   
-     En este cuadro de diálogo puede ver exactamente qué columnas se asignan y cuáles no. El modelo de minería de datos contiene las columnas Calls, Orders, IssuesRaised y LvlTwoOperators, que puede asignar a cualquiera de los agregados que creó según estas columnas del origen de datos. En este escenario, asignará los promedios.  
+     En este cuadro de diálogo puede ver exactamente qué columnas se asignan y cuáles no. El modelo de minería de datos contiene las columnas Calls, Orders, IssuesRaised y LvlTwoOperators, que puede asignar a cualquiera de los agregados que creó según estas columnas del origen de datos. En este escenario, se asignará a los promedios.  
   
-7.  Haga clic en la celda vacía situada junto a LevelTwoOperators y seleccione **Shifts for Call Center.AvgOperators**.  
+7.  Haga clic en la celda vacía situada junto a LevelTwoOperators y seleccione **ShiftS for Call Center. AvgOperators**.  
   
-8.  Haga clic en la celda vacía situada junto a Calls, seleccione **Shifts for Call Center.AvgCalls**. y, a continuación, haga clic en **Aceptar**.  
+8.  Haga clic en la celda vacía situada junto a llamadas y seleccione **ShiftS for Call Center. AvgCalls**. A continuación, haga clic en **Aceptar**.  
   
 ##### <a name="to-create-the-predictions-for-each-shift"></a>Para crear las predicciones de cada turno  
   
-1.  En la cuadrícula en la parte inferior de la mitad de la **generador de consultas de predicción**, haga clic en la celda vacía bajo **origen,** y, a continuación, seleccione turnos del centro de llamadas.  
+1.  En la cuadrícula de la mitad inferior de la **generador de consultas de predicción**, haga clic en la celda vacía situada debajo de **origen** y, a continuación, seleccione turnos en centro de llamadas.  
   
-2.  En la celda vacía debajo **campo**, seleccione Shift.  
+2.  En la celda vacía debajo de **campo**, seleccione Mayús.  
   
 3.  Haga clic en la siguiente línea vacía de la cuadrícula y repita el procedimiento descrito para agregar otra fila para WageType.  
   
-4.  Haga clic en la siguiente línea vacía de la cuadrícula. En el **origen** columna, seleccione **función de predicción**. En el **campo** columna, seleccione **Predict**.  
+4.  Haga clic en la siguiente línea vacía de la cuadrícula. En la columna **origen** , seleccione **función de predicción**. En la columna **campo** , seleccione **predicción**.  
   
-5.  Arrastre la columna ServiceGrade desde el **Mining Model** panel hasta la cuadrícula y en el **criterios o argumento** celda. En el **Alias** , escriba **Predicted Service Grade**.  
+5.  Arrastre la columna ServiceGrade desde el panel **modelo de minería de datos** hacia abajo hasta la cuadrícula y en la celda **criterios o argumento** . En el campo **alias** , escriba **grado de servicio predicho**.  
   
-6.  Haga clic en la siguiente línea vacía de la cuadrícula. En el **origen** columna, seleccione **función de predicción**. En el **campo** columna, seleccione **PredictProbability**.  
+6.  Haga clic en la siguiente línea vacía de la cuadrícula. En la columna **origen** , seleccione **función de predicción**. En la columna **campo** , seleccione **PredictProbability**.  
   
-7.  Arrastre la columna ServiceGrade desde el **Mining Model** panel hasta la cuadrícula y en el **criterios o argumento** celda. En el **Alias** , escriba **probabilidad**.  
+7.  Arrastre la columna ServiceGrade desde el panel **modelo de minería de datos** hacia abajo hasta la cuadrícula y en la celda **criterios o argumento** . En el campo **alias** , escriba **probabilidad**.  
   
 8.  Haga clic en **cambiar a vista de resultado de consulta** para ver las predicciones.  
   
@@ -152,14 +152,14 @@ ms.locfileid: "63217883"
   
 |Shift|WageType|Predicted Service Grade|Probabilidad|  
 |-----------|--------------|-----------------------------|-----------------|  
-|AM|holiday|0.165|0.377520666|  
-|midnight|holiday|0.105|0.364105573|  
-|PM1|holiday|0.165|0.40056055|  
-|PM2|holiday|0.165|0.338532973|  
-|AM|weekday|0.165|0.370847617|  
-|midnight|weekday|0.08|0.352999173|  
-|PM1|weekday|0.165|0.317419177|  
-|PM2|weekday|0.105|0.311672027|  
+|AM|holiday|0,165|0,377520666|  
+|midnight|holiday|0,105|0,364105573|  
+|PM1|holiday|0,165|0,40056055|  
+|PM2|holiday|0,165|0,338532973|  
+|AM|weekday|0,165|0,370847617|  
+|midnight|weekday|0.08|0,352999173|  
+|PM1|weekday|0,165|0,317419177|  
+|PM2|weekday|0,105|0,311672027|  
   
 ### <a name="predicting-the-effect-of-reduced-response-time-on-service-grade"></a>Predecir el efecto del tiempo de respuesta reducido en la calificación del servicio  
  Ha generado algunos valores de promedio para cada turno y los ha usado como entrada del modelo de regresión logística. Sin embargo, dado que el objetivo de la empresa es mantener la tasa de abandonos dentro del intervalo 0,00-0,05, los resultados no son esperanzadores.  
@@ -172,30 +172,30 @@ ms.locfileid: "63217883"
   
  A partir de estos resultados, podría concluir que, en los turnos de destino, debe reducir el tiempo de respuesta en un 90 por ciento de la tasa actual para mejorar la calidad del servicio.  
   
-|Turno, salario y día|Calidad prevista del servicio con el tiempo de respuesta promedio actual|Calidad prevista del servicio con reducción del 90 por ciento en tiempo de respuesta|Calidad prevista del servicio con reducción en un 80 del tiempo de respuesta|  
+|Turno, salario y día|Calidad prevista del servicio con el tiempo de respuesta promedio actual|Calidad de servicio predicho con reducción del 90 por ciento en el tiempo de respuesta|Calidad prevista del servicio con reducción en un 80 del tiempo de respuesta|  
 |--------------------------|------------------------------------------------------------------|--------------------------------------------------------------------------|--------------------------------------------------------------------------|  
-|Holiday AM|0.165|0,05|0,05|  
+|Holiday AM|0,165|0,05|0,05|  
 |Holiday PM1|0,05|0,05|0,05|  
-|Holiday Midnight|0.165|0,05|0,05|  
+|Holiday Midnight|0,165|0,05|0,05|  
   
- Hay varias consultas de predicción diferentes que puede crear en este modelo. Por ejemplo, podría predecir cuántos operadores son necesarios para cumplir un cierto nivel de servicio o para responder a un determinado número de llamadas entrantes. Dado que puede incluir varias salidas en un modelo de regresión logística, es fácil experimentar con variables independientes y resultados diferentes sin tener que crear varios modelos distintos.  
+ Hay varias consultas de predicción diferentes que puede crear en este modelo. Por ejemplo, puede predecir cuántos operadores son necesarios para cumplir un determinado nivel de servicio o para responder a un cierto número de llamadas entrantes. Dado que puede incluir varias salidas en un modelo de regresión logística, es fácil experimentar con variables independientes y resultados diferentes sin tener que crear varios modelos distintos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los complementos de minería de datos para Excel 2007 ofrecen asistentes de regresión logística que facilitan el poder responder a cuestiones complejas, como cuántos operadores de nivel dos se necesitarían para mejorar el grado de servicio a un nivel determinado para un turno concreto. Los complementos de minería de datos se pueden descargar de forma gratuita e incluyen asistentes que se basan en los algoritmos de red neuronal o de regresión logística. Para obtener más información, vea los siguientes vínculos:  
   
--   [SQL Server 2005 Data minería complementos para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Buscar objetivo y ¿qué ocurre si el análisis de escenario  
+-   [SQL Server 2005 complementos de minería de datos para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): búsqueda de objetivo y análisis de escenario de What if  
   
--   [SQL Server 2008 datos minería complementos para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Buscar objetivo análisis de escenario, ¿qué ocurre si el análisis de escenario y cálculo de predicción  
+-   [SQL Server 2008 complementos de minería de datos para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Análisis de escenario de búsqueda de objetivos, análisis de escenario de What If y cálculo de predicción  
   
 ## <a name="conclusion"></a>Conclusión  
  Ha aprendido a crear, personalizar e interpretar los modelos de minería de datos que se basan en los algoritmos de red neuronal y/o de regresión logística de Microsoft. Estos tipos de modelos son sofisticados y permiten una variedad casi infinita de análisis, y, por tanto, pueden ser complejos y difíciles de dominar.  
   
  Sin embargo, estos algoritmos pueden recorrer muchas combinaciones de factores e identificar automáticamente las correlaciones más marcadas, lo que proporciona datos estadísticos para obtener una idea clara que sería muy difícil de detectar con la exploración manual de datos mediante Transact-SQL o incluso PowerPivot.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de modelos de regresión logística](../../2014/analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Algoritmo de regresión logística de Microsoft](../../2014/analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [Microsoft Neural Network Algorithm](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Algoritmo de red neuronal de Microsoft](../../2014/analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Ejemplos de consultas de modelos de red neuronal](../../2014/analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

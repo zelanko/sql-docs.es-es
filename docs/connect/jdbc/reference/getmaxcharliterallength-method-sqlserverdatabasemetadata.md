@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc7aea1b0b03981d21e9ab3f5e5453c68476a0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a0eab3b622a5f61d5730d7f266ac99c2eba48253
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982328"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921124"
 ---
 # <a name="getmaxcharliterallength-method-sqlserverdatabasemetadata"></a>Método getMaxCharLiteralLength (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getMaxCharLiteralLength()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMaxCharLiteralLength se especifica mediante el método getMaxCharLiteralLength en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getMaxCharLiteralLength especifica este método getMaxCharLiteralLength en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

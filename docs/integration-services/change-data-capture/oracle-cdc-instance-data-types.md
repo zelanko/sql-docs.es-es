@@ -11,10 +11,10 @@ ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5dc1ae24d927247a1af61ff974a535b6bdb48502
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298671"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipos de datos de la instancia CDC de Oracle
@@ -41,7 +41,7 @@ ms.locfileid: "71298671"
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
 |real|FLOAT|  
-|TIMESTAMP|DATETIME2|  
+|timestamp|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
 |VARCHAR2|VARCHAR|  

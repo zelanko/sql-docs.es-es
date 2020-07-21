@@ -1,5 +1,5 @@
 ---
-title: Configuración de datos de gran tamaño | Microsoft Docs
+title: Establecimiento de datos grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,21 +14,19 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: 8de78c3d4218c3f5ef37e1e2d7a0e197f8c2d1c0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909471"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002858"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Con el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
+  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
   
  El consumidor crea un objeto de almacenamiento que contiene los datos y pasa al proveedor un puntero a este objeto de almacenamiento. A continuación, el proveedor lee los datos del objeto de almacenamiento del consumidor y los escribe en la columna BLOB.  
   
@@ -45,7 +43,7 @@ ms.locfileid: "72909471"
 ## <a name="how-to-set-large-data"></a>Cómo establecer datos grandes  
  Para pasar un puntero a su propio objeto de almacenamiento, el consumidor crea un descriptor de acceso que enlaza el valor de la columna BLOB y, a continuación, llama a los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow** . Para establecer datos BLOB:  
   
-1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establezca el elemento *dwFlag* de la estructura DBOBJECT en STGM_READ y establezca el elemento *iid* en IID_ISequentialStream (la interfaz que se va a exponer).  
+1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establezca el elemento *dwFlag* de la estructura DBOBJECT en STGM_READ y establezca el elemento *IID* en IID_ISequentialStream (la interfaz que se va a exponer).  
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
@@ -721,8 +719,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>Consulte también  
+ [Blobs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

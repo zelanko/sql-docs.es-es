@@ -1,5 +1,5 @@
 ---
-title: Las columnas y tablas de métodos Append, asigne el nombre de ejemplo de la propiedad (VB) | Microsoft Docs
+title: Ejemplo de propiedad Name, métodos Append de columnas y tablas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d25582b8059f59e20ffd3c96a86049bd692a4303
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966862"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759361"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Ejemplo de propiedad Name, métodos Append de tablas y columnas (VB)
-El código siguiente muestra cómo crear una nueva tabla.  
+En el código siguiente se muestra cómo crear una nueva tabla.  
   
 ```  
 ' BeginCreateTableVB  
@@ -66,11 +66,11 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append (método) (tablas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Objeto column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Nombre (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
+ [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

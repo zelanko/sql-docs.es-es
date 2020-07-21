@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f19fa2dc044d5975edfbc201c8fc3eb9e9244936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044605"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Modificar los procedimientos almacenados que utilizan propiedades de búsqueda de texto completo no incluidas
   Para asegurarse de que sus procedimientos almacenados funcionen correctamente, debería modificar los procedimientos existentes y quitar aquellas propiedades y configuraciones relacionadas con la búsqueda de texto completo que se han quitado o han quedado desusadas.  
@@ -26,7 +25,7 @@ ms.locfileid: "66093849"
 ## <a name="component"></a>Componente  
  Búsqueda de texto completo  
   
-## <a name="description"></a>Descripción  
+## <a name="description"></a>Description  
  Los siguientes parámetros y propiedades relacionados con la búsqueda de texto completo se han quitado.  
   
 -   **DataTimeout**  
@@ -46,7 +45,7 @@ ms.locfileid: "66093849"
 ## <a name="corrective-action"></a>Acción correctora  
  Modifique sus procedimientos almacenados para quitar estas propiedades.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

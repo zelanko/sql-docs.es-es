@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: b8a8a2d7-eda5-409c-8cc3-7ba32f0d4fd7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab8458907ab0761b92a377bf19050e5df93a24d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30070ff5825a631a4602467a3a6231e211ac6995
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870043"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552340"
 ---
-# <a name="mssqlserver12308"></a>MSSQLSERVER_12308
+# <a name="mssqlserver_12308"></a>MSSQLSERVER_12308
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12308|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12308|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_TABLE_VALUED_FUNCTIONS|  
 |Texto del mensaje|No se admiten funciones con valores de tabla con '*construct*'.|  
@@ -35,7 +34,7 @@ ms.locfileid: "62870043"
 ## <a name="user-action"></a>Acción del usuario  
  No use funciones con valores de tabla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

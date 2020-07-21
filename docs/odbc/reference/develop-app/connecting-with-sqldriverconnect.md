@@ -1,5 +1,5 @@
 ---
-title: Conexión con SQLDriverConnect | Microsoft Docs
+title: Conectando con SQLDriverConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b8285ca9fddf0e1b77ca171414e4c00b0029d110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036501"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299075"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Conexión con SQLDriverConnect
-**SQLDriverConnect** se usa para conectarse a un origen de datos mediante una cadena de conexión. **SQLDriverConnect** se utiliza en lugar de **SQLConnect** por las razones siguientes:  
+**SQLDriverConnect** se utiliza para conectarse a un origen de datos mediante una cadena de conexión. Se usa **SQLDriverConnect** en lugar de **SQLConnect** por las razones siguientes:  
   
--   Para permitir que la aplicación use información de conexión específicos del controlador.  
+-   Para permitir que la aplicación use información de conexión específica del controlador.  
   
 -   Para solicitar que el controlador solicite al usuario la información de conexión.  
   

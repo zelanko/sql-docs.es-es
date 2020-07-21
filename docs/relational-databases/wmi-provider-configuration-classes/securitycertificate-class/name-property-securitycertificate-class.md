@@ -1,6 +1,6 @@
 ---
-title: Nombre de propiedad (clase SecurityCertificate) | Microsoft Docs
-ms.custom: ''
+title: Propiedad Name (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69790e059ca11f3981c81cc5420e70cbc4c40a32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 423b505e282a67fbba6ff39c0efdd84fc5988908
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989907"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880949"
 ---
 # <a name="name-property-securitycertificate-class"></a>Propiedad Name (clase SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre del certificado de seguridad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +44,7 @@ object.Name [= value]
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

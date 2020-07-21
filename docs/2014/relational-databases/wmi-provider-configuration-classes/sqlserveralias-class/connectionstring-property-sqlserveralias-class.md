@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79f1d849b2dec4eda67ec5b84b1783b12b1bf0fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046889"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>Propiedad ConnectionString (clase SqlServerAlias)
   Obtiene la cadena de conexión que se utiliza para establecer la conexión para el alias de conexión del servidor.  

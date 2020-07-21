@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpdelcltask.f1
 - sql11.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 839350610bdcc55d185fa06c122e71b50c5ca753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db0a15aaea37c6d18c1d3c2136e0fd0c94eb7506
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832685"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433902"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Tarea de eliminación de clúster de HDInsight de Azure
 La **tarea de eliminación de clúster de Azure HDInsight** permite que un paquete SSIS elimine un clúster de Azure HDInsight del grupo de recursos y la suscripción de Azure especificados.
@@ -36,5 +35,5 @@ En la tabla siguiente se proporciona una descripción de los campos del cuadro d
 |AzureResourceManagerConnection|Seleccione un administrador de conexiones de Azure Resource Manager existente o cree uno nuevo que se usará para eliminar el clúster de HDInsight.|
 |SubscriptionId|Especifique el identificador de la suscripción en la que se encuentra el clúster de HDInsight.|
 |ResourceGroup|Especifique el grupo de recursos de Azure en el que se encuentra el clúster de HDInsight.|
-|nombreDeClúster|Especifique el nombre del clúster que se va a eliminar.|  
+|ClusterName|Especifique el nombre del clúster que se va a eliminar.|  
 |FailIfNotExists|Especifique si la tarea debe generar un error si no existe el clúster.|

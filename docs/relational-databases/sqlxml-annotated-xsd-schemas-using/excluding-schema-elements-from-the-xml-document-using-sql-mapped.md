@@ -1,6 +1,6 @@
 ---
-title: 'Excluir elementos de esquema del documento XML mediante SQL: asignado | Microsoft Docs'
-ms.custom: ''
+title: 'Excluir elementos de esquema de documento XML con SQL: asignado'
+description: 'Obtenga información sobre cómo usar la anotación sql: alpped para crear un elemento en el esquema XSD que no se asigna a una tabla (vista) o columna de base de datos.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,16 +22,17 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d466ad57d7644f73d7fdd44df62aac6a0c2a1b0b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750790"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cada elemento y atributo del esquema XSD se asigna a una tabla/vista y columna de base de datos debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigne a ninguna tabla de base de datos (vista) o columna y que no aparezca en el XML, puede especificar la anotación **SQL:** asvisad.  
   
  La anotación **SQL: alpped** es especialmente útil si no se puede modificar el esquema o si el esquema se usa para validar XML de otros orígenes y, además, contiene datos que no están almacenados en la base de datos. La anotación **SQL: aspped** difiere de **SQL: is-Constant** en que los elementos y atributos no asignados no aparecen en el documento XML.  
@@ -42,11 +43,11 @@ ms.locfileid: "72905961"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificar la anotación sql:mapped  
- Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un elemento **\<person. Contact >** con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
+ Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un **\<Person.Contact>** elemento con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
   
  Al asignar este esquema XSD a la tabla person. contact de la base de datos AdventureWorks, se especifica **SQL: alpped** en el atributo **HomeAddress** porque la tabla Employees no almacena las direcciones particulares de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
   
- Para el resto del esquema se produce una asignación predeterminada. El elemento **\<person. contact >** se asigna a la tabla person. contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla person. contact.  
+ Para el resto del esquema se produce una asignación predeterminada. El **\<Person.Contact>** elemento se asigna a la tabla person. contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -105,7 +106,7 @@ ms.locfileid: "72905961"
   
  Tenga en cuenta que los ContactID, FirstName y LastName están presentes, pero HomeAddress no es porque el esquema de asignación especificó 0 para el atributo **SQL: alpped** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Asignación predeterminada de elementos y atributos XSD a tablas y columnas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

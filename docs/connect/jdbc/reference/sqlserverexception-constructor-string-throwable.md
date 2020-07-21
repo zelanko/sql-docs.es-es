@@ -1,5 +1,5 @@
 ---
-title: Constructor SQLServerException (Java. lang. String, Java. lang. Throwable) | Microsoft Docs
+title: Constructor SQLServerException (java.lang.String, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -11,19 +11,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14984450507b5eea63d2fbe88bb2e7f957f61868
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 875d706af83792134d44100d39ceccf3b1a848ac
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67971075"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902501"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Constructor SQLServerException (Java. lang. String, Java. lang. Throwable)
+# <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>Constructor SQLServerException (java.lang.String, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa una nueva instancia de la clase [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) cuando se proporciona un objeto de **cadena** y un objeto que se **inicia** .
+  Inicializa una nueva instancia de la clase [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) cuando se proporciona un objeto de **string** y un objeto **iniciable**.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>Parámetros  
  *errText*  
   
- Cadena que contiene el texto del error.
+ Cadena que contiene el texto de error.
  
  *cause*  
   

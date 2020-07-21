@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939200"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897883"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Tras considerar las sugerencias generales de rendimiento que se describen en [Aumentar el rendimiento general de la replicación](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenga en cuenta estas otras áreas específicas de la replicación de mezcla.  
   
 ## <a name="database-design"></a>Diseño de la base de datos  
   
 -   Indice las columnas utilizadas en filtros de fila y de combinación.  
   
-     Cuando utilice un filtro de fila en un artículo publicado, cree un índice en cada una de las columnas utilizadas en la cláusula WHERE del filtro. Sin los índices, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene que leer todas las filas de la tabla para determinar si la fila debe incluirse en la partición. Con los índices, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede encontrar rápidamente qué filas se deben incluir. El procesamiento es más rápido si la replicación puede resolver completamente la cláusula WHERE del filtro solamente a partir del índice.  
+     Cuando utilice un filtro de fila en un artículo publicado, cree un índice en cada una de las columnas utilizadas en la cláusula WHERE del filtro. Sin un índice, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene que leer todas las filas de la tabla para determinar si la fila debe incluirse en la partición. Con los índices, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede encontrar rápidamente qué filas se deben incluir. El procesamiento es más rápido si la replicación puede resolver completamente la cláusula WHERE del filtro solamente a partir del índice.  
   
      La indización de todas las columnas utilizadas en los filtros de combinación también es importante. Cada vez que se ejecuta el Agente de mezcla, busca la tabla base para determinar qué filas de la tabla principal y qué filas de las tablas relacionadas están incluidas en la partición. La creación de un índice en las columnas de combinación evita que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lea todas las filas de la tabla cada vez que se ejecute el Agente de mezcla.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67939200"
   
      El período de retención de la publicación, que es la cantidad máxima de tiempo que debe transcurrir antes de que una suscripción se deba sincronizar, determina el tiempo de almacenamiento del seguimiento de metadatos. Un valor alto puede afectar el rendimiento de almacenamiento y procesamiento. Para obtener más información acerca de cómo configurar el período de retención de la publicación, vea [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
--   Utilice los artículos de solo descarga en las tablas que únicamente se cambian en el publicador. Para obtener más información, consulte [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+-   Utilice los artículos de solo descarga en las tablas que únicamente se cambian en el publicador. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ### <a name="filter-design-and-use"></a>Diseño y uso de filtros  
   
@@ -64,11 +64,11 @@ ms.locfileid: "67939200"
   
 -   Utilice particiones precalculadas con filtros con parámetros (esta característica se usa de manera predeterminada). Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Las particiones precalculadas imponen una serie de limitaciones en el comportamiento de los filtros. Si la aplicación no puede respetar estas limitaciones, establezca la opción **keep_partition_changes** en **True**, y así obtendrá ventajas de rendimiento. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Las particiones precalculadas imponen una serie de limitaciones en el comportamiento de los filtros. Si la aplicación no puede respetar estas limitaciones, establezca la opción **keep_partition_changes** en **True**, y así obtendrá ventajas de rendimiento. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Utilice particiones que no se superpongan si los datos se filtran pero no se comparten entre usuarios.  
   
-     La replicación puede optimizar el rendimiento de los datos que no se comparten entre particiones o suscripciones. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     La replicación puede optimizar el rendimiento de los datos que no se comparten entre particiones o suscripciones. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   No cree jerarquías complejas de filtros de combinación.  
   
@@ -103,13 +103,13 @@ ms.locfileid: "67939200"
   
 -   Si una suscripción se sincroniza mediante una conexión rápida y los cambios se envían desde el publicador y el suscriptor, use el parámetro **–ParallelUploadDownload** en el Agente de mezcla.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo parámetro del Agente de mezcla: **–ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo parámetro del Agente de mezcla: **–ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
     -   [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Considere aumentar el valor del parámetro **-MakeGenerationInterval** , especialmente si la sincronización implica más cargas de suscriptores que descargas a suscriptores.  
   
@@ -135,13 +135,13 @@ ms.locfileid: "67939200"
   
 -   Genere instantáneas previamente y/o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan.  
   
-     Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para obtener más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+     Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>Consideraciones acerca del mantenimiento y la supervisión  
   
 -   De vez en cuando, vuelva a crear los índices de tablas del sistema de la replicación de mezcla.  
   
-     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory** y **MSmerge_tombstone**, **MSmerge_current_partition_mappings** y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   

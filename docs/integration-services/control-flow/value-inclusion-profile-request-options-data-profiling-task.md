@@ -13,10 +13,10 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa6215e3fafbbf962c687daf329f6781f466342d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293809"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
@@ -65,7 +65,7 @@ ms.locfileid: "71293809"
   
 ### <a name="data-options"></a>Opciones de Data  
  **ConnectionManager**  
- Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) con el fin de conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se va a generar el perfil.  
+ Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se generará el perfil.  
   
  **SubsetTableOrView**  
  Seleccione la tabla o vista cuyo perfil se va a generar.  
@@ -106,15 +106,15 @@ ms.locfileid: "71293809"
 > [!NOTE]  
 >  Cuando use el carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
+|**Valor predeterminado**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
 |**DictionarySort**|Ordena y compara los datos según el orden y las reglas de comparación definidas en los diccionarios del idioma o alfabeto asociado.|  
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "Ã¥" se considera igual que "a".|  
@@ -129,9 +129,9 @@ ms.locfileid: "71293809"
  **InclusionThresholdSetting**  
  Seleccione el valor de umbral para precisar la salida del perfil. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Ninguno**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
+|**None**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
 |**Specified**|Utilice el umbral que se especifica en **InclusionStrengthThreshold**. Solo se notifica el nivel de inclusión si es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. Solo se notifica el nivel de inclusión si los valores del subconjunto están completamente incluidos en los valores del superconjunto.|  
   
@@ -143,9 +143,9 @@ ms.locfileid: "71293809"
  **SupersetColumnsKeyThresholdSetting**  
  Especifique el umbral del superconjunto. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Ninguno**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
+|**None**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
 |**Specified**|Utilice el umbral que se especifica en **SupersetColumnsKeyThreshold**. Solo se notifica el nivel de inclusión si el nivel de clave de la columna de superconjunto es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. Solo se notifica el nivel de inclusión si las columnas de superconjunto son una clave exacta en la tabla de superconjunto.|  
   

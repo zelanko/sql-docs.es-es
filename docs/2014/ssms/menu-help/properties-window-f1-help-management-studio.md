@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73ac04e428a07cd607969a18ec88c68ea07df9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661762"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062063"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ventana Propiedades (Ayuda F1 de Management Studio)
   Use la ventana **Propiedades** para ver las propiedades de los elementos seleccionados. También puede usar la ventana **Propiedades** para ver las propiedades de archivos, proyectos y soluciones. Para obtener acceso a la ventana **Propiedades** , haga clic en **Ventana Propiedades** en el menú **Ver** .  
@@ -51,7 +50,7 @@ ms.locfileid: "62661762"
  **Panel de descripción**  
  El panel de descripción aparece en la parte inferior de la ventana **Propiedades** . Muestra el tipo de propiedad y una breve descripción de la misma. La descripción de la propiedad puede desactivarse y activarse por medio del comando **Descripción** del menú contextual.  
   
-## <a name="see-also"></a>Vea también  
- [Usar la ventana Propiedades en Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Utilizar la ventana Propiedades en Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

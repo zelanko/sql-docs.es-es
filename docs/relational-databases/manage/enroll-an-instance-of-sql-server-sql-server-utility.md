@@ -1,5 +1,6 @@
 ---
 title: Inscribir una instancia de SQL Server (Utilidad de SQL Server) | Microsoft Docs
+description: Inicie la supervisión del rendimiento y la configuración de una instancia de SQL Server mediante su inscripción en una Utilidad de SQL Server existente.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776000"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Inscriba una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para supervisar su rendimiento y configuración como una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El punto de control de la utilidad (UCP) recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  
   
  En esta versión, el UCP y todas las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben satisfacer los requisitos siguientes:  
@@ -87,17 +88,17 @@ ms.locfileid: "68115416"
   
 -   [Inscripción de la instancia de SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
  Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Instance_name"></a> Especificar la instancia de SQL Server  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Especificar la instancia de SQL Server  
  Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...** . Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
  En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
 > [!NOTE]  
@@ -105,7 +106,7 @@ ms.locfileid: "68115416"
   
  Para continuar, haga clic en **Conectar...** .  
   
-##  <a name="Proxy_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
  Especifique una cuenta de dominio de Windows para ejecutar el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta cuenta se utiliza como la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma alternativa, puede utilizar la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente. Para pasar los requisitos de validación, utilice las siguientes instrucciones con el fin de especificar la cuenta.  
   
  Si especifica la opción de cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -114,7 +115,7 @@ ms.locfileid: "68115416"
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Validation_rules"></a> Validación de instancia de SQL Server  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Validación de instancia de SQL Server  
  En esta versión, deben cumplirse las siguientes condiciones en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a inscribir en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Condición|Acción correctora|  
@@ -141,7 +142,7 @@ ms.locfileid: "68115416"
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Summary"></a> Resumen de la inscripción de instancia  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Resumen de la inscripción de instancia  
  La página de resumen muestra información sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a agregar a la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Configuración de la instancia administrada:  
@@ -152,7 +153,7 @@ ms.locfileid: "68115416"
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Enrolling"></a> Inscripción de la instancia de SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Inscripción de la instancia de SQL Server  
  La página de inscripción proporciona el estado de la operación:  
   
 -   Preparar la instancia para la inscripción.  
@@ -170,7 +171,7 @@ ms.locfileid: "68115416"
 >   
 >  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Información adicional:  No se pudo obtener información acerca del grupo o usuario de Windows NT "\<nombre_dominio\nombre_cuenta>", código de error 0x5. (Microsoft SQL Server, Error: 15404)  
+>  Información adicional:  No se ha podido obtener información acerca del grupo o usuario de Windows NT "\<DomainName\AccountName>", código de error 0x5. (Microsoft SQL Server, Error: 15404)  
 >   
 >  Para obtener más información sobre cómo solucionar este error, vea [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
@@ -183,7 +184,7 @@ ms.locfileid: "68115416"
   
  Para eliminar instancias administradas de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **Instancias administradas** en el panel **Navegación del Explorador de la utilidad** con el fin de rellenar la vista de lista de instancias administradas, haga clic con el botón derecho en el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la vista de lista **Contenido del explorador de la utilidad** y, después, seleccione **Convertir instancia en no administrada**.  
   
-##  <a name="PowerShell_enroll"></a> Inscribir una instancia de SQL Server usando PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Inscribir una instancia de SQL Server usando PowerShell  
  Use el siguiente ejemplo para inscribir una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente:  
   
 ```  

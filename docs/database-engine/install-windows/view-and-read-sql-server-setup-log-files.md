@@ -1,5 +1,6 @@
 ---
 title: Ver y leer los archivos de registro de instalación de SQL Server | Microsoft Docs
+description: En este artículo se describen los archivos de registro que crea el programa de instalación de SQL Server. Los archivos de registro se colocan en una carpeta con fecha y con marca de tiempo.
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql
@@ -18,26 +19,26 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edeb881f5d589e0a2e09848cc4b4c7f7c958f9ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "67906769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900174"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Ver y leer los archivos de registro de instalación de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 El programa de instalación de SQL Server crea archivos de registro en una carpeta con fecha y marca de tiempo en **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** de forma predeterminada, donde *nnn* son los números que se corresponden a la versión de SQL que se va a instalar. El formato del nombre de la carpeta de registro con marca de tiempo es AAAAMMDD_hhmmss. Cuando el programa de instalación se ejecuta en modo desatendido, los registros se crean en %temp%\sqlsetup*.log. Todos los archivos de la carpeta de registro se almacenan en el archivo Log\*.cab en su carpeta de registro correspondiente.  
 
-   | Archivo           | Ruta de acceso |
+   | Archivo           | Path |
    | :------        | :----------------------------- |
    | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
-   | **Summary_\<NombreDelEquipo>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
-   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
-   | **Archivos de registro de MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Nombre>.log|
+   | **Almacén de datos** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **Archivos de registro de MSI** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
    | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
    | **Para las instalaciones desatendidas** | %temp%\sqlsetup*.log |
@@ -82,20 +83,20 @@ En las secciones siguientes se describen los archivos de registro de instalació
 
 
   >[!NOTE]
-  > Tenga en cuenta que, al aplicar una revisión, puede haber una serie de subcarpetas (una para cada instancia a la que se aplique la revisión y otra para las características compartidas) que contienen un conjunto similar de archivos (es decir, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<AAAAMMDD_HHMM>\MSSQLSERVER). 
+  > Tenga en cuenta que, al aplicar una revisión, puede haber una serie de subcarpetas (una por cada instancia a la que se aplique la revisión y otra para las características compartidas) que contienen un conjunto similar de archivos (es decir, %programfiles%\MicrosoftSQL Server\130\Setup Bootstrap\Log\<YYYYMMDD_HHMM>\MSSQLSERVER). 
   
-### <a name="location"></a>Ubicación  
+### <a name="location"></a>Location  
  El archivo summary.txt se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\.
   
  Para encontrar errores en el archivo de texto de resumen, busque en el archivo usando las palabras clave "error" o "failed".
   
-## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Archivo Summary_\<MachineName>_AAAAMMDD_HHMMss.txt
+## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Summary_\<MachineName>_YYYYMMDD_HHMMss.txt file
   
 ### <a name="overview"></a>Información general  
  El archivo base de registro de resumen es similar al archivo de resumen y se genera durante el flujo de trabajo principal.
   
-### <a name="location"></a>Ubicación  
- El archivo Summary_\<MachineName>_AAAAMMDD_HHMMss.txt se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\\.
+### <a name="location"></a>Location  
+ El archivo Summary_\<MachineName>_YYYYMMDD_HHMMss.txt se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\\.
   
   
 ## <a name="detailtxt-file"></a>Archivo Detail.txt
@@ -103,7 +104,7 @@ En las secciones siguientes se describen los archivos de registro de instalació
 ### <a name="overview"></a>Información general
  El archivo Detail.txt se genera durante el flujo de trabajo principal, como la instalación o la actualización, y proporciona los detalles de la ejecución. Los registros del archivo se generan según la hora a la que se invocó cada acción de la instalación. En el archivo de texto se muestra el orden en el que se ejecutaron las acciones, así como sus dependencias.  
   
-### <a name="location"></a>Ubicación  
+### <a name="location"></a>Location  
  El archivo detail.txt se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\Detail.txt.  
   
  Si se produce un error durante el proceso de instalación, la excepción o el error se registran al final de este archivo. Para encontrar los errores en este archivo, examine primero el final del archivo y, después, realice una búsqueda en el mismo usando las palabras clave "error" o "exception"
@@ -119,7 +120,7 @@ En las secciones siguientes se describen los archivos de registro de instalació
 -   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log   
 -   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
-### <a name="location"></a>Ubicación  
+### <a name="location"></a>Location  
  Los archivos de registro de MSI se encuentran en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\\<Nombre\>.log.  
   
  Al final del archivo se encuentra un resumen de la ejecución, que incluye el estado de corrección o error y las propiedades. Para encontrar el error en el archivo MSI, busque "value 3" y revise el texto anterior y posterior.  
@@ -129,7 +130,7 @@ En las secciones siguientes se describen los archivos de registro de instalació
 ### <a name="overview"></a>Información general  
  El archivo de configuración contiene la configuración de entrada que se proporciona durante la instalación. Se puede usar para reiniciar la instalación sin tener que especificar la configuración manualmente. Sin embargo, las contraseñas de las cuentas, los PID y algunos parámetros no se guardan en el archivo de configuración. La configuración se puede agregar al archivo o se puede proporcionar usando la línea de comandos o la interfaz de usuario del programa de instalación. Para obtener más información, vea [Instalar SQL Server 2016 mediante un archivo de configuración](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
-### <a name="location"></a>Ubicación  
+### <a name="location"></a>Location  
  El archivo ConfigurationFile.ini se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\\.  
   
 ## <a name="systemconfigurationcheck_reporthtm-file"></a>Archivo SystemConfigurationCheck_Report.htm
@@ -137,10 +138,10 @@ En las secciones siguientes se describen los archivos de registro de instalació
 ### <a name="overview"></a>Información general  
  El informe de comprobación de la configuración del sistema contiene una descripción breve de cada regla ejecutada y el estado de ejecución.
   
-### <a name="location"></a>Ubicación  
+### <a name="location"></a>Location  
 El archivo SystemConfigurationCheck_Report.htm se encuentra en %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<AAAAMMDD_HHMM>\\.
 
 [!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

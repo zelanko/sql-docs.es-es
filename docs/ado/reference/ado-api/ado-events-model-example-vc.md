@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VC ++) del modelo de eventos de ADO | Microsoft Docs
+title: Ejemplo de modelo de eventos de ADO (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,41 +12,41 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921014"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747350"
 ---
 # <a name="ado-events-model-example-vc"></a>Ejemplo de modelo de eventos de ADO (VC ++)
-La sección de Visual C++ de [creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md) ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. El siguiente es un ejemplo específico de instancias del modelo de eventos dentro del entorno creado por el **#import** directiva.  
+En la sección Visual C++ de la [creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md) se ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. El siguiente es un ejemplo específico de la creación de instancias del modelo de eventos dentro del entorno creado por la directiva **#import** .  
   
- La descripción general utiliza **adoint.h** como referencia para las firmas de método. Sin embargo, algunos detalles de la descripción general cambian ligeramente debido al uso del **#import** directiva:  
+ La descripción general utiliza **adoint. h** como referencia para las firmas de método. Sin embargo, algunos detalles de la descripción general cambian ligeramente como resultado del uso de la directiva **#import** :  
   
--   El **#import** resuelve la directiva **typedef**del, tipos de datos de firma de método y los modificadores en sus formas fundamentales.  
+-   La directiva **#import** resuelve los tipos de datos de la firma del método, los tipos y los modificadores de **typedef**en sus formatos fundamentales.  
   
--   Los métodos virtuales puros que se deben sobrescribir están precedidos por "**raw_** ".  
+-   Todos los métodos virtuales puros que se deben sobrescribir tienen el prefijo "**raw_**".  
   
- Parte del código refleja simplemente estilo de codificación.  
+ Parte del código simplemente refleja el estilo de codificación.  
   
--   El puntero a **IUnknown** utilizado por el **Advise** método se obtiene de forma explícita con una llamada a **QueryInterface**.  
+-   El puntero a **IUnknown** utilizado por el método **Advise** se obtiene explícitamente con una llamada a **QueryInterface**.  
   
 -   No es necesario codificar explícitamente un destructor en las definiciones de clase.  
   
--   Desea codificar implementaciones más robustas de QueryInterface, AddRef y Release.  
+-   Puede que desee codificar implementaciones más sólidas de QueryInterface, AddRef y Release.  
   
--   El **__uuidof ()** directiva se usa ampliamente para obtener los identificadores de interfaz.  
+-   La directiva **__uuidof ()** se usa en gran medida para obtener los identificadores de interfaz.  
   
- Por último, el ejemplo contiene algún código de trabajo.  
+ Por último, el ejemplo contiene código de trabajo.  
   
--   En el ejemplo se escribe como una aplicación de consola.  
+-   El ejemplo se escribe como una aplicación de consola.  
   
--   Debe insertar su propio código bajo el comentario "`// Do some work`".  
+-   Debe insertar su propio código bajo el comentario " `// Do some work` ".  
   
--   Todos los eventos controladores predeterminada para no hacer nada y cancelar posteriores notificaciones. Debe insertar el código apropiado para su aplicación y permitir notificaciones si es necesario.  
+-   De forma predeterminada, todos los controladores de eventos no hacen nada y cancelan más notificaciones. Debe insertar el código adecuado para la aplicación y permitir las notificaciones si es necesario.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

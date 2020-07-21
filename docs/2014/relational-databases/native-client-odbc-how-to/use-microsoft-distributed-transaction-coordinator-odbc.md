@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - MS DTC, using
 ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6a938b49a5497aa81b48cb4032286e9d748acceb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048129"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Usar Microsoft DTC (Coordinador de transacciones distribuidas) (ODBC)
     
@@ -44,7 +43,7 @@ ms.locfileid: "72688701"
 > [!NOTE]  
 >  También puede llamar a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) y [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) sucesivamente para cada servidor SQL Server en lugar de llamarlos tal y como se sugería anteriormente en los pasos 4 y 5.  
   
-## <a name="see-also"></a>Ver también  
- [Realizar transacciones &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Realizar transacciones &#40;&#41;ODBC](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

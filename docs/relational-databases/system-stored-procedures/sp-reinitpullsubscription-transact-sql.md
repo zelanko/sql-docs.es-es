@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d9a581803d232f704dd27592a354c6331660ac03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751706"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Marca una suscripción transaccional de extracción o anónima para reinicializarla la próxima vez que se ejecute el Agente de distribución. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones de extracción.  
   
@@ -39,11 +39,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'` es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es All, que marca todas las suscripciones para reinicializarlas.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es All, que marca todas las suscripciones para reinicializarlas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -55,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  se puede llamar a **sp_reinitpullsubscription** desde el suscriptor para reinicializar la suscripción, durante la siguiente ejecución de la agente de distribución.  
   
- Las suscripciones a publicaciones creadas con un valor de **false** para **\@immediate_sync** no se pueden reinicializar desde el suscriptor.  
+ Las suscripciones a publicaciones creadas con un valor de **false** para ** \@ immediate_sync** no se pueden reinicializar desde el suscriptor.  
   
  Puede reinicializar una suscripción de extracción ejecutando **sp_reinitpullsubscription** en el suscriptor o **Sp_reinitsubscription** en el publicador.  
   
@@ -65,7 +65,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_reinitpullsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar una suscripción](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

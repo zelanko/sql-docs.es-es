@@ -1,821 +1,255 @@
 ---
-title: Notas de la versión
+title: Notas de la versión para clústeres de macrodatos de SQL Server
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describen las actualizaciones más recientes y los problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar).
+description: En este artículo se describen las actualizaciones más recientes y los problemas conocidos de los clústeres de macrodatos de SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
-ms.translationtype: MT
+ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974395"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517165"
 ---
-# <a name="release-notes-for-sql-server-big-data-clusters"></a>Notas de la versión de clústeres de macrodatos de SQL Server
+# <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se enumeran las actualizaciones y los problemas conocidos de las versiones más recientes de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+Las notas de la versión siguientes se aplican a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Este artículo se divide en secciones para cada versión. Cada versión tiene un vínculo a un artículo de asistencia en el que se describen los cambios de la CU, así como vínculos a las descargas de los paquetes de Linux. En el artículo también se enumeran los [problemas conocidos](#known-issues) para las versiones más recientes de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
-## <a id="rc"></a>Candidato de versión comercial (agosto)
+## <a name="supported-platforms"></a>Plataformas compatibles
 
-En las secciones siguientes se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server Release Candidate 2019.
+En esta sección se explican las plataformas compatibles con BDC.
 
-### <a name="whats-new"></a>What's New
+### <a name="kubernetes-platforms"></a>Plataformas Kubernetes
 
-|Nueva característica o actualización | Detalles |
-|:---|:---|
-|SQL Server Always On grupo de disponibilidad |Al implementar un clúster de macrodatos de SQL Server, puede configurar la implementación para crear un grupo de disponibilidad que proporcione:<br/><br/>-Alta disponibilidad <br/><br/>-Escalado horizontal de lectura <br/><br/>-Escalado horizontal de la inserción de datos en el grupo de datos<br/><br>Consulte [implementación con alta disponibilidad](../big-data-cluster/deployment-high-availability.md). |
-|`azdata` |Instalación simplificada para la herramienta con el [Administrador de instalación](./deploy-install-azdata-linux-package.md)<br/><br/>[comando `azdata notebook`](./reference-azdata-notebook.md)<br/><br/>[comando `azdata bdc status`](./reference-azdata-bdc-status.md) |
-|Azure Data Studio|[Descargue la versión candidata para lanzamiento de Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Se han agregado cuadernos de solución de problemas a través de SQL Server guía 2019 de Jupyter.<br/><br/>Experiencia de inicio de sesión de controlador agregada.<br/><br/>Se ha agregado el panel del controlador para ver los puntos de conexión de servicio, ver el estado de mantenimiento del clúster y acceder a los cuadernos de solución de problemas.<br/><br/>Rendimiento de edición/salida de celda del Bloc de notas mejorado.|
-| &nbsp; | &nbsp; |
+|Plataforma|Versiones compatibles|
+|---------|---------|
+|Kubernetes|BDC requiere la versión 1.13 de Kubernetes como mínimo. Vea [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) (Versión de Kubernetes y directiva de compatibilidad de sesgo de versión) para obtener la directiva de compatibilidad con versiones de Kubernetes.|
+|Azure Kubernetes Service (AKS)|BDC requiere la versión 1.13 de AKS como mínimo.<br/>Vea [Versiones de Kubernetes compatibles en Azure Kubernetes Service (AKS)](/azure/aks/supported-kubernetes-versions) para obtener la directiva de compatibilidad de versiones.|
 
-### <a name="known-issues"></a>Problemas conocidos
+### <a name="host-os-for-kubernetes"></a>SO del host para Kubernetes
 
-* SQL Server 2019 clústeres de macrodatos Release Candidate la actualización del número de compilación es `15.0.1900.47`.
+|Plataforma|Versiones compatibles|
+|---------|---------|
+|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
+|Ubuntu|16.04|
 
-* El perfil de implementación "kubeadm-Prod" no se admite en los clústeres de macrodatos de SQL Server 2019 Release Candidate con el número de compilación anterior. En su lugar, use el perfil "kubeadm-dev-test" para las implementaciones de Kubeadm.
+### <a name="sql-server-editions"></a>Ediciones de SQL Server
 
-## <a id="ctp32"></a> CTP 3.2 (julio)
+|Edición|Notas|
+|---------|---------|
+|Enterprise<br/>Estándar<br/>Desarrollador| La edición del clúster de macrodatos la determina la edición de la instancia maestra de SQL Server. En el momento de la implementación, se implementa de forma predeterminada la edición Developer. Puede cambiar la edición después de la implementación. Vea [Configuración de la instancia maestra de SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
 
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 3.2.
+## <a name="tools"></a>Herramientas
 
-### <a name="whats-new"></a>What's New
+|Plataforma|Versiones compatibles|
+|---------|---------|
+|`azdata`|Debe ser la misma versión secundaria que la del servidor (igual que la instancia maestra de SQL Server).<br/><br/>Ejecute `azdata –-version` para validar la versión.<br/><br/>Vea [Historial de versiones](#release-history) para obtener la versión más reciente.|
+|Azure Data Studio|Obtenga la versión más reciente de [Azure Data Studio](https://aka.ms/getazuredatastudio).|
 
-|Nueva característica o actualización | Detalles |
-|:---|:---|
-|Versión preliminar pública |Antes de CTP 3.2, el clúster de macrodatos de SQL Server estaba disponible para los usuarios pioneros registrados. Esta versión permite a todo el mundo experimentar las características de los clústeres de macrodatos de SQL Server. <br/><br/> Consulte Introducción [a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).|
-|`azdata` |CTP 3.2 presenta `azdata`: una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. `azdata` reemplaza a `mssqlctl`. Vea [Instalación de `azdata`](deploy-install-azdata.md). |
-|PolyBase |Los nombres de las columnas de la tabla externa ahora se usan para consultar orígenes de datos ODBC, SQL Server, Oracle, Teradata y MongoDB. En versiones anteriores de CTP, las columnas del origen de datos externos se enlazaban solo en la posición ordinal y los nombres especificados en la definición de la tabla externa no se usaban. |
-|Actualización de niveles de HDFS |Presentamos la funcionalidad de actualización de niveles de HDFS, gracias a la que se puede actualizar un montaje existente a la instantánea más reciente de los datos remotos. Vea [Niveles de HDFS](hdfs-tiering.md) |
-|Solución de problemas basada en cuadernos |CTP 3.2 presenta cuadernos de Jupyter para ayudar con la [implementación](deploy-notebooks.md) y la [detección, el diagnóstico y la solución de problemas](manage-notebooks.md) de componentes en un clúster de macrodatos de SQL Server. |
-| &nbsp; | &nbsp; |
+## <a name="release-history"></a>Historial de versiones
 
-### <a name="known-issues"></a>Problemas conocidos
+En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
+| Release               | Versión         | Fecha de la versión |
+|-----------------------|-----------------|--------------|
+| [CU4](#cu4)           | 15.0.4033.1     | 31-03-2020   |
+| [CU3](#cu3)           | 15.0.4023.6     | 12-03-2020   |
+| [CU2](#cu2)           | 15.0.4013.40    | 13-02-2020   |
+| [CU1](#cu1)           | 15.0.4003.23    | 07-01-2020   |
+| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
 
-#### <a name="polybase"></a>PolyBase
+## <a name="how-to-install-updates"></a>Instalación de las actualizaciones
 
-- La desactivación de la cláusula TOP cuando el recuento es > 1000 no se admite en esta versión. En estos casos, se leerán todas las filas del origen de datos remotos. (Corregido en versión candidata para lanzamiento)
+Para instalar las actualizaciones, consulte [Cómo actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-- En esta versión no se admite la desactivación de combinaciones colocadas en orígenes de datos externos. Por ejemplo, la desactivación de dos tablas de grupos de datos del tipo de distribución ROUND_ROBIN obtendrá los datos en la instancia maestra de SQL o en la instancia del grupo de proceso para realizar la operación de unión.
+## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (abril de 2020)
 
-#### <a name="compute-pool"></a>Grupo de proceso
+Versión de actualización acumulativa 4 (CU4) para SQL Server 2019. La versión del Motor de base de datos de SQL Server es la 15.0.4033.1.
 
-- La implementación de clúster de macrodatos solo admite el grupo de proceso con una instancia. (Corregido en versión candidata para lanzamiento)
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.4033.1 |[2019-CU4-ubuntu-16.04]
 
-#### <a name="storage-pool"></a>Grupo de almacenamiento
+## <a name="cu3-march-2020"></a><a id="cu3"></a> CU3 (marzo de 2020)
 
-- La consulta de archivos parquet en el grupo de almacenamiento no admite determinados tipos de datos.
+Versión de actualización acumulativa 3 (CU3) para SQL Server 2019. La versión de Motor de base de datos de SQL Server de esta versión es la 15.0.4023.6.
 
-- No se puede consultar la asignación y la lista de columnas primarias, así como las columnas primarias sin un tipo asociado. Devuelve un error.
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
 
-- No se pueden consultar los nodos REPETIDOS y es posible que devuelva resultados incorrectos.
+### <a name="resolved-issues"></a>Problemas resueltos
 
-## <a id="ctp31"></a> CTP 3.1 (junio)
+En SQL Server 2019 CU3 se resuelven los problemas siguientes de las versiones anteriores.
 
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 3.1.
+- [Implementación con repositorio privado](#deployment-with-private-repository)
+- [Puede generarse un error de actualización debido a un tiempo de espera](#upgrade-may-fail-due-to-timeout)
 
-### <a name="whats-new"></a>What's New
+## <a name="cu2-february-2020"></a><a id="cu2"></a> CU2 (febrero de 2020)
 
-| Nueva característica o actualización | Detalles |
-|:---|:---|
-| Cambios del comando `mssqlctl` | Los comandos `mssqlctl cluster` se llaman ahora `mssqlctl bdc`. Para más información, consulte la referencia de [`mssqlctl`](reference-azdata.md). |
-| Nuevos comandos de estado de `mssqlctl` y eliminación del portal de administración de clústeres. | En esta versión se quita el portal de administración de clústeres. Se han agregado nuevos comandos de estado a `mssqlctl` que complementan los comandos de supervisión existentes. |
-| Grupos de procesos de Spark | Cree nodos adicionales para aumentar la capacidad de proceso de Spark sin tener que escalar verticalmente el almacenamiento. Además, puede iniciar los nodos del grupo de almacenamiento que no se usan con Spark. Spark y el almacenamiento están desacoplados. Para más información, consulte [Configurar el almacenamiento sin spark](deployment-custom-configuration.md#sparkstorage). |
-| Conector de Spark MSSQL | Compatibilidad con operaciones de lectura y escritura en tablas externas del grupo de datos. Las versiones anteriores solo admitían operaciones de lectura y escritura en tablas de instancias maestras. Para más información, consulte [Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL](spark-mssql-connector.md). |
-| Machine Learning con MLeap | [Entrenar un modelo de aprendizaje automático MLeap en Spark y puntuarlo en SQL Server con la extensión del lenguaje Java](spark-create-machine-learning-model.md). |
+Versión de actualización acumulativa 2 (CU2) para SQL Server 2019. La versión de Motor de base de datos de SQL Server de esta versión es la 15.0.4013.40.
 
-### <a name="known-issues"></a>Problemas conocidos
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
+## <a name="cu1-january-2020"></a><a id="cu1"></a> CU1 (enero de 2020)
 
-#### <a name="hdfs"></a>HDFS
+Versión de actualización acumulativa 1 (CU1) para SQL Server 2019. La versión de Motor de base de datos de SQL Server de esta versión es la 15.0.4003.23.
 
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-   `Error previewing file: File exceeds max size of 30MB`
+## <a name="gdr1-november-2019"></a><a id="rtm"></a> GDR1 (noviembre de 2019)
 
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
+Versión de distribución general 1 (GDR1) de SQL Server 2019, presenta la disponibilidad general para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]. La versión de Motor de base de datos de SQL Server de esta versión es la 15.0.2070.34.
 
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.2070.34|[2019-GDR1-ubuntu-16.04]
 
-#### <a name="deployment"></a>Implementación
+[!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
-- No se admite la actualización de un clúster de macrodatos de una versión anterior.
+## <a name="known-issues"></a>Problemas conocidos
 
-   > [!IMPORTANT]
-   > Ha de hacer una copia de seguridad de los datos y luego eliminar el clúster de macrodatos existente (con la versión anterior de **azdata**) antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
+### <a name="deployment-with-private-repository"></a>Implementación con repositorio privado
 
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
+- **Versiones afectadas**: GDR1, CU1, CU2. Resuelto para CU3.
 
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+- **Problema e impacto en el cliente**: La actualización del repositorio privado tiene requisitos específicos
 
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+- **Solución alternativa**: si usa un repositorio privado para extraer previamente las imágenes para implementar o actualizar BDC, asegúrese de que las imágenes de compilación actuales, así como las imágenes de compilación de destino se encuentran en el repositorio privado. Esto permite una reversión correcta, si es necesario. Además, si cambió las credenciales del repositorio privado desde la implementación original, actualice el secreto correspondiente en Kubernetes antes de la actualización. `azdata` no admite la actualización de las credenciales a través de las variables de entorno `AZDATA_PASSWORD` y `AZDATA_USERNAME`. Actualice el secreto mediante [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret). 
 
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
+No se admite la actualización mediante distintos repositorios privados para compilaciones actuales y de destino.
 
-#### <a name="external-tables"></a>Tablas externas
+### <a name="upgrade-may-fail-due-to-timeout"></a>Puede generarse un error de actualización debido a un tiempo de espera
 
-- La implementación de un clúster de macrodatos ya no crea los orígenes de datos externos **SqlDataPool** y **SqlStoragePool**. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos en el grupo de datos y el bloque de almacenamiento.
+- **Versiones afectadas**: GDR1, CU1, CU2. Resuelto para CU3.
 
-   > [!NOTE]
-   > El URI para la creación de estos orígenes de datos externos es distinto de una versión de CTP a otra. Consulte los siguientes comandos de Transact-SQL para ver cómo crearlos 
+- **Problema e impacto en el cliente**: Puede generarse un error de actualización debido a un tiempo de espera.
 
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+   En el código siguiente se muestra el aspecto del error:
+
+   ```
+   >azdata.EXE bdc upgrade --name <mssql-cluster>
+   Upgrading cluster to version 15.0.4003
+
+   NOTE: Cluster upgrade can take a significant amount of time depending on
+   configuration, network speed, and the number of nodes in the cluster.
+
+   Upgrading Control Plane.
+   Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
+   Es más probable que este error se produzca al actualizar BDC en Azure Kubernetes Service (AKS).
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+- **Solución alternativa**: aumente el tiempo de espera de la actualización. 
 
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
+   Para aumentar los tiempos de espera de una actualización, edite la asignación de configuración de la actualización. Para editar la asignación de configuración de la actualización:
 
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+   1. Ejecute el siguiente comando:
 
-- Si va a crear una tabla externa en Oracle que utilice tipos de datos de caracteres, el asistente para virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de la tabla externa. Esto producirá un error en el DDL de la tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2 o cree instrucciones EXTERNAL TABLE manualmente y especifique NVARCHAR en lugar de usar el asistente.
+      ```bash
+      kubectl edit configmap controller-upgrade-configmap
+      ```
 
-#### <a name="application-deployment"></a>Implementación de la aplicación
+   2. Edite estos campos:
 
-- Cuando se llama a una aplicación de R, Python o MLeap desde la API RESTful, el tiempo de espera de la llamada se agota en 5 minutos.
+       **`controllerUpgradeTimeoutInMinutes`** designa el número de minutos que se esperará a que finalice la actualización del controlador o de la base de datos del controlador. El valor predeterminado es 5. Actualice al menos a 20.
 
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
+       **`totalUpgradeTimeoutInMinutes`** : designa la cantidad de tiempo para que el controlador y la base de datos del controlador terminen de actualizarse (actualización del controlador y de la base de datos del controlador). El valor predeterminado es 10. Actualice al menos a 40.
 
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
+       **`componentUpgradeTimeoutInMinutes`** : designa la cantidad de tiempo en que se debe completar cada fase posterior de la actualización.  El valor predeterminado es 30. Actualice a 45.
 
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
+   3. Guarde y salga.
 
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
+   El script de Python siguiente es otra manera de establecer el tiempo de espera:
 
-#### <a name="security"></a>Seguridad
+   ```python
+   from kubernetes import client, config
+   import json
 
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
+   def set_upgrade_timeouts(namespace, controller_timeout=20, controller_total_timeout=40, component_timeout=45):
+       """ Set the timeouts for upgrades
 
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
+       The timeout settings are as follows
 
-#### <a name="kibana-logs-dashboards"></a>Paneles de registros Kibana
+       controllerUpgradeTimeoutInMinutes: sets the max amount of time for the controller
+           or controllerdb to finish upgrading
 
-- Entre CTP 3,0 y 3,1, la versión de Kibana se actualizó de 6.3.1 a 7.0.1.  Esto ha hecho que el explorador Microsoft Edge no sea compatible con Kibana. Los usuarios verán una página en blanco al cargar la versión actual de los paneles de Kibana en Microsoft Edge. Consulte [aquí]( https://www.elastic.co/support/matrix#matrix_browse) para ver los exploradores compatibles con Kibana.
+       totalUpgradeTimeoutInMinutes: sets the max amount of time to wait for both the
+           controller and controllerdb to complete their upgrade
 
+       componentUpgradeTimeoutInMinutes: sets the max amount of time allowed for
+           subsequent phases of the upgrade to complete
+       """
+       config.load_kube_config()
 
-## <a id="ctp30"></a> CTP 3.0 (mayo)
+       upgrade_config_map = client.CoreV1Api().read_namespaced_config_map("controller-upgrade-configmap", namespace)
 
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 3.0.
+       upgrade_config = json.loads(upgrade_config_map.data["controller-upgrade"])
 
-### <a name="whats-new"></a>What's New
+       upgrade_config["controllerUpgradeTimeoutInMinutes"] = controller_timeout
 
-| Nueva característica o actualización | Detalles |
-|:---|:---|
-| **mssqlctl** updates | Varias [actualizaciones de comandos y parámetros](reference-azdata.md) de **mssqlctl**. Esto incluye una actualización del comando **mssqlctl login**, que ahora se dirige al punto de conexión y al nombre de usuario del controlador. |
-| Mejoras en el almacenamiento | Compatibilidad con distintas configuraciones de almacenamiento para registros y datos. Además, se ha reducido el número de notificaciones de volumen persistentes para un clúster de macrodatos. |
-| Varias instancias de grupos de procesos | Compatibilidad con varias instancias de grupos de procesos. |
-| Nuevas características y nuevo comportamiento del grupo | Ahora, el grupo de procesos se utiliza de forma predeterminada para las operaciones de grupo de almacenamiento y grupo de datos solo en distribución **ROUND_ROBIN**. Ahora, el grupo de datos puede utilizar un nuevo tipo de distribución, **REPLICATED**, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
-| Mejoras en la tabla externa | Las tablas externas de tipo origen de datos HADOOP ahora admiten la lectura de filas de hasta 1 MB. Ahora, las tablas externas (ODBC, bloque de almacenamiento, grupo de datos) admiten filas tan anchas como las tablas de SQL Server. |
+       upgrade_config["totalUpgradeTimeoutInMinutes"] = controller_total_timeout
 
-### <a name="known-issues"></a>Problemas conocidos
+       upgrade_config["componentUpgradeTimeoutInMinutes"] = component_timeout
 
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
+       upgrade_config_map.data["controller-upgrade"] = json.dumps(upgrade_config)
 
-#### <a name="hdfs"></a>HDFS
-
-- Azure Data Studio devuelve un error al intentar crear una nueva carpeta en HDFS. Para habilitar esta funcionalidad, instale la compilación para los participantes del programa Insider de Azure Data Studio:
-  
-   - [Instalador de usuario de Windows: **compilación para los participantes del programa Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
-   - [Instalador de sistema Windows: **compilación para los participantes del programa Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
-   - [Archivo ZIP de Windows: **compilación para los participantes del programa Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
-   - [Archivo ZIP de macOS: **compilación para los participantes del programa Insider**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
-   - [Archivo TAR.GZ de Linux: **compilación para los participantes del programa Insider**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="deployment"></a>Implementación
-
-- Los procedimientos de implementación anteriores para los clústeres de macrodatos habilitados para GPU no se admiten en CTP 3.0. Se está investigando un procedimiento de implementación alternativo. Por ahora, la publicación del artículo "Implementar un clúster de macrodatos compatible con GPU y ejecutar TensorFlow" se ha anulado temporalmente para evitar confusiones.
-
-- No se admite la actualización de un clúster de macrodatos de una versión anterior.
-
-   > [!IMPORTANT]
-   > Ha de hacer una copia de seguridad de los datos y luego eliminar el clúster de macrodatos existente (con la versión anterior de **azdata**) antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="external-tables"></a>Tablas externas
-
-- La implementación de un clúster de macrodatos ya no crea los orígenes de datos externos **SqlDataPool** y **SqlStoragePool**. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos en el grupo de datos y el bloque de almacenamiento.
-
-   > [!NOTE]
-   > El URI para la creación de estos orígenes de datos externos es distinto de una versión de CTP a otra. Consulte los siguientes comandos de Transact-SQL para ver cómo crearlos 
-
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://controller-svc/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+       client.CoreV1Api().patch_namespaced_config_map("controller-upgrade-configmap", namespace, upgrade_config_map)
    ```
 
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
+### <a name="livy-job-submission-from-azure-data-studio-ads-or-curl-fail-with-500-error"></a>Error 500 al enviar el trabajo de Livy desde Azure Data Studio (ADS) o curl
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+- **Problema e impacto en el cliente**: en una configuración de alta disponibilidad, los recursos compartidos de Spark `sparkhead` se configuran con varias réplicas. En este caso, es posible que experimente errores con el envío del trabajo de Livy desde Azure Data Studio (ADS) o `curl`. Para comprobarlo, la ejecución de `curl` en cualquier pod de `sparkhead` da como resultado una conexión rechazada. Por ejemplo, `curl https://sparkhead-0:8998/` o `curl https://sparkhead-1:8998` devuelve el error 500.
 
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
+   Esto sucede en los escenarios siguientes:
 
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+   - Los pods de Zookeeper o los procesos de cada instancia de Zookeeper se reinician varias veces.
+   - Cuando la conectividad de red no es confiable entre el pod de `sparkhead` y los pods de Zookeeper.
 
-- Si va a crear una tabla externa en Oracle que utilice tipos de datos de caracteres, el asistente para virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de la tabla externa. Esto producirá un error en el DDL de la tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2 o cree instrucciones EXTERNAL TABLE manualmente y especifique NVARCHAR en lugar de usar el asistente.
-
-#### <a name="application-deployment"></a>Implementación de la aplicación
-
-- Cuando se llama a una aplicación de R, Python o MLeap desde la API RESTful, el tiempo de espera de la llamada se agota en 5 minutos.
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
-
-## <a id="ctp25"></a> CTP 2.5 (abril)
-
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.5.
-
-### <a name="whats-new"></a>What's New
-
-| Nueva característica o actualización | Detalles |
-|:---|:---|
-| Perfiles de implementación | Utiliza los [archivos JSON de configuración de la implementación](deployment-guidance.md#configfile) predeterminados y personalizados para las implementaciones de clústeres de macrodatos en lugar de las variables de entorno. |
-| Implementaciones solicitadas | `azdata cluster create` ahora le pide los valores necesarios para realizar implementaciones predeterminadas. |
-| Cambios de nombre de punto de conexión de servicio y pod | Los siguientes puntos de conexión externos han cambiado de nombre:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| Mejoras de **azdata** | Use **azdata** para [enumerar los puntos de conexión externos](deployment-guidance.md#endpoints) y compruebe la versión de **azdata** con el parámetro `--version`. |
-| Instalación sin conexión | Instrucciones para las implementaciones del clúster de macrodatos sin conexión. |
-| Mejoras en los niveles de HDFS | Niveles S3, almacenamiento en caché de montaje y compatibilidad con OAuth para ADLS Gen2. |
-| Nuevo conector `mssql` de Spark a SQL Server | |
-
-### <a name="known-issues"></a>Problemas conocidos
-
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
-
-#### <a name="deployment"></a>Implementación
-
-- No se admite la actualización de un clúster de macrodatos de una versión anterior.
-
-   > [!IMPORTANT]
-   > Ha de hacer una copia de seguridad de los datos y luego eliminar el clúster de macrodatos existente (con la versión anterior de **azdata**) antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="external-tables"></a>Tablas externas
-
-- La implementación de un clúster de macrodatos ya no crea los orígenes de datos externos **SqlDataPool** y **SqlStoragePool**. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos en el grupo de datos y el bloque de almacenamiento.
-
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   ```
-
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- Si va a crear una tabla externa en Oracle que utilice tipos de datos de caracteres, el asistente para virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de la tabla externa. Esto producirá un error en el DDL de la tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2 o cree instrucciones EXTERNAL TABLE manualmente y especifique NVARCHAR en lugar de usar el asistente.
-
-#### <a name="application-deployment"></a>Implementación de la aplicación
-
-- Cuando se llama a una aplicación de R, Python o MLeap desde la API RESTful, el tiempo de espera de la llamada se agota en 5 minutos.
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="hdfs"></a>HDFS
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
-
-## <a id="ctp24"></a> CTP 2.4 (marzo)
-
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.4.
-
-### <a name="whats-new"></a>What's New
-
-| Nueva característica o actualización | Detalles |
-|:---|:---|
-| Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark. | [Implementa un clúster de macrodatos con compatibilidad con GPU y ejecuta TensorFlow](spark-gpu-tensorflow.md). |
-| Los orígenes de datos **SqlDataPool** y **SqlStoragePool** ya no se crean de forma predeterminada. | Puede crearlos manualmente según sea necesario. Consulte los [problemas conocidos](#externaltablesctp24). |
-| Compatibilidad de `INSERT INTO SELECT` con el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| Opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION`. | Fuerza o deshabilita el uso del grupo de proceso para las consultas en tablas externas. Por ejemplo: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
-| Recomendaciones actualizadas para implementar AKS. | Al evaluar los clústeres de macrodatos en AKS, ahora se recomienda utilizar un único nodo del tamaño **Standard_L8s**. |
-| Actualización del entorno de ejecución de Spark a Spark 2.4. | |
-
-### <a name="known-issues"></a>Problemas conocidos
-
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
-
-#### <a name="deployment"></a>Implementación
-
-- No se admite la actualización de un clúster de macrodatos de una versión anterior.
-
-   > [!IMPORTANT]
-   > Ha de hacer una copia de seguridad de los datos y luego eliminar el clúster de macrodatos existente (con la versión anterior de **azdata**) antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="kubeadm-deployments"></a>Implementaciones de kubeadm
-
-Si usa kubeadm para implementar Kubernetes en varios equipos, el portal de administración de clústeres no muestra correctamente los puntos de conexión necesarios para conectarse al clúster de macrodatos. Si experimenta este problema, use la siguiente solución alternativa para detectar las direcciones IP del punto de conexión de servicio:
-
-- Si se va a conectar desde dentro del clúster, consulte Kubernetes para obtener la dirección IP del punto de conexión de servicio al que desea conectarse. Por ejemplo, el siguiente comando **kubectl** muestra la dirección IP de la instancia maestra de SQL Server:
+- **Solución alternativa**: reinicie los dos servidores de Livy.
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl -n <clustername> exec sparkhead-0 -c hadoop-livy-sparkhistory supervisorctl restart livy
    ```
-
-- Si se va a conectar desde fuera del clúster, siga estos pasos para conectarse:
-
-   1. Obtenga la dirección IP del nodo que ejecuta la instancia maestra de SQL Server: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
-
-   1. Conéctese a la instancia maestra de SQL Server con esta dirección IP.
-
-   1. Consulte **cluster_endpoint_table** en la base de datos maestra para buscar otros puntos de conexión externos.
-
-      Si se produce un error de tiempo de espera de conexión, es posible que el nodo respectivo se encuentre en el firewall. En este caso, debe ponerse en contacto con el administrador de clústeres de Kubernetes y solicitar la IP del nodo que se expone externamente. Puede ser cualquier nodo. Después, puede utilizar dicha dirección IP y el puerto correspondiente para conectarse a varios servicios que se ejecutan en el clúster. Por ejemplo, el administrador puede encontrar dicha dirección IP mediante la ejecución de:
-
-      ```
-      [root@m12hn01 config]# kubectl cluster-info
-      Kubernetes master is running at https://172.50.253.99:6443
-      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-      ```
-
-#### <a name="delete-cluster-fails"></a>Error al eliminar el clúster
-
-Cuando intenta eliminar un clúster con **azdata**, se produce el siguiente error:
-
-```
-2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
-Error processing command: "TypeError"
-delete_namespaced_service() takes 3 positional arguments but 4 were given
-Makefile:61: recipe for target 'delete-cluster' failed
-make[2]: *** [delete-cluster] Error 1
-Makefile:223: recipe for target 'deploy-clean' failed
-make[1]: *** [deploy-clean] Error 2
-Makefile:203: recipe for target 'deploy-clean' failed
-make: *** [deploy-clean] Error 2
-```
-
-Un nuevo cliente de Kubernetes de Python (versión 9.0.0) ha cambiado la API de eliminación de espacios de nombres, que actualmente interrumpe **azdata**. Esto solo ocurre si tiene un cliente de Python de Kubernetes más reciente instalado. Para solucionar este problema, elimine directamente el clúster mediante **kubectl** (`kubectl delete ns <ClusterName>`), o bien puede instalar la versión anterior mediante `sudo pip install kubernetes==8.0.1`.
-
-#### <a id="externaltablesctp24"></a> Tablas externas
-
-- La implementación de un clúster de macrodatos ya no crea los orígenes de datos externos **SqlDataPool** y **SqlStoragePool**. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos en el grupo de datos y el bloque de almacenamiento.
-
-   ```sql
-   -- Create default data sources for SQL Big Data Cluster
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-       CREATE EXTERNAL DATA SOURCE SqlDataPool
-       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
- 
-   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   ```
-
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- Si va a crear una tabla externa en Oracle que utilice tipos de datos de caracteres, el asistente para virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de la tabla externa. Esto producirá un error en el DDL de la tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2 o cree instrucciones EXTERNAL TABLE manualmente y especifique NVARCHAR en lugar de usar el asistente.
-
-#### <a name="application-deployment"></a>Implementación de la aplicación
-
-- Cuando se llama a una aplicación de R, Python o MLeap desde la API RESTful, el tiempo de espera de la llamada se agota en 5 minutos.
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="hdfs"></a>HDFS
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
-
-## <a id="ctp23"></a> CTP 2.3 (febrero)
-
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.3.
-
-### <a name="whats-new"></a>What's New
-
-| Nueva característica o actualización | Detalles |
-| :---------- | :------ |
-| Envío de trabajos de Spark en clústeres de macrodatos en IntelliJ. | [Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| CLI comunes para la implementación de la aplicación y la administración de clústeres. | [Cómo implementar una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| Extensión de VS Code para implementar aplicaciones en un clúster de macrodatos. | [Cómo usar VS Code para implementar aplicaciones en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
-| Cambios en el uso del comando de la herramienta **azdata**. | Para obtener más información, vea los [problemas conocidos con azdata](#azdatactp23). |
-| Uso de Sparklyr en clústeres de macrodatos | [Uso de Sparklyr en clústeres de macrodatos de SQL Server 2019](sparklyr-from-RStudio.md) |
-| Montaje de almacenamiento externo compatible con HDFS en clústeres de macrodatos con **niveles de HDFS**. | Vea [Niveles de HDFS](hdfs-tiering.md). |
-| Nueva experiencia de conexión unificada para la instancia principal de SQL Server y la puerta de enlace de Spark o HDFS. | Consulte la [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md). |
-| Al eliminar un clúster con el comando **azdata cluster delete** ahora solo se eliminan los objetos del espacio de nombres que formaban parte del clúster de macrodatos. | El espacio de nombres no se elimina. Sin embargo, en versiones anteriores, este comando sí que eliminaba todo el espacio de nombres. |
-| Los nombres de punto de conexión de _seguridad_ se han cambiado y consolidado. | **service-security-lb** y **service-security-nodeport** se han consolidado en el punto de conexión **endpoint-security**. |
-| Los nombres de punto de conexión de _proxy_ se han cambiado y consolidado. | **service-proxy-lb** y **service-proxy-nodeport** se han consolidado en el punto de conexión **endpoint-sevice-proxy**. |
-| Los nombres de punto de conexión de _controller_ se han cambiado y consolidado. | **service-mssql-controller-lb** y **service-mssql-controller-nodeport** se han consolidado en el punto de conexión **endpoint-controller**. |
-| &nbsp; | &nbsp; |
-
-### <a name="known-issues"></a>Problemas conocidos
-
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
-
-#### <a name="deployment"></a>Implementación
-
-- No se admite la actualización de un clúster de macrodatos de una versión anterior.
-
-   > [!IMPORTANT]
-   > Ha de hacer una copia de seguridad de los datos y luego eliminar el clúster de macrodatos existente (con la versión anterior de **azdata**) antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
-
-- La variable de entorno **ACCEPT_EULA** debe ser "yes" o "Yes" para aceptar el CLUF. Las versiones anteriores permitían "y" y "Y", pero ya no se aceptan y provocarán un error en la implementación.
-
-- Las variables de entorno **CLUSTER_PLATFORM** no tienen un valor predeterminado, como en versiones anteriores.
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="kubeadm-deployments"></a>Implementaciones de kubeadm
-
-Si usa kubeadm para implementar Kubernetes en varios equipos, el portal de administración de clústeres no muestra correctamente los puntos de conexión necesarios para conectarse al clúster de macrodatos. Si experimenta este problema, use la siguiente solución alternativa para detectar las direcciones IP del punto de conexión de servicio:
-
-- Si se va a conectar desde dentro del clúster, consulte Kubernetes para obtener la dirección IP del punto de conexión de servicio al que desea conectarse. Por ejemplo, el siguiente comando **kubectl** muestra la dirección IP de la instancia maestra de SQL Server:
 
    ```bash
-   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   kubectl -n <clustername> exec sparkhead-1 -c hadoop-livy-sparkhistory supervisorctl restart livy
    ```
 
-- Si se va a conectar desde fuera del clúster, siga estos pasos para conectarse:
+### <a name="create-memory-optimized-table-when-master-instance-in-an-availability-group"></a>Creación de una tabla optimizada para memoria cuando la instancia maestra está en un grupo de disponibilidad
 
-   1. Obtenga la dirección IP del nodo que ejecuta la instancia maestra de SQL Server: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`.
+- **Problema e impacto en el cliente**: no se puede usar el punto de conexión principal expuesto para conectarse a las bases de datos del grupo de disponibilidad (agente de escucha) para crear tablas optimizadas para memoria.
 
-   1. Conéctese a la instancia maestra de SQL Server con esta dirección IP.
+- **Solución alternativa**: para crear tablas optimizadas para memoria cuando la instancia maestra de SQL Server es una configuración de grupo de disponibilidad, [conéctese a la instancia de SQL Server](deployment-high-availability.md#instance-connect), exponga un punto de conexión, conéctese a la base de datos SQL Server y cree las tablas optimizadas para memoria en la sesión creada con la nueva conexión.
 
-   1. Consulte **cluster_endpoint_table** en la base de datos maestra para buscar otros puntos de conexión externos.
+### <a name="insert-to-external-tables-active-directory-authentication-mode"></a>Inserción en el modo de autenticación de Active Directory en tablas externas
 
-      Si se produce un error de tiempo de espera de conexión, es posible que el nodo respectivo se encuentre en el firewall. En este caso, debe ponerse en contacto con el administrador de clústeres de Kubernetes y solicitar la IP del nodo que se expone externamente. Puede ser cualquier nodo. Después, puede utilizar dicha dirección IP y el puerto correspondiente para conectarse a varios servicios que se ejecutan en el clúster. Por ejemplo, el administrador puede encontrar dicha dirección IP mediante la ejecución de:
+- **Problema e impacto en el cliente**: cuando la instancia maestra de SQL Server está en el modo de autenticación Active Directory, una consulta que selecciona solo en tablas externas, donde al menos una está en un grupo de almacenamiento, e inserta en otra tabla externa, devuelve lo siguiente:
 
-      ```
-      [root@m12hn01 config]# kubectl cluster-info
-      Kubernetes master is running at https://172.50.253.99:6443
-      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-      ```
-
-#### <a id="azdatactp23"></a> azdata
-
-- La herramienta **azdata** ha cambiado de un orden de comandos verbo-sustantivo a un orden sustantivo-verbo. Por ejemplo, `azdata create cluster` ahora es `azdata cluster create`.
-
-- Ahora el parámetro `--name` es necesario al crear un clúster con `azdata cluster create`.
-
-   ```bash
-   azdata cluster create --name <cluster_name>
+   ```
+   Msg 7320, Level 16, State 102, Line 1
+   Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "SQLNCLI11". Only domain logins can be used to query Kerberized storage pool.
    ```
 
-- Para obtener información importante sobre la actualización a la versión más reciente de los clústeres de macrodatos y **azdata**, consulte [Actualización a una nueva versión](deployment-upgrade.md).
+- **Solución alternativa**: modifique la consulta de una de las maneras siguientes. Puede unir la tabla de bloque de almacenamiento a una tabla local, o bien insertar primero en la tabla local y después leer desde la tabla local para insertar en el grupo de datos.
 
-#### <a name="external-tables"></a>Tablas externas
+### <a name="transparent-data-encryption-capabilities-can-not-be-used-with-databases-that-are-part-of-the-availability-group-in-the-sql-server-master-instance"></a>Las funcionalidades de Cifrado de datos transparente no se pueden usar con las bases de datos que forman parte del grupo de disponibilidad en la instancia maestra de SQL Server.
 
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
+- **Problema e impacto en el cliente**: en una configuración de alta disponibilidad, las bases de datos que tienen habilitado el cifrado no se pueden usar después de una conmutación por error, ya que la clave maestra usada para el cifrado es distinta en cada réplica. 
 
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-- Si va a crear una tabla externa en Oracle que utilice tipos de datos de caracteres, el asistente para virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de la tabla externa. Esto producirá un error en el DDL de la tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2 o cree instrucciones EXTERNAL TABLE manualmente y especifique NVARCHAR en lugar de usar el asistente.
-
-#### <a name="application-deployment"></a>Implementación de la aplicación
-
-- Cuando se llama a una aplicación de R, Python o MLeap desde la API RESTful, el tiempo de espera de la llamada se agota en 5 minutos.
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="hdfs"></a>HDFS
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
-
-## <a id="ctp22"></a> CTP 2.2 (diciembre de 2018)
-
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.2.
-
-### <a name="new-features"></a>Nuevas características
-
-- Portal de administración del clúster al que se accede con `/portal` (**https://\<ip-address\>:30777/portal**).
-- El nombre de servicio del grupo maestro ha cambiado de `service-master-pool-lb` y `service-master-pool-nodeport` a `endpoint-master-pool`.
-- Nueva versión de **azdata** e imágenes actualizadas.
-- Correcciones de errores y mejoras varias.
-
-### <a name="known-issues"></a>Problemas conocidos
-
-En las secciones siguientes se describen los problemas conocidos y las limitaciones de esta versión.
-
-#### <a name="deployment"></a>Implementación
-
-- No se admite la actualización de un clúster de macrodatos de una versión anterior. Debe hacer una copia de seguridad y eliminar cualquier clúster de macrodatos existente antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="cluster-administration-portal"></a>Portal de administración de clústeres
-
-El portal de administración de clústeres no muestra el punto de conexión de la instancia maestra de SQL Server. Para buscar la dirección IP y el puerto de la instancia maestra, use el siguiente comando de **kubectl**:
-
-```
-kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
-```
-
-#### <a name="external-tables"></a>Tablas externas
-
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="hdfs"></a>HDFS
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
-
-## <a id="ctp21"></a> CTP 2.1 (noviembre de 2018)
-
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.1.
-
-### <a name="new-features"></a>Nuevas características
-
-- [Implementación de aplicaciones de Python y R](big-data-cluster-create-apps.md) en un clúster de macrodatos.
-- Nueva versión de **azdata** e imágenes actualizadas. 
-- Correcciones de errores y mejoras varias.
-
-### <a name="known-issues"></a>Problemas conocidos
-
-En las secciones siguientes se proporcionan problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en CTP 2,1.
-
-#### <a name="deployment"></a>Implementación
-
-- No se admite la actualización de un clúster de macrodatos de una versión anterior. Debe hacer una copia de seguridad y eliminar cualquier clúster de macrodatos existente antes de implementar la versión más reciente. Para obtener más información, consulte [Actualización a una nueva versión](deployment-upgrade.md).
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="admin-portal"></a>Portal de administración
-
-- Cuando se [crea una aplicación con el comando msqlctl-ctp](big-data-cluster-create-apps.md) y se implementa en un clúster de macrodatos de SQL Server, el portal de administración de clústeres muestra los pods en los que la aplicación se ha implementado como "desconocido" en la sección de controlador de la parte de administración.
-
-#### <a name="external-tables"></a>Tablas externas
-
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="hdfs"></a>HDFS
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
-
-## <a id="ctp20"></a> CTP 2.0 (octubre de 2018)
-
-En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.0.
-
-### <a name="new-features"></a>Nuevas características
-
-- Experiencia de implementación sencilla con la herramienta de administración de azdata
-- Experiencia nativa de Notebook en Azure Data Studio
-- Consultar archivos HDFS a través de la instancia de almacenamiento de SQL Server
-- Virtualización de datos a través de Master a SQL Server, Oracle, MongoDB y HDFS
-- Asistente para la virtualización de datos para SQL Server y Oracle en Azure Data Studio
-- ML Services en Master
-- Portal de administración de clústeres que puede usar para la supervisión y solución de problemas
-- Envío de trabajos de Spark en Azure Data Studio 
-- Interfaz de usuario de Spark en el portal de administración de clústeres
-- Montaje de volúmenes en clases de almacenamiento
-- Consultas en grupos de datos de master
-- Mostrar el plan de consultas distribuidas en SSMS
-- Paquete PIP para la herramienta de administración de azdata
-- Motor de implementación integrado a través del servicio de controlador
-
-### <a name="known-issues"></a>Problemas conocidos
-
-En las secciones siguientes se proporcionan problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en CTP 2,0.
-
-#### <a name="deployment"></a>Implementación
-
-- Si usa Azure Kubernetes Service (AKS), la versión recomendada de Kubernetes es 1.10*, que no admite el cambio de tamaño del disco. Debe asegurarse de que está cambiando el tamaño del almacenamiento en consecuencia en el momento de la implementación. Para obtener más información sobre cómo ajustar los tamaños de almacenamiento, consulte [Persistencia de datos](concept-data-persistence.md). En el caso de Kubernetes implementado en máquinas virtuales, la versión recomendada es 1.11.
-
-- Después de la implementación en AKS, es posible que vea los dos eventos de advertencia siguientes en la implementación. Ambos eventos son problemas conocidos, pero no impiden implementar correctamente el clúster de macrodatos en AKS.
-
-   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
-
-   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
-
-- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución alternativa consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
-
-#### <a name="external-tables"></a>Tablas externas
-
-- Es posible crear una tabla externa del grupo de datos para una tabla que tenga tipos de columna no admitidos. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
-
-   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
-
-- Si consulta una tabla externa del bloque de almacenamiento, puede que reciba un error si el archivo subyacente se copia en HDFS al mismo tiempo.
-
-   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
-
-#### <a name="spark-and-notebooks"></a>Spark y cuadernos
-
-- Es posible que las direcciones IP de POD cambien en el entorno de Kubernetes al reiniciar los POD. En el escenario en el que master-pod se reinicie, es posible que se produzca un error de `NoRoteToHostException` en la sesión de Spark. Esto se debe a que hay memorias caché de JVM que no se actualizan con nuevas direcciones IP.
-
-- Si ya tiene Jupyter instalado y otro Python en Windows, es posible que se produzcan errores en los cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
-
-- En un cuaderno, si hace clic en el comando **Agregar texto**, la celda de texto se agrega en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para cambiar al modo de edición y editar la celda.
-
-#### <a name="hdfs"></a>HDFS
-
-- Si hace clic con el botón derecho en un archivo de HDFS para obtener una vista previa, es posible que vea el siguiente error:
-
-   `Error previewing file: File exceeds max size of 30MB`
-
-   Actualmente no hay ninguna manera de obtener una vista previa de los archivos de más de 30 MB en Azure Data Studio.
-
-- No se admiten cambios de configuración de HDFS que impliquen cambios en hdfs-site.xml.
-
-#### <a name="security"></a>Seguridad
-
-- SA_PASSWORD forma parte del entorno y es detectable (por ejemplo, en un archivo de copia de seguridad). Debe restablecer el valor de SA_PASSWORD en la instancia maestra después de la implementación. No se trata de un error, sino de un paso de seguridad. Para obtener más información sobre cómo cambiar el valor de SA_PASSWORD en un contenedor de Linux, consulte [Cambio de la contraseña de administrador del sistema](../linux/quickstart-install-connect-docker.md#sapassword).
-
-- Los registros de AKS pueden contener la contraseña de administrador del sistema para implementaciones de clúster de macrodatos.
+- **Solución alternativa**: No hay ninguna solución alternativa para este problema. Se recomienda no habilitar el cifrado en esta configuración hasta que se realice una corrección.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para obtener más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)?

@@ -1,5 +1,5 @@
 ---
-title: Organizador de configuraciones de paquete | Microsoft Docs
+title: Organizador de configuraciones de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c50a1cba2a2fcc44fab6a9836704c9da8d9798bf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056966"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423982"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de configuraciones de paquetes
   Utilice el cuadro de diálogo **Organizador de configuraciones de paquetes** para habilitar las configuraciones de paquetes, ver una lista de configuraciones para el paquete actual y especificar el orden de preferencia en el que se deben cargar las configuraciones.  
@@ -32,13 +31,13 @@ ms.locfileid: "66056966"
 > [!NOTE]  
 >  Cuando las configuraciones de paquetes se cargan en el orden preferido, se cargan de arriba a abajo, según la lista que se muestra en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Sin embargo, en tiempo de ejecución, las configuraciones de paquetes podrían no cargarse en el orden preferido. Concretamente, las configuraciones de paquetes principales se cargan después de las configuraciones de otros tipos.  
   
- Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para obtener más información, vea [Package Configurations](../../2014/integration-services/package-configurations.md).  
+ Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para más información, consulte [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
 ## <a name="options"></a>Opciones  
  **Habilitar configuraciones de paquetes**  
  Seleccione esta opción para utilizar las configuraciones incluidas con el paquete.  
   
- **Nombre de la configuración**  
+ **Nombre de configuración**  
  Presenta el nombre de la configuración.  
   
  **Tipo de configuración**  
@@ -53,10 +52,10 @@ ms.locfileid: "66056966"
  **Propiedad de destino**  
  Presenta el nombre de la propiedad modificada por la configuración. La columna está en blanco si el tipo de configuración admite varias configuraciones.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una configuración empleando el Asistente para la configuración de paquetes.  
   
- **Editar**  
+ **Edición**  
  Edita una configuración existente volviendo a ejecutar el Asistente para la configuración de paquetes.  
   
  **Quitar**  
@@ -65,7 +64,7 @@ ms.locfileid: "66056966"
  **Flechas**  
  Seleccione una configuración y utilice las flechas arriba y abajo para subirla o bajarla de la lista. Las configuraciones se cargan en la secuencia en la que aparecen en la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e9154b2ad6d574f251f3248903f2518e0f6b0b3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71289032"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OR lógico) (expresión de SSIS)
@@ -42,10 +42,10 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente tabla se muestra el resultado del operador ||.  
   
-|Resultado|Expresión|Expresión|  
+|Resultado|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|TRUE|FALSE|  

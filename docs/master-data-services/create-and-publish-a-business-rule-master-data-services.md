@@ -1,5 +1,6 @@
 ---
-title: Crear y publicar una regla de negocios (Master Data Services) | Microsoft Docs
+title: Crear y publicar una regla de negocios
+description: Obtenga información sobre cómo crear una regla de negocios en Master Data Services para garantizar la precisión de los datos maestros. Después de crear una regla, publíquela para aplicar la regla.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813051"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Crear y publicar una regla de negocios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una regla de negocios para asegurarse de la exactitud de los datos maestros. Después de crear una regla, debe publicarla antes de poder aplicarla a los datos.  
   
@@ -31,7 +32,7 @@ ms.locfileid: "68025060"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Crear y publicar una regla de negocios  
   
@@ -79,7 +80,7 @@ ms.locfileid: "68025060"
   
 19. Complete todos los campos obligatorios.  
   
-20. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Entonces** .  
+20. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Entonces** .  
   
 21. Opcionalmente, para agregar la acción **Otra** , complete los pasos siguientes.  
   
@@ -91,9 +92,9 @@ ms.locfileid: "68025060"
   
     4.  Complete todos los campos obligatorios.  
   
-    5.  Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Otra** .  
+    5.  Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Otra** .  
   
-22. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula de la regla de negocio.  
+22. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula de la regla de negocio.  
   
 23. Haga clic en **Publish All**(Publicar todo).  
   
@@ -102,14 +103,14 @@ ms.locfileid: "68025060"
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada regla de negocio creada, se agrega una fila con seis columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|Name|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|Status|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|NOMBRE|El nombre de la regla de negocio.|  
+|Estado|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Nombre|El nombre de la regla de negocio.|  
 |Descripción|La descripción de la regla de negocio.|  
 |Business Rule State|Uno de los siguientes estados de la regla de negocio: Regla no definida, Activa, Excluida, Cambios pendientes, Exclusión pendiente y Eliminación pendiente.|  
 |Excluido|Especifica si la regla de negocios está excluida.|  
-|Notification|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
+|Notificación|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68025060"
   
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Cambiar el nombre de una regla de negocios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Agregar varias condiciones a una regla de negocios &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

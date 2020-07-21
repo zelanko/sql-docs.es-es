@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SSIS, expressions
 - tools [Integration Services], Expression Builder
 ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4c2b2ec2be82cbc71987fb675d8599dbb790dcf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058896"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437322"
 ---
 # <a name="expression-builder-integration-services"></a>Generador de expresiones (Integration Services)
   El cuadro de diálogo **Generador de expresiones** proporciona una interfaz gráfica de usuario para generar las expresiones usadas por las expresiones de propiedades. Puede tener acceso al cuadro de diálogo **Generador de expresiones** desde los cuadros de diálogo de tareas personalizadas del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] y desde la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

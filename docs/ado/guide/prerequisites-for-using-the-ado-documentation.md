@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 192c249bfa73c17d32faef7ec925d2704aff3144
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923125"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747954"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Requisitos previos para usar la documentación de ADO
-Para usar esta documentación, debe tener, como mínimo, cierta experiencia en desarrollo de aplicaciones con Microsoft Visual Basic, porque la mayoría de los ejemplos de la guía se escribe en este idioma. También hay algunos ejemplos escritos en Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) y Microsoft JScript.  
+Para usar esta documentación, debe tener, como mínimo, cierta experiencia en el desarrollo de aplicaciones con Microsoft Visual Basic, ya que la mayoría de los ejemplos de la guía están escritos en este lenguaje. También hay algunos ejemplos escritos en Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) y Microsoft JScript.  
   
- Dado que se utiliza ADO para tener acceso a datos desde una variedad de orígenes, también necesitará cierto conocimiento de los sistemas de administración de base de datos relacional y procesamiento analítico en línea (OLAP) y conocimientos básicos de Internet y a Internet protocolos.  
+ Dado que ADO se utiliza para obtener acceso a los datos de diversos orígenes, también necesitará comprender los sistemas de administración de bases de datos relacionales y el procesamiento analítico en línea (OLAP) y la familiaridad básica con Internet y los protocolos de Internet.  
   
- Dado que ADO y la tecnología de OLE DB relacionada se basan en el modelo de objetos de componentes (COM) de Microsoft, conocimientos de COM le ayudará a comprender mejor los conceptos avanzados en ADO.
+ Dado que ADO y la tecnología de OLE DB relacionada se basan en el modelo de objetos componentes (COM) de Microsoft, el conocimiento de COM le ayudará a comprender mejor los conceptos avanzados de ADO.

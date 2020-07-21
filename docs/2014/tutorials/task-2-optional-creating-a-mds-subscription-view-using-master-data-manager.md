@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 2 (opcional): Creación de una vista de suscripciones de MDS con Master Data Manager | Microsoft Docs'
+title: 'Tarea 2 (opcional): creación de una vista de suscripciones de MDS con Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,28 +9,27 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 598b7bab60cad5d0c391e5e8aeec9fa3b7b9b97f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006527"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarea 2 (opcional): Creación de una vista de suscripciones de MDS con Master Data Manager
-  En esta tarea, creará una vista de suscripciones para exponer el **proveedor** entidad en el **proveedores** modelos para otras aplicaciones. No use esta vista en la versión actual del tutorial.  
+  En esta tarea, creará una vista de suscripciones para exponer la entidad **proveedor** del modelo **proveedores** a otras aplicaciones. No use esta vista en la versión actual del tutorial.  
   
-1.  Cambie a la página principal de **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)), haga clic en **SQL Server 2012 Master Data Services** en la parte superior.  
+1.  Cambie a la Página principal de **Master Data Manager** ( `http://localhost/MDS` ) haciendo clic en **SQL Server 2012 Master Data Services** en la parte superior.  
   
-2.  Haga clic en **administración de integraciones**.  
+2.  Haga clic en **Administración de integraciones**.  
   
 3.  Haga clic en **crear vistas** en la barra de menús.  
   
-     ![Agregue un nuevo botón de vista de suscripción](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "agregar un nuevo botón de vista de suscripción")  
+     ![Botón Agregar una nueva vista de suscripción](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "Botón Agregar una nueva vista de suscripción")  
   
-4.  Haga clic en **+ (signo más)** icono en la barra de herramientas para crear una vista de suscripciones.  
+4.  Haga clic en el icono **+ (más)** de la barra de herramientas para crear una vista de suscripciones.  
   
-5.  En el **Crear vista de suscripciones** panel, escriba **proveedores** para **nombre de la vista de suscripción**.  
+5.  En el panel **crear vista de suscripciones** , escriba **proveedores** de **nombre de vista de suscripciones**.  
   
 6.  Seleccione **Proveedores** en **Modelo**.  
   
@@ -38,13 +37,13 @@ ms.locfileid: "65484722"
   
 8.  Seleccione **proveedor** para **entidad**.  
   
-9. Seleccione **miembros hoja** para **formato**.  
+9. Seleccione **los miembros hoja** para el **formato**.  
   
-     ![Botón de vista de suscripción guardar](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "guardar el botón de vista de suscripción")  
+     ![Botón Guardar vista de suscripción](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "Botón Guardar vista de suscripción")  
   
-10. Haga clic en **guardar** en la barra de herramientas para guardar la vista de suscripciones. Esta acción crea una vista en SQL Server denominada **proveedores**. Puede comprobarlo con SQL Server Management Studio (SSMS).  
+10. Haga clic en **Guardar** en la barra de herramientas para guardar la vista de suscripciones. Esta acción crea una vista en SQL Server **proveedores**con nombre. Puede comprobarlo con SQL Server Management Studio (SSMS).  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 3 &#40;opcional&#41;: Revisar las vistas de suscripción](task-3-optional-reviewing-the-subscription-views.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 3 &#40;&#41; opcional: revisar las vistas de suscripciones](task-3-optional-reviewing-the-subscription-views.md)  
   
   

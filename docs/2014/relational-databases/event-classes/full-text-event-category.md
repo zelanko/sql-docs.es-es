@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8107a3ea-f891-4134-946b-c64e3a8e92e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a889f4bc00f48a73fa16b079a34c2b07f1df297
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63023117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029541"
 ---
 # <a name="full-text-event-category"></a>Texto completo (categoría de eventos)
   La categoría de eventos **Texto completo** contiene eventos de texto completo generales.  

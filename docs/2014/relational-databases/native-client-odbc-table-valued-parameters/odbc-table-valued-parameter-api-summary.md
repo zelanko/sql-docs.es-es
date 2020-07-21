@@ -1,5 +1,5 @@
 ---
-title: Resumen de la API de ODBC parámetro con valores de tabla | Microsoft Docs
+title: Resumen de la API de parámetros con valores de tabla de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - ODBC, API support for table-valued parameters
 - table-valued parameters (ODBC), API support
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6920431686dc4e12fc5d2342744c17fc7b193ad8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199867"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039439"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Resumen de la API de parámetros con valores de tabla de ODBC
   En este tema se enumeran las funciones de ODBC mejoradas para admitir los parámetros con valores de tabla.  
@@ -59,7 +58,7 @@ ms.locfileid: "63199867"
   
 -   [SQLTables](../native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

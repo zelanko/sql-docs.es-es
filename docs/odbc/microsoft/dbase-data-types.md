@@ -15,46 +15,46 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 17b96ad0b6674a2d120ef46d9bfa221e8df6d140
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096449"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307696"
 ---
 # <a name="dbase-data-types"></a>Tipos de datos de dBASE
-En la tabla siguiente se muestra cómo se asignan los tipos de datos de dBASE a tipos de datos SQL de ODBC. Tenga en cuenta que no todos los tipos de datos SQL de ODBC son compatibles.  
+En la tabla siguiente se muestra cómo se asignan los tipos de datos de dBASE a los tipos de datos SQL de ODBC. Tenga en cuenta que no se admiten todos los tipos de datos SQL de ODBC.  
   
-|tipo de datos de dBASE|Tipo de datos de ODBC|  
+|dBASE, tipo de datos|Tipo de datos de ODBC|  
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT[1]|SQL_DOUBLE|  
-|LÓGICO|SQL_BIT|  
-|MEMORANDO|SQL_LONGVARCHAR|  
-|NUMÉRICO (BCD)|SQL_DOUBLE|  
-|CLASES OLEOBJECT [1]|SQL_LONGBINARY|  
+|FLOAT [1]|SQL_DOUBLE|  
+|OPERADOR|SQL_BIT|  
+|Memorando|SQL_LONGVARCHAR|  
+|NUMERIC (BCD)|SQL_DOUBLE|  
+|OLEOBJECT [1]|SQL_LONGBINARY|  
   
- [1] válido sólo para dBASE versión 5. *x*  
+ [1] solo es válido para dBASE versión 5. *x*  
   
- Precisión en dBASE III permite números con seguridad a los exponentes de dos dígitos y en los números de dBASE IV con hasta los exponentes de tres dígitos. Dado que los números se almacenan como texto, se convierten a números. Si el número que desea convertir no cabe en un campo, pueden producirse resultados inexplicables.  
+ La precisión en dBASE III permite números con exponentes de hasta dos dígitos y en números de dBASE IV con exponentes de hasta tres dígitos. Dado que los números se almacenan como texto, se convierten en números. Si el número que se va a convertir no cabe en un campo, pueden producirse resultados no explicados.  
   
- Aunque dBASE permite una precisión y una escala que especificarse con un tipo de datos numérico, no se admite el controlador de dBASE ODBC. El controlador ODBC dBASE siempre devuelve una precisión de 15 y una escala de 0 para un tipo de datos numérico.  
+ Aunque dBASE permite especificar una precisión y una escala con un tipo de datos numérico, el controlador ODBC dBASE no lo admite. El controlador ODBC dBASE siempre devuelve una precisión de 15 y una escala de 0 para un tipo de datos numérico.  
   
- Una columna creada con el tipo de datos numéricos mediante las asignaciones de controlador de dBASE ODBC para el tipo de datos SQL_DOUBLE ODBC. Por lo tanto los datos de esta columna están sujeto a redondeo. Este comportamiento no es igual a medida que los datos NUMÉRICOS escribe en dBASE (tipo N), que es Binary Coded Decimal (BCD).  
+ Una columna creada con el tipo de datos Numeric mediante el controlador ODBC dBASE se asigna al tipo de datos SQL_DOUBLE ODBC. Por lo tanto, los datos de esta columna están sujetos a redondeo. Este comportamiento no es el mismo que el del tipo de datos NUMERIC en dBASE (tipo N), que es el decimal codificado binario (BCD).  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** devuelve tipos de datos de SQL de ODBC. Todas las conversiones en el apéndice D de la *referencia del programador de ODBC* son compatibles con los tipos de datos SQL de ODBC enumerados anteriormente en este tema.  
+>  **SQLGetTypeInfo** devuelve los tipos de datos SQL de ODBC. Todas las conversiones del Apéndice D de la *Referencia del programador de ODBC* son compatibles con los tipos de datos SQL de ODBC enumerados anteriormente en este tema.  
   
- En la tabla siguiente muestra las limitaciones en dBASE tipos de datos.  
+ En la tabla siguiente se muestran las limitaciones en los tipos de datos de dBASE.  
   
 |Tipo de datos|Descripción|  
 |---------------|-----------------|  
-|CHAR|Creación de una columna CHAR de cero o sin especificar longitud devuelve realmente una columna de bytes de 254.|  
-|Datos cifrados|El controlador de dBASE no admite tablas de dBASE cifrados.|  
-|LÓGICO|El controlador de dBASE no puede crear un índice en una columna lógica.|  
-|MEMORANDO|La longitud máxima de una columna de memorando es 65.500 bytes.|  
+|CHAR|Al crear una columna CHAR de cero o una longitud no especificada, se devuelve realmente una columna de 254 bytes.|  
+|Datos cifrados|El controlador dBASE no admite tablas de dBASE cifradas.|  
+|OPERADOR|El controlador dBASE no puede crear un índice en una columna lógica.|  
+|Memorando|La longitud máxima de una columna de memorando es de 65.500 bytes.|  
   
- Para conocer más limitaciones en los tipos de datos pueden encontrarse en [limitaciones del tipo de datos](../../odbc/microsoft/data-type-limitations.md).
+ Se pueden encontrar más limitaciones en los tipos de datos en limitaciones de tipos de [datos](../../odbc/microsoft/data-type-limitations.md).

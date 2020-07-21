@@ -1,5 +1,5 @@
 ---
-title: Crear el cuadro de diálogo de consulta (Analysis Services - datos multidimensionales) procesamiento | Microsoft Docs
+title: Cuadro de diálogo Crear consulta de procesamiento (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 185ea27c344ccb9e06f914507faca3fea9554dae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086766"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526445"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear consulta de procesamiento (Analysis Services - Datos multidimensionales)
-  Use el cuadro de diálogo **Crear consulta de procesamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta de procesamiento en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** . Una consulta de procesamiento es aquella que devuelve un conjunto de filas que contiene los cambios realizados en una tabla asociada a un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde la última vez que se sondeó la tabla, con el fin de actualizar incrementalmente la caché OLAP multidimensional (MOLAP) del objeto. Analysis Services utiliza otra consulta, denominada consulta de sondeo, para sondear una tabla asociada a un objeto y determinar si ésta ha cambiado. Las consultas de procesamiento no son necesarias para actualizar completamente la caché MOLAP del objeto.  
+  Use el cuadro de diálogo **Crear consulta de procesamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta de procesamiento en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**. Una consulta de procesamiento es aquella que devuelve un conjunto de filas que contiene los cambios realizados en una tabla asociada a un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde la última vez que se sondeó la tabla, con el fin de actualizar incrementalmente la caché OLAP multidimensional (MOLAP) del objeto. Analysis Services utiliza otra consulta, denominada consulta de sondeo, para sondear una tabla asociada a un objeto y determinar si ésta ha cambiado. Las consultas de procesamiento no son necesarias para actualizar completamente la caché MOLAP del objeto.  
   
  Por lo general, la consulta de procesamiento utiliza parámetros y actualmente se admiten dos parámetros:  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66086766"
   
  Para obtener más información sobre las actualizaciones incrementales para notificaciones de sondeos programados, vea [Almacenamiento en caché automático &#40;Particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
- Para mostrar el cuadro de diálogo **Crear consulta de procesamiento** , haga clic en **...** en la columna **Consulta de procesamiento** de la cuadrícula de la opción **Sondeo programado** en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** . Para obtener más información sobre la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**, vea [Notificaciones &#40;cuadro de diálogo Opciones de almacenamiento&#41; &#40;Analysis Services - Datos multidimensionales&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
+ Para mostrar el cuadro de diálogo **Crear consulta de procesamiento**, haga clic en **...** en la columna **Consulta de procesamiento** de la cuadrícula de la opción **Sondeo programado** en la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**. Para obtener más información sobre la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento**, vea [Notificaciones &#40;cuadro de diálogo Opciones de almacenamiento&#41; &#40;Analysis Services - Datos multidimensionales&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   
  La consulta proporcionada debe ser un comando de consulta válido para el proveedor subyacente. La consulta se prepara para la validación con el proveedor correspondiente, así como para identificar las columnas devueltas. El cuadro de diálogo puede presentar dos vistas:  
   
@@ -50,30 +49,30 @@ ms.locfileid: "66086766"
      El Generador de consultas genérico proporciona a los usuarios avanzados una interfaz de usuario más sencilla y más directa para crear y probar consultas SQL.  
   
 ## <a name="options"></a>Opciones  
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Especifique el origen de datos para la consulta.  
   
- **Definición de consulta**  
+ **Definición de la consulta**  
  La definición de la consulta proporciona una barra de herramientas y paneles (que dependerán de la vista seleccionada) para definir y probar consultas.  
   
- **Barra de herramientas**  
+ **Barra**  
  Use la barra de herramientas para administrar conjuntos de datos, seleccionar los paneles que desea mostrar y controlar diversas funciones de consulta.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Cambiar a generador de consultas genérico**|Seleccione esta opción si desea mostrar únicamente las opciones disponibles para la vista del Generador de consultas genérico. Se mostrará solo una de las opciones siguientes:<br /><br /> **Panel SQL**<br /><br /> **Panel de resultados**<br /><br /> **Barra de herramientas**, que contiene únicamente **Cambiar a Generador de consultas de VDT** y **Ejecutar**<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Cambiar a generador de consultas de VDT**|Seleccione esta opción si desea mostrar todas las opciones disponibles para la vista del Generador de consultas de Visual Database Tools (VDT).<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas genérico** está seleccionada.|  
-|**Mostrar u ocultar panel de diagrama**|Muestra u oculta el **panel Diagrama**.<br /><br /> **Nota** Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Mostrar u ocultar panel de SQL**|Muestra u oculta el **panel de SQL**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Mostrar u ocultar panel de resultados**|Muestra u oculta el **panel Resultado**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Cambiar a Generador de consultas genérico**|Seleccione esta opción si desea mostrar únicamente las opciones disponibles para la vista del Generador de consultas genérico. Se mostrará solo una de las opciones siguientes:<br /><br /> **Panel SQL**<br /><br /> **Panel de resultados**<br /><br /> **Barra de herramientas**, que contiene únicamente **Cambiar a Generador de consultas de VDT** y **Ejecutar**<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Cambiar a Generador de consultas de VDT**|Seleccione esta opción si desea mostrar todas las opciones disponibles para la vista del Generador de consultas de Visual Database Tools (VDT).<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas genérico** .|  
+|**Mostrar u ocultar panel de diagrama**|Muestra u oculta el **panel Diagrama**.<br /><br /> **Nota:** Esta opción solo se muestra si se selecciona **cambiar a VDT generador de consultas** .|  
+|**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Mostrar u ocultar panel de SQL**|Muestra u oculta el **panel de SQL**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Mostrar u ocultar el panel Resultado**|Muestra u oculta el **panel Resultado**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
 |**Ejecutar**|Ejecuta la consulta. Los resultados se muestran en el **panel Resultado**.|  
-|**Comprobar SQL**|Comprueba la instrucción SQL de la consulta.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Orden ascendente**|Ordena de forma ascendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Orden descendente**|Ordena de forma descendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Quitar filtro**|Quita los criterios de ordenación, si corresponde, para la fila seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Usar GROUP BY**|Agrega la funcionalidad de agrupamiento a la consulta.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
-|**Agregar tabla**|Muestra el cuadro de diálogo **Agregar tabla** para agregar una nueva tabla o vista a la consulta. Para obtener más información sobre el cuadro de diálogo **Agregar tabla**, vea [Cuadro de diálogo Agregar tabla &#40;Analysis Services - Datos multidimensionales&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Comprobar SQL**|Comprueba la instrucción SQL de la consulta.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Orden ascendente**|Ordena de forma ascendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Orden descendente**|Ordena de forma descendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Quitar filtro**|Quita los criterios de ordenación, si corresponde, para la fila seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Usar GROUP BY**|Agrega la funcionalidad de agrupamiento a la consulta.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Agregar tabla**|Muestra el cuadro de diálogo **Agregar tabla** para agregar una nueva tabla o vista a la consulta. Para obtener más información sobre el cuadro de diálogo **Agregar tabla**, vea [Cuadro de diálogo Agregar tabla &#40;Analysis Services - Datos multidimensionales&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
   
  **Panel Diagrama**  
  Muestra en un diagrama los objetos a los que se hace referencia en la consulta. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.  
@@ -83,27 +82,27 @@ ms.locfileid: "66086766"
  Haga clic con el botón derecho en el **panel Diagrama** para agregar o quitar tablas, seleccionar todas las tablas y mostrar u ocultar paneles.  
   
 > [!NOTE]  
->  Los contenidos del **panel Diagrama**, el **panel Cuadrícula**y el **panel de SQL** están sincronizados de forma que los cambios realizados en un panel se reflejen en los otros dos paneles.  
+>   Los contenidos del **panel Diagrama**, el **panel Cuadrícula**y el **panel de SQL** están sincronizados de forma que los cambios realizados en un panel se reflejen en los otros dos paneles.  
   
 > [!IMPORTANT]  
 >  No es posible cambiar los tipos de consulta en el cuadro de diálogo.  
   
- **Panel de cuadrícula**  
+ **panel Cuadrícula**  
  Muestra en una cuadrícula los objetos a los que se hace referencia en la consulta. Puede usar este panel para agregar y quitar columnas en la consulta, y para cambiar la configuración de cada columna.  
   
 > [!NOTE]  
->  Los contenidos del **panel Diagrama**, el **panel Cuadrícula**y el **panel de SQL** están sincronizados de forma que los cambios realizados en un panel se reflejen en los otros dos paneles.  
+>   Los contenidos del **panel Diagrama**, el **panel Cuadrícula**y el **panel de SQL** están sincronizados de forma que los cambios realizados en un panel se reflejen en los otros dos paneles.  
   
  **Panel SQL**  
  Muestra la consulta como una instrucción SQL. Le permite modificar la instrucción SQL de la consulta.  
   
 > [!NOTE]  
->  Los contenidos del **panel Diagrama**, el **panel Cuadrícula**y el **panel de SQL** están sincronizados de forma que los cambios realizados en un panel se reflejen en los otros dos paneles.  
+>   Los contenidos del **panel Diagrama**, el **panel Cuadrícula**y el **panel de SQL** están sincronizados de forma que los cambios realizados en un panel se reflejen en los otros dos paneles.  
   
  **Panel de resultados**  
  Muestra los resultados de la consulta al hacer clic en **Ejecutar** en el panel **Barra de herramientas** .  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

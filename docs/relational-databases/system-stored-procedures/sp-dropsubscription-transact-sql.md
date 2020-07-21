@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription (Transact-SQL) | Microsoft Docs
+description: Quita las suscripciones a un artículo, publicación o suscripción en el publicador. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d324d5f26f847488af8cec480cce6c699a5f473
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783031"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita las suscripciones a un artículo, publicación o conjunto de suscripciones específico del publicador. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -68,12 +69,12 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** o del usuario que creó la suscripción pueden ejecutar **sp_dropsubscription**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o el usuario que creó la suscripción pueden ejecutar **sp_dropsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [Transact &#40;-SQL de sp_helpsubscription&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

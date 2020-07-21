@@ -1,5 +1,5 @@
 ---
-title: Completar - instalación | Microsoft Docs
+title: Completar la instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: eb7ddb23-12d0-4c81-9609-4046ccaca7d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb86615f0023ff5c2c65e02af5c597ed3c1fdf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adaea30ec9838ff4b1b82a8f929ebeb2f5858b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037031"
 ---
 # <a name="complete---installation"></a>Completar - Instalación
   Haga clic en **Cerrar** para finalizar la instalación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Validar una instalación de SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
   
   

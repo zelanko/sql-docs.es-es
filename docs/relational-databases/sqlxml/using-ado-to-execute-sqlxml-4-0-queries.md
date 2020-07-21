@@ -1,7 +1,8 @@
 ---
-title: Usar ADO para ejecutar consultas SQLXML 4,0 | Microsoft Docs
+title: Utilizar ADO para ejecutar consultas SQLXML 4.0
+description: Aprenda a ejecutar consultas SQLXML 4,0 en una aplicación basada en COM mediante el uso de extensiones SQLXML para Objetos de datos ActiveX (ADO).
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 12/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,15 +18,15 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f7c2db9cc01bfa50092e5849d869d43da8a622e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665543"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En versiones anteriores de SQLXML, la ejecución de consultas basadas en HTTP se admitía mediante la utilización de directorios virtuales de SQLXML IIS y el filtro SQLXML ISAPI. En SQLXML 4.0, estos componentes se han quitado ya que se ofrece una funcionalidad similar superpuesta a través de servicios web XML nativos a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Como alternativa, puede ejecutar consultas y utilizar SQLXML 4.0 con las aplicaciones basadas en COM si aprovecha las extensiones SQLXML a Objetos de datos ActiveX (ADO) que se introdujeron por primera vez en Microsoft Data Access Components (MDAC) 2.6 y versiones posteriores.  
@@ -123,7 +124,7 @@ ms.locfileid: "72909131"
         > [!NOTE]  
         >  Si necesita instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte Instalación de [SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Compruebe que la versión de MDAC instalada en el equipo cliente es la versión 2.6 o posterior. Si necesita comprobar información de versión de MDAC, puede utilizar la herramienta MDAC Component Checker, que se proporciona como descarga gratuita en el sitio web de Microsoft (www.microsoft.com). Para obtener más información, busque "MDAC Component Checker" en el sitio web de Microsoft.  
+2.  Compruebe que la versión de MDAC instalada en el equipo cliente es la versión 2.6 o posterior. Si necesita comprobar la información de la versión de MDAC, puede usar la herramienta Comprobador de componentes de MDAC, que se proporciona como descarga gratuita en el sitio web de Microsoft, [http://www.microsoft.com](https://www.microsoft.com) . Para obtener más información, busque "MDAC Component Checker" en el sitio web de Microsoft.  
   
 3.  Ejecute el script.  
   

@@ -1,5 +1,6 @@
 ---
-title: Solución de problemas de suscripciones y entrega de Reporting Services | Microsoft Docs
+title: Solución de problemas de suscripciones y entrega de Reporting Services
+description: En este artículo, diagnosticará y solucionará los problemas encontrados al trabajar con suscripciones de informes, programaciones y entregas en SQL Server Reporting Services.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 577ca01b2764df923c0208934c597e17e8412ff2
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65572117"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662751"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Solución de problemas de suscripciones y entrega de Reporting Services
   
@@ -52,7 +53,7 @@ donde \<mensaje de error> se reemplaza por información de mensaje de error adic
   
 Para más información sobre la utilización de un servicio SMTP local para la entrega de informes por correo electrónico, vea Configurar un servidor de informes para la entrega de correo electrónico .  
   
-## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Error al enviar correo: el servidor rechazó la dirección del remitente. La respuesta del servidor fue: 454 5.7.3 El cliente no tiene permiso para enviar correo a este servidor  
+## <a name="failure-sending-mail-the-server-rejected-the-sender-address-the-server-response-was-454-573-client-does-not-have-permission-to-submit-mail-to-this-server"></a>Error al enviar correo: el servidor ha rechazado la dirección del remitente. La respuesta del servidor fue: 454 5.7.3 El cliente no tiene permiso para enviar correo a este servidor  
 Este error se produce cuando la configuración de las directivas de seguridad en el servidor SMTP solamente permite que usuarios autenticados envíen correo para su entrega posterior. Si el servidor SMTP no admite envíos de correo procedentes de usuarios anónimos, consulte al administrador del sistema cómo obtener permiso para utilizar el servidor.  
 > Este error se produce al especificar un nombre de servidor Exchange como SMTPServer. Para utilizar un servidor Exchange para la entrega por correo electrónico es preciso especificar el nombre de la puerta de enlace SMTP configurada en el servidor Exchange. Consulte al administrador de Exchange para obtener esta información.  
   

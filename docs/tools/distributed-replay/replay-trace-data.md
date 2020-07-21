@@ -1,6 +1,8 @@
 ---
-title: Reproducir datos de seguimiento | Microsoft Docs
-ms.custom: ''
+title: Reproducción de datos de seguimiento
+titleSuffix: SQL Server Distributed Replay
+description: Con la característica Distributed Replay de SQL Server, utilice la opción de reproducción de la herramienta de administración para iniciar la fase de reproducción de eventos de la reproducción distribuida.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: d03afc892fcdadbdaa346366096bec184707e70b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949954"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152181"
 ---
 # <a name="replay-trace-data"></a>Reproducir datos de seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +25,7 @@ ms.locfileid: "67949954"
   
  Utilice la opción **replay** de la herramienta de administración para iniciar la fase de reproducción de eventos de Distributed Replay. Esta fase consta de dos partes: la distribución de los datos de seguimiento y el inicio y sincronización de la reproducción distribuida.  
   
- ![Reproducción de eventos distribuidos](../../tools/distributed-replay/media/eventreplay.gif "Reproducción de eventos distribuidos")  
+ ![Reproducir evento distribuido](../../tools/distributed-replay/media/eventreplay.gif "Reproducir evento distribuido")  
   
  Puede reproducir los datos de seguimiento en uno de estos dos modos de secuenciación: modo "stres" o modo "synchronization". El comportamiento predeterminado es reproducir los datos de seguimiento en modo "stress". Para obtener más información sobre la fase de reproducción de eventos y los modos de secuenciación, vea [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
@@ -42,7 +44,7 @@ ms.locfileid: "67949954"
   
      Para obtener más información sobre el archivo de configuración de reproducción, vea [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Iniciar la fase de reproducción de eventos**: para iniciar Distributed Replay, debe ejecutar la herramienta de administración con la opción **replay** . Para obtener más información, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
+2.  **Iniciar la fase de reproducción de eventos**: para iniciar Distributed Replay, debe ejecutar la herramienta de administración con la opción **replay**. Para obtener más información, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
   
     1.  Abra la utilidad de símbolo del sistema de Windows (**CMD.exe**) y navegue hasta la ubicación de instalación de la herramienta de administración de Distributed Replay (**DReplay.exe**).  
   
@@ -54,7 +56,7 @@ ms.locfileid: "67949954"
   
     5.  (Opcional) Use el parámetro *target_server* , **-s**, para especificar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde los clientes de Distributed Replay deben reproducir la carga de trabajo de seguimiento. Este parámetro no es necesario si se ha usado el elemento `<Server>` para especificar el servidor de destino en el elemento `<ReplayOptions>` del archivo de configuración de reproducción.  
   
-    6.  Use el parámetro *clients* , **-w**, para especificar los clientes de Distributed Replay que deben participar en la reproducción. Enumere los nombres de los equipos cliente, separados por comas. Nota: no se permiten direcciones IP.  
+    6.  Use el parámetro *clients* , **-w**, para especificar los clientes de Distributed Replay que deben participar en la reproducción. Enumere los nombres de los equipos cliente, separados por comas. Nota: No se permiten direcciones IP.  
   
     7.  (Opcional) Use el parámetro *config_file* , **-c**, para especificar la ubicación del archivo de configuración de reproducción. Use este parámetro para señalar el nuevo archivo de configuración si se ha modificado una copia del archivo de configuración de reproducción predeterminado.  
   

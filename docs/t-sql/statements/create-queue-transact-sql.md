@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 6bf798524d8ccdc4ee1a5971e3c78a1302dcde58
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326096"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391740"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Crea una nueva cola en una base de datos. Las colas almacenan mensajes. Cuando llega un mensaje para un servicio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] lo coloca en la cola asociada a ese servicio.
 
@@ -42,7 +42,7 @@ Crea una nueva cola en una base de datos. Las colas almacenan mensajes. Cuando l
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -67,6 +67,8 @@ CREATE QUEUE <object>
 
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
 *database_name* (objeto) Nombre de la base de datos en la que se crea la nueva cola. *database_name* debe especificar el nombre de una base de datos existente. Si no se proporciona *database_name*, la cola se crea en la base de datos actual.
@@ -86,7 +88,7 @@ ACTIVATION Especifica información sobre qué procedimiento almacenado es necesa
 
 STATUS (activación) Especifica si [!INCLUDE[ssSB](../../includes/sssb-md.md)] inicia el procedimiento almacenado. Si STATUS = ON, la cola inicia el procedimiento almacenado especificado con PROCEDURE_NAME cuando el número de procedimientos que se ejecutan actualmente es menor que MAX_QUEUE_READERS y cuando los mensajes llegan a la cola antes de que los procedimientos almacenados reciban mensajes. Si STATUS = OFF, la cola no inicia el procedimiento almacenado. Si no se especifica esta cláusula, el valor predeterminado es ON.
 
-PROCEDURE_NAME = \<procedimiento> Especifica el nombre del procedimiento almacenado que es necesario iniciar para procesar mensajes en esta cola. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+PROCEDURE_NAME = \<procedure> Especifica el nombre del procedimiento almacenado que se va a iniciar para procesar mensajes en esta cola. Este valor debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 *database_name*(procedimiento) Nombre de la base de datos que contiene el procedimiento almacenado.
 
@@ -110,7 +112,7 @@ Una cola que tenga configurado en OFF el control de mensajes dudosos no se desha
 
 *grupo de archivos ON |* [**DEFAULT**] Especifica el grupo de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a crear esta cola. Puede usar el parámetro *filegroup* para identificar un grupo de archivos o emplear el identificador DEFAULT para usar el grupo de archivos predeterminado de la base de datos de Service Broker. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. Si no se especifica ningún grupo de archivos, la cola utiliza el grupo de archivos predeterminado de la base de datos.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una cola puede ser el destino de una instrucción SELECT. No obstante, el contenido de una cola solo puede modificarse mediante instrucciones que funcionan en conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND, RECEIVE y END CONVERSATION. Una cola no puede ser el destino de una instrucción INSERT, UPDATE, DELETE o TRUNCATE.
 
@@ -128,7 +130,7 @@ Una cola es un objeto propiedad de un esquema. Las colas aparecen en la vista de
 
 La siguiente tabla contiene las columnas de una cola.
 
-|Nombre de columna|Tipo de datos|Descripción|
+|Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|Estado del mensaje. La instrucción RECEIVE devuelve todos los mensajes que tienen **1** como estado. Si la retención de los mensajes está activada, el estado se establece en 0. Si está desactivada, el mensaje se elimina de la cola. Los mensajes de la cola pueden contener uno de los valores siguientes:<br /><br /> **0**=Mensaje recibido retenido<br /><br /> **1**=Listo para recibir<br /><br /> **2**=Sin completar<br /><br /> **3**=Mensaje enviado retenido|
 |priority|**tinyint**|Nivel de prioridad asignado a este mensaje.|

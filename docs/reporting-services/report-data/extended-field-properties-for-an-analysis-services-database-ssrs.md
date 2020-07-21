@@ -1,5 +1,5 @@
 ---
-title: Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS) | Microsoft Docs
+title: Propiedades de campo extendidas para una base de datos de Analysis Services | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573321"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077681"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
   La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo **Value** e **IsMissing** en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Para incluir valores de propiedades de campo extendidas en el informe, escriba expresiones que las especifiquen por su nombre con la colección **Fields** integrada.  
@@ -42,7 +42,7 @@ ms.locfileid: "65573321"
   
 |**Propiedad**|**Tipo**|**Descripción o valor esperado**|  
 |------------------|--------------|---------------------------------------|  
-|**Value**|**Objeto**|Especifica el valor de los datos del campo.|  
+|**Valor**|**Object**|Especifica el valor de los datos del campo.|  
 |**IsMissing**|**Boolean**|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
 |**UniqueName**|**String**|Devuelve el nombre completo de un nivel. Por ejemplo, el valor **UniqueName** de un empleado podría ser *[Empleado].[Departamento del empleado].[Departamento].&[Ventas].&[Jefe de ventas de Norteamérica].&[272]* .|  
 |**BackgroundColor**|**String**|Devuelve el color de fondo del campo, definido en la base de datos.|  
@@ -53,8 +53,8 @@ ms.locfileid: "65573321"
 |**FontStyle**|**String**|Devuelve el estilo de la fuente del elemento, definido en la base de datos.|  
 |**TextDecoration**|**String**|Devuelve el formato de texto especial del elemento, definido en la base de datos.|  
 |**FormattedValue**|**String**|Devuelve un valor con formato para una medida o cifra clave. Por ejemplo, la propiedad **FormattedValue** de **Cuota de importe de venta** devuelve un formato de moneda similar a $1,124,400.00.|  
-|**Key**|**Objeto**|Devuelve la clave de un nivel.|  
-|**LevelNumber**|**Integer**|En jerarquías de elementos primarios y secundarios, devuelve el número de nivel o dimensión.|  
+|**Clave**|**Object**|Devuelve la clave de un nivel.|  
+|**LevelNumber**|**Entero**|En jerarquías de elementos primarios y secundarios, devuelve el número de nivel o dimensión.|  
 |**ParentUniqueName**|**String**|En jerarquías de elementos primarios y secundarios, devuelve el nombre completo del nivel primario.|  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ CELL PROPERTIES
   
  Las primeras cuatro filas de resultado del panel de resultados MDX se muestran en la siguiente tabla.  
   
-|Month of Year|Order Count|  
+|Month of Year|Número de pedidos|  
 |-------------------|-----------------|  
 |January|2,481|  
 |February|2,684|  
@@ -126,10 +126,10 @@ CELL PROPERTIES
   
  Incluso si las propiedades forman parte de la instrucción SELECT de MDX, no aparecen en las columnas del conjunto de resultados. No obstante, los datos están disponibles para un informe mediante el uso de la característica de propiedades extendidas. En el panel de resultados de una consulta MDX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede hacer doble clic en la celda para ver los valores de propiedades de celda si están establecidos en el cubo. Si hace doble clic en la primera celda de Order Count que contiene 1,379, verá una ventana emergente con las siguientes propiedades de celda:  
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALOR|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  

@@ -11,17 +11,16 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSSRC.F1
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 author: yualan
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.author: chugu
+ms.openlocfilehash: e5bce25e303b055d734da6a00c73851f4eb0d7ec
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061347"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439392"
 ---
 # <a name="azure-data-lake-store-source"></a>Origen de Azure Data Lake Store
-  El componente **Origen de Azure Data Lake Store** permite que un paquete SSIS lea datos de un Azure Data Lake Store. Los formatos de archivo compatibles son los siguientes: texto y Avro.
+  El componente **Origen de Azure Data Lake Store** permite que un paquete SSIS lea datos de un Azure Data Lake Store. Los formatos de archivo admitidos son: Text y Avro.
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Configurar Origen de Azure Data Lake Store 
   
@@ -33,6 +32,6 @@ ms.locfileid: "66061347"
   
     2.  En el campo **Formato de archivo** , especifique el formato del archivo de origen.  
   
-        Si el formato de archivo es Text, debe especificar el valor **Carácter de delimitador de columna** . Seleccione también **Nombres de columna de la primera fila de datos** si la primera fila del archivo contiene nombres de columna.  
+        Si el formato de archivo es texto, debe especificar el valor del **carácter delimitador de columna** . Seleccione también **Nombres de columna de la primera fila de datos** si la primera fila del archivo contiene nombres de columna.  
   
 3.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.  

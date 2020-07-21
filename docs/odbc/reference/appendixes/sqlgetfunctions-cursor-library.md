@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Cursor Library
 ms.assetid: 931acd12-4eb6-4a78-9a77-157a18a9a2d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1497a7d2ec5951feedb36831ab541413e57152f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f993a08aae1656b8d373911299e75852de855419
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073935"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307826"
 ---
 # <a name="sqlgetfunctions-cursor-library"></a>SQLGetFunctions (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLGetFunctions** función en la biblioteca de cursores. Para obtener información general sobre **SQLGetFunctions**, consulte [función SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md).  
+ En este tema se describe el uso de la función **SQLGetFunctions** en la biblioteca de cursores. Para obtener información general sobre **SQLGetFunctions**, consulte la [función SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md).  
   
- Cuando se llama a **SQLGetFunctions**, devuelve de la biblioteca de cursores que admite **SQLExtendedFetch**, **SQLFetchScroll**, **SQLSetPos**, y **SQLSetScrollOptions**, además de las funciones admitidas por el controlador.
+ Cuando se llama a **SQLGetFunctions**, la biblioteca de cursores devuelve que admite **SQLExtendedFetch**, **SQLFetchScroll**, **SQLSetPos**y **SQLSetScrollOptions**, además de las funciones admitidas por el controlador.

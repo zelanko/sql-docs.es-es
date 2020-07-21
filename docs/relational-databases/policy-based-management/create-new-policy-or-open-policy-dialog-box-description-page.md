@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Crear nueva directiva o Abrir directiva, página Descripción | Microsoft Docs
-ms.custom: ''
+title: Página "Descripción" del cuadro de diálogo "Crear nueva directiva" o "Abrir directiva"
+description: Describe la página "Descripción" del cuadro de diálogo "Crear nueva directiva" o "Abrir Directiva" para la administración basada en directivas para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d95b4eaeb42f2f7a15de22b58a1e7c42a0893a1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46425eba2f2334ad6fe5bf70a9067bf4ce8fd48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749506"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página Descripción
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice este cuadro de diálogo para agregar una descripción e información adicional a una directiva de administración basada en directivas.  
   
 ## <a name="options"></a>Opciones  

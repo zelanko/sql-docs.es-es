@@ -1,5 +1,5 @@
 ---
-title: Seleccione el grupo de medida de tablas (Asistente para cubos) | Microsoft Docs
+title: Seleccionar tablas de grupos de medida (Asistente para cubos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60e1bc5248f2ba85c505beb11ff78e5bbd3ded2b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940986"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>Seleccionar tablas de grupos de medida (Asistente para cubos)
   Use la página **Seleccionar tablas de grupos de medida** para identificar la vista del origen de datos y las tablas de grupos de medida para el cubo.  
@@ -29,7 +28,7 @@ ms.locfileid: "66069468"
  **Tablas de grupos de medida**  
  Seleccione las tablas que se utilizarán para los grupos de medida en el cubo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario del Asistente para instalación de paquete | Microsoft Docs
+title: Referencia de interfaz de usuario del Asistente para la instalación de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc500615774a67bae70e9c9fa8845db166f44466
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056824"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423882"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la instalación de paquetes
   Use el **Asistente para la instalación de paquetes** para implementar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , incluidos los paquetes y los distintos archivos que contienen, así como las dependencias del paquete.  
@@ -56,7 +55,7 @@ ms.locfileid: "66056824"
  **Archivo de configuración**  
  Para modificar el contenido de un archivo de configuración, seleccione el archivo en la lista.  
   
- **Temas relacionados:** [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)  
+ **Related Topics:** [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
  **Ruta de acceso**  
  Muestra la ruta de acceso de la propiedad que debe configurarse.  
@@ -136,22 +135,22 @@ ms.locfileid: "66056824"
  **Utilizar autenticación de Windows**  
  Permite especificar si se usará la autenticación de Windows al iniciar una sesión en el servidor. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Permite especificar si el paquete debe usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] al iniciar una sesión en el servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario.  
   
  **Contraseña**  
  Especifique una contraseña.  
   
- **Ruta de acceso del paquete**  
+ **Ruta de acceso de paquete**  
  Especifique el nombre de la carpeta lógica o escribe "/" para la carpeta predeterminada.  
   
- Para seleccionar la carpeta en el cuadro de diálogo **Paquete SSIS** , haga clic en el botón para examinar (…). Sin embargo, el cuadro de diálogo no proporciona medios para seleccionar la carpeta predeterminada. Si desea utilizar la carpeta predeterminada, tiene que escribir "/" en el cuadro de texto.  
+ Para seleccionar la carpeta en el cuadro de diálogo **paquete SSIS** , haga clic en examinar (...). Sin embargo, el cuadro de diálogo no proporciona un medio para seleccionar la carpeta predeterminada. Si desea utilizar la carpeta predeterminada, tiene que escribir "/" en el cuadro de texto.  
   
 > [!NOTE]  
->  Si no escribe una ruta de acceso del paquete válida, aparece el mensaje de error siguiente: "Uno o más argumentos no son válidos".  
+>  Si no escribe una ruta de acceso del paquete válida, aparece el mensaje de error siguiente: "Uno o más argumentos no son válidos."  
   
  **Basar el cifrado en el almacenamiento del servidor**  
  Seleccione estas características de seguridad del [!INCLUDE[ssDE](../includes/ssde-md.md)] para contribuir a proteger los paquetes.  
@@ -168,7 +167,7 @@ ms.locfileid: "66056824"
  **Finalizar**  
  Para salir del asistente, haga clic en **Finalizar**.  
   
-## <a name="see-also"></a>Vea también  
- [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

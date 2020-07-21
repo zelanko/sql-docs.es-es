@@ -1,5 +1,5 @@
 ---
-title: Los informes del servidor de Integration Services | Microsoft Docs
+title: Informes para el servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f71f87241f57fef455b44d4cfe5007d1ff0968d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056442"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423062"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
@@ -31,7 +30,7 @@ ms.locfileid: "66056442"
   
  El informe muestra las siguientes secciones de información.  
   
-|Section|Descripción|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |**Información de ejecución**|Muestra el número de ejecuciones en distintos estados (error, en ejecución, correcto, otros) en las últimas 24 horas.|  
 |**Información del paquete**|Muestra el número total de paquetes que se han ejecutado en las últimas 24 horas.|  
@@ -45,9 +44,9 @@ ms.locfileid: "66056442"
   
  El informe muestra las siguientes secciones de información.  
   
-|Section|Descripción|  
+|Sección|Descripción|  
 |-------------|-----------------|  
-|Filter|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
+|Filtrar|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
   
  Para obtener más información sobre cómo utilizar la tarea Ejecutar paquete con el fin de que los valores estén disponibles para un paquete secundario, vea [Execute Package Task](control-flow/execute-package-task.md).  
@@ -59,9 +58,9 @@ ms.locfileid: "66056442"
   
  El informe muestra las siguientes secciones de información.  
   
-|Section|Descripción|  
+|Sección|Descripción|  
 |-------------|-----------------|  
-|Filter|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
+|Filtrar|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
 |Detalles|Muestra la cadena de conexión, el número de ejecuciones en las que se produjo un error de conexión y la fecha en la que hubo un error de conexión por última vez.|  
   
 ## <a name="all-operations-report"></a>Informe Todas las operaciones  
@@ -71,7 +70,7 @@ ms.locfileid: "66056442"
  El informe **Todas las validaciones** muestra un resumen de todas las validaciones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] realizadas en el servidor. El resumen muestra información para cada validación, como el estado, la hora de inicio y la hora de finalización. Cada entrada de resumen incluye un vínculo a los mensajes generados durante la validación. Al igual que con el Panel de Integration Services, puede aplicar un filtro a la tabla para reducir la información mostrada.  
   
 ## <a name="custom-reports"></a>informes personalizados  
- Puede agregar un informe personalizado (archivo .rdl) al nodo del catálogo de **SSISDB** en el nodo **Catálogos de Integration Services** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Antes de agregar el informe, confirme que usa una convención de nomenclatura de tres partes para calificar completamente los objetos a los que hace referencia como una tabla de origen. De lo contrario, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mostrará un error. La convención de nomenclatura es \<base de datos>.\<propietario>.\<objeto>. Un ejemplo sería SSISDB.internal.executions.  
+ Puede agregar un informe personalizado (archivo .rdl) al nodo del catálogo de **SSISDB** en el nodo **Catálogos de Integration Services** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Antes de agregar el informe, confirme que usa una convención de nomenclatura de tres partes para calificar completamente los objetos a los que hace referencia como una tabla de origen. De lo contrario, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mostrará un error. La Convención de nomenclatura es \<database> . \<owner> . \<object> . Un ejemplo sería SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  Al agregar informes personalizados al nodo **SSISDB** en el nodo **Bases de datos** , el prefijo de SSISDB no es necesario.  

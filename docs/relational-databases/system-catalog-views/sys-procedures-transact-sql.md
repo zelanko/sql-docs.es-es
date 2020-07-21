@@ -1,5 +1,5 @@
 ---
-title: sys.procedures (Transact-SQL) | Microsoft Docs
+title: Sys. Procedures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,24 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.procedures catalog view
 ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd7a827c869456b2f4cd97a08b39e7b9be00cb86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 5581e91b7a395bda7f4b47ca41bdae45795ad93b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068082"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008911"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Contiene una fila por cada objeto que es un procedimiento de algún tipo, con **sys.objects.type** = P, X, RF y PC.  
+  Contiene una fila por cada objeto que es un procedimiento de algún tipo, con **Sys. Objects. Type** = P, X, RF y PC.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<Las columnas que se heredan de sys.objects >**||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**\<Columns inherited from sys.objects>**||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = El procedimiento se ejecuta automáticamente en el inicio del servidor; de lo contrario, 0. Solo se puede establecer para procedimientos en la base de datos maestra.|  
 |**is_execution_replicated**|**bit**|Se replica la ejecución de este procedimiento.|  
 |**is_repl_serializable_only**|**bit**|La replicación de la ejecución del procedimiento solo se realiza cuando la transacción se puede ejecutar en serie.|  
@@ -43,8 +42,8 @@ ms.locfileid: "68068082"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e506e2846de3d106cfc6e4eccd7519d428da4f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768948"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771518"
 ---
-# <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica el trabajo de agente que genera la instantánea para una suscripción a una publicación con un filtro de fila con parámetros. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -53,9 +53,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Es el nombre del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobname*es de **tipo sysname y su**valor predeterminado es N '% '. Si se especifica *dynamic_snapshot_jobid* , debe usar el valor predeterminado para *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Es el nombre del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobname*es de **tipo sysname y su**valor predeterminado es N '% '. Si se especifica *dynamic_snapshot_jobid* , debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Es el identificador del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobid* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Si se especifica *dynamic_snapshot_jobname*, debe usar el valor predeterminado para *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Es el identificador del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobid* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Si se especifica *dynamic_snapshot_jobname*, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el agente. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
@@ -63,9 +63,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4**|Diario|  
+|**8**|Cada semana|  
+|**16**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -82,7 +82,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**8**|Day|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
@@ -91,10 +91,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
+|**1**|Una sola vez|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -103,7 +103,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Primero|  
+|**1**|First|  
 |**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
@@ -138,8 +138,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changedynamicsnapshot_job**.  
   
-## <a name="see-also"></a>Vea también  
- [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
+## <a name="see-also"></a>Consulte también  
+ [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

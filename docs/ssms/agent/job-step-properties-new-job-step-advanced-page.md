@@ -1,10 +1,7 @@
 ---
-title: 'Propiedades de paso de trabajo: nuevo paso de trabajo (página Opciones avanzadas) | Microsoft Docs'
-ms.custom: ''
-ms.date: 01/19/2017
+title: Propiedades de nuevo paso de trabajo (página Opciones avanzadas)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f9395e9d1f7af28f0ff8a7d3f50d25eb665b7bb9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d51de2031e8187e96eaea3fcb344df133928779
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263304"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242242"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propiedades de paso de trabajo - Nuevo paso de trabajo (página Opciones avanzadas)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -48,7 +50,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo. Est
 **...**  
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
-**Ver**  
+**Vista**  
 En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
@@ -57,7 +59,7 @@ Anexa la salida al contenido existente del archivo. De lo contrario, el anterior
 **Registro en tabla**  
 Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
-**Ver**  
+**Vista**  
 Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
 **Anexar salida a la entrada existente de la tabla**  
@@ -76,7 +78,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo.
 **...**  
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
-**Ver**  
+**Vista**  
 En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
@@ -85,7 +87,7 @@ Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez q
 **Registro en tabla**  
 Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
-**Ver**  
+**Vista**  
 Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
 **Anexar salida a la entrada existente de la tabla**  
@@ -101,7 +103,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo.
 **...**  
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
-**Ver**  
+**Vista**  
 En [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
@@ -110,7 +112,7 @@ Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez q
 **Registro en tabla**  
 Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
-**Ver**  
+**Vista**  
 Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
 **Anexar salida a la entrada existente de la tabla**  
@@ -133,7 +135,7 @@ Establece el archivo que se utiliza para la salida desde el paso de trabajo. Est
 **...**  
 Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
-**Ver**  
+**Vista**  
 En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
 **Anexar la salida al archivo existente**  
@@ -142,7 +144,7 @@ Anexa la salida al contenido existente del archivo. De lo contrario, el anterior
 **Registro en tabla**  
 Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
-**Ver**  
+**Vista**  
 Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
 **Anexar salida a la entrada existente de la tabla**  

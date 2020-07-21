@@ -14,17 +14,17 @@ helpviewer_keywords:
 - system statistical functions [SQL Server]
 - functions [SQL Server], statistical
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: c55a051866ae346d5f83c898dc8292833d6d0679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: ff5025ce34155432736bd341a332f602cf94d337
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714698"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>Funciones estadísticas del sistema (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Las siguientes funciones escalares devuelven información estadística acerca del sistema:  
   

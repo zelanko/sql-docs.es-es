@@ -11,15 +11,14 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059394"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
   Como se describe en el tema [Generar XML mediante FOR XML](../xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
@@ -55,7 +54,7 @@ ms.locfileid: "63231269"
   
     -   Para las filas con valor 2 en la columna **Tag**, las columnas **Order!2!id** y **Order!2!date** forman un grupo que se usa después para construir elementos, <`Order id=... date=... /`>.  
   
-    -   Para las filas con valor 3 en la columna **Tag**, las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
+    -   Para las filas con valor 3 en la columna **Tag** , las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
   
 -   Tenga en cuenta que, al generar la jerarquía en XML, las filas se procesan por orden. La jerarquía XML se determina como se indica a continuación:  
   
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  A continuación, se describe cada parte del formato.  
   
  *ElementName*  
- Es el identificador genérico resultante del elemento. Por ejemplo, si se especifica **Customers** como *ElementName*, se genera el elemento \<Customers>.  
+ Es el identificador genérico resultante del elemento. Por ejemplo, si **los clientes** se especifican como *ElementName*, \<Customers> se genera el elemento.  
   
  *TagNumber*  
  Es un valor de etiqueta único asignado a un elemento. Este valor, junto con las dos columnas de metadatos **Tag** y **Parent**, determina el anidamiento de los elementos en el XML resultante.  
@@ -147,27 +146,27 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>En esta sección  
  Los siguientes ejemplos ilustran el uso del modo EXPLICIT.  
   
--   [Ejemplo: Recuperación de información de los empleados](../xml/example-retrieving-employee-information.md)  
+-   [Ejemplo: Recuperar información de los empleados](../xml/example-retrieving-employee-information.md)  
   
--   [Ejemplo: Especificación de la directiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
+-   [Ejemplo: Especificar la directiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
--   [Ejemplo: Especificación de la directiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Ejemplo: Especificar la directiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Ejemplo: Especificación de las directivas ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Ejemplo: especificar las directivas ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Ejemplo: Especificación de las directivas ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Ejemplo: Especificar las directivas ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Ejemplo: Especificación de la directiva HIDE](../xml/example-specifying-the-hide-directive.md)  
+-   [Ejemplo: Especificar la directiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Ejemplo: Especificación de la directiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
+-   [Ejemplo: Especificar la directiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Ejemplo: Especificación de la directiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Ejemplo: Especificar la directiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo RAW con FOR XML](../xml/use-raw-mode-with-for-xml.md)   
  [Usar el modo AUTO con FOR XML](../xml/use-auto-mode-with-for-xml.md)   
  [Usar el modo PATH con FOR XML](../xml/use-path-mode-with-for-xml.md)   

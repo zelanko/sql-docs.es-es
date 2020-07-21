@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 6cbe0bf465460fe1464b47deed461d05217595f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994346"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Interfaces del controlador OLE DB para SQL Server (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "67994346"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server expone interfaces a los consumidores que quieran tener acceso a los datos de uno o varios equipos en los que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador de OLE DB para SQL Server es un proveedor compatible con OLE DB versión 2,0.  
+  El controlador OLE DB para SQL Server expone interfaces a los consumidores que quieran tener acceso a los datos de uno o varios equipos en los que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. OLE DB Driver for SQL Server es un proveedor compatible con la versión 2.0 de OLE DB.  
   
  Esta referencia de programación del controlador OLE DB para SQL Server no documenta todas las interfaces y métodos de OLE DB, sino únicamente aquellos que muestran un comportamiento específico del proveedor cuando se usa el controlador OLE DB para SQL Server.  
   

@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e6d25305bd6abf4a3dc4555f2148a2fe385187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121585"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197411"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transacciones (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Una transacción es un grupo de una o varias instrucciones de base de datos totalmente confirmadas o totalmente revertidas. Cada transacción es atómica, coherente, aislada y durable (ACID). Si la transacción se realiza correctamente, se confirman todas las instrucciones que contiene. Si se produce un error en la transacción, es decir, se produce un error en al menos una de las instrucciones del grupo, se revierte todo el grupo.  
   
@@ -30,11 +30,11 @@ ms.locfileid: "68121585"
   
 -   Las *transacciones de confirmación automática* se inician automáticamente dentro de una sesión y no se inician con la instrucción BEGIN TRANSACTION. Cuando el valor de AUTOCOMMIT es ON, cada instrucción se ejecuta en una transacción y no se necesita COMMIT o ROLLBACK de forma explícita. Cuando el valor de AUTOCOMMIT es OFF, se requiere una instrucción COMMIT o ROLLBACK para determinar el resultado de la transacción. En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], las transacciones de confirmación automática comienzan inmediatamente después de una instrucción COMMIT o ROLLBACK, o bien después de una instrucción SET AUTOCOMMIT OFF.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 BEGIN TRANSACTION [;]  
 COMMIT [ TRAN | TRANSACTION | WORK ] [;]  
 ROLLBACK [ TRAN | TRANSACTION | WORK ] [;]  
@@ -55,10 +55,10 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET AUTOCOMMIT { **ON** | OFF }  
  Determina cómo se pueden iniciar y finalizar las transacciones.  
   
- ON  
+ ACTIVAR  
  Cada instrucción se ejecuta en su propia transacción y no se necesita ninguna instrucción COMMIT o ROLLBACK explícita. Las transacciones explícitas se permiten cuando AUTOCOMMIT es ON.  
   
- OFF  
+ Apagado  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inicia automáticamente una transacción cuando no hay en curso una transacción. Todas las instrucciones siguientes se ejecutan como parte de la transacción y se necesita COMMIT o ROLLBACK para determinar el resultado de la transacción. Cuando una transacción se confirma o revierte en este modo de funcionamiento, el modo permanece en OFF, y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] inicia una nueva transacción. Cuando AUTOCOMMIT es OFF las transacciones explícitas no se permiten.  
   
  Si se cambia la configuración de AUTOCOMMIT dentro de una transacción activa, la configuración afecta a la transacción actual y no tiene efecto hasta que se complete la transacción.  
@@ -78,7 +78,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Si un error que no sea de una instrucción de tiempo de ejecución impide la terminación correcta de una transacción, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] revierte automáticamente la transacción y libera todos los recursos que mantiene. Por ejemplo, si se interrumpe la conexión de red del cliente con una instancia de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o si el cliente se desconecta de la aplicación, las transacciones pendientes de la conexión se revierten al estado anterior cuando la red notifica la interrupción a la instancia.  
   
- Si se produce un error de instrucción de tiempo de ejecución en un lote, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comporta de forma coherente a **XACT_ABORT** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecido en **ON** y se revierte la transacción completa. Para obtener más información sobre la configuración de **XACT_ABORT**, vea [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Si se produce un error de instrucción de tiempo de ejecución en un lote, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se comporta de forma coherente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]XACT_ABORT**de** establecido en **ON** y se revierte la transacción completa. Para obtener más información sobre la configuración de **XACT_ABORT**, vea [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Notas generales  
  Una sesión solo puede ejecutar una transacción en un momento dado; no se admiten los puntos de retorno y las transacciones anidadas.  
@@ -99,7 +99,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="locking-behavior"></a>Comportamiento del bloqueo  
  En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se usa el bloqueo para garantizar la integridad de las transacciones y mantener la coherencia de las bases de datos cuando varios usuarios obtienen acceso a los datos al mismo tiempo. El bloqueo se usa tanto en transacciones implícitas como explícitas. Cada transacción solicita diferentes tipos de bloqueo en los recursos, como por ejemplo, las tablas o bases de datos de las que depende la transacción. Todos los bloqueos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] son en el nivel de tabla o superior. Estos bloqueos impiden que otras transacciones puedan modificar los recursos de forma que esto provoque problemas para la transacción que solicita el bloqueo. Cada transacción libera sus bloqueos cuando ya no tiene una dependencia en los recursos bloqueados; las transacciones explícitas mantienen los bloqueos hasta que la transacción finaliza cuando se confirma o revierte.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Usar una transacción explícita  
   

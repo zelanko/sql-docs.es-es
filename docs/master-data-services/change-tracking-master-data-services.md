@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de cambios (Master Data Services) | Microsoft Docs
+title: Seguimiento de cambios
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8ba29c99c7744793b3c2829f45cf1303a1c0e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7883f3dda53897eb9d53e9ff4e9e41e6731775d0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052061"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811640"
 ---
 # <a name="change-tracking-master-data-services"></a>Seguimiento de cambios [Master Data Services]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede usar grupos de seguimiento de cambios para realizar una acción cuando cambie un valor de atributo. Use el seguimiento de cambios cuando no conozca cuál será el nuevo valor, pero quiera saber si se produjo algún cambio.  
   

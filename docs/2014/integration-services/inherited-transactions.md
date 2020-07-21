@@ -1,5 +1,5 @@
 ---
-title: Hereda las transacciones | Microsoft Docs
+title: Transacciones heredadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 110dfa19f9251b1cd43fc7ad0d6f7b4ce894dfa1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058063"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424782"
 ---
 # <a name="inherited-transactions"></a>Transacciones heredadas
   Un paquete puede ejecutar otro paquete, utilizando la tarea Ejecutar paquete. El paquete secundario, que es el que ejecuta la tarea Ejecutar paquete, puede crear su propia transacción de paquete o heredar la del paquete primario.  
@@ -43,11 +42,11 @@ ms.locfileid: "66058063"
   
 -   **TransactionOption** se establece en **NotSupported** en el paquete E y en las tareas Ejecutar paquete C y Ejecutar paquete E.  
   
- ![Flujo de transacciones heredadas](media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Flujo de transacciones heredadas](media/mw-dts-executepack.gif "Flujo de transacciones heredadas")  
   
  Solo los paquetes B, D y F pueden heredar transacciones de sus paquetes primarios.  
   
- Los paquetes B y D heredan la transacción iniciada por el paquete A.  
+ Los paquetes B y D heredan la transacción iniciada por el paquete A.   
   
  El paquete F hereda la transacción iniciada por el paquete C.  
   

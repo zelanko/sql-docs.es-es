@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68dbfaed63677a7d64c489646592fe35745ff3b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083752"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891127"
 ---
-# <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Genera scripts para crear funciones de contenedor para las funciones de consulta de captura de datos modificados que están disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La API que se admite en los contenedores generados permite el intervalo de consulta que se especifican como un intervalo de fecha y hora. Esto hace que la función sea idónea para su uso en muchas aplicaciones de almacenamiento de datos, incluidas las que se desarrollan con diseñadores de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que utilizan la tecnología de captura de datos modificados para determinar la carga incremental.  
+  Genera scripts para crear funciones de contenedor para las funciones de consulta de captura de datos modificados que están disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La API que se admite en los contenedores generados permite especificar el intervalo de la consulta como un intervalo de fecha y hora. Esto hace que la función sea idónea para su uso en muchas aplicaciones de almacenamiento de datos, incluidas las que se desarrollan con diseñadores de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que utilizan la tecnología de captura de datos modificados para determinar la carga incremental.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,17 +50,17 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @capture_instance=] '*capture_instance*'  
- Es la instancia de captura para la que se van a generar los scripts. *capture_instance* es **sysname** y tiene un valor predeterminado es null. Si se omite un valor o se establece explícitamente en NULL, los scripts de contenedor se generan para todas las instancias de captura  
+ [ @capture_instance =] '*capture_instance*'  
+ Es la instancia de captura para la que se van a generar los scripts. *capture_instance* es de **tipo sysname y su** valor predeterminado es NULL. Si se omite un valor o se establece explícitamente en NULL, los scripts de contenedor se generan para todas las instancias de captura  
   
- [ @closed_high_end_point=] *high_end_pt_flag*  
- Es el bit de marca que indica si el procedimiento generado incluirá dentro del intervalo de extracción los cambios que tengan una fecha y hora de confirmación igual al extremo superior. *high_end_pt_flag* es **bit** y tiene un valor predeterminado de 1, que indica que se debe incluir el punto de conexión. El valor 0 indica que todas las fechas y horas de confirmación serán estrictamente menores que el extremo superior.  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
+ Es el bit de marca que indica si el procedimiento generado incluirá dentro del intervalo de extracción los cambios que tengan una fecha y hora de confirmación igual al extremo superior. *high_end_pt_flag* es de **bits** y tiene un valor predeterminado de 1, que indica que se debe incluir el extremo. El valor 0 indica que todas las fechas y horas de confirmación serán estrictamente menores que el extremo superior.  
   
- [ @column_list=] '*column_list*'  
- Es una lista de las columnas capturadas que se van a incluir en el conjunto de resultados devuelto por la función de contenedor. *column_list* es **nvarchar (max)** y tiene un valor predeterminado es null. Cuando se especifica NULL, se incluyen todas las columnas capturadas.  
+ [ @column_list =] '*column_list*'  
+ Es una lista de las columnas capturadas que se van a incluir en el conjunto de resultados devuelto por la función de contenedor. *column_list* es de tipo **nvarchar (Max)** y su valor predeterminado es NULL. Cuando se especifica NULL, se incluyen todas las columnas capturadas.  
   
- [ @update_flag_list=] '*update_flag_list*'  
- Es una lista de las columnas incluidas para las que se incluye una marca de actualización en el conjunto de resultados devuelto por la función de contenedor. *update_flag_list* es **nvarchar (max)** y tiene un valor predeterminado es null. Cuando se especifica NULL, no se incluyen marcas de actualización.  
+ [ @update_flag_list =] '*update_flag_list*'  
+ Es una lista de las columnas incluidas para las que se incluye una marca de actualización en el conjunto de resultados devuelto por la función de contenedor. *update_flag_list* es de tipo **nvarchar (Max)** y su valor predeterminado es NULL. Cuando se especifica NULL, no se incluyen marcas de actualización.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -69,7 +69,7 @@ sys.sp_cdc_generate_wrapper_function
   
 |Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
-|**function_name**|**nvarchar(145)**|Nombre de la función generada.|  
+|**function_name**|**nvarchar (145)**|Nombre de la función generada.|  
 |**create_script**|**nvarchar(max)**|Es el script que crea la función de contenedor de la instancia de captura.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -103,7 +103,7 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de captura de datos modificados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Captura de datos modificados &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Enlazar datos relacionales dentro de datos XML | Microsoft Docs
+title: Enlazar datos relacionales dentro de datos XML
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051333"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392843"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Enlazar datos relacionales dentro de datos XML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Puede especificar [métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md) con una variable de tipo de datos o columna **xml**. Por ejemplo, [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md) ejecuta la instrucción XQuery especificada con una instancia XML. Cuando se genera XML de esta manera, se puede utilizar un valor de un tipo de columna que no es XML o una variable Transact-SQL. Este proceso se conoce como enlazar datos relacionales dentro de XML.  
   

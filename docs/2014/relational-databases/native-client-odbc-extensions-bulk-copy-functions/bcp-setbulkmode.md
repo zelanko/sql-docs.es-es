@@ -9,18 +9,17 @@ ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019334"
 ---
-# <a name="bcpsetbulkmode"></a>bcp_setbulkmode
-  bcp_setbulkmode le permite especificar el formato de columna en una operación de copia masiva, establecer todos los atributos de columna en una única llamada de función.  
+# <a name="bcp_setbulkmode"></a>bcp_setbulkmode
+  bcp_setbulkmode permite especificar el formato de columna en una operación de copia masiva, estableciendo todos los atributos de columna en una única llamada de función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,28 +66,28 @@ cbRow
  *cbRow*  
  Longitud en bytes del valor de terminador de fila.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL  
   
 ## <a name="remarks"></a>Comentarios  
- bcp_setbulkmode puede utilizarse para la copia masiva de una consulta o una tabla. Cuando se usa bcp_setbulkmode para una instrucción de consulta de copia de forma masiva, se debe llamar antes de llamar a bcp_control con BCP_HINT.  
+ bcp_setbulkmode puede usarse para realizar una copia masiva de una consulta o una tabla. Cuando bcp_setbulkmode se utiliza para realizar una copia masiva de una instrucción de consulta, se debe llamar antes de llamar a bcp_control con BCP_HINT.  
   
- bcp_setbulkmode es una alternativa al uso [bcp_setcolfmt](bcp-setcolfmt.md) y [bcp_columns](bcp-columns.md), que solo le permite especificar el formato de una columna por llamada de función.  
+ bcp_setbulkmode es una alternativa al uso de [bcp_setcolfmt](bcp-setcolfmt.md) y [bcp_columns](bcp-columns.md), que solo permiten especificar el formato de una columna por cada llamada de función.  
   
  En la lista siguiente se enumeran las constantes del parámetro *property* .  
   
-|property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Se corresponde con la opción - c en BCP. EXE y a bcp_setcolfmt con `BCP_FMT_TYPE` propiedad establecida en `SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Corresponde a la opción -w de BCP. EXE y bcp_setcolfmt con `BCP_FMT_TYPE` propiedad establecida en `SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Se corresponde con la opción -N de BCP. EXE y bcp_setcolfmt con `BCP_FMT_TYPE` propiedad establecida en `SQLNCHAR` si el tipo de columna es una cadena (valor predeterminado si no es una cadena).|  
-|BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Se corresponde con la opción - n de BCP. EXE y bcp_setcolfmt con `BCP_FMT_TYPE` propiedad establecida en el valor predeterminado.|  
+|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Corresponde a la opción-c en BCP.EXE y a bcp_setcolfmt con la `BCP_FMT_TYPE` propiedad establecida en `SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Corresponde a la opción-w de BCP.EXE y bcp_setcolfmt con la `BCP_FMT_TYPE` propiedad establecida en `SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Corresponde a la opción-N de BCP.EXE y bcp_setcolfmt con `BCP_FMT_TYPE` la propiedad establecida en `SQLNCHAR` si el tipo de columna es una cadena (valor predeterminado si no es una cadena).|  
+|BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Corresponde a la opción-n de BCP.EXE y bcp_setcolfmt con `BCP_FMT_TYPE` la propiedad establecida en el valor predeterminado.|  
   
- No se debe usar bcp_setbulkmode con una secuencia de llamadas de función que incluye bcp_setcolfmt bcp_control y bcp_readfmt. Por ejemplo, no debe llamar bcp_control(BCPTEXTFILE) y bcp_setbulkmode.  
+ No debe utilizar bcp_setbulkmode con una secuencia de llamadas de función que incluya bcp_setcolfmt, bcp_control y bcp_readfmt. Por ejemplo, no debe llamar a bcp_control (BCPTEXTFILE) y bcp_setbulkmode.  
   
- Puede llamar a bcp_control y bcp_setbulkmode para bcp_control opciones que no entren en conflicto con bcp_setbulkmode. Por ejemplo, puede llamar a bcp_control(BCPFIRST) y bcp_setbulkmode.  
+ Puede llamar a bcp_control y bcp_setbulkmode para bcp_control opciones que no entren en conflicto con bcp_setbulkmode. Por ejemplo, puede llamar a bcp_control (BCPFIRST) y bcp_setbulkmode.  
   
- Si intenta llamar a bcp_setbulkmode con una secuencia de llamadas de función que incluye bcp_setcolfmt bcp_control y bcp_readfmt, una de las llamadas de función devolverá un error de secuencia. Si elige corregir el error, llame a bcp_init para restablecer todos los valores y volver a empezar.  
+ Si intenta llamar a bcp_setbulkmode con una secuencia de llamadas a función que incluye bcp_setcolfmt, bcp_control y bcp_readfmt, una de las llamadas de función devolverá un error de secuencia. Si opta por corregir el error, llame a bcp_init para restablecer toda la configuración y volver a empezar.  
   
  En la siguiente tabla se presentan algunos ejemplos de llamadas a función que producen un error de secuencia de función:  
   
@@ -295,7 +294,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

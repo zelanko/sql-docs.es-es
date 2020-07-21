@@ -1,6 +1,7 @@
 ---
-title: Solución de problemas IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Identificación de problemas con IntelliSense (SSMS)
+description: Aprenda a solucionar problemas e identificarlos con IntelliSense con SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -15,14 +16,14 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dcff5c71d8093f4049983393ee7a10622f57f5b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de4491bdeecdc635d12dca7cb0a51426524bdd67
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253117"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75558687"
 ---
-# <a name="troubleshooting-intellisense"></a>Solución de problemas IntelliSense
+# <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identificación de problemas con IntelliSense: SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Hay algunos casos en que es posible que las opciones de IntelliSense no funcionen como se espera.  
   

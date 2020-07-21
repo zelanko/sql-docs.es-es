@@ -1,5 +1,5 @@
 ---
-title: Método Recover (SQLServerXAResource) | Microsoft Docs
+title: Método recover (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b78165b8c199a04d716d18614e6fb56232eca429
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976023"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923118"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>Método recover (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,18 +37,18 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>Parámetros  
  *flags*  
   
- Un valor **int** que puede tomar uno de los siguientes valores: XARESOURCE. TMSTARTRSCAN o XARESOURCE. TMENDRSCAN o XARESOURCE. TMNOFLAGS o XARESOURCE. TMSTARTTRSCAN | XAResource. TMENDRSCAN.  
+ Un valor **int** que puede tomar uno de los siguientes valores: XAResource.TMSTARTRSCAN o XAResource.TMENDRSCAN o XAResource.TMNOFLAGS o XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto XID.  
+ Un objeto Xid.  
   
 ## <a name="exceptions"></a>Excepciones  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método recover especifica este método recover en la interfaz javax.transaction.xa.XAResource.  
   
- Si el **marcador** de parámetro no es XARESOURCE. TMSTARTRSCAN o XARESOURCE. TMSTARTRSCAN | XAResource. TMENDRSCAN, un examen de recuperación debe estar en curso.  
+ Si el parámetro **marca** no es XAResource.TMSTARTRSCAN o XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, un examen de recuperación debe estar en curso.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

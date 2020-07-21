@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType y ejemplo de las propiedades EditMode (VB) | Microsoft Docs
+title: Ejemplo de las propiedades CursorType, LockType y EditMode (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 044dc0351cb5893514373f298c7a3df86abe5f38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919278"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763536"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType y ejemplo de las propiedades EditMode (VB)
-En este ejemplo se muestra cómo establecer el [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedades antes de abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la [EditMode](../../../ado/reference/ado-api/editmode-property.md) propiedad bajo diferentes condiciones. La función EditModeOutput es necesaria ejecutar este procedimiento.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Ejemplo de las propiedades CursorType, LockType y EditMode (VB)
+Este ejemplo muestra cómo establecer las propiedades [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) antes de abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la propiedad [EditMode](../../../ado/reference/ado-api/editmode-property.md) en varias condiciones. La función EditModeOutput es necesaria para que este procedimiento se ejecute.  
   
 ```  
 'BeginEditModeVB  
@@ -122,11 +122,11 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [Propiedad EditMode](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
- [Propiedad LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [LockType (propiedad, ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

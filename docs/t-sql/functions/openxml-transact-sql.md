@@ -17,21 +17,21 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: c9f0034e6f3fb620bd55410d345c1c2291db280f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738068"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   OPENXML proporciona una vista de un conjunto de filas en un documento XML. Puesto que OPENXML es un proveedor de conjuntos de filas, puede utilizarse en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en las que pueden aparecer proveedores de conjuntos de filas como una tabla, vista o la función OPENROWSET.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,7 +59,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Es la definición de esquema de la forma: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]…]  
+ Es la definición de esquema de la forma: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Es el nombre de columna en el conjunto de filas.  
@@ -80,12 +80,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Es el nombre de tabla que puede proporcionarse (en lugar de *SchemaDeclaration*) si ya existe una tabla con el esquema deseado y no se requieren patrones de columna.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La cláusula WITH proporciona un formato de conjunto de filas (e información de asignación adicional si es necesario) mediante *SchemaDeclaration* o la especificación de un *TableName* existente. Si no se especifica la cláusula opcional WITH, los resultados se devuelven en un formato de tabla **irregular**. Las tablas irregulares representan la estructura refinada del documento XML (por ejemplo, los nombres de elementos o atributos, la jerarquía del documento, los espacios de nombre, las instrucciones de proceso, etc.) en una única tabla.  
   
  En la tabla siguiente se describe la estructura de la tabla **irregular**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Es el id. único del nodo del documento.<br /><br /> El elemento raíz tiene un valor de identificador 0. Los valores de identificador negativos están reservados.|  
 |**parentid**|**bigint**|Identifica el elemento primario del nodo. El elemento primario especificado por este identificador no es necesariamente el elemento primario, pero depende del NodeType del nodo cuyo elemento primario indica este identificador. Por ejemplo, si se trata de un nodo de texto, su elemento primario puede ser un nodo de atributo.<br /><br /> Si el nodo está en el nivel superior del documento XML, su **ParentID** es NULL.|  
@@ -95,7 +95,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**namespaceuri**|**nvarchar**|Es el URI del espacio de nombres del nodo. Si el valor es NULL, no hay ningún espacio de nombres.|  
 |**datatype**|**nvarchar**|Es el tipo de datos reales de la fila del elemento o atributo y, en caso contrario, es NULL. El tipo de datos se infiere a partir de las DTD insertadas o del esquema insertado.|  
 |**prev**|**bigint**|Es el id. XML del anterior elemento del mismo nivel. Es NULL si no existe ningún elemento previo directo del mismo nivel.|  
-|**texto**|**ntext**|Contiene el valor de atributo o el contenido de elemento en forma de texto (o es NULL si la entrada de la tabla **irregular** no requiere un valor).|  
+|**text**|**ntext**|Contiene el valor de atributo o el contenido de elemento en forma de texto (o es NULL si la entrada de la tabla **irregular** no requiere un valor).|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -163,7 +163,7 @@ NULL       NULL
   
 -   La columna `ProdID` del conjunto de filas se asigna al atributo `ProductID`, y la columna `Qty` del conjunto de filas se asigna al atributo `Quantity` de los nodos identificados en *rowpattern*.  
   
- Aunque el parámetro *flags* especifica la asignación **centrada en elementos**, la asignación especificada en *ColPattern* sobrescribe la anterior.  
+ Aunque el parámetro **flags** especifica la asignación *centrada en elementos*, la asignación especificada en *ColPattern* sobrescribe la anterior.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -190,11 +190,11 @@ EXEC sp_xml_preparedocument @idoc OUTPUT, @doc;
 -- SELECT stmt using OPENXML rowset provider  
 SELECT *  
 FROM   OPENXML (@idoc, '/ROOT/Customer/Order/OrderDetail',2)   
-         WITH (OrderID       int         '../@OrderID',   
-               CustomerID  varchar(10) '../@CustomerID',   
-               OrderDate   datetime    '../@OrderDate',   
-               ProdID      int         '@ProductID',   
-               Qty         int         '@Quantity');  
+         WITH (OrderID       int         '../@OrderID',
+               CustomerID  varchar(10) '../@CustomerID',
+               OrderDate   datetime    '../@OrderDate',
+               ProdID      int         '@ProductID',
+               Qty         int         '@Quantity');
   
 ```  
   
@@ -245,5 +245,5 @@ EXEC sp_xml_removedocument @idoc;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplos: usar OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+ [Ejemplos: Usar OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Controlar la presentación de la región de datos Tablix en una página de informe (generador de informes y SSRS) | Microsoft Docs
+title: Controlar la presentación de la región de datos Tablix en una página de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106208"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlar la presentación de la región de datos Tablix en una página de informe (Generador de informes y SSRS)
@@ -34,9 +34,9 @@ ms.locfileid: "66106208"
   
 -   **Mostrar un mensaje cuando no hay datos**: cuando no existen datos para un conjunto de datos de informe en tiempo de ejecución, puede escribir su propio mensaje para que se muestre en lugar de la región de datos. Para obtener más información, vea [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
--   **Ocultar condicionalmente los datos**: Para controlar de manera condicional si mostrar u ocultar una región de datos o partes de una región de datos, puede establecer la propiedad Hidden en `True` o en una expresión. Las expresiones pueden incluir referencias a parámetros de informe. También puede especificar un elemento de alternancia, para que el usuario pueda decidir si se deben mostrar los datos detallados. Para más información, vea [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
+-   **Ocultar condicionalmente los datos**: Para controlar condicionalmente si Mostrar u ocultar una región de datos o partes de una región de datos, puede establecer la propiedad Hidden en `True` o en una expresión. Las expresiones pueden incluir referencias a parámetros de informe. También puede especificar un elemento de alternancia, para que el usuario pueda decidir si se deben mostrar los datos detallados. Para más información, vea [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
--   **Combinar celdas:** existe la posibilidad de combinar en una única celda una serie de celdas contiguas de una tabla. Este proceso se conoce como extensión de columnas o combinación de celdas. Las celdas solo se pueden combinar horizontal o verticalmente. Al combinarlas, se debe tener en cuenta que solo se conservan los datos de la primera celda. Los datos de las otras celdas se quitan. Las celdas combinadas pueden dividirse para que recuperen sus columnas originales. Para más información, vea [Combinar celdas en una región de datos &#40;Generador de informes y SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Combinar celdas.** existe la posibilidad de combinar en una única celda una serie de celdas contiguas de una tabla. Este proceso se conoce como extensión de columnas o combinación de celdas. Las celdas solo se pueden combinar horizontal o verticalmente. Al combinarlas, se debe tener en cuenta que solo se conservan los datos de la primera celda. Los datos de las otras celdas se quitan. Las celdas combinadas pueden dividirse para que recuperen sus columnas originales. Para más información, vea [Combinar celdas en una región de datos &#40;Generador de informes y SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>Controlar la posición y expansión de la región de datos Tablix en una página  
  Las características siguientes ayudan a controlar el modo en que se muestra una región de datos Tablix en un informe representado:  
@@ -55,7 +55,7 @@ ms.locfileid: "66106208"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Controlar cómo se representan grupos de filas y columnas de Tablix  
  Para controlar cómo se representa un grupo de región de datos Tablix, hay que tener en cuenta la estructura de grupo. Una región de datos Tablix puede tener cuatro áreas, tal y como se muestra en la ilustración siguiente:  
   
- ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
+ ![Áreas de región de datos Tablix](../media/rs-tablixareas.gif "Áreas de la región de datos Tablix")  
   
  El área del grupo de filas y el área del grupo de columnas contienen encabezados de grupo. Cuando una región de datos Tablix tiene encabezados de grupo, puede controlar la repetición de las filas y las columnas estableciendo las propiedades en la página **General** del cuadro de diálogo **Propiedades de Tablix** .  
   
@@ -71,15 +71,15 @@ ms.locfileid: "66106208"
   
  Para más información sobre cómo el hecho de exportar un informe a formatos diferentes afecta al modo de representación de una región de datos Tablix en una página, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [Controlar saltos de página, encabezados, columnas y filas &#40;Generador de informes y SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
+ [&#40;de la región de datos Tablix Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
- [Listas &#40;Generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Enumera &#40;Generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

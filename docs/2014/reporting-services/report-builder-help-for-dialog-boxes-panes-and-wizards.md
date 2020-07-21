@@ -1,5 +1,5 @@
 ---
-title: Ayuda para cuadros de diálogo, paneles y asistentes del generador de informes | Microsoft Docs
+title: Generador de informes ayuda para cuadros de diálogo, paneles y asistentes | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f9f6fa990aa3c976565968ccb69bb3d18c25f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107959"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes
   Esta sección contiene Ayuda para muchos de los asistentes, vistas, paneles y cuadros de diálogo del Generador de informes. También puede abrir la Ayuda presionando F1 o haciendo clic en el botón Ayuda que se muestra en el cuadro de diálogo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](report-builder/report-design-view-report-builder.md)   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Solucionar problemas del Generador de informes](../../2014/reporting-services/troubleshoot-report-builder.md)  

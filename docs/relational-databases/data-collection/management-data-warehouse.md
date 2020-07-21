@@ -1,5 +1,6 @@
 ---
 title: Almacén de administración de datos | Microsoft Docs
+description: El almacén de administración de datos de SQL Server es una base de datos relacional que contiene los datos recopilados de un servidor de destino.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8723d9750eb03eda14a7983cba8919ea8e92eb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3699812972a7119552a53b76c73a373a89dc0622
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758106"
 ---
 # <a name="management-data-warehouse"></a>almacén de administración de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El almacén de administración de datos es una base de datos relacional que contiene los datos recopilados de un servidor que es el destino de la recopilación de datos. Estos datos se utilizan para generar informes para los conjuntos de recopilación de datos del sistema y también pueden utilizarse para crear informes personalizados.  
   
  La infraestructura del recopilador de datos define los trabajos y los planes de mantenimiento que se necesitan para implementar las directivas de retención definidas por el administrador de bases de datos.  
@@ -109,7 +110,7 @@ ms.locfileid: "68133623"
   
  Para obtener información detallada sobre el tipo de datos y el contenido de las columnas de tabla de base de datos, lea la documentación del procedimiento almacenado del recopilador de datos correspondiente de cada una de las tablas.  
   
-### <a name="best-practices"></a>Procedimientos recomendados  
+### <a name="best-practices"></a>Prácticas recomendadas  
  Al trabajar con el almacén de datos de administración, recomendamos seguir estas prácticas recomendadas:  
   
 -   No modifique los metadatos de tablas de almacén de datos de administración a menos que esté agregando un nuevo tipo de recopilador.  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7d341d828d3ae0527192c96a3c63fb2951eef7a1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981012"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904591"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>Método getParameterClassName (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public java.lang.String getParameterClassName(int param)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getParameterClassName se especifica mediante el método getParameterClassName de la interfaz java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getParameterClassName especifica este método getParameterClassName en la interfaz java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

@@ -1,6 +1,7 @@
 ---
-title: 'Ejemplo: Mediante el proveedor de eventos WMI con .NET Framework | Microsoft Docs'
-ms.custom: ''
+title: 'Ejemplo: usar el proveedor de eventos WMI en .NET'
+description: Una aplicación de C# de ejemplo utiliza el proveedor de eventos WMI para devolver datos de eventos para todos los eventos de lenguaje de definición de datos que se producen en una instancia de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 727cacbbe0c69b25af7df15660b7adb64268c861
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a863d0c6130821c9a495b8e92332342e90005689
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139227"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888184"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Ejemplo: Uso del proveedor de eventos WMI con .NET Framework
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Sample: Uso del proveedor de eventos WMI con .NET Framework
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En el ejemplo siguiente se crea una aplicación en C# que utiliza el proveedor de eventos WMI para devolver datos de evento de todos los eventos de lenguaje de definición de datos (DDL) que se producen en una instancia de instalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Ejemplo  
@@ -76,7 +77,7 @@ class SQLWEPExample
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

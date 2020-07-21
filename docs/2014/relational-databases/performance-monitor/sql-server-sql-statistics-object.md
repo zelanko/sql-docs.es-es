@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aba118f93a9a4f38179e8e7c5156eecc24012ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066914"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Statistics (objeto de SQL Server)
   El objeto **SQLServer:SQL Statistics** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la compilación y el tipo de solicitudes que se envían a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La supervisión del número de compilaciones y recompilaciones de consultas y el número de lotes que recibe una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de la rapidez con la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las consultas de usuarios y la eficacia con la que el optimizador de consultas las procesa.  
@@ -31,7 +30,7 @@ ms.locfileid: "63183079"
   
  Para obtener más información sobre la parametrización simple y forzada, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Estos son los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** .  
+ Estos son los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Statistics**de**.  
   
 |Contadores de SQLServer:SQL Statistics|Descripción|  
 |----------------------------------------|-----------------|  
@@ -47,7 +46,7 @@ ms.locfileid: "63183079"
 |**Recompilaciones SQL/seg.**|Número de recompilaciones de instrucciones por segundo. Cuenta el número de veces que se desencadenan las recompilaciones de instrucciones. En general, es conveniente que el número de recompilaciones sea bajo.|  
 |**Parametrizaciones automáticas no seguras/seg.**|Número de intentos de parametrización automática no segura por segundo. Por ejemplo, la consulta dispone de algunas características que impiden compartir el plan almacenado en caché. Estas parametrizaciones se designan como no seguras. Esta opción no cuenta el número de parametrizaciones forzadas.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Plan Cache (objeto de SQL Server)](sql-server-plan-cache-object.md)   
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   

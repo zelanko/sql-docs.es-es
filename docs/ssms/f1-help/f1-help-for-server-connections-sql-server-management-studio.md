@@ -1,10 +1,7 @@
 ---
-title: Ayuda F1 para conexiones de servidor (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Ayuda F1 para las conexiones de servidor
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 495e32c9930711562876c87c5781d51535f1ff2a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 1e2c897807cadf602dffaa7217442074f6f3cad8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265068"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261894"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Ayuda F1 para conexiones de servidor (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
 Esta sección contiene la Ayuda F1 para las páginas de los cuadros de diálogo de **Conectar al servidor** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Buscar servidores &#40;Servidores locales&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
@@ -55,5 +57,4 @@ Esta sección contiene la Ayuda F1 para las páginas de los cuadros de diálogo 
   
 [Conectar al servidor &#40;Reporting Services&#41;](../../ssms/f1-help/connect-to-server-reporting-services.md)  
   
-[Contraseña expirada](../../ssms/f1-help/password-expired.md)  
-  
+[Contraseña expirada](../../ssms/f1-help/password-expired.md)

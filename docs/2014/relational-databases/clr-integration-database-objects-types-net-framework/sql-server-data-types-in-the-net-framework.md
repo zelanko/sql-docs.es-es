@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos SQL Server en .NET Framework | Microsoft Docs
+title: SQL Server tipos de datos en el .NET Framework | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe0ed680e7050c58738301256575e4138f21276f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970816"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de datos de SQL Server en .NET Framework
   La biblioteca `SqlTypes` forma parte de la biblioteca de clase base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Está diseñado para proporcionar a los tipos de datos la misma semántica y precisión que las encontradas en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este tema se describe la nueva semántica para los programadores de .NET Framework y se muestran los tipos implementados en el espacio de nombres `System.Data.SqlTypes` incluido en la biblioteca `System.Data`.  
@@ -37,7 +36,7 @@ ms.locfileid: "62874540"
  [Intercalación y tipos de datos de integración CLR](collation-and-clr-integration-data-types.md)  
  Describe la manera en la que se administran las intercalaciones con la integración CLR.  
   
- [Controlar objetos grandes &#40;LOB&#41; parámetros en CLR](handling-large-object-lob-parameters-in-the-clr.md)  
+ [Administrar los parámetros de objetos grandes &#40;LOB&#41; en CLR](handling-large-object-lob-parameters-in-the-clr.md)  
  Describe la manera de pasar los tipos LOB entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el CLR.  
   
  [Asignar datos de parámetros CLR](mapping-clr-parameter-data.md)  

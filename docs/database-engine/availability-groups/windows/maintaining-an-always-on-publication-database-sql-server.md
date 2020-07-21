@@ -1,8 +1,8 @@
 ---
 title: Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad
-description: 'Una descripción sobre cómo administrar y mantener una base de datos que actúa como publicador en una replicación de SQL y también participa en un grupo de disponibilidad Always On. '
+description: Una descripción sobre cómo administrar y mantener una base de datos que actúa como publicador en una replicación de SQL y también participa en un grupo de disponibilidad Always On.
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,33 +13,33 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bdb26625e1b461e9f82342824f07f73a02f863bf
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 6962df1084579693ec5b281514b12db83fdb07da
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846767"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896086"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se tratan consideraciones especiales para mantener una base de datos de publicación cuando se usan grupos de disponibilidad AlwaysOn.  
   
-##  <a name="MaintainPublDb"></a> Mantener una base de datos publicada en un grupo de disponibilidad  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a> Mantener una base de datos publicada en un grupo de disponibilidad  
  El mantenimiento de una base de datos de publicación AlwaysOn se realiza básicamente de la misma forma que para una base de datos de publicación estándar, con las siguientes salvedades:  
   
 -   La administración debe producirse en el host de réplica principal. En [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], las publicaciones aparecen bajo la carpeta de **Publicaciones locales** para el host de réplica principal y también para las réplicas secundarias legibles. Después de la conmutación por error, puede que tenga que actualizar manualmente [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] para que el cambio quede reflejado si el elemento secundario promovido a principal no era legible.  
   
 -   El Monitor de replicación muestra siempre la información de publicación en el publicador original. Sin embargo, esta información se puede ver en el Monitor de replicación de cualquier réplica al agregar el publicador original como servidor.  
   
--   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la réplica principal actual, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación (el publicador original). Para determinar el nombre correcto, use la función **PUBLISHINGSERVERNAME** . Cuando una base de datos de publicación se une a un grupo de disponibilidad, los metadatos de replicación almacenados en las réplicas de la base de datos secundaria son idénticos a los de la principal. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad principal, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad secundaria es el nombre de la entidad principal en lugar del nombre de la entidad secundaria. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad secundaria. Por ejemplo, si va a configurar la replicación con procedimientos almacenados en una entidad secundaria después de la conmutación por error y quiere una suscripción de extracción a una base de datos de publicación que se ha habilitado en otra réplica, debe especificar el nombre del publicador original en lugar del publicador actual como parámetro *\@publisher* de **sp_addpullsubscription** o **sp_addmergepulllsubscription**. Sin embargo, si habilita una base de datos de publicación después de la conmutación por error, el nombre de la instancia del publicador almacenado en las tablas del sistema es el nombre del host principal actual. En este caso, usaría el nombre de host de la réplica principal actual para el parámetro *\@publisher*.  
+-   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la réplica principal actual, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación (el publicador original). Para determinar el nombre correcto, use la función **PUBLISHINGSERVERNAME** . Cuando una base de datos de publicación se une a un grupo de disponibilidad, los metadatos de replicación almacenados en las réplicas de la base de datos secundaria son idénticos a los de la principal. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad principal, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad secundaria es el nombre de la entidad principal en lugar del nombre de la entidad secundaria. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad secundaria. Por ejemplo, si va a configurar la replicación con procedimientos almacenados en una entidad secundaria después de la conmutación por error y quiere una suscripción de extracción a una base de datos de publicación que se ha habilitado en otra réplica, debe especificar el nombre del publicador original en lugar del publicador actual como parámetro *\@publicador* de **sp_addpullsubscription** o **sp_addmergepulllsubscription**. Sin embargo, si habilita una base de datos de publicación después de la conmutación por error, el nombre de la instancia del publicador almacenado en las tablas del sistema es el nombre del host principal actual. En este caso, usaría el nombre de host de la réplica principal actual para el parámetro *\@publisher*.  
   
     > [!NOTE]  
     >  En algunos procedimientos, como **sp_addpublication**, el parámetro *\@publisher* solo se admite para publicadores que no sean instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; en estos casos, no es relevante para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn.  
   
 -   Para sincronizar una suscripción en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] tras una conmutación por error, sincronice las suscripciones de extracción del suscriptor y sincronice las suscripciones de inserción del publicador activo.  
   
-##  <a name="RemovePublDb"></a> Quitar una base de datos publicada de un grupo de disponibilidad  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Quitar una base de datos publicada de un grupo de disponibilidad  
  Tenga en cuenta los siguientes problemas si quita una base de datos publicada de un grupo de disponibilidad, o si quita un grupo de disponibilidad que tiene una base de datos de miembros publicada.  
   
 -   Si la base de datos de publicación del publicador original se quita de la réplica principal de un grupo de disponibilidad, debe ejecutar **sp_redirect_publisher** sin especificar un valor para el parámetro *\@redirected_publisher* a fin de quitar el redireccionamiento del par de publicador y base de datos.  
@@ -100,7 +100,7 @@ ms.locfileid: "70846767"
   
      En este momento, la copia de la base de datos publicada se puede conservar o quitar.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Configurar la replicación para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)  
   

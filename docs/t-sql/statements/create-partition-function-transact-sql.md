@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912615"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392703"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea una función en la base de datos actual que asigna las filas de una tabla o un índice a particiones según los valores de una columna especificada. El uso de CREATE PARTITION FUNCTION constituye el primer paso para la creación de una tabla o un índice con particiones. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], una tabla o un índice puede tener un máximo de 15.000 particiones.  
   
@@ -43,14 +43,16 @@ ms.locfileid: "67912615"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CREATE PARTITION FUNCTION partition_function_name ( input_parameter_type )  
 AS RANGE [ LEFT | RIGHT ]   
 FOR VALUES ( [ boundary_value [ ,...n ] ] )   
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *partition_function_name*  
  Es el nombre de la función de partición. Los nombres de las funciones de partición deben ser únicos en la base de datos y ajustarse a las reglas para los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -75,7 +77,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  Especifica el lado de cada intervalo de valores de límite, derecho o izquierdo, al que pertenece *boundary_value* [ **,** _...n_ ], cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] ordena los valores del intervalo en orden ascendente de izquierda a derecha. Si no se especifica, el valor predeterminado es LEFT.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El ámbito de una función de partición está limitado a la base de datos en la que se crea. Dentro de la base de datos, las funciones de partición residen en un espacio de nombres independiente de las demás funciones.  
   
  Las filas cuya columna de partición tenga valores NULL se colocan en la partición situada más a la izquierda, a menos que se especifique NULL como un valor de límite y se indique RIGHT. En este caso, la partición situada más a la izquierda es una partición vacía y los valores NULL se colocan en la siguiente.  
@@ -89,7 +91,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se está creando la función de partición.  
   
-##  <a name="BKMK_examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="BKMK_examples"></a> Ejemplos  
   
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Crear una función de partición RANGE LEFT en una columna int  
  La siguiente función de partición realizará cuatro particiones en una tabla o un índice.  
@@ -101,7 +103,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
   
  En la tabla siguiente se muestra cómo se crearían particiones en una tabla que usa esta función de partición en la columna de partición **col1**.  
   
-|Partición|1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
@@ -115,7 +117,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
   
  En la tabla siguiente se muestra cómo se crearían particiones en una tabla que usa esta función de partición en la columna de partición **col1**.  
   
-|Partición|1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valores**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
@@ -131,7 +133,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
   
  En la tabla siguiente se muestra cómo se crearían particiones en una tabla o un índice que usa esta función de partición en la columna de partición **datecol**.  
   
-|Partición|1|2|…|11|12|  
+|Partition|1|2|…|11|12|  
 |---------------|-------|-------|---------|--------|--------|  
 |**Valores**|**datecol** \< `February 1, 2003`|**datecol** >= `February 1, 2003` AND **datecol** \< `March 1, 2003`||**datecol** >= `November 1, 2003` AND **col1** \< `December 1, 2003`|**datecol** >= `December 1, 2003`| 
   
@@ -145,7 +147,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
   
  En la tabla siguiente se muestra cómo se crearían particiones en una tabla que usa esta función de partición en la columna de partición **col1**.  
   
-|Partición|1|2|3|4|  
+|Partition|1|2|3|4|  
 |---------------|-------|-------|-------|-------|  
 |**Valores**|**col1** \< `EX`...|**col1** >= `EX` AND **col1** \< `RXE`...|**col1** >= `RXE` AND **col1** \< `XR`...|**col1** >= `XR`| 
   

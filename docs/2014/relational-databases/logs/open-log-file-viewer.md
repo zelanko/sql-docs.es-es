@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3376b682b9d461547356920f837e62554640fe1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63144507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024695"
 ---
 # <a name="open-log-file-viewer"></a>Abrir el Visor de archivos de registro
   Puede usar el Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para obtener acceso a la información sobre los errores y eventos capturados en los registros siguientes:  
@@ -40,7 +39,7 @@ ms.locfileid: "63144507"
   
  El Visor del archivo de registros se puede abrir de varias maneras, dependiendo de la información que se desee ver.  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en línea, se requiere pertenecer al rol fijo de servidor securityadmin.  
   
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin conexión, se debe tener acceso de lectura tanto al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** como a la carpeta donde están almacenados los archivos de registro. Para obtener más información, vea la sección Seguridad del tema [Ver archivos del registro sin conexión](view-offline-log-files.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "63144507"
   
 1.  En el Explorador de objetos, expanda **Administración**.  
   
-2.  Realice una de las acciones siguientes:  
+2.  Realice cualquiera de las siguientes acciones:  
   
     -   Haga clic con el botón derecho en **Registros de SQL Server**, seleccione **Ver**y, después, haga clic en **Registro de SQL Server** o **Registro de Windows y SQL Server**.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63144507"
   
      Los registros son **Recopilación de auditoría** y **Windows NT**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Visor de archivos de registro](log-file-viewer.md)   
  [SQL Server Audit &#40;motor de base de datos&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Ver archivos del registro sin conexión](view-offline-log-files.md)  

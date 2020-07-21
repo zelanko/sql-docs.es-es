@@ -1,5 +1,5 @@
 ---
-title: Sistema de control de versiones para la documentación de SQL | Microsoft Docs
+title: Sistema de control de versiones para la documentación de SQL
 ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: ''
@@ -9,12 +9,12 @@ ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7813368e08c8d1fdf4da1e2ee1e6775f56557d0a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907949"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150605"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de control de versiones para la documentación de SQL
 
@@ -56,7 +56,7 @@ El _código_ de moniker de la dirección `https` siempre coincide con el _nombre
 
 ## <a name="products-not-editions"></a>Productos, no ediciones
 
-### <a name="editions"></a>ediciones
+### <a name="editions"></a>Ediciones
 
 En los años 90 y en los 2000, Microsoft SQL Server solo tenía un producto. Había varias _ediciones_ de cada versión de SQL Server, como las ediciones _Developer_ y _Enterprise_ de SQL Server 2008. Las ediciones representaban conjuntos de características ligeramente distintas, pero el producto principal era el mismo. Es posible que las versiones nuevas de SQL Server todavía tengan varias ediciones.
 
@@ -113,9 +113,9 @@ En el siguiente escenario poco habitual se explica lo que sucede si se hace clic
 
 El siguiente artículo se ha agregado como novedad para SQL Server 2017. En el artículo se describen las características que se han agregado a la versión 2017 de SQL Server. La mayoría o todas esas características nuevas también forman parte de la versión 2019. Estos son los atributos del artículo.
 
-| Attribute | Valor |
+| Atributo | Value |
 | :-------- | :---- |
-| Title | Novedades de SQL Server 2017 |
+| Título | Novedades de SQL Server 2017 |
 | Intervalo de moniker | `>= sql-server-2017 || = sqlallproducts-allversions` |
 | Dirección `https` | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |
@@ -130,13 +130,13 @@ Dada la dirección `https` base, en la tabla siguiente se explica lo que sucede 
 | `sql-server-2019` | Es similar al caso del valor `sql-server-2017`, excepto que el parámetro y el control se establecen en 2019. |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> Moniker especial All SQL - Hide nothing (Todo SQL: no ocultar nada)
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> Moniker especial All SQL - Hide nothing (Todo SQL: no ocultar nada)
 
 Hay un nombre de producto de moniker especial, **All SQL** (Todo SQL) y su única versión **Hide nothing** (No ocultar nada). El propósito de este moniker es realizar pruebas internas de determinados cambios. Si lo usa un cliente, es probable que este moniker desoriente más que informar.
 
 Algunos artículos tienen información relacionada con varias versiones de SQL Server. Cada moniker normal oculta las secciones con versiones que, de lo contrario, podrían mostrar información inexacta, confusa o contradictoria para la versión del moniker. El moniker **All SQL** especial mostraría todas las secciones de la versión y es posible que no sea evidente que se muestra información inexacta.
 
-## <a name="anchor-message-unavailable-for-moniker"></a> Mensaje: La página solicitada no está disponible para el \<moniker\>
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Mensaje: La página solicitada no está disponible para el \<moniker\>
 
 El siguiente escenario conduce a la presentación de un mensaje informativo junto a la parte superior de la página web :::no-loc text="Docs"::::
 
@@ -166,9 +166,9 @@ El sistema de control de versiones está totalmente implementado para SQL Server
     - [Documentación de SQL Server 2014](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
 
 - _2016 y versiones posteriores:_ &nbsp; el sistema de control de versiones está totalmente implementado para SQL Server 2016 y versiones posteriores.
-    - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/index.yml?view=sql-server-2016)
+    - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/?view=sql-server-2016)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Versiones anteriores de SQL Server, 2014-2005](../toc/previous-versions-sql-server.md)  
 [Guía de navegación de la documentación de SQL Server](sql-docs-navigation-guide.md)  

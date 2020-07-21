@@ -1,5 +1,6 @@
 ---
 title: Protección de su propiedad intelectual de SQL Server | Microsoft Docs
+description: Entienda las opciones para proteger la propiedad intelectual de una aplicación de datos de SQL Server que se distribuye a los clientes.
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc6b2c88fc2405aea99ac8ce7de9c38cf43c99aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773879"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Proteger su propiedad intelectual de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Los desarrolladores de software a menudo preguntan cómo pueden distribuir su aplicación de datos [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] a los clientes y a la vez evitar que la analicen y deconstruyan. En esta situación, lo esencial es proteger su propiedad intelectual. Se trata de un problema legal y la protección correspondiente reside en su contrato de licencia. Si [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está instalado en un equipo administrado por terceros, usted pierde algunos aspectos de control de forma inherente. 
 
@@ -39,6 +40,6 @@ También puede hospedar un sistema [!INCLUDE[ssNoVersion_md](../../includes/ssno
 
 ## <a name="see-also"></a>Consulte también
 
-[Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Proteger SQL Server](../../relational-databases/security/securing-sql-server.md)  
 

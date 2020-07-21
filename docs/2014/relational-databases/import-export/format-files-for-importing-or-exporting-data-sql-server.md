@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463bd0f3fee203820eb6312a6d4ecfa3165d31b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026820"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Archivos de formato para importar o exportar datos (SQL Server)
   Al importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o exportar masivamente datos de una tabla, puede usar un *archivo de formato* para almacenar toda la información de formato necesaria para exportar o importar datos masivamente. Esto incluye la información de formato para cada campo de un archivo de datos relativo a la tabla.  
@@ -28,14 +27,14 @@ ms.locfileid: "66011950"
   
  
   
-##  <a name="Benefits"></a> Ventajas de los archivos de formato  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> Ventajas de los archivos de formato  
   
 -   El archivo de formato proporciona una manera flexible de escribir archivos de datos que requiere poca o ninguna modificación para adaptarlos a otros formatos de datos y para leer archivos de datos de otros programas.  
   
 -   Permite realizar la importación masiva de datos sin tener que agregar o eliminar datos innecesarios o reordenar los datos existentes en el archivo de datos. Los archivos de formato resultan especialmente útiles cuando existe una discrepancia entre los campos del archivo de datos y las columnas de la tabla.  
   
-##  <a name="ExamplesOfFFs"></a> Ejemplos de archivos de formato  
- Los siguientes ejemplos muestran el diseño de un archivo de formato no XML y de un archivo de formato XML. Estos archivos de formato corresponden a la tabla `HumanResources.myTeam` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esta tabla tiene cuatro columnas: `EmployeeID`, `Name`, `Title` y `ModifiedDate`.  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Ejemplos de archivos de formato  
+ Los siguientes ejemplos muestran el diseño de un archivo de formato no XML y de un archivo de formato XML. Estos archivos de formato corresponden a la tabla `HumanResources.myTeam` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esta tabla tiene cuatro columnas: `EmployeeID`, `Name`, `Title`y `ModifiedDate`.  
   
 > [!NOTE]  
 >  Para obtener más información sobre la tabla y cómo crearla, vea [Tabla de ejemplo HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
@@ -57,7 +56,7 @@ The contents of this format file are as follows: 9.0
   
  
   
-### <a name="b-using-an-xml-format-file"></a>b. Uso de un archivo de formato XML  
+### <a name="b-using-an-xml-format-file"></a>B. Uso de un archivo de formato XML  
  El siguiente archivo de formato XML usa el formato de datos nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la tabla `HumanResources.myTeam` . Este formato se creó usando el siguiente comando `bcp` .  
   
 ```  
@@ -88,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-##  <a name="WhenFFrequired"></a> ¿Cuándo se necesita un archivo de formato?  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> ¿Cuándo se necesita un archivo de formato?  
  Una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) necesita siempre un archivo de formato.  
   
 -   Para **bcp** o BULK INSERT, en situaciones simples, el uso de un archivo de formato es opcional y pocas veces necesario. Sin embargo, en situaciones de importación masiva complejas, el archivo de formato suele ser necesario.  
@@ -114,7 +113,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -128,7 +127,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de formato no XML &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  

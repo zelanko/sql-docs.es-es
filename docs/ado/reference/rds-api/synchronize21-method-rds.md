@@ -11,20 +11,20 @@ apitype: COM
 helpviewer_keywords:
 - Synchronize21 method [ADO]
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750559"
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
-Sincronizar el conjunto de registros determinado con la base de datos especificada por la cadena de conexión para su uso con ADO 2.1.  
+Sincronizar el conjunto de registros dado con la base de datos especificada por la cadena de conexión para su uso con ADO 2,1.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,33 +35,33 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
   
 #### <a name="parameters"></a>Parámetros  
  *ConnectionString*  
- Cadena utilizada para conectarse al proveedor OLE DB donde se enviará la solicitud. Si se usa un controlador, el controlador puede modificar o reemplazar la cadena de conexión.  
+ Cadena que se usa para conectar con el proveedor de OLE DB donde se enviará la solicitud. Si se usa un controlador, el controlador puede editar o reemplazar la cadena de conexión.  
   
  *HandlerString*  
- La cadena identifica el controlador que se usará con esta ejecución. La cadena contiene dos partes. La primera parte contiene el nombre (ProgID) del controlador que se usará. La segunda parte de la cadena contiene argumentos que se pasarán al controlador. Cómo se interpreta la cadena de argumentos es específico del controlador. Las dos partes se separan con la primera instancia de una coma en la cadena. La cadena de argumentos puede contener comas adicionales. Los argumentos son opcionales.  
+ La cadena identifica el controlador que se va a utilizar con esta ejecución. La cadena contiene dos partes. La primera parte contiene el nombre (ProgID) del controlador que se va a usar. La segunda parte de la cadena contiene los argumentos que se van a pasar al controlador. La forma en que se interpreta la cadena arguments es específica del controlador. Las dos partes se separan mediante la primera instancia de una coma de la cadena. La cadena arguments puede contener comas adicionales. Los argumentos son opcionales.  
   
  *lSynchronizeOptions*  
- Una máscara de bits de las opciones de sincronización.  
+ Máscara de bits de las opciones de sincronización.  
   
- 1 =*UpdateTransact* las actualizaciones de la base de datos se encapsulan en una transacción. Si alguna de las actualizaciones se producen errores, se anula la transacción.  
+ 1 =*UpdateTransact* las actualizaciones de la base de datos se ajustan en una transacción. La transacción se anula si se produce un error en alguna de las actualizaciones.  
   
- 2 =*RefreshWithUpdate* causas fila los Estados que se devolverán cuando ninguna de ellas *actualizar* ni *RefreshConflicts* está establecido.  
+ 2 =*RefreshWithUpdate* hace que se devuelvan los Estados de fila cuando no se establece ninguna *actualización* ni *RefreshConflicts* .  
   
- 4 =*actualizar* se actualiza el conjunto de registros con datos actuales de la base de datos. Las actualizaciones pendientes no se insertan en la base de datos. Si no se establece este bit, no se actualiza el conjunto de registros y las actualizaciones pendientes se insertan en la base de datos.  
+ 4 = la*actualización* del conjunto de registros se actualiza con los datos actuales de la base de datos. Las actualizaciones pendientes no se insertan en la base de datos. Si no se establece este bit, el conjunto de registros no se actualiza y se insertan las actualizaciones pendientes en la base de datos.  
   
- 8 =*RefreshConflicts* no se pudieron actualizar las filas con cambios pendientes. Se actualizan las filas que no se pudieron actualizar con datos actuales de la base de datos.  
+ 8 =*RefreshConflicts* las filas con cambios pendientes no se pueden actualizar. Las filas que no se pudieron actualizar se actualizan con los datos actuales de la base de datos.  
   
  *ppRecordset*  
- Un puntero a un puntero al conjunto de registros que se sincronizarán.  
+ Un puntero a un puntero al conjunto de registros que se va a sincronizar.  
   
  *pStatusArray*  
- Una variante que se usa para devolver una matriz segura de los Estados de fila para las filas afectadas por sincronizar. No se establece si se establece ninguna de las siguientes opciones de sincronización: *RefreshWithUpdate*, *actualizar* y *RefreshConflicts*.  
+ Variant que se usa para devolver una matriz segura de Estados de fila para las filas afectadas por la sincronización. No se establece si no se establece ninguna de las siguientes opciones de sincronización: *RefreshWithUpdate*, *Refresh* y *RefreshConflicts*.  
   
 ## <a name="remarks"></a>Comentarios  
- El *HandlerString* parámetro puede ser null. ¿Qué ocurre en este caso depende de cómo se configura el servidor RDS. Una cadena de controlador de "MSDFMAP.handler" indica que se debe usar el controlador de Microsoft proporcionada (Msdfmap.dll). Una cadena de controlador de "MASDFMAP.handler,sample.ini" indica que se debe usar el controlador Msdfmap.dll y que se debe pasar el argumento "sample.ini" al controlador. MSDFMAP.dll interpretará, a continuación, el argumento como una dirección que desea utilizar el sample.ini para comprobar las cadenas de conexión y consulta.  
+ El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (MSDFMAP. dll). Una cadena de controlador de "MASDFMAP. handler, sample. ini" indica que se debe usar el controlador MSDFMAP. dll y que el argumento "sample. ini" se debe pasar al controlador. Después, MSDFMAP. dll interpretará el argumento como una dirección para usar el archivo Sample. ini con el fin de comprobar las cadenas de conexión y de consulta.  
   
 > [!NOTE]
->  El **Synchronize21** método es simplemente una versión de la [método sincronizar (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Donde deberá usar el **Synchronize** método para comunicarse con ADO 2.1, la **Synchronize21** método se puede llamar en su lugar. Las capacidades de la **Synchronize** método ADO 2.5 y versiones posterior son un superconjunto de las capacidades proporcionadas para el mismo método en ADO 2.1.  
+>  El método **Synchronize21** es simplemente una versión del [método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). En el caso de que necesite usar el método **Synchronize** para comunicarse con ADO 2,1, se puede llamar al método **Synchronize21** en su lugar. Las capacidades del método **Synchronize** en ADO 2,5 y versiones posteriores son un superconjunto de las funciones proporcionadas para el mismo método en ADO 2,1.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

@@ -21,10 +21,10 @@ ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68126073"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de red y bibliotecas de red
@@ -59,15 +59,15 @@ ms.locfileid: "68126073"
   
 3.  Siga los pasos de desinstalación.  
   
-4.  Seleccione **Compartir impresoras y archivos para redes Microsoft**y, a continuación, haga clic en **Desinstalar**.  
+4.  Seleccione **Compartir impresoras y archivos para redes Microsoft** y, a continuación, haga clic en **Desinstalar**.  
   
 5.  Siga los pasos de desinstalación.  
   
 #### <a name="to-disable-smb-on-servers-accessible-from-the-internet"></a>Para deshabilitar SMB en servidores accesibles desde Internet  
   
--   En las propiedades de Conexión de área local, use el cuadro de diálogo **Propiedades de Protocolo de control de transporte/Protocolo Internet (TCP/IP)** para quitar **Compartir impresoras y archivos para redes Microsoft** y **Cliente para redes Microsoft**.  
+-   En las propiedades de Conexión de área local, utilice el cuadro de diálogo **Propiedades de Protocolo de control de transporte/Protocolo Internet (TCP/IP)** para quitar **Impresoras y archivos para redes Microsoft** y **Cliente para redes Microsoft**.  
   
-## <a name="endpoints"></a>Extremos  
+## <a name="endpoints"></a>Puntos de conexión  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presenta un nuevo concepto para conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; la conexión se representa en el extremo de servidor mediante un [!INCLUDE[tsql](../../includes/tsql-md.md)]*de*. Se pueden otorgar, revocar y denegar permisos para extremos de [!INCLUDE[tsql](../../includes/tsql-md.md)] . De manera predeterminada, todos los usuarios tienen permisos para obtener acceso a un extremo, a menos que los permisos sean denegados o revocados por un miembro del grupo sysadmin o por el propietario del extremo. La sintaxis GRANT, REVOKE y DENY ENDPOINT utiliza un Id. de extremo que el administrador debe obtener de la vista de catálogo del extremo.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea extremos de [!INCLUDE[tsql](../../includes/tsql-md.md)] para todos los protocolos de red admitidos, así como para la conexión de administrador dedicada.  

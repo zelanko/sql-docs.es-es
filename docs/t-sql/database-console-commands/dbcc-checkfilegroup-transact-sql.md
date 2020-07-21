@@ -25,21 +25,21 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad67fa7e1cda5208fa5468e233c60a27edb10837
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754834"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Comprueba la asignación y la integridad estructural de todas las tablas y vistas indizadas del grupo de archivos especificado de la base de datos actual.
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
   
 DBCC CHECKFILEGROUP   
 [  
@@ -67,7 +67,7 @@ DBCC CHECKFILEGROUP
  Es el número de identificación (identificador) del grupo de archivos de la base de datos actual para el que se debe comprobar la asignación de tablas y la integridad estructural.  
   
  NOINDEX  
- Especifica que no se deben realizar comprobaciones intensivas de índices no clúster para las tablas de usuario. Esto reduce el tiempo total de ejecución. La opción NOINDEX no afecta a las tablas del sistema, ya que DBCC CHECKFILEGROUP siempre comprueba todos los índices de las tablas del sistema.  
+ Especifica que no se deben realizar comprobaciones intensivas de índices no agrupado para las tablas de usuario. Esto reduce el tiempo total de ejecución. La opción NOINDEX no afecta a las tablas del sistema, ya que DBCC CHECKFILEGROUP siempre comprueba todos los índices de las tablas del sistema.  
   
  ALL_ERRORMSGS  
  Muestra un número ilimitado de errores por objeto. De forma predeterminada, se muestran todos los mensajes de error. Especificar u omitir esta opción no tiene ningún efecto.  
@@ -99,7 +99,7 @@ DBCC CHECKFILEGROUP
 > [!CAUTION]  
 >  Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC CHECKFILEGROUP y DBCC CHECKDB son comandos DBCC similares. La diferencia principal es que DBCC CHECKFILEGROUP se limita al grupo de archivos especificado y a las tablas necesarias.
 DBCC CHECKFILEGROUP ejecuta los siguientes comandos:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) del grupo de archivos.  

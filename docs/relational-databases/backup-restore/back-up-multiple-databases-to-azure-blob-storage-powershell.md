@@ -1,7 +1,9 @@
 ---
-title: Realizar copias de seguridad de varias bases de datos en Azure Blob Storage - PowerShell | Microsoft Docs
-ms.custom: ''
-ms.date: 05/21/2016
+title: 'Copia de seguridad de varias bases de datos: Azure Blob Storage'
+description: En este tema se ofrecen scripts de ejemplo que se pueden utilizar para automatizar las copias de seguridad de SQL Server en el servicio Azure Blob Storage con los cmdlets de PowerShell.
+titleSuffix: PowerShell
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,16 +12,16 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbfcee4bd7ceafb7d09f9719744e5d1e89776499
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: e8cd67af06699c929e1f84f948606a6411c5e1a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722498"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Realizar copias de seguridad de varias bases de datos en Azure Blob Storage - PowerShell
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio Azure Blob Storage con los cmdlets de PowerShell.  
   
@@ -165,8 +167,8 @@ foreach ($database in $databases) {
     catch { Write-Host $_.Exception.Message } }
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)
 
-[Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)
+[Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

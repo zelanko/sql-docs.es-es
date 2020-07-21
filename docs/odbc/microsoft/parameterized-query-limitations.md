@@ -1,5 +1,5 @@
 ---
-title: Parametrizar consultas limitaciones | Microsoft Docs
+title: Limitaciones de las consultas con parámetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 4edc0566-bba8-42b2-ab0e-60dfb67b5e7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc7d6a88cca932187d0b8ce5e09c82cb8420a63d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55a89e2ae0493cca1562b056e21455c6fd09242f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043702"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81290786"
 ---
 # <a name="parameterized-query-limitations"></a>Limitaciones de la consulta con parámetros
-Cuando se usa el controlador de Microsoft Access, se puede llamar a una consulta parametrizada usando la sintaxis siguiente: Llame a *nombre de la consulta* [(*parámetro*[,*parámetro*]...)].
+Cuando se usa el controlador de Microsoft Access, se puede llamar a una consulta con parámetros mediante la siguiente sintaxis: CALL *-Name* [(*parámetro*[,*parámetro*]...)].

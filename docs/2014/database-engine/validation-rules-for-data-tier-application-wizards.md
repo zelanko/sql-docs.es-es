@@ -1,5 +1,5 @@
 ---
-title: Reglas de validación para los asistentes para aplicaciones de capa de datos | Microsoft Docs
+title: Reglas de validación para los asistentes de aplicación de capa de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 422872b7-b0cd-466d-a6bf-2e2c8a2f8da5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23b19a53b512996f72990714ba3a478965179a1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19dc400cac04fbf0956a33b899d18e3dcee449ac
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773391"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927626"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>Reglas de validación para los asistentes de aplicación de capa de datos
   Este tema se actualizará con la acción correctora para las reglas de validación en asistentes de aplicación de capa de datos.  

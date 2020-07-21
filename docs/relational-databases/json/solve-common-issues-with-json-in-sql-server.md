@@ -1,9 +1,7 @@
 ---
-title: Resolver problemas comunes con JSON en SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 07/07/2016
+title: Resolver problemas comunes con JSON en SQL Server
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 268ec12e297d6c8a3e5dd869d0d143877a81e505
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0e5a115c8ba86553954ab325651a1bb89cf6c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730369"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Resolver problemas comunes con JSON en SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  Encuentre respuestas en este artículo a algunas preguntas habituales sobre la compatibilidad integrada de JSON en SQL Server.  
  
@@ -41,7 +41,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  
@@ -74,7 +74,7 @@ FOR JSON PATH
   
  JSON_QUERY sin su segundo parámetro opcional devuelve solo el primer argumento como resultado. Puesto que JSON_QUERY siempre devuelve texto JSON válido, FOR JSON reconoce que este resultado no tiene que ir con caracteres de escape.
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>Texto JSON generado con la cláusula WITHOUT_ARRAY_WRAPPER y con caracteres de escape en el resultado FOR JSON  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>Texto JSON generado con la cláusula WITHOUT_ARRAY_WRAPPER y con caracteres de escape en el resultado FOR JSON  
  **Pregunta.** Estoy tratando de dar formato a una expresión de columna mediante FOR JSON y la opción WITHOUT_ARRAY_WRAPPER.  
   
 ```sql  
@@ -96,7 +96,7 @@ FOR JSON PATH
 ## <a name="openjson-and-json-input"></a>Entrada de OPENJSON y JSON
 
 ### <a name="return-a-nested-json-sub-object-from-json-text-with-openjson"></a>Devolución de un subobjeto JSON anidado a partir de texto JSON con OPENJSON  
- **Pregunta.** No puedo abrir una matriz de objetos complejos JSON que contiene matrices, objetos y valores escalares empleando OPENJSON con un esquema explícito. Cuando hago referencia a una clave en la cláusula WITH, se devuelven solo los valores escalares. Los objetos y las matrices se devuelven como valores NULL. ¿Cómo puedo extraer objetos o matrices como objetos JSON?  
+ **Pregunta.** No puedo abrir una matriz de objetos JSON complejos que contiene matrices, objetos y valores escalares empleando OPENJSON con un esquema explícito. Cuando hago referencia a una clave en la cláusula WITH, se devuelven solo los valores escalares. Los objetos y las matrices se devuelven como valores NULL. ¿Cómo puedo extraer objetos o matrices como objetos JSON?  
   
  **Respuesta.** Si quiere devolver un objeto o matriz como una columna, use la opción AS JSON en la definición de columna, tal y como se muestra en el ejemplo siguiente.  
   
@@ -110,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>Devolver valores de texto largo con OPENJSON en lugar de JSON_VALUE
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>Devolver valores de texto largo con OPENJSON en lugar de JSON_VALUE
  **Pregunta.** Tengo una clave de descripción en JSON que contiene texto largo. `JSON_VALUE(@json, '$.description')` devuelve NULL en lugar de un valor.  
   
  **Respuesta.** JSON_VALUE se ha diseñado para devolver valores escalares de tamaño reducido. Generalmente, la función devuelve NULL en lugar de un error de desbordamiento. Si quiere que se devuelvan valores de mayor tamaño, utilice OPENJSON, que admite valores NVARCHAR(MAX), tal y como se muestra en el ejemplo siguiente.  
@@ -119,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>Controlar claves duplicadas con OPENJSON en lugar de JSON_VALUE
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>Controlar claves duplicadas con OPENJSON en lugar de JSON_VALUE
  **Pregunta.** Tengo claves duplicadas en el texto JSON. JSON_VALUE devuelve solo la primera clave que se encuentra en la ruta de acceso. ¿Cómo puedo devolver todas las claves que tengan el mismo nombre?  
   
  **Respuesta.** Las funciones escalares JSON integradas devuelven solo la primera aparición del objeto de referencia. Si necesita más de una clave, utilice la función con valores de tabla OPENJSON, tal y como se muestra en el ejemplo siguiente.  

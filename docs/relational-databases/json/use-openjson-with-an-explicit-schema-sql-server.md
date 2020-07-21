@@ -1,9 +1,7 @@
 ---
-title: Uso de OPENJSON con un esquema explícito (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: Uso de OPENJSON con un esquema explícito
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d087a257a0d53baa0c92bad437c6a988f2d8d23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66cbabd4b762f65a63a11294b495256824243173
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760750"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>Uso de OPENJSON con un esquema explícito (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Use **OPENJSON** con un esquema explícito para devolver una tabla que tiene el formato especificado en la cláusula WITH.  
   
@@ -53,7 +53,7 @@ WITH ( k1 int,
  )  
 ```  
   
- **Resultado**  
+ **Resultados**  
   
 |k1|k2|col3|col4|col5|array_element|  
 |--------|--------|----------|----------|----------|--------------------|  
@@ -62,7 +62,7 @@ WITH ( k1 int,
 |31|"32"|*NULL*|*NULL*|*NULL*|{"k1": 31, "k2": 32 }|  
 |41|*NULL*|*NULL*|false|{ "data": false }|{"k1": 41, "k2": null,       "k4": { "data": false }    }|  
   
-## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>Ejemplo: Carga de JSON en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="example---load-json-into-a-ssnoversion-table"></a>Ejemplo: Carga de JSON en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En el ejemplo siguiente se carga un objeto JSON completo en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```sql  

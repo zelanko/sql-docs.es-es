@@ -10,72 +10,72 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO], details
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922524"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747756"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
-Estos son los elementos clave del modelo de programación de RDS:  
+Los siguientes son elementos clave del modelo de programación de RDS:  
   
--   RDS. Espacio de datos  
+-   ActiveX. DataSpace  
   
--   RDSServer.DataFactory  
+-   RDSServer. DataFactory  
   
--   RDS. Control de datos  
+-   ActiveX. DataControl  
   
 -   Evento  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="rdsdataspace"></a>RDS. Espacio de datos  
- La aplicación cliente debe especificar el servidor y el programa de servidor para invocar. En cambio, la aplicación recibe una referencia al programa de servidor y puede tratar la referencia como si fuera el propio programa de servidor.  
+## <a name="rdsdataspace"></a>ActiveX. DataSpace  
+ La aplicación cliente debe especificar el servidor y el programa de servidor que se va a invocar. A cambio, la aplicación recibe una referencia al programa de servidor y puede tratar la referencia como si fuera el propio programa de servidor.  
   
- El modelo de objetos RDS incluye esta funcionalidad con el [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto.  
+ El modelo de objetos RDS incluye esta funcionalidad con [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) .  
   
- El programa de servidor se especifica con un identificador de programa, o *ProgID*. El servidor usa el *ProgID* y del registro del equipo servidor para buscar información sobre el programa real para iniciar.  
+ El programa de servidor se especifica con un identificador de programa o *ProgID*. El servidor utiliza el *ProgID* y el registro del equipo servidor para buscar información acerca del programa real que se va a iniciar.  
   
- RDS hace una distinción interna dependiendo de si el programa de servidor está en un servidor remoto a través de Internet o una intranet; un servidor en una red de área local; o no en un servidor en absoluto, sino en una biblioteca de vínculos dinámicos (DLL) local. Esta distinción determina cómo se intercambia entre el cliente y el servidor de información y marca una diferencia tangible en el tipo de referencia que se devuelven a la aplicación cliente. Sin embargo, desde el punto de vista, esta distinción tiene ningún significado especial. Lo único que importa es que reciba una referencia de programa utilizable.  
+ RDS realiza una distinción internamente en función de si el programa de servidor está en un servidor remoto a través de Internet o de una intranet. un servidor en una red de área local; o no en un servidor, sino en una biblioteca de vínculos dinámicos (DLL) local. Esta distinción determina cómo se intercambia información entre el cliente y el servidor, y realiza una diferencia tangible en el tipo de referencia que se devuelve a la aplicación cliente. Sin embargo, desde el punto de vista, esta distinción no tiene ningún significado especial. Lo único que importa es que reciba una referencia de programa utilizable.  
   
-## <a name="rdsserverdatafactory"></a>RDSServer.DataFactory  
- RDS proporciona un programa de servidor predeterminado que puede realizar una consulta SQL en el origen de datos y volver una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto o tomar una **Recordset** objeto y actualizar el origen de datos.  
+## <a name="rdsserverdatafactory"></a>RDSServer. DataFactory  
+ RDS proporciona un programa de servidor predeterminado que puede realizar una consulta SQL en el origen de datos y devolver un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) , o bien tomar un objeto de **conjunto de registros** y actualizar el origen de datos.  
   
- El modelo de objetos RDS incluye esta funcionalidad con el [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
+ El modelo de objetos RDS incluye esta funcionalidad con el objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) .  
   
- Además, este objeto tiene un método para crear un valor vacío **Recordset** objeto que se puede rellenar mediante programación ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) y otro método para convertir un **conjunto de registros**  objeto en una cadena de texto para crear una página Web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ Además, este objeto tiene un método para crear un objeto de **conjunto de registros** vacío que se puede rellenar mediante programación ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)) y otro método para convertir un objeto de **conjunto de registros** en una cadena de texto para compilar una página web ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
   
- Con ADO, puede reemplazar algunas de las conexiones estándar y el comportamiento de comando de la **RDSServer.DataFactory** con un **DataFactory** controlador y un archivo de personalización que contiene la conexión, comando y los parámetros de seguridad.  
+ Con ADO, puede invalidar algunos de los comportamientos estándar de conexión y comando de **RDSServer. DataFactory** con un controlador **DataFactory** y un archivo de personalización que contiene los parámetros de conexión, comando y seguridad.  
   
- El programa de servidor se denomina a veces un *objeto comercial*. Puede escribir su propio objeto de negocios personalizada que puede realizar el acceso a datos complicadas, comprobaciones de validez y así sucesivamente. Incluso al escribir un objeto comercial personalizado, puede crear una instancia de un **RDSServer.DataFactory** de objetos y usar algunas de sus métodos para realizar sus propias tareas.  
+ El programa de servidor se denomina a veces *objeto comercial*. Puede escribir su propio objeto comercial personalizado que puede realizar un acceso a datos complicado, comprobaciones de validez, etc. Incluso al escribir un objeto comercial personalizado, puede crear una instancia de un objeto **RDSServer. DataFactory** y usar algunos de sus métodos para realizar sus propias tareas.  
   
-## <a name="rdsdatacontrol"></a>RDS. Control de datos  
- RDS proporciona un medio para combinar la funcionalidad de la **RDS. DataSpace** y **RDSServer.DataFactory**y también permiten controles visuales utilizar fácilmente la **Recordset** objeto devuelto por una consulta desde un origen de datos. Intentos de RDS, para que el caso más común para realizar tanto como sea posible para obtener acceso a información en un servidor y mostrarlos en un control visual automáticamente.  
+## <a name="rdsdatacontrol"></a>ActiveX. DataControl  
+ RDS proporciona un medio para combinar la funcionalidad de **RDS. DataSpace** y **RDSServer. DataFactory**, y también permiten a los controles visuales usar fácilmente el objeto de **conjunto de registros** devuelto por una consulta de un origen de datos. RDS intenta, en el caso más común, hacer lo máximo posible para obtener acceso automáticamente a la información de un servidor y mostrarlo en un control visual.  
   
- El modelo de objetos RDS incluye esta funcionalidad con el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ El modelo de objetos RDS incluye esta funcionalidad con [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- El **RDS. DataControl** tiene dos aspectos. Un aspecto pertenece al origen de datos. Si establece el comando y la información de conexión con el **Connect** y **SQL** propiedades de la **RDS. DataControl**, usarán automáticamente la **RDS. DataSpace** para crear una referencia al valor predeterminado **RDSServer.DataFactory** objeto. El **RDSServer.DataFactory** usará el **Connect** valor de propiedad para conectarse al origen de datos, use el **SQL** valor de propiedad para obtener un  **Conjunto de registros** desde el origen de datos y devolver el **Recordset** de objeto para el **RDS. DataControl**.  
+ **Objeto RDS. DataControl** tiene dos aspectos. Un aspecto pertenece al origen de datos. Si establece la información de conexión y comando mediante las propiedades **Connect** y **SQL** de **RDS. DataControl**, usará automáticamente **RDS. DataSpace** para crear una referencia al objeto **RDSServer. DataFactory** predeterminado. A continuación, **RDSServer. DataFactory** usará el valor de la propiedad **Connect** para conectarse al origen de datos, usar el valor de la propiedad **SQL** para obtener un **conjunto de registros** del origen de datos y devolver el objeto de conjunto de **registros** a **RDS. DataControl**.  
   
- El segundo aspecto pertenece a la presentación de devuelto **Recordset** información en un control visual. Puede asociar un control visual con el **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información de asociado **Recordset** objeto, mostrar los resultados de consulta en una página Web de Microsoft® Internet Explorer. Cada **RDS. DataControl** objeto enlaza una **Recordset** objeto que representa los resultados de una sola consulta, a uno o varios controles visuales (por ejemplo, un cuadro de texto, cuadro combinado, control de cuadrícula y así sucesivamente). Puede haber más de uno **RDS. DataControl** objeto en cada página. Cada **RDS. DataControl** objeto se puede conectar a un origen de datos diferentes y contener los resultados de una consulta independiente.  
+ El segundo aspecto pertenece a la presentación de la información de **conjunto de registros** devuelta en un control visual. Puede asociar un control visual a **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información del objeto de **conjunto de registros** asociado, mostrando los resultados de la consulta en una página Web de Microsoft® Internet Explorer. Cada **RDS. **El objeto DataControl enlaza un objeto de **conjunto de registros** , que representa los resultados de una sola consulta, a uno o más controles visuales (por ejemplo, un cuadro de texto, un cuadro combinado, un control de cuadrícula, etc.). Puede haber más de un **RDS. Objeto DataControl** en cada página. Cada **RDS. **El objeto DataControl puede estar conectado a un origen de datos diferente y contener los resultados de una consulta independiente.  
   
- El **RDS. DataControl** objeto también tiene sus propios métodos para explorar, ordenar y filtrar las filas del asociado **Recordset** objeto. Estos métodos son similares, pero no igual que con los métodos de ADO **Recordset** objeto.  
+ **Objeto RDS. **El objeto DataControl también tiene sus propios métodos para navegar, ordenar y filtrar las filas del objeto de conjunto de **registros** asociado. Estos métodos son similares, pero no son los mismos que los métodos del objeto de **conjunto de registros** de ADO.  
   
-## <a name="events"></a>Events  
- RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. El [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) se llama al evento cada vez que el **RDS. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) los cambios de propiedad, lo que le avise cuando se haya completado correctamente una operación asincrónica, finalizado o ha experimentado un error. El [onError](../../../ado/reference/rds-api/onerror-event-rds.md) se llama al evento cada vez que se produce un error, incluso si el error se produce durante una operación asincrónica.  
+## <a name="events"></a>Eventos  
+ RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. Se llama al evento [onreadystatechange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) siempre que el **objeto RDS. **Los cambios en la propiedad [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) de DataControl, lo que le notifica cuando una operación asincrónica ha finalizado correctamente, finalizado o se ha producido un error. Se llama al evento [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) siempre que se produce un error, incluso si se produce un error durante una operación asincrónica.  
   
 > [!NOTE]
->  Microsoft Internet Explorer proporciona dos eventos adicionales a RDS: **onDataSetChanged**, lo que indica que el **Recordset** es funcional pero sigue recuperando filas, y  **onDataSetComplete**, lo que indica que el **Recordset** ha terminado de recuperar filas.  
+>  Microsoft Internet Explorer proporciona dos eventos adicionales a RDS: **onDataSetChanged**, que indica que el **conjunto de registros** es funcional pero sigue recuperando filas, y **onDataSetComplete**, que indica que el **conjunto de registros** ha terminado de recuperar filas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modelo de programación de RDS con objetos](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Escenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+ [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

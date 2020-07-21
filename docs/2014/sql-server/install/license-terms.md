@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9d3f1a5e021eb564e4570e9f115e40329edcdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4407143e3e045326011fdb4e8a1eb4a0ee61f95b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045116"
 ---
 # <a name="license-terms"></a>Términos de licencia
   Use la página Términos de licencia para aceptar los términos de la licencia de esta versión.  

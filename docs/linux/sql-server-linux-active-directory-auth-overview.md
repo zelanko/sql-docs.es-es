@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 27a215b868101b17b7db6ec3f25dfc5456777ab1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67834422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900133"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticación de Active Directory para SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-En este artículo, se proporciona información general sobre la autenticación de Active Directory (AD) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux. La autenticación de AD también se conoce como autenticación integrada en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+En este artículo, se proporciona información general sobre la autenticación de Active Directory (AD) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux. La autenticación de AD también se conoce como autenticación integrada en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="ad-authentication-overview"></a>Información general sobre la autenticación de AD
 
@@ -30,10 +30,10 @@ La autenticación de AD permite que los clientes unidos a un dominio en Windows 
 
 La autenticación de AD tiene las siguientes ventajas sobre la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-- Los usuarios se autentican mediante el inicio de sesión único, sin que se les pida una contraseña.   
+- Los usuarios se autentican mediante el inicio de sesión único, sin que se les pida una contraseña.
 - Al crear inicios de sesión para grupos de AD, puede administrar el acceso y los permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante pertenencias a grupos de AD.  
 - Cada usuario tiene una única identidad en toda la organización, por lo que no es necesario realizar un seguimiento de qué inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se corresponde con cada usuario.   
-- AD le permite implementar una directiva de contraseñas centralizada en toda su organización.   
+- AD le permite implementar una directiva de contraseñas centralizada en toda su organización.
 
 ## <a name="configuration-steps"></a>Pasos de configuración
 
@@ -44,8 +44,8 @@ Para obtener más información sobre cómo configurar la autenticación de AD, v
 1. [Unir un host de SQL Server a un dominio de Active Directory](sql-server-linux-active-directory-join-domain.md).
 1. [Crear un usuario de AD para SQL Server y establecer el elemento ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Configurar la tabla de claves del servicio SQL Server](sql-server-linux-active-directory-authentication.md#configurekeytab).
-1. [Proteger el archivo de tabla de claves](sql-server-linux-active-directory-authentication.md#securekeytab).
-1. [Configurar SQL Server para usar el archivo de tabla de claves para la autenticación Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
+1. [Proteger el archivo de tabla de claves](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Configurar SQL Server para usar el archivo de tabla de claves para la autenticación Kerberos](sql-server-linux-active-directory-authentication.md#configurekeytab).
 1. [Crear inicios de sesión de SQL Server basados en AD en Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Conectarse a SQL Server mediante la autenticación de AD](sql-server-linux-active-directory-authentication.md#connect).
 
@@ -53,6 +53,6 @@ Para obtener más información sobre cómo configurar la autenticación de AD, v
 
 - En este momento, el único método de autenticación admitido para el punto de conexión de la creación de reflejos de bases de datos es el de “CERTIFICADO”. El método de autenticación de “WINDOWS” se habilitará en una versión futura.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre cómo implementar la autenticación de Active Directory para SQL Server en Linux, vea [Tutorial: usar la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md).

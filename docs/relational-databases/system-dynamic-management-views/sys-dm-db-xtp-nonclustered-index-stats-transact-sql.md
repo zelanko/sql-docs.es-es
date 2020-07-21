@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_nonclustered_index_stats
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c66bc0d20274819de2c9dc1b4a20e125e6e9044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830822"
 ---
-# <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   sys.dm_db_xtp_nonclustered_index_stats incluye estadísticas sobre las operaciones en índices no clúster en tablas optimizadas para memoria. sys.dm_db_xtp_nonclustered_index_stats contiene una fila por cada índice no clúster de una tabla optimizada para memoria de la base de datos actual.  
@@ -38,12 +38,12 @@ ms.locfileid: "68026787"
   
  Un gran número de reintentos indica la existencia de problemas de simultaneidad; llame al servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Para obtener más información acerca de los índices no clúster optimizados para memoria, vea [SQL Server In-Memory OLTP Internals Overview](https://t.co/T6zToWc6y6), página 17.  
+ Para obtener más información acerca de los índices no clúster optimizados para memoria, vea [SQL Server información general sobre los elementos internos de OLTP en memoria](https://t.co/T6zToWc6y6), página 17.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Id. del objeto.|  
-|xtp_object_id|**bigint**|Identificador de la tabla optimizada para memoria.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR de la tabla optimizada para memoria.|  
 |index_id|**int**|Id. del índice.|  
 |delta_pages|**bigint**|Número total de páginas delta de este índice en el árbol.|  
 |internal_pages|**bigint**|Para uso interno. Número total de páginas internas de este índice en el árbol.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68026787"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

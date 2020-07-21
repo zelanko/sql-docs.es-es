@@ -1,5 +1,6 @@
 ---
 title: Creación de variables y columnas del tipo de datos XML | Microsoft Docs
+description: Obtenga información sobre cómo crear columnas y variables del tipo de datos XML en SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0471d842c56abf7ca888542d36ea9b688797dd64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691475"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, se puede usar el tipo de datos **xml** como un tipo de columna al crear una tabla como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en [CAST y CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="creating-columns-and-variables"></a>Crear columnas y variables  
@@ -134,7 +135,7 @@ INSERT INTO T values(1,'<Product />')
   
 -   La aplicación efectúa una recuperación de datos en la columna XML y no requiere un índice XML en la columna XML.  
   
--   Desea generar un índice XML en la columna de tipo de datos **xml** y la clave principal de la tabla principal es la misma que su clave de agrupación en clústeres. Para obtener más información, vea [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+-   Desea generar un índice XML en la columna de tipo de datos **xml** y la clave principal de la tabla principal es la misma que su clave de agrupación en clústeres. Para obtener más información, consulte [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
  Puede crear la columna de tipo de datos **xml** en otra tabla si se cumplen las condiciones siguientes:  
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889046"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670242"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *subquery*  
- Una instrucción SELECT con el formato Select * from \<Column name > [where \<Predicate list >].  
+ *subconsulta*  
+ Una instrucción SELECT con el formato SELECT * FROM \< Column name> [where \< Predicate List>].  
   
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el conjunto de resultados devuelto por la subconsulta contiene al menos una fila; de lo contrario, devuelve **false**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede utilizar la palabra clave NOT delante de EXISTS; por ejemplo, `WHERE NOT EXISTS (<subquery>)`.  
   
  La lista de columnas que se agrega al argumento de la subconsulta de EXISTS es irrelevante; la función solo comprueba la existencia de una fila que cumpla la condición.  
@@ -55,8 +55,8 @@ WHERE [[Model] = 'Patch kit'
   
  Otra manera de ver los mismos datos que devuelve esta consulta es abrir el modelo en el visor de asociaciones, hacer clic con el botón secundario en el conjunto de la **revisión kit = existente**, seleccionar la opción obtener **detalles** y, a continuación, seleccionar **solo casos del modelo**.  
   
-## <a name="see-also"></a>Vea también  
- [DMX &#40;de funciones&#41;](../dmx/functions-dmx.md)   
- [Sintaxis y ejemplos &#40;del filtro de modelos Analysis Services: minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services: Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

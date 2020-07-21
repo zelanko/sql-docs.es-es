@@ -1,5 +1,5 @@
 ---
-title: Funciones definidas por el usuario CLR | Microsoft Docs
+title: Funciones CLR definidas por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba7a4a983ec0cb36ef0fd79df44491f7f23f7648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874491"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970775"
 ---
-# <a name="clr-user-defined-functions"></a>Funciones CLR definidas por el usuario
+# <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR
   Las funciones definidas por el usuario son rutinas que pueden tomar parámetros, realizar cálculos u otras acciones y devolver un resultado. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], las funciones definidas por el usuario se pueden escribir en cualquier lenguaje de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  Existen dos tipos de funciones: escalares, que devuelven un valor único, y con valores de tabla, que devuelven un conjunto de filas.  
@@ -39,7 +38,7 @@ ms.locfileid: "62874491"
  [Agregados definidos por el usuario de CLR](clr-user-defined-aggregates.md)  
  Describe cómo implementar y utilizar los agregados definidos por el usuario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones definidas por el usuario](../user-defined-functions/user-defined-functions.md)  
   
   

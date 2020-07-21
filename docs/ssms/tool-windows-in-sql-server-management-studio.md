@@ -1,6 +1,6 @@
 ---
-title: Ventanas de herramientas de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Ventanas de herramientas de SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266706"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243892"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Ventanas de herramientas de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68266706"
   
 |||  
 |-|-|  
-|**Herramienta**|**Finalidad**|  
+|**Herramienta**|**Propósito**|  
 |[Explorador de objetos](../ssms/object/object-explorer.md)|Examinar servidores, crear y ubicar objetos, administrar orígenes de datos y ver registros. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de soluciones](../ssms/solution/solution-explorer.md)|Almacenar y organizar scripts e información de conexión relacionada en proyectos denominados Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Es posible almacenar varios Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como Soluciones y utilizar el control de código fuente para administrar los scripts a medida que evolucionan. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de plantillas](../ssms/template/template-explorer.md)|Crear consultas basadas en las plantillas existentes. También es posible crear consultas personalizadas o modificar las plantillas existentes de modo que se ajusten a su situación. A esta herramienta se obtiene acceso desde el menú **Ver** .|  

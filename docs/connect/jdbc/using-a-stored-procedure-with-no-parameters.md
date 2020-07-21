@@ -11,10 +11,10 @@ ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027020"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Empleo de un procedimiento almacenado sin parámetros
@@ -28,7 +28,7 @@ Si usa el controlador JDBC para llamar a un procedimiento almacenado sin paráme
 `{call procedure-name}`
 
 > [!NOTE]  
-> Para obtener más información sobre las secuencias de escape de SQL, vea [usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obtener más información sobre las secuencias de escape de SQL, consulte [Usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Cree, a modo de ejemplo, el siguiente procedimiento almacenado en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 
@@ -57,6 +57,6 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Empleo de instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

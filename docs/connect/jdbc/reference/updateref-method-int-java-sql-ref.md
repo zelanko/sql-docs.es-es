@@ -1,5 +1,5 @@
 ---
-title: Método updateRef (int, Java. SQL. Ref) | Microsoft Docs
+title: Método updateRef (int, java.sql.Ref) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 174be7f4e4a9a693a3beaac51d69ad40569bdf64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: acdff5d46b8b2be5c060688353b43732b2a01b79
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998404"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919704"
 ---
 # <a name="updateref-method-int-javasqlref"></a>Método updateRef (int, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,16 +42,16 @@ public void updateRef(int columnIndex,
   
  *x*  
   
- Objeto Ref.  
+ Un objeto Ref.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateRef especifica este método updateRef en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
- [Método &#40;updateRef SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
+ [Método updateRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

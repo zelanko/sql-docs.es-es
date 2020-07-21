@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062228"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
   Los pasos de trabajo son acciones que el trabajo realiza en una base de datos o en un servidor. Cada trabajo debe estar formado por un paso, como mínimo. Los pasos de trabajo pueden ser:  
@@ -57,7 +56,7 @@ ms.locfileid: "72798220"
   
 -   Programas ejecutables y comandos del sistema operativo.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Instrucciones[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tareas.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "72798220"
   
  Opcionalmente, puede abrir un archivo [!INCLUDE[tsql](../../includes/tsql-md.md)] existente que actúe como comando para el paso de trabajo.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no usan cuentas de proxy del Agente. En lugar de ello, el paso de trabajo se ejecuta como el propietario del paso de trabajo, o como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el propietario del paso de trabajo es miembro del rol fijo de servidor sysadmin. Los miembros del rol fijo de servidor sysadmin también pueden especificar que los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuten en el contexto de otro usuario mediante el parámetro *database_user_name* del procedimiento almacenado sp_add_jobstep. Para obtener más información, [vea &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no usan cuentas de proxy del Agente. En lugar de ello, el paso de trabajo se ejecuta como el propietario del paso de trabajo, o como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el propietario del paso de trabajo es miembro del rol fijo de servidor sysadmin. Los miembros del rol fijo de servidor sysadmin también pueden especificar que los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuten en el contexto de otro usuario mediante el parámetro *database_user_name* del procedimiento almacenado sp_add_jobstep. Para obtener más información, vea [sp_add_jobstep &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
 >  Un solo paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] puede contener varios lotes. [!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de trabajo pueden contener comandos GO incrustados.  
@@ -101,7 +100,7 @@ ms.locfileid: "72798220"
   
 -   El archivo de script de PowerShell que se desea abrir.  
   
- El subsistema de PowerShell del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre una sesión de PowerShell y carga los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. El script de PowerShell que se usa como comando de paso de trabajo puede hacer referencia al proveedor de PowerShell de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a los cmdlets. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsistema de PowerShell del agente abre una sesión de PowerShell y carga los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Complementos de PowerShell. El script de PowerShell que se usa como comando de paso de trabajo puede hacer referencia al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor y a los cmdlets de PowerShell. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Pasos de trabajo de scripts ActiveX  
   
@@ -156,7 +155,7 @@ Set oServer = nothing
   
 -   Identificar el servidor OLAP de la base de datos en el que se ejecutará el paso de trabajo.  
   
--   Escribir la instrucción que se debe ejecutar. Esta instrucción debe ser XML para el método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **de** . Puede que la instrucción no contenga un elemento SOAP completo o un método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **de XML para** . Observe que, mientras que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es compatible con los sobres SOAP completos y con el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no lo son.  
+-   Escribir la instrucción que se debe ejecutar. Esta instrucción debe ser XML para el método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Execute**. Puede que la instrucción no contenga un elemento SOAP completo o un XML para el método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Discover**. Observe que, mientras que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es compatible con los sobres SOAP completos y con el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no lo son.  
   
 ### <a name="analysis-services-query-job-steps"></a>Pasos de trabajo de consulta de Analysis Services  
  Al crear un paso de trabajo de consulta de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe:  
@@ -165,7 +164,7 @@ Set oServer = nothing
   
 -   Escribir la instrucción que se debe ejecutar. La instrucción debe ser una consulta de expresiones multidimensionales (MDX).  
   
- Para obtener más información sobre MDX, consulte [aspectos básicos de &#40;las&#41;consultas MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
+ Para obtener más información sobre MDX, consulte [aspectos básicos de las consultas mdx &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ## <a name="integration-services-packages"></a>Paquetes de Integration Services  
  Al crear un paso de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , debe realizar las operaciones siguientes:  
@@ -198,18 +197,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Description**|**Tema**|  
+|**Descripción**|**Tema**|  
 |Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](create-a-cmdexec-job-step.md)|  
-|Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Definir opciones de pasos de trabajo de Transact-SQL](define-transact-sql-job-step-options.md)|  
+|Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
 |Describe cómo crear un paso de trabajo de script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Crear un paso de trabajo de Analysis Services](create-an-analysis-services-job-step.md)|  
+|Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
 |Describe la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
-|Describe cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo.|[Ver información de pasos de trabajo](view-job-step-information.md)|  
-|Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Eliminar un registro de paso de trabajo](delete-a-job-step-log.md)|  
+|Describe cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo.|[View Job Step Information](view-job-step-information.md)|  
+|Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Ver también  
- [dbo. sysjobstepslogs &#40;Transact-SQL&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Crear trabajos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

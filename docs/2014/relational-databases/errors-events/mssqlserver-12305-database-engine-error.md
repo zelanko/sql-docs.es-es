@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 5a65a9fb-6db1-40dd-b410-3199bb410261
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af3db33f0679f7fa988f8eb41f94313041d4b596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b067193c9e3a6315796cb320394109af7cf72e7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62915843"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553840"
 ---
-# <a name="mssqlserver12305"></a>MSSQLSERVER_12305
+# <a name="mssqlserver_12305"></a>MSSQLSERVER_12305
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12305|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12305|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_TABLE_VAR|  
 |Texto del mensaje|No se admiten las variables de tabla insertada con '*construct*'.|  
@@ -35,7 +34,7 @@ ms.locfileid: "62915843"
 ## <a name="user-action"></a>Acción del usuario  
  No use variables de tabla insertada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

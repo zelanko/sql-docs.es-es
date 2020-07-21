@@ -10,18 +10,17 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637998"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046810"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
-  El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Igual que con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna cuando crea una tabla como un tipo de variable, tipo de parámetro, un tipo de devolución de función, o en [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+  El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Como con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna al crear una tabla como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto de función o en [CAST y Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
 ## <a name="creating-columns-and-variables"></a>Crear columnas y variables  
  Para crear una columna de tipo `xml` como parte de una tabla, utilice una instrucción `CREATE TABLE` , como se muestra en el ejemplo siguiente:  
@@ -127,9 +126,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>La misma tabla o una tabla diferente  
- Un `xml` columna tipo de datos se puede crear en una tabla que contiene otras columnas relacionales o en otra tabla con una relación de clave externa con una tabla principal.  
+ Una `xml` columna de tipo de datos se puede crear en una tabla que contenga otras columnas relacionales o en una tabla independiente con una relación de clave externa con una tabla principal.  
   
- Crear un `xml` columna de tipo de datos en la misma tabla cuando se cumple una de las condiciones siguientes:  
+ Cree una `xml` columna de tipo de datos en la misma tabla cuando se cumpla una de las condiciones siguientes:  
   
 -   La aplicación efectúa una recuperación de datos en la columna XML y no requiere un índice XML en la columna XML.  
   

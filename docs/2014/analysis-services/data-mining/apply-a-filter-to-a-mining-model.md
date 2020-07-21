@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a7f00e4d9ecbcc539b470cf5b2afe5864eb6114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086216"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525531"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
   Si la estructura de minería de datos contiene una tabla anidada, puede aplicar un filtro a la tabla de casos, a la tabla anidada o a ambas.  
@@ -46,7 +45,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Seleccione el modelo y haga clic con el botón secundario del mouse para abrir el menú contextual.  
   
-     -o bien-  
+     o bien  
   
      Seleccione el modelo. A continuación, en el menú **Modelo de minería de datos** , seleccione **Establecer filtro de modelos**.  
   
@@ -66,11 +65,11 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Haga clic en el cuadro de texto **Valor** y escriba un valor:  
   
-     Por ejemplo, seleccione `Income` como columna, seleccione el mayor que (>) de operador y, a continuación, escriba `30000`.  
+     Por ejemplo, seleccione `Income` como columna, seleccione el operador mayor que (>) y, a continuación, escriba `30000` .  
   
 9. Haga clic en la siguiente fila de la cuadrícula.  
   
-     La condición de filtro creada se agrega automáticamente al cuadro de texto Expresión. Por ejemplo, `[Income] > '30000'`  
+     La condición de filtro creada se agrega automáticamente al cuadro de texto Expresión. Por ejemplo, `[Income] > '30000'`.  
   
 10. Haga clic en el cuadro de texto **Y/O** de la siguiente fila de la cuadrícula para agregar una condición.  
   
@@ -78,7 +77,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Seleccione un operador y escriba un valor tal como se describe en los pasos 7 y 8.  
   
-     Por ejemplo, seleccione `Income` como la columna de nuevo, seleccione el operador menor que (<) y, a continuación, escriba `40000`.  
+     Por ejemplo, seleccione `Income` como columna de nuevo, seleccione el operador menor que (<) y, a continuación, escriba `40000` .  
   
 12. Haga clic en la siguiente fila de la cuadrícula.  
   
@@ -86,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Para agregar un filtro en la tabla anidada en un modelo de minería de datos  
   
-1.  En el  **\<nombre > filtro del modelo** diálogo cuadro, haga clic en una fila vacía en la cuadrícula situada debajo **columna de estructura de minería de datos**.  
+1.  En el cuadro de diálogo ** \<name> filtro del modelo** , haga clic en una fila vacía de la cuadrícula situada debajo de la **columna estructura de minería de datos**.  
   
 2.  Seleccione el nombre de la tabla anidada en la lista desplegable.  
   
@@ -96,9 +95,9 @@ WHERE [Model] <> 'Water Bottle' )
   
      Éstas son las únicas condiciones disponibles para la tabla anidada en el cuadro de diálogo **Filtro de modelos** , porque se está restringiendo la tabla de casos a únicamente los casos que contienen un cierto valor en la tabla anidada. En el paso siguiente, se establecerá el valor de la condición en la tabla anidada.  
   
-4.  Haga clic en el **valor** cuadro y, a continuación, haga clic en el **(...)**  botón para crear una expresión.  
+4.  Haga clic en el cuadro **valor** y, a continuación, haga clic en el botón **(...)** para generar una expresión.  
   
-     El  **\<nombre > filtro** abre el cuadro de diálogo. Este cuadro de diálogo solo puede establecer condiciones en la tabla actual, que en este caso es la tabla anidada.  
+     Se abrirá el cuadro de diálogo ** \<name> filtro** . Este cuadro de diálogo solo puede establecer condiciones en la tabla actual, que en este caso es la tabla anidada.  
   
 5.  Haga clic en el cuadro **Columna de la estructura de minería de datos** y seleccione un nombre de columna en las listas desplegables de las columnas de tabla anidadas.  
   
@@ -106,7 +105,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Haga clic en **Valor** y escriba un valor.  
   
-     Por ejemplo, para **columna de estructura de minería de datos,** seleccione `Model`. Para **operador**, seleccione `<>`y escriba el valor `Water Bottle`. Esta condición crea la siguiente expresión de filtro:  
+     Por ejemplo, para **columna de la estructura de minería de datos,** seleccione `Model` . Para **operador**, seleccione `<>` y escriba el valor `Water Bottle` . Esta condición crea la siguiente expresión de filtro:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +114,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  Dado que el número de atributos de tabla anidada es potencialmente ilimitado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no suministra ninguna lista de valores posibles entre los que seleccionar. Debe escribir el valor exacto. Asimismo, no se puede utilizar a un operador LIKE en una tabla anidada.  
   
-1.  Agregue más condiciones según convenga y combínelas seleccionando `AND` o `OR` en el **o** cuadro en el lado izquierdo de la **condiciones** cuadrícula. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  Agregue más condiciones según sea necesario; para ello, seleccione `AND` o `OR` en el cuadro **y/o** en el lado izquierdo de la cuadrícula de **condiciones** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  En el cuadro de diálogo **Filtro del modelo** , revise las condiciones que creó utilizando el cuadro de diálogo **Filtro** . Las condiciones de la tabla anidada se anexan a las condiciones de la tabla de casos y el conjunto completo de condiciones de filtro se muestra en el cuadro de texto **Expresión** .  
   
@@ -125,9 +124,9 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     >  Si cambia manualmente una parte de la expresión de filtro, la cuadrícula se deshabilitará y a partir de este momento deberá trabajar solo con la expresión de filtro en modo de edición de texto. Para restaurar el modo de edición de cuadrícula, debe borrar la expresión de filtro y comenzar de nuevo.  
   
   
-## <a name="see-also"></a>Vea también  
- [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+ [Tareas y procedimientos del modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](delete-a-filter-from-a-mining-model.md)  
   
   

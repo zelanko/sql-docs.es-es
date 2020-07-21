@@ -198,7 +198,7 @@
       href: transact-sql-debugger-threads-window.md
     - name: Ventana de comandos
       href: transact-sql-debugger-command-window.md
-    - name: Resultados (ventana)
+    - name: Ventana de salida
       href: transact-sql-debugger-output-window.md
     - name: Ventana de inspección
       href: transact-sql-debugger-watch-window.md

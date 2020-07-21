@@ -1,20 +1,21 @@
 ---
-title: Palabras clave de cadena de conexión y DSN para el controlador ODBC - SQL Server | Microsoft Docs
+title: Palabras clave de la cadena de conexión y del DSN de ODBC
+description: En esta página se enumeran las palabras clave para las cadenas de conexión y DSN, así como los atributos de conexión para SQLSetConnectAttr y SQLGetConnectAttr, disponibles en el controlador ODBC para SQL Server.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-ms.reviewer: MightyPen
+ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712921"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528987"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos y palabras clave de cadena de conexión y DSN
 
@@ -22,7 +23,7 @@ En esta página se enumeran las palabras clave para las cadenas de conexión y D
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Atributos de conexión y palabras clave de cadena de conexión y DSN compatibles
 
-En la siguiente tabla se enumeran los atributos y las palabras clave disponibles para cada plataforma (L: Linux; M: Mac; W: Windows). Haga clic en una palabra clave o un atributo para obtener más detalles.
+En la tabla siguiente se enumeran los atributos y las palabras clave disponibles para cada plataforma (L: Linux; M: macOS; W: Windows). Haga clic en una palabra clave o un atributo para obtener más detalles.
 
 | Palabra clave de cadena de conexión y DSN | Atributo de conexión | Plataforma |
 |-|-|-|
@@ -45,8 +46,8 @@ En la siguiente tabla se enumeran los atributos y las palabras clave disponibles
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, solo DSN)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +, solo DSN) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, solo DSN)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v17.4+, solo DSN) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -113,6 +114,7 @@ En la siguiente tabla se enumeran los atributos y las palabras clave disponibles
 | | [SQL_COPT_SS_OLDPWD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssoldpwd) | LMW |
 | | [SQL_COPT_SS_PERF_DATA_LOG_NOW](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssperfdatalognow) | W |
 | | [SQL_COPT_SS_PRESERVE_CURSORS](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsspreservecursors) | LMW |
+| | [SQL_COPT_SS_SPID](../../connect/odbc/dsn-connection-string-attribute.md#sql_copt_ss_spid) (v17.5+) | LMW |
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
@@ -120,7 +122,7 @@ En la siguiente tabla se enumeran los atributos y las palabras clave disponibles
 | [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
-Estos son algunos de los atributos y las palabras clave de cadena de conexión que no se documentan en [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [Función SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
+Estos son algunos de los atributos y las palabras clave de cadena de conexión que no se documentan en [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [Función SQLSetConnectAttr](../../odbc/reference/syntax/sqlsetconnectattr-function.md).
 
 ### <a name="description"></a>Descripción
 
@@ -150,7 +152,7 @@ Controla el uso de conexiones de reserva de SQL Server. Ya no se admite.
 
 ###  <a name="authentication---sql_copt_ss_authentication"></a>Autenticación: SQL_COPT_SS_AUTHENTICATION
 
-Establece el modo de autenticación que se utilizará al conectarse a SQL Server. Para obtener más información, vea [Uso de Azure Active Directory](using-azure-active-directory.md).
+Establece el modo de autenticación que se utilizará al conectarse a SQL Server. Para más información, vea [Uso de Azure Active Directory](using-azure-active-directory.md).
 
 | Valor de palabra clave | Valor del atributo | Descripción |
 |-|-|-|
@@ -167,22 +169,22 @@ Establece el modo de autenticación que se utilizará al conectarse a SQL Serve
 
 ### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption: SQL_COPT_SS_COLUMN_ENCRYPTION
 
-Controla el cifrado transparente de columnas (Always Encrypted). Para obtener más información, vea [Uso de Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md).
+Controla el cifrado transparente de columnas (Always Encrypted). Para más información, vea [Uso de Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md).
 
 | Valor de palabra clave | Valor del atributo | Descripción |
 |-|-|-|
-|Habilitado|SQL_CE_ENABLED|Habilita Always Encrypted.|
-|Deshabilitado|SQL_CE_DISABLED|(Valor predeterminado) Deshabilita Always Encrypted.|
+|habilitado|SQL_CE_ENABLED|Habilita Always Encrypted.|
+|Disabled|SQL_CE_DISABLED|(Valor predeterminado) Deshabilita Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Habilita solamente el descifrado (los resultados y valores devueltos).|
 
 ### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution: SQL_COPT_SS_TNIR
 
-Controla la característica de resolución de IP de red transparente, que interactúa con MultiSubnetFailover para permitir intentos de reconexión más rápidos. Para obtener más información, vea [Uso de resolución de IP de red transparente](using-transparent-network-ip-resolution.md).
+Controla la característica de resolución de IP de red transparente, que interactúa con MultiSubnetFailover para permitir intentos de reconexión más rápidos. Para más información, vea [Uso de resolución de IP de red transparente](using-transparent-network-ip-resolution.md).
 
 | Valor de palabra clave | Valor del atributo| Descripción |
 |-|-|-|
-|Sí|SQL_IS_ON|(Predeterminado) Habilita la resolución de IP de red transparente.|
-|No|SQL_IS_OFF|Deshabilita la resolución de IP de red transparente.|
+|habilitado|SQL_IS_ON|(Predeterminado) Habilita la resolución de IP de red transparente.|
+|Disabled|SQL_IS_OFF|Deshabilita la resolución de IP de red transparente.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
 
@@ -196,31 +198,31 @@ Controla el uso de SET FMTONLY para los metadatos al conectarse a SQL Server 20
 
 ## <a name="clientcertificate"></a>ClientCertificate
 
-Especifica el certificado que se va a utilizar para la autenticación. Las opciones son: 
+Especifica el certificado que se usará para la autenticación. Las opciones son: 
 
-| Valor de opción | Descripción |
+| Valor de la opción | Descripción |
 |-|-|
-| SHA1: `<hash_value>` | El controlador ODBC utiliza el hash SHA1 para localizar un certificado en el almacén de certificados de Windows |
-| asunto: `<subject>` | El controlador ODBC utiliza el asunto para buscar un certificado en el almacén de certificados de Windows |
-| archivo: `<file_location>` [, contraseña: `<password>`] | El controlador ODBC utiliza un archivo de certificado. |
+| sha1:`<hash_value>` | El controlador ODBC utiliza el hash SHA1 para localizar un certificado en el Almacén de certificados de Windows |
+| subject:`<subject>` | El controlador ODBC utiliza subject para localizar un certificado en el Almacén de certificados de Windows |
+| file:`<file_location>`[,password:`<password>`] | El controlador ODBC utiliza un archivo de certificado. |
 
-En caso de que el certificado esté en formato PFX y la clave privada dentro del certificado PFX esté protegida por contraseña, se requiere la palabra clave password. Para los certificados en formatos PEM y DER, se requiere el atributo ClientKey
+En caso de que el certificado esté en formato PFX y la clave privada dentro del certificado PFX esté protegida por contraseña, se requiere la palabra clave de contraseña. Para los certificados en formatos PEM y DER, se requiere el atributo ClientKey
 
 
 ## <a name="clientkey"></a>ClientKey
 
-Especifica una ubicación de archivo de la clave privada para los certificados PEM o DER especificados por el atributo ClientCertificate. Aplique 
+Especifica una ubicación de archivo de la clave privada para los certificados PEM o DER especificados por el atributo ClientCertificate. Formato: 
 
-| Valor de opción | Descripción |
+| Valor de la opción | Descripción |
 |-|-|
-| archivo: `<file_location>` [, contraseña: `<password>`] | Especifica la ubicación del archivo de clave privada. |
+| file:`<file_location>`[,password:`<password>`] | Especifica la ubicación del archivo de clave privada. |
 
-En caso de que el archivo de clave privada esté protegido por contraseña, se requiere la palabra clave password. Si la contraseña contiene alguno de los caracteres ",", se agregará un carácter "," adicional inmediatamente después de cada uno de ellos. Por ejemplo, si la contraseña es "a, b, c", la contraseña de escape presente en la cadena de conexión es "a,, b,, c". 
+En caso de que el archivo de clave privada esté protegido por contraseña, se requiere la palabra clave de contraseña. Si la contraseña contiene algún carácter ",", se agrega automáticamente un carácter "," adicional inmediatamente después de cada uno de ellos. Por ejemplo, si la contraseña es "a, b, c", la contraseña con escape presente en la cadena de conexión es "a,, b,, c". 
     
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-Permite el uso de un token de acceso de Azure Active Directory para la autenticación. Para obtener más información, vea [Uso de Azure Active Directory](using-azure-active-directory.md).
+Permite el uso de un token de acceso de Azure Active Directory para la autenticación. Para más información, vea [Uso de Azure Active Directory](using-azure-active-directory.md).
 
 | Valor del atributo | Descripción |
 |-|-|
@@ -229,7 +231,7 @@ Permite el uso de un token de acceso de Azure Active Directory para la autentica
 
 ### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-Se comunica con una biblioteca de proveedor de almacén de claves cargada. Controla el cifrado transparente de columnas (Always Encrypted). Este atributo no tiene ningún valor predeterminado. Consulte [Proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información.
+Se comunica con una biblioteca de proveedor de almacén de claves cargada. Controla el cifrado transparente de columnas (Always Encrypted). Este atributo no tiene ningún valor predeterminado. Para más información, vea [Proveedores de almacén de claves personalizados](custom-keystore-providers.md).
 
 | Valor del atributo | Descripción |
 |-|-|
@@ -237,7 +239,7 @@ Se comunica con una biblioteca de proveedor de almacén de claves cargada. Contr
 
 ### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Carga una biblioteca de proveedor de almacén de claves para Always Encrypted o recupera los nombres de las bibliotecas de proveedor de almacén de claves cargadas. Consulte [Proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información. Este atributo no tiene ningún valor predeterminado.
+Carga una biblioteca de proveedor de almacén de claves para Always Encrypted o recupera los nombres de las bibliotecas de proveedor de almacén de claves cargadas. Para más información, vea [Proveedores de almacén de claves personalizados](custom-keystore-providers.md). Este atributo no tiene ningún valor predeterminado.
 
 | Valor del atributo | Descripción |
 |-|-|
@@ -245,7 +247,7 @@ Carga una biblioteca de proveedor de almacén de claves para Always Encrypted o
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-Para habilitar transacciones XA con un procesador de transacciones (TP) compatible con XA, la aplicación debe llamar a **SQLSetConnectAttr** con SQL_COPT_SS_ENLIST_IN_XA establecido y un puntero a un objeto `XACALLPARAM`. Esta opción es compatible con Windows, Linux (17.3 y versiones posteriores) y Mac.
+Para habilitar transacciones XA con un procesador de transacciones (TP) compatible con XA, la aplicación debe llamar a **SQLSetConnectAttr** con SQL_COPT_SS_ENLIST_IN_XA establecido y un puntero a un objeto `XACALLPARAM`. Esta opción es compatible con Windows, Linux (17.3 y versiones posteriores) y macOS.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -254,10 +256,18 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|Valor|Descripción|Plataformas|  
+|Value|Descripción|Plataformas|  
 |-----------|-----------------|-----------------|  
-|Objeto XACALLPARAM*|El puntero al objeto `XACALLPARAM`.|Windows, Linux y Mac|
+|Objeto XACALLPARAM*|El puntero al objeto `XACALLPARAM`.|Windows, Linux y macOS|
 |TRUE|Asocia la transacción XA con la conexión ODBC. Todas las actividades de base de datos relacionadas se realizarán bajo la protección de la transacción XA.|Windows|  
 |FALSE|Desasocia la transacción XA con la conexión ODBC.|Windows|
 
- Para obtener más información sobre las transacciones XA, vea [Uso de las transacciones XA](../../connect/odbc/use-xa-with-dtc.md).
+ Para más información sobre las transacciones XA, vea [Uso de las transacciones XA](../../connect/odbc/use-xa-with-dtc.md).
+
+### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
+
+Recupera el identificador de proceso de servidor de la conexión. Esto es equivalente a la variable [@@SPID](../../t-sql/functions/spid-transact-sql.md) de T-SQL, con la salvedad de que no incurre en un recorrido de ida y vuelta adicional al servidor.
+
+| Valor del atributo | Descripción |
+|-|-|
+| DWORD | SPID |

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f80eb2cc31d58c231645c8fcbe9a745feb2d2382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e32ce830fc83279327e06bb363c17f2e54c125d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038727"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>Cursor Manager Total (objeto de SQL Server)
   El objeto **SQLServer:Cursor Manager Total** proporciona contadores para supervisar cursores.  
@@ -31,7 +30,7 @@ ms.locfileid: "63250675"
 |**Velocidad de conversión de cursores**|Número de conversiones de cursor por segundo.|  
 |**Vaciados de cursor**|Número total de instrucciones que se crean de nuevo con cursores en tiempo de ejecución.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2012 | Microsoft Docs
+description: En estas notas de la versión se describen los problemas conocidos con los que familiarizarse antes de instalar Microsoft SQL Server 2012 o solucionar problemas en este.
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a6592781464bb148bf31fdaa135d17a159b5e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136531"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999405"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ En este documento de notas de la versión se describen los problemas conocidos q
   
 Para obtener una introducción e información acerca de cómo instalar SQL Server 2012, vea el documento Léame de SQL Server 2012. El documento Léame está disponible en el disco de instalación y en la página de descarga [Léame](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . También puede encontrar más información en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) y en los foros de [SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
-## <a name="Install"></a>1.0 Antes de la instalación  
+## <a name="10-before-you-install"></a><a name="Install"></a>1.0 Antes de la instalación  
 Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tenga en cuenta la siguiente información.  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1 Documentación de las reglas para la instalación de SQL Server 2012  
@@ -64,12 +65,12 @@ Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tenga en c
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-o Administrador de configuración de  
+or  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no se puede instalar. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [Ver y leer los archivos de registro de instalación de SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+**Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no se puede instalar. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Se puede producir un error en la actualización del clúster de conmutación por error de SQL Server 2008 y 2008 R2 Analysis Services a SQL Server 2012 después de cambiar el nombre de red  
 **Problema:** después de cambiar el nombre de red de una instancia de clúster de conmutación por error de Microsoft SQL Server 2008 o 2008 R2 Analysis Services mediante la herramienta Administrador de clústeres de Windows, es posible que se produzca un error en la operación de actualización.  
@@ -94,7 +95,7 @@ Puede instalar SQL Server en Windows Server 2008 R2 Server Core SP1 con las limi
   
 **Solución alternativa:** para configurar la base de datos de estadísticas de lenguaje semántico como requisito previo para la indexación semántica, realice las tareas siguientes:  
   
-1.  Busque y ejecute el paquete de Windows Installer denominado SemanticLanguageDatabase.msi en el disco de instalación de SQL Server para extraer la base de datos. Para SQL Server 2012 Express, descargue la base de datos de estadísticas de lenguaje semántico del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) y, después, ejecute el paquete de Windows Installer.  
+1.  Busque y ejecute el paquete de Windows Installer denominado SemanticLanguageDatabase.msi en el disco de instalación de SQL Server para extraer la base de datos. Para SQL Server 2012 Express, descargue la base de datos de estadísticas de lenguaje semántico del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=52681) (https://www.microsoft.com/download/details.aspx?id=52681) ) y, después, ejecute el paquete de Windows Installer.  
   
 2.  Mueva la base de datos a una carpeta de datos apropiada. Si deja la base de datos en la ubicación predeterminada, debe cambiar los permisos para poderla adjuntar correctamente.  
   
@@ -132,7 +133,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         5.  Deje que el proceso de instalación se complete y haga clic en **Cerrar**.  
   
-        Método 2: Uso de Windows PowerShell  
+        Método 2: Use Windows PowerShell  
   
         1.  Haga clic en **Inicio** | **Todos los programas** | **Accesorios**.  
   
@@ -151,7 +152,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         2.  Para habilitar **Microsoft .NET Framework 3.5.1**, active la casilla situada junto a esa característica. Para desactivar una característica de Windows, desactive la casilla.  
   
-        3.  Haga clic en **Aceptar**.  
+        3.  Haga clic en **OK**.  
   
         **Use Administración y mantenimiento de imágenes de implementación (DISM.exe) para habilitar .NET Framework 3.5 SP1.**  
   
@@ -229,12 +230,12 @@ Para obtener más información acerca de cómo reparar una instancia de SQL Serv
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**Solución**: repare la instalación de .NET Framework 4 después de actualizar el sistema operativo. Para obtener más información, vea [Reparar una instalación existente de .NET Framework](https://support.microsoft.com/kb/306160).  
+**Solución alternativa**: repare la instalación de .NET Framework 4 después de actualizar el sistema operativo. Para obtener más información, vea [Reparar una instalación existente de .NET Framework](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 La actualización de SQL Server Edition necesita un reinicio  
 **Problema:** cuando la edición actualiza una instancia de SQL Server 2012, es posible que algunas de las funcionalidades asociadas con la nueva edición no se activen inmediatamente.  
   
-**Solución**: reinicie el equipo tras la actualización de edición de una instancia de SQL Server 2012. Para obtener más información sobre actualizaciones admitidas en SQL Server 2012, vea [Actualizaciones de versión y edición admitidas](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
+**Solución alternativa**: reinicie el equipo tras la actualización de edición de una instancia de SQL Server 2012. Para obtener más información sobre actualizaciones admitidas en SQL Server 2012, vea [Actualizaciones de versión y edición admitidas](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 No se puede actualizar una base de datos con archivos o un grupo de archivos de solo lectura  
 **Problema:**  no puede actualizar una base de datos ya sea por adjuntar la base de datos o restaurarla de una copia de seguridad si la base de datos o sus archivos o grupos de archivos están configurados de solo lectura.  Se devuelve el error 3415.  Este problema también se aplica cuando se realiza una actualización en contexto de una instancia de SQL Server. Es decir, intenta reemplazar una instancia existente de SQL Server mediante la instalación de SQL Server 2012 y una o varias bases de datos existentes están configuradas de solo lectura.  
@@ -248,14 +249,14 @@ Para obtener más información acerca de cómo reparar una instancia de SQL Serv
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="AS"></a>2.0 Analysis Services  
+## <a name="20-analysis-services"></a><a name="AS"></a>2.0 Analysis Services  
   
 ### <a name="21-sql-editor-and-as-editor-cannot-connect-to-their-respective-server-instances-in-the-same-ssms-instance"></a>2.1 El editor SQL y el editor de AS no pueden conectar con sus instancias de servidor respectivas en la misma instancia de SSMS  
 **Problema:** no puede conectar con un servidor de Analysis Services con el editor MDX/DMX cuando el editor SQL ya está conectado.  
   
 Cuando se usa SQL Server Management Studio 2012 (SSMS), si hay un archivo .sql abierto en el editor y está conectado a una instancia de SQL Server, cuando se abre un archivo DMX o DMX en la misma instancia de SSMS no se puede conectar con una instancia del servidor de AS. Asimismo, si ya hay un archivo MDX o DMX abierto en el editor en SSMS y está conectado a una instancia de servidor de AS, cuando se abre un archivo .sql en la misma instancia de SSMS no se puede conectar con una instancia de SQL Server.  
   
-**Solución**:  use una de las opciones siguientes para resolver este problema.  
+**Solución alternativa**:  use una de las opciones siguientes para resolver este problema.  
   
 -   Inicie otra instancia de SSMS para abrir el archivo MDX/DMX.  
   
@@ -295,7 +296,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="BOL"></a>3.0 Libros en pantalla  
+## <a name="30-books-online"></a><a name="BOL"></a>3.0 Libros en pantalla  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 El Visor de Ayuda para SQL Server se bloquea en entornos configurados para ejecutar solo IPv6  
 **Problema:** si el entorno está configurado para ejecutar IPv6 únicamente, el Visor de la Ayuda para SQL Server 2012 se bloqueará y aparecerá el mensaje de error siguiente:  
@@ -305,7 +306,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
 > [!IMPORTANT]  
 > Se aplica a todos los entornos que se ejecuten solo con IPv6 habilitado. Los entornos habilitados para IPv4 (e IPv4 con IPv6) no están afectados.  
   
-**Solución**: para evitar este problema, habilite IPv4 o siga estos pasos para agregar una entrada del Registro y cree una ACL para habilitar el Visor de la Ayuda para IPv6:  
+**Solución alternativa**: para evitar este problema, habilite IPv4 o siga estos pasos para agregar una entrada del Registro y cree una ACL para habilitar el Visor de la Ayuda para IPv6:  
   
 1.  Cree una clave del Registro con el nombre "IPv6" y el valor "1 (DWORD (32 bits))" en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
@@ -317,7 +318,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="DQS"></a>4.0 Data Quality Services  
+## <a name="40-data-quality-services"></a><a name="DQS"></a>4.0 Data Quality Services  
   
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 DQS no se admite en un clúster  
 **Problema:** DQS no se admite en una instalación de clúster de SQL Server. Si va a instalar una instancia de clúster de SQL Server, no debe activar las casillas **Data Quality Services** y **Data Quality Client** en la página **Selección de características** . Si estas casillas están activadas durante la instalación de la instancia del clúster (y completa la instalación de Data Quality Server ejecutando el archivo DQSInstaller.exe), DQS se instalará en este nodo, pero no estará disponible en otros nodos adicionales cuando se agreguen más nodos al clúster, por lo que no funcionará en nodos adicionales.  
@@ -392,11 +393,11 @@ En un proyecto de calidad de datos de limpieza, si ha asignado un campo en los d
   
 -   Quite los datos de todas las columnas situadas más allá de la columna 255 en el archivo .xls, guarde el archivo e importe los valores del archivo .xls en un dominio.  
   
-### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqsadministrator"></a>4.16 La característica Supervisión de actividades no está disponible para otros roles distintos de dqs_administrator  
+### <a name="416-activity-monitoring-feature-is-unavailable-for-roles-other-than-dqs_administrator"></a>4.16 La característica Supervisión de actividades no está disponible para otros roles distintos de dqs_administrator  
 La característica Supervisión de actividades solo está disponible para los usuarios que tienen el rol dqs_administrator. Si su cuenta de usuario tiene el rol dqs_kb_editor o dqs_kb_operator, la característica Supervisión de actividades no estará disponible en la aplicación Data Quality Client.  
   
 ### <a name="417-error-on-opening-a-knowledge-base-in-the-recent-knowledge-base-list-for-domain-management"></a>4.17 Error al abrir una base de conocimiento en la lista de bases de conocimiento recientes para la administración de dominios  
-Problema puede recibir el siguiente error si abre una base de conocimiento en la lista **Base de conocimiento** reciente para la actividad Supervisión de dominios en la pantalla principal de Data Quality Client:  
+Problema: puede recibir el siguiente error si abre una base de conocimiento en la lista **Base de conocimiento** reciente para la actividad Supervisión de dominios en la pantalla principal de Data Quality Client:  
   
 `"A configuration with name 'RecentList:KB:<domain>\<username>' already exists in the database."`  
   
@@ -431,7 +432,7 @@ Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usua
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="DE"></a>5.0 Motor de base de datos  
+## <a name="50-database-engine"></a><a name="DE"></a>5.0 Motor de base de datos  
   
 ### <a name="51-use-of-distributed-replay-controller-and-distributed-replay-client-features"></a>5.1 Uso de las características Distributed Replay Controller y Distributed Replay Client  
 **Problema:** las características Distributed Replay Controller y Distributed Replay Client están disponibles en la SKU Server Core de Windows Server 2008, Windows Server 2008 R2 y Windows Server 7, aunque no se admiten en la SKU Server Core.  
@@ -449,7 +450,7 @@ Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usua
   
 -   No se pueden depurar consultas en el modo de usuario normal.  
   
-**Solución**: instale de nuevo Visual Studio 2010 SP1 y reinicie Management Studio.  
+**Solución alternativa**: instale de nuevo Visual Studio 2010 SP1 y reinicie Management Studio.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 Los sistemas operativos x64 requieren PowerShell 2.0 de 64 bits  
 **Problema:** las instalaciones de 32 bits de Extensiones de PowerShell para SQL Server de Windows no se admiten para instancias de SQL Server 2012 en sistemas operativos de 64 bits.  
@@ -475,10 +476,10 @@ Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Nuevo diseño para planes de mantenimiento no compatible con herramientas anteriores de SQL Server  
 **Problema:** cuando se usan herramientas de administración de SQL Server 2012 para modificar un plan de mantenimiento existente creado en una versión anterior de las herramientas de administración de SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), el plan de mantenimiento se guarda en un formato nuevo. Las versiones anteriores de las herramientas de administración de SQL Server no admiten este nuevo formato.  
   
-**Solución**: None  
+**Solución alternativa**: None  
   
 ### <a name="56-intellisense-has-limitations-when-logged-in-to-a-contained-database"></a>5.6 IntelliSense tiene limitaciones cuando se inicia sesión en una base de datos independiente  
-Problema Intellisense en SQL Server Management Studio (SSMS) y SQL Server Data Tools (SSDT) no funciona de la manera esperada cuando usuarios contenidos inician sesión en bases de datos independientes. En esos casos se produce el comportamiento siguiente:  
+Problema: Intellisense en SQL Server Management Studio (SSMS) y SQL Server Data Tools (SSDT) no funciona de la manera esperada cuando usuarios contenidos inician sesión en bases de datos independientes. En esos casos se produce el comportamiento siguiente:  
   
 1.  El subrayado de los objetos no válidos no aparece.  
   
@@ -486,7 +487,7 @@ Problema Intellisense en SQL Server Management Studio (SSMS) y SQL Server Data T
   
 3.  La Ayuda de información sobre herramientas para las funciones integradas no funciona.  
   
-**Solución**:  None  
+**Solución alternativa**:  None  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 Grupos de disponibilidad AlwaysOn  
 Antes de intentar crear un grupo de disponibilidad, vea [Requisitos previos, restricciones y recomendaciones para los grupos de disponibilidad AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753168) en los Libros en pantalla. Para obtener una introducción a los grupos de disponibilidad AlwaysOn, vea [Grupos de disponibilidad AlwaysOn (SQL Server)](https://go.microsoft.com/?linkid=9753166)en los Libros en pantalla.  
@@ -578,7 +579,7 @@ Si tiene dos clústeres de WSFC controlados por la misma instancia de Active Dir
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="IS"></a>6.0 Integration Services  
+## <a name="60-integration-services"></a><a name="IS"></a>6.0 Integration Services  
   
 ### <a name="61-the-change-data-capture-service-for-oracle-and-the-change-data-capture-designer-console-for-oracle"></a>6.1 Servicio de captura de datos modificados para Oracle y consola del diseñador de captura de datos modificados para Oracle  
 El servicio CDC para Oracle es un servicio de Windows que examina los registros de transacciones de Oracle y captura los cambios a las tablas de Oracle deseadas en tablas de cambios de SQL Server. La consola del diseñador CDC se emplea para desarrollar y mantener instancias CDC de Oracle. La consola del diseñador CDC es un complemento de Microsoft Management Console (MMC).  
@@ -595,12 +596,12 @@ El servicio CDC para Oracle es un servicio de Windows que examina los registros 
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="MDS"></a>7.0 Master Data Services  
+## <a name="70-master-data-services"></a><a name="MDS"></a>7.0 Master Data Services  
   
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 Corrección de una instalación de MDS en un clúster  
 **Problema:** si instala una instancia en clúster de la versión RTM de SQL Server 2012 con la casilla **Master Data Services** activada, MDS se instalará en un solo nodo, pero no estará disponible y no funcionará en los nodos adicionales que agregue al clúster.  
   
-**Solución**: para resolver este problema, debe instalar la Versión acumulativa 1 (CU1) de SQL Server 2012 y realizar los pasos siguientes:  
+**Solución alternativa**: para resolver este problema, debe instalar la Versión acumulativa 1 (CU1) de SQL Server 2012 y realizar los pasos siguientes:  
   
 1.  Asegúrese de que no hay ninguna instalación existente de SQL/MDS.  
   
@@ -615,24 +616,24 @@ Para trabajar en la aplicación web Master Data Manager, Silverlight 5.0 debe es
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="RS"></a>8.0 Reporting Services  
+## <a name="80-reporting-services"></a><a name="RS"></a>8.0 Reporting Services  
   
 ### <a name="81-reporting-services-connectivity-to-sql-server-pdw-requires-updated-drivers"></a>8.1 La conectividad de Reporting Services con PDW de SQL Server necesita controladores actualizados  
 La conectividad desde SQL Server 2012 Reporting Services con Microsoft SQL Server PDW Appliance Update 2 y posterior necesita una actualización de los controladores de conectividad de PDW. Para obtener más información, los clientes de PDW de SQL Server deben ponerse en contacto con el soporte técnico de Microsoft.  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="SI"></a>9.0 StreamInsight  
+## <a name="90-streaminsight"></a><a name="SI"></a>9.0 StreamInsight  
 SQL Server 2012 incluye StreamInsight 2.0. StreamInsight 2.0 necesita una licencia de Microsoft SQL Server 2012 y .NET Framework 4.0. Incluye una serie de mejoras de rendimiento y algunas correcciones de errores. Para obtener más información, vea las [Notas de la versión de Microsoft StreamInsight 2.0](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx). Para descargar StreamInsight 2.0 por separado, visite la [página de descarga de Microsoft StreamInsight 2.0](https://go.microsoft.com/fwlink/?LinkId=241593) en el Centro de descarga de Microsoft.  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
-## <a name="UA"></a>10.0 Asesor de actualizaciones  
+## <a name="100-upgrade-advisor"></a><a name="UA"></a>10.0 Asesor de actualizaciones  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 El vínculo para instalar el Asesor de actualizaciones no está habilitado en los sistemas operativos en chino (HK)  
-Problema al intentar instalar el Asesor de actualizaciones en alguna versión admitida de Windows en sistemas operativos en chino (Hong Kong), es posible que descubra que el vínculo para instalar el asesor no está habilitado.  
+Problema: al intentar instalar el Asesor de actualizaciones en alguna versión admitida de Windows en sistemas operativos en chino (Hong Kong), es posible que descubra que el vínculo para instalar el asesor no está habilitado.  
   
-**Solución**: busque los archivos **SQLUA.msi** en el disco de SQL Server 2012 en `\1028_CHT_LP\x64\redist\Upgrade Advisor` o en `\1028_CHT_LP\x86\redist\Upgrade Advisor`, en función de la arquitectura del sistema operativo.  
+**Solución alternativa**: busque los archivos **SQLUA.msi** en el disco de SQL Server 2012 en `\1028_CHT_LP\x64\redist\Upgrade Advisor` o en `\1028_CHT_LP\x86\redist\Upgrade Advisor`, en función de la arquitectura del sistema operativo.  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   

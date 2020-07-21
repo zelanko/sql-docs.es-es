@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038858"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "76037173"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>¿Qué es SQL Server Management Studio (SSMS)?
 
@@ -68,7 +68,7 @@ Para más información sobre cómo usar [!INCLUDE[ssManStudioFull](../includes/s
 
 Utilice SQL Server Management Studio para habilitar las características de Reporting Services y administrar el servidor, las bases de datos, los roles y los trabajos.
 
-Las programaciones compartidas se administran con la carpeta Programaciones compartidas y las bases de datos del servidor de informes (ReportServer, ReportServerTempdb) también se administran. También se crea un rol RSExecRole en la base de datos del sistema maestra cuando se mueve una base de datos del servidor de informes a un motor de base de datos de SQL Server nuevo o diferente ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Para más información sobre estas tareas, vea los artículos siguientes:  
+Las programaciones compartidas se administran con la carpeta Programaciones compartidas y las bases de datos del servidor de informes (ReportServer, ReportServerTempdb) también se administran. También se crea un rol RSExecRole en la base de datos del sistema maestra cuando se mueve una base de datos del servidor de informes a un motor de base de datos de SQL Server nuevo o diferente ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)]). Para más información sobre estas tareas, vea los artículos siguientes:  
 
 - [Reporting Services en SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Administración de una base de datos del servidor de informes](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
@@ -91,6 +91,10 @@ Para obtener más información sobre las distintas configuraciones regionales de
 - A partir de SSMS 17.0, el equipo de herramientas SQL ha adoptado la [directiva de ciclo de vida moderna de Microsoft](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 - Lea el anuncio [de la directiva de ciclo de vida moderna](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy) original. Para obtener más información, vea [Preguntas más frecuentes sobre la directiva moderna de ciclo de vida](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
 - Para obtener información sobre la recopilación de datos de diagnóstico y el uso de características, vea el [complemento de privacidad de SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
+
+## <a name="cross-platform-tool"></a>Herramienta multiplataforma
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294154"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488194"
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
 
@@ -41,7 +41,7 @@ ms.locfileid: "71294154"
   
  El siguiente diagrama muestra un contenedor de bucles For con una tarea Enviar correo. Si la expresión de inicialización es `@Counter = 0`, la expresión de evaluación es `@Counter < 4`y la expresión de iteración es `@Counter = @Counter + 1`, el bucle se repetirá cuatro veces y enviará cuatro mensajes de correo electrónico.  
   
- ![Un contenedor de bucles Para repite una tarea cuatro veces](../../integration-services/control-flow/media/ssis-forloop.gif "A For Loop container repeats a task four times")  
+ ![Un contenedor de bucles For repite una tarea cuatro veces.](../../integration-services/control-flow/media/ssis-forloop.gif "Un contenedor de bucles For repite una tarea cuatro veces.")  
   
  Las expresiones deben ser expresiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] válidas.  
   
@@ -72,8 +72,6 @@ ms.locfileid: "71294154"
 
 ##  <a name="configure-the-for-loop-container"></a>Configurar el contenedor de bucles Para
 En este procedimiento se describe cómo configurar un contenedor de bucles For mediante el cuadro de diálogo **Editor de bucles For** .  
-  
- Para obtener un ejemplo del contenedor de bucles For, vea [Bucles de SSIS que no producen error](https://go.microsoft.com/fwlink/?LinkId=240295) en bimonkey.com.  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga doble clic en el contenedor de bucles For para abrir el **Editor de bucles For**.  
   

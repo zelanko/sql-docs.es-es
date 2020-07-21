@@ -1,5 +1,5 @@
 ---
-title: Crear el ejemplo del método (VB) | Microsoft Docs
+title: Ejemplo del método Create (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Create method [ADOX], Visual Basic example
 ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 622b2ab47793fe55d2ecf6bbe65c0b9ccf544589
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7fc6ab5b6b5edf0e3e168a1a1fa47f27a99927a6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966658"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759261"
 ---
 # <a name="create-method-example-vb"></a>Ejemplo de método Create (VB)
-El código siguiente muestra cómo crear una nueva base de datos Microsoft Jet con el [Create](../../../ado/reference/adox-api/create-method-adox.md) método.  
+En el código siguiente se muestra cómo crear una nueva base de datos de Microsoft Jet con el método [Create](../../../ado/reference/adox-api/create-method-adox.md) .  
   
 ```  
 Attribute VB_Name = "Create"  
@@ -49,6 +49,6 @@ End Sub
 ' EndCreateDatabaseVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create (método, ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

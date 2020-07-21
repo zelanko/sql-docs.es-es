@@ -1,5 +1,6 @@
 ---
 title: rrRenderingError - Error de Reporting Services | Microsoft Docs
+description: 'En esta página de referencia de error, obtenga información sobre el identificador de evento "rrRenderingError": Error durante la representación del informe.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1fcfe999a7cfaf41cc4b6b9fad437ea14dfe2613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 143520a4bb62df4f38ed0d1d116fd6dc1df22f2c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575554"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487744"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Error de Reporting Services
     
@@ -23,9 +24,9 @@ ms.locfileid: "65575554"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rrRenderingError|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources.Strings|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rrRenderingError|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources.Strings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|Error durante la representación del informe. (rrRenderingError) %1|  
   

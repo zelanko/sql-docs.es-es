@@ -11,15 +11,15 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 4e9ca11ccf29cc1f13b5d4c70a229634674b3d9f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009450"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007521"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Almacenamiento de datos de índices de almacén de columnas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los índices de almacén de columnas, junto con las particiones, son esenciales para crear un almacenamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70009450"
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Mejora del rendimiento al combinar índices de almacén de columnas y no agrupados  
  A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede definir índices no agrupados en un índice de almacén de columnas agrupado.   
   
-### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Ejemplo: Mejorar la eficacia de las búsquedas de tabla con un índice no agrupado  
+### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Ejemplo: mejorar la eficacia de las búsquedas de tabla con un índice no agrupado  
  Para mejorar la eficacia de las búsquedas de tabla en un almacenamiento de datos, puede crear un índice no agrupado diseñado para ejecutar consultas que realicen las mejores búsquedas de tabla. Por ejemplo, las consultas que buscan valores coincidentes o que devuelven un pequeño intervalo de valores tienen un rendimiento mejor en un índice de árbol B que en un índice de almacén de columnas. No requieren un recorrido de tabla completo a través del índice de almacén de columnas y devolverán el resultado correcto más rápidamente si se realiza una búsqueda binaria a través de un índice de árbol B.  
   
 ```sql  
@@ -63,8 +63,8 @@ GO
 CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);  
 ```  
   
-### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Ejemplo: Usar un índice no agrupado para aplicar una restricción de clave principal en una tabla de almacén de columnas  
- Por diseño, una tabla de almacén de columnas no permite restricciones de clave principal. Ahora puede usar un índice no agrupado en una tabla de almacén de columnas para aplicar restricciones de clave principal. Una clave principal equivale a una restricción UNIQUE en una columna no NULL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una restricción UNIQUE como un índice no agrupado. Combinando ambos factores, en el siguiente ejemplo se define una restricción UNIQUE en la accountkey de la columna no NULL. El resultado es un índice no agrupado que aplica una restricción de clave principal como una restricción UNIQUE en una columna no NULL.  
+### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>Ejemplo: usar un índice no agrupado para aplicar una restricción de clave principal en una tabla de almacén de columnas  
+ Por diseño, una tabla de almacén de columnas no permite una restricción de clave principal agrupada. Ahora puede usar un índice no agrupado en una tabla de almacén de columnas para aplicar restricciones de clave principal. Una clave principal equivale a una restricción UNIQUE en una columna no NULL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa una restricción UNIQUE como un índice no agrupado. Combinando ambos factores, en el siguiente ejemplo se define una restricción UNIQUE en la accountkey de la columna no NULL. El resultado es un índice no agrupado que aplica una restricción de clave principal como una restricción UNIQUE en una columna no NULL.  
   
  Luego, la tabla se convierte en un índice de almacén de columnas agrupado. Durante la conversión, se conserva el índice no agrupado. El resultado es un índice de almacén de columnas agrupado con un índice no agrupado que aplica una restricción de clave principal. Dado que cualquier actualización o inserción en la tabla de almacén de columnas también afectará al índice no agrupado, todas las operaciones que infrinjan la restricción UNIQUE y el valor no NULL harán que se produzca un error en toda la operación.  
   

@@ -19,10 +19,10 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292232"
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
@@ -140,7 +140,7 @@ ms.locfileid: "71292232"
  **Administrador de conexiones OLE DB**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Modo de acceso a datos**  
@@ -153,7 +153,7 @@ ms.locfileid: "71292232"
 |Comando SQL|Obtenga datos del origen de datos OLE DB mediante una consulta SQL.|  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
@@ -166,7 +166,7 @@ ms.locfileid: "71292232"
  Seleccione el nombre de la tabla o vista de los disponibles en una lista del origen de datos.  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
 #### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
@@ -176,17 +176,17 @@ ms.locfileid: "71292232"
  **Parámetros**  
  Si ha escrito una consulta con parámetros mediante ? como marcador de posición de parámetro en el texto de la consulta, utilice el cuadro de diálogo **Establecer parámetros de consulta** para asignar los parámetros de entrada de las consultas a las variables del paquete.  
   
- **Build query**  
+ **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  
  Comprueba la sintaxis del texto de la consulta.  
   
 #### <a name="data-access-mode--sql-command-from-variable"></a>Modo de acceso a datos = Comando SQL de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el texto de la consulta SQL.  
   
 ## <a name="ole-db-source-editor-columns-page"></a>Editor de origen de OLE DB (página Columnas)

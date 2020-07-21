@@ -1,5 +1,6 @@
 ---
 title: Usar datos XML en las aplicaciones | Microsoft Docs
+description: Conozca las opciones disponibles para trabajar con tipos de datos xml en sus aplicaciones.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b137b58daa6936328e5f8f37dc31277e0d5b6ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039152"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762545"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar datos XML en las aplicaciones
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describen las opciones que están disponibles para trabajar con tipos de datos **xml** en una aplicación. El tema incluye información acerca de lo siguiente:  
   
 -   Controlar XML desde una columna de tipo **xml** usando ADO y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
@@ -97,7 +98,7 @@ Set objConn = Nothing
   
 1.  Compruebe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado y que en el equipo cliente está disponible MDAC 2.6 o versiones posteriores.  
   
-     Para obtener más información, vea [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md).  
+     Para obtener más información, consulte [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 2.  Compruebe que la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalada.  
   
@@ -146,14 +147,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Controlar XML desde una columna de tipo xml utilizando ADO.NET  
- Para controlar XML desde una columna de tipo de datos **xml** usando ADO.NET y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , puede usar el comportamiento estándar de la clase **SqlCommand** . Por ejemplo, una columna de tipo de datos **xml** y sus valores se pueden recuperar de la misma manera que se recupera cualquier columna SQL utilizando una clase **SqlDataReader**. Sin embargo, si desea trabajar con el contenido de una columna de tipo de datos **xml** como XML, primero tendrá que asignar el contenido a un tipo **XmlReader** .  
+ Para controlar XML desde una columna de tipo de datos **xml** mediante ADO.NET y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puede usar el comportamiento estándar de la clase **SqlCommand**. Por ejemplo, una columna de tipo de datos **xml** y sus valores se pueden recuperar de la misma manera que se recupera cualquier columna SQL utilizando una clase **SqlDataReader**. Sin embargo, si desea trabajar con el contenido de una columna de tipo de datos **xml** como XML, primero tendrá que asignar el contenido a un tipo **XmlReader** .  
   
- Para obtener más información y código muestra, vea el artículo sobre valores de columnas XML en un lector de datos, incluido en la documentación del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Para obtener más información y código de ejemplo, vea el artículo sobre valores de columnas XML en un lector de datos de la documentación del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Controlar una columna de tipo XML como parámetros mediante ADO.NET  
  Para controlar un tipo de datos XML pasado como un parámetro en ADO.NET y [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puede indicar el valor como una instancia del tipo de datos **SqlXml** . No es necesario llevar a cabo ningún control especial, porque las columnas de tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden aceptar valores de parámetros del mismo modo que otros tipos de columnas y de datos, como **string** o **integer**.  
   
- Para obtener más información y código muestra, vea el artículo sobre valores XML como parámetros de comando incluido en la documentación del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] .  
+ Para obtener más información y código de ejemplo, vea el artículo sobre valores XML como parámetros de comando de la documentación del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

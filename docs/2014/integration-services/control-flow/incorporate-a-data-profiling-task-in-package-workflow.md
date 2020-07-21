@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f74a564bf3cc3f70ef685c3adf23fd5a117711cc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831635"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433032"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -45,7 +44,7 @@ ms.locfileid: "62831635"
   
  Al incorporar la tarea de generación de perfiles de datos al flujo de trabajo de un paquete, tenga en cuenta estas dos características de dicha tarea:  
   
--   **Resultado de la tarea**. La tarea de generación de perfiles de datos escribe su resultado en un archivo o en una variable de paquete en el formato XML, de acuerdo con el esquema DataProfile.xsd. Por lo tanto, si desea usar los resultados del perfil en el flujo de trabajo condicional del paquete, debe realizar una consulta en los resultados XML. Para ello, puede usar el lenguaje para consultas Xpath. Para estudiar la estructura de estos resultados XML, puede abrir un archivo de resultados de ejemplo o el propio esquema. Para abrir el archivo de resultados o el esquema, puede usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], otro editor XML o un editor de texto, como el Bloc de notas.  
+-   **Resultado de la tarea**. La tarea de generación de perfiles de datos escribe su resultado en un archivo o en una variable de paquete en el formato XML, de acuerdo con el esquema DataProfile.xsd. Por lo tanto, si desea usar los resultados del perfil en el flujo de trabajo condicional del paquete, debe realizar una consulta en los resultados XML. Para ello, puede usar el lenguaje para consultas Xpath. Para estudiar la estructura de estos resultados XML, puede abrir un archivo de resultados de ejemplo o el propio esquema. Para abrir el archivo de salida o el esquema, puede usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], otro editor XML o un editor de texto, como el Bloc de notas.  
   
     > [!NOTE]  
     >  Algunos de los resultados del perfil que se muestran en el Visor de perfil de datos son valores calculados que no se encuentran directamente en la salida. Por ejemplo, la salida del perfil de proporción de columnas nulas contiene el número total de filas y el número de filas que contienen valores NULL. Para obtener la proporción de columnas nulas, debe usar estos dos valores con objeto de calcular el porcentaje de filas que contienen valores NULL.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831635"
   
 2.  Agregue un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al paquete. Configure dicho administrador de conexiones de forma que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) y se conecte a una instancia disponible de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     De forma predeterminada, el administrador de conexiones tiene el nombre siguiente: \<nombre de servidor>.AdventureWorks1.  
+     De forma predeterminada, el administrador de conexiones tiene el siguiente nombre: \<server name> . AdventureWorks1.  
   
 3.  Agregue un administrador de conexiones de archivos al paquete. Configure este administrador de conexiones con objeto de crear el archivo de resultados para la tarea de generación de perfiles de datos.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831635"
   
 -   En la ventana **Variables** , agregue y configure las dos variables de paquete siguientes:  
   
-    -   Escriba el nombre, `ProfileConnectionName`, para una de las variables y establezca el tipo de esta variable en **cadena**.  
+    -   Escriba el nombre, `ProfileConnectionName` , para una de las variables y establezca el tipo de esta variable en **cadena**.  
   
-    -   Escriba el nombre, `AddressLine2NullRatio`, para la otra variable y establezca el tipo de esta variable en **doble**.  
+    -   Escriba el nombre, `AddressLine2NullRatio` , para la otra variable y establezca el tipo de esta variable en **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurar la tarea de generación de perfiles de datos  
  La tarea de generación de perfiles de datos se debe configurar de la siguiente manera:  
@@ -142,9 +141,9 @@ ms.locfileid: "62831635"
   
 4.  En la página **Script** , seleccione el lenguaje de programación que prefiera. A continuación, ponga las dos variables de paquete a disposición del script:  
   
-    1.  Para `ReadOnlyVariables`, seleccione `ProfileConnectionName`.  
+    1.  En `ReadOnlyVariables` , seleccione `ProfileConnectionName` .  
   
-    2.  Para **ReadWriteVariables**, seleccione `AddressLine2NullRatio`.  
+    2.  En el caso de **ReadWriteVariables**, seleccione `AddressLine2NullRatio` .  
   
 5.  Seleccione **Editar script** para abrir el entorno de desarrollo de script.  
   
@@ -327,7 +326,7 @@ ms.locfileid: "62831635"
   
 7.  En las restricciones de precedencia que conectan la tarea Script a las bifurcaciones de nivel inferior del flujo de trabajo, escriba expresiones que usen los valores de las variables para dirigir el flujo de trabajo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuración de la Tarea de generación de perfiles de datos](data-profiling-task.md)   
  [Visor de perfil de datos](data-profile-viewer.md)  
   

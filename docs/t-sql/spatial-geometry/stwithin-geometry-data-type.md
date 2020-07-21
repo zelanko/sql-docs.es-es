@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f33e2fbc22a1d2cf9228ca5b7cbdc79d787445
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762119"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve 1 si una instancia de **geometry** se encuentra totalmente dentro de otra instancia de **geometry**; en caso contrario, devuelve 0. El comando `STWithin` distingue mayúsculas de minúsculas.
   
@@ -40,12 +40,12 @@ Devuelve 1 si una instancia de **geometry** se encuentra totalmente dentro de ot
  *other_geometry*  
  Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STWithin()`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.
   
 ## <a name="examples"></a>Ejemplos  

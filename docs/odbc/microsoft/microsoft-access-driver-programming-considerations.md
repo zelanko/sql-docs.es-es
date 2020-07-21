@@ -1,5 +1,5 @@
 ---
-title: Consideraciones sobre la programación de controlador de Microsoft Access | Microsoft Docs
+title: Consideraciones de programación del controlador de Microsoft Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Access driver [ODBC]
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c8a169c950de7c1b5f717c2591fff88add42f3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045124"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81308056"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Consideraciones sobre la programación de controlador de Microsoft Access
 Esta sección contiene los temas siguientes.  

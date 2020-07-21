@@ -1,24 +1,23 @@
 ---
-title: Notas de la versión (Controlador OLE DB para SQL Server) | Microsoft Docs
-ms.date: 10/11/2019
+title: Notas de la versión de OLE DB Driver
+description: En este artículo sobre notas de la versión se describen los cambios de cada versión de Microsoft OLE DB Driver for SQL Server.
+ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381733"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727964"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de la versión del controlador Microsoft OLE DB para SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-[!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 En esta página se describe lo que se ha agregado en cada versión del controlador Microsoft OLE DB para SQL Server.
 
@@ -31,39 +30,64 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-Octubre de 2019
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2117517)  
+
+Fecha de publicación: Octubre de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)  
 
 ### <a name="features-added"></a>Características agregadas
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
 | Compatibilidad con la autenticación de Azure Active Directory (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Uso de Azure Active Directory](features/using-azure-active-directory.md). |
-| Compatibilidad con Biblioteca de autenticación de Active Directory incrustado (ADAL). | Una instalación independiente de ADAL ya no es necesaria para usar determinados métodos de autenticación. |
+| Incluye la biblioteca de autenticación de Azure Active Directory (ADAL) y el instalador. | Ahora incluido en la instalación del controlador base, el instalador OLE DB actualizará las instalaciones existentes de la Biblioteca de autenticación de Microsoft Active Directory para SQL Server, y las quita de la lista de aplicaciones instaladas en Windows. |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>Errores corregidos
 
 | Error corregido | Detalles |
 | :-------- | :------ |
-| Lógica de Drop index corregida en [IIndexDefinition::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el ID. de esquema y el ID. de usuario del propietario del índice no son iguales. |
+| Se corrigió la lógica de DROP INDEX en [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el identificador de esquema y el identificador de usuario del propietario del índice no son iguales. |
 | &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Versiones anteriores
+
+Para descargar las versiones anteriores del controlador OLE DB, haga clic en los vínculos de descarga de las secciones siguientes:
 
 ## <a name="1823"></a>18.2.3
 
-Junio de 2019
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
-### <a name="features-added"></a>Características agregadas
+Fecha de publicación: Junio de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
+
+### <a name="features-added-in-1823"></a>Características agregadas en la versión 18.2.3
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Compatibilidad con las actualizaciones de controladores desde el SQL Server medios extraíbles. | Esta mejora permite actualizar controladores directamente desde el SQL Server medios extraíbles. |
+| Compatibilidad con las actualizaciones de controladores desde medios extraíbles de SQL Server. | Esta mejora permite actualizar controladores directamente desde medios extraíbles de SQL Server. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
 
-Mayo de 2019
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
-### <a name="bugs-fixed"></a>Errores corregidos
+Fecha de publicación: Mayo de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
+
+### <a name="bugs-fixed-in-1822"></a>Errores corregidos en la versión 18.2.2
 
 | Error corregido | Detalles |
 | :-------- | :------ |
@@ -72,9 +96,16 @@ Mayo de 2019
 
 ## <a name="1821"></a>18.2.1
 
-Febrero de 2019
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
-### <a name="features-added"></a>Características agregadas
+Fecha de publicación: Febrero de 2019
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
+
+### <a name="features-added-in-1821"></a>Características agregadas en la versión 18.2.1
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
@@ -84,16 +115,23 @@ Febrero de 2019
 
 ## <a name="1810"></a>18.1.0
 
-Julio de 2018
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
-### <a name="features-added"></a>Características agregadas
+Fecha de publicación: Julio de 2018
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
+
+### <a name="features-added-in-1810"></a>Características agregadas en la versión 18.1.0
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Compatibilidad con la palabra clave de cadena de conexión `UseFMTONLY` y la propiedad de inicialización `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla cómo se recuperan los metadatos al conectarse a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones más recientes.<br/><br/>Para obtener más información, consulte: [usar palabras clave de cadena de conexión con OLE DB controlador para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Compatibilidad con la palabra clave de cadena de conexión `UseFMTONLY` y la propiedad de inicialización `SSPROP_INIT_USEFMTONLY`. | `UseFMTONLY` controla cómo se recuperan los metadatos al conectarse a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones más recientes.<br/><br/>Para más información, consulte: [Uso de palabras clave de cadena de conexión con el controlador OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="bugs-fixed"></a>Errores corregidos
+### <a name="bugs-fixed-in-1810"></a>Errores corregidos en la versión 18.1.0
 
 | Error corregido | Detalles |
 | :-------- | :------ |
@@ -102,13 +140,22 @@ Julio de 2018
 
 ## <a name="1802"></a>18.0.2
 
-### <a name="features-added"></a>Características agregadas
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2118277)  
+
+Fecha de publicación: Marzo de 2018
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
+
+### <a name="features-added-in-1802"></a>Características agregadas en la versión 18.0.2
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Compatibilidad con la palabra clave de cadena de conexión `MultiSubnetFailover` y la propiedad de inicialización `SSPROP_INIT_MULTISUBNETFAILOVER`. | Para obtener más información, vea:<br/>&bull; &nbsp; [Compatibilidad de OLE DB Driver for SQL Server con la alta disponibilidad y la recuperación ante desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md),<br/>&bull; &nbsp; [Uso de palabras clave de cadena de conexión con el controlador OLE DB para SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Compatibilidad con la palabra clave de cadena de conexión `MultiSubnetFailover` y la propiedad de inicialización `SSPROP_INIT_MULTISUBNETFAILOVER`. | Para más información, consulte:<br/>&bull; &nbsp; [Compatibilidad de OLE DB Driver for SQL Server con la alta disponibilidad y la recuperación ante desastres](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)<br/>&bull; &nbsp; [Uso de palabras clave de cadena de conexión con OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Controlador Microsoft OLE DB para SQL Server](oledb-driver-for-sql-server.md)

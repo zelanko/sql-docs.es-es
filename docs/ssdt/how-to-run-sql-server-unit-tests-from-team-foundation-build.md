@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035092"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244290"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedimientos: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Cómo: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
+
 Puede usar Team Foundation Build para ejecutar las pruebas unitarias de SQL Server como parte de una prueba de comprobación de la compilación (BVT). Puede configurar las pruebas unitarias para implementar la base de datos, generar datos de prueba y ejecutar las pruebas seleccionadas. Si no está familiarizado con Team Foundation Build, debe revisar la siguiente información antes de seguir los procedimientos de este tema:  
   
 -   [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -66,7 +67,7 @@ Cuando ejecute pruebas unitarias en un equipo de compilación, puede que las pru
   
 Para resolver estos problemas, debe especificar una sección de invalidación en el archivo app.config que reemplace app.config por un archivo de configuración que sea específico del entorno de Team Foundation Build. Para más información, consulte [Modificar el proyecto de prueba](#ModifyTestProject), más adelante en este tema.  
   
-## <a name="ConfigureX64"></a>Configurar las pruebas para ejecutar pruebas unitarias de SQL Server en un agente de compilación x64  
+## <a name="configure-test-settings-to-run-sql-server-unit-tests-on-an-x64-build-agent"></a><a name="ConfigureX64"></a>Configurar las pruebas para ejecutar pruebas unitarias de SQL Server en un agente de compilación x64  
 Para poder ejecutar las pruebas unitarias en un agente de compilación x64, debe configurar las pruebas para cambiar la plataforma de proceso host.  
   
 #### <a name="to-specify-the-host-process-platform"></a>Para especificar la plataforma de proceso de host  
@@ -83,7 +84,7 @@ Para poder ejecutar las pruebas unitarias en un agente de compilación x64, debe
   
 5.  Haga clic en **Aplicar**.  
   
-## <a name="CreateATestList"></a>Asignar pruebas a una categoría de prueba (opcional)  
+## <a name="assign-tests-to-a-test-category-optional"></a><a name="CreateATestList"></a>Asignar pruebas a una categoría de prueba (opcional)  
 Normalmente, cuando se crea una definición de compilación para ejecutar pruebas unitarias, se especifica una o varias categorías de prueba. Todas las pruebas de las categorías especificadas se ejecutan cuando se ejecuta la compilación.  
   
 #### <a name="to-assign-tests-to-a-test-category"></a>Para asignar pruebas a una categoría de prueba  
@@ -100,7 +101,7 @@ Normalmente, cuando se crea una definición de compilación para ejecutar prueba
   
     La nueva categoría de prueba se asignará a la prueba y estará disponible para otras pruebas mediante sus propiedades.  
   
-## <a name="ModifyTestProject"></a>Modificar el proyecto de prueba  
+## <a name="modify-the-test-project"></a><a name="ModifyTestProject"></a>Modificar el proyecto de prueba  
 De forma predeterminada, Team Foundation Build crea un archivo de configuración a partir del archivo app.config del proyecto cuando compila el proyecto de pruebas unitarias. La ruta de acceso al proyecto de base de datos se almacena como ruta de acceso relativa en el archivo app.config. Las rutas de acceso relativas que funcionan en Visual Studio no funcionarán porque Team Foundation Build coloca los archivos compilados en ubicaciones diferentes con respecto al lugar donde se ejecutan las pruebas unitarias. Además, el archivo app.config contiene las cadenas de conexión que especifican la base de datos que desea probar. También necesita un archivo app.config independiente para Team Foundation Build si las pruebas unitarias deben conectarse a una base de datos diferente de la usada cuando se creó el proyecto de prueba. Al realizar modificaciones en el procedimiento siguiente, puede configurar el proyecto de prueba y el servidor de compilación de modo que Team Foundation Build use una configuración diferente.  
   
 > [!IMPORTANT]  
@@ -204,7 +205,7 @@ De forma predeterminada, Team Foundation Build crea un archivo de configuración
   
     A continuación, puede proteger la solución en el control de versiones.  
   
-## <a name="CheckInTheTestList"></a>Proteger la solución  
+## <a name="check-in-the-solution"></a><a name="CheckInTheTestList"></a>Proteger la solución  
 En este procedimiento, va a proteger todos los archivos de la solución. Estos archivos incluyen el archivo de metadatos de prueba de la solución, que contiene las asociaciones y pruebas de la categoría de prueba. Cada vez que agregue, elimine, reorganice o cambie el contenido de las pruebas, el archivo de metadatos de prueba se actualizará automáticamente para reflejar estos cambios.  
   
 > [!NOTE]  
@@ -233,7 +234,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
     Las pruebas están disponibles en Team Foundation Build. A continuación puede crear una definición de compilación que contenga las pruebas que desee ejecutar.  
   
-## <a name="CreateBuildDef"></a>Crear una definición de compilación  
+## <a name="create-a-build-definition"></a><a name="CreateBuildDef"></a>Crear una definición de compilación  
   
 #### <a name="to-create-a-build-definition"></a>Para crear una definición de compilación  
   
@@ -259,7 +260,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
     La solución aparece en la lista **Archivos de la solución o del proyecto que se van a compilar**.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. En el grupo **Básico**, en **Pruebas automatizadas**, especifique las pruebas que desea ejecutar. De forma predeterminada, se ejecutarán las pruebas que se encuentran en los archivos denominados \*test\*.dll de la solución.  
   
@@ -267,7 +268,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
     Ha creado una definición de compilación. A continuación, modifique el proyecto de prueba.  
   
-## <a name="RunBuild"></a>Ejecutar la nueva definición de compilación  
+## <a name="run-the-new-build-definition"></a><a name="RunBuild"></a>Ejecutar la nueva definición de compilación  
   
 #### <a name="to-run-the-new-build-type"></a>Para ejecutar el nuevo tipo de compilación  
   

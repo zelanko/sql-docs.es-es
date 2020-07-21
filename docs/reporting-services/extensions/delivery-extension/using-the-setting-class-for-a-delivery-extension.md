@@ -12,10 +12,10 @@ ms.assetid: 50746639-da7c-46a5-ac7b-e87dd6b91880
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 118f116de516e912b78b7467450b44116b432271
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193599"
 ---
 # <a name="using-the-setting-class-for-a-delivery-extension"></a>Usar la clase Setting para una extensión de entrega

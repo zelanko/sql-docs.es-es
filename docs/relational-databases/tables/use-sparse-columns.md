@@ -15,15 +15,15 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee869a8bc2842bcc56fd0e8ab79c7668c28b50a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140356"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999868"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento. Las columnas dispersas y los conjuntos de columnas se definen mediante las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
@@ -62,9 +62,9 @@ ms.locfileid: "68140356"
   
 |||  
 |-|-|  
-|**geography**|**texto**|  
+|**geography**|**text**|  
 |**geometry**|**timestamp**|  
-|**imagen**|**tipos de datos definidos por el usuario**|  
+|**image**|**tipos de datos definidos por el usuario**|  
 |**ntext**||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>Ahorro de espacio calculado para cada tipo de datos  
@@ -74,7 +74,7 @@ ms.locfileid: "68140356"
   
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|**bit**|0.125|5|98%|  
+|**bit**|0,125|5|98%|  
 |**tinyint**|1|5|86%|  
 |**smallint**|2|6|76%|  
 |**int**|4|8|64%|  

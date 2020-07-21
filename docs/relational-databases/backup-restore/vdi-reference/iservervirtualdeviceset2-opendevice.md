@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: af24aff4bbb8f0eefa14363453e962c0a90d610e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: b43f2adedde0c317f24ee811c4ac1b2a69057de2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847216"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898926"
 ---
 # <a name="iservervirtualdeviceset2opendevice-vdi"></a>IServerVirtualDeviceSet2::OpenDevice (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **OpenDevice** obtiene las interfaces de dispositivo virtual del conjunto de dispositivos virtuales.
 
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::OpenDevice (
 | NOERROR | La función se ha realizado correctamente. |
 | VD_E_OPEN |Se han abierto todos los dispositivos. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cada llamada devuelve el siguiente dispositivo sin abrir. Solo se puede llamar a la función un número de veces igual al número de dispositivos especificado en la configuración del conjunto de dispositivos virtuales.
 

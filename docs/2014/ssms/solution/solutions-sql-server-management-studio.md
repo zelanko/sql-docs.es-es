@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5954a96ce62e74643087ee4723b1977b140bbf96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63064907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058323"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluciones (SQL Server Management Studio)
   Una solución de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una colección de uno o más proyectos relacionados. Los proyectos son contenedores que los desarrolladores de software usan para organizar los archivos relacionados, como conjuntos de scripts de uso común.  
@@ -52,7 +51,7 @@ ms.locfileid: "63064907"
 |Describe cómo mover elementos entre los proyectos de una solución.|[Mover elementos en una solución](move-items-in-a-solution.md)|  
 |Describe cómo cambiar el nombre de una solución o elementos de la solución.|[Cambiar el nombre de las soluciones y los elementos de un proyecto](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Proyectos &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Control de código fuente del Explorador de soluciones](../../database-engine/solution-explorer-source-control.md)  

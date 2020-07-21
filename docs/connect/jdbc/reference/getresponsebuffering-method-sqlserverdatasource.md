@@ -13,14 +13,14 @@ apilocation:
 - SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7710a9c900867e273156690edc0d8961eb08c345
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980436"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921878"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>Método getResponseBuffering (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,14 +35,14 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **Cadena** que contiene un **completo** o **adaptable**en minúsculas.  
+ Un objeto **String** que contiene un atributo **full** o **adaptive** en minúscula.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor **full** se especifica mediante la lectura del resultado completo desde el servidor en el tiempo de ejecución.  
   
  El valor **adaptive** especifica que se almacenen en búfer los menos datos posibles cuando sea necesario. El valor **adaptive** es el modo de almacenamiento en búfer predeterminado.  
   
- Para obtener más información sobre cómo usar el modo de almacenamiento en búfer de respuesta, vea [usar el almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Para más información sobre cómo utilizar el modo de almacenamiento en búfer de respuesta, vea [Empleo de almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Método setResponseBuffering &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   

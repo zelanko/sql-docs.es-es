@@ -1,5 +1,5 @@
 ---
-title: Especificar un conjunto de datos de prueba para la estructura (Tutorial de minería de datos básicos) | Microsoft Docs
+title: Especificar un conjunto de datos de prueba para la estructura (tutorial básico de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720098"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificar un conjunto de datos de pruebas para la estructura (Tutorial básico de minería de datos)
   En las pantallas finales del Asistente para minería de datos dividirá los datos en un conjunto de pruebas y en un conjunto de entrenamiento. Después, asignará nombre a la estructura y habilitará la obtención de detalles en el modelo.  
   
 ## <a name="specifying-a-testing-set"></a>Especificar un conjunto de pruebas  
- Al separar los datos en conjuntos de entrenamiento y de pruebas cuando se crea una estructura de minería de datos, es posible evaluar fácilmente la precisión de los modelos de minería de datos que se crean después. Para obtener más información sobre conjuntos de pruebas, vea [conjuntos de datos de prueba y entrenamiento](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
+ Al separar los datos en conjuntos de entrenamiento y de pruebas cuando se crea una estructura de minería de datos, es posible evaluar fácilmente la precisión de los modelos de minería de datos que se crean después. Para obtener más información sobre los conjuntos de pruebas, consulte [conjuntos de datos de entrenamiento y de prueba](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### <a name="to-specify-the-testing-set"></a>Para especificar el conjunto de pruebas  
   
-1.  En el **crear conjunto de pruebas** página, para **porcentaje de datos de prueba**, deje el valor predeterminado de `30`.  
+1.  En la página **crear conjunto de pruebas** , en **porcentaje de datos para pruebas**, deje el valor predeterminado `30`de.  
   
-2.  Para **número máximo de casos en el conjunto de datos de prueba**, tipo `1000`.  
+2.  **En número máximo de casos en el conjunto de datos**de `1000`prueba, escriba.  
   
 3.  Haga clic en **Siguiente**.  
   
@@ -38,25 +38,25 @@ ms.locfileid: "62720098"
   
 #### <a name="to-name-the-model-and-structure-and-specify-drillthrough"></a>Para denominar el modelo y la estructura, y especificar la obtención de detalles  
   
-1.  En el **completando el Asistente para** página **nombre de la estructura de minería de datos**, tipo `Targeted Mailing`.  
+1.  En la página **finalización del asistente** , en nombre de la estructura `Targeted Mailing`de minería de **datos**, escriba.  
   
-2.  En **nombre del modelo de minería de datos**, tipo `TM_Decision_Tree`.  
+2.  En **nombre del modelo**de minería `TM_Decision_Tree`de datos, escriba.  
   
-3.  Seleccione el **permitir obtención de detalles** casilla de verificación.  
+3.  Active la casilla **permitir obtención de detalles** .  
   
-4.  Revise el **Preview** panel. Tenga en cuenta que solo las columnas seleccionadas como **clave**, **entrada** o **Predictable** se muestran. Las otras columnas que seleccionó (por ejemplo, AddressLine1) no se usan para generar el modelo, pero estarán disponibles en la estructura subyacente y se pueden consultar una vez procesado e implementado el modelo.  
+4.  Revise el panel de **vista previa** . Observe que solo se muestran las columnas seleccionadas como **clave**, **entrada** o **predicción** . Las otras columnas que seleccionó (por ejemplo, AddressLine1) no se usan para generar el modelo, pero estarán disponibles en la estructura subyacente y se pueden consultar una vez procesado e implementado el modelo.  
   
-5.  Haga clic en **Finalizar**.  
+5.  Haga clic en **Finalizar**  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
- [Especificar el tipo de datos y el tipo de contenido &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
+ [Especificar el tipo de datos y el tipo de contenido &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Lección 3: Adición y procesamiento de modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
-## <a name="see-also"></a>Vea también  
- [Habilitar obtención de detalles para un modelo de minería de datos](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
- [Consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Especifique los datos de entrenamiento &#40;Asistente para minería de datos&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
+## <a name="see-also"></a>Consulte también  
+ [Habilitar la obtención de detalles para un modelo de minería de datos](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   
+ [Consultas de obtención de detalles &#40;&#41;de minería de datos](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Especificar los datos de entrenamiento &#40;Asistente para minería de datos&#41;](../../2014/analysis-services/specify-the-training-data-data-mining-wizard.md)  
   
   

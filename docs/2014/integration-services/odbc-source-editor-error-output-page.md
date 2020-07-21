@@ -1,5 +1,5 @@
 ---
-title: Editor de origen ODBC (página salida de Error) | Microsoft Docs
+title: Editor de origen de ODBC (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53661c456ca8cf72508e32a534dfaa8d711ea146
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057128"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424252"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor de origen de ODBC (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de ODBC** para seleccionar las opciones de control de errores.  
@@ -38,7 +37,7 @@ ms.locfileid: "66057128"
 ### <a name="inputoutput"></a>Entrada/salida  
  Muestra el nombre del origen de datos.  
   
-### <a name="column"></a>columna  
+### <a name="column"></a>Columna  
  No se usa.  
   
 ### <a name="error"></a>Error  
@@ -60,7 +59,7 @@ ms.locfileid: "66057128"
  Use las opciones siguientes para configurar la forma en la que el origen de ODBC controla errores y truncamientos.  
   
 ### <a name="fail-component"></a>Error de componente  
- La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Este es el comportamiento predeterminado.  
   
 ### <a name="ignore-failure"></a>Omitir error  
  Se omite el error o el truncamiento.  
@@ -68,8 +67,8 @@ ms.locfileid: "66057128"
 ### <a name="redirect-flow"></a>Redirigir fila  
  La fila que está produciendo el error o el truncamiento se dirige a la salida de error del origen de ODBC. Para más información, consulte [ODBC Source](data-flow/odbc-source.md).  
   
-## <a name="see-also"></a>Vea también  
- [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de origen de ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Editor de orígenes ODBC &#40;página Columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

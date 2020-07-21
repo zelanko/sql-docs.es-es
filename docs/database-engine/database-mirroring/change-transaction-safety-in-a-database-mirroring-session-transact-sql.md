@@ -1,6 +1,7 @@
 ---
-title: Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Cambio de la seguridad de las transacciones (base de datos reflejada)
+description: Cambiar el atributo de seguridad de la transacción para una sesión de creación de reflejo de la base de datos de SQL Server mediante Transact-SQL.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d37d47983dd7c98338f20df1157cd45d88411b74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b7c60138db717f287af5416c7a310debc7e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763847"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La seguridad de las transacciones es el atributo que controla el modo operativo de la sesión. No obstante, el propietario de la base de datos puede cambiar la seguridad de las transacciones en cualquier momento. De forma predeterminada, el nivel de seguridad de las transacciones está establecido en FULL (modo operativo sincrónico).  
   
  Si se desactiva la seguridad de las transacciones, la sesión cambia al modo operativo asincrónico, lo que maximiza el rendimiento. Si la base de datos principal no está disponible, la base de datos reflejada se detiene pero está disponible como base de datos en espera semiactiva (la conmutación por error requiere forzar el servicio, con una posible pérdida de datos).  
@@ -35,7 +36,7 @@ ms.locfileid: "67952065"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     donde *\<base de datos>* es el nombre de la base de datos reflejada.  
+     donde *\<database>* es el nombre de la base de datos reflejada.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Para desactivar la seguridad de las transacciones  
   
@@ -47,7 +48,7 @@ ms.locfileid: "67952065"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     donde *\<base de datos>* es la base de datos reflejada.  
+     donde *\<database>* es la base de datos reflejada.  
   
 ## <a name="see-also"></a>Consulte también  
  [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

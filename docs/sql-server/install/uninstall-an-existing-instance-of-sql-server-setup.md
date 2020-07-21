@@ -1,7 +1,7 @@
 ---
-title: Desinstalar una instancia existente de SQL Server (programa de instalación) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: Desinstalación de una instancia existente
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251069"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78335750"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "71251069"
   
 
   
-## <a name="prepare"></a>Preparar  
+## <a name="prepare"></a>Preparación  
   
 1.  **Haga una copia de seguridad de los datos.** Cree [copias de seguridad completas](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) de todas las bases de datos, incluidas las bases de datos del sistema, o copie manualmente los archivos .mdf y .ldf en una ubicación independiente. La base de datos **maestra** contiene toda la información de nivel de sistema del servidor, como los inicios de sesión y los esquemas. La base de datos **msdb** contiene información del trabajo, como los trabajos del agente SQL Server, el historial de copia de seguridad y los planes de mantenimiento. Consulte [Bases de datos del sistema](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) para obtener más información sobre este tipo de bases de datos. 
   
@@ -55,13 +55,13 @@ ms.locfileid: "71251069"
     > Las bases de datos de ReportServer se incluyen con SQL Server Reporting Services.   
 
  
-1.  **Detenga todos los servicios de**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **.** Se recomienda detener todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las conexiones activas pueden evitar que la desinstalación se realice correctamente.  
+1.  **Detenga todos** los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]servicios de **.** Se recomienda detener todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las conexiones activas pueden evitar que la desinstalación se realice correctamente.  
   
 1.  **Utilice una cuenta que tenga los permisos adecuados.** Inicie sesión en el servidor mediante la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con una cuenta que tenga permisos equivalentes. Por ejemplo, puede iniciar sesión en el servidor mediante una cuenta miembro del grupo de administradores locales.  
   
-## <a name="uninstall"></a>Desinstalar 
+## <a name="uninstall"></a>Desinstalación 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10/2016 +](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10/2016 +](#tab/Windows10)
 
 Para desinstalar SQL Server de Windows 10, Windows Server 2016, Windows Server 2019 y versiones posteriores, siga estos pasos: 
 
@@ -84,7 +84,7 @@ Para desinstalar SQL Server de Windows 10, Windows Server 2016, Windows Ser
  
 1. Actualice la ventana **Aplicaciones y características** para comprobar que la instancia de SQL Server se ha quitado correctamente y determinar qué componentes de SQL Server todavía existen, si los hay. Quite estos componentes también de esta ventana, si lo prefiere. 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 - 2012 R2](#tab/windows2012)
 
 Para desinstalar SQL Server de Windows Server 2008, Windows Server 2012 y Windows 2012 R2, siga estos pasos: 
 

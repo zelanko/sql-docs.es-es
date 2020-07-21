@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f600d7bf2515cb77c587e5c9c3d5f8d1db1e343f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097188"
 ---
-# <a name="getreportserverurls-method-wmi-msreportserverinstance"></a>Método GetReportServerUrls (WMI MSReportServer_Instance)
+# <a name="getreportserverurls-method-wmi-msreportserver_instance"></a>Método GetReportServerUrls (WMI MSReportServer_Instance)
   Devuelve una lista de direcciones URL que los usuarios pueden utilizar para tener acceso al servidor de informes y al administrador de informes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -49,13 +49,13 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Valores devueltos  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se llama a los métodos expuestos por objetos de administración de WMI mediante la función InvokeMethod. Para obtener más información, vea "Ejecutar métodos en objetos de administración" en la la documentación de WMI de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

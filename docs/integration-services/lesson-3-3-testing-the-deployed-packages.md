@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Prueba de los paquetes implementados | Microsoft Docs'
+title: 'Paso 3: Probar los paquetes implementados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac260f2c3703260e5472d5be399333a93574f2c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283252"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lección 3-3: Probar los paquetes implementados

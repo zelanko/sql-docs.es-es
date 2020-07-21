@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 216fb75c9dcdffc83e8f4f21469aaa9cfc1b11d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4ff8d6e7348ece5f09f9ac529c474a302e30be7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726444"
 ---
 # <a name="log-shipping-monitor-settings"></a>Configuración del monitor de trasvase de registros
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para configurar y modificar las propiedades del servidor del monitor de trasvase de registros.  
   
  Para obtener una explicación de los conceptos relacionados con el trasvase de registros, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "67934416"
  **Instancia del servidor de supervisión**  
  Muestra el nombre de la instancia del servidor configurado actualmente como el servidor de supervisión para la configuración del trasvase de registros.  
   
- **Conectar**  
+ **Conexión**  
  Elija y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a utilizar como servidor de supervisión. La cuenta utilizada para la conexión debe ser miembro del rol fijo de servidor sysadmin en la instancia de servidor secundario.  
   
  **Mediante la suplantación de la cuenta de proxy del trabajo**  
@@ -47,7 +47,7 @@ ms.locfileid: "67934416"
  **Programación**  
  Indica la programación actual del trabajo de alerta del Agente SQL Server.  
   
- **Editar**  
+ **Edición**  
  Modifique los parámetros del trabajo de alerta del Agente SQL Server.  
   
  **Deshabilitar este trabajo**  

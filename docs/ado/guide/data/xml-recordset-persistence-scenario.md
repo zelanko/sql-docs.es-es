@@ -10,38 +10,38 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748303"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Escenario de persistencia del conjunto de registros XML
-En este escenario, creará una aplicación de páginas Active Server (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  
+En este escenario, creará una aplicación de Active Server páginas (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  
   
 > [!NOTE]
->  Este escenario requiere que el servidor tiene 5.0 de Internet Information Server (IIS) o una versión posterior instalada.  
+>  Este escenario requiere que el servidor tenga instalado Internet Information Server 5,0 (IIS) o posterior.  
   
- El conjunto de registros devuelto se muestra en el Explorador de Internet mediante un [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ El conjunto de registros devuelto se muestra en Internet Explorer mediante un [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
   
  Los pasos siguientes son necesarios para crear este escenario:  
   
 -   Configuración de la aplicación  
   
--   Obtener los datos  
+-   Obtención de los datos  
   
 -   Enviar los datos  
   
 -   Recibir y mostrar los datos  
   
-## <a name="step-1-set-up-the-application"></a>Paso 1: Configuración de la aplicación  
- Cree un directorio virtual denominado "XMLPersist", con permisos de la secuencia de comandos. Cree dos nuevos archivos de texto en la carpeta a la que señala el directorio virtual, una con nombre "XMLResponse.asp," el otro denominado "Default.htm".  
+## <a name="step-1-set-up-the-application"></a>Paso 1: configuración de la aplicación  
+ Cree un directorio virtual de IIS denominado "XMLPersist" con permisos de script. Cree dos nuevos archivos de texto en la carpeta a la que apunta el directorio virtual, uno denominado "XMLResponse. asp", el otro con el nombre "default. htm".  
   
-## <a name="step-2-get-the-data"></a>Paso 2: Obtener los datos  
- En este paso, escribirá el código para abrir un conjunto de registros ADO y prepararlo para su envío al cliente. Abra el archivo XMLResponse.asp con un editor de texto como Bloc de notas e inserte el código siguiente.  
+## <a name="step-2-get-the-data"></a>Paso 2: obtener los datos  
+ En este paso, escribirá el código para abrir un conjunto de registros ADO y prepararlo para enviarlo al cliente. Abra el archivo XMLResponse. asp con un editor de texto, como el Bloc de notas, e inserte el código siguiente.  
   
 ```  
 <%@ language="VBScript" %>  
@@ -65,12 +65,12 @@ En este escenario, creará una aplicación de páginas Active Server (ASP) que g
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- No olvide cambiar el valor de la `Data Source` parámetro `strCon` en el nombre de su equipo de Microsoft SQL Server.  
+ Asegúrese de cambiar el valor del `Data Source` parámetro en `strCon` al nombre del equipo Microsoft SQL Server.  
   
- Mantener el archivo abierto y vaya al paso siguiente.  
+ Mantenga el archivo abierto y continúe con el paso siguiente.  
   
-## <a name="step-3-send-the-data"></a>Paso 3: Enviar los datos  
- Ahora que tiene un conjunto de registros, debe enviar al cliente, se almacena como XML en el objeto de respuesta de ASP. Agregue el código siguiente al final de XMLResponse.asp.  
+## <a name="step-3-send-the-data"></a>Paso 3: enviar los datos  
+ Ahora que tiene un conjunto de registros, debe enviarlo al cliente guardándolo como XML en el objeto de respuesta de ASP. Agregue el código siguiente a la parte inferior de XMLResponse. asp.  
   
 ```  
   Response.ContentType = "text/xml"  
@@ -84,12 +84,12 @@ En este escenario, creará una aplicación de páginas Active Server (ASP) que g
 %>  
 ```  
   
- Tenga en cuenta que el objeto de respuesta de ASP se especifica como el destino para el conjunto de registros [método Save](../../../ado/reference/ado-api/save-method.md). El destino del método Save puede ser cualquier objeto que admita la interfaz IStream, como ADO [objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), o un nombre de archivo que incluye la ruta de acceso completa que es el conjunto de registros se guarden.  
+ Tenga en cuenta que el objeto de respuesta de ASP se especifica como destino para el [método Save](../../../ado/reference/ado-api/save-method.md)del conjunto de registros. El destino del método Save puede ser cualquier objeto que admita la interfaz IStream, como un [objeto de secuencia ADO (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), o un nombre de archivo que incluya la ruta de acceso completa en la que se va a guardar el conjunto de registros.  
   
- Guarde y cierre XMLResponse.asp antes de pasar al paso siguiente. También copie el archivo adovbs.inc desde la carpeta de instalación de biblioteca de ADO de forma predeterminada en la misma carpeta donde guardó el archivo XMLResponse.asp.  
+ Guarde y cierre XMLResponse. asp antes de ir al paso siguiente. Copie también el archivo adovbs. Inc de la carpeta de instalación de la biblioteca de ADO predeterminada en la misma carpeta donde guardó el archivo XMLResponse. asp.  
   
-## <a name="step-4-receive-and-display-the-data"></a>Paso 4: Recibir y mostrar los datos  
- En este paso creará un archivo HTML con un embedded [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto que apunta al archivo XMLResponse.asp para obtener el conjunto de registros. Abra default.htm con un editor de texto como Bloc de notas y agregue el código siguiente. Reemplace "sqlserver" en la dirección URL con el nombre del servidor.  
+## <a name="step-4-receive-and-display-the-data"></a>Paso 4: recepción y visualización de los datos  
+ En este paso, creará un archivo HTML con un objeto de [objeto de control de objetos (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) incrustado que apunta al archivo XMLResponse. asp para obtener el conjunto de registros. Abra default. htm con un editor de texto, como el Bloc de notas, y agregue el código siguiente. Reemplace "SQLServer" en la dirección URL por el nombre del servidor.  
   
 ```  
 <HTML>  
@@ -110,8 +110,8 @@ En este escenario, creará una aplicación de páginas Active Server (ASP) que g
 </HTML>  
 ```  
   
- Cierre el archivo default.htm y guárdelo en la misma carpeta donde guardó XMLResponse.asp. Uso de Internet Explorer 4.0 o posterior, abra la dirección URL https://*sqlserver*/XMLPersist/default.htm y observe los resultados. Los datos se muestran en una tabla enlazada de DHTML. Ahora, abra la dirección URL https:// *sqlserver* /XMLPersist/XMLResponse.asp y observe los resultados. Se muestra el código XML.  
+ Cierre el archivo default. htm y guárdelo en la misma carpeta donde guardó XMLResponse. asp. Con Internet Explorer 4,0 o posterior, abra la dirección URL https://*SQLServer*/XMLPersist/default.htm y observe los resultados. Los datos se muestran en una tabla DHTML enlazada. Ahora, abra la dirección URL https:// *SQLServer* /XMLPersist/XMLResponse.asp y observe los resultados. Se muestra el XML.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Save (método)](../../../ado/reference/ado-api/save-method.md)   
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 671c49e0b36107682994fdc2192a11db0b40d9d1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 67d76fba42820b972c202fd4321d02fd4f5d9faa
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71297113"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469380"
 ---
 # <a name="developing-a-custom-task"></a>Desarrollar una tarea personalizada
 
@@ -37,7 +37,7 @@ ms.locfileid: "71297113"
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa tareas para realizar unidades de trabajo con el fin de admitir la extracción, transformación y carga de datos. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varias tareas que realizan las acciones usadas con más frecuencia, desde ejecutar una instrucción SQL hasta descargar un archivo de un sitio FTP. Si las tareas incluidas y las acciones compatibles no cumplen completamente sus requisitos, puede crear una tarea personalizada.  
   
- Para crear una tarea personalizada, debe crear una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, aplicar el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a la nueva clase e invalidar los métodos y propiedades importantes de la clase base, incluido el método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
+ Para crear una tarea personalizada, debe crear una clase que herede de la clase base [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task), aplicar el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a la nueva clase e invalidar los métodos y propiedades importantes de la clase base, incluido el método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  
   
 ## <a name="in-this-section"></a>En esta sección  
  En esta sección se describe cómo crear, configurar y codificar una tarea personalizada y su interfaz de usuario personalizada opcional.  

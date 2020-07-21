@@ -11,16 +11,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e26c0e06ea9a71bdb6b9e39126e646d22ad40ea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014977"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926420"
 ---
-# <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
+# <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Informa del número de filas de un conjunto de resultados.  
@@ -38,7 +38,7 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>Valor devuelto  
 Se devolverá**False** si se produce un error al calcular el número de filas. De lo contrario, se devolverá el número de filas del conjunto de resultados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 sqlsrv_num_rows requiere un cursor de cliente, estático o de conjunto de claves, y devolverá **False** si utiliza un cursor de avance o un cursor dinámico. (El valor predeterminado es un cursor de avance). Para obtener más información sobre los cursores, vea [sqlsrv_query](../../connect/php/sqlsrv-query.md) y [Cursor Types &#40;SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador SQLSRV&#41;)](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Ejemplo  

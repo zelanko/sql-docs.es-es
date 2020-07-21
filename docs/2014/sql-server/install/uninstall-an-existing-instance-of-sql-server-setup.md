@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62990188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062427"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
   En este artículo se describe cómo desinstalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siguiendo los pasos de este tema, también prepara el sistema para reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62990188"
 >  Para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe ser administrador local con permiso para iniciar sesión como servicio.  
   
 > [!NOTE]  
->  Para desinstalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice la funcionalidad Eliminar nodo proporcionada por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para quitar cada nodo individualmente. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+>  Para desinstalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilice la funcionalidad Eliminar nodo proporcionada por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para quitar cada nodo individualmente. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  Tenga en cuenta la siguiente información importante antes de desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62990188"
   
 ### <a name="before-you-uninstall"></a>Antes de la desinstalación  
   
-1.  **Haga una copia de seguridad de los datos.** Aunque este paso no sea obligatorio, podría tener bases de datos que desee guardar en su estado presente. También es posible que desee guardar cambios realizados en las bases de datos del sistema. Si se da alguna de estas situaciones, asegúrese de realizar una copia de seguridad de los datos antes de desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede guardar una copia de todos los datos y archivos de registro en una carpeta distinta a la carpeta MSSQL. La carpeta MSSQL se elimina durante la desinstalación.  
+1.  **Realice una copia de seguridad de los datos.** Aunque este paso no sea obligatorio, podría tener bases de datos que desee guardar en su estado presente. También es posible que desee guardar cambios realizados en las bases de datos del sistema. Si se da alguna de estas situaciones, asegúrese de realizar una copia de seguridad de los datos antes de desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede guardar una copia de todos los datos y archivos de registro en una carpeta distinta a la carpeta MSSQL. La carpeta MSSQL se elimina durante la desinstalación.  
   
      Entre los archivos que debe guardar se incluyen los siguientes archivos de base de datos:  
   
@@ -66,21 +65,21 @@ ms.locfileid: "62990188"
   
     -   Templog.ldf  
   
-    -   `ReportServer[$InstanceName]` (Estoes el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] base de datos predeterminada.)  
+    -   `ReportServer[$InstanceName]`(Esta es la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] base de datos predeterminada).  
   
     -   ReportServer[$InstanceName]TempDB (Es la base de datos temporal predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ).  
   
 2.  **Elimine los grupos de seguridad locales.** Antes de desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elimine los grupos de seguridad locales correspondientes a los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  **Detenga todos los servicios de**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **.** Se recomienda detener todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las conexiones activas pueden evitar que la desinstalación se realice correctamente.  
+3.  **Detenga todos los **  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **servicios de .** Se recomienda detener todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las conexiones activas pueden evitar que la desinstalación se realice correctamente.  
   
 4.  **Utilice una cuenta que tenga los permisos adecuados.** Inicie sesión en el servidor mediante la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con una cuenta que tenga permisos equivalentes. Por ejemplo, puede iniciar sesión en el servidor mediante una cuenta miembro del grupo de administradores locales.  
   
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-uninstall-an-instance-of-ssnoversion"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Para comenzar el proceso de desinstalación, vaya al **Panel de control** y, a continuación, a **Programas y características**.  
   
-2.  Haga clic en **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** y seleccione **desinstalar**. A continuación, haga clic en **Quitar**. De esta forma se inicia el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Haga clic con el botón derecho **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** y seleccione **desinstalar**. A continuación, haga clic en **Quitar**. De esta forma se inicia el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Se ejecutan las Reglas auxiliares del programa de instalación para comprobar la configuración del equipo. Para continuar, haga clic en **Siguiente**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "62990188"
   
 2.  Si no puede solucionar la causa del error de desinstalación, puede ponerse en contacto con el servicio de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . En algunos casos, como en la eliminación accidental de archivos importantes, puede ser necesario reinstalar el sistema operativo antes de reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

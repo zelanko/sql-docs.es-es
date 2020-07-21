@@ -1,5 +1,6 @@
 ---
 title: Replicación transaccional | Microsoft Docs
+description: La replicación transaccional utiliza una instantánea de la base de datos y aplica los cambios en el suscriptor a medida que se han producido en el publicador para garantizar la coherencia.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716655"
 ---
-# <a name="transactional-replication"></a>replicación transaccional
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="transactional-replication"></a>Replicación transaccional
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   Normalmente, la replicación transaccional se inicia con una instantánea de los datos y los objetos de la base de datos de publicaciones. En cuanto se obtiene la instantánea inicial, los posteriores cambios de datos y modificaciones del esquema realizados en el publicador habitualmente se entregan en el suscriptor cuando se producen (casi en tiempo real). Los cambios de datos se aplican al suscriptor en el mismo orden y dentro de los mismos límites de la transacción que cuando se produjeron en el publicador. Por tanto, en una publicación, se garantiza la coherencia transaccional.  
   
  La replicación transaccional se utiliza normalmente en entornos entre servidores y es la adecuada en los siguientes casos:  
@@ -41,7 +42,7 @@ ms.locfileid: "71251077"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
-##  <a name="HowWorks"></a> Cómo funciona la replicación transaccional  
+##  <a name="how-transactional-replication-works"></a><a name="HowWorks"></a> Cómo funciona la replicación transaccional  
  La replicación transaccional se implementa con el Agente de instantáneas, el Agente de registro del LOG y el Agente de distribución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El Agente de instantáneas prepara archivos de instantáneas que contienen esquemas y datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución del distribuidor.  
   
  El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para ser replicadas desde el registro de transacciones a la base de datos de distribución, que actúa como una cola de almacenamiento y reenvío confiable. El Agente de distribución copia los archivos de instantáneas iniciales de la carpeta de instantáneas y las transacciones almacenadas en las tablas de la base de datos de distribución a los suscriptores.  
@@ -50,9 +51,9 @@ ms.locfileid: "71251077"
   
  En la siguiente ilustración se muestran los principales componentes de la replicación transaccional.  
   
- ![Componentes de replicación transaccionales y flujo de datos](../../../relational-databases/replication/transactional/media/trnsact.gif "Componentes de replicación transaccionales y flujo de datos")  
+ ![Componentes y flujo de datos de replicación transaccional](../../../relational-databases/replication/transactional/media/trnsact.gif "Componentes y flujo de datos de replicación transaccional")  
   
-##  <a name="Dataset"></a> Conjunto de datos inicial  
+##  <a name="initial-dataset"></a><a name="Dataset"></a> Conjunto de datos inicial  
  Antes de que un suscriptor de replicación transaccional pueda recibir los cambios incrementales desde un publicador, debe contener tablas con el mismo esquema y los mismos datos que las tablas del publicador. El conjunto de datos inicial es normalmente una instantánea que se crea con el Agente de instantáneas y se distribuye y aplica a través del Agente de distribución. También se puede suministrar el conjunto de datos inicial mediante una copia de seguridad u otro medio, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services.  
   
  Cuando se distribuyen y se aplican instantáneas a los suscriptores, solo se ven afectados los suscriptores que estén esperando instantáneas iniciales. Otros suscriptores de esa publicación (aquellos que ya se han inicializado) no se ven afectados.  
@@ -60,19 +61,19 @@ ms.locfileid: "71251077"
 ## <a name="concurrent-snapshot-processing"></a>Procesamiento simultáneo de instantáneas  
  La replicación de instantáneas coloca bloqueos compartidos en todas las tablas publicadas como parte de la replicación mientras dure la generación de instantáneas. Así se puede evitar que se realicen actualizaciones en las tablas de publicación. El procesamiento simultáneo de instantáneas, que es el valor predeterminado con la replicación transaccional, no mantiene los bloqueos compartidos durante la generación completa de la instantánea, lo que permite a los usuarios continuar el trabajo sin interrupción mientras la replicación crea los archivos de instantáneas iniciales.  
   
-##  <a name="SnapshotAgent"></a> Agente de instantáneas  
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> Agente de instantáneas  
  Los procedimientos por los que el Agente de instantáneas implementa la instantánea inicial en la replicación transaccional son los mismos que se utilizan en la replicación de instantáneas (excepto en lo indicado anteriormente acerca del procesamiento simultáneo de instantáneas).  
   
  Después de generarse los archivos de instantáneas, podrá verlos en la carpeta de instantáneas mediante el Explorador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows.  
   
-##  <a name="LogReaderAgent"></a> Modificar datos y el Agente de registro del LOG  
+##  <a name="modifying-data-and-the-log-reader-agent"></a><a name="LogReaderAgent"></a> Modificar datos y el Agente de registro del LOG  
  El Agente de registro del LOG se ejecuta en el distribuidor. Normalmente se ejecuta de forma continua, pero también puede hacerlo siguiendo una programación establecida. Al ejecutarse, el Agente de registro del LOG lee primero el registro de transacciones de la publicación (el mismo registro de la base de datos que se utiliza para el seguimiento de las transacciones y la recuperación durante las operaciones normales del motor de base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ) e identifica las instrucciones INSERT, UPDATE y DELETE, u otras modificaciones efectuadas en los datos de las transacciones que se hayan marcado para ser replicadas. A continuación, el agente copia por lotes dichas transacciones a la base de datos de distribución del distribuidor. El Agente de registro del LOG utiliza el procedimiento almacenado interno **sp_replcmds** para obtener el siguiente conjunto de comandos marcados para replicación desde el registro. La base de datos de distribución se convierte así en una cola de almacenamiento y reenvío desde la que se envían los cambios a los suscriptores. A la base de datos de distribución solo se envían las transacciones confirmadas.  
   
  El lote completo de transacciones se confirma después de que se ha escrito correctamente en la base de datos de distribución. A continuación de la confirmación de cada lote de comandos en el distribuidor, el Agente de registro del LOG llama a **sp_repldone** para marcar hasta dónde se ha llegado en la replicación. Por último, el agente marca las filas del registro de transacciones que están listas para ser purgadas. Las filas que están en espera de ser replicadas no se purgan.  
   
  Los comandos de transacción se almacenan en la base de datos de distribución hasta que se propagan a todos los suscriptores o hasta que se ha alcanzado el período máximo de retención de distribución. Los suscriptores recibirán las transacciones en el mismo orden en que fueron aplicadas en el publicador.  
   
-##  <a name="DistributionAgent"></a> Agente de distribución  
+##  <a name="distribution-agent"></a><a name="DistributionAgent"></a> Agente de distribución  
  El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. El Agente mueve las transacciones desde la base de datos de distribución al suscriptor. Si se ha marcado una suscripción para validarla, el Agente de distribución comprueba también si los datos en el publicador y en el suscriptor coinciden.  
 
 ## <a name="publication-types"></a>Tipos de publicación 

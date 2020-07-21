@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101010"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66101010"
   
  Cuando se crea una suscripción, hay tres formas de especificar su entrega:  
   
--   **Biblioteca de documentos**: Puede crear una suscripción que entregue un documento basado en el informe original a una biblioteca dentro del mismo sitio de SharePoint que el informe original. No puede entregar el documento a una biblioteca en otro servidor u otro sitio dentro de la misma colección de sitios. Para entregar el documento, debe tener el permiso Agregar elementos para la biblioteca a la que se entrega el informe.  
+-   **Biblioteca de documentos**: puede crear una suscripción que entregue un documento basado en el informe original a una biblioteca que se encuentre en el mismo sitio de SharePoint que el informe original. No puede entregar el documento a una biblioteca en otro servidor u otro sitio dentro de la misma colección de sitios. Para entregar el documento, debe tener el permiso Agregar elementos para la biblioteca a la que se entrega el informe.  
   
--   **Carpeta de archivos:** Puede entregar un documento basado en el informe original a una carpeta compartida en el sistema de archivos. Debe seleccionar una carpeta existente que sea accesible a través de una conexión de red.  
+-   **Carpeta de archivos:** puede entregar un documento basado en el informe original a una carpeta compartida del sistema de archivos. Debe seleccionar una carpeta existente que sea accesible a través de una conexión de red.  
   
--   **Correo electrónico:** Si el servidor de informes está configurado para usar la extensión de entrega de correo electrónico del servidor de informes, puede crear una suscripción que envía un informe o un archivo de informe exportado (guardado en un formato de salida) a la Bandeja de entrada. Para recibir simplemente la notificación sin la dirección URL del informe o sin el informe propiamente dicho, desactive las casillas **Incluir un vínculo al informe** y **Mostrar informe dentro del mensaje** .  
+-   **Correo electrónico:** si el servidor de informes está configurado para usar la extensión de entrega de correo electrónico del servidor de informes, puede crear una suscripción que envíe un informe o un archivo de informe exportado (guardado en un formato de salida) a la bandeja de entrada. Para recibir simplemente la notificación sin la dirección URL del informe o sin el informe propiamente dicho, desactive las casillas **Incluir un vínculo al informe** y **Mostrar informe dentro del mensaje** .  
   
  **En este tema:**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66101010"
   
 -   [Para eliminar una suscripción](#bkmk_to_delete_subscription)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisitos generales de las suscripciones  
+##  <a name="general-requirements-for-subscriptions"></a><a name="bkmk_subscription_requirements"></a> Requisitos generales de las suscripciones  
  Para crear una suscripción, el informe debe usar credenciales almacenadas y se debe contar con permiso para ver el informe y crear alertas.  
   
  Al crear una suscripción, puede seleccionar un formato de archivo de salida. No todos los informes funcionan bien en todos los formatos. Antes de seleccionar un formato en una suscripción, abra el informe y expórtelo a otros formatos para asegurarse de que aparece de la manera esperada.  
@@ -66,7 +66,7 @@ ms.locfileid: "66101010"
   
  Los formatos de salida que se seleccionan para una suscripción se basan en las extensiones de representación instaladas en el servidor de informes. Solo pueden seleccionarse formatos de salida compatibles con las extensiones de representación del servidor de informes.  
   
-###  <a name="bkmk_tosharepoint_library"></a> Para crear una suscripción para entregar un informe a una biblioteca de SharePoint  
+###  <a name="to-create-a-subscription-to-deliver-a-report-to-a-sharepoint-library"></a><a name="bkmk_tosharepoint_library"></a> Para crear una suscripción para entregar un informe a una biblioteca de SharePoint  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66101010"
   
 10. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. La sección de parámetros no está visible en esta página si el informe que selecciona no contiene parámetros. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_sharedfolder"></a> Para crear una suscripción para la entrega en una carpeta compartida  
+###  <a name="to-create-a-subscription-for-shared-folder-delivery"></a><a name="bkmk_subscription_for_sharedfolder"></a> Para crear una suscripción para la entrega en una carpeta compartida  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66101010"
   
 12. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_subscription_for_email"></a> Para crear una suscripción para la entrega de correo electrónico del servidor de informes  
+###  <a name="to-create-a-subscription-for-report-server-e-mail-delivery"></a><a name="bkmk_subscription_for_email"></a> Para crear una suscripción para la entrega de correo electrónico del servidor de informes  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66101010"
   
 10. En **Parámetros**, si está creando una suscripción a un informe con parámetros, especifique los valores que desee usar con el informe cuando se procese la suscripción. Para obtener más información sobre los parámetros, vea [Establecer parámetros en un informe publicado &#40;Reporting Services en el modo integrado de SharePoint&#41;](../report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-###  <a name="bkmk_to_modify_subscription"></a> Para ver o modificar una suscripción  
+###  <a name="to-view-or-modify-a-subscription"></a><a name="bkmk_to_modify_subscription"></a> Para ver o modificar una suscripción  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66101010"
   
 3.  Cada suscripción se identifica mediante el tipo de entrega. Haga clic en el tipo de suscripción para ver y cambiar las propiedades existentes.  
   
-###  <a name="bkmk_to_delete_subscription"></a> Para eliminar una suscripción  
+###  <a name="to-delete-a-subscription"></a><a name="bkmk_to_delete_subscription"></a> Para eliminar una suscripción  
   
 1.  Vaya a una biblioteca de SharePoint que contenga el informe.  
   
@@ -156,11 +156,11 @@ ms.locfileid: "66101010"
   
 3.  Haga clic en la casilla situada junto a la suscripción y, a continuación, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Entrega a recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega de la biblioteca de SharePoint en Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
- [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Configurar un servidor de informes para la entrega por correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

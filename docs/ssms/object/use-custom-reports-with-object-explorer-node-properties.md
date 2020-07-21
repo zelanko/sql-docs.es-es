@@ -1,6 +1,6 @@
 ---
-title: Usar informes personalizados con las propiedades de nodo del Explorador de objetos | Microsoft Docs
-ms.custom: ''
+title: Usar informes personalizados con las propiedades de nodo del Explorador de objetos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3bc3c116f8082b17f392d04ae14e0895762fc37
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262068"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257597"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ Los informes personalizados se pueden ejecutar en el contexto de un nodo del Exp
   
 ## <a name="object-explorer-node-report-parameters"></a>Parámetros del informe de un nodo del Explorador de objetos  
   
-|Nombre del parámetro|Tipo de datos|  
+|Nombre de parámetro|Tipo de datos|  
 |------------------|-------------|  
 |**ObjectName**|**String**|  
 |**ObjectTypeName**|**String**|  

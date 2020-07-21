@@ -1,5 +1,5 @@
 ---
-title: Pestaña gráfico (vista Gráfico de precisión de minería de datos) de elevación | Microsoft Docs
+title: Pestaña gráfico de elevación (vista gráfico de precisión de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078100"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541897"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Pestaña Gráfico de elevación (vista Gráfico de precisión de minería de datos)
   Utilice el panel **Gráfico de elevación** para ver un gráfico que compara todos los modelos de minería seleccionados en la estructura de minería de datos seleccionada.  
@@ -42,9 +41,9 @@ ms.locfileid: "66078100"
  **Copiar**  
  Copia el gráfico en el Portapapeles.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)   
+ [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

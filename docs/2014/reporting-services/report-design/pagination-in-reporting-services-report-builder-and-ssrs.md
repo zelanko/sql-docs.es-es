@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105476"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginación en Reporting Services (Generador de informes y SSRS)
@@ -45,14 +45,14 @@ ms.locfileid: "66105476"
   
  El área de la página física que queda después de haber asignado el espacio correspondiente a los márgenes, el espaciado entre columnas, y el encabezado y pie de página, se denomina *área de página utilizable*. Los márgenes se aplican solo cuando se representan y se imprimen informes en formatos de representadores de saltos de página duros. La imagen siguiente muestra el margen y el área de página utilizable de una página física.  
   
- ![Página física con márgenes y área utilizable](../media/rspagemargins.gif "Página física con márgenes y área utilizable")  
+ ![Página física con márgenes y área utilizable.](../media/rspagemargins.gif "Página física con márgenes y área utilizable.")  
   
 ### <a name="newsletter-style-columns"></a>Columnas de estilo boletín  
  El informe se puede dividir en columnas, como las columnas de un periódico, que se tratan como páginas lógicas representadas en la misma página física. Las columnas se organizan de izquierda a derecha y de arriba abajo, y se separan mediante espacios en blanco. Si el informe se divide en más de una columna, cada página física se divide verticalmente en columnas, cada una de las cuales se considera una página lógica. Por ejemplo, imagine que tiene dos columnas en una página física. El contenido del informe rellena la primera columna y, a continuación, la segunda. Si las dos primeras columnas no son suficientes para la totalidad del informe, se rellena la primera columna de la página siguiente y, a continuación, la segunda. Las columnas continúan rellenándose, de izquierda a derecha y de arriba abajo, hasta que se han representado todos los elementos de informe. Si especifica tamaños de columna que hacen que el ancho horizontal o vertical sea cero, el espaciado entre columnas se establece en cero de forma predeterminada.  
   
  Las columnas se especifican en el panel **Propiedades del informe** , el cuadro de diálogo **Configurar página** o si cambia las propiedades TopMargin, BottomMargin, LeftMargin y RightMargin en el panel **Propiedades** . Si desea usar un tamaño de margen que no está definido, puede especificarlo usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Las columnas solo se aplican cuando se representan y se imprimen informes en formatos PDF o Imagen. La imagen siguiente muestra el área de página utilizable de una página que contiene columnas.  
   
- ![Página física con columnas descritas](../media/rspagecolumns.gif "Página física con columnas descritas")  
+ ![Página física con columnas descritas.](../media/rspagecolumns.gif "Página física con columnas descritas.")  
   
 ## <a name="page-breaks-and-page-names"></a>Saltos de página y nombres de página  
  Un informe podría ser más legible y sus datos más fáciles de auditar y exportar si tiene nombres de página. Reporting Services proporciona propiedades para las regiones de datos Tablix (tabla, matriz y lista) e informes, grupos y rectángulos del informe para controlar la paginación, restablecer los números de página y proporcionar nombres nuevos para las páginas del informe en los saltos de página. Estas características pueden mejorar los informes con independencia del formato en el que se representan los informes, pero son especialmente útiles al exportar los informes a los libros de Excel.  
@@ -82,7 +82,7 @@ ms.locfileid: "66105476"
   
  Para más información sobre cómo funcionan estas propiedades cuando se exportan informes a Excel, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

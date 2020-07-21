@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4670ef04301bb8dc75828db97ee42d3379ecbfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706235"
 ---
 # <a name="operator-precedence-transact-sql"></a>Prioridad de operador (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cuando una expresión compleja tiene múltiples operadores, la prioridad de operador determina la secuencia en que se realizan las operaciones. El orden de ejecución puede afectar de manera significativa al valor resultante.  
   

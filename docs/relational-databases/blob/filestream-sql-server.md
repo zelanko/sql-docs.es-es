@@ -1,5 +1,6 @@
 ---
 title: FILESTREAM (SQL Server) | Microsoft Docs
+description: Obtenga información sobre FILESTREAM, una característica de SQL Server que almacena datos en el sistema de archivos. Lea sobre cómo almacena y protege los datos y sobre cómo proporciona acceso a ellos.
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: c56f702b6946662657f35fd7e0c8e6b9bc791c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 180e13a7a8e5d85aa43ae47d7e9ae955d421991b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903960"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893801"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 FILESTREAM permite a las aplicaciones basadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenar datos no estructurados, como documentos e imágenes, en el sistema de archivos. Las aplicaciones pueden aprovechar las API de transmisión de datos enriquecidas y el rendimiento del sistema de archivos al mismo tiempo que mantienen la coherencia transaccional entre los datos no estructurados y los datos estructurados correspondientes.  
   
@@ -75,7 +76,7 @@ Solo la cuenta con la que la cuenta de servicio de [!INCLUDE[ssNoVersion](../../
 > [!NOTE]
 > Los inicios de sesión de SQL no funcionarán con contenedores FILESTREAM. Solo la autenticación NTFS o ReFS funcionará con contenedores FILESTREAM.
 
-## <a name="dual"></a> Acceso a datos BLOB con Transact-SQL y acceso de transmisión de datos del sistema de archivos
+## <a name="accessing-blob-data-with-transact-sql-and-file-system-streaming-access"></a><a name="dual"></a> Acceso a datos BLOB con Transact-SQL y acceso de transmisión de datos del sistema de archivos
 
 Después de almacenar los datos en una columna FILESTREAM, puede tener acceso a los archivos usando las transacciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] o usando las API de Win32.  
   
@@ -150,7 +151,7 @@ No se admite la creación de vistas asignadas de memoria (E/S asignada de memori
 
 ## <a name="related-tasks"></a>Related Tasks
 
-[Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
+[Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [crear una base de datos habilitada para FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
 [Crear una tabla para almacenar datos FILESTREAM](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
 [Obtener acceso a datos FILESTREAM con Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md) [Crear aplicaciones cliente para datos FILESTREAM](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d2df5c3df512c60c38caeb2f2d0240a3cf2daa6e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f9d55c01d2913f76b09b783212768544866dd892
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768725"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159333"
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceptos de los ejecutables del Agente de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Los agentes de replicación se pueden controlar mediante programación de las maneras siguientes:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68768725"
   
  Las instancias de los agentes de replicación siguientes se pueden ejecutar con archivos ejecutables.  
   
--   [Agente de distribución de replicación](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Agente de registro del LOG de replicación](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   

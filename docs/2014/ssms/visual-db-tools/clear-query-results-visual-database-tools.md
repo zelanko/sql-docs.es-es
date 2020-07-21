@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 068220e731c905f32dff471d477ae27742698e23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63255786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066221"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Borrar los resultados de una consulta (Visual Database Tools)
   Después de ejecutar una consulta en el **Diseñador de consultas y vistas**, puede borrar el panel Resultados. Este procedimiento se aplica a las consultas creadas mediante las opciones **Abrir vista** o **Abrir tabla** del Explorador de objetos. En[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], después de ejecutar una consulta en el Editor de consultas, el panel Resultados no se puede borrar excepto si se cierra la ventana Editor de consultas o se ejecuta otra consulta.  
@@ -35,7 +34,7 @@ ms.locfileid: "63255786"
   
      Si está ejecutando una consulta cuando borra el panel Resultados, el Diseñador de consultas y vistas detendrá la consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar consultas &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [Detener una consulta &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
  [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](visual-database-tools.md)  

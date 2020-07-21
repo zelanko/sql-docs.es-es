@@ -1,5 +1,5 @@
 ---
-title: Agregar y comprobar una conexión de datos o un origen de datos (generador de informes y SSRS) | Microsoft Docs
+title: Agregar y comprobar una conexión de datos o un origen de datos (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca1e5d039a7ea7aacd930f47eb99f854cbce8cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107520"
 ---
-# <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Agregar y comprobar una conexión de datos o un origen de datos (generador de informes y SSRS)
+# <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Agregar y comprobar una conexión de datos o un origen de datos (Generador de informes y SSRS)
   En el Generador de informes, puede agregar un origen de datos compartido del servidor de informes o crear un origen de datos incrustado para el informe. En el Diseñador de informes, puede crear un origen de datos compartido o un origen de datos incrustado e implementarlo en un servidor de informes.  
   
  Para agregar un origen de datos compartido al informe, busque un servidor de informes y seleccione un origen de datos compartido. El origen de datos compartido del informe señala a la definición del origen de datos compartido en el servidor de informes.  
@@ -48,7 +48,7 @@ ms.locfileid: "66107520"
   
 ### <a name="to-create-an-embedded-data-source"></a>Para crear un origen de datos incrustado  
   
-1.  En la barra de herramientas del panel Datos de informe, haga clic en **Nuevo**y, a continuación, haga clic en **Origen de datos**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
+1.  En la barra de herramientas del panel datos de informe, haga clic en **nuevo**y, a continuación, haga clic en **origen de datos**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
 2.  En el cuadro de texto **Nombre** , escriba un nombre para el origen de datos o acepte el valor predeterminado.  
   
@@ -80,20 +80,20 @@ ms.locfileid: "66107520"
   
 2.  Haga clic en **Probar conexión**.  
   
-3.  Si la conexión se realiza correctamente, aparece el mensaje siguiente: "Conexión creada correctamente". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Si la conexión es correcta, aparece el mensaje siguiente: "Conexión creada correctamente". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Si la conexión no se realiza correctamente, aparece el mensaje siguiente: "No se puede conectar al origen de datos."  
+4.  Si la conexión no es correcta, aparece un mensaje similar al siguiente: "No se puede establecer conexión con el origen de datos".  
   
 5.  Haga clic en **Detalles**y utilice la información para corregir el problema.  
   
-     Para obtener más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
+     Para más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión (Generador de informes y SSRS)](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
+## <a name="see-also"></a>Consulte también  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
+ [Conjuntos de valores integrados de informe y conjuntos de recursos compartidos &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
   

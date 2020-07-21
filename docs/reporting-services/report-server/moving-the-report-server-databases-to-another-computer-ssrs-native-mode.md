@@ -1,6 +1,7 @@
 ---
-title: Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS) | Microsoft Docs
-ms.date: 05/30/2017
+title: Movimiento de las bases de datos del servidor de informes a otro equipo (modo nativo) | Microsoft Docs
+description: Las bases de datos del servidor de informes que se emplean en una instalación de Motor de base de datos de SQL Server se pueden mover a una instancia que se encuentre en otro equipo.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 762bee43a32bed19b5646ad982467c67c933ed85
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65619685"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254584"
 ---
-# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
+# <a name="moving-report-server-databases-to-another-computer-ssrs-native-mode"></a>Movimiento de las bases de datos del servidor de informes a otro equipo (modo nativo de SSRS)
 
   Las bases de datos del servidor de informes que se emplean en una instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] se pueden mover a una instancia que se encuentre en otro equipo. Las bases de datos reportserver y reportservertempdb se deben mover o copiar en conjunto. Una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere las dos bases de datos; la base de datos reportservertempdb debe estar relacionada por nombre con la base de datos reportserver principal que se vaya a mover.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
  Mover una base de datos no afecta a las operaciones programadas que están actualmente definidas para los elementos del servidor de informes.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65619685"
 ## <a name="backing-up-and-restoring-the-report-server-databases"></a>Realizar copias de seguridad de las bases de datos del servidor de informes y restaurarlas  
  Si no es posible que el servidor de informes esté sin conexión, puede realizar una copia de seguridad de las bases de datos del servidor de informes y restaurarlas para cambiar su ubicación. Debe usar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizar copias de seguridad y restauraciones. Después de restaurar las bases de datos, debe configurar el servidor de informes para que utilice la base de datos en la nueva instancia del servidor. Para obtener más información, vea las instrucciones que se incluyen al final de este tema.  
   
-### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>Usar BACKUP y COPY_ONLY para la copia de seguridad de las bases de datos del servidor de informes  
+### <a name="using-backup-and-copy_only-to-backup-the-report-server-databases"></a>Usar BACKUP y COPY_ONLY para la copia de seguridad de las bases de datos del servidor de informes  
  Cuando realice copias de seguridad de las bases de datos, establezca el argumento COPY_ONLY. Asegúrese de incluir ambas bases de datos y los archivos de registro en la copia de seguridad.  
   
 ```  
@@ -200,15 +201,15 @@ GO
   
 1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y abra una conexión con el servidor de informes.  
   
-2.  En la página Base de datos, haga clic en **Cambiar base de datos**. Haga clic en **Siguiente**.  
+2.  En la página Base de datos, haga clic en **Cambiar base de datos**. Haga clic en **Next**.  
   
-3.  Haga clic en **Elija una base de datos del servidor de informes existente**. Haga clic en **Siguiente**.  
+3.  Haga clic en **Elija una base de datos del servidor de informes existente**. Haga clic en **Next**.  
   
-4.  Seleccione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ahora aloja la base de datos del servidor de informes y haga clic en **Probar conexión**. Haga clic en **Siguiente**.  
+4.  Seleccione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ahora aloja la base de datos del servidor de informes y haga clic en **Probar conexión**. Haga clic en **Next**.  
   
-5.  En Nombre de la base de datos, seleccione la base de datos del servidor de informes que desea utilizar. Haga clic en **Siguiente**.  
+5.  En Nombre de la base de datos, seleccione la base de datos del servidor de informes que desea utilizar. Haga clic en **Next**.  
   
-6.  En Credenciales, especifique las credenciales que utilizará el servidor de informes para conectarse a la base de datos del servidor de informes. Haga clic en **Siguiente**.  
+6.  En Credenciales, especifique las credenciales que utilizará el servidor de informes para conectarse a la base de datos del servidor de informes. Haga clic en **Next**.  
   
 7.  Haga clic en **Siguiente** y, a continuación, en **Finalizar**.  
   

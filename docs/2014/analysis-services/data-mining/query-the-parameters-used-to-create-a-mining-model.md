@@ -1,5 +1,5 @@
 ---
-title: Los parámetros utilizados para crear un modelo de minería de datos de consulta | Microsoft Docs
+title: Consultar los parámetros usados para crear un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d24d3316275e649a62e2c66d01e683a20b7a640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083036"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520591"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Consultar los parámetros usados para crear un modelo de minería de datos
   La composición de un modelo de minería de datos no solo se ve afectada por los casos de entrenamiento, sino también por los parámetros que se establecieron al crear el modelo. Por lo tanto, es posible que la recuperación de la configuración de parámetros de un modelo existente resulte de utilidad para comprender mejor el comportamiento del modelo. La recuperación de parámetros también resulta útil al documentar una versión determinada del modelo.  
@@ -31,7 +30,7 @@ ms.locfileid: "66083036"
 2.  Haga clic con el botón derecho en el nombre de la instancia, seleccione **Nueva consulta**y, después, seleccione **DMX**.  
   
     > [!NOTE]  
-    >  También puede crear una consulta en un modelo de minería de datos usando la plantilla **MDX** .  
+    >   También puede crear una consulta en un modelo de minería de datos utilizando la plantilla **MDX** .  
   
 3.  Si la instancia contiene varias bases de datos, seleccione la base de datos que contiene el modelo que desea consultar en la lista **Bases de datos disponibles** de la barra de herramientas.  
   
@@ -66,8 +65,8 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de Consulta de minería de datos](data-mining-query-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos de consulta de minería de datos](data-mining-query-tasks-and-how-tos.md)   
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

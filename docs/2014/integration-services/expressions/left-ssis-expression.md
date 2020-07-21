@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e6deba09d2804903e8353d4648a2775d18c8c392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37f5c1e09464e08932527a667dfc6f8fe306a3ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897693"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428382"
 ---
 # <a name="left-ssis-expression"></a>LEFT (expresión de SSIS)
   Devuelve el número de caracteres especificado de la parte más a la izquierda de la expresión de caracteres dada.  
@@ -31,13 +30,13 @@ LEFT(character_expression,number)
  *character_expression*  
  Expresión de caracteres de la que se van a extraer caracteres.  
   
- *number*  
+ *número*  
  Expresión entera que indica el número de caracteres que se van a devolver.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si *number* es mayor que la longitud de *character_expression*, la función devuelve *character_expression*.  
   
  Si el valor de *number* es cero, la función devuelve una cadena de longitud cero.  
@@ -57,7 +56,7 @@ LEFT(character_expression,number)
 LEFT("Mountain Bike", 8)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RIGHT &#40;expresión de SSIS&#41;](right-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   

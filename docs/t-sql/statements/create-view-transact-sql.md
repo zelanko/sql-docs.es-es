@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,15 +37,15 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: de62120fd28e67c4323a88f73bc5bac939aedc64
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038875"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002491"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea una tabla virtual cuyo contenido (columnas y filas) se define mediante una consulta. Utilice esta instrucción para crear una vista de los datos de una o varias tablas de la base de datos. Por ejemplo, una vista se puede utilizar para lo siguiente:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "71038875"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -131,7 +131,7 @@ OR ALTER
   
 -   Una referencia a una tabla temporal o a una variable de tabla  
   
- Dado que *select_statement* utiliza la instrucción SELECT, es válido utilizar \<join_hint> y \<table_hint> hints como se especifican en la cláusula FROM. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) y [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
+ Dado que *select_statement* utiliza la instrucción SELECT, es válido utilizar las sugerencias \<join_hint> y \<table_hint>, tal como se especifican en la cláusula FROM. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) y [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
  En *select_statement* se pueden utilizar funciones y varias instrucciones SELECT separadas por UNION o UNION ALL.  
   
@@ -142,7 +142,7 @@ OR ALTER
 >  Cualquier actualización realizada directamente en las tablas subyacentes de una vista no se comprueba en la vista, aunque se haya especificado CHECK OPTION.  
   
  ENCRYPTION  
- **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Cifra las entradas de [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contienen el texto de la instrucción CREATE VIEW. El uso de WITH ENCRYPTION evita que la vista se publique como parte de la replicación de SQL Server.  
   
@@ -158,7 +158,7 @@ OR ALTER
   
  Cuando se crea una vista mediante WITH VIEW_METADATA, todas sus columnas, excepto una columna **timestamp**, son actualizables si la vista tiene los desencadenadores INSTEAD OF INSERT o INSTEAD OF UPDATE. Para obtener más información acerca de las vistas actualizables, vea la sección Notas.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una vista solo se puede crear en la base de datos actual. CREATE VIEW debe ser la primera instrucción en un lote de consultas. Una vista puede tener un máximo de 1.024 columnas.  
   
  Cuando se realiza una consulta a través de una vista, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se asegura de que todos los objetos de base de datos a los que se hace referencia en algún lugar de la instrucción existen, que son válidos en el contexto de la instrucción y que las instrucciones de modificación de datos no infringen ninguna regla de integridad de los datos. Las comprobaciones que no son correctas devuelven un mensaje de error. Las comprobaciones correctas traducen la acción a una acción con las tablas subyacentes.  
@@ -210,7 +210,7 @@ OR ALTER
   
  Una vista con particiones de `Server1` se define de la siguiente forma:  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  Normalmente, se dice que una vista tiene particiones si tiene el siguiente formato:  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          La restricción `C1` definida en la tabla `T1` debe tener el siguiente formato:  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   Las restricciones deben estar definidas de manera que cualquier valor especificado de `<col>` pueda cumplir al menos una de las restricciones `C1, ..., Cn` de modo que las restricciones formen un conjunto de intervalos no combinados o que no se superpongan. La columna `<col>` en la que se definen las restricciones no combinadas se denomina columna de partición. Observe que la columna de partición puede tener diferentes nombres en las tablas subyacentes. Las restricciones deben estar habilitadas y ser de confianza para cumplir las condiciones mencionadas anteriormente de la columna de partición. Si las restricciones están deshabilitadas, vuelva a habilitarlas mediante la opción CHECK CONSTRAINT *constraint_name* de ALTER TABLE y la opción WITH CHECK para validarlas.  
   
          En los siguientes ejemplos se muestran conjuntos válidos de restricciones:  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ Para los siguientes ejemplos se usan las bases de datos AdventureWorks 2012 o Ad
 ### <a name="a-using-a-simple-create-view"></a>A. Usar una instrucción CREATE VIEW sencilla  
  En el ejemplo siguiente se crea una vista mediante una instrucción `SELECT` sencilla. Una vista sencilla resulta útil cuando se consulta con frecuencia una combinación de columnas. Los datos de esta vista provienen de las tablas `HumanResources.Employee` y `Person.Person` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Los datos proporcionan el nombre e información sobre la fecha de contratación de los empleados de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Esta vista puede crearse para la persona responsable del seguimiento de los aniversarios de trabajo pero sin concederle acceso a todos los datos de estas tablas.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -369,9 +369,9 @@ GO
 ### <a name="b-using-with-encryption"></a>B. Usar WITH ENCRYPTION  
  En el siguiente ejemplo se utiliza la opción `WITH ENCRYPTION` y se muestran columnas calculadas, columnas con el nombre cambiado y varias columnas.  
   
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. Usar WITH CHECK OPTION  
  En el siguiente ejemplo se muestra una vista denominada `SeattleOnly` que hace referencia a cinco tablas y permite modificar datos aplicados únicamente a los empleados que viven en Seattle.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D. Usar funciones integradas dentro de una vista  
  En el siguiente ejemplo se muestra una definición de vista que incluye una función integrada. Al utilizar funciones, es necesario especificar un nombre de columna para la columna derivada.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. Usar datos con particiones  
  En el siguiente ejemplo se utilizan las tablas denominadas `SUPPLY1`, `SUPPLY2`, `SUPPLY3` y `SUPPLY4`. Estas tablas corresponden a las tablas de proveedores de cuatro oficinas ubicadas en diferentes países o regiones.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -464,12 +464,12 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-creating-a-simple-view"></a>F. Crear una vista simple  
  En el ejemplo siguiente se crea una vista seleccionando solo algunas de las columnas de la tabla de origen.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. Crear una vista mediante la combinación de dos tablas  
  En el ejemplo siguiente se crea una vista mediante una instrucción `SELECT` con `OUTER JOIN`. Los resultados de la consulta de combinación rellenan la vista.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

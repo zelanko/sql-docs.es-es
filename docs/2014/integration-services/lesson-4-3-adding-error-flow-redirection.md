@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Agregar redirección de flujo de Error | Microsoft Docs'
+title: 'Paso 3: Agregar redirección de flujo de errores | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c9e20ae26c3eec7069a20a09d54bd43836c0c9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62891407"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440462"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Paso 3: Adición de redirección de flujo de errores
   Como se ha mostrado en la tarea anterior, la transformación Lookup Currency Key no puede generar una coincidencia cuando la transformación intenta procesar el archivo plano de ejemplo dañado que ha generado un error. Puesto que la transformación utiliza la configuración de salida de error predeterminada, cualquier error da lugar a un error de la transformación. Cuando se produce un error en la transformación, también se produce un error en el resto del paquete.  
@@ -24,13 +23,13 @@ ms.locfileid: "62891407"
   
  En esta tarea configurará la transformación Lookup Currency Key para redirigir cualquier fila con errores a la salida de errores. En la rama de errores del flujo de datos, estas filas se escribirán en un archivo.  
   
- De forma predeterminada, las dos columnas adicionales en una salida de errores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , **ErrorCode** y **ErrorColumn**, solo contienen códigos numéricos que representan un número de error y el Id. de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la correspondiente descripción del error.  
+ De forma predeterminada, las dos columnas adicionales en una [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] salida de error, **ErrorCode** y **ErrorColumn**, solo contienen códigos numéricos que representan un número de error y el identificador de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la correspondiente descripción del error.  
   
  Para mejorar la utilidad de la salida de errores, antes de que el paquete escriba las filas con errores en el archivo, se utilizará un componente de script para obtener acceso a la API de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y obtener una descripción del error.  
   
 ### <a name="to-configure-an-error-output"></a>Para configurar una salida de error  
   
-1.  En el **Cuadro de herramientas de SSIS**, expanda **Comunes**y, a continuación, arrastre **Componente de script** a la superficie de diseño de la pestaña **Flujo de datos** . Coloque **Script** a la derecha de la transformación **Lookup Currency Key** .  
+1.  En el **cuadro de herramientas de SSIS**, expanda **común**y, a continuación, arrastre **componente de script** a la superficie de diseño de la pestaña **flujo de datos** . Coloque el **script** a la derecha de la transformación **lookup Currency Key** .  
   
 2.  En el cuadro de diálogo **Seleccionar el tipo de componente de script** , haga clic en **Transformación**y luego en **Aceptar**.  
   
@@ -48,9 +47,9 @@ ms.locfileid: "62891407"
   
 8.  En la página **Entradas y salidas** , expanda **Salida 0**, haga clic en **Columnas de salida**y, a continuación, en **Agregar columna**.  
   
-9. En el `Name` propiedad, tipo **ErrorDescription** y establezca el `DataType` propiedad **cadena Unicode [DT_WSTR]** .  
+9. En la `Name` propiedad, escriba **ErrorDescription** y establezca la `DataType` propiedad en **cadena Unicode [DT_WSTR]**.  
   
-10. En el **Script** , comprueba que el `LocaleID` propiedad está establecida en **inglés (Estados Unidos.**  
+10. En la página **script** , compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos.**  
   
 11. Haga clic en **Editar script** para abrir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). En el método `Input0_ProcessInputRow`, escriba o pegue el código siguiente.  
   
@@ -96,6 +95,6 @@ ms.locfileid: "62891407"
 13. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación Script** .  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 4: Agregar un destino de archivo sin formato] (lesson-4-4-adding-a-flat-file-destination.md  
+ [Paso 4: agregar un destino de archivo plano] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

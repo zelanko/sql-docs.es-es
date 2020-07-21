@@ -1,5 +1,5 @@
 ---
-title: Instrucción CREATE SESSION CUBE (MDX) | Microsoft Docs
+title: CREATE SESSION CUBE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038363"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definición de datos de MDX: CREATE SESSION CUBE
@@ -101,16 +101,16 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Nombre de la dimensión del cubo de sesión.  
   
- DESDE \<dim from (cláusula) >  
+ FROM \<DIM from (cláusula)>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
  NOT_RELATED_TO_FACTS  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
- \<nivel de tipo >  
+ \<tipo de nivel>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  A diferencia de los cubos de servidor y locales, un cubo de sesión no se mantiene más allá de la sesión que lo creó. Un cubo de sesión se define según las medidas y definiciones que lo definen. Existen dos tipos de dimensiones.  
   
 -   Dimensiones de origen: se trata de las dimensiones que formaban parte de uno de varios cubos de origen.  
@@ -124,7 +124,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Eliminar las dimensiones presentes en el cubo de origen  
   
--   Agregar o eliminar jerarquías en una dimensión.  
+-   Agregar o eliminar jerarquías de una dimensión.  
   
 -   Eliminar grupos de medida o medidas específicas  
   
@@ -198,8 +198,8 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instrucción CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [CREATE GLOBAL CUBE, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

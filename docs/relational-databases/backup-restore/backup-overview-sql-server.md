@@ -1,5 +1,6 @@
 ---
 title: Información general sobre copias de seguridad (SQL Server) | Microsoft Docs
+description: Conozca el componente de copia de seguridad de SQL Server, que incluye los tipos de copia de seguridad y las restricciones, así como los dispositivos y medios de copia de seguridad.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834806"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se presenta el componente de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La copia de seguridad de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es esencial para proteger los datos. En esta descripción se tratan los tipos y las restricciones de copia de seguridad. En el tema también se presentan los dispositivos y los medios de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
@@ -79,7 +80,7 @@ ms.locfileid: "70176264"
 ## <a name="backup-media-terms-and-definitions"></a>Términos y definiciones de medios de copia de seguridad  
   
  **[dispositivo de copia de seguridad](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[medio de copia de seguridad](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  
@@ -96,11 +97,11 @@ ms.locfileid: "70176264"
  **[conjunto de medios reflejado](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)**  
  Varias copias (reflejos) de un conjunto de medios.  
   
-##  <a name="BackupCompression"></a> Compresión de copia de seguridad  
+##  <a name="backup-compression"></a><a name="BackupCompression"></a> Compresión de copia de seguridad  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores admiten la compresión de copias de seguridad, y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores pueden restaurar una copia de seguridad comprimida. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a>  Restricciones en las operaciones de copia de seguridad 
- Se puede realizar la copia de seguridad mientras la base de datos está en línea y en uso. Sin embargo, existen las siguientes restricciones.  
+##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Restricciones en las operaciones de copia de seguridad 
+ Se puede realizar la copia de seguridad mientras la base de datos está en línea y en uso. Sin embargo, existen las restricciones siguientes:  
   
 ### <a name="cannot-back-up-offline-data"></a>No se pueden realizar copias de seguridad de datos sin conexión  
  Cualquier operación de copia de seguridad en la que se haga referencia de forma implícita o explícita a datos sin conexión provocará un error. A continuación, se exponen algunos ejemplos habituales:  
@@ -128,7 +129,7 @@ ms.locfileid: "70176264"
   
  Si una operación de copia de seguridad se superpone a una operación de administración de archivos o de reducción, surge un conflicto. Con independencia de la operación en conflicto que empieza en primer lugar, la segunda operación espera a que se agote el tiempo de espera del bloqueo establecido por la primera operación. (El tiempo de espera se controla mediante un valor de tiempo de espera de sesión). Si el bloqueo se libera durante el tiempo de espera, la segunda operación continúa. Si se agota el tiempo de espera del bloqueo, la segunda operación no se realiza correctamente.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
  **Dispositivos y medios de copia de seguridad**  
   
 -   [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

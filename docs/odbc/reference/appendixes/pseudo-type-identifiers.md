@@ -1,5 +1,5 @@
 ---
-title: Identificadores de Pseudotipo | Microsoft Docs
+title: Identificadores de seudoelemento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3fb8b89b3a4acf979a1cb67621b2223d22d303c8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057219"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307986"
 ---
 # <a name="pseudo-type-identifiers"></a>Identificadores de pseudotipo
-Para mayor comodidad de programación de aplicaciones, ODBC define una serie de identificadores de pseudotipo. Estos identificadores no corresponderse con los tipos de datos reales, pero en su lugar, según la situación, resuelvan los tipos de datos existente.  
+Para facilitar la programación de aplicaciones, ODBC define una serie de identificadores de pseudo tipo. En realidad, estos identificadores no se corresponden con los tipos de datos reales, sino que, en función de la situación, se resuelven en los tipos de datos existentes.  
   
  Esta sección contiene los temas siguientes.  
   

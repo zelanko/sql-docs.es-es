@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29b3430e4a29130c4189fbce1a9a023b7a7f26da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101642"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
@@ -42,13 +42,13 @@ ms.locfileid: "66101642"
 |Seleccione esta tarea|Para conceder a los usuarios permiso para|Roles predeterminados que incluyen la tarea|  
 |----------------------|---------------------------------|-----------------------------------------|  
 |Ver informes|Ver el elemento del conjunto de datos compartido en la jerarquía de carpetas. Sin esta tarea, el elemento no está visible para los usuarios y podrían no saber que el conjunto de datos está disponible.|Browser<br /><br /> Administrador de contenido<br /><br /> Generador de informes<br /><br /> Mis informes|  
-|Administrar informes|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un elemento de conjunto de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver informes".|Administrador de contenido<br /><br /> publicador<br /><br /> Mis informes|  
+|Administrar informes|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un elemento de conjunto de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver informes".|Administrador de contenido<br /><br /> Publicador<br /><br /> Mis informes|  
 |Usar informes|Ver la definición del conjunto de datos compartido.|Administrador de contenido<br /><br /> Generador de informes|  
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al conjunto de datos compartido. Esta tarea debe utilizarse con las tareas "Ver informes" o "Administrar informes". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|Administrador de contenido|  
   
  Para más información, vea [Tareas de nivel de elemento](tasks-and-permissions-item-level-tasks.md) y [Roles predefinidos](role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar conjuntos de datos compartidos](../report-data/manage-shared-datasets.md)   
  [Proteger carpetas](secure-folders.md)   
  [Proteger informes y recursos](secure-reports-and-resources.md)   

@@ -1,5 +1,6 @@
 ---
 title: Planes de mantenimiento | Microsoft Docs
+description: Obtenga información sobre los planes de mantenimiento, que crean un flujo de trabajo para garantizar que la base de datos de SQL Server está optimizada, no tiene incoherencias y se hacen copias de seguridad de esta con regularidad.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115880"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789457"
 ---
 # <a name="maintenance-plans"></a>Planes de mantenimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Los planes de mantenimiento crean un flujo de trabajo de las tareas necesarias para asegurarse de que la base de datos está optimizada, se realizan copias de seguridad de la misma con regularidad y no tiene incoherencias. El Asistente para planes de mantenimiento también crea planes de mantenimiento principales, pero la creación manual de planes le da mucha más flexibilidad.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Ventajas de los planes de mantenimiento  
@@ -64,7 +65,7 @@ ms.locfileid: "68115880"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Configure la opción de configuración de servidor de **Agent XPs** para habilitar los procedimientos almacenados extendidos del Agente SQL Server.|[Agent XPs (opción de configuración del servidor)](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Describe cómo crear un plan de mantenimiento mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Crear un plan de mantenimiento](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Describe cómo crear un plan de mantenimiento mediante la superficie de diseño Plan de mantenimiento.|[Crear un plan de mantenimiento &#40;superficie de diseño del plan de mantenimiento&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

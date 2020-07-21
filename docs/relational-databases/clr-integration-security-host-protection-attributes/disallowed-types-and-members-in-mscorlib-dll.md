@@ -1,5 +1,6 @@
 ---
-title: No se permiten tipos y miembros en mscorlib.dll | Microsoft Docs
+title: Tipos y miembros no permitidos en mscorlib.dll | Microsoft Docs
+description: SQL Server la programación de CLR no permite un tipo o miembro con algunos valores para la enumeración HostProtectionResource. En este artículo se enumeran mscorlib.dll valores no permitidos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51a9f87ef3b9ceb4a8bded8f2c7f013f4f00a821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d57e0cba6a0bb12d62b73ff6e064196a8d89c452
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727730"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Miembros y tipos no permitidos en mscorlib.dll
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programación de Common language integration (CLR) no permite el uso de un tipo o miembro que tiene un **HostProtectionAttribute** que especifica un **System.Security.Permissions.HostProtectionResource** enumeración con un valor de **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **sincronización**, o **UI**. En la tabla siguiente se enumeran los miembros y tipos del ensamblado mscorlib.dll cuyos valores de atributo de protección de host (HPA) no están permitidos.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programación de Common Language Integration (CLR) no permite el uso de un tipo o miembro que tiene un **HostProtectionAttribute** que especifica una enumeración **System. Security. Permissions. HostProtectionResource** con un valor de **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**o **UI**. En la tabla siguiente se enumeran los miembros y tipos del ensamblado mscorlib.dll cuyos valores de atributo de protección de host (HPA) no están permitidos.  
   
 > [!NOTE]  
->  Esta lista se generó a partir de los ensamblados admitidos. Para obtener más información, consulte [admite bibliotecas de .NET Framework](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Esta lista se generó a partir de los ensamblados admitidos. Para obtener más información, consulte [supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Tipo o miembro|Valores de HPA|  
 |--------------------|--------------------|  
@@ -35,22 +36,22 @@ ms.locfileid: "68028153"
 |System.Collections.Queue.Synchronized()|Sincronización|  
 |System.Collections.SortedList.Synchronized()|Sincronización|  
 |System.Collections.Stack.Synchronized()|Sincronización|  
-|System.Console.Beep()|UI|  
-|System.Console.get_Error()|UI|  
-|System.Console.get_In()|UI|  
-|System.Console.get_KeyAvailable()|UI|  
-|System.Console.get_Out()|UI|  
-|System.Console.OpenStandardError()|UI|  
-|System.Console.OpenStandardInput()|UI|  
-|System.Console.OpenStandardOutput()|UI|  
-|System.Console.Read()|UI|  
-|System.Console.ReadKey()|UI|  
-|System.Console.ReadLine()|UI|  
-|System.Console.SetError()|UI|  
-|System.Console.SetIn()|UI|  
-|System.Console.SetOut()|UI|  
-|System.Console.Write()|UI|  
-|System.Console.WriteLine()|UI|  
+|System.Console.Beep()|IU|  
+|System.Console.get_Error()|IU|  
+|System.Console.get_In()|IU|  
+|System.Console.get_KeyAvailable()|IU|  
+|System.Console.get_Out()|IU|  
+|System.Console.OpenStandardError()|IU|  
+|System.Console.OpenStandardInput()|IU|  
+|System.Console.OpenStandardOutput()|IU|  
+|System.Console.Read()|IU|  
+|System.Console.ReadKey()|IU|  
+|System.Console.ReadLine()|IU|  
+|System.Console.SetError()|IU|  
+|System.Console.SetIn()|IU|  
+|System.Console.SetOut()|IU|  
+|System.Console.Write()|IU|  
+|System.Console.WriteLine()|IU|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
@@ -98,11 +99,11 @@ ms.locfileid: "68028153"
 |System.Threading.Timer|ExternalThreading, Synchronization|  
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
-## <a name="see-also"></a>Vea también  
- [Atributos de protección de host y programación de la integración CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Los miembros de Microsoft.VisualBasic.dll y tipos no permitidos](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Los miembros en System.dll y tipos no permitidos](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [Los miembros en System.Data.dll y tipos no permitidos](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+## <a name="see-also"></a>Consulte también  
+ [Atributos de protección del host y programación de la integración CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+ [Tipos y miembros no permitidos en Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Tipos y miembros no permitidos en System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Tipos y miembros no permitidos en System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [Tipos y miembros no permitidos en System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

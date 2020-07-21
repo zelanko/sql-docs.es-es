@@ -1,5 +1,5 @@
 ---
-title: Solución de problemas de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Solución de problemas de escalabilidad horizontal de SSIS | Microsoft Docs
 description: En este artículo se describe cómo solucionar problemas comunes con Escalabilidad horizontal de SSIS.
 ms.custom: performance
 ms.date: 01/09/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 987217c1afe07b5e917f415b9a5bc0d784ab7c6d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896150"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903779"
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
 
@@ -82,7 +82,7 @@ Compruebe los mensajes de error en el registro del servicio de trabajo de escala
 ### <a name="symptoms"></a>Síntomas
 *""System.ServiceModel.Security.SecurityNegotiationException: No se pudo establecer una relación de confianza para el canal seguro SSL/TLS con la autoridad "[NombreEquipo]:[Puerto]"".*
 
-*"System.Net.WebException: Se cerró la conexión subyacente: No se pudo establecer una relación de confianza para el canal seguro SSL/TLS".*
+*"System.Net.WebException: Se ha cerrado la conexión subyacente: No se pudo establecer una relación de confianza para el canal seguro SSL/TLS".*
 
 *"System.Security.Authentication.AuthenticationException: El certificado remoto no es válido según el procedimiento de validación".*
 
@@ -123,7 +123,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 *"System.ServiceModel.Security.MessageSecurityException: Se prohibió la solicitud HTTP con el esquema de autenticación de cliente 'Anonymous'".*
 
-*"System.Net.WebException: El servidor remoto devolvió un error: (403) Prohibido".*
+*"System.Net.WebException: Error en el servidor remoto: (403) Prohibido".*
 
 ### <a name="solution"></a>Solución
 1.  Si el certificado de trabajo de escalabilidad horizontal todavía no está instalado en el almacén de certificados raíz del equipo local del nodo del Servicio principal de escalabilidad horizontal, instálelo y reinicie el servicio de trabajo.
@@ -136,7 +136,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Nombre del valor: **SendTrustedIssuerList** 
 
-    Tipo del valor: **REG_DWORD** 
+    Tipo de valor: **REG_DWORD** 
 
     Datos del valor: **0 (False)**
 
@@ -146,7 +146,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Nombre del valor: **ClientAuthTrustMode** 
 
-    Tipo del valor: **REG_DWORD** 
+    Tipo de valor: **REG_DWORD** 
 
     Datos del valor: **2**
 

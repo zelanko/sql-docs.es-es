@@ -1,6 +1,6 @@
 ---
-title: Editor de consultas del motor de base de datos (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor de consultas del motor de base de datos
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -19,15 +19,14 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a2fc741a13a0565ab49d1974b9c2798ad7b9ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056842"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)
   Use el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para crear y ejecutar scripts que contengan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . El editor también permite ejecutar scripts que contengan comandos **sqlcmd** .  
@@ -53,7 +52,7 @@ ms.locfileid: "66064096"
 ## <a name="sql-editor-toolbar"></a>Barra de herramientas del Editor SQL  
  Cuando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está abierto, la barra de herramientas del Editor SQL aparece con los botones siguientes.  
   
- **Conectar**  
+ **Conexión**  
  Se abre el cuadro de diálogo **Conectar al servidor** . Utilice este cuadro de diálogo para establecer una conexión a un servidor.  
   
  **Desconectar**  
@@ -68,7 +67,7 @@ ms.locfileid: "66064096"
  **Bases de datos disponibles**  
  Cambia la conexión a una base de datos distinta del mismo servidor.  
   
- **Execute**  
+ **Ejecut**  
  Ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas.  
   
  **Depuración**  
@@ -77,7 +76,7 @@ ms.locfileid: "66064096"
  **Cancelar ejecución de la consulta**  
  Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Cuando se cancelan las transacciones, podrían producirse retrasos mientras se revierten.  
   
- **Analizar**  
+ **Analiza**  
  Comprueba la sintaxis del código seleccionado. Si no se ha seleccionado ningún código, comprueba la sintaxis de todo el código en la ventana del Editor de consultas.  
   
  **Mostrar plan de ejecución estimado**  
@@ -102,7 +101,7 @@ ms.locfileid: "66064096"
  Devuelve los resultados de la consulta como una o varias cuadrículas en la ventana **Resultados** .  
   
  **Resultados a archivo**  
- Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, a continuación, haga clic en **Guardar** para guardar los resultados de la consulta como un archivo **Informe** que tenga la extensión .rpt. Para obtener acceso a las opciones avanzadas, haga clic en la flecha abajo del botón **Guardar** y después haga clic en **Guardar con codificación**.  
+ Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, a continuación, haga clic en **Guardar** para guardar los resultados de la consulta como un archivo **Informe** que tenga la extensión .rpt. Para obtener acceso a las opciones avanzadas, haga clic en la flecha abajo del botón **Guardar** y, a continuación, haga clic en **Guardar con codificación**.  
   
  **Selección con comentarios**  
  Convierte la línea actual en comentario agregando al principio de la línea un operador de comentario (--).  
@@ -130,7 +129,7 @@ ms.locfileid: "66064096"
  **Interrumpir todos**  
  Establece el depurador para interrumpir todos los procesos a los que está asociado cuando se produce una interrupción.  
   
- **Detener depuración**  
+ **Habilitar herramientas de diagnóstico durante la depuración**  
  Saca la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] seleccionada del modo de depuración y restaura el modo de ejecución estándar.  
   
  **Mostrar la instrucción siguiente**  
@@ -148,7 +147,7 @@ ms.locfileid: "66064096"
  **Windows**  
  Abre la ventana **Punto de interrupción** o la ventana **Inmediato** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

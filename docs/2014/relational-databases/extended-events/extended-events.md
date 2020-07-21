@@ -10,22 +10,21 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa7f81fb0260def654f0ad1c93ccee367f44f664
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62990702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027450"
 ---
 # <a name="extended-events"></a>Eventos extendidos
   Los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
   
  Puede buscar más información acerca de Extended Events en Internet, en [SQL Server Extended Events](https://blogs.msdn.com/b/extended_events/).  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
  Extended Events es un sistema ligero de supervisión de rendimiento que usa muy pocos recursos de rendimiento. Los eventos extendidos proporcionan dos interfaces de usuario gráficas (**Asistente para nueva sesión** y **Nueva sesión**) para crear, modificar, mostrar y analizar los datos de la sesión.  
   
 ## <a name="extended-events-concepts"></a>Conceptos de Extended Events  
@@ -57,7 +56,7 @@ ms.locfileid: "62990702"
   
 -   El motor de Extended Events es independiente del evento. Esto permite al motor enlazar cualquier evento con cualquier destino, ya que el motor no está limitado por el contenido del evento. Para obtener más información sobre el motor de Extended Events, vea [SQL Server Extended Events Engine](sql-server-extended-events-engine.md).  
   
--   Los eventos están separados de los consumidores de eventos, llamados *destinos* en Extended Events. Esto significa que cualquier destino puede recibir cualquier evento. Además, cualquier evento generado puede ser automáticamente utilizado por el destino, que puede registrar o proporcionar el contexto adicional del evento. Para obtener más información, vea [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md).  
+-   Los eventos están separados de los consumidores de eventos, llamados *destinos* en Extended Events. Esto significa que cualquier destino puede recibir cualquier evento. Además, cualquier evento generado puede ser automáticamente utilizado por el destino, que puede registrar o proporcionar el contexto adicional del evento. Para más información, consulte [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md).  
   
 -   Los eventos son diferentes de la acción que se lleva a cabo cuando se produce un evento. Por lo tanto, puede asociarse cualquier acción a cualquier evento.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62990702"
   
 -   La capacidad para supervisar dinámicamente los procesos activos, ejerciendo al mismo tiempo el mínimo efecto sobre dichos procesos.  
   
--   Una sesión de estado del sistema predeterminada que se ejecuta sin efectos apreciables en el rendimiento. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [Usar la sesión system_health](use-the-ssms-xe-profiler.md).  
+-   Una sesión de estado del sistema predeterminada que se ejecuta sin efectos apreciables en el rendimiento. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [usar la sesión de system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="extended-events-tasks"></a>Tareas de Extended Events  
  Si mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecuta instrucciones de lenguaje de definición de datos (DDL) de [!INCLUDE[tsql](../../includes/tsql-md.md)] , funciones y vistas de administración dinámica, o vistas de catálogo, podrá crear soluciones sencillas o complejas de problemas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events para el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,19 +89,19 @@ ms.locfileid: "62990702"
 |Describe cómo obtener información acerca de los campos asociados a los eventos.|[Obtener los campos de todos los eventos](../../database-engine/get-the-fields-for-all-events.md)|  
 |Describe cómo determinar los eventos que están disponibles en los paquetes registrados.|[Ver los eventos de los paquetes registrados](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Describe cómo determinar los destinos de eventos extendidos que están disponibles en los paquetes registrados.|[Ver los destinos de eventos extendidos de los paquetes registrados](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
-|Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Describe cómo determinar los parámetros que puede establecer al usar el argumento ADD TARGET en CREATE EVENT SESSION o ALTER EVENT SESSION.|[Obtener los parámetros configurables del argumento ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
-|Describe cómo convertir un script de Seguimiento de SQL existente en una sesión de eventos extendidos.|[Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
+|Describe cómo convertir un script de Seguimiento de SQL existente en una sesión de eventos extendidos.|[Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
 |Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que retienen bloqueos](determine-which-queries-are-holding-locks.md)|  
 |Describe cómo identificar el origen de los bloqueas que afectan al rendimiento de la base de datos.|[Buscar los objetos que han obtenido más bloqueos](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describe cómo usar los eventos extendidos con el seguimiento de eventos para Windows a fin de supervisar la actividad del sistema.|[Supervisar la actividad del sistema mediante eventos extendidos](monitor-system-activity-using-extended-events.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../data-tier-applications/data-tier-applications.md)   
- [Compatibilidad de DAC con las versiones y objetos de SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
+ [Compatibilidad de DAC con objetos y versiones de SQL Server](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Implementar una aplicación de capa de datos](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Supervisar aplicaciones de capa de datos](../data-tier-applications/monitor-data-tier-applications.md)   
  [Vistas de administración dinámica de eventos extendidos](../views/views.md)   
- [Vistas de catálogo de eventos de extended &#40;Transact-SQL&#41;] (~/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql  
+ [Vistas de catálogo de eventos extendidos &#40;Transact-SQL&#41;] (~/Relational-Databases/System-Catalog-views/Extended-Events-Catalog-views-Transact-SQL  
   
   

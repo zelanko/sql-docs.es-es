@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (Transact-SQL) | Microsoft Docs
+title: Sys. Schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.schemas catalog view
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f4aa79f2c93e1c78c895f0e3d47e3114df20a8c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018345"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834470"
 ---
-# <a name="schemas-catalog-views---sysschemas"></a>-Las vistas de catálogo de esquemas sys.schemas
+# <a name="schemas-catalog-views---sysschemas"></a>Vistas de catálogo de esquemas: sys. Schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contiene una fila por cada esquema de la base de datos.  
@@ -35,22 +35,22 @@ ms.locfileid: "68018345"
 > [!NOTE]  
 >  Los esquemas de la base de datos son diferentes de los esquemas XML, que se utilizan para definir el modelo de contenido de los documentos XML.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre del esquema. Es único en la base de datos.|  
 |**schema_id**|**int**|Id. del esquema. Es único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad propietaria del esquema.|  
   
-## <a name="remarks"></a>Comentarios  
-Esquemas de base de datos actúan como espacios de nombres o contenedores de objetos, como tablas, vistas, procedimientos y funciones, que pueden encontrarse en el **sys.objects** vista de catálogo.  
+## <a name="remarks"></a>Observaciones  
+Los esquemas de base de datos actúan como espacios de nombres o contenedores para objetos, como tablas, vistas, procedimientos y funciones, que se pueden encontrar en la vista de catálogo **Sys. Objects** .  
 
-Cada esquema tiene un propietario. El propietario es una seguridad [principal](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Cada esquema tiene un propietario. El propietario es una [entidad](../../relational-databases/security/authentication-access/principals-database-engine.md)de seguridad.
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Debe pertenecer al rol **public** .  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
-[Entidades de seguridad](../../relational-databases/security/authentication-access/principals-database-engine.md)
+## <a name="see-also"></a>Consulte también  
+[Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
 
 [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 

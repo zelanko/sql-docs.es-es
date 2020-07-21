@@ -1,5 +1,6 @@
 ---
 title: Agregar medidores a informes para dispositivos móviles | Reporting Services | Microsoft Docs
+description: Puede agregar medidores a un informe para dispositivos móviles de Reporting Services. Los medidores muestran un valor único de un conjunto de datos de forma individual o comparado con un objetivo.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 456c50650afc01fc18465b0d96f3cfeb715ddecb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280562"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448286"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
 Los medidores son los elementos visuales más básicos y más ampliamente usados en los informes para dispositivos móviles. Muestran un valor único de un conjunto de datos: solo el valor, o bien el valor comparado con un objetivo.
@@ -42,7 +43,7 @@ Los valores de medidor se pueden filtrar conectándolos a navegadores en el info
 
 4. [Opcional] Para cambiar la agregación, seleccione **Opciones** y, luego, seleccione otra agregación.
    
-   >**Nota:** si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
+   >**Nota**: Si cambia la agregación del valor principal, probablemente también quiera hacer lo propio con el valor de comparación, aunque en algunos casos se pueden combinar diferentes métodos de agregación.  
 
 ## <a name="filter-a-gauge"></a>Filtrar un medidor
   
@@ -58,7 +59,7 @@ Si el informe para dispositivos móviles tiene navegadores, puede enlazar un med
   
 Además de las propiedades de datos que conectan elementos de medidor a campos de datos, hay también un número de propiedades funcionales y visuales que se pueden personalizar. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>Establecer la dirección del valor: valores altos o bajos como mejor opción
+### <a name="set-value-direction-high-or-low-is-better"></a>Establezca la dirección del valor: es mejor alta o baja
 * Seleccione un medidor y, en la pestaña **Diseño** , en el panel **Propiedades de los elementos visuales** , establezca **Dirección del valor** en **Los valores altos son mejores** o **Los valores bajos son mejores**. 
 
 La opción**Los valores altos son mejores** pone los valores positivos de color verde, lo que indica un cambio positivo deseable, o los valores bajos de color rojo, lo que indica un cambio negativo no deseable. 
@@ -81,10 +82,10 @@ Otra propiedad del elemento de medidor que no es de datos y una compartida por m
 
 Determina el formato de los números que aparecen en el medidor (por ejemplo, moneda, porcentaje, hora o general). El formato de número se establece en cada elemento del informe para dispositivos móviles.
   
-### <a name="see-also"></a>Vea también 
+### <a name="see-also"></a>Consulte también 
 
 * [Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
-* [Mapas en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navegadores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizaciones de informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
-* [Cuadrículas de datos en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
+* [Agregar cuadrículas de datos a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4218a14af8e4408538dc69d18e3bcefc44f2c31a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894869"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Vuelve a generar uno o varios índices de una tabla de la base de datos especificada.
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ Vuelve a generar uno o varios índices de una tabla de la base de datos especifi
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC DBREINDEX   
 (   
     table_name   
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC DBREINDEX vuelve a generar un índice de una tabla o todos los índices definidos de una tabla. Al permitir que los índices se vuelvan a generar dinámicamente, los índices que implementen restricciones PRIMARY KEY o UNIQUE se pueden volver a generar sin tener que quitar y volver a crear las restricciones. Esto significa que un índice puede volver a generarse sin conocer la estructura de una tabla ni sus restricciones. Esto puede suceder después de copiar datos de forma masiva en la tabla.
 
 DBCC DBREINDEX puede volver a generar todos los índices para una tabla en una instrucción. Es más sencillo que codificar varias instrucciones DROP INDEX y CREATE INDEX. Como todo el trabajo se hace con una instrucción, DBCC DBREINDEX es, automáticamente, una acción atómica, mientras que, para ser atómicas, las instrucciones DROP INDEX y CREATE INDEX individuales deben formar parte de una transacción. Además, DBCC DBREINDEX ofrece más optimizaciones que las instrucciones DROP INDEX y CREATE INDEX individuales.
@@ -75,7 +75,7 @@ A diferencia de DBCC INDEXDEFRAG o ALTER INDEX, con la opción REORGANIZE, DBCC 
 
 Para más información sobre cómo seleccionar un método para recompilar o reorganizar un índice, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
 No se admite el uso de DBCC DBREINDEX en los objetos siguientes:
 -   Tablas del sistema  
 -   Índices espaciales  

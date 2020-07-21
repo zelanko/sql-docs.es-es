@@ -1,5 +1,5 @@
 ---
-title: Cláusula APPEND de forma | Microsoft Docs
+title: Cláusula APPEND de Shape | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924182"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760871"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
-La cláusula APPEND de comando de forma que anexa una o varias columnas a un **Recordset**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un elemento secundario **Recordset**.  
+La cláusula APPEND del comando Shape anexa una o varias columnas a un **conjunto de registros**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un **conjunto de registros**secundario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,30 +31,30 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ```  
   
 ## <a name="description"></a>Descripción  
- Las partes de esta cláusula son los siguientes:  
+ Las partes de esta cláusula son las siguientes:  
   
- *parent-command*  
- Cero o uno de los siguientes (se puede omitir el *comando primario* completamente):  
+ *comando primario*  
+ Cero o uno de los siguientes (puede omitir completamente el *comando primario* ):  
   
--   Un comando de proveedor entre llaves ("{}") que devuelve un **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinada.  
+-   Un comando de proveedor entre llaves (" {} ") que devuelve un objeto de **conjunto de registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
--   Otro comando shape incrustado entre paréntesis.  
+-   Otro comando de forma se inserta entre paréntesis.  
   
--   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
+-   La palabra clave TABLE, seguida del nombre de una tabla en el proveedor de datos.  
   
- *parent-alias*  
- Un alias opcional que hace referencia al elemento primario **Recordset**.  
+ *alias primario*  
+ Alias opcional que hace referencia al conjunto de **registros**primario.  
   
- *column-list*  
+ *lista de columnas*  
  Uno o varios de los siguientes:  
   
--   Una columna agregada.  
+-   Columna de agregado.  
   
--   Una columna calculada.  
+-   Columna calculada.  
   
--   Una nueva columna creada mediante la cláusula nuevo.  
+-   Nueva columna creada con la nueva cláusula.  
   
--   Una columna de capítulo. Una definición de columna de capítulo se encierra entre paréntesis ((")"). Consulte la siguiente sintaxis.  
+-   Columna de capítulo. Una definición de columna de capítulo se incluye entre paréntesis ("()"). Vea la siguiente sintaxis.  
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
@@ -64,51 +64,51 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  *child-recordset*  
- -   Un comando de proveedor entre llaves ("{}") que devuelve un **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinada.  
+ -   Un comando de proveedor entre llaves (" {} ") que devuelve un objeto de **conjunto de registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
--   Otro comando shape incrustado entre paréntesis.  
+-   Otro comando de forma se inserta entre paréntesis.  
   
--   El nombre de una existente en forma de **Recordset**.  
+-   Nombre de un **conjunto de registros**con forma existente.  
   
--   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
+-   La palabra clave TABLE, seguida del nombre de una tabla en el proveedor de datos.  
   
- *child-alias*  
- Un alias que hace referencia al elemento secundario **Recordset**.  
+ *alias secundario*  
+ Un alias que hace referencia al **conjunto de registros**secundario.  
   
- *parent-column*  
- Una columna en la **Recordset** devuelto por la *comando primario.*  
+ *columna primaria*  
+ Columna del conjunto de **registros** devuelta por el *comando primario.*  
   
- *child-column*  
- Una columna en la **Recordset** devuelto por la *comando secundario*.  
+ *columna secundaria*  
+ Columna del conjunto de **registros** devuelta por el *comando secundario*.  
   
- *param-number*  
- Consulte [funcionamiento de los comandos con parámetros](../../../ado/guide/data/operation-of-parameterized-commands.md).  
+ *número de parámetro*  
+ Vea [operación de comandos con parámetros](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *chapter-alias*  
- Un alias que hace referencia a la columna de capítulo anexada al elemento primario.  
-  
-> [!NOTE]
->  El *"columna primaria* TO *columna secundaria"* cláusula es realmente una lista, donde cada relación definida está separado por una coma  
+ *Chapter: alias*  
+ Un alias que hace referencia a la columna Chapter anexada al elemento primario.  
   
 > [!NOTE]
->  La cláusula después de la palabra clave APPEND es realmente una lista, donde cada cláusula separado por una coma y define otra columna que se debe anexar al elemento primario.  
+>  La cláusula *"Parent-Column* to *Child-Column"* es realmente una lista, donde cada relación definida está separada por una coma.  
   
-## <a name="remarks"></a>Comentarios  
- Al construir los comandos de proveedor de entrada del usuario como parte de un comando SHAPE, SHAPE tratará proporcionado por el usuario un comando de proveedor como una cadena opaca y pasarlos fielmente al proveedor. Por ejemplo, en el siguiente comando de forma  
+> [!NOTE]
+>  La cláusula después de la palabra clave APPEND es realmente una lista, donde cada cláusula está separada por una coma y define otra columna que se va a anexar al elemento primario.  
+  
+## <a name="remarks"></a>Observaciones  
+ Al construir comandos de proveedor a partir de datos proporcionados por el usuario como parte de un comando de forma, forma tratará el comando de proveedor proporcionado por el usuario como una cadena opaca y los pasará fielmente al proveedor. Por ejemplo, en el siguiente comando SHAPE,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE ejecutará dos comandos: `select * from t1` y (`select * from t2 RELATE k1 TO k2)`. Si el usuario proporciona un comando compuesto que consta de varios comandos de proveedor separados por punto y coma, SHAPE no es capaz de distinguir la diferencia. Así que en el siguiente comando de forma  
+ La forma ejecutará dos comandos: `select * from t1` y ( `select * from t2 RELATE k1 TO k2)` . Si el usuario proporciona un comando compuesto que consta de varios comandos de proveedor separados por punto y coma, la forma no puede distinguir la diferencia. Por lo tanto, en el siguiente comando SHAPE,  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- Ejecuta de forma `select * from t1; drop table t1` y (`select * from t2 RELATE k1 TO k2),` sin darse cuenta que `drop table t1` es un independiente y en este comando de proveedor de caso, peligroso. Las aplicaciones siempre deben validar la entrada del usuario para evitar estos posibles ataques de piratas informáticos que se produzca.  
+ SHAPE ejecuta `select * from t1; drop table t1` y ( `select * from t2 RELATE k1 TO k2),` sin darse cuenta de que `drop table t1` es un comando de proveedor independiente y en este caso, peligroso. Las aplicaciones siempre deben validar los datos proporcionados por el usuario para evitar que puedan producirse ataques de piratas informáticos potenciales.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -120,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Cláusulas COMPUTE de forma que intervengan](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
+ [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)

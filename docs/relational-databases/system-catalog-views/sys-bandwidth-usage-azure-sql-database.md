@@ -1,5 +1,5 @@
 ---
-title: Sys.bandwidth_usage (base de datos de SQL Azure) | Microsoft Docs
+title: Sys. bandwidth_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -19,55 +19,55 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752920"
 ---
-# <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
+# <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> Esto se aplica únicamente a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]V11.* *  
+> Esto solo se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
- Devuelve información sobre el ancho de banda de red utilizado por cada base de datos en un  **[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de base de datos de V11**,. Cada fila devuelta para una base de datos determinada resume una única dirección y clase de uso durante un período de una hora.  
+ Devuelve información sobre el ancho de banda de red usado por cada base de datos en un ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de base de datos de V11**,. Cada fila devuelta para una base de datos determinada resume una única dirección y clase de uso durante un período de una hora.  
   
- **Esto ha quedado obsoleto en un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
+ **Esto está en desuso en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
- El **sys.bandwidth_usage** vista contiene las siguientes columnas.  
+ La vista **Sys. bandwidth_usage** contiene las columnas siguientes.  
   
-|Column Name|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**time**|La hora a la que se utilizó el ancho de banda. Las filas de esta vista ofrecen información por horas. Por ejemplo, 2009-09-19 02:00:00.000 significa que el ancho de banda se consumió el 19 de septiembre de 2009 entre las 2:00 a. m. y las 3:00 a. m.|  
 |**database_name**|El nombre de la base de datos que utilizó ancho de banda.|  
-|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven hacia la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: Datos que se mueven dentro de la plataforma Azure.<br />Externo: Datos que se mueven fuera de la plataforma Azure.<br /><br /> Se devuelve esta clase solamente si la base de datos está ocupada en una relación continua de copias entre las regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una base de datos no participa en una relación de copia continua, no se devuelven filas "Interlink". Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
-|**time_period**|El período de tiempo cuando se produjo el uso es pico o programarla. El valor Peak va en función de la región en la que se creó el servidor. Por ejemplo, si se creó un servidor en la región "US_Northwest”, las horas pico se definen como una hora comprendida entre las 10:00 a. m. y a las 06:00:00 p. m. PST.|  
-|**Cantidad**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
+|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: datos que se mueven al [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Salida: datos que se mueven fuera de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|  
+|**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: datos que se mueven dentro de la plataforma Azure.<br />External: datos que se mueven fuera de la plataforma Azure.<br /><br /> Se devuelve esta clase solamente si la base de datos está ocupada en una relación continua de copias entre las regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una base de datos determinada no participa en ninguna relación de copia continua, no se devuelven las filas "Interlink". Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
+|**time_period**|El período de tiempo de uso es Pico o Fuera de horas pico. El valor Peak va en función de la región en la que se creó el servidor. Por ejemplo, si se creó un servidor en la región "US_Northwest”, las horas pico se definen como una hora comprendida entre las 10:00 a. m. y a las 06:00:00 p. m. PST.|  
+|**quantity**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
   
 ## <a name="permissions"></a>Permisos
 
- Esta vista solo está disponible en el **maestro** base de datos para el inicio de sesión de entidad de seguridad de nivel de servidor.  
+ Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
 ## <a name="remarks"></a>Comentarios  
   
 ### <a name="external-and-internal-classes"></a>Clases externas e internas
 
- Para cada base de datos utilizada en un momento dado, el **sys.bandwidth_usage** vista devuelve las filas que muestran la clase y la dirección de uso de ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **sys.bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de direcciones de entrada y salida y clases externas e internas, como sigue:  
+ Para cada base de datos que se utiliza en un momento dado, la vista **Sys. bandwidth_usage** devuelve filas que muestran la clase y la dirección del uso del ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **Sys. bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de las direcciones de entrada y salida, y las clases externas e internas, como se indica a continuación:  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
-|2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|Externo|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
-|2012-04-21 17:00:00|Db1|Egress|Interno|Peak|3525|  
+|2012-04-21 17:00:00|Db1|Entrada|Externo|Peak|66|  
+|2012-04-21 17:00:00|Db1|Salida|Externo|Peak|741|  
+|2012-04-21 17:00:00|Db1|Entrada|Interno|Peak|1052|  
+|2012-04-21 17:00:00|Db1|Salida|Interno|Peak|3525|  
   
-### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interpretar la dirección de los datos para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]
+### <a name="interpreting-data-direction-for-ssgeodr"></a>Interpretar la dirección de los datos para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]
 
- Para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)], los datos de uso del ancho banda son visibles en la base de datos maestra lógica en ambos lados de una relación continua de copia. Por lo que debe interpretar la entrada y salida indicadores de dirección desde la perspectiva de las bases de datos que se están consultando. Por ejemplo, considere un flujo de replicación que transfiere 1 MB de datos del servidor de origen al de destino. En este caso, en el servidor de origen el 1MB se descontará datos enviados totales y en el servidor de destino, el 1MB se registra como datos recibidos.  
+ Para [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)], los datos de uso del ancho banda son visibles en la base de datos maestra lógica en ambos lados de una relación continua de copia. Por lo tanto, debe interpretar los indicadores de dirección de entrada y salida desde la perspectiva de las bases de datos que está consultando. Por ejemplo, considere un flujo de replicación que transfiere 1 MB de datos del servidor de origen al de destino. En este caso, en el servidor de origen, 1 MB cuenta el número total de datos enviados y en el servidor de destino, el 1 MB se registra como datos recibidos.  
   
 > [!NOTE]  
 > La importación masiva de datos transferidos es del servidor de origen al de destino, en la dirección del flujo de datos de usuario. Sin embargo, algunas transferencias de datos se requieren en la otra dirección.  

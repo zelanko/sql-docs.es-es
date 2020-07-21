@@ -17,15 +17,14 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e09d338f7f8e29f5b499a64f9f84e042b1fd1234
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898863"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428602"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   En las expresiones, los identificadores son columnas y variables que están disponibles para la operación. Puede utilizar en las expresiones identificadores regulares y calificados.  
@@ -112,9 +111,9 @@ ms.locfileid: "62898863"
 > [!IMPORTANT]  
 >  Debe escribir la combinación de espacio de nombres y nombre calificado de la variable entre corchetes para que el evaluador de expresiones reconozca la variable.  
   
- Si el valor de **recuento** en el **usuario** espacio de nombres es 10 y el valor de **recuento** en **MyNamespace** es 2, la expresión se evalúa como `true` porque el evaluador de expresiones reconoce dos variables distintas.  
+ Si el valor de **Count** en el espacio de nombres **User** es 10 y el valor de **Count** en **myNameSpace** es 2, la expresión se evalúa como `true` porque el evaluador de expresiones reconoce dos variables distintas.  
   
- Si los nombres de las variables no son únicos, no se produce un error. El evaluador de expresiones utilizará una sola instancia de la variable para evaluar la expresión y devolverá un resultado incorrecto. Por ejemplo, la siguiente expresión intenta comparar los valores (10 y 2) para dos **recuento** variables, pero la expresión se evalúa como `false` porque el evaluador de expresiones utiliza la misma instancia de la  **Recuento** variable dos veces.  
+ Si los nombres de las variables no son únicos, no se produce un error. El evaluador de expresiones utilizará una sola instancia de la variable para evaluar la expresión y devolverá un resultado incorrecto. Por ejemplo, la siguiente expresión estaba diseñada para comparar los valores (10 y 2) para dos variables de **recuento** independientes, pero la expresión se evalúa `false` como porque el evaluador de expresiones utiliza la misma instancia de la variable **Count** dos veces.  
   
 ```  
 @Count > @Count  

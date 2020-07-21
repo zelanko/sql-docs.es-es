@@ -1,5 +1,6 @@
 ---
 title: Instantáneas de base de datos (SQL Server) | Microsoft Docs
+description: Descubra cómo usar instantáneas de base de datos para crear vistas estáticas de solo lectura de una base de datos en SQL Server. Vea las ventajas, requisitos previos y limitaciones.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630817"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantáneas de base de datos (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Una instantánea de base de datos es una vista estática de solo lectura de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada *base de datos de origen*. La instantánea de base de datos es coherente en cuanto a las transacciones con la base de datos de origen tal como existía en el momento de la creación de la instantánea. Una instantánea de base de datos siempre reside en la misma instancia de servidor que la base de datos de origen. Aunque las instantáneas de base de datos proporcionan una vista de solo lectura de los datos que se encuentran en el mismo estado que cuando se creó la instantánea, el tamaño del archivo de instantáneas crece a medida que se realizan cambios en la base de datos de origen. Para obtener más información, consulte la sección [Información general de la característica](#FeatureOverview), más adelante.
   
@@ -48,14 +49,14 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="FeatureOverview"></a> Información general de la característica  
+##  <a name="feature-overview"></a><a name="FeatureOverview"></a> Información general de la característica  
  Las instantáneas de base de datos funcionan en el nivel de página de datos. Antes de modificar por primera vez una página de la base de datos de origen, la página original se copia de la base de datos de origen a la instantánea. La instantánea almacena la página original y conserva los registros de datos en el estado en que se encontraban cuando se creó la instantánea. El mismo proceso se repite para cada página que se modifica por primera vez. Para el usuario, la instantánea de base de datos no parece cambiar nunca, ya que las operaciones de lectura en una instantánea siempre tienen acceso a las páginas de datos originales, con independencia de dónde residan.  
   
  Para almacenar las páginas originales copiadas, la instantánea usa uno o varios *archivos dispersos*. Inicialmente, un archivo disperso es básicamente un archivo vacío que no contiene datos de usuario y al que todavía no se ha asignado espacio en el disco para datos de usuario. A medida que se actualizan páginas en la base de datos de origen, el tamaño del archivo aumenta. En la siguiente ilustración se muestran los efectos de dos patrones de actualización en contraste respecto del tamaño de una instantánea. El patrón de actualización A refleja un entorno en el que solo el 30 por ciento de las páginas originales se actualizan durante la vida de la instantánea. El patrón de actualización B refleja un entorno en el que el 80 por ciento de las páginas originales se actualizan durante la vida de la instantánea.  
   
  ![Patrones de actualización alternativos y tamaño de instantánea](../../relational-databases/databases/media/dbview-04.gif "Patrones de actualización alternativos y tamaño de instantánea")  
   
-##  <a name="Benefits"></a> Ventajas de las instantáneas de base de datos  
+##  <a name="benefits-of-database-snapshots"></a><a name="Benefits"></a> Ventajas de las instantáneas de base de datos  
   
 -   Las instantáneas se pueden usar para crear informes.  
   
@@ -96,7 +97,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
      En un entorno de pruebas, cuando se ejecuta un protocolo de pruebas de forma repetida, puede resultar útil que la base de datos contenga datos idénticos al inicio de cada ronda de pruebas. Antes de ejecutar la primera ronda, un programador o evaluador de aplicaciones puede crear una instantánea de base de datos en la base de datos de prueba. Después de cada serie de pruebas, puede devolver la base de datos rápidamente a su estado anterior revirtiendo la instantánea de base de datos.  
   
-##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Términos y definiciones  
  database snapshot  
  Una vista estática, coherente y de solo lectura desde el punto de vista transaccional de una base de datos (la base de datos de origen).  
   
@@ -106,7 +107,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
  archivo disperso  
  Archivo que proporciona el sistema de archivos NTFS y que requiere mucho menos espacio en disco del que se necesitaría de otro modo. Los archivos dispersos se usan para almacenar páginas copiadas en una instantánea de base de datos. Cuando se crea por primera vez, un archivo disperso ocupa poco espacio en disco. Mientras los datos se escriben en una instantánea de base de datos, NTFS asigna espacio de disco gradualmente al archivo disperso correspondiente.  
   
-##  <a name="LimitationsRequirements"></a> Requisitos previos y limitaciones de las instantáneas de base de datos  
+##  <a name="prerequisites-for-and-limitations-on-database-snapshots"></a><a name="LimitationsRequirements"></a> Requisitos previos y limitaciones de las instantáneas de base de datos  
  **En esta sección:**  
   
 -   [Requisitos previos](#Prerequisites)  
@@ -119,7 +120,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
 -   [Instantáneas de base de datos con grupos de archivos sin conexión](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  La base de datos de origen, que puede usar cualquier modelo de recuperación, debe cumplir los siguientes requisitos previos:  
   
 -   La instancia de servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de base de datos. Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -141,7 +142,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
 > [!NOTE]  
 >  Todos los modelos de recuperación admiten instantáneas de base de datos.  
   
-###  <a name="LimitsOnSourceDb"></a> Limitaciones de la base de datos de origen  
+###  <a name="limitations-on-the-source-database"></a><a name="LimitsOnSourceDb"></a> Limitaciones de la base de datos de origen  
  En tanto exista una instantánea de base de datos, existirán las siguientes limitaciones de la base de datos de origen de la instantánea:  
   
 -   La base de datos no se puede quitar, separar ni restaurar.  
@@ -153,7 +154,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
 -   No se pueden quitar archivos de la base de datos de origen ni de las instantáneas.  
   
-###  <a name="LimitsOnDbSS"></a> Limitaciones de las instantáneas de base de datos  
+###  <a name="limitations-on-database-snapshots"></a><a name="LimitsOnDbSS"></a> Limitaciones de las instantáneas de base de datos  
  Las siguientes limitaciones son aplicables a las instantáneas de base de datos:  
   
 -   Una instantánea de base de datos debe crearse en la misma instancia de servidor que la base de datos de origen.  
@@ -197,9 +198,9 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
     > [!NOTE]  
     >  Una instrucción SELECT que se ejecuta en una instantánea de base de datos no debe especificar una columna FILESTREAM; de lo contrario, se devolverá el mensaje de error siguiente: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Cuando faltan las estadísticas de una instantánea de solo lectura o son obsoletas, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y mantiene estadísticas temporales en tempdb. Para obtener más información, vea [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Cuando faltan las estadísticas de una instantánea de solo lectura o son obsoletas, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y mantiene estadísticas temporales en tempdb. Para más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
-###  <a name="DiskSpace"></a> Requisitos de espacio en disco  
+###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a> Requisitos de espacio en disco  
  Las instantáneas de base de datos ocupan espacio en disco. Si una instantánea de base de datos se queda sin espacio en disco, se marca como sospechosa y debe quitarse. (Sin embargo, la base de datos de origen no se ve afectada; las acciones sobre ella continúan normalmente). No obstante, en comparación con una copia completa de una base de datos, las instantáneas ocupan poco espacio. Una instantánea solo requiere suficiente espacio para las páginas que cambian durante su duración. En general, las instantáneas se conservan durante un tiempo limitado, por lo que el tamaño no es un gran problema.  
   
  Así y todo, cuanto más tiempo se mantenga una instantánea, más probable será que se agote el espacio disponible. El tamaño máximo que puede crecer un archivo disperso es el tamaño del archivo de base de datos de origen correspondiente al crear la instantánea. Si una instantánea de base de datos se queda sin espacio en disco, es necesario eliminarla (quitarla).  
@@ -207,7 +208,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
 > [!NOTE]  
 >  Una instantánea de base de datos consume casi los mismos recursos que una base de datos, salvo el espacio de archivo.  
   
-###  <a name="OfflineFGs"></a> Instantáneas de base de datos con grupos de archivos sin conexión  
+###  <a name="database-snapshots-with-offline-filegroups"></a><a name="OfflineFGs"></a> Instantáneas de base de datos con grupos de archivos sin conexión  
  Los grupos de archivos sin conexión de la base de datos de origen afectan a las instantáneas de base de datos al intentar llevar a cabo una de las siguientes acciones:  
   
 -   Crear una instantánea  
@@ -226,7 +227,7 @@ Una instantánea de base de datos es una vista estática de solo lectura de una 
   
      La reversión de una base de datos de origen a una instantánea de base de datos requiere que se encuentren en línea todos los grupos de archivos excepto los grupos de archivos que estaban sin conexión al crear la instantánea.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   

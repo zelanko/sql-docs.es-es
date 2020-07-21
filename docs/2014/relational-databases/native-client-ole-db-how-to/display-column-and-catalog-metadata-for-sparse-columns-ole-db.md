@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 429ce6ca8ffa59181f1b15af477a3408702a2514
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039268"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Mostrar metadatos de columna y del catálogo para columnas dispersas (OLE DB)
   En este ejemplo se crea una tabla con tres columnas: una columna dispersa, otra que no es dispersa y una tercera de conjunto de columnas. A continuación, el ejemplo muestra las marcas OLE DB que muestran los metadatos de columna y de catálogo para la columna no dispersa y para la columna de conjunto de columnas.  

@@ -10,10 +10,10 @@ author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
 ms.openlocfilehash: ac10ace82a38110d2038f95c3514aa8271d5b88c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283747"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lección 1-6: Adición y configuración de las transformaciones de búsqueda
@@ -115,5 +115,5 @@ En ambos casos, en la transformación de búsqueda se usa el administrador de co
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 7: Adición y configuración del destino de OLE DB](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Transformación Búsqueda](../integration-services/data-flow/transformations/lookup-transformation.md)  

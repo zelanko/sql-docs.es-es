@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4f96928e0d914837762af760fce9d5b6973fce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63282112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066308"
 ---
 # <a name="create-a-new-solution"></a>Crear una nueva solución
   Cuando se crea un proyecto, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crea una solución que lo incluye. Solo puede abrir una solución al mismo tiempo. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no permite crear carpetas dentro de los proyectos. Para organizar el trabajo, cree varios proyectos.  
@@ -36,9 +35,9 @@ ms.locfileid: "63282112"
   
 5.  También puede modificar el nombre de la solución en el cuadro de texto **Nombre de la solución** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Abrir soluciones desde el control de código fuente](../../database-engine/open-solutions-from-source-control.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: Cadena de búsqueda en XQuery | Microsoft Docs
+title: Búsqueda de cadenas en XQuery | Microsoft Docs
+description: Obtenga información sobre cómo buscar texto en documentos XML viendo un ejemplo de búsqueda de cadenas en XQuery.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ae897a8a945c477ce201b4037f3b05dbb13160e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765566"
 ---
 # <a name="string-search-in-xquery"></a>Buscar cadenas en XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Este tema incluye consultas de ejemplo que muestran cómo buscar texto en documentos XML.  
   
@@ -44,9 +45,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- En la consulta anterior, el `where` en el FLOWR expresión filtra el resultado de la `for` expresión y devuelve solo aquellos elementos que satisfacen la **contains()** condición.  
+ En la consulta anterior, `where` en la expresión de flujo filtra el resultado de la `for` expresión y devuelve solo los elementos que cumplen la condición **Contains ()** .  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <p1:Maintenance     
@@ -57,8 +58,8 @@ WHERE ProductModelID=19
 </p1:Maintenance>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

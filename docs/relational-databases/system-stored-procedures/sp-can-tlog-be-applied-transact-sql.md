@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_can_tlog_be_applied
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045958"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85873825"
 ---
-# <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Comprueba si una copia de seguridad del registro de transacciones se puede aplicar a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** requiere que la base de datos esté en estado Restoring.  
+  Comprueba si una copia de seguridad del registro de transacciones se puede aplicar a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** requiere que la base de datos esté en estado de restauración.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @backup_file_name = ] 'backup_file_name'` Es el nombre de un archivo de copia de seguridad. *nombreDelArchivoDeCopiaDeSeguridad* es **nvarchar (128)** .  
+`[ @backup_file_name = ] 'backup_file_name'`Es el nombre de un archivo de copia de seguridad. *backup_file_name* es **nvarchar (128)**.  
   
-`[ @database_name = ] 'database_name'` Es el nombre de la base de datos. *database_name* es **sysname**.  
+`[ @database_name = ] 'database_name'`Es el nombre de la base de datos. *database_name* es **sysname**.  
   
-`[ @result = ] _result_ OUTPUT` Indica si el registro de transacciones se puede aplicar a la base de datos. *resultado* es **bits**.  
+`[ @result = ] _result_ OUTPUT`Indica si el registro de transacciones se puede aplicar a la base de datos. el *resultado* es **bit**.  
   
  1 = El registro se puede aplicar.  
   
@@ -55,7 +55,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
  0 (correcto) o 1 (error)  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_can_tlog_be_applied**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_can_tlog_be_applied**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se declara una variable local, `@MyBitVar`, para almacenar el resultado.  
@@ -72,7 +72,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

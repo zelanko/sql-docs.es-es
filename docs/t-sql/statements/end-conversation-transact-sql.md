@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26051de067dd496d25cfcc3c2cb0f71715ed3145
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: a2805dc4ca99ad89cf1b34e03a6ea9c5b8ecc1e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892087"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Finaliza un extremo de una conversación existente.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70211359"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
@@ -62,7 +62,7 @@ END CONVERSATION conversation_handle
  WITH CLEANUP  
  Quita todos los mensajes y todas las entradas de la vista de catálogo para un lado de una conversación que no se puede completar con normalidad. No se le informa de la limpieza al otro lado de la conversación. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quita el extremo de conversación, todos los mensajes de la conversación que estén en la cola de transmisión y todos los mensajes de la conversación que estén en la cola de servicio. Los administradores pueden utilizar esta opción para quitar las conversaciones que no se completan con normalidad. Por ejemplo, si el servicio remoto se ha quitado de manera permanente, un administrador puede utilizar WITH CLEANUP para quitar las conversaciones con ese servicio. No use WITH CLEANUP en el código de una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Si se ejecuta END CONVERSATION WITH CLEANUP antes de que el extremo receptor confirme la recepción de un mensaje, el extremo de envío enviará el mensaje de nuevo. Esto podría volver a ejecutar el cuadro de diálogo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al finalizar una conversación, se bloquea el grupo de conversaciones al que pertenece el *conversation_handle* suministrado. Cuando finaliza una conversación, [!INCLUDE[ssSB](../../includes/sssb-md.md)] quita todos los mensajes de la conversación de la cola de servicio.  
   
  Después de que una conversación finaliza, ninguna aplicación puede enviar o recibir mensajes para esa conversación. Los dos participantes de una conversación deben llamar a END CONVERSATION para que la conversación finalice. Si [!INCLUDE[ssSB](../../includes/sssb-md.md)] no ha recibido ningún mensaje de fin de diálogo ni ningún mensaje de error del otro participante de la conversación, [!INCLUDE[ssSB](../../includes/sssb-md.md)] notifica al otro participante que la conversación ha finalizado. En este caso, aunque el identificador de conversación ya no es válido, el extremo de la conversación sigue activo hasta que la instancia que hospeda el servicio remoto confirma el mensaje.  

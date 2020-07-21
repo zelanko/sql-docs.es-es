@@ -1,5 +1,5 @@
 ---
-title: Referencias a la colección de parámetros (Generador de informes y SSRS) | Microsoft Docs
+title: Referencias a la colección de parámetros (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581800"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082190"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección de parámetros (Generador de informes)
   Los parámetros de informe son una de las colecciones integradas a las que se puede hacer referencia desde una expresión. Al incluir parámetros en una expresión, puede personalizar los datos y el aspecto de los informes basándose en las opciones seleccionadas por el usuario. Se pueden usar expresiones para cualquier propiedad de elemento de informe o de cuadro de texto que proporcione la opción (*Fx*) o \<**Expresión**>. Las expresiones también se usan para controlar el contenido y el aspecto de los informes de otras maneras. Para más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "65581800"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Single"></a> Usar un parámetro de un solo valor en una expresión  
+##  <a name="using-a-single-valued-parameter-in-an-expression"></a><a name="Single"></a> Usar un parámetro de un solo valor en una expresión  
  En la tabla siguiente se muestran ejemplos de la sintaxis que se debe usar cuando se incluye una referencia a un parámetro de un solo valor de cualquier tipo de datos en una expresión.  
   
 |Ejemplo|Descripción|  
@@ -39,7 +39,7 @@ ms.locfileid: "65581800"
   
  Para obtener más información sobre cómo usar parámetros en los filtros, vea [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
   
-##  <a name="Multi"></a> Usar un parámetro de varios valores en una expresión  
+##  <a name="using-a-multivalue-parameter-in-an-expression"></a><a name="Multi"></a> Usar un parámetro de varios valores en una expresión  
  En la tabla siguiente se muestran ejemplos de la sintaxis que se debe usar cuando se incluye una referencia a un parámetro de varios valores de cualquier tipo de datos en una expresión.  
   
 |Ejemplo|Descripción|  

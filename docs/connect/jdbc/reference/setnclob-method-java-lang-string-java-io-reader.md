@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a595679a-89b7-4b18-9ad2-d9cb13af2a28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 252d16871a3aa161eacab99a62eaf4f8a2f03ae8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 12b09f0a1f4847897397509e4c7cb985c1af7a2b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973737"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923280"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader"></a>Método setNClob (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +37,13 @@ public final void setNClob(java.lang.String parameterName,
   
  *reader*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método se debe usar para los tipos de datos de parámetro **nchar**, **nvarchar**, **ntext**y **XML** .  
+## <a name="remarks"></a>Observaciones  
+ Este método se debe usar para los tipos de datos de parámetros **NCHAR**, **NVARCHAR**, **NTEXT** y **XML**.  
   
  El método setNClob especifica este método setNClob en la interfaz java.sql.CallableStatement.  
   

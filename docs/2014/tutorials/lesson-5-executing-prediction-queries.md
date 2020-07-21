@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Ejecutar consultas de predicción | Microsoft Docs'
+title: 'Lección 5: ejecutar consultas de predicción | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822317"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lección 5: Ejecución de consultas de predicción
-  En esta lección, usará el [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) del modelo que ha creado en el formulario de la instrucción SELECT para crear dos tipos diferentes de predicciones basadas en el árbol de decisión [ Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de asociación](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Estos tipos de predicciones se definen a continuación.  
+  En esta lección, usará la forma [seleccionar del \<modelo> combinación de predicción (DMX)](/sql/dmx/select-from-model-cases-dmx) de la instrucción SELECT para crear dos tipos diferentes de predicciones basadas en el modelo de árbol de decisión creado en la [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Estos tipos de predicciones se definen a continuación.  
   
  Consulta singleton  
  Use una consulta singleton para proporcionar valores ad hoc al realizar predicciones. Por ejemplo, puede determinar si es probable que un cliente sea un comprador de bicicletas pasando entradas a la consulta, como la distancia al lugar de trabajo, el prefijo telefónico o el número de hijos del cliente. La consulta singleton devuelve un valor que indica la probabilidad de que la persona compre una bicicleta basándose en esas entradas.  
@@ -26,7 +26,7 @@ ms.locfileid: "62822317"
  Consulta por lotes  
  Utilice una consulta por lotes para determinar qué clientes potenciales incluidos en una tabla es probable que adquieran una bicicleta. Por ejemplo, si el departamento de marketing le proporciona una lista de clientes y atributos de clientes, puede utilizar una predicción por lotes para determinar qué clientes de la tabla es probable que adquieran una bicicleta.  
   
- El [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) formulario de la instrucción SELECT consta de tres partes:  
+ La forma [seleccionar \<del modelo> combinación de predicción (DMX)](/sql/dmx/select-from-model-cases-dmx) de la instrucción SELECT contiene tres partes:  
   
 -   Una lista de las funciones de predicción y las columnas del modelo de minería de datos devueltas en los resultados. Los resultados también pueden incluir columnas de entrada de los datos de origen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62822317"
   
 -   Una asignación entre las columnas del modelo de minería de datos y los datos de origen. Si los nombres coinciden, puede utilizar la sintaxis NATURAL y no incluir las asignaciones de columnas.  
   
- La consulta se puede mejorar aún más si se utilizan funciones de predicción. Las funciones de predicción proporcionan información adicional como, por ejemplo, la probabilidad de que se produzca una predicción, y ofrecen compatibilidad con la predicción en el conjunto de datos de entrenamiento. Para obtener más información acerca de las funciones de predicción, vea [funciones &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+ La consulta se puede mejorar aún más si se utilizan funciones de predicción. Las funciones de predicción proporcionan información adicional como, por ejemplo, la probabilidad de que se produzca una predicción, y ofrecen compatibilidad con la predicción en el conjunto de datos de entrenamiento. Para obtener más información sobre las funciones de predicción, consulte [funciones &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
  Las predicciones de este tutorial se basan en la tabla ProspectiveBuyer de la base de datos de ejemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. La tabla ProspectiveBuyer contiene una lista de clientes potenciales y de sus características asociadas. Los clientes de esta tabla son independientes de los clientes utilizados para crear el modelo de minería de datos del árbol de decisión.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62822317"
 -   Crear una consulta por lotes para determinar qué clientes de los incluidos en una tabla es probable que adquieran una bicicleta.  
   
 ## <a name="singleton-query"></a>Consulta singleton  
- El primer paso consiste en usar el [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) en una consulta de predicción de singleton. A continuación, se incluye un ejemplo genérico de la instrucción singleton:  
+ El primer paso es usar el [modelo SELECT FROM &#60;&#62; combinación de predicción &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) en una consulta de predicción singleton. A continuación, se incluye un ejemplo genérico de la instrucción singleton:  
   
 ```  
 SELECT <select list> FROM [<mining model name>]   
@@ -76,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>Para crear una consulta de predicción singleton  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -88,13 +88,13 @@ ORDER BY <expression>
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     La instrucción AS se utiliza para asignar un alias a las columnas devueltas por la consulta. El [PredictHistogram](/sql/dmx/predicthistogram-dmx) función devuelve estadísticas sobre la predicción, incluidas la probabilidad y el soporte técnico. Para obtener más información sobre las funciones que puede usarse en una instrucción de predicción, vea [funciones &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+     La instrucción AS se utiliza para asignar un alias a las columnas devueltas por la consulta. La función [PredictHistogram](/sql/dmx/predicthistogram-dmx) devuelve estadísticas sobre la predicción, incluida la probabilidad y la compatibilidad. Para obtener más información sobre las funciones que se pueden usar en una instrucción de predicción, consulte [funciones &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
 4.  Reemplace lo siguiente:  
   
@@ -102,7 +102,7 @@ ORDER BY <expression>
     [<mining model>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Decision Tree]  
@@ -114,7 +114,7 @@ ORDER BY <expression>
     (SELECT '<value>' AS [<column name>], ...)  AS t  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     (SELECT 35 AS [Age],  
@@ -140,16 +140,16 @@ ORDER BY <expression>
        2 AS [Total Children]) AS t  
     ```  
   
-6.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+6.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-7.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Singleton_Query.dmx`.  
+7.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Singleton_Query.dmx`al archivo.  
   
-8.  En la barra de herramientas, haga clic en el **Execute** botón.  
+8.  En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
      La consulta devuelve una predicción acerca de si un cliente con las características especificadas adquirirá una bicicleta, así como estadísticas acerca de la predicción.  
   
 ## <a name="batch-query"></a>Consulta por lotes  
- El paso siguiente consiste en usar el [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) en una consulta de predicción por lotes. A continuación, se incluye un ejemplo genérico de una instrucción por lotes:  
+ El siguiente paso consiste en usar el [modelo SELECT FROM &#60;&#62; combinación de predicción &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx) en una consulta de predicción por lotes. A continuación, se incluye un ejemplo genérico de una instrucción por lotes:  
   
 ```  
 SELECT TOP <number> <select list>   
@@ -162,7 +162,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- Como en la consulta singleton, en las dos primeras líneas del código se definen las columnas del modelo de minería de datos devueltas por la consulta, así como el nombre del modelo de minería de datos utilizado para generar la predicción. La parte superior \<número > instrucción especifica que la consulta sólo devolverá el número o los resultados especificados por \<número >.  
+ Como en la consulta singleton, en las dos primeras líneas del código se definen las columnas del modelo de minería de datos devueltas por la consulta, así como el nombre del modelo de minería de datos utilizado para generar la predicción. La instrucción \<> número superior especifica que la consulta solo devolverá el número o los resultados especificados por \<número>.  
   
  En las líneas siguientes del código se definen los datos de origen en los que se basan las predicciones:  
   
@@ -171,7 +171,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   AS [<input alias>]  
 ```  
   
- En cuanto al método utilizado para recuperar los datos de origen, hay varias opciones, pero en este tutorial se usará OPENQUERY. Para obtener más información sobre las opciones disponibles, consulte [ &#60;consulta de origen de datos&#62;](/sql/dmx/source-data-query).  
+ En cuanto al método utilizado para recuperar los datos de origen, hay varias opciones, pero en este tutorial se usará OPENQUERY. Para obtener más información sobre las opciones disponibles, vea [&#60;&#62;de consultas de datos de origen ](/sql/dmx/source-data-query).  
   
  En la línea siguiente se definen la asignación entre las columnas de origen del modelo de minería de datos y las columnas de los datos de origen:  
   
@@ -191,11 +191,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- Usar ORDER BY en combinación con la parte superior \<número > instrucción para filtrar los resultados que se devuelven. Por ejemplo, en esta predicción se devolverán los diez principales compradores de bicicletas, ordenados por la probabilidad de que la predicción sea correcta. Puede utilizar la sintaxis [DESC|ASC] para controlar el orden en el que aparecen los resultados.  
+ Utilice ORDER BY en combinación con el número \<superior> instrucción para filtrar los resultados que se devuelven. Por ejemplo, en esta predicción se devolverán los diez principales compradores de bicicletas, ordenados por la probabilidad de que la predicción sea correcta. Puede utilizar la sintaxis [DESC|ASC] para controlar el orden en el que aparecen los resultados.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>Para crear una consulta de predicción por lotes  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -207,7 +207,7 @@ ORDER BY <expression> [DESC|ASC]
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     SELECT  
@@ -327,16 +327,16 @@ ORDER BY <expression> [DESC|ASC]
     ORDER BY PredictProbability([Bike Buyer]) DESC  
     ```  
   
-7.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+7.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Batch_Prediction.dmx`.  
+8.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Batch_Prediction.dmx`al archivo.  
   
-9. En la barra de herramientas, haga clic en el **Execute** botón.  
+9. En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
      La consulta devuelve una tabla que contiene nombres de cliente, una predicción acerca de si cada cliente adquirirá una bicicleta y la probabilidad de la predicción.  
   
  Éste es el último paso del tutorial de Bike Buyer. Ahora dispone de un conjunto de modelos de minería de datos que puede utilizar para explorar las similitudes entre sus clientes y predecir si los clientes potenciales adquirirán una bicicleta.  
   
- Para aprender a utilizar DMX en un escenario de cesta, consulte [Tutorial DMX de Market Basket](../../2014/tutorials/market-basket-dmx-tutorial.md).  
+ Para obtener información sobre cómo usar DMX en un escenario de cesta de la compra, consulte el [tutorial DMX](../../2014/tutorials/market-basket-dmx-tutorial.md)de la cesta de la compra.  
   
   

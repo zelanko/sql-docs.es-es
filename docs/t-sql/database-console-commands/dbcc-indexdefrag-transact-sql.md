@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116533"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901663"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Desfragmenta los índices de la tabla o la vista especificada.
   
@@ -44,7 +44,7 @@ Desfragmenta los índices de la tabla o la vista especificada.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   
@@ -70,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC INDEXDEFRAG desfragmenta el nivel hoja de un índice para que el orden físico de las páginas coincida con el orden lógico de izquierda a derecha de los nodos hoja, lo que mejora el rendimiento de recorrido del índice.
   
 > [!NOTE]  
@@ -86,7 +86,7 @@ A diferencia de DBCC DBREINDEX, o la operación de generación del índice en ge
   
 La desfragmentación siempre se registra por completo con independencia de la configuración del modelo de recuperación. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). La desfragmentación de un índice muy fragmentado puede generar más información en el registro que la creación de un índice de registro completo. No obstante, la desfragmentación se realiza como una serie de transacciones cortas y, por tanto, no es necesario un registro grande si se realizan con frecuencia copias de seguridad de registros o si la configuración del modelo de recuperación es SIMPLE.
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
 DBCC INDEXDEFRAG coloca las páginas hoja del índice en su lugar. Por lo tanto, si un índice se intercala con otros índices en el disco, la ejecución de DBCC INDEXDEFRAG en dicho índice no ordena las páginas hoja del índice de forma contigua. Para mejorar la agrupación en clústeres de páginas, vuelva a generar el índice.
 No se puede utilizar DBCC INDEXDEFRAG para desfragmentar los índices siguientes:
 -   Un índice deshabilitado.  

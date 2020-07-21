@@ -1,5 +1,5 @@
 ---
-title: Detalles de la perspectiva (pestaña perspectivas, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Detalles de la perspectiva (pestaña perspectivas, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86983780a94af679c06253e710a582115bb25956
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072059"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540637"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalles de la perspectiva (pestaña Perspectivas, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Detalles de la perspectiva** de la pestaña **Perspectivas** del Diseñador de cubos para administrar los metadatos disponibles para aquellos usuarios que consulten la perspectiva seleccionada.  
@@ -44,6 +43,6 @@ ms.locfileid: "66072059"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Nueva perspectiva**|Haga clic para crear una nueva perspectiva en el cubo seleccionado.|  
-|**Eliminar perspectiva**|Haga clic en esta opción para mostrar el cuadro de diálogo **Eliminar objetos** y eliminar la perspectiva seleccionada.|  
+|**Eliminar perspectiva**|Haga clic para mostrar el cuadro de diálogo **eliminar objetos** y eliminar la perspectiva seleccionada|  
   
   

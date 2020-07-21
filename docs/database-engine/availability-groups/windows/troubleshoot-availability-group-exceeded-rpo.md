@@ -1,6 +1,7 @@
 ---
-title: 'Solución de problemas: el grupo de disponibilidad superó el RPO (SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: El grupo de disponibilidad superó el RPO
+description: Problemas comunes y soluciones para cuando el grupo de disponibilidad de AlwaysOn supera el objetivo de punto de recuperación (RPO)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013738"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882362"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Después de realizar una conmutación por error manual forzada de un grupo de disponibilidad a una réplica secundaria de confirmación asincrónica, es posible que la pérdida de datos supere su objetivo de punto de recuperación (RPO). También puede ser que al calcular la pérdida de datos potencial de una réplica secundaria de confirmación sincrónica usando el método que se describe en [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisión del rendimiento de grupos de disponibilidad Always On), descubra que supera el RPO.  
   
  Una réplica secundaria de confirmación sincrónica garantiza que no se pierdan datos, pero la pérdida de datos potencial de una réplica secundaria de confirmación asincrónica depende de la cantidad de registro que todavía está esperando a ser protegido en la réplica secundaria.  
@@ -28,7 +29,7 @@ ms.locfileid: "68013738"
   
 2.  [Un cuello de botella de E/S de disco ralentiza la protección de la réplica secundaria](#BKMK_IO_BOTTLENECK)  
   
-##  <a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
  La causa que provoca con más frecuencia que las bases de datos superen su RPO es que no se pueden enviar lo suficientemente rápido a la réplica secundaria.  
   
 ### <a name="explanation"></a>Explicación  
@@ -62,7 +63,7 @@ ms.locfileid: "68013738"
 Para solucionar este problema, intente actualizar el ancho de banda de red o eliminar o reducir el tráfico de red innecesario.  
 
 
-##  <a name="BKMK_IO_BOTTLENECK"></a> Un cuello de botella de E/S de disco ralentiza la protección de la réplica secundaria  
+##  <a name="disk-io-bottleneck-slows-down-log-hardening-on-the-secondary-replica"></a><a name="BKMK_IO_BOTTLENECK"></a> Un cuello de botella de E/S de disco ralentiza la protección de la réplica secundaria  
  En función de la implementación del archivo de base de datos, la protección del registro puede ralentizarse debido a la contención de E/S con una carga de trabajo de informes.  
   
 ### <a name="explanation"></a>Explicación  
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Disco físico: todos los contadores**  
   
--   **Disco físico: Promedio de de segundos de disco/transferencia**  
+-   **Disco físico: Prom. de segundos de disco/transferencia**  
   
 -   **SQL Server: bases de datos > tiempo de espera de vaciado de registro**  
   

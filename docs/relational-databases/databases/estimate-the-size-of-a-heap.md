@@ -1,5 +1,6 @@
 ---
 title: Estimar el tamaño de un montón | Microsoft Docs
+description: Use este procedimiento para estimar la cantidad de espacio necesario para almacenar datos en un montón en SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909044"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002962"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar datos en un montón:  
   
 1.  Especifique el número de filas que habrá en la tabla:  
@@ -46,7 +47,7 @@ ms.locfileid: "72909044"
   
 3.  Una parte de la fila, conocida como el mapa de bits NULL, se reserva para administrar la nulabilidad en las columnas. Calcule el tamaño:  
   
-     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Solo debe utilizarse la parte entera de la expresión anterior. Descarte el resto.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "72909044"
   
      Si hay columnas de longitud variable en la tabla, determine cuánto espacio se utiliza para almacenar las columnas en la fila:  
   
-     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Los bytes agregados a **_Max_Var_Size_** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de **_Max_Var_Size_** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
@@ -65,19 +66,19 @@ ms.locfileid: "72909044"
   
 5.  Calcule el tamaño total de la fila:  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      El valor 4 de la fórmula representa la sobrecarga del encabezado de la fila de datos.  
   
 6.  Calcule el número de filas por página (8096 bytes libres por página):  
   
-     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
   
      Dado que las filas no abarcan varias páginas, el número de filas por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
 7.  Calcule el número de páginas necesarias para almacenar todas las filas:  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      El número de páginas estimado debe redondearse hacia arriba a la página completa más cercana.  
   
@@ -87,7 +88,7 @@ ms.locfileid: "72909044"
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   
--   Particiones  
+-   Creación de particiones  
   
      La sobrecarga de espacio de la creación de particiones es mínima, pero resulta difícil de calcular. No es importante incluirla.  
   
@@ -113,7 +114,7 @@ ms.locfileid: "72909044"
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Calcular el tamaño de una tabla](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
- [Estimar el tamaño de un índice clúster](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   
+ [Estimar el tamaño de un índice agrupado](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   
  [Estimar el tamaño de un índice no clúster](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)   
  [Estimar el tamaño de una base de datos](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   

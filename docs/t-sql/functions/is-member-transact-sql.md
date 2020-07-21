@@ -27,15 +27,15 @@ ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c75bd121f799a9612a0f2857478d6c71055b080
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab3e4b428cd3f8d5c899558ac2c4e1c5089d2cb1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086720"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85981820"
 ---
-# <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Indica si el usuario actual es miembro del grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows o del rol de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados. La función IS_MEMBER no se admite para los grupos de Azure Active Directory.  
   
@@ -43,24 +43,24 @@ ms.locfileid: "68086720"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 IS_MEMBER ( { 'group' | 'role' } )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  **'** *group* **'**  
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Nombre del grupo de Windows que se está comprobando; su formato debe ser *Dominio*\\*Grupo*. *group* es **sysname**.  
   
  **'** *role* **'**  
  Es el nombre del rol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va comprobar. *role* es **sysname** y puede contener los roles fijos de base de datos o los roles definidos por el usuario, pero no los roles de servidor.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  IS_MEMBER devuelve los siguientes valores.  
   
 |Valor devuelto|Descripción|  

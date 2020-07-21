@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f36cd694756544a44df657d97fd84e1967167b55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a35d9dcb9564c4081d008768c28e28dd1f7c1e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066900"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Errors (objeto de SQL Server)
   El objeto **SQLServer:SQL Errors** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar los **errores de SQL**.  
   
- En esta tabla se describen los contadores de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **errores de SQL** .  
+ En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]errores de SQL**de**.  
   
 |Contadores de errores de SQL de SQL Server|Descripción|  
 |------------------------------------|-----------------|  
@@ -39,7 +38,7 @@ ms.locfileid: "63183008"
 |**Kill Connection Errors**|Hace un seguimiento de los errores graves que hacen que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimine la conexión actual.|  
 |**User Errors**|Información sobre los errores de usuario.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

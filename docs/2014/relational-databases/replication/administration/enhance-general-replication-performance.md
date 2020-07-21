@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a85519a947e7d5d03f324b71984d2ffb40bcefe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043353"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
   Puede aumentar el rendimiento general de todos los tipos de replicación en su aplicación y en la red siguiendo las directrices descritas en este tema.  
   
 ## <a name="server-and-network"></a>Servidor y red  
   
--   Defina la cantidad mínima y máxima de memoria asignada al [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+-   Defina la cantidad mínima y máxima de memoria asignada a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
      De forma predeterminada, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Para evitar la disponibilidad insuficiente de memoria durante las actividades de replicación, utilice la opción **min server memory** para establecer la memoria mínima disponible. Para evitar que el sistema operativo tenga que paginar en el disco para disponer de memoria, puede definir también una cantidad máxima de memoria con la opción **max server memory** . Para obtener más información, consulte [Opciones de configuración del servidor de memoria del servidor](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -72,7 +71,7 @@ ms.locfileid: "63187083"
   
      La lógica de negocios de los desencadenadores definidos por el usuario en el Suscriptor puede ralentizar la replicación de los cambios en el suscriptor.  
   
-    -   En la replicación transaccional, puede ser más eficaz incluir esta lógica en procedimientos almacenados personalizados que se utilizan para aplicar los comandos replicados. Para obtener más información, consulte [Especificar cómo se propagan los cambios para los artículos transaccionales](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
+    -   En la replicación transaccional, puede ser más eficaz incluir esta lógica en procedimientos almacenados personalizados que se utilizan para aplicar los comandos replicados. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
     -   En la replicación de mezcla, puede ser más eficaz utilizar controladores de lógica de negocios. Para obtener más información, consulte [Ejecutar lógica de negocios durante la sincronización de mezcla](../merge/execute-business-logic-during-merge-synchronization.md).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "63187083"
   
      Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos `text`, `ntext` y `image` han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)`, respectivamente.  
   
-     Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para más información, vea [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
+     Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para obtener más información, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="publication-design"></a>Diseño de la publicación  
   
@@ -96,9 +95,9 @@ ms.locfileid: "63187083"
   
      Para realizar particiones de cambios se pueden publicar subconjuntos de datos en cada suscriptor o hacer que una aplicación dirija los cambios de una fila determinada a un nodo en concreto:  
   
-    -   La replicación de mezcla admite la publicación de subconjuntos de datos utilizando filtros con parámetros con una sola publicación. Para más información, vea [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+    -   La replicación de mezcla admite la publicación de subconjuntos de datos utilizando filtros con parámetros con una sola publicación. Para obtener más información, consulte [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
-    -   La replicación transaccional admite la publicación de subconjuntos de datos utilizando filtros estáticos con varias publicaciones. Para obtener más información, consulte [Filtrar datos publicados](../publish/filter-published-data.md).  
+    -   La replicación transaccional admite la publicación de subconjuntos de datos utilizando filtros estáticos con varias publicaciones. Para obtener más información, vea [Filtrar datos publicados](../publish/filter-published-data.md).  
   
 -   Utilice los filtros de fila con prudencia.  
   
@@ -110,13 +109,13 @@ ms.locfileid: "63187083"
   
 -   Utilice suscripciones de extracción cuando haya un gran número de suscriptores.  
   
-     El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción, y en los suscriptores para las suscripciones de extracción. El uso de las suscripciones de extracción puede mejorar el rendimiento desplazando el procesamiento de agentes del distribuidor a los suscriptores. Para obtener más información, consulte [Suscribirse a publicaciones](../subscribe-to-publications.md).  
+     El Agente de distribución y el Agente de mezcla se ejecutan en el distribuidor para las suscripciones de inserción, y en los suscriptores para las suscripciones de extracción. El uso de las suscripciones de extracción puede mejorar el rendimiento desplazando el procesamiento de agentes del distribuidor a los suscriptores. Para obtener más información, vea [Suscribirse a publicaciones](../subscribe-to-publications.md).  
   
 -   Considere la posibilidad de reinicializar la suscripción si los suscriptores están muy retrasados.  
   
      Cuando sea necesario enviar grandes cantidades de cambios a los suscriptores, reinicializarlos con una nueva instantánea puede ser más rápido que utilizar la replicación para mover los cambios individuales. Para obtener más información, vea [Reinicializar suscripciones](../reinitialize-subscriptions.md).  
   
-     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, vea [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Consideraciones acerca de las instantáneas  
   
@@ -158,7 +157,7 @@ ms.locfileid: "63187083"
   
 -   Use el parámetro **-UseInprocLoader** del Agente de distribución y del Agente de mezcla (este parámetro no se puede usar si las tablas publicadas incluyen columnas XML). Con este parámetro, el agente utiliza el comando BULK INSERT cuando se aplica la instantánea.  
   
- Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+ Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
 -   [Trabajar con perfiles del Agente de replicación](../agents/work-with-replication-agent-profiles.md)  
   

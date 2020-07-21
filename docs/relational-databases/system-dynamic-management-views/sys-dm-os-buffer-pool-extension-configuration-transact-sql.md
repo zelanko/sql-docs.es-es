@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_pool_extension_configuration dynamic management view
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8924d703085b3f93fe2ae36084025e945ff3fda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900229"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820879"
 ---
-# <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+# <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
@@ -33,11 +33,11 @@ ms.locfileid: "67900229"
   
 
   
-| Nombre de columna | Tipo de datos | Descripción |
+| Nombre de la columna | Tipo de datos | Descripción |
 | :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|Ruta y nombre de archivo de la memoria caché de la extensión del grupo de búferes. Acepta valores NULL.|  
 |file_id|**int**|Identificador del archivo de la extensión del grupo de búferes. No admite valores NULL.|  
-|state|**int**|Estado de la característica de extensión del grupo de búferes. No admite valores NULL.<br /><br /> 0: extensión del grupo de búferes deshabilitada<br /><br /> 1: deshabilitando extensión del grupo de búferes<br /><br /> 2: reservado para uso futuro<br /><br /> 3: habilitando extensión del grupo de búferes<br /><br /> 4: reservado para uso futuro<br /><br /> 5: extensión del grupo de búferes habilitada|  
+|state|**int**|Estado de la característica de extensión del grupo de búferes. No admite valores NULL.<br /><br /> 0: extensión del grupo de búferes deshabilitada<br /><br /> 1: deshabilitando extensión del grupo de búferes<br /><br /> 2-reservado para uso futuro<br /><br /> 3: habilitando extensión del grupo de búferes<br /><br /> 4: reservado para uso futuro<br /><br /> 5: extensión del grupo de búferes habilitada|  
 |state_description|**nvarchar**(60)|Describe el estado de la característica de extensión del grupo de búferes. Acepta valores NULL.<br /><br /> 0 = EXTENSIÓN DEL GRUPO DE BÚFERES DESHABILITADA<br /><br /> 5 = EXTENSIÓN DEL GRUPO DE BÚFERES HABILITADA|
 |current_size_in_kb|**bigint**|Tamaño actual del archivo de la extensión del grupo de búferes. No admite valores NULL.|
 | &nbsp; | &nbsp; | &nbsp; |
@@ -55,7 +55,7 @@ SELECT path, file_id, state, state_description, current_size_in_kb
 FROM sys.dm_os_buffer_pool_extension_configuration;  
 ```  
   
-### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>b. Devolver el número de páginas en caché del archivo de la extensión del grupo de búferes  
+### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>B. Devolver el número de páginas en caché del archivo de la extensión del grupo de búferes  
  El ejemplo siguiente devuelve el número de páginas en caché de cada archivo de la extensión del grupo de búferes.  
   
 ```sql  
@@ -65,7 +65,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

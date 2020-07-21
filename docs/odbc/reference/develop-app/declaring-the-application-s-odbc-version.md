@@ -1,5 +1,5 @@
 ---
-title: Declarar la aplicación&#39;s versión de ODBC | Microsoft Docs
+title: Declaración de la versión de ODBC de Application&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,36 +15,36 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba346ed7f7a261446110c5513026d20a86fd3a19
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076842"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285235"
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>Declarar la aplicación&#39;s versión de ODBC
-Antes de que una aplicación asigna una conexión, se debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue ODBC *2.x* u ODBC *3.x* especificación al usar los siguientes elementos:  
+# <a name="declaring-the-application39s-odbc-version"></a>Declaración de la versión de ODBC de Application&#39;s
+Antes de que una aplicación asigne una conexión, debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue la especificación ODBC *2. x* u ODBC *3. x* cuando se usan los siguientes elementos:  
   
--   **SQLSTATE**. Muchos de los valores SQLSTATE son diferentes en ODBC *2.x* y ODBC *3.x*.  
+-   **SQLSTATEs**. Muchos valores SQLSTATE son diferentes en ODBC *2. x* y ODBC *3. x*.  
   
--   **Fecha, hora y los identificadores de tipo de marca de tiempo**. La siguiente tabla muestra los identificadores de tipo de datos de fecha, hora y marca de tiempo en ODBC *2.x* y ODBC *3.x*.  
+-   **Identificadores de tipo de fecha, hora y marca de tiempo**. En la tabla siguiente se muestran los identificadores de tipo de datos de fecha, hora y marca de tiempo en ODBC *2. x* y ODBC *3. x*.  
   
-    |ODBC *2.x*|ODBC *3.x*|  
+    |ODBC *2. x*|ODBC *3. x*|  
     |----------------|----------------|  
     |**Identificadores de tipo SQL**||  
     |SQL_DATE|SQL_TYPE_DATE|  
     |SQL_TIME|SQL_TYPE_TIME|  
     |SQL_TIMESTAMP|SQL_TYPE_TIMESTAMP|  
-    |**Identificadores de tipo C**||  
+    |**Identificadores de tipo de C**||  
     |SQL_C_DATE|SQL_C_TYPE_DATE|  
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_**argumento en SQLTables**. En ODBC *2.x*, los caracteres comodín ("%" y "_") en el *CatalogName* argumento se tratan literalmente. En ODBC *3.x*, se tratan como caracteres comodín. Por lo tanto, una aplicación que sigue a ODBC *2.x* especificación no puede utilizar tal y como caracteres comodín y no realiza escape de ellos cuando se usen como literales. Una aplicación que sigue a ODBC *3.x* especificación puede usarlas como caracteres comodín o ponerlos y usarlos como literales. Para obtener más información, consulte [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   Argumento _nombrecatálogo_**en SQLTables**.   En ODBC *2. x*, los caracteres comodín ("%" y "_") del argumento *nombrecatálogo* se tratan literalmente. En ODBC *3. x*, se tratan como caracteres comodín. Por lo tanto, una aplicación que sigue a la especificación de ODBC *2. x* no puede usarlos como caracteres comodín y no los escapa cuando se usan como literales. Una aplicación que sigue a la especificación de ODBC *3. x* puede usarlos como caracteres comodín o escapar y usarlos como literales. Para obtener más información, vea [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
- ODBC *3.x* Administrador de controladores y ODBC *3.x* controladores comprobar la versión de la especificación de ODBC que se escribe una aplicación y responder según corresponda. Por ejemplo, si la aplicación sigue ODBC *2.x* especificación y llama a **SQLExecute** antes de llamar a **SQLPrepare**, ODBC *3.x*Administrador de controladores devuelve SQLSTATE S1010 (función de error de secuencia). Si la aplicación sigue ODBC *3.x* especificación, el Administrador de controladores devuelve SQLSTATE HY010 (función de error de secuencia). Para obtener más información, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ El administrador de controladores ODBC *3. x* y los controladores ODBC *3. x* comprueban la versión de la especificación de ODBC en la que se escribe una aplicación y responden en consecuencia. Por ejemplo, si la aplicación sigue la especificación ODBC *2. x* y llama a **SQLExecute** antes de llamar a **SQLPrepare**, el administrador de controladores ODBC *3. x* devuelve SQLSTATE S1010 (error de secuencia de función). Si la aplicación sigue la especificación de ODBC *3. x* , el administrador de controladores devuelve SQLSTATE HY010 (error de secuencia de función). Para obtener más información, consulte [compatibilidad con versiones anteriores y cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
 > [!IMPORTANT]  
->  Las aplicaciones que siguen ODBC *3.x* especificación debe utilizar código condicional para evitar el uso de la funcionalidad nueva a ODBC *3.x* al trabajar con ODBC *2.x* controladores. ODBC *2.x* controladores no admiten la funcionalidad nueva a ODBC *3.x* simplemente porque la aplicación declara que sigue a ODBC *3.x* especificación. Además, ODBC *3.x* no dejan de controladores admitir la funcionalidad nueva a ODBC *3.x* simplemente porque la aplicación declara que sigue a ODBC *2.x* especificación.
+>  Las aplicaciones que siguen la especificación de ODBC *3. x* deben usar código condicional para evitar el uso de la funcionalidad nueva en ODBC *3. x* al trabajar con controladores ODBC *2. x* . Los controladores ODBC *2. x* no admiten la funcionalidad nueva de ODBC *3. x* , solo porque la aplicación declara que sigue la especificación de ODBC *3. x* . Además, los controladores ODBC *3. x* no dejan de admitir la funcionalidad nueva de ODBC *3. x* , solo porque la aplicación declara que sigue la especificación ODBC *2. x* .

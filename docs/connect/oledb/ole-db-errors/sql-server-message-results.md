@@ -1,5 +1,5 @@
 ---
-title: Resultados del mensaje de SQL Server | Microsoft Docs
+title: Resultados de mensajes de SQL Server | Microsoft Docs
 description: resultados de los mensajes de SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994918"
 ---
 # <a name="sql-server-message-results"></a>Resultados de los mensajes de SQL Server
@@ -38,9 +38,9 @@ ms.locfileid: "67994918"
   
 -   SET STATISTICS  
   
- Estas instrucciones devuelven uno o varios mensajes informativos o hacen que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelva mensajes informativos en lugar de resultados de conjunto de filas o de recuento. Si la ejecución es correcta, el controlador de OLE DB para SQL Server Devuelve S_OK y los mensajes están disponibles para el controlador de OLE DB para SQL Server consumidor.  
+ Estas instrucciones devuelven uno o varios mensajes informativos o hacen que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelva mensajes informativos en lugar de resultados de conjunto de filas o de recuento. Si la ejecución es correcta, OLE DB Driver for SQL Server devuelve S_OK y los mensajes están disponibles para el consumidor de OLE DB Driver for SQL Server.  
   
- El controlador de OLE DB para SQL Server Devuelve S_OK y tiene uno o más mensajes informativos disponibles después de la [!INCLUDE[tsql](../../../includes/tsql-md.md)] ejecución de muchas instrucciones o la ejecución del consumidor de un controlador de OLE DB para SQL Server función miembro.  
+ OLE DB Driver for SQL Server devuelve S_OK y tiene uno o varios mensajes informativos disponibles después de la ejecución de muchas instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] o de la ejecución del consumidor de una función miembro de OLE DB Driver for SQL Server.  
   
  El consumidor del controlador OLE DB para SQL Server que permite la especificación dinámica de texto de consulta debe comprobar las interfaces de error después de cada ejecución de una función de miembro independientemente del valor del código de retorno, la presencia o ausencia de una referencia de interfaz **IRowset** o **IMultipleResults** devuelta o un recuento de filas afectadas.  
   

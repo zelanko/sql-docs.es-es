@@ -1,5 +1,5 @@
 ---
-title: Conversión del tipo de datos con la transformación Conversión de datos | Microsoft Docs
+title: Conversión del tipo de datos con la transformación Conversión de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2587c08c3ebf919a1665989863dc46e23a0ae690
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 9d25c3d7cf2c58af5b7daceeadb1daf3a9122a6d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71297991"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903911"
 ---
-# <a name="convert-data-type-by-using-data-conversion-transformation"></a>Conversión del tipo de datos con la transformación Conversión de datos
+# <a name="convert-data-type-with-data-conversion-transformation"></a>Conversión del tipo de datos con la transformación Conversión de datos
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -53,7 +53,7 @@ ms.locfileid: "71297991"
   
 10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para más información, consulte [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md).  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   

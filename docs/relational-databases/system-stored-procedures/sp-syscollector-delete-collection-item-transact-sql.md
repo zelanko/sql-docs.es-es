@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f0753ed820012d0bbae1fb263b7881aad663ee45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000906"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892942"
 ---
-# <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina un elemento de recopilación de un conjunto de recopilación  
   
@@ -42,10 +42,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_item_id =] *collection_item_id*  
- Es el identificador único del elemento de recopilación. *collection_item_id* es **int** con el valor predeterminado es NULL. *collection_item_id* debe tener un valor si *nombre* es NULL.  
+ Es el identificador único del elemento de recopilación. *collection_item_id* es de **tipo int** y su valor predeterminado es NULL. *collection_item_id* debe tener un valor si *el nombre* es NULL.  
   
  [ @name =] '*nombre*'  
- Es el nombre del elemento de colección. *nombre* es **sysname** con un valor predeterminado es null. *nombre* debe tener un valor si *collection_item_id* es NULL.  
+ Es el nombre del elemento de colección. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_item_id* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -67,9 +67,9 @@ GO
 EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   

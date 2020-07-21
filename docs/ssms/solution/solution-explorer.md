@@ -1,5 +1,5 @@
 ---
-title: Explorador de soluciones | Microsoft Docs
+title: Explorador de soluciones
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,14 +15,14 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a0e2a3512528bdddc62d89e182a6f074b05bdc75
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988126"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242840"
 ---
 # <a name="solution-explorer"></a>Explorador de soluciones
 
@@ -54,7 +54,7 @@ Use los siguientes temas para empezar a trabajar con Soluciones de SQL Server:
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo recopilar uno o varios proyectos en una solución.|[Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Describe cómo crear un proyecto y agregar elementos como scripts y conexiones.|[Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Proporciona información acerca de los archivos usados por [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar soluciones y archivos.|[Archivos que administran soluciones y proyectos](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

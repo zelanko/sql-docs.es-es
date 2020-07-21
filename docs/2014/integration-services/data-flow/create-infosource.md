@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6494c70226195f3cab10c3a3925c19dcfcdd954e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827948"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432272"
 ---
 # <a name="create-infosource"></a>Crear InfoSource
   Use el cuadro de diálogo **Crear InfoSource** para crear un InfoSource nuevo. Para crear un InfoSource nuevo, puede usar el cuadro de diálogo **Crear InfoSource para los datos de transacción** o **Crear InfoSource para datos maestros** .  
@@ -46,7 +45,7 @@ ms.locfileid: "62827948"
   
  Si selecciona esta opción, se abrirá el cuadro de diálogo **Crear InfoSource para datos maestros** . Use el cuadro de diálogo **Crear InfoSource para datos maestros** para crear el InfoSource nuevo. Para obtener más información sobre este cuadro de diálogo, vea [Create InfoSource for Master Data](create-infosource-for-master-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

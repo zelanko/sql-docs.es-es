@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Ordenar | Microsoft Docs
+title: Editor de transformación ordenar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c78bfc5503673de6dae51db20243cf1dc1ea65a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055491"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421302"
 ---
 # <a name="sort-transformation-editor"></a>Editor de transformación Ordenar
   Use el cuadro de diálogo **Editor de transformación Ordenar** para seleccionar las columnas que desea ordenar, establecer el orden y especificar si deben quitarse los duplicados.  
@@ -30,10 +29,10 @@ ms.locfileid: "66055491"
  **Columnas de entrada disponibles**  
  Active las casillas de las columnas que desea ordenar.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de todas las columnas de entrada disponibles.  
   
- **Paso a través**  
+ **Acceso directo**  
  Permite indicar si la columna debe incluirse en la salida ordenada.  
   
  **Columna de entrada**  
@@ -54,7 +53,7 @@ ms.locfileid: "66055491"
  **Quitar filas con valores de ordenación duplicados**  
  Permite indicar si la transformación copia filas duplicadas en la salida o crea una única entrada para todos los duplicados utilizando las opciones de comparación de cadenas especificadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

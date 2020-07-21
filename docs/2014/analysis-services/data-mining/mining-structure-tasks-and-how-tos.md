@@ -1,5 +1,5 @@
 ---
-title: Procedimientos y tareas de la estructura de minería de datos | Microsoft Docs
+title: Tareas y procedimientos de la estructura de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2093bfc0fc36b324054fe30c11ff1e61042c6b21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083441"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521185"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tareas y procedimientos de las estructuras de minería de datos
   La pestaña **Estructura de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene herramientas que se pueden utilizar para crear, editar y procesar una estructura de minería de datos.  
@@ -36,7 +35,7 @@ ms.locfileid: "66083441"
   
 -   [Cambiar las propiedades de una estructura de minería de datos](change-the-properties-of-a-mining-structure.md)  
   
--   [Editar la vista del origen de datos usada para una estructura de minería de datos](edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modifique la vista del origen de datos utilizada para una estructura de minería de datos](edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Procesar una estructura de minería de datos](process-a-mining-structure.md)  
   

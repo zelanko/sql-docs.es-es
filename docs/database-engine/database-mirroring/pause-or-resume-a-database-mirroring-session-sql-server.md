@@ -1,6 +1,7 @@
 ---
-title: Pausar o reanudar una sesión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Pausa y reanudación de una sesión de creación de reflejo de una base de datos
+description: Obtenga información sobre cómo pausar y reanudar una sesión de creación de reflejo de una base de datos mediante SQL Server Management Studio o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9829ffeb1eaf609ae538fc92054517aa8c9bbf3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0104928ede91b1130636bd4d29cc7329b4e63c86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996477"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643434"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Pausar o reanudar una sesión de creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo pausar o reanudar la creación de reflejo de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -41,18 +42,18 @@ ms.locfileid: "67996477"
   
 -   **Seguimiento:**  [Después de pausar o reanudar la creación de reflejo de la base de datos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  En cualquier momento, puede suspender una sesión de creación de reflejo de la base de datos, lo que puede mejorar el rendimiento durante los cuellos de botella, y puede reanudar una sesión suspendida.  
   
 > [!CAUTION]  
 >  Después de un servicio forzado, cuando el servidor principal original se vuelve a conectar, se suspende la creación de reflejo. Reanudar la creación de reflejo en esta situación puede dar lugar a una pérdida de datos en el servidor principal original. Para obtener información sobre la administración de la posible pérdida de datos, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Para pausar o reanudar una sesión de creación de reflejo de la base de datos, use la página **Creación de reflejo de Propiedades de la base de datos** .  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>Para pausar o reanudar la creación de reflejo de la base de datos  
@@ -71,7 +72,7 @@ ms.locfileid: "67996477"
   
 5.  Para reanudar la sesión, haga clic en **Reanudar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>Para pausar la creación de reflejo de la base de datos  
   
@@ -109,7 +110,7 @@ ms.locfileid: "67996477"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de pausar o reanudar la creación de reflejo de la base de datos  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a> Seguimiento: Después de pausar o reanudar la creación de reflejo de la base de datos  
   
 -   **Después de pausar la creación de reflejo de la base de datos**  
   
@@ -119,7 +120,7 @@ ms.locfileid: "67996477"
   
      La reanudación del reflejo de una base de datos pone a la base de datos reflejada en el estado SYNCHRONIZING. Si el nivel de seguridad es FULL, el reflejo se pone al nivel de la principal y la base de datos reflejada toma el estado SYNCHRONIZED. En este punto, es posible una conmutación por error. Si el testigo está presente y activo, es posible la conmutación automática por error. Si no hay un testigo, es posible la conmutación por error manual.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   

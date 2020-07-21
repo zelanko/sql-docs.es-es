@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3b4c94ef1c4690af2a333fcdbdef88b475219e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023760"
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
 
-El**cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
+El **cuadro de herramientas** muestra varios elementos para su empleo en proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
   
 Los iconos del**cuadro de herramientas** pueden arrastrarse y colocarse, o bien copiarse y pegarse en los editores de código o en superficies de vistas de diseño de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -35,6 +34,6 @@ Los iconos del**cuadro de herramientas** pueden arrastrarse y colocarse, o bien 
   
  Para agregar elementos al **cuadro de herramientas** o eliminarlos de éste, en el menú **Herramientas** , haga clic en **Elegir elementos del cuadro de herramientas**. Solo las **tareas de mantenimiento** pueden estar disponibles como iconos del **cuadro de herramientas** . No todos los componentes están siempre disponibles. Por ejemplo, las tareas de mantenimiento solo están disponibles si se crea un plan de mantenimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el cuadro de herramientas](../../ssms/use-the-toolbox.md)   
  [Elegir elementos del cuadro de herramientas &#40;página Tareas de mantenimiento&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  

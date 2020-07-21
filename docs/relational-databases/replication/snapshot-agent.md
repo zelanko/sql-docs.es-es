@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c3eb8c58bc43268356f47946df3ec60e7553ec61
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bcd2ee4bc1f193716b084bf816d27a5107e27a84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767633"
 ---
 # <a name="snapshot-agent"></a>Agente de instantáneas
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   El cuadro de diálogo **Agente de instantáneas** muestra información detallada acerca del Agente de instantáneas, como el estado, el historial, mensajes informativos y mensajes de error.  
   
 ## <a name="options"></a>Opciones  
  Seleccione en el menú **Ver** las sesiones del Agente de instantáneas que desea ver y seleccione a continuación una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de instantáneas**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
- **Ver**  
+ **Vista**  
  Seleccione las sesiones del Agente de instantáneas que desea ver.  
   
  **Estado**  
@@ -41,7 +41,7 @@ ms.locfileid: "68769526"
   
 -   No está en ejecución  
   
--   Completado  
+-   Completed  
   
  **Start Time**  
  Muestra la hora de inicio de la sesión.  
@@ -49,7 +49,7 @@ ms.locfileid: "68769526"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duración**  
+ **Duration**  
  Muestra el tiempo que se ha ejecutado el Agente de instantáneas en esta sesión. El tiempo representa el tiempo transcurrido si el agente se está ejecutando, y el tiempo total de la sesión si la sesión del agente ha finalizado.  
   
  **Mensaje de error**  

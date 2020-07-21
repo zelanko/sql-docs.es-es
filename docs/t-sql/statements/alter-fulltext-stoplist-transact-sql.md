@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067554"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301853"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Inserta o elimina una palabra irrelevante en la lista de palabras irrelevantes de texto completo predeterminada de la base de datos actual.  
   
@@ -51,7 +51,9 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ;  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *stoplist_name*  
  Es el nombre de la lista de palabras irrelevantes que se está modificando. *stoplist_name* puede tener un máximo de 128 caracteres.  
   
@@ -66,7 +68,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 |Formato|Descripción|  
 |------------|-----------------|  
 |String|*language_term* corresponde al valor de columna **alias** en la vista de compatibilidad [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La cadena debe estar delimitada con comillas sencillas, como en **'***language_term***'** .|  
-|Integer|*language_term* es la configuración regional (LCID) del idioma.|  
+|Entero|*language_term* es la configuración regional (LCID) del idioma.|  
 |Hexadecimal|*language_term* es 0x seguido del valor hexadecimal de LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda. Si el valor está en formato de juego de caracteres de doble byte (DBCS), SQL Server lo convertirá a Unicode.|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  
@@ -86,7 +88,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  Quita todas las palabras irrelevantes de la lista de palabras irrelevantes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  CREATE FULLTEXT STOPLIST solo se admite para el nivel de compatibilidad 100 y posterior. Para los niveles de compatibilidad 80 y 90, la lista de palabras irrelevantes del sistema siempre se asigna a la base de datos.  
   
 ## <a name="permissions"></a>Permisos  

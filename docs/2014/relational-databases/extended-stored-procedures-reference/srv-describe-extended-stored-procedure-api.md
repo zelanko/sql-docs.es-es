@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 264781f21e328c4740ee31b53fe3812bbe392305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050775"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API de procedimiento almacenado extendido)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -99,7 +98,7 @@ srcdata
   
  Si *desttype* es SRVDECIMAL o SRVNUMERIC, el parámetro *srcdata* debe ser un puntero a una estructura DBNUMERIC o DBDECIMAL con los campos de escala y precisión de la estructura ya establecidos en los valores deseados. Puede usar DEFAULTPRECISION para especificar una precisión predeterminada y DEFAULTSCALE para especificar una escala predeterminada.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  El número de la columna descrita. La primera columna es la columna 1. Si se produce un error, devuelve 0.  
   
 ## <a name="remarks"></a>Comentarios  
@@ -109,14 +108,14 @@ srcdata
   
  Para obtener una descripción de tipos de datos y conversiones de tipos de datos de API de procedimiento almacenado extendido, vea [Data Types &#40;Extended Stored Procedure API&#41; (Tipos de datos &#40;API de procedimiento almacenado extendido&#41;)](data-types-extended-stored-procedure-api.md).  
   
- Si el nombre de columna de la aplicación se encuentra en formato Unicode, debe convertirlo a la página de códigos multibyte del servidor antes de llamar a **srv_describe**. Para más información, vea [Datos Unicode y páginas de códigos de servidor](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Si el nombre de columna de la aplicación se encuentra en formato Unicode, debe convertirlo a la página de códigos multibyte del servidor antes de llamar a **srv_describe**. Para obtener más información, vea [datos Unicode y páginas de códigos de servidor](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vea también  
- [srv_sendrow &#40;API de procedimiento almacenado extendido&#41;](srv-sendrow-extended-stored-procedure-api.md)   
- [srv_setutype &#40;API de procedimiento almacenado extendido&#41;](srv-setutype-extended-stored-procedure-api.md)   
+## <a name="see-also"></a>Consulte también  
+ [srv_sendrow API de procedimiento almacenado extendido &#40;&#41;](srv-sendrow-extended-stored-procedure-api.md)   
+ [srv_setutype API de procedimiento almacenado extendido &#40;&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;API de procedimiento almacenado extendido&#41;](srv-setcoldata-extended-stored-procedure-api.md)  
   
   

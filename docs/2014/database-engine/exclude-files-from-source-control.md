@@ -1,5 +1,5 @@
 ---
-title: Excluir archivos de Control de código fuente | Microsoft Docs
+title: Excluir archivos del control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,28 +12,27 @@ helpviewer_keywords:
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fb3c5ccb4fcaad062236eec6d04f995557dc2b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933096"
 ---
 # <a name="exclude-files-from-source-control"></a>Excluir archivos desde el control de código fuente
-  Si la solución que está trabajando contiene archivos que no requieren servicios de control de código fuente, puede usar el **excluir del Control de código fuente** comando para excluir el archivo de control de código fuente. Al hacer esto, el archivo permanece en la base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, aunque ya no se protege ni desprotege con el proyecto.  
+  Si la solución en la que está trabajando contiene archivos que no requieren servicios de control de código fuente, puede usar el comando **excluir del control de código** fuente para excluir el archivo del control de código fuente. Al hacer esto, el archivo permanece en la base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, aunque ya no se protege ni desprotege con el proyecto.  
   
- Debe usar el **excluir del Control de código fuente** comando solo en los archivos generados. Un archivo generado es aquel que se puede volver a crear íntegramente [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] según el contenido de otro archivo en la solución.  
+ Debe usar el comando **excluir del control de código fuente** solo en los archivos generados. Un archivo generado es aquél que puede volver a crearse por completo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] según el contenido de otro archivo de la solución.  
   
 ### <a name="to-exclude-a-file-from-source-control"></a>Para excluir un archivo del control de código fuente  
   
 1.  En el Explorador de soluciones, seleccione el archivo que desea excluir.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **excluir**  *\<nombre de archivo >* **desde Control de código fuente**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y, a continuación, haga clic en **excluir** *\<file name>* **del control de código fuente**.  
   
-## <a name="see-also"></a>Vea también  
- [Fundamentos del Control de código fuente](../../2014/database-engine/source-control-basics.md)   
- [Establecer opciones de Control de código fuente](../../2014/database-engine/set-source-control-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Aspectos básicos del control de código fuente](../../2014/database-engine/source-control-basics.md)   
+ [Establecer opciones de control de código fuente](../../2014/database-engine/set-source-control-options.md)   
  [Cambiar las conexiones del control de código fuente](../../2014/database-engine/change-source-control-connections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.service_contract_message_usages (Transact-SQL) | Microsoft Docs
+title: Sys. service_contract_message_usages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_message_usages catalog view
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bca839c61a59c69a7f6cf7e659ad940864fcee37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6b388925ae325018307905188529d0b38a09be32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894940"
 ---
-# <a name="sysservicecontractmessageusages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysservice_contract_message_usages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta vista de catálogo contiene una fila por cada par (contrato, tipo de mensaje).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**service_contract_id**|**int**|Id. del contrato utilizado por el tipo de mensaje. No acepta valores NULL.|  
 |**message_type_id**|**int**|Id. del tipo de mensaje utilizado por el contrato. No acepta valores NULL.|  

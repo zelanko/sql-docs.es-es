@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5bdbff06c1dbda2f31aa8e456878649e8d7f9508
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130848"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775781"
 ---
 # <a name="sql-server-plan-cache-object"></a>Plan Cache (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **Plan Cache** proporciona contadores para supervisar la forma en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la memoria para almacenar objetos tales como procedimientos almacenados, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc y preparadas, y desencadenadores. Se pueden supervisar simultáneamente múltiples instancias del objeto **Plan Cache** ; cada instancia representa un tipo distinto de plan para supervisar.  
   
  En esta tabla se describen los contadores de **SQLServer:Plan Cache**.  
@@ -29,7 +29,7 @@ ms.locfileid: "68130848"
 |Contadores de Plan Cache de SQL Server|Descripción|  
 |------------------------------------|-----------------|  
 |**Frecuencia de aciertos de caché**|Proporción entre los aciertos de caché y las búsquedas.|  
-|**Base de frecuencia de aciertos de caché**|Exclusivamente para uso interno.| 
+|**Base de frecuencia de aciertos de caché**|Solo para uso interno.| 
 |**Recuentos de objetos de caché**|Número de objetos de caché que hay en la caché.|  
 |**Páginas de caché**|Número de páginas de 8 KB utilizadas por los objetos de caché.|  
 |**Objetos de caché en uso**|Número de objetos de caché que se están utilizando.|  

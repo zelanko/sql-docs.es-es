@@ -1,5 +1,5 @@
 ---
-title: Instrucciones y limitaciones de DiffGrams en SQLXML | Documentos de Microsoft
+title: Instrucciones y limitaciones de DiffGrams en SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: cf8689c4-2a63-4d05-b202-21b5ff187d7f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a1113bf11fcb3b1be2164bc6e685e6454323f3df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f2901f02f8b4a8fc7b77dcb6c1cb166cb6af6ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062944"
 ---
 # <a name="guidelines-and-limitations-of-diffgrams-in-sqlxml"></a>Instrucciones y limitaciones de DiffGrams en SQLXML
   Recuerde lo siguiente al usar DiffGrams con SQLXML 4.0:  

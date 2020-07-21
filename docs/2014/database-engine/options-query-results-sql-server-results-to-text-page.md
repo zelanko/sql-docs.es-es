@@ -1,5 +1,5 @@
 ---
-title: Opciones (consulta resultados de SQL Server-página resultados a texto) | Microsoft Docs
+title: 'Opciones (resultados de la consulta-SQL Server: resultados a la página de texto) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7d785a7b8c2ce424f2f88b23024b0d22f399149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930047"
 ---
-# <a name="options-query-results-sql-server-results-to-text-page"></a>Opciones (consulta resultados de SQL Server-página resultados a texto)
-  Utilice esta página para especificar las opciones para mostrar el conjunto de resultados de una consulta en formato de texto. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o haga clic con el botón derecho en la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Resultados**, haga clic en **Texto**.  
+# <a name="options-query-results-sql-server-results-to-text-page"></a>Opciones (resultados de la consulta-SQL Server-resultados a página de texto)
+  Utilice esta página para especificar las opciones para mostrar el conjunto de resultados de una consulta en formato de texto. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **consulta** o haga clic con el botón derecho en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ventana de consulta y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Resultados**, haga clic en **Texto**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Formato de salida**  
  De manera predeterminada, la salida se muestra en columnas que se han creado rellenando de espacios los resultados. Otras de las opciones son el uso de comas, tabulaciones o espacios para separar las columnas. Seleccione **Delimitador personalizado** en esta lista desplegable para especificar un carácter delimitador distinto en el cuadro de texto **Delimitador personalizado**.  
   

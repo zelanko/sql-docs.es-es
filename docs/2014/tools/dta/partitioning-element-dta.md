@@ -1,5 +1,5 @@
 ---
-title: Creación de particiones de elemento (DTA) | Microsoft Docs
+title: Partitioning (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bc5d1d5-27a7-4434-966f-c3935794af27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f49b514edbeac06d5a7af9008ba4209be2978d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62657240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040349"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning (DTA, elemento)
   Contiene el esquema de particiones que se desea que utilice el Asistente para la optimización de motor de base de datos durante el análisis.  
@@ -53,7 +52,7 @@ ms.locfileid: "62657240"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML simple &#40;DTA&#41;](simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Ingerir datos en un grupo de datos de SQL Server
 titleSuffix: SQL Server big data clusters
-description: En este tutorial se muestra cómo introducir datos en el grupo de datos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]de.
+description: En este tutorial, se muestra cómo ingerir datos en el grupo de datos de un clúster de macrodatos de SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: e7daf0dab9725320cf674db04cc2e306726810f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653311"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606468"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: ingerir datos en un grupo de datos de SQL Server con Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial se muestra cómo usar Transact-SQL para cargar datos en el [Grupo](concept-data-pool.md) de datos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]de. Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], los datos de una variedad de orígenes se pueden ingerir y distribuir entre instancias del grupo de datos.
+En este tutorial, se muestra cómo usar Transact-SQL para cargar datos en el [grupo de datos](concept-data-pool.md) de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], se pueden ingerir y distribuir datos de una amplia variedad de orígenes en varias instancias de grupos de datos.
 
 En este tutorial, aprenderá a:
 
@@ -32,12 +32,12 @@ En este tutorial, aprenderá a:
 > [!TIP]
 > Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [Ejemplos de grupos de datos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) en GitHub.
 
-## <a id="prereqs"></a> Requisitos previos
+## <a name="prerequisites"></a><a id="prereqs"></a> Requisitos previos
 
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Crear una tabla externa en el grupo de datos
@@ -48,7 +48,7 @@ En los pasos siguientes, crearemos una tabla externa en el grupo de datos llamad
 
 1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![Consultar una instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
 1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto de la base de datos **Ventas** de la instancia maestra.
 
@@ -77,8 +77,8 @@ En los pasos siguientes, crearemos una tabla externa en el grupo de datos llamad
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero aún no se puede determinar cuándo se ha completado. Espere dos minutos para asegurarse de que se haya creado el grupo de datos antes de continuar.
+
+La creación de la tabla externa del grupo de datos es una operación de bloqueo. El control se devuelve cuando se ha creado la tabla especificada en todos los nodos del grupo de datos de back-end. Si se produce un error durante la operación de creación, se devuelve un mensaje de error al autor de la llamada.
 
 ## <a name="load-data"></a>Cargar datos
 

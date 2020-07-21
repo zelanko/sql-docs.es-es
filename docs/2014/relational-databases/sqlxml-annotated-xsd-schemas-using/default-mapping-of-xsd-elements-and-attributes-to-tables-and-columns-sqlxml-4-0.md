@@ -1,5 +1,5 @@
 ---
-title: Asignación predeterminada de atributos y elementos XSD a tablas y columnas (SQLXML 4.0) | Microsoft Docs
+title: Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,24 +23,23 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 96df35ea1b8d87aa8718a29b51c07ab5a427efc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055154"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  
- Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Especificar la asignación predeterminada  
- En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla Person.Contact en la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) de la  **\<Person.Contact >** elemento son de tipo simple y se asignan de forma predeterminada a las columnas con los mismos nombres en la tabla Person.Contact.  
+ En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El **\<Person.Contact>** elemento es de tipo complejo y, por consiguiente, se asigna de forma predeterminada a la tabla person. contact de la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) del **\<Person.Contact>** elemento son de tipo simple y se asignan de forma predeterminada a columnas con los mismos nombres en la tabla person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -55,7 +54,7 @@ ms.locfileid: "66013881"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como MySchema.xml.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66013881"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados parciales:  
   
@@ -90,8 +89,8 @@ ms.locfileid: "66013881"
 </ROOT>  
 ```  
   
-### <a name="b-mapping-an-xml-element-to-a-database-column"></a>b. Asignar un elemento XML a una columna de base de datos  
- En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Person.Contact >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. Los elementos  **\<FirstName >** y  **\<LastName >** y **EmployeeID** atributo son de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y el ejemplo anterior es que los elementos se usan para asignar los campos de FirstName y LastName.  
+### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Asignar un elemento XML a una columna de base de datos  
+ En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El **\<Person.Contact>** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. Los elementos **\<FirstName>** y **\<LastName>** y el atributo **EmployeeID** son de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y el ejemplo anterior es que los elementos se usan para asignar los campos de FirstName y LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -108,7 +107,7 @@ ms.locfileid: "66013881"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como MySchemaElements.xml.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66013881"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados parciales:  
   
@@ -145,7 +144,7 @@ ms.locfileid: "66013881"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Asignar un elemento XML a una columna de tipo de datos XML  
- En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El  **\<Production.ProductModel >** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El **ProductModelID** atributo es de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y los ejemplos anteriores es que el  **\<instrucciones >** elemento se asigna a una columna que usa el `xml` el tipo de datos mediante el `xsd:anyType` tipo.  
+ En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El **\<Production.ProductModel>** elemento es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El atributo **ProductModelID** es de tipo simple y, por lo tanto, se asigna a las columnas con los mismos nombres. La única diferencia entre este y los ejemplos anteriores es que el **\<Instructions>** elemento se asigna a una columna que utiliza el `xml` tipo de datos mediante el `xsd:anyType` tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,7 +162,7 @@ ms.locfileid: "66013881"
   
  El tipo de datos `xml` se introdujo en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como MySchemaXmlAnyElements.xml.  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66013881"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados parciales:  
   
@@ -203,9 +202,9 @@ ctions">
 </ROOT>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Datos XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones sobre la seguridad del esquema anotado &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
+ [&#40;de datos XML SQL Server&#41;](../xml/xml-data-sql-server.md)   
  [Compatibilidad con tipos de datos xml en SQLXML 4.0](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

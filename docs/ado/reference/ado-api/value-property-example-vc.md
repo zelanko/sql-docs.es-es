@@ -1,5 +1,5 @@
 ---
-title: Valor de ejemplo de la propiedad (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad Value (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b124dc502df261972621b554cb2992d0e6014737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944463"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758641"
 ---
 # <a name="value-property-example-vc"></a>Ejemplo de la propiedad de valor (VC ++)
-Este ejemplo se muestra el [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad con [campo](../../../ado/reference/ado-api/field-object.md) y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos al mostrar los valores de propiedad y campo para el ***empleados*** tabla.  
+En este ejemplo se muestra la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) con objetos [Field](../../../ado/reference/ado-api/field-object.md) y [Property](../../../ado/reference/ado-api/property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  
   
 ```  
 // BeginValueCpp.cpp  
@@ -169,7 +169,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
+ [Property (objeto) (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value (propiedad) (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

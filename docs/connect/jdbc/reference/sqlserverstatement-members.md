@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72eededd01cd61d6845cc92bbdfbfd073668dd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: efc14978a306266432f0d4c2dc49f97f6a19dc0d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970354"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927009"
 ---
 # <a name="sqlserverstatement-members"></a>Miembros SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67970354"
 ## <a name="constructors"></a>Constructores  
  Ninguno.  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  
@@ -50,8 +50,8 @@ ms.locfileid: "67970354"
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|Recupera el objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) que generó este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|Recupera la dirección para capturar las filas de las tablas de base de datos que es el valor predeterminado para los conjuntos de resultados que se generaron a partir de este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|Recupera el número de filas del conjunto de resultados que sea el tamaño de captura predeterminado para los objetos del conjunto de resultados que generó este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
-|[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|Recupera cualquiera clave generada automáticamente que se cree como resultado de ejecutar este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
-|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|Recupera el número máximo de bytes que se pueden devolver para valores de columna de caracteres y binarios en un objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) que haya generado este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|Recupera cualquier clave generada automáticamente que se cree como resultado de ejecutar este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
+|[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|Recupera el número máximo de bytes que se pueden devolver para valores de columna de caracteres y binarios en un objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) que haya generado este objeto [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|Recupera el número máximo de filas que puede contener un objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) que haya generado este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|Se desplaza al próximo resultado de este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|Recupera el número de segundos que [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] esperará la ejecución de este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  

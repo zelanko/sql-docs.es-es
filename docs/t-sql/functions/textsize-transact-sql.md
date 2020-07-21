@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '@@TEXTSIZE function'
 - text size returned [SQL Server]
 ms.assetid: 4308a7b9-8e8f-49e9-8246-8224e32f4953
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b4389320436559504e6a9618565dad3198e91353
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 8a3fd16fc891f1996014e7deee016d696e7ff51c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714665"
 ---
 # <a name="x40x40textsize-transact-sql"></a>&#x40;&#x40;TEXTSIZE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el valor actual de la opción [TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68099024"
 @@TEXTSIZE  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **integer**  
   
 ## <a name="examples"></a>Ejemplos  

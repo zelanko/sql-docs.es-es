@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: de84d9fd01f49661dc099d166829d19e39559904
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682051"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función cifra los datos con una clave asimétrica.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
@@ -46,13 +46,13 @@ Id. de una clave asimétrica en la base de datos. *asym_key_ID* tiene un tipo de
 *cleartext*  
 Cadena de datos que `ENCRYPTBYASYMKEY` cifrará con la clave asimétrica. *cleartext* puede tener un tipo de
  
-+ **binario**
++ **binary**
 + **char**
 + **nchar**
 + **nvarchar**
 + **varbinary**
   
-o Administrador de configuración de
+or
   
 + **varchar**
  
@@ -61,22 +61,22 @@ datos.
 **\@plaintext**  
 Una variable que contiene un valor que `ENCRYPTBYASYMKEY` cifrará con la clave asimétrica. **\@plaintext** puede tener un
   
-+ **binario**
++ **binary**
 + **char**
 + **nchar**
 + **nvarchar**
 + **varbinary**
   
-o Administrador de configuración de
+or
   
 + **varchar**
  
 datos.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary**, con un tamaño máximo de 8 000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las operaciones de cifrado y descifrado en las que se usan claves asimétricas consumen muchos recursos y, por tanto, son muy costosas en comparación con el descifrado y cifrado de claves simétricas. Se recomienda que los desarrolladores eviten el cifrado y descifrado de claves asimétricas en grandes conjuntos de datos (por ejemplo, conjuntos de datos de usuario almacenados en tablas de base de datos). En su lugar, se recomienda que los desarrolladores cifren primero los datos con una clave simétrica segura y, después, cifren esa clave simétrica con una clave asimétrica.  
   
 En función del algoritmo, `ENCRYPTBYASYMKEY` devuelve **NULL** si la entrada supera un número determinado de bytes. Los límites específicos:

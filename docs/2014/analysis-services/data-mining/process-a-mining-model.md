@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd2506e835f634937d5bf135ed7eec7cfa259b5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aa0d177d7fc3da967c4143a71e0852928a6e81c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083098"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520821"
 ---
 # <a name="process-a-mining-model"></a>Procesar un modelo de minería de datos
   En la pestaña Modelos de minería de datos del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede procesar un modelo de minería de datos específico que esté asociado a una estructura de minería de datos, o bien, procesar todos los modelos que estén asociados con la estructura.  
@@ -28,7 +27,7 @@ ms.locfileid: "66083098"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
- También puede utilizar un comando XMLA Process. Para más información, vea [Herramientas y enfoques de procesamiento &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
+ También puede utilizar un comando XMLA Process. Para obtener más información, vea [herramientas y enfoques para procesar &#40;Analysis Services&#41;](../multidimensional-models/tools-and-approaches-for-processing-analysis-services.md).  
   
 ### <a name="process-a-single-mining-model-using-sql-server-data-tools"></a>Procesar un modelo de minería de datos mediante las Herramientas de datos de SQL Server  
   
@@ -38,13 +37,13 @@ ms.locfileid: "66083098"
   
      Si ha realizado cambios a la estructura de minería de datos, se le pedirá que vuelva a implementar la estructura antes de procesar el modelo. Haga clic en **Sí**.  
   
-3.  En el **procesando modelo de minería de datos - \<modelo >** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el cuadro de diálogo **procesando modelo de minería de \<model> datos** , haga clic en **Ejecutar**.  
   
      Se abre el cuadro de diálogo **Progreso del proceso** para mostrar información acerca del procesamiento del modelo.  
   
 4.  Una vez que haya finalizado el procesamiento del modelo correctamente, haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** .  
   
-5.  Haga clic en **cerrar** en el **procesando modelo de minería de datos - \<modelo >** cuadro de diálogo.  
+5.  Haga clic en **cerrar** en el cuadro de diálogo **procesando modelo de minería \<model> de datos** .  
   
  Solo se han procesado la estructura y el modelo de minería de datos seleccionado.  
   
@@ -54,17 +53,17 @@ ms.locfileid: "66083098"
   
 2.  Si ha realizado cambios a la estructura de minería de datos, se le pedirá que vuelva a implementar la estructura antes de procesar los modelos. Haga clic en **Sí**.  
   
-3.  En el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el cuadro de diálogo **procesando estructura de minería de \<structure> datos** , haga clic en **Ejecutar**.  
   
 4.  Se abre el cuadro de diálogo **Progreso del proceso** para mostrar información acerca del procesamiento del modelo.  
   
 5.  Una vez que haya finalizado el procesamiento de todos los modelos correctamente, haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** .  
   
-6.  Haga clic en **cerrar** en el **procesamiento \<modelo >** cuadro de diálogo.  
+6.  Haga clic en **cerrar** en el cuadro de diálogo de **procesamiento \<model> ** .  
   
  Se han procesado la estructura y todos los modelos de minería de datos asociados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)  
   
   

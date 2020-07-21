@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0c220523a431e8387601307709aa42bd9d4eeb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9cd224234c992184bce0e29e036e2e44aa0b6b4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732835"
 ---
 # <a name="date-and-time-types"></a>Tipos de fecha y hora
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los tipos de fecha y hora siguientes:
   
@@ -32,7 +32,7 @@ ms.locfileid: "68113757"
 [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
 [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

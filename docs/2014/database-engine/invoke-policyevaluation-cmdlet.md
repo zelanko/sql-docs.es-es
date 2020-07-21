@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 6153626439ca8a529dc4b763ba70922b059ec7a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797848"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931566"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
   **Invoke-PolicyEvaluation** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que notifica si un conjunto de destino de objetos de SQL Server cumple las condiciones especificadas en una o más directivas de administración basada en directivas.  
@@ -31,13 +30,13 @@ ms.locfileid: "72797848"
   
  El parámetro **-AdHocPolicyEvaluationMode** especifica las acciones realizadas:  
   
- Comprobación  
+ de Azure Functions  
  Informa del estado de cumplimiento de los objetos de destino mediante las credenciales del inicio de sesión actual. No configure ningún objeto. Esta es la configuración predeterminada.  
   
  CheckSqlScriptAsProxy  
  Informa del estado de cumplimiento de los objetos de destino mediante las credenciales del inicio de sesión de proxy **##MS_PolicyTSQLExecutionLogin##** . No configure ningún objeto.  
   
- Configurar  
+ Configuración  
  Informa del estado de cumplimiento de los objetos de destino mediante las credenciales del inicio de sesión actual. Vuelva a configurar cualquier opción que se pueda establecer y que sea determinista que no cumpla las directivas.  
   
 ## <a name="specifying-polices"></a>Especificar directivas  
@@ -136,5 +135,5 @@ sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"
 Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -OutputXML > C:\MyReports\DatabaseStatusReport.xml  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Usar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+## <a name="see-also"></a>Consulte también  
+ [Utilizar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

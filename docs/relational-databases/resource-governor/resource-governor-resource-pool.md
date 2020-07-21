@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0236841f3f3c6944d411fd18cb0222afb1802947
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729284"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   En el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un grupo de recursos de servidor representa un subconjunto de los recursos físicos de una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Cada grupo de recursos de servidor puede contener uno o más grupos de cargas de trabajo. Cuando se inicia una sesión, el clasificador del regulador de recursos asigna la sesión a un grupo de cargas de trabajo concreto y la sesión se debe ejecutar utilizando los recursos asignados al grupo de cargas de trabajo.  
   
@@ -57,7 +57,7 @@ En la tabla siguiente se muestran algunos de los conceptos anteriores. La tabla 
 |Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interno|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
-|predeterminados|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
+|default|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
 |Grupo 1|20|100|50|30|El valor MAX efectivo se calcula como: min(100,100-50) = 50. El % compartido calculado es el MAX efectivo - MIN = 30.|  
 |Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-20) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
 
@@ -78,7 +78,7 @@ Si tomamos la tabla anterior como ejemplo, podemos mostrar más detalladamente l
 |Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interno|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
-|predeterminados|0|100|25|25|El valor MAX efectivo se calcula como: min(100,100-(20+50+5)) = 25. El % compartido calculado es el MAX efectivo - MIN = 25.|  
+|default|0|100|25|25|El valor MAX efectivo se calcula como: min(100,100-(20+50+5)) = 25. El % compartido calculado es el MAX efectivo - MIN = 25.|  
 |Grupo 1|20|100|45|25|El valor MAX efectivo se calcula como: min (100,100-55) = 45. El % compartido calculado es el MAX efectivo - MIN = 25.|  
 |Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-25) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
 |Grupo 3|5|100|30|25|El valor MAX efectivo se calcula como: min(100,100-70) = 30. El % compartido calculado es el MAX efectivo - MIN = 25.|  

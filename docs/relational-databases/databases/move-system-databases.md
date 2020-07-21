@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763215"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo mover bases de datos del sistema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bases de datos del sistema puede resultar útil en las situaciones siguientes:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68100461"
   
  Los siguientes procedimientos se aplican para mover archivos de base de datos dentro de una misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, use la operación [copia de seguridad y restauración](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) .  
 
- Los procedimientos descritos en este tema requieren el nombre lógico de los archivos de la base de datos. Para obtener el nombre, consulte la columna de nombre de la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md).  
+ Los procedimientos descritos en este tema requieren el nombre lógico de los archivos de la base de datos. Para obtener el nombre, consulte la columna de nombre de la vista de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  Si se mueve una base de datos del sistema y posteriormente se vuelve a generar la base de datos maestra, se debe mover de nuevo la base de datos del sistema porque la operación de regeneración instala todas las bases de datos del sistema en su ubicación predeterminada.  
@@ -56,7 +56,7 @@ ms.locfileid: "68100461"
 >  Después de mover los archivos, la cuenta del servicio de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] debe tener permiso de acceso a los archivos en la nueva ubicación de la carpeta de archivos.
     
   
-##  <a name="Planned"></a> Procedimiento de reubicación planeada y mantenimiento de disco programado  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Procedimiento de reubicación planeada y mantenimiento de disco programado  
  Para mover un archivo de registro o datos de bases de datos del sistema como parte de una operación de reubicación planeada o de mantenimiento programado, siga estos pasos. Este procedimiento se aplica a todas las bases de datos del sistema, excepto las bases de datos maestras y Resource.  
   
 1.  Para cada archivo que se va a mover, ejecute la siguiente instrucción.  
@@ -93,7 +93,7 @@ ms.locfileid: "68100461"
   
 2.  Envíe un mensaje de correo electrónico para comprobar que el Correo electrónico de base de datos funciona.  
   
-##  <a name="Failure"></a> Procedimiento de recuperación de errores  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> Procedimiento de recuperación de errores  
  Si se debe mover un archivo a causa de un error de hardware, siga los pasos que se indican a continuación para colocar el archivo en otra ubicación. Este procedimiento se aplica a todas las bases de datos del sistema, excepto las bases de datos maestras y Resource.  
   
 > [!IMPORTANT]  
@@ -141,7 +141,7 @@ ms.locfileid: "68100461"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a> Mover la base de datos maestra  
+##  <a name="moving-the-master-database"></a><a name="master"></a> Mover la base de datos maestra  
  Para mover la base de datos maestra, siga estos pasos.  
   
 1.  Desde el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server 2005**, **Herramientas de configuración**y, finalmente, haga clic en **Administrador de configuración de SQL Server**.  
@@ -188,10 +188,10 @@ ms.locfileid: "68100461"
 10. En este punto, SQL Server se debería ejecutar con normalidad. Sin embargo, Microsoft también recomienda ajustar la entrada del Registro en `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`, donde *instance_ID* es similar a `MSSQL13.MSSQLSERVER`. En ese subárbol, cambie el valor de `SQLDataRoot` a la ruta de acceso nuevo. Si no actualiza el Registro, puede que la aplicación de revisiones y las actualizaciones presenten errores.
 
   
-##  <a name="Resource"></a> Mover la base de datos Resource  
- La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Mover la base de datos Resource  
+ La ubicación de la base de datos Resource es \<*drive*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. No se puede mover la base de datos.  
   
-##  <a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
   
 -   Cambie la ruta de acceso del registro del Agente SQL Server. Si no actualiza esta ruta de acceso, el Agente SQL Server no se podrá iniciar.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100461"
   
 2.  Haga clic con el botón derecho en **Registros de errores** y haga clic en **Configurar**.  
   
-3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.<nombreDeInstancia>\MSSQL\Log\\.  
+3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de programa\Microsoft SQL Server\MSSQL\<version>.<nombre_instancia>\MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Cambiar la ubicación predeterminada de la base de datos  
   
@@ -216,7 +216,7 @@ ms.locfileid: "68100461"
   
 4.  Detenga e inicie el servicio SQL Server para completar el cambio.  
   
-##  <a name="Examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. Mover la base de datos tempdb  
  En el ejemplo siguiente se mueven los archivos de datos y registro de `tempdb` a una nueva ubicación como parte de una reubicación planeada.  

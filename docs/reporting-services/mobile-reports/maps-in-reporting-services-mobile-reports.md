@@ -1,5 +1,6 @@
 ---
 title: Mapas en informes para dispositivos móviles de Reporting Services | Microsoft Docs
+description: Publicador de informes móviles de Microsoft SQL Server ofrece tres tipos de visualización de mapa, así como mapas integrados para continentes y diversos países individuales.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 6b7635b0af96f0009ef6220fc8360a1373d2f998
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62683687"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448437"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Mapas en informes para dispositivos móviles de Reporting Services
 Los mapas constituyen una forma excelente de visualizar datos geográficos. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] ofrece tres tipos distintos de visualización en mapas, así como mapas integrados para continentes y diversos países individuales. También puede [cargar y usar mapas personalizados](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -58,7 +59,7 @@ Para mostrar los datos reales en el mapa, debe establecer los valores de, como m
   
 2. Seleccione **Agregar datos**y, después, **Local Excel** (Excel local) o **SSRS Server**(Servidor de SSRS).  
   
-   > **Sugerencia**: asegúrese de que [los datos están en un formato apto para informes para dispositivos móviles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > **Sugerencia**: Asegúrese de que [los datos están en un formato apto para informes para dispositivos móviles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Elija las hojas de cálculo que desee y seleccione **Importar**.  
    Verá los datos en el [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  
@@ -77,8 +78,8 @@ Para mostrar los datos reales en el mapa, debe establecer los valores de, como m
      
 8. Seleccione el icono de **Guardar** , situado en la esquina superior izquierda, y elija entre **guardar el mapa localmente** en su equipo o **guardarlo en el servidor**.  
   
-### <a name="see-also"></a>Vea también  
--  [Mapas personalizados en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>Consulte también  
+-  [Mapas personalizados en informes móviles de Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

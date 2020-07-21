@@ -1,5 +1,6 @@
 ---
-title: Novedades de Master Data Services (MDS) | Microsoft Docs
+title: Novedades
+description: Obtenga información sobre los cambios, las mejoras y las actualizaciones en la versión SQL Server 2019 de Master Data Services.
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813929"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Este tema resume los cambios y actualizaciones en la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -31,9 +32,9 @@ ms.locfileid: "68810503"
   
 -   Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
   
--   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.  
+-   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.  
   
-##  <a name="improved-performance"></a>Rendimiento mejorado  
+##  <a name="improved-performance"></a>Mejorar el rendimiento  
   
  Las mejoras de rendimiento permiten crear modelos más grandes, cargar datos de manera más eficaz y obtener un mejor rendimiento general. Esto incluye la mejora del rendimiento del complemento para Microsoft Excel, que se ha optimizado para reducir los tiempos de carga de datos y habilitar el complemento para administrar entidades mayores.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "68810503"
   
  Ahora es posible asignar explícitamente a un usuario el permiso de administrador en el nivel de modelo. Esto significa que si más adelante se le asignan permisos al usuario en el subárbol del modelo, como el nivel de entidad, no perderá el permiso de administrador.  
   
- En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: Leer, Crear, Actualizar y Eliminar. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
+ En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: lectura, creación, actualización y eliminación. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
   
  Cuando se actualiza a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los permisos anteriores se convierten en permisos nuevos, tal como se muestra en la tabla siguiente.  
   
@@ -87,7 +88,7 @@ ms.locfileid: "68810503"
 |El usuario que instala originalmente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tiene el permiso de administrador del servidor.|El usuario tiene el permiso de función de superusuario.|  
 |El usuario tiene permisos de actualización en el nivel de modelo y ningún permiso en el subárbol de modelo, por lo que implícitamente es administrador del modelo.|El usuario tiene permisos explícitos de administrador en el nivel de modelo.|  
 |El usuario tiene permisos de solo lectura.|El usuario tiene permisos de acceso de lectura.|  
-|El usuario tiene permisos de actualización.|El usuario tiene los cuatro permisos de acceso: Crear, Actualizar, Eliminar y Leer.|  
+|El usuario tiene permisos de actualización.|El usuario tiene los cuatro permisos de acceso: creación, actualización, eliminación y lectura.|  
 |El usuario tiene permisos de denegación.|El usuario tiene permisos de denegación.|  
   
  Para más información sobre los permisos, consulte [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -122,7 +123,7 @@ ms.locfileid: "68810503"
   
 -   Cambio del nombre y ocultación de los atributos Name y Code.  
   
- Para obtener más información, vea los siguientes temas.  
+ Para obtener más información, vea los temas siguientes:  
   
 -   [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
@@ -137,7 +138,7 @@ ms.locfileid: "68810503"
   
  En el complemento Master Data Services para Excel puede administrar reglas de negocios, como la creación y la edición de reglas de negocios. Las reglas de negocios se usan para validar los datos.  
  
- **Extensión de reglas de negocios**  
+ **Business Rules Extension**  
   
  Puede aplicar scripts SQL definidos por el usuario como una extensión de las acciones y las condiciones de las reglas de negocios. Las funciones SQL pueden usarse como una condición. Los procedimientos almacenados SQL pueden usarse como una acción. Para más información, consulte [Ejecución de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md). 
  
@@ -165,7 +166,7 @@ ms.locfileid: "68810503"
  
  **Edición de relaciones varios a varios en las jerarquías derivadas**  
   
- Puede editar la relación varios a varios mediante la modificación de los miembros de la entidad de asignación. Para más información, consulte [Visualización de relaciones varios a varios en jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
+ Puede editar la relación varios a varios mediante la modificación de los miembros de la entidad de asignación. Para obtener más información, vea [Mostrar relaciones varios a varios en jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md).  
  
  **Mejora en la experiencia de administración de la jerarquía derivada**  
   
@@ -205,7 +206,7 @@ ms.locfileid: "68810503"
   
  **Conjuntos de cambios**  
   
- Puede usar conjuntos de cambios para guardar los cambios pendientes en una entidad. Además, puede ver y modificar los cambios pendientes. Si la entidad requiere la aprobación de los cambios, debe guardar los cambios pendientes en un conjunto de cambios y enviarlo para recibir la aprobación del administrador. Para más información, consulte [Conjuntos de cambios &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
+ Puede usar conjuntos de cambios para guardar los cambios pendientes en una entidad. Además, puede ver y modificar los cambios pendientes. Si la entidad requiere la aprobación de los cambios, debe guardar los cambios pendientes en un conjunto de cambios y enviarlo para recibir la aprobación del administrador. Para obtener más información, vea [conjuntos de cambios &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md).  
   
  **Correo electrónico y administración del conjunto de cambios**  
   
@@ -225,13 +226,13 @@ ms.locfileid: "68810503"
    
  **Actualización de los paquetes de implementación de modelos de ejemplo**  
   
- Los paquetes de ejemplo se han actualizado para admitir nuevos escenarios. Para más información, vea [Ejemplos de SQL Server: Paquetes de implementación de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Los paquetes de ejemplo se han actualizado para admitir nuevos escenarios. Para más información, consulte [Ejemplos de SQL Server: paquetes de implementación de modelos (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características de Master Data Services y Data Quality Services compatibles con las ediciones de SQL Server 2016](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Características en desuso de Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
  [Características descontinuadas de Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

@@ -1,5 +1,6 @@
 ---
 title: Iniciar SQL Server con la configuración mínima | Microsoft Docs
+description: Familiarícese con la opción de inicio con la configuración mínima en SQL Server. Vea cuándo y cómo usarlo y obtenga información sobre cómo limita la funcionalidad.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - minimal configuration [SQL Server]
 - starting SQL Server, minimal configuration
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763999"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>Iniciar SQL Server con la configuración mínima
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Si tiene problemas de configuración que impiden el inicio del servidor, puede iniciar una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la opción de inicio con configuración mínima. Esta es la opción de inicio **-f**. Al iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configuración mínima, el servidor utilizará automáticamente el modo de usuario único.  
+  Si tiene problemas de configuración que evitan el inicio del servidor, puede iniciar una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la opción de inicio con configuración mínima. Esta es la opción de inicio **-f**. Al iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la configuración mínima, el servidor utilizará automáticamente el modo de usuario único.  
   
  Tenga en cuenta los siguientes aspectos cuando inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de configuración mínima:  
   
@@ -34,6 +35,8 @@ ms.locfileid: "68037147"
 -   No se ejecutan los procedimientos almacenados de inicio.  
 
 -   `tempdb` se configura con el tamaño más pequeño posible.
+
+-   La auditoría se deshabilitará pero todavía se puede emitir la auditoría de DDL. En la práctica, **-m** debe ser suficiente para la mayoría de los casos que requieran la reconfiguración de la auditoría de SQL Server. Para obtener más información sobre la seguridad en la configuración de auditoría, vea [Auditoría en SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  Después de iniciar el servidor con la configuración mínima, debe modificar los valores que haga falta del servidor, detenerlo y después reiniciarlo.  
   

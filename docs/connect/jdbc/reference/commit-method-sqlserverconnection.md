@@ -1,5 +1,5 @@
 ---
-title: Método Commit (SQLServerConnection) | Microsoft Docs
+title: Método commit (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c7346165-51bf-4844-b64c-29833c147236
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7561a77d91ca7de4aafd9a5d7aab2c9a4b312124
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 50afbfa25052e0f602c486d011ce666a599372e0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955563"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923588"
 ---
 # <a name="commit-method-sqlserverconnection"></a>Método commit (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void commit()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método commit especifica este método commit en la interfaz java.sql.Connection.  
   
  Este método se debería utilizar solamente cuando el modo de confirmación automática esté deshabilitado.  

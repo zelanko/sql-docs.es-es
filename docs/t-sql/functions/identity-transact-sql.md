@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 912e4485-683c-41c2-97b3-8831c0289ee4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06421410c6cb0f6d80b9f8e67446a17d4e84864d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4527cd9f5684bab46866fcdd9ea37b2da027b23d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631385"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Se trata de una función del sistema que devuelve el último valor de identidad insertado.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "68024361"
 @@IDENTITY  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se completa una instrucción INSERT, SELECT INTO o de copia masiva, @@IDENTITY contiene el último valor de identidad generado por la instrucción. Si la instrucción no afectó a ninguna tabla con columnas de identidad, @@IDENTITY devuelve NULL. Si se insertan varias filas, lo que genera varios valores de identidad, @@IDENTITY devuelve el último valor de identidad generado. Si la instrucción activa uno o más desencadenadores que realizan inserciones que, a su vez, generan valores de identidad, al llamar a @@IDENTITY inmediatamente después de la instrucción se obtiene el último valor de identidad generado por los desencadenadores. Si un desencadenador se activa tras una acción de inserción en una tabla que tiene una columna de identidad y se inserta en otra tabla que no tiene una columna de identidad, @@IDENTITY devuelve el valor de identidad de la primera inserción. Si se produce un error en la instrucción INSERT o SELECT INTO o en la copia masiva o se revierte la transacción, el valor de @@IDENTITY no revierte a un valor anterior.  
   
  Las instrucciones y transacciones con errores pueden cambiar la identidad actual de una tabla y crear huecos en los valores de columna de identidad. El valor de identidad jamás se revierte, aun cuando no se haya confirmado la transacción que intentó insertar el valor en la tabla. Por ejemplo, si se produce un error en una instrucción INSERT debido a una infracción de tipo IGNORE_DUP_KEY, el valor de identidad actual de la tabla se sigue incrementando.  
@@ -80,7 +80,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Configurar una ejecución de prueba unitaria de SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Configuración de una ejecución de prueba unitaria de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d01703ff133fb8bac0425fc283190042d8dfcd1f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911846"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241565"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedimientos: Configuración de una ejecución de prueba unitaria de SQL Server
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Cómo: Configurar una ejecución de prueba unitaria de SQL Server
+
 Al configurar el proyecto de prueba, puede especificar varios valores que controlan aspectos de la ejecución de las pruebas unitarias de SQL Server. Esta configuración se almacena en el archivo app.config del proyecto de prueba. Si edita este archivo directamente, los nuevos valores aparecerán en el cuadro de diálogo de configuración de prueba.  
   
 La solución puede contener varios proyectos de prueba. Cada proyecto de prueba contiene un archivo app.config (es decir, un conjunto de valores de configuración). Como resultado, la solución puede contener diferentes conjuntos de pruebas unitarias (un conjunto para cada proyecto de prueba) que están configurados para ejecutarse de forma diferente.  
@@ -31,7 +32,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
     > [!NOTE]  
     > Las pruebas no se ejecutan en la carpeta de la solución, sino en una carpeta independiente en el disco duro local. Aunque se pueden configurar algunos aspectos de la implementación de prueba, normalmente no es necesario configurarlos para las pruebas unitarias. Para más información acerca de la implementación de prueba, consulte [Ejecutar pruebas](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
   
-## <a name="SpecifyConnectionStrings"></a>Especificar cadenas de conexión  
+## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Especificar cadenas de conexión  
   
 #### <a name="to-specify-database-connection-strings"></a>Para especificar las cadenas de conexión a la base de datos  
   
@@ -53,7 +54,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
   
 4.  Recompile el proyecto de prueba para aplicar los cambios de configuración.  
   
-## <a name="DeployingDBSchema"></a>Implementar un esquema de la base de datos  
+## <a name="deploy-a-database-schema"></a><a name="DeployingDBSchema"></a>Implementar un esquema de la base de datos  
   
 #### <a name="to-deploy-to-a-database-the-schema-of-a-database-project"></a>Para implementar en una base de datos el esquema de un proyecto de base de datos  
   

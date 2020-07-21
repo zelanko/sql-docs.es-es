@@ -11,17 +11,16 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSDEST.F1
 ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 author: yualan
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ebf686807169bb850e5a3ae8fac8cfb0b8ca7791
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.author: chugu
+ms.openlocfilehash: 14248d14b6a944250c33a19c8cf83ab0e0330587
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061458"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439422"
 ---
 # <a name="azure-data-lake-store-destination"></a>Destino de Azure Data Lake Store
-  El componente **Destino de Azure Data Lake Store** permite que un paquete SSIS escriba datos en un Azure Data Lake Store. Los formatos de archivo compatibles son los siguientes: texto, Avro y ORC. 
+  El componente **Destino de Azure Data Lake Store** permite que un paquete SSIS escriba datos en un Azure Data Lake Store. Los formatos de archivo admitidos son: Text, Avro y ORC. 
   
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Configurar Destino de Azure Data Lake Store 
 
@@ -33,7 +32,7 @@ ms.locfileid: "66061458"
   
     2.  En el campo **Formato de archivo** , especifique el formato que quiere utilizar.  
   
-        Si el formato de archivo es Text, debe especificar el valor **Carácter de delimitador de columna** . Seleccione también **Nombres de columna de la primera fila de datos** si la primera fila del archivo contiene nombres de columna.  
+        Si el formato de archivo es texto, debe especificar el valor del **carácter delimitador de columna** . Seleccione también **nombres de columna en la primera fila de datos** si la primera fila del archivo contiene nombres de columna.  
 
         Si el formato de archivo es ORC, debe instalar JRE de la plataforma correspondiente. 
   

@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742970"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279514"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones RESTORE: HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68742970"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 RESTORE HEADERONLY   
 FROM <backup_device>   
@@ -91,15 +91,15 @@ FROM <backup_device>
 > [!NOTE]
 >  Debido a la naturaleza del formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)], es posible que los conjuntos de copia de seguridad de otros programas de software ocupen espacio en los mismos medios que los conjuntos de copia de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El conjunto de resultados que devuelve RESTORE HEADERONLY contiene una fila por cada uno de estos otros conjuntos de copia de seguridad.  
   
-|Nombre de columna|Tipo de datos|Descripción de los conjuntos de copia de seguridad de SQL Server|  
+|Nombre de la columna|Tipo de datos|Descripción de los conjuntos de copia de seguridad de SQL Server|  
 |-----------------|---------------|--------------------------------------------|  
 |**BackupName**|**nvarchar(128)**|Nombre del conjunto de copia de seguridad.|  
 |**BackupDescription**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad.|  
 |**BackupType**|**smallint**|Tipo de copia de seguridad:<br /><br /> **1** = Base de datos<br /><br /> **2** = Registro de transacciones<br /><br /> **4** = Archivo<br /><br /> **5** = Base de datos diferencial<br /><br /> **6** = Archivo diferencial<br /><br /> **7** = Parcial<br /><br /> **8** = Parcial diferencial|  
 |**ExpirationDate**|**datetime**|Fecha de expiración del conjunto de copia de seguridad.|  
-|**Compressed**|**BYTE(1)**|Si el conjunto de copia de seguridad se comprime con el sistema de compresión por software:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
+|**Compressed**|**BIT(1)**|Si el conjunto de copia de seguridad se comprime con el sistema de compresión por software:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**Posición**|**smallint**|Posición del conjunto de copia de seguridad en el volumen (para utilizarlo con la opción FILE =).|  
-|**DeviceType**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Cinta:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> Los nombres de dispositivos lógicos y los números de dispositivo se encuentran en **sys.backup_devices**; para más información, vea [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Número correspondiente al dispositivo utilizado para la operación de copia de seguridad.<br /><br /> Disco:<br /><br /> **2** = Lógico<br /><br /> **102** = Físico<br /><br /> Cinta:<br /><br /> **5** = Lógico<br /><br /> **105** = Físico<br /><br /> Dispositivo virtual:<br /><br /> **7** = Lógico<br /><br /> **107** = Físico<br /><br /> URL<br /><br /> **9** = Lógico<br /><br /> **109** = Físico<br /><br />  Los nombres de dispositivos lógicos y los números de dispositivo se encuentran en **sys.backup_devices**; para más información, vea [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Nombre del usuario que ha ejecutado la operación de copia de seguridad.|  
 |**ServerName**|**nvarchar(128)**|Nombre del servidor que escribió el conjunto de copia de seguridad.|  
 |**DatabaseName**|**nvarchar(128)**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo de copia de seguridad como cadena, uno de los siguientes valores:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Número de identificación único del conjunto de copia de seguridad mediante el cual se identifica en los medios.|  
 |**CompressedBackupSize**|**bigint**|Recuento de bytes del conjunto de copia de seguridad. Para las copias de seguridad sin comprimir, este valor es igual que **BackupSize**.<br /><br /> Para calcular la razón de compresión, use **CompressedBackupSize** y **BackupSize**.<br /><br /> Durante una actualización de **msdb**, se establece este valor para que coincida con el valor de la columna **BackupSize**.|  
-|**containment**|**tinyint** not NULL|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
+|**containment**|**tinyint** not NULL|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Algoritmo de cifrado usado para cifrar la copia de seguridad. NO_Encryption indica que no se cifró la copia de seguridad. Cuando no se puede determinar el valor correcto, el valor debe ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> La huella digital del sistema de cifrado que se puede utilizar para encontrar el certificado o la clave asimétrica en la base de datos. Si la copia de seguridad no se cifró, este valor es NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  
@@ -157,7 +157,7 @@ FROM <backup_device>
  Un cliente puede utilizar RESTORE HEADERONLY para obtener toda la información de encabezado de todas las copias de seguridad de un dispositivo determinado. Para cada copia de seguridad del dispositivo de copia de seguridad, el servidor envía la información del encabezado como una fila.  
   
 ## <a name="security"></a>Seguridad  
- La operación de copia de seguridad puede especificar opcionalmente contraseñas para un conjunto de medios, para un conjunto de copia de seguridad o para ambos. Si se ha definido una contraseña en un conjunto de medios o un conjunto de copia de seguridad, debe especificar la contraseña o contraseñas correctas en la instrucción RESTORE. Estas contraseñas impiden operaciones de restauración y anexiones no autorizadas de los conjuntos de copia de seguridad en medios que usan herramientas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, la contraseña no impide que se sobrescriba el medio con la opción FORMAT de la instrucción BACKUP.  
+ La operación de copia de seguridad puede especificar opcionalmente contraseñas para un conjunto de medios, para un conjunto de copia de seguridad o para ambos. Si se ha definido una contraseña en un conjunto de medios o un conjunto de copia de seguridad, debe especificar la contraseña o contraseñas correctas en la instrucción RESTORE. Estas contraseñas impiden operaciones de restauración y anexiones no autorizadas de los conjuntos de copia de seguridad en medios que utilizan herramientas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, la contraseña no impide que se sobrescriba el medio con la opción FORMAT de la instrucción BACKUP.  
   
 > [!IMPORTANT]  
 >  El nivel de protección que proporciona esta contraseña es bajo. El objetivo es impedir una restauración incorrecta con las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea por parte de usuarios autorizados o no autorizados. No impide la lectura de los datos de las copias de seguridad por otros medios o el reemplazo de la contraseña. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]El procedimiento recomendado para proteger las copias de seguridad consiste en almacenar las cintas de copia de seguridad en una ubicación segura o en hacer una copia de seguridad en archivos de disco protegidos con las listas de control de acceso (ACL) adecuadas. Las ACL se deben establecer en el directorio raíz en el que se crean las copias de seguridad.  
@@ -170,8 +170,7 @@ FROM <backup_device>
   
 ```  
 RESTORE HEADERONLY   
-FROM DISK = N'C:\AdventureWorks-FullBackup.bak'   
-WITH NOUNLOAD;  
+FROM DISK = N'C:\AdventureWorks-FullBackup.bak';  
 GO  
 ```  
   

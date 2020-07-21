@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 44537263a785ed32a9618f352cdd402d412dc3b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097197"
 ---
-# <a name="msreportserverinstance-members"></a>Miembros de MSReportServer_Instance
+# <a name="msreportserver_instance-members"></a>Miembros de MSReportServer_Instance
   La clase MSReportServer_Instance proporciona la información básica necesaria para que un cliente se conecte a un servidor de informes instalado.  
   
 ## <a name="public-properties"></a>Propiedades públicas  

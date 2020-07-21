@@ -1,6 +1,6 @@
 ---
-title: Subexpresión común se explica en Analytics Platform System | Microsoft Docs
-description: Muestra la mejora de la consulta de ejemplo que se introdujo en Analytics Platform System CU7.3
+title: Subexpresión común
+description: Muestra la mejora de consultas de ejemplo que se presentó en Analytics Platform System CU 7.3.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,17 +8,18 @@ ms.topic: conceptual
 ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961314"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401333"
 ---
-# <a name="common-subexpression-elimination-explained"></a>Eliminación de subexpresiones comunes explicado
+# <a name="common-subexpression-elimination-explained"></a>Explicación de la eliminación de subexpresiones comunes
 
-APS CU7.3 mejora el rendimiento de consultas con la eliminación de subexpresiones comunes en el optimizador de consultas SQL. La mejora de la mejora de las consultas de dos maneras. La primera ventaja es la capacidad de identificar y eliminar, las expresiones ayudan a reducir el tiempo de compilación de SQL. La ventaja de segundo y lo más importante es las operaciones de movimiento de datos para estas subexpresiones redundantes se eliminan, por tanto, el tiempo de ejecución para las consultas se convierte en más rápido.
+APS CU 7.3 mejora el rendimiento de las consultas con una eliminación común de subexpresiones en el optimizador de consultas de SQL. La mejora mejora las consultas de dos maneras. La primera ventaja es que la capacidad de identificar y eliminar estas expresiones ayuda a reducir el tiempo de compilación de SQL. La segunda ventaja y más importante son las operaciones de movimiento de datos para estas subexpresiones redundantes que se eliminan, por lo que el tiempo de ejecución de las consultas es más rápido.
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -54,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-Considere la posibilidad de la consulta anterior de las herramientas de prueba comparativa de TPC-DS.  En la consulta anterior, la subconsulta es lo mismo pero se ordena la cláusula order by con rank() a través de la función de dos maneras diferentes. Anteriores a CU7.3, obtendrá evalúa y ejecuta de dos veces, una vez por orden ascendente y orden descendente, una vez que incurrir en dos de las operaciones de movimiento de datos Esta subconsulta. Después de instalar CU7.3 APS, se evaluará la parte de la subconsulta una vez, por tanto, reducir el movimiento de datos y finalizar la consulta más rápida.
+Considere la consulta anterior de las herramientas de pruebas comparativas TPC-DS.  En la consulta anterior, la subconsulta es la misma, pero la cláusula order by con la función Rank () sobre se ordena de dos maneras diferentes. Anterior a CU 7.3, esta subconsulta se evaluará y se ejecutará dos veces, una para el orden ascendente y otra para el orden descendente, incurriendo en dos operaciones de movimiento de datos. Después de instalar APS CU 7.3, la parte de la subconsulta se evaluará una vez, lo que reduce el movimiento de datos y finaliza la consulta más rápidamente.
 
-Hemos introducido una [modificador de característica](appliance-feature-switch.md) llamado 'OptimizeCommonSubExpressions', que le permitirá probar la característica incluso después de actualizar a CU7.3 APS. La característica está activada de forma predeterminada, pero se puede desactivar. 
+Hemos introducido un [modificador de características](appliance-feature-switch.md) denominado ' OptimizeCommonSubExpressions ' que le permitirá probar la característica incluso después de actualizar a APS cu 7.3. La característica está activada de forma predeterminada, pero se puede desactivar. 
 
 > [!NOTE] 
-> Los cambios en los valores de conmutador de característica requieren un reinicio del servicio.
+> Los cambios en los valores del modificador de características requieren un reinicio del servicio.
 
-Puede probar la consulta de ejemplo mediante la creación de las tablas siguientes en el entorno de prueba y evaluar el plan explain para la consulta mencionado anteriormente. 
+Puede probar la consulta de ejemplo creando las tablas siguientes en el entorno de prueba y evaluando el plan de explicación de la consulta mencionada anteriormente. 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -117,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-Si nos fijamos en el plan explain de la consulta, verá antes CU7.3 (o cuando el modificador de la característica está desactivada) la consulta tiene 17 número total de operaciones y después CU7.3 (o con el modificador de característica activada) 9 el número total de operaciones de muestra de la misma consulta. Si solo se cuentan las operaciones de movimiento de datos, verá que el plan anterior tiene cuatro operaciones de movimiento frente a dos de las operaciones de movimiento en el nuevo plan. El optimizador de consultas nuevo pudo reducir dos operaciones de movimiento de datos mediante la reutilización de la tabla temporal ya ha creado con el nuevo plan, lo que reduce el tiempo de ejecución de consulta. 
+Si echa un vistazo al plan explicado de la consulta, verá que antes de la CU 7.3 (o cuando el modificador de características está desactivado), la consulta tiene 17 número total de operaciones y después de CU 7.3 (o con el modificador de características activado) la misma consulta muestra 9 número total de operaciones. Si solo cuenta las operaciones de movimiento de datos, verá que el plan anterior tiene cuatro operaciones de movimiento frente a dos operaciones de movimiento en el nuevo plan. El nuevo optimizador de consultas pudo reducir dos operaciones de movimiento de datos mediante la reutilización de la tabla temporal que ya se creó con el nuevo plan, lo que reduce el tiempo de ejecución de la consulta. 
 
 

@@ -14,10 +14,10 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503087"
 ---
 # <a name="feature-reference-reporting-services"></a>Referencia de características (Reporting Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65503087"
  [Temas de Ayuda del Administrador de configuración de Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  Proporciona ayuda para la herramienta de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se usa para implementar y administrar las instancias del servidor de informes.  
   
- [Servidor de informes en Management Studio ayuda F1](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio (Ayuda F1)](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Proporciona ayuda para los cuadros de diálogo que se usan para administrar informes y servidores de informes en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
  [Visor HTML y la barra de herramientas del informe](../reporting-services/html-viewer-and-the-report-toolbar.md)  

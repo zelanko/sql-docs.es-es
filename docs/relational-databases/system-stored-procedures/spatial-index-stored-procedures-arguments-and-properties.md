@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626589"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procedimientos almacenados de índice espacial: argumentos y propiedades
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se documentan los argumentos y propiedades de los procedimientos almacenados de índice espacial.  
   
@@ -31,13 +31,13 @@ ms.locfileid: "69028906"
 ## <a name="syntax"></a>Sintaxis  
  Para obtener la sintaxis específica de los procedimientos almacenados de índice espacial, consulte los temas siguientes:  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumentos  
 `[ @tabname = ] 'tabname'`Es el nombre completo o no completo de la tabla para la que se ha especificado el índice espacial.  
@@ -59,22 +59,22 @@ ms.locfileid: "69028906"
 `[ @xml_output = ] 'xml_output'`Es un parámetro de salida que devuelve el conjunto de resultados de un fragmento XML. *xml_output* es **XML** y no tiene ningún valor predeterminado.  
   
 ## <a name="properties"></a>Propiedades  
- Establezca verboseoutput = 0 para que se devuelvan las propiedades básicas como se muestra en la tabla siguiente.  **\@** verboseoutput > 0 para devolver todas las propiedades del índice espacial.  **\@**  
+ Establezca ** \@ verboseoutput** = 0 para que se devuelvan las propiedades básicas como se muestra en la tabla siguiente. ** \@ verboseoutput** > 0 para devolver todas las propiedades del índice espacial.  
   
  **Base_Table_Rows**  
  Número de filas de la tabla base. El valor es **BIGINT**.  
   
  **Bounding_Box_xmin**  
- Propiedades de cuadro de límite X mínimo del índice espacial para el tipo **Geometry** . El valor de esta propiedad esnull para el tipo Geography. El valor es **float**.  
+ Propiedades de cuadro de límite X mínimo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es NULL para el tipo **Geography**. El valor es **float**.  
   
  **Bounding_Box_ymin**  
- Propiedades de cuadro de límite Y mínimo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es null para el tipo Geography. El valor es **float**.  
+ Propiedades de cuadro de límite Y mínimo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es NULL para el tipo **Geography** . El valor es **float**.  
   
  **Bounding_Box_xmax**  
- Propiedades del cuadro de límite X máximo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es null para el tipo Geography. El valor es **float**.  
+ Propiedades del cuadro de límite X máximo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es NULL para el tipo **Geography** . El valor es **float**.  
   
  **Bounding_Box_ymax**  
- Propiedades del cuadro de límite Y máximo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es null para el tipo Geography. El valor es **float**.  
+ Propiedades del cuadro de límite Y máximo del índice espacial para el tipo **Geometry** . El valor de esta propiedad es NULL para el tipo **Geography** . El valor es **float**.  
   
  **Grid_Size_Level_1**  
  Densidad de la cuadrícula de nivel 1 del índice espacial:  
@@ -155,28 +155,28 @@ ms.locfileid: "69028906"
  Número de instancias de celdas de objetos indizados que se teselan con precisión de nivel 4. Ésta es una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- Número de celdas que están completamente tratadas por un objeto en el nivel de teselación 1 y, por tanto, son interiores al objeto. (Cell_attributevalue es 2). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que están completamente tratadas por un objeto en el nivel de teselación 1 y, por tanto, son interiores al objeto. (Cell_attributevalue es 2). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- Número de celdas que están completamente tratadas por un objeto en el nivel de teselación 2 y, por tanto, son interiores al objeto. (El valor de Cell_attribute es 2). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que están completamente tratadas por un objeto en el nivel de teselación 2 y, por tanto, son interiores al objeto. (Cell_attribute valor es 2). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- Número de celdas que están completamente tratadas por un objeto en el nivel de teselación 3 y, por tanto, son interiores al objeto. (El valor de Cell_attribute es 2). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que están completamente tratadas por un objeto en el nivel de teselación 3 y, por tanto, son interiores al objeto. (Cell_attribute valor es 2). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- Número de celdas que están cubiertas completamente por un objeto en el nivel 4 de teselación y, por lo tanto, son interiores al objeto. (El valor de Cell_attribute es 2). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que están cubiertas completamente por un objeto en el nivel 4 de teselación y, por lo tanto, son interiores al objeto. (Cell_attribute valor es 2). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- Número de celdas que forman una intersección con un objeto en el nivel de teselación 1. (El valor de Cell_attribute es 1). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que forman una intersección con un objeto en el nivel de teselación 1. (Cell_attribute valor es 1). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- Número de celdas que forman una intersección con un objeto en el nivel de teselación 2. (El valor de Cell_attribute es 1). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que forman una intersección con un objeto en el nivel de teselación 2. (Cell_attribute valor es 1). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- Número de celdas que forman una intersección con un objeto en el nivel de teselación 3. (El valor de Cell_attribute es 1). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que forman una intersección con un objeto en el nivel de teselación 3. (Cell_attribute valor es 1). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- Número de celdas que intersecta un objeto en el nivel 4 de teselación. (El valor de Cell_attribute es 1). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas que intersecta un objeto en el nivel 4 de teselación. (Cell_attribute valor es 1). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  Indica si el ejemplo de consulta está en la celda raíz 0, fuera del cuadro de límite, pero tocándolo. Ésta es una propiedad básica. El valor es **BIGINT**.  
@@ -185,19 +185,19 @@ ms.locfileid: "69028906"
 >  Esta información solo es útil para determinar si hay objetos que el cuadro de límite pueda echar mucho en falta.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- El número de objetos del nivel 0 que tocan al cuadro de límite. (El valor de Cell_attribute es 0).  El valor es **BIGINT**.  
+ El número de objetos del nivel 0 que tocan al cuadro de límite. (Cell_attribute valor es 0).  El valor es **BIGINT**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Número de celdas de objeto que tocan un límite de celda de la cuadrícula en el nivel de teselación 1. (El valor de Cell_attribute es 0). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas de objeto que tocan un límite de celda de la cuadrícula en el nivel de teselación 1. (Cell_attribute valor es 0). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Número de celdas de objeto que tocan un límite de celda de la cuadrícula en el nivel de teselación 2. (El valor de Cell_attribute es 0). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas de objeto que tocan un límite de celda de la cuadrícula en el nivel de teselación 2. (Cell_attribute valor es 0). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Número de celdas de objeto que tocan un límite de celda de la cuadrícula en el nivel de teselación 3. (El valor de Cell_attribute es 0). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas de objeto que tocan un límite de celda de la cuadrícula en el nivel de teselación 3. (Cell_attribute valor es 0). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- Número de celdas de objeto que tocan un límite de celda de cuadrícula en el nivel 4 de teselación. (El valor de Cell_attribute es 0). Ésta es una propiedad básica. El valor es **BIGINT**.  
+ Número de celdas de objeto que tocan un límite de celda de cuadrícula en el nivel 4 de teselación. (Cell_attribute valor es 0). Se trata de una propiedad básica. El valor es **BIGINT**.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  Porcentaje del área total (celdas hoja totales) de la cuadrícula que contienen celdas hoja cubiertas por un objeto.  
@@ -306,19 +306,19 @@ ms.locfileid: "69028906"
 ## <a name="examples"></a>Ejemplos  
  Para obtener ejemplos, vea los siguientes temas:  
   
--   [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>Requisitos  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos &#40;almacenados de índice espacial TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de índice espacial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Conceptos básicos de XQuery](../../xquery/xquery-basics.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

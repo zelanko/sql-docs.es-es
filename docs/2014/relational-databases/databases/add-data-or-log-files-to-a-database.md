@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952375"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Agregar archivos de datos o de registro a una base de datos
   En este tema se describe cómo agregar archivos de datos o de registro a una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -42,20 +41,20 @@ ms.locfileid: "62917735"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   No se puede agregar o quitar un archivo mientras se está ejecutando una instrucción BACKUP.  
   
 -   Para cada base de datos pueden especificarse hasta 32.767 archivos y 32.767 grupos de archivos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para agregar archivos de datos o de registro a una base de datos  
   
@@ -71,11 +70,11 @@ ms.locfileid: "62917735"
   
 6.  Seleccione el tipo de archivo: de datos o de registro.  
   
-7.  En el caso de un archivo de datos, seleccione el grupo de archivos en que se debe incluir el archivo de la lista, o bien seleccione **\<new filegroup>** para crear un grupo de archivos nuevo. Los archivos de registro de transacciones no pueden formar parte de un grupo de archivos.  
+7.  Para un archivo de datos, seleccione el grupo de archivos en el que se debe incluir el archivo de la lista o seleccione **\<new filegroup>** para crear un nuevo grupo de archivos. Los archivos de registro de transacciones no pueden formar parte de un grupo de archivos.  
   
 8.  Especifique el tamaño inicial del archivo. Defina el mayor tamaño posible para los archivos de datos, según la cantidad de datos máxima prevista para la base datos.  
   
-9. Para especificar cómo debe crecer el archivo, haga clic en ( **...** ) en la columna **Crecimiento automático**. Seleccione una de las opciones siguientes:  
+9. Para especificar cómo debe crecer el archivo, haga clic en ( **...** ) en la columna **Crecimiento automático**. Seleccione entre las siguientes opciones:  
   
     1.  Para permitir que el archivo actualmente seleccionado crezca cuando se necesite más espacio para los datos, active la casilla **Habilitar crecimiento automático** y, a continuación, elija una de las opciones siguientes:  
   
@@ -99,9 +98,9 @@ ms.locfileid: "62917735"
     > [!NOTE]  
     >  De forma predeterminada, los datos y los registros de transacciones se colocan en la misma unidad y ruta de acceso para adecuarse a sistemas de un solo disco, pero puede que esto no resulte óptimo para los entornos de producción. Para más información, consulte [Database Files and Filegroups](database-files-and-filegroups.md).  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para agregar archivos de datos o de registro a una base de datos  
   
@@ -115,7 +114,7 @@ ms.locfileid: "62917735"
   
  Para obtener más ejemplos, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Eliminar archivos de datos o de registro de una base de datos](delete-data-or-log-files-from-a-database.md)   
  [Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)  

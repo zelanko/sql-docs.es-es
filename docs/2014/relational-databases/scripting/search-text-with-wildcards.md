@@ -1,6 +1,6 @@
 ---
-title: Buscar texto con caracteres comodín | Microsoft Docs
-ms.custom: ''
+title: Buscar texto con caracteres comodín
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], wildcard searches
 - wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc4e24c3dce73e46350b0c106429c42ab5f0edb2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049034"
 ---
 # <a name="search-text-with-wildcards"></a>Buscar texto con caracteres comodín
-  Las expresiones siguientes pueden reemplazar a caracteres o dígitos en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+  Las expresiones siguientes pueden reemplazar a caracteres o dígitos en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Buscar y reemplazar**.  
   
 #### <a name="to-search-using-wildcards"></a>Para buscar mediante caracteres comodín  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66090241"
   
  En la tabla siguiente se describen los caracteres comodín disponibles en la **Lista de referencias**.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Un carácter cualquiera|?|Coincidencia con cualquier carácter individual.|  
 |Un dígito cualquiera|#|Coincidencia con cualquier dígito individual. Por ejemplo, 7# devuelve números que incluyen un 7 seguido de otro número, como 71, pero no 17.|  
@@ -42,6 +41,6 @@ ms.locfileid: "66090241"
 |Cero o más caracteres cualesquiera|*|Coincidencia con uno o más caracteres. Por ejemplo, new* devuelve cualquier texto que incluya "new", como newfile.txt.|  
 |Un carácter cualquiera del conjunto|[ ]|Coincidencia con cualquier carácter especificado en el juego de caracteres.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md)  

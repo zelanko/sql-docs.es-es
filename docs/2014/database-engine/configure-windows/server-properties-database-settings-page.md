@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66487dd264f4733e0b8b3345aa5ebd5976165a42
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934958"
 ---
 # <a name="server-properties-database-settings-page"></a>Propiedades del servidor (página Configuración de base de datos)
   Utilice esta página para ver o modificar la configuración de la base de datos.  
@@ -71,7 +70,7 @@ ms.locfileid: "62809537"
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

@@ -7,35 +7,35 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: bb9e02743122958cb567e01f5011fc9f8b3481e6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: ea2f8a65cb8ca16efd625309f73d7dccc3e27505
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452007"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911671"
 ---
 # <a name="sql-server-security"></a>Seguridad de SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server incluye muchas características que permiten crear aplicaciones de base de datos seguras.  
   
-Las consideraciones comunes de seguridad, como el robo de datos o el vandalismo, se aplican independientemente de la versión de SQL Server que se use. La integridad de los datos también se debe considerar como un problema de seguridad. Si los datos no están protegidos, es posible que resulte más útil si se permite la manipulación de datos ad hoc y los datos se modifican de forma accidental o malintencionada con valores incorrectos o se eliminan por completo. Además, a menudo se deben cumplir requisitos legales, como el almacenamiento correcto de información confidencial. El almacenamiento de algunos tipos de datos personales se ha dado por completo, en función de las leyes que se apliquen en una determinada jurisdicción.  
+Las consideraciones comunes de seguridad, como el robo de datos o el vandalismo, se aplican independientemente de la versión de SQL Server que se use. La integridad de los datos también se debe considerar como un problema de seguridad. Si los datos no están protegidos, es posible que pierdan su valor si se permite la manipulación de datos ad hoc y los datos se modifican de forma accidental o malintencionada con valores incorrectos o se eliminan por completo. Además, a menudo se deben cumplir requisitos legales, como el almacenamiento correcto de información confidencial. El almacenamiento de algunos tipos de datos personales se prohíbe por completo, en función de las leyes que se apliquen en una determinada jurisdicción.  
   
-Cada versión de SQL Server incluye diferentes características de seguridad, del mismo modo que las versiones de Windows más recientes mejoran la funcionalidad respecto a las anteriores. Es importante comprender que las características de seguridad solas no pueden garantizar una aplicación de base de datos segura. Cada aplicación de base de datos es única en sus requisitos, el entorno de ejecución, el modelo de implementación, la ubicación física y el rellenado de usuarios. Algunas aplicaciones que son locales en el ámbito pueden necesitar una seguridad mínima, mientras que otras aplicaciones o aplicaciones locales implementadas a través de Internet pueden requerir medidas de seguridad rigurosas y una supervisión y evaluación continuas.  
+Cada versión de SQL Server incluye diferentes características de seguridad, del mismo modo que las versiones de Windows más recientes mejoran la funcionalidad respecto a las anteriores. Es importante comprender que las características de seguridad no pueden garantizar por sí mismas una aplicación de base de datos segura. Cada aplicación de base de datos es única en sus requisitos, el entorno de ejecución, el modelo de implementación, la ubicación física y la población de usuarios. Algunas aplicaciones que son locales en ámbito pueden necesitar una seguridad mínima, mientras que otras aplicaciones locales o aplicaciones implementadas a través de Internet pueden requerir medidas de seguridad rigurosas y una supervisión y evaluación continuas.  
   
-Los requisitos de seguridad de una aplicación de base de datos de SQL Server se deben tener en cuenta en el momento del diseño, no a posteriori. La evaluación de las amenazas en las primeras fases del ciclo de desarrollo le ofrece la oportunidad de mitigar los posibles daños en cualquier momento en que se detecte una vulnerabilidad.  
+Los requisitos de seguridad de una aplicación de base de datos de SQL Server se deben tener en cuenta en el momento del diseño, no a posteriori. La evaluación de las amenazas en las primeras fases del ciclo de desarrollo le brinda la oportunidad de mitigar los posibles daños en cualquier momento en que se detecte una vulnerabilidad.  
   
-Incluso si el diseño inicial de una aplicación es un sonido, pueden surgir nuevas amenazas a medida que el sistema evoluciona. Al crear varias líneas de defensa en torno a la base de datos, puede minimizar los daños causados por una infracción de seguridad. La primera línea de defensa es reducir el área expuesta a ataques sin conceder más permisos de los que son absolutamente necesarios.  
+Incluso si el diseño inicial de una aplicación es sólido, pueden surgir nuevas amenazas a medida que el sistema evoluciona. Al crear varias líneas de defensa en torno a la base de datos, puede minimizar los daños causados por una infracción de seguridad. La primera línea de defensa es reducir el área expuesta a ataques sin conceder más permisos de los que son absolutamente necesarios.  
   
 Los temas de esta sección describen brevemente las características de seguridad de SQL Server de interés para los desarrolladores, con vínculos a temas relevantes en los Libros en pantalla de SQL Server y otros recursos que proporcionan información más detallada.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Autenticación en SQL Server](authentication-sql-server.md)  
-Describe los inicios de sesión y la autenticación en SQL Server y proporciona vínculos a recursos adicionales. 
+Describe los inicios de sesión y la autenticación en SQL Server y proporciona vínculos a recursos adicionales. 
   
 [Escenarios de seguridad de aplicaciones en SQL Server](application-security-scenarios-sql-server.md)  
 Contiene temas que describen diferentes escenarios de seguridad de aplicaciones para aplicaciones de ADO.NET y SQL Server.  
@@ -44,11 +44,11 @@ Contiene temas que describen diferentes escenarios de seguridad de aplicaciones 
 Describe cuestiones de seguridad relacionadas con SQL Server Express.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
-[Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-Describe las consideraciones de seguridad para SQL Server y Azure SQL Database.
+[Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+Describe cuestiones de seguridad relacionadas con SQL Server y Azure SQL Database.
 
 [Consideraciones de seguridad para una instalación de SQL Server](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
-Describe los problemas de seguridad que se deben tener en cuenta antes de instalar SQL Server.
+Describe los problemas de seguridad que se deben tener en cuenta antes de instalar SQL Server.
 
 ## <a name="next-steps"></a>Pasos siguientes
 - [SQL Server y ADO.NET](index.md)

@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f666a327db29468c5bbd91bf7106d7c6e4f61f64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec7fe290a603d901de17fb88513434a13717e148
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765820"
 ---
-# <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica la comprobación del cumplimiento del estándar FIPS 127-2. Esto se basa en el estándar ISO. Para más información sobre la compatibilidad con SQL Server FIPS, vea [How to use SQL Server 2016 in FIPS 140-2-compliant mode](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode) (Cómo usar SQL Server 2016 en el modo compatible con FIPS 140-2). 
   
@@ -37,24 +37,24 @@ ms.locfileid: "67929044"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 SET FIPS_FLAGGER ( 'level' |  OFF )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  **'** *level* **'**  
- Es el nivel de cumplimiento del estándar FIPS 127-2 que se comprueba en todas las operaciones de base de datos. Si una operación de la base de datos entra en conflicto con el nivel de los estándares ISO elegido, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera una advertencia.  
+ Es el nivel de cumplimiento del estándar FIPS 127-2 que se comprueba en todas las operaciones de base de datos. Si una operación de la base de datos entra en conflicto con el nivel elegido de los estándares ISO, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera una advertencia.  
   
  *level* debe tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |ENTRY|Comprobación de los estándares ISO de compatibilidad con el nivel básico.|  
 |FULL|Comprobación de los estándares ISO de compatibilidad plena.|  
 |INTERMEDIATE|Comprobación de los estándares ISO de compatibilidad con el nivel intermedio.|  
-|OFF|Sin comprobación del estándar.|  
+|Apagado|Sin comprobación del estándar.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de `SET FIPS_FLAGGER` se establece en tiempo de análisis, en lugar de en tiempo de ejecución. El hecho de que se establezca en tiempo de análisis supone que si la instrucción SET está presente en el lote o el procedimiento almacenado, se aplica aunque la ejecución del código no llegue al punto donde se encuentre. Además, la instrucción `SET` se aplica antes de que se ejecute ninguna otra instrucción. Por ejemplo, aunque la instrucción `SET` se encuentre en un bloque de instrucciones de `IF...ELSE` al que nunca se llega durante la ejecución, la instrucción `SET` se seguirá aplicando porque se ha analizado el bloque de instrucciones `IF...ELSE`.  
   
  Si `SET FIPS_FLAGGER` se establece en un procedimiento almacenado, el valor de `SET FIPS_FLAGGER` se restablecerá cuando el procedimiento almacenado devuelva el control. Por tanto, una instrucción `SET FIPS_FLAGGER` especificada en SQL dinámico no tiene ningún efecto en las instrucciones siguientes de SQL dinámico.  

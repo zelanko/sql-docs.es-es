@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d555a3763b4e8c769cd52ce72019b66bddd594fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062642"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Propiedad AcceptStop (clase SqlService)
   Obtiene el valor de propiedad booleano que especifica si se puede detener el servicio.  
@@ -38,14 +37,14 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase SqlService](sqlservice-class.md) objeto que representa el servicio  
+ Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor booleano que especifica si se puede detener el servicio: `true` si se puede detener el servicio; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

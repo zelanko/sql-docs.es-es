@@ -1,5 +1,5 @@
 ---
-title: nodes() (método del tipo de datos XML) | Microsoft Docs
+title: nodes() (método del tipo de datos XML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a0648ea24162f59562f6d7a68dd5007ca78be3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051273"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393063"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() (método del tipo de datos XML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El método **nodes()** es muy útil si desea dividir una instancia de tipo de datos **xml** en datos relacionales. Permite identificar nodos que se asignarán a una fila nueva.  
   
@@ -39,14 +39,16 @@ Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *XQuery*  
 Es un literal de cadena, una expresión XQuery. Si la expresión de consulta construye nodos, éstos se exponen en el conjunto de filas resultante. Si la expresión de consulta da lugar a una secuencia vacía, el conjunto de filas también está vacío. Si la expresión de consulta da lugar estáticamente a una secuencia que contiene valores atómicos en lugar de nodos, se produce un error estático.  
   
 *Table*(*Column*)  
 Es el nombre de tabla y el nombre de columna del conjunto de filas resultante.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Por ejemplo, imagine que tiene la tabla siguiente:  
   
 ```sql
@@ -215,7 +217,7 @@ En este ejemplo, la consulta establece cada elemento <`Location`> como un nodo d
   
 Esta consulta devuelve el elemento de contexto, en el que se especifica la sintaxis abreviada `'.'` para `self::node()`, en el método `query()`.  
   
-Observe lo siguiente:
+Tenga en cuenta lo siguiente:
   
 - El método `nodes()` se aplica a la columna Instructions y devuelve un conjunto de filas, `T (C)`. Este conjunto de filas contiene copias lógicas del documento de instrucciones de fabricación original con `/root/Location` como elemento de contexto.  
   
@@ -247,7 +249,7 @@ Observe lo siguiente:
 ### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>Aplicar nodes() al conjunto de filas devuelto por otro método nodes()  
 El código siguiente realiza una consulta en los documentos XML sobre instrucciones de fabricación en la columna `Instructions` de la tabla `ProductModel`. La consulta devuelve un conjunto de filas que contiene el Id. del modelo de producto, las ubicaciones y los pasos de fabricación.  
   
-Observe lo siguiente:  
+Tenga en cuenta lo siguiente:  
   
 - El método `nodes()` se aplica a la columna `Instructions` y devuelve el conjunto de filas `T1 (Locations)`. Este conjunto de filas contiene copias lógicas del documento de instrucciones de fabricación original con el elemento `/root/Location` como contexto del elemento.  
   

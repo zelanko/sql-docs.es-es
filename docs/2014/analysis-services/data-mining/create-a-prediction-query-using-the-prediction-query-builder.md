@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta de predicción mediante el generador de consultas de predicción | Microsoft Docs
+title: Cree una consulta de predicción mediante la Generador de consultas de predicción | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,28 +12,27 @@ helpviewer_keywords:
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 759830666c3da1faa8deccb754fc2955b47e5bd7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085349"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523721"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Crear una consulta de predicción con el Generador de consultas de predicción
   Puede crear consultas de predicción mientras está generando una solución de minería de datos en BI Development Studio o al hacer clic con el botón derecho en un modelo de minería de datos existente en SQL Server Management Studio y, después, elegir la opción **Generar consulta de predicción**.  
   
  El **Generador de consultas de predicción** tiene los tres modos de diseño siguientes, entre los que puede cambiar haciendo clic en los iconos en la esquina superior izquierda.  
   
--   **Design**  
+-   **Diseño**  
   
--   **Consulta**  
+-   **Consultar**  
   
 -   **Resultado**  
   
  El modo**Diseño** permite generar una consulta de predicción eligiendo los datos de entrada, asignando los datos al modelo y, después, agregando funciones de predicción en instrucciones que se generan utilizando la cuadrícula. La cuadrícula de diseño contiene estos bloques de creación:  
   
- **Source**  
+ **Origen**  
  Elija el origen de la nueva columna. Puede utilizar columnas del modelo de minería de datos, las tablas de entrada incluidas en la vista del origen de datos, una función de predicción o una expresión personalizada.  
   
  **Campo**  
@@ -45,10 +44,10 @@ ms.locfileid: "66085349"
  **Mostrar**  
  Determina si la selección de la columna **Origen** aparecerá en los resultados.  
   
- **Grupo**  
+ **Agrupamiento**  
  Funciona con la columna **Y/O** para agrupar expresiones mediante paréntesis. Por ejemplo, (expr1 o expr2) y expr3.  
   
- **Y/O**  
+ **Y/o**  
  Crea lógica en la consulta. Por ejemplo, (expr1 o expr2) y expr3.  
   
  **Criterios o argumento**  
@@ -90,8 +89,8 @@ ms.locfileid: "66085349"
   
 8.  Ejecute la consulta haciendo clic en el primer botón de la barra de herramientas de la pestaña **Predicción de modelo de minería de datos** y seleccione **Resultado**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una consulta singleton en el Diseñador de minería de datos](create-a-singleton-query-in-the-data-mining-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear una consulta Singleton en el diseñador de minería de datos](create-a-singleton-query-in-the-data-mining-designer.md)   
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - RADIANS function
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02a7590fa122dbfbd23c8a647ad800becfdc932c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914245"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003811"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve los radianes de una expresión numérica en grados.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67914245"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 RADIANS ( numeric_expression )  
 ```  
   
@@ -42,7 +42,7 @@ RADIANS ( numeric_expression )
  *numeric_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el mismo tipo que *numeric_expression*.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -68,34 +68,34 @@ GO
   
 ```  
 -- First value is -45.01.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -45.01  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is -181.01.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = -181.01  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is 0.00.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.00  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Next value is 0.1472738.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 0.1472738  
 SELECT 'The RADIANS of the angle is: ' +  
-    CONVERT(varchar, RADIANS(@angle))  
+    CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 -- Last value is 197.1099392.  
-DECLARE @angle float  
+DECLARE @angle FLOAT  
 SET @angle = 197.1099392  
 SELECT 'The RADIANS of the angle is: ' +  
-   CONVERT(varchar, RADIANS(@angle))  
+   CONVERT(VARCHAR, RADIANS(@angle))  
 GO  
 ```  
   
@@ -121,7 +121,7 @@ The RADIANS of the angle is: 3.44022
   
 ## <a name="see-also"></a>Consulte también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  [decimal y numeric &#40;Transact-SQL&#41;]  
+ [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
  [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
  [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Asistente de diseño de agregaciones (Ayuda de F1) | Microsoft Docs
+title: Asistente para diseñar agregaciones (ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a29cc4c248b1cdc4d671890f980cb7fe14c8414a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528171"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Asistente para diseñar agregaciones (Ayuda F1, SSAS)
-  Las agregaciones proporcionan mejoras de rendimiento al permitir que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere los totales calculados previamente de forma directa desde el almacenamiento del cubo en vez de tener que volver a calcular datos de un origen de datos subyacente para cada consulta.  
+  Las agregaciones proporcionan mejoras de rendimiento al permitir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que recupere los totales calculados previamente directamente desde el almacenamiento de cubos en lugar de tener que volver a calcular los datos de un origen de datos subyacente para cada consulta.  
   
  Para diseñar estas agregaciones, puede utilizar el Asistente para diseñar agregaciones. Este asistente le guía por los siguientes pasos:  
   
@@ -36,20 +35,20 @@ ms.locfileid: "66062750"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Seleccionar particiones para modificar &#40;Asistente para diseñar agregaciones&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
+-   [Seleccione las particiones para modificar &#40;Asistente para diseñar agregaciones&#41;](select-partitions-to-modify-aggregation-design-wizard.md)  
   
--   [Revise el uso de agregaciones &#40;Asistente para diseñar agregaciones&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
+-   [Revisar el uso de agregaciones &#40;Asistente para diseñar agregaciones&#41;](review-aggregation-usage-aggregation-design-wizard.md)  
   
 -   [Especificar recuentos de objetos &#40;Asistente para diseñar agregaciones&#41;](specify-object-counts-aggregation-design-wizard.md)  
   
--   [Establecer las opciones de agregaciones &#40;Asistente para diseñar agregaciones&#41;](set-aggregation-options-aggregation-design-wizard.md)  
+-   [Establecer opciones de agregación &#40;Asistente para diseñar agregaciones&#41;](set-aggregation-options-aggregation-design-wizard.md)  
   
 -   [Finalización del asistente &#40;Asistente para diseñar agregaciones&#41;](completing-the-wizard-aggregation-design-wizard.md)  
   
-## <a name="see-also"></a>Vea también  
- [Las agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Ayuda de F1 del Asistente para optimización basada en uso](usage-based-optimization-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Asistente para optimización basada en el uso (ayuda F1)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

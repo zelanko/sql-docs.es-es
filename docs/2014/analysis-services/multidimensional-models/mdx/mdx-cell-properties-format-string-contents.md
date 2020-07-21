@@ -1,5 +1,5 @@
 ---
-title: FORMAT_STRING, contenido (MDX) | Microsoft Docs
+title: Contenido de FORMAT_STRING (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a68b0c6145d24ae5ae543b6132e222fe611b77
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546407"
 ---
-# <a name="formatstring-contents-mdx"></a>FORMAT_STRING, contenido (MDX)
+# <a name="format_string-contents-mdx"></a>FORMAT_STRING, contenido (MDX)
   La propiedad de celda `FORMAT_STRING` aplica formato a la propiedad de celda `VALUE` y crea el valor para la propiedad de celda `FORMATTED_VALUE`. La propiedad de celda `FORMAT_STRING` controla los valores sin procesar numéricos y de cadena mediante la aplicación de una expresión de formato al valor para devolver un valor con formato para la propiedad de celda `FORMATTED_VALUE`. En las siguientes tablas se detallan la sintaxis y los caracteres de formato utilizados para controlar los valores numéricos y de cadena.  
   
 ## <a name="string-values"></a>Valores de cadena  
@@ -51,7 +50,7 @@ ms.locfileid: "66074465"
 |-----------|------------|  
 |Una sección|La expresión de formato se aplica a todos los valores.|  
 |Dos secciones|La primera sección se aplica a valores positivos y ceros; la segunda se aplica a valores negativos.|  
-|Tres secciones|La primera sección se aplica a valores positivos, la segunda a valores negativos y la tercera a los ceros.|  
+|Tres secciones.|La primera sección se aplica a valores positivos, la segunda a valores negativos y la tercera a los ceros.|  
 |Cuatro secciones|La primera sección se aplica a valores positivos, la segunda a valores negativos, la tercera a los ceros y la cuarta a valores NULL.|  
   
  El siguiente ejemplo tiene dos secciones. La primera sección define el formato de los valores positivos y los ceros, y la segunda define el formato de los valores negativos.  
@@ -72,16 +71,16 @@ ms.locfileid: "66074465"
 |---------------|-----------------|  
 |None|Muestra el número sin formato.|  
 |**0**|Representa un marcador de posición de dígitos que muestra un dígito o un cero (0).<br /><br /> Si el número tiene un dígito en la posición donde aparece el cero en la cadena de formato, se muestra el dígito en el valor con formato. De lo contrario, el valor con formato muestra un cero en dicha posición.<br /><br /> Si el número tiene menos dígitos que ceros (en cualquier lado del separador decimal) en la cadena de formato, el valor con formato muestra ceros a la izquierda o a la derecha.<br /><br /> Si el número tiene más dígitos a la derecha del separador decimal que ceros a la derecha del separador decimal en la expresión de formato, el valor con formato redondea el número con tantos decimales como ceros haya.<br /><br /> Si el número tiene más dígitos a la izquierda del separador decimal que ceros a la izquierda del separador decimal en la expresión de formato, el valor con formato muestra los dígitos adicionales sin modificación.|  
-|**#**|Representa un marcador de posición de dígitos que muestra un dígito o nada.<br /><br /> Si la expresión tiene un dígito en la posición donde aparece el signo de número ( **#** ) en la cadena de formato, el valor con formato muestra el dígito. De lo contrario, el valor con formato no muestra nada en dicha posición.<br /><br /> El marcador de posición de signo de número ( **#** ) funciona como el marcador de posición de dígito cero (**0**), excepto que no se muestran ceros a la izquierda ni a la derecha si el número tiene los mismos dígitos o menos que el número de caracteres **#** a cualquier lado del separador decimal en la expresión de formato.|  
-|**.**|Representa un marcador de posición de decimales que determina cuántos dígitos se muestran a la izquierda o a la derecha del separador decimal.<br /><br /> Si la expresión de formato solo contiene caracteres de signos de número ( **#** ) a la izquierda del separador ( **,** ), los números inferiores a 1 empiezan con un separador decimal. Para mostrar un cero a la izquierda con los números fraccionarios, utilice un cero (0) como primer marcador de posición de dígitos a la izquierda del separador decimal.<br /><br /> El carácter real utilizado como marcador de posición de decimales en la salida con formato depende del formato de número que reconozca el sistema informático.<br /><br /> Nota: En algunas configuraciones regionales se utiliza una coma como separador decimal.|  
-|**%**|Representa un marcador de posición de porcentaje. La expresión se multiplica por 100. El carácter de porcentaje ( **%** ) se inserta en la posición donde aparece el porcentaje en la cadena de formato.|  
-|**,**|Representa un separador de miles que separa los millares de las centenas en un número que tiene cuatro o más posiciones a la izquierda del separador decimal.<br /><br /> El uso estándar del separador de miles se especifica si el formato contiene un separador de miles delimitado por marcadores de posición de dígitos (**0** o **#** ).<br /><br /> Dos separadores de miles adyacentes o un separador de miles inmediatamente a la izquierda del separador decimal (tanto si se ha especificado un decimal como si no), significan "escalar el número dividiéndolo por 1000, redondeándolo como sea preciso". Por ejemplo, puede usar la cadena de formato " **##0**,," para representar 100 millones como 100. Los números menores que 1 millón se muestran como 0. Dos separadores de miles adyacentes en cualquier posición que no sea la inmediatamente a la izquierda del separador decimal se tratan como si especificaran el uso de un separador de miles.<br /><br /> El carácter real utilizado como separador de miles en la salida con formato depende del formato de número que reconozca el sistema informático.<br /><br /> Nota: En algunas configuraciones regionales se utiliza un punto como separador de miles.|  
-|**:**|Representa un separador de hora que separa horas, minutos y segundos cuando se asigna formato a los valores de hora.<br /><br /> Nota: En algunas configuraciones regionales, es posible que se utiliza otro carácter como separador de hora.<br /><br /> El carácter real utilizado como separador de hora en la salida con formato viene determinado por la configuración del sistema del equipo.|  
-|**/**|Representa un separador de fecha que separa el día, el mes y el año cuando se asigna formato a los valores de fecha.<br /><br /> El carácter real utilizado como separador de fecha en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales, es posible que utiliza otro carácter como separador de fecha.|  
-|**E- E+ e- e+**|Representa el formato científico.<br /><br /> Si la expresión de formato contiene como mínimo un marcador de posición de dígito (**0** o **#** ) a la derecha de **E-** , **E+** , **e-** o **e+** , el valor con formato se muestra en formato científico y se inserta E o e entre el número y su exponente. El número de marcadores de posición de dígitos a la derecha determina el número de dígitos del exponente. Use **E-** o **e-** para incluir un signo menos junto a los exponentes negativos. Use **E+** o **e+** para incluir un signo menos junto a los exponentes negativos y un signo más junto a los exponentes positivos.|  
-|**- + $ ( )**|Muestra un carácter literal.<br /><br /> Para mostrar un carácter distinto del que aparece en la lista, escriba una barra diagonal inversa ( **\\** ) antes del carácter o delimite el carácter con comillas dobles ( **" "** ).|  
-|**\\**|Muestra el siguiente carácter en la cadena de formato.<br /><br /> Para mostrar un carácter con un significado especial como un carácter literal, escriba una barra diagonal inversa ( **\\** ) antes del carácter. La barra diagonal inversa no se muestra. Utilizar una barra diagonal inversa es equivalente a delimitar el siguiente carácter con comillas dobles. Para mostrar una barra diagonal inversa, use dos barras diagonales inversas ( **\\\\** ). A continuación se indican algunos ejemplos de caracteres que no pueden mostrarse como caracteres literales:<br /><br /> Los caracteres de formato de fecha y hora de formato -**un**, **c**, **d.** , **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y** , **/** , y **:**<br /><br /> Los caracteres de formato numérico - **#** , **0**, **%** , **E**, **e**, **comas**, y **período**<br /><br /> Los caracteres de formato de cadena - **@** , **&** , **\<** , **>** , y **!**|  
-|**"ABC"**|Muestra la cadena entre comillas dobles ( **" "** ).<br /><br /> Para asignar formato a una cadena desde dentro del código, use Chr(**34**) para delimitar el texto. (El código de carácter para las comillas dobles es **34**).|  
+|**#**|Representa un marcador de posición de dígitos que muestra un dígito o nada.<br /><br /> Si la expresión tiene un dígito en la posición donde aparece el signo de número ( **#** ) en la cadena de formato, el valor con formato muestra el dígito. De lo contrario, el valor con formato no muestra nada en dicha posición.<br /><br /> El marcador de posición de signo de número ( **#** ) funciona como el marcador de posición cero (**0**), excepto que no se muestran ceros a la izquierda ni a la derecha si el número tiene los mismos dígitos o menos que **#** caracteres situados a cada lado del separador decimal en la expresión de formato.|  
+|**.**|Representa un marcador de posición de decimales que determina cuántos dígitos se muestran a la izquierda o a la derecha del separador decimal.<br /><br /> Si la expresión de formato solo contiene caracteres de signo de número ( **#** ) a la izquierda del punto (**.**), los números menores que 1 comienzan con un separador decimal. Para mostrar un cero a la izquierda con los números fraccionarios, utilice un cero (0) como primer marcador de posición de dígitos a la izquierda del separador decimal.<br /><br /> El carácter real utilizado como marcador de posición de decimales en la salida con formato depende del formato de número que reconozca el sistema informático.<br /><br /> Nota: En algunas configuraciones regionales se utiliza la coma como separador decimal.|  
+|**%**|Representa un marcador de posición de porcentaje. La expresión se multiplica por 100. El carácter de porcentaje ( **%** ) se inserta en la posición en la que aparece el porcentaje en la cadena de formato.|  
+|**,**|Representa un separador de miles que separa los millares de las centenas en un número que tiene cuatro o más posiciones a la izquierda del separador decimal.<br /><br /> El uso estándar del separador de miles se especifica si el formato contiene un separador de miles delimitado por marcadores de posición de dígitos (**0** o **#**).<br /><br /> Dos separadores de miles adyacentes o un separador de miles inmediatamente a la izquierda del separador decimal (tanto si se ha especificado un decimal como si no), significan "escalar el número dividiéndolo por 1000, redondeándolo como sea preciso". Por ejemplo, puede usar la cadena de formato "**# #0**,," para representar 100 millones como 100. Los números menores que 1 millón se muestran como 0. Dos separadores de miles adyacentes en cualquier posición que no sea la inmediatamente a la izquierda del separador decimal se tratan como si especificaran el uso de un separador de miles.<br /><br /> El carácter real utilizado como separador de miles en la salida con formato depende del formato de número que reconozca el sistema informático.<br /><br /> Nota: En algunas configuraciones regionales se utiliza el punto como separador de miles.|  
+|**:**|Representa un separador de hora que separa horas, minutos y segundos cuando se asigna formato a los valores de hora.<br /><br /> Nota: En algunas configuraciones regionales se utilizan otros caracteres como separador de hora.<br /><br /> El carácter real utilizado como separador de hora en la salida con formato viene determinado por la configuración del sistema del equipo.|  
+|**/**|Representa un separador de fecha que separa el día, el mes y el año cuando se asigna formato a los valores de fecha.<br /><br /> El carácter real utilizado como separador de fecha en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales se utilizan otros caracteres como separador de fecha.|  
+|**E- E+ e- e+**|Representa el formato científico.<br /><br /> Si la expresión de formato contiene como mínimo un marcador de posición de dígito (**0** o **#**) a la derecha de **E-**, **E+**, **e-** o **e+**, el valor con formato se muestra en formato científico y se inserta E o e entre el número y su exponente. El número de marcadores de posición de dígitos a la derecha determina el número de dígitos del exponente. Use **e** -o **e-** para incluir un signo menos junto a los exponentes negativos. Use **E+** o **e+** para incluir un signo menos junto a los exponentes negativos y un signo más junto a los exponentes positivos.|  
+|**- + $ ( )**|Muestra un carácter literal.<br /><br /> Para mostrar un carácter que no sea uno de los enumerados, coloque una barra diagonal inversa ( **\\** ) antes del carácter o incluya el carácter entre comillas dobles (**""**).|  
+|**\\**|Muestra el siguiente carácter en la cadena de formato.<br /><br /> Para mostrar un carácter que tenga un significado especial como un carácter literal, coloque una barra diagonal inversa ( **\\** ) antes del carácter. La barra diagonal inversa no se muestra. Utilizar una barra diagonal inversa es equivalente a delimitar el siguiente carácter con comillas dobles. Para mostrar una barra diagonal inversa, use dos barras diagonales inversas ( **\\\\** ). A continuación se indican algunos ejemplos de caracteres que no pueden mostrarse como caracteres literales:<br /><br /> Los caracteres de formato de fecha y hora-**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, y **,** **/** y **:**<br /><br /> Los caracteres de formato numérico: **#** **,0**, **%** , **e**, **e**, **coma**y **punto**<br /><br /> Los caracteres de formato de cadena: **@** , **&** ,, **\<**, **>** y **!**|  
+|**ROTACIÓN**|Muestra la cadena entre comillas dobles (**" "**).<br /><br /> Para asignar formato a una cadena desde dentro del código, use Chr(**34**) para delimitar el texto. (El código de carácter para las comillas dobles es **34**).|  
   
 ### <a name="named-numeric-formats"></a>Formatos numéricos con nombre  
  La tabla siguiente muestra los nombres de formato numérico predefinidos:  
@@ -103,12 +102,12 @@ ms.locfileid: "66074465"
   
 |Carácter|Descripción|  
 |---------------|-----------------|  
-|**:**|Representa un separador de hora que separa horas, minutos y segundos cuando se asigna formato a los valores de hora.<br /><br /> El carácter real utilizado como separador de hora en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales, es posible que utiliza otro carácter como separador de hora.|  
-|**/**|Representa un separador de fecha que separa el día, el mes y el año cuando se asigna formato a los valores de fecha.<br /><br /> El carácter real utilizado como separador de fecha en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales, es posible que se utiliza otro carácter para representar el separador de fecha|  
+|**:**|Representa un separador de hora que separa horas, minutos y segundos cuando se asigna formato a los valores de hora.<br /><br /> El carácter real utilizado como separador de hora en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales se utilizan otros caracteres como separador de hora.|  
+|**/**|Representa un separador de fecha que separa el día, el mes y el año cuando se asigna formato a los valores de fecha.<br /><br /> El carácter real utilizado como separador de fecha en la salida con formato viene determinado por la configuración del sistema del equipo.<br /><br /> Nota: En algunas configuraciones regionales se utiliza otro carácter como separador de fecha.|  
 |**C**|Muestra la fecha como **ddddd** y la hora como **ttttt**, en este orden.<br /><br /> Muestra únicamente información de fecha si no hay ninguna parte fraccionaria en el número de serie de fecha. Muestra únicamente información de hora si no hay ninguna parte entera.|  
 |**d**|Muestra el día como un número sin un cero a la izquierda (1-31).|  
-|**dd**|Muestra el día como un número con un cero a la izquierda (01-31).|  
-|**ddd**|Muestra el día como una abreviatura (DOM-Sáb).|  
+|**DD**|Muestra el día como un número con un cero a la izquierda (01-31).|  
+|**DDD**|Muestra el día como una abreviatura (sol-SAT).|  
 |**dddd**|Muestra el día como un nombre completo (domingo-sábado).|  
 |**ddddd**|Muestra la fecha como una fecha completa (día, mes y año), con el formato que especifique la configuración de formato de fecha corto del sistema.<br /><br /> En Microsoft Windows, el formato de fecha corta predeterminado es **d/m/aa**.|  
 |**dddddd**|Muestra un número de serie de fecha como fecha completa (día, mes y año), con el formato de fecha largo que especifique la configuración del sistema.<br /><br /> En Windows, el formato largo de fecha predeterminado es **dd de mmmm de yyyy**.|  
@@ -116,21 +115,21 @@ ms.locfileid: "66074465"
 |**ww**|Muestra la semana del año como un número (1-54).|  
 |**m**|Muestra el mes como un número sin un cero a la izquierda (1-12).<br /><br /> Si **m** va inmediatamente después de **h** o **hh**, se muestra el minuto en lugar del mes.|  
 |**mm**|Muestra el mes como un número con un cero a la izquierda (01-12).<br /><br /> Si **m** va inmediatamente después de **h** o **hh**, se muestra el minuto en lugar del mes.|  
-|**mmm**|Muestra el mes como una abreviatura (Ene-Dic).|  
-|**mmmm**|Muestra el mes como un nombre completo del mes (de enero a diciembre).|  
-|**q**|Muestra el trimestre del año como un número (1-4).|  
+|**MMM**|Muestra el mes como una abreviatura (Ene-Dic).|  
+|**mmmm**|Muestra el mes con el nombre completo del mes (enero-diciembre).|  
+|**respuestas**|Muestra el trimestre del año como un número (1-4).|  
 |**y**|Muestra el día del año como un número (1-366).|  
-|**yy**|Muestra el año como un número de dos dígitos (00-99).|  
-|**aaaa**|Muestra el año como un número de cuatro dígitos (100-9999).|  
-|**h**|Muestra la hora como un número sin ceros (0-23).|  
+|**YY**|Muestra el año como un número de dos dígitos (00-99).|  
+|**AAA**|Muestra el año como un número de cuatro dígitos (100-9999).|  
+|**h**|Muestra la hora como un número sin ceros a la izquierda (0-23).|  
 |**hh**|Muestra la hora como un número con ceros a la izquierda (00-23).|  
-|**n**|Muestra el minuto como un número sin ceros (0-59).|  
+|**n**|Muestra el minuto como un número sin ceros a la izquierda (0-59).|  
 |**nn**|Muestra el minuto como un número con ceros a la izquierda (00-59).|  
-|**s**|Muestra al segundo como un número sin ceros (0-59).|  
-|**ss**|Muestra al segundo como un número con ceros a la izquierda (00-59).|  
+|**s**|Muestra el segundo como un número sin ceros a la izquierda (0-59).|  
+|**SS**|Muestra el segundo como un número con ceros a la izquierda (00-59).|  
 |**t t t t t**|Muestra la hora como una hora completa (hora, minuto y segundo), utilizando el separador de hora definido en el formato de hora que reconozca el equipo.<br /><br /> Si se selecciona la opción de cero a la izquierda, se muestra un cero a la izquierda, y la hora es anterior a 10:00 tanto en ciclo a.m. como p.m. Por ejemplo, 09:59,<br /><br /> En Windows, el formato de hora predeterminado es **h:mm:ss**.|  
 |**AM/PM**|Muestra **AM** en mayúscula con las horas desde medianoche hasta mediodía; muestra **PM** en mayúscula con las horas desde mediodía hasta medianoche.<br /><br /> Nota: Utiliza el reloj de 12 horas.|  
-|**am/pm**|Muestra **am** en minúscula con las horas desde medianoche hasta mediodía; muestra **pm** en minúscula con las horas desde mediodía hasta medianoche.<br /><br /> Nota: Utiliza el reloj de 12 horas.|  
+|**AM/PM**|Muestra **am** en minúscula con las horas desde medianoche hasta mediodía; muestra **pm** en minúscula con las horas desde mediodía hasta medianoche.<br /><br /> Nota: Utiliza el reloj de 12 horas.|  
 |**A/P**|Muestra una **A** en mayúscula con las horas desde medianoche hasta mediodía; muestra una **P** en mayúscula con las horas desde mediodía hasta medianoche.<br /><br /> Nota: Utiliza el reloj de 12 horas.|  
 |**a/p**|Muestra **a** en minúscula con las horas desde medianoche hasta mediodía; muestra **p** en minúscula con las horas desde mediodía hasta medianoche.<br /><br /> Nota: Utiliza el reloj de 12 horas.|  
 |**AMPM**|Muestra el literal de cadena AM como está definido en el equipo con las horas desde medianoche hasta mediodía; muestra el literal de cadena PM como está definido en el equipo con las horas desde mediodía hasta medianoche.<br /><br /> Nota: Utiliza el reloj de 12 horas.<br /><br /> **AMPM** puede ir en mayúscula o en minúscula, pero la cadena que se muestra aparecerá como esté definida en la configuración del equipo.<br /><br /> En Windows, el formato predeterminado es **a. m./p. m.**|  
@@ -148,10 +147,10 @@ ms.locfileid: "66074465"
 |`Medium Time`|Muestra una hora en el formato de 12 horas utilizando horas y minutos y el designador de AM/PM.|  
 |`Short Time`|Muestra una hora utilizando el formato de 24 horas, por ejemplo, 17:45.|  
   
-## <a name="see-also"></a>Vea también  
- [LANGUAGE y FORMAT_STRING en FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
- [Usar las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Crear y usar los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [IDIOMA y FORMAT_STRING en FORMATED_VALUE](mdx-cell-properties-formatted-value-property.md)   
+ [Usar las propiedades de celda &#40;&#41;MDX](mdx-cell-properties-using-cell-properties.md)   
+ [Crear y usar valores de propiedad &#40;&#41;MDX](../../creating-and-using-property-values-mdx.md)   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

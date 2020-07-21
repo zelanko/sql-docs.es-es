@@ -15,48 +15,48 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ffc2075f3994ec24339cc74e0d87085679e379c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889898"
 ---
-# <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **MSmerge_agents** tabla contiene una fila por cada agente de mezcla que se ejecuta en el suscriptor. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla **MSmerge_agents** contiene una fila por cada agente de mezcla que se ejecuta en el suscriptor. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|El Id. del Agente de mezcla.|  
-|**name**|**nvarchar(100)**|Nombre del Agente de mezcla.|  
-|**publisher_id**|**smallint**|El ID. del publicador.|  
+|**name**|**nvarchar(100**|Nombre del Agente de mezcla.|  
+|**publisher_id**|**smallint**|IDENTIFICADOR del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**publicación**|**sysname**|Nombre de la publicación.|  
-|**subscriber_id**|**smallint**|El identificador del suscriptor.|  
-|**subscriber_db**|**sysname**|El nombre de la base de datos de suscripción.|  
+|**publicaciones**|**sysname**|Nombre de la publicación.|  
+|**subscriber_id**|**smallint**|IDENTIFICADOR del suscriptor.|  
+|**subscriber_db**|**sysname**|El nombre de la base de datos de suscripciones.|  
 |**local_job**|**bit**|Indica si hay un trabajo de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  en el distribuidor local.|  
-|**job_id**|**binary (16)**|El número de identificación del trabajo.|  
-|**profile_id**|**int**|El identificador de configuración de la **MSagent_profiles** tabla.|  
+|**job_id**|**binario (16)**|El número de identificación del trabajo.|  
+|**profile_id**|**int**|IDENTIFICADOR de configuración de la tabla **MSagent_profiles** .|  
 |**anonymous_subid**|**uniqueidentifier**|Id. de un agente anónimo.|  
 |**subscriber_name**|**sysname**|Nombre del suscriptor.|  
-|**creation_date**|**datetime**|La fecha y hora que se ha creado la distribución o el agente de mezcla.|  
-|**offload_enabled**|**bit**|Especifica que el agente puede activarse de manera remota.<br /><br /> **0** especifica que el agente no puede activarse de forma remota.<br /><br /> **1** especifica que el agente se activará de forma remota y en el equipo remoto especificado en la propiedad offload_server.|  
+|**creation_date**|**datetime**|Fecha y hora en que se creó la distribución o el Agente de mezcla.|  
+|**offload_enabled**|**bit**|Especifica que el agente puede activarse de manera remota.<br /><br /> **0** especifica que no se puede activar el agente de forma remota.<br /><br /> **1** especifica que el agente se activará de forma remota y en el equipo remoto especificado en la propiedad offload_server.|  
 |**offload_server**|**sysname**|Especifica el nombre de red del servidor a utilizar en la activación remota del agente.|  
 |**sid**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  
-|**subscriber_password**|**nvarchar(524)**|Valor cifrado de la contraseña que se utilizará en la conexión con el suscriptor.|  
+|**subscriber_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utilizará en la conexión con el suscriptor.|  
 |**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
-|**publisher_password**|**nvarchar(524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
+|**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

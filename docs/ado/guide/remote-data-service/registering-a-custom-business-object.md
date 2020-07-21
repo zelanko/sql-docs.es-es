@@ -1,5 +1,5 @@
 ---
-title: Registrar un objeto de negocios personalizada | Microsoft Docs
+title: Registrando un objeto comercial personalizado | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747722"
 ---
 # <a name="registering-a-custom-business-object"></a>Registro de un objeto de negocios personalizado
-Para iniciar correctamente un objeto de negocios personalizados (.dll o .exe) a través del servidor Web, ProgID del objeto comercial debe especificarse en el registro como se explica en este procedimiento. Esta característica RDS protege la seguridad del servidor Web al ejecutar sólo ejecutables autorizados.  
+Para iniciar correctamente un objeto comercial personalizado (. dll o. exe) a través del servidor Web, el identificador de programa (ProgID) del objeto comercial debe especificarse en el registro tal y como se explica en este procedimiento. Esta característica de RDS protege la seguridad del servidor Web mediante la ejecución de solo ejecutables autorizados.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!NOTE]
->  Para MDAC 2.0 y versiones posterior y Windows DAC, el objeto de negocios de forma predeterminada, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), no se registra de forma predeterminada durante la instalación de Windows o MDAC DAC. Sin embargo, si **RDSServer.DataFactory** se registró como seguros para la ejecución en el equipo antes de la instalación, la entrada del registro se mantiene para la nueva instalación.  
+>  En el caso de MDAC 2,0 y versiones posteriores y Windows DAC, el objeto comercial predeterminado, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), no se registra de forma predeterminada durante la instalación de la DAC de MDAC/Windows. Sin embargo, si **RDSServer. DataFactory** se registró como seguro para su ejecución en el equipo antes de la instalación, la entrada del registro se mantiene para la nueva instalación.  
   
-### <a name="to-register-a-custom-business-object"></a>Para registrar un objeto de negocios personalizada:  
+### <a name="to-register-a-custom-business-object"></a>Para registrar un objeto comercial personalizado:  
   
-1.  Haga clic en **iniciar** y, a continuación, haga clic en **ejecutar**.  
+1.  Haga clic en **Inicio** y, a continuación, en **Ejecutar**.  
   
-2.  Tipo **RegEdit** y haga clic en **Aceptar**.  
+2.  Escriba **regedit** y haga clic en **Aceptar**.  
   
-3.  En el Editor del registro, navegue hasta la **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** clave del registro.  
+3.  En el editor del registro, navegue hasta la clave del registro **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** .  
   
-4.  Seleccione el **ADCLaunch** clave y, a continuación, desde el **editar**menú, elija **New** y haga clic en **clave**.  
+4.  Seleccione la clave **ADCLaunch** y, a continuación, en el menú **edición**, seleccione **nuevo** y haga clic en **clave**.  
   
-5.  Escriba el ProgID de su objeto de negocios personalizada y haga clic en **ENTRAR**. Deje el **valor** entrada en blanco.
+5.  Escriba el ProgID del objeto comercial personalizado y haga clic en **entrar**. Deje la entrada **valor** en blanco.
 
 

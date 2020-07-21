@@ -1,5 +1,5 @@
 ---
-title: Organizador de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Organizador de KPI (pestaña KPI, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5693369574a7c7fc8ea357248347fb89dee0f214
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543651"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Organizador de KPI** en la pestaña **KPI** del Diseñador de cubos para acceder a los indicadores clave de rendimiento (KPI) del cubo especificado para ordenarlos.  
@@ -37,16 +36,16 @@ ms.locfileid: "66079403"
 |Opción|Definición|  
 |------------|----------------|  
 |**Nuevo KPI**|Seleccione esta opción para mostrar el **Editor de Formulario de KPI** y crear un nuevo KPI. Para más información sobre el **Editor de Formulario de KPI**, vea [Editor de Formulario de KPI &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Subir**|Seleccione esta opción para subir el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción está deshabilitada si el KPI seleccionado no puede desplazarse más.|  
-|**Bajar**|Seleccione esta opción para bajar el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción está deshabilitada si el KPI seleccionado no puede desplazarse más.|  
+|**Subir**|Seleccione esta opción para subir el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción estará deshabilitada si el KPI seleccionado no puede desplazarse más.|  
+|**Bajar**|Seleccione esta opción para bajar el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción estará deshabilitada si el KPI seleccionado no puede desplazarse más.|  
 |**Eliminar**|Seleccione esta opción para eliminar el KPI seleccionado.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [KPI &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Herramientas de cálculo &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de KPI &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Examinador de KPI &#40;pestaña KPI, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [KPI &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Herramientas de cálculo &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de KPI &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorador de KPI &#40;pestaña KPI, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

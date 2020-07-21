@@ -1,5 +1,5 @@
 ---
-title: Administra los detalles de la instancia (utilidad de SQL Server) | Microsoft Docs
+title: Detalles de Instancia administrada (Utilidad de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edd9853a68fd86481e32cfa9dee69b0be8b577a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930969"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
   La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Vista de lista  
  La vista de lista del panel superior muestra los datos sobre las instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se enumeran en las filas según mombreDeEquipo\nombreDeInstancia.  
   
  Los iconos de estado de mantenimiento proporcionan un resumen del estado de cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] por categoría de utilización:  
   
--   Marca de verificación verde - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - Número de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no están infringiendo las directivas de uso de recursos. Los recursos se utilizan apropiadamente.  
+-   Marca de verificación verde - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - Número de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no están infringiendo las directivas de utilización de recursos. Los recursos se utilizan apropiadamente.  
   
 -   Flecha verde hacia abajo - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - Los recursos están infrautilizados.  
   
@@ -46,9 +45,9 @@ ms.locfileid: "62774348"
   
      Para ver el historial de utilización del procesador para esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]o para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso de la CPU** .  
   
--   Espacio de archivo: muestra un resumen del estado de mantenimiento del uso de los archivos de todas las bases de datos que pertenecen a la instancia seleccionada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si el estado de mantenimiento de cualquier base de datos está sobreutilizado, el estado de mantenimiento del espacio de archivo se notificará como sobreutilizado en la vista de lista. Si el estado de mantenimiento de cualquier base de datos está infrautilizado y ninguna base de datos esta sobreutilizada, el estado del espacio de archivo se notificará como infrautilizado en la vista de lista. De lo contrario, el estado de mantenimiento del espacio de archivo se notificará como utilizado apropiadamente en la vista de lista. Para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso del almacenamiento** .  
+-   Espacio de archivo: muestra un resumen del estado de mantenimiento del uso de los archivos de todas las bases de datos que pertenecen a la instancia seleccionada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si el estado de mantenimiento de cualquier base de datos está sobreutilizado, el estado de mantenimiento del espacio de archivo se notificará como sobreutilizado en la vista de lista. Si el estado de mantenimiento de cualquier base de datos está infrautilizado y ninguna base de datos esta sobreutilizada, el estado del espacio de archivo se notificará como infrautilizado en la vista de lista. De lo contrario, el estado de mantenimiento del espacio de archivo se notificará como utilizado apropiadamente en la vista de lista. Para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso del almacenamiento**.  
   
--   Espacio de volumen: muestra un resumen de los estados de mantenimiento de la utilización del espacio de volumen para todos los volúmenes que contienen bases de datos que pertenecen a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]seleccionada. Si el estado de mantenimiento de cualquier volumen está sobreutilizado, el estado de mantenimiento del espacio de volumen se notificará como sobreutilizado en la vista de lista. Si el estado de mantenimiento de cualquier volumen está infrautilizado y no hay volúmenes que estén sobreutilizados, el estado de mantenimiento del espacio de volumen se notificará como infrautilizado en la vista de lista. De lo contrario, el estado de mantenimiento del espacio de volumen se notificará como utilizado apropiadamente en la vista de lista. Para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso del almacenamiento** .  
+-   Espacio de volumen: muestra un resumen de los estados de mantenimiento de la utilización del espacio de volumen para todos los volúmenes que contienen bases de datos que pertenecen a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]seleccionada. Si el estado de mantenimiento de cualquier volumen está sobreutilizado, el estado de mantenimiento del espacio de volumen se notificará como sobreutilizado en la vista de lista. Si el estado de mantenimiento de cualquier volumen está infrautilizado y no hay volúmenes que estén sobreutilizados, el estado de mantenimiento del espacio de volumen se notificará como infrautilizado en la vista de lista. De lo contrario, el estado de mantenimiento del espacio de volumen se notificará como utilizado apropiadamente en la vista de lista. Para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso del almacenamiento**.  
   
 -   Tipo de directiva: indica si las opciones de directiva predeterminada global y directiva personalizada invalidada están habilitadas para la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -68,17 +67,17 @@ ms.locfileid: "62774348"
   
 -   Edición de SQL Server:  
   
--   En el clúster: (True o False)  
+-   Agrupado: (True o False)  
   
 -   Directorio de copia de seguridad:  
   
 -   Intercalación:  
   
--   Distingue mayúsculas de minúsculas: (True o False)  
+-   Distinción de mayúsculas y minúsculas: (True o False)  
   
--   Idioma:  
+-   Language:  
   
--   Última hora notificada: Esta columna muestra el UCP fecha y hora local mediante el tipo de datos de fecha y hora. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
+-   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de CPU muestra gráficos en paralelo de datos históricos para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el uso de la CPU del sistema informático.  
@@ -165,21 +164,21 @@ ms.locfileid: "62774348"
   
 -   Edición de SQL Server:  
   
--   En el clúster: (True o False)  
+-   Agrupado: (True o False)  
   
 -   Directorio de copia de seguridad:  
   
 -   Intercalación:  
   
--   Distingue mayúsculas de minúsculas: (True o False)  
+-   Distinción de mayúsculas y minúsculas: (True o False)  
   
--   Idioma:  
+-   Language:  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Panel de la utilidad &#40;utilidad de SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Supervisar instancias de SQL Server en la utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [Supervisar instancias de SQL Server en el Utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Utilidad de SQL Server características y tareas](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de la Utilidad de SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

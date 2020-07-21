@@ -1,10 +1,9 @@
 ---
-title: Reglas para especificar valores de búsqueda (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Reglas para especificar valores de búsqueda
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1d614875cb8530c95d2078579307e1b83c4aa41
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5c784351eadaaa6fc90c074d836ccd66238f9052
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255766"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255183"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Reglas para especificar valores de búsqueda (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -119,7 +120,7 @@ En la tabla siguiente se resumen los formatos de fecha que se pueden utilizar en
 |------------|-------------------|  
 |Criterios|Específico de la configuración regional Específico de la base de datos Estándar ANSI<br /><br />Las fechas escritas en el [panel Criterios](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) se convierten a un formato compatible con la base de datos en el panel SQL.|  
 |SQL|Específico de la base de datos Estándar ANSI|  
-|Resultado|Específico de la configuración regional|  
+|Results|Específico de la configuración regional|  
   
 ## <a name="searching-on-logical-values"></a>Buscar valores lógicos  
 El formato de los datos lógicos varía de una base de datos a otra. Los valores False suelen almacenarse como cero (0). Un valor True se suele almacenar como 1 y, de vez en cuando, como -1. Las siguientes directrices se aplican al escribir valores lógicos en las condiciones de búsqueda:  

@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 657e4e173815fa25458e296f7eadb3d4d0696a02
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890326"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433372"
 ---
 # <a name="data-mining-query"></a>Consulta de minería de datos
   El panel de diseño contiene el generador de consultas de predicción de minería de datos, que puede utilizar para generar consultas de predicción de minería de datos. Puede diseñar consultas de predicción basadas en tablas de entrada o consultas singleton de predicción. Cambie a la vista de resultado para ejecutar la consulta y ver los resultados. La vista de consulta muestra la consulta de Extensiones de minería de datos (DMX) creada mediante el generador de consultas de predicción.  
@@ -26,9 +25,9 @@ ms.locfileid: "68890326"
  Botón Cambiar vista  
  Haga clic en un icono para cambiar entre el panel de diseño y el de consulta. De forma predeterminada, el panel de diseño está abierto.  
   
- Para cambiar al panel de diseño, haga clic en el icono ![icono de diseño](../media/ssis-designicon.gif "Design icon").  
+ Para cambiar al panel de diseño, haga clic en el icono ![icono de diseño](../media/ssis-designicon.gif "Icono de diseño").  
   
- Para cambiar al panel de consulta, haga clic en el icono ![icono de SQL](../media/ssis-queryicon.gif "icono de SQL").  
+ Para cambiar al panel de consulta, haga clic en el icono ![icono de SQL](../media/ssis-queryicon.gif "Icono de SQL").  
   
  **Modelo de minería de datos**  
  Muestra el modelo de minería de datos seleccionado en el que desea basar las predicciones.  
@@ -62,7 +61,7 @@ ms.locfileid: "68890326"
  **Criterios o argumento**  
  Especifique una condición o una expresión de usuario que se aplica a la columna. Las columnas pueden arrastrarse desde las tablas que contienen el modelo de minería de datos y las columnas de entrada a la celda.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Interfaces de consulta de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   

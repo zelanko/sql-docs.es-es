@@ -10,32 +10,32 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6fab10f0b4629c9936d4ff8df439b970c362ef41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749678"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cree una variable de entorno en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-catalog.create_environment_variable [@folder_name =] folder_name  
-    , [@environment_name =] environment_name  
-    , [@variable_name =] variable_name  
-    , [@data_type =] data_type  
-    , [@sensitive =] sensitive  
-    , [@value =] value  
-    , [@description =] description  
+catalog.create_environment_variable [ @folder_name = ] folder_name  
+    , [ @environment_name = ] environment_name  
+    , [ @variable_name = ] variable_name  
+    , [ @data_type = ] data_type  
+    , [ @sensitive = ] sensitive  
+    , [ @value = ] value  
+    , [ @description = ] description  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -84,7 +84,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se puede usar una variable de entorno para asignar eficazmente un valor a un parámetro de proyecto o parámetro de paquete para su uso en la ejecución de un paquete. Las variables de entorno permiten organizar los valores de parámetro. Los nombres de variable deben ser únicos dentro de un entorno.  
   
  El procedimiento almacenado valida el tipo de datos de la variable para garantizar que es compatible con el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

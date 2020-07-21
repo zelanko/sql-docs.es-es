@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42538053b80565005e86e82a32b6c04bae1aa360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: daae6d7b0829df68749224422b4595404843534a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010849"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Características que ya no se utilizan en la replicación de SQL Server
   Este tema describe las características de replicación desusadas que siguen estando disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -29,7 +28,7 @@ ms.locfileid: "62721481"
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Se admite la replicación si cada extremo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en dos versiones principales de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no admite la replicación a o desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)]|Se admite la replicación si cada extremo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en dos versiones principales de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no admite la replicación a o desde [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores de replicación](replication-backward-compatibility.md)  
   
   

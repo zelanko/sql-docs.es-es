@@ -1,5 +1,5 @@
 ---
-title: Proyecto de servicios de desarrollo de una integración | Microsoft Docs
+title: Desarrollo de un proyecto de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da648b3b09b25fa2a7b1cf886ad1bf770296f5ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059462"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429582"
 ---
 # <a name="development-of-an-integration-services-project"></a>Desarrollo de un proyecto de Integration Services
-  Puede agregar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a proyectos. Para crear y trabajar con proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe instalar el entorno de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obtener más información, vea [Instalar Integration Services](install-windows/install-integration-services.md).  
+  Puede agregar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a proyectos. Para crear y trabajar con proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe instalar el entorno de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obtener más información, vea [instalar Integration Services](install-windows/install-integration-services.md).  
   
  Al crear un proyecto nuevo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el cuadro de diálogo **Nuevo proyecto** incluye una plantilla **Proyecto de Integration Services** . Esta plantilla de proyecto crea un proyecto nuevo que contiene un único paquete.  
   

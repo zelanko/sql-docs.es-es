@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58f04e83541f218a4cdcfbd99d6b3de12bf38b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211378"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064978"
 ---
 # <a name="job-activity-monitor"></a>Monitor de actividad de trabajo
   Utilice esta página para ver la actividad actual de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Haga clic en **Filtro** para limitar el número de trabajos mostrados. La cuadrícula **Actividad de trabajo del agente** es de solo lectura. Haga clic en los encabezados de columna para ordenar la cuadrícula. Si desea modificar un trabajo, haga doble clic en el trabajo para abrir el cuadro de diálogo **Propiedades del trabajo** . Haga clic con el botón secundario en un trabajo de la cuadrícula para que comiencen a ejecutarse todos los pasos del trabajo, para iniciar un paso del trabajo determinado, deshabilitar o habilitar el trabajo, actualizarlo, eliminarlo, ver su historial o ver sus propiedades. Haga clic en **Actualizar** para actualizar la cuadrícula con información actual.  
@@ -39,7 +38,7 @@ ms.locfileid: "68211378"
  **Última ejecución**  
  Fecha y hora en que se ejecutó el trabajo por última vez con la fecha y hora locales del servidor.  
   
- **A continuación ejecute** <sup>1</sup>  
+ **Siguiente ejecución** <sup>1</sup>  
  Fecha y hora en que se ha programado la próxima ejecución del trabajo con la fecha y hora locales del servidor.  
   
  **Categoría**  
@@ -51,13 +50,13 @@ ms.locfileid: "68211378"
  **Programado**  
  **Sí** si se ha asignado el trabajo a una programación de trabajo; **No** si el trabajo no tiene ninguna programación.  
   
- <sup>1</sup>sólo los miembros de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fijo sysadmin rol de servidor y los administradores de servidor, puede ver el grupo de valores en esta columna. Los miembros del rol SQLAgentOperatorRole no pueden ver los valores en esta columna.  
+ <sup>1</sup> Solo los miembros del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de servidor sysadmin y del grupo administradores de servidor pueden ver los valores de esta columna. Los miembros del rol SQLAgentOperatorRole no pueden ver los valores en esta columna.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Para abrir el Monitor de actividad de trabajo  
   
 -   En el **Explorador de objetos**, expanda su servidor, expanda **Agente SQL Server**, haga clic con el botón derecho en **Monitor de actividad de trabajo**y, luego, haga clic en **Ver actividad de trabajo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actividad de trabajos de monitor](monitor-job-activity.md)  
   
   

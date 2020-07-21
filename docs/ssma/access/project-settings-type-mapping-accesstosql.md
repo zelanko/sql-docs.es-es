@@ -17,36 +17,36 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066659"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
-La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individual. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](mapping-source-and-target-data-types-accesstosql.md).  
+La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individuales. Para obtener más información, vea [asignar tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md).  
   
-Asignación de tipos está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo:  
+La asignación de tipos está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** :  
   
--   Use la **configuración del proyecto** cuadro de diálogo para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de asignación de tipo en el **herramientas** menú, seleccione **configuración del proyecto**y, a continuación, haga clic en **asignación de tipo** en el panel izquierdo.  
+-   Utilice el cuadro de diálogo **configuración del proyecto** para establecer las opciones de configuración del proyecto actual. Para obtener acceso a la configuración de asignación de tipos, en el menú **herramientas** , seleccione **configuración del proyecto**y, a continuación, haga clic en **tipo de asignación** en el panel izquierdo.  
   
--   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para acceder a la configuración de asignación de tipo en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para los que es necesaria para ver o cambiar de configuración  **Versión de destino de migración** lista desplegable y, a continuación, haga clic en **Type Mapping** en el panel izquierdo.  
+-   Utilice el cuadro de diálogo **configuración predeterminada del proyecto** para establecer las opciones de configuración de todos los proyectos. Para obtener acceso a la configuración de asignación de tipos, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione tipo de proyecto de migración para el que se deben ver los valores de/Changed en la lista desplegable de la **versión de destino** de la migración y, a continuación, haga clic en **tipo de asignación** en el panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Tipo de origen**  
-El tipo de datos de acceso para asignar.  
+Tipo de datos de acceso que se va a asignar.  
   
 **Tipo de destino**  
-El destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipo de datos de SQL Azure para el tipo de datos de acceso especificado.  
+El tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos de destino o SQL Azure para el tipo de datos de acceso especificado.  
   
 En la tabla siguiente se muestra la asignación predeterminada entre los tipos de datos de origen y de destino.  
   
 |Tipo de datos de Access|Tipo de datos de SQL Server|  
 |--------------------|------------------------|  
-|**binario [\*... \*]**|**varbinary[\*]**|  
+|**binario\*[.. \*]**|**varbinary [\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
-|**Moneda**|**money**|  
+|**monetaria**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
@@ -54,25 +54,25 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
-|**memo**|**nvarchar(max)**|  
-|**memorando** : para Access 97|**ntext**|  
+|**Memorando**|**nvarchar(max)**|  
+|**memorando** -para Access 97|**ntext**|  
 |**single**|**real**|  
-|**texto [\*... \*]**|**nvarchar [\*]**|  
-|**texto [\*... \*]** : para Access 97|**varchar [\*]**|  
+|**texto [\*.. \*]**|**nvarchar [\*]**|  
+|**texto [\*.. ] \*** -para Access 97|**VARCHAR [\*]**|  
   
-**Agregar**  
-Haga clic para agregar un tipo de datos a la lista de asignación.  
+**Add (Agregar)**  
+Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Editar**  
-Haga clic para editar un tipo de datos en la lista de asignación.  
+**Edición**  
+Haga clic para editar un tipo de datos en la lista asignación.  
   
-**Quitar**  
-Haga clic para quitar la asignación de tipos de datos seleccionados de la lista de asignación.  
+**Remove**  
+Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 **Valores predeterminados**  
-Haga clic para restablecer todas las asignaciones de tipo de datos a los valores predeterminados SSMA.  
+Haga clic para restablecer todas las asignaciones de tipos de datos a los valores predeterminados de SSMA.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Asignación de tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md)  
-[Reference(Access) de interfaz de usuario](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

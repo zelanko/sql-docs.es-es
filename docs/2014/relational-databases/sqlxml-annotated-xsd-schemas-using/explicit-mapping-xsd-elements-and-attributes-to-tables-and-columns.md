@@ -1,5 +1,5 @@
 ---
-title: Asignación explícita de elementos y atributos a las tablas y columnas (SQLXML 4.0) XSD | Microsoft Docs
+title: Asignación explícita de elementos y atributos XSD a tablas y columnas (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -25,15 +25,14 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055149"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación explícita de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   Cuando se utiliza un esquema XSD para proporcionar una vista XML de la base de datos relacional, los elementos y atributos del esquema se deben asignar a tablas y columnas de la base de datos. Las filas de la tabla o vista de la base de datos se asignarán a elementos del documento XML. Los valores de columna de la base de datos se asignan a atributos o elementos.  
@@ -45,7 +44,7 @@ ms.locfileid: "66013843"
   
  Cuando se especifica `sql:relation` en un elemento, el ámbito de esta anotación se aplica a todos los atributos y elementos secundarios que se describen en la definición del tipo complejo de ese elemento, proporcionando por lo tanto un acceso directo para escribir anotaciones.  
   
- El `sql:relation` anotación también es útil cuando los identificadores que son válidos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no son válidos en XML. Por ejemplo, "Order Details" es un nombre de tabla válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero no en XML. En casos como éste, la anotación `sql:relation` se puede utilizar para especificar la asignación, por ejemplo:  
+ La `sql:relation` anotación también es útil cuando los identificadores que son válidos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no son válidos en XML. Por ejemplo, "Order Details" es un nombre de tabla válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero no en XML. En casos como éste, la anotación `sql:relation` se puede utilizar para especificar la asignación, por ejemplo:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -55,14 +54,14 @@ ms.locfileid: "66013843"
  La anotación `sql-field` asigna un elemento o atributo a una columna de base de datos. La anotación `sql:field` se agrega para asignar un nodo XML del esquema a una columna de base de datos. No se puede especificar `sql:field` en un elemento de contenido vacío.  
   
 ## <a name="examples"></a>Ejemplos  
- Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificar las anotaciones sql:relation y sql:field  
- En este ejemplo, el esquema XSD consta de un  **\<contacto >** elemento de tipo complejo con  **\<FName >** y  **\<LName >** elementos secundarios y la **ContactID** atributo.  
+ En este ejemplo, el esquema XSD está compuesto de un **\<Contact>** elemento de tipo complejo con los **\<FName>** **\<LName>** elementos secundarios y y el atributo **ContactID** .  
   
- El `sql:relation` anotación asigna el  **\<póngase en contacto con >** elemento a la tabla Person.Contact en la base de datos AdventureWorks. El `sql:field` anotación asigna el  **\<FName >** elemento a la columna FirstName y el  **\<LName >** elemento a la columna LastName.  
+ La `sql:relation` anotación asigna el **\<Contact>** elemento a la tabla person. contact de la base de datos AdventureWorks. La `sql:field` anotación asigna el **\<FName>** elemento a la columna FirstName y el **\<LName>** elemento a la columna LastName.  
   
- Se especifica ninguna anotación para la **ContactID** atributo. Esto produce una asignación predeterminada del atributo a la columna del mismo nombre.  
+ No se especifica ninguna anotación para el atributo **ContactID** . Esto produce una asignación predeterminada del atributo a la columna del mismo nombre.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -84,11 +83,11 @@ ms.locfileid: "66013843"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como MySchema-annotated.xml.  
   
-2.  Copie la plantilla siguiente siguiente y péguelo en un archivo de texto. Guarde el archivo como MySchema-annotatedT.xml en el mismo directorio donde guardó MySchema-annotated.xml.  
+2.  Copie la siguiente plantilla y péguela en un archivo de texto. Guarde el archivo como MySchema-annotatedT.xml en el mismo directorio donde guardó MySchema-annotated.xml.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -106,7 +105,7 @@ ms.locfileid: "66013843"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados parciales:  
   

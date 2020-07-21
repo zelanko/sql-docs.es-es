@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59bcc5bda489edcd337bba78bd07d55ff0a28806
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029274"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, clase de eventos
   La clase de eventos **Log File Auto Shrink** indica que el archivo de registro se ha reducido automáticamente. Este evento no se desencadena si el archivo de registro se reduce mediante una instrucción ALTER DATABASE explícita.  
@@ -34,10 +33,10 @@ ms.locfileid: "62662219"
 |**ClientProcessID**|**Int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**Duración**|**bigint**|Tiempo (en milisegundos) necesario para ampliar el archivo.|13|Sí|  
+|**Duration**|**bigint**|Tiempo (en milisegundos) necesario para ampliar el archivo.|13|Sí|  
 |**EndTime**|**datetime**|Hora final de la **reducción automática** del archivo de registro.|18|Sí|  
-|**EventClass**|**int**|Tipo de evento = 95.|27|Sin|  
-|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|Sin|  
+|**EventClass**|**int**|Tipo de evento = 95.|27|No|  
+|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|No|  
 |**Nombre de archivo**|**nvarchar**|Nombre lógico del archivo que se va a ampliar.|36|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|**Int**|Número de páginas de 8 KB en las que se incrementa el archivo.|25|Sí|  
@@ -50,7 +49,7 @@ ms.locfileid: "62662219"
 |**SPID**|**Int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

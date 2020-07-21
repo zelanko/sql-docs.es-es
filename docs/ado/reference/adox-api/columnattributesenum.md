@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - ColumnAttributesEnum enumeration [ADOX]
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0c590e0f5dd94713c84a858063a81c680e4a0029
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966880"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759371"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-Especifica las características de un [columna](../../../ado/reference/adox-api/column-object-adox.md).  
+Especifica las características de una [columna](../../../ado/reference/adox-api/column-object-adox.md).  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adColFixed**|1|La columna es una longitud fija.|  
-|**adColNullable**|2|La columna puede contener valores null.|  
+|**adColFixed**|1|La columna tiene una longitud fija.|  
+|**adColNullable**|2|La columna puede contener valores NULL.|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Attributes (propiedad, ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536357"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
   Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
@@ -33,19 +32,19 @@ ms.locfileid: "66076239"
   
  [Crear un nuevo proyecto mediante la plantilla de proyecto de Analysis Services](#bkmk_NewUsingTemplate)  
   
- [Crear un nuevo proyecto usando una base de datos existente de Analysis Services](#bkmk_NewUsingWizard)  
+ [Crear un nuevo proyecto con una base de datos de Analysis Services existente](#bkmk_NewUsingWizard)  
   
  [Agregar un proyecto de Analysis Services a una solución existente](#bkmk_AddtoExistingSolution)  
   
- [Generar e implementar la solución](#bkmk_buildDeploy)  
+ [Compilar e implementar la solución](#bkmk_buildDeploy)  
   
  [Carpetas de proyecto de Analysis Services](#bkmk_ProjectFolders)  
   
- [Tipos de archivo de Analysis Services](#bkmk_FileTypes)  
+ [Analysis Services tipos de archivo](#bkmk_FileTypes)  
   
  [Plantillas de elementos de Analysis Services](#bkmk_ItemTemplates)  
   
-##  <a name="bkmk_NewUsingTemplate"></a> Crear un nuevo proyecto mediante la plantilla de proyecto de Analysis Services  
+##  <a name="create-a-new-project-using-the-analysis-services-project-template"></a><a name="bkmk_NewUsingTemplate"></a>Crear un nuevo proyecto con la plantilla de proyecto de Analysis Services  
  Siga estas instrucciones para crear un proyecto vacío en el que se definirán objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se podrán implementar a continuación como una nueva base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en **Archivo**, seleccione **Nuevo**y haga clic en **Proyecto**. En el cuadro de diálogo **Nuevo proyecto** , en el panel **Tipos de proyecto** , seleccione **Proyectos de Business Intelligence**.  
@@ -58,13 +57,13 @@ ms.locfileid: "66076239"
   
 5.  Para agregar el proyecto nuevo a la solución existente, en la lista desplegable **Solución** , seleccione **Agregar a solución**.  
   
-     -o bien-  
+     o bien  
   
      Para crear una nueva solución, en la lista desplegable **Solución** , seleccione **Crear nueva solución**. Para crear una nueva carpeta para la nueva solución, seleccione **Crear directorio para la solución**. En **Nombre de la solución**, escriba el nombre de la nueva solución.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
-##  <a name="bkmk_NewUsingWizard"></a> Crear un nuevo proyecto usando una base de datos existente de Analysis Services  
+##  <a name="create-a-new-project-using-an-existing-analysis-services-database"></a><a name="bkmk_NewUsingWizard"></a> Crear un nuevo proyecto usando una base de datos existente de Analysis Services  
  Use el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear un proyecto basado en los objetos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente. Cuando se define un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basado en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente, los metadatos de dicha base de datos se abrirán en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A continuación, estos objetos se pueden modificar en el proyecto, sin que lo objetos originales se vean afectados, y se pueden implementar en la misma base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si las propiedades de implantación así lo especifican, o en otra recién creada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para llevar a cabo pruebas comparativas. Hasta que se implementen los cambios, no tendrá efecto ningún cambio en la base de datos existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  También puede usar la plantilla Importar base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear un proyecto a partir de una base de datos de producción en la que se han realizado cambios directamente desde que se implementó el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] original.  
@@ -75,7 +74,7 @@ ms.locfileid: "66076239"
   
 2.  En el cuadro de diálogo **Nuevo proyecto** , en la categoría **Plantillas instaladas de Visual Studio** , seleccione **Importar base de datos de Analysis Services**.  
   
-3.  Escriba la información de propiedades del proyecto y la solución, incluyendo el nombre de los archivos y su ubicación. Haga clic en **Aceptar**.  
+3.  Escriba la información de propiedades del proyecto y la solución, incluyendo el nombre de los archivos y su ubicación. Haga clic en **OK**.  
   
 4.  En la página de inicio del **Asistente para importar bases de datos de Analysis Services** , haga clic en **Siguiente**.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66076239"
   
 7.  Abra el Explorador de soluciones para ver el contenido del proyecto.  
   
-##  <a name="bkmk_AddtoExistingSolution"></a> Agregar un proyecto de Analysis Services a una solución existente  
+##  <a name="add-an-analysis-services-project-to-an-existing-solution"></a><a name="bkmk_AddtoExistingSolution"></a> Agregar un proyecto de Analysis Services a una solución existente  
  Si ya dispone de una solución que contiene todos los archivos de origen de una aplicación empresarial, puede agregar un nuevo proyecto de Analysis Services a dicha solución.  
   
  La adición de un proyecto existente a una solución asocia el proyecto a la solución, pero no lo copia en esta. Si el proyecto de Analysis Services se creó en otra solución, los archivos de proyecto permanecen con la solución original en la que se crearon. Esto significa que los cambios realizados en el proyecto mediante cualquiera de las soluciones se aplicarán al mismo conjunto de archivos de origen. Si este comportamiento no es el deseado, en primer lugar deberá copiar o mover los archivos de proyecto a la carpeta de la nueva solución y, a continuación, agregar el proyecto a la solución.  
@@ -98,7 +97,7 @@ ms.locfileid: "66076239"
   
 2.  Seleccione el archivo .dwproj que desea agregar a la solución.  
   
-##  <a name="bkmk_buildDeploy"></a> Generar e implementar la solución  
+##  <a name="build-and-deploy-the-solution"></a><a name="bkmk_buildDeploy"></a> Generar e implementar la solución  
  De manera predeterminada, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] implementa un proyecto en la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el equipo local. Puede cambiar este destino de implementación con el cuadro de diálogo **Páginas de propiedades** del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para cambiar la propiedad de configuración **Server** .  
   
 > [!NOTE]  
@@ -110,7 +109,7 @@ ms.locfileid: "66076239"
   
  Cuando se complete el proyecto, puede usar el Asistente para la implementación para implementar el script de implementación, generado al crear la solución, en las instancias de destino para las pruebas, los ensayos y la implementación final.  
   
-##  <a name="bkmk_ProjectFolders"></a> Carpetas de proyecto de Analysis Services  
+##  <a name="analysis-services-project-folders"></a><a name="bkmk_ProjectFolders"></a>Analysis Services carpetas de proyecto  
  Un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene las siguientes carpetas, que se usan para organizar los elementos incluidos en el proyecto.  
   
 |Carpeta|Descripción|  
@@ -124,7 +123,7 @@ ms.locfileid: "66076239"
 |Ensamblados|Contiene referencias a las bibliotecas COM y los ensamblados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede crear referencias con el cuadro de diálogo **Agregar referencia** .|  
 |Varios|Contiene cualquier tipo de archivo excepto los de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Use esta carpeta para agregar archivos varios, como archivos de texto que contengan notas del proyecto.|  
   
-##  <a name="bkmk_FileTypes"></a> Tipos de archivo de Analysis Services  
+##  <a name="analysis-services-file-types"></a><a name="bkmk_FileTypes"></a> Tipos de archivo de Analysis Services  
  Una solución de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] puede contener varios tipos de archivos, dependiendo de qué proyectos se incluyeron en la solución y qué elementos se incluyeron en cada proyecto. Por lo general, los archivos de cada proyecto de una solución de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] se almacenan en la carpeta de la solución, dentro de una carpeta independiente para cada proyecto.  
   
 > [!NOTE]  
@@ -145,12 +144,12 @@ ms.locfileid: "66076239"
 |Archivo de base de datos (.database)|Contiene elementos ASSL que definen los metadatos de una base de datos, incluyendo tipos de cuenta, traducciones y permisos de la base de datos.|  
 |Archivo de rol de base de datos (.role)|Contiene elementos ASSL que definen los metadatos de un rol de base de datos, incluyendo miembros de roles.|  
   
-##  <a name="bkmk_ItemTemplates"></a> Plantillas de elementos de Analysis Services  
+##  <a name="analysis-services-item-templates"></a><a name="bkmk_ItemTemplates"></a>Plantillas de elementos de Analysis Services  
  Si usa el cuadro de diálogo **Agregar nuevo elemento** para agregar nuevos elementos a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede usar una plantilla de elementos, es decir, una instrucción o script predefinido que muestra cómo realizar una determinada acción.  
   
  Las plantillas de elementos, que aparecen en la tabla siguiente, están disponibles en la categoría Elementos de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , en el cuadro de diálogo **Agregar nuevo elemento** .  
   
-|Category|Plantilla de elementos|Descripción|  
+|Categoría|Plantilla de elementos|Descripción|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementos de un proyecto|Cube|Inicia el Asistente para cubos para agregar un nuevo cubo al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Origen de datos|Inicia el Asistente para orígenes de datos para agregar un nuevo origen de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
@@ -159,9 +158,9 @@ ms.locfileid: "66076239"
 ||Dimensión|Inicia el Asistente para dimensiones para agregar una nueva dimensión de base de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Estructura de minería de datos|Inicia el Asistente para minería de datos para agregar una nueva estructura de minería de datos y el modelo de minería de datos asociado al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Generar proyectos de Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar las propiedades del proyecto Analysis Services &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Compilar proyectos de Analysis Services &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Implementar proyectos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

@@ -13,35 +13,35 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679053"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de datos (API de procedimiento almacenado extendido)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Para utilizar los tipos de datos de la API Procedimiento almacenado extendido, incluya el archivo de encabezado Srv.h en el programa.  
   
-|Tipo de datos|Tipo de datos de SQL Server|Descripción|  
+|Tipo de datos|Tipos de datos de SQL Server|Descripción|  
 |---------------|--------------------------|-----------------|  
-|SRVBIGBINARY|**binario**|Tipo de datos **binary**, longitud de 0 a 8000 bytes.|  
+|SRVBIGBINARY|**binary**|Tipo de datos **binary**, longitud de 0 a 8000 bytes.|  
 |SRVBIGCHAR|**char**|Tipo de datos **character**, longitud de 0 a 8000 bytes.|  
 |SRVBIGVARBINARY|**varbinary**|Tipo de datos **binary** de longitud variable, longitud de 0 a 8000 bytes.|  
 |SRVBIGVARCHAR|**varchar**|Tipo de datos **character** de longitud variable, longitud de 0 a 8000 bytes.|  
-|SRVBINARY|**binario**|Tipo de datos **binary**.|  
-|SRVBIT|**Bit**|Tipo de datos **bit**.|  
+|SRVBINARY|**binary**|tipo de datos **binario** .|  
+|SRVBIT|**Poco**|tipo de datos **bit** .|  
 |SRVBITN|**bit null**|Tipo de datos **bit**, permite valores NULL.|  
 |SRVCHAR|**char**|Tipo de datos **character**.|  
 |SRVDATETIME|**datetime**|Tipo de datos **datetime** de 8 bytes.|  
 |SRVDATETIM4|**smalldatetime**|Tipo de datos **smalldatetime** de 4 bytes.|  
 |SRVDATETIMN|**datetime null**|Tipo de datos **smalldatetime** o **datetime**, permite valores NULL.|  
-|SRVDECIMAL|**decimal**|Tipo de datos **decimal**.|  
+|SRVDECIMAL|**decimal**|tipo de datos **decimal** .|  
 |SRVDECIMALN|**decimal null**|Tipo de datos **decimal**, permite valores NULL.|  
 |SRVFLT4|**real**|Tipo de datos **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de datos **float** de 8 bytes.|  
@@ -59,7 +59,7 @@ ms.locfileid: "68064216"
 |SRVNUMERIC|**numeric**|Tipo de datos **numeric**.|  
 |SRVNUMERICN|**numeric null**|Tipo de datos **numeric**, permite valores NULL.|  
 |SRVNVARCHAR|**nvarchar**|Tipo de datos **character** Unicode de longitud variable.|  
-|SRVTEXT|**texto**|Tipo de datos **text**.|  
+|SRVTEXT|**text**|Tipo de datos **text**.|  
 |SRVVARBINARY|**varbinary**|Tipo de datos **binary** de longitud variable.|  
 |SRVVARCHAR|**varchar**|Tipo de datos **character** de longitud variable.|  
   

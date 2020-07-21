@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f978432deffbddbee3e0413aeba54b9c1c4635
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b9740bb5c9025dcb1cd2d989b8cba3112627d344
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978861"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927316"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>Método getTimestamp (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
  Valor **int** que indica el índice de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto timestamp.  
+ Un objeto Timestamp.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getTimestamp especifica este método getTimestamp en la interfaz java.sql.ResultSet.  
   
  Este método solamente devuelve valores de columnas datetime y smalldatetime de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

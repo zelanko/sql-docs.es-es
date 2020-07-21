@@ -1,5 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2012 Service Pack | Microsoft Docs
+description: Este artículo contiene las notas de la versión agregadas de los cuatro Service Pack de SQL Server 2012. Cada Service Pack es una acumulación de Service Pack anteriores.
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
@@ -7,15 +8,15 @@ ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: d49f60415135a40ffeb470f09903cd3cd080ab69
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155698"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999469"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +32,9 @@ Los Service Pack solo están disponibles en línea, no en los soportes de instal
 
 ### <a name="download-pages"></a>Páginas de descarga
 
-- [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
-- [Instalación de la revisión SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)
+- [Instalación de la revisión SQL Server 2012 SP4](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### <a name="performance-and-scale-improvements"></a>Mejoras de rendimiento y escalado
@@ -107,7 +108,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Una versión de 32 bits de SQL Server 2012 Management Studio Express|Actualizar a la versión de 32 bits de SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x86_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Una versión de 32 bits de cualquier edición de SQL Server 2012 **y** una versión de 32 bits de las herramientas de cliente y de administración (incluido SQL Server 2012 RTM Management Studio)|Actualizar todos los productos a la versión de 32 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Una versión de 32 bits de una o más herramientas del [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)|Actualizar las herramientas a la versión de 32 bits del Microsoft SQL Server 2012 SP1 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|Una versión de 32 bits de una o más herramientas del [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Actualizar las herramientas a la versión de 32 bits del Microsoft SQL Server 2012 SP1 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
 |No instalar la versión de 32 bits de SQL Server 2012|Instalar una versión de 32 bits de Server 2012 incluido SP1 (nueva instancia con SP1 preinstalado)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **y** SQLServer2012SP1-FullSlipstream-x86-ENU.box desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |No instalar la versión de 32 bits de SQL Server 2012 Management Studio|Instalar la versión de 32 bits de SQL Server 2012 Management Studio junto con el SP1|SQLManagementStudio_x86_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Sin versión de 32 bits de SQL Server 2012 RTM Express|Instalar versión de 32 bits de SQL Server 2012 Express incluido el SP1|SQLEXPR32_x86_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkId=267905)|  
@@ -118,7 +119,7 @@ Use la tabla siguiente para determinar qué archivo va a descargar e instalar. C
 |Una versión de 64 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 64 bits de SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Una versión de 64 bits de SQL Server 2012 Management Studio Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP1 Management Studio Express|SQLManagementStudio_x64_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Una versión de 64 bits de cualquier edición de SQL Server 2012 **y** una versión de 64 bits de las herramientas de cliente y de administración (incluido SQL Server 2012 RTM Management Studio)|Actualizar todos los productos a la versión de 64 bits de SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|Una versión de 64 bits de una o más herramientas del [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=16978)|Actualizar las herramientas a la versión de 64 bits del Microsoft SQL Server 2012 SP1 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
+|Una versión de 64 bits de una o más herramientas del [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)|Actualizar las herramientas a la versión de 64 bits del Microsoft SQL Server 2012 SP1 Feature Pack|Uno o más archivos del [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|  
 |No instalar la versión de 64 bits de SQL Server 2012|Instalar una versión de 64 bits de Server 2012 incluido SP1 (nueva instancia con SP1 preinstalado)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **y** SQLServer2012SP1-FullSlipstream-x64-ENU.box desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |No instalar la versión de 64 bits de SQL Server 2012 Management Studio|Instalar la versión de 64 bits de SQL Server 2012 Management Studio junto con el SP1|SQLManagementStudio_x64_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
 |Sin versión de 64 bits de SQL Server 2012 RTM Express|Instalar versión de 64 bits de SQL Server 2012 Express incluido el SP1|SQLEXPR_x64_ENU.exe desde [aquí](https://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -179,14 +180,14 @@ Los detalles del error interno contendrán un mensaje similar al siguiente:
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Las hojas de Power View en un libro PowerPivot se borran tras una actualización de datos programada  
 **Problema:** en el complemento PowerPivot para SharePoint, al usar **Actualización de datos programada** en un libro con Power View, se eliminan todas las hojas de Power View.  
   
-**Solución**: para usar la **Actualización de datos programada** con libros Power View, cree un libro PowerPivot que sea el modelo de datos. Cree otro libro con las hojas de Excel y Power View que se vincule al libro PowerPivot con el modelo de datos. Para la actualización de datos, solo se debe programar el libro PowerPivot con el modelo de datos.  
+**Solución alternativa**: para usar la **Actualización de datos programada** con libros Power View, cree un libro PowerPivot que sea el modelo de datos. Cree otro libro con las hojas de Excel y Power View que se vincule al libro PowerPivot con el modelo de datos. Para la actualización de datos, solo se debe programar el libro PowerPivot con el modelo de datos.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponible en la edición incorrecta de SQL Server 2012  
 **Problema:** en la versión [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM, la característica Data Quality Services (DQS) está disponible en ediciones de SQL Server distintas de Enterprise, Business Intelligence y Developer. Después de instalar SQL Server 2012 SP1, DQS no estará disponible en todas las ediciones salvo en Enterprise, Business Intelligence y Developer.  
   
-**Solución**: si usa DQS en una edición no admitida, actualice a una edición admitida o desinstale la dependencia de esta característica de sus aplicaciones.  
+**Solución alternativa**: si usa DQS en una edición no admitida, actualice a una edición admitida o desinstale la dependencia de esta característica de sus aplicaciones.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -247,6 +248,6 @@ Esta versión presenta varios escenario de compatibilidad con versiones posterio
 - [Instalar actualizaciones de servicio de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [Identificar la versión y edición de SQL Server](https://support.microsoft.com/help/321185) 
 - [Cómo determinar la versión y la edición de SQL Server](https://support.microsoft.com/kb/321185)  
-- [Características compatibles con las ediciones de SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Características admitidas por las ediciones de SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

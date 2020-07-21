@@ -20,18 +20,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629192"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Puede usar el *término de proximidad* **NEAR** en un predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o en una función [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para buscar palabras o frases que están cerca unas de otras. 
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Puede usar el *término de proximidad* **NEAR** en un predicado [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o una función [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para buscar palabras o frases que estén cerca unas de otras. 
   
-##  <a name="Custom_NEAR"></a> Introducción a NEAR  
+##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a> Introducción a NEAR  
 **NEAR** tiene las características siguientes:  
 -   Puede especificar el número máximo de términos de no búsqueda que separan el primero y el último término de búsqueda.
 
@@ -129,7 +129,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
  No se puede combinar NEAR con un término de generación (ISABOUT ...) o un término ponderado (FORMSOF ...).  
   
-##  <a name="Additional_Considerations"></a> Más información sobre las búsquedas de proximidad  
+##  <a name="more-info-about-proximity-searches"></a><a name="Additional_Considerations"></a> Más información sobre las búsquedas de proximidad  
    
 -   Apariciones superpuestas de términos de búsqueda  
   

@@ -1,5 +1,5 @@
 ---
-title: Seleccione la instancia | Microsoft Docs
+title: Seleccionar instancia | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcebff1c8621e2699137163e89bef87c22c67865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036665"
 ---
 # <a name="select-instance"></a>Seleccionar instancia
   Utilice la página Seleccionar instancia del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar la instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] que desea actualizar a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -45,8 +44,8 @@ ms.locfileid: "66092351"
   
  Para obtener más información sobre escenarios de actualización admitidos y problemas conocidos de actualización, vea [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
-## <a name="see-also"></a>Vea también  
- [Utilice el Asesor de actualizaciones para preparar las actualizaciones](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+## <a name="see-also"></a>Consulte también  
+ [Usar el asesor de actualizaciones para preparar las actualizaciones](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [Trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

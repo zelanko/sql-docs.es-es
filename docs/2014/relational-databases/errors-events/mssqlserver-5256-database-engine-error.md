@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 6fe254b4-2926-446f-8b20-0f1d921a4615
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9541247b281d6e96c87bf67c879b517a16d48dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 046644db95b586ebdfb1db3846c13b6670d21bbe
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913828"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551237"
 ---
-# <a name="mssqlserver5256"></a>MSSQLSERVER_5256
+# <a name="mssqlserver_5256"></a>MSSQLSERVER_5256
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|5256|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|5256|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC4_INCORRECT_PAGE_ID_IN_HEADER_NO_METADATA|  
 |Texto del mensaje|Error de tabla: Id. de unidad de asignación A_ID. En el encabezado de la página P_ID1 hay un Id. de página incorrecto. PageId del encabezado de página = P_ID2.|  

@@ -1,10 +1,8 @@
 ---
 title: JSON_QUERY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5acf669e6db68b5fceb3a83c7f036d5f8065bde3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752249"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +36,7 @@ ms.locfileid: "68109372"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql  
+```syntaxsql
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
@@ -69,7 +68,7 @@ Si el formato de *path* no es válido, **JSON_QUERY** devuelve un error.
   
 - En el modo strict, **JSON_QUERY** devuelve un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo lax y modo strict
 
@@ -77,32 +76,32 @@ Si el formato de *path* no es válido, **JSON_QUERY** devuelve un error.
   
 ```json  
 {
-    "info": {
-        "type": 1,
-        "address": {
-            "town": "Bristol",
-            "county": "Avon",
-            "country": "England"
-        },
-        "tags": ["Sport", "Water polo"]
-    },
-    "type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
  En la tabla siguiente se compara el comportamiento de **JSON_QUERY** en modo lax y modo strict. Para más información sobre la especificación del modo de ruta de acceso opcional (lax o strict), vea [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Ruta de acceso|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
+|Path|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Devuelve todo el texto JSON.|Devuelve todo el texto JSON.|N/A|  
+|$|Devuelve todo el texto JSON.|Devuelve todo el texto JSON.|N/a|  
 |$.info.type|NULL|Error|No es un objeto o una matriz.<br /><br /> Use **JSON_VALUE** en su lugar.|  
 |$.info.address.town|NULL|Error|No es un objeto o una matriz.<br /><br /> Use **JSON_VALUE** en su lugar.|  
-|$.info."address"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N/A|  
-|$.info.tags|N"[ "Sport", "Water polo"]"|N"[ "Sport", "Water polo"]"|N/A|  
+|$.info."address"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N/a|  
+|$.info.tags|N"[ "Sport", "Water polo"]"|N"[ "Sport", "Water polo"]"|N/a|  
 |$.info.type[0]|NULL|Error|No es una matriz.|  
 |$.info.none|NULL|Error|La propiedad no existe.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Uso de JSON_QUERY con FOR JSON
+### <a name="using-json_query-with-for-json"></a>Uso de JSON_QUERY con FOR JSON
 
 **JSON_QUERY** devuelve un fragmento de JSON válido. Como resultado, **FOR JSON** no incluye entre caracteres de escape los caracteres especiales del valor devuelto de **JSON_QUERY**.
 
@@ -116,7 +115,7 @@ Si se van a devolver resultados con FOR JSON y se van a incluir datos que ya est
   
 ```sql  
 SELECT PersonID,FullName,
- JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
+  JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
 FROM Application.People
 ```  
   
@@ -132,7 +131,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
- [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

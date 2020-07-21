@@ -1,6 +1,6 @@
 ---
-title: Actualización de bases de datos mediante el Asistente para la optimización de consultas | Microsoft Docs
-ms.custom: ''
+title: Actualización de bases de datos con el Asistente para la optimización de consultas
+ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163903"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598751"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o posterior, y al [actualizar el nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) al más reciente disponible, una carga de trabajo podría quedar expuesta al riesgo de regresión del rendimiento. Esto también es posible en menor grado al actualizar entre [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y cualquier versión más reciente.
 
@@ -34,7 +34,7 @@ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], y con cada nueva 
 
 Esta capacidad de canalización proporcionada por el nivel de compatibilidad de la base de datos, en combinación con el Almacén de consultas, ofrece un gran nivel de control sobre el rendimiento de las consultas durante el proceso de actualización si la actualización sigue el flujo de trabajo recomendado que se indica a continuación. Para obtener más información sobre el flujo de trabajo recomendado para actualizar el nivel de compatibilidad, vea [Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
-![Flujo de trabajo recomendado de actualización de base de datos mediante el Almacén de consultas](../../relational-databases/performance/media/query-store-usage-5.png "Recommended database upgrade workflow using Query Store") 
+![Flujo de trabajo de actualización de base de datos recomendado mediante el almacén de consultas](../../relational-databases/performance/media/query-store-usage-5.png "Flujo de trabajo de actualización de base de datos recomendado mediante el almacén de consultas") 
 
 Este control sobre las actualizaciones se ha mejorado aún más con [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], donde se ha incorporado el [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) y se permite la automatización del último paso del flujo de trabajo recomendado anterior.
 
@@ -56,7 +56,7 @@ Para obtener más información sobre cómo asociar una base de datos, vea [Adjun
 
 Vea a continuación cómo QTA básicamente solo cambia los últimos pasos del flujo de trabajo recomendado para actualizar el nivel de compatibilidad mediante el Almacén de consultas visto arriba. En lugar de dar la opción de elegir entre el plan de ejecución actualmente ineficaz y el último plan de ejecución bueno conocido, QTA presenta opciones de optimización que son específicas de las consultas con regresión seleccionadas, con el fin de crear un nuevo estado mejorado con planes de ejecución optimizados.
 
-![Flujo de trabajo recomendado de actualización de base de datos mediante QTA](../../relational-databases/performance/media/qta-usage.png "Recommended database upgrade workflow using QTA")
+![Flujo de trabajo de actualización de base de datos recomendado mediante QTA](../../relational-databases/performance/media/qta-usage.png "Flujo de trabajo de actualización de base de datos recomendado mediante QTA")
 
 ### <a name="qta-tuning-internal-search-space"></a>Espacio de búsqueda interno de optimización de QTA
 QTA solo se ocupa de las consultas `SELECT` que se pueden ejecutar desde el Almacén de consultas. Las consultas parametrizadas son aptas si se conoce el parámetro compilado. Las consultas que dependen de construcciones en tiempo de ejecución, como tablas temporales o variables de tabla, no son aptas en este momento. 
@@ -89,14 +89,14 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
         -  Establezca el nivel de compatibilidad previsto de la base de datos de destino en el que debería estar la base de datos de usuario una vez completado el flujo de trabajo de QTA.
         Cuando termine, haga clic en **Siguiente**.
     
-       ![Ventana de instalación Nueva sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-setup.png "New database upgrade setup window")  
+       ![Nueva ventana de configuración de sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-setup.png "Nueva ventana de configuración de actualización de base de datos")  
   
     2.  En la ventana **Configuración**, dos columnas muestran el estado **Actual** del Almacén de consultas de la base de destino, así como la configuración **Recomendada**. 
         -  La configuración recomendada se selecciona de forma predeterminada, pero al hacer clic en el botón de radio en la columna actual, se acepta la configuración actual y también se permite ajustar con precisión la configuración actual del Almacén de consultas. 
         -  El valor de *Umbral de consultas obsoletas* propuesto es dos veces la duración de la carga de trabajo esperada en días. Esto se debe a que el Almacén de consultas debe contener información sobre la carga de trabajo de línea de base y la carga de trabajo de actualización posterior a la base de datos.
         Cuando termine, haga clic en **Siguiente**.
 
-       ![Ventana de configuración Nueva sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
+       ![Nueva ventana de configuración de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-settings.png "Nueva ventana de configuración de actualización de base de datos")
 
        > [!IMPORTANT]
        > El valor *Tamaño máximo* propuesto es un valor arbitrario que puede ser adecuado para una carga de trabajo de breve duración.   
@@ -105,7 +105,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
 
 4.  La ventana **Optimización** concluye la configuración de la sesión e indica los pasos siguientes para abrir la sesión y continuar con ella. Cuando haya terminado, haga clic en **Finalizar**.
 
-    ![Ventana de optimización Nueva sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-tuning.png "New database upgrade tuning window")
+    ![Nueva ventana de optimización de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-tuning.png "Nueva ventana de optimización de actualización de base de datos")
 
 > [!NOTE]
 > Un posible escenario alternativo se inicia al restaurar la copia de seguridad de una base de datos desde el servidor de producción donde una base de datos ya ha pasado por el flujo de trabajo de actualización de compatibilidad de base de datos recomendado en un servidor de prueba.
@@ -125,7 +125,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     -  **Descripción**: generada por el sistema; consta del nivel de compatibilidad de la base de datos de destino seleccionado por el usuario y el número de días de la carga de trabajo de ciclo comercial.
     -  **Hora de inicio**: fecha y hora de creación de la sesión.
 
-    ![Página de administración de sesiones de QTA](../../relational-databases/performance/media/qta-session-management.png "QTA Session Management page")
+    ![Página de administración de sesiones de QTA](../../relational-databases/performance/media/qta-session-management.png "Página de administración de sesiones de QTA")
 
     > [!NOTE]
     > **Eliminar sesión** elimina todos los datos almacenados de la sesión seleccionada,    
@@ -145,19 +145,19 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
         > [!NOTE]
         > La ventana de QTA se puede cerrar mientras la carga de trabajo se ejecuta. Al volver a la sesión que permanece en estado activo en un momento posterior, se reanuda desde el mismo paso donde se había quedado. 
 
-        ![Paso 2 de QTA: subpaso 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA Step 2 Substep 1")
+        ![QTA, paso 2 subpaso 1](../../relational-databases/performance/media/qta-step2-substep1.png "QTA, paso 2 subpaso 1")
 
     2.  **Actualizar base de datos** le pide permiso para actualizar el nivel de compatibilidad de la base de datos al destino deseado. Para continuar con el siguiente subpaso, haga clic en **Sí**.
 
-        ![Paso 2 de QTA: subpaso 2: actualización del nivel de compatibilidad de la base de datos](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA Step 2 Substep 2 - Upgrade database compatibility level")
+        ![QTA, paso 2 subpaso 2: Actualización del nivel de compatibilidad de la base de datos](../../relational-databases/performance/media/qta-step2-substep2-prompt.png "QTA, paso 2 subpaso 2: Actualización del nivel de compatibilidad de la base de datos")
 
         La siguiente página confirma que el nivel de compatibilidad de la base de datos se ha actualizado correctamente.
 
-        ![Paso 2 de QTA: subpaso 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA Step 2 Substep 2")
+        ![QTA, paso 2 subpaso 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA, paso 2 subpaso 2")
 
     3.  **Recopilación de datos observados** solicita al usuario que vuelva a ejecutar el ciclo de carga de trabajo representativo para que el Almacén de consultas pueda recopilar una línea de base comparativa que se use para buscar oportunidades de optimización. Mientras se ejecuta la carga de trabajo, use el botón **Actualizar** para seguir actualizando la lista de consultas con regresión, si se ha detectado alguna. Cambie el valor **Queries to show** (Consultas que se van a mostrar) para limitar el número de consultas que aparecen. El orden de la lista se ve afectado por **Métrica** (Duración o Tiempo de CPU) y **Agregación** (Promedio es el valor predeterminado). Seleccione también cuántas **consultas se van a mostrar**. Una vez completada esa carga de trabajo, active **Done with workload run** (Ejecución de carga de trabajo lista) y haga clic en **Siguiente**.
 
-        ![Paso 2 de QTA: subpaso 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA Step 2 Substep 3")
+        ![QTA, paso 2 subpaso 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA, paso 2 subpaso 3")
 
         La lista contiene la información siguiente:
         -  **Id. de consulta** 
@@ -177,7 +177,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     > Un símbolo del sistema advierte de que una vez que QTA pasa a la fase de experimentación, no es posible volver a la página Ver análisis.   
     > Si no selecciona todas las consultas aptas antes de pasar a la fase de experimentación, debe crear una nueva sesión posteriormente y repetir el flujo de trabajo. Esto requiere el restablecimiento del nivel de compatibilidad de la base de datos al valor anterior.
 
-    ![Paso 3 de QTA](../../relational-databases/performance/media/qta-step3.png "QTA Step 3")
+    ![QTA, paso 3](../../relational-databases/performance/media/qta-step3.png "QTA, paso 3")
 
 5.  **Visualización de resultados** permite la selección de las consultas que van a implementar la optimización propuesta como guía de plan. 
 
@@ -191,15 +191,15 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     -  **Opción de consulta**: vínculo a la sugerencia propuesta que mejora la métrica de ejecución de consulta.
     -  **Puede implementar**: *True* o *False* en función de si la optimización de consultas propuesta se puede implementar como guía de plan.
 
-    ![Paso 4 de QTA](../../relational-databases/performance/media/qta-step4.png "QTA Step 4")
+    ![QTA, paso 4](../../relational-databases/performance/media/qta-step4.png "QTA, paso 4")
 
 6.  **Comprobación** muestra el estado de implementación de consultas previamente seleccionadas de esta sesión. La lista de esta página difiere de la página anterior al cambiar la columna **Puede implementar** por **Puede revertir**. Esta columna puede ser *Verdadero* o *Falso* en función de si se puede revertir la optimización de consultas implementada y se puede quitar su guía de plan.
 
-    ![Paso 5 de QTA](../../relational-databases/performance/media/qta-step5.png "QTA Step 5")
+    ![QTA, paso 5](../../relational-databases/performance/media/qta-step5.png "QTA, paso 5")
 
     Si más adelante es necesario revertir en una optimización propuesta, seleccione la consulta correspondiente y haga clic en **Revertir**. La guía de plan de consulta se quita y la lista se actualiza para quitar la consulta revertida. Tenga en cuenta que en la siguiente imagen se ha quitado la consulta 8.
 
-    ![Paso 5 de QTA: reversión](../../relational-databases/performance/media/qta-step5-rollback.png "QTA Step 5 - Rollback") 
+    ![QTA paso 5: Reversión](../../relational-databases/performance/media/qta-step5-rollback.png "QTA paso 5: Reversión") 
 
     > [!NOTE]
     > La eliminación de una sesión cerrada **no** elimina guías de plan implementadas previamente.   

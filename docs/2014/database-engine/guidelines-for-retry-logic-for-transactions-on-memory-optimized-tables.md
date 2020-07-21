@@ -1,5 +1,5 @@
 ---
-title: Directrices para la lógica de reintento para las transacciones en tablas optimizadas para memoria | Microsoft Docs
+title: Instrucciones para la lógica de reintento de transacciones en tablas optimizadas para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cebe052a91dbf414f63f82efdfca88c64faabd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932894"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Instrucciones para la lógica de reintento de transacciones en tablas con optimización para memoria
   Hay varias condiciones de error que aparecen con las transacciones que tienen acceso a tablas optimizadas para memoria.  
@@ -30,7 +29,7 @@ ms.locfileid: "62779219"
   
  Una causa común de estos errores son las interferencias entre transacciones que se ejecutan simultáneamente. La acción correctora común es reintentar la transacción.  
   
- Para obtener más información acerca de estas condiciones de error, vea la sección en la detección de conflictos, validación y comprobaciones de dependencia de confirmación en [transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Para obtener más información sobre estas condiciones de error, vea la sección sobre detección de conflictos, validación y comprobaciones de dependencias de confirmación en [transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Los interbloqueos (código de error 1205) no pueden aparecer en las tablas optimizadas para memoria. Los bloqueos no se utilizan en las tablas optimizadas para memoria. Sin embargo, si la aplicación ya contiene lógica de reintento para los interbloqueos, la lógica existente se puede ampliar para incluir los nuevos códigos de error.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62779219"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>Consideraciones para las transacciones de solo lectura y las transacciones entre contenedores  
  Las transacciones de solo lectura entre contenedores, que son las transacciones que se inician fuera del contexto de un procedimiento almacenado compilado de forma nativa, no realizan la validación si se tiene acceso a todas las tablas optimizadas para memoria bajo aislamiento SNAPSHOT. Sin embargo, cuando se tiene acceso a tablas optimizadas para memoria con el aislamiento REPEATABLE READ o SERIALIZABLE, la validación se realiza en tiempo de confirmación. En este caso, puede ser necesaria lógica de reintento.  
   
- Para obtener más información, vea la sección sobre las transacciones entre contenedores en [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
+ Para obtener más información, vea la sección sobre transacciones entre contenedores en [los niveles de aislamiento de transacción](../../2014/database-engine/transaction-isolation-levels.md).  
   
 ## <a name="implementing-retry-logic"></a>Implementar lógica de reintento  
  Como ocurre con todas las transacciones que tienen acceso a tablas optimizadas para memoria, se debe considerar el uso de lógica de reintentos para controlar los posibles errores, como conflictos de escritura (código de error 41302) o errores de dependencia (código de error 41301). En la mayoría de las aplicaciones la tasa de error será baja, pero sigue siendo necesario controlar los errores reintentando la transacción. He aquí dos maneras sugeridas de implementar lógica de reintentos:  
@@ -71,7 +70,7 @@ ms.locfileid: "62779219"
   
 -   La aplicación cliente tiene lógica de reintento para otros códigos de error, como 1205, que puede ampliar.  
   
--   Los conflictos son raros y es importante reducir la latencia de un extremo a otro mediante la ejecución preparada. Para obtener más información acerca de cómo ejecutar de forma nativa compila los procedimientos almacenados directamente, vea [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
+-   Los conflictos son raros y es importante reducir la latencia de un extremo a otro mediante la ejecución preparada. Para obtener más información sobre la ejecución directa de procedimientos almacenados compilados de forma nativa, vea [procedimientos almacenados compilados](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)de forma nativa.  
   
  En el siguiente ejemplo se muestra la lógica de reintento de un procedimiento almacenado de [!INCLUDE[tsql](../includes/tsql-md.md)] interpretado que contiene una llamada a un procedimiento almacenado compilado de forma nativa o a una transacción entre contenedores.  
   
@@ -125,9 +124,9 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Transacciones en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Instrucciones para los niveles de aislamiento de transacciones con tablas optimizadas para memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
+ [Transacciones en tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Instrucciones para los niveles de aislamiento de transacciones con tablas con optimización para memoria](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

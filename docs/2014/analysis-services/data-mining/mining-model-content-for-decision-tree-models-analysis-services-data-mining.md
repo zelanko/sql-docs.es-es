@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo para los modelos de árboles de decisión de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521602"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
   
-##  <a name="bkmk_Top"></a> Descripción de la estructura de un modelo de árboles de decisión  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>Descripción de la estructura de un modelo de árboles de decisión  
  Un modelo de árboles de decisión tiene un nodo primario único que representa el modelo y sus metadatos. Debajo del nodo primario aparecen árboles independientes que representan los atributos de predicción que se seleccionan. Por ejemplo, si configura su modelo de árboles de decisión para predecir si los clientes comprarán algo y, a continuación, proporciona entradas para el género y los ingresos, el modelo creará un árbol único para el atributo de compra, con muchas bifurcaciones que se dividen en función de condiciones relacionadas con el género y los ingresos.  
   
  Sin embargo, si después agrega un atributo de predicción independiente para la participación en un programa de premios para los clientes, el algoritmo creará dos árboles independientes bajo el nodo primario. Un árbol contendrá el análisis para las compras, y el otro el análisis correspondiente al programa de premios para los clientes.  Si usa el algoritmo de árboles de decisión para crear un modelo de asociación, el algoritmo crea un árbol independiente para cada producto que se predice, y dicho árbol contiene las demás combinaciones de productos que contribuyen a la selección del atributo de destino.  
@@ -32,7 +31,7 @@ ms.locfileid: "66083671"
 > [!NOTE]  
 >  Si el modelo incluye varios árboles, solo podrá ver un árbol cada vez en el **Visor de árboles de Microsoft**. Sin embargo, en el **Visor de árbol de contenido genérico** se muestran de forma simultánea todos los árboles del mismo modelo.  
   
- ![estructura del contenido del modelo de árbol de decisión](../media/modelcontentstructure-dt.gif "estructura del contenido del modelo de árbol de decisión")  
+ ![estructura del contenido del modelo para el árbol de decisión](../media/modelcontentstructure-dt.gif "estructura del contenido del modelo para el árbol de decisión")  
   
  El árbol para cada atributo de predicción contiene información que describe cómo afectan las columnas de entrada elegidas al resultado de ese atributo de predicción concreto. Cada árbol está encabezado por un nodo (NODE_TYPE = 9) que contiene el atributo de predicción, seguido de una serie de nodos (NODE_TYPE = 10) que representan los atributos de entrada. Un atributo corresponde a una columna de nivel de caso o a valores de columnas de tabla anidada, que generalmente son los valores que aparecen en la columna `Key` de la tabla anidada.  
   
@@ -47,8 +46,8 @@ ms.locfileid: "66083671"
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elige automáticamente un método para colocar en cubos los atributos continuos; sin embargo, se puede controlar cómo se discretizan los valores continuos de las entradas estableciendo el tipo de contenido de la columna de estructura de minería de datos en `Discretized` y, a continuación, estableciendo la propiedad <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
   
-##  <a name="bkmk_ModelContent"></a> Contenido del modelo para un modelo de árboles de decisión  
- En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos de árboles de decisión. Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema y para obtener una explicación de la terminología del modelo de minería de datos, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> Contenido del modelo para un modelo de árboles de decisión  
+ En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos de árboles de decisión. Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema y para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -75,10 +74,10 @@ ms.locfileid: "66083671"
 |Tipo de nodo|Descripción|  
 |---------------|-----------------|  
 |1 (Modelo)|Nodo raíz para el modelo.|  
-|2 (árbol)|Nodo primario para los árboles de clasificación del modelo. Se etiqueta como **"Todos"** .|  
+|2 (árbol)|Nodo primario para los árboles de clasificación del modelo. Se etiqueta como **"Todos"**.|  
 |3 (interior)|Encabezado de la bifurcación interior, que se encuentra dentro de un árbol de clasificación o de regresión.|  
 |4 (distribución)|Nodo hoja, que se encuentra dentro de un árbol de clasificación o de regresión.|  
-|25 (árbol de regresión)|Nodo primario para el árbol de regresión dentro del modelo. Se etiqueta como **"Todos"** .|  
+|25 (árbol de regresión)|Nodo primario para el árbol de regresión dentro del modelo. Se etiqueta como **"Todos"**.|  
   
  NODE_CAPTION  
  Nombre descriptivo que se utiliza para la visualización.  
@@ -157,7 +156,7 @@ ms.locfileid: "66083671"
  MSOLAP_NODE_SHORT_CAPTION  
  Etiqueta que se utiliza para la visualización.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un modelo de árboles de decisión no dispone de un nodo independiente que almacena estadísticas para todo el modelo, a diferencia del nodo de estadísticas marginales que se puede encontrar en un modelo Bayes naive o en un modelo de red neuronal. En su lugar, el modelo crea un árbol independiente para cada atributo de predicción, con un nodo (Todos) en la parte superior de dicho árbol. Cada uno de los árboles es independiente de los demás. Si su modelo solo contiene un atributo de predicción, solo hay un árbol y, por lo tanto, solo un nodo (Todos).  
   
  Cada árbol que representa un atributo de salida se subdivide además en bifurcaciones interiores (NODE_TYPE = 3) que representan divisiones. Cada uno de estos árboles contiene estadísticas sobre la distribución del atributo de destino. Además, cada nodo hoja (NODE_TYPE = 4) contiene estadísticas que describen los atributos de entrada y sus valores, junto con el número de casos de soporte de cada par atributo-valor. Por lo tanto, puede ver fácilmente las probabilidades o la distribución de los datos en cualquier bifurcación de un árbol de decisión sin necesidad de consultar los datos de origen. Cada nivel del árbol representa necesariamente la suma de sus nodos secundarios inmediatos.  
@@ -171,12 +170,12 @@ ms.locfileid: "66083671"
   
  Cada nodo de árbol interior contiene nodos hoja que proporcionan un análisis de los resultados dados los resultados de clasificación actuales. Por ejemplo, podría tener un nodo interior que represente Age >= 30 y Gender = Male. El nodo para este grupo le muestra cuántos clientes de esta categoría han comprado o no han comprado algo. Por ejemplo, la clasificación podría contener las divisiones del árbol siguientes:  
   
-|Árbol interior|división|  
+|Árbol interior|Dividir|  
 |-------------------|-----------|  
 |Age >= 30|Age >= 30 y Gender = Male|  
 ||Age >= 30 y Gender = Female|  
 |Age < 30|Age < 30 y Gender = Male|  
-||Edad \< 30 y Gender = Female|  
+||Age \< 30 y Gender = mujer|  
   
  Cuando se usa un modelo de árboles de decisión para la predicción, el modelo toma los atributos proporcionados como argumentos y sigue la ruta de acceso de los atributos hacia abajo por el árbol. En general, todas las predicciones van a una hoja y los nodos interiores solo se usan para la clasificación.  
   
@@ -184,23 +183,23 @@ ms.locfileid: "66083671"
   
  Si el atributo de predicción es un número continuo, el algoritmo intenta crear una fórmula de regresión que modele la relación entre dicho atributo y las entradas.  
   
-###  <a name="NodeCaption"></a> Título y descripción del nodo  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>Título del nodo y descripción del nodo  
  En un modelo de árboles de decisión, el título y la descripción del nodo contienen información similar. Sin embargo, la descripción del nodo es más completa y contiene más información a medida que nos acercamos a los nodos hoja. Tanto el título como la descripción del nodo son cadenas traducidas.  
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Muestra el atributo que distingue ese nodo concreto respecto al nodo primario. El título del nodo define un subsegmento del rellenado en función de la condición de división. Por ejemplo, si la división se realizó por [Age] y fue una división en tres partes, los títulos de nodo para los tres nodos secundarios podrían ser "[Age] < 40", "40 < = [Age] \< 50", "[Age] > = 50".|  
+|**NODE_CAPTION**|Muestra el atributo que distingue ese nodo concreto respecto al nodo primario. El título del nodo define un subsegmento del rellenado en función de la condición de división. Por ejemplo, si la división se realizó en [Age] y fue una división tridireccionales, los títulos de nodo para los tres nodos secundarios podrían ser "[Age] < 40", "40 <= [Age] \< 50", "[Age] > = 50".|  
 |**NODE_DESCRIPTION**|Contiene una lista completa de los atributos que distinguen ese nodo de otros nodos, empezando por el nodo primario del modelo. Por ejemplo, Nombre de producto = Manzana y Color = Rojo.|  
   
-###  <a name="NodeRule"></a> Regla de nodo y regla marginal  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> Regla de nodo y regla marginal  
  Las columnas NODE_RULE y MARGINAL_RULE contienen la misma información que las columnas NODE_CAPTION y NODE_DESCRIPTION, pero la representan como fragmentos XML. La regla de nodo es una versión XML de la ruta de acceso completa, mientras que la regla marginal indica la división más reciente.  
   
  El atributo representado por el fragmento XML puede ser simple o complejo. Un atributo simple contiene el nombre de la columna del modelo y el valor del atributo. Si la columna del modelo contiene una tabla anidada, el atributo de tabla anidada se representa como una concatenación del nombre de tabla, el valor de clave y el atributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es compatible con la versión 2.0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]admite la versión 2,0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
-###  <a name="bkmk_NodeDist_Discrete"></a> Distribución de nodos para los atributos discretos  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Distribución de nodos para los atributos discretos  
  En un modelo de árboles de decisión, la tabla NODE_DISTRIBUTION contiene estadísticas útiles. Sin embargo, el tipo de estadísticas depende de si el árbol predice un atributo discreto o un atributo continuo. En esta sección se describe el significado de las estadísticas de distribución de nodos para los atributos discretos.  
   
 #### <a name="attribute-name-and-attribute-value"></a>Nombre y valor del atributo  
@@ -225,7 +224,7 @@ ms.locfileid: "66083671"
 |Age < 30|40|Age < 30 y Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 y Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. Para los atributos continuos, cada valor o intervalo de valores está representado como un estado (por ejemplo, Age \<30, Age = 30 y Age > 30) y las probabilidades se calculan como se indica a continuación: estado existe (valor = 1), existe otro estado (valor = 0), el estado es `Missing`. Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. En el caso de los atributos continuos, cada valor o intervalo de valores se representa como un estado (por ejemplo, \<30, Age = 30, and Age > 30 años) y las probabilidades se calculan de la siguiente manera: el estado existe (valor = 1), existe otro Estado (valor = 0), el estado es `Missing` . Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
  Las probabilidades para cada nodo se calculan casi directamente a partir de la distribución, de la siguiente manera:  
   
@@ -252,7 +251,7 @@ ms.locfileid: "66083671"
   
  Si el modelo incluye un atributo de predicción continuo, el árbol también podría contener tipos de valores que son únicos de las fórmulas de regresión. Para obtener una lista de los tipos de valores usados en los árboles de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-###  <a name="NodeScore"></a> Puntuación del nodo  
+###  <a name="node-score"></a><a name="NodeScore"></a> Puntuación del nodo  
  La puntuación del nodo representa información ligeramente distinta en cada nivel del árbol. En general, la puntuación es un valor numérico que le indica la calidad con la que se ha realizado una división basándose en la condición. El valor se representa como un tipo de datos Double, donde un valor mayor es mejor.  
   
  Por definición, el nodo del modelo y todos los nodos hoja tienen una puntuación de nodo de 0.  
@@ -261,12 +260,12 @@ ms.locfileid: "66083671"
   
  Para el resto de los nodos del árbol (excepto los nodos hoja), la puntuación para cada nodo representa el mejor resultado de división para el nodo actual, menos el resultado de división para el nodo primario. Normalmente, el resultado de división para un nodo primario siempre debería ser mejor que el de cualquiera de sus nodos secundarios. Esto se debe a que, teóricamente, un modelo de árboles de decisión se divide primero en los atributos más importantes.  
   
- Hay muchas maneras de calcular una puntuación para una división, dependiendo del parámetro de algoritmo que se elija. La explicación de cómo se calculan las puntuaciones para cada uno de los métodos de puntuación queda fuera del ámbito de este tema. Para obtener más información, vea "[las redes bayesianas: La combinación de conocimiento y datos estadísticos](https://go.microsoft.com/fwlink/?LinkId=45963)", en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] sitio Web de investigación.  
+ Hay muchas maneras de calcular una puntuación para una división, dependiendo del parámetro de algoritmo que se elija. La explicación de cómo se calculan las puntuaciones para cada uno de los métodos de puntuación queda fuera del ámbito de este tema. Para obtener más información, vea "[Descripción de las redes Bayesianas: combinación de conocimiento y datos estadísticos](https://go.microsoft.com/fwlink/?LinkId=45963)", en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
   
 > [!NOTE]  
 >  Si crea un modelo de árboles de decisión que tenga atributos de predicción continuos y discretos, verá puntuaciones completamente diferentes en los nodos (Todos) que representan cada tipo de árbol. Cada modelo se debería considerar de forma individual, ya que los métodos usados para puntuar la regresión son completamente diferentes de los usados para puntuar la clasificación. Los valores de puntuación de nodo no se pueden comparar.  
   
-##  <a name="bkmk_RegressionNodes"></a> Nodos de regresión dentro de un modelo de árboles de decisión  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>Nodos de regresión dentro de un modelo de árbol de decisión  
  Si un modelo de árboles de decisión contiene un atributo de predicción con datos numéricos continuos, el algoritmo de árboles de decisión de Microsoft busca áreas en los datos donde la relación entre el estado predicho y las variables de entrada sea lineal. Si el algoritmo es capaz de encontrar una relación lineal, crea un árbol especial (NODE_TYPE = 25) que representa una regresión lineal. Estos nodos de árbol de regresión son más complejos que los nodos que representan valores discretos.  
   
  En general, una regresión asigna los cambios en el dependiente continuo (variable de predicción) como una función de los cambios en las entradas. Si la variable dependiente tiene entradas continuas, y la relación entre la entrada y el valor de predicción es lo suficientemente estable para calcularse como un gráfico de líneas, el nodo para la regresión contiene una fórmula.  
@@ -281,8 +280,8 @@ ms.locfileid: "66083671"
   
  Para obtener más información sobre los nodos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)  

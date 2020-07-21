@@ -1,6 +1,7 @@
 ---
-title: Pausar y reanudar la creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Pausa y reanudación del reflejo de la base de datos
+description: Aprenda a pausar y luego a reanudar una sesión de creación de reflejo de la base de datos de SQL Server para conservar el estado de sesión a la vez que se suspende la creación de reflejo.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 80a412419c1538c485ff6766bbe68ba5c510779b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b71dd9efc29735d618e6cf7cbabab5615f31fb0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996464"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735255"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Pausar y reanudar la creación de reflejo de la base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El propietario de la base de datos puede pausar y reanudar posteriormente una sesión de creación de reflejo de la base de datos en cualquier momento. La pausa preserva el estado de la sesión mientras se suspende la creación de reflejo. Durante los cuellos de botella, las pausas pueden ser útiles para mejorar el rendimiento en el servidor principal.  
   
  Cuando se realiza una pausa en una sesión, la base de datos principal sigue estando disponible. La pausa establece el estado de la sesión de creación de reflejo de la base de datos en SUSPENDED y la base de datos reflejada ya no se mantiene al día con la base de datos principal, lo que ocasiona que la base de datos principal se ejecute de una manera expuesta.  
@@ -42,7 +43,7 @@ ms.locfileid: "67996464"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> Cómo afectan la pausa y la reanudación al truncamiento del registro  
+##  <a name="how-pausing-and-resuming-affect-log-truncation"></a><a name="EffectOnLogTrunc"></a> Cómo afectan la pausa y la reanudación al truncamiento del registro  
  Normalmente, cuando se lleva a cabo un punto de comprobación automático en una base de datos, su registro de transacciones se trunca en dicho punto de comprobación después de la siguiente copia de seguridad del registro. Mientras que una sesión de creación de reflejo de la base de datos permanece en pausa, todos las entradas de registro actuales permanecen activas porque el servidor principal está esperando para enviarlos al servidor reflejado. Las entradas de registro no enviadas se acumulan en el registro de transacciones de la base de datos principal hasta que se reanuda la sesión y el servidor principal ha enviado las entradas de registro al servidor reflejado.  
   
  Cuando se reanuda la sesión, el servidor principal comienza a enviar inmediatamente las entradas de registro acumuladas al servidor reflejado. Después de que el servidor reflejado confirma que ha puesto en cola la entrada de registro correspondiente al punto de comprobación automático más antiguo, el servidor principal trunca el registro de la base de datos principal en dicho punto de comprobación. El servidor reflejado trunca la cola rehecha en la misma entrada de registro. Conforme este proceso se repite por cada punto de comprobación sucesivo, el registro se trunca por etapas, en cada punto de comprobación.  
@@ -50,7 +51,7 @@ ms.locfileid: "67996464"
 > [!NOTE]  
 >  Para obtener más información sobre los puntos de comprobación y el truncamiento del registro, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-##  <a name="AvoidFullLog"></a> Evitar un registro de transacciones lleno  
+##  <a name="avoid-a-full-transaction-log"></a><a name="AvoidFullLog"></a> Evitar un registro de transacciones lleno  
  Si el registro se llena (bien porque alcanza su tamaño máximo o porque la instancia del servidor se queda sin espacio), la base de datos no puede realizar más actualizaciones. Hay dos alternativas para evitar este problema:  
   
 -   Reanudar la sesión de creación de reflejo de la base de datos antes de que se llene el registro o agregar más espacio al registro. Reanudar la creación de reflejo de la base de datos permite al servidor principal enviar su registro activo acumulado al servidor reflejado y aplicar el estado SYNCHRONIZING a la base de datos reflejada. A continuación, el servidor reflejado puede reforzar el registro en el disco y comenzar a rehacerlo.  
@@ -59,7 +60,7 @@ ms.locfileid: "67996464"
   
      A diferencia de la pausa de una sesión, al quitar la creación de reflejo se elimina toda la información de la sesión de creación de reflejo. Cada instancia de servidor asociado conserva su propia copia de la base de datos. Si se recupera la copia reflejada anterior, será diferente de la copia principal anterior y estará por detrás en la cantidad de tiempo transcurrido desde que se detuvo la sesión. Para obtener más información, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para pausar o reanudar la creación de reflejo de la base de datos**  
   
 -   [Pausar o reanudar una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  

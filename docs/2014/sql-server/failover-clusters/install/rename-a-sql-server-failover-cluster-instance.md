@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062603"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
   Cuando una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] forma parte de un clúster de conmutación por error, el proceso para cambiar el nombre del servidor virtual no es el mismo que para cambiar el nombre de una instancia independiente. Para obtener más información, vea [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -63,9 +62,9 @@ ms.locfileid: "63126037"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Consideraciones adicionales después de la operación de cambio de nombre  
  Después de cambiar el nombre de red en clúster del clúster de conmutación por error, hay que comprobar y seguir las siguientes instrucciones para conseguir que todos los escenarios del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funcionen.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Después de cambiar el nombre de red de un [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instancia mediante la herramienta de administrador de clústeres de Windows, futura de actualización de clúster de conmutación por error o desinstalar podría producir un error. Para resolver este problema, actualice el **ClusterName** entrada del registro siguiendo las instrucciones que aparecen en la sección resolución de [esto](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] :** Después de cambiar el nombre de red de una [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instancia de clúster de conmutación por error mediante la herramienta Administrador de clústeres de Windows, es posible que se produzca un error en la operación de actualización o desinstalación. Para resolver este problema, actualice la entrada del registro **ClusterName** siguiendo las instrucciones de la sección resolución de [este](https://go.microsoft.com/fwlink/?LinkId=244002) ( https://go.microsoft.com/fwlink/?LinkId=244002) .  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del agente:** Compruebe y realice las acciones adicionales siguientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio del agente:  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del agente:** Compruebe y realice las acciones adicionales siguientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del agente:  
   
 -   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
@@ -83,7 +82,7 @@ ms.locfileid: "63126037"
   
 -   Actualizar los pasos de trabajo que dependen del nombre de servidor. Para más información, consulte [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

@@ -9,17 +9,17 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65105926"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lección 5: Aplicar formato a un informe (Reporting Services)
 
 Ahora que ha agregado una región de datos y algunos campos al informe Sales Orders, puede dar formato a los campos de moneda y de fecha, así como a los encabezados de columna.
 
-## <a name="bkmk_format_date"></a>Dar formato a la fecha
+## <a name="format-the-date"></a><a name="bkmk_format_date"></a>Dar formato a la fecha
 
 La expresión del campo Date muestra información de fecha y hora de manera predeterminada. Puede darle formato para mostrar solo la fecha.
 
@@ -30,7 +30,7 @@ La expresión del campo Date muestra información de fecha y hora de manera pred
 5. Seleccione **Aceptar** para aplicar el formato.
 6. Obtenga una vista previa del informe para ver el cambio de formato del campo `[Date]` y, después, vuelva a cambiar a la vista de diseño.
 
-## <a name="bkmk_format_currency"></a>Dar formato a la moneda
+## <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Dar formato a la moneda
 
 La expresión del campo LineTotal muestra un número general. Puede aplicarle formato para mostrar el número como moneda.
 
@@ -44,7 +44,7 @@ La expresión del campo LineTotal muestra un número general. Puede aplicarle fo
 5. Seleccione **Aceptar** para aplicar el formato.
 6. Obtenga una vista previa del informe para ver el cambio de la columna de la expresión `[LineTotal]` y, después, vuelva a cambiar a la vista de diseño.  
 
-## <a name="bkmk_change_textstyle"></a>Cambiar el estilo de texto y los anchos de columna
+## <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Cambiar el estilo de texto y los anchos de columna
 
 Puede agregar otro formato al informe; para ello, resalte la fila de encabezado y ajuste los anchos de las columnas de datos.
 
@@ -67,7 +67,7 @@ Puede agregar otro formato al informe; para ello, resalte la fila de encabezado 
 
 En esta lección, ha aplicado el formato correcto a los encabezados de columna y a las expresiones de los campos. A continuación, va a agregar grupos y totales al informe. Continúe con la [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)
 [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)

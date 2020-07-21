@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f77148e039e61c080d0eae4e4ab7cad06ef050d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40f9ae1f00dd0a6520c6d1b06111864fba02e8f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077306"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544810"
 ---
 # <a name="define-a-new-attribute-automatically"></a>Definir un nuevo atributo automáticamente
   Puede crear un atributo nuevo en una dimensión con la edición de tipo arrastrar y colocar del Diseñador de dimensiones.  
@@ -31,7 +30,7 @@ ms.locfileid: "66077306"
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea el nuevo atributo con el mismo nombre que la columna con la que está enlazado. Si hay varios atributos que utilizan la misma columna, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] anexará un número al nombre de atributo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Dimensiones en modelos multidimensionales](dimensions-in-multidimensional-models.md)   
  [Referencia de las propiedades de los atributos de dimensión](dimension-attribute-properties-reference.md)  
   

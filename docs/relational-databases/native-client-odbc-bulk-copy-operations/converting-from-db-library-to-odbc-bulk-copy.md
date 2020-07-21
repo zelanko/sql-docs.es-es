@@ -17,18 +17,16 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f41438f8ecd7a905201b8f912b3fee142716a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: 09726fbbbb1ba1ecd1516dc56ae084897aafff5c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708079"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006608"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertir un programa de copia masiva de DB-Library a ODBC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Convertir un programa de copia masiva de DB-Library a ODBC es fácil porque las funciones de copia masiva que admite el controlador ODBC de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son similares a las funciones de copia masiva de DB-Library, con las siguientes excepciones:  
+  Convertir un programa de copia masiva de DB-Library a ODBC es fácil porque las funciones de copia masiva que admite el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client son similares a las funciones de copia masiva de DB-Library, con las siguientes excepciones:  
   
 -   Las aplicaciones DB-Library pasan un puntero a una estructura DBPROCESS como primer parámetro de las funciones de copia masiva. En las aplicaciones ODBC, el puntero a DBPROCESS se reemplaza por un identificador de conexión ODBC.  
   
@@ -39,9 +37,9 @@ ms.locfileid: "71708079"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   El controlador ODBC de cliente nativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite controladores de mensajes y errores de DB-Library. debe llamar a **SQLGetDiagRec** para obtener errores y mensajes generados por las funciones de copia masiva de ODBC. Las versiones ODBC de las funciones de copia masiva devuelven los códigos de retorno de copia masiva estándar, es decir, SUCCEED o FAILED, no códigos de retorno de estilo ODBC, como SQL_SUCCESS o SQL_ERROR.  
+-   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no es compatible con los controladores de mensajes y errores de DB-Library; debe llamar a **SQLGetDiagRec** para obtener los errores y mensajes generados por las funciones de copia masiva de ODBC. Las versiones ODBC de las funciones de copia masiva devuelven los códigos de retorno de copia masiva estándar, es decir, SUCCEED o FAILED, no códigos de retorno de estilo ODBC, como SQL_SUCCESS o SQL_ERROR.  
   
--   Los valores especificados para el parámetro*varlen* de [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)de DB-Library se interpretan de forma diferente que el parámetro_cbData_ **de bcp_bind de ODBC.**  
+-   Los valores especificados para el parámetro*varlen* de DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)se interpretan de forma distinta que el parámetro_cbData_ de ODBC **bcp_bind**.  
   
     |Condición indicada|Valor de *varlen* de DB-Library|Valor *cbData* de ODBC|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -49,13 +47,13 @@ ms.locfileid: "71708079"
     |Se suministraron datos variables|-1|-10 (SQL_VARLEN_DATA)|  
     |Cadena binaria o carácter de longitud cero|N/D|0|  
   
-     En DB-Library, un valor *varlen* de-1 indica que se están suministrando datos de longitud variable, que en el *cbData* de ODBC se interpreta para indicar que solo se proporcionan valores NULL. Cambie cualquier especificación de *varlen* de DB-Library de-1 a SQL_VARLEN_DATA y cualquier especificación *varlen* de 0 a SQL_NULL_DATA.  
+     En DB-Library, un valor *varlen* de-1 indica que se están suministrando datos de longitud variable, que en el *cbData* de ODBC se interpreta para indicar que solo se proporcionan valores NULL. Cambie cualquier especificación de *varlen* de DB-Library de-1 a SQL_VARLEN_DATA y cualquier especificación de *varlen* de 0 a SQL_NULL_DATA.  
   
--   Las versiones DB-Library **bcp_colfmt**_file_collen_ y ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* tienen el mismo problema que los parámetros de **bcp_bind**_varlen_ y *cbData* indicados anteriormente. Cambie cualquier especificación de *file_collen* de DB-Library de-1 a SQL_VARLEN_DATA y cualquier especificación *file_collen* de 0 a SQL_NULL_DATA.  
+-   El_file_collen_ de **bcp_colfmt**de DB-Library y ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* tienen el mismo problema que los parámetros **bcp_bind**_varlen_ y *cbData* indicados anteriormente. Cambie cualquier especificación de *file_collen* de DB-Library de-1 a SQL_VARLEN_DATA y cualquier especificación de *file_collen* de 0 a SQL_NULL_DATA.  
   
 -   El parámetro *iValue* de la función [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) de ODBC es un puntero void. En DB-Library, *iValue* era un entero. Convierta los valores de *iValue* de ODBC a void *.  
   
--   La opción **BCP_CONTROL** BCPMAXERRS especifica el número de filas individuales que pueden tener errores antes de que se produzca un error en una operación de copia masiva. El valor predeterminado de BCPMAXERRS es 0 (error en el primer error) en la versión de DB-Library de **bcp_control** y 10 en la versión de ODBC. Las aplicaciones de DB-Library que dependen del valor predeterminado de 0 para finalizar una operación de copia masiva deben cambiarse para llamar a la **bcp_control** de ODBC para establecer BCPMAXERRS en 0.  
+-   La opción **BCP_CONTROL** BCPMAXERRS especifica el número de filas individuales que pueden tener errores antes de que se produzca un error en una operación de copia masiva. El valor predeterminado de BCPMAXERRS es 0 (error en el primer error) en la versión de DB-Library de **bcp_control** y 10 en la versión de ODBC. Las aplicaciones de DB-Library que dependen del valor predeterminado de 0 para finalizar una operación de copia masiva deben cambiarse para llamar a la **BCP_CONTROL** ODBC para establecer BCPMAXERRS en 0.  
   
 -   La función **bcp_control** de ODBC admite las siguientes opciones no admitidas por la versión DB-Library de **bcp_control**:  
   
@@ -91,7 +89,7 @@ ms.locfileid: "71708079"
   
          Especifica que un archivo de copia masiva en modo de carácter es un archivo Unicode.  
   
--   La función **bcp_colfmt** de ODBC no admite el indicador *File_Type* de SQLCHAR porque entra en conflicto con la definición de tipo SQLCHAR de ODBC. Use SQLCHARACTER en lugar de **bcp_colfmt**.  
+-   La función **bcp_colfmt** de ODBC no admite el indicador de *File_Type* de SQLCHAR porque entra en conflicto con la definición de tipo SQLCHAR de ODBC. En su lugar, use SQLCHARACTER para **bcp_colfmt**.  
   
 -   En las versiones ODBC de las funciones de copia masiva, el formato para trabajar con valores **DateTime** y **smalldatetime** en cadenas de caracteres es el formato ODBC de AAAA-MM-DD HH: mm: SS. SSS; los valores **smalldatetime** usan el formato ODBC de AAAA-MM-DD HH: mm: SS.  
   
@@ -101,7 +99,7 @@ ms.locfileid: "71708079"
   
     -   cadenas de caracteres **DateTime** y **smalldatetime** en cualquier formato admitido por la función **dbconvert** de DB-Library.  
   
-    -   Cuando se activa la casilla **Usar configuración internacional** en la pestaña **Opciones** de DB-Library de la herramienta de red de cliente @no__t 2, las funciones de copia masiva de DB-Library también aceptan fechas en el formato de fecha regional definido para la configuración regional del cliente. registro del equipo.  
+    -   Cuando se activa la casilla **Usar configuración internacional** en la pestaña **Opciones** de DB-Library de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de red de cliente, las funciones de copia masiva de DB-Library también aceptan fechas en el formato de fecha regional definido para la configuración regional del registro del equipo cliente.  
   
      Las funciones de copia masiva de DB-Library no aceptan los formatos **DateTime** y **smalldatetime** de ODBC.  
   
@@ -109,8 +107,8 @@ ms.locfileid: "71708079"
   
 -   Al generar valores de **moneda** en formato de caracteres, las funciones de copia masiva de ODBC proporcionan cuatro dígitos de precisión y sin separadores de coma; Las versiones de DB-Library solo proporcionan dos dígitos de precisión e incluyen los separadores de comas.  
   
-## <a name="see-also"></a>Vea también  
- [Realizar operaciones &#40;de copia masiva&#41;de ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
- [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Realizar operaciones de copia masiva &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

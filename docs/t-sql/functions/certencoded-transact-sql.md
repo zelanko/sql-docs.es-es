@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cc70ffc8f2520c4d8c50eff24b451f5a53ffbfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732741"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve la parte pública de un certificado en formato binario. Esta función toma un identificador de certificado como argumento y devuelve el certificado codificado. Para crear un certificado nuevo, pase el resultado binario a **CREATE CERTIFICATE ... WITH BINARY**.
   
@@ -42,7 +42,7 @@ CERTENCODED ( cert_id )
 ## <a name="return-types"></a>Tipos de valores devueltos
 **varbinary**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use **CERTENCODED** y **CERTPRIVATEKEY** juntos para devolver diferentes partes de un certificado en formato binario.
   
 ## <a name="permissions"></a>Permisos  
@@ -152,7 +152,7 @@ SELECT @CLEARTEXT AS ClearTextInTarget, @CIPHERTEXT AS CipherTextInTarget, @UNCI
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  

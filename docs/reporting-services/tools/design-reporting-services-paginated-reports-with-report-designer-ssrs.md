@@ -1,5 +1,5 @@
 ---
-title: Diseñar informes con el Diseñador de informes (SSRS) | Microsoft Docs
+title: Diseño de informes con el Diseñador de informes | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577870"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286169"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Diseñar informes paginados de Reporting Services con el Diseñador de informes (SSRS)
 
@@ -37,23 +37,23 @@ La característica Proyectos de informe actúa como contenedor para las definici
  Use la información de este tema para diseñar informes paginados y elementos relacionados para un solo proyecto de informe en una solución de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Para obtener más información sobre soluciones y proyectos múltiples en SQL Server Data Tools, vea [Reporting Services en SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
 
   
-##  <a name="bkmk_SharedDataSources"></a> Orígenes de datos compartidos  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a> Orígenes de datos compartidos  
  Usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implementar orígenes de datos compartidos para una solución de informes. Los orígenes de datos compartidos se pueden implementar independientemente de otros elementos de un proyecto mediante las propiedades **OverwriteDataSources** y **TargetDataSourceFolder** . Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  En el Diseñador de informes, se trabaja en el panel Datos de informe y en el Explorador de soluciones para definir los orígenes de datos usados en un informe. Para más información, consulte [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). No puede usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir los orígenes de datos publicados en un servidor de informes o en un sitio de SharePoint, pero no incluidos en la solución de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] . Para esta característica, use [Entorno de creación del Generador de informes &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md).  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] es una herramienta de cliente. Puede probar la solución de elaboración de informes localmente en el equipo, implementarla un entorno de pruebas para probar la solución de servidor y, a continuación, implementarla en un entorno de producción. Después de la implementación, compruebe que las extensiones de procesamiento de origen de datos y las credenciales del origen de datos están configuradas para el entorno del servidor de informes. Puede usar el administrador de configuración para ayudar a administrar las propiedades de distintas implementaciones. Para obtener más información, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).  
   
- Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más información, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_SharedDatasets"></a> Conjuntos de datos compartidos  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Conjuntos de datos compartidos  
  Use [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para definir e implementar conjuntos de datos compartidos para una solución de informes. Los conjuntos de datos compartidos pueden implementarse independientemente de otros elementos de un proyecto mediante las propiedades **OverwriteDatasets** y **TargetDatasetFolder** . Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
  En el Diseñador de informes, se trabaja en el panel Datos de informe y en el Explorador de soluciones para definir los conjuntos de datos compartidos usados en un informe. Para más información, consulte [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). No puede usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para abrir los conjuntos de datos publicados directamente desde un servidor de informes o un sitio de SharePoint. Para esta característica, use [Entorno de creación del Generador de informes &#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md) en modo de conjunto de datos compartido.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] es una herramienta de cliente. Puede usar los Diseñadores de consultas para crear y probar los resultados de la consulta localmente en la vista previa. Después de la implementación, puede administrar los conjuntos de datos compartidos independientemente de los orígenes de datos compartidos e informes de los que dependen. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Herramientas de diseño de consulta &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) y [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-##  <a name="bkmk_Reports"></a> Informes paginados  
+##  <a name="paginated-reports"></a><a name="bkmk_Reports"></a> Informes paginados  
 Los informes paginados son archivos que se almacenan en un proyecto de informe. Los informes se pueden usar como informes independientes, subinformes o destinos para las acciones de obtención de detalles a partir de informes principales. Los informes pueden implementarse independientemente de otros elementos de un proyecto mediante **TargetReportFolder** y otras propiedades. Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -84,18 +84,18 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
   
      Para más información, vea [Report Definition Language &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md).  
   
-##  <a name="bkmk_ReportParts"></a> Elementos de informe  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a> Elementos de informe  
  En el Diseñador de informes, después de crear tablas, gráficos y otros elementos de informe paginado en un proyecto, puede publicarlos como *elementos de informe* en un servidor de informes o en el sitio de SharePoint integrado con un servidor de informes para que su usuario y otros usuarios puedan reutilizarlos en otros informes. Para obtener más información, vea [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
  Los elementos de informe pueden implementarse independientemente de otros elementos de un proyecto mediante **TargetReportPartFolder** y otras propiedades. Para más información, vea [Establecer propiedades de implementación &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md).  
   
-##  <a name="bkmk_Resources"></a> Recursos  
- Puede agregar al proyecto archivos relacionados con el informe, pero no procesados por el servidor de informes. Por ejemplo, puede agregar imágenes para las imágenes o archivos de forma ESRI para los datos espaciales. Para más información, consulte [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Recursos  
+ Puede agregar al proyecto archivos relacionados con el informe, pero no procesados por el servidor de informes. Por ejemplo, puede agregar imágenes para las imágenes o archivos de forma ESRI para los datos espaciales. Para obtener más información, consulte [Recursos](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
  
-##  <a name="bkmk_ReportLayout"></a> Diseño de informe paginado  
+##  <a name="paginated-report-layout"></a><a name="bkmk_ReportLayout"></a> Diseño de informe paginado  
  Para crear el diseño del informe, arrastre los elementos del informe y las regiones de datos desde el cuadro de herramientas hasta la superficie de diseño y organícelos. Arrastre los campos de conjunto de datos a los elementos en la superficie de diseño para agregar datos al informe. Para organizar los datos en grupos dentro de una región de datos Tablix, arrastre los campos de conjunto de datos hasta el panel de agrupación. Dado que las herramientas de creación de informes son básicamente una manera de crear definiciones de informe, el enfoque del diseño de informe es muy similar entre el Generador de informes y el Diseñador de informes.  
    
-##  <a name="bkmk_Preview"></a> Vista previa de un informe paginado  
+##  <a name="preview-a-paginated-report"></a><a name="bkmk_Preview"></a> Vista previa de un informe paginado  
  Use la **Vista previa** para comprobar los datos del informe y el diseño del informe. Al obtener la vista previa de un informe, el procesador de este valida el esquema de definición del informe y la sintaxis de sus expresiones, y enumera los problemas en la ventana [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
@@ -118,7 +118,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
     > [!NOTE]  
     >  Para usar el modo de depuración, debe establecer un elemento de inicio. En el Explorador de soluciones, haga clic con el botón derecho en el proyecto de informe, haga clic en **Propiedades**y, en **StartItem**, seleccione el nombre del informe que quiere mostrar.  
   
-     Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y luego haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
+     Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y, luego, haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
   
 -   **Vista previa de impresión.**  
   
@@ -138,7 +138,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
   
     -   El diseño del informe necesita modificaciones para poder leerlo mejor en un formato impreso.  
    
-##  <a name="bkmk_SaveandDeploy"></a> Guardar e implementar informes paginados  
+##  <a name="save-and-deploy-paginated-reports"></a><a name="bkmk_SaveandDeploy"></a> Guardar e implementar informes paginados  
  En el Diseñador de informes, puede guardar informes y otros archivos del proyecto localmente o implementarlos en un servidor de informes o en un sitio de SharePoint. Los orígenes de datos compartidos, conjuntos de datos compartidos, informes, recursos de informes y elementos de informe se pueden implementar de forma independiente o conjuntamente en función de las propiedades de implementación del proyecto que configure. Para más información, consulte [Configuration and Deployment Properties](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  En el Diseñador de informes, es importante entender que un informe se diseña mediante el esquema de definición de informe que admite la versión actual de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cuando se establecen las propiedades de implementación del proyecto para un servidor de informes o un sitio de SharePoint concretos y, a continuación, se guarda el informe, el Diseñador de informes guarda la definición de informe en el directorio de compilación del esquema que coincide con la versión del servidor de informes de destino. Para crear informes que se pueden publicar en un servidor de informes de nivel inferior, el Diseñador de informes quita los elementos de informe que no existen en el esquema de destino. Esto ocurre automáticamente y sin pedir confirmación. Cuando esto sucede, la definición de informe original se mantiene en la carpeta del proyecto. La definición de informe modificada que se implementa está en la carpeta de compilación.  
@@ -159,7 +159,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
 ### <a name="export-a-paginated-report-to-a-different-file-format"></a>Exportación de un informe a un formato de archivo diferente  
  Los informes se pueden exportar a una gran variedad de formatos y estos formatos determinan el funcionamiento de algunas de las características interactivas y de diseño del informe. Para más información sobre las consideraciones de diseño de varios formatos de salida, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
    
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Validación de informes y niveles de error  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Validación de informes y niveles de error  
  Los informes se validan antes de la vista previa y durante la implementación. Se pueden producir varios problemas al compilar los informes. Por ejemplo, los informes podrían contener cadenas como expresiones o consultas que sean incompatibles con la versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que la configuración de proyecto especifique.  
   
  Use la propiedad ErrorLevel para administrar las advertencias y los errores de compilación. La propiedad ErrorLevel puede contener un valor comprendido entre 0 y 4, ambos incluidos. El valor determina qué problemas de generación se notifican como errores y cuáles como advertencias. El valor predeterminado es 2. Las advertencias y los errores se escriben en la ventana [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][Salida](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output).  
@@ -183,6 +183,6 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
 [Descargar SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [Reporting Services en SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   
 [Herramientas de diseño de consulta](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-[Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+[Implementación y compatibilidad de versiones en SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

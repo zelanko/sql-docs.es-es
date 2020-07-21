@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68210773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055736"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
   Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
@@ -71,14 +70,14 @@ ms.locfileid: "68210773"
   
  **Para establecer la opción sync with backup**  
   
--   Programación de la replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restaurar bases de datos que participan en la replicación  
  Puede restaurar todas las bases de datos de una topología de replicación si hay copias de seguridad recientes disponibles y se siguen los pasos correctos. Los pasos de restauración de la base de datos de publicación dependen del tipo de replicación y de las opciones utilizadas. No obstante, los pasos de restauración de todas las demás bases de datos son independientes del tipo y de las opciones.  
   
  La replicación permite restaurar las bases de datos replicadas en el mismo servidor y base de datos de los que se creó la copia de seguridad. Si restaura una copia de seguridad de una base de datos replicada en otro servidor o base de datos, no se conservará la configuración de la replicación. En este caso, deberá volver a crear todas las publicaciones y suscripciones después de restaurar las copias de seguridad.  
   
-### <a name="publisher"></a>publicador  
+### <a name="publisher"></a>Publicador  
  Se proporcionan los pasos de restauración para los siguientes tipos de replicación:  
   
 -   Replicación de instantáneas  
@@ -117,7 +116,7 @@ ms.locfileid: "68210773"
   
          Para más información sobre cómo ejecutar el Agente de distribución, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) y [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md).  
   
-         Para obtener más información acerca de cómo comprobar comandos, consulte [ver comandos replicados y otra información en la base de datos de distribución &#40;Replication Transact-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Para obtener más información acerca de cómo comprobar comandos, vea [ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Quite la configuración de replicación del publicador, el distribuidor y los suscriptores, y vuelva a crear la configuración. Al volver a crear las suscripciones, especifique que el suscriptor ya tiene los datos. La restauración se ha completado.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "68210773"
   
          Para más información sobre cómo ejecutar el Agente de distribución, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) y [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md).  
   
-         Para obtener más información acerca de cómo comprobar comandos, consulte [ver comandos replicados y otra información en la base de datos de distribución &#40;Replication Transact-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Para obtener más información acerca de cómo comprobar comandos, vea [ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Utilice la [tablediff utility](../../../tools/tablediff-utility.md) u otra herramienta para sincronizar manualmente el publicador con el suscriptor. Esto le permite recuperar los datos de la base de datos de suscripciones que no estaban incluidos en la copia de seguridad de base de datos de publicación. Continúe en el paso c.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "68210773"
   
      Para más información sobre cómo ejecutar el Agente de distribución, vea [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) y [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md).  
   
-     Para obtener más información acerca de cómo comprobar comandos, consulte [ver comandos replicados y otra información en la base de datos de distribución &#40;Replication Transact-SQL Programming&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Para obtener más información acerca de cómo comprobar comandos, vea [ver comandos replicados y otra información en la base de datos de distribución &#40;programación de la replicación con Transact-SQL&#41;](../monitor/view-replicated-commands-and-information-in-distribution-database.md) y [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Si está utilizando suscripciones de actualización en cola, conéctese a cada suscriptor y elimine todas las filas de la tabla [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql) en la base de datos de suscripciones. Vaya al paso 4.  
   
@@ -205,9 +204,9 @@ ms.locfileid: "68210773"
   
     1.  Vuelva a crear la publicación en la base de datos **B**. Continúe en el paso b.  
   
-    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base de datos **A**, especificando que la suscripción debe inicializarse con una copia de seguridad (el valor **initialize with backup** para el parámetro **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso c.  
+    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base **de**datos a, especificando que la suscripción debe inicializarse con una copia de seguridad (el valor **Initialize with backup** para el **@sync_type** parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso c.  
   
-    3.  Vuelva a crear la suscripción de la base de datos **A** a la publicación de la base de datos **B**, especificando que el suscriptor ya tiene los datos (el valor **replication support only** para el parámetro **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vaya al paso 8.  
+    3.  Vuelva a crear la suscripción de la base **de** datos a a la publicación de la base de datos **B**, especificando que el suscriptor ya tiene los datos (un valor de **Replication support only** para el **@sync_type** parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vaya al paso 8.  
   
 8.  Ejecute los agentes de distribución para sincronizar las suscripciones de las bases de datos **A** y **B**. Si hay columnas de identidad en las tablas publicadas, vaya al paso 9. En caso contrario, continúe en el paso 10.  
   
@@ -217,7 +216,7 @@ ms.locfileid: "68210773"
   
     2.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Para más información, vea [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md) o [Iniciar y detener un Agente de replicación &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Continúe en el paso c.  
   
-    3.  Ejecute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), proporcionando el valor **@request_id** recuperado en el paso b. Espere hasta que todos los nodos indiquen que han recibido la solicitud del mismo nivel. Continúe en el paso d.  
+    3.  Ejecute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), proporcionando el **@request_id** valor recuperado en el paso b. Espere hasta que todos los nodos indiquen que han recibido la solicitud del mismo nivel. Continúe en el paso d.  
   
     4.  Use [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) para reinicializar cada tabla de la base de datos **B** con el fin de asegurarse de que se utiliza un intervalo apropiado. Vaya al paso 10.  
   
@@ -233,7 +232,7 @@ ms.locfileid: "68210773"
   
     3.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Continúe en el paso d.  
   
-    4.  Ejecute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), proporcionando el valor **@request_id** recuperado en el paso b. Espere hasta que todos los nodos indiquen que han recibido la solicitud del mismo nivel. Continúe en el paso e.  
+    4.  Ejecute [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql), proporcionando el **@request_id** valor recuperado en el paso b. Espere hasta que todos los nodos indiquen que han recibido la solicitud del mismo nivel. Continúe en el paso e.  
   
     5.  Vuelva a crear la suscripción en la base de datos **B** a la publicación de la base de datos **C**, especificando que el suscriptor ya tiene los datos. Continúe en el paso b.  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210773"
   
     1.  En la base de datos **B**, consulte la tabla [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) para recuperar el número de secuencia de registro (LSN) de la más reciente transacción que ha recibido la base de datos **B** de la base de datos **C**.  
   
-    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base de datos **C**, especificando que la suscripción debe inicializarse basándose en LSN (el valor **initialize from lsn** para el parámetro **@sync_type** de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso b.  
+    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base de datos **C**, especificando que la suscripción debe inicializarse basándose en LSN (el valor **Initialize from lsn** para el **@sync_type** parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso b.  
   
     3.  Vuelva a crear la suscripción en la base de datos **C** a la publicación de la base de datos **B**, especificando que el suscriptor ya tiene los datos. Vaya al paso 13.  
   
@@ -345,12 +344,12 @@ ms.locfileid: "68210773"
   
 2.  Asegúrese de que la base de datos sea coherente con la base de datos de publicación en términos de configuración general y configuración de la replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](back-up-and-restore-replicated-databases.md)   
  [Configurar distribución](../configure-distribution.md)   
  [Publicar datos y objetos de base de datos](../publish/publish-data-and-database-objects.md)   
- [Suscribirse a publicaciones](../subscribe-to-publications.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)   
  [Initialize a Subscription](../initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Sincronizar datos](../synchronize-data.md)  
   

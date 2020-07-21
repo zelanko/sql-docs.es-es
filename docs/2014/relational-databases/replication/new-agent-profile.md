@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fcdca4d57b21855a959a876c0c9c9344487046b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022667"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060664"
 ---
 # <a name="new-agent-profile"></a>Nuevo perfil de agente
-  Utilice el cuadro de diálogo **Nuevo perfil de agente** para crear un perfil nuevo. Los perfiles nuevos siempre se basan en perfiles existentes, pero pueden modificarse para satisfacer los requisitos de la aplicación. Después de crear el perfil, éste puede aplicarse a trabajos de agente existentes y futuros en el cuadro de diálogo **Perfiles de agente** . Los valores de los parámetros de agente pueden modificarse en el cuadro de diálogo \<**Propiedades de <NombrePerfilAgente>**.  
+  Utilice el cuadro de diálogo **Nuevo perfil de agente** para crear un perfil nuevo. Los perfiles nuevos siempre se basan en perfiles existentes, pero pueden modificarse para satisfacer los requisitos de la aplicación. Después de crear el perfil, éste puede aplicarse a trabajos de agente existentes y futuros en el cuadro de diálogo **Perfiles de agente** . Los valores de los parámetros del agente se pueden editar en el \<**AgentProfileName> cuadro de diálogo Propiedades * *.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba un nombre para el perfil.  
   
  **Descripción**  
@@ -40,7 +39,7 @@ ms.locfileid: "63022667"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Agente de mezcla de replicación](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Agente de lectura de cola de replicación](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63022667"
  **Mostrar solo los parámetros utilizados en este perfil**  
  Desactive esta opción si desea mostrar todos los parámetros válidos para un agente determinado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con perfiles del Agente de replicación](agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Perfiles del Agente de replicación](agents/replication-agent-profiles.md)  

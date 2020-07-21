@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079091"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543527"
 ---
 # <a name="defining-a-dimension"></a>Definir una dimensión
   En la tarea siguiente, usará el Asistente para dimensiones con objeto de generar una dimensión Date.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079091"
   
 5.  En la lista **Tabla principal** , seleccione **Fecha**.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Seleccionar los atributos de la dimensión** , active las casillas situadas junto a los siguientes atributos:  
   
@@ -45,13 +44,13 @@ ms.locfileid: "66079091"
   
     -   **Spanish Month Name**  
   
-    -   **Trimestre del calendario**  
+    -   **Trimestre natural**  
   
-    -   **Año del calendario**  
+    -   **Año natural**  
   
     -   **Semestre del calendario**  
   
-8.  Cambie el valor de la columna **Tipo de atributo** del atributo **Full Date Alternate Key** de **Normal** a **Fecha**. Para ello, haga clic en **Normal** en la columna **Tipo de atributo** . A continuación, haga clic en la flecha para expandir las opciones. Después, haga clic en **Fecha** > **Calendario** > **Fecha**. Haga clic en **Aceptar**. Repita estos pasos para cambiar el tipo de atributo de los siguientes atributos como se indica a continuación:  
+8.  Cambie el valor de la columna **Tipo de atributo** del atributo **Full Date Alternate Key** de **Normal** a **Fecha**. Para ello, haga clic en **Normal** en la columna **Tipo de atributo** . A continuación, haga clic en la flecha para expandir las opciones. A continuación, **haga clic en fecha**  >  **calendario**  >  **fecha**. Haga clic en **OK**. Repita estos pasos para cambiar el tipo de atributo de los siguientes atributos como se indica a continuación:  
   
     -   **English Month Name** a **Month**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66079091"
   
     -   **Calendar Semester** a **Half Year**  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página **Finalización del asistente** , en el panel de vista previa, puede ver la dimensión **Fecha** y sus atributos.  
   
@@ -69,14 +68,14 @@ ms.locfileid: "66079091"
   
      En el Explorador de soluciones, en el proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la dimensión Fecha aparece en la carpeta **Dimensiones** . En el centro del entorno de desarrollo, el Diseñador de dimensiones muestra la dimensión Date.  
   
-12. En el menú **Archivo** , haga clic en **Guardar todo**.  
+12. En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir un cubo](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Crear una dimensión mediante el uso de una tabla existente](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [Crear una dimensión usando una tabla existente](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [Crear una dimensión usando el Asistente para dimensiones](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

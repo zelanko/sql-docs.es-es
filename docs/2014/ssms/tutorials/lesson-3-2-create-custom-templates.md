@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d44d8d8bdda5f8c15fffe8f3aaf0eaf2d099e81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62805571"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040892"
 ---
 # <a name="create-custom-templates"></a>Crear plantillas personalizadas
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incorpora plantillas para muchas tareas comunes, pero el auténtico valor reside en la posibilidad de crear una plantilla personalizada para un script complejo que tenga que crear con frecuencia. En esta práctica, creará un script sencillo con unos pocos parámetros; pero las plantillas también son útiles para scripts largos y repetitivos.  
@@ -67,7 +66,7 @@ ms.locfileid: "62805571"
   
 10. En el Editor de consultas, escriba **EXECUTE dbo.WorkOrdersForBlade**y, después, pulse F5 para ejecutar la consulta. Confirme que el panel **Resultados** devuelve una lista de los pedidos de trabajo relativos a cuchillas.  
   
-11. Editar la plantilla de secuencia de comandos (la secuencia de comandos en el paso 7), reemplace el nombre del producto hoja con el parámetro <strong> *<* product_name</strong>, `nvarchar(50)`, <strong>nombre *>* </strong>, en cuatro lugares.  
+11. Edite el script de la plantilla (el script del paso 7) y reemplace el nombre del producto hoja por el parámetro <strong> *<* PRODUCT_NAME</strong>, `nvarchar(50)` , <strong> *>* nombre</strong>, en cuatro lugares.  
   
     > [!NOTE]  
     >  Los parámetros requieren tres elementos: el nombre del parámetro que desea reemplazar, el tipo de datos del parámetro y un valor predeterminado para el parámetro.  
@@ -103,7 +102,7 @@ ms.locfileid: "62805571"
   
 3.  En el menú **Consulta** , haga clic en **Especificar valores para parámetros de plantilla**.  
   
-4.  En el **Reemplazar parámetros de plantilla** cuadro de diálogo para la `product_name` valor, escriba **FreeWheel** (sobrescribiendo el contenido predeterminado) y, a continuación, haga clic en **Aceptar** para cerrar el **Reemplazar parámetros de plantilla** diálogo cuadro y modifique el script en el Editor de consultas.  
+4.  En el cuadro de diálogo **reemplazar parámetros de plantilla** , para el `product_name` valor, escriba **Freewheel** (sobrescribiendo el contenido predeterminado) y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo **reemplazar parámetros de plantilla** y modificar el script en el editor de consultas.  
   
 5.  Presione F5 para ejecutar la consulta y crear el procedimiento.  
   

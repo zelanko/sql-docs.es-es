@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af6de293d3b5054e90f79a3f2f8f5cae4fbca04a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886027"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
   En este tema se describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe saber o recordar la contraseña de la clave maestra de base de datos que proporcionó durante la instalación del servidor DQS.  
   
@@ -30,15 +29,15 @@ ms.locfileid: "65481154"
   
 -   Asegúrese de que ningún usuario haya iniciado sesión en el servidor DQS.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor sysadmin en la instancia de SQL Server para realizar las operaciones de copia de seguridad y restauración.  
   
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
-##  <a name="BackupRestore"></a> Copia de seguridad y restauración de bases de datos de DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Copia de seguridad y restauración de bases de datos de DQS  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "65481154"
   
 6.  Desconéctese de la instancia actual de SQL Server y conéctese a la instancia de SQL Server donde desea restaurar estas bases de datos.  
   
-7.  Restaure la base de datos DQS_MAIN. Para que obtener instrucciones paso a paso restaurar una base de datos de SQL Server, consulte [restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Restaure la base de datos DQS_MAIN. Para obtener instrucciones paso a paso para restaurar una base de datos de SQL Server, consulte [restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Restaure la base de datos DQS_PROJECTS.  
   
@@ -60,19 +59,18 @@ ms.locfileid: "65481154"
   
 10. En el Explorador de objetos, haga clic con el botón secundario en el servidor y, a continuación, haga clic en **Nueva consulta**.  
   
-11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace *\<CONTRASEÑA>* por la contraseña proporcionada durante la instalación de DQS para la clave maestra de base de datos:  
+11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace *\<PASSWORD>* por la contraseña que proporcionó durante la instalación de DQS para la clave maestra de base de datos:  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     EXECUTE [internal_core].[RestoreDQDatabases] '<PASSWORD>'  
     GO  
-  
     ```  
   
 12. Presione F5 para ejecutar las instrucciones. Vea el panel **Resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar bases de datos de DQS](../../2014/data-quality-services/manage-dqs-databases.md)  
+## <a name="see-also"></a>Consulte también  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

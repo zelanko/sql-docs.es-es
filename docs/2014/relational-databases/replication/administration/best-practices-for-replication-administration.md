@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29432a9ed953acae6f2d99ef8f9d5ace7f210793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043469"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
-  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir las instrucciones de procedimientos recomendados que se presentan en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md).  
+  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir la guía de procedimientos recomendados que se presenta en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md).  
   
  Es útil dividir la guía de prácticas recomendadas en dos áreas:  
   
@@ -105,7 +104,7 @@ ms.locfileid: "62629637"
  Después de que haya establecido números de línea de base, establezca umbrales en el Monitor de replicación. Para obtener más información, vea [Establecer umbrales y advertencias en el Monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) y [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md). Si se encuentra con un problema de rendimiento, se recomienda leer las sugerencias de los temas para mejorar el rendimiento enumerados anteriormente y aplicar cambios en áreas que afecten a los problemas que ha encontrado.  
   
 ## <a name="create-thresholds-and-alerts"></a>Crear umbrales y alertas  
- El Monitor de replicación le permite establecer un número de umbrales relacionados con el estado y el rendimiento. Se recomienda establecer los umbrales apropiados para su topología; si se alcanza un umbral, se mostrará una advertencia y, opcionalmente, se puede enviar una alerta a una cuenta de correo electrónico, un buscapersonas u otro dispositivo. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+ El Monitor de replicación le permite establecer un número de umbrales relacionados con el estado y el rendimiento. Se recomienda establecer los umbrales apropiados para su topología; si se alcanza un umbral, se mostrará una advertencia y, opcionalmente, se puede enviar una alerta a una cuenta de correo electrónico, un buscapersonas u otro dispositivo. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  Además de las alertas que se pueden asociar con los umbrales de supervisión, la replicación ofrece un número de alertas predefinidas que responden a las acciones del agente de replicación. Un administrador puede utilizar estas alertas para mantenerse informado sobre el estado de la topología de replicación. Se recomienda leer el tema en el que se describen las alertas y utilizar aquellas que se adapten a las necesidades de administración (también es posible crear alertas adicionales si es necesario). Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62629637"
  Una vez creada una publicación, puede ser necesario agregar o quitar artículos, o cambiar las propiedades de la publicación o de un artículo. Es posible realizar la mayoría de los cambios una vez creada la publicación. Sin embargo, en algunos casos, es necesario generar una nueva instantánea de la publicación o reinicializar las suscripciones de la misma. Para más información, vea [Change Publication and Article Properties](../publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos) y [Agregar y quitar artículos de publicaciones existentes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>Conocer cómo realizar cambios de esquema si cambian los requisitos de la aplicación  
- En muchos casos, son necesarios cambios de esquema después de que una aplicación esté en producción. En una topología de replicación, a menudo se deben propagar estos cambios a todos los suscriptores. La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ En muchos casos, son necesarios cambios de esquema después de que una aplicación esté en producción. En una topología de replicación, a menudo se deben propagar estos cambios a todos los suscriptores. La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando realice cualquiera de los siguientes cambios de esquema en el objeto publicado correspondiente en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ese cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -147,7 +146,7 @@ ms.locfileid: "62629637"
   
  Para obtener más información, vea [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md)  
   
   

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06e8d38be6f1e8e1ef816f5fa38c66d74a69987a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054505"
 ---
 # <a name="report-server-properties-service-tab"></a>Propiedades de Servidor de informes (pestaña Servicio)
-  Éste es el servicio Servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
+  este es el servicio Servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
  **Ruta de acceso binaria**  
@@ -33,7 +32,7 @@ ms.locfileid: "62506775"
  **Host Name**  
  Muestra el nombre del equipo o clúster que ejecuta la búsqueda de texto completo.  
   
- **Name**  
+ **Nombre**  
  Indica el nombre para mostrar del servicio.  
   
  **Id. del proceso**  
@@ -45,16 +44,16 @@ ms.locfileid: "62506775"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: Este servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: No se puede iniciar este servicio.  
+-   Deshabilitado: el servicio no se puede iniciar.  
   
- **Estado**  
+ **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servicios de SQL Server](../../../2014/tools/configuration-manager/sql-server-services.md)  
   
   

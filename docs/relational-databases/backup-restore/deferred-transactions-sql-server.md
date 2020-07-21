@@ -1,5 +1,6 @@
 ---
 title: Transacciones diferidas (SQL Server) | Microsoft Docs
+description: Una transacción diferida de SQL Server Enterprise se produce si los datos necesarios para la reversión están sin conexión. Aprenda a sacarlas del estado diferido.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748409"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transacciones diferidas (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, una transacción dañada puede ser diferida si los datos necesarios para la reversión se encuentran sin conexión durante el inicio de la base de datos. Una *transacción diferida* es aquella que está sin confirmar cuando termina la fase de puesta al día y que se encuentra con un error que impide que se revierta. Si la transacción no se puede revertir, se convierte en una transacción diferida.  
   
 > [!NOTE]  
@@ -40,8 +41,8 @@ ms.locfileid: "68075983"
 |Acción|Resolución (si se producen problemas de E/S o los datos necesarios están sin conexión)|  
 |------------|-----------------------------------------------------------------------|  
 |Iniciar el servidor|transacción diferida|  
-|Restaurar|transacción diferida|  
-|Adjuntar|Error en la operación de adjuntar|  
+|Restauración|transacción diferida|  
+|Attach|Error en la operación de adjuntar|  
 |Reinicio automático|transacción diferida|  
 |Crear una base de datos o una instantánea de base de datos|Error en la creación|  
 |Puesta al día en la creación de reflejo de la base de datos|transacción diferida|  

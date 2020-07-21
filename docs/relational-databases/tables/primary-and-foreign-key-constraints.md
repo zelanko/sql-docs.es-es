@@ -16,15 +16,15 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999438"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004773"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Las claves principales y las claves externas son dos tipos de restricciones que se pueden usar para aplicar la integridad de datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se trata de objetos de base de datos importantes.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67999438"
   
  [Tareas relacionadas](../../relational-databases/tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> Restricciones de clave principal  
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> Restricciones de clave principal  
  Una tabla suele tener una columna o una combinación de columnas cuyos valores identifican de forma única cada fila de la tabla. Estas columnas se denominan claves principales de la tabla y exigen la integridad de entidad de la tabla. Debido a que las restricciones de clave principal garantizan datos únicos, con frecuencia se definen en una columna de identidad.  
   
  Cuando especifica una restricción de clave principal en una tabla, [!INCLUDE[ssDE](../../includes/ssde-md.md)] exige la unicidad de los datos mediante la creación automática de un índice único para las columnas de clave principal. Este índice también permite un acceso rápido a los datos cuando se usa la clave principal en las consultas. Si se define una restricción de clave principal para más de una columna, puede haber valores duplicados dentro de la misma columna, pero cada combinación de valores de todas las columnas de la definición de la restricción de clave principal debe ser única.  
@@ -57,12 +57,12 @@ ms.locfileid: "67999438"
   
 -   Si la clave principal se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints  
  Una clave externa (FK) es una columna o combinación de columnas que se usa para establecer y aplicar un vínculo entre los datos de dos tablas a fin de controlar los datos que se pueden almacenar una tabla de clave externa. En una referencia de clave externa, se crea un vínculo entre dos tablas cuando las columnas de una de ellas hacen referencia a las columnas de la otra que contienen el valor de clave principal. Esta columna se convierte en una clave externa para la segunda tabla.  
   
  Por ejemplo, la tabla **Sales.SalesOrderHeader** tiene un vínculo de clave externa a la tabla **Sales.SalesPerson** porque existe una relación lógica entre pedidos de ventas y personal de ventas. La columna **SalesPersonID** de la tabla **SalesOrderHeader** coincide con la columna de clave principal de la tabla **SalesPerson** . La columna **SalesPersonID** de la tabla **SalesOrderHeader** es la clave externa para la tabla **SalesPerson** . Al crear esta relación de clave externa, no se puede insertar un valor para **SalesPersonID** en la tabla **SalesOrderHeader** si no existe en la tabla **SalesPerson** .  
   
- Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000. (Requiere al menos el nivel de compatibilidad 130). El aumento tiene las siguientes restricciones:  
+ Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000. (Requiere al menos el nivel de compatibilidad 130). El aumento conlleva las siguientes restricciones:  
   
 -   Mayor que 253 referencias de clave externa solo se admite para operaciones DELETE DML. No se admiten operaciones UPDATE y MERGE.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "67999438"
   
 -   Una tabla con un desencadenador INSTEAD OF no puede tener también una cláusula REFERENCES que especifique un acción en cascada. Sin embargo, un desencadenador AFTER de la tabla de destino de una acción en cascada puede ejecutar una instrucción INSERT, UPDATE o DELETE en otra tabla o vista que active un desencadenador INSTEAD OF definido para dicho objeto.  
   
-##  <a name="Tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tareas relacionadas  
  En la tabla siguiente se enumeran las tareas comunes asociadas a restricciones de clave principal y clave externa.  
   
 |Tarea|Tema|  
@@ -126,11 +126,11 @@ ms.locfileid: "67999438"
 |Describe cómo crear una clave principal.|[Crear claves principales](../../relational-databases/tables/create-primary-keys.md)|  
 |Describe cómo eliminar una clave principal.|[Eliminar claves principales](../../relational-databases/tables/delete-primary-keys.md)|  
 |Describe cómo modificar una clave principal.|[Modificar claves principales](../../relational-databases/tables/modify-primary-keys.md)|  
-|Describe cómo crear relaciones de clave externa|[Crear relaciones de clave externa](../../relational-databases/tables/create-foreign-key-relationships.md)|  
-|Describe cómo modificar las relaciones de clave externa.|[Modificar relaciones de claves externas.](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
-|Describe cómo eliminar relaciones de clave externa.|[Eliminar relaciones entre claves externas.](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
+|Describe cómo crear relaciones de clave externa|[Crear relaciones de claves externas](../../relational-databases/tables/create-foreign-key-relationships.md)|  
+|Describe cómo modificar las relaciones de clave externa.|[Modificar relaciones de claves externas](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
+|Describe cómo eliminar relaciones de clave externa.|[Eliminar relaciones de claves externas](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Describe cómo ver las propiedades de clave externa.|[Ver las propiedades de clave externa](../../relational-databases/tables/view-foreign-key-properties.md)|  
-|Describe cómo deshabilitar restricciones de clave externa para replicación.|[Deshabilitar una restricción FOREIGN KEY para la replicación](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
-|Describe cómo deshabilitar las restricciones de clave externa durante una instrucción INSERT o UPDATE.|[Deshabilitar restricciones FOREIGN KEY con instrucciones INSERT y UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
+|Describe cómo deshabilitar restricciones de clave externa para replicación.|[Deshabilitar restricciones de clave externa para la replicación](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
+|Describe cómo deshabilitar las restricciones de clave externa durante una instrucción INSERT o UPDATE.|[Deshabilitar restricciones de clave externa con instrucciones INSERT y UPDATE](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  
   
   

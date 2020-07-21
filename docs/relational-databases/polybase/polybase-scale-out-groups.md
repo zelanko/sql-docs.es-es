@@ -1,5 +1,6 @@
 ---
 title: Grupos de escalado horizontal de PolyBase | Microsoft Docs
+description: Use la característica Grupo de PolyBase para crear un clúster de instancias de SQL Server. Esto mejora el rendimiento de las consultas de grandes conjuntos de datos de orígenes externos.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -13,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710472"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818228"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
 
@@ -28,13 +29,13 @@ Una instancia de SQL Server independiente con PolyBase puede convertirse en un c
   
 Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escalado horizontal de PolyBase")  
+![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escalado horizontal de PolyBase")  
   
 ## <a name="head-node"></a>Nodo principal  
 
 El nodo principal contiene la instancia de SQL Server a la que se envían las consultas PolyBase. Cada grupo de PolyBase solo puede tener un nodo principal. Un nodo principal es un grupo lógico del motor de base de datos de SQL, el motor de PolyBase y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server.
   
-## <a name="compute-node"></a>Nodo de proceso  
+## <a name="compute-node"></a>Nodo de ejecución  
 
 Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución. El nodo principal y los nodos de ejecución deben ejecutar la misma versión de SQL Server.
 
@@ -47,7 +48,7 @@ Por ejemplo, supongamos que tiene una tabla externa de SQL Server con 12 partici
 > [!NOTE]
 >  Y es diferente de las lecturas de escalabilidad horizontal a través de Hadoop. 
 
-![Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escalado horizontal de PolyBase")
+![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escalado horizontal de PolyBase")
   
 ## <a name="distributed-query-processing"></a>Procesamiento de consultas distribuidas  
 
@@ -57,12 +58,15 @@ El motor de PolyBase es el componente principal que está detrás de las consult
   
 El servicio de movimiento de datos de PolyBase recibe instrucciones del motor de PolyBase y transfiere los datos entre HDFS y SQL Server, y entre las instancias de SQL Server de los nodos principal y de ejecución.
   
-## <a name="editions-availability"></a>Disponibilidad de ediciones  
-
-Después de instalar SQL Server, la instancia puede designarse como nodo principal o de ejecución. La elección dependerá de qué versión de SQL Server PolyBase se esté ejecutando. En una instalación de Enterprise Edition, la instancia se puede designar como nodo principal o de ejecución. En Standard Edition, la instancia solo puede designarse como nodo de ejecución.
-
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para configurar un grupo de escalado horizontal de PolyBase, consulte la guía siguiente:
 
 [Improve PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md) (mejora de los grupos de escalado horizontal de PolyBase en Windows)
+
+## <a name="see-also"></a>Consulte también
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

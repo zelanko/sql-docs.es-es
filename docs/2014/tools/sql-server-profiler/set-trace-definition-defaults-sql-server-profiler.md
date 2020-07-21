@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32b32bab5e7105f9f34774c5c59551b30858ee2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267441"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057773"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>Configurar los valores predeterminados de definición de seguimiento (SQL Server Profiler)
   El valor predeterminado de definición de seguimiento es la plantilla de seguimiento predeterminada que se utiliza para cada proveedor o servidor. Puede configurar las plantillas de seguimiento predeterminadas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -34,9 +33,9 @@ ms.locfileid: "63267441"
   
 5.  Si es necesario, haga clic en la pestaña **Selección de eventos**para modificar la plantilla.  
   
-6.  Haga clic en **Guardar**.  
+6.  Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Plantillas de SQL Server Profiler](sql-server-profiler-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18268c4ac8f0a6a848918c66c07c5ac3be062768
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480533"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937636"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importar y exportar conocimiento
   Puede crear bases de conocimiento y dominios directamente en la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , o bien importar conocimiento en una base de conocimiento o exportarlo desde esta. En la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , puede usar un archivo de datos para las operaciones de importación y exportación, o un archivo de Excel para las operaciones de importación. El archivo de datos utilizado es un archivo cifrado creado por [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) con la extensión .dqs. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Estas operaciones le proporcionan una mayor flexibilidad a la hora de generar y compartir el conocimiento que utiliza para realizar las operaciones de limpieza de datos y búsqueda de coincidencias.  
@@ -40,7 +39,7 @@ ms.locfileid: "65480533"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Crear un dominio individual y agregarle conocimiento.|[Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   

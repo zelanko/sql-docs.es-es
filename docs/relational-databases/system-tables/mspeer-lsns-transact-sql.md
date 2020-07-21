@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 231653b004da7e3429f81997500f2ece51e77f8b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085772"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889662"
 ---
-# <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **Mspeer_lsns** tabla se utiliza para asignar cada transacción a una suscripción en una topología de replicación punto a punto. Esta tabla se almacena en cada base de datos de publicación en una topología de replicación punto a punto y en la base de datos de suscripciones de todos los suscriptores en una publicación punto a punto. Para obtener más información sobre este tipo de topología de replicación transaccional, vea [replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Esta tabla se almacena en la base de datos de publicación.  
+  La tabla **Mspeer_lsns** se usa para asignar cada transacción a una suscripción en una topología de replicación punto a punto. Esta tabla se almacena en cada base de datos de publicación en una topología de replicación punto a punto y en la base de datos de suscripciones de todos los suscriptores en una publicación punto a punto. Para obtener más información sobre este tipo de topología de replicación transaccional, vea [replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). Esta tabla se almacena en la base de datos de publicación.  
   
 ## <a name="definition"></a>Definición  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica un LSN punto a punto.|  
-|**last_updated**|**datetime**|El **datetime** en que se realizó la última actualización de fila.|  
-|**originator**|**sysname**|Nombre del publicador que originó la transacción.|  
+|**last_updated**|**datetime**|**Fecha y hora** en que se realizó la última actualización de la fila.|  
+|**llegar**|**sysname**|Nombre del publicador que originó la transacción.|  
 |**originator_db**|**sysname**|Nombre de la base de datos en que se originó la transacción.|  
 |**originator_publication**|**sysname**|Nombre de la publicación en que se originó la transacción.|  
 |**originator_publication_id**|**int**|Identificador de la publicación en que se originó la transacción.|  
@@ -44,8 +44,8 @@ ms.locfileid: "68085772"
 |**originator_version**|**int**|Identifica el número de versión del publicador.|  
 |**originator_id**|**smallint**|Identifica cada nodo de la topología para detectar conflictos. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

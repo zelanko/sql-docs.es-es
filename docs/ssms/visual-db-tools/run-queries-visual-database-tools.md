@@ -1,10 +1,9 @@
 ---
-title: Ejecutar consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Ejecutar consultas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28eaf23631d9f9331ede00394485d1cdc41b9fbd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3880beb6f4927c28fe6edd686b26804d3826cf16
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255653"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255174"
 ---
 # <a name="run-queries-visual-database-tools"></a>Ejecutar consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ Una vez finalizado el diseño de la consulta, puede ejecutarla.
   
 2.  Haga clic con el botón derecho en la ventana de la consulta y elija **Ejecutar SQL** en el menú contextual.  
   
-    -O bien-  
+    O bien  
   
     Presione CTRL+R.  
   

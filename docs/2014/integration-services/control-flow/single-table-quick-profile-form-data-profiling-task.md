@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e6626040cfd51a2119a3c1b3b4dfd9203a6b0a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830187"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432662"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
   Utilice el **Formulario de perfil rápido de tabla única** para configurar rápidamente la tarea de generación de perfiles de datos de una sola tabla o vista utilizando la configuración predeterminada.  
@@ -27,16 +26,16 @@ ms.locfileid: "62830187"
  Para más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](data-profiling-task.md). Para más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](data-profile-viewer.md).  
   
 ## <a name="options"></a>Opciones  
- **Conexión**  
+ **Connection**  
  Seleccione un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista que se usará para generar el perfil.  
   
  **Tabla o vista**  
  Seleccione una tabla o vista en la base de datos a la que se conecta el administrador de conexiones seleccionado.  
   
- **Ejecución**  
+ **Proceso**  
  Seleccione qué perfiles hay que calcular.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Perfil de proporción de columnas nulas**|Calcule un perfil de proporción de columnas nulas con la configuración predeterminada para todas las columnas aplicables en la tabla o vista seleccionadas.<br /><br /> Este perfil notifica el porcentaje de valores nulos en la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Para más información sobre la configuración de este perfil, vea [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md).|  
 |**Perfil de estadísticas de columnas**|Calcule un perfil de estadísticas de columnas con la configuración predeterminada para todas las columnas aplicables en la tabla o vista seleccionadas.<br /><br /> Este perfil notifica estadísticas, como los valores mínimo, máximo y promedio, y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas `datetime`. Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Para más información sobre la configuración de este perfil, vea [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md).|  
@@ -51,7 +50,7 @@ ms.locfileid: "62830187"
 > [!NOTE]  
 >  El tipo Perfil de inclusión de valores no está disponible en el **Formulario de perfil rápido de tabla única**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](data-profiling-task-editor-profile-requests-page.md)  
   

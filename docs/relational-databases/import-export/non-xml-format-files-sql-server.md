@@ -1,5 +1,6 @@
 ---
 title: Archivos de otro formato distinto a XML (SQL Server) | Microsoft Docs
+description: SQL Server 2019 admite archivos de formato XML y no XML para la importación en bloque y la exportación masiva. Obtenga información sobre los archivos de formato no XML y sus ventajas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3581d9247979702a7c1e9af409b43121c4158334
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3af61eb74cd1cd54dccff28f38b698fc113f61e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111889"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001194"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admiten dos tipos de archivos de formato para la importación y exportación masivas: *archivos de formato no XML* y *archivos de formato XML*.  
   
  **En este tema:**  
@@ -36,7 +37,7 @@ ms.locfileid: "68111889"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Ventajas de los archivos de formato no XML  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Ventajas de los archivos de formato no XML  
   
 -   Puede crear automáticamente un archivo de formato no XML si especifica la opción **format** en un comando **bcp** .  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68111889"
 > [!NOTE]  
 >  Los archivos de formato XML ofrecen varias ventajas sobre los archivos con otro formato. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Estructura de los archivos de formato no XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Estructura de los archivos de formato no XML  
  Un archivo de formato no XML es un archivo de texto que tiene una estructura específica. El archivo de formato no XML contiene información sobre el tipo de almacenamiento de archivo, la longitud de prefijo, la longitud de campo y el terminador de campo de cada columna de tabla.  
   
  En la ilustración siguiente se muestran los campos de archivo de formato de un archivo de formato no XML de ejemplo.  
@@ -79,7 +80,7 @@ ms.locfileid: "68111889"
 > [!NOTE]  
 >  Puede modificar un archivo de formato de forma que le permita realizar una importación masiva desde un archivo de datos en el que el número o el orden de los campos difieran del número o el orden de las columnas de la tabla. Para obtener más información, vea la lista [Tareas relacionadas](#RelatedTasks) , más adelante en este tema.  
   
-##  <a name="Examples"></a> Ejemplo de archivo de formato no XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Ejemplo de archivo de formato no XML  
  En el ejemplo siguiente se muestra un archivo de formato no XML creado anteriormente (`myDepartmentIdentical-f-c.fmt`). Este archivo describe un campo de datos de caracteres para cada columna en la tabla `HumanResources.Department` de la base de datos de ejemplo `AdventureWorks2012` .  
   
  El archivo de formato generado, `myDepartmentIdentical-f-c.fmt`, contiene la siguiente información:  
@@ -96,7 +97,7 @@ ms.locfileid: "68111889"
 > [!NOTE]  
 >  Para ver una ilustración en la que se muestran los campos del archivo de formato en relación con este archivo de formato no XML de ejemplo, vea [Estructura de los archivos de formato no XML](#Structure)anteriormente en este tema.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)  
   

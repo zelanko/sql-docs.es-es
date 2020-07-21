@@ -1,5 +1,6 @@
 ---
-title: Funciones definidas por el usuario CLR | Microsoft Docs
+title: Funciones CLR definidas por el usuario | Microsoft Docs
+description: SQL Server la integración CLR le permite crear funciones escalares definidas por el usuario, con valores de tabla y de agregado en cualquier lenguaje de programación .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6195badbf3fc0d789e1b083ab187eebbce2414fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe481b1a49f8eba69bbf913e49f398c86244b952
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727864"
 ---
-# <a name="clr-user-defined-functions"></a>Funciones CLR definidas por el usuario
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las funciones definidas por el usuario son rutinas que pueden tomar parámetros, realizar cálculos u otras acciones y devolver un resultado. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], las funciones definidas por el usuario se pueden escribir en cualquier lenguaje de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  Existen dos tipos de funciones: escalares, que devuelven un valor único, y con valores de tabla, que devuelven un conjunto de filas.  
@@ -39,7 +40,7 @@ ms.locfileid: "68009725"
  [Agregados definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
  Describe cómo implementar y utilizar los agregados definidos por el usuario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)  
   
   

@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 82c3c7191ab686550885ebdc050f5fb1ac818cb9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957335"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar una copia de seguridad de base de datos (SQL Server Management Studio)
   En este tema se explica cómo restaurar una copia de seguridad completa de la base de datos.  
   
 > [!IMPORTANT]  
->  En el modelo de recuperación optimizado para cargas masivas de registros o completo, para poder restaurar una base de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se debe realizar una copia de seguridad del registro de transacciones activo (conocido como final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)). Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para más información, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+>  En el modelo de recuperación optimizado para cargas masivas de registros o completo, para poder restaurar una base de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se debe realizar una copia de seguridad del registro de transacciones activo (conocido como final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)). Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Tenga en cuenta que si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero, si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la operación de importar puede requerir varias horas y la operación de volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
@@ -63,27 +62,27 @@ ms.locfileid: "70154778"
         >  Esta lista solo está disponible cuando se selecciona la opción **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   
          **Medio de copia de seguridad**  
-         Seleccione el medio para la operación de restauración: **Archivo**, **cinta**, **dirección URL**o **dispositivo de copia de seguridad**. La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.  
+         Seleccione el medio de la operación de restauración: **Archivo**, **Cinta**, **Dirección URL** o **Dispositivo de copia de seguridad**. La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.  
   
-         **Ubicación de copia de seguridad**  
+         **Ubicación de la copia de seguridad**  
          Consulte, agregue o quite medios de la operación de restauración. La lista puede contener un máximo de 64 archivos, cintas o dispositivos de copia de seguridad.  
   
-         **Agregar**  
-         Agrega la ubicación de un dispositivo de copia de seguridad a la lista ubicación de la **copia de seguridad** . En función del tipo de medio que seleccione en el campo **Medio para copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo.  
+         **Add (Agregar)**  
+         Agrega la ubicación de dispositivo de copia de seguridad a la lista **Ubicación de la copia de seguridad**. En función del tipo de medio que seleccione en el campo **Medio para copia de seguridad**, al hacer clic en **Agregar**, se abrirá uno de los siguientes cuadros de diálogo.  
   
         |Tipo de medio|Cuadro de diálogo|Descripción|  
         |----------------|----------------|-----------------|  
         |**Archivo**|**Buscar archivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un archivo local en el árbol, o bien especificar un archivo remoto mediante su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-        |**Device**|**Seleccionar dispositivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un dispositivo de una lista de dispositivos lógicos de copia de seguridad en la instancia del servidor.|  
+        |**Dispositivo**|**Seleccionar dispositivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un dispositivo de una lista de dispositivos lógicos de copia de seguridad en la instancia del servidor.|  
         |**Cinta**|**Seleccionar cinta de copia de seguridad**|En este cuadro de diálogo, puede seleccionar una cinta de la lista de unidades de cinta que están conectadas físicamente al equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**URL**|De esta forma se inician dos cuadros de diálogo en el siguiente orden:<br /><br /> 1) **Conéctese a Azure Storage**<br /><br /> 2) **Buscar el archivo de copia de seguridad en Azure**|En el cuadro de diálogo **conectar con el Azure Storage** , seleccione una credencial existente de SQL que almacene la información de nombre y clave de acceso de la cuenta de Azure Storage, o bien cree una nueva credencial de SQL especificando el nombre de la cuenta de almacenamiento y la información de la clave de acceso de almacenamiento. Para obtener más información, vea [conectarse a &#40;Azure Storage&#41;restore](connect-to-microsoft-azure-storage-restore.md).<br /><br /> En el cuadro de diálogo **Buscar archivo de copia de seguridad** , puede seleccionar un archivo de la lista de contenedores mostrados en el marco de la izquierda.|  
+        |**URL**|De esta forma se inician dos cuadros de diálogo en el siguiente orden:<br /><br /> 1) **Conéctese a Azure Storage**<br /><br /> 2) **Buscar el archivo de copia de seguridad en Azure**|En el cuadro de diálogo **conectar con el Azure Storage** , seleccione una credencial existente de SQL que almacene la información de nombre y clave de acceso de la cuenta de Azure Storage, o bien cree una nueva credencial de SQL especificando el nombre de la cuenta de almacenamiento y la información de la clave de acceso de almacenamiento. Para obtener más información, vea [conectarse a Azure Storage &#40;restore&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> En el cuadro de diálogo **Buscar archivo de copia de seguridad**, puede seleccionar un archivo de la lista de contenedores mostrados en el marco de la izquierda.|  
   
          Si la lista está completa, el botón **Agregar** no está disponible.  
   
          **Quitar**  
          Quita uno o varios archivos, cintas o dispositivos lógicos de copia de seguridad seleccionados.  
   
-         **Contenido**  
+         **Contents**  
          Muestra el contenido de los medios de un archivo, una cinta o un dispositivo lógico de copia de seguridad seleccionado.  
   
 5.  En la sección **Destino** , el cuadro **Base de datos** se rellena automáticamente con el nombre de la base de datos que se va a restaurar. Para cambiar el nombre de la base de datos, especifique el nuevo nombre en el cuadro **Base de datos** .  
@@ -122,7 +121,7 @@ ms.locfileid: "70154778"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
  [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   

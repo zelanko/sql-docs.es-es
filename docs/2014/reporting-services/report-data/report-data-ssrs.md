@@ -11,25 +11,25 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: be36e61a44a416283e77638f01005f1b3e16883b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413053"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Datos de informe en SQL Server Reporting Services (SSRS)
 
   Los datos del informe pueden proceder de varios orígenes de datos de la organización. El primer paso para diseñar un informe es crear orígenes de datos y conjuntos de datos que representan los datos de informes subyacentes. Cada origen de datos incluye información de conexión de datos. Cada conjunto de datos incluye un comando de consulta que define el conjunto de campos que se van a usar como datos de un origen de datos. Para ver los datos de cada conjunto de datos, agregue una región de datos, como una tabla, una matriz, un gráfico o un mapa. Cuando se procesa el informe, las consultas se ejecutan en el origen de datos y cada región de datos se expande según sea necesario para mostrar los resultados de la consulta para el conjunto de datos.  
   
-##  <a name="BkMk_ReportDataTerms"></a> Términos
+##  <a name="terms"></a><a name="BkMk_ReportDataTerms"></a>Terminología
 
- Si no está familiarizado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conceptos, revise los siguientes términos en [conceptos de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *conexión de datos*, *datos incrustados orígenes*, *orígenes de datos compartidos*, *conjuntos de datos incrustados*, *conjuntos de datos compartidos*, *consultas de conjunto de datos* , *elementos de informe*, y *alertas de datos*.  
+ Si no está familiarizado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los conceptos, revise los siguientes términos [en Reporting Services conceptos &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *conexión de datos*, orígenes de datos *incrustados*, *orígenes de datos compartidos*, conjuntos de datos *incrustados*, conjuntos de datos *compartidos*, *consultas de conjunto*de datos, elementos de *Informe*y *alertas de datos*.  
   
-##  <a name="BkMk_ReportDataTips"></a> Sugerencias para especificar datos de informe
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a> Sugerencias para especificar datos de informe
 
  Use la siguiente información para diseñar una estrategia de datos de informe.  
   
-- **Orígenes de datos** Los orígenes de datos se pueden publicar y administrar aparte de los informes en un servidor de informes o en un sitio de SharePoint. Para cada origen de datos, usted o el propietario de la base de datos pueden administrar la información de conexión en un solo lugar. Las credenciales del origen de datos se almacenan de forma segura en el servidor de informes; no incluya contraseñas en la cadena de conexión. Puede redirigir el origen de datos de un servidor de prueba a un servidor de producción. Puede deshabilitar un origen de datos para suspender todos los informes que lo usan. Para obtener una lista de orígenes de datos admitidos, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+- **Orígenes de datos** Los orígenes de datos se pueden publicar y administrar aparte de los informes en un servidor de informes o en un sitio de SharePoint. Para cada origen de datos, usted o el propietario de la base de datos pueden administrar la información de conexión en un solo lugar. Las credenciales del origen de datos se almacenan de forma segura en el servidor de informes; no incluya contraseñas en la cadena de conexión. Puede redirigir el origen de datos de un servidor de prueba a un servidor de producción. Puede deshabilitar un origen de datos para suspender todos los informes que lo usan. Para obtener una lista de orígenes de datos admitidos, vea [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
 - **Conjuntos de datos** Los conjuntos de datos se pueden publicar y administrar aparte de los informes o los orígenes de datos compartidos de los que dependen. Usted o el propietario de la base de datos pueden proporcionar consultas optimizadas para los autores de informes que se van a usar. Cuando cambie la consulta, todos los informes que usan el conjunto de datos compartido utilizan la consulta actualizada. Puede habilitar el almacenamiento en caché del conjunto de datos para mejorar el rendimiento. Puede programar el almacenamiento en caché de la consulta para un momento concreto o usar una programación compartida.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67413053"
   
 - Comprenda las herramientas y las arquitecturas de cliente y servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, en el Diseñador de informes, los informes se crean en un equipo cliente que usa tipos de orígenes de datos integrados. Cuando se publica un informe, los tipos de origen de datos deben ser compatibles con el servidor de informes o el sitio de SharePoint.  Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-- Los orígenes de datos y conjuntos de datos se crean en un informe y se publican en un servidor de informes o en un sitio de SharePoint desde una herramienta de creación de cliente. Los orígenes de datos se pueden crear directamente en el servidor de informes. Una vez que se publican, puede configurar las credenciales y otras propiedades en el servidor de informes. Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) y [herramientas de Reporting Services](../tools/reporting-services-tools.md).  
+- Los orígenes de datos y conjuntos de datos se crean en un informe y se publican en un servidor de informes o en un sitio de SharePoint desde una herramienta de creación de cliente. Los orígenes de datos se pueden crear directamente en el servidor de informes. Una vez que se publican, puede configurar las credenciales y otras propiedades en el servidor de informes. Para obtener más información, vea [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) y [Reporting Services herramientas](../tools/reporting-services-tools.md).  
   
 - Los orígenes de datos que puede usar dependen de las extensiones de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas. La compatibilidad con los orígenes de datos puede diferir en lo relativo a herramienta de creación de cliente, versión del servidor de informes y plataforma del servidor de informes. Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -74,11 +74,11 @@ ms.locfileid: "67413053"
 |||  
 |-|-|  
 |**Tareas comunes**|**Vínculos**|  
-|Crear conexiones de datos|[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Crear conexiones de datos|[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Crear conjuntos de datos y consultas|[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Administrar orígenes de datos después de que se publican|[Administrar orígenes de datos de informe](manage-report-data-sources.md)|  
-|Administrar conjuntos de datos compartidos cuando se publican|[Administración de conjuntos de datos compartidos](manage-shared-datasets.md)|  
+|Administrar conjuntos de datos compartidos cuando se publican|[Administrar conjuntos de datos compartidos](manage-shared-datasets.md)|  
 |Crear y administrar alertas de datos|[Alertas de datos de Reporting Services](../tutorial-creating-a-basic-table-report-report-builder.md)|  
 |Almacenar en caché un conjunto de datos compartido|[Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)|  
 |Programar un conjunto de datos compartido para cargar previamente la memoria caché|[Programaciones](../subscriptions/schedules.md)|  
-|Agregar una extensión de datos|[Implementación de una extensión de procesamiento de datos](../extensions/data-processing/implementing-a-data-processing-extension.md)|
+|Agregar una extensión de datos|[Implementar una extensión de procesamiento de datos](../extensions/data-processing/implementing-a-data-processing-extension.md)|

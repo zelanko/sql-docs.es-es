@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fb706fb8be1864b8da12c91fc4ce1e767355f93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62467859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023082"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
   En los siguientes temas se documentan la funcionalidad de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus operaciones asociadas.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Panel de la utilidad &#40;utilidad de SQL Server&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
+ [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../database-engine/utility-dashboard-sql-server-utility.md)  
   
- [Implementa los detalles de la aplicación de capa de datos &#40;utilidad de SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
+ [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [Administra los detalles de la instancia &#40;utilidad de SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
@@ -42,8 +41,8 @@ ms.locfileid: "62467859"
   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Vea también  
- [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md)   
+## <a name="see-also"></a>Consulte también  
+ [Utilidad de SQL Server características y tareas](sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de la Utilidad de SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

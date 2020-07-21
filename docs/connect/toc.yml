@@ -140,9 +140,11 @@
               href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
             - name: Compatibilidad de SqlClient con LocalDB
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
+            - name: Compatibilidad de SqlClient para Always Encrypted
+              href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
 - name: JDBC
   items:
-    - name: Controlador JDBC de Microsoft para SQL Server
+    - name: Microsoft JDBC Driver para SQL Server
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
     - name: Referencia de API del controlador JDBC
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
@@ -2628,6 +2630,9 @@
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
         - name: Usar Always Encrypted con el controlador JDBC
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+          items:
+            - name: Always Encrypted con enclaves seguros
+              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
         - name: Artículos de la guía
           items:
             - name: Usar instrucciones con SQL
@@ -2769,8 +2774,10 @@
           href: ../connect/odbc/linux-mac/system-requirements.md
         - name: Instalación del Administrador de controladores
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Instalación de Microsoft ODBC Driver for SQL Server
+        - name: Instalación del controlador de ODBC (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: Instalación del controlador de ODBC (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: Guías de características
           items:
             - name: Palabras clave de cadena de conexión y nombres de orígenes de datos (DSN)
@@ -2913,7 +2920,7 @@
                     - name: Arquitectura ODBC
                       href: ../odbc/reference/odbc-architecture.md
                       items:
-                        - name: Aplicaciones
+                        - name: APLICACIONES
                           href: ../odbc/reference/applications.md
                         - name: El Administrador de controladores
                           href: ../odbc/reference/the-driver-manager.md
@@ -3447,7 +3454,7 @@
                               href: ../odbc/reference/develop-app/concurrency-types.md
                             - name: Simultaneidad optimista
                               href: ../odbc/reference/develop-app/optimistic-concurrency.md
-                    - name: Diagnósticos
+                    - name: Diagnóstico
                       href: ../odbc/reference/develop-app/diagnostics.md
                       items:
                         - name: Códigos de retorno de ODBC
@@ -4037,7 +4044,7 @@
                               href: ../odbc/reference/appendixes/numeric-literal-syntax.md
                         - name: Palabras clave reservadas
                           href: ../odbc/reference/appendixes/reserved-keywords.md
-                    - name: "Apéndice\_D: Tipos de datos"
+                    - name: "Apéndice\_D: Tipo de datos"
                       href: ../odbc/reference/appendixes/appendix-d-data-types.md
                       items:
                         - name: Usar identificadores de tipo de datos
@@ -4108,19 +4115,19 @@
                         - name: Convertir datos de SQL a tipos de datos C
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: 'SQL a C: Binario'
+                            - name: 'SQL a C: Binary'
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
                             - name: 'SQL a C: bit'
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
                             - name: 'SQL a C: Carácter'
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'SQL a C: date'
+                            - name: 'SQL a C: Date'
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
                             - name: 'SQL a C: Intervalos de día y hora'
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
                             - name: 'SQL a C: GUID'
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
-                            - name: 'SQL a C: Numérico'
+                            - name: 'SQL a C: Numeric'
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
                             - name: 'SQL a C: Timestamp'
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
@@ -4133,19 +4140,19 @@
                         - name: Convertir datos de C en tipos de datos SQL
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: 'C a SQL: Binario'
+                            - name: 'C a SQL: Binary'
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
                             - name: 'C a SQL: bit'
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
                             - name: 'C a SQL: Carácter'
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'C a SQL: date'
+                            - name: 'C a SQL: Date'
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: 'C a SQL: Intervalos de día y hora'
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
                             - name: 'C a SQL: GUID'
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
-                            - name: 'C a SQL: Numérico'
+                            - name: 'C a SQL: Numeric'
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
                             - name: 'C a SQL: Timestamp'
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
@@ -5116,7 +5123,7 @@
           href: ../connect/oledb/features/working-with-query-notifications.md
         - name: Trabajar con aislamiento de instantánea
           href: ../connect/oledb/features/working-with-snapshot-isolation.md
-    - name: Aplicaciones
+    - name: APLICACIONES
       href: ../connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
       items:
         - name: Componentes del controlador OLE DB para SQL Server
@@ -5168,7 +5175,7 @@
                   href: ../connect/oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md
                 - name: Sesiones
                   href: ../connect/oledb/ole-db-data-source-objects/sessions.md
-            - name: Comandos
+            - name: 'Comandos:'
               href: ../connect/oledb/ole-db-commands/commands.md
               items:
                 - name: Parámetros de comando
@@ -5281,11 +5288,11 @@
                   href: ../connect/oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md
                 - name: 'Metadatos: fecha y hora y conjuntos de filas de esquema'
                   href: ../connect/oledb/ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md
-                - name: 'Metadatos: parámetro y conjunto de filas'
+                - name: 'Metadatos: Parámetro y conjunto de filas'
                   href: ../connect/oledb/ole-db-date-time/metadata-parameter-and-rowset.md
                 - name: Compatibilidad de API de OLE DB con las mejoras de fecha y hora
                   href: ../connect/oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md
-            - name: Transactions
+            - name: Transacciones
               href: ../connect/oledb/ole-db-transactions/transactions.md
               items:
                 - name: Niveles de aislamiento
@@ -5294,7 +5301,7 @@
                   href: ../connect/oledb/ole-db-transactions/supporting-distributed-transactions.md
                 - name: Compatibilidad con transacciones locales
                   href: ../connect/oledb/ole-db-transactions/supporting-local-transactions.md
-            - name: Errores
+            - name: Errors
               href: ../connect/oledb/ole-db-errors/errors.md
               items:
                 - name: Información en interfaces de error
@@ -5364,10 +5371,10 @@
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
                 - name: 'ISSCommandWithParameters::SetParameterProperties'
                   href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
-            - name: Procedimiento
+            - name: Procedimientos
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:
-                - name: Resultado
+                - name: Results
                   href: ../connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
                   items:
                     - name: Ejecutar una función definida por el usuario y procesar el código de retorno
@@ -5580,6 +5587,10 @@
           href: ../connect/php/logging-activity.md
         - name: Uso de Always Encrypted con los controladores PHP para SQL Server
           href: ../connect/php/using-always-encrypted-php-drivers.md
+        - name: "Always Encrypted con enclaves seguros y controladores PHP para SQL\_Server"
+          href: ../connect/php/always-encrypted-secure-enclaves.md
+        - name: Configuración regional ajena a la del sistema
+          href: ../connect/php/non-system-locale-settings.md
         - name: Constantes (controladores de Microsoft para PHP para SQL Server)
           href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
         - name: Referencia de API del controlador SQLSRV
@@ -5712,7 +5723,7 @@
                   href: ../connect/php/pdostatement-setattribute.md
                 - name: 'PDOStatement::setFetchMode'
                   href: ../connect/php/pdostatement-setfetchmode.md
-    - name: Consideraciones de seguridad
+    - name: Consideraciones sobre la seguridad
       href: ../connect/php/security-considerations-for-php-sql-driver.md
     - name: Ejemplos de código
       href: ../connect/php/code-samples-for-php-sql-driver.md
@@ -7621,7 +7632,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: Ejemplo de propiedades PrimaryKey y Unique (VC++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: 'Obsoleto: Referencia de la API de RDS'
+    - name: 'En desuso: Referencia de la API de RDS'
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: Objetos RDS
       href: ../ado/reference/rds-api/rds-objects.md

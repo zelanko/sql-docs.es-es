@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934416"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
   
- ##  <a name="InitialConnection"></a> Establecer la conexión inicial en una sesión de creación de reflejo de la base de datos  
+ ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Establecer la conexión inicial en una sesión de creación de reflejo de la base de datos  
  Para la conexión inicial en una base de datos reflejada, un cliente debe suministrar una cadena de conexión que como mínimo proporcione el nombre de una instancia del servidor. Este nombre de servidor requerido debería identificar la instancia del servidor principal actual y se conoce como el *nombre del asociado inicial*.  
   
  Opcionalmente, la cadena de conexión también puede proporcionar el nombre de otra instancia del servidor, que debería identificar la instancia del servidor reflejado actual, para usarla si el asociado inicial no está disponible durante el primer intento de conexión. Este nombre se conoce como el *nombre del asociado de conmutación por error*.  
@@ -45,7 +44,7 @@ ms.locfileid: "62755337"
   
  En la siguiente ilustración se muestra una conexión del cliente con el asociado inicial, **Partner_A**, para una base de datos reflejada denominada **Db_1**. En la ilustración se muestra un caso en el que el nombre del asociado inicial proporcionado por el cliente identifica correctamente el servidor principal actual, **Partner_A**. El intento de conexión inicial se realiza correctamente y el proveedor de acceso a datos almacena el nombre del servidor reflejado ( **Partner_B**) como nombre del asociado de conmutación por error en la memoria caché local. Finalmente, el cliente se conecta a la copia principal de la base de datos **Db_1** .  
   
- ![Conexión de cliente si el asociado inicial es una entidad de seguridad](../media/dbm-initial-connection.gif "Conexión de cliente si el asociado inicial es una entidad de seguridad")  
+ ![Conexión de cliente si el asociado inicial es una entidad principal](../media/dbm-initial-connection.gif "Conexión de cliente si el asociado inicial es una entidad principal")  
   
  El intento de conexión inicial puede no tener éxito, por ejemplo, debido a un error de red o una instancia del servidor inactiva. Puesto que el asociado inicial no está disponible, para que el proveedor de acceso a datos intente conectarse al asociado de conmutación por error, el cliente deberá haber proporcionado el nombre del asociado de conmutación por error en la cadena de conexión.  
   
@@ -85,11 +84,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo Server  
  La cadena de conexión debe contener un atributo `Server` que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>* [ **\\** _<nombre_de_instancia_de_SQL_Server>_ ]. Por ejemplo:  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<SERVER_NAME>*[ **\\** _<SQL_Server_instance_name>_]. Por ejemplo:  
   
  `Server=Partner_A;`  
   
- o Administrador de configuración de  
+ or  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Se necesita una consulta de SQL Server Browser si la cadena de conexión especifica el nombre de la instancia con nombre y no el puerto.  
   
- Para especificar la dirección IP y puerto, el `Server` atributo toma el formato siguiente, `Server=` *< dirección_IP >* `,` *\<puerto >* , por ejemplo:  
+ Para especificar la dirección IP y el puerto, el `Server` atributo adopta el formato siguiente, `Server=` *<ip_address>* `,` *\<port>* , por ejemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  En esta cadena se omite la información de autenticación.  
   
 > [!IMPORTANT]  
->  La unión del prefijo de protocolo con el `Server` atributo (`Server=tcp:` *\<servername >* ) no es compatible con la **red** de atributo y especificar el protocolo en ambos lugares, probablemente se producirá un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el **red** de atributo y especificar solo el nombre del servidor en el `Server` atributo (`"Network=dbmssocn; Server=` *\<servername >* `"`).  
+>  La agrupación del prefijo de protocolo con el `Server` atributo ( `Server=tcp:` *\<servername>* ) es incompatible con el atributo **Network** , y si se especifica el protocolo en ambos lugares, es probable que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y especifique solo el nombre del servidor en el `Server` atributo ( `"Network=dbmssocn; Server=` *\<servername>* `"` ).  
   
 #### <a name="failover-partner-attribute"></a>Atributo Failover Partner  
  Además del nombre del asociado inicial, el cliente puede especificar también el nombre del asociado de conmutación por error, que debería identificar la instancia del servidor reflejado actual. Una de las palabras clave especifica el asociado de conmutación por error para el atributo de asociado de conmutación por error. La palabra clave para este atributo depende de la API que está utilizando. En la tabla siguiente se enumeran estas palabras clave.  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |Controlador ODBC|`Failover_Partner`|  
 |Objetos de datos ActiveX (ADO)|`Failover Partner`|  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>* [ **\\** _<nombre_de_instancia_de_SQL_Server>_ ].  
+ La manera más sencilla de identificar la instancia del servidor es por su nombre del sistema, *<SERVER_NAME>*[ **\\** _<SQL_Server_instance_name _>].  
   
  O bien, la dirección IP y el número de puerto pueden proporcionarse en el atributo `Failover Partner`. Si el intento de conexión inicial no tiene éxito durante la primera conexión a la base de datos, el intento de conectarse al asociado de conmutación por error no tendrá que retransmitirse en DNS y SQL Server Browser. Una vez que se establezca la conexión, el nombre del asociado de conmutación por error se sobrescribirá con el nombre del asociado de conmutación por error, de modo que, si se produce una conmutación por error, las conexiones redirigidas requerirán DNS y SQL Server Browser.  
   
@@ -152,13 +151,13 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algoritmo de reintento de conexión (para conexiones TCP/IP)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> Algoritmo de reintento de conexión (para conexiones TCP/IP)  
  Para una conexión TCP/IP, cuando los nombres de ambos asociados están en la memoria caché, el proveedor de acceso a datos se ajusta a un algoritmo de reintento de conexión. Esto se cumple para establecer la conexión inicial a la sesión y para volver a conectarse después de que una conexión establecida se haya perdido. Una vez que se ha abierto una conexión, finalizar los pasos previos de inicio de sesión y el inicio de sesión requiere tiempo adicional.  
   
 > [!NOTE]  
 >  El tiempo empleado en abrir una conexión puede superar el tiempo de reintento debido a factores externos como, por ejemplo, lentas búsquedas de DNS, un controlador de dominio/KDC (Kerberos Key Distribution Center) lento, el tiempo necesario para contactar con SQL Server Browser, congestión de la red, etc. Estos factores externos pueden impedir que un cliente se conecte a una base de datos reflejada. Además, los factores externos pueden hacer que una conexión tarde más en abrirse que el tiempo de reintento asignado. Para obtener información acerca de cómo omitir DNS y SQL Server Browser para el intento de conexión al asociado inicial, vea [Establecer la conexión inicial en una sesión de creación de reflejo de la base de datos](#InitialConnection), anteriormente en este tema.  
   
- Si el intento de conexión genera un error o el tiempo de reintento expira antes de que se realice correctamente, el proveedor de acceso a datos probará con el otro asociado. Si este punto no abre una conexión, el proveedor probará, de forma alternativa, con los nombre inicial y del asociado de conmutación por error, hasta que se abra una conexión o el periodo de inicio de sesión se agote. El periodo de tiempo de espera predeterminado es de 15 segundos. Es recomendable que el periodo de espera de inicio de sesión sea de 5 segundos o más. Si se especifica un periodo de tiempo de espera menor, es posible que ningún intento de conexión pueda realizarse correctamente.  
+ Si el intento de conexión genera un error o el tiempo de reintento expira antes de que se realice correctamente, el proveedor de acceso a datos probará con el otro asociado. Si este punto no abre una conexión, el proveedor probará alternativamente los nombres iniciales y de los asociados de conmutación por error, hasta que se abra una conexión o se agote el tiempo de inicio de sesión. El período de tiempo de espera predeterminado de inicio de sesión es de 15 segundos. Es recomendable que el periodo de espera de inicio de sesión sea de 5 segundos o más. Si se especifica un periodo de tiempo de espera menor, es posible que ningún intento de conexión pueda realizarse correctamente.  
   
  El tiempo de reintento es un porcentaje del periodo de inicio de sesión. El tiempo de reintento de una conexión es mayor en cada ciclo sucesivo. En el primer ciclo, el tiempo de reintento de cada uno de los dos intentos es el 8 por ciento del periodo de inicio de sesión total. En cada ciclo sucesivo, el algoritmo de reintento incrementa el tiempo máximo de reintento en la misma cantidad. De esta forma, los tiempos de reintento de las primeras ocho conexiones son las siguientes:  
   
@@ -166,13 +165,13 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- _TiempoDeReintento_ **=** _TiempoDeReintentoAnterior_ **+(** 0,08 **&#42;** _TiempoDeEsperaDeInicioDeSesión_ **)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;** _LoginTimeout_**)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
  Por ejemplo, si se usa el tiempo de espera predeterminado de 15 segundos, *LoginTimeout* *= 15*. En este caso, los tiempos de reintento en los primeros tres ciclos son los siguientes:  
   
-|Redondear|Cálculo de*RetryTime*|Tiempo de reintento por intento|  
+|Round|Cálculo de*RetryTime*|Tiempo de reintento por intento|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
@@ -181,9 +180,9 @@ Server=123.34.45.56,4724;
   
  En la siguiente ilustración se muestran los tiempos de reintento para intentos de conexión sucesivos, cada uno de los cuales se agota.  
   
- ![Número máximo de intervalos entre reintentos en un tiempo de espera de inicio de sesión de 15 segundos](../media/dbm-retry-algorithm.gif "Número máximo de intervalos entre reintentos en un tiempo de espera de inicio de sesión de 15 segundos")  
+ ![Número máximo de intervalos entre reintentos para un tiempo de espera de inicio de sesión de 15 segundos](../media/dbm-retry-algorithm.gif "Número máximo de intervalos entre reintentos para un tiempo de espera de inicio de sesión de 15 segundos")  
   
- Para el periodo de espera de inicio de sesión predeterminado, el tiempo máximo asignado para los primeros tres ciclos de intentos de conexión es de 14,4 segundos. Si cada intento utilizase todo el tiempo que tiene asignado, solo quedarían 0,6 segundos antes de que el periodo de inicio de sesión se agotara. En este caso, el cuarto ciclo se acortaría y solo se permitiría un intento final rápido para conectarse mediante el nombre del asociado inicial. No obstante, un intento de conexión puede generar un error en menos tiempo que el tiempo de reintento asignado, especialmente en los ciclos posteriores. Por ejemplo, la recepción de un error de red puede causar que un intento termine antes de que el tiempo de reintento expire. Si los primeros intentos no se realizan correctamente debido a errores de red, habría tiempo disponible adicional para el cuarto ciclo y, probablemente, para ciclos adicionales.  
+ Para el periodo de espera de inicio de sesión predeterminado, el tiempo máximo asignado para los primeros tres ciclos de intentos de conexión es de 14,4 segundos. Si cada intento fuera a usar todo el tiempo asignado, solo quedarían 0,6 segundos de tiempo antes de que el periodo de inicio de sesión se agote. En ese caso, se reduciría la cuarta ronda, lo que permite un intento rápido final de conectar con el nombre de asociado inicial. No obstante, un intento de conexión puede generar un error en menos tiempo que el tiempo de reintento asignado, especialmente en los ciclos posteriores. Por ejemplo, la recepción de un error de red puede causar que un intento termine antes de que el tiempo de reintento expire. Si los primeros intentos no se realizan correctamente debido a errores de red, habría tiempo disponible adicional para el cuarto ciclo y, probablemente, para ciclos adicionales.  
   
  Otra razón de que un intento genere un error es una instancia de servidor inactiva, como pasa cuando una instancia de servidor se encuentra ocupada en realizar la conmutación por error de su base de datos. En este caso, se impone un intervalo entre reintentos para evitar que los clientes sobrecarguen a los asociados con una rápida sucesión de intentos de conexión.  
   
@@ -192,7 +191,7 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>Intervalos de reintento durante la conmutación por error  
- Si un cliente intenta conectarse a un asociado que está en conmutación por error, este responde inmediatamente que se encuentra inactivo. En este caso, cada ciclo de intentos de conexión es mucho más breve que el tiempo de reintento asignado. Esto significa que pueden producirse muchos ciclos de intentos de conexión antes de que el periodo de inicio de sesión se agote. Para evitar la sobrecarga de los asociados con una rápida serie de intentos de conexión durante una conmutación por error, el proveedor de acceso a datos agrega un breve intervalo entre reintentos después de cada ciclo. La longitud de un intervalo entre reintentos determinado se define mediante el algoritmo de intervalos entre reintentos. Después del primer ciclo, el intervalo es de 100 milisegundos. Después de cada uno de los tres ciclos siguientes, el intervalo entre reintentos se duplica: 200, 400 y 800. En todos los ciclos posteriores, el intervalo entre reintentos es de 1 segundo hasta que la conexión se realiza correctamente o se supera el tiempo de espera.  
+ Si un cliente intenta conectarse a un asociado que está en conmutación por error, este responde inmediatamente que se encuentra inactivo. En este caso, cada ciclo de intentos de conexión es mucho más breve que el tiempo de reintento asignado. Esto significa que pueden producirse muchos ciclos de intentos de conexión antes de que expire el período de inicio de sesión. Para evitar la sobrecarga de los asociados con una serie rápida de intentos de conexión durante una conmutación por error, el proveedor de acceso a datos agrega un breve intervalo entre reintentos después de cada ciclo de reintento. La longitud de un intervalo entre reintentos determinado se define mediante el algoritmo de intervalos entre reintentos. Después del primer ciclo, el intervalo es de 100 milisegundos. Después de cada uno de los tres ciclos siguientes, el intervalo entre reintentos se duplica: 200, 400 y 800. En todos los ciclos posteriores, el intervalo entre reintentos es de 1 segundo hasta que la conexión se realiza correctamente o se supera el tiempo de espera.  
   
 > [!NOTE]  
 >  Si la instancia de servidor se detiene, la solicitud de conexión genera un error de forma inmediata.  
@@ -201,7 +200,7 @@ Server=123.34.45.56,4724;
   
  ![Algoritmo de intervalo entre reintentos](../media/dbm-retry-delay-algorithm.gif "Algoritmo de intervalo entre reintentos")  
   
-##  <a name="Reconnecting"></a> Volver a conectar una sesión de creación de reflejo de la base de datos  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> Volver a conectar una sesión de creación de reflejo de la base de datos  
  Si una conexión establecida de una sesión de creación de reflejo de la base de datos genera un error por alguna razón; por ejemplo, debido a una conmutación automática por error, y la aplicación intenta volver a conectarse al servidor inicial, el proveedor de acceso a datos puede tratar de volver a conectarse mediante el nombre de asociado de conmutación por error almacenado en la memoria caché del cliente. No obstante, volver a conectarse no es un proceso automático. La aplicación debe detectar el error. Después, la aplicación necesita cerrar la conexión con error y abrir una nueva utilizando los mismos atributos de la cadena de conexión. En este punto, el proveedor de acceso a datos redirige la conexión al asociado de conmutación por error. Si la instancia de servidor que se identifica con este nombre es actualmente el servidor principal, el intento de conexión suele tener éxito. Si no está claro si una transacción se confirmó o revirtió, la aplicación debe comprobar el estado de la transacción, de la misma forma en que lo hace cuando se vuelve a conectar con una instancia de servidor independiente.  
   
  Volver a conectarse se parece bastante a una conexión inicial donde la cadena de conexión suministra un nombre de asociado de conmutación por error. Si el primer intento no tiene éxito, los intentos de conexión se alternan repetidamente entre el nombre del asociado inicial y el nombre del asociado de conmutación por error, hasta que el cliente se conecta al servidor principal o el proveedor de acceso a datos agota el tiempo de espera.  
@@ -220,7 +219,7 @@ Server=123.34.45.56,4724;
   
  Después de ser redirigido al asociado de conmutación por error, un cliente puede obtener resultados inesperados cuando utiliza una instrucción USE de [!INCLUDE[tsql](../../includes/tsql-md.md)] para usar otra base de datos. Esto puede producirse si la instancia del servidor principal (el asociado de conmutación por error) tiene un conjunto diferente de bases de datos que el servidor principal (el asociado inicial).  
   
-##  <a name="StalePartnerName"></a> Impacto de un nombre de asociado de conmutación por error desusado  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> Impacto de un nombre de asociado de conmutación por error desusado  
  El administrador de la base de datos puede cambiar el asociado de conmutación por error en cualquier momento. Por lo tanto, un nombre de asociado de conmutación por error que suministre un cliente podría estar desfasado o *desusado*. Por ejemplo, imagine que tiene un asociado de conmutación por error que se llama Partner_B y que es sustituido por otra instancia de servidor, Partner_C. Si un cliente proporciona Partner_B como nombre del asociado de conmutación por error, ese nombre está desusado. En este caso, el comportamiento del proveedor de acceso a datos es el mismo que cuando el cliente no proporciona un nombre de asociado de conmutación por error.  
   
  Por ejemplo, suponga que un cliente utiliza una cadena de conexión para una serie de cuatro intentos de conexión. En la cadena de conexión, el nombre del asociado inicial es Partner_A y el del asociado de conmutación por error, Partner_B:  
@@ -237,12 +236,12 @@ Server=123.34.45.56,4724;
 |Configuración|Servidor principal|Servidor reflejado|Comportamiento al intentar conectarse especificando Partner_A y Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuración de creación de reflejo original.|Partner_A|Partner_B|Se almacena Partner_A en la caché como nombre del asociado inicial. El cliente se conecta correctamente a Partner_A. El cliente descarga el nombre del servidor reflejado, Partner B, y lo almacena en caché, sin tener en cuenta el nombre del asociado de conmutación por error proporcionado por el cliente.|  
-|Partner_A sufre un error de hardware y se produce la conmutación por error (se desconectan los clientes).|Partner_B|none|Partner_A sigue almacenado en caché como nombre del asociado inicial, pero el nombre del asociado de conmutación por error proporcionado por el cliente, Partner_B, permite al cliente conectarse al servidor principal actual.|  
+|Partner_A sufre un error de hardware y se produce la conmutación por error (se desconectan los clientes).|Partner_B|ninguno|Partner_A sigue almacenado en caché como nombre del asociado inicial, pero el nombre del asociado de conmutación por error proporcionado por el cliente, Partner_B, permite al cliente conectarse al servidor principal actual.|  
 |El administrador de la base de datos detiene la creación del reflejo (se desconectan los clientes), sustituye Partner_A por Partner_C y reinicia la creación del reflejo.|Partner_B|Partner_C|El cliente intenta conectarse a Partner_A y surge un error. A continuación, lo intenta con Partner_B (el servidor principal actual) y se conecta correctamente. El proveedor de acceso a datos descarga el nombre del servidor reflejado actual, Partner_C, y lo almacena en caché como nombre del asociado de conmutación por error actual.|  
 |El servicio se conmuta manualmente a Partner_C (se desconectan los clientes).|Partner_C|Partner_B|El cliente trata de conectarse primero a Partner_A y, después, a Partner_B. Los dos nombres producen un error y, finalmente, se agota el tiempo de espera de la solicitud y se produce un error.|  
   
-## <a name="see-also"></a>Vea también  
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VB) Find | Microsoft Docs
+title: Ejemplo del método Find (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3495e26fa4b71563716877db501299873aff532
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932623"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760111"
 ---
 # <a name="find-method-example-vb"></a>Ejemplo del método Find (VB)
-Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el ***Pubs*** base de datos. El ejemplo se supone que el proveedor subyacente no admite una funcionalidad similar.  
+En este ejemplo se usa el método [Find](../../../ado/reference/ado-api/find-method-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos ***pubs*** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  
   
 ```  
 'BeginFindVB  
@@ -99,6 +99,6 @@ End Sub
 'EndFindVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Buscar (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Find (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

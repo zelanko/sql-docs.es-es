@@ -1,7 +1,6 @@
 ---
-title: Importar un archivo de bacpac para crear una nueva base de datos de usuario | Microsoft Docs
-ms.custom: ''
-ms.date: 01/31/2017
+title: Importación de un archivo de bacpac para crear una base de datos de usuario
+ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -24,17 +23,18 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781672"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra, o bien para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  El proceso de importación compila una nueva DAC en dos fases.  
@@ -44,7 +44,7 @@ ms.locfileid: "72908489"
 2.  La importación masiva copia los datos del archivo de exportación.  
 
 ## <a name="sql-server-utility"></a>Utilidad de SQL Server  
- Si importa una DAC en una instancia del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
+ Si importa una DAC en una instancia del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Explorador de la utilidad** y se notificará en la página de detalles **Aplicaciones de capa de datos implementadas**.  
   
 ## <a name="database-options-and-settings"></a>Opciones y configuración de bases de datos  
  De forma predeterminada, la base de datos creada durante la importación incorporará toda la configuración predeterminada de la instrucción CREATE DATABASE, con la excepción de que la intercalación de base de datos y el nivel de compatibilidad se establecen en los valores definidos en el archivo de exportación de DAC. Un archivo de exportación de DAC usa los valores de la base de datos original.  
@@ -55,7 +55,7 @@ ms.locfileid: "72908489"
  Se puede importar una DAC en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si exporta una DAC de una versión anterior, puede contener objetos que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]no admita. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="prerequisites"></a>Prerequisites  
- Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
+ Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para obtener más información acerca de cómo realizar estas comprobaciones, vea [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Seguridad  
  Para mejorar la seguridad, los inicios de sesión de autenticación de SQL Server están almacenados en un archivo de exportación de DAC sin contraseña. Cuando el archivo se importa, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y utilice ALTER LOGIN para habilitar el inicio de sesión y asignar una contraseña nueva que se pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
@@ -84,7 +84,7 @@ ms.locfileid: "72908489"
   
     -   [Página Resultados](#Results)  
   
-###  <a name="Introduction"></a> Página Introducción  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para el Asistente Importar aplicación de capa de datos.  
   
  **Opciones**  
@@ -95,7 +95,7 @@ ms.locfileid: "72908489"
   
 -   **Cancelar**: cancela la operación y cierra el asistente.  
   
-###  <a name="Import_settings"></a> Página Importar configuración  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Página Importar configuración  
  Use esta página para especificar la ubicación del archivo .bacpac para importar.  
   
 -   **Importar desde el disco local**: haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
@@ -106,7 +106,7 @@ ms.locfileid: "72908489"
   
      Para continuar, especifique el archivo .bacpac para importar y, a continuación, haga clic en **Abrir**.  
   
-###  <a name="Database_settings"></a> Página Configuración de base de datos  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Página Configuración de base de datos  
  Use esta página para especificar los detalles de la base de datos que se creará.  
   
  **Para una instancia local de SQL Server:**  
@@ -122,29 +122,29 @@ ms.locfileid: "72908489"
  **Desde Azure SQL Database:**  
   
  - En **[Importación de un archivo BACPAC para crear una instancia de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-import/)** se proporcionan instrucciones paso a paso con Azure Portal, PowerShell, SSMS o SqlPackage.  
- - Consulte **[Opciones de SQL Database y rendimiento: descripción de lo que está disponible en cada nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** para obtener una vista detallada de los distintos niveles de servicio.  
+ - Consulte **[Opciones y rendimiento de SQL Database: descripción de lo que está disponible en cada nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** para obtener una vista detallada de los distintos niveles de servicio.  
 
 ### <a name="validation-page"></a>Página Validación  
  Use esta página para revisar los problemas que bloquean la operación. Para continuar, resuelva los problemas de bloqueo y, después, haga clic en **Volver a ejecutar la validación** para asegurarse de que la validación es correcta.  
   
  Para continuar, haga clic en **Siguiente**.  
   
-###  <a name="Summary"></a> Página Resumen  
+###  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar los valores de origen y de destino especificados de la operación. Para completar la operación de importación mediante los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de importación y salir del asistente, haga clic en **Cancelar**.  
   
-###  <a name="Progress"></a> Página Progreso  
+###  <a name="progress-page"></a><a name="Progress"></a> Página Progreso  
  En esta página se muestra una barra de progreso que indica el estado de la operación. Para ver el estado detallado, haga clic en la opción **Ver detalles** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
-###  <a name="Results"></a> Página Resultados  
+###  <a name="results-page"></a><a name="Results"></a> Página Resultados  
  Esta página notifica el éxito o error de importación y crea las operaciones de la base de datos, mostrando el éxito o error de cada acción. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Haga clic en el vínculo para ver un informe del error para esa acción.  
   
  Haga clic en **Cerrar** para cerrar el asistente.  
   
 ## <a name="see-also"></a>Consulte también  
-[Importación de un archivo BACPAC para crear una Azure SQL Database nueva](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Importar un archivo BACPAC para crear una base de datos de Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
+ [Exportar una aplicación de la capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   
   

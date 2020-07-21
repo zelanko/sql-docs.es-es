@@ -1,32 +1,32 @@
 ---
-title: Configuración de clústeres de RHEL para grupos de disponibilidad de SQL Server
-titleSuffix: SQL Server
-description: Obtenga información sobre los clústeres de grupos de disponibilidad al ejecutar Red Hat Enterprise Linux (RHEL).
+title: 'RHEL: Configuración del grupo de disponibilidad para SQL Server en Linux'
+description: Obtenga información sobre cómo configurar un grupo de disponibilidad al ejecutar Red Hat Enterprise Linux (RHEL) para SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 03/12/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896948"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clústeres de RHEL para grupos de disponibilidad de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-En este documento se explica cómo crear un clúster de grupos de disponibilidad de tres nodos para SQL Server en Red Hat Enterprise Linux. Para lograr una alta disponibilidad, un grupo de disponibilidad en Linux requiere tres nodos (vea [Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md)). La capa de agrupación en clústeres se basa en el [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) que, a su vez, se basa en [Pacemaker](https://clusterlabs.org/). 
+En este documento se explica cómo crear un clúster de grupos de disponibilidad de tres nodos para SQL Server en Red Hat Enterprise Linux. Para lograr una alta disponibilidad, un grupo de disponibilidad en Linux necesita tres nodos (vea [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md) [Alta disponibilidad y protección de datos para configuraciones de grupos de disponibilidad]). La capa de agrupación en clústeres se basa en el [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). 
 
 > [!NOTE] 
 > El acceso a toda la documentación de Red Hat exige una suscripción válida. 
 
-Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y la administración, visite la [documentación de referencia de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y la administración, vaya a la [documentación de referencia de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 > [!NOTE] 
 > SQL Server no está tan estrechamente integrado con Pacemaker en Linux como lo está con los clústeres de conmutación por error de Windows Server. Una instancia de SQL Server no es consciente del clúster. Pacemaker proporciona orquestación del recurso de clúster. Además, el nombre de red virtual es específico de los clústeres de conmutación por error de Windows Server (no hay equivalente en Pacemaker). Las vistas de administración dinámica (DMV) de los grupos de disponibilidad que consultan información del clúster devuelven filas vacías en los clústeres de Pacemaker. Para crear un cliente de escucha para la reconexión transparente tras una conmutación por error, registre de forma manual el nombre del cliente de escucha en DNS con la dirección IP empleada para crear el recurso de dirección IP virtual. 
@@ -48,9 +48,9 @@ Los pasos necesarios para crear un grupo de disponibilidad en servidores con Lin
    >[!IMPORTANT]
    >Para alcanzar una alta disponibilidad, los entornos de producción necesitan un agente de barrera (por ejemplo, STONITH). En los ejemplos de esta documentación, no se usan agentes de barrera. Los ejemplos solo se proporcionan con fines de prueba y validación.
    
-   >Un clúster de Linux usa barreras para devolver el clúster a un estado conocido. La forma de configurar las barreras depende de la distribución y del entorno. Actualmente, las barreras no están disponibles en algunos entornos de nube. Para obtener más información, vea [Directivas de soporte para clústeres de alta disponibilidad de RHEL: plataformas de virtualización](https://access.redhat.com/articles/29440).
+   >Un clúster de Linux usa barreras para devolver el clúster a un estado conocido. La forma de configurar las barreras depende de la distribución y del entorno. Actualmente, las barreras no están disponibles en algunos entornos de nube. Para más información, vea [Directivas de soporte para clústeres de alta disponibilidad de RHEL: plataformas de virtualización](https://access.redhat.com/articles/29440).
 
-5. [Agregue el grupo de disponibilidad como un recurso en el clúster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+4. [Agregue el grupo de disponibilidad como un recurso en el clúster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## <a name="configure-high-availability-for-rhel"></a>Configuración de la alta disponibilidad de RHEL
 
@@ -84,8 +84,16 @@ Cada nodo del clúster debe tener una suscripción adecuada de RHEL y el complem
 
 1. Habilite el repositorio.
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 Para obtener más información, vea [Pacemaker: el clúster de alta disponibilidad de código abierto](https://clusterlabs.org/pacemaker/). 
@@ -100,7 +108,7 @@ Una vez registrada la suscripción, realice los pasos siguientes para configurar
 
 Una vez configurado Pacemaker, use `pcs` para interactuar con el clúster. Ejecute todos los comandos en un nodo del clúster. 
 
-## <a name="configure-fencing-stonith"></a>Configuración de barreras (STONITH)
+## <a name="configure-fencing-stonith"></a>Configuración de barrera (STONITH)
 
 Para admitir la configuración del clúster, los proveedores de clústeres de Pacemaker requieren que se habilite STONITH y que se configure un dispositivo de barrera. STONITH corresponde a "shoot the other node in the head", que en español sería algo como "disparar al otro nodo en la cabeza". Si el administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso de un nodo, las barreras devuelven al clúster a un estado conocido.
 
@@ -123,7 +131,7 @@ Para obtener información sobre STONITH y las barreras, vea los siguientes artí
 >sudo pcs property set stonith-enabled=false
 >``` 
 >
->La deshabilitación de STONITH es solo con fines de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, necesita planear una implementación de STONITH basada en su entorno y mantenerla habilitada.
+>Solo deshabilite STONITH con fines de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, necesita planear una implementación de STONITH basada en su entorno y mantenerla habilitada.
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecer la propiedad del clúster cluster-recheck-interval
 
@@ -153,17 +161,27 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 Para obtener información sobre las propiedades de clúster de Pacemaker, vea [Propiedades de clúster de Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html).
 
-## <a name="create-a-sql-server-login-for-pacemaker"></a>Creación de un inicio de sesión de SQL Server para Pacemaker
+## <a name="create-a-sql-server-login-for-pacemaker"></a>Crear un inicio de sesión de SQL Server para Pacemaker
 
 [!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
 ## <a name="create-availability-group-resource"></a>Crear un recurso de grupo de disponibilidad
 
-Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El siguiente comando crea un recurso `ocf:mssql:ag` de tipo principal/secundario para el grupo de disponibilidad con el nombre `ag1`.
+Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El comando siguiente crea un recurso `ocf:mssql:ag` de tipo principal/secundario para el grupo de disponibilidad con el nombre `ag1`.
+
+**RHEL 7**
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
-``` 
+```
+
+**RHEL 8**
+
+Con la disponibilidad de **RHEL 8**, la sintaxis de Create ha cambiado. Si usa **RHEL 8**, la terminología `master` ha cambiado a `promotable`. Use el comando CREATE siguiente en lugar del comando anterior: 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
@@ -177,7 +195,7 @@ Para crear el recurso de dirección IP virtual, ejecute el comando siguiente en 
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-No hay ningún nombre de servidor virtual equivalente en Pacemaker. Para usar una cadena de conexión que apunte a un nombre de servidor de cadena en lugar de a una dirección IP, registre la dirección de recurso de dirección IP virtual y el nombre de servidor virtual deseado en DNS. En el caso de las configuraciones de recuperación ante desastres, registre el nombre de servidor virtual deseado y la dirección IP con los servidores DNS en el sitio principal y en el sitio de recuperación ante desastres.
+No hay ningún nombre de servidor virtual equivalente en Pacemaker. Para usar una cadena de conexión que apunte a un nombre de servidor de cadena en lugar de a una dirección IP, registre la dirección de recurso de dirección IP virtual y el nombre de servidor virtual deseado en DNS. En el caso de las configuraciones de recuperación ante desastres, registre el nombre de servidor virtual que prefiera y la dirección IP con los servidores DNS en el sitio principal y en el sitio de recuperación ante desastres.
 
 ## <a name="add-colocation-constraint"></a>Agregar una restricción de ubicación
 
@@ -185,17 +203,29 @@ Casi todas las decisiones de un clúster de Pacemaker, por ejemplo elegir dónde
 
 En un clúster de Pacemaker, las decisiones del clúster se pueden manipular mediante restricciones. Las restricciones tienen una puntuación. Si una restricción tiene una puntuación inferior a `INFINITY`, Pacemaker la considera como una recomendación. Una puntuación de `INFINITY` es obligatoria.
 
-Para garantizar que los recursos de réplica principal y dirección IP virtual se ejecutan en el mismo host, defina una restricción de ubicación con una puntuación de INFINITY. Para agregar la restricción de ubicación, ejecute el siguiente comando en un nodo.
+Para garantizar que los recursos de réplica principal y dirección IP virtual se ejecutan en el mismo host, defina una restricción de ubicación con una puntuación de INFINITY. Para agregar la restricción de ubicación, ejecute el comando siguiente en un nodo.
+
+### <a name="rhel-7"></a>RHEL 7
+
+Cuando crea el recurso `ag_cluster` en RHEL 7, se crea el recurso como `ag_cluster-master`. Use el siguiente comando para RHEL 7:
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
+```
+
+### <a name="rhel-8"></a>RHEL 8
+
+Cuando crea el recurso `ag_cluster` en RHEL 8, se crea el recurso como `ag_cluster-clone`. Use el siguiente comando para RHEL 8:
+
+```bash
+sudo pcs constraint colocation add virtualip with master ag_cluster-clone INFINITY with-rsc-role=Master
 ```
 
 ## <a name="add-ordering-constraint"></a>Agregar una restricción de ordenación
 
 La restricción de ubicación tiene una restricción de orden implícita. Mueve el recurso de dirección IP virtual antes de mover el recurso de grupo de disponibilidad. La secuencia de eventos predeterminada es la siguiente:
 
-1. El usuario emite `pcs resource move` a la réplica principal del grupo de disponibilidad desde el nodo 1 al nodo 2.
+1. El usuario envía `pcs resource move` a la réplica principal del grupo de disponibilidad desde el nodo1 al nodo2.
 1. El recurso de dirección IP virtual se detiene en el nodo 1.
 1. El recurso de dirección IP virtual se inicia en el nodo 2.
   
@@ -205,16 +235,24 @@ La restricción de ubicación tiene una restricción de orden implícita. Mueve 
 1. La réplica principal del grupo de disponibilidad del nodo 1 se degrada a secundario.
 1. La réplica secundaria del grupo de disponibilidad del nodo 2 se asciende a principal. 
 
-Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de orden. 
+Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de ordenación. 
 
 Para agregar una restricción de orden, ejecute el siguiente comando en un nodo:
+
+### <a name="rhel-7"></a>RHEL 7
 
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
+### <a name="rhel-8"></a>RHEL 8
+
+```bash
+sudo pcs constraint order promote ag_cluster-clone then start virtualip
+```
+
 >[!IMPORTANT]
->Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede usar Transact-SQL para conmutar por error los recursos del grupo de disponibilidad. Los recursos de clúster de SQL Server en Linux no están tan bien integrados con el sistema operativo como lo están en un clúster de conmutación por error de Windows Server (WSFC). El servicio SQL Server no es consciente de la presencia del clúster. Toda la orquestación se realiza a través de las herramientas de administración del clúster. En RHEL o Ubuntu, use `pcs`; en SLES, use las herramientas de `crm`. 
+>Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede usar Transact-SQL para conmutar por error los recursos del grupo de disponibilidad. Los recursos de clúster de SQL Server en Linux no están tan bien integrados con el sistema operativo como lo están en un clúster de conmutación por error de Windows Server (WSFC). El servicio SQL Server no es consciente de la presencia del clúster. Toda la orquestación se realiza con las herramientas de administración de clústeres. En RHEL o Ubuntu, use `pcs`; en SLES, use las herramientas de `crm`. 
 
 Realice una conmutación por error manual del grupo de disponibilidad con `pcs`. No inicie la conmutación por error con Transact-SQL. Para obtener instrucciones, vea [Conmutación por error](sql-server-linux-availability-group-failover-ha.md#failover).
 

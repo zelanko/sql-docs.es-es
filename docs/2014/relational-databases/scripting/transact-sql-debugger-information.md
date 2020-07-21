@@ -1,6 +1,6 @@
 ---
-title: Información del depurador de Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Ver información del depurador de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 487c347679fc26e28f02aa8bd11306ac3086567c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063336"
 ---
 # <a name="transact-sql-debugger-information"></a>Ver información del depurador de Transact-SQL
   Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
@@ -40,11 +39,11 @@ ms.locfileid: "66063429"
 -   En la barra de herramientas **Depuración** , haga clic en **Puntos de interrupción**y, a continuación, seleccione la ventana que desee.  
   
 ## <a name="transact-sql-expressions"></a>Expresiones de Transact-SQL  
- Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3** e **Inspección4**.  
+ Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**e **Inspección4**.  
   
  La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en **esta ventana** cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   
- Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Los ejemplos incluyen:  
+ Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Algunos ejemplos son:  
   
 -   El nombre de una variable, como @IntegerCounter.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66063429"
   
  En el modo de depuración, las pestañas **Resultados** y **Mensajes** continúan estando activas en el Editor de consultas. La pestaña **Resultados** continúa mostrando los conjuntos de resultados de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan durante una sesión de depuración. La pestaña **Mensajes** continúa mostrando los mensajes del sistema, como *xx* filas afectadas y el resultado de las instrucciones PRINT y RAISERROR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ventana de locales](transact-sql-debugger-locals-window.md)   
  [Ventana de inspección](transact-sql-debugger-watch-window.md)   
  [Cuadro de diálogo Inspección rápida](transact-sql-debugger-quickwatch-dialog-box.md)   

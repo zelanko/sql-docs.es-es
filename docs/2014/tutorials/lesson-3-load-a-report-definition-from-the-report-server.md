@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Cargar una definición de informe desde el servidor de informes | Microsoft Docs'
+title: 'Lección 3: cargar una definición de informe desde el servidor de informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042521"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lección 3: Carga de una definición de informe desde el servidor de informes
@@ -22,7 +22,7 @@ ms.locfileid: "63042521"
   
 ### <a name="to-load-a-report-definition"></a>Para cargar una definición de informe  
   
-1.  Agregue un campo privado en la parte superior de la `ReportUpdater` clase (módulo si usas [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) para el `Report` clase. Este campo se utilizará para mantener una referencia al informe que se ha cargado desde el servidor de informes para la duración de la aplicación.  
+1.  Agregue un campo privado en la parte superior de `ReportUpdater` la clase (módulo si está usando [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) para la `Report` clase. Este campo se utilizará para mantener una referencia al informe que se ha cargado desde el servidor de informes para la duración de la aplicación.  
   
     ```csharp  
     private Report _report;  
@@ -97,10 +97,10 @@ ms.locfileid: "63042521"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección escribirá el código para actualizar la definición de informe que se cargó desde el servidor de informes. Consulte [Lección 4: Actualizar la definición de informe mediante programación](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ En la siguiente lección escribirá el código para actualizar la definición de informe que se cargó desde el servidor de informes. Vea [la lección 4: actualizar la definición de informe mediante programación](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
-## <a name="see-also"></a>Vea también  
- [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
- [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+## <a name="see-also"></a>Consulte también  
+ [Actualizar informes con clases generadas a partir del esquema RDL &#40;tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 763d5f31fd3562f54b274a74324ed4715b623a18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62746089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027939"
 ---
 # <a name="tsql-event-category"></a>TSQL (categoría de eventos)
   La categoría de eventos **TSQL** contiene eventos TSQL generales.  
@@ -40,7 +39,7 @@ ms.locfileid: "62746089"
 |[Unprepare SQL (clase de eventos)](unprepare-sql-event-class.md)|Indica que SqlClient, ODBC, OLE DB o DB-Library ha eliminado una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |[XQuery Static Type (clase de eventos)](xquery-static-type-event-class.md)|Se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una expresión XQuery.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference)  
   
   

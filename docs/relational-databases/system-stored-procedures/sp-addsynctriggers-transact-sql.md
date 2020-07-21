@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f11e2c1aaf4747d8e0edaf6fd44b62ec93ee4896
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096210"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85876215"
 ---
-# <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Crea desencadenadores en el suscriptor utilizado con todos los tipos de suscripciones actualizables (actualización inmediata, actualización en cola, actualización inmediata con actualización en cola como conmutación por error). Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripción.  
+  Crea desencadenadores en el suscriptor utilizado con todos los tipos de suscripciones actualizables (actualización inmediata, actualización en cola, actualización inmediata con actualización en cola como conmutación por error). Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
 > [!IMPORTANT]  
->  El [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) procedimiento debe usarse en lugar de **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) genera un script que contiene el **sp_addsynctrigger** llamadas.  
+>  Se debe utilizar el procedimiento [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) en lugar de **sp_addsynctrigger**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) genera un script que contiene las llamadas a **sp_addsynctrigger** .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,54 +57,54 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sub_table = ] 'sub_table'` Es el nombre de la tabla del suscriptor. *sub_table* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @sub_table = ] 'sub_table'`Es el nombre de la tabla del suscriptor. *sub_table* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @sub_table_owner = ] 'sub_table_owner'` Es el nombre del propietario de la tabla del suscriptor. *sub_table_owner* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @sub_table_owner = ] 'sub_table_owner'`Es el nombre del propietario de la tabla del suscriptor. *sub_table_owner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'`Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. Si es NULL, se utiliza la base de datos actual.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es NULL, se utiliza la base de datos actual.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @ins_proc = ] 'ins_proc'` Es el nombre del procedimiento almacenado que admite inserciones de transacciones sincrónicas en el publicador. *ins_proc* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @ins_proc = ] 'ins_proc'`Es el nombre del procedimiento almacenado que admite inserciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @upd_proc = ] 'upd_proc'` Es el nombre del procedimiento almacenado que admite actualizaciones de transacciones sincrónicas en el publicador. *ins_proc* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @upd_proc = ] 'upd_proc'`Es el nombre del procedimiento almacenado que admite actualizaciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @del_proc = ] 'del_proc'` Es el nombre del procedimiento almacenado que admite eliminaciones de transacciones sincrónicas en el publicador. *ins_proc* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @del_proc = ] 'del_proc'`Es el nombre del procedimiento almacenado que admite eliminaciones de transacciones sincrónicas en el publicador. *ins_proc* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @cftproc = ] 'cftproc'` Es el nombre del procedimiento generado automáticamente usado por las publicaciones que permiten la actualización en cola. *cftproc* es **sysname**, no tiene ningún valor predeterminado. En las publicaciones que permiten la actualización inmediata, este valor es NULL. Este parámetro se aplica a las publicaciones que permiten la actualización en cola (actualización en cola y actualización inmediata con actualización en cola como conmutación por error).  
+`[ @cftproc = ] 'cftproc'`Es el nombre del procedimiento generado automáticamente que usan las publicaciones que permiten la actualización en cola. *cftproc* es de **tipo sysname**y no tiene ningún valor predeterminado. En las publicaciones que permiten la actualización inmediata, este valor es NULL. Este parámetro se aplica a las publicaciones que permiten la actualización en cola (actualización en cola y actualización inmediata con actualización en cola como conmutación por error).  
   
-`[ @proc_owner = ] 'proc_owner'` Especifica la cuenta de usuario en el publicador con el que se crearon los procedimientos almacenados generados automáticamente para la actualización de publicación (en cola e inmediata). *proc_owner* es **sysname** no tiene ningún valor predeterminado.  
+`[ @proc_owner = ] 'proc_owner'`Especifica la cuenta de usuario en el publicador en la que se crearon todos los procedimientos almacenados generados automáticamente para la publicación de actualización (en cola o inmediato). *proc_owner* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
-`[ @identity_col = ] 'identity_col'` Es el nombre de la columna de identidad en el publicador. *identity_col* es **sysname**, su valor predeterminado es null.  
+`[ @identity_col = ] 'identity_col'`Es el nombre de la columna de identidad en el publicador. *identity_col* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @ts_col = ] 'timestamp_col'` Es el nombre de la **timestamp** columna en el publicador. *timestamp_col* es **sysname**, su valor predeterminado es null.  
+`[ @ts_col = ] 'timestamp_col'`Es el nombre de la columna **timestamp** en el publicador. *timestamp_col* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Es una restricción cláusula (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause*es **nvarchar (4000)** , su valor predeterminado es null.  
+`[ @filter_clause = ] 'filter_clause'`Es una cláusula de restricción (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause*es de tipo **nvarchar (4000)** y su valor predeterminado es NULL.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Es un mapa de bits de las columnas de clave principal en la tabla. *primary_key_bitmap* es **varbinary (4000)** , no tiene ningún valor predeterminado.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'`Es un mapa de bits de las columnas de clave principal de la tabla. *primary_key_bitmap* es **varbinary (4000)** y no tiene ningún valor predeterminado.  
   
-`[ @identity_support = ] identity_support` Habilita y deshabilita la administración del intervalo automático de identidad cuando se utiliza la actualización en cola. *identity_support* es un **bit**, su valor predeterminado es **0**. **0** significa que no hay ninguna identidad de intervalo de soporte técnico, **1** permite la administración de intervalos de identidad automáticos.  
+`[ @identity_support = ] identity_support`Habilita y deshabilita el control automático de intervalos de identidad cuando se utiliza la actualización en cola. *identity_support* es de **bit**y su valor predeterminado es **0**. **0** significa que no hay compatibilidad con el intervalo de identidad, **1** habilita el control automático del intervalo de identidad.  
   
-`[ @independent_agent = ] independent_agent` Indica si hay un único agente de distribución (un agente independiente) para esta publicación, o un agente de distribución por publicación base de datos y suscripción pareja base de datos (un agente compartido). Este valor refleja el valor de la propiedad independent_agent de la publicación definida en el publicador. *independent_agent* es un poco con un valor predeterminado de **0**. Si **0**, se trata de un agente compartido. Si **1**, el agente es un agente independiente.  
+`[ @independent_agent = ] independent_agent`Indica si hay un único Agente de distribución (un agente independiente) para esta publicación, o una Agente de distribución por cada base de datos de publicación y par de base de datos de suscripciones (un agente compartido). Este valor refleja el valor de la propiedad independent_agent de la publicación definida en el publicador. *independent_agent* es un bit con un valor predeterminado de **0**. Si es **0**, el agente es un agente compartido. Si es **1**, el agente es un agente independiente.  
   
-`[ @distributor = ] 'distributor'` Es el nombre del distribuidor. *distribuidor* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @distributor = ] 'distributor'`Es el nombre del distribuidor. *Distributor* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @pubversion = ] pubversion` Indica la versión del publicador. *pubversion* es **int**, su valor predeterminado es 1. **1** significa que la versión del publicador es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o anterior; **2** significa que el publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o posterior. *pubversion* debe establecerse explícitamente en **2** cuando la versión del publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o posterior.  
+`[ @pubversion = ] pubversion`Indica la versión del publicador. *pubversion* es de **tipo int**y su valor predeterminado es 1. **1** significa que la versión del publicador es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 o anterior; **2** significa que el publicador es [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) o posterior. *pubversion* debe establecerse explícitamente en **2** cuando la versión del publicador sea [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 o posterior.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_addsynctriggers** es utilizado por el agente de distribución como parte de la inicialización de la suscripción. Este procedimiento almacenado no lo suelen ejecutar los usuarios, pero puede resultar útil si el usuario debe configurar manualmente una suscripción de tipo no sync.  
+ el Agente de distribución usa **sp_addsynctriggers** como parte de la inicialización de la suscripción. Este procedimiento almacenado no lo suelen ejecutar los usuarios, pero puede resultar útil si el usuario debe configurar manualmente una suscripción de tipo no sync.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_addsynctriggers**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addsynctriggers**.  
   
-## <a name="see-also"></a>Vea también  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Suscripciones actualizables para la replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [sp_script_synctran_commands &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

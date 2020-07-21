@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d34c6b836f13fe120d50153e642f42d6c8785e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058271"
 ---
 # <a name="view-project-properties"></a>Ver las propiedades de un proyecto
   Es posible ver las propiedades asociadas a los proyectos en la ventana Propiedades.  
@@ -33,7 +32,7 @@ ms.locfileid: "63240114"
   
  Las propiedades de un proyecto, como la fecha de creación, son de solo lectura y no se pueden cambiar desde la ventana Propiedades.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)  
   
   

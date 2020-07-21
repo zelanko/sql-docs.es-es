@@ -1,5 +1,5 @@
 ---
-title: Temas de procedimientos sobre SQLCMD | Microsoft Docs
+title: Temas de procedimientos de SQLCMD | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: dd7a2d2b-6327-4d77-ac5a-580d36073ad4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c011103c4434f87dba5ba61d6f4419278583f50b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928548"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Temas de procedimientos sobre sqlcmd
-  La utilidad [sqlcmd](../tools/sqlcmd-utility.md) permite escribir instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], procedimientos del sistema y archivos de script en el símbolo del sistema, en el Editor de consultas en modo SQLCMD, en un archivo de script de Windows o en un paso de trabajo del sistema operativo (Cmd.exe) de un trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+   La [utilidad sqlcmd](../tools/sqlcmd-utility.md) permite escribir instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], procedimientos del sistema y archivos de script en el símbolo del sistema, en el Editor de consultas en modo SQLCMD, en un archivo de script de Windows o en un paso de trabajo del sistema operativo (Cmd.exe) de un trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="related-tasks"></a>Related Tasks  
  En los temas siguientes se explica el uso de [sqlcmd Utility](../tools/sqlcmd-utility.md):  

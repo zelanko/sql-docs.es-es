@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad de versión (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad version (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,30 +12,30 @@ dev_langs:
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5b2ed55f02e3cbabfa1e14aadf7c53d923d85523
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938695"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758601"
 ---
 # <a name="version-property-example-vc"></a>Ejemplo de la propiedad de versión (VC ++)
-Este ejemplo se usa el [versión](../../../ado/reference/ado-api/version-property-ado.md) propiedad de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto para mostrar la versión actual de ADO. También se utilizan varias propiedades dinámicas para mostrar:  
+En este ejemplo se usa la propiedad [version](../../../ado/reference/ado-api/version-property-ado.md) de un objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) para mostrar la versión actual de ADO. También usa varias propiedades dinámicas para mostrar:  
   
--   Nombre actual de DBMS y la versión.  
+-   Nombre y versión de DBMS actuales.  
   
 -   Versión de OLE DB.  
   
--   Nombre del proveedor y la versión.  
+-   Nombre y versión del proveedor.  
   
 -   Versión de ODBC.  
   
--   Nombre del controlador ODBC y la versión.  
+-   Nombre y versión del controlador ODBC.  
   
 > [!NOTE]
->  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propiedad Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

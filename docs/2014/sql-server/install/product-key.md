@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e39bd3f-6246-4b60-9774-0a427ba2a26c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5a7a59c14cbc5fc3bf3742d8a53e8cf3f92076a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5b7e7174407126db1f312e42369204dbf35155b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054693"
 ---
 # <a name="product-key"></a>Clave de producto
   Use la página Clave del producto para validar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o especificar la edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que va a instalar.  

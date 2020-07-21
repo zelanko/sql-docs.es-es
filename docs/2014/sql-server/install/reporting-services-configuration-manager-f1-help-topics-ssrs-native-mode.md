@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: c59a2acf78ed8df34ff78de209b5a20df8ef07e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059041"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Temas de Ayuda F1 del Administrador de configuración de Reporting Services (Modo nativo de SSRS)
   Esta sección proporciona la Ayuda F1 para el Administrador de configuración de Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -32,7 +31,7 @@ ms.locfileid: "71952043"
   
 -   [Cuenta de servicio](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
--   [Dirección URL del servicio Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
+-   [Dirección URL del servicio web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
 -   [Configuración avanzada de varios sitios web](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "71952043"
   
 -   [Administrador de informes dirección URL](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [Configuración del correo electrónico](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Configuración de correo electrónico](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Cuenta de ejecución](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
@@ -52,11 +51,11 @@ ms.locfileid: "71952043"
   
 -   [Clave de cifrado de copia de seguridad](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
--   [Restaurar la clave de cifrado](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
+-   [Restaurar clave de cifrado](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
 -   [Implementación escalada](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

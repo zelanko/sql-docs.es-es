@@ -1,5 +1,5 @@
 ---
-title: Comando y ejemplo de las propiedades CommandText (VC ++) | Microsoft Docs
+title: Ejemplo de propiedades de comando y CommandText (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CommandText property [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3c1a54ea3f101449d18fcae00373344b7ecf11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 35e43b2e9aaba281334af135a44510295f4179e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966735"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759311"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Ejemplo de propiedades Command y CommandText (VC++)
-El código siguiente muestra cómo usar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad para actualizar el texto de un procedimiento.  
+En el código siguiente se muestra cómo utilizar la propiedad [Command](../../../ado/reference/adox-api/command-property-adox.md) para actualizar el texto de un procedimiento.  
   
 ```  
 // BeginCommandTextCpp  
@@ -83,12 +83,12 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ProcedureTextX...."<< endl;  
+      cout << "Error occurred in ProcedureTextX...."<< endl;  
    }  
   
    ::CoUninitialize();  
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Command (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)

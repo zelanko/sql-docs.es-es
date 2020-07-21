@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 6b1150fd-9dfd-4df9-8f08-8eca237667db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dee5b45aac6518517434595b0f26ce18d219866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4b4ac18d4c01db528407819cff73eb504928e3c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913167"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553108"
 ---
-# <a name="mssqlserver8966"></a>MSSQLSERVER_8966
+# <a name="mssqlserver_8966"></a>MSSQLSERVER_8966
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8966|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8966|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_FAILED_TO_READ_AND_LATCH_PAGE|  
 |Texto del mensaje|No se puede leer la página de bloqueo temporal P_ID con el tipo de bloqueo temporal TYPE. Error de OPERATION.|  

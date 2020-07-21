@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 75bb1a0b0be620bf76f7f38d60a85625fe0ad217
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983624"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917552"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>Método getDiscardedServerPreparedStatementCount (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Devuelve el número de acciones de despreparación de la instrucción preparada actualmente pendiente.
+ Devuelve el número de acciones de cancelación de preparación de instrucciones preparadas pendientes.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- **Entero** que contiene el número de acciones de despreparación de la instrucción preparada actualmente vigente.
+ Un **int** que contiene el número de acciones de cancelación de preparación de instrucciones preparadas pendientes.
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notas  
- Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
+## <a name="remarks"></a>Observaciones  
+ Este método está disponible en la versión 6.4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

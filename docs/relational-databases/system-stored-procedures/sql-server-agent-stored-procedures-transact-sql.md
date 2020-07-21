@@ -1,5 +1,5 @@
 ---
-title: Del Agente SQL Server procedimientos almacenados (Transact-SQL) | Microsoft Docs
+title: Agente SQL Server procedimientos almacenados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], SQL Server Agent
 - SQL Server Agent, stored procedures
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0396823be5a733acc551dc52a96ff642b67076c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 00347b61a88092b8d95e2851e132ef69aa5edf93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950372"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626423"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Procedimientos almacenados del Agente SQL Server (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema utilizados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para administrar las actividades programadas y controladas por eventos.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "67950372"
 |[sp_help_downloadlist](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)|[sp_update_targetservergroup](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)|  
 |[sp_help_job](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

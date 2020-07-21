@@ -1,5 +1,5 @@
 ---
-title: Embedded SQL ejemplo | Microsoft Docs
+title: Ejemplo de SQL incrustado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 39ec504c423817c6a3e11bc954555b201b8b09c6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068659"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294176"
 ---
 # <a name="embedded-sql-example"></a>Ejemplo de SQL incrustado
-El código siguiente es un simple programa SQL incrustado, escrito en C. El programa muestra muchos, pero no todos, de los datos incrustados técnicas SQL. El sistema solicita al usuario un número de pedido, recupera el número de cliente, el vendedor y el estado del pedido y muestra la información recuperada en la pantalla.  
+El código siguiente es un sencillo programa de SQL incrustado, escrito en C. El programa muestra muchas de las técnicas de SQL incrustadas, pero no todas. El programa solicita al usuario un número de pedido, recupera el número de cliente, el vendedor y el estado del pedido, y muestra la información recuperada en la pantalla.  
   
 ```cpp  
 int main() {  
@@ -64,12 +64,12 @@ bad_number:
 }  
 ```  
   
- Tenga en cuenta lo siguiente acerca de este programa:  
+ Tenga en cuenta lo siguiente sobre este programa:  
   
--   **Variables de host** se declaran las variables de host en una sección delimitada por la **comenzar sección declarar** y **fin de declarar la sección** palabras clave. Cada nombre de variable de host viene precedida por un signo de dos puntos (:) cuando aparezca en una instrucción SQL incrustada. Los dos puntos permite el precompilador distinguir entre las variables de host y los objetos de base de datos, como tablas y columnas que tienen el mismo nombre.  
+-   **Variables de host** Las variables de host se declaran en una sección entre las palabras clave **Begin DECLARE Section** y **End declare Section** . Cada nombre de variable de host tiene como prefijo un signo de dos puntos (:) Cuando aparece en una instrucción SQL incrustada. Los dos puntos permiten al precompilador distinguir entre las variables de host y los objetos de base de datos, como tablas y columnas, que tienen el mismo nombre.  
   
--   **Tipos de datos** los tipos de datos admitidos por un lenguaje de host y un DBMS pueden ser muy diferentes. Esto afecta a las variables de host porque juegan un papel doble. Por un lado, las variables de host son variables de programa, declara y manipular las instrucciones del lenguaje de host. Por otro lado, se usan en instrucciones SQL incrustadas para recuperar la base de datos. Si no hay ningún tipo de lenguaje de host que corresponde a un tipo de datos DBMS, el DBMS convierte automáticamente los datos. Sin embargo, dado que cada DBMS tiene sus propias reglas e idiosincrasias asociados con el proceso de conversión, los tipos de variables de host deben elegir cuidadosamente.  
+-   **Tipos de datos** Los tipos de datos admitidos por un DBMS y un lenguaje host pueden ser bastante diferentes. Esto afecta a las variables de host porque juegan un rol dual. Por un lado, las variables de host son variables de programa, declaradas y manipuladas por instrucciones de lenguaje de host. Por otro lado, se usan en instrucciones SQL incrustadas para recuperar datos de la base de datos. Si no hay ningún tipo de idioma de host que corresponda a un tipo de datos de DBMS, el DBMS convierte automáticamente los datos. Sin embargo, dado que cada DBMS tiene sus propias reglas e idiosincrasia asociadas al proceso de conversión, los tipos de variable de host deben elegirse con cuidado.  
   
--   **Control de errores** el DBMS informa de errores de tiempo de ejecución para el programa de las aplicaciones a través de un área de comunicaciones de SQL o SQLCA. En el ejemplo de código anterior, la primera instrucción SQL incrustada es incluir SQLCA. Esto indica que el precompilador para incluir la estructura de SQLCA en el programa. Esto es necesario cada vez que el programa procesará los errores devueltos por el sistema DBMS. El WHENEVER... GOTO (instrucción) indica el precompilador para generar el código de control de errores que se produce ramas a una etiqueta específica cuando un error.  
+-   **Control de errores** DBMS informa de los errores en tiempo de ejecución al programa de aplicaciones a través de un área de comunicaciones de SQL o SQLCA. En el ejemplo de código anterior, la primera instrucción SQL incrustada es incluir SQLCA. Esto indica al precompilador que incluya la estructura SQLCA en el programa. Esto es necesario siempre que el programa procese los errores devueltos por el DBMS. La... La instrucción GOTO indica al precompilador que genere código de control de errores que se bifurca en una etiqueta específica cuando se produce un error.  
   
--   **Seleccione singleton** la instrucción utilizada para devolver los datos es una instrucción SELECT singleton; es decir, devuelve una única fila de datos. Por lo tanto, el ejemplo de código no declarar ni usar cursores.
+-   **Selección de singleton** La instrucción que se usa para devolver los datos es una instrucción SELECT de singleton; es decir, solo devuelve una sola fila de datos. Por lo tanto, el ejemplo de código no declara ni utiliza cursores.

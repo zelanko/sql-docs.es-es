@@ -1,5 +1,5 @@
 ---
-title: Usar conjuntos de filas (ODBC) de enlace | Documentos de Microsoft
+title: Usar enlace de conjuntos de filas (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - rowset binding [ODBC]
 ms.assetid: a7be05f0-6b11-4b53-9fbc-501e591eef09
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: deb2c179cea2d0ea7c97385d56320075061f0686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018903"
 ---
 # <a name="use-rowset-binding-odbc"></a>Usar enlace de conjuntos de filas (ODBC)
     
@@ -69,9 +68,9 @@ ms.locfileid: "63200432"
   
 5.  Cada llamada a [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) o a [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) recupera R filas y transfiere los datos a las columnas enlazadas.  
   
-## <a name="see-also"></a>Vea también  
- [Uso de temas de procedimientos de los cursores &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
- [¿Cómo se implementan los cursores](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Usar cursores &#40;ODBC&#41;](use-cursors-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de uso de cursores &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
+ [Cómo se implementan los cursores](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ [Usar cursores &#40;&#41;ODBC](use-cursors-odbc.md)  
   
   

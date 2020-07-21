@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2f182c7974eaf26cca2b666fcf9740dee675830
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006774"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
   Informa de un problema encontrado por la utilidad **ssbdiagnose** . El archivo de salida XML de **ssbdiagnose** tiene un elemento Issue por cada problema notificado.  
@@ -40,7 +39,7 @@ ms.locfileid: "63285771"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Attribute|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |`type`|Identifica la categoría del problema sobre el que informa el elemento Issue.<br /><br /> **"Diagnóstico"** Informa de un problema de configuración encontrado al analizar una configuración de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .<br /><br /> **"Problema"** Informa de un problema que ha impedido que **ssbdiagnose** complete el análisis. Corrija el problema y vuelva a ejecutar **ssbdiagnose**.<br /><br /> **"Evento"** Informa de un evento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] encontrado al ejecutar una comprobación de **-RUNTIME** . Solo se informa de los eventos si se especifica **-SHOWEVENTS** .|  
 |`code`|Identifica el número de error del mensaje.|  
@@ -52,7 +51,7 @@ ms.locfileid: "63285771"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|`string`, longitud es ilimitada.|  
+|**Tipo y longitud de los datos**|`string`, la longitud es ilimitada.|  
 |**Valor**|Devuelve el texto del mensaje de error.|  
 |**Repetición**|Una vez por error notificado.|  
   
@@ -70,7 +69,7 @@ ms.locfileid: "63285771"
 <Issue type="Diagnosis" code="1102" server="TestComputer" database="TargetDB" object="TargetDB">The master key was not found</diagnostic>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Utilidad ssbdiagnose &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

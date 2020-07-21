@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7312df919f6d182351e86ed41b5aed84fba3e646
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955575"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
   Para empezar a utilizar FILESTREAM, debe habilitarlo en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En este tema se describe cómo habilitar FILESTREAM con el Administrador de configuración de SQL Server.  
@@ -25,7 +24,7 @@ ms.locfileid: "66010155"
 > [!NOTE]  
 >  No puede habilitar FILESTREAM en una versión de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en un sistema operativo de 64 bits.  
   
-##  <a name="enabling"></a> Habilitar FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Habilitar FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Para habilitar y cambiar la configuración de FILESTREAM  
   
@@ -62,9 +61,9 @@ ms.locfileid: "66010155"
   
 
   
-##  <a name="best"></a> Procedimientos recomendados  
+##  <a name="best-practices"></a><a name="best"></a>Procedimientos recomendados  
   
-###  <a name="config"></a> Configuración física y mantenimiento  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a>Configuración física y mantenimiento  
  Cuando configure volúmenes de almacenamiento FILESTREAM, tenga en cuenta las directrices siguientes:  
   
 -   Desactive la opción de nombres cortos de archivo en equipos FILESTREAM. Los nombres cortos de archivo requieren mucho más tiempo para su creación. Para deshabilitar la opción de nombres cortos de archivo, emplee la utilidad **fsutil** de Windows.  
@@ -81,17 +80,17 @@ ms.locfileid: "66010155"
   
 ||||||  
 |-|-|-|-|-|  
-|Nivel RAID|Rendimiento de escritura|Rendimiento de lectura|Tolerancia a errores|Comentarios|  
+|Nivel RAID|Rendimiento de escritura|Rendimiento de lectura|Tolerancia a errores|Observaciones|  
 |RAID 5|Normal|Normal|Excelente|El rendimiento es mejor que en el caso de un disco o JBOD y menor que RAID 0 o RAID 5 con creación de bandas.|  
 |RAID 0|Excelente|Excelente|None||  
 |RAID 5 con creación de bandas|Excelente|Excelente|Excelente|Opción más cara.|  
   
 
   
-###  <a name="database"></a> Diseño físico de base de datos  
+###  <a name="physical-database-design"></a><a name="database"></a>Diseño físico de la base de datos  
  Cuando diseñe una base de datos de FILESTREAM, tenga en cuenta las directrices siguientes:  
   
--   Las columnas FILESTREAM deben ir acompañadas de correspondiente `uniqueidentifier`columna ROWGUID. Estos tipos de tablas también deben ir acompañados de un índice único. Normalmente, este índice no es un índice clúster. Si la lógica de negocios de bases de datos requiere un índice clúster, debe asegurarse de que los valores almacenados en el índice no sean aleatorios. Los valores aleatorios harán que el índice se vuelva a ordenar cada vez que se agregue o se quite una fila en la tabla.  
+-   Las columnas FILESTREAM deben ir acompañadas de una `uniqueidentifier` columna ROWGUID correspondiente. Estos tipos de tablas también deben ir acompañados de un índice único. Normalmente, este índice no es un índice clúster. Si la lógica de negocios de bases de datos requiere un índice clúster, debe asegurarse de que los valores almacenados en el índice no sean aleatorios. Los valores aleatorios harán que el índice se vuelva a ordenar cada vez que se agregue o se quite una fila en la tabla.  
   
 -   Por razones de rendimiento, los contenedores y grupos de archivos FILESTREAM deben residir en volúmenes distintos del sistema operativo, base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tempdb o archivo de paginación.  
   

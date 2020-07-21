@@ -1,5 +1,5 @@
 ---
-title: Editor de código fuente de OData (página salida de Error) | Microsoft Docs
+title: Editor de origen OData (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f433d70a934bcc6784a81cd4d2a602ecb7338b69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057293"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424412"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor de origen OData (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen OData** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  
@@ -46,9 +45,9 @@ ms.locfileid: "66057293"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de origen OData &#40;página Conexión&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Editor de origen OData &#40;página Columnas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de origen OData &#40;página de conexión&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Editor de origen OData &#40;página columnas&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Origen OData](data-flow/odata-source.md)   
  [Administrador de conexiones OData](connection-manager/odata-connection-manager.md)  
   

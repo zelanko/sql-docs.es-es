@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98680c9e00fcb5a693ac257eaf6dd1265c3c3d62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995517"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872803"
 ---
-# <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia la asignación del tipo de datos de la columna del artículo en una publicación de Oracle. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
 > [!NOTE]  
->  De forma predeterminada, se proporcionan las asignaciones de tipos de datos entre los tipos de publicadores admitidos. Use **sp_changearticlecolumndatatype** solo al reemplazar estos valores predeterminados.  
+>  De forma predeterminada, se proporcionan las asignaciones de tipos de datos entre los tipos de publicadores admitidos. Utilice **sp_changearticlecolumndatatype** solo cuando reemplace estos valores predeterminados.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,36 +47,36 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación de Oracle. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación de Oracle. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @column = ] 'column'` Es el nombre de la columna que se va a cambiar el tipo de datos de asignación. *columna* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @column = ] 'column'`Es el nombre de la columna para la que se va a cambiar la asignación de tipo de datos. la *columna* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @type = ] 'type'` Es el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *tipo* es **sysname**, su valor predeterminado es null.  
+`[ @type = ] 'type'`Es el nombre del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de la columna de destino. *Type* es de tipo **sysname y su**valor predeterminado es NULL.  
   
-`[ @length = ] length` Es la longitud de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *longitud* es **bigint**, su valor predeterminado es null.  
+`[ @length = ] length`Es la longitud del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de la columna de destino. *length* es de tipo **BIGINT**y su valor predeterminado es NULL.  
   
-`[ @precision = ] precision` Es la precisión de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *precisión* es **bigint**, su valor predeterminado es null.  
+`[ @precision = ] precision`Es la precisión del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de la columna de destino. la *precisión* es **BIGINT**y su valor predeterminado es NULL.  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **Sp_changearticlecolumndatatype** se usa para invalidar las asignaciones de tipos de datos predeterminada entre los tipos de publicadores admitidos (Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para ver estas asignaciones de tipos de datos de forma predeterminada, ejecute [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
+ **Sp_changearticlecolumndatatype** se utiliza para invalidar las asignaciones de tipos de datos predeterminados entre los tipos de publicadores admitidos (Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Para ver estas asignaciones de tipos de datos predeterminados, ejecute [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
  **sp_changearticlecolumndatatype** solo se admite para publicadores de Oracle. Ejecutar este procedimiento almacenado contra una publicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produce un error.  
   
- **sp_changearticlecolumndatatype** se debe ejecutar para cada asignación de columnas de artículo debe cambiarse.  
+ **sp_changearticlecolumndatatype** debe ejecutarse para cada asignación de columna de artículo que se debe cambiar.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changearticlecolumndatatype**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changearticlecolumndatatype**.  
   
-## <a name="see-also"></a>Vea también  
- [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Asignación de tipos de datos para publicadores de Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

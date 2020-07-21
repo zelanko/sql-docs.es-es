@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952607"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
   Las tablas **msdb** mantienen copias de los mensajes del Correo electrónico de base de datos y sus datos adjuntos, además del registro de eventos del Correo electrónico de base de datos. Puede reducir el tamaño de las tablas y eliminar los mensajes y eventos que ya no sean necesarios periódicamente. Los procedimientos siguientes permiten crear un trabajo del Agente SQL Server para automatizar el proceso.  
@@ -29,21 +28,21 @@ ms.locfileid: "62917597"
   
 -   **Para almacenar mensajes y los registros de Correo electrónico de base de datos mediante:**  [Agente SQL Server](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Las nuevas tablas para almacenar los datos del archivo se pueden ubicar en una base de datos de archivo especial. De forma alternativa, las filas se pudieron exportar a un archivo de texto.  
  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  En su entorno de producción, puede agregar otros procedimientos de comprobación de errores y enviar un mensaje de correo electrónico a los operadores si el trabajo provoca un error.  
   
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** para ejecutar los procedimientos almacenados que se describen en este tema.  
   
   
-###  <a name="Process_Overview"></a> Información general acerca del proceso de inicialización  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> Información general acerca del proceso de inicialización  
   
 -   En el primer procedimiento se crea con cuatro pasos un trabajo denominado Archivar mensajes del Correo electrónico de base de datos.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar elementos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar datos adjuntos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar el registro del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del registro de eventos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Comando** , escriba la instrucción siguiente para quitar las filas anteriores al mes actual del registro de eventos del Correo electrónico de base de datos:  
   
@@ -208,7 +207,7 @@ ms.locfileid: "62917597"
   
 5.  En el área **Frecuencia** , seleccione las opciones para ejecutar el trabajo periódicamente, por ejemplo una vez al mes.  
   
-6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<hora>** .  
+6.  En el área **frecuencia diaria** , seleccione **sucede una vez \<time> a **las.  
   
 7.  Compruebe que las demás opciones están configuradas tal como desea y, a continuación, haga clic en **Aceptar** para guardar la programación.  
   

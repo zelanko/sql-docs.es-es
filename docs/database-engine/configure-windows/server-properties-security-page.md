@@ -1,5 +1,6 @@
 ---
 title: Propiedades del servidor (página Seguridad) | Microsoft Docs
+description: Familiarícese con la configuración de la seguridad del servidor en SQL Server. Obtenga información sobre las opciones que controlan la autenticación de servidor, las cuentas de proxy y otras características.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e864eced90a190dc7e7c0f204691ed02b9a2cff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723997"
 ---
 # <a name="server-properties---security-page"></a>Propiedades del servidor (página Seguridad)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para ver o modificar las opciones de seguridad del servidor.  
   
 ## <a name="server-authentication"></a>Autenticación de servidor  
@@ -37,7 +38,7 @@ ms.locfileid: "68031429"
 >  El cambio de la configuración de seguridad requiere reiniciar el servicio. Cuando se cambia la Autenticación de servidor al modo de autenticación de Windows y SQL Server, la cuenta SA no se habilita automáticamente. Para utilizar la cuenta SA, ejecute [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) con la opción ENABLE.  
   
 ## <a name="login-auditing"></a>Auditoría de inicio de sesión  
- **Ninguno**  
+ **None**  
  Desactiva la auditoría de inicio de sesión.  
   
  **Solo inicios de sesión erróneos**  

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de configuración de almacenamiento (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Configuración de almacenamiento (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940236"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Configuración de almacenamiento (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Configuración de almacenamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para establecer la configuración del almacenamiento en caché automático, del almacenamiento y de las notificaciones para una dimensión, un cubo, un grupo de medida o una partición. Puede abrir el cuadro de diálogo **Configuración de almacenamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] de distintas maneras:  
   
--   Al hacer clic en el botón de puntos suspensivos ( **...** ) para el `ProactiveCaching` valor de propiedad de una dimensión, cubo, grupo de medida o partición en la **propiedades** ventana de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Hacer clic en el botón de puntos suspensivos (**...**) para el `ProactiveCaching` valor de propiedad de una dimensión, un cubo, un grupo de medida o una partición en la ventana **propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 -   Expandir un grupo de medida en la pestaña **Particiones** del **Diseñador de cubos** y hacer clic en **Configuración de almacenamiento**.  
   
@@ -46,9 +45,9 @@ ms.locfileid: "66068030"
 |**Configuración personalizada**|Seleccione esta opción para establecer de forma explícita las opciones de modo de almacenamiento, almacenamiento en caché automático y notificación.||  
 |**Opciones**|Haga clic para abrir el cuadro de diálogo **Opciones de almacenamiento** para establecer explícitamente las opciones de modo de almacenamiento, almacenamiento en caché automático y notificación. Para más información, sobre el cuadro de diálogo **Opciones de almacenamiento**, vea [Cuadro de diálogo Opciones de almacenamiento &#40;Analysis Services - Datos multidimensionales&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Almacenamiento en caché automático &#40;particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [Almacenamiento de cubos &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
+ [Almacenamiento de cubos &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6596b20-3aa5-4dc4-a4c5-3649f1f5a20e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00662ef396ff114e4b77d70aa2f60863e8f94bd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773401"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927848"
 ---
 # <a name="undo-checkouts"></a>Deshacer desprotecciones
   El comando **Deshacer desprotección** se puede utilizar para cancelar una desprotección existente. Resulta muy útil cuando se ha modificado y guardado un archivo y, posteriormente, es necesario revertir los cambios.  
@@ -42,7 +41,7 @@ ms.locfileid: "62773401"
      **Vista plana**  
      Muestra los elementos como listas planas en su conexión de control de código fuente.  
   
-     **Name**  
+     **Nombre**  
      Muestra los nombres de los elementos en los que se deshará la desprotección. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea deshacer la desprotección de un elemento, desactive su casilla.  
   
      **Opciones**  
@@ -57,7 +56,7 @@ ms.locfileid: "62773401"
      **Deshacer desprotección**  
      Anula la desprotección y descarta los cambios en el archivo desprotegido.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desproteger archivos](../../2014/database-engine/check-out-files.md)   
  [Administrar desprotecciones](../../2014/database-engine/manage-checkouts.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
+title: Sys. fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6a777b64fbebc9a97762949ccbd895d052c6260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898402"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve el valor de la columna start_lsn para la instancia de captura especificada desde el [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabla del sistema. Este valor representa el extremo inferior del intervalo de validez para la instancia de captura.  
+  Devuelve el valor de start_lsn columna de la instancia de captura especificada de la tabla del sistema [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Este valor representa el extremo inferior del intervalo de validez para la instancia de captura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *capture_instance_name* **'**  
- Es el nombre de la instancia de captura. *capture_instance_name* es **sysname**.  
+ Es el nombre de la instancia de captura. *capture_instance_name* es de **tipo sysname**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **binary(10)**  
   
 ## <a name="remarks"></a>Comentarios  
@@ -68,7 +68,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>b. Comprobar el extremo inferior de un rango de consulta  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>B. Comprobar el extremo inferior de un rango de consulta  
  El ejemplo siguiente utiliza el valor LSN mínimo devuelto por `sys.fn_cdc_get_min_lsn` para comprobar que el extremo inferior propuesto para una consulta de datos de cambio es válido para la escala de tiempo actual para la instancia de captura el `HumanResources_Employee`. Este ejemplo supone que el LSN del extremo alto anterior para la instancia de captura se guardó y está disponible para establecer la variable `@save_to_lsn`. Para los propósitos de este ejemplo, `@save_to_lsn` está establecido en 0x000000000000000000 para forzar la ejecución de la sección de control de errores.  
   
 ```  
@@ -94,8 +94,8 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

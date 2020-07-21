@@ -1,5 +1,5 @@
 ---
-title: Asignar almacenamiento | Documentos de Microsoft
+title: Asignación de almacenamiento | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,19 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4fd131050930cda981ebbd0e82daea46776dfa07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200043"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039597"
 ---
 # <a name="assigning-storage"></a>Asignar almacenamiento
   Una aplicación puede asignar almacenamiento para los resultados antes o después de ejecutar una instrucción SQL. Si una aplicación prepara o ejecuta primero la instrucción SQL, puede realizar consultas sobre el conjunto de resultados antes de asignar almacenamiento para los resultados. Por ejemplo, si no se conoce el conjunto de resultados, la aplicación debe recuperar el número de columnas para poder asignar almacenamiento al mismo.  
   
- Para asociar el almacenamiento para una columna de datos, una aplicación llama a [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)y lo pasa:  
+ Para asociar el almacenamiento de una columna de datos, una aplicación llama a [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)y lo pasa:  
   
 -   El tipo al que deben convertirse los datos.  
   
@@ -49,15 +48,15 @@ ms.locfileid: "63200043"
   
 -   El enlace de modo de columna finaliza cuando cada columna se enlaza a su propia matriz de variables.  
   
-     El enlace se especifica mediante una llamada a [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con *atributo* establecido en SQL_ATTR_ROW_BIND_TYPE y *ValuePtr* establecido en SQL_BIND_BY_COLUMN. Todas las matrices deben tener el mismo número de elementos.  
+     El enlace de modo de columna se especifica llamando a [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) con el *atributo* establecido en SQL_ATTR_ROW_BIND_TYPE y *ValuePtr* establecido en SQL_BIND_BY_COLUMN. Todas las matrices deben tener el mismo número de elementos.  
   
 -   El enlace de modo de fila finaliza cuando todos los parámetros de la instrucción SQL se enlazan como una unidad a una matriz de estructuras que contienen variables individuales para los parámetros.  
   
-     El enlace se especifica mediante una llamada a **SQLSetStmtAttr** con *atributo* establecido en SQL_ATTR_ROW_BIND_TYPE y *ValuePtr* establecido en el tamaño de la explotación de estructura el columnas del conjunto de variables que van a recibir el resultado.  
+     El enlace de modo de fila se especifica mediante una llamada a **SQLSetStmtAttr** con el *atributo* establecido en SQL_ATTR_ROW_BIND_TYPE y *ValuePtr* establecido en el tamaño de la estructura que contiene las variables que recibirán las columnas del conjunto de resultados.  
   
  La aplicación también establece SQL_ATTR_ROW_ARRAY_SIZE en el número de elementos de las matrices de columnas o filas y establece SQL_ATTR_ROW_STATUS_PTR y SQL_ATTR_ROWS_FETCHED_PTR.  
   
-## <a name="see-also"></a>Vea también  
- [Procesar resultados &#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Procesar los resultados &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

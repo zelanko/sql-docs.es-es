@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_trace_gettable (Transact-SQL) | Microsoft Docs
+title: Sys. fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059223"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898281"
 ---
-# <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el contenido de uno o más archivos de seguimiento en forma de tabla.  
   
@@ -43,16 +43,16 @@ fn_trace_gettable ( 'filename' , number_files )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- '*filename*'  
- Especifica el archivo de seguimiento inicial que se va a leer. *nombre de archivo* es **nvarchar (256)** , no tiene ningún valor predeterminado.  
+ '*nombreDeArchivo*'  
+ Especifica el archivo de seguimiento inicial que se va a leer. *filename* es **nvarchar (256)** y no tiene ningún valor predeterminado.  
   
  *number_files*  
- Especifica el número de archivos de sustitución que se van a leer. Este número incluye el archivo inicial especificado en *filename*. *number_files* es un **int**.  
+ Especifica el número de archivos de sustitución que se van a leer. Este número incluye el archivo inicial especificado en *filename*. *number_files* es de **tipo int**.  
   
 ## <a name="remarks"></a>Comentarios  
- Si *number_files* se especifica como **predeterminada**, **fn_trace_gettable** lee todos los archivos de sustitución incremental hasta que llega al final del seguimiento. **fn_trace_gettable** devuelve una tabla con todas las columnas válidas para el seguimiento especificado. Para obtener más información, consulte [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+ Si se especifica *number_files* como **valor predeterminado**, **fn_trace_gettable** Lee todos los archivos de sustitución incremental hasta que llega al final del seguimiento. **fn_trace_gettable** devuelve una tabla con todas las columnas válidas para el seguimiento especificado. Para obtener más información, vea [sp_trace_setevent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando se especifica esta opción mediante el uso de la *number_files* argumento) donde el nombre de archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando un archivo realiza la sustitución incremental). Como alternativa, puede cambiar el nombre de los archivos de seguimiento para quitar los caracteres de subrayado del nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5.trc** y el archivo de sustitución se denomina **Trace_Oct_5_1.trc**, puede cambiar el nombre de los archivos a **TraceOct5.trc** y  **TraceOct5_1.trc**.  
+ Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando esta opción se especifica mediante el argumento *number_files* ), donde el nombre del archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando se revierte un archivo). Como solución alternativa, puede cambiar el nombre de los archivos de seguimiento para quitar los guiones bajos en el nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5. TRC** y el archivo de sustitución incremental se denomina **Trace_Oct_5_1. TRC**, puede cambiar el nombre de los archivos a **TraceOct5. TRC** y **TraceOct5_1. TRC**.  
   
  Esta función puede leer un seguimiento que todavía esté activo en la instancia en la que se ejecuta.  
   
@@ -61,7 +61,7 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-fntracegettable-to-import-rows-from-a-trace-file"></a>A. Usar fn_trace_gettable para importar filas de un archivo de seguimiento  
+### <a name="a-using-fn_trace_gettable-to-import-rows-from-a-trace-file"></a>A. Usar fn_trace_gettable para importar filas de un archivo de seguimiento  
  En el siguiente ejemplo se llama a `fn_trace_gettable` en la cláusula `FROM` de una instrucción `SELECT...INTO`.  
   
 ```  
@@ -72,7 +72,7 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-### <a name="b-using-fntracegettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>b. Usar fn_trace_gettable para devolver una tabla con una columna IDENTITY que se pueda cargar en una tabla de SQL Server  
+### <a name="b-using-fn_trace_gettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B. Usar fn_trace_gettable para devolver una tabla con una columna IDENTITY que se pueda cargar en una tabla de SQL Server  
  Este ejemplo llama a la función como parte de una instrucción `SELECT...INTO` y devuelve una tabla con una columna `IDENTITY` que se puede cargar en la tabla `temp_trc`.  
   
 ```  
@@ -83,10 +83,10 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_trace_generateevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
   

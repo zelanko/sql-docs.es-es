@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107901"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107901"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Elementos de informe  
+##  <a name="report-items"></a><a name="ReportItems"></a> Elementos de informe  
  En la tabla siguiente se describe cómo se representan los elementos de informe.  
   
 |Elemento|Comportamiento de la representación|  
@@ -34,11 +34,11 @@ ms.locfileid: "66107901"
 |Cuadro de texto|Se representa como un atributo o elemento dentro de su contenedor.|  
 |Rectángulo|Se representa como un elemento dentro de su contenedor.|  
 |Grupos de columnas de matriz|Se representan como elementos dentro de grupos de filas.|  
-|Asignación|Se representa como un elemento dentro del elemento de su contenedor. Las capas de mapa son elementos secundarios del mapa. Cada capa de mapa incluye los elementos y los atributos de los miembros del mapa.|  
+|Map|Se representa como un elemento dentro del elemento de su contenedor. Las capas de mapa son elementos secundarios del mapa. Cada capa de mapa incluye los elementos y los atributos de los miembros del mapa.|  
 |Gráfico|Se representa como un elemento dentro del elemento de su contenedor. Las series son elementos secundarios del gráfico y las categorías son los elementos secundarios de una serie. Representa todas las etiquetas de gráfico de cada valor de gráfico. Las etiquetas y los valores se incluyen como atributos.|  
 |Barra de datos|Se representan como un elemento dentro del elemento de su contenedor, de forma similar a un gráfico. Normalmente, una barra de datos no incluye jerarquías o etiquetas, solo valores.|  
 |Minigráfico|Se representan como un elemento dentro del elemento de su contenedor, de forma similar a un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas, solo valores.|  
-|Medidor|Se representa como un elemento dentro del elemento de su contenedor. Se representa como un único elemento con los valores máximo y mínimo de la escala, los valores inicial y final del intervalo, y el valor del puntero como atributos.|  
+|Indicador|Se representa como un elemento dentro del elemento de su contenedor. Se representa como un único elemento con los valores máximo y mínimo de la escala, los valores inicial y final del intervalo, y el valor del puntero como atributos.|  
 |Indicador|Se representa como un elemento dentro del elemento de su contenedor, de forma similar a un medidor. Se representa como un único elemento con el nombre del estado activo, los estados disponibles y el valor de los datos como atributos.|  
   
  Los informes que se representan con la extensión de representación en XML también siguen estas reglas:  
@@ -53,7 +53,7 @@ ms.locfileid: "66107901"
   
 -   Se omiten `Images, lines, and custom report items`.  
   
-##  <a name="DataTypes"></a> Tipos de datos  
+##  <a name="data-types"></a><a name="DataTypes"></a>Tipos de datos  
  Al elemento o atributo del cuadro de texto se le asigna un tipo de datos XSD según los valores que muestra el cuadro de texto.  
   
 |Si todos los valores del cuadro de texto son|El tipo de datos asignado es|  
@@ -68,7 +68,7 @@ ms.locfileid: "66107901"
 |`String`, `Char`|**xsd:cadena**|  
 |Otros|**xsd:cadena**|  
   
-##  <a name="XMLSpecificRenderingRules"></a> Reglas de representación específicas de XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Reglas de representación específicas de XML  
  En las secciones siguientes se describe cómo interpreta los elementos del informe la extensión de representación en XML.  
   
 ### <a name="report-body"></a>Cuerpo del informe  
@@ -80,7 +80,7 @@ ms.locfileid: "66107901"
   
  Los valores de las variables son los siguientes:  
   
-|Name|Valor|  
+|NOMBRE|Value|  
 |----------|-----------|  
 |Informe|Report.DataElementName|  
 |ReportURL|Dirección URL absoluta con codificación URL al informe en el servidor.|  
@@ -114,7 +114,7 @@ ms.locfileid: "66107901"
 ### <a name="tables-matrices-and-lists"></a>Tablas, matrices y listas  
  Las tablas, matrices y listas se representan como un elemento. El nombre del elemento procede de la propiedad RDL DataElementName de Tablix.  
   
-#### <a name="rows-and-columns"></a>Las filas y columnas  
+#### <a name="rows-and-columns"></a>Filas y columnas  
  Las columnas se representan dentro de las filas.  
   
 #### <a name="tablix-corner"></a>Esquina de Tablix  
@@ -148,20 +148,20 @@ ms.locfileid: "66107901"
   
  Si el valor de la propiedad DataElementOutput es igual al de la salida, el encabezado de un elemento repetitivo se representa como un elemento secundario del elemento de detalle.  
   
-##  <a name="CustomFormatsXSLTransformations"></a> Formatos personalizados y transformaciones XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formatos personalizados y transformaciones XSL  
  Los archivos XML generados por la extensión de representación en XML se pueden transformar prácticamente a cualquier formato mediante las transformaciones XSL (XSLT). Esta funcionalidad se puede usar para generar datos en formatos todavía no admitidos por las extensiones de representación existentes. Se recomienda utilizar la extensión de representación en XML y XSLT antes de intentar crear una extensión de representación propia.  
   
-##  <a name="DuplicateName"></a> Nombres duplicados  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nombres duplicados  
  Si hay nombres de elementos de datos duplicados dentro del mismo ámbito, el representador muestra un mensaje de error.  
   
-##  <a name="XSLTTransformations"></a> Transformaciones XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>Transformaciones XSLT  
  El representador de XML puede aplicar una transformación XSLT en el servidor a los datos XML originales. Cuando se aplica una XSLT, el representador genera el contenido transformado en lugar de los datos XML originales. La transformación se produce en el servidor, no en el cliente.  
   
  La transformación XSLT que se debe aplicar a la salida se define en el archivo de definición de informe con la propiedad DataTransform del informe o con el parámetro *DeviceInfo* de XSLT. Si se establece cualquiera de estos valores, la transformación se produce cada vez que se usa el representador de XML. Cuando se usan suscripciones, la transformación XSLT se debe definir en la propiedad RDL DataTransform.  
   
  Si se especifica un archivo XSLT, tanto con la propiedad de definición DataTransform como con la configuración de la información del dispositivo, primero se produce la transformación XSLT especificada en DataTransform y después la establecida mediante la configuración de la información del dispositivo.  
   
-###  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando valores de configuración de la información del dispositivo como los siguientes:  
   
 -   La transformación (XSLT) que se aplicará al XML.  
@@ -180,9 +180,9 @@ ms.locfileid: "66107901"
   
  Para obtener más información, vea [XML Device Information Settings](../xml-device-information-settings.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

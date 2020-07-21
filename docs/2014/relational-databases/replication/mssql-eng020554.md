@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0223cd2499d228eea233ac56fb6964c5fdaa24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010369"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|20554|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|20554|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|El agente de replicación no ha registrado un mensaje de progreso en %ld minutos. Esto podría indicar que un agente no responde o una gran actividad en el sistema. Compruebe que se están replicando los registros en el destino y que las conexiones al suscriptor, publicador y distribuidor están activas.|  
@@ -52,33 +51,33 @@ ms.locfileid: "63057125"
   
      Compruebe los detalles del error en el Monitor de replicación y, a continuación, reinicie el agente si se ha detenido. Los detalles del error pueden ofrecer información adicional sobre el motivo por el que el agente no se estaba ejecutando correctamente. Si el agente se está ejecutando, no lo detenga y lo reinicie porque esto puede agravar el problema. Para obtener información sobre el modo de ver el estado del agente y los detalles del error en el Monitor de replicación, vea los siguientes temas:  
   
-    -   Para el agente de instantáneas, Agente lector del registro y el agente de lector de cola, vea [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Para los Agente de instantáneas, Agente de registro del LOG y Agente de lectura de cola, vea [ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   Para el agente de distribución y agente de mezcla, vea [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Para obtener Agente de distribución y Agente de mezcla, vea [ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si este error se genera con frecuencia porque el agente está ocupado:  
   
      Es posible que tenga que volver a diseñar la aplicación para que el agente pase menos tiempo procesando.  
   
-     Puede incrementar el intervalo en el que el estado del agente se comprueba usando el cuadro de diálogo **Propiedades del trabajo** . Para obtener información sobre el acceso a este cuadro de diálogo para trabajos de replicación, vea [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Puede incrementar el intervalo en el que el estado del agente se comprueba usando el cuadro de diálogo **Propiedades del trabajo** . Para obtener información acerca de cómo obtener acceso a este cuadro de diálogo para trabajos de replicación, vea [ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Si un agente no puede iniciar sesión en uno de los equipos de la topología:  
   
-     Se recomienda que establezca **-LoginTimeOut** en un valor inferior al intervalo en el que se ejecuta el trabajo de comprobación del agente de replicación. En algunos casos, **-LoginTimeOut** se establece en un valor mayor debido a problemas de red que causan que los inicios de sesión agoten el tiempo de espera. Si **-LoginTimeOut** se establece en un valor menor, la replicación puede informar sobre errores más específicos, lo que le permite solucionar problemas de inicio de sesión que pueden estar causados por permisos, problemas de red u otros factores. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+     Se recomienda que establezca **-LoginTimeOut** en un valor inferior al intervalo en el que se ejecuta el trabajo de comprobación del agente de replicación. En algunos casos, el valor de **-LoginTimeout** se establece más alto debido a problemas de red que hacen que los inicios de sesión agoten el tiempo de espera. Si **-LoginTimeout se establece en un** valor inferior, la replicación puede informar sobre errores más específicos, lo que le permite solucionar problemas de inicio de sesión que pueden estar causados por permisos, problemas de red u otros problemas. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
     -   [Trabajar con perfiles del Agente de replicación](agents/replication-agent-profiles.md)  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
+    -   [Conceptos de los ejecutables del agente de replicación](concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Vea también  
- [Administración del Agente de replicación](agents/replication-agent-administration.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administración del agente de replicación](agents/replication-agent-administration.md)   
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)   
  [Agente de distribución de replicación](agents/replication-distribution-agent.md)   
  [Agente de registro del LOG de replicación](agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](agents/replication-queue-reader-agent.md)   
- [Agente de instantáneas de replicación](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

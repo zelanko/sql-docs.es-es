@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f0a37385750db130a82bee39e430f5d4632f139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f333e2bdbe10ff3e3b4ec43aaa24746300a0becd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980562"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925122"
 ---
 # <a name="getref-method-sqlservercallablestatement"></a>Método getRef (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652434"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831676"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Compila un plan para la instrucción de cursor enviada o lote. Después, crea y rellena el cursor. sp_cursorprepexec combina las funciones de sp_cursorprepare y sp_cursorexecute. Este procedimiento se invoca especificando el identificador 5 en un paquete de flujo TDS.  
   
- ![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,19 +48,19 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Es el identificador de cursor generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *cursor* es un parámetro necesario que se debe proporcionar en todos los procedimientos subsiguientes que actúan sobre este cursor, por ejemplo, sp_cursorfetch.  
   
  *params*  
- Identifica instrucciones con parámetros. La definición de params de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar**o **nvarchar** .  
+ Identifica instrucciones con parámetros. La definición de *params* de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar**o **nvarchar** .  
   
 > [!NOTE]  
->  Use una cadena **ntext** como valor de entrada cuando *stmt* tiene parámetros y el valor de PARAMETERIZED_STMT de *scrollopt* es on.  
+>  Use una cadena **ntext** como valor de entrada cuando *stmt* tiene parámetros y el valor de PARAMETERIZED_STMT *scrollopt* es on.  
   
- *instrucción*  
+ *statement*  
  Define el conjunto de resultados del cursor. El parámetro de *instrucción* es obligatorio y llama a para un valor de entrada **ntext**, **nchar**o **nvarchar** .  
   
 > [!NOTE]  
->  Las reglas para especificar el valor de stmt son las mismas que para Sp_cursoropen, con la excepción de que el tipo de datos de la cadena *stmt* debe ser **ntext**.  
+>  Las reglas para especificar el valor de stmt son las mismas que para sp_cursoropen, con la excepción de que el tipo de datos de la cadena *stmt* debe ser **ntext**.  
   
  *options*  
- Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. \* las opciones requieren el siguiente valor de entrada **int** .  
+ Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. * las opciones requieren el siguiente valor de entrada **int** .  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -86,7 +86,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Debido a la posibilidad de que la opción solicitada no sea adecuada para el cursor definido por  *\<stmt >* , este parámetro actúa como entrada y salida. En casos como este, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo adecuado y modifica este valor.  
+ Debido a la posibilidad de que la opción solicitada no sea adecuada para el cursor definido por * \< stmt>*, este parámetro actúa como entrada y salida. En casos como este, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo adecuado y modifica este valor.  
   
  *ccopt*  
  Opción de control de simultaneidad. *ccopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
@@ -105,23 +105,23 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igualque con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, puede asignar un valor diferente al que se solicitó.  
+ Al igual que con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar un valor diferente al que se solicitó.  
   
- *rowcount*  
+ *empleado*  
  Es un parámetro opcional que indica el número de filas del búfer de captura que se van a usar con AUTO_FETCH. El valor predeterminado es 20 filas. *RowCount* se comporta de forma diferente cuando se asigna como valor de entrada frente a un valor devuelto.  
   
 |Como valor de entrada|Como valor devuelto|  
 |--------------------|---------------------|  
-|Cuando se especifica AUTO_FETCH con los cursores FAST_FORWARD, *RowCount* representa el número de filas que se van a colocar en el búfer de captura.|Representa el número de filas en el conjunto de resultados. Cuando se especifica el valor de *scrollopt* AUTO_FETCH, *RowCount* devuelve el número de filas que se capturaron en el búfer de captura.|  
+|Cuando se especifica AUTO_FETCH con FAST_FORWARD cursor *RowCount* representa el número de filas que se van a colocar en el búfer de captura.|Representa el número de filas en el conjunto de resultados. Cuando se especifica el valor *scrollopt* AUTO_FETCH, *RowCount* devuelve el número de filas que se capturaron en el búfer de captura.|  
 
 *parameter_name* Designe uno o varios nombres de parámetro tal y como se define en el argumento params.  Debe haber un parámetro proporcionado para cada parámetro incluido en params. Este argumento no es necesario cuando la instrucción de Transact-SQL o el lote en params no tienen parámetros definidos.
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Si params devuelve un valor NULL, la instrucción no tiene parámetros.  
   
-## <a name="see-also"></a>Vea también  
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursorprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_cursoropen &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorexecute &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursorprepare &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorfetch &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

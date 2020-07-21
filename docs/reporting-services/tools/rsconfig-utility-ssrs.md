@@ -1,5 +1,5 @@
 ---
-title: rsconfig (utilidad) (SSRS) | Microsoft Docs
+title: rsconfig (utilidad) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571529"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082181"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
   La utilidad **rsconfig.exe** cifra y almacena valores de cuenta y conexión en el archivo RSReportServer.config. Los valores cifrados incluyen la información de conexión de la base de datos del servidor de informes y los valores de cuenta utilizados para el procesamiento de informes desatendido.  
@@ -49,11 +49,11 @@ rsconfig {-?}
 |**-c**|Necesario si no se usa el argumento **-e** .|Especifica la cadena de conexión, las credenciales y los valores de origen de datos que se utilizan para conectar un servidor de informes a la base de datos del servidor de informes.<br /><br /> Este argumento no toma ningún valor. No obstante, deben especificarse argumentos adicionales para proporcionar todos los valores de conexión requeridos.<br /><br /> Los argumentos que se pueden especificar con **-c** son **-m**, **-s**, **-i**, **-d**, **-a**, **-u**, **-p**y **-t**.|  
 |**-e**|Necesario si no se usa el argumento **-c** .|Especifica la cuenta de ejecución desatendida del informe.<br /><br /> Este argumento no toma ningún valor. Sin embargo, deben incluirse argumentos adicionales en la línea de comandos para especificar los valores que están cifrados en el archivo de configuración.<br /><br /> Los argumentos que se pueden especificar con **-e** son **-u** y **-p**. También puede establecer **-t**.|  
 |**-m**  *nombreDeEquipo*|Requerido si configura una instancia de servidor de informes remoto.|Especifica el nombre del equipo donde está hospedado el servidor de informes. Si se omite este argumento, el valor predeterminado es **localhost**.|  
-|**-s**  *nombreDeServidor*|Requerido.|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes.|  
+|**-s**  *nombreDeServidor*|Necesario.|Especifica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes.|  
 |**-i**  *nombreDeInstancia*|Requerido si utiliza instancias con nombre.|Si usa una instancia de Reporting Services con nombre, este valor especifica el nombre de la instancia de Reporting Services.|  
-|**-d**  *nombreDeBaseDeDatos*|Requerido.|Especifica el nombre de la base de datos de servidor de informes.|  
-|**-a**  *métodoDeAutenticación*|Requerido.|Especifica el método de autenticación que el servidor de informes utiliza para conectarse a la base de datos de servidor de informes. Los valores válidos son **Windows** o **SQL** (este argumento no distingue mayúsculas de minúsculas).<br /><br /> **Windows** especifica que el servidor de informes utilice la autenticación de Windows.<br /><br /> **SQL** especifica que el servidor de informes utilice la autenticación de SQL Server.|  
-|**-u**  *[dominio\\]nombreUsuario*|Necesario con **-e** y opcional con **-c**.|Especifica una cuenta de usuario para la conexión de base de datos del servidor de informes o para la cuenta desatendida.<br /><br /> Para **rsconfig -e**, este argumento es obligatorio. Debe ser una cuenta de usuario de dominio.<br /><br /> Para **rsconfig -c** y **-a SQL**, este argumento necesita especificar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** y **-a Windows**, este argumento puede especificar un usuario de dominio, una cuenta integrada o credenciales de cuenta de servicio. Si especifica una cuenta de dominio, especifique un *dominio* y un *nombre de usuario* en el formato *dominio\nombre de usuario*. Si está utilizando una cuenta integrada, este argumento es opcional. Si desea utilizar las credenciales de la cuenta de servicio, omita este argumento.|  
+|**-d**  *nombreDeBaseDeDatos*|Necesario.|Especifica el nombre de la base de datos de servidor de informes.|  
+|**-a**  *métodoDeAutenticación*|Necesario.|Especifica el método de autenticación que el servidor de informes utiliza para conectarse a la base de datos de servidor de informes. Los valores válidos son **Windows** o **SQL** (este argumento no distingue mayúsculas de minúsculas).<br /><br /> **Windows** especifica que el servidor de informes utilice la autenticación de Windows.<br /><br /> **SQL** especifica que el servidor de informes utilice la autenticación de SQL Server.|  
+|**-u**  *[dominio\\]nombreDeUsuario*|Necesario con **-e** y opcional con **-c**.|Especifica una cuenta de usuario para la conexión de base de datos del servidor de informes o para la cuenta desatendida.<br /><br /> Para **rsconfig -e**, este argumento es obligatorio. Debe ser una cuenta de usuario de dominio.<br /><br /> Para **rsconfig -c** y **-a SQL**, este argumento necesita especificar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Para **rsconfig -c** y **-a Windows**, este argumento puede especificar un usuario de dominio, una cuenta integrada o credenciales de cuenta de servicio. Si especifica una cuenta de dominio, especifique un *dominio* y un *nombre de usuario* en el formato *dominio\nombre de usuario*. Si está utilizando una cuenta integrada, este argumento es opcional. Si desea utilizar las credenciales de la cuenta de servicio, omita este argumento.|  
 |**-p**  *contraseña*|Obligatorio si se especifica **-u** .|Especifica la contraseña que se utilizará con el argumento *username* . Este argumento se puede establecer en un valor en blanco si la cuenta no requiere una contraseña. Este valor distingue entre mayúsculas y minúsculas para cuentas de dominio.|  
 |**-t**|Opcional.|Registra los mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -63,7 +63,7 @@ rsconfig {-?}
 ## <a name="file-location"></a>Ubicación del archivo  
  Rsconfig.exe se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Rsconfig.exe se utiliza con dos objetivos:  
   
 -   Modificar la información de conexión que un servidor de informes utiliza para conectar con una base de datos de servidor de informes.  

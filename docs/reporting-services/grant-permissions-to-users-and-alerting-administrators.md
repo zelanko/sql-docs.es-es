@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: dd6a34e6dbf57eb5080525d7dd0f7d7067484ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580485"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Conceder permisos a los usuarios y alertar a los administradores
@@ -31,7 +31,7 @@ Para que los usuarios y administradores de alertas puedan crear, modificar, elim
 
 Para más información sobre los permisos de SharePoint, vea [Permisos de usuario y niveles de permisos (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).
 
-## <a name="grant-permissions"></a>Conceder permisos
+## <a name="grant-permissions"></a>Concesión de permisos
   
 1.  Vaya al sitio de SharePoint para el que desea conceder permisos.  
   
@@ -39,7 +39,7 @@ Para más información sobre los permisos de SharePoint, vea [Permisos de usuari
   
      Si no aparece esta opción, no tiene permisos suficientes para conceder permisos a otros.  
   
-3.  Haga clic en **Conceder permisos**.  
+3.  Haga clic en **Concesión de permisos**.  
   
 4.  En **Usuarios/Grupos**, escriba los nombres de usuario, los nombres de grupo o las direcciones de correo electrónico a los que quiere conceder permiso.  
   

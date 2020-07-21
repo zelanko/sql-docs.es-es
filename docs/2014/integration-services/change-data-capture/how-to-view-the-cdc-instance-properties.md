@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa99a4f25d0bf6581ac434ea64c10acd723740de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835571"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438632"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Cómo ver las propiedades de la instancia CDC
   En este procedimiento se describe cómo usar la consola del Diseñador CDC para ver información acerca de las instancias que se crean para ayudar a administrar el funcionamiento de las instancias.  

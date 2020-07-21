@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb509d4b3ba48bbd31b4246e66e024b0be1d49ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688903"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025626"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
   Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla optimizada para memoria, las filas no pueden ser mayores de 8060 bytes. Conocer el tamaño de una tabla optimizada para memoria le ayudará a saber si el equipo tiene memoria suficiente.  
@@ -34,7 +33,7 @@ ms.locfileid: "72688903"
   
  La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
   
- ![Tabla con optimización para memoria.](../../database-engine/media/hekaton-guide-1.gif "Tabla con optimización para memoria.")  
+ ![Tabla optimizada para memoria.](../../database-engine/media/hekaton-guide-1.gif "Tabla optimizada para memoria.")  
 La tabla con optimización para memoria, que consta de índices y filas.  
   
  El tamaño en memoria de una tabla, en bytes, se calcula de la forma siguiente:  
@@ -70,19 +69,19 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, indicado como [tamaño real del cuerpo de fila] = SUM([tamaño de tipos superficiales]) + 2 + 2 * [número de columnas de tipo profundo].  
   
-|Sección|Tamaño|Comentarios|  
+|Sección|Size|Comentarios|  
 |-------------|----------|--------------|  
-|Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **El tamaño de los tipos individuales es el siguiente:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisión < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisión > 18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **El tamaño de los tipos individuales es el siguiente:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisión <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisión>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
 |Relleno de matriz NULL|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño de la matriz NULL es un número de bytes impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Relleno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Espaciado interno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Columnas de tipo profundo de longitud fija|SUM([tamaño de columnas de tipo profundo de longitud fija])<br /><br /> El tamaño de cada columna es el siguiente:<br /><br /> i para char(i) y binary(i).<br /><br /> 2 * i para nchar(i)|Las columnas de tipo profundo de longitud fija son de tipo char(i), nchar(i) o binary(i).|  
 |Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|  
   
-##  <a name="bkmk_RowStructure"></a> Estructura de filas  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a>Estructura de filas  
  Las filas de una tabla optimizada para memoria tienen los siguientes componentes:  
   
 -   El encabezado de fila contiene la marca de tiempo necesaria para implementar las versiones de fila. El encabezado de fila también contiene el puntero de índice para implementar el encadenamiento de filas en cubos de hash (descritos arriba).  
@@ -91,7 +90,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  La ilustración siguiente muestra la estructura de la fila de una tabla que tenga dos índices:  
   
- ![Estructura de fila para una tabla que tiene dos índices.](../../database-engine/media/hekaton-tables-4.gif "Estructura de fila para una tabla que tiene dos índices.")  
+ ![Estructura de fila de una tabla que tiene dos índices.](../../database-engine/media/hekaton-tables-4.gif "Estructura de fila de una tabla que tiene dos índices.")  
   
  Las marcas de tiempo de inicio y fin indican el periodo en el que una determinada versión de fila es válida. Las transacciones que se inician en este intervalo pueden ver esta versión de fila. Para obtener más detalles, consulte [Transacciones en tablas con optimización para memoria](memory-optimized-tables.md).  
   
@@ -113,24 +112,24 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
 -   Segundo cubo: (John, París), (Jane, Praga)  
   
- Una marca &#x221e; de tiempo de finalización (infinito) indica que se trata de la versión válida actualmente de la fila. La fila no se ha actualizado ni se ha eliminado desde que esta versión de fila se escribió.  
+ Una marca de tiempo de finalización &#x221e; (infinito) indica que se trata de la versión válida actualmente de la fila. La fila no se ha actualizado ni se ha eliminado desde que esta versión de fila se escribió.  
   
  Para un tiempo mayor que 200, la tabla contiene las filas siguientes:  
   
-|Name|Ciudad|  
+|Name|City|  
 |----------|----------|  
-|John|Beijing|  
-|Jane|Praga|  
+|Juan|Beijing|  
+|Julia|Praga|  
   
  Sin embargo, cualquier transacción activa con el tiempo de inicio 100 verá la versión siguiente de la tabla:  
   
-|Name|Ciudad|  
+|Name|City|  
 |----------|----------|  
-|John|Paris|  
-|Jane|Praga|  
+|Juan|Paris|  
+|Julia|Praga|  
 |Susan|Bogotá|  
   
-##  <a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
  Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el bucket_count especificado es 100000, el número real de cubos para el índice es 131072.  
   
  Considere una tabla Orders con la definición siguiente:  
@@ -188,7 +187,7 @@ GO
   
 -   El relleno NULL de matriz = 1, como el tamaño de la matriz NULL es impar y hay una columna de tipo profundo.  
   
--   Relleno  
+-   Espaciado interno  
   
     -   8 es el requisito mayor de alineación.  
   
@@ -222,7 +221,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
   
   

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085813"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85864366"
 ---
-# <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina la información acerca de la base de datos especificada de las tablas del historial de copias de seguridad y restauración.  
   
@@ -39,7 +39,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database_name = ] database_name` Especifica el nombre de la base de datos implicado en operaciones de copia de seguridad y restauración. *database_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @database_name = ] database_name`Especifica el nombre de la base de datos implicada en las operaciones de copia de seguridad y restauración. *database_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -47,8 +47,8 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_delete_database_backuphistory** se debe ejecutar desde la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_delete_database_backuphistory** se debe ejecutar desde la base de datos **msdb** .  
   
  Este procedimiento almacenado afecta a las siguientes tablas:  
   
@@ -81,8 +81,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_backuphistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Historial de copias de seguridad e información de encabezados &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

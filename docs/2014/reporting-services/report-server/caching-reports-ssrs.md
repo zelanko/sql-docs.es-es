@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104109"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
@@ -69,13 +69,13 @@ ms.locfileid: "66104109"
   
  Si un informe no puede representarse desde una instancia en caché por cualquier motivo (por ejemplo, si los valores de los parámetros que especifica un usuario son distintos de los que se utilizan para generar el informe en caché), el servidor de informes vuelve a ejecutar el informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](preload-the-cache-report-manager.md)   
+ [Cargar previamente el Administrador de informes de &#40;de caché&#41;](preload-the-cache-report-manager.md)   
  [Programaciones](../subscriptions/schedules.md)   
- [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
+ [Almacenar en caché conjuntos de recursos compartidos &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
  [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](../cache-refresh-options-report-manager.md)  
   
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 3394181111267c01e9baaa13bd1b6d64339dd5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054653"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>El directorio virtual tiene un método de autenticación no admitido (Asesor de actualizaciones)
   El Asesor de actualizaciones ha detectado un método de autenticación no compatible en el directorio virtual del Administrador de informes o del servidor de informes. Entre los métodos de autenticación no admitidos por la actualización se incluyen: Anónimo, Implícito y .NET Passport.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -32,9 +31,9 @@ ms.locfileid: "71952008"
 ## <a name="description"></a>Descripción  
  El programa de instalación no puede actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que usa uno de los métodos de autenticación siguientes  
   
--   Anónimo  
+-   Anónimas  
   
--   Resumen  
+-   Digest  
   
 -   .NET Passport  
   
@@ -43,7 +42,7 @@ ms.locfileid: "71952008"
 ## <a name="corrective-action"></a>Acción correctora  
  Para continuar con la actualización, modifique el método de autenticación en IIS para los directorios virtuales ReportServer y Reports. Para obtener más información sobre cómo modificar los métodos de autenticación en IIS, vea la documentación de IIS. Después de modificar el método de autenticación para los directorios virtuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vuelva a ejecutar el Asesor de actualizaciones para confirmar que no hay problemas de actualización.  
   
-## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones &#40;de Reporting Services upgrade issues&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Reporting Services problemas de actualización &#40;el asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

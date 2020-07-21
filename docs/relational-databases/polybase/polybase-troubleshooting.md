@@ -1,5 +1,6 @@
 ---
 title: Supervisión y solución de problemas de PolyBase | Microsoft Docs
+description: Para solucionar problemas de PolyBase, use estas vistas y DMV. Vea el plan de consulta de PolyBase, supervise los nodos de un grupo de PolyBase y configure la alta disponibilidad de los nodos de nombre de Hadoop.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -14,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 363014bcba5e726f55bed758aad9a4aaae0780fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787285"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Supervisión y solución de problemas de PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/applies-to-version/sqlserver.md)]
 
 Para solucionar problemas de PolyBase, use las técnicas que aparecen en este tema.
 
@@ -142,7 +143,7 @@ Supervise y solucione problemas de las consultas de PolyBase con los siguientes 
 
 3. Haga clic con el botón derecho en el **operador de consulta remota** y seleccione **Propiedades**.
 
-4. Copie y pegue el valor de consulta remota en un editor de texto para ver el plan de consulta remota en formato XML. A continuación, se muestra un ejemplo.
+4. Copie y pegue el valor de consulta remota en un editor de texto para ver el plan de consulta remota en formato XML. A continuación se muestra un ejemplo.
 
    ```xml  
 
@@ -217,12 +218,12 @@ Después de configurar un conjunto de máquinas como parte de un grupo de escala
 
 Actualmente, PolyBase no se comunica con servicios de alta disponibilidad de NameNode como Zookeeper o Knox, pero existe una solución alternativa probada que se puede usar para ofrecer la funcionalidad.
 
-Solución alternativa: Usar un nombre DNS para volver a enrutar las conexiones al NameNode activo. Para ello, debe asegurarse de que el origen de datos externo usa un nombre DNS para comunicarse con el NameNode. Si se produce una conmutación por error de NameNode, deberá cambiar la dirección IP asociada al nombre DNS usado en la definición del origen de datos externo. Se volverán a enrutar todas las conexiones nuevas al NameNode correcto. Las conexiones existentes generarán un error si se produce una conmutación por error. Para automatizar este proceso, un "latido" puede hacer ping en el NameNode activo. Si se produce un error en el latido, se puede suponer que se ha producido una conmutación por error y pasar automáticamente a las direcciones IP secundarias.
+Solución alternativa: Usar un nombre DNS para volver a enrutar las conexiones al NameNode activo. Para ello, debe asegurarse de que el origen de datos externo usa un nombre DNS para comunicarse con el NameNode. Si se produce una conmutación por error de NameNode, deberá cambiar la dirección IP asociada al nombre DNS usado en la definición del origen de datos externo. Se volverán a enrutar todas las conexiones nuevas al NameNode correcto. Las conexiones existentes generarán un error si se produce una conmutación por error. Para automatizar este proceso, un "latido" puede hacer ping en el NameNode activo. Si se produce un error en el latido, se puede dar por hecho que se ha producido una conmutación por error y pasar automáticamente a las direcciones IP secundarias.
 
 ## <a name="error-messages-and-possible-solutions"></a>Mensajes de error y posibles soluciones
 
 Para solucionar los errores de tabla externa, vea el blog de Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "Errores de instalación de PolyBase y posibles soluciones").
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Solución de problemas de conectividad de Kerberos con PolyBase](polybase-troubleshoot-connectivity.md)

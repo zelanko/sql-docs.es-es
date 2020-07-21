@@ -1,6 +1,7 @@
 ---
-title: Agregar dependencias a un recurso de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Adición de dependencias a un recurso de FCI de SQL Server
+descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063825"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74822064"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Agregar dependencias a un recurso de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe cómo se agregan dependencias a un recurso de instancia de clúster de conmutación por error (FCI) AlwaysOn con el complemento Administrador de clústeres de conmutación por error. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
+  En este tema se describe cómo se agregan dependencias a un recurso de instancia de clúster de conmutación por error (FCI) Always On con el complemento Administrador de clústeres de conmutación por error. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Requisitos previos](#Prerequisites)  
   
 -   **Para agregar una dependencia a un recurso de SQL Server, mediante:** [Administrador de clústeres de conmutación por error de Windows](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Tenga en cuenta que si agrega otros recursos al grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dichos recursos deben tener siempre sus propios recursos de nombre de red SQL únicos y sus propios recursos de dirección IP de SQL.  
   
  No utilice los recursos de nombre de red SQL ni los recursos de dirección IP SQL existentes en ningún otro entorno que no sea [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si los recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se comparten con otros recursos pueden producirse los siguientes problemas:  
@@ -54,10 +55,10 @@ ms.locfileid: "68063825"
   
      Si instala MS DTC en el grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y tiene otros recursos que dependen de MS DTC, MS DTC no estará disponible si este grupo se encuentra en modo sin conexión ni durante una conmutación por error. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que, si es posible, sitúe MS DTC en su propio grupo con su propio recurso de disco físico.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Si instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un grupo de recursos de WSFC con varias unidades de disco y decide colocar los datos en una de las unidades, el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configurará para que solo dependa de dicha unidad. Para colocar datos o registros en otro disco, primero debe agregar una dependencia al recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el disco adicional.  
   
-##  <a name="WinClusManager"></a> Usar el complemento Administrador de clústeres de conmutación por error  
+##  <a name="using-the-failover-cluster-manager-snap-in"></a><a name="WinClusManager"></a> Usar el complemento Administrador de clústeres de conmutación por error  
  **Para agregar una dependencia a un recurso de SQL Server**  
   
 -   Abra el complemento Administrador de clústeres de conmutación por error.  

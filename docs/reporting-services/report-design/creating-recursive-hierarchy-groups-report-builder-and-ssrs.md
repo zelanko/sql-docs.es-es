@@ -1,5 +1,5 @@
 ---
-title: Crear grupos de jerarquía recursiva (Generador de informes y SSRS) | Microsoft Docs
+title: Creación de grupos de jerarquía recursiva (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9125adcb007e7f191ab30bc0b957580d0012e859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1674673e3c009815d04e3c4428244dfc29d0343
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581515"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77078529"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Crear grupos de jerarquía recursiva (Generador de informes y SSRS)
 Para mostrar datos recursivos en informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (donde la relación entre el elemento primario y el elemento secundario se representa con campos del conjunto de datos), establezca la expresión de grupo de región de datos según el campo secundario y establezca la propiedad Parent según el campo primario.  

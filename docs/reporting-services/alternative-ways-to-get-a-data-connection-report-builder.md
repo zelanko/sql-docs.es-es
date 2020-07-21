@@ -9,10 +9,10 @@ ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62703890"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>Maneras alternativas de obtener una conexión de datos (Generador de informes)
@@ -35,7 +35,7 @@ Para usar un origen de datos compartido, vaya a un servidor de informes y selecc
   
 3.  Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**. Aparece un mensaje que indica que la conexión se ha creado correctamente. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-4.  Haga clic en **Siguiente**.  
+4.  Haga clic en **Next**.  
   
     Si es necesario, escriba sus credenciales. Para guardar las credenciales de forma local, seleccione **Guardar contraseña con conexión**. Si no selecciona esta opción, se le pedirán las credenciales cada vez que ejecute el informe  
   
@@ -63,7 +63,7 @@ Para usar un origen de datos compartido, vaya a un servidor de informes y selecc
   
     Aparece un mensaje que indica que la conexión se ha creado correctamente. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  Si se le solicita un nombre de usuario y contraseña, escriba sus credenciales. Para guardar las credenciales de forma local, seleccione **Guardar contraseña con conexión**.  
   

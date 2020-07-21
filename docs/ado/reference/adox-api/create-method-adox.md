@@ -1,5 +1,5 @@
 ---
-title: Crear (método, ADOX) | Microsoft Docs
+title: Create (método) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Create method [ADOX]
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aafcab3ad379dc25a2681a5d4f0d3f5e8d6eab5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15ea5cf8b565a943f4905a890cb08ba0afed202f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966674"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759271"
 ---
 # <a name="create-method-adox"></a>Create (método, ADOX)
 Crea un nuevo catálogo.  
@@ -34,17 +34,17 @@ Catalog.Create ConnectString
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ConnectString*  
- Un **cadena** valor usado para conectarse al origen de datos.  
+ *Property*  
+ Valor de **cadena** que se usa para conectar con el origen de datos.  
   
-## <a name="remarks"></a>Comentarios  
- El **crear** método crea y abre un nuevo ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) al origen de datos especificado en *ConnectString*. Si se realiza correctamente, el nuevo **conexión** se asigna a la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad.  
+## <a name="remarks"></a>Observaciones  
+ El método **Create** crea y abre una nueva [conexión](../../../ado/reference/ado-api/connection-object-ado.md) ado con el origen de datos especificado en *connectstring*. Si se realiza correctamente, el nuevo objeto de **conexión** se asigna a la propiedad [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) .  
   
  Se producirá un error si el proveedor no admite la creación de nuevos catálogos.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crear el ejemplo del método (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo del método Create (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

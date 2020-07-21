@@ -1,6 +1,6 @@
 ---
-title: Especificar un filtro del punto de interrupción | Microsoft Docs
-ms.custom: ''
+title: Especificar un filtro del punto de interrupción
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,27 +9,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c86f31bc79dae5c257f58d59bbfc8039e02f7e4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bf434243cf02c3827e48feb4543339bfcfab32b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049024"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar un filtro del punto de interrupción
   Un filtro del punto de interrupción limita el punto de interrupción de manera que solo actúe en los equipos, procesos del sistema operativo y subprocesos especificados. Los filtros del punto de interrupción suelen utilizarse al depurar aplicaciones en paralelo.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Consideraciones de filtrado  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> Consideraciones de filtrado  
  Los filtros del punto de interrupción no suelen utilizarse con el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] porque los scripts y los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] no son aplicaciones en paralelo.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Para especificar un filtro del punto de interrupción  
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, después, haga clic en **Filtrar** en el menú contextual.  
   
-     -o bien-  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, después, haga clic en **Filtrar** en el menú contextual.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66090117"
   
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)   
  [Especificar un número de llamadas](specify-a-hit-count.md)   
  [Especificar una acción del punto de interrupción](specify-a-breakpoint-action.md)  

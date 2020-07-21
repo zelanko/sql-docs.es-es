@@ -8,15 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce3a9e88e9de4bf3a825b5f5a02e4268f4f137d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62837708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927006"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtener ayuda (SQL Server 2014)
   Hay tres fuentes principales de información de [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -39,8 +38,8 @@ ms.locfileid: "62837708"
  [Comentarios sobre SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Describe cómo puede transmitirnos sus sugerencias e informes de errores sobre las características e interfaz de usuario del producto, presentarnos sus comentarios acerca de la documentación y, si lo desea, enviarnos de manera automática sus informes de errores y datos de uso a [!INCLUDE[msCoName](../includes/msconame-md.md)] para su estudio.  
   
-## <a name="see-also"></a>Vea también  
- [Novedades en SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
+## <a name="see-also"></a>Consulte también  
+ [Novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Instalación de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

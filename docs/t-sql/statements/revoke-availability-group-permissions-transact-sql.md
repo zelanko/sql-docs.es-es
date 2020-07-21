@@ -1,6 +1,8 @@
 ---
-title: REVOKE (permisos de grupos de disponibilidad de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de grupos de disponibilidad REVOKE
+description: Revoca los permisos en un grupo de disponibilidad AlwaysOn.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0910901fbe248714b5cbd11d14e5036c52cf8e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735431"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo REVOKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Revoca los permisos en un grupo de disponibilidad Always On. 
   
@@ -33,7 +35,7 @@ ms.locfileid: "68082350"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON AVAILABILITY GROUP :: availability_group_name  
@@ -84,7 +86,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho para revocar el permiso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los permisos del ámbito de servidor solo pueden revocarse si la base de datos actual es **master**.  
   
  Encontrará información sobre los grupos de disponibilidad en la vista de catálogo [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). La información sobre los permisos del servidor está disponible en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), mientras que la información sobre las entidades de seguridad de servidor puede verse en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -114,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revocar el permiso TAKE OWNERSHIP con CASCADE  
- En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el grupo de disponibilidad `MyAg` para el usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` y desde todas las entidades de seguridad a las que `PKomosinski` concedio TAKE OWNERSHIP en MyAg.  
+ En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el grupo de disponibilidad `MyAg` para el usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` y desde todas las entidades de seguridad a las que `PKomosinski` concedio TAKE OWNERSHIP en MyAg.  
   
 ```  
 USE master;  

@@ -1,6 +1,7 @@
 ---
-title: Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal de SQL Server (grupos de disponibilidad AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Redireccionamiento de conexiones de lectura y escritura a la réplica principal
+description: Obtenga información sobre cómo redirigir las conexiones de lectura y escritura a la réplica principal de un grupo de disponibilidad Always On con independencia del servidor especificado en la cadena de conexión.
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -17,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637822"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal (grupos de disponibilidad AlwaysOn)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduce el *redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal* para los grupos de disponibilidad Always On. El redireccionamiento de la conexión de lectura/escritura está disponible en cualquier plataforma de sistema operativo. Permite que las conexiones de las aplicaciones cliente se dirijan a la réplica principal, independientemente del servidor de destino especificado en la cadena de las conexiones. 
 
@@ -45,9 +46,9 @@ Antes de [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], el agente de
 Para que una réplica secundaria redirija solicitudes de conexión de lectura/escritura:
 * La réplica secundaria debe estar en línea. 
 * La especificación de réplica `PRIMARY_ROLE` debe incluir `READ_WRITE_ROUTING_URL`.
-* La cadena de conexión debe definir `ApplicationIntent` como `ReadWrite` (que es el valor predeterminado).
+* La cadena de conexión debe ser `ReadWrite` mediante la definición de `ApplicationIntent` como `ReadWrite`, o bien si no se establece `ApplicationIntent` y se permite que el valor predeterminado (`ReadWrite`) surta efecto.
 
-## <a name="set-readwriteroutingurl-option"></a>Establecer la opción READ_WRITE_ROUTING_URL
+## <a name="set-read_write_routing_url-option"></a>Establecer la opción READ_WRITE_ROUTING_URL
 
 Para configurar el redireccionamiento de la conexión de lectura/escritura, establezca `READ_WRITE_ROUTING_URL` para la réplica principal al crear el grupo de disponibilidad. 
 
@@ -57,7 +58,7 @@ En [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] se ha agregado `REA
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) no establecido (predeterminado) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) no establecido (predeterminado) 
 
 De forma predeterminada, no se establece el redireccionamiento de la conexión de réplica de lectura/escritura para una réplica. La manera en que una réplica secundaria gestiona las solicitudes de conexión depende de si está configurada para permitir las conexiones y de la opción `ApplicationIntent` de la cadena de conexión. En la siguiente tabla se muestra cómo gestiona una réplica secundaria las conexiones a partir de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` y `ApplicationIntent`.
 
@@ -68,7 +69,7 @@ De forma predeterminada, no se establece el redireccionamiento de la conexión d
 
 En la tabla anterior se muestra el comportamiento predeterminado, que es el mismo que en las versiones de SQL Server anteriores a [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) establecido 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) establecido 
 
 Después de establecer el redireccionamiento de la conexión de lectura/escritura, la réplica gestionará las solicitudes de conexión de otra manera. El comportamiento de la conexión sigue dependiendo de la configuración de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` y `ApplicationIntent`. En la siguiente tabla se muestra cómo gestiona una réplica secundaria con `READ_WRITE_ROUTING` establecido las conexiones a partir de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` y `ApplicationIntent`.
 
@@ -84,7 +85,7 @@ En la tabla anterior se muestra que, cuando la réplica principal tiene `READ_WR
 En este ejemplo, un grupo de disponibilidad tiene tres réplicas:
 * Una réplica principal en COMPUTER01
 * Una réplica secundaria sincrónica en COMPUTER02
-* Una réplica secundaria sincrónica en COMPUTER03
+* Réplica secundaria asincrónica en COMPUTER03
 
 En la siguiente imagen se representa el grupo de disponibilidad.
 
@@ -124,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  

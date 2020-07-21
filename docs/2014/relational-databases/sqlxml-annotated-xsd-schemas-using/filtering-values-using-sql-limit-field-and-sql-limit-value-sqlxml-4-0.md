@@ -1,5 +1,5 @@
 ---
-title: 'Filtrar valores mediante SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Documentos de Microsoft'
+title: 'Filtrar valores mediante SQL: Limit-Field y SQL: Limit-Value (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062999"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
   Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. Las anotaciones `sql:limit-field` y `sql:limit-value` se usan para identificar la columna de base de datos que contiene valores de limitación y para especificar un valor de limitación concreto que se va a usar para filtrar los datos devueltos.  
   
  La anotación `sql:limit-field` se usa para identificar una columna que contiene un valor de limitación; se permite en cada atributo o elemento asignado.  
   
- La anotación `sql:limit-value` se usa para especificar el valor limitado en la columna que se especifica en la anotación `sql:limit-field`. La anotación `sql:limit-value` es opcional. Si `sql:limit-value` no es se especifica, se supone que un valor NULL.  
+ La anotación `sql:limit-value` se usa para especificar el valor limitado en la columna que se especifica en la anotación `sql:limit-field`. La anotación `sql:limit-value` es opcional. Si `sql:limit-value` no se especifica, se supone un valor null.  
   
 > [!NOTE]  
 >  Al trabajar con `sql:limit-field` donde la columna SQL asignada es del tipo `real`, SQLXML 4.0 realiza la conversión en `sql:limit-value` como se especifica en los esquemas XML como un valor especificado `nvarchar`. Esto requiere que se especifiquen valores de límite decimal mediante la notación científica completa. Para obtener más información, vea el ejemplo B a continuación.  
@@ -53,7 +52,7 @@ ms.locfileid: "66013807"
   
  Un cliente puede tener una dirección de envío y/o una dirección de facturación. Los valores de la columna AddressType son Shipping y Billing.  
   
- Éste es el esquema de asignación en el que el **ShipTo** atributo de esquema se asigna a la columna StreetAddress en la relación de Addresses. Los valores devueltos para este atributo se limitan solo a distribuir direcciones de envío especificando las anotaciones `sql:limit-field` y `sql:limit-value`. De forma similar, el **BillTo** atributo de esquema devuelve solo la dirección de facturación de un cliente.  
+ Es el esquema de asignación en el que el atributo de esquema **ShipTo** se asigna a la columna StreetAddress de la relación addresses. Los valores devueltos para este atributo se limitan solo a distribuir direcciones de envío especificando las anotaciones `sql:limit-field` y `sql:limit-value`. Del mismo modo, el atributo de esquema **BillTo** solo devuelve la dirección de facturación de un cliente.  
   
  Éste es el esquema:  
   
@@ -97,9 +96,9 @@ ms.locfileid: "66013807"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
-1.  Cree dos tablas en el **tempdb** base de datos:  
+1.  Cree dos tablas en la base de datos **tempdb** :  
   
     ```  
     USE tempdb  
@@ -146,9 +145,9 @@ ms.locfileid: "66013807"
   
 5.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   
@@ -163,14 +162,14 @@ ms.locfileid: "66013807"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitar los resultados basándose en un valor de descuento de datos de tipo real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitar los resultados basándose en un valor de descuento de datos de tipo real  
  En este ejemplo, una base de datos contiene dos tablas:  
   
 -   Orders (OrderID)  
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Éste es el esquema de asignación en el que el **OrderID** atributo en los detalles del pedido se asigna a la columna OrderID de la relación de pedidos. Los valores devueltos para este atributo se limitan a solo aquellos que tienen un valor de 2. 0000000e-001 (0.2) como se especifica para el **descuento** atributo mediante la `sql:limit-field` y `sql:limit-value` anotaciones.  
+ Es el esquema de asignación en el que el atributo **OrderID** de los detalles del pedido se asigna a la columna OrderID de la relación Orders. Los valores que se devuelven para este atributo se limitan únicamente a los que tienen un valor de 2.0000000 e-001 (0,2) como se especifica para el atributo **Discount** mediante las `sql:limit-field` `sql:limit-value` anotaciones y.  
   
  Éste es el esquema:  
   
@@ -214,9 +213,9 @@ ms.locfileid: "66013807"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
-1.  Cree dos tablas en el **tempdb** base de datos:  
+1.  Cree dos tablas en la base de datos **tempdb** :  
   
     ```  
     USE tempdb  
@@ -287,7 +286,7 @@ ms.locfileid: "66013807"
   
 5.  En el Explorador de Windows, haga clic en el archivo TestQuery.vbs para ejecutarlo.  
   
-     Éste es el resultado:  
+     El resultado es el siguiente:  
   
     ```  
     <root>  
@@ -304,10 +303,10 @@ ms.locfileid: "66013807"
     </root>  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [float y real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [Float y real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
- [Instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Mediante los esquemas XSD en consultas anotados &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
+ [Instalación de SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
+ [Usar esquemas XSD anotados en consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   
   

@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65578777"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas
@@ -22,7 +22,7 @@ ms.locfileid: "65578777"
   
  A. Informe detallado  
   
- B. subinforme  
+ B. Subinforme  
   
  C. Regiones de datos anidadas  
   
@@ -33,10 +33,10 @@ ms.locfileid: "65578777"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="SummaryCharacteristics"></a> Resumen de características  
+##  <a name="summary-of-characteristics"></a><a name="SummaryCharacteristics"></a> Resumen de características  
  En la tabla que figura a continuación se resumen estas características distintas. Los detalles se incluyen en secciones aparte más adelante en este tema. La obtención de detalles no se incluye en estas comparaciones porque su acción de mostrar u ocultar se puede aplicar a cualquier elemento de informe.  
   
-|Característica|Subinforme|detallados|está anidada|  
+|Característica|Subinforme|Obtención de detalles|está anidada|  
 |-----------|---------------|------------------|------------|  
 |Uso de conjuntos de datos del informe principal|Iguales o distintos|Iguales o distintos|Iguales|  
 |Recuperación de datos|Los datos se recuperan al mismo tiempo que el informe principal.|Los datos se recuperan en un informe detallado cada vez.|Los datos se recuperan todos al mismo tiempo que el informe principal.|  
@@ -48,36 +48,36 @@ ms.locfileid: "65578777"
 |Presentación|En el informe principal|En otro informe|En el informe principal|  
   
   
-##  <a name="Details"></a> Detalles de las características  
+##  <a name="details-of-characteristics"></a><a name="Details"></a> Detalles de las características  
   
-###  <a name="Datasets"></a> Conjuntos de datos que utilizan  
+###  <a name="datasets-they-use"></a><a name="Datasets"></a> Conjuntos de datos que utilizan  
  Los subinformes y los informes detallados pueden usar el mismo conjunto de datos en el informe principal o pueden utilizar uno diferente. Las regiones de datos anidadas utilizan el mismo conjunto de datos.  
   
-###  <a name="RetrieveData"></a> Recuperación de datos  
+###  <a name="retrieving-data"></a><a name="RetrieveData"></a> Recuperación de datos  
  Los subinformes y las regiones de datos anidadas recuperan datos al mismo tiempo que el informe principal. Los informes detallados, no. Cada informe detallado recupera los datos cuando un usuario hace clic en cada uno de los vínculos. Esto tiene importancia si los datos del informe principal y los del informe subordinado se deben recuperar al mismo tiempo.  
   
-###  <a name="ProcessRender"></a> Proceso y representación  
+###  <a name="processing-and-rendering"></a><a name="ProcessRender"></a> Proceso y representación  
  Un subinforme se procesa como parte del informe principal. Por ejemplo, si un subinforme que muestra información detallada de un pedido se agrega a una celda de la tabla en la fila de detalles, el subinforme se procesa una vez para cada fila de la tabla y se representa como parte del informe principal. Un informe detallado solo se procesa y se representa cuando el usuario hace clic en el vínculo de obtención de detalles en el informe principal de resumen.  
   
-###  <a name="Performance"></a> Rendimiento  
+###  <a name="performance"></a><a name="Performance"></a> Rendimiento  
  A la hora de decidir cuál utilizar, plantéese la posibilidad de usar una región de datos en lugar de un subinforme, especialmente si dicho subinforme no se usa con varios informes. Puesto que el servidor de informes procesa cada instancia de un subinforme como un informe independiente, el rendimiento se puede ver afectado. Las regiones de datos ofrecen casi la misma funcionalidad y flexibilidad que los subinformes, pero con un mejor rendimiento. Los informes detallados tienen un mejor rendimiento que los subinformes, también, porque no recuperan todos los datos al mismo tiempo que el informe principal.  
   
-###  <a name="Parameters"></a> Uso de parámetros  
+###  <a name="use-of-parameters"></a><a name="Parameters"></a> Uso de parámetros  
  Normalmente, los informes detallados y los subinformes tienen parámetros de informe que especifican los datos del informe que se deben mostrar. Por ejemplo, al hacer clic en un número de pedido de ventas en un informe principal, se abre un informe detallado que acepta dicho número como un parámetro y, a continuación, muestra todos los datos sobre dicho pedido de ventas. Al crear el vínculo en el informe principal, debe especificar los valores que se deben pasar como parámetros al informe detallado.  
   
  Para crear un informe detallado o un subinforme, debe diseñar primero el informe detallado de destino o el subinforme y, a continuación, crear una acción de obtención de detalles o agregar la referencia al informe principal.  
   
-###  <a name="Reusability"></a> Reusabilidad  
+###  <a name="reusability"></a><a name="Reusability"></a> Reusabilidad  
  Los subinformes y los informes detallados son informes independientes. Por lo tanto, se pueden utilizar en distintos informes o mostrar como informes independientes. Las regiones de datos anidadas no son reutilizables. No se pueden guardar como elementos de informe porque están anidadas en una región de datos. Puede guardar la región de datos que las contiene como un elemento de informe, pero no la región de datos anidada.  
   
-###  <a name="Location"></a> Ubicación  
+###  <a name="location"></a><a name="Location"></a> Ubicación  
  Los subinformes y los informes detallados son informes independientes; por lo tanto, se almacenan fuera del informe principal. Los subinformes pueden estar en el mismo servidor de informes o en otro distinto, pero los informes detallados deben estar en el mismo servidor de informes. Las regiones de datos anidadas forman parte del informe principal.  
   
-###  <a name="Display"></a> Presentación  
+###  <a name="display"></a><a name="Display"></a> Presentación  
  Los subinformes y las regiones de datos anidadas se muestran en el informe principal. Los informes detallados se muestran solos.  
   
   
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)  
  Se explican los informes que se abren cuando un usuario hace clic en un vínculo de un informe principal.  
   

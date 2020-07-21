@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7b15a5e6-fd41-47ce-ba87-54f72acea4bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3a2d500a16a90ce997273fad3eb7c2d8a82c1d6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869713"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553680"
 ---
-# <a name="mssqlserver17128"></a>MSSQLSERVER_17128
+# <a name="mssqlserver_17128"></a>MSSQLSERVER_17128
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|17128|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|17128|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|INIT_NOBUFSPACE|  
-|Texto del mensaje|initdata: No hay memoria para los búferes del kernel.|  
+|Texto del mensaje|initdata: memoria insuficiente para los búferes del kernel.|  
   
 ## <a name="explanation"></a>Explicación  
  Se ha producido un error en las reservas o las asignaciones de memoria iniciales del grupo de búferes, y SQL Server se cierra.  

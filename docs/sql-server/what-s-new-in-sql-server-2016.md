@@ -1,5 +1,6 @@
 ---
 title: Novedades de SQL Server 2016
+description: Obtenga información sobre las nuevas características de seguridad de SQL Server 2016, las funciones de consulta, la integración de Hadoop y la nube, el análisis de R y mucho más.
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0289967cfb3585f6fa7914262e8e280089d4b478
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893034"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886245"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Novedades de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -34,7 +35,7 @@ En esta página se proporciona información de resumen y vínculos a informació
  **Pruebe SQL Server hoy** 
 - Descargue la edición **gratuita** de [**SQL Server 2016 Developer**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Descargue la última versión de [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
-- ¿Tiene una cuenta de Azure? Ponga en marcha una [máquina virtual con SQL Server 2016 ya instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016).
+- ¿Tiene una cuenta de Azure? Ponga en marcha una [máquina virtual con SQL Server 2016 ya instalado](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview).
 
 ## <a name="sql-server-2016-database-engine"></a>Motor de base de datos de SQL Server 2016
 - Ya puede configurar **varios archivos de base de datos tempDB** durante la instalación y configuración de SQL Server.
@@ -48,14 +49,13 @@ En esta página se proporciona información de resumen y vínculos a informació
     - Admite tablas de hasta 2 TB (a partir de 256 GB). 
     - Presenta mejoras del índice de almacenamiento de columnas para la ordenación, así como compatibilidad para el grupo de disponibilidad AlwaysOn.
 - Nuevas características de seguridad:
-    - **Always Encrypted:** cuando se habilita, solo la aplicación que tiene la clave de cifrado puede acceder a la información confidencial cifrada en la base de datos de SQL Server 2016. La clave nunca se pasa a SQL Server.
+    - **Always Encrypted:** cuando se habilita, solo la aplicación que tiene la clave de cifrado puede acceder a la información confidencial cifrada en la base de datos de SQL Server 2016. La clave nunca se pasa a SQL Server.
     - **Enmascaramiento dinámico de datos:** si se especifica en la definición de tabla, los datos enmascarados están ocultos para la mayoría de los usuarios, por lo que solo aquellos que dispongan del permiso UNMASK pueden ver la información completa.
     - **Seguridad de nivel de fila:** se puede restringir el acceso a los datos a nivel del motor de base de datos, para que los usuarios solo vean lo que sea pertinente para ellos. 
 
-Vea [Motor de base de datos](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services ofrece mejores prestaciones de rendimiento, creación, administración de base de datos, filtrado, procesamiento y de otras muchas características para bases de datos de modelo tabular en función del **nivel de compatibilidad 1200**.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integra el lenguaje de programación R, que se usa para análisis estadísticos, en SQL Server. 
+- **[SQL Server R Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** integra el lenguaje de programación R, que se usa para análisis estadísticos, en SQL Server. 
 - El nuevo **comprobador de coherencia de la base de datos (DBCC)** se ejecuta internamente para detectar posibles problemas de datos dañados.
 - **DirectQuery**, que consulta los datos externos de forma dinámica en lugar de importarlos antes, ahora admite más orígenes de datos, como SQL Azure, Oracle y Teradata. 
 - Hay numerosas **funciones de DAX (expresiones de acceso a datos)** nuevas.

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 944b3e02894e86de9ff5c0f2254b71de7b76bd2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752365"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Evalúa el permiso efectivo del usuario actual sobre un elemento protegible. Una función relacionada es [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68019734"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 HAS_PERMS_BY_NAME ( securable , securable_class , permission    
     [ , sub-securable ] [ , sub-securable_class ] )  
@@ -60,19 +60,19 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
 > [!NOTE]  
->  En las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las subentidades protegibles no pueden usar corchetes con el formato **'[** _sub name_ **]'** . Es mejor usar **'** _sub name_ **'** .  
+>  En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y posteriores, las subentidades protegibles no pueden usar corchetes con el formato **"[** _sub name_ **]"** . Es mejor usar **'** _sub name_ **'** .  
   
  *sub-securable_class*  
  Expresión escalar opcional de tipo **nvarchar(60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento sub-securable_class solo es válido si el argumento securable_class está establecido en **OBJECT**. Si el argumento securable_class se establece en **OBJECT**, el argumento sub-securable_class debe establecerse en **COLUMN**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
  Devuelve NULL cuando la consulta da error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta función integrada determina si la entidad de seguridad actual tiene un permiso efectivo específico sobre un elemento protegible determinado. HAS_PERMS_BY_NAME devuelve 1 cuando el usuario tiene un permiso efectivo sobre el elemento protegible, 0 cuando el usuario no tiene ningún permiso efectivo sobre el elemento protegible y NULL cuando la clase protegible o el permiso no son válidos. Un permiso efectivo puede ser cualquiera de los siguientes:  
   
 -   Un permiso concedido directamente a la entidad de seguridad, no denegado.  
@@ -95,9 +95,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Se utilizan las intercalaciones siguientes:  
   
--   Intercalación de base de datos actual: elementos protegibles de base de datos que incluyen elementos no incorporados en un esquema; elementos con ámbito de esquema de una o dos partes; base de datos de destino cuando se utiliza un nombre de tres partes.  
+-   Intercalación de la base de datos activa: elementos protegibles de base de datos, entre los que se incluyen elementos no incluidos en un esquema; elementos con ámbito de esquema de una o dos partes; base de datos de destino cuando se utiliza un nombre de tres partes.  
   
--   Intercalación de base de datos &maestra: elementos protegibles en el nivel de servidor.  
+-   Intercalación de la base de datos maestra: elementos protegibles de servidor.  
   
 -   En las comprobaciones de columna no se admite 'ANY'. Debe especificar el permiso apropiado.  
   
@@ -105,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. ¿Tengo el permiso VIEW SERVER STATE en el servidor?  
   
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -113,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. ¿Puedo suplantar (IMPERSONATE) la entidad de seguridad del servidor Ps?  
   
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

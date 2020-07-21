@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6571c9592514bb0f29c796ae5a671363f3214ca7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027771"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920641"
 ---
 # <a name="programming-with-sqlxml"></a>Programar con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "69027771"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Leer y escribir datos XML con objetos SQLXML  
  En la lista siguiente se describe cómo usar los métodos de la API del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para leer y escribir datos XML con objetos SQLXML:  
   
--   Para crear un objeto SQLXML, use el método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Tenga en cuenta que este método crea un objeto SQLXML sin dato alguno. Para agregar datos **XML** a un objeto SQLXML, llame a uno de los métodos siguientes especificados en la interfaz SQLXML: SetResult, SetCharacterStream, SetBinaryStream o setString.  
+-   Para crear un objeto SQLXML, use el método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Tenga en cuenta que este método crea un objeto SQLXML sin dato alguno. Para agregar datos **xml** al objeto SQLXML, llame a uno de los siguientes métodos especificados en la interfaz SQLXML: setResult, setCharacterStream, setBinaryStream o setString.  
   
 -   Para recuperar el propio objeto SQLXML, use los métodos getSQLXML de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) o de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Para recuperar los datos **XML** de un objeto SQLXML, utilice uno de los métodos siguientes que se especifican en la interfaz SQLXML: GetSource, GetCharacterStream, GetBinaryStream o GetString.  
+-   Para recuperar los datos **xml** de un objeto SQLXML, use uno de los siguientes métodos especificados en la interfaz SQLXML: getSource, getCharacterStream, getBinaryStream o getString.  
   
 -   Para actualizar los datos **xml** de un objeto SQLXML, use el método [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -50,14 +50,14 @@ ms.locfileid: "69027771"
   
 |Nombre de método|Objeto SQLXML de captador<br /><br /> (lectura)|Objeto SQLXML establecedor<br /><br /> (escritura)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|No admitida|Admitida|  
-|CallableStatement.setObject()|No admitida|Admitida|  
-|PreparedStatement.setSQLXML()|No admitida|Admitida|  
-|PreparedStatement.setObject()|No admitida|Admitida|  
-|ResultSet.updateSQLXML()|No admitida|Admitida|  
-|ResultSet.updateObject()|No admitida|Admitida|  
-|ResultSet.getSQLXML()|Admitida|No admitida|  
-|CallableStatement.getSQLXML()|Admitida|No admitida|  
+|CallableStatement.setSQLXML()|No compatible|Compatible|  
+|CallableStatement.setObject()|No compatible|Compatible|  
+|PreparedStatement.setSQLXML()|No compatible|Compatible|  
+|PreparedStatement.setObject()|No compatible|Compatible|  
+|ResultSet.updateSQLXML()|No compatible|Compatible|  
+|ResultSet.updateObject()|No compatible|Compatible|  
+|ResultSet.getSQLXML()|Compatible|No compatible|  
+|CallableStatement.getSQLXML()|Compatible|No compatible|  
   
  Tal como se muestra en el área superior, los métodos SQLXML establecedor no funcionarán con los objetos SQLXML de lectura; similarmente, los métodos captadores no funcionarán con los objetos SQLXML de escritura.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "69027771"
  Los analizadores XML no pueden controlar valores vacíos. Sin embargo, SQL Server permite que las aplicaciones recuperen valores vacíos de columnas de base de datos del tipo de datos XML y los almacenen en ellas. Eso significa que al analizar los datos XML, si el valor subyacente está vacío, el analizador devuelve una excepción. En los resultados de DOM, el controlador JDBC capta esa excepción y devuelve un error. En los resultados de SAX y Stax, el error procede directamente del analizador.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Almacenamiento en búfer adaptable y compatibilidad con SQLXML  
- Los flujos binarios y de caracteres devueltos por el objeto SQLXML obedecen a los modos de almacenamiento en búfer completo o adaptable. Por otra parte, si los analizadores XML no son secuencia, no obedecerán a los valores completos o adaptables. Para obtener más información sobre el almacenamiento en búfer adaptable, vea [usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).  
+ Los flujos binarios y de caracteres devueltos por el objeto SQLXML obedecen a los modos de almacenamiento en búfer completo o adaptable. Por otra parte, si los analizadores XML no son secuencia, no obedecerán a los valores completos o adaptables. Para obtener más información acerca del almacenamiento en búfer adaptable, consulte [Empleo de almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

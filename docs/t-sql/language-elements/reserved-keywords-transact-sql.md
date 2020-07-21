@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cc0390a01bec10b58ed29d1824e8d0b482e78358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68091774"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palabras clave reservadas (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68091774"
 |ANY|FOR|READTEXT|  
 |AS|FOREIGN|RECONFIGURE|  
 |ASC|FREETEXT|REFERENCES|  
-|AUTHORIZATION|FREETEXTTABLE|Replicación|  
+|AUTHORIZATION|FREETEXTTABLE|REPLICACIÓN|  
 |BACKUP|FROM|RESTORE|  
 |BEGIN|FULL|RESTRICT|  
 |BETWEEN|FUNCTION|RETURN|  
@@ -71,20 +71,20 @@ ms.locfileid: "68091774"
 |CURRENT_DATE|MERGE|TEXTSIZE|  
 |CURRENT_TIME|NATIONAL|THEN|  
 |CURRENT_TIMESTAMP|NOCHECK|TO|  
-|CURRENT_USER|NONCLUSTERED|ARRIBA|  
+|CURRENT_USER|NONCLUSTERED|TOP|  
 |CURSOR|NOT|TRAN|  
 |DATABASE|NULL|TRANSACTION|  
 |DBCC|NULLIF|TRIGGER|  
 |DEALLOCATE|OF|TRUNCATE|  
-|DECLARE|OFF|TRY_CONVERT|  
+|DECLARE|Apagado|TRY_CONVERT|  
 |DEFAULT|OFFSETS|TSEQUAL|  
-|Delete|ON|UNION|  
-|DENY|OPEN|UNIQUE|  
+|Delete|ACTIVAR|UNION|  
+|DENEGAR|OPEN|UNIQUE|  
 |DESC|OPENDATASOURCE|UNPIVOT|  
 |DISK|OPENQUERY|UPDATE|  
 |DISTINCT|OPENROWSET|UPDATETEXT|  
 |DISTRIBUTED|OPENXML|USE|  
-|DOUBLE|OPTION|User|  
+|DOUBLE|OPTION|USER|  
 |DROP|O BIEN|VALUES|  
 |DUMP|ORDER|VARYING|  
 |ELSE|OUTER|VIEW|  
@@ -92,7 +92,7 @@ ms.locfileid: "68091774"
 |ERRLVL|PERCENT|WHEN|  
 |ESCAPE|PIVOT|WHERE|  
 |EXCEPT|PLAN|WHILE|  
-|EXEC|PRECISION|por|  
+|EXEC|PRECISION|WITH|  
 |Ejecute|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
@@ -118,7 +118,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 ||||  
 |-|-|-|  
 |**ABSOLUTE**|**EXEC**|**OVERLAPS**|  
-|**ACTION**|**EXECUTE**|**PAD**|  
+|**ACCIÓN**|**EXECUTE**|**PAD**|  
 |**ADA**|**EXISTS**|**PARTIAL**|  
 |**ADD**|**EXTERNAL**|**PASCAL**|  
 |**ALL**|**EXTRACT**|**POSITION**|  
@@ -256,13 +256,13 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 |CYCLE|OCCURRENCES_REGEX|TRUE|  
 |DATA|OLD|UESCAPE|  
 |DATE|ONLY|UNDER|  
-|DAY|OPERATION|UNKNOWN|  
+|DAY|OPERATION|DESCONOCIDO|  
 |DEC|ORDINALITY|UNNEST|  
 |DECIMAL|OUT|USAGE|  
 |DEFERRABLE|OVERLAY|USING|  
-|DEFERRED|OUTPUT|Value|  
+|DEFERRED|OUTPUT|VALOR|  
 |DEPTH|PAD|VAR_POP|  
-|DEREF|Parámetro|VAR_SAMP|  
+|DEREF|PARÁMETRO|VAR_SAMP|  
 |DESCRIBE|PARAMETERS|VARCHAR|  
 |DESCRIPTOR|PARTIAL|VARIABLE|  
 |DESTROY|PARTITION|WHENEVER|  

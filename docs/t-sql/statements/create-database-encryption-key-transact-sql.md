@@ -1,5 +1,5 @@
 ---
-title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
+title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -27,16 +27,17 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
+ms.openlocfilehash: 1e0a3ee426281799ee535b686596b87fb13d41ae
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060992"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392803"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
  Crea una clave de cifrado que se utiliza para cifrar de forma transparente una base de datos. Para más información sobre el cifrado de bases de datos transparente, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68060992"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
 
 CREATE DATABASE ENCRYPTION KEY  
@@ -57,20 +58,27 @@ CREATE DATABASE ENCRYPTION KEY
 [ ; ]  
 ```  
   
-```  
--- Syntax for Parallel Data Warehouse  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+   
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 CREATE DATABASE ENCRYPTION KEY  
        WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY }  
    ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name   
 [ ; ]  
 ```  
-  
-## <a name="arguments"></a>Argumentos  
-WITH ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY  }  
-Especifica el algoritmo de cifrado utilizado para la clave de cifrado.   
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
+WITH ALGORITHM = { AES_128 \| AES_192 \| AES_256 \| TRIPLE_DES_3KEY  }  
+Especifica el algoritmo de cifrado utilizado para la clave de cifrado.
+
 > [!NOTE]
->    A partir de SQL Server 2016, todos los algoritmos están en desuso, excepto AES_128, AES_192 y AES_256. Para usar algoritmos anteriores (no se recomienda), debe establecer la base de datos en el nivel de compatibilidad de base de datos 120 o inferior.  
+> A partir de SQL Server 2016, todos los algoritmos están en desuso, excepto AES_128, AES_192 y AES_256. Para usar algoritmos anteriores (no se recomienda), debe establecer la base de datos en el nivel de compatibilidad de base de datos 120 o inferior.  
   
 ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 Especifica el nombre del sistema de cifrado utilizado para cifrar la clave de cifrado.  
@@ -78,7 +86,7 @@ Especifica el nombre del sistema de cifrado utilizado para cifrar la clave de ci
 ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 Especifica el nombre de la clave asimétrica que se usa para cifrar la clave de cifrado de base de datos. Para cifrar la clave de cifrado de la base de datos con una clave asimétrica, la clave asimétrica debe residir en un proveedor extensible de administración de claves.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Se necesita una clave de cifrado de base de datos para que una base de datos se pueda cifrar mediante el *cifrado de datos transparente* (TDE). Cuando se cifra una base de datos de forma transparente, toda la base de datos se cifra en el nivel de archivo, sin ninguna modificación especial de código. El certificado o la clave asimétrica que se usa para cifrar la clave de cifrado de base de datos se debe ubicar en la base de datos maestra del sistema.  
   
 Las instrucciones de cifrado de la base de datos se permiten únicamente en bases de datos de usuario.  

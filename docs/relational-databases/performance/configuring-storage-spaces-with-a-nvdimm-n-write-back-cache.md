@@ -1,6 +1,6 @@
 ---
-title: Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N | Microsoft Docs
-ms.custom: ''
+title: 'Configuración de almacenamiento: caché con reescritura de NVDIMM-N'
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 050182836ecaa013ffe45ff9d5f78d2cdd60a1a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2f0434041b7573bc8c32e2618a64a0f900561fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655748"
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Windows Server 2016 es compatible con dispositivos de NVDIMM-N que permiten operaciones de entrada y salida (E/S) extremadamente rápidas. Una manera atractiva de usar dichos dispositivos es usarlos como una memoria caché con reescritura para obtener latencias de escritura bajas. En este tema se describe cómo configurar un espacio de almacenamiento reflejado con una caché con reescritura reflejada de NVDIMM-N como una unidad virtual para almacenar el registro de transacciones de SQL Server. Si quiere usarlo también para almacenar tablas de datos u otros datos, puede incluir más discos en el grupo de almacenamiento o crear varios grupos si el aislamiento es importante.  
   
  Para ver un vídeo de Channel 9 con esta técnica, vea [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016 (Usar una memoria no volátil (NVDIMM-N) como almacenamiento en bloque en Windows Server 2016)](https://channel9.msdn.com/Events/Build/2016/P466).  
@@ -46,7 +46,7 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![Seleccionar FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Seleccionar FriendlyName")  
   
 ## <a name="creating-the-storage-pool"></a>Crear el grupo de almacenamiento  
  Al usar la variable $pd que contiene los discos físicos, es sencillo crear el grupo de almacenamiento mediante el cmdlet New-StoragePool de PowerShell.  
@@ -72,7 +72,7 @@ New-Volume -StoragePool (Get-StoragePool -FriendlyName NVDIMM_Pool) -FriendlyNam
   
  Ahora puede ver este nuevo volumen en su servidor. Ahora puede usar esta unidad para el registro de transacciones de SQL Server.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Unidad Log_Space](../../relational-databases/performance/media/log-space-drive.png "Unidad Log_Space")  
   
 ## <a name="see-also"></a>Consulte también  
  [Espacios de almacenamiento en Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10)   

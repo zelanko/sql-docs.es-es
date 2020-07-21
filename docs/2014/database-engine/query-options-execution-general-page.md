@@ -1,5 +1,5 @@
 ---
-title: Opciones de consulta de ejecución (página General) | Microsoft Docs
+title: Ejecución de opciones de consulta (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,19 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a7d317e3fd4b225236064d02157aff37f3529f83
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929627"
 ---
 # <a name="query-options-execution-general-page"></a>Ejecución de Opciones de consulta (página General)
-  Utilice esta página para especificar las opciones de ejecución de consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en el cuerpo de una ventana del Editor de consultas y haga clic en **Opciones de consulta**.  
+  Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en el cuerpo de una ventana del Editor de consultas y haga clic en **Opciones de consulta**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **SET ROWCOUNT**  
  El valor predeterminado 0 indica que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esperará a que se reciban todos los resultados. Especifique un valor mayor que 0 si desea que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detenga la consulta después de obtener el número de filas especificado. Para desactivar esta opción (de modo que se devuelvan todas las filas), especifique SET ROWCOUNT 0.  
   
@@ -35,8 +34,8 @@ ms.locfileid: "66089043"
  **Separador de lotes**  
  Escriba la palabra que utilice para separar instrucciones Transact-SQL en lotes. El separador predeterminado es GO.  
   
- **De manera predeterminada, abrir nuevas consultas en modo SQLCMD**  
- Active esta casilla para abrir nuevas consultas en modo SQLCMD. Esta casilla solo se muestra cuando el cuadro de diálogo se abre desde el menú **Herramientas** .  
+ **De forma predeterminada, abrir nuevas consultas en modo SQLCMD**  
+ Active esta casilla para abrir nuevas consultas en modo SQLCMD. Esta casilla solo está visible cuando el cuadro de diálogo se abre a través del menú **herramientas** .  
   
  Cuando seleccione esta opción, tenga en cuenta las siguientes limitaciones:  
   

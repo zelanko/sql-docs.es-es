@@ -1,5 +1,5 @@
 ---
-title: Área funcional de Permisos de usuario y grupo (Master Data Manager) | Microsoft Docs
+title: Área funcional de Permisos de usuario y grupo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3fac1e0c639bbe49e0c837f6de0a5abd9d2139d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1e4c41bd4edd55fea00d20d89c7d1b944a868d8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813209"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Área funcional de Permisos de usuario y grupo (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En el área funcional de Permisos de usuario y grupo, los administradores pueden conceder permisos para áreas funcionales, atributos (en la pestaña Modelos) y miembros (en la pestaña Miembros de la jerarquía). Se resuelven los permisos superpuestos para determinar el permiso de un usuario para cada valor de atributo individual.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68102564"
   
  [Solucionar problemas de seguridad de Master Data Manager](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-master-data-manager-security-master-data-services.aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

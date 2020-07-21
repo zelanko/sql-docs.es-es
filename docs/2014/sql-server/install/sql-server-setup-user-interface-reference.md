@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario de instalación SQL Server | Microsoft Docs
+title: Referencia de la interfaz de usuario de SQL Server de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 183b5cdd-962e-41ca-8064-ea44f622c77d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9374783a1e542076436b38e9a5858773e8901e68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8da894d9c450dc4a23b15f8466e915898a858e52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035921"
 ---
 # <a name="sql-server-setup-user-interface-reference"></a>Referencia de la interfaz de usuario del programa de instalación de SQL Server
   En esta sección se describen las opciones de instalación presentadas por el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

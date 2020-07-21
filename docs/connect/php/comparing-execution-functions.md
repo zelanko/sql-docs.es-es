@@ -1,5 +1,5 @@
 ---
-title: Comparar funciones de ejecución | Microsoft Docs
+title: Comparación de funciones de ejecución | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,24 +10,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - executing queries
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68575f3a0227c6400ed5d927ff603b66bd6f440d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993743"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925866"
 ---
 # <a name="comparing-execution-functions"></a>Comparación de las funciones de ejecución
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ofrecen varias opciones para ejecutar funciones.  
 
-## <a name="sqlsrv-execution-functions"></a>Funciones de ejecución de SQLSRV  
+## <a name="sqlsrv-execution-functions"></a>Funciones de ejecución SQLSRV  
 Si está utilizando el controlador SQLSRV, use [sqlsrv_query](../../connect/php/sqlsrv-query.md) para ejecutar una consulta única y [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) con [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) para ejecutar varias veces una instrucción preparada con distintos valores de parámetros en cada ejecución.  
 
-## <a name="pdosqlsrv-execution-functions"></a>Funciones de ejecución de PDO_SQLSRV 
+## <a name="pdo_sqlsrv-execution-functions"></a>Funciones de ejecución PDO_SQLSRV 
 Si está utilizando el controlador PDO_SQLSRV, puede ejecutar una consulta con una de las siguientes instrucciones:  
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  

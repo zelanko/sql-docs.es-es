@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2effee7d-16bc-46e1-913c-28470faea345
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f355527002ed6d3637a3d1d895eb776c620c971d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26c0adce1276a083d996910f2dd4ddda32dca1c9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060368"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438432"
 ---
 # <a name="connect-to-integration-services"></a>Conectarse a Integration Services
   Antes de conectar con el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el administrador debe concederle acceso al servicio. Para más información, consulte [Grant Permissions to Integration Services Service](../../2014/integration-services/grant-permissions-to-integration-services-service.md).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b0e2519-998d-40d5-b8ba-5e6a773f91a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d4b4bebb2a3e05e3de12e59c53ccca9c980afd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63255811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064030"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Crear un script de Transact-SQL para ejecutar un seguimiento (SQL Server Profiler)
   En este tema se describe cómo crear un script de Transact-SQL a partir de un archivo o una tabla de seguimiento existente mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -31,7 +30,7 @@ ms.locfileid: "63255811"
   
 3.  En el cuadro de diálogo **Guardar como** , especifique un nombre para el archivo de script y haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Plantillas y permisos de SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Seleccione los atributos de dimensión (Asistente para dimensiones) | Microsoft Docs
+title: Seleccionar atributos de dimensión (Asistente para dimensiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: dcaf18ea2df3bbd3b227c8948d2fb15f54828853
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537927"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Seleccionar los atributos de la dimensión (Asistente para dimensiones)
   Utilice la página **Seleccionar los atributos de la dimensión** para seleccionar y modificar los atributos para la dimensión que debe crearse.  
@@ -25,7 +24,7 @@ ms.locfileid: "67624350"
 > [!NOTE]  
 >  Si no puede leer los valores de cualquier columna, maximice la ventana del asistente y cambie el ancho de cada encabezado de columna hasta que lea los valores.  
   
- **Para abrir al Asistente para dimensiones**  
+ **Para abrir el Asistente para dimensiones**  
   
 -   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** para un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, luego, haga clic en **Nueva dimensión**.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "67624350"
 > [!NOTE]  
 >  No se puede desactivar la casilla para el atributo clave.  
   
- **Nombre de atributo**  
+ **Nombre del atributo**  
  Enumera los atributos disponibles.  
   
  Para cambiar el nombre de un atributo, haga clic en el nombre del atributo y escriba otro nombre.  
   
- **Habilitar la exploración**  
+ **Habilitar exploración**  
  Seleccione esta opción para que el atributo esté disponible para que el usuario final pueda examinar y filtrar. La opción**Habilitar exploración** debe estar seleccionada para el atributo clave. Para los atributos no clave, el valor predeterminado es no tener la opción **Habilitar exploración** seleccionada, lo que hace que se muestren los atributos no clave solo como propiedades de miembro.  
   
  En la mayoría de los casos, el atributo se convierte en disponible o no disponible para examinar estableciendo la propiedad `AttributeHierarchyEnabled` en `True` o `False`, respectivamente. Sin embargo, en los tres casos siguientes, el asistente usa valores diferentes.  
@@ -59,9 +58,9 @@ ms.locfileid: "67624350"
  **Tipo de atributo**  
  (Opcional) Establezca el tipo para el atributo. El valor predeterminado es **Regular**. El tipo de atributo proporciona orientación a las aplicaciones cliente sobre qué información podría contener el atributo.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

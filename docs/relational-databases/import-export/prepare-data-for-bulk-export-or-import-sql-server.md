@@ -1,6 +1,6 @@
 ---
-title: Preparación de los datos para exportar o importar de forma masiva (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Preparación de los datos para la exportación o importación en bloque
+description: En este artículo se describe cómo planear operaciones de importación en bloque y exportación masiva. Además, se incluyen los requisitos del formato de archivo de datos y se indica cuándo se debe usar la utilidad bcp.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,15 +17,16 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29b85b0832e0ef1ec150e63a2cdafba65e5ad238
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8921009e0c16b799da40940ead5ef49643538b6a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063169"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001178"
 ---
-# <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparar los datos para exportar o importar de forma masiva (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="prepare-data-for-bulk-export-or-import"></a>Preparación de los datos para la exportación o importación en bloque
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En esta sección se explican las consideraciones implicadas en el planeamiento de operaciones de exportación masiva y los requisitos para operaciones de importación masiva.  
   
@@ -58,7 +59,7 @@ ms.locfileid: "68063169"
 -   Cada campo del archivo de datos debe ser compatible con la columna correspondiente de la tabla de destino. Por ejemplo, un campo **int** no puede cargarse en una columna **datetime** . Para obtener más información, vea [Formatos de datos para importación o exportación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md) y [Especificar formatos de datos por razones de compatibilidad mediante bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
     > [!NOTE]  
-    >  Para especificar un subconjunto de filas para importarlas desde un archivo de datos, en lugar del archivo completo, puede usar un comando **bcp** con el modificador **-F** *first_row* o el modificador **-L** *last_row*. Para obtener más información, consulte [bcp Utility](../../tools/bcp-utility.md).  
+    >  Para especificar un subconjunto de filas para importarlas desde un archivo de datos en lugar del archivo completo, puede usar un comando **bcp** con el modificador **-F** *first_row* o el modificador **-L** *last_row*. Para obtener más información, consulte [bcp Utility](../../tools/bcp-utility.md).  
   
 -   Para importar datos de archivos de datos con campos de longitud fija o ancho fijo, use un archivo de formato. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68063169"
   
      Para realizar la importación masiva de los datos de un archivo de tabla de [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro o de Visual FoxPro (.dbf), o de un archivo de hoja de cálculo de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xls), habría que convertir los datos en un archivo CSV que cumpliera las restricciones anteriores. La extensión de archivo normalmente será .csv. A continuación, podrá usar el archivo .csv como un archivo de datos en una operación de importación masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     En sistemas de 32 bits, es posible importar datos CSV en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin optimizaciones de importación masiva mediante [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con el proveedor OLE DB para Jet. Jet trata los archivos de texto como tablas, con el esquema definido por un archivo schema.ini que se encuentra en el mismo directorio que el origen de datos.  Con los datos CSV, uno de los parámetros del archivo schema.ini sería "FORMAT=CSVDelimited". Para usar esta solución, tendría que entender cómo funciona Jet Test IISAMm: la sintaxis de las cadenas de conexión, el uso de schema.ini, las opciones de los valores del Registro, etc.).  Los orígenes que contienen la información más adecuada sobre esto son la Ayuda de Microsoft Access y los artículos de Knowledge Base (KB). Para obtener más información, vea [Inicializar el controlador de origen de datos de texto](https://msdn.microsoft.com/library/office/ff834391.aspx), [Procedimientos para usar una consulta distribuida de SQL Server 7.0 con un servidor vinculado para bases de datos de acceso seguro](https://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDIMIENTO: Usar el proveedor OLE DB de Jet 4.0 para conectarse a bases de datos ISAM](https://go.microsoft.com/fwlink/?LinkId=128505) y [Procedimientos para abrir archivos de texto delimitados con IIsam de texto del proveedor Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     En sistemas de 32 bits (SQL Server 2014 y versiones anteriores), es posible importar datos CSV en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin optimizaciones de importación masiva mediante [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con el proveedor OLE DB para Jet. Jet trata los archivos de texto como tablas, con el esquema definido por un archivo schema.ini que se encuentra en el mismo directorio que el origen de datos.  Con los datos CSV, uno de los parámetros del archivo schema.ini sería "FORMAT=CSVDelimited". Para usar esta solución, tendría que entender cómo funciona Jet Text IISAM (su sintaxis de las cadenas de conexión, el uso de schema.ini, las opciones de los valores del Registro, etc.).  Los orígenes que contienen la información más adecuada sobre esto son la Ayuda de Microsoft Access y los artículos de Knowledge Base (KB). Para obtener más información, vea [Inicializar el controlador de origen de datos de texto](https://msdn.microsoft.com/library/office/ff834391.aspx), [Procedimientos para usar una consulta distribuida de SQL Server 7.0 con un servidor vinculado para bases de datos de acceso seguro](https://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDIMIENTO: Usar el proveedor OLE DB de Jet 4.0 para conectarse a bases de datos ISAM](https://go.microsoft.com/fwlink/?LinkId=128505) y [Procedimientos para abrir archivos de texto delimitados con IIsam de texto del proveedor Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Además, la importación masiva de datos desde un archivo de datos a una tabla requiere lo siguiente:  
   
@@ -91,7 +92,7 @@ ms.locfileid: "68063169"
 |Se agregó información sobre cómo utilizar el proveedor OLE DB para Jet con el fin de importar datos CSV.|  
   
 ## <a name="see-also"></a>Consulte también  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Usar el formato de caracteres para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Colección Members (ADO MD) | Microsoft Docs
+title: Colección de miembros (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,39 +15,39 @@ f1_keywords:
 helpviewer_keywords:
 - Members collection [ADO MD]
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e8337bfd2e7fb8ece226709f86c3b57ef746baca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949431"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765135"
 ---
 # <a name="members-collection-ado-md"></a>Colección Members (ADO MD)
-Contiene el [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos de un nivel o una posición a lo largo de un eje.  
+Contiene los objetos [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) de un nivel o una posición a lo largo de un eje.  
   
 ## <a name="remarks"></a>Comentarios  
- Un **miembros** colección se usa para contener los siguientes tipos de miembros:  
+ Una colección de **miembros** se usa para contener los siguientes tipos de miembros:  
   
--   Los miembros que constituyen un nivel en un cubo. Se encuentran en el **miembros** colección de un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto. Por ejemplo, utilizando el ejemplo de [información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), los cuatro miembros del nivel de países son Estados Unidos, Canadá, Reino Unido y Alemania.  
+-   Los miembros que componen un nivel en un cubo. Están contenidos en la colección **Members** de un objeto [LEVEL](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Por ejemplo, mediante el ejemplo de [información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), los cuatro miembros del nivel países son Canadá, EE. UU., Reino Unido y Alemania.  
   
--   Los miembros que son elementos secundarios de un miembro específico dentro de una jerarquía. Estos miembros devuelven el [hijos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedad del elemento primario **miembro** objeto. Por ejemplo, nuevo con el mismo ejemplo, son los dos elementos secundarios del miembro Canada Canadá oriental y Canadá oeste.  
+-   Los miembros que son elementos secundarios de un miembro específico dentro de una jerarquía. Estos miembros son devueltos por la propiedad [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) del objeto **miembro** primario. Por ejemplo, de nuevo con el mismo ejemplo, los dos elementos secundarios del miembro Canada son Canada-East y Canada-West.  
   
--   Los miembros que definen una posición específica en un eje de un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Mediante el objeto cellset de [trabajar con datos multidimensionales](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) como por ejemplo, los dos miembros de la primera posición en el eje x son Valentine y Seattle. Estos miembros están incluidos en el **miembros** colección de un [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto.  
+-   Los miembros que definen una posición específica a lo largo de un eje de un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md). Al usar el Cellset para [trabajar con datos multidimensionales](../../../ado/guide/multidimensional/working-with-multidimensional-data.md) como ejemplo, los dos miembros de la primera posición en el eje x son San Valentín y Seattle. Estos miembros están incluidos en la colección **Members** de un objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
   
- **Los miembros** es una colección de ADO estándar. Con las propiedades y métodos de una colección, puede hacer lo siguiente:  
+ **Members** es una colección estándar de ADO. Con las propiedades y los métodos de una colección, puede hacer lo siguiente:  
   
--   Obtener el número de objetos de la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
+-   Obtiene el número de objetos de la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Devolver un objeto de la colección con el valor predeterminado [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
+-   Devuelve un objeto de la colección con la propiedad de [elemento](../../../ado/reference/ado-api/item-property-ado.md) predeterminada.  
   
--   Actualizar los objetos de la colección del proveedor con el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
+-   Actualice los objetos de la colección desde el proveedor con el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de Members (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de miembros (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

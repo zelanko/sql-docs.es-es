@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee48107177cef7a38daf0e7b0080c08db23b2367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068978"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidad del cifrado de claves asimétricas
   Esta regla comprueba si las claves asimétricas se crearon utilizando 1024 bits o un cifrado más seguro.  
@@ -28,7 +27,7 @@ ms.locfileid: "63253134"
 ## <a name="for-more-information"></a>Para obtener más información  
  [Elegir un algoritmo de cifrado](../security/encryption/choose-an-encryption-algorithm.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

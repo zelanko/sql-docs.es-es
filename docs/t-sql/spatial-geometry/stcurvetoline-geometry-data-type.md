@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b0dff24ff83cd577bfdb572a16582bbdc6b6863
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748679"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (tipo de datos de geometría)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una aproximación poligonal de una instancia de **geometry** que contiene segmentos de arco circulares.
   
@@ -33,12 +33,12 @@ Devuelve una aproximación poligonal de una instancia de **geometry** que contie
 .STCurveToLine ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Devuelve una instancia vacía de **GeometryCollection** para variables vacías de la instancia de **geometry** y devuelve **NULL** para variables de **geometry** sin inicializar.  
   
  La aproximación poligonal devuelta por el método depende de la instancia de **geometry** que se use para llamar al método:  

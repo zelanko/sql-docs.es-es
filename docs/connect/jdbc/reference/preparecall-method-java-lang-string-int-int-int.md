@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0839fb735431adcdc4d1e3d0e7820ca2253cc121
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 80e4c2ba3c7e8d5624ca226703f7aeb48b8ac436
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976242"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923174"
 ---
 # <a name="preparecall-method-javalangstring-int-int-int"></a>Método prepareCall (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,8 +60,8 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método prepareCall se especifica mediante el método prepareCall en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método prepareCall especifica este método prepareCall en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método prepareCall &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 7e492091be9fc2f363b5f105893e888301b1e0e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674254"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inicia una instancia de ejecución en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
+catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] retry_count]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -39,7 +39,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  Es el número de reintentos si se produce un error en la ejecución. Solo tendrá efecto si la ejecución está en modo de escalabilidad horizontal. Este parámetro es opcional. Si no se especifica, su valor se establece en 0. El parámetro *retry_count* es **int**.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una ejecución se usa para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hará referencia a un proyecto obsoleto. Esta referencia no válida hace que el procedimiento almacenado genere un error.  
   
 > [!NOTE]  

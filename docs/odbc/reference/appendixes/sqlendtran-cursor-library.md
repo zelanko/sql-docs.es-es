@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLEndTran function [ODBC], Cursor Library
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f713f9a0c96aaf3798cf160e648404470e3a4363
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c2277a67cd5410ea3c2a5d5b03b16d4533ed6ee1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064498"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304776"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLEndTran** función en la biblioteca de cursores. Para obtener información general sobre **SQLEndTran**, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
+ En este tema se describe el uso de la función **SQLEndTran** en la biblioteca de cursores. Para obtener información general sobre **SQLEndTran**, consulte la [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).  
   
- La biblioteca de cursores no admite transacciones y pasa las llamadas a **SQLEndTran** directamente al controlador. Sin embargo, la biblioteca de cursores es compatible con los comportamientos de confirmación y reversión del cursor devuelto por el origen de datos con los tipos de información SQL_CURSOR_ROLLBACK_BEHAVIOR y SQL_CURSOR_COMMIT_BEHAVIOR:  
+ La biblioteca de cursores no admite transacciones y pasa llamadas a **SQLEndTran** directamente al controlador. Sin embargo, la biblioteca de cursores admite los comportamientos commit y rollback del cursor devueltos por el origen de datos con los tipos de información SQL_CURSOR_ROLLBACK_BEHAVIOR y SQL_CURSOR_COMMIT_BEHAVIOR:  
   
--   Orígenes de datos que conserva los cursores en las transacciones, los cambios que se revierten los cambios en el origen de datos no se revierten en memoria caché de la biblioteca de cursores. Para hacer que la memoria caché coincida con los datos del origen de datos, la aplicación debe cerrar y volver a abrir el cursor.  
+-   En el caso de los orígenes de datos que conservan cursores entre transacciones, los cambios que se revierten en el origen de datos no se revierten en la memoria caché de la biblioteca de cursores. Para que la memoria caché coincida con los datos del origen de datos, la aplicación debe cerrar y volver a abrir el cursor.  
   
--   Orígenes de datos que cierra los cursores en los límites de transacción, la biblioteca de cursores cierra los cursores y elimina las memorias caché de todas las instrucciones de la conexión.  
+-   En el caso de los orígenes de datos que cierran los cursores en los límites de la transacción, la biblioteca de cursores cierra los cursores y elimina las cachés de todas las instrucciones de la conexión.  
   
--   Orígenes de datos que eliminación las instrucciones preparadas en límites de la transacción, la aplicación debe reprepare todas las instrucciones preparadas en la conexión antes de ellos deteniéndose.
+-   En el caso de los orígenes de datos que eliminan instrucciones preparadas en los límites de las transacciones, la aplicación debe repreparar todas las instrucciones preparadas en la conexión antes de reejecutarlas.

@@ -1,5 +1,6 @@
 ---
-title: Importación en bloque de datos mediante las instrucciones BULK INSERT u OPENROWSET(BULK...) (SQL Server) | Microsoft Docs
+title: Uso de BULK INSERT u OPENROWSET(BULK...) para importar datos a SQL Server
+description: Descubra cómo usar instrucciones Transact-SQL para importar en bloque datos de un archivo a una tabla SQL Server o Azure SQL Database y obtenga información sobre las consideraciones de seguridad.
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.custom: ''
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30eb6969c480cb4e3c326da01c3cb0cc2f96c682
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a9f62a8a6aa679624e78def2dd5bea1ddeb7f5db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715399"
 ---
-# <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importación en bloque de datos mediante las instrucciones BULK INSERT o OPENROWSET(BULK...) (SQL Server)
+# <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Uso de BULK INSERT u OPENROWSET(BULK...) para importar datos a SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este artículo se ofrece información general sobre cómo usar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT e INSERT...SELECT * FROM OPENROWSET(BULK...) para realizar una importación en bloque de datos desde un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database. En este artículo también se describen las consideraciones de seguridad del uso de BULK INSERT y OPENROWSET(BULK...), así como el uso de estos métodos para una importación en bloque desde un origen de datos remoto.
 
@@ -81,7 +81,7 @@ Para obtener información sobre los usos adicionales de la opción BULK, vea [OP
 - [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)
 - [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad
 
 Si un usuario utiliza un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se utilizará el perfil de seguridad de la cuenta de proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un inicio de sesión que use autenticación de SQL Server no se puede autenticar fuera del Motor de base de datos. Por tanto, cuando un inicio de sesión que usa autenticación de SQL Server inicia un comando BULK INSERT, la conexión con los datos se realiza usando el contexto de seguridad de la cuenta de proceso de SQL Server (la cuenta usada por el servicio Motor de base de datos de SQL Server). 
 
@@ -109,12 +109,15 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 
 Cuando se importe desde Azure Blob Storage y los datos no sean públicos (acceso anónimo), cree una instancia de [DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md) basada en una clave SAS que esté cifrada con [MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md) y, después, cree un [origen de base de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md) para usarlo en el comando BULK INSERT.
 
+> [!NOTE]
+> No use transacciones explícitas o recibirá un error 4861.
+
 ### <a name="using-bulk-insert"></a>Usar BULK INSERT
 
 En el ejemplo siguiente se muestra cómo usar el comando BULK INSERT para cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -145,7 +148,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 En el ejemplo siguiente se muestra cómo usar el comando OPENROWSET para cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -176,7 +179,7 @@ SELECT * FROM OPENROWSET(
 > [!IMPORTANT]
 > Azure SQL Database no admite la lectura de archivos de Windows.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [Cláusula SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)

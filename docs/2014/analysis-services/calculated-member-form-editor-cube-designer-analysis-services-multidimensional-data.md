@@ -1,5 +1,5 @@
 ---
-title: Calcula el Editor de formulario de miembro (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Editor de formulario de miembro calculado (pestaña cálculos, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527662"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de miembro calculado (pestaña Cálculos, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
   Utilice el panel del **Editor de Formulario de miembro calculado** de la pestaña **Cálculos** del Diseñador de cubos para crear o modificar un miembro calculado.  
@@ -25,7 +24,7 @@ ms.locfileid: "66088368"
  **Nota** Este panel solamente se muestra en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba el nombre del miembro calculado.  
   
  **Propiedades del miembro primario**  
@@ -39,10 +38,10 @@ ms.locfileid: "66088368"
   
  **Nota** Esta opción está disponible si **Jerarquía primaria** especifica una jerarquía distinta de MEASURES.  
   
- **Change**  
+ **Cambio**  
  Seleccione esta opción para mostrar el cuadro de diálogo **Seleccionar miembro primario** y, luego, un miembro para **Miembro primario**. Para más información sobre el cuadro de diálogo **Seleccionar miembro primario**, vea [Cuadro de diálogo Seleccionar miembro primario &#40;Analysis Services - Datos multidimensionales&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Expresión**  
+ **Expression**  
  Expanda esta opción para ver o modificar la expresión MDX (Expresiones multidimensionales) para el miembro calculado.  
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
@@ -58,19 +57,19 @@ ms.locfileid: "66088368"
   
  Para más información sobre las cadenas de forato MDX, vea [FORMAT_STRING, contenido &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md).  
   
- **Visible**  
+ **Estarán**  
  Seleccione **True** para permitir que las aplicaciones cliente vean el miembro calculado.  
   
- **Comportamiento no está vacío**  
+ **Comportamiento si no está vacío**  
  Seleccione el nombre de la medida utilizada para resolver las consultas NON EMPTY en MDX para el miembro calculado. Si la propiedad **Comportamiento si no está vacío** está en blanco, es necesario evaluar el miembro calculado repetidamente para determinar si está vacío. Si la propiedad **Comportamiento si no está vacío** contiene el nombre de una medida, el miembro calculado se trata como si estuviera vacío si la medida especificada está vacía.  
   
 > [!WARNING]  
->  Esta propiedad está en desuso. No la active. Consulte [en desuso características de Analysis Services en SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
+>  Esta propiedad está desusada. No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
   
  **Expresiones de color**  
  Expanda para ver las opciones **Color en primer plano** y **Color de fondo** .  
   
- **Color de primer plano**  
+ **Color en primer plano**  
  Escriba la expresión MDX que proporciona el color del primer plano del miembro calculado.  
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
@@ -101,22 +100,22 @@ ms.locfileid: "66088368"
   
  Haga clic en el botón de selección de fuentes para mostrar el cuadro de diálogo **Fuente** e inserte los valores de propiedad para una fuente determinada en la expresión MDX. Para más información sobre valores de propiedades, vea [Crear y usar los valores de propiedad &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
- **Marcas de fuente**  
+ **Indicadores de fuente**  
  Escriba la expresión MDX que proporciona el valor de mapa de bits que contiene las marcas de fuente, como subrayado o negrita, de la fuente utilizada para el miembro calculado.  
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
   
  Haga clic en el botón de selección de fuentes para mostrar el cuadro de diálogo **Fuente** e inserte los valores de propiedad para una fuente determinada en la expresión MDX. Para más información sobre valores de propiedades, vea [Crear y usar los valores de propiedad &#40;MDX&#41;](creating-and-using-property-values-mdx.md).  
   
-## <a name="see-also"></a>Vea también  
- [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+## <a name="see-also"></a>Consulte también  
+ [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Crear miembros calculados](multidimensional-models/create-calculated-members.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Cálculos &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Herramientas de cálculo &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
- [Denominada Editor de formulario de conjunto &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Cálculos &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organizador de scripts &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Herramientas de cálculo &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de conjuntos con nombre &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de scripts &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

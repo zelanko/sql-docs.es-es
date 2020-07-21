@@ -17,17 +17,17 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ede416b140175e853028473890881e565105582c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752381"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve información acerca de las propiedades de catálogo de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -43,7 +43,7 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>Argumentos  
   
 > [!NOTE]  
->  Las propiedades siguientes se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** y **PopulateStatus**. Evite el uso de estas propiedades en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
+>  Se quitarán las propiedades siguientes de una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** y **PopulateStatus**. Evite el uso de estas propiedades en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
   
 _catalog\_name_  
 Es una expresión que contiene el nombre del catálogo de texto completo.  
@@ -63,7 +63,7 @@ Es una expresión que contiene el nombre de la propiedad del catálogo de texto 
 |**UniqueKeyCount**|Número de claves únicas en el catálogo de texto completo.|  
 |**ImportStatus**|Indica si se va a importar el catálogo de texto completo.<br /><br /> 0 = no se va a importar el catálogo de texto completo.<br /><br /> 1 = Si se va a importar el catálogo de texto completo.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **int**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -71,7 +71,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un usuario solo puede ver los metadatos de elementos protegibles. Estos elementos protegibles son los que posee el usuario o para los que se le ha concedido permiso. Como tales, las funciones integradas que emiten metadatos, como FULLTEXTCATALOGPROPERTY, pueden devolver NULL si el usuario no tiene permisos sobre el objeto. Para más información, vea [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') solo examina fragmentos con el estado 4 o 6, como se muestra en [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Estos fragmentos forman parte del índice lógico. Por lo tanto, la propiedad **IndexSize** solo devuelve el tamaño del índice lógico. 
 
 Sin embargo, durante una mezcla de índice, el tamaño de índice real podría ser el doble de su tamaño lógico. Para encontrar el tamaño real que está usando un índice de texto completo durante una combinación, use el procedimiento almacenado del sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Ese procedimiento mira en todos los fragmentos asociados a un índice de texto completo. 
@@ -94,7 +94,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
-[Metadata Functions &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  [Funciones de metadatos &#40;Transact-SQL&#41;]  
+[Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
 [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
   
   

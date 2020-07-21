@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c76fcbf2beaee458284297c522948c11a42fdef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835457"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438572"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipos de datos de la instancia CDC de Oracle
   La instancia CDC de Oracle admite la mayoría de los tipos de datos de Oracle. En las secciones siguientes se describen los tipos de datos admitidos y los tipos de datos no admitidos.  
@@ -25,7 +24,7 @@ ms.locfileid: "62835457"
   
 |Tipo de datos de base de datos de Oracle|Tipo de datos de SQL Server|  
 |-------------------------------|--------------------------|  
-|BINARY_FLOAT|REAL|  
+|BINARY_FLOAT|real|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
 |DATE|DATETIME|  
@@ -36,8 +35,8 @@ ms.locfileid: "62835457"
 |NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|REAL|FLOAT|  
-|TIMESTAMP|DATETIME2|  
+|real|FLOAT|  
+|timestamp|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
 |VARCHAR2|VARCHAR|  
@@ -72,7 +71,7 @@ ms.locfileid: "62835457"
   
 -   VARRAY  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [La instancia CDC de Oracle](the-oracle-cdc-instance.md)  
   

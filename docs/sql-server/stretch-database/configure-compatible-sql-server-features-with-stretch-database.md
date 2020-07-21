@@ -1,5 +1,5 @@
 ---
-title: Configurar características compatibles de SQL Server con Stretch Database | Microsoft Docs
+title: Configuración de características de SQL Server compatibles
 ms.date: 03/14/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,19 +7,20 @@ ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d558dad38492bcd9ce2bad0eb00a887a2225de33
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136290"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73844571"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurar características compatibles de SQL Server con Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
 Realice pasos simples para configurar las siguientes características de SQL Server para trabajar con Stretch Database.
--   AlwaysOn
+-   Always On
 -   Always Encrypted
 -   Cifrado de datos transparente (TDE)
 -   Tablas temporales
@@ -35,7 +36,7 @@ Si desea usar Always Encrypted en conjunto con Stretch Database, debe configurar
 Si ya habilitó Stretch Database en la tabla y desea usar columnas de Always Encrypted, deberá hacer lo siguiente.
 1.   Deshabilite Stretch Database en la tabla y devuelva los datos remotos desde Azure. Para obtener más información, vea [Deshabilitar Stretch Database y recuperar datos remotos](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md).
 2.   Configure Always Encrypted en las columnas seleccionadas.
-3. Vuelva a habilitar Stretch Database en la tabla. Para obtener más información, vea [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
+3. Vuelva a habilitar Stretch Database en la tabla. Para obtener más información, vea [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).
 
 ## <a name="configure-transparent-data-encryption-tde-with-stretch-database"></a>Configurar Cifrado de datos transparente (TDE) con Stretch Database
 

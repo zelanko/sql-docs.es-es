@@ -17,26 +17,26 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f0d47428eab3bfe0f18901d24de33fd7b25acb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965007"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762726"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule (propiedad, ADOX)
-Indica la acción realizada cuando un elemento principal [clave](../../../ado/reference/adox-api/key-object-adox.md) se actualiza.  
+Indica la acción que se realiza cuando se actualiza una [clave](../../../ado/reference/adox-api/key-object-adox.md) principal.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece y devuelve un **largo** valor que puede ser uno de los [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constantes. El valor predeterminado es **adRINone**.  
+ Establece y devuelve un valor **Long** que puede ser una de las constantes [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . El valor predeterminado es **adRINone**.  
   
-## <a name="remarks"></a>Comentarios  
- Esta propiedad es de solo lectura en [clave](../../../ado/reference/adox-api/key-object-adox.md) ya se anexa a la colección de objetos.  
+## <a name="remarks"></a>Observaciones  
+ Esta propiedad es de solo lectura en objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) ya anexados a la colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

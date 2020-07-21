@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_schedule
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046163"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874365"
 ---
-# <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Configura una programación para un trabajo.  
   
@@ -42,26 +42,26 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo al que se agrega la programación. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo al que se agrega la programación. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` El nombre del trabajo al que se agrega la programación. *job_name*es **sysname**, su valor predeterminado es null.  
-  
-> [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
-  
-`[ @schedule_id = ] schedule_id` El número de identificación de la programación se establece para el trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
-  
-`[ @schedule_name = ] 'schedule_name'` El nombre de la programación se establece para el trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo al que se agrega la programación. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
+>  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
+  
+`[ @schedule_id = ] schedule_id`El número de identificación de la programación que se va a establecer para el trabajo. *schedule_id*es de **tipo int**y su valor predeterminado es NULL.  
+  
+`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a establecer para el trabajo. *schedule_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+  
+> [!NOTE]  
+>  Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
 ## <a name="remarks"></a>Comentarios  
  La programación y el trabajo deben tener el mismo propietario.  
   
  Se puede configurar una programación para más de un trabajo. Se puede ejecutar un trabajo en más de una programación.  
   
- Este procedimiento almacenado se debe ejecutar desde la **msdb** base de datos.  
+ Este procedimiento almacenado se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -72,7 +72,7 @@ sp_attach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, una programación no se puede eliminar si la separación la dejase sin trabajos, a menos que el llamador sea propietario de la programación.  
+ Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, no se puede eliminar una programación si la desasociación la dejaría sin trabajos, a menos que el autor de la llamada sea el propietario de la programación.  
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
@@ -106,9 +106,9 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

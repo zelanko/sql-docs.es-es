@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de propiedades de tabla (pestaña selección de eventos) | Microsoft Docs
+title: Propiedades de la tabla de seguimiento (pestaña selección de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8406f31269c92dfc950834d31da88fcb26259d51
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928246"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Propiedades de la tabla de seguimiento (pestaña Selección de eventos)
   Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de la tabla de seguimiento** para ver las propiedades de columna de datos y eventos del seguimiento o para quitar eventos o columnas del seguimiento.  
   
- Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para abrir una tabla de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
+ Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para abrir una tabla de seguimiento. A continuación, en el menú **archivo** , haga clic en **propiedades**y, a continuación, haga clic en la pestaña **selección de eventos** .  
   
 ## <a name="options"></a>Opciones  
- Columna **Eventos**  
+ Columna**Eventos**  
  Muestra los eventos de los que se hace el seguimiento y que están organizados por categoría de eventos. Para seleccionar un evento, debe activarse la casilla o la columna de datos de dicho evento. Si la casilla del evento está activada, se seleccionan todas las columnas de datos disponibles para dicho evento. Si la columna de datos de un evento está activada, se activa el evento, y cualquier otra columna requerida también se activa automáticamente. Si se está viendo un archivo o una tabla de seguimiento, al desactivar las casillas de las columnas de datos o eventos, se reduce la cantidad de datos visibles en la ventana de seguimiento para simplificar el análisis. Se pueden cambiar los filtros de las columnas para reducir la cantidad de datos visibles en la ventana de seguimiento. Para obtener más información sobre las clases de eventos, vea [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Otras columnas de datos  
@@ -47,8 +46,8 @@ ms.locfileid: "66089539"
  **Organizar columnas**  
  Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
   
-## <a name="see-also"></a>Vea también  
- [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte también  
+ [Abra una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

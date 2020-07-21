@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077503"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544879"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
   Una acción es una operación iniciada por el usuario final en un cubo seleccionado o en una parte de un cubo. La operación puede iniciar una aplicación con el elemento seleccionado como parámetro o recuperar información acerca del elemento seleccionado. Para más información sobre las acciones, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md).  
   
  Use la pestaña **Acciones** del Diseñador de cubos para generar acciones para un cubo. Especifique lo siguiente:  
   
- **Name**  
+ **Nombre**  
  Seleccione un nombre que identifique la acción.  
   
  **Destino de la acción**  
@@ -57,22 +56,22 @@ ms.locfileid: "66077503"
  **Contenido de la acción**  
  Seleccione el tipo de acción. La siguiente tabla contiene los tipos disponibles.  
   
-|Tipo|Descripción|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Conjunto de datos|Recupera un conjunto de datos.|  
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
 |Conjunto de filas|Recupera un conjunto de filas.|  
 |.|Ejecuta un comando OLE DB.|  
-|Dirección URL|Muestra una página variable en un explorador de Internet.|  
+|Resolución|Muestra una página variable en un explorador de Internet.|  
   
  En **Expresión de acción**, especifique los parámetros que se pasan cuando se ejecuta la acción. La sintaxis se debe evaluar como una cadena, y debe incluirse una expresión escrita en MDX. Por ejemplo, la expresión MDX puede indicar una parte del cubo incluida en la sintaxis. Las expresiones MDX se evalúan antes de pasar los parámetros. Además, el Generador MDX ayuda a generar expresiones MDX.  
   
  **Propiedades adicionales**  
  Seleccione la propiedad. En la siguiente tabla se resumen las propiedades disponibles.  
   
-|Property|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
-|**Invocación**|Especifica cómo se ejecuta la acción. Interactiva, que es la opción predeterminada, especifica que la acción se ejecuta cuando un usuario tiene acceso a un objeto. Los valores posibles son:<br /><br /> Lote<br /><br /> Interactiva<br /><br /> Al abrir|  
+|**Invocación**|Especifica cómo se ejecuta la acción. Interactiva, que es la opción predeterminada, especifica que la acción se ejecuta cuando un usuario tiene acceso a un objeto. Los valores posibles son:<br /><br /> Batch<br /><br /> Interactive<br /><br /> Al abrir|  
 |**Aplicación**|Describe la aplicación de la acción.|  
 |**Descripción**|Describe la acción.|  
 |**Caption**|Proporciona un título que se muestra para la acción. Si el título es MDX, especifique `True` para **título es MDX**.|  
@@ -87,7 +86,7 @@ ms.locfileid: "66077503"
  **Servidor de informes**  
  Las propiedades descritas en la siguiente tabla se especifican para el servidor de informes.  
   
-|Property|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |**Nombre del servidor**|Nombre del equipo en el que se ejecuta el servidor de informes.|  
 |**Ruta de acceso al servidor**|La ruta de acceso expuesta por un servidor de informes.|  
@@ -123,7 +122,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **Columnas de obtención de detalles**  
  Seleccione una o más dimensiones y, para cada dimensión, las columnas de obtención de detalles devueltas a la aplicación cliente por la acción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cubos en modelos multidimensionales](cubes-in-multidimensional-models.md)  
   
   

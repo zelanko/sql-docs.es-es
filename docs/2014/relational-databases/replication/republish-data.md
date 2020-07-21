@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 816d6ad75e2c331a7269d66b0d238141557b4b88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066548"
 ---
 # <a name="republish-data"></a>Volver a publicar datos
   En un modelo de republicación, el publicador envía datos a un suscriptor y éste, a su vez, vuelve a publicar los datos en cualquier número de suscriptores. Esto es útil cuando un publicador tiene que enviar datos a suscriptores a través de un vínculo de comunicaciones lento o costoso. Si hay varios suscriptores en el otro extremo del vínculo, el uso de un republicador desplaza la mayor parte de la carga de distribución a ese extremo del vínculo.  
@@ -43,9 +42,9 @@ ms.locfileid: "63250405"
   
  En la siguiente ilustración, tanto el publicador como el republicador actúan como sus propios distribuidores locales. Si estuvieran configurados para utilizar un distribuidor remoto, cada distribuidor tendría que estar en el mismo lado del vínculo de comunicaciones lento o costoso que su publicador. Los publicadores tienen que estar conectados con sus distribuidores remotos mediante vínculos de comunicaciones confiables y de alta velocidad.  
   
- ![Republishing data](media/repl-06a.gif "Republishing data")  
+ ![Volver a publicar datos](media/repl-06a.gif "Volver a publicar datos")  
   
- Cualquier servidor puede funcionar como publicador y suscriptor. Por ejemplo, considere el siguiente diagrama en el que existe en Londres una publicación de una tabla y se debe distribuir a cuatro ciudades diferentes de los Estados Unidos: Chicago, Nueva York, San Diego y Seattle. El servidor de Nueva York es el elegido para que se suscriba a la tabla publicada de Londres, porque el sitio de Nueva York cumple estas condiciones:  
+ Cualquier servidor puede funcionar como publicador y suscriptor. Por ejemplo, observe el siguiente diagrama en el que la publicación de una tabla que existe en Londres se tiene que distribuir a cuatro ciudades diferentes de los Estados Unidos: Chicago, Nueva York, San Diego y Seattle. El servidor de Nueva York es el elegido para que se suscriba a la tabla publicada de Londres, porque el sitio de Nueva York cumple estas condiciones:  
   
 -   El vínculo de red de retorno a Londres es relativamente confiable.  
   
@@ -53,23 +52,23 @@ ms.locfileid: "63250405"
   
 -   Hay buenas líneas de comunicación de red desde Nueva York a todos los demás sitios suscriptores de Estados Unidos.  
   
-     ![Volver a publicar datos en ubicaciones dispersas](media/repl-06.gif "Volver a publicar datos en ubicaciones dispersas")  
+     ![Volver a publicar datos para ubicaciones dispersas](media/repl-06.gif "Volver a publicar datos para ubicaciones dispersas")  
   
  La replicación es compatible con los casos de republicación que se muestran en la tabla siguiente.  
   
-|publicador|Suscriptor de publicación|Suscriptor|  
+|Publicador|Suscriptor de publicación|Suscriptor|  
 |---------------|---------------------------|----------------|  
 |Publicación transaccional|Suscripción transaccional/publicación transaccional|Suscripción transaccional|  
-|Publicación transaccional|Transaccional suscripción/publicación de combinación<sup>1</sup>|Suscripción de mezcla|  
+|Publicación transaccional|Suscripción transaccional/publicación de combinación<sup>1</sup>|Suscripción de mezcla|  
 |Publicación de combinación|Suscripción de mezcla/publicación de combinación|Suscripción de mezcla|  
 |Publicación de combinación|Suscripción de mezcla/publicación transaccional|Suscripción transaccional|  
   
- <sup>1</sup>debe establecer el `@published_in_tran_pub` propiedad en la publicación de combinación. De forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura. Si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, la convergencia de los datos puede no producirse. Para evitar este riesgo, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para obtener más información, vea [Optimize Merge Replication Performance with Download-Only Articles](merge/optimize-merge-replication-performance-with-download-only-articles.md) (Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga).  
+ <sup>1</sup> Debe establecer la `@published_in_tran_pub` propiedad en la publicación de combinación. De forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura. Si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, la convergencia de los datos puede no producirse. Para evitar este riesgo, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar distribución](configure-distribution.md)   
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
- [Suscribirse a publicaciones](subscribe-to-publications.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Initialize a Subscription](initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Sincronizar datos](synchronize-data.md)  
   

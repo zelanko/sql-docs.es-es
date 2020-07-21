@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667423"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060815"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Agregar y quitar publicadores del Monitor de replicación
-  El servidor desde el que inicia el Monitor de replicación se agrega automáticamente al monitor si es un publicador. Se pueden agregar más publicadores mediante el cuadro de diálogo **Agregar publicador** . Una vez agregado un publicador, se muestra en un grupo en el panel izquierdo del monitor. El grupo **Mis publicadores** se incluye de manera predeterminada, pero puede crear grupos nuevos para administrar una o más topologías de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, consulte [Iniciar el Monitor de replicación](start-the-replication-monitor.md).  
+  El servidor desde el que inicia el Monitor de replicación se agrega automáticamente al monitor si es un publicador. Se pueden agregar más publicadores mediante el cuadro de diálogo **Agregar publicador** . Una vez agregado un publicador, se muestra en un grupo en el panel izquierdo del monitor. El grupo **Mis publicadores** se incluye de manera predeterminada, pero puede crear grupos nuevos para administrar una o más topologías de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](start-the-replication-monitor.md).  
   
 ### <a name="to-add-a-sql-server-publisher"></a>Para agregar un publicador de SQL Server  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62667423"
   
 2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar**y, a continuación, en **Agregar publicador de Oracle**.  
   
-3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre del distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
+3.  En el cuadro de diálogo **Conectar al servidor**, escriba el nombre del distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
   
 4.  Haga clic en **Conectar**.  
   
@@ -104,8 +103,8 @@ ms.locfileid: "62667423"
   
 2.  Haga clic con el botón secundario en un grupo de publicador y, a continuación, haga clic en **Quitar**.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar distribución](../configure-distribution.md)   
- [Supervisar la replicación](../monitoring-replication.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar la distribución](../configure-distribution.md)   
+ [Supervisión de la replicación](../monitoring-replication.md)  
   
   

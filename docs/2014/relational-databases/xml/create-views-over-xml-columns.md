@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2c4a0cd87d42db9e17097932b6530936a2b83eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059482"
 ---
 # <a name="create-views-over-xml-columns"></a>Crear vistas sobre columnas XML
   Puede utilizar una columna de tipo `xml` para crear vistas. En el ejemplo siguiente se crea una vista en la que se recupera el valor de una columna de tipo `xml` mediante el método `value()` del tipo de datos `xml`.  
@@ -47,7 +46,7 @@ SELECT *
 FROM   MyView  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductID   PName        

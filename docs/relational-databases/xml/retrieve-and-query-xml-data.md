@@ -1,5 +1,6 @@
 ---
 title: Recuperar y consultar datos XML | Microsoft Docs
+description: Obtenga información sobre las opciones de consulta que se deben especificar al consultar datos XML y sobre las partes de las instancias XML que no se conservan cuando se almacenan en bases de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86f908d6aa221b2c69be3d8960efac929cbf5306
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738400"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describen las opciones de consulta que se tienen que especificar para consultar datos XML. También describe las partes de las instancias XML que no se conservan cuando se almacenan en bases de datos.  
   
-##  <a name="features"></a> Características de una instancia de XML que no se mantienen  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Características de una instancia de XML que no se mantienen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva el contenido de la instancia XML, pero no conserva los aspectos de la instancia XML que no se consideran significativos en el modelo de datos XML. Esto significa que una instancia XML recuperada no podría ser idéntica a la instancia que se almacenó en el servidor pero contendrá la misma información.  
   
 ### <a name="xml-declaration"></a>Declaración XML  
@@ -87,18 +88,18 @@ GO
 ```  
   
   
-##  <a name="query"></a> Establecer opciones de consulta necesarias  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Establecer opciones de consulta necesarias  
  Cuando se consultan variables o columnas de tipo **xml** mediante métodos del tipo de datos **xml** , se deben establecer las siguientes opciones como se indica.  
   
 |Opciones de SET|Valores requeridos|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
-|NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|ANSI_NULLS|ACTIVAR|  
+|ANSI_PADDING|ACTIVAR|  
+|ANSI_WARNINGS|ACTIVAR|  
+|ARITHABORT|ACTIVAR|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|  
+|NUMERIC_ROUNDABORT|Apagado|  
+|QUOTED_IDENTIFIER|ACTIVAR|  
   
  Si no se establecen las opciones como se indica, no funcionarán las consultas y modificaciones de los métodos del tipo de datos **xml** .  
   

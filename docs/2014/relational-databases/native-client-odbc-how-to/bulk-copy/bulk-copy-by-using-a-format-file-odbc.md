@@ -10,15 +10,14 @@ helpviewer_keywords:
 - bulk copy using format file [ODBC]
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2dc0ac57b132a0e681337b358a951a0e33f56db
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bfd3c1d1c35f311f2542366dc802c9a13fe858a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019270"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Realizar una copia masiva con un archivo de formato (ODBC)
   En este ejemplo se muestra cómo se usa la función ODBC bcp_init con un archivo de formato.  
@@ -31,7 +30,7 @@ ms.locfileid: "72688905"
   
 3.  Conéctese a Microsoft SQL Server.  
   
-4.  Llame a [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para establecer la siguiente información:  
+4.  Llame a [bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para establecer la información siguiente:  
   
     -   El nombre de la tabla o vista desde la que se realizará la copia masiva o en la que se realizará la copia masiva.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "72688905"
   
     -   La dirección de la copia: DB_IN al archivo desde la tabla o vista.  
   
-5.  Llame a [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para leer el archivo de formato que describe el archivo de datos que va a usar la operación de copia masiva.  
+5.  Llame a [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para leer el archivo de formato que describe el archivo de datos que se va a usar en la operación de copia masiva.  
   
 6.  Llame a [bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para ejecutar la operación de copia masiva.  
   
@@ -183,8 +182,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Temas &#40;de procedimientos de la copia masiva con el controlador ODBC de&#41; SQL Server ODBC](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)    
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de la copia masiva con el controlador ODBC de SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilizar archivos de datos y archivos de formato](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

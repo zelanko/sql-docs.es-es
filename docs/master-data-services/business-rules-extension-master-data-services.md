@@ -1,5 +1,6 @@
 ---
-title: Extensión de reglas de negocios (Master Data Services) | Microsoft Docs
+title: Business Rules Extension
+description: Puede aplicar scripts SQL definidos por el usuario como una extensión de condiciones y acciones de reglas de negocios predefinidas en Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4d6ad76f68acb72072f04728e55793bad3aa9cd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047412"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813679"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensión de reglas de negocios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede aplicar scripts SQL definidos por el usuario como una extensión de las acciones y las condiciones predefinidas.  
   
@@ -65,7 +66,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**Esquema**|**Permissions**|  
+|**Esquema**|**Permisos**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
@@ -103,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  Asigne un valor a cada parámetro.  
   
-    5.  Haga clic en **Guardar**.  
+    5.  Haga clic en **Save**(Guardar).  
   
 8.  Haga lo siguiente para establecer un script definido por el usuario como una acción  
   
@@ -111,9 +112,9 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  En la lista desplegable **Operador** , seleccione la función definida por el usuario en **Script definido por el usuario** .  
   
-    3.  Haga clic en **Guardar**.  
+    3.  Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Condiciones de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Acciones de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  

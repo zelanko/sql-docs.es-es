@@ -1,5 +1,5 @@
 ---
-title: Configurar la integración de servicios (servicio SSIS) | Microsoft Docs
+title: Configuración del servicio de Integration Services (servicio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,21 @@ helpviewer_keywords:
 - service [Integration Services], configuring
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4176906d19ccdd7ed3671ce5eee65887656ae8f6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060500"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434682"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configurar el servicio Integration Services (servicio SSIS)
     
 > [!IMPORTANT]  
 >  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
- El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se basa en un archivo de configuración para sus valores. De forma predeterminada, el nombre de este archivo de configuración es MsDtsSrvr.ini.xml y el archivo se encuentra en la carpeta %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
+ El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se basa en un archivo de configuración para sus valores. De forma predeterminada, el nombre de este archivo de configuración es MsDtsSrvr.ini.xml y el archivo se encuentra en la carpeta% archivos de programa%\Microsoft SQL Server\120\dts\binn  
   
  Normalmente, no tiene que realizar ningún cambio en este archivo de configuración, ni es necesario cambiar su ubicación predeterminada. Sin embargo, tendrá que modificar el archivo de configuración si sus paquetes están almacenados en una instancia con nombre o una instancia remota del [!INCLUDE[ssDE](../includes/ssde-md.md)], o en varias instancias de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Además, si mueve el archivo de configuración a una ubicación distinta de la predeterminada, tendrá que modificar la clave del Registro que especifica la ubicación del archivo.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66060500"
   
 -   Las carpetas raíz que deben mostrarse para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] son MSDB y File System.  
   
--   Los paquetes del sistema de archivos que el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra el servicio se encuentran disponibles en %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
+-   Los paquetes del sistema de archivos que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra el servicio se encuentran en%ProgramFiles%\MICROSOFT SQL Server\120\DTS\Packages.  
   
  Este archivo de configuración también especifica qué base de datos msdb contiene los paquetes que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administrará. De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configura para administrar los paquetes de la base de datos msdb de la instancia del [!INCLUDE[ssDE](../includes/ssde-md.md)] que se instala al mismo tiempo que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si no se instala al mismo tiempo una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] , el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configura para administrar paquetes de la base de datos msdb de la instancia local predeterminada del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66060500"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Modificación de la ubicación del archivo de configuración  
-La clave del registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile** especifica la ubicación y el nombre de la configuración de archivos que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa el servicio. El valor predeterminado de la clave del registro es **C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Puede actualizar el valor de la clave del Registro para utilizar un nombre y una ubicación diferentes para el archivo de configuración. Tenga en cuenta que el número de versión en la ruta de acceso (120 para SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) puede variar en función de la versión de SQL Server. 
+La clave del registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\ServiceConfigFile** especifica la ubicación y el nombre del archivo de configuración que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa el servicio. El valor predeterminado de la clave del registro es **c:\Archivos de programa\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Puede actualizar el valor de la clave del Registro para utilizar un nombre y una ubicación diferentes para el archivo de configuración. Tenga en cuenta que el número de versión en la ruta de acceso (120 para SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] ) variará en función de la versión SQL Server. 
   
   
 > [!CAUTION]  

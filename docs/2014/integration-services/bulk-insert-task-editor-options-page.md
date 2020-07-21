@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de inserción (página Opciones) de forma masiva | Microsoft Docs
+title: Editor de la tarea inserción masiva (página Opciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1751d1e0ac01d5459a8c76e6a48626c2ad6deafd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061189"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439182"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor de la tarea Inserción masiva (página Opciones)
-  Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea Inserción masiva copia gran cantidad de datos en una tabla o vista de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea inserción masiva copia grandes cantidades de datos en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabla o vista.  
   
  Para más información sobre las inserciones masivas, vea [Tarea Inserción masiva](control-flow/bulk-insert-task.md) y [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -60,11 +59,11 @@ ms.locfileid: "66061189"
 > [!NOTE]  
 >  Cada fila que no pueda importarse con la operación de carga masiva se contabilizará como un error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Inserción masiva &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea Inserción masiva &#40;página Conexión&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Editor de la tarea inserción masiva &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea inserción masiva &#40;página de conexión&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [Flujo de control](control-flow/control-flow.md)  
   
   

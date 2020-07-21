@@ -16,17 +16,17 @@ helpviewer_keywords:
 - PERCENT_RANK function
 - analytic functions, PERCENT_RANK
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b6e1144572288b2bc56fd434278ecda6cdc56f8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7832a121d1d50b069927b811634224718434be3e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832933"
 ---
-# <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
+# <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Calcula el rango relativo de una fila dentro de un grupo de filas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use PERCENT_RANK para evaluar la situación relativa de un valor dentro de un conjunto de resultados de la consulta o de una partición. PERCENT_RANK es similar a la función CUME_DIST.  
@@ -43,7 +43,7 @@ PERCENT_RANK( )
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. La \<cláusula rows o range\> de la sintaxis OVER no se puede especificar en una función PERCENT_RANK.  Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **float(53)**  
   
 ## <a name="general-remarks"></a>Notas generales  

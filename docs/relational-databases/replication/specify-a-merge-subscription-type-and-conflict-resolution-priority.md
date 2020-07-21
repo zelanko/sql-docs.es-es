@@ -1,6 +1,7 @@
 ---
-title: Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos | Microsoft Docs
-ms.custom: ''
+title: Especificación del tipo y la prioridad de resolución de conflictos (combinación)
+description: Obtenga información sobre cómo especificar el tipo y la directiva de resolución de conflictos usada por una suscripción de combinación para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2b828d83-2341-4924-b92a-4f81a22246c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fe64a74b85aca2ff02308c384dce89b9be540a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2981f84bd2cbf6c813a4adf761ddd271c8b68fd1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907611"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737055"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Especifique un tipo de suscripción de mezcla y la prioridad de resolución de conflictos en la página **Tipo de suscripción** del Asistente para nuevas suscripciones. Para obtener más información sobre cómo utilizar este asistente, vea [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) y [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
- El tipo de suscripción no se puede modificar después de crear la suscripción, pero se puede modificar la prioridad del tipo de suscripción de servidor en el cuadro de diálogo **Propiedades de suscripción - \<Publicador>: \<base_datos_publicación>** . Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ El tipo de suscripción no se puede modificar después de crear la suscripción, pero se puede modificar la prioridad del tipo de suscripción de servidor en el cuadro de diálogo **Propiedades de suscripción - \<Publisher>: \<PublicationDatabase>** . Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
 ### <a name="to-specify-a-merge-subscription-type-and-conflict-resolution-priority"></a>Para especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos  
   
@@ -34,7 +35,7 @@ ms.locfileid: "67907611"
   
 ### <a name="to-modify-the-conflict-resolution-priority"></a>Para modificar la prioridad de resolución de conflictos  
   
-1.  El cuadro de diálogo **Propiedades de la suscripción - \<Publicador>: \<base_datos_publicación>** , en el publicador, escriba un valor (de 0,00 a 99,99) para la opción **Prioridad**.  
+1.  En **Propiedades de suscripción -\<Publisher>: \<PublicationDatabase>** en el publicador, escriba un valor (de 0,00 a 99,99) en la opción **Prioridad**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

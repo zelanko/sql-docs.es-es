@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 418af5b3-b8d8-45ba-9219-24ac2a348c29
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa0dd504e38944f314896ac825c7e25709790e25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035805"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>Desinstalar una instancia existente de Distributed Replay
   Al desinstalar un componente de Distributed Replay (controlador o cliente), se quitará lo siguiente:  

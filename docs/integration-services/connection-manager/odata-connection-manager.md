@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a643d35b6f9c31060e2c0404a6042be8b1c87abb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 39499e36568d64f92d3608f610d64193c93389e6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298460"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74542184"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
 
@@ -51,7 +51,7 @@ ms.locfileid: "71298460"
   
 Para el acceso anónimo, seleccione la opción Autenticación de Windows.  
 
-Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, no puede usar la opción de autenticación **Microsoft Online Services**. Tampoco podrá usar ninguna opción que esté configurada para la autenticación multifactor.
+Para conectarse a Microsoft Dynamics AX Online o Microsoft Dynamics CRM Online, no puede usar la opción de autenticación **Microsoft Online Services**. Tampoco podrá usar ninguna opción que esté configurada para la autenticación multifactor. En este momento no se admite la autenticación moderna. 
   
 ### <a name="specifying-and-securing-credentials"></a>Especificar y proteger las credenciales  
  Si el servicio OData requiere autenticación básica, puede especificar un nombre de usuario y una contraseña en el [Editor del administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager-editor.md). Los valores que especifica en el editor se conservan en el paquete. El valor de contraseña se cifra según el nivel de protección del paquete.  

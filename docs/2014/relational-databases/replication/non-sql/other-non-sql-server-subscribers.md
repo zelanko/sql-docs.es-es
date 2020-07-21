@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068546"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Otros suscriptores que no son de SQL Server
-  Para obtener una lista de suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibles con [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vea [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Este tema incluye información acerca de los requisitos para los controladores ODBC y los proveedores de OLE DB.  
+   Para obtener una lista de suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibles con [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vea [Suscriptores que no son de SQL Server](non-sql-server-subscribers.md). Este tema incluye información acerca de los requisitos para los controladores ODBC y los proveedores de OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Requisitos para los controladores ODBC  
  El controlador ODBC:  
@@ -59,7 +58,7 @@ ms.locfileid: "63021944"
   
 -   `IDBProperties`  
   
- Si el proveedor es compatible con la interfaz **IDBInfo** , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza la interfaz para obtener información como el carácter de identificador entre comillas, la longitud máxima de instrucciones SQL y el número máximo de caracteres en nombres de tablas y de columnas.  
+ Si el proveedor admite la interfaz **IDBInfo**, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la usa para recuperar información como el carácter de identificador entre comillas, la longitud máxima de instrucciones SQL y el número máximo de caracteres en nombres de tablas y columnas.  
   
 ### <a name="session-object-interfaces"></a>Interfaces del objeto Session  
  Se requieren las siguientes interfaces:  
@@ -113,7 +112,7 @@ ms.locfileid: "63021944"
   
  Para obtener más información acerca del proveedor OLE DB, vea la documentación que se suministra con el proveedor OLE DB.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
   
   

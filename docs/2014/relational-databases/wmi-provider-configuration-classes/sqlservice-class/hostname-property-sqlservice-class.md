@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c27c0e32953833a8b7438501d1d42a617cae2cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 343b162346c1b96083f3fe428689401da6ab8c41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002156"
 ---
 # <a name="hostname-property-sqlservice-class"></a>Propiedad HostName (clase SqlService)
   Obtiene el nombre de host del servicio.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

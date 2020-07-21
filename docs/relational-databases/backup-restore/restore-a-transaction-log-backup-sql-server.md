@@ -1,5 +1,6 @@
 ---
 title: Restaurar una copia de seguridad de registros de transacciones (SQL Server) | Microsoft Docs
+description: En este artículo se describe cómo restaurar una copia de seguridad del registro de transacciones en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd2fd146d585b49579910d5876ba5268e4237f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717955"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -47,9 +48,9 @@ ms.locfileid: "68111177"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Las copias de seguridad deben restaurarse en el mismo orden en el que se crearon. Para que pueda restaurar una copia de seguridad determinada del registro de transacciones, primero debe restaurar las siguientes copias de seguridad anteriores sin revertir las transacciones sin confirmar, es decir, WITH NORECOVERY:  
   
@@ -59,19 +60,19 @@ ms.locfileid: "68111177"
   
          Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) y [Aplicar copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 > [!WARNING]  
 >  El proceso normal de una restauración consiste en seleccionar las copias de seguridad de registros en el cuadro de diálogo **Restaurar base de datos** junto con las copias de seguridad de datos y diferenciales.  
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar una copia de seguridad del registro de transacciones  
   
-1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
+1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
@@ -98,11 +99,11 @@ ms.locfileid: "68111177"
   
      En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-    |Encabezado|Valor|  
+    |Encabezado|Value|  
     |------------|-----------|  
     |**Restauración**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|Componente cuya copia de seguridad se ha realizado: **Base de datos**, **Archivo** o \<en blanco> (para registros de transacciones).|  
+    |**Componente**|Componente cuya copia de seguridad se ha realizado: **Base de datos**, **Archivo** o \<blank> (para registros de transacciones).|  
     |**Base de datos**|Nombre de la base de datos que forma parte de la operación de copia de seguridad.|  
     |**Fecha de inicio**|Fecha y hora de inicio de la operación de copia de seguridad, según la configuración regional del cliente.|  
     |**Fecha final**|Fecha y hora de finalización de la operación de copia de seguridad, según la configuración regional del cliente.|  
@@ -116,7 +117,7 @@ ms.locfileid: "68111177"
     |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
     |**Expiración**|Fecha y hora de expiración del conjunto de copia de seguridad.|  
   
-7.  Seleccione una de las opciones siguientes:  
+7.  Seleccione uno de los siguientes:  
   
     -   **A un momento dado**  
   
@@ -130,7 +131,7 @@ ms.locfileid: "68111177"
   
          En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-        |Encabezado|Valor|  
+        |Encabezado|Value|  
         |------------|-----------|  
         |\<blank>|Muestra una casilla para seleccionar la marca.|  
         |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  
@@ -191,7 +192,7 @@ ms.locfileid: "68111177"
   
 11. O bien, especifique un nombre de archivo en espera en el cuadro de texto **Archivo en espera** . Esta opción es obligatoria si se deja la base de datos en modo de solo lectura. Puede buscar el archivo en espera o escribir su ruta de acceso en el cuadro de texto.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 > [!IMPORTANT]  
 >  Se recomienda que especifique siempre WITH NORECOVERY o WITH RECOVERY en todas las instrucciones RESTORE para evitar ambigüedades. Esto es especialmente importante cuando se escriben scripts.  
@@ -236,7 +237,7 @@ ms.locfileid: "68111177"
     > [!IMPORTANT]  
     >  Si está creando una base de datos reflejada, omita el paso de recuperación. Una base de datos reflejada debe permanecer en el estado RESTORING.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  La base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usa el modelo de recuperación simple de forma predeterminada. En los siguientes ejemplos se requiere la modificación de la base de datos para utilizar el modelo de recuperación completa, como se indica a continuación:  
   
 ```sql  
@@ -289,7 +290,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   

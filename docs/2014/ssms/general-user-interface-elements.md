@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ace1911238a994785189d2d0911ac7d687dade
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064338"
 ---
 # <a name="general-user-interface-elements"></a>Elementos generales de la interfaz de usuario
   El **Editor**, la ventana **Propiedades** y el **Cuadro de herramientas** son algunos de los elementos básicos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

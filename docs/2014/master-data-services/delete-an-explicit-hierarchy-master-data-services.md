@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 048d0c4bc88f28274dc7efd686ad075242e926ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db4a6a51164fbcdfd62a542cba9e48a58438d0ed
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483093"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950725"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Eliminar una jerarquía explícita (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una jerarquía explícita cuando ya no la necesite.  
@@ -31,7 +30,7 @@ ms.locfileid: "65483093"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-explicit-hierarchy"></a>Eliminar una jerarquía explícita  
   
@@ -45,7 +44,7 @@ ms.locfileid: "65483093"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **editar entidad** página, en el **jerarquías explícitas** panel, haga clic en la jerarquía explícita que desea eliminar.  
+6.  En la página **Editar entidad** , en el panel **jerarquías explícitas** , haga clic en la jerarquía explícita que desea eliminar.  
   
 7.  Haga clic en **eliminar jerarquía seleccionada**.  
   
@@ -53,8 +52,8 @@ ms.locfileid: "65483093"
   
 9. En el cuadro de diálogo de confirmación adicional, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

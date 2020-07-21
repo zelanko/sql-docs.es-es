@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 29d655fc1a63513db073520981398d2b5a66c529
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68000121"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900143"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Uso de PowerShell en Windows para administrar SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se presenta [SQL Server PowerShell](../powershell/sql-server-powershell.md) y se describen un par de ejemplos sobre cómo usarlo con SQL Server en Linux. Actualmente, la compatibilidad de PowerShell con SQL Server está disponible en Windows, MacOS y Linux. Este artículo le guiará a través del uso de un equipo Windows para conectarse a una instancia de SQL Server remota en Linux.
 
@@ -25,7 +25,7 @@ En este artículo se presenta [SQL Server PowerShell](../powershell/sql-server-p
 
 [SQL PowerShell](../powershell/download-sql-server-ps-module.md) en Windows se mantiene en la Galería de PowerShell. Cuando trabaje con SQL Server, siempre debe usar la versión más reciente del módulo de SqlServer PowerShell.
 
-## <a name="before-you-begin"></a>Antes de comenzar
+## <a name="before-you-begin"></a>Antes de empezar
 
 Lea los [Problemas conocidos](sql-server-linux-release-notes.md) de SQL Server en Linux.
 
@@ -64,8 +64,8 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 Vamos a usar PowerShell en Windows para conectar con la instancia de SQL Server en Linux y mostrar un par de propiedades de servidor.
 
 Copie y pegue los siguientes comandos en el símbolo del sistema de PowerShell. Al ejecutar estos comandos, PowerShell:
-- Mostrará un cuadro de diálogo que le pida el nombre de host o la dirección IP de la instancia
-- Mostrará el cuadro de diálogo *Solicitud de credenciales de Windows PowerShell*, que le solicita las credenciales. Puede usar el *nombre de usuario* y la  *contraseña de SQL* para conectarse a su instancia de SQL Server en Linux
+- Muestran un cuadro de diálogo que le pide el nombre de host o la dirección IP de la instancia.
+- Mostrará el cuadro de diálogo *Solicitud de credenciales de Windows PowerShell*, que le solicita las credenciales. Puede usar el *nombre de usuario* y la  *contraseña de SQL* para conectarse a su instancia de SQL Server en Linux.
 - Use el cmdlet **Get-SqlInstance** para conectarse al **servidor** y mostrar algunas propiedades
 
 Opcionalmente, puede reemplazar la variable `$serverInstance` por la dirección IP o el nombre de host de la instancia de SQL Server.
@@ -135,9 +135,9 @@ Si necesita ver todas las bases de datos en la instancia, una opción es usar el
 En los pasos siguientes se usa PowerShell en Windows para examinar los registros de errores que se conectan a la instancia de SQL Server en Linux. También usaremos el cmdlet **Out-GridView** para mostrar información de los registros de errores en una pantalla de vista de cuadrícula.
 
 Copie y pegue los siguientes comandos en el símbolo del sistema de PowerShell. La ejecución puede tardar unos minutos. Estos comandos hacen lo siguiente:
-- Mostrará un cuadro de diálogo que le pida el nombre de host o la dirección IP de la instancia
-- Mostrará el cuadro de diálogo *Solicitud de credenciales de Windows PowerShell*, que le solicita las credenciales. Puede usar el *nombre de usuario* y la  *contraseña de SQL* para conectarse a su instancia de SQL Server en Linux
-- Use el cmdlet **Get-SqlErrorLog** para conectarse a la instancia de SQL Server en Linux y recuperar los registros de errores desde **ayer**
+- Muestran un cuadro de diálogo que le pide el nombre de host o la dirección IP de la instancia.
+- Mostrará el cuadro de diálogo *Solicitud de credenciales de Windows PowerShell*, que le solicita las credenciales. Puede usar el *nombre de usuario* y la  *contraseña de SQL* para conectarse a su instancia de SQL Server en Linux.
+- Usan el cmdlet **Get-SqlErrorLog** para conectarse a la instancia de SQL Server en Linux y recuperar los registros de errores desde **ayer**.
 - Canalizar el resultado al cmdlet **Out-GridView**
 
 Opcionalmente, puede reemplazar la variable `$serverInstance` por la dirección IP o el nombre de host de la instancia de SQL Server.
@@ -151,6 +151,6 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
 - [Cmdlets de SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)

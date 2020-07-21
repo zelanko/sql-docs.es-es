@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a689daf33baece845ddf81c09b99fc61c96509a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726497"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Envío de un correo electrónico de prueba con el Correo electrónico de base de datos  
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Utilice el cuadro de diálogo Enviar correo electrónico de prueba para probar la capacidad de enviar correo mediante un perfil específico.
 
@@ -47,7 +47,7 @@ Debe ser miembro del rol fijo de servidor sysadmin para utilizar el cuadro de di
 
     En la columna sent_status se indica si se ha enviado el mensaje de correo electrónico de prueba.
 
-1. Si se produce un error, ejecute la siguiente instrucción para ver el mensaje correspondiente:
+1. Si se produce un error, ejecute la instrucción siguiente para ver el mensaje correspondiente:
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 
@@ -55,7 +55,7 @@ Debe ser miembro del rol fijo de servidor sysadmin para utilizar el cuadro de di
     ```
 
 
-##  <a name="RelatedContent"></a> Vea también 
+##  <a name="see-also"></a><a name="RelatedContent"></a> Vea también 
   
 -   [Objetos de configuración de Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)
 -   [Objetos de mensajería de Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-messaging-objects.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098867"
 ---
 # <a name="upload-file-page-report-manager"></a>Cargar archivo (página del Administrador de informes)
@@ -22,7 +22,7 @@ ms.locfileid: "66098867"
   
 -   Los archivos .rdl cargados se publican como informes en el servidor de informes.  
   
--   Los archivos .smdl cargados se publican como modelos de informe si contienen información de la vista del origen de datos. Si les falta una referencia de vista del origen de datos, se produce un error durante la carga. Podría faltar información de vista del origen de datos si se carga un archivo .smdl desde un proyecto de modelos de informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . En los proyectos de modelo de informe, la información de la vista del origen de datos se almacena en un archivo independiente en lugar de hacerlo en el mismo archivo .smdl.  
+-   Los archivos .smdl cargados se publican como modelos de informe si contienen información de la vista del origen de datos. Si les falta una referencia de vista del origen de datos, se produce un error durante la carga. Es posible que falte información de la vista del origen de datos si se carga un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] archivo. SMDL desde un proyecto de modelos de informe. En los proyectos de modelo de informe, la información de la vista del origen de datos se almacena en un archivo independiente en lugar de hacerlo en el mismo archivo .smdl.  
   
      Los archivos de modelo que no contienen información de vista del origen de datos (y que por tanto se cargan correctamente) son aquellos que se han publicado previamente en un servidor de informes y se han guardado posteriormente del servidor a un archivo del sistema de archivos. Si abre la página Propiedades generales de un modelo y hace clic en **Editar** para abrirlo, puede guardarlo en un archivo y, a continuación, cargarlo como un nuevo modelo en el servidor de informes. El archivo .SMDL que cargue posteriormente dispondrá de toda la información necesaria para la publicación de modelos.  
   
@@ -49,16 +49,16 @@ ms.locfileid: "66098867"
  **Examinar**  
  Haga clic para elegir un archivo del sistema de archivos.  
   
- **Name**  
- Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o / al especificar un nombre de elemento.  
+ **Nombre**  
+ Escriba el nombre del archivo tal como desea que aparezca en el espacio de nombres del servidor de informes. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o/al especificar un nombre de elemento.  
   
  **Sobrescribir elemento si existe**  
  Active esta casilla si desea reemplazar un elemento por una versión más reciente. Para que se sobrescriba una versión existente, deben coincidir exactamente el nombre del elemento nuevo y el nombre del elemento existente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Carga de archivos a una carpeta](report-server/upload-files-to-a-folder.md)  
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Cargar archivos a una carpeta](report-server/upload-files-to-a-folder.md)  
   
   

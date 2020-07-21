@@ -1,5 +1,6 @@
 ---
 title: Tabla de ejemplo HumanResources.myTeam (SQL Server) | Microsoft Docs
+description: Para ejecutar ejemplos de código para importar y exportar datos en bloque en SQL Server, debe crear una tabla de prueba denominada myTeam en el esquema HumanResources.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d68c1cab5ea8902a4858cc7aaad79d08aa458f01
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035684"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012443"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabla de ejemplo HumanResources.myTeam (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Muchos de los ejemplos de código de [Importar y exportar datos masivos](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) requieren una tabla de prueba especial llamada **myTeam**. Antes de poder ejecutar los ejemplos, debe crear la tabla **myTeam** en el esquema **HumanResources** de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 > [!NOTE]  
@@ -31,12 +32,12 @@ ms.locfileid: "68035684"
   
  La tabla **myTeam** contiene las columnas siguientes.  
   
-|columna|Tipo de datos|Nulabilidad|Descripción|  
+|Columna|Tipo de datos|Nulabilidad|Descripción|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|No NULL|Clave principal para las filas. Identificador de empleado de un miembro de mi equipo.|  
 |**Nombre**|**nvarchar(50)**|No NULL|Nombre de un miembro de mi equipo.|  
-|**Title**|**nvarchar(50)**|Admisión de valores NULL|Cargo que tiene el empleado en mi equipo.|  
-|**Información previa**|**nvarchar(50)**|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
+|**Título**|**nvarchar(50)**|Nullable|Cargo que tiene el empleado en mi equipo.|  
+|**Información preliminar**|**nvarchar(50)**|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
   
 **Para crear HumanResources.myTeam**  
   

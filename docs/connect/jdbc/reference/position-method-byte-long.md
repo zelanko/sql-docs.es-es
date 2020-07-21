@@ -1,5 +1,5 @@
 ---
-title: Método Position (byte, Long) | Microsoft Docs
+title: Método position (byte, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf8cfa3bb6aed74c7689639698715dc24803d46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 938254b8076d78ebd1ac768d130904077828aa03
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976477"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80914391"
 ---
 # <a name="position-method-byte-long"></a>Método position (byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,11 +50,11 @@ public long position(byte[] bPattern,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método de posición se especifica mediante el método Position en la interfaz java. SQL. BLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método position especifica este método position en la interfaz java.sql.Blob.  
   
 ## <a name="see-also"></a>Consulte también  
- [Position ( &#40;método) SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
+ [Método position &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [Métodos SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Miembros SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Clase SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad (VC ++) de origen | Microsoft Docs
+title: Ejemplo de la propiedad Source (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930883"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759791"
 ---
 # <a name="source-property-example-vc"></a>Ejemplo de la propiedad Source (VC ++)
-Este ejemplo se muestra el [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad abriendo tres [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos basados en orígenes de datos diferentes.  
+En este ejemplo se muestra la propiedad de [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) abriendo tres objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basados en orígenes de datos diferentes.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -156,6 +156,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad Source (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

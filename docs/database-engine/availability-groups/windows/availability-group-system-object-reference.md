@@ -1,6 +1,7 @@
 ---
-title: Referencia de objetos de sistema de grupos de disponibilidad AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Referencia de objetos de sistema de grupos de disponibilidad
+description: Referencia de los diversos objetos del sistema que se pueden usar cuando se trabaja con grupos de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2010
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: b9bdf352a566917678294c6c63ac52bd0d27de8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 140953484006d33e7814c19b9eb5bd6abcd29009
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991394"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74822467"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Referencia de objetos de sistema de grupos de disponibilidad AlwaysOn
 

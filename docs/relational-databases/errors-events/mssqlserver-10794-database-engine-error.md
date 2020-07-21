@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 9a6864bc-d4ea-4582-a875-eed9424774b1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5cdb950146ed0134fda3b9f9955395edf0530e87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3a22aef28381db536a5637d07b776b5c2fd1df2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781299"
 ---
-# <a name="mssqlserver10794"></a>MSSQLSERVER_10794
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10794"></a>MSSQLSERVER_10794
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|10794|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|10794|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P3_HEKATON_INDEX|  
 |Texto del mensaje|*construct* '*feature*' no se admite con *construct*.|  

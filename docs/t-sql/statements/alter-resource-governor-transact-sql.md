@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927211"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381139"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta instrucción se usa para realizar las siguientes acciones de Resource Governor en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67927211"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ALTER RESOURCE GOVERNOR   
       { DISABLE | RECONFIGURE }  
     | WITH ( CLASSIFIER_FUNCTION = { schema_name.function_name | NULL } )  
@@ -55,7 +55,10 @@ ALTER RESOURCE GOVERNOR
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  DISABLE  
  Deshabilita el regulador de recursos. La deshabilitación de Resource Governor tiene las siguientes consecuencias:  
   
@@ -94,11 +97,11 @@ ALTER RESOURCE GOVERNOR
  Restablece las estadísticas en todos los grupos de cargas de trabajo y los grupos de recursos. Para obtener más información, vea [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) y [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  MAX_OUTSTANDING_IO_PER_VOLUME = *value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
  Establece la cantidad máxima de operaciones de E/S en cola por volumen de disco. Estas operaciones de E/S pueden ser lecturas o escrituras de cualquier tamaño.  El valor máximo de MAX_OUTSTANDING_IO_PER_VOLUME es 100. No es un porcentaje. Este valor está diseñado para optimizar la gobernanza de recursos de E/S según las características de E/S de un volumen de disco. Se recomienda experimentar con distintos valores y plantearse el uso de una herramienta de calibración como IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) o SQLIO (en desuso) para identificar el valor máximo del subsistema de almacenamiento. Este valor proporciona una comprobación de seguridad de nivel de sistema que permite a SQL Server cumplir el mínimo de IOPS para los grupos de recursos aunque otros grupos tengan el valor de MAX_IOPS_PER_VOLUME establecido en ilimitado. Para obtener más información sobre MAX_IOPS_PER_VOLUME, vea [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVENOR RECONFIGURE y ALTER RESOURCE GOVERNOR RESET STATISTICS no se pueden usar en una transacción de usuario.  
   
  El parámetro RECONFIGURE forma parte de la sintaxis de Resource Governor y no debe confundirse con [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), que es una instrucción DDL independiente.  
@@ -178,7 +181,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. Establecer la opción MAX_OUTSTANDING_IO_PER_VOLUME  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. Establecer la opción MAX_OUTSTANDING_IO_PER_VOLUME  
  En el ejemplo siguiente se establece la opción MAX_OUTSTANDING_IO_PER_VOLUME en 20.  
   
 ```  

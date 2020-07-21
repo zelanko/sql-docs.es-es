@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear el proyecto y el paquete básico | Microsoft Docs'
+title: 'Lección 1: crear el proyecto y el paquete básico | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17bfedafcb97793ccccf414a6ae5da9bc66faa66
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767507"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440612"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lección 1: Creación del proyecto y el paquete básico
   En esta lección, creará un paquete ETL simple que extrae datos de un único origen de archivo plano, transforma los datos usando dos componentes de la transformación de búsqueda y escribe dichos datos en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes nuevos, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
   
 > [!IMPORTANT]  
->  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación **AdventureWorksDW2012**, consulte [Microsoft SQL Server Product Samples: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
+>  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación de **AdventureWorksDW2012**, vea [Microsoft SQL Server Product samples: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Descripción de los requisitos de paquete  
  Este tutorial necesita Microsoft SQL Server Data Tools.  
@@ -60,7 +59,7 @@ ms.locfileid: "62767507"
 ### <a name="looking-at-the-destination"></a>Información sobre el destino  
  El destino final de los datos de origen es la tabla de hechos **FactCurrency** de **AdventureWorksDW**. La tabla de hechos **FactCurrency** tiene cuatro columnas y tiene relaciones con dos tablas de dimensiones, como se muestra en la tabla siguiente.  
   
-|Nombre de la columna|Tipo de datos|Tabla de búsqueda|Columna de búsqueda|  
+|Nombre de columna|Tipo de datos|Tabla de búsqueda|columna de búsqueda|  
 |-----------------|---------------|------------------|-------------------|  
 |AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
@@ -70,9 +69,9 @@ ms.locfileid: "62767507"
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Asignar datos de origen para que sean compatibles con el destino  
  El análisis de los formatos de datos de origen y de destino indica que serán necesarias búsquedas para los valores **CurrencyKey** y **DateKey** . Las transformaciones que realizarán estas búsquedas obtendrán los valores de **CurrencyKey** y **DateKey** usando las claves alternativas de las tablas de dimensiones **DimCurrency** y **DimDate** .  
   
-|Columna de archivo plano|Nombre de tabla|Nombre de la columna|Tipo de datos|  
+|Columna de archivo plano|Nombre de la tabla|Nombre de columna|Tipo de datos|  
 |----------------------|----------------|-----------------|---------------|  
-|0|FactCurrency|AverageRate|float|  
+|0|FactCurrency|AverageRate|FLOAT|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
 |2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrency|EndOfDayRate|FLOAT|  
@@ -80,25 +79,25 @@ ms.locfileid: "62767507"
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Paso 1: Creación de un proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Paso 3: Adición y configuración de un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Paso 4: Agregar una tarea de flujo de datos al paquete](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Paso 4: Adición de una tarea Flujo de datos al paquete](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [Paso 5: Agregar y configurar el origen de archivo plano](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [Paso 5: Adición y configuración del origen de archivo plano](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Paso 6: Agregar y configurar transformaciones de búsqueda](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Paso 6: Adición y configuración de transformaciones de búsqueda](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Paso 7: Agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Paso 7: Adición y configuración del destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Paso 8: Lo más fácil de entender el paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Paso 9: Probar el paquete del Tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Paso 9: Prueba del paquete del tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
- [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [Paso 1: Creación de un proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

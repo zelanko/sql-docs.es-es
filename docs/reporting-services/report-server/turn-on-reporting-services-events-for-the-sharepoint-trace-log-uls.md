@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68893240"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
@@ -35,10 +35,10 @@ ms.locfileid: "68893240"
   
 -   [Ubicación del registro de seguimiento](#bkmk_trace)  
   
-##  <a name="bkmk_general"></a> Recomendaciones generales para el registro ULS  
+##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> Recomendaciones generales para el registro ULS  
  En la tabla siguiente se enumeran los niveles y categorías de eventos que se recomiendan para supervisar un entorno de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cuando se registra un evento, cada entrada incluye el momento en que se registró, el nombre del proceso y el identificador de subproceso.  
   
-|Categoría|Nivel|Descripción|  
+|Category|Nivel|Descripción|  
 |--------------|-----------|-----------------|  
 |Base de datos|Verbose|Registra eventos que implican el acceso a bases de datos.|  
 |General|Verbose|Registra eventos que implican el acceso a los elementos siguientes:<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] páginas Web<br /><br /> Controlador HTTP del visor de informes<br /><br /> Acceso a informes (archivos .rdl)<br /><br /> Orígenes de datos (archivos .rsds)<br /><br /> Direcciones URL en el sitio de SharePoint (archivos .smdl)|  
@@ -46,7 +46,7 @@ ms.locfileid: "68893240"
 |Topología|Verbose|Registra información del usuario actual.|  
 |elementos web|Verbose|Registra eventos que implican el acceso al elemento web Visor de informes.|  
   
-##  <a name="bkmk_turnon"></a> Para activar y desactivar eventos de Reporting Services en la categoría de Reporting Services  
+##  <a name="to-turn-on-and-off-reporting-services-events-in-the-reporting-services-category"></a><a name="bkmk_turnon"></a> Para activar y desactivar eventos de Reporting Services en la categoría de Reporting Services  
   
 1.  En Administración central de SharePoint  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68893240"
 > [!NOTE]  
 >  **no admite la opción** Evento crítico mínimo para notificar al registro de eventos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Se omitirá la opción.  
   
-##  <a name="bkmk_recommended"></a> Configuración recomendada  
+##  <a name="recommended-configuration"></a><a name="bkmk_recommended"></a> Configuración recomendada  
  Las siguientes opciones de registro son la configuración estándar recomendada:  
   
 -   **Redirector de HTTP**  
@@ -80,7 +80,7 @@ ms.locfileid: "68893240"
 Get-SPDiagnosticConfig  
 ```  
   
-##  <a name="bkmk_readentries"></a> Lectura de las entradas de registro  
+##  <a name="reading-the-logs-entries"></a><a name="bkmk_readentries"></a> Lectura de las entradas de registro  
  El formato de las entradas de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es el siguiente.  
   
 1.  **Producto: SQL Server Reporting Services.**  
@@ -89,7 +89,7 @@ Get-SPDiagnosticConfig
   
 3.  **Categoría**: los eventos relacionados o comunicados desde un componente front-end web no contendrán "Servidor de informes". Por ejemplo, "Proxy de aplicación de servicio - Tiempo de ejecución de alertas del servidor de informes". Las entradas de WFE contienen un CorrelationID pero no así las entradas del servidor.  
   
-##  <a name="bkmk_list"></a> Lista de eventos de SQL Server Reporting Services  
+##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Lista de eventos de SQL Server Reporting Services  
  La tabla siguiente contiene una lista de eventos de la categoría SQL Server Reporting Services:  
   
 |Nombre del área|Entradas de descripción o ejemplo|  
@@ -137,7 +137,7 @@ Get-SPDiagnosticConfig
 |Proxy de aplicación de servicio||  
 |Servicio compartido|Entradas de ejemplo:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Acceso de MediumGranting a las bases de datos de contenido.<br /><br /> Instancias de MediumProvisioning para ReportingWebServiceApplication<br /><br /> Cambio de la cuenta de servicio de MediumProcessing para ReportingWebServiceApplication<br /><br /> Permisos de base de datos de MediumSetting.|  
   
-##  <a name="bkmk_powershell"></a> Ver un archivo de registro con PowerShell  
+##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> Ver un archivo de registro con PowerShell  
  ![Contenido relacionado con PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")Puede usar PowerShell para devolver una lista de los eventos relacionados con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de un archivo de registro de ULS. Escriba el comando siguiente desde el Shell de administración de SharePoint 2010 para devolver una lista filtrada de filas desde el archivo de registro ULS UESQL11SPOINT-20110606-1530.log, que contiene "**sql server reporting services**":  
   
 ```  
@@ -148,7 +148,7 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Para más información sobre cómo usar PowerShell para ver datos de registro, vea [Visualización de registros de diagnóstico (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
   
-##  <a name="bkmk_trace"></a> Ubicación del registro de seguimiento  
+##  <a name="trace-log-location"></a><a name="bkmk_trace"></a> Ubicación del registro de seguimiento  
  Los archivos de registro de seguimiento se encuentran normalmente en la carpeta **c:\Archivos de programa\Common files\Microsoft Shared\Web Server Extensions\14\logs** , pero puede comprobar o cambiar la ruta de acceso en la página **Registro de diagnóstico** de Administración central de SharePoint.  
   
  Para más información y conocer los pasos para configurar el registro de diagnóstico en un servidor de SharePoint en Administración Central de SharePoint 2010, vea [Configuración de las opciones del registro de diagnóstico (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  

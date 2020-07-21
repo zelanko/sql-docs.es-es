@@ -1,7 +1,7 @@
 ---
 title: DROP WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -16,24 +16,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP WORKLOAD CLASSIFIER statement
-ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 92e853a1d54c91b43d166555162f77030e07b9e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5db3c50e4b0a21e2e1acf9512995870b62375dd8
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072031"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73632834"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Coloca un clasificador de administración de cargas de trabajo definido por el usuario existente.  
+Coloca un clasificador de administración de cargas de trabajo definido por el usuario existente.  Si las solicitudes se ejecutan o están en la cola de solicitudes en estado suspendido, mantendrán su clasificación y el clasificador se podrá colocar inmediatamente. El hecho de colocar y volver a crear el clasificador con una importancia distinta no afectará a una solicitud ya clasificada.
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
 
@@ -44,14 +43,8 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 ## <a name="arguments"></a>Argumentos
 
 *classifier_name*  
-Especifica el nombre por el que se identifica el clasificador de carga de trabajo.  "classifier_name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser único en la instancia.
+Especifica el nombre por el que se identifica el clasificador de carga de trabajo.
   
-## <a name="remarks"></a>Notas
-
-La instrucción DROP WORKLOAD CLASSIFIER no se permite en clasificadores de cargas de trabajo del sistema.
-
-Si las solicitudes se ejecutan o están en la cola de solicitudes en estado suspendido, mantendrán su clasificación y el clasificador se podrá colocar inmediatamente.  El hecho de colocar y volver a crear el clasificador con una importancia distinta no afectará a una solicitud ya clasificada.
-
 ## <a name="permissions"></a>Permisos
 
 Requiere el permiso CONTROL DATABASE.  

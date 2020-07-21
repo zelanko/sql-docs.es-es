@@ -1,6 +1,6 @@
 ---
-title: Cuadro de diálogo Argumentos | Microsoft Docs
-ms.custom: ''
+title: Argumentos, cuadro de diálogo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4573c603ad2fed4071a7903c20bd82aec3c78096
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 804cec4cbfe25f92b6b244b25b25a4498a09f1fa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267351"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245037"
 ---
 # <a name="arguments-dialog-box"></a>Argumentos, cuadro de diálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Enumera las variables actuales especificadas para la herramienta en el cuadro de
 Muestra el valor de los argumentos especificados en el cuadro de diálogo **Argumentos** .  
   
 ## <a name="see-also"></a>Consulte también  
-[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+[Argumentos de las herramientas externas](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Cuadro de diálogo Herramientas externas](../ssms/external-tools-dialog-box.md)  
 [Elementos generales de la interfaz de usuario](../ssms/general-user-interface-elements.md)  
   

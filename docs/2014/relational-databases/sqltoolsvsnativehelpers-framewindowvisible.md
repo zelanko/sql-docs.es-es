@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fd09d5d20b2a84050390c3e131265feddc09a409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 414f1a03ea87f6cc6b0916a0122ca2a66d5855a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060185"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   Propiedad que especifica si un marco de ventana proporcionado es visible. El método del asistente se utiliza a partir del código administrado.  

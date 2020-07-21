@@ -12,15 +12,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25ee5f9ba6a17f0d7e0e7b5416079c19bb885c30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770397"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437602"
 ---
 # <a name="ole-db-command-transformation"></a>transformación Comando de OLE DB
   La transformación Comando de OLE DB ejecuta una instrucción SQL para cada fila en un flujo de datos. Por ejemplo, puede ejecutar una instrucción SQL que inserte, actualice o elimine filas en una tabla de base de datos.  
@@ -49,7 +48,7 @@ ms.locfileid: "62770397"
 ## <a name="related-tasks"></a>Related Tasks  
  Puede configurar la transformación mediante el Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o el modelo de objetos. Para obtener detalles sobre cómo configurar la transformación mediante el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , vea  [Configurar la transformación Comando de OLE DB](../../configure-the-ole-db-command-transformation.md). Vea la Guía del desarrollador para obtener información detallada sobre la configuración mediante programación de esta transformación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

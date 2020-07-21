@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab8e9767dc0f71ae6eae4da5658243c23d8f71e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768711"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427972"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (expresión de SSIS)
   Devuelve un token (subcadena) de una cadena basándose en los delimitadores especificados que separan los tokens en la cadena y el número del token que indica qué token se va a devolver.  
@@ -39,14 +38,14 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentarios  
- Esta función divide la cadena <character_expression> en un conjunto de tokens separados por los delimitadores especificados en <delimiter_string> y devuelve el token número N, donde N es el número de concurrencia del token especificado por el parámetro \<occurrence>. Vea la sección Ejemplos para los usos de ejemplo de esta función.  
+## <a name="remarks"></a>Observaciones  
+ Esta función divide el <character_expression> cadena en un conjunto de tokens separados por los delimitadores especificados en el delimiter_string de <> y, a continuación, devuelve el token n, donde N es el número de apariciones del token especificado por el \<occurrence> parámetro. Vea la sección Ejemplos para los usos de ejemplo de esta función.  
   
  Las observaciones siguientes se aplican a la función TOKEN:  
   
 -   La cadena delimitadora puede contener uno o más caracteres delimitadores.  
   
--   Si el valor del parámetro \<occurrence> es mayor que el número total de tokens de la cadena, la función devuelve NULL.  
+-   Si el valor del \<occurrence> parámetro es mayor que el número total de tokens de la cadena, la función devuelve NULL.  
   
 -   Los delimitadores iniciales se omiten.  
   
@@ -99,7 +98,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   
   

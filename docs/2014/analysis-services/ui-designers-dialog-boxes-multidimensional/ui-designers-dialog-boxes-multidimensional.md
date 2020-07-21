@@ -1,5 +1,5 @@
 ---
-title: Diseñadores de interfaz de usuario y los cuadros de diálogo para el análisis Multidimensional | Microsoft Docs
+title: Diseñadores y cuadros de diálogo de la interfaz de usuario para análisis multidimensional | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,17 +8,16 @@ ms.technology: analysis-services
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2d10e1b117cf88f74523dad6fcec3cfd3ee871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a098b1c75f6ef388e6e7a069827861623f8f4e85
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938234"
 ---
-# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Diseñadores de interfaz de usuario y los cuadros de diálogo para el análisis Multidimensional
+# <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>Diseñadores y cuadros de diálogo de la interfaz de usuario para análisis multidimensionales
 
-Esta sección contiene documentación sobre los diseñadores de interfaz de usuario y los cuadros de diálogo para el análisis multidimensional.
+Esta sección contiene documentación sobre los diseñadores y cuadros de diálogo de la interfaz de usuario (UI) para el análisis multidimensional.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

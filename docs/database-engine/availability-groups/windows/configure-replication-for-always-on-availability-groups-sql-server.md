@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689659"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196903"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configuración de la replicación con grupos de disponibilidad Always On
 
@@ -27,7 +27,7 @@ ms.locfileid: "72689659"
 
   La configuración de la replicación y los grupos de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conlleva siete pasos. Cada paso se describe con más detalle en las secciones siguientes.  
   
-##  <a name="step1"></a> 1. Configurar las publicaciones y suscripciones de la base de datos  
+##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Configurar las publicaciones y suscripciones de la base de datos  
  **Configurar el distribuidor**  
   
  La base de datos de distribución no se puede colocar en un grupo de disponibilidad con SQL Server 2012 y SQL Server 2014. Se admite poner la base de datos de distribución en un grupo de disponibilidad con SQL Server 2016 y superior. Para más información, consulte [Configurar la base de datos de distribución en un grupo de disponibilidad](../../../relational-databases/replication/configure-distribution-availability-group.md).
@@ -98,7 +98,7 @@ ms.locfileid: "72689659"
   
 3.  Cree la publicación de replicación, los artículos y las suscripciones. Para obtener más información acerca de cómo configurar la replicación, vea los objetos Publicar datos y Base de datos.  
   
-##  <a name="step2"></a> 2. Configurar el grupo de disponibilidad AlwaysOn  
+##  <a name="2-configure-the-always-on-availability-group"></a><a name="step2"></a> 2. Configurar el grupo de disponibilidad AlwaysOn  
  En la principal deseada, cree el grupo de disponibilidad con la base de datos publicada (o que va a ser publicada) como una base de datos de miembros. Si usa el Asistente para grupo de disponibilidad, puede permitir que el asistente sincronice inicialmente las bases de datos de réplica secundaria o puede realizar la inicialización manualmente mediante copias de seguridad y restauración.  
   
  Cree un agente de escucha DNS para el grupo de disponibilidad que utilizarán los agentes de replicación para conectarse a la principal actual. El nombre del agente de escucha especificado se utilizará como el destino de la redirección para el par publicador original y base de datos publicada. Por ejemplo, si utiliza DDL para configurar el grupo de disponibilidad, el siguiente ejemplo de código se puede usar para especificar un agente de escucha para un grupo de disponibilidad denominado `MyAG`:  
@@ -111,7 +111,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  Para obtener más información, vea [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md).  
 
   
-##  <a name="step3"></a> 3. Asegurarse de que todos los hosts de la réplica secundaria están configurados para la replicación  
+##  <a name="3-ensure-that-all-of-the-secondary-replica-hosts-are-configured-for-replication"></a><a name="step3"></a> 3. Asegurarse de que todos los hosts de la réplica secundaria están configurados para la replicación  
  Compruebe que se ha configurado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cada host de réplica secundaria para admitir la replicación. La siguiente consulta se puede ejecutar en cada host de réplica secundaria para determinar si está instalada la replicación:  
   
 ```  
@@ -124,7 +124,7 @@ SELECT @installed;
   
  Si *\@installed* es 0, se debe agregar la replicación a la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-##  <a name="step4"></a> 4. Configurar los hosts de la réplica secundaria como publicadores de replicación  
+##  <a name="4-configure-the-secondary-replica-hosts-as-replication-publishers"></a><a name="step4"></a> 4. Configurar los hosts de la réplica secundaria como publicadores de replicación  
  Una réplica secundaria no puede actuar como un publicador o republicador de la replicación, pero la replicación debe configurarse de modo que la secundaria pueda asumir el control después de una conmutación por error. En el distribuidor, configure la distribución para cada host de réplica secundaria. Especifique la misma base de datos de distribución y directorio de trabajo que se especificó cuando se agregó el publicador original en el distribuidor. Si usa procedimientos almacenados para configurar la distribución, use **sp_adddistpublisher** a fin de asociar los publicadores remotos al distribuidor. Si el publicador original utilizó *\@login* y *\@password*, especifique los mismos valores al agregar los hosts de la réplica secundaria como publicadores.  
   
 ```  
@@ -151,7 +151,7 @@ EXEC sys.sp_addlinkedserver
     @server = 'MySubscriber';  
 ```  
   
-##  <a name="step5"></a> 5. Redirigir el publicador original al nombre del agente de escucha  
+##  <a name="5-redirect-the-original-publisher-to-the-ag-listener-name"></a><a name="step5"></a> 5. Redirigir el publicador original al nombre del agente de escucha  
  En la base de datos de distribución del distribuidor, ejecute el procedimiento almacenado **sp_redirect_publisher** para asociar el publicador original y la base de datos publicada al nombre del agente de escucha de grupo de disponibilidad.  
   
 ```  
@@ -163,7 +163,7 @@ EXEC sys.sp_redirect_publisher
     @redirected_publisher = 'MyAGListenerName';  
 ```  
   
-##  <a name="step6"></a> 6. Ejecutar el procedimiento almacenado de validación de la replicación para comprobar la configuración  
+##  <a name="6-run-the-replication-validation-stored-procedure-to-verify-the-configuration"></a><a name="step6"></a> 6. Ejecutar el procedimiento almacenado de validación de la replicación para comprobar la configuración  
  En la base de datos de distribución del distribuidor, ejecute el procedimiento almacenado **sp_validate_replica_hosts_as_publishers** a fin de comprobar que ahora todos los hosts de la réplica se configuran para servir como publicadores de la base de datos publicada.  
   
 ```  
@@ -187,12 +187,12 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Se encontraron uno o varios errores de validación del publicador para el host de réplica 'MyReplicaHostName'.  
   
- Este comportamiento es el esperado. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
+ Este es el comportamiento esperado. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
   
-##  <a name="step7"></a> 7. Agregar el publicador original al Monitor de replicación  
+##  <a name="7-add-the-original-publisher-to-replication-monitor"></a><a name="step7"></a> 7. Agregar el publicador original al Monitor de replicación  
  En cada réplica del grupo de disponibilidad, agregue el publicador original al Monitor de replicación.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Replicación**  
   
 -   [Mantener una base de datos de publicación AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
@@ -224,9 +224,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
-  
-  
+- [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+- [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+- [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+- [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  
+- Si usa puertos no predeterminados, vea [Tutorial: Publicador, distribuidor y suscriptor en Grupos de disponibilidad AlwaysOn](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups).

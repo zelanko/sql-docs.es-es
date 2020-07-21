@@ -19,18 +19,18 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c9599ddcade6c62a21245ef16cc89034df1524c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914365"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003801"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve la posición inicial de la primera repetición de un patrón en la expresión especificada, o ceros si el patrón no se encuentra, en todos los tipos de datos de texto y caracteres.  
   
@@ -44,15 +44,18 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>Argumentos  
  *pattern*  
- Es una expresión de carácter que contiene la secuencia que se va a buscar. Se pueden usar caracteres comodín, pero el carácter % debe ir delante y detrás de *pattern* (a menos que busque el primer o el último carácter). *pattern* es una expresión de la categoría del tipo de datos de cadena de caracteres. *pattern* tiene un límite de 8000 caracteres.  
+ Es una expresión de carácter que contiene la secuencia que se va a buscar. Se pueden usar caracteres comodín, pero el carácter % debe ir delante y detrás de *pattern* (a menos que busque el primer o el último carácter). *pattern* es una expresión de la categoría del tipo de datos de cadena de caracteres. *pattern* tiene un límite de 8000 caracteres.
+
+ > [!NOTE]
+ > Aunque las expresiones regulares tradicionales no se admiten de forma nativa en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede lograr una coincidencia de patrones complejos similar mediante el uso de varias expresiones comodín. Consulte la documentación [Operadores de cadena](../../t-sql/language-elements/string-operators-transact-sql.md) para obtener más información sobre la sintaxis de los caracteres comodín.
   
  *expression*  
  [expression](../../t-sql/language-elements/expressions-transact-sql.md) es una expresión, normalmente una columna en la que se busca el patrón especificado. *expression* es de la categoría del tipo de datos de cadena de caracteres.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **bigint** si *expression* es de los tipos de datos **varchar(max)** o **nvarchar(max)** ; en caso contrario, **int**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si *pattern* o *expression* son NULL, PATINDEX devuelve NULL.  
  
 La posición inicial de PATINDEX es 1.
@@ -70,18 +73,22 @@ Cuando se usan intercalaciones SC, el valor devuelto contará cualquier par supl
  En este ejemplo se comprueba una cadena corta de caracteres (`interesting data`) para la ubicación inicial de los caracteres `ter`.  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-`3`  
+
+```
+position
+--------
+3
+```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. Utilizar un patrón con PATINDEX  
 En el siguiente ejemplo se busca la posición en que comienza el patrón `ensure` en una fila específica de la columna `DocumentSummary` de la tabla `Document` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 Si no restringe las filas que se van a buscar mediante una cláusula `WHERE`, la consulta devuelve todas las filas de la tabla e informa de valores distintos de cero para las filas en las que se encontró el modelo, y cero para todas las filas en las que no se encontró el modelo.  
@@ -101,21 +108,36 @@ Si no restringe las filas que se van a buscar mediante una cláusula `WHERE`, la
  En el siguiente ejemplo se utilizan los caracteres comodín % y _ para buscar la posición en la que comienza el modelo `'en'` en la cadena especificada, seguido de cualquier carácter y `'ure'` (el índice comienza en 1):  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX` funciona igual que `LIKE`, por lo que se puede usar cualquiera de los caracteres comodín. No es necesario incluir el patrón entre caracteres de porcentaje. `PATINDEX('a%', 'abc')` devuelve 1 y `PATINDEX('%a', 'cba')` devuelve 3.  
   
  A diferencia de `LIKE`, `PATINDEX` devuelve una posición, de forma similar a `CHARINDEX`.  
-  
-### <a name="d-using-collate-with-patindex"></a>D. Utilizar COLLATE con PATINDEX  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. Uso de expresiones de caracteres comodín complejos con PATINDEX 
+En el ejemplo siguiente se usa el [operador de cadena](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` para buscar la posición de un carácter que no es un número, una letra o un espacio.
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>E. Utilizar COLLATE con PATINDEX  
  En el siguiente ejemplo se utiliza la función `COLLATE` para especificar de forma explícita la intercalación de la expresión que se está buscando.  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. Usar una variable para especificar el patrón  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. Usar una variable para especificar el patrón  
 En este ejemplo se usa una variable para pasar un valor al parámetro *pattern*. Aquí se usa la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql  
-DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+DECLARE @MyValue VARCHAR(10) = 'safety';   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

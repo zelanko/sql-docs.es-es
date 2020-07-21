@@ -1,6 +1,7 @@
 ---
-title: 'Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica) | Microsoft Docs'
-ms.custom: ''
+title: 'Asistente para grupos de disponibilidad: Página Especificar réplicas'
+description: Describe las opciones de la página Especificar réplicas del Asistente para nuevo grupo de disponibilidad de SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,25 +14,25 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 190ff2f2f7fe510722f73c03bdc4beba18273d2b
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176213"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898092"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen las opciones de la página **Especificar réplicas** . Esta página se aplica a **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** y a **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
   
-|Pestaña|Descripción breve|  
+|Pestaña|Breve descripción|  
 |---------|-----------------------|  
 |[Réplicas](#ReplicasTab)|Utilice esta pestaña para especificar cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará u hospeda actualmente una réplica secundaria. Tenga en cuenta que la instancia de servidor a la que está conectado actualmente debe hospedar la réplica principal.<br /><br /> Termine de especificar todas las réplicas en la pestaña **Réplicas** antes de iniciar las demás pestañas.<br/><br/> Observe que la **conmutación automática por error** está deshabilitada si el tipo de clúster es **NONE**. SQL Server solo admite la conmutación por error manual cuando un grupo de disponibilidad no está en un clúster. <br/><br/> Si el tipo de clúster es EXTERNAL, el modo de conmutación por error es **Externo**. <br/><br/> Al agregar una réplica, todas las réplicas nuevas deben estar en el mismo tipo de sistema operativo que las réplicas existentes. <br/><br/>Al agregar una réplica, si la réplica principal se encuentra en un WSFC, las réplicas secundarias deben pertenecer al mismo clúster.|
 |[Extremos](#EndpointsTab)|Utilice esta pestaña para comprobar los extremos de creación de reflejo de base de datos existentes y también, si este extremo falta en una instancia de servidor cuyas cuentas de servicio utilizan la autenticación de Windows, para crear el extremo automáticamente.|  
 |[Preferencias de copia de seguridad](#BackupPreferencesTab)|Utilice esta pestaña para especificar sus preferencias de copias de seguridad para el grupo de disponibilidad en conjunto y las prioridades de copias de seguridad para las réplicas de disponibilidad individuales.|  
-|[Escucha](#Listener)|Utilice esta pestaña, si está disponible, para crear un agente de escucha del grupo de disponibilidad. De forma predeterminada, no se crea un agente de escucha.<br /><br /> Esta pestaña está disponible solo si se ejecuta [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP está deshabilitado si el tipo de clúster es EXTERNAL o NONE. |  
+|[Agente de escucha](#Listener)|Utilice esta pestaña, si está disponible, para crear un agente de escucha del grupo de disponibilidad. De forma predeterminada, no se crea un agente de escucha.<br /><br /> Esta pestaña está disponible solo si se ejecuta [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].<br/><br/>DHCP está deshabilitado si el tipo de clúster es EXTERNAL o NONE. |  
   
-##  <a name="ReplicasTab"></a> Pestaña réplicas  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> Pestaña réplicas  
  **Instancia del servidor**  
  Muestra el nombre de la instancia del servidor que hospedará la réplica de disponibilidad.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "70176213"
  **Quitar réplica**  
  Haga clic para quitar la réplica secundaria seleccionada del grupo de disponibilidad.  
   
-##  <a name="EndpointsTab"></a> Pestaña extremos  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> Pestaña extremos  
  Para cada instancia del servidor que hospedará una réplica de disponibilidad, la pestaña **Extremos** muestra los valores reales del extremo de creación de reflejo de la base de datos existente, en su caso, o los valores sugeridos para un nuevo extremo posible que utilizaría la Autenticación de Windows. Tanto para los extremos existentes como para los posibles, la cuadrícula Valores de extremo muestra la información siguiente:  
   
  **Nombre de servidor**  
@@ -106,7 +107,7 @@ ms.locfileid: "70176213"
   
      Si deja la página **Especificar réplicas de disponibilidad** abierta mientras configura los extremos, vuelva a la pestaña **Extremos** y haga clic en **Actualizar** para actualizar la cuadrícula **Valores de extremo** .  
   
-##  <a name="BackupPreferencesTab"></a> Pestaña Preferencias de copia de seguridad  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> Pestaña Preferencias de copia de seguridad  
  Para especificar dónde deben producirse las copias de seguridad, elija una de las opciones siguientes:  
   
  **Preferir secundaria**  
@@ -122,7 +123,7 @@ ms.locfileid: "70176213"
  Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden evaluar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
   
 > [!IMPORTANT]  
->  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para más información, consulte [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Cuadrícula de prioridades de copia de seguridad de réplica  
  Use la cuadrícula **Prioridades de copia de seguridad de réplica** para especificar sus prioridades de copia de seguridad para cada una de las réplicas del grupo de disponibilidad. Esta cuadrícula contiene las columnas siguientes:  
@@ -136,7 +137,7 @@ ms.locfileid: "70176213"
  **Excluir réplica**  
  Para evitar que esta réplica de disponibilidad se elija nunca para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  
   
-##  <a name="Listener"></a> Pestaña Agente de escucha  
+##  <a name="listener-tab"></a><a name="Listener"></a> Pestaña Agente de escucha  
  Especifique sus preferencias para una[escucha de grupo de disponibilidad](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)que proporcionará un punto de conexión de cliente; puede ser:  
   
  **No cree ahora un agente de escucha del grupo de disponibilidad.**  
@@ -163,7 +164,7 @@ ms.locfileid: "70176213"
  **Dirección IP estática**  
  Seleccione esta opción si desea que el agente de escucha escuche en más de una subred. Para utilizar el modo de red de dirección IP estática, un agente de escucha del grupo de disponibilidad debe escuchar en cada subred que hospeda una réplica de disponibilidad para el grupo de disponibilidad. Para cada subred, haga clic en **Agregar** para seleccionar una dirección de subred y especificar una dirección IP.  
   
- Si se selecciona **Dirección IP estática** como modo de red (esta es la selección predeterminada), una cuadrícula muestra las columnas **Subret** y **Dirección IP** , y se muestran los botones **Agregar** y **Quitar** asociados. Tenga en cuenta que la cuadrícula estará vacía hasta que se agregue la primera subred.  
+ Si se selecciona **Dirección IP estática** como modo de red (esta es la selección predeterminada), una cuadrícula muestra las columnas **Subret** y **Dirección IP** , y se muestran los botones **Agregar** y **Quitar** asociados. La cuadrícula estará vacía hasta que se agregue la primera subred.  
   
  Columna**Subret**  
  Muestra la dirección de subred seleccionada para cada subred agregada para el agente de escucha.  
@@ -171,10 +172,10 @@ ms.locfileid: "70176213"
  Columna**Dirección IP**  
  Muestra la dirección IPv4 o IPv6 especificada para una subred determinada.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una subred a este agente de escucha. Se abrirá el cuadro de diálogo de **Agregar dirección IP** . Para obtener más información, vea el tema de ayuda [Agregar dirección IP &#40;cuadro de diálogo - SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar la subred actualmente seleccionada en la cuadrícula.  
   
  **DHCP**  
@@ -185,7 +186,7 @@ ms.locfileid: "70176213"
   
  Cuando **DHCP** está seleccionado, se muestra el campo **Subred** .  
   
- **Subret**  
+ **Subred**  
  Si selecciona **DHCP** como modo de red, use la lista desplegable **Subret** para seleccionar una dirección para la subred que hospeda las réplicas de disponibilidad del grupo de disponibilidad.  
   
 > [!IMPORTANT]
@@ -194,7 +195,7 @@ ms.locfileid: "70176213"
 >  -   Pida al administrador de red que reserve la dirección IP del agente de escucha para su uso exclusivo. Proporcione el nombre del host DNS del agente de escucha a los desarrolladores de aplicaciones para que lo usen en las cadenas de conexión cuando soliciten conexiones cliente a este grupo de disponibilidad.  
 > -   Proporcione el nombre del host DNS del agente de escucha a los desarrolladores de aplicaciones para que lo usen en las cadenas de conexión cuando soliciten conexiones cliente a este grupo de disponibilidad.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Aplaza campos | Microsoft Docs
+title: Campos diferidos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,34 +11,34 @@ helpviewer_keywords:
 - descriptors [ODBC], deferred fields
 - deferred fields [ODBC]
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2c229d31941d5cef0da253545cecd7d1496ee4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305976"
 ---
 # <a name="deferred-fields"></a>Campos aplazados
-Los valores de *aplazada campos* no se usan cuando se establecen, pero el controlador guarda las direcciones de las variables para un efecto aplazada. Para un descriptor de parámetro de la aplicación, el controlador utiliza el contenido de las variables en el momento de la llamada a **SQLExecDirect** o **SQLExecute**. Para un descriptor de fila de la aplicación, el controlador utiliza el contenido de las variables en el momento de la operación de captura.  
+Los valores de los *campos diferidos* no se usan cuando se establecen, pero el controlador guarda las direcciones de las variables para un efecto diferido. En el caso de un descriptor de parámetros de aplicación, el controlador utiliza el contenido de las variables en el momento de la llamada a **SQLExecDirect** o **SQLExecute**. En el caso de un descriptor de fila de la aplicación, el controlador utiliza el contenido de las variables en el momento de la captura.  
   
- Los siguientes son campos aplazados:  
+ Los siguientes son campos diferidos:  
   
--   Los campos de un registro de descriptor SQL_DESC_DATA_PTR y SQL_DESC_INDICATOR_PTR.  
+-   Los campos SQL_DESC_DATA_PTR y SQL_DESC_INDICATOR_PTR de un registro del descriptor.  
   
--   El campo SQL_DESC_OCTET_LENGTH_PTR un registro del descriptor de aplicación.  
+-   SQL_DESC_OCTET_LENGTH_PTR campo de un registro del descriptor de la aplicación.  
   
 -   En el caso de una captura de varias filas, los campos SQL_DESC_ARRAY_STATUS_PTR y SQL_DESC_ROWS_PROCESSED_PTR de un encabezado de descriptor.  
   
- Cuando se asigna un descriptor, los campos de cada registro de descriptor aplazados inicialmente tienen un valor null. El significado del valor null es como sigue:  
+ Cuando se asigna un descriptor, los campos diferidos de cada registro del descriptor inicialmente tienen un valor null. El significado del valor NULL es el siguiente:  
   
--   Si SQL_DESC_ARRAY_STATUS_PTR tiene un valor null, una captura de varias filas no puede devolver este componente de la información de diagnóstico de cada fila.  
+-   Si SQL_DESC_ARRAY_STATUS_PTR tiene un valor null, una captura de varias filas no puede devolver este componente de la información de diagnóstico por fila.  
   
--   Si SQL_DESC_DATA_PTR tiene un valor null, el registro es independiente.  
+-   Si SQL_DESC_DATA_PTR tiene un valor null, el registro está desenlazado.  
   
--   Si el campo SQL_DESC_OCTET_LENGTH_PTR de un descartar tiene un valor null, el controlador no devuelve información de longitud para esa columna.  
+-   Si el SQL_DESC_OCTET_LENGTH_PTR campo de un ARD tiene un valor null, el controlador no devuelve información de longitud para esa columna.  
   
--   Si el campo SQL_DESC_OCTET_LENGTH_PTR de un APD tiene un valor null y el parámetro es una cadena de caracteres, el controlador supone que cadena terminada en null. Parámetros de salida dinámicas, un valor null en este campo impide que el controlador devolver información de longitud. (Si el campo SQL_DESC_TYPE no indica un parámetro de cadena de caracteres, se omite el campo SQL_DESC_OCTET_LENGTH_PTR.)  
+-   Si el SQL_DESC_OCTET_LENGTH_PTR campo de un APD tiene un valor NULL y el parámetro es una cadena de caracteres, el controlador supone que la cadena termina en NULL. En el caso de los parámetros dinámicos de salida, un valor null en este campo impide que el controlador devuelva información de longitud. (Si el campo SQL_DESC_TYPE no indica un parámetro de cadena de caracteres, se omite el campo SQL_DESC_OCTET_LENGTH_PTR).  
   
- La aplicación no debe desasignar o descartar variables usados en los campos aplazados entre el momento en que asocia a los campos y la hora en que el controlador lee o escribe.
+ La aplicación no debe desasignar ni descartar las variables usadas para los campos diferidos entre el momento en que las asocia con los campos y la hora en que el controlador las lee o las escribe.

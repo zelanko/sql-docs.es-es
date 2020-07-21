@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VBScript) del método Clone | Microsoft Docs
+title: Ejemplo del método Clone (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920003"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749000"
 ---
 # <a name="clone-method-example-vbscript"></a>Ejemplo del método Clone (VBScript)
-Este ejemplo se usa el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y permite al usuario, a continuación, colocar el puntero de registro de cada copia de forma independiente.  
+En este ejemplo se usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear copias de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y, a continuación, se permite al usuario colocar el puntero de registro de cada copia de forma independiente.  
   
- Utilice el siguiente ejemplo en una página Active Server (ASP). Este ejemplo se usa el **Northwind** base de datos que se distribuye con Microsoft Access. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como CloneVBS.asp. Puede ver el resultado en cualquier explorador cliente.  
+ Use el ejemplo siguiente en una página de Active Server (ASP). En este ejemplo se usa la base de datos **Northwind** distribuida con Microsoft Access. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como CloneVBS. asp. Puede ver el resultado en cualquier explorador cliente.  
   
- Para ejecutar el ejemplo, cambie la línea `RsCustomerList.Source = "Customers"` a `RsCustomerList.Source = "Products"` para contar una tabla más grande.  
+ Para practicar el ejemplo, cambie la línea `RsCustomerList.Source = "Customers"` a `RsCustomerList.Source = "Products"` para contar una tabla más grande.  
   
 ```  
 <!-- BeginCloneVBS -->  
@@ -117,6 +117,6 @@ Este ejemplo se usa el [clon](../../../ado/reference/ado-api/clone-method-ado.md
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Clone (método) (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

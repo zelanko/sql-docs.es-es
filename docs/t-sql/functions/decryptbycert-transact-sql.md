@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: d0b4363e41169ccec1da20780cc18ca3c3f57dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682665"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En esta función se usa la clave privada de un certificado para descifrar los datos cifrados.  
   
@@ -35,7 +35,7 @@ En esta función se usa la clave privada de un certificado para descifrar los da
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }   
     [ , { 'cert_password' | @cert_password } ] )  
@@ -57,10 +57,10 @@ La contraseña que se usa para cifrar la clave privada del certificado. *cert_pa
  @cert_password  
 Una variable de tipo **nchar** o **nvarchar** que contiene la contraseña que se usa para cifrar la clave privada del certificado. *\@cert_password* debe tener un formato de datos Unicode.  
 
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary**, con un tamaño máximo de 8 000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Esta función descifra datos con la clave privada de un certificado. Las transformaciones cifradas que utilizan claves asimétricas consumen gran cantidad de recursos. Por tanto, se recomienda que los desarrolladores eviten el uso de [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) y DECRYPTBYCERT para el cifrado y descifrado de datos de usuario rutinarios.  
 
 ## <a name="permissions"></a>Permisos  

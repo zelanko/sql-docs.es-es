@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296037"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lección 2-1: Generar la utilidad de implementación
@@ -40,7 +40,7 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
 5.  En el panel derecho del cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), compruebe que **AllowConfigurationChanges** se establece en **True**, establezca **CreateDeploymentUtility** en **True**y, de manera opcional, actualice el valor predeterminado de **DeploymentOutputPath**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ### <a name="to-build-the-deployment-utility"></a>Para generar las propiedades de la utilidad de implementación  
   
@@ -52,7 +52,7 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
 4.  En la ventana de resultados, compruebe la siguiente información:  
   
-    Compilación iniciada: Proyecto de SQL Integration Services: Incremental ...  
+    Generación iniciada: proyecto de SQL Integration Services: Incremental...  
   
     Creando la utilidad de implementación...  
   
@@ -60,12 +60,12 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
     Generación completa -- 0 errores, 0 advertencias  
   
-    ========== Build: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
+    ========== Compilación: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
   
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Consulte también  
 [Crear una utilidad de implementación](../integration-services/packages/create-a-deployment-utility.md)  

@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4384164d7baa79559d8810114494473435894f8c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e29258b58a1d731a8cc81004b77430d9839d35b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721994"
 ---
 # <a name="mssql_eng002601"></a>MSSQL_ENG002601
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2601|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2601|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico|N/D|  
 |Texto del mensaje|No se puede insertar una fila de clave duplicada en el objeto '%.*ls' con índice único '%.\*ls'.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68770509"
   
 -   Se está utilizando una tabla con una columna de identidad, pero la columna no está correctamente administrada.  
   
--   En la replicación de mezcla, este error también puede producirse durante una inserción en la tabla del sistema **MSmerge_contents**; el error que se produce es similar al siguiente: No se puede insertar una fila de clave duplicada en el objeto "MSmerge_contents" con índice único "ucl1SycContents".  
+-   En la replicación de mezcla, este error puede producirse también durante una inserción en la tabla del sistema **MSmerge_contents**; el error que se produce es similar al siguiente: No se puede insertar una fila de clave duplicada en el objeto 'MSmerge_contents' con índice único 'ucl1SycContents'.  
   
 ## <a name="user-action"></a>Acción del usuario  
  La acción que debe llevarse a cabo depende del motivo por el que se produjo el error:  

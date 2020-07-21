@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 842dbcfb-7f6a-46d5-b386-c6cbb879a23d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 183175e7af5e264284f35021fd64939cc1fa425b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: de1995ed76f31739ec239fff5df99f7baab54c6b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973508"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920886"
 ---
 # <a name="setnull-method-sqlservercallablestatement"></a>Método setNull (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

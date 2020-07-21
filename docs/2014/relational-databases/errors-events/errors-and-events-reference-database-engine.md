@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969925"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referencia de errores y eventos del motor de base de datos
 
-Esta sección contiene los mensajes de error de motor de base de datos seleccionados que requieren una explicación más.
+Esta sección contiene los mensajes de error seleccionados Motor de base de datos que requieren una explicación más detallada.
   
 ## <a name="in-this-section"></a>En esta sección  
- [Errores y eventos del motor de base de datos](database-engine-events-and-errors.md) describe el formato de [!INCLUDE[ssDE](../../includes/ssde-md.md)] los mensajes de error y se explica cómo ver los mensajes de error y devolver los mensajes de error a las aplicaciones.  
+ [Eventos y errores de motor de base de datos](database-engine-events-and-errors.md) Describe el formato de [!INCLUDE[ssDE](../../includes/ssde-md.md)] los mensajes de error y explica cómo ver los mensajes de error y devolver mensajes de error a las aplicaciones.  
   
  Proporciona una explicación de los mensajes de error de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , las posibles causas y las medidas que se pueden tomar para corregir el problema.  
   

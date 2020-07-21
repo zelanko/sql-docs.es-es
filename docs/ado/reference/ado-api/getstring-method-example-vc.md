@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método GetString (VC ++) | Microsoft Docs
+title: Ejemplo del método GetString (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1b01ef4a6cbb0b8cdc3d00d86302eababfac34a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932445"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758731"
 ---
 # <a name="getstring-method-example-vc"></a>Ejemplo del método GetString (VC ++)
-Este ejemplo se muestra el [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método.  
+En este ejemplo se muestra el método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
   
- Supongamos que está depurando un problema de acceso a datos y desea una manera rápida y sencilla de imprimir el contenido actual de un pequeño [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Supongamos que está depurando un problema de acceso a datos y desea una manera rápida y sencilla de imprimir el contenido actual de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)pequeño.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -175,7 +175,7 @@ void PrintComError(_com_error &e) {
 MD  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  
@@ -183,6 +183,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [GetString (método) (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

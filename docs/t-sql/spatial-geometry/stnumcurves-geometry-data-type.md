@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 20c2fa0b-656b-4519-b34c-cc8f094290d4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1eb57ac476d430d5bc79c71ce5c6a12087155366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f64b10f4ce73c886ce229c9c859bd6de9693cc80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762289"
 ---
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Este método devuelve el número de curvas en una instancia de **geometry** cuando la instancia es un tipo de datos espacial unidimensional. Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString** y **CompoundCurve**. `STNumCurves`() solo funciona en tipos simples; no funciona con colecciones de **geometry** como **MultiLineString**.
   
@@ -33,12 +33,12 @@ Este método devuelve el número de curvas en una instancia de **geometry** cuan
 .STNumCurves()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una instancia vacía unidimensional de **geometry** devuelve 0. Se devuelve **NULL** cuando la instancia de **geometry** no es una instancia unidimensional o es una instancia no inicializada.  
   
 ## <a name="examples"></a>Ejemplos  

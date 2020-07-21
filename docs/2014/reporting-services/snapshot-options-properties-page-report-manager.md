@@ -1,5 +1,5 @@
 ---
-title: Opciones de instantánea de la página de propiedades (Administrador de informes) | Microsoft Docs
+title: Página de propiedades opciones de instantánea (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101160"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propiedades de opciones de instantánea (Administrador de informes)
   Use la página de propiedades Opciones de instantánea para programar las instantáneas de informe que se van a agregar al historial del informe, y para establecer los límites del número de ellas que se almacenarán en el historial.  
   
 > [!NOTE]  
->  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de características que son compatibles con las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [servicios adicionales de base de datos](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
+>  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de, vea [servicios de base de datos adicionales](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
   
 ## <a name="navigation"></a>Navegación  
  Utilice el procedimiento siguiente para navegar hasta esta ubicación en la interfaz de usuario (IU).  
@@ -40,10 +40,10 @@ ms.locfileid: "66101160"
  **Permitir que el historial de informe se cree manualmente**  
  Active esta casilla para agregar instantáneas a un historial de informe según sea necesario. Al activarla, aparece el botón **Nueva instantánea** en la página Historial.  
   
- **Store todas las instantáneas de ejecución de informes en el historial de informes**  
+ **Almacenar todas las instantáneas de ejecución de informes en el historial**  
  Active esta casilla para copiar en el historial de un informe una instantánea del informe generada según las propiedades de ejecución del informe. Puede establecer las propiedades de ejecución de informes para ejecutar un informe a partir de una instantánea generada. Al establecer esta propiedad del historial del informe, se puede mantener un registro de todas las instantáneas del informe generadas con el tiempo, colocando copias de las mismas en el historial.  
   
- **Utilice la siguiente programación para agregar instantáneas al historial de informes**  
+ **Utilizar la siguiente programación para agregar instantáneas al historial de informe**  
  Active esta casilla para agregar instantáneas al historial de un informe según una programación. Puede crear una programación exclusivamente con esta finalidad o seleccionar una programación compartida predefinida, si alguna contiene la información de programación que desea.  
   
  **Seleccione el número de instantáneas que desea mantener**  
@@ -60,7 +60,7 @@ ms.locfileid: "66101160"
  **Aplicar**  
  Haga clic para guardar los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar instantáneas del historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023551"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
   Inscriba una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para supervisar su rendimiento y configuración como una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El punto de control de la utilidad (UCP) recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  
@@ -86,17 +85,17 @@ ms.locfileid: "72798084"
   
 -   [Inscripción de la instancia de SQL Server](#Enrolling)  
   
-##  <a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
  Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Instance_name"></a> Especificar la instancia de SQL Server  
- Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el cuadro de diálogo conexión, haga clic en **conectar..** .. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato Nombredeequipo\nombredeinstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Especificar la instancia de SQL Server  
+ Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...** . Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Cuadro de diálogo de conexión  
  En el cuadro de diálogo Conectar al servidor, compruebe la información sobre el tipo de servidor, el nombre del equipo y el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
@@ -104,7 +103,7 @@ ms.locfileid: "72798084"
   
  Para continuar, haga clic en **Conectar...** .  
   
-##  <a name="Proxy_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
  Especifique una cuenta de dominio de Windows para ejecutar el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta cuenta se utiliza como la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma alternativa, puede utilizar la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente. Para pasar los requisitos de validación, utilice las siguientes instrucciones con el fin de especificar la cuenta.  
   
  Si especifica la opción de cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -113,7 +112,7 @@ ms.locfileid: "72798084"
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Validation_rules"></a> Validación de instancia de SQL Server  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> Validación de instancia de SQL Server  
  En esta versión, deben cumplirse las siguientes condiciones en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a inscribir en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Condición|Acción correctora|  
@@ -124,7 +123,7 @@ ms.locfileid: "72798084"
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede inscribir con ningún otro UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que especifica ya se administra como parte de una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente, no puede inscribirla con un UCP diferente.|  
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aún no puede ser un UCP.|Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que especifica ya es un UCP que es diferente del UCP que está conectado; no puede inscribirla en este UCP.|  
 |La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener conjuntos de recopilación de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados.|Reinstale la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Los conjuntos de recopilación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada deben detenerse.|Detenga los conjuntos de recopilación ya existentes sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]especificada. Si se deshabilita el recopilador de datos, habilítelo, detenga cualquier conjunto de recopilación en ejecución y, a continuación, vuelva a ejecutar las reglas de validación para la operación Crear UCP.<br /><br /> Para habilitar el recopilador de datos:<br /><br /> En el Explorador de objetos, expanda el nodo **Administración** .<br /><br /> Haga clic con el botón derecho en **Recopilación de datos**y luego haga clic en **Habilitar recopilación de datos**.<br /><br /> Para detener un conjunto de recopilación:<br /><br /> En el Explorador de objetos, expanda el nodo Administración, expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.<br /><br /> Haga clic con el botón derecho en el conjunto de recopilación que quiere detener y, luego, haga clic en **Detener conjunto de recopilación de datos**.<br /><br /> Un cuadro de mensaje muestra los resultados de esta acción y un círculo rojo en el icono para el conjunto de recopilación indica que el conjunto de recopilación se ha detenido.|  
+|Los conjuntos de recopilación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada deben detenerse.|Detenga los conjuntos de recopilación ya existentes sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]especificada. Si se deshabilita el recopilador de datos, habilítelo, detenga cualquier conjunto de recopilación en ejecución y, a continuación, vuelva a ejecutar las reglas de validación para la operación Crear UCP.<br /><br /> Para habilitar el recopilador de datos:<br /><br /> En el Explorador de objetos, expanda el nodo **Administración** .<br /><br /> Haga clic con el botón derecho en **Recopilación de datos**y, luego, haga clic en **Habilitar recopilación de datos**.<br /><br /> Para detener un conjunto de recopilación:<br /><br /> En el Explorador de objetos, expanda el nodo Administración, expanda **Recopilación de datos**y, después, **Conjuntos de recopilación de datos del sistema**.<br /><br /> Haga clic con el botón derecho en el conjunto de recopilación que quiere detener y, luego, haga clic en **Detener conjunto de recopilación de datos**.<br /><br /> Un cuadro de mensaje muestra los resultados de esta acción y un círculo rojo en el icono para el conjunto de recopilación indica que el conjunto de recopilación se ha detenido.|  
 |Se debe iniciar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Inicie el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que se tenga que iniciar manualmente. En caso contrario, configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente.|  
 |Se debe iniciar el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el UCP.|Inicie el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el UCP. Si el UCP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma que se tenga que iniciar manualmente. En caso contrario, configure el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente.|  
 |WMI debe estar configurado correctamente.|Para solucionar problemas de configuración de WMI, vea [Solucionar problemas de la Utilidad de SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).|  
@@ -140,18 +139,18 @@ ms.locfileid: "72798084"
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Summary"></a> Resumen de la inscripción de instancia  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> Resumen de la inscripción de instancia  
  La página de resumen muestra información sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a agregar a la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Configuración de la instancia administrada:  
   
--   Nombre de instancia de SQL Server: NombreEquipo\NombreInstancia  
+-   Nombre de instancia de SQL Server: ComputerName\InstanceName  
   
--   Cuenta del conjunto de recopilación de la utilidad: NombreDominio\NombreUsuario  
+-   Cuenta del conjunto de recopilación de la utilidad: DomainName\UserName  
   
  Para continuar, haga clic en **Siguiente**.  
   
-##  <a name="Enrolling"></a> Inscripción de la instancia de SQL Server  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> Inscripción de la instancia de SQL Server  
  La página de inscripción proporciona el estado de la operación:  
   
 -   Preparar la instancia para la inscripción.  
@@ -169,7 +168,7 @@ ms.locfileid: "72798084"
 >   
 >  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Información adicional: no se ha podido obtener información sobre el grupo o usuario '\<nombreDeDominio\nombreDeCuenta>' de Windows NT, código de error 0x5. (Microsoft SQL Server, Error: 15404)  
+>  Información adicional: no se pudo obtener información acerca del grupo o usuario de Windows NT ' \<DomainName\AccountName> ', código de error 0X5. (Microsoft SQL Server, Error: 15404)  
 >   
 >  Para obtener más información sobre cómo solucionar este error, vea [Solucionar problemas de la Utilidad de SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -182,7 +181,7 @@ ms.locfileid: "72798084"
   
  Para eliminar instancias administradas de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **Instancias administradas** en el panel **Navegación del Explorador de la utilidad** con el fin de rellenar la vista de lista de instancias administradas, haga clic con el botón derecho en el nombre de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la vista de lista **Contenido del explorador de la utilidad** y, después, seleccione **Convertir instancia en no administrada**.  
   
-##  <a name="PowerShell_enroll"></a> Inscribir una instancia de SQL Server usando PowerShell  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> Inscribir una instancia de SQL Server usando PowerShell  
  Use el siguiente ejemplo para inscribir una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente:  
   
 ```powershell
@@ -194,7 +193,7 @@ $InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.Sq
 $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md)   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Solucionar problemas de la Utilidad de SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  

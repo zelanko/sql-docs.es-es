@@ -1,5 +1,5 @@
 ---
-title: Partición en función de las vistas de catálogo (Transact-SQL) | Microsoft Docs
+title: Vistas de catálogo de funciones de partición (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - catalog views [SQL Server], partition function
 - partition function catalog views [SQL Server]
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 210a636943fca647539a840dbc394f4c91e6f28e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ffaa8c718d2836a9fe92fbc2f280ae15173a10cb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127590"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897745"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>Vistas de catálogo de la función de partición (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta sección contiene las siguientes vistas de catálogo.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68127590"
 |[sys.partition_functions](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)|[sys.partition_range_values](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)|  
 |[sys.partition_parameters](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

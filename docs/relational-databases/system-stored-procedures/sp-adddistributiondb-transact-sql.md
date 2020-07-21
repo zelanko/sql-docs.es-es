@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771351"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758030"
 ---
-# <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una nueva base de datos de distribución e instala el esquema del distribuidor. La base de datos de distribución almacena los procedimientos, esquema y metadatos utilizados en la replicación. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos maestra con el fin de crear la base de datos de distribución e instalar las tablas y procedimientos almacenados necesarios para habilitar la distribución de replicación.  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] database'`Es el nombre de la base de datos de distribución que se va a crear. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado. Si la base de datos especificada ya existe y no está ya marcada como base de datos de distribución, entonces los objetos necesarios para habilitar la distribución están instalados y la base de datos está marcada como base de datos de distribución. Si la base de datos especificada ya está habilitada como base de datos de distribución, se obtiene un error.  
   
-`[ @data_folder = ] 'data_folder'_`Es el nombre del directorio que se utiliza para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @data_folder = ] 'data_folder'_`Es el nombre del directorio que se utiliza para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
   
 `[ @data_file = ] 'data_file'`Es el nombre del archivo de base de datos. *data_file* es de tipo **nvarchar (255)** y su valor predeterminado es **Database**. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`Es el nombre del archivo de registro. *log_file* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
-`[ @log_file_size = ] log_file_size`Es el tamaño inicial del archivo de registro en megabytes (MB). *log_file_size* es de **tipo int**y su valor predeterminado es 0 MB, lo que significa que el tamaño del archivo se crea con el tamaño de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]archivo de registro más pequeño permitido por.  
+`[ @log_file_size = ] log_file_size`Es el tamaño inicial del archivo de registro en megabytes (MB). *log_file_size* es de **tipo int**y su valor predeterminado es 0 MB, lo que significa que el tamaño del archivo se crea con el tamaño de archivo de registro más pequeño permitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @min_distretention = ] min_distretention`Es el período de retención mínimo, en horas, antes de que se eliminen las transacciones de la base de datos de distribución. *min_distretention* es de **tipo int**y su valor predeterminado es 0 horas.  
   
@@ -89,18 +89,18 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
-`[ @deletebatchsize_xact = ] deletebatchsize_xact`Especifica el tamaño del lote que se va a usar durante la limpieza de transacciones expiradas de las tablas MSRepl_Transactions. *deletebatchsize_xact* es de **tipo int**y su valor predeterminado es 5000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact`Especifica el tamaño del lote que se va a usar durante la limpieza de transacciones expiradas de las tablas de MSRepl_Transactions. *deletebatchsize_xact* es de **tipo int**y su valor predeterminado es 5000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2.  
 
-`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Especifica el tamaño del lote que se va a usar durante la limpieza de los comandos expirados de las tablas MSRepl_Commands. *deletebatchsize_cmd* es de **tipo int**y su valor predeterminado es 2000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2. 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Especifica el tamaño del lote que se va a utilizar durante la limpieza de los comandos expirados de las tablas de MSRepl_Commands. *deletebatchsize_cmd* es de **tipo int**y su valor predeterminado es 2000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_adddistributiondb** se utiliza en todos los tipos de replicación. Sin embargo, este procedimiento almacenado se ejecuta únicamente en un distribuidor.  
   
- Debe configurar el distribuidor mediante la ejecución de [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) antes de ejecutar **sp_adddistributiondb**.  
+ Debe configurar el distribuidor ejecutando [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) antes de ejecutar **sp_adddistributiondb**.  
   
  Ejecute **sp_adddistributor** antes de ejecutar **sp_adddistributiondb**.  
   
@@ -163,11 +163,11 @@ GO
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_adddistributiondb**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de propiedades de archivo (pestaña selección de eventos) | Microsoft Docs
+title: Propiedades del archivo de seguimiento (pestaña selección de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20ec4981a7a4c7f2d09315416deddc5e0e195fda
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088802"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928362"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Propiedades del archivo de seguimiento (pestaña Selección de eventos)
   Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades del archivo de seguimiento** para ver las propiedades de columna del seguimiento o quitar columnas de datos del seguimiento.  
@@ -27,7 +26,7 @@ ms.locfileid: "66088802"
  Para ver esta ventana, abra un archivo de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
   
 ## <a name="options"></a>Opciones  
- Columna **Eventos**  
+ Columna**Eventos**  
  Muestra los eventos de los que se hace el seguimiento y que están organizados por categoría de eventos. Inicialmente, se seleccionan todos los eventos del seguimiento. Para seleccionar un evento, debe activarse la casilla o la columna de datos de dicho evento. Si la casilla del evento está activada, se seleccionan todas las columnas de datos disponibles para dicho evento. Si la columna de datos de un evento está activada, se activa el evento, y cualquier otra columna requerida también se activa automáticamente. Si se está viendo un archivo o una tabla de seguimiento, al desactivar las casillas de las columnas de datos o eventos, se reduce la cantidad de datos visibles en la ventana de seguimiento para simplificar el análisis. Se pueden cambiar los filtros de las columnas para reducir la cantidad de datos visibles en la ventana de seguimiento. Para obtener más información sobre las clases de eventos, vea [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Columnas de datos  
@@ -47,10 +46,10 @@ ms.locfileid: "66088802"
  **Organizar columnas**  
  Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [Filtrar eventos en un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Ver información de un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [Filtrar eventos en un SQL Server Profiler de seguimiento &#40;&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [Ver información de filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Modificar un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  

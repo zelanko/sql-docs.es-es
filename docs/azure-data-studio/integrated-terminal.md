@@ -1,25 +1,24 @@
 ---
 title: Terminal integrado
-titleSuffix: Azure Data Studio
 description: Obtenga información sobre el terminal integrado en Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ecd96299a29619bdf52894b36782f6d71e3a0c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774591"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
-En [!INCLUDE[name-sos](../includes/name-sos-short.md)], puede abrir un terminal integrado, que se inicia al principio en la raíz de su área de trabajo. Esto le puede resultar práctico, ya que no tiene que cambiar de ventana ni modificar el estado de un terminal existente para realizar una tarea de línea de comandos rápida.
+En Azure Data Studio, puede abrir un terminal integrado, que se inicia al principio en la raíz de su área de trabajo. Esto le puede resultar práctico, ya que no tiene que cambiar de ventana ni modificar el estado de un terminal existente para realizar una tarea de línea de comandos rápida.
 
 Para abrir el terminal:
 
@@ -30,7 +29,7 @@ Para abrir el terminal:
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> Todavía puede abrir un shell externo con el comando **Abrir en símbolo del sistema** de Explorer (**Abrir en terminal** en Mac o Linux) si prefiere trabajar fuera de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> Todavía puede abrir un shell externo con el comando **Abrir en símbolo del sistema** del explorador (**Abrir en terminal** en Mac o Linux) si prefiere trabajar fuera de Azure Data Studio.
 
 ## <a name="managing-multiple-terminals"></a>Administración de varios terminales
 
@@ -66,7 +65,7 @@ Para configurar correctamente el shell en Windows, hay que buscar el ejecutable 
 > Para usarse como un terminal integrado, el ejecutable del shell debe ser una aplicación de consola para que se pueda redirigir `stdin/stdout/stderr`.
 
 > [!TIP]
-> El shell del terminal integrado se ejecuta con los permisos de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Si necesita ejecutar un comando del shell con privilegios elevados (administrador) u otros permisos, puede usar las utilidades de la plataforma, como `runas.exe`, en un terminal.
+> El shell del terminal integrado se ejecuta con los permisos de Azure Data Studio. Si necesita ejecutar un comando del shell con privilegios elevados (administrador) u otros permisos, puede usar las utilidades de la plataforma, como `runas.exe`, en un terminal.
 
 ### <a name="shell-arguments"></a>Argumentos del shell
 
@@ -87,13 +86,13 @@ Puede personalizar la fuente y el alto de línea del terminal integrado con la s
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Enlaces de teclado del terminal
+## <a name="terminal-key-bindings"></a><a id="key-bindings"></a>Enlaces de teclado del terminal
 
 El comando **Ver: Alternar terminal integrado** está enlazado con **Ctrl+`** para mostrar u ocultar rápidamente el panel del terminal integrado en la vista.
 
 A continuación se muestran los métodos abreviados de teclado para navegar rápidamente por el terminal integrado:
 
-|Key|Comando|  
+|Clave|Get-Help|  
 |---|---|  
 |**Ctrl+\`**|Mostrar el terminal integrado|  
 |**Ctrl+Mayús+\`**|Crear un terminal|  
@@ -107,7 +106,7 @@ A continuación se muestran los métodos abreviados de teclado para navegar ráp
 
 Hay disponibles otros comandos del terminal y se pueden enlazar a sus métodos abreviados de teclado preferidos.
 
-Estas sobrecargas son:
+Son las siguientes:
 
 * `workbench.action.terminal.focus`: centre el terminal. Esto es parecido a la alternación, pero centra el terminal en lugar de ocultarlo, si está visible.
 * `workbench.action.terminal.focusNext`: centra la siguiente instancia del terminal.
@@ -149,5 +148,5 @@ Ahora se puede cambiar el nombre de las sesiones del terminal integrado mediante
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Forzamiento del paso de los enlaces de teclado mediante el terminal
 
-Mientras el foco está en el terminal integrado, muchos enlaces de teclado no funcionarán porque las pulsaciones de las teclas se pasan al propio terminal, quien las consume. Se puede usar la configuración `terminal.integrated.commandsToSkipShell` para solucionar este problema. Contiene una matriz de nombres de comando cuyos enlaces de teclado omiten el procesamiento del shell y, en su lugar, se procesan mediante el sistema de enlaces de teclado de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. De forma predeterminada, esto incluye todos los enlaces de teclado del terminal, además de una selección de algunos enlaces de teclado de uso frecuente.
+Mientras el foco está en el terminal integrado, muchos enlaces de teclado no funcionarán porque las pulsaciones de las teclas se pasan al propio terminal, quien las consume. Se puede usar la configuración `terminal.integrated.commandsToSkipShell` para solucionar este problema. Contiene una matriz de nombres de comando cuyos enlaces de teclado omiten el procesamiento del shell y, en su lugar, se procesan mediante el sistema de enlaces de teclado de Azure Data Studio. De forma predeterminada, esto incluye todos los enlaces de teclado del terminal, además de una selección de algunos enlaces de teclado de uso frecuente.
 

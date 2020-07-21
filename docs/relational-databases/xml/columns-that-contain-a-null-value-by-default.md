@@ -1,5 +1,6 @@
 ---
 title: Columnas que incluyen un valor NULL de forma predeterminada | Microsoft Docs
+description: Obtenga información sobre cómo trabajar con columnas que contienen un valor NULL de forma predeterminada mediante la frase de palabra clave ELEMENTS XSINIL en SQL.
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0fb8b86daedb73f62396e1dc13a06a5a4e2a7bb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6962f6117a857ed5875d503c259b4d54e8dd84d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775607"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Columnas que incluyen un valor NULL de forma predeterminada
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 De forma predeterminada, un valor NULL en una columna se asigna a la ausencia del atributo, nodo u elemento. Este comportamiento predeterminado puede invalidarse mediante el uso de la frase de palabras clave ELEMENTS XSINIL. Esta frase solicita un XML centrado en elementos. Esto significa que los valores null se indican explícitamente en los resultados devueltos. Estos elementos no tendrán ningún valor.
 

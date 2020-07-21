@@ -1,6 +1,6 @@
 ---
-title: Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Importación de datos con formato nativo y de caracteres de versiones anteriores de SQL Server
+description: En SQL Server 2019, puede usar bcp para importar datos nativos y con formato de caracteres de otras versiones de SQL Server mediante el uso del modificador -V con un calificador.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,15 +16,16 @@ ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 904e98bf9adaa375ff5b896a3d6fa357b6c53b4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 68892ebd57fb83578eda6090e3baead0bb7b4ed0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896652"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007216"
 ---
-# <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]puede usar **bcp** para importar datos con formato nativo y de caracteres de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] con el modificador **-V** . El modificador **-V** hace que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] use los tipos de datos de la versión anterior especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y el formato del archivo de datos es el mismo que el de esa versión anterior.  
   
  Para especificar una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un archivo de datos, use el modificador **-V** con uno de los siguientes calificadores:  
@@ -42,12 +43,12 @@ ms.locfileid: "67896652"
 |Nuevos tipos de datos de SQL Server 2005|Tipos de datos compatibles de la versión 6*x*|Tipos de datos compatibles de la versión 70|Tipos de datos compatibles de la versión 80|  
 |---------------------------------------|-------------------------------------------|-----------------------------------------|-----------------------------------------|  
 |**bigint**|**decimal**|**decimal**|*|  
-|**sql_variant**|**texto**|**nvarchar(4000)**|*|  
-|**ntext**|**texto**|**texto**|**texto**|  
+|**sql_variant**|**text**|**nvarchar(4000)**|*|  
+|**ntext**|**text**|**text**|**text**|  
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
-|**varbinary(max)**|**imagen**|**imagen**|**imagen**|  
+|**varbinary(max)**|**image**|**image**|**image**|  
 |XML|**ntext**|**ntext**|**ntext**|  
-|UDT**|**imagen**|**imagen**|**imagen**|  
+|UDT**|**image**|**image**|**image**|  
   
  *Este tipo es compatible en modo nativo.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "67896652"
 > [!IMPORTANT]  
 >  Cuando importe datos en un campo **smalldatetime** utilizando **bcp**, asegúrese de que el valor de los segundos sea 00.000; de lo contrario, se producirá un error en la operación. El tipo de datos **smalldatetime** contiene únicamente valores hasta el minuto más cercano. BULK INSERT e INSERT ... SELECT * FROM OPENROWSET(BULK...) no darán error en esta instancia, pero truncarán el valor de los segundos.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para usar formatos de datos para la importación o exportación masivas**  
   
 -   [Usar el formato de caracteres para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
@@ -76,7 +77,7 @@ ms.locfileid: "67896652"
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

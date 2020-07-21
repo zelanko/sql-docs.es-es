@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2daa7d007783434e0994846e41300c31b3e35162
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771353"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia el estado de un suscriptor existente. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -64,11 +64,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **%** **tipo sysname y su**valor predeterminado es. Si no se especifica la *publicación* , se verán afectadas todas las publicaciones.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . Si no se especifica la *publicación* , se verán afectadas todas las publicaciones.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. Debe ser único para la publicación. *article* es de **%** **tipo sysname y su**valor predeterminado es. Si no se especifica *article* , se verán afectados todos los artículos.  
+`[ @article = ] 'article'`Es el nombre del artículo. Debe ser único para la publicación. *article* es de **tipo sysname y su**valor predeterminado es **%** . Si no se especifica *article* , se verán afectados todos los artículos.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor del que se va a cambiar el estado. *Subscriber* es de **%** **tipo sysname y su**valor predeterminado es. Si no se especifica el suscriptor, se cambia el estado de todos los suscriptores al artículo especificado.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor del que se va a cambiar el estado. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** . Si no se especifica el *suscriptor* , se cambia el estado de todos los suscriptores al artículo especificado.  
   
 `[ @status = ] 'status'`Es el estado de la suscripción en la tabla **syssubscriptions** . *status* es de **tipo sysname**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
@@ -76,11 +76,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |-----------|-----------------|  
 |**active**|El suscriptor está sincronizado y recibe datos.|  
 |**inactive**|Existe una entrada de suscriptor sin que haya una suscripción.|  
-|**suscrito**|El suscriptor solicita datos, pero aún no está sincronizado.|  
+|**subscribed**|El suscriptor solicita datos, pero aún no está sincronizado.|  
   
 `[ @previous_status = ] 'previous_status'`Es el estado anterior de la suscripción. *previous_status* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro permite cambiar cualquier suscripción que tenga actualmente ese estado, lo que permite a las funciones de grupo en un conjunto específico de suscripciones (por ejemplo, al establecer de nuevo todas las suscripciones activas en **suscrito**).  
   
-`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **%** **tipo sysname y su**valor predeterminado es.  
+`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es **%** .  
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -90,7 +90,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Primero|  
+|**1**|First|  
 |**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
@@ -103,10 +103,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
+|**1**|Una sola vez|  
 |**2**|Second|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -135,9 +135,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Si se establece *remote_agent_server_name* en cualquier valor distinto de NULL, se genera un error.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Especifica el nombre del paquete de servicios de transformación de datos (DTS) de. *dts_package_name* es de **tipo sysname y su**valor predeterminado es NULL. Por ejemplo, para un paquete denominado **DTSPub_Package** , debe especificar `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Especifica el nombre del paquete de servicios de transformación de datos (DTS) de. *dts_package_name* es de **tipo sysname y su**valor predeterminado es NULL. Por ejemplo, para un paquete denominado **DTSPub_Package** debe especificar `@dts_package_name = N'DTSPub_Package'` .  
   
-`[ @dts_package_password = ] 'dts_package_password'`Especifica la contraseña del paquete. *dts_package_password* es de **tipo sysname y su** valor predeterminado es null, que especifica que la propiedad de contraseña se dejará sin cambios.  
+`[ @dts_package_password = ] 'dts_package_password'`Especifica la contraseña del paquete. *dts_package_password* es de **tipo sysname y su** valor predeterminado es null, lo que especifica que la propiedad de contraseña se dejará sin cambios.  
   
 > [!NOTE]  
 >  Un paquete DTS debe tener una contraseña.  
@@ -148,10 +148,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`Es el nombre del trabajo de distribución. *distribution_job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el publicador al cambiar las propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un artículo en un publicador.  
+>  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -164,11 +164,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** o del creador de la suscripción pueden ejecutar **sp_changesubstatus**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_addsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

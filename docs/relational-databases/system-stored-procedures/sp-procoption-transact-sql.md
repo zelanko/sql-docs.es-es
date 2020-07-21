@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901439"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Establece o borra la configuración de ejecución automática de un procedimiento almacenado. Un procedimiento almacenado que se establece en ejecuciones de la ejecución automática cada vez una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia.  
+  Establece o borra la configuración de ejecución automática de un procedimiento almacenado. Un procedimiento almacenado que se establece en ejecución automática se ejecuta cada vez que se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ProcName = ] 'procedure'` Es el nombre del procedimiento que se va a establecer una opción. *procedimiento* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
+`[ @ProcName = ] 'procedure'`Es el nombre del procedimiento para el que se va a establecer una opción. *procedure* es **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @OptionName = ] 'option'` Es el nombre de la opción para establecer. El único valor para *opción* es **inicio**.  
+`[ @OptionName = ] 'option'`Es el nombre de la opción que se va a establecer. El único valor de la *opción* es **Startup**.  
   
-`[ @OptionValue = ] 'value'` Indica si se establece la opción en (**true** o **en**) u off (**false** o **desactivar**). *valor* es **varchar (12)** , no tiene ningún valor predeterminado.  
+`[ @OptionValue = ] 'value'`Indica si se debe establecer la opción en (**true** u **on**) o en OFF (**false** u **OFF**). el *valor* es **VARCHAR (12)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o número de error (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Procedimientos de inicio deben estar en el **maestro** de base de datos y no puede contener parámetros de entrada o salida. La ejecución de los procedimientos almacenados comienza cuando se recuperan todas las bases de datos y se registra el mensaje "Se completó la recuperación" en el inicio.  
+ Los procedimientos de inicio deben estar en la base de datos **maestra** y no pueden contener parámetros de entrada ni de salida. La ejecución de los procedimientos almacenados comienza cuando se recuperan todas las bases de datos y se registra el mensaje "Se completó la recuperación" en el inicio.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
@@ -73,7 +73,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar un procedimiento almacenado](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19898578-7b2f-401c-bb8f-9f2a017efdf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 412ec93cbfedc87e92da9e86c7e4c7455919722a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058073"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Seleccionar filas que no coinciden con un valor (Visual Database Tools)
   Para buscar filas que no coinciden con un valor, utilice el operador NOT.  
@@ -37,8 +36,8 @@ ms.locfileid: "63067541"
 NOT LIKE 'A%'  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Reglas para especificar los valores de búsqueda &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Reglas para especificar valores de búsqueda &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Especificar criterios de búsqueda (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

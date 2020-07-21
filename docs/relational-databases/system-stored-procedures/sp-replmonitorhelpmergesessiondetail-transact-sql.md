@@ -1,6 +1,7 @@
 ---
-title: sp_replmonitorhelpmergesessiondetail (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sp_replmonitorhelpmergesessiondetail (T-SQL)
+description: Describe el sp_replmonitorhelpmergesessiondetail procedimiento almacenado que devuelve información detallada de nivel de artículo sobre una sesión de Agente de mezcla de replicación específica.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b1aaa8afdb6ad67f906140c0714f115b64c08bc1
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725725"
 ---
-# <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve información detallada de nivel de artículo sobre una sesión determinada de Agente de mezcla de replicación, que se utiliza para supervisar la replicación de mezcla. El conjunto de resultados incluye una fila de detalles para cada artículo sincronizado durante la sesión. También incluye una fila que representa la inicialización de la sesión y filas que resumen las fases de carga y descarga de la sesión. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución o en el suscriptor de la base de datos de suscripciones.  
   
@@ -41,7 +42,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Es la fase de la sesión de sincronización, que puede ser:<br /><br /> **0** = inicialización o fila de Resumen<br /><br /> **1** = carga<br /><br /> **2** = descargar|  
 |**ArticleName**|**sysname**|Es el nombre del artículo que se va a sincronizar. **ArticleName** también contiene información de resumen para las filas del conjunto de resultados que no representan detalles del artículo.|  
@@ -63,12 +64,12 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="remarks"></a>Comentarios  
  **sp_replmonitorhelpmergesessiondetail** se utiliza para supervisar la replicación de mezcla.  
   
- Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesessiondetail** solo devuelve información detallada acerca de las últimas 5 agente de mezcla sesiones.  
+ Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesessiondetail** solo devuelve información detallada acerca de las últimas 5 sesiones agente de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** de la base de datos de distribución en el distribuidor o en la base de datos de suscripciones del suscriptor pueden ejecutar **sp_replmonitorhelpmergesessiondetail**.  
+ Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución en el distribuidor o en la base de datos de suscripciones del suscriptor pueden ejecutar **sp_replmonitorhelpmergesessiondetail**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

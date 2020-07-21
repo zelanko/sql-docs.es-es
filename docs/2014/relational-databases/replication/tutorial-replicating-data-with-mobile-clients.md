@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8c9e2d0f20a91bb11c0d5e08aff00c27785818e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63255396"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047589"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>Tutorial: Replicar datos con clientes móviles
   La replicación es una buena solución al problema de mover datos entre un servidor central y clientes móviles que solo se conectan en determinadas ocasiones. La utilización de asistentes para replicación le facilitará la configuración y administración de una topología de replicación. Este tutorial le mostrará cómo configurar una topología de replicación para clientes móviles.  
@@ -26,7 +25,7 @@ ms.locfileid: "63255396"
  En este tutorial utilizará la replicación de mezcla para publicar datos de una base de datos central en uno o más usuarios móviles para que cada usuario obtenga un subconjunto de datos filtrado de manera exclusiva. En la primera lección se muestra cómo utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear una publicación. Las lecciones posteriores muestran cómo crear y sincronizar una suscripción.  
   
 ## <a name="requirements"></a>Requisitos  
- Este tutorial está destinado a usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero que tienen una experiencia limitada en operaciones de replicación. Antes de empezar este tutorial, debe haber completado [Tutorial: Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
+ Este tutorial está destinado a usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero que tienen una experiencia limitada en operaciones de replicación. Antes de comenzar este tutorial, debe completar [el tutorial: preparar el servidor para la replicación](tutorial-preparing-the-server-for-replication.md).  
   
  Para utilizar este tutorial, el sistema debe tener instalados los siguientes componentes:  
   
@@ -50,13 +49,13 @@ ms.locfileid: "63255396"
   
 ## <a name="lessons-in-this-tutorial"></a>Lecciones de este tutorial  
   
--   [Lección 1: Publicar datos con replicación de mezcla](lesson-1-publishing-data-using-merge-replication.md)  
+-   [Lección 1: Publicación de datos con la replicación de mezcla](lesson-1-publishing-data-using-merge-replication.md)  
   
--   [Lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
+-   [Lección 2: Creación de una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
- [Iniciar el tutorial](merge/merge-replication.md)  
+ [Inicio del tutorial](merge/merge-replication.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de la programación de replicación](concepts/replication-programming-concepts.md)  
   
   

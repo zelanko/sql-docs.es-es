@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 6e9c7241-0201-44e0-9f8b-b3c4e293f0f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8f238589f0f9b6641095a4ccb65a4665300a28b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2753fc7e6b09f1fd319f0ed791da30d590dfde4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023177"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781074"
 ---
-# <a name="mssqlserver1418"></a>MSSQLSERVER_1418
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_1418"></a>MSSQLSERVER_1418
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|1418|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|1418|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBM_PARTNERNOTFOUND|  
 |Texto del mensaje|La dirección de red del servidor "%.*ls" no se puede alcanzar o no existe. Compruebe el nombre de la dirección de red y que los puertos de los extremos local y remoto estén operativos.|  

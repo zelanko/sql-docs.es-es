@@ -19,17 +19,17 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: d1e6123b99308e053a3235d5e9fe8cd22a4daaa8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736445"
 ---
-# <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el número de filas afectadas por la última instrucción ejecutada. Esta función actúa como [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), salvo que el tipo de valor devuelto de ROWCOUNT_BIG es **bigint**.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68127408"
 ROWCOUNT_BIG ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  A continuación de una instrucción SELECT, esta función devuelve el número de filas devueltas por la instrucción.  
   
  A continuación de las instrucciones INSERT, UPDATE o DELETE, esta función devuelve el número de filas afectadas por la instrucción de modificación de datos.  

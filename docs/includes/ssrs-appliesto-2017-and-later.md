@@ -1,6 +1,6 @@
 ---
-title: incluir archivo
-description: incluir archivo
+title: archivo de inclusión
+description: archivo de inclusión
 services: ''
 author: maggiesMSFT
 ms.service: ''
@@ -8,11 +8,11 @@ ms.topic: include
 ms.date: 03/26/2018
 ms.author: maggies
 ms.custom: include file
-ms.openlocfilehash: 8602db3dd46db55ba15a9572fc9427e66e56b62b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 867199e9e505077a749246a5ad57bca20d81d0ac
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68221352"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80501940"
 ---
- ![sí](media/yes.png)SQL Server Reporting Services (2017 y posterior)
+ ![Sí](media/yes-icon.png)SQL Server Reporting Services (2017 y posterior)

@@ -15,18 +15,17 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a3565f98786b02eaeacb1140e34f862102ca2463
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62892288"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436272"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
-  Las variables almacenan valores que un paquete de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
+  Las variables almacenan valores que un paquete [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
   
  Puede usar variables en paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los siguientes fines:  
   
@@ -86,24 +85,24 @@ ms.locfileid: "62892288"
  Especifica la descripción de la variable.  
   
  EvaluateAsExpression  
- Cuando la propiedad se establece en `True`, la expresión especificada se usa para establecer el valor de la variable.  
+ Cuando la propiedad está establecida en `True` , la expresión proporcionada se utiliza para establecer el valor de la variable.  
   
  Expresión  
  Especifica la expresión asignada a la variable.  
   
- Name  
+ Nombre  
  Especifica el nombre de la variable.  
   
  Espacio de nombres  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona dos espacios de nombres, **User** y **System**. Como opción predeterminada, las variables personalizadas están en el espacio de nombres **User** y las variables del sistema están en el espacio de nombres **System** . Puede crear espacios de nombres adicionales para variables definidas por el usuario y cambiar el nombre del espacio de nombres **User**, pero no puede cambiar el nombre del espacio de nombres **System**, agregar variables al espacio de nombres **System** o asignar variables del sistema a un espacio de nombres diferente.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona dos espacios de nombres, **User** y **System**. Como opción predeterminada, las variables personalizadas están en el espacio de nombres **User** y las variables del sistema están en el espacio de nombres **System** . Puede crear espacios de nombres adicionales para variables definidas por el usuario y cambiar el nombre del espacio de nombres **User** , pero no puede cambiar el nombre del espacio de nombres **System** , agregar variables al espacio de nombres **System** o asignar variables del sistema a un espacio de nombres diferente.  
   
  RaiseChangedEvent  
  Cuando la propiedad está establecida en `True`, se produce el evento de `OnVariableValueChanged` si el valor de la variable cambia.  
   
- Solo lectura  
+ ReadOnly  
  Cuando la propiedad está establecida en `False`, la variable es de lectura\escritura.  
   
- Scope  
+ Ámbito  
  > [!NOTE]  
 >  Para cambiar este valor de la propiedad, basta con hacer clic en **Mover variable** en la ventana **Variables** .  
   
@@ -114,26 +113,26 @@ ms.locfileid: "62892288"
  IncludeInDebugDump  
  Indica si el valor variable está incluido en los archivos de volcado de depuración.  
   
- Para variables definidas por el usuario y variables del sistema, el valor predeterminado para el **InclueInDebugDump** opción es `true`.  
+ En el caso de las variables definidas por el usuario y las variables del sistema, el valor predeterminado de la opción **InclueInDebugDump** es `true` .  
   
- Sin embargo, para las variables definidas por el usuario, el sistema restablece la **IncludeInDebugDump** opción `false` cuando se cumplen las condiciones siguientes:  
+ Sin embargo, para las variables definidas por el usuario, el sistema restablece la opción **IncludeInDebugDump** en `false` cuando se cumplen las condiciones siguientes:  
   
--   Si el **EvaluateAsExpression** propiedad de la variable se establece en `true`, el sistema restablece la **IncludeInDebugDump** opción `false`.  
+-   Si la propiedad de la variable **EvaluateAsExpression** se establece en `true` , el sistema restablece la opción **IncludeInDebugDump** en `false` .  
   
-     Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de depuración, establezca el **IncludeInDebugDump** opción `true`.  
+     Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de depuración, establezca la opción **IncludeInDebugDump** en `true` .  
   
--   Si se cambia el tipo de datos en una cadena, el sistema restablece la **IncludeInDebugDump** opción `false`.  
+-   Si el tipo de datos de la variable se cambia a una cadena, el sistema restablece la opción **IncludeInDebugDump** en `false` .  
   
- Cuando el sistema restablece la **IncludeInDebugDump** opción `false`, podría invalidarse el valor seleccionado por el usuario.  
+ Cuando el sistema restablece la opción **IncludeInDebugDump** en `false` , esto podría invalidar el valor seleccionado por el usuario.  
   
- Valor  
+ Value  
  El valor de una variable definida por el usuario puede ser un literal o una expresión. Una variable incluye opciones para establecer el valor de la variable y el tipo de datos del valor. Las dos propiedades deben ser compatibles: por ejemplo, el uso de un valor de cadena junto con el tipo de datos de número entero no es válido.  
   
  Si la variable está configurada para evaluarse como una expresión, se debe proporcionar una expresión. En el tiempo de ejecución, se evalúa la expresión, y se establece la variable con el resultado de la evaluación. Por ejemplo, si una variable usa la expresión `DATEPART("month", GETDATE())` , el valor de la variable es el equivalente numérico del mes de la fecha actual. La expresión debe ser una expresión válida que use la sintaxis de gramática de expresiones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Cuando una expresión se usa con variables, la expresión puede usar literales y los operadores y funciones que proporciona la gramática de la expresión, pero la expresión no puede hacer referencia a las columnas desde un flujo de datos en el paquete. La longitud máxima de una expresión es 4000 caracteres. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  ValueType  
  > [!NOTE]  
->  El valor de la propiedad aparece en la columna **Tipo de datos** en la ventana **Variables** .  
+>   El valor de la propiedad aparece en la columna **Tipo de datos** en la ventana **Variables** .  
   
  Especifica el tipo de datos del valor de la variable.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62892288"
   
  [Establecer las propiedades de una variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
- [Uso de los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Usar los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
  [Asignar parámetros de consulta a variables en un componente de flujo de datos](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

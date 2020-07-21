@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 772de447-c922-4b85-8e10-5f0d9277966c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d9f41ca22902607daf7ef1962382cbb6daee27a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5817283a940414acf6a36401af8d1ba0f931de97
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67971534"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928645"
 ---
 # <a name="sqlserverdatabasemetadata-methods"></a>Métodos SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obtener información sobre los miembros de [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), consulte [miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md).  
+  Para información sobre los miembros de [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), vea [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md).  
   
   

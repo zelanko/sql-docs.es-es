@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad de estado (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad de estado (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d477b23b384bcc8e059afb94e72a3f6fc12fa724
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916783"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759691"
 ---
 # <a name="status-property-example-vc"></a>Ejemplo de la propiedad de estado (VC ++)
-Este ejemplo se usa el [estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad para mostrar los registros que se han modificado en una operación por lotes antes de que se ha producido una actualización por lotes.  
+En este ejemplo se usa la propiedad [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para mostrar los registros que se han modificado en una operación por lotes antes de que se haya realizado una actualización por lotes.  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -186,5 +186,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

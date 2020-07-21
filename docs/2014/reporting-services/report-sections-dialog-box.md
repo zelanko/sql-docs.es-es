@@ -1,5 +1,5 @@
 ---
-title: Las secciones del informe de cuadro de diálogo | Microsoft Docs
+title: Cuadro de diálogo secciones del informe | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104306"
 ---
 # <a name="report-sections-dialog-box"></a>Cuadro de diálogo Secciones del informe
-  Al abrir un informe, el Diseñador de informes comprueba que el informe contiene un único lenguaje RDL (Report Definition)  **\<sección >** elemento. No se permite abrir un informe con varios elementos **\<Section>** .  
+  Al abrir un informe, diseñador de informes comprueba que el informe contiene solo una sección de lenguaje RDL (Report Definition Language) ** \<>** elemento. No se admite la apertura de un informe con varias ** \<secciones>** elementos.  
   
  Aunque se puede generar una definición de informe con varias secciones mediante programación, no se admite la edición del informe en un entorno de creación de informes.  
   

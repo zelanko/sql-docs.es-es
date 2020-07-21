@@ -15,10 +15,10 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288805"
 ---
 # <a name="modulo-ssis-expression"></a>(Módulo) (expresión de SSIS)
@@ -46,7 +46,7 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La evaluación de ambas expresiones debe devolver tipos de datos enteros, con o sin signo.  
   
  Si alguno de los operandos es NULL, el resultado será NULL.  

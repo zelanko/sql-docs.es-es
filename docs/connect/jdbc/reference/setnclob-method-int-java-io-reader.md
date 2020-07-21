@@ -1,5 +1,5 @@
 ---
-title: Método setNClob (int, Java. IO. Reader) | Microsoft Docs
+title: Método setNClob (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4abac6b892ae5960e8cafc5f265d6a81081e878b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93c2559555748ce18d0e77040fa9d737829c5466
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973776"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901127"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>Método setNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setNClob especifica este método setNClob en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

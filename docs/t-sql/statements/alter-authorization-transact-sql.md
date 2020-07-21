@@ -26,16 +26,16 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb1732f099dcdf9ab5119ba288d625ad45384bd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 705e5f381d8df82aff6f662b97d9742586ab498a
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066049"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86302039"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cambia la propiedad de un elemento protegible.    
     
@@ -43,7 +43,7 @@ ms.locfileid: "68066049"
     
 ## <a name="syntax"></a>Sintaxis    
     
-```    
+```syntaxsql
 -- Syntax for SQL Server  
 ALTER AUTHORIZATION    
    ON [ <class_type>:: ] entity_name    
@@ -60,7 +60,7 @@ ALTER AUTHORIZATION
     }    
 ```    
 
-```
+```syntaxsql
 -- Syntax for SQL Database  
   
 ALTER AUTHORIZATION    
@@ -79,7 +79,7 @@ ALTER AUTHORIZATION
 ```    
 
     
-```    
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -99,7 +99,7 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-```    
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER AUTHORIZATION ON    
@@ -121,32 +121,34 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-## <a name="arguments"></a>Argumentos    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 \<class_type> Es la clase protegible de la entidad para la que se va a cambiar el propietario. El valor predeterminado es OBJECT.    
     
 |||    
 |-|-|    
-|OBJECT|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|ASSEMBLY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ASYMMETRIC KEY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|AVAILABILITY GROUP |**SE APLICA A**: SQL Server 2012 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
-|CERTIFICATE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|CONTRACT|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|DATABASE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Para obtener más información, consulte la sección [bases de datos ALTER AUTHORIZATION FOR](#AlterDB) que encontrará más adelante.|    
-|ENDPOINT|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|FULLTEXT CATALOG|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|FULLTEXT STOPLIST|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|MESSAGE TYPE|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|REMOTE SERVICE BINDING|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|ROLE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|ROUTE|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SCHEMA|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
-|SEARCH PROPERTY LIST|**SE APLICA A**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|SERVER ROLE|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SERVICE|**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|    
-|SYMMETRIC KEY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|TYPE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
-|XML SCHEMA COLLECTION|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
+|OBJECT|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
+|ASSEMBLY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|ASYMMETRIC KEY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|AVAILABILITY GROUP |**SE APLICA A**: SQL Server 2012 y versiones posteriores|
+|CERTIFICADO|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|CONTRACT|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|DATABASE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Para obtener más información, consulte la sección [bases de datos ALTER AUTHORIZATION FOR](#AlterDB) que encontrará más adelante.|    
+|ENDPOINT|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|FULLTEXT CATALOG|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|FULLTEXT STOPLIST|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|MESSAGE TYPE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|REMOTE SERVICE BINDING|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|ROLE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|ROUTE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|SCHEMA|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|    
+|SEARCH PROPERTY LIST|**SE APLICA A**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|SERVER ROLE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|SERVICE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
+|SYMMETRIC KEY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|TYPE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|XML SCHEMA COLLECTION|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
     
  *entity_name*    
  Es el nombre de la entidad.    
@@ -154,7 +156,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  Nombre de la entidad de seguridad que va a ser propietaria de la entidad. Los objetos de base de datos deben tener una entidad de base de datos como propietaria; un usuario o rol de base de datos. Los objetos de servidor (como bases de datos) deben tener una entidad de servidor (un inicio de sesión) como propietaria. Indique **SCHEMA OWNER** como *principal_name* para indicar que el objeto debe tener como propietaria la entidad que posee el esquema del objeto.    
     
-## <a name="remarks"></a>Notas    
+## <a name="remarks"></a>Observaciones    
  Se puede usar ALTER AUTHORIZATION para cambiar la propiedad de cualquier entidad que tenga propietario. La propiedad de las entidades que contienen bases de datos se puede transferir a cualquier entidad de seguridad de nivel de base de datos. La propiedad de las entidades de nivel de servidor solo se puede transferir a entidades de seguridad de nivel de servidor.    
     
 > [!IMPORTANT]    
@@ -191,7 +193,7 @@ ALTER AUTHORIZATION ON
 |CERTIFICATE o ASYMMETRIC KEY|No se puede transferir la propiedad de estas entidades a un rol o un grupo.|    
 |ENDPOINT|La entidad de seguridad debe ser un inicio de sesión.|    
   
-## <a name="AlterDB"></a> ALTER AUTHORIZATION para bases de datos  
+## <a name="alter-authorization-for-databases"></a><a name="AlterDB"></a> ALTER AUTHORIZATION para bases de datos  
 **SE APLICA A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>En SQL Server:  
 **Requisitos del nuevo propietario:**    
@@ -253,7 +255,7 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>Práctica recomendada  
+### <a name="best-practice"></a>Procedimiento recomendado  
   
 En lugar de utilizar a los usuarios de Azure AD como propietarios individuales de la base de datos, utilice un grupo de Azure AD como miembro del rol fijo de base de datos **db_owner**. En los pasos siguientes se muestra cómo configurar un inicio de sesión deshabilitado como propietario de la base de datos y cómo convertir un grupo de Azure Active Directory (`mydbogroup`) en un miembro del rol **db_owner**. 
 1.  Inicie sesión en SQL Server como administrador de Azure AD y cambie el propietario de la base de datos a un inicio de sesión deshabilitado para la autenticación de SQL Server. Por ejemplo, desde la base de datos de usuario, ejecute:  
@@ -270,7 +272,7 @@ En lugar de utilizar a los usuarios de Azure AD como propietarios individuales d
   ```    
   
 Ahora, los miembros `mydbogroup` pueden administrar centralmente la base de datos como miembros del rol **db_owner**.  
-- Cuando los miembros de este grupo se quitan del grupo de Azure AD, pierden automáticamente los permisos de propietarios para esta base de datos.  
+- Cuando los miembros de este grupo se quitan del grupo de Azure AD, pierden automáticamente los permisos de propietarios para esta base de datos.  
 - Asimismo, si se agregan nuevos miembros al grupo de Azure AD `mydbogroup`, estos obtienen automáticamente acceso de propietarios para esta base de datos.  
   
 Para comprobar si un usuario específico tiene el permiso de propietario de base de datos en vigor, pídale que ejecute la instrucción siguiente:  
@@ -328,7 +330,7 @@ GO
 ### <a name="d-transfer-ownership-of-an-endpoint-to-a-sql-server-login"></a>D. Transferir la propiedad de un extremo a un inicio de sesión de SQL Server    
  En el siguiente ejemplo se transfiere la propiedad del extremo `CantabSalesServer1` a `JaePak`. Puesto que el extremo es un elemento protegible de nivel de servidor, el extremo solo puede transferirse a una entidad de seguridad de nivel de servidor.    
     
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.    
     
 ```    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
@@ -345,7 +347,7 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
 ```    
     
 ### <a name="f-changing-the-owner-of-a-database"></a>F. Cambiar el propietario de una base de datos    
- **SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].    
+ **SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]    
     
  En el ejemplo siguiente, se cambia el propietario de la base de datos `Parts` por el inicio de sesión `MichikoOsada`.    
     

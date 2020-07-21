@@ -12,15 +12,14 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a878a61678fcad2fe15ac71d8ed7d29f24057852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e28c5f77bea9a22511ca93d1a2b350887cae77b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829359"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438022"
 ---
 # <a name="xml-task"></a>Tarea XML
   La tarea XML se usa para trabajar con datos XML. Mediante esta tarea, un paquete puede recuperar documentos XML, aplicar operaciones a los documentos mediante las hojas de estilos Extensible Stylesheet Language Transformations (XSLT) y expresiones XPath, combinar varios documentos, o bien validar, comparar y guardar los documentos actualizados en archivos y variables.  
@@ -56,9 +55,9 @@ ms.locfileid: "62829359"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |Diferencias|Compara dos documentos XML. Usando el documento XML de origen como documento base, la operación de comparación lo compara con otro documento XML, detecta sus diferencias y escribe las diferencias en un documento DiffGram XML. Esta operación incluye propiedades para personalizar la comparación.|  
-|Mezcla|Combina dos documentos XML. Usando el documento XML de origen como documento base, la operación de combinación agrega el contenido de un segundo documento en el documento base. La operación puede especificar una ubicación de combinación dentro del documento base.|  
+|Merge|Combina dos documentos XML. Usando el documento XML de origen como documento base, la operación de combinación agrega el contenido de un segundo documento en el documento base. La operación puede especificar una ubicación de combinación dentro del documento base.|  
 |Revisión|Aplica el resultado de la operación de comparación, denominada documento DiffGram, en un documento XML para crear un nuevo documento principal que incluye contenido del documento DiffGram.|  
-|Validar|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD).|  
+|Validación|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD).|  
 |XPath|Realiza consultas y evaluaciones XPath.|  
 |XSLT|Realiza transformaciones XSL en documentos XML.|  
   
@@ -71,9 +70,9 @@ ms.locfileid: "62829359"
 |------------|-----------------|  
 |**IgnoreComments**|Valor que especifica si se comparan los nodos de comentarios.|  
 |**IgnoreNameSpaces**|Valor que especifica si se comparan el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y sus nombres de atributos. Si esta opción se establece en `true`, dos elementos que tienen el mismo nombre local pero un espacio de nombres diferente se consideran idénticos.|  
-|**IgnorePrefixes**|Valor que especifica si se comparan los prefijos de nombres de elementos y atributos. Si esta opción está establecida en `true,` dos elementos que tienen el mismo nombre local pero un URI de espacio de nombres diferente y un prefijo se consideran idénticos.|  
+|**IgnorePrefixes**|Valor que especifica si se comparan los prefijos de nombres de elementos y atributos. Si esta opción se establece en `true,` dos elementos que tienen el mismo nombre local pero un URI y un prefijo de espacio de nombres diferentes se consideran idénticos.|  
 |**IgnoreXMLDeclaration**|Un valor que especifica si se comparan las declaraciones XML.|  
-|**IgnoreOrderOfChildElements**|Valor que especifica si se compara el orden de los elementos secundarios. Si esta opción se establece en `true`, los elementos secundarios que solo difieren en su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
+|**IgnoreOrderOfChildElements**|Valor que especifica si se compara el orden de los elementos secundarios. Si esta opción se establece en `true` , los elementos secundarios que solo difieren en su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
 |**IgnoreWhiteSpaces**|Valor que especifica si se comparan los espacios en blanco.|  
 |**IgnoreProcessingInstructions**|Valor que especifica si se comparan las instrucciones de procesamiento.|  
 |**IgnoreDTD**|Valor que especifica si se pasa por alto el DTD.|  
@@ -121,7 +120,7 @@ ms.locfileid: "62829359"
   
 -   [Editor de la tarea XML &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [Validar XML con la tarea XML](xml-task.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -141,6 +140,5 @@ ms.locfileid: "62829359"
   
 -   Entrada del blog sobre el [Componente script de destino XML](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), en agilebi.com  
   
--   Ejemplo en CodePlex, [ejemplo de proceso de paquete de datos XML](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), en www.codeplex.com  
-  
+-   Ejemplo en CodePlex, [ejemplo de proceso de paquete de datos XML](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), en www.codeplex.com  
   

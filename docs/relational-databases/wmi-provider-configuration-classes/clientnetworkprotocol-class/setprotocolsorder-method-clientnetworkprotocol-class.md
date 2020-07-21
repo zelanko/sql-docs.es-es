@@ -1,6 +1,6 @@
 ---
-title: Método SetProtocolsOrder (clase ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Método SetProtocolsOrder (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 714154456bcdf2a5202148c46cc9b52b376c7f8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 93c4b91d6091cf8ed60cf7923d31460f37d5f4bb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040805"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881062"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Método SetProtocolsOrder (clase ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cambia el orden de la lista de protocolos.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -50,8 +50,8 @@ object.SetProtocolsOrder(ProtocolOrderList)
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)   
- [Configurar bibliotecas de red y protocolos de red de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

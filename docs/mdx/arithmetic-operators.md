@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017084"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
@@ -22,7 +22,7 @@ ms.locfileid: "68017084"
   
  MDX es compatible con los operadores aritméticos que se indican en la siguiente tabla.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |[+ (Sumar)](../mdx/add-mdx.md)|Suma dos números.|  
 |[/ (Dividir)](../mdx/divide-mdx-operator-reference.md)|Divide un número entre otro.|  
@@ -42,8 +42,8 @@ ms.locfileid: "68017084"
   
 -   Las expresiones entre paréntesis tienen precedencia sobre el resto de las operaciones.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operadores &#40;sintaxis de MDX&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

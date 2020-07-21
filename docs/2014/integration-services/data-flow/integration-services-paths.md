@@ -13,15 +13,14 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 832ea48478eb28b94caf292067344a3754040b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c225d2fe52fcb12a5abc22df5008b6cbc9b861a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62901799"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432112"
 ---
 # <a name="integration-services-paths"></a>Rutas de Integration Services
   Una ruta conecta dos componentes en un flujo de datos conectando la salida de un componente de flujo de datos con la entrada de otro componente. Una ruta tiene un origen y un destino. Por ejemplo, si una ruta conecta un origen de OLE DB y una transformación Ordenar, el origen de OLE DB es el origen de la ruta y la transformación Ordenar es el destino de la ruta. El origen es el componente donde se inicia la ruta y el destino es el componente donde finaliza la ruta.  
@@ -41,9 +40,9 @@ ms.locfileid: "62901799"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de rutas de flujo de datos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de rutas de flujo de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de rutas de flujo de datos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de rutas de flujo de datos &#40;metadatos (página)&#41;](../data-flow-path-editor-metadata-page.md)  
+-   [Editor de rutas de flujo de datos &#40;página de metadatos&#41;](../data-flow-path-editor-metadata-page.md)  
   
 -   [Editor de rutas de flujo de datos &#40;página visores de datos&#41;](../data-flow-path-editor-data-viewers-page.md)  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62901799"
   
 -   [Conectar componentes de un flujo de datos](connect-components-in-a-data-flow.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](data-flow.md)  
   
   

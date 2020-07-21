@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938934"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834736"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propiedad)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,7 @@ ms.locfileid: "67938934"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
-IDENTITY [ (seed , increment) ]  
+IDENTITY [ (seed , increment) ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -54,7 +53,7 @@ IDENTITY [ (seed , increment) ]
   
  Debe especificar tanto el valor de inicialización como el incremento, o bien ninguno de los dos. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las columnas de identidad pueden usarse para generar valores de clave. La propiedad de identidad de una columna garantiza lo siguiente:  
   
 -   Cada nuevo valor se genera basándose en el valor actual de inicialización e incremento.  
@@ -67,7 +66,7 @@ IDENTITY [ (seed , increment) ]
   
 -   **Consecutive values within a transaction** (Valores consecutivos en una transacción): No se garantiza que una transacción que inserta varias filas obtenga valores consecutivos para las filas porque podrían producirse otras inserciones simultáneas en la tabla. Si los valores deben ser consecutivos, la transacción debe usar un bloqueo exclusivo en la tabla o usar el nivel de aislamiento **SERIALIZABLE**.  
   
--   **Consecutive values after server restart or other failures** (Valores consecutivos después de un reinicio del servidor u otros errores) - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría almacenar en memoria caché los valores de identidad por motivos de rendimiento y algunos de los valores asignados podrían perderse durante un error de la base de datos o un reinicio del servidor. Esto puede tener como resultado espacios en el valor de identidad al insertarlo. Si no es aceptable que haya espacios, la aplicación debe usar mecanismos propios para generar valores de clave. El uso de un generador de secuencias con la opción **NOCACHE** puede limitar los espacios a transacciones que nunca se llevan a cabo.  
+-   **Consecutive values after server restart or other failures** (Valores consecutivos después de un reinicio del servidor u otros errores) -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría almacenar en memoria caché los valores de identidad por motivos de rendimiento y algunos de los valores asignados podrían perderse durante un error de la base de datos o un reinicio del servidor. Esto puede tener como resultado espacios en el valor de identidad al insertarlo. Si no es aceptable que haya espacios, la aplicación debe usar mecanismos propios para generar valores de clave. El uso de un generador de secuencias con la opción **NOCACHE** puede limitar los espacios a transacciones que nunca se llevan a cabo.  
   
 -   **Reuse of values** (Reutilización de valores): Para una propiedad de identidad determinada, con un valor de inicialización e incremento específico, el motor no reutiliza los valores de identidad. Si una instrucción de inserción concreta produce un error o si la instrucción de inserción se revierte, los valores de identidad utilizados se pierden y no volverán a generarse. Esto puede tener como resultado espacios cuando se generan los valores de identidad siguientes.  
   
@@ -77,7 +76,7 @@ IDENTITY [ (seed , increment) ]
   
  Solo se puede crear una columna de identidad para cada tabla.  
   
- En las tablas optimizadas para memoria, el valor de inicialización y el valor de incremento debe establecerse en 1,1. Si establece el valor de inicialización o de incremento en un valor que no sea 1, se produce el siguiente error: El uso de valores de inicialización y de incremento distintos a 1 no es compatible con las tablas con optimización para memoria.  
+ En las tablas optimizadas para memoria, el valor de inicialización y el valor de incremento debe establecerse en 1,1. Si seed o increment se establecen en un valor distinto de 1, se produce este error: The use of seed and increment values other than 1 is not supported with memory optimized tables (No se admite el uso de valores seed e increment distintos de 1 con tablas optimizadas en memoria).  
   
 ## <a name="examples"></a>Ejemplos  
   

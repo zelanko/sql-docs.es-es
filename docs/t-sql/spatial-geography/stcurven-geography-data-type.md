@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eabf47faee7f6dbd0916680b378a653a1ae9c619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704377"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (tipo de datos Geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve la curva especificada a partir de una instancia de **geography** que es **LineString**, **CircularString** o **CompoundCurve**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68042449"
  *n*  
  Es una expresión **int** entre 1 y el número de curvas de la instancia de **geography**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
@@ -48,7 +48,7 @@ ms.locfileid: "68042449"
 ## <a name="exceptions"></a>Excepciones  
  Si n < 1, se produce una excepción **ArgumentOutOfRangeException**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se dan los criterios siguientes, se devuelve **NULL**.  
   
 -   Se declara la instancia de **geography**, pero no se crea.  

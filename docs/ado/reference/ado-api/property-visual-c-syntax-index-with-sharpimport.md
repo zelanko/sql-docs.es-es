@@ -1,5 +1,5 @@
 ---
-title: 'Propiedad (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
+title: 'Property (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - 'Property collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 80988ca7-f514-438d-bf6f-9390dfe93fc3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2175b8b07fcea8dc61ab0c47a4d85fcdb94dd7d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: de7aa9f867e723099e7b6a7cc9177bf6d152cce8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931579"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759951"
 ---
-# <a name="property-visual-c-syntax-index-with-import"></a>Propiedad (Visual C++ índice de sintaxis con #import)
+# <a name="property-visual-c-syntax-index-with-import"></a>Property (Visual C++ Índice de sintaxis con #import)
 ## <a name="properties"></a>Propiedades  
   
 ```  
@@ -42,5 +42,5 @@ void PutValue( const _variant_t & pval );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

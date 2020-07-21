@@ -1,8 +1,10 @@
 ---
-title: Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 05/24/2018
+title: Creación de una base de datos del servidor de informes de modo nativo (Administrador de configuración) | Microsoft Docs
+description: El modo nativo de Reporting Services usa una base de datos SQL Server para el almacenamiento interno. La base de datos es un componente necesario y se utiliza para almacenar los informes publicados, modelos, orígenes de datos compartidos, datos de sesión, recursos y metadatos del servidor.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -10,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652343"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866338"
 ---
-# <a name="create-a-native-mode-report-server-database"></a>Crear una base de datos del servidor de informes de modo nativo
+# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Creación de una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo nativo usa una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el almacenamiento interno. La base de datos es un componente necesario y se utiliza para almacenar los informes publicados, modelos, orígenes de datos compartidos, datos de sesión, recursos y metadatos del servidor.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo usa una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el almacenamiento interno. La base de datos es un componente necesario y se utiliza para almacenar los informes publicados, modelos, orígenes de datos compartidos, datos de sesión, recursos y metadatos del servidor.  
 
 Para crear una base de datos del servidor de informes o cambiar la cadena de conexión o las credenciales, utilice las opciones de la página Base de datos del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -30,7 +32,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
  Si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la configuración predeterminada para el modo nativo, la base de datos del servidor de informes se ha creado y configurado automáticamente al instalar la instancia del servidor de informes. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver o modificar los valores que el programa de configuración estableció automáticamente.  
   
-##  <a name="rsdbrequirements"></a> Antes de empezar  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Antes de empezar  
  La creación o configuración de una base de datos del servidor de informes son procesos que constan de varios pasos. Antes de crear la base de datos del servidor de informes, considere cómo desea especificar los elementos siguientes:  
   
  **Seleccionar un servidor de base de datos**  
@@ -65,13 +67,13 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 5.  Haga clic con el botón derecho en **TCP/IP** y seleccione **Habilitado**.  
   
-6.  Reiniciar el servicio.  
+6.  Reinicie el servicio.  
   
-7.  Abra el software de firewall y abra el puerto en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha. Para la instancia predeterminada, suele ser el puerto 1433 de las conexiones TCP/IP. Para obtener más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+7.  Abra el software de firewall y abra el puerto en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha. Para la instancia predeterminada, suele ser el puerto 1433 de las conexiones TCP/IP. Para más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Crear una base de datos del servidor de informes local  
   
-1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes para la que va a crear la base de datos. Para obtener más información, vea [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes para la que va a crear la base de datos. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  En la página Base de datos, seleccione **Cambiar base de datos**.  
   
@@ -85,7 +87,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
     3.  Seleccione **Probar conexión** para validar la conexión al servidor.  
   
-    4.  Seleccione **Siguiente**.  
+    4.  Seleccione **Next** (Siguiente).  
   
 5.  Especifique las propiedades que se usan para crear la base de datos. Para obtener más información acerca de cómo se utilizan estas propiedades, vea [Antes de empezar](#rsdbrequirements) en este tema:  
   
@@ -95,7 +97,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
     3.  El modo de servidor de informes siempre está establecido en **Nativo**.  
   
-    4.  Seleccione **Siguiente**.  
+    4.  Seleccione **Next** (Siguiente).  
   
 6.  Especifique las credenciales que usa el servidor de informes para conectarse a la base de datos del servidor de informes.  
   
@@ -107,11 +109,11 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
          Seleccione **Credenciales de servicio** si desea que el servidor de informes se conecte con su cuenta de servicio. Con esta opción, el servidor se conecta utilizando la seguridad integrada; las credenciales no se cifran ni almacenan.  
   
-    2.  Seleccione **Siguiente**.  
+    2.  Seleccione **Next** (Siguiente).  
   
 7.  Revise la información de la página Resumen para comprobar que la configuración es correcta y, después, seleccione **Siguiente**.  
   
-8.  Compruebe la conexión mediante la selección de una dirección URL en la página Dirección URL del servidor de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Compruebe la conexión mediante la selección de una dirección URL en la página Dirección URL del servidor de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Modificar las credenciales de base de datos
 
@@ -127,7 +129,7 @@ El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ss
   
     2.  Seleccione **Probar conexión** para validar la conexión al servidor.  
   
-    3.  Seleccione **Siguiente**.  
+    3.  Seleccione **Next** (Siguiente).  
 
 4.  Especifique las credenciales que usa el servidor de informes para conectarse a la base de datos del servidor de informes.  
   
@@ -139,7 +141,7 @@ El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ss
   
          Seleccione **Credenciales de servicio** si desea que el servidor de informes se conecte con su cuenta de servicio. Con esta opción, el servidor se conecta utilizando la seguridad integrada; las credenciales no se cifran ni almacenan.  
   
-    2.  Seleccione **Siguiente**. 
+    2.  Seleccione **Next** (Siguiente). 
 
 5. Revise la configuración y seleccione **Siguiente**.
 

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b46633e17ee508a9e38ef1cc57cb76004ecdcba1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706616"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Marca el final de una transacción.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "68140252"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 COMMIT [ WORK ]  
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta instrucción funciona de forma idéntica a la instrucción COMMIT TRANSACTION, con la diferencia de que COMMIT TRANSACTION acepta nombres de transacción definidos por el usuario. Esta sintaxis de COMMIT, con o sin la especificación de la palabra clave opcional WORK, es compatible con SQL-92.  
   
 ## <a name="see-also"></a>Consulte también  

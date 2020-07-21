@@ -1,5 +1,5 @@
 ---
-title: Comandos de forma General | Microsoft Docs
+title: Comandos Shape en general | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,45 +11,45 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924176"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760861"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
-La forma de datos define las columnas de una forma **Recordset**, las relaciones entre las entidades representadas por las columnas y la forma en que el **Recordset** se rellena con datos.  
+La forma de datos define las columnas de un **conjunto de registros**con forma, las relaciones entre las entidades representadas por las columnas y la manera en que el **conjunto de registros** se rellena con datos.  
   
- Una forma **Recordset** puede constar de los siguientes tipos de columnas.  
+ Un **conjunto de registros** con forma puede constar de los siguientes tipos de columnas.  
   
 |Tipo de columna|Descripción|  
 |-----------------|-----------------|  
-|data|Campos de un **Recordset** devuelto por un comando de consulta a un proveedor de datos, tabla o en forma de anteriormente **Recordset**.|  
-|Capítulo|Una referencia a otro **Recordset**, denominado un *capítulo*. Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y el *secundarios* es el **Recordset** representado por el capítulo.|  
-|agregado|El valor de la columna se deriva ejecutando una *función de agregado* en todas las filas o una columna de todas las filas de un elemento secundario **Recordset**. (Vea las funciones de agregado en el tema siguiente, [las funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
-|Expresión calculada|El valor de la columna se deriva calculando un Visual Basic para la expresión de aplicaciones en las columnas de la misma fila de la **Recordset**. La expresión es el argumento a la función CALC. (Vea expresión calculada en el tema siguiente, [las funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) y en [Visual Basic para aplicaciones de funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  
-|nuevo|Campos creados vacíos, que se pueden rellenar con datos en un momento posterior. La columna se define con la palabra clave NEW. (Vea la nueva palabra clave en el tema siguiente, [las funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
+|datos|Campos de un **conjunto de registros** devueltos por un comando de consulta a un proveedor de datos, una tabla o un **conjunto de registros**con forma anterior.|  
+|Capítulo|Referencia a otro **conjunto de registros**, denominado *capítulo*. Las columnas Chapter permiten definir una relación *de elementos primarios y secundarios* en la que el *elemento primario* es el **conjunto de registros** que contiene la columna Chapter y el *elemento secundario* es el **conjunto de registros** representado por el capítulo.|  
+|aggregate|El valor de la columna se deriva mediante la ejecución de una *función de agregado* en todas las filas o en una columna de todas las filas de un conjunto de **registros**secundario. (Vea funciones de agregado en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
+|expresión calculada|El valor de la columna se deriva calculando una expresión Visual Basic para Aplicaciones en las columnas de la misma fila del **conjunto de registros**. La expresión es el argumento de la función CALC. (Vea expresión calculada en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) y en [funciones Visual Basic para aplicaciones](../../../ado/guide/data/visual-basic-for-applications-functions.md)).|  
+|nuevo|Campos de fabricación vacíos, que se pueden rellenar con datos en otro momento. La columna se define con la palabra clave NEW. (Vea la nueva palabra clave en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
   
- Un comando shape puede contener una cláusula que especifica un comando de consulta a un proveedor de datos subyacente que devolverá un **Recordset** objeto. Sintaxis de la consulta depende de los requisitos del proveedor de datos subyacente. Suele ser SQL, aunque ADO no requiere el uso de cualquier lenguaje de consulta en particular.  
+ Un comando de forma puede contener una cláusula que especifica un comando de consulta para un proveedor de datos subyacente que devolverá un objeto de **conjunto de registros** . La sintaxis de la consulta depende de los requisitos del proveedor de datos subyacente. Normalmente será SQL, aunque ADO no requiere el uso de un lenguaje de consulta determinado.  
   
- Pueden emitir comandos de forma **Recordset** objetos o mediante la configuración de la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad de la [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y, a continuación, llamar a la [Execute ](../../../ado/reference/ado-api/execute-method-ado-command.md) método.  
+ Los comandos de forma pueden ser emitidos por objetos de **conjunto de registros** o estableciendo la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) del objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) y, a continuación, llamando al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) .  
   
- Podría usar una cláusula SQL JOIN para relacionar las dos tablas; Sin embargo, jerárquica **Recordset** puede representar la información de forma más eficaz. Cada fila de un **Recordset** creado mediante una información de repeticiones de combinación redundante desde una de las tablas. Jerárquica **Recordset** tiene solo un elemento primario **Recordset** para cada uno de varios secundarios **Recordset** objetos.  
+ Puede usar una cláusula SQL JOIN para relacionar dos tablas; sin embargo, un **conjunto de registros** jerárquico puede representar la información de forma más eficaz. Cada fila de un **conjunto de registros** creado por una combinación repite información de forma redundante de una de las tablas. Un conjunto de **registros** jerárquico solo tiene un **conjunto de registros** primario para cada uno de los distintos objetos de **conjunto de registros** secundarios.  
   
- Comandos de forma que se pueden anidar. Es decir, el *comando primario* o *comando secundario* puede ser otro comando shape.  
+ Los comandos de forma se pueden anidar. Es decir, el comando *primario* o *secundario* puede ser otro comando de forma.  
   
- El proveedor de formas siempre devuelve un cursor de cliente, incluso cuando el usuario especifica una posición del cursor del **adUseServer**.  
+ El proveedor de la forma siempre devuelve un cursor de cliente, incluso cuando el usuario especifica una ubicación de cursor de **adUseServer**.  
   
- Puede tener acceso a la **Recordset** componentes de la forma **Recordset** mediante programación o a través de un control visual adecuado.  
+ Puede tener acceso a los componentes de **conjunto** de registros del **conjunto de registros** con forma mediante programación o a través de un control visual adecuado.  
   
- Microsoft proporciona una herramienta visual que genera comandos shape (vea la [diseñador del entorno de datos](https://go.microsoft.com/fwlink/?LinkId=5689) en la documentación de Visual Basic 6) y otra que muestra cursores jerárquicos (vea "usar el Microsoft jerárquica FlexGrid Control"en la documentación de Visual Basic 6).  
+ Microsoft proporciona una herramienta visual que genera comandos de forma (vea el [Diseñador de entorno de datos](https://go.microsoft.com/fwlink/?LinkId=5689) en la documentación de Visual Basic 6) y otro que muestra los cursores jerárquicos (vea "usar el control Hierarchical FlexGrid de Microsoft" en la documentación de Visual Basic 6).  
   
- Para obtener información sobre la navegación jerárquica **Recordset**, consulte [obtener acceso a filas en un conjunto de registros jerárquicos](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Para obtener información sobre cómo navegar por un **conjunto de registros**jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
- Para obtener información exacta sobre los comandos de forma sintácticamente correcto, consulte [gramática Formal de forma](../../../ado/guide/data/formal-shape-grammar.md).  
+ Para obtener información precisa sobre los comandos Shape sintácticamente correctos, vea [gramática formal](../../../ado/guide/data/formal-shape-grammar.md)de las formas.  
   
  Esta sección contiene los temas siguientes.  
   

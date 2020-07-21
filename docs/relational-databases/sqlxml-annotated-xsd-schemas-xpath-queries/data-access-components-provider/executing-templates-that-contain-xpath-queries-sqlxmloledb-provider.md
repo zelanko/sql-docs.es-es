@@ -1,6 +1,6 @@
 ---
-title: Ejecutar plantillas que contienen consultas XPath (proveedor SQLXMLOLEDB) | Microsoft Docs
-ms.custom: ''
+title: Ejecutar plantillas que contienen consultas XPath (SQLXMLOLEDB)
+description: Vea un ejemplo de una aplicación ADO que utiliza el proveedor SQLXMLOLEDB para ejecutar una plantilla que contiene consultas XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,34 +18,35 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035d9c4cb94a52d964d26c2b6b94180eb7eefaff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9cccdba37897836733f666ede50948953b31946b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109598"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650411"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas XPath (Proveedor SQLXMLOLEDB)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   En este ejemplo se muestra cómo utilizar las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
   
--   ClientSideXML  
+-   Clientsidexml,  
   
--   Ruta de acceso base  
+-   Ruta de base  
   
 -   Esquema de asignación  
   
- En esta aplicación ADO de ejemplo, se especifica una plantilla XML que consta de una consulta de XPath (raíz) en el esquema de asignación XSD (MySchema.xml) que se describe en [ejecutar consultas XPath &#40;proveedor SQLXMLOLEDB&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ En esta aplicación ADO de ejemplo, se especifica una plantilla XML compuesta de una consulta XPath (raíz) en el esquema de asignación XSD (MySchema.xml) que se describe en [ejecutar consultas xpath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
- La propiedad de esquema de asignación proporciona el esquema de asignación XSD en el que se ejecuta la consulta XPath. La propiedad de ruta de acceso Base proporciona la ruta de acceso al esquema de asignación.  
+ La propiedad esquema de asignación proporciona el esquema de asignación XSD en el que se ejecuta la consulta XPath. La propiedad ruta de acceso base proporciona la ruta de acceso del archivo al esquema de asignación.  
   
- El clientsidexml, propiedad se establece en True. Por lo tanto, el documento XML se genera en el cliente.  
+ La propiedad Clientsidexml, se establece en true. Por lo tanto, el documento XML se genera en el cliente.  
   
  En la aplicación, se especifica una consulta XPath directamente. Por lo tanto, debe estar incluido el lenguaje {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   
 > [!NOTE]  
->  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere el software de cliente de red adicional para instalarse. Para obtener más información, consulte [requisitos del sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
+>  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión. Además, este ejemplo especifica el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) para el proveedor de datos que requiere la instalación de software cliente de red adicional. Para obtener más información, vea [requisitos del sistema para SQL Server Native Client](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

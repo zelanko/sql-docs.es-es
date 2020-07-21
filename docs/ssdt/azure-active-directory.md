@@ -1,20 +1,21 @@
 ---
-title: Azure Active Directory en SQL Server Data Tools (SSDT) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/31/2018
+title: Azure Active Directory en SSDT
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4ea9e05d0a3f1c330fc24f52670384b2a3cd844d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984690"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286209"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Compatibilidad de Azure Active Directory con SQL Server Data Tools (SSDT)
 
@@ -22,14 +23,16 @@ ms.locfileid: "67984690"
 
 SQL Server Data Tools (SSDT) proporciona varios métodos de autenticación de [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
 
+En Visual Studio, abra el **Explorador de objetos de SQL Server** (en el menú **Vista**) y seleccione **Agregar SQL Server**:
+
 ![Cuadro de diálogo de conexión de SSDT](media/azure-active-directory/interactive.png)
 
 #### <a name="which-azure-sql-products"></a>¿Qué productos de Azure SQL?
 
 En este artículo se describe Azure AD para la lista siguiente de *productos de Azure SQL* en [Azure Cloud](https://azure.microsoft.com/):
 
-- Base de datos SQL de Azure
-- Almacenamiento de datos SQL de Azure
+- Azure SQL Database
+- Azure SQL Data Warehouse
 
 ## <a name="active-directory-password-authentication"></a>Autenticación de contraseña de Active Directory
 
@@ -38,11 +41,11 @@ En este artículo se describe Azure AD para la lista siguiente de *productos de 
 - Haya iniciado sesión en Windows con las credenciales de un dominio que no está federado con Azure, o bien
 - Use la autenticación de Azure AD con Azure AD y se base en el dominio cliente o inicial.
 
-Para más información, consulte [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
 
 ## <a name="active-directory-integrated-authentication"></a>Autenticación integrada de Active Directory
 
-*Autenticación integrada de Active Directory* es un mecanismo que permite conectarse a los productos de Azure SQL indicados mediante identidades de Azure Active Directory (Azure AD). Use este método para conectarse si ha iniciado sesión en Windows con credenciales de Azure Active Directory de un dominio federado. Para más información, consulte [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+*Autenticación integrada de Active Directory* es un mecanismo que permite conectarse a los productos de Azure SQL indicados mediante identidades de Azure Active Directory (Azure AD). Use este método para conectarse si ha iniciado sesión en Windows con credenciales de Azure Active Directory de un dominio federado. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Autenticación interactiva de Active Directory
 

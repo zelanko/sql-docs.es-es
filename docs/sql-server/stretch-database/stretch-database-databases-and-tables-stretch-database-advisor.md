@@ -1,5 +1,5 @@
 ---
-title: Identificación de bases de datos y tablas para Stretch Database | Microsoft Docs
+title: Identificación de bases de datos y tablas
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,12 +12,13 @@ helpviewer_keywords:
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 304aba1c33dcfd46a2dbfb27e8eeefff8c0f6436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091849"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73843750"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificar bases de datos y tablas para Stretch Database con Data Migration Assistant
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "68091849"
 
 7.  Seleccione **Start Assessment** (Iniciar evaluación).
 
-## <a name="review-the-results"></a>Consultar los resultados  
+## <a name="review-the-results"></a>Revisión del resultado  
   
 1.  Cuando termine el análisis, en la página **Revisar resultados** (paso 3), seleccione la opción **Recomendaciones de características** y luego la pestaña **Almacenamiento**.
 
@@ -65,6 +66,6 @@ Con el lanzamiento de Data Migration Assistant, que reemplaza a Upgrade Advisor 
 ## <a name="see-also"></a>Consulte también  
  [Limitaciones del área expuesta y problemas de bloqueo de Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Habilitación de Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

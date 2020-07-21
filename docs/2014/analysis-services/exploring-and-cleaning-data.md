@@ -1,5 +1,5 @@
 ---
-title: Exploración y limpieza de datos | Microsoft Docs
+title: Explorar y limpiar datos | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a31ed2e8e79e6f3ebf6cbecfeac14d24b56bf303
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081268"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528341"
 ---
 # <a name="exploring-and-cleaning-data"></a>Explorar y limpiar datos
   La preparación de los datos es mucho más que limpiarlos. Recuerde que el modo en que los datos se preparan también afecta al modo en que los resultados se interpretan en el extremo. La preparación de los datos implica estas tareas:  
@@ -32,13 +31,13 @@ ms.locfileid: "66081268"
   
 -   Convertir los tipos de datos o categorizar los valores en caso necesario para el análisis.  
   
- Si está familiarizado con el modelado de datos, recomendamos que lea el tema relacionado, [lista de comprobación de preparación para la minería de datos](checklist-of-preparation-for-data-mining.md).  
+ Si no está familiarizado con el modelado de datos, se recomienda leer el tema relacionado, [lista de comprobación de preparación para la minería de datos](checklist-of-preparation-for-data-mining.md).  
   
 ## <a name="data-preparation-tools"></a>Herramientas de preparación de datos  
  Complementos de minería de datos para Office incluye las herramientas siguientes para la limpieza y preparación de los datos:  
   
 ### <a name="explore-data"></a>Explorar datos  
- Use la **explorar datos** Asistente para estas tareas de preparación de datos:  
+ Use el Asistente para **explorar datos** para estas tareas de preparación de datos:  
   
 -   Obtener una vista previa de los datos e identificar errores que se deben corregir antes del análisis.  
   
@@ -46,10 +45,10 @@ ms.locfileid: "66081268"
   
 -   Identificar columnas que son útiles para el análisis y planear la fase de modelado de datos.  
   
- [Explorar datos &#40;complementos de minería de datos de SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md).  
+ [Explore los datos &#40;SQL Server complementos de minería de datos&#41;](explore-data-sql-server-data-mining-add-ins.md).  
   
 ### <a name="detect-and-handle-outliers"></a>Detectar y administrar valores atípicos  
- El **valores atípicos** Asistente gráficamente la distribución de valores de los datos y le ayuda a quitar los valores extremos. Use la **valores atípicos** herramienta para las tareas de preparación de datos siguientes:  
+ El asistente valores **atípicos** representa gráficamente la distribución de los valores de los datos y ayuda a quitar los valores extremos. Use la herramienta **valores atípicos** para las siguientes tareas de preparación de datos:  
   
 -   Determinar si los distintos valores son confiables, basándose en los patrones encontrados en los datos.  
   
@@ -57,10 +56,10 @@ ms.locfileid: "66081268"
   
 -   Definir el ámbito de un modelo a un intervalo de valores específico. Por ejemplo, si sabe que tiene valores atípicos en un almacén determinado, puede eliminar ese valor y obtener un modelo que obtenga mejores predicciones en otros almacenes.  
   
- [Los valores atípicos &#40;complementos de minería de datos de SQL Server&#41;](outliers-sql-server-data-mining-add-ins.md).  
+ [Valores atípicos &#40;SQL Server complementos de minería de datos&#41;](outliers-sql-server-data-mining-add-ins.md).  
   
 ### <a name="relabel-and-bin-data"></a>Cambiar etiquetas y discretizar datos  
- El **cambiar etiquetas** Asistente agrupa los datos por valores para que puedan cambiar las etiquetas de los datos. Utilice la herramienta Cambiar etiquetas para estas tareas de preparación de datos:  
+ El Asistente para cambiar **etiquetas** agrupa los datos por valores para que pueda cambiar las etiquetas de los datos. Utilice la herramienta Cambiar etiquetas para estas tareas de preparación de datos:  
   
 -   Cambiar los códigos numéricos utilizados en los resultados de una encuesta por una descripción de texto con el significado de los códigos numéricos.  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66081268"
   
 -   Discretizar datos mediante la creación de grupos que representen intervalos de números.  
   
-     Por ejemplo, desea reemplazar una columna de números de ingresos por etiquetas como **ingresos - moderado** y **ingresos - altos**.  
+     Por ejemplo, puede que desee reemplazar una columna ingresos de números por etiquetas como **ingresos-moderado** e **ingresos-alto**.  
   
 -   Contraer valores discretos en categorías.  
   
      Por ejemplo, si tiene demasiados productos individuales que le imposibilitan detectar un patrón de compras, puede intentar reagrupar los productos en categorías.  
   
- [Cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [Cambiar la etiqueta de &#40;SQL Server complementos de minería de datos&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
 ### <a name="cleanse-data"></a>Limpiar datos  
  La limpieza de datos abarca una amplia variedad de actividades, la mayoría de las cuales se realizan mediante los complementos  
@@ -83,24 +82,24 @@ ms.locfileid: "66081268"
   
 -   Detectar valores ausentes y quitarlos o imputarles un valor adecuado, como una media, un valor NULL u otro valor.  
   
- [Explorar datos &#40;complementos de minería de datos de SQL Server&#41;](explore-data-sql-server-data-mining-add-ins.md)  
+ [Explorar datos &#40;SQL Server complementos de minería de datos&#41;](explore-data-sql-server-data-mining-add-ins.md)  
   
- [Cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41;](relabel-sql-server-data-mining-add-ins.md)  
+ [Cambiar la etiqueta de &#40;SQL Server complementos de minería de datos&#41;](relabel-sql-server-data-mining-add-ins.md)  
   
  [Rellenar desde ejemplo](fill-from-example-table-analysis-tools-for-excel.md)  
   
 ### <a name="sample-data"></a>Datos de ejemplo  
  El Asistente para datos de muestra proporciona dos métodos para crear conjuntos de datos equilibrados para entrenar y probar modelos.  
   
--   **Muestreo aleatorio.** Utilice esta opción para extraer un conjunto de datos representativo de un conjunto de datos más grande y usarlos como datos de entrenamiento o de prueba. Usan los complementos de minería de datos *muestreo estratificado* para asegurarse de que se obtiene un conjunto equilibrado de valores para cada variable muestreada.  
+-   **Muestreo aleatorio.** Utilice esta opción para extraer un conjunto de datos representativo de un conjunto de datos más grande y usarlos como datos de entrenamiento o de prueba. Los complementos de minería de datos usan el *muestreo estratificado* para asegurarse de que se obtiene un conjunto equilibrado de valores para cada variable muestreada.  
   
 -   **Sobremuestreo.** Utilice esta opción cuando disponga de menos datos de los que le gustaría para un resultado de destino, y necesite dar a dichos datos un peso mayor. Por ejemplo, el fraude puede ser relativamente poco frecuente, pero puede sobremuestrear los casos que implican fraude para obtener datos apropiados para el modelado.  
   
- [Datos de ejemplo &#40;complementos de minería de datos de SQL Server&#41;](sample-data-sql-server-data-mining-add-ins.md).  
+ [&#40;de datos de ejemplo SQL Server complementos de minería de datos&#41;](sample-data-sql-server-data-mining-add-ins.md).  
   
-## <a name="see-also"></a>Vea también  
- [Creación de un modelo de minería de datos](creating-a-data-mining-model.md)   
- [Validar modelos y usar modelos para la predicción &#40;datos complementos de minería de datos para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [Implementar y ampliar modelos de minería de datos &#40;datos complementos de minería de datos para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear un modelo de minería de datos](creating-a-data-mining-model.md)   
+ [Validar modelos y usar modelos para la predicción &#40;complementos de minería de datos para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [Implementar y escalar modelos de minería de datos &#40;complementos de minería de datos para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

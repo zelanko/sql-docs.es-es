@@ -1,5 +1,5 @@
 ---
-title: Instalación y referencia de los componentes de configuración | Microsoft Docs
+title: Referencia de componentes de instalación y configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca15d3946dffe67c28d285c95f62d8956b276fb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094150"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301954"
 ---
 # <a name="installation-and-configuration-components-reference"></a>Referencia de los componentes de instalación y configuración
 > [!NOTE]  
->  Desde Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. ODBC explícitamente sólo debe instalar en versiones anteriores de Windows.  
+>  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar explícitamente ODBC en versiones anteriores de Windows.  
   
- Las secciones siguientes proporcionan información acerca de los componentes usados para la instalación y configuración de ODBC.  
+ En las secciones siguientes se proporciona información sobre los componentes que se usan para instalar y configurar ODBC.  
   
 -   [Programa de administración](../../../odbc/reference/install/administration-program.md)  
   

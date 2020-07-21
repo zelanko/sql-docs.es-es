@@ -13,17 +13,17 @@ helpviewer_keywords:
 - scalar functions [ODBC], desktop database drivers
 - SQL grammar [ODBC], scalar functions
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85511a9997ccbae0ebe4838218d43bc997344085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e9d319b08069fd0ae32af20bf39dbdb7cdfb819c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997778"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306016"
 ---
 # <a name="scalar-functions"></a>Funciones escalares
-Los controladores de base de datos de escritorio de Microsoft ODBC admiten las siguientes funciones escalares:  
+Los controladores de base de datos de Microsoft ODBC Desktop admiten las siguientes funciones escalares:  
   
 ||||  
 |-|-|-|  
@@ -31,8 +31,8 @@ Los controladores de base de datos de escritorio de Microsoft ODBC admiten las s
 |CONVERT|LEFT|RTRIM|  
 |CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|User|  
+|DATABASE|LTRIM|USER|  
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   
- Para obtener información acerca de los argumentos y valores devueltos de funciones escalares, consulte el apéndice F de la *referencia del programador de ODBC.*
+ Para obtener información sobre los argumentos y los valores devueltos de las funciones escalares, vea el Apéndice F de la *Referencia del programador de ODBC.*

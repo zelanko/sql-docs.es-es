@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099654"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
@@ -32,10 +32,10 @@ ms.locfileid: "66099654"
  El nombre del rol que se usa al crear directivas de seguridad en las carpetas Mis informes del usuario. El valor predeterminado es `My Reports Role`.  
   
  **EnableClientPrinting**  
- Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos son `true` y `false`. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos `true` son `false`y. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información sobre el registro de ejecución del servidor de informes, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información acerca del registro de ejecución del servidor de informes, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
  Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos de esta propiedad son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.  
@@ -59,7 +59,7 @@ ms.locfileid: "66099654"
  Indica si el servidor de informes debería usar cookies de sesión al comunicarse con exploradores cliente. El valor predeterminado es `true`.  
   
  **ExternalImagesTimeout**  
- Determina el período de tiempo dentro del cual se debe recuperar un archivo de imagen externo antes de que se agote el tiempo de espera de la conexión. El valor predeterminado es `600` segundos.  
+ Determina el período de tiempo dentro del cual se debe recuperar un archivo de imagen externo antes de que se agote el tiempo de espera de la conexión. El valor predeterminado `600` es segundos.  
   
  **SnapshotCompression**  
  Define la manera en la que se comprimen las instantáneas. El valor predeterminado es `SQL`. Los valores válidos son los siguientes:  
@@ -100,18 +100,18 @@ ms.locfileid: "66099654"
  Especifica el número de entradas de datos en memoria caché que pueden estar activas en una sesión de edición de informes. El número predeterminado es 5.  
   
  **EditSessionTimeout**  
- Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es de 7200 segundos (2 horas).  
+ Especifica el número de segundos hasta que se agota el tiempo de espera de una sesión de edición de informe. El valor predeterminado es 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
  Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es `true`. Si la opción se establece en `false`, solo se enviarán mensajes de error genéricos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Propiedades de Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
- [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
+ [Servidor de informes en Management Studio ayuda de F1](report-server-in-management-studio-f1-help.md)   
  [Propiedades del sistema del servidor de informes](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
- [Script para tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
+ [Crear script de tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
  [Habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md)  
   
   

@@ -21,15 +21,15 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f52991347331645857ee2c7ac6d58e5a65f9ba
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121988"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990465"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Niega la entrada de un valor booleano.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68121988"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 [ NOT ] boolean_expression  
 ```  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68121988"
 ## <a name="result-value"></a>Valor del resultado  
  NOT invierte el valor de cualquier expresión booleana.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El uso de NOT niega una expresión.  
   
  La tabla siguiente muestra el resultado de comparar los valores TRUE y FALSE mediante el operador NOT.  
@@ -60,7 +60,7 @@ ms.locfileid: "68121988"
 |------|---------|  
 |**TRUE**|FALSE|  
 |**FALSE**|TRUE|  
-|**UNKNOWN**|UNKNOWN|  
+|**UNKNOWN**|DESCONOCIDO|  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se buscan todas las bicicletas Silver que no tienen un precio estándar superior a los 400 $.  
@@ -87,7 +87,7 @@ GO
  (6 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo, los resultados de `SalesOrderNumber` se restringen a los valores que comiencen por `SO6` y a valores de `ProductKeys` mayores o iguales que 400.  
   
 ```  

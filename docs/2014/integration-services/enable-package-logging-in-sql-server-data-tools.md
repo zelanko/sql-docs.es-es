@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cae08e9d9eee75382321cac746e24d57982cc4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059279"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437472"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Habilitar el registro de paquetes en SQL Server Data Tools
   Este procedimiento describe cómo agregar registros a un paquete, configurar el registro en el nivel de paquete y guardar la configuración de registro en un archivo XML. Solo puede agregar registros en el nivel de paquete, pero el paquete no tiene que realizar registros para habilitar el registro en los contenedores que incluye.  
@@ -35,9 +34,9 @@ ms.locfileid: "66059279"
   
 3.  Seleccione un proveedor de registro en la lista **Tipo de proveedor** y a continuación, haga clic en **Agregar**.  
   
-4.  En la columna **Configuración**, seleccione un administrador de conexiones o haga clic en **\<Nueva conexión>** para crear un nuevo administrador de conexiones del tipo apropiado para el proveedor de registro. En función del proveedor seleccionado, utilice uno de los siguientes administradores de conexión:  
+4.  En la columna **configuración** , seleccione un administrador de conexiones o haga clic en **\<New connection>** para crear un nuevo administrador de conexiones del tipo apropiado para el proveedor de registro. En función del proveedor seleccionado, utilice uno de los siguientes administradores de conexión:  
   
-    -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para obtener más información, consulte [File Connection Manager](connection-manager/file-connection-manager.md).  
+    -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para obtener más información, vea [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md) .  
   
     -   Para el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], utilice un administrador de conexiones de archivos.  
   
@@ -61,14 +60,14 @@ ms.locfileid: "66059279"
     > [!NOTE]  
     >  De manera predeterminada, se registra toda la información.  
   
-9. En la pestaña **Detalles** , haga clic en **Guardar**. Aparece el cuadro de diálogo **Guardar como** . Localice la carpeta en la que desee guardar la configuración de registro, escriba un nombre de archivo para la nueva configuración de registro y haga clic en **Guardar**.  
+9. En la pestaña **Detalles** , haga clic en **Guardar**. Se abre el cuadro de diálogo **Guardar como**. Localice la carpeta en la que desee guardar la configuración de registro, escriba un nombre de archivo para la nueva configuración de registro y haga clic en **Guardar**.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
- [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;SSIS&#41; registro](performance/integration-services-ssis-logging.md)   
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

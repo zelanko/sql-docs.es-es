@@ -17,13 +17,13 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282619"
 ---
-# <a name="performance-counters"></a>Performance Counters
+# <a name="performance-counters"></a>Contadores de rendimiento
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -73,7 +73,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626) (Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
+-   Herramienta, [SSIS Performance Visualization for Business Intelligence Development Studio (CodePlex Project)](https://go.microsoft.com/fwlink/?LinkId=146626)(Visualización del rendimiento de SSIS para Business Intelligence Development Studio (proyecto CodePlex)), en codeplex.com.  
   
 -   Vídeo, [Medir y conocer el rendimiento de los paquetes SSIS en la empresa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497), en msdn.microsoft.com.  
   
@@ -93,7 +93,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 3.  En el cuadro de diálogo **Rendimiento** , expanda **Registros y alertas de rendimiento**, haga clic con el botón derecho en **Registros de contador**y, después, haga clic en **Nueva configuración de registro**. Escriba el nombre del registro. Por ejemplo, escriba **miRegistro**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En el cuadro de diálogo **miRegistro** , haga clic en **Agregar contadores**.  
   
@@ -115,7 +115,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 12. Para agregar más contadores, repita los pasos 5 a 10.  
   
-13. Haga clic en **Aceptar**.  
+13. Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Debe iniciar el servicio Registros y alertas de rendimiento con una cuenta local o de dominio que sea miembro del grupo Administradores.  

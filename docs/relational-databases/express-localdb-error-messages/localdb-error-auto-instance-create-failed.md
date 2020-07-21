@@ -9,23 +9,23 @@ ms.topic: reference
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8920ef798a1ee9f16da8e80f994407ab3a7eedec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd911fda7424df681eaa5ce3e11db5a6b573ca54
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753283"
 ---
-# <a name="localdberrorautoinstancecreatefailed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="localdb_error_auto_instance_create_failed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|280|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|280|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|No se puede crear una instancia automática. Vea el registro de eventos de aplicación de Windows para obtener los detalles del error.|  
   

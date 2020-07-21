@@ -1,5 +1,5 @@
 ---
-title: Consultas (minería de datos) de contenido | Microsoft Docs
+title: Consultas de contenido (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44b162c34f5f505462a713205d8434484473afa4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085648"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524061"
 ---
 # <a name="content-queries-data-mining"></a>Consultas de contenido (minería de datos)
   Una consulta de contenido es una manera de extraer información sobre las estadísticas internas y la estructura del modelo de minería de datos. A veces, una consulta de contenido puede proporcionar detalles que no están disponibles con facilidad en el visor. También puede usar los resultados de una consulta de contenido para extraer información mediante programación para otros usos.  
@@ -24,7 +23,7 @@ ms.locfileid: "66085648"
   
  [Consultas básicas de contenido](#bkmk_ContentQuery)  
   
--   [Consultas en los datos de casos y de estructura](#bkmk_Structure)  
+-   [Consultas en datos de estructura y de caso](#bkmk_Structure)  
   
 -   [Consultas en los patrones de modelo](#bkmk_Patterns)  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66085648"
   
  [Trabajar con los resultados de la consulta](#bkmk_Results)  
   
-##  <a name="bkmk_ContentQuery"></a> Consultas básicas de contenido  
+##  <a name="basic-content-queries"></a><a name="bkmk_ContentQuery"></a>Consultas básicas de contenido  
  Puede crear consultas de contenido mediante el Generador de consultas de predicción, use las plantillas de consulta de contenido DMX incluidas en SQL Server Management Studio, o escribir consultas directamente en DMX. A diferencia de las consultas de predicción, no es necesario combinar datos externos, por lo que las consultas de contenido son fáciles de crear.  
   
  Esta sección proporciona información general sobre los tipos de consultas de contenido que puede crear.  
@@ -45,7 +44,7 @@ ms.locfileid: "66085648"
   
 -   Las consultas en el modelo pueden devolver patrones, listas de atributos, fórmulas, etc.  
   
-###  <a name="bkmk_Structure"></a> Consultas en los datos de casos y de estructura  
+###  <a name="queries-on-structure-and-case-data"></a><a name="bkmk_Structure"></a> Consultas en los datos de casos y de estructura  
  DMX admite consultas en los datos almacenados en caché que se usan para compilar estructuras y modelos de minería de datos. De forma predeterminada, esta caché se crea al definir la estructura de minería de datos, y se rellena al procesar la estructura o el modelo.  
   
 > [!WARNING]  
@@ -88,7 +87,7 @@ ms.locfileid: "66085648"
   
  Use esta instrucción para recuperar datos detallados de los casos de un modelo entrenado. Debe especificar un nodo concreto: por ejemplo, debe conocer el identificador de nodo del clúster, la rama específica del árbol de decisión, etc. Además, debe tener permisos de obtención de detalles en el modelo para ejecutar esta consulta.  
   
-###  <a name="bkmk_Patterns"></a> Consultas en los patrones, estadísticas y atributos del modelo  
+###  <a name="queries-on-model-patterns-statistics-and-attributes"></a><a name="bkmk_Patterns"></a>Consultas en los patrones, estadísticas y atributos del modelo  
  El contenido de un modelo de minería de datos es útil para muchos propósitos. Con una consulta de contenido del modelo, puede:  
   
 -   Extraer fórmulas o probabilidades para realizar sus propios cálculos.  
@@ -129,12 +128,12 @@ ms.locfileid: "66085648"
   
  Obtiene un documento XML que representa el modelo en formato PMML. No se admiten todos los tipos de modelos.  
   
-##  <a name="bkmk_Examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="bkmk_Examples"></a> Ejemplos  
  Aunque algún contenido del modelo es estándar en todos los algoritmos, algunas partes del contenido varían en gran medida dependiendo del algoritmo que se usa para compilar el modelo. Por consiguiente, al crear una consulta de contenido, debe comprender qué información del modelo resulta más útil para su modelo específico.  
   
  En esta sección se proporcionan algunos ejemplos para mostrar cómo la elección del algoritmo afecta al tipo de información que se almacena en el modelo. Para más información sobre el contenido del modelo de minería de datos y el contenido específico de cada tipo de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a> Ejemplo 1: Consulta de contenido en un modelo de asociación  
+###  <a name="example-1-content-query-on-an-association-model"></a><a name="bkmk_Assoc"></a> Ejemplo 1: consulta de contenido en un modelo de asociación  
  La instrucción `SELECT FROM <model>.CONTENT`devuelve diferentes tipos de información, según el tipo de modelo que esté consultando. Para un modelo de asociación, una información clave es el *tipo de nodo*. Los nodos son como contenedores de información en el contenido del modelo. En un modelo de asociación, los nodos que representan reglas tienen un valor NODE_TYPE de 8, mientras que los nodos que representan conjuntos de elementos tienen un valor NODE_TYPE de 7.  
   
  Así, la consulta siguiente devuelve los 10 mejores conjuntos de elementos, clasificados según el soporte (la ordenación predeterminada).  
@@ -144,7 +143,7 @@ SELECT TOP 10 NODE_DESCRIPTION, NODE_PROBABILITY, SUPPORT
 FROM <model>.CONTENT WHERE NODE_TYPE = 7  
 ```  
   
- La consulta siguiente se basa en esta información. La consulta devuelve tres columnas: el identificador del nodo, la regla completa y el producto en el lado derecho del conjunto de elementos: es decir, el producto que se prevé que se asociará con otros productos como parte de un conjunto de elementos.  
+ La consulta siguiente se basa en esta información. La consulta devuelve tres columnas: el identificador del nodo, la regla completa y el producto en el lado derecho del conjunto de elementos; es decir, el producto que se predice que está asociado a otros productos como parte de un conjunto de elementos.  
   
 ```  
 SELECT FLATTENED NODE_UNIQUE_NAME, NODE_DESCRIPTION,  
@@ -166,7 +165,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Para obtener más ejemplos, vea [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Ejemplo 2: Consulta de contenido en un modelo de árboles de decisión  
+###  <a name="example-2-content-query-on-a-decision-trees-model"></a><a name="bkmk_DecTree"></a> Ejemplo 2: consulta de contenido en un modelo de árboles de decisión  
  Un modelo del árbol de decisión se puede utilizar para la predicción así como para la clasificación.  En este ejemplo se supone que está utilizando el modelo para predecir un resultado, pero también desea descubrir qué factores o reglas se pueden utilizar para clasificar el resultado.  
   
  En un modelo de árbol de decisión, los nodos se utilizan para representar árboles y nodos de hoja. El título de cada nodo contiene la descripción de la ruta de acceso al resultado. Por consiguiente, para realizar el seguimiento de la ruta de acceso de cualquier resultado determinado, debe identificar el nodo que lo contiene y obtener los detalles de ese nodo.  
@@ -190,13 +189,13 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Para obtener más ejemplos, vea [Ejemplos de consultas de modelos de árboles de decisión](decision-trees-model-query-examples.md).  
   
-##  <a name="bkmk_Results"></a> Trabajar con los resultados de la consulta  
+##  <a name="working-with-the-query-results"></a><a name="bkmk_Results"></a>Trabajar con los resultados de la consulta  
  Como demuestran los ejemplos, las consultas de contenido devuelven principalmente conjuntos de filas tabulares, pero también pueden incluir información de columnas anidadas. Es posible simplificar el conjunto de filas que se devuelven, pero esto puede dificultar el trabajo con los resultados. El contenido del nodo NODE_DISTRIBUTION en concreto está anidado, pero contiene información muy interesante sobre el modelo.  
   
  Para obtener más información sobre cómo trabajar con conjuntos de filas jerárquicos, vea la especificación OLEDB en MSDN.  
   
-## <a name="see-also"></a>Vea también  
- [Descripción de la instrucción Select de DMX](/sql/dmx/understanding-the-dmx-select-statement)   
+## <a name="see-also"></a>Consulte también  
+ [Descripción de la instrucción SELECT de DMX](/sql/dmx/understanding-the-dmx-select-statement)   
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

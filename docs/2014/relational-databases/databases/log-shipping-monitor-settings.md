@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcf8810d43f69acc858a0882ad17aa1056014ca7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965935"
 ---
 # <a name="log-shipping-monitor-settings"></a>Configuración del monitor de trasvase de registros
   Utilice esta página para configurar y modificar las propiedades del servidor del monitor de trasvase de registros.  
@@ -28,7 +27,7 @@ ms.locfileid: "62917058"
  **Instancia del servidor de supervisión**  
  Muestra el nombre de la instancia del servidor configurado actualmente como el servidor de supervisión para la configuración del trasvase de registros.  
   
- **Conectar**  
+ **Conexión**  
  Elija y conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a utilizar como servidor de supervisión. La cuenta utilizada para la conexión debe ser miembro del rol fijo de servidor sysadmin en la instancia de servidor secundario.  
   
  **Mediante la suplantación de la cuenta de proxy del trabajo**  
@@ -46,7 +45,7 @@ ms.locfileid: "62917058"
  **Programación**  
  Indica la programación actual del trabajo de alerta del Agente SQL Server.  
   
- **Editar**  
+ **Edición**  
  Modifique los parámetros del trabajo de alerta del Agente SQL Server.  
   
  **Deshabilitar este trabajo**  

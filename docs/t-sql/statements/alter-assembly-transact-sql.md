@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecea611192ee3e2bd2d64419e53bfa6c7601c0b8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066113"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301915"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica una ensamblado cambiando las propiedades del catálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un ensamblado. ALTER ASSEMBLY lo actualiza a la última copia de los módulos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contienen su implementación y agrega o quita los archivos asociados con él. Los ensamblados se crean mediante [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -42,7 +42,7 @@ ms.locfileid: "68066113"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ALTER ASSEMBLY assembly_name  
     [ FROM <client_assembly_specifier> | <assembly_bits> ]  
     [ WITH <assembly_option> [ ,...n ] ]  
@@ -67,19 +67,21 @@ ALTER ASSEMBLY assembly_name
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *assembly_name*  
  Es el nombre del ensamblado que se desea modificar. *assembly_name* ya debe existir en la base de datos.  
   
- FROM \<especificador_de_ensamblado_de_cliente> | \<bits_de_ensamblado>  
+ FROM \<client_assembly_specifier> | \<assembly_bits>  
  Actualiza un ensamblado a la última copia de los módulos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que conservan su implementación. Esta opción solo se puede utilizar si no hay archivos asociados con el ensamblado especificado.  
   
- \<especificador_de_ensamblado_de_cliente> especifica la ubicación local o de red donde se encuentra el ensamblado que se va a actualizar. La ubicación de red incluye el nombre del equipo, el nombre del recurso compartido y una ruta dentro de ese recurso compartido. *manifest_file_name* especifica el nombre del archivo que contiene el manifiesto del ensamblado.  
+ \<client_assembly_specifier> especifica la ubicación local o de red donde se encuentra el ensamblado que se va a actualizar. La ubicación de red incluye el nombre del equipo, el nombre del recurso compartido y una ruta dentro de ese recurso compartido. *manifest_file_name* especifica el nombre del archivo que contiene el manifiesto del ensamblado.  
 
 > [!IMPORTANT]
 > Azure SQL Database no admite la referencia a un archivo.
   
- \<bits_de_ensamblado> es el valor binario para el ensamblado.  
+ \<assembly_bits> es el valor binario para el ensamblado.  
   
  Deben generarse instrucciones ALTER ASSEMBLY independientes para cada ensamblado dependiente que también debe actualizarse.  
   
@@ -125,7 +127,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Esta opción no está disponible en una base de datos independiente o en Azure SQL Database.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ALTER ASSEMBLY no interrumpe las sesiones en ejecución actuales que están ejecutando código en el ensamblado que se va a modificar. Las sesiones actuales completan su ejecución utilizando los bits no modificados del ensamblado.  
   
  Si se especifica la cláusula FROM, ALTER ASSEMBLY actualiza el ensamblado en relación con las últimas copias de los módulos proporcionados. Puesto que pueden existir funciones CLR, procedimientos almacenados, desencadenadores, tipos de datos y funciones de agregado definidas por el usuario en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya definidas en el ensamblado, la instrucción ALTER ASSEMBLY las vuelve a enlazar con la última implementación del ensamblado. Para realizar la operación de volver a enlazar, los métodos que asignan a funciones CLR, procedimientos almacenados y desencadenadores ya deben existir en el ensamblado modificado con las mismas firmas. Las clases que implementan tipos definidos por el usuario CLR y funciones de agregado definidas por el usuario deben cumplir los requisitos de ser un tipo o un agregado definido por el usuario.  

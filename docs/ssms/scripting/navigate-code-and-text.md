@@ -1,6 +1,6 @@
 ---
-title: Exploración de código y texto | Microsoft Docs
-ms.custom: ''
+title: Navegar por código y texto
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -21,12 +21,12 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4171d67bafa5b2f692a0a1a0b7e87dc9ed9b8525
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258192"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261854"
 ---
 # <a name="navigate-code-and-text"></a>Navegar por código y texto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68258192"
 -   El comando **Ir a**  
   
 > [!NOTE]  
->  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## <a name="navigating-with-bookmarks"></a>Navegar con marcadores  
  Para modificar un documento en cualquier lugar y volver después a la ubicación original, agregue un marcador. Mediante métodos abreviados de teclado, podrá establecer marcadores y moverse por ellos. Vea los marcadores en la ventana de marcadores.  

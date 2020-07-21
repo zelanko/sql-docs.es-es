@@ -14,16 +14,16 @@ ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53f5e080a4ce654eb133aed340034e547f247737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503332"
 ---
 # <a name="pptx-device-information-settings"></a>Configuración de la información del dispositivo PPTX
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para representar informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en formato PPTX.  
   
-|Configuración|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
 |**Columnas**|Número de columnas que se van a establecer para el informe. Este valor invalida la configuración original del informe.|  
 |**ColumnSpacing**|Espacio entre las columnas que se va a establecer para el informe. Este valor invalida la configuración original del informe.|  

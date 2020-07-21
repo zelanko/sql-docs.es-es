@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099125"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
@@ -30,20 +30,20 @@ ms.locfileid: "66099125"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a> Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
-1.  [Crear un gráfico desde el Asistente para gráficos](#Chart)  
+1.  [Crear un gráfico a partir del Asistente para gráficos](#Chart)  
   
-2.  [Elija el tipo de gráfico](#ChartType)  
+2.  [Elegir el tipo de gráfico](#ChartType)  
   
-3.  [Dar formato el eje Horizontal y etiquetarlo](#Horizontal)  
+3.  [Dar formato al eje horizontal y etiquetarlo](#Horizontal)  
   
 4.  [Mover la leyenda](#Legend)  
   
-5.  [Título del gráfico](#ChartTitle)  
+5.  [Titular el gráfico](#ChartTitle)  
   
-6.  [Dar formato y el eje Vertical](#Vertical)  
+6.  [Dar formato al eje vertical y etiquetarlo](#Vertical)  
   
 7.  [Agregar una media móvil](#Average)  
   
@@ -52,15 +52,15 @@ ms.locfileid: "66099125"
 9. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 15 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a> 1. Crear un informe de gráfico a partir del Asistente para gráficos  
- Desde el **Introducción** cuadro de diálogo, use el Asistente para gráficos para crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. crear un informe de gráfico a partir del Asistente para gráficos  
+ En el cuadro de diálogo **Introducción** , use el Asistente para gráficos con el fin de crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
@@ -69,16 +69,16 @@ ms.locfileid: "66099125"
   
 1.  Haga clic en **Inicio**, seleccione **Programas**, **Generador de informes de Microsoft SQL Server 2012**y, a continuación, haga clic en **Generador de informes**.  
   
-     Aparecerá el cuadro de diálogo **Introducción** .  
+     Aparece el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
+    >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la **página Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos**y,después, haga clic en **Siguiente**.  
+4.  En la **Página elegir un conjunto**de los, haga clic en **crear un conjunto**de los y, a continuación, en **siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099125"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
-##  <a name="ChartType"></a> 2. Elegir el tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. elegir el tipo de gráfico  
  Podrá elegir entre varios tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-column-chart"></a>Para agregar un gráfico de columnas  
@@ -125,11 +125,11 @@ ms.locfileid: "66099125"
   
 4.  Haga clic en **Siguiente**.  
   
-5.  En el **elegir un estilo** página, en el cuadro estilos, seleccione un estilo.  
+5.  En la página **elegir un estilo** , en el cuadro estilos, seleccione un estilo.  
   
      Un estilo especifica un estilo de fuente, un conjunto de colores y un estilo de borde. Al seleccionar un estilo, el panel Vista previa muestra un ejemplo del gráfico con ese estilo.  
   
-6.  Haga clic en **Finalizar**.  
+6.  Haga clic en **Finalizar**  
   
      El gráfico se agrega a la superficie de diseño.  
   
@@ -137,14 +137,14 @@ ms.locfileid: "66099125"
   
 8.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Horizontal"></a> 3. Dar formato al eje horizontal y etiquetarlo  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. dar formato al eje horizontal y etiquetarlo  
  De forma predeterminada, el eje horizontal muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>Para dar formato a una fecha en el eje horizontal  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga clic en el eje horizontal y, a continuación, haga clic en **propiedades del eje Horizontal**.  
+2.  Haga clic con el botón secundario en el eje horizontal y, a continuación, haga clic en **propiedades del eje horizontal**.  
   
 3.  Haga clic en **Número**.  
   
@@ -164,15 +164,15 @@ ms.locfileid: "66099125"
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga clic en el título del eje horizontal y, a continuación, haga clic en **Mostrar título del eje** para quitar el título. Dado que el eje horizontal muestra las fechas, no es necesario el título.  
+2.  Haga clic con el botón secundario en el título del eje horizontal y, a continuación, haga clic en **Mostrar título del eje** para quitar el título. Dado que el eje horizontal muestra las fechas, no es necesario el título.  
   
-3.  Haga clic en el eje horizontal y, a continuación, haga clic en **propiedades del eje Horizontal**.  
+3.  Haga clic con el botón secundario en el eje horizontal y, a continuación, haga clic en **propiedades del eje horizontal**.  
   
-4.  En el **opciones del eje** página **intervalo del eje y el intervalo**, tipo **3** para **intervalo**. El gráfico mostrará una fecha de cada tres.  
+4.  En la página **Opciones del eje** , en **rango e**intervalo del eje, escriba **3** para **intervalo**. El gráfico mostrará una fecha de cada tres.  
   
 5.  Haga clic en **Etiquetas**.  
   
-6.  En **cambiar opciones de ajuste automático de etiquetas de eje**, seleccione **deshabilitar el ajuste automático**.  
+6.  En **cambiar las opciones de ajuste automático de las etiquetas de eje**, seleccione **deshabilitar ajuste automático**.  
   
 7.  En **Ángulo de giro de etiqueta**, seleccione **-90**.  
   
@@ -184,36 +184,36 @@ ms.locfileid: "66099125"
   
  En el gráfico, las etiquetas se giran y se muestra la etiqueta de cada tercera fecha.  
   
-##  <a name="Legend"></a> 4. Mover la leyenda  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. Mueva la leyenda  
  La leyenda se crea automáticamente a partir de los datos de las categorías y las series.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>Para mover la leyenda debajo del área de gráfico de un gráfico de columnas  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Haga clic en la leyenda del gráfico y, a continuación, haga clic en **propiedades de la leyenda**.  
+2.  Haga clic con el botón secundario en la leyenda del gráfico y, a continuación, haga clic en propiedades de la **leyenda**.  
   
-3.  Para **diseño y posición**, seleccione una posición diferente. Por ejemplo, sitúe la leyenda centrada en la parte inferior.  
+3.  En **diseño y posición**, seleccione una posición diferente. Por ejemplo, sitúe la leyenda centrada en la parte inferior.  
   
      Cuando la leyenda se coloca en la parte superior o inferior de un gráfico, su diseño cambia de vertical a horizontal. Puede seleccionar un diseño diferente en la lista desplegable **Diseño** .  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Opcional) Dado que solo hay una categoría en este tutorial, no es necesaria la leyenda. Para quitar la leyenda, haga clic en la leyenda y, a continuación, haga clic en **eliminar leyenda**.  
+5.  (Opcional) Dado que solo hay una categoría en este tutorial, no es necesaria la leyenda. Para quitar la leyenda, haga clic con el botón secundario en la leyenda y, a continuación, haga clic en **eliminar leyenda**.  
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="ChartTitle"></a> 5. Titular el gráfico  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. título del gráfico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>Para cambiar el título del gráfico encima del área de gráfico  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  Seleccione las palabras **título del gráfico** en la parte superior del gráfico y, a continuación, escriba el texto siguiente: **Store los totales de pedido de ventas**.  
+2.  Seleccione las palabras **título del gráfico** en la parte superior del gráfico y, a continuación, escriba el siguiente texto: **total de pedidos de venta de tiendas**.  
   
 3.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Vertical"></a> 6. Dar formato al eje vertical y etiquetarlo  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. dar formato al eje vertical y etiquetarlo  
  De forma predeterminada, el eje vertical muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>Para dar formato de moneda a los números del eje vertical  
@@ -222,27 +222,27 @@ ms.locfileid: "66099125"
   
 2.  Haga doble clic en las etiquetas del eje vertical a lo largo del lateral del gráfico para seleccionarlas.  
   
-3.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, haga clic en el **moneda** botón. Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
+3.  En la cinta de opciones, en la pestaña **Inicio** , en el grupo **número** , haga clic en el botón **moneda** . Las etiquetas del eje cambiarán para mostrar el formato de moneda.  
   
-4.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, haga clic en el **Disminuir decimales** botón dos veces para mostrar el número redondeado al dólar más próximo.  
+4.  En la cinta de opciones, en la pestaña **Inicio** , en el grupo **número** , haga clic dos veces en el botón **disminuir decimales** para mostrar el número redondeado al dólar más próximo.  
   
-5.  Haga clic en el eje vertical y haga clic en **propiedades del eje Vertical**.  
+5.  Haga clic con el botón secundario en el eje vertical y haga clic en **propiedades del eje vertical**.  
   
-6.  Haga clic en **Número**. Tenga en cuenta que **moneda** ya está seleccionado en el **categoría** cuadro, y **decimales** ya está **0** (cero).  
+6.  Haga clic en **Número**. Tenga en cuenta que **moneda** ya está seleccionado en el cuadro **categoría** y **posiciones decimales** ya es **0** (cero).  
   
-7.  En el **mostrar valores en** cuadro, haga clic en **miles**.  
+7.  En el cuadro **Mostrar valores en** , haga clic en **miles**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Haga clic en el título del eje vertical a lo largo del lado del gráfico y haga clic en **propiedades del título del eje**.  
+9. Haga clic con el botón secundario en el título del eje vertical a lo largo del lateral del gráfico y haga clic en **propiedades del título del eje**.  
   
-10. Reemplace el texto en el **texto de título** campo con el siguiente texto: **Total de ventas (en miles)** . También puede especificar una gran variedad de opciones de formato para el título.  
+10. Reemplace el texto del campo **texto del título** con el siguiente texto: **total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Average"></a> 7. Agregar una media móvil  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. agregar una media móvil  
   
 #### <a name="to-add-a-moving-average"></a>Para agregar una media móvil  
   
@@ -250,7 +250,7 @@ ms.locfileid: "66099125"
   
 2.  Haga doble clic en el gráfico para mostrar el panel **Datos del gráfico** .  
   
-3.  Haga clic en el **[SUM (Sales)]** campo que se encuentra en la **valores** área y, a continuación, haga clic en **agregar serie calculada**.  
+3.  Haga clic con el botón secundario en el campo **[SUM (sales)]** que se encuentra en el área **valores** y, a continuación, haga clic en **Agregar serie calculada**.  
   
 4.  En **Fórmula**, compruebe que esté seleccionada la opción **Media móvil** .  
   
@@ -258,7 +258,7 @@ ms.locfileid: "66099125"
   
 6.  Haga clic en **borde**.  
   
-7.  En **ancho de línea**, seleccione **3pt**.  
+7.  En **ancho de línea**, seleccione **3 PT**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099125"
   
  El gráfico muestra una línea que muestra la media móvil del total de ventas por fecha, promediado cada cuatro fechas.  
   
-##  <a name="Title"></a> 8. Agregar un título de informe  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. agregar un título de informe  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
@@ -274,39 +274,39 @@ ms.locfileid: "66099125"
   
 2.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-3.  Tipo **gráfico de ventas**, presione ENTRAR y, a continuación, escriba **enero a diciembre de 2009**, por lo que este aspecto:  
+3.  Escriba **gráfico de ventas**, presione entrar y, a continuación, escriba **enero a diciembre de 2009**, de modo que tenga este aspecto:  
   
      **Gráfico de ventas**  
   
      **Enero a diciembre de 2009**  
   
-4.  Seleccione **gráfico de ventas**y haga clic en el **negrita** situado en la **fuente** sección en la **inicio** pestaña de la cinta de opciones.  
+4.  Seleccione **gráfico de ventas**y haga clic en el botón **negrita** en la sección **fuente** de la pestaña **Inicio** de la cinta de opciones.  
   
-5.  Seleccione **enero a diciembre de 2009**y en el **fuente** sección en la **inicio** pestaña, establezca el tamaño de fuente en **10**.  
+5.  Seleccione **enero a diciembre 2009**y, en la sección **fuente** de la pestaña **Inicio** , establezca el tamaño de fuente en **10**.  
   
-6.  (Opcional) Es posible que deba realizar la **título** más alto para dar cabida a las dos líneas de texto desplazando hacia abajo las flechas de dos puntas al hacer clic en Centro del borde inferior del cuadro de texto.  
+6.  Opta Es posible que tenga que hacer que el cuadro de texto del **título** sea más alto para dar cabida a las dos líneas de texto al hacer clic en el centro del borde inferior.  
   
      Este título aparecerá en la parte superior del informe. Cuando no hay ningún encabezado de página definido, los elementos de la parte superior del cuerpo del informe son equivalentes a un encabezado de informe.  
   
 7.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Save"></a> 9. Guardar el informe  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. guardar el informe  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  En el botón Generador de informes, haga clic en **Guardar como**.  
+2.  En el botón Generador de informes , haga clic en **Guardar como**.  
   
 3.  En **Nombre**, escriba **Gráfico de columnas de pedidos de ventas**.  
   
 4.  Haga clic en **Guardar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md)   
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

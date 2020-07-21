@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10796dde3513e5c4b7970d1e4f6c4eedcad3c6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4008df15ded37398ef8565bac759364699561fad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058692"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>Propiedades de Agente SQL Server (página Historial)
-  Utilice esta página para ver y modificar los valores de configuración para administrar el registro del historial de servicios del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y modificar la configuración para administrar el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registro del historial de servicios del agente.  
   
 ## <a name="options"></a>Opciones  
  **Limitar tamaño del registro de historial de trabajos**  
@@ -38,7 +37,7 @@ ms.locfileid: "63245586"
  **Anterior a**  
  Establece el tiempo que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conservará las entradas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registro de errores del Agente SQL Server](sql-server-agent-error-log.md)  
   
   

@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Compilar e implementar una base de datos local | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Compilación e implementación de una base de datos local
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c3c079ddc375c1fa252975c419aff587d324dd1b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911872"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241607"
 ---
-# <a name="how-to-build-and-deploy-to-a-local-database"></a>Procedimientos: Compilación e implementación de una base de datos local
+# <a name="how-to-build-and-deploy-to-a-local-database"></a>Cómo: Compilar e implementar una base de datos local
+
 Microsoft SQL Server 2012 proporciona una instancia de servidor local a petición, denominada SQL Server Express Local Database Runtime, que se activa al depurar un proyecto de base de datos de SQL Server. Esta instancia de servidor local se puede usar como espacio aislado para compilar, probar y depurar un proyecto. Es independiente de cualquiera de las instancias instaladas de SQL Server y no es accesible fuera de SQL Server Data Tools (SSDT). Esa organización es ideal para los desarrolladores que tienen acceso limitado o no tienen acceso a bases de datos de producción pero desean probar sus proyectos localmente antes de que el personal autorizado los implemente en producción. Además, cuando desarrolle una solución de base de datos para SQL Azure, puede usar la comodidad que ofrece este servidor local para desarrollar y probar su proyecto de base de datos localmente, antes de implementarlo en la nube.  
   
 > [!WARNING]  

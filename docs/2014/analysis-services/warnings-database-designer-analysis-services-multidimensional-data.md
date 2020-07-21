@@ -1,5 +1,5 @@
 ---
-title: Advertencias (Diseñador de la base de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: ADVERTENCIAS (diseñador de bases de datos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938127"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Advertencias (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
-  Use la pestaña **Advertencias** para ver y descartar reglas globalmente, así como para ver y volver a habilitar instancias específicas de advertencias descartadas. El **advertencias** ficha muestra dos cuadrículas: **Reglas de advertencia de diseño** y **advertencias descartadas**.  
+  Use la pestaña **Advertencias** para ver y descartar reglas globalmente, así como para ver y volver a habilitar instancias específicas de advertencias descartadas. La pestaña **Advertencias** muestra dos cuadrículas: **Reglas de advertencia de diseño** y **Advertencias descartadas**.  
   
- **Para mostrar la pestaña advertencias**  
+ **Para mostrar la pestaña Advertencias**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66065428"
   
  La cuadrícula **Advertencias descartadas** tiene lo siguiente:  
   
- **Objeto**  
+ **Object**  
  Muestra un icono que representa el tipo y el nombre de objeto.  
   
  **Tipo**  
@@ -62,14 +61,14 @@ ms.locfileid: "66065428"
  **Comentarios**  
  Muestra el comentario que se escribió cuando se descartó la advertencia. Puede agregar o modificar un comentario aquí.  
   
- **Re-enable**  
+ **Rehabilitar**  
  Rehabilita las advertencias seleccionadas.  
   
 > [!NOTE]  
 >  Si un objeto tiene una advertencia, pero el objeto se encuentra en un estado no válido o se quitó manualmente del proyecto, aparece un icono de error al lado de la advertencia en la lista. Para descartar la advertencia, selecciónela y, después, haga clic en **Rehabilitar**.  
   
-## <a name="see-also"></a>Vea también  
- [Descartar el cuadro de diálogo de advertencia &#40;Analysis Services - datos multidimensionales&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
- [General &#40;Diseñador de la base de datos&#41; &#40;Analysis Services - datos multidimensionales&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo descartar ADVERTENCIA &#40;Analysis Services de datos multidimensionales&#41;](dismiss-warning-dialog-box-analysis-services-multidimensional-data.md)   
+ [Diseñador de bases de datos de &#40;general&#41; &#40;Analysis Services de datos multidimensionales&#41;](general-database-designer-analysis-services-multidimensional-data.md)  
   
   

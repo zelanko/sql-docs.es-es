@@ -10,15 +10,14 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8e457601eafcdd8e363d931d53dfea673254b29f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ea619cb05064788869e211b6cb5ef96cb4f7188d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896972"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428142"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expresión de SSIS)
   Devuelve el cuadrado de una expresión numérica.  
@@ -37,7 +36,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  SQUARE devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Antes de realizar la operación de raíz cuadrada, se convierte el argumento al tipo de datos DT_R8.  
@@ -64,7 +63,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  En las expresiones, los nombres de variables siempre incluyen el prefijo \@.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   
   

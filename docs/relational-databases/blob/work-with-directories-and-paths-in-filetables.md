@@ -1,5 +1,6 @@
 ---
 title: Trabajar con directorios y rutas de acceso de FileTables | Microsoft Docs
+description: La característica FileTables usa una estructura de directorio para almacenar archivos. Sepa cómo trabajar con sus directorios, rutas de acceso, restricciones y semántica.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765463"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe la estructura de directorios en la que los archivos se almacenan en FileTables.  
   
-##  <a name="HowToDirectories"></a> Procedimientos para: Trabajar con directorios y rutas de acceso de FileTables  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Procedimientos para: Trabajar con directorios y rutas de acceso de FileTables  
  Puede usar las tres funciones que se indican a continuación para trabajar con directorios de FileTable en [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Para obtener este resultado|Use esta función|  
@@ -32,7 +33,7 @@ ms.locfileid: "72908700"
 |Obtener una ruta de acceso UNC absoluta o relativa de un archivo o directorio de una FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Obtener el valor del identificador del localizador de ruta de acceso del archivo o directorio especificado en una FileTable proporcionando la ruta de acceso.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Procedimientos para: usar rutas de acceso relativas para el código portable  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Procedimientos para: usar rutas de acceso relativas para el código portable  
  Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución usando conjuntamente las funciones [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) y [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md), como se muestra en el siguiente ejemplo. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  
@@ -49,17 +50,17 @@ PRINT @fullpath;
 GO  
 ```  
   
-##  <a name="restrictions"></a> Restricciones relevantes  
+##  <a name="important-restrictions"></a><a name="restrictions"></a> Restricciones relevantes  
   
-###  <a name="nesting"></a> Nivel de anidamiento  
+###  <a name="nesting-level"></a><a name="nesting"></a> Nivel de anidamiento  
   
 > **IMPORTANTE:** No puede almacenar más de 15 niveles de subdirectorios en el directorio de FileTable. Si se almacenan 15 niveles de subdirectorios, el nivel inferior no podrá contener los archivos, ya que estos archivos representarían un nivel adicional.  
   
-###  <a name="fqnlength"></a> Longitud del nombre completo de la ruta de acceso  
+###  <a name="length-of-full-path-name"></a><a name="fqnlength"></a> Longitud del nombre completo de la ruta de acceso  
   
 > **IMPORTANTE:** El sistema de archivos NTFS admite nombres de ruta de acceso con una longitud mayor que el límite de 260 caracteres del shell de Windows y la mayoría de las API de Windows. Por consiguiente, es posible que al crear archivos en la jerarquía de archivos de un objeto FileTable con Transact-SQL no pueda verlos ni abrirlos con el Explorador de Windows o muchas otras aplicaciones Windows, porque el nombre completo de la ruta de acceso supera los 260 caracteres. Sin embargo, puede seguir teniendo acceso a estos archivos mediante Transact-SQL.  
   
-##  <a name="fullpath"></a> Ruta de acceso completa a un elemento almacenado en una FileTable  
+##  <a name="the-full-path-to-an-item-stored-in-a-filetable"></a><a name="fullpath"></a> Ruta de acceso completa a un elemento almacenado en una FileTable  
  La ruta de acceso completa a un archivo o directorio almacenado en una FileTable comienza con los elementos siguientes:  
   
 1.  El recurso compartido habilitado para el acceso de E/S de archivos de FILESTREAM en el nivel de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -76,7 +77,7 @@ GO
   
  Es importante tener en cuenta que la jerarquía de directorios creada en el recurso compartido de FILESTREAM en el nivel de instancia es una jerarquía de directorios virtual. Esta jerarquía se almacena en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se representa físicamente en el sistema de archivos NTFS. Todas las operaciones que tienen acceso a los archivos y directorios situados en el recurso compartido de FILESTREAM y en las FileTables que contiene se interceptan y controlan mediante un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incrustado en el sistema de archivos.  
   
-##  <a name="roots"></a> Semántica de los directorios raíz en los niveles de instancia, base de datos y FileTable  
+##  <a name="the-semantics-of-the-root-directories-at-the-instance-database-and-filetable-levels"></a><a name="roots"></a> Semántica de los directorios raíz en los niveles de instancia, base de datos y FileTable  
  Esta jerarquía de directorios se ajusta a la semántica siguiente:  
   
 -   El recurso compartido de FILESTREAM en el nivel de instancia lo configura un administrador y se almacena como una propiedad del servidor. Puede cambiar el nombre de este recurso compartido a través del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una operación de cambio de nombre no surtirá efecto hasta que se reinicie el servidor.  
@@ -89,18 +90,18 @@ GO
   
 -   No puede abrir estos directorios raíz con identificadores de archivo exclusivos.  
   
-##  <a name="is_directory"></a> Columna is_directory del esquema de la FileTable  
+##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> Columna is_directory del esquema de la FileTable  
  En la siguiente tabla se describe la interacción entre la columna **is_directory** y la columna **file_stream** que contiene los datos FILESTREAM de un objeto FileTable.  
   
 ||||  
 |-|-|-|  
-|*is_directory* **is_directory**|*file_stream* **is_directory**|**Comportamiento**|  
+|*is_directory* **value**|*file_stream* **value**|**Comportamiento**|  
 |FALSE|NULL|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
-|FALSE|\<valor>|El elemento representa un archivo.|  
+|FALSE|\<value>|El elemento representa un archivo.|  
 |TRUE|NULL|El elemento representa un directorio.|  
-|TRUE|\<valor>|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
+|TRUE|\<value>|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
   
-##  <a name="alwayson"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
+##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn:  
   
 -   Las funciones FILESTREAM y FileTable aceptan o devuelven nombres de red virtual (VNN) en lugar de nombres de equipo. Para obtener más información sobre estas funciones, vea [Funciones FILESTREAM y FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  

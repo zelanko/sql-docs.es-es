@@ -9,10 +9,10 @@ ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63218956"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
@@ -24,7 +24,7 @@ ms.locfileid: "63218956"
   
 1.  En la pestaña **Vista** , seleccione la casilla **Parámetros** para mostrar el panel de parámetros.  
   
-     ![Acceso al panel de parámetros desde la pestaña Vista](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Acceso al panel de parámetros desde la pestaña Vista")  
+     ![Acceder al panel de parámetros de la pestaña Vista](../../reporting-services/report-design/media/ssrs-customparameter-accessparameterpanedesignmode.png "Acceder al panel de parámetros de la pestaña Vista")  
   
      El panel aparece en la parte superior de la superficie de diseño.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63218956"
   
     -   Haga clic con el botón derecho en el parámetro del panel de parámetros y después haga clic en **Propiedades del parámetro**.  
   
-         ![Acceso a las propiedades del parámetro desde el panel de parámetros](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Acceso a las propiedades del parámetro desde el panel de parámetros")  
+         ![Acceder a las propiedades del parámetro desde el panel de parámetros](../../reporting-services/report-design/media/ssrs-customizeparameter-accessparameterproperties-composite.png "Acceder a las propiedades del parámetro desde el panel de parámetros")  
   
     -   Haga clic con el botón derecho en el parámetro del panel **Datos de informe** y después haga clic en **Propiedades del parámetro**.  
   

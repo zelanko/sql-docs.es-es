@@ -1,5 +1,5 @@
 ---
-title: Flujo de datos (página General) del Editor de ruta de acceso | Microsoft Docs
+title: Editor de rutas de flujo de datos (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85382ac1f2c61b603fe56065236645efcab19c16
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059962"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432602"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de rutas de flujo de datos (página General)
   Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para establecer propiedades de ruta, ver metadatos de columna y administrar los visores de datos adjuntados a la ruta.  
@@ -27,7 +26,7 @@ ms.locfileid: "66059962"
  Utilice el nodo **General** del cuadro de diálogo **Editor de rutas de flujo de datos** para nombrar y describir la ruta, y para especificar las opciones de anotación de ruta.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para la ruta.  
   
  **ID**  
@@ -48,8 +47,8 @@ ms.locfileid: "66059962"
  **SourceName**  
  Muestra la salida que es el inicio de la ruta.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de rutas de flujo de datos &#40;metadatos (página)&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de rutas de flujo de datos &#40;página de metadatos&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [Editor de rutas de flujo de datos &#40;página visores de datos&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flujo de datos](data-flow/data-flow.md)   
  [Usar anotaciones en paquetes](use-annotations-in-packages.md)  

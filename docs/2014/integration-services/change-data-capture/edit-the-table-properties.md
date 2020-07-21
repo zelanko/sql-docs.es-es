@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 307f2a2a0769caf1124ba07905eacca9bcb2976a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835995"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438692"
 ---
 # <a name="edit-the-table-properties"></a>Editar las propiedades de tabla
   Use este cuadro de diálogo para editar las columnas específicas de la tabla seleccionada donde se están capturando cambios. También puede editar la información de **Rol de seguridad** y de **Instancia de captura** .  
@@ -40,18 +39,18 @@ ms.locfileid: "62835995"
   
 2.  Guarde la instancia de captura de una de las maneras siguientes:  
   
-    -   **New Capture Instance** (Nueva instancia de captura): en este caso se guarda una nueva instancia de captura y la antigua no se elimina.  
+    -   **Nueva instancia de captura**: en este caso se guarda una nueva instancia de captura y la antigua instancia de captura no se elimina.  
   
-         **Nota**: No puede tener más de dos instancias de captura por tabla. Si ya hay dos instancias de captura, esta opción no estará disponible.  
+         **Nota**: no puede tener más de dos instancias de captura por tabla. Si ya hay dos instancias de captura, esta opción no estará disponible.  
   
-    -   **Replace Existing** (Reemplazar existente): en este caso, la instancia de captura actual se elimina y se reemplaza por la instancia de captura que ha creado. Si hay dos instancias de captura definidas para esta tabla, debe seleccionar una para reemplazar.  
+    -   **Reemplazar existente**: en este caso, la instancia de captura actual se elimina y se reemplaza con la instancia de captura que ha creado. Si hay dos instancias de captura definidas para esta tabla, debe seleccionar una para reemplazar.  
   
- **Nota**: Puede quitar una instancia de captura de la lista de tablas en la pestaña **Tabla**.  
+ **Nota**: puede quitar una instancia de captura de la lista de tablas en la pestaña **Tabla** .  
   
  Cuando termine de especificar la información en este cuadro de diálogo, haga clic en **Aceptar** para aceptar los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo editar las propiedades de la instancia CDC](how-to-edit-the-cdc-instance-properties.md)   
- [Realizar cambios en las tablas seleccionadas para capturar cambios](make-changes-to-the-tables-selected-for-capturing-changes.md)  
+ [Realice los cambios en las tablas seleccionadas para capturar cambios ](make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

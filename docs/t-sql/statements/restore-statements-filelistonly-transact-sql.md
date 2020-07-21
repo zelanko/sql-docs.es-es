@@ -22,12 +22,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742978"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635726"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instrucciones RESTORE: FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -42,7 +42,7 @@ ms.locfileid: "68742978"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 RESTORE FILELISTONLY   
 FROM <backup_device>   
@@ -86,13 +86,13 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Un cliente puede utilizar RESTORE FILELISTONLY para obtener una lista de los archivos que contiene el conjunto de copia de seguridad. Esta información se devuelve como conjunto de resultados que contiene una fila por cada archivo.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Nombre lógico del archivo.|  
 |PhysicalName|**nvarchar(260)**|Nombre físico o del sistema operativo del archivo.|  
 |Tipo|**char(1)**|Uno de los tipos de archivo:<br /><br /> **L** = archivo de registro de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** = archivo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = catálogo de texto completo<br /><br /> **S** = FileStream, FileTable o contenedor [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
 |FileGroupName|**nvarchar(128)** NULL|Nombre del grupo de archivos que contiene el archivo.|  
-|Tamaño|**numeric(20,0)**|Tamaño actual, en bytes.|  
+|Size|**numeric(20,0)**|Tamaño actual, en bytes.|  
 |MaxSize|**numeric(20,0)**|Tamaño máximo permitido, en bytes.|  
 |FileID|**bigint**|Identificador de archivo, único en la base de datos.|  
 |CreateLSN|**numeric(25,0)**|Número de secuencia de registro en el que se creó el archivo.|  
@@ -112,7 +112,7 @@ FROM <backup_device>
 |SnapshotURL|**nvarchar(360)** NULL|Dirección URL de la instantánea de Azure del archivo de base de datos incluido en la copia de seguridad de FILE_SNAPSHOT. Devuelve NULL si no hay ninguna copia de seguridad de FILE_SNAPSHOT.|  
   
 ## <a name="security"></a>Seguridad  
- La operación de copia de seguridad puede especificar opcionalmente contraseñas para un conjunto de medios, para un conjunto de copia de seguridad o para ambos. Si se ha definido una contraseña en un conjunto de medios o un conjunto de copia de seguridad, debe especificar la contraseña o contraseñas correctas en la instrucción RESTORE. Estas contraseñas impiden operaciones de restauración y anexiones no autorizadas de los conjuntos de copia de seguridad en medios que usan herramientas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, la contraseña no impide que se sobrescriba el medio con la opción FORMAT de la instrucción BACKUP.  
+ La operación de copia de seguridad puede especificar opcionalmente contraseñas para un conjunto de medios, para un conjunto de copia de seguridad o para ambos. Si se ha definido una contraseña en un conjunto de medios o un conjunto de copia de seguridad, debe especificar la contraseña o contraseñas correctas en la instrucción RESTORE. Estas contraseñas impiden operaciones de restauración y anexiones no autorizadas de los conjuntos de copia de seguridad en medios que utilizan herramientas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, la contraseña no impide que se sobrescriba el medio con la opción FORMAT de la instrucción BACKUP.  
   
 > [!IMPORTANT]  
 >  El nivel de protección que proporciona esta contraseña es bajo. El objetivo es impedir una restauración incorrecta con las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea por parte de usuarios autorizados o no autorizados. No impide la lectura de los datos de las copias de seguridad por otros medios o el reemplazo de la contraseña. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] La práctica recomendada para proteger las copias de seguridad consiste en almacenar las cintas de copia de seguridad en una ubicación segura o hacer una copia de seguridad en archivos de disco protegidos mediante las listas de control de acceso (ACL) adecuadas. Las ACL se deben establecer en el directorio raíz en el que se crean las copias de seguridad.  

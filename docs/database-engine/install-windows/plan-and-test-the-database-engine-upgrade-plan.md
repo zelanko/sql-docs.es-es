@@ -1,5 +1,6 @@
 ---
 title: Planear y probar el plan de actualización del Motor de base de datos | Microsoft Docs
+description: En este artículo se describe el planeamiento necesario para comenzar la actualización de SQL Server, que incluye una lista de comprobación de planeamiento y el desarrollo y las pruebas de un plan de actualización.
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0476871b5788e47648e96abe2f9c12d2ee98e2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65614af22873f907363bd721ff5c364e9cca5ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990868"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900348"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planear y probar el plan de actualización del Motor de base de datos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
  Para realizar una actualización a [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] correcta, se precisa una planeación adecuada, con independencia del enfoque.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "67990868"
   
        -   [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-       -   Actualización de seguridad SSL  
+       -   Actualización de seguridad de TLS  
 
    >[!NOTE]
    >La lista anterior es válida también para [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)].
@@ -97,4 +98,4 @@ ms.locfileid: "67990868"
 [Actualizar el motor de base de datos](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>Recursos adicionales 
-[Guía de migración de bases de datos](https://aka.ms/datamigration)  
+[Guía sobre Database Migration](https://aka.ms/datamigration)  

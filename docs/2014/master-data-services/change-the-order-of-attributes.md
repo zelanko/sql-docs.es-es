@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5bd144197379ed574ccd152fedf8089b311881be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e55da683013f55e37fec90bc501acfadb6d0c8d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972022"
 ---
 # <a name="change-the-order-of-attributes"></a>Cambiar el orden de los atributos
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el orden de los atributos.  
@@ -25,7 +24,7 @@ ms.locfileid: "65483536"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>Para cambiar el orden de un atributo  
   
@@ -43,7 +42,7 @@ ms.locfileid: "65483536"
   
 7.  Haga clic en **Guardar entidad**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

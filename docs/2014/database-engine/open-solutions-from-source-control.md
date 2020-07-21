@@ -1,5 +1,5 @@
 ---
-title: Abrir soluciones desde Control de código fuente | Microsoft Docs
+title: Abrir soluciones desde el control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6d998956497eb0fb15f3b99de8e543636266e32
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62844773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930354"
 ---
 # <a name="open-solutions-from-source-control"></a>Abrir soluciones desde el control de código fuente
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede utilizar para abrir soluciones directamente desde el control de código fuente. Al hacer esto, el entorno de Studio crea una copia de la última versión de los archivos de la solución en la ubicación que se especifique.  
@@ -30,17 +29,17 @@ ms.locfileid: "62844773"
   
 ### <a name="to-open-a-solution-from-source-control"></a>Para abrir una solución desde el control de código fuente  
   
-1.  En el **archivo** menú, elija **Control de código fuente**y haga clic en **abrir desde el Control de código fuente**.  
+1.  En el menú **archivo** , seleccione **control de código fuente**y haga clic en **abrir desde el control de código fuente**.  
   
 2.  Si se le pide, inicie sesión en [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
   
-3.  En el **crear un proyecto local de SourceSafe** cuadro de diálogo, seleccione la carpeta que contiene la solución que desea abrir y haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **crear un proyecto local de SourceSafe** , seleccione la carpeta que contiene la solución que desea abrir y haga clic en **Aceptar**.  
   
-4.  Si ya existe una carpeta de trabajo para la solución en la unidad de disco local, el **crear un nuevo proyecto en la carpeta** cuadro cambia para identificar el directorio local. Si no hay una carpeta de trabajo para la solución, puede escribir la ruta o ir al directorio local en el que debe abrirse la solución.  
+4.  Si ya existe una carpeta de trabajo para la solución en la unidad de disco local, el cuadro **crear un nuevo proyecto en la carpeta** cambia para identificar el directorio local. Si no hay una carpeta de trabajo para la solución, puede escribir la ruta o ir al directorio local en el que debe abrirse la solución.  
   
-5.  En el **Abrir solución** cuadro de diálogo, seleccione el archivo de solución y haga clic en **Aceptar**.  
+5.  En el cuadro de diálogo **Abrir solución** , seleccione el archivo de solución y haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Abrir proyectos desde el control de código fuente](../../2014/database-engine/open-projects-from-source-control.md)  
   
   

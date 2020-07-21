@@ -1,5 +1,5 @@
 ---
-title: UniqueName (propiedad, ADO MD) | Microsoft Docs
+title: Propiedad UniqueName (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,20 +17,20 @@ f1_keywords:
 helpviewer_keywords:
 - UniqueName property [ADO MD]
 ms.assetid: 5b977956-e252-4861-8425-f1aaf6b80130
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bb4e77047fb1a5483c0b87d98f55eda43f1658b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5192713ead82cc486fbbdba643cf426c0849ddad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913946"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764966"
 ---
 # <a name="uniquename-property-ado-md"></a>UniqueName (propiedad, ADO MD)
-Indica un nombre único para el objeto actual.  
+Indica un nombre no ambiguo para el objeto actual.  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **cadena** y es de solo lectura.  
+ Devuelve una **cadena** y es de solo lectura.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
@@ -39,5 +39,5 @@ Indica un nombre único para el objeto actual.
 |[Objeto de dimensión (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
 |[Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Name (propiedad, ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - ERROR_NUMBER function
 - CATCH block
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74e87d0cf31e866d21d2027e40513d0c0598ea7a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094711"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999018"
 ---
-# <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve el número del error que ha provocado la ejecución del bloque CATCH de una construcción TRY…CATCH.  
 
@@ -42,7 +42,7 @@ Esta función devuelve el número del error que ha provocado la ejecución del b
 ERROR_NUMBER ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -50,7 +50,7 @@ Si se llama en un bloque CATCH, `ERROR_NUMBER` devuelve el número del error que
 
 `ERROR_NUMBER` devuelve NULL si se llama desde fuera del ámbito de un bloque CATCH.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `ERROR_NUMBER` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_NUMBER` devuelve un número de error relevante, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
@@ -59,7 +59,7 @@ En un bloque `CATCH` anidado, `ERROR_NUMBER` devuelve el número de error espec�
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>A. Usar ERROR_NUMBER en un bloque CATCH  
+### <a name="a-using-error_number-in-a-catch-block"></a>A. Usar ERROR_NUMBER en un bloque CATCH  
 En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. El bloque `CATCH` devuelve el número de error.  
   
 ```sql  
@@ -86,7 +86,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. Usar ERROR_NUMBER en un bloque CATCH con otras herramientas de control de errores  
+### <a name="b-using-error_number-in-a-catch-block-with-other-error-handling-tools"></a>B. Usar ERROR_NUMBER en un bloque CATCH con otras herramientas de control de errores  
 En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. Junto con el número de error, el bloque `CATCH` devuelve información sobre ese error.  
 
 ```sql  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_enumeratependingschemachanges
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0b150b563cc9ea6bb555e6ea4f9caa1e6fe60193
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124577"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881738"
 ---
-# <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve una lista de todos los cambios de esquema pendientes. Este procedimiento almacenado puede utilizarse con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), lo que permite que un administrador omita cambios de esquema pendientes seleccionados para que no se replican. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Devuelve una lista de todos los cambios de esquema pendientes. Este procedimiento almacenado se puede utilizar con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), lo que permite a un administrador omitir los cambios de esquema pendientes seleccionados para que no se repliquen. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,19 +38,19 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @starting_schemaversion = ] starting_schemaversion` Es el cambio de esquema de número más bajo para incluir en el conjunto de resultados.  
+`[ @starting_schemaversion = ] starting_schemaversion`Es el cambio de esquema de número más bajo que se va a incluir en el conjunto de resultados.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**article_name**|**sysname**|Nombre del artículo al que se aplica el cambio de esquema, o **toda la publicación** los cambios de esquema que se aplican a toda la publicación.|  
+|**article_name**|**sysname**|Nombre del artículo al que se aplica el cambio de esquema o de la **publicación** para los cambios de esquema que se aplican a toda la publicación.|  
 |**schemaversion**|**int**|Número del cambio de esquema pendiente.|  
 |**schematype**|**sysname**|Valor de texto que representa el tipo de cambio de esquema.|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] que describe el cambio de esquema.|  
-|**schemastatus**|**nvarchar(10)**|Indica si hay un cambio de esquema pendiente para el artículo, que puede tener los valores siguientes:<br /><br /> **Active** = cambio de esquema está pendiente<br /><br /> **inactivo** = cambio de esquema está inactivo<br /><br /> **omitir** = no se replica el cambio de esquema|  
+|**schemastatus**|**nvarchar(10**|Indica si hay un cambio de esquema pendiente para el artículo, que puede tener los valores siguientes:<br /><br /> **activo** = cambio de esquema pendiente<br /><br /> **inactivo** = el cambio de esquema está inactivo<br /><br /> **omitir** = el cambio de esquema no se replica|  
 |**schemaguid**|**uniqueidentifier**|Identifica el cambio de esquema.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -59,12 +59,12 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_enumeratependingschemachanges** se utiliza en la replicación de mezcla.  
   
- **sp_enumeratependingschemachanges**, que se usa con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), está pensado para la compatibilidad de la replicación de mezcla y debe usarse solo cuando otras acciones correctivas, como reinicialización, no se han podido corregir la situación.  
+ **sp_enumeratependingschemachanges**, que se usa con [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), está pensado para la compatibilidad con la replicación de mezcla y solo debe usarse cuando otras acciones correctivas, como la reinicialización, no hayan podido corregir la situación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_enumeratependingschemachanges**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_enumeratependingschemachanges**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62d688230a43305ae0c652891213ba529a378e70
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078983"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543485"
 ---
 # <a name="browsing-the-cube"></a>Examinar el cubo
   Una vez implementado un cubo, los datos de este pueden verse en la pestaña **Explorador** del Diseñador de cubos y los datos de dimensión pueden verse en la pestaña **Explorador** del Diseñador de dimensiones. La exploración de los datos de cubos y dimensiones es una forma de comprobar el trabajo incrementalmente. Puede comprobar que los pequeños cambios en las propiedades, las relaciones y otros objetos tienen el efecto deseado una vez que se procesa el objeto. Si bien la pestaña Explorador se usa para ver datos de cubos y dimensiones, también ofrece diversas funciones dependiendo del objeto que se está examinando.  
@@ -30,18 +29,18 @@ ms.locfileid: "66078983"
   
 1.  Cambie al **Diseñador de dimensiones** para la dimensión Product en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en la dimensión **Product** del nodo **Dimensiones** del Explorador de soluciones.  
   
-2.  Haga clic en el **explorador** ficha para mostrar el **todas** miembro de la `Product Key` jerarquía de atributo. En la lección tres, definirá una jerarquía de usuario para la dimensión Product que le permitirá examinar la dimensión.  
+2.  Haga clic en la pestaña **Explorador** para mostrar el miembro **All** de la `Product Key` jerarquía de atributo. En la lección tres, definirá una jerarquía de usuario para la dimensión Product que le permitirá examinar la dimensión.  
   
-3.  Cambie a **Diseñador de cubos** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en el cubo **Tutorial de Analysis Services** en el nodo **Cubos** del Explorador de soluciones.  
+3.  Cambie a **Diseñador de cubos** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en el cubo **Analysis Services tutorial** del nodo **cubos** de explorador de soluciones.  
   
 4.  Seleccione la pestaña **Explorador** y haga clic en el icono **Volver a conectar** en la barra de herramientas del diseñador.  
   
      En el panel izquierdo del diseñador se muestran los objetos del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En el lado derecho de la pestaña **Explorador** hay dos paneles: el superior es el panel **Filtro** y el inferior es el panel **Datos** . En una próxima lección, utilizará el explorador de cubo para realizar el análisis.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lección 3: modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de consultas MDX &#40;Analysis Services: datos multidimensionales&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

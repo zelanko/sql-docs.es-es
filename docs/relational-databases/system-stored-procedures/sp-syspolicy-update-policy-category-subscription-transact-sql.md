@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f3833d16d0cf4e791064dc369d460fe9cf5cc3e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891439"
 ---
-# <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza una suscripción de categoría de directiva para una base de datos especificada.  
   
@@ -42,15 +42,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Es el identificador de la suscripción de categoría de directiva que desea actualizar. *policy_category_subscription_id* es **int**y es necesario.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`Es el identificador de la suscripción de categoría de directiva que desea actualizar. *policy_category_subscription_id* es de **tipo int**y es obligatorio.  
   
-`[ @target_type = ] 'target_type'` Es el tipo de destino de la suscripción de categoría. *target_type* es **sysname**, su valor predeterminado es null.  
+`[ @target_type = ] 'target_type'`Es el tipo de destino de la suscripción de categoría. *target_type* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- Si especifica *tipo_de_destino*, el valor debe establecerse en 'DATABASE'.  
+ Si especifica *target_type*, el valor se debe establecer en ' Database '.  
   
-`[ @target_object = ] 'target_object'` Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *target_object* es **sysname**, su valor predeterminado es null.  
+`[ @target_object = ] 'target_object'`Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *target_object* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @policy_category = ] 'policy_category'` Es el nombre de la categoría de directiva que desea suscribirse a la base de datos. *categoría_de_directiva* es **sysname**, su valor predeterminado es null.  
+`[ @policy_category = ] 'policy_category'`Es el nombre de la categoría de directiva a la que desea que se suscriba la base de datos. *policy_category* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -58,7 +58,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_update_policy_category_subscription en el contexto de la base de datos del sistema msdb.  
   
- Para obtener los valores de *policy_category_subscription_id* y *categoría_de_directiva*, puede usar la siguiente consulta:  
+ Para obtener valores para *policy_category_subscription_id* y para *policy_category*, puede usar la siguiente consulta:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  
@@ -72,7 +72,7 @@ ON a.policy_category_id = b.policy_category_id;
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Posible elevación de credenciales: Los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Posible elevación de credenciales: los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente actualiza una suscripción de categoría de directiva existente para que la base de datos AdventureWorks2012 se suscriba a la categoría de la directiva 'Finance'.  
@@ -85,9 +85,9 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

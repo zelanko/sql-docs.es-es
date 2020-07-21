@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929004"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765805"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cuando se establece FORCEPLAN en ON, el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa una combinación en el mismo orden en que aparecen las tablas en la cláusula FROM de una consulta. Además, si se establece FORCEPLAN en ON, se fuerza el uso de una combinación de bucles anidados, a menos que sea necesario utilizar otros tipos de combinaciones para construir un plan para la consulta o que se soliciten dichas combinaciones con sugerencias de combinación o sugerencias de consulta.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "67929004"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SET FORCEPLAN básicamente invalida la lógica utilizada por el optimizador de consultas para procesar una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los datos que devuelve la instrucción SELECT son los mismos, independientemente del valor de esta opción. La única diferencia es el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las tablas para satisfacer la consulta.  
   
  Las sugerencias del optimizador de consultas se pueden usar también en las consultas para influir en el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa la instrucción SELECT.  
@@ -57,7 +57,7 @@ SET FORCEPLAN { ON | OFF }
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se realiza una combinación de cuatro tablas. La opción `SHOWPLAN_TEXT` está habilitada, por lo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información sobre cómo va a procesar la consulta de forma distinta cuando se habilite la opción `SET FORCE_PLAN`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Make sure FORCEPLAN is set to OFF.  

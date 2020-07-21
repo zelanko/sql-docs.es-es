@@ -1,5 +1,5 @@
 ---
-title: Ver un informe de conjunto de recopilación (SQL Server Management Studio) | Microsoft Docs
+title: Visualización de un informe de conjunto de recopilación (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 548f6a6a75be51df2ea0de87f4eca91bebf8358b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 161fbacb2edc8d73d69bbc501e255ce657f6208c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055501"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715518"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Ver un informe de conjunto de recopilación (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Después de haber configurado el almacén de administración de datos, puede ver un informe de conjunto de recopilación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se proporcionan informes para los conjuntos de recopilación de datos del sistema que se instalan durante el proceso de instalación. Entre otros, se incluyen los siguientes informes:  
   
 -   Resumen de uso de disco  
@@ -51,7 +51,7 @@ ms.locfileid: "68055501"
  **Hora de inicio**  
  Escriba una hora inicial para los datos del informe o especifique una haciendo clic en las flechas.  
   
- **Duración**  
+ **Duration**  
  Especifique el intervalo de tiempo que incluir en el informe. El valor predeterminado es de 240 minutos. Los valores posibles entre los que seleccionar son 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) y 1440 minutos (24 horas).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00ccbf26d040eb5285595a43a9eead93d1eeddbb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082106"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528811"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definir nuevas medidas (Asistente para cubos)
   Utilice la página **Definir nuevas medidas** para crear medidas nuevas para un cubo que se crea sin utilizar un origen de datos.  
@@ -55,7 +54,7 @@ ms.locfileid: "66082106"
   
  Para cambiar el tipo de datos, haga clic en él y, después, seleccione un tipo de datos de la lista.  
   
- **Agregación**  
+ **Concentrado**  
  Enumera la agregación para la medida.  
   
  Para cambiar la agregación, haga clic en ella y, después, seleccione un tipo de datos de la lista.  
@@ -83,7 +82,7 @@ ms.locfileid: "66082106"
   
  Para cambiar el tipo de datos, haga clic en él y, después, seleccione un tipo de datos de la lista.  
   
- **Agregación**  
+ **Concentrado**  
  Enumera la agregación para la medida.  
   
  Para cambiar la agregación, haga clic en ella y, después, seleccione un tipo de datos de la lista.  
@@ -93,9 +92,9 @@ ms.locfileid: "66082106"
   
  Para eliminar una medida nueva del cubo, haga clic en el botón **X** de la medida en cuestión.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para cubos](cube-wizard-f1-help.md)   
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para cubos (ayuda F1)](cube-wizard-f1-help.md)   
+ [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

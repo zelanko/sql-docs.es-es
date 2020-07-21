@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Recuperación de información de los empleados | Microsoft Docs'
+title: 'Ejemplo: Recuperar información de los empleados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: efa6c05db03bdfe17d5b1a68b04403e5649ccee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287839"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013362"
 ---
-# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperación de información de los empleados
+# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperar información de los empleados
   En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  
   
  Supongamos que desea una transformación FOR XML EXPLICIT para generar XML como se indica a continuación:  
@@ -57,7 +56,7 @@ INNER JOIN Person.Person AS P
 ON  E.BusinessEntityID = P.BusinessEntityID;  
 ```  
   
- Combina estas consultas con `UNION AL`L, aplica `FOR XML EXPLICIT` y especifica la cláusula `ORDER BY` querida. El conjunto de filas se debe ordenar primero según el valor de `BusinessEntityID` y, a continuación, por nombre, de modo que los valores NULL en el nombre aparezcan al principio. Si ejecuta la siguiente consulta sin la cláusula FOR XML, podrá ver la tabla universal generada.  
+ Combina estas consultas con `UNION AL`L, aplica `FOR XML EXPLICIT`y especifica la cláusula `ORDER BY` querida. El conjunto de filas se debe ordenar primero según el valor de `BusinessEntityID` y, a continuación, por nombre, de modo que los valores NULL en el nombre aparezcan al principio. Si ejecuta la siguiente consulta sin la cláusula FOR XML, podrá ver la tabla universal generada.  
   
  Esta es la consulta final:  
   
@@ -129,7 +128,7 @@ FOR XML EXPLICIT;
   
  Este proceso se repite con el resto de filas del conjunto. Observe la importancia de ordenar las filas de la tabla universal para que FOR XML EXPLICIT pueda procesar el conjunto de filas por orden y generar el XML deseado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

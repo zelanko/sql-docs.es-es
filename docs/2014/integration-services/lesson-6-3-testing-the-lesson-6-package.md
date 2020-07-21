@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37c4bbccc7c63ab2c2fdc6f64793281cf4c88349
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62890861"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440332"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Paso 3: Prueba del paquete de la lección 6
   En tiempo de ejecución, el paquete obtendrá el valor de la Propiedad de directorio desde el parámetro VarFolderName.  
@@ -31,7 +30,7 @@ ms.locfileid: "62890861"
   
  **Flujo de datos**  
   
- ![Flujo de datos](../../2014/tutorials/media/task3lesson6data.jpg "Flujo de datos")  
+ ![Flujo de datos](../../2014/tutorials/media/task3lesson6data.jpg "Data Flow")  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>Para probar el paquete del tutorial de la lección 6  
   
@@ -40,6 +39,6 @@ ms.locfileid: "62890861"
 2.  Una vez que se haya completado la ejecución del paquete, en el menú Depurar, haga clic en Detener depuración.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 4: Implementar el paquete de la lección 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [Paso 4: Implementación del paquete de la lección 6](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

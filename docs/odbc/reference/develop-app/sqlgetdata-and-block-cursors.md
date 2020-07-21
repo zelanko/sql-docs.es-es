@@ -13,16 +13,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4841d8d923ff73d187569df3d7f9e29daf0f4e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b60d7093552b8f1dbed87d9ad8840ddb5a9e0799
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107398"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299755"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData y cursores de bloque
-**SQLGetData** opera en una sola columna de una sola fila y no se puede capturar una matriz que contiene los datos de varias filas. Esto es porque el uso principal de **SQLGetData** consiste en capturar datos largos en partes, y hay poca o ninguna razón para hacer esto más de una fila a la vez.  
+**SQLGetData** funciona en una sola columna de una sola fila y no puede capturar una matriz que contenga datos de varias filas. Esto se debe a que el uso principal de **SQLGetData** es capturar datos de gran tamaño en partes y hay poca o ninguna razón para hacerlo para más de una fila a la vez.  
   
- Para usar **SQLGetData** con un cursor de bloque, una aplicación llama primero **SQLSetPos** para colocar el cursor en una sola fila. A continuación, llama **SQLGetData** para una columna de esa fila. Sin embargo, este comportamiento es opcional. Para determinar si un controlador admite el uso de **SQLGetData** con cursores de bloque, una aplicación llama a **SQLGetInfo** con la opción SQL_GETDATA_EXTENSIONS.
+ Para usar **SQLGetData** con un cursor de bloque, una aplicación llama primero a **SQLSetPos** para colocar el cursor en una sola fila. A continuación, llama a **SQLGetData** para una columna de esa fila. Sin embargo, este comportamiento es opcional. Para determinar si un controlador admite el uso de **SQLGetData** con cursores de bloque, una aplicación llama a **SQLGetInfo** con la opción SQL_GETDATA_EXTENSIONS.

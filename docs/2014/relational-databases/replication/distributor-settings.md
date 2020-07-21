@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de configuración del distribuidor | Microsoft Docs
+title: Cuadro de diálogo ' configuración del distribuidor ' | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f6fbc408e9a81506db12670a620693464df6b17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010755"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Cuadro de diálogo de configuración del distribuidor de replicación de SQL Server
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>Cuadro de diálogo Replicación de SQL Server ' configuración del distribuidor '
   El cuadro de diálogo **Configuración del distribuidor** le permite cambiar la configuración de los distribuidores que se han agregado al panel izquierdo del Monitor de replicación.  
   
 ## <a name="options"></a>Opciones  
  **Conectar automáticamente cuando se inicia el Monitor de replicación**  
  Seleccione esta opción para permitir que el Monitor de replicación se conecte al distribuidor y recupere información de estado.  
   
- **Conexión**  
+ **Connection**  
  Haga clic aquí para mostrar el cuadro de diálogo **Conectar con el servidor** . Esto le permite ver y cambiar las propiedades de conexión y las credenciales que el Monitor de replicación utiliza para conectarse al distribuidor.  
   
  **Actualizar automáticamente el estado de este distribuidor y sus publicaciones**  
@@ -43,7 +42,7 @@ ms.locfileid: "62721350"
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores dentro del Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   

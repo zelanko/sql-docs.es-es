@@ -1,8 +1,8 @@
 ---
-title: Procesamiento de consultas inteligente en bases de datos de Microsoft SQL | Microsoft Docs
+title: Procesamiento de consultas inteligentes
 description: Características de procesamiento de consultas inteligente para mejorar el rendimiento de las consultas en SQL Server y Azure SQL Database.
-ms.custom: ''
-ms.date: 07/22/2019
+ms.custom: seo-dt-2019
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,20 +12,25 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be17617a400f760d0c5cd5eaa98124d066f19a4c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 104fbedea8199f0a6fb092c3ee1524bbfb4b903f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787306"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 La familia de características de procesamiento de consultas inteligentes incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo. 
 
 ![Procesamiento de consultas inteligentes](./media/iqp-feature-family.png)
+
+Vea este vídeo de seis minutos para obtener información general sobre el procesamiento de consultas inteligentes:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
 
 Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas inteligentes si habilita el nivel de compatibilidad de base de datos pertinente en la base de datos. Puede establecerlo con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo:  
 
@@ -38,13 +43,13 @@ En la siguiente tabla se detallan todas las características de procesamiento de
 | **Característica de procesamiento de consultas inteligentes** | **Compatible con Azure SQL Database** | **Compatible con SQL Server** |**Descripción** |
 | --- | --- | --- |--- |
 | [Combinaciones adaptables (modo por lotes)](#batch-mode-adaptive-joins) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Las combinaciones adaptables seleccionan dinámicamente un tipo de combinación en tiempo de ejecución según las filas de entrada reales.|
-| [Count Distinct aproximada](#approximate-query-processing) | Sí, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Proporcione un valor de COUNT DISTINCT aproximado en escenarios de macrodatos, con la ventaja de un alto rendimiento y una baja superficie de memoria. |
-| [Modo por lotes en el almacén de filas](#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Proporcione el modo por lotes en las cargas de trabajo de almacenamiento de datos relacionales enlazadas a la CPU, sin necesidad de índices de almacén de columnas.  | 
+| [Count Distinct aproximada](#approximate-query-processing) | Sí| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|Proporcione un valor de COUNT DISTINCT aproximado en escenarios de macrodatos, con la ventaja de un alto rendimiento y una baja superficie de memoria. |
+| [Modo por lotes en el almacén de filas](#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Proporcione el modo por lotes en las cargas de trabajo de almacenamiento de datos relacionales enlazadas a la CPU, sin necesidad de índices de almacén de columnas.  | 
 | [Ejecución intercalada](#interleaved-execution-for-mstvfs) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Use la cardinalidad real de la función con valores de tabla y múltiples instrucciones detectada en la primera compilación en lugar de una estimación fija.|
 | [Comentarios de concesión de memoria (modo por lotes)](#batch-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Si una consulta de modo por lotes tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
-| [Comentarios de concesión de memoria (modo de fila)](#row-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Si una consulta de modo de fila tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
-| [Inserción de UDF escalar](#scalar-udf-inlining) | No | Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 en el nivel de compatibilidad 150, versión preliminar pública|Los UDF escalares se transforman en expresiones relacionales equivalentes que se "insertan" en la consulta que realiza la llamada, lo que a menudo supone una notable mejora del rendimiento.|
-| [Compilación diferida de variables de tabla](#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Use la cardinalidad real de la variable de tabla detectada en la primera compilación en lugar de una estimación fija.|
+| [Comentarios de concesión de memoria (modo de fila)](#row-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 150| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Si una consulta de modo de fila tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
+| [Inserción de UDF escalar](#scalar-udf-inlining) | No | Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Los UDF escalares se transforman en expresiones relacionales equivalentes que se "insertan" en la consulta que realiza la llamada, lo que a menudo supone una notable mejora del rendimiento.|
+| [Compilación diferida de variables de tabla](#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] en el nivel de compatibilidad 150|Use la cardinalidad real de la variable de tabla detectada en la primera compilación en lugar de una estimación fija.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables del modo por lotes
 La característica de combinaciones adaptables del modo por lotes permite elegir un método de [combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada, mediante un único plan en caché. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.
@@ -123,14 +128,11 @@ Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de 
 
 ## <a name="row-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria del modo de fila
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
-
-> [!NOTE]
-> Los comentarios de concesión de memoria del modo de fila es una característica en vista previa (GB) pública.  
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Los comentarios de concesión de memoria del modo de fila se expanden en la característica de comentarios de concesión de memoria de modo de proceso por lotes al ajustar los tamaños de concesión de memoria tanto para los operadores del modo de proceso por lotes como del modo de fila.  
 
-Para habilitar la versión preliminar pública de los comentarios de concesión de memoria del modo de fila en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
+Para habilitar los comentarios de concesión de memoria del modo de fila en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], habilite el nivel 150 de compatibilidad de la base de datos para la base de datos a la que se conecta cuando ejecuta la consulta.
 
 La actividad de comentarios de concesión de memoria del modo de fila será visible a través del evento extendido **memory_grant_updated_by_feedback**. 
 
@@ -145,9 +147,6 @@ A partir de los comentarios de concesión de memoria del modo de fila, se mostra
 | No: Feedback disabled | Si los comentarios de concesión de memoria se desencadenan de manera continúa y fluctúan entre operaciones de aumento de memoria y operaciones de disminución de memoria, se deshabilitarán los comentarios de concesión de memoria para la instrucción. |
 | Yes: Adjusting | Se aplicaron los comentarios de concesión de memoria y se pueden seguir ajustando para la próxima ejecución. |
 | Yes: Stable | Se aplicaron los comentarios de concesión de memoria y ahora la memoria concedida es estable, lo que significa que lo último que se concedió para la ejecución anterior es lo que se concedió para la ejecución actual. |
-
-> [!NOTE]
-> Los atributos del plan de comentarios de concesión de memoria del modo de fila en versión preliminar pública son visibles en los planes de ejecución de consultas gráficas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en las versiones 17.9 y superiores. 
 
 ### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>Deshabilitar los comentarios de concesión de memoria en modo de fila sin cambiar el nivel de compatibilidad
 Los comentarios de concesión de memoria en modo de fila se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 150 o posterior. Para deshabilitar los comentarios de concesión de memoria en modo de fila para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
@@ -280,19 +279,61 @@ Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de 
 
 ## <a name="table-variable-deferred-compilation"></a>Compilación diferida de variables de tabla
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
-La compilación diferida de variables de tabla mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación inicial, esta característica propaga las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información precisa del recuento de filas optimiza las operaciones del plan de bajada.
+La **compilación diferida de variables de tabla** mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación del plan inicial, esta característica propagará las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información exacta de recuento de filas se usará para optimizar las operaciones del plan de bajada.
 
-La compilación diferida de variables de tabla aplaza la compilación de una instrucción que hace referencia a una variable de tabla hasta la primera ejecución real de la instrucción. Este comportamiento de compilación diferida es el mismo que el de las tablas temporales. Este cambio se traduce en el uso de la cardinalidad real en lugar de la estimación de una fila original. 
+Con la compilación aplazada variable de tabla, la compilación de una instrucción que hace referencia a una variable de tabla se aplaza hasta que la primera ejecución real de la instrucción. Este comportamiento de compilación diferida es idéntico al comportamiento de las tablas temporales. Este cambio se traduce en el uso de la cardinalidad real en lugar de la estimación de una fila original. 
 
-Puede habilitar la versión preliminar pública de la compilación diferida de variables de tabla en Azure SQL Database. Para ello, habilite el nivel de compatibilidad 150 para la base de datos a la que se conecta al ejecutar la consulta.
+Para habilitar la compilación diferida de variables de tabla, habilite el nivel de compatibilidad 150 de la base de datos a la que se conecta cuando ejecuta la consulta.
 
-Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+La compilación diferida de variables de tabla **no** cambia ninguna otra característica de las variables de tabla. Por ejemplo, esta característica no agrega estadísticas de columna a las variables de tabla.
+
+La compilación diferida de variables de tabla **no aumenta la frecuencia de recompilación**. En su lugar, se desplaza a donde se produce la compilación inicial. El plan en caché resultante se genera en función del recuento de filas de variables de tabla de la compilación diferida. Este plan se reutiliza en consultas sucesivas, y hasta que se expulsa o se vuelve a compilar. 
+
+El recuento de filas de variables de tabla que se usa para la compilación inicial del plan representa un valor típico que podría ser diferente de una estimación del recuento de filas fijo. Si es diferente, las operaciones de bajada saldrán beneficiadas. Si el recuento de filas de variables de tabla varía considerablemente entre ejecuciones, es posible que esta característica no mejore el rendimiento.
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Deshabilitación de la compilación diferida de variables de tabla sin cambiar el nivel de compatibilidad
+Deshabilite la compilación diferida de variables de tabla en el ámbito de base de datos o de instrucción mientras se mantiene el nivel 150 o posterior de compatibilidad de base de datos. Para deshabilitar la compilación diferida de variables de tabla para todas las ejecuciones de consultas que se originan en la base de datos, ejecute el siguiente ejemplo en el contexto de la base de datos aplicable:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+Para volver a habilitar la compilación diferida de variables de tabla para todas las ejecuciones de consultas que se originan en la base de datos, ejecute el siguiente ejemplo en el contexto de la base de datos aplicable:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+También puede deshabilitar la compilación diferida de variables de tabla para una consulta específica mediante la designación de DISABLE_DEFERRED_COMPILATION_TV como una sugerencia de consulta USE HINT.  Por ejemplo:
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
 ## <a name="scalar-udf-inlining"></a>Inserción de UDF escalar
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 La inserción de UDF escalar transforma automáticamente las [UDF escalares](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar) en expresiones relacionales. Las inserta en la consulta SQL de llamada. Esta transformación mejora el rendimiento de las cargas de trabajo que aprovechan las UDF escalares. La inserción de UDF escalar facilita la optimización basada en costos de las operaciones dentro de las UDF. Los resultados son eficaces, orientados a conjuntos y paralelos en lugar de tratarse de planes de ejecución seriales, iterativos e ineficaces. Esta característica está habilitada de forma predeterminada en el nivel de compatibilidad de base de datos 150.
 
@@ -300,7 +341,7 @@ Para obtener más información, vea [Inserción de UDF escalares](../user-define
 
 ## <a name="approximate-query-processing"></a>Procesamiento de consultas aproximado
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 El procesamiento de consultas aproximado es una nueva familia de características. Agrega conjuntos de datos de gran tamaño en los que la capacidad de respuesta resulta más fundamental que la precisión absoluta. Un ejemplo es calcular el valor **COUNT(DISTINCT())** entre 10 mil millones de filas para mostrar en un panel. En este caso, la precisión absoluta no es importante, pero la capacidad de respuesta es fundamental. La función de agregado **APPROX_COUNT_DISTINCT** nueva devuelve el número aproximado de valores no nulos únicos de un grupo.
 
@@ -308,7 +349,7 @@ Para más información, consulte [APPROX_COUNT_DISTINCT (Transact-SQL)](../../t-
 
 ## <a name="batch-mode-on-rowstore"></a>Modo por lotes en el almacén de filas 
 
-**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública) 
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 El modo por lotes en el almacén de filas permite la ejecución en modo por lotes de las cargas de trabajo de análisis sin necesidad de índices de almacén de columnas.  Esta característica admite la ejecución en modo por lotes y filtros de mapa de bits para montones en disco e índices de árbol B. El modo por lotes en el almacén de filas permite la compatibilidad con todos operadores habilitados para el modo por lotes existentes.
 
@@ -317,41 +358,45 @@ El modo por lotes en el almacén de filas permite la ejecución en modo por lote
 - Con los índices de **almacén de columnas**, las consultas analíticas tienen acceso solo a los datos de las columnas que necesitan. La compresión de página en formato de almacén de columnas también es más eficaz que la compresión en los índices de **almacén de filas** tradicionales. 
 - Con el procesamiento de **modo por lotes**, los operadores de consulta procesan los datos con mayor eficacia. Funcionan en un lote de filas en lugar de una fila cada vez. Hay más mejoras de escalabilidad relacionadas con el proceso en modo por lotes. Para obtener más información sobre el modo por lotes, consulte [Modos de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
-Los dos conjuntos de características funcionan conjuntamente para mejorar la utilización de entrada/salida (E/S) y CPU:
-- Mediante el uso de índices de almacén de columnas, más datos suyos caben en la memoria. Eso reduce la necesidad de E/S.
+Los dos conjuntos de características funcionan conjuntamente para mejorar la utilización de entrada y salida (E/S) y CPU:
+- Mediante el uso de índices de almacén de columnas, más datos suyos caben en la memoria. Esto reduce la carga de trabajo de E/S.
 - El proceso en modo por lotes utiliza la CPU de manera más eficaz.
 
-Las dos tecnologías se apoyan entre sí siempre que es posible. Por ejemplo, es posible evaluar agregados del modo por lotes como parte de una exploración del índice de almacén de columnas. También se procesan los datos de un almacén de columnas comprimidos con codificación run-length de forma mucho más eficiente con combinaciones del modo por lotes y los agregados de modo por lotes. 
+Las dos tecnologías se apoyan entre sí siempre que es posible. Por ejemplo, es posible evaluar agregados del modo por lotes como parte de una exploración del índice de almacén de columnas. Asimismo, los datos comprimidos del almacén de columnas se procesan mediante la codificación en longitud del recorrido de forma mucho más eficiente con combinaciones y agregados de modo por lotes. 
  
-Las dos características se pueden usar de forma independiente:
-* Obtiene planes de modo de fila que usan índices de almacén de columnas.
-* Obtiene planes de modo por lotes que usan índices de almacén de filas. 
+Sin embargo, es importante comprender que las dos características son independientes:
+* Puede obtener planes de modo de fila que usan índices de almacén de columnas.
+* Puede obtener planes de modo por lotes que usan índices de almacén de filas. 
 
 Normalmente obtiene los mejores resultados al usar las dos características conjuntamente. Así pues, hasta ahora, el optimizador de consultas de SQL Server ha tenido en cuenta el procesamiento de modo por lotes solo para aquellas consultas que implican al menos una tabla con un índice de almacén de columnas.
 
-Los índices de almacén de columnas no son una buena opción para algunas aplicaciones. Una aplicación podría usar cualquier otra característica no compatible con los índices de almacén de columnas. Por ejemplo, las modificaciones en contexto no son compatibles con la compresión del almacén de columnas. De este modo, los desencadenadores no se admiten en tablas con índices de almacén de columnas en clúster. Y, lo que es más importante, los índices de almacén de columnas agregan sobrecarga para las instrucciones **DELETE** y **UPDATE**. 
+Es posible que los índices de almacén de columnas no sean adecuados para algunas aplicaciones. Una aplicación podría usar cualquier otra característica no compatible con los índices de almacén de columnas. Por ejemplo, las modificaciones en contexto no son compatibles con la compresión del almacén de columnas. Por tanto, los desencadenadores no se admiten en tablas con índices de almacén de columnas en clúster. Y, lo que es más importante, los índices de almacén de columnas agregan sobrecarga para las instrucciones **DELETE** y **UPDATE**. 
 
-Para algunas cargas de trabajo híbridas transaccionales y analíticas, la sobrecarga que añaden a los aspectos transaccionales de una carga de trabajo es superior que las ventajas de los índices de almacén de columnas. Estos escenarios pueden mejorar el uso de CPU desde el procesamiento de modo por lotes solamente. Por eso, el modo por lotes en la característica de almacén de filas tiene en cuenta el modo por lotes para todas las consultas. No importa qué índices están implicados.
+Para algunas cargas de trabajo híbridas transaccionales y analíticas, la sobrecarga de una carga de trabajo transaccional supera las ventajas que se obtienen al usar índices de almacén de columnas. Estos escenarios se pueden beneficiar del uso de CPU mejorado mediante el procesamiento de modo por lotes por sí solo. Por esa razón la característica de modo por lotes en almacén de filas considera el modo por lotes para todas las consultas, independientemente del tipo de índices implicados.
 
 ### <a name="workloads-that-might-benefit-from-batch-mode-on-rowstore"></a>Cargas de trabajo que pueden beneficiarse del modo por lotes en el almacén de filas
 Las siguientes cargas de trabajo pueden beneficiarse del modo por lotes en el almacén de filas:
-* una parte significativa de la carga de trabajo consta de consultas analíticas. Normalmente, estas consultas tienen operadores como combinaciones o agregados que procesan cientos de miles de filas o más.
-* La carga de trabajo está enlazada a la CPU. Si el cuello de botella es E/S, seguimos recomendando que tenga en cuenta un índice de almacén de columnas, si es posible.
-* La creación de un índice de almacén de columnas agrega demasiada sobrecarga al elemento transaccional de su carga de trabajo. O bien, la creación de un índice de almacén de columnas no sería factible porque la aplicación depende de una característica que no es compatible aún con los índices de almacén de columnas.
+* una parte significativa de la carga de trabajo consta de consultas analíticas. Normalmente, estas consultas usan operadores como combinaciones o agregados que procesan cientos de miles de filas o más.
+* La carga de trabajo está enlazada a la CPU. Si el cuello de botella es de E/S, se sigue recomendando tener en cuenta un índice de almacén de columnas, siempre que sea posible.
+* La creación de un índice de almacén de columnas agrega demasiada sobrecarga al elemento transaccional de su carga de trabajo. O bien, la creación de un índice de almacén de columnas no es factible porque la aplicación depende de una característica que todavía no es compatible con los índices de almacén de columnas.
+
 
 > [!NOTE]
-> El modo por lotes en el almacén de filas solo sirve para reducir el consumo de CPU. Si el cuello de botella está relacionado con la E/S y los datos ya no están almacenados en caché (caché "en frío"), el modo por lotes en el almacén de filas no mejorará el tiempo transcurrido. De forma similar, si no hay suficiente memoria en el equipo para almacenar en caché todos los datos, es poco probable que mejore el rendimiento.
+> El modo por lotes en el almacén de filas solo sirve para reducir el consumo de CPU. Si el cuello de botella está relacionado con la E/S y los datos todavía no están almacenados en caché (caché "en frío"), el modo por lotes en el almacén de filas no mejorará el tiempo transcurrido de la consulta. De forma similar, si no hay memoria suficiente en el equipo para almacenar en caché todos los datos, es poco probable que mejore el rendimiento.
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>¿Qué cambios se producirán con el modo por lotes en el almacén de filas?
-Aparte de pasar al nivel de compatibilidad 150, no es necesario que haga cambios para habilitar el modo por lotes en el almacén de filas para las cargas de trabajo candidatas.
 
-Incluso si una consulta no implica ninguna tabla con un índice de almacén de columnas, el procesador de consultas ahora usa la heurística para decidir si se va a tener en cuenta el modo por lotes. La heurística consiste en estas comprobaciones:
+Establezca la base de datos en el nivel de compatibilidad 150. No se requiere ningún cambio más.
+
+Incluso si una consulta no accede a ninguna tabla con índice de almacén de columnas, el procesador de consultas, mediante la heurística, decidirá si se va a considerar el modo por lotes. La heurística consiste en estas comprobaciones:
 1. Una comprobación inicial de tamaños de tablas, operadores utilizados y cardinalidades estimadas en la consulta de entrada.
 2. Puntos de control adicionales, a medida que el optimizador detecta planes nuevos y más baratos para la consulta. Si estos planes alternativos no hacen un uso considerable del modo por lotes, el optimizador dejará explorar alternativas al modo por lotes.
 
+
 Si se usa el modo por lotes en el almacén de filas, verá el modo de ejecución real como **modo por lotes** en el plan de consulta. El operador de examen usa el modo por lotes para montones en disco e índices de árbol B. Esta exploración del modo por lotes puede evaluar los filtros de mapa de bits del modo por lotes. También podría ver otros operadores del modo por lotes en el plan. Entre los ejemplos se incluyen combinaciones hash, agregados basados en hash, ordenaciones, agregados de ventana, filtros, concatenación y operadores Compute Scalar.
 
-### <a name="remarks"></a>Notas
+### <a name="remarks"></a>Observaciones
+
 Los planes de consulta no siempre usan el modo por lotes. Es posible que el optimizador de consultas decida que el modo por lotes no es beneficioso para la consulta. 
 
 El espacio de búsqueda del optimizador de consultas está cambiando. Así pues, si obtiene un plan de modo de fila, podría no ser igual al plan obtenido en un nivel de compatibilidad más bajo. Y, si obtiene un plan de modo por lotes, podría no ser igual al plan obtenido con un índice de almacén de columnas. 
@@ -397,7 +442,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)    (Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database)  
 [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)    
 [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

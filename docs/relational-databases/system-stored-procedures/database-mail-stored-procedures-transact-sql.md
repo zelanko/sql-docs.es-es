@@ -15,19 +15,19 @@ helpviewer_keywords:
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13c8c9c7c14cdd4cd6a3c15d3c6216614b38a518
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6127fae185a556387d0469998c383445d74e6fc8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211319"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898169"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>Procedimientos almacenados de Correo electrónico de base de datos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]admite los siguientes procedimientos almacenados del sistema que se utilizan para realizar operaciones de correo electrónico desde dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite los siguientes procedimientos almacenados del sistema que se utilizan para realizar operaciones de correo electrónico desde dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="database-mail-procedures"></a>Procedimientos del Correo electrónico de base de datos  
   
@@ -47,7 +47,7 @@ ms.locfileid: "70211319"
 |[sysmail_delete_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)|[sysmail_update_profileaccount_sp](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|  
 |[sysmail_help_account_sp](../../relational-databases/system-stored-procedures/sysmail-help-account-sp-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   
   

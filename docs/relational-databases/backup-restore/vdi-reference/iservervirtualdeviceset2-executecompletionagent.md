@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2ad094794b5115aa4593f918de442798445e2b79
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 067767ebc40ef44b70a09a7f15872ea0fcdce5ba
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847296"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893999"
 ---
 # <a name="iservervirtualdeviceset2executecompletionagent-vdi"></a>IServerVirtualDeviceSet2::ExecuteCompletionAgent (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **ExecuteCompletionAgent** se usa para implementar el bucle principal del agente de finalización.
 
@@ -32,7 +32,7 @@ HRESULT IServerVirtualDeviceSet2::ExecuteCompletionAgent ();
 
 Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de NOERROR indica que la llamada al método se ha realizado correctamente. Un valor distinto de cero indica que se ha producido un error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El agente de finalización proporciona un mecanismo a través del cual SQL Server se puede sincronizar con las finalizaciones de comandos del dispositivo virtual. Debe estar activo antes de que se puedan emitir comandos y debe permanecer activo hasta que se cierren todos los dispositivos.
 

@@ -1,5 +1,6 @@
 ---
 title: Usar el Asistente para planes de mantenimiento | Microsoft Docs
+description: Obtenga información sobre cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de SQL Server.
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,19 +35,19 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155567"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758979"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
     
  
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Para crear un plan de mantenimiento multiservidor, debe configurar un entorno multiservidor con un servidor maestro y uno o varios servidores de destino. Debe crear y mantener planes de mantenimiento multiservidor en el servidor maestro. Puede ver planes en servidores de destino.   
 
@@ -54,14 +55,14 @@ ms.locfileid: "70155567"
 
 Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
 
-##  <a name="Prerequisite"></a> Requisitos previos 
+##  <a name="prerequisites"></a><a name="Prerequisite"></a> Requisitos previos 
 Debe habilitar la [opción de configuración del servidor Agent XPs](../../database-engine/configure-windows/agent-xps-server-configuration-option.md).
   
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar el Asistente para planes de mantenimiento  
+##  <a name="use-the-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a> Usar el Asistente para planes de mantenimiento  
   
 **Iniciar el asistente** 
 
@@ -130,9 +131,9 @@ Debe habilitar la [opción de configuración del servidor Agent XPs](../../datab
   
         6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-        7.  Haga clic en **Aceptar**.  
+        7.  Haga clic en **OK**.  
   
-    6.  Haga clic en **Siguiente**.  
+    6.  Haga clic en **Next**.  
   
 6.  En la página **Seleccionar servidores de destino** , seleccione los servidores en los que desea ejecutar el plan de mantenimiento. Esta página solo está visible en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuradas como servidores maestros.  
   
@@ -157,7 +158,7 @@ En esta página están disponibles las opciones siguientes.
   
  -  **Todas las bases de datos**  
   
-Genera un plan de mantenimiento que ejecuta esta tarea en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a excepción de **tempdb**.  
+Genere un plan de mantenimiento que ejecute esta tarea en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a excepción de **tempdb**.  
   
 **Bases de datos del sistema**  
   
@@ -182,7 +183,7 @@ Casilla**Incluir índices**
   
 ## <a name="define-database-shrink-tasks"></a>Definir las tareas Reducir base de datos  
   
-1.  En la página **Definir la tarea Reducir base de datos** , cree una tarea que intente reducir el tamaño de las bases de datos seleccionadas mediante la instrucción `DBCC SHRINKDATABASE` , con la opción `NOTRUNCATE` o `TRUNCATEONLY` . Para obtener más información, vea [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Reducir base de datos** , cree una tarea que intente reducir el tamaño de las bases de datos seleccionadas mediante la instrucción `DBCC SHRINKDATABASE` , con la opción `NOTRUNCATE` o `TRUNCATEONLY` . Para obtener más información, vea [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md). Cuando haya terminado, haga clic en **Siguiente**.  
   
     > **¡ADVERTENCIA!** Los datos movidos para reducir un archivo se pueden dispersar en cualquier ubicación disponible en el archivo. Esto produce la fragmentación de índices y puede reducir el rendimiento de las consultas que buscan un intervalo del índice. Para eliminar la fragmentación, considere la posibilidad de volver a generar los índices en el archivo después de la reducción.  
   
@@ -205,7 +206,7 @@ Casilla**Incluir índices**
   
 ## <a name="define-the-index-tasks"></a>Definir las tareas de índice  
   
-1.  En la página **Definir la tarea Reorganizar índice** , seleccione el servidor o los servidores en los que va a mover páginas de índice a un orden de búsqueda más eficiente. Esta tarea usa la instrucción `ALTER INDEX ... REORGANIZE`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Reorganizar índice** , seleccione el servidor o los servidores en los que va a mover páginas de índice a un orden de búsqueda más eficiente. Esta tarea usa la instrucción `ALTER INDEX ... REORGANIZE`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md). Cuando haya terminado, haga clic en **Siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
@@ -374,7 +375,7 @@ Casilla**Incluir índices**
      Especifique el nombre del contenedor de Azure Storage.  
   
      **Prefijo URL:**  
-     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<cuenta de almacenamiento>.blob.core.windows.net**.  
+     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<storage account>.blob.core.windows.net**.  
   
      Cuadro**Extensión del archivo de copia de seguridad**  
      Especifique la extensión que se va a utilizar para los archivos de copia de seguridad. El valor predeterminado es .bak.  
@@ -428,7 +429,7 @@ Casilla**Incluir índices**
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definir las tareas Limpieza de mantenimiento  
   
-1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file` . Cuando termine, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file`. Cuando termine, haga clic en **Siguiente**.  
   
     > **IMPORTANTE:** Esta tarea no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta precaución reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, hay que seleccionar **Incluir subcarpetas de primer nivel**.  
   
@@ -505,10 +506,10 @@ Casilla**Incluir índices**
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  

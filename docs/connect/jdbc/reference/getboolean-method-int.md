@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a1f83c94559eeedba5ab01e2ffa1835215d40af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d42b6464850d1fb68fffeab45943dd27bf6d76d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953663"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926364"
 ---
 # <a name="getboolean-method-int"></a>Método getBoolean (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public boolean getBoolean(int index)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Un valor **int** que indica el índice del parámetro.  
   
@@ -45,7 +45,7 @@ public boolean getBoolean(int index)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getBoolean especifica este método getBoolean en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5f6b63e0ff79f44b2900fb0f727436ed36401ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ba6ba2d1238c75c29990a8ab2bd98ea419cc606
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728379"
 ---
 # <a name="resource-database"></a>Base de datos Resource
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La base de datos Resource es de solo lectura y contiene todos los objetos del sistema que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos del sistema, tales como sys.objects, persisten físicamente en la base de datos Resource, pero aparecen lógicamente en el esquema sys de cada base de datos. La base de datos Resource no contiene datos o metadatos del usuario.  
   
  La base de datos de recursos hace que el procedimiento de actualizar a una versión nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sea más rápido y sencillo. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la actualización requiere quitar y crear los objetos del sistema. Como el archivo de la base de datos Resource contiene todos los objetos del sistema, ahora para realizar una actualización basta con copiar el único archivo de base de datos Resource en el servidor local.  
   
 ## <a name="physical-properties-of-resource"></a>Propiedades físicas de recurso  
- Los nombres de archivos físicos de la base de datos de recursos son mssqlsystemresource.mdf y mssqlsystemresource.ldf. Estos archivos se encuentran en \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombre_instancia*>\MSSQL\Binn\ y no deben cambiarse. Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene un solo archivo mssqlsystemresource.mdf asociado y las instancias no lo comparten.  
+ Los nombres de archivos físicos de la base de datos de recursos son mssqlsystemresource.mdf y mssqlsystemresource.ldf. Estos archivos se encuentran en \<*drive*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\ y no deben cambiarse. Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene un solo archivo mssqlsystemresource.mdf asociado y las instancias no lo comparten.  
   
 > [!WARNING]  
 >  En ocasiones, las actualizaciones y los paquetes de servicios ofrecen una base de datos de nuevos recursos, que se instala en la carpeta BINN. No es compatible ni recomendable cambiar la ubicación de la base de datos de recursos.  

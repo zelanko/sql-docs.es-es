@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6b38d58ddf81f0b8439912b865b1d94a7b15ecf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a22ef9e24818521ea8e2c59362ab46b5a46573a5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80905204"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>Método getNumericFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public java.lang.String getNumericFunctions()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getNumericFunctions especifica este método getNumericFunctions en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  

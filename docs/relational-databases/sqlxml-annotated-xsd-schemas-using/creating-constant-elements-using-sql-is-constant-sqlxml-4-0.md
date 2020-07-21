@@ -1,6 +1,6 @@
 ---
-title: 'Crear elementos constantes mediante SQL: is-Constant (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Crear elementos constantes con SQL: is-Constant (SQLXML)'
+description: 'Aprenda a usar la anotación sql: is-Constant en SQLXML 4,0 para crear elementos constantes en un esquema XSD que no se asignan a ninguna tabla o columna de base de datos.'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,34 +18,35 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb1223c7c72aa091a3dd15da3beacaf65c4b21b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 50e2a6efad0cf14739fe2ef28135ea797ce6140e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906045"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750824"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Crear elementos constantes mediante sql:is-constant (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Para especificar un elemento de constante, es decir, un elemento en el esquema XSD que no se asigna a ninguna tabla o columna de base de datos, puede usar la anotación **SQL: is-Constant** . Esta anotación toma un valor booleano (0=false, 1=true). Los valores permitidos son 0, 1, true y false. La anotación **SQL: is-Constant** se puede especificar en un elemento que no tiene atributos. Si se especifica en un elemento con el valor true (o 1), ese elemento no está asignado a la base de datos pero sigue apareciendo en el documento XML.  
   
  La anotación **SQL: is-Constant** se puede usar para:  
   
 -   Agregar un elemento de nivel superior al documento XML. XML requiere un único elemento de nivel superior (root) para el documento.  
   
--   La creación de elementos de contenedor, como un **\<pedidos >** elemento que contiene todos los pedidos.  
+-   Crear elementos de contenedor, como un **\<Orders>** elemento que contiene todos los pedidos.  
   
- La anotación **SQL: is-Constant** se puede Agregar a un elemento **\<complexType >** .  
+ La anotación **SQL: is-Constant** puede agregarse a un **\<complexType>** elemento.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Especificar sql:is-constant para agregar un elemento contenedor  
- En este esquema XSD anotado, **\<> CustomerOrders** se define como un elemento Constant especificando el atributo **SQL: is-Constant** con un valor de 1. Por lo tanto, **\<> CustomerOrders** no se asigna a ninguna tabla o columna de base de datos. Este elemento Constant se compone del **orden\<** elementos secundarios.  
+ En este esquema XSD anotado, **\<CustomerOrders>** se define como un elemento constante especificando el atributo **SQL: is-Constant** con un valor de 1. Por lo tanto, **\<CustomerOrders>** no se asigna a ninguna tabla o columna de base de datos. Este elemento Constant está compuesto de los **\<Order>** elementos secundarios.  
   
- Aunque **\<> CustomerOrders** no se asigna a ninguna tabla o columna de base de datos, sigue apareciendo en el XML resultante como un elemento contenedor que contiene el **\<orden >** los elementos secundarios.  
+ Aunque no **\<CustomerOrders>** se asigna a ninguna tabla o columna de base de datos, sigue apareciendo en el XML resultante como un elemento contenedor que contiene los **\<Order>** elementos secundarios.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

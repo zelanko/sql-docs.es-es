@@ -17,10 +17,10 @@ ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 18252987543528f41b4c0f64c2954138b7a5d13c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282495"
 ---
 # <a name="reuse-of-package-objects"></a>Volver a utilizar objetos de paquete
@@ -47,6 +47,6 @@ ms.locfileid: "71282495"
   
 -   [Copiar los elementos de proyectos](https://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
--   [guardar un paquete como una plantilla de paquete](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
+-   [Guardar un paquete como una plantilla de paquete](https://msdn.microsoft.com/library/efe66cec-3933-4f6e-8d35-fe3d300de66c)  
   
   

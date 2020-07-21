@@ -10,15 +10,14 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd8bf917bd293cd4aab3d5c8c7fe526a557fec8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68195573"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065513"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
   Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
@@ -26,9 +25,9 @@ ms.locfileid: "68195573"
  La columna promocionada puede ser una columna calculada de la misma tabla o puede ser una columna aparte, mantenida por el usuario, de una tabla. Esto es suficiente cuando se promocionan valores singleton desde cada instancia XML. No obstante, en el caso de propiedades con varios valores, es necesario crear una tabla aparte para la propiedad, como se describe en la sección siguiente.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Columna calculada basada en el tipo de datos xml  
- Una columna calculada puede crearse mediante el uso de una función definida por el usuario que invoca `xml` métodos del tipo de datos. El tipo de la columna calculada puede ser cualquiera SQL, incluido XML. Esto se muestra en el ejemplo siguiente.  
+ Una columna calculada se puede crear mediante una función definida por el usuario que invoque `xml` métodos de tipo de datos. El tipo de la columna calculada puede ser cualquiera SQL, incluido XML. Esto se muestra en el ejemplo siguiente.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Ejemplo: Columna calculada basada en el método de tipo de datos XML  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Ejemplo: columna calculada basada en el método de tipo de datos xml  
  Cree la función definida por el usuario para obtener el número ISBN de un libro:  
   
 ```  
@@ -50,7 +49,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  La columna calculada se puede indizar de la manera habitual.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Ejemplo: Consultas en una columna calculada basada en métodos de tipo de datos XML  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Ejemplo: consultas en una columna calculada basada en métodos de tipo de datos xml  
  Para obtener el <`book`> cuyo ISBN es 0-7356-1588-2:  
   
 ```  
@@ -78,20 +77,20 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Cree desencadenadores en la columna XML para mantener las tablas de propiedades. En los desencadenadores, realice una de las siguientes operaciones:  
   
-    -   Use `xml` métodos, tipo de datos, como **nodes()** y **value()** , para insertar y eliminar filas de las tablas de propiedades.  
+    -   Use `xml` métodos de tipo de datos, como **Nodes ()** y **Value ()**, para insertar y eliminar filas de las tablas de propiedades.  
   
     -   Cree funciones de transmisión por secuencias con valores de tabla en Common Language Runtime (CLR) para insertar y eliminar filas de las tablas de propiedades.  
   
     -   Escriba consultas para el acceso de SQL a las tablas de propiedades y para el acceso de XML a la columna XML de la tabla base, con combinaciones entre las tablas mediante el uso de su clave principal.  
   
-### <a name="example-create-a-property-table"></a>Ejemplo: Creación de una tabla de propiedades  
+### <a name="example-create-a-property-table"></a>Ejemplo: crear una tabla de propiedades  
  A modo de ilustración, suponga que desea promocionar el nombre de los autores. Los libros tienen uno o varios autores, por lo que sus nombres son una propiedad con varios valores. Cada nombre se almacena en una fila distinta de una tabla de propiedades. La clave principal de la tabla base se duplica en la tabla de propiedades para que se puedan volver a combinar más tarde.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Ejemplo: Creación de una función definida por el usuario para generar un conjunto de filas a partir de una instancia XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Ejemplo: crear una función definida por el usuario para generar un conjunto de filas a partir de una instancia XML  
  La siguiente función con valores de tabla, udf_XML2Table, acepta un valor de clave principal y una instancia XML. Recupera el nombre de todos los autores de los elementos <`book`> y devuelve un conjunto de filas de pares de nombres y claves principales.  
   
 ```  
@@ -107,7 +106,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>Ejemplo: Creación de desencadenadores para rellenar una tabla de propiedades  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Ejemplo: crear desencadenadores para rellenar una tabla de propiedades  
  El desencadenador insert inserta filas en la tabla de propiedades:  
   
 ```  
@@ -154,7 +153,7 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Ejemplo: Búsqueda de instancias XML cuyos autores tengan el mismo nombre  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Ejemplo: buscar instancias XML cuyos autores tengan el mismo nombre  
  La consulta se puede formar en la columna XML. Otra posibilidad es buscar en la tabla de propiedades el nombre "David" y combinarla de nuevo con la tabla base para devolver la instancia XML. Por ejemplo:  
   
 ```  
@@ -163,7 +162,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Ejemplo: Solución mediante la función de transmisión por secuencias con valores de tabla de CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Ejemplo: solución mediante la función de transmisión por secuencias con valores de tabla de CLR  
  Esta solución consta de los siguientes pasos:  
   
 1.  Defina una clase de CLR, SqlReaderBase, que implemente ISqlReader y genere una función de salida de transmisión por secuencias con valores de tabla aplicando una expresión de ruta de acceso en una instancia XML.  
@@ -172,7 +171,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Defina los desencadenadores insert, update y delete mediante la función definida por el usuario para mantener tablas de propiedades.  
   
- Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El `xml` tipo de datos se expone como una clase administrada SqlXml en ADO.NET y admite la **CreateReader()** método que devuelve un objeto XmlReader.  
+ Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El `xml` tipo de datos se expone como una clase administrada SQLXML en ADO.net y admite el método **CreateReader ()** que devuelve un XmlReader.  
   
 > [!NOTE]  
 >  El código de ejemplo de esta sección usa XPathDocument y XPathNavigator. De este modo, se fuerza la carga de todos los documentos XML en la memoria. Si utiliza código similar en su aplicación para procesar varios documentos XML grandes, este código no es escalable. En lugar de ello, mantenga asignaciones de memoria de pequeño tamaño y use interfaces de transmisión por secuencias siempre que sea posible. Para obtener más información sobre el rendimiento, vea [Arquitectura de integración CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md).  
@@ -253,7 +252,7 @@ as
   
  El desencadenador delete es idéntico a la versión no CLR. Sin embargo, el desencadenador update simplemente reemplaza la función udf_XML2Table() por CLR_udf_XML2Table().  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar XML en columnas calculadas](use-xml-in-computed-columns.md)  
   
   

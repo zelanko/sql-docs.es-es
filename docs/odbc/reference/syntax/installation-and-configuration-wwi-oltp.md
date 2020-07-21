@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetDriverConnectInfo function [ODBC]
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54e37940062427008e9b90f6cda4cec825a721ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 10336475e39598161126c13771ad822de0d5f7d8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915290"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298809"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>Función SQLSetDriverConnectInfo
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 3,81 de ODBC: ODBC  
+ Versión introducida: ODBC 3,81 Standards Compliance: ODBC  
   
  **Resumen**  
- **SQLSetDriverConnectInfo** se usa para establecer la cadena de conexión en el token de la información de conexión para una aplicación **SQLDriverConnect** llamar.  
+ **SQLSetDriverConnectInfo** se usa para establecer la cadena de conexión en el token de información de conexión para la llamada **SQLDriverConnect** de una aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,30 +38,30 @@ SQLRETURN SQLSetDriverConnectInfo(
   
 ## <a name="arguments"></a>Argumentos  
  *TokenHandle*  
- [Entrada] Identificador del token.  
+ Entradas Identificador de token.  
   
- *InConnectionString*  
- [Entrada] Una cadena de conexión completa (vea la sintaxis de "Comentarios" en [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), una cadena de conexión parcial o una cadena vacía.  
+ *Inconnectionstring*  
+ Entradas Una cadena de conexión completa (vea la sintaxis en "Comentarios" en [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), una cadena de conexión parcial o una cadena vacía.  
   
  *StringLength1*  
- [Entrada] Longitud de **InConnectionString*, en caracteres, si la cadena es Unicode o bytes si es de cadena ANSI o DBCS.  
+ Entradas Longitud de **inconnectionstring*, en caracteres si la cadena es Unicode, o bytes si la cadena es ANSI o DBCS.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Igual que [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) relacionados con cualquier error de validación de entrada, salvo que se va a usar el Administrador de controladores un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **controlar** de *hDbcInfoToken*.  
+ Igual que [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) relacionado con cualquier error de validación de entrada, salvo que el administrador de controladores usará una **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **identificador** de *hDbcInfoToken*.  
   
-## <a name="remarks"></a>Comentarios  
- Cada vez que un controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el Administrador de controladores devuelve el error a la aplicación (en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+## <a name="remarks"></a>Observaciones  
+ Cada vez que un controlador devuelve SQL_ERROR o SQL_INVALID_HANDLE, el administrador de controladores devuelve el error a la aplicación (en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el Administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devuelvan SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Cada vez que un controlador devuelve SQL_SUCCESS_WITH_INFO, el administrador de controladores obtendrá la información de diagnóstico de *hDbcInfoToken*y devolverá SQL_SUCCESS_WITH_INFO a la aplicación en [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) y [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admite la agrupación de conexiones dependientes del controlador debe implementar esta función.  
+ Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admita la agrupación de conexiones compatible con controladores debe implementar esta función.  
   
- Incluir sqlspi.h para el desarrollo de controladores ODBC.  
+ Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Agrupación de conexiones dependientes del controlador](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

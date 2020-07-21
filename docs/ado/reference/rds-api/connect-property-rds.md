@@ -11,22 +11,22 @@ apitype: COM
 helpviewer_keywords:
 - Connect property [ADO]
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f89e1097565c5b9841db69ac44e13c8d7138e64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964565"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755587"
 ---
 # <a name="connect-property-rds"></a>Propiedad Connect (RDS)
-Indica el nombre de la base de datos desde el que se ejecutan las operaciones de consulta y actualización.  
+Indica el nombre de la base de datos desde la que se ejecutan las operaciones de consulta y actualización.  
   
- Puede establecer el **Connect** propiedad en tiempo de diseño en el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) etiquetas de objeto del objeto, o en tiempo de ejecución de secuencias de comandos de código (por ejemplo, VBScript).  
+ Puede establecer la propiedad **Connect** en tiempo de diseño en [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Etiquetas de objeto del objeto DataControl, o en tiempo de ejecución en el código de scripting (por ejemplo, VBScript).  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,20 +38,20 @@ Run time: DataControl.Connect = "ConnectionString"
   
 #### <a name="parameters"></a>Parámetros  
  *ConnectionString*  
- Una cadena de conexión válida. Para obtener información general sobre las cadenas de conexión, vea el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad o la documentación del proveedor.  
+ Cadena de conexión válida. Para obtener más información general sobre las cadenas de conexión, vea la documentación de [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) o del proveedor.  
   
 > [!NOTE]
->  Si especifica MS Remote como el proveedor para el **RDS. DataControl** crearía un escenario de cuatro niveles. Escenarios de más de tres niveles no se han probado y no deberían ser necesario.  
+>  Especificar MS Remote como proveedor para **RDS. DataControl** crearía un escenario de cuatro niveles. Los escenarios de más de tres niveles no se han probado y no deben ser necesarios.  
   
  *DataControl*  
- Una variable de objeto que representa un **RDS. DataControl** objeto.  
+ Variable de objeto que representa un objeto **RDS. Objeto DataControl** .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo (VBScript) de la propiedad de conexión](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
- [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de la propiedad Connect (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
+ [Query (método) (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

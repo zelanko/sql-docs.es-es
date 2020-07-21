@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 831875218423bdb9106d7d84995af1e788da44db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068260"
 ---
 # <a name="optimize-sql-trace"></a>Optimizar el seguimiento de SQL
   Aunque la ejecución de Seguimiento de SQL supone un costo de rendimiento porque utiliza recursos del sistema para recopilar datos, dicho costo se puede reducir al mínimo de muchas maneras. Para minimizar el costo de rendimiento que provoca un seguimiento, intente las siguientes acciones:  
@@ -43,7 +42,7 @@ ms.locfileid: "63135544"
   
 -   Limite el número de eventos que se devuelven. Con [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] , puede limitar el número de eventos devueltos guardando el seguimiento en una tabla y configurando el número máximo de filas. Los resultados del seguimiento siguen mostrándose en la pantalla de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] tras alcanzar el número máximo de filas, pero se elimina el costo de registrar los resultados en una tabla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar un seguimiento](../sql-trace/filter-a-trace.md)  
   
   

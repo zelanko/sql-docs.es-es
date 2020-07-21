@@ -1,7 +1,8 @@
 ---
-title: 'Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación simple) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restauración por etapas: exclusiva para algunos grupos de archivos (modelo de recuperación simple)'
+description: En este ejemplo se muestra una restauración por etapas de solo algunos grupos de archivos en SQL Server de una base de datos con el modelo de recuperación simple.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7ad026c-5355-4308-9560-0dc843940d4f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f33dc11cb8cc08950bb4f957246727701e4f5d25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67d0cf696f149b0105dfe53c15a80fc81bced1f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138782"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737751"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model"></a>Ejemplo: Restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación simple)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema solo es relevante para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el modelo de recuperación simple que contienen un grupo de archivos de solo lectura.  
   

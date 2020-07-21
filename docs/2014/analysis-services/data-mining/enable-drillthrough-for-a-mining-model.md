@@ -1,5 +1,5 @@
 ---
-title: Habilitar obtención de detalles para un modelo de minería de datos | Microsoft Docs
+title: Habilitar la obtención de detalles para un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a6adfc389776f91132e527130f50f61c9783d9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084542"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522491"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Habilitar la obtención de detalles para un modelo de minería
   Si ha habilitado la obtención de detalles para un modelo de minería de datos, al examinar el modelo, puede recuperar información detallada sobre los casos que se usaron para crear el modelo. Para ver esta información, debe tener los permisos necesarios y se debe de haber procesado la estructura.  
@@ -27,7 +26,7 @@ ms.locfileid: "66084542"
   
 -   Los permisos de obtención de detalles en el modelo permiten obtener detalles del modelo, incluso si no se dispone de permisos en la estructura.  
   
--   Los permisos de obtención de detalles en la estructura ofrecen la posibilidad adicional de incluir columnas de la estructura en las consultas de obtención de detalles del modelo, mediante la función [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). También puede consultar el entrenamiento y casos de prueba de la estructura mediante el uso de SELECT... DESDE \<estructura >. Sintaxis de los casos.  
+-   Los permisos de obtención de detalles en la estructura ofrecen la posibilidad adicional de incluir columnas de la estructura en las consultas de obtención de detalles del modelo, mediante la función [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx). También puede consultar los casos de prueba y entrenamiento de la estructura mediante el uso de la instrucción SELECT... DESDE \<structure> . Sintaxis de CASEs.  
   
  **Almacenamiento en caché de casos de entrenamiento** : la obtención de detalles funciona recuperando información sobre los casos de entrenamiento de la estructura de minería de datos. Esta información se almacena en la caché cuando se procesa la estructura. Por consiguiente, si decide borrar todos los datos de la caché cambiando la propiedad <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> a `ClearAfterProcessing`, la obtención de detalles no funcionará.  
   
@@ -40,9 +39,9 @@ ms.locfileid: "66084542"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la pestaña **Modelos de minería de datos** del Diseñador de minería de datos, haga clic con el botón derecho en el nombre del modelo de minería de datos del que quiere habilitar la obtención de detalles y seleccione **Propiedades**.  
   
-2.  En las ventanas **Propiedades** , haga clic en **AllowDrillThrough**y seleccione **True**.  
+2.  En las ventanas **propiedades** , haga clic en **AllowDrillthrough**y seleccione **true**.  
   
-3.  En la pestaña **Modelos de minería de datos** , haga clic con el botón derecho en el modelo y seleccione **Procesar modelo**.  
+3.  En la pestaña **modelos de minería de datos** , haga clic con el botón secundario en el modelo y seleccione **procesar modelo**.  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>Para habilitar el almacenamiento en caché para una estructura de minería de datos  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66084542"
   
 4.  En el menú **Base de datos** , seleccione **Procesar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
   
   

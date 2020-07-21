@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c8462d5965685986bbb68565ccb24de0f18c645
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083870"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521761"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal combina cada posible estado del atributo de entrada con cada posible estado del atributo predecible y usa los datos de entrenamiento para calcular las probabilidades. Posteriormente, puede usar estas probabilidades para la clasificación o la regresión, así como para predecir un resultado del atributo de predicción basándose en los atributos de entrada.  
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal combina cada posible estado del atributo de entrada con cada posible estado del atributo de predicción y usa los datos de entrenamiento para calcular las probabilidades. Posteriormente, puede usar estas probabilidades para la clasificación o la regresión, así como para predecir un resultado del atributo de predicción basándose en los atributos de entrada.  
   
  Los modelos de minería de datos construidos con el algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] pueden contener varias redes, en función del número de columnas que se utilizan para la entrada y la predicción, o solo para la predicción. El número de redes que contiene un único modelo de minería de datos depende del número de estados que contienen las columnas de entrada y las columnas de predicción que utiliza el modelo.  
   
@@ -53,11 +52,11 @@ ms.locfileid: "66083870"
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
  El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] crea una red formada por hasta tres niveles de neuronas. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
   
- **Nivel de entrada:** Neuronas de entrada definen todos los valores de atributo de entrada para el modelo de minería de datos así como sus probabilidades.  
+ **Nivel de entrada:** La neuronas de entrada define todos los valores de atributos de entrada para el modelo de minería de datos y sus probabilidades.  
   
- **Capa oculta:** Las neuronas ocultas reciben entradas de las neuronas de entrada y proporcionan salidas a las neuronas de salida. El nivel oculto es donde se asignan pesos a las distintas probabilidades de las entradas. Un peso describe la relevancia o importancia de una entrada determinada para la neurona oculta. Cuanto mayor sea el peso asignado a una entrada, más importante será el valor de dicha entrada. Los pesos pueden ser negativos, lo que significa que la entrada puede impedir, en lugar de activar, un resultado concreto.  
+ **Nivel oculto:** Los neuronas ocultos reciben entradas de neuronas de entrada y proporcionan salidas a neuronas de salida. El nivel oculto es donde se asignan pesos a las distintas probabilidades de las entradas. Un peso describe la relevancia o importancia de una entrada determinada para la neurona oculta. Cuanto mayor sea el peso asignado a una entrada, más importante será el valor de dicha entrada. Los pesos pueden ser negativos, lo que significa que la entrada puede impedir, en lugar de activar, un resultado concreto.  
   
- **Nivel de salida:** Las neuronas de salida representan valores de atributo de predicción para el modelo de minería de datos.  
+ **Nivel de salida:** Los neuronass de salida representan valores de atributo de predicción para el modelo de minería de datos.  
   
  Para obtener una explicación detallada sobre cómo se construyen y puntúan los niveles de entrada, los niveles de salida y los niveles ocultos, vea [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66083870"
   
  Para obtener información general sobre cómo crear una consulta en un modelo de minería de datos, vea [Consultas de minería de datos](data-mining-queries.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   No admite la obtención de detalles ni las dimensiones de minería de datos. Esto se debe a que la estructura de los nodos del modelo de minería de datos no tiene por qué corresponder directamente a los datos subyacentes.  
   
@@ -88,9 +87,9 @@ ms.locfileid: "66083870"
   
 -   No admite la creación de dimensiones de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)   
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)  
   

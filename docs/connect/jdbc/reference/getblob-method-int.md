@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c93bec37060ebdb7850ff2b678d7a68fce35e3a0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953816"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921625"
 ---
 # <a name="getblob-method-int"></a>Método getBlob (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,17 +35,17 @@ public java.sql.Blob getBlob(int index)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Un valor **int** que indica el índice del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de BLOB.  
+ Un objeto Blob.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getBlob especifica este método getBlob en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

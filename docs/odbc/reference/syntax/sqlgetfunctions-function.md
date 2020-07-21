@@ -18,18 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC]
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: edb58ebff212e494b84aed12397def2876d3728d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15537b28ff2bae8a4fcd3e7be82426eb53aa83a8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345603"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285335"
 ---
 # <a name="sqlgetfunctions-function"></a>Función SQLGetFunctions
 **Conformidad**  
- Versión introducida: Compatibilidad con los estándares de ODBC 1,0: ISO 92  
+ Versión introducida: compatibilidad con estándares de ODBC 1,0: ISO 92  
   
  **Resumen**  
  **SQLGetFunctions** devuelve información acerca de si un controlador admite una función de ODBC concreta. Esta función se implementa en el administrador de controladores. también se puede implementar en los controladores. Si un controlador implementa **SQLGetFunctions**, el administrador de controladores llama a la función en el controlador. De lo contrario, ejecuta la propia función.  
@@ -54,11 +54,11 @@ SQLRETURN SQLGetFunctions(
  Para obtener una lista de los valores de **#define** que identifican funciones ODBC, vea las tablas de "Comentarios".  
   
  *SupportedPtr*  
- Genere  Si el valor de *FunctionId* identifica una sola función ODBC, *SupportedPtr* señala a un único valor SQLUSMALLINT que es SQL_TRUE si la función especificada es compatible con el controlador y SQL_FALSE si no se admite.  
+ Genere  Si el valor de *FunctionId* identifica una sola función ODBC, *SupportedPtr* señala a un único valor SQLUSMALLINT que se SQL_TRUE si el controlador admite la función especificada y SQL_FALSE si no se admite.  
   
- Si el valor de *FunctionId* es SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* apunta a una matriz de SQLSMALLINT con un número de elementos igual a SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. El administrador de controladores trata esta matriz como un mapa de bits de 4.000 bits que se puede usar para determinar si se admite una función ODBC 3 *. x* o anterior. Se llama a la macro SQL_FUNC_EXISTS para determinar la compatibilidad con la función. (Vea "Comentarios"). Una aplicación ODBC 3 *. x* puede llamar a **SQLGetFunctions** con SQL_API_ODBC3_ALL_FUNCTIONS en un controlador ODBC 3 *. x* u ODBC 2 *. x* .  
+ Si el valor de *FunctionId* es SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* apunta a una matriz de SQLSMALLINT con un número de elementos igual a SQL_API_ODBC3_ALL_FUNCTIONS_SIZE. El administrador de controladores trata esta matriz como un mapa de bits de 4.000 bits que se puede usar para determinar si se admite una función ODBC 3 *. x* o anterior. Se llama a la macro SQL_FUNC_EXISTS para determinar la compatibilidad de la función. (Vea "Comentarios"). Una aplicación ODBC 3 *. x* puede llamar a **SQLGetFunctions** con SQL_API_ODBC3_ALL_FUNCTIONS en un controlador ODBC 3 *. x* u ODBC 2 *. x* .  
   
- Si *FunctionId* es SQL_API_ALL_FUNCTIONS, *SupportedPtr* apunta a una matriz SQLUSMALLINT de elementos 100. La matriz se indiza mediante **#define** valores utilizados por *FunctionId* para identificar cada función ODBC. algunos elementos de la matriz no se usan y se reservan para uso futuro. Un elemento es SQL_TRUE si identifica una función ODBC 2 *. x* o anterior admitida por el controlador. Es SQL_FALSE si identifica una función ODBC no admitida por el controlador o no identifica una función ODBC.  
+ Si *FunctionId* es SQL_API_ALL_FUNCTIONS, *SupportedPtr* apunta a una matriz SQLUSMALLINT de 100 elementos. La matriz se indiza mediante **#define** valores utilizados por *FunctionId* para identificar cada función ODBC. algunos elementos de la matriz no se usan y se reservan para uso futuro. Un elemento se SQL_TRUE si identifica una función ODBC 2 *. x* o anterior admitida por el controlador. Es SQL_FALSE si identifica una función ODBC no admitida por el controlador o no identifica una función ODBC.  
   
  Las matrices devueltas en **SupportedPtr* usan una indización de base cero.  
   
@@ -72,13 +72,13 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY010|Error de secuencia de función|Se llamó a (DM) **SQLGetFunctions** antes de **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**.<br /><br /> Se llamó a (DM) **SQLBrowseConnect** para *ConnectionHandle* y devolvió SQL_NEED_DATA. Se llamó a esta función antes de que **SQLBrowseConnect** devolviera SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *ConnectionHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
+|HY010|Error de secuencia de función|Se llamó a (DM) **SQLGetFunctions** antes de **SQLConnect**, **SQLBrowseConnect**o **SQLDriverConnect**.<br /><br /> Se llamó a (DM) **SQLBrowseConnect** para *ConnectionHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de que **SQLBrowseConnect** devolviera SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *ConnectionHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY095|Tipo de función fuera del intervalo|(DM) se especificó un valor de *FunctionId* no válido.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
   
 ## <a name="comments"></a>Comentarios  
  **SQLGetFunctions** siempre devuelve que se admiten **SQLGetFunctions**, **SQLDataSources**y **SQLDrivers** . Esto se debe a que estas funciones se implementan en el administrador de controladores. El administrador de controladores asignará una función ANSI a la función Unicode correspondiente si la función Unicode existe y asignará una función Unicode a la función ANSI correspondiente si existe la función ANSI. Para obtener información sobre cómo usan las aplicaciones **SQLGetFunctions**, consulte [niveles de cumplimiento](../../../odbc/reference/develop-app/interface-conformance-levels.md)de la interfaz.  
@@ -129,7 +129,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] al trabajar con un controlador ODBC 2 *. x* , **SQLBulkOperations** se devolverá como compatible solo si se cumplen las dos condiciones siguientes: el controlador ODBC 2 *. x* admite **SQLSetPos**y el tipo de información SQL_POS_OPERATIONS devuelve bit SQL_POS_ADD establecido.  
+ [1] al trabajar con un controlador ODBC 2 *. x* , **SQLBulkOperations** se devolverá como compatible solo si se cumplen las dos condiciones siguientes: el controlador ODBC 2 *. x* admite **SQLSetPos**y el tipo de información SQL_POS_OPERATIONS devuelve el bit de SQL_POS_ADD como establecido.  
   
  A continuación se muestra una lista de valores válidos para *FunctionId* para las funciones introducidas en ODBC 3,8 o posterior:  
   
@@ -139,11 +139,11 @@ SQLRETURN SQLGetFunctions(
   
  [2] **SQLCancelHandle** se devolverá como compatible solo si el controlador admite **SQLCancel** y **SQLCancelHandle**. Si se admite **SQLCancel** pero **SQLCancelHandle** no, la aplicación puede seguir llamando a **SQLCancelHandle** en un identificador de instrucción, porque se asignará a **SQLCancel**.  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
- La macro SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) se usa para determinar la compatibilidad con las funciones ODBC 3 *. x* o anteriores después de haber llamado a **SQLGetFunctions** con un argumento *FunctionID* de SQL_API_ODBC3_ALL_ Dia. La aplicación llama a SQL_FUNC_EXISTS con el argumento *SupportedPtr* establecido en *SupportedPtr* pasado en *SQLGetFunctions*y con el argumento *FunctionID* establecido en el **#define** para la función. SQL_FUNC_EXISTS devuelve SQL_TRUE si se admite la función y SQL_FALSE en caso contrario.  
+## <a name="sql_func_exists-macro"></a>SQL_FUNC_EXISTS macro  
+ La macro SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) se usa para determinar la compatibilidad con las funciones ODBC 3 *. x* o anteriores después de llamar a **SQLGetFunctions** con un argumento *FunctionID* de SQL_API_ODBC3_ALL_FUNCTIONS. La aplicación llama a SQL_FUNC_EXISTS con el argumento *SupportedPtr* establecido en *SupportedPtr* pasado en *SQLGetFunctions*y con el argumento *FunctionID* establecido en el **#define** de la función. SQL_FUNC_EXISTS devuelve SQL_TRUE si se admite la función y SQL_FALSE en caso contrario.  
   
 > [!NOTE]
->  Cuando se trabaja con un controlador ODBC 2 *. x* , el administrador de controladores ODBC 3 *. x* devolverá SQL_TRUE para **SQLAllocHandle** y **SQLFreeHandle** porque **SQLAllocHandle** está asignado a **SQLAllocEnv**, **SQLAllocConnect** , o **SQLAllocStmt**, y dado que **SQLFreeHandle** está asignado a **SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt**. No se admite **SQLAllocHandle** o **SQLFreeHandle** con un argumento *HandleType* de SQL_HANDLE_DESC, aunque se devuelve SQL_TRUE para las funciones, ya que no hay ninguna función ODBC 2 *. x* a la que asignar en este caso.  
+>  Cuando se trabaja con un controlador ODBC 2 *. x* , el administrador de controladores ODBC 3 *. x* devolverá SQL_TRUE para **SQLAllocHandle** y **SQLFreeHandle** porque **SQLAllocHandle** está asignado a **SQLAllocEnv**, **SQLAllocConnect**o **SQLAllocStmt**, y porque **SQLFreeHandle** está asignado a **SQLFreeEnv**, **SQLFreeConnect**o **SQLFreeStmt**. No obstante, no se admite **SQLAllocHandle** o **SQLFreeHandle** con un argumento *HandleType* de SQL_HANDLE_DESC, aunque se devuelvan SQL_TRUE para las funciones, ya que no hay ninguna función ODBC 2 *. x* a la que asignar en este caso.  
   
 ## <a name="code-example"></a>Ejemplo de código  
  Los tres ejemplos siguientes muestran cómo una aplicación usa **SQLGetFunctions** para determinar si un controlador admite **SQLTables**, **SQLColumns**y **SQLStatistics**. Si el controlador no admite estas funciones, la aplicación se desconecta del controlador. En el primer ejemplo se llama a **SQLGetFunctions** una vez para cada función.  
@@ -217,12 +217,12 @@ SQLDisconnect(hdbc);
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
 |Devolver el valor de un atributo de conexión|[Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Devolver información acerca de un controlador o un origen de datos|[Función SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
 |Devolver el valor de un atributo de instrucción|[Función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

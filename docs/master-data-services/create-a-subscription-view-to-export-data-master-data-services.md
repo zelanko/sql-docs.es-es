@@ -1,5 +1,6 @@
 ---
-title: Crear una vista de suscripciones para exportar datos (Master Data Services) | Microsoft Docs
+title: Crear una vista de suscripciones para exportar datos
+description: Obtenga información sobre cómo crear una vista de suscripciones para exportar Master Data Services datos a sistemas de suscripción, lo que crea una vista de los datos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896917"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812773"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Crear una vista de suscripciones para exportar datos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cree una vista de suscripciones para exportar datos de Master Data Services a sistemas de suscripción. Va a crear una vista de los datos en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -31,7 +32,7 @@ ms.locfileid: "67896917"
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>Para crear y editar una vista de suscripciones  
   
@@ -60,17 +61,17 @@ ms.locfileid: "67896917"
   
 10. Si elige **Niveles explícitos** o **Niveles derivados** en la lista **Formato** , escriba el número de niveles en la jerarquía que se incluirán en la vista.  
   
-11. Haga clic en **Guardar**.  
+11. Haga clic en **Save**(Guardar).  
   
 ## <a name="view-information"></a>Información sobre las vistas  
  Por cada vista creada, se agrega a la cuadrícula una fila con diez columnas. En la siguiente tabla se describen las columnas.  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
-|Status|El estado de la vista.<br /><br /> Al hacer clic en **Guardar**, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que se está actualizando la vista.<br /><br /> Si hay errores al crear o editar una vista, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
-|NOMBRE|El nombre de la vista de suscripciones.|  
+|Estado|El estado de la vista.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que la vista se está actualizando.<br /><br /> Si hay errores al crear o editar una vista, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
+|Nombre|El nombre de la vista de suscripciones.|  
 |Modelo|Nombre del modelo.|  
-|`Version`|El nombre de la versión.|  
+|Version|El nombre de la versión.|  
 |Marca de versión|El nombre de la marca de la versión.|  
 |Jerarquía derivada|El nombre de la jerarquía derivada.|  
 |Entidad|El nombre de la entidad.|  
@@ -80,16 +81,16 @@ ms.locfileid: "67896917"
   
  Cuando se hace clic en una vista, se muestra la siguiente información.  
   
--   **Creado por**: nombre del usuario que ha creado la vista.  
+-   **Creado por:** nombre del usuario que creó la vista.  
   
--   **El**: fecha y hora en que se ha creado la vista.  
+-   **El:** fecha y hora en que se creó la vista.  
   
--   **Actualizada por**: nombre del usuario que ha actualizado la vista por última vez.  
+-   **Actualizado por:** nombre del usuario que actualizó la vista por última vez.  
   
--   **El**: fecha y hora en que se ha actualizado la vista por última vez.  
+-   **El:** fecha y hora en que se actualizó la vista por última vez.  
   
-## <a name="see-also"></a>Vea también  
- [Información general: exportación de datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general: exportar datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Eliminar una vista de suscripciones &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   

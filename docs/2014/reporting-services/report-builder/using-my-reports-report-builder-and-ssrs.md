@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107580"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usar Mis informes (Generador de informes y SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66107580"
 ## <a name="ways-to-use-my-reports"></a>Modos de empleo de Mis informes  
  La carpeta Mis informes está vacía hasta que se agregan informes, carpetas u otros elementos. A continuación se indican algunos métodos para agregar contenido a Mis informes.  
   
--   Crear un informe vinculado personal y almacenarlo en Mis informes. No todos los informes permiten la vinculación. Para obtener más información, vea [Crear un informe vinculado](../reports/create-a-linked-report.md).  
+-   Crear un informe vinculado personal y almacenarlo en Mis informes. No todos los informes permiten la vinculación. Para obtener más información, consulte [Crear un informe vinculado](../reports/create-a-linked-report.md).  
   
 -   Cargar un archivo de definición de informe (.rdl), un archivo de modelo de informe (.smdl) u otros archivos del sistema de archivos. Puede cargarse cualquier archivo, pero el servidor de informes solamente procesa los archivos con la extensión .rdl o .smdl. Para más información, vea Definiciones de informe en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) de los Libros en pantalla de SQL Server y [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66107580"
 ## <a name="searching-my-reports"></a>Realizar búsquedas en Mis informes  
  Al realizar búsquedas en una base de datos del servidor de informes, el contenido de la carpeta Mis informes también se incluye en la búsqueda y se excluye el de las carpetas Mis informes de los otros usuarios. Los resultados de la búsqueda solo muestran los informes a los que se tiene acceso.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

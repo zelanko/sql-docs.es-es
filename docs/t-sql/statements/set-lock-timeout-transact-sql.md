@@ -25,15 +25,15 @@ ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fde68ce7bea6d8a97d84cc0b1e7a561f82550b6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928909"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999373"
 ---
-# <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Especifica el número de milisegundos que una instrucción espera a que se libere un bloqueo.  
   
@@ -41,17 +41,17 @@ ms.locfileid: "67928909"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 SET LOCK_TIMEOUT timeout_period  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *timeout_period*  
- Es el número de milisegundos que transcurrirán antes de que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelva un error de bloqueo. El valor -1 (predeterminado) indica que no hay límite de espera (es decir que se espera indefinidamente).  
+ Es el número de milisegundos que pasarán antes de que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelva un error de bloqueo. El valor -1 (predeterminado) indica que no hay límite de espera (es decir que se espera indefinidamente).  
   
  Cuando se espera un bloqueo durante más tiempo que el indicado, se devuelve un error. El valor 0 significa no esperar y devolver un mensaje en cuanto se encuentre un bloqueo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al principio de una conexión, este valor es -1. Después de cambiarlo, el nuevo valor permanece en vigor para el resto de la conexión.  
   
  La opción SET LOCK_TIMEOUT se establece en tiempo de ejecución, no en tiempo de análisis.  
@@ -65,7 +65,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Establecer el tiempo de expiración de bloqueo en 1800 milisegundos  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Establecer el tiempo de espera de bloqueo en 1800 milisegundos  
  En el ejemplo siguiente se establece el período de tiempo de espera de bloqueo en `1800` milisegundos.  
   
 ```sql  
@@ -73,7 +73,7 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Establecer el tiempo de espera de bloqueo para esperar indefinidamente a se libere un bloqueo  
  En este ejemplo se establece el tiempo de espera de bloqueo para que espere indefinidamente y no expire nunca. Este es el comportamiento predeterminado que ya está establecido al principio de cada conexión.  

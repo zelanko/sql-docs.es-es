@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d977fe6650ea6d2f28b1762cfb44aaa89164d772
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbed5b2a290c5820417086e1a6de7dd6b3116ec8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087371"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749406"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>Cuadro de diálogo Propiedades de faceta, página Condiciones dependientes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use este cuadro de diálogo para mostrar una lista de las condiciones que hacen referencia actualmente a esta faceta de administración basada en directivas.  
   
 ## <a name="options"></a>Opciones  

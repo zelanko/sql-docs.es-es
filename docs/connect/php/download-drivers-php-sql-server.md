@@ -1,52 +1,55 @@
 ---
 title: Descarga de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+description: Descargue controladores de Microsoft para PHP para SQL Server para desarrollar aplicaciones PHP que se conectan a SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 05/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015089"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487948"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Descargar los controladores de Microsoft para PHP para SQL Server
 
-[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en instancias de Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.
 
-## <a name="windows"></a>Windows
+En Linux y macOS, los controladores para PHP se descargan e instalan fácilmente con PECL. Consulte el [tutorial de instalación en Linux y macOS](installation-tutorial-linux-mac.md) para más detalles. Si necesita descargar e instalar manualmente los controladores para PHP en Linux y macOS, los paquetes de esas plataformas se pueden encontrar en las etiquetas de la versión de GitHub.
 
-Las siguientes versiones de los controladores para PHP en Windows están disponibles para su descarga:
+## <a name="download"></a>Descargar
 
-- [Controladores de Microsoft 5.6 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
-- [Controladores de Microsoft 5.3 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
-- [Controladores de Microsoft 5.2 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
-- [Controladores de Microsoft 4.3 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
-- [Controladores de Microsoft 4.0, 3.2, 3.1 y 3.0 para PHP para SQL Server](https://www.microsoft.com/download/details.aspx?id=20098)
+Los controladores de Microsoft 5.8 para PHP para SQL Server son la versión de disponibilidad general (GA) más reciente.
 
-## <a name="linux-and-macos"></a>Linux y macOS
+**[![Descargar](../../ssms/media/download-icon.png) Descargar los controladores de Microsoft para PHP para SQL Server (Windows)](https://go.microsoft.com/fwlink/?linkid=2120362)**  
+[Etiqueta de versión de GitHub v 5.8.0 (los paquetes de Linux y macOS están disponibles aquí)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
 
-Los controladores para PHP se descargan e instalan fácilmente con PECL en Linux y macOS. Para más información, consulte el [tutorial de instalación de Linux y MacOS](installation-tutorial-linux-mac.md) . Si necesita instalar manualmente los controladores para PHP en Linux y macOS, puede descargar las siguientes versiones:
+### <a name="version-information"></a>Información de la versión
 
-- [Controladores de Microsoft 5.6 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
-- [Controladores de Microsoft 5.3 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
-- [Controladores de Microsoft 5.2 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
-- [Controladores de Microsoft 4.3 para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
+- Número de versión: 5.8.0
+- Fecha de publicación: 31 de enero de 2019
 
-## <a name="see-also"></a>Vea también
+Si tiene algún comentario, la mejor manera de ponerse en contacto con el equipo de los controladores de Microsoft para PHP para SQL Server es presentar un problema en el [repositorio de GitHub](https://github.com/Microsoft/msphpsql/issues).
 
-[Introducción a los controladores de Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)
+## <a name="release-notes"></a>Notas de la versión
 
-[Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](system-requirements-for-the-php-sql-driver.md)
+Para más información sobre lo que ha cambiado en esta versión, consulte las [notas de la versión](release-notes-php-sql-driver.md).
 
-[Guía de programación para los controladores de Microsoft para PHP para SQL Server](programming-guide-for-php-sql-driver.md)
+## <a name="previous-releases"></a>Versiones anteriores
 
-[Referencia de API del controlador SQLSRV](sqlsrv-driver-api-reference.md)
+Esta página es solo para la versión más reciente de los controladores de Microsoft para PHP. Para descargar versiones anteriores, consulte [Notas de la versión de los controladores de Microsoft para PHP para SQL Server](release-notes-php-sql-driver.md#previous-releases).
 
-[Referencia de la API del controlador PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)
+## <a name="see-also"></a>Consulte también
+
+[Introducción a los controladores de Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)  
+[Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](system-requirements-for-the-php-sql-driver.md)  
+[Matriz de compatibilidad de los controladores de Microsoft para PHP para SQL Server](microsoft-php-drivers-for-sql-server-support-matrix.md)  
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](programming-guide-for-php-sql-driver.md)  
+[Referencia de API del controlador SQLSRV](sqlsrv-driver-api-reference.md)  
+[Referencia de la API del controlador PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  

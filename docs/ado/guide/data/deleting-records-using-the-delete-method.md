@@ -1,5 +1,5 @@
 ---
-title: Eliminación de registros mediante el método Delete | Microsoft Docs
+title: Eliminar registros mediante el método Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8da01b9c92aeec9c01527370e19c8edfb751da9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763626"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminar registros mediante el método Delete
-Mediante el **eliminar** método marca el registro actual o un grupo de registros en un **Recordset** objeto para su eliminación. Si el **Recordset** objeto no permitir eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen en la base de datos inmediatamente. Si un registro no puede eliminarse correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de llamar a **Update.** Esto significa que se debe cancelar la actualización mediante [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de abandonar el registro actual (por ejemplo, mediante [cerrar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+El uso del método **Delete** marca el registro actual o un grupo de registros en un objeto de **conjunto de registros** para su eliminación. Si el objeto de **conjunto de registros** no permite la eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen inmediatamente en la base de datos. Si un registro no se puede eliminar correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de la llamada a **Update.** Esto significa que debe cancelar la actualización mediante [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de salir del registro actual (por ejemplo, con [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
- Si está en modo de actualización por lotes, los registros se marcan para su eliminación de la memoria caché y la eliminación real se produce cuando se llama a la **UpdateBatch** método. (Para ver los registros eliminados, establezca la **filtro** propiedad **adFilterAffectedRecords** después **eliminar** se denomina.)  
+ Si está en modo de actualización por lotes, los registros se marcan para su eliminación de la memoria caché y la eliminación real se produce cuando se llama al método **UpdateBatch** . (Para ver los registros eliminados, establezca la propiedad **Filter** en **adFilterAffectedRecords** después de llamar a **Delete** ).  
   
- Intentar recuperar los valores de campo del registro eliminado, genera un error. Después de eliminar el registro actual, el registro eliminado permanece actual hasta que se mueva a otro registro. Una vez que se mueva fuera del registro eliminado, ya no es accesible.  
+ Al intentar recuperar valores de campo del registro eliminado, se genera un error. Después de eliminar el registro actual, el registro eliminado permanece activo hasta que se mueve a otro registro. Una vez que salga del registro eliminado, ya no estará accesible.  
   
- Si se anida eliminaciones en una transacción, puede recuperar los registros eliminados mediante el **RollbackTrans** método. Si está en modo de actualización por lotes, puede cancelar una eliminación pendiente o un grupo de eliminaciones pendientes mediante el **CancelBatch** método.  
+ Si anida eliminaciones en una transacción, puede recuperar los registros eliminados mediante el método **RollbackTrans** . Si está en modo de actualización por lotes, puede cancelar una eliminación pendiente o un grupo de eliminaciones pendientes mediante el método **CancelBatch** .  
   
- Si se produce un error en el intento de eliminar registros debido a un conflicto con los datos subyacentes (por ejemplo, otro usuario ya se ha eliminado un registro), el proveedor devuelve advertencias a la **errores** colección pero no detiene el programa ejecución. Se produce un error de tiempo de ejecución solo si hay conflictos en todos los registros solicitados.  
+ Si se produce un error al intentar eliminar registros debido a un conflicto con los datos subyacentes (por ejemplo, otro usuario ya ha eliminado un registro), el proveedor devuelve advertencias a la colección de **errores** , pero no detiene la ejecución del programa. Solo se produce un error en tiempo de ejecución si hay conflictos en todos los registros solicitados.  
   
- Si el **tabla única** se establece la propiedad dinámica y la **Recordset** es el resultado de ejecutar una operación JOIN en varias tablas, el **eliminar** método eliminará solo filas desde la tabla mencionada en el **Unique Table** propiedad.  
+ Si se establece la propiedad dinámica de **tabla única** y el **conjunto de registros** es el resultado de ejecutar una operación de combinación en varias tablas, el método **Delete** solo eliminará las filas de la tabla mencionada en la propiedad de **tabla única** .  
   
- El **eliminar** método toma un argumento opcional que le permite especificar qué registros se ven afectados por la **eliminar** operación. Los únicos valores válidos para este argumento son cualquiera de los siguiente ADO **AffectEnum** constantes enumeradas:  
+ El método **Delete** toma un argumento opcional que le permite especificar qué registros se ven afectados por la operación de **eliminación** . Los únicos valores válidos para este argumento son cualquiera de las siguientes constantes enumeradas de **AffectEnum** de ADO:  
   
--   **adAffectCurrent** afecta a solo el registro actual.  
+-   **adAffectCurrent** Afecta solo al registro actual.  
   
--   **adAffectGroup** afecta a solo los registros que cumplen actual **filtro** configuración de la propiedad. El **filtro** propiedad debe establecerse en un **FilterGroupEnum** valor o una matriz de **marcadores** para usar esta opción.  
+-   **adAffectGroup** Afecta únicamente a los registros que cumplen la configuración de propiedad de **filtro** actual. La propiedad **Filter** debe establecerse en un valor **FilterGroupEnum** o en una matriz de **marcadores** para usar esta opción.  
   
- El código siguiente muestra un ejemplo de especificación **adAffectGroup** al llamar a la **eliminar** método. Este ejemplo agrega algunos registros en el ejemplo **Recordset** y actualiza la base de datos. A continuación, filtra el **Recordset** utilizando el **adFilterAffectedRecords** constante enumerada de filtro, que deja sólo los registros recién agregados visibles en el **conjunto de registros.** Por último, llama a la **eliminar** método y especifica que todos los registros que cumplen actual **filtro** se debe eliminar la configuración de la propiedad (los nuevos registros).  
+ En el código siguiente se muestra un ejemplo de cómo especificar **adAffectGroup** al llamar al método **Delete** . Este ejemplo agrega algunos registros al conjunto de **registros** de ejemplo y actualiza la base de datos. A continuación, filtra el **conjunto de registros** mediante la constante enumerada del filtro **adFilterAffectedRecords** , que deja solo los registros recién agregados visibles en el **conjunto de registros.** Finalmente, llama al método **Delete** y especifica que se deben eliminar todos los registros que cumplen la configuración actual de la propiedad de **filtro** (los nuevos registros).  
   
 ```  
 'BeginDeleteGroup  

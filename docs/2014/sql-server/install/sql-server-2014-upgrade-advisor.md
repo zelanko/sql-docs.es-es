@@ -1,5 +1,5 @@
 ---
-title: Asesor SQL Server 2014 | Microsoft Docs
+title: Asesor de actualizaciones de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 041637f92ff64fc66f7525a7bcd50501acb31d86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065165"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
   El Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analiza la configuración de componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados y, a continuación, genera un informe de problemas que debe resolver para asegurar una actualización correcta.  
@@ -28,7 +27,7 @@ ms.locfileid: "66092050"
 |[Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|Proporciona información general acerca de las funcionalidades del Asesor de actualizaciones, información acerca de cómo instalar y utilizar el Asesor de actualizaciones, además de cómo utilizar los informes del Asesor de actualizaciones.|  
 |[Resolver problemas de la actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)|Proporciona descripciones y acciones correctoras que se pueden llevar a cabo en relación con los problemas detectables e indetectables concernientes a una actualización.|  
   
-## <a name="see-also"></a>Vea también  
- [Actualización a SQL Server 2014 mediante el Asistente para instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+## <a name="see-also"></a>Consulte también  
+ [Actualice a SQL Server 2014 mediante el Asistente para la instalación &#40;la instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

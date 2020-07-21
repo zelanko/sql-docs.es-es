@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a344d490ee4941ea233de28008a1cb990938274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705359"
 ---
 # <a name="spatial-types---geography"></a>Tipos espaciales: geography
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  El tipo de datos de geografía espacial, **geography**, se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo representa los datos en un sistema de coordenadas de tierra redonda. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  El tipo de datos de geografía espacial, **geography**, se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo representa los datos en un sistema de coordenadas de tierra redonda. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** almacena datos elipsoidales (globo), como coordenadas de latitud y longitud de GPS.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un conjunto de métodos para el tipo de datos espacial **geography**. Se incluyen los métodos de **geography** definidos por el estándar Open Geospatial Consortium (OGC) y un conjunto de extensiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] a dicho estándar.  
  
@@ -42,7 +42,7 @@ ms.locfileid: "68042520"
 ### <a name="a-showing-how-to-add-and-query-geography-data"></a>A. Mostrar cómo agregar y consultar datos geography  
  En los ejemplos siguientes se muestra cómo agregar y consultar datos geography. En el primer ejemplo se crea una tabla con una columna de identidad y una columna de tipo `geography`, `GeogCol1`. Una tercera columna representa la columna de tipo `geography` en su representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) y utiliza el método `STAsText()` . A continuación se insertan dos filas: una que contiene una instancia de `LineString` de `geography`y otra que contiene una instancia de `Polygon` .  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -64,7 +64,7 @@ GO
 ### <a name="b-returning-the-intersection-of-two-geography-instances"></a>B. Devolver la intersección de dos instancias de geography  
  En el ejemplo siguiente se utiliza el método `STIntersection()` para devolver los puntos de intersección de las dos instancias de `geography` insertadas previamente.  
   
-```  
+```sql  
 DECLARE @geog1 geography;  
 DECLARE @geog2 geography;  
 DECLARE @result geography;  
@@ -78,7 +78,7 @@ SELECT @result.STAsText();
 ### <a name="c-using-geography-in-a-computed-column"></a>C. Usar geography en una columna calculada  
  En el ejemplo siguiente se crea una tabla con una columna calculada persistente mediante un tipo **geography**.  
   
-```  
+```sql  
 IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
     DROP TABLE dbo.SpatialTable;  
 GO  
@@ -88,7 +88,7 @@ CREATE TABLE SpatialTable
     locationId int IDENTITY(1,1),  
     location geography,  
     deliveryArea as location.STBuffer(10) persisted  
-)  
+);  
 ```  
   
 ## <a name="see-also"></a>Consulte también  

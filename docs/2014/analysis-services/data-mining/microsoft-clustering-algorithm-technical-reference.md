@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084029"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522141"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
   En esta sección se explica la implementación del algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , incluidos los parámetros que se pueden usar para controlar el comportamiento de los modelos de agrupación en clústeres. Además, incluye instrucciones sobre cómo mejorar el rendimiento durante la creación y el procesamiento de modelos de agrupación en clústeres.  
@@ -65,7 +64,7 @@ ms.locfileid: "66084029"
   
  Para consultar un informe técnico donde se describe la implementación de EM en el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Scaling EM (Expectation Maximization) Clustering to Large Databases](https://go.microsoft.com/fwlink/?LinkId=45964)(Escalado de agrupación en clústeres de EM [Expectation Maximization] en bases de datos de gran tamaño).  
   
-### <a name="k-means-clustering"></a>Agrupación en clústeres mediana-K  
+### <a name="k-means-clustering"></a>Agrupación en clústeres K-Means  
  La agrupación en clústeres mediana-K es un método muy conocido para asignar la pertenencia al clúster que consiste en minimizar las diferencias entre los elementos de un clúster al tiempo que se maximiza la distancia entre los clústeres. El término “mediana” en mediana-K hace referencia al *centroide* del clúster, que es un punto de datos que se elige arbitrariamente y que se restringe de forma iterativa hasta que representa la media real de todos los puntos de datos del clúster. La "K" hace referencia a un número arbitrario de puntos que se usan para inicializar el proceso de agrupación en clústeres. El algoritmo mediana-K calcula las distancias euclidianas cuadradas entre los registros de datos de un clúster y el vector que representa la media de clústeres, y converge en un conjunto final de K clústeres cuando la suma alcanza su valor mínimo.  
   
  El algoritmo mediana-K asigna cada punto de datos a un solo clúster y no permite la incertidumbre en la pertenencia. En un clúster, la pertenencia se expresa como una distancia desde el centroide.  
@@ -94,7 +93,7 @@ ms.locfileid: "66084029"
  CLUSTERING_METHOD  
  Especifica el método de agrupación en clústeres que va a usar el algoritmo. Los métodos de agrupación en clústeres disponibles son:  
   
-|Id.|Método|  
+|ID|Método|  
 |--------|------------|  
 |1|EM escalable|  
 |2|EM no escalable|  
@@ -161,7 +160,7 @@ ms.locfileid: "66084029"
   
 |Marca de modelado|Descripción|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La columna se tratará como si tuviera dos estados posibles: Ausente y existente. Un valor NULL es un valor ausente.<br /><br /> Se aplica a la columna del modelo de minería de datos.|  
+|MODEL_EXISTENCE_ONLY|La columna se tratará como si tuviera dos estados posibles: ausente y existente. Un valor NULL es un valor ausente.<br /><br /> Se aplica a la columna del modelo de minería de datos.|  
 |NOT NULL|La columna no puede contener valores NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a la columna de la estructura de minería de datos.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -170,7 +169,7 @@ ms.locfileid: "66084029"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -178,7 +177,7 @@ ms.locfileid: "66084029"
 > [!NOTE]  
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  

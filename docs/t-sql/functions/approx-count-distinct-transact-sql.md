@@ -1,7 +1,7 @@
 ---
 title: APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/17/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,22 +14,20 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a506597e3f702f36996da687fe0cf4058fc2ca
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019790"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007935"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
-[!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
+
+[!INCLUDE [sqlserver2019-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
 Esta función devuelve el número aproximado de valores no nulos únicos de un grupo. 
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-
-> [!NOTE]
-> APPROX_COUNT_DISTINCT es una característica en versión preliminar pública.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +44,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 ## <a name="return-types"></a>Tipos de valores devueltos
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `APPROX_COUNT_DISTINCT( expression )` evalúa una expresión para cada fila de un grupo y devuelve el número aproximado de valores no nulos únicos de un grupo. Esta función está diseñada para proporcionar agregaciones de conjuntos de datos de gran tamaño en los que la capacidad de respuesta resulta más fundamental que la precisión absoluta.  
 
 `APPROX_COUNT_DISTINCT` está diseñado para su uso en escenarios de macrodatos y está optimizado para las condiciones siguientes:
@@ -58,11 +56,11 @@ La implementación de la función garantiza una tasa de error de hasta 2 % dentr
 `APPROX_COUNT_DISTINCT` requiere menos memoria que una operación COUNT DISTINCT exhaustiva.  Dada la menor superficie de memoria, es menos probable que `APPROX_COUNT_DISTINCT` desborde memoria en el disco en comparación con una operación COUNT DISTINCT precisa. Para más información sobre el algoritmo usado para conseguir esto, consulte [HyperLogLog](https://en.wikipedia.org/wiki/HyperLogLog).
 
 > [!NOTE]
-> Con cadenas que distinguen la intercalación, la versión preliminar pública de APPROX_COUNT_DISTINCT usa una combinación binaria y proporciona resultados que se habrían generado en presencia de intercalaciones BIN y no BIN2. 
+> Con cadenas que distinguen la intercalación, APPROX_COUNT_DISTINCT usa una combinación binaria y proporciona resultados que se habrían generado en presencia de intercalaciones BIN y no BIN2. 
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-approxcountdistinct"></a>A. Uso de APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>A. Uso de APPROX_COUNT_DISTINCT 
 Este ejemplo devuelve el número aproximado de claves de pedido diferentes desde la tabla de pedidos.
   
 ```sql
@@ -78,7 +76,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. Uso de APPROX_COUNT_DISTINCT con GROUP BY 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. Uso de APPROX_COUNT_DISTINCT con GROUP BY 
 Este ejemplo devuelve el número aproximado de claves de pedido diferentes según el estado del pedido desde la tabla de pedidos. 
   
 ```sql
@@ -98,6 +96,6 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

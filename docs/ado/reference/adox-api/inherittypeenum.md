@@ -13,25 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - InheritTypeEnum enumeration [ADOX]
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f420d7d49ad24188f5210001af1209427478f3f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965952"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746679"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-Especifica cómo heredan los permisos establecidos con los objetos [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
+Especifica cómo los objetos heredarán los permisos establecidos con [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adInheritBoth**|3|Objetos y otros contenedores contenidos en el objeto principal heredan la entrada.|  
-|**adInheritContainers**|2|Otros contenedores que se encuentran en el objeto principal heredan la entrada.|  
-|**adInheritNone**|0|Predeterminado: Se produce ninguna herencia.|  
-|**adInheritNoPropagate**|4|El **marcas adInheritObjects** y **adInheritContainers** marcas no se propagan a una entrada heredada.|  
-|**adInheritObjects**|1|Objetos que no son contenedores en el contenedor heredan los permisos.|  
+|**adInheritBoth**|3|Los dos objetos y otros contenedores contenidos en el objeto principal heredan la entrada.|  
+|**adInheritContainers**|2|Otros contenedores contenidos en el objeto principal heredan la entrada.|  
+|**adInheritNone**|0|Predeterminada. No se produce herencia.|  
+|**adInheritNoPropagate**|4|Las marcas **adInheritObjects** y **adInheritContainers** no se propagan a una entrada heredada.|  
+|**adInheritObjects**|1|Los objetos que no son contenedores del contenedor heredan los permisos.|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [SetPermissions (método, ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

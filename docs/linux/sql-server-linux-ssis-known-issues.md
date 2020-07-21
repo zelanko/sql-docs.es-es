@@ -8,16 +8,16 @@ ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ff8b3953961a6d3a8f13ceec262df5fea079ced8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032232"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897230"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se describen las limitaciones y los problemas conocidos de SQL Server Integration Services (SSIS) en Linux.
 
@@ -36,7 +36,7 @@ Las siguientes características no se admiten en esta versión de SSIS en Linux:
 
 Para consultar otras limitaciones y problemas conocidos de SSIS en Linux, vea las [Notas de la versión](sql-server-linux-release-notes.md#ssis).
 
-## <a name="components"></a> Componentes admitidos y no admitidos
+## <a name="supported-and-unsupported-components"></a><a name="components"></a> Componentes admitidos y no admitidos
 
 En Linux se admiten los siguientes componentes de Integration Services integrados. Algunos de ellos tienen limitaciones en la plataforma Linux. Los componentes integrados que no aparecen aquí no se admiten en Linux.
 
@@ -72,7 +72,7 @@ Las siguientes tareas del plan de mantenimiento no se admiten en Linux:
 
 Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 - Comprobar la integridad de la base de datos
-- Reducir la base de datos
+- Reducir base de datos
 - Reorganizar índice
 - Recompilar índice
 - Actualizar estadísticas
@@ -102,7 +102,7 @@ Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 
 ## <a name="supported-data-flow-transformations"></a>Transformaciones de flujos de datos admitidas
 - Agregado
-- Auditar
+- Auditoría
 - Balanced Data Distributor
 - Mapa de caracteres
 - División condicional
@@ -113,8 +113,8 @@ Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 - agrupación aproximada
 - Búsqueda aproximada
 - Importar columna
-- Lookup
-- Mezcla
+- Búsqueda
+- Merge
 - Merge Join
 - Multidifusión
 - Dinamización
@@ -143,7 +143,7 @@ Los proveedores de registro de SSIS para archivos de texto, archivos XML y SQL 
 -   No se puede usar una variable de entorno en una ruta de acceso de archivo. Si especifica una variable de entorno, el texto literal que especifique aparece en la ruta de acceso del archivo. Por ejemplo, si especifica `%TMP%/log.txt`, el proveedor de registro anexa el texto literal `/%TMP%/log.txt` al directorio del host actual.
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
--   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 -   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
 -   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

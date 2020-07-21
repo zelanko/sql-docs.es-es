@@ -10,15 +10,14 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d1be9f993b9400d51f3f129d48a85bd92d99b2c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205057"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054900"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparación de la consulta FOR XML con la consulta FOR XML anidada
   En este tema se compara una consulta FOR XML de nivel único con una consulta FOR XML anidada. Una de las ventajas de usar consultas FOR XML anidadas es que puede especificar una combinación de XML centrado en atributos y un XML centrado en elementos para los resultados de la consulta. En este ejemplo se demuestra.  
@@ -90,7 +89,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 < ProdCat ProductCategoryID="1" CategoryName="Bikes" />  
@@ -200,7 +199,7 @@ FOR XML AUTO, TYPE
   
  Si quita la directiva `ELEMENTS` de la consulta `FOR XML` anidada que genera subcategorías de productos, todo el resultado está centrado en atributos. Después puede escribir esta consulta sin anidar. La adición de `ELEMENTS` da lugar a un XML parcialmente centrado en atributos y parcialmente centrado en elementos. Este resultado no se puede generar en un solo nivel, consulta FOR XML.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar consultas FOR XML anidadas](use-nested-for-xml-queries.md)  
   
   

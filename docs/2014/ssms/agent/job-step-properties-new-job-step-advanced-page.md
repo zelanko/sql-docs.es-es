@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página avanzada) | Microsoft Docs'
+title: 'Propiedades de paso de trabajo: nuevo paso de trabajo (página avanzadas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62937205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064483"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página Avanzado)
-  Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Acción en caso de éxito**  
@@ -43,7 +42,7 @@ ms.locfileid: "62937205"
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
  **Vista**  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
  Anexa la salida al contenido existente del archivo. De lo contrario, el anterior contenido del archivo se sobrescribe cada vez que se ejecuta el paso de trabajo.  
@@ -71,7 +70,7 @@ ms.locfileid: "62937205"
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
  **Vista**  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
  Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez que se ejecuta.  
@@ -96,7 +95,7 @@ ms.locfileid: "62937205"
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
  **Vista**  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
  Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez que se ejecuta.  
@@ -145,7 +144,7 @@ ms.locfileid: "62937205"
  **Incluir salida de paso en historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar pasos de trabajo](manage-job-steps.md)  
   
   

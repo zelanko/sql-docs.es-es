@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ADO code examples
 - ADO, code examples
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3671bb7ffcb1d51f6bb7582d8cce50e5e28e330a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921113"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749370"
 ---
 # <a name="ado-code-examples"></a>Ejemplos de código ADO
-Utilice los siguientes ejemplos de código para obtener información sobre cómo usar los objetos, métodos, propiedades y eventos de ADO.  
+Use los siguientes ejemplos de código para obtener información sobre cómo usar los objetos, métodos, propiedades y eventos de ADO.  
   
 > [!NOTE]
->  Pegue el ejemplo de código completo en el editor de código. El ejemplo no funcionen correctamente si se usan ejemplos parciales o si se pierde el formato de párrafo.  
+>  Pegue el ejemplo de código completo en el editor de código. Es posible que el ejemplo no se ejecute correctamente si se usan ejemplos parciales o si se pierde el formato del párrafo.  
   
 -   [Ejemplos de código ADO en Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
   

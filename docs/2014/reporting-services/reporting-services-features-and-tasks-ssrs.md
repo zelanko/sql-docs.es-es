@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102907"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Características y tareas de Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se organiza mediante los informes y las características de informes, las características del servidor de informes y las características del producto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Servidor de informes de Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)  
+ [Reporting Services servidor de informes](../../2014/reporting-services/reporting-services-report-server.md)  
   
  [Informes de Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66102907"
   
  [Herramientas de Reporting Services](tools/reporting-services-tools.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [¿Qué novedades &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
+ [Novedades &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
   
   

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - CATCH block
 - ERROR_SEVERITY function
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f3f6988a766966b35fc247e9fc17a2b9f8c558d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094653"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999049"
 ---
-# <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve el valor de gravedad del error cuando se produce un error, si provoca la ejecución del bloque CATCH de una construcción TRY…CATCH.  
 
@@ -42,7 +42,7 @@ Esta función devuelve el valor de gravedad del error cuando se produce un error
 ERROR_SEVERITY ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -50,16 +50,16 @@ Cuando se llama en un bloque CATCH donde se produce un error, `ERROR_SEVERITY` d
 
 `ERROR_SEVERITY` NULL si se llamó desde fuera del ámbito de un bloque CATCH.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `ERROR_SEVERITY` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_SEVERITY` devuelve el valor de gravedad de un error, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
   
 `ERROR_SEVERITY` normalmente funciona en un bloque `CATCH` anidado. `ERROR_SEVERITY` devuelve el valor de gravedad del error específico del ámbito del bloque `CATCH` al que hace referencia ese bloque `CATCH`. Por ejemplo, el bloque `CATCH` de una construcción TRY...CATCH externa podría tener una construcción `TRY...CATCH` interna. Dentro de ese bloque interno `CATCH`, `ERROR_SEVERITY` devuelve el valor de gravedad del error que invocó el bloque `CATCH` interno. Si `ERROR_SEVERITY` se ejecuta en el bloque `CATCH` externo, devuelve el valor de gravedad del error que invocó ese bloque `CATCH` externo.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Utilizar ERROR_SEVERITY en un bloque CATCH  
+### <a name="a-using-error_severity-in-a-catch-block"></a>A. Utilizar ERROR_SEVERITY en un bloque CATCH  
 En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_SEVERITY` devuelve el valor de gravedad de ese error.  
 ```sql  
 BEGIN TRY  
@@ -85,7 +85,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_SEVERITY en un bloque CATCH con otras herramientas de control de errores  
+### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_SEVERITY en un bloque CATCH con otras herramientas de control de errores  
 En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. El procedimiento almacenado devuelve información sobre el error.  
 
 ```sql  

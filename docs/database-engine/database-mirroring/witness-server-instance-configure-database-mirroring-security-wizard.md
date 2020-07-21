@@ -1,6 +1,7 @@
 ---
-title: Instancia de servidor testigo (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos) | Microsoft Docs
-ms.custom: ''
+title: 'Asistente para configuración de seguridad: Instancia del servidor testigo'
+description: 'Describe la página "Instancia de servidor testigo" del "Asistente para configuración de seguridad de la creación de reflejo de bases de datos". '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e50362e86273f00c6bcfe13a3d6c2120ee36e33d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1209600e4803d0d5bed5e506f4af64b782648787
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650918"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Instancia de servidor testigo (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice esta página para especificar información sobre la instancia de servidor que actuará como testigo de la sesión.  
   
 > [!NOTE]
@@ -38,7 +39,7 @@ ms.locfileid: "68050579"
   
  En caso contrario, este cuadro de lista muestra el nombre del servidor actual. Tenga en cuenta que la instancia de servidor testigo no puede ser la misma que las instancias de servidor principal o de servidor reflejado.  
   
- **Conectar**  
+ **Conexión**  
  Si no se ha especificado una instancia de servidor testigo, haga clic en **Conectar**. Aparecerá el cuadro de diálogo **Conectar al servidor** , donde puede especificar la instancia de servidor y establecer una conexión.  
   
  Si se ha especificado la instancia, pero el asistente no tiene una conexión con los permisos suficientes para comprobar la existencia del extremo, haga clic en **Conectar**. Aparecerá el cuadro de diálogo **Conectar al servidor** con la instancia de servidor preseleccionada y sin cambios. Especifique una cuenta de dominio con permisos suficientes y conéctese a la instancia de servidor.  
@@ -46,7 +47,7 @@ ms.locfileid: "68050579"
 > [!NOTE]  
 >  Al conectarse a la instancia del servidor, el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos utiliza las credenciales proporcionadas en el cuadro de diálogo **Conectar al servidor** . Éstas son diferentes de las credenciales de una sesión de creación de reflejo, que utiliza las credenciales de la cuenta de inicio y cuya instancia del servidor se ejecuta como un servicio.  
   
- **Puerto de escucha**  
+ **Listener Port** (Puerto de escucha)  
  El comportamiento de esta opción depende de la existencia del extremo de reflejo para la instancia de servidor, del modo siguiente:  
   
 -   Si el puerto de escucha no existe para la instancia de servidor, aparecerá el número de puerto 5022 en el cuadro de texto **Puerto** . Puede escribir cualquier número de puerto disponible, como el 7022.  

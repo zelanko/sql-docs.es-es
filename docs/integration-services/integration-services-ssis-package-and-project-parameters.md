@@ -1,5 +1,5 @@
 ---
-title: Paquete de Integration Services (SSIS) y parámetros del proyecto | Microsoft Docs
+title: Parámetros de paquete y proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296168"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903862"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paquete de Integration Services (SSIS) y parámetros del proyecto
 
@@ -58,7 +58,7 @@ ms.locfileid: "71296168"
   
  Puede utilizar un único parámetro para asignar un valor a varias propiedades del paquete. A una propiedad del paquete se le puede asignar un valor solo de un único parámetro.  
   
-###  <a name="executions"></a> Ejecuciones y valores de parámetros  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> Ejecuciones y valores de parámetros  
  La *ejecución* es un objeto que representa una sola instancia de ejecución del paquete. Cuando se crea una ejecución, debe especificar todos los detalles para ejecutar un paquete como los valores de los parámetros de ejecución. También puede modificar los valores de parámetros para las ejecuciones existentes.  
   
  Cuando se establece explícitamente un valor de parámetro de ejecución, el valor solo es aplicable a esa instancia de ejecución concreta. El valor de ejecución se utiliza en lugar de un valor de servidor o de un valor de diseño. Si no establece explícitamente un valor de ejecución y se ha especificado un valor de servidor, se utiliza el valor del servidor.  
@@ -89,7 +89,7 @@ ms.locfileid: "71296168"
   
  También puede utilizar el cuadro de diálogo **Ejecutar paquete** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar el valor de parámetro. Para obtener más información, vea [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog).  
   
- También puede utilizar la opción de **/Parameter** dtexec para modificar un valor de parámetro. Para obtener más información, vea [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
+ También puede utilizar la opción de **/Parameter** dtexec para modificar un valor de parámetro. Para obtener más información, consulte [utilidad dtexec](../integration-services/packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Validación de parámetros  
  Si los valores de parámetros no se pueden resolver, la ejecución del paquete correspondiente generará un error. Para ayudar a evitar errores, puede validar los proyectos y los paquetes mediante el cuadro de diálogo **Validar** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La validación permite confirmar que todos los parámetros tienen los valores necesarios o pueden resolver los valores necesarios con referencias de entorno específicas. La validación comprueba también otros problemas comunes del paquete.  
@@ -103,29 +103,29 @@ ms.locfileid: "71296168"
   
  En la preparación de una instancia específica de la ejecución del paquete, se asigna el valor 5 al parámetro **pkgOptions** . Este valor se conoce como valor de ejecución porque se aplica al parámetro solo para esa instancia concreta de ejecución. Cuando se inicia la ejecución, se asigna el valor 5 a la propiedad del paquete correspondiente al parámetro **pkgOptions** .  
   
-## <a name="create-parameters"></a>Create Parameters
+## <a name="create-parameters"></a>Creación de parámetros
 Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear parámetros de proyecto y parámetros de paquete. Los procedimientos siguientes proporcionan instrucciones paso a paso para crear parámetros de paquete o proyecto.  
   
-> **NOTA:** Si va a convertir un proyecto que creó utilizando una versión anterior de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al modelo de implementación de proyectos, puede utilizar el **Asistente para conversión de proyectos de Integration Services** para crear parámetros de acuerdo con las configuraciones. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
+> **NOTA:** Si va a convertir un proyecto que creó con una versión anterior de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al modelo de implementación de proyectos, puede usar el **Asistente para conversión de proyectos de Integration Services** con el fin de crear parámetros de acuerdo con las configuraciones. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
   
 ### <a name="create-package-parameters"></a>Creación de parámetros del paquete  
   
 1.  Abra el paquete en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]y después haga clic en la pestaña **Parámetros** del Diseñador SSIS.  
   
-     ![Pestaña Parámetros del paquete](../integration-services/media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![Pestaña Parámetros de paquete](../integration-services/media/denali-package-parameters.gif "Pestaña Parámetros de paquete")  
   
 2.  Haga clic en el botón **Agregar parámetro** de la barra de herramientas.  
   
-     ![Botón Agregar de la barra de herramientas](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Agregar botón de la barra de herramientas](../integration-services/media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
   
 3.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** en la propia lista o en la ventana **Propiedades** . Estas propiedades se describen en la tabla siguiente.  
   
     |Propiedad|Descripción|  
     |--------------|-----------------|  
-    |Nombre|Nombre del parámetro.|  
+    |Nombre|El nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
-    |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
+    |Sensible|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
     |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
@@ -143,20 +143,20 @@ Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pa
   
 2.  En el Explorador de soluciones, haga clic con el botón secundario en **Project.params** y, a continuación, haga clic en **Abrir** , o haga doble clic en **Project.params** para abrirlo.  
   
-     ![Ventana Parámetros del proyecto](../integration-services/media/denali-project-parameters.gif "Project Parameters Window")  
+     ![Ventana Parámetros del proyecto](../integration-services/media/denali-project-parameters.gif "Ventana Parámetros del proyecto")  
   
 3.  Haga clic en el botón **Agregar parámetro** de la barra de herramientas.  
   
-     ![Botón Agregar de la barra de herramientas](../integration-services/media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Agregar botón de la barra de herramientas](../integration-services/media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
   
 4.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** .  
   
     |Propiedad|Descripción|  
     |--------------|-----------------|  
-    |Nombre|Nombre del parámetro.|  
+    |Nombre|El nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
-    |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
+    |Sensible|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
     |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
@@ -186,7 +186,7 @@ El cuadro de diálogo **Parametrizar** permite asociar un parámetro nuevo o exi
  **Descripción**  
  Especifique la descripción del parámetro.  
   
- **Value**  
+ **Valor**  
  Especifique el valor predeterminado del parámetro. Se conoce también como valor predeterminado de diseño, el cual se puede invalidar más adelante durante la fase de implementación.  
   
  **Ámbito**  
@@ -209,7 +209,7 @@ El Asistente para la implementación permite establecer valores de parámetro pr
   
 3.  Abra la página de parámetros haciendo clic en **Parámetros** debajo de **Seleccionar una página**.  
   
-4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: La columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
+4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: la columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
   
 5.  En la columna de **Valor** , especifique el valor del parámetro predeterminado del servidor deseado.  
 

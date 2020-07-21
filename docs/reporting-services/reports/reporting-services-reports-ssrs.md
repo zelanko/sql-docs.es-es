@@ -1,5 +1,6 @@
 ---
-title: Informes de Reporting Services (SSRS) | Microsoft Docs
+title: Informes de Reporting Services | Microsoft Docs
+description: Obtenga información sobre los informes de Reporting Services, incluidas las ventajas de los informes, cómo crear informes paginados y cómo ver informes.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 9eb81b3b3274afa8a53a217ea1139a8a904979ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314031"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510066"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Los informes paginados son definiciones de informes basados en XML donde se incluyen datos y elementos de diseño de informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe paginado, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes paginados son una parte de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También puede [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -45,7 +46,7 @@ ms.locfileid: "67314031"
   
     ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
-##  <a name="bkmk_StagesSummary"></a> Fases del procesamiento de informes  
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Fases del procesamiento de informes  
  Al crear un informe, tiene que definir un archivo de definición de informe (.rdl) en formato XML. Este archivo contiene toda la información necesaria para combinar los datos y el diseño del informe mediante el procesador de informes. Cuando consulte un informe, el informe avanzará a través de los pasos siguientes:  
   
 -   **Compilación.** Se evalúan las expresiones de la definición de informe y se almacena el formato intermedio compilado internamente en el servidor de informes.  
@@ -69,15 +70,15 @@ ms.locfileid: "67314031"
   
 -   **Configure los permisos.** Planee la estrategia de concesión de permisos del nivel adecuado. Una estrategia habitual consiste en crear una estructura de carpetas de servidor de informes y conceder acceso a los informes y a sus elementos relacionados en función de la seguridad de los roles y las carpetas. Para obtener más información, vea [Proteger informes](#bkmk_SecureReportsSummary).  
   
--   **Elija un entorno de creación.** La compatibilidad con las características es distinta en cada herramienta de creación. Para más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
+-   **Elija un entorno de creación.** La compatibilidad con las características es distinta en cada herramienta de creación. Para obtener más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
 -   En cada informe:  
   
-    -   **Identifique los orígenes de datos.** Defina los orígenes de datos de los informes, uno por cada origen de datos. Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    -   **Identifique los orígenes de datos.** Defina los orígenes de datos de los informes, uno por cada origen de datos. Para más información, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
     -   **Elija qué datos se van a usar de cada origen.** En cada origen de datos, defina los conjuntos de datos del informe. Cada conjunto de datos incluye una consulta que especificará qué datos se van a usar. Si tiene parámetros de informe, defina un conjunto de datos para rellenar la lista de valores disponibles de cada parámetro. Para más información, vea [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) y [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Elija una visualización de los datos.** En cada conjunto de datos, elija qué región de datos se va a usar para mostrar los datos. Elija en la lista de tablas, gráficos, medidores y mapas. Para obtener más información, vea los siguientes artículos:  
+    -   **Elija una visualización de los datos.** En cada conjunto de datos, elija qué región de datos se va a usar para mostrar los datos. Elija en la lista de tablas, gráficos, medidores y mapas. Para más información, consulte los siguientes artículos.  
   
         -   [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
@@ -91,7 +92,7 @@ ms.locfileid: "67314031"
   
         -   [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personalice los datos y el diseño.** Cree el diseño del informe. Una definición de informe tiene un cuerpo, orígenes de datos, conjuntos de datos, regiones de datos, cuadros de texto, líneas e imágenes de informe. Los rectángulos se usan como contenedores de diseño, además de como elementos visuales. Personalice cada región de datos escribiendo expresiones para controlar el filtrado, la agrupación, la ordenación, el formato y la visualización de los datos. Agregue los nombres, las ubicaciones y otra información de identificación del informe que ayude a administrar docenas o cientos de informes. Agregue los elementos visuales y los contenedores para organizar los elementos de diseño de la página. Para obtener más información, vea los siguientes artículos:  
+    -   **Personalice los datos y el diseño.** Cree el diseño del informe. Una definición de informe tiene un cuerpo, orígenes de datos, conjuntos de datos, regiones de datos, cuadros de texto, líneas e imágenes de informe. Los rectángulos se usan como contenedores de diseño, además de como elementos visuales. Personalice cada región de datos escribiendo expresiones para controlar el filtrado, la agrupación, la ordenación, el formato y la visualización de los datos. Agregue los nombres, las ubicaciones y otra información de identificación del informe que ayude a administrar docenas o cientos de informes. Agregue los elementos visuales y los contenedores para organizar los elementos de diseño de la página. Para más información, consulte los siguientes artículos.  
   
         -   [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -122,7 +123,7 @@ ms.locfileid: "67314031"
 ## <a name="view-reports"></a>Ver informes  
  Además de mostrar una vista previa de un informe guardado localmente o publicado en un servidor de informes, puede proporcionar diversas experiencias de visualización a los lectores del informe. Para ver un informe:  
   
--   **Explorador.**  Use el servicio web del servidor de informes o del sitio de SharePoint para ver los informes publicados. En un sitio de SharePoint, también puede configurar un elemento web para ver los informes publicados. Para obtener más información, vea los siguientes artículos:
+-   **Explorador.**  Use el servicio web del servidor de informes o del sitio de SharePoint para ver los informes publicados. En un sitio de SharePoint, también puede configurar un elemento web para ver los informes publicados. Para más información, consulte los siguientes artículos.
 
      - [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
      - [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
@@ -134,7 +135,7 @@ ms.locfileid: "67314031"
   
 -   **Impresión.**  Un lector de informes puede imprimir un informe o algunas de las páginas de un informe, en función del modo en que lo esté viendo. Para más información, vea [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Aplicación web o formulario Windows Forms.**  Use Visual Studio para desarrollar una aplicación que facilita reporting a través de SSRS. Para obtener más información, consulte [[la integración de Reporting Services en aplicaciones](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
+-   **Aplicación web o formulario Windows Forms.**  Use Visual Studio para desarrollar una aplicación que facilite la creación de informes a través de SSRS. Para obtener más información, consulte [[Integración de Reporting Services en las aplicaciones](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
 ## <a name="manage-reports"></a>Administrar informes  
  Para administrar un informe publicado:  
@@ -155,7 +156,7 @@ ms.locfileid: "67314031"
   
  Para más información sobre rendimiento, vea [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md).  
   
-##  <a name="bkmk_SecureReportsSummary"></a> Proteger informes  
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Proteger informes  
  Para proteger un informe:  
   
 Como administrador del servidor de informes, identifique el sistema de autorización y autenticación empleado para la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la autenticación de Windows, la seguridad integrada y la asignación de roles para ayudar a controlar el acceso a los informes publicados. Para más información, vea [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) y [Seguridad y protección de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
@@ -177,8 +178,8 @@ Puede crear alertas de datos de los informes publicados en un sitio de SharePoin
   
 - **Determine dónde puede buscar más información.** Por ejemplo, si el diseño de informe incluye expresiones, la herramienta Diseñador de informes proporciona más información sobre los problemas de evaluación de expresiones que la herramienta Generador de informes. Si se producen errores de procesamiento de informes, los archivos de registro contienen información detallada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Extensiones &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Comparar nativo y los servidores de informes de SharePoint, Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
+ [Comparación de los servidores de informes de Reporting Services nativos y de SharePoint](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

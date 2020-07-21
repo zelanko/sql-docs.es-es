@@ -1,5 +1,6 @@
 ---
 title: Configuración de los grupos de escalado horizontal de PolyBase en Windows | Microsoft Docs
+description: Configure un grupo de escalado horizontal de PolyBase para crear un clúster de instancias de SQL Server. Esto mejora el rendimiento de las consultas de grandes conjuntos de datos de orígenes externos.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,20 +9,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906888"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892055"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 En este artículo se describe cómo configurar un [grupo de escalado horizontal de PolyBase](polybase-scale-out-groups.md) en Windows. Esto crea un clúster de instancias de SQL Server para procesar grandes conjuntos de datos a partir de orígenes de datos externos, como Hadoop o Azure Blob Storage, en un modo de escalado horizontal para mejorar el rendimiento de las consultas.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
   
 - Más de una máquina en el mismo dominio  
   
@@ -61,7 +62,7 @@ En este tutorial se muestran los pasos necesarios para configurar un grupo de Po
   
 3. En la página Configuración del servidor, use la **cuenta de dominio** PQTH4A\PolyBaseUser para el motor y el servicio de movimiento de datos de SQL Server PolyBase.
   
-4. En la página PolyBase Configuration (Configuración de PolyBase), seleccione la opción **Use the SQL Server instance as part of a PolyBase scale-out group**(Usar la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase). Se abrirá el firewall para permitir las conexiones entrantes a los servicios de PolyBase.
+4. En la página PolyBase Configuration (Configuración de PolyBase), seleccione la opción **Use the SQL Server instance as part of a PolyBase scale-out group**(Usar la instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase). Se abrirá el firewall para permitir las conexiones entrantes a los servicios de PolyBase. Si el nodo principal es una instancia con nombre, debe agregar manualmente el puerto de SQL Server al firewall de Windows en el nodo principal y también iniciar SQL Browser en el nodo principal.
   
 5. Una vez completada la instalación, ejecute **services.msc**. Compruebe que están ejecutando SQL Server, el motor de PolyBase y el servicio de movimiento de datos de PolyBase.
   
@@ -86,7 +87,10 @@ Una vez completada la instalación, las dos máquinas pueden funcionar como nodo
 3. Ejecute services.msc en el nodo de ejecución (PQTH4A-CMP02).
   
 4. Apague el motor de PolyBase y reinicie el servicio de movimiento de datos de PolyBase.
-  
+
+> [!NOTE] 
+> Cuando el servicio de motor de PolyBase se reinicia o se detiene en el nodo principal, los servicios del servicio de movimiento de datos (DMS) se detienen en cuanto se cierra el canal de comunicación entre DMS y el servicio de motor de PolyBase (DW). Si el motor de DW se reinicia más de dos veces, DMS entra en un período no interactivo durante 90 minutos y debe esperar 90 minutos para el siguiente intento de inicio automático. En esta situación, debe iniciar este servicio manualmente en todos los nodos.
+
 ## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación de un nodo de ejecución.  
   
 1. Conéctese al nodo de ejecución de SQL Server (PQTH4A-CMP02).

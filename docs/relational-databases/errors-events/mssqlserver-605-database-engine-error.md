@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7657c18708e9b54c33f15142c57782da671037f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 514e0d342fb542ade5cefaf0f405f9caf1cd0b1d
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903928"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279621"
 ---
-# <a name="mssqlserver605"></a>MSSQLSERVER_605
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_605"></a>MSSQLSERVER_605
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|605|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|605|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|WRONGPAGE|  
 |Texto del mensaje|Error al intentar capturar la página lógica %S_PGID de la base de datos %d, ya que pertenece a la unidad de asignación %I64d, no a %I64d.|  
@@ -54,6 +54,7 @@ Si el error 605 no es transitorio, significa que el problema es grave y debe cor
   
 1.  Identifique las tablas asociadas a las unidades de asignación especificadas en el mensaje ejecutando la siguiente consulta. Reemplace `allocation_unit_id` por las unidades de asignación especificadas en el mensaje de error.  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -73,6 +74,7 @@ Si el error 605 no es transitorio, significa que el problema es grave y debe cor
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  Ejecute DBCC CHECKTABLE sin la cláusula REPAIR en la tabla asociada al segundo Id. de unidad de asignación especificado en el mensaje de error.  
   

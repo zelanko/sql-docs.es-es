@@ -10,15 +10,15 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b61761ff30a32d6781e61e988325fbfc40b5762e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 87bdd407e59a1c019e2878971d3044deb777755b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725215"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
 
@@ -27,7 +27,7 @@ Esta lección contiene las siguientes tareas:
 - [Conectarse a Management Studio](#connect)  
 - [Autorizar conexiones adicionales](#additional) 
 
-## <a name="tools">Herramientas de introducción</a> 
+## <a name=""></a><a name="tools">Herramientas de introducción</a> 
 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye varias herramientas. En este tema se describen las primeras herramientas que necesitará y se ofrece ayuda para seleccionar la herramienta adecuada para La tarea. Se puede obtener acceso a todas las herramientas desde el menú **Inicio** . No se instalan las mismas herramientas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], de forma predeterminada. Debe seleccionarlas como parte de los componentes de cliente durante la instalación. Para obtener una descripción completa de las herramientas descritas a continuación, búsquelas en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] solo contiene un subconjunto de las herramientas.  
 
 ### <a name="basic-tools"></a>Herramientas básicas
@@ -46,7 +46,7 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
 - En las versiones actuales de Windows, en la página de **Inicio** , escriba **Administrador de configuración**y luego haga clic en **Administrador de configuración de SQL Server *versión* Administrador de configuración**.   
 - Si usa versiones anteriores de Windows, en el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración**y, después, haga clic en **Administrador de configuración de SQL Server**.  
 
-## <a name="connect"></a>Conectarse a Management Studio  
+## <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectarse a Management Studio  
 - Resulta sencillo conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde herramientas que se ejecutan en el mismo equipo si conoce el nombre de la instancia y se conecta como miembro del grupo local Administradores del equipo. Los procedimientos siguientes deben realizarse en el mismo equipo en el que se hospeda [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 > [!NOTE]  
@@ -76,7 +76,7 @@ Se ha seleccionado al menos una cuenta de administrador al instalar [!INCLUDE[ss
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<nombre_equipo\>_ **\\** _\<nombre_instancia\>_ , como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
+3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<computer_name\>_ **\\** _\<instance_name\>_ , como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -85,7 +85,7 @@ Se ha seleccionado al menos una cuenta de administrador al instalar [!INCLUDE[ss
 > [!NOTE]
 > En este tutorial se supone que es nuevo con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no tiene problemas especiales para conectarse. Esto debería ser suficiente para la mayoría de las personas y hace que este tutorial sea simple. Para obtener pasos de solución de problemas detallados, consulte [Solucionar problemas de conexión al motor de base de datos de SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md). 
 
-## <a name="additional"></a>Autorizar conexiones adicionales  
+## <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorizar conexiones adicionales  
 Ahora que se ha conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como administrador, una de las primeras tareas que debe realizar es autorizar a otros usuarios a conectarse. Para ello, cree un inicio de sesión y concédale autorización para obtener acceso a una base de datos como usuario. Los inicios de sesión pueden ser inicios de sesión con autenticación de Windows, que utilizan las credenciales de Windows, o bien inicios de sesión con autenticación de SQL Server, que almacenan la información de autenticación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y son independientes de las credenciales de Windows. Utilice la autenticación de Windows siempre que sea posible.
 
 > [!TIP]

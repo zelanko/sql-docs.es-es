@@ -1,5 +1,5 @@
 ---
-title: Crear un conjunto de recopilación personalizado que utiliza el tipo de recopilador consulta T-SQL genérico (Transact-SQL) | Microsoft Docs
+title: Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab21ad5fd65556dec639fd5ca6999d23e2de673b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970475"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Crear un conjunto de recopilación personalizado que utilice el tipo de recopilador de consultas T-SQL genérico (Transact-SQL)
   Puede crear un conjunto de recopilación personalizado con elementos de recopilación que utilicen el tipo de recopilador de consultas T-SQL genérico mediante los procedimientos almacenados que se proporcionan con el recopilador de datos. Para realizar esta tarea debe usar el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para llevar a cabo los siguientes procedimientos:  
@@ -160,7 +159,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Administrar programaciones](../../ssms/agent/manage-schedules.md)   
  [Iniciar o detener un conjunto de recopilación](start-or-stop-a-collection-set.md)  

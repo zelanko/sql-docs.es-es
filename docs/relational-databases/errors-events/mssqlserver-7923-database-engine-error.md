@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: b09a95e2-0ffe-4847-aa77-51e6639259f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5b4872e87ffa3c84be8a93e5faeb597d90c722c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6df367610f21801e85e36b8d9c9f698d0021dd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767938"
 ---
-# <a name="mssqlserver7923"></a>MSSQLSERVER_7923
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_7923"></a>MSSQLSERVER_7923
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7923|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7923|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_SUMMARY_TABLE_NAME|  
 |Texto del mensaje|Tabla TABLE                id. de objeto O_ID.|  

@@ -1,7 +1,7 @@
 ---
 title: xp_sprintf (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec2ad672135453750d5880d63a8f90f3e3d4c558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 157b027580592f2d4663788911530c282bebfcc4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755521"
 ---
-# <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Da formato y almacena una serie de caracteres y valores en la cadena del parámetro de salida. Cada argumento de formato se sustituye por el argumento correspondiente.  
   
@@ -42,13 +41,13 @@ xp_sprintf { string OUTPUT , format }
   
 ## <a name="arguments"></a>Argumentos  
  *string*  
- Es un **varchar** variable que recibe la salida.  
+ Es una variable **VARCHAR** que recibe la salida.  
   
  OUTPUT  
  Cuando se especifica, coloca el valor de la variable en el parámetro de salida.  
   
  *format*  
- Es una cadena de caracteres de formato con marcadores de posición para *argumento* valores, similares a la que admite el lenguaje c. **sprintf** función. Actualmente, solo se acepta el formato %s.  
+ Es una cadena de caracteres de formato con marcadores de posición para los valores de *argumento* , similar a la admitida por la función **sprintf** del lenguaje C. Actualmente, solo se acepta el formato %s.  
   
  *argument*  
  Es una cadena de caracteres que representa el valor del argumento de formato correspondiente.  
@@ -67,9 +66,9 @@ xp_sprintf { string OUTPUT , format }
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sscanf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
+ [xp_sscanf &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

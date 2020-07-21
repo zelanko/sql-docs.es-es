@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae89ee9f60e740a4e20486e7dcbe99316fd4ed04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62811236"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935406"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
   Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del ejecutable de `sqlservr.exe` que se ejecuta como un servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  
@@ -51,7 +50,7 @@ ms.locfileid: "62811236"
 |Describe las capacidades de Service Broker para las aplicaciones de mensajería y de puesta en cola, y proporciona punteros a la documentación de Service Broker.|[Service Broker](sql-server-service-broker.md)|  
 |Describe cómo se puede utilizar la extensión del grupo de búferes para proporcionar una integración sin problemas del almacenamiento de acceso aleatorio no volátil (unidades de estado sólido) con el grupo de búferes del motor de base de datos para mejorar significativamente el rendimiento de E/S.|[Archivo de la extensión del grupo de búferes](buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sqlservr (aplicación)](../../tools/sqlservr-application.md)   
  [Características de la base de datos](../../relational-databases/database-features.md)   
  [Características entre instancias del motor de base de datos](../database-engine-cross-instance-features.md)  

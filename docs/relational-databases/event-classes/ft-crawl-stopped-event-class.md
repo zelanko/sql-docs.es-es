@@ -12,15 +12,15 @@ ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3804c83c328a7fc067d2aed964eb7b9635cfb386
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebe0c2680347336172c108753f237279648b0259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737227"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **:Crawl Stopped** indica que se ha detenido un rastreo de texto completo (rellenado). La detención podría deberse a un rastreo finalizado correctamente o a un error irrecuperable.  
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>Columnas de datos de la clase de eventos FT:Crawl Stopped  

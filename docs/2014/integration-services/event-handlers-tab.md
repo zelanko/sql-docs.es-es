@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.eventhandlerwindow.f1
 ms.assetid: 94fc8916-8032-490c-b9d5-ded8b6217e49
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8777e6c0515a602198e3ed393714544d774f9958
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059293"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437422"
 ---
 # <a name="event-handlers-tab"></a>Pestaña Controladores de eventos
   Utilice la pestaña **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para generar un flujo de control en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Un controlador de eventos se ejecuta en respuesta a un evento generado por el paquete o por una tarea o un contenedor de un paquete.  
@@ -32,15 +31,15 @@ ms.locfileid: "66059293"
  **Eliminar**  
  Seleccione un controlador de eventos y elimínelo del paquete haciendo clic en **Eliminar**.  
   
- **Haga clic aquí para crear un \<nombre de controlador de eventos > para el ejecutable \<nombre del archivo ejecutable >**  
+ **Haga clic aquí para crear un \<event handler name> para el ejecutable\<executable name>**  
  Haga clic aquí para crear el controlador de eventos.  
   
  Cree el flujo de control arrastrando objetos gráficos que representan contenedores y tareas de [!INCLUDE[ssIS](../includes/ssis-md.md)] desde el **Cuadro de herramientas** a la superficie de diseño de la pestaña **Controladores de eventos** y, a continuación, conecte los objetos utilizando las restricciones de precedencia para definir la secuencia en que se ejecutan.  
   
  Además, para agregar anotaciones, haga clic con el botón derecho en la superficie de diseño y, después, en el menú, haga clic en **Agregar anotación**.  
   
-## <a name="see-also"></a>Vea también  
- [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
+## <a name="see-also"></a>Consulte también  
+ [Controladores de eventos Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Flujo de control](control-flow/control-flow.md)   
  [Diseñador SSIS](ssis-designer.md)   
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  

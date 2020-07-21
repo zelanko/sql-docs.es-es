@@ -1,5 +1,6 @@
 ---
 title: 'Ejemplo: Especificación de la directiva ELEMENT | Microsoft Docs'
+description: Vea un ejemplo de cómo especificar la directiva ELEMENT en una consulta SQL para generar XML centrado en elementos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6e8f74e0d5d8d90afa09c733e5b46b47b533995
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006725"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632615"
 ---
 # <a name="example-specifying-the-element-directive"></a>Ejemplo: Especificación de la directiva ELEMENT
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Se recupera información de los empleados y se genera XML centrado en elementos como se muestra a continuación:  
   
 ```  

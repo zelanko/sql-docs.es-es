@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e69157f4b933d45b69d199536989526ea45c61e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055601"
 ---
 # <a name="snapshot-agent"></a>Agente de instantáneas
   El cuadro de diálogo **Agente de instantáneas** muestra información detallada acerca del Agente de instantáneas, como el estado, el historial, mensajes informativos y mensajes de error.  
@@ -39,7 +38,7 @@ ms.locfileid: "62676549"
   
 -   No está en ejecución  
   
--   Completada  
+-   Completed  
   
  **Start Time**  
  Muestra la hora de inicio de la sesión.  
@@ -47,7 +46,7 @@ ms.locfileid: "62676549"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duración**  
+ **Duration**  
  Muestra el tiempo que se ha ejecutado el Agente de instantáneas en esta sesión. El tiempo representa el tiempo transcurrido si el agente se está ejecutando, y el tiempo total de la sesión si la sesión del agente ha finalizado.  
   
  **Mensaje de error**  
@@ -62,9 +61,9 @@ ms.locfileid: "62676549"
  **Detalles del error o mensaje de la sesión seleccionada**  
  Solo se muestra si la sesión seleccionada presenta un valor de **Error** en la columna **Estado** . El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   

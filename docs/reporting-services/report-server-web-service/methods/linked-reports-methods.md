@@ -1,5 +1,6 @@
 ---
 title: Métodos de informes vinculados | Microsoft Docs
+description: Estos métodos agregan elementos vinculados a una base de datos, obtienen el nombre de un elemento vinculado, obtienen elementos vinculados a un elemento y establecen un elemento de catálogo para un elemento vinculado.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a474b4b3cb3a9973fc4fdaf14e7179cc73a2d2de
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284418"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198252"
 ---
 # <a name="linked-reports-methods"></a>Métodos de informes vinculados
   Puede utilizar estos métodos para crear y administrar elementos vinculados.  

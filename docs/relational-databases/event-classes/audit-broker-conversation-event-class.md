@@ -12,15 +12,15 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5389bd711a9427a0487e7d7374d899a8ac2c67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22dba70f903d19a0be15bfe7acb440dd1b1f4b1a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903541"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693773"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Broker Conversation** para emitir mensajes de auditoría relacionados con la seguridad de diálogo de Service Broker.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Conversation  
@@ -43,15 +43,15 @@ ms.locfileid: "67903541"
 |**ObjectId**|**int**|Id. de usuario del servicio de destino.|22|No|  
 |**RoleName**|**nvarchar**|Rol del identificador de conversación. Es **initiator** o **target**.|38|No|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
-|**Severity**|**int**|Gravedad del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|29|No|  
+|**Gravedad**|**int**|Gravedad del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|29|No|  
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
-|**TextData**|**ntext**|En el caso de errores, contiene un mensaje que describe el motivo. Los valores pueden ser los siguientes:<br /><br /> <br /><br /> **No se encontró el certificado**. El usuario especificado para la seguridad del protocolo de diálogo no tiene ningún certificado.<br /><br /> **No se encuentra en un período de tiempo válido**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero ha expirado.<br /><br /> **Certificado demasiado grande para asignación de memoria**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero es demasiado grande. El tamaño máximo de certificado que admite Service Broker es de 32.768 bytes.<br /><br /> **No se encontró la clave privada del certificado**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero no hay ninguna clave privada asociada al mismo.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave privada del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave pública del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con la clave de intercambio de claves cifradas**. El tamaño especificado en la clave de intercambio de claves no coincide con el de la clave privada del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con la firma del encabezado de seguridad**. El encabezado de seguridad contiene una firma que no se puede validar con la clave pública del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.|1|Sí|  
+|**TextData**|**ntext**|En el caso de errores, contiene un mensaje que describe el motivo. Uno de los valores siguientes:<br /><br /> <br /><br /> **No se encontró el certificado**. El usuario especificado para la seguridad del protocolo de diálogo no tiene ningún certificado.<br /><br /> **No se encuentra en un período de tiempo válido**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero ha expirado.<br /><br /> **Certificado demasiado grande para asignación de memoria**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero es demasiado grande. El tamaño máximo de certificado que admite Service Broker es de 32.768 bytes.<br /><br /> **No se encontró la clave privada del certificado**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero no hay ninguna clave privada asociada al mismo.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave privada del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave pública del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con la clave de intercambio de claves cifradas**. El tamaño especificado en la clave de intercambio de claves no coincide con el de la clave privada del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con la firma del encabezado de seguridad**. El encabezado de seguridad contiene una firma que no se puede validar con la clave pública del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.|1|Sí|  
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   
-|Id.|Subclase|Descripción|  
+|id|Subclase|Descripción|  
 |--------|--------------|-----------------|  
 |1|No hay encabezado de seguridad|Durante una conversación segura, Service Broker recibió un mensaje sin clave de sesión. Una vez establecida una conversación segura, el protocolo de diálogo requiere que todos los mensajes de la conversación incluyan una clave de sesión.|  
 |2|No hay certificado|Service Broker no encontró un certificado utilizable para uno de los participantes en la conversación. Para poder proteger una conversación, la base de datos debe incluir un certificado tanto para el remitente como para el destinatario de la conversación.|  

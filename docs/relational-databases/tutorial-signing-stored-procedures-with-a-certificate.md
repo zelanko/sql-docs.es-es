@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Firmar procedimientos almacenados con un certificado | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Firmar procedimientos almacenados con un certificado'
+ms.custom: seo-dt-2019
 ms.date: 08/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 225f827de70f4946cabca3e06e7a7be364094479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac154e772029a5f28920e97864c9387a5e834161
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138381"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752615"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Firmar procedimientos almacenados con un certificado
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -188,7 +188,7 @@ GO
   
 Para obtener más información sobre la instrucción REVERT, consulte [REVERT &#40;Transact-SQL&#41;](../t-sql/statements/revert-transact-sql.md).  
   
-## <a name="CompleteExample"></a>Ejemplo completo  
+## <a name="complete-example"></a><a name="CompleteExample"></a>Ejemplo completo  
 En esta sección se muestra el código de ejemplo completo.  
   
 ```sql  
@@ -285,7 +285,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

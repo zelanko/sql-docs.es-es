@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23f839416e3404bfdf0a7e61d1b1e8dbbb90ec95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663814"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030431"
 ---
 # <a name="broker-event-category"></a>Broker (categoría de eventos)
   La categoría de eventos **Broker** contiene eventos generales de Service Broker.  
@@ -43,7 +42,7 @@ ms.locfileid: "62663814"
   
  También se proporcionan dos eventos de auditoría de seguridad para Service Broker. Para obtener más información sobre estos eventos, vea [Clase de eventos Audit Broker Login](audit-broker-login-event-class.md) y [Audit Broker Conversation (clase de eventos)](audit-broker-conversation-event-class.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Auditoría de seguridad (categoría de eventos)](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

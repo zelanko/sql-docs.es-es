@@ -1,5 +1,5 @@
 ---
-title: Comparar las predicciones (Tutorial de minería de datos intermedios) de los modelos de predicción | Microsoft Docs
+title: Comparar las predicciones de los modelos de predicción (tutorial intermedio de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066344"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparar las predicciones de los modelos de predicción (Tutorial intermedio de minería de datos)
@@ -34,8 +34,8 @@ ms.locfileid: "63066344"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> Comparar los resultados originales con los resultados después de agregar datos  
- Echemos un vistazo a los datos de solo la línea de producto M200 en la región del Pacífico, para ver cómo afecta a los resultados de la actualización del modelo con nuevos datos. Recuerde que la serie de datos original finalizó en junio de 2004 y que hemos obtenido datos nuevos para julio, agosto y septiembre.  
+##  <a name="comparing-the-original-results-with-results-after-adding-data"></a><a name="bkmk_EXTEND"></a>Comparar los resultados originales con los resultados después de agregar datos  
+ Echemos un vistazo a los datos de la línea de productos de M200 en la región del Pacífico para ver cómo afecta a los resultados la actualización del modelo con nuevos datos. Recuerde que la serie de datos original finalizó en junio de 2004 y que hemos obtenido datos nuevos para julio, agosto y septiembre.  
   
 -   La primera columna muestra los datos nuevos que se han agregado.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63066344"
   
 -   La tercera columna muestra el pronóstico basado en los datos extendidos.  
   
-|**M200 Pacífico**|Datos actualizados de ventas reales|Previsión antes de agregar datos|Predicción ampliada|  
+|**M200 Pacific**|Datos actualizados de ventas reales|Previsión antes de agregar datos|Predicción ampliada|  
 |----------------------|-----------------------------|------------------------------------|-------------------------|  
 |7-25-2008|**65**|32|**65**|  
 |8-25-2008|**54**|37|**54**|  
@@ -56,16 +56,16 @@ ms.locfileid: "63066344"
   
  En general, el algoritmo pondera los cambios en los datos nuevos más que los datos del principio de los datos del modelo. Sin embargo, en este caso, las nuevas cifras de ventas representan un incremento de solo el 20-30 por ciento durante el período anterior, por lo que hubo tan solo un ligero repunte de las ventas previstas, tras el cual las proyecciones de ventas vuelven a descender, más en línea con la tendencia de los meses anteriores a los datos nuevos.  
   
-##  <a name="bkmk_REPLACE"></a> Comparar los resultados originales y la predicción cruzada  
- Recuerde que el modelo de minería de datos original revelaba grandes diferencias entre las regiones y las líneas de productos. Por ejemplo, las ventas para el modelo M200 fueron muy marcadas, mientras que las ventas del modelo T1000 fueron bastante bajas en todas las regiones. Además, algunas series no tenía muchos datos. Las series eran desiguales, lo que significa que no tienen el mismo punto de partida.  
+##  <a name="comparing-the-original-and-cross-prediction-results"></a><a name="bkmk_REPLACE"></a>Comparar los resultados originales y entre predicciones  
+ Recuerde que el modelo de minería de datos original revelaba grandes diferencias entre las regiones y las líneas de productos. Por ejemplo, las ventas para el modelo M200 fueron muy marcadas, mientras que las ventas del modelo T1000 fueron bastante bajas en todas las regiones. Además, algunas series no tenían muchos datos. Las series eran desiguales, lo que significa que no tenían el mismo punto de partida.  
   
- ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie que predice la cantidad de M200 y T1000")  
+ ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Serie que predice la cantidad de M200 y T1000")  
   
  Por lo tanto, ¿cómo cambiaron las predicciones cuando se realizaron proyecciones basadas en el modelo general, que se basaba a su vez en las ventas mundiales, no en los conjuntos de datos originales? Para asegurarse de que no ha perdido ninguna información ni ha sesgado las predicciones, puede guardar los resultados en una tabla, combinar la tabla de predicciones con la de datos históricos y, después, crear un gráfico de los dos conjuntos de datos históricos y predicciones.  
   
  El siguiente diagrama se basa solo en una línea de productos, M200. En el gráfico se comparan las predicciones del modelo de minería de datos inicial con las predicciones que usan el modelo de minería de datos agregado.  
   
- ![Gráfico de Excel, comparar las predicciones](../../2014/tutorials/media/m200-predictions-compared.gif "comparar las predicciones de gráfico de Excel")  
+ ![Gráfico de Excel que compara las predicciones](../../2014/tutorials/media/m200-predictions-compared.gif "Gráfico de Excel que compara las predicciones")  
   
  En este diagrama, se puede ver que el modelo de minería agregado conserva los intervalos y tendencias generales de los valores, a la vez que reduce las fluctuaciones de las series de datos individuales.  
   
@@ -76,8 +76,8 @@ ms.locfileid: "63066344"
   
  Ha aprendido a crear modelos que se pueden usar para la predicción cruzada y ha utilizado el parámetro REPLACE_MODEL_CASES y aplicado el modelo a una serie de datos diferente.  
   
-## <a name="see-also"></a>Vea también  
- [Tutorial de minería de datos de datos intermedio &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tutorial intermedio de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   
   

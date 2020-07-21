@@ -23,15 +23,15 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 56408c607d9e1ecf5b03fc3bd135d0eae706c9e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995740"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007610"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve el número de identificación de base de datos de una base de datos especificada.
   
@@ -50,7 +50,7 @@ El nombre de la base de datos cuyo número de identificación de base de datos d
 ## <a name="return-types"></a>Tipos de valores devueltos
 **int**
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 `DB_ID` solo se puede usar para devolver el identificador de la base de datos actual de Azure SQL Database. Se devuelve NULL si el nombre de la base de datos que especificó es distinto de la base de datos actual.
 
 > [!NOTE]
@@ -103,7 +103,7 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>D. Devolver el identificador de la base de datos actual  
 En este ejemplo se devuelve el identificador de base de datos de la base de datos actual.
@@ -119,7 +119,7 @@ En este ejemplo se devuelve el identificador de base de datos de la base de dato
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
 [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

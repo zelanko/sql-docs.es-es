@@ -1,5 +1,7 @@
 ---
-title: Editores de consultas y texto (SQL Server Management Studio) | Microsoft Docs
+title: Editores de consultas y texto (SSMS)
+description: Aprenda a usar los editores de SQL Server Management Studio (SSMS) para consultar, editar y probar archivos de forma interactiva.
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,17 +24,16 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: afd2bc9b3477ad7b3d4448c83cdf20453794a79c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988161"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261694"
 ---
-# <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas y texto (SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas y texto (SQL Server Management Studio)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -67,7 +68,7 @@ ms.locfileid: "70988161"
 
  Los editores de código contienen estas características además de las que se comparten con los editores de texto y XML:  
   
- **Resultado**  
+ **Resultados**  
  Esta ventana se usa para ver los resultados de una consulta. La ventana puede mostrar los resultados en una cuadrícula o en el texto, o los resultados se pueden dirigir a un archivo. Las cuadrículas de resultados se pueden mostrar como ventanas independientes con pestañas.  
   
  **IntelliSense**  
@@ -137,4 +138,4 @@ ms.locfileid: "70988161"
   
 ## <a name="next-steps"></a>Pasos siguientes
 
- [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)
+[Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

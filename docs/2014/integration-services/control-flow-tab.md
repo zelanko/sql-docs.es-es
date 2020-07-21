@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.controlflowwindow.f1
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4838abd00dcde10f78587647b5ea980a3b3ce456
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060362"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438292"
 ---
 # <a name="control-flow-tab"></a>Pestaña Flujo de control
   Utilice la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para genera el flujo de control en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "66060362"
   
  Para agregar estas funciones a contenedores o tareas individuales del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic con el botón secundario en la superficie de diseño y, a continuación, seleccione la opción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restricciones de precedencia](control-flow/precedence-constraints.md)   
  [Diseñador SSIS](ssis-designer.md)   
  [Flujo de control](control-flow/control-flow.md)  

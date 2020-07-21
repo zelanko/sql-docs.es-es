@@ -1,6 +1,6 @@
 ---
 title: DATEADD (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para la función DATEADD. Esta función devuelve una fecha modificada por la parte de fecha especificada.
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 386b3af5eb7a5f69ac02c4e07f3318494ad56582
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026194"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011429"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función agrega un valor *number* especificado (como un entero con signo) a un atributo *datepart* determinado de un valor *date* de entrada y, después, devuelve el valor modificado.
   
@@ -50,7 +50,7 @@ DATEADD (datepart , number , date )
   
 ## <a name="arguments"></a>Argumentos  
 *datepart*  
-Es la parte de *date* a la que `DATEADD` agrega un valor *number* **entero**. En esta tabla se enumeran todos los argumentos válidos de *datepart*. 
+La parte de la *fecha* a la que `DATEADD` agrega un **número** *entero*. En esta tabla se enumeran todos los argumentos válidos de *datepart*. 
 
 > [!NOTE]
 > `DATEADD` no acepta los equivalentes de variables definidas por el usuario para los argumentos *datepart*. 
@@ -71,7 +71,7 @@ Es la parte de *date* a la que `DATEADD` agrega un valor *number* **entero**. En
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
-*number*  
+*número*  
 Expresión que se puede resolver como un valor [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) que `DATEADD` suma a un atributo *datepart* de *date*. `DATEADD` acepta valores de variables definidas por el usuario para *number*. `DATEADD` truncará un valor *number* especificado que tiene una fracción decimal. En esta situación no se redondeará el valor *number*.
   
 *date*  
@@ -127,20 +127,20 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Valores devueltos para una fecha smalldatetime y datepart de un segundo o fracciones de segundo  
-La parte correspondiente a los segundos de un valor [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) siempre es 00. Para un valor **date** *smalldatetime*, se aplica lo siguiente: 
+La parte correspondiente a los segundos de un valor [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) siempre es 00. Para un valor de **fecha** *smalldatetime*, se aplica lo siguiente: 
 
 -   Para un argumento *datepart* de **second** y un valor *number* comprendido entre -30 y +29, `DATEADD` no realiza ningún cambio.  
 -   Para un argumento *datepart* de **second** y un valor *number* menor que -30 o mayor de +29, `DATEADD` realiza la suma a partir de un minuto.  
 -   Para un argumento *datepart* de **millisecond** y un valor *number* comprendido entre -30001 y +29998, `DATEADD` no realiza ningún cambio.  
 -   Para un argumento *datepart* de **millisecond** y un valor *number* menor que -30001 o mayor de +29998, `DATEADD` realiza la suma a partir de un minuto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use `DATEADD` en las cláusulas siguientes:
 
 + GROUP BY
 + HAVING
 + ORDER BY
-+ SELECT \<lista>
++ SELECT \<list>
 + WHERE
   
 ## <a name="fractional-seconds-precision"></a>Precisión de fracciones de segundo
@@ -368,7 +368,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

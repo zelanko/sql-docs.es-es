@@ -1,5 +1,6 @@
 ---
 title: Cifrado de SQL Server | Microsoft Docs
+description: Use estos recursos para entender cómo emplea SQL Server el cifrado para mejorar la seguridad de las bases de datos.
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bed5524bbc7326357200841fd0d6a4045566a902
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720431"
 ---
 # <a name="sql-server-encryption"></a>Cifrado de SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   El cifrado es el proceso consistente en ofuscar los datos mediante el uso de una clave o contraseña. Esto puede hacer que los datos sean inútiles sin la clave o contraseña de descifrado correspondiente. El cifrado no resuelve los problemas de control de acceso. Sin embargo, mejora la seguridad debido a que limita la pérdida de datos, incluso si se superan los controles de acceso. Por ejemplo, si el equipo host de base de datos no está configurado correctamente y un usuario malintencionado obtiene datos confidenciales, esa información robada podría resultar inservible si está cifrada.  
   
 
@@ -31,7 +32,7 @@ ms.locfileid: "71713262"
 >  Aunque el cifrado es una valiosa herramienta para ayudar a garantizar la seguridad, no está indicado para todos los datos o conexiones. Cuando decida si debe implementar el cifrado, debe tener en cuenta el modo en que los usuarios obtendrán acceso a los datos. Si los usuarios tienen acceso a los datos a través de una red pública, podría ser necesario el cifrado de datos para aumentar la seguridad. Sin embargo, si todo el acceso se realiza dentro de una configuración de intranet segura, el cifrado podría no ser necesario. Cualquier uso del cifrado también debería incluir una estrategia de mantenimiento para las contraseñas, las claves y los certificados.  
   
 > [!NOTE]  
->  Encontrará la información más reciente sobre la seguridad de nivel de transporte (TSL1.2) en [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
+>  Encontrará la información más reciente sobre la seguridad de la capa de transporte (TLS1.2) en [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244).  
 
 Puede utilizar el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para las conexiones, los datos y los procedimientos almacenados. En la tabla siguiente, se incluye más información sobre el cifrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 

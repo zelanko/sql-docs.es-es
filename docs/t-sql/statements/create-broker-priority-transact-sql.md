@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061152"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393163"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Define un nivel de prioridad y el conjunto de criterios para determinar a qué conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe asignar el nivel de prioridad. El nivel de prioridad se asignará a cualquier extremo de conversación que use la misma combinación de contratos y servicios especificados en la prioridad de conversación. El valor de las prioridades va de 1 (bajo) a 10 (alto). El valor predeterminado es 5.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68061152"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
@@ -55,9 +55,11 @@ FOR CONVERSATION
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *ConversationPriorityName*  
- Especifica el nombre para esta prioridad de conversación. El nombre debe ser único en la base de datos actual y debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ Especifica el nombre para esta prioridad de conversación. El nombre debe ser único en la base de datos actual y debe cumplir las reglas de los [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificadores[ de ](../../relational-databases/databases/database-identifiers.md).  
   
  SET  
  Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. Si se especifica, SET debe contener al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Si no se especifica SET, se establecen los valores predeterminados para los tres criterios.  
@@ -110,7 +112,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Especifica la prioridad que se asigna a cualquier extremo de conversación que utilice los contratos y servicios que se han especificado en la prioridad de conversación. *PriorityValue* debe ser un literal entero comprendido entre 1 (prioridad más baja) y 10 (prioridad más alta). El valor predeterminado es 5.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] asigna los niveles de prioridad a los extremos de conversación. Los niveles de prioridad controlan la prioridad de las operaciones asociadas al extremo. Cada conversación tiene dos extremos:  
   
 -   El extremo iniciador de conversación asocia un lado de la conversación con el servicio iniciador y con la cola del iniciador. El extremo iniciador de la conversación se crea cuando se ejecuta la instrucción BEGIN DIALOG. Las operaciones que realiza el extremo iniciador de conversación son:  
@@ -220,7 +222,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Crear tres niveles de prioridad para un servicio de destino utilizando servicios  
  Es compatible con un sistema que proporciona tres niveles de rendimiento: Gold (alto), Silver (medio) y Bronze (bajo). Hay un contrato, pero cada nivel tiene un servicio iniciador independiente. Todos los servicios iniciadores se comunican con un servicio de destino central.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +264,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Crear tres niveles de prioridad para varios servicios utilizando contratos  
  Es compatible con un sistema que proporciona tres niveles de rendimiento: Gold (alto), Silver (medio) y Bronze (bajo). Cada nivel tiene un contrato independiente. Estas prioridades se aplican a cualquier servicio al que hagan referencia las conversaciones que utilicen los contratos.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

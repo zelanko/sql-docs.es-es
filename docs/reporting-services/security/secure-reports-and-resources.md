@@ -15,10 +15,10 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570624"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
@@ -69,7 +69,7 @@ ms.locfileid: "65570624"
 >  En versiones anteriores de la documentación, se incluía un ejemplo de cómo crear una consulta dinámica como una expresión. Este tipo de consulta genera vulnerabilidad a los ataques por inyección de código SQL y, por lo tanto, no se recomienda.  
   
 ## <a name="securing-confidential-reports"></a>Proteger informes confidenciales  
- Los informes que contienen información confidencial deberían protegerse en el nivel de acceso a datos requiriendo que los usuarios proporcionen credenciales para tener acceso a datos confidenciales. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). También puede proteger una carpeta para que no resulte accesible a usuarios no autorizados. Para obtener más información, vea [Proteger carpetas](../../reporting-services/security/secure-folders.md).  
+ Los informes que contienen información confidencial deberían protegerse en el nivel de acceso a datos requiriendo que los usuarios proporcionen credenciales para tener acceso a datos confidenciales. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). También puede proteger una carpeta para que no resulte accesible a usuarios no autorizados. Para obtener más información, vea [Proteger carpetas](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)   

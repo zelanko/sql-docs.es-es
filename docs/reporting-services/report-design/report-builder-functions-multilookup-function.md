@@ -1,5 +1,5 @@
 ---
-title: Función Multilookup (Generador de informes y SSRS) | Microsoft Docs
+title: Función Multilookup (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 94883e68a4543c7fe98794d8b89dc38f05d2b410
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577138"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081191"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Funciones del Generador de informes: función Multilookup
   Devuelve el conjunto de valores de primera coincidencia para el conjunto especificado de nombres a partir de un conjunto de datos que contiene pares nombre/valor.  
@@ -41,10 +41,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "Colores".  
   
-## <a name="return"></a>Devolución  
+## <a name="return"></a>Valor devuelto  
  Devuelve **VariantArray**o **Nothing** si no hay ninguna coincidencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use **Multilookup** para recuperar un conjunto de valores de un conjunto de datos para los pares nombre-valor donde cada par tiene una relación de uno a uno. **MultiLookup** es equivalente de llamar **Lookup** para un conjunto de nombres o de claves. Por ejemplo, para un parámetro de varios valores que se base en identificadores de clave principal, puede usar **Multilookup** en una expresión de un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no esté enlazado al parámetro ni a la tabla.  
   
  **Multilookup** realiza las operaciones siguientes:  
@@ -57,7 +57,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Para recuperar un único valor de un conjunto de datos con pares de nombre y valor para un nombre especificado donde hay una relación de uno a uno, use la [función Lookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Para recuperar varios valores de un conjunto de datos con pares de nombre y valor para un nombre donde hay una relación de uno a varios, use la [Función LookupSet &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md).  
   
- Se aplican las siguientes restricciones:  
+ Se aplican las restricciones que se indican a continuación:  
   
 -   Se evalúa**Multilookup** después de aplicar todas las expresiones de filtro.  
   
@@ -88,12 +88,12 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  El conjunto de datos CategoryNames contiene el identificador y el nombre de la categoría, tal como se muestra en la siguiente tabla.  
   
-|Id.|Nombre|  
+|id|Nombre|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
 |3|Clothing|  
-|4|Components|  
+|4|Componentes|  
   
  Para buscar los nombres que corresponden a la lista de identificadores, use **Multilookup**. Primero debe dividir la lista en una matriz de cadenas, llamar a **Multilookup** para recuperar los nombres de categoría y concatenar los resultados en una cadena.  
   

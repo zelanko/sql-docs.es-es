@@ -1,5 +1,5 @@
 ---
-title: Los límites de un conjunto de registros | Microsoft Docs
+title: Límites de un conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925912"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761231"
 ---
 # <a name="boundaries-of-a-recordset"></a>Límites de un conjunto de registros
-**Conjunto de registros** admite el **BOF** y **EOF** propiedades para delinear el principio y al final, respectivamente, del conjunto de datos. Puede pensar en **BOF** y **EOF** como registros "fantasmas" situados al principio y al final de la **Recordset**. Recuento **BOF** y **EOF**, nuestro ejemplo **Recordset** ahora tendría el aspecto siguiente:  
+**Recordset** admite las propiedades **BOF** y **EOF** para delimitar el principio y el final, respectivamente, del conjunto de registros. Puede pensar en **BOF** y **EOF** como registros "fantasma" que se colocan al principio y al final del **conjunto de registros**. Contando **BOF** y **EOF**, nuestro **conjunto de registros** de ejemplo tendría el siguiente aspecto:  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
 |BOF|||  
-|7|Peras secos orgánicos de Bob tío|30.0000|  
-|14|Tofu|23.2500|  
-|28|Rssle chucrut|45.6000|  
-|51|Manzanas secas Manjimup|53.0000|  
-|74|Longlife Tofu|10.0000|  
+|7|Peras secas orgánicas|30,0000|  
+|14|Tofu|23,2500|  
+|28|Rssle Sauerkraut|45,6000|  
+|51|Manzanas secas Manjimup|53,0000|  
+|74|Longlife Tofu|10,0000|  
 |EOF|||  
   
- Cuando un cursor se mueve más allá del último registro, **EOF** está establecido en **True**; en caso contrario, su valor es **False**. De forma similar, cuando mueve el cursor delante del primer registro, **BOF** está establecido en **True**; en caso contrario, su valor es **False**. Estas propiedades se usan habitualmente para enumerar los registros del conjunto de datos, como se muestra en el siguiente fragmento de código JScript.  
+ Cuando un cursor se desplaza más allá del último registro, **EOF** se establece en **true**; de lo contrario, su valor es **false**. Del mismo modo, cuando el cursor se mueve antes del primer registro, **BOF** se establece en **true**; de lo contrario, su valor es **false**. Estas propiedades se utilizan normalmente para enumerar los registros del conjunto de elementos, como se muestra en el siguiente fragmento de código JScript.  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -54,7 +54,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- Si ambos **BOF** y **EOF** son **True**, **Recordset** objeto está vacío. Ambas propiedades será **False** para un recién abierto vacío **Recordset** objeto. Puede usar el **BOF** y **EOF** propiedades conjuntamente para determinar si un **Recordset** objeto está vacío o no, como se muestra en el siguiente fragmento de código JScript.  
+ Si **BOF** y **EOF** son **true**, el objeto de **conjunto de registros** está vacío. Ambas propiedades serán **false** para un objeto **Recordset** no vacío recién abierto. Puede usar las propiedades **BOF** y **EOF** conjuntamente para determinar si un objeto de **conjunto de registros** está vacío o no, tal como se muestra en el siguiente fragmento de código JScript.  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  
@@ -67,6 +67,6 @@ else
 }  
 ```  
   
- Este esquema funciona para todos los tipos de cursor y es independiente de los proveedores subyacentes. Si se intenta determinar el está vacía de un **Recordset** objeto comprobando si su **RecordCount** valor de propiedad es cero (0) o no, que debe tomar precauciones para utilizar un cursor apropiado y un proveedor que admite la devolución del número de registros en el resultado.  
+ Este esquema funciona con todos los tipos de cursor y es independiente de los proveedores subyacentes. Si intenta determinar el Emptiness de un objeto de **conjunto de registros** comprobando si el valor de la propiedad **RecordCount** es cero (0) o no, debe tomar precauciones para usar un cursor y un proveedor adecuados que admitan la devolución del número de registros en el resultado.  
   
- Si elimina el último registro que queda en el **Recordset** objeto, el cursor se deja en un estado indeterminado. El **BOF** y **EOF** propiedades pueden permanecer **False** hasta que se intente colocar el registro actual, dependiendo del proveedor. Para obtener más información, consulte [registros de eliminación mediante el método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Si elimina el último registro restante en el objeto de **conjunto de registros** , el cursor se queda en un estado indeterminado. Es posible que las propiedades **BOF** y **EOF** sigan siendo **false** hasta que intente volver a colocar el registro actual, dependiendo del proveedor. Para obtener más información, vea [eliminar registros con el método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).

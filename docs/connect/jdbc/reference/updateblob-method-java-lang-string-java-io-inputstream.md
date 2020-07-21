@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 018cd71b-4b58-49a7-990e-d28dbb12da70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 23eaa798e05ae9653695cc33753e14cb57b72c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4371d10398ee70f337662f51416dcb13305b6c83
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997111"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922807"
 ---
 # <a name="updateblob-method-javalangstring-javaioinputstream"></a>Método updateBlob (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,12 +37,12 @@ public void updateBlob(java.lang.String columnLabel,
   
  *inputStream*  
   
- Objeto InputStream.  
+ Un objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateBlob especifica este método updateBlob en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

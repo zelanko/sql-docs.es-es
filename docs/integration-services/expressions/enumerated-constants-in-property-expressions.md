@@ -18,10 +18,10 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38ba2374821505dc3541ea05e76fd8aaecdcb5fc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297636"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
@@ -37,7 +37,7 @@ ms.locfileid: "71297636"
   
  Las siguientes secciones proporcionan información sobre constantes enumeradas:  
   
- [Paquete](#Package)  
+ [Package](#Package)  
   
  [Enumeradores de bucle Foreach](#Foreach)  
   
@@ -45,9 +45,9 @@ ms.locfileid: "71297636"
   
  [Tareas del plan de mantenimiento](#MaintenancePlanTasks)  
   
- [Propiedades comunes](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> Paquete  
+##  <a name="package"></a><a name="Package"></a> Paquete  
  Las siguientes tablas enumeran los nombres descriptivos y los equivalentes de valores numéricos de las propiedades de paquetes que se establecen utilizando valores de un enumerador.  
   
  Propiedad **PackageType**: se establece mediante el uso de valores de la enumeración **DTSPackageType**.  
@@ -65,9 +65,9 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en DTSCheckpointUsage|Valor numérico|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|Nunca|0|  
 |IfExists|1|  
-|Always|2|  
+|Siempre|2|  
   
  Propiedad **PackagePriorityClass**: se establece mediante el uso de valores de la enumeración **DTSPriorityClass**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "71297636"
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
-|Idle|4|  
+|Inactivo|4|  
   
  Propiedad **ProtectionLevel**: se establece mediante el uso de valores de la enumeración **DTSProtectionLevel**.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "71297636"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Restricciones de precedencia  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Restricciones de precedencia  
  Propiedad **EvalOp**: se establece mediante el uso de valores de la enumeración **DTSPrecedenceEvalOp**.  
   
 |Nombre descriptivo en DTSPrecedenceEvalOp|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Expresión|1|  
+|Expression|1|  
 |Restricción|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -105,11 +105,11 @@ ms.locfileid: "71297636"
 |Nombre descriptivo|Valor numérico|  
 |-------------------|-------------------|  
 |Correcto|0|  
-|Failure|1|  
+|Error|1|  
 |Completion|2|  
 |Canceled|3|  
   
-##  <a name="Foreach"></a> Enumeradores de bucle Foreach  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Enumeradores de bucle Foreach  
  El bucle Foreach incluye un conjunto de enumeradores con propiedades que se pueden establecer a partir de expresiones de propiedad.  
   
 ### <a name="foreach-ado-enumerator"></a>Enumerador de ADO para Foreach  
@@ -134,7 +134,7 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en EnumerationType|Valor numérico|  
 |--------------------------------------|-------------------|  
-|Navigator|0|  
+|Navegador|0|  
 |Nodo|1|  
 |NodeText|2|  
 |ElementCollection|3|  
@@ -143,11 +143,11 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en InnerElementType|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Navigator|0|  
+|Navegador|0|  
 |Nodo|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Tareas  
+##  <a name="tasks"></a><a name="Tasks"></a> Tareas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye numerosas tareas con propiedades que se establecen a partir de expresiones de propiedad.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services  
@@ -208,9 +208,9 @@ ms.locfileid: "71297636"
 |Nombre descriptivo en DTSFileSystemAttributes|Valor numérico|  
 |----------------------------------------------|-------------------|  
 |Normal|0|  
-|Archive|1|  
+|Archivar|1|  
 |Hidden|2|  
-|Solo lectura|4|  
+|ReadOnly|4|  
 |Sistema|8|  
   
 ### <a name="ftp-task"></a>Tarea FTP  
@@ -218,8 +218,8 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en DTSFTPOp|Valor numérico|  
 |-------------------------------|-------------------|  
-|Send|0|  
-|Receive|1|  
+|Envío|0|  
+|Recepción|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -266,9 +266,9 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en MailPriority|Valor numérico|  
 |-----------------------------------|-------------------|  
-|Alta|1|  
+|Alto|1|  
 |Normal|3|  
-|Baja|5|  
+|Bajo|5|  
   
 ### <a name="transfer-database-task"></a>Tarea Transferir bases de datos  
  Propiedad **Action**: se establece mediante el uso de valores de la enumeración **TransferAction**.  
@@ -276,7 +276,7 @@ ms.locfileid: "71297636"
 |Nombre descriptivo en TransferAction|Valor numérico|  
 |-------------------------------------|-------------------|  
 |Copiar|0|  
-|Mover|1|  
+|Move|1|  
   
  Propiedad **Method**: se establece mediante el uso de valores de la enumeración **TransferMethod**.  
   
@@ -334,8 +334,8 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en ExistingData|Valor numérico|  
 |-----------------------------------|-------------------|  
-|Reemplazar|0|  
-|Anexar|1|  
+|Replace|0|  
+|Append|1|  
   
 ### <a name="web-service-task"></a>Tarea Servicio web  
  Propiedad **OutputType**: se establece mediante el uso de valores de la enumeración **DTSOutputType**.  
@@ -420,10 +420,10 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en DTSXMLOperation|Valor numérico|  
 |--------------------------------------|-------------------|  
-|Validar|0|  
+|Validación|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Mezcla|3|  
+|Merge|3|  
 |Diferencias|4|  
 |Revisión|5|  
   
@@ -453,7 +453,7 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en DTSXMLXPathOperation|Valor numérico|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|Evaluación|0|  
 |Valores|1|  
 |NodeList|2|  
   
@@ -475,11 +475,11 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en DTSXMLDiffAlgorithm|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Auto|0|  
-|Rápido|1|  
+|Automático|0|  
+|Fast (rápido)|1|  
 |Preciso|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Tareas del plan de mantenimiento  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Tareas del plan de mantenimiento  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye un conjunto de tareas que realiza tareas de SQL Server para utilizar en planes de mantenimiento y paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite el trabajo con estas tareas mediante programación y la documentación de referencia de programación no incluye documentación de API de estas tareas y sus enumeradores.  
@@ -495,7 +495,7 @@ ms.locfileid: "71297636"
 |All|1|  
 |Sistema|2|  
 |Usuario|3|  
-|Specific|4|  
+|Específico|4|  
   
  Propiedad **TableSelectionType**: se establece mediante el uso de valores de la enumeración **TableSelection**.  
   
@@ -503,13 +503,13 @@ ms.locfileid: "71297636"
 |-------------------------------------|-------------------|  
 |None|0|  
 |All|1|  
-|Specific|2|  
+|Específico|2|  
   
  Propiedad **ObjectTypeSelection**: se establece mediante el uso de valores de la enumeración **ObjectType**.  
   
 |Nombre descriptivo en ObjectType|Valor numérico|  
 |---------------------------------|-------------------|  
-|Table|0|  
+|Tabla|0|  
 |Ver|1|  
 |TableView|2|  
   
@@ -518,14 +518,14 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
-|Auto|0|  
+|Automático|0|  
 |Manual|1|  
   
  Propiedad **ExistingBackupsAction**: se establece mediante el uso de valores de la enumeración **ActionForExistingBackups**.  
   
 |Nombre descriptivo en ActionForExistingBackups|Valor numérico|  
 |-----------------------------------------------|-------------------|  
-|Anexar|0|  
+|Append|0|  
 |Sobrescribir|1|  
   
  Propiedad **BackupAction**: se establece mediante el uso de valores de la enumeración **BackupTaskType**. Esta propiedad trabaja con la propiedad **BackupIsIncremental** para definir el tipo de copia de seguridad que realiza la tarea.  
@@ -558,7 +558,7 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en TimeUnitType|Valor numérico|  
 |-----------------------------------|-------------------|  
-|Day|0|  
+|Día|0|  
 |Semana|1|  
 |Month|2|  
 |Year|3|  
@@ -568,11 +568,11 @@ ms.locfileid: "71297636"
   
 |Nombre descriptivo en StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  
-|columna|1|  
+|Columna|1|  
 |Índice|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> Propiedades comunes  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Propiedades comunes  
  Los paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For pueden utilizar las siguientes enumeraciones para establecer las propiedades especificadas.  
   
  Propiedad **ForceExecutionResult**: se establece mediante el uso de valores de la enumeración **DTSForcedExecResult**.  
@@ -581,7 +581,7 @@ ms.locfileid: "71297636"
 |------------------------------------------|-------------------|  
 |None|-1|  
 |Correcto|0|  
-|Failure|1|  
+|Error|1|  
 |Completion|2|  
   
  Propiedad **IsolationLevel**: se establece mediante la enumeración **IsolationLevel** de .NET Framework. Para obtener más información, vea la biblioteca de clases de .NET Framework. en [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -591,15 +591,15 @@ ms.locfileid: "71297636"
 |Nombre descriptivo en DTSLoggingMode|Valor numérico|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Habilitado|1|  
-|Deshabilitado|2|  
+|habilitado|1|  
+|Disabled|2|  
   
  Propiedad **TransactionOption**: se establece mediante el uso de valores de la enumeración **DTSTransactionOption**.  
   
 |Nombre descriptivo en DTSTransactionOption|Valor numérico|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Admitida|1|  
+|Compatible|1|  
 |Obligatorio|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  

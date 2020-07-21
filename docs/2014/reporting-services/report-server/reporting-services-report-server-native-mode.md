@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3be08f0962b7440d5cd0812ad365a752aa1b89d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103311"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
   Un servidor de informes configurado para el modo nativo se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el Administrador de informes para administrar informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Use el administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar un servidor de informes en modo nativo.  
+ Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o administrador de informes para administrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informes. Use el administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar un servidor de informes en modo nativo.  
   
  Si el servidor de informes está configurado para el modo de SharePoint, debe usar las páginas de administración de contenido del sitio de SharePoint para administrar informes, orígenes de datos compartidos y otros elementos del servidor de informes.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66103311"
   
 -   [Hacer referencia a un recurso de imagen desde un informe](#bkmk_referenceimage)  
   
-##  <a name="bkmk_sum"></a> Resumen del modo nativo  
+##  <a name="summary-of-native-mode"></a><a name="bkmk_sum"></a> Resumen del modo nativo  
  Una instalación del modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consta de varias características de servidor que es necesario administrar y mantener. Entre estas características figuran las siguientes:  
   
 -   El servicio web del servidor de informes, que se ejecuta dentro del servicio del servidor de informes.  
@@ -55,7 +55,7 @@ ms.locfileid: "66103311"
   
 -   Si va a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un controlador de dominio, debe ser un administrador de dominio.  
   
-##  <a name="bkmk_managecontent"></a> Administrar contenido  
+##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Administrar contenido  
  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración del contenido hace referencia a la administración de informes, modelos, carpetas, recursos y orígenes de datos compartidos. Es posible administrar todos estos elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.  
   
 > [!NOTE]  
@@ -77,11 +77,11 @@ ms.locfileid: "66103311"
   
 -   Equilibrar las peticiones de procesamiento de informes que se envían al servidor mediante la programación del procesamiento de informes y la especificación de los informes que pueden ejecutarse a petición y de los que se cargan desde la memoria caché.  
   
- Permiso para realizar tareas de administración se proporcionan dos roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles. Para más información sobre estos roles predefinidos, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
+ El permiso para realizar tareas de administración se proporciona a través de dos roles predefinidos: **Administrador del sistema** y **Administrador de contenido**. La administración efectiva del contenido del servidor de informes requiere que esté asignado a ambos roles. Para más información sobre estos roles predefinidos, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md).  
   
  Las herramientas para administrar contenido del servidor de informes son [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el Administrador de informes. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El Administrador de informes se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes.  
   
-##  <a name="bkmk_manageresources"></a> Proteger y administrar un recurso  
+##  <a name="securing-and-managing-a-resource"></a><a name="bkmk_manageresources"></a>Proteger y administrar un recurso  
  Un recurso es un elemento administrado que se almacena en un servidor de informes pero no se procesa allí. Normalmente, un recurso proporciona contenido externo a los usuarios de los informes. Entre los ejemplos se incluye una imagen en un archivo .jpg o un archivo HTML que describe las reglas de negocios usadas en un informe. El archivo JPG o HTML está almacenado en el servidor de informes, pero el servidor de informes pasa el archivo directamente al explorador en lugar de procesarlo primero.  
   
  Para agregar un recurso a un servidor de informes, se carga o se publica un archivo:  
@@ -97,7 +97,7 @@ ms.locfileid: "66103311"
   
  Los recursos existen junto con informes, orígenes de datos compartidos, programaciones compartidas y carpetas como elementos con nombre en la jerarquía de carpetas del servidor de informes. Puede buscar, ver, proteger y establecer propiedades en los recursos de la misma manera que lo haría con cualquier elemento almacenado en un servidor de informes. Para ver o administrar un recurso, debe tener las tareas Ver recursos o Administrar recursos en su asignación de roles.  
   
-##  <a name="bkmk_referenceimage"></a> Hacer referencia a un recurso de imagen desde un informe  
+##  <a name="referencing-an-image-resource-from-a-report"></a><a name="bkmk_referenceimage"></a>Hacer referencia a un recurso de imagen desde un informe  
  Los recursos pueden contener una imagen a la que hace referencia en un informe. Si entre los requisitos de informe se incluye el uso de imágenes externas, piense en las ventajas siguientes de almacenar la imagen como un recurso:  
   
 -   Almacenamiento centralizado en la base de datos del servidor de informes. Si mueve la base de datos del servidor de informes y su contenido a otro equipo, la imagen externa permanece con el informe. No tiene que realizar un seguimiento de los archivos de imagen almacenados en disco en equipos diferentes.  
@@ -106,8 +106,8 @@ ms.locfileid: "66103311"
   
  Para usar un recurso de imagen de un informe, agregue el archivo de imagen al proyecto y publíquelo junto con el informe. Una vez publicada la imagen, puede actualizar la referencia de la imagen en el informe de manera que señale al recurso del servidor de informes y, a continuación, vuelva a publicar únicamente el informe para guardar sus cambios. Puede actualizar ahora la imagen posteriormente con independencia del informe volviendo a publicar el recurso. El informe usa la versión más actual de la imagen disponible en el servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Solucionar problemas en una instalación de Reporting Services](../install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Solución de problemas en una instalación de Reporting Services](../install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

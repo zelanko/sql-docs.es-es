@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5507000a-98b1-40b1-b8a7-16365ae80d7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 94f0bd637a50e56db86394153bec4fe8fdb492b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 924a9d15a544d618002acb91dd669221cc10654b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67981815"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906300"
 ---
 # <a name="getminorversion-method-sqlserverdriver"></a>Método getMinorVersion (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +37,8 @@ public int getMinorVersion()
 ## <a name="return-value"></a>Valor devuelto  
  Un valor **int** que contiene el número de versión secundaria del controlador JDBC.  
   
-## <a name="remarks"></a>Notas  
- Este método getMinorVersion se especifica mediante el método getMinorVersion de la interfaz java. SQL. driver.  
+## <a name="remarks"></a>Observaciones  
+ El método getMinorVersion especifica este método getMinorVersion en la interfaz java.sql.Driver.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

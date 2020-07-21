@@ -1,5 +1,5 @@
 ---
-title: 'Paso 5: Prueba de los paquetes actualizados | Microsoft Docs'
+title: 'Paso 5: Probar los paquetes actualizados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e90af0ecf9972b7365f42fcc307181c4d657e3c5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296109"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>Lección 1-5: Probar los paquetes actualizados
@@ -45,7 +45,7 @@ Si los paquetes no se ejecutan correctamente, debe solucionarlos antes de ir a l
 3.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Creación del paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Lección 2: Crear el paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

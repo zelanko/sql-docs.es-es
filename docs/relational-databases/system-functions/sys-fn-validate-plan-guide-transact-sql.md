@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
+title: Sys. fn_validate_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898273"
 ---
-# <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Comprueba la validez de la guía de plan especificada. La función sys.fn_validate_plan_guide devuelve el primer mensaje de error encontrado cuando la guía de plan se aplica a su consulta. Se devuelve un conjunto de filas vacío cuando la guía de plan es válida. Las guías de plan pueden volverse no válidas una vez realizados los cambios en el diseño físico de la base de datos. Por ejemplo, si una guía de plan especifica un índice determinado y se quita después dicho índice, la consulta ya no podrá utilizar la guía de plan.  
   
@@ -44,11 +44,11 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>Argumentos  
  *plan_guide_id*  
- Es el identificador de la Guía de plan como se notifica en el [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) vista de catálogo. *plan_guide_id* es **int** no tiene ningún valor predeterminado.  
+ Es el ID. de la guía de plan tal y como se muestra en la vista de catálogo [Sys. plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) . *plan_guide_id* es de **tipo int** y no tiene ningún valor predeterminado.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|Id. del mensaje de error.|  
 |severity|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25.|  
@@ -74,8 +74,8 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>b. Validar la guía de plan de prueba antes de implementar un cambio en la base de datos  
- El ejemplo siguiente utiliza una transacción explícita para quitar un índice. El `sys.fn_validate_plan_guide` se ejecuta la función para determinar si esta acción invalidará cualquier guía de plan en la base de datos. En función de los resultados de la función, se confirma la instrucción `DROP INDEX` o se revierte la transacción y no se quita el índice.  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Validar la guía de plan de prueba antes de implementar un cambio en la base de datos  
+ El ejemplo siguiente utiliza una transacción explícita para quitar un índice. La `sys.fn_validate_plan_guide` función se ejecuta para determinar si esta acción invalidará las guías de plan de la base de datos. En función de los resultados de la función, se confirma la instrucción `DROP INDEX` o se revierte la transacción y no se quita el índice.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guías de plan](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

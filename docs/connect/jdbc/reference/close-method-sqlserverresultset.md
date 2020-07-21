@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8f666ab4b382d14ea64b7fd8638aa0d010ff8ecd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955583"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923629"
 ---
 # <a name="close-method-sqlserverresultset"></a>Método close (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método close especifica este método close en la interfaz java.sql.ResultSet.  
   
  Un objeto SQLServerResultSet se cierra automáticamente por el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) que lo generó cuando ese objeto SQLServerStatement se cierra, se vuelve a utilizar o se utiliza para recuperar el siguiente resultado en un flujo de varios resultados. También se cierra un objeto SQLServerResultSet automáticamente cuando se recopila como elemento no utilizado.  

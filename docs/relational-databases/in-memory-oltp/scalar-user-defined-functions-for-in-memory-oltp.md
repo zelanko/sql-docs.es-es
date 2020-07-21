@@ -1,5 +1,6 @@
 ---
 title: Funciones escalares definidas por el usuario para OLTP en memoria | Microsoft Docs
+description: Obtenga información sobre cómo crear y quitar funciones escalares definidas por el usuario y compiladas de forma nativa para OLTP en memoria en SQL Server. La compilación nativa mejora el rendimiento.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8914f495767e6942b12f5c4dd7b61fd4a6a5bebf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735027"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Funciones escalares definidas por el usuario para OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear y eliminar funciones escalares definidas por el usuario y compiladas de forma nativa. También puede modificar estas funciones definidas por el usuario. La compilación nativa mejora el rendimiento de la evaluación de funciones definidas por el usuario en Transact-SQL.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68111765"
   
  El procedimiento almacenado [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) se puede usar con la función escalar definida por el usuario y compilada de forma nativa. Se creará la función que se va a volver a compilar con la definición que hay en los metadatos.  
   
- En el ejemplo siguiente se muestra una UDF escalar de la base de datos de muestra [AdventureWorks2016CTP3](https://www.microsoft.com/download/details.aspx?id=49502) .  
+ En el ejemplo siguiente se muestra una UDF escalar de la base de datos de muestra [AdventureWorks2016CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) .  
   
 ```sql  
 CREATE FUNCTION [dbo].[ufnLeadingZeros_native](@Value int)   
@@ -91,7 +92,7 @@ END
   
 -   No se pueden quitar ni modificar cuando se hacen referencia a estas mediante una función definida por el usuario o un procedimiento almacenado enlazados al esquema.  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  Las funciones escalares definidas por el usuario y compiladas de forma nativa admiten SHOWPLAN_XML. Siguen las especificaciones del esquema general SHOWPLAN_XML, al igual que con los procedimientos almacenados compilados de forma nativa. El elemento base de las funciones definidas por el usuario es `<UDF>`.  
   
  STATISTICS XML no es compatible con las funciones escalares definidas por el usuario y compiladas de forma nativa. Al ejecutar una consulta que hace referencia a la función definida por el usuario, con la opción STATISTICS XML habilitada, se devuelve el contenido XML sin la parte de la función definida por el usuario.  

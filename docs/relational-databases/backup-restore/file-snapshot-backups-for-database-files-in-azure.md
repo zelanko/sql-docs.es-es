@@ -1,5 +1,6 @@
 ---
 title: Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure | Microsoft Docs
+description: La copia de seguridad de instantánea de archivos de SQL Server usa instantáneas de Azure para proporcionar copias de seguridad y restauraciones más rápidas de los archivos de base de datos almacenados con el servicio Azure Blob Storage.
 ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718068"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La copia de seguridad de instantánea de archivos usa las instantáneas de Azure para proporcionar copias de seguridad prácticamente instantáneas y restauraciones más rápidas de los archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Azure. Esta función permite simplificar las directivas de copia de seguridad y restauración. Para obtener una demostración en vivo, consulte [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Demostración de restauración a un momento dado). Para obtener más información sobre cómo almacenar los archivos de base de datos mediante el servicio de almacenamiento de blobs de Azure, vea [Archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La copia de seguridad de instantánea de archivos usa las instantáneas de Azure para proporcionar copias de seguridad prácticamente instantáneas y restauraciones más rápidas de los archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Azure. Esta capacidad le permite simplificar las directivas de copia de seguridad y restauración. Para obtener una demostración en vivo, consulte [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Demostración de restauración a un momento dado). Para obtener más información sobre cómo almacenar los archivos de base de datos mediante el servicio de almacenamiento de blobs de Azure, vea [Archivos de datos de SQL Server en Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
- ![diagrama de arquitectura de copia de seguridad de instantánea](../../relational-databases/backup-restore/media/snapshotbackups.PNG "diagrama de arquitectura de copia de seguridad de instantánea")  
+ ![Diagrama de arquitectura de copia de seguridad de instantánea](../../relational-databases/backup-restore/media/snapshotbackups.PNG "Diagrama de arquitectura de copia de seguridad de instantánea")  
   
  **Descargar**  
   
@@ -31,10 +32,10 @@ ms.locfileid: "68086280"
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Uso de instantáneas de Azure para hacer copias de seguridad de los archivos de base de datos almacenados en Azure  
   
-### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>¿Qué es una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ?  
+### <a name="what-is-a-ssnoversion-file-snapshot-backup"></a>¿Qué es una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ?  
  Una copia de seguridad de instantánea de archivos se compone de un conjunto de instantáneas de Azure de los blobs que contienen los archivos de base de datos, más un archivo de copia de seguridad que incluye punteros a esas instantáneas de archivos. Cada instantánea de archivos se almacena en el contenedor junto con el blob base. Se puede especificar que el archivo de copia de seguridad se escriba en una dirección URL, un disco o una cinta. La opción recomendada es la de dirección URL. Consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md) para obtener más información sobre copias de seguridad y [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) para copias de seguridad en la dirección URL.  
   
- ![arquitectura de la característica de instantánea](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "arquitectura de la característica de instantánea")  
+ ![Arquitectura de la característica de instantánea](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "Arquitectura de la característica de instantánea")  
   
  Si se elimina el blob de base, se invalidará el conjunto de copia de seguridad y no se podrán anular los blobs que contengan instantáneas de archivos (a menos que especifique expresamente que se anule el blob con todas sus instantáneas de archivo). Por otro lado, anular una base de datos o un archivo de datos no elimina el blob de base ni ninguno de sus archivos de instantáneas. Además, aunque se elimine el archivo de copia de seguridad, no se elimina ninguna de las instantáneas de archivos del conjunto de copia de seguridad. Para eliminar un conjunto de copia de seguridad de instantánea de archivos, use el procedimiento almacenado del sistema **sys.sp_delete_backup** .  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68086280"
  **Eliminar instantáneas de archivos de copia de seguridad huérfanas:** es posible que haya instantáneas de archivos huérfanas si se elimina el archivo de copia de seguridad sin usar el procedimiento almacenado del sistema **sys.sp_delete_backup** o si se anula una base de datos o un archivo de base de datos mientras los blobs que contienen la base de datos o el archivo de base de datos tienen instantáneas de archivos de copia de seguridad asociadas a ellos. Para identificar las instantáneas de archivos que puedan estar huérfanas, use la función del sistema **sys.fn_db_backup_file_snapshots** para hacer una lista con todas las instantáneas de los archivos de la base de datos. Para identificar las instantáneas de archivos que forman parte de un determinado conjunto de copia de seguridad de instantánea de archivos, use el procedimiento almacenado del sistema RESTORE FILELISTONLY. Después, puede usar el procedimiento almacenado del sistema **sys.sp_delete_backup_file_snapshot** para eliminar una instantánea de archivos de copia de seguridad que se haya quedado huérfana. Al final de este tema podrá consultar ejemplos en los que se usan esta función de sistema y estos procedimientos almacenados del sistema. Para obtener más información, vea [sp_delete_backup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md), [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md), [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) y [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
 ### <a name="considerations-and-limitations"></a>Consideraciones y limitaciones  
- **Premium Storage:** las siguientes limitaciones se aplican al usar Premium Storage.  
+ **Almacenamiento premium:** las siguientes limitaciones se aplican al usar Premium Storage.  
   
 -   El propio archivo de copia de seguridad no puede almacenarse usando almacenamiento premium.  
   
@@ -111,7 +112,7 @@ BACKUP LOG AdventureWorks2016
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>Restauración a partir de una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="restoring-from-a-ssnoversion-file-snapshot-backup"></a>Restauración a partir de una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En el ejemplo siguiente, se restaura la base de datos AdventureWorks2016 mediante un conjunto de copia de seguridad de instantánea de archivos del registro de transacciones y se muestra una operación de recuperación. Observe que puede restaurar una base de datos a partir de un único conjunto de copia de seguridad de instantánea de archivos del registro de transacciones.  
   
 ```  
@@ -120,7 +121,7 @@ WITH RECOVERY, REPLACE;
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup-to-a-point-in-time"></a>Restauración a partir de una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un momento dado  
+## <a name="restoring-from-a-ssnoversion-file-snapshot-backup-to-a-point-in-time"></a>Restauración a partir de una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un momento dado  
  En el ejemplo siguiente se restaura la base de datos AdventureWorks2016 a su estado en un momento en el tiempo. Para ello, se usan dos conjuntos de copia de seguridad de instantánea de archivos del registro de transacciones y se muestra una operación de recuperación.  
   
 ```  
@@ -148,7 +149,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>Visualización de instantáneas de archivos de copia de seguridad de base de datos  
- Para ver instantáneas de archivos del blob de base para cada archivo de base de datos, use la función del sistema **sys.fn_db_backup_file_snapshots** . Esta función del sistema permite ver todas las instantáneas de archivos de copia de seguridad de cada blob de base para una base de datos almacenada con el servicio de almacenamiento de blobs de Azure. Un ejemplo de uso principal de esta función es identificar las instantáneas de archivo de copia de seguridad de una base de datos que se mantienen cuando se elimina el archivo de copia de seguridad de un conjunto de copia de seguridad de instantánea de archivo mediante un mecanismo distinto del procedimiento almacenado del sistema **sys.sp_delete_backup** . Para determinar las instantáneas de archivo de copia de seguridad que forman parte de los conjuntos de copia de seguridad intactos y aquellas que no forman parte de esos conjuntos intactos, use el procedimiento almacenado del sistema **RESTORE FILELISTONLY** para enumerar las instantáneas de archivo que pertenecen a cada archivo de copia de seguridad. Para obtener más información, vea [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) y [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Para ver instantáneas de archivos del blob de base para cada archivo de base de datos, use la función del sistema **sys.fn_db_backup_file_snapshots** . Esta función del sistema permite ver todas las instantáneas de archivos de copia de seguridad de cada blob de base para una base de datos almacenada con el servicio de almacenamiento de blobs de Azure. Un ejemplo de uso principal de esta función es identificar las instantáneas de archivo de copia de seguridad de una base de datos que se mantienen cuando se elimina el archivo de copia de seguridad de un conjunto de copia de seguridad de instantánea de archivo mediante un mecanismo distinto del procedimiento almacenado del sistema **sys.sp_delete_backup** . Para determinar las instantáneas de archivo de copia de seguridad que forman parte de los conjuntos de copia de seguridad intactos y aquellas que no forman parte de esos conjuntos intactos, use el procedimiento almacenado del sistema **RESTORE FILELISTONLY**  para enumerar las instantáneas de archivo que pertenecen a cada archivo de copia de seguridad. Para obtener más información, vea [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) y [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  En el ejemplo siguiente se devuelve la lista de todas las instantáneas de archivos de copia de seguridad correspondientes a la base de datos especificada.  
   
@@ -163,7 +164,7 @@ GO
 ```  
   
 ## <a name="deleting-an-individual-database-backup-file-snapshot"></a>Eliminación de una única instantánea de archivos de copia de seguridad de base de datos  
- Para eliminar una instantánea de archivo de copia de seguridad de un blob de base de datos, use el procedimiento almacenado del sistema **sys.sp_delete_backup_file_snapshot** . Un ejemplo de uso principal de este procedimiento almacenado del sistema es eliminar los archivos de instantánea de archivo huérfanos que permanecen después de que se haya eliminado un archivo de copia de seguridad usando un método distinto del procedimiento almacenado del sistema **sys.sp_delete_backup**. Para obtener más información, vea [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
+ Para eliminar una instantánea de archivo de copia de seguridad de un blob de base de datos, use el procedimiento almacenado del sistema **sys.sp_delete_backup_file_snapshot** . Un ejemplo de uso principal de este procedimiento almacenado del sistema es eliminar los archivos de instantánea de archivo huérfanos que permanecen después de que se haya eliminado un archivo de copia de seguridad usando un método distinto del procedimiento almacenado del sistema **sys.sp_delete_backup** . Para obtener más información, vea [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md).  
   
 > [!WARNING]  
 >  La eliminación de una instantánea de archivos individual que forma parte de un conjunto de copia de seguridad de instantánea de archivos invalidará el conjunto de copia de seguridad.  

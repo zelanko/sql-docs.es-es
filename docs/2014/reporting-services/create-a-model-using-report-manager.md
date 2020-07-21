@@ -1,5 +1,5 @@
 ---
-title: Crear un modelo usando el Administrador de informes | Microsoft Docs
+title: Crear un modelo mediante Administrador de informes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109672"
 ---
 # <a name="create-a-model-using-report-manager"></a>Crear un modelo con el Administrador de informes
@@ -26,7 +26,7 @@ ms.locfileid: "66109672"
  El modelo de informe que se genera se basa completamente en el esquema del origen de datos compartido. No puede elegir qué partes del origen de datos se incluyen en el modelo, ni puede editar las reglas o metadatos de un modelo generado. Sin embargo, puede establecer las propiedades del modelo después de que se haya generado y definir las asignaciones de roles que restrinjan el acceso a todo el modelo o parte de él.  
   
 > [!NOTE]  
->  Un modelo basado en Oracle generado mediante el Administrador de informes o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] incluirá objetos de base de datos que forman parte del esquema de la cuenta de usuario usada para conectarse al origen de datos de Oracle. El nombre de la cuenta de usuario está especificado en las credenciales de propiedades del origen de datos.  
+>  Un modelo basado en Oracle generado mediante administrador de informes o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 [!INCLUDE[SPS2010](../includes/sps2010-md.md)] incluirá objetos de base de datos que forman parte del esquema de la cuenta de usuario utilizada para conectarse al origen de datos de Oracle. El nombre de la cuenta de usuario está especificado en las credenciales de propiedades del origen de datos.  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>Para crear un nuevo origen de datos para un modelo de informe con el Administrador de informes  
   
@@ -46,9 +46,9 @@ ms.locfileid: "66109672"
   
 8.  Seleccione el método de conexión que utilizarán los usuarios del Generador de informes para conectarse a la base de datos.  
   
-    -   Autenticación de Windows: Seleccione esta opción cuando desee que el sistema operativo para autenticar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a los usuarios. Esta opción permite que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice las características de seguridad de Windows, como el cifrado de contraseñas, para autenticar a los usuarios. Se recomienda encarecidamente seleccionar esta opción.  
+    -   Autenticación de Windows: seleccione esta opción cuando desee que el sistema operativo autentique a los usuarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta opción permite que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilice las características de seguridad de Windows, como el cifrado de contraseñas, para autenticar a los usuarios. Se recomienda encarecidamente seleccionar esta opción.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Autenticación: Seleccione esta opción cuando desee que los usuarios utilicen un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuenta de inicio de sesión que creó. Los usuarios deben proporcionar un nombre y una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] válidos.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Autenticación: Seleccione esta opción si desea que los usuarios utilicen una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuenta de inicio de sesión que haya creado. Los usuarios deben proporcionar un nombre y una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] válidos.  
   
         > [!CAUTION]  
         >  Siempre que sea posible, utilice la autenticación de Windows.  
@@ -79,7 +79,7 @@ ms.locfileid: "66109672"
   
      El modelo de informe se crea y guarda en la ubicación que especificó. Puede asignar los permisos a este modelo con el Administrador de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceder permisos en un servidor de informes en modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)  

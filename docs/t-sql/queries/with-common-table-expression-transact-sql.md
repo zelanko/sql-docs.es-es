@@ -1,6 +1,6 @@
 ---
 title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL sobre cómo usar expresiones de tabla comunes (CTE) en las consultas.
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -27,15 +27,15 @@ ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bc1a652b84aeb088046d6b76d40cbd5227d3672
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948093"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011354"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Se deriva de una consulta simple y se define en el ámbito de ejecución de una sola instrucción SELECT, INSERT, UPDATE, DELETE o MERGE. Esta cláusula también se puede utilizar en una instrucción CREATE VIEW como parte de la instrucción SELECT que la define. Una expresión de tabla común puede incluir referencias a ella misma. Esto se conoce como expresión de tabla común recursiva.  
   
@@ -43,7 +43,7 @@ Especifica un conjunto de resultados temporal con nombre, conocido como expresi�
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
   
 <common_table_expression>::=  
@@ -64,7 +64,7 @@ Es un identificador válido de la expresión de tabla común. *expression_name* 
   
  Si se define más de una *definición_de_consulta_de_CTE*, es preciso unir las definiciones de consulta mediante uno de estos operadores de conjuntos: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Instrucciones para crear y utilizar expresiones de tabla comunes  
 Las instrucciones siguientes se aplican a expresiones de tabla comunes no recursivas. Para obtener instrucciones que se aplican a expresiones de tabla comunes recursivas, consulte [Instrucciones para definir y usar expresiones de tabla comunes recursivas](#guidelines-for-defining-and-using-recursive-common-table-expressions) más adelante.  
@@ -142,7 +142,7 @@ Las instrucciones siguientes se aplican a expresiones de tabla comunes no recurs
   
 -   Las funciones analíticas y de agregado de la parte recursiva del CTE se aplican al conjunto para el nivel de recursividad actual y no al conjunto para el CTE. Las funciones como `ROW_NUMBER` solo funcionan sobre el subconjunto de datos que les pasa el nivel de recursividad actual y no sobre todo el conjunto de datos pasados a la parte recursiva de la CTE. Para más información, vea el ejemplo K "Utilizar funciones analíticas en una CTE recursiva" más abajo.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Características y limitaciones de las expresiones de tabla comunes en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>Características y limitaciones de las expresiones de tabla comunes en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  La implementación actual de CTE en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] presenta las siguientes características y limitaciones:  
   
 -   Una CTE se puede especificar en una instrucción `SELECT`.  
@@ -288,9 +288,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -307,12 +305,10 @@ FROM DirectReports
 ORDER BY ManagerID;   
 ```  
   
-### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. Usar una expresión de tabla común recursiva para mostrar dos niveles de recursividad  
+#### <a name="using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>Usar una expresión de tabla común recursiva para mostrar dos niveles de recursividad  
  En el ejemplo siguiente se muestran los directivos y los empleados que tienen a su cargo. El número de niveles devueltos está limitado a dos.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
 (  
     SELECT ManagerID, EmployeeID, Title, 0 AS EmployeeLevel  
@@ -329,12 +325,10 @@ FROM DirectReports
 WHERE EmployeeLevel <= 2 ;  
 ```  
   
-### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. Usar una expresión de tabla común recursiva para mostrar una lista jerárquica  
- El ejemplo siguiente, que está basado en el ejemplo D, agrega los nombres del directivo y de los empleados, y sus cargos respectivos. La jerarquía de directivos y empleados se resalta más mediante la aplicación de sangrías a cada nivel.  
+#### <a name="using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>Usar una expresión de tabla común recursiva para mostrar una lista jerárquica  
+ En el siguiente ejemplo se agregan los nombres del directivo y de los empleados, así como sus cargos respectivos. La jerarquía de directivos y empleados se resalta más mediante la aplicación de sangrías a cada nivel.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
 AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),  
         e.Title,  
@@ -359,12 +353,10 @@ FROM DirectReports
 ORDER BY Sort;  
 ```  
   
-### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. Usar MAXRECURSION para cancelar una instrucción  
+#### <a name="using-maxrecursion-to-cancel-a-statement"></a>Usar MAXRECURSION para cancelar una instrucción  
  `MAXRECURSION` se puede utilizar para impedir que una CTE recursiva con formato incorrecto entre en un bucle infinito. En el ejemplo siguiente se crea un bucle infinito intencionadamente y se utiliza la sugerencia `MAXRECURSION` para limitar el número de niveles de recursividad a dos.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 --Creates an infinite loop  
 WITH cte (EmployeeID, ManagerID, Title) as  
 (  
@@ -385,9 +377,7 @@ OPTION (MAXRECURSION 2);
   
  Después de corregir el error de código, ya no se requiere MAXRECURSION. En el siguiente ejemplo se muestra el código corregido.  
   
-```sql  
-USE AdventureWorks2012;  
-GO  
+```sql
 WITH cte (EmployeeID, ManagerID, Title)  
 AS  
 (  
@@ -403,7 +393,7 @@ SELECT EmployeeID, ManagerID, Title
 FROM cte;  
 ```  
   
-### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. Usar una expresión de tabla común para recorrer selectivamente y paso a paso una relación recursiva en una instrucción SELECT  
+### <a name="e-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>E. Usar una expresión de tabla común para recorrer selectivamente y paso a paso una relación recursiva en una instrucción SELECT  
  En el ejemplo siguiente se muestra la jerarquía de ensamblados y componentes de producto necesarios para fabricar la bicicleta para `ProductAssemblyID = 800`.  
   
 ```sql  
@@ -432,7 +422,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. Usar una CTE recursiva en una instrucción UPDATE  
+### <a name="f-using-a-recursive-cte-in-an-update-statement"></a>F. Usar una CTE recursiva en una instrucción UPDATE  
  En el siguiente ejemplo se actualiza el valor de `PerAssemblyQty` para todos los componentes que se usan para fabricar el producto 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). La expresión de tabla común devuelve una lista jerárquica de los elementos que se utilizan para fabricar `ProductAssemblyID 800` y los componentes que se utilizan para crear esos elementos, etc. Solo se modifican las filas devueltas por la expresión de tabla común.  
   
 ```sql  
@@ -460,7 +450,7 @@ JOIN Parts AS d ON c.ProductAssemblyID = d.AssemblyID
 WHERE d.ComponentLevel = 0;  
 ```  
   
-### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. Usar varios miembros no recursivos y recursivos  
+### <a name="h-using-multiple-anchor-and-recursive-members"></a>H. Usar varios miembros no recursivos y recursivos  
  En el ejemplo siguiente se utilizan varios miembros no recursivos y recursivos para devolver todos los antecesores de una persona especificada. Se crea una tabla y se insertan valores en ella para establecer la genealogía familiar devuelta por la CTE recursiva.  
   
 ```sql  
@@ -507,7 +497,7 @@ WHERE Generation.ID = Person.ID;
 GO  
 ```  
   
-###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. Utilizar funciones analíticas en una CTE recursiva  
+###  <a name="i-using-analytical-functions-in-a-recursive-cte"></a><a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> I. Utilizar funciones analíticas en una CTE recursiva  
  En el siguiente ejemplo se muestra un error que puede producirse al utilizar una función analítica o de agregado en la parte recursiva de una CTE.  
   
 ```sql  
@@ -578,9 +568,9 @@ Lvl  N
   
  `N` devuelve 1 para cada paso de la parte recursiva del CTE, porque solo el subconjunto de datos para ese nivel de recursividad se pasa a `ROWNUMBER`. Por cada iteración de la parte recursiva de la consulta solo se pasa una fila a `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Usar una expresión de tabla común en una instrucción CREATE TABLE AS SELECT  
+### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. Usar una expresión de tabla común en una instrucción CREATE TABLE AS SELECT  
  En el siguiente ejemplo se crea una tabla que contiene el número total de pedidos de venta por año de cada representante de ventas en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -609,7 +599,7 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Usar una expresión de tabla común en una instrucción CREATE EXTERNAL TABLE AS SELECT  
+### <a name="k-using-a-common-table-expression-within-a-cetas-statement"></a>K. Usar una expresión de tabla común en una instrucción CREATE EXTERNAL TABLE AS SELECT  
  En el siguiente ejemplo se crea una tabla externa que contiene el número total de pedidos de venta por año de cada representante de ventas en [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```sql  
@@ -639,7 +629,7 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Uso de varias CTE separadas por comas en una instrucción  
+### <a name="l-using-multiple-comma-separated-ctes-in-a-statement"></a>L. Uso de varias CTE separadas por comas en una instrucción  
  En el siguiente ejemplo se muestra cómo incluir dos CTE en una misma instrucción. Las CTE no se pueden anidar (no debe haber recursión).  
   
 ```sql  

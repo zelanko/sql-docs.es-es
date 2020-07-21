@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2915b0214b5b1a53392f025fbb4cce6eb3d14674
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075612"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547037"
 ---
 # <a name="define-database-dimensions"></a>Definir dimensiones de base de datos
-  Utilice el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar una dimensión de base de datos existente en un proyecto o base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede usar el Diseñador de dimensiones para realizar lo siguiente:  
+  Use el diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para configurar una dimensión de base de datos existente en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto o base de datos de. Puede usar el Diseñador de dimensiones para realizar lo siguiente:  
   
 -   Configurar las propiedades de dimensión-nivel.  
   
@@ -42,9 +41,9 @@ ms.locfileid: "66075612"
   
 |Pestaña|Descripción|  
 |---------|-----------------|  
-|**Estructura de dimensión**|Use esta ficha para trabajar con la estructura de una dimensión para examinar o crear el esquema de vista del origen de datos para una dimensión, trabajar con atributos y organizar atributos en jerarquías definidas por el usuario.|  
+|**Estructura de dimensión**|Use esta pestaña para trabajar con la estructura de una dimensión: para examinar o crear el esquema de la vista del origen de datos para una dimensión, trabajar con atributos y organizar atributos en jerarquías definidas por el usuario.|  
 |**Relaciones de atributo**|Utilice esta pestaña para crear, modificar o eliminar las relaciones de atributo de una dimensión.|  
-|**Traducciones**|Utilice esta pestaña para agregar y modificar traducciones de metadatos de dimensiones en distintos idiomas.|  
+|**Translations**|Utilice esta pestaña para agregar y modificar traducciones de metadatos de dimensiones en distintos idiomas.|  
 |**Browser**|Utilice esta pestaña para examinar los miembros de una dimensión procesada y revisar las traducciones de metadatos de dimensiones.|  
   
  En los siguientes temas se describen las tareas que puede realizar en el Diseñador de dimensiones.  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 638aca05-63e4-4d73-a9c8-e0442f775720
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd9252827e7c7bec70636937bc89dd5390e68519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ff46f64ffef7c4c0d0438332720deff32a0c86ea
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980939"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904573"
 ---
 # <a name="getparametertype-method-sqlserverparametermetadata"></a>Método getParameterType (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public int getParameterType(int param)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getParameterType se especifica mediante el método getParameterType de la interfaz java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getParameterType especifica este método getParameterType en la interfaz java.sql.ParameterMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

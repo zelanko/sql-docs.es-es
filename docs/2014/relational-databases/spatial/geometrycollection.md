@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b882aad6557eb812ee44eeeb46ecbbbda86061c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996319"
 ---
-# <a name="geometrycollection"></a>Colección Geometry
+# <a name="geometrycollection"></a>GeometryCollection
   Un `GeometryCollection` es una colección de cero o más `geometry` o `geography` instancias. Un `GeometryCollection` puede estar vacío.  
   
 ## <a name="geometrycollection-instances"></a>Instancias de GeometryCollection  
@@ -62,7 +61,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION(POINT(3 3 1), POLYGON((0 0 2, 1 10 3, 1 0 4, 0 0 2)))', 1);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Datos espaciales &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

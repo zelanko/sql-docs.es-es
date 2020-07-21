@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 048f737266e815a02058a51ebebce0b0f1ff46af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afba038563ec5934a874811c804dd7a4aa9fff1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084917"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523101"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servicios de minería de datos y orígenes de datos
   La minería de datos requiere una conexión a una instancia de SQL Server Analysis Services. Los datos de un cubo no son necesarios para la minería de datos y se recomienda el uso de orígenes relacionales; sin embargo, la minería de datos usa los componentes proporcionados por el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -23,7 +22,7 @@ ms.locfileid: "66084917"
  En este tema se proporciona información que es necesario conocer al conectarse a una instancia de SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear, procesar, implementar o consultar modelos de minería de datos.  
   
 ## <a name="data-mining-services"></a>Servicios de minería de datos  
- El componente de servidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es la aplicación msmdsrv.exe, que por lo general se ejecuta como un servicio de Windows. Esta aplicación está formada por componentes de seguridad, un componente de escucha XML for Analysis (XMLA), un componente de procesador de consultas y otros componentes internos que realizan las siguientes funciones:  
+ El componente de servidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es la aplicación msmdsrv.exe, que normalmente se ejecuta como un servicio de Windows. Esta aplicación está formada por componentes de seguridad, un componente de escucha XML for Analysis (XMLA), un componente de procesador de consultas y otros componentes internos que realizan las siguientes funciones:  
   
 -   Analizar instrucciones recibidas de clientes  
   
@@ -44,13 +43,13 @@ ms.locfileid: "66084917"
 -   Administrar recursos del servidor  
   
 ### <a name="xmla-listener"></a>Componente de escucha XMLA  
- El componente de escucha XMLA controla todas las comunicaciones XMLA entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y sus clientes. El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` puede utilizarse la opción de configuración en el archivo msmdsrv.ini para especificar un puerto en el que un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha la instancia. Un valor de 0 en este archivo indica que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto predeterminado. A menos que se especifique lo contrario, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza los siguientes puertos TCP predeterminados:  
+ El componente de escucha XMLA controla todas las comunicaciones XMLA entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y sus clientes. El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` valor de configuración del archivo msmdsrv.ini se puede usar para especificar un puerto en el que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha una instancia. Un valor de 0 en este archivo indica que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto predeterminado. A menos que se especifique lo contrario, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza los siguientes puertos TCP predeterminados:  
   
-|Puerto|Descripción|  
+|Port|Descripción|  
 |----------|-----------------|  
-|2383|Instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|2382|Redirector de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|Se asigna dinámicamente al iniciar el servidor.|Instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|2383|Instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|2382|Redirector para otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|Se asigna dinámicamente al iniciar el servidor.|Instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
  Para más información sobre cómo controlar los puertos usados por este servicio, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66084917"
 ## <a name="configuring-permissions-and-server-properties"></a>Configurar permisos y propiedades del servidor  
  La minería de datos requiere permisos adicionales en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La mayoría de las propiedades de minería de datos se pueden configurar con el [Cuadro de diálogo Propiedades de Analysis Server &#40;Analysis Services&#41;](../analysis-server-properties-dialog-box-analysis-services.md).  
   
- Para obtener más información acerca de las propiedades que puede configurar, consulte [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
+ Para obtener más información acerca de las propiedades que puede configurar, vea [configurar las propiedades del servidor en Analysis Services](../server-properties/server-properties-in-analysis-services.md).  
   
  Las siguientes propiedades del servidor son de especial relevancia para la minería de datos:  
   
--   `AllowAdHocOpenRowsetQueries` Controla el acceso ad hoc a los proveedores de OLE DB, que se cargan directamente en el espacio de memoria de servidor.  
+-   `AllowAdHocOpenRowsetQueries`Controla el acceso ad hoc a los proveedores de OLE DB, que se cargan directamente en el espacio de memoria del servidor.  
   
     > [!IMPORTANT]  
     >  Para mejorar la seguridad, se recomienda establecer esta propiedad en `false`. El valor predeterminado es `false`. Sin embargo, aunque esta propiedad esté establecida en `false`, los usuarios pueden continuar creando consultas singleton y pueden utilizar OPENQUERY en orígenes de datos permitidos.  
@@ -88,7 +87,7 @@ ms.locfileid: "66084917"
  También puede establecer propiedades que permitan ajustar el servidor y controlar la seguridad para uso del cliente. Para más información, consulte [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre la compatibilidad con los algoritmos de complemento con las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Para obtener más información sobre la compatibilidad con los algoritmos de complemento de las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acceso a objetos de minería de datos mediante programación  
  Puede utilizar los modelos de objetos siguientes para crear una conexión a una base de datos de Analysis Services y trabajar con objetos de minería de datos:  
@@ -117,14 +116,14 @@ ms.locfileid: "66084917"
   
  Si el procedimiento devuelve un conjunto de datos, el cliente recibirá un conjunto de datos o una tabla de datos con una tabla anidada que contenga las filas. Por ejemplo, si crea una consulta con el contenido del modelo, esta devuelve el modelo completo. Para evitar que se devuelvan demasiadas filas, puede escribir los procedimientos almacenados con el modelo de objetos ADOMD+.  
   
- Para escribir un procedimiento almacenado de servidor, debe hacer referencia al espacio de nombres Microsoft.AnalysisServices.AdomdServer. Para obtener más información sobre cómo crear y usar procedimientos almacenados, vea [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
+ Para escribir un procedimiento almacenado de servidor, debe hacer referencia al espacio de nombres Microsoft.AnalysisServices.AdomdServer. Para obtener más información sobre cómo crear y usar procedimientos almacenados, vea [User Defined Functions and Stored Procedures](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures).  
   
 > [!NOTE]  
 >  Los procedimientos almacenados no se pueden utilizar para cambiar la seguridad en los objetos de servidor de datos. Cuando se ejecuta un procedimiento almacenado, el contexto actual del usuario se utiliza para determinar el acceso a todos los objetos de servidor. Por consiguiente, los usuarios deben disponer de los permisos adecuados en cualquier objeto de base de datos al que tengan acceso.  
   
-## <a name="see-also"></a>Vea también  
- [Arquitectura física &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Arquitectura física &#40;Analysis Services de datos multidimensionales&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [Arquitectura física &#40;Analysis Services:&#41;de minería de datos](physical-architecture-analysis-services-data-mining.md)   
  [Administración de las soluciones y los objetos de minería de datos](management-of-data-mining-solutions-and-objects.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server Express LocalDB | Microsoft Docs
+description: Familiarícese con SQL Server Express LocalDB. Los desarrolladores pueden usar este Motor de base de datos ligero para escribir y probar el código de Transact-SQL.
 ms.custom: ''
 ms.date: 04/17/2019
 ms.prod: sql
@@ -14,35 +15,37 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771786"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Microsoft SQL Server Express LocalDB es una característica de [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) dirigida a los desarrolladores. Está disponible en SQL Server Express con Advanced Services.
+Microsoft SQL Server Express LocalDB es una característica de [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) dirigida a los desarrolladores. Está disponible en SQL Server Express con Advanced Services.
 
 La instalación de LocalDB copia un conjunto de archivos mínimo necesario para iniciar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una vez que LocalDB está instalado, puede iniciar una conexión mediante una cadena de conexión especial. Cuando se realiza la conexión, se crea y se inicia automáticamente la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesaria, permitiendo que la aplicación use la base de datos sin tareas de configuración complejas. Las herramientas de desarrollo pueden proporcionar a los desarrolladores de software un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que les permite escribir y probar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] sin tener que administrar una instancia de servidor completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-## <a name="try-it-out"></a>Pruébelo. 
+## <a name="installation-media"></a>Medios de instalación 
 
-- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
+LocalDB es una característica que se selecciona durante la instalación de SQL Server Express y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. 
 
- >[!TIP]
- > También puede instalar LocalDB como parte de Visual Studio. Durante la instalación de Visual Studio, seleccione la carga de trabajo de **desarrollo de escritorio de .NET**, que incluye LocalDB de SQL Server Express.
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
+- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-- ¿Tiene una cuenta de Azure? [Comience](https://azure.microsoft.com/services/virtual-machines/sql-server/) y ponga en marcha una máquina virtual con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ya instalado.
+Como alternativa, puede instalar LocalDB a través del [Instalador de Visual Studio](https://visualstudio.microsoft.com/downloads/), como parte de la carga de trabajo de **almacenamiento y procesamiento de datos**, la carga de trabajo de **ASP.NET y desarrollo web** o como un componente individual.
+
 
 ## <a name="install-localdb"></a>Instalar LocalDB
 
-Instale LocalDB mediante el asistente para la instalación o el programa SqlLocalDB.msi. LocalDB es una opción cuando se instala [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
+Instale LocalDB mediante el asistente para la instalación o el programa SqlLocalDB.msi. LocalDB es una opción al instalar LocalDB de SQL Server Express. 
  
 Seleccione LocalDB en la página **Selección de características/Características compartidas** durante la instalación. Solo puede haber una instalación de los archivos binarios de LocalDB para cada versión principal de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Se pueden iniciar varios procesos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y todos usarán los mismos binarios. Una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] iniciada como LocalDB tiene las mismas limitaciones que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].
 
@@ -50,9 +53,9 @@ Una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB s
 
 ## <a name="description"></a>Descripción
 
-El programa de instalación de LocalDB usa el programa `SqlLocalDB.msi` para instalar los archivos necesarios en el equipo. Una vez instalado, LocalDB es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que puede crear y abrir bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los archivos de base de datos del sistema de la base de datos se almacenan en la ruta de acceso de AppData local, que suele estar oculta. Por ejemplo, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Los archivos de base de datos de usuario se almacenan donde indica el usuario, normalmente en algún lugar de la carpeta `C:\Users\<user>\Documents\`.
+El programa de instalación de LocalDB usa el programa `SqlLocalDB.msi` para instalar los archivos necesarios en el equipo. Una vez instalado, LocalDB es una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que puede crear y abrir bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los archivos de base de datos del sistema de la base de datos se almacenan en la ruta de acceso de AppData local, que suele estar oculta. Por ejemplo, `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Los archivos de la base de datos de usuarios se almacenan donde designa el usuario, normalmente en alguna parte de la carpeta `C:\Users\<user>\Documents\`.
 
-Para más información sobre cómo incluir LocalDB en una aplicación, consulte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Introducción a los datos locales](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Crear una base de datos y agregar las tablas en Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
+Para más información sobre cómo incluir LocalDB en una aplicación, vea [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Introducción a los datos locales](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Crear una base de datos y agregar las tablas en Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
 Para más información sobre la API LocalDB, consulte [Referencia de SQL Server Express LocalDB](../../relational-databases/sql-server-express-localdb-reference.md).
 
@@ -60,7 +63,7 @@ La utilidad `SqlLocalDb` puede crear instancias de LocalDB e iniciar y detener u
 
 La intercalación de instancias de LocalDB está establecida en `SQL_Latin1_General_CP1_CI_AS` y no se puede cambiar. Normalmente se admiten las intercalaciones de nivel de base de datos, nivel de columna y nivel de expresión. Las bases de datos independientes siguen las reglas de metadatos e intercalaciones de `tempdb` definidas por [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md).
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>Restricciones
 
 - LocalDB no puede ser un suscriptor de replicación de mezcla.
 
@@ -90,10 +93,13 @@ Solo un administrador del equipo puede crear una instancia compartida de LocalDB
 
 ### <a name="connect-to-the-automatic-instance"></a>Conexión a la instancia automática
 
-La manera más fácil de usar LocalDB es conectarse a la instancia automática propiedad del usuario actual mediante la cadena de conexión `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para conectarse a una base de datos específica con el nombre de archivo, conéctese con una cadena de conexión similar a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
+La manera más fácil de usar LocalDB es conectarse a la instancia automática propiedad del usuario actual mediante la cadena de conexión `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para conectarse a una base de datos específica usando el nombre de archivo, conéctese con una cadena de conexión similar a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
+
+La convención de nomenclatura y la cadena de conexión para el formato de LocalDB cambió en SQL Server 2014. Anteriormente, el nombre de instancia era un solo carácter v seguido de LocalDB y el número de versión. A partir de SQL Server 2014, este formato de nombre de instancia ya no se admite y se debe usar en su lugar la cadena de conexión mencionada anteriormente.  
 
 >[!NOTE]
->La primera vez que un usuario de un equipo intenta conectarse a LocalDB, se debe crear e iniciar la instancia automática. El tiempo adicional para la creación de la instancia puede hacer que el intento de conexión deje de funcionar con un mensaje de fin de tiempo de espera. Cuando sucede esto, espere unos segundos para que el proceso de creación se complete y, a continuación, conéctese de nuevo.
+> - La primera vez que un usuario de un equipo intenta conectarse a LocalDB, se debe crear e iniciar la instancia automática. El tiempo adicional para la creación de la instancia puede hacer que el intento de conexión deje de funcionar con un mensaje de fin de tiempo de espera. Cuando sucede esto, espere unos segundos para que el proceso de creación se complete y, a continuación, conéctese de nuevo.
+
 
 ### <a name="create-and-connect-to-a-named-instance"></a>Creación de una instancia con nombre y conexión a ella
 
@@ -113,12 +119,12 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |Nombre|`LocalDBApp1`|
-|Versión|\<Versión actual>|
+|Versión|\<Current Version>|
 |Nombre compartido|""|
-|Propietario|"\<Su usuario de Windows>"|
+|Propietario|"\<Your Windows User>"|
 |Creación automática|No|
-|State|ejecución|
-|Última hora de inicio|\<Fecha y hora>|
+|State|en ejecución|
+|Última hora de inicio|\<Date and Time>|
 |Nombre de canalización de instancia|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
@@ -128,13 +134,13 @@ REM Gather information about the instance of LocalDB
 
 Para conectarse a una instancia compartida de LocalDB, agregue `\.\` (barra diagonal inversa + punto + barra diagonal inversa) a la cadena de conexión para hacer referencia al espacio de nombres reservado para las instancias compartidas. Por ejemplo, para conectarse a una instancia compartida de LocalDB denominada `AppData`, use una cadena de conexión, como `(localdb)\.\AppData`, como parte de la cadena de conexión. Un usuario que se conecta a una instancia compartida de LocalDB de la que no es propietario debe tener un inicio de sesión con autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Para información sobre cómo solucionar problemas de LocalDB, consulte la [página que trata la solución de problemas de SQL Server 2012 Express LocalDB](https://social.technet.microsoft.com/wiki/contents/articles/4609.aspx).
 
 ## <a name="permissions"></a>Permisos
 
-Una instancia de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] LocalDB es una instancia creada por el usuario para utilizarla. Cualquier usuario del equipo puede crear una base de datos mediante una instancia de LocalDB, almacenar archivos en su perfil de usuario y ejecutar el proceso con sus credenciales. De forma predeterminada, el acceso a la instancia de LocalDB está limitado a su propietario. Los datos contenidos en LocalDB están protegidos por el acceso del sistema de archivos a los archivos de base de datos. Si los archivos de base de datos de usuario se almacenan en una ubicación compartida, cualquiera que tenga acceso al sistema de archivos en esa ubicación puede abrir la base de datos usando una instancia de LocalDB que sea de su propiedad. Si los archivos de base de datos están en una ubicación protegida, como la carpeta de datos de los usuarios, solo el usuario y los administradores con acceso a la carpeta pueden abrir la base de datos. Los archivos de LocalDB solo se pueden abrir con una instancia de LocalDB cada vez.
+Una instancia de SQL Server Express LocalDB es una instancia creada por el usuario para utilizarla. Cualquier usuario del equipo puede crear una base de datos mediante una instancia de LocalDB, almacenar archivos en su perfil de usuario y ejecutar el proceso con sus credenciales. De forma predeterminada, el acceso a la instancia de LocalDB está limitado a su propietario. Los datos contenidos en LocalDB están protegidos por el acceso del sistema de archivos a los archivos de base de datos. Si los archivos de base de datos de usuario se almacenan en una ubicación compartida, cualquiera que tenga acceso al sistema de archivos en esa ubicación puede abrir la base de datos usando una instancia de LocalDB que sea de su propiedad. Si los archivos de base de datos están en una ubicación protegida, como la carpeta de datos de los usuarios, solo el usuario y los administradores con acceso a la carpeta pueden abrir la base de datos. Los archivos de LocalDB solo se pueden abrir con una instancia de LocalDB cada vez.
 
 >[!NOTE]
 >LocalDB siempre se ejecuta en el contexto de seguridad de los usuarios; es decir, LocalDB nunca se ejecuta con credenciales del grupo local Administradores. Esto significa que todos los archivos de base de datos usados por una instancia de LocalDB deben ser accesibles mediante la cuenta de Windows del usuario propietario, sin tener en cuenta la pertenencia al grupo local Administradores.

@@ -10,32 +10,32 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8c9263e3855fcb9617baf3d9d3d7e0a55d079316
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295279"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674529"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Establece el valor de un parámetro del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Asocia el valor a una variable de entorno o asigna un valor literal que se va a usar como valor predeterminado si no se asignan otros valores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-catalog.set_object_parameter_value [@object_type =] object_type   
-    , [@folder_name =] folder_name   
-    , [@project_name =] project_name   
-    , [@parameter_name =] parameter_name   
-    , [@parameter_value =] parameter_value   
- [  , [@object_name =] object_name ]  
- [  , [@value_type =] value_type ]  
+catalog.set_object_parameter_value [ @object_type = ] object_type   
+    , [ @folder_name = ] folder_name   
+    , [ @project_name = ] project_name   
+    , [ @parameter_name = ] parameter_name   
+    , [ @parameter_value = ] parameter_value   
+ [  , [ @object_name = ] object_name ]  
+ [  , [ @value_type = ] value_type ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -49,10 +49,10 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Nombre del proyecto que contiene el parámetro. *project_name* es **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
+ El nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
- El valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
+ Valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
   
  [@object_name =] *object_name*  
  Nombre del paquete. Este argumento es necesario cuando el parámetro es un parámetro de paquete. El parámetro *object_name* es **nvarchar(260)** .  
@@ -88,7 +88,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 -   Si no se especifica ningún parámetro *value_type*, se usa un valor literal de *parameter_value* de forma predeterminada. Cuando se usa un valor literal, el parámetro*value_set* de la vista [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) se establece en `1`. No se permiten valores de parámetro NULL.  
   

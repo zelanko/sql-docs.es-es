@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e1528d81faa352fdcdf37abe9ad93fda190445c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62955848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004847"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar datos en columnas cifradas (SQL Server Management Studio)
   La replicación le permite publicar datos de columna cifrados. Para descifrar y usar estos datos en el suscriptor, la clave usada para cifrar los datos en el publicador también debe estar presente en el suscriptor. La replicación no ofrece un mecanismo de seguridad para transportar las claves de cifrado. Debe volver a crear manualmente la clave de cifrado en el suscriptor. En este tema se muestra cómo cifrar una columna en el publicador y asegurarse de que la clave de cifrado esté disponible en el suscriptor.  
@@ -56,7 +55,7 @@ ms.locfileid: "62955848"
   
 4.  Ejecute [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) para cerrar la clave.  
   
-5.  Publique la tabla que contiene la columna cifrada. Para obtener más información, vea [Crear una suscripción](../publish/create-a-publication.md).  
+5.  Publique la tabla que contiene la columna cifrada. Para obtener más información, vea [crear una publicación](../publish/create-a-publication.md).  
   
 6.  Suscríbase a la publicación. Para obtener más información, vea [Crear una suscripción de extracción](../create-a-pull-subscription.md) o [Crear una suscripción de inserción](../create-a-push-subscription.md).  
   
@@ -85,8 +84,8 @@ ms.locfileid: "62955848"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>Consulte también  
+ [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)   
  [Crear claves simétricas idénticas en dos servidores](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

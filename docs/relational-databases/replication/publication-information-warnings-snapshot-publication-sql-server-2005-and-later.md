@@ -1,6 +1,7 @@
 ---
-title: Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores) | Microsoft Docs
-ms.custom: ''
+title: 'Advertencias (instantáneas: Monitor de replicación)'
+decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a9657fd76e48848035cac74acac1b0f723e07d31
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e23c798722928a8374dae43002ba44ca0347c76a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720922"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La pestaña **Advertencias** está disponible para los distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. La pestaña **Advertencias** permite realizar las siguientes tareas para la publicación seleccionada:  
   
 -   Habilitar advertencias.  
@@ -36,16 +37,16 @@ ms.locfileid: "68769968"
  Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Para definir alertas, haga clic en **Configurar alertas** y proporcione información en el cuadro de diálogo **Configurar alertas de replicación** .  
   
 ## <a name="options"></a>Opciones  
- **Habilitado**  
+ **Enabled**  
  Seleccione esta opción si desea habilitar una advertencia y especificar un umbral asociado.  
   
- **Advertencia**  
+ **Warning (ADVERTENCIA)**  
  Descripción de la advertencia asociada al umbral.  
   
  **Umbral**  
  Permite especificar un valor para el umbral.  
   
- **Configurar alertas**  
+ **Configuración de alertas**  
  Seleccione una fila en la cuadrícula **Advertencias** y haga clic en **Configurar alertas** para abrir el cuadro de diálogo **Configurar alertas de replicación** . El cuadro de diálogo permite definir una alerta que se asociará al umbral y la advertencia seleccionados.  
   
  **Descartar cambios**  
@@ -54,7 +55,7 @@ ms.locfileid: "68769968"
 > [!NOTE]  
 >  Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
   
- **Guardar cambios**  
+ **Save Changes**  
  Haga clic para guardar los cambios realizados en las advertencias y los umbrales.  
   
 ## <a name="see-also"></a>Consulte también  

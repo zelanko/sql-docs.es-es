@@ -1,6 +1,7 @@
 ---
-title: Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco | Microsoft Docs
-ms.custom: ''
+title: 'Comprobación de los problemas de reintento de lectura en el subsistema de E/S de disco: administración basada en directivas'
+description: Esta regla comprueba el registro de eventos en busca del mensaje de error 825 de SQL Server, que indica que SQL Server no pudo leer los datos del disco en el primer intento.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1540314e6dfe9370cd11b7638e003b5e230c32d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd26814ac9b1a1ab2c1f7c8b00705d264a96a735
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655047"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regla comprueba si existe el mensaje de error 825 de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el registro de eventos. Este mensaje indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo leer los datos del disco al primer intento. Este mensaje indica un problema importante con el subsistema de E/S de disco. Este mensaje no indica actualmente un problema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sin embargo, el problema de disco podría producir la pérdida de datos o daños en la base de datos si no se resuelve.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

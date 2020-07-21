@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Aplicación de formato a un informe (Reporting Services) | Microsoft Docs'
+title: 'Lección 5: Aplicar formato a un informe (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108431"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lección 5: Aplicación de formato a un informe (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   Ahora que ha agregado una región de datos y algunos campos al informe Sales Orders, puede dar formato a los campos de moneda y de fecha, así como a los encabezados de columna.  
   
  En este tema:  
@@ -28,7 +28,7 @@ ms.locfileid: "66108431"
   
 -   [Cambiar el estilo de texto y los anchos de columna](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a> Dar formato a la fecha  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>Dar formato a la fecha  
  En el campo Date, se muestra información de fecha y hora de manera predeterminada. Puede darle formato para mostrar solo la fecha.  
   
 #### <a name="to-format-a-date-field"></a>Para dar formato a un campo de fecha  
@@ -37,7 +37,7 @@ ms.locfileid: "66108431"
   
 2.  Haga clic con el botón derecho en la celda con la expresión de campo `[Date]` y, después, haga clic en **Propiedades de cuadro de texto**.  
   
-3.  Haga clic en **número**y, a continuación, en el **categoría** campos, seleccione `Date`.  
+3.  Haga clic en **número**y, a continuación, en el `Date`campo **categoría** , seleccione.  
   
 4.  En el cuadro **Tipo** , seleccione **January 31, 2000**.  
   
@@ -45,12 +45,12 @@ ms.locfileid: "66108431"
   
 6.  Obtenga una vista previa del informe para ver el cambio en el campo `[Date]` y, después, vuelva a cambiar a la vista de diseño.  
   
-##  <a name="bkmk_format_currency"></a> Dar formato a la moneda  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Dar formato a la moneda  
  El campo LineTotal muestra un número general. Aplíquele el formato adecuado para mostrar el número como moneda.  
   
 #### <a name="to-format-a-currency-field"></a>Para dar formato a un campo de moneda  
   
-1.  Haga clic con el botón secundario en la celda con la expresión de campo `[LineTotal]` y, a continuación, haga clic en **Propiedades de cuadro de texto**.  
+1.  Haga clic con el botón derecho en la celda con la expresión de campo `[LineTotal]` y, después, haga clic en **Propiedades de cuadro de texto**.  
   
 2.  Haga clic en **Número**y, en el campo **Categoría** , seleccione **Moneda**.  
   
@@ -70,14 +70,14 @@ ms.locfileid: "66108431"
   
 6.  Obtenga una vista previa del informe para ver el cambio en el campo `[LineTotal]` y, después, vuelva a cambiar a la vista de diseño.  
   
-##  <a name="bkmk_change_textstyle"></a> Cambiar el estilo de texto y los anchos de columna  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Cambiar el estilo de texto y los anchos de columna  
  También puede cambiar el formato de la fila de encabezado para diferenciarlo de las filas de datos del informe. Por último, ajustará el ancho de las columnas.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Para dar formato a las filas de encabezado y las columnas de tabla  
   
 1.  Haga clic en la tabla para que los identificadores de columna y de fila aparezcan encima y al lado de la tabla.  
   
-     ![Diseño, tabla con fila de encabezado y fila de detalle](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "diseño, tabla con fila de encabezado y fila de detalles")  
+     ![Diseño, Tabla con fila de encabezado y fila de detalle](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Diseño, Tabla con fila de encabezado y fila de detalle")  
   
      Las barras grises situadas en la parte superior y en el lado de la tabla son los identificadores de fila y de columna.  
   
@@ -85,16 +85,16 @@ ms.locfileid: "66108431"
   
 3.  Seleccione la fila que contiene las etiquetas de los encabezados de columna y, en el menú **Formato** , seleccione **Fuente** y, a continuación, haga clic en **Negrita**.  
   
-4.  Haga clic en la pestaña **Vista previa** para obtener la vista previa del informe. Debe tener el siguiente aspecto:  
+4.  Para obtener una vista previa del informe, haga clic en la pestaña **vista previa** . Debe tener un aspecto similar al siguiente:  
   
      ![Vista previa de la tabla con encabezados de columna en negrita](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Vista previa de la tabla con encabezados de columna en negrita")  
   
 5.  En el menú **Archivo** , haga clic en **Guardar todo** para guardar el informe.  
   
-## <a name="next-steps"></a>Pasos siguientes  
- Ha aplicado formato correctamente a los encabezados de columna y los valores de moneda y fecha. A continuación, agregará características de agrupación y totales al informe. Consulte [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
+## <a name="next-steps"></a>Pasos a seguir  
+ Ha aplicado formato correctamente a los encabezados de columna y los valores de moneda y fecha. A continuación, agregará características de agrupación y totales al informe. Vea [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

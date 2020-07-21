@@ -14,22 +14,22 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd888fe32692494e2b0ceadc1ed872dd96e244a9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077014"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305217"
 ---
 # <a name="data-type-conversions"></a>Conversiones de tipos de datos
-Se pueden convertir datos de un tipo a otro en uno de cuatro veces: cuando se transfieren datos de la variable de una aplicación a otra (C y C), cuando se envían datos de una variable de aplicación a un parámetro de instrucción (C a SQL), cuando los datos en una columna del conjunto de resultados se devuelven en una variable de aplicación (SQL a C) y cuando se transfieren los datos de columna de origen de datos de uno a otro (SQL para SQL).  
+Los datos se pueden convertir de un tipo a otro en cuatro veces: cuando los datos se transfieren de una variable de aplicación a otra (C a C), cuando los datos de una variable de aplicación se envían a un parámetro de instrucción (de C a SQL), cuando los datos de una columna de conjunto de resultados se devuelven en una variable de aplicación (SQL a C) y cuando se transfieren datos de una columna de origen de datos  
   
- Cualquier conversión que se produce cuando se transfieren datos de la variable de una aplicación a otro está fuera del ámbito de este documento.  
+ Cualquier conversión que se produce cuando los datos se transfieren de una variable de aplicación a otra queda fuera del ámbito de este documento.  
   
- Cuando una aplicación enlaza una variable con un parámetro de instrucción o la columna del conjunto de resultados, la aplicación especifica implícitamente una conversión de tipos de datos de su elección del tipo de datos de la variable de aplicación. Por ejemplo, suponga que una columna contiene datos enteros. Si la aplicación enlaza una variable de entero a la columna, especifica que se realiza ninguna conversión; Si la aplicación enlaza una variable de caracteres a la columna, especifica que los datos se convierten de entero al carácter.  
+ Cuando una aplicación enlaza una variable a un parámetro de instrucción o columna del conjunto de resultados, la aplicación especifica implícitamente una conversión de tipo de datos en su elección del tipo de datos de la variable de aplicación. Por ejemplo, supongamos que una columna contiene datos enteros. Si la aplicación enlaza una variable de entero a la columna, especifica que no se realizará ninguna conversión. Si la aplicación enlaza una variable de carácter a la columna, especifica que los datos se convertirán de entero a carácter.  
   
- ODBC define cómo se convierten los datos entre cada tipo de datos SQL y C. Básicamente, ODBC admite todas las conversiones razonables, como carácter de entero y entero a float y no admite conversiones bien definidas, como float hasta la fecha. Los controladores deben admitir todas las conversiones para cada tipo de datos SQL que admiten. Para obtener una lista completa de las conversiones entre tipos de datos SQL y C, consulte [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) y [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el apéndice D: Tipos de datos.  
+ ODBC define cómo se convierten los datos entre cada tipo de datos SQL y C. Básicamente, ODBC admite todas las conversiones razonables, como carácter a entero y entero a flotante, y no admite conversiones mal definidas, como Float hasta la fecha. Los controladores son necesarios para admitir todas las conversiones de cada tipo de datos de SQL que admiten. Para obtener una lista completa de las conversiones entre los tipos de datos de SQL y C, vea [convertir datos de SQL a tipos de datos de c](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) y [convertir datos de c en tipos de datos de SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el Apéndice D: tipos de datos.  
   
- ODBC también define una función escalar para convertir los datos de un tipo de datos SQL a otro. El **convertir** función escalar está asignada por el controlador a la función escalar subyacente o funciones definidas para llevar a cabo las conversiones en el origen de datos. Dado que esta función se asigna a funciones específicas del DBMS, ODBC no define cómo funcionan estas conversiones o conversiones de qué deben ser compatibles. Una aplicación detecta qué conversiones son compatibles con un origen de datos y el controlador determinado a través de las opciones de SQL_CONVERT en **SQLGetInfo**. Para obtener más información sobre la **convertir** función escalar, vea [secuencias de Escape de ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) y [función de conversión de tipo de datos explícita](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+ ODBC también define una función escalar para convertir datos de un tipo de datos SQL a otro. El controlador asigna la **función escalar** a la función escalar subyacente o a las funciones definidas para realizar conversiones en el origen de datos. Dado que esta función está asignada a funciones específicas de DBMS, ODBC no define el funcionamiento de estas conversiones o las conversiones que se deben admitir. Una aplicación detecta qué conversiones son compatibles con un controlador y un origen de datos determinados a través de las opciones de SQL_CONVERT de **SQLGetInfo**. Para obtener más información acerca de la función escalar **Convert** , vea [secuencias de escape en ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) y función de [conversión de tipos de datos explícita](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).

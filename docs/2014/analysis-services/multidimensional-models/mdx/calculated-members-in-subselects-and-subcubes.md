@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546547"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
   En las versiones anteriores, no se admitían miembros calculados en subselecciones ni subcubos. Sin embargo, a partir de SQL Server 2008 se permiten y habilitan por una propiedad de conexión. Además, se ha introducido un nuevo comportamiento de los miembros calculados en subselecciones y subcubos en SQL Server 2008 R2.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos  
- El `SubQueries` propiedad de cadena de conexión de <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o `DBPROPMSMDSUBQUERIES` propiedad [propiedades XMLA compatibles &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) define el comportamiento o concesión de miembros calculados o calculados establece en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
+ La `SubQueries` propiedad de cadena de conexión en <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> o la `DBPROPMSMDSUBQUERIES` propiedad en [las propiedades xmla compatibles &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) define el comportamiento o la concesión de miembros calculados o conjuntos calculados en subselecciones o subcubos. En el contexto de este documento, subselección hace referencia a subselecciones y subcubos, a menos que se indique lo contrario.  
   
  La propiedad SubQueries permite los siguientes valores.  
   
 |||  
 |-|-|  
-|Valor|Descripción|  
+|Value|Descripción|  
 |0|Los miembros calculados no se permiten en subselecciones ni en subcubos.<br /><br /> Se produce un error al evaluar la subselección o subcubo si se hace referencia a un miembro calculado.|  
 |1|Los miembros calculados se permiten en subselecciones y subcubos pero sin que se introduzca ningún miembro antecesor en el subespacio que se devuelve.|  
 |2|Los miembros calculados se permiten en subselecciones y subcubos y los miembros antecesores se introducen en el subespacio que se devuelve. Asimismo, la granularidad mixta se permite en la selección de miembros calculados.|  
@@ -81,7 +80,7 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
-|United States|(null)|(null)|(null)|(null)|(null)|  
+|Estados Unidos|(null)|(null)|(null)|(null)|(null)|  
 |Washington|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
@@ -107,8 +106,8 @@ Where [Measures].[Reseller Sales Amount]
 |-|-|-|-|-|-|  
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|United States|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
+|Estados Unidos|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
+|Oregón|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Washington|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
@@ -118,10 +117,10 @@ Where [Measures].[Reseller Sales Amount]
   
  En los resultados anteriores, los valores agregados para [All Geographies], [United States], [Oregon] y [Washington] proceden de agregar los descendientes de &[Portland]&[OR] y &[Spokane]&[WA]. Nada procede del miembro calculado.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Observaciones  
  Solo se permiten miembros calculados globales o de sesión en las expresiones de subselección o subcubo. Si existen miembros calculados de consulta en la expresión MDX, se producirá un error cuando se evalúe la expresión de subselección o subcubo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subselecciones en las consultas](subselects-in-queries.md)   
  [Propiedades XMLA compatibles &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  

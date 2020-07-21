@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f927d11df6fa0e01004213e8d2336aa3fefe13c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984425"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902246"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (permisos de Service Broker de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deniega permisos en un contrato, tipo de mensaje, enlace de servicio remoto, ruta o servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67984425"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON  
     {    
        [ CONTRACT :: contract_name ]   
@@ -99,7 +99,7 @@ CASCADE
 -   Usuario de la base de datos asignado a una clave asimétrica  
 -   Usuario de la base de datos no asignado a una entidad de seguridad de servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="service-broker-contracts"></a>Contratos de Service Broker  
  Un contrato de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. En la siguiente tabla se muestran los permisos más limitados y específicos que se pueden denegar en un contrato de [!INCLUDE[ssSB](../../includes/sssb-md.md)], junto con los permisos más generales que los incluyen por implicación.  

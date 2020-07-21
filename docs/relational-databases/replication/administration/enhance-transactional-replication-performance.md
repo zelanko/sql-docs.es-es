@@ -1,5 +1,6 @@
 ---
 title: Aumentar el rendimiento de la replicación transaccional | Microsoft Docs
+description: Además de sugerencias de rendimiento generales para mejorar el rendimiento de la replicación en SQL Server, obtendrá información sobre técnicas adicionales para la replicación transaccional.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 40b83d154c5cef0526e5e4550910fb2e3e7dd115
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710378"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160023"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Una vez que haya considerado las sugerencias generales sobre el rendimiento que se describen en [Aumentar el rendimiento general de la replicación](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), tenga en cuenta estas áreas adicionales específicas de la replicación transaccional.  
   
 ## <a name="database-design"></a>Diseño de la base de datos  
@@ -66,7 +67,7 @@ ms.locfileid: "71710378"
   
 -   Ejecute los agentes continuamente en lugar de utilizar programaciones frecuentes.  
   
-     Configurar los agentes para que se ejecuten continuamente en vez de crear programaciones frecuentes (por ejemplo, cada minuto) mejora el rendimiento de la replicación, ya que el agente no tiene que iniciarse y detenerse. Si configura el Agente de distribución para que se ejecute continuamente, los cambios se propagan con latencia baja a los demás servidores conectados en la topología. Para obtener más información, vea:  
+     Configurar los agentes para que se ejecuten continuamente en vez de crear programaciones frecuentes (por ejemplo, cada minuto) mejora el rendimiento de la replicación, ya que el agente no tiene que iniciarse y detenerse. Si configura el Agente de distribución para que se ejecute continuamente, los cambios se propagan con latencia baja a los demás servidores conectados en la topología. Para más información, consulte:  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar programaciones de sincronización](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
@@ -160,6 +161,6 @@ Confirmar un conjunto de transacciones tiene una sobrecarga fija; al confirmar u
   
 [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
-[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+[Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1de3d4dd18d1c838b9445cbaa335ae42323c6b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064970"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
   Los argumentos son variables para las que el entorno de Studio proporciona valores cuando se inicia una herramienta desde el menú **Herramientas** . Es posible agregar herramientas externas, como el Bloc de notas, al menú **Herramientas** mediante el cuadro de diálogo **Herramientas externas** .  
   
  En la tabla siguiente se enumeran los argumentos de las herramientas externas.  
   
-|Name|Argumento|Descripción|  
+|Nombre|Argumento|Descripción|  
 |----------|--------------|-----------------|  
 |**Ruta de acceso del elemento**|$(ItemPath)|El nombre completo del archivo de origen actual (definido como unidad + ruta de acceso + nombre de archivo); en blanco si hay una ventana de no origen activa.|  
 |**Directorio del elemento**|$(ItemDir)|El directorio del origen actual (definido como unidad + ruta de acceso); en blanco si hay una ventana de no origen activa.|  
@@ -43,10 +42,10 @@ ms.locfileid: "63280491"
 |**Directorio de la solución**|$(SolutionDir)|El directorio de la solución actual (definido como unidad + ruta de acceso).|  
 |**Nombre de archivo de la solución**|$(SolutionFileName)|El nombre de archivo de la solución actual (definido como unidad + ruta de acceso + nombre de archivo).|  
   
- <sup>1</sup> la línea actual, la columna actual o el texto actual se basa en la posición del cursor en el editor de texto, como se muestra en la barra de estado.  
+ <sup>1</sup> la línea actual, la columna actual o el texto actual se basan en la posición del cursor en el editor de texto, tal como se muestra en la barra de estado.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Herramientas externas](external-tools-dialog-box.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo herramientas externas](external-tools-dialog-box.md)   
  [Elementos generales de la interfaz de usuario](general-user-interface-elements.md)  
   
   

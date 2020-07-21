@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4d38041ce4daa12911dc706d382460324931c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088506"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926617"
 ---
 # <a name="sql-server-backward-compatibility"></a>Compatibilidad con versiones anteriores de SQL Server
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -24,12 +23,12 @@ ms.locfileid: "66088506"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Características de SQL Server en desuso en SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desusadas en esta versión. En este tema se trata la funcionalidad de instalación y configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|[Características de SQL Server desusadas en SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desusadas en esta versión. En este tema se trata la funcionalidad de instalación y configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |[Características de SQL Server no disponibles en SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Funciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no incluidas en esta versión. En este tema se trata la funcionalidad de instalación y configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |[Cambios recientes en las características de SQL Server en SQL Server 2014](../../2014/getting-started/breaking-changes-to-sql-server-features-in-sql-server-2014.md)|Cambios que pueden requerir cambios en las aplicaciones. En este tema se trata la funcionalidad de instalación y configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |[Cambios de comportamiento en las características de SQL Server en SQL Server 2014](../../2014/getting-started/behavior-changes-to-sql-server-features-in-sql-server-2014.md)|Cambios de rendimiento en las características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en esta versión. En este tema se trata la funcionalidad de instalación y configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

@@ -24,16 +24,16 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 35db04fee2cc8d17034414bce9c994db501d5c02
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680889"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392833"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Crea una credencial de nivel de servidor. Una credencial es un registro que contiene la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. La mayoría de las credenciales incluyen un usuario y una contraseña de Windows. Por ejemplo, guardar una copia de seguridad de base de datos en una ubicación cualquiera podría requerir que SQL Server proporcione credenciales especiales para tener acceso a esa ubicación. Para más información, vea [Credenciales (motor de base de datos)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
@@ -44,12 +44,14 @@ Crea una credencial de nivel de servidor. Una credencial es un registro que cont
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 CREATE CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]
         [ FOR CRYPTOGRAPHIC PROVIDER cryptographic_provider_name ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -65,11 +67,11 @@ IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que 
 
 SECRET **="** _secreto_ **"** Especifica el secreto necesario para la autenticación de salida.
 
-Cuando se usa la credencial para acceder a Azure Key Vault, el argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* de una **entidad de servicio** en Azure Active Directory se pasen entre sí sin un espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **SECRET** es el token de la Firma de acceso compartido. Vea el ejemplo D de abajo. Para información sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure, consulte [Lección 1: Creación de una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
+Cuando se usa la credencial para acceder a Azure Key Vault, el argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores *\<Client ID>* (sin guiones) y *\<Secret>* de una **entidad de servicio** de Azure Active Directory se pasen juntos sin ningún espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **SECRET** es el token de la Firma de acceso compartido. Vea el ejemplo D de abajo. Para información sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure, consulte [Lección 1: Creación de una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#1---create-stored-access-policy-and-shared-access-storage).
 
 FOR CRYPTOGRAPHIC PROVIDER *nombre_del_proveedor_de_servicios_criptográficos* Especifica el nombre de un *proveedor de Administración de claves de empresa (EKM)* . Para más información sobre la administración de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Si IDENTITY es un usuario de Windows, el secreto puede ser la contraseña. El secreto se cifra usando la clave maestra de servicio. Si se vuelve a generar la clave maestra de servicio, el secreto se vuelve a cifrar con la nueva clave maestra de servicio.
 
@@ -108,13 +110,8 @@ CREATE CREDENTIAL CredentialForEKM
 GO
 
 /* Modify the login to assign the cryptographic provider credential */
-ALTER LOGIN Login1
+ALTER LOGIN User1
 ADD CREDENTIAL CredentialForEKM;
-
-/* Modify the login to assign a non cryptographic provider credential */
-ALTER LOGIN Login1
-WITH CREDENTIAL = AlterEgo;
-GO
 ```
 
 ### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Crear una credencial de EKM con Azure Key Vault
@@ -122,7 +119,7 @@ GO
 En el siguiente ejemplo se crea una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] la use al tener acceso a Azure Key Vault con el **Conector de SQL Server para Azure Key Vault**. Para ver un ejemplo completo sobre cómo usar el Conector de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).
 
 > [!IMPORTANT]
-> El argumento **IDENTITY** de **CREATE CREDENTIAL** requiere el nombre del Almacén de claves. El argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* se pasen juntos, sin un espacio entre ellos.
+> El argumento **IDENTITY** de **CREATE CREDENTIAL** requiere el nombre del Almacén de claves. El argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores *\<Client ID>* (sin guiones) y *\<Secret>* se pasen juntos sin ningún espacio entre ellos.
 
  En el ejemplo siguiente, el **Id. de cliente** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) se deja sin guiones y se introduce como la cadena `EF5C8E094D2A4A769998D93440D8115D` . El **secreto** se representa con la cadena *SECRET_DBEngine*.
 

@@ -1,6 +1,6 @@
 ---
-title: Método StartService (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Método StartService (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc901f2ccd68fbdee19fc7887638f7f89ff04efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006844"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888317"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Método StartService (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Intenta poner el servicio en estado iniciado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,7 +46,7 @@ object.StartService()
  Correcto. Se aceptó la solicitud.  
   
  1  
- No compatible. No se admite la solicitud.  
+ No admitido. No se admite la solicitud.  
   
  2  
  Acceso denegado. El usuario no tenía el permiso de acceso adecuado.  
@@ -119,7 +119,7 @@ object.StartService()
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c5f6c9fff572794c523e8420c84af57b53ece1c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7ed2ac427b1269a93906b356bdf7d9ded2a7c33f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999140"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919835"
 ---
 # <a name="updatedate-method-sqlserverresultset"></a>Método updateDate (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

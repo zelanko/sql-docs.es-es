@@ -1,5 +1,6 @@
 ---
 title: Tipo xs:QName | Microsoft Docs
+description: Obtenga información sobre cómo usar el tipo xs:QName como un elemento de restricción de esquema XML o como el tipo de miembro de una unión.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 879ec2e1e4aaebfde4b3597df3d244380f2b4165
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078132"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758510"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite los tipos derivados de **xs:QName** que utilizan un elemento de restricción de esquema XML. Actualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite tipos de unión con **QName** como tipo de miembro.  
   
 ## <a name="example"></a>Ejemplo  

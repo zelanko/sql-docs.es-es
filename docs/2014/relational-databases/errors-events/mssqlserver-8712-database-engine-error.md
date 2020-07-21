@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 292fb3bc-062e-41e4-a566-b5d3d0b21977
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b956a9f51e013ce03801ff870e27f337c738b3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 465f47fd69f8e6477ede13892a079f069042c57b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762066"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553040"
 ---
-# <a name="mssqlserver8712"></a>MSSQLSERVER_8712
+# <a name="mssqlserver_8712"></a>MSSQLSERVER_8712
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8712|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8712|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|USEPLAN_ERR_NO_INDEX|  
 |Texto del mensaje|El índice '%.*ls', especificado en la sugerencia USE PLAN, no existe. Especifique un índice existente o cree un índice con el nombre especificado.|  
@@ -38,7 +37,7 @@ ms.locfileid: "62762066"
 ## <a name="user-action"></a>Acción del usuario  
  Asegurarse de que todos los índices que se especifican en la sugerencia USE PLAN existen.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Sugerencias de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [Guías de plan](../performance/plan-guides.md)  
   

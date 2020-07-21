@@ -1,24 +1,25 @@
 ---
 title: Configuración de conectividad de PolyBase (Transact-SQL) | Microsoft Docs
+description: Descubra cómo usar sp_configure para mostrar o cambiar la configuración global de PolyBase Hadoop y la conectividad de almacenamiento de blobs de Azure.
 ms.custom: ''
 ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.technology: configuration
-ms.topic: conceptual
+ms.technology: polybase
+ms.topic: reference
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3daf000381fbfaa5481ae18f348bd987689e46b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938988"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -88,12 +89,12 @@ RECONFIGURE
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-##  <a name="ResultSets"></a> Conjuntos de resultados  
+##  <a name="result-sets"></a><a name="ResultSets"></a> Conjuntos de resultados  
  Cuando se ejecuta sin parámetros, **sp_configure** devuelve un conjunto de resultados con cinco columnas.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**nvarchar(35)**|Nombre de la opción de configuración.|  
+|**name**|**nvarchar(35)**|Nombre de la opción de configuración.|  
 |**Mínimo**|**int**|Valor mínimo de la opción de configuración.|  
 |**Máximo**|**int**|Valor máximo de la opción de configuración.|  
 |**config_value**|**int**|Valor que se ha configurado con **sp_configure**.|  

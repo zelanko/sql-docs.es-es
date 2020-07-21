@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - opciones de herramientas (página de opciones generales) | Microsoft Docs
+title: SQL Server Profiler-Tools-Options (página Opciones generales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7845a84c45015ba3346538030725eb2973490d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089622"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928558"
 ---
-# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - opciones de herramientas (página de opciones generales)
+# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-herramientas-opciones (página Opciones generales)
   Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las siguientes opciones.  
   
 ## <a name="options"></a>Opciones  
@@ -72,9 +71,9 @@ ms.locfileid: "66089622"
  **Intervalo de sondeo del monitor de estado predeterminado (seg.)**  
  Especifique el intervalo de sondeo del monitor de estado durante la reproducción en segundos. El valor predeterminado es 60 segundos. Este valor permite al usuario configurar la frecuencia con que el monitor de estado sondea los candidatos para terminar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Establecer los valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Establecer valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)   

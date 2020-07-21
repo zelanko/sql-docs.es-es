@@ -1,5 +1,5 @@
 ---
-title: Listas (generador de informes y SSRS) | Microsoft Docs
+title: Listas (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106151"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Generador de informes y SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66106151"
 > [!NOTE]  
 >  Puede publicar listas por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para obtener información acerca de las listas, vea [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Para empezar a usar listas rápidamente, vea [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
  Los informes de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen un informe que utiliza una lista. Puede obtener conocimientos sobre las listas explorando la definición del informe de ejemplo en el Generador de informes o el Diseñador de informes, u obteniendo una vista previa del informe representado en el Generador de informes o el Diseñador de informes. Para obtener más información sobre la descarga de los informes de ejemplo, vea el tema sobre [ejemplos de Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a> Agregar una lista al informe  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>Agregar una lista al informe  
  Agregue una lista a la superficie de diseño desde la pestaña Insertar en la cinta de opciones. De forma predeterminada, la lista inicialmente tiene una única celda en una fila asociada al grupo de detalles.  
   
  ![Elementos del informe Nueva lista en la superficie de diseño](../media/rs-listtemplatenew.gif "Elementos del informe Nueva lista en la superficie de diseño")  
@@ -43,12 +43,12 @@ ms.locfileid: "66106151"
   
 
   
-##  <a name="DisplayingLayout"></a> Mostrar datos en un diseño de forma libre  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> Mostrar datos en un diseño de forma libre  
  Para organizar los datos del informe en un diseño de forma libre en lugar de en una cuadrícula, puede agregar una lista a la superficie de diseño. Arrastre los campos desde el panel Datos de informe hasta la celda. De forma predeterminada, la celda contiene un rectángulo que actúa como contenedor. Mueva cada campo en el contenedor hasta que tenga el diseño que desea. Use las líneas de ajuste que aparecen al arrastrar los cuadros de texto en el contenedor de rectángulo para alinear los bordes vertical y horizontalmente. Quite el espacio en blanco no deseado ajustando el tamaño de la celda. Para más información, vea [Cambiar el alto de fila o el ancho de columna &#40;Generador de informes y SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  En la ilustración siguiente aparece una lista con información sobre un pedido, incluyendo estos campos: Date, Order, Qty, Product, LineTotal y una imagen.  
   
- ![Lista en vista de diseño, 4 campos y una imagen](../media/rs-basiclistformdesign.gif "Lista en vista de diseño, 4 campos y una imagen")  
+ ![Enumerar en vista de diseño, 4 campos y una imagen](../media/rs-basiclistformdesign.gif "Enumerar en vista de diseño, 4 campos y una imagen")  
   
  En la vista previa, la lista se repite para mostrar los datos de los campos en el formato de forma libre, como se muestra en la ilustración siguiente:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66106151"
   
 
   
-##  <a name="DisplayingGrouping"></a> Mostrar datos con un nivel de agrupación  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> Mostrar datos con un nivel de agrupación  
  Dado que una lista proporciona automáticamente un contenedor, puede usarla para mostrar datos agrupados con varias vistas. Para cambiar la lista predeterminada y poder especificar un grupo, modifique el grupo de detalles, especifique un nuevo nombre y, por último, especifique una expresión de grupo.  
   
  Por ejemplo, puede incrustar una tabla y un gráfico que muestren vistas diferentes del mismo conjunto de datos. Puede agregar un grupo a la lista para que los elementos de informe anidados se repitan una vez para cada valor de grupo. En la ilustración siguiente se muestra una lista agrupada por categoría de producto. Observe que no hay ninguna fila de detalles. En la lista aparecen dos tablas anidadas en paralelo. La primera muestra las subcategorías con las ventas totales. La segunda muestra la categoría agrupada por área geográfica, con un gráfico que muestra la distribución de las subcategorías.  
@@ -68,11 +68,11 @@ ms.locfileid: "66106151"
   
  En la vista previa, una tabla muestra las ventas totales para todas las subcategorías de bicicletas, y la otra muestra el desglose de las ventas por área geográfica. Se usa una expresión para especificar el color de fondo para la tabla y una paleta personalizada para el gráfico; la primera tabla también proporciona la leyenda para los colores del gráfico.  
   
- ![Vista previa, 2 tablas, una con gráfico anidado](../media/rs-basiclistgrouppreview.gif "Vista previa, 2 tablas, una con gráfico anidado")  
+ ![Vista previa, dos tablas, una con gráfico anidado](../media/rs-basiclistgrouppreview.gif "Vista previa, dos tablas, una con gráfico anidado")  
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

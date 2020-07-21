@@ -1,6 +1,5 @@
 ---
-title: Pantalla de inicio de Data Quality Client | Microsoft Docs
-ms.custom: ''
+title: Página de inicio del cliente de calidad de datos
 ms.date: 02/29/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4b1a25fc4bee5c66838c7e29f7c34dc67a572b79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152575"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899113"
 ---
 # <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Utilice esta pantalla para obtener acceso a las interfaces de usuario de cada uno de los tres grupos principales de tareas de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): administración de bases de conocimiento, proyectos de calidad de datos y administración.  
   
@@ -62,9 +61,9 @@ ms.locfileid: "70152575"
  **Configuración**  
  Muestra las propiedades de configuración de las cuentas de servicio de datos de referencia (a través de Azure Marketplace y directamente a los servicios de datos de referencia), la configuración general (limpieza interactiva, coincidencia y generación de perfiles) y la configuración de la gravedad del registro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Proyectos de calidad de datos &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
- [Administración de DQS](../data-quality-services/dqs-administration.md)  
+ [dqs, administración](../data-quality-services/dqs-administration.md)  
   
   

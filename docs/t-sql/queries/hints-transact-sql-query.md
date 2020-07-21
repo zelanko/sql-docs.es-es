@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731305"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Sugerencias de consulta especifica que en toda la consulta se deben utilizar las sugerencias especificadas. Afectan a todos los operadores de la instrucción. Si hay un argumento UNION implicado en la consulta principal, solo la última consulta que implique una operación UNION puede contener la cláusula OPTION. Las sugerencias de consulta se especifican como parte de la [cláusula OPTION](../../t-sql/queries/option-clause-transact-sql.md). El error 8622 se produce si una o varias sugerencias de consulta provocan que el optimizador de consultas no genere un plan válido.  
   
@@ -84,7 +84,7 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 <query_hint > ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
@@ -92,7 +92,8 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -104,6 +105,7 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -168,7 +170,9 @@ Especifica que el orden de combinación que indica la sintaxis de la consulta se
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Fuerza o deshabilita la aplicación del cálculo de expresiones válidas en Hadoop. Solo se aplica a las consultas que usan PolyBase. No se aplicará a Azure Storage.  
-  
+
+{FORCE | DISABLE} SCALEOUTEXECUTION Fuerce o deshabilite la ejecución de escalado horizontal de consultas de PolyBase que usan tablas externas en Clústeres de macrodatos de SQL Server 2019. Esta sugerencia solo se respetará con una consulta que use la instancia maestra de un clúster de macrodatos de SQL. El escalado horizontal se producirá en todo el grupo de procesos del clúster de macrodatos. 
+
 KEEP PLAN  
 Fuerza al optimizador de consultas a aumentar el umbral estimado para volver a compilar una consulta. El umbral estimado para volver a compilar inicia una nueva compilación automática para la consulta cuando se ha realizado el número estimado de cambios de columnas indexados en una tabla mediante la ejecución de una de las siguientes instrucciones:
 
@@ -183,7 +187,7 @@ KEEPFIXED PLAN
 Fuerza al optimizador de consultas a no compilar de nuevo una consulta debido a cambios en las estadísticas. Al especificar KEEPFIXED PLAN, se asegura de que una consulta solo se vuelve a compilar si el esquema de las tablas subyacentes cambia o si **sp_recompile** se ejecuta en estas tablas.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) y versiones posteriores.  
   
 Impide que la consulta use un índice no agrupado de almacén de columnas optimizado para memoria. Si la consulta contiene la sugerencia de consulta para evitar el uso del índice de almacén de columnas y una sugerencia de índice para usar un índice de almacén de columnas, las sugerencias están en conflicto y la consulta devuelve un error.  
   
@@ -234,10 +238,10 @@ Es un valor constante literal al que se asigna _\@nombre\_de variable_ para su u
 OPTIMIZE FOR puede contrarrestar el comportamiento de detección de parámetros predeterminado del optimizador. Use también OPTIMIZE FOR para crear guías de plan. Para más información, vea [Volver a compilar un procedimiento almacenado](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Indica al optimizador de consultas que use datos estadísticos en lugar de los valores iniciales para todas las variables locales al compilar y optimizar la consulta. Esta optimización incluye los parámetros creados mediante parametrización forzada.  
+Indica al optimizador de consultas que use la selectividad promedio del predicado en todos los valores de columna en lugar del valor del parámetro en tiempo de ejecución al compilar y optimizar la consulta.  
   
 Si usa OPTIMIZE FOR @variable_name = _literal\_constant_ y OPTIMIZE FOR UNKNOWN en la misma sugerencia de consulta, el optimizador de consultas usará el valor _literal\_constant_ especificado para un valor determinado. El optimizador de consultas usará UNKNOWN para los valores de las variables restantes. Los valores se usan solo durante la optimización de la consulta y no durante la ejecución de la misma.  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 Especifica las reglas de parametrización que aplica el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se compila la consulta.  
   
@@ -246,6 +250,11 @@ Especifica las reglas de parametrización que aplica el optimizador de consultas
 > Para más información, vea [Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
 SIMPLE indica al optimizador de consultas que intente la parametrización simple. FORCED indica al optimizador de consultas que intente la parametrización forzada. Para más información, vea [Parametrización forzada en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) y [Parametrización simple en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+
+QUERYTRACEON trace_flag    
+Esta opción permite habilitar una marca de seguimiento que afecte al plan solo durante la compilación de una única consulta. Como sucede con otras opciones de nivel de consulta, se puede usar junto con guías de plan para hacer coincidir el texto de una consulta que se ejecuta desde cualquier sesión y aplicar automáticamente una marca de seguimiento que afecte al plan al compilar esta consulta. La opción QUERYTRACEON solo se admite en las marcas de seguimiento del optimizador de consultas que se documentan en la tabla de la sección "Más información" y en [Marcas de seguimiento](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pero esta opción no devolverá ningún error ni advertencia si se usa un número de marca de seguimiento no admitido. Si la marca de seguimiento especificada no afecta a un plan de ejecución de consulta, la opción se omitirá de forma silenciosa.
+
+Se puede especificar más de una marca de seguimiento en la cláusula OPTION si QUERYTRACEON trace_flag_number se duplica con otros números de marca de seguimiento.
 
 RECOMPILE  
 Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que genere un plan nuevo y temporal para la consulta y descarte de inmediato ese plan una vez que se completa la ejecución de la consulta. El plan de consulta generado no reemplaza un plan almacenado en caché cuando la misma consulta se ejecuta sin la sugerencia RECOMPILE. Sin especificar RECOMPILE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena en la memoria caché planes de consulta y los reutiliza. Al compilar los planes de consulta, la sugerencia de consulta RECOMPILE utiliza los valores actuales de cualquier variable local en la consulta. Si la consulta está dentro de un procedimiento almacenado, los valores actuales se pasan a cualquier parámetro.  
@@ -275,7 +284,7 @@ Se admiten los siguientes nombres de sugerencia:
    Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
    **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
-  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
   **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
    Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
@@ -285,7 +294,7 @@ Se admiten los siguientes nombres de sugerencia:
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
    Hace que SQL Server genere un plan que no usa las modificaciones del objetivo de fila con las consultas que contienen estas palabras clave: 
    
-   * ARRIBA
+   * TOP
    * OPTION (FAST N)
    * IN
    * EXISTS
@@ -301,7 +310,7 @@ Se admiten los siguientes nombres de sugerencia:
   **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * "DISALLOW_BATCH_MODE"    
   Deshabilita la ejecución del modo por lotes. Para más información, consulte [Modos de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-modes).     
-  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
+  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  "ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS"      
    Habilita las estadísticas rápidas generadas automáticamente (modificación de histograma) para las columnas de índice iniciales para las que se necesite la estimación de cardinalidad. El histograma usado para calcular la cardinalidad se ajustará en tiempo de compilación de la consulta para tener en cuenta el valor máximo o mínimo real de esta columna. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  "ENABLE_QUERY_OPTIMIZER_HOTFIXES"     
@@ -311,7 +320,7 @@ Se admiten los siguientes nombres de sugerencia:
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o a la opción `LEGACY_CARDINALITY_ESTIMATION = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Fuerza el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos compatible. Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_.      
+ Fuerza el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos admitido (por ejemplo, 100, 130, etc.). Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_.      
    **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
@@ -357,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > Al especificar FORCESEEK con parámetros se limita el número de planes que el optimizador puede considerar en comparación con cuando se especifica FORCESEEK sin parámetros. Esto puede producir un error "No se puede generar el plan" en más casos. En una versión futura, las modificaciones internas realizadas en el optimizador pueden permitir que se consideren más planes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No se pueden especificar sugerencias de consulta en una instrucción INSERT, excepto cuando se usa una cláusula SELECT en la instrucción.  
   
  Solo se pueden especificar sugerencias de consulta en la consulta de nivel superior, no en las subconsultas. Cuando se especifica una sugerencia de tabla como una sugerencia de consulta, la sugerencia puede especificarse en la consulta de nivel superior o en una subconsulta. Sin embargo, el valor especificado para _exposed\_object\_name_ en la cláusula TABLE HINT debe coincidir exactamente con el nombre expuesto en la consulta o subconsulta.  
@@ -395,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>B. Usar OPTIMIZE FOR  
- En el ejemplo siguiente se indica al optimizador de consultas que use el valor `'Seattle'`para la variable local `@city_name` y que use datos estadísticos para determinar el valor de la variable local `@postal_code` al optimizar la consulta. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ En el ejemplo siguiente se indica al optimizador de consultas que use el valor `'Seattle'` para `@city_name` y la selectividad promedio del predicado en todos los valores de columna para `@postal_code` al optimizar la consulta. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>C. Usar MAXRECURSION  
@@ -596,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. Uso de QUERYTRACEON HINT  
+ En el ejemplo siguiente se usan las sugerencias de consulta de QUERYTRACEON. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Puede habilitar todas las revisiones que afectan al plan controladas por la marca de seguimiento 4199 para una consulta determinada mediante la consulta siguiente:
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ También puede usar varias marcas de seguimiento como en la consulta siguiente:
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>Consulte también  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Members (conjunto) (MDX) | Microsoft Docs
+title: Members (Set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138263"
 ---
 # <a name="members-set-mdx"></a>Members (Set) (MDX)
@@ -38,10 +38,10 @@ Level_Expression.Members
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifica una expresión de jerarquía, el **Members (Set)** función devuelve el conjunto de todos los miembros de la jerarquía especificada, sin incluir los miembros calculados. Para obtener el conjunto de todos los miembros calculados o en caso contrario, en una jerarquía, utilice la [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) (función)  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica una expresión de jerarquía, la función **Members (Set)** devuelve el conjunto de todos los miembros de la jerarquía especificada, sin incluir los miembros calculados. Para obtener el conjunto de todos los miembros, calculados o en cualquier otro caso, en una jerarquía, utilice la función [AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)  
   
- Si se especifica una expresión de nivel, el **Members (Set)** función devuelve el conjunto de todos los miembros del nivel especificado.  
+ Si se especifica una expresión de nivel, la función **Members (Set)** devuelve el conjunto de todos los miembros en el nivel especificado.  
   
 > [!IMPORTANT]  
 >  Cuando una dimensión contiene solo una única jerarquía visible, se puede hacer referencia a la jerarquía por el nombre de la dimensión o por el nombre de la jerarquía, dado que el nombre de la dimensión en este escenario se resuelve en su única jerarquía visible. Por ejemplo, Measures.Members es una expresión MDX válida debido a que se resuelve en la única jerarquía de la dimensión Measures.  
@@ -57,7 +57,7 @@ FROM
   
 ```  
   
- El siguiente ejemplo devuelve las cantidades de pedido de 2003 para cada miembro del nivel `[Product].[Products].[Product Line]`. El **miembros** función devuelve un conjunto que representa todos los miembros del nivel.  
+ El siguiente ejemplo devuelve las cantidades de pedido de 2003 para cada miembro del nivel `[Product].[Products].[Product Line]`. La función **Members** devuelve un conjunto que representa todos los miembros del nivel.  
   
 ```  
 SELECT   
@@ -69,7 +69,7 @@ WHERE
    {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

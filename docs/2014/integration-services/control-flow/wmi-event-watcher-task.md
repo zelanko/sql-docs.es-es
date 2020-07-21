@@ -12,15 +12,14 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7f044434f39abe123904b094d70e915780ce9fc6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829503"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438052"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarea Monitor de eventos WMI
   La tarea Monitor de eventos WMI supervisa un evento de Instrumental de administración de Windows (WMI) mediante una consulta de evento de Lenguaje de consulta de Instrumental de administración (WQL) para especificar los eventos de interés. Puede usar la tarea Monitor de eventos WMI para los siguientes fines:  
@@ -75,9 +74,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definir de qué manera la tarea responde ante el evento. La tarea se puede configurar para realizarse correctamente o generar un error, según el evento, o la tarea puede supervisar el evento nuevamente.  
   
--   Especificar la acción realizada por la tarea cuando se agota el tiempo de espera de la consulta WMI. Puede registrar el tiempo de espera y el estado después del tiempo de espera, o activar un evento personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que indique que se agotó el tiempo de espera del evento WMI y que registre el tiempo de espera y el estado del tiempo de espera.  
+-   Especifica la acción que realiza la tarea cuando se agota el tiempo de espera de la consulta de WMI. Puede registrar el tiempo de espera y el estado después del tiempo de espera, o bien generar un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] evento personalizado, que indica que el evento WMI agotó el tiempo de espera y registra el estado del tiempo de espera y el tiempo de espera.  
   
--   Definir de qué manera la tarea responde ante el tiempo de espera. La tarea se puede configurar para realizarse correctamente o presentar un error, o la tarea puede detectar el evento nuevamente.  
+-   Defina el modo en que la tarea responde al tiempo de espera. La tarea se puede configurar para que se realice correctamente o se produzca un error, o bien la tarea solo puede ver el evento de nuevo.  
   
 -   Especificar la cantidad de veces que la tarea supervisa el evento.  
   

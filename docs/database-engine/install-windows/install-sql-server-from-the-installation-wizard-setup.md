@@ -1,7 +1,8 @@
 ---
-title: Instalación de SQL Server 2016 desde el Asistente para la instalación (programa de instalación) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/26/2019
+title: Instalación mediante la interfaz gráfica de usuario
+description: En este artículo se proporciona un procedimiento paso a paso para instalar una nueva instancia de SQL Server con el Asistente para la instalación de SQL Server.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,20 +15,20 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899700"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 En este artículo se describe cómo instalar SQL Server con el Asistente para la instalación. Se aplica a [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] y a [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
-En este artículo se proporciona un procedimiento paso a paso para instalar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El Asistente para la instalación proporciona un único árbol de características para la instalación de todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que no tenga que instalarlos individualmente. Para instalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado, consulte [Instalar SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
+En este artículo se proporciona un procedimiento paso a paso para instalar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El Asistente para la instalación proporciona un único árbol de características para la instalación de todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que no tenga que instalarlos individualmente. Para instalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado, consulte [Instalar SQL Server](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
 Para conocer otras formas de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte:  
 
@@ -41,7 +42,7 @@ Para conocer otras formas de instalar [!INCLUDE[ssNoVersion](../../includes/ssno
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], revise [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md).  
   
@@ -50,7 +51,7 @@ Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], rev
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 
-###  <a name="bkmk_ga_instalpatch"></a> Requisito de instalación de revisión
+###  <a name="install-patch-requirement"></a><a name="bkmk_ga_instalpatch"></a> Requisito de instalación de revisión
 
 Microsoft ha identificado un problema con los archivos binarios de entorno de ejecución de Microsoft Visual C++ 2013 que se instalan como requisito previo con SQL Server 2016 y 2017. Hay disponible una actualización para corregir este problema. Si esta actualización a los archivos binarios de tiempo de ejecución de Visual C++ no se instala, puede que SQL Server experimente problemas de estabilidad en determinados escenarios. Antes de instalar SQL Server, siga las instrucciones que se indican en [Notas de la versión de SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) para ver si el equipo necesita una revisión para los archivos binarios de tiempo de ejecución de Visual C++. 
 
@@ -67,9 +68,9 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
    Para continuar, seleccione **Siguiente**.
 
 1. En la página **Términos de licencia**, revise el contrato de licencia. Si está de acuerdo, marque la casilla **Acepto los términos de licencia** y, luego, seleccione **Siguiente**.  
-
-   >[!NOTE]
-   > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, consulte la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+    
+   > [!NOTE]
+   > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, consulte la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. En la página **Reglas globales**, el procedimiento de instalación avanzará automáticamente hasta la página **Actualizaciones de productos** si no hay ningún error de regla.  
   
@@ -191,15 +192,15 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
   
 1. Use la página **Configuración de Distributed Replay Client** para especificar los usuarios a los que desee conceder permisos administrativos para el servicio Distributed Replay Client. Los usuarios con permisos administrativos tendrán acceso ilimitado al servicio Distributed Replay Client.  
   
-     * El **nombre del controlador** es opcional. Está \<*en blanco*> de forma predeterminada. Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client:  
+     * El **nombre del controlador** es opcional. El valor predeterminado es \<*blank*>. Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client:  
   
        * Si ya ha configurado un controlador, escriba el nombre del controlador mientras configura cada cliente.  
   
        * Si aún no ha configurado ningún controlador, puede dejar el nombre del controlador en blanco. Sin embargo, debe escribir manualmente el nombre del controlador en el archivo de **configuración de cliente** .  
   
-     * Especifique el **Directorio de trabajo** para el servicio Distributed Replay Client. El directorio de trabajo predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     * Especifique el **Directorio de trabajo** para el servicio Distributed Replay Client. El directorio de trabajo predeterminado es \<*drive letter*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
   
-     * Especifique el **Directorio de resultados** para el servicio Distributed Replay Client. El directorio de resultados predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     * Especifique el **Directorio de resultados** para el servicio Distributed Replay Client. El directorio de resultados predeterminado es \<*drive letter*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
   
      * Para continuar, seleccione **Siguiente**.  
   
@@ -227,15 +228,17 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
   
 1. El Asistente para instalación ejecuta el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para crear una nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Instalación** en el área de navegación izquierda y, luego, seleccione **Nueva instalación independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o agregar características a una instalación existente**.  
 
-1. En la página **Clave del producto**, seleccione una opción para indicar si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versión de producción con una clave de PID. Para más información, vea [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1. En la página **Clave del producto**, seleccione una opción para indicar si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versión de producción con una clave de PID. Para más información, vea [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
    Para continuar, seleccione **Siguiente**.
-
   
 1. En la página **Términos de licencia**, revise el contrato de licencia. Si está de acuerdo, marque la casilla **Acepto los términos de licencia[declaración de privacidad](https://privacy.microsoft.com/privacystatement)** y, luego, seleccione **Siguiente**.  
 
-   >[!NOTE]
-   > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, consulte la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+   > [!NOTE]
+   > Si se especifica una clave de producto de licencia Enterprise Server o CAL y el equipo tiene más de 20 núcleos físicos, o 40 núcleos lógicos si la tecnología Hyper-Threading está habilitada, se muestra una advertencia durante la instalación. Puede continuar con la instalación si activa la casilla **Para continuar, active esta casilla para confirmar esta limitación o haga clic en Atrás o Cancelar para escribir una licencia de producto Enterprise Core que admita hasta el máximo del sistema operativo** o hace clic en **Atrás** y escribe una clave de licencia que admita el número máximo de procesadores del sistema operativo.
+
+   > [!NOTE]
+   > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, consulte la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. En la página **Reglas globales**, el procedimiento de instalación avanzará automáticamente hasta la página **Actualizaciones de productos** si no hay ningún error de regla.  
   
@@ -317,12 +320,6 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
      Para obtener más información, consulte la página [Configuración del Motor de base de datos - Directorios de datos](../../sql-server/install/instance-configuration.md#datadir).
 
      Use la página **Configuración del Motor de base de datos - TempDB** para configurar el tamaño de archivo, el número de archivos, los directorios de instalación no predeterminados y la configuración del crecimiento de archivos para **tempdb**. Para obtener más información, consulte la página [Configuración del Motor de base de datos: TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-<<<<<<< ENCABEZADO
-  
-     Use la página **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuración: MaxDOP** para especificar el grado máximo de paralelismo. Esta configuración determina cuántos procesadores puede utilizar una única instrucción durante la ejecución. El valor recomendado se calcula automáticamente durante la instalación. Esta página solo está disponible en el programa de instalación a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Para obtener más información, consulte [Página Configuración del Motor de base de datos: MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
-
-     Use la página **Configuración del Motor de base de datos: Memoria** para especificar los valores de **Memoria de servidor mínima** y **Memoria de servidor máxima** que usará esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] después del inicio. Puede usar los valores predeterminados o los valores calculados recomendados o especificar manualmente sus propios valores después de haber elegido la opción **Recomendado**. Esta página solo está disponible en el programa de instalación a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Para obtener más información, consulte [Página Configuración del Motor de base de datos: memoria](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
-=======
 
      Use la página **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuración: MaxDOP** para especificar el grado máximo de paralelismo. Esta configuración determina cuántos procesadores puede utilizar una única instrucción durante la ejecución. El valor recomendado se calcula automáticamente durante la instalación. 
      
@@ -337,9 +334,8 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
     > Esta página solo está disponible en el programa de instalación a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
     Para obtener más información, consulte [Página Configuración del Motor de base de datos: memoria](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
->>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
 
-     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Use la página **Configuración de Motor de base de datos - FILESTREAM** para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte la página [Configuración del Motor de base de datos - FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Use la página **Configuración de Analysis Services - Aprovisionamiento de cuentas** para especificar el modo de servidor y los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El modo servidor determina los subsistemas de memoria y de almacenamiento que se utilizan en el servidor. Tipos diferentes de solución se ejecutan en modos servidor diferentes. Si tiene previsto ejecutar bases de datos multidimensionales de cubo en el servidor, elija la opción predeterminada, **Modo multidimensional y de minería de datos**.
 
@@ -374,15 +370,15 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
   
 1. Use la página **Configuración de Distributed Replay Client** para especificar los usuarios a los que desee conceder permisos administrativos para el servicio Distributed Replay Client. Los usuarios con permisos administrativos tendrán acceso ilimitado al servicio Distributed Replay Client.  
   
-     * El **nombre del controlador** es opcional. Está \<*en blanco*> de forma predeterminada. Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client:  
+     * El **nombre del controlador** es opcional. El valor predeterminado es \<*blank*>. Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client:  
   
        * Si ya ha configurado un controlador, escriba el nombre del controlador mientras configura cada cliente.  
   
        * Si aún no ha configurado ningún controlador, puede dejar el nombre del controlador en blanco. Sin embargo, debe escribir manualmente el nombre del controlador en el archivo de **configuración de cliente** .  
   
-     * Especifique el **Directorio de trabajo** para el servicio Distributed Replay Client. El directorio de trabajo predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     * Especifique el **Directorio de trabajo** para el servicio Distributed Replay Client. El directorio de trabajo predeterminado es \<*drive letter*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
   
-     * Especifique el **Directorio de resultados** para el servicio Distributed Replay Client. El directorio de resultados predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     * Especifique el **Directorio de resultados** para el servicio Distributed Replay Client. El directorio de resultados predeterminado es \<*drive letter*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
   
      * Para continuar, seleccione **Siguiente**.  
   
@@ -409,7 +405,7 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
   
 Para reducir el área expuesta de un sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita de manera selectiva los servicios y características clave. Para obtener más información, consulte [Configuración del área expuesta](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
   
 * [Validar una instalación de SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)  
 * [Reparar una instalación de SQL Server con errores](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)

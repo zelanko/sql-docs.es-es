@@ -335,7 +335,7 @@
       href: failover-cluster-report.md
     - name: Revisión de características
       href: feature-review.md
-    - name: Reglas de instalación
+    - name: Installation Rules
       href: installation-rules.md
     - name: Reglas de características
       href: feature-rules.md
@@ -349,7 +349,7 @@
       href: full-text-search-upgrade-options.md
     - name: Completar - Instalación
       href: complete-installation.md
-    - name: Requisitos previos de la instalación
+    - name: Requisitos previos de instalación
       href: installation-prerequisites.md
     - name: Progreso de la instalación
       href: installation-progress.md
@@ -428,11 +428,11 @@
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Información general sobre la instalación de servicios de SQL Server
       href: overview-of-sql-server-servicing-installation.md
-    - name: información general
+    - name: Bienvenido
       href: welcome.md
     - name: Términos de licencia
       href: license-terms.md
-    - name: Seleccionar características
+    - name: Selección de características
       href: select-features.md
     - name: Comprobar archivos en uso
       href: check-files-in-use.md

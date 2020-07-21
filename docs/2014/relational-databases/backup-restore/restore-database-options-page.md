@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d60474b5d72ab9745500325dfd523f83f155343c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62875633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956849"
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
   Utilice la página **Opciones** del cuadro de diálogo **Restaurar base de datos** para modificar el comportamiento y el resultado de la operación de restauración.  
@@ -92,13 +91,13 @@ ms.locfileid: "62875633"
  **Archivo de copia de seguridad**  
  Especifica un archivo de copia de seguridad del final del registro. Puede buscar el archivo de copia de seguridad o escribir su nombre directamente en el cuadro de texto.  
   
-### <a name="server-connections"></a>Conexiones al servidor  
+### <a name="server-connections"></a>Conexiones con el servidor  
  Permite cerrar las conexiones de base de datos existentes.  
   
  **Cerrar conexiones existentes**  
  Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   
-### <a name="prompt"></a>Pedir datos  
+### <a name="prompt"></a>Prompt  
  **Preguntar antes de restaurar cada copia de seguridad**  
  Especifica que, después de que se restaure cada copia de seguridad, se mostrará el cuadro de diálogo **Continuar con la restauración** para preguntar si quiere continuar con la secuencia de restauración. En este cuadro de diálogo se muestra el nombre del siguiente conjunto de medios (si se conoce) junto con el nombre y la descripción del siguiente conjunto de copia de seguridad.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "62875633"
   
 -   Si la siguiente copia de seguridad es una copia de seguridad de registros, utilice la tarea **Restaurar registro de transacciones** . Para obtener más información sobre cómo reanudar una secuencia de restauración por medio de la restauración de un registro de transacciones, vea [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)   
  [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   

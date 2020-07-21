@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: d7972592-72a5-4e84-b9d5-54324d430dcb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f9a6b3f963522c6e26fbc88fc6d970c1361b308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ebbb1b45046e4371d50ad3b691f6d9abbe13f76
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62915876"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553870"
 ---
-# <a name="mssqlserver12303"></a>MSSQLSERVER_12303
+# <a name="mssqlserver_12303"></a>MSSQLSERVER_12303
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12303|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12303|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_NUMBERED_PROC|  
 |Texto del mensaje|No se admite la cláusula 'number' con '*construct*'.|  
@@ -35,7 +34,7 @@ ms.locfileid: "62915876"
 ## <a name="user-action"></a>Acción del usuario  
  No use la cláusula 'number'.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

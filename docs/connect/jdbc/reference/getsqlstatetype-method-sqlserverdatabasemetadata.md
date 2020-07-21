@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 762c22bbf2ed499fc2c0884014e374af17f60292
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979735"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921949"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Método getSQLStateType (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>Valor devuelto  
  Un valor **int** que indica el tipo de SQLSTATE, que puede ser uno de los siguientes valores:  
   
--   Para Java Runtime Environment versión 5,0: Si la propiedad de conexión **xopenStates** está establecida en **true**, este método devuelve DatabaseMetaData. sqlStateXOpen. En caso contrario, DatabaseMetaData.sqlStateSQL99.  
+-   Para Java Runtime Environment versión 5.0: Si la propiedad de conexión **xopenStates** está establecida en **true**, este método devuelve DatabaseMetaData.sqlStateXOpen. En caso contrario, DatabaseMetaData.sqlStateSQL99.  
   
--   Para Java Runtime Environment versión 6,0: Si la propiedad de conexión **xopenStates** está establecida en **true**, este método devuelve DatabaseMetaData. sqlStateXOpen. En caso contrario, DatabaseMetaData.sqlStateSQL.  
+-   Para Java Runtime Environment versión 6.0: Si la propiedad de conexión **xopenStates** está establecida en **true**, este método devuelve DatabaseMetaData.sqlStateXOpen. En caso contrario, DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getSQLStateType se especifica mediante el método getSQLStateType en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getSQLStateType especifica este método getSQLStateType en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

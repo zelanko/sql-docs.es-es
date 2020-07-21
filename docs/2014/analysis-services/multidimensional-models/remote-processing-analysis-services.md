@@ -1,5 +1,5 @@
 ---
-title: Remoto de procesamiento (Analysis Services) | Microsoft Docs
+title: Procesamiento remoto (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073208"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545777"
 ---
 # <a name="remote-processing-analysis-services"></a>Procesamiento remoto (Analysis Services)
   Puede ejecutar el procesamiento programado o desatendido en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remota, donde la solicitud de procesamiento se origina en un equipo, pero se ejecuta en otro equipo de la misma red.  
@@ -90,11 +89,11 @@ ms.locfileid: "66073208"
   
 2.  Como paso final, modifique el trabajo para que se ejecute según una programación definida y agregue las alertas o las notificaciones necesarias para administrar el trabajo. También podría ser conveniente ajustar el script de procesamiento o crear varios pasos en el trabajo para procesar objetos de forma independiente.  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
- [Programar tareas administrativas de SSAS con el Agente SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+## <a name="see-also"></a>Consulte también  
+ [Componentes de Agente SQL Server](../../ssms/agent/sql-server-agent.md#Components)   
+ [Programar tareas administrativas de SSAS con Agente SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Procesamiento por lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
- [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
+ [Procesamiento de objetos del modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
  [Procesar objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

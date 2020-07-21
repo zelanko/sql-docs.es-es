@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad y restauración de las tablas (Transact-SQL) | Microsoft Docs
+title: Tablas de copia de seguridad y restauración (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - system tables [SQL Server], restore tables
 - restore system tables [SQL Server]
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8b3a8bf99bb51e5b2c4e9979266bd7252790315c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091892"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750395"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Tablas de copias de seguridad y restauración (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Los temas de esta sección describen las tablas del sistema que almacenan la información que utilizan las operaciones de copias de seguridad y restauración de bases de datos.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68091892"
  Contiene una fila por cada transacción marcada que se ha confirmado.  
   
  [restorefile](../../relational-databases/system-tables/restorefile-transact-sql.md)  
- Contiene una fila por cada archivo restaurado. Estos incluyen los archivos restaurados indirectamente por nombre de grupo de archivos.  
+ Contiene una fila por cada archivo restaurado. Estos archivos de inclusión se restauran indirectamente por nombre de grupo de archivos.  
   
  [restorefilegroup](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)  
  Contiene una fila por cada grupo de archivos restaurado.  

@@ -1,5 +1,5 @@
 ---
-title: Páginas de códigos de servidor y los datos Unicode | Microsoft Docs
+title: Páginas de códigos de servidor y datos Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,35 +14,35 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d440b710d5f8c5693308500c01b7339c33943b0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064272"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767760"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Datos Unicode y páginas de códigos de servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR.  
   
  La API Procedimiento almacenado extendido está habilitada para los datos Unicode; sin embargo, no está habilitada para los metadatos Unicode. La directiva #define de Unicode no tiene ningún efecto en la API Procedimiento almacenado extendido.  
   
- Se supone que todos los metadatos que devuelve la API Procedimiento almacenado extendido o que la aplicación de procedimiento almacenado extendida le proporciona están en la página de códigos multibyte del servidor. La página de códigos predeterminada de una aplicación de servidor de API procedimiento almacenado extendido es la página de códigos ANSI del equipo donde se ejecuta la aplicación, que puede obtenerse mediante una llamada a **srv_pfield** con el parámetro de campo establecido en SRV_ SPROC_CODEPAGE.  
+ Se supone que todos los metadatos que devuelve la API Procedimiento almacenado extendido o que la aplicación de procedimiento almacenado extendida le proporciona están en la página de códigos multibyte del servidor. La página de códigos predeterminada de una aplicación de servidor de API de procedimiento almacenado extendido es la página de códigos ANSI del equipo en el que se ejecuta la aplicación, que se puede obtener llamando a **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE.  
   
  Si la aplicación de API Procedimiento almacenado extendido está habilitada para Unicode, debe convertir los nombres de columna de metadatos de Unicode, mensajes de error, etc., a datos multibyte antes de pasar estos datos a la API Procedimiento almacenado extendido.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Observe lo siguiente:  
+ El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Ten en cuenta lo siguiente:  
   
--   Datos de columna se pasan como datos Unicode a **srv_describe** porque la columna se describe como srvnvarchar.  
+-   Los datos de columna se pasan como datos Unicode a **srv_describe** porque la columna se describe como SRVNVARCHAR.  
   
--   Metadatos de nombre de columna se pasan a **srv_describe** como datos multibyte.  
+-   Los metadatos de nombre de columna se pasan a **srv_describe** como datos multibyte.  
   
-     Las llamadas a procedimiento almacenado extendido **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos multibyte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     El procedimiento almacenado extendido llama a **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos multibyte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Los mensajes de error que se pasan a **srv_sendmsg** como datos multibyte.  
+-   Los mensajes de error se pasan a **srv_sendmsg** como datos multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -150,7 +150,7 @@ ms.locfileid: "68064272"
   
     ```  
   
-## <a name="see-also"></a>Vea también  
- [srv_wsendmsg &#40;API procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Consulte también  
+ [srv_wsendmsg API de procedimiento almacenado extendido &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

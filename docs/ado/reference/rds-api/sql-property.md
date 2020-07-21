@@ -11,22 +11,22 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963348"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750729"
 ---
 # <a name="sql-property"></a>Propiedad SQL
-Indica la cadena de consulta utilizada para recuperar el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indica la cadena de consulta utilizada para recuperar el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Puede establecer el **SQL** propiedad en tiempo de diseño en el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) etiquetas de objeto del objeto, o en tiempo de ejecución de código de secuencias de comandos.  
+ Puede establecer la propiedad **SQL** en tiempo de diseño en [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Etiquetas de objeto del objeto DataControl o en tiempo de ejecución en el código de scripting.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,24 +37,24 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *QueryString*  
- Un **cadena** valor que contiene una solicitud de datos SQL válida.  
+ *Cadenas*  
+ Valor de **cadena** que contiene una solicitud de datos SQL válida.  
   
  *DataControl*  
- Una variable de objeto que representa un **RDS. DataControl** objeto.  
+ Variable de objeto que representa un objeto **RDS. Objeto DataControl** .  
   
-## <a name="remarks"></a>Comentarios  
- En general, esto es una instrucción SQL (mediante el dialecto del servidor de base de datos), como `"Select * from NewTitles"`. Para asegurarse de que los registros se concilian y actualizados con precisión, una consulta actualizable debe contener un campo que no sea un campo binario largo o un campo calculado.  
+## <a name="remarks"></a>Observaciones  
+ En general, se trata de una instrucción SQL (con el dialecto del servidor de base de datos), como `"Select * from NewTitles"` . Para asegurarse de que los registros coinciden y se actualizan con precisión, una consulta actualizable debe contener un campo que no sea un campo binario largo o un campo calculado.  
   
- El **SQL** propiedad es opcional si un objeto de negocios de servidor personalizado recupera los datos del cliente.  
+ La propiedad **SQL** es opcional si un objeto empresarial personalizado del lado servidor recupera los datos para el cliente.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la propiedad SQL (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de propiedad SQL (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
  [Propiedad Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Método Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
+ [Query (método) (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

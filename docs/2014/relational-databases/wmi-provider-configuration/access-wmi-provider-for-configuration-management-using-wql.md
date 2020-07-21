@@ -1,5 +1,5 @@
 ---
-title: Obtener acceso el proveedor WMI para la administración de configuración mediante WQL | Microsoft Docs
+title: Obtener acceso al proveedor WMI para la administración de configuración mediante WQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b58297c5e292ceb18a6e2e50e2b25b9aa352e2fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68195871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061291"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
   En esta sección se describe cómo ejecutar instrucciones WQL (Lenguaje de consulta de Instrumental de administración de Windows) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] con el proveedor WMI para la Administración de equipos.  
@@ -29,13 +28,13 @@ ms.locfileid: "68195871"
   
 ### <a name="querying-services-using-wbemtest"></a>Consultar los servicios mediante WBEMtest  
   
-1.  Desde el **iniciar** menú, haga clic en **ejecutar**y, a continuación, escriba `WBEMtest`.  
+1.  En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba `WBEMtest` .  
   
 2.  El diálogo de WBEMtest.exe aparece. Haga clic en **Conectar**.  
   
 3.  En el primer campo de texto, escriba el espacio de nombres del proveedor WMI de Administración de equipos: raíz\Microsoft\SqlServer\ComputerManagement11. Haga clic en **Conectar**.  
   
-4.  Haga clic en **consulta**. Escriba una consulta que devuelve los servicios actuales que se ejecutan en el equipo local: **Seleccione \* de SqlService.** Haga clic en **Aplicar**.  
+4.  Haga clic en **Consulta**. Escriba una consulta que devuelva los servicios actuales que se ejecutan en el equipo local: **SELECT \* from SqlService.** Haga clic en **Aplicar**.  
   
 5.  Además, refine la consulta agregando `WHERE ServiceName = "MSSQLSERVER"`.  
   

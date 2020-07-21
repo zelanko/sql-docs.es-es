@@ -14,16 +14,16 @@ helpviewer_keywords:
 - API Reference, sqlsrv_server_info
 - sqlsrv_server_info
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e606d7f5d34225dd690181092c5fdfdfa8d05bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0831addcaec34e24d12f3b775125f7414e302b8f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014827"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928540"
 ---
-# <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
+# <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Devuelve información del servidor. Debe establecerse una conexión antes de llamar a esta función.  
@@ -41,11 +41,11 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Valor devuelto  
 Una matriz asociativa con las claves siguientes:  
   
-|Key|Descripción|  
+|Clave|Descripción|  
 |-------|---------------|  
 |CurrentDatabase|La base de datos de destino actual.|  
 |SQLServerVersion|La versión de SQL Server.|  
-|SQLServerName|Nombre del servidor.|  
+|SQLServerName|El nombre del servidor.|  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se crea información del servidor en la consola cuando se ejecuta dicho ejemplo en la línea de comandos.  

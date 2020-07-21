@@ -1,5 +1,5 @@
 ---
-title: Crear un Alias para una columna de modelo | Microsoft Docs
+title: Crear un alias para una columna de modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 908c0a8d8caa810badf4b82dc3dd3f411d09f323
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085314"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523691"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>Crear un alias para una columna de modelo
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear un alias para una columna de modelo. Esto puede resultar útil cuando el nombre de la estructura de minería de datos es demasiado largo para trabajar con él fácilmente, o si desea cambiar el nombre de la columna para que describa mejor su contenido o su uso en el modelo. Por ejemplo, si realiza una copia de una columna de estructura y, a continuación, discretiza la columna de manera diferente para un modelo determinado, puede cambiar el nombre de la columna para reflejar con más precisión el contenido.  
@@ -36,8 +35,8 @@ ms.locfileid: "66085314"
   
 2.  En la ventana **Propiedades** situada a la derecha de la pantalla, haga clic en la celda existente junto a la propiedad Name y elimine el valor actual. Escriba un nuevo nombre para la columna.  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos del modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
  [Propiedades del modelo de minería de datos](mining-model-properties.md)  
   
   

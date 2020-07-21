@@ -1,168 +1,178 @@
 ---
-title: Implementación de SQL Server clúster de Big Data con alta disponibilidad
+title: Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 titleSuffix: Deploy SQL Server Big Data Cluster with high availability
-description: Aprenda a implementar SQL Server clúster de Big Data con alta disponibilidad.
+description: Aprenda a implementar clústeres de macrodatos de SQL Server con alta disponibilidad.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d651c46282d7de0ffdd60f326740e7821b9bbe
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542161"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286049"
 ---
-# <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de SQL Server clúster de Big Data con alta disponibilidad
+# <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En el momento de implementar un clúster de Big Data (BDC), puede configurar SQL Server maestro que se va a implementar en una configuración de grupo de disponibilidad. Esta configuración aumenta la confiabilidad de SQL Server Master, además de lo que la infraestructura Kubernetes habilita con su supervisión de estado integrada, la detección de errores y los mecanismos de conmutación por error. Los grupos de disponibilidad (AG) agregan redundancia a la instancia de SQL Server. En esta configuración, la supervisión, la detección de errores y las tareas de conmutación por error se administran mediante el servicio de administración de clúster de Big Data, es decir, el servicio de control.
+Dado que los clústeres de macrodatos de SQL Server se encuentran en Kubernetes como aplicaciones en contenedores y usan características como los conjuntos con estado y el almacenamiento persistente, esta infraestructura tiene supervisión de estado integrada, detección de errores y mecanismos de conmutación por error que los componentes de los clústeres aprovechan para mantener el estado del servicio. Para mayor confiabilidad, también puede configurar un nodo de nombre HDFS o de instancia maestra de SQL Server y servicios compartidos de Spark para implementar con réplicas adicionales en una configuración de alta disponibilidad. La supervisión, la detección de errores y la conmutación automática por error se administran mediante un servicio de administración de clústeres de macrodatos, es decir, el servicio de control. Este servicio proporciona sin intervención del usuario desde configuración del grupo de disponibilidad y configuración de puntos de conexión de creación de reflejo de la base de datos hasta adición de bases de datos al grupo de disponibilidad o conmutación por error y coordinación de actualizaciones. 
 
-Además, otras tareas de administración como la configuración de puntos de conexión de creación de reflejo de la base de datos, la creación del grupo de disponibilidad y la adición de bases de datos al grupo de disponibilidad se proporcionan mediante la plataforma de clúster de Big Data.
+En la imagen siguiente se refleja cómo se implementa un grupo de disponibilidad en un clúster de macrodatos de SQL Server:
 
-Estas son algunas de las funcionalidades que los grupos de disponibilidad habilitan:
+:::image type="content" source="media/deployment-high-availability/contained-ag.png" alt-text="high-availability-ag-bdc":::
 
-1. Si se especifica la configuración de alta disponibilidad en el archivo de configuración de implementación, se crea un único grupo de disponibilidad denominado `containedag`. De forma predeterminada, `containedag` tiene tres réplicas, incluida la principal. Todas las operaciones CRUD para el grupo de disponibilidad se administran internamente.
-1. Todas las bases de datos se agregan automáticamente al grupo de disponibilidad, incluidas `master` y `msdb`. Las bases de datos de configuración de polybase no se incluyen en el grupo de disponibilidad porque incluyen metadatos de nivel de instancia específicos de cada réplica.
-1. Un punto de conexión externo se aprovisiona automáticamente para conectarse a las bases de datos de AG. Este punto de conexión `master-svc-external` desempeña el rol del agente de escucha de AG.
-1. Se aprovisiona un segundo extremo externo para las conexiones de solo lectura a las réplicas secundarias. 
+Estas son algunas de las funcionalidades que habilitan los grupos de disponibilidad:
 
+- Si la configuración de alta disponibilidad se especifica en el archivo de configuración de implementación, se crea un único grupo de disponibilidad denominado `containedag`. De forma predeterminada, `containedag` tiene tres réplicas, incluida la principal. Todas las operaciones CRUD del grupo de disponibilidad se administran internamente, incluida la creación del grupo de disponibilidad o la unión de réplicas al grupo de disponibilidad creado. No se pueden crear grupos de disponibilidad adicionales en la instancia maestra de SQL Server de un clúster de macrodatos.
+- Todas las bases de datos se agregan automáticamente al grupo de disponibilidad, incluidas todas las bases de datos del usuario y el sistema, como `master` y `msdb`. Esta funcionalidad proporciona una vista de un solo sistema de las réplicas del grupo de disponibilidad. Se usan otras bases de datos modelo (`model_replicatedmaster` y `model_msdb`) para inicializar la parte replicada de las bases de datos del sistema. Además de estas bases de datos, aparecen las bases de datos `containedag_master` y `containedag_msdb` si se conecta directamente a la instancia. Las bases de datos `containedag` representan `master` y `msdb` dentro del grupo de disponibilidad.
+
+  > [!IMPORTANT]
+  > En el momento del lanzamiento de SQL Server 2019 CU1, solo se agregaban automáticamente al grupo de disponibilidad las bases de datos creadas como resultado de una instrucción CREATE DATABASE. Las bases de datos creadas en la instancia como resultado de otros flujos de trabajo como adjuntar la base de datos todavía no se agregaban al grupo de disponibilidad y el administrador del clúster de macrodatos tenía que hacerlo manualmente. Vea la sección [Conectarse a la instancia de SQL Server](#instance-connect) para obtener instrucciones. Antes de la versión SQL Server 2019 CU2, las bases de datos creadas como resultado de una instrucción RESTORE tenían el mismo comportamiento y requerían la incorporación manual de las bases de datos al grupo de disponibilidad contenido.
+  >
+- Las bases de datos de configuración de Polybase no se incluyen en el grupo de disponibilidad porque incluyen metadatos de nivel de instancia específicos de cada réplica.
+- Se aprovisiona automáticamente un punto de conexión externo para conectarse a las bases de datos del grupo de disponibilidad. Este punto de conexión `master-svc-external` desempeña el rol de escucha de grupo de disponibilidad.
+- Se aprovisiona un segundo punto de conexión externo para las conexiones de solo lectura a las réplicas secundarias para escalar horizontalmente las cargas de trabajo de lectura.
 
 ## <a name="deploy"></a>Implementación
 
-Para implementar SQL Server maestro en un grupo de disponibilidad:
+Para implementar la instancia maestra de SQL Server en un grupo de disponibilidad:
 
-1. Habilitar la característica `hadr`
-1. Especificar el número de réplicas para el AG (el mínimo es 3)
-1. Configurar los detalles del segundo extremo externo creado para las conexiones a las réplicas secundarias de solo lectura
+1. Habilite la característica `hadr`
+1. Especifique el número de réplicas del grupo de disponibilidad (el mínimo es 3)
+1. Configure los detalles del segundo punto de conexión externo creado para las conexiones a las réplicas secundarias de solo lectura
 
-En los pasos siguientes se muestra cómo crear un archivo de revisión que incluye esta configuración y cómo aplicarla a los perfiles de configuración de `aks-dev-test` o `kubeadm-dev-test`. En estos pasos se describe un ejemplo de cómo revisar el perfil de `aks-dev-test` para agregar los atributos de alta disponibilidad. En el caso de una implementación en un clúster de kubeadm, se aplicaría una revisión similar, pero asegúrese de que está usando *NodePort* para el **serviceType** en la sección de **puntos de conexión** .
+Puede usar los perfiles de configuración integrados `aks-dev-test-ha` o `kubeadm-prod` para empezar a personalizar el clúster de macrodatos. Estos perfiles incluyen la configuración necesaria relativa a los recursos que permiten configurar alta disponibilidad extra. Por ejemplo, a continuación hay una sección del archivo de configuración `bdc.json` que es relevante para habilitar grupos de disponibilidad para la instancia maestra de SQL Server.  
 
-1. Crear un archivo de `patch.json`
-
-    ```json
-    {
-      "patch": [
+```json
+{
+  ...
+    "spec": {
+      "type": "Master",
+      "replicas": 3,
+      "endpoints": [
         {
-          "op": "replace",
-          "path": "spec.resources.master.spec",
-          "value": {
-            "type": "Master",
-            "replicas": 3,
-            "endpoints": [
-              {
-                "name": "Master",
-                "serviceType": "LoadBalancer",
-                "port": 31433
-              },
-              {
-                "name": "MasterSecondary",
-                "serviceType": "LoadBalancer",
-                "port": 31436
-              }
-            ],
-            "settings": {
-              "sql": {
-                "hadr.enabled": "true"
-              }
-            }
-          }
+          "name": "Master",
+          "serviceType": "LoadBalancer",
+          "port": 31433
+        },
+        {
+          "name": "MasterSecondary",
+          "serviceType": "LoadBalancer",
+          "port": 31436
         }
-      ]
+      ],
+      "settings": {
+        "sql": {
+          "hadr.enabled": "true"
+        }
+      }
     }
-    ```
+  ...
+}
+```
 
-1. Clonar el perfil de destino
+En los pasos siguientes se ve un ejemplo de cómo iniciar desde el perfil `aks-dev-test-ha` y personalizar la configuración de implementación del clúster de macrodatos. En el caso de una implementación en un clúster de `kubeadm`, se aplican pasos similares, aunque asegúrese de usar `NodePort` como `serviceType` en la sección `endpoints`.
 
-    ```bash
-    azdata bdc config init --source aks-dev-test --target custom-aks
-    ```
-
-1. Aplicar el archivo de revisión al perfil personalizado
+1. Clone el perfil de destino
 
     ```bash
-    azdata bdc config patch -c custom-aks/bdc.json --patch-file patch.json
+    azdata bdc config init --source aks-dev-test-ha --target custom-aks-ha
     ```
-1. Iniciar la implementación del clúster con el perfil de configuración de clúster creado anteriormente
+
+1. Opcionalmente, realice cualquier modificación en el perfil personalizado según sea necesario. 
+1. Inicie la implementación del clúster mediante el perfil de configuración de clúster creado anteriormente
 
     ```bash
-    azdata bdc create --config-profile custom-aks --accept-eula yes
+    azdata bdc create --config-profile custom-aks-ha --accept-eula yes
     ```
 
-## <a name="connect-to-sql-server-databases"></a>Conexión a bases de datos de SQL Server
+## <a name="connect-to-sql-server-databases-in-the-availability-group"></a>Conectarse a bases de datos de SQL Server en el grupo de disponibilidad
 
-En función del tipo de carga de trabajo que desee ejecutar en SQL Server maestro, puede conectarse al servidor principal para las cargas de trabajo de lectura y escritura o a las bases de datos de las réplicas secundarias para el tipo de cargas de trabajo de solo lectura. Este es un esquema para cada tipo de conexión:
+En función del tipo de carga de trabajo que quiera ejecutar en la instancia maestra de SQL Server, puede conectarse a las bases de datos de la réplica principal en el caso de las cargas de trabajo de lectura y escritura o a las bases de datos de las réplicas secundarias en el caso del tipo de cargas de trabajo de solo lectura. Este es un esquema de cada tipo de conexión:
 
-### <a name="connect-to-databases-on-the-primary-replica"></a>Conectarse a bases de datos en la réplica principal
+### <a name="connect-to-databases-on-the-primary-replica"></a>Conexión a las bases de datos de la réplica principal
 
-Para las conexiones a la réplica principal, use `sql-server-master` punto de conexión. Este punto de conexión también es el agente de escucha del AG. Todas las conexiones están en el contexto del grupo de disponibilidad. Por ejemplo, una conexión predeterminada que use este extremo dará lugar a la conexión a la base de datos de `master` dentro del AG, no a la instancia de SQL Server `master` base de datos.
+En el caso de las conexiones a la réplica principal, use el punto de conexión `sql-server-master`. Este punto de conexión también es el cliente de escucha del grupo de disponibilidad. Al usar este punto de conexión, todas las conexiones se encuentran en el contexto de bases de datos del grupo de disponibilidad. Por ejemplo, una conexión predeterminada que use este punto de conexión da lugar a la conexión a la base de datos `master` del grupo de disponibilidad, no a la base de datos `master` de la instancia de SQL Server. Ejecute este comando para buscar el punto de conexión:
 
 ```bash
 azdata bdc endpoint list -e sql-server-master -o table
 ```
 
-`Description                           Endpoint             Name               Protocol`
-`------------------------------------  -------------------  -----------------  ----------`
-`SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+```
+Description                           Endpoint             Name               Protocol
+------------------------------------  -------------------  -----------------  ----------
+SQL Server Master Instance Front-End  11.11.111.111,11111  sql-server-master  tds
+```
 
 > [!NOTE]
-> Los eventos de conmutación por error pueden producirse durante la ejecución de una consulta distribuida que tiene acceso a datos de orígenes de datos remotos como HDFS o un grupo de datos. Como procedimiento recomendado, las aplicaciones deben diseñarse para tener lógica de reintento de conexión en caso de desconexiones producidas por la conmutación por error.  
+> Pueden producirse eventos de conmutación por error durante una ejecución de consulta distribuida que acceda a datos de orígenes de datos remotos como HDFS o un grupo de datos. Como procedimiento recomendado, las aplicaciones deben diseñarse con lógica de reintento de conexión en caso de desconexiones producidas por una conmutación por error.  
 >
 
-### <a name="connect-to-databases-on-the-secondary-replicas"></a>Conexión a bases de datos en las réplicas secundarias
+### <a name="connect-to-databases-on-the-secondary-replicas"></a>Conexión a las bases de datos de las réplicas secundarias
 
-En el caso de las conexiones de solo lectura a las bases de datos de las réplicas secundarias, utilice el punto de conexión de `sql-server-master-readonly`. Este punto de conexión actúa como un equilibrador de carga en todas las réplicas secundarias. Proporcione el contexto de la base de datos de usuario en la cadena de conexión.
+En el caso de las conexiones de solo lectura a las bases de datos de las réplicas secundarias, use el punto de conexión `sql-server-master-readonly`. Este punto de conexión actúa como un equilibrador de carga en todas las réplicas secundarias.  Al usar este punto de conexión, todas las conexiones se encuentran en el contexto de bases de datos del grupo de disponibilidad. Por ejemplo, una conexión predeterminada que use este punto de conexión da lugar a la conexión a la base de datos `master` del grupo de disponibilidad, no a la base de datos `master` de la instancia de SQL Server. 
 
 ```bash
 azdata bdc endpoint list -e sql-server-master-readonly -o table
 ```
 
-`Description                                    Endpoint            Name                        Protocol`
-`---------------------------------------------  ------------------  --------------------------  ----------`
-`SQL Server Master Readable Secondary Replicas  13.64.238.24,31436  sql-server-master-readonly  tds`
+```
+Description                                    Endpoint            Name                        Protocol
+---------------------------------------------  ------------------  --------------------------  ----------
+SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-master-readonly  tds
+```
 
-### <a id="instance-connect"></a>Conexión a SQL Server instancia
+## <a name="connect-to-sql-server-instance"></a><a id="instance-connect"></a> Conectarse a la instancia de SQL Server
 
-Para ciertas operaciones como establecer configuraciones de nivel de servidor o agregar manualmente una base de datos al grupo de disponibilidad (en caso de que se creara la base de datos con un flujo de trabajo de restauración), se necesita una conexión a la instancia. Para proporcionar esta conexión, exponga un extremo externo. Este es un ejemplo que muestra cómo exponer este punto de conexión y, a continuación, agregar la base de datos que se creó con un flujo de trabajo de restauración al grupo de disponibilidad.
+En determinadas operaciones, como el establecimiento de configuraciones de nivel de servidor o la incorporación manual de una base de datos al grupo de disponibilidad, debe conectarse a la instancia de SQL Server. Antes de SQL Server 2019 CU2, operaciones como `sp_configure`, `RESTORE DATABASE` o cualquier DDL de grupos de disponibilidad requieren este tipo de conexión. De forma predeterminada, el clúster de macrodatos no incluye un punto de conexión que habilite la conexión de la instancia, así que debe exponer este punto de conexión de forma manual. 
 
-- Determine el POD que hospeda la réplica principal; para ello, conéctese al punto de conexión de `sql-server-master` y ejecute:
+> [!IMPORTANT]
+> El punto de conexión expuesto para las conexiones de la instancia de SQL Server solo admite autenticación SQL, incluso en clústeres en los que Active Directory está habilitado. De forma predeterminada, durante la implementación de un clúster de macrodatos, el inicio de sesión `sa` está deshabilitado y se aprovisiona un nuevo inicio de sesión `sysadmin` basado en los valores proporcionados en el momento de la implementación para las variables de entorno `AZDATA_USERNAME` y `AZDATA_PASSWORD`.
+
+Este es un ejemplo que muestra cómo exponer este punto de conexión y luego agregar la base de datos creada con un flujo de trabajo de restauración al grupo de disponibilidad. Se aplican instrucciones similares para configurar una conexión a la instancia maestra de SQL Server cuando se quieren cambiar las configuraciones de servidor con `sp_configure`.
+
+> [!NOTE]
+> A partir de SQL Server 2019 CU2, las bases de datos creadas como resultado de un flujo de trabajo de restauración se agregan automáticamente al grupo de disponibilidad contenido.
+
+- Determine el pod que hospeda la réplica principal; para ello, conéctese al punto de conexión `sql-server-master` y ejecute:
 
     ```sql
     SELECT @@SERVERNAME
    ```
 
-- Exponer el punto de conexión externo mediante la creación de un nuevo servicio Kubernetes
+- Exponga el punto de conexión externo mediante la creación de un nuevo servicio Kubernetes
 
-    Para un clúster de kubeadm, ejecute el comando siguiente. Reemplace `podName` por el nombre del servidor devuelto en el paso anterior, `serviceName` con el nombre preferido para el servicio Kubernetes creado y `namespaceName` * por el nombre del clúster de BDC.
+    En el caso de un clúster de `kubeadm`, ejecute el comando siguiente. Reemplace `podName` por el nombre del servidor devuelto en el paso anterior, `serviceName` por el nombre preferido para el servicio Kubernetes creado y `namespaceName`* por el nombre del clúster de BDC.
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=NodePort
     ```
 
-    Para ejecutar un clúster de AKS, ejecute el mismo comando, con la salvedad de que el tipo de servicio creado se `LoadBalancer`. Por ejemplo: 
+    En el caso de un clúster de AKS, ejecute el mismo comando, con la salvedad de que el tipo de servicio creado es `LoadBalancer`. Por ejemplo: 
 
     ```bash
     kubectl -n <namespaceName> expose pod <podName> --port=1533  --name=<serviceName> --type=LoadBalancer
     ```
 
-    Este es un ejemplo de este comando que se ejecuta en AKS, donde el POD que hospeda la principal está `master-0`:
+    Este es un ejemplo de este comando en ejecución en AKS, donde el pod que hospeda la réplica principal es `master-0`:
 
     ```bash
     kubectl -n mssql-cluster expose pod master-0 --port=1533  --name=master-sql-0 --type=LoadBalancer
     ```
 
-    Obtiene la dirección IP del servicio Kubernetes creado:
+    Obtenga la dirección IP del servicio Kubernetes creado:
 
     ```bash
     kubectl get services -n <namespaceName>
     ```
 
 > [!IMPORTANT]
-> Como práctica recomendada, debe realizar la limpieza eliminando el servicio Kubernetes creado anteriormente con este comando:
+> Como procedimiento recomendado, debe limpiar mediante la eliminación del servicio Kubernetes creado anteriormente al ejecutar este comando:
 >
 >```bash
 >kubectl delete svc master-sql-0 -n mssql-cluster
@@ -170,31 +180,33 @@ Para ciertas operaciones como establecer configuraciones de nivel de servidor o 
 
 - Agregue la base de datos al grupo de disponibilidad.
 
-    Para que la base de datos se agregue al AG, debe ejecutarse en modo de recuperación completa y debe realizarse una copia de seguridad de registros. Use la dirección IP del servicio Kubernetes creado anteriormente y conéctese a la instancia de SQL Server y, a continuación, ejecute las instrucciones TSQL como se muestra a continuación.
+    Para que la base de datos se agregue al grupo de disponibilidad, debe ejecutarse en modo de recuperación completa y debe realizarse una copia de seguridad del registro. Use la dirección IP del servicio Kubernetes creado anteriormente y conéctese a la instancia de SQL Server, luego ejecute las instrucciones de TSQL como se muestra a continuación.
 
     ```sql
-    ALTER DATABASE <databaseName> SET RECOVERY FULL;
-    BACKUP DATABASE <databaseName> TO DISK='<filePath>'
-    ALTER AVAILABILITY GROUP containedag ADD DATABASE <databaseName>
+    ALTER DATABASE <databaseName> SET RECOVERY FULL;
+    BACKUP DATABASE <databaseName> TO DISK='<filePath>'
+    ALTER AVAILABILITY GROUP containedag ADD DATABASE <databaseName>
     ```
 
-    En el ejemplo siguiente se agrega una base de datos denominada `sales` que se restauró en la instancia de:
+    En el ejemplo siguiente se agrega una base de datos denominada `sales` restaurada en la instancia:
 
     ```sql
-    ALTER DATABASE sales SET RECOVERY FULL;
-    BACKUP DATABASE sales TO DISK='/var/opt/mssql/data/sales.bak'
-    ALTER AVAILABILITY GROUP containedag ADD DATABASE sales
+    ALTER DATABASE sales SET RECOVERY FULL;
+    BACKUP DATABASE sales TO DISK='/var/opt/mssql/data/sales.bak'
+    ALTER AVAILABILITY GROUP containedag ADD DATABASE sales
     ```
 
 ## <a name="known-limitations"></a>Restricciones conocidas
 
-Estos son los problemas conocidos y las limitaciones de los grupos de disponibilidad de SQL Server maestro en el clúster de macrodatos:
+Problemas y limitaciones conocidos de los grupos de disponibilidad de la instancia maestra de SQL Server en el clúster de macrodatos:
 
-- Las bases de datos creadas como resultado de flujos de trabajo que no sean `CREATE DATABASE` como `RESTORE`, `CREATE DATABASE FROM SNAPSHOT` no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
-- Ciertas operaciones, como la ejecución de la configuración del servidor con `sp_configure` requieren una conexión a la instancia maestra. No se puede usar el punto de conexión principal correspondiente. Siga [las instrucciones](#instance-connect) para conectarse a la instancia de SQL Server y ejecute `sp_configure`.
-- La configuración de alta disponibilidad debe crearse cuando se implementa el BDC. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación.
+- Antes de SQL Server 2019 CU2, las bases de datos creadas como resultado de flujos de trabajo distintos a `CREATE DATABASE` y `RESTORE DATABASE`, como `CREATE DATABASE FROM SNAPSHOT`, no se agregan automáticamente al grupo de disponibilidad. [Conéctese a la instancia](#instance-connect) y agregue la base de datos al grupo de disponibilidad manualmente.
+- Para restaurar de forma correcta una base de datos habilitada para TDE a partir de una copia de seguridad creada en otro servidor, debe asegurarse de que los [certificados necesarios](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md) se restauren tanto en la instancia maestra de SQL Server como en el grupo de disponibilidad maestro contenido. [Aquí](https://www.sqlshack.com/restoring-transparent-data-encryption-tde-enabled-databases-on-a-different-server/) puede ver un ejemplo de cómo realizar una copia de seguridad de los certificados y restaurarlos.
+- Determinadas operaciones, como la ejecución de la configuración de servidor con `sp_configure`, requieren una conexión a la base de datos `master` de la instancia de SQL Server, no a `master` del grupo de disponibilidad. No se puede usar el punto de conexión principal correspondiente. Siga las [instrucciones](#instance-connect) para exponer un punto de conexión y conectarse a la instancia de SQL Server y ejecutar `sp_configure`. Solo se puede usar autenticación SQL cuando se expone manualmente el punto de conexión para conectarse a la base de datos `master` de la instancia de SQL Server.
+- La configuración de alta disponibilidad debe crearse al implementar el clúster de macrodatos. No se puede habilitar la configuración de alta disponibilidad con grupos de disponibilidad después de la implementación.
+- Aunque la base de datos msdb independiente se incluye en el grupo de disponibilidad y los trabajos del Agente SQL se replican ahí, los trabajos no se desencadenan según una programación. La solución consiste en [conectarse a cada una de las instancias de SQL Server](#instance-connect) y crear los trabajos en la instancia msdb. A partir de SQL Server 2019 CU2, solo se admiten los trabajos creados en cada una de las réplicas de la instancia maestra.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Para obtener más información sobre el uso de archivos de configuración en implementaciones de clúster de Big Data, consulte [cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md#configfile).
-- Para obtener más información acerca de la característica de grupos de disponibilidad para SQL Server, consulte [información general de los grupos de disponibilidad de Always On (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-2017).
+- Para más información sobre cómo usar archivos de configuración en implementaciones de clústeres de macrodatos, vea [Cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md#configfile).
+- Para obtener más información sobre la característica de grupos de disponibilidad para SQL Server, vea [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

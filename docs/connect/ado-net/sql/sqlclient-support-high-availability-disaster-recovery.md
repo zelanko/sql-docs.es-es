@@ -1,27 +1,27 @@
 ---
 title: Compatibilidad de SqlClient para la alta disponibilidad con recuperación de desastres
-description: Describe la compatibilidad de SqlClient con grupos de disponibilidad de alta disponibilidad y recuperación ante desastres (AlwaysOn).
+description: Describe la compatibilidad de SqlClient con grupos de disponibilidad de alta disponibilidad y recuperación ante desastres (Always On).
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 841e5e1caf4594c519b44e5813688761838247b0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451995"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918744"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SqlClient para la alta disponibilidad con recuperación de desastres
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-En este tema se describe el proveedor de datos SqlClient de Microsoft para SQL Server la compatibilidad con la recuperación ante desastres de alta disponibilidad, Grupos de disponibilidad AlwaysOn.  La característica Grupos de disponibilidad AlwaysOn se ha incorporado a SQL Server 2012. Para obtener más información sobre los grupos de disponibilidad AlwaysOn, vea los Libros en pantalla de SQL Server.  
+En este tema se describe la compatibilidad del proveedor de datos SqlClient de Microsoft para SQL Server con los grupos de disponibilidad AlwaysOn de alta disponibilidad y recuperación ante desastres.  La característica Grupos de disponibilidad AlwaysOn se ha incorporado a SQL Server 2012. Para obtener más información sobre los grupos de disponibilidad AlwaysOn, vea los Libros en pantalla de SQL Server.  
   
 Ahora puede especificar la escucha de grupo de disponibilidad de un grupo de disponibilidad (AG) (alta disponibilidad, recuperación ante desastres) o la instancia de clúster de conmutación por error de SQL Server 2012 en la propiedad de conexión. Si una aplicación SqlClient está conectada a una base de datos AlwaysOn que conmuta por error, se interrumpe la conexión original y la aplicación debe abrir una nueva para seguir trabajando tras la conmutación por error.  
   
@@ -87,7 +87,7 @@ Cuando `ApplicationIntent=ReadOnly`, el cliente solicita una carga de trabajo de
   
 La palabra clave `ApplicationIntent` no funciona con bases de datos de solo lectura heredadas.  
   
-Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Esto se hace con la cláusula `ALLOW_CONNECTIONS` de las instrucciones `PRIMARY_ROLE` y `SECONDARY_ROLE`Transact-SQL).  
+Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Esto se hace con la cláusula `ALLOW_CONNECTIONS` de las instrucciones Transact-SQL de `PRIMARY_ROLE` y `SECONDARY_ROLE`).  
   
 La palabra clave `ApplicationIntent` se utiliza para habilitar el enrutamiento de solo lectura.  
   

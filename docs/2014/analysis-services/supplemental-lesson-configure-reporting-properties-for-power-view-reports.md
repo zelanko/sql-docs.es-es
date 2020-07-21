@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940216"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar las propiedades de notificación para informes de Power View
   En esta lección complementaria, verá las propiedades de informes del proyecto Adventure Works Internet Sales Model. Las propiedades de informe facilitan a los usuarios finales la selección y presentación de datos del modelo en Power View. También establecerá las propiedades para ocultar ciertas columnas y tablas, y creará nuevos datos para usar en gráficos.  
   
  Tras completar esta lección y volver a implementar el modelo para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] integrada con SharePoint y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], puede crear un origen de datos, especificar la información de conexión de datos, iniciar Power View y diseñar informes con el modelo.  
   
- En esta lección no se describe cómo crear y usar los informes de Power View. Esta lección pretende proporcionar a los autores de modelos tabulares una introducción aquellas propiedades y opciones que afectan al modo en que los datos del modelo aparecerán en Power View. Para más información sobre la creación de informes de Power View, vea [Tutorial: Crear un informe de ejemplo en Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
+ En esta lección no se describe cómo crear y usar los informes de Power View. Esta lección pretende proporcionar a los autores de modelos tabulares una introducción aquellas propiedades y opciones que afectan al modo en que los datos del modelo aparecerán en Power View. Para obtener información sobre cómo crear informes de Power View, vea [Tutorial: Crear un informe de ejemplo en Power View](https://go.microsoft.com/fwlink/?LinkId=221204).  
   
  Tiempo estimado para completar esta lección: **30 minutos**  
   
@@ -40,17 +39,17 @@ ms.locfileid: "66067959"
 ## <a name="model-properties-that-affect-reporting"></a>Propiedades de modelo que afectan a los informes  
  Al crear un modelo tabular, hay ciertas propiedades que puede establecer en tablas y columnas individuales para mejorar la experiencia de informes del usuario final en Power View. Además, puede crear datos de modelo adicionales para permitir la visualización de datos y otras características específicas del cliente de informes. Para el Adventure Works Internet Sales Model de ejemplo, aquí se enumeran algunos de los cambios que hará:  
   
--   **Agregar nuevos datos** -agregar nuevos datos en una columna calculada mediante una fórmula DAX crea información de fecha en un formato que sea más fácil de mostrar en los gráficos.  
+-   **Agregar nuevos datos** : al agregar datos nuevos en una columna calculada mediante una fórmula Dax, se crea información de fecha en un formato más fácil de mostrar en los gráficos.  
   
 -   **Ocultar las tablas y las columnas que no son útiles para el usuario final** : la propiedad **Hidden** controla si las tablas y las columnas de tabla se muestran en el cliente de informes. Los elementos que están ocultos siguen siendo parte del modelo y permanecen disponibles para las consultas y los cálculos.  
   
--   **Habilitar las tablas con un solo clic** : de forma predeterminada, se realiza ninguna acción si un usuario final hace clic en una tabla en la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
+-   **Habilitar tablas de un clic** : de forma predeterminada, no se produce ninguna acción si un usuario final hace clic en una tabla de la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
   
 -   **Establecer agrupación cuando sea necesario** : la propiedad **Mantener filas únicas** determina si los valores de la columna se deben agrupar por valores en un campo diferente, como un campo identificador. En las columnas que contienen valores duplicados, como Customer Name (por ejemplo, varios clientes denominados John Smith), es importante agrupar (mantener filas únicas) en el campo **Identificador de fila** para proporcionar a los usuarios finales los resultados correctos.  
   
 -   **Establecer tipos de datos y formatos de datos** : de manera predeterminada, Power View aplica las reglas según el tipo de datos de columna a fin de determinar si el campo puede usarse como una medida. Dado que cada visualización de datos en Power View también tiene reglas sobre dónde se pueden colocar las medidas y las no medidas, es importante establecer el tipo de datos en el modelo o invalidar el predeterminado para lograr el comportamiento que quiera para el usuario final.  
   
--   **Establecer el criterio de ordenación por columna** propiedad - la **ordenar por columna** propiedad especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
+-   **Establezca la propiedad ordenar por columna** : la propiedad **ordenar por columna** especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
   
 ## <a name="hide-tables-from-client-tools"></a>Ocultar las tablas de las herramientas de cliente  
  Dado que hay una columna calculada Product Category y otra Product Subcategory en la tabla calculated Product, no es necesario tener visibles las tablas Product Category y Product Subcategory para las aplicaciones cliente.  
@@ -70,7 +69,7 @@ ms.locfileid: "66067959"
   
 2.  Agregue dos nuevas columnas calculadas con las fórmulas siguientes en la barra de fórmula:  
   
-    |Nombre de la columna|Fórmula|  
+    |Nombre de columna|Fórmula|  
     |-----------------|-------------|  
     |Year Quarter|=[Calendar Year] & " Q" & [Calendar Quarter]|  
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
@@ -82,7 +81,7 @@ ms.locfileid: "66067959"
   
 #### <a name="to-set-default-field-set-for-tables"></a>Para establecer el conjunto de campos predeterminado para las tablas  
   
-1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer**.  
+1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer** .  
   
 2.  En la ventana **Propiedades** , en **Propiedades de informe**, en la propiedad **Conjunto de campos predeterminado** , haga clic en **Haga clic para editar** para abrir el cuadro de diálogo **Conjunto de campos predeterminado** .  
   
@@ -92,9 +91,9 @@ ms.locfileid: "66067959"
   
 4.  En la ventana **Campos predeterminados, en orden** , use los botones Mover arriba y Mover abajo para poner el orden siguiente:  
   
-     **Customer Alternate Id**  
+     **Id. alternativo del cliente**  
   
-     **First Name**  
+     **Nombre**  
   
      **Last Name**  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66067959"
   
 6.  Realice estos mismos pasos para la tabla **Geography** , seleccionando los campos siguientes y poniéndolos en este orden.  
   
-     **Ciudad**, **código de estado/provincia**, **código de región de estado**.  
+     **Ciudad**, **código de provincia de estado**, **código de región de estado**.  
   
 7.  Finalmente, realice estos mismos pasos para la tabla **Product** , seleccionando los campos siguientes y poniéndolos en este orden.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "66067959"
 7.  Repita estos pasos con la tabla **Product** , seleccionando la columna **Product Id** como identificador de fila y la columna **Product Name** en el cuadro de lista **Mantener filas únicas** . En **Etiqueta predeterminada**, seleccione **Product Alternate Id**.  
   
 ## <a name="reporting-properties-for-columns"></a>Propiedades de informe para las columnas  
- Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Igual que ocultó las tablas Product Category y Product Subcategory antes, mediante el uso de la propiedad Hidden de una columna, puede ocultar columnas concretas de una tabla que se muestra en caso contrario. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
+ Hay varias propiedades de columna básicas y propiedades de informe específicos en las columnas que puede establecer para mejorar la experiencia de informes de modelo. Por ejemplo, puede no ser necesario que los usuarios vena cada columna de cada tabla. Al igual que ocultó las tablas Product Category y Product subcategory antes, mediante la propiedad Hidden de una columna puede ocultar columnas concretas de una tabla que, de otro modo, se muestra. Otras propiedades, como Data Format y Sort by Column, también pueden afectar al modo en que los datos de columna pueden aparecer en los informes. Establecerá algunas de esas columnas concretas ahora. Otras columnas no requieren ninguna acción y no se muestran a continuación.  
   
  Solo establecerá algunas propiedades de columna distintas aquí, pero hay muchas otras. Para obtener más información sobre las propiedades de informes de columna, vea [Pestaña Propiedades de columna &#40;SSAS tabular&#41;](tabular-models/properties-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
   
@@ -150,43 +149,43 @@ ms.locfileid: "66067959"
   
 4.  Repita estos pasos, estableciendo la columna siguiente y las propiedades de informes para cada tabla especificada. Deje las demás propiedades con su configuración predeterminada.  
   
-     **Customer**  
+     **Cliente**  
   
-    |columna|Property|Valor|  
+    |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|Formato de datos|Short Date|  
   
-     **Date**  
+     **Fecha**  
   
     > [!NOTE]  
-    >  Dado que la tabla Date se seleccionó como tabla de fechas de los modelos mediante el uso de la marca como valor de la tabla de fecha, en la lección 7: Marcar como tabla de fechas y la columna de fecha en la tabla Date como la columna que se usará como el identificador único, la propiedad de identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
+    >  Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
   
-    |columna|Property|Valor|  
+    |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
-    |date|Formato de datos|Short Date|  
+    |Date|Formato de datos|Short Date|  
     |Día de la semana|Hidden|True|  
     |Nombre del día|Sort By Column|Día de la semana|  
     |Día de la semana|Hidden|True|  
     |Día del mes|Hidden|True|  
     |Día del año|Hidden|True|  
-    |Nombre del mes|Sort By Column|Month|  
-    |Month|Hidden|True|  
+    |Nombre del mes|Sort By Column|Mes|  
+    |Mes|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Trimestre fiscal|Hidden|True|  
     |Año fiscal|Hidden|True|  
     |Semestre fiscal|Hidden|True|  
   
-     **Geography**  
+     **Geografía**  
   
-    |columna|Property|Valor|  
+    |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Product**  
+     **Producto**  
   
-    |columna|Property|Valor|  
+    |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|Etiqueta predeterminada|True|  
@@ -197,26 +196,26 @@ ms.locfileid: "66067959"
   
      **Internet Sales**  
   
-    |columna|Property|Valor|  
+    |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
     |Id. de promoción|Hidden|True|  
     |Id. de moneda|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
-    |Cantidad del pedido|Tipo de datos<br /><br /> Formato de datos<br /><br /> Posiciones decimales|Decimal Number<br /><br /> Decimal Number<br /><br /> 0|  
+    |Cantidad del pedido|Tipo de datos<br /><br /> Formato de datos<br /><br /> Decimal Places|Decimal Number<br /><br /> Decimal Number<br /><br /> 0|  
     |Order Date|Tipo de datos|Short Date|  
     |Due Date|Tipo de datos|Short Date|  
     |Ship Date|Tipo de datos|Short Date|  
   
 ## <a name="redeploy-the-adventure-works-internet-sales-tabular-model"></a>Volver a implementar el MT Ventas AW  
- Dado que ha cambiado el modelo, debe volver a implementarlo. Básicamente, repetirá las tareas realizadas en [lección 14: Implementar](lesson-13-deploy.md).  
+ Dado que ha cambiado el modelo, debe volver a implementarlo. Básicamente, repetirá las tareas realizadas en [Lección 14: Implementar](lesson-13-deploy.md).  
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Para volver a implementar el modelo tabular Ventas por Internet de Adventure Works  
   
 -   En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Generar** y, después, haga clic en **Implementar el modelo Ventas por Internet de Adventure Works**.  
   
-     Aparece el cuadro de diálogo **Implementar** en el que se muestra el estado de implementación de los metadatos y de las tablas incluidas en el modelo.  
+     Aparece el cuadro de diálogo **implementar** y muestra el estado de implementación de los metadatos, así como las tablas incluidas en el modelo.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Ahora puede usar Power View para visualizar los datos del modelo. Asegúrese de que las cuentas de Analysis Services y Reporting Services en el sitio de SharePoint tienen permisos de lectura en la instancia de Analysis Services donde implementó el modelo.  

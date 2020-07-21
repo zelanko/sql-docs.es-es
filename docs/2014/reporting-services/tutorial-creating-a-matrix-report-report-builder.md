@@ -11,49 +11,49 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098917"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz [Generador de informes]
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
   Este tutorial enseña a crear un informe de matriz básico de acuerdo con los datos de ventas de ejemplo. La matriz ha anidado en grupos de filas y de columnas, así como en un grupos de columnas adyacente. También aprenderá a dar formato a las columnas y a girar el texto. En la siguiente ilustración se muestra un informe similar al que creará.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
   
- Una versión mejorada del informe que creará en este tutorial está disponible como ejemplo en el informe del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851).  
+ Una versión mejorada del informe que creará en este tutorial está disponible como ejemplo en el informe del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este informe de ejemplo y otros, vea [generador de informes informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a> Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a:  
   
-1.  [Crear un informe de matriz y un conjunto de datos de la nueva tabla o el Asistente para matrices](#CreateMatrix)  
+1.  [Crear un informe de matriz y un conjunto de datos desde el nuevo Asistente para tablas o matrices](#CreateMatrix)  
   
-2.  [Organizar datos y elegir el diseño y estilo de la nueva tabla o el Asistente para matrices](#Groups)  
+2.  [Organizar datos y elegir el diseño y el estilo desde el nuevo Asistente para tablas o matrices](#Groups)  
   
-3.  [Formato de datos](#FormatData)  
+3.  [Dar formato a datos](#FormatData)  
   
 4.  [Agregar grupo de columnas adyacente](#AdjacentGroup)  
   
 5.  [Cambiar el ancho de columna](#Width)  
   
-6.  [Combinar celdas de la matriz](#MergeCells)  
+6.  [Combinar las celdas de la matriz](#MergeCells)  
   
-7.  [Agregar un encabezado de informe y el título del informe](#HeaderTitle)  
+7.  [Agregar un encabezado y un título del informe](#HeaderTitle)  
   
 8.  [Guardar el informe](#Save)  
   
 ### <a name="other-optional-step"></a>Otro paso opcional  
   
-1.  [Girar texto 270 grados el cuadro](#RotateTextBox)  
+1.  [Girar 270 grados el cuadro de texto](#RotateTextBox)  
   
  Tiempo estimado para completar este tutorial: 20 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateMatrix"></a> 1. Crear un informe de matriz y un conjunto de datos desde el nuevo Asistente para tablas o matrices  
- Desde el **Introducción** cuadro de diálogo Generador de informes, elija un origen de datos compartido, crear un conjunto de datos incrustado y, a continuación, muestre los datos de una matriz.  
+##  <a name="1-create-a-matrix-report-and-dataset-from-the-new-table-or-matrix-wizard"></a><a name="CreateMatrix"></a>1. crear un informe de matriz y un conjunto de DataSet desde el Asistente para nueva tabla o matriz  
+ En el cuadro de diálogo **Introducción** en generador de informes, elija un origen de datos compartido, cree un conjunto de datos incrustado y, a continuación, muestre los datos en una matriz.  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene ya los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
@@ -63,7 +63,7 @@ ms.locfileid: "66098917"
 1.  Haga clic en **Inicio**, seleccione **Programas**, **Generador de informes de Microsoft SQL Server 2012**y, a continuación, haga clic en **Generador de informes**.  
   
     > [!NOTE]  
-    >  Debería aparecer el cuadro de diálogo **Introducción** . Si no es así, en el botón Generador de informes, haga clic en **New**.  
+    >  Debería aparecer el cuadro de diálogo **Introducción** . Si no es así, en el botón Generador de informes, haga clic en **nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66098917"
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En el **elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y, a continuación, seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener más información acerca de cómo crear un origen de datos incrustados, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y, a continuación, seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener más información acerca de la creación de un origen de datos incrustado, vea [Tutorial: crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66098917"
   
 10. Haga clic en **Siguiente**.  
   
-##  <a name="Groups"></a> 2. Organizar datos y elegir el diseño y estilo de la nueva tabla o el Asistente para matrices  
+##  <a name="2-organize-data-and-choose-layout-and-style-from-the-new-table-or-matrix-wizard"></a><a name="Groups"></a>2. organizar datos y elegir el diseño y el estilo desde el Asistente para nueva tabla o matriz  
  Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar el diseño de la matriz.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>Para organizar los datos en grupos y elegir un diseño y un estilo  
@@ -129,9 +129,9 @@ ms.locfileid: "66098917"
   
 3.  Arrastre Subcategory a **Grupos de columnas**.  
   
-4.  Arrastre Product hasta **grupos de columnas,** y, a continuación, coloque abajo Subcategory.  
+4.  Arrastre Product hasta **grupos de columnas** y, a continuación, colóquelo debajo de subcategory.  
   
-     El orden en el que se enumeran los campos en **grupos de columnas** define la jerarquía de grupos.  
+     El orden en que se enumeran los campos en **grupos de columnas** define la jerarquía de grupos.  
   
      Los pasos 3 y 4 organizan los valores de los campos primero por subcategoría y, después, por producto.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66098917"
   
 7.  Haga clic en **Siguiente**.  
   
-8.  En la página Elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
+8.  En la página elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
 9. Compruebe que esté seleccionada la opción **Bloqueado, subtotal abajo** .  
   
@@ -155,9 +155,9 @@ ms.locfileid: "66098917"
   
 11. Haga clic en **Siguiente**.  
   
-12. En la página Elegir un estilo, en el panel Estilos, seleccione **Pizarra**.  
+12. En la página Elegir un estilo , en el panel Estilos , seleccione **Pizarra**.  
   
-13. Haga clic en **Finalizar**.  
+13. Haga clic en **Finalizar**  
   
      La matriz se agrega a la superficie de diseño. El panel Grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel Grupos de columnas muestra dos grupos de columnas: Subcategory y Product. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66098917"
   
  Para cada producto que se vende en una fecha concreta, la matriz muestra la subcategoría a la que pertenece el producto y el territorio de las ventas.  
   
-##  <a name="FormatData"></a> 3. Dar formato a datos  
+##  <a name="3-format-data"></a><a name="FormatData"></a>3. dar formato a los datos  
  De forma predeterminada, los datos de resumen para el campo Sales muestran un número general y el campo SalesDate muestra información de fecha y de hora. Dé formato al campo Sales para mostrar el número como moneda y el campo SalesDate para mostrar solo la fecha. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
   
 #### <a name="to-format-fields"></a>Para dar formato a los campos  
@@ -176,19 +176,19 @@ ms.locfileid: "66098917"
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
   
-     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el **números** de grupo y, a continuación, haga clic en **valores de ejemplo**.  
+     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el grupo **números** y, a continuación, haga clic en **valores de ejemplo**.  
   
 4.  Haga clic en la celda que contiene `[SalesDate]`.  
   
-5.  En el **número** grupo, en la lista desplegable, seleccione **fecha**.  
+5.  En el grupo **número** , en la lista desplegable, seleccione **fecha**.  
   
-     La celda muestra la fecha de ejemplo **[1/31/2000]** . Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
+     La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
 6.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
  Los valores de fecha solo muestran fechas y los valores de ventas se muestran como moneda.  
   
-##  <a name="AdjacentGroup"></a> 4. Agregar grupo de columnas adyacente  
+##  <a name="4-add-adjacent-column-group"></a><a name="AdjacentGroup"></a>4. Agregar grupo de columnas adyacente  
  Puede anidar grupos de filas y de columnas en relaciones de elemento primarias o adyacentes en relaciones del mismo nivel.  
   
  Agregue un grupo de columnas que es adyacente al grupo de columnas de Subcategory, copie las celdas para rellenar el nuevo grupo de columnas y, a continuación, utilice una expresión para crear el valor del encabezado de grupo de columnas.  
@@ -230,9 +230,9 @@ ms.locfileid: "66098917"
  El informe incluye columnas denominadas Monday y Tuesday. El conjunto de datos solo contiene los datos de estos dos días.  
   
 > [!NOTE]  
->  Si los datos incluyeran otros días, el informe también incluiría las columnas correspondientes. Cada columna tiene el encabezado de columna, `Sales`y los totales de ventas por territorio.  
+>  Si los datos incluyeran otros días, el informe también incluiría las columnas correspondientes. Cada columna tiene el encabezado de columna `Sales`, y los totales de ventas por territorio.  
   
-##  <a name="Width"></a> 5. Cambiar el ancho de columna  
+##  <a name="5-change-column-widths"></a><a name="Width"></a>5. cambiar el ancho de las columnas  
  Un informe que incluye una matriz normalmente se expande horizontalmente así como verticalmente cuando se ejecuta. Controlar la expansión horizontal es particularmente importante si piensa exportar el informe a los formatos como Microsoft Word o Adobe PDF, que se utilizan para los informes impresos. Si el informe se expande horizontalmente por varias páginas, el informe impreso es difícil de entender. Para minimizar la expansión horizontal, puede cambiar el tamaño de las columnas para que tengan solo el ancho necesario para mostrar los datos sin ajustar. También puede cambiar el nombre de las columnas para que sus títulos con el ancho necesario para mostrar los datos.  
   
 #### <a name="to-rename-and-resize-the-columns"></a>Cambiar el nombre y el tamaño de las columnas  
@@ -259,7 +259,7 @@ ms.locfileid: "66098917"
   
  Las columnas del informe que contiene las cantidades se denominan ahora QTY y son más estrechas.  
   
-##  <a name="MergeCells"></a> 6. Combinar las celdas de la matriz  
+##  <a name="6-merge-matrix-cells"></a><a name="MergeCells"></a>6. combinar las celdas de la matriz  
  El área de la esquina está en la esquina superior izquierda de la matriz Dependiendo del número de grupos de filas y columnas de la matriz, el número de celdas en el área de la esquina varía. La matriz generada en este tutorial tiene cuatro celdas en su área de esquina. Las celdas se disponen en dos filas y dos columnas, reflejando la profundidad de las jerarquías de grupos de filas y columnas. Las cuatro celdas no se utilizan en este informe y los combinará en una.  
   
 #### <a name="to-merge-matrix-cells"></a>Para combinar las celdas de la matriz  
@@ -270,13 +270,13 @@ ms.locfileid: "66098917"
   
 3.  Presione la tecla CTRL y, a continuación, seleccione las cuatro celdas de la esquina.  
   
-4.  Haga clic en las celdas y, a continuación, haga clic en **combinar celdas**.  
+4.  Haga clic con el botón secundario en las celdas y haga clic en **combinar celdas**.  
   
-5.  Haga clic en la celda de esquina y, a continuación, haga clic en **propiedades de cuadro de texto**.  
+5.  Haga clic con el botón secundario en la celda de la esquina y después haga clic en **propiedades de cuadro de texto**.  
   
 6.  Haga clic en la pestaña **Rellenar** .  
   
-7.  Haga clic en el (***fx***) botón **color de relleno**.  
+7.  Haga clic en el botón (***FX***) para el **color de relleno**.  
   
 8.  Copie y pegue la expresión siguiente en el cuadro de diálogo de expresión.  
   
@@ -292,16 +292,16 @@ ms.locfileid: "66098917"
   
  La matriz de la esquina superior es una celda única y tiene el mismo color que las celdas del grupo de filas y columnas.  
   
-##  <a name="HeaderTitle"></a> 7. Agregar un encabezado y un título del informe  
+##  <a name="7-add-a-report-header-and-report-title"></a><a name="HeaderTitle"></a>7. agregar un encabezado de informe y un título de informe  
  Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, quitará el cuadro de texto de la parte superior del informe y agregará un título al encabezado.  
   
 #### <a name="to-add-a-report-header-and-report-title"></a>Para agregar un encabezado y un título del informe  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  Haga clic en el cuadro de texto en la parte superior del cuerpo del informe que contiene **haga clic aquí para agregar un título**y, a continuación, presione la tecla SUPR.  
+2.  Haga clic en el cuadro de texto de la parte superior del cuerpo del informe que contiene **haga clic para agregar título**y, a continuación, presione la tecla Supr.  
   
-3.  En el **insertar** pestaña de la cinta de opciones, haga clic en **encabezado** y, a continuación, haga clic en **agregar encabezado**.  
+3.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **encabezado** y, a continuación, haga clic en **Agregar encabezado**.  
   
      Se agrega un encabezado a la parte superior del cuerpo del informe.  
   
@@ -309,14 +309,14 @@ ms.locfileid: "66098917"
   
 5.  En el cuadro de texto, escriba **Ventas por territorio, Subcategoría y Día**.  
   
-6.  Seleccione el texto que escribió, con el botón secundario y, a continuación, haga clic en **propiedades de texto**.  
+6.  Seleccione el texto que escribió, haga clic con el botón secundario y, a continuación, haga clic en **propiedades de texto**.  
   
     > [!NOTE]  
     >  Para dar formato al mismo tiempo a los caracteres, deben ser contiguos.  
   
-7.  En el **propiedades de texto** cuadro de diálogo, haga clic en **fuente**.  
+7.  En el cuadro de diálogo **propiedades de texto** , haga clic en **fuente**.  
   
-8.  En el **fuente** lista, seleccione **Times New Roman**; en **tamaño** seleccione **24 pt**, en **Color** seleccione  **Granate**y en **estilo** seleccione **cursiva**.  
+8.  En la lista **fuente** , seleccione **Times New Roman**; en **tamaño** , **Seleccione 24 PT**, en **color** seleccione **granate**y en **estilo** seleccione **cursiva**.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -324,7 +324,7 @@ ms.locfileid: "66098917"
   
  El informe incluye un título de informe en el encabezado del informe.  
   
-##  <a name="Save"></a> 8. Guardar el informe  
+##  <a name="8-save-the-report"></a><a name="Save"></a>8. guardar el informe  
  Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo.  
   
  En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
@@ -355,7 +355,7 @@ ms.locfileid: "66098917"
   
 4.  Haga clic en **Guardar**.  
   
-##  <a name="RotateTextBox"></a> 9. (Opcional) Girar 270 grados el cuadro de texto  
+##  <a name="9-optional-rotate-text-box-270-degrees"></a><a name="RotateTextBox"></a>9. (opcional) girar el cuadro de texto 270 grados  
  Un informe con matrices se puede expandir horizontal y verticalmente cuando se ejecuta. Girando los cuadros de texto verticalmente o 270 grados, puede ahorrar espacio horizontal. El informe representado se hace más estrecho y, si se exporta a un formato como Microsoft Word, tendrá más posibilidades de ajustar en una página impresa.  
   
  Un cuadro de texto también puede mostrar el texto como horizontal o como, vertical (de arriba abajo). Para más información, vea [Cuadros de texto &#40;Generador de informes y SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md).  
@@ -366,7 +366,7 @@ ms.locfileid: "66098917"
   
 2.  Haga clic en la celda que contiene `[Territory].`.  
   
-3.  En el panel Propiedades, busque la propiedad WritingMode y en su lista desplegable, seleccione **Rotate270**.  
+3.  En el panel Propiedades, busque la propiedad WritingMode y, en la lista desplegable, seleccione **Rotate270**.  
   
      Si el panel Propiedades no está abierto, haga clic en la pestaña **Ver** de la cinta de opciones y seleccione **Propiedades**.  
   
@@ -378,11 +378,11 @@ ms.locfileid: "66098917"
   
  El nombre del territorio se escribe verticalmente, de arriba abajo. El alto del grupo de fila de Territory varía por la longitud del nombre del territorio.  
   
-## <a name="next-steps"></a>Pasos siguientes  
- Concluye así el tutorial para sobre el modo de crear un informe de matriz. Para obtener más información sobre matrices, vea [tablas, Matrices y listas &#40;generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Matrices &#40;generador de informes y SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [ Áreas de la región de datos Tablix &#40;generador de informes y SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), y [columnas, filas y celdas de la región de datos Tablix &#40;generador de informes&#41; y SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
+## <a name="next-steps"></a>Pasos a seguir  
+ Concluye así el tutorial para sobre el modo de crear un informe de matriz. Para más información sobre las matrices, consulte [tablas, matrices y listas &#40;generador de informes y ssrs&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [matrices &#40;Generador de informes y SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md), [áreas de la región de datos Tablix &#40;generador de informes y SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)y [celdas, filas y columnas de la región de datos Tablix &#40;generador de informes&#41; y SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md)   
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

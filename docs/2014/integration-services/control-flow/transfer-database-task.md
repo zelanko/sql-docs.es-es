@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fbc7c5cdadfa381cb493c08d4b50500f12f5db92
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830154"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438142"
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
   La tarea Transferir bases de datos transfiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferencia de otras tareas que solo transfieren objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiándolos, la tarea Transferir bases de datos puede copiar o mover una base de datos. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor.  
@@ -32,7 +31,7 @@ ms.locfileid: "62830154"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transferencia de bases de datos entre versiones de SQL Server  
  La tarea Transferir bases de datos puede transferir una base de datos entre instancias de versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferentes.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  La tarea Transferir bases de datos no indica el progreso incremental de la transferencia del mensaje de error; solo indica 0% y 100%.  
   
 ## <a name="execution-value"></a>Valor de ejecución  

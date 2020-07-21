@@ -1,6 +1,6 @@
 ---
-title: Trabajar con objetos de base de datos | Microsoft Docs
-ms.custom: ''
+title: Trabajar con objetos de bases de datos
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +14,14 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a59d039beed50543f1f7397bbceec24430c86a89
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: 624de23d309aac6f453054c2bf7a7a10b4a478ec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909748"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001350"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>Crear, modificar y quitar objetos de base de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Éstas son las fases de la creación de objetos SMO:  
   
@@ -42,7 +41,7 @@ ms.locfileid: "72909748"
   
  La instrucción **Drop** se utiliza para quitar un objeto y todos los objetos secundarios codependientes que hicieron falta para crear el objeto inicialmente.  
   
-## <a name="see-also"></a>Ver también  
- [Modelo de objetos de SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
+## <a name="see-also"></a>Consulte también  
+ [Modelo de objetos SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

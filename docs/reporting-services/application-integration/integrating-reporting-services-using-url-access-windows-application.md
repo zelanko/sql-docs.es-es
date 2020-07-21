@@ -1,9 +1,11 @@
 ---
-title: Usar el acceso URL en una aplicación de Windows | Microsoft Docs
+title: Uso del acceso URL en aplicaciones para Windows
+description: El acceso URL a un servidor de informes está optimizado para un entorno web, pero también puede utilizar el acceso URL para incrustar informes de Reporting Services en una aplicación de Windows.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -14,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012185"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74796904"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>Integración de Reporting Services con el acceso URL: aplicación de Windows
   Aunque el acceso URL a un servidor de informes se optimiza para un entorno web, también puede utilizar el acceso URL para incrustar informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una aplicación para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Sin embargo, el acceso URL que implica formularios Windows Forms todavía requiere que use la tecnología del explorador web. Puede utilizar los escenarios de integración siguientes con el acceso URL y los formularios Windows Forms:  
@@ -95,7 +97,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
      El control <xref:System.Windows.Forms.WebBrowser> denominado webBrowser1 se agrega al formulario  
   
- Al llamar al método del control <xref:System.Windows.Forms.WebBrowser> **Navigate**, dirige el control a una dirección URL. Puede asignar una cadena de acceso URL concreta al control <xref:System.Windows.Forms.WebBrowser> en tiempo de ejecución como se muestra en el ejemplo siguiente.  
+ Al llamar al método del control <xref:System.Windows.Forms.WebBrowser>**Navigate**, dirige el control a una dirección URL. Puede asignar una cadena de acceso URL concreta al control <xref:System.Windows.Forms.WebBrowser> en tiempo de ejecución como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  

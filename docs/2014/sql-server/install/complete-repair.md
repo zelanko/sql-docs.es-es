@@ -1,5 +1,5 @@
 ---
-title: Completar - reparar | Microsoft Docs
+title: Completar-reparar | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64d55acc-b164-4796-a3a0-ea84b812181d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e25553d57aabf32713e1369c75602ea7e12818db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e24ba1e080d087ec63742307a4c15f1c9c0fd25d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037064"
 ---
 # <a name="complete---repair"></a>Completar - Reparar
   Use la página **Completar - Reparar** para comprobar que la reparación se ha completado.  

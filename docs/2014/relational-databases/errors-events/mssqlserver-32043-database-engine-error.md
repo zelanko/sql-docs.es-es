@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: a0c48ae3-4c8c-419c-afb5-579fcefac01d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8892eb88a943176a5d99bdada398d004e983658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27b08927861e9222fe87ebb108d8595f63edb813
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914300"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551740"
 ---
-# <a name="mssqlserver32043"></a>MSSQLSERVER_32043
+# <a name="mssqlserver_32043"></a>MSSQLSERVER_32043
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|32043|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|32043|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum32043|  
 |Texto del mensaje|Se ha producido la alerta para 'registro sin restaurar'. El valor actual de '%d' sobrepasa el umbral '%d'.|  
@@ -43,7 +42,7 @@ ms.locfileid: "62914300"
 ## <a name="user-action"></a>Acción del usuario  
  Compruebe las cargas en las instancias del servidor principal y reflejado y su conexión de red para localizar la causa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 96c1529c3f73cb910471d5b829a09472535618fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4092a45a102206b738349a26fdc560c60a42400d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62826538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014133"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyNumVal (clase ClientNetworkProtocolProperty)
   Obtiene el valor numérico de la propiedad actual a la que hace referencia el valor de la [propiedad PropertyIdx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  

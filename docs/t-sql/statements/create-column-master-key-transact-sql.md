@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,19 +24,19 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 01f0824bd93535a05ee0d3dba6b56ce79c4e34d0
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061063"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391710"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-Crea un objeto de metadatos de clave maestra de columna en una base de datos. Una entrada de metadatos de la clave maestra de columna representa una clave, almacenada en un almacén de claves externo. La clave protege (cifra) claves de cifrado de columna al usar la característica [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Varias claves maestras de columna permiten la rotación de claves; cambie periódicamente la clave para mejorar la seguridad. Cree una clave maestra de columna en un almacén de claves y su objeto de metadatos relacionado en la base de datos mediante el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Para más detalles, vea [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
+Crea un objeto de metadatos de clave maestra de columna en una base de datos. Una entrada de metadatos de la clave maestra de columna representa una clave, almacenada en un almacén de claves externo. Esta clave protege (cifra) las claves de cifrado de columna cuando se usa [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Varias claves maestras de columna permiten la rotación de claves; cambie periódicamente la clave para mejorar la seguridad. Cree una clave maestra de columna en un almacén de claves y su objeto de metadatos relacionado en la base de datos mediante el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Para más detalles, vea [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
@@ -46,7 +46,7 @@ Crea un objeto de metadatos de clave maestra de columna en una base de datos. Un
 
 ## <a name="syntax"></a>Sintaxis  
 
-```  
+```syntaxsql
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
@@ -56,7 +56,9 @@ CREATE COLUMN MASTER KEY key_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *key_name*  
 El nombre de la clave maestra de columna en la base de datos.  
   
@@ -72,9 +74,7 @@ A continuación, el controlador usa el proveedor para descifrar claves de cifrad
   
 Las bibliotecas de controladores cliente compatibles con Always Encrypted incluyen proveedores de almacenamiento de claves para los almacenes de claves populares.   
   
-Un conjunto de proveedores disponibles depende del tipo y la versión del controlador cliente. Consulte información sobre controladores determinados en la documentación de Always Encrypted:
-
-[Desarrollar aplicaciones mediante Always Encrypted con el proveedor de datos .NET Framework para SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
+Un conjunto de proveedores disponibles depende del tipo y la versión del controlador cliente. Consulte información sobre controladores determinados en la documentación de Always Encrypted: [Desarrollo de aplicaciones con Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 
 En la siguiente tabla se muestran los nombres de los proveedores del sistema:  
@@ -84,7 +84,8 @@ En la siguiente tabla se muestran los nombres de los proveedores del sistema:
     |'MSSQL_CERTIFICATE_STORE'|Almacén de certificados de Windows| 
     |'MSSQL_CSP_PROVIDER'|Un almacén, como por ejemplo un módulo de seguridad de hardware (HSM), que es compatible con Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Un almacén, como un módulo de seguridad de hardware (HSM), que es compatible con la API de Cryptography: Next Generation.|  
-    |'Azure_Key_Vault'|Vea [Introducción a Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'AZURE_KEY_VAULT'|Vea [Introducción a Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)|  
+    |'MSSQL_JAVA_KEYSTORE'| Almacén de claves de Java.
   
 
 En su controlador cliente compatible con Always Encrypted, puede configurar un proveedor de almacenamiento de claves personalizado que almacena claves maestras de columna para las que no hay ningún proveedor de almacenamiento de claves integrado. Los nombres de proveedores de almacenamiento de claves personalizados no pueden empezar por 'MSSQL_', ya que es un prefijo reservado para proveedores de almacenamiento de claves de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
@@ -168,10 +169,11 @@ Especifica que la clave maestra de columna está habilitada para el enclave. Pue
 Un literal binario que es un resultado de la firma digital de la *ruta de acceso de la clave* y el valor ENCLAVE_COMPUTATIONS con la clave maestra de columna. La firma refleja si ENCLAVE_COMPUTATIONS se especifica o no. La firma evita que los usuarios no autorizados modifiquen los valores firmados. Un controlador cliente habilitado para Always Encrypted comprueba la firma y devuelve un error a la aplicación si la firma no es válida. La firma debe haberse generada utilizando herramientas de cliente. Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 Cree primero una entrada de metadatos de la clave maestra de columna para poder crear una entrada de metadatos de la clave de cifrado de columna en la base de datos y para poder cifrar cualquier columna de la base de datos mediante Always Encrypted. Una entrada de la clave maestra de columna en los metadatos no contiene la clave maestra de columna real. La clave maestra de columna debe almacenarse en un almacén de claves de columna externo (fuera de SQL Server). El nombre del proveedor de almacenamiento de claves y la ruta de acceso de la clave maestra de columna en los metadatos deben ser válidos para una aplicación cliente. La aplicación cliente debe usar la clave maestra de columna para descifrar una clave de cifrado de columna. La clave de cifrado de columna se cifra con la clave maestra de columna. La aplicación cliente también debe consultar columnas de cifrado.
 
+Se recomienda usar herramientas, como SQL Server Management Studio (SSMS) o PowerShell para administrar claves maestras de columna. Estas herramientas generan firmas (si usa Always Encrypted con enclaves seguros) y emiten automáticamente instrucciones de `CREATE COLUMN MASTER KEY` para crear objetos de metadatos de la clave de cifrado de columna. Consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-ssms.md) y [Aprovisionamiento de claves de Always Encrypted con PowerShell](../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md). 
 
   
 ## <a name="permissions"></a>Permisos  
@@ -182,7 +184,7 @@ Necesita el permiso **ALTER ANY COLUMN MASTER KEY**.
 ### <a name="a-creating-a-column-master-key"></a>A. Crear una clave maestra de columna  
 En el siguiente ejemplo se crea una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. La clave maestra de columna está almacenada en el almacén de certificados para las aplicaciones cliente que usan el proveedor MSSQL_CERTIFICATE_STORE para obtener acceso a la clave maestra de columna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -192,7 +194,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. Las aplicaciones cliente, que usan el proveedor MSSQL_CNG_STORE, obtienen acceso a la clave maestra de columna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +204,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. La clave maestra de columna está almacenada en Azure Key Vault para las aplicaciones cliente que usan el proveedor AZURE_KEY_VAULT para obtener acceso a la clave maestra de columna.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +214,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. La clave maestra de columna está almacenada en un almacén de claves maestras de columna personalizado:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +224,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Crear una clave maestra de columna habilitada para enclaves  
 En el siguiente ejemplo se crea una entrada de metadatos de la clave maestra de columna para una clave maestra de columna habilitada para el enclave. La clave maestra de columna habilitada para el enclave está almacenada en el almacén de certificados para las aplicaciones cliente que usan el proveedor MSSQL_CERTIFICATE_STORE para obtener acceso a la clave maestra de columna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +235,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna habilitada para el enclave. La clave maestra de columna habilitada para el enclave está almacenada en Azure Key Vault para las aplicaciones cliente que usan el proveedor AZURE_KEY_VAULT para obtener acceso a la clave maestra de columna.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -247,6 +249,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
-* [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+* [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+* [Administración de claves para Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

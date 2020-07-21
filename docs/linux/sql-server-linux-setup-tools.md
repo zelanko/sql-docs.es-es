@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: En este artículo se explica cómo instalar las herramientas de SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041248"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897330"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalación de las herramientas de línea de comandos sqlcmd y bcp de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En los pasos siguientes se instalan las herramientas de línea de comandos, los controladores ODBC de Microsoft y sus dependencias. El paquete **mssql-tools** contiene:
 
@@ -36,7 +36,7 @@ Instale las herramientas para su plataforma:
 
 En este artículo se explica cómo instalar las herramientas línea de comandos. Si busca ejemplos de cómo usar **sqlcmd** o **bcp**, vea los [vínculos](#next-steps) al final de este tema.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Instalación de herramientas en RHEL 7
+## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>Instalación de herramientas en RHEL 8
 
 Use los pasos siguientes para instalar **mssql-tools** en Red Hat Enterprise Linux. 
 
@@ -49,7 +49,7 @@ Use los pasos siguientes para instalar **mssql-tools** en Red Hat Enterprise Lin
 1. Descargue el archivo de configuración del repositorio de Red Hat de Microsoft.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. Salga del modo de superusuario.
@@ -92,9 +92,12 @@ Use los pasos siguientes para instalar **mssql-tools** en Red Hat Enterprise Lin
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Instalación de herramientas en Ubuntu 16.04
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Instalación de herramientas en Ubuntu 16.04
 
-Siga estos pasos para instalar **mssql-tools** en Ubuntu. 
+Siga estos pasos para instalar **mssql-tools** en Ubuntu.
+
+> [!NOTE]
+> Ubuntu 18.04 se admite a partir de SQL Server 2019 CU3. Si usa Ubuntu 18.04, cambie la ruta de acceso del repositorio de `/ubuntu/16.04` a `/ubuntu/18.04`.
 
 1. Importe las claves de GPG del repositorio público.
 
@@ -137,7 +140,7 @@ Siga estos pasos para instalar **mssql-tools** en Ubuntu.
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Instalación de herramientas en SLES 12
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>Instalación de herramientas en SLES 12
 
 Use los pasos siguientes para instalar **mssql-tools** en SUSE Linux Enterprise Server. 
 
@@ -176,17 +179,17 @@ Use los pasos siguientes para instalar **mssql-tools** en SUSE Linux Enterprise 
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>Instalación de herramientas en macOS
+## <a name="install-tools-on-macos"></a><a id="macos"></a>Instalación de herramientas en macOS
 
 Ahora hay disponible una versión preliminar de **sqlcmd** y **bcp** en MacOS. Para obtener más información, consulte el [anuncio](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
 *Instale [Homebrew](https://brew.sh) si aún no lo tiene:*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Para instalar las herramientas para Mac El Capitan y Sierra, use los comandos siguientes:
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -195,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-docker.md), las herramientas de línea de comandos de SQL Server ya están incluidas en la imagen de contenedor de SQL Server para Linux. Si adjunta un contenedor en ejecución con un shell de Bash interactivo, puede ejecutar las herramientas de forma local.
 
@@ -215,7 +218,7 @@ Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-do
 
    | Distribución de Linux | Ubicación de paquetes ODBC |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
@@ -229,7 +232,7 @@ Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-do
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **Resuelva las dependencias que faltan** : Es posible que falten dependencias en este punto. Si no es así, puede omitir este paso. En algunos casos, debe localizar e instalar manualmente estas dependencias.
+1. **Resuelva las dependencias que faltan**: Es posible que falten dependencias en este punto. Si no es así, puede omitir este paso. En algunos casos, debe localizar e instalar manualmente estas dependencias.
 
     En el caso de paquetes RPM, puede inspeccionar las dependencias necesarias con los siguientes comandos:
 

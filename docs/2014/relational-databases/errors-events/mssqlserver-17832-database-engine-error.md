@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be82900146be4b20fb68960350959ae3b2135076
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62915433"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553610"
 ---
-# <a name="mssqlserver17832"></a>MSSQLSERVER_17832
+# <a name="mssqlserver_17832"></a>MSSQLSERVER_17832
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|17832|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|17832|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SRV_BAD_LOGIN_PKT|  
 |Texto del mensaje|La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls|  
@@ -51,11 +50,11 @@ ms.locfileid: "62915433"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- **Para cambiar el valor de MaxTokenSize en el equipo del servidor**  
+ **Para cambiar el MaxTokenSize en el equipo servidor**  
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  Tipo `regedit`y, a continuación, haga clic en **Aceptar**. (Si aparece el cuadro de diálogo **Control de cuentas de usuario**, haga clic en **Continuar**).  
+2.  Escriba `regedit` y, a continuación, haga clic en **Aceptar**. (Si aparece el cuadro de diálogo **Control de cuentas de usuario**, haga clic en **Continuar**).  
   
 3.  Desplácese a **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   

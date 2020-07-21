@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002900"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento. Las columnas dispersas y los conjuntos de columnas se definen mediante las instrucciones [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) o [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -71,7 +70,7 @@ ms.locfileid: "68196654"
   
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|`bit`|0.125|5|98%|  
+|`bit`|0,125|5|98%|  
 |`tinyint`|1|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
@@ -92,10 +91,10 @@ ms.locfileid: "68196654"
 |`datetime2(0)`|6|10|57%|  
 |`datetime2(7)`|8|12|52%|  
 |`time(0)`|3|7|69%|  
-|`time(7)`|5|9|60%|  
+|`time(7)`|5|9|60 %|  
 |`datetimetoffset(0)`|8|12|52%|  
 |`datetimetoffset (7)`|10|14|49%|  
-|`decimal/numeric(1,s)`|5|9|60%|  
+|`decimal/numeric(1,s)`|5|9|60 %|  
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Utilice el tipo `decimal` como un cálculo moderado.|||  
   
@@ -104,11 +103,11 @@ ms.locfileid: "68196654"
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Varía con el tipo de datos subyacente|||  
-|`varchar` o `char`|2*|4*|60%|  
-|`nvarchar` o `nchar`|2*|4*+|60%|  
-|`varbinary` o `binary`|2*|4*|60%|  
-|`xml`|2*|4*|60%|  
-|`hierarchyid`|2*|4*|60%|  
+|`varchar` o `char`|2*|4*|60 %|  
+|`nvarchar` o `nchar`|2*|4*+|60 %|  
+|`varbinary` o `binary`|2*|4*|60 %|  
+|`xml`|2*|4*|60 %|  
+|`hierarchyid`|2*|4*|60 %|  
   
  *La longitud es igual a la media de los datos incluidos en el tipo, más 2 o 4 bytes.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "68196654"
   
      La replicación de mezcla no admite el uso de columnas dispersas ni de conjuntos de columnas.  
   
--   seguimiento de cambios  
+-   Seguimiento de cambios  
   
      El seguimiento de cambios admite el uso de columnas dispersas y de conjuntos de columnas. Cuando se actualiza un conjunto de columnas en una tabla, el seguimiento de cambios lo considera como una actualización de la fila completa. No se proporciona ningún seguimiento de cambios detallado que permita obtener el número exacto de columnas dispersas que se actualizan mediante la operación de actualización del conjunto de columnas. Si las columnas dispersas se actualizan de forma explícita mediante una instrucción DML, el seguimiento de cambios funcionará normalmente en ellas y permitirá identificar el número exacto de columnas modificadas.  
   
@@ -231,7 +230,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar conjuntos de columnas](../tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

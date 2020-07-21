@@ -20,18 +20,18 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c287300b9db48327f5d3ac72e11fcc78183ed88b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a817d079c926db5d130c950e4a7d1a706a77b26d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927425"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991490"
 ---
-# <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Función escalar que notifica el estado de la transacción de usuario de una solicitud que se está ejecutando actualmente. XACT_STATE indica si la solicitud tiene una transacción de usuario activa y si se puede confirmar la transacción.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "67927425"
 XACT_STATE()  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **smallint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  XACT_STATE devuelve los siguientes valores.  
   
 |Valor devuelto|Significado|  

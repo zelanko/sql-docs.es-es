@@ -19,15 +19,15 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68425937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732319"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Devuelve el valor de propiedad de archivo extendida especificado al especificar un nombre de archivo en la base de datos actual y un nombre de propiedad. Devuelve NULL para los archivos que no están en la base de datos actual o para las propiedades de archivo extendidas que no existen. Actualmente, las propiedades de archivo extendidas solo se aplican a las bases de datos que están en Azure Blob Storage.  
   
@@ -40,7 +40,7 @@ FILEPROPERTYEX ( name , property )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Nombre*  
+ *name*  
  Es una expresión que contiene el nombre del archivo asociado a la base de datos actual de la que se va a devolver información de propiedades. *file_name* es **nchar(128)** .  
   
  *property*  
@@ -48,17 +48,17 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|Valor|Descripción|
+|Value|Descripción|
 |-----------|-----------------|  
 |**BlobTier**|Nivel de blob en páginas de Azure de destino. Solo se aplica a las bases de datos Standard y GeneralPurpose que usa el almacenamiento de blobs en páginas de Azure.|
 |**AccountType**|Tipo de cuenta de almacenamiento que indica si se trata de almacenamiento de blobs o de almacenamiento de archivos y si es un almacenamiento Premium o estándar.|
 |**IsInferredTier**|Indica si el nivel es un nivel implícito (deducido) que podría crecer con el tamaño de los datos o un nivel explícito (fijo).|
 |**IsPageBlob**|Indica si el blob de destino es un blob en páginas o no.|
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sql_variant**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  *file_name* corresponde a la columna **name** de la vista de catálogo **sys.master_files** o **sys.database_files**.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo Filter y RecordCount propiedades (JScript) | Microsoft Docs
+title: Ejemplo de las propiedades Filter y RecordCount (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 339a605e926b88dae5cee515af9579152613692c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932655"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756797"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Ejemplo Filter y RecordCount propiedades (JScript)
-Este ejemplo se abre un **Recordset** en la tabla de las compañías de la base de datos Northwind y, a continuación, usa el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar los registros visibles a aquellos en los que el campo CompanyName comienza por la letra D. corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **FilterJS.asp**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Ejemplo de las propiedades Filter y RecordCount (JScript)
+En este ejemplo se abre un **conjunto de registros** en la tabla de compañías de la base de datos Northwind y, a continuación, se usa la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) para limitar los registros visibles para aquellos en los que el campo CompanyName comienza con la letra D. corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **FilterJS. asp**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -148,7 +148,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad de filtro](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedad Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

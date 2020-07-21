@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808403"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934616"
 ---
 # <a name="connection-properties-dialog-box"></a>Propiedades de conexión, cuadro de diálogo
   Utilice este cuadro de diálogo para ver las propiedades de la conexión actual. Este cuadro de diálogo está disponible cuando se hace clic en **Ver propiedades de conexión** en varios cuadros de diálogo del Explorador de objetos. Las propiedades que aparecen en esta página son de solo lectura.  
@@ -28,8 +27,8 @@ ms.locfileid: "62808403"
   
  Observe que el tiempo de espera de consulta para SQL Azure es de 30 minutos.  
   
-## <a name="authentication"></a>Autenticación  
- Vea las propiedades de autenticación de la conexión actual. Las propiedades de autenticación son el inicio de sesión y el método de autenticación cuando se establece la conexión. Para cambiar las propiedades de autenticación, desconéctese de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, a continuación, conecte de nuevo el Explorador de objetos al servidor, mediante las opciones de conexión deseadas.  
+## <a name="authentication"></a>Authentication  
+ Vea las propiedades de autenticación de la conexión actual. Las propiedades de autenticación son el inicio de sesión y el método de autenticación cuando se establece la conexión. Para cambiar las propiedades de autenticación, desconéctese de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y, a continuación, vuelva a conectar explorador de objetos con el servidor, con las opciones de conexión deseadas.  
   
  **Método de autenticación**  
  El método de autenticación que utiliza la conexión actual.  
@@ -52,16 +51,16 @@ ms.locfileid: "62808403"
  **Tamaño de paquete de red**  
  Tamaño del paquete que se utiliza en la comunicación con el servidor. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
- **Tiempo de espera de la conexión**  
+ **Tiempo de espera de conexión**  
  Intervalo de tiempo de espera (en segundos) al conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antes de que se agote el tiempo y se devuelva un error de conexión al usuario. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
  **Tiempo de espera de ejecución**  
  Intervalo de tiempo (en segundos) que hay que esperar antes de que finalice la ejecución de una tarea en el servidor. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
- **Cifrado**  
+ **Cifrados**  
  Indica si la conexión actual está cifrada. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
-## <a name="product-category"></a>Categoría del producto  
+## <a name="product-category"></a>Categoría de productos  
  Vea las propiedades del producto de la conexión actual. Estas propiedades describen el producto, la versión, el nombre de instancia y la intercalación del servidor. Las propiedades se configuran durante la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Nombre del producto**  
@@ -70,10 +69,10 @@ ms.locfileid: "62808403"
  **Versión del producto**  
  Versión del producto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nombre de servidor**  
+ **Nombre del servidor**  
  Nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Nombre de la instancia**  
+ **Nombre de instancia**  
  Nombre de instancia del servidor. Está en blanco de forma predeterminada.  
   
  **Lenguaje**  
@@ -100,7 +99,7 @@ ms.locfileid: "62808403"
  **Memoria del sistema operativo**  
  La cantidad total de memoria física del servidor, en megabytes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Páginas de propiedades en SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
  [Conectar al servidor &#40;Página Inicio de sesión&#41; Motor de base de datos](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   

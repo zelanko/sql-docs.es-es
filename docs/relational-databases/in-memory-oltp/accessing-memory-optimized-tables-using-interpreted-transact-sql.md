@@ -1,6 +1,7 @@
 ---
-title: Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado | Microsoft Docs
-ms.custom: ''
+title: Tablas con optimización para memoria mediante T-SQL interpretado
+description: Obtenga información sobre el acceso a tablas optimizadas para memoria mediante Transact-SQL interpretado (lotes de Transact-SQL o procedimientos almacenados en SQL Server).
+ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd722c59384b1a7878ac2b940da9534ba5d1f7a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50e15e99ce68b47b1cd87262ff12fda3e9836bcf
+ms.sourcegitcommit: 7a47aaffbd82bab2707cd69f44571a9037d2273b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951328"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85377806"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

@@ -10,16 +10,16 @@ ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059969"
 ---
 # <a name="troubleshooting-db2tosql"></a>Solución de problemas (DB2ToSQL)
-No es raro experimenta midway de problemas de migración ejecutando los comandos o scripts de la consola.  
+No es raro que se ejecute en problemas de migración que ejecutan los comandos o scripts de la consola.  
   
-Los errores se pueden corregir pueden estar relacionados con:  
+Los errores de fixable pueden estar relacionados con:  
   
 1.  Función  
   
@@ -33,5 +33,5 @@ Los errores se pueden corregir pueden estar relacionados con:
   
 6.  Cambiar la configuración del proyecto  
   
-Los problemas pueden solucionarse mediante la interfaz de usuario SSMA abriendo el archivo de proyecto creado mediante la consola.  
+Los problemas se pueden corregir mediante la interfaz de usuario de SSMA abriendo el archivo de proyecto creado a través de la consola de.  
   

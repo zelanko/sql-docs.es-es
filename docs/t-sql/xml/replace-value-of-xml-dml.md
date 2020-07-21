@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Microsoft Docs
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051231"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393053"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Actualiza el valor de un nodo en el documento.  
   
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *Expression1*  
 Identifica un nodo cuyo valor se va a actualizar. Debe identificar un solo nodo. Es decir, *Expresión1* debe ser un singleton estático. Si el XML tiene un tipo, el tipo del nodo debe ser simple. Si se seleccionan varios nodos, se producirá un error. Si *Expression1* devuelve una secuencia vacía, no se reemplazará ningún valor ni se devolverá ningún error. *Expression1* debe devolver un solo elemento que incluya contenido de tipo simple (tipos de lista o atómicos), un nodo de texto o un nodo de atributo. *Expression1* no puede ser un tipo de unión, un tipo complejo, una instrucción de procesamiento, un nodo de documento ni un nodo de comentario, pues se devolvería un error.  
   

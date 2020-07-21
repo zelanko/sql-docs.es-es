@@ -1,5 +1,6 @@
 ---
 title: Entidades de seguridad (motor de base de datos) | Microsoft Docs
+description: Obtenga información sobre las entidades de seguridad en el Motor de base de datos, que son entidades que pueden solicitar recursos de SQL Server. Hay entidades de seguridad de nivel de SQL Server y de nivel de bases de datos.
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
@@ -29,17 +30,17 @@ ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 213babf7e34fac642bd91374b2f008776dbbd8d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344598"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005612"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de la definición de la entidad de seguridad: Windows, servidor, base de datos; y si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
+  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de la definición de la entidad de seguridad: Windows, servidor, base de datos; y si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Entidades de seguridad de nivel de SQL Server  
   
@@ -67,7 +68,7 @@ El usuario `dbo` tiene la propiedad del esquema `dbo`. El esquema `dbo` es el pr
 ## <a name="public-server-role-and-database-role"></a>Rol público de base de datos y de servidor  
 Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario de base de datos pertenece al rol de base de datos `public`. Cuando a un usuario o inicio de sesión no se le han concedido ni denegado permisos concretos para un elemento protegible, hereda los permisos para ese elemento concedidos a public. El rol fijo de servidor `public` y el de base de datos `public` no pueden quitarse. Sin embargo, puede revocar los permisos de los roles `public`. Hay muchos de los permisos que se asignan a los roles `public` de forma predeterminada. La mayoría de estos permisos son necesarios para realizar operaciones rutinarias en la base de datos; el tipo de tareas que todo el mundo debe poder hacer. Tenga cuidado al revocar permisos desde el usuario o el inicio de sesión público, ya que afectará a todos los inicios de sesión y usuarios. Normalmente, no debe denegar permisos a public, ya que la instrucción deny invalida cualquier instrucción grant que podrían crear para los usuarios. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA, y usuarios y esquemas sys 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA, y usuarios y esquemas sys 
  Todas las bases de datos incluyen dos entidades que aparecen como usuarios en las vistas de catálogo:`INFORMATION_SCHEMA` y `sys`. Estas entidades son necesarias para uso interno por parte del motor de base de datos. No se pueden modificar ni quitar.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Inicios de sesión de SQL Server basados en certificados  

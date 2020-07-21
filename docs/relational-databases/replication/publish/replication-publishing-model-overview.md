@@ -1,5 +1,6 @@
 ---
 title: Información general del modelo de publicación de replicación | Microsoft Docs
+description: Obtenga información sobre el modelo de publicación de replicación en SQL Server, incluidos el publicador, el distribuidor, los suscriptores, las publicaciones, los artículos y las suscripciones.
 ms.custom: ''
 ms.date: 09/01/2016
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: df1813018defce81e6e7fcb69c206fc3e4d91195
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769799"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159943"
 ---
 # <a name="replication-publishing-model-overview"></a>Información general del modelo de publicación de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  La replicación utiliza una metáfora del sector editorial para representar los componentes de una topología de replicación, que incluyen el publicador, el distribuidor, los suscriptores, las publicaciones, los artículos y las suscripciones. Resulta útil pensar en la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como si fuera una revista:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  La replicación utiliza una metáfora del sector editorial para representar los componentes de una topología de replicación, que incluyen el publicador, el distribuidor, los suscriptores, las publicaciones, los artículos y las suscripciones. Resulta útil pensar en la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en términos de una revista:  
   
 -   El publicador (editor) de una revista produce una o más publicaciones.  
   
@@ -46,12 +47,12 @@ ms.locfileid: "68769799"
   
  Una *topología de replicación* define la relación entre los servidores y las copias de los datos, y aclara la lógica que determina cómo fluyen los datos entre los servidores. Hay varios procesos de replicación (denominados *agentes*) que son responsables de copiar y mover los datos entre el publicador y los suscriptores. En la siguiente ilustración se muestra información general acerca de los componentes y procesos que participan en la replicación.  
   
- ![Componentes de replicación y flujo de datos](../../../relational-databases/replication/publish/media/replintro1.gif "Componentes de replicación y flujo de datos")  
+ ![Componentes y flujo de datos de replicación](../../../relational-databases/replication/publish/media/replintro1.gif "Componentes y flujo de datos de replicación")  
   
-## <a name="publisher"></a>publicador  
+## <a name="publisher"></a>Publicador  
  El publicador es una instancia de base de datos que permite que los datos estén disponibles para otras ubicaciones a través de la replicación. El publicador puede tener una o más publicaciones, cada una de las cuales representa un conjunto de objetos y datos relacionados lógicamente para replicar.  
   
-## <a name="distributor"></a>Distribuidor  
+## <a name="distributor"></a>Distribuidor.  
  El distribuidor es una instancia de base de datos que funciona como almacén para datos específicos de replicación asociados con uno o más publicadores. Cada publicador está asociado con una sola base de datos (conocida como la base de datos de distribución) en el distribuidor. La base de datos de distribución almacena los datos de estado de la replicación, metadatos acerca de la publicación y, en algunos casos, funciona como cola para los datos que se transfieren del publicador a los suscriptores. En muchos casos, una sola instancia de servidor de bases de datos funciona como publicador y como distribuidor Esto se conoce como un *distribuidor local*. Cuando el publicador y el distribuidor se configuran en instancias distintas del servidor de bases de datos, el distribuidor se denomina un *distribuidor remoto*.  
   
 ## <a name="subscribers"></a>Suscriptores  
@@ -67,8 +68,8 @@ ms.locfileid: "68769799"
  Una suscripción es una solicitud de una copia de una publicación que se entrega a un suscriptor. La suscripción define qué publicación se recibirá, dónde y cuándo. Hay dos tipos de suscripciones: de inserción y de extracción. Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Información general sobre los agentes de replicación](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [Tipos de replicación](../../../relational-databases/replication/types-of-replication.md)   
+ [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [Mantener una base de datos de publicación AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

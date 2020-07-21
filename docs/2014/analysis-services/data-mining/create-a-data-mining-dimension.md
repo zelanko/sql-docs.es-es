@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a21653e55088935539f8dedd4c94078c4c0ffdf9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085499"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523941"
 ---
 # <a name="create-a-data-mining-dimension"></a>Crear una dimensión de minería de datos
   Si su estructura de minería de datos está basada en un cubo OLAP, puede crear una dimensión que incluya el contenido del modelo de minería de datos. A continuación, puede volver a incorporar la dimensión en el cubo de origen.  
@@ -38,11 +37,11 @@ ms.locfileid: "66085499"
   
 5.  Si desea crear un cubo que incluya la nueva dimensión de minería de datos, seleccione **Crear cubo**. Después de seleccionar **Crear cubo**, puede escribir un nuevo nombre para el cubo.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
      La dimensión de minería de datos se crea y se agrega a la carpeta **Dimensiones** del Explorador de dimensiones. Si ha seleccionado **Crear cubo**, también se crea un cubo nuevo que se agrega a la carpeta **Cubos** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
   
   

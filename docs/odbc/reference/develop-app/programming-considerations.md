@@ -1,5 +1,5 @@
 ---
-title: Consideraciones sobre la programación | Microsoft Docs
+title: Consideraciones de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023260"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282185"
 ---
 # <a name="programming-considerations"></a>Consideraciones sobre la programación
-En esta sección se describe brevemente varios temas relacionados con la escritura de controladores y aplicaciones de ODBC.  
+En esta sección se describe brevemente una serie de temas relacionados con la escritura de aplicaciones y controladores ODBC.  
   
  Esta sección contiene los temas siguientes.  
   

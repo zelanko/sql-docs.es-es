@@ -1,6 +1,7 @@
 ---
-title: Grupos de disponibilidad Always On para SQL Server en Linux
-description: ''
+title: Grupos de disponibilidad para SQL Server en Linux
+description: Obtenga información sobre las características de los grupos de disponibilidad Always On para SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 8ec35aff528e1ca35d145f400edeb2ca46a7df85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883940"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de disponibilidad AlwaysOn en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se describen las características de los grupos de disponibilidad Always On (AG) en instalaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Linux. También se tratan las diferencias entre los AG basados en el clúster de conmutación por error de Windows Server (WSFC) y Linux. Consulte la [documentación basada en Windows](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) para obtener información básica de los AG, ya que funcionan de la misma forma en Windows y Linux, excepto para el WSFC.
 
@@ -46,7 +47,7 @@ Una novedad en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] es la introducc
 
 Un tipo de clúster None significa que no hay ningún requisito de Pacemaker y que el AF no lo usará. Incluso en los servidores que tienen configurado Pacemaker, si un AG está configurado con un tipo de clúster None, Pacemaker no verá ni administrará ese AG. Un tipo de clúster de None solo admite la conmutación por error manual de una réplica principal a una secundaria. Un AG creado con None se dirige principalmente al escenario de escalado de lectura, así como a las actualizaciones. Aunque puede funcionar en escenarios como la recuperación ante desastres o la disponibilidad local cuando no se necesita ninguna conmutación por error automática, no resulta recomendable. La historia del cliente de escucha también es más compleja sin Pacemaker.
 
-El tipo de clúster se almacena en la vista de administración dinámica (DMV) de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] `sys.availability_groups`, en las columnas `cluster_type` y `cluster_type_desc`.
+El tipo de clúster se almacena en la vista de administración dinámica (DMV) de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]`sys.availability_groups`, en las columnas `cluster_type` y `cluster_type_desc`.
 
 ## <a name="required_synchronized_secondaries_to_commit"></a>required\_synchronized\_secondaries\_to\_commit
 
@@ -158,7 +159,7 @@ If using automatic seeding with a distributed availability group that crosses OS
 ## <a name="next-steps"></a>Pasos siguientes
 [Configurar el grupo de disponibilidad para SQL Server en Linux](sql-server-linux-availability-group-configure-ha.md)
 
-[Configurar el grupo de disponibilidad de escalado de lectura para SQL Server en Linux](sql-server-linux-availability-group-configure-rs.md)
+[Configurar el grupo de disponibilidad de escalado de lectura para SQL Server en Linux](sql-server-linux-availability-group-configure-rs.md)
 
 [Agregar un recurso de clúster de grupo de disponibilidad en RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 

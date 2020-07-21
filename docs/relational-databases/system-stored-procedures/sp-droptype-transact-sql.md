@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_droptype
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13ef625d778fe20aa5d33b2958c90aa8cd5a2a8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783755"
 ---
-# <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Elimina un tipo de datos de alias desde **systypes**.  
+  Elimina un tipo de datos de alias de **systypes**.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @typename = ] 'type'` Es el nombre de un tipo de datos de alias perteneciente al usuario. *tipo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @typename = ] 'type'`Es el nombre de un tipo de datos de alias que posee. *Type* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-type"></a>Tipo de código de retorno  
  0 (correcto) o 1 (error)  
@@ -47,14 +47,14 @@ sp_droptype [ @typename = ] 'type'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- El **tipo** alias no se puede quitar el tipo de datos si las tablas u otros objetos de base de datos hacen referencia a él.  
+## <a name="remarks"></a>Observaciones  
+ No se puede quitar el tipo de datos del alias de **tipo** si las tablas u otros objetos de base de datos hacen referencia a él.  
   
 > [!NOTE]  
 >  Un tipo de datos de alias no puede quitarse si se utiliza en una definición de tabla, o si una regla o valor predeterminado está enlazado a él.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **db_owner** rol fijo de base de datos o el **db_ddladmin** rol fijo de base de datos.  
+ Requiere la pertenencia al rol fijo de base de datos **db_owner** o el rol fijo de base de datos **db_ddladmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el tipo de datos de alias `birthday`.  
@@ -69,9 +69,9 @@ EXEC sp_droptype 'birthday';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addtype &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_addtype &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

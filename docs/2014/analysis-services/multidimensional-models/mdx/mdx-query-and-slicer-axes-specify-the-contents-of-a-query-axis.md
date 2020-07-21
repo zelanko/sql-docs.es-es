@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c745ade0-738e-4a98-a3f0-3eabfd3eeba2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b310c3fd762274a038198f7d88456b85d156ba3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074083"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546247"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Especificar el contenido de un eje de consulta (MDX)
   Los ejes de consulta especifican los límites de un conjunto de celdas devuelto por una instrucción SELECT de Expresiones multidimensionales (MDX). Al especificar los límites de un conjunto de celdas puede restringir los datos devueltos que son visibles para el cliente.  
@@ -71,7 +70,7 @@ FROM [Adventure Works]
   
 ```  
   
- La palabra clave NON EMPTY, utilizada antes de la definición específica, es una forma sencilla de quitar todas las tuplas vacías de un eje. Por ejemplo, en los ejemplos que hemos visto hasta ahora hay ningún dato en el cubo desde agosto de 2004 y versiones posteriores. Para quitar todas las filas del conjunto que no tienen ningún dato en ninguna columna, agregue simplemente NON EMPTY antes del conjunto en la definición del eje de filas como sigue:  
+ La palabra clave NON EMPTY, utilizada antes de la definición específica, es una forma sencilla de quitar todas las tuplas vacías de un eje. Por ejemplo, en los ejemplos que hemos visto hasta ahora no hay datos en el cubo de agosto de 2004 en adelante. Para quitar todas las filas del conjunto que no tienen ningún dato en ninguna columna, agregue simplemente NON EMPTY antes del conjunto en la definición del eje de filas como sigue:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -114,7 +113,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar el contenido de un eje de división en sectores &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

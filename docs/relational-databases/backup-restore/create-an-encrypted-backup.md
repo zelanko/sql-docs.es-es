@@ -1,5 +1,6 @@
 ---
 title: Creación de una copia de seguridad cifrada | Microsoft Docs
+description: En este artículo se muestra cómo crear una copia de seguridad cifrada en SQL Server mediante Transact-SQL. Se puede realizar una copia de seguridad en disco o en Azure Storage.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: a235ae2c396334d7dbd7c27efb582bf8c1890219
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70280807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748437"
 ---
 # <a name="create-an-encrypted-backup"></a>Crear una copia de seguridad cifrada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen los pasos necesarios para crear una copia de seguridad cifrada mediante Transact-SQL.  Para ver un ejemplo que usa [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Crear una copia de seguridad completa de base de datos (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md). 
   
 ## <a name="backup-to-disk-with-encryption"></a>Copia de seguridad en disco con cifrado  

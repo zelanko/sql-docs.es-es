@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063587"
 ---
 # <a name="resource-governor"></a>regulador de recursos
-  El regulador de recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una característica que puede usarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria que pueden usar las solicitudes entrantes procedentes de las aplicaciones.  
+  El regulador de recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una característica que puede usarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Resource Governor permite especificar la cantidad máxima de CPU, E/S física y memoria que pueden usar las solicitudes de aplicación entrantes.  
   
 ## <a name="benefits-of-resource-governor"></a>Ventajas del regulador de recursos  
  El regulador de recursos que permite administrar las cargas de trabajo y los recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la especificación de los límites del consumo de recursos por solicitudes entrantes. En el contexto del Regulador de recursos, la carga de trabajo es un conjunto de consultas o solicitudes de dimensiones similares que pueden (y deberían) tratarse como una entidad única. No se trata de un requisito, pero cuanto más uniforme es el modelo del uso de recursos de una carga de trabajo, mayores son las ventajas que pueden obtenerse del Regulador de recursos. Los límites sobre los recursos pueden reconfigurarse en tiempo real con un impacto mínimo sobre las cargas de trabajo que se están ejecutando.  
@@ -86,10 +85,10 @@ ms.locfileid: "62704874"
 |Describe cómo crear, modificar y quitar un grupo de recursos de servidor.|[Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)|  
 |Describe cómo crear, modificar, mover y quitar un grupo de carga de trabajo.|[Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)|  
 |Describe cómo crear y probar una función clasificadora definida por el usuario.|[Función clasificadora del regulador de recursos](resource-governor-classifier-function.md)|  
-|Describe cómo configurar el regulador de recursos mediante una plantilla.|[Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)|  
+|Describe cómo configurar el regulador de recursos mediante una plantilla.|[Configurar el regulador de recursos mediante una plantilla](configure-resource-governor-using-a-template.md)|  
 |Describe cómo ver las propiedades del regulador de recursos.|[Ver las propiedades del regulador de recursos](view-resource-governor-properties.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instancias del motor de base de datos &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

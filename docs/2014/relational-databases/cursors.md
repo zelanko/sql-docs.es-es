@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970545"
 ---
 # <a name="cursors"></a>Cursores
   Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
@@ -61,7 +60,7 @@ ms.locfileid: "62918696"
   
  Aunque los modelos de cursor de la API de base de datos consideran el cursor de solo avance como un tipo más, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no establece esta distinción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que las opciones de desplazamiento de solo avance y de desplazamiento son las que se pueden aplicar a los cursores estáticos, a los controlados por conjunto de claves y a los dinámicos. [!INCLUDE[tsql](../includes/tsql-md.md)] cursores admiten cursores estáticos controlados por conjunto de claves y dinámicos que sean de solo avance. Los modelos de cursor de la API de bases de datos dan por sentado que los cursores estáticos, los controlados por conjunto de claves y los dinámicos siempre se pueden desplazar. Cuando se establece el atributo o propiedad de un cursor de la API de bases de datos como de solo avance, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lo implementa como cursor dinámico de solo avance.  
   
- Estático  
+ estática  
  El conjunto de resultados completo de un cursor estático se genera en **tempdb** cuando se abre el cursor. Un cursor estático siempre muestra el conjunto de resultados tal como estaba al abrir el cursor. Los cursores estáticos detectan pocos cambios o ningún cambio, pero consumen relativamente pocos recursos al desplazarse.  
   
  El cursor no refleja las modificaciones realizadas en la base de datos que afectan a la pertenencia al conjunto de resultados o a los valores modificados en las columnas de las filas que forman el conjunto de resultados. Un cursor estático no muestra las nuevas filas insertadas en la base de datos después de abrir el cursor, aunque coincidan con las condiciones de búsqueda de la instrucción SELECT del cursor. Si otros usuarios actualizan las filas que conforman el conjunto de resultados, los nuevos valores de datos no se muestran en el cursor estático. El cursor estático muestra las filas eliminadas de la base de datos una vez que se ha abierto el cursor. Las operaciones UPDATE, INSERT o DELETE no se reflejan en un cursor estático (a menos que se cierre éste y se vuelva a abrir), ni tampoco las modificaciones realizadas con la misma conexión que abrió el cursor.  
@@ -113,12 +112,12 @@ ms.locfileid: "62918696"
 5.  Cierre el cursor.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Cursor Behaviors](native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+ [Comportamientos de los cursores](native-client-odbc-cursors/cursor-behaviors.md) [Cómo se implementan los cursores](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
  [Cursores &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
- [Funciones del cursor &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
+ [Funciones de cursor &#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-functions-transact-sql)   
  [Procedimientos almacenados de cursor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   
   

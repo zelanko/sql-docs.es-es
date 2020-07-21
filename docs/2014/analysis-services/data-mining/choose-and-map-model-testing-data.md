@@ -1,5 +1,5 @@
 ---
-title: Elegir y asignar el modelo de datos de prueba | Microsoft Docs
+title: Elegir y asignar los datos de prueba del modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88e109a3ee51360edf85547a92254f6015168243
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085760"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524903"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Elegir y asignar datos de prueba para el modelo
   Para crear un gráfico de precisión en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], debe elegir los datos que se utilizarán para probar el modelo y asignar dichos datos al modelo.  
@@ -49,7 +48,7 @@ ms.locfileid: "66085760"
   
  [Cambiar la forma en la que las columnas de los datos de prueba se asignan al modelo](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a> Para seleccionar tablas de entrada para probar la precisión de un modelo de minería de datos  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> Para seleccionar tablas de entrada para probar la precisión de un modelo de minería de datos  
   
 1.  En el Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga doble clic en la estructura de minería de datos que contiene los modelos de los que desea crear un gráfico.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085760"
   
 5.  Haga clic en la pestaña **Gráfico de elevación** o la pestaña **Matriz de clasificación** para generar automáticamente el gráfico utilizando los datos de prueba que especificó.  
   
-##  <a name="bkmk_MapColumns"></a> Para asignar columnas del modelo a las columnas de los datos de prueba  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> Para asignar columnas del modelo a las columnas de los datos de prueba  
   
 1.  Haga doble clic en la estructura de minería de datos que contiene los modelos de los que desea crear un gráfico para abrir la estructura y los modelos en el Diseñador de minería de datos.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66085760"
   
 3.  En la pestaña **Selección de entrada** , en **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y generar la definición del conjunto de datos externo.  
+4.  Haga clic en el botón examinar **(...)** para abrir un cuadro de diálogo y generar la definición del conjunto de datos externo.  
   
 5.  En el cuadro de diálogo **Seleccionar estructura de minería de datos** , seleccione la estructura que contenga los modelos con los que desea trabajar y, después, haga clic en **Aceptar**.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66085760"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a> Para modificar la forma en la que los datos de entrada se asignan al modelo  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a>Para modificar la forma en que los datos de entrada se asignan al modelo  
   
 1.  En el Diseñador de minería de datos, haga doble clic en la estructura que contiene los modelos que quiere incluir en un gráfico.  
   
@@ -97,9 +96,9 @@ ms.locfileid: "66085760"
   
 3.  Haga clic en la pestaña **Selección de entrada** .  
   
-4.  En **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
+4.  En **seleccionar el conjunto de datos que se va a usar para el gráfico de precisión**, seleccione la opción **especificar un conjunto de datos diferente**.  
   
-5.  Haga clic en el botón Examinar **(...)**  para abrir un cuadro de diálogo y generar la definición del origen de datos externo.  
+5.  Haga clic en el botón examinar **(...)** para abrir un cuadro de diálogo y generar la definición del origen de datos externo.  
   
 6.  En el cuadro de diálogo **Especificar asignación de columnas** , haga clic en **Seleccionar tabla de casos**.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66085760"
   
      Las nuevas asignaciones de columna se muestran en el cuadro de diálogo **Especificar asignación de columnas** . Puede quitar una asignación seleccionando la línea entre las columnas y presionando la tecla Supr. Para crear una conexión, seleccione una columna de la tabla **Estructura de minería de datos** y arrástrela hasta la columna correspondiente de la tabla **Seleccionar tabla(s) de entrada** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

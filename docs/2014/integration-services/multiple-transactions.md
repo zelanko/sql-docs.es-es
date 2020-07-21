@@ -10,35 +10,34 @@ helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ff909c92a23c965047edc0fcf278e17e4c76d94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057400"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440102"
 ---
 # <a name="multiple-transactions"></a>Varias transacciones
-  Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando un contenedor situado en medio de una jerarquía de contenedores anidados no admite transacciones, los contenedores situados en un nivel superior o inferior de la jerarquía inician transacciones independientes, si están configurados para admitir transacciones. Las transacciones se confirman o se revierten en orden, desde la tarea más interna en la jerarquía de contenedores anidados hasta el paquete. Sin embargo, una vez confirmada la transacción interna, no se revierte aunque se anule una transacción externa.  
-  
-## <a name="illustration-of-multiple-transactions"></a>Ilustración de varias transacciones  
- Por ejemplo, un paquete tiene un contenedor de secuencias con dos contenedores de bucles Foreach y cada contenedor incluye dos tareas Ejecutar SQL. El contenedor de secuencias y las tareas Ejecutar SQL admiten transacciones, pero los contenedores de bucles Foreach no las admiten. En este ejemplo, cada tarea Ejecutar SQL iniciaría su propia transacción, que no se revertiría aunque se anulara la tarea de secuencia.  
-  
- Las propiedades de TransactionOption del contenedor de secuencias, el contenedor de bucles Foreach y las tareas Ejecutar SQL se establecen de la siguiente forma:  
-  
--   La propiedad TransactionOption del contenedor de secuencias se establece en **Required**.  
-  
--   Las propiedades TransactionOption de los contenedores de bucles Foreach se establecen en **NotSupported**.  
-  
--   Las propiedades de TransactionOption las tareas Ejecutar SQL se establecen en **Required**.  
-  
- En el diagrama siguiente se muestran las cinco transacciones no relacionadas del paquete. El contenedor de secuencias inicia una transacción y las tareas Ejecutar SQL inician las otras cuatro.  
-  
- ![Implementación de varias transacciones](media/mw-dts-trans2.gif "Implementation of multiple transactions")  
-  
-## <a name="related-tasks"></a>Related Tasks  
- [Configurar un paquete para el uso de transacciones](../relational-databases/native-client-ole-db-transactions/transactions.md)  
-  
-  
+  Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando un contenedor situado en medio de una jerarquía de contenedores anidados no admite transacciones, los contenedores situados en un nivel superior o inferior de la jerarquía inician transacciones independientes, si están configurados para admitir transacciones. Las transacciones se confirman o se revierten en orden, desde la tarea más interna en la jerarquía de contenedores anidados hasta el paquete. Sin embargo, una vez confirmada la transacción interna, no se revierte aunque se anule una transacción externa.
+
+## <a name="illustration-of-multiple-transactions"></a>Ilustración de varias transacciones
+ Por ejemplo, un paquete tiene un contenedor de secuencias con dos contenedores de bucles Foreach y cada contenedor incluye dos tareas Ejecutar SQL. El contenedor de secuencias y las tareas Ejecutar SQL admiten transacciones, pero los contenedores de bucles Foreach no las admiten. En este ejemplo, cada tarea Ejecutar SQL iniciaría su propia transacción, que no se revertiría aunque se anulara la tarea de secuencia.
+
+ Las propiedades de TransactionOption del contenedor de secuencias, el contenedor de bucles Foreach y las tareas Ejecutar SQL se establecen de la siguiente forma:
+
+-   La propiedad TransactionOption del contenedor de secuencias se establece en **Required**.
+
+-   Las propiedades TransactionOption de los contenedores de bucles Foreach se establecen en **NotSupported**.
+
+-   Las propiedades de TransactionOption las tareas Ejecutar SQL se establecen en **Required**.
+
+ En el diagrama siguiente se muestran las cinco transacciones no relacionadas del paquete. El contenedor de secuencias inicia una transacción y las tareas Ejecutar SQL inician las otras cuatro.
+
+ ![Implementación de varias transacciones](media/mw-dts-trans2.gif "Implementación de varias transacciones")
+
+## <a name="related-tasks"></a>Related Tasks
+ [Configurar un paquete para el uso de transacciones](../relational-databases/native-client-ole-db-transactions/transactions.md)
+
+

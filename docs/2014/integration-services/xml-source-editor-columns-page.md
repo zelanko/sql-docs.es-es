@@ -1,5 +1,5 @@
 ---
-title: Editor de origen XML (página columnas) | Microsoft Docs
+title: Editor de origen de XML (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b9433b7a2c4f08f9e0c70d568f8fc037ceb7c6c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054315"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419812"
 ---
 # <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)
   Use el nodo **Columnas** del cuadro de diálogo **Editor de origen de XML** para asignar una columna de salida a una columna externa (origen).  
@@ -36,10 +35,10 @@ ms.locfileid: "66054315"
  **Columna de salida**  
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de XML &#40;página Administrador de conexiones&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de origen de XML &#40;página Salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Editor de origen de XML &#40;página salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

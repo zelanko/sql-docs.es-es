@@ -1,5 +1,5 @@
 ---
-title: Instalación de versiones de idioma de SQL Server Management Studio (SSMS) distintas del inglés | Microsoft Docs
+title: Instalación de versiones de idioma distintas del inglés
 description: Instalación de versiones de idioma de SQL Server Management Studio (SSMS) distintas del inglés
 ms.prod: sql
 ms.reviewer: ''
@@ -7,14 +7,14 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: fb1d51121f38aa2adfe0bdfbfcb6c5bcc10d8c4f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265010"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246884"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Instalación de versiones de idioma de SQL Server Management Studio (SSMS) distintas del inglés
 

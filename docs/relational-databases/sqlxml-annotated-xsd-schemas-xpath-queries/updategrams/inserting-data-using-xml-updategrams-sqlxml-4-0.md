@@ -1,6 +1,6 @@
 ---
-title: Insertar datos con diagramas de actualización XML (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Insertar datos mediante diagramas XML (SQLXML)
+description: Obtenga información sobre cómo insertar datos mediante diagramas XML en SQLXML 4,0.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -33,17 +33,18 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88e1f334629482182fb182dde60f715c0d122d25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790600"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Un diagrama de actualización indica una operación de inserción cuando una instancia de registro aparece en el  **\<después >** bloque pero no en las correspondientes  **\<antes >** bloque. En este caso, el diagrama de actualización inserta el registro en el  **\<después >** bloque en la base de datos.  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  Un diagrama indica una operación de inserción cuando una instancia de registro aparece en el **\<after>** bloque, pero no en el **\<before>** bloque correspondiente. En este caso, diagrama inserta el registro del **\<after>** bloque en la base de datos.  
   
  Éste es el formato del diagrama de actualización para una operación de inserción:  
   
@@ -66,29 +67,29 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<antes de > bloque  
- El  **\<antes >** bloque puede omitirse en una operación de inserción. Si el elemento opcional **esquema de asignación** atributo no se especifica, el  **\<ElementName >** que se especifica en el diagrama de actualización se asigna a una tabla de base de datos y los elementos secundarios o atributos se asignan a columnas de la tabla.  
+## <a name="before-block"></a>\<before>Sin  
+ El **\<before>** bloque se puede omitir para una operación de inserción. Si no se especifica el atributo **mapping-schema** opcional, el **\<ElementName>** especificado en diagrama se asigna a una tabla de base de datos y los elementos secundarios o atributos se asignan a las columnas de la tabla.  
   
-## <a name="after-block"></a>\<una vez > bloque  
- Puede especificar uno o más registros en el  **\<después >** bloque.  
+## <a name="after-block"></a>\<after>Sin  
+ Puede especificar uno o varios registros en el **\<after>** bloque.  
   
- Si el  **\<después >** bloque no proporciona un valor para una columna en particular, el diagrama de actualización usa el valor predeterminado que se especifica en el esquema anotado (si se ha especificado un esquema). Si el esquema no especifica un valor predeterminado para la columna, el diagrama de actualización no especifica ningún valor explícito para esta columna y, en su lugar, se asigna el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor de predeterminado (si se especifica) a esta columna. Si no hay ningún valor predeterminado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la columna acepta un valor NULL, el diagrama de actualización establece el valor de columna en NULL. Si la columna no tiene un valor predeterminado ni acepta un valor NULL, se produce un error en el comando y el diagrama de actualización devuelve un error. El elemento opcional **updg:returnid** atributo se usa para devolver el valor de identidad generado por el sistema cuando se agrega un registro en una tabla con una columna de tipo IDENTITY.  
+ Si el **\<after>** bloque no proporciona un valor para una columna determinada, diagrama usa el valor predeterminado que se especifica en el esquema anotado (si se ha especificado un esquema). Si el esquema no especifica un valor predeterminado para la columna, diagrama no especifica ningún valor explícito para esta columna y, en su lugar, asigna el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valor predeterminado (si se especifica) a esta columna. Si no hay ningún valor predeterminado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la columna acepta un valor NULL, el diagrama de actualización establece el valor de columna en NULL. Si la columna no tiene un valor predeterminado ni acepta un valor NULL, se produce un error en el comando y el diagrama de actualización devuelve un error. El atributo opcional **atributo updg: returnid** se usa para devolver el valor de identidad generado por el sistema cuando se agrega un registro en una tabla con una columna de tipo Identity.  
   
 ## <a name="updgid-attribute"></a>Atributo updg:id  
- Si el diagrama de actualización inserta solamente registros, el diagrama de actualización no requiere la **updg: ID** atributo. Para obtener más información acerca de **updg: ID**, consulte [Updategrams de actualización de datos utilizando XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
+ Si diagrama solo inserta registros, diagrama no requiere el atributo **atributo updg: ID** . Para obtener más información acerca de **atributo updg: ID**, vea [actualizar datos mediante XML diagramas &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 ## <a name="updgat-identity-attribute"></a>Atributo updg:at-identity  
- Cuando un diagrama de actualización inserta un registro en una tabla que tiene una columna de tipo de identidad, el diagrama de actualización puede capturar el valor asignado por el sistema mediante el uso opcional **updg: en identidad** atributo. El diagrama de actualización puede utilizar este valor en operaciones posteriores. Al ejecutar el diagrama de actualización, puede devolver el valor de identidad que se genera mediante la especificación de la **updg:returnid** atributo.  
+ Cuando un diagrama inserta un registro en una tabla que tiene una columna de tipo identidad, diagrama puede capturar el valor asignado por el sistema mediante el atributo opcional **atributo updg: at-Identity** . El diagrama de actualización puede utilizar este valor en operaciones posteriores. Tras la ejecución de diagrama, puede devolver el valor de identidad que se genera especificando el atributo **atributo updg: returnid** .  
   
 ## <a name="updgguid-attribute"></a>Atributo updg:guid  
- El **updg: GUID** es un atributo opcional que genera un identificador único global. Este valor permanece en el ámbito de todo el  **\<sincronización >** bloque en el que se especifica. Puede usar este valor en cualquier lugar en el  **\<sincronización >** bloque. El atributo llama a la **::NewGuid()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] función para generar el identificador único.  
+ El atributo **atributo updg: GUID** es un atributo opcional que genera un identificador único global. Este valor permanece en el ámbito de todo el **\<sync>** bloque en el que se especifica. Puede usar este valor en cualquier parte del **\<sync>** bloque. El atributo llama a la función **NEWGUID ()** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para generar el identificador único.  
   
 ## <a name="examples"></a>Ejemplos  
- Para crear ejemplos funcionales mediante los siguientes ejemplos, debe cumplir los requisitos especificados en [requisitos para ejecutar los ejemplos de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear ejemplos funcionales mediante los ejemplos siguientes, debe cumplir los requisitos especificados en [requisitos para ejecutar ejemplos de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
  Antes de usar los ejemplos del diagrama de actualización, tenga en cuenta lo siguiente:  
   
--   En la mayoría de los ejemplos se usa una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+-   En la mayoría de los ejemplos se usa una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de diagramas que usan esquemas de asignación, vea [especificar un esquema de asignación anotado en un diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 -   La mayoría de los ejemplos usan la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Todas las actualizaciones se aplican a las tablas de esta base de datos.  
   
@@ -114,13 +115,13 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el diagrama de actualización anterior y péguelo en un archivo de texto. Guarde el archivo como MyUpdategram.xml.  
   
 2.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  En una asignación centrada en elementos, el diagrama de actualización presenta un aspecto como el siguiente:  
   
@@ -158,8 +159,8 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Insertar varios registros utilizando un diagrama de actualización  
- Este diagrama de actualización agrega dos nuevos registros de turno a la tabla HumanResources.Shift. El diagrama de actualización no especifica opcional  **\<antes >** bloque.  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Insertar varios registros utilizando un diagrama de actualización  
+ Este diagrama de actualización agrega dos nuevos registros de turno a la tabla HumanResources.Shift. Diagrama no especifica el **\<before>** bloque opcional.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -178,15 +179,15 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el diagrama de actualización anterior y péguelo en un archivo de texto. Guarde el archivo como Updategram-AddShifts.xml.  
   
 2.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Otra versión de este ejemplo es un diagrama de actualización que utiliza dos  **\<después >** bloques en lugar de un bloque para insertar los dos empleados. Esta versión es válida y puede codificarse del siguiente modo:  
+ Otra versión de este ejemplo es una diagrama que usa dos bloques independientes en **\<after>** lugar de un bloque para insertar los dos empleados. Esta versión es válida y puede codificarse del siguiente modo:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -210,12 +211,12 @@ ms.locfileid: "68086840"
 ```  
   
 ### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Trabajar con caracteres de SQL Server válidos que no son válidos en XML  
- En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en los caracteres XML válidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores, pero no identificadores XML válidos pueden codificarse utilizando ' __xHHHH\_\_' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos de el carácter en el orden de primero bit más significativo.  
+ En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en caracteres XML que son [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores válidos, pero los identificadores XML no válidos se pueden codificar mediante ' __xHHHH \_ \_ ' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter en el orden más significativo en primer lugar.  
   
 > [!NOTE]  
->  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante el uso de un script SQL disponible para su descarga desde esta [sitio Web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=30196).  
+>  Este ejemplo usa la base de datos de ejemplo Northwind. Puede instalar la base de datos Northwind mediante un script SQL disponible para su descarga desde este [sitio web de Microsoft](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
- Además, el nombre del elemento debe incluirse entre corchetes ([]). Dado que los caracteres [y] no son válidos en XML, debe codificarlos como _x005B\_ y _x005D\_, respectivamente. (Si utiliza un esquema de asignación, puede especificar nombres de elemento que no contengan caracteres no válidos, como espacios en blanco. El esquema de asignación realiza la asignación necesaria; por lo tanto, no necesita codificar estos caracteres.)  
+ Además, el nombre del elemento debe incluirse entre corchetes ([ ]). Dado que los caracteres [y] no son válidos en XML, debe codificarlos como _x005B \_ y _x005D \_ , respectivamente. (Si utiliza un esquema de asignación, puede especificar nombres de elemento que no contengan caracteres no válidos, como espacios en blanco. El esquema de asignación realiza la asignación necesaria; por lo tanto, no necesita codificar estos caracteres.)  
   
  Este diagrama de actualización agrega un registro a la tabla Order Details de la base de datos Northwind:  
   
@@ -235,22 +236,22 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
- La columna UnitPrice en la tabla Order Details es de la **dinero** tipo. Para aplicar la conversión de tipos adecuada (desde un **cadena** tipo a un **dinero** tipo), se debe agregar el carácter de signo de dólar ($) como parte del valor. Si el diagrama de actualización no especifica un esquema de asignación, el primer carácter de la **cadena** se evalúa el valor. Si el primer carácter es un signo de dólar ($), se aplica la conversión adecuada.  
+ La columna UnitPrice de la tabla Order Details es del tipo **Money** . Para aplicar la conversión de tipos adecuada (de un tipo de **cadena** a un tipo **Money** ), se debe agregar el carácter de signo de dólar ($) como parte del valor. Si diagrama no especifica un esquema de asignación, se evalúa el primer carácter del valor de **cadena** . Si el primer carácter es un signo de dólar ($), se aplica la conversión adecuada.  
   
- Si el diagrama de actualización no se especifica en un esquema de asignación donde la columna está correctamente marcada como **dt:type="fixed.14.4"** o **SQL: DataType = "money"** , no se requiere el signo de dólar ($) y el la asignación controla la conversión. Ésta es la forma recomendada de asegurarse de que se realice la conversión de tipos adecuada.  
+ Si el diagrama se especifica en un esquema de asignación donde la columna está marcada correctamente como **DT: type = "Fixed. 14.4"** o **SQL: DataType = "Money"**, el signo de dólar ($) no es necesario y la asignación controla la conversión. Ésta es la forma recomendada de asegurarse de que se realice la conversión de tipos adecuada.  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el diagrama de actualización anterior y péguelo en un archivo de texto. Guarde el archivo como UpdategramSpacesInTableName.xml.  
   
 2.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. Utilizar el atributo at-identity para recuperar el valor insertado en la columna de tipo IDENTITY  
  El siguiente diagrama de actualización inserta dos registros: uno en la tabla Sales.SalesOrderHeader y otra en la tabla Sales.SalesOrderDetail.  
   
- En primer lugar, el diagrama de actualización agrega un registro a la tabla Sales.SalesOrderHeader. En esta tabla, la columna SalesOrderID es una columna de tipo IDENTITY. Por lo tanto, al agregar este registro a la tabla, el diagrama de actualización usa la **en identidad** atributo para capturar el valor de SalesOrderID asignado como "x" (un valor de marcador de posición). A continuación, el diagrama de actualización especifica esto **en identidad** variable como el valor del atributo SalesOrderID en el \<Sales.SalesOrderDetail > elemento.  
+ En primer lugar, el diagrama de actualización agrega un registro a la tabla Sales.SalesOrderHeader. En esta tabla, la columna SalesOrderID es una columna de tipo IDENTITY. Por lo tanto, al agregar este registro a la tabla, diagrama utiliza el atributo **at-Identity** para capturar el valor de SalesOrderID asignado como "x" (un valor de marcador de posición). A continuación, diagrama especifica esta variable **en identidad** como el valor del atributo SalesOrderID en el \<Sales.SalesOrderDetail> elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -287,7 +288,7 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
- Si desea devolver el valor de identidad generado por el **updg: en identidad** atributo, puede usar el **updg:returnid** atributo. A continuación se muestra un diagrama de actualización revisado que devuelve este valor de identidad. (Este diagrama de actualización agrega dos registros de pedido y dos registros de detalles del pedido, simplemente para complicar un poco el ejemplo.)  
+ Si desea devolver el valor de identidad generado por el atributo **atributo updg: at-Identity** , puede usar el atributo **atributo updg: returnid** . A continuación se muestra un diagrama de actualización revisado que devuelve este valor de identidad. (Este diagrama de actualización agrega dos registros de pedido y dos registros de detalles del pedido, simplemente para complicar un poco el ejemplo.)  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -319,16 +320,16 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el diagrama de actualización anterior y péguelo en un archivo de texto. Guarde el archivo como Updategram-returnId.xml.  
   
 2.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>E. Utilizar el atributo updg:guid para generar un valor único  
- En este ejemplo, el diagrama de actualización inserta un registro en las tablas Cust y CustOrder. Además, el diagrama de actualización genera un valor único para el atributo CustomerID utilizando el **updg: GUID** atributo.  
+ En este ejemplo, el diagrama de actualización inserta un registro en las tablas Cust y CustOrder. Además, diagrama genera un valor único para el atributo CustomerID mediante el atributo **atributo updg: GUID** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -349,7 +350,7 @@ ms.locfileid: "68086840"
 </ROOT>  
 ```  
   
- El diagrama de actualización especifica la **returnid** atributo. Como resultado, se devuelve el GUID generado:  
+ Diagrama especifica el atributo **returnid** . Como resultado, se devuelve el GUID generado:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -373,7 +374,7 @@ ms.locfileid: "68086840"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="f-specifying-a-schema-in-an-updategram"></a>F. Especificar un esquema en un diagrama de actualización  
  El diagrama de actualización de este ejemplo inserta un registro en la tabla siguiente:  
@@ -384,7 +385,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  En este diagrama de actualización se especifica un esquema XSD (es decir, no existe ninguna asignación predeterminada de elementos y atributos del diagrama de actualización). El esquema proporciona la asignación necesaria de elementos y atributos a las tablas y columnas de la base de datos.  
   
- El esquema siguiente (CustOrderSchema.xml) describe un  **\<CustOrder >** elemento que consta de los **OrderID** y **EmployeeID** atributos. Para hacer que el esquema más interesante, el valor predeterminado se asigna a la **EmployeeID** atributo. Un diagrama de actualización utiliza el valor predeterminado de un atributo solamente para las operaciones de inserción y solamente si el diagrama de actualización no especifica dicho atributo.  
+ En el esquema siguiente (CustOrderSchema.xml) se describe un **\<CustOrder>** elemento que consta de los atributos **OrderID** y **EmployeeID** . Para que el esquema sea más interesante, se asigna un valor predeterminado al atributo **EmployeeID** . Un diagrama de actualización utiliza el valor predeterminado de un atributo solamente para las operaciones de inserción y solamente si el diagrama de actualización no especifica dicho atributo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -412,11 +413,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Para obtener más ejemplos de diagramas de actualización que especifican un esquema de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Para obtener más ejemplos de diagramas que especifican un esquema de asignación, vea [especificar un esquema de asignación anotado en un diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
-1.  Cree esta tabla en la **tempdb** base de datos:  
+1.  Cree esta tabla en la base de datos **tempdb** :  
   
     ```  
     USE tempdb  
@@ -432,7 +433,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 4.  Cree y use el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar el diagrama de actualización.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el esquema XDR equivalente:  
   
@@ -451,7 +452,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ```  
   
 ### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>G. Usar el atributo xsi:nil para insertar valores NULL en una columna  
- Si desea insertar un valor null en la columna correspondiente en la tabla, puede especificar el **xsi: nil** atributo en un elemento en un diagrama de actualización. En el esquema XSD correspondiente, el esquema XSD **nillable** atributo también se debe especificar.  
+ Si desea insertar un valor null en la columna correspondiente de la tabla, puede especificar el atributo **xsi: nil** en un elemento de un diagrama. En el esquema XSD correspondiente, también se debe especificar el atributo **nillable** de XSD.  
   
  Por ejemplo, fíjese en este esquema XSD:  
   
@@ -483,7 +484,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- Especifica el esquema XSD **nillable = "true"** para el  **\<fname >** elemento. El siguiente diagrama de actualización usa este esquema:  
+ El esquema XSD especifica **nillable = "true"** para el **\<fname>** elemento. El siguiente diagrama de actualización usa este esquema:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -503,11 +504,11 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- El diagrama de actualización especifica **xsi: nil** para el  **\<fname >** elemento en el  **\<después >** bloque. Por lo tanto, cuando se ejecuta este diagrama de actualización, se inserta un valor NULL en la columna first_name de la tabla.  
+ Diagrama especifica **xsi: nil** para el **\<fname>** elemento en el **\<after>** bloque. Por lo tanto, cuando se ejecuta este diagrama de actualización, se inserta un valor NULL en la columna first_name de la tabla.  
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
-1.  Cree la siguiente tabla en la **tempdb** base de datos:  
+1.  Cree la siguiente tabla en la base de datos **tempdb** :  
   
     ```  
     USE tempdb  
@@ -526,12 +527,12 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 4.  Cree y use el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar el diagrama de actualización.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Especificar espacios de nombres en un diagrama de actualización  
  En un diagrama de actualización puede tener elementos que pertenezcan a un espacio de nombres declarado en el mismo elemento del diagrama de actualización. En este caso, el esquema correspondiente también debe declarar el mismo espacio de nombres y el elemento debe pertenecer a este espacio de nombres de destino.  
   
- Por ejemplo, en el siguiente diagrama de actualización (UpdateGram-ElementHavingNamespace.xml), el  **\<orden >** elemento pertenece a un espacio de nombres declarado en el elemento.  
+ Por ejemplo, en el siguiente diagrama (UpdateGram-ElementHavingNamespace.xml), el **\<Order>** elemento pertenece a un espacio de nombres declarado en el elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -609,16 +610,16 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 3.  Cree y use el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar el diagrama de actualización.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="i-inserting-data-into-an-xml-data-type-column"></a>I. Insertar datos en una columna de tipo de datos XML  
- El **xml** tipo de datos se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Puede utilizar los diagramas de actualización para insertar y actualizar datos almacenados en **xml** tipo de datos de las columnas con las disposiciones siguientes:  
+ El tipo de datos **XML** se incluyó en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Puede usar diagramas para insertar y actualizar datos almacenados en columnas de tipo de datos **XML** con las siguientes disposiciones:  
   
--   El **xml** columna no se puede usar para identificar una fila existente. Por lo tanto, no puede incluirse en el **updg: antes de** sección de un diagrama de actualización.  
+-   La columna **XML** no se puede utilizar para identificar una fila existente. Por lo tanto, no se puede incluir en la sección **atributo updg: Before** de un diagrama.  
   
--   Espacios de nombres que están en el ámbito del fragmento XML insertado en el **xml** se conservará la columna y sus declaraciones de espacio de nombres se agregan al elemento superior del fragmento insertado.  
+-   Los espacios de nombres que se encuentran en el ámbito del fragmento XML insertado en la columna **XML** se conservarán y sus declaraciones de espacio de nombres se agregarán al elemento superior del fragmento insertado.  
   
- Por ejemplo, en el siguiente diagrama de actualización (SampleUpdateGram.xml), el  **\<Desc >** elemento actualiza la columna ProductDescription de la producción > tabla productModel en la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos de ejemplo. El resultado de este diagrama de actualización es que el contenido XML de la columna ProductDescription se update con el contenido XML de la  **\<Desc >** elemento.  
+ Por ejemplo, en el siguiente diagrama (SampleUpdateGram.xml), el **\<Desc>** elemento actualiza la columna ProductDescription de la tabla Production>productModel de la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] base de datos de ejemplo. El resultado de este diagrama es que el contenido XML de la columna ProductDescription se actualiza con el contenido XML del **\<Desc>** elemento.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -719,15 +720,15 @@ CustOrder(OrderID, EmployeeID, OrderType)
 1.  Copie el esquema anterior y péguelo en un archivo de texto. Guarde el archivo como XSD-SampleSchema.xml.  
   
     > [!NOTE]  
-    >  Dado que los diagramas de actualización admiten la asignación predeterminada, no hay ninguna manera para identificar el principio y el final de la **xml** tipo de datos. Esto significa que un esquema de asignación es necesario al insertar o actualizar las tablas con **xml** columnas de tipo de datos. Si no se proporciona ningún esquema, SQLXML devuelve un error que indica que falta una de las columnas de la tabla.  
+    >  Dado que diagramas admite la asignación predeterminada, no hay forma de identificar el principio y el final del tipo de datos **XML** . Esto significa que se requiere un esquema de asignación al insertar o actualizar tablas con columnas de tipo de datos **XML** . Si no se proporciona ningún esquema, SQLXML devuelve un error que indica que falta una de las columnas de la tabla.  
   
 2.  Copie el diagrama de actualización anterior y péguelo en un archivo de texto. Guarde el archivo como SampleUpdategram.xml en la misma carpeta donde ha guardado SampleSchema.xml.  
   
 3.  Cree y use el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar el diagrama de actualización.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

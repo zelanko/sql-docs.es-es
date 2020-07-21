@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a8abbba087679d263c00484764ecf445d6e5a006
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959345"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
   En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los datos copiados (la *copia de seguridad*) se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
@@ -39,19 +38,19 @@ ms.locfileid: "70155044"
   
 -   [Términos y definiciones](#TermsAndDefinitions)  
   
--   [Uso de dispositivos de copia de seguridad en disco](#DiskBackups)  
+-   [Usar dispositivos de copia de seguridad en disco](#DiskBackups)  
   
 -   [Uso de dispositivos de cinta](#TapeDevices)  
   
--   [Uso de un dispositivo lógico de copia de seguridad](#LogicalBackupDevice)  
+-   [Usar un dispositivo lógico de copia de seguridad](#LogicalBackupDevice)  
   
 -   [Conjuntos de medios de copia de seguridad reflejados](#MirroredMediaSets)  
   
--   [Archivado de copias de seguridad de SQL Server](#Archiving)  
+-   [Archivar copias de seguridad de SQL Server](#Archiving)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Términos y definiciones  
  disco de copia de seguridad  
  Disco duro u otro medio de almacenamiento en disco que contiene uno o varios archivos de copia de seguridad. Un archivo de copia de seguridad es un archivo normal del sistema operativo.  
   
@@ -61,16 +60,16 @@ ms.locfileid: "70155044"
  dispositivo físico de copia de seguridad  
  Unidad de cinta o un archivo de disco proporcionado por el sistema operativo. Una copia de seguridad puede utilizar entre 1 y 64 dispositivos de copia de seguridad. Si una copia de seguridad requiere varios dispositivos de copia de seguridad, estos deben ser de un mismo tipo (disco o cinta).  
   
- También se pueden escribir copias de seguridad de SQL Server en el servicio de almacenamiento de blobs de Azure, además de en disco o cinta.  
+ Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage.  
   
-##  <a name="DiskBackups"></a>Uso de dispositivos de copia de seguridad en disco  
+##  <a name="using-disk-backup-devices"></a><a name="DiskBackups"></a>Uso de dispositivos de copia de seguridad en disco  
  **En esta sección:**  
   
 -   [Especificar un archivo de copia de seguridad mediante su nombre físico (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
--   [Especificación de la ruta de acceso de un archivo de copia de seguridad en disco](#BackupFileDiskPath)  
+-   [Especificar la ruta de acceso de un archivo de copia de seguridad en disco](#BackupFileDiskPath)  
   
--   [Realizar una copia de seguridad en un archivo en un recurso compartido de red](#NetworkShare)  
+-   [Realizar una copia de seguridad en un archivo de un recurso compartido de red](#NetworkShare)  
   
  Si un archivo de disco se llena mientras una operación de copia de seguridad está anexando una copia de seguridad al conjunto de medios, la operación producirá un error. El tamaño máximo de un archivo de copia de seguridad se determina de acuerdo con el espacio disponible en el dispositivo de disco, de modo que el tamaño apropiado para un dispositivo de copia de seguridad en disco dependerá del tamaño de las copias de seguridad.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "70155044"
 > [!IMPORTANT]  
 >  Se recomienda que el disco de copia de seguridad no sea el disco de datos o del registro de la base de datos. Esto es necesario para garantizar el acceso a las copias de seguridad si el disco de datos o del registro presenta errores.  
   
-###  <a name="BackupFileUsingPhysicalName"></a>Especificar un archivo de copia de seguridad mediante su nombre físico (Transact-SQL)  
+###  <a name="specifying-a-backup-file-by-using-its-physical-name-transact-sql"></a><a name="BackupFileUsingPhysicalName"></a>Especificar un archivo de copia de seguridad mediante su nombre físico (Transact-SQL)  
  La sintaxis básica de [BACKUP](/sql/t-sql/statements/backup-transact-sql) para especificar un archivo de copia de seguridad mediante su nombre de dispositivo físico es:  
   
  BACKUP DATABASE *database_name*  
@@ -109,8 +108,8 @@ RESTORE DATABASE AdventureWorks2012
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak';   
 ```  
   
-###  <a name="BackupFileDiskPath"></a>Especificación de la ruta de acceso de un archivo de copia de seguridad en disco  
- Cuando se especifica un archivo de copia de seguridad, se debe especificar ruta de acceso completa y el nombre de archivo. Si especifica solo el nombre de archivo o la ruta de acceso relativa al realizar la copia de seguridad de un archivo, el archivo de copia de seguridad se sitúa en el directorio predeterminado de copias de seguridad. El directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, donde *n* es el número de la instancia de servidor. Por lo tanto, para la instancia del servidor predeterminada, el directorio de copia de seguridad predeterminado es: C:\Archivos de Programa\microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
+###  <a name="specifying-the-path-of-a-disk-backup-file"></a><a name="BackupFileDiskPath"></a>Especificación de la ruta de acceso de un archivo de copia de seguridad en disco  
+ Cuando se especifica un archivo de copia de seguridad, se debe especificar ruta de acceso completa y el nombre de archivo. Si especifica solo el nombre de archivo o la ruta de acceso relativa al realizar la copia de seguridad de un archivo, el archivo de copia de seguridad se sitúa en el directorio predeterminado de copias de seguridad. El directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, donde *n* es el número de la instancia de servidor. Por lo tanto, para la instancia de servidor predeterminada, el directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  Para evitar ambigüedades, particularmente en los scripts, recomendamos especificar de forma explícita la ruta de acceso del directorio de copias de seguridad en cada cláusula DISK. Sin embargo, esto es menos importante cuando se utiliza el Editor de consultas. En ese caso, si está seguro de que el archivo de copia de seguridad reside en el directorio predeterminado de copias de seguridad, puede omitir la ruta de acceso de una cláusula DISK. Por ejemplo, la siguiente instrucción `BACKUP` realiza una copia de seguridad de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el directorio predeterminado de copias de seguridad.  
   
@@ -123,7 +122,7 @@ GO
 > [!NOTE]  
 >  La ubicación predeterminada se almacena en la clave del Registro **BackupDirectory** bajo **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
-###  <a name="NetworkShare"></a>Realizar una copia de seguridad en un archivo en un recurso compartido de red  
+###  <a name="backing-up-to-a-file-on-a-network-share"></a><a name="NetworkShare"></a>Realizar una copia de seguridad en un archivo en un recurso compartido de red  
  Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda tener acceso a un archivo de disco remoto, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso al recurso compartido de red. Esto incluye disponer de los permisos necesarios para realizar operaciones de copia de seguridad y restauración, escribiendo y leyendo en el recurso compartido de red. La disponibilidad de las unidades de red y los permisos depende del contexto en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Para realizar una copia de seguridad en una unidad de red cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en ejecución en una cuenta de usuario de dominio, se debe asignar la unidad compartida como una unidad de red en la sesión donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si inicia Sqlservr.exe desde la línea de comandos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta todas las unidades de red que ha asignado en la sesión que ha iniciado.  
@@ -146,7 +145,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="TapeDevices"></a>Uso de dispositivos de cinta  
+##  <a name="using-tape-devices"></a><a name="TapeDevices"></a>Uso de dispositivos de cinta  
   
 > [!NOTE]  
 >  La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.  
@@ -169,7 +168,7 @@ GO
   
 -   Si un dispositivo de copia de seguridad en cinta se llena durante la operación de copia de seguridad, pero todavía faltan por escribir más datos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pedirá una nueva cinta y continuará con la operación de copia de seguridad una vez que la cinta se haya cargado.  
   
-###  <a name="BackupTapeUsingPhysicalName"></a>Especificar una cinta de copia de seguridad mediante su nombre físico (Transact-SQL)  
+###  <a name="specifying-a-backup-tape-by-using-its-physical-name-transact-sql"></a><a name="BackupTapeUsingPhysicalName"></a>Especificar una cinta de copia de seguridad mediante su nombre físico (Transact-SQL)  
  La sintaxis básica de [BACKUP](/sql/t-sql/statements/backup-transact-sql) para especificar una cinta de copia de seguridad mediante el nombre de dispositivo físico de la unidad de cinta es:  
   
  BACKUP { DATABASE | LOG } *database_name*  
@@ -190,7 +189,7 @@ GO
   
  FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
-###  <a name="TapeOptions"></a>Opciones de copia de seguridad y restauración específicas de cinta (Transact-SQL)  
+###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>Opciones de copia de seguridad y restauración específicas de cinta (Transact-SQL)  
  Para facilitar la administración de cintas, la instrucción BACKUP proporciona las siguientes opciones específicas:  
   
 -   { NOUNLOAD | **UNLOAD** }  
@@ -204,15 +203,15 @@ GO
 > [!NOTE]  
 >  Para obtener más información sobre la sintaxis y los argumentos de BACKUP, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Para obtener más información sobre los argumentos y la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) y [RESTORE &#40;argumentos, Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql), respectivamente.  
   
-###  <a name="OpenTapes"></a>Administrar cintas abiertas  
+###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>Administrar cintas abiertas  
  Para ver una lista de los dispositivos de cinta abiertos y el estado de las solicitudes de montaje, vea la vista de administración dinámica [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . En esta vista se muestran todas las cintas abiertas. Se incluyen las cintas en uso que se encuentran temporalmente inactivas mientras esperan a la siguiente operación BACKUP o RESTORE.  
   
  Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Usar el servicio de Azure Blob Storage  
- Se pueden escribir SQL Server copias de seguridad en el servicio Azure Blob Storage.  Para obtener más información sobre cómo usar el servicio Azure BLOB Storage para las copias de seguridad, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Las copias de seguridad de SQL Server se pueden escribir en un servicio de Azure Blob Storage.  Para obtener más información sobre cómo usar el servicio Azure BLOB Storage para las copias de seguridad, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
-##  <a name="LogicalBackupDevice"></a>Uso de un dispositivo lógico de copia de seguridad  
+##  <a name="using-a-logical-backup-device"></a><a name="LogicalBackupDevice"></a>Uso de un dispositivo lógico de copia de seguridad  
  Un *dispositivo lógico de copia de seguridad* es un nombre opcional y definido por el usuario que apunta a un dispositivo físico de copia de seguridad específico (un archivo de disco o una unidad de cinta). Un dispositivo lógico de copia de seguridad permite usar el direccionamiento indirecto cuando se hace referencia al dispositivo físico de copia de seguridad correspondiente.  
   
  Definir un dispositivo lógico de copia de seguridad requiere la asignación de un nombre lógico a un dispositivo físico. Por ejemplo, puede definirse el dispositivo lógico AdventureWorksBackups para que apunte al archivo Z:\SQLServerBackups\AdventureWorks2012.bak o a la unidad de cinta \\\\.\tape0. De esta forma, los comandos de copias de seguridad y restauración pueden especificar AdventureWorksBackups como dispositivo de copia de seguridad, en lugar de DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' o TAPE = '\\\\.\tape0'.  
@@ -238,18 +237,18 @@ GO
   
 2.  Definir un nuevo dispositivo lógico de copia de seguridad que utilice el nombre de dispositivo lógico original pero que se asigne a un dispositivo de copia de seguridad físico distinto. Los dispositivos lógicos de copia de seguridad resultan muy útiles para identificar los dispositivos de copia de seguridad en cinta.  
   
-##  <a name="MirroredMediaSets"></a>Conjuntos de medios de copia de seguridad reflejados  
+##  <a name="mirrored-backup-media-sets"></a><a name="MirroredMediaSets"></a>Conjuntos de medios de copia de seguridad reflejados  
  La creación de reflejos de los conjuntos de medios de copia de seguridad reduce el efecto de los errores de funcionamiento de los dispositivos de copia de seguridad. Los errores de funcionamiento son especialmente graves porque las copias de seguridad son el último recurso para evitar la pérdida de datos. A medida que aumenta el tamaño de una base de datos, aumentan las posibilidades de que un error de un dispositivo o medio de copia de seguridad provoque que no se pueda restaurar una copia de seguridad. La creación de reflejo de los medios de copia de seguridad aumenta la confiabilidad de las copias de seguridad al proporcionar redundancia para el dispositivo físico. Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
 > [!NOTE]  
 >  Los conjuntos de medios de copia de seguridad reflejados solo se admiten en [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] y en versiones posteriores.  
   
-##  <a name="Archiving"></a>Archivado de copias de seguridad de SQL Server  
- Se recomienda que use una utilidad de copia de seguridad del sistema de archivos para archivar las copias de seguridad en disco y que guarde los archivos fuera de las instalaciones. El uso de discos tiene la ventaja de poder utilizar la red para escribir las copias de seguridad archivadas en un disco fuera de las instalaciones. El servicio de almacenamiento de blobs de Azure se puede usar como una opción de archivado fuera del sitio.  Puede cargar las copias de seguridad del disco o escribir directamente las copias de seguridad en el servicio de almacenamiento de blobs de Azure.  
+##  <a name="archiving-sql-server-backups"></a><a name="Archiving"></a>Archivado de copias de seguridad de SQL Server  
+ Se recomienda que use una utilidad de copia de seguridad del sistema de archivos para archivar las copias de seguridad en disco y que guarde los archivos fuera de las instalaciones. El uso de discos tiene la ventaja de poder utilizar la red para escribir las copias de seguridad archivadas en un disco fuera de las instalaciones. El servicio Azure Blob Storage se puede usar como una opción de archivado externo.  Puede cargar las copias de seguridad en disco, o escribir directamente las copias de seguridad en dicho servicio.  
   
  Otro método común de archivado consiste en escribir las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un disco local de copia de seguridad, archivarlas en cinta y guardar estas cintas fuera de las instalaciones.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para especificar un dispositivo de disco (SQL Server Management Studio)**  
   
 -   [Especificar un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
@@ -292,7 +291,7 @@ GO
   
 -   [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Backup Device (objeto de SQL Server)](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md)   

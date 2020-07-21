@@ -1,5 +1,5 @@
 ---
-title: Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo (SSAS Tabular) | Microsoft Docs
+title: Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: a612b7b5005fb603be30d697a18fc92a7c481933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938646"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Especificar Marcar como tabla de fechas con inteligencia de tiempo (SSAS tabular)
   Para usar las funciones de inteligencia de tiempo en fórmulas DAX, debe especificar una tabla de fechas y una columna de identificador único (datetime) del tipo de datos Date. Una vez especificada una columna en la tabla de fechas como identificador único, puede crear relaciones entre las columnas de la tabla de fechas y cualquier tabla de hechos.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284883"
   
 3.  En el cuadro de diálogo **Marcar como tabla de fechas** , en el cuadro de lista **Fecha** , seleccione la columna que se utilizará como identificador único. Esta columna debe contener valores únicos y debe ser de tipo de datos Date. Por ejemplo:  
   
-    |date|  
+    |Date|  
     |----------|  
     |1/7/2010 12:00:00 a.m.|  
     |2/7/2010 12:00:00 a.m.|  
@@ -50,8 +49,8 @@ ms.locfileid: "67284883"
   
 4.  Si fuera necesario, cree las relaciones entre las tablas de hechos y la tabla de fechas.  
   
-## <a name="see-also"></a>Vea también  
- [Cálculos &#40;SSAS tabular&#41;](calculations-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cálculos &#40;&#41;tabular de SSAS](calculations-ssas-tabular.md)   
  [Funciones de inteligencia de tiempo &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

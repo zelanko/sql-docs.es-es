@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c48de91-de55-4f25-a5f1-36a8e8c4629e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: afb317bfcca6ccea14c9a25c98e1c0bfbe29e19f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55df93254976bcef4d7346267f4f4da0884e1cdc
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980491"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925107"
 ---
 # <a name="getreference-method-sqlserverconnectionpooldatasource"></a>Método getReference (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de referencia.  
+ Un objeto Reference.  
   
-## <a name="remarks"></a>Notas  
- Este método getReference se especifica mediante el método getReference en la interfaz javax. naming. Referenceable. Invalida el método [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) de la clase [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+## <a name="remarks"></a>Observaciones  
+ El método getReference especifica este método getReference en la interfaz javax.naming.Referenceable. Invalida el método [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) de la clase [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

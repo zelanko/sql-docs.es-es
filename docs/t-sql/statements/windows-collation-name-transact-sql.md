@@ -18,16 +18,16 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d7c4eec871d08eebbc18da84dec95d148fe161f5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874467"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012810"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nombre de intercalación de Windows (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Especifica el nombre de intercalación de Windows en la cláusula COLLATE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre de intercalación de Windows se compone del designador de intercalación y los estilos de comparación.
 
@@ -35,7 +35,7 @@ Especifica el nombre de intercalación de Windows en la cláusula COLLATE en [!I
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -54,7 +54,7 @@ Especifica las reglas de intercalación base utilizadas por la intercalación de
 - Las reglas de ordenación y comparación que se aplican cuando se especifica la ordenación del diccionario. Las reglas de ordenación se basan en el alfabeto o en el idioma.
 - La página de códigos que se usa para almacenar datos **varchar**.
 
-He aquí algunos ejemplos:
+Ejemplos:
 
 - Latin1\_General o francés: ambos usan la página de códigos 1252.
 - Turco: utiliza la página de códigos 1254.
@@ -72,12 +72,12 @@ Al omitir esta opción se especifica que no se distinguen tipos de kana, **KS** 
 Al omitir esta opción se especifica que no se distinguen tipos de ancho, **KS** especifica que se distinguen tipos de ancho.
 
 *VariationSelectorSensitivity*  
-- **Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Al omitir esta opción se especifica que no se distingue el selector de variación, **VSS** especifica que se distingue el selector de variación.
 
 **UTF8**  
-- **Se aplica a**: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Se aplica a**: a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Especifica la codificación UTF-8 que se va a usar para los tipos de datos válidos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -87,7 +87,7 @@ Especifica el criterio de ordenación binario compatible con versiones anteriore
 **BIN2**  
 Especifica el criterio de ordenación binario que utiliza la semántica de comparación de punto de código.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 Según cuál sea la versión de la intercalación, puede que algunos puntos de código no tengan definida ninguna prioridad de ordenación y/o asignación de mayúsculas o minúsculas. Por ejemplo, compare el resultado de la función `LOWER` cuando se indica en ella el mismo carácter, pero con diferentes versiones de la misma intercalación:
 
 ```sql
@@ -139,7 +139,7 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Amárico (Etiopía)|Latin1_General_100_|No disponible|
 |Armenio (Armenia)|Cyrillic_General_100_|No disponible|
 |Asamés (India)|Assamese_100_ <sup>1</sup>|No disponible|
-|Bengalí (Bangladés)|Bengali_100_<sup>1</sup>|No disponible|
+|Bengalí (Bangladesh)|Bengali_100_<sup>1</sup>|No disponible|
 |Baskir (Rusia)|Bashkir_100_|No disponible|
 |Vasco (España)|Latin1_General_100_|No disponible|
 |Bengali (India)|Bengali_100_<sup>1</sup>|No disponible|
@@ -233,7 +233,8 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Hindi|Hindi|
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Korean_Wansung_Unicode|Korean_Wansung_Unicode|
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Lithuanian_Classic|Lithuanian_Classic|
-|Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Macedonian|Macedonian|
+|Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Macedonio|Macedonio|
+||||
 
 <sup>1</sup> Las intercalaciones exclusivas de Unicode de Windows solo se pueden aplicar a datos de nivel de columna o de nivel de expresión. No se pueden utilizar como intercalaciones de base de datos o de servidor.
 
@@ -241,7 +242,7 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 
 ## <a name="see-also"></a>Consulte también
 
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [Constantes](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)

@@ -1,5 +1,6 @@
 ---
-title: Catálogo de base de datos OLAP WideWorldImporters - SQL | Documentos de Microsoft
+title: Catálogo de base de datos OLAP de WideWorldImporters-SQL | Microsoft Docs
+description: Comprenda los esquemas, las tablas y los procedimientos almacenados que se usan para el almacenamiento de datos y el procesamiento analítico en la base de datos WideWorldImportersDW.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -10,94 +11,94 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104296"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "79112433"
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos de WideWorldImportersDW
+# <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-Explicación de los esquemas, tablas y procedimientos almacenados en la base de datos de WideWorldImportersDW. 
+Explicaciones para los esquemas, tablas y procedimientos almacenados en la base de datos WideWorldImportersDW. 
 
-La base de datos de WideWorldImportersDW se utiliza para el almacenamiento de datos y procesamiento analítico. Los datos transaccionales sobre ventas y compras se genera en la base de datos de WideWorldImporters y cargados en la base de datos de WideWorldImportersDW con un **proceso ETL diario**.
+La base de datos WideWorldImportersDW se utiliza para el procesamiento analítico y el almacenamiento de datos. Los datos transaccionales sobre ventas y compras se generan en la base de datos WideWorldImporters y se cargan en la base de datos WideWorldImportersDW mediante un **proceso ETL diario**.
 
-Por lo tanto, los datos de WideWorldImportersDW duplica los datos en WideWorldImporters, pero las tablas se organizan de forma diferente. Mientras que WideWorldImporters tiene un esquema normalizado tradicional, WideWorldImportersDW utiliza la [esquema de estrella](https://wikipedia.org/wiki/Star_schema) enfoque para el diseño de la tabla. Además de las tablas de hechos y dimensiones, la base de datos incluye una serie de tablas de ensayo que se utilizan en el proceso ETL.
+Por tanto, los datos de WideWorldImportersDW espejan los datos en WideWorldImporters, pero las tablas se organizan de forma diferente. Aunque WideWorldImporters tiene un esquema normalizado tradicional, WideWorldImportersDW usa el enfoque de [esquema de estrella](https://wikipedia.org/wiki/Star_schema) para su diseño de tabla. Además de las tablas de hechos y dimensiones, la base de datos incluye una serie de tablas de almacenamiento provisional que se usan en el proceso ETL.
 
 ## <a name="schemas"></a>Esquemas
 
 Los diferentes tipos de tablas se organizan en tres esquemas.
 
-|Esquema|Descripción|
+|Schema|Descripción|
 |-----------------------------|---------------------|
 |Dimensión|Tablas de dimensiones.|
-|Hecho|Tablas de hechos.|  
-|Integración|Almacenamiento de tablas y otros objetos necesarios para el ETL.|  
+|Fact|Tablas de hechos.|  
+|Integración|Tablas de ensayo y otros objetos necesarios para ETL.|  
 
 ## <a name="tables"></a>Tablas
 
-Las tablas de hechos y dimensiones aparecen a continuación. Las tablas en el esquema de integración se utilizan únicamente para el proceso ETL y no aparecen.
+A continuación se enumeran las tablas de dimensiones y hechos. Las tablas del esquema de integración solo se usan para el proceso ETL y no se muestran en la lista.
 
 ### <a name="dimension-tables"></a>Tablas de dimensiones
 
-WideWorldImportersDW tiene las siguientes tablas de dimensión. La descripción incluye la relación con las tablas de origen en la base de datos de WideWorldImporters.
+WideWorldImportersDW tiene las siguientes tablas de dimensiones. La descripción incluye la relación con las tablas de origen en la base de datos WideWorldImporters.
 
 |Tabla|Tablas de origen|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Date|Nueva tabla con información sobre fechas, incluyendo ejercicio (basado en 1 de noviembre iniciar ejercicio).|
-|Employee|`Application.People`|
+|Date|Nueva tabla con información sobre las fechas, incluido el año financiero (según el primer inicio del año financiero).|
+|Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
-|Proveedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`.|
+|Supplier|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
+|PaymentMethod (MétodoPago)|`Application.PaymentMethods`.|
 |TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>Tablas de hechos
 
-WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incluye la relación con las tablas de origen en la base de datos de WideWorldImporters, así como las clases de consultas de análisis y reporting que suele utilizarse con cada tabla de hechos.
+WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incluye la relación con las tablas de origen en la base de datos WideWorldImporters, así como las clases de consultas de análisis e informes en las que se usa normalmente cada tabla de hechos.
 
-|Tabla|Tablas de origen|Análisis de la muestra|
+|Tabla|Tablas de origen|Análisis de ejemplo|
 |-----------------------------|---------------------|---------------------|
-|Pedido de|`Sales.Orders` y `Sales.OrderLines`|Personal, productividad de selector/envasador, de ventas y en tiempo para elegir los pedidos. Además, bajo stock situaciones conducen a pedidos en espera.|
-|Venta|`Sales.Invoices` y `Sales.InvoiceLines`|Fechas de ventas, las fechas de entrega, rentabilidad con el tiempo, rentabilidad por vendedor.|
-|Compra|`Purchasing.PurchaseOrderLines`|Tiempos de entrega real vs esperado|
-|Transacción|`Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`|Medición de importes y fechas de finalización de vs de fechas de problema.|
-|Movimiento|`Warehouse.StockTransactions`|Movimientos con el tiempo.|
-|Cartera de valores|`Warehouse.StockItemHoldings`|Los niveles de existencias del inventario y el valor.|
+|Pedido de|`Sales.Orders` y `Sales.OrderLines`|Personal de ventas, productividad del selector/compresor y en el tiempo para seleccionar pedidos. Además, hay situaciones de baja existencias que conducen a los pedidos en espera.|
+|Sale|`Sales.Invoices` y `Sales.InvoiceLines`|Fechas de ventas, fechas de entrega, rentabilidad con el tiempo, rentabilidad por vendedor.|
+|Compra|`Purchasing.PurchaseOrderLines`|Tiempos de entrega reales esperados de vs|
+|Transacción|`Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`|Medición de fechas de emisión frente a fechas de finalización e importes.|
+|Movimiento|`Warehouse.StockTransactions`|Movimientos a lo largo del tiempo.|
+|Mantenimiento de existencias|`Warehouse.StockItemHoldings`|Valores y niveles de existencias disponibles.|
 
 ## <a name="stored-procedures"></a>Procedimientos almacenados
 
-Los procedimientos almacenados se utilizan principalmente para el proceso ETL y para fines de configuración.
+Los procedimientos almacenados se utilizan principalmente para el proceso ETL y con fines de configuración.
 
-Las extensiones de la muestra se les recomienda usar la `Reports` esquema para los informes de Reporting Services y el `PowerBI` esquema para el acceso de BI de energía.
+Se recomienda que todas las extensiones del ejemplo usen el `Reports` esquema para Reporting Services informes y el esquema `PowerBI` para el acceso de Power BI.
 
-### <a name="application-schema"></a>Esquema de la aplicación
+### <a name="application-schema"></a>Esquema de aplicación
 
-Estos procedimientos se utilizan para configurar la muestra. Se utilizan para aplicar características de enterprise edition a la versión standard edition de la muestra, agregar PolyBase y sembrar ETL.
+Estos procedimientos se utilizan para configurar el ejemplo. Se usan para aplicar las características de la edición Enterprise a la versión Standard Edition del ejemplo, agregar polybase y reinicializar ETL.
 
-|Procedimiento|Finalidad|
+|Procedimiento|Propósito|
 |-----------------------------|---------------------|
-|Configuration_ApplyPartitionedColumnstoreIndexing|Se aplica a particionar y columnstore índices para las tablas de hechos.|
-|Configuration_ConfigureForEnterpriseEdition|Aplica la partición columnstore indización y en la memoria.|
-|Configuration_EnableInMemory|Reemplaza las tablas de ensayo de la integración con las tablas optimizadas para memoria SCHEMA_ONLY para mejorar el rendimiento de ETL.|
-|Configuration_ApplyPolyBase|Configura un origen de datos externo, el formato de archivo y la tabla.|
-|Configuration_PopulateLargeSaleTable|Aplica cambios de edición enterprise y rellena una mayor cantidad de datos para el año 2012 como historial adicional.|
-|Configuration_ReseedETL|Elimina los datos existentes y reinicia las semillas ETL. Esto permite rellenar la base de datos OLAP para que coincidan con las filas actualizadas en la base de datos OLTP.|
+|Configuration_ApplyPartitionedColumnstoreIndexing|Aplica las particiones y los índices de almacén de columnas para las tablas de hechos.|
+|Configuration_ConfigureForEnterpriseEdition|Aplica las particiones, la indexación de almacén de columnas y en memoria.|
+|Configuration_EnableInMemory|Reemplaza las tablas de ensayo de integración por SCHEMA_ONLY las tablas optimizadas para memoria para mejorar el rendimiento de ETL.|
+|Configuration_ApplyPolyBase|Configura un origen de datos externo, un formato de archivo y una tabla.|
+|Configuration_PopulateLargeSaleTable|Aplica los cambios de edición Enterprise y, a continuación, rellena una cantidad mayor de datos para el año natural 2012 como historial adicional.|
+|Configuration_ReseedETL|Quita los datos existentes y reinicia las semillas de ETL. Esto permite volver a rellenar la base de datos OLAP para que coincida con las filas actualizadas en la base de datos OLTP.|
 
 ### <a name="integration-schema"></a>Esquema de integración
 
-Procedimientos utilizados en el proceso ETL se dividen en estas categorías:
-- Procedimientos auxiliares para el paquete ETL - Get * todos los procedimientos.
-- Procedimientos utilizados por el paquete ETL para migrar datos de prueba en las tablas de DW - todos los procedimientos de migración *.
-- `PopulateDateDimensionForYear` -Toma un año y garantiza que todas las fechas para ese año se llenan en el `Dimension.Date` tabla.
+Los procedimientos utilizados en el proceso ETL se encuentran en estas categorías:
+- Procedimientos auxiliares del paquete ETL: todos los procedimientos get *.
+- Procedimientos utilizados por el paquete ETL para migrar los datos almacenados provisionalmente a las tablas DW-All Migrate * Procedures.
+- `PopulateDateDimensionForYear`-Tarda un año y garantiza que todas las fechas del año se rellenan `Dimension.Date` en la tabla.
 
 ### <a name="sequences-schema"></a>Esquema de secuencias
 
-Procedimientos para configurar las secuencias de la base de datos.
+Procedimientos para configurar las secuencias en la base de datos.
 
-|Procedimiento|Finalidad|
+|Procedimiento|Propósito|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Llama al procedimiento `ReseedSequenceBeyondTableValue` para todas las secuencias.|
-|ReseedSequenceBeyondTableValue|Se utiliza para cambiar la posición del siguiente valor de secuencia más allá del valor de cualquier tabla que utiliza la misma secuencia. (Como un `DBCC CHECKIDENT` para el equivalente de columnas de identidad para secuencias pero en potencialmente varias tablas.)|
+|ReseedSequenceBeyondTableValue|Se usa para cambiar la posición del valor de secuencia siguiente más allá del valor de cualquier tabla que use la misma secuencia. (Como un `DBCC CHECKIDENT` para las columnas de identidad equivalentes para las secuencias, pero en potencialmente varias tablas).|

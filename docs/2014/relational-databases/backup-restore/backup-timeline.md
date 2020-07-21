@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3fb7cd9d51015a4a26cc50608b012542255a880
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958984"
 ---
 # <a name="backup-timeline"></a>Escala de tiempo de copia de seguridad
   Use el cuadro de diálogo **Escala de tiempo de la copia de seguridad** para buscar y especificar las copias de seguridad para restaurar una base de datos a un momento dado. El acceso al cuadro de diálogo **Escala de tiempo de la copia de seguridad** se abre haciendo clic en **Escala de tiempo** en el panel **Restaurar base de datos (página General)** . Este cuadro de diálogo permite ver una escala de tiempo de las operaciones de restauración realizadas sobre la base de datos.  
@@ -56,7 +55,7 @@ ms.locfileid: "62876707"
  Línea roja  
  Solo puede colocarse a lo largo de la escala de tiempo donde es posible la restauración. Moviendo la línea roja a lo largo de la escala de tiempo se ajustará la fecha y hora mostrada en los cuadros **Fecha** y **Hora** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restaurar la base de datos &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
   

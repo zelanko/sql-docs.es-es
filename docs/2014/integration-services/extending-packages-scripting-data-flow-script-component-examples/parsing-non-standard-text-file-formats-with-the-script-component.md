@@ -12,30 +12,29 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc8ac157a3bdfa240414fe4055cc322370bac019
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769021"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427092"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  
   
- [Ejemplo 1: Análisis de los registros delimitados por filas](#example1)  
+ [Ejemplo 1: Analizar registros delimitados por fila](#example1)  
   
- [Ejemplo 2: División de los registros primarios y secundarios](#example2)  
+ [Ejemplo 2: Dividir registros primarios y secundarios](#example2)  
   
 > [!NOTE]  
 >  Si desea crear un componente que pueda reutilizar más fácilmente en varias tareas de flujo de datos y varios paquetes, puede utilizar el código de este ejemplo de componente de script como punto de inicio para el componente de flujo de datos personalizado. Para obtener más información, vea [Desarrollar un componente de flujo de datos personalizado](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Ejemplo 1: Análisis de los registros delimitados por filas  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> Ejemplo 1: Analizar registros delimitados por fila  
  En este ejemplo se muestra cómo tomar un archivo de texto en el que cada columna de datos aparece en una línea independiente y analizarlo en una tabla de destino utilizando el componente de script.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación del flujo de datos, vea [crear una transformación sincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [creando una asincrónica Transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información sobre cómo configurar el componente de script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -94,11 +93,11 @@ ms.locfileid: "62769021"
   
 11. En la página **Columnas de entrada** del **Editor de transformación Script**, seleccione la única columna de entrada disponible.  
   
-12. En el **entradas y salidas** página de la **Editor de transformación Script**, seleccione salida 0 y establezca su `SynchronousInputID` en None. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
+12. En la página **entradas y salidas** del **Editor de script de transformación**, seleccione salida 0 y establezca su `SynchronousInputID` en ninguno. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
   
-    -   FirstName  
+    -   Nombre  
   
-    -   LastName  
+    -   Apellidos  
   
     -   Título  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769021"
   
     -   StateProvince  
   
-13. En el **Script** página de la **Editor de transformación Script**, haga clic en **editar Script** y escriba el código se muestra en el `ScriptMain` clase del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
+13. En la página **script** del **Editor de script de transformación**, haga clic en **Editar script** y escriba el código que se muestra en la `ScriptMain` clase del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
 14. Agregue un destino de SQL Server al flujo de datos. Configúrelo para utilizar el administrador de conexiones OLE DB y la tabla RowDelimitedData. Conecte la salida del componente de script a este destino.  
   
@@ -187,13 +186,13 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Ejemplo 2: División de los registros primarios y secundarios  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Ejemplo 2: Dividir registros primarios y secundarios  
  Este ejemplo muestra cómo tomar un archivo de texto, en el que una fila de separación precede a una fila de registro primario a la que siguen un número indefinido de filas de registro secundario, y cómo analizarlo en tablas de destino primarias y secundarias correctamente normalizadas mediante el componente de script. Este sencillo ejemplo se puede adaptar fácilmente a archivos de origen que utilizan más de una fila o columna para cada registro primario y secundario, siempre que exista una forma de identificar el principio y el final de cada registro.  
   
 > [!CAUTION]  
 >  El único fin de este ejemplo es usarlo para realizar una demostración. Si ejecuta más de una vez el ejemplo, se insertan valores de clave duplicados en la tabla de destino.  
   
- Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación del flujo de datos, vea [crear una transformación sincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [creando una asincrónica Transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Para obtener más información sobre cómo configurar el componente de script para su uso como una transformación en el flujo de datos, vea [crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. En la página **Columnas de entrada** del **Editor de transformación Script**, seleccione la única columna de entrada disponible.  
   
-12. En el **entradas y salidas** página de la **Editor de transformación Script**, seleccione salida 0, cámbiele el nombre a ParentRecords y establezca su `SynchronousInputID` en None. Cree 2 columnas de salida:  
+12. En la página **entradas y salidas** del **Editor de script de transformación**, seleccione salida 0, cambie su nombre a ParentRecords y establezca su `SynchronousInputID` en ninguno. Cree 2 columnas de salida:  
   
     -   ParentID (la clave principal), de tipo entero de cuatro bytes con signo [DT_I4]  
   
@@ -346,9 +345,9 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  [Crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   

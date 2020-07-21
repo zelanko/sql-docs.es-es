@@ -1,5 +1,5 @@
 ---
-title: 'Copia de seguridad y restauración: Interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
+title: 'Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959486"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copia de seguridad y restauración: Interoperabilidad y coexistencia (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copia de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
   En este tema se describen las consideraciones de copias de seguridad y restauración para varias características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Entre estas características se incluyen restauración de archivos e inicio de bases de datos, restauración en línea e índices deshabilitados, creación de reflejo de la base de datos, y restauración por etapas e índices de texto completo.  
   
  **En este tema:**  
@@ -40,7 +39,7 @@ ms.locfileid: "62922440"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> Restaurar archivos e iniciar la base de datos  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> Restaurar archivos e iniciar la base de datos  
  Esta sección solo es pertinente para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen varios grupos de archivos.  
   
 > [!NOTE]  
@@ -48,22 +47,22 @@ ms.locfileid: "62922440"
   
  Si se detecta algún problema durante el inicio de la base de datos, no se puede llevar a cabo la restauración y la base de datos se marca como SUSPECT. Si es posible aislar el problema en un archivo o una serie de archivos, el administrador de la base de datos puede dejar sin conexión los archivos en cuestión e intentar reiniciar la base de datos. Para dejar sin conexión un archivo se puede utilizar la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *database_name* MODIFY FILE (nombre **=' *`filename`* '** , sin conexión)  
+ ALTER DATABASE *database_name* Modify File (name **= ' *`filename`* '** sin conexión)  
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> Restauración en línea e índices deshabilitados  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> Restauración en línea e índices deshabilitados  
  Esta sección solo es relevante para las bases de datos que tienen varios grupos de archivos y, para el modelo de recuperación simple, al menos un grupo de archivos de solo lectura.  
   
  En estos casos, si una base de datos está en línea, su índice se puede crear, quitar, habilitar o deshabilitar solo si todos los grupos de archivos que contienen alguna parte del índice están en línea.  
   
  Para obtener información sobre cómo restaurar grupos de archivos sin conexión, vea [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DbMandBnR"></a> Creación de reflejo de la base de datos y copias de seguridad y restauración  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> Creación de reflejo de la base de datos y copias de seguridad y restauración  
  Esta sección solo es relevante para bases de datos con el modelo completo que contienen varios grupos de archivos.  
   
 > [!NOTE]  
->  La característica de creación de reflejo de la base de datos se quitará en una versión futura de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Utilice [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  La característica de creación de reflejo de la base de datos se quitará en una versión futura de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Creación de reflejo de la base de datos es una solución para aumentar la disponibilidad de la base de datos. La creación de reflejo se implementa en cada una de las bases de datos y solo funciona con las que utilizan el modelo de recuperación completa. Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62922440"
   
 -   No se admite la restauración de la base de datos principal.  
   
-##  <a name="PiecemealAndFTIndexes"></a> Restauración por etapas e índices de texto completo  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> Restauración por etapas e índices de texto completo  
  Esta sección solo resulta relevante para las bases de datos que contienen varios grupos de archivos y, en el caso de bases de datos de modelo simple, únicamente para los grupos de archivos de solo lectura.  
   
  Los índices de texto completo se almacenan en grupos de archivos de bases de datos y pueden verse afectados por una restauración por etapas. Si el índice de texto completo reside en el mismo grupo de archivos que alguno de los datos de la tabla asociada, la restauración por etapas funciona como cabría esperar.  
@@ -111,7 +110,7 @@ ms.locfileid: "62922440"
   
  Tan pronto como el grupo de archivos de tabla base y el grupo de archivos de índice de texto completo estén en línea, se reanudarán los rellenados de texto completo pausados.  
   
-##  <a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la compresión de datos del sistema de archivos NTFS de grupos de archivos y bases de datos de solo lectura.  
   
  Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:  
@@ -123,15 +122,15 @@ ms.locfileid: "62922440"
 > [!NOTE]  
 >  Los archivos de registro de bases de datos de lectura/escritura no se deben almacenar en sistemas de archivos comprimidos.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
 -   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

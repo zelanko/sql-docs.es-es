@@ -1,23 +1,24 @@
 ---
-title: Condiciones de prueba personalizadas para pruebas unitarias de SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Condiciones de prueba personalizadas para pruebas unitarias de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1292666a44f93d8b8dd551975eed4b7ea46f5ffe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984561"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245530"
 ---
-# <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Condiciones de prueba personalizadas para pruebas unitarias de SQL Server
+# <a name="custom-test-conditions-for-sql-server-unit-tests"></a>Condiciones de prueba personalizadas para pruebas unitarias de SQL Server
+
 Pude agregar condiciones de prueba personalizadas para pruebas unitarias de SQL Server. Sin embargo, debe instalar primero la condición de prueba antes de poder usarla, tanto si creó la extensión como si instaló una extensión creada por otra persona.  
   
 Antes de instalar una condición de prueba que usted no ha creado, debe entender los riesgos siguientes:  
@@ -40,7 +41,7 @@ Para obtener más información acerca de las condiciones de prueba personalizada
   
 -   [Cómo: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [Tutorial: Usar una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   

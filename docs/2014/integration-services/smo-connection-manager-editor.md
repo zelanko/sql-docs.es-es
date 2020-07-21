@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones SMO | Microsoft Docs
+title: Editor del administrador de conexiones SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2dd9b6d61c5c00fc1330aa23a385d335dd164ada
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055595"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421412"
 ---
 # <a name="smo-connection-manager-editor"></a>administrador de conexiones SMO, editor del
   Utilice el **Editor del administrador de conexiones SMO** para configurar una conexión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para las diferentes tareas que transfieren objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -36,19 +35,19 @@ ms.locfileid: "66055595"
  **Utilizar autenticación de Windows**  
  Utiliza la autenticación de Windows para conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seleccionada.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Utiliza la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seleccionada.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba el nombre de usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Contraseña**  
  Si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba la contraseña.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Pruebe la conexión con la configuración establecida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -12,15 +12,15 @@ ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85f631d55d93701738edca23f127ad4e0b212e34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 210cafe436036219cf3ece8ec67d7db0ff7ee5da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756047"
 ---
 # <a name="deprecation-event-category"></a>degradación [categoría de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La categoría de evento de **degradación** contiene eventos de degradación generales.  
   
 ## <a name="in-this-section"></a>En esta sección  

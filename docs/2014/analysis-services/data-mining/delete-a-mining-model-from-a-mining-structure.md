@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72c79dcdccf6225b8e75144f8b090dcab7506c10
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084779"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522707"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>Eliminar un modelo de minería de datos de una estructura de minería de datos
   Puede utilizar el Diseñador de minería de datos para eliminar los modelos de minería de datos, bien mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o bien mediante instrucciones DMX.  
@@ -33,7 +32,7 @@ ms.locfileid: "66084779"
   
      Se abre el cuadro de diálogo **Eliminar objetos** .  
   
-3.  Haga clic en **Aceptar**.  
+3.  Haga clic en **OK**.  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>Eliminar un modelo de minería de datos mediante SQL Server Management Studio  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66084779"
   
 -   [DROP MINING MODEL &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)  
   
   

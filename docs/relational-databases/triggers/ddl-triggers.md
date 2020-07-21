@@ -12,15 +12,15 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4647814765225a2c1deeedd05f77bed80d7e992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89845e119f40b0a339bdeb7d6809ad0c017afc0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056154"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757606"
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Los desencadenadores DDL se inician en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
   
  Use desencadenadores DDL cuando desee hacer lo siguiente:  
@@ -115,7 +115,7 @@ GO
 |----------|-----------|  
 |Describe cómo crear, modificar, eliminar o deshabilitar los desencadenadores DDL.|[Implementar desencadenadores DDL](../../relational-databases/triggers/implement-ddl-triggers.md)|  
 |Describe cómo crear un desencadenador DDL de CLR.|[Crear desencadenadores CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
-|Describe cómo devolver información acerca de los desencadenadores DDL.|[Obtener información acerca de los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
+|Describe cómo devolver información acerca de los desencadenadores DDL.|[Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
 |Describe cómo devolver información acerca de un evento que activa un desencadenador DDL mediante la función EVENTDATA.|[Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Describe cómo administrar la seguridad de los desencadenadores.|[Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md)|  
   

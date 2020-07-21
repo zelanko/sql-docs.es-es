@@ -1,5 +1,5 @@
 ---
-title: Seguridad de la integración de CLR | Microsoft Docs
+title: Seguridad de la integración CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970585"
 ---
 # <a name="clr-integration-security"></a>Seguridad de la integración CLR
-  El modelo de seguridad de la [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] common language runtime (CLR) administra y protege el acceso entre diferentes tipos de objetos CLR y que no son CLR que se ejecutan en [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] instrucción u otro objeto CLR que se ejecutan en el servidor. Las llamadas entre objetos reciben el nombre de vínculos. Los tipos de comprobaciones de seguridad que se realizan en estos objetos dependen de los tipos de vínculos implicados.  
+  El modelo de seguridad del [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) administra y protege el acceso entre los distintos tipos de objetos CLR y no CLR que se ejecutan dentro de [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] la instrucción u otro objeto CLR que se ejecuta en el servidor. Las llamadas entre objetos reciben el nombre de vínculos. Los tipos de comprobaciones de seguridad que se realizan en estos objetos dependen de los tipos de vínculos implicados.  
   
  El modelo de seguridad de la integración CLR tiene estos objetivos:  
   
--   De forma predeterminada, ejecutar código de usuario administrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La realización de operaciones que podrían poner en peligro la estabilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debería protegerse mediante los permisos de alto nivel pertinentes.  
+-   De forma predeterminada, la ejecución de código de usuario administrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La realización de operaciones que podrían poner en peligro la estabilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debería protegerse mediante los permisos de alto nivel pertinentes.  
   
 -   El código de usuario administrado no debería obtener un acceso no autorizado a los datos del usuario ni a ningún otro código de usuario de la base de datos. El código definido por el usuario debería ejecutarse bajo el contexto de seguridad de la sesión del usuario que lo invocó y con los privilegios adecuados para ese contexto de seguridad.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62918997"
   
 -   El código definido por el usuario no debería poder obtener un acceso no autorizado a los recursos del sistema por el hecho de ejecutarse en el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el modelo de seguridad basada en el acceso del código de CLR. Algunas de las ventajas que este enfoque combinado ofrece para la seguridad se describen en esta sección.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]con el modelo de seguridad basado en el acceso del código de CLR. Algunas de las ventajas que este enfoque combinado ofrece para la seguridad se describen en esta sección.  
   
  En la siguiente tabla se muestran los temas de esta sección.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62918997"
  [Dominios de aplicación y seguridad de la integración CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  Describe la forma en que los ensamblados se cargan en los dominios de aplicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar ensamblados de integración CLR](../assemblies/managing-clr-integration-assemblies.md)  
   
   

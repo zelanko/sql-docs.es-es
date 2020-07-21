@@ -7,23 +7,22 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c1601184acb7cf157149208b3f3a056090333c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68205529"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048191"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Enviar y recibir datos incrementalmente con FILESTREAM (ODBC)
   En este ejemplo se muestra cómo utilizar la característica FILESTREAM para enviar y recibir datos incrementalmente con SQLPutData y SQLGetData.  
   
- Para obtener más información sobre la característica FILESTREAM, vea [compatibilidad con FILESTREAM &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md).  
+ Para obtener más información acerca de la característica FILESTREAM, vea [compatibilidad de filestream &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
- Antes de compilar y ejecutar este ejemplo, habilitar la compatibilidad con FILESTREAM ([habilitar y configurar FILESTREAM](../blob/enable-and-configure-filestream.md)).  
+ Antes de compilar y ejecutar este ejemplo, habilite la compatibilidad con FILESTREAM ([Habilitar y configurar FILESTREAM](../blob/enable-and-configure-filestream.md)).  
   
  La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una base de datos usada por este ejemplo. Su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso de escritura para ejecutar este script (por ejemplo, iniciar sesión como una cuenta de sistema local).  
   

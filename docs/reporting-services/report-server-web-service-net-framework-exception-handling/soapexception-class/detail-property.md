@@ -1,5 +1,6 @@
 ---
 title: Propiedad Detail | Microsoft Docs
+description: Obtenga información sobre la propiedad Detail de la clase SoapException de Reporting Services, en concreto sobre los elementos XML que definen la propiedad.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 929c597fda9b97c5ffdb24a0aed236f68727a3fd
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991556"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80215624"
 ---
 # <a name="detail-property"></a>Propiedad Detail
   La propiedad **Detail** de la clase **SoapException** de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiene la estructura XML siguiente:  
@@ -29,9 +30,9 @@ ms.locfileid: "62991556"
  Código de error específico de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  **HttpStatus**  
- Código de estado HTTP.  
+ El código de estado HTTP.  
   
- **de mensaje**  
+ **Mensaje**  
  Mensaje de error y código de error asignados por el servidor de informes.  
   
  **HelpLink**  
@@ -58,10 +59,10 @@ ms.locfileid: "62991556"
  **MoreInformation**  
  Cadena XML que contiene las excepciones anidadas que se produjeron mientras el método se ejecutaba.  
   
- **Source**  
+ **Origen**  
  Elemento secundario de **MoreInformation**. Origen del error.  
   
- **de mensaje**  
+ **Mensaje**  
  Elemento secundario de **MoreInformation**. Mensaje de error de una excepción anidada. Este elemento incluye atributos XML para **ErrorCode** y **HelpLink**.  
   
  **Advertencias**  

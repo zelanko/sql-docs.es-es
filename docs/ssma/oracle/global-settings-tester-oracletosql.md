@@ -11,42 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264414"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configuración global (evaluador) (OracleToSQL)
-Use la página de la herramienta de comprobación de la **configuración Global** cuadro de diálogo para especificar la configuración de pruebas de SSMA.  
+Use la página evaluador del cuadro de diálogo **configuración global** para especificar la configuración de SSMA Tester.  
   
-Para obtener acceso a la configuración de la herramienta de comprobación, en el **herramientas** menú, seleccione **configuración Global**y haga clic en **evaluador** en la parte inferior del panel izquierdo.  
+Para obtener acceso a la configuración del evaluador, en el menú **herramientas** , seleccione **configuración global**y haga clic en **evaluador** en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
-**Análisis de objeto comprobables**  
-Esta configuración especifica si se debe realizar el análisis de los objetos que puede probar. Seleccione **Sí** si desea que el evaluador de SSMA para analizar y buscar automáticamente los objetos dependientes. Conjunto de opciones de forma predeterminada es **Sí**.  
-  
-Las siguientes opciones están disponibles para esta configuración:  
-  
-1.  Sí  
-  
-2.  Sin  
-  
-**Modo de ahorro de tablas auxiliares**  
-Esta configuración especifica cómo se guardan las tablas auxiliares internas creadas durante la ejecución del caso de prueba. Siguientes opciones se pueden establecer para esta configuración concreta:  
-  
-1.  Eliminar siempre  
-  
-2.  Guarde siempre  
-  
-3.  Guardar el caso de error de comparación de la tabla  
-  
-4.  Pedir el usuario si la comparación de la tabla no se pudo  
-  
-La opción establecida de forma predeterminada es: **Eliminar siempre**.  
-  
-**Realizar reversión de datos**  
-Esta configuración especifica si se debe realizar una operación de reversión después de ejecutar cada caso de prueba. Conjunto de opciones de forma predeterminada es **No**.  
+**Análisis de objetos comprobables**  
+Esta configuración especifica si se debe realizar el análisis de los objetos que se van a probar. Seleccione **sí** si desea que el evaluador de SSMA analice y compruebe automáticamente los objetos dependientes. El conjunto de opciones predeterminado es **sí**.  
   
 Las siguientes opciones están disponibles para esta configuración:  
   
@@ -54,15 +32,37 @@ Las siguientes opciones están disponibles para esta configuración:
   
 2.  No  
   
-**Detener la ejecución de pruebas tras el primer error**  
-Esta configuración especifica si se debe detener la ejecución de caso de prueba actual, si se ha producido un error durante la ejecución. Conjunto de opciones de forma predeterminada es **Sí**.  
+**Modo de guardado de tablas auxiliares**  
+Esta configuración especifica cómo se guardan las tablas auxiliares internas creadas durante la ejecución del caso de prueba. Se pueden establecer las siguientes opciones para esta configuración determinada:  
+  
+1.  Eliminar siempre  
+  
+2.  Guardar siempre  
+  
+3.  Guardar si se produjo un error en la comparación de tabla  
+  
+4.  Preguntar al usuario si se produjo un error en la comparación de tabla  
+  
+El conjunto de opciones predeterminado es: **eliminar siempre**.  
+  
+**Realizar la reversión de los datos**  
+Esta configuración especifica si se debe realizar una operación de reversión después de ejecutar cada caso de prueba. El conjunto de opciones predeterminado es **no**.  
   
 Las siguientes opciones están disponibles para esta configuración:  
   
 1.  Sí  
   
-2.  Sin  
+2.  No  
   
-## <a name="see-also"></a>Vea también  
-[Finalización de la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+**Detener la ejecución de pruebas después del primer error**  
+Esta configuración especifica si se debe detener el caso de prueba actual en ejecución, si se ha producido un error durante la ejecución. El conjunto de opciones predeterminado es **sí**.  
+  
+Las siguientes opciones están disponibles para esta configuración:  
+  
+1.  Sí  
+  
+2.  No  
+  
+## <a name="see-also"></a>Consulte también  
+[Finalizando la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

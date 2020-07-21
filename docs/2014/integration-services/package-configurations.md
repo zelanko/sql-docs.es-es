@@ -18,18 +18,17 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84ad905a0b9e19c27e8b24bf9d4b2d0329a7db2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056891"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423922"
 ---
 # <a name="package-configurations"></a>Configuraciones de paquetes
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones de paquetes que se pueden usar para actualizar los valores de las propiedades en tiempo de ejecución.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]proporciona configuraciones de paquetes que puede usar para actualizar los valores de las propiedades en tiempo de ejecución.  
   
 > [!NOTE]  
 >  Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -79,7 +78,7 @@ ms.locfileid: "66056891"
   
 -   No puede usar la opción **/ConfigFile** para cargar configuraciones que reemplacen las configuraciones que ha especificado en tiempo de diseño.  
   
- Para obtener más información sobre estas opciones y cómo difiere el comportamiento de estas opciones entre [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] y versiones anteriores, vea [cambios de comportamiento en las características de Integration Services en SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Para obtener más información acerca de estas opciones y cómo difiere el comportamiento de estas opciones entre [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] y versiones anteriores, vea [cambios de comportamiento en Integration Services características en SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Tipos de configuraciones de paquetes  
  En la tabla siguiente se describen los tipos de configuraciones de paquetes.  
@@ -90,7 +89,7 @@ ms.locfileid: "66056891"
 |Variable de entorno|Una variable de entorno contiene la configuración.|  
 |Entrada del Registro|Una entrada del Registro contiene la configuración.|  
 |Variable de paquete primario|Una variable del paquete contiene la configuración. Este tipo de configuración se utiliza habitualmente para actualizar las propiedades de los paquetes secundarios.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
+|Tabla [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
   
 ### <a name="xml-configuration-files"></a>Archivos de configuración XML  
  Si selecciona el tipo de configuración **Archivo de configuración XML** , puede crear un archivo de configuración, reutilizar un archivo existente y agregarle configuraciones nuevas, o bien reutilizar un archivo existente sobrescribiendo el contenido actual.  
@@ -123,7 +122,7 @@ ms.locfileid: "66056891"
 ### <a name="registry-entry"></a>Entrada del Registro  
  Si desea usar una entrada del Registro para guardar la configuración, puede usar una clave existente o crear otra en HKEY_CURRENT_USER. La clave del Registro que utilice debe tener un valor denominado `Value`. El valor puede ser un valor de tipo DWORD o una cadena.  
   
- Si selecciona el tipo de configuración **Entrada del Registro** , debe escribir el nombre de la clave del Registro en el cuadro de texto del Registro. El formato es \<clave del Registro>. Si quiere usar una clave del Registro que no está en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\...> para identificarla. Por ejemplo, para usar la clave MyPackage de SSISPackages, escriba `SSISPackages\MyPackage`.  
+ Si selecciona el tipo de configuración **Entrada del Registro** , debe escribir el nombre de la clave del Registro en el cuadro de texto del Registro. El formato es \<registry key>. Si desea usar una clave del registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<Registry key\registry key\\...> para identificar la clave. Por ejemplo, para usar la clave MyPackage de SSISPackages, escriba `SSISPackages\MyPackage`.  
   
 ### <a name="sql-server"></a>SQL Server  
  Si selecciona el tipo de configuración **SQL Server** , debe especificar la conexión a la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que desee almacenar las configuraciones. Puede guardar las configuraciones en una tabla existente o crear una tabla nueva en la base de datos especificada.  
@@ -155,7 +154,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 -   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
   
--   Entrada de blog, [crear paquetes de código: configuraciones de paquetes](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
+-   Entrada de blog, [crear paquetes en configuraciones de paquetes de código](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
   
 -   Entrada de blog, [ejemplo de API: agregar mediante programación un archivo de configuración a un paquete](https://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
   

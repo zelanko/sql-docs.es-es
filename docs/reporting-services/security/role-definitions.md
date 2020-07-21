@@ -14,10 +14,10 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570586"
 ---
 # <a name="role-definitions"></a>Definiciones de roles
@@ -53,7 +53,7 @@ ms.locfileid: "65570586"
  Puede eliminar una definición de roles si ya no la utiliza. No se puede eliminar la definición de rol seleccionada para la característica Mis informes mientras ésta siga habilitada. Para poder eliminar la definición de rol utilizada por Mis informes, primero debe deshabilitar la característica o seleccionar una definición de rol diferente para usarla con ella.  
   
 ## <a name="see-also"></a>Consulte también  
- [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)   
+ [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

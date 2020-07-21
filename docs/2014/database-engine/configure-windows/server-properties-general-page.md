@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4967d494f381b7562c1bbecdd04811d22239e66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934936"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Propiedades del servidor (página General) - SQL Server Management Studio
   Use esta página para ver información de solo lectura sobre la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -27,10 +26,10 @@ ms.locfileid: "62809357"
 ## <a name="property-grid"></a>Cuadrícula de propiedades  
  Presenta las propiedades del servidor seleccionado, como el nombre del servidor, el sistema operativo del servidor o el número de procesadores.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la instancia del servidor.  
   
- **Product**  
+ **Producto**  
  Muestra la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se está ejecutando en la actualidad.  
   
  **Sistema operativo**  
@@ -66,7 +65,7 @@ ms.locfileid: "62809357"
 ## <a name="description-field"></a>Campo de descripción  
  Presenta información adicional sobre las propiedades del servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fedf4ce3011d9caae9d673acf354265537115057
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126138"
 ---
 # <a name="integrating-reporting-services-using-url-access"></a>Integrar Reporting Services utilizando un acceso URL
@@ -29,14 +29,14 @@ ms.locfileid: "63126138"
 >  Los temas de la sección proporcionan algunas ideas básicas para la integración. Puede usar la información para empezar a diseñar y desarrollar sus propios escenarios de integración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Usar un acceso URL en una aplicación web](integrating-reporting-services-using-url-access-web-application.md)  
+ [Usar acceso URL en una aplicación web](integrating-reporting-services-using-url-access-web-application.md)  
  Describe cómo usar el acceso URL para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un entorno web.  
   
- [Usar un acceso URL en una aplicación para Windows](integrating-reporting-services-using-url-access-windows-application.md)  
+ [Usar el acceso URL en una aplicación para Windows](integrating-reporting-services-using-url-access-windows-application.md)  
  Describe cómo utilizar el acceso URL para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un entorno [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32.  
   
-## <a name="see-also"></a>Vea también  
- [Integración de Reporting Services en las aplicaciones](../application-integration/integrating-reporting-services-into-applications.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integración de Reporting Services en aplicaciones](../application-integration/integrating-reporting-services-into-applications.md)   
  [Acceso URL &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

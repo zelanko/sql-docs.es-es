@@ -1,5 +1,6 @@
 ---
-title: Proveedor WMI de clases de administración de configuración | Microsoft Docs
+title: Proveedor WMI para las clases de administración de configuración
+description: Detecte e implemente la funcionalidad que proporciona Instrumental de administración de Windows. Elija una de estas clases para Configuration Manager.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a7ac0d4975890a6aa949bac1050a4bb7cefe00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 044fbfcaefe52f897842684d4224222232577d21
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139407"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888257"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Proveedor WMI para las clases de administración de configuración
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El proveedor de Instrumental de administración de Windows (WMI) para la administración de Configuración proporciona la funcionalidad para las clases siguientes:  
   
  [Clase CInstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
@@ -54,7 +55,7 @@ ms.locfileid: "68139407"
   
  [Clase SInstance](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
   
- [Clase SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
+ [SqlErrorLogEvent, clase](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   
  [Clase SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
   

@@ -12,28 +12,27 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 860d188f7a934e707766b157d4c089a88207ce02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63062147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056333"
 ---
 # <a name="data-types-ole-db"></a>Tipos de datos (OLE DB)
-  Para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y procesar los resultados mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, debe saber cómo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas del proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos OLE DB al enlazar los parámetros o columnas en un conjunto de filas y, cuando usa el **ITableDefinition** interfaz para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y procesar los resultados mediante el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de Native Client, debe saber cómo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client asigna los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a OLE DB tipos de datos al enlazar parámetros o columnas en un conjunto de filas, y cuando usa la interfaz **ITableDefinition** para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 -   [Asignar tipos de datos en conjuntos de filas y parámetros](data-type-mapping-in-rowsets-and-parameters.md)  
   
--   [Asignar tipos de datos en ITableDefinition](data-type-mapping-in-itabledefinition.md)  
+-   [Asignación de tipos de datos en ITableDefinition](data-type-mapping-in-itabledefinition.md)  
   
 -   [Estructura SSVARIANT](ssvariant-structure.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

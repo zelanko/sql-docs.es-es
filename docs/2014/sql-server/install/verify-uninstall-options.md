@@ -1,5 +1,5 @@
 ---
-title: Compruebe las opciones de desinstalación | Microsoft Docs
+title: Comprobar las opciones de desinstalación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f353fa-1bb4-495c-bf86-77cfa5bc6c78
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4140f782e162e317d934c23f7c4601fd90c40a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6e89d4fefd66d6f3565b17b5dcb44b14ad13400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065099"
 ---
 # <a name="verify-uninstall-options"></a>Compruebe las opciones de desinstalación
   Compruebe su selección y, a continuación, haga clic en **Siguiente** para continuar.  

@@ -14,10 +14,10 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71282510"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados por un paquete de Integration Services
@@ -39,7 +39,7 @@ ms.locfileid: "71282510"
 > [!NOTE]  
 >  El paquete registrará los mensajes de la tabla siguiente aunque no se haya habilitado el registro.  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Id. de evento|Nombre simbólico|Texto|Notas|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Se ha iniciado el paquete "".|El paquete ha comenzado a ejecutarse.|  
 |12289|DTS_MSG_PACKAGESUCCESS|El paquete "" finalizó correctamente.|El paquete se ha ejecutado correctamente y ya no está ejecutándose.|  
@@ -59,7 +59,7 @@ ms.locfileid: "71282510"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Mensajes sobre las fases de ejecución del paquete  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Id. de evento|Nombre simbólico|Texto|Notas|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|Cuando se configura el registro de paquetes en el registro de eventos de aplicación, varios mensajes usan este formato genérico.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|El paquete se ha iniciado.|  
@@ -72,7 +72,7 @@ ms.locfileid: "71282510"
 ### <a name="messages-about-events-that-occur"></a>Mensajes sobre los eventos que se producen  
  En la tabla siguiente, se muestran solo algunos de los mensajes generados por eventos. Para consultar una lista más completa de los mensajes de error, advertencia e información que usa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md).  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Id. de evento|Nombre simbólico|Texto|Notas|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|Error en la tarea.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|Este mensaje informa de que se ha producido un error.|  

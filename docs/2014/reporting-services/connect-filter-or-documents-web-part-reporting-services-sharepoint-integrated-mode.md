@@ -1,5 +1,5 @@
 ---
-title: Conectar el elemento filtro o documentos Web (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
+title: Conectar el elemento Web filtro o documentos (Reporting Services en el modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109714"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Conectar un elemento web Filtro o Documentos (Reporting Services en el modo integrado de SharePoint)
@@ -35,15 +35,15 @@ ms.locfileid: "66109714"
   
 2.  En el menú **Acciones del sitio** , haga clic en **Editar página**.  
   
-3.  Haga clic en **Agregar elemento web**.  
+3.  Haga clic en **Agregar un elemento Web**.  
   
-4.  En **Todos los elementos web**, en la categoría **Varios** , seleccione **Visor de informes de SQL Reporting Services**.  
+4.  En **todos los elementos Web**, en la categoría **varios** , seleccione **SQL Server Reporting Services visor de informes**.  
   
 5.  Haga clic en **Agregar**. El elemento web se agregará a la parte superior de la zona.  
   
-6.  En otra zona del mismo panel o página de elementos web, haga clic en **Agregar elemento web**.  
+6.  En otra zona de la misma página o panel de elementos Web, haga clic en **Agregar un elemento Web**.  
   
-7.  En **Todos los elementos web**, en la sección **Filtros** , seleccione un elemento web.  
+7.  En **todos los elementos Web**, en la sección **filtros** , seleccione un elemento Web.  
   
 8.  Haga clic en **Agregar**. El elemento web se agregará a la parte superior de la zona.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66109714"
   
 2.  En el menú **Acciones del sitio** , haga clic en **Editar página**.  
   
-3.  Haga clic en **Agregar elemento web**.  
+3.  Haga clic en **Agregar un elemento Web**.  
   
 4.  En **Todos los elementos web**, en la sección **Listas y bibliotecas** , seleccione **Documentos**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66109714"
   
 6.  Haga clic en **Aplicar** en la parte inferior del panel de herramientas y, a continuación, haga clic en **Aceptar** para cerrar el panel.  
   
-7.  En otra zona del mismo panel o página de elementos web, haga clic en **Agregar elemento web**.  
+7.  En otra zona de la misma página o panel de elementos Web, haga clic en **Agregar un elemento Web**.  
   
 8.  En **Todos los elementos web**, en la categoría **Varios** , seleccione **Visor de informes de SQL Reporting Services.**  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66109714"
   
 11. Proteja sus cambios y guarde la página.  
   
-## <a name="see-also"></a>Vea también  
- [Agregar el elemento web Visor de informes a una página web &#40;Reporting Services en el modo integrado de SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [Elemento web Visor de informes en un sitio de SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
+## <a name="see-also"></a>Consulte también  
+ [Agregar el elemento Web visor de informes a una página web &#40;Reporting Services en el modo integrado de SharePoint&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Elemento Web visor de informes en un sitio de SharePoint](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizar el elemento web Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md)  
   
   

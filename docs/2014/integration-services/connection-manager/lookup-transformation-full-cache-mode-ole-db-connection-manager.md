@@ -1,5 +1,5 @@
 ---
-title: Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB | Microsoft Docs
+title: Implementar una transformación búsqueda en el modo de caché completa mediante el administrador de conexiones de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11eb545aa4d9beefc0852bb68ed18a84ffe3256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a40ae949eecdaa71053b0e7f4253817643bc669f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833714"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438352"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-ole-db-connection-manager"></a>Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -51,11 +50,11 @@ ms.locfileid: "62833714"
   
     -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
-         -o bien-  
+         O bien  
   
     -   Haga clic en **Usar los resultados de una consulta SQL**y después genere una consulta en la ventana **Comando SQL** , o haga clic en **Generar consulta** para generar una consulta mediante las herramientas gráficas que proporciona el **Generador de consultas** .  
   
-         -o bien-  
+         O bien  
   
     -   Haga clic en **Examinar** para importar una instrucción SQL de un archivo.  
   
@@ -81,9 +80,9 @@ ms.locfileid: "62833714"
   
 13. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## <a name="see-also"></a>Vea también  
- [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Implementar una búsqueda en modo No hay caché o Caché parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+## <a name="see-also"></a>Consulte también  
+ [Implementación de una transformación Búsqueda en el modo de caché completa con el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../data-flow/transformations/integration-services-transformations.md)  
   
   

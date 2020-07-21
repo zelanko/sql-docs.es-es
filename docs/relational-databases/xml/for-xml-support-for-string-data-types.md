@@ -1,5 +1,6 @@
 ---
 title: Compatibilidad con FOR XML para tipos de datos de cadena | Microsoft Docs
+description: Obtenga información sobre cómo se controlan los tipos de datos de cadena cuando la cláusula FOR XML genera XML en una consulta SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e0ad8310f5938d757c30732cf6b1a78a9770254e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdaa7560b5dad561d981acee2d2d48ccca44146c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729913"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Compatibilidad con FOR XML para tipos de datos de cadena
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Se crea una entidad del XML generado por los caracteres de espacio en blanco de FOR XML en los datos.  
   
  En el ejemplo siguiente se crea una tabla de ejemplo **T** y se insertan datos de ejemplo que incluyen los caracteres de avance de línea, retorno de carro y tabulación. La instrucción SELECT recupera los datos de la tabla.  
@@ -62,6 +63,6 @@ after line feed" />
 -   Se crea la entidad &#xA para el carácter de avance de línea de la tercera fila.  
   
 ## <a name="see-also"></a>Consulte también  
- [Compatibilidad con FOR XML para varios tipos de datos de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
+ [Compatibilidad de FOR XML con varios tipos de datos de SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

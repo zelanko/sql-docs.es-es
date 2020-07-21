@@ -1,5 +1,5 @@
 ---
-title: Propiedades ADOX | Microsoft Docs
+title: Propiedades de ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,44 +11,44 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764106"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 
 |||  
 |-|-|  
-|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica la propiedad ADO **conexión** objeto al que pertenece el catálogo.|  
-|[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Describe las características de la columna.|  
+|[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica el objeto de **conexión** ADO al que pertenece el catálogo.|  
+|[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Describe las características de las columnas.|  
 |[Agrupado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
-|[Command](../../../ado/reference/adox-api/command-property-adox.md)|Especifica un ADO **comando** objeto que puede usarse para crear o ejecutar el procedimiento.|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
-|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la fecha en que se creó el objeto.|  
-|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica la fecha en que se modificó por última vez el objeto.|  
+|[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica un objeto **Command** de ADO que se puede utilizar para crear o ejecutar el procedimiento.|  
+|[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la fecha de creación del objeto.|  
+|[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Indica la fecha en que se modificó el objeto por última vez.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Indica el tamaño máximo indicado de la columna.|  
-|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Indica la acción realizada cuando se elimina una clave principal.|  
-|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica si los registros que tienen valores null en sus campos de índice tienen entradas de índice.|  
-|[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica a un miembro específico de una colección, por nombre o número ordinal.|  
-|[Name](../../../ado/reference/adox-api/name-property-adox.md)|Indica el nombre del objeto.|  
+|[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)|Indica la acción que se realiza cuando se elimina una clave principal.|  
+|[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)|Indica si los registros que tienen valores NULL en sus campos de índice tienen entradas de índice.|  
+|[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica un miembro específico de una colección, por nombre o número ordinal.|  
+|[Nombre](../../../ado/reference/adox-api/name-property-adox.md)|Indica el nombre del objeto.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Indica la escala de un valor numérico de la columna.|  
-|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Especifica el catálogo del elemento primario de una tabla o columna para proporcionar acceso a propiedades específicas del proveedor.|  
-|[Precisión](../../../ado/reference/adox-api/precision-property-adox.md)|Indica la precisión máxima de valores de datos de la columna.|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indica si el índice representa la clave principal en la tabla.|  
+|[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Especifica el catálogo primario de una tabla o columna para proporcionar acceso a las propiedades específicas del proveedor.|  
+|[Precisión](../../../ado/reference/adox-api/precision-property-adox.md)|Indica la precisión máxima de los valores de datos de la columna.|  
+|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Indica si el índice representa la clave principal de la tabla.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Indica el nombre de la columna relacionada en la tabla relacionada (solo columnas de clave).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Indica el nombre de la tabla relacionada.|  
-|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica la secuencia de ordenación para la columna (solo columnas de índice).|  
+|[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|Indica la secuencia de ordenación de la columna (solo columnas de índice).|  
 |[Tipo (columna)](../../../ado/reference/adox-api/type-property-column-adox.md)|Indica el tipo de datos de una columna.|  
 |[Tipo (clave)](../../../ado/reference/adox-api/type-property-key-adox.md)|Indica el tipo de datos de la clave.|  
-|[Tipo (tabla)](../../../ado/reference/adox-api/type-property-table-adox.md)|Indica el tipo de una tabla.|  
+|[Type (tabla)](../../../ado/reference/adox-api/type-property-table-adox.md)|Indica el tipo de una tabla.|  
 |[Único](../../../ado/reference/adox-api/unique-property-adox.md)|Indica si las claves de índice deben ser únicas.|  
-|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Indica la acción realizada cuando se actualiza una clave principal.|  
+|[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Indica la acción que se realiza cuando se actualiza una clave principal.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de API de ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de la API de ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

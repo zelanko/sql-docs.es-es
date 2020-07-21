@@ -27,10 +27,10 @@ ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294076"
 ---
 # <a name="integration-services-tasks"></a>Tareas de Integration Services
@@ -42,7 +42,7 @@ ms.locfileid: "71294076"
   
  También puede escribir tareas personalizadas mediante un lenguaje de programación compatible con COM, como Visual Basic, o un lenguaje de programación .NET, como C#.  
   
- El Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , la herramienta gráfica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para trabajar con paquetes, proporciona la superficie de diseño para crear flujos de control de paquetes y proporciona editores personalizados para configurar las tareas. También se puede programar el modelo de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para crear paquetes mediante programación.  
+ El Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)], la herramienta gráfica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para trabajar con paquetes, proporciona la superficie de diseño para crear flujos de control de paquetes y proporciona editores personalizados para configurar las tareas. También se puede programar el modelo de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para crear paquetes mediante programación.  
   
 ## <a name="types-of-tasks"></a>Tipos de tareas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los siguientes tipos de tareas.  
@@ -69,7 +69,7 @@ ms.locfileid: "71294076"
  Tareas que realizan funciones administrativas como crear copias de seguridad y reducir bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , volver a generar y reorganizar índices, y ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Tareas personalizadas  
- Además, también puede escribir tareas personalizadas mediante un lenguaje de programación compatible con COM, como Visual Basic, o un lenguaje de programación .NET, como C#. Si quiere tener acceso a una tarea personalizada en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede crear y registrar una interfaz de usuario para la tarea. Para obtener más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
+ Además, también puede escribir tareas personalizadas mediante un lenguaje de programación compatible con COM, como Visual Basic, o un lenguaje de programación .NET, como C#. Si quiere tener acceso a una tarea personalizada en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede crear y registrar una interfaz de usuario para la tarea. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="configuration-of-tasks"></a>Configuración de tareas  
  Un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede contener una tarea individual, como una tarea Ejecutar SQL que elimina registros de una tabla de base de datos cuando se ejecuta el paquete. No obstante, los paquetes suelen contener varias tareas y cada tarea se establece para ejecutarse en el contexto del flujo de control de paquete. Los controladores de eventos, que son flujos de trabajo que se ejecutan en respuesta a eventos de tiempo de ejecución, también puede tener tareas.  

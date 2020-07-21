@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b15d0601255cc7f53b677c333f531057a05573a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0912e67fcf72ccdf5e13be46cf4507a47f33fc83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762259"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve la suma del número de puntos de cada una de las figuras de una instancia de **geometry**.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68075077"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método cuenta los puntos de la descripción de una instancia de **geometry**. Los puntos duplicados se cuentan. Si esta instancia es de tipo **collection**, este método devuelve la suma de los puntos de cada uno de sus elementos.  
   
 ## <a name="examples"></a>Ejemplos  

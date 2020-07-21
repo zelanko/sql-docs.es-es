@@ -14,15 +14,14 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 225b6010e5d5a6c45a84d7e22272c4e5242906fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a073db65768c413b6cbe648c757ad75d80bd318e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827900"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432232"
 ---
 # <a name="data-in-data-flows"></a>Datos de flujos de datos
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de tipos de datos que se usan en flujos de datos.  

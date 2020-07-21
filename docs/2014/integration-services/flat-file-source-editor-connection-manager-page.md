@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de archivo (página Administrador de conexiones) planos | Microsoft Docs
+title: Editor de origen de archivos planos (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43a0251b63d7a0519a2a19b6bec4c5117f0dcef0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058689"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425492"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de origen de archivos planos (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar el administrador de conexiones que utilizará el origen de archivos planos. El origen de archivos planos lee los datos de un archivo de texto, que pueden estar en formato delimitado, tener un ancho fijo o ser mixtos.  
@@ -33,22 +32,22 @@ ms.locfileid: "66058689"
  Para obtener más información acerca del origen de archivo plano, vea [Flat File Source](data-flow/flat-file-source.md).  
   
 ## <a name="options"></a>Opciones  
- **Flat file connection manager**  
+ **Administrador de conexiones de archivos planos**  
  Seleccione un administrador de conexiones de la lista o cree un nuevo administrador de conexiones haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Crea un nuevo administrador de conexiones mediante el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
   
  **Conservar los valores null del origen como valores null en el flujo de datos**  
  Especifica si deben mantenerse los valores NULL cuando se extraen los datos. El valor predeterminado de esta propiedad es **false**. Cuando este valor es f`alse`, el origen de archivos planos reemplaza los valores NULL del origen de datos por los valores predeterminados correspondientes para cada columna, como cadenas vacías para las columnas de cadenas o cero para las columnas numéricas.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Editor de origen de archivos planos &#40;página Salida de error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [Página &#40;columnas del editor de origen de archivos planos&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
+ [Editor de origen de archivos planos &#40;página salida de error&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)  
   
   

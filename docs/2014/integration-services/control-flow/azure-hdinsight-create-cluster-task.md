@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpcreatecltask.f1
 - sql11.dts.designer.afpcreatecltask.f1
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2e0d73034bc131b0cc65d475f00efd4f54612b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028630"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433922"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tarea de creación de clúster de HDInsight de Azure
 La **tarea de creación de clúster de Azure HDInsight** permite que un paquete SSIS cree un clúster de Azure HDInsight en la suscripción de Azure y el grupo de recursos especificados.
@@ -39,8 +38,8 @@ En la tabla siguiente se proporciona una descripción de los campos de este cuad
 |SubscriptionId|Especifique el identificador de la suscripción en la que se creará el clúster de HDInsight.|
 |ResourceGroup|Especifique el grupo de recursos de Azure en el que se creará el clúster de HDInsight.|
 |Location|Especifique la ubicación del clúster de HDInsight. El clúster debe crearse en la misma ubicación que la cuenta de Azure Storage especificada.|  
-|nombreDeClúster|Especifique un nombre para el clúster de HDInsight que se va a crear.|  
-|ClusterSize|Especifique el número de nodos que quiere crear en el clúster.|  
+|ClusterName|Especifique un nombre para el clúster de HDInsight que se va a crear.|  
+|clusterSize|Especifique el número de nodos que quiere crear en el clúster.|  
 |BlobContainer|Especifique el nombre del contenedor de almacenamiento predeterminado que quiere asociar con el clúster de HDInsight.|  
 |UserName|Especifique el nombre de usuario que se usará para conectarse al clúster de HDInsight.|  
 |Contraseña|Especifique la contraseña que se usará para conectarse al clúster de HDInsight.|

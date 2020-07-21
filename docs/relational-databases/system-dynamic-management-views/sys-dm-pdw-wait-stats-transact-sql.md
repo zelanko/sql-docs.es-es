@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_wait_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_pdw_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,30 +12,30 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28fb7ffe37631fc7f77333683f6bda4ccf1ddedf
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088720"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197038"
 ---
-# <a name="sysdmpdwwaitstats-transact-sql"></a>sys.dm_pdw_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_wait_stats-transact-sql"></a>Sys. dm_pdw_wait_stats (Transact-SQL)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene información relacionada con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estado del sistema operativo relacionados con instancias que se ejecutan en distintos nodos. Para obtener una lista de tipos de esperas y su descripción, consulte [sys.dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
+  Contiene información relacionada con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Estado del sistema operativo relacionado con las instancias que se ejecutan en los distintos nodos. Para obtener una lista de los tipos de esperas y su descripción, vea [Sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx).  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|**pdw_node_id**|**int**|Identificador del nodo que hace referencia esta entrada.||  
+|**pdw_node_id**|**int**|IDENTIFICADOR del nodo al que hace referencia esta entrada.||  
 |**wait_name**|**nvarchar(255)**|Nombre del tipo de espera.||  
 |**max_wait_time**|**bigint**|Tiempo de espera máximo de este tipo de espera.||  
-|**request_count**|**bigint**|Número de esperas de este espera tipo pendiente.||  
+|**request_count**|**bigint**|Número de esperas pendientes de este tipo de espera.||  
 |**signal_time**|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.||  
-|**completed_count**|**bigint**|Número total de esperas de este tipo completado desde el último servidor se reinicie.||  
+|**completed_count**|**bigint**|Número total de esperas de este tipo completadas desde el último reinicio del servidor.||  
 |**wait_time**|**bigint**|Tiempo de espera total para este tipo de espera en millisecons. Inclusivo de signal_time.||  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Sys. dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   
   

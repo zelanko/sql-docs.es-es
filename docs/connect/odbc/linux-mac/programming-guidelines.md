@@ -1,47 +1,48 @@
 ---
-title: Instrucciones de programación (ODBC Driver para SQL Server) | Microsoft Docs
+title: Instrucciones de programación (controlador ODBC)
+description: Las características de programación de Microsoft ODBC Driver for SQL Server en macOS y Linux se basan en ODBC en SQL Server Native Client (ODBC).
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
-ms.author: genemi
-ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
-ms.translationtype: MTE75
+ms.author: v-daenge
+ms.openlocfilehash: 8843bf303f20a7d8aa0baac5be3d9da4e7c54e01
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742787"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886372"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Las características de programación de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en macOS y Linux se basan en ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se basa en ODBC de los Componentes de Windows Data Access ([Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+Las características de programación de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en macOS y Linux se basan en ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se basa en ODBC de los Componentes de Windows Data Access ([Referencia del programador de ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)).  
 
 Una aplicación de ODBC puede utilizar conjuntos de resultados activos múltiples (MARS) y otras [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]características específicas incluyendo `/usr/local/include/msodbcsql.h` después de agregar los encabezados de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h` y `sqlucode.h`). Luego use los mismos nombres simbólicos para los elementos específicos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usaría en las aplicaciones de ODBC para Windows.
 
 ## <a name="available-features"></a>Características disponibles  
-Las siguientes secciones de la documentación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para ODBC ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)) son válidas cuando se usa el controlador ODBC en macOS y Linux:  
+Las siguientes secciones de la documentación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para ODBC ([SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)) son válidas cuando se usa el controlador ODBC en macOS y Linux:  
 
--   [Comunicar con SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
+-   [Comunicar con SQL Server (ODBC)](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
 -   [Compatibilidad con el tiempo de espera de la conexión y consulta](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Cursores](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Mejoras en los tipos de datos de fecha y hora (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
--   [Ejecutar consultas (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
+-   [Mejoras en los tipos de datos de fecha y hora (ODBC)](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Ejecutar consultas (ODBC)](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
 -   [Controlar errores y mensajes](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Autenticación Kerberos](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
--   [Tipos CLR grandes definidos por el usuario (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
--   [Realización de transacciones (ODBC) (excepto las transacciones distribuidas)](https://msdn.microsoft.com/library/ms131706.aspx)  
--   [Procesar resultados (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Tipos CLR grandes definidos por el usuario (ODBC)](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Realización de transacciones (ODBC) (excepto las transacciones distribuidas)](../../../relational-databases/native-client/odbc/performing-transactions-in-odbc.md)  
+-   [Procesar resultados (ODBC)](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
 -   [Ejecutar procedimientos almacenados](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
--   [Compatibilidad con columnas dispersas (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [Cifrado SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
--   [Parámetros con valores de tabla](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
--   [UTF-8 y UTF-16 para la API de datos y comandos](https://msdn.microsoft.com/library/ff878241.aspx)
+-   [Compatibilidad con columnas dispersas (ODBC)](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)
+-   [Utilizar el cifrado sin validación](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Parámetros con valores de tabla](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)
+-   [UTF-8 y UTF-16 para la API de datos y comandos](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)
 -   [Utilizar funciones de catálogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
 
 ## <a name="unsupported-features"></a>Características no admitidas
@@ -49,23 +50,23 @@ Las siguientes secciones de la documentación de [!INCLUDE[ssNoVersion](../../..
 Las siguientes características no se han verificado para funcionar correctamente con esta versión del controlador ODBC en macOS y Linux:
 
 -   Conexión de clúster de conmutación por error
--   [Resolución de IP de red transparente](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (antes, versión 17 del controlador ODBC)
--   [Seguimiento de controlador avanzado](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
+-   [Resolución de IP de red transparente](../using-transparent-network-ip-resolution.md) (antes, versión 17 del controlador ODBC)
+-   [Seguimiento de controlador avanzado](/archive/blogs/mattn/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers)
 
 Las siguientes características no están disponibles en esta versión del controlador ODBC en macOS y Linux: 
 
 -   Transacciones distribuidas (no se admite el atributo SQL_ATTR_ENLIST_IN_DTC)  
 -   Creación de reflejo de la base de datos  
 -   FILESTREAM  
--   Generación de perfiles de rendimiento del controlador ODBC, que se describe en [SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=234099), y los siguientes atributos de conexión relacionados con el rendimiento:  
+-   Generación de perfiles de rendimiento del controlador ODBC, que se describe en [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), y los siguientes atributos de conexión relacionados con el rendimiento:  
     -   SQL_COPT_SS_PERF_DATA  
     -   SQL_COPT_SS_PERF_DATA_LOG  
     -   SQL_COPT_SS_PERF_DATA_LOG_NOW  
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect (antes de la versión 17,2)
--   Los tipos de intervalo de C como SQL_C_INTERVAL_YEAR_TO_MONTH (se trata en [Identificadores y descriptores de tipo de datos](https://msdn.microsoft.com/library/ms716351(VS.85).aspx))
+-   SQLBrowseConnect (antes de la versión 17.2)
+-   Los tipos de intervalo de C como SQL_C_INTERVAL_YEAR_TO_MONTH (se trata en [Identificadores y descriptores de tipo de datos](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md))
 -   El valor SQL_CUR_USE_ODBC del atributo SQL_ATTR_ODBC_CURSORS de la función SQLSetConnectAttr.
 
 ## <a name="character-set-support"></a>Compatibilidad con juegos de caracteres
@@ -73,6 +74,11 @@ Las siguientes características no están disponibles en esta versión del contr
 Para la versión 13 y 13.1 del controlador ODBC, los datos de SQLCHAR deben ser UTF-8. No se admite ninguna otra codificación.
 
 Para la versión 17 del controlador ODBC, se admiten datos de SQLCHAR en una de las siguientes codificaciones o conjuntos de caracteres:
+
+> [!NOTE]  
+> Debido a diferencias de `iconv` en `musl` y `glibc`, no se admiten muchas de estas configuraciones regionales en Alpine Linux.
+>
+> Para más información, consulte el artículo sobre las [diferencias funcionales de glibc](https://wiki.musl-libc.org/functional-differences-from-glibc.html).
 
 |Nombre|Descripción|
 |-|-|
@@ -85,7 +91,7 @@ Para la versión 17 del controlador ODBC, se admiten datos de SQLCHAR en una de
 |CP949|Coreano, EUC-KR|
 |CP950|Chino tradicional, Big5|
 |CP1251|Cirílico|
-|CP1253|Greek|
+|CP1253|Griego|
 |CP1256|Árabe|
 |CP1257|Báltico|
 |CP1258|Vietnamita|
@@ -103,7 +109,7 @@ Para la versión 17 del controlador ODBC, se admiten datos de SQLCHAR en una de
 
 Al establecer la conexión, el controlador detecta la configuración regional actual del proceso en el que se carga. Si utiliza una de las codificaciones anteriores, el controlador utiliza esa codificación para los datos de SQLCHAR (caracteres estrechos). En caso contrario, el valor predeterminado es UTF-8. Dado que todos los procesos empiezan de forma predeterminada en la configuración regional "C" (y esto hace que el valor predeterminado del controlador sea UTF-8), si una aplicación necesita utilizar una de las codificaciones anteriores, debe usar la función **setlocale** para establecer la configuración regional adecuadamente antes de conectarse, ya sea especificando la configuración regional deseada de forma explícita o mediante una cadena vacía, como `setlocale(LC_ALL, "")`, para usar la configuración regional del entorno.
 
-Por lo tanto, en un entorno típico de Linux o Mac, donde la codificación es UTF-8, los usuarios de la versión 17 del controlador ODBC que actualizan desde la versión 13 o 13.1 no observarán ninguna diferencia. Sin embargo, las aplicaciones que usan una codificación que no es UTF-8 en la lista anterior a través de `setlocale()` deben usar esa codificación para los datos hacia y desde el controlador en lugar de UTF-8.
+Por lo tanto, en un entorno típico de Linux o macOS, donde la codificación es UTF-8, los usuarios de la versión 17 del controlador ODBC que actualizan desde la versión 13 o 13.1 no observarán ninguna diferencia. Sin embargo, las aplicaciones que usan una codificación que no es UTF-8 en la lista anterior a través de `setlocale()` deben usar esa codificación para los datos hacia y desde el controlador en lugar de UTF-8.
 
 Los datos de SQLWCHAR deben tener la codificación UTF-16LE (Little Endian).
 
@@ -117,15 +123,18 @@ Hay algunas diferencias de conversión de codificación entre Windows y varias v
 
 En ODBC Driver 13 y 13.1, cuando los caracteres multibyte UTF-8 o UTF-16 suplentes se dividen en búferes de SQLPutData, se producen daños en los datos. Los búferes se utilizan para transmitir datos de SQLPutData sin codificaciones de caracteres parciales. Esta limitación se ha quitado con la versión 17 del controlador ODBC.
 
-## <a name="bkmk-openssl"></a>OpenSSL
-A partir de la versión 17,4, el controlador carga el OpenSSL dinámicamente, lo que permite que se ejecute en sistemas que tienen la versión 1,0 o 1,1 sin necesidad de archivos de controlador independientes. Cuando hay varias versiones de OpenSSL presentes, el controlador intentará cargar la más reciente. El controlador admite actualmente OpenSSL 1.0. x y 1.1. x
+## <a name="openssl"></a><a name="bkmk-openssl"></a>OpenSSL
+A partir de la versión 17.4, el controlador carga OpenSSL de manera dinámica, lo que permite que se ejecute en sistemas que tienen la versión 1.0 o 1.1 sin necesidad de archivos de controlador independientes. Cuando hay varias versiones de OpenSSL presentes, el controlador intentará cargar la más reciente. El controlador admite actualmente OpenSSL 1.0.x y 1.1.x.
 
 > [!NOTE]  
-> Puede producirse un posible conflicto si la aplicación que usa el controlador (o uno de sus componentes) está vinculada a una versión diferente de OpenSSL o la carga dinámicamente. Si hay varias versiones de OpenSSL presentes en el sistema y la aplicación la utiliza, se recomienda encarecidamente que se asegure de que la versión cargada por la aplicación y el controlador no coinciden, ya que los errores podrían dañar la memoria y, por tanto, no incluirá necesariamente manifiestos de maneras obvias o coherentes.
+> Puede producirse un posible conflicto si la aplicación que usa el controlador (o uno de sus componentes) está vinculada a una versión diferente de OpenSSL o si la carga de manera dinámica. Si hay varias versiones de OpenSSL presentes en el sistema y la aplicación las utiliza, se recomienda encarecidamente que se asegure de que no haya un error de coincidencia entre la versión cargada por la aplicación y el controlador, ya que los errores podrían dañar la memoria y, por tanto, no incluirá necesariamente manifiestos de maneras obvias o coherentes.
+
+## <a name="alpine-linux"></a><a name="bkmk-alpine"></a>Alpine Linux
+En el momento de redactar este documento, el tamaño predeterminado de la pila en MUSL es 128 K, que es suficiente para la funcionalidad básica del controlador ODBC, pero en función de lo que hace la aplicación no es difícil superar este límite, especialmente cuando se llama al controlador desde varios subprocesos. Se recomienda compilar una aplicación ODBC en Alpine Linux con `-Wl,-z,stack-size=<VALUE IN BYTES>` para aumentar el tamaño de la pila. Como referencia, el tamaño predeterminado de la pila en la mayoría de los sistemas GLIBC es de 2 MB.
 
 ## <a name="additional-notes"></a>Notas adicionales  
 
-1.  Puede realizar una conexión de administrador dedicada (DAC) con la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y **host,port**. Un miembro de la función Sysadmin debe detectar primero el puerto DAC. Para descubrir cómo, consulte [Conexión de diagnóstico para administradores de bases de datos](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators#dac-port). Por ejemplo, si el puerto DAC fuera 33000, podría conectarse a él con `sqlcmd` de la siguiente forma:  
+1.  Puede realizar una conexión de administrador dedicada (DAC) con la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y **host,port**. Un miembro de la función Sysadmin debe detectar primero el puerto DAC. Para descubrir cómo, consulte [Conexión de diagnóstico para administradores de bases de datos](../../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md#dac-port). Por ejemplo, si el puerto DAC fuera 33000, podría conectarse a él con `sqlcmd` de la siguiente forma:  
 
     ```
     sqlcmd -U <user> -P <pwd> -S <host>,33000
@@ -136,11 +145,11 @@ A partir de la versión 17,4, el controlador carga el OpenSSL dinámicamente, lo
     
 2.  El Administrador de controladores unixODBC devuelve el mensaje "Identificador de opción o atributo no válido" en todos los atributos de instrucción cuando se transmiten a través de SQLSetConnectAttr. En Windows, cuando SQLSetConnectAttr recibe un valor de atributo de instrucción, el controlador tiene que establecer ese valor en todas las instrucciones activas que pertenecen al identificador de conexión.  
 
-3.  Al usar el controlador con aplicaciones multiproceso, la validación del identificador de unixODBC puede convertirse en un cuello de botella de rendimiento. En estos escenarios, se puede obtener significativamente más rendimiento compilando unixODBC con `--enable-fastvalidate` la opción. Sin embargo, tenga cuidado de que esto puede hacer que las aplicaciones que pasan identificadores no válidos a las `SQL_INVALID_HANDLE` API de ODBC se bloqueen en lugar de devolver errores.
+3.  Al usar el controlador con aplicaciones multiproceso, la validación del identificador de unixODBC puede convertirse en un cuello de botella de rendimiento. En estos escenarios, se puede obtener significativamente más rendimiento compilando unixODBC con la opción `--enable-fastvalidate`. Sin embargo, tenga cuidado de que esto puede hacer que las aplicaciones que pasan identificadores no válidos a las API de ODBC se bloqueen en lugar de devolver errores de `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Consulte también  
-[Preguntas más frecuentes](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Preguntas más frecuentes](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Problemas conocidos en esta versión del controlador](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Problemas conocidos en esta versión del controlador](known-issues-in-this-version-of-the-driver.md)
 
-[Notas de la versión](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de la versión](release-notes-odbc-sql-server-linux-mac.md)

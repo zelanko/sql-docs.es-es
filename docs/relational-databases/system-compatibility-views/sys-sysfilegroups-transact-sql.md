@@ -1,5 +1,5 @@
 ---
-title: Sys.sysfilegroups (Transact-SQL) | Microsoft Docs
+title: Grupos de archivos sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 832521da1d7d23ed4b91c5d9c451c3ceb3b1e5b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053485"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897122"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada grupo de archivos de una base de datos. Esta tabla contiene al menos la entrada correspondiente al grupo de archivos principal.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**groupid**|**smallint**|Número de identificación de grupo, único en cada base de datos.|  
-|**allocpolicy**|**smallint**|Reservado|  
+|**GROUPID**|**smallint**|Número de identificación de grupo, único en cada base de datos.|  
+|**allocpolicy**|**smallint**|Reservada|  
 |**status**|**int**|0x8 = Solo lectura<br /><br /> 0x10 = Predeterminado|  
-|**groupname**|**sysname**|Nombre del grupo de archivos.|  
+|**GroupName**|**sysname**|Nombre del grupo de archivos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

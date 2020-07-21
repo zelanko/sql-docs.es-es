@@ -1,5 +1,5 @@
 ---
-title: (Controlador ODBC de Visual FoxPro) de compatibilidad con subprocesos | Microsoft Docs
+title: Compatibilidad con subprocesos (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], thread support
 - multithreaded applications [ODBC]
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72672cfc20b5d363229fd1ba49278d11e6d6793d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912416"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303086"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Compatibilidad con subprocesos (el controlador ODBC de Visual FoxPro)
-El controlador ODBC de Visual FoxPro es segura para subprocesos. Acceso a los identificadores de entorno (*hen*), identificadores de conexión (*hdbc*) y los identificadores de instrucciones (*hstmt*) se ajusta en semáforos adecuados para evitar que otros procesos obtengan acceso y posiblemente modificar estructuras de datos internas del controlador.  
+El controlador ODBC de Visual FoxPro es seguro para subprocesos. El acceso a los identificadores de entorno (*gallina*), los identificadores de conexión (*hdbc*) y los identificadores de instrucción (*hstmt*) se encapsula en los semáforos adecuados para evitar que otros procesos obtengan acceso a las estructuras de datos internas del controlador y puedan alterarlas.  
   
- En una aplicación multiproceso, puede cancelar una función que se está ejecutando de forma sincrónica en un *hstmt* mediante una llamada a [SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) en un subproceso independiente.  
+ En una aplicación multiproceso, puede cancelar una función que se ejecuta de forma sincrónica en un *hstmt* llamando a [SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md) en un subproceso independiente.  
   
- El controlador utiliza un subproceso independiente para capturar los datos cuando se usa capturando progresiva. Para utilizar la obtención de progresiva para un origen de datos, seleccione el **capturar los datos en segundo plano** casilla de verificación en la [cuadro de diálogo del programa de instalación de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) o usar la palabra clave de atributo BackgroundFetch en la conexión cadena. Evite el uso de captura en segundo plano cuando se llama el controlador de aplicaciones multiproceso. Para obtener información sobre palabras clave de atributo de cadena de conexión, vea [utilizando las cadenas de conexión](../../odbc/microsoft/using-connection-strings.md).  
+ El controlador usa un subproceso independiente para capturar datos cuando se usa la captura progresiva. Para usar la captura progresiva para un origen de datos, active la casilla **capturar datos en segundo plano** en el [cuadro de diálogo Configuración de ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) o use la palabra clave del atributo BackgroundFetch en la cadena de conexión. Evite el uso de la captura en segundo plano cuando llame al controlador desde aplicaciones multiproceso. Para obtener información sobre las palabras clave de atributo de cadena de conexión, vea [usar cadenas de conexión](../../odbc/microsoft/using-connection-strings.md).  
   
- Para obtener más información sobre los subprocesos y **SQLCancel**, consulte [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información sobre los subprocesos y **SQLCancel**, vea [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) en la *Referencia del programador de ODBC*.

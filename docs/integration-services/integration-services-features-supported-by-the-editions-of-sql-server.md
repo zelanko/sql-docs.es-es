@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71284356"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817788"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Características de Integration Services compatibles con las ediciones de SQL Server
 
@@ -35,27 +35,31 @@ Para consultar las notas de la versión más reciente e información sobre las n
 
 La edición de evaluación de SQL Server está disponible durante un período de prueba de 180 días.  
     
-> [![Descargar desde el centro de evaluación](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Descargar SQL Server 2016 desde el centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Descargar desde el Centro de evaluación](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Descargar SQL Server 2016 desde el Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> Nuevas características de Integration Services en SQL Server 2017
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> Nuevas características de Integration Services en SQL Server 2017
   
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Patrón de escalabilidad horizontal|Sí|||||
 |Trabajo de escalabilidad horizontal|Sí|Sí <sup>1</sup>|TBD|TBD|TBD|
 |Compatibilidad con Microsoft Dynamics AX y Microsoft Dynamics CRM en componentes de OData <sup>2</sup>|Sí|Sí||||
+|Compatibilidad de Linux|Sí|Sí|||Sí|
 
 <sup>1</sup> Si ejecuta paquetes que solo requieren características de la versión Enterprise en la escalabilidad horizontal, los trabajos de escalabilidad horizontal también deben ejecutarse en instancias de SQL Server Enterprise.
 
 <sup>2</sup> Esta característica también se admite en SQL Server 2016 con Service Pack 1.
 
-## <a name="IEWiz"></a> Asistente para importación y exportación de SQL Server
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> Asistente para importación y exportación de SQL Server
 
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Asistente para importación y exportación de SQL Server|Sí|Sí|Sí|Sí|Sí|  
+|Asistente para importación y exportación de SQL Server|Sí|Sí|Sí|Sí<sup>1</sup>|Sí<sup>1</sup>|
 
-## <a name="IS"></a> Integration Services  
+<sup>1</sup> DTSWizard.exe no se proporciona con SQL en Linux. Pero se puede usar dtexec en Linux para ejecutar un paquete creado por DTSWizard en Windows.
+
+
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +70,7 @@ La edición de evaluación de SQL Server está disponible durante un período de
 |Conectores y tareas de Hadoop/HDFS|Sí|Sí||||  
 |Herramientas de generación de perfiles de datos básicos|Sí|Sí|||| 
 
-## <a name="ISAA"></a> Integration Services: orígenes y destinos avanzados  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services: orígenes y destinos avanzados  
   
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +81,7 @@ La edición de evaluación de SQL Server está disponible durante un período de
 |Destino de procesamiento de dimensiones|Sí|||||  
 |Destino de procesamiento de particiones|Sí|||||  
   
-## <a name="ISAT"></a> Integration Services: transformaciones y tareas avanzadas  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services: transformaciones y tareas avanzadas  
   
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10ebbcdfb136126911b95c0148a2c8671584170b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010339"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visor de conflictos de replicación de Microsoft y Solucionador interactivo
   Esta sección incluye información sobre el Visor de conflictos de replicación para replicación de mezcla y replicación transaccional, e información sobre el Solucionador interactivo para la replicación de mezcla:  
@@ -31,8 +30,8 @@ ms.locfileid: "63250337"
   
 -   [Definir filtros](define-filters.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ver y resolver conflictos de datos para publicaciones de combinación &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Ver conflictos de datos para publicaciones transaccionales &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [Detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Detección de conflictos en la replicación punto a punto](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   

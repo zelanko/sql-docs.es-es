@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -16,44 +16,44 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898760"
 ---
-# <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por cada módulo cargado en el espacio de direcciones del servidor.  
   
 > [!NOTE]  
->  Al llamarlo desde [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_loaded_modules**.  
+>  Para llamarlo desde [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilice el nombre **sys. dm_pdw_nodes_os_loaded_modules**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**base_address**|**varbinary(8)**|Dirección del módulo en proceso.|  
-|**file_version**|**varchar(23)**|Versión del archivo. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
-|**product_version**|**varchar(23)**|Versión del producto. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
-|**debug**|**bit**|1 = El módulo es una versión de depuración del módulo cargado.|  
+|**base_address**|**varbinary(8**|Dirección del módulo en proceso.|  
+|**file_version**|**VARCHAR (23)**|Versión del archivo. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
+|**product_version**|**VARCHAR (23)**|Versión del producto. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
+|**depura**|**bit**|1 = El módulo es una versión de depuración del módulo cargado.|  
 |**patched**|**bit**|1 = El módulo se ha revisado.|  
-|**prerelease**|**bit**|1 = El módulo es una versión preliminar del módulo cargado.|  
+|**versión preliminar**|**bit**|1 = El módulo es una versión preliminar del módulo cargado.|  
 |**private_build**|**bit**|1 = El módulo es una versión privada del módulo cargado.|  
 |**special_build**|**bit**|1 = El módulo es una versión especial del módulo cargado.|  
 |**language**|**int**|Información del idioma de la versión del módulo.|  
-|**company**|**nvarchar(256)**|Nombre de la compañía que ha creado el módulo.|  
+|**recíproca**|**nvarchar(256)**|Nombre de la compañía que ha creado el módulo.|  
 |**description**|**nvarchar(256)**|Descripción del módulo.|  
 |**name**|**nvarchar(255)**|Nombre del módulo. Incluye la ruta de acceso completa del módulo.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

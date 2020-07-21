@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 49ab892f-8ba3-4ba1-b562-ddf205019802
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8d39e007653bfdccd68ad9b5a2705b629d1e9979
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f48ea225a3db0109d9dc1d745a5bb667b1f509ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723790"
 ---
-# <a name="mssqlserver2596"></a>MSSQLSERVER_2596
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_2596"></a>MSSQLSERVER_2596
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2596|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2596|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_DATABASE_IN_READ_ONLY_MODE|  
 |Texto del mensaje|Instrucción de reparación no procesada. La base de datos no puede estar en modo de solo lectura.|  

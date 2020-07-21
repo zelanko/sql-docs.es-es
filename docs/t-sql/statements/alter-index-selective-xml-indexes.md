@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6f6005e3e2b6966a4bc9e457b1ee552ea017f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85761873"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (índices XML selectivos)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica un índice XML selectivo existente. La instrucción ALTER INDEX cambia uno o varios de los elementos siguientes:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68071365"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -109,7 +109,7 @@ identifier
 )  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  *index_name*  
  Es el nombre del índice existente que se va a modificar.  
   
@@ -137,7 +137,7 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  Solo se puede especificar \<index_options> cuando se usa ALTER INDEX sin la cláusula FOR. Cuando se usa ALTER INDEX para agregar o quitar rutas de acceso del índice, las opciones de índice no son argumentos válidos. Para saber más sobre las opciones de índice, vea [CREATE XML INDEX &#40;índices XML selectivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Al ejecutar una instrucción ALTER INDEX, siempre se vuelve a generar el índice XML selectivo. Debe tener en cuenta el impacto de este proceso sobre los recursos de servidor.  

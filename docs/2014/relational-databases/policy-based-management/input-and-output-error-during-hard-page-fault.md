@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d67d036987fe92275b4cf524c15c1ebe083001b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a70c72647ad1b348a8f9c1fb6980626b5f1b178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063822"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>Input and Output Error During Hard Page Fault
   Esta regla comprueba si el identificador EventId 51 se encuentra en el registro de eventos del sistema. Este error se debe a otro error de página en disco.  

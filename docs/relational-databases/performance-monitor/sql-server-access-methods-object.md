@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787405"
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la forma en que se obtiene acceso a los datos lógicos de una base de datos. El acceso físico a las páginas de base de datos en disco se supervisa mediante los contadores de **Buffer Manager** . La supervisión de los métodos que se utilizan para el acceso a los datos almacenados en la base de datos puede ayudar a determinar si se puede mejorar el rendimiento de las consultas al agregar o modificar índices, agregar o mover particiones, agregar archivos o grupos de archivos, desfragmentar índices o volver a escribir las consultas. Los contadores de **Access Methods** también se pueden utilizar para supervisar la cantidad de datos, los índices y el espacio disponible en la base de datos, con lo que se indica el volumen de datos y la fragmentación para cada instancia de servidor. Una fragmentación excesiva de los índices puede tener un efecto negativo sobre el rendimiento.  
   
  Para obtener información detallada acerca del volumen de datos, la fragmentación y el uso, utilice las siguientes vistas de administración dinámica:  
@@ -42,7 +42,7 @@ ms.locfileid: "67987365"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** .  
+ En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access Methods**de**.  
   
 |Contadores de Access Methods de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987365"
 |**Cookie de página de árbol utilizada**|Número de veces que una cookie de página de árbol se utiliza con éxito durante una búsqueda de índices porque no se produjo ningún cambio en la página primaria de la página de árbol. La cookie se utiliza para acelerar la búsqueda de índices.|  
 |**Archivos de trabajo creados/seg.**|Número de archivos de trabajo creados por segundo. Por ejemplo, los archivos de trabajo se pueden utilizar para almacenar los resultados temporales de las combinaciones hash y agregados hash.|  
 |**Tablas de trabajo creadas/seg.**|Número de tablas de trabajo creadas por segundo. Por ejemplo, las tablas de trabajo se pueden utilizar para almacenar los resultados temporales de una cola de consultas, variables lob, variables XML y cursores.|  
-|**Base de tablas de trabajo desde caché**|Exclusivamente para uso interno.|  
+|**Base de tablas de trabajo desde caché**|Solo para uso interno.|  
 |**Relación de tablas de trabajo desde caché**|Porcentaje de tablas de trabajo creadas donde las dos páginas iniciales de la tabla de trabajo no fueron asignadas pero estaban inmediatamente disponibles desde la caché de la tabla de trabajo. (Cuando se elimina una tabla de trabajo, dos páginas pueden permanecer asignadas y se devuelven a la caché de la tabla de trabajo. Esto aumenta el rendimiento.)|  
   
 ## <a name="see-also"></a>Consulte también  

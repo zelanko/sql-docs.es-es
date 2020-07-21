@@ -1,5 +1,5 @@
 ---
-title: Editor de destinos de ADO NET (página salida de Error) | Microsoft Docs
+title: Editor de destinos de ADO NET (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b294149fad7f26d7dceb62bdc289116e3f9098b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061770"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439602"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor de destinos de ADO NET (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de destinos de ADO NET** para especificar las opciones de control de errores.  
@@ -56,7 +55,7 @@ ms.locfileid: "66061770"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de destinos de ADO NET &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
  [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   

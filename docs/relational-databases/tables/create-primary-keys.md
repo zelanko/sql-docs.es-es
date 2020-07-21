@@ -13,36 +13,36 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24c45f661afff669e64dae6c800d19a57635aebe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123724"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002185"
 ---
 # <a name="create-primary-keys"></a>Crear claves principales
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Puede definir una clave principal en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al crear una clave principal, se crea automáticamente un índice agrupado único o bien un índice no agrupado si así se especifica.
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar
 
-### <a name="Restrictions"></a> Limitaciones y restricciones
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones
 
 - Una tabla solo puede incluir una restricción PRIMARY KEY.
 
 - Todas las columnas definidas en una restricción PRIMARY KEY se deben definir como NOT NULL. Si no se especifica nulabilidad, la nulabilidad de todas las columnas que participan en una restricción PRIMARY KEY se establece en NOT NULL.
 
-### <a name="Security"></a> Seguridad
+### <a name="security"></a><a name="Security"></a> Seguridad
 
-#### <a name="Permissions"></a> Permisos
+#### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 La creación de una tabla nueva con una clave principal requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla.
 
 La creación de una clave principal de una tabla existente requiere el permiso ALTER en la tabla.
 
-## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
 
 ### <a name="to-create-a-primary-key"></a>Para crear una clave principal
 
@@ -59,7 +59,7 @@ Si una clave principal consta de más de una columna, se admitirán valores dupl
 
 Si define una clave compuesta, el orden de las columnas de la clave principal coincide con el de las columnas mostradas en la tabla. Sin embargo, puede cambiar el orden de las columnas después de crear la clave principal. Para obtener más información, vea [Modificar claves principales](../../relational-databases/tables/modify-primary-keys.md).
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
 
 ### <a name="to-create-a-primary-key-in-an-existing-table"></a>Para crear una clave principal en una tabla existente
 
@@ -83,7 +83,7 @@ CREATE TABLE Production.TransactionHistoryArchive1
 ;
 ```
 
-### <a name="to-create-a-primary-key-with-nonclustered-index-in-a-new-table"></a>Crear una clave principal con un índice no agrupado en una tabla nueva
+### <a name="to-create-a-primary-key-with-clustered-index-in-a-new-table"></a>Para crear una clave principal con un índice agrupado en una tabla nueva
 
 En el ejemplo siguiente se crea una tabla y se define una clave principal en la columna `CustomerID` y un índice agrupado en `TransactionID` en la base de datos de AdventureWorks.
 

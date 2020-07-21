@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ba4b2f081047f25fa775e0c8754caa4ce643e70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011167"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004168"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Administrar y supervisar la búsqueda de texto completo para una instancia de servidor
   La administración de texto completo de una instancia del servidor incluye:  
@@ -29,7 +28,7 @@ ms.locfileid: "66011167"
   
 -   Configurar una base de datos de usuario para la búsqueda de texto completo. Esto implica crear uno o más catálogos de texto completo para la base de datos y definir un índice de texto completo en cada tabla o vista indizada en la que desee ejecutar las consultas de texto completo.  
   
-##  <a name="props"></a> Ver o cambiar las propiedades del servidor para la búsqueda de texto completo  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Ver o cambiar las propiedades del servidor para la búsqueda de texto completo  
  Puede ver las propiedades de texto completo de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Para ver y cambiar las propiedades del servidor para la búsqueda de texto completo  
@@ -56,29 +55,29 @@ ms.locfileid: "66011167"
   
          Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
-         **Volver a generar**  
+         **Recompilación**  
          Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. La regeneración de los índices puede llevar cierto tiempo y, después de la actualización, podría ser necesaria una cantidad significativa de CPU y de memoria.  
   
-         **Restablecer**  
+         **Reset**  
          Los catálogos de texto completo se restablecen. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Los archivos de catálogo de texto completo se quitan, pero los metadatos de los catálogos de texto completo y los índices de texto completo se conservan. Después de actualizarse, todos los índices de texto completo quedan deshabilitados para el seguimiento de cambios y los rastreos no se inician de forma automática. El catálogo permanecerá vacío hasta que se emita manualmente un rellenado completo después de que se complete la actualización.  
   
-         Para obtener información acerca de cómo elegir una opción de actualización de texto completo, vea [actualizar la búsqueda de texto completo](upgrade-full-text-search.md).  
+         Para obtener información sobre cómo elegir una opción de actualización de texto completo, vea [actualizar la búsqueda de texto completo](upgrade-full-text-search.md).  
   
         > [!NOTE]  
         >  La opción de actualización de texto completo también se puede establecer mediante la acción [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** .  
   
-##  <a name="metadata"></a> Ver propiedades de servidor de texto completo adicionales  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Ver propiedades de servidor de texto completo adicionales  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Las funciones se pueden usar para obtener el valor de varias propiedades de búsqueda de texto completo de nivel de servidor. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la tabla siguiente se enumeran las propiedades de texto completo de una instancia de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus funciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] relacionadas.  
   
-|Property|Descripción|Función|  
+|Propiedad|Descripción|Función|  
 |--------------|-----------------|--------------|  
 |`IsFullTextInstalled`|Si el componente de texto completo se instala con la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[FULLTEXTSERVICEPROPERTY](/sql/t-sql/functions/fulltextserviceproperty-transact-sql)<br /><br /> [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql)|  
 |`LoadOSResources`|Si los separadores de palabras y filtros del sistema operativo se registran y utilizan con esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |`VerifySignature`|Especifica si el motor de texto completo carga únicamente datos binarios firmados.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Supervisar la actividad de búsqueda de texto completo  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Supervisar la actividad de búsqueda de texto completo  
  Para supervisar la actividad de búsqueda de texto completo en una instancia del servidor se pueden usar varias vistas y funciones de administración dinámica.  
   
  **Para ver información sobre los catálogos de texto completo con actividad de rellenado en curso**  

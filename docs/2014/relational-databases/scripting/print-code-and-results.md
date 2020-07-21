@@ -1,6 +1,6 @@
 ---
-title: Impresión de código y resultados | Microsoft Docs
-ms.custom: ''
+title: Imprimir código y resultados
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18cbed174a5be656079ef232ba70cba3599d2815
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 074641e6f3ab9900e3842787e56746ad66a33fbe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009549"
 ---
 # <a name="print-code-and-results"></a>Imprimir código y resultados
   Al imprimir una consulta o un archivo, los elementos en color se imprimen en color siempre que la impresora sea compatible con la impresión en color y ésta se haya habilitado en la configuración de la impresora.  
@@ -29,7 +28,7 @@ ms.locfileid: "66090291"
   
  Si tiene habilitados los números de línea en el editor, estos no se imprimirán a menos que se seleccione **Incluir números de línea** en el cuadro de diálogo **Imprimir** del menú **Archivo** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el color, el tamaño y el estilo de la fuente](change-font-color-size-and-style.md)  
   
   

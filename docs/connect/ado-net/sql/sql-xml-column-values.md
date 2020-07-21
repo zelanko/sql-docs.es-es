@@ -9,29 +9,29 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: d8dc9d5100f71fed39c1e4166882230451dd139e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 2704ceae26c58edc85b0cbc1f0fbe6cc98f64311
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451929"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902017"
 ---
 # <a name="sql-xml-column-values"></a>Valores de columna de SQL XML
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-SQL Server admite el tipo de datos `xml` y los desarrolladores pueden recuperar conjuntos de resultados que incluyan este tipo mediante el comportamiento estándar de la clase <xref:Microsoft.Data.SqlClient.SqlCommand>. Una columna `xml` se puede recuperar tal como se recupera cualquier columna (en un <xref:Microsoft.Data.SqlClient.SqlDataReader>, por ejemplo), pero si desea trabajar con el contenido de la columna como XML, debe usar una <xref:System.Xml.XmlReader>.  
+SQL Server admite el tipo de datos `xml` y los desarrolladores pueden recuperar conjuntos de resultados que incluyan este tipo mediante el comportamiento estándar de la clase <xref:Microsoft.Data.SqlClient.SqlCommand>. Una columna `xml` se puede recuperar tal como se recupera cualquier columna (en <xref:Microsoft.Data.SqlClient.SqlDataReader>, por ejemplo), pero si desea trabajar con el contenido de la columna como XML, debe usar <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Ejemplo  
-La siguiente aplicación de consola selecciona dos filas, cada una de las cuales contiene una columna `xml`, de la tabla **Sales.Store** de la base de datos **AdventureWorks** para una instancia <xref:Microsoft.Data.SqlClient.SqlDataReader>. Para cada fila, se lee el valor de la columna `xml` mediante el método <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> de <xref:Microsoft.Data.SqlClient.SqlDataReader>. El valor se almacena en un <xref:System.Xml.XmlReader>. Tenga en cuenta que debe usar <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> en lugar del método <xref:System.Data.IDataRecord.GetValue%2A> si desea establecer el contenido en una variable <xref:System.Data.SqlTypes.SqlXml>;  <xref:System.Data.IDataRecord.GetValue%2A> devuelve el valor de la columna `xml` como una cadena.  
+La siguiente aplicación de consola selecciona dos filas, cada una de las cuales contiene una columna `xml`, de la tabla **Sales.Store** de la base de datos **AdventureWorks** para una instancia <xref:Microsoft.Data.SqlClient.SqlDataReader>. Para cada fila, se lee el valor de la columna `xml` mediante el método <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> de <xref:Microsoft.Data.SqlClient.SqlDataReader>. El valor se almacena en <xref:System.Xml.XmlReader>. Tenga en cuenta que debe usar <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlXml%2A> en lugar del método <xref:System.Data.IDataRecord.GetValue%2A> si desea establecer el contenido en una variable <xref:System.Data.SqlTypes.SqlXml>; <xref:System.Data.IDataRecord.GetValue%2A> devuelve el valor de la columna `xml` como una cadena.  
   
 > [!NOTE]
->  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución de SQL Server programa de instalación.  
+>  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución del programa de instalación de SQL Server.  
   
-[!code-csharp[DataWorks SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
+[!code-csharp [SqlDataReader_GetSqlXml#1](~/../sqlclient/doc/samples/SqlDataReader_GetSqlXml.cs#1)]
   
 ## <a name="next-steps"></a>Pasos siguientes
 - <xref:System.Data.SqlTypes.SqlXml>

@@ -1,6 +1,6 @@
 ---
-title: Procesar XML en el lado cliente (clases administradas de SQLXML) | Microsoft Docs
-ms.custom: ''
+title: Procesar XML en el lado cliente (SQLXML)
+description: Obtenga información sobre cómo procesar XML en el lado cliente mediante la propiedad Clientsidexml, del objeto SqlXmlCommand en las clases administradas de SQLXML.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6133cbedb01dce5cb4d868e79e52e236e773f4b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2b7b8a42c4e58b6d43de9ffc48d5dbce9c3eee1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649326"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Procesar XML en el cliente (clases administradas de SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   En este ejemplo se muestra el uso de la propiedad Clientsidexml,. La aplicación ejecuta un procedimiento almacenado en el servidor. El resultado del procedimiento almacenado (un conjunto de filas de dos columnas) se procesa en el cliente para generar un documento XML.  
   
  El siguiente procedimiento almacenado GetContacts devuelve el **nombre** y el **Apellido** de los empleados de la tabla person. contact de la base de datos AdventureWorks.  
@@ -40,7 +41,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Esta C# aplicación ejecuta el procedimiento almacenado y especifica la opción for XML auto en la especificación del valor CommandText. En la aplicación, la propiedad Clientsidexml, del objeto SqlXmlCommand se establece en true. Esto le permite ejecutar procedimientos almacenados preexistentes que devuelven un conjunto de filas y aplican a este último una transformación XML en el cliente.  
+ Esta aplicación de C# ejecuta el procedimiento almacenado y especifica la opción FOR XML AUTO en la especificación del valor CommandText. En la aplicación, la propiedad Clientsidexml, del objeto SqlXmlCommand se establece en true. Esto le permite ejecutar procedimientos almacenados preexistentes que devuelven un conjunto de filas y aplican a este último una transformación XML en el cliente.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: c93c1003-0e3a-40aa-9873-44a0f5b8b57e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3a19ce1aab8df20682640262017a7e303d6f940
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62868886"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551836"
 ---
-# <a name="mssqlserver3159"></a>MSSQLSERVER_3159
+# <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|3159|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|3159|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|LDDB_LOGNOTBACKEDUP|  
 |Texto del mensaje|No se hizo copia del final del registro de la base de datos "%ls". Use BACKUP LOG WITH NORECOVERY para realizar una copia de seguridad del registro si contiene trabajo que no desea perder. Utilice la cláusula WITH REPLACE o WITH STOPAT de la instrucción RESTORE para sobrescribir el contenido del registro.|  
@@ -47,9 +46,9 @@ ms.locfileid: "62868886"
   
  Si no puede hacer una copia del final del registro después del error, utilice WITH STOPAT o WITH REPLACE en las instrucciones RESTORE.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
- [Copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
+ [Realice una copia de seguridad del registro de transacciones cuando la base de datos esté dañada &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Copias del final del registro &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   

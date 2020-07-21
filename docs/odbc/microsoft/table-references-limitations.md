@@ -1,5 +1,5 @@
 ---
-title: Tabla hace referencia a limitaciones | Microsoft Docs
+title: Limitaciones de las referencias de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, table reference limitations
 - table reference limitations [ODBC]
 ms.assetid: de674d5e-a16a-4cf1-b7e7-0222ef19a6f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 838c80fada6dbbff67ea01c38192db4c78d3c45f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 590be0bfccdda9963ca1ec9840da0f8691bd784f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939725"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303106"
 ---
 # <a name="table-references-limitations"></a>Tabla hace referencia a limitaciones
-Un máximo de 16 referencias de tabla puede incluirse en cualquier instrucción de consulta.
+En cualquier instrucción de consulta se puede incluir un máximo de 16 referencias de tabla.

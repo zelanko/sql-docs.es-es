@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b8e5371762e38cf2b3ac8c1d506b467dcfa7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063641"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Crear y probar una función clasificadora definida por el usuario
   En este tema se muestra cómo crear y probar una función clasificadora definida por el usuario (UDF). Los pasos implican ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  El ejemplo mostrado en el procedimiento siguiente ilustra las posibilidades para crear una función clasificadora definida por el usuario bastante compleja.  
   
- En nuestro ejemplo:  
+ En el ejemplo:  
   
 -   Se crean un grupo de recursos de servidor (pProductionProcessing) y un grupo de cargas de trabajo (gProductionProcessing) para el procesamiento de producción durante un intervalo de tiempo especificado.  
   
@@ -262,7 +261,7 @@ ms.locfileid: "68212005"
         > [!WARNING]  
         >  Se aconseja encarecidamente seguir estas prácticas recomendadas. Si hay problemas que impiden seguir las prácticas recomendadas, conviene ponerse en contacto con el servicio de soporte técnico de Microsoft para poder evitar de forma proactiva cualquier problema futuro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   

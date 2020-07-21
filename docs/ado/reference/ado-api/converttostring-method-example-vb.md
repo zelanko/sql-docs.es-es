@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ConvertToString method [ADO], Visual Basic example
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cd23acb0f966ec04c4a2f3e6da48d21d33fb915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 90472a43cefe87fdc255d9794f16fa32ca0aff16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933424"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762586"
 ---
 # <a name="converttostring-method-example-vb"></a>Ejemplo del método ConvertToString (VB)
 ```  
@@ -98,6 +98,6 @@ End Sub
 'EndConvertToStringVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

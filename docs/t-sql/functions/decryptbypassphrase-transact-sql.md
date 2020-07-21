@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: aaa37425d2de461cd5f7bdd1bb3ae37da53ce249
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682283"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función descifra los datos que se cifraron originalmente con una frase de contraseña.  
   
@@ -35,7 +35,7 @@ Esta función descifra los datos que se cifraron originalmente con una frase de 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  
@@ -48,17 +48,7 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 La frase de contraseña que se usa para generar la clave de descifrado.  
   
  @passphrase  
-Una variable de tipo
-
-+ **char**
-+ **nchar**
-+ **nvarchar**
-
-o Administrador de configuración de
-
-+ **varchar**
-
-que contiene la frase de contraseña que se usa para generar la clave de descifrado.  
+Variable de tipo **char**, **nchar**, **nvarchar** o **varchar** que contiene la frase de contraseña que se usa para generar la clave de descifrado.  
   
 '*ciphertext*'  
 La cadena de datos cifrados con la clave. *ciphertext* tiene un tipo de datos **varbinary**.  
@@ -78,10 +68,10 @@ Los datos que se usaron como base para la generación del autenticador. *autenti
 @authenticator  
 Una variable que contiene los datos que se usaron como base para la generación de los autenticadores. *\@authenticator* tiene un tipo de datos **sysname**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary**, con un tamaño máximo de 8 000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DECRYPTBYPASSPHRASE` no requiere permisos para su ejecución. `DECRYPTBYPASSPHRASE` devuelve NULL si se recibe la frase de contraseña o información de autenticador erróneas.  
   
 `DECRYPTBYPASSPHRASE` usa la frase de contraseña para generar una clave de descifrado. Esta clave de descifrado no se conservará.  
@@ -93,14 +83,14 @@ En este ejemplo se descifra el registro actualizado en [EncryptByPassPhrase](../
   
 ```  
 USE AdventureWorks2012;  
--- Get the pass phrase from the user.  
+-- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser nvarchar(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   
 -- Decrypt the encrypted record.  
 SELECT CardNumber, CardNumber_EncryptedbyPassphrase   
-    AS 'Encrypted card number', CONVERT(nvarchar,  
+    AS 'Encrypted card number', CONVERT(varchar,  
     DecryptByPassphrase(@PassphraseEnteredByUser, CardNumber_EncryptedbyPassphrase, 1   
     , CONVERT(varbinary, CreditCardID)))  
     AS 'Decrypted card number' FROM Sales.CreditCard   

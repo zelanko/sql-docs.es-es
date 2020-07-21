@@ -10,15 +10,14 @@ helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1137fa6847cf851a6cb56ffd8a0da10032decc7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bd4c13677b1c4b7e0a788b3459e8f658e25c2c6c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897423"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437202"
 ---
 # <a name="--negate-ssis-expression"></a>- (Negativo) (expresión de SSIS)
   Niega una expresión numérica.  
@@ -45,7 +44,7 @@ ms.locfileid: "62897423"
 -@Counter + 50  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   

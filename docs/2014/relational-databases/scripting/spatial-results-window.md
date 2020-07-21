@@ -1,21 +1,20 @@
 ---
-title: Ventana Resultados espaciales | Microsoft Docs
-ms.custom: ''
+title: Ventana Resultados espaciales
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d4a438cdaf0025397faec463f99e91a4c349d1b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048999"
 ---
 # <a name="spatial-results-window"></a>Ventana Resultados espaciales
   La ventana **Resultados espaciales** proporciona herramientas de asignación visual para ver los datos espaciales. Para ver los resultados espaciales, los resultados de la consulta deben incluir una columna espacial con datos de geometría o de geografía.  
@@ -33,7 +32,7 @@ ms.locfileid: "66063799"
  Esta opción no está disponible si solo se devuelven instancias de punto en una consulta.  
   
  **Seleccionar proyección**  
- Muestre los datos geográficos en una de las cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
+ Muestre los datos de geografía en una de estas cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
   
  Esta opción no está disponible para los datos de geometría.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66063799"
 > [!NOTE]  
 >  Las instancias de punto no se pueden etiquetar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver datos espaciales en el Explorador de objetos](view-spatial-data-in-object-explorer.md)   
  [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
  [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   

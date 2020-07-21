@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82ed0e5dd67738b705b4991b90669198495d497a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63286531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060255"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
   En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,12 +34,12 @@ ms.locfileid: "63286531"
  Los términos siguientes describen los conceptos clave de Seguimiento de SQL.  
   
  **Evento**  
- Repetición de una acción en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
+ La repetición de una acción dentro de una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] .  
   
  **Columna de datos**  
  Atributo de un evento.  
   
- **Clase de eventos**  
+ **Event (clase)**  
  Tipo de evento del que se puede realizar un seguimiento. La clase de evento contiene todas las columnas de datos que puede proporcionar un evento.  
   
  **Categoría de eventos**  
@@ -70,7 +69,7 @@ ms.locfileid: "63286531"
 ## <a name="use-data-columns-to-describe-returned-events"></a>Usar columnas de datos para describir eventos devueltos  
  Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para describir eventos devueltos cuando se ejecuta el seguimiento. En la tabla siguiente se describen las columnas de datos de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] , que son las mismas que usa Seguimiento de SQL, y se indican las columnas seleccionadas de manera predeterminada.  
   
-|Columna de datos|Número de columna|Descripción|  
+|Columna de datos|Número de columna|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, no con el nombre del programa.|  
 |**BigintData1**|52|Valor (tipo de datos `bigint`) que depende de la clase de evento especificada en el seguimiento.|  
@@ -79,7 +78,7 @@ ms.locfileid: "63286531"
 |**ClientProcessID** <sup>1</sup>|9|Id. que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|  
 |**ColumnPermissions**|44|Indica si se estableció un permiso de columna. Puede analizar el texto de la instrucción para determinar los permisos que se aplicaron a las columnas.|  
 |**CPU**|18|Cantidad de tiempo de CPU (en milisegundos) utilizada por el evento.|  
-|**Id. de base de datos** <sup>1</sup>|3|Identificador de la base de datos especificada mediante la instrucción USE *database_name* o el identificador de la base de datos predeterminada si no se emite la instrucción USE *database_name*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|  
+|**Identificador de base de datos** <sup>1</sup>|3|Identificador de la base de datos especificada mediante la instrucción USE *database_name* o el identificador de la base de datos predeterminada si no se emite la instrucción USE *database_name*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|  
 |**DatabaseName**|35|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|  
 |**DBUserName** <sup>1</sup>|40|Nombre de usuario de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del cliente.|  
 |**Duración**|13|Duración (en microsegundos) del evento.<br /><br /> El servidor informa de la duración del evento en microsegundos (una millonésima parte de un segundo o 10<sup>-6</sup>segundos) y la cantidad de tiempo de CPU que usa el evento en milisegundos (una milésima de segundo o 10<sup>-3</sup>segundos). La interfaz gráfica de usuario de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] muestra la columna **Duración** en milisegundos de manera predeterminada, pero cuando se guarda un seguimiento en un archivo o en una tabla de base de datos, el valor de la columna **Duración** se escribe en microsegundos.|  
@@ -87,7 +86,7 @@ ms.locfileid: "63286531"
 |**Error**|31|Número de error de un evento específico. A menudo, es el número de error almacenado en **sysmessages**.|  
 |**EventClass** <sup>1</sup>|27|Tipo de clase de evento capturado.|  
 |**EventSequence**|51|Número de secuencia de este evento.|  
-|**EventSubClass** <sup>1</sup>|21|Tipo de subclase de evento, que proporciona más información acerca de cada clase de evento. Por ejemplo, los valores de la subclase de evento de la clase de evento **Execution Warning** representan el tipo de advertencia de ejecución:<br /><br /> **1** = Espera de consulta. La consulta debe esperar a los recursos para poder ejecutarse; por ejemplo, la memoria.<br /><br /> **2** = Tiempo de espera de la consulta. Se ha agotado el tiempo de espera de la consulta mientras esperaba a los recursos necesarios para su ejecución. Esta columna de datos no se llena para todas las clases de evento.|  
+|**EventSubClass** <sup>1</sup>|21|Tipo de subclase de evento, que proporciona más información acerca de cada clase de evento. Por ejemplo, los valores de la subclase de evento de la clase de evento **Execution Warning** representan el tipo de advertencia de ejecución:<br /><br /> **1** = Espera de consulta. La consulta debe esperar a los recursos para poder ejecutarse; por ejemplo, la memoria.<br /><br /> **2** = tiempo de espera de la consulta. Se agotó el tiempo de espera de la consulta mientras se esperaba a que se ejecutaran los recursos necesarios. Esta columna de datos no se llena para todas las clases de evento.|  
 |**GUID**|54|Valor GUID que depende de la clase de evento especificada en el seguimiento.|  
 |**FileName**|36|Nombre lógico del archivo modificado.|  
 |**Handle**|33|Valor entero utilizado por ODBC, OLE DB o DB-Library para coordinar la ejecución del servidor.|  
@@ -108,38 +107,38 @@ ms.locfileid: "63286531"
 |**ObjectID**|22|Id. del objeto asignado por el sistema.|  
 |**ObjectID2**|56|Id. del objeto o entidad relacionado, si está disponible.|  
 |**ObjectName**|34|Nombre del objeto al que se hace referencia.|  
-|**ObjectType** <sup>2</sup>|28|Valor que representa el tipo de objeto implicado en el evento. Este valor corresponde al de la columna **type** en **sysobjects**.|  
-|**Offset**|61|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
+|**Objecttype** <sup>2</sup>|28|Valor que representa el tipo de objeto implicado en el evento. Este valor corresponde al de la columna **type** en **sysobjects**.|  
+|**Posición**|61|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
 |**OwnerID**|58|Solo para eventos de bloqueo. Tipo de objeto que posee un bloqueo.|  
 |**OwnerName**|37|Nombre de usuario de la base de datos del propietario del objeto.|  
 |**ParentName**|59|Nombre del esquema en el que reside el objeto.|  
-|**Permisos**|19|Valor entero que representa el tipo de permisos comprobado. Los valores son:<br /><br /> **1** = SELECT ALL<br /><br /> **2** = UPDATE ALL<br /><br /> **4** = REFERENCES ALL<br /><br /> **8** = INSERT<br /><br /> **16** = DELETE<br /><br /> **32** = EXECUTE (solo procedimientos)<br /><br /> **4096** = SELECT ANY (al menos una columna)<br /><br /> **8192** = UPDATE ANY<br /><br /> **16384** = REFERENCES ANY|  
+|**Permisos**|19|Valor entero que representa el tipo de permisos comprobado. Los valores son:<br /><br /> **1** = seleccionar todo<br /><br /> **2** = actualizar todo<br /><br /> **4** = referencias All<br /><br /> **8** = inserción<br /><br /> **16** = eliminar<br /><br /> **32** = Execute (solo procedimientos)<br /><br /> **4096** = Select any (al menos una columna)<br /><br /> **8192** = actualizar any<br /><br /> **16384** = REFERENCES ANY|  
 |**ProviderName**|46|Nombre del proveedor OLEDB.|  
-|**Reads**|16|Número de operaciones de lectura en el disco lógico que realiza el servidor en nombre del evento. Estas operaciones de lectura incluyen todas las lecturas realizadas desde tablas y búferes durante la ejecución de la instrucción.|  
-|**IdSolicitud**|49|Id. de la solicitud que contiene la instrucción.|  
+|**Lecturas**|16|Número de operaciones de lectura en el disco lógico que realiza el servidor en nombre del evento. Estas operaciones de lectura incluyen todas las lecturas realizadas desde tablas y búferes durante la ejecución de la instrucción.|  
+|**RequestID**|49|Id. de la solicitud que contiene la instrucción.|  
 |**RoleName**|38|Nombre del rol de aplicación que se habilita.|  
 |**RowCounts**|48|Número de filas del lote.|  
-|**ServerName** <sup>1</sup>|26|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|  
+|**NombreServidor** <sup>1</sup>|26|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|  
 |**SessionLoginName**|64|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y de Windows.|  
-|**Severity**|20|Nivel de gravedad del evento de excepción.|  
+|**Gravedad**|20|Nivel de gravedad del evento de excepción.|  
 |**SourceDatabaseID**|62|Id. de la base de datos en la que se está el origen del objeto.|  
 |**SPID**|12|Id. de proceso de servidor (SPID) que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|  
-|**SqlHandle**|63|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
+|**SqlHandle**|63|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor se puede pasar a **Sys. dm_exec_sql_text ()** para recuperar el texto SQL asociado.|  
 |**StartTime** <sup>1</sup>|14|Hora a la que se inició el evento, si está disponible.|  
 |**Estado**|30|Código de estado de error.|  
-|**Correcto**|23|Indica si el evento se realizó correctamente. Los valores son:<br /><br /> **1** = Correcto<br /><br /> **0** = Error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
+|**Correcto**|23|Indica si el evento se realizó correctamente. Estos valores incluyen:<br /><br /> **1** = correcto.<br /><br /> **0** = error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
 |**TargetLoginName**|42|Para acciones que se dirigen a un inicio de sesión, el nombre del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetLoginSid**|43|Para acciones que se dirigen a un inicio de sesión, el SID del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetUserName**|39|Para acciones que se dirigen a un usuario de base de datos, el nombre del usuario; por ejemplo, conceder permiso a un usuario.|  
 |**TextData**|1|Valor de texto que depende de la clase de evento que se captura en el seguimiento. Sin embargo, si realiza un seguimiento de una consulta con parámetros, no se mostrarán en la columna **TextData** las variables con los valores de datos.|  
-|**Identificador de transacción**|4|Identificador de la transacción asignado por el sistema.|  
+|**Transaction ID**|4|Identificador de la transacción asignado por el sistema.|  
 |**Tipo**|57|Valor entero que depende de la clase de evento capturado en el seguimiento.|  
-|**Writes**|17|Número de operaciones de escritura en el disco físico que realiza el servidor en nombre del evento.|  
+|**Escrituras**|17|Número de operaciones de escritura en el disco físico que realiza el servidor en nombre del evento.|  
 |**XactSequence**|50|Token que describe la transacción actual.|  
   
  <sup>1</sup> estas columnas de datos se rellenan de forma predeterminada para todos los eventos.  
   
- <sup>2</sup> para obtener más información sobre la **ObjectType** columna de datos, vea [ObjectType Trace Event Column](../event-classes/objecttype-trace-event-column.md).  
+ <sup>2</sup> para obtener más información acerca de la columna de datos **objecttype** , vea [columna de evento de seguimiento ObjectType](../event-classes/objecttype-trace-event-column.md).  
   
 ## <a name="sql-trace-tasks"></a>Tareas de seguimiento de SQL  
   
@@ -160,7 +159,7 @@ ms.locfileid: "63286531"
 |Describe cómo minimizar la cantidad de datos que el seguimiento recopile.|[Limitar el tamaño de la tabla y el archivo de seguimiento](../sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Describe las dos maneras de programar la traza en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Programar seguimientos](../sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Plantillas y permisos de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

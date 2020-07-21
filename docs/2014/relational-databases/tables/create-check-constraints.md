@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7795ee6eca85a22bdd4e84c90ce49a9449ddff28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047139"
 ---
 # <a name="create-check-constraints"></a>Crear restricciones CHECK
   Puede crear una restricción CHECK en una tabla para especificar los valores de datos aceptables en una o más columnas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,14 +37,14 @@ ms.locfileid: "62736205"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere permisos ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-new-check-constraint"></a>Para crear una restricción CHECK nueva  
   
@@ -68,13 +67,13 @@ ms.locfileid: "62736205"
     > [!NOTE]  
     >  Asegúrese de que escribe los valores de restricción no numéricos entre comillas sencillas (').  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En la categoría **Identidad** , puede cambiar el nombre de la restricción CHECK y agregar una descripción (propiedad extendida) para la restricción.  
   
 6.  En la categoría **Diseñador de tablas** , puede definir cuándo debe exigirse la restricción.  
   
-    |**Para:**|**Seleccione Sí en los campos siguientes:**|  
+    |**Para**:|**Seleccione Sí en los campos siguientes:**|  
     |-------------|---------------------------------------------|  
     |Pruebe la restricción en los datos existentes antes de que se creara la restricción|**Comprobar los datos existentes al crear o habilitar**|  
     |Exigir la restricción siempre que se produzca una operación de replicación en esta tabla|**Exigir para replicación**|  
@@ -82,7 +81,7 @@ ms.locfileid: "62736205"
   
 7.  Haga clic en **Cerrar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-new-check-constraint"></a>Para crear una restricción CHECK nueva  
   

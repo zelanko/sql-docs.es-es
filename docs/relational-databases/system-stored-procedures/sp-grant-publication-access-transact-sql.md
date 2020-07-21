@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 4a94c22c7f524572a4b629c27d49ad35a84c3b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123808"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891831"
 ---
-# <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
+# <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega un inicio de sesión a la lista de acceso de la publicación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -38,9 +38,9 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación para tener acceso a. **'***publicación***'** es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación a la que se va a obtener acceso. **'***Publication***'** es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @login = ] 'login'` Es el identificador de inicio de sesión. **'***inicio de sesión***'** es **sysname**, no tiene ningún valor predeterminado.  
+`[ @login = ] 'login'`Es el identificador de inicio de sesión. **'***login***'** es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -48,16 +48,16 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_grant_publication_access** se utiliza en instantáneas, transaccional y replicación de mezcla.  
+ **sp_grant_publication_access** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
  Es posible llamar repetidamente a este procedimiento almacenado.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_grant_publication_access**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_grant_publication_access**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_help_publication_access &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Proteger el publicador](../../relational-databases/replication/security/secure-the-publisher.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

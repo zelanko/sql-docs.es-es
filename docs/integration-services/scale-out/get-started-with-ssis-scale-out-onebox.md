@@ -4,18 +4,17 @@ description: En este artículo se muestra todo lo que se necesita saber para emp
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: maghan
+ms.openlocfilehash: a631e6e3192e6b727d6fc50feaae2aadaa2d7dc2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082163"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764867"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Introducción a la escalabilidad horizontal de SSIS en un único equipo
 
@@ -45,7 +44,7 @@ En las páginas **Configuración de escalabilidad horizontal de Integration Serv
 
 Finalice el Asistente para la instalación de SQL Server.
 
-## <a name="2-install-sql-server-management-studio"></a>2. Instalar SQL Server Management Studio
+## <a name="2-install-sql-server-management-studio"></a>2. Instalación de SQL Server Management Studio
 
 Descargue e instale [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 

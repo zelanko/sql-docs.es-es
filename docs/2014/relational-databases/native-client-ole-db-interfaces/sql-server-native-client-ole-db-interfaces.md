@@ -1,5 +1,5 @@
 ---
-title: Referencia SQL Server Native Client (OLE DB) | Microsoft Docs
+title: Referencia de SQL Server Native Client (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,19 @@ helpviewer_keywords:
 - SQLNCLI, OLE DB
 - SQL Server Native Client, OLE DB
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4483ea4b43e0ab65deca1e81f873ed82de22f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056059"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Referencia de SQL Server Native Client (OLE DB)
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone interfaces a los consumidores que desean tener acceso a los datos en uno o más equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB es un proveedor compatible con 2.0 versión de OLE DB.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone interfaces a los consumidores que desean tener acceso a los datos de uno o más equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client es un proveedor compatible con la versión 2,0 de OLE DB.  
   
- Esto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referencia de programación de proveedor de OLE DB de Native Client no documenta todas las interfaces OLE DB y los métodos, solo esas interfaces y métodos que un comportamiento específico del proveedor cuando se usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB proveedor.  
+ Esta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] referencia de programación del proveedor de OLE DB de Native Client no documenta todas las interfaces y métodos de OLE DB, solo las interfaces y los métodos que muestran el comportamiento específico del proveedor cuando se usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client.  
   
  Para obtener una descripción completa de las interfaces y los métodos principales de OLE DB, vea la [Referencia del programador de OLE DB](https://go.microsoft.com/fwlink/?LinkId=45232).  
   
@@ -33,7 +32,7 @@ ms.locfileid: "63192425"
   
 -   [Interfaces &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

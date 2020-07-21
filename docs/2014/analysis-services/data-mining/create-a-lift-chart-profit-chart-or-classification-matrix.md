@@ -1,5 +1,5 @@
 ---
-title: Crear un gráfico de elevación, gráfico de beneficios o matriz de clasificación | Microsoft Docs
+title: Crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82514e49b8e991c45bab4d1c32365765cefeeb65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085404"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523891"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación
   Puede crear un gráfico de precisión para un modelo de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siguiendo cinco pasos básicos:  
@@ -69,26 +68,26 @@ ms.locfileid: "66085404"
   
     -   Seleccione la opción **Usar casos de pruebas de estructura de minería de datos**para utilizar el conjunto completo de casos de prueba que se definieron como parte del conjunto de datos de exclusión de las estructuras de minería de datos.  
   
-    -   Seleccione la opción **Especificar otro conjunto de datos**si desea utilizar datos externos.  El conjunto de datos debe estar disponible como vista del origen de datos.   Haga clic en el ( **...** ) botón para elegir las tablas de datos que se usará para el gráfico de precisión. Para más información, consulte [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Seleccione la opción **Especificar otro conjunto de datos**si desea utilizar datos externos.  El conjunto de datos debe estar disponible como vista del origen de datos.   Haga clic en el botón Examinar (**...**) para elegir las tablas de datos que se van a usar para el gráfico de precisión. Para más información, consulte [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Si está utilizando un conjunto de datos externos, opcionalmente puede filtrar el conjunto de datos de entrada. Para obtener más información, vea [Aplicar filtros a los datos de prueba del modelo](apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  No puede crear un filtro para los casos de prueba del modelo ni para los casos de prueba de la estructura de minería de datos de la pestaña **Selección de entrada** . Para crear un filtro en el modelo de minería de datos, modifique la propiedad Filter del modelo. Para obtener más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
+>  No se puede crear un filtro en los casos de prueba del modelo ni en los casos de prueba de la estructura de minería de datos en la pestaña **selección de entrada** . Para crear un filtro en el modelo de minería de datos, modifique la propiedad Filter del modelo. Para más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
   
 ### <a name="configure-chart-settings-and-generate-the-chart"></a>Configurar los valores del gráfico y generarlo  
   
 1.  En la pestaña **Gráfico de precisión de minería de datos** , haga clic en la pestaña correspondiente al gráfico que desea crear.  
   
-2.  Para un **gráfico de mejora respecto al modelo predictivo**, haga clic en la pestaña **Gráfico de elevación** . El gráfico se genera automáticamente basándose en el modelo, los atributos de predicción y los datos de entrada que acaba de seleccionar.  
+2.  Para un **gráfico de elevación**, haga clic en la pestaña **gráfico de elevación** . El gráfico se genera automáticamente basándose en el modelo, los atributos de predicción y los datos de entrada que acaba de seleccionar.  
   
-3.  Para una **matriz de clasificación**, haga clic en la pestaña **Matriz de clasificación** . No es necesario ningún valor más; el gráfico se genera automáticamente basándose en los datos de entrada y en el modelo seleccionado.  
+3.  Para una **matriz de clasificación**, haga clic en la pestaña **matriz de clasificación** . No es necesario realizar más configuraciones. el gráfico se genera automáticamente en función de los datos de entrada y del modelo que haya seleccionado.  
   
-4.  Para un **gráfico de beneficios**, primero haga clic en la pestaña **Gráfico de elevación** . Después, en la lista desplegable **Tipo de gráfico** , seleccione **Gráfico de beneficios**.  
+4.  Para un **gráfico de beneficios**, haga clic primero en la pestaña **gráfico de elevación** . A continuación, en la lista desplegable **tipo de gráfico** , seleccione **gráfico de beneficios**.  
   
      Escriba los valores siguientes en el cuadro de diálogo **Configuración del gráfico de beneficios** .  
   
-     **Población**  
+     **Llenado**  
      El número de casos del conjunto de datos que desea utilizar al crear el gráfico de elevación.  
   
      El modelo siempre elige los casos en orden de probabilidad decreciente; es decir, si se están evaluando clientes potenciales y elige un número que representa solo la mitad de los registros de la base de datos de clientes, el modelo medirá la exactitud en el subconjunto de casos que mejor se ajustan al modelo.  
@@ -110,8 +109,8 @@ ms.locfileid: "66085404"
      **Ingresos por individuo**  
      Cantidad de ingresos asociados con cada venta realizada con éxito.  
   
-## <a name="see-also"></a>Vea también  
- [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Gráfico de elevación &#40;Analysis Services:&#41;de minería de datos](lift-chart-analysis-services-data-mining.md)   
  [Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

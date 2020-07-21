@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5d7d42d081b0494feeb5c2b221575e0d5df1143a
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 52dcbd2e2218da289d447b16d29460ff3f5af977
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847456"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896880"
 ---
 # <a name="iclientvirtualdeviceset2getconfiguration-vdi"></a>IClientVirtualDeviceSet2::GetConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **GetConfiguration** se usa para esperar a que el servidor configure el conjunto de dispositivos virtuales.
 
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::GetConfiguration (
 | VD_E_ABORT | Se invocó SignalAbort. |
 | VD_E_TIMEOUT | Se agotó el tiempo de espera de la función. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Esta función se bloquea en un estado de alerta. Después de la invocación correcta, se pueden abrir los dispositivos del conjunto de dispositivos virtuales.
 

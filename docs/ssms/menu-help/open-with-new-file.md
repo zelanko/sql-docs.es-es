@@ -1,6 +1,6 @@
 ---
-title: Abrir con (nuevo archivo) | Microsoft Docs
-ms.custom: ''
+title: Abrir con (Nuevo archivo)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252052"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245783"
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +30,10 @@ Muestra los editores disponibles en [!INCLUDE[msCoName](../../includes/msconame_
 **Abrir**  
 Haga clic en **Abrir** para abrir el documento en el editor seleccionado.  
   
-**Agregar**  
+**Add (Agregar)**  
 Haga clic en este botón para agregar un programa a la lista **Seleccione el programa que desee usar**. Puede escribir la ruta de acceso al programa en el campo **Nombre del programa** o hacer clic en **Examinar**para buscar el programa. En **Nombre descriptivo**, indique un nombre de programa para mostrar en la lista **Seleccione el programa que desee usar**.  
   
-**Quitar**  
+**Remove**  
 Para quitar un programa, selecciónelo y haga clic en **Quitar**.  
   
 **Predeterminado**  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea70100-ac98-4625-8748-ef7cc0b111ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d42af84c320eadb167126325299fb25cadaed2dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cb39d5e5f3805d5c734b51fd01eb36d84fb53410
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901831"
 ---
 # <a name="seturl-method-sqlserverdatasource"></a>Método setURL (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void setURL(java.lang.String url)
   
  Objeto **String** que contiene la dirección URL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Por razones de seguridad, no debería incluir la contraseña en la dirección URL que se proporciona al método setURL. Esto se debe a que los servidores de aplicación Java de otro fabricante muy a menudo muestran el conjunto de valores para la propiedad URL en la interfaz de usuario para la configuración del origen de datos. En su lugar, utilice el método [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) para establecer el valor de la contraseña. Los servidores de aplicación Java no mostrarán las contraseñas que se establezcan en su origen de datos de la interfaz de usuario para la configuración.  
   
 > [!NOTE]  

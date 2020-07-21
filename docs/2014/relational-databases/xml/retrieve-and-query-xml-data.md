@@ -10,20 +10,19 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 40e4fbf76bbed28822cc86cc5c04ea26adb6c7a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065478"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
   En este tema se describen las opciones de consulta que se tienen que especificar para consultar datos XML. También describe las partes de las instancias XML que no se conservan cuando se almacenan en bases de datos.  
   
-##  <a name="features"></a> Características de una instancia de XML que no se mantienen  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Características de una instancia de XML que no se mantienen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva el contenido de la instancia XML, pero no conserva los aspectos de la instancia XML que no se consideran significativos en el modelo de datos XML. Esto significa que una instancia XML recuperada no podría ser idéntica a la instancia que se almacenó en el servidor pero contendrá la misma información.  
   
 ### <a name="xml-declaration"></a>Declaración XML  
@@ -40,7 +39,7 @@ FROM T1
   
  El resultado es `<doc/>`.  
   
- No se conserva la declaración XML, como `<?xml version='1.0'?>`, al almacenar los datos XML en una instancia de tipo de datos `xml`. es así por diseño. La declaración XML () y sus atributos (versión/codificación/independiente) se pierden cuando los datos se convierten al tipo `xml`. La declaración XML se trata como una directiva del analizador XML. Los datos XML se almacenan internamente como ucs-2. Se conservan todos los demás PI en la instancia XML.  
+ No se conserva la declaración XML, como `<?xml version='1.0'?>`, al almacenar los datos XML en una instancia de tipo de datos `xml`. es así por diseño. La declaración XML () y sus atributos (versión/codificación/independiente) se pierden cuando los datos se convierten al tipo `xml` . La declaración XML se trata como una directiva del analizador XML. Los datos XML se almacenan internamente como ucs-2. Se conservan todos los demás PI en la instancia XML.  
   
   
 ### <a name="order-of-attributes"></a>Orden de atributos  
@@ -86,23 +85,23 @@ GO
 ```  
   
   
-##  <a name="query"></a> Establecer opciones de consulta necesarias  
- Al consultar `xml` columnas o variables con tipo `xml` métodos del tipo de datos, las siguientes opciones deben establecerse como se muestra.  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Establecer opciones de consulta necesarias  
+ Al consultar las `xml` columnas de tipo o las variables mediante `xml` métodos de tipo de datos, se deben establecer las siguientes opciones como se muestra.  
   
 |Opciones de SET|Valores requeridos|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
-|NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|ANSI_NULLS|ACTIVAR|  
+|ANSI_PADDING|ACTIVAR|  
+|ANSI_WARNINGS|ACTIVAR|  
+|ARITHABORT|ACTIVAR|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|  
+|NUMERIC_ROUNDABORT|Apagado|  
+|QUOTED_IDENTIFIER|ACTIVAR|  
   
- Si no se establecen las opciones tal como se muestra, las consultas y modificaciones en `xml` métodos del tipo de datos se producirá un error.  
+ Si no se establecen las opciones como se muestra, las consultas y modificaciones de `xml` los métodos de tipo de datos generarán un error.  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear instancias de datos XML](create-instances-of-xml-data.md)  
   
   

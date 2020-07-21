@@ -1,5 +1,6 @@
 ---
 title: Introducción a los permisos de los motores de bases de datos | Microsoft Docs
+description: Revise algunos conceptos básicos de seguridad en SQL Server y obtenga información sobre una implementación típica de los permisos del motor de base de datos.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903021"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005658"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los permisos de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] se administran en el nivel de servidor mediante inicios de sesión y roles de servidor, y en el nivel de base de datos mediante usuarios de base de datos y roles base de datos. El modelo para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] expone el mismo sistema en cada base de datos, pero los permisos de nivel de servidor no están disponibles. En este tema se tratan algunos conceptos básicos de seguridad y, a continuación, se describe una implementación típica de los permisos.  
   
@@ -225,7 +226,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
  Para obtener más temas para comenzar, consulte:  
   
 -   [Tutorial: Introducción al motor de base de datos](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
@@ -234,7 +235,7 @@ JOIN sys.database_principals AS dRole
   
 -   [Tutorial: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Tutorial: Escritura de instrucciones Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Tutorial: Escribir instrucciones Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

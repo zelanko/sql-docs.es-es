@@ -1,5 +1,6 @@
 ---
 title: Restauraciones de archivos (modelo de recuperación completa) | Microsoft Docs
+description: Una restauración de archivos en SQL Server es una secuencia de restauración única que copia, pone al día y recupera uno o varios archivos de datos sin restaurar la base de datos completa.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c4ca01f461d3013482ceca066a6ce141adf0aaae
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4d0af1b6f32ddc31cef057b2eb13a123dd13e348
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718083"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restauraciones de archivos (modelo de recuperación completa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema solo es pertinente para las bases de datos que contienen varios archivos o grupos de archivos con el modelo de recuperación completa o de carga masiva.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "72908927"
     >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos antes de iniciar la secuencia de restauración mediante la ejecución de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) siguiente: ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
   
   
-##  <a name="Overview"></a> Restaurar archivos dañados a partir de copias de seguridad de archivo  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Restaurar archivos dañados a partir de copias de seguridad de archivo  
   
 1.  Antes de restaurar uno o varios archivos dañados, intente crear una [copia del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
@@ -121,7 +122,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Ejemplo: restauración sin conexión del grupo de archivos principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para restaurar archivos y grupos de archivos**  
   
 -   [Restaurar archivos en una nueva ubicación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  

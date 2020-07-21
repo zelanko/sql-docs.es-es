@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015838"
 ---
 # <a name="conversions-ole-db"></a>Conversiones (OLE DB)
@@ -26,11 +26,11 @@ ms.locfileid: "68015838"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En esta sección se describe cómo convertir entre valores **DateTime** y **DateTimeOffset** . OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
+  En esta sección se describe cómo convertir entre valores **datetime** y **datetimeoffset**. OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
   
- El formato de literales y cadenas para las fechas y horas en OLE DB generalmente sigue la ISO y no depende de la configuración regional del cliente. Una excepción es DBTYPE_DATE, donde la norma es OLE Automation. Sin embargo, como OLE DB controlador para SQL Server solo convierte entre tipos cuando los datos se transmiten a o desde el cliente, no hay ninguna manera de que una aplicación fuerce OLE DB controlador de SQL Server para la conversión entre DBTYPE_DATE y formatos de cadena. De lo contrario, las cadenas usan los formatos siguientes (el texto entre corchetes indica un elemento opcional):  
+ El formato de literales y cadenas para las fechas y horas en OLE DB generalmente sigue la ISO y no depende de la configuración regional del cliente. Una excepción es DBTYPE_DATE, donde la norma es OLE Automation. Sin embargo, debido a que OLE DB Driver for SQL Server solamente convierte entre tipos cuando se transmiten datos a o desde el cliente, no hay ninguna manera de que una aplicación fuerce a OLE DB Driver for SQL Server a convertir entre DBTYPE_DATE y los formatos de cadena. De lo contrario, las cadenas usan los formatos siguientes (el texto entre corchetes indica un elemento opcional):  
   
--   El formato de las cadenas **DateTime** y **DateTimeOffset** es el siguiente:  
+-   El formato de las cadenas **datetime** y **datetimeoffset** es:  
   
      *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -38,14 +38,14 @@ ms.locfileid: "68015838"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   El formato de las cadenas de **fecha** es:  
+-   El formato de las cadenas **date** es:  
   
      *aaaa*-*mm*-*dd*  
   
 > [!NOTE]  
->  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. El controlador de OLE DB para SQL Server sigue el mismo comportamiento [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que Native Client. Como resultado, algunas conversiones realizadas por OLE DB controlador para SQL Server difieren de la especificación de OLE DB.  
+>  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. OLE DB Driver for SQL Server sigue el mismo comportamiento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Como resultado, algunas conversiones realizadas por OLE DB Driver for SQL Server difieren de la especificación OLE DB.  
   
- Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "formatos de datos: cadenas y literales" en [compatibilidad con tipos de datos para obtener OLE DB mejoras de fecha y hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, consulte la sección "Formatos de datos: Cadenas y literales" de [Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  A continuación figuran las reglas de conversión generales:  
   

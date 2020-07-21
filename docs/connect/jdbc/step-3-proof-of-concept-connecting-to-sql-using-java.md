@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: prueba de concepto de la conexión a SQL con Java | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante Java'
+description: El paso 3 es una prueba de concepto, que muestra cómo puede conectarse a SQL Server mediante Java y JDBC. Los ejemplos básicos demuestran la selección e inserción de datos.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,22 +9,22 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 966c931f5012e5701a0f6db0bd64503be1189d50
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027508"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528899"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Paso 3: Prueba de concepto que se conecta a SQL con Java
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Paso 3: prueba de concepto de la conexión a SQL mediante Java
   
-Este ejemplo solo debe considerarse una prueba de concepto. El código de ejemplo se ha simplificado para mejorar la claridad y no representa necesariamente los procedimientos recomendados de Microsoft.  
+Solo debe considerarse a este ejemplo una prueba de concepto. El código de ejemplo se simplifica por claridad y no representa necesariamente los procedimientos recomendados que sugiere Microsoft.  
   
-## <a name="step-1-connect"></a>Paso 1: conexión  
+## <a name="step-1-connect"></a>Paso 1: Conectar  
   
-Use la clase de conexión para conectarse a SQL Database.   
+Utilice la clase de conexión para conectarse a SQL Database.   
   
 ```java  
 import java.sql.Connection;
@@ -54,8 +55,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-2-execute-a-query"></a>Paso 2: ejecutar una consulta  
-En este ejemplo, conéctese a Azure SQL Database, ejecute una instrucción SELECT y devuelva las filas seleccionadas.   
+## <a name="step-2-execute-a-query"></a>Paso 2: Ejecutar una consulta  
+En este ejemplo, se realiza una conexión a Azure SQL Database, se ejecuta una instrucción SELECT y se devuelven las filas seleccionadas.   
   
 ```java  
 import java.sql.Connection;
@@ -99,8 +100,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Paso 3: insertar una fila  
-En este ejemplo, ejecute una instrucción INSERT, pase parámetros y recupere el valor de clave principal generado automáticamente.   
+## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
+En este ejemplo, se ejecuta una instrucción INSERT, se pasan parámetros y se recupera el valor de clave principal generado automáticamente.   
   
 ```java  
 import java.sql.Connection;

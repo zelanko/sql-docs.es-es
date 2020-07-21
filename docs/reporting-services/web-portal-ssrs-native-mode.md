@@ -1,6 +1,6 @@
 ---
-title: El portal web de un servidor de informes (modo nativo de SSRS) | Microsoft Docs
-ms.date: 12/05/2018
+title: El portal web de un servidor de informes (modo nativo) | Microsoft Docs
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874913"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082512"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>El portal web de un servidor de informes (modo nativo de SSRS)
 
@@ -30,7 +30,7 @@ Puede usar el portal web para realizar las siguientes tareas:
 
 - Ver, buscar, imprimir y suscribirse a informes.
 - Crear, proteger y mantener la jerarquía de carpetas para organizar elementos en el servidor.
-- Configurar una seguridad basada en roles que determine el acceso a elementos y operaciones.
+- Configurar una seguridad basada en roles que determine el acceso a elementos y operaciones. Vea [Definiciones de roles: roles predefinidos](security/role-definitions-predefined-roles.md) para más información.
 - Configurar propiedades de ejecución del informe, historial del informe y parámetros del informe.
 - Crear programaciones compartidas y orígenes de datos compartidos para que las programaciones y las conexiones de orígenes de datos sean más fáciles de administrar.
 - Crear suscripciones controladas por datos que distribuyan informes a una lista de destinatarios extensa.
@@ -51,7 +51,7 @@ Algunas características del portal web solo están disponibles en determinadas 
 En una instalación nueva, solo los administradores locales tienen permisos suficientes para trabajar con el contenido y la configuración. Para conceder permisos a otros usuarios, un administrador local debe crear asignaciones de roles que proporcionen acceso al servidor de informes. Las tareas y las páginas de aplicación a las que un usuario puede obtener acceso posteriormente dependerán de las asignaciones de roles para dicho usuario. Para obtener más información, consulte [Conceder acceso de usuario a un servidor de informes](security/grant-user-access-to-a-report-server-report-manager.md).
 
 > [!NOTE]
-> Si va a examinar el portal web en la máquina local donde se ejecuta el servidor, aparecerá un mensaje que le indica que no tiene permiso para ver esta carpeta. Esto se debe al control de acceso universal (UAC) y a que no está ejecutando el explorador como administrador. No es posible ejecutar Microsoft Edge como administrador. Tendrá que utilizar Internet Explorer. Puede acceder al servidor de forma remota o iniciar Internet Explorer como administrador e ir al portal web. Si desea usar el portal web de forma remota, debe conceder a su cuenta de derechos de administrador de contenido para la carpeta.  
+> Si va a examinar el portal web en la máquina local donde se ejecuta el servidor, aparecerá un mensaje que le indica que no tiene permiso para ver esta carpeta. Esto se debe al control de acceso universal (UAC) y a que no está ejecutando el explorador como administrador. No puede ejecutar Microsoft Edge como administrador. Tendrá que utilizar Internet Explorer. Puede acceder al servidor de forma remota o iniciar Internet Explorer como administrador e ir al portal web. Si desea usar el portal web de forma remota, debe conceder a su cuenta de derechos de administrador de contenido para la carpeta.  
 
 ## <a name="start-and-use-the-web-portal"></a>Inicio y uso del portal web
 
@@ -112,7 +112,7 @@ Escriba un término de búsqueda y vea todos los elementos a los que puede acced
 
 [Uso de los conjuntos de datos compartidos (portal web)](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [Configurar una dirección URL (Administrador de configuración de SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

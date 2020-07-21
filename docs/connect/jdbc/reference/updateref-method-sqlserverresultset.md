@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6146fb97d700cd7908bcd56648cf00593a824f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7a3760308e5cca34600ac80d47dd29f0c83020ae
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998378"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919697"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>Método updateRef (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

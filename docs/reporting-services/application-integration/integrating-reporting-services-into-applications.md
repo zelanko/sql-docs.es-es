@@ -1,5 +1,7 @@
 ---
-title: Integrar Reporting Services en las aplicaciones | Microsoft Docs
+title: Integración de aplicaciones
+description: Reporting Services es una plataforma de informe abierta y extensible diseñada para proporcionar un conjunto completo de API a los programadores para desarrollar soluciones.
+ms.custom: seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64f4e77a943f1d71fc7655a4a1d36dffafe7afcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 889967d4a7731b25b2704b8695c6b8797d367430
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175136"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74796958"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrar Reporting Services en las aplicaciones
 

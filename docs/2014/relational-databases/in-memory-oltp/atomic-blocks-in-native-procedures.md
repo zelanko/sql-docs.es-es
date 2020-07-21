@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca8f5b4d767ef0fe836cd260f8d12dd5b40c75d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62467285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050374"
 ---
 # <a name="atomic-blocks"></a>Bloques atomic
   `BEGIN ATOMIC` es parte del estándar ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
@@ -123,21 +122,21 @@ ORDER BY c1
 GO  
 ```  
   
- Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si se producen en el ámbito de un bloque atomic, hará que la transacción se anule: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
+ Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si aparecen en el ámbito de un bloque atomic, causarán que se anulen las transacciones: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
   
 ## <a name="session-settings"></a>Configuración de la sesión  
  Los parámetros de configuración de sesión de los bloques atomic son fijos cuando se compila el procedimiento almacenado. Algunos parámetros se pueden especificar con `BEGIN ATOMIC`, mientras que otros están fijos siempre en el mismo valor.  
   
  Se requieren las siguientes opciones con `BEGIN ATOMIC`:  
   
-|Configuración necesaria|Descripción|  
+|Configuración necesaria|Description|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|Los valores admitidos son `SNAPSHOT`, `REPEATABLEREAD` y `SERIALIZABLE`.|  
 |`LANGUAGE`|Determina los formatos de fecha y hora y los mensajes del sistema. Se admiten todos los lenguajes y alias de [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql).|  
   
  Los siguientes parámetros de configuración son opcionales:  
   
-|Configuración opcional|Descripción|  
+|Configuración opcional|Description|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|Se admiten todos los formatos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se especifica, `DATEFORMAT` reemplaza el formato de fecha predeterminado asociado a `LANGUAGE`.|  
 |`DATEFIRST`|Cuando se especifica, `DATEFIRST` reemplaza el valor predeterminado asociado a `LANGUAGE`.|  
@@ -147,21 +146,21 @@ GO
   
 |Opción SET|Valor predeterminado del sistema para los bloques atomic|  
 |----------------|--------------------------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNING|ON|  
-|ARITHABORT|ON|  
-|ARITHIGNORE|OFF|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
-|IDENTITY_INSERT|OFF|  
-|NOCOUNT|ON|  
-|NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|ANSI_NULLS|ACTIVAR|  
+|ANSI_PADDING|ACTIVAR|  
+|ANSI_WARNING|ACTIVAR|  
+|ARITHABORT|ACTIVAR|  
+|ARITHIGNORE|Apagado|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|  
+|IDENTITY_INSERT|Apagado|  
+|NOCOUNT|ACTIVAR|  
+|NUMERIC_ROUNDABORT|Apagado|  
+|QUOTED_IDENTIFIER|ACTIVAR|  
 |ROWCOUNT|0|  
 |TEXTSIZE|0|  
-|XACT_ABORT|OFF<br /><br /> Las excepciones no detectadas hacen que se revierta el bloque atomic, pero no causan que la transacción se anule a menos que el error invalide la transacción.|  
+|XACT_ABORT|Apagado<br /><br /> Las excepciones no detectadas hacen que se revierta el bloque atomic, pero no causan que la transacción se anule a menos que el error invalide la transacción.|  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Consulte también  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

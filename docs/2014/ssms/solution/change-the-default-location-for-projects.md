@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 330dc8ae1746a4fe7be8291cf1032a12bc62e948
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066363"
 ---
 # <a name="change-the-default-location-for-projects"></a>Cambiar la ubicación predeterminada de los proyectos
   La ubicación predeterminada de los archivos y los proyectos es la carpeta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects, en la carpeta Mis documentos.  
@@ -27,7 +26,7 @@ ms.locfileid: "62956139"
   
 1.  Cambie la ubicación predeterminada mediante la apertura o el almacenamiento de un archivo o un proyecto de otra ubicación. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] almacena la ubicación del proyecto abierto anteriormente y la usa para la siguiente apertura o almacenamiento de un proyecto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)  
   
   

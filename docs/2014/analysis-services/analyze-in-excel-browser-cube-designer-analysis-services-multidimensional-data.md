@@ -1,5 +1,5 @@
 ---
-title: Analizar en Excel (pestaña explorador, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Analizar en Excel (pestaña explorador, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a84fd7daf954b7537d34189ce6848472aa8818e6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062365"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527977"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analizar en Excel (pestaña Explorador de cubo del Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   **Analizar en Excel** proporciona al desarrollador de cubos un mecanismo para ver rápidamente cómo se mostraría un proyecto al usuario final. La característica **Analizar en Excel** abre Microsoft Excel, crea una conexión de origen de datos con la base de datos del área de trabajo y agrega automáticamente una tabla dinámica a la hoja de cálculo. Esta característica reemplaza al control Web de Office que, en versiones anteriores, proporcionaba una tabla dinámica incrustada en la pestaña Explorador.  
@@ -50,10 +49,10 @@ ms.locfileid: "66062365"
   
  [Examinar los datos y metadatos de un cubo](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>Vea también  
- [Explorador &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Metadatos &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Consulta y filtro &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Explorador de cubos &#40;&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Metadatos &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Consulta y filtro &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

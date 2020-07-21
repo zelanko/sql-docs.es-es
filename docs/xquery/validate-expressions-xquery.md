@@ -1,5 +1,6 @@
 ---
 title: Expresiones de validación (XQuery) | Microsoft Docs
+description: Obtenga información sobre la expresión Validate en XQuery.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: fb2592a1-1fad-41f9-8ff8-74c5905dbae9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0cd42034bb143476862b4460ef28d1f02dcca027
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba7b28277db82a39de449a51776b9893419d9db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946193"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765577"
 ---
 # <a name="validate-expressions-xquery"></a>Expresiones de validación (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-  En esta implementación, el **validar** no se admite la expresión. El resultado de las expresiones de construcción XQuery es siempre sin tipo. Si debe escribirse el resultado de una expresión XQuery, utilice la expresión SQL CAST para convertir el resultado en un **xml** tipo de datos con la colección de esquemas que prefiera.  
+  En esta implementación, no se admite la expresión **Validate** . El resultado de las expresiones de construcción XQuery es siempre sin tipo. Si se debe escribir el resultado de una expresión XQuery, utilice la expresión de conversión de SQL para convertir el resultado en un tipo de datos **XML** con la colección de esquemas preferida.  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones de ruta &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
+## <a name="see-also"></a>Consulte también  
+ [Expresiones de ruta de acceso &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)   
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   
   

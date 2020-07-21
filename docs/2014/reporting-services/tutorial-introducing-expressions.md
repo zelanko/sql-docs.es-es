@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098845"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
-  Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el **expresión** cuadro de diálogo para escribir expresiones que concatenan valores de nombres, buscan valores en un conjunto de datos independiente, mostrar diferentes imágenes según los valores de campo y así sucesivamente.  
+  Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el cuadro de diálogo **expresión** para escribir expresiones que concatenan valores de nombres, buscan valores en un conjunto de un conjunto de distintos, muestran imágenes diferentes en función de los valores de campo, etc.  
   
  Se trata de un informe con barras y colores de filas que alternan entre el blanco y un color. El informe incluye un parámetro para seleccionar el color de las filas que no son blancas.  
   
@@ -26,28 +26,28 @@ ms.locfileid: "66098845"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a> Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
-1.  [Crear un informe de tabla y el conjunto de datos de la tabla o el Asistente para matrices](#Setup)  
+1.  [Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices](#Setup)  
   
-2.  [Actualizar nombres predeterminados de los datos de origen y conjunto de datos](#UpdateNames)  
+2.  [Actualizar nombres predeterminados del origen de datos y el conjunto de datos](#UpdateNames)  
   
-3.  [Nombre, iniciales y apellido nombre para mostrar](#Concatenate)  
+3.  [Mostrar First Name, Initial y Last Name](#Concatenate)  
   
 4.  [Usar imágenes para mostrar el sexo](#Gender)  
   
-5.  [Buscar nombre CountryRegion](#Lookup)  
+5.  [Buscar el nombre CountryRegion](#Lookup)  
   
 6.  [Recuento de días desde la última compra](#Count)  
   
 7.  [Usar un indicador para mostrar la comparación de ventas](#Indicator)  
   
-8.  [Hacer que el informe que notificar una "barra verde"](#GreenBar)  
+8.  [Hacer que el informe sea un "barra verde"](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Otros pasos opcionales  
   
--   [Columna de fecha de formato](#DateFormat)  
+-   [Dar formato a la columna de fecha](#DateFormat)  
   
 -   [Agregar un título de informe](#Title)  
   
@@ -58,26 +58,26 @@ ms.locfileid: "66098845"
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. crear un informe de tabla y un conjunto de informes desde el Asistente para tablas o matrices  
  Cree un informe de tabla, un origen de datos y un conjunto de datos. Cuando distribuya la tabla, incluirá solo unos cuantos campos. Después de completar el asistente, agregará manualmente las columnas. El asistente facilita la distribución de la tabla y la aplicación de un estilo.  
   
 > [!NOTE]  
 >  En este tutorial, la consulta contiene los valores de datos, de forma que no necesita un origen de datos externo. Esto hace que la consulta requiera bastante tiempo. En un entorno empresarial, la consulta no contendría los datos. Esto es solo con fines de aprendizaje.  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Para crear un nuevo informe de tabla  
   
-1.  Haga clic en **iniciar**, apunte a **programas**, haga clic en [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **Inicio**, **Elija programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]haga clic en **generador de informes**y, a continuación, haga clic en **generador de informes**.  
   
-     Aparecerá el cuadro de diálogo **Introducción** .  
-  
-    > [!NOTE]  
-    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
+     Aparece el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
-    >  Si prefiere usar la versión ClickOnce del generador de informes, abra el Administrador de informes y haga clic en **Report Builder**, o vaya a un sitio de SharePoint en los servicios de informes de los tipos de contenido como informes están habilitados y haga clic en  **Informe del generador** en el **nuevo documento** menú en el **documentos** pestaña de una biblioteca de documentos compartida.  
+    >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
+  
+    > [!NOTE]  
+    >  Si prefiere usar la versión ClickOnce de Generador de informes, abra Administrador de informes y haga clic en **generador de informes**o vaya a un sitio de SharePoint en el que Reporting Services tipos de contenido como informes estén habilitados y haga clic en **generador de informes Informe** en el menú **nuevo documento** de la pestaña **documentos** de una biblioteca de documentos compartida.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66098845"
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos**, seleccione un origen de datos del tipo **SQL Server**. Seleccione un origen de datos en la lista o vaya al servidor de informes para seleccionar uno.  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos del tipo **SQL Server**. Seleccione un origen de datos en la lista o vaya al servidor de informes para seleccionar uno.  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66098845"
   
      La consulta especifica los nombres de columna que incluyen una fecha de nacimiento, un nombre, un apellido, el estado o provincia, el identificador de país o región, el sexo y compras anuales.  
   
-10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 20 filas de datos e incluye las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
+10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 20 filas de datos e incluye las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
   
 11. Haga clic en **Siguiente**.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66098845"
     > [!NOTE]  
     >  Los campos FirstName y LastName no están incluidos. Los agregará en un paso posterior.  
   
-13. En el **valores** lista, haga clic en `CountryRegionID` y haga clic en el **suma** opción.  
+13. En la lista **valores** , haga clic `CountryRegionID` con el botón secundario y haga clic en la opción **suma** .  
   
      La suma ya no se aplica a CountryRegionID.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "66098845"
   
 16. En la página **Elegir el diseño**, haga clic en **Siguiente**.  
   
-17. En el **elegir un estilo** página, haga clic en **Pizarra**y, a continuación, haga clic en **finalizar**.  
+17. En la página **elegir un estilo** , haga clic en **pizarra**y, a continuación, haga clic en **Finalizar**.  
   
-##  <a name="UpdateNames"></a> 2. Actualizar nombres predeterminados del origen de datos y el conjunto de datos  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. actualizar los nombres predeterminados del origen de datos y el conjunto de datos  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>Para actualizar el nombre predeterminado del origen de datos  
   
@@ -178,14 +178,14 @@ ms.locfileid: "66098845"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a> 3. Mostrar First Name, Initial y Last Name  
- Use la función **Izquierda** y el operador **Concatenar** ( **&** ) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión**.  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. Mostrar el nombre, el inicial y el apellido  
+ Use la función **Izquierda** y el operador **Concatenar** (**&**) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .  
   
 #### <a name="to-add-the-name-column"></a>Para agregar la columna Nombre  
   
-1.  Haga clic con el botón derecho en la columna **StateProvince**, seleccione **Insertar columna** y haga clic en **Izquierda**.  
+1.  Haga clic con el botón derecho en la columna **StateProvince** , seleccione **Insertar columna**y haga clic en **Izquierda**.  
   
-     Se agrega una columna nueva a la izquierda de la columna **StateProvince**.  
+     Se agrega una columna nueva a la izquierda de la columna **StateProvince** .  
   
 2.  Haga clic en el título de la nueva columna y escriba **Nombre**  
   
@@ -197,13 +197,13 @@ ms.locfileid: "66098845"
   
      La función **Izquierda** se agrega a la expresión.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 7.  En la lista **Valores** , haga doble clic en **FirstName**.  
   
 8.  Escriba **, 1)**  
   
-     Esta expresión extrae un carácter del valor **FirstName**, contando desde la izquierda.  
+     Esta expresión extrae un carácter del valor **FirstName** , contando desde la izquierda.  
   
 9. Escriba **&" "&**  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098845"
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Gender"></a> 4. Usar imágenes para mostrar el sexo  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. usar imágenes para mostrar el sexo  
  Use imágenes para mostrar el sexo de una persona e identifique el sexo desconocido usando una tercera imagen. Agregará al informe tres imágenes ocultas y una nueva columna para mostrar las imágenes y después determinará la imagen que aparece en la columna según el valor del campo Gender.  
   
  Para aplicar un color a la celda de la tabla que contiene la imagen, cuando convierta el informe en un informe con barras, agregará un rectángulo y después agregará la imagen al mismo. Tiene que usar un rectángulo porque puede aplicar un color de fondo a un rectángulo, pero no a una imagen.  
@@ -270,11 +270,11 @@ ms.locfileid: "66098845"
   
 2.  En el cuadro de diálogo **Propiedades de la imagen** haga clic en el botón **fx** de la expresión junto al cuadro de texto **Usar esta imagen**.  
   
-3.  En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
+3.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
   
 4.  En la lista **Elemento** , haga doble clic en **Cambiar**.  
   
-5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 6.  En la lista **Valores** , haga doble clic en **Gender**.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "66098845"
   
 9. Escriba **="Female", "Penguins",**  
   
-10. En la lista **Valores**, haga doble clic en **Gender**.  
+10. En la lista **Valores** , haga doble clic en **Gender**.  
   
 11. Escriba **="Unknown", "Tulips")**  
   
@@ -296,18 +296,18 @@ ms.locfileid: "66098845"
   
 14. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Lookup"></a> 5. Buscar el nombre CountryRegion  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. Buscar nombre PaísRegión  
  Cree el conjunto de datos CountryRegion y use la función **Búsqueda** para mostrar el nombre de un país o región en lugar del identificador del mismo.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>Para crear el conjunto de datos CountryRegion  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic en **Nuevo** y, después, en **Conjunto de datos**.  
+2.  En el panel datos de informe, haga clic en **nuevo** y, a continuación, en **conjunto**de datos.  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**.  
   
-4.  En la lista **Origen de datos**, seleccione ExpressionsDataSource.  
+4.  En la lista **Origen de datos** , seleccione ExpressionsDataSource.  
   
 5.  En el cuadro **Nombre** , escriba **CountryRegion**  
   
@@ -332,17 +332,17 @@ ms.locfileid: "66098845"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Haga clic en **Ejecutar** ( **!** ) para ejecutar la consulta.  
+9. Haga clic en **Ejecutar** (**!**) para ejecutar la consulta.  
   
      Los resultados de la consulta son los identificadores del país o región y los nombres.  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-11. Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Propiedades del conjunto de datos**.  
+11. Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Propiedades del conjunto de datos** .  
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para buscar valores en el conjunto de datos CountryRegion  
   
-1.  Haga clic en el **Country Region ID** título de columna y elimine el texto: ID.  
+1.  Haga clic en el título de columna **Country Region ID** y elimine el texto: ID.  
   
 2.  Haga clic con el botón derecho en la celda de datos de la columna **Country Region** y haga clic en **Expresión**.  
   
@@ -354,9 +354,9 @@ ms.locfileid: "66098845"
   
 5.  En la lista **Elemento**, haga doble clic en **Búsqueda**.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
-7.  En el **valores** lista, haga doble clic en `CountryRegionID`.  
+7.  En la lista **valores** , haga doble clic `CountryRegionID`en.  
   
 8.  Si el cursor no está ya inmediatamente después de `CountryRegionID.Value`, colóquelo ahí.  
   
@@ -370,8 +370,8 @@ ms.locfileid: "66098845"
   
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Count"></a> 6. Recuento de días desde la última compra  
- Agregar una columna y, a continuación, usar el **ahora** función o el `ExecutionTime` variable global integrada para calcular el número de días desde hoy que una persona última compra.  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. recuento de días desde la última compra  
+ Agregue una columna y, a continuación **Now** , utilice la función `ExecutionTime` Now o la variable global integrada para calcular el número de días a partir de hoy desde la fecha en que la última compra una persona.  
   
 #### <a name="to-add-the-days-ago-column"></a>Para agregar la columna Días transcurridos  
   
@@ -387,13 +387,13 @@ ms.locfileid: "66098845"
   
 5.  En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y haga clic en **Fecha y hora**.  
   
-6.  En la lista **Elemento**, haga doble clic en **DateDiff**.  
+6.  En la lista **Elemento** , haga doble clic en **DateDiff**.  
   
 7.  Si el cursor no está ya inmediatamente después de `DateDiff(`, colóquelo ahí.  
   
 8.  Escriba **"d",**  
   
-9. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+9. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 10. En la lista **Valores**, haga doble clic en **LastPurchase**.  
   
@@ -416,24 +416,24 @@ ms.locfileid: "66098845"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a> 7. Usar un indicador para mostrar la comparación de ventas  
- Agregue una nueva columna y usar un indicador para mostrar si una persona año hasta la fecha (año actual) están por encima o por debajo del promedio de que compras hasta la fecha. La función **Redondear** quita los decimales de los valores.  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. usar un indicador para mostrar la comparación de ventas  
+ Agregue una nueva columna y use un indicador para mostrar si las compras anuales hasta la fecha (año) de una persona están por encima o por debajo del promedio de compras de año. La función **Redondear** quita los decimales de los valores.  
   
- La configuración del indicador y sus estados requiere muchos pasos. Si lo desea, en el procedimiento "para configurar el indicador", puede avanzar y copiar y pegar las expresiones completas de este tutorial en el **expresión** cuadro de diálogo.  
+ La configuración del indicador y sus estados requiere muchos pasos. Si lo desea, en el procedimiento "para configurar el indicador", puede avanzar y copiar o pegar las expresiones completadas de este tutorial en el cuadro de diálogo **expresión** .  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>Para agregar la columna Promedio + o -  
   
 1.  Haga clic con el botón derecho en la columna **YTD Purchase** , seleccione **Insertar columna**y haga clic en **Derecha**.  
   
-     Se agrega una columna nueva a la derecha de la columna **YTD Purchase**.  
+     Se agrega una columna nueva a la derecha de la columna **YTD Purchase** .  
   
 2.  Haga clic en el título de la columna y escriba **Ventas promedio + o -**  
   
 #### <a name="to-add-an-indicator"></a>Para agregar un indicador  
   
-1.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **Indicador** y, después, haga clic en la celda de datos de la columna **Ventas promedio + o -** .  
+1.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **Indicador** y, después, haga clic en la celda de datos de la columna **Ventas promedio + o -**.  
   
-     Se abrirá el cuadro de diálogo **Seleccionar tipo de indicador**.  
+     Se abrirá el cuadro de diálogo **Seleccionar tipo de indicador** .  
   
 2.  En el grupo **Direccional** de los conjuntos de iconos, haga clic en el conjunto de tres flechas grises.  
   
@@ -447,21 +447,21 @@ ms.locfileid: "66098845"
   
 3.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y haga clic en **Matemáticas**.  
   
-4.  En la lista **Elemento**, haga doble clic en **Redondear**.  
+4.  En la lista **Elemento** , haga doble clic en **Redondear**.  
   
-5.  En la lista **Categoría**, haga clic en **Campos (Expresiones)** .  
+5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 6.  En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
 7.  Si el cursor no está ya inmediatamente después de `Fields!YTDPurchase.Value`, colóquelo ahí.  
   
-8.  Escriba **-**  
+8.  Automáticamente**-**  
   
 9. Expanda **Funciones comunes** de nuevo y haga clic en **Agregado**.  
   
 10. En la lista **Elemento**, haga doble clic en **Promedio**.  
   
-11. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+11. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 12. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -475,25 +475,25 @@ ms.locfileid: "66098845"
   
 16. En el cuadro **Unidad de medida de estados** , seleccione **Numérico**.  
   
-17. En la fila con la flecha hacia abajo, haga clic en el botón **fx** a la derecha del cuadro de texto del valor **Inicio**.  
+17. En la fila con la flecha hacia abajo, haga clic en el botón **fx** a la derecha del cuadro de texto del valor **Inicio** .  
   
-18. En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y haga clic en **Matemáticas**.  
+18. En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y haga clic en **Matemáticas**.  
   
-19. En la lista **Elemento**, haga doble clic en **Redondear**.  
+19. En la lista **Elemento** , haga doble clic en **Redondear**.  
   
-20. En la lista **Categoría**, haga clic en **Campos (Expresiones)** .  
+20. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 21. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
 22. Si el cursor no está ya inmediatamente después de `Fields!YTDPurchase.Value`, colóquelo ahí.  
   
-23. Escriba **-**  
+23. Automáticamente**-**  
   
 24. Expanda **Funciones comunes** de nuevo y haga clic en **Agregado**.  
   
 25. En la lista **Elemento**, haga doble clic en **Promedio**.  
   
-26. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+26. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 27. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -509,11 +509,11 @@ ms.locfileid: "66098845"
   
 32. Haga clic en la fila con la flecha horizontal y haga clic en **Eliminar**.  
   
-33. En la fila con la flecha hacia arriba, en el cuadro **Inicio**, escriba **0**  
+33. En la fila con la flecha hacia arriba, en el cuadro **Inicio** , escriba **0**  
   
 34. Haga clic en el botón **fx** a la derecha del cuadro de texto del valor **Final** .  
   
-35. En el **expresión** diálogo cuadro, cree la expresión: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. En el cuadro de diálogo **expresión** , cree la expresión:`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -521,14 +521,14 @@ ms.locfileid: "66098845"
   
 38. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="GreenBar"></a> 8. Hacer que el informe que notificar una "barra verde"  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. convierta el informe en un informe de "barra verde"  
  Use un parámetro para especificar el color que se aplicará a filas alternativas del informe, convirtiéndolo en un informe con barras.  
   
 #### <a name="to-add-a-parameter"></a>Para agregar un parámetro  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  En el panel **Datos de informe**, haga clic con el botón derecho en **Parámetros** y haga clic en **Agregar parámetro**.  
+2.  En el panel **Datos de informe** , haga clic con el botón derecho en **Parámetros** y haga clic en **Agregar parámetro**.  
   
      Se abrirá el cuadro de diálogo **Propiedades de parámetro de informe** .  
   
@@ -542,7 +542,7 @@ ms.locfileid: "66098845"
   
 7.  Haga clic en **Agregar**.  
   
-8.  En el **etiqueta** , escriba: **Amarillo**  
+8.  En el cuadro **etiqueta** , escriba: **amarillo** .  
   
 9. En el cuadro **Valor** , escriba **Amarillo**  
   
@@ -580,17 +580,17 @@ ms.locfileid: "66098845"
   
 5.  Haga clic en la flecha hacia abajo y, después, en **Expresión**.  
   
-6.  En el cuadro de diálogo **Expresión**, expanda **Funciones comunes** y, después, haga clic en **Flujo de programa**.  
+6.  En el cuadro de diálogo **Expresión** , expanda **Funciones comunes**y, después, haga clic en **Flujo de programa**.  
   
-7.  En la lista **Elemento**, haga doble clic en **SiInm**.  
+7.  En la lista **Elemento** , haga doble clic en **SiInm**.  
   
 8.  Expanda **Funciones comunes** y haga clic en **Agregado**.  
   
 9. En la lista **Elemento**, haga doble clic en **RunningValue**.  
   
-10. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+10. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
-11. En la lista **Valores**, haga doble clic en **FirstName**.  
+11. En la lista **Valores** , haga doble clic en **FirstName**.  
   
 12. Si el cursor no está ya inmediatamente después de `Fields!FirstName.Value`, colóquelo ahí y escriba **,**  
   
@@ -600,7 +600,7 @@ ms.locfileid: "66098845"
   
 15. Si el cursor no está ya inmediatamente después de `Count(`, colóquelo ahí.  
   
-16. Elimine el paréntesis de apertura y, a continuación, escriba **, "Expressions")**  
+16. Elimine el paréntesis de apertura y, a continuación, escriba **"expresiones")**  
   
     > [!NOTE]  
     >  Expressions es el nombre del conjunto de datos en el que contabilizar las filas de datos.  
@@ -616,11 +616,11 @@ ms.locfileid: "66098845"
     > [!IMPORTANT]  
     >  Asegúrese de incluir un espacio antes de escribir el número 2.  
   
-21. Haga clic en **Parámetros** y en la lista **Valores**, haga doble clic en **RowColor**.  
+21. Haga clic en **Parámetros** y en la lista **Valores** , haga doble clic en **RowColor**.  
   
 22. Si el cursor no está ya inmediatamente después de `Parameters!RowColor.Value`, colóquelo ahí.  
   
-23. Escriba **, "White")**  
+23. Tipo **, "blanco")**  
   
      La expresión completa es la siguiente: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -638,7 +638,7 @@ ms.locfileid: "66098845"
   
      Los representadores de informes y las filas alternativas tienen el fondo que elija.  
   
-##  <a name="DateFormat"></a> (opcional) Columna de fecha de formato  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>opta Dar formato a la columna de fecha  
  Dé formato a la columna **Last Purchase**, que contiene fechas.  
   
 #### <a name="to-format-date-column"></a>Para dar formato a la columna de fecha  
@@ -651,7 +651,7 @@ ms.locfileid: "66098845"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a> (opcional) Agregar un título de informe  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>opta Agregar un título de informe  
  Agregue un título al informe.  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
@@ -662,9 +662,9 @@ ms.locfileid: "66098845"
   
 3.  Haga clic con el botón derecho en el cuadro de texto que contiene **Resumen de comparación de ventas** y haga clic en **Propiedades de cuadro de texto**.  
   
-4.  En el cuadro de diálogo **Propiedades de cuadro de texto**, haga clic en **Fuente**.  
+4.  En el cuadro de diálogo **Propiedades de cuadro de texto** , haga clic en **Fuente**.  
   
-5.  En la lista **Tamaño**, seleccione **18pt**.  
+5.  En la lista **Tamaño** , seleccione **18 pt**.  
   
 6.  En la lista **Color**, seleccione **Gris**.  
   
@@ -672,7 +672,7 @@ ms.locfileid: "66098845"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> (opcional) Guardar el informe  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>opta Guardar el informe  
  Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo. Para obtener más información, consulte [Guardar informes &#40;Generador de informes&#41;](report-builder/saving-reports-report-builder.md).  
   
  En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
@@ -703,12 +703,12 @@ ms.locfileid: "66098845"
   
 4.  Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Los indicadores &#40;generador de informes y SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [Indicadores &#40;Generador de informes y SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
  [Imágenes, cuadros de texto, rectángulos y líneas &#40;Generador de informes y SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

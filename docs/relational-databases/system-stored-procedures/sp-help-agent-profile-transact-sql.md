@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662443"
 ---
-# <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Muestra el perfil de un agente especificado. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -52,13 +52,13 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|IDENTIFICADOR del perfil.|  
 |**profile_name**|**sysname**|Único para el tipo de agente.|  
 |**agent_type**|**int**|**1** = agente de instantáneas<br /><br /> **2** = agente de registro del log<br /><br /> **3** = agente de distribución<br /><br /> **4** = agente de mezcla<br /><br /> **9** = agente de lectura de cola|  
-|**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
-|**description**|**varchar(3000)**|Descripción del perfil.|  
+|**Type**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
+|**description**|**VARCHAR (3000)**|Descripción del perfil.|  
 |**def_profile**|**bit**|Especifica si este perfil es el predeterminado para este tipo de agente.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -70,10 +70,10 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** pueden ejecutar **sp_help_agent_profile**.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con perfiles de agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [sp_add_agent_profile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

@@ -20,15 +20,15 @@ ms.assetid: 5b0b35be-50ae-411d-a607-bf7464b73624
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: adae0818964e55bffb71dd415dde9cb74297f3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a526d3846f98ac247d6e7d18a3670165892769a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893930"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve el nombre de la clave del Registro bajo la cual se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. @@SERVICENAME devuelve 'MSSQLSERVER' si la instancia actual es la predeterminada; esta función devuelve el nombre de la instancia si la instancia actual es una instancia con nombre.  
 
@@ -40,14 +40,14 @@ ms.locfileid: "67906114"
 @@SERVICENAME  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como un servicio denominado MSSQLServer.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se muestra la forma de utilizar `@@SERVICENAME`.  
+ En el ejemplo siguiente se muestra el uso de `@@SERVICENAME`.  
   
 ```  
 SELECT @@SERVICENAME AS 'Service Name';  

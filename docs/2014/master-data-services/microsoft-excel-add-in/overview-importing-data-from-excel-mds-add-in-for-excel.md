@@ -1,5 +1,5 @@
 ---
-title: Publicación de datos (complemento MDS para Excel) | Microsoft Docs
+title: Publicación de datos (Complemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4126398cb90d488bd663b87ffcc31c1c53ba4d8a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960965"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publicar datos (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS si desea compartirlo con otros usuarios. En cuanto se publiquen los datos, estarán disponibles para otros usuarios del complemento para su descarga.  
@@ -35,7 +34,7 @@ ms.locfileid: "65479033"
   
 -   No puede anotar las eliminaciones, aunque se guardan como transacciones que un administrador puede invertir.  
   
--   Si cambia el **código** valor para un miembro, no se registra como una transacción y todas las transacciones anteriores para el miembro no están disponibles.  
+-   Si cambia el valor de **código** de un miembro, no se registrará como una transacción y todas las transacciones anteriores del miembro no estarán disponibles.  
   
 -   Puede ver las transacciones realizadas por otros usuarios en un miembro. También puede ver todas las transacciones que ha realizado en un miembro, aunque ya no tenga permiso para atributos concretos.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "65479033"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Publicar de nuevo los datos de la hoja de cálculo activa en el repositorio MDS.|[Publicar datos de Excel en MDS &#40;complemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Publicar de nuevo los datos de la hoja de cálculo activa en el repositorio MDS.|[Publicar datos de Excel en MDS &#40;Complemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |Eliminar una fila del repositorio MDS y de la hoja de cálculo al mismo tiempo.|[Eliminar una fila &#40;complemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  

@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General del Editor de texto - XML -) | Microsoft Docs
+title: Opciones (editor de texto-XML-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,21 +7,20 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f79745bdb8699d288797f41d69b53fd1b6998589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089199"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929650"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor XML, que se utiliza para modificar los documentos XML. Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **XML** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
- Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si utiliza los cuadros de diálogos **Todos los idiomas** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor XML mediante este cuadro de diálogo.  
+ Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para los demás [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editores, como los editores de DMX o MDX, debe restablecer las opciones del editor XML mediante este cuadro de diálogo.  
   
 ## <a name="statement-completion"></a>Finalización de instrucciones  
  **Lista de miembros automática**  
@@ -30,7 +29,7 @@ ms.locfileid: "66089199"
  **Ocultar miembros avanzados**  
  Esta casilla no está disponible.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  Cuando se selecciona esta casilla, la sintaxis completa para la declaración o procedimiento actual aparece a la izquierda del punto de inserción del editor, con todos sus parámetros disponibles. El siguiente parámetro que puede asignar aparece en negrita.  
   
 ## <a name="settings"></a>Configuración  
@@ -46,7 +45,7 @@ ms.locfileid: "66089199"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
+ **Aplicar comandos Cortar o Copiar a líneas en blanco si no hay selección**  
  Esta casilla establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  
@@ -62,7 +61,7 @@ ms.locfileid: "66089199"
 > [!NOTE]  
 >  Estos números de línea no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Habilitar navegación a direcciones URL con un solo clic**  
+ **Habilitar acceso a direcciones URL con un solo clic**  
  Cuando se selecciona esta casilla, el cursor cambia a una mano cuando pasa por encima de una dirección URL en el editor. Puede hacer clic en la dirección URL para abrir la página indicada en el explorador web.  
   
  **Barra de navegación**  

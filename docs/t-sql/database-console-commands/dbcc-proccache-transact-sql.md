@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d021905cfd1a75a35487499ef383d6e0a78c8323
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85685477"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Muestra información acerca de la caché de procedimientos en forma de tabla.
   
@@ -42,13 +42,13 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- por  
+ WITH  
  Permite que se especifiquen opciones.  
   
  NO_INFOMSGS  
  Suprime todos los mensajes informativos que tienen niveles de gravedad entre 0 y 10.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La caché de procedimientos se utiliza para almacenar en caché los planes compilados y ejecutables con el fin de acelerar la ejecución de lotes. Las entradas de una caché de procedimientos están en el nivel de lote. La caché de procedimientos incluye las siguientes entradas:
 -   Planes compilados  
 -   Planes de ejecución  
@@ -58,7 +58,7 @@ La caché de procedimientos se utiliza para almacenar en caché los planes compi
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En la tabla siguiente se describen las columnas del conjunto de resultados.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**num proc buffs**|Número total de páginas utilizadas por todas las entradas de la caché de procedimientos.|  
 |**num proc buffs used**|Número total de páginas utilizadas por todas las entradas que se están utilizando actualmente.|  

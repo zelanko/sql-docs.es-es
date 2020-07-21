@@ -1,5 +1,5 @@
 ---
-title: Relaciones (pestaña Diseñador de relación de atributos, Diseñador de dimensiones) de los atributos (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Relaciones de atributo (pestaña diseñador de relación de los atributos, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92ad2dfbe51f97a84b443ae531bd11b0531f055e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527891"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Relación de los atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la lista **Relación de los atributos** para buscar una relación de atributo concreta en el diagrama de relación de atributo y para administrar dicha relación. Este panel aparece inmediatamente debajo del panel que contiene el diagrama de la relación de los atributos.  
   
- **Para ver el panel relaciones de atributo**  
+ **Para ver el panel Relación de los atributos**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el Explorador de soluciones, haga doble clic en una dimensión para abrir el Diseñador de dimensiones y, después, haga clic en la pestaña **Relación de los atributos** .  
   
@@ -55,10 +54,10 @@ ms.locfileid: "66062272"
  **Propiedades**  
  Muestra las propiedades del atributo en la ventana **Propiedades** .  
   
-## <a name="see-also"></a>Vea también  
- [Relaciones de atributo &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña Diseñador de relación de atributo, el Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
- [Atributos &#40;pestaña Diseñador de relación de atributo, el Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Diagrama de relaciones de atributo &#40;pestaña Diseñador de relación de atributo, el Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Relaciones de atributo &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña diseñador de relación de los atributos, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Atributos &#40;pestaña diseñador de relación de los atributos, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Diagrama de relación de los atributos &#40;pestaña diseñador de relación de los atributos, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  
   
   

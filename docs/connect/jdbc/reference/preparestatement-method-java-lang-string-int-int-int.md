@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0629ee8020c6b1be5f8273c16fe814cf05e922b5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67976183"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924095"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>Método prepareStatement (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,13 +55,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  Un valor **int** que indica la capacidad de alojamiento del conjunto de resultados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto PreparedStatement.  
+ Un objeto PreparedStatement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método prepareStatement se especifica mediante el método prepareStatement en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método prepareStatement especifica este método prepareStatement en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método prepareStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

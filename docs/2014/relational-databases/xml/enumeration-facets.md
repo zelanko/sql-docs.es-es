@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumeration facets
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2687acdf1c4d9b3decc8fe83f7c967173cdba3a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fe41085c78077477a495e9cc136c30857938310a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048817"
 ---
 # <a name="enumeration-facets"></a>facetas de enumeración
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rechaza los esquemas XML con tipos que tienen facetas de patrón o enumeraciones que infringen estas facetas.  
@@ -43,7 +42,7 @@ CREATE XML SCHEMA COLLECTION MySampleCollection AS '
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

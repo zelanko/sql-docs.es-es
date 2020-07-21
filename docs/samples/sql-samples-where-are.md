@@ -1,6 +1,6 @@
 ---
 title: Ejemplos de Microsoft SQL | Microsoft Docs
-description: Documentación para las bases de datos y vínculos a ejemplos de productos de Microsoft SQL.
+description: Documentación de las bases de datos de ejemplo y vínculos a ejemplos de productos de Microsoft SQL.
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,50 +9,47 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 05b611f55d30f177ecc6f44f472430203a739d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104302"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718588"
 ---
 # <a name="sql-samples"></a>Ejemplos de SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Ubicaciones de las bases de datos de ejemplo y ejemplos de código para productos de Microsoft SQL.
 
 ## <a name="sql-samples-repository"></a>Repositorio de ejemplos de SQL
 
-Ejemplos de código para productos de SQL se encuentran en el [Microsoft SQL Server Samples](https://github.com/microsoft/sql-server-samples) repositorio de GitHub. Cada ejemplo incluye un archivo Léame que explica cómo ejecutar y usar el ejemplo. El archivo Léame principal para el repositorio de ejemplos explica cómo contribuir. 
+Los ejemplos de código de los productos SQL se encuentran en el repositorio de github de [ejemplos de Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) . Cada ejemplo incluye un archivo Léame que explica cómo ejecutar y utilizar el ejemplo. En el archivo Léame principal del repositorio de ejemplos se explica cómo contribuir. 
 
-Los ejemplos y plantillas tienen licencia bajo la licencia MIT. Consulte el archivo License.txt que se encuentra en la raíz.
+Todos los ejemplos y plantillas tienen licencia en virtud de la licencia MIT. Vea el archivo de license.txt en la raíz.
 
-Preguntas de correo electrónico: sqlserversamples@microsoft.com.
-
-
-## <a name="wideworldimporters-sample-database"></a>Base de datos de ejemplo de WideWorldImporters
-
-WideWorldImporters (WWI) es una base de datos de ejemplo que muestra el diseño de base de datos mediante las características actuales, herramientas y técnicas de diseño. Descargas de WideWorldImporters incluyen una OLTP y una base de datos OLAP que se crean para ejecutarse en SQL Server 2016 y versiones posteriores. 
-
-Descarga de la base de datos y ejemplos se encuentran en el [ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples) repositorio de GitHub.
+Envíe preguntas por correo electrónico a: sqlserversamples@microsoft.com .
 
 
-- [Ejemplos y del archivo Léame de WideWorldImporters](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) en GitHub.
+## <a name="wideworldimporters-sample-database"></a>Base de datos de ejemplo WideWorldImporters
 
-- [Tutorial: Cargar WideWorldImportersDW a Azure SQL Data Warehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+WideWorldImporters (WWI) es una base de datos de ejemplo que muestra el diseño de bases de datos mediante las características, las herramientas y las técnicas de diseño actuales. Las descargas de WideWorldImporters incluyen un OLTP y una base de datos OLAP que se han creado para ejecutarse en SQL Server 2016 y versiones posteriores. 
+
+Las descargas y los ejemplos de bases de datos se encuentran en el repositorio de github de [ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples) .
+
+
+- [Léame y ejemplos de WideWorldImporters](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) en github.
+
+- [Tutorial: carga de WideWorldImportersDW en Azure SQL Data Warehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>Base de datos de ejemplo AdventureWorks
 
-Las bases de datos de AdventureWorks están disponibles en el [ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples) repositorio de GitHub.  Las siguientes ubicaciones de descarga incluyen todas las distintas versiones de AdventureWorks.
+Las bases de datos de AdventureWorks se pueden encontrar en la página de [instalación](adventureworks-install-configure.md) o directamente en el repositorio de github de [ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples) . 
 
-- [Descargas de AdventureWorks para SQL Server 2014 y versiones posteriores](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Incluye los archivos .bak para las versiones 2012.
-- [Descargas de AdventureWorks para SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
-- [Descargas de AdventureWorks para SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
 
-## <a name="azure-samples-and-templates"></a>Plantillas y ejemplos de Azure
-Hay una serie de ejemplos de código de Microsoft Azure y ejemplos disponibles en Github en. NET, Java, Python, Node.js, PHP y Ruby. Además, Azure Resource Manager permite aprovisionar las aplicaciones mediante una plantilla declarativa. En una única plantilla, puede implementar varios servicios junto con sus dependencias. Utilice la misma plantilla de forma repetida para implementar su aplicación en cada fase del ciclo de vida de aplicación.
+## <a name="azure-samples-and-templates"></a>Ejemplos y plantillas de Azure
+Hay una serie de ejemplos de código de Microsoft Azure y ejemplos disponibles en github en .NET, Java, Python, Node.js, PHP y Ruby. Además, Azure Resource Manager le permite aprovisionar sus aplicaciones mediante una plantilla declarativa. En una plantilla, puede implementar varios servicios junto con sus dependencias. Use la misma plantilla para implementar su aplicación de forma repetida durante cada fase de su ciclo de vida.
 
 - [Ejemplos de Azure](https://github.com/Azure-Samples)
 - [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/resources/templates/)

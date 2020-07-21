@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c4c798c431b2eb71354dd803bd5701df0b6f9cad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 885a7adaa3d88dd8534abca1378d7b10c6dece25
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85701169"
 ---
 # <a name="z-geography-data-type"></a>Z (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El valor (elevación) Z de la instancia. La semántica del valor de elevación la define el usuario.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68120656"
 .Z  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la instancia de **geography** no es un punto, se asignará el valor null a esta propiedad, así como a cualquier instancia de **Point** para la que no se establezca dicha propiedad.  
   
  Esta propiedad es de solo lectura.  

@@ -1,5 +1,6 @@
 ---
 title: Credenciales (motor de base de datos) | Microsoft Docs
+description: Obtenga información sobre las credenciales en SQL Server. Familiarícese con la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
@@ -22,16 +23,16 @@ ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a73728345ba30fefe755bbab53c185804080dc3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f6be70be8c7f2d03c55c5df53fd9f27a32b35fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094920"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005662"
 ---
 # <a name="credentials-database-engine"></a>Credenciales (motor de base de datos)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Una credencial es un registro que contiene la información de autenticación (credenciales) necesaria para conectarse a un recurso situado fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta información la utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]internamente. La mayoría de las credenciales incluyen un nombre de usuario y una contraseña de Windows.  
   

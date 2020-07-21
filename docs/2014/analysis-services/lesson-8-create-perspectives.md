@@ -1,5 +1,5 @@
 ---
-title: 'Lección 9: Creación de perspectivas | Microsoft Docs'
+title: 'Lección 9: crear perspectivas | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd395e605bfde9d34ed0dc4f16060812464efb56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20601a1ece7707e8f798907f21ee5ee7110fe2fe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078252"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542227"
 ---
 # <a name="lesson-9-create-perspectives"></a>Lección 9: Crear perspectivas
   En esta lección, creará una perspectiva Venta por Internet. Una perspectiva define un subconjunto visible de un modelo que ofrece puntos de vista centrados, específicos del negocio o específicos de la aplicación. Cuando un usuario se conecta a un modelo utilizando una perspectiva, solo ve los objetos del modelo (tablas, columnas, medidas, jerarquías y KPI) como campos definidos en esa perspectiva.  
@@ -29,19 +28,19 @@ ms.locfileid: "66078252"
  Tiempo estimado para completar esta lección: **5 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 8: Creación de indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md).  
+ Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 8: Crear indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md).  
   
 ## <a name="create-perspectives"></a>Crear perspectivas  
   
 #### <a name="to-create-an-internet-sales-perspective"></a>Para crear una perspectiva Venta por Internet  
   
-1.  En el Diseñador de modelos, haga clic en el **modelo** menú y, a continuación, haga clic en **perspectivas**.  
+1.  En el diseñador de modelos, haga clic en el menú **modelo** y, a continuación, en **perspectivas**.  
   
 2.  En el cuadro de diálogo **Perspectivas** , haga clic en **Nueva perspectiva**.  
   
-3.  Para cambiar el nombre de la perspectiva, haga doble clic en el **nueva perspectiva 1** encabezado de columna y, a continuación, escriba `Internet Sales`.  
+3.  Para cambiar el nombre de la perspectiva, haga doble clic en el encabezado de columna **nueva perspectiva 1** y, a continuación, escriba `Internet Sales` .  
   
-4.  En **campos**, seleccione las tablas siguientes **fecha**, **Geography**, **producto**, **Product Category**, **Subcategoría de producto**, y `Internet Sales`.  
+4.  En **campos**, seleccione las tablas siguientes: **Date**, **Geography**, **Product**, **Product Category**, **Product**subcategory y `Internet Sales` .  
   
      Tenga en cuenta que excluyó la tabla Cliente y todas sus columnas de esta perspectiva. Más adelante, en la lección 12, utilizará la característica Analizar en Excel para probar esta perspectiva. La lista de campos de tabla dinámica de Excel incluirá todas las tablas, excepto la tabla Cliente.  
   

@@ -1,5 +1,6 @@
 ---
 title: MSSQLSERVER_18456 | Microsoft Docs
+description: Se ha rechazado un intento de conexión debido a un error con una contraseña o un nombre de usuario incorrectos en SQL Server. Vea una explicación del error y las posibles resoluciones.
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -11,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3e1ad2ab6cda565e59268b063494c17941a81e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137092"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780633"
 ---
-# <a name="mssqlserver18456"></a>MSSQLSERVER_18456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|18456|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|18456|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|LOGON_FAILED|  
 |Texto del mensaje|Error de inicio de sesión del usuario '%.*ls'.%.\*ls|  
@@ -73,6 +74,7 @@ Para aumentar la seguridad, en el mensaje de error que se devuelve al cliente se
 |12|El inicio de sesión es válido, pero se ha producido un error de acceso al servidor.|  
 |18|Se debe cambiar la contraseña.|  
 |38, 46|No se pudo encontrar la base de datos solicitada por el usuario.|
+|58| Cuando SQL Server está establecido para usar solo la autenticación de Windows y un cliente intenta iniciar sesión con la autenticación de SQL. Otro motivo es que los SID no coincidan.|
 |102 - 111|Error de AAD.|
 |122 - 124|Error debido a que el nombre de usuario o la contraseña están vacíos.|
 |126|La base de datos solicitada por el usuario no existe.|
@@ -93,7 +95,7 @@ Para solucionar este problema, incluya **TRUSTED_CONNECTION = TRUE** en la caden
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo, el estado de error de autenticación es 8. Esto indica que la contraseña no es correcta.  
   
-|date|Source|de mensaje|  
+|Date|Source|Message|  
 |--------|----------|-----------|  
 |2007-12-05 20:12:56.34|Inicio de sesión|Error: 18456, Gravedad: 14, Estado: 8.|  
 |2007-12-05 20:12:56.34|Inicio de sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [CLIENT: <ip address>]|  

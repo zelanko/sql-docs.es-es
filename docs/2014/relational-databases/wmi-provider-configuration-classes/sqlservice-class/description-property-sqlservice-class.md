@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 78efcf489189f328408ffc11452b86015e9a1f43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd244f75b7b8829d2a0cd894f637db2e79144f42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63225238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995684"
 ---
 # <a name="description-property-sqlservice-class"></a>Propiedad Description (clase SqlService)
   Obtiene una descripción del servicio al que se hace referencia.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

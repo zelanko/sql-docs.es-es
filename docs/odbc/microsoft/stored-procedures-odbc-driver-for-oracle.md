@@ -1,5 +1,5 @@
 ---
-title: (Controlador ODBC para Oracle) de procedimientos almacenados | Microsoft Docs
+title: Procedimientos almacenados (controlador ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cef0c3737dbca640d6b842fc495c14c925c35723
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ed0dadb81f31492f0dca8801a8ba925a81eacdb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948818"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299185"
 ---
 # <a name="stored-procedures-odbc-driver-for-oracle"></a>Procedimientos almacenados (controlador ODBC para Oracle)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
- Esta sección contiene los siguientes temas:  
+ En esta sección se incluyen los siguientes temas:  
   
 -   [Limitaciones de parámetro de procedimiento almacenado](../../odbc/microsoft/stored-procedure-parameter-limitations.md)  
   

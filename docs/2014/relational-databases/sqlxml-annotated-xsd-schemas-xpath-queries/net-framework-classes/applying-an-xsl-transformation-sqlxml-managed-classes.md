@@ -12,20 +12,19 @@ helpviewer_keywords:
 - SQLXML Managed Classes, applying XSL transformations
 - XSL Transformations [SQLXML]
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 381d22e666fb8d490013004d00f5354b972e5215
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062908"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicar una transformación XSL (clases administradas de SQLXML)
   En este ejemplo se ejecuta una consulta SQL en la base de datos AdventureWorks. La transformación XSL se aplica al resultado de la consulta para generar una tabla de dos columnas con los nombres y los apellidos de los empleados.  
   
- El xslpath, propiedad del objeto SqlXmlCommand se utiliza para especificar el archivo XSL y su ruta de acceso de directorio.  
+ La propiedad XslPath del objeto SqlXmlCommand se usa para especificar el archivo XSL y su ruta de acceso de directorio.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

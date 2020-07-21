@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos (SSAS Tabular) | Microsoft Docs
+title: Orígenes de datos (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d686d8100e30d7608e8d90f135022bdf46785723
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082332"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528961"
 ---
 # <a name="data-sources-ssas-tabular"></a>Orígenes de datos (SSAS tabular)
   Los orígenes de datos proporcionan los datos que se van a incluir en una solución de modelo tabular. Puede importar en el modelo datos procedentes de una gran variedad de orígenes: bases de datos relacionales; fuentes de distribución de datos; orígenes de datos multidimensionales, como los cubos de Analysis Services; y archivos de texto, como los libros de Microsoft Excel. En los temas de esta sección hallará información sobre los tipos de orígenes de datos desde los que puede importar y los tipos de datos que puede importar; además, encontrará tareas que describen cómo importar datos desde esos orígenes.  

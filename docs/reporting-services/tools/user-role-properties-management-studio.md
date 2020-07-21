@@ -11,10 +11,10 @@ ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65575776"
 ---
 # <a name="user-role-properties-management-studio"></a>Propiedades de rol de usuario (Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "65575776"
  **Descripción**  
  Muestra una descripción de la definición de roles. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], esta descripción solo resulta visible en esta página. En el Administrador de informes, esta descripción ayuda a los usuarios a decidir si desean usar el rol en una asignación de roles.  
   
- **Tarea**  
+ **Task**  
  Muestra todas las tareas de nivel de elemento que pueden seleccionarse para esta definición de roles. Puede agregar o quitar elementos de la lista de tareas predefinidas para definir el modo en que los usuarios tienen acceso a un elemento dado a través de ese rol. No puede crear nuevas tareas y no puede modificar tareas existentes. La lista de tareas de una definición de roles solo aparece en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Descripción de la tarea**  

@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188827"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058703"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Wendows que ejecuta tareas admenistrativas programadas, denomenadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **En este tema**  
   
--   [Ventajas del Agente SQL Server](#Benefits)  
+-   [Ventajas de Agente SQL Server](#Benefits)  
   
 -   [Componentes del Agente SQL Server](#Components)  
   
 -   [Seguridad en la administración del Agente SQL Server](#Security)  
   
-##  <a name="Benefits"></a> Ventajas del Agente SQL Server  
+##  <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Ventajas de Agente SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar información de los trabajos. Los trabajos contienen uno o más pasos. Cada paso contiene su propia tarea; por ejemplo, realizar una copia de seguridad de una base de datos.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar un trabajo según una programación, como respuesta a un evento específico o a petición. Por ejemplo, si desea realizar una copia de seguridad de todos los servidores de la organización todos los días entre semana después del horario de trabajo, puede automatizar esta tarea. Programe la copia de seguridad para que se ejecute después de las 22:00 h de lunes a viernes; si la copia de seguridad encuentra un problema, el Agente SQL Server puede registrar el evento y notificárselo.  
@@ -39,11 +38,11 @@ ms.locfileid: "68188827"
 > [!NOTE]  
 >  El servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está deshabilitado de manera predeterminada cuando se instala [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , a menos que el usuario elija explícitamente iniciar automáticamente el servicio.  
   
-##  <a name="Components"></a> Componentes del Agente SQL Server  
+##  <a name="sql-server-agent-components"></a><a name="Components"></a>Componentes de Agente SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea los siguientes componentes para definir las tareas que se van a realizar, cuándo se van a llevar a cabo y cómo se va a informar de si se han realizado correctamente o no.  
   
-### <a name="jobs"></a>trabajos  
- Un *trabajo* es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice los trabajos para definir tareas administrativas de manera que se ejecuten una o más veces, y se pueda supervisar si se realizan o no correctamente. Un trabajo se puede ejecutar en un servidor local o en varios servidores remotos.  
+### <a name="jobs"></a>Trabajos  
+ Un *trabajo* es una serie especificada de acciones que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el agente. Use trabajos para definir una tarea administrativa que se puede ejecutar una o varias veces y supervisar para detectar si lo hace correctamente o con errores. Un trabajo se puede ejecutar en un servidor local o en varios servidores remotos.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están ejecutando en el momento de un evento de conmutación por error en una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se reanudan después de la conmutación por error a otro nodo de clúster de conmutación por error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los trabajos del Agente que se están ejecutando en el momento que se pausa un nodo de Hyper-V no se reanudan si la pausa origina una conmutación por error a otro nodo. Los trabajos que empiezan pero no se finalizan como consecuencia de un evento de conmutación por error se registran como iniciados, pero no muestran entradas de registro adicionales para que indiquen finalización o error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran como nunca finalizados.  
@@ -61,7 +60,7 @@ ms.locfileid: "68188827"
  Cada paso se ejecuta en un contexto de seguridad específico. En el caso de los pasos de trabajo que utilizan [!INCLUDE[tsql](../../includes/tsql-md.md)], use la instrucción EXECUTE AS para establecer el contexto de seguridad para éstos. Para los demás tipos de pasos de trabajo, utilice una cuenta de proxy para establecer el contexto de seguridad.  
   
 ### <a name="schedules"></a>Programaciones  
- Una *programación* especifica cuándo se ejecuta un trabajo. Se puede ejecutar más de un trabajo en la misma programación y se puede aplicar más de una programación al mismo trabajo. Una programación puede definir las condiciones siguientes del momento en el que se ejecuta un trabajo:  
+ Una *programación* especifica cuándo se ejecuta un trabajo. Se puede ejecutar más de un trabajo en la misma programación y se puede aplicar más de una programación al mismo trabajo. Una programación puede definir las condiciones siguientes para el momento en que se ejecuta un trabajo:  
   
 -   Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -69,7 +68,7 @@ ms.locfileid: "68188827"
   
 -   Una vez, a una hora y una fecha específicas.  
   
--   Periódicamente.  
+-   Según una programación periódica.  
   
  Para obtener más información, vea [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md).  
   
@@ -88,9 +87,9 @@ ms.locfileid: "68188827"
   
 -   Notificar a uno o varios operadores  
   
--   Ejecutar un trabajo  
+-   Ejecución de un trabajo  
   
- Para obtener más información, consulte [Alertas](alerts.md).  
+ Para más información, consulte [Alertas](alerts.md).  
   
 ### <a name="operators"></a>Operadores  
  Un *operador* define información de contacto para las personas responsables del mantenimiento de una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En algunas compañías, las responsabilidades de operador están asignadas a una sola persona. En compañías con varios servidores, muchas personas comparten las responsabilidades de operador. Un operador no contiene información de seguridad y no define una entidad de seguridad.  
@@ -109,24 +108,24 @@ ms.locfileid: "68188827"
 > [!IMPORTANT]  
 >  Las opciones Buscapersonas y **net send** se quitarán del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
- Para enviar a los operadores notificaciones por correo electrónico o buscapersonas, deberá configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos. Para más información, consulte [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md).  
+ Para enviar a los operadores notificaciones por correo electrónico o buscapersonas, deberá configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos. Para obtener más información, consulte [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md).  
   
- Puede definir un operador como alias de un grupo de personas. De esta manera, todos los miembros de este alias pueden recibir notificaciones al mismo tiempo. Para obtener más información, consulte [Operadores](operators.md).  
+ Puede definir un operador como alias de un grupo de personas. De esta manera, todos los miembros de este alias pueden recibir notificaciones al mismo tiempo. Para obtener más información, vea [Operadores (Guía de programación de C#)](operators.md).  
   
-##  <a name="Security"></a> Seguridad para la administración del Agente SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Emplea el **SQLAgentUserRole**, **SQLAgentReaderRole**, y **SQLAgentOperatorRole** funciones fijas de base de datos en el **msdb** base de datos para controlar el acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente para los usuarios que no son miembros de la `sysadmin` rol fijo de servidor. Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
+##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Seguridad para la administración de Agente SQL Server  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Usa los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** en la base de datos **msdb** para controlar el acceso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente para los usuarios que no son miembros del `sysadmin` rol fijo de servidor. Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
   
 ### <a name="roles"></a>Roles  
- Los miembros de la **SQLAgentUserRole**, **SQLAgentReaderRole**, y **SQLAgentOperatorRole** funciones fijas de base de datos en **msdb**, y los miembros de la `sysadmin` rol fijo de servidor tiene acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
+ Los miembros de los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** de **msdb**y los miembros del `sysadmin` rol fijo de servidor tienen acceso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsistemas  
  Un subsistema es un objeto predefinido que representa las funciones disponibles para un paso de trabajo. Cada proxy tiene acceso a uno o varios subsistemas. Los subsistemas proporcionan seguridad, ya que delimitan el acceso a las que funciones que están disponibles para el proxy. Cada paso de trabajo se ejecuta en el contexto de un proxy, con la excepción de los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizan el comando EXECUTE AS para establecer el contexto de seguridad.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define los subsistemas incluidos en la tabla siguiente:  
   
-|Nombre del subsistema|Descripción|  
+|Nombre del subsistema|Description|  
 |--------------------|-----------------|  
-|Scripts Microsoft ActiveX|Ejecuta un paso de trabajo de scripts ActiveX.<br /><br /> **\*\* Importante \* \***  subsistema de los scripts de ActiveX se quitará de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|Scripts Microsoft ActiveX|Ejecuta un paso de trabajo de scripts ActiveX.<br /><br /> Importante el subsistema de scripts ActiveX se quitará del agente en una versión futura de ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
 |Sistema operativo (**CmdExec**)|Ejecuta un programa ejecutable.|  
 |PowerShell|Ejecuta un paso de trabajo de scripts de PowerShell.|  
 |Distribuidor de replicación|Ejecuta un paso de trabajo que activa el Agente de distribución de replicación.|  
@@ -144,9 +143,9 @@ ms.locfileid: "68188827"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica las restricciones del subsistema incluso si la entidad de seguridad del proxy tuviera permiso para ejecutar la tarea del paso de trabajo. Por ejemplo, un proxy para un usuario que es miembro del rol fijo de servidor sysadmin no puede ejecutar un paso de trabajo [!INCLUDE[ssIS](../../includes/ssis-md.md)] salvo que el proxy tenga acceso al subsistema de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , aunque el usuario pueda ejecutar paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
 ### <a name="proxies"></a>Servidores proxy  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa servidores proxy para administrar contextos de seguridad. Se puede utilizar un servidor proxy en más de un paso de trabajo. Los miembros de la `sysadmin` rol fijo de servidor puede crear servidores proxy.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa servidores proxy para administrar contextos de seguridad. Se puede utilizar un servidor proxy en más de un paso de trabajo. Los miembros del `sysadmin` rol fijo de servidor pueden crear servidores proxy.  
   
- Cada proxy se corresponde con unas credenciales de seguridad. Cada proxy puede asociarse a un conjunto de subsistemas y un conjunto de inicios de sesión. El proxy solo se puede utilizar con pasos de trabajo que utilizan un subsistema asociado al proxy. Para crear un paso de trabajo que utilice un proxy determinado, el propietario del trabajo debe utilizar un inicio de sesión asociado al proxy o debe ser miembro de un rol con acceso ilimitado a los servidores proxy. Los miembros de la `sysadmin` rol fijo de servidor tiene acceso ilimitado a los servidores proxy. Los miembros de **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** solo pueden utilizar servidores proxy para los que dispongan de acceso específico. Cada usuario que sea miembro de alguno de estos roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso a servidores proxy específicos para poder crear pasos de trabajo que usen esos proxy.  
+ Cada proxy se corresponde con unas credenciales de seguridad. Cada proxy puede asociarse a un conjunto de subsistemas y un conjunto de inicios de sesión. El proxy solo se puede utilizar con pasos de trabajo que utilizan un subsistema asociado al proxy. Para crear un paso de trabajo que utilice un proxy determinado, el propietario del trabajo debe utilizar un inicio de sesión asociado al proxy o debe ser miembro de un rol con acceso ilimitado a los servidores proxy. Los miembros del `sysadmin` rol fijo de servidor tienen acceso ilimitado a los servidores proxy. Los miembros de **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole** solo pueden utilizar servidores proxy para los que dispongan de acceso específico. Cada usuario que sea miembro de alguno de estos roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener acceso a servidores proxy específicos para poder crear pasos de trabajo que usen esos proxy.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Use los pasos siguientes para configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que se automatice la administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -168,7 +167,7 @@ ms.locfileid: "68188827"
 |-|-|  
 |**Descripción**|**Tema**|  
 |Describe cómo configurar el Agente SQL Server.|[Configurar el Agente SQL Server](configure-sql-server-agent.md)|  
-|Describe cómo iniciar, detener y pausar el servicio del Agente SQL Server.|[Iniciar, detener o pausar el servicio del Agente SQL Server](start-stop-or-pause-the-sql-server-agent-service.md)|  
+|Describe cómo iniciar, detener y pausar el servicio del Agente SQL Server.|[Start, Stop, or Pause the SQL Server Agent Service](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Describe las consideraciones para especificar una cuenta para el servicio del Agente SQL Server.|[Seleccionar una cuenta para el servicio Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md)|  
 |Describe cómo usar el registro de errores del Agente SQL Server.|[Registro de errores del Agente SQL Server](sql-server-agent-error-log.md)|  
 |||  
@@ -176,7 +175,7 @@ ms.locfileid: "68188827"
 |Describe el Asistente para planes de mantenimiento, que es una utilidad que puede ayudarle a crear trabajos, alertas y operadores para automatizar la administración de una instancia de SQL Server.|[Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Describe cómo automatizar tareas administrativas mediante el Agente SQL Server.|[Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configuración de área expuesta](../../relational-databases/security/surface-area-configuration.md)  
   
   

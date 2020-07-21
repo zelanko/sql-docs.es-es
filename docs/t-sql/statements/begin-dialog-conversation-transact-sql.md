@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211373"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380848"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Inicia un diálogo de un servicio a otro servicio. Un diálogo es una conversación que proporciona una función de mensajería exactamente una vez por orden entre dos servicios.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "70211373"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
@@ -61,7 +61,9 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **@** _dialog_handle_  
  Se trata de una variable utilizada para almacenar el identificador de diálogo generado por el sistema para el nuevo diálogo devuelto por la instrucción BEGIN DIALOG CONVERSATION. La variable debe ser de tipo **uniqueidentifier**.  
   
@@ -106,7 +108,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Los mensajes intercambiados con servicios en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se cifran en ningún caso. No obstante, la clave maestra de la base de datos y los certificados de cifrado siguen siendo necesarios para las conversaciones que utilizan el cifrado si los servicios para la conversación están en distintas bases de datos. Esto permite que las conversaciones continúen en caso de que una de las bases de datos se mueva a otra instancia mientras la conversación está en curso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Todos los mensajes forman parte de una conversación. Por lo tanto, el servicio iniciador debe iniciar una conversación con el servicio de destino antes de enviar un mensaje al servicio de destino. La información especificada en la instrucción BEGIN DIALOG CONVERSATION es similar a la dirección de una carta; [!INCLUDE[ssSB](../../includes/sssb-md.md)] utiliza la información para entregar mensajes al servicio correcto. El servicio especificado en la cláusula TO SERVICE es la dirección a la que se envían los mensajes. El servicio especificado en la cláusula FROM SERVICE es la dirección de retorno utilizada para responder a los mensajes.  
   
  El destino de una conversación no necesita llamar a BEGIN DIALOG CONVERSATION. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea una conversación en la base de datos de destino cuando llega del iniciador el primer mensaje de la conversación.  

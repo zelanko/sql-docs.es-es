@@ -24,14 +24,14 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97aae435e393a5ae876004ecaa29722171679e89
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941657"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634702"
 ---
-# <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
+# <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
@@ -41,11 +41,11 @@ Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ejecute in
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La opción SET SHOWPLAN_XML se establece en tiempo de ejecución, no en tiempo de análisis.
 

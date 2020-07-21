@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a49f56c4e898b0189ce0f8bf5008873e13dc6223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099555"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propiedades del servidor (página de seguridad) - Reporting Services
@@ -37,9 +37,9 @@ ms.locfileid: "66099555"
   
  Al desactivar esta opción, se mitiga una amenaza en la que un usuario malintencionado inicia un ataque por denegación de servicio sobrecargando el servidor de informes con solicitudes `LoadReportDefinition`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Especifique la información de credenciales y conexión para orígenes de datos de informes] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.MD [servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)  
+ [Conectarse a un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Especificar información de credenciales y conexión para los orígenes de datos de informes] (.. /Report-Data/Specify-Credential-and-Connection-Information-for-Report-Data-Sources.MD [servidor de informes en Management Studio ayuda de F1](report-server-in-management-studio-f1-help.md)  
   
   

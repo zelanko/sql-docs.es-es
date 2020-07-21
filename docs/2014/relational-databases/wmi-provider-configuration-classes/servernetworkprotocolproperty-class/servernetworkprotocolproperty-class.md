@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0f5d0261bd1968eb01ce8c394de4aeda1a02a22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056793"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Clase ServerNetworkProtocolProperty
-  El [clase ServerNetworkProtocolProperty] servernetworkprotocolproperty-class.md) representa las propiedades de un protocolo de red de servidor.  
+  La [clase ServerNetworkProtocolProperty] ServerNetworkProtocolProperty-class.md) representa las propiedades de un protocolo de red de servidor.  
   
- Con el servernetworkprotocolproperty de [clase ServerNetworkProtocolProperty]-class.md), puede realizar las siguientes tareas:  
+ Con [clase ServerNetworkProtocolProperty] ServerNetworkProtocolProperty-class.md), puede realizar las siguientes tareas:  
   
 -   Comprobar el protocolo al que pertenece la propiedad actual.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62642911"
   
 -   Establecer marcas para la propiedad actual.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

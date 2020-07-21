@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993059"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928611"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,13 +39,13 @@ $*cursor_offset*: símbolo opcional (entero) que especifica la fila que se va a 
 ## <a name="return-value"></a>Valor devuelto  
 Un valor mixto que devuelve una fila o False.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Cuando se llama al método de captura, el cursor avanza automáticamente. La tabla siguiente contiene la lista de posibles valores de $*fetch_style*.  
   
 |$*fetch_style*|Descripción|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Especifica una matriz indizada por el nombre de columna.|  
-|PDO::FETCH_BOTH|Especifica una matriz indizada por el nombre de columna y el orden basado en 0. Ésta es la opción predeterminada.|  
+|PDO::FETCH_BOTH|Especifica una matriz indizada por el nombre de columna y el orden basado en 0. Este es el valor predeterminado.|  
 |PDO::FETCH_BOUND|Devuelve el valor True y asigna los valores tal y como se especifica en [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md).|  
 |PDO::FETCH_CLASS|Crea una instancia y asigna las columnas a las propiedades con nombre.<br /><br />Llame a [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) antes que al método de captura.|  
 |PDO::FETCH_INTO|Actualiza una instancia de la clase solicitada.<br /><br />Llame a [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) antes que al método de captura.|  
@@ -59,7 +59,7 @@ Si el cursor es desplazable (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL), el método 
   
 |$*cursor_orientation*|Descripción|  
 |--------------------------|---------------|  
-|PDO::FETCH_ORI_NEXT|Recupera la fila siguiente. Ésta es la opción predeterminada.|  
+|PDO::FETCH_ORI_NEXT|Recupera la fila siguiente. Este es el valor predeterminado.|  
 |PDO::FETCH_ORI_PRIOR|Recupera la fila anterior.|  
 |PDO::FETCH_ORI_FIRST|Recupera la primera fila.|  
 |PDO::FETCH_ORI_LAST|Recupera la última fila.|  

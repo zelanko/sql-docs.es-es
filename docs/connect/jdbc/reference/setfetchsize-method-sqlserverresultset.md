@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5052d9830c3df97e8e491c38a3c606bbdfca1919
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974244"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922324"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>Método setFetchSize (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +37,13 @@ public void setFetchSize(int rows)
 #### <a name="parameters"></a>Parámetros  
  *rows*  
   
- Un valor **int** que indica el número de filas que se van a capturar.  
+ Un valor**int** que indica el número de filas que se van a capturar.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setFetchSize se especifica mediante el método setFetchSize de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método setFetchSize especifica este método setFetchSize en la interfaz java.sql.ResultSet.  
   
  Si el tamaño de la captura es cero, el controlador JDBC omite el valor y calcula el tamaño de captura apropiado. El objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) que creó el conjunto de resultados establece el valor predeterminado. El tamaño de la captura puede cambiar en cualquier momento.  
   

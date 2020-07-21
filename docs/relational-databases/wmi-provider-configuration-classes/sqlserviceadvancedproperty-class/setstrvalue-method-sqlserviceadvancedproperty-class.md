@@ -1,6 +1,6 @@
 ---
-title: Método SetStrValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetStrValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a58248999ae44ef71d454bef5e0fbdc9802494c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b7e2ffa75190d8699e0110664dd179ab3f096ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888280"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Método SetStrValue (clase SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Establece el valor de cadena de una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,7 +51,7 @@ object.SetStrValue(StrValue)
 ## <a name="remarks"></a>Comentarios  
  El tipo de valor de la propiedad debe ser *string* para establecer la propiedad en un valor de cadena.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

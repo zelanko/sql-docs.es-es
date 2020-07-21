@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8058c7c31c49935d244726bf9e8ea0ac6cfbe750
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bb321f89c70983855e00b3eec4382c51fce1e16
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914576"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552054"
 ---
-# <a name="mssqlserver2530"></a>MSSQLSERVER_2530
+# <a name="mssqlserver_2530"></a>MSSQLSERVER_2530
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2530|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2530|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_INDEX_IS_OFFLINE|  
 |Texto del mensaje|El índice "%.*ls"" de la tabla "%.\*ls" está deshabilitado.|  
@@ -45,7 +44,7 @@ ms.locfileid: "62914576"
   
 2.  Ejecute de nuevo la instrucción DBCC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar índices y restricciones](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

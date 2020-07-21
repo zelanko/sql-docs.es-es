@@ -1,5 +1,6 @@
 ---
 title: Determinar los permisos efectivos del motor de base de datos | Microsoft Docs
+description: Obtenga información sobre cómo determinar quién tiene permisos para varios objetos en el motor de base de datos de SQL Server, incluidos los sistemas de permisos actuales y anteriores.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995629"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005625"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En este artículo se describe cómo determinar quién tiene permisos para varios objetos en el motor de base de datos de SQL Server. SQL Server implementa dos sistemas de permisos para el motor de base de datos. Un sistema anterior de roles fijos tiene permisos preconfigurados. A partir de SQL Server 2005 está disponible un sistema más flexible y preciso. (La información de este artículo también es aplicable a SQL Server, a partir de la versión 2005. Ciertos tipos de permisos no están disponibles en algunas versiones de SQL Server).
 
@@ -92,7 +93,7 @@ Este sistema es flexible, lo que significa que puede ser complicado si los usuar
 
 Los permisos se pueden conceder en el nivel de servidor, el nivel de base de datos, el nivel de esquema o el nivel de objeto, etc. Hay 26 niveles (denominados clases). La lista completa de clases en orden alfabético es: `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER`, `XML SCHEMA COLLECTION`. (Algunas clases no están disponibles en algunos tipos de servidores SQL Server). Para proporcionar información completa sobre cada clase se requiere una consulta diferente.
 
-### <a name="principals"></a>Entidades de seguridad
+### <a name="principals"></a>Principals
 
 Los permisos se conceden a entidades de seguridad. Las entidades de seguridad pueden ser roles de servidor, inicios de sesión, roles de base de datos o usuarios. Los inicios de sesión pueden representar grupos de Windows que incluyen muchos usuarios de Windows. Dado que los grupos de Windows no se mantienen por SQL Server, SQL Server no siempre sabe quién es miembro de un grupo de Windows. Cuando un usuario de Windows se conecta a SQL Server, el paquete de inicio de sesión contiene los tokens de pertenencia a grupos de Windows para el usuario.
 
@@ -156,5 +157,5 @@ Para obtener detalles de la sintaxis, vea [HAS_PERMS_BY_NAME](../../../t-sql/fun
 ## <a name="see-also"></a>Ver también:
 
 [Introducción a los permisos de los motores de bases de datos](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Tutorial: Introducción al motor de base de datos](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[Tutorial: Introducción al motor de base de datos](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 

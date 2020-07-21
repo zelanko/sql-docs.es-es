@@ -1,6 +1,6 @@
 ---
-title: (Clase ServerNetworkProtocolIpAddress) de la propiedad Enabled | Microsoft Docs
-ms.custom: ''
+title: Propiedad Enabled (ServerNetworkProtocolIpAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6562c4985edd9379a4ca330772e56bb566c67a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55dec08596dab429fad1b283b37697ca1c4896d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911925"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888691"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Propiedad Enabled (clase ServerNetworkProtocolIpAddress)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene la propiedad booleana que especifica si una dirección IP está habilitada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.Enabled [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor booleano que especifica si la dirección IP está habilitada: **true** si la dirección IP está habilitada; en caso contrario, **false** .  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,10 +1,8 @@
 ---
-title: TestServer (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TestServer (DTA, elemento)
+description: En la utilidad DTA, el elemento TestServer especifica el servidor de prueba que se va a utilizar al optimizar un servidor de producción.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 784275fe53edd3e0c7068927c4af299de3d304d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 6cba5afd8d53396e3e35012d132f95730a8f3b75
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105934"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151506"
 ---
 # <a name="testserver-element-dta"></a>TestServer (DTA, elemento)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica el servidor de prueba que se va a utilizar al optimizar un servidor de producción.  
+
+Especifica el servidor de prueba que se va a utilizar al optimizar un servidor de producción.  
   
 ## <a name="syntax"></a>Sintaxis  
   

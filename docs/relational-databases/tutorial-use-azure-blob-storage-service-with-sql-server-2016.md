@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016 | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016'
+ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
@@ -14,16 +14,16 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ea8d28fafe8b4812b3e2cfd55c03640e46cd7ab2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4143785a4789dd2f9dd2510b96bcc4de3a21c82e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906963"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753771"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 Bienvenido al tutorial del servicio Trabajar con SQL Server 2016 en Microsoft Azure Blob Storage. Este tutorial le ayudará a saber cómo usar el servicio Microsoft Azure Blob Storage para archivos de datos de SQL Server y copias de seguridad de SQL Server.  
   
 La compatibilidad de integración de SQL Server para el servicio Microsoft Azure Blob Storage comenzó como una mejora de SQL Server 2012 Service Pack 1 CU2 y se ha mejorado aún más con SQL Server 2014 y SQL Server 2016. Para obtener información general sobre la funcionalidad y las ventajas de usar esta característica, consulte [Archivos de datos de SQL Server en Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Para obtener una demostración en vivo, consulte [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Demostración de restauración a un momento dado).  
@@ -35,7 +35,7 @@ En este tutorial se incluyen varias secciones en las que aprenderá a trabajar c
 Para completar este tutorial, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL. Para usar este tutorial, necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS), acceso a una instancia de SQL Server local, acceso a una máquina virtual de Azure (VM) que ejecute SQL Server 2016 y una base de datos AdventureWorks2016. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 
 - Obtenga una [cuenta de Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratis.
-- Cree una [cuenta de Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Cree una [cuenta de almacenamiento de Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Aprovisione una [máquina virtual de Azure que ejecute SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/).
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -53,7 +53,7 @@ Una firma de acceso compartido es un URI que concede derechos de acceso restring
   
 Puede crear una directiva de acceso y una firma de acceso compartido mediante Azure PowerShell, el SDK Azure Storage, la API de REST de Azure o una utilidad de terceros. Este tutorial muestra cómo usar un script de PowerShell de Azure para completar esta tarea. El script usa el modelo de implementación del Administrador de recursos y crea los siguientes  recursos nuevos  
   
--   Grupo de recursos   
+-   Resource group   
 -   Cuenta de almacenamiento  
 -   Contenedor de blobs de Azure   
 -   Directiva SAS    
@@ -481,10 +481,10 @@ Para eliminar el grupo de recursos, ejecute el siguiente código de PowerShell:
 ## <a name="see-also"></a>Consulte también
 
 [Archivos de datos de SQL Server en Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Copias de seguridad de instantáneas de archivo para archivos de base de datos en Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Copia de seguridad en URL de SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Crear contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[Creación de un contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Establecer lista de control de acceso de contenedor](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx) (Obtención de ACL de contenedor)
 [Credenciales &#40;motor de base de datos&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  

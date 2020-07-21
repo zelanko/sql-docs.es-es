@@ -1,11 +1,7 @@
 ---
-title: Configuración del proyecto de base de datos | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Configuración del proyecto de base de datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
@@ -40,14 +36,19 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3a57f52df4dced4f110135cce1ff30346cc1ebb0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912854"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241682"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
+
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  
   
 -   [Configuración del proyecto](#bkmk_proj_settings)  
@@ -80,7 +81,7 @@ Utilice la configuración del proyecto de base de datos para controlar aspectos 
   
 3.  Haga clic en la ficha **Configuración del proyecto** . Ahora puede configurar las propiedades generales de las propiedades del proyecto de base de datos. Tenga en cuenta la disponibilidad de las diversas pestañas (que representan distintas categorías) en el panel de la izquierda.  
   
-## <a name="bkmk_proj_settings"></a>Configuración del proyecto  
+## <a name="project-settings"></a><a name="bkmk_proj_settings"></a>Configuración del proyecto  
 Los valores de configuración de la siguiente tabla se aplican a todas las configuraciones de este proyecto de base de datos.  
   
 |Campo|Valor predeterminado|Descripción|  
@@ -94,9 +95,9 @@ Los valores de configuración de la siguiente tabla se aplican a todas las confi
 |Esquema predeterminado|dbo|Especifica el esquema predeterminado en el que se crean tanto los objetos SQLCLR como los objetos Transact\-SQL. Si desea invalidar este valor, especifique el esquema directamente en los objetos."|  
 |Incluir nombre de esquema en nombre de archivo|no|Especifica si los nombres de archivo incluyen el esquema como prefijo (por ejemplo, dbo.Products.table.sql). Si se desactiva esta casilla, los nombres de archivo para los objetos adoptan el formato nombreDeObjeto.tipoDeObjeto.sql (por ejemplo, Products.table.sql).|  
 |Validar el uso de mayúsculas y minúsculas en identificadores|sí|Especifica si se validará el uso de mayúsculas y minúsculas en identificadores en los objetos SQL del proyecto durante la compilación del proyecto. Esta opción se aplica a los proyectos de base de datos que especifican una intercalación de la base de datos que distingue mayúsculas de minúsculas.|  
-|Configuración de base de datos|Configuración predeterminada basada en la configuración estándar para una base de datos|Entre las configuraciones que se pueden especificar se incluye el método de intercalación y el nivel de una base de datos de SQL Server.|  
+|Database Settings|Configuración predeterminada basada en la configuración estándar para una base de datos|Entre las configuraciones que se pueden especificar se incluye el método de intercalación y el nivel de una base de datos de SQL Server.|  
   
-## <a name="bkmk_evf"></a>Comprobación extendida de Transact-SQL  
+## <a name="extended-transact-sql-verification"></a><a name="bkmk_evf"></a>Comprobación extendida de Transact-SQL  
   
 > [!IMPORTANT]  
 > La función Comprobación de Transact-SQL extendida se eliminará de la próxima versión de SQL Server Data Tools y la próxima versión principal de Visual Studio.  
@@ -116,7 +117,7 @@ Las características que se basan en la configuración de la instancia o la base
   
 -   FileTables  
   
--   Seguimiento de los cambios  
+-   Seguimiento de cambios  
   
 -   Funciones Rowset - OPENROWSET, OPENQUERY, OPENDATASOURCE  
   
@@ -150,17 +151,17 @@ La característica de comprobación extendida puede usarse también al desarroll
   
 2.  En **Propiedades**, cambie la propiedad **Extended T-SQL Verification** (Comprobación extendida de T-SQL) a **False**.  
   
-![Propiedades de archivo](../ssdt/media/ssdt-evf.gif "Propiedades de archivo")  
+![Propiedades del archivo](../ssdt/media/ssdt-evf.gif "Propiedades del archivo")  
   
 ### <a name="special-considerations-for-collations"></a>Consideraciones especiales para las intercalaciones  
 Para obtener más información acerca de las intercalaciones en las bases de datos parcialmente independientes, vea [Intercalaciones en bases de datos independientes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
   
-## <a name="bkmk_sqlclr"></a>SQLCLR  
+## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
 Para obtener información sobre las opciones de Ensamblado, vea [Cuadro de diálogo Información del ensamblado](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
   
 Para obtener más información sobre la firma, vea la sección **Firma de ensamblados** del tema [Página Firma, Diseñador de proyectos](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
   
-## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR y Compilación de SQLCLR  
+## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR y Compilación de SQLCLR  
 Las páginas de propiedades **SQLCLR** y **Compilación de SQLCLR** contienen muchas configuraciones para usar objetos CLR de SQL en el proyecto. En concreto, la página de propiedades **SQLCLR** tiene una configuración de nivel de permisos para establecer permisos en el ensamblado SQLCLR. También tiene una configuración “Generar DDL” para controlar si se genera el archivo DDL para los objetos SQLCLR que se han agregado al proyecto. La página de propiedades **Compilación de SQLCLR** contiene todas las opciones de compilador que puede establecer para configurar la compilación de código SQLCLR en el proyecto.  
   
 La página de propiedades **Compilación de SQLCLR** contiene configuraciones de compilación avanzadas para compilar objetos CLR de SQL. Se ofrecen distintas opciones según el lenguaje (VB o C#) que se vaya a utilizar para codificar los objetos CLR de SQL.  
@@ -170,14 +171,14 @@ La página de propiedades **Compilación de SQLCLR** contiene configuraciones de
 2.  Si el objeto se ha escrito en VB, puede elegir VB en primer lugar en la lista desplegable **Lenguaje** y, a continuación, hacer clic en el botón **Avanzadas** . Podrá encontrar descripciones de las opciones de VB en [Configuración de compilador avanzada (Cuadro de diálogo, Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
   
 
-## <a name="bkmk_build"></a>Compilación  
+## <a name="build"></a><a name="bkmk_build"></a>Compilación  
 Puede elegir una configuración de compilación para cada proyecto de base de datos de la solución. De forma predeterminada, existe una sola configuración, pero puede agregar configuraciones personalizadas. Puede optar por esta opción si desea, por ejemplo, una configuración personalizada en la que siempre elimina y vuelve a crear la base de datos. En soluciones que contienen distintos tipos de proyecto, puede crear una configuración de solución personalizada que contenga una configuración de compilación determinada para cada proyecto.  
   
 #### <a name="to-specify-a-build-configuration-for-a-solution"></a>Para especificar una configuración de compilación para una solución  
   
 1.  En el **Explorador de soluciones**, haga clic en el nodo de solución para el que desea especificar una configuración de compilación.  
   
-2.  En el menú **Compilar** , haga clic en **Administrador de configuración**. Aparecerá el cuadro de diálogo **Administrador de configuración** .  
+2.  En el menú **Compilar**, haga clic en **Administrador de configuración**. Aparecerá el cuadro de diálogo **Administrador de configuración**.  
   
     Especifique los valores de configuración que vaya a utilizar para cada proyecto de la solución.  
   
@@ -196,14 +197,14 @@ Los valores de configuración de la siguiente tabla se aplican a todas las confi
 |Tratar advertencias de Transact\-SQL como errores|No|Especifica si una advertencia de Transact\-SQL debe provocar la cancelación de los procesos de compilación e implementación. Si se desactiva esta casilla, aparecen mensajes de advertencia, pero el proceso de compilación e implementación continúa. Esta configuración es específica del proyecto, no del usuario, y se almacena en el archivo .sqlproj.|  
 |Suprimir las advertencias de Transact\-SQL|En blanco|Especifica una lista de números de advertencia, separados por coma o punto y coma, que identifican las advertencias que se suprimen.<br /><br />Las advertencias suprimidas no aparecen en la ventana **Lista de errores** ni afectan a la correcta compilación, incluso cuando se activa la casilla **Tratar advertencias de Transact\-SQL como errores**.|  
   
-## <a name="bkmk_sqlcmd_variables"></a>Variables SQLCMD  
+## <a name="sqlcmd-variables"></a><a name="bkmk_sqlcmd_variables"></a>Variables SQLCMD  
 En los proyectos de base de datos de SQL Server puede utilizar variables SQLCMD para proporcionar sustitución dinámica que se usará con fines de depuración o publicación. Tiene que especificar los nombres y los valores de las variables, y durante la compilación se sustituirán los valores. Si no hay ningún valor local, se usará el valor predeterminado. Si estas variables se especifican en las propiedades del proyecto, se ofrecerán automáticamente en la publicación y se almacenarán en los perfiles de publicación. Puede insertar los valores de proyecto de las variables en la publicación mediante el botón Cargar valores.  
   
 Asegúrese de especificar las variables adecuadas en las propiedades del proyecto, ya que estas variables no se validan con ningún script del proyecto ni se rellenan automáticamente.  
   
 Además, la publicación desde la línea de comandos le permite invalidar estos valores en la línea de comandos o mediante un perfil.  
   
-## <a name="bkmk_build_events"></a>Eventos de compilación  
+## <a name="build-events"></a><a name="bkmk_build_events"></a>Eventos de compilación  
 Puede usar estos valores para especificar una línea de comandos que se debe ejecutar antes de que se inicie la operación de compilación y otra línea de comandos que se debe ejecutar una vez finalizada dicha operación.  
   
 |Campo|Valor predeterminado|Descripción|  
@@ -212,7 +213,7 @@ Puede usar estos valores para especificar una línea de comandos que se debe eje
 |Línea de comandos del evento posterior a la compilación|None|Especifica la línea de comandos que se ejecutará después de que se compile el proyecto. Haga clic en **Edición posterior a la compilación** para modificar la línea de comandos.|  
 |Ejecutar el evento posterior a la compilación|Si la compilación es correcta|Especifica si la línea de comandos posterior a la generación se debería ejecutar siempre, sólo si la generación ha sido correcta o sólo si la generación ha actualizado el resultado del proyecto (el script de compilación).|  
   
-## <a name="bkmk_debug"></a>Depuración  
+## <a name="debug"></a><a name="bkmk_debug"></a>Depuración  
 Puede utilizar esta configuración para controlar la depuración del proyecto de base de datos.  
   
 |Campo|Valor predeterminado|Descripción|  
@@ -221,15 +222,15 @@ Puede utilizar esta configuración para controlar la depuración del proyecto de
 |Cadena de conexión de destino|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Especifica la información de conexión del servidor de bases de datos que desea que sea el destino de la configuración de compilación especificada. La cadena de conexión predeterminada corresponde a una instancia de LocalDB y una base de datos de SQL Server creadas dinámicamente.|  
 |Implementar propiedades de base de datos|Sí|Especifica si se implementa o se actualiza la configuración de DatabaseProperties.DatabaseProperties al implementar el proyecto de base de datos.|  
 |Volver a crear siempre la base de datos|No|Especifica si se va a quitar y volver a crear la base de datos en lugar de realizar una actualización incremental. Seleccione esta casilla de verificación si desea ejecutar las pruebas unitarias de base de datos en una implementación limpia de la base de datos, por ejemplo. Si desactiva esta casilla, la base de datos existente se actualizará en lugar de eliminarse y volver a crearse.|  
-|Bloquear implementación incremental si puede dar lugar a pérdida de datos|sí|Especifica si la implementación debe detenerse si una actualización puede producir pérdida de datos. Si esta casilla está activada, los cambios que provocarían la pérdida de datos detendrían la implementación con un error, lo que impediría que se perdiesen los datos. Por ejemplo, la implementación se detendría si una columna `varchar(50)` se hubiera cambiado a `varchar(30)`.<br /><br />**NOTA:** La implementación solo se bloquea si las tablas en las que puede producirse pérdida de datos contienen datos. La implementación continúa si no se pierde ningún dato.|  
-|Objetos DROP en destino pero no en proyecto|no|Especifica si los objetos que están en la base de datos de destino pero no en el proyecto de base de datos se deben eliminar del script de implementación. Esto permite excluir algunos archivos del proyecto y quitarlos temporalmente del script de compilación. Sin embargo, es posible que le interese mantener las versiones existentes de estos objetos en la base de datos de destino. Esta casilla de verificación no tiene ningún efecto si la casilla de verificación **Volver a crear siempre la base de datos** está seleccionada, porque se quitará la base de datos.|  
+|Bloquear implementación incremental si puede dar lugar a pérdida de datos|Sí|Especifica si la implementación debe detenerse si una actualización puede producir pérdida de datos. Si esta casilla está activada, los cambios que provocarían la pérdida de datos detendrían la implementación con un error, lo que impediría que se perdiesen los datos. Por ejemplo, la implementación se detendría si una columna `varchar(50)` se hubiera cambiado a `varchar(30)`.<br /><br />**NOTA:** La implementación solo se bloquea si las tablas en las que puede producirse pérdida de datos contienen datos. La implementación continúa si no se pierde ningún dato.|  
+|Objetos DROP en destino pero no en proyecto|No|Especifica si los objetos que están en la base de datos de destino pero no en el proyecto de base de datos se deben eliminar del script de implementación. Esto permite excluir algunos archivos del proyecto y quitarlos temporalmente del script de compilación. Sin embargo, es posible que le interese mantener las versiones existentes de estos objetos en la base de datos de destino. Esta casilla de verificación no tiene ningún efecto si la casilla de verificación **Volver a crear siempre la base de datos** está seleccionada, porque se quitará la base de datos.|  
 |No usar instrucciones ALTER ASSEMBLY para actualizar tipos CLR|No|Especifica si deben usarse instrucciones ALTER ASSEMBLY para actualizar tipos CLR (Common Language Runtime) o si el objeto que crea la instancia del tipo CLR se va a quitar y volver a generar al implementar los cambios.|  
 |Avanzadas...|No|Botón de comando que permite especificar opciones que controlan eventos y el comportamiento de la implementación.|  
   
-## <a name="bkmk_ref_paths"></a>Rutas de acceso de referencia  
+## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Rutas de acceso de referencia  
 Puede utilizar esta página para definir el servidor y las variables de la base de datos asociadas a referencias de bases de datos cruzadas. Además, puede especificar los valores de esas variables. Para obtener más información, consulte [Uso de referencias en proyectos de base de datos](https://msdn.microsoft.com/library/bb386242.aspx).  
   
-## <a name="bkmk_code_analysis"></a>Análisis de código  
+## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Análisis de código  
 Puede usar Análisis de código para detectar posibles problemas en los scripts, como problemas de diseño, nomenclatura y rendimiento. Las reglas para los proyectos de base de datos están organizadas en conjuntos de reglas predefinidos dirigidos a determinadas áreas y puede habilitar o deshabilitar cualquier regla en la pestaña **Análisis de código** de la página **Propiedades del proyecto** . En la misma pestaña, puede especificar que el análisis de código se ejecute automáticamente cada vez que se compile un proyecto o si las advertencias deben tratarse como errores.  
   
 Para usar Análisis de código manualmente, haga clic con el botón derecho en el proyecto en el **Explorador de soluciones** y seleccione **Ejecutar análisis de código**. Las advertencias de análisis de código se mostrarán en la ventana **Lista de errores** . Puede hacer doble clic en una advertencia para navegar hasta el código fuente que contiene el problema, y puede ver información adicional y posibles correcciones de una advertencia usando el menú contextual **Ayuda para Mostrar mensaje**. Para obtener más información sobre Análisis de código, vea [Analizar el código de base de datos para mejorar la calidad del código](https://msdn.microsoft.com/library/dd172133.aspx).  

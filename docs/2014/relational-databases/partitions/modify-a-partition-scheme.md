@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060906"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar un esquema de partición
   Para modificar un esquema de partición en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , puede diseñar un grupo de archivos que contenga la siguiente partición que se agregará a la tabla con particiones mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para hacerlo debe asignar la propiedad NEXT USED a un grupo de archivos. Puede asignar la propiedad NEXT USED a un grupo de archivos vacío o a uno que ya contenga una partición. Es decir, un grupo de archivos puede tener más de una partición.  
@@ -34,14 +33,14 @@ ms.locfileid: "68206567"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Los grupos de archivos afectados por ALTER PARTITION SCHEME deben estar en línea.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los siguientes permisos pueden utilizarse para ejecutar ALTER PARTITION SCHEME:  
   
 -   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
@@ -50,10 +49,10 @@ ms.locfileid: "68206567"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se ha creado el esquema de partición.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para modificar un esquema de partición:**  
   
- Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar un esquema de partición, primero debe eliminar el esquema y después crear uno nuevo con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, consulte [crear tablas de particiones e índices con SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) en **crear Partitioned Tables and Indexes**.  
+ Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar un esquema de partición, primero debe eliminar el esquema y después crear uno nuevo con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, vea [crear tablas e índices con particiones mediante SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) en **crear tablas e índices con particiones**.  
   
 #### <a name="to-delete-a-partition-scheme"></a>Para eliminar un esquema de partición  
   
@@ -67,7 +66,7 @@ ms.locfileid: "68206567"
   
 5.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionado el esquema de partición correcta y después haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-modify-a-partition-scheme"></a>Para modificar un esquema de partición  
   

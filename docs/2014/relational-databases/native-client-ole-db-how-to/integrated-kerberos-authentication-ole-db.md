@@ -1,5 +1,5 @@
 ---
-title: Autenticación de Kerberos (OLE DB) integrada | Microsoft Docs
+title: Autenticación Kerberos integrada (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c20a4e4951b518f034332c1851ac238d7103dcaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62718152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998680"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticación integrada de Kerberos (OLE DB)
   En este ejemplo se muestra cómo obtener la autenticación mutua de Kerberos utilizando OLE DB en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  

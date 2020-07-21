@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d912271e1f772ed0161b6c97977917d525b7d771
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997580"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899516"
 ---
-# <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Presenta información acerca de los inicios de sesión remotos de un servidor remoto específico o acerca de todos los servidores remotos definidos en el servidor local.  
   
@@ -43,26 +43,26 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @remoteserver **=** ] **'***remoteserver***'**  
- Es el servidor remoto cuya información de inicio de sesión remoto se va a devolver. *remoteserver* es **sysname**, su valor predeterminado es null. Si *remoteserver* no es se especifica, se devuelve información sobre todos los servidores remotos definidos en el servidor local.  
+ [ @remoteserver **=** ] **'***ServidorRemoto***'**  
+ Es el servidor remoto cuya información de inicio de sesión remoto se va a devolver. *RemoteServer* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *RemoteServer* , se devuelve información acerca de todos los servidores remotos definidos en el servidor local.  
   
  [ @remotename **=** ] **'***remote_name***'**  
- Es un inicio de sesión remoto específico en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. Si *remote_name* no se especifica, la información acerca de todos los usuarios remotos definidos para *remoteserver* se devuelve.  
+ Es un inicio de sesión remoto específico en el servidor remoto. *remote_name* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *remote_name* , se devuelve información acerca de todos los usuarios remotos definidos para *RemoteServer* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |server|**sysname**|Nombre de un servidor remoto definido en el servidor local.|  
 |local_user_name|**sysname**|Inicio de sesión del servidor local al que está asociado el inicio de sesión remoto.|  
-|remote_user_name|**sysname**|Inicio de sesión en el servidor remoto a local_user_name.|  
+|remote_user_name|**sysname**|Inicio de sesión del servidor remoto asignado a local_user_name.|  
 |opciones|**sysname**|Trusted = El inicio de sesión remoto no necesita contraseña cuando se conecta con el servidor local desde el servidor remoto.<br /><br /> Untrusted (o en blanco) = El inicio de sesión remoto tiene que suministrar una contraseña cuando se conecta con el servidor local desde el servidor remoto.|  
   
 ## <a name="remarks"></a>Comentarios  
- Utilice sp_helpserver para enumerar los nombres de servidores remotos definidos en el servidor local.  
+ Utilice sp_helpserver para presentar los nombres de los servidores remotos definidos en el servidor local.  
   
 ## <a name="permissions"></a>Permisos  
  No se comprueba ningún permiso.  
@@ -76,18 +76,18 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 EXEC sp_helpremotelogin 'Accounts';  
 ```  
   
-### <a name="b-reporting-help-on-all-remote-users"></a>b. Presentar información acerca de todos los usuarios remotos  
+### <a name="b-reporting-help-on-all-remote-users"></a>B. Presentar información acerca de todos los usuarios remotos  
  En el siguiente ejemplo se presenta información acerca de todos los usuarios remotos de todos los servidores remotos conocidos por el servidor local.  
   
 ```  
 EXEC sp_helpremotelogin;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_addremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

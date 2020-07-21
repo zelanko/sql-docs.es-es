@@ -1,6 +1,6 @@
 ---
-title: Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs
-ms.custom: ''
+title: Sintaxis de Transact-SQL compatible con IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6db4de99458ced7471414540bc46704cfab928fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997926"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
   En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -40,7 +39,7 @@ ms.locfileid: "66063329"
 |FROM|ORDER BY|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
-|ARRIBA|OPTION (sugerencia)|  
+|TOP|OPTION (sugerencia)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>Instrucciones Transact-SQL adicionales compatibles  
  El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también proporciona compatibilidad con IntelliSense para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se muestran en la tabla siguiente.  
@@ -51,7 +50,7 @@ ms.locfileid: "66063329"
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Toda la sintaxis.|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|Toda la sintaxis.|  
 |[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda la sintaxis.|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
+|[CONJUNTO@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Toda la sintaxis.|  
 |[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Toda la sintaxis.|  

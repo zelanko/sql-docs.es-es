@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de Excel (página salida de Error) | Microsoft Docs
+title: Editor de destino de Excel (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c57cccb71819c86874e83bb105c9270ec456648
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059196"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437382"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  
@@ -50,10 +49,10 @@ ms.locfileid: "66059196"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor de destino de Excel &#40;página Asignaciones&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Editor de destino de Excel &#40;página asignaciones&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)  
   
   

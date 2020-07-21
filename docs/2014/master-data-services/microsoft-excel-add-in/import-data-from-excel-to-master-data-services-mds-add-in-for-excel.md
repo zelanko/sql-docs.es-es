@@ -1,5 +1,5 @@
 ---
-title: Publicar datos de Excel en MDS (complemento MDS para Excel) | Microsoft Docs
+title: Publicar datos de Excel en MDS (Complemento MDS para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e330e0841f32cbe44b33b7fe72e46eab15c3c1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478802"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961085"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Publicar datos de Excel en MDS (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede publicar los datos en el repositorio MDS cuando termine de trabajar en Excel y desee guardar los cambios para que otros usuarios tengan acceso a ellos.  
@@ -31,7 +30,7 @@ ms.locfileid: "65478802"
   
 -   La hoja de cálculo activa debe contener datos administrados por MDS y debe haber realizado cambios o adiciones a los datos administrados por MDS.  
   
--   Si agrega miembros, no tiene que especificar un valor de **Código** si los códigos para la entidad se generan automáticamente. Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md).  
+-   Si agrega miembros, no tiene que especificar un valor de **Código** si los códigos para la entidad se generan automáticamente. Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md).  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>Publicar datos en el repositorio MDS  
   
@@ -49,8 +48,8 @@ ms.locfileid: "65478802"
 ## <a name="next-steps"></a>Pasos siguientes  
  [Aplicar reglas de negocios &#40;complemento MDS para Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Vea también  
- [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>Consulte también  
+ [Complemento MDS para Excel de &#40;de datos de publicación&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [Validar datos &#40;complemento MDS para Excel&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

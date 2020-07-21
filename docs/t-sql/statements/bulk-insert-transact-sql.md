@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/25/2019
+description: Referencia de Transact-SQL para la instrucción BULK INSERT.
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: ebdcdb325ba39d163ef63c04008d86a46cb6bec4
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252012"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380868"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Importa un archivo de datos en una tabla o vista de base de datos con un formato especificado por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -43,7 +43,7 @@ Importa un archivo de datos en una tabla o vista de base de datos con un formato
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 BULK INSERT
    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -78,6 +78,8 @@ BULK INSERT
    [ [ , ] ROWTERMINATOR = 'row_terminator' ]
     )]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -100,7 +102,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. En ese caso, deberá especificar la opción **data_source_name**. Para obtener un ejemplo, vea [Importación de datos desde un archivo en Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 **"** _data_source_name_ **"** 
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 y Azure SQL Database.
@@ -120,7 +122,7 @@ Una situación en la que quizá desee que las restricciones estén deshabilitada
 > [!NOTE]
 > La opción MAXERRORS no se aplica a la comprobación de restricciones.
 
-CODEPAGE **=** { **"** ACP **"**  |  **"** OEM **"**  |  **"** RAW **"**  |  **"** _página_de_códigos_ **"** } Especifica la página de códigos de los datos del archivo de datos. CODEPAGE solo es pertinente si los datos contienen columnas de tipo **char**, **varchar** o **text** con valores de caracteres mayores que **127** o menores que **32**. Para obtener un ejemplo, vea [Especificación de una página de códigos](#d-specifying-a-code-page).
+CODEPAGE **=** { **'** ACP **'** \| **'** OEM **'** \| **'** RAW **'** \| **'** _code_page_ **'** } Especifica la página de códigos de los datos del archivo de datos. CODEPAGE solo es pertinente si los datos contienen columnas de tipo **char**, **varchar** o **text** con valores de caracteres mayores que **127** o menores que **32**. Para obtener un ejemplo, vea [Especificación de una página de códigos](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
 > CODEPAGE no es una opción admitida en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Para [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], solo la opción **"RAW"** se permite para CODEPAGE.
@@ -136,7 +138,7 @@ CODEPAGE **=** { **"** ACP **"**  |  **"** OEM **"**  |  **"** RAW **"**  |  **"
 |*code_page*|Número específico de una página de códigos; por ejemplo, 850.<br /><br /> **&#42;&#42;Importante&#42;&#42;** Las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **"char"**  |  **"native"**  |  **"widechar"**  |  **"widenative"** } Especifica que BULK INSERT realiza la operación de importación con el valor de tipo de archivo de datos especificado.
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** } Especifica que BULK INSERT realiza la operación de importación con el valor del tipo de archivo de datos especificado.
 
 &nbsp;
 
@@ -157,7 +159,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_
 "errorfile_data_source_name" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de error que contendrá los errores encontrados durante la importación. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-FIRSTROW **=** _primera_fila_ Especifica el número de la primera fila que se va a cargar. El valor predeterminado es la primera fila del archivo de datos especificado. FIRSTROW está en base 1.
+FIRSTROW **=** _first_row_ Especifica el número de la primera fila que se va a cargar. El valor predeterminado es la primera fila del archivo de datos especificado. FIRSTROW está en base 1.
 
 > [!NOTE]
 > El atributo FIRSTROW no está pensado para saltar los encabezados de columna. La instrucción BULK INSERT no permite omitir los encabezados. Al omitir filas, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] solo analiza los terminadores de campo y no valida los datos en los campos de las filas omitidas.
@@ -166,7 +168,7 @@ FIRE_TRIGGERS Especifica que todos los desencadenadores de inserción definidos 
 
 Si no se especifica FIRE_TRIGGERS, no se ejecuta ningún desencadenador de inserción.
 
-FORMATFILE_DATASOURCE **=** "nombre_del_origen_de_datos" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
+FORMATFILE_DATA_SOURCE **=** "nombre_del_origen_de_datos" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de formato que definirá el esquema de los datos importados. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 KEEPIDENTITY Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica KEEPIDENTITY, los valores de identidad de esta columna se comprueban pero no se importan y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla. Si el archivo de datos no contiene valores para la columna de identidad de la tabla o vista, utilice un archivo de formato para especificar que se debe omitir la columna de identidad de la tabla o vista cuando se importen los datos; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos para la columna. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md).
@@ -175,11 +177,11 @@ Si quiere saber más sobre cómo mantener valores de identidad, vea [Mantener va
 
 KEEPNULLS Especifica que las columnas vacías deben conservar un valor NULL durante la operación de importación en bloque, en lugar de tener valores predeterminados para las columnas insertadas. Para obtener más información, vea [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).
 
-KILOBYTES_PER_BATCH **=** _kilobytes_por_lote_ Especifica el número aproximado de kilobytes (KB) de datos por lote como *kilobytes_por_lote*. De forma predeterminada, el valor de KILOBYTES_PER_BATCH es desconocido. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
+KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ Especifica el número aproximado de kilobytes (KB) de datos por lote como *kilobytes_per_batch*. De forma predeterminada, el valor de KILOBYTES_PER_BATCH es desconocido. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
 
-LASTROW **=** _last_row_ Especifica el número de la última fila que va a cargarse. El valor predeterminado es 0, que indica la última fila del archivo de datos especificado.
+LASTROW **=** _last_row_ Especifica el número de la última fila que se va a cargar. El valor predeterminado es 0, que indica la última fila del archivo de datos especificado.
 
-MAXERRORS **=** _número_máximo_de_errores_ Especifica el número máximo de errores de sintaxis permitidos en los datos antes de cancelar la operación de importación en bloque. Cada fila que no se puede importar con la operación de importación masiva se omite y se considera un error. Si no se especifica *max_errors*, el valor predeterminado es 10.
+MAXERRORS **=** _max_errors_ Especifica el número máximo de errores de sintaxis permitidos en los datos antes de cancelar la operación de importación en bloque. Cada fila que no se puede importar con la operación de importación masiva se omite y se considera un error. Si no se especifica *max_errors*, el valor predeterminado es 10.
 
 > [!NOTE]
 > La opción MAX_ERRORS no se aplica a comprobaciones de restricciones ni para convertir tipos de datos **money** y **bigint**.
@@ -188,7 +190,7 @@ ORDER ( { *columna* [ ASC | DESC ] } [ **,** ... *n* ] ) Especifica cómo se ord
 
 *n* Es un marcador de posición que indica que se pueden especificar varias columnas.
 
-ROWS_PER_BATCH **=** _filas_por_lote_ Indica el número aproximado de filas de datos del archivo de datos.
+ROWS_PER_BATCH **=** _rows_per_batch_ Indica el número aproximado de filas de datos del archivo de datos.
 
 De forma predeterminada, todos los datos del archivo de datos se envían al servidor en una sola transacción y el optimizador de consultas desconoce el número de filas del lote. Si especifica ROWS_PER_BATCH (con el valor > 0) el servidor utiliza este valor para optimizar la operación de importación masiva. El valor especificado para ROWS_PER_BATCH debe ser aproximadamente el mismo que el número real de filas. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
 
@@ -231,11 +233,11 @@ BULK INSERT aplica una estricta validación y comprobación de los datos leídos
 - Las representaciones nativas de los tipos de datos **float** o **real** son válidas.
 - Los datos Unicode tienen una longitud de bytes uniforme.
 
-## <a name="data-types"></a>Tipos de datos
+## <a name="data-types"></a>Tipo de datos
 
 ### <a name="string-to-decimal-data-type-conversions"></a>Conversiones de tipos de datos de cadena a decimal
 
-Las conversiones de tipos de datos de cadena a decimal usadas en BULK INSERT siguen las mismas reglas que la función [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)], que rechaza las cadenas que representan valores numéricos con notación científica. Por lo tanto, BULK INSERT trata esas cadenas como valores no válidos y genera errores de conversión.
+Las conversiones de tipos de datos de cadena a decimal usadas en BULK INSERT siguen las mismas reglas que la función [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)], que rechaza las cadenas que representan valores numéricos con notación científica. Por lo tanto, BULK INSERT trata esas cadenas como valores no válidos y genera errores de conversión.
 
 Para solucionar este comportamiento, use un archivo de formato para la importación masiva de datos de tipo **float** con notación científica en una columna con valores decimales. En el archivo de formato, describa explícitamente la columna como de datos **real** o **float**. Para más información sobre estos tipos de datos, vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
 
@@ -278,7 +280,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows pero puede leer desde Azure Blob Storage.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Tipos de datos para importar o exportar masivamente documentos SQLXML
 
@@ -310,7 +312,7 @@ Antes de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, las ope
 
  Para más información sobre cuándo se incluyen en el registro de transacciones las operaciones de inserción de filas realizadas durante una importación en bloque a SQL Server, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). En Azure SQL Database no se admite el registro mínimo.
 
-## <a name="Limitations"></a> Restricciones
+## <a name="restrictions"></a><a name="Limitations"></a> Restricciones
 
 Cuando se usa un archivo de formato con BULK INSERT, solo se puede especificar un máximo de 1024 campos. Es el mismo número máximo de columnas permitido en una tabla. Si usa un archivo de formato con BULK INSERT con un archivo de datos que contenga más de 1024 campos, BULK INSERT genera el error 4822. La [utilidad bcp](../../tools/bcp-utility.md) no tiene esta limitación, por lo que para los archivos de datos que contengan más de 1024 campos, use BULK INSERT sin un archivo de formato, o bien use el comando **bcp**.
 
@@ -338,7 +340,9 @@ Cuando se importa desde Azure Blob Storage y los datos no son públicos (acceso 
 
 ### <a name="permissions"></a>Permisos
 
-Se requieren los permisos INSERT y ADMINISTER BULK OPERATIONS. En Azure SQL Database, se necesitan los permisos INSERT y ADMINISTER DATABASE BULK OPERATIONS. Además, es necesario el permiso ALTER TABLE si se da una o varias de las siguientes circunstancias:
+Se requieren los permisos INSERT y ADMINISTER BULK OPERATIONS. En Azure SQL Database, se necesitan los permisos INSERT y ADMINISTER DATABASE BULK OPERATIONS. No se admiten los permisos ADMINISTER BULK OPERATIONS o el rol bulkadmin para SQL Server en Linux. Solo `sysadmin` puede realizar inserciones masivas para SQL Server en Linux. 
+
+Además, es necesario el permiso ALTER TABLE si se da una o varias de las siguientes circunstancias:
 
 - Existen restricciones y no se ha especificado la opción CHECK_CONSTRAINTS.
 
@@ -369,7 +373,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. Usar el argumento FIRE_TRIGGERS
 
@@ -387,7 +391,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Usar el salto de línea como terminador de fila
 
@@ -405,7 +409,7 @@ EXEC(@bulk_cmd);
 > Debido al modo en que Microsoft Windows trata los archivos de texto, **(\n** se reemplaza automáticamente por **\r\n)** .
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="d-specifying-a-code-page"></a>D. Especificar una página de códigos
 
@@ -422,7 +426,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importar datos desde un archivo CSV
 
@@ -439,14 +443,14 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importar datos desde un archivo en Azure Blog Storage
 
-En el ejemplo siguiente se muestra cómo cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como un origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
+En el ejemplo siguiente se muestra cómo cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -468,9 +472,27 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
+Otra manera de acceder a la cuenta de almacenamiento es a través de la [identidad administrada](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Para ello, siga los [pasos del 1 al 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) a fin de configurar SQL Database para acceder al almacenamiento a través de la identidad administrada, y después puede implementar el ejemplo de código como se indica a continuación.
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage');
+```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importar datos desde un archivo en Azure Blob Storage y especificar un archivo de error
 

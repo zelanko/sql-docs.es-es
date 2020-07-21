@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f13f076309cfc1b78ab5b76676cbf7ec3eb82f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c4f082b427aaafb8b93aff7f3247859a92a3b62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738228"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve un objeto **hierarchyid** que representa el antepasado *número* de *this*.
   
@@ -50,7 +50,7 @@ Un tipo **int**, que representa el número de niveles que subir en la jerarquía
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Se usa para probar si cada nodo de la salida tiene el nodo actual como antecesor en el nivel especificado.
   
 Si se pasa un número mayor que [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), se devuelve NULL.
@@ -116,7 +116,7 @@ En el fragmento de código siguiente se llama al método `GetAncestor()`.
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [IsDescendantOf &#40;motor de base de datos&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

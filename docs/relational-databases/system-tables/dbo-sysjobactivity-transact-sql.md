@@ -17,36 +17,36 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aee1a088e4b2c95b33f8bdb4002853877d8c1275
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890527"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Registra la actividad y el estado de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual.  Esta tabla se almacena en el **msdb** base de datos.
+  Registra la actividad y el estado de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual.  Esta tabla se almacena en la base de datos **msdb** .
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|Identificador de la sesión almacenada en el **syssessions** de tabla en la **msdb** base de datos.|  
-|**job_id**|**uniqueidentifier**|Identificador del trabajo.|  
+|**session_id**|**int**|IDENTIFICADOR de la sesión almacenada en la tabla **syssessions** de la base de datos **msdb** .|  
+|**job_id**|**uniqueidentifier**|IDENTIFICADOR del trabajo.|  
 |**run_requested_date**|**datetime**|Fecha y hora en que se solicitó la ejecución del trabajo.|  
-|**run_requested_source**|**sysname(nvarchar(128))**|Solicitante de la ejecución del trabajo.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname (nvarchar (128))**|Solicitante de la ejecución del trabajo.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Fecha y hora en que el trabajo se puso en cola. Si el trabajo se ejecuta directamente, esta columna es NULL.|  
 |**start_execution_date**|**datetime**|Fecha y hora de la programación de la ejecución del trabajo.|  
 |**last_executed_step_id**|**int**|Id. del último paso de trabajo que se ejecutó.|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|Fecha y hora en que empezó a ejecutarse el último paso de trabajo.|  
 |**stop_execution_date**|**datetime**|Fecha y hora de finalización de la ejecución del trabajo.|  
-|**job_history_id**|**int**|Utilizado para identificar una fila en la **sysjobhistory** tabla.|  
+|**job_history_id**|**int**|Se usa para identificar una fila en la tabla **sysjobhistory** .|  
 |**next_scheduled_run_date**|**datetime**|Siguiente fecha y hora en que se ha programado la ejecución del trabajo.|  
 
 ## <a name="example"></a>Ejemplo
-Este ejemplo devuelve el estado de tiempo de ejecución para todos los trabajos del Agente SQL Server.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Este ejemplo devolverá el estado de tiempo de ejecución de todos los trabajos Agente SQL Server.  Ejecute la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT sj.Name, 
     CASE
@@ -61,7 +61,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

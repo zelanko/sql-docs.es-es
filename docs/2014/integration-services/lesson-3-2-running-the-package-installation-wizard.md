@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9565b6afa321081bd843d68dcecca4e4678da79
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62891583"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440532"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: Ejecución del Asistente para la instalación de paquetes
   En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  
@@ -53,7 +52,7 @@ ms.locfileid: "62891583"
     > [!IMPORTANT]  
     >  En el valor de las variables de entorno que utilizan las configuraciones se hace referencia a este nombre. El nombre de la carpeta y la referencia deben coincidir o el paquete no se ejecutará.  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
 13. En la página Seleccionar la carpeta de instalación, compruebe que el cuadro Carpeta contiene **C:\DeploymentTutorialInstall** y luego haga clic en **Siguiente**.  
   
@@ -65,14 +64,14 @@ ms.locfileid: "62891583"
   
 16. En la lista **Archivo de configuración** , haga clic en **datatransferconfig.dtsconfig**, expanda Propiedad en la columna **Ruta de acceso** del cuadro **Configuraciones** y actualice la columna **Valor** con los siguientes valores:  
   
-    |Property|Valor|Valor actualizado|  
+    |Propiedad|Value|Valor actualizado|  
     |--------------|-----------|-------------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. En la lista **Archivo de configuración** , haga clic en loadxmldataconfig.dtsconfig, expanda Propiedad en la columna **Ruta de acceso** del cuadro **Configuraciones** y actualice la columna **Valor** con los siguientes valores:  
   
-    |Property|Valor|Valor actualizado|  
+    |Propiedad|Value|Valor actualizado|  
     |--------------|-----------|-------------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -85,7 +84,7 @@ ms.locfileid: "62891583"
   
     -   Error al cargar al menos una de las entradas de configuración en el paquete. Compruebe las entradas de configuración y las advertencias anteriores para ver una descripción de los errores de configuración.  
   
-    -   El archivo de configuración: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig no es válido. Compruebe el nombre del archivo de configuración.  
+    -   El archivo de configuración: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig” no es válido. Compruebe el nombre del archivo de configuración.  
   
     -   Error al cargar al menos una de las entradas de configuración en el paquete. Compruebe las entradas de configuración y las advertencias anteriores para ver una descripción de los errores de configuración.  
   
@@ -99,12 +98,12 @@ ms.locfileid: "62891583"
     >  Se crea un archivo de registro temporal para utilizarlo en la validación de paquetes. Este archivo no se usa cuando se ejecuta el paquete.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: Prueba de los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [Paso 3: Probar los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
+## <a name="see-also"></a>Consulte también  
+ [Servicio de Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Administrar el servicio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b7b05a5a6aead6c564cb9b5c4ad9ca678abe3fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0deb6a675601b2b88cf3a8a6d649e704ffaf6870
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085528"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300025"
 ---
 # <a name="index-name-limitations"></a>Limitaciones del nombre de índice
-Cuando se usa el controlador de Paradox, un índice principal debe tener el mismo nombre que la tabla en el que se ha definido. Otros índices que no es único o deben tener el mismo nombre que la tabla en la que se definen.
+Cuando se usa el controlador de Paradox, un índice principal debe tener el mismo nombre que la tabla en la que se define. Otros índices únicos o no únicos deben tener el mismo nombre que la tabla en la que se definen.

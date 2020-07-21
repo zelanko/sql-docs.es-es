@@ -1,10 +1,8 @@
 ---
-title: TuningTimeInMin (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningTimeInMin (DTA, elemento)
+description: En la utilidad DTA, el elemento TuningTimeInMin especifica la longitud máxima de una sesión de optimización en minutos.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c19cec140b0059cad98c777613dcbe1d3ec5a7b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 5f57cc81435aeb6542dfdd4a360e8e4c0a26d343
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105852"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151479"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin (DTA, elemento)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica la duración máxima de una sesión de optimización en minutos.  
+
+Especifica la duración máxima de una sesión de optimización en minutos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,7 +59,7 @@ ms.locfileid: "68105852"
 ## <a name="description"></a>Descripción  
  En el siguiente ejemplo de código se muestra cómo establecer un tiempo de optimización máximo de 12 horas:  
   
-## <a name="code"></a>código  
+## <a name="code"></a>Código  
   
 ```  
 <DTAInput>  

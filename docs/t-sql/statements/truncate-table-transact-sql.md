@@ -25,15 +25,15 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bed7fa9d84cc3100d5da0f784c9e2551071156e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100072"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012847"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Quita todas las filas de una tabla o las particiones especificadas de una tabla, sin registrar las eliminaciones individuales de filas. TRUNCATE TABLE es similar a la instrucción DELETE sin una cláusula WHERE; no obstante, TRUNCATE TABLE es más rápida y utiliza menos recursos de registros de transacciones y de sistema.  
   
@@ -41,7 +41,7 @@ Quita todas las filas de una tabla o las particiones especificadas de una tabla,
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
@@ -54,7 +54,7 @@ TRUNCATE TABLE
 <partition_number_expression> TO <partition_number_expression>  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  Es el nombre de la tabla que se va a truncar o de la que se van a quitar todas las filas. *table_name* debe ser un valor literal. *table_name* no puede ser la variable o la función de **OBJECT_ID()** .  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Especifica las particiones para truncar o desde las que se quitan todas las filas. Si la tabla no tiene particiones, el argumento **WITH PARTITIONS** generará un error. Si no se proporciona la cláusula **WITH PARTITIONS**, se truncará toda la tabla.  
+ Especifica las particiones para truncar o desde las que se quitan todas las filas. Si la tabla no se particiona, el argumento `WITH PARTITIONS` generará un error. Si no se especifica la cláusula `WITH PARTITIONS`, se truncará toda la tabla.  
   
  *\<partition_number_expression>* se puede especificar de estas maneras: 
   
@@ -88,33 +88,40 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Para truncar una tabla con particiones, la tabla y los índices deben estar alineados (con particiones en la misma función de partición).  
   
-## <a name="remarks"></a>Notas  
- En comparación con la instrucción DELETE, TRUNCATE TABLE ofrece las siguientes ventajas:  
+## <a name="remarks"></a>Observaciones  
+ En comparación con la instrucción DELETE, `TRUNCATE TABLE` ofrece las siguientes ventajas:  
   
 -   Se utiliza menos espacio del registro de transacciones.  
   
-     La instrucción DELETE quita una a una las filas y graba una entrada en el registro de transacciones por cada fila eliminada. TRUNCATE TABLE quita los datos al cancelar la asignación de las páginas de datos utilizadas para almacenar los datos de la tabla y solo graba en el registro de transacciones las cancelaciones de asignación de páginas.  
+     La instrucción DELETE quita una a una las filas y graba una entrada en el registro de transacciones por cada fila eliminada. `TRUNCATE TABLE` quita los datos al cancelar la asignación de las páginas de datos utilizadas para almacenar los datos de la tabla y solo graba en el registro de transacciones las cancelaciones de asignación de páginas.  
   
 -   Por regla general, se utilizan menos bloqueos.  
   
-     Si se ejecuta la instrucción DELETE con un bloqueo de fila, se bloquea cada fila de la tabla para su eliminación. TRUNCATE TABLE siempre bloquea la tabla (incluido un bloqueo de esquema (SCH-M)) y la página, pero no cada fila.  
+     Si se ejecuta la instrucción DELETE con un bloqueo de fila, se bloquea cada fila de la tabla para su eliminación. `TRUNCATE TABLE` siempre bloquea la tabla (incluido un bloqueo de esquema (SCH-M)) y la página, pero no cada fila.  
   
 -   Las páginas cero se conservan en la tabla sin excepciones.  
   
      Después de ejecutar una instrucción DELETE, la tabla puede seguir conteniendo páginas vacías. Por ejemplo, no se puede cancelar la asignación de las páginas vacías de un montón sin un bloqueo de tabla exclusivo (LCK_M_X) como mínimo. Si en la operación de eliminación no se utiliza un bloqueo de tabla, la tabla (montón) contiene muchas páginas vacías. En el caso de los índices, la operación de eliminación puede dejar páginas vacías, aunque la asignación de estas páginas se puede cancelar rápidamente mediante un proceso de limpieza en segundo plano.  
   
- TRUNCATE TABLE quita todas las filas de una tabla, pero permanecen la estructura y sus columnas, las restricciones, los índices, etc. Para quitar la definición de tabla además de los datos, utilice la instrucción DROP TABLE.  
+ `TRUNCATE TABLE` quita todas las filas de una tabla, pero permanecen la estructura y sus columnas, las restricciones, los índices, etc. Para quitar la definición de tabla además de los datos, utilice la instrucción `DROP TABLE`.  
   
  Si la tabla contiene una columna de identidad, el contador para dicha columna se restablece al valor de inicialización definido para ella. Si no se define ningún valor de inicialización, se utiliza el valor predeterminado 1. Para conservar el contador de identidad, utilice DELETE.  
+ 
+ > [!NOTE]
+ > Se puede revertir una operación `TRUNCATE TABLE`.
   
-## <a name="restrictions"></a>Restrictions  
- No puede utilizar TRUNCATE TABLE en las siguientes tablas:  
+## <a name="restrictions"></a>Restricciones  
+ No se puede usar `TRUNCATE TABLE` en los siguientes casos:  
   
--   Tablas a las que se hace referencia mediante una restricción FOREIGN KEY. (Puede truncar una tabla que tenga una clave externa que haga referencia a sí misma).  
+-   Tablas a las que se hace referencia mediante una restricción FOREIGN KEY. (Puede truncar una tabla que tenga una clave externa que haga referencia a sí misma). 
   
 -   Tablas que participan en una vista indizada.  
   
 -   Tablas que se publican mediante replicación transaccional o replicación de mezcla.  
+
+-   Tablas temporales con versiones del sistema.
+
+-   Tablas a las que se hace referencia con una restricción EDGE.  
   
  En el caso de las tablas con una o más de estas características, utilice la instrucción DELETE.  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  En [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[sspdw](../../includes/sspdw-md.md)]:
 
-- TRUNCATE TABLE no se permite dentro de la instrucción EXPLAIN.
+- `TRUNCATE TABLE` no se permite dentro de la instrucción EXPLAIN.
 
-- TRUNCATE TABLE no se puede ejecutar dentro de una transacción.
+- `TRUNCATE TABLE` no se puede ejecutar dentro de una transacción.
   
 ## <a name="truncating-large-tables"></a>Truncar tablas de gran tamaño  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece la posibilidad de quitar o truncar las tablas con más de 128 extensiones sin mantener bloqueos simultáneos en todas las extensiones necesarias para la eliminación.  
   
 ## <a name="permissions"></a>Permisos  
- El permiso mínimo necesario es ALTER en *table_name*. Los permisos predeterminados de TRUNCATE TABLE son los de propietario de la tabla, los miembros del rol fijo de servidor sysadmin y los miembros de los roles fijos de base de datos db_owner y db_ddladmin, y no son transferibles. No obstante, puede incorporar la instrucción TRUNCATE TABLE en un módulo, por ejemplo un procedimiento almacenado, y conceder los permisos correspondientes al módulo mediante la cláusula EXECUTE AS.  
+ El permiso mínimo necesario es `ALTER` en *table_name*. Los permisos `TRUNCATE TABLE` se adjudican de manera predeterminada al propietario de la tabla, a los miembros del rol fijo de servidor `sysadmin` y a los roles fijos de base de datos `db_owner` y `db_ddladmin`, y no se pueden transferir. No obstante, puede incorporar la instrucción `TRUNCATE TABLE` en un módulo, por ejemplo un procedimiento almacenado, y conceder los permisos correspondientes al módulo mediante la cláusula `EXECUTE AS`.  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -1,5 +1,5 @@
 ---
-title: Base de datos de tablas del Plan de mantenimiento (Transact-SQL) | Microsoft Docs
+title: Tablas de planes de mantenimiento de bases de datos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], system tables
 - system tables [SQL Server], database maintenance plans
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f6fe1c0734864f8bde8b579ced77dc8106cb80ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762617"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>Tablas de planes de mantenimiento de bases de datos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Los temas de esta sección describen las tablas del sistema que almacenan información que utilizan los planes de mantenimiento de bases de datos. Estas tablas conservan información de instancias actualizadas desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68084755"
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  Contiene una fila por cada plan de mantenimiento de bases de datos actualizado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

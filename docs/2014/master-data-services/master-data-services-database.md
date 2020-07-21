@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec4513b62056d7054c06373ddaea7fbca11a511
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961585"
 ---
 # <a name="master-data-services-database"></a>Base de datos de Master Data Services
   La base de datos contiene toda la información para el sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Es un punto central en una implementación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Las base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
@@ -43,9 +42,9 @@ ms.locfileid: "65479612"
   
 -   [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crea una base de datos de Master Data Services](install-windows/create-a-master-data-services-database.md)   
- [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear una base de datos de Master Data Services](install-windows/create-a-master-data-services-database.md)   
+ [&#40;de seguridad de objetos de base de datos Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)   
  [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../2014/master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dad75f84dd7696364528fe215bcf2665d78562c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734387"
 ---
-# <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="fn_syscollector_get_execution_stats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve estadísticas detalladas del paquete o conjunto de recopilación, incluido el número de filas de error registradas por una tarea Flujo de datos del paquete. Una tarea de flujo de datos es un componente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que procesa los datos. Estos datos están en formato relacional, de modo que tienen un conjunto de datos de entrada y otro de salida compuestos por filas.  
   
@@ -42,13 +42,13 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>Argumentos  
  *log_id*  
- Identificador único local para el registro de ejecución. *log_id* es **int**.  
+ Identificador único local para el registro de ejecución. *log_id* es de **tipo int**.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|Promedio del número de filas que entraron en las tareas Flujo de datos del paquete.<br /><br /> Nota: Una tarea de flujo de datos es un componente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que procesa los datos. Estos datos están en formato relacional, de modo que tienen un conjunto de datos de entrada formado por filas. Este es el número de filas que entraron en la tarea. Una vez transformados los datos, la salida es un conjunto de resultados formado por filas. La tarea de flujo de datos transforma los datos y genera un conjunto de resultados que está compuesto por filas. Esta salida es el número de filas que salieron de la tarea.|  
+|avg_row_count_in|**int**|Promedio del número de filas que entraron en las tareas Flujo de datos del paquete.<br /><br /> Nota: una tarea flujo de datos es un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente que procesa los datos. Estos datos están en formato relacional, de modo que tienen un conjunto de datos de entrada formado por filas. Este es el número de filas que entraron en la tarea. Una vez transformados los datos, la salida es un conjunto de resultados formado por filas. La tarea de flujo de datos transforma los datos y genera un conjunto de resultados que está compuesto por filas. Esta salida es el número de filas que salieron de la tarea.|  
 |min_row_count_in|**int**|Mínimo número de filas que entraron en las tareas Flujo de datos del paquete.|  
 |max_row_count_in|**int**|Máximo número de filas que entraron en las tareas Flujo de datos del paquete.|  
 |avg_row_count_out|**int**|Promedio del número de filas que salieron de las tareas Flujo de datos del paquete.|  
@@ -61,8 +61,8 @@ fn_syscollector_get_execution_stats ( log_id )
 ## <a name="permissions"></a>Permisos  
  Requiere SELECT para **dc_operator**.  
   
-## <a name="see-also"></a>Vea también  
- [syscollector_execution_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [syscollector_execution_stats &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   
   

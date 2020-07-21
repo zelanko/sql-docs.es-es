@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893595"
 ---
 # <a name="expressions-mdx"></a>Expresiones (MDX)
@@ -32,7 +32,7 @@ ms.locfileid: "68893595"
  Una función escalar devuelve un solo valor en el contexto de evaluación de MDX. Esta diferencia es importante para comprender cómo resuelve MDX las funciones escalares, puesto que la mayoría de las expresiones, instrucciones y scripts MDX se evalúan no respecto a un solo elemento de datos, sino de forma iterativa respecto a un grupo de elementos de datos como celdas o miembros. Sin embargo, cuando se evalúa la función escalar, la función suele revisar un solo elemento de datos.  
   
  Identificador de objeto  
- MDX está orientado a objetos por la naturaleza de los datos multidimensionales. Los identificadores de objetos se consideran expresiones simples en MDX. Para obtener más información sobre los identificadores, vea [identificadores &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
+ MDX está orientado a objetos por la naturaleza de los datos multidimensionales. Los identificadores de objetos se consideran expresiones simples en MDX. Para obtener más información sobre los identificadores, vea [identifiers &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Las expresiones complejas también pueden generarse a partir de la combinación de estas entidades mediante operadores.  
   
@@ -75,15 +75,15 @@ WHERE [Product].[Category].[Bikes]
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Uso de expresiones de cubo y de subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define expresiones de cubo y subcubo.|  
-|[Uso de expresiones de dimensiones](../mdx/using-dimension-expressions.md)|Define expresiones de dimensión.|  
-|[Uso de expresiones de miembro](../mdx/using-member-expressions.md)|Define expresiones de miembro.|  
-|[Uso de expresiones de tupla](../mdx/using-tuple-expressions.md)|Define expresiones de tupla.|  
-|[Uso de expresiones de conjunto](../mdx/using-set-expressions.md)|Define expresiones de conjunto.|  
-|[Uso de expresiones escalares](../mdx/using-scalar-expressions.md)|Define expresiones escalares.|  
+|[Usar expresiones de cubo y de subcubo](../mdx/using-cube-and-subcube-expressions.md)|Define expresiones de cubo y subcubo.|  
+|[Usar expresiones de dimensiones](../mdx/using-dimension-expressions.md)|Define expresiones de dimensión.|  
+|[Usar expresiones de miembro](../mdx/using-member-expressions.md)|Define expresiones de miembro.|  
+|[Usar expresiones de tupla](../mdx/using-tuple-expressions.md)|Define expresiones de tupla.|  
+|[Usar expresiones de conjunto](../mdx/using-set-expressions.md)|Define expresiones de conjunto.|  
+|[Usar expresiones escalares](../mdx/using-scalar-expressions.md)|Define expresiones escalares.|  
 |[Trabajar con valores vacíos](../mdx/working-with-empty-values.md)|Describe un valor vacío y cómo se administran estos valores.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   

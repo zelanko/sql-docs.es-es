@@ -1,5 +1,5 @@
 ---
-title: Medidas (pestaña estructura de cubo, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Medidas (pestaña estructura de cubo, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc38d7977e13fb76c33a0399fd6a7325783abb1e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541595"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Medidas** para manipular grupos de medida y miembros en la pestaña **Estructura de cubo** del Diseñador de cubos.  
   
 ## <a name="options"></a>Opciones  
- medidas  
+ Medidas  
  Muestra los grupos de medida y las medidas incluidas en el cubo, según la vista seleccionada:  
   
- trEE  
+ Árbol  
  Muestra una vista de árbol de los grupos de medida, con medidas como nodos secundarios.  
   
  Expanda los grupos de medida para ver las medidas. Haga clic en un grupo de medida seleccionado o en una medida para cambiar el nombre del grupo de medida o de la medida respectivamente.  
@@ -62,10 +61,10 @@ ms.locfileid: "66077922"
   
 |Opción|Definición|  
 |------------|----------------|  
-|**Árbol**|Muestra los grupos de medida y las medidas en una vista de árbol.|  
+|**Palmera**|Muestra los grupos de medida y las medidas en una vista de árbol.|  
 |**Grid**|Muestra los grupos de medida y las medidas en una cuadrícula.|  
   
- **Cambiar el nombre**  
+ **Cambiar nombre**  
  Seleccione esta opción para cambiar el nombre del grupo de medida o de la medida seleccionados.  
   
  **Eliminar**  
@@ -89,7 +88,7 @@ ms.locfileid: "66077922"
  **Propiedades**  
  Seleccione esta opción para mostrar la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el grupo de medida o la medida seleccionados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar propiedades de medidas](multidimensional-models/configure-measure-properties.md)   
  [Medidas y grupos de medida](multidimensional-models/measures-and-measure-groups.md)  
   

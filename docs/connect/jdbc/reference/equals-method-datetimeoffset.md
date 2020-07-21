@@ -1,5 +1,5 @@
 ---
-title: Equals (método, DateTimeOffset) | Microsoft Docs
+title: Método equals (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ef0203c8ece600de52a5ba4734249b269f21777
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 023630427354e2fb0ce376a57df938a5262266c5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955028"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922136"
 ---
 # <a name="equals-method-datetimeoffset"></a>Método equals (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Compara este objeto **DateTimeOffset** con otro **objeto**.  
+  Compara este objeto **DateTimeOffset** con otro objeto **Object**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ public boolean equals(Object o)
  El objeto que desea la comparación con la instancia actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve true si este objeto **DateTimeOffset** representa el mismo punto en el tiempo en el mismo desplazamiento de GMT que otro **DateTimeOffset**.  
+ Devuelve true si este objeto **DateTimeOffset** representa el mismo punto cronológico en el mismo desplazamiento de GMT que otro objeto **DateTimeOffset**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   

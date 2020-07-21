@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520611"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
   Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
@@ -30,7 +29,7 @@ ms.locfileid: "66082988"
   
  En este tema se describen otras características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que, a menudo, son parte de una solución de predicción de análisis, ya sea para respaldar los procesos de preparación y de minería de datos o a los usuarios proporcionándoles herramientas para el análisis y la acción.  
   
- [Integration Services](#bkmk_SSIS)  
+ [Servicio de integración](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66082988"
   
  [Indización semántica](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a> SQL Server Integration Services  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona los componentes y las características necesarias para las fases de entrenamiento y de preparación de los datos de un proyecto de minería de datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
   
 -   Representa las tareas como parte de un flujo de trabajo, que puede repetirse, automatizarse, bifurcarse y ampliarse.  
@@ -63,7 +62,7 @@ ms.locfileid: "66082988"
   
 -   [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
--   [Limpieza de datos](../../data-quality-services/data-cleansing.md)  
+-   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
 -   [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
   
@@ -77,19 +76,19 @@ ms.locfileid: "66082988"
   
 -   [Transformación Conversión de datos](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
--   [Destino de entrenamiento del modelo de minería de datos](../../integration-services/data-flow/data-mining-model-training-destination.md)  
+-   [entrenamiento del modelo de minería de datos, destino](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
--   [Transformación Consulta de minería de datos](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
+-   [Consulta de minería de datos, transformación](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
 -   [Transformación Columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Transformación Muestreo de porcentaje](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
--   [Transformación Extracción de términos](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+-   [Extracción de términos, transformación](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
--   [Transformación Búsqueda de términos](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+-   [Búsqueda de términos, transformación](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a> SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Aunque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se vea normalmente como un componente esencial de las soluciones de minería de datos, proporciona las siguientes características útiles para la presentación de las soluciones de minería de datos.  
   
 -   Integración de datos de varios orígenes en informes complejos. Creación de consultas con el contenido de modelos para los analistas e informes que muestran predicciones y tendencias de los usuarios finales.  
@@ -112,7 +111,7 @@ ms.locfileid: "66082988"
   
  Para obtener más información sobre cómo usar Reporting Services como nivel de presentación para los orígenes de datos, vea [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
-##  <a name="bkmk_DQSetc"></a> Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) es nuevo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Como los problemas con datos pueden imposibilitar la minería de datos, se espera que los responsables de la minería de datos que realizan análisis repetidos o que trabajan en grandes organizaciones con orígenes de datos complejos encuentren que un proyecto de datos bien planeado que use DQS es una solución más confiable para admitir la minería de datos, en lugar de la limpieza ad hoc de los datos con [!INCLUDE[tsql](../../includes/tsql-md.md)] u otros scripts.  
   
  Las siguientes características de DQS deben considerarse para la preparación y la integridad de los datos en una solución de minería de datos.  
@@ -148,7 +147,7 @@ ms.locfileid: "66082988"
   
  Para obtener más información, consulte [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="bkmk_FTSetc"></a> Búsqueda de texto completo  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>Búsqueda de texto completo  
  La búsqueda de texto completo de SQL Server permite a las aplicaciones y a los usuarios ejecutar consultas de texto completo en datos basados en caracteres en las tablas de SQL Server. Cuando se habilita la búsqueda de texto completo, puede realizar búsquedas en los datos de texto que son mejoradas mediante reglas específicas del idioma acerca de las diversas formas de una palabra o frase. También puede configurar las condiciones de búsqueda, como la distancia entre varios términos, y utilizar funciones para restringir los resultados devueltos por orden de probabilidad.  
   
  Puesto que las consultas de texto completo son una característica que proporciona el motor de SQL Server, puede crear consultas con parámetros, generar conjuntos de datos personalizados o vectores de términos mediante características de búsqueda de texto completo en un origen de datos de texto y utilizar estos orígenes de minería de datos.  
@@ -161,7 +160,7 @@ ms.locfileid: "66082988"
   
  Para obtener más información, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
- La versión de una palabra que se almacena después de una indización de texto completo es un símbolo en formato comprimido. Las consultas posteriores al índice de texto completo generan formas no flexionadas de una palabra determinada según las reglas de ese idioma, para asegurarse de que se realizan todas las coincidencias probables. Por ejemplo, aunque el token que se almacena podría ser "ejecutar", el motor de consultas también busca los términos "running", "corrió" y "corredor", porque son variaciones morfológicas derivadas de la palabra raíz "ejecutar".  
+ La versión de una palabra que se almacena después de una indización de texto completo es un símbolo en formato comprimido. Las consultas posteriores al índice de texto completo generan formas no flexionadas de una palabra determinada según las reglas de ese idioma, para asegurarse de que se realizan todas las coincidencias probables. Por ejemplo, aunque el token que se almacena podría ser "ejecutar", el motor de consultas también busca los términos "en ejecución", "ejecutado" y "Ejecutor", porque son variaciones morfológicas derivadas de forma regular de la palabra raíz "Run".  
   
  También puede crear y generar un diccionario de sinónimos de usuario para almacenar los sinónimos y habilitar mejores resultados de la búsqueda, o la clasificación de los términos. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66082988"
   
 -   La indización de texto completo solo se admite para las columnas con estos tipos de datos: char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary y varbinary(max). Si la columna es varbinary, varbinary (max), image o XML, debe especificar la extensión de archivo del documento indizable (.doc, .pdf, .xls, etc.), en una columna de tipo independiente.  
   
-##  <a name="bkmk_SemSearch"></a> Indización semántica  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>Indización semántica  
  La búsqueda semántica se basa en las características de búsqueda de texto completo existentes en SQL Server, pero utiliza estadísticas y funciones adicionales para escenarios como la extracción automática de palabras clave y la detección de documentos relacionados. Por ejemplo, puede usar la búsqueda semántica para generar una taxonomía base para una organización u ordenar un corpus de documentos. O bien, podría utilizar la combinación de los términos extraídos y las clasificaciones de similitud de los documentos en los modelos de árbol de decisión o de un clúster.  
   
  Después de habilitar la búsqueda semántica correctamente e indizar sus columnas de datos, puede utilizar las funciones que se proporcionan de modo nativo con la indización semántica para lo siguiente:  
@@ -200,7 +199,7 @@ ms.locfileid: "66082988"
   
 -   No todos los idiomas de texto completo admiten la indización semántica. Para consultar la lista de idiomas compatibles, vea [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
   

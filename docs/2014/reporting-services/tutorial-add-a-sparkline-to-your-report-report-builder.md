@@ -11,36 +11,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099040"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adición de un minigráfico a un informe (Generador de informes)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
   En este tutorial, crea un informe de la tabla básico basado en datos de ventas de ejemplo y, a continuación, agrega un minigráfico a una celda de la tabla.  
   
- Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
+ Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este informe de ejemplo y otros, vea [generador de informes informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- El vídeo [Cómo: Crear un minigráfico en una tabla (vídeo del generador de informes)](https://technet.microsoft.com/bi/ff871942.aspx) se muestra cómo crear un informe similar con minigráficos.  
+ En el vídeo [Cómo: crear un minigráfico en una tabla (generador de informes vídeo)](https://technet.microsoft.com/bi/ff871942.aspx) se muestra cómo crear un informe similar con minigráficos.  
   
-##  <a name="BackToTop"></a> Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
  1. [Crear un informe con una tabla](#CreateTable)  
   
- 2. [Crear una consulta en la tabla o el Asistente para matrices](#Query)  
+ 2. [Crear una consulta en el Asistente para tablas o matrices](#Query)  
   
  3. [Agregar un minigráfico a la tabla](#Sparkline)  
   
  4. [Alinear los minigráficos vertical y horizontalmente](#AlignSparklines)  
   
 ### <a name="other-optional-steps"></a>Otros pasos opcionales  
- 5. [Formato de datos como moneda](#FormatCurrency)  
+ 5. [Dar formato a los datos como moneda](#FormatCurrency)  
   
- 6. [Formato de datos como fechas](#FormatDates)  
+ 6. [Dar formato a los datos como datos](#FormatDates)  
   
  7. [Cambiar el ancho de columna](#Width)  
   
@@ -53,16 +53,16 @@ ms.locfileid: "66099040"
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Crear un informe con una tabla  
+##  <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. crear un informe con una tabla  
   
 #### <a name="to-create-a-report"></a>Para crear un informe  
   
 1.  Haga clic en **Inicio**, seleccione **Programas**, **Generador de informes de Microsoft SQL Server 2012**y, a continuación, haga clic en **Generador de informes**.  
   
-     El **Introducción** abre el cuadro de diálogo.  
+     Se abre el cuadro de diálogo **Introducción**.  
   
     > [!NOTE]  
-    >  Si el **Introducción** no aparece el cuadro de diálogo, desde el **Report Builder** botón, haga clic en **New**.  
+    >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -81,9 +81,9 @@ ms.locfileid: "66099040"
   
 8.  En **Cadena de conexión**, escriba el texto siguiente:  
   
-     **Origen de datos =\<servername >**  
+     **Origen de datos\<= ServerName>**  
   
-     La expresión \<servername >, por ejemplo Report001, especifica un equipo en el que se instala una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se utiliza la base de datos predeterminada en el servidor especificado.  
+     La expresión \<ServerName>, por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del Motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se utiliza la base de datos predeterminada en el servidor especificado.  
   
 9. Haga clic en **Credenciales**. Escriba las credenciales necesarias para tener acceso al origen de datos externo.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "66099040"
   
 12. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-13. Haga clic en **Siguiente**.  
+13. Haga clic en **Next**.  
   
-##  <a name="Query"></a> 2. Crear una consulta en el Asistente para tablas  
+##  <a name="2-create-a-query-in-the-table-wizard"></a><a name="Query"></a>2. crear una consulta en el Asistente para tablas  
  En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ ms.locfileid: "66099040"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar ( **!** ).  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar (**!**).  
   
      La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales**y **Quantity**.  
   
@@ -178,15 +178,15 @@ ms.locfileid: "66099040"
   
      El panel Vista previa muestra un ejemplo de la tabla con ese estilo.  
   
-13. Haga clic en **Finalizar**.  
+13. Haga clic en **Finalizar**  
   
 14. La tabla se agrega a la superficie de diseño. La tabla tiene tres columnas y tres filas.  
   
-     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel de grupos de filas muestra un grupo de filas: **Product**. El panel de grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Product**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 15. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Sparkline"></a> 3. Agregar un minigráfico  
+##  <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. agregar un minigráfico  
   
 #### <a name="to-add-a-sparkline-chart-to-a-table"></a>Para agregar un minigráfico a una tabla  
   
@@ -196,28 +196,28 @@ ms.locfileid: "66099040"
   
 3.  Haga clic con el botón derecho, señale **Insertar columna**y, después, haga clic en **Izquierda**.  
   
-4.  En la nueva columna, haga clic en la fila [Product], seleccione el **insertar** ficha de cinta y, a continuación, haga clic en **minigráfico**.  
+4.  En la nueva columna, haga clic con el botón secundario en la fila [product], seleccione la pestaña **Insertar** de la cinta de opciones y, a continuación, haga clic en **minigráfico**.  
   
-5.  Asegúrese de que el primer minigráfico de la **columna** fila está seleccionada y, a continuación, haga clic en **Aceptar**.  
+5.  Asegúrese de que el primer minigráfico de la fila de **columna** está seleccionado y, a continuación, haga clic en **Aceptar**.  
   
 6.  Haga clic en el minigráfico para mostrar el panel Datos del gráfico.  
   
-7.  Haga clic en el signo más (+) situado en el cuadro valores y, a continuación, haga clic en **ventas**.  
+7.  Haga clic en el signo más (+) en el cuadro valores y, a continuación, haga clic en **ventas**.  
   
      Los valores del campo **Sales** son ahora los valores para el minigráfico.  
   
-8.  Haga clic en el signo más (+) situado en el cuadro de grupos de categorías y, a continuación, haga clic en **SalesDate**.  
+8.  Haga clic en el signo más (+) en el cuadro grupos de categorías y, a continuación, haga clic en **fechaventa**.  
   
 9. Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
      Tenga en cuenta que hay minigráficos en cada fila de la tabla, pero no son correctos. Las barras de los gráficos no están alineadas entre sí. Solo hay cuatro barras en la segunda fila de datos, por lo que las barras son más anchas que las de la primera fila, que tiene seis. No puede comparar los valores para cada producto por día. Tienen que estar alineados entre sí.  
   
-     Además, observe que para cada fila, la barra más alta de esa fila es el alto de la fila. Esto puede resultar confuso, también, porque los valores mayores de cada fila no son iguales: el valor mayor para Budget Movie-Maker es 10.400 dólares, pero el valor mayor para Slim Digital es 26.576 dólares: más de dos veces tan grande. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. También es necesario realizar esto para ajustarse a los demás minigráficos.  
+     Además, observe que para cada fila, la barra más alta de esa fila es el alto de la fila. Esto también es engañoso, porque los valores más grandes de cada fila no son iguales: el valor más grande de Budget Movie-Maker es $10.400, pero el valor más grande para digital delgada es $26.576-más de dos veces más grande. Además, las barras más grandes de esas dos filas tienen aproximadamente el mismo alto. También es necesario realizar esto para ajustarse a los demás minigráficos.  
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
-##  <a name="AlignSparklines"></a> 4. Alinear los minigráficos vertical y horizontalmente  
- Los minigráficos son difíciles de leer cuando no usan todos las mismas medidas. Los ejes horizontal y vertical de cada uno tienen que coincidir con el resto.  
+##  <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. alinear los minigráficos vertical y horizontalmente  
+ Los minigráficos son difíciles de leer cuando no todos usan las mismas medidas. Los ejes horizontal y vertical de cada uno tienen que coincidir con el resto.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>Para establecer la alineación de los minigráficos en la tabla  
   
@@ -243,25 +243,25 @@ ms.locfileid: "66099040"
   
  Observe que todas las barras están ahora alineadas con las barras de las demás filas.  
   
-##  <a name="FormatCurrency"></a> 5. (Opcional) Formato de datos como moneda  
- De manera predeterminada, los datos de resumen del campo **Sales** se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
+##  <a name="5-optional-format-data-as-currency"></a><a name="FormatCurrency"></a>5. (opcional) dar formato a los datos como moneda  
+ De forma predeterminada, los datos de resumen del campo **sales** muestran un número general. Aplíquele el formato adecuado para mostrar el número como moneda. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
   
 #### <a name="to-format-a-currency-field"></a>Para dar formato a un campo de moneda  
   
 1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
-2.  Haga clic en la celda en la segunda fila (bajo la fila de encabezados de columna) en el **SalesDate** columna y arrastre para seleccionar todas las celdas que contienen `[Sum(Sales)]`.  
+2.  Haga clic en la celda de la segunda fila (bajo la fila de encabezados de columna) en la columna **fechaventa** y arrastre para seleccionar todas `[Sum(Sales)]`las celdas que contienen.  
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** . Las celdas cambian para mostrar la moneda con formato.  
   
-     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el **números** de grupo y, a continuación, haga clic en **valores de ejemplo**.  
+     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el grupo **números** y, a continuación, haga clic en **valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
- Los valores de resumen para **ventas** se muestran como moneda.  
+ Los valores de Resumen de **sales** se muestran como moneda.  
   
-##  <a name="FormatDates"></a> 6. (Opcional) Dar formato a datos como fechas  
- De manera predeterminada, en el campo **SalesDate** se muestra información de fecha y hora. Puede darle formato para mostrar solo la fecha.  
+##  <a name="6-optional-format-data-as-dates"></a><a name="FormatDates"></a>6. (opcional) dar formato a los datos como fechas  
+ De forma predeterminada, el campo **fechaventa** muestra información de fecha y hora. Puede darle formato para mostrar solo la fecha.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>Para dar formato a un campo de fecha como el formato predeterminado  
   
@@ -269,15 +269,15 @@ ms.locfileid: "66099040"
   
 2.  Haga clic en la celda que contiene `[SalesDate]`.  
   
-3.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, en la lista desplegable, seleccione **fecha**.  
+3.  En la cinta de opciones, en la pestaña **Inicio** , en el grupo **número** , en la lista desplegable, seleccione **fecha**.  
   
-     La celda muestra la fecha de ejemplo **[1/31/2000]** . Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
+     La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
- El **SalesDate** valores se muestran en el formato de fecha predeterminado.  
+ Los valores de **fechaventa** se muestran en el formato de fecha predeterminado.  
   
-##  <a name="Width"></a> 7. (Opcional) Cambiar el ancho de columna  
+##  <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (opcional) cambiar el ancho de las columnas  
  De forma predeterminada, cada celda de una tabla contiene un cuadro de texto. Un cuadro de texto se expande verticalmente para alojar el texto cuando se representa la página. En el informe representado, cada fila se expande hasta el alto del cuadro de texto más alto representado de la fila. El alto de la fila en la superficie de diseño no tiene efecto alguno en el alto de la fila en el informe representado.  
   
  Para reducir la cantidad de espacio vertical que ocupa cada fila, expanda el ancho de columna para dar cabida en una línea al contenido previsto de los cuadros de texto de la columna.  
@@ -290,11 +290,11 @@ ms.locfileid: "66099040"
   
      Las barras grises situadas en la parte superior y en el lado de la tabla son los identificadores de fila y de columna.  
   
-3.  Sitúe el cursor en la línea que hay entre los controladores de columna para que cambie a una flecha doble. Arrastre las columnas hasta que tengan el tamaño deseado. Por ejemplo, expanda la columna **producto** para que muestre el nombre del producto en una sola línea.  
+3.  Sitúe el cursor en la línea que hay entre los controladores de columna para que cambie a una flecha doble. Arrastre las columnas hasta que tengan el tamaño deseado. Por ejemplo, expanda la columna de **Product** para que el nombre de producto se muestre en una línea.  
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
-##  <a name="Title"></a> 8. (Opcional) Agregar un título de informe  
+##  <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (opcional) agregar un título de informe  
  Los títulos de informe aparecen en la parte superior. Puede situar el título del informe en un encabezado de informe o, si el informe no lo utiliza, en un cuadro de texto en la parte superior del cuerpo del informe. En este tutorial, deberá utilizar el cuadro de texto que se coloca automáticamente en la parte superior del cuerpo del informe.  
   
  El texto se puede mejorar aún más aplicando estilos de fuente, tamaños y colores diferentes a las frases y caracteres individuales. Para obtener más información, vea [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -311,13 +311,13 @@ ms.locfileid: "66099040"
   
 5.  En la lista **Tamaño** , seleccione **18 pt**.  
   
-6.  En el **Color** lista, seleccione **granate**.  
+6.  En la lista **color** , seleccione **granate**.  
   
 7.  Seleccione **Negrita**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 9. Guardar el informe  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. guardar el informe  
  Guarde el informe un servidor de informes o en su equipo. Si no guarda el informe en el servidor de informes, varias características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , como los elementos de informe y los subinformes, no estarán disponibles.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
@@ -346,11 +346,11 @@ ms.locfileid: "66099040"
   
 4.  Haga clic en **Guardar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Esto concluye el tutorial para crear un informe de tabla con minigráficos. Para obtener más información sobre minigráficos, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tutoriales &#40;generador de informes&#41;](report-builder-tutorials.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tutoriales &#40;Generador de informes&#41;](report-builder-tutorials.md)   
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65577768"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint
@@ -72,12 +72,12 @@ La característica de espacio aislado para el lenguaje RDL (Report Definition La
 |**MaxStringResultLength**|Número máximo de caracteres permitido en un valor de devolución para una expresión RDL.<br /><br /> Valor predeterminado: 1000|  
 |**MaxArrayResultLength**|Número máximo de elementos permitido en un valor de devolución de matriz para una expresión RDL.<br /><br /> Valor predeterminado: 100|  
 |**Tipos**|Lista de los miembros que se permitirán en las expresiones RDL.|  
-|**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
+|**Permitir**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |**AllowNew**|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Cuando se habilita **RDLSandboxing**, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración de **AllowNew**.|  
-|**Value**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
+|**Valor**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |**Miembros**|Para la lista de tipos que se incluyen en el elemento **\<Types>** , la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
-|**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
+|**Deny**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabajar con expresiones cuando se habilita el espacio seguro para RDL
 
@@ -104,7 +104,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
 -   Miembros estáticos de un tipo.  
   
--   El método [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** .  
+-   El método [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]New**de**.  
   
 -   El elemento **\<Classes>** en la definición del informe.  
   
@@ -128,7 +128,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
  Para agregar funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
   
- Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>** :  
+ Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>**:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -174,7 +174,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
 -   Agregar la clase a la lista de permitidos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)  

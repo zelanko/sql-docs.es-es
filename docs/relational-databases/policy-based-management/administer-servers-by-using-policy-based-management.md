@@ -1,6 +1,7 @@
 ---
-title: Administrar servidores mediante administración basada en directivas | Microsoft Docs
-ms.custom: ''
+title: Administración de servidores mediante la administración basada en directivas
+description: Obtenga información sobre cómo utilizar la administración basada en directivas para administrar una o más instancias de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c62c2372b0a61d0a09a0e15998f2340b995fc919
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97514b5bab233bbef63876dd8f0cd6b0afca2274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749534"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    La administración basada en directivas es un sistema basado en directivas para administrar una o más instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se usa para crear condiciones que contengan expresiones de condición. A continuación, cree directivas que apliquen las condiciones a los objetos de destino de la base de datos.  
 
 Por ejemplo, como el administrador de la base de datos, puede que desee asegurarse de que ciertos servidores no tienen habilitada la opción Correo electrónico de base de datos, por lo que crea una condición y una directiva que establece esa opción de servidor. 
@@ -103,25 +104,19 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
   
 ## <a name="links-to-specific-tasks"></a>Vínculos a tareas específicas 
 
- - [Almacenar directivas de administración basada en directivas.](policy-based-management-storage.md)|  
- - [Configurar alertas para notificar los errores de directiva a los administradores de directivas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Crear una nueva condición de administración basada en directivas.](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Almacenar directivas de administración basada en directivas.](policy-based-management-storage.md)
+ - [Configurar alertas para notificar los errores de directiva a los administradores de directivas](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [Crear una nueva condición de administración basada en directivas](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [Eliminar una condición de administración basada en directivas](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [Ver o modificar las propiedades de una condición de administración basada en directivas](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [Ver o modificar las propiedades de una condición de administración basada en directivas](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [Exportar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [Importar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [Importar una directiva de administración basada en directivas](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [Evaluar una directiva de administración basada en directivas desde un objeto](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [Trabajar con facetas de administración basada en directivas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [Trabajar con facetas de administración basada en directivas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
 
-
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  
- - [Tutorial: Creación y aplicación de una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)
- - [Tutorial: Creación y aplicación de una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [Tutorial: Crear y aplicar una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [Tutorial: Crear y aplicar una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

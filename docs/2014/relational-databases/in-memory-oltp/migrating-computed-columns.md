@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 706b029dbd811f2e1794e451291830bf15d37274
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63165049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026230"
 ---
 # <a name="migrating-computed-columns"></a>Migrar columnas calculadas
   Las tablas optimizadas para memoria no admiten columnas calculadas. Sin embargo, puede simular una columna calculada.  
@@ -85,7 +84,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

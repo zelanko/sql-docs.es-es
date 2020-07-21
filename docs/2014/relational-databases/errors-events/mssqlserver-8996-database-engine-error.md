@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4e655cdc-945a-4a18-95dd-75f050563d26
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41f92430eecb0eb06fbca18bbb552a2e85ce6069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6ad3945b2ab1aa4138512e10cf9104e9d5bed8d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761837"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550822"
 ---
-# <a name="mssqlserver8996"></a>MSSQLSERVER_8996
+# <a name="mssqlserver_8996"></a>MSSQLSERVER_8996
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8996|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8996|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_IAM_PAGE_RANGE_IN_WRONG_FILEGROUP|  
 |Texto del mensaje|La página IAM P_ID del Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE) controla las páginas del grupo de archivos FG_ID1 que deberían estar en el grupo de archivos FG_ID2.|  

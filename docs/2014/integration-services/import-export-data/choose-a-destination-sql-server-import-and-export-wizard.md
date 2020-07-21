@@ -9,31 +9,30 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c47c5596d5674adf56105cffd7617a2e3436bc8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768030"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436842"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Elegir un destino (Asistente para importación y exportación de SQL Server)
-  Use la **elegir un destino** página para especificar el destino de los datos que se van a copiar.  
+  Use la página **elegir un destino** para especificar el destino de los datos que desea copiar.  
   
- Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La finalidad del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Opciones estáticas  
  **Destino**  
- Elija el proveedor de datos que coincide con el formato de almacenamiento de datos del destino. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor Microsoft OLE DB para SQL Server.  
+ Elija el proveedor de datos que coincide con el formato de almacenamiento de datos del destino. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con puede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor de OLE DB de Microsoft para SQL Server.  
   
 > [!NOTE]  
 >  Para guardar datos en un destino ODBC, seleccione el proveedor de datos de .NET Framework para ODBC.  
   
- El **origen de datos** propiedad tiene un número variable de opciones que cambian en función de los proveedores instalados en el equipo. Las siguientes tablas enumeran las opciones que se aplican a algunos destinos frecuentemente utilizados. Para otros proveedores, vea la documentación específica del proveedor.  
+ La propiedad **origen de datos** tiene un número variable de opciones, que cambian en función de los proveedores instalados en el equipo. Las siguientes tablas enumeran las opciones que se aplican a algunos destinos frecuentemente utilizados. Para otros proveedores, vea la documentación específica del proveedor.  
   
 ## <a name="dynamic-options"></a>Opciones dinámicas  
  En las secciones siguientes se muestran las opciones disponibles para varios orígenes de datos. Aquí no encontrará todos los destinos disponibles en la lista desplegable Destino.  
@@ -45,23 +44,23 @@ ms.locfileid: "62768030"
  **Utilizar autenticación de Windows**  
  Especifique si el paquete debe utilizar la autenticación de Microsoft Windows para iniciar una sesión en la base de datos. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows.  
   
- **Utilizar autenticación de SQL Server**  
- Especifique si el paquete debe utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
+ **Usar autenticación SQL Server**  
+ Especifique si el paquete debe usar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario para la conexión de la base de datos cuando utilice la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Contraseña**  
  Proporcione la contraseña para la conexión de la base de datos cuando use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Base de datos**  
- Seleccione en la lista de bases de datos en la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o cree una nueva base de datos haciendo **New**.  
+ Seleccione en la lista de bases de datos de la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cree una nueva base de datos haciendo clic en **nueva**.  
   
  **Actualizar**  
  Para restaurar la lista de bases de datos disponibles, haga clic en **Actualizar**.  
   
- **Nueva**  
- Crear una nueva base de datos de destino mediante el **Create Database** cuadro de diálogo.  
+ **Nuevo**  
+ Cree una nueva base de datos de destino mediante el cuadro de diálogo **crear base de datos** .  
   
 ### <a name="destination--flat-file-destination"></a>Destino = Destino de archivo plano  
  **Nombre de archivo**  
@@ -79,10 +78,10 @@ ms.locfileid: "62768030"
  **Página de códigos**  
  Especifique la página de códigos correspondiente al idioma que desea utilizar.  
   
- **Formato**  
+ **Format**  
  Indique si se utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante un delimitador, que se especifica en la página **Columnas** .|  
 |Ancho fijo|Las columnas tienen un ancho fijo.|  
@@ -97,32 +96,32 @@ ms.locfileid: "62768030"
 ### <a name="destination--microsoft-excel"></a>Destino = Microsoft Excel  
   
 > [!NOTE]  
->  Seleccione **Microsoft Excel** únicamente si desea conectarse a un origen de datos que utiliza Excel 2003 o versiones anteriores. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**, haga clic en **propiedades**y, a continuación, en el **todas** pestaña de la **Propiedades de vínculo de datos** cuadro de diálogo para **propiedades extendidas**, escriba `Excel 12.0`.  
+>  Seleccione **Microsoft Excel** solo si desea conectarse a un origen de datos que use Excel 2003 o una versión anterior. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12,0 acceso motor de base de datos proveedor de OLE DB**, haga clic en **propiedades**y, a continuación, en la pestaña **todo** del cuadro de diálogo Propiedades de **vínculo de datos** , para **propiedades extendidas**, escriba `Excel 12.0` .  
   
  **Ruta de acceso del archivo Excel**  
- Especifique la ruta de acceso y nombre de archivo del libro en el que se va a almacenar los datos (por ejemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
+ Especifique la ruta de acceso y el nombre de archivo del libro en el que desea almacenar los datos (por ejemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
   
  **Examinar**  
- Localice un libro de Excel mediante el uso de la **abierto** cuadro de diálogo.  
+ Busque un libro de Excel mediante el cuadro de diálogo **abrir** .  
   
  **Versión de Excel**  
  Seleccione la versión de Excel que utiliza el libro de destino.  
   
 > [!NOTE]  
->  Al exportar datos a un destino de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , el asistente utiliza el componente Destino de Excel de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener información sobre algunas consideraciones de uso y problemas conocidos, vea [destino de Excel](../data-flow/excel-destination.md).  
+>  Al exportar datos a un destino de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] , el asistente utiliza el componente Destino de Excel de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener información sobre algunas consideraciones de uso y problemas conocidos, vea [Excel Destination](../data-flow/excel-destination.md).  
   
 ### <a name="destination--microsoft-access"></a>Destino = Microsoft Access  
   
 > [!NOTE]  
->  Seleccione **Microsoft Access** únicamente si desea conectarse a una base de datos que use Access 2003 o versiones anteriores. Para conectarse a una base de datos que use Access 2007, seleccione **Microsoft Office 12.0 Access Database Engine OLE DB Provider**.  
+>  Seleccione **Microsoft Access** solo si desea conectarse a una base de datos que use Access 2003 o una versión anterior. Para conectarse a una base de datos que usa Access 2007, seleccione **Microsoft Office 12,0 Access motor de base de datos proveedor de OLE DB**.  
   
  **Nombre de archivo**  
- Especifique la ruta de acceso y nombre de archivo para el archivo de base de datos en el que se va a almacenar los datos (por ejemplo, C:\MyData.mdb, \\\Sales\Database\Northwind.mdb). O bien, haga clic en **Examinar** para buscar un archivo de base de datos.  
+ Especifique la ruta de acceso y el nombre de archivo del archivo de base de datos en el que se almacenarán los datos (por ejemplo, C:\MyData.mdb, \\ \Sales\Database\Northwind.mdb). O bien, haga clic en **Examinar** para buscar un archivo de base de datos.  
   
  **Examinar**  
- Busque el archivo de base de datos mediante el uso de la **abierto** cuadro de diálogo.  
+ Busque el archivo de base de datos mediante el cuadro de diálogo **abrir** .  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario válido para la conexión de base de datos si hay un archivo de información de grupo de trabajo asociado a la base de datos.  
   
  **Contraseña**  

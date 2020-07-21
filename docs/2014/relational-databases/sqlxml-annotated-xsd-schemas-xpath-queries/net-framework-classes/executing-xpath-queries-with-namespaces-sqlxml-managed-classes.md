@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML) | Documentos de Microsoft
+title: Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - SQLXML Managed Classes, executing XPath queries
 - namespaces [SQLXML], XPath queries
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 793107e91425e4fa0df23211a6d4ea42afef8c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7d5e937cead8fa86fd249d782fa570639a403493
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015289"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML)
   Las consultas XPath pueden incluir espacios de nombres. Si los elementos de esquema son espacios de nombres calificados (usan un espacio de nombres de destino), las consultas XPath que se realicen en el esquema deben especificar el espacio de nombres.  
   
- Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, utilice la propiedad de los espacios de nombres para especificar el enlace de espacio de nombres.  
+ Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, use la propiedad namespaces para especificar el enlace del espacio de nombres.  
   
- En el ejemplo siguiente, la consulta XPath especifica los espacios de nombres con el carácter comodín (\*) y las funciones de XPath local-name() y espacio. Esta consulta XPath devuelve todos los elementos en los que el nombre local es `Employee` y el URI del espacio de nombres es `urn:myschema:Contacts`:  
+ En el ejemplo siguiente, la consulta XPath especifica espacios de nombres mediante el carácter comodín ( \* ) y las funciones XPath de nombre local () y espacio de nombres-URI (). Esta consulta XPath devuelve todos los elementos en los que el nombre local es `Employee` y el URI del espacio de nombres es `urn:myschema:Contacts`:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
@@ -54,7 +53,7 @@ ms.locfileid: "66010802"
   
  Dado que en este esquema se define el espacio de nombres de destino, una consulta XPath (como "Employee") en este esquema debe incluir el espacio de nombres.  
   
- La aplicación de ejemplo C# siguiente ejecuta una consulta XPath en el esquema XSD anterior (MySchema.xml). Para resolver el prefijo, especifique el enlace de espacio de nombres mediante el uso de la propiedad de los espacios de nombres del objeto SqlXmlCommand.  
+ La aplicación de ejemplo C# siguiente ejecuta una consulta XPath en el esquema XSD anterior (MySchema.xml). Para resolver el prefijo, especifique el enlace de espacio de nombres mediante la propiedad namespaces del objeto SqlXmlCommand.  
   
 > [!NOTE]  
 >  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  
@@ -96,7 +95,7 @@ class Test
   
 1.  Guarde el esquema XSD (MySchema.xml) que se proporciona en este ejemplo en una carpeta.  
   
-2.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta donde se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
+2.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
   
 3.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   

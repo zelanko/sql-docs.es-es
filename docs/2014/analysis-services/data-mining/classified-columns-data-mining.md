@@ -1,5 +1,5 @@
 ---
-title: Clasificar las columnas (minería de datos) | Microsoft Docs
+title: Columnas clasificadas (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bb1484ff3bad80979c9421e8d46ec4f46e866b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085686"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524815"
 ---
 # <a name="classified-columns-data-mining"></a>Columnas clasificadas (Minería de datos)
   Cuando se define una columna clasificada, se crea una relación entre la columna actual y otra columna de la estructura de minería de datos. La columna de la estructura de minería de datos que se designa como columna clasificada contiene información sobre categorías que describe los valores de otra columna de la estructura de minería de datos.  
@@ -40,10 +39,10 @@ ms.locfileid: "66085686"
   
  En la lista siguiente se describen los tipos de contenido que admite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para las columnas clasificadas.  
   
- **PROBABILITY**  
+ **PROBABILIDAD**  
  El valor de la columna es la probabilidad del valor asociado, un número entre cero y uno.  
   
- **VARIANCE**  
+ **CONCILIA**  
  El valor de la columna es la varianza del valor asociado.  
   
  **STDEV**  
@@ -55,12 +54,12 @@ ms.locfileid: "66085686"
  **PROBABILITY_STDEV**  
  El valor de la columna es la desviación estándar de la probabilidad del valor asociado.  
   
- **Support**  
+ **SER**  
  El valor de la columna es el peso, o factor de replicación del caso, del valor asociado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
  [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md)  
   
   

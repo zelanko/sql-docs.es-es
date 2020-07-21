@@ -1,5 +1,5 @@
 ---
-title: Establecer la reescritura de particiones | Microsoft Docs
+title: Establecer escritura diferida de partición | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6056fcd26a8fdef16d17178cd12e8d5f27e97c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547387"
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
   Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  
@@ -53,15 +52,15 @@ ms.locfileid: "66072903"
  Puede convertir los datos de la tabla de reescritura de una partición en una partición. Este procedimiento convierte la tabla de reescritura en la nueva tabla de hechos de la partición.  
   
 > [!CAUTION]  
->  El uso incorrecto de las particiones puede provocar que haya datos incorrectos en el cubo. Para más información, vea [Crear y administrar una partición local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
+>  El uso incorrecto de las particiones puede provocar que haya datos incorrectos en el cubo. Para obtener más información, vea [Crear y administrar una partición local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md).  
   
  Al convertir la tabla de datos de reescritura en una partición también se deshabilita la partición para escritura. Todas las directivas de lectura/escritura y permisos de lectura/escritura no restringidos de las celdas de la partición se deshabilitan, y los usuarios finales no podrán cambiar los datos mostrados del cubo. (Los usuarios finales con directivas de lectura/escritura no restringidas deshabilitadas o con permisos de lectura y lectura deshabilitados, seguirán siendo capaces de examinar el cubo.) Los permisos de lectura y de contingente de lectura no se ven afectados.  
   
- Para convertir los datos de reescritura en una partición, use el cuadro de diálogo **Convertir en partición**, al que puede acceder si hace clic con el botón derecho en la tabla de reescritura de una partición habilitada para escritura en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Especifique un nombre para la partición y si va a diseñar la agregación de la partición más adelante o al mismo tiempo que la crea. Para crear la agregación al mismo tiempo que elige la partición, debe elegir copiar el diseño de agregaciones desde una partición existente. Aunque no siempre, ésta suele ser la partición de reescritura actual. También puede elegir procesar la partición al mismo tiempo que la crea.  
+ Para convertir los datos de reescritura en una partición, use el cuadro de diálogo **Convertir en partición** , al que puede acceder si hace clic con el botón derecho en la tabla de reescritura de una partición habilitada para escritura en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Especifique un nombre para la partición y si va a diseñar la agregación de la partición más adelante o al mismo tiempo que la crea. Para crear la agregación al mismo tiempo que elige la partición, debe elegir copiar el diseño de agregaciones desde una partición existente. Aunque no siempre, ésta suele ser la partición de reescritura actual. También puede elegir procesar la partición al mismo tiempo que la crea.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones habilitadas para escritura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Habilitar reescritura en un cubo OLAP en el nivel de celda en Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [Habilitar la reescritura en un cubo OLAP en el nivel de celda en Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Habilitación y seguridad de la entrada de datos con reescritura de Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

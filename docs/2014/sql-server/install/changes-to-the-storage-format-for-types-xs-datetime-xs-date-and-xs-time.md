@@ -1,5 +1,5 @@
 ---
-title: 'Los cambios en el formato de almacenamiento para los tipos xs: DateTime, xs: Date y xs: Time | Microsoft Docs'
+title: 'Cambios en el formato de almacenamiento para los tipos XS: dateTime, XS: Date y XS: Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037159"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>Cambios en el formato de almacenamiento de los tipos xs:dateTime, xs:date y xs:time
   La regla XMLDATETIME identifica si las bases de datos contienen datos XML con tipo que dejarán de ser válidos después de la actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66096606"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Descripción  
- El formato de almacenamiento en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para los tipos xs: DateTime, xs: Date y xs: Time ha cambiado para admitir valores con o sin información de zona horaria y para permitir la conservación de la zona horaria.  
+ El formato de almacenamiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para los tipos XS: DateTime, XS: Date y XS: Time ha cambiado para admitir valores con o sin información de zona horaria y para permitir la preservación de la zona horaria.  
   
  Si una colección de esquemas XML hace referencia a uno de esos tipos, los índices XML de todas las columnas que estén asociadas a la colección estarán deshabilitados tras la actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Podrá consultarlos utilizando SELECT y/o XQUERIES, pero no se utilizará el índice XML. Si se encuentra un valor de año negativo, se producirá un error en tiempo de ejecución.  
   
@@ -185,7 +184,7 @@ EXECUTE DateTimeInvestigation 1;
   
  Para utilizar índices XML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] después de la actualización, debe volver a generar los índices XML o volver a escribir las columnas XML para todas las columnas que utilicen xs:date, xs:time o xs:dateTime.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de actualización del motor de la base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

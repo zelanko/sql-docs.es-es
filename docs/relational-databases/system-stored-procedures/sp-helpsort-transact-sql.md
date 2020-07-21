@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997360"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750525"
 ---
-# <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Muestra el criterio de ordenación y el juego de caracteres de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -46,7 +46,7 @@ sp_helpsort
  Devuelve la intercalación predeterminada del servidor.  
   
 ## <a name="remarks"></a>Comentarios  
- Si una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instala con una intercalación especificada para que sea compatible con una instalación anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_helpsort** devuelve resultados en blanco. En casos como éste, se puede determinar la intercalación consultando el objeto SERVERPROPERTY; por ejemplo: `SELECT SERVERPROPERTY ('Collation');`.  
+ Si se instala una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una intercalación especificada para ser compatible con una instalación anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_helpsort** devuelve resultados en blanco. En casos como éste, se puede determinar la intercalación consultando el objeto SERVERPROPERTY; por ejemplo: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -66,9 +66,9 @@ sp_helpsort;
   
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

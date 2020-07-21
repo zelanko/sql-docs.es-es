@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f0cc59a51573931c742e4a6303b72e103e747d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774017"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar IIS 7 para la sincronización web
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Los procedimientos descritos en este tema le guiarán a través del proceso de configurar manualmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versión 7 y superior para su uso con la sincronización web en la replicación de mezcla. 
   
@@ -34,9 +34,9 @@ ms.locfileid: "67903210"
   
  Para utilizar la sincronización web, debe configurar IIS mediante los siguientes pasos. Cada paso se describe detalladamente en este tema.  
   
-1.  Instale y configure la Escucha de replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo en el que se ejecuta IIS.  
+1.  Instale y configure Escucha de replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo en el que se ejecuta IIS.  
   
-2.  Configure SSL (Capa de sockets seguros). SSL es necesario para establecer comunicaciones entre IIS y todos los suscriptores.  
+2.  Configure la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL). TLS es necesario para establecer comunicaciones entre IIS y todos los suscriptores.  
   
 3.  Configure la autenticación IIS.  
   
@@ -50,7 +50,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 1.  Instale la replicación de SQL Server en el equipo de IIS.
 
-2. Cree un directorio de archivos para replisapi.dll en el equipo que ejecute IIS. Puede crear el directorio donde desee, pero recomendamos crearlo en el directorio \<*unidad*>:\Inetpub. Por ejemplo, cree el directorio \<*drive*>:\Inetpub\SQLReplication\\.  
+2. Cree un directorio de archivos para replisapi.dll en el equipo que ejecute IIS. Puede crear el directorio donde quiera, pero se recomienda crearlo en el directorio \<*drive*>:\Inetpub. Por ejemplo, cree el directorio \<*drive*>:\Inetpub\SQLReplication\\.  
   
 3.  Copie replisapi.dll del directorio [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ al directorio de archivos que creó en el paso 1.  
   
@@ -70,7 +70,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     2.  En **Alias**, escriba **SQLReplication**.  
   
-    3.  En **Ruta de acceso física**, escriba **\<<unidad>:\Inetpub\SQLReplication\\** y haga clic en **Aceptar**.  
+    3.  En **Ruta de acceso física**, escriba **\<drive>:\Inetpub\SQLReplication\\** y, después, haga clic en **Aceptar**.  
   
 7.  Configure IIS para permitir la ejecución de replisapi.dll.  
   
@@ -84,7 +84,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     5.  En la lista desplegable **Módulo** , seleccione **IsapiModule**.  
   
-    6.  En **Ejecutable**, escriba **\<unidad>:\Inetpub\SQLReplication\replisapi.dll**.  
+    6.  En **Ejecutable**, escriba **\<drive>:\Inetpub\SQLReplication\replisapi.dll**.  
   
     7.  En **Nombre**especifique **Replisapi**.  
   
@@ -97,9 +97,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
 ## <a name="configuring-iis-authentication"></a>Configurar la autenticación IIS  
  Cuando los equipos suscriptores se conectan a IIS, IIS debe autenticarlos para que puedan tener acceso a los recursos y procesos. La autenticación se puede aplicar a todo el sitio web o al directorio virtual que ha creado.  
   
- Se recomienda usar la autenticación básica con SSL. SSL es necesario, independientemente del tipo de autenticación que se utilice.  
-  
- Se recomienda usar la autenticación básica con SSL. SSL es necesario, independientemente del tipo de autenticación que se utilice.  
+ Se recomienda usar la autenticación básica con TLS. TLS es necesario, independientemente del tipo de autenticación que se utilice.
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar la autenticación IIS  
   
@@ -112,7 +110,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
 4.  Haga clic con el botón secundario en Autenticación básica y, a continuación, elija Habilitar.  
   
 ## <a name="configuring-secure-sockets-layer"></a>Configurar la Capa de sockets seguros (SSL)  
- Para configurar SSL, especifique un certificado para que lo utilice el equipo en el que se ejecuta IIS. La sincronización web para la replicación de mezcla es compatible con el uso de certificados de servidor, pero no de certificados de cliente. Para configurar IIS para implementación, primero debe obtener un certificado por parte de una entidad de certificación (CA). Para obtener más información acerca de los certificados, vea la documentación de IIS.  
+ Para configurar TLS, especifique un certificado para que lo utilice el equipo en el que se ejecuta IIS. La sincronización web para la replicación de mezcla es compatible con el uso de certificados de servidor, pero no de certificados de cliente. Para configurar IIS para implementación, primero debe obtener un certificado por parte de una entidad de certificación (CA). Para obtener más información acerca de los certificados, vea la documentación de IIS.  
   
  Cuando el certificado esté instalado, debe asociarlo al sitio web que utiliza la sincronización web. En el caso las tareas de desarrollo y pruebas, puede especificar un certificado autofirmado. IIS 7 puede crear un certificado y registrarlo en el equipo.  
   
@@ -121,9 +119,9 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
 > [!IMPORTANT]  
 >  No es recomendable utilizar un certificado autofirmado en una instalación de producción. Los certificados autofirmados no son seguros. Utilice certificados autofirmados solo en instalaciones de desarrollo y pruebas.  
   
- Para configurar SSL, debe realizar estos pasos:  
+ Para configurar TLS, debe realizar estos pasos:  
   
-1.  Configure el sitio web para requiera SSL y pase por alto los certificados de cliente.  
+1.  Configure el sitio web para que requiera TLS y pase por alto los certificados de cliente.  
   
 2.  Obtenga un certificado de una entidad de certificación o cree un certificado autofirmado.  
   
@@ -220,7 +218,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     2.  En la pestaña **Seguridad** , haga clic en **Editar**.  
   
-    3.  En el cuadro de diálogo **Permisos de \<nombreDeCarpeta>** , haga clic en **Agregar** para agregar la cuenta que creó en el paso 1.  
+    3.  En el cuadro de diálogo **Permisos para \<foldername>** , haga clic en **Agregar** para agregar la cuenta que ha creado en el paso 1.  
   
     4.  Compruebe que en **Desde esta ubicación** aparece el nombre del equipo local (no un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
   
@@ -268,7 +266,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
     5.  Vuelva a hacer clic en **Aceptar** para cerrar Configuración avanzada.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>Probar la conexión con replisapi.dll  
- Ejecute la sincronización web en modo de diagnóstico para probar la conexión al equipo en el que se ejecuta IIS y para asegurarse de que el certificado SSL (Capa de sockets seguros) está instalado correctamente. Para ejecutar la sincronización web en modo de diagnóstico, debe ser administrador en el equipo donde se ejecuta IIS.  
+ Ejecute la sincronización web en modo de diagnóstico para probar la conexión con el equipo en el que se ejecuta IIS y para asegurarse de que el certificado TLS/SSL está instalado correctamente. Para ejecutar la sincronización web en modo de diagnóstico, debe ser administrador en el equipo donde se ejecuta IIS.  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>Para probar la conexión con replisapi.dll  
   
@@ -309,7 +307,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
     > [!NOTE]  
     >  Los certificados los instalan los usuarios. Este proceso lo deben realizar todos los usuarios que vayan a realizar sincronizaciones con IIS.  
   
-4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>** , especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
+4.  En el cuadro de diálogo **Conectar con \<ServerName>** , especifique el nombre de inicio de sesión y la contraseña que utilizará el Agente de mezcla para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
 5.  En la ventana de Internet Explorer con **información de diagnóstico sobre la sincronización web de SQL**, compruebe que el valor de todas las columnas de **estado** de la página sea **SUCCESS**.  
   

@@ -1,5 +1,6 @@
 ---
 title: Valor predeterminado de la suma de comprobación de copia de seguridad | Microsoft Docs
+description: Obtenga información sobre la opción backup checksum default. Vea cómo usarla para activar o desactivar la suma de comprobación de copia de seguridad durante las operaciones de copia de seguridad y restauración de SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725248"
 ---
 # <a name="backup-checksum-default"></a>Valor predeterminado de la suma de comprobación de copia de seguridad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use el ajuste del valor predeterminado de la suma de comprobación de copia de seguridad para habilitar o deshabilitar dicha suma de comprobación durante la creación de copias de seguridad y la restauración.  
   
@@ -26,11 +27,11 @@ ms.locfileid: "68013136"
   
 |||  
 |-|-|  
-|**Value**|**Significado**|  
+|**Valor**|**Significado**|  
 |0|Deshabilitado. Esta es la configuración predeterminada.|  
-|1|Habilitado|  
+|1|habilitado|  
   
- La configuración surte efecto de forma inmediata.  
+ Esta configuración surte efecto inmediatamente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante copia de seguridad o restauración &#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

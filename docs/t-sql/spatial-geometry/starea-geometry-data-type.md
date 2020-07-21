@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 736099ee4e694863c05b56626572c0b3edb1a485
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748791"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el área expuesta total de una instancia de **geometry**.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68100990"
 .STArea ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STArea()` devuelve 0 si una instancia de **geometry** contiene únicamente figuras no dimensionales o unidimensionales, o si está vacía. `STArea()` devuelve **NULL** si la instancia de **geometry** no se ha inicializado.  
   
 ## <a name="examples"></a>Ejemplos  

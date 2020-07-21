@@ -1,6 +1,6 @@
 ---
-title: Reemplazar los parámetros de plantilla | Microsoft Docs
-ms.custom: ''
+title: Reemplazar parámetros de plantilla
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd68bc3a3334991a7c81db547a9fc8117c86996a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b0c4cc26fddff13e388b74593aa9d8f9331359f8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266728"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245681"
 ---
 # <a name="replace-template-parameters"></a>Reemplazar parámetros de plantilla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68edbeac50e02e827418c2a213b706162f623b0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064586"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publicación (replicación punto a punto)
   La página **Publicación** muestra las publicaciones transaccionales habilitadas para la replicación punto a punto. Las publicaciones se habilitan en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** .  
   
 ## <a name="options"></a>Opciones  
- **publicador**  
+ **Publicador**  
  Muestra el servidor al que está conectado. Para conectar con otro servidor, seleccione **Buscar publicador de SQL Server**.  
   
  **Bases de datos y publicaciones**  
  Muestra todas las bases de datos del servidor que contienen al menos una publicación habilitada para la replicación punto a punto. Seleccione una publicación para continuar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   

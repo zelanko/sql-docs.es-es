@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f611367f0b078fb02977c27ee1d61d648de87869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873106"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970305"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociados a una base de datos de usuario, como tablas, vistas y objetos de instancia, incluidos los inicios de sesión. Una DAC es una unidad independiente de implementación de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un artefacto portátil denominado paquete DAC y también conocido como DACPAC.  
@@ -98,7 +97,7 @@ ms.locfileid: "62873106"
 ## <a name="backup-package-bacpac"></a>Paquete de copia de seguridad (.bacpac)  
  Un BACPAC es un artefacto que encapsula el esquema de la base de datos junto con los datos almacenados en la base de datos. El BACPAC es un archivo de Windows con una extensión .bacpac. Similar al DACPAC, el formato de archivo BACPAC es abierto: el contenido del esquema del BACPAC es idéntico al del DACPAC. Los datos se almacenan en formato JSON.  
   
- DACPAC y BACPAC son similares pero se dirigen a escenarios diferentes. Un DACPAC está dirigido a la captura y la implementación del esquema, incluida la actualización de una base de datos existente. El principal caso de uso de un DACPAC es implementar un esquema estrictamente definido para el desarrollo, prueba y, a continuación, los entornos de producción y viceversa: capturar el esquema de producción y aplicarlo a entornos de desarrollo y volver a probar.  
+ DACPAC y BACPAC son similares pero se dirigen a escenarios diferentes. Un DACPAC está dirigido a la captura y la implementación del esquema, incluida la actualización de una base de datos existente. El caso de uso principal de un DACPAC es implementar un esquema estrictamente definido en entornos de desarrollo, prueba y producción, y a la inversa: capturar el esquema de producción y volver a aplicarlo a los entornos de prueba y desarrollo.  
   
  Por otro lado, un BACPAC está dirigido a capturar el esquema y los datos. Un BACPAC es el equivalente lógico de una copia de seguridad de base de datos y no se puede utilizar para actualizar las bases de datos existentes. El caso de uso principal de un BACPAC es mover una base de datos de un servidor a otro, o de un servidor local a la nube, y almacenar una base de datos existente en un formato abierto.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873106"
   
 -   **IMPORT**: el usuario puede importar el esquema y los datos a una base de datos nueva en el servidor de host.  
   
- Las dos funciones son compatibles con las herramientas de administración de base de datos: Server Management Studio, el Portal de administración de SQL Azure y la API de DACFx.  
+ Ambas funciones son compatibles con las herramientas de administración de bases de datos: Server Management Studio, Portal de administración de SQL Azure y API de DACFx.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario ser miembro del rol `dbmanager` o tener asignados permisos `CREATE DATABASE` para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. Es necesario ser miembro del rol `dbmanager` o tener asignados permisos `DROP DATABASE` para quitar una base de datos.  
@@ -126,10 +125,10 @@ ms.locfileid: "62873106"
 |Describe cómo importar un archivo BACPAC para crear una base de datos de usuario en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraer una DAC de una base de datos](extract-a-dac-from-a-database.md)|  
 |Describe cómo promover una base de datos existente para que sea una instancia de DAC. La definición de DAC está compilada y almacenada en las bases de datos del sistema.|[Registrar una base de datos como una DAC](register-a-database-as-a-dac.md)|  
 |Describe cómo consultar el contenido de un paquete DAC y las acciones que una actualización de DAC realizará antes de usar el paquete en un sistema de producción.|[Validar un paquete DAC](validate-a-dac-package.md)|  
-|Describe cómo colocar el contenido de un paquete DAC en una carpeta donde un administrador de bases de datos puede revisar lo que hace la DAC antes de implementarlo en un servidor de producción.|[Desempaquetar un paquete DAC](unpack-a-dac-package.md)|  
+|Describe cómo colocar el contenido de un paquete DAC en una carpeta donde un administrador de bases de datos puede revisar lo que hace la DAC antes de implementarlo en un servidor de producción.|[Desempaquetar un paquete de DAC](unpack-a-dac-package.md)|  
 |Describe cómo usar un asistente para implementar una base de datos existente. El asistente usa DAC para realizar la implementación.|[Implementar una base de datos mediante una DAC](deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de DAC con las versiones y objetos de SQL Server](dac-support-for-sql-server-objects-and-versions.md)  
   
   

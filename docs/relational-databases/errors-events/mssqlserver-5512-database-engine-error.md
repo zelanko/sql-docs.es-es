@@ -12,23 +12,23 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: badc2269bd84bdaa32a5e48bde9492c306eb01be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f82e60e3c3d44e2fc51ac0e5a258ae3f63fa33bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716952"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|5512|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|5512|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|FS_TRUNCATEDIR_FAILED|  
 |Texto del mensaje|Error 0x%x (%ls) al truncar el directorio ''%.*ls''.|  

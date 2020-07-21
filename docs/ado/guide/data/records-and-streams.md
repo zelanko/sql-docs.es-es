@@ -12,53 +12,53 @@ helpviewer_keywords:
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ec87974499edabb2c5a5ae503d90f9f739694c41
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924492"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760991"
 ---
 # <a name="records-and-streams"></a>Registros y secuencias
-ADO proporciona actualmente las [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto como medio principal para acceder a la información de orígenes de datos, como bases de datos relacionales. Sin embargo, algunos proveedores admiten la [registro](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos como objetos alternativos o complementarios para manipular los datos de proveedores. Para obtener información específica sobre **registro** comportamiento, consulte la documentación del proveedor.  
+ADO actualmente proporciona el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como medio principal para tener acceso a la información de los orígenes de datos, como las bases de datos relacionales. Sin embargo, algunos proveedores admiten los objetos [Record](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) como objetos complementarios o alternativos con los que se pueden manipular los datos de los proveedores. Para obtener información específica sobre el comportamiento del **registro** , consulte la documentación del proveedor.  
   
 ## <a name="records"></a>Registros  
- **Registro** objetos funcionan básicamente como una fila **Recordset**s. Sin embargo, **registros** limitada en comparación con la funcionalidad **conjuntos de registros** y tienen diferentes propiedades y métodos. El origen de datos en un **registro** objeto puede ser un comando que devuelve una fila de datos del proveedor. Mediante **registro** objetos en lugar de **Recordset** objetos para recibir los resultados de una consulta que devuelve una fila de datos elimina la sobrecarga de crear instancias más complejas **conjunto de registros**  objeto.  
+ Los objetos de **registro** básicamente funcionan como **conjuntos de registros**de una fila. Sin embargo, **los registros** tienen una funcionalidad limitada en comparación con los **conjuntos de registros** y tienen propiedades y métodos diferentes. El origen de los datos de un objeto de **registro** puede ser un comando que devuelve una fila de datos del proveedor. El uso de objetos de **registro** en lugar de objetos de **conjunto de registros** para recibir los resultados de una consulta que devuelve una fila de datos elimina la sobrecarga de crear instancias del objeto de **conjunto de registros** más complejo.  
   
- **Registro** objetos pueden servir para otro propósito, especialmente con proveedores de orígenes de datos que no sean bases de datos relacionales tradicionales, como el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Gran parte de la información que se debe procesar existe, no como tablas en bases de datos, pero como mensajes en sistemas de correo electrónico y archivos en modernos sistemas de archivos. El **registro** y **Stream** objetos facilitan el acceso a información almacenada en los orígenes que no sean bases de datos relacionales.  
+ Los objetos de **registro** pueden servir a otro propósito, especialmente con los proveedores de orígenes de datos que no sean bases de datos relacionales tradicionales, como el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Gran parte de la información que se debe procesar existe, no como tablas en las bases de datos, sino como mensajes en los sistemas de correo electrónico y los archivos de los sistemas de archivos modernos. Los objetos **Record** y **Stream** facilitan el acceso a la información almacenada en orígenes distintos de las bases de datos relacionales.  
   
- El **registro** objeto puede representar y administrar datos, como archivos y directorios en un sistema de archivos o carpetas y mensajes en un sistema de correo electrónico. Para estos fines, el origen de la **registro** puede ser la fila actual de una abierta **Recordset**, una dirección URL absoluta o una dirección URL relativa junto con una apertura [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
+ El objeto de **registro** puede representar y administrar datos como directorios y archivos en un sistema de archivos o carpetas y mensajes en un sistema de correo electrónico. Para estos propósitos, el origen del **registro** puede ser la fila actual de un conjunto de **registros**abierto, una dirección URL absoluta o una dirección URL relativa junto con un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) abierto.  
   
- Normalmente, un **Recordset** puede usarse para representar un contenedor o la entidad primaria en una jerarquía como una carpeta o un directorio. Un **registro** puede usarse para devolver información específica sobre un nodo en el contenedor primario, como un archivo o documento. La razón principal **registros** se utilizan para representar este tipo de información es que estos orígenes de datos heterogéneos. Esto significa que cada **registro** puede tener un conjunto diferente y el número de campos. Tradicional **conjuntos de registros** que contienen filas de una base de datos son homogéneas, lo que significa que cada fila tiene el mismo número y tipo de campos.  
+ Normalmente, un **conjunto de registros** se puede usar para representar un contenedor o un elemento primario en una jerarquía, como una carpeta o un directorio. Un **registro** se puede utilizar para devolver información específica sobre un nodo del contenedor primario, como un archivo o un documento. Los **registros** de motivo principal que se usan para representar este tipo de información son que estos orígenes de datos son heterogéneos. Esto significa que cada **registro** puede tener un conjunto y un número de campos distintos. Los **conjuntos de registros** tradicionales que contienen filas de una base de datos son homogéneos, lo que significa que cada fila tiene el mismo número y tipo de campos.  
   
- Para obtener más información sobre el uso de la **registro** de objetos para el procesamiento de datos heterogéneos de proveedores como el proveedor de publicación en Internet, consulte [utilizar ADO para publicación en Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
+ Para obtener más información sobre el uso del objeto **Record** para procesar estos datos heterogéneos de proveedores como el proveedor de publicación en Internet, vea [usar ado para la publicación en Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
-## <a name="streams"></a>Flujos  
- El **Stream** objeto proporciona los medios para leer, escribir y administrar una secuencia de bytes. Esta secuencia de bytes puede ser texto o binario y tiene un tamaño limitada únicamente por los recursos del sistema. Normalmente, ADO **Stream** objetos se usan para los siguientes fines:  
+## <a name="streams"></a>Secuencias  
+ El objeto **Stream** proporciona los medios para leer, escribir y administrar un flujo de bytes. Esta secuencia de bytes puede ser texto o binaria y solo tiene un tamaño limitado por los recursos del sistema. Normalmente, los objetos de **secuencia** de ADO se utilizan para los siguientes fines:  
   
--   Para que contenga los datos de un **Recordset** guarda en formato XML. Guardan estas secuencias XML desde **Recordset**s puede usarse como origen al abrir un nuevo **Recordset**. Para obtener más información, consulte [secuencias y persistencia](../../../ado/guide/data/streams-and-persistence.md).  
+-   Para contener los datos de un **conjunto de registros** guardado en formato XML. Estas secuencias XML de los **conjuntos de registros**guardados se pueden usar como origen al abrir un nuevo **conjunto de registros**. Para obtener más información, vea [flujos y persistencia](../../../ado/guide/data/streams-and-persistence.md).  
   
--   Para que contenga [CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md) que se ejecutan en el proveedor como una alternativa a [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md). Por ejemplo, diagramas de actualización XML puede usarse como origen para un comando con el proveedor Microsoft OLE DB para SQL Server.  
+-   Para contener [CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md) que se van a ejecutar en el proveedor como alternativa a [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md). Por ejemplo, se puede usar XML diagramas como origen de un comando en el proveedor de OLE DB de Microsoft para SQL Server.  
   
--   Para recibir los resultados del proveedor en un formato distinto de un **Recordset**, tales como los resultados XML desde el proveedor Microsoft OLE DB para SQL Server. Para obtener más información, consulte [recuperar conjuntos de resultados en secuencias](../../../ado/guide/data/retrieving-resultsets-into-streams.md).  
+-   Para recibir los resultados del proveedor en un formato que no sea un **conjunto de registros**, como los resultados XML del proveedor de OLE DB de Microsoft para SQL Server. Para obtener más información, vea [recuperar conjuntos de datos en secuencias](../../../ado/guide/data/retrieving-resultsets-into-streams.md).  
   
--   Para contener el texto o bytes que componen un archivo o mensaje que normalmente se utiliza con los proveedores como el proveedor Microsoft OLE DB para la publicación en Internet. Para obtener más información acerca de este uso de **Stream** objetos, vea [utilizar ADO para publicación en Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
+-   Para contener el texto o bytes que componen un archivo o un mensaje, normalmente se usa con proveedores como el proveedor de OLE DB de Microsoft para la publicación en Internet. Para obtener más información sobre este uso de los objetos de **secuencia** , vea [usar ado para la publicación en Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
- Un **Stream** se puede abrir el objeto en:  
+ Un objeto de **secuencia** se puede abrir en:  
   
 -   Un archivo simple especificado con una dirección URL.  
   
--   Un campo de un **registro** o **Recordset** que contiene un **Stream** objeto.  
+-   Campo de un **registro** o **conjunto de registros** que contiene un objeto de **secuencia** .  
   
--   La secuencia predeterminada de un **registro** o **Recordset** objeto que representa un directorio o un archivo compuesto.  
+-   Secuencia predeterminada de un **registro** o un objeto de **conjunto de registros** que representa un directorio o archivo compuesto.  
   
--   Un campo de recursos que contiene la dirección URL de un archivo simple.  
+-   Campo de recursos que contiene la dirección URL de un archivo simple.  
   
--   Ningún origen particular en absoluto. En este caso, un **Stream** se abre el objeto en memoria. Datos se pueden escritos en él y, a continuación, se guarda en otra **Stream** o archivo.  
+-   Ningún origen determinado. En este caso, se abre un objeto de **flujo** en la memoria. Los datos se pueden escribir en él y, a continuación, guardar en otro **flujo** o archivo.  
   
--   Un campo BLOB en un **Recordset**.  
+-   Campo de BLOB en un **conjunto de registros**.  
   
  Esta sección contiene los temas siguientes.  
   

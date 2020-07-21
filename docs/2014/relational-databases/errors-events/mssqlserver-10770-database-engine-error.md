@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 20f2147d-7f2d-470a-ac01-3c9adc29c577
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 591420c194a3d0a7e1ec2ec3fbcb2d580aaef90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37211e3342a7d109b907f89331760114ec14becf
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870452"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554050"
 ---
-# <a name="mssqlserver10770"></a>MSSQLSERVER_10770
+# <a name="mssqlserver_10770"></a>MSSQLSERVER_10770
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|10770|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|10770|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P3_HEKATON_TABLE|  
 |Texto del mensaje|*construct* '*feature*' no es compatible con las tablas optimizadas en memoria.|  

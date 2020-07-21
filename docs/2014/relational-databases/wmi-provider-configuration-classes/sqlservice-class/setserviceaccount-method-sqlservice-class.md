@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2b4d5c42401a46f9840871d071c27dccf07b04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63218106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059723"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (clase SqlService)
   Intenta cambiar el nombre de usuario y la contraseña con los que se ejecuta la instancia del servicio.  
@@ -49,19 +48,19 @@ ServiceStartName , ServiceStartPassword
   
 -   Si la cuenta pertenece al dominio integrado, puede especificarse \NombreUsuario.  
   
--   Si se especifica NULL, el servicio de haber iniciado sesión como el **LocalSystem** cuenta.  
+-   Si se especifica NULL, el servicio se iniciará sesión como la cuenta **LocalSystem** .  
   
- Para los controladores de kernel o nivel de sistema, *StartName* contiene el nombre de objeto de controlador, \FileSystem\Rdr o \Driver\Xns, que usa el sistema de E/S para cargar el controlador de dispositivo. Además, si se especifica NULL, el controlador se ejecutará con un nombre de objeto predeterminado creado por el sistema de E/S basado en el nombre del servicio. Ejemplo: DWDOM\Admin.  
+ En el caso de los controladores de kernel o de nivel de sistema, *StartName* contiene el nombre de objeto del controlador, ya sea \FileSystem\Rdr o \Driver\Xns, que el sistema de e/s utiliza para cargar el controlador de dispositivo. Además, si se especifica NULL, el controlador se ejecutará con un nombre de objeto predeterminado creado por el sistema de E/S basado en el nombre del servicio. Ejemplo: DWDOM\Admin.  
   
  *ServiceStartPassword*  
- Un valor de cadena que especifica la contraseña para el nombre de cuenta en el *StartName* parámetro. Especifique NULL si no va a cambiar la contraseña. Especifique una cadena vacía si el servicio no tiene contraseña.  
+ Valor de cadena que especifica la contraseña para el nombre de cuenta en el parámetro *StartName* . Especifique NULL si no va a cambiar la contraseña. Especifique una cadena vacía si el servicio no tiene contraseña.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de `uint32` que es igual a 0 si se modificó el servicio correctamente o igual a 1 si no se admite la solicitud. Cualquier otro número indica que hubo un error.  
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

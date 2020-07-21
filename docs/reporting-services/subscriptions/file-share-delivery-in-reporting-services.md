@@ -1,5 +1,6 @@
 ---
 title: Entrega a recursos compartidos de archivos en Reporting Services | Microsoft Docs
+description: En este artículo, aprenderá a configurar la extensión de entrega de recursos compartidos de archivos que permite entregar un informe a una carpeta.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.openlocfilehash: a411b818d0b844f3f43ae29db7a3e1ee732be798
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278230"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742049"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura puede ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
@@ -25,7 +26,7 @@ ms.locfileid: "72278230"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  **En este tema:**  
   
@@ -37,7 +38,7 @@ ms.locfileid: "72278230"
   
 -   [Opciones de archivo](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Informes de características entregados en carpetas compartidas  
+##  <a name="characteristics-reports-delivered-to-shared-folders"></a><a name="bkmk_Characteristics"></a> Informes de características entregados en carpetas compartidas  
   
 -   A diferencia de los informes que se hospedan y administran en un servidor de informes, los informes que se entregan a una carpeta compartida son archivos estáticos.  
   
@@ -45,9 +46,9 @@ ms.locfileid: "72278230"
   
 -   Si el informe incluye gráficos, se utiliza la presentación predeterminada. Si el informe se vincula a otro informe, el vínculo se representa como texto estático.  
   
--   Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. El correo electrónico contiene un vínculo al informe del servidor de informes, y los usuarios pueden usar las características interactivas. Para obtener más información, vea [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+-   Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. El correo electrónico contiene un vínculo al informe del servidor de informes, y los usuarios pueden usar las características interactivas. Para más información, vea [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Carpetas de destino  
+##  <a name="target-folders"></a><a name="bkmk_target_folders"></a> Carpetas de destino  
  Cuando defina una suscripción que utilice entrega a recursos compartidos de archivos, debe especificar una carpeta existente como la carpeta de destino. El servidor de informes no crea carpetas en el sistema de archivos. La carpeta que especifique debe ser accesible a través de una conexión de red.  
   
  Compruebe que los usuarios que van a **ver** los informes en la carpeta compartida tengan permiso de lectura.  
@@ -60,23 +61,23 @@ ms.locfileid: "72278230"
   
  Cuando cree la carpeta, tenga en cuenta los límites de conexión que necesita. El servidor de informes requiere dos conexiones, pero deben incluirse las suficientes para otros usuarios que deseen abrir informes en la carpeta compartida.  
   
-##  <a name="bkmk_file_formats"></a> Formatos de archivo  
+##  <a name="file-formats"></a><a name="bkmk_file_formats"></a> Formatos de archivo  
  Los informes se pueden representar en diversos formatos de archivo, como HTML, DOCX y Excel. Para guardar el informe en un formato de archivo específico, seleccione ese formato de representación en el momento en que cree su suscripción. Por ejemplo, si elige **Excel** , se guardará el informe como archivo de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Aunque puede elegir cualquier formato de representación compatible, algunos formatos funcionan mejor que otros al representar un archivo.  
   
  Para la entrega a recursos compartidos de archivos, elija un formato que entregue el informe como único archivo y que incluya todas las imágenes y el contenido relacionado en el informe. Entre los formatos adecuados se encuentran archivo web, PDF, TIFF y Excel. Evite HTML 4.0. Si su informe incluye imágenes, los formatos HTML 4.0 no las incluirán en el archivo.  
   
-##  <a name="bkmk_file_options"></a> Opciones de archivo  
+##  <a name="file-options"></a><a name="bkmk_file_options"></a> Opciones de archivo  
  Cuando se crea una suscripción de recurso compartido de archivos, puede configurar cómo se crea el nombre de archivo y si el archivo sobrescribe las versiones anteriores del informe. Un nombre de archivo completo tiene tres partes: un nombre, una extensión y texto o un número que se anexa al archivo para crear un nombre de archivo exclusivo.  
   
- **Nombre de archivo:** el nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
+ **Nombre de archivo:** nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
   
- **Sobrescribir:** se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
+ **Sobrescribir:** Se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
  Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable **\@timestamp** al nombre del archivo (por ejemplo, *CompanySales@timestamp* ). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   
  La imagen siguiente es un ejemplo de la configuración de una suscripción configurada para la entrega a recursos compartidos de archivos.  
   
- ![Suscripción a un recurso compartido de archivos](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Suscripción a un recurso compartido de archivos")  
+ ![Suscripción a recurso compartido](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Suscripción a recurso compartido")  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   

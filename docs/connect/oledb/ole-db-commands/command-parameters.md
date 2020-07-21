@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68016108"
 ---
 # <a name="command-parameters"></a>Parámetros de comando
@@ -34,7 +34,7 @@ ms.locfileid: "68016108"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Para mejorar el rendimiento mediante la reducción del tráfico de red, el controlador OLE DB para SQL Server no deriva automáticamente la información de parámetros a menos que se llame a **ICommandWithParameters::GetParameterInfo** o **ICommandPrepare::Prepare** antes de ejecutar un comando. Esto significa que el controlador de OLE DB para SQL Server no realiza automáticamente lo siguiente:  
+ Para mejorar el rendimiento mediante la reducción del tráfico de red, el controlador OLE DB para SQL Server no deriva automáticamente la información de parámetros a menos que se llame a **ICommandWithParameters::GetParameterInfo** o **ICommandPrepare::Prepare** antes de ejecutar un comando. Esto significa que OLE DB Driver for SQL Server no hace automáticamente nada de lo siguiente:  
   
 -   Comprobar la exactitud del tipo de datos especificado con **ICommandWithParameters::SetParameterInfo**.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "68016108"
 > [!NOTE]  
 >  El proveedor no permite que se llame a **ICommandWithParameters::GetParameterInfo** para ninguna instrucción UPDATE o DELETE de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contenga una cláusula FROM; para ninguna instrucción SQL que dependa de una subconsulta que contenga parámetros; para instrucciones SQL que contengan marcadores de parámetros en las dos expresiones de una comparación, igualdad o predicado cuantificado; o consultas donde uno de los parámetros sea un parámetro de una función. Al procesar un lote de instrucciones SQL, el proveedor tampoco admite que se llame a **ICommandWithParameters::GetParameterInfo** para marcadores de parámetros en instrucciones después de la primera instrucción del lote. No se permiten comentarios (/* \*/) en el comando [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- El controlador de OLE DB para SQL Server admite parámetros de entrada en comandos de instrucción SQL. En los comandos de llamada a procedimiento, el controlador de OLE DB para SQL Server admite parámetros de entrada, salida y entrada/salida. Los valores de los parámetros de salida se devuelven a la aplicación en ejecución (únicamente si no se ha devuelto ningún conjunto de filas) o cuando la aplicación agota todos los conjuntos de filas. Para asegurarse de que los valores devueltos sean válidos, use **IMultipleResults** para forzar el consumo del conjunto de filas.  
+ OLE DB Driver for SQL Server admite parámetros de entrada en comandos de instrucciones SQL. En comandos de llamadas a procedimientos, OLE DB Driver for SQL Server admite parámetros de entrada, parámetros de salida y parámetros de entrada y salida. Los valores de los parámetros de salida se devuelven a la aplicación en ejecución (únicamente si no se ha devuelto ningún conjunto de filas) o cuando la aplicación agota todos los conjuntos de filas. Para asegurarse de que los valores devueltos sean válidos, use **IMultipleResults** para forzar el consumo del conjunto de filas.  
   
  No es necesario especificar los nombres de los parámetros de procedimientos almacenados en una estructura DBPARAMBINDINFO. Use NULL para el valor del miembro *pwszName* a fin de indicar que el controlador OLE DB para SQL Server debe omitir el nombre del parámetro y usar solo el ordinal especificado en el miembro *rgParamOrdinals* de **ICommandWithParameters::SetParameterInfo**. Si el texto del comando contiene tanto parámetros con nombre como parámetros sin nombre, todos los parámetros sin nombre deben especificarse antes de cualquier parámetro con nombre.  
   
- Si se especifica el nombre de un parámetro de procedimiento almacenado, el controlador OLE DB para SQL Server lo comprueba para asegurarse de que es válido. El controlador de OLE DB para SQL Server devuelve un error cuando recibe un nombre de parámetro erróneo del consumidor.  
+ Si se especifica el nombre de un parámetro de procedimiento almacenado, el controlador OLE DB para SQL Server lo comprueba para asegurarse de que es válido. OLE DB Driver for SQL Server devuelve un error cuando recibe un nombre de parámetro erróneo por parte del consumidor.  
   
 > [!NOTE]  
 >  Para exponer la compatibilidad con XML y tipos definidos por el usuario (UDT) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el controlador OLE DB para SQL Server implementa una nueva interfaz [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md).  

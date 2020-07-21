@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8c9388138ddec275dc1abd2b75e0b0c7fc99de4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721137"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049432"
 ---
 # <a name="initialize-subscriptions"></a>Inicializar suscripciones
   Deberá inicializar los suscriptores antes de que puedan comenzar a recibir datos replicados. No se requiere un conjunto de datos inicial, pero el suscriptor deberá poseer al menos el esquema de cada objeto replicado y todas las tablas de metadatos y los procedimientos necesarios para la replicación.  
@@ -31,10 +30,10 @@ ms.locfileid: "62721137"
 > [!NOTE]  
 >  El asistente podría solicitar una conexión al distribuidor para iniciar un trabajo adecuado del Agente de distribución o el Agente de mezcla.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Inicializar una suscripción](initialize-a-subscription.md)   
+ [Initialize a Subscription](initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   
   

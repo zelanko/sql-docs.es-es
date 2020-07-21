@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 417fce6637f17b428f0e4d45404760088a8c0e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71292180"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488604"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
 
@@ -61,7 +61,7 @@ ms.locfileid: "71292180"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|Anexar|Anexa datos a un archivo existente. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
+|Append|Anexa datos a un archivo existente. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
 |Crear siempre|Crea siempre un nuevo archivo.|  
 |Crear una vez|Crea un nuevo archivo. Si existe el archivo, el componente genera un error.|  
 |Truncar y anexar|Trunca un archivo existente y luego escribe los datos en el archivo. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
@@ -136,7 +136,7 @@ ms.locfileid: "71292180"
  Para obtener información sobre cómo establecer las propiedades del componente, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada del blog, sobre los [archivos sin formato](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
+ Entrada del blog, sobre los [archivos sin formato](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), en sqlservercentral.com  
   
 ## <a name="raw-file-destination-editor-connection-manager-page"></a>Editor de destino de archivos sin formato (página Administrador de conexiones)
   Use el editor de destino de archivos sin formato para configurar el destino de archivo sin formato con el fin de escribir datos sin formato en un archivo.  
@@ -149,13 +149,13 @@ ms.locfileid: "71292180"
   
 -   [Establecer las opciones de la pestaña Columnas](#mapping)  
   
-###  <a name="open"></a> Abra el editor de destino de archivos sin formato  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra el editor de destino de archivos sin formato  
   
 1.  Agregue el destino de archivo sin formato a un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
-###  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Modo de acceso**  
  Seleccione cómo se especifica el nombre de archivo. Seleccione **Nombre de archivo** para escribir el nombre de archivo y la ruta de acceso directamente o **Nombre de archivo de la variable** para especificar una variable que contiene el nombre de archivo.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "71292180"
   
  Al hacer clic en **Generar archivo sin formato inicial**, aparece un cuadro de mensaje. Haga clic en **Aceptar** para continuar con la creación del archivo. Haga clic en **Cancelar** para seleccionar otra lista de columnas en la página **Columnas:** .  
   
-###  <a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
  **Columnas de entrada disponibles**  
  Seleccione una o varias columnas de entrada para escribir en el archivo sin formato.  
   
@@ -191,13 +191,13 @@ ms.locfileid: "71292180"
   
 -   [Establecer las opciones de la pestaña Columnas](#mapping)  
   
-###  <a name="open"></a> Abra el editor de destino de archivos sin formato  
+###  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra el editor de destino de archivos sin formato  
   
 1.  Agregue el destino de archivo sin formato a un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 2.  Haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
-###  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
+###  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Modo de acceso**  
  Seleccione cómo se especifica el nombre de archivo. Seleccione **Nombre de archivo** para escribir el nombre de archivo y la ruta de acceso directamente o **Nombre de archivo de la variable** para especificar una variable que contiene el nombre de archivo.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71292180"
   
  Al hacer clic en el botón, aparece una lista de columnas. Puede hacer clic en Cancelar y modificar las columnas, o hacer clic en Aceptar y continuar con la creación del archivo.  
   
-###  <a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
+###  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
  **Columnas de entrada disponibles**  
  Seleccione una o varias columnas de entrada para escribir en el archivo sin formato.  
   

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a609147a58a426ac89708b36d1e098f170c8b530
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900207"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430302"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
@@ -64,7 +63,7 @@ ms.locfileid: "62900207"
   
  La siguiente tabla describe las salidas de la transformación y los requisitos de sus flujos de datos posteriores. Los requisitos describen el flujo de datos que crea el Asistente para dimensiones variables.  
   
-|Salida|Descripción|Requisitos de flujo de datos|  
+|Output|Descripción|Requisitos de flujo de datos|  
 |------------|-----------------|----------------------------|  
 |**Salida de actualizaciones de atributos variables**|El registro de la tabla de búsqueda se actualiza. Esta salida se usa para filas de atributos variables.|Una transformación Comando de OLE DB actualiza el registro mediante una instrucción UPDATE.|  
 |**Salida de atributo fijo**|Los valores en las filas que no deben cambiar no coinciden con los valores de la tabla de búsqueda. Esta salida se usa para filas de atributos fijos.|No se crea un flujo de datos predeterminado. Si la transformación se configura para continuar después de encontrar cambios en columnas de atributos fijos, debe crear un flujo de datos que capture estas filas.|  
@@ -89,7 +88,7 @@ ms.locfileid: "62900207"
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

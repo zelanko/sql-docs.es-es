@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades del trabajo: Nuevo trabajo (página alertas) | Microsoft Docs'
+title: 'Propiedades del trabajo: nuevo trabajo (página alertas) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,32 +11,31 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46e17ba7281e8289e2209d4e1dfc3ae40f5ef161
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062286"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Propiedades del trabajo: Nuevo trabajo (página Alertas)
-  Utilice esta página para ver y cambiar las alertas de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y organizar las alertas de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Lista de alertas**  
  Presenta una lista de las alertas de este trabajo.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea una nueva alerta para el trabajo.  
   
- **Editar**  
+ **Edición**  
  Modifica la definición de la alerta seleccionada.  
   
  **Quitar**  
  Quita la alerta seleccionada del trabajo y la elimina.  
   
-## <a name="see-also"></a>Vea también  
- [Alerts](alerts.md)   
+## <a name="see-also"></a>Consulte también  
+ [Alarmas](alerts.md)   
  [Implementar trabajos](implement-jobs.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7e277d22-8d4b-422e-8882-7c5dd7a6d915
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2773352ea91890031931c19b20789d7bf3cb813d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934706"
 ---
 # <a name="connect-to-server-analysis-services"></a>Conectar al servidor (Analysis Services)
   Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -30,18 +29,18 @@ ms.locfileid: "62755597"
  Seleccione la instancia de servidor a la que va a conectarse. De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
- Se admiten los siguientes modos de autenticación al conectarse a una instancia de Analysis Services: [!INCLUDE[msCoName](../includes/msconame-md.md)] Autenticación de Windows.  
+ Cuando se conecta a una instancia de Analysis Services, se admiten los siguientes modos de autenticación: autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
  **Modo de autenticación de Windows (autenticación de Windows)**  
- El modo de**autenticación de Windows** permite al usuario conectarse mediante una cuenta de usuario de Windows.  
+ El modo de **autenticación de Windows** permite a un usuario conectarse a través de una cuenta de usuario de Windows.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Esta opción no está disponible en esta versión. Escriba el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la **autenticación de Windows**para conectarse.  
   
  **Contraseña**  
  Esta opción no está disponible en esta versión. Escriba la contraseña del inicio de sesión. Esta opción solo es editable si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse.  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí para conectarse al servidor seleccionado anteriormente.  
   
  **Opciones**  

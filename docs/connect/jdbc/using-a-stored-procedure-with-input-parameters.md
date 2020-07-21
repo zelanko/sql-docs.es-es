@@ -11,10 +11,10 @@ ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026902"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Empleo de un procedimiento almacenado con parámetros de entrada
@@ -28,9 +28,9 @@ Si usa el controlador JDBC para llamar a un procedimiento almacenado con los par
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obtener más información sobre las secuencias de escape de SQL, vea [usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obtener más información sobre las secuencias de escape de SQL, consulte [Usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
-Al crear la secuencia de escape `call`, especifique los parámetros IN mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para los valores de parámetros pasados al procedimiento almacenado. Para especificar un valor para un parámetro, puede usar uno de los métodos de establecedor de la clase SQLServerPreparedStatement. El método del establecedor que puede usar se determina mediante el tipo del parámetro IN.
+Al crear la secuencia de escape `call`, especifique los parámetros IN mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para los valores de parámetros pasados al procedimiento almacenado. Para especificar un valor de un parámetro, puede usar uno de los métodos del establecedor de la clase SQLServerPreparedStatement. El método del establecedor que puede usar se determina mediante el tipo del parámetro IN.
 
 Cuando pasa un valor al método establecedor, debe especificar no solo el valor real que se usará en el parámetro, sino el lugar ordinal que ocupa el parámetro en el procedimiento almacenado. Por ejemplo, si el procedimiento almacenado contiene un solo parámetro IN, su valor ordinal será 1. Si el procedimiento almacenado contiene dos parámetros, el primer valor ordinal es 1 y el segundo 2.
 
@@ -54,6 +54,6 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Empleo de instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

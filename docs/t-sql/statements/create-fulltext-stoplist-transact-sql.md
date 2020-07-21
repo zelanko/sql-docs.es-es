@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912759"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392923"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea una nueva lista de palabras irrelevantes de texto completo en la base de datos actual.  
   
@@ -46,15 +46,17 @@ ms.locfileid: "67912759"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT STOPLIST stoplist_name  
 [ FROM { [ database_name.]source_stoplist_name } | SYSTEM STOPLIST ]  
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *stoplist_name*  
  Es el nombre de la lista de palabras irrelevantes. *stoplist_name* puede tener un máximo de 128 caracteres. *stoplist_name* debe ser único entre todas las listas de palabras irrelevantes de la base de datos actual y cumplir las reglas de los identificadores.  
   
@@ -72,7 +74,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Especifica el nombre de una entidad de seguridad de base de datos como propietaria de la lista de palabras irrelevantes. *owner_name* debe ser el nombre de una entidad de seguridad de la que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE en *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El creador de la lista de palabras irrelevantes es su propietario.  
   
 ## <a name="permissions"></a>Permisos  
@@ -86,7 +88,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. Crear una lista de palabras irrelevantes de texto completo  
  En el ejemplo siguiente se crea una nueva lista de palabras irrelevantes de texto completo denominada `myStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -94,7 +96,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. Copiar una lista de palabras irrelevantes de texto completo a partir de una lista de palabras irrelevantes de texto completo existente  
  En el ejemplo siguiente se crea una lista de palabras irrelevantes de texto completo denominada `myStoplist2` copiando la lista de palabras irrelevantes de AdventureWorks denominada `Customers.otherStoplist`.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -102,7 +104,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. Copiar una lista de palabras irrelevantes de texto completo a partir de la lista de palabras irrelevantes de texto completo del sistema  
  En el ejemplo siguiente se crea una lista de palabras irrelevantes de texto completo denominada `myStoplist3` copiando la lista de palabras irrelevantes del sistema.  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

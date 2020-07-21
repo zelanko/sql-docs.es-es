@@ -11,10 +11,10 @@ ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570154"
 ---
 # <a name="configurationsetting-property---version"></a>Propiedad ConfigurationSetting - Version
@@ -40,6 +40,6 @@ public string Version;
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Miembros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Miembros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

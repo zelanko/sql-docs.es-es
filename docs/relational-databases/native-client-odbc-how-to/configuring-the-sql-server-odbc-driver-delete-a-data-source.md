@@ -1,5 +1,6 @@
 ---
 title: Eliminar un origen de datos (ODBC) | Microsoft Docs
+description: Obtenga información acerca de cómo eliminar un origen de datos mediante el administrador ODBC, mediante programación o mediante un archivo, antes de utilizar las aplicaciones ODBC con SQL Server 2005 o posterior.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -10,19 +11,17 @@ ms.topic: reference
 helpviewer_keywords:
 - data sources [ODBC]
 ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 714823ca585e85d8c1c3840da37630d975b9fdb6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: 9bf2767bdf043543f84f50a2c72fbfc8a5f10890
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908215"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009528"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar el controlador ODBC de SQL Server: eliminar un origen de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Antes de utilizar las aplicaciones ODBC con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior, debe saber cómo actualizar la versión de los procedimientos almacenados del catálogo en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar, eliminar y probar los orígenes de datos.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "72908215"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para eliminar un origen de datos mediante el Administrador ODBC  
   
-1.  En **el panel de control**, Abra **herramientas administrativas**y, a continuación, haga doble clic en orígenes de **datos ODBC (64 bits)** o en orígenes de **datos ODBC (32 bits)** . Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
+1.  En **el panel de control**, Abra **herramientas administrativas**y, a continuación, haga doble clic en orígenes de **datos ODBC (64 bits)** o en orígenes de **datos ODBC (32 bits)**. Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
   
 2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o DSN de **archivo** .  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72908215"
 4.  Haga clic en **quitar**y confirme la eliminación.  
 
 ## <a name="example"></a>Ejemplo  
- Para eliminar un origen de datos mediante programación, llame a [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) usando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN como segundo parámetro.  
+ Para eliminar un origen de datos mediante programación, llame a [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) utilizando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN como segundo parámetro.  
   
  El ejemplo siguiente se muestra cómo se puede eliminar un origen de datos mediante programación.  
   
@@ -60,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Agregar un origen &#40;de datos ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+## <a name="see-also"></a>Consulte también  
+ [Agregar un origen de datos &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

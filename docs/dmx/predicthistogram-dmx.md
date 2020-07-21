@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893848"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666797"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,14 +30,14 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="applies-to"></a>Se aplica a  
  Una referencia de columna escalar o una referencia de columna de clúster. Puede utilizarse con todos los tipos de algoritmo, excepto el algoritmo de asociación de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Tabla.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los histogramas generan columnas de estadísticas. La estructura de columnas del histograma devuelto depende del tipo de referencia de columna que se usa con la función **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Columnas escalares  
- En el \<caso de una referencia de columna escalar >, el histograma que devuelve la función **PredictHistogram** consta de las siguientes columnas:  
+ En el caso de una \< referencia de columna escalar>, el histograma que devuelve la función **PredictHistogram** consta de las siguientes columnas:  
   
 -   El valor que se predice.  
   
@@ -55,10 +55,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     La columna **$AdjustedProbability** es una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensión del OLE DB [!INCLUDE[msCoName](../includes/msconame-md.md)] para la especificación de minería de datos.  
+     La columna **$AdjustedProbability** es una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensión del [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos.  
   
 ## <a name="cluster-columns"></a>Columnas de clúster  
- El histograma que devuelve la función **PredictHistogram** para una \<referencia de columna de clúster > consta de las siguientes columnas:  
+ El histograma que devuelve la función **PredictHistogram** para una \< referencia de columna de clúster> consta de las siguientes columnas:  
   
 -   **$Cluster** (representa el nombre del clúster)  
   
@@ -83,17 +83,17 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [DMX &#40;de clúster&#41;](../dmx/cluster-dmx.md)   
- [DMX &#40;ClusterProbability&#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [Referencia de funciones &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;de funciones&#41;](../dmx/functions-dmx.md)   
- [Funciones &#40;de predicción generales DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Consulte también  
+ [&#41;de &#40;DMX de clúster](../dmx/cluster-dmx.md)   
+ [&#41;ClusterProbability &#40;DMX](../dmx/clusterprobability-dmx.md)   
+ [&#41;PredictAdjustedProbability &#40;DMX](../dmx/predictadjustedprobability-dmx.md)   
+ [&#41;PredictProbability &#40;DMX](../dmx/predictprobability-dmx.md)   
+ [&#41;PredictStdev &#40;DMX](../dmx/predictstdev-dmx.md)   
+ [&#41;PredictSupport &#40;DMX](../dmx/predictsupport-dmx.md)   
+ [&#41;PredictVariance &#40;DMX](../dmx/predictvariance-dmx.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

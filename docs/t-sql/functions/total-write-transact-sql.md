@@ -19,17 +19,17 @@ helpviewer_keywords:
 - disks [SQL Server], number of disk writes
 - total write [SQL Server]
 ms.assetid: cd528126-51ee-4aa4-a21f-f32ce5c80fac
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 295dbd375b099227fb29333a3af925649b1fb88e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 0464eec31fb138fd58f2e3c2a1efd09e2aafc254
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098919"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858547"
 ---
-# <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="x40x40total_write-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número de escrituras de disco de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la última vez que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68098919"
 @@TOTAL_WRITE  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **integer**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para mostrar un informe con varias estadísticas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluida la actividad de lectura y escritura, ejecute **sp_monitor**.  
   
 ## <a name="examples"></a>Ejemplos  

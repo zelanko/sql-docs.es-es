@@ -23,15 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682010"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999231"
 ---
 # <a name="float-and-real-transact-sql"></a>float y real (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Tipos de datos numéricos y aproximados que se utilizan con datos numéricos de coma flotante. Los datos de coma flotante son aproximados; por tanto, no todos los valores del rango del tipo de datos se pueden representar con exactitud. El sinónimo ISO para **real** es **float(24)** .
   
@@ -40,7 +40,7 @@ Tipos de datos numéricos y aproximados que se utilizan con datos numéricos de 
 ## <a name="syntax"></a>Sintaxis  
 **float** [ **(** _n_ **)** ]Donde *n* es el número de bits que se usan para almacenar la mantisa del número de **float** en notación científica y, por tanto, dicta su precisión y el tamaño de almacenamiento. Si se especifica *n*, debe ser un valor entre **1** y **53**. El valor predeterminado de *n* es **53**.
   
-|Valor *n*|Precisión|Tamaño de almacenamiento|  
+|Valor *n*|Precision|Tamaño de almacenamiento|  
 |---|---|---|
 |**1-24**|7 dígitos|4 bytes|  
 |**25-53**|15 dígitos|8 bytes|  
@@ -50,7 +50,7 @@ Tipos de datos numéricos y aproximados que se utilizan con datos numéricos de 
   
 El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] cumple con el estándar ISO para todos los valores de *n* desde **1** hasta **53**. El sinónimo de **double precision** es **float(53)** .
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 |Tipo de datos|Intervalo|Storage|  
 |---|---|---|
@@ -64,7 +64,7 @@ Cuando convierte de valores de **float** o **real** a datos de carácter, suele 
   
 Antes de [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], la conversión de los valores **float** a **decimal** o **numeric** se restringía únicamente a los valores con una precisión de 17 dígitos. Cualquier valor **float** menor de 5E-18 (cuando se establece mediante la notación científica de 5E-18 o la notación decimal de 0,0000000000000000050000000000000005) se redondea hacia abajo a 0. A partir de [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] esto ya no es una restricción.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

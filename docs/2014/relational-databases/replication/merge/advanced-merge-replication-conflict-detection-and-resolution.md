@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63000345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049469"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Detección y resolución de conflictos de replicación de mezcla avanzada
   Cuando un publicador y un suscriptor se conectan y se produce la sincronización, el Agente de mezcla detecta si existen conflictos. Si se detectan conflictos, el Agente de mezcla utiliza un solucionador de conflictos (que se especifica cuando se agrega un artículo a una publicación) para determinar qué datos se aceptarán y se propagarán a otros sitios.  
@@ -40,7 +39,7 @@ ms.locfileid: "63000345"
   
     -   Un *controlador de lógica de negocios* escrito en código administrado  
   
-    -   Un *solucionador personalizado*basado en COM  
+    -   Un *solucionador personalizado*basado en com.  
   
     -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
@@ -81,11 +80,11 @@ ms.locfileid: "63000345"
   
 -   Un solucionador personalizado basado en COM  
   
-     La replicación de mezcla propociona una API para escribir solucionadoes como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replicación de mezcla proporciona una API para escribir resoluciones como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] . Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye varios solucionadores basados en COM. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]incluye varios solucionadores basados en com. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Para obtener información sobre cómo seleccionar el tipo de solucionador adecuado, consulte [Elegir un solucionador](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -94,9 +93,9 @@ ms.locfileid: "63000345"
   
  Para especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos, vea  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificación de un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programación de replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Creación de una suscripción de extracción](../create-a-pull-subscription.md) y [Creación de una suscripción de inserción](../create-a-push-subscription.md)  
+-   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Create a Pull Subscription](../create-a-pull-subscription.md) y [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Solucionador interactivo  
  La replicación proporciona una interfaz de usuario Solucionador interactivo que se puede utilizar junto con el solucionador de conflictos basado en prioridad predeterminado o un solucionador de artículos. Cuando se ejecuta una sincronización a petición a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, el Solucionador interactivo muestra los datos en conflicto en tiempo de ejecución y permite elegir la forma de solucionar los conflictos. Para obtener más información acerca de cómo habilitar la resolución interactiva e iniciar el Solucionador interactivo, vea [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -109,7 +108,7 @@ ms.locfileid: "63000345"
   
  El Visor de conflictos muestra información de tres tablas del sistema:  
   
--   La replicación crea una tabla de conflictos por cada tabla de un artículo de mezcla, con un nombre en formato **MSmerge_conflict_\<NombreDePublicación>_\<NombreDeArtículo>** .  
+-   La replicación crea una tabla de conflictos para cada tabla de un artículo de mezcla, con un nombre con el formato **MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **.  
   
      Las tablas de conflictos tienen la misma estructura que las tablas en las que se basan. Una fila de una de estas tablas consta de la versión perdedora de una fila de conflictos (la versión ganadora de esta fila se encuentra en la tabla real del usuario).  
   
@@ -129,9 +128,9 @@ ms.locfileid: "63000345"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programación de la replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Sincronizar datos](../synchronize-data.md)  
   
   

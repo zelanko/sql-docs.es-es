@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ab8517345f60e0b747e2693e3c07c5ea9db0b0fa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027391"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921184"
 ---
 # <a name="understanding-isolation-levels"></a>Descripción de los niveles de aislamiento
 
@@ -41,7 +41,7 @@ La selección de un nivel de aislamiento de transacción no afecta a los bloqueo
   
 Un nivel de aislamiento menor significa que los usuarios tienen un mayor acceso a los datos simultáneamente, con lo que aumentan los efectos de la simultaneidad que pueden experimentar, como las lecturas de datos sucios o la pérdida de actualizaciones. Por el contrario, un nivel de aislamiento mayor reduce los tipos de efectos de simultaneidad, pero requiere más recursos del sistema y aumenta las posibilidades de que una transacción bloquee a otra. El nivel de aislamiento apropiado depende del equilibrio entre los requisitos de integridad de los datos de la aplicación y la sobrecarga de cada nivel de aislamiento. El nivel de aislamiento superior, que es serializable, garantiza que una transacción recuperará exactamente los mismos datos cada vez que repita una operación de lectura, aunque para ello aplicará un nivel de bloqueo que puede afectar a los demás usuarios en los sistemas multiusuario. El nivel de aislamiento menor, de lectura sin confirmar, puede recuperar datos que otras transacciones han modificado pero no confirmado. En este nivel se pueden producir todos los efectos secundarios de simultaneidad, pero no hay bloqueos ni versiones de lectura, por lo que la sobrecarga se reduce.  
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
  En la tabla siguiente se muestran los efectos secundarios de la simultaneidad que permiten los distintos niveles de aislamiento.  
   
@@ -50,7 +50,7 @@ Un nivel de aislamiento menor significa que los usuarios tienen un mayor acceso 
 | Lectura no confirmada | Sí        | Sí                 | Sí     |
 | Lectura confirmada   | No         | Sí                 | Sí     |
 | Lectura repetible  | No         | No                  | Sí     |
-| Snapshot         | No         | No                  | No      |
+| Instantánea         | No         | No                  | No      |
 | Serializable     | No         | No                  | No      |
   
 Las transacciones se deben ejecutar en un nivel de aislamiento de lectura repetible, al menos, para evitar las pérdidas de actualizaciones que pueden producirse cuando dos transacciones recuperan la misma fila, y a continuación la actualizan según los valores recuperados originalmente. Si las dos transacciones actualizan las filas con una única instrucción UPDATE y no basan la actualización en los valores recuperados previamente, la pérdida de las actualizaciones no puede producirse en el nivel de aislamiento predeterminado de lectura confirmada.  
@@ -75,6 +75,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 Para obtener más información sobre los niveles de aislamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Niveles de aislamiento en [!INCLUDE[ssDE](../../includes/ssde_md.md)]" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b11323702d7468d07783b4d1c763dba691479d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63130369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043063"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Capturar datos de eventos de desencadenador logon
   Para capturar datos XML acerca de los eventos LOGON para utilizarlos dentro de los desencadenadores logon, utilice la función [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) . El evento LOGON devuelve el siguiente esquema de datos de eventos:  

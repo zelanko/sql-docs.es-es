@@ -11,15 +11,15 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: c8098ffe6b2b74f415595a4ff6ed91172085a009
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781610"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriales del motor de base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Esta sección contiene los tutoriales de [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Tutorial: Introducción al motor de base de datos](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  

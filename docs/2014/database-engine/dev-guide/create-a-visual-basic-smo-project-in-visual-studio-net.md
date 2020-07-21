@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto de Visual Basic SMO en Visual Studio .NET | Microsoft Docs
+title: Creación de un proyecto de Visual Basic SMO en Visual Studio .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933686"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Crear un proyecto de Visual Basic SMO en Visual Studio .NET
   En esta sección se describe cómo generar una aplicación de consola SMO simple.  
   
- En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Usarlo cuando se escribe un programa que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
+ En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Úselo cuando esté escribiendo un programa que use el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
   
 ### <a name="creating-a-visual-basic-smo-project-in-visual-studionet"></a>Crear un proyecto de Visual Basic SMO en Visual Studio.NET  
   
@@ -32,15 +31,15 @@ ms.locfileid: "62753358"
   
 2.  En el menú **Archivo**, haga clic en **Nuevo proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En **tipos de proyecto** cuadro de diálogo, seleccione **Visual Basic**y, a continuación, seleccione **Windows**. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel Plantillas instaladas, seleccione **aplicación de consola.**  
+3.  En el cuadro de diálogo **tipos de proyecto** , seleccione **Visual Basic**y, a continuación, seleccione **Windows**. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel Plantillas instaladas, seleccione **aplicación de consola.**  
   
-4.  (Opcional) En el **nombre** , escriba el nombre de la nueva aplicación.  
+4.  Opta En el campo **nombre** , escriba el nombre de la nueva aplicación.  
   
-5.  Haga clic en **Aceptar** para cargar el [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] plantilla aplicación de consola.  
+5.  Haga clic en **Aceptar** para cargar la [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] plantilla de aplicación de consola.  
   
 6.  En el menú **Proyecto**, seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-7.  Haga clic en **examinar**, busque los ensamblados SMO en la carpeta C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies y, a continuación, seleccione los archivos siguientes. Son los archivos mínimos necesarios para generar una aplicación SMO:  
+7.  Haga clic en **examinar**, busque los ensamblados SMO en la carpeta C:\Archivos de Programa\microsoft SQL Server\120\SDK\Assemblies y, a continuación, seleccione los archivos siguientes. Son los archivos mínimos necesarios para generar una aplicación SMO:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -59,9 +58,9 @@ ms.locfileid: "62753358"
   
 9. Haga clic en **Abrir**.  
   
-10. En el **vista** menú, haga clic en **código**. - o - seleccione la ventana Module1.vb para mostrar la ventana de código.  
+10. En el menú **Ver** , haga clic en **código**. o bien seleccione la ventana Module1. VB para mostrar la ventana de código.  
   
-11. En el código, antes de cualquier declaración, escriba lo siguiente **importaciones** instrucciones para certificar los tipos del espacio de nombres SMO.  
+11. En el código, antes de cualquier declaración, escriba las instrucciones **Imports** siguientes para certificar los tipos en el espacio de nombres de SMO.  
   
     ```  
     Imports Microsoft.SqlServer.Management.Smo  

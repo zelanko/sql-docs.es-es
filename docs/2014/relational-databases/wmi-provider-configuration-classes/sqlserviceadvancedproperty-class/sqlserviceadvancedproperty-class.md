@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c33ed9c41577c02b6d37f21db0ceca91a5449f1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059603"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Clase SqlServiceAdvancedProperty
-  El [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) representa una propiedad avanzada del servicio al que hace referencia el [clase SqlService](../sqlservice-class/sqlservice-class.md) objeto.  
+  La [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) representa una propiedad avanzada del servicio al que hace referencia el objeto de la [clase SqlService](../sqlservice-class/sqlservice-class.md) .  
   
- El [propiedad AdvancedProperties (clase SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) hace referencia a una matriz de [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) objetos.  
+ La [propiedad AdvancedProperties (clase SqlService)](../sqlservice-class/advancedproperties-property-sqlservice-class.md) hace referencia a una matriz de objetos de la [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) .  
   
- El [iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) clase representa las propiedades que son únicas para el servicio. Estas propiedades no están en la lista de propiedades que está asociado el [clase SqlService](https://technet.microsoft.com/library/ms186497.aspx) clase. El [clase SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) permite la representación de propiedades de cadena, numérico o booleano. Puede utilizar esta clase para ver las propiedades únicas del servicio especificado.  
+ La clase de [servicios de inicio y detención](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) representa propiedades que son únicas para el servicio. Estas propiedades no están en la lista de propiedades que está asociada a la clase de [clase SqlService](https://technet.microsoft.com/library/ms186497.aspx) . La clase de [clase SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) permite la representación de propiedades de cadena, numéricas o booleanas. Puede utilizar esta clase para ver las propiedades únicas del servicio especificado.  
   
-## <a name="see-also"></a>Vea también  
- [Iniciales, pausar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

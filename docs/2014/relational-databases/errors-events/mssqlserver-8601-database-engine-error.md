@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: d8603ea1-27b7-4379-a451-744787daea66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1803850e770b42a411a0e6e7a62096afc9b8d3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30879123ce2a0d52669ddf83e18d40fa1be7231e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762686"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550870"
 ---
-# <a name="mssqlserver8601"></a>MSSQLSERVER_8601
+# <a name="mssqlserver_8601"></a>MSSQLSERVER_8601
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8601|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8601|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|INVALID_INTERFACE_ERR|  
 |Texto del mensaje|Error interno del procesador de consultas: el procesador de consultas no tiene acceso a una interfaz necesaria.|  

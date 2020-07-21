@@ -14,10 +14,10 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a82b5abf846bb9904d6ea8db879ff73e98f43a8c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298419"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Tarea de eliminación de clúster de HDInsight de Azure
@@ -42,5 +42,5 @@ En la tabla siguiente se proporciona una descripción de los campos del cuadro d
 |AzureResourceManagerConnection|Seleccione un administrador de conexiones de Azure Resource Manager existente o cree uno nuevo que se usará para eliminar el clúster de HDInsight.|
 |SubscriptionId|Especifique el identificador de la suscripción en la que se encuentra el clúster de HDInsight.|
 |ResourceGroup|Especifique el grupo de recursos de Azure en el que se encuentra el clúster de HDInsight.|
-|nombreDeClúster|Especifique el nombre del clúster que se va a eliminar.|  
+|ClusterName|Especifique el nombre del clúster que se va a eliminar.|  
 |FailIfNotExists|Especifique si la tarea debe generar un error si no existe el clúster.|

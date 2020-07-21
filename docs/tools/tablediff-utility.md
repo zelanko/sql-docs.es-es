@@ -1,6 +1,7 @@
 ---
-title: Utilidad tablediff | Microsoft Docs
-ms.custom: ''
+title: tablediff, utilidad
+description: Use la utilidad tablediff para comparar los datos de dos tablas para determinar la no convergencia solucionar problemas de no convergencia en una topología de replicación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,12 +20,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986037"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150516"
 ---
 # <a name="tablediff-utility"></a>tablediff, utilidad
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,13 +167,13 @@ tablediff
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Correcto|  
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La utilidad **tablediff** no se puede usar con servidores que no sean [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  No se admiten tablas que contengan columnas con el tipo de datos **sql_variant** .  
@@ -187,10 +188,10 @@ tablediff
 |**timestamp**|**varbinary**|  
 |**ntext**|**text**|  
 |**nvarchar(max)**|**ntext**|  
-|**varbinary(max)**|**imagen**|  
-|**texto**|**ntext**|  
+|**varbinary(max)**|**image**|  
+|**text**|**ntext**|  
 |**ntext**|**nvarchar(max)**|  
-|**imagen**|**varbinary(max)**|  
+|**image**|**varbinary(max)**|  
   
  Use la opción **-strict** para no permitir estas asignaciones y llevar a cabo una validación estricta.  
   
@@ -208,11 +209,11 @@ tablediff
   
 -   **xml**  
   
--   **texto**  
+-   **text**  
   
 -   **ntext**  
   
--   **imagen**  
+-   **image**  
   
 ## <a name="permissions"></a>Permisos  
  Para comparar tablas, necesita los permisos SELECT ALL en los objetos de la tabla que se están comparando.  

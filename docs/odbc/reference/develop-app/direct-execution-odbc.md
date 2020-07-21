@@ -12,19 +12,19 @@ helpviewer_keywords:
 - direct execution [ODBC]
 - SQL statements [ODBC], executing
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc5d942ac0c2af54168248d8e416ca233b2c69e6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039799"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305166"
 ---
 # <a name="direct-execution-odbc"></a>Ejecución directa ODBC
 La ejecución directa es la manera más sencilla de ejecutar una instrucción. Cuando la instrucción se envía para su ejecución, el origen de datos lo compila en un plan de acceso y, a continuación, ejecuta ese plan de acceso.  
   
- Ejecución directa se utiliza normalmente en aplicaciones genéricas que compilación y ejecutan instrucciones en tiempo de ejecución. Por ejemplo, el código siguiente compila una instrucción SQL y lo ejecuta en una sola vez:  
+ La ejecución directa se usa normalmente en aplicaciones genéricas que compilan y ejecutan instrucciones en tiempo de ejecución. Por ejemplo, el código siguiente crea una instrucción SQL y la ejecuta una sola vez:  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- Ejecución directa funciona mejor con las instrucciones que se va a ejecutar una sola vez. Su principal inconveniente es que la instrucción SQL se analiza cada vez que se ejecuta. Además, la aplicación no puede recuperar información sobre el conjunto de resultados creado por la instrucción (si existe) hasta que después se ejecuta la instrucción; Esto es posible si la instrucción se prepara y ejecuta en dos pasos independientes.  
+ La ejecución directa funciona mejor para las instrucciones que se ejecutarán una sola vez. Su principal inconveniente es que la instrucción SQL se analiza cada vez que se ejecuta. Además, la aplicación no puede recuperar información sobre el conjunto de resultados creado por la instrucción (si existe) hasta que se ejecute la instrucción; Esto es posible si la instrucción se prepara y se ejecuta en dos pasos independientes.  
   
- Para ejecutar una instrucción directamente, la aplicación realiza las acciones siguientes:  
+ Para ejecutar directamente una instrucción, la aplicación realiza las siguientes acciones:  
   
-1.  Establece los valores de los parámetros. Para obtener más información, consulte [parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md), más adelante en esta sección.  
+1.  Establece los valores de los parámetros. Para obtener más información, vea [parámetros de instrucción](../../../odbc/reference/develop-app/statement-parameters.md), más adelante en esta sección.  
   
-2.  Las llamadas **SQLExecDirect** y le pasa una cadena que contiene la instrucción SQL.  
+2.  Llama a **SQLExecDirect** y le pasa una cadena que contiene la instrucción SQL.  
   
-3.  Cuando **SQLExecDirect** se llama, el controlador:  
+3.  Cuando se llama a **SQLExecDirect** , el controlador:  
   
-    -   Modifica la instrucción SQL para usar la gramática SQL del origen de datos sin analizar la instrucción; Esto incluye reemplazando las secuencias de escape se describe en [secuencias de Escape de ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). La aplicación puede recuperar el formulario de una instrucción SQL modificada mediante una llamada a **SQLNativeSql**. No se reemplazan las secuencias de escape si se establece el atributo de instrucción SQL_ATTR_NOSCAN.  
+    -   Modifica la instrucción SQL para utilizar la gramática de SQL del origen de datos sin analizar la instrucción; Esto incluye reemplazar las secuencias de escape descritas en [secuencias de escape en ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). La aplicación puede recuperar el formulario modificado de una instrucción SQL mediante una llamada a **SQLNativeSql**. Las secuencias de escape no se reemplazan si se establece el atributo de instrucción SQL_ATTR_NOSCAN.  
   
-    -   Recupera los valores de parámetro actuales y los convierte según sea necesario. Para obtener más información, consulte [parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md), más adelante en esta sección.  
+    -   Recupera los valores de parámetro actuales y los convierte según sea necesario. Para obtener más información, vea [parámetros de instrucción](../../../odbc/reference/develop-app/statement-parameters.md), más adelante en esta sección.  
   
-    -   Envía la instrucción y los valores de parámetro convertido al origen de datos para su ejecución.  
+    -   Envía la instrucción y convierte los valores de parámetro en el origen de datos para su ejecución.  
   
-    -   Devuelve los errores. Estos incluyen la secuenciación o diagnósticos de estado como SQLSTATE 24000 (estado de cursor no válido), los errores sintácticos, como SQLSTATE 42000 (sintaxis o infracción de acceso) y errores semánticos como SQLSTATE 42S02 (con Base en tabla o vista no encontrado).
+    -   Devuelve cualquier error. Entre ellas se incluyen la secuenciación o el diagnóstico de estado, como SQLSTATE 24000 (estado de cursor no válido), errores sintácticos como SQLSTATE 42000 (error de sintaxis o infracción de acceso) y errores semánticos como SQLSTATE 42S02 (no se encontró la tabla base o la vista).

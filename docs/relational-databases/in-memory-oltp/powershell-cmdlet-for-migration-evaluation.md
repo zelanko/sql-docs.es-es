@@ -1,5 +1,6 @@
 ---
 title: Cmdlet de PowerShell para la evaluación de la migración | Microsoft Docs
+description: Obtenga información sobre Save-SqlMigrationReport, que evalúa la idoneidad de la migración de objetos en una base de datos de SQL Server para OLTP en memoria.
 ms.custom: ''
 ms.date: 07/30/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5272203fb1a1c0ac2f755a4da99c654b2595a7f0
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: f0c3489dab411718eb32e8ff4dd6c182ec59f2b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68698307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722380"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet de PowerShell para la evaluación de la migración
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El cmdlet `Save-SqlMigrationReport` es una herramienta que evalúa la idoneidad de la migración de varios objetos en una base de datos de SQL Server.
 
@@ -57,20 +58,20 @@ Hay aspectos de sintaxis que se deben destacar. Si especifica el parámetro `-In
 
 Por el contrario, si _no_ especifica `-InputObject`, debe especificar `-Server` y `-Database`. Si especifica `-Server`, tiene la opción de restringir el ámbito especificando `-Schema` o `-Object`, o ambos.
 
-| Nombre del parámetro | Descripción |
+| Nombre de parámetro | Descripción |
 | :------------- | :---------- |
 | Base de datos | El nombre de la base de datos de SQL Server de destino. Obligatorio cuando `-Server` es obligatorio.<br/><br/> En SQLPS es opcional. |
-| FolderPath | La carpeta en la que el cmdlet debe almacenar los informes generados.<br/><br/> Requerido. |
+| FolderPath | La carpeta en la que el cmdlet debe almacenar los informes generados.<br/><br/> Necesario. |
 | InputObject | El objeto SMO al que se debe dirigir el cmdlet.<br/><br/> Obligatorio en el entorno de Windows PowerShell si no se proporciona `-Server`.<br/><br/> En SQLPS es opcional. |
 | MigrationType | El tipo de escenario de migración al que se dirige el cmdlet. Actualmente, el único valor es el **"OLTP"** predeterminado.<br/><br/> Opcional. |
-| Objeto | Nombre del objeto sobre el que se va a informar. Puede ser una tabla o un procedimiento almacenado. |
+| Object | Nombre del objeto sobre el que se va a informar. Puede ser una tabla o un procedimiento almacenado. |
 | Contraseña | Requerido cuando `-Username` es requerido. |
-| esquema | Nombre del esquema al que pertenece el objeto sobre el que se va a informar.<br/><br/> Opcional. |
-| Servidor | El nombre de la instancia de SQL Server de destino. Obligatorio en el entorno de Windows PowerShell si no se proporciona el parámetro `-InputObject`.<br/><br/> En SQLPS es opcional. |
+| Schema | Nombre del esquema al que pertenece el objeto sobre el que se va a informar.<br/><br/> Opcional. |
+| Server | El nombre de la instancia de SQL Server de destino. Obligatorio en el entorno de Windows PowerShell si no se proporciona el parámetro `-InputObject`.<br/><br/> En SQLPS es opcional. |
 | Nombre de usuario | Requerido al conectarse a través de la autenticación de SQL Server, en contraposición a la autenticación de Windows. En caso contrario, se omite. |
 | &nbsp; | &nbsp; |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de poder ejecutar este cmdlet, primero debe instalar el módulo denominado **SqlServer**:
 
@@ -100,7 +101,7 @@ Save-SqlMigrationReport `
 
 ## <a name="example-output-report"></a>Informe de salida de ejemplo
 
-En la carpeta especificada para el parámetro `-FolderPath`, se crean las siguientes dos rutas de acceso de carpeta mediante la ejecución de este cmdlet. Ambas rutas comienzan con el valor _nombre\_servidor_ :
+En la carpeta especificada para el parámetro `-FolderPath`, se crean las siguientes dos rutas de acceso de carpeta mediante la ejecución de este cmdlet. Ambas rutas comienzan con el valor _nombre\_servidor_:
 
 - MyDatabaseName_31\Tables\
 - MyDatabaseName_31\Stored Procedures\

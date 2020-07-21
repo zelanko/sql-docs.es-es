@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283015"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lección 6-4: Implementar el paquete de la lección 6
@@ -66,7 +66,7 @@ En esta tarea se:
   
 6.  En el cuadro de diálogo **Buscar carpeta**, vaya a la carpeta que contiene este proyecto Tutorial de SSIS y seleccione **Aceptar**.  
   
-7.  Seleccione **Siguiente**.  
+7.  Seleccione **Next** (Siguiente).  
   
 8.  En la página Seleccionar paquetes debería ver los seis paquetes de Tutorial de SSIS. En la lista **Paquetes**, seleccione **Lesson 6.dtsx** y luego **Siguiente**.  
   

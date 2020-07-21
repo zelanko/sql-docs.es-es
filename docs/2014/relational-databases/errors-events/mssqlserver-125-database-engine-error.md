@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: 0f58338d-2ea0-48b8-8a20-c438b0940433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8287572d31dc136f21717ba45b730936b4fb78ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65387159ee6372a57fa898905fd5912147442002
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870462"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552360"
 ---
-# <a name="mssqlserver125"></a>MSSQLSERVER_125
+# <a name="mssqlserver_125"></a>MSSQLSERVER_125
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|125|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|125|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
 |Texto del mensaje|Las expresiones Case solo pueden anidarse hasta el nivel %d.|  
@@ -40,7 +39,7 @@ ms.locfileid: "62870462"
 ## <a name="user-action"></a>Acción del usuario  
  Reduzca el nivel de las instrucciones CASE a 10 o a un número inferior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CASE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/case-transact-sql)  
   
   

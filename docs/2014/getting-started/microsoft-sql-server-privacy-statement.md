@@ -8,15 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - privacy statement [SQL Server]
 ms.assetid: 57769f4a-5689-49a1-8298-e3c0db5106f8
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 226f9d37e9a65eac795b2cf6644394dae318e227
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3be4ed4ef53ecd3c9feba2938786a47b9c75dcad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62837480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926676"
 ---
 # <a name="microsoft-sql-server-privacy-statement"></a>Declaración de privacidad de Microsoft SQL Server
   Para obtener información acerca de los componentes de recopilación de datos de usuario de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vea la [declaración de privacidad de SQL Server](https://go.microsoft.com/fwlink/?LinkID=282418).  

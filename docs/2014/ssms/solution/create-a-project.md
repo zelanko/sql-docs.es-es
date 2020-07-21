@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
-ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
+ms.openlocfilehash: 11af4a71ae5c0eb45395b71f8eac83ef27daf4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67197593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062038"
 ---
 # <a name="create-a-project"></a>Crear un proyecto
   Puede crear uno o varios proyectos nuevos en una solución existente.  
@@ -30,10 +29,10 @@ ms.locfileid: "67197593"
   
 3.  En el cuadro de diálogo  **Nuevo proyecto** , haga clic en un tipo de proyecto.  
   
-     **Plantillas**  
+     **Templates** (Plantillas [C++])  
      En el cuadro **Plantillas** , seleccione una plantilla. Aparecerá una breve descripción de la plantilla del proyecto seleccionado debajo del cuadro **Plantillas** .  
   
-     **Name**  
+     **Nombre**  
      Escriba el nombre del proyecto de scripts que desea crear. También se creará una carpeta con el mismo nombre que el proyecto en la ubicación que aparece en el campo **Ubicación** . En algunos proyectos, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crea archivos de origen y otros archivos de compatibilidad, y los agrega a la nueva carpeta del proyecto.  
   
     > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "67197593"
      **Ubicación**  
      Escriba la ubicación donde desea crear el proyecto o elija una en la lista.  
   
-     **Examinar**  
+     **Browse**  
      Muestra el cuadro de diálogo **Ubicación del proyecto** , que le permite navegar a un nuevo directorio en el que guardar el proyecto.  
   
      **Solución**  
@@ -89,16 +88,16 @@ ms.locfileid: "67197593"
      **Agregar al control de código fuente**  
      Cuando esta casilla está seleccionada, la aplicación de control de código fuente se abre al hacer clic en **Aceptar**. Complete la información que necesite la aplicación de control de código fuente para continuar. Para utilizar esta opción, deberá tener una aplicación cliente de control de código fuente instalada.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
- Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada para las carpetas de proyecto de script es la siguiente: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
+ Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada de las carpetas de los proyectos de script es: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Agregar un proyecto existente a una solución](add-an-existing-project-to-a-solution.md)   
  [Agregar nuevos elementos a un proyecto](add-new-items-to-a-project.md)   
  [Agregar elementos existentes a un proyecto](add-existing-items-to-a-project.md)   
- [Cambiar la ubicación predeterminada para los proyectos](change-the-default-location-for-projects.md)   
+ [Cambiar la ubicación predeterminada de los proyectos](change-the-default-location-for-projects.md)   
  [Quitar o eliminar un elemento o un proyecto](remove-or-delete-an-item-or-project.md)   
  [Eliminar una solución](delete-a-solution.md)  
   

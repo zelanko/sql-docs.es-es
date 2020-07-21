@@ -13,10 +13,10 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 29c4fe9779b30066a188b9270e920ffd6339421b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298612"
 ---
 # <a name="data-sources"></a>Orígenes de datos
@@ -24,11 +24,11 @@ ms.locfileid: "71298612"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un objeto de tiempo de diseño que puede usar en los paquetes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : el origen de datos.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un objeto de tiempo de diseño que puede usar en los paquetes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]: el origen de datos.  
   
  Un objeto de origen de datos es una referencia a una conexión y, como mínimo, incluye una cadena de conexión y un identificador de origen de datos. También puede incluir metadatos adicionales tales como descripción, nombre, nombre de usuario y contraseña.  
   
-> **NOTA:** Puede agregar orígenes de datos solo a los proyectos configurados para utilizar el modelo de implementación de paquetes. Si se configura un proyecto para utilizar el modelo de implementación de proyectos, los administradores de conexiones creados en el nivel de proyecto se usan para compartir las conexiones, en lugar de usar orígenes de datos.  
+> **NOTA:** Puede agregar orígenes de datos solo a los proyectos configurados para usar el modelo de implementación de paquetes. Si se configura un proyecto para utilizar el modelo de implementación de proyectos, los administradores de conexiones creados en el nivel de proyecto se usan para compartir las conexiones, en lugar de usar orígenes de datos.  
 >   
 >  Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Para obtener más información sobre cómo convertir un proyecto al modelo de implementación de proyectos, vea [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
   

@@ -29,15 +29,15 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b23776208e246e4c36ce08c7c61c4245d891008c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121557"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003973"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   Implementa un mecanismo de control de errores para [!INCLUDE[tsql](../../includes/tsql-md.md)] que es similar al control de excepciones en los lenguajes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Se puede incluir un grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque TRY. Si se produce un error en el bloque TRY, el control se transfiere a otro grupo de instrucciones que está incluido en un bloque CATCH.  
@@ -46,7 +46,7 @@ ms.locfileid: "68121557"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 BEGIN TRY  
      { sql_statement | statement_block }  
 END TRY  
@@ -63,16 +63,21 @@ END CATCH
  *statement_block*  
  Grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] incluidas en un lote o en un bloque BEGIN…END.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una construcción TRY…CATCH detecta todos los errores de ejecución que tienen una gravedad mayor de 10 y que no cierran la conexión de la base de datos.  
   
  Un bloque TRY debe ir seguido inmediatamente por un bloque CATCH asociado. Si se incluye cualquier otra instrucción entre las instrucciones END TRY y BEGIN CATCH se genera un error de sintaxis.  
   
  Una construcción TRY…CATCH no puede abarcar varios lotes. Una construcción TRY…CATCH no puede abarcar varios bloques de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo, una construcción TRY…CATCH no puede abarcar dos bloques BEGIN…END de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], ni puede abarcar una construcción IF…ELSE.  
   
- Si no hay errores en el código incluido en un bloque TRY, cuando la última instrucción de este bloque ha terminado de ejecutarse, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH asociada. Si hay un error en el código incluido en un bloque TRY, el control se transfiere a la primera instrucción del bloque CATCH asociado. Si la instrucción END CATCH es la última instrucción de un procedimiento almacenado o desencadenador, el control se devuelve a la instrucción que llamó al procedimiento almacenado o activó el desencadenador.  
-  
- Cuando finaliza el código del bloque CATCH, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH. Los errores capturados por un bloque CATCH no se devuelven a la aplicación que realiza la llamada. Si es necesario devolver cualquier parte de la información sobre el error a la aplicación, debe hacerlo el código del bloque CATCH a través de mecanismos como los conjuntos de resultados SELECT o las instrucciones RAISERROR y PRINT.  
+ Si no hay errores en el código incluido en un bloque TRY, cuando la última instrucción de este bloque ha terminado de ejecutarse, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH asociada.
+ 
+ Si hay un error en el código incluido en un bloque TRY, el control se transfiere a la primera instrucción del bloque CATCH asociado. Cuando finaliza el código del bloque CATCH, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH. 
+ 
+ > [!NOTE] 
+ > Si la instrucción END CATCH es la última instrucción de un procedimiento almacenado o desencadenador, el control se devuelve a la instrucción que llamó al procedimiento almacenado o activó el desencadenador. 
+ 
+ Los errores capturados por un bloque CATCH no se devuelven a la aplicación que realiza la llamada. Si es necesario devolver cualquier parte de la información sobre el error a la aplicación, debe hacerlo el código del bloque CATCH a través de mecanismos como los conjuntos de resultados SELECT o las instrucciones RAISERROR y PRINT.  
   
  Las construcciones TRY…CATCH pueden estar anidadas. Un bloque TRY o un bloque CATCH puede contener construcciones TRY…CATCH anidadas. Por ejemplo, un bloque CATCH puede contener una construcción TRY…CATCH insertada para controlar los errores detectados por el código de CATCH.  
   
@@ -200,7 +205,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>Transacciones no confirmables y XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>Transacciones no confirmables y XACT_STATE  
  Si un error generado en un bloque TRY hace que se invalide el estado de la transacción actual, la transacción se clasifica como una transacción no confirmable. Un error que normalmente termina una transacción fuera de un bloque TRY hace que la transacción no confirmable cuando se produce dentro de un bloque TRY. Una transacción no confirmable solo puede realizar operaciones de lectura o ROLLBACK TRANSACTION. La transacción no puede ejecutar ninguna instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que genere una operación de escritura o COMMIT TRANSACTION. La función XACT_STATE devuelve el valor -1 si una transacción se ha clasificado como transacción no confirmable. Cuando finaliza el lote, [!INCLUDE[ssDE](../../includes/ssde-md.md)] revierte todas las transacciones activas no confirmables. Si no se envió ningún mensaje de error cuando la transacción entró en un estado no confirmable, cuando finalice la ejecución del lote se enviará un mensaje de error a la aplicación cliente. Esto indica que se ha detectado y revertido una transacción no confirmable.  
   
  Para más información sobre las transacciones no confirmables y la función XACT_STATE, vea [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
@@ -256,7 +261,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Uso de TRY…CATCH con XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>C. Uso de TRY…CATCH con XACT_STATE  
  En este ejemplo se muestra cómo utilizar la construcción `TRY...CATCH` para controlar los errores que se producen en una transacción. La función `XACT_STATE` determina si la transacción debe confirmarse o revertirse. En este ejemplo `SET XACT_ABORT` es `ON`. Esto hace que la transacción sea no confirmable cuando se produce el error por infracción de restricción.  
   
 ```sql  
@@ -323,7 +328,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-trycatch"></a>D. Uso de TRY…CATCH  
  En el siguiente ejemplo se muestra una instrucción `SELECT` que generará un error de división por cero. El error hace que la ejecución salte al bloque `CATCH` asociado.  

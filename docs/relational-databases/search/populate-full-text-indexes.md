@@ -24,18 +24,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903877"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629268"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La creación y el mantenimiento de un índice de texto completo implica el rellenado del índice mediante un proceso denominado *rellenado* (también se denomina *rastreo*).  
   
-##  <a name="types"></a> Types of population  
+##  <a name="types-of-population"></a><a name="types"></a> Types of population  
 Un índice de texto completo admite los siguientes tipos de rellenado:
 -   Rellenado **completo**
 -   Rellenado automático o manual basado en el **seguimiento de cambios**
@@ -171,7 +171,7 @@ En algunos casos, la solicitud de un rellenado incremental produce un llenado co
   
  Para ejecutar un rellenado incremental, ejecute una instrucción `ALTER FULLTEXT INDEX` mediante la cláusula `START INCREMENTAL POPULATION`.  
   
-###  <a name="create"></a> Creación o modificación de una programación para el rellenado incremental   
+###  <a name="create-or-change-a-schedule-for-incremental-population"></a><a name="create"></a> Creación o modificación de una programación para el rellenado incremental   
   
 1.  En el Explorador de objetos de Management Studio, expanda el servidor.  
   
@@ -208,7 +208,7 @@ En algunos casos, la solicitud de un rellenado incremental produce un llenado co
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
 
-##  <a name="crawl"></a> Solución de errores en un rellenado de texto completo (rastreo)  
+##  <a name="troubleshoot-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a> Solución de errores en un rellenado de texto completo (rastreo)  
 Cuando se produce un error durante un rastreo, la función de registro de rastreo de la búsqueda de texto completo crea y mantiene un registro de rastreo, que es un archivo sin formato. Cada registro de rastreo se corresponde con un determinado catálogo de texto completo. De forma predeterminada, los registros de rastreo de una instancia determinada (en este ejemplo, la instancia predeterminada) se encuentran en la carpeta `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.
  
 El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:  

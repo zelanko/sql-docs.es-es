@@ -12,10 +12,10 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52222f154ccc8068c77b0925f246e738a66721cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581257"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acceder a elementos del servidor de informes mediante el acceso URL
@@ -29,7 +29,7 @@ ms.locfileid: "65581257"
 ## <a name="access-a-report"></a>Acceder a un informe  
  Para ver un informe en el explorador, use el parámetro *rs:Command*=*Render* . Por ejemplo:  
   
- - **Nativa** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **Nativo** `https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
@@ -43,7 +43,7 @@ ms.locfileid: "65581257"
 ## <a name="access-a-resource"></a>Acceder a un recurso  
  Para tener acceso a un recurso, use el parámetro *rs:Command*=*GetResourceContents* . Si el recurso es compatible con el explorador, como una imagen, se abre en el explorador. De lo contrario, le preguntarán si desea abrir o guardar el archivo o recurso en el disco.  
   
- **Nativa** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
+ **Nativo** `https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -54,7 +54,7 @@ ms.locfileid: "65581257"
 ## <a name="access-a-data-source"></a>Acceder a un origen de datos  
  Para acceder al origen de datos, use el parámetro *rs:Command*=*GetDataSourceContents* . Si el explorador admite código XML, aparecerá la definición del origen de datos si es un usuario autenticado con el permiso **Read Contents** en el origen de datos. Por ejemplo:  
   
- **Nativa** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **Nativo** `https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -81,7 +81,7 @@ ms.locfileid: "65581257"
 ## <a name="access-the-contents-of-a-folder"></a>Acceder al contenido de una carpeta  
  Para acceder al contenido de una carpeta, use el parámetro *rs:Command*=*GetChildren* . Se devuelve una página de navegación por carpetas genérica que contiene vínculos a las subcarpetas, informes, orígenes de datos y recursos en la carpeta solicitada. Por ejemplo:  
   
- **Nativa** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
+ **Nativo** `https://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   

@@ -1,6 +1,6 @@
 ---
-title: Especificar una condición de punto de interrupción | Microsoft Docs
-ms.custom: ''
+title: Especificar una condición de punto de interrupción
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e331c8dfd533a99d2938633fe7dae5654f5c0ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 659b6ca1149eb8f0412efbe2adbaf4c1ffce59d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063740"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997874"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar una condición de punto de interrupción
   Una condición de punto de interrupción es una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] evaluada por el depurador cuando se alcanza el punto de interrupción. Si se satisface la condición y se alcanza el número de llamadas especificado, el depurador interrumpe, o bien, realiza la acción definida para el punto de interrupción.  
@@ -31,17 +30,17 @@ ms.locfileid: "66063740"
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo del punto de interrupción y, después, haga clic en la opción **Condición** del menú contextual.  
   
-     -o bien-  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo del punto de interrupción y, después, haga clic en la opción **Condición** del menú contextual.  
   
 2.  En el cuadro de diálogo **Condición de punto de interrupción** , escriba una expresión booleana válida en el cuadro **Condición** .  
   
-3.  Elija **es true** si desea interrumpir cuando la expresión se evalúa como `true`, o elija **ha cambiado** si desea interrumpir cuando el valor de la expresión ha cambiado.  
+3.  Elija **es true** si desea interrumpir cuando la expresión se evalúa como `true` o elija **ha cambiado** si desea interrumpir cuando el valor de la expresión ha cambiado.  
   
     > [!NOTE]  
     >  El depurador no evalúa la expresión booleana hasta la primera vez que se alcanza el punto de interrupción. Si elige **Ha cambiado**, el depurador no considerará la primera evaluación como cambio, por lo que el depurador no interrumpirá le ejecución en la primera evaluación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar un número de llamadas](specify-a-hit-count.md)   
  [Especificar una acción del punto de interrupción](specify-a-breakpoint-action.md)  

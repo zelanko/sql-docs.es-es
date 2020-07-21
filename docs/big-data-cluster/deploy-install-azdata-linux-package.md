@@ -1,59 +1,63 @@
 ---
-title: Instalación de azdata con el instalador en Linux
+title: Instalación de azdata con instalador en Linux
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo instalar la herramienta azdata para instalar y administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar) con el instalador (Linux).
+description: Aprenda a instalar la herramienta azdata para instalar y administrar clústeres de macrodatos de SQL Server con el instalador (Linux).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2795178cb975ecb620528c4a5dc8715b70d447fd
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
-ms.translationtype: MT
+ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342008"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75728586"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Instalación de `azdata` para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Linux
+# <a name="install-azdata-with-apt"></a>Instalación de `azdata` con apt
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo instalar `azdata` para los clústeres de Big Data de SQL Server 2019 Release Candidate en Linux. Antes de que estos administradores de paquetes estuviesen disponibles, se requiere la instalación de `azdata` `pip`.
+En este artículo se explica cómo instalar `azdata` para clústeres de macrodatos de SQL Server 2019 en Linux. Antes de que estos administradores de paquetes estuviesen disponibles, la instalación de `azdata` exigía `pip`.
 
-Los administradores de paquetes están diseñados para varios sistemas operativos y distribuciones.
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
-- Para Linux (Ubuntu), [instale `azdata` con `apt`](#azdata-apt)
+## <a name="install-azdata-for-linux"></a><a id="linux"></a>Instalar `azdata` para Linux
 
-En este momento, no hay ningún administrador de paquetes para instalar `azdata` en otros sistemas operativos o distribuciones. Para estas plataformas, consulte [instalación de `azdata` sin el administrador de paquetes](./deploy-install-azdata.md).
+El paquete de instalación `azdata` está disponible para Ubuntu con `apt`.
 
-## <a id="linux"></a>Instalación de `azdata` para Linux
-
-el paquete de instalación de `azdata` está disponible para Ubuntu con `apt`.
-
-### <a id="azdata-apt"></a>Instalación de `azdata` con apt (Ubuntu)
+### <a name="install-azdata-with-apt-ubuntu"></a><a id="azdata-apt"></a>Instalar `azdata` con apt (Ubuntu)
 
 >[!NOTE]
->El paquete `azdata` no usa Python del sistema, sino que instala su propio intérprete de Python.
+>El paquete `azdata` no usa el sistema Python, sino que instala su propio intérprete de Python.
 
-1. Obtener los paquetes necesarios para el proceso de instalación:
+1. Obtenga los paquetes necesarios para el proceso de instalación:
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. Descargue e instale la clave de firma:
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
-3. Agregue la información del repositorio `azdata`:
+3. Agregue la información del repositorio `azdata`.
 
+   Para el cliente Ubuntu 16.04, ejecute:
     ```bash
-    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   Para el cliente Ubuntu 18.04, ejecute:
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. Actualice la información del repositorio e instale `azdata`:
@@ -63,23 +67,23 @@ el paquete de instalación de `azdata` está disponible para Ubuntu con `apt`.
     sudo apt-get install -y azdata-cli
     ```
 
-5. Comprobar la instalación:
+5. Compruebe la instalación:
 
     ```bash
     azdata --version
     ```
 
-### <a name="update"></a>Update
+### <a name="update"></a>Actualizar
 
-Actualizar solo `azdata`:
+Actualice `azdata` únicamente:
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 ```
 
-### <a name="uninstall"></a>Desinstalar
+### <a name="uninstall"></a>Desinstalación
 
-1. Desinstalar con apt-obtener quitar:
+1. Desinstale con apt-get remove:
 
     ```bash
     sudo apt-get remove -y azdata-cli
@@ -88,7 +92,7 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 2. Quite la información del repositorio `azdata`:
 
     >[!NOTE]
-    >Este paso no es necesario si planea instalar `azdata` en el futuro.
+    >Este paso no es necesario si planea instalar `azdata` en el futuro
 
     ```bash
     sudo rm /etc/apt/sources.list.d/azdata-cli.list
@@ -100,7 +104,7 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
     sudo rm /etc/apt/trusted.gpg.d/dpgswdist.v1.asc.gpg
     ```
 
-4. Quite las dependencias innecesarias que se instalaron con la CLI de Azdata:
+4. Quite las dependencias innecesarias que se hayan instalado con la CLI de Azdata:
 
     ```bash
     sudo apt autoremove
@@ -108,4 +112,4 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de Big Data, consulte [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17f2762975f72ccd1e6482ea7120701eacf0c4c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8dd9e6920aadec8434bfe7629cad9e1c8a22215d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984075"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922734"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>Método getDate (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,15 +42,15 @@ public java.sql.Date getDate(int columnIndex,
   
  *cal*  
   
- Un objeto de calendario.  
+ Un objeto Calendar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto Date.  
+ Un objeto Date.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getDate especifica este método getDate en la interfaz java.sql.ResultSet.  
   
  Este método devuelve una fecha válida que forma parte de un tipo de datos datetime o smalldatetime de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte correspondiente a la hora establecida en la hora de inicio de Java de 00:00 (media noche) en la zona horaria del calendario suministrado.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: b2a25f62b563a01aa9cafb522d9ea32ab0f32fc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314590"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682036"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cifra datos con la clave pública de un certificado.  
   
@@ -35,7 +35,7 @@ Cifra datos con la clave pública de un certificado.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )  
 ```  
@@ -53,14 +53,14 @@ Una variable de uno de los siguientes tipos que contiene datos que se cifrarán 
 * **nvarchar** 
 * **char**
 * **varchar**
-* **binario** 
+* **binary** 
 * **varbinary**
 * **nchar**
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Esta función cifra los datos con la clave pública del certificado. El texto cifrado solo puede descifrarse con la correspondiente clave privada. Estas transformaciones asimétricas son muy costosas en comparación con el cifrado y el descifrado mediante una clave simétrica. Por lo tanto, no se recomienda el cifrado asimétrico cuando se trabaja con grandes conjuntos de datos.
   
 ## <a name="examples"></a>Ejemplos  

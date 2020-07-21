@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 94edb9dad26037834ed54441b72480eb54cd9683
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3004bbb67e8bb3e89bec4acfe9674f0b99f27169
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762379"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551050"
 ---
-# <a name="mssqlserver7905"></a>MSSQLSERVER_7905
+# <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7905|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7905|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Texto del mensaje|Error de base de datos: El directorio 'Directorio' no es un directorio de Filestream válido.|  
+|Texto del mensaje|Error de base de datos: el directorio "DIRECTORY" no es un directorio de Filestream válido.|  
   
 ## <a name="explanation"></a>Explicación  
  El nombre de un directorio de conjunto de filas es el Id. de la partición, excepto para los nombres de directorios de conjunto de filas especiales como 'ghost'. Si un nombre de directorio de conjunto de filas no se puede convertir en un Id. de partición, el directorio no es un directorio de conjunto de filas válido.  

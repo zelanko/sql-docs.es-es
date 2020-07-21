@@ -1,23 +1,24 @@
 ---
-title: 'Tutorial: Creación y ejecución de una prueba unitaria de SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Crear y ejecutar una prueba unitaria de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141207"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087512"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
+
 En este tutorial, se crea una prueba unitaria de SQL Server que comprueba el comportamiento de varios procedimientos almacenados. Las pruebas unitarias de SQL Server se crean para ayudar a identificar los defectos del código que podrían producir un comportamiento incorrecto de la aplicación. Las pruebas unitarias de SQL Server y las pruebas de aplicación se pueden ejecutar como parte de un conjunto de pruebas automatizado.  
   
 En este tutorial, realizará las tareas siguientes:  
@@ -38,10 +39,10 @@ En este tutorial, realizará las tareas siguientes:
   
 Cuando una de las pruebas unitarias detecta un error en un procedimiento almacenado, se corrige el error y se vuelve a ejecutar la prueba.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Para completar este tutorial, debe poder conectarse a un servidor de bases de datos (o a una base de datos LocalDB) en el que tenga permisos para crear e implementar una base de datos. Para más información, consulte [Permisos necesarios para las características de base de datos de Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
-## <a name="CreateScript"></a>Crear un script que contiene un esquema de la base de datos  
+## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Crear un script que contiene un esquema de la base de datos  
   
 #### <a name="to-create-a-script-from-which-you-can-import-a-schema"></a>Para crear un script desde el que se puede importar un esquema  
   
@@ -121,12 +122,12 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
     PRINT N'Creating Sales.CK_Orders_FilledDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.CK_Orders_OrderDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.uspCancelOrder...';  
     GO  
@@ -221,7 +222,7 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
   
     A continuación creará un proyecto de base de datos e importará el esquema desde el script que ha creado.  
   
-## <a name="CreateProjectAndImport"></a>Crear un proyecto de base de datos e importar un esquema  
+## <a name="create-a-database-project-and-import-a-schema"></a><a name="CreateProjectAndImport"></a>Crear un proyecto de base de datos e importar un esquema  
   
 #### <a name="to-create-a-database-project"></a>Para crear un proyecto de base de datos  
   
@@ -262,10 +263,10 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
   
 2.  En el **Explorador de objetos de** , examine la base de datos del nodo Proyectos.  
   
-## <a name="DeployDBProj"></a>Implementar en LocalDB  
+## <a name="deploying-to-localdb"></a><a name="DeployDBProj"></a>Implementar en LocalDB  
 De forma predeterminada, al presionar F5 se implementa (o publica) la base de datos en una base de datos LocalDB. Puede cambiar la ubicación de la base de datos si va a la pestaña Depurar de la página de propiedades del proyecto y cambia la cadena de conexión.  
   
-## <a name="CreateDBUnitTests"></a>Crear pruebas unitarias de SQL Server  
+## <a name="create-sql-server-unit-tests"></a><a name="CreateDBUnitTests"></a>Crear pruebas unitarias de SQL Server  
   
 #### <a name="to-create-a-sql-server-unit-test-for-the-stored-procedures"></a>Para crear una prueba unitaria de SQL Server para los procedimientos almacenados  
   
@@ -292,11 +293,11 @@ De forma predeterminada, al presionar F5 se implementa (o publica) la base de da
   
     Podría generar también datos de prueba como parte de las pruebas unitarias de SQL Server. En este tutorial, puede omitir este paso porque las pruebas van a crear sus propios datos.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
     Se compilará el proyecto de prueba y aparecerá el Diseñador de pruebas unitarias de SQL Server. A continuación, actualizará la lógica de prueba en el script Transact\-SQL de las pruebas unitarias.  
   
-## <a name="DefineTestLogic"></a>Definir la lógica de prueba  
+## <a name="define-test-logic"></a><a name="DefineTestLogic"></a>Definir la lógica de prueba  
 Esta base de datos muy simple tiene dos tablas, Customer y Order. Actualiza la base de datos mediante los procedimientos almacenados siguientes:  
   
 -   uspNewCustomer: Este procedimiento almacenado agrega un registro a la tabla Customer, que establece las columnas YTDOrders y YTDSales del cliente en cero.  
@@ -563,7 +564,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
     Se ejecuta el cuerpo de Transact\-SQL de la prueba unitaria y el esquema resultante aparece en el cuadro de diálogo. Dado que el código anterior a la prueba no se ejecutó, no se devuelve ningún dato. Ya que solo se está comprobando el esquema y no los datos, esto es correcto.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
     El esquema esperado se almacena con la condición de prueba.  
   
@@ -690,7 +691,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
     Se ejecuta el Transact\-SQL especificado y se calcula una suma de comprobación para los datos devueltos.  
   
-18. Haga clic en **Aceptar**.  
+18. Haga clic en **OK**.  
   
     La suma de comprobación calculada se almacena con la condición de prueba. La suma de comprobación esperada aparece en la columna Valor de la condición de prueba Suma de comprobación de datos.  
   
@@ -698,7 +699,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
     En este punto, estará listo para ejecutar las pruebas.  
   
-## <a name="RunTests"></a>Ejecutar pruebas unitarias de SQL Server  
+## <a name="run-sql-server-unit-tests"></a><a name="RunTests"></a>Ejecutar pruebas unitarias de SQL Server  
   
 #### <a name="to-run-the-sql-server-unit-tests"></a>Para ejecutar las pruebas unitarias de SQL Server  
   
@@ -718,10 +719,10 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
 5.  Repita el paso 3 para las pruebas Sales_uspPlaceNewOrderTest, Sales_uspFillOrderTest y Sales_uspShowOrderDetailsTest. Los resultados deberían ser los siguientes:  
   
-    |Prueba|Resultado esperado|  
+    |Prueba|Resultado previsto|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|Superada|  
-    |Sales_uspShowOrderDetailsTest|Superada|  
+    |Sales_uspPlaceNewOrderTest|Pass (pasado)|  
+    |Sales_uspShowOrderDetailsTest|Pass (pasado)|  
     |Sales_uspFillOrderTest|Se produce el siguiente error: “Error en la condición ScalarValueCondition (scalarValueCondition2): ResultSet 1 Fila 1 Columna 1: los valores no coinciden, real ‘-100’, esperado ‘100’”. Este error aparece porque la definición del procedimiento almacenado contiene un error menor.|  
   
     A continuación, se corregirá el error y volverá a ejecutar la prueba.  
@@ -754,7 +755,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
     Se supera la prueba.  
   
-## <a name="NegativeTest"></a>Agregar una prueba unitaria negativa  
+## <a name="add-a-negative-unit-test"></a><a name="NegativeTest"></a>Agregar una prueba unitaria negativa  
 Puede crear una prueba negativa para comprobar que una prueba genera un error cuando debe dar error. Por ejemplo, si intenta cancelar un pedido que ya estaba rellenado, la prueba debe generar un error. En esta parte del tutorial, se crea una prueba unitaria negativa para el procedimiento almacenado Sales.uspCancelOrder.  
   
 Para crear y comprobar una prueba negativa, debe realizar las siguientes tareas:  
@@ -981,7 +982,7 @@ Para crear y comprobar una prueba negativa, debe realizar las siguientes tareas:
   
     La prueba se supera, lo que significa que se produjo un error en el procedimiento cuando se suponía que se debía producir.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 En un proyecto típico, se definirían pruebas unitarias adicionales para comprobar que todos los objetos de base de datos críticos funcionan correctamente. Una vez completado el conjunto de pruebas, se protegerían las pruebas en el control de versiones para compartirlas con el equipo.  
   
 Después de establecer una línea base, puede crear y modificar los objetos de base de datos y crear pruebas asociadas para comprobar si un cambio interrumpirá el comportamiento esperado.  

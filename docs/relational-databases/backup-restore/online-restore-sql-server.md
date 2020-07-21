@@ -1,5 +1,6 @@
 ---
 title: Restauración con conexión (SQL Server) | Microsoft Docs
+description: En algunos casos, en la edición SQL Server Enterprise los datos se pueden restaurar por archivo, por página o por restauración por etapas mientras una base de datos permanece en línea.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e4f5817fe575422dddeedd525b077dbf643a29b2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6579e091911dc5e6a6c41bc27a567300f6fe2390
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908878"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670444"
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La restauración en línea solo se admite en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta versión, la restauración de un archivo, una página o por etapas es en línea de manera predeterminada. Este tema es pertinente para las bases de datos que incluyen varios archivos o grupos de archivos y, en el modelo de recuperación simple, solo para grupos de archivos de solo lectura.  
   
  La restauración de datos mientras la base de datos está en línea se denomina *restauración en línea*. Se considera que una base de datos está en línea siempre que el grupo de archivos principal esté en línea, aunque alguno de los grupos de archivos secundarios esté sin conexión. En todos los modelos de recuperación se puede restaurar un archivo sin conexión mientras la base de datos está en línea. En el modelo de recuperación completa, también se pueden restaurar páginas mientras la base de datos está en línea.  
@@ -63,7 +64,7 @@ ms.locfileid: "72908878"
     > [!NOTE]  
     >  Como alternativa, puede dejar el archivo sin conexión manualmente antes de la secuencia de restauración. Para obtener más información, vea "Dejar sin conexión una base de datos o un archivo" más adelante en este tema.  
   
-##  <a name="taking_db_or_file_offline"></a> Dejar sin conexión una base de datos o un archivo  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Dejar sin conexión una base de datos o un archivo  
  Si no desea utilizar la restauración en línea, puede dejar sin conexión la base de datos antes de iniciar la secuencia de restauración; para ello, puede usar uno de los métodos siguientes:  
   
 -   En todos los modelos de recuperación puede dejar sin conexión la base de datos con la siguiente instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
@@ -95,7 +96,7 @@ ms.locfileid: "72908878"
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Restaurar archivos y grupos de archivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   

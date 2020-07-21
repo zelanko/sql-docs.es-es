@@ -1,5 +1,5 @@
 ---
-title: Usar datos de reemplazo (Tutorial intermedio de datos de minería) de predicciones de serie temporal | Microsoft Docs
+title: Predicciones de serie temporal que usan datos de reemplazo (tutorial intermedio de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312879"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal que usan datos de reemplazo (Tutorial intermedio de minería de datos)
   En esta tarea, se creará un nuevo modelo basado en datos de ventas mundiales. A continuación, se creará una consulta de predicción que aplica el modelo de ventas mundial a una de las regiones individuales.  
   
 ## <a name="building-a-general-model"></a>Crear un modelo general  
- Recuerde que el análisis de los resultados del modelo de minería de datos original reveló grandes diferencias entre ciertas regiones y entre las líneas de productos. Por ejemplo, las ventas de Norteamérica fueron buenas para el modelo M200, mientras que las ventas del modelo T1000 no fueron tan bien. Sin embargo, el análisis se complica por el hecho de que algunas series no tenían muchos datos o datos que se inicia en un punto diferente en el tiempo. También faltaban algunos datos.  
+ Recuerde que el análisis de los resultados del modelo de minería de datos original reveló grandes diferencias entre ciertas regiones y entre las líneas de productos. Por ejemplo, las ventas de Norteamérica fueron buenas para el modelo M200, mientras que las ventas del modelo T1000 no fueron tan bien. Sin embargo, el análisis es complicado por el hecho de que algunas series no tenían muchos datos o se iniciaron en un momento diferente. También faltaban algunos datos.  
   
- ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "serie que predice la cantidad de M200 y T1000")  
+ ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Serie que predice la cantidad de M200 y T1000")  
   
  Para resolver algunos de los problemas de calidad de los datos, decide combinar los datos de ventas de todo el mundo y usar ese conjunto de tendencias de ventas generales para crear un modelo que se pueda aplicar para predecir las ventas futuras en cualquier región.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63312879"
 ## <a name="performing-cross-prediction-with-a-time-series-model"></a>Realizar una predicción cruzada con un modelo de serie temporal  
  El proceso de usar datos de una serie para predecir tendencias en otras series se denomina predicción cruzada. Puede usar la predicción cruzada en muchas situaciones: por ejemplo, podría decidir que las ventas de televisiones son adecuadas para predecir la actividad económica general, y aplicar un modelo formado en ventas de televisiones a los datos económicos generales.  
   
- En SQL Server Data Mining, realizar una predicción cruzada utilizando el parámetro REPLACE_MODEL_CASES en los argumentos a la función, [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ En SQL Server minería de datos, se realiza una predicción cruzada mediante el parámetro REPLACE_MODEL_CASES dentro de los argumentos de la función, [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
  En la tarea siguiente, aprenderá a usar REPLACE_MODEL_CASES. Usará los datos combinados de las ventas mundiales para crear un modelo y, a continuación, creará una consulta de predicción que asigna el modelo general a los datos de reemplazo.  
   
@@ -40,21 +40,21 @@ ms.locfileid: "63312879"
   
 #### <a name="to-build-a-mining-structure-and-mining-model-using-the-aggregated-data"></a>Para generar una estructura de minería de datos y un modelo de minería de datos utilizando los datos agregados  
   
-1.  En **el Explorador de soluciones**, haga clic en **estructuras de minería de datos**y, a continuación, seleccione **nueva estructura de minería de datos** para iniciar el Asistente para minería de datos.  
+1.  En **Explorador de soluciones**, haga clic con el botón secundario en **estructuras de minería**de datos y seleccione **nueva estructura de minería** de datos para iniciar el Asistente para minería de datos.  
   
 2.  En el Asistente para minería de datos, realice las selecciones siguientes:  
   
-    -   Algoritmo: Serie temporal de Microsoft  
+    -   Algoritmo: serie temporal de Microsoft  
   
-    -   Use el origen de datos que creó anteriormente en esta lección avanzada como origen para el modelo. Consulte [avanzada predicciones de serie temporal &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
+    -   Use el origen de datos que creó anteriormente en esta lección avanzada como origen para el modelo. Vea [predicciones de serie temporal avanzadas &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/advanced-time-series-predictions-intermediate-data-mining-tutorial.md).  
   
-         Vista del origen de datos: `AllRegions`  
+         Vista del origen de datos:`AllRegions`  
   
     -   Elija las columnas siguientes para la clave de serie y la clave temporal:  
   
-         Clave temporal: ReportingDate  
+         Hora clave: ReportingDate  
   
-         Clave: Region  
+         Clave: región  
   
     -   Elija las columnas siguientes para `Input` y `Predict`:  
   
@@ -66,31 +66,31 @@ ms.locfileid: "63312879"
   
          AvgQty  
   
-    -   Para **nombre de la estructura de minería de datos**, tipo: `All Regions`  
+    -   En **nombre**de la estructura de minería de datos, escriba:`All Regions`  
   
-    -   Para **nombre del modelo de minería de datos**, tipo: `All Regions`  
+    -   En **nombre del modelo de minería de datos**, escriba:`All Regions`  
   
 3.  Procese la nueva estructura y el nuevo modelo.  
   
 #### <a name="to-build-the-prediction-query-and-map-the-replacement-data"></a>Para generar la consulta de predicción y asignar los datos de reemplazo  
   
-1.  Si el modelo no está abierto, haga doble clic en la estructura AllRegions y, en el Diseñador de minería de datos, haga clic en el **predicción de modelo de minería de datos** ficha.  
+1.  Si el modelo aún no está abierto, haga doble clic en la estructura AllRegions y, en el diseñador de minería de datos, haga clic en la pestaña **predicción de modelo de minería** de datos.  
   
-2.  En el **Mining Model** panel, el modelo AllRegions ya debería estar seleccionado. Si no está seleccionada, haga clic en **Seleccionar modelo**y, a continuación, seleccione el modelo AllRegions.  
+2.  En el panel **modelo de minería de datos** , el modelo AllRegions ya debe estar seleccionado. Si no está seleccionada, haga clic en **Seleccionar modelo**y, a continuación, seleccione el modelo AllRegions.  
   
-3.  En el **Seleccionar tabla (s) de entrada** panel, haga clic en **Seleccionar tabla de casos**.  
+3.  En el panel **seleccionar tabla (s) de entrada** , haga clic en **seleccionar tabla de casos**.  
   
-4.  En el **Seleccionar tabla** cuadro de diálogo, cambie los datos de origen por T1000 Pacific Region y, a continuación, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **seleccionar tabla** , cambie el origen de datos a T1000 Pacific region y, a continuación, haga clic en **Aceptar**.  
   
-5.  Haga clic en la línea de combinación entre el modelo de minería de datos y los datos de entrada y seleccione **modificar conexiones**. Asigne los datos de la vista del origen de datos al modelo de la manera siguiente:  
+5.  Haga clic con el botón secundario en la línea de combinación entre el modelo de minería de datos y los datos de entrada y seleccione **modificar conexiones**. Asigne los datos de la vista del origen de datos al modelo de la manera siguiente:  
   
-    1.  Compruebe que la columna ReportingDate del modelo de minería de datos se asigna a la columna ReportingDate en los datos de entrada.  
+    1.  Compruebe que la columna ReportingDate del modelo de minería de datos está asignada a la columna ReportingDate de los datos de entrada.  
   
-    2.  En el **modificar asignación** cuadro de diálogo, en la fila de la columna del modelo correspondiente a AvgQty, haga clic en **columna de tabla** y, a continuación, seleccione T1000 Pacific.Quantity. Haga clic en **Aceptar**.  
+    2.  En el cuadro de diálogo **modificar asignación** , en la fila de la columna del modelo AvgQty, haga clic en columna de la **tabla** y, a continuación, seleccione T1000 Pacific. quantity. Haga clic en **Aceptar**.  
   
          Este paso asigna la columna que creó en el modelo para la cantidad promedio que predecía los datos reales de la serie T1000 de la cantidad de ventas.  
   
-    3.  No asigne la columna de la región en el modelo a cualquier columna de entrada.  
+    3.  No asigne la región de columna del modelo a ninguna columna de entrada.  
   
          Puesto que el modelo agregaba los datos de todas las series, no hay ninguna coincidencia de los valores de series como T1000 Pacific y se generará un error cuando se ejecute la consulta de predicción.  
   
@@ -98,33 +98,33 @@ ms.locfileid: "63312879"
   
      Primero, agregue una columna a los resultados que genera la etiqueta AllRegions a partir del modelo y las predicciones. De esta manera, sabe que los resultados están basados en el modelo general.  
   
-    1.  En la cuadrícula, haga clic en la primera fila vacía en **origen**y, a continuación, seleccione AllRegions modelo de minería de datos.  
+    1.  En la cuadrícula, haga clic en la primera fila vacía, en **origen**y, a continuación, seleccione modelo de minería de datos AllRegions.  
   
-    2.  Para **campo**, seleccione la región.  
+    2.  En **campo**, seleccione región.  
   
-    3.  Para **Alias**, tipo **modelo usa**.  
+    3.  En **alias**, escriba **modelo utilizado**.  
   
 7.  A continuación, agregue otra etiqueta a los resultados, de modo que pueda ver para qué serie son las predicciones.  
   
-    1.  Haga clic en una fila vacía y en **origen**, seleccione **expresión personalizada**.  
+    1.  Haga clic en una fila vacía y, en **origen**, seleccione **expresión personalizada**.  
   
-    2.  En el **Alias** columna, escriba **ModelRegion**.  
+    2.  En la columna **alias** , escriba **ModelRegion**.  
   
-    3.  En el **criterios o argumento** columna, escriba `'T1000 Pacific'`.  
+    3.  En la columna **criterios o argumento** , escriba `'T1000 Pacific'`.  
   
 8.  Ahora va a configurar la función de predicción cruzada.  
   
-    1.  Haga clic en una fila vacía y en **origen**, seleccione **función de predicción**.  
+    1.  Haga clic en una fila vacía y, en **origen**, seleccione **función de predicción**.  
   
-    2.  En el **campo** columna, seleccione **PredictTimeSeries**.  
+    2.  En la columna **campo** , seleccione **PredictTimeSeries**.  
   
-    3.  Para **Alias**, tipo **valores predichos**.  
+    3.  En **alias**, escriba **valores predichos**.  
   
-    4.  Arrastre el campo AvgQty desde el **Mining Model** panel en el **criterios o argumento** columna mediante el uso de la operación de arrastrar y colocar.  
+    4.  Arrastre el campo AvgQty del panel **modelo de minería de datos** a la columna **criterios o argumento** mediante la operación de arrastrar y colocar.  
   
-    5.  En el **criterios o argumento** columna, después del nombre de campo, escriba el texto siguiente: `,5, REPLACE_MODEL_CASES`  
+    5.  En la columna **criterios o argumento** , después del nombre del campo, escriba el texto siguiente:`,5, REPLACE_MODEL_CASES`  
   
-         El texto completo de la **criterios o argumento** cuadro de texto debería ser como sigue: `[AllRegions].[AvgQty],5,REPLACE_MODEL_CASES`  
+         El texto completo del cuadro de texto **criterios/argumento** debe ser el siguiente:`[AllRegions].[AvgQty],5,REPLACE_MODEL_CASES`  
   
 9. Haga clic en **resultados**.  
   
@@ -158,9 +158,9 @@ AND
  Por ejemplo, si cambia las condiciones de filtro y las etiquetas de las columnas reemplazando 'Pacific' con 'North America', obtendrá las predicciones para el producto T1000 de Norteamérica, según los patrones del modelo general.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Comparar las predicciones para los modelos de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+ [Comparar las predicciones de modelos de previsión &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   

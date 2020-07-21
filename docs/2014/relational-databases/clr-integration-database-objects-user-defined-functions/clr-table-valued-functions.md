@@ -1,5 +1,5 @@
 ---
-title: Las funciones con valores de tabla CLR | Microsoft Docs
+title: Funciones con valores de tabla de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192673590f5dccfcee3f7c49de7cda659f97b8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970811"
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
   Una función con valores de tabla es una función definida por el usuario que devuelve una tabla.  
@@ -45,7 +44,7 @@ ms.locfileid: "62874546"
  Los parámetros con valores de tabla son tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, y proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla presentan una funcionalidad similar a la de las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Los parámetros con valores de tabla también ayudan a reducir el número de viajes de ida y vuelta (round trip) al servidor. En lugar de enviar varias solicitudes al servidor, como en el caso de una lista de parámetros escalares, los datos pueden enviarse al servidor como un parámetro con valores de tabla. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para más información sobre los parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parámetros de salida y funciones con valores de tabla  
- Se puede devolver información de funciones con valores de tabla mediante el uso de parámetros de salida. El parámetro correspondiente en el código de implementación de la función con valores de tabla debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar la \<Out() > atributo para representar un parámetro de salida, como en el siguiente ejemplo:  
+ Se puede devolver información de funciones con valores de tabla mediante el uso de parámetros de salida. El parámetro correspondiente en el código de implementación de la función con valores de tabla debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar el \<Out()> atributo para representar un parámetro de salida, como se muestra a continuación:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,12 +75,12 @@ select * from table t cross apply function(t.column);
   
 -   Se genera a partir de datos externos. Por ejemplo, una función con valores de tabla que lee el registro de eventos y lo expone como una tabla.  
   
- **Tenga en cuenta** una función con valores de tabla solo puede realizar el acceso a los datos a través de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consultar en el `InitMethod` método y no en el `FillRow` método. `InitMethod` debe marcarse con la propiedad de atributo `SqlFunction.DataAccess.Read` si se realiza una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ **Nota:** Una función con valores de tabla solo puede realizar el acceso a los datos a través [!INCLUDE[tsql](../../includes/tsql-md.md)] de una consulta en el `InitMethod` método y no en el `FillRow` método. `InitMethod` debe marcarse con la propiedad de atributo `SqlFunction.DataAccess.Read` si se realiza una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="a-sample-table-valued-function"></a>A. Función con valores de tabla de ejemplo  
  La siguiente función con valores de tabla devuelve información del registro de eventos del sistema. La función toma un único argumento de cadena que contiene el nombre del registro de eventos que va a leerse.  
   
-###### <a name="sample-code"></a>Código muestra  
+###### <a name="sample-code"></a>Código de ejemplo  
   
 ```csharp  
 using System;  
@@ -174,8 +173,8 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Ejemplo: Devolver los resultados de una consulta de SQL Server  
- En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Consulte [ http://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información sobre la descarga de AdventureWorks.  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>Ejemplo: devolver los resultados de una consulta SQL Server  
+ En el siguiente ejemplo se muestra una función con valores de tabla que consulta una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este ejemplo se utiliza la base de datos AdventureWorks Light de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Vea [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) para obtener más información acerca de la descarga de AdventureWorks.  
   
  Asigne a su archivo de código fuente el nombre FindInvalidEmails.cs o FindInvalidEmails.vb.  
   
@@ -414,5 +413,4 @@ go
 SELECT * FROM FindInvalidEmails('2000-01-01');  
 go  
 ```  
-  
   

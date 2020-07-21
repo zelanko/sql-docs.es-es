@@ -1,6 +1,6 @@
 ---
 title: Aplicaciones ASP.NET que usan identificadores de espera
-description: Proporciona un ejemplo en el que se muestra cómo ejecutar varios comandos simultáneos desde una página de ASP.NET, mediante el uso de identificadores de espera para administrar la operación cuando se completan todos los comandos.
+description: Proporciona un ejemplo en el que se muestra cómo ejecutar varios comandos simultáneos desde una página ASP.NET. Para ello, se usan identificadores Wait para administrar la operación cuando se completan todos los comandos.
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: f7d242410b5f7aadd74494bb33a7572afe23be54
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b96d0b862e034123d61bbce038ea81ce2b1a61bd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452331"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928950"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Aplicaciones ASP.NET que usan identificadores de espera
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-Los modelos de devolución de llamada y sondeo para controlar las operaciones asincrónicas son útiles cuando la aplicación está procesando una sola operación asincrónica a la vez. Los modelos de espera proporcionan una manera más flexible de procesar varias operaciones asincrónicas. Hay dos modelos de espera, denominados para los <xref:System.Threading.WaitHandle> métodos que se usan para implementarlos: el modelo Wait (any) y el modelo Wait (All).  
+Los modelos de devolución de llamada y sondeo para controlar las operaciones asincrónicas son útiles cuando la aplicación está procesando una sola operación asincrónica a la vez. Los modelos Wait proporcionan una manera más flexible de procesar varias operaciones asincrónicas. Existen dos modelos Wait, cuyo nombre se debe a los métodos <xref:System.Threading.WaitHandle> usados para implementarlos: Wait (Any) y Wait (All).  
   
-Para usar cualquier modelo de espera, debe usar la propiedad <xref:System.IAsyncResult.AsyncWaitHandle%2A> del objeto <xref:System.IAsyncResult> devuelto por los métodos <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Los métodos <xref:System.Threading.WaitHandle.WaitAny%2A> y <xref:System.Threading.WaitHandle.WaitAll%2A> requieren que se envíen los objetos <xref:System.Threading.WaitHandle> como argumento, agrupados en una matriz.  
+Para usar cualquier modelo Wait, debe usar la propiedad <xref:System.IAsyncResult.AsyncWaitHandle%2A> del objeto <xref:System.IAsyncResult> devuelto por los métodos <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> o <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A>. Los métodos <xref:System.Threading.WaitHandle.WaitAny%2A> y <xref:System.Threading.WaitHandle.WaitAll%2A> requieren que se envíen los objetos <xref:System.Threading.WaitHandle> como argumento, agrupados en una matriz.  
   
-Ambos métodos wait supervisan las operaciones asincrónicas, a la espera de su finalización. El método <xref:System.Threading.WaitHandle.WaitAny%2A> espera a que cualquiera de las operaciones se complete o agote su tiempo de espera. Una vez que sabe que una determinada operación se ha completado, puede procesar sus resultados y luego seguir a la espera de que la siguiente operación se complete o agote su tiempo de espera. El método <xref:System.Threading.WaitHandle.WaitAll%2A> espera a que todos los procesos de la matriz de instancias <xref:System.Threading.WaitHandle> se completen o agoten su tiempo de espera antes de continuar.  
+Ambos métodos Wait supervisan las operaciones asincrónicas, a la espera de su finalización. El método <xref:System.Threading.WaitHandle.WaitAny%2A> espera a que cualquiera de las operaciones se complete o agote su tiempo de espera. Una vez que sabe que una determinada operación se ha completado, puede procesar sus resultados y luego seguir a la espera de que la siguiente operación se complete o agote su tiempo de espera. El método <xref:System.Threading.WaitHandle.WaitAll%2A> espera a que todos los procesos de la matriz de instancias <xref:System.Threading.WaitHandle> se completen o agoten su tiempo de espera antes de continuar.  
   
-La ventaja de los modelos de espera es más impactante cuando se necesita ejecutar varias operaciones de cierta longitud en servidores diferentes, o cuando el servidor es lo suficientemente eficaz como para procesar todas las consultas al mismo tiempo. En los ejemplos presentados aquí, tres consultas emulan procesos largos mediante la adición de comandos WAITFOR de diferentes longitudes a consultas de selección indistintas.  
+La ventaja de los modelos Wait es más impactante cuando se necesita ejecutar varias operaciones de cierta longitud en servidores diferentes, o bien cuando el servidor es lo suficientemente eficaz como para procesar todas las consultas al mismo tiempo. En los ejemplos de este artículo, tres consultas emulan procesos largos agregando comandos WAITFOR de diferentes longitudes a consultas SELECT sin relevancia.  
   
-## <a name="example-wait-any-model"></a>Ejemplo: modelo Wait (any)  
-En el ejemplo siguiente se muestra el modelo Wait (any). Una vez iniciados tres procesos asincrónicos, se llama al método <xref:System.Threading.WaitHandle.WaitAny%2A> para esperar a que se complete cualquiera de ellos. A medida que se completa cada proceso, se llama al método <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> y se lee el objeto <xref:Microsoft.Data.SqlClient.SqlDataReader> resultante. En este momento, es probable que una aplicación real use el <xref:Microsoft.Data.SqlClient.SqlDataReader> para rellenar una parte de la página. En este sencillo ejemplo, la hora en que se completó el proceso se agrega al cuadro de texto correspondiente al proceso. Tomadas juntas, las horas de los cuadros de texto ilustran el punto: el código se ejecuta cada vez que se completa un proceso.  
+## <a name="example-wait-any-model"></a>Ejemplo: Modelo Wait (Any)  
+En el ejemplo siguiente se ilustra el modelo Wait (Any). Una vez iniciados tres procesos asincrónicos, se llama al método <xref:System.Threading.WaitHandle.WaitAny%2A> para esperar a que se complete cualquiera de ellos. Cuando se completa cada proceso, se llama al método <xref:Microsoft.Data.SqlClient.SqlCommand.EndExecuteReader%2A> y se lee el objeto <xref:Microsoft.Data.SqlClient.SqlDataReader> devuelto. En este punto, una aplicación real probablemente usaría <xref:Microsoft.Data.SqlClient.SqlDataReader> para rellenar una parte de la página. En este sencillo ejemplo, se agrega la hora a la que se completa el proceso a un cuadro de texto correspondiente al proceso. Tomadas juntas, las horas de los cuadros de texto ilustran el punto: el código se ejecuta cada vez que se completa un proceso.  
   
-Para configurar este ejemplo, cree un nuevo proyecto de sitio web de ASP.NET. Coloque un control <xref:System.Web.UI.WebControls.Button> y cuatro controles <xref:System.Web.UI.WebControls.TextBox> en la página (aceptando el nombre predeterminado de cada control).  
+Para configurar este ejemplo, cree un proyecto de sitio web de ASP.NET. Coloque un control <xref:System.Web.UI.WebControls.Button> y cuatro controles <xref:System.Web.UI.WebControls.TextBox> en la página (aceptando el nombre predeterminado de cada control).  
   
 Agregue el código siguiente a la clase del formulario y modifique la cadena de conexión según sea necesario para su entorno.  
   
@@ -191,12 +191,12 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>Ejemplo: modelo Wait (All)  
-En el ejemplo siguiente se muestra el modelo Wait (All). Una vez iniciados tres procesos asincrónicos, se llama al método <xref:System.Threading.WaitHandle.WaitAll%2A> para esperar a que los procesos se completen o agoten su tiempo de espera.  
+## <a name="example-wait-all-model"></a>Ejemplo: Modelo Wait (All)  
+En el ejemplo siguiente se ilustra el modelo Wait (All). Una vez iniciados tres procesos asincrónicos, se llama al método <xref:System.Threading.WaitHandle.WaitAll%2A> para esperar a que los procesos se completen o agoten el tiempo de espera.  
   
-Al igual que en el ejemplo del modelo Wait (any), la hora en que se completa el proceso se agrega al cuadro de texto correspondiente al proceso. De nuevo, las horas de los cuadros de texto ilustran el punto: el código que sigue al método <xref:System.Threading.WaitHandle.WaitAny%2A> solo se ejecuta una vez completados todos los procesos.  
+Al igual que en el ejemplo del modelo Wait (Any), la hora en que se completa el proceso se agrega al cuadro de texto correspondiente al proceso. De nuevo, las horas de los cuadros de texto ilustran el punto: el código que sigue al método <xref:System.Threading.WaitHandle.WaitAny%2A> solo se ejecuta una vez completados todos los procesos.  
   
-Para configurar este ejemplo, cree un nuevo proyecto de sitio web de ASP.NET. Coloque un control <xref:System.Web.UI.WebControls.Button> y cuatro controles <xref:System.Web.UI.WebControls.TextBox> en la página (aceptando el nombre predeterminado de cada control).  
+Para configurar este ejemplo, cree un proyecto de sitio web de ASP.NET. Coloque un control <xref:System.Web.UI.WebControls.Button> y cuatro controles <xref:System.Web.UI.WebControls.TextBox> en la página (aceptando el nombre predeterminado de cada control).  
   
 Agregue el código siguiente a la clase del formulario y modifique la cadena de conexión según sea necesario para su entorno.  
   

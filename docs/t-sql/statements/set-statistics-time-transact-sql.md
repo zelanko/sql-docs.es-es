@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12e5acfd9436a4295ded63e7db8572dd27ce6e39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765668"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Muestra el número de milisegundos necesarios para analizar, compilar y ejecutar cada instrucción.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "67897998"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando SET STATISTICS TIME es ON, se muestran las estadísticas de tiempo de una instrucción. Cuando es OFF no se muestran las estadísticas de tiempo.  
   
  La opción SET STATISTICS TIME se establece en tiempo de ejecución, no en tiempo de análisis.  
@@ -62,7 +62,7 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se muestran los tiempos de ejecución, análisis y compilación del servidor.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

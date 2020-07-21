@@ -10,15 +10,14 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 460cc962ec8ce871438a74ee914ba60ba406d583
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769342"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428832"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expresión de SSIS)
   Devuelve un entero que representa una parte de una fecha.  
@@ -31,7 +30,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *parte de fecha*  
+ *datepart*  
  Parámetro que especifica para qué parte de la fecha se devuelve un valor nuevo.  
   
  *date*  
@@ -40,7 +39,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  DATEPART devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
@@ -53,12 +52,12 @@ DATEPART(datepart, date)
 |Trimestre|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Día|dd, d|  
 |Semana|wk, ww|  
-|Weekday|dw|  
+|Día de la semana|dw|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|Second|ss, s|  
+|Segundo|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Ejemplos de expresiones de SSIS  
@@ -80,7 +79,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DATEADD &#40;expresión de SSIS&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expresión de SSIS&#41;](datediff-ssis-expression.md)   
  [DAY &#40;expresión de SSIS&#41;](day-ssis-expression.md)   

@@ -1,5 +1,6 @@
 ---
 title: Creación, modificación y eliminación de FileTables | Microsoft Docs
+description: En SQL Server, la característica FileTables usa una estructura de directorio para almacenar archivos. Obtenga información sobre cómo crear una tabla FileTable, o bien cómo modificar o quitar una existente.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816736"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768016"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe cómo crear una nueva FileTable. O bien, modificar o quitar una FileTable existente.  
   
-##  <a name="BasicsCreate"></a> Crear una FileTable  
+##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Crear una FileTable  
  Una FileTable es una tabla de usuario especializada que tiene un esquema predefinido y fijo. Este esquema almacena los datos FILESTREAM, la información de directorios y archivos, así como los atributos de archivos. Para obtener información acerca del esquema de FileTable, vea [FileTable Schema](../../relational-databases/blob/filetable-schema.md).  
   
  Puede crear una nueva FileTable con Transact-SQL o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puesto que una FileTable tiene un esquema fijo, no tiene que especificar ninguna lista de columnas. La sintaxis simple para crear una FileTable permite especificar:  
@@ -35,7 +36,7 @@ ms.locfileid: "71816736"
   
 -   Los nombres que se van a utilizar para la clave principal 3 y las restricciones únicas que se crean automáticamente.  
   
-###  <a name="HowToCreate"></a> Procedimientos para: crear una FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Procedimientos para: crear una FileTable  
  **Crear una FileTable con Transact-SQL**  
  Cree una FileTable llamando a la instrucción [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) con la opción **AS FileTable**. Puesto que una FileTable tiene un esquema fijo, no tiene que especificar ninguna lista de columnas. Puede especificar los siguientes valores para la nueva FileTable:  
   
@@ -88,7 +89,7 @@ GO
   
  Esta opción abre una nueva ventana de script que contiene una plantilla de script Transact-SQL que puede personalizar y ejecutar para crear una FileTable. Use la opción **Especificar valores para parámetros de plantilla** en el menú **Consulta** para personalizar el script fácilmente.  
   
-###  <a name="ReqCreate"></a> Requisitos y restricciones para crear una FileTable  
+###  <a name="requirements-and-restrictions-for-creating-a-filetable"></a><a name="ReqCreate"></a> Requisitos y restricciones para crear una FileTable  
   
 -   No puede modificar una tabla existente para convertirla en una FileTable.  
   
@@ -102,12 +103,12 @@ GO
   
 -   No puede crear ninguna FileTable como tabla temporal.  
   
-##  <a name="BasicsAlter"></a> Modificar una FileTable  
+##  <a name="altering-a-filetable"></a><a name="BasicsAlter"></a> Modificar una FileTable  
  Puesto que una FileTable tiene un esquema predefinido y fijo, no puede agregar ni cambiar sus columnas. No obstante, puede agregar índices personalizados, desencadenadores, restricciones y opciones adicionales a una FileTable.  
   
  Para obtener información sobre el uso de la instrucción ALTER TABLE para habilitar o deshabilitar el espacio de nombres de FileTable, incluidas las restricciones definidas por el sistema, vea [Administrar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Procedimientos para: cambiar el directorio de un objeto FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Procedimientos para: cambiar el directorio de un objeto FileTable  
  **Cambiar el directorio de un objeto FileTable mediante Transact-SQL**  
  Llame a la instrucción ALTER TABLE y proporcione un nuevo valor válido para la opción **FILETABLE_DIRECTORY** SET.  
   
@@ -122,7 +123,7 @@ GO
  **Cambiar el directorio de un objeto FileTable mediante SQL Server Management Studio**  
  En el Explorador de objetos, haga clic con el botón derecho en el objeto FileTable y seleccione **Propiedades** para abrir el cuadro de diálogo **Propiedades de la tabla** . En la página **FileTable** , escriba un nuevo valor para **Nombre del directorio de FileTable**.  
   
-###  <a name="ReqAlter"></a> Requisitos y restricciones para modificar una FileTable  
+###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> Requisitos y restricciones para modificar una FileTable  
   
 -   No puede modificar el valor de **FILETABLE_COLLATE_FILENAME**.  
   
@@ -130,7 +131,7 @@ GO
   
 -   No puede agregar nueva columnas de usuario, columnas calculadas ni columnas calculadas persistentes a una FileTable.  
   
-##  <a name="BasicsDrop"></a> Quitar una FileTable  
+##  <a name="dropping-a-filetable"></a><a name="BasicsDrop"></a> Quitar una FileTable  
  Puede quitar una FileTable mediante la sintaxis normal de la instrucción [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md).  
   
  Cuando se quita una FileTable, también se quitan los objetos siguientes:  
@@ -141,7 +142,7 @@ GO
   
  Se produce un error en el comando DROP TABLE si hay identificadores de archivo abiertos en el espacio de nombres de archivo de FileTable. Para obtener información sobre cómo cerrar identificadores abiertos, vea [Administrar FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-##  <a name="BasicsOtherObjects"></a> Se crean otros objetos de base de datos cuando se crea una FileTable  
+##  <a name="other-database-objects-are-created-when-you-create-a-filetable"></a><a name="BasicsOtherObjects"></a> Se crean otros objetos de base de datos cuando se crea una FileTable  
  Cuando cree una nueva FileTable, también se crean algunas restricciones y algunos índices definidos por el sistema. No puede modificar ni quitar estos objetos; desaparecen solo cuando se quita el propio objeto FileTable. Para ver la lista de estos objetos, consulte la vista de catálogo [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md).  
   
 ```sql  
@@ -175,7 +176,7 @@ GO
 |Restricciones CHECK|Las restricciones CHECK definidas por el sistema se aplican a los siguientes requisitos:<br /><br /> Nombres de archivo válidos.<br /><br /> Atributos de archivo válidos.<br /><br /> El objeto primario debe ser un directorio.<br /><br /> La jerarquía del espacio de nombres se bloquea durante la manipulación de archivos.|  
   
  **Convención de nomenclatura para las restricciones definidas por el sistema**  
- Las restricciones definidas por el sistema descritas arriba reciben su nombre en el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , donde:  
+ A las restricciones definidas por el sistema descritas anteriormente se les asigna un nombre con el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , donde:  
   
 -   *<constraint_type>* es CK (restricción CHECK), DF (restricción DEFAULT), FK (clave externa), PK (clave principal) o UQ (restricción UNIQUE).  
   

@@ -12,47 +12,47 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fc15968501fed6b94a7ccddb984cbdf76bcbcb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915804"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298135"
 ---
 # <a name="odbc-driver-for-oracle"></a>Controlador ODBC para Oracle
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
- Microsoft® ODBC Driver for Oracle permite conectar su aplicación compatible con ODBC a una base de datos de Oracle. El controlador ODBC para Oracle se ajusta a la especificación de Open Database Connectivity (ODBC) se describe en el *referencia del programador de ODBC*. Permite el acceso a los paquetes de PL/SQL, integración de XA/DTC y acceso de Oracle desde dentro de Internet Information Services (IIS).  
+ El controlador ODBC de Microsoft® para Oracle le permite conectar su aplicación compatible con ODBC a una base de datos de Oracle. El controlador ODBC para Oracle se ajusta a la especificación de conectividad abierta de bases de datos (ODBC) que se describe en la *Referencia del programador de ODBC*. Permite el acceso a paquetes PL/SQL, la integración de XA/DTC y el acceso a Oracle desde Internet Information Services (IIS).  
   
- Oracle RDBMS es un sistema de administración de varios usuarios de base de datos relacional que se ejecute con distintos sistemas operativos de estación de trabajo y minicomputadoras. Equipos compatibles con IBM Microsoft Windows pueden comunicarse con servidores de base de datos de Oracle a través de una red. Redes admitidas incluyen Microsoft LAN Manager, NetWare, VINES, DECnet y cualquier red que es compatible con TCP/IP.  
+ RDBMS de Oracle es un sistema de administración de bases de datos relacionales multiusuario que se ejecuta con varios sistemas operativos de estación de trabajo y minicomputer. Los equipos compatibles con IBM que ejecutan Microsoft Windows pueden comunicarse con los servidores de bases de datos de Oracle a través de una red. Entre las redes admitidas se incluyen Microsoft LAN Manager, NetWare, VINEs, DECnet y cualquier red que admita TCP/IP.  
   
- El controlador ODBC para Oracle permite que una aplicación tener acceso a datos en una base de datos de Oracle a través de la interfaz ODBC. El controlador puede tener acceso a bases de datos de Oracle locales o se puede comunicar con la red a través de SQL * Net. El siguiente diagrama ilustra esta arquitectura de aplicaciones y controladores.  
+ El controlador ODBC para Oracle permite a una aplicación tener acceso a los datos de una base de datos de Oracle a través de la interfaz ODBC. El controlador puede tener acceso a bases de datos de Oracle locales o puede comunicarse con la red a través de SQL * Net. En el siguiente diagrama se detalla esta arquitectura de aplicaciones y controladores.  
   
- ![Controlador ODBC para Oracle aplicación&#47;arquitectura de controladores](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Arquitectura de controladores ODBC para el controlador de&#47;de aplicaciones Oracle](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
- El controlador ODBC para Oracle cumple con API de conformidad de nivel 1 y principales del nivel de conformidad de SQL. También admite algunas funciones en 2 de nivel de conformidad de API y la mayoría de la gramática de los niveles de conformidad de Core y SQL extendido. El controlador es compatible con 2.5 de ODBC y es compatible con sistemas de 32 bits. Oracle 7.3 x se admite por completo; Oracle8 tiene compatibilidad limitada. El controlador ODBC para Oracle no admite cualquiera de los tipos de datos de Oracle8 - los tipos de datos Unicode, BLOB, CLOB y así sucesivamente - ni admite nuevo modelo de objetos relacionales de Oracle. Para obtener más información acerca de los tipos de datos admitidos, consulte [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) en esta guía.  
+ El controlador ODBC para Oracle cumple con el nivel de conformidad de API 1 y el nivel de cumplimiento de SQL básico. También admite algunas funciones en el nivel de cumplimiento de API 2 y la mayor parte de la gramática en los niveles de cumplimiento básico y extendido de SQL. El controlador es compatible con ODBC 2,5 y admite sistemas de 32 bits. Oracle 7.3 x es totalmente compatible; Oracle8 tiene compatibilidad limitada. El controlador ODBC para Oracle no es compatible con ninguno de los nuevos tipos de datos Oracle8-tipos de datos Unicode, blobs, CLOB, etc., ni tampoco admite el nuevo modelo de objetos relacionales de Oracle. Para obtener más información sobre los tipos de datos admitidos, vea [tipos de datos admitidos](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) en esta guía.  
   
- Para obtener acceso a datos de Oracle, se requieren los siguientes componentes:  
+ Para tener acceso a los datos de Oracle, se necesitan los siguientes componentes:  
   
 -   El controlador ODBC para Oracle  
   
--   Una base de datos de RDBMS de Oracle  
+-   Una base de datos RDBMS de Oracle  
   
 -   Software cliente de Oracle  
   
  Además, para las conexiones remotas:  
   
--   Una red que conecta los equipos que ejecutan el controlador y la base de datos. La red debe ser compatible con SQL * Net conexiones.  
+-   Una red que conecta los equipos que ejecutan el controlador y la base de datos. La red debe ser compatible con las conexiones de SQL * Net.  
   
-## <a name="component-documentation"></a>Documentación del componente  
- Esta guía contiene información detallada sobre cómo instalar y configurar el controlador ODBC de Microsoft para Oracle y agregar funcionalidad mediante programación. También contiene material de referencia técnica.  
+## <a name="component-documentation"></a>Documentación de componentes  
+ Esta guía contiene información detallada acerca de la instalación y configuración de Microsoft ODBC driver for Oracle y la incorporación de la funcionalidad de programación. También contiene material de referencia técnica.  
   
- Para obtener información sobre el comportamiento específico del producto de Oracle, consulte la documentación que acompaña a los productos de Oracle.  
+ Para obtener información sobre el comportamiento específico del producto de Oracle, consulte la documentación que acompaña al producto de Oracle.  
   
- Para obtener información sobre cómo instalar o configurar el controlador ODBC de Microsoft para Oracle mediante el Administrador de orígenes de datos ODBC, vea el [Administrador de orígenes de datos ODBC](../../odbc/admin/odbc-data-source-administrator.md) documentación.  
+ Para obtener información acerca de cómo instalar o configurar el controlador ODBC de Microsoft para Oracle mediante el administrador de orígenes de datos ODBC, vea la documentación del [Administrador de orígenes de datos ODBC](../../odbc/admin/odbc-data-source-administrator.md) .  
   
  Esta sección contiene los temas siguientes.  
   

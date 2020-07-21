@@ -1,6 +1,6 @@
 ---
-title: Modificar scripts SQLCMD con el Editor de consultas | Microsoft Docs
-ms.custom: ''
+title: Modificar scripts SQLCMD con el Editor de consultas
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263476"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253908"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68263476"
   
 3.  En la barra de herramientas del **Editor SQL** , en la lista **Bases de datos disponibles** , seleccione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-4.  En la ventana Editor de consultas, escriba las siguientes dos instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] y, a continuación, la instrucción `!!DIR` **sqlcmd** :  
+4.  En la ventana Editor de consultas, escriba las siguientes dos instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] y, a continuación, la instrucción `!!DIR` **sqlcmd**:  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  
@@ -161,6 +161,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [Utilidad sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

@@ -1,10 +1,9 @@
 ---
-title: Selección de columnas (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Selección de columnas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4522bc61c35927c4fdfe524205578f0a06cf6d95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 32e7daca1fb5f79f8ac110a28f8b70731349c62d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262518"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241239"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Selección de columnas (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ Utilice las flechas < y << para quitar una o todas las propiedades de la vista p
 **Guardar como predeterminado**  
 Reemplaza la vista personalizada predeterminada por las columnas seleccionadas en este cuadro de diálogo. Si no está activada, la selección de columnas especificada en el cuadro de diálogo solo se aplicará a la tabla seleccionada en el diagrama de base de datos.  
   
-**Aceptar**  
+**OK (CORRECTO)**  
 Guarda la vista personalizada.  
   
 **Cancelar**  

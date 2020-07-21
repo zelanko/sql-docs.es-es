@@ -21,18 +21,18 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce69487c1550314dc7cfe3641333728fd07155e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46d5834ff1e9c519b7ac675fd93b75d2b089317e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117557"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85993882"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve un valor **datetimeoffset** que ha cambiado el ajuste de zona horaria almacenado por un nuevo ajuste de zona horaria especificado.  
   
@@ -53,10 +53,10 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  *time_zone*  
  Es una cadena de caracteres en formato [+|-]TZH:TZM o un entero con signo (de minutos) que representa el ajuste de zona horaria y se supone que reconoce y está ajustado para el horario de verano.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **datetimeoffset** con la precisión fraccionaria del argumento *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use SWITCHOFFSET para seleccionar un valor **datetimeoffset** en el ajuste de zona horaria que sea diferente del que se almacenó originalmente. SWITCHOFFSET no actualiza el valor *time_zone* almacenado.  
   
  SWITCHOFFSET se puede usar para actualizar una columna **datetimeoffset**.  

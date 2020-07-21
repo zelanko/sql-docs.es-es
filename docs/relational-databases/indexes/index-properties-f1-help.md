@@ -19,15 +19,15 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f9ca6fc85701a0056074d4ce3a1ff76abfe1cfb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476298"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760799"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68476298"
   
  [Propiedades del índice (página Filtro)](#Filter)  
   
-##  <a name="General"></a> Propiedades del índice (página General)  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Propiedades del índice (página General)  
  Use la página General para ver o modificar las propiedades del índice para la tabla o vista seleccionada. Las opciones para cada página pueden cambiar según el tipo de índice seleccionado.  
   
  **Nombre de la tabla**  
@@ -95,10 +95,10 @@ ms.locfileid: "68476298"
  **Permitir valores NULL**  
  Muestra si la columna que participa en la clave de índice permite almacenar valores NULL en la columna de vista o tabla.  
   
- **Agregar**  
- Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<nombre de tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
+ **Add (Agregar)**  
+ Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<table name>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
   
- **Quitar**  
+ **Remove**  
  Quita la columna seleccionada de la clave de índice.  
   
  **Subir**  
@@ -113,7 +113,7 @@ ms.locfileid: "68476298"
  **Columnas incluidas**  
  Incluye columnas sin clave en el índice no clúster. Esta opción le permite superar los límites actuales del índice relativos al tamaño total de una clave de índice y el número máximo de columnas que participan en una clave de índice agregando columnas como columnas sin clave en el nivel hoja del índice no clúster. Para obtener más información, vea [Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-##  <a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> Cuadro de diálogo Seleccionar columnas de (índice)  
  Use esta página para agregar columnas a la página General de **Propiedades del índice** cuando cree o modifique un índice.  
   
  **casilla**  
@@ -131,10 +131,10 @@ ms.locfileid: "68476298"
  **Identidad**  
  Muestra **Sí** para columnas de identidad y **No** cuando la columna no es una columna de identidad.  
   
- **Allow Nulls**  
+ **Permitir valores NULL**  
  Muestra **Sí** cuando la definición de la tabla permite valores NULL para la columna. Muestra **No** cuando la definición de la tabla no permite valores NULL para la columna.  
 
-##  <a name="Options"></a> Opciones de la página Opciones
+##  <a name="options-page-options"></a><a name="Options"></a> Opciones de la página Opciones
  Use esta página para ver o modificar las diversas opciones del índice.
 
 ### <a name="general-options"></a>Opciones generales
@@ -203,7 +203,7 @@ No se especifica False ni fillfactor.<br>
 Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dejan espacio suficiente para al menos una fila del tamaño máximo que puede tener el índice, considerando el conjunto de claves incluidas en las páginas de nivel intermedio.
 
 
-##  <a name="Storage"></a> Opciones de la página Almacenamiento  
+##  <a name="storage-page-options"></a><a name="Storage"></a> Opciones de la página Almacenamiento  
  Utilice esta página para ver o modificar las propiedades del grupo de archivos o del esquema de partición para el índice seleccionado. Solo muestra las opciones relacionadas con el tipo de índice.  
   
  **Grupo de archivos**  
@@ -234,7 +234,7 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
 > [!NOTE]  
 >  Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
   
-##  <a name="Spatial"></a> Opciones de índice de la página Espacial  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a> Opciones de índice de la página Espacial  
  Use la página **Espacial** para ver o especificar los valores de las propiedades espaciales. Para obtener más información, vea [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Cuadro de límite  
@@ -242,16 +242,16 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
   
  El panel muestra las coordenadas **(** _X-min_ **,** _Y-min_ **)** y **(** _X-max_ **,** _Y-max_ **)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo **geometry** , deberá especificar los valores de las coordenadas.  
   
- **X-min**  
+ **X mínima**  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
   
- **Y-min**  
+ **Y mínima**  
  La coordenada y de la esquina inferior izquierda del cuadro de límite.  
   
- **X-max**  
+ **X máxima**  
  La coordenada x de la esquina superior derecha del cuadro de límite.  
   
- **Y-max**  
+ **Y máxima**  
  La coordenada y de la esquina superior derecha del cuadro de límite.  
   
 ### <a name="general"></a>General  
@@ -292,11 +292,11 @@ Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dej
  **Nivel 4**  
  La densidad de la cuadrícula del cuarto nivel.  
   
-##  <a name="Filter"></a> Página Filtro  
+##  <a name="filter-page"></a><a name="Filter"></a> Página Filtro  
  Use esta página para especificar el predicado de filtro para un índice filtrado. Para obtener más información, consulte [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  **Expresión de filtro**  
- Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ Define qué filas de datos para incluir en el índice filtrado. Por ejemplo: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   

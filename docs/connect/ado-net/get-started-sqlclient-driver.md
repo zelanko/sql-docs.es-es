@@ -1,26 +1,26 @@
 ---
 title: Introducción al controlador SqlClient | Microsoft Docs
-description: Intoduction con el dirver de SqlClient.
+description: Introducción al controlador SqlClient.
 ms.custom: ''
 ms.date: 09/30/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2b75ca2a6b7646e48d6d58754fadc462da983e7d
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 194c4501ae353212202d7f58ad9de4472d7d34cd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452402"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929007"
 ---
 # <a name="getting-started-with-the-sqlclient-driver"></a>Introducción al controlador SqlClient
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 * [Paso 1: Configurar el entorno de desarrollo para el desarrollo de ADO.NET](step-1-configure-development-environment-ado-net-development.md)  
 * [Paso 2: Crear una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  

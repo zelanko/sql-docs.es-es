@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049192"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
@@ -34,13 +34,13 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- El **DrillupMember** función devuelve un conjunto de miembros en función de los miembros especificados en el primer conjunto que son descendientes de miembros en el segundo conjunto. El primer conjunto puede tener varias dimensiones, pero el segundo conjunto debe contener un conjunto de una dimensión. Se mantiene el orden entre los miembros originales del primer conjunto. La función crea el conjunto mediante la inclusión únicamente de los miembros del primer conjunto que son descendientes inmediatos de miembros del segundo conjunto. Si el antecesor inmediato de un miembro del primer conjunto no se encuentra en el segundo conjunto, el miembro del primer conjunto se incluye en el conjunto devuelto por esta función. También se incluyen los descendientes del primer conjunto que preceden a un miembro antecesor del segundo conjunto.  
+## <a name="remarks"></a>Observaciones  
+ La función **DrillupMember** devuelve un conjunto de miembros en función de los miembros especificados en el primer conjunto que son descendientes de miembros del segundo conjunto. El primer conjunto puede tener varias dimensiones, pero el segundo conjunto debe contener un conjunto de una dimensión. Se mantiene el orden entre los miembros originales del primer conjunto. La función crea el conjunto mediante la inclusión únicamente de los miembros del primer conjunto que son descendientes inmediatos de miembros del segundo conjunto. Si el antecesor inmediato de un miembro del primer conjunto no se encuentra en el segundo conjunto, el miembro del primer conjunto se incluye en el conjunto devuelto por esta función. También se incluyen los descendientes del primer conjunto que preceden a un miembro antecesor del segundo conjunto.  
   
- El primer conjunto puede contener tuplas en vez de miembros. Obtención de detalles de tupla es una extensión de OLE DB y devuelve un conjunto de tuplas en vez de miembros.  
+ El primer conjunto puede contener tuplas en vez de miembros. La obtención de detalles de tupla es una extensión de OLE DB y devuelve un conjunto de tuplas en lugar de miembros.  
   
 > [!IMPORTANT]  
->  Se reducirá el detalle de un miembro solo si va inmediatamente seguido por un elemento secundario o un descendiente. Es importante el orden de los miembros del conjunto para ambos la obtención de detalles\* y Drillup\* familias de funciones. Considere el uso de la **Hierarchize** función para ordenar adecuadamente los miembros del primer conjunto.  
+>  Se reducirá el detalle de un miembro solo si va inmediatamente seguido por un elemento secundario o un descendiente. El orden de los miembros en el conjunto es importante para las\* familias de\* las funciones de obtención de detalles y drillup. Considere la posibilidad de usar la función **Hierarchy** para ordenar correctamente los miembros del primer conjunto.  
   
 ## <a name="example"></a>Ejemplo  
  Los tres ejemplos siguientes son idénticos salvo por el segundo conjunto. En el primer ejemplo, el segundo conjunto es Estados Unidos. Como resultado, Colorado se excluye del conjunto de resultados. Es un descendiente de Estados Unidos.  
@@ -58,7 +58,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- El segundo ejemplo muestra la importancia del orden de los miembros. Puesto que **DrillupMember** solo explora en profundidad aquellos miembros seguidos inmediatamente por descendientes del primer conjunto, se muestran los detalles del miembro Canada. Canadá está separada de sus descendientes por Estados Unidos y Colorado. Si vuelve a ordenar los miembros para que Canadá quede directamente encima de Alberta, Alberta y Brunswick se excluirán del conjunto de filas.  
+ El segundo ejemplo muestra la importancia del orden de los miembros. Dado que **DrillupMember** solo profundiza en los miembros que van seguidos inmediatamente de los descendientes del primer conjunto, no profundiza en el miembro de Canadá. Canadá está separada de sus descendientes por Estados Unidos y Colorado. Si vuelve a ordenar los miembros para que Canadá quede directamente encima de Alberta, Alberta y Brunswick se excluirán del conjunto de filas.  
   
 ```  
 SELECT DrillUpMember (   
@@ -74,7 +74,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Tercer ejemplo se muestra cómo el uso de **Hierarchize** puede mitigar los efectos del orden de los miembros y obtener los detalles del miembro Canada.  
+ En el ejemplo 3 se muestra cómo el uso de la **jerarquía** puede mitigar los efectos del orden de los miembros y profundizar en el miembro de Canadá.  
   
 ```  
 SELECT DrillUpMember (   
@@ -93,7 +93,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

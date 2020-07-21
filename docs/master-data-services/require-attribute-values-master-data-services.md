@@ -1,5 +1,5 @@
 ---
-title: Requerir valores de atributo (Master Data Services) | Microsoft Docs
+title: Requerir valores de atributo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dea2c4f9392cbc70d73d1eb383e7e0e2d306a1d3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811896"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requerir valores de atributo (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], requiera valores de atributo cuando desee asegurarse de que los datos maestros están completos.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68085699"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Requerir los valores de atributo  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68085699"
   
 2.  En la barra de menús, seleccione **Administrar** y haga clic en **Reglas de negocios**.  
   
-3.  En la página **Reglas de negocios** , en la lista desplegable **Modelo** , seleccione un modelo.  
+3.  En la página **reglas de negocios** , en la lista desplegable **modelo** , seleccione un modelo.  
   
 4.  En la lista desplegable **Entidad** , seleccione una entidad.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "68085699"
   
 11. En la lista desplegable **Atributo** , seleccione un atributo.  
   
-12. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Entonces** .  
+12. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Entonces** .  
   
-13. Haga clic en **Guardar**.  
+13. Haga clic en **Save**(Guardar).  
   
 14. Haga clic en **Publish All**(Publicar todo).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68085699"
   
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   

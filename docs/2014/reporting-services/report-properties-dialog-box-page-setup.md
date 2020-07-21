@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades, el programa de instalación de la página de informe | Microsoft Docs
+title: Propiedades del informe (cuadro de diálogo), configurar página | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104376"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Propiedades del informe (cuadro de diálogo), Configurar página
-  Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  
+  Seleccione **Configurar página** en el cuadro de diálogo **propiedades del informe**para establecer las opciones de página para todo el informe.  
   
 ## <a name="options"></a>Opciones  
  **Pulgadas**  
@@ -45,10 +45,10 @@ ms.locfileid: "66104376"
  **Height**  
  Muestra el alto del tamaño de papel seleccionado en la lista **Tipo de papel** .  
   
- **Top**  
+ **Arriba**  
  Define la distancia entre la parte superior del informe y la parte superior de la primera línea del mismo.  
   
- **parte inferior**  
+ **Descendente**  
  Define la distancia entre la parte inferior del informe y la parte inferior de la última línea del mismo.  
   
  **Left**  
@@ -57,7 +57,7 @@ ms.locfileid: "66104376"
  **Right**  
  Define la distancia entre el borde derecho del informe y el borde derecho de las filas del mismo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Sugerencias para el diseño de informes &#40;Generador de informes y SSRS&#41;](report-design/report-design-tips-report-builder-and-ssrs.md)  
   

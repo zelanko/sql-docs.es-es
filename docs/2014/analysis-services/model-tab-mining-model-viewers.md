@@ -1,5 +1,5 @@
 ---
-title: Pestaña (visores de modelos de minería de datos) del modelo | Microsoft Docs
+title: Pestaña modelo (visores de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,28 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66077621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537367"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Pestaña Modelo (Visores de modelos de minería de datos)
   La pestaña **Modelo** del Visor de series temporales de Microsoft muestra una representación de una serie temporal como un nodo en un gráfico, similar a la utilizada en los modelos de árboles de decisión.  
   
  Utilice esta vista de un modelo de serie temporal para extraer información útil sobre el análisis de la serie temporal, incluida la ecuación del gráfico, los términos ARIMA y los coeficientes.  
   
- **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [examinar un modelo usando el Visor de Series temporales de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
+ **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Examinar un modelo usando el Visor de serie temporal de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opciones  
- **Actualizar el contenido del Visor**  
+ **Actualizar el contenido del visor**  
  Vuelva a cargar el modelo de minería de datos en el visor.  
   
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que desee ver. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Viewer**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de este tipo de modelo o el **Visor de árbol de contenido genérico de Microsoft** . También puede utilizar visores de complemento, si están disponibles.  
   
  **Acercar**  
@@ -51,7 +50,7 @@ ms.locfileid: "66077621"
  **Ajustar diagrama a la ventana**  
  Aleje el diagrama hasta que el todo él se ajuste a la pantalla.  
   
- **Árbol**  
+ **Palmera**  
  Seleccione un árbol de la lista desplegable para mostrarlo en el visor  
   
  Si el modelo de serie temporal incluye varias series, cada serie se representa como un árbol independiente. Por ejemplo, si creó predicciones a lo largo del tiempo para [Quantity] y [Sales Amount], se crea una serie independiente para cada atributo de predicción.  
@@ -60,7 +59,7 @@ ms.locfileid: "66077621"
   
  Si el árbol mostrado en la lista desplegable tiene una barra coloreada más larga, significa que el modelo tiene muchas bifurcaciones en el árbol. La bifurcación significa que la regresión es más compleja y el modelo se tiene que dividir en varios segmentos, con una ecuación diferente (o par de ecuaciones) en cada nodo.  
   
- **Información previa**  
+ **Fondo**  
  Utilice este control para seleccionar el estado que se representa mediante el color de fondo en cada nodo.  
   
  **Expansión predeterminada**  
@@ -69,9 +68,9 @@ ms.locfileid: "66077621"
  **Mostrar nivel**  
  Cambie el número de niveles que se muestra en el árbol.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   
   

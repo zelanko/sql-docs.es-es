@@ -1,5 +1,5 @@
 ---
-title: tablediff, utilidad | Microsoft Docs
+title: Utilidad tablediff | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68185972"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057624"
 ---
 # <a name="tablediff-utility"></a>tablediff, utilidad
   La utilidad **tablediff** se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
@@ -77,7 +76,7 @@ ms.locfileid: "68185972"
  Devuelve la lista de parámetros admitidos.  
   
  **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
- Es el nombre del servidor de origen. Especificar _origen\_server\_nombre_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _origen\_server\_nombre_ **\\** _instancia\_nombre_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Es el nombre del servidor de origen. Especifique _el \_ \_ nombre del servidor de origen_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Especifique _ \_ \_ _ **\\** _ \_ el nombre de instancia_ del servidor de origen para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-sourcedatabase** *source_database*  
  Es el nombre de la base de datos de origen.  
@@ -100,8 +99,8 @@ ms.locfileid: "68185972"
  **-sourcelocked**  
  La tabla de origen se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[ **\\** _instancia\_nombre_]  
- Es el nombre del servidor de destino. Especifique *destination_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _destino\_server\_nombre_ **\\** _instancia\_nombre_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[ **\\** _ \_ nombre de instancia_]  
+ Es el nombre del servidor de destino. Especifique *destination_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique _ \_ \_ _ **\\** _ \_ el nombre de instancia_ del servidor de destino para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-destinationdatabase** *subscription_database*  
  Es el nombre de la base de datos de destino.  
@@ -162,14 +161,14 @@ ms.locfileid: "68185972"
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Correcto|  
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   
-## <a name="remarks"></a>Comentarios  
- La utilidad **tablediff** no se puede usar con servidores que no son[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+## <a name="remarks"></a>Observaciones  
+ La utilidad **tablediff** no se puede usar con servidores que no sean de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  No se admiten tablas que contengan columnas con el tipo de datos `sql_variant`.  
   
@@ -177,7 +176,7 @@ ms.locfileid: "68185972"
   
 |Tipo de datos de origen|Tipo de datos de destino|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int` o `bigint`|  
+|`tinyint`|`smallint`, `int`o `bigint`|  
 |`smallint`|`int` o `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
@@ -219,7 +218,7 @@ ms.locfileid: "68185972"
   
  Para usar las opciones **-o** o **-f** , debe tener permisos de escritura en la ubicación del directorio de archivos especificada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comparar tablas replicadas para buscar diferencias &#40;programación de la replicación&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

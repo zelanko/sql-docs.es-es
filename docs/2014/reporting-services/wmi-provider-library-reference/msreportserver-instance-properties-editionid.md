@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ad5dfe05037562ac9afbafe56cd76504f7533b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097147"
 ---
-# <a name="editionid-property-wmi-msreportserverinstance"></a>Propiedad EditionID (WMI MSReportServer_Instance)
+# <a name="editionid-property-wmi-msreportserver_instance"></a>Propiedad EditionID (WMI MSReportServer_Instance)
   Devuelve la edición del servidor de informes. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,7 +41,7 @@ public uint EditionID;
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de MSReportServer_Instance](msreportserver-instance-members.md)  
+## <a name="see-also"></a>Consulte también  
+ [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

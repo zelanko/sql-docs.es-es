@@ -1,5 +1,7 @@
 ---
-title: Patrones de implementación de grupo de disponibilidad Always On de SQL Server
+title: 'Patrones de implementación de grupo de disponibilidad: SQL Server en Linux'
+description: Obtenga información sobre las configuraciones de implementación admitidas para los grupos de disponibilidad Always On de SQL Server en servidores Linux.
+ms.custom: seo-lt-2019
 ms.date: 04/17/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,16 +10,16 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 637d67767e17344d63498f8cb6a141fa78b11ecb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996436"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892257"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se presentan las configuraciones de implementación admitidas para los grupos de disponibilidad Always On de SQL Server en servidores Linux. Un grupo de disponibilidad admite alta disponibilidad y protección de datos. La detección automática de errores, la conmutación automática por error y la reconexión transparente después de la conmutación por error proporcionan alta disponibilidad. Las réplicas sincronizadas proporcionan la protección de datos. 
 
@@ -168,7 +170,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 > [!NOTE]
 > Al ejecutar los comandos anteriores, la réplica principal se degrada temporalmente a secundaria y luego se promueve de nuevo. La actualización de recursos hace que todas las réplicas se detengan y reinicien. El nuevo valor de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` solo se establece una vez que se reinician las réplicas, no de forma instantánea.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Grupos de disponibilidad en Linux](sql-server-linux-availability-group-overview.md)
 

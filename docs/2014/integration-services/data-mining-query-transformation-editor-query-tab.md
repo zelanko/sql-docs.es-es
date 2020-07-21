@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación de consulta de minería de datos (pestaña consulta) | Microsoft Docs
+title: Editor de transformación consulta de minería de datos (pestaña consulta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: f6d8958c-0a70-41ab-b6d9-b42cf3194d37
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4222f3017b4a62fc080100bf028475eddc5a58fa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059751"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429732"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Editor de transformación Consulta de minería de datos (pestaña Consulta)
   Utilice la pestaña **Consulta** del cuadro de diálogo **Editor de transformación Consulta de minería de datos** para crear una consulta de predicción.  
@@ -33,7 +32,7 @@ ms.locfileid: "66059751"
  **Generar nueva consulta**  
  Haga clic en **Generar nueva consulta** para crear una consulta DMS (Extensiones de minería de datos) mediante el generador de consultas gráfico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   

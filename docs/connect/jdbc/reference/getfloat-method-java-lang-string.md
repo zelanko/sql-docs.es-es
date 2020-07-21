@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ab60742b06054f5583cc438a68ddb5ed634740f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae411181007b573eb1b38681872b7d4bff36be24
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924777"
 ---
 # <a name="getfloat-method-javalangstring"></a>Método getFloat (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,15 +40,15 @@ public float getFloat(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor de **tipo float** .  
+ Un valor **float**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getFloat especifica este método getFloat en la interfaz java.sql.CallableStatement.  
   
- Este método devuelve todos los tipos basados en números con la fidelidad **flotante** de Java.  
+ Este método devuelve todos los tipos de datos basados en número con fidelidad **float** de Java.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getFloat &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   

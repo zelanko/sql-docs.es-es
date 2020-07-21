@@ -1,5 +1,5 @@
 ---
-title: Página Propiedades generales, informes (Administrador de informes) | Microsoft Docs
+title: Página de propiedades generales, informes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109102"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página d propiedades generales, informes (Administrador de informes)
@@ -32,8 +32,8 @@ ms.locfileid: "66109102"
 3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades General correspondiente al informe.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
- Especifique un nombre para el informe. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = + , $ * \< >  
+ **Nombre**  
+ Especifique un nombre para el informe. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ *\< >  
   
  " o / al especificar el nombre.  
   
@@ -49,11 +49,11 @@ ms.locfileid: "66109102"
  **Eliminar**  
  Haga clic para quitar el informe de la base de datos del servidor de informes. Al eliminar un informe, se eliminan el historial de informe asociado y todas las suscripciones y programaciones específicas del informe. Si el informe está asociado a informes vinculados, éstos quedan invalidados.  
   
- **Mover**  
- Haga clic para cambiar la posición de un informe en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta. Para obtener más información, consulte [página Mover elementos &#40;el Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Move**  
+ Haga clic para cambiar la posición de un informe en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta. Para obtener más información, vea [Página de elementos de movimiento &#40;Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Crear informe vinculado**  
- Haga clic para abrir la página Nuevo informe vinculado. Para obtener más información acerca de esta página e informes vinculados, vea [página nuevo informe vinculado &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
+ Haga clic para abrir la página Nuevo informe vinculado. Para obtener más información acerca de esta página y los informes vinculados, consulte la [Página nuevo informe vinculado &#40;Administrador de informes&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
  **Guardar**  
  Haga clic para extraer una copia de solo lectura de la definición de informe. En función de las asociaciones de archivos definidas en su equipo, el archivo se abrirá en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o en otra aplicación. En la mayoría de los casos, el informe se abre como un archivo XML.  
@@ -62,13 +62,13 @@ ms.locfileid: "66109102"
   
  Puede modificar la definición del informe y guardarla como un archivo nuevo en una carpeta compartida, y cargar la definición del informe en el servidor de informes como un nuevo elemento. Las modificaciones que realice en la definición de informe desde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (o desde otra aplicación) no se guardan directamente en el servidor de informes. Deberá cargar el archivo para publicar el informe modificado en el servidor de informes.  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic para reemplazar la definición de informe que se usa en el informe actual por una distinta obtenida del archivo .rdl ubicado en el sistema de archivos. Si actualiza una definición de informe, debe restablecer la configuración del origen de datos cuando la actualización haya finalizado.  
   
  **Cambiar vínculo**  
  Haga clic para seleccionar una definición de informe diferente para el informe vinculado. Esta opción aparece si el informe es un informe vinculado. Si el informe es vinculado, puede establecer esta propiedad de manera que reemplace la definición de informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

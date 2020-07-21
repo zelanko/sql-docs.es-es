@@ -10,15 +10,14 @@ helpviewer_keywords:
 - null values [Integration Services]
 - ISNULL function
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df3612392859a8b7ed6301587cf4d630b2fecf4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51eda21b5c9b85c5f9cfd613d0d92df9729fe620
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62769151"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428472"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (expresión de SSIS)
   Devuelve un resultado booleano en función de si una expresión es NULL.  
@@ -56,7 +55,7 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)   
  [COALESCE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/coalesce-transact-sql)  
   

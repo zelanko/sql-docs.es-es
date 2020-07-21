@@ -1,5 +1,5 @@
 ---
-title: Agregar cuadro de diálogo de tabla (diseñadores de consultas y la vista) (Visual Database Tools) | Microsoft Docs
+title: Agregar tabla (cuadro de diálogo, diseñadores de consultas y vistas) (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d7bf30cbdd37927735c36f184208a1ded957763
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63460170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058225"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Agregar tabla (cuadro de diálogo, Diseñadores de consultas y vistas, Visual Database Tools)
   Este cuadro de diálogo permite agregar tablas, vistas, funciones definidas por el usuario o sinónimos a una consulta o una vista.  
@@ -42,10 +41,10 @@ ms.locfileid: "63460170"
  **Actualizar**  
  Actualiza la lista para que incluya los cambios realizados en la base de datos desde la última vez que se recuperó la lista.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega los elementos seleccionados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

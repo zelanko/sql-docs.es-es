@@ -1,5 +1,5 @@
 ---
-title: Tareas y procedimientos modelos de minería de datos | Microsoft Docs
+title: Tareas y procedimientos del modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c2073e5-b40f-4bf8-aa51-021adb08e072
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee288cccb64535454a3ccfbbc271c4919c220c65
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083490"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521225"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tareas y procedimientos de los modelos de minería de datos
   Utilice la pestaña **Modelos de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para administrar y procesar los modelos en una estructura de minería de datos.  
@@ -37,7 +36,7 @@ ms.locfileid: "66083490"
   
 -   [Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
   
--   [Especificar una columna para usar como regresor en un modelo](specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [Especificar una columna para utilizar como regresor en un modelo](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)  
   
@@ -55,9 +54,9 @@ ms.locfileid: "66083490"
   
 -   [Crear una dimensión de minería de datos](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)   
- [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos de la estructura de minería de datos](mining-structure-tasks-and-how-tos.md)   
+ [Modelos de minería de datos &#40;Analysis Services&#41;de minería de datos](mining-models-analysis-services-data-mining.md)   
  [Conceptos de minería de datos](data-mining-concepts.md)  
   
   

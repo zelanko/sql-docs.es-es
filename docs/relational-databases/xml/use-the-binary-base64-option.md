@@ -1,7 +1,8 @@
 ---
 title: Usar la opción BINARY BASE64 | Microsoft Docs
+description: Obtenga información acerca de cómo usar la opción BINARY BASE64 en una consulta SQL para devolver datos binarios en el formato de codificación Base64.
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: eb192cdb9a7e9ffb43561b3b642f60144861c6df
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 03ada0a70977968914cd00c14c279921a0652a2c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738384"
 ---
 # <a name="use-the-binary-base64-option"></a>Usar la opción BINARY BASE64
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Si en la consulta se especifica la opción BINARY BASE64, los datos binarios se devuelven en formato de codificación en base64.
 

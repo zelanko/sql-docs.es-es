@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 19c0c15d-223f-45bd-a215-2867dfefecb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb131223c59586d30fdf4cfbee84f63c483959f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd09db3880b7e4294620f9e8f0476fc759d1a54a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984092"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923197"
 ---
 # <a name="getdatabaseproductversion-method-sqlserverdatabasemetadata"></a>Método getDatabaseProductVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.lang.String getDatabaseProductVersion()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getDatabaseProductVersion se especifica mediante el método getDatabaseProductVersion en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getDatabaseProductVersion especifica este método getDatabaseProductVersion en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

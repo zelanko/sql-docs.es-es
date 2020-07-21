@@ -1,5 +1,6 @@
 ---
 title: Creación de un informe móvil de Reporting Services | Microsoft Docs
+description: Con Publicador de informes móviles de Microsoft SQL Server, cree informes para dispositivos móviles de SQL Server Reporting Services para cualquier tamaño de pantalla con elementos de informe para dispositivos móviles flexibles.
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 08076ebf437841f5d60d957df934fc7de6406ded
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316459"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448218"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creación de un informe móvil de Reporting Services
 Con el Publicador de informes móviles de Microsoft SQL Server, puede crear informes móviles de SQL Server Reporting Services con un escalado adecuado hasta cualquier tamaño de pantalla en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles.  
@@ -60,11 +61,11 @@ La primera vez que crea un informe móvil, puede instalar el Publicador de infor
     
 10. Seleccione **Vista previa** en la parte superior izquierda para ver cómo se presenta el informe.  
   
-11. Es el momento de guardar el informe. Seleccione el icono Guardar situado en la parte superior izquierda y elija **Save Locally (Guardar localmente)** o **Save to Server (Guardarlo en el servidor)** .  
+11. Es el momento de guardar el informe. Seleccione el icono Guardar situado en la parte superior izquierda y elija **Save Locally (Guardar localmente)** o **Save to Server (Guardarlo en el servidor)**.  
   
    Para guardarlo en un servidor, necesita tener acceso a un servidor de informes de SQL Server Reporting Services.  
      
-   ### <a name="see-also"></a>Vea también  
+   ### <a name="see-also"></a>Consulte también  
      
 -   [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [Diseñar un informe de Reporting Services móvil para tableta o teléfono](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52c0129c18f3248813c663026797b86ea23d5b13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056899"
 ---
 # <a name="scripting-replication"></a>Crear script para la replicación
   Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script  contiene los procedimientos almacenados del sistema Transact-SQL necesarios para implementar los componentes de replicación a los que se refieren los scripts, como una publicación o una suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) o en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación.  
   
- Si se producen cambios en alguna propiedad, es necesario volver a generar el script de un componente. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para más información acerca de los procedimientos personalizados, vea [Specify How Changes Are Propagated for Transactional Articles](transactional/transactional-articles-specify-how-changes-are-propagated.md) (Especificar cómo se propagan los cambios para los artículos transaccionales).  
+ Si se producen cambios en alguna propiedad, es necesario volver a generar el script de un componente. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para obtener más información sobre los procedimientos personalizados, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  Para las publicaciones de combinación que utilizan filtros con parámetros, los scripts de publicación contienen las llamadas al procedimiento almacenado para crear particiones de datos. El script proporciona una referencia para las particiones creadas y una forma de volver a crear una o más divisiones en caso necesario.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "63250517"
   
 -   [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)  
   
--   [Create a Publication](publish/create-a-publication.md)  
+-   [Create a Publication](publish/create-a-publication.md) (Creación de una publicación)  
   
--   [Crear una suscripción de inserción](create-a-push-subscription.md)  
+-   [Create a Push Subscription](create-a-push-subscription.md) (Creación de una suscripción de inserción)  
   
 -   [Crear una suscripción de extracción](create-a-pull-subscription.md)  
   
@@ -82,7 +81,7 @@ ms.locfileid: "63250517"
   
 3.  Haga clic con el botón secundario en una publicación o suscripción y, a continuación, haga clic en **Generar scripts**.  
   
-4.  Especifique las opciones en el cuadro de diálogo **Generar script SQL - \<ReplicationObject>** .  
+4.  Especifique las opciones en el cuadro de diálogo **generar script \<ReplicationObject> SQL** .  
   
 5.  Haga clic en **Script a archivo**.  
   

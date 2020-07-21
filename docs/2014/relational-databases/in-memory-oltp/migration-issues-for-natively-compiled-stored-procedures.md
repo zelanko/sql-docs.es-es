@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc220bcdb899d18b8f439e6e0e1e4b6bdd56903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026054"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Problemas de migración para los procedimientos almacenados compilados de forma nativa
   En esta sección se presentan varios problemas relacionados con la creación de procedimientos almacenados compilados de forma nativa.  
@@ -34,7 +33,7 @@ ms.locfileid: "63015287"
   
 -   [Implementar el operador OR en procedimientos almacenados compilados de forma nativa](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

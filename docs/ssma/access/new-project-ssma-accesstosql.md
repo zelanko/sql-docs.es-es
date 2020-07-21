@@ -11,28 +11,28 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002452"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "79112296"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Nuevo proyecto (SSMA) (AccessToSQL)
-Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  
+Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA. Para tener acceso al cuadro de diálogo **nuevo proyecto** , en el menú **archivo** , haga clic en **nuevo proyecto**.  
   
 ## <a name="options"></a>Opciones  
-**Name**  
+**Nombre**  
   
 Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.  
   
 **Ubicación**  
   
-Escriba o busque la carpeta o ubicación de red para guardar el proyecto.  
+Escriba o busque la carpeta o la ubicación de red en la que desea guardar el proyecto.  
   
-**MigrateTo**  
+**Migrara**  
   
-Seleccione uno de la versión de la base de datos de destino desde abajo de la lista  
+Seleccione una de las siguientes versiones de la base de datos de destino.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -40,13 +40,13 @@ Seleccione uno de la versión de la base de datos de destino desde abajo de la l
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> Requiere de un nuevo proyecto de tipo "SQL Azure", SQL Server Native Client (SNAC) versión 10.5 o por encima vincular el acceso a tablas base de datos de SQL Azure.   
-> Puede obtener la última versión de SNAC desde [Microsoft® SQL Server® 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940).  
+> Un nuevo proyecto de tipo ' SQL Azure ' requiere, SQL Server Native Client (SNAC) versión 10,5 o posterior, para vincular las tablas de acceso a SQL Azure base de datos.   
+> Puede obtener la versión más reciente de SNAC del [Feature Pack de Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272).  
   

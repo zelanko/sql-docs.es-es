@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de la base de datos (Analysis Services - datos multidimensionales) restaurar | Microsoft Docs
+title: Cuadro de diálogo restaurar base de datos (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539167"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Restaurar base de datos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Restaurar base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para restaurar una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde un archivo de copia de seguridad con el formato de copia de seguridad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (.abf).  
@@ -41,8 +40,8 @@ ms.locfileid: "66070257"
  **Particiones**  
  Use esta página para restaurar las particiones locales en ubicaciones específicas y para restaurar particiones remotas desde archivos de copia de seguridad remotos. Para obtener más información sobre esta página, vea [Particiones &#40;cuadro de diálogo Restaurar base de datos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

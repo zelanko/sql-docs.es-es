@@ -37,15 +37,15 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027650"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999816"
 ---
 # <a name="search-condition-transact-sql"></a>Condiciones de búsqueda (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Es una combinación de uno o varios predicados que utilizan los operadores lógicos AND, OR y NOT.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68027650"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 <search_condition> ::=  
@@ -93,7 +93,7 @@ ms.locfileid: "68027650"
     edge_table_name | edge_table_alias
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 < search_condition > ::=   
@@ -115,7 +115,7 @@ ms.locfileid: "68027650"
  Especifica las condiciones de las filas devueltas en el conjunto de resultados de una instrucción SELECT, una expresión de consulta o una subconsulta. En una instrucción UPDATE, especifica las filas que se van a actualizar. En una instrucción DELETE, especifica las filas que se van a eliminar. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  \<graph_search_pattern>  
- Especifica el patrón de coincidencia del grafo. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ Especifica el patrón de coincidencia de gráficos. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
  
  NOT  
  Niega la expresión booleana que especifica el predicado. Para obtener más información, vea [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
@@ -189,18 +189,18 @@ ms.locfileid: "68027650"
  Especifica la búsqueda de una expresión, basada en si la expresión está incluida en una lista o excluida de ella. La expresión de búsqueda puede ser una constante o un nombre de columna, y la lista puede ser un conjunto de constantes o, más normalmente, una subconsulta. Encierre la lista de valores entre paréntesis. Para más información, vea [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Se puede considerar como una instrucción SELECT restringida y es similar a \<expresión_de_consulta> en la instrucción SELECT. No se permiten la cláusula ORDER BY ni la palabra clave INTO. Para obtener más información, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ Se puede considerar como una instrucción SELECT restringida y es similar a \<query_expression> en la instrucción SELECT. No se permiten la cláusula ORDER BY ni la palabra clave INTO. Para obtener más información, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
- Se utiliza con un operador de comparación y una subconsulta. Devuelve TRUE para \<predicate> si todos los valores obtenidos de la subconsulta satisfacen la operación de comparación, o FALSE si no todos los valores satisfacen la comparación o si la subconsulta no devuelve filas a la instrucción externa. Para obtener más información, vea [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
+ Se utiliza con un operador de comparación y una subconsulta. Devuelve TRUE para \<predicate> si todos los valores obtenidos de la subconsulta satisfacen la operación de comparación, o FALSE cuando no todos los valores satisfacen la comparación o si la subconsulta no devuelve filas a la instrucción externa. Para obtener más información, vea [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md).  
   
  { SOME | ANY }  
- Se utiliza con un operador de comparación y una subconsulta. Devuelve TRUE para \<predicate> si algún valor obtenido de la subconsulta satisface el operador de comparación, o FALSE si ningún valor de la subconsulta satisface la comparación o si la subconsulta no devuelve filas a la instrucción externa. En caso contrario, la expresión es UNKNOWN. Para obtener más información, vea [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Se utiliza con un operador de comparación y una subconsulta. Devuelve TRUE para \<predicate> si algún valor obtenido de la subconsulta satisface el operador de comparación, o FALSE cuando ningún valor de la subconsulta satisface la comparación o si la subconsulta no devuelve filas a la instrucción externa. En caso contrario, la expresión es UNKNOWN. Para obtener más información, vea [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
  EXISTS  
  Se utiliza con una subconsulta para probar la existencia de filas devueltas por la subconsulta. Para obtener más información, vea [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El orden de prioridad de los operadores lógicos es NOT (el más alto), seguido de AND y OR. Se pueden utilizar paréntesis para invalidar esta prioridad en una condición de búsqueda. El orden de evaluación de los operadores lógicos puede variar dependiendo de las opciones elegidas por el optimizador de consultas. Para obtener más información sobre el funcionamiento de los operadores lógicos en valores lógicos, vea [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) y [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
@@ -229,7 +229,7 @@ WHERE CountryRegionCode NOT IN ('US')
 AND City LIKE N'Pa%' ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-where-with-like"></a>C. Usar WHERE con LIKE  
  En el siguiente ejemplo se buscan filas en las que la columna `LastName` tenga los caracteres `and`.  

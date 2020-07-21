@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3c6df0bccb7af1d99df2bce82f4211de17f1356a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499583"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73593387"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas relacionales (Generador de informes)
-  El Generador de informes y el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de bases de datos relacionales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
+  El Generador de informes y el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proporcionan tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de bases de datos relacionales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)], además de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
   
 > [!NOTE]  
 >  En el Generador de informes, para especificar una consulta para los tipos de orígenes de datos Oracle, OLE DB, ODBC y Teradata, debe usarse el diseñador de consultas basado en texto. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
@@ -40,11 +40,11 @@ ms.locfileid: "66499583"
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con tablas o vistas.  
   
- ![Diseñador gráfico de consultas](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Diseñador gráfico de consultas")  
+ ![Diseñador gráfico para consultas](../../reporting-services/report-data/media/rsqd-relational-graphical.gif "Diseñador gráfico para consultas")  
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con funciones con valores de tabla o procedimientos almacenados.  
   
- ![Procedimiento almacenado en un diseñador gráfico de consultas](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Procedimiento almacenado en un diseñador gráfico de consultas")  
+ ![Procedimiento almacenado en el diseñador gráfico de consultas](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "Procedimiento almacenado en el diseñador gráfico de consultas")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66499583"
  [Resultados de la consulta](#QueryResults)  
  Muestra datos de ejemplo para el conjunto de resultados de la consulta generada automáticamente.  
   
-###  <a name="DatabaseView"></a> Panel Vista de base de datos  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Panel Vista de base de datos  
  El panel Vista de base de datos muestra los metadatos de los objetos de base de datos que el usuario tiene permiso para ver, que se determinan mediante la conexión a un origen de datos y las credenciales. La vista jerárquica muestra objetos de base de datos organizados por esquema de la base de datos. Expanda el nodo de cada esquema para ver las tablas, vistas, procedimientos almacenados y funciones con valores de tabla. Expanda una tabla o vista para ver las columnas.  
   
-###  <a name="SelectedFields"></a> Panel Campos seleccionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Panel Campos seleccionados  
  El panel Campos seleccionados muestra los campos en el conjunto de datos de informe y los grupos y agregados para incluir en la consulta.  
   
  Se muestran las siguientes opciones:  
@@ -87,9 +87,9 @@ ms.locfileid: "66499583"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
- Para más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../../t-sql/transact-sql-reference-database-engine.md) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para obtener más información sobre [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Referencia de Transact-SQL (motor de base de datos)](../../t-sql/transact-sql-reference-database-engine.md).  
   
  En la siguiente tabla se enumeran los agregados y se proporciona una breve descripción de los mismos.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66499583"
 |Max|Devuelve el valor máximo en un grupo. Implementa el agregado de SQL MAX.|  
 |StDev|Devuelve la desviación estadística estándar de todos los valores de un grupo. Implementa el agregado de SQL STDEV.|  
 |StDevP|Devuelve la desviación estadística estándar para la población de todos los valores de una expresión especificada de grupo. Implementa el agregado de SQL STDEVP.|  
-|SUM|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
+|Sum|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
 |Var|Devuelve la varianza estadística de todos los valores del grupo. Implementa el agregado de SQL VAR.|  
 |VarP|Devuelve la varianza estadística de la población de todos los valores del grupo. Implementa el agregado de SQL VARP.|  
 |Avg Distinct|Devuelve los promedios únicos. Implementa una combinación de la agregación AVG y la palabra clave DISTINCT.|  
@@ -114,14 +114,14 @@ ms.locfileid: "66499583"
 |Var Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VAR y la palabra clave DISTINCT.|  
 |VarP Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VARP y la palabra clave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Panel Parámetros de función  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Panel Parámetros de función  
  El panel Parámetros de función muestra los parámetros para un procedimiento almacenado o función con valores de tabla. Se muestran las siguientes columnas:  
   
 -   **Nombre de parámetro** : muestra el nombre del parámetro definido por el procedimiento almacenado o la función con valores de tabla.  
   
 -   **Valor** : valor que se usa para el parámetro cuando la consulta se ejecuta a fin de recuperar los datos que deben mostrarse en el panel Resultados de la consulta en tiempo de diseño. Este valor no se usa cuando el informe se ejecuta en el tiempo de ejecución.  
   
-###  <a name="Relationships"></a> Panel Relaciones  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Panel Relaciones  
  El panel Relaciones muestra las relaciones de la combinación. Las relaciones pueden detectarse automáticamente en las relaciones de clave externa que se recuperan a partir de los metadatos de base de datos, o bien puede crearlas usted mismo.  
   
  Se muestran las siguientes opciones:  
@@ -153,13 +153,13 @@ ms.locfileid: "66499583"
   
 -   **Tabla izquierda** : muestra el nombre de la primera tabla que forma parte de una relación de combinación.  
   
--   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha. Para obtener más información acerca de los tipos de combinaciones JOIN, vea el tema sobre aspectos básicos de las combinaciones en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com.  
+-   **Tipo de combinación** : muestra el tipo de instrucción JOIN de SQL que se usa en la consulta generada automáticamente. De forma predeterminada, si se detecta una restricción de clave externa, se utiliza INNER JOIN. Otros tipos de combinación pueden ser LEFT JOIN o RIGHT JOIN. Si no se aplica ninguno de estos tipos de combinación, la columna **Tipo de combinación** muestra **No relacionada**. No se crea ninguna combinación CROSS JOIN para las tablas no relacionadas; en su lugar, debe crear las relaciones manualmente combinando las columnas de las tablas izquierda y derecha.  
   
 -   **Tabla derecha** : muestra el nombre de la segunda tabla que forma parte de una relación de combinación.  
   
 -   **Campos de combinación** : muestra los pares de campos combinados; si una relación tiene varias condiciones de combinación, los pares de campos combinados están separados por comas (,).  
   
-###  <a name="AppliedFilters"></a> Panel Filtros aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Panel Filtros aplicados  
  El panel Filtros aplicados muestra los criterios que se usan para limitar el número de filas de datos que deben recuperarse en tiempo de ejecución. Los criterios especificados en este panel se usan para generar una cláusula WHERE de SQL. Al seleccionar la opción de parámetro, se crea automáticamente un parámetro de informe. Los parámetros de informe basados en los parámetros de consulta permiten a un usuario especificar valores para que la consulta controle los datos del informe.  
   
  Se muestran las siguientes columnas:  
@@ -172,7 +172,7 @@ ms.locfileid: "66499583"
   
 -   **Parámetro** : muestra la opción de agregar un parámetro de consulta a la consulta. Use las propiedades del conjunto de datos para ver la relación que existe entre el parámetro de consulta y el parámetro de informe.  
   
-###  <a name="QueryResults"></a> Panel Resultados de la consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Panel Resultados de la consulta  
  El panel Resultados de la consulta muestra los resultados de la consulta generada automáticamente que se especifica mediante selecciones en los otros paneles. Las columnas del conjunto de resultados son los campos que se especifican en el panel Campos seleccionados y los datos de fila quedan limitados por los filtros especificados en el panel Filtros aplicados. Si la consulta incluye agrega el conjunto de resultados incluye las nuevas columnas agregadas. Por ejemplo, si la columna **Color** se agrega utilizando el agregado Count, los resultados de la consulta incluyen una nueva columna. De forma predeterminada, esta columna se denomina **Count_Color**.  
   
  Estos datos representan los valores del origen de datos en el momento de ejecución de la consulta. Los datos no se guardan en la definición de informe. Los datos reales del informe se recuperar al procesar el informe.  

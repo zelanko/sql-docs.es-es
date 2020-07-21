@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 79765f589dcc649bdb2d12bd9dda0d4c955ae916
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883931"
 ---
 # <a name="relational-query-designer-ssas"></a>Diseñador de consultas relacionales (SSAS)
-  El diseñador de consultas relacionales le ayuda a crear una consulta que especifica los datos que hay que recuperar de las bases de datos relacionales de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] y del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use el diseñador gráfico de consultas para explorar los metadatos, crear la consulta de forma interactiva y ver los resultados de la misma.  Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
+  El diseñador de consultas relacionales le ayuda a crear una consulta que especifica los datos que se van a recuperar de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] las bases de datos relacionales y y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . Use el diseñador gráfico de consultas para explorar los metadatos, crear la consulta de forma interactiva y ver los resultados de la misma.  Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
   
  Si lo prefiere, puede escribir la consulta en lenguaje SQL utilizando el editor basado en texto. Para cambiar al diseñador de consultas basado en texto, en la barra de herramientas, haga clic en **Editar como texto**. Una vez que haya modificado una consulta en el diseñador de consultas basado en texto, ya no podrá usar el diseñador gráfico de consultas.  
   
@@ -42,11 +41,11 @@ ms.locfileid: "72251217"
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con tablas o vistas.  
   
- ![Diseñador gráfico de consultas](media/rsqd-relational-graphical.gif "Diseñador gráfico de consultas")  
+ ![Diseñador gráfico para consultas](media/rsqd-relational-graphical.gif "Diseñador gráfico para consultas")  
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con funciones con valores de tabla o procedimientos almacenados.  
   
- ![Procedimiento almacenado en un diseñador gráfico de consultas](media/rs-relational-graphical-sp.gif "Procedimiento almacenado en un diseñador gráfico de consultas")  
+ ![Procedimiento almacenado en el diseñador gráfico de consultas](media/rs-relational-graphical-sp.gif "Procedimiento almacenado en el diseñador gráfico de consultas")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -59,15 +58,15 @@ ms.locfileid: "72251217"
 |[Filtros aplicados.](#AppliedFilters)|Muestra una lista de campos y criterios de filtro para tablas o vistas en la Vista de base de datos.|  
 |[Resultados de la consulta](#QueryResults)|Muestra datos de ejemplo para el conjunto de resultados de la consulta generada automáticamente.|  
   
-###  <a name="DatabaseView"></a> Panel Vista de base de datos  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Panel Vista de base de datos  
  El panel Vista de base de datos muestra los metadatos de los objetos de base de datos que el usuario tiene permiso para ver, que se determinan mediante la conexión a un origen de datos y las credenciales. La vista jerárquica muestra objetos de base de datos organizados por esquema de la base de datos. Expanda el nodo de cada esquema para ver las tablas, vistas, procedimientos almacenados y funciones con valores de tabla. Expanda una tabla o vista para ver las columnas.  
   
-###  <a name="SelectedFields"></a> Panel Campos seleccionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Panel Campos seleccionados  
  El panel Campos seleccionados muestra los campos en el conjunto de datos y los grupos y agregados para incluir en la consulta.  
   
  Se muestran las siguientes opciones:  
   
--   **Campos seleccionados**: muestra los campos de base de datos seleccionados para tablas o vistas, o los parámetros de entrada para procedimientos almacenados o funciones con valores de tabla. Los campos que se muestran en este panel se convierten en la colección de campos para el conjunto de datos.  
+-   **Campos seleccionados** : muestra los campos de base de datos seleccionados para tablas o vistas, o los parámetros de entrada para procedimientos almacenados o funciones con valores de tabla. Los campos que se muestran en este panel se convierten en la colección de campos para el conjunto de datos.  
   
      Utilice el panel Datos de informe para mostrar la colección de campos para un conjunto de datos.  
   
@@ -80,9 +79,9 @@ ms.locfileid: "72251217"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)] . Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
- Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de  en msdn.microsoft.com.  
   
  En la siguiente tabla se enumeran los agregados y se proporciona una breve descripción de los mismos.  
   
@@ -107,14 +106,14 @@ ms.locfileid: "72251217"
 |Var Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VAR y la palabra clave DISTINCT.|  
 |VarP Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VARP y la palabra clave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Panel Parámetros de función  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Panel Parámetros de función  
  El panel Parámetros de función muestra los parámetros para un procedimiento almacenado o función con valores de tabla. Se muestran las siguientes columnas:  
   
--   **Nombre de parámetro**: muestra el nombre del parámetro definido por el procedimiento almacenado o la función con valores de tabla.  
+-   **Nombre de parámetro** : muestra el nombre del parámetro definido por el procedimiento almacenado o la función con valores de tabla.  
   
 -   **Valor** : valor que se usa para el parámetro cuando la consulta se ejecuta a fin de recuperar los datos que deben mostrarse en el panel Resultados de la consulta en tiempo de diseño. Este valor no se usa en tiempo de ejecución.  
   
-###  <a name="Relationships"></a> Panel Relaciones  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Panel Relaciones  
  El panel Relaciones muestra las relaciones de la combinación. Las relaciones pueden detectarse automáticamente en las relaciones de clave externa que se recuperan a partir de los metadatos de base de datos, o bien puede crearlas usted mismo.  
   
  Se muestran las siguientes opciones:  
@@ -152,7 +151,7 @@ ms.locfileid: "72251217"
   
 -   **Campos de combinación** : muestra los pares de campos combinados; si una relación tiene varias condiciones de combinación, los pares de campos combinados están separados por comas (,).  
   
-###  <a name="AppliedFilters"></a> Panel Filtros aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Panel Filtros aplicados  
  El panel Filtros aplicados muestra los criterios que se usan para limitar el número de filas de datos que deben recuperarse en tiempo de ejecución. Los criterios especificados en este panel se usan para generar una cláusula WHERE de SQL. Al seleccionar la opción de parámetro, se crea automáticamente un parámetro.  
   
  Se muestran las siguientes columnas:  
@@ -165,7 +164,7 @@ ms.locfileid: "72251217"
   
 -   **Parámetro** : muestra la opción de agregar un parámetro de consulta a la consulta.  
   
-###  <a name="QueryResults"></a> Panel Resultados de la consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Panel Resultados de la consulta  
  El panel Resultados de la consulta muestra los resultados de la consulta generada automáticamente que se especifica mediante selecciones en los otros paneles. Las columnas del conjunto de resultados son los campos que se especifican en el panel Campos seleccionados y los datos de fila quedan limitados por los filtros especificados en el panel Filtros aplicados.  
   
  Estos datos representan los valores del origen de datos en el momento de ejecución de la consulta.  
@@ -220,7 +219,7 @@ ms.locfileid: "72251217"
 #### <a name="example"></a>Ejemplo  
  La siguiente consulta devuelve la lista de nombres de una tabla denominada `ContactType`.  
   
-```  
+```sql  
 SELECT Name FROM ContactType  
 ```  
   
@@ -243,16 +242,16 @@ SELECT Name FROM ContactType
 #### <a name="example"></a>Ejemplo  
  La consulta siguiente llama a un procedimiento almacenado denominado `uspGetWhereUsedProductID`. Cuando el procedimiento almacenado tenga parámetros de entrada, al ejecutar la consulta debe proporcionar los valores de los parámetros.  
   
-```  
+```sql  
 uspGetWhereUsedProductID  
 ```  
   
- Haga clic en el botón **Ejecutar** ( **!** ). En la tabla siguiente se proporciona un ejemplo de parámetros `uspGetWhereUsedProductID` para los que se proporcionan valores en el cuadro de diálogo **definir parámetro de consulta** .  
+ Haga clic en el botón **Ejecutar** (**!**). En la tabla siguiente se proporciona un ejemplo de `uspGetWhereUsedProductID` parámetros para los que se proporcionan valores en el cuadro de diálogo **definir parámetro de consulta** .  
   
 |||  
 |-|-|  
-|*@no__t 1StartProductID*|820|  
-|*@no__t 1CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>Tipo de comando TableDirect  
  Si selecciona **Tipo de comando TableDirect**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Si selecciona una tabla y hace clic en el botón **Ejecutar** , se devolverán todas las columnas de dicha tabla.  

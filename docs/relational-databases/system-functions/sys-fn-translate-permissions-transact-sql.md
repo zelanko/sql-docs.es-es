@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_translate_permissions (Transact-SQL) | Microsoft Docs
+title: Sys. fn_translate_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aec909b59a6e174269a14a330ad839d3e3ff4faa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055372"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898257"
 ---
-# <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Traduce la máscara de bits de permisos devuelta por Seguimiento de SQL a una tabla de nombres de permisos.  
   
@@ -43,23 +43,23 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *level*  
- El tipo de elemento protegible al que se aplica el permiso. *nivel* es **nvarchar (60)** .  
+ *Nivel*  
+ El tipo de elemento protegible al que se aplica el permiso. *LEVEL* es de tipo **nvarchar (60)**.  
   
  *perms*  
- Es una máscara de bits que se devuelve en la columna de permisos. *Perms* es **varbinary (16)** .  
+ Es una máscara de bits que se devuelve en la columna de permisos. *perms* es **varbinary (16)**.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  **table**  
   
 ## <a name="remarks"></a>Comentarios  
- El valor devuelto en el **permisos** columna de un seguimiento de SQL es una representación de entero de una máscara de bits utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular los permisos efectivos. Cada una de las 25 clases de elementos protegibles tiene su propio conjunto de permisos con sus valores numéricos correspondientes. **Sys.fn_translate_permissions** traduce esta máscara de bits en una tabla de nombres de permisos.  
+ El valor devuelto en la columna **Permissions** de un seguimiento de SQL es una representación de entero de una máscara de máscara utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para calcular los permisos efectivos. Cada una de las 25 clases de elementos protegibles tiene su propio conjunto de permisos con sus valores numéricos correspondientes. **Sys. fn_translate_permissions** traduce esta máscara de máscara en una tabla de nombres de permisos.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="example"></a>Ejemplo  
- La consulta siguiente utiliza `sys.fn_builtin_permissions` para mostrar los permisos que se aplican a los certificados y, a continuación, usa `sys.fn_translate_permissions` para devolver los resultados de la máscara de bits de permisos.  
+ En la siguiente consulta `sys.fn_builtin_permissions` se usa para mostrar los permisos que se aplican a los certificados y, a continuación, `sys.fn_translate_permissions` se usa para devolver los resultados de la máscara de vídeo de permisos.  
   
 ```  
 SELECT * FROM sys.fn_builtin_permissions('CERTIFICATE');  
@@ -68,9 +68,9 @@ SELECT '0010' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0010)
 SELECT '0011' AS Input, * FROM sys.fn_translate_permissions('CERTIFICATE', 0011);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Permisos &#40;Motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Sys. server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
   

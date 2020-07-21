@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ded0a1ea68f150d1e2f55e4d032394203d0ad5e4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059764"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896593"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información sobre la configuración de la directiva de inicio de sesión.  
   
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  Es una expresión que contiene la información de propiedad que se va a devolver para el inicio de sesión. *propertyname* puede ser uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Devuelve el número de intentos consecutivos de inicio de sesión con una contraseña incorrecta.|  
 |**BadPasswordTime**|Devuelve la hora del último intento de inicio de sesión con una contraseña incorrecta.|  
@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL si el inicio de sesión no es un inicio de sesión de SQL Server válido.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta función integrada devuelve información sobre la configuración de la directiva de contraseñas de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los nombres de las propiedades no distinguen mayúsculas de minúsculas, por lo que nombres de propiedades como **BadPasswordCount** y **badpasswordcount** son equivalentes. Los valores de las propiedades **PasswordHash, PasswordHashAlgorithm** y **PasswordLastSetTime** están disponibles en todas las configuraciones compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero las demás propiedades solo están disponibles cuando se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] y tanto CHECK_POLICY como CHECK_EXPIRATION están habilitadas. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Permisos  

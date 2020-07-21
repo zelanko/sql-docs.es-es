@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5888cb9666488ced6f9e112d21c48d0265f5c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922835"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749997"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configuración de servidores virtuales en IIS
-Al crear servidores virtuales en servicios de Internet Information Server 4.0, los dos pasos adicionales siguientes son necesarios para configurar el servidor virtual para que funcione con RDS:  
+Al crear servidores virtuales en Internet Information Services 4,0, se necesitan los dos pasos adicionales siguientes para configurar el servidor virtual para que funcione con RDS:  
   
-1.  Al configurar el servidor, consulte "Permitir el acceso Execute".  
+1.  Al configurar el servidor, Active "permitir acceso de ejecución".  
   
-2.  Mueva msadcs.dll a *vroot*\msadc, donde *vroot* es el directorio principal del servidor virtual.  
+2.  Mueva msadcs. dll a *vroot*\msadc, donde *vroot* es el directorio principal del servidor virtual.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

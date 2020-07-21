@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098482"
 ---
-# <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Genera un script SQL que se puede usar para conceder derechos a un usuario sobre la base de datos del servidor de informes y otras bases de datos necesarias para el funcionamiento de un servidor de informes. Se espera que el autor de la llamada se conecte al servidor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecute el script.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -64,14 +64,14 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si *DatabaseName* está vacío, *IsRemote* se omite y el valor del archivo de configuración del servidor de informes se usa para el nombre de base de datos.  
   
- Si *IsWindowsUser* está establecido en `true`, *UserName* debe tener el formato \<dominio >\\< nombre de usuario\>.  
+ Si *IsWindowsUser* se establece en `true`, *el nombre de usuario* debe tener \<el formato \\ dominio>\><nombre de usuario.  
   
- Cuando *IsWindowsUser* está establecido en `true`, el script generado concede derechos de inicio de sesión al usuario para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], establecer la base de datos del servidor de informes como la base de datos predeterminada y concede el **RSExec** rol en la base de datos del servidor de informes, la base de datos temporal del servidor informes, la base de datos maestra y la base de datos del sistema MSDB.  
+ Cuando *IsWindowsUser* se establece en `true`, el script generado concede derechos de inicio de sesión al usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para, estableciendo la base de datos del servidor de informes como la base de datos predeterminada, y concede el rol **RSExec** en la base de datos del servidor de informes, la base de datos temporal del servidor de informes, la base de datos maestra y la base de datos del sistema msdb.  
   
- Cuando *IsWindowsUser* está establecido en `true`, el método acepta los SID de Windows estándar como entrada. Cuando se proporciona un SID de Windows estándar o el nombre de la cuenta de servicio, se traduce a una cadena de nombre de usuario. Si la base de datos es local, la cuenta se traduce a la representación localizada correcta de la cuenta. Si la base de datos es remota, la cuenta se representa como la cuenta del equipo.  
+ Cuando *IsWindowsUser* se establece en `true`, el método acepta los SID de Windows estándar como entrada. Cuando se proporciona un SID de Windows estándar o el nombre de la cuenta de servicio, se traduce a una cadena de nombre de usuario. Si la base de datos es local, la cuenta se traduce a la representación localizada correcta de la cuenta. Si la base de datos es remota, la cuenta se representa como la cuenta del equipo.  
   
  En la tabla siguiente, se muestran las cuentas que están traducidas y su representación remota.  
   
@@ -102,11 +102,11 @@ out Int32 HRESULT);
 |\<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
- Cuando *IsWindowsUser* está establecido en `true`, el proveedor WMI llama a LookupAccountName para obtener el SID de la cuenta y, a continuación, llama a LookupAccountSID para obtener el nombre e insertarlo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] secuencia de comandos. Esto asegura que el nombre de la cuenta que se utiliza pasará la validación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Cuando *IsWindowsUser* se establece en `true`, el proveedor WMI llama a LOOKUPACCOUNTNAME para obtener el SID de la cuenta y, a continuación, llama a LookupAccountSID para obtener el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre que se va a colocar en el script. Esto asegura que el nombre de la cuenta que se utiliza pasará la validación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Cuando *IsWindowsUser* está establecido en `false`, el script generado concede el **RSExec** rol en la base de datos del servidor de informes, la base de datos temporal del servidor informes y la base de datos MSDB.  
+ Cuando *IsWindowsUser* se establece en `false`, el script generado concede el rol **RSExec** en la base de datos del servidor de informes, la base de datos temporal del servidor de informes y la base de datos msdb.  
   
- Cuando *IsWindowsUser* está establecido en `false`, el usuario de SQL Server ya debe existir en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el script se ejecute correctamente.  
+ Cuando *IsWindowsUser* se establece en `false`, el usuario SQL Server debe existir en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que el script se ejecute correctamente.  
   
  Si el servidor de informes no cuenta con una base de datos del servidor de informes especificada, al llamar a GrantRightsToDatabaseUser se devuelve un error.  
   
@@ -115,7 +115,7 @@ out Int32 HRESULT);
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

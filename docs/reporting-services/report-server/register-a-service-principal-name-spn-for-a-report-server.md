@@ -1,6 +1,6 @@
 ---
 title: Registrar un nombre de entidad de seguridad de servicio (SPN) para un servidor de informes | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500233"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77256428"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
   Si está implementando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una red que usa el protocolo Kerberos para la autenticación mutua, debe crear un nombre principal de servicio (SPN) para el servicio Servidor de informes si lo configura para que se ejecute como una cuenta de usuario de dominio.  
@@ -21,19 +21,20 @@ ms.locfileid: "66500233"
 ## <a name="about-spns"></a>Acerca de los nombres principales de servicio  
  Un SPN es un identificador único para un servicio en una red que utiliza la autenticación Kerberos. Está compuesto de una clase de servicio, un nombre de host y, en ocasiones, un puerto. Los SPN de HTTP no requieren un puerto. En una red que utiliza la autenticación Kerberos, un SPN para el servidor se debe registrar en una cuenta de equipo integrada (como NetworkService o LocalSystem) o en una cuenta de usuario. Los SPN se registran automáticamente para las cuentas integradas. Sin embargo, al ejecutar un servicio en una cuenta de usuario de dominio, debe registrar manualmente el SPN para la cuenta que desea utilizar.  
   
- Para crear un SPN, puede emplear la utilidad de línea de comandos **SetSPN** . Para obtener más información, vea:  
+ Para crear un SPN, puede emplear la utilidad de línea de comandos **SetSPN** . Para obtener más información, vea lo siguiente:  
   
--   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
+-   [Setspn](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) (https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)).  
   
 -   [Sintaxis de nombres SetSPN de los nombres de entidad de servicio (SPN) (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Debe ser administrador de dominio si desea ejecutar la utilidad en el controlador de dominio.  
   
 ## <a name="syntax"></a>Sintaxis  
- La sintaxis de comandos para utilizar la utilidad SetSPN con el fin de crear un SPN para el servidor de informes es similar a la siguiente:  
+
+Al manipular los SPN con setspn, el SPN se debe escribir en el formato correcto. El formato de un SPN es `<serviceclass>/host:<por>`. La sintaxis de comandos para utilizar la utilidad SetSPN con el fin de crear un SPN para el servidor de informes es similar a la siguiente:  
   
 ```  
-Setspn -s http/<computername>.<domainname> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
 ```  
   
  **SetSPN** está disponible con Windows Server. El argumento **-s** agrega un SPN después de validar que no existe ningún duplicado. **NOTA: -s** está disponible en Windows Server a partir de Windows Server 2008.  
@@ -44,7 +45,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Registrar un nombre principal de servicio para la cuenta de usuario de dominio  
   
-#### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>Para registrar un SPN para un servicio Servidor de informes que se ejecute como un usuario de dominio  
+### <a name="to-register-an-spn-for-a-report-server-service-running-as-a-domain-user"></a>Para registrar un SPN para un servicio Servidor de informes que se ejecute como un usuario de dominio  
   
 1.  Instale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y configure el servicio Servidor de informes para ejecutarse como una cuenta de usuario de dominio. Observe que los usuarios no podrán conectarse al servidor de informes hasta que complete los pasos siguientes.  
   
@@ -55,10 +56,10 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 4.  Copie el comando siguiente, reemplazando los valores de los marcadores de posición con valores reales que sean válidos para su red:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
     ```  
   
-     Por ejemplo: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
+    Por ejemplo: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
   
 5.  Ejecute el comando.  
   

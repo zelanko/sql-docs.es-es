@@ -1,5 +1,5 @@
 ---
-title: Configuración (conversión) (MySQLToSQL) del proyecto | Microsoft Docs
+title: Configuración del proyecto (conversión) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,106 +10,106 @@ ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908869"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configuración del proyecto (conversión) (MySQLToSQL)
-La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de MySQL a la sintaxis de SQL Server o SQL Azure.  
+La página conversión del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan cómo SSMA convierte la sintaxis de MySQL en SQL Server o SQL Azure sintaxis.  
   
-El panel de conversión está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+El panel conversión está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** .  
   
--   Use la **configuración de proyecto predeterminada** cuadro de diálogo para establecer las opciones de configuración para todos los proyectos. Para obtener acceso a la configuración de conversión, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para los que es necesaria para ver o cambiar de configuración  **Versión de destino de migración** lista desplegable, haga clic en **General** en la parte inferior del panel izquierdo y a continuación, seleccione **conversión**.  
+-   Utilice el cuadro de diálogo **configuración predeterminada del proyecto** para establecer las opciones de configuración de todos los proyectos. Para obtener acceso a la configuración de conversión, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que se deben ver los valores de/Changed en la lista desplegable de la **versión de destino** de la migración, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **conversión**.  
   
--   Para especificar la configuración para el proyecto actual, en el **herramientas** menú haga clic en **configuración del proyecto**, a continuación, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **Conversión**.  
+-   Para especificar la configuración del proyecto actual, en el menú **herramientas** , haga clic en **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **conversión**.  
   
 ## <a name="options"></a>Opciones  
   
-### <a name="collate-clause"></a>Cláusula de intercalación  
+### <a name="collate-clause"></a>Cláusula COLLATE  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Conversión explícita de cláusula COLLATE**|Opción de conversión de cláusula COLLATE explícita especifica cómo convertir las cláusulas COLLATE explícitas en el código de MySQL. Opciones posibles: Omitir y marcar con una advertencia o generar un Error<br /><br />**Modo predeterminado**:  Omitir y se marca con una advertencia<br /><br />**Modo optimista**:  Omitir y se marca con una advertencia<br /><br />**Modo completo**:  Omitir y se marca con una advertencia|  
+|**Conversión de la cláusula de intercalación explícita**|La opción de conversión de la cláusula de intercalación explícita especifica cómo convertir cláusulas de intercalación explícitas en el código de MySQL. Posibles opciones: omitir y marcar con una advertencia/generar un error<br /><br />**Modo predeterminado**: omitir y marcar con una advertencia<br /><br />**Modo optimista**: omitir y marcar con una advertencia<br /><br />**Modo completo**: omitir y marcar con una advertencia|  
   
 ### <a name="column-constraints"></a>Restricciones de columna  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Generar la restricción de las columnas de tipo de datos de enumeración**|Genera la restricción de las columnas de tipo de datos de enumeración en la tabla de SQL Server o SQL Azure, si no está presente en la tabla de MySQL. En caso afirmativo, todas las columnas convertidas de tipo de datos de enumeración irá acompañadas de controlar el valor de restricción de comprobación.<br /><br />**Modo predeterminado**:   Sin<br /><br />**Modo optimista**:  No<br /><br />**Modo completo**:   Sí|  
-|**Generar la restricción de las columnas de tipo de conjunto de datos**|Genera la restricción de las columnas de tipo de conjunto de datos en la tabla de SQL Server o SQL Azure, si no está presente en la tabla de MySQL. En caso afirmativo, todas las columnas convertidas de tipo de conjunto de datos irá acompañadas de controlar el valor de restricción de comprobación.<br /><br />**Modo predeterminado**:   No<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:   Sí|  
-|**Generar la restricción de las columnas de las columnas de tipo de datos numérico sin signo**|Agregar comprobación para un valor no negativo a las columnas de tipos de datos numérico sin signo.<br /><br />**Modo predeterminado**:   Sin<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:   Sí|  
-|**Generar la restricción de las columnas de tipo de datos de año**|Genera la restricción de las columnas de tipo de datos de año en la tabla de SQL Server o SQL Azure, si no está presente en la tabla de MySQL. En caso afirmativo, se han convertido las columnas de datos del año tipo irá acompañado de controlar el valor de restricción de comprobación.<br /><br />**Modo predeterminado**:   Sin<br /><br />**Modo optimista**:  No<br /><br />**Modo completo**:   Sí|  
+|**Generar restricción para columnas de tipo de datos ENUM**|Genera una restricción para las columnas de tipo de datos ENUM en el SQL Server o SQL Azure tabla, si no está presente en la tabla MySQL. En caso afirmativo, todas las columnas convertidas de tipo de datos ENUM irán acompañadas de la restricción CHECK que controla el valor.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
+|**Generar restricción para columnas de tipo de datos SET**|Genera una restricción para las columnas de tipo de datos SET en el SQL Server o SQL Azure tabla, si no está presente en la tabla MySQL. En caso afirmativo, todas las columnas convertidas de tipo de datos SET irán acompañadas de la restricción CHECK que controla el valor.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
+|**Generar restricción para columnas de columnas de tipos de datos numéricos sin signo**|Agregue una comprobación de valor no negativo a las columnas de tipos de datos numéricos sin signo.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
+|**Generar restricción para columnas de tipo de datos YEAR**|Genera una restricción para las columnas de tipo de datos YEAR en el SQL Server o SQL Azure tabla, si no está presente en la tabla MySQL. En caso afirmativo, todas las columnas convertidas del tipo de datos YEAR irán acompañadas de la restricción CHECK que controla el valor.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
   
 ### <a name="data-types"></a>Tipos de datos  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Conversión de tipos de datos de enumeración**|Especifica cómo se debe convertir tipo de datos MySQL ENUM como convertir a NVARCHAR o convertir a numérico<br /><br />**Modo predeterminado**:  Convertir a NVARCHAR<br /><br />**Modo optimista**:  Convertir a NVARCHAR<br /><br />**Modo completo**:  Convertir a NVARCHAR|  
-|**Conversión de tipos de conjunto de datos**|Especifica cómo MySQL establecer tipo de datos debe convertir, convertir a NVARCHAR (L) / convertir en BINARY(L)<br /><br />**Modo predeterminado**: Convertir en NVARCHAR(L)<br /><br />**Modo optimista**: Convertir en NVARCHAR(L)<br /><br />**Modo completo**: Convertir en NVARCHAR(L)|  
+|**Conversión de tipos de datos de ENUMERAción**|Especifica cómo se debe convertir el tipo de datos de ENUMERAción de MySQL como convertir en NVARCHAR o convertir en numérico.<br /><br />**Modo predeterminado**: convertir a nvarchar<br /><br />**Modo optimista**: convertir a nvarchar<br /><br />**Modo completo**: convertir a nvarchar|  
+|**ESTABLECER conversión de tipos de datos**|Especifica cómo se debe convertir el tipo de datos SET de MySQL, convertir a NVARCHAR (L)/Convert en BINARIo (L)<br /><br />**Modo predeterminado**: convertir a nvarchar (L)<br /><br />**Modo optimista**: convertir a nvarchar (L)<br /><br />**Modo completo**: convertir a nvarchar (L)|  
   
 ### <a name="generic"></a>Genérico  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Columnas sin valor predeterminado de insertar y reemplazar**|Si todas las instrucciones que hacen referencia a tablas mediante motores almacenados que no sean MyISAM y InnoDb, 'Sí' debe marcarse con mensajes de advertencia de conversión.<br /><br />**Modo predeterminado**:  Agregar a lista de columnas<br /><br />**Modo optimista**:  Agregar a lista de columnas<br /><br />**Modo completo**:   Agregar a lista de columnas|  
-|**División por cero conversión genera**|Especifica si desea emular MySQL sin comportamiento ERROR_FOR_DIVISION_BY_ZERO o no.<br /><br />**Modo predeterminado**:   Error<br /><br />**Modo optimista**:  Error<br /><br />**Modo completo**:   NULL|  
-|**IN (operador)**|Especifica cómo convertir el operador IN de MySQL.<br /><br />**Modo predeterminado**:   Convertir siempre a IN<br /><br />**Modo optimista**:  Convertir siempre a IN<br /><br />**Modo completo**:   Expanda si es necesario|  
-|**Conversión de la función de MySQL**|Especifica cómo convertir las funciones estándares de MySQL.<br /><br />**Modo predeterminado**:   Optimistic<br /><br />**Modo optimista**:  Optimistic<br /><br />**Modo completo**:   Preciso|  
-|**No se admiten los motores de almacenamiento**|Si todas las instrucciones que hacen referencia a tablas mediante motores almacenados que no sean MyISAM y InnoDb, 'Sí' debe marcarse con mensajes de advertencia de conversión.<br /><br />**Modo predeterminado**:   Sin<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:   Sí|  
-|**Suprimir la generación de una columna auxiliar ROWID**|En caso afirmativo, prohíbe la creación de la creación de una columna auxiliar ROWD en tablas de destino. Es posible que afectan a la migración de algunas estructuras.<br /><br />**Modo predeterminado**:   No<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:   Sin|  
-|**Conversión de la instrucción TRUNCATE**|Especifica cómo convertir instrucciones TRUNCADAS.<br /><br />**Modo predeterminado**:   TRUNCATE<br /><br />**Modo optimista**:  TRUNCATE<br /><br />**Modo completo**:   TRUNCATE|  
+|**Columnas sin valor predeterminado en INSERT y Replace**|Si es "Yes", todas las instrucciones que hacen referencia a tablas que usan motores almacenados distintos de MyISAM y InnoDb deben marcarse con mensajes de conversión de advertencia.<br /><br />**Modo predeterminado**: agregar a lista de columnas<br /><br />**Modo optimista**: agregar a lista de columnas<br /><br />**Modo completo**: agregar a lista de columnas|  
+|**La conversión de división por cero produce**|Especifica si se emula MySQL sin ERROR_FOR_DIVISION_BY_ZERO comportamiento.<br /><br />**Modo predeterminado**: error<br /><br />**Modo optimista**: error<br /><br />**Modo completo**: null|  
+|**IN (operador)**|Especifica cómo convertir MySQL en el operador.<br /><br />**Modo predeterminado**: convertir siempre en en<br /><br />**Modo optimista**: convertir siempre en en<br /><br />**Modo completo**: expandir si es necesario|  
+|**Conversión de funciones de MySQL**|Especifica cómo convertir las funciones estándar de MySQL.<br /><br />**Modo predeterminado**: optimista<br /><br />**Modo optimista**: optimista<br /><br />**Modo completo**: preciso|  
+|**Motores de almacenamiento no admitidos**|Si es "Yes", todas las instrucciones que hacen referencia a tablas que usan motores almacenados distintos de MyISAM y InnoDb deben marcarse con mensajes de conversión de advertencia.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
+|**Suprimir la generación de columna auxiliar ROWID**|En caso afirmativo, prohíbe la creación de la creación de la columna auxiliar ROWD en las tablas de destino. Puede afectar a la migración de algunas estructuras.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: no|  
+|**TRUNCAte (conversión de instrucción)**|Especifica cómo convertir instrucciones TRUNCAte.<br /><br />**Modo predeterminado**: TRUNCATE<br /><br />**Modo optimista**: TRUNCATE<br /><br />**Modo completo**: TRUNCATE|  
   
 ### <a name="misc"></a>Varios  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Asignación de esquema predeterminada**|Especifica cómo asignar las bases de datos MySQL a esquemas de SQL Server.<br /><br />**Modo predeterminado**:  Base de datos a la base de datos<br /><br />**Modo optimista**:  Base de datos a la base de datos<br /><br />**Modo completo**:  Base de datos a la base de datos|  
+|**Asignación de esquemas predeterminada**|Especifica cómo asignar las bases de datos MySQL a esquemas de SQL Server.<br /><br />**Modo predeterminado**: base de datos en base de datos<br /><br />**Modo optimista**: base de datos en base de datos<br /><br />**Modo completo**: base de datos en base de datos|  
   
 ### <a name="procedures-and-functions"></a>Procedimientos y funciones  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Conversión de función predeterminada**|Especifica si las funciones se de forma predeterminada se deben convertir a las funciones de Transact-SQL o procedimientos almacenados.<br /><br />**Modo predeterminado**:  Convertir a función<br /><br />**Modo optimista**:  Convertir a función<br /><br />**Modo completo**:  Convertir a función|  
-|**Generar conjunto XACT_ABORT en**|Especifica si debe agregarse al principio del desencadenador o procedimiento convertido SET XACT_ABORT ON.<br /><br />**Modo predeterminado**:  Sí<br /><br />**Modo optimista**:  Sí<br /><br />**Modo completo**:  Sí|  
-|**Generar SET NOCOUNT en**|Especifica si debe agregarse al principio del desencadenador o procedimiento convertido SET NOCOUNT ON.<br /><br />**Modo predeterminado**:  Sí<br /><br />**Modo optimista**:  Sí<br /><br />**Modo completo**:  Sí|  
+|**Conversión de función predeterminada**|Especifica si las funciones deben convertirse de forma predeterminada en funciones de T-SQL o en procedimientos almacenados.<br /><br />**Modo predeterminado**: convertir a función<br /><br />**Modo optimista**: convertir a función<br /><br />**Modo completo**: convertir a función|  
+|**Generar XACT_ABORT SET activado**|Especifica si se debe agregar o no XACT_ABORT del conjunto al principio del procedimiento o desencadenador convertido.<br /><br />**Modo predeterminado**: sí<br /><br />**Modo optimista**: sí<br /><br />**Modo completo**: sí|  
+|**Generar SET NOCOUNT ON**|Especifica si se debe agregar o no SET NOCOUNT ON al principio del procedimiento o desencadenador convertido.<br /><br />**Modo predeterminado**: sí<br /><br />**Modo optimista**: sí<br /><br />**Modo completo**: sí|  
   
 ### <a name="spatial-data-types"></a>Tipos de datos espaciales  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Rectángulo del predeterminado {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para los índices espaciales**|Define el valor predeterminado de {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} el parámetro de rectángulo utilizados en los índices espaciales.<br /><br />**Modo predeterminado**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo optimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**Densidad de cuadrícula predeterminada para los índices espaciales**|Define el valor predeterminado para LEVEL_1, LEVEL_2, LEVEL_3 y LEVEL_4 de densidad de cuadrícula utilizada en índices espaciales.<br /><br />**Modo predeterminado**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Modo optimista**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Modo completo**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
+|**Cuadro de límite predeterminado {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} para los índices espaciales**|Define el valor predeterminado para el parámetro {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} del cuadro de límite usado en los índices espaciales.<br /><br />**Modo predeterminado**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo optimista**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modo completo**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
+|**Densidad de cuadrícula predeterminada para los índices espaciales**|Define el valor predeterminado para LEVEL_1, LEVEL_2, LEVEL_3 y LEVEL_4 de la densidad de la cuadrícula utilizada en los índices espaciales.<br /><br />**Modo predeterminado**<br /><br />LEVEL_1: valor predeterminado<br /><br />LEVEL_2: valor predeterminado<br /><br />LEVEL_3: valor predeterminado<br /><br />LEVEL_4: valor predeterminado<br /><br />**Modo optimista**<br /><br />LEVEL_1: valor predeterminado<br /><br />LEVEL_2: valor predeterminado<br /><br />LEVEL_3: valor predeterminado<br /><br />LEVEL_4: valor predeterminado<br /><br />**Modo completo**<br /><br />LEVEL_1: valor predeterminado<br /><br />LEVEL_2: valor predeterminado<br /><br />LEVEL_3: valor predeterminado<br /><br />LEVEL_4: valor predeterminado|  
   
 ### <a name="transactions"></a>Transacciones  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Tablas no transaccional**|Especifica si se deben marcar todas las referencias a la tabla que no admiten transacciones con mensajes de advertencia de conversión.<br /><br />**Modo predeterminado**: No<br /><br />**Modo optimista**: No<br /><br />**Modo completo**: Sí|  
-|**nivel de aislamiento de transacción**|Especifica qué nivel de aislamiento de transacción se debe usar para las nuevas transacciones.<br /><br />**Modo predeterminado**:   Default<br /><br />**Modo optimista**:  Default<br /><br />**Modo completo**:   Lectura repetible|  
+|**Tablas no transaccionales**|Especifica si todas las referencias a la tabla que no admiten transacciones deben marcarse con mensajes de conversión de advertencia.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
+|**Nivel de aislamiento de transacción**|Especifica el nivel de aislamiento de transacción que se debe usar para las nuevas transacciones.<br /><br />**Modo predeterminado**: predeterminado<br /><br />**Modo optimista**: predeterminado<br /><br />**Modo completo**: lectura repetible|  
   
 ### <a name="value-control"></a>Control de valor  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Carácter de conversión numérica**|Especifica cómo controlar la conversión implícita y explícita del tipo de datos de caracteres para los tipos de datos numéricos.<br /><br />**Modo predeterminado**:   Optimistic<br /><br />**Modo optimista**:  Optimistic<br /><br />**Modo completo**:   Preciso|  
-|**Controlar valores numéricos sin signo**|Control de asignación de valores para parámetros y variables numéricas sin signo.<br /><br />**Modo predeterminado**:   Sin<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:   Sí|  
-|**Resta de control sin signo**|Modifique los valores negativos insertados en las columnas de tabla de tipo de datos sin signo.<br /><br />**Modo predeterminado**:   Convertir ' como-es '<br /><br />**Modo optimista**:  Convertir ' como-es '<br /><br />**Modo completo**:   Marcar con una advertencia|  
-|**Conversión de tipo de datos binarios**|Especifica cómo controlar las conversiones implícitas y explícitas de tipos de datos binarios.<br /><br />**Modo predeterminado**:   Optimistic<br /><br />**Modo optimista**:  Optimistic<br /><br />**Modo completo**:   Preciso|  
-|**Tipo de conversión de datos de fecha y hora**|Especifica cómo controlar las conversiones implícitas y explícitas a la fecha y hora de tipo de datos.<br /><br />**Modo predeterminado**:   Emular el formato de MySQL<br /><br />**Modo optimista**:  Usar el formato de SQL Server<br /><br />**Modo completo**:   Emular el formato de MySQL|  
-|**Literales numéricos con una precisión superior a 38**|Especifica cómo convertir literales numéricos con una precisión superior a 38.<br /><br />**Modo predeterminado**:   Si es posible de ida y vuelta<br /><br />**Modo optimista**:  Si es posible de ida y vuelta<br /><br />**Modo completo**:   Si es posible de ida y vuelta|  
-|**Fecha cero en las columnas NOT NULL**|Especifica cómo controlar la asignación de columnas NOT NULL de la fecha cero, fecha de cero o valores de fecha y hora no válido.<br /><br />**Modo predeterminado**:   GETDATE()<br /><br />**Modo optimista**:  GETDATE()<br /><br />**Modo completo**:   GETDATE()|  
+|**Conversión de caracteres a numéricos**|Especifica cómo controlar la conversión implícita y explícita del tipo de datos de caracteres a tipos de datos numéricos.<br /><br />**Modo predeterminado**: optimista<br /><br />**Modo optimista**: optimista<br /><br />**Modo completo**: preciso|  
+|**Controlar valores numéricos sin signo**|Controlar la asignación de valores a variables numéricas y parámetros sin signo.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
+|**Control de resta sin signo**|Modifique los valores negativos insertados en columnas de tabla de tipo de valor sin signo.<br /><br />**Modo predeterminado**: convertir ' as-is '<br /><br />**Modo optimista**: convertir "tal cual"<br /><br />**Modo completo**: marca con una advertencia|  
+|**Conversión a y desde el tipo de datos binary**|Especifica cómo controlar la conversión implícita y explícita del tipo de datos binario.<br /><br />**Modo predeterminado**: optimista<br /><br />**Modo optimista**: optimista<br /><br />**Modo completo**: preciso|  
+|**Conversión al tipo de datos de fecha y hora**|Especifica cómo controlar la conversión implícita y explícita al tipo de datos de fecha y hora.<br /><br />**Modo predeterminado**: emular formato MySQL<br /><br />**Modo optimista**: usar formato de SQL Server<br /><br />**Modo completo**: emular el formato MySQL|  
+|**Literales numéricos con una precisión superior a 38**|Especifica cómo convertir literales numéricos con una precisión superior a 38.<br /><br />**Modo predeterminado**: Round si es posible<br /><br />**Modo optimista**: Round si es posible<br /><br />**Modo completo**: Round si es posible|  
+|**Fecha cero en columnas NOT NULL**|Especifica cómo controlar la asignación a columnas NOT NULL de valores de fecha y hora de cero, cero o no válidos.<br /><br />**Modo predeterminado**: getDate ()<br /><br />**Modo optimista**: getDate ()<br /><br />**Modo completo**: getDate ()|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de la interfaz de usuario &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

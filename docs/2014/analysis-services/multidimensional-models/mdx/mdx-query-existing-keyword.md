@@ -1,5 +1,5 @@
 ---
-title: EXISTING, palabra clave (MDX) | Microsoft Docs
+title: Palabra clave EXISTing (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115444c832fe8fe9b258a0c23b97b97553f32e8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546217"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING (Palabra clave, MDX)
   Exige que un conjunto especificado se evalúe en el contexto actual.  
@@ -35,11 +34,11 @@ Existing Set_Expression
  *Set_Expression*  
  Una expresión de conjunto de MDX (Expresiones multidimensionales) válida.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  De forma predeterminada, los conjuntos se evalúan en el contexto del cubo que contiene los miembros del conjunto. La palabra clave `Existing` fuerza a un conjunto especificado a evaluarse en el contexto actual.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario, evaluados mediante la función `Aggregate`. La palabra clave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) y [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) se usan para devolver valores para las ventas que han disminuido en las categorías de productos de la dimensión Product. El `Existing` palabra clave fuerza el conjunto en el `Filter` función va a evaluar en el contexto actual, es decir, para los miembros Washington y Oregon de la jerarquía de atributo State-Province.  
+ El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario, evaluados mediante la función `Aggregate`. La palabra clave [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) y [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) se usan para devolver valores para las ventas que han disminuido en las categorías de productos de la dimensión Product. La `Existing` palabra clave obliga al conjunto de la `Filter` función a evaluarse en el contexto actual, es decir, para los miembros de Washington y Oregon de la jerarquía de atributo State-provincia.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -76,14 +75,14 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Count &#40;Set&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)   
- [Filter &#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [Properties &#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+## <a name="see-also"></a>Consulte también  
+ [Count &#40;establecer&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
+ [&#41;AddCalculatedMembers &#40;MDX](/sql/mdx/addcalculatedmembers-mdx)   
+ [&#40;de&#41;MDX de agregado](/sql/mdx/aggregate-mdx)   
+ [Filtrar &#40;&#41;MDX](/sql/mdx/filter-mdx)   
+ [Propiedades &#40;&#41;MDX](/sql/mdx/properties-mdx)   
+ [&#41;DrilldownLevel &#40;MDX](/sql/mdx/drilldownlevel-mdx)   
+ [Jerarquía &#40;&#41;MDX](/sql/mdx/hierarchize-mdx)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

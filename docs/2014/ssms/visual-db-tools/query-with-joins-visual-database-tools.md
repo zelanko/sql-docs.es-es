@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89eebf359167559357ef9c3aadf7599b77c8d376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 598a6cd3f891dc838bc5a797ad99e545a67bcf65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63010755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048583"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Realizar consultas con combinaciones (Visual Database Tools)
   El resultado de una consulta puede incluir datos de varias tablas o de varios objetos con valores de tabla. Para combinar los datos provenientes de varios objetos de tabla, utilice la operación JOIN de SQL.  

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 700f54ab-58c1-4e5f-a188-818366a119c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec8a1fc56fe5762093f78ce95453cc44d2f136f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c2d9c70658ac1d3180d011eaf4a8938058d94b7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978279"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910681"
 ---
 # <a name="geturl-method-sqlservercallablestatement"></a>Método getURL (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917032"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755824"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
-Guarda el contenido binario de un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a un archivo.  
+Guarda el contenido binario de una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) en un archivo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,24 +35,24 @@ Stream.SaveToFile FileName, SaveOptions
   
 #### <a name="parameters"></a>Parámetros  
  *FileName*  
- Un **cadena** valor que contiene el nombre completo del archivo al que el contenido de la **Stream** se guardarán. Puede guardar en cualquier ubicación local válida o cualquier ubicación tiene acceso a través de un valor UNC.  
+ Valor de **cadena** que contiene el nombre completo del archivo en el que se guardará el contenido de la **secuencia** . Puede guardar en cualquier ubicación local válida o en cualquier ubicación a la que tenga acceso a través de un valor UNC.  
   
  *SaveOptions*  
- Un [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md) valor que especifica si se debe crear un nuevo archivo por **SaveToFile**, si aún no existe. Valor predeterminado es **adSaveCreateNotExists**. Con estas opciones puede especificar que se produce un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescribe el contenido actual de un archivo existente.  
+ Valor [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md) que especifica si **SaveToFile**debe crear un nuevo archivo, si aún no existe. El valor predeterminado es **adSaveCreateNotExists**. Con estas opciones, puede especificar que se produzca un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescriba el contenido actual de un archivo existente.  
   
 > [!NOTE]
->  Si sobrescribe un archivo existente (cuando **adSaveCreateOverwrite** está establecido), **SaveToFile** truncará los bytes del archivo existente original que siguen a la nueva [EOS](../../../ado/reference/ado-api/eos-property.md).  
+>  Si sobrescribe un archivo existente (cuando se establece **adSaveCreateOverwrite** ), **SaveToFile** truncará cualquier byte del archivo existente original que siga el nuevo [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
 ## <a name="remarks"></a>Comentarios  
- **SaveToFile** puede utilizarse para copiar el contenido de un **Stream** objeto en un archivo local. No hay ningún cambio en el contenido o las propiedades de la **Stream** objeto. El **Stream** objeto debe estar abierto antes de llamar a **SaveToFile**.  
+ **SaveToFile** se puede usar para copiar el contenido de un objeto de **secuencia** en un archivo local. No hay ningún cambio en el contenido o las propiedades del objeto de **secuencia** . El objeto de **secuencia** debe estar abierto antes de llamar a **SaveToFile**.  
   
- Este método no cambia la asociación de la **Stream** objeto a su origen subyacente. El **Stream** objeto aún estará asociado con la dirección URL original o **registro** que era su origen al abrirse.  
+ Este método no cambia la Asociación del objeto de **secuencia** a su origen subyacente. El objeto de **secuencia** todavía se asociará a la dirección URL o **registro** original que era su origen al abrirse.  
   
- Después de un **SaveToFile** operación, la posición actual ([posición](../../../ado/reference/ado-api/position-property-ado.md)) en la secuencia se establece en el principio de la secuencia (0).  
+ Después de una operación de **SaveToFile** , la posición actual ([posición](../../../ado/reference/ado-api/position-property-ado.md)) en la secuencia se establece en el principio de la secuencia (0).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Método Open (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+## <a name="see-also"></a>Consulte también  
+ [Open (método, secuencia de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save (método)](../../../ado/reference/ado-api/save-method.md)

@@ -1,5 +1,5 @@
 ---
-title: Activar el servidor de informes y Power View Integration Features in SharePoint | Microsoft Docs
+title: Activar el servidor de informes y Power View características de integración de SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110025"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Activar las características de integración del servidor de informes y Power View en SharePoint
-  Las características de colección de sitios de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se generan normalmente de forma predeterminada una vez se ha instalado el complemento de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] para productos de SharePoint. En algunas situaciones, tendrá que activar las características de forma manual.  
+  Las [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características de la colección de sitios normalmente se activan de forma [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] predeterminada después de instalar el complemento para productos de SharePoint. En algunas situaciones, tendrá que activar las características de forma manual.  
   
  Si instala el complemento de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint 2010 después de instalar el producto de SharePoint, la característica de integración del servidor de informes y la característica de integración de la vista avanzada se activarán únicamente para colecciones de sitios raíz. Para las demás colecciones de sitios, deberá activar manualmente las características. Por ejemplo, si tiene una colección de sitios de **http://[nombre de mi servidor]/sites/[nombre de colección de sitios]** deberá activar manualmente las características de la colección de sitios de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -26,7 +26,7 @@ ms.locfileid: "66110025"
   
  “La aplicación web 80 de Sharepoint no tiene colección de sitios raíz”  
   
- El mensaje se encuentra en el registro de instalación del complemento, "RS_SP_ # .log", donde # es un número incremental. El archivo de registro se encuentra en la carpeta Temp de los usuarios actuales, por ejemplo: C:\Usuarios\\[nombre del usuario]\AppData\Local\Temp. Para obtener más información sobre las opciones de registro con el complemento, vea [instalar o desinstalar el complemento Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ El mensaje se encontrará en el registro de instalación del complemento, denominado "RS_SP_ #. log", donde # es un número que se incrementa. El archivo de registro se encontrará en la carpeta Temp de los usuarios actuales, por\\ejemplo, C:\Users [nombre de usuario] \AppData\Local\Temp. Para obtener más información sobre las opciones de registro con el complemento, vea [instalar o desinstalar el complemento de Reporting Services para sharepoint &#40;sharepoint 2010 y sharepoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  En este tema:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66110025"
   
 -   [Para activar o desactivar la característica de colección de sitios de Administración central de Reporting Services:](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a> Para activar las características de colección de sitios de integración del servidor de informes y de la vista avanzada:  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>Para activar el servidor de informes y Power View características de colección de sitios de integración:  
   
 1.  Abra el explorador en el sitio donde desea que estén activas las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66110025"
   
  Para desactivar las características, puede usar el mismo procedimiento y hacer clic en **Desactivar** en lugar de en **Activar**.  
   
-##  <a name="bkmk_centraladmin"></a> Para activar o desactivar la característica de colección de sitios de Administración central de Reporting Services:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>Para activar o desactivar la característica de colección de sitios de administración central de Reporting Services:  
   
 1.  Abra el explorador en Administración central de SharePoint.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66110025"
   
  Para desactivar la característica, puede usar el mismo procedimiento y hacer clic en **Desactivar** en lugar de en **Activar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Una vez activada la característica, puede continuar con la integración del servidor.  
   
-## <a name="see-also"></a>Vea también  
- [Instalar o desinstalar el complemento Servicios de informes para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instalar o desinstalar el complemento de Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

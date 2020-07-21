@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
 ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66175342"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
@@ -79,7 +79,7 @@ ms.locfileid: "66175342"
     > [!NOTE]  
     > Si ha seleccionado **Generar** , el Diseñador de informes genera el proyecto del informe y comprueba si existen errores antes de mostrar una vista previa o publicarlo en un servidor de informes. Si ha seleccionado **Implementar** , el Diseñador de informes publica los informes en el servidor de informes de acuerdo con las propiedades de implementación establecidas. Si no ha seleccionado **Implementar** , el Diseñador de informes muestra el informe especificado en la propiedad **StartItem** en una ventana de vista previa local.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 - [Publicación de orígenes de datos e informes](../../reporting-services/reports/publishing-data-sources-and-reports.md)
 - [Vista previa de informes](../../reporting-services/reports/previewing-reports.md)

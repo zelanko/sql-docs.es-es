@@ -27,15 +27,15 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 234fe7a9d26c91bc5b390997f56c9dcb050561aa
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661425"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392863"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea un rol de base de datos nuevo en la base de datos actual.  
   
@@ -43,18 +43,20 @@ ms.locfileid: "68661425"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql  
 CREATE ROLE role_name [ AUTHORIZATION owner_name ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *role_name*  
  Es el nombre del rol que se va a crear.  
   
  AUTHORIZATION *owner_name*  
  Es el usuario o el rol de base de datos que será propietario del nuevo rol. Si no se especifica un usuario, el rol será propiedad del usuario que ejecute CREATE ROLE. El propietario del rol, o cualquier miembro de un rol propietario, puede agregar o quitar miembros del rol.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los roles son elementos protegibles de nivel de base de datos. Después de crear un rol, configure los permisos de nivel de base de datos del rol con GRANT, DENY y REVOKE. Para agregar miembros a un rol de base de datos, use [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Para más información, vea [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Los roles de base de datos se pueden ver en las vistas de catálogos sys.database_role_members y sys.database_principals.  
@@ -79,7 +81,7 @@ En todos estos ejemplos se usa la base de datos AdventureWorks.
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. Crear un rol de base de datos propiedad de un usuario de la base de datos  
  En el siguiente ejemplo se crea el rol de base de datos `buyers` que es propiedad del usuario `BenMiller`.  
   
-```  
+```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
 GO  
 ```  
@@ -87,7 +89,7 @@ GO
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. Crear un rol de base de datos que es propiedad de un rol fijo de base de datos  
  En el siguiente ejemplo se crea el rol de base de datos `auditors` que es propiedad del rol fijo de base de datos `db_securityadmin`.  
   
-```  
+```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  
 GO  
 ```  

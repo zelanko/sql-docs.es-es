@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Configuración de replicación de mezcla'
+description: Este tutorial le enseña a configurar la replicación de combinación entre una instancia de SQL Server y un cliente móvil.
+ms.custom: seo-lt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517965"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720691"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La replicación de mezcla es una buena solución al problema de mover datos entre un servidor central y clientes móviles que solo se conectan en determinadas ocasiones. Al usar los asistentes para replicación, es más fácil configurar y administrar una topología de replicación de mezcla. 
 
 Este tutorial le mostrará cómo configurar una topología de replicación para clientes móviles. Para más información sobre la replicación de mezcla, vea [Replicación de mezcla](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
@@ -35,7 +36,7 @@ En este tutorial, aprenderá a:
 > * Agregar un suscriptor móvil para la publicación de mezcla
 > * Sincronizar la suscripción con la publicación de mezcla
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Este tutorial es para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero tienen una experiencia limitada en operaciones de replicación. Antes de empezar este tutorial, debe haber completado [Tutorial: Preparación de SQL Server para la replicación](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
   
 Para completar este tutorial, necesita tener SQL Server, SQL Server Management Studio (SSMS) y una base de datos de AdventureWorks: 
@@ -64,7 +65,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
   
 ### <a name="create-merge-publication-and-define-articles"></a>Crear publicaciones de mezcla y definir artículos  
   
-1. Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y, después, expanda el nodo del servidor.  
+1. Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y, después, expanda el nodo de servidor.  
   
 2. Inicie el Agente SQL Server haciendo clic con el botón derecho en el Explorador de objetos y seleccionando **Iniciar**. Si esto no inicia el agente, deberá hacerlo manualmente desde el Administrador de configuración de SQL Server.  
 3. Expanda la carpeta **Replicación**, haga clic con el botón derecho en la carpeta **Publicaciones locales**y, después, seleccione **Nueva publicación**. Se inicia el Asistente para nueva publicación:  
@@ -81,7 +82,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
     ![Páginas "Tipo de publicación" y "Tipos de suscriptor"](media/tutorial-replicating-data-with-mobile-clients/mergerpl.png)
   
    
-6. En la página **Artículos**, expanda el nodo **Tablas**. Seleccione las tres tablas siguientes: **Employee**, **SalesOrderHeader** y **SalesOrderDetail**. Seleccione **Siguiente**.  
+6. En la página **Artículos**, expanda el nodo **Tablas**. Seleccione las tres tablas siguientes: **Employee**, **SalesOrderHeader** y **SalesOrderDetail**. Seleccione **Next** (Siguiente).  
 
    ![Selecciones de tabla en la página "Artículos"](media/tutorial-replicating-data-with-mobile-clients/mergearticles.png)
 
@@ -109,28 +110,28 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
   
 10. En la página **Filtrar filas de tabla**, seleccione **Employee (Human Resources)** , luego **Agregar** y, después, **Add Join to Extend the Selected Filter** (Agregar combinación para ampliar el filtro seleccionado).  
   
-    A. En el cuadro de diálogo **Agregar combinación**, seleccione **Sales.SalesOrderHeader** en **Tabla combinada**. Seleccione **Escribir instrucción de combinación manualmente** y complete la instrucción de combinación de la manera siguiente:  
+    a. En el cuadro de diálogo **Agregar combinación**, seleccione **Sales.SalesOrderHeader** en **Tabla combinada**. Seleccione **Escribir instrucción de combinación manualmente** y complete la instrucción de combinación de la manera siguiente:  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    B. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, seleccione **Aceptar**.
+    b. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, seleccione **Aceptar**.
 
     ![Selecciones para agregar una combinación al filtro](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. En la página **Filtrar filas de tabla**, seleccione **SalesOrderHeader**, elija **Agregar** y luego **Add Join to Extend the Selected Filter** (Agregar combinación para ampliar el filtro seleccionado).  
   
-    A. En el cuadro de diálogo **Agregar combinación** , seleccione **Sales.SalesOrderDetail** en **Tabla combinada**.    
-    B. Seleccione **Usar generador de instrucciones para crear la instrucción**.  
+    a. En el cuadro de diálogo **Agregar combinación** , seleccione **Sales.SalesOrderDetail** en **Tabla combinada**.    
+    b. Seleccione **Usar generador de instrucciones para crear la instrucción**.  
     c. En el cuadro **Vista previa**, confirme que la instrucción de combinación es como sigue:  
   
     ```sql  
     ON [SalesOrderHeader].[SalesOrderID] = [SalesOrderDetail].[SalesOrderID] 
     ```  
   
-    d. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, seleccione **Aceptar**. Seleccione **Siguiente**. 
+    d. En **Especifique las opciones de combinación**, seleccione **Clave única**y, a continuación, seleccione **Aceptar**. Seleccione **Next** (Siguiente). 
 
     ![Selecciones para agregar otra combinación para pedidos de venta](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
@@ -138,7 +139,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
 
     ![Selección para crear una instantánea inmediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. En la página **Seguridad del agente**, elija **Configuración de seguridad**. Escriba <*Nombre_De_Equipo_Publicador>* > **\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, seleccione **Aceptar**. Seleccione **Siguiente**.  
+22. En la página **Seguridad del agente**, elija **Configuración de seguridad**. Escriba <*Nombre_De_Equipo_Publicador>* > **\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, seleccione **Aceptar**. Seleccione **Next** (Siguiente).  
 
     ![Selecciones para configurar la seguridad del agente de instantáneas](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -164,14 +165,14 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
   
 2. En la carpeta **Publicaciones locales**, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge** y seleccione **Propiedades**.  
   
-   A. Seleccione la página **Lista de acceso a la publicación** y seleccione **Agregar**. 
+   a. Seleccione la página **Lista de acceso a la publicación** y seleccione **Agregar**. 
   
-   B. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>* > **\repl_merge** y seleccione **Aceptar**. Vuelva a hacer clic en **Aceptar**. 
+   b. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>* > **\repl_merge** y seleccione **Aceptar**. Vuelva a hacer clic en **Aceptar**. 
 
    ![Selecciones para agregar el inicio de sesión del Agente de mezcla](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
   
-Para obtener más información, vea:  
+Para más información, consulte:  
 - [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md) 
 - [Filtros con parámetros: filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
 - [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)  
@@ -200,7 +201,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
   
 6. En la página **Suscriptores**, seleccione el nombre de instancia del servidor del suscriptor. En **Base de datos de suscripciones**, seleccione **Nueva base de datos** en la lista.  
   
-   En el cuadro de diálogo **Nueva base de datos**, escriba **SalesOrdersReplica** en el cuadro **Nombre de la base de datos**. Seleccione **Aceptar**y luego seleccione **Siguiente**. 
+   En el cuadro de diálogo **Nueva base de datos**, escriba **SalesOrdersReplica** en el cuadro **Nombre de la base de datos**. Seleccione **Aceptar** y después **Siguiente**. 
 
    ![Selecciones para agregar una base de datos al suscriptor](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
@@ -208,7 +209,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
 
    ![Selecciones para la seguridad del Agente de mezcla](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
-9. En la página **Programación de sincronización**, establezca **Programación del agente** en **Run on demand only** (Ejecutar solamente a petición). Seleccione **Siguiente**.  
+9. En la página **Programación de sincronización**, establezca **Programación del agente** en **Run on demand only** (Ejecutar solamente a petición). Seleccione **Next** (Siguiente).  
 
    ![Selección de "Run on demand only" (Ejecutar solamente a petición) para el agente](media/tutorial-replicating-data-with-mobile-clients/mergesyncschedule.png)
   
@@ -240,14 +241,14 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
   
 2. En la carpeta **Publicaciones locales**, haga clic con el botón derecho en la publicación **AdvWorksSalesOrdersMerge** y, luego, seleccione **Propiedades**.  
    
-   A. Seleccione la página **Particiones de datos** y seleccione **Agregar**.   
-   B. En el cuadro de diálogo **Agregar partición de datos**, escriba **adventure-works\pamela0** en el cuadro **Valor de HOST_NAME** y, después, seleccione **Aceptar**.  
+   a. Seleccione la página **Particiones de datos** y seleccione **Agregar**.   
+   b. En el cuadro de diálogo **Agregar partición de datos**, escriba **adventure-works\pamela0** en el cuadro **Valor de HOST_NAME** y, después, seleccione **Aceptar**.  
    c. Seleccione la partición agregada recientemente, elija **Generar instantáneas seleccionadas ahora** y, después, seleccione **Aceptar**. 
 
    ![Selecciones para agregar una partición](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   
   
-Para obtener más información, vea:  
+Para más información, consulte:  
 - [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  
 - [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)  
 - [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
@@ -276,7 +277,7 @@ Ha configurado correctamente el publicador y el suscriptor para la replicación 
 2. Repetir este procedimiento cuando la conectividad de red esté disponible para sincronizar los datos entre el publicador y el suscriptor.
 3. Consultar la tabla **SalesOrderHeader** o **SalesOrderDetail** en el otro servidor para ver los cambios replicados.  
   
-Para obtener más información, vea:   
+Para más información, consulte:   
 - [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Sincronizar datos](../../relational-databases/replication/synchronize-data.md)  
 - [Sincronizar una suscripción de extracción](../../relational-databases/replication/synchronize-a-pull-subscription.md)  

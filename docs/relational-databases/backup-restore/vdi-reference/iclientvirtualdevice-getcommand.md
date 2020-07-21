@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a861377924b4bb3cc1c1d2a4b83eba660fbf99e0
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7665d541663097452fa9aaeba4f30dcd95c75232
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847596"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896936"
 ---
 # <a name="iclientvirtualdevicegetcommand-vdi"></a>IClientVirtualDevice::GetCommand (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **GetCommand** se usa para obtener el siguiente comando en cola en un dispositivo. Cuando se solicita, esta función espera el siguiente comando.
 
@@ -46,7 +46,7 @@ HRESULT IClientVirtualDevice::GetCommand (
 | VD_E_TIMEOUT | No había ningún comando disponible y se agotó el tiempo de espera. |
 | VD_E_ABORT | El cliente o el servidor han usado el elemento SignalAbort para forzar un apagado. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cuando se devuelve VD_E_CLOSE, SQL Server ha cerrado el dispositivo. Esto forma parte del apagado normal. Una vez cerrados todos los dispositivos, el cliente invoca IClientVirtualDeviceSet2::Close para cerrar el conjunto de dispositivos virtuales.
 

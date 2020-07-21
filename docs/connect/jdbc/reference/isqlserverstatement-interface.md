@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b736ed84e0fed6794b036d22af84912f240539fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ec01618ffa24c980733642ca66df5af0f234d172
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977340"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924737"
 ---
 # <a name="isqlserverstatement-interface"></a>Interfaz ISQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67977340"
 public interface ISQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta interfaz se implementa mediante la [clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
  Esta interfaz expone los siguientes métodos específicos del [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  

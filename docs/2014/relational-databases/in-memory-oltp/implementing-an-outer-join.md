@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e7ce6db35817fdfc9bb4169a69e5f959b40f268
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050153"
 ---
 # <a name="implementing-an-outer-join"></a>Implementar una combinación externa
   No se admite una combinación externa en los procedimientos almacenados compilados de forma nativa. En el ejemplo siguiente se muestra una forma de implementar la funcionalidad de una combinación externa izquierda en un procedimiento almacenado compilado de forma nativa.  
   
  Los ejemplos usan una variable de tabla para simular un cursor en la parte izquierda de la combinación y una variable de tabla para crear un único conjunto de resultados, que solo es adecuado cuando se procesa un número limitado de filas, ya que ello implica crear una copia adicional de las filas de datos.  
   
- Una variable (@outer) de tipo t1_type se utiliza para recorrer en iteración las filas desde t1, con un tiempo bucle para simular un cursor. La variable @result de tipo t1t2_join_type, a continuación, se utiliza para construir el conjunto de resultados.  
+ Se utiliza una variable ( @outer ) de tipo t1_type para recorrer en iteración las filas de T1, utilizando un bucle while para simular un cursor. @resultA continuación, se usa la variable de tipo t1t2_join_type para construir el conjunto de resultados.  
   
  Debe probar el rendimiento de esta solución alternativa para asegurarse de que funciona de la manera esperada en la aplicación.  
   
@@ -112,8 +111,8 @@ GO
 exec dbo.usp_left_join  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [Construcciones de Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

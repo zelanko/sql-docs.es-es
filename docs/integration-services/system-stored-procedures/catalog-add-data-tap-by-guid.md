@@ -10,26 +10,26 @@ ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 486820bf4e3bbae793a23625fe687bd875210cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749793"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una derivación de datos a una ruta de acceso de flujo de datos específica de un flujo de datos de paquete, para una instancia de la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  
@@ -52,7 +52,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  El parámetro *dataflow_path_id_string* es de tipo **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta " *\<Carpeta de instalación de SQL Server>* \130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)** .  
+ Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta " *\<SQL Server installation folder>* \130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Número de filas que se capturan durante la derivación de datos. Si no se especifica este valor, se capturan todas las filas. El parámetro max_rows es de tipo **int**.  
@@ -70,7 +70,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para agregar derivaciones de datos, la instancia de la ejecución debe estar en el estado creado (un valor 1 en la columna **status** de la vista [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). El valor de estado cambia cuando se ejecuta la ejecución. Puede crear una ejecución mediante una llamada a [catalog.create_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  A continuación se indican algunas consideraciones sobre el procedimiento almacenado add_data_tap_by_guid.  

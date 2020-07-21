@@ -1,5 +1,5 @@
 ---
-title: Configuración de errores (cuadro de diálogo de estructura de minería de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Configuración de errores (cuadro de diálogo estructura de minería de datos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef6ba1926d23990399be8571ed117b87dd2edb8b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081369"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528390"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configuración de errores (cuadro de diálogo Propiedades de la estructura de minería de datos) (Analysis Services: datos multidimensionales)
   Use la página **Configuración de errores** del cuadro de diálogo **Propiedades de la estructura de minería de datos** de **SQL Server Management Studio** para definir las propiedades de configuración de errores de una estructura de minería de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
- **Use la configuración de error predeterminada**  
+ **Usar configuración de error predeterminada**  
  Seleccione esta opción para utilizar la configuración de errores predeterminada para los objetos en la operación de procesamiento.  
   
  **Acción del error de clave**  
@@ -67,7 +66,7 @@ ms.locfileid: "66081369"
   
 -   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
   
- **Clave NULL convertida en desconocida**  
+ **Clave null convertida en Unknown**  
  Especifique una de las siguientes acciones para que se lleve a cabo cuando se agregue una clave de miembro NULL al procesar un objeto:  
   
 -   **Omitir error** omite el error.  
@@ -76,7 +75,7 @@ ms.locfileid: "66081369"
   
 -   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
   
- **Clave NULL no permitida**  
+ **Clave null no permitida**  
  Especifique una de las siguientes acciones para que se lleve a cabo cuando se encuentre una clave NULL al procesar un objeto:  
   
 -   **Omitir error** omite el error.  
@@ -88,8 +87,8 @@ ms.locfileid: "66081369"
  **Ruta de acceso del registro de errores**  
  Escriba la ruta de acceso completa y un nombre para el archivo de registro de errores.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de propiedades de estructura de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
- [General &#40;cuadro de diálogo estructura de minería de datos&#41; &#40;Analysis Services - minería de datos&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo Propiedades de la estructura de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [General &#40;cuadro de diálogo estructura de minería de datos&#41; &#40;Analysis Services-minería de datos&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

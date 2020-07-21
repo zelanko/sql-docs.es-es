@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: d78fc8a9-d173-4801-bb32-ed6a29257f08
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 949e3ef39b0c3ef7b4fec6b3f99735dec287d5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0777e25a68193527a6d4265a436ddb96752ef6cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913369"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550976"
 ---
-# <a name="mssqlserver7936"></a>MSSQLSERVER_7936
+# <a name="mssqlserver_7936"></a>MSSQLSERVER_7936
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7936|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7936|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Texto del mensaje|Error de tabla: Directorio FileStream existe para la columna C_ID del Id. de objeto ID O_ID, ID. de partición PN_ID, índice, pero esa columna no es una columna Filestream.|  
+|Texto del mensaje|Error de tabla: el id. de directorio FILESTREAM existe para el id. de columna C_ID del id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, pero esa columna no es una columna FILESTREAM.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se encontró un directorio FILESTREAM para la columna especificada; sin embargo, la columna no es una columna `FILESTREAM`.  

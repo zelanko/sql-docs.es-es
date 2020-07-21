@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Schema Restrictions dialog box
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7746ef8a7fd0782524f9a6ecff194503cf3882d9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056144"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422302"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Restricciones de esquema, cuadro de diálogo
   Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las restricciones de esquema que se van a aplicar a Foreach ADO.NET Schema Rowset Enumerator.  
@@ -29,15 +28,15 @@ ms.locfileid: "66056144"
  Seleccione las restricciones que se van a aplicar al esquema.  
   
  **Variable**  
- Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **Nueva variable** para crear una nueva.  
+ Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **nueva variable..** . para crear una nueva variable.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **Texto**  
  Proporciona el texto para definir restricciones.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de bucles foreach &#40;página de la colección&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>Consulte también  
+ [Página colección de &#40;del editor de bucles foreach&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Contenedor Foreach Loop](control-flow/foreach-loop-container.md)  
   
   

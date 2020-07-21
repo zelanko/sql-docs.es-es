@@ -14,10 +14,10 @@ ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298981"
 ---
 # <a name="package-properties-dialog-box"></a>Propiedades del paquete, cuadro de diálogo
@@ -35,7 +35,7 @@ ms.locfileid: "71298981"
   
 -   [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Propiedades del paquete  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Propiedades del paquete  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71298981"
   
 5.  Haga clic con el botón derecho en el paquete y, después, seleccione **Propiedades**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurar las opciones  
  Utilice la página **General** para ver las propiedades del paquete seleccionado.  
   
  Todas las propiedades que aparecen en la página **General** son de solo lectura.  

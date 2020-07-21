@@ -1,5 +1,5 @@
 ---
-title: Administración basada en directivas procedimientos (Transact-SQL) | Microsoft Docs
+title: Procedimientos almacenados de administración basada en directivas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Policy-Based Management, stored procedures
 - stored procedures [Policy-Based Management]
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e6c8382737adcf94daf9df9c92f58b46ffc95ade
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941955"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728221"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procedimientos almacenados de la administración basada en directivas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes sistemas procedimientos almacenan que se usan para la administración basada en directivas.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite los siguientes procedimientos almacenados del sistema que se usan para la administración basada en directivas.  
   
 > [!IMPORTANT]  
 >  Solo se admiten los procedimientos almacenados de administración basada en directivas que se documentan en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de administración basada en directivas usan los procedimientos almacenados que no se han documentado y no se deberían utilizar para administrar la administración basada en directivas.  
@@ -43,7 +43,7 @@ ms.locfileid: "67941955"
 |[sp_syspolicy_rename_condition](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-condition-transact-sql.md)|[sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)|  
 |[sp_syspolicy_rename_policy](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070006"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538927"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Programar una actualización de datos (PowerPivot para SharePoint)
   Puede programar la actualización de datos para obtener actualizaciones automáticas de los datos PowerPivot dentro de un libro de Excel que publicara en un sitio de SharePoint.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../includes/applies-md.md)]** SharePoint 2010  
   
  **En este tema:**  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66070006"
 > [!NOTE]  
 >  Las instancias de servidor de Analysis Services realizan la actualización de los datos PowerPivot en la granja de servidores de SharePoint. No está relacionada con la característica de actualización de datos que se proporciona en Excel Services. La característica de programación de actualizaciones de datos de PowerPivot no actualizará los datos que no sean de PowerPivot.  
   
-##  <a name="prereq"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
  Debe tener el nivel de permisos para contribuir o uno superior en el libro si desea crear una programación para la actualización de datos.  
   
  Los orígenes de datos externos a los que se tiene acceso durante la actualización de datos deben estar disponibles y las credenciales que especifique en la programación deben tener el permiso de acceso a esos orígenes de datos. La actualización de datos programada requiere la ubicación de un origen de datos que sea accesible a través de una conexión de red (por ejemplo, desde un recurso compartido de archivos de red en lugar de una carpeta local en la estación de trabajo).  
@@ -51,9 +50,9 @@ ms.locfileid: "66070006"
  El libro se debe proteger en el momento en que la operación de actualización finalice. Para ello, una vez finalizada la actualización de los datos, se realiza un bloqueo del libro del archivo. Este bloqueo se ejecuta cuando se guarda el archivo, y no cuando se inicia la actualización.  
   
 > [!NOTE]  
->  El servidor no bloquea el libro mientras la actualización de datos esté en curso. Sin embargo, bloquea el archivo al final de la actualización de datos con el fin de proteger el archivo actualizado. Si, en este momento, el archivo se desprotege para otro usuario, los datos actualizados se eliminarán. De igual modo, si el archivo está protegido, pero es significativamente diferente de la copia recuperada por el servidor al comenzar la actualización de datos, los datos actualizados se descartarán.  
+>  El servidor no bloquea el libro mientras la actualización de datos esté en curso. Sin embargo, bloquea el archivo al final de la actualización de datos con el fin de proteger el archivo actualizado. En este momento, el archivo se desprotege para otro usuario, se producirán los datos actualizados. Del mismo modo, si el archivo está protegido, pero es significativamente diferente de la copia recuperada por el servidor al inicio de la actualización de datos, se descartarán los datos actualizados.  
   
-##  <a name="intro"></a> Información general sobre la actualización de datos  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>Información general sobre la actualización de datos  
  Los datos PowerPivot de libro de Excel pueden originarse en varios orígenes de datos externos como son bases de datos externas o archivos de datos a los que tiene acceso desde servidores remotos o desde recursos compartidos de archivos de red. En el caso de libros PowerPivot que contengan datos importados de orígenes de datos externos o conectados, puede configurar la actualización de datos para programar una importación automática de los datos actualizados de esos orígenes iniciales.  
   
  El acceso a un origen de datos externo se obtiene a través de una dirección URL, ruta UNC o cadena de conexión incrustada que se especifica al importar los datos originales en el libro utilizando la aplicación cliente de PowerPivot. La información de conexión original que está almacenada en el libro PowerPivot se reutiliza para las operaciones de actualización de datos subsiguientes. Aunque puede sobrescribir las credenciales que se usan para conectarse a los orígenes de datos, no puede sobrescribir las cadenas de conexión para la actualización de datos; solo se utiliza la información de conexión existente.  
@@ -72,7 +71,7 @@ ms.locfileid: "66070006"
   
  Al crear programaciones específicas para orígenes de datos individuales se permite hacer coincidir la programación de la actualización con las fluctuaciones en los orígenes de datos externos. Por ejemplo, si un origen de datos externo contiene datos transaccionales que se generan a lo largo del día, puede crear una programación individual de la actualización de datos para que ese origen de datos obtenga su información actualizada por la noche.  
   
-##  <a name="drenablesched"></a> Habilitar y programar la actualización de datos  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>Habilitar y programar la actualización de datos  
  Utilice las siguientes instrucciones para programar la actualización de datos para los datos PowerPivot en un libro de Excel que esté publicado en una biblioteca de SharePoint.  
   
 1.  En la biblioteca que contenga el libro, selecciónelo y, a continuación, haga clic en la flecha abajo para mostrar una lista de comandos.  
@@ -98,7 +97,7 @@ ms.locfileid: "66070006"
   
 7.  En Notificaciones de correo electrónico, escriba la dirección de correo electrónico de la persona a la que se debería notificar en caso de un error de procesamiento.  
   
-8.  En Credenciales, especifique una cuenta utilizada para ejecutar el trabajo de actualización de datos. La cuenta debe tener permisos para contribuir en el libro y poder abrirlo y actualizar sus datos. Debe ser una cuenta de usuario de dominio de Windows. En muchos casos, esta cuenta también debe tener permisos de lectura en los orígenes de datos externos utilizados durante la actualización de datos. En concreto, si importó originalmente los datos mediante la opción Utilizar autenticación de Windows, la cadena de conexión se genera para utilizar las credenciales de Windows del usuario actual. Si el usuario actual es la cuenta de actualización de datos, la cuenta debe tener permisos de lectura en el origen de datos externo para que la actualización de datos se realice correctamente. Elija una de las opciones siguientes:  
+8.  En Credenciales, especifique una cuenta utilizada para ejecutar el trabajo de actualización de datos. La cuenta debe tener permisos para contribuir en el libro y poder abrirlo y actualizar sus datos. Debe ser una cuenta de usuario de dominio de Windows. En muchos casos, esta cuenta también debe tener permisos de lectura en los orígenes de datos externos utilizados durante la actualización de datos. En concreto, si importó originalmente los datos mediante la opción Utilizar autenticación de Windows, la cadena de conexión se genera para utilizar las credenciales de Windows del usuario actual. Si el usuario actual es la cuenta de actualización de datos, la cuenta debe tener permisos de lectura en el origen de datos externo para que la actualización de datos se realice correctamente. Elija una de las siguientes opciones:  
   
     1.  Elija **Usar la cuenta de actualización de datos configurada por el administrador** para procesar la operación de actualización de datos mediante la cuenta de actualización de datos desatendida de PowerPivot.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66070006"
   
     3.  Elija **Conectar con las credenciales guardadas en el Servicio de almacenamiento seguro** si conoce el identificador de una aplicación de destino que contenga las credenciales almacenadas previamente que desea utilizar.  
   
-     Para obtener más información acerca de estas opciones, consulte [configurar las credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) y [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
+     Para obtener más información acerca de estas opciones, vea [configurar credenciales almacenadas para la actualización de datos powerpivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) y [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40;PowerPivot para SharePoint ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)&#41;.  
   
 9. En Orígenes de datos, active la casilla **Todos los orígenes de datos** si desea que la actualización de datos vuelva a consultar todos los orígenes de datos originales.  
   
@@ -120,7 +119,7 @@ ms.locfileid: "66070006"
   
     -   El origen de datos debe estar disponible en la ubicación indicada en el momento en que se produce la actualización de datos. Si el origen de datos original está en una unidad de disco local del usuario que creó el libro, debe excluir ese origen de datos de la operación de actualización de datos o encontrar una manera de publicarlo en una ubicación que sea accesible a través de una conexión de red. Si mueve un origen de datos a una ubicación de red, asegúrese de abrir el libro en [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] y actualice la información de conexión del origen de datos. Esto es necesario para restablecer la información de conexión que está almacenada en el libro PowerPivot.  
   
-    -   Se debe tener acceso al origen de datos utilizando la información de credenciales que está insertada en el libro PowerPivot o que se haya especificado en la programación. La información de credenciales insertadas se almacena en el libro PowerPivot al importar los datos con PowerPivot para Excel. La información de credenciales insertada suele ser SSPI=IntegratedSecurity o SSPI=TrustedConnection, lo que significa que las credenciales del usuario actual se usan para conectarse al origen de datos. Si desea invalidar la información de credenciales en la programación de actualización de datos, puede especificar credenciales predefinidas almacenadas. Para obtener más información, consulte [configurar las credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+    -   Se debe tener acceso al origen de datos utilizando la información de credenciales que está insertada en el libro PowerPivot o que se haya especificado en la programación. La información de credenciales insertadas se almacena en el libro PowerPivot al importar los datos con PowerPivot para Excel. La información de credenciales insertada suele ser SSPI=IntegratedSecurity o SSPI=TrustedConnection, lo que significa que las credenciales del usuario actual se usan para conectarse al origen de datos. Si desea invalidar la información de credenciales en la programación de actualización de datos, puede especificar credenciales predefinidas almacenadas. Para obtener más información, vea [configurar credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
     -   La actualización de datos debe realizarse para todos los orígenes de datos que especifique. De lo contrario, se descartan los datos actualizados y se queda con la última versión guardada del libro. Excluya cualquier origen de datos en el que no confíe completamente.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66070006"
   
 11. Haga clic en **Aceptar** para guardar la programación.  
   
-##  <a name="drverify"></a> Comprobar la actualización de datos  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>Comprobar la actualización de datos  
  La mejor forma de comprobar la actualización de datos es ejecutarla inmediatamente y revisar la página del historial para ver si se completó de modo correcto. Al activar la casilla **También actualizar lo más rápido posible** en la programación se comprobará que la actualización de datos está operativa.  
   
  Puede ver el registro actual y pasado de las operaciones de actualización de datos en la página Historial de actualización de datos para el libro. Esta página solo aparece si la actualización de datos se ha programado para un libro. Si no hay ninguna programación de actualización de datos, la página de definición de la programación aparece en su lugar.  
@@ -158,9 +157,9 @@ ms.locfileid: "66070006"
 > [!NOTE]  
 >  Los administradores de SharePoint pueden ayudarle a solucionar los problemas de la actualización de datos viendo los informes de la actualización de datos consolidados en el Panel de administración de PowerPivot en Administración central. Para obtener más información, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualización de datos PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   
- [Ver historial de actualización de datos &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
+ [Ver el historial de actualización de datos &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)   
  [Configurar credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)  
   
   

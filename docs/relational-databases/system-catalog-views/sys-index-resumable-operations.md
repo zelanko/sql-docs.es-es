@@ -1,7 +1,7 @@
 ---
-title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
+title: Sys. index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,24 +19,24 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227197"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790494"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>Sys. index_resumable_operations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**Sys. index_resumable_operations** es una vista del sistema que supervisa y comprueba el estado de ejecución actual de la recompilación de índices reanudables.  
-**Se aplica a**: SQL Server 2017 y Azure SQL Database
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+**Sys. index_resumable_operations** es una vista del sistema que supervisa y comprueba el estado de ejecución actual de la regeneración o creación de índices reanudables.  
+**Se aplica a**: SQL Server (2017 y versiones más recientes) y Azure SQL Database
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|IDENTIFICADOR del objeto al que pertenece este índice (no acepta valores NULL).|  
-|**index_id**|**int**|IDENTIFICADOR del índice (no acepta valores NULL). el número de la **secuencia es único** en el objeto.|
-|**Nombre**|**sysname**|Nombre del índice. **Name** es único solo dentro del objeto.|  
+|**index_id**|**int**|IDENTIFICADOR del índice (no acepta valores NULL). **index_id** es único solo dentro del objeto.|
+|**name**|**sysname**|Nombre del índice. **Name** es único solo dentro del objeto.|  
 |**sql_text**|**nvarchar(max)**|Texto de la instrucción de T-SQL DDL|
 |**last_max_dop**|**smallint**|Última MAX_DOP usada (valor predeterminado = 0)|
 |**partition_number**|**int**|Número de partición dentro del índice o montón propietario. En el caso de las tablas e índices sin particiones, o en caso de que se vuelvan a generar todas las particiones, el valor de esta columna es NULL.|
@@ -54,13 +54,13 @@ ms.locfileid: "71227197"
 
 ## <a name="example"></a>Ejemplo
 
- Muestra todas las operaciones de recompilación de índice reanudables que se encuentran en estado de pausa.
+ Enumere todas las operaciones de creación o recompilación de índices reanudables que estén en estado de pausa.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
@@ -73,4 +73,4 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 - [sys.key_constraints](sys-key-constraints-transact-sql.md)
 - [sys.filegroups](sys-filegroups-transact-sql.md)
 - [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
-- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](querying-the-sql-server-system-catalog-faq.md)
+- [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](querying-the-sql-server-system-catalog-faq.md)

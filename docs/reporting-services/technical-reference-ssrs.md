@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica (SSRS) | Microsoft Docs
+title: Referencia técnica | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: 9d368a5156651ed47ed6942f8fb5ba7925a397c6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892810"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077860"
 ---
 # <a name="technical-reference-ssrs"></a>Referencia técnica (SSRS)
 

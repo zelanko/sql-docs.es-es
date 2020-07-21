@@ -1,6 +1,6 @@
 ---
-title: Editores XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editores XML (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -17,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9b82bec0f3def57ac575b4e338e437c05f0bbd1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d9b62b35ee3819edcbfcc0fc41f8fa22747d966b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252828"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252932"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editores XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68252828"
 |Ver|Descripción|Tipos de archivos compatibles|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para crear y modificar visualmente esquemas XML y conjuntos de datos ADO.NET.|.xsd|  
-|**Datos**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
+|**Data**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
 |**XML**|Para editar XML; el editor de origen proporciona codificación de colores e IntelliSense, e incluye las características Palabra completa y Lista de miembros.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
 |**ShowPlan**|Muestra los planes de consulta xml creados mediante la opción SET SHOWPLAN_XML ON.|.showplan|  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68252828"
 ## <a name="data-view"></a>Vista de datos  
  La vista de datos proporciona una cuadrícula de datos que puede utilizarse para modificar archivos .xml. En la vista de datos, solo se puede editar el contenido (pero no las etiquetas ni la estructura) de un archivo XML.  
   
- Hay dos áreas independientes en la vista de datos: **Tablas de datos** y **Datos**. El área **Tablas de datos** es una lista de relaciones definidas en el archivo XML, colocadas en el orden de su anidamiento (de exterior a interior). El área **Datos** es una cuadrícula de datos que muestra los datos en función de la selección realizada en el área Tablas de datos.  
+ En la vista de datos, hay dos áreas bien diferenciadas: **Tablas de datos** y **Datos**. El área **Tablas de datos** es una lista de relaciones definidas en el archivo XML, colocadas en el orden de su anidamiento (de exterior a interior). El área **Datos** es una cuadrícula de datos que muestra los datos en función de la selección realizada en el área Tablas de datos.  
   
 > [!NOTE]  
 >  Los archivos XML recién creados no contienen ningún dato y, por lo tanto, no pueden mostrarse en la vista de datos. Existen también algunas instancias de documentos XML donde no se puede invocar la vista de datos. Aunque se considere que el documento XML tiene un formato correcto, si no está formado por datos estructurados que están intentando cambiar a la vista de datos, se generará el siguiente mensaje: "Aunque este documento XML está bien formado, contiene una estructura que la Vista de datos no puede mostrar".  

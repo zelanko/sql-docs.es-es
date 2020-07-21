@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eaca5fcf2dfbac57fc6d3ba6178251927d15aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003743"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas de indización de texto completo
      
-##  <a name="failure"></a> Solucionar errores de indización de texto completo  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Solucionar errores de indización de texto completo  
  Al rellenar o mantener un índice de texto completo, es posible que el indizador de texto completo no pueda indizar una o varias filas por las razones que se explican a continuación. Estos errores de nivel de fila no impiden que se realice el llenado. El indizador omite estas filas, lo que significa que no se pueden realizar consultas del contenido de estas filas.  
   
  Pueden producirse errores de indización cuando:  
@@ -54,12 +53,12 @@ ms.locfileid: "66015089"
   
 
   
-##  <a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
  Al restaurar el registro de transacciones de una base de datos, es posible que aparezca una advertencia que indica que el índice de texto completo no es coherente. El motivo es que se ha modificado el índice de texto completo en una tabla después de realizar la copia de seguridad de la base de datos. Si esto ocurre, deberá ejecutar un rellenado completo (rastreo) en la tabla para devolver la coherencia al índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../indexes/indexes.md).  
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Rellenar índices de texto completo](../indexes/indexes.md)  
   

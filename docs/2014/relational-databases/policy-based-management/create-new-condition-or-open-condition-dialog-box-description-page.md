@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80198964075bc6de2bdd816c54ccf2ca1e3710f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42c403674d9ea8b34035631409a274bcce0b55bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005856"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>Cuadro de diálogo Crear nueva condición o Abrir condición, página Descripción
   Utilice este cuadro de diálogo para agregar una descripción a una condición de la administración basada en directivas.  
@@ -39,7 +38,7 @@ ms.locfileid: "62705375"
  **Modificado por**  
  Inicio de sesión que hizo el cambio más reciente en la directiva o condición.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

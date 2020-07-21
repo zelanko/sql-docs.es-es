@@ -1,5 +1,5 @@
 ---
-title: Sys.securable_classes (Transact-SQL) | Microsoft Docs
+title: Sys. securable_classes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
 ms.prod: sql
@@ -20,19 +20,18 @@ ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: a9778b9546c4462a87e888907f0932cdd7037809
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135282"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003008"
 ---
-# <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una lista de las clases protegibles.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|Nombre de la clase.|  
 |**class**|**int**|Designación numérica de la clase.|  
@@ -47,7 +46,7 @@ ms.locfileid: "68135282"
 SELECT * FROM sys.securable_classes ORDER BY class;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elementos protegibles](../../relational-databases/security/securables.md)  
   
   

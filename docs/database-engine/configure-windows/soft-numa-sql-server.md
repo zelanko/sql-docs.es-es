@@ -1,5 +1,6 @@
 ---
 title: Soft-NUMA (SQL Server) | Microsoft Docs
+description: Obtenga información sobre soft-NUMA en SQL Server 2014 SP2 y versiones posteriores. Vea cómo usar soft-NUMA automático y cómo configurar manualmente SQL Server para usar soft-NUMA.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d41432f47d39b887e054e17d7596e0c027bc31b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789765"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Los procesadores de hoy en día tienen varios núcleos por socket. Normalmente, cada socket se representa como un solo nodo NUMA. El motor de base de datos de SQL Server crea particiones de las diversas estructuras internas y de los subprocesos de servicio por nodo NUMA.  En procesadores con 10 o más núcleos por socket, el uso de NUMA de software para dividir los nodos NUMA de hardware suele aumentar la escalabilidad y el rendimiento. Antes de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, NUMA basado en software (soft-NUMA) requería modificar el Registro para agregar una máscara de afinidad de configuración de nodo y, además, se configuraba en el nivel de host, en vez de por instancia. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], soft-NUMA se configura automáticamente en el nivel de instancia de base de datos cuando se inicia el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
@@ -72,7 +73,7 @@ La instancia A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para 
   
  La instancia A, que experimenta actividades de E/S importantes, tiene ahora dos subprocesos de E/S y un subproceso de escritura diferida. La instancia B, que realiza operaciones que requieren un uso intensivo del procesador, solo tiene un subproceso de E/S y un subproceso de escritura diferida. Se pueden asignar diferentes cantidades de memoria a las instancias, pero, a diferencia de lo que ocurre con el NUMA de hardware, ambas reciben memoria del mismo bloque de memoria del sistema operativo y no hay afinidad entre la memoria y el procesador.  
   
- El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, sea cual sea el número de nodos físicos de NUMA que presente el hardware, este será el número de subprocesos de escritura diferida que se creen. Para más información, vea [Cómo funciona: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx) (Cómo funciona: soft-NUMA, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria).  
+ El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, sea cual sea el número de nodos físicos de NUMA que presente el hardware, este será el número de subprocesos de escritura diferida que se creen. Para más información, vea [Cómo funciona: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044) (Cómo funciona: soft-NUMA, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria).  
   
 > [!NOTE]
 > Las claves del Registro de **Soft-NUMA** no se copian al actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -132,7 +133,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): muestra el valor actual (0 o 1) de SOFTNUMA.  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): en las columnas *softnuma* y *softnuma_desc* se muestran los valores de configuración actuales.  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): en las columnas *softnuma_configuration* y *softnuma_configuration_desc* se muestran los valores de configuración actuales.  
   
 > [!NOTE]
 > El valor actual de uso automático de soft-NUMA se puede ver con [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), pero no se puede modificar mediante **sp_configure**. Debe usar la instrucción [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) con el argumento `SET SOFTNUMA`.  

@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 1b57f8a7985c9fb092209bc5a80b9d0c3294d98c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006077"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781499"
 ---
 # <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10519|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10519|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_INCOMPATIBLE_STMT_AND_HINTS|  
 |Texto del mensaje|No se puede crear la guía de plan "%.\*ls" porque las sugerencias especificadas en **\@hints** no se pueden aplicar a la instrucción especificada por **\@stmt** o **\@statement_start_offset**. Compruebe que las sugerencias pueden aplicarse a la instrucción.|  

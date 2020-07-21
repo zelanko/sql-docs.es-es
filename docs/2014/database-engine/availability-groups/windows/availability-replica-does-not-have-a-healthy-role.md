@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48dc4150c79225e069ea4e340e82458b42b4be6d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937086"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La réplica de disponibilidad no tiene un rol en buen estado
     
@@ -29,8 +28,8 @@ ms.locfileid: "62815602"
 |-|-|  
 |**Nombre de directiva**|Estado del rol de réplica de disponibilidad|  
 |**Problema**|La réplica de disponibilidad no tiene un rol en buen estado.|  
-|**Categoría**|**Crítico**|  
-|**Faceta**|Réplica de disponibilidad|  
+|**Categoría**|**Critical)** (Crítico)|  
+|**Agrupa**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado del rol de la réplica de disponibilidad. La directiva está en mal estado cuando el rol de la réplica de disponibilidad no es principal ni secundario. De lo contrario, la directiva está en un estado correcto.  
@@ -38,13 +37,13 @@ ms.locfileid: "62815602"
 > [!NOTE]  
 >  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La réplica de disponibilidad no tiene un rol en buen estado](https://go.microsoft.com/fwlink/p/?LinkId=220856) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  El rol de esta réplica de disponibilidad está en mal estado. La réplica no tiene el rol principal o secundario.  
   
-## <a name="possible-solution-informationstilltocome"></a>Solución posible: Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>Solución posible: Information_still_to_come  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

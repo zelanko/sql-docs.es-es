@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9bdf91105e9e7db82f51b5ba9885506e2edd8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b9ba6e530942751521ef149a4fa53c4c84ab158
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953536"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926397"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>Método getBoolean (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public boolean getBoolean(java.lang.String columnName)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getBoolean especifica este método getBoolean en la interfaz java.sql.ResultSet.  
   
  Este método se admite únicamente en los tipos de datos numéricos y de caracteres. Convierte los valores "1", 1 y "**true**" en **true**, y los valores "0", 0 y "**false**" en **false**. Para el resto de los valores no se ha definido el comportamiento.  

@@ -13,10 +13,10 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285867"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Compatibilidad de Hadoop y HDFS en Integration Services (SSIS)
@@ -44,6 +44,6 @@ ms.locfileid: "71285867"
   
     -   [Origen de archivo HDFS](../integration-services/data-flow/hdfs-file-source.md)  
   
-    -   [HDFS File Destination](../integration-services/data-flow/hdfs-file-destination.md)  
+    -   [Destino de archivo HDFS](../integration-services/data-flow/hdfs-file-destination.md)  
   
   

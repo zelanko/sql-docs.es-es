@@ -11,10 +11,10 @@ ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c35024df0f34f1a66a64bc587aa928cb0daf4475
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71289383"
 ---
 # <a name="left-ssis-expression"></a>LEFT (expresión de SSIS)
@@ -35,13 +35,13 @@ LEFT(character_expression,number)
  *character_expression*  
  Expresión de caracteres de la que se van a extraer caracteres.  
   
- *number*  
+ *número*  
  Expresión entera que indica el número de caracteres que se van a devolver.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si *number* es mayor que la longitud de *character_expression*, la función devuelve *character_expression*.  
   
  Si el valor de *number* es cero, la función devuelve una cadena de longitud cero.  

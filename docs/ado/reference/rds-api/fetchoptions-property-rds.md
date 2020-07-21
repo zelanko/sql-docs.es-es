@@ -11,41 +11,41 @@ apitype: COM
 helpviewer_keywords:
 - FetchOptions property [ADO]
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964121"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752139"
 ---
 # <a name="fetchoptions-property-rds"></a>Propiedad FetchOptions (RDS)
-Indica el tipo de recuperación asincrónica.  
+Indica el tipo de captura asincrónica.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="setting-and-return-values"></a>Establecer y devolver valores  
  Establece o devuelve uno de los valores siguientes.  
   
 |Constante|Descripción|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|Todos los registros de la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) se capturan antes de devolver el control a la aplicación. La completa **Recordset** se capturan antes de la aplicación puede hacer nada con ella.|  
-|**adcFetchBackground**|Control puede volver a la aplicación tan pronto como el primer lote de registros se han obtenido. Lee una posterior de la **Recordset** que intenta obtener acceso a un registro no recuperado en el primer lote se retrasará hasta que se capturaron realmente el registro buscado, momento en el que el control vuelve a la aplicación.|  
-|**adcFetchAsync**|Predeterminado: Control vuelve inmediatamente a la aplicación mientras se capturan los registros en segundo plano. Si la aplicación intenta leer un registro que aún no se han recuperado, se leerá el registro más cercano al buscado y el control se devuelve inmediatamente, lo que indica que el extremo actual de la **Recordset** se ha alcanzado. Por ejemplo, una llamada a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá la posición actual del registro al último registro realmente recuperado, aunque haya más registros continuará rellenar el **Recordset**.|  
+|**adcFetchUpFront**|Se capturan todos los registros del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) antes de que se devuelva el control a la aplicación. Se captura el **conjunto de registros** completo antes de que la aplicación pueda hacer nada con él.|  
+|**adcFetchBackground**|El control puede volver a la aplicación en cuanto se ha capturado el primer lote de registros. Una lectura posterior del **conjunto de registros** que intenta tener acceso a un registro que no se captura en el primer lote se retrasará hasta que se recupere realmente el registro buscado, momento en el que el control de tiempo vuelve a la aplicación.|  
+|**adcFetchAsync**|Predeterminada. El control vuelve inmediatamente a la aplicación mientras se capturan los registros en segundo plano. Si la aplicación intenta leer un registro que todavía no se ha capturado, el registro más cercano al registro buscado se leerá y el control se devolverá inmediatamente, lo que indica que se ha alcanzado el final actual del **conjunto de registros** . Por ejemplo, una llamada a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá la posición del registro actual al último registro que se ha capturado realmente, aunque más registros continúen rellenando el **conjunto de registros**.|  
   
 > [!NOTE]
->  Cada archivo ejecutable del lado cliente que usa estas constantes debe proporcionar declaraciones para ellos. Puede cortar y pegar las declaraciones de constante que desee desde el archivo Adcvbs.Inc que se encuentra en la carpeta de instalación predeterminada de la biblioteca de RDS.  
+>  Cada archivo ejecutable del lado cliente que utiliza estas constantes debe proporcionar declaraciones para ellas. Puede cortar y pegar las declaraciones de constantes que desee del archivo Adcvbs. Inc, que se encuentra en la carpeta de instalación predeterminada de la biblioteca RDS.  
   
 ## <a name="remarks"></a>Comentarios  
- En una aplicación Web, normalmente es conveniente usar **adcFetchAsync** (el valor predeterminado), ya que proporciona un mejor rendimiento. En una aplicación cliente compilada, normalmente es conveniente usar **adcFetchBackground**.  
+ En una aplicación Web, normalmente querrá usar **adcFetchAsync** (el valor predeterminado), ya que proporciona un mejor rendimiento. En una aplicación cliente compilada, normalmente querrá usar **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo ExecuteOptions y FetchOptions propiedades (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades ExecuteOptions y FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel (método) (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 
 

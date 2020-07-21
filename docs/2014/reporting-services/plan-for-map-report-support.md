@@ -1,5 +1,5 @@
 ---
-title: Planear la compatibilidad de informe de mapa de | Microsoft Docs
+title: Planear la compatibilidad con informes de mapa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108079"
 ---
 # <a name="plan-for-map-report-support"></a>Planear la compatibilidad de informe de mapa
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite informes de mapas que usan orígenes de datos espaciales. Los datos espaciales pueden proceder de bases de datos de SQL Server, de archivos de forma ESRI o de la galería de mapas que se instala con Reporting Services o con el Generador de informes. Un mapa también puede mostrar un fondo de mosaicos de mapa de Bing. Un autor de informes puede crear un informe que especifique datos espaciales o mosaicos de mapa de Bing como dinámicos y recuperados en el tiempo de ejecución o como estáticos e incrustados en la definición de informe.  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]admite informes de mapas que usan orígenes de datos espaciales. Los datos espaciales pueden proceder de bases de datos de SQL Server, de archivos de forma ESRI o de la galería de mapas que se instala con Reporting Services o con el Generador de informes. Un mapa también puede mostrar un fondo de mosaicos de mapa de Bing. Un autor de informes puede crear un informe que especifique datos espaciales o mosaicos de mapa de Bing como dinámicos y recuperados en el tiempo de ejecución o como estáticos e incrustados en la definición de informe.  
   
 ## <a name="support-for-bing-maps"></a>Compatibilidad con Bing Maps  
  Los mapas pueden incluir un nivel de fondo que muestra los mosaicos de mapa de Bing. Para ver un informe publicado que tenga una capa de mosaicos de mapas, el servidor de informes debe estar configurado para recuperar mosaicos de los servicios web de Bing Maps. Para más información, consulte [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md).  
   
- En cada informe, sus autores pueden especificar si se utiliza una conexión de Capa de sockets seguros (SSL) para recuperar los mosaicos del servidor de mosaicos. Para ello, en el panel de propiedades de la capa de mosaico, debe establecer la propiedad booleana UseSecureConnection a `true`.  
+ En cada informe, sus autores pueden especificar si se utiliza una conexión de Capa de sockets seguros (SSL) para recuperar los mosaicos del servidor de mosaicos. Para ello, en el panel Propiedades de la capa de mosaico, deben establecer la propiedad booleana UseSecureConnection en `true`.  
   
 > [!NOTE]  
->  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
+>   Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## <a name="report-design-recommendations"></a>Recomendaciones de diseño de informes  
  Un buen diseño de los informes de mapas requiere que su autor evalúe los pros y los contras entre los datos espaciales estáticos y dinámicos, y que encuentre un equilibrio que sirva para los usuarios del informe. Los elementos de mapa incrustados pueden aumentar considerablemente el tamaño de la definición de informe, pero reducen el tiempo necesario para ver el informe de mapa. Los elementos de mapa dinámicos reducen el tamaño de la definición de informe, pero aumentan el tiempo necesario para procesar y ver el mapa. El autor del informe debe buscar el equilibrio adecuado entre estos aspectos opuestos.  
@@ -47,9 +47,9 @@ ms.locfileid: "66108079"
   
 -   Cuando los datos de mapa deban ser incrustados, ajuste el centro de la ventanilla y el nivel de zoom para incluir solo los datos de mapa necesarios para el informe.  
   
- Para obtener más información, [mapas &#40;generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Para obtener más información, [Maps &#40;generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

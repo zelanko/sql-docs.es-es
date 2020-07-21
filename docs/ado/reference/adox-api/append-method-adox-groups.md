@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3896de6c921f85d4b3e5a2194b1baa2fe511f22b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967315"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764056"
 ---
 # <a name="append-method-adox-groups"></a>Append (método) (grupos ADOX)
-Agrega un nuevo [grupo](../../../ado/reference/adox-api/group-object-adox.md) de objeto para el [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) colección.  
+Agrega un nuevo objeto de [Grupo](../../../ado/reference/adox-api/group-object-adox.md) a la colección de [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,21 +35,21 @@ Groups.Append Group
   
 #### <a name="parameters"></a>Parámetros  
  *Grupo*  
- El **grupo** objeto anexar o el nombre del grupo para crear y anexar.  
+ Objeto de **Grupo** que se va a anexar o nombre del grupo que se va a crear y anexar.  
   
 ## <a name="remarks"></a>Comentarios  
- El **grupos** colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) todas las cuentas de grupo del catálogo representa. El **grupos** colección para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa sólo el grupo al que pertenece el usuario.  
+ La colección de **grupos** de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las cuentas de grupo del catálogo. La colección de **grupos** para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa solo el grupo al que pertenece el usuario.  
   
- Si el proveedor no admite la creación de grupos, se producirá un error.  
+ Se producirá un error si el proveedor no admite la creación de grupos.  
   
 > [!NOTE]
->  Antes de anexar una **grupo** de objeto para el **grupos** colección de un **usuario** objeto, un **grupo** objeto con el mismo [ Nombre](../../../ado/reference/adox-api/name-property-adox.md) ya debe existir en lo que se debe anexar el **grupos** colección de la **catálogo**.  
+>  Antes de anexar un objeto de **Grupo** a la colección **Groups** de un objeto **User** , el objeto **Group** con el mismo [nombre](../../../ado/reference/adox-api/name-property-adox.md) que el que se va a anexar ya debe existir en la colección **Groups** del **Catálogo**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Colección de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [Usuarios y grupos, ChangePassword ejemplo de métodos Append (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de métodos Append y ChangePassword de grupos y usuarios (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append (método) (índices ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Append (método) (claves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a3225e4ae703f473e9c7e6679d304da596accba
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767437"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440582"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Paso 3: Modificación del Administrador de conexiones de archivos planos
   En esta tarea, modificará el administrador de conexiones de archivos planos que creó y configuró en la lección 1. Cuando se creó inicialmente, el administrador de conexiones de archivos planos se configuró para cargar de forma estática un único archivo. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, debe modificar la propiedad ConnectionString del administrador de conexiones de modo que acepte la variable `User:varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se cargará en tiempo de ejecución.  
@@ -26,21 +25,21 @@ ms.locfileid: "62767437"
   
 1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
   
-2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y, después, haga clic en el botón de puntos suspensivos **(…)**.  
+2.  En el ventana Propiedades, para las **expresiones**, haga clic en la celda vacía y, a continuación, haga clic en el botón de puntos suspensivos **(...)**.  
   
-3.  En el **Editor de expresiones de propiedad** cuadro de diálogo el **propiedad** columna, escriba o seleccione `ConnectionString`.  
+3.  En el cuadro de diálogo **Editor de expresiones de propiedad** , en la columna **propiedad** , escriba o seleccione `ConnectionString` .  
   
-4.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
+4.  En la columna **expresión** , haga clic en el botón de puntos suspensivos **(...)** para abrir el cuadro de diálogo **generador de expresiones** .  
   
 5.  En el cuadro de diálogo **Generador de expresiones** , expanda el nodo **Variables** .  
   
-6.  Arrastre la variable **User::varFileName**hasta el cuadro **Expresión** .  
+6.  Arrastre la variable **User:: varFileName**al cuadro **expresión** .  
   
 7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Generador de expresiones** .  
   
 8.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad** .  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
- [Paso 4: Probar el paquete del Tutorial lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Paso 4: Prueba del paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

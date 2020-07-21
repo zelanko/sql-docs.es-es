@@ -1,5 +1,5 @@
 ---
-title: Seleccionar características (actualización) | Microsoft Docs
+title: Seleccionar características (actualizar) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d6040e86b29c7f3d79606ee47004b0bb9c38cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058929"
 ---
 # <a name="select-features-upgrade"></a>Seleccionar características (actualización)
   Utilice la página **Seleccionar características** del Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para ver las características que se van a actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  No es posible cambiar las características que se van a actualizar en esta versión. Para agregar las características a esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete el proceso de actualización, reinicie el programa de instalación y haga clic en **Nueva instalación a Agregar características a una instalación existente** en el centro de instalación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Utilice el Asesor de actualizaciones para preparar las actualizaciones](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
+ [Usar el asesor de actualizaciones para preparar las actualizaciones](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [Trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
   

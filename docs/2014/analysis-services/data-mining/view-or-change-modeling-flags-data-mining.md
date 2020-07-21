@@ -1,5 +1,5 @@
 ---
-title: Ver o cambiar marcas de modelado (minería de datos) | Microsoft Docs
+title: Ver o cambiar las marcas de modelado (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ad72ec94c8125b2f3bd9067a3a2ce413eeaba21
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082678"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520201"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Ver o cambiar marcas de modelado (minería de datos)
   Las marcas de modelado son propiedades que se activan en una columna de estructura de minería de datos o columnas de modelo de minería de datos para controlar cómo procesa los datos el algoritmo durante el análisis.  
@@ -28,7 +27,7 @@ ms.locfileid: "66082678"
   
 1.  En SQL Server Design Studio, abra el Explorador de soluciones y, a continuación, haga doble clic en la estructura de minería de datos.  
   
-2.  Para establecer la marca de modelado NOT NULL, haga clic en la pestaña **Estructura de minería de datos** . Para establecer las marcas REGRESSOR o MODEL_EXISTENCE_ONLY, haga clic en la pestaña **Modelo de minería de datos** .  
+2.  Para establecer la marca de modelado NOT NULL, haga clic en la pestaña **estructura de minería de datos** . Para establecer las marcas de REGRESOr o MODEL_EXISTENCE_ONLY, haga clic en la pestaña **modelo de minería de datos** .  
   
 3.  Haga clic con el botón derecho en la columna que quiere ver o cambiar y seleccione **Propiedades**.  
   
@@ -50,8 +49,8 @@ ms.locfileid: "66082678"
   
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos del modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
  [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)  
   
   

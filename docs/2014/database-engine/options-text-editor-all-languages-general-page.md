@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General del Editor de texto - todos los idiomas -) | Microsoft Docs
+title: Opciones (editor de texto-todos los lenguajes-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 721ebe6d235e1a8001403d4fb9bb993dba86dd13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929973"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opciones (Editor de texto - Todos los idiomas - Página General)
   Utilice este cuadro de diálogo para establecer opciones generales de edición en los cinco editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para mostrar estas opciones, haga clic en **Opciones** en el menú **Herramientas** . Seleccione la carpeta **Editor de texto** , expanda la carpeta **Todos los lenguajes** y haga clic en **General**.  
@@ -35,7 +34,7 @@ ms.locfileid: "66089249"
  **Ocultar miembros avanzados**  
  Reduce las listas emergentes de finalización de instrucciones reducidas y muestra solo los elementos de uso más frecuente. Los demás elementos se extraen de la lista. Esta opción no está disponible si no existen miembros marcados como miembros avanzados.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  Muestra la sintaxis completa para la declaración o procedimiento actual a la izquierda del punto de inserción del editor, con todos sus parámetros disponibles. El siguiente parámetro que puede asignar aparece en negrita.  
   
 ## <a name="settings"></a>Configuración  
@@ -51,7 +50,7 @@ ms.locfileid: "66089249"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia. Esta característica no está disponible en todos los tipos de editores.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
+ **Aplicar comandos Cortar o Copiar a líneas en blanco si no hay selección**  
  Establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  
@@ -67,7 +66,7 @@ ms.locfileid: "66089249"
 > [!NOTE]  
 >  Estos números de línea no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Habilitar navegación a direcciones URL con un solo clic**  
+ **Habilitar acceso a direcciones URL con un solo clic**  
  El cursor cambia a un símbolo de mano cuando pasa por encima de una dirección URL en el editor. Puede hacer clic en la dirección URL para abrir la página indicada en el explorador web.  
   
  **Barra de navegación**  

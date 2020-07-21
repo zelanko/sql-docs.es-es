@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 548beeae68f5585c5cf2ba56b67027532ab43b71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026594"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
   En los campos de datos de caracteres, los caracteres de terminación opcionales permiten marcar el final de cada campo de un archivo de datos con un *terminador de campo* y el final de cada fila con un *terminador de fila*. Los caracteres de terminación son una forma de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro.  
@@ -37,14 +36,14 @@ ms.locfileid: "66011860"
 |Pestaña|\t<br /><br /> Terminador de campo predeterminado.|  
 |Carácter de nueva línea|\n<br /><br /> Terminador de fila predeterminado.|  
 |Retorno de carro/avance de línea|\r|  
-|Backslash<sup>1</sup>|\\\|  
-|Terminador null (terminador invisible)<sup>2</sup>|\0|  
+|Barra diagonal inversa<sup>1</sup>|\\\|  
+|Terminador null (terminador no visible)<sup>2</sup>|\0|  
 |Cualquier carácter imprimible (los caracteres de control no se pueden imprimir, excepto los valores NULL, tabulaciones, caracteres de nueva línea y retornos de carro)|(*, A, t, l, etc.)|  
 |Una cadena de hasta 10 caracteres imprimibles, incluidos algunos o todos los terminadores enumerados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t-\n, etc.)|  
   
- <sup>1</sup> sólo el t, n, r, 0 y '\0' caracteres trabajar con el carácter de escape de barra diagonal inversa para generar un carácter de control.  
+ <sup>1</sup> solo los caracteres t, n, r, 0 y ' \ 0 ' funcionan con el carácter de escape de barra diagonal inversa para generar un carácter de control.  
   
- <sup>2</sup> incluso aunque el carácter de control null (\0) no sea visible al imprimir, es un carácter distintivo en el archivo de datos. Esto significa que el uso del carácter de control NULL como terminador de campo o de fila es diferente a no tener ningún terminador de campo o de fila.  
+ <sup>2</sup> aunque el carácter de control null (\ 0) no es visible cuando se imprime, es un carácter distinto en el archivo de datos. Esto significa que el uso del carácter de control NULL como terminador de campo o de fila es diferente a no tener ningún terminador de campo o de fila.  
   
 > [!IMPORTANT]  
 >  Si en los datos hay un carácter terminador, se interpreta como un terminador, no como datos, y se interpreta que los datos posteriores a ese carácter pertenecen al campo o registro siguiente. Por lo tanto, elija los terminadores con atención para asegurarse de que nunca aparezcan en los datos. Por ejemplo, un terminador de campo que funcione como suplente inferior no resultaría una buena opción para un terminador de campo si los datos contienen dicho suplente inferior.  
@@ -56,7 +55,7 @@ ms.locfileid: "66011860"
 >  Cuando usa **bcp** en modo interactivo y especifica \n (nueva línea) como terminador de fila, **bcp** antepondrá automáticamente el carácter \r (retorno de carro) como prefijo, lo que genera un terminador de fila \r\n.  
   
 ## <a name="specifying-terminators-for-bulk-export"></a>Especificar terminadores para la exportación masiva  
- Cuando se realiza la exportación `char` o `nchar` datos y desea volver a usar un terminador no predeterminado, debe especificar el terminador en el **bcp** comando. Los terminadores se pueden especificar de cualquiera de las siguientes maneras:  
+ Cuando realiza una exportación masiva de `char` `nchar` datos o y desea usar un terminador no predeterminado, debe especificar el terminador en el comando **BCP** . Los terminadores se pueden especificar de cualquiera de las siguientes maneras:  
   
 -   Con un archivo de formato que especifica el terminador campo a campo.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66011860"
   
     -   Usar el modificador **-t** para especificar el terminador de fila en todos los campos, excepto el último campo de la fila, y usar el modificador **-r** para especificar un terminador de fila.  
   
-    -   Usar un modificador de formato de caracteres ( **-c** o **-w**) sin el modificador **-t**, lo que establece el carácter de tabulación, \t, como terminador de campo. Esto equivale a especificar **-t**\t.  
+    -   Usar un modificador de formato de caracteres ( **-c** o **-w**) sin el modificador **-t** , lo que establece el carácter de tabulación, \t, como terminador de campo. Esto equivale a especificar **-t**\t.  
   
         > [!NOTE]  
         >  Si se especifica el modificador **-n** (datos nativos) o **-N** (nativos Unicode), no se insertan los terminadores.  
@@ -97,7 +96,7 @@ ms.locfileid: "66011860"
   
  El comando **bcp** contiene los siguientes modificadores.  
   
-|Modificador|Descripción|  
+|Switch|Descripción|  
 |------------|-----------------|  
 |**-c**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
 |**-t** `,`|Especifica una coma (,) como terminador de campo.|  
@@ -127,8 +126,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|Descripción|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **=' *`field_terminator`* '**|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
-    |ROWTERMINATOR **=' *`row_terminator`* '**|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
+    |FIELDTERMINATOR **= ' *`field_terminator`* '**|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
+    |ROWTERMINATOR **= ' *`row_terminator`* '**|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
   
      Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -164,12 +163,12 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Usar BULK INSERT para especificar terminadores interactivamente  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Usar BULK INSERT para especificar terminadores interactivamente  
  En el ejemplo siguiente se importa de forma masiva el archivo de datos `Department-c-t.txt` mediante una instrucción `BULK INSERT` que utiliza los calificadores que figuran en la siguiente tabla:  
   
-|Opción|Attribute|  
+|Opción|Atributo|  
 |------------|---------------|  
-|DATAFILETYPE **='`char`'**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
+|DATAFILETYPE **= ' `char` '**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
 |FIELDTERMINATOR **='** `,` **'**|Especifica una coma (`,`) como terminador de campo.|  
 |ROWTERMINATOR **='** `\n` **'**|Especifica el terminador de fila como un carácter de nueva línea.|  
   
@@ -187,8 +186,8 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte también  
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Secuencias de Escape de fecha, hora y marca de tiempo | Microsoft Docs
+title: Secuencias de escape de fecha, hora y marca de tiempo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ODBC escape sequences [ODBC], about escape sequences
 - ODBC escape sequences [ODBC]
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2b9b62fae23932d1072ea319e1305a0853ca2d6
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051140"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807536"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Secuencias de escape de fecha, hora y marca de tiempo
-ODBC define secuencias de escape para fecha, hora y marca de tiempo literales. La sintaxis de estas secuencias de escape es como sigue:  
+ODBC define secuencias de escape para los literales de fecha, hora y marca de tiempo. La sintaxis de estas secuencias de escape es la siguiente:  
   
 ```  
   
@@ -32,25 +32,54 @@ ODBC define secuencias de escape para fecha, hora y marca de tiempo literales. L
 {ts 'value'}  
 ```  
   
- En la notación de BNF, la sintaxis es como sigue:  
+ En la notación BNF, la sintaxis es la siguiente:  
   
-```  
-  
-      ODBC-date-time-escape ::=  
+```bnf 
+ODBC-date-time-escape ::=  
      ODBC-date-escape  
      | ODBC-time-escape  
-     | ODBC-timestamp-escapeODBC-date-escape ::=  
-     ODBC-esc-initiator d 'date-value' ODBC-esc-terminatorODBC-time-escape ::=  
-     ODBC-esc-initiator t 'time-value' ODBC-esc-terminatorODBC-timestamp-escape ::=  
-     ODBC-esc-initiator ts 'timestamp-value' ODBC-esc-terminatorODBC-esc-initiator ::= {  
+     | ODBC-timestamp-escape
+
+ODBC-date-escape ::=  
+     ODBC-esc-initiator d 'date-value' ODBC-esc-terminator
+
+ODBC-time-escape ::=  
+     ODBC-esc-initiator t 'time-value' ODBC-esc-terminator
+
+ODBC-timestamp-escape ::=  
+     ODBC-esc-initiator ts 'timestamp-value' ODBC-esc-terminator
+
+ODBC-esc-initiator ::= {  
+
 ODBC-esc-terminator ::= }  
+
 date-value ::=   
-     years-value date-separator months-value date-separator days-valuetime-value ::=   
-     hours-value time-separator minutes-value time-separatorseconds-valuetimestamp-value ::= date-value timestamp-separator time-valuedate-separator ::= -  
+     years-value date-separator months-value date-separator days-value
+
+time-value ::=   
+     hours-value time-separator minutes-value time-separator seconds-value
+
+timestamp-value ::= date-value timestamp-separator time-value
+
+date-separator ::= -  
+
 time-separator ::= :  
+
 timestamp-separator ::=  
-     (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
+     (The blank character)
+
+years-value ::= digit digit digit digit
+
+months-value ::= digit digit
+
+days-value ::= digit digit
+
+hours-value ::= digit digit
+
+minutes-value ::= digit digit
+
+seconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Si los tipos de datos de fecha, hora y marca de tiempo son compatibles con el origen de datos, se admiten las secuencias de escape literal de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.
+## <a name="remarks"></a>Observaciones  
+ Las secuencias de escape de fecha, hora y marca de tiempo se admiten si el origen de datos admite los tipos de datos de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.

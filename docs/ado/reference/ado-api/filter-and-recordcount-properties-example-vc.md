@@ -1,5 +1,5 @@
 ---
-title: Ejemplo Filter y RecordCount propiedades (VC ++) | Microsoft Docs
+title: Ejemplo de las propiedades Filter y RecordCount (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - RecordCount property [ADO], VC++ example
 - Filter property [ADO], VC++ example
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932665"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763446"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Ejemplo Filter y RecordCount propiedades (VC ++)
-Este ejemplo se usa el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para abrir una nueva [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) según una condición especificada se aplica a una existente **Recordset**. Usa el [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para mostrar el número de registros en los dos **conjuntos de registros**. La función FilterField es necesaria ejecutar este procedimiento.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Ejemplo de las propiedades Filter y RecordCount (VC + +)
+En este ejemplo se usa la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) para abrir un nuevo [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basándose en una condición especificada aplicada a un **conjunto de registros**existente. Usa la propiedad [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para mostrar el número de registros de los dos **conjuntos de registros**. La función FilterField es necesaria para que este procedimiento se ejecute.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -286,7 +286,7 @@ void PrintComError(_com_error &e) {
 USA  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Orders in original recordset:  
@@ -302,7 +302,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad de filtro](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedad Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

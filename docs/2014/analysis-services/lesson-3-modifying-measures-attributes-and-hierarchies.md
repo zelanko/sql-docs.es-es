@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Modificar medidas, atributos y jerarquías | Microsoft Docs'
+title: 'Lección 3: modificar medidas, atributos y jerarquías | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18312c8c597c783ad3f30dab0bdd386f7e560de6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078780"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543357"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificación de medidas, atributos y jerarquías
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
   Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
   
 > [!NOTE]  
@@ -40,8 +39,8 @@ ms.locfileid: "66078780"
  [Examinar el cubo implementado](lesson-3-5-browsing-the-deployed-cube.md)  
  En esta tarea, debe explorar los datos del cubo usando el explorador del Diseñador de cubos.  
   
-## <a name="see-also"></a>Vea también  
- [Escenario de Tutorial de Analysis Services](analysis-services-tutorial-scenario.md)   
+## <a name="see-also"></a>Consulte también  
+ [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   
  [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

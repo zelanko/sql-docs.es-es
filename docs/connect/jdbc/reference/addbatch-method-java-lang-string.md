@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 093f6c3b-49a6-4043-9993-bd0482de04dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42045bee1dca5d2a9c5fc748f5d7a1c5ebbca9de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 748828e4d58afa1fd9c5ee637e702a2403400b7a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956015"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923020"
 ---
 # <a name="addbatch-method-javalangstring"></a>Método addBatch (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public void addBatch(java.lang.String sql)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método addBatch se especifica mediante el método addBatch en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método addBatch especifica este método addBatch en la interfaz java.sql.Statement.  
   
  Si se llama a este método se producirá una excepción, ya que la instrucción SQL para el objeto SQLServerPreparedStatement se especificó cuando se creó el objeto.  
   

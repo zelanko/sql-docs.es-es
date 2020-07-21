@@ -12,16 +12,16 @@ helpviewer_keywords:
 - interoperability [ODBC], levels
 - generic applications [ODBC]
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 607676d5370f02ee1d39196bff9261bc897521ee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139296"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305556"
 ---
 # <a name="generic-applications"></a>Aplicaciones genéricas
-Aplicaciones genéricas en ocasiones, realizan una tarea codificado de forma rígida, como una hoja de cálculo de recuperación de datos de una base de datos. También es posible que realizan diversas tareas definidas por el usuario, como una aplicación de consultas genérico que permite al usuario escribir y ejecutar una instrucción SQL. ¿Qué aplicaciones genéricas tienen en común es que deben trabajar con una variedad de diferentes DBMS y que el desarrollador no conoce de antemano cuál será estos DBMS.  
+A veces, las aplicaciones genéricas realizan una tarea codificada de forma rígida, como una hoja de cálculo que recupera datos de una base de datos. También pueden realizar una serie de tareas definidas por el usuario, como una aplicación de consulta genérica que permite al usuario escribir y ejecutar una instrucción SQL. Lo habitual de las aplicaciones genéricas es que deben funcionar con una variedad de DBMS diferentes y que el desarrollador no sabe de antemano qué serán estos DBMS.  
   
- Por lo tanto, deben ser muy interoperable aplicaciones genéricas. El desarrollador debe realizar numerosas opciones, compensando la interoperabilidad de características y debe escribir código que espera que los controladores para admitir una amplia gama de funcionalidad. Mientras las aplicaciones genéricas se podrían optimizar para trabajar con DBMS conocidos, rara vez contienen código específico del controlador o específicos para DBMS.
+ Por lo tanto, las aplicaciones genéricas deben ser altamente interoperables. El desarrollador debe tomar muchas decisiones, desmarcando la interoperabilidad de las características y debe escribir código que espera que los controladores admitan una amplia gama de funcionalidades. Aunque es posible que las aplicaciones genéricas estén optimizadas para trabajar con DBMS populares, rara vez contienen código específico del controlador o específico del DBMS.

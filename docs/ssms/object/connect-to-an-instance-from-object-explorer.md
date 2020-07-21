@@ -1,6 +1,6 @@
 ---
-title: Conexión a SQL Server o Azure SQL Database | Microsoft Docs
-ms.custom: ''
+title: Conexión a SQL Server o Azure SQL Database
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264609"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257213"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conexión a SQL Server o Azure SQL Database
 
@@ -28,11 +28,11 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 
 1. En **Explorador de objetos**, haga clic en **Conectar > Motor de base de datos...** .
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![conectar](../media/connect-to-server/connect-db-engine.png)
 
 1. Rellene el formulario **Conectar al servidor** y haga clic en **Conectar**:
 
-   ![Conexión al servidor](../media/connect-to-server/connect.png)
+   ![conectar con el servidor](../media/connect-to-server/connect.png)
 
 1. Si se está conectando a un servidor SQL de Azure, puede que se le pida que inicie sesión para crear una regla de firewall. Haga clic en **Iniciar sesión...** . Si no es así, vaya directamente al paso 6.
 
@@ -46,9 +46,9 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 
 1. El servidor se mostrará en el **Explorador de objetos** después de conectarse correctamente:
 
-   ![Conectado](../media/connect-to-server/connected.png)
+   ![connected](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 [Diseño, creación y actualización de tablas](../visual-db-tools/design-tables-visual-database-tools.md)
 
@@ -58,6 +58,6 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 [Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Servicio de integración](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Almacenamiento de Azure](../f1-help/connect-to-microsoft-azure-storage.md)  

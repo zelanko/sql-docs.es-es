@@ -1,5 +1,5 @@
 ---
-title: Instancia de usuario - Configuración del motor de base de datos | Microsoft Docs
+title: 'Configuración de Motor de base de datos: instancia de usuario | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f3ec55aa69653667e5f968d0b4368b200431b70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054952"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configuración del motor de base de datos - Instancia de usuario
   Utilice la página **Instancia de usuario** para generar una instancia independiente de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usuarios sin permisos de administrador, y para agregar usuarios al rol Administrador.  

@@ -16,20 +16,19 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241227"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065523"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Preprocesar un esquema para combinar esquemas incluidos
   El elemento **include** de W3C XSD proporciona compatibilidad con la modularidad de esquemas en la que un esquema XML se puede dividir en más de un archivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite este elemento. El servidor rechazará los esquemas XML que incluyan este elemento.  
   
- Para solucionar este problema, los esquemas XML que incluyen la directiva \<xsd:include> se pueden procesar previamente para copiar y combinar el contenido de todos los esquemas incluidos en un solo esquema para cargarlo en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
+ Como solución, los esquemas XML que incluyen la \<xsd:include> Directiva se pueden procesar previamente para copiar y combinar el contenido de los esquemas incluidos en un solo esquema para cargar en el servidor. Se puede utilizar el código C# siguiente para el preprocesamiento. Los comentarios de la primera parte del código proporcionan información acerca de su utilización.  
   
 ```  
 // XSD Schema Include Normalizer  
@@ -190,7 +189,7 @@ public class XmlSchemaIncludeNormalizer
 ## <a name="testing-the-preprocessor-tool"></a>Probar la herramienta de preprocesador  
  Puede utilizar los esquemas XSD siguientes para probar la herramienta de preprocesador:  
   
-### <a name="bookscommonxsd"></a>books_common.xsd  
+### <a name="books_commonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -212,7 +211,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colecciones de esquemas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
   
   

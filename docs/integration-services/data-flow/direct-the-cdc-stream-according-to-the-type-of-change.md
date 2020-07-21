@@ -11,10 +11,10 @@ ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7af6ce4ebf3e412c2283e16e008cfd97cd34df0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292839"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Dirigir el flujo CDC según el tipo de cambio
@@ -40,11 +40,11 @@ ms.locfileid: "71292839"
   
 6.  Seleccione una de las siguientes salidas:  
   
-    -   Salida Delete: la salida adonde se dirigen las filas de cambios DELETE.  
+    -   Salida Delete: la salida donde se dirigen las filas de cambios DELETE.  
   
-    -   Salida Insert: la salida adonde se dirigen las filas de cambios INSERT.  
+    -   Salida Insert: la salida donde se dirigen las filas de cambios INSERT.  
   
-    -   Salida Update: la salida adonde se dirigen las filas de cambios UPDATE antes o después y las filas de cambios de combinación.  
+    -   Salida Update: la salida donde se dirigen las filas de cambios UPDATE antes o después y las filas de cambios Merge.  
   
 7.  Opcionalmente, puede configurar las propiedades avanzadas mediante el cuadro de diálogo **Editor avanzado** .  
   

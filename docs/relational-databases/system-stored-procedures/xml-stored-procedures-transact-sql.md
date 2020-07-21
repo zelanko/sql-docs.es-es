@@ -1,5 +1,5 @@
 ---
-title: XML procedimientos almacenados (Transact-SQL) | Microsoft Docs
+title: Procedimientos almacenados XML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 11c84ddb-662b-43a6-9625-9eaa589f0966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66f944e1be0edec50492f0eb732bdd03575891f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47634ca0584dce437802977263a3a098ba3e9b8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783628"
 ---
 # <a name="xml-stored-procedures-transact-sql"></a>Procedimientos almacenados de XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes sistemas procedimientos almacenan que se usan para la administración de texto XML.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite los siguientes procedimientos almacenados del sistema que se usan para la administración de texto XML.  
   
 |||  
 |-|-|  
 |[sp_xml_preparedocument](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)|[sp_xml_removedocument](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: 'Página Especificar opciones de grupo de disponibilidad (Asistente para nuevo grupo de disponibilidad): SQL Server | Microsoft Docs'
-ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
-ms.custom: seodec18
+title: 'Asistente para grupos de disponibilidad: Especificación de las opciones de grupo de disponibilidad'
+description: Describe las opciones que se encuentran en la página "Especificar nombre de grupo de disponibilidad" del Asistente para grupos de disponibilidad en SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,24 +13,24 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 202493fb2ee8a05408f82927f82f2b696aa19331
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014018"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883095"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Página Especificar opciones de grupo de disponibilidad para un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen las opciones de la página **Especificar nombre de grupo de disponibilidad** . Este tema lo utilizan [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="PageOptions"></a> Especificar opciones de grupo de disponibilidad  
+##  <a name="specify-availability-group-options"></a><a name="PageOptions"></a> Especificar opciones de grupo de disponibilidad  
  **Nombre del grupo de disponibilidad**  
  Especifique el nombre del grupo de disponibilidad. En el caso de un nuevo grupo de disponibilidad, especifique un identificador válido de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que sea exclusivo en todos los grupos de disponibilidad del clúster de conmutación por error de Windows Server (WSFC). La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
 
  **Tipo de clúster** Después, especifique el tipo de clúster. Los tipos de clúster posibles dependen de la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y del sistema operativo. Elija una de las opciones de la siguiente lista:
 
-   * **Clústeres de conmutación por error de Windows Server**
+   * **Agrupación en clústeres de conmutación por error de Windows Server**
    
       Use esta opción cuando el grupo de disponibilidad se hospede en instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pertenecen a un clúster de conmutación por error de Windows Server para alta disponibilidad y recuperación ante desastres. Esto es válido en todas las versiones compatibles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "68014018"
 
 Select Databases Page (New Availability Group Wizard and Add Database Wizard)  
   
-##  <a name="LaunchWiz"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

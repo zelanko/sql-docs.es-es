@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109590"
 ---
 # <a name="csv-device-information-settings"></a>Configuración de la información del dispositivo CSV
@@ -25,7 +25,7 @@ ms.locfileid: "66109590"
   
  En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato de texto.  
   
-|Parámetro|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
 |`Encoding`|Nombre del organismo Internet Assigned Numbers Authority (IANA) de una codificación de caracteres que es compatible con .NET Framework. El valor predeterminado es `UTF-8`. Entre los ejemplos de otros valores se incluyen ASCII, UTF-7 y UTF-16.|  
 |`ExcelMode`|Especifica que la salida de destino es para Excel. El valor predeterminado es `true`.|  
@@ -37,10 +37,10 @@ ms.locfileid: "66109590"
 |**SuppressLineBreaks**|Indica si los saltos de línea se quitan de los datos incluidos en la salida. El valor predeterminado es `false`. Si el valor es `true`, `FieldDelimiter`, los valores `RecordDelimiter` y `Qualifier` no pueden ser un carácter de espacio en blanco.|  
 |`UseFormattedValues`|Indica si las cadenas con formato se colocan en la salida CSV. El valor predeterminado es `true` cuando `ExcelMode` es `true`; de lo contrario es `false`.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Pasar la configuración de información de dispositivo a las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizar los parámetros de extensión de representación en RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referencia técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

@@ -10,15 +10,14 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPARMCM.F1
 - SQL11.DTS.DESIGNER.AFPARMCM.F1
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1dce4def11f14072295dbf3cde9d5ab77304fe74
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061359"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439352"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Administrador de conexiones de Azure Resource Manager
 El **Administrador de conexiones de Azure Resource Manager** permite que un paquete SSIS administre los recursos de Azure con una [entidad de servicio](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).

@@ -1,5 +1,5 @@
 ---
-title: 'Jet: Fecha, hora y marca de tiempo literales | Microsoft Docs'
+title: 'Jet: fecha, hora y literales de marca de tiempo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - timestamp literals [ODBC]
 - time literals [ODBC]
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 372b7c1dab1ad8ff000fb88729c3b02e05d4a21c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085492"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299944"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: Fecha, hora y marca de tiempo literales
-Para obtener la máxima interoperatividad, las aplicaciones deben pasar literales de fecha en el formato canónico de ODBC con la sintaxis de la cláusula de escape:  
+Para obtener la máxima interoperabilidad, las aplicaciones deben pasar los literales de fecha en el formato canónico de ODBC mediante la sintaxis de la cláusula de escape:  
   
--   Para los literales de fecha, {d. '*valor*"}, donde *valo*e tiene el formato"aaaa-mm-dd"  
+-   En el caso de los literales de fecha, {d '*Value*'}, donde *Valo*e tiene el formato "AAAA-MM-DD"  
   
--   Para los literales de hora, {t '*valor*"}, donde *valo*e tiene el formato"hh"  
+-   En el caso de los literales de hora, {t '*Value*'}, donde *Valo*e tiene el formato "HH: mm: SS"  
   
- Marca de tiempo literales {ts'*valor*'}, donde *valo*e tiene el formato "aaaa-mm-dd hh: mm: [. f...]".
+ Para los literales de marca de tiempo {ts '*Value*'}, donde *Valo*e tiene el formato "AAAA-MM-DD HH: mm: SS [. f...]".

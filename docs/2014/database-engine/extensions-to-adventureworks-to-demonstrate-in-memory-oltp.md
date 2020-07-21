@@ -1,5 +1,5 @@
 ---
-title: Las extensiones de AdventureWorks para mostrar OLTP en memoria | Microsoft Docs
+title: Extensiones de AdventureWorks para mostrar OLTP en memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966174c359675a06565b57fe4acb02b43ff39892
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933093"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
@@ -33,26 +32,26 @@ ms.locfileid: "62779981"
   
 -   [Requisitos previos](#Prerequisites) para instalar el ejemplo y ejecutar la carga de trabajo de demostración  
   
--   Instrucciones para [Instalación de la muestra OLTP en memoria basada en AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
+-   Instrucciones para [Instalar el ejemplo de In-Memory OLTP basado en AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
--   [Descripción de las tablas de ejemplo y los procedimientos](#Descriptionofthesampletablesandprocedures) -contiene descripciones de las tablas y procedimientos que se agrega a AdventureWorks por la [!INCLUDE[hek_2](../includes/hek-2-md.md)] ejemplo, así como consideraciones sobre la migración algunas del original las tablas AdventureWorks optimizado para memoria  
+-   [Descripción de las tablas y los procedimientos de ejemplo](#Descriptionofthesampletablesandprocedures) : incluye descripciones de las tablas y los procedimientos agregados a AdventureWorks por el [!INCLUDE[hek_2](../includes/hek-2-md.md)] ejemplo, así como consideraciones para migrar algunas de las tablas originales de AdventureWorks a la optimización para memoria  
   
 -   Instrucciones para realizar [Medidas de rendimiento con la carga de trabajo de demostración](#PerformanceMeasurementsusingtheDemoWorkload): contiene instrucciones para instalar y ejecutar ostress, una herramienta que se usa para controlar la carga de trabajo y para ejecutar la carga de trabajo de demostración propiamente dicha.  
   
 -   [Uso de memoria y de espacio en disco del ejemplo](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM: edición Evaluation, Developer o Enterprise  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM: Evaluation, Developer o Enterprise Edition  
   
--   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener instrucciones generales de hardware para [!INCLUDE[hek_2](../includes/hek-2-md.md)], consulte el blog siguiente:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener instrucciones generales sobre el hardware de [!INCLUDE[hek_2](../includes/hek-2-md.md)] , consulte la siguiente entrada de blog:[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Instalar el ejemplo de [!INCLUDE[hek_2](../includes/hek-2-md.md)] basado en AdventureWorks  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Instalar el [!INCLUDE[hek_2](../includes/hek-2-md.md)] ejemplo basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
   
 1.  Descargue el archivo de la copia de seguridad completa de la base de datos AdventureWorks2014:  
   
-    1.  Abra la dirección siguiente: [ http://msftdbprodsamples.codeplex.com/downloads/get/880661 ](http://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  Abra lo siguiente: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  Se le pedirá que guarde el archivo en una carpeta local.  
   
@@ -87,13 +86,13 @@ ms.locfileid: "62779981"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Descargue el script de ejemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' desde [ejemplo de OLTP de SQL Server 2014 RTM en memoria](https://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
+5.  Descargue el script de ejemplo ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' del [ejemplo de OLTP en memoria SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
   
-6.  Actualice el valor de la variable 'checkpoint_files_location' en la secuencia de comandos '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', para que apunte a la ubicación de destino para la [!INCLUDE[hek_2](../includes/hek-2-md.md)] archivos de punto de comprobación. Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
+6.  Actualice el valor de la variable ' checkpoint_files_location ' en el script ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' para que apunte a la ubicación de destino de los [!INCLUDE[hek_2](../includes/hek-2-md.md)] archivos de punto de comprobación. Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
   
      Actualice el valor de la variable 'database_name' para que señale a la base de datos AdventureWorks2014.  
   
-    1.  No olvide incluir la barra diagonal inversa '\' como parte del nombre de ruta de acceso  
+    1.  Asegúrese de incluir la barra diagonal inversa ' \' como parte del nombre de ruta de acceso  
   
     2.  Ejemplo:  
   
@@ -113,15 +112,15 @@ ms.locfileid: "62779981"
   
     2.  Con Management Studio:  
   
-        1.  Abra el script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql' en una ventana de consulta  
+        1.  Abra el script ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' en una ventana de consulta.  
   
         2.  Conéctese al servidor de destino que contiene la base de datos AdventureWorks2014.  
   
-        3.  Habilite el modo SQLCMD haciendo clic en 'Consulta -> modo SQLCMD'  
+        3.  Habilite el modo SQLCMD; para ello, haga clic en "modo de consulta > SQLCMD"  
   
-        4.  Haga clic en el botón 'Ejecutar' para ejecutar la secuencia de comandos  
+        4.  Haga clic en el botón ' ejecutar ' para ejecutar el script.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Descripción de las tablas y los procedimientos de ejemplo:  
+##  <a name="description-of-the-sample-tables-and-procedures"></a><a name="Descriptionofthesampletablesandprocedures"></a>Descripción de las tablas y los procedimientos de ejemplo  
  El ejemplo crea nuevas tablas para productos y pedidos de venta basadas en tablas existentes en AdventureWorks. El esquema de las nuevas tablas es similar a las tablas existentes, con algunas diferencias, como se explica a continuación.  
   
  Las nuevas tablas optimizadas para memoria llevan el sufijo "_inmem". El ejemplo también incluye las tablas correspondientes que llevan el sufijo "_ondisk"; estas tablas se pueden usar para realizar una comparación uno a uno entre el rendimiento de las tablas optimizadas para memoria y las tablas basadas en disco del sistema.  
@@ -186,7 +185,7 @@ ms.locfileid: "62779981"
   
 -   *Columnas que aceptan valores NULL en claves de índice:* en la tabla original, la columna SalesPersonID acepta valores NULL, mientras que en las tablas nuevas esa columna no acepta valores NULL y tiene una restricción DEFAULT con el valor (-1). Esto se debe a que los índices de las tablas optimizadas para memoria no pueden tener columnas que aceptan valores NULL en la clave de índice; -1 es un suplente para NULL en este caso.  
   
--   *Columnas calculadas:* se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
+-   *Columnas calculadas*: se omiten las columnas calculadas SalesOrderNumber y TotalDue, ya que [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no admite columnas calculadas en tablas optimizadas para memoria. La nueva vista Sales.vSalesOrderHeader_extended_inmem refleja las columnas SalesOrderNumber y TotalDue. Por tanto, puede usar esta vista si se necesitan estas columnas.  
   
 -   Las tablas optimizadas para memoria no admiten*restricciones de clave externa* en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Además, SalesOrderHeader_inmem es una tabla sin interrupción en la carga de trabajo de ejemplo, y las restricciones de clave externa requieren un procesamiento adicional para todas las operaciones DML, ya que tienen que hacer búsquedas en todas las demás tablas a las que se hace referencia en estas restricciones. Por tanto, la suposición es que la aplicación garantiza la integridad referencial, y la integridad referencial no se valida cuando se insertan filas. La integridad referencial de los datos de esta tabla se puede comprobar con el procedimiento almacenado dbo.usp_ValidateIntegrity, mediante el script siguiente:  
   
@@ -208,7 +207,7 @@ ms.locfileid: "62779981"
   
 -   *Restricciones DEFAULT*: igual que en SalesOrderHeader, la restricción DEFAULT que requiere la fecha y la hora del sistema no se migra; en su lugar, el procedimiento almacenado que inserta pedidos de venta se encarga de insertar la fecha y la hora actuales del sistema en la primera inserción.  
   
--   *Columnas calculadas*: la columna calculada LineTotal no se ha migrado, ya que en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] no se admiten columnas calculadas en las tablas optimizadas para memoria. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
+-   *Columnas calculadas* : la columna calculada LineTotal no se migró porque no se admiten columnas calculadas con tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -223,7 +222,7 @@ ms.locfileid: "62779981"
   
 -   *UDT de alias*: en la tabla original se usa el tipo de datos definido por el usuario dbo.Flag, que equivale al tipo de datos del sistema bit. La tabla migrada usa el tipo de datos bit en su lugar.  
   
--   *Intercalación BIN2* -las columnas Name y ProductNumber se incluyen en las claves de índice y, por tanto, deben tener intercalaciones BIN2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aquí, la suposición es que la aplicación no emplea las características de intercalación, como no distinguir mayúsculas de minúsculas.  
+-   *Intercalación BIN2* : las columnas Name y ProductNumber se incluyen en las claves de índice y, por tanto, deben tener intercalaciones BIN2 en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Aquí, la suposición es que la aplicación no emplea las características de intercalación, como no distinguir mayúsculas de minúsculas.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -245,7 +244,7 @@ ms.locfileid: "62779981"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* : se omite la columna rowguid. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
+-   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
  Sales.SpecialOfferProduct  
   
@@ -385,7 +384,7 @@ ms.locfileid: "62779981"
   
     -   Usa los procedimientos del asistente dbo.usp_GenerateCKCheck, dbo.usp_GenerateFKCheck y dbo.GenerateUQCheck para generar el código T-SQL necesario para realizar las comprobaciones de integridad.  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> Medidas de rendimiento con la carga de trabajo de demostración  
+##  <a name="performance-measurements-using-the-demo-workload"></a><a name="PerformanceMeasurementsusingtheDemoWorkload"></a>Medidas de rendimiento con la carga de trabajo de demostración  
  Ostress es una herramienta de línea de comandos desarrollada por el equipo de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Esta herramienta se puede usar para ejecutar consultas o ejecutar procedimientos almacenados en paralelo. Puede configurar el número de subprocesos para ejecutar una instrucción T-SQL proporcionada en paralelo y puede especificar cuántas veces se debe ejecutar la instrucción en este subproceso; ostress recorrerá los subprocesos y ejecutará la instrucción en todos ellos en paralelo. Una vez que concluya la ejecución en todos los subprocesos, ostress notificará el tiempo empleado en finalizar la ejecución en todos los subprocesos.  
   
 ### <a name="installing-ostress"></a>Instalar ostress  
@@ -393,7 +392,7 @@ ms.locfileid: "62779981"
   
  Pasos para la instalación:  
   
-1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente: [https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  Descargue y ejecute el paquete de instalación x64 para las utilidades de RML desde la página siguiente:[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  Si aparece un cuadro de diálogo que indica que algunos archivos están en uso, haga clic en "Continue" (Continuar).  
   
@@ -412,7 +411,7 @@ ms.locfileid: "62779981"
   
 -   -S nombre de la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la que se va a conectar  
   
--   -E usar autenticación de Windows para conectarse (valor predeterminado); Si usas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación, utilice las opciones-u y -P para especificar el nombre de usuario y la contraseña, respectivamente  
+-   -E usar autenticación de Windows para conectarse (valor predeterminado); Si usa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la autenticación de, use las opciones-usted y-P para especificar el nombre de usuario y la contraseña, respectivamente.  
   
 -   -d nombre de la base de datos; para este ejemplo, AdventureWorks2014  
   
@@ -462,7 +461,7 @@ END
  Se usará la herramienta ostress para ejecutar los scripts con varias conexiones simultáneas. Se usará el parámetro "-n" para controlar el número de conexiones y el parámetro "r" para controlar cuántas veces se ejecuta el script en cada conexión.  
   
 #### <a name="functional-validation-of-the-workload"></a>Validación funcional de la carga de trabajo  
- Para comprobar que todo funciona, comenzaremos con una prueba de ejemplo, usando 10 conexiones simultáneas y 5 iteraciones, para insertar un total de 10 * 5 \* 20 = 1000 pedidos de ventas.  
+ Para comprobar que todo funciona, comenzaremos con una prueba de ejemplo, con 10 conexiones simultáneas y 5 iteraciones, insertando un total de 10 * 5 \* 20 = 1000 pedido de ventas.  
   
  Con el comando siguiente suponemos que se usa la instancia predeterminada en el equipo local. Si va a usar una instancia con nombre o un servidor remoto, cambie el nombre del servidor en consecuencia con el parámetro -S.  
   
@@ -491,7 +490,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
   
  Como medida de rendimiento de la carga de trabajo usamos el tiempo transcurrido notificado por ostress.exe después de ejecutar la carga de trabajo.  
   
-##### <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
+##### <a name="memory-optimized-tables"></a>Tablas optimizadas para memoria  
  Empezaremos ejecutando la carga de trabajo en las tablas optimizadas para memoria. El comando siguiente abre 100 subprocesos, cada uno de los cuales se ejecuta para 5.000 iteraciones.  Cada iteración inserta 20 pedidos de venta en transacciones diferentes. Hay 20 inserciones por iteración para compensar el hecho de que la base de datos se usa para generar los datos que se van a insertar. Esto produce un total de 20 * 5000 \* 100 = 10 000 000 inserciones de pedidos de venta.  
   
  Abra RML Cmd Prompt y ejecute el comando siguiente:  
@@ -519,7 +518,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  En un servidor de prueba con un número total de 8 núcleos físicos (16 lógicos), se tardaron 41 minutos y 25 segundos. En un segundo servidor de prueba con 24 núcleos físicos (48 lógicos), se tardaron 52 minutos y 16 segundos.  
   
- La causa principal de la diferencia de rendimiento entre las tablas optimizadas para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede utilizar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de [!INCLUDE[hek_2](../includes/hek-2-md.md)] no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por lo tanto, las transacciones simultáneas no bloquean la otra inserciones, lo que permite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para utilizar totalmente la CPU.  
+ La causa principal de la diferencia de rendimiento entre las tablas optimizadas para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede utilizar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de [!INCLUDE[hek_2](../includes/hek-2-md.md)] no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por lo tanto, las transacciones simultáneas no bloquean las inserciones de las demás, lo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que permite que se use totalmente la CPU.  
   
  Puede observar el uso de la CPU mientras se está ejecutando la carga de trabajo, por ejemplo con el Administrador de tareas. Con las tablas basadas en disco verá que el uso de la CPU está muy alejado del 100 %. En una configuración de prueba con 16 procesadores lógicos, el uso rondaría el 24 %.  
   
@@ -536,23 +535,23 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  Se recomienda restablecer la demostración tras cada ejecución. Como esta carga de trabajo solo realiza inserciones, cada ejecución consume más memoria, por lo que es necesario un restablecimiento para no quedarse sin memoria. La cantidad de memoria consumida después de una ejecución se explica en la sección [Utilización de memoria después de ejecutar la carga de trabajo](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Solucionar problemas de pruebas de ejecución lenta  
+###  <a name="troubleshooting-slow-running-tests"></a><a name="Troubleshootingslow-runningtests"></a>Solucionar problemas de pruebas de ejecución lenta  
  Los resultados de prueba variarán normalmente según el hardware, y también el nivel de simultaneidad empleado en la serie de pruebas. He aquí varios aspectos que hay que examinar si los resultados no son los esperados:  
   
--   Número de transacciones simultáneas: Cuando se ejecuta la carga de trabajo en un único subproceso, el aumento del rendimiento con [!INCLUDE[hek_2](../includes/hek-2-md.md)] probablemente será menor que 2 X. La contención de bloqueos temporales solo supone un gran problema si hay un nivel elevado de simultaneidad.  
+-   Número de transacciones simultáneas: cuando se ejecuta la carga de trabajo en un solo subproceso, el aumento del rendimiento con [!INCLUDE[hek_2](../includes/hek-2-md.md)] probablemente será menor del doble. La contención de bloqueos temporales solo supone un gran problema si hay un nivel elevado de simultaneidad.  
   
--   Pocos núcleos disponibles para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Esto significa que habrá un bajo nivel de simultaneidad en el sistema, ya que solo pueden haber tantas transacciones que ejecutan simultáneamente como núcleos disponibles haya en SQL.  
+-   Pocos núcleos disponibles para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: esto significa que habrá un bajo nivel de simultaneidad en el sistema, ya que solo puede haber tantas transacciones que se ejecutan simultáneamente como núcleos disponibles haya en SQL.  
   
     -   Síntoma: si la utilización de la CPU es alta cuando se ejecuta la carga de trabajo en tablas basadas en disco, significa que no hay mucha contención, lo que apunta a una falta de simultaneidad.  
   
--   Velocidad de la unidad de registro: Si la unidad de registro no se puede seguir con el nivel de rendimiento de las transacciones en el sistema, la carga de trabajo se convierte en un cuello de botella de E/S de registro. Aunque el registro es más eficaz con [!INCLUDE[hek_2](../includes/hek-2-md.md)], si la E/S de registro es un cuello de botella, se limita el aumento potencial de rendimiento.  
+-   Velocidad de la unidad de registro: si la unidad de registro no puede seguir el nivel de rendimiento de transacciones del sistema, la carga de trabajo se convierte en un cuello de botella para la E/S de registro. Aunque el registro es más eficaz con [!INCLUDE[hek_2](../includes/hek-2-md.md)], si la E/S de registro es un cuello de botella, se limita el aumento potencial de rendimiento.  
   
     -   Síntoma: si la utilización de la CPU no está cercana al 100 % o tiene muchos picos cuando se ejecuta la carga de trabajo en tablas optimizadas para memoria, es posible que haya un cuello de botella de la E/S de registro. Esto se puede confirmar abriendo el Monitor de recursos y examinando la longitud de la cola de la unidad de registro.  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Uso de memoria y de espacio en disco del ejemplo  
+##  <a name="memory-and-disk-space-utilization-in-the-sample"></a><a name="MemoryandDiskSpaceUtilizationintheSample"></a>Uso de memoria y espacio en disco en el ejemplo  
  A continuación se describe qué cabe esperar en cuando a uso de la memoria y del espacio en disco para la base de datos de ejemplo. También se muestran los resultados obtenidos en un servidor de prueba con 16 núcleos lógicos.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Uso de memoria para las tablas optimizadas para memoria  
+###  <a name="memory-utilization-for-the-memory-optimized-tables"></a><a name="Memoryutilizationforthememory-optimizedtables"></a>Uso de memoria para las tablas optimizadas para memoria  
   
 #### <a name="overall-utilization-of-the-database"></a>Utilización global de la base de datos  
  Se puede usar la consulta siguiente para obtener la utilización de memoria total para [!INCLUDE[hek_2](../includes/hek-2-md.md)] en el sistema.  
@@ -568,11 +567,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|94|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Valor predeterminado|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
   
  Los distribuidores de memoria predeterminados contienen estructuras de memoria de todo el sistema y son relativamente pequeños. El distribuidor de memoria para la base de datos de usuario, en este caso la base de datos con el identificador 5, tiene unos 900 MB.  
   
@@ -601,11 +600,11 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Como puede ver las tablas son bastante pequeñas: SalesOrderHeader_inmem tiene unos 7MB y SalesOrderDetail_inmem unos 15MB de tamaño.  
+ Como puede ver, las tablas son bastante pequeñas: SalesOrderHeader_inmem tiene unos 7 MB y SalesOrderDetail_inmem unos 15 MB de tamaño.  
   
  Lo sorprendente aquí es el tamaño de la memoria asignada para los índices, en comparación con el tamaño de los datos de tabla. Esto se debe a que los índices hash del ejemplo tienen establecido previamente un tamaño de datos mayor. Observe que los índices hash tienen un tamaño fijo y por tanto su tamaño no crece junto con el tamaño de los datos de la tabla.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Utilización de memoria después de ejecutar la carga de trabajo  
+####  <a name="memory-utilization-after-running-the-workload"></a><a name="Memoryutilizationafterrunningtheworkload"></a>Uso de memoria después de ejecutar la carga de trabajo  
  Después de insertar 10 millones de pedidos de venta, la utilización total de memoria es similar a lo siguiente:  
   
 ```  
@@ -617,11 +616,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|146|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Valor predeterminado|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
   
  Como puede ver, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un bit por debajo de 8 GB para las tablas y los índices optimizados para memoria de la base de datos de ejemplo.  
   
@@ -663,11 +662,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|2261|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Valor predeterminado|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
   
  Esto es lo esperado: la memoria se recuperará cuando se ejecute la carga de trabajo transaccional.  
   
@@ -682,11 +681,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**Tipo**|**Nombre**|**pages_MB**|  
-|MEMORYCLERK_XTP|Default|1863|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Valor predeterminado|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|Default|0|  
-|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
+|MEMORYCLERK_XTP|Valor predeterminado|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Uso de disco para las tablas optimizadas para memoria  
  El tamaño total en disco de los archivos de punto de comprobación de una base de datos en un momento dado se puede averiguar con la consulta:  
@@ -713,7 +712,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**Tamaño en disco en MB**|  
+|**On-disk size in MB**|  
 |2312|  
   
  Como puede ver, hay una gran discrepancia entre el tamaño en disco de los archivos de punto de comprobación, que es 2,3 GB, y el tamaño de datos real, que es más cercano a 30 MB.  
@@ -739,7 +738,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**Recuento**|**Tamaño en disco en MB**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -761,7 +760,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**Tamaño en disco en MB**|  
+|**On-disk size in MB**|  
 |8828|  
   
  El tamaño en disco está cercano a 9 GB, que es parecido al tamaño en memoria de los datos.  
@@ -785,7 +784,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**Recuento**|**Tamaño en disco en MB**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
@@ -809,7 +808,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**Tamaño en disco en MB**|  
+|**On-disk size in MB**|  
 |11839|  
   
  Con casi 12 GB, esto es mucho más significativo que los 9 GB teníamos antes de restablecer la demostración. Esto se debe a que se han iniciado algunas combinaciones de archivos de punto de comprobación, pero algunos destinos de mezcla todavía no se han instalado, y algunos de los archivos de origen de mezcla todavía no se han limpiado, como se puede ver aquí:  
@@ -831,7 +830,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**Recuento**|**Tamaño en disco en MB**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVO|DATA|38|5152|  
@@ -864,7 +863,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**Recuento**|**Tamaño en disco en MB**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
@@ -874,7 +873,6 @@ ORDER BY state, file_type
   
  En este caso, hay dos pares de archivos de punto de comprobación en el estado "under construction", lo que significa que varios pares de archivos pasaron por el estado "under construction", probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de "precreated" a "under construction".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   

@@ -1,5 +1,5 @@
 ---
-title: '* (Combinaciones cruzadas) (MDX) | Microsoft Docs'
+title: '* Crossjoin (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68047140"
 ---
-# <a name="crossjoin----mdx-operator-reference"></a>Crossjoin - referencia de operadores de MDX
+# <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-referencia del operador de MDX
 
 
   Realiza una operación de conjunto que devuelve el producto cruzado de dos conjuntos.  
@@ -34,8 +34,8 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Conjunto que contiene el producto cruzado de ambos parámetros especificados.  
   
-## <a name="remarks"></a>Comentarios  
- El  **\* (combinaciones cruzadas)** operador es funcionalmente equivalente a la [Crossjoin](../mdx/crossjoin-mdx.md) función.  
+## <a name="remarks"></a>Observaciones  
+ El ** \* operador (Crossjoin)** es funcionalmente equivalente a la función [Crossjoin](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra el uso de este operador.  
@@ -53,7 +53,7 @@ WHERE
     ([Measures].[Gross Profit Margin])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

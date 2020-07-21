@@ -22,15 +22,15 @@ ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4acc2dfb88767dd246dc8e8c5af413235a8bb803
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927379"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991209"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Combina dos expresiones booleanas y devuelve **TRUE** cuando ambas expresiones son **TRUE**. Cuando se usa más de un operador lógico en una instrucción, en primer lugar se evalúan los operadores **AND**. Puede cambiar el orden de evaluación gracias a los paréntesis.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "67927379"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 boolean_expression AND boolean_expression  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida que devuelve un valor booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida que devuelve un valor booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
@@ -52,14 +52,14 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valor del resultado  
  Devuelve TRUE cuando ambas expresiones son TRUE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente tabla se muestran los resultados de la comparación de los valores TRUE y FALSE mediante el operador AND.  
   
-||TRUE|FALSE|UNKNOWN|  
+||TRUE|FALSE|DESCONOCIDO|  
 |------|----------|-----------|-------------|  
-|**TRUE**|TRUE|FALSE|UNKNOWN|  
+|**TRUE**|TRUE|FALSE|DESCONOCIDO|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|DESCONOCIDO|FALSE|DESCONOCIDO|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -83,7 +83,7 @@ IF 1 = 1 AND 2 = 2
 BEGIN  
    PRINT 'First Example is TRUE'  
 END  
-ELSE PRINT 'First Example is FALSE';  
+ELSE PRINT 'First Example is FALSE' ;  
 GO  
   
 IF 1 = 1 AND 2 = 17  

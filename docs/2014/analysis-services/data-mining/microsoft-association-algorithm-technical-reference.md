@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de asociación de Microsoft | Microsoft Docs
+title: Referencia técnica del algoritmo de Asociación de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084130"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522130"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referencia técnica del algoritmo de asociación de Microsoft
   El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una implementación sencilla del conocido algoritmo Apriori.  
@@ -73,10 +72,10 @@ ms.locfileid: "66084130"
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite varios parámetros que influyen en el comportamiento, el rendimiento y la precisión del modelo de minería de datos resultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
- Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiar los parámetros mediante programación utilizando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en AMO, o mediante el [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) en XMLA. Estos parámetros se describen en la tabla siguiente.  
+ Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiar los parámetros mediante programación usando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en amo o mediante el [elemento MININGMODELS &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) en XMLA. Estos parámetros se describen en la tabla siguiente.  
   
 > [!NOTE]  
->  No se puede cambiar los parámetros de un modelo existente mediante el uso de una instrucción DMX; debe especificar los parámetros en las instrucciones DMX CREATE MODEL o ALTER STRUCTURE... ADD MODEL cuando se crea el modelo.  
+>  No se pueden cambiar los parámetros en un modelo existente mediante una instrucción DMX. debe especificar los parámetros en las instrucciones DMX CREATE MODEL o ALTER STRUCTURE... Agregar modelo al crear el modelo.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Especifica el número máximo de conjuntos de elementos que se van a generar. Si no se especifica ningún número, se usa el valor predeterminado.  
@@ -153,7 +152,7 @@ ms.locfileid: "66084130"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Cyclical, Discrete, Discretized, Key, Table y Ordered|  
 |Atributo de predicción|Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -161,9 +160,9 @@ ms.locfileid: "66084130"
 > [!NOTE]  
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)   
- [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmo de Asociación de Microsoft](microsoft-association-algorithm.md)   
+ [Ejemplos de consultas de modelos de asociación](association-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

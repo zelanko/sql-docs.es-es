@@ -1,5 +1,5 @@
 ---
-title: Las bases de datos de modelo tabular (SSAS Tabular) | Microsoft Docs
+title: Bases de datos de modelo tabular (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 669d39c3f76cc8e925932b238bd7b0fd1c1a89c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938576"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de datos de modelo tabular (SSAS tabular)
   Una base de datos de modelo tabular es una base de datos de Analysis Services que se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante la plantilla de proyecto de modelo tabular de Analysis Services, donde las tablas y las relaciones son las estructuras principales para la representación de datos.  

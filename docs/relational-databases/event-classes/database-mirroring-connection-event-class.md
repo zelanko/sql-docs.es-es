@@ -10,15 +10,15 @@ ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b10bdc5786d87dedb2d4247dbffc6f7f9eda43fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37f1658a49fa5bc6577e4b7668dc62914aab3aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765296"
 ---
 # <a name="database-mirroring-connection-event-class"></a>Database Mirroring: Connection (clase de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Database Mirroring Connection** para informar del estado de una conexión de transporte administrada por la creación de reflejo de la base de datos.  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>Columnas de datos de la clase de eventos Database Mirroring:Connection  
@@ -31,12 +31,12 @@ ms.locfileid: "68009561"
 |**Error**|**int**|Número de Id. del mensaje en **sys.messages** para el texto del evento. Si este evento informa de un error, éste es el número de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|31|No|  
 |**EventClass**|**int**|Tipo de clase de eventos capturado. Siempre es **151** para **Database Mirroring Connection**.|27|No|  
 |**EventSequence**|**int**|Número de secuencia de este evento.|51|No|  
-|**EventSubClass**|**nvarchar**|Estado de esta conexión. En el caso de este evento, la subclase es uno de los valores siguientes:<br /><br /> **Connecting**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciando una conexión de transporte.<br /><br /> **Connected**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha establecido una conexión de transporte.<br /><br /> **Connect Failed**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido establecer una conexión de transporte.<br /><br /> **Closing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está cerrando la conexión de transporte.<br /><br /> **Closed**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha cerrado la conexión de transporte.<br /><br /> **Accept**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha aceptado una conexión de transporte de otra instancia.<br /><br /> **Send IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectó un error de transporte al enviar un mensaje.<br /><br /> **Receive IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectó un error de transporte al recibir un mensaje.|21|Sí|  
+|**EventSubClass**|**nvarchar**|Estado de esta conexión. En el caso de este evento, la subclase es uno de los valores siguientes:<br /><br /> **Connecting**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciando una conexión de transporte.<br /><br /> **Connected**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha establecido una conexión de transporte.<br /><br /> **Connect Failed**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido establecer una conexión de transporte.<br /><br /> **Closing**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está cerrando la conexión de transporte.<br /><br /> **Closed** (Cerrado). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha cerrado la conexión de transporte.<br /><br /> **Accept**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha aceptado una conexión de transporte de otra instancia.<br /><br /> **Send IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectó un error de transporte al enviar un mensaje.<br /><br /> **Receive IO Error**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectó un error de transporte al recibir un mensaje.|21|Sí|  
 |**GUID**|**uniqueidentifier**|Id. de extremo de esta conexión.|54|No|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para averiguar el nombre de host, use la función **HOST_NAME** .|8|Sí|  
 |**IntegerData**|**int**|Número de veces que se ha cerrado esta conexión.|25|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |**ObjectName**|**nvarchar**|Identificador de conversación del diálogo.|34|No|  

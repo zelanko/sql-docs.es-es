@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de propiedades de tabla (pestaña General) | Microsoft Docs
+title: Propiedades de la tabla de seguimiento (pestaña general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3d931252829058842fe20d20667dff598092f49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928224"
 ---
 # <a name="trace-table-properties-general-tab"></a>Propiedades de la tabla de seguimiento (pestaña General)
   Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la tabla de seguimiento** para ver las propiedades de una tabla de seguimiento.  
@@ -27,7 +26,7 @@ ms.locfileid: "66088739"
  Si desea ver esta ventana, utilice el [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para abrir una tabla de seguimiento y, a continuación, en el menú **Archivo** , haga clic en **Propiedades**.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de la tabla**  
+ **Nombre de tabla**  
  Muestra el servidor, la base de datos, el esquema y el nombre de la tabla de seguimiento mostrado.  
   
  **Nombre del proveedor de seguimiento**  
@@ -45,8 +44,8 @@ ms.locfileid: "66088739"
  **Tamaño de los datos (páginas)**  
  Muestra el número de páginas de datos de la tabla de seguimiento.  
   
-## <a name="see-also"></a>Vea también  
- [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte también  
+ [Abra una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

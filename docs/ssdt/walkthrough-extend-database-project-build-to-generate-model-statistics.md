@@ -1,23 +1,24 @@
 ---
-title: 'Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069009"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242690"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo
+
 Puede crear un colaborador de compilación para realizar acciones personalizadas al compilar un proyecto de base de datos. En este tutorial, se crea un colaborador de compilación llamado ModelStatistics que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos. Dado que este colaborador de compilación acepta parámetros cuando se compila, son necesarios algunos pasos adicionales.  
   
 En este tutorial, realizará las principales tareas siguientes:  
@@ -60,7 +61,7 @@ A continuación se muestran algunos de los comandos usados por el colaborador de
   
 **Identificar su colaborador de forma exclusiva**  
   
-Durante el proceso de compilación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores de compilación se identifican con un atributo [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) . Este atributo es necesario para poder detectar colaboradores. Este atributo deberá ser parecido al de la ilustración siguiente:  
+Durante el proceso de compilación, los colaboradores personalizados se cargan desde un directorio de la extensión estándar. Los colaboradores de compilación se identifican con un atributo [ExportBuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx). Este atributo es necesario para poder detectar colaboradores. Este atributo deberá ser parecido al de la ilustración siguiente:  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -69,7 +70,7 @@ Durante el proceso de compilación, los colaboradores personalizados se cargan d
   
 En este caso el primer parámetro del atributo debe ser un identificador único que se utilizará para identificar su colaborador en archivos de proyecto. Una práctica recomendada es combinar el espacio de nombres de la biblioteca (en este tutorial, “ExampleContributors”) con el nombre de clase (en este tutorial, “ModelStatistics”) para generar el identificador. Verá cómo este espacio de nombres se utiliza para especificar que su colaborador se debe ejecutar posteriormente en el tutorial.  
   
-## <a name="CreateBuildContributor"></a>Crear un colaborador de compilación  
+## <a name="create-a-build-contributor"></a><a name="CreateBuildContributor"></a>Crear un colaborador de compilación  
 Para crear un colaborador de compilación, debe realizar las siguientes tareas:  
   
 -   Cree un proyecto de biblioteca de clases y agregue las referencias necesarias.  
@@ -433,7 +434,7 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
 1.  En el menú **Proyecto** , haga clic en **Propiedades de MyBuildContributor**.  
   
-2.  Haga clic en la pestaña **Firmar** .  
+2.  Haga clic en la pestaña **Firma** .  
   
 3.  Haga clic en **Firmar el ensamblado**.  
   
@@ -443,15 +444,15 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
 6.  (opcional) Puede especificar una contraseña para el archivo de clave de nombre seguro.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-9. En el menú **Compilar** , haga clic en **Compilar solución**.  
+9. En el menú **Compilar**, haga clic en **Compilar solución**.  
   
     A continuación, debe instalar el ensamblado para que se cargue cuando compile proyectos de SQL.  
   
-## <a name="InstallBuildContributor"></a>Instalar un colaborador de compilación  
+## <a name="install-a-build-contributor"></a><a name="InstallBuildContributor"></a>Instalar un colaborador de compilación  
 Para instalar un colaborador de compilación, debe copiar el ensamblado y el archivo .pdb asociado en la Carpeta de extensiones.  
   
 #### <a name="to-install-the-mybuildcontributor-assembly"></a>Para instalar el ensamblado MyBuildContributor  
@@ -463,7 +464,7 @@ Para instalar un colaborador de compilación, debe copiar el ensamblado y el arc
     > [!NOTE]  
     > De manera predeterminada, la ruta de acceso del archivo .dll compilado es YourSolutionPath\YourProjectPath\bin\Debug o YourSolutionPath\YourProjectPath\bin\Release.  
   
-## <a name="TestBuildContributor"></a>Ejecutar o comprobar su colaborador de compilación  
+## <a name="run-or-test-your-build-contributor"></a><a name="TestBuildContributor"></a>Ejecutar o comprobar su colaborador de compilación  
 Para ejecutar o comprobar su colaborador de compilación, debe realizar las siguientes tareas:  
   
 -   Agregue propiedades al archivo .sqlproj que quiera compilar.  
@@ -528,7 +529,7 @@ Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin d
   
 3.  En el símbolo del sistema, navegue a la carpeta que contiene el proyecto de SQL.  
   
-4.  En el símbolo del sistema, escriba el comando siguiente:  
+4.  En el símbolo del sistema, escriba el siguiente comando:  
   
     ```  
     MSBuild /t:Rebuild MyDatabaseProject.sqlproj /p:BuildContributors=$(BuildContributors);ExampleContributors.ModelStatistics /p:ContributorArguments=$(ContributorArguments);GenerateModelStatistics=true;SortModelStatisticsBy=name;OutDir=.\;  
@@ -587,10 +588,10 @@ Relationships
   
     Los resultados informados también se guardan en el archivo XML.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Puede crear herramientas adicionales para realizar el procesamiento del archivo XML de salida. Esto es solo un ejemplo de un colaborador de compilación. Podría, por ejemplo, crear un colaborador de compilación para generar un archivo de diccionario de datos como parte de la compilación.  
   
 ## <a name="see-also"></a>Consulte también  
 [Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

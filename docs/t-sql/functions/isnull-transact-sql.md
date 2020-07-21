@@ -19,18 +19,18 @@ helpviewer_keywords:
 - null values [SQL Server], replacement values
 - ISNULL function
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 866c2eaadb8cd946fb7a7b9b2ffdd46a81ec9e27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb356779514e175a56644a8c020746bd110e3893
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109428"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999803"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Sustituye el valor NULL por el valor especificado.  
   
@@ -38,7 +38,7 @@ Sustituye el valor NULL por el valor especificado.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ISNULL ( check_expression , replacement_value )  
 ```  
   
@@ -49,10 +49,10 @@ ISNULL ( check_expression , replacement_value )
  *replacement_value*  
  Es la expresión que se devuelve si *check_expression* es NULL. *valor_de_reemplazo* debe ser de un tipo que se pueda convertir implícitamente en el tipo de *expresión_de_comprobación*.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el mismo tipo que *check_expression*. Si se proporciona un literal NULL como *check_expression*, devuelve el tipo de datos de *replacement_value*. Si se proporciona un literal NULL como *check_expression* y no se proporciona *replacement_value*, se devuelve un **int**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de *check_expression* se devuelve si no es NULL; de lo contrario, se devuelve *replacement_value* después de convertirse de forma implícita al tipo de *check_expression*, si los tipos son diferentes. *replacement_value* se puede truncar si *replacement_value* es mayor que *check_expression*.  
   
 > [!NOTE]  
@@ -97,18 +97,18 @@ GO
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
 |  Volume Discount   |  0.02           |   11        |   14                 |
-|  Volume Discount   |  0.05           |   15        |   4                  |
-|  Volume Discount   |  0.10           |   25        |   0                  |
-|  Volume Discount   |  0.15           |   41        |   0                  |
-|  Volume Discount   |  0.20           |   61        |   0                  |
+|  Volume Discount   |  0,05           |   15        |   4                  |
+|  Volume Discount   |  0,10           |   25        |   0                  |
+|  Volume Discount   |  0,15           |   41        |   0                  |
+|  Volume Discount   |  0,20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0.35           |   0         |   0                  |
-|  Sport Helmet Di   |  0.10           |   0         |   0                  |
-|  Road-650 Overst   |  0.30           |   0         |   0                  |
+|  Sport Helmet Di   |  0,10           |   0         |   0                  |
+|  Road-650 Overst   |  0,30           |   0         |   0                  |
 |  Mountain Tire S   |  0.50           |   0         |   0                  |
-|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  Sport Helmet Di   |  0,15           |   0         |   0                  |
 |  LL Road Frame S   |  0.35           |   0         |   0                  |
-|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
-|  Touring-1000 Pr   |  0.20           |   0         |   0                  |
+|  Touring-3000 Pr   |  0,15           |   0         |   0                  |
+|  Touring-1000 Pr   |  0,20           |   0         |   0                  |
 |  Half-Price Peda   |  0.50           |   0         |   0                  |
 |  Mountain-500 Si   |  0.40           |   0         |   0                  |
 
@@ -126,7 +126,7 @@ WHERE Weight IS NULL;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-isnull-with-avg"></a>D. Usar ISNULL con AVG  
  En el ejemplo siguiente se busca el promedio del peso de todos los productos en una tabla de ejemplo. Sustituye el valor `50` para todas las entradas NULL en la columna `Weight` de la tabla `Product`.  
@@ -183,7 +183,7 @@ WHERE Weight IS NULL;
 ## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)  
   

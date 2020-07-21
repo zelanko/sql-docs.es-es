@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b974356db48a7621103d24894a39e9f0a3037e63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736953"
 ---
-# <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve todos los errores de la replicación transaccional de una suscripción determinada. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -53,16 +53,16 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Tipo de cursor  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del error.|  
 |**time**|**datetime**|Hora en que se produjo el error.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Id. del tipo de origen del error.|  
-|**source_name**|**nvarchar(100)**|Nombre del origen del error.|  
+|**source_name**|**nvarchar(100**|Nombre del origen del error.|  
 |**error_code**|**sysname**|Código de error.|  
 |**error_text**|**ntext**|Mensaje de error.|  
-|**xact_seqno**|**varbinary (16)**|Número de secuencia del registro de transacciones de inicio del lote de ejecución fallido. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
+|**xact_seqno**|**varbinary(16)**|Número de secuencia del registro de transacciones de inicio del lote de ejecución fallido. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
 |**command_id**|**int**|IDENTIFICADOR de comando del lote de ejecución con errores. Solo lo utilizan los Agentes de distribución, y se trata del Id. del comando del primer comando del proceso por lotes de ejecución fallida.|  
 |**session_id**|**int**|IDENTIFICADOR de la sesión del agente en la que se produjo el error.|  
   
@@ -75,8 +75,8 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpsubscriptionerrors**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

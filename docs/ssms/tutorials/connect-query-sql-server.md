@@ -1,22 +1,22 @@
 ---
-title: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS)
+title: Conexión a una instancia de SQL Server y realización de consultas
 description: Tutorial para conectarse a una instancia de SQL Server usando SQL Server Management Studio y ejecutando consultas básicas de T-SQL.
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
-ms.topic: quickstart
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
+ms.topic: tutorial
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ac805437d716bbc7e8fdf95f491c64331ddb4658
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708331"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286269"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS)
 
@@ -31,7 +31,7 @@ En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para cone
 > * Usar la tabla de la ventana de consulta para comprobar las propiedades de la conexión
 > * Cambiar el servidor al que está conectada la ventana de consulta
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 
@@ -195,11 +195,16 @@ Siga estos pasos para cambiar el servidor al que está conectada la ventana de c
     > [!NOTE]
     > Esta acción cambia solo el servidor al que está conectada la ventana de consulta, y no el servidor que el Explorador de objetos usa.
 
+## <a name="azure-data-studio"></a>Azure Data Studio
+
+También puede conectarse y consultar [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md)y [Azure SQL Data Warehouse](../../azure-data-studio/quickstart-sql-dw.md) con Azure Data Studio.
+
 ## <a name="next-steps"></a>Pasos siguientes
 
-La mejor forma de familiarizarse con SSMS es practicar. Estos artículos lo ayudan con varias características disponibles dentro de SSMS.  Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
+La mejor forma de familiarizarse con SSMS es practicar. Estos artículos lo ayudan con varias características disponibles dentro de SSMS. Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
 
 * [Scripting](scripting-ssms.md)
 * [Uso de plantillas en SSMS](../template/templates-ssms.md)
 * [Configuración de SSMS](ssms-configuration.md)
 * [Otras recomendaciones y trucos al usar SSMS](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

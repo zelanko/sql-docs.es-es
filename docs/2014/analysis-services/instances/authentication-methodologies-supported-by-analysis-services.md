@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e8aa42a3e4c7e725ced23d85ded836cc3dde6a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080340"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544093"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologías de autenticación admitidas por Analysis Services
   Las conexiones desde una aplicación cliente a una instancia de Analysis Services requieren la autenticación de Windows (integrada). Puede proporcionar una identidad de usuario de Windows mediante cualquiera de los métodos siguientes:  
@@ -34,7 +33,7 @@ ms.locfileid: "66080340"
   
  Para obtener más información sobre BI y los flujos de autenticación de Analysis Services, vea [Autenticación y delegación de identidad de Microsoft BI](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a> Descripción de las alternativas de autenticación  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> Descripción de las alternativas de autenticación  
  La conexión a una base de datos de Analysis Services requiere una identidad de usuario o grupo de Windows y permisos asociados. La identidad puede ser un inicio de sesión de propósito general usado por alguien que necesite consultar un informe, pero lo más probable es que incluya la identidad de usuarios individuales.  
   
  A menudo, los modelos multidimensionales o tabulares tendrán diferentes niveles de acceso a los datos, por objeto o bien dentro de los propios datos, en función de quién realice la solicitud. Para satisfacer este requisito, puede usar la autenticación NTLM, Kerberos, EffectiveUserName o Básica. Todas estas técnicas ofrecen distintas posibilidades de pasar diferentes identidades de usuario con cada conexión. Sin embargo, la mayoría de estas opciones están sujetas a la limitación de un solo salto. Solo Kerberos con delegación permite que la identidad de usuario original circule a través de conexiones entre varios equipos hasta un almacén de datos back-end en un servidor remoto.  
@@ -72,15 +71,15 @@ ms.locfileid: "66080340"
   
  Básica y Anónima solo están disponibles al configurar Analysis Services para acceso HTTP con el uso de IIS y msmdpump.dll para establecer la conexión. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Stored Credentials**  
+ **Credenciales almacenadas**  
   
  La mayoría de servicios de aplicación de nivel intermedio incluyen la funcionalidad para almacenar un nombre de usuario y una contraseña que posteriormente se usarán para recuperar datos de un almacén de datos de nivel inferior, como Analysis Services o el motor relacional de SQL Server. En sí, las credenciales almacenadas ofrecen una quinta alternativa para recuperar datos. Entre las limitaciones inherentes a este método se incluye la sobrecarga de mantenimiento asociada con la actualización de los nombres de usuario y las contraseñas, y el uso de una sola identidad en la conexión. Si su solución precisa de la identidad del autor de la llamada original, las credenciales almacenadas no serían una alternativa viable.  
   
  Para obtener más información sobre las credenciales almacenadas, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) y [Usar Servicios de Excel con el Servicio de almacenamiento seguro en SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## <a name="see-also"></a>Vea también  
- [Usar la suplantación con seguridad de transporte](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+## <a name="see-also"></a>Consulte también  
+ [Usar la suplantación con la seguridad de transporte](https://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Configurar Analysis Services para la delegación restringida de Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Registro de SPN para una instancia de Analysis Services](spn-registration-for-an-analysis-services-instance.md)   
  [Conectar a Analysis Services](connect-to-analysis-services.md)  

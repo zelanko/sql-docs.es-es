@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04f09bcd843946763fe3bb2b69cbdcd9560e7c91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 40cd72a4eca8f8174996b955e994295978d87fa6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975041"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928794"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>Método setBoolean (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,12 +42,12 @@ public void setBoolean(java.lang.String sCol,
   
  *b*  
   
- Un valor **booleano** , ya sea **true** o **false**.  
+ Debe ser un valor **booleano**: **true** o **false**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setBoolean especifica este método setBoolean en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

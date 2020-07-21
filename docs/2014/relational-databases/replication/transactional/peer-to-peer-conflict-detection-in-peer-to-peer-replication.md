@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68198992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055583"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
   La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  
@@ -86,7 +85,7 @@ ms.locfileid: "68198992"
   
 -   Intente sincronizar de nuevo el nodo permitiendo que el Agente de distribución continúe aplicando los cambios:  
   
-    1.  Ejecutar [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especifique 'p2p_continue_onconflict' para el @property parámetro y `true` para el @value parámetro.  
+    1.  Ejecutar [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especifique ' p2p_continue_onconflict ' para el @property parámetro y `true` para el @value parámetro.  
   
     2.  Reinicie el Agente de distribución.  
   
@@ -97,9 +96,9 @@ ms.locfileid: "68198992"
         > [!NOTE]  
         >  Si los datos son incoherentes después de este paso, debe actualizar manualmente las filas en el nodo que tenga la prioridad más alta y, a continuación, dejar que se propaguen los cambios desde ese nodo. Si no hay ningún otro conflicto relacionado con los cambios en la topología, todos los nodos se encontrarán en un estado coherente.  
   
-    5.  Ejecutar [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especifique 'p2p_continue_onconflict' para el @property parámetro y `false` para el @value parámetro.  
+    5.  Ejecutar [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): especifique ' p2p_continue_onconflict ' para el @property parámetro y `false` para el @value parámetro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Particiones y el modo DirectQuery (SSAS Tabular) | Microsoft Docs
+title: Particiones y el modo DirectQuery (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d79b78fbec2a7af13e54547baf294857cebd8dfd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939766"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Particiones y el modo DirectQuery (SSAS tabular)
   En esta sección se explica cómo se utilizan las particiones en los modelos DirectQuery. Para obtener información general sobre las particiones en los modelos tabulares, vea [Particiones &#40;SSAS tabular&#41;](partitions-ssas-tabular.md).  
   
- Para obtener instrucciones sobre cómo cambiar la partición que se utiliza, o ver información acerca de la partición, consulte [cambiar la partición DirectQuery &#40;Tabular de SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
+ Para obtener instrucciones sobre cómo cambiar la partición que se utiliza o ver información acerca de la partición, vea [cambiar la partición de DirectQuery &#40;&#41;tabular de SSAS ](../change-the-directquery-partition-ssas-tabular.md).  
   
 ## <a name="using-partitions-in-directquery-mode"></a>El uso de particiones en el modo DirectQuery  
  Para cada tabla, debe especificar una única partición para utilizar como origen de datos de DirectQuery.  De forma predeterminada, si existen varias particiones, al cambiar el modelo para habilitar el modo DirectQuery, la primera partición que se creó en la tabla se marcará como la partición DirectQuery. Puede cambiar este comportamiento posteriormente mediante el Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -42,12 +41,12 @@ ms.locfileid: "66067309"
   
  Hay dos opciones de procesamiento para la partición DirectQuery. Para establecer esta propiedad, use el **Administrador de particiones** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], y seleccione la propiedad **Opción de procesamiento** . En la tabla siguiente se muestran los valores de esta propiedad y se describen los efectos de cada valor cuando se combinan con la propiedad DirectQueryUsage en la cadena de conexión:  
   
-|**DirectQueryUsage** propiedad|Propiedad**Opción de procesamiento**|Notas|  
+|Propiedad **DirectQueryUsage**|Propiedad**Opción de procesamiento**|Notas|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|No procesar nunca esta partición|Cuando el modelo utiliza Solo DirectQuery, el procesamiento no es necesario nunca.<br /><br /> En los modelos híbridos, es posible configurar la partición DirectQuery para que no se procese nunca. Por ejemplo, si está trabajando con un conjunto de datos muy grande y no desea que los resultados completos se agreguen a la memoria caché, puede especificar que la partición DirectQuery incluya la unión de los resultados para el resto de particiones de la tabla y no procesar nunca dicha unión. Las consultas dirigidas al origen relacional no se verán afectadas, y las consultas en los datos en caché combinarán datos del resto de particiones|  
-|InMemory con DirectQuery|Permitir procesar la partición|Si el modelo utiliza el modo híbrido, debe usar la misma partición para las consultas en memoria y las consultas en el origen de datos de DirectQuery.|  
+|Inmemory con DirectQuery|Permitir procesar la partición|Si el modelo utiliza el modo híbrido, debe usar la misma partición para las consultas en memoria y las consultas en el origen de datos de DirectQuery.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones &#40;SSAS tabular&#41;](partitions-ssas-tabular.md)  
   
   

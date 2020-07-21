@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02d888d3cccabca8618df361e458c7bc706536ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971336"
 ---
 # <a name="create-a-master-data-services-database"></a>Crea una base de datos de Master Data Services
   Cree una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] cuando necesite una base de datos nueva que sea compatible con la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y el servicio web de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
@@ -42,7 +41,7 @@ ms.locfileid: "65482942"
   
 -   Configure un plan de mantenimiento para hacer copias de seguridad de la base de datos y de los registros de transacciones. Para obtener más información, vea [Requisitos de base de datos &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](install-master-data-services.md)  
   
   

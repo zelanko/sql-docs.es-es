@@ -1,5 +1,6 @@
 ---
 title: Realizar copias de seguridad de la base de datos (página Opciones de copia de seguridad) | Microsoft Docs
+description: En SQL Server, utilice la página Opciones de copia de seguridad del cuadro de diálogo Copia de seguridad de base de datos para ver o modificar opciones de conjunto de copia de seguridad, compresión y cifrado.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4932a229d2d883a8d5b2be84795a96aafd5bba3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719990"
 ---
 # <a name="back-up-database-backup-options-page"></a>Copia de seguridad de la base de datos (página Opciones de copia de seguridad)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice la página  **Opciones de copia de seguridad** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones de copia de seguridad de la base de datos.  
   
  **Para crear una copia de seguridad mediante SQL Server Management Studio**  
@@ -34,7 +35,7 @@ ms.locfileid: "67940976"
 >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md) y [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## <a name="options"></a>Opciones  
   

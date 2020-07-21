@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4e5bb10700ebcac08ca576d07c196163db0f637
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085527"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523991"
 ---
 # <a name="create-a-cross-validation-report"></a>Crear un informe de validación cruzada
   Este tema le guía a través del proceso de creación de un informe de validación cruzada utilizando la pestaña Gráfico de precisión del Diseñador de minería de datos. Para obtener información general sobre el aspecto de un informe de validación cruzada y sobre las medidas estadísticas que se incluyen en este, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md).  
@@ -66,7 +65,7 @@ ms.locfileid: "66085527"
 4.  Si lo desea, en **Estado de destino**, escriba el valor del atributo de predicción que desea modelar. Por ejemplo, si la columna [Bike Buyer] tiene dos valores posibles, 1 (Sí) y 2 (No), puede especificar el valor 1 para evaluar la exactitud del modelo solo para el resultado deseado.  
   
     > [!NOTE]  
-    >  Si no especifica un valor, la opción **Umbral de destino** no estará disponible y el modelo se evaluará para todos los valores posibles del atributo de predicción.  
+    >   Si no especifica un valor, la opción **Umbral de destino** no está disponible y el modelo se evalúa para todos los valores posibles del atributo de predicción.  
   
 5.  Opcionalmente, en **Umbral de destino**, escriba un número decimal comprendido entre 0 y 1 para especificar la probabilidad mínima que una predicción debe tener para que se considere que es precisa.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66085527"
   
 4.  Pegue la selección en un libro de Excel abierto. Si utiliza la opción **Pegar** , el informe se pega en Excel como HTML, con lo que se conserva el formato de filas y columnas. Si pega el informe con las opciones de **Pegado especial** para texto o texto Unicode, el informe se pegará con un formato delimitado por filas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Medidas en el informe de validación cruzada](measures-in-the-cross-validation-report.md)  
   
   

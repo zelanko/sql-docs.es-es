@@ -1,5 +1,5 @@
 ---
-title: sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: Sys. selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 55bb26edf9d51731a4a5986a8a6063f6214df1f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787077"
 ---
-# <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sysselective_xml_index_paths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, cada fila de sys.selective_xml_index_paths representa una ruta de acceso promocionada para un índice xml selectivo concreto.  
   
@@ -43,7 +43,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  Habrá dos filas nuevas en sys.selective_xml_index_paths correspondientes al índice sxi1.  
 
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador de la tabla con la columna XML.|  
 |**index_id**|**int**|Identificador único del índice xml selectivo.|  
@@ -51,7 +51,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**path**|**nvarchar(4000)**|Ruta de acceso promocionada. Por ejemplo, '/a/b/c/d/e'.|  
 |**name**|**sysname**|Nombre de ruta de acceso.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
-|**path_type_desc**|**sysname**|En función de **path_type** valor 'XQUERY' o 'SQL'.|  
+|**path_type_desc**|**sysname**|Basado en **path_type** valor ' XQUERY ' o ' SQL '.|  
 |**xml_component_id**|**int**|Id. único del componente del esquema XML en la base de datos.|  
 |**xquery_type_description**|**nvarchar(4000)**|Nombre del tipo xsd especificado.|  
 |**is_xquery_type_inferred**|**bit**|1 = el tipo se infiere.|  
@@ -60,17 +60,17 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**is_node**|**bit**|0 = la sugerencia de node() no está presente.<br /><br /> 1 = se aplica la sugerencia de optimización de node().|  
 |**system_type_id**|**tinyint**|Id. del tipo de sistema de la columna.|  
 |**user_type_id**|**tinyint**|Identificador del tipo de usuario de la columna.|  
-|**max_length**|**smallint**|Max Length (en bytes) del tipo.<br /><br /> -1 = El tipo de datos de las columnas es varchar(max), nvarchar(max), varbinary(max) o xml.|  
-|**precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
-|**scale**|**tinyint**|Escala máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
+|**max_length**|**smallint**|Longitud máxima (en bytes) del tipo.<br /><br /> -1 = El tipo de datos de las columnas es varchar(max), nvarchar(max), varbinary(max) o xml.|  
+|**precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales. De lo contrario, es 0.|  
+|**scale**|**tinyint**|Escala máxima del tipo si está basado en numerales. De lo contrario, es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del tipo si está basado en caracteres. En caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = la sugerencia SINGLETON no está presente.<br /><br /> 1 = Se aplica la sugerencia de optimización SINGLETON.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Los esquemas XML &#40;sistema de tipo XML&#41; vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [Esquemas XML &#40;las vistas de catálogo del sistema de tipos XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

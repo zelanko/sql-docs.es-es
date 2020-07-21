@@ -10,23 +10,23 @@ ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f3450320f28a2f0abd133c93d1b43512484d446
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3e9112883b7a85ed1ced0c3f5a7e061a396cbf31
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296573"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85672695"
 ---
 # <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información de cada derivación de datos definida en una ejecución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |data_tap_id|**bigint**|Identificador (id.) único de la derivación de datos.|  
 |execution_id|**bigint**|Identificador único (id.) de la instancia de ejecución.|  

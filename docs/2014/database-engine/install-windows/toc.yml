@@ -220,15 +220,15 @@
     - name: Listas de comprobación para instalar características de BI con SharePoint
       href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
       items:
-        - name: 'Lista de comprobación: Reporting Services, Power View y PowerPivot para SharePoint'
+        - name: 'Lista de comprobación: Reporting Services, vista avanzada y PowerPivot para SharePoint'
           href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-        - name: 'Lista de comprobación: Escalar horizontalmente mediante la adición de servidores de PowerPivot a una granja de SharePoint 2010'
+        - name: Escalar horizontalmente agregando servidores de PowerPivot a una granja de SharePoint 2010
           href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
-        - name: 'Lista de comprobación: Instalación de Reporting Services en una granja de servidores de SharePoint existente'
+        - name: 'Lista de comprobación: instalar Reporting Services en una granja de servidores de SharePoint existente'
           href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
-        - name: 'Lista de comprobación: Instalación en varios servidores de PowerPivot para SharePoint 2010'
+        - name: 'Lista de comprobación: instalación en varios servidores de PowerPivot para SharePoint 2010'
           href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
-        - name: 'Lista de comprobación: Uso de PowerShell para comprobar PowerPivot para SharePoint'
+        - name: 'Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint'
           href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
     - name: Instalación del modo de SharePoint de Reporting Services (SharePoint 2010 y SharePoint 2013)
       href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md

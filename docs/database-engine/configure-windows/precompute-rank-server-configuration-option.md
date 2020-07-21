@@ -1,5 +1,6 @@
 ---
 title: precompute rank (opción de configuración del servidor) | Microsoft Docs
+description: Obtenga información sobre la opción obsoleta de SQL Server "precompute rank". Descubra cómo se ven afectadas las aplicaciones que usan esta opción y vea qué medida debe adoptar con ellas.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - precompute rank option
 - FREETEXTTABLE function (Transact-SQL)
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: f50c3cd17c21ba822950807e02fcc962dac0fb8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1195066a4f6039e969614c634e927fac00f09189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781849"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank (opción de configuración del servidor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta opción no se implementa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Éste es un cambio importante. Modifique las aplicaciones que actualmente utilizan esta característica lo antes posible.  
   

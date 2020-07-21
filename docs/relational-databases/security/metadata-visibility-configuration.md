@@ -1,5 +1,6 @@
 ---
 title: Configuración de visibilidad de los metadatos | Microsoft Docs
+description: Obtenga información sobre cómo configurar la visibilidad de los metadatos para los elementos protegibles propiedad de un usuario o a los que se le han concedido permiso en SQL Server.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63c00456e36742d62074a65eb291dc19e23a2863
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661213"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85979537"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tienen algún permiso. Por ejemplo, la siguiente consulta devuelve una fila si se ha concedido al usuario un permiso como SELECT o INSERT sobre la tabla `myTable`.  
   
 ```  
@@ -65,7 +66,7 @@ GO
   
 -   Las funciones integradas que emiten metadatos, como OBJECTPROPERTYEX, pueden devolver NULL.  
   
--   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** pueden devolver únicamente un subconjunto de filas, o NULL.  
+-   Los procedimientos almacenados **sp_help** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueden devolver únicamente un subconjunto de filas, o NULL.  
   
  Los módulos SQL, como procedimientos almacenados y desencadenadores, se ejecutan en el contexto de seguridad del autor de la llamada y, por tanto, tienen un acceso limitado a los metadatos. Por ejemplo, en el siguiente código, cuando el procedimiento almacenado intenta obtener acceso a los metadatos de la tabla `myTable` sobre la que el autor de la llamada no tienen ningún derecho, se devuelve un conjunto de resultados vacío. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se devuelve una fila.  
   

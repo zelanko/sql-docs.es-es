@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 02d36b72c949db673bcc2d00918bd7571821d025
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7814090b688f362737e7cd045bca9edd32c34bcb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111081"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883630"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], puede incluir Publicadores de Oracle en su topología de replicación, empezando por Oracle versión 9i. Los servidores de publicación se pueden implementar en cualquier hardware y sistema operativo admitido por Oracle. La característica se ha creado sobre la sólida base de la replicación transaccional y la replicación de instantáneas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lo que proporciona un rendimiento y una capacidad de uso similares.  
   
@@ -33,7 +33,8 @@ A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssV
 -   Publicar datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   La publicación de datos en y desde Oracle tiene las siguientes restricciones:  
-  | |2016 o anterior |2017 o posterior |
+
+  |       | 2016 o anterior |2017 o posterior |
   |-------|-------|--------|
   |Replicación de Oracle |Compatibilidad solo con Oracle 10g o versiones anteriores |Compatibilidad solo con Oracle 10g o versiones anteriores |
   |Replicación en Oracle |Hasta Oracle 12c |No compatible |

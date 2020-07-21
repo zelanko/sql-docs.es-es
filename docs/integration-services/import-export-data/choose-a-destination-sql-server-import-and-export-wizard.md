@@ -12,10 +12,10 @@ ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285879"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Elegir un destino (Asistente para importación y exportación de SQL Server)
@@ -50,7 +50,7 @@ En la captura de pantalla siguiente, se muestra la primera parte de la página *
 -   **Proveedores de 64 bits y 32 bits.** Si está ejecutando el asistente de 64 bits, no podrá ver los destinos que tengan instalado un proveedor de 32 bits y viceversa.
 
 > [!NOTE]
-> Para usar la versión de 64 bits del asistente para importar y exportar de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
+> Para usar la versión de 64 bits del asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 ## <a name="after-you-choose-a-destination"></a>Después de seleccionar un destino
 Después de elegir un destino, el resto de la página **Elegir un destino** tiene un número variable de opciones que dependen del proveedor de datos que elija.
@@ -71,7 +71,7 @@ Para obtener más información sobre cómo conectarse a un destino que no aparez
 ## <a name="whats-next"></a>¿Qué sigue?  
  Después de proporcionar información sobre el destino de los datos y sobre cómo se conectará a estos, la página siguiente es **Especificar copia de tabla o consulta**. En esta página, especifique si quiere copiar una tabla completa o solo algunas filas. Para obtener más información, vea [Especificar copia de tabla o consulta](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

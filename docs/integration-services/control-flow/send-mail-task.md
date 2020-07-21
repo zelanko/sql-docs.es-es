@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293927"
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
@@ -112,10 +112,10 @@ ms.locfileid: "71293927"
   
  **Temas relacionados:** [Administrador de conexiones SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)  
   
- **De**  
+ **From**  
  Especifique la dirección de correo electrónico del remitente.  
   
- **Para**  
+ **To**  
  Escriba las direcciones de correo electrónico de los destinatarios, separadas con punto y coma.  
   
  **CC**  
@@ -124,13 +124,13 @@ ms.locfileid: "71293927"
  **CCO**  
  Escriba las direcciones de correo electrónico de los destinatarios ocultos de copia del mensaje, separadas con punto y coma.  
   
- **Asunto**  
+ **Subject**  
  Escriba el asunto del mensaje de correo electrónico.  
   
  **MessageSourceType**  
  Permite seleccionar el tipo de origen del mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
 |**Conexión de archivos**|Establezca el origen al archivo que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  

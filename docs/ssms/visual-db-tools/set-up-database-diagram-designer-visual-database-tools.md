@@ -1,10 +1,9 @@
 ---
-title: Configurar el Diseñador de diagramas de base de datos (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Configurar el Diseñador de diagramas de base de datos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59da7b5c0097b8ead05fb5ecd04873bf35b79142
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 5b4ce43a2c19f58c44ab0319aec5f98c38dafa3d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267326"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255113"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Configurar el Diseñador de diagramas de base de datos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

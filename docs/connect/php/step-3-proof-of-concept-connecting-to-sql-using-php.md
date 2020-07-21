@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: prueba de concepto de la conexión a SQL con PHP | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante PHP'
+description: El paso 3 es una prueba de concepto, que muestra cómo puede conectarse a SQL Server mediante PHP. Los ejemplos básicos demuestran la selección e inserción de datos.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,22 +9,22 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014802"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528589"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Step 3: Proof of concept connecting to SQL using PHP (Paso 3: prueba de concepto de la conexión a SQL con PHP)
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Paso 3: Conexión de prueba de concepto a SQL mediante PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>Paso 1: conexión  
+## <a name="step-1--connect"></a>Paso 1:  Conectar  
   
   
-Se llama a esta función **OpenConnection** cerca de la parte superior de todas las funciones siguientes.  
+La función **OpenConnection** se llama casi al principio de todas las demás funciones siguientes.  
   
   
 ```php 
@@ -45,9 +46,9 @@ Se llama a esta función **OpenConnection** cerca de la parte superior de todas 
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Paso 2: ejecutar la consulta  
+## <a name="step-2--execute-query"></a>Paso 2:  Ejecutar consulta  
   
-La función [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) se puede usar para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función acepta esencialmente cualquier consulta y el objeto de conexión y devuelve un conjunto de resultados que se puede iterar con el uso de [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+La función [sqlsrv_query](https://php.net/manual/en/function.sqlsrv-query.php) puede usarse para recuperar un conjunto de resultados de una consulta realizada en SQL Database. Esta función acepta cualquier consulta y objeto de conexión y devuelve un conjunto de resultados que se puede iterar mediante el uso de [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -77,10 +78,9 @@ La función [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.ph
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Paso 3: insertar una fila  
+## <a name="step-3--insert-a-row"></a>Paso 3:  Inserción de una fila  
   
-En este ejemplo verá cómo ejecutar una instrucción [Insert](../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación del valor de [inyección de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
-  
+En este ejemplo, verá cómo ejecutar una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros. Los valores de parámetro protegen la aplicación de la [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -109,16 +109,16 @@ En este ejemplo verá cómo ejecutar una instrucción [Insert](../../t-sql/state
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Paso 4: reversión de una transacción  
+## <a name="step-4--roll-back-a-transaction"></a>Paso 4:  Reversión de una transacción  
   
   
-En este ejemplo de código se muestra el uso de transacciones en las que:  
+Este ejemplo de código muestra el uso de transacciones con las que podrá realizar lo siguiente:  
   
--Iniciar una transacción  
+\- Iniciar una transacción  
   
--Insertar una fila de datos, actualizar otra fila de datos  
+\- Insertar una fila de datos, actualizar otra fila de datos  
   
--Confirma la transacción si la inserción y la actualización se realizaron correctamente y revierte la transacción si una de ellas no era  
+\- Confirmar la transacción si la inserción y actualización se realizaron correctamente y revertir la transacción si uno de ellos no lo ha sido  
   
   
 ```php 

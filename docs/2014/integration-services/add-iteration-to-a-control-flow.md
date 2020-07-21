@@ -1,5 +1,5 @@
 ---
-title: Agregar iteración a un flujo de Control | Microsoft Docs
+title: Agregar iteración a un flujo de control | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 039f1dff39f5bc89dbe360d49ad0d4174d665074
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061982"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439642"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Agregar iteración a un flujo de control
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para, un elemento de flujo de control que simplifica la inclusión de bucles que repiten condicionalmente un flujo de control en un paquete. Para más información, vea [Contenedor de bucles For](control-flow/for-loop-container.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66061982"
   
  Las expresiones pueden incluir variables. La ventaja de usar variables es que se pueden actualizar en tiempo de ejecución, lo que hace que los paquetes sean más flexibles y fáciles de administrar. La longitud máxima de una expresión es 4000 caracteres.  
   
- Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, para una variable denominada `Counter`, escriba @Counter en la expresión que usa el contenedor de bucles for. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, para un `Counter` variable en el `MyNamespace` espacio de nombres, tipo [@MyNamespace::Counter].  
+ Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, para una variable denominada `Counter` , escriba @Counter en la expresión que usa el contenedor de bucles for. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, para una `Counter` variable del `MyNamespace` espacio de nombres, escriba [ @MyNamespace::Counter ].  
   
  Las variables que usa el contenedor de bucles For se deben definir en el ámbito del contenedor de bucles For o en el ámbito de cualquier contenedor que se encuentre más arriba en la jerarquía de contenedores de paquetes. Por ejemplo, un contenedor de bucles For puede usar variables definidas en su ámbito y también variables definidas en el ámbito de paquetes. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) y [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md).  
   
@@ -46,21 +45,21 @@ ms.locfileid: "66061982"
   
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>Para implementar un contenedor de bucles For en un flujo de control  
   
-1.  Agregue el contenedor de bucles For al paquete. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+1.  Agregue el contenedor de bucles For al paquete. Para obtener más información, vea [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
-2.  Agregue tareas y contenedores al contenedor de bucles For. Para obtener más información, consulte [agregar o eliminar una tarea o un contenedor en un flujo de Control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+2.  Agregue tareas y contenedores al contenedor de bucles For. Para obtener más información, vea [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md) .  
   .  
   
 3.  Conecte tareas y contenedores en el contenedor de bucles For mediante restricciones de precedencia. Para más información, vea [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
   
 4.  Configure el contenedor de bucles For. Para más información, vea [Configurar un contenedor de bucles For](../../2014/integration-services/configure-a-for-loop-container.md).  
   
-## <a name="see-also"></a>Vea también  
- [Agregar o eliminar tareas o contenedores en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+## <a name="see-also"></a>Consulte también  
+ [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Agrupar o desagrupar componentes](group-or-ungroup-components.md)   
  [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [Agregar enumeración a un flujo de Control](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
+ [Agregar enumeración a un flujo de control](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   
  [Flujo de control](control-flow/control-flow.md)  
   
   

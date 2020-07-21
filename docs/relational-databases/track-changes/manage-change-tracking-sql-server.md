@@ -1,5 +1,6 @@
 ---
-title: Administración del seguimiento de cambios (SQL Server) | Microsoft Docs
+title: Administrar el seguimiento de cambios
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +16,15 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c613d8590334216215b0de24320d94612a7b6e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58093593dc2824d67e4b04cb6a02e52a1422555a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725361"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Administrar el seguimiento de cambios (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este tema se describe cómo administrar el seguimiento de los cambios. También se describe cómo configurar la seguridad, así como determinar los efectos en el almacenamiento y en el rendimiento cuando se utiliza esta característica.  
   

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e635d789-9218-488e-a213-2e3e09635acc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da7c1c07537ebd9cb258bbd2eba9c2e8718bfe40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f8231a88407334a4d4c72018d9fe1a4f178b20c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996936"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925985"
 ---
 # <a name="updatebyte-method-int-byte"></a>Método updateByte (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateByte(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el índice de la columna.  
   
@@ -47,7 +47,7 @@ public void updateByte(int index,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateByte especifica este método updateByte en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - TRIM function
 - trailing blanks
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59d7eb92d79aa77da3faded36036de4b14142c93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 756d9bd066f4ecbcb1cfb7e43cec8ca7ea2713a6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62896527"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437072"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (expresión de SSIS)
   Devuelve una expresión de caracteres después de quitar los espacios iniciales y finales.  
@@ -41,10 +40,10 @@ TRIM(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  TRIM devuelve un resultado NULL si el valor del argumento es NULL.  
   
- TRIM solo funciona con el tipo de datos DT_WSTR. Un argumento *character_expression* que sea un literal de cadena o una columna de datos con el tipo de datos DT_STR se convertirá implícitamente al tipo de datos DT_WSTR antes de que TRIM realice su operación. Los otros tipos de datos deben convertirse explícitamente al tipo de datos DT_WSTR. Para más información, vea [Tipos de datos de Integration Services](../data-flow/integration-services-data-types.md) y [Conversión &#40;expresión de SSIS&#41;](cast-ssis-expression.md).  
+ TRIM solo funciona con el tipo de datos DT_WSTR. Un argumento *character_expression* que sea un literal de cadena o una columna de datos con el tipo de datos DT_STR se convertirá implícitamente al tipo de datos DT_WSTR antes de que TRIM realice su operación. Los otros tipos de datos deben convertirse explícitamente al tipo de datos DT_WSTR. Para obtener más información, vea [Tipos de datos de Integration Services](../data-flow/integration-services-data-types.md) y [Conversión &#40;expresión de SSIS&#41;](cast-ssis-expression.md).  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo quita los espacios iniciales y finales de un literal de cadena. El resultado devuelto es "New York".  
@@ -59,7 +58,7 @@ TRIM("   New York   ")
 TRIM(FirstName + " "+ LastName)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [LTRIM &#40;expresión de SSIS&#41;](trim-ssis-expression.md)   
  [RTRIM &#40;expresión de SSIS&#41;](rtrim-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  

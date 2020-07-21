@@ -15,16 +15,16 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36c7637d1408a8d37764bf18997d341db959d8e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730291"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un optimizador basado en el costo. Esto significa que selecciona los planes de consulta cuya ejecución tiene el menor costo de procesamiento estimado. El optimizador de consultas determina el costo de ejecución de un plan de consulta en función de dos factores principales:
 
@@ -48,12 +48,7 @@ En los casos siguientes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 En este artículo se explica cómo evaluar y elegir la mejor configuración de estimación de cardinalidad para su sistema. La mayoría de los sistemas sacan partido de la última estimación de cardinalidad, porque es la más precisa. Con la estimación de cardinalidad se predice cuántas filas va a devolver la consulta casi con toda seguridad. El optimizador de consultas usa la predicción de cardinalidad para generar el mejor plan de consulta posible. Con estimaciones más precisas, el optimizador de consultas normalmente puede hacer mejor su trabajo a la hora de generar un plan de consulta óptimo.  
   
-Es bastante probable que el sistema de aplicaciones tenga una consulta importante cuyo plan cambie a un plan más lento debido a la nueva estimación de cardinalidad. Esa consulta podría ser una de las siguientes:  
-  
-- Una consulta OLTP (procesamiento de transacciones en línea) que se ejecuta con tanta frecuencia que, a menudo, coinciden varias instancias al mismo tiempo.  
-- Una instrucción SELECT con agregaciones importantes que se ejecuta durante el horario laboral de OLTP.  
-  
-Existen diversas técnicas para detectar una consulta que se ralentiza a raíz de la nueva estimación de cardinalidad. También hay diversas opciones para abordar ese problema de rendimiento.
+Es bastante probable que el sistema de aplicaciones tenga una consulta importante cuyo plan cambie a un plan más lento debido a cambios en la estimación de cardinalidad a lo largo de las versiones. Existen diversas técnicas y herramientas para detectar una consulta que se ralentiza debido a problemas de la estimación de cardinalidad. También hay diversas opciones para abordar los problemas de rendimiento resultantes.
   
 ## <a name="versions-of-the-ce"></a>Versiones de la estimación de cardinalidad
 
@@ -102,7 +97,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
 GO
 ```  
  
-O, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+O bien, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -129,7 +124,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> Se recomienda instalar la última versión de [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) y actualizarlo con frecuencia.  
+> Se recomienda instalar la última versión de [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) y actualizarlo con frecuencia.  
+
+> [!IMPORTANT] 
+> Asegúrese de que el almacén de consultas esté configurado correctamente para la base de datos y la carga de trabajo. Para más información, consulte [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md). 
   
 Otra opción para llevar un seguimiento del proceso de estimación de cardinalidad consiste en usar el evento extendido denominado **query_optimizer_estimate_cardinality**. El siguiente código de ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Escribe un archivo .xel en `C:\Temp\` (aunque la ruta de acceso se puede cambiar). Cuando abra el archivo .xel en [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], podrá consultar la información detallada de forma muy sencilla.  
   
@@ -176,7 +174,7 @@ Estos son los pasos que se pueden realizar para saber si alguna de las consultas
   
     3.  Asegúrese de que la configuración `LEGACY_CARDINALITY_ESTIMATION` de la base de datos está desactivada.  
   
-    4.  BORRE el almacén de consultas. Por supuesto, asegúrese de que el almacén de consultas está activado.  
+    4.  Borre el contenido del almacén de consultas. Asegúrese de que el almacén de consultas está activado.  
   
     5.  Ejecute la instrucción `SET NOCOUNT OFF;`.  
   
@@ -282,8 +280,8 @@ Las nuevas investigaciones exhaustivas en las cargas de trabajo y datos empresar
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  
@@ -291,7 +289,7 @@ WHERE s.ticket = r.ticket AND
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
- [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
+ [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md)     
  [Sugerencias de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
  [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           

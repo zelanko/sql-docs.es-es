@@ -1,5 +1,6 @@
 ---
 title: Restauraciones por etapas (SQL Server) | Microsoft Docs
+description: En SQL Server, la restauración por etapas permite la restauración y recuperación en fases de las bases de datos con varios grupos de archivos. La restauración por etapas funciona con todos los modelos de recuperación.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 61054ac32e13c16a77c1ad27400be6b978cebe7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670240"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tema se aplica a las bases de datos de la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (restauración con conexión) o de la edición Estándar (restauración sin conexión) que incluyan varios archivos o grupos de archivos y, en el modelo simple, únicamente para grupos de archivos de solo lectura.  
   
  Para obtener información sobre la restauración por etapas y las tablas optimizadas para memoria, vea [Restauración por etapas de bases de datos con tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
@@ -57,7 +58,7 @@ ms.locfileid: "72915998"
   
      Para obtener información sobre las restauraciones por etapas de bases de datos de OLTP en memoria, vea [Copias de seguridad y restauración por etapas de bases de datos con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) , no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Restauración por etapas con el modelo de recuperación simple  

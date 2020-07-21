@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1549b8fa0979bba109c84485a89384722c82e7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37cae552008873c874840fd75a84e7496bafdd0d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835411"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435652"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Realizar una carga incremental de varias tablas
   En el tema [Mejorar las cargas incrementales con la captura de datos modificados](change-data-capture-ssis.md), el diagrama muestra un paquete básico que realiza una carga incremental en una sola tabla. Sin embargo, cargar una tabla no es una acción tan común como realizar una carga incremental de varias tablas.  
@@ -45,7 +44,7 @@ ms.locfileid: "62835411"
   
 4.  Utilice varias tareas Ejecutar paquete para ejecutar los paquetes secundarios para cada tabla que se va a cargar. Pase los extremos calculados en el paquete primario a cada paquete secundario mediante configuraciones de variable de paquete primario.  
   
-     Para obtener más información, vea [Tarea Ejecutar paquete](../control-flow/execute-package-task.md) y [Usar los valores de variables y parámetros en un paquete secundario](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
+     Para más información, vea [Tarea Ejecutar paquete](../control-flow/execute-package-task.md) y [Usar los valores de variables y parámetros en un paquete secundario](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 #### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Para crear paquetes secundarios que realicen los pasos que se deben efectuar para cada tabla de origen  
   

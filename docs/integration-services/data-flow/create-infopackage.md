@@ -11,10 +11,10 @@ ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 25f1497b7801c7891681324b12fa9a5eda4eb842
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293208"
 ---
 # <a name="create-infopackage"></a>Crear InfoPackage
@@ -55,13 +55,13 @@ ms.locfileid: "71293208"
  **Textos**  
  Permite indicar que el InfoPackage cargará los datos de texto.  
   
- **Transaction**  
+ **Transacción**  
  Permite indicar que el InfoPackage cargará los datos de transacciones.  
   
  **Guardar y activar**  
  Permite guardar y activar el nuevo InfoPackage.  
   
 ## <a name="see-also"></a>Consulte también  
- [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
+ [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

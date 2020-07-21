@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796641"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parámetros con valores de tabla (motor de base de datos)
@@ -43,7 +43,7 @@ Los parámetros con valores de tabla son como las matrices de parámetros en OLE
 
 [Ejemplo](#Example)
 
-## <a name="Benefits"></a> Ventajas
+## <a name="benefits"></a><a name="Benefits"></a> Ventajas
 
 Un parámetro con valores de tabla está incluido en el ámbito de procedimiento almacenado, función o texto [!INCLUDE[tsql](../../includes/tsql-md.md)] dinámico, exactamente igual que los demás parámetros. Del mismo modo, una variable de tipo de tabla tiene el mismo ámbito que cualquier otra variable local creada mediante una instrucción DECLARE. Puede declarar variables con valores de tabla en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] dinámicas y pasar estas variables como parámetros con valores de tabla a procedimientos almacenados y funciones.
 
@@ -58,10 +58,10 @@ Los parámetros con valores de tabla proporcionan más flexibilidad y, en alguno
 - Permiten al cliente especificar un criterio de ordenación y claves únicas.
 - Se almacenan en caché como una tabla temporal cuando se usa en un procedimiento almacenado. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los parámetros con valores de tabla también se almacenan en caché para las consultas con parámetros.
 
-## <a name="Permissions"></a> Permisos
+## <a name="permissions"></a><a name="Permissions"></a> Permisos
 Para crear una instancia de un tipo de tabla definido por el usuario o llamar a un procedimiento almacenado con un parámetro con valores de tabla, el usuario debe tener el permiso EXECUTE en el tipo o en el esquema o la base de datos que contiene el tipo.
 
-## <a name="Restrictions"></a> Restricciones
+## <a name="restrictions"></a><a name="Restrictions"></a> Restricciones
 
 Los parámetros con valores de tabla tienen las restricciones siguientes:
 
@@ -69,7 +69,7 @@ Los parámetros con valores de tabla tienen las restricciones siguientes:
 - Los parámetros con valores de tabla se deben pasar como parámetros READONLY de entrada a rutinas [!INCLUDE[tsql](../../includes/tsql-md.md)] . No se pueden realizar operaciones de DML como UPDATE, DELETE o INSERT en un parámetro con valores de tabla en el cuerpo de una rutina.
 - No se puede utilizar un parámetro con valores de tabla como destino de una instrucción SELECT INTO o INSERT EXEC. Un parámetro con valores de tabla puede estar en la cláusula FROM de SELECT INTO o en el procedimiento almacenado o la cadena INSERT EXEC.
 
-## <a name="BulkInsert"></a> Parámetros con valores de tabla frente a operaciones BULK INSERT
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> Parámetros con valores de tabla frente a operaciones BULK INSERT
 
 El uso de parámetros con valores de tabla es comparable a otras formas de uso de variables basadas en conjuntos; sin embargo, el uso de parámetros con valores de tabla puede ser con frecuencia más rápido para grandes conjuntos de datos. Si se comparan con operaciones masivas que tienen un costo de inicio mayor que los parámetros con valores de tabla, el comportamiento de los parámetros con valores de tabla es excelente cuando se insertan menos de 1.000 filas.
 
@@ -77,7 +77,7 @@ Los parámetros con valores de tabla que se vuelven a utilizar se benefician del
 
 Los parámetros con valores de tabla se comportan tan bien o mejor que una implementación de matriz de parámetros equivalente.
 
-## <a name="Example"></a> Ejemplo
+## <a name="example"></a><a name="Example"></a> Ejemplo
 
 En el ejemplo siguiente se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)] y se muestra la forma de crear un tipo de parámetro con valores de tabla, declarar una variable para hacer referencia a ella, rellenar la lista de parámetros y, a continuación, pasar los valores a un procedimiento almacenado en la base de datos de AdventureWorks.
 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfa1c9265af255c3dc901bf931e7b70528f2ec64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038286"
 ---
 # <a name="replication-agent-profiles"></a>Perfiles del Agente de replicación
   Cuando se configura la replicación, se instala un conjunto de perfiles de agente en el distribuidor. Un perfil de agente contiene un conjunto de parámetros que se usan cada vez que se ejecuta un agente: cada agente inicia una sesión en el distribuidor durante su proceso de inicio y consulta los parámetros de su perfil. En las suscripciones de mezcla que utilizan la sincronización web, los perfiles se descargan y almacenan en el suscriptor. Si se cambia el perfil, éste se actualiza en el suscriptor la próxima vez que se ejecuta el Agente de mezcla. Para obtener más información acerca de la sincronización web, vea [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "62721757"
 ## <a name="snapshot-agent-profiles"></a>Perfiles del Agente de instantáneas  
  En la siguiente tabla se muestran los parámetros definidos en el perfil predeterminado del Agente de instantáneas. Para obtener más información acerca de estos parámetros, vea [Replication Snapshot Agent](replication-snapshot-agent.md).  
   
-||predeterminados|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -54,7 +53,7 @@ ms.locfileid: "62721757"
 ## <a name="log-reader-agent-profiles"></a>Perfiles del Agente de registro del LOG  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de registro del LOG. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Log Reader Agent](replication-log-reader-agent.md).  
   
-||predeterminados|historial detallado|  
+||default|historial detallado|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -66,7 +65,7 @@ ms.locfileid: "62721757"
 ## <a name="distribution-agent-profiles"></a>Perfiles del Agente de distribución  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de distribución. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Distribution Agent](replication-distribution-agent.md).  
   
-||predeterminados|historial detallado|Administrador de sincronización de Windows|Continuar después de errores de coherencia de datos.|Perfil de distribución para secuencias OLEDB|  
+||default|historial detallado|Administrador de sincronización de Windows|Continuar después de errores de coherencia de datos.|Perfil de distribución para secuencias OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -76,8 +75,8 @@ ms.locfileid: "62721757"
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32 768|  
+|**-PacketSize**|NULL|NULL|NULL|NULL|32 768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
 |**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
@@ -87,7 +86,7 @@ ms.locfileid: "62721757"
 ## <a name="merge-agent-profiles"></a>Perfiles del Agente de mezcla  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de mezcla. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Merge Agent](replication-merge-agent.md).  
   
-||predeterminados|historial detallado|Administrador de sincronización de Windows|validación del recuento de filas|validación del recuento de filas y de la suma de comprobación|conexión lenta|grandes volúmenes entre servidores|  
+||default|historial detallado|Administrador de sincronización de Windows|validación del recuento de filas|validación del recuento de filas y de la suma de comprobación|conexión lenta|grandes volúmenes entre servidores|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -118,16 +117,16 @@ ms.locfileid: "62721757"
 ## <a name="queue-reader-agent-profiles"></a>Perfiles del Agente de lectura de cola  
  En la siguiente tabla se muestran los parámetros definidos en el perfil predeterminado del Agente de lectura de cola. Para obtener más información acerca de estos parámetros, vea [Replication Queue Reader Agent](replication-queue-reader-agent.md).  
   
-||predeterminados|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](replication-agent-administration.md)   
  [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+ [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md)  
   
   

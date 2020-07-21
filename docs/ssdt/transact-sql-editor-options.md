@@ -1,11 +1,7 @@
 ---
-title: Opciones del Editor de Transact-SQL | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Opciones del Editor de Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,21 +23,26 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110631"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256318"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
+
 Este tema contiene información sobre algunas de las opciones del Editor de Transact-SQL. Para establecer estas opciones, navegue al cuadro de diálogo **Opción** a través del menú **Herramientas\Opciones**.  
   
 [Ejecución de la consulta](#QueryExecution)  
   
 [Resultados de la consulta](#QueryResults)  
   
-## <a name="QueryExecution"></a>Ejecución de la consulta  
+## <a name="query-execution"></a><a name="QueryExecution"></a>Ejecución de la consulta  
   
 |Propiedad|Descripción|  
 |------------|---------------|  
@@ -69,7 +70,7 @@ Este tema contiene información sobre algunas de las opciones del Editor de Tran
 |**SET ANSI_WARNINGS**|Especifica el comportamiento estándar de SQL-92 para varias condiciones de error. Para más información, consulte [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
 |**SET ANSI_NULLS**|Especifica el comportamiento conforme a SQL-92 para los operadores de comparación Igual que ( **=** ) y Distinto de ( **<>** ) cuando se usan con valores NULL. Para más información, consulte [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
-## <a name="QueryResults"></a>Resultados de la consulta  
+## <a name="query-results"></a><a name="QueryResults"></a>Resultados de la consulta  
   
 |Propiedad|Descripción|  
 |------------|---------------|  

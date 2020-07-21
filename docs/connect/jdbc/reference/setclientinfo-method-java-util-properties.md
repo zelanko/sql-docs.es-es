@@ -1,5 +1,5 @@
 ---
-title: Método setClientInfo (Java. util. Properties) | Microsoft Docs
+title: Método setClientInfo (java.util.Properties) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d89d266af2ef2409fb0a1a06c4768a0f2c387ce7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974744"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920916"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>Método setClientInfo (java.util.Properties)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,8 +37,8 @@ public void setClientInfo (java.util.Properties properties)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setClientInfo se especifica mediante el método setClientInfo en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método setClientInfo especifica este método setClientInfo en la interfaz java.sql.Connection.  
   
  El [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] no admite propiedades de información de cliente. Este método genera advertencias si el parámetro de entrada *properties* no hace referencia a un conjunto de propiedades vacías. Es decir, este método genera advertencias para las propiedades que desea establecer la aplicación. Las aplicaciones deberían utilizar el método [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) para recuperar cada advertencia.  
   

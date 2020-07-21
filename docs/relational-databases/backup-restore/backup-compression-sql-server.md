@@ -1,7 +1,8 @@
 ---
 title: Compresión de copia de seguridad (SQL Server) | Microsoft Docs
+description: Conozca la compresión de copias de seguridad de SQL Server, incluidas las restricciones, las ventajas y desventajas con respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.
 ms.custom: ''
-ms.date: 08/08/2016
+ms.date: 07/08/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,26 +18,26 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3351a709eef1550ab172e90b61d2cb67673ba27
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940834"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196952"
 ---
 # <a name="backup-compression-sql-server"></a>Compresión de copia de seguridad (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  Solo se admite la compresión de copia de seguridad en las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Enterprise, Standard y Developer.  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
  
   
-##  <a name="Benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="Benefits"></a> Ventajas  
   
 -   Dado que el tamaño de una copia de seguridad comprimida es menor que el de una sin comprimir de los mismos datos, normalmente la compresión de una copia de seguridad requiere menos operaciones de E/S en los dispositivos y, por consiguiente, suele aumentar significativamente la velocidad de creación de la copia.  
   
      Para obtener más información, vea [Impacto en el rendimiento de la compresión de las copias de seguridad](#PerfImpact), más adelante en este tema.  
   
   
-##  <a name="Restrictions"></a> Restricciones  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Restricciones  
  La compresión de las copias de seguridad está sujeta a las siguientes restricciones:  
   
 -   Las copias de seguridad comprimidas y sin comprimir no pueden coexistir al mismo tiempo en un mismo conjunto de medios.  
@@ -46,7 +47,7 @@ ms.locfileid: "67940834"
 -   NTbackups no puede compartir una cinta con copias de seguridad comprimidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-##  <a name="PerfImpact"></a> Impacto en el rendimiento de la compresión de las copias de seguridad  
+##  <a name="performance-impact-of-compressing-backups"></a><a name="PerfImpact"></a> Impacto en el rendimiento de la compresión de las copias de seguridad  
  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el[regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.  
   
  Para hacerse una idea acertada del rendimiento de la E/S de su copia de seguridad, puede aislar la E/S de la copia de seguridad realizada hacia o desde los dispositivos evaluando los siguientes tipos de contadores de rendimiento:  
@@ -60,7 +61,7 @@ ms.locfileid: "67940834"
  Para obtener más información acerca de los contadores de Windows, vea la ayuda de Windows. Para obtener información sobre el trabajo con contadores de SQL Server, vea [Usar objetos de SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
    
-##  <a name="CompressionRatio"></a> Calcular la razón de compresión de una copia de seguridad comprimida  
+##  <a name="calculate-the-compression-ratio-of-a-compressed-backup"></a><a name="CompressionRatio"></a> Calcular la razón de compresión de una copia de seguridad comprimida  
  Para calcular la razón de compresión de una copia de seguridad, use los valores de la copia de seguridad de las columnas **backup_size** y **compressed_backup_size** de la tabla de historial [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) , de la manera siguiente:  
   
  **backup_size**:**compressed_backup_size**  
@@ -83,19 +84,28 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   Si los datos están o no cifrados.  
   
-     Los datos cifrados se comprimen mucho menos que los datos no cifrados equivalentes. Si se usa el cifrado transparente de los datos para cifrar una base de datos completa, al comprimir las copias de seguridad, podría no reducirse mucho su tamaño, o nada en absoluto.  
-  
+     Los datos cifrados se comprimen mucho menos que los datos no cifrados equivalentes. Por ejemplo, si los datos se cifran en el nivel de columna con Always Encrypted, o con otro cifrado de nivel de aplicación, puede que la compresión de las copias de seguridad no reduzca considerablemente el tamaño.
+
+     Para obtener más información relacionada con la compresión de bases de datos cifradas mediante Cifrado de datos transparente (TDE), vea [Compresión de copia de seguridad con TDE](#backup-compression-with-tde).
+
 -   Si la base de datos está comprimida.  
   
      Si la base de datos está comprimida, puede que la compresión de las copias de seguridad no reduzca demasiado su tamaño, si es que logra alguna reducción.  
-  
-  
-##  <a name="Allocation"></a> Asignación de espacio para el archivo de copia de seguridad.  
+
+## <a name="backup-compression-with-tde"></a>Compresión de copia de seguridad con TDE
+
+Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el valor `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)** habilita un algoritmo de compresión optimizada para bases de datos con [cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si `MAXTRANSFERSIZE` no se especifica o si se usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
+
+Desde [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, ya no es necesario establecer `MAXTRANSFERSIZE` para habilitar este algoritmo de compresión optimizada con TDE. Si se especifica el comando de copia de seguridad `WITH COMPRESSION` o la configuración de servidor  *predeterminada de compresión de copia de seguridad* se establece en 1, `MAXTRANSFERSIZE` aumentará automáticamente a 128K para habilitar el algoritmo optimizado. Si se especifica `MAXTRANSFERSIZE` en el comando de copia de seguridad con un valor > 64K, se respetará el valor proporcionado. En otras palabras, SQL Server nunca disminuirá automáticamente el valor, solo lo aumentará. Si necesita hacer una copia de seguridad de una base de datos con cifrado TDE con `MAXTRANSFERSIZE = 65536`, debe especificar `WITH NO_COMPRESSION` o asegurarse de que la configuración de servidor *predeterminada de compresión de copia de seguridad* esté establecida en 0.
+
+Para obtener más información, vea [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
+
+##  <a name="allocation-of-space-for-the-backup-file"></a><a name="Allocation"></a> Asignación de espacio para el archivo de copia de seguridad.  
  Para las copias de seguridad comprimidas, el tamaño del archivo de copia de seguridad final depende de en qué grado puedan comprimirse los datos y esto no se conoce antes de que la operación de copia de seguridad finalice.  Por lo tanto, de forma predeterminada al hacer una copia de seguridad de una base de datos usando la compresión, el Motor de base de datos usa un algoritmo de preasignación para el archivo de copia de seguridad. Este algoritmo preasigna una porcentaje predefinido del tamaño de la base de datos para el archivo de copia de seguridad. Si se necesita más espacio durante la operación de copia de seguridad, el Motor de base de datos hace crecer el archivo. Si el tamaño final es menor que el espacio asignado, al final de la operación de copia de seguridad, el Motor de base de datos reduce el archivo hasta el tamaño final real de la copia de seguridad.  
   
  Para que el archivo de copia de seguridad crezca solo lo necesario para alcanzar su tamaño final, use la marca de seguimiento 3042. La marca de seguimiento 3042 hace que la operación de copia de seguridad omita el algoritmo de preasignación de compresión de copia de seguridad predeterminada. Esta marca de seguimiento es útil si tiene que ahorrar espacio asignando solo el tamaño real requerido para la copia de seguridad comprimida. No obstante, el uso de esta marca de seguimiento podría ocasionar una ligera reducción en el rendimiento (un posible aumento de la duración de la operación de copia de seguridad).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Configurar la compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/configure-backup-compression-sql-server.md)  
   

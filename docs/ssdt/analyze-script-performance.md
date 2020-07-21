@@ -1,25 +1,24 @@
 ---
-title: Análisis del rendimiento de los scripts | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Analizar el rendimiento de los scripts
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984682"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245562"
 ---
 # <a name="analyze-script-performance"></a>Analizar el rendimiento de los scripts
+
 Puede usar las herramientas proporcionadas por SQL Server Data Tools para determinar si puede mejorar el rendimiento de la consulta, los procedimientos almacenados o los scripts. Por ejemplo, supervisando estadísticas de cliente como los tiempos de respuesta a las consultas usadas con frecuencia, puede determinar si es necesario cambiar la consulta o los índices de las tablas. Esas estadísticas pueden incluir el tiempo de ejecución del cliente, el perfil de consulta y los paquetes/bytes enviados y recibidos.  
   
 Además, algunos problemas de rendimiento se solucionan mejor mediante el análisis de las consultas y actualizaciones que la aplicación envía a la base de datos, y la forma en que estas consultas y actualizaciones interactúan con los datos y el esquema de la base de datos. Los planes de ejecución muestran gráficamente los métodos de recuperación de datos elegidos por el optimizador de consultas de SQL Server, y muestran el costo de ejecución de determinadas instrucciones y consultas. Por tanto, pueden ayudarle a entender cómo SQL Server procesa la consulta de SQL y a determinar la causa de la degradación del rendimiento.  

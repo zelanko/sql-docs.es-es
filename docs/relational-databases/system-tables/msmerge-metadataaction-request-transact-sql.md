@@ -15,30 +15,30 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_metadataaction_request system table
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106367"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889730"
 ---
-# <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **MSmerge_metadataaction_request** tabla almacena una fila por cada acción de compensación necesaria. Usar sincronización Web, si se produce un error y se debe volver a intentar la sincronización, se realiza una entrada en **MSmerge_metadataaction_request**. Durante la fase de carga de la mezcla posterior, las solicitudes de todos los artículos pertenecientes a la publicación que se está sincronizando se recuperan de esta taba y se cargan. Cuando se haya completado correctamente la sincronización, la fila correspondiente en el **MSmerge_metadataaction_request** se elimina la tabla. Esta tabla se almacena en la base de datos de publicación del publicador y en la base de datos de suscripciones del suscriptor.  
+  En la tabla **MSmerge_metadataaction_request** se almacena una fila por cada acción de compensación necesaria. Mediante la sincronización Web, si se produce un error y se debe reintentar la sincronización, se realiza una entrada en **MSmerge_metadataaction_request**. Durante la fase de carga de la mezcla posterior, las solicitudes de todos los artículos pertenecientes a la publicación que se está sincronizando se recuperan de esta taba y se cargan. Cuando la sincronización se haya completado correctamente, se eliminará la fila correspondiente en la tabla de **MSmerge_metadataaction_request** . Esta tabla se almacena en la base de datos de publicación del publicador y en la base de datos de suscripciones del suscriptor.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|El alias de la tabla publicada.|  
 |**rowguid**|**uniqueidentifier**|Identificador de la fila especificada.|  
 |**action**|**tinyint**|Identifica la acción de compensación necesaria.|  
-|**generation**|**bigint**|El valor de la generación para la que se necesita la acción de compensación.|  
-|**changed**|**int**|Solo para uso interno.|  
+|**última**|**bigint**|El valor de la generación para la que se necesita la acción de compensación.|  
+|**cambio**|**int**|Solo para uso interno.|  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   

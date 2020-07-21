@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0eeb0558d898c4f12e1d3848e7220c7b7143c996
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98b49873b2774151c0ff23d7e7a7dfab9ccf9388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704975"
 ---
 # <a name="static-aggregate-geography-methods"></a>Métodos de agregado de geografía estáticos
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes métodos de agregado como extensiones a los métodos de geografía estáticos de Open Geospatial Consortium (OGC).  
   

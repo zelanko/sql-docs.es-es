@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 406e7f7cbf2cd7656fe50531027c8566cb6c3243
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd402193bf666ca7bacadafb44a177ddda71777b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975763"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80904102"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>Método releaseSavepoint (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 #### <a name="parameters"></a>Parámetros  
  *savepoint*  
   
- Objeto de punto de retorno que se va a quitar.  
+ El objeto SavePoint que se va a quitar.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método releaseSavepoint se especifica mediante el método releaseSavepoint en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método releaseSavepoint especifica este método releaseSavepoint en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

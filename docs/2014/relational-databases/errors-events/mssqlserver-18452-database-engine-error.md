@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 21da332c-e81d-4dee-a9d2-95598911b3be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d3318e2425ba8c9dde6f8a5cc950bc0444a0bb2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6502edb0c0e23628f3fe2ec8cba5c2af4d1685aa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869488"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552240"
 ---
-# <a name="mssqlserver18452"></a>MSSQLSERVER_18452
+# <a name="mssqlserver_18452"></a>MSSQLSERVER_18452
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|18452|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|18452|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|LOGON_INVALID_CONNECT|  
 |Texto del mensaje|Error de inicio de sesión del usuario '%.*ls'. El inicio de sesión es un inicio de sesión de SQL Server y no se puede usar con la autenticación de Windows.%.\*ls|  

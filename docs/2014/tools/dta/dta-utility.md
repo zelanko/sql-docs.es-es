@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c412258e04c1945638e0302a2c0c7bf2fb657a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057779"
 ---
 # <a name="dta-utility"></a>dta, utilidad
   La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
@@ -134,7 +133,7 @@ dta -d AdventureWorks2012 ...
   
  Si se especifican varios nombres de bases de datos, **dta** devuelve un error. El argumento **-d** es opcional.  
   
- Si utiliza un archivo de entrada XML, puede especificar la primera base de datos que **dta** se conecta mediante el `DatabaseToConnect` elemento que se encuentra bajo la `TuningOptions` elemento. Para obtener más información, vea [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Si utiliza un archivo de entrada XML, puede especificar la primera base de datos a la que se conecta **DTA** mediante el `DatabaseToConnect` elemento que se encuentra bajo el `TuningOptions` elemento. Para obtener más información, vea [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Si solo optimiza una base de datos, el argumento **-d** proporciona una funcionalidad similar a la del argumento **-d** de la utilidad **sqlcmd** , pero no ejecuta la instrucción USE *database_name* . Para obtener más información, consulte [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -149,7 +148,7 @@ dta -d AdventureWorks2012 ...
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
 |*database_name*|*database_name* especificado con la opción **–D**|  
-|*owner_name*|**dbo**<br /><br /> Nota: *owner_name* debe ser **dbo**. Si se especifica otro valor, la ejecución de **dta** es errónea y devuelve un error.|  
+|*owner_name*|**dbo**<br /><br /> Nota: *owner_name* debe ser **DBO**. Si se especifica otro valor, la ejecución de **dta** es errónea y devuelve un error.|  
 |*table_name*|None|  
   
  Si se usa un archivo, especifique .xml como extensión. Por ejemplo, TuningLog.xml.  
@@ -161,7 +160,7 @@ dta -d AdventureWorks2012 ...
  Permite que **dta** sobrescriba un archivo de salida existente. Si ya existe un archivo de salida con el mismo nombre y no se especifica **-F** , **dta**devuelve un error. Puede usar **-F** con **-of**, **-or**o **-ox**.  
   
  **-fa** _physical_design_structures_to_add_  
- Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **dta** usa el valor predeterminado **-fa**`IDX`.  
+ Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **DTA** usa el valor predeterminado **-FA** `IDX` .  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -193,7 +192,7 @@ dta -d AdventureWorks2012 ...
 |FULL|Particiones completas (para mejorar el rendimiento)|  
 |ALIGNED|Solo particiones alineadas (para mejorar la capacidad de administración)|  
   
- ALIGNED significa que, en la recomendación generada por **dta** , cada índice propuesto se divide exactamente igual que la tabla subyacente para la que se ha definido el índice. Los índices no clúster de una vista indizada se alinean con la vista indizada. Solo se puede especificar un valor para este argumento. El valor predeterminado es **-fp**`NONE`.  
+ ALIGNED significa que, en la recomendación generada por **dta** , cada índice propuesto se divide exactamente igual que la tabla subyacente para la que se ha definido el índice. Los índices no clúster de una vista indizada se alinean con la vista indizada. Solo se puede especificar un valor para este argumento. El valor predeterminado es **-FP** `NONE` .  
   
  **-fx** _drop_only_mode_  
  Especifica que **dta** solo tiene en cuenta la eliminación de estructuras de diseño físicas existentes. No se tienen en cuenta las nuevas estructuras de diseño físico. Cuando se especifica esta opción, **dta** evalúa la utilidad de las estructuras de diseño físico existentes y recomienda la eliminación de las estructuras que se usan en contadas ocasiones. Este argumento no necesita valores. No puede usarse con los argumentos **-fa**, **-fp**o **-fk ALL** .  
@@ -233,10 +232,10 @@ dta -d AdventureWorks2012 ...
  **-N** _online_option_  
  Especifica si las estructuras de diseño físico se crean en línea. En la tabla siguiente se muestran y describen los valores que pueden especificarse para este argumento:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|OFF|No se pueden crear en línea las estructuras recomendadas de diseño físico.|  
-|ON|Se pueden crear en línea todas las estructuras recomendadas de diseño físico.|  
+|Apagado|No se pueden crear en línea las estructuras recomendadas de diseño físico.|  
+|ACTIVAR|Se pueden crear en línea todas las estructuras recomendadas de diseño físico.|  
 |MIXED|Siempre que es posible, el Asistente para la optimización de motor de base de datos intenta recomendar las estructuras de diseño físico que se pueden crear en línea.|  
   
  Si los índices se crean en línea, se anexa ONLINE = ON a la definición del objeto.  
@@ -274,7 +273,7 @@ dta -n number_of_events -A 0
  **-rl** _analysis_report_list_  
  Especifica la lista de informes de análisis que se generarán. En la tabla siguiente se muestran los valores que se pueden especificar para este argumento:  
   
-|Valor|Informe|  
+|Value|Informe|  
 |-----------|------------|  
 |ALL|Todos los informes de análisis|  
 |STMT_COST|Informe de costo de instrucciones|  
@@ -334,7 +333,7 @@ dta -n number_of_events -A 0
  **-x**  
  Inicia la sesión de optimización y se cierra.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Pulse Ctrl+C una vez para detener la sesión de optimización y generar recomendaciones basadas en el análisis que **dta** ha completado hasta este punto. Se le solicitará que decida si desea o no generar recomendaciones. Presione CTRL+C de nuevo para detener la sesión de optimización sin generar recomendaciones.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -388,8 +387,8 @@ AdventureWorks2012.Production.Product  2000000
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../command-prompt-utility-reference-database-engine.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

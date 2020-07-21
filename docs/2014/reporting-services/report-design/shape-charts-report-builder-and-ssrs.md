@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104947"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de formas (Generador de informes y SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66104947"
   
 -   Los gráficos de formas son muy efectivos para mostrar porcentajes proporcionales ordenados. Sin embargo, para mantener la coherencia, el gráfico no ordena los valores del conjunto de datos de forma predeterminada. Piense en la posibilidad de ordenar los valores de mayor a menor para representar con mayor precisión los datos con forma de embudo o de pirámide. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
--   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico de formas. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico de formas por otro tipo de gráfico. Para obtener más información sobre cómo agregar puntos vacíos a un gráfico que no son de formas, vea [agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico de formas. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico de formas por otro tipo de gráfico. Para obtener más información sobre cómo agregar puntos vacíos a un gráfico que no sea de formas, vea [Agregar puntos vacíos al gráfico &#40;generador de informes y SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
 -   Si va a definir sus propios colores en un gráfico de formas con una paleta personalizada, asegúrese de que dispone de colores suficientes para resaltar cada punto de datos con su propio color. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66104947"
   
 -   Puede aplicar estilos de dibujo adicionales a los gráficos circulares y de anillos para aumentar su impacto visual. Para más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

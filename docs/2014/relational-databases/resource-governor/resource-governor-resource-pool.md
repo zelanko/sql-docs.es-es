@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063564"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
   En el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un grupo de recursos de servidor representa un subconjunto de los recursos físicos de una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Cada grupo de recursos de servidor puede contener uno o más grupos de cargas de trabajo. Cuando se inicia una sesión, el clasificador del regulador de recursos asigna la sesión a un grupo de cargas de trabajo concreto y la sesión se debe ejecutar utilizando los recursos asignados al grupo de cargas de trabajo.  
@@ -65,8 +64,8 @@ ms.locfileid: "63209874"
   
 |Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
-|interno|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
-|predeterminados|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
+|internal|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
+|default|0|100|30|30|El valor MAX efectivo se calcula como: min (100,100 - (20+50)) = 30. El % compartido calculado es el MAX efectivo - MIN = 30.|  
 |Grupo 1|20|100|50|30|El valor MAX efectivo se calcula como: min(100,100-50) = 50. El % compartido calculado es el MAX efectivo - MIN = 30.|  
 |Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-20) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63209874"
 |Nombre del grupo|Valor de % MIN|Valor de % MAX|% MAX efectivo calculado|% compartido calculado|Comentario|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |interno|0|100|100|0|Los valores de % MAX efectivo y % compartido no son aplicables al grupo interno.|  
-|predeterminados|0|100|25|25|El valor MAX efectivo se calcula como: min(100,100-(20+50+5)) = 25. El % compartido calculado es el MAX efectivo - MIN = 25.|  
+|default|0|100|25|25|El valor MAX efectivo se calcula como: min(100,100-(20+50+5)) = 25. El % compartido calculado es el MAX efectivo - MIN = 25.|  
 |Grupo 1|20|100|45|25|El valor MAX efectivo se calcula como: min (100,100-55) = 45. El % compartido calculado es el MAX efectivo - MIN = 25.|  
 |Grupo 2|50|70|70|20|El valor MAX efectivo se calcula como: min(70,100-25) = 70. El % compartido calculado es el MAX efectivo - MIN = 20.|  
 |Grupo 3|5|100|30|25|El valor MAX efectivo se calcula como: min(100,100-70) = 30. El % compartido calculado es el MAX efectivo - MIN = 25.|  
@@ -116,10 +115,10 @@ ms.locfileid: "63209874"
 |Describe cómo cambiar la configuración del grupo de recursos de servidor.|[Cambiar la configuración del grupo de recursos de servidor](change-resource-pool-settings.md)|  
 |Describe cómo eliminar un grupo de recursos de servidor.|[Eliminar un grupo de recursos de servidor](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
- [Función clasificadora del regulador de recursos](resource-governor-classifier-function.md)   
+ [Resource Governor función clasificadora](resource-governor-classifier-function.md)   
  [Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)   
  [Ver las propiedades del regulador de recursos](view-resource-governor-properties.md)  
   

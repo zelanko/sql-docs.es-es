@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 278dd48749168495c2678e58e25ae732060b12fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750993"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificar un seguimiento existente (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo utilizar procedimientos almacenados para modificar un seguimiento existente.  
   
 ### <a name="to-modify-an-existing-trace"></a>Para modificar un seguimiento existente  
@@ -30,17 +30,17 @@ ms.locfileid: "72909457"
   
 2.  Para modificar los eventos del seguimiento, ejecute **sp_trace_setevent** , especificando los cambios a través de los parámetros. Los parámetros son, por este orden:  
 
-    -   **@traceid** (Id. del seguimiento)  
+    -   **\@traceid** (identificador de seguimiento)  
   
-    -   **@eventid** (Id. del evento)  
+    -   **\@eventid** (identificador del evento)  
   
-    -   **@columnid** (Id. de columna)  
+    -   **\@columnid** (identificador de columna)  
   
-    -   **@on** (ON)  
+    -   **\@on** (activado)  
   
-     Al modificar el parámetro **@on** , tenga presente su interacción con el parámetro **@columnid** :  
+     Al modificar el parámetro **\@on**, tenga presente su interacción con el parámetro **\@columnid**:  
   
-    |ON|Identificador de columna|Resultado|  
+    |ACTIVAR|Identificador de columna|Resultado|  
     |--------|---------------|------------|  
     |ON (**1**)|NULL|El evento se activa, se establece en ON. Se borran todas las columnas.|  
     ||NOT NULL|La columna se activa, se establece en ON, para el evento especificado.|  

@@ -444,7 +444,7 @@
           href: ../mdx/strtovalue-mdx.md
         - name: Subset
           href: ../mdx/subset-mdx.md
-        - name: SUM
+        - name: Sum
           href: ../mdx/sum-mdx.md
         - name: Tail
           href: ../mdx/tail-mdx.md
@@ -472,7 +472,7 @@
           href: ../mdx/username-mdx.md
         - name: ValidMeasure
           href: ../mdx/validmeasure-mdx.md
-        - name: Valor
+        - name: Value
           href: ../mdx/value-mdx.md
         - name: Var
           href: ../mdx/var-mdx.md

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e48a38ba97feaf03a9ed14f3668ac4b98095a92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d172683f5248c5ad50cb20bb26f58c94849d4c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62679126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064324"
 ---
 # <a name="about-sql-server-management-studio"></a>Acerca de SQL Server Management Studio
   Utilice este cuadro de diálogo para ver o copiar información sobre la instalación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las ediciones de evaluación muestran el número de días que faltan hasta el vencimiento del producto.  

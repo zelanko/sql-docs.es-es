@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a980f048d6a8f5fae333381f07be3c889ad70366
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091901"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890699"
 ---
-# <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lee datos de la cadena en las posiciones de los argumentos especificados por cada argumento de formato.  
   
@@ -43,13 +43,13 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
  Es la cadena de caracteres de la que se van a extraer los argumentos.  
   
  OUTPUT  
- Cuando se especifica, coloca el valor de *argumento* en el parámetro de salida.  
+ Cuando se especifica, coloca el valor de *argument* en el parámetro de salida.  
   
  *format*  
- Es una cadena de caracteres con formato similar a lo que es compatible con el lenguaje C **sscanf** función. Actualmente, solo se acepta el formato %s.  
+ Es una cadena de caracteres con formato similar a la admitida por la función **sscanf** del lenguaje C. Actualmente, solo se acepta el formato %s.  
   
  *argument*  
- Es un **varchar** variable se establece en el valor de la correspondiente *formato* argumento.  
+ Es una variable **VARCHAR** establecida en el valor del argumento *Format* correspondiente.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar hasta 50 argumentos.  
@@ -82,9 +82,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+ [xp_sprintf &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

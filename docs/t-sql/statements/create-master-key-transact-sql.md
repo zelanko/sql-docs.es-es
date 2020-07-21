@@ -24,16 +24,16 @@ ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64e05a3498a489cfa16d913b953b39c0d0ccb251
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 2bd067638bdcf9ee624fa714334ff8c8a78c0e69
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816842"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393213"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Crea una clave maestra de base de datos en la base de datos.
 
@@ -41,16 +41,18 @@ Crea una clave maestra de base de datos en la base de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
 PASSWORD ="*contraseña*" es la contraseña que se usa para cifrar la clave maestra de la base de datos. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* es opcional en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La clave maestra de base de datos es una clave simétrica que se usa para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. Al crearla, la clave maestra se cifra mediante el algoritmo AES_256 y una contraseña proporcionada por el usuario. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se utiliza el algoritmo triple DES. Para permitir el descifrado automático de la clave maestra, se cifra una copia de la clave mediante la clave maestra de servicio y se almacena en la base de datos y en la base de datos maestra. Por lo general, la copia almacenada en la base de datos maestra se actualiza automáticamente al cambiar la clave maestra. Es posible cambiar esta opción predeterminada usando la opción DROP ENCRYPTION BY SERVICE MASTER KEY de [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Para abrir una clave maestra que no se haya cifrado con la clave maestra de servicio, debe usarse la instrucción [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) y una contraseña.
 

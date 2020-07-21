@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 67f738c92307fbf504bc6824ce3e6871746952b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833877"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438412"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de archivos
   Utilice el cuadro de diálogo **Agregar administrador de conexiones de archivos** para definir una conexión a un grupo de archivos o carpetas.  
@@ -33,7 +32,7 @@ ms.locfileid: "62833877"
  **Tipo de uso**  
  Especifique el tipo de archivo que va a utilizar para el administrador de conexiones de varios archivos.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Crear archivos**|El administrador de conexiones creará los archivos.|  
 |**Archivos existentes**|El administrador de conexiones utilizará archivos existentes.|  
@@ -43,19 +42,19 @@ ms.locfileid: "62833877"
  **Archivos/Carpetas**  
  Muestra los archivos o carpetas que se han agregado mediante los botones descritos a continuación.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un archivo desde el cuadro de diálogo **Seleccionar archivos** o agregue una carpeta desde el cuadro de diálogo **Buscar carpeta** .  
   
- **Editar**  
+ **Edición**  
  Seleccione un archivo o una carpeta y reemplácelos con un archivo o una carpeta diferentes desde el cuadro de diálogo **Seleccionar archivos** o **Buscar carpeta** , respectivamente.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un archivo o una carpeta y quítelos de la lista con el botón **Quitar** .  
   
  **Botones de flecha**  
  Seleccione un archivo o una carpeta y utilice los botones de flecha para subirlos o bajarlos y especificar la secuencia de acceso.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md)  
   
   

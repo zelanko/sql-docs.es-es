@@ -9,25 +9,24 @@ ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6478f29c150181b477e6fecc5c4b35f25db3e817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3ba0ba2e6b8e1549016a6cc1fc7b1fba4af2fc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051098"
 ---
-# <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
+# <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|266|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|266|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
-|Texto del mensaje|Se ha producido un error durante el inicio de la instancia de base de datos Local: No se pudo iniciar el proceso de SQL Server.|  
+|Texto del mensaje|Error durante el inicio de la instancia de la base de datos local: no se pudo iniciar el proceso de SQL Server.|  
   
 ## <a name="explanation"></a>Explicación  
  Se ha iniciado un proceso de SQL Server, pero se ha producido un error al iniciar SQL Server.  

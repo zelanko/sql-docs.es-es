@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c4e8a1e2a277d5888603a84a1dcb9f582380e3a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702501"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el número de curvas de una instancia unidimensional de **geography**.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68120929"
 .STNumCurves()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los tipos de datos espaciales unidimensionales incluyen **LineString**, **CircularString** y **CompoundCurve**. Una instancia vacía unidimensional de **geography** devuelve 0.  
   
  `STNumCurves`() solo funciona en tipos simples; no funciona con colecciones de **geography** como **MultiLineString**. Se devuelve **NULL** cuando la instancia de **geography** no es un tipo de datos unidimensional.  

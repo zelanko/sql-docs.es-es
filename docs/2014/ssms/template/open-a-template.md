@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b00a531c3b8abde6e9728039ece1de6a1866d3d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad12b20233cb753b28c4618ce53cd28ed850984c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63071874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061944"
 ---
 # <a name="open-a-template"></a>Abrir una plantilla
   Puede abrir una plantilla desde el Explorador de plantillas.  
@@ -42,7 +41,7 @@ ms.locfileid: "63071874"
   
  Si la apertura de una plantilla inicia una nueva ventana del editor, la ventana se abrirá con las credenciales de la conexión activa actual. Por ejemplo, si se centra en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el Explorador de objetos al abrir la plantilla CREATE DATABASE, se abrirá una nueva ventana del editor mediante una conexión a dicha instancia. Si no hay ninguna conexión activa, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presentará un cuadro de diálogo de inicio de sesión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de plantillas](template-explorer.md)   
  [Reemplazar parámetros de plantilla](replace-template-parameters.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: Habilitar y deshabilitar el seguimiento de cambios (SQL Server) | Microsoft Docs
+title: Habilitar y deshabilitar el seguimiento de cambios
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,15 +18,15 @@ ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1da6aaf1f3befc09ccf26d4405a6d5853de5441d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 775feb5c2393c8b482deb2deb919fc93576e3ce6
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058043"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279090"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Habilitar y deshabilitar el seguimiento de cambios (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este tema se describe cómo habilitar y deshabilitar el seguimiento de cambios para una tabla y una base de datos.  
   
@@ -38,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- También puede habilitar el seguimiento de cambios en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el cuadro de diálogo [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) .  
+ También puede habilitar el seguimiento de cambios en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el cuadro de diálogo [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) . Si una base de datos contiene tablas optimizadas para memoria, no se puede habilitar el seguimiento de cambios con SQL Server Management Studio. Para habilitarlo, use T-SQL.
   
  Puede especificar las opciones CHANGE_RETENTION y AUTO_CLEANUP al habilitar el seguimiento de cambios, y puede cambiar los valores en cualquier momento una vez que esté habilitado.  
   

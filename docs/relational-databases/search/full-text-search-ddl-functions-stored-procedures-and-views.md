@@ -1,5 +1,5 @@
 ---
-title: DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas | Microsoft Docs
+title: DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -10,22 +10,23 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e6674c40fe0f0b01d9a2b59104b67e0eff7cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a54c93eb9e0c9964698e44451aa4be5e13e07d9f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723091"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Enumera las instrucciones Transact-SQL y objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la búsqueda de texto completo, incluida la característica de búsqueda de la propiedad.  
   
  Esta lista no incluye objetos desusados.  
   
  Para obtener la lista de objetos de base de datos que admiten la búsqueda semántica, vea [DDL de búsqueda semántica, funciones, procedimientos almacenados y vistas](../../relational-databases/search/semantic-search-ddl-functions-stored-procedures-and-views.md).  
   
-##  <a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
   
 -   [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68082772"
   
 -   [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="func"></a> Predicados y funciones del sistema  
+##  <a name="system-predicates-and-functions"></a><a name="func"></a> Predicados y funciones del sistema  
   
 -   [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68082772"
   
 -   [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
   
-##  <a name="meta"></a> Funciones de metadatos del sistema  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> Funciones de metadatos del sistema  
   
 -   [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68082772"
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
-##  <a name="proc"></a> Procedimientos almacenados del sistema  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> Procedimientos almacenados del sistema  
   
 -   [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)  
   
@@ -89,7 +90,7 @@ ms.locfileid: "68082772"
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  
   
-##  <a name="cat"></a> Vistas del sistema: vistas de catálogo  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> Vistas del sistema: vistas de catálogo  
   
 -   [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)  
   
@@ -115,7 +116,7 @@ ms.locfileid: "68082772"
   
 -   [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)  
   
-##  <a name="dmv"></a> Vistas del sistema: vistas de administración dinámica  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Vistas del sistema: vistas de administración dinámica  
   
 -   [sys.dm_fts_active_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-active-catalogs-transact-sql.md)  
   

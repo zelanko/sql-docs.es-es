@@ -17,10 +17,10 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 333ccd783a1ef55a3c2ddc79936011330cf79b9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294109"
 ---
 # <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento

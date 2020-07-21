@@ -1,5 +1,5 @@
 ---
-title: Servicios de soporte técnico | Microsoft Docs
+title: Soporte técnico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - product support [ODBC]
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09e62da5bf1f68ddf5ad2ab974d85cfb8dec859a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: baabb4b5beb1c089ae1d53b7de08d14955d83158
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988092"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304856"
 ---
 # <a name="product-support"></a>Servicios de soporte técnico
-Servicios de soporte técnico de Microsoft proporciona soporte técnico para ODBC. Dado que muchos productos de Microsoft utilizan ODBC como componente principal y también redistribuyen los controladores ODBC, servicios de soporte técnico de Microsoft consideran que ODBC a formar parte de cada producto que incorpora ODBC como un componente. Soporte técnico para ODBC se proporciona conforme al acuerdo de soporte técnico de ese producto. Consulte la documentación de productos individuales para obtener más información.
+Los servicios de soporte técnico de Microsoft proporcionan soporte técnico para ODBC. Dado que muchos productos de Microsoft usan ODBC como componente principal y también redistribuyen los controladores ODBC, los servicios de soporte técnico de Microsoft consideran que ODBC forme parte de cada producto que incorpora ODBC como componente. La compatibilidad con ODBC se proporciona según el contrato de soporte técnico de dicho producto. Para obtener más información, consulte la documentación del producto individual.

@@ -1,5 +1,5 @@
 ---
-title: Ayuda F1 del Asistente para la administración de particiones | Microsoft Docs
+title: Asistente para administrar particiones
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787555"
 ---
-# <a name="manage-partition-wizard-f1-help"></a>Ayuda F1 del Asistente para la administración de particiones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="manage-partition-wizard"></a>Asistente para administrar particiones 
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice el **Asistente para la administración de particiones** con el fin de administrar y modificar las tablas con particiones existentes a través de la activación de particiones o de la implementación de un escenario de ventanas deslizantes. Este asistente puede facilitar la administración de las particiones y simplificar la migración normal de los datos en las tablas.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Para iniciar el Asistente para la administración de particiones  
@@ -44,7 +44,7 @@ ms.locfileid: "68892408"
   
  En esta sección se proporciona la información necesaria para administrar, modificar e implementar particiones utilizando el **Asistente para la administración de particiones**.  
   
-##  <a name="Top"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="Top"></a> En esta sección  
  En las secciones siguientes se proporciona ayuda de las páginas del **Asistente para la administración de particiones**.  
   
  [Asistente para la administración de particiones (página Seleccionar acción de partición)](#SelectPartitionAction)  
@@ -63,7 +63,7 @@ ms.locfileid: "68892408"
   
  [Asistente para la administración de particiones (página Progreso)](#Progress)  
   
-##  <a name="SelectPartitionAction"></a> Página Seleccionar acción de partición  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Página Seleccionar acción de partición  
  Utilice la página **Seleccionar acción de partición** para elegir la acción que desee realizar en la partición.  
   
 ### <a name="create-a-staging-table"></a>Crear una tabla de ensayo  
@@ -76,7 +76,7 @@ ms.locfileid: "68892408"
 ### <a name="sliding-window-scenario"></a>Escenario de ventana deslizante  
  Para administrar las particiones en un escenario de ventana deslizante, seleccione **Administrar datos particionados en un escenario de ventana deslizante**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Crear una tabla de ensayo para la modificación de particiones**  
  Crea una tabla de ensayo para los datos cuya partición está activando o desactivando en la tabla con particiones existente.  
   
@@ -89,12 +89,12 @@ ms.locfileid: "68892408"
  **Administrar datos particionados en un escenario de ventana deslizante**  
  Anexa una partición vacía a la tabla existente que se puede utilizar para activar la partición de los datos. Actualmente, el asistente permite activar la última partición y desactivar la primera.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="SwitchIn"></a> Página Seleccionar las opciones de activación de la partición  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Página Seleccionar las opciones de activación de la partición  
  Use la página **Seleccionar las opciones de activación de la partición** para seleccionar la tabla de ensayo que quiera activar en la tabla con particiones.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Mostrar todas las particiones**  
  Seleccione esta opción para mostrar todas las particiones, incluidas las particiones existentes actualmente en la tabla con particiones.  
   
@@ -104,34 +104,34 @@ ms.locfileid: "68892408"
  **Tabla de activación**  
  Seleccione la tabla de ensayo que contiene la partición que desea agregar a la tabla con particiones. Debe crear esta tabla de almacenamiento provisional antes de activar las particiones con el **Asistente para la administración de particiones**.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="SwitchOut"></a> Página Seleccionar las opciones de desactivación de la partición  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Página Seleccionar las opciones de desactivación de la partición  
  Use la página **Seleccionar las opciones de desactivación de la partición** para seleccionar la partición y la tabla de ensayo donde se almacenarán los datos particionados que está desactivando en la tabla con particiones.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Cuadrícula Partición**  
  Muestra el nombre de la partición, el **Límite izquierdo**, el **Límite derecho**, el **Grupo de archivos**y el **Recuento de filas** de las particiones seleccionadas.  
   
  **Tabla de desactivación**  
  Seleccione una tabla nueva o una tabla existente en la que desea desactivar los datos.  
   
- **Nueva**  
+ **Nuevo**  
  Escriba un nombre nuevo para la tabla de ensayo que desea utilizar para desactivar la partición de la tabla de origen actual.  
   
  **Existente**  
  Seleccione el nombre de la tabla de ensayo existente que desee utilizar para desactivar la partición de la tabla de origen actual. Si la tabla existente contiene datos, estos se sobrescribirán con los datos cuya partición esté desactivando.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="StagingTableOptions"></a> Página Seleccionar las opciones de tabla de ensayo  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Página Seleccionar las opciones de tabla de ensayo  
  Utilice la página **Seleccionar las opciones de tabla de ensayo** para crear la tabla de ensayo que desea utilizar para modificar los datos con particiones.  
   
  Las tablas de ensayo deben residir en el mismo grupo de archivos que la partición seleccionada en que se encuentra la tabla de origen. La tabla de ensayo debe reflejar el diseño tanto de la tabla de origen como de la tabla de destino.  
   
  También puede crear en la tabla de ensayo los mismos índices que existan en la partición de origen. La tabla de ensayo contiene automáticamente una restricción basada en los elementos de la partición de origen. Esta restricción se suele generar a partir del valor de límite de la partición de origen.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre de tabla de ensayo**  
  Cree un nombre para la tabla de ensayo o acepte el predeterminado que se muestra en el cuadro de edición.  
   
@@ -144,9 +144,9 @@ ms.locfileid: "68892408"
  **Grupo de archivos**  
  Seleccione un grupo de archivos para la nueva tabla.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="OutputOption"></a> Página Seleccionar la opción de salida  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Página Seleccionar la opción de salida  
  Utilice la página **Seleccionar la opción de salida** para especificar cómo desea completar las modificaciones de las particiones.  
   
 ### <a name="create-script"></a>Crear script  
@@ -171,9 +171,9 @@ ms.locfileid: "68892408"
  **Cambiar programación**  
  Abre el cuadro de diálogo **Nueva programación de trabajo** , donde puede seleccionar, cambiar o ver las propiedades del trabajo programado.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="NewJob"></a> Página Nueva programación del trabajo  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Página Nueva programación del trabajo  
  Utilice la página **Nueva programación del trabajo** para ver y cambiar las propiedades de la programación.  
   
 ### <a name="options"></a>Opciones  
@@ -254,18 +254,18 @@ ms.locfileid: "68892408"
  **Time**  
  Seleccione la hora de ejecución del trabajo.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="Summary"></a> Página Resumen  
+##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Utilice la página **Resumen** para revisar las opciones que ha seleccionado en las páginas anteriores.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Revisar opciones seleccionadas**  
  Muestra las selecciones que ha realizado en cada página del asistente. Haga clic en un nodo para expandir y ver sus opciones seleccionadas previamente.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
-##  <a name="Progress"></a> Página Progreso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progreso  
  Utilice la página **Progreso** para supervisar la información de estado sobre las acciones del **Asistente para la administración de particiones**. Según las opciones que se seleccionen en el asistente, la página **Progreso** puede contener una o varias acciones. El cuadro superior muestra el estado general del asistente y el número de mensajes de estado, error y advertencia que ha recibido.  
   
 ### <a name="options"></a>Opciones  
@@ -278,13 +278,13 @@ ms.locfileid: "68892408"
  **Estado**  
  Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
- **de mensaje**  
+ **Mensaje**  
  Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
- **Detener**  
+ **Detención**  
  Detiene la acción llevada a cabo por el asistente.  
   
- **Informe**  
+ **Report**  
  Crea un informe que contiene los resultados del **Asistente para la administración de particiones**. Las opciones son:  
   
 -   **Ver informe**  
@@ -298,12 +298,12 @@ ms.locfileid: "68892408"
  **Ver informe**  
  Abre el cuadro de diálogo **Ver informe** . Este cuadro de diálogo contiene un informe de texto con el progreso del **Asistente para la administración de particiones**.  
   
- **Cerrar**  
+ **Close**  
  Cierra el asistente.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[En esta sección](#Top)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [En esta sección](#Top)  
   
 ## <a name="see-also"></a>Consulte también  
- [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

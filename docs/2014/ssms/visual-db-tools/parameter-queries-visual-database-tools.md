@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03ede58be73ed422c4049eaabb789d09465129fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001185"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas con parámetros (Visual Database Tools)
   En algunos casos, tal vez necesite crear una consulta que pueda utilizar en muchas ocasiones, pero con un valor diferente cada vez. Por ejemplo, puede ejecutar habitualmente una consulta para buscar todos los `title_ids` escritos por un autor. Puede ejecutar la misma consulta para cada solicitud, con la salvedad de que el nombre o el Id. del autor serán diferentes cada vez.  
@@ -64,9 +63,9 @@ WHERE au_fname = %first name% AND
   
  Cuando ejecute la consulta en el Diseñador de consultas y vistas, el [cuadro de diálogo Parámetros de la consulta](query-parameters-dialog-box-visual-database-tools.md) mostrará una lista de parámetros con nombre.  
   
-## <a name="see-also"></a>Vea también  
- [Consulta con parámetros &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Consultar con parámetros &#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
+ [Tipos de consultas admitidos &#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

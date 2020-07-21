@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106496"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Agregar datos a una región de datos Tablix (Generador de informes y SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106496"
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Agregar una región de datos Tablix existente de otro informe  
  Puede copiar una región de datos de otro informe y pegarla en un informe nuevo o en uno ya existente. Tras pegar la región de datos, debe asegurarse de que el conjunto de datos que usa la región de datos esté definido, y de que los campos de conjunto de datos tengan nombres y tipos de datos idénticos a los del informe original. No puede copiar los conjuntos de datos de un informe en otro, pero si los informes utilizan orígenes de datos compartidos, puede duplicar rápidamente el conjunto de datos en el otro el informe. También puede importar el texto de consulta correspondiente a las consultas que recuperan los datos del conjunto de datos, lo que simplifica la duplicación de las consultas en los informes. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e533edec149513e240efb938d5fb9aad634e7cf8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047713"
 ---
 # <a name="replication-agent-executables-concepts"></a>Conceptos de los ejecutables del Agente de replicación
   Los agentes de replicación se pueden controlar mediante programación de las maneras siguientes:  
@@ -34,7 +33,7 @@ ms.locfileid: "62721897"
   
  Las instancias de los agentes de replicación siguientes se pueden ejecutar con archivos ejecutables.  
   
--   [Agente de distribución de replicación](../agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
 -   [Agente de registro del LOG de replicación](../agents/replication-log-reader-agent.md)  
   

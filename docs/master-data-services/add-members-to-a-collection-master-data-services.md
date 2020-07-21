@@ -1,5 +1,5 @@
 ---
-title: Agregar miembros a una colección (Master Data Services) | Microsoft Docs
+title: Agregar miembros a una colección
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69f218494a40878e4e24e86a34ebd834de0f8abd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813749"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Agregar miembros a una colección (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede agregar miembros hoja y consolidados a una colección.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68047885"
   
 11. Además, puede establecer los valores de ponderación haciendo clic en el valor de la columna **Ponderación** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

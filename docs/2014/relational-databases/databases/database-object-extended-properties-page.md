@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebd204401a69777f4d128337e66f7bc4a502f8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970195"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de base de datos (página Propiedades extendidas)
   Las propiedades extendidas permiten agregar propiedades personalizadas a los objetos de base de datos. Utilice esta página para ver o modificar las propiedades extendidas del objeto seleccionado. La página **Propiedades extendidas** es la misma para todos los tipos de objeto de base de datos.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Base de datos**  
  Muestra el nombre de la base de datos seleccionada. Este campo es de solo lectura.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62917210"
  **Eliminar**  
  Elimina la propiedad extendida que se ha seleccionado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de propiedades extendidas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)  
   
   

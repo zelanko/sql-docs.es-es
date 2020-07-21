@@ -16,10 +16,10 @@ ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67954027"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Método getBestRowIdentifier (SQLServerDatabaseMetaData)
@@ -51,7 +51,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  Objeto **String** que contiene el nombre de la tabla.  
   
- *ámbito*  
+ *scope*  
   
  Un valor **int** que indica el ámbito de interés. Los valores pueden incluir lo siguiente:  
   
@@ -71,8 +71,8 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getBestRowIdentifier se especifica mediante el método getBestRowIdentifier en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getBestRowIdentifier especifica este método getBestRowIdentifier en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getBestRowIdentifier contendrá la siguiente información:  
   
@@ -82,8 +82,8 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 |COLUMN_NAME|String|Nombre de la columna.|  
 |DATA_TYPE|short|Tipo de datos SQL de java.sql.Types.|  
 |TYPE_NAME|String|El nombre del tipo de datos.|  
-|COLUMN_SIZE|INT|Precisión de la columna.|  
-|BUFFER_LENGTH|INT|Longitud del búfer.|  
+|COLUMN_SIZE|int|Precisión de la columna.|  
+|BUFFER_LENGTH|int|Longitud del búfer.|  
 |DECIMAL_DIGITS|short|Escala de la columna.|  
 |PSEUDO_COLUMN|short|Indica si la columna es una pseudocolumna. Puede ser uno de los siguientes valores:<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   

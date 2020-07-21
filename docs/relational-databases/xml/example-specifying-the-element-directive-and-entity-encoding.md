@@ -1,6 +1,6 @@
 ---
-title: 'Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades | Microsoft Docs'
-ms.custom: ''
+title: Especificación de la directiva ELEMENT y la codificación de entidades | Microsoft Docs
+description: Obtenga información sobre cómo especificar la directiva ELEMENT en una consulta SQL para que el resultado de la consulta sea la entidad codificada.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +13,17 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ec0ad5a21100a99b80cca9df20e4b12bbfb58548
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 176cbbd92b55ada81a845018826cbf0b899b3475
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632660"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Este ejemplo muestra la diferencia entre las directivas **ELEMENT** y **XML** . La directiva **ELEMENT** crea entidades para los datos, pero la directiva **XML** no lo hace. Al elemento \<Summary> se le asigna XML, `<Summary>This is summary description</Summary>`, en la consulta.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Este ejemplo muestra la diferencia entre las directivas **ELEMENT** y **XML** . La directiva **ELEMENT** crea entidades para los datos, pero la directiva **XML** no lo hace. Al elemento \<Summary> se le asigna el XML, `<Summary>This is summary description</Summary>`, en la consulta.  
   
  Considere esta consulta:  
   

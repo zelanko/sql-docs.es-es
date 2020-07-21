@@ -1,6 +1,7 @@
 ---
-title: Paginación en Reporting Services (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 07/26/2019
+title: Paginación en informes (Generador de informes y SSRS) | Microsoft Docs
+description: La paginación hace referencia al número de páginas de un informe paginado y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en Reporting Services varía en función de la extensión de representación usada para ver y entregar el informe.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: MTE75
+ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632029"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247341"
 ---
-# <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginación en Reporting Services (Generador de informes y SSRS)
-  La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+# <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginación en informes (Generador de informes y SSRS)
+  La paginación hace referencia al número de páginas de un informe paginado y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  En este tema se describe cómo afecta el tamaño físico de la página y el diseño del informe al modo en que los representadores de saltos de página duros representan el informe. Se pueden establecer propiedades para modificar el tamaño de página físico y los márgenes y dividir el informe en columnas mediante el panel **Propiedades del informe** , el panel **Propiedades** o el cuadro de diálogo **Configurar página** . Se accede al panel **Propiedades del informe** haciendo clic en el área azul fuera del cuerpo del informe. Se accede al cuadro de diálogo **Configurar página** haciendo clic en **Ejecutar** en la pestaña Inicio y luego haciendo clic en **Configurar página** en la pestaña Ejecutar.  
   
@@ -43,14 +44,14 @@ ms.locfileid: "68632029"
   
  El área de la página física que queda después de haber asignado el espacio correspondiente a los márgenes, el espaciado entre columnas, y el encabezado y pie de página, se denomina *área de página utilizable*. Los márgenes se aplican solo cuando se representan y se imprimen informes en formatos de representadores de saltos de página duros. La imagen siguiente muestra el margen y el área de página utilizable de una página física.  
   
- ![Página física con márgenes y área utilizable](../../reporting-services/report-design/media/rspagemargins.gif "Página física con márgenes y área utilizable")  
+ ![Página física con márgenes y área utilizable.](../../reporting-services/report-design/media/rspagemargins.gif "Página física con márgenes y área utilizable.")  
   
 ### <a name="newsletter-style-columns"></a>Columnas de estilo boletín  
  El informe se puede dividir en columnas, como las columnas de un periódico, que se tratan como páginas lógicas representadas en la misma página física. Las columnas se organizan de izquierda a derecha y de arriba abajo, y se separan mediante espacios en blanco. Si el informe se divide en más de una columna, cada página física se divide verticalmente en columnas, cada una de las cuales se considera una página lógica. Por ejemplo, imagine que tiene dos columnas en una página física. El contenido del informe rellena la primera columna y, a continuación, la segunda. Si las dos primeras columnas no son suficientes para la totalidad del informe, se rellena la primera columna de la página siguiente y, a continuación, la segunda. Las columnas continúan rellenándose, de izquierda a derecha y de arriba abajo, hasta que se han representado todos los elementos de informe. Si especifica tamaños de columna que hacen que el ancho horizontal o vertical sea cero, el espaciado entre columnas se establece en cero de forma predeterminada.  
   
  Las columnas se especifican en el panel **Propiedades del informe** , el cuadro de diálogo **Configurar página** o si cambia las propiedades TopMargin, BottomMargin, LeftMargin y RightMargin en el panel **Propiedades** . Si desea usar un tamaño de margen que no está definido, puede especificarlo usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Las columnas solo se aplican cuando se representan y se imprimen informes en formatos PDF o Imagen. La imagen siguiente muestra el área de página utilizable de una página que contiene columnas.  
   
- ![Página física con columnas descritas](../../reporting-services/report-design/media/rspagecolumns.gif "Página física con columnas descritas")  
+ ![Página física con columnas descritas.](../../reporting-services/report-design/media/rspagecolumns.gif "Página física con columnas descritas.")  
   
 ## <a name="page-breaks-and-page-names"></a>Saltos de página y nombres de página  
  Un informe podría ser más legible y sus datos más fáciles de auditar y exportar si tiene nombres de página. Reporting Services proporciona propiedades para las regiones de datos Tablix (tabla, matriz y lista) e informes, grupos y rectángulos del informe para controlar la paginación, restablecer los números de página y proporcionar nombres nuevos para las páginas del informe en los saltos de página. Estas características pueden mejorar los informes con independencia del formato en el que se representan los informes, pero son especialmente útiles al exportar los informes a los libros de Excel.  

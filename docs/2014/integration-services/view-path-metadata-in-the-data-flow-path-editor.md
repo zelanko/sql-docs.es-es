@@ -1,5 +1,5 @@
 ---
-title: Ver los metadatos de ruta de acceso en el Editor de rutas de flujo de datos | Microsoft Docs
+title: Ver metadatos de ruta de acceso en el editor de rutas de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9832d212b49e743dcccb2e0aac62c9a218e82317
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054486"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420002"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Ver los metadatos de rutas con el Editor de rutas de flujo de datos
   Las rutas conectan dos componentes de flujo de datos. Antes de poder ver los metadatos de ruta, el flujo de datos debe contener por lo menos dos componentes de flujo de datos conectados. Para más información, vea [Agregar o eliminar un componente en un flujo de datos](data-flow/add-or-delete-a-component-in-a-data-flow.md) y [Conectar componentes de un flujo de datos](data-flow/connect-components-in-a-data-flow.md).  
@@ -37,10 +36,10 @@ ms.locfileid: "66054486"
   
 6.  Para copiar los metadatos, haga clic en **Copiar al Portapapeles**.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
- [Rutas de Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services trazados](data-flow/integration-services-paths.md)   
  [Flujo de datos](data-flow/data-flow.md)  
   
   

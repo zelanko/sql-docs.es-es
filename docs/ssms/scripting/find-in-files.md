@@ -1,6 +1,6 @@
 ---
-title: Buscar en archivos | Microsoft Docs
-ms.custom: ''
+title: Buscar en archivos
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45121de07c89603f4de8f2d97ddd7d92d500879b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 81ddd51b2b005a104e2311dc7853484d081c3391
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265460"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261884"
 ---
 # <a name="find-in-files"></a>Buscar en archivos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265460"
 ## <a name="find-what"></a>Buscar  
  Estos controles de la pestaña **Buscar en archivos** permiten especificar la cadena o expresión que se buscará.  
   
- **Find what**  
+ **Buscar**  
  Escriba el texto que desea buscar. El cuadro de diálogo intentará rellenar el texto de búsqueda probable utilizando el texto seleccionado con el cursor antes de abrir el cuadro de diálogo, o bien texto cercano o texto que se haya buscado con anterioridad. Podrá reutilizar una de las últimas 20 cadenas de búsqueda seleccionándola en esta lista desplegable.  
   
  **[cadena con caracteres comodín]**  
@@ -67,7 +67,7 @@ ms.locfileid: "68265460"
  **Incluir subcarpetas**  
  Especifica que se buscarán las subcarpetas de la carpeta especificada en **Buscar en** . Requiere un grupo de directorios personalizados.  
   
- **Examinar**  
+ **Browse**  
  Haga clic en este botón para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda** , donde puede reunir, editar, guardar y seleccionar los grupos de directorios con nombre que se van a usar en el cuadro **Buscar en** .  
   
 ## <a name="find-options"></a>Opciones de búsqueda  
@@ -79,7 +79,7 @@ ms.locfileid: "68265460"
  **Solo palabras completas**  
  Cuando esta casilla se activa, las ventanas Resultados de la búsqueda solo mostrarán las instancias de la cadena especificada en **Buscar** cuyas palabras completas coincidan. Por ejemplo, una búsqueda de **MyObject** devolverá "MyObject", pero no devolverá "CMyObject" ni "MyObjectC".  
   
- **Usar**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
  **Regular Expressions**  
@@ -134,4 +134,4 @@ ms.locfileid: "68265460"
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Find in Symbols (Buscar en símbolos)** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

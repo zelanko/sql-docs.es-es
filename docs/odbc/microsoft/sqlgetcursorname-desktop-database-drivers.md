@@ -1,5 +1,5 @@
 ---
-title: SQLGetCursorName (controladores de escritorio de la base de datos) | Microsoft Docs
+title: SQLGetCursorName (controladores de base de datos de escritorio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetCursorName function [ODBC], Desktop Database Drivers
 ms.assetid: 76399d74-1121-4c63-92ee-7d2984ac74af
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63c5dd6cd20f30281e9cf83c920b85e4f024ad35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6c1d0879b84e6d39d8e92c560775f5fef38d4990
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003443"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298625"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (controladores de escritorio de la base de datos)
-**SQLGetCursorName** se admite, pero solo se puede usar cuando se utiliza la biblioteca de cursores, porque no se admiten operaciones por posición en el controlador.
+**SQLGetCursorName** es compatible, pero solo se puede usar cuando se usa la biblioteca de cursores, ya que no se admiten las operaciones de ubicación en el controlador.

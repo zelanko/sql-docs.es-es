@@ -9,20 +9,19 @@ ms.topic: reference
 ms.assetid: ebd0e9a8-5fe5-4b15-9a44-2f131a13c186
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84ec9e17d525521620abac48fc294461281b50cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83b70059cb90750ec4f37bcb74c7e6bc59f886cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933346"
 ---
 # <a name="sql-server-native-client-errors"></a>Errores de SQL Server Native Client
   Esta sección contiene el tema que describe el error que puede producirse al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  [MSSQLSERVER_50000](../../relational-databases/errors-events/sql-server-native-client-error-mssqlserver-50000.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

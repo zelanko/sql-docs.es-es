@@ -14,10 +14,10 @@ ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 592061a8665bf5dad30ab653f20d062bc0a54257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193834"
 ---
 # <a name="reporting-services-extension-library"></a>Biblioteca de extensiones de Reporting Services

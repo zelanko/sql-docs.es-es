@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 6fe254b4-2926-446f-8b20-0f1d921a4615
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8fddb4dbc6ef34a4c389ebd1dd164056a1c6f9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a17bb23fddfe8cab57151582a45f0953ebe221a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058172"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716981"
 ---
-# <a name="mssqlserver5256"></a>MSSQLSERVER_5256
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_5256"></a>MSSQLSERVER_5256
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|5256|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|5256|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC4_INCORRECT_PAGE_ID_IN_HEADER_NO_METADATA|  
 |Texto del mensaje|Error de tabla: Id. de unidad de asignación A_ID. En el encabezado de la página P_ID1 hay un Id. de página incorrecto. PageId del encabezado de página = P_ID2.|  

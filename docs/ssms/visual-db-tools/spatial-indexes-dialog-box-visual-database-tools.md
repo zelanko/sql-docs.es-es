@@ -1,10 +1,9 @@
 ---
-title: Cuadro de diálogo Índices espaciales (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Índices espaciales
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4d8ce987edf5595c0f1f75bb0da6d94c5399033
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263570"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254970"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ Para más información sobre las restricciones de la creación de índices espac
 **Índice espacial seleccionado**  
 Enumera los índices espaciales existentes. Seleccione un índice para mostrar sus propiedades. Si la lista está vacía, no se han definido índices espaciales para la tabla.  
   
-**Agregar**  
+**Add (Agregar)**  
 Crea un nuevo índice espacial.  
   
 **Eliminar**  
@@ -86,7 +87,7 @@ Especifica la coordenada Y de la esquina inferior izquierda del cuadro de límit
 Expandido, muestra los campos de propiedades **Nombre** y **Descripción** .  
   
 **(Nombre)**  
-Muestra el nombre del índice espacial. Cuando se crea un nuevo índice, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
+Muestra el nombre del índice espacial. Cuando se crea un nuevo índice, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Puede cambiar el nombre en cualquier momento.  
   
 **Descripción**  
 Describe el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  

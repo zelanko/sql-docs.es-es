@@ -1,6 +1,6 @@
 ---
-title: Método SetStartMode (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Método SetStartMode (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08309cd2f53c39ec4a37dc1345a1788379dd7310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15cfa1eddcd9a32b51984d3833c288fc006d395b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006869"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888352"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>Método SetStartMode (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Modifica el modo de inicio de la instancia del servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -60,7 +60,7 @@ object.SetStartMode(StartMode)
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

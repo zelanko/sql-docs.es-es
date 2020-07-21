@@ -1,7 +1,7 @@
 ---
-title: sys.servers (Transact-SQL) | Microsoft Docs
+title: Sys. servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 06/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,34 +17,34 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132949"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894930"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Contiene una fila por cada servidor vinculado o remoto registrado y una fila para el servidor local que tenga **server_id** = 0.  
+  Contiene una fila por cada servidor vinculado o remoto registrado, y una fila para el servidor local que tiene **server_id** = 0.  
 
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. local del servidor vinculado.|  
 |**name**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
-|**product**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica que otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**provider**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
+|**Manuales**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**presta**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.<br /><br />A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , el valor "SQLNCLI" se asigna al [controlador de Microsoft OLE DB para SQL Server (MSOLEDBSQL) de](../../connect/oledb/oledb-driver-for-sql-server.md) forma predeterminada. En versiones anteriores, el valor "SQLNCLI" se asigna al [proveedor de OLE DB de SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
-|**location**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
-|**provider_string**|**nvarchar(4000)**|Propiedad de conexión de la cadena del proveedor OLE DB.<br /><br /> Es NULL a menos que el autor de la llamada tenga permiso ALTER ANY LINKED SERVER.|  
-|**catalog**|**sysname**|Propiedad de conexión del catálogo OLE DB. Es NULL si no hay ninguna.|  
+|**ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
+|**provider_string**|**nvarchar(4000)**|Propiedad de conexión de la cadena del proveedor OLE DB.<br /><br /> Es NULL a menos que el autor de la llamada tenga el `ALTER ANY LINKED SERVER` permiso.|  
+|**Catálogo**|**sysname**|OLE DB propiedad de conexión del catálogo. Es NULL si no hay ninguna.|  
 |**connect_timeout**|**int**|Tiempo de espera de conexión, en segundos. Es 0 si no hay ninguno.|  
 |**query_timeout**|**int**|Tiempo de espera de la consulta, en segundos. Es 0 si no hay ninguno.|  
-|**is_linked**|**bit**|0 = es un servidor antiguo agregado mediante **sp_addserver**, con diferentes RPC y el comportamiento de las transacciones distribuidas.<br /><br /> 1 = Servidor vinculado estándar.|  
+|**is_linked**|**bit**|0 = es un servidor de estilo antiguo agregado mediante **sp_addserver**, con diferentes comportamientos de RPC y transacciones distribuidas.<br /><br /> 1 = Servidor vinculado estándar.|  
 |**is_remote_login_enabled**|**bit**|Se establece la opción de RPC para habilitar los inicios de sesión remotos entrantes en este servidor.|  
 |**is_rpc_out_enabled**|**bit**|Se habilitan las RPC salientes (desde este servidor).|  
 |**is_data_access_enabled**|**bit**|El servidor está habilitado para las consultas distribuidas.|  
@@ -59,23 +59,24 @@ ms.locfileid: "68132949"
 |**is_nonsql_subscriber**|**bit**|El servidor es un suscriptor de replicación que no es de SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Si es 1, al llamar a un procedimiento remoto almacenado se inicia una transacción distribuida y se da de alta en MS DTC. Para obtener más información, vea [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Fecha en que cambió por última vez la información del servidor.|  
+|**is_rda_server**|**bit**|**Se aplica a:** A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />El servidor es habilitado para el archivo de datos remotos (habilitado para Stretch). Para obtener más información, consulte [enable Stretch Database on The Server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Permisos  
- El valor de **provider_string** siempre es NULL, a menos que el llamador tiene el permiso ALTER ANY LINKED SERVER.  
+ El valor de **provider_string** siempre es null, a menos que el autor de la llamada tenga el permiso ALTER any Linked Server.  
   
- No se requieren permisos para ver el servidor local (**server_id** = 0).  
+ No se necesitan permisos para ver el servidor local (**server_id** = 0).  
   
- Cuando se crea un servidor vinculado o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea una asignación de inicio de sesión predeterminada para el **pública** rol de servidor. Asignación de inicio de sesión predeterminada significa que todos los inicios de sesión pueden ver todos los servidores vinculados y remotos. Para restringir la visibilidad a estos servidores, quite la asignación de inicio de sesión predeterminada ejecutando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) y especificar NULL para el *locallogin* parámetro.  
+ Cuando se crea un servidor vinculado o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea una asignación de inicio de sesión predeterminada para el rol de servidor **público** . La asignación de inicio de sesión predeterminada significa que todos los inicios de sesión pueden ver todos los servidores vinculados y remotos. Para restringir la visibilidad de estos servidores, quite la asignación de inicio de sesión predeterminada ejecutando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) y especificando null para el parámetro *locallogin* .  
   
  Si se elimina la asignación de inicio de sesión predeterminada, solo los usuarios que se hayan agregado de forma explícita como un inicio de sesión vinculado o remoto podrán ver los servidores vinculados o remotos para los que tienen un inicio de sesión.  Los siguientes permisos son necesarios para ver todos los servidores vinculados y remotos después de la asignación de inicio de sesión predeterminada:  
   
 - `ALTER ANY LINKED SERVER` o `ALTER ANY LOGIN ON SERVER`  
-- Pertenencia a la **setupadmin** o **sysadmin** roles fijos de servidor  
+- Pertenencia a los roles fijos de servidor **setupadmin** o **sysadmin**  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo de servidores vinculados &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Servidores vinculados vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
-  
+ 

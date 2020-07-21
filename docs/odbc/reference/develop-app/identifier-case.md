@@ -12,16 +12,16 @@ helpviewer_keywords:
 - identifiers [ODBC], case
 - interoperability of SQL statements [ODBC], identifier case
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70728908f081ab89e08cad1265f04394f29b66ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 940d96ece6b2c344fa02e0daadd6248270f4d19e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138973"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300155"
 ---
 # <a name="identifier-case"></a>Caso de identificador
-En las instrucciones SQL y los argumentos de función de catálogo y entre comillas, puede ser entre mayúsculas y minúsculas o no, que una aplicación puede determinar mediante una llamada a **SQLGetInfo** con el SQL_IDENTIFIER_CASE y SQL_QUOTED_ Opciones de IDENTIFIER_CASE.  
+En las instrucciones SQL y los argumentos de la función de catálogo, los identificadores e identificadores entre comillas pueden distinguir entre mayúsculas y minúsculas, que una aplicación puede determinar llamando a **SQLGetInfo** con las opciones SQL_IDENTIFIER_CASE y SQL_QUOTED_IDENTIFIER_CASE.  
   
- Cada una de estas opciones tiene cuatro valores devueltos posibles: una que indica que el identificador o el caso del identificador entre comillas confidencial y tres indicando que no es confidencial. Los tres valores que no distinguen mayúsculas de minúsculas describen aún más el caso en el que los identificadores están almacenados en el catálogo del sistema. Cómo se almacenan los identificadores en el catálogo del sistema solo es relevante para los fines de presentación, por ejemplo, cuando una aplicación muestra los resultados de una función de catálogo no se cambia la diferenciación de los identificadores.
+ Cada una de estas opciones tiene cuatro valores devueltos posibles: uno que indica que el identificador o el caso del identificador entre comillas es sensible y tres que indican que no es sensible. Los tres valores que no distinguen mayúsculas de minúsculas describen en detalle el caso en el que los identificadores se almacenan en el catálogo del sistema. La forma en que se almacenan los identificadores en el catálogo del sistema solo es relevante para la visualización, por ejemplo, cuando una aplicación muestra los resultados de una función de catálogo. no cambia la distinción de mayúsculas y minúsculas de los identificadores.

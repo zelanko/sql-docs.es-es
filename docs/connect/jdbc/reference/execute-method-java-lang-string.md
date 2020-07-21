@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1715a24f6104a6542d3c2847345adb438620a618
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922098"
 ---
 # <a name="execute-method-javalangstring"></a>Método execute (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public final boolean execute(java.lang.String sql)
  Un valor **String** que contiene una instrucción SQL.  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o ningún resultado.  
+ **true**  si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o no devuelve ningún resultado.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método execute especifica este método execute en la interfaz java.sql.Statement.  
   
  Este método invalida el método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) que se encuentra en la clase [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  

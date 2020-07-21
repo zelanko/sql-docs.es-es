@@ -15,25 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - MSdynamicsnapshotviews system table
 ms.assetid: 4fc1822a-5d6e-4034-a2e2-363210232d3b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8de7dd1571f7b9082144e97c8b35d9a39d6cabe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cc0668cb67308110cfde23390c809c8867fb959a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907323"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889914"
 ---
 # <a name="msdynamicsnapshotviews-transact-sql"></a>MSdynamicsnapshotviews (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **MSdynamicsnapshotviews** tabla realiza un seguimiento de todas las vistas de instantánea de datos filtrados temporales creadas por el agente de instantáneas y se utiliza el sistema para limpiar las vistas en el caso de un cierre anómalo del Agente SQL Server o el Agente de instantáneas. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
+  La tabla **MSdynamicsnapshotviews** realiza un seguimiento de todas las vistas de instantáneas de datos filtradas temporales creadas por el agente de instantáneas y la usa el sistema para limpiar las vistas en caso de un cierre anómalo de Agente SQL Server o del agente de instantáneas. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**dynamic_snapshot_view_name**|**sysname**|Nombre de la vista temporal de instantáneas de datos filtrados.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

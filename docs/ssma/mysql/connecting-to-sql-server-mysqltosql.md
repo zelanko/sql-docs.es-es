@@ -1,5 +1,6 @@
 ---
-title: Conectarse a SQL Server (MySQLToSQL) | Microsoft Docs
+title: Conexión a SQL Server (MySQLToSQL) | Microsoft Docs
+description: Obtenga información sobre cómo conectarse a una instancia de destino de SQL Server para migrar bases de datos de MySQL. SSMA obtiene metadatos acerca de las bases de datos en SQL Server.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,74 +13,74 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103129"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293962"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conexión a SQL Server (MySQLToSQL)
-Para migrar bases de datos MySQL a SQL Server, debe conectarse a la instancia de destino de SQL Server. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en la instancia de SQL Server y muestra los metadatos de la base de datos en el Explorador de metadatos de SQL Server. SSMA almacena la información de la instancia de SQL Server están conectados a, pero no almacena las contraseñas.  
+Para migrar las bases de datos de MySQL a SQL Server, debe conectarse a la instancia de destino de SQL Server. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de SQL Server y muestra los metadatos de la base de datos en el explorador de metadatos de SQL Server. SSMA almacena información de la instancia de SQL Server a la que está conectado, pero no almacena contraseñas.  
   
-La conexión a SQL Server permanece activa hasta que cierre el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a SQL Server si desea que una conexión activa con el servidor. Puede trabajar sin conexión hasta que se cargará los objetos de base de datos en SQL Server y migrar los datos.  
+La conexión a SQL Server permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a SQL Server si desea una conexión activa con el servidor. Puede trabajar sin conexión hasta que cargue los objetos de base de datos en SQL Server y migre los datos.  
   
-Metadatos acerca de la instancia de SQL Server no se sincronizan automáticamente. En su lugar, para actualizar los metadatos en el Explorador de metadatos de SQL Server, debe actualizar manualmente los metadatos de SQL Server. Para obtener más información, consulte la sección "Sincronizar los metadatos de SQL Server" más adelante en este tema.  
+Los metadatos sobre la instancia de SQL Server no se sincronizan automáticamente. En su lugar, para actualizar los metadatos en SQL Server explorador de metadatos, debe actualizar manualmente los metadatos de SQL Server. Para obtener más información, vea la sección "sincronizar metadatos de SQL Server" más adelante en este tema.  
   
-## <a name="required-sql-server-permissions"></a>Permisos necesarios de SQL Server  
-La cuenta que se usa para conectarse a SQL Server requiere permisos diferentes dependiendo de las acciones que realiza la cuenta:  
+## <a name="required-sql-server-permissions"></a>Permisos SQL Server necesarios  
+La cuenta que se usa para conectarse a SQL Server requiere permisos diferentes en función de las acciones que realiza la cuenta:  
   
--   Para convertir objetos de MySQL a [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis, para actualizar los metadatos de SQL Server, o para guardar la sintaxis para convertir los scripts, la cuenta debe tener permiso para iniciar sesión en la instancia de SQL Server.  
+-   Para convertir objetos MySQL en [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis, actualizar metadatos de SQL Server o guardar la sintaxis convertida en scripts, la cuenta debe tener permiso para iniciar sesión en la instancia de SQL Server.  
   
--   Para cargar los objetos de base de datos en SQL Server, el requisito de permiso mínimo es la pertenencia a la **db_owner** rol de base de datos en la base de datos de destino.  
+-   Para cargar los objetos de base de datos en SQL Server, el requisito de permiso mínimo es la pertenencia al rol de base de datos **db_owner** en la base de datos de destino.  
   
-## <a name="establishing-a-sql-server-connection"></a>Establecer una conexión con SQL Server  
-Antes de convertir los objetos de base de datos MySQL en sintaxis de SQL Server, debe establecer una conexión a la instancia de SQL Server donde van a migrar la base de datos MySQL o bases de datos.  
+## <a name="establishing-a-sql-server-connection"></a>Establecer una conexión SQL Server  
+Antes de convertir los objetos de base de datos de MySQL en SQL Server sintaxis, debe establecer una conexión con la instancia de SQL Server en la que desea migrar la base de datos o las bases de datos de MySQL.  
   
-Al definir las propiedades de conexión, también se especifique la base de datos donde se migrarán los objetos y datos. Puede personalizar esta asignación en el nivel de esquema de MySQL después de conectarse a SQL Server. Para obtener más información, consulte [asignación de bases de datos MySQL a esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+Al definir las propiedades de conexión, también se especifica la base de datos en la que se migrarán los objetos y los datos. Puede personalizar esta asignación en el nivel de esquema de MySQL después de conectarse a SQL Server. Para obtener más información, consulte [asignación de bases de datos de MySQL a esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > Antes de intentar conectarse a SQL Server, asegúrese de que la instancia de SQL Server se está ejecutando y puede aceptar conexiones.  
   
 **Para conectarse a SQL Server**  
   
-1.  En el **archivo** menú, seleccione **conectar con SQL Server** (esta opción está habilitada después de la creación de un proyecto).  
+1.  En el menú **archivo** , seleccione **conectarse a SQL Server** (esta opción se habilita después de la creación de un proyecto).  
   
-    Si se ha conectado anteriormente a SQL Server, será el nombre del comando **volver a conectar a SQL Server**.  
+    Si previamente se ha conectado a SQL Server, el nombre del comando se volverá **a conectar a SQL Server**.  
   
-2.  En el cuadro de diálogo de conexión, escriba o seleccione el nombre de la instancia de SQL Server.  
+2.  En el cuadro de diálogo conexión, escriba o seleccione el nombre de la instancia de SQL Server.  
   
-    -   Si se conecta a la instancia predeterminada en el equipo local, puede escribir **localhost** o un punto ( **.** ).  
+    -   Si se está conectando a la instancia predeterminada en el equipo local, puede especificar **localhost** o un punto (**.**).  
   
-    -   Si se conecta a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
+    -   Si se va a conectar a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
   
-    -   Si se conecta a una instancia con nombre en otro equipo, escriba el nombre del equipo seguido por una barra diagonal inversa y, a continuación, el nombre de instancia, como MyServer\MyInstance.  
+    -   Si se va a conectar a una instancia con nombre en otro equipo, escriba el nombre del equipo seguido de una barra diagonal inversa y, a continuación, el nombre de la instancia, como MyServer\MyInstance.  
   
-3.  Si la instancia de SQL Server está configurada para aceptar conexiones en un puerto no predeterminado, escriba el número de puerto que se usa para las conexiones de SQL Server en el **puerto del servidor** cuadro. Para la instancia predeterminada de SQL Server, el número de puerto predeterminado es 1433. Las instancias con nombre, SSMA intentará obtener el número de puerto desde el servicio SQL Server Browser.  
+3.  Si la instancia de SQL Server está configurada para aceptar conexiones en un puerto no predeterminado, escriba el número de puerto que se utiliza para las conexiones de SQL Server en el cuadro **Puerto del servidor** . Para la instancia predeterminada de SQL Server, el número de puerto predeterminado es 1433. En el caso de las instancias con nombre, SSMA intentará obtener el número de puerto del servicio de SQL Server Browser.  
   
-4.  En el **autenticación** , seleccione el tipo de autenticación que se usará para la conexión. Para usar la cuenta de Windows actual, seleccione **Windows autenticación**. Para utilizar un inicio de sesión de SQL Server, seleccione autenticación de SQL Server y, a continuación, proporcione el nombre de inicio de sesión y contraseña.  
+4.  En el cuadro **autenticación** , seleccione el tipo de autenticación que se utilizará para la conexión. Para usar la cuenta de Windows actual, seleccione **autenticación de Windows**. Para usar un inicio de sesión de SQL Server, seleccione autenticación de SQL Server y proporcione el nombre de inicio de sesión y la contraseña.  
   
-5.  Para una conexión segura, se agregan dos controles, el **cifrar conexión** y **TrustServerCertificate** casillas de verificación. Solo cuando **cifrar conexión** está activada, el **TrustServerCertificate** casilla de verificación está visible. Cuando **cifrar conexión** está activada (true) y **TrustServerCertificate** está desactivada (false), validará el certificado SSL de SQL Server. Validar el certificado de servidor es una parte del protocolo de enlace de SSL y asegurarse de que el servidor es el apropiado al que hay que conectarse. Para asegurarse de esto, debe instalar un certificado en el lado cliente, así como en el servidor.  
+5.  Para una conexión segura, se agregan dos controles, las casillas de verificación **cifrar conexión** y **TrustServerCertificate** . Solo cuando se activa **cifrar conexión** , la casilla **TrustServerCertificate** está visible. Cuando se activa la opción **cifrar conexión** (true) y **TrustServerCertificate** está desactivado (false), se validará el certificado SSL SQL Server. Validar el certificado de servidor es una parte del protocolo de enlace de SSL y asegurarse de que el servidor es el apropiado al que hay que conectarse. Para garantizar esto, se debe instalar un certificado en el lado cliente y en el lado servidor.  
   
 6.  Haga clic en Conectar.  
   
 **Mayor compatibilidad de versiones**  
   
-Se puede conectar o volver a conectarse a versiones posteriores de SQL Server.  
+Puede conectarse o volver a conectarse a versiones posteriores de SQL Server.  
   
-1.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+1.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-2.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 pero no se permite para conectarse a las versiones inferiores, es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+2.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 pero no se le permita conectarse a las versiones anteriores, es decir, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-3.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
+3.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
   
-4.  Podrá conectarse a sólo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
+4.  Solo podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
-5.  Mayor compatibilidad de versión no es válido para "SQL Azure".  
+5.  La compatibilidad con versiones posteriores no es válida para "SQL Azure".  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|**TIPO frente a la versión de servidor de destino del proyecto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Versión: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Versión: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014<br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Version:13.x)|SQL Azure|  
+|**VERSIÓN de tipo de proyecto frente al servidor de destino**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Versión: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Versión: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Versión: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(Versión: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Versión: 13. x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Sí|Sí|Sí|Sí|Sí||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Sí|Sí|Sí|Sí||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Sí|Sí|Sí||  
@@ -88,32 +89,32 @@ Se puede conectar o volver a conectarse a versiones posteriores de SQL Server.
 |SQL Azure||||||Sí|  
   
 > [!IMPORTANT]  
-> Conversión de los objetos de base de datos se lleva a cabo según el tipo de proyecto, pero no según la versión de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectado a. En caso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proyecto 2005, conversión se lleva a cabo según [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 incluso después de que está conectado a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL/SQL Server 2012 Server 2014 o SQL Server 2016).  
+> La conversión de los objetos de base de datos se realiza según el tipo de proyecto, pero no según la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada a. En el caso del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proyecto 2005, la conversión se realiza según [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, aunque esté conectado a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
-## <a name="synchronizing-sql-server-metadata"></a>Sincronizar los metadatos de SQL Server  
-Metadatos acerca de las bases de datos de SQL Server no se actualizan automáticamente. Los metadatos en el Explorador de metadatos de SQL Server están una instantánea de los metadatos cuando conectó en primer lugar a SQL Server o la última vez que usted manualmente los metadatos. Puede actualizar manualmente los metadatos para todas las bases de datos, o para cualquier base de datos única o un objeto de base de datos.  
+## <a name="synchronizing-sql-server-metadata"></a>Sincronizar metadatos de SQL Server  
+Los metadatos acerca de SQL Server bases de datos no se actualizan automáticamente. Los metadatos de SQL Server explorador de metadatos es una instantánea de los metadatos cuando se conectó por primera vez a SQL Server, o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todas las bases de datos o de cualquier base de datos o objeto de base de datos.  
   
 **Para sincronizar los metadatos**  
   
 1.  Asegúrese de que está conectado a SQL Server.  
   
-2.  En el Explorador de metadatos de SQL Server, active la casilla situada junto a la base de datos o esquema de base de datos que desea actualizar.  
+2.  En SQL Server explorador de metadatos, active la casilla situada junto a la base de datos o el esquema de la base de datos que desea actualizar.  
   
-    Por ejemplo, para actualizar los metadatos de todas las bases de datos, active la casilla situada junto a las bases de datos.  
+    Por ejemplo, para actualizar los metadatos de todas las bases de datos, active la casilla situada junto a bases de datos.  
   
-3.  Haga clic en bases de datos, o la base de datos individual o el esquema de base de datos y, a continuación, seleccione **sincronizar con base de datos**.  
+3.  Haga clic con el botón derecho en bases de datos o en el esquema de base de datos o de base de datos individual y seleccione **sincronizar con base de datos**.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en la migración depende de las necesidades del proyecto:  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso de la migración depende de las necesidades del proyecto:  
   
--   Para personalizar la asignación entre esquemas de MySQL y bases de datos de SQL Server y los esquemas, vea [bases de datos de asignación de MySQL a esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Para personalizar la asignación entre esquemas de MySQL y bases de datos y esquemas de SQL Server, consulte [asignación de bases de datos de MySQL a esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   Para personalizar las opciones de configuración para los proyectos, vea [definir opciones de proyecto &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   Para personalizar las opciones de configuración de los proyectos, vea [establecer opciones de proyecto &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   Para personalizar la asignación de tipos de datos de origen y destino, vea [asignación MySQL y tipos de datos de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   Para personalizar la asignación de los tipos de datos de origen y de destino, consulte [asignación de tipos de datos de SQL Server y MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   Si no es necesario realizar ninguna de estas tareas, puede convertir las definiciones de objeto de base de datos MySQL en definiciones de objetos de SQL Server. Para obtener más información, consulte [convertir las bases de datos de MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   Si no tiene que realizar ninguna de estas tareas, puede convertir las definiciones de objetos de base de datos de MySQL en SQL Server definiciones de objeto. Para obtener más información, vea [convertir las bases de datos MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>Vea también  
-[Bases de datos de migración desde MySQL a SQL Server: base de datos SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Migración de bases de datos de MySQL a SQL Server: Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

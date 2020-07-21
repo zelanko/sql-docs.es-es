@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006967"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891492"
 ---
-# <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita el trabajo especificado de los servidores de destino o de los grupos de servidores de destino dados.  
   
@@ -42,13 +42,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo desde el que se va a quitar los servidores o grupos de servidores de destino especificados. Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo del que se van a quitar los servidores de destino o grupos de servidores de destino especificados. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo que se va a quitar los servidores o grupos de servidores de destino especificados. Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo del que se van a quitar los servidores de destino o grupos de servidores de destino especificados. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Una lista separada por comas de grupos de servidores de destino va a quitar del trabajo especificado. *target_server_groups* es **nvarchar (1024)** , su valor predeterminado es null.  
+`[ @target_server_groups = ] 'target_server_groups'`Lista separada por comas de los grupos de servidores de destino que se van a quitar del trabajo especificado. *target_server_groups* es de tipo **nvarchar (1024)** y su valor predeterminado es NULL.  
   
-`[ @target_servers = ] 'target_servers'` Una lista separada por comas de los servidores de destino va a quitar del trabajo especificado. *target_servers* es **nvarchar (1024)** , su valor predeterminado es null.  
+`[ @target_servers = ] 'target_servers'`Lista separada por comas de los servidores de destino que se van a quitar del trabajo especificado. *target_servers* es de tipo **nvarchar (1024)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -70,9 +70,9 @@ EXEC dbo.sp_remove_job_from_targets
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_apply_job_to_targets &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

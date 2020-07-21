@@ -1,6 +1,6 @@
 ---
-title: Configuración de IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Configurar IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1dc17f3f7e1b58c871a6a1efead6338f4f0c3243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 305796d2c3293f64874e77d14592fd7b67554a2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056853"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar IntelliSense (SQL Server Management Studio)
   La mayoría de las opciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense están activadas de forma predeterminada. Es posible desactivar una opción e invocarla mediante un comando de menú o una combinación de teclas.  

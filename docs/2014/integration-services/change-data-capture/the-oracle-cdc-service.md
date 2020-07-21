@@ -7,20 +7,19 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e1a6f64fa7f03bbf98158a791784bb795becd2d4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771081"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435252"
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
   El servicio CDC de Oracle es un servicio de Windows que ejecuta el programa xdbcdcsvc.exe. El servicio CDC de Oracle se puede configurar para ejecutar varios servicios de Windows en el mismo equipo, cada uno de ellos con un nombre de servicio de Windows diferente. Se suelen crear varios servicios de Windows CDC de Oracle en un único equipo para obtener una mejor separación entre ellos o cuando cada uno de ellos debe trabajar con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  
   
- Un servicio CDC de Oracle se crea mediante la Consola de configuración del servicio CDC de Oracle o se define mediante la interfaz de línea de comandos integrada en el programa xdbcdcsvc.exe. En ambos casos, cada servicio CDC de Oracle creado está asociado con una sola [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (que es posible que organizado en clústeres o reflejarse con **AlwaysOn** el programa de instalación) y la información de conexión (cadena de conexión y credenciales de acceso) son parte de la configuración del servicio.  
+ Un servicio CDC de Oracle se crea mediante la Consola de configuración del servicio CDC de Oracle o se define mediante la interfaz de línea de comandos integrada en el programa xdbcdcsvc.exe. En ambos casos, cada servicio CDC de Oracle creado está asociado a una sola [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia (que puede estar agrupada o reflejada con la configuración de **AlwaysOn** ) y la información de conexión (cadena de conexión y credenciales de acceso) forma parte de la configuración del servicio.  
   
  Cuando se inicia un servicio CDC de Oracle, intenta conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que está asociado, obtiene la lista de instancias CDC de Oracle que debe controlar y realiza una validación inicial del entorno. Los errores que se producen durante el inicio del servicio y cualquier información de inicio o detención se escriben siempre en el registro de eventos de aplicación de Windows. Cuando se establece una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , todos los errores y mensajes informativos se escriben en la tabla **dbo.xdbcdc_trace** de la base de datos MSXDBCDC de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una de las comprobaciones realizadas durante el inicio consiste en comprobar que no hay ningún otro servicio CDC de Oracle con el mismo nombre funcionando en ese momento. Si un servicio con el mismo nombre está conectado actualmente desde un equipo diferente, el servicio CDC de Oracle entra en un bucle de espera, esperando a que el otro servicio se desconecte antes de controlar el trabajo de CDC de Oracle.  
   
@@ -43,7 +42,7 @@ GO
   
  La configuración de la instancia CDC de Oracle se guarda en la tabla **cdc.xdbcdc_config** , que es la tabla con la que trabaja la Consola del diseñador CDC de Oracle. Puesto que toda la configuración de una instancia CDC de Oracle se encuentra en la instancia y las bases de datos CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino, es posible crear scripts de implementación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una instancia CDC de Oracle. Esto se realiza mediante las consolas de configuración del servicio CDC de Oracle y del Diseñador CDC de Oracle.  
   
-## <a name="security-considerations"></a>Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
  A continuación se describen los requisitos de seguridad necesarios para trabajar con el servicio CDC para Oracle.  
   
 ### <a name="protection-of-source-oracle-data"></a>Protección de datos de Oracle de origen  
@@ -92,7 +91,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Trabajar con el servicio CDC de Oracle](the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo administrar un servicio CDC local](how-to-manage-a-local-cdc-service.md)   
  [Administrar un servicio CDC de Oracle](manage-an-oracle-cdc-service.md)  
   

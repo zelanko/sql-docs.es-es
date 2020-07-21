@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 47b289b4c2c97e91beff4defb509e2707caaaff1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72796960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016117"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Crear, modificar y eliminar las claves externas
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> representa las claves externas.  
@@ -27,7 +26,7 @@ ms.locfileid: "72796960"
  Las columnas que representan la clave externa se muestran en la propiedad de objeto `Columns` del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que se encuentra en la tabla especificada en la propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> representa la clave principal a la que hace referencia la clave externa.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Crear, modificar y quitar una clave externa en Visual Basic  
  En este ejemplo de código se muestra cómo crear una relación de clave externa entre una o varias columnas de una tabla y una columna de clave principal de otra tabla.  
@@ -93,7 +92,7 @@ $fk.Create()
 ```  
   
 ## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: claves externas, claves principales y columnas de restricción UNIQUE  
- Este ejemplo explica cómo:  
+ En este ejemplo se muestra:  
   
 -   Buscar una clave externa en un objeto existente.  
   

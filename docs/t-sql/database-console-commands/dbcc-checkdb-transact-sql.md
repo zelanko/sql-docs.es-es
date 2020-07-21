@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809890"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748952"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Comprueba la integridad física y lógica de todos los objetos de la base de datos especificada mediante la realización de las siguientes operaciones:    
     
@@ -64,7 +64,7 @@ Esto significa que los comandos DBCC CHECKALLOC, DBCC CHECKTABLE o DBCC CHECKCAT
     
 ## <a name="syntax"></a>Sintaxis    
     
-```    
+```syntaxsql
 DBCC CHECKDB     
     [ ( database_name | database_id | 0    
         [ , NOINDEX     
@@ -89,7 +89,7 @@ DBCC CHECKDB
  Es el nombre o Id. de la base de datos para la que se van a ejecutar comprobaciones de integridad. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
     
 NOINDEX  
- Especifica que no se deben realizar comprobaciones intensivas de índices no clúster para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema, porque las comprobaciones de integridad siempre se realizan en los índices de las tablas del sistema.  
+ Especifica que no se deben realizar comprobaciones intensivas de índices no agrupado para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema, porque las comprobaciones de integridad siempre se realizan en los índices de las tablas del sistema.  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  Especifica que DBCC CHECKDB repare los errores que encuentre. Utilice las opciones REPAIR solo como último recurso. La base de datos especificada debe estar en modo de usuario único para utilizar una de las siguientes opciones de reparación.  
@@ -161,14 +161,14 @@ DATA_PURITY
  Los errores de validación de los que informe esta opción no se pueden corregir con las opciones de reparación de DBCC. Para obtener información acerca de cómo corregir manualmente estos errores, consulte el artículo 923247 de Knowledge Base: [Resolución del error DBCC 2570 en SQL Server 2005 y versiones posteriores](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y versiones posteriores)  
     
  Invalida la opción de configuración de **grado máximo de paralelismo** de **sp_configure** para la instrucción. MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] usa el valor MAXDOP de Resource Governor, descrito en [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
 > [!WARNING] 
 > Si MAXDOP se establece en cero, SQL Server elige el grado máximo de paralelismo que se va a usar.    
 
-## <a name="remarks"></a>Notas    
+## <a name="remarks"></a>Observaciones    
 DBCC CHECKDB no examina los índices deshabilitados. Para más información sobre los índices deshabilitados, vea [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Si un tipo definido por el usuario se marca como ordenado por bytes, solo debe existir una serialización del tipo definido por el usuario. La serialización incoherente de los tipos definidos por el usuario ordenados por bytes provoca el error 2537 cuando se ejecuta DBCC CHECKDB. Para más información, vea los [requisitos de los tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
@@ -201,7 +201,7 @@ En Microsoft SQL Server 2012 o en una versión anterior de SQL Server, podría e
 Cuando FILESTREAM está habilitado para una base de datos y una tabla, puede almacenar opcionalmente los objetos binarios grandes (BLOB) **varbinary(max)** en el sistema de archivos. Al utilizar DBCC CHECKDB en una base de datos que almacena BLOB en el sistema de archivos, DBCC comprueba la coherencia de nivel de vínculo entre el sistema de archivos y la base de datos.
 Por ejemplo, si una tabla contiene una columna **varbinary(max)** en la que se usa el atributo FILESTREAM, DBCC CHECKDB comprobará que existe una asignación uno a uno entre los directorios del sistema de archivos y los archivos y filas de tabla, las columnas y los valores de columna. DBCC CHECKDB puede reparar el daño producido si se especifica la opción de REPAIR_ALLOW_DATA_LOSS. Para reparar el daño producido en FILESTREAM, DBCC eliminará las filas de tabla que sean datos del sistema de archivos que faltan.
     
-## <a name="best-practices"></a>Procedimientos recomendados    
+## <a name="best-practices"></a>Prácticas recomendadas    
 Se recomienda utilizar la opción `PHYSICAL_ONLY` si se usa con frecuencia en sistemas de producción. El uso de PHYSICAL_ONLY puede reducir mucho el tiempo de ejecución de DBCC CHECKDB en bases de datos grandes. También se recomienda ejecutar DBCC CHECKDB sin opciones de forma periódica. La frecuencia con que se deben realizar estas ejecuciones varía en función de la empresa y su entorno de producción.
     
 ## <a name="checking-objects-in-parallel"></a>Comprobar objetos en paralelo    
@@ -221,7 +221,13 @@ Cuando finaliza el comando DBCC CHECKDB, se escribe un mensaje en el registro de
 |3|Esto indica que se interrumpió la ejecución del comando DBCC a causa de daños en los metadatos.|    
 |4|Se ha detectado una infracción de acceso o aserción.|    
 |5|Error desconocido que cancela el comando DBCC.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra la fecha y hora en que se ha ejecutado una comprobación de coherencia para una base de datos sin errores (o "limpia"). Esto se conoce como `last known clean check`. Cuando se inicia una base de datos por primera vez, esta fecha se escribe en el registro de eventos (EventID-17573) y en el ERRORLOG en el formato siguiente: 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>Informes de errores    
 Un archivo de volcado (`SQLDUMP*nnnn*.txt`) se crea en el directorio LOG de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada vez que DBCC CHECKDB detecta un error relacionado con datos dañados. Si las características de recopilación de datos de *Uso de la característica* e *Informes de errores* están habilitadas para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el archivo se reenvía automáticamente a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los datos recopilados se utilizan para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 El archivo de volcado contiene los resultados del comando DBCC CHECKDB y los resultados del diagnóstico adicional. El acceso está limitado a la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a los miembros del rol sysadmin. De forma predeterminada, el rol sysadmin contiene todos los miembros del grupo `BUILTIN\Administrators` de Windows y el grupo de administradores local. El comando DBCC no producirá error en caso de que se produzca un error en el proceso de recopilación de datos.

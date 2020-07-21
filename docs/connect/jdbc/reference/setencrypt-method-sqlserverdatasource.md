@@ -13,14 +13,14 @@ apilocation:
 - setEncrypt Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da0aa987f1ec773e2f61e738bc4045136c64859a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974290"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219244"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Método setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,14 +37,14 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Parámetros  
  *encrypt*  
   
- Es **true** si el cifrado de Capa de sockets seguros (SSL) está habilitado entre el cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De lo contrario, se devuelve el valor **False**.  
+ Es **true** si el cifrado de Seguridad de la capa de transporte (TLS), antes conocida como Capa de sockets seguros (SSL), está habilitado entre el cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De lo contrario, se devuelve el valor **False**.  
   
-## <a name="remarks"></a>Notas  
- Si la propiedad encrypt se establece en **true**, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] procura que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] use el cifrado SSL en todos los datos que se envíen entre el cliente y el servidor, si el servidor tiene un certificado instalado. El valor predeterminado es **false**.  
+## <a name="remarks"></a>Observaciones  
+ Si la propiedad encrypt se establece en **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se asegura de que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa el cifrado TLS en todos los datos que se envíen entre el cliente y el servidor, si el servidor tiene un certificado instalado. El valor predeterminado es **false**.  
   
- El controlador JDBC detecta la máquina virtual Java (JVM) que se está ejecutando cuando se intenta establecer un protocolo de enlace SSL.  
+ El controlador JDBC detecta la máquina virtual Java (JVM) que se está ejecutando cuando se intenta establecer un protocolo de enlace TLS.  
   
- Si la propiedad encrypt se establece en **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] usa el proveedor de seguridad JSSE predeterminado de JVM para negociar el cifrado SSL con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El proveedor de seguridad predeterminado puede no admitir todas las características necesarias para negociar el cifrado SSL correctamente. Por ejemplo, es posible que el proveedor de seguridad predeterminado no admita el tamaño de la clave pública RSA que se usa en el certificado SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En este caso, el proveedor de seguridad predeterminado podría generar un error que ocasionará que el controlador JDBC termine la conexión. Para resolver este problema, intente una de las siguientes acciones:  
+ Si la propiedad encrypt se establece en **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] usa el proveedor de seguridad JSSE predeterminado de JVM para negociar el cifrado TLS con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El proveedor de seguridad predeterminado puede no admitir todas las características necesarias para negociar el cifrado TLS correctamente. Por ejemplo, es posible que el proveedor de seguridad predeterminado no admita el tamaño de la clave pública RSA que se usa en el certificado TLS/SSL de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En este caso, el proveedor de seguridad predeterminado podría generar un error que ocasionará que el controlador JDBC termine la conexión. Para resolver este problema, intente una de las siguientes acciones:  
   
 -   Configurar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un certificado de servidor que tenga una clave pública RSA más pequeña  
   
@@ -52,7 +52,7 @@ public void setEncypt(boolean encrypt)
   
 -   Usar una JVM distinta  
   
- Si la propiedad de cifrado no se ha especificado o se ha establecido en **false**, el controlador no aplicará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para admitir el cifrado SSL. Si la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se configura para exigir el cifrado SSL, se establece una conexión sin cifrado. Si la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está configurada para exigir el cifrado SSL, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] habilitará automáticamente el cifrado SSL cuando se ejecute en una máquina virtual Java (JVM) configurada correctamente; de lo contrario, se finalizará la conexión y el controlador generará un error.  
+ Si la propiedad encrypt no se ha especificado o se ha establecido en **false**, el controlador no aplicará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para admitir el cifrado TLS. Si la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se configura para exigir el cifrado TLS, se establece una conexión sin cifrado. Si la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está configurada para exigir el cifrado TLS, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] habilitará automáticamente el cifrado TLS cuando se ejecute en una máquina virtual Java (JVM) configurada correctamente; de lo contrario, se finalizará la conexión y el controlador generará un error.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,5 +1,6 @@
 ---
 title: Usar el modo EXPLICIT con FOR XML | Microsoft Docs
+description: Obtenga información sobre cómo el uso del modo EXPLICIT ofrece la máxima flexibilidad para generar el XML a partir del resultado de una consulta.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736546"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Como se describe en el tema [Generar XML mediante FOR XML](../../relational-databases/xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
   
  La consulta en modo EXPLICIT debe escribirse de una determinada manera para poder especificar explícitamente la información adicional sobre el XML requerido, como el anidamiento esperado en el XML, como parte de la propia consulta. Dependiendo del XML que se solicite, la escritura de consultas en modo EXPLICIT puede resultar complicada. Tal vez, una alternativa más sencilla que escribir consultas en modo EXPLICIT sea [usar el modo PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) con anidamiento.  
@@ -56,7 +57,7 @@ ms.locfileid: "68001788"
   
     -   Para las filas con valor 2 en la columna **Tag**, las columnas **Order!2!id** y **Order!2!date** forman un grupo que se usa después para construir elementos, <`Order id=... date=... /`>.  
   
-    -   Para las filas con valor 3 en la columna **Tag**, las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
+    -   Para las filas con valor 3 en la columna **Tag** , las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
   
 -   Tenga en cuenta que, al generar la jerarquía en XML, las filas se procesan por orden. La jerarquía XML se determina como se indica a continuación:  
   

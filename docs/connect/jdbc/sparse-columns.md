@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027719"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80909592"
 ---
 # <a name="sparse-columns"></a>Columnas dispersas
 
@@ -41,7 +41,7 @@ Este ejemplo muestra cómo detectar conjuntos de columnas. También muestra cóm
 
 La lista de códigos corresponde al código fuente de Java. Antes de compilar la aplicación, cambie la cadena de conexión.
 
-### <a name="code"></a>código
+### <a name="code"></a>Código
 
 ```java
 import java.io.StringReader;
@@ -158,6 +158,6 @@ public class SparseColumns {
 
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -16,22 +16,22 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061261"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865609"
 ---
-# <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza la tabla de estado del monitor de creación de reflejos de la base de datos insertando una nueva fila de tabla para cada base de datos reflejada y trunca las filas más antiguas que el período de retención actual. El período de retención predeterminado es de 7 días (168 horas). Al actualizar la tabla, **sp_dbmmonitorupdate** evalúa las métricas de rendimiento.  
   
 > [!NOTE]  
->  La primera vez **sp_dbmmonitorupdate** se ejecuta, crea la tabla de estado de creación de reflejo de la base de datos y el **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos.  
+>  La primera vez que se ejecuta **sp_dbmmonitorupdate** , crea la tabla de estado de la creación de reflejo de la base de datos y el rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sp_dbmmonitorupdate [ database_name ]
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- Nombre de la base de datos para la que se va a actualizar el estado de la creación de reflejos. Si *database_name* no se especifica, el procedimiento actualiza la tabla de estado para cada base de datos reflejada en la instancia del servidor.  
+ Nombre de la base de datos para la que se va a actualizar el estado de la creación de reflejos. Si no se especifica *database_name* , el procedimiento actualiza la tabla de estado para cada base de datos reflejada en la instancia del servidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -52,14 +52,14 @@ sp_dbmmonitorupdate [ database_name ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_dbmmonitorupdate** se puede ejecutar solo en el contexto de la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_dbmmonitorupdate** solo se puede ejecutar en el contexto de la base de datos **msdb** .  
   
  Si una columna de la tabla de estado no se aplica al rol de un asociado, el valor es NULL en ese asociado. Una columna también tendrá un valor NULL si la información relevante no está disponible, como durante una conmutación por error o un reinicio del servidor.  
   
- Después de **sp_dbmmonitorupdate** crea el **dbm_monitor** rol fijo de base de datos en el **msdb** de base de datos, los miembros de la **sysadmin** rol fijo de servidor puede agregar a cualquier usuario la **dbm_monitor** rol fijo de base de datos. El **dbm_monitor** rol permite a sus miembros ver el estado, la creación de reflejo de la base de datos, pero no actualizarlo, pero no ver o configurar los eventos de creación de reflejo de la base de datos.  
+ Una vez que **sp_dbmmonitorupdate** crea el rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** , los miembros del rol fijo de servidor **sysadmin** pueden agregar cualquier usuario al rol fijo de base de datos **dbm_monitor** . El rol **dbm_monitor** permite a sus miembros ver el estado de la creación de reflejo de la base de datos, pero no actualizarlo, pero no ver ni configurar eventos de creación de reflejo de la base de datos.  
   
- Al actualizar el estado de creación de reflejo de una base de datos, **sp_dbmmonitorupdate** inspecciona el valor más reciente de cualquier métrica de rendimiento de creación de reflejo para el que se ha especificado un umbral de advertencia. Si el valor supera el umbral, el procedimiento agrega un evento informativo al registro de eventos. Todos los valores son promedios desde la última actualización. Para obtener más información, vea [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Al actualizar el estado de creación de reflejo de una base de datos, **sp_dbmmonitorupdate** inspecciona el último valor de cualquier métrica de rendimiento de creación de reflejo para la que se ha especificado un umbral de advertencia. Si el valor supera el umbral, el procedimiento agrega un evento informativo al registro de eventos. Todos los valores son promedios desde la última actualización. Para obtener más información, vea [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
@@ -72,13 +72,13 @@ USE msdb;
 EXEC sp_dbmmonitorupdate AdventureWorks2012 ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
- [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangealert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitordropalert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
+ [sp_dbmmonitorhelpalert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

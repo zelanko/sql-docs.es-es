@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8081b4b4b4c8a9d19af0c558d162974d98e16878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68094741"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Agregar columnas a una tabla (motor de base de datos)
@@ -28,19 +28,19 @@ ms.locfileid: "68094741"
 
 En este artículo se describe cómo agregar columnas nuevas a una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar
 
-### <a name="Restrictions"></a> Limitaciones y restricciones
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones
 
  Al usar la instrucción ALTER TABLE para agregar columnas a una tabla, se agregan automáticamente las columnas al final de la tabla. Si desea que las columnas aparezcan en un orden concreto en la tabla, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sin embargo, tenga en cuenta que esto no es un procedimiento recomendado del diseño de base de datos. El procedimiento recomendado es especificar el orden en que las columnas se devuelven en el nivel de aplicación y de consulta. No debe confiar en el uso de SELECT * para devolver todas las columnas en un orden esperado según el orden en que están definidos en la tabla. Especifique siempre las columnas por nombre en las consultas y aplicaciones en el orden en que desea que aparezcan.
 
-### <a name="Security"></a> Seguridad
+### <a name="security"></a><a name="Security"></a> Seguridad
 
-#### <a name="Permissions"></a> Permisos
+#### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 Requiere el permiso ALTER en la tabla.
 
-## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
 
 ### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Para insertar columnas en una tabla con el Diseñador de tablas
 
@@ -59,9 +59,9 @@ Requiere el permiso ALTER en la tabla.
     > [!NOTE]
     > Los valores predeterminados de las propiedades de la columna se agregan cuando crea una columna nueva, pero se pueden cambiar en la pestaña **Propiedades de columna** .
 
-6. Cuando haya terminado de agregar columnas, en el menú **Archivo**, elija **Guardar**  _nombre de la tabla_.
+6. Cuando haya terminado de agregar columnas, en el menú **Archivo**, seleccione **Guardar** _nombre de tabla_.
   
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
   
 ### <a name="to-insert-columns-into-a-table"></a>Para insertar columnas en una tabla  
   
@@ -71,4 +71,4 @@ El ejemplo siguiente agrega dos columnas a la tabla `dbo.doc_exa`.
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;
 ```
 
-#### <a name="FollowUp"></a> Para obtener más información, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)
+#### <a name="for-more-information-see-alter-table-40transact-sql41"></a><a name="FollowUp"></a> Para obtener más información, consulte [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)

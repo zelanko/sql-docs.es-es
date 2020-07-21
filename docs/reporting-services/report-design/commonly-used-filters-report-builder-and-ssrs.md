@@ -1,5 +1,5 @@
 ---
-title: Filtros de uso frecuente (Generador de informes y SSRS) | Microsoft Docs
+title: Filtros de uso frecuente (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0757982d8e1e758a771d7ccdf880c88576f980f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d0a096fd9dcb292f1a71b74aaf853abcbd7c02ae
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581591"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082309"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtros de uso frecuente (Generador de informes y SSRS)
   Para crear un filtro, debe especificar una o varias ecuaciones de filtro. Una ecuación de filtro incluye una expresión, un tipo de datos, un operador y un valor. En este tema, se proporcionan ejemplos de filtros usados habitualmente.  
@@ -29,11 +29,11 @@ ms.locfileid: "65581591"
 ## <a name="filter-examples"></a>Ejemplos de filtros  
  En la tabla siguiente, se muestran ejemplos de ecuaciones de filtro que usan tipos de datos y operadores diferentes. El elemento de informe para el que se define un filtro determina el ámbito de la comparación. Por ejemplo, para un filtro definido en un conjunto de datos, **TOP % 10** es el 10 por ciento de los valores más altos del conjunto de datos; para un filtro definido en un grupo, **TOP% 10** es el 10 por ciento de los valores más altos del grupo.  
   
-|Expresión simple|Tipo de datos|Operador|Valor|Descripción|  
+|Expresión simple|Tipo de datos|Operator|Value|Descripción|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Integer**|**>**|`7`|Incluye valores de datos que son mayores que 7.|  
-|`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Incluye los 10 valores de datos más altos.|  
-|`[SUM(Quantity)]`|**Integer**|**TOP %**|`20`|Incluye el 20% de los valores de datos más altos.|  
+|`[SUM(Quantity)]`|**Entero**|**>**|`7`|Incluye valores de datos que son mayores que 7.|  
+|`[SUM(Quantity)]`|**Entero**|**TOP N**|`10`|Incluye los 10 valores de datos más altos.|  
+|`[SUM(Quantity)]`|**Entero**|**TOP %**|`20`|Incluye el 20% de los valores de datos más altos.|  
 |`[Sales]`|**Texto**|**>**|`=CDec(100)`|Incluye todos los valores de tipo System.Decimal (tipos de datos "money" de SQL) mayores que $100.|  
 |`[OrderDate]`|**DateTime**|**>**|`2088-01-01`|Incluye todas las fechas desde el 1 de enero de 2008 hasta la fecha actual.|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|Incluye las fechas desde el 1 de enero de 2008 hasta el 1 de febrero de 2008, inclusive.|  
@@ -44,10 +44,10 @@ ms.locfileid: "65581591"
 ## <a name="examples-with-report-parameters"></a>Ejemplos con parámetros de informe  
  En la tabla siguiente, se proporcionan ejemplos de expresiones de filtro que incluyen una referencia a un parámetro con un solo valor o con varios valores.  
   
-|Tipo de parámetro|Expresión (Filtro)|Operador|Valor|Tipo de datos|  
+|Tipo de parámetro|Expresión (Filtro)|Operator|Value|Tipo de datos|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|Un solo valor|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
-|Varios valores|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
+|Un solo valor|`[EmployeeID]`|=|`[@EmployeeID]`|Entero|  
+|Varios valores|`[EmployeeID]`|IN|`[@EmployeeID]`|Entero|  
   
 ## <a name="see-also"></a>Consulte también  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

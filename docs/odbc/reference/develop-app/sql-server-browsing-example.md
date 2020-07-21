@@ -12,71 +12,71 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f3a7568c0849844526ef5f172bcecc0a5857268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114329"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301986"
 ---
 # <a name="sql-server-browsing-example"></a>Ejemplo de exploración de SQL Server
-El ejemplo siguiente se muestra cómo **SQLBrowseConnect** podría utilizarse para examinar las conexiones disponibles con un controlador para SQL Server. En primer lugar, la aplicación solicita un identificador de conexión:  
+En el ejemplo siguiente se muestra cómo se puede usar **SQLBrowseConnect** para examinar las conexiones disponibles con un controlador para SQL Server. En primer lugar, la aplicación solicita un identificador de conexión:  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);  
 ```  
   
- A continuación, la aplicación llama a **SQLBrowseConnect** y especifica el controlador de SQL Server, utilizando la descripción del controlador devuelta por **SQLDrivers**:  
+ A continuación, la aplicación llama a **SQLBrowseConnect** y especifica el controlador SQL Server, mediante la descripción del controlador devuelta por **SQLDrivers**:  
   
 ```  
 SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,  
                   sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- Se trata de la primera llamada a **SQLBrowseConnect**, el Administrador de controladores se carga el controlador de SQL Server y se llama al controlador **SQLBrowseConnect** canónica con los mismos argumentos que recibió de la aplicación.  
+ Dado que se trata de la primera llamada a **SQLBrowseConnect**, el administrador de controladores carga el controlador de SQL Server y llama a la función **SQLBrowseConnect** del controlador con los mismos argumentos que recibió de la aplicación.  
   
 > [!NOTE]  
->  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar `Trusted_Connection=yes` en lugar de la información de identificador y la contraseña de usuario en la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de `Trusted_Connection=yes` Windows, debe especificar en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
   
- El controlador determina que se trata de la primera llamada a **SQLBrowseConnect** y devuelve el segundo nivel de los atributos de conexión: servidor, nombre de usuario, contraseña, nombre de la aplicación y el identificador de estación de trabajo Para el atributo de servidor, devuelve una lista de nombres de servidor válido. El código de retorno de **SQLBrowseConnect** es SQL_NEED_DATA. Esta es la cadena de resultado de examinar:  
+ El controlador determina que se trata de la primera llamada a **SQLBrowseConnect** y devuelve el segundo nivel de atributos de conexión: servidor, nombre de usuario, contraseña, nombre de la aplicación e identificador de la estación de trabajo. En el caso del atributo Server, devuelve una lista de nombres de servidor válidos. El código de retorno de **SQLBrowseConnect** es SQL_NEED_DATA. Esta es la cadena de resultado de la exploración:  
   
 ```  
 "SERVER:Server={red,blue,green,yellow};UID:Login ID=?;PWD:Password=?;  
    *APP:AppName=?;*WSID:WorkStation ID=?;"  
 ```  
   
- Cada palabra clave en la cadena de resultado de examinar va seguido de dos puntos y una o varias palabras antes del signo igual. Estas palabras son el nombre descriptivo que una aplicación puede usar para crear un cuadro de diálogo. El **aplicación** y **WSID** palabras clave van precedidas por un asterisco, lo que significa que son opcionales. El **SERVER**, **UID**, y **PWD** palabras clave no están precedidas por un asterisco; los valores se deben proporcionar para ellos en la siguiente cadena de solicitud de exploración. El valor de la **SERVER** palabra clave puede ser uno de los servidores devueltos por **SQLBrowseConnect** o un nombre proporcionado por el usuario.  
+ Cada palabra clave de la cadena de resultado de la exploración va seguida de dos puntos y una o varias palabras antes del signo igual. Estas palabras son el nombre descriptivo que puede utilizar una aplicación para crear un cuadro de diálogo. Las palabras clave **App** y **WSID** están precedidas por un asterisco, lo que significa que son opcionales. Las palabras clave **Server**, **UID**y **pwd** no tienen un asterisco como prefijo. se deben proporcionar valores para ellos en la siguiente cadena de solicitud de examen. El valor de la palabra clave **Server** puede ser uno de los servidores devueltos por **SQLBrowseConnect** o un nombre proporcionado por el usuario.  
   
- La aplicación llama a **SQLBrowseConnect** de nuevo, especificando el servidor de color verde y omitir el **aplicación** y **WSID** las palabras clave y los nombres descriptivos después de cada palabra clave:  
+ La aplicación llama a **SQLBrowseConnect** de nuevo, especificando el servidor verde y omitiendo las palabras clave **App** y **WSID** y los nombres descriptivos después de cada palabra clave:  
   
 ```  
 SQLBrowseConnect(hdbc, "SERVER=green;UID=Smith;PWD=Sesame;", SQL_NTS,  
                   BrowseResult, sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- El controlador intenta conectarse al servidor verde. Si hay algún error recuperable, como un par de palabra clave y valor que falta, **SQLBrowseConnect** devuelve SQL_NEED_DATA y permanece en el mismo estado que tenía antes del error. La aplicación puede llamar a **SQLGetDiagField** o **SQLGetDiagRec** para determinar el error. Si la conexión es correcta, el controlador devuelve SQL_NEED_DATA y devuelve la cadena de resultado de examinar:  
+ El controlador intenta conectarse al servidor verde. Si hay algún error no irrecuperable, como un par de palabra clave-valor que falta, **SQLBrowseConnect** devuelve SQL_NEED_DATA y permanece en el mismo estado que tenía antes del error. La aplicación puede llamar a **SQLGetDiagField** o **SQLGetDiagRec** para determinar el error. Si la conexión es correcta, el controlador devuelve SQL_NEED_DATA y devuelve la cadena de resultado de la exploración:  
   
 ```  
 "*DATABASE:Database={master,model,pubs,tempdb};  
    *LANGUAGE:Language={us_english,Franais};"  
 ```  
   
- Dado que los atributos de esta cadena son opcionales, la aplicación puede omitirlas. Sin embargo, la aplicación debe llamar a **SQLBrowseConnect** nuevo. Si elige la aplicación omitir el nombre de la base de datos y el idioma, especifica una cadena de solicitud vacío Examinar. En este ejemplo, la aplicación elige la base de datos pubs y llama a **SQLBrowseConnect** una última vez, si se omite el **LENGUAJE** palabra clave y el asterisco delante de la **delabasededatos**palabra clave:  
+ Dado que los atributos de esta cadena son opcionales, la aplicación puede omitirlos. Sin embargo, la aplicación debe volver a llamar a **SQLBrowseConnect** . Si la aplicación decide omitir el nombre y el idioma de la base de datos, especifica una cadena de solicitud de exploración vacía. En este ejemplo, la aplicación elige la base de datos pubs y llama a **SQLBrowseConnect** una hora final, omitiendo la palabra clave **Language** y el asterisco antes de la palabra clave **Database** :  
   
 ```  
 SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,  
                   sizeof(BrowseResult), &BrowseResultLen);  
 ```  
   
- Dado que el **base de datos** es el atributo de conexión final requerido por el controlador, el proceso de exploración completada, la aplicación está conectada al origen de datos, y **SQLBrowseConnect** Devuelve SQL_SUCCESS. **SQLBrowseConnect** también devuelve la cadena de conexión completa como la cadena de resultado de examinar:  
+ Dado que el atributo de **base** de datos es el atributo de conexión final requerido por el controlador, el proceso de exploración se completa, la aplicación se conecta al origen de datos y **SQLBrowseConnect** devuelve SQL_SUCCESS. **SQLBrowseConnect** también devuelve la cadena de conexión completa como la cadena de resultado de la exploración:  
   
 ```  
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- La cadena de conexión final devuelta por el controlador no contiene los nombres descriptivos después de cada palabra clave ni contiene palabras clave opcionales no especificadas por la aplicación. La aplicación puede utilizar esta cadena con **SQLDriverConnect** para volver a conectarse al origen de datos en el identificador de conexión actual (después de desconectar) o para conectarse al origen de datos en un identificador de conexión diferentes. Por ejemplo:  
+ La cadena de conexión final devuelta por el controlador no contiene los nombres descriptivos después de cada palabra clave, ni contiene palabras clave opcionales no especificadas por la aplicación. La aplicación puede utilizar esta cadena con **SQLDriverConnect** para volver a conectar con el origen de datos en el identificador de conexión actual (después de desconectar) o para conectarse al origen de datos en un identificador de conexión diferente. Por ejemplo:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

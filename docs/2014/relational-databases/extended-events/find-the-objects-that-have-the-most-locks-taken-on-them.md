@@ -12,15 +12,14 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af71bf168517e979113c51e81bf9aa3bed504a52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 345c5f179358bd7b8df587b76c9c6053235d3a73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027487"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Buscar los objetos que han obtenido más bloqueos
   A menudo, los administradores de bases de datos necesitan identificar el origen de bloqueos que reducen el rendimiento de la base de datos.  
@@ -99,17 +98,17 @@ ms.locfileid: "62705486"
   
  Una vez finalizadas las instrucciones de este procedimiento, la pestaña **Resultados** del Editor de consultas mostrará las columnas siguientes:  
   
--   NAME  
+-   name  
   
 -   object_id  
   
 -   lock_count  
   
-## <a name="see-also"></a>Vea también  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [sys.dm_xe_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql)   
+ [Sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Sys. dm_xe_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-sessions-transact-sql)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql)  
   
   

@@ -11,28 +11,28 @@ helpviewer_keywords:
 - SQLDriverConnect function [ODBC], Text File Driver
 - text file driver [ODBC], SQLDriverConnect
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9343361e7ad6fbfdf68b82218a39a56fa8d928e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2768669b7dbb2066de0acedd5711911be0eac8fa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053913"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307106"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (controlador de archivo de texto)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador de archivo de texto. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de archivo de texto. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** le permite conectarse a un controlador sin necesidad de crear un origen de datos (DSN).  
+ **SQLDriverConnect** le permite conectarse a un controlador sin crear un origen de datos (DSN).  
   
- Se admiten las siguientes palabras clave en la cadena de conexión para todos los controladores: **DSN**, **DBQ**, y **FIL**.  
+ Las palabras clave siguientes se admiten en la cadena de conexión para todos los controladores: **DSN**, **DBQ**y **Fil**.  
   
- En la tabla siguiente muestra las palabras clave mínimas necesarias para conectarse a cada controlador y proporciona un ejemplo de pares de palabra clave y valor utilizada con **SQLDriverConnect**. Para obtener una lista completa de valores DRIVERID, consulte [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).  
+ En la tabla siguiente se muestran las palabras clave mínimas necesarias para conectarse a cada controlador y se proporciona un ejemplo de pares de palabra clave y valor que se usan con **SQLDriverConnect**. Para obtener una lista completa de los valores de DRIVERID, consulte [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).  
   
 > [!NOTE]  
->  Si no se especifica DBQ o valor de esta opción para el controlador de texto, se conectará el controlador en el directorio actual.  
+>  Si no se especifica DBQ o DefaultDir para el controlador de texto, el controlador se conectará al directorio actual.  
   
 |Controlador|Palabras clave necesarias|Ejemplos|  
 |------------|-----------------------|--------------|  
-|Text|Controlador|Driver={Microsoft Text Driver (*.txt;\*.csv)}; DefaultDir=c:\temp|
+|Text|Controlador|Driver = {controlador de texto de Microsoft (*.\*txt;. CSV)}; DefaultDir = c:\temp|

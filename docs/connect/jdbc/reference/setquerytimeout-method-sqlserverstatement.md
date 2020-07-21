@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9a4a271e07dea5a533dcb19b098a3e3de29e535e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 050a32c83950d2846ac60d14af0413f0be67110d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973180"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920744"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>Método setQueryTimeout (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ public final void setQueryTimeout(int seconds)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setQueryTimeout se especifica mediante el método setQueryTimeout en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método setQueryTimeout especifica este método setQueryTimeout en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

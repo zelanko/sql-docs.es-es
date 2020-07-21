@@ -1,6 +1,6 @@
 ---
-title: Ver el registro de errores de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Ver el registro de errores de SQL Server
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ ms.assetid: 6908c21a-65e3-458f-a272-fee256d86448
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 54ceec989d9bb35807391f39beff543407a0c6f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 421836f23129879670dd4ff2194c553adaeaa12b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058265"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307578"
 ---
 # <a name="viewing-the-sql-server-error-log"></a>Ver el registro de errores de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

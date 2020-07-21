@@ -1,5 +1,5 @@
 ---
-title: Determinar instalado componentes de Oracle | Microsoft Docs
+title: Determinar los componentes de Oracle instalados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], determining installed components
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73a406487ea6a4e1ab00e0320923b0b276a359a6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079009"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303496"
 ---
 # <a name="determining-installed-oracle-components"></a>Determinar instalado componentes de Oracle
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
- Para determinar los componentes de Oracle instalados en el sistema (y sus versiones), navegue hasta el directorio \Orainst dentro del directorio particular de Oracle. Abra uno de los archivos de texto siguientes: NT.rgs, Win95.rgs o Win98.rgs.  
+ Para determinar los componentes de Oracle instalados en el sistema (y sus versiones), navegue hasta el directorio \Orainst en el directorio principal de Oracle. Abra uno de los siguientes archivos de texto: NT. RGS, Win95. RGS o Win98. RGS.  
   
  El formato de archivo es similar al siguiente:  
   
@@ -37,4 +37,4 @@ ms.locfileid: "68079009"
 69 w32plus80    all    "plus80"   "8.0.5.0.0"   "SQL*Plus"  
 ```  
   
- Los archivos .rgs también incluyen información sobre la instalación y descripciones de cada componente.
+ Los archivos. RGS también incluyen información de instalación y descripciones de cada componente.

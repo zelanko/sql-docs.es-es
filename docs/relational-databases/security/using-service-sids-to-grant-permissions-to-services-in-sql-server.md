@@ -1,17 +1,18 @@
 ---
-title: Uso de SID de servicio para conceder permisos a servicios en SQL Server | Microsoft Docs
+title: Uso de SID de servicio para conceder permisos a servicios
+ms.custom: seo-dt-2019
 author: randomnote1
 ms.author: dareist
 ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: aeb813feb46c5895352e4da3ea748a3e2f12c1e2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888589"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807615"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso de SID de servicio para conceder permisos a servicios en SQL Server
 
@@ -90,13 +91,13 @@ GO
 Conceda los permisos necesarios con el fin de administrar grupos de disponibilidad para el servicio de clúster.
 
 ```SQL
-GRANT ALTER ANY AVAILABILITY GROUP TO 'NT SERVICE\ClusSvc'
+GRANT ALTER ANY AVAILABILITY GROUP TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT CONNECT SQL TO 'NT SERVICE\ClusSvc'
+GRANT CONNECT SQL TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
+GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
 

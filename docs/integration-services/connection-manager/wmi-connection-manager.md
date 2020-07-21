@@ -17,10 +17,10 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7b3f33d0c37ba9c856d9cc0b66674c8ca4221e0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294357"
 ---
 # <a name="wmi-connection-manager"></a>Administrador de conexiones WMI
@@ -68,13 +68,13 @@ ms.locfileid: "71294357"
  **Usar la autenticación de Windows**  
  Seleccione el uso de la autenticación de Windows. Si utiliza la autenticación de Windows, no será necesario que proporcione un nombre de usuario o una contraseña para la conexión.  
   
- **User name**  
+ **Nombre de usuario**  
  Si no utiliza la autenticación de Windows, deberá proporcionar un nombre de usuario para la conexión.  
   
  **Contraseña**  
  Si no utiliza la autenticación de Windows, deberá proporcionar la contraseña para la conexión.  
   
- **Prueba**  
+ **Test**  
  Permite probar la configuración del administrador de conexiones.  
   
 ## <a name="see-also"></a>Consulte también  

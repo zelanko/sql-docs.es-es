@@ -1,10 +1,9 @@
 ---
-title: Trabajar con el diseño de diagramas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Trabajar con el diseño del diagrama
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 785d823f822e2c350c899bbed3a0e12e53c6edda
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c857e3113f2af09aa51edce03ecf8453c272a097
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258784"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246195"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Trabajar con el diseño de diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

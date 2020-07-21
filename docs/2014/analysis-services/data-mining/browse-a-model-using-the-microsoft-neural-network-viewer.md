@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de red neuronal de Microsoft | Microsoft Docs
+title: Examinar un modelo mediante el visor de red neuronal de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c9ad60ad7602222572bd1649d2ac503e0535205
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086056"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525301"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Examinar un modelo usando el Visor de redes neuronales de Microsoft
-  El Visor de redes neuronales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de Red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] crea modelos de minería de datos de regresión y de clasificación que pueden analizar entradas y salidas múltiples, y es muy útil para los análisis de final abierto y la exploración. Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal de. El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] crea modelos de minería de datos de regresión y de clasificación que pueden analizar entradas y salidas múltiples, y es muy útil para los análisis de final abierto y la exploración. Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
   
  Cuando se explora un modelo usando el Visor de redes neuronales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , se suele elegir un determinado atributo y estado de destino, y después se usa el visor para ver cómo afectan al resultado los atributos de entrada.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66086056"
   
  Si necesita información más detallada, como las ecuaciones que representan cada patrón descubierto, puede cambiar de vista y usar el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Fichas del visor  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Pestañas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor de redes neuronales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ofrece las siguientes pestañas para usarlas con el fin de explorar modelos de minería de datos de redes neuronales:  
   
 -   [Entradas](#BKMK_Inputs)  
@@ -52,7 +51,7 @@ ms.locfileid: "66086056"
   
 -   [Variables](#BKMK_Characteristics)  
   
-###  <a name="BKMK_Inputs"></a> Entradas  
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Comentarios  
  Use la pestaña **Entradas** para elegir los atributos y los valores que usará el modelo como entradas. De forma predeterminada, el visor se abre con todos los atributos incluidos. En esta vista predeterminada, el modelo elige qué valores de los atributos son los más importantes que se van a mostrar.  
   
  Para seleccionar un atributo de entrada, haga clic en la columna **Atributo** de la cuadrícula **Entrada** y, después, seleccione un atributo de la lista desplegable. (En la lista solo están incluidos los atributos presentes en el modelo).  
@@ -61,24 +60,24 @@ ms.locfileid: "66086056"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Outputs"></a> Salidas  
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Salidas  
  Use la pestaña **Salidas** para elegir el atributo de resultados que se debe investigar. Puede elegir dos estados resultantes cualesquiera para compararlos, suponiendo que las columnas se definieron como atributos de predicción cuando se creó el modelo.  
   
  Use la lista **Atributo de salida** para seleccionar un atributo. Después puede seleccionar dos estados asociados con el atributo en las listas **Valor 1** y **Valor 2** . Estos dos estados del atributo de salida se compararán en el panel **Variables** .  
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a> Variables  
- La cuadrícula en el **Variables** ficha contiene las siguientes columnas: **Atributo**, **valor**, **favorece [valor 1]** , y **favorece [valor 2]** . De forma predeterminada, las columnas se ordenan por la intensidad de **Favorece [valor 1]** . Si hace clic en un encabezado de columna, cambia el orden de la columna seleccionada.  
+###  <a name="variables"></a><a name="BKMK_Characteristics"></a>Variable  
+ La cuadrícula de la pestaña **Variables** contiene las columnas siguientes: **Atributo**, **Valor**, **Favorece [valor 1]** y **Favorece [valor 2]**. De forma predeterminada, las columnas se ordenan por la intensidad de **Favorece [valor 1]**. Si hace clic en un encabezado de columna, cambia el orden de la columna seleccionada.  
   
  Una barra a la derecha del atributo muestra el estado del atributo de entrada que el estado del atributo de salida favorece. El tamaño de la barra muestra la intensidad con la que el estado de salida favorece al estado de entrada.  
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Vea también  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
- [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
- [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
+ [Tareas y procedimientos del visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   

@@ -20,34 +20,33 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a9ce530ce764d640493ae46130193b896b63b8b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768451"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426322"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabajar con imágenes con la tarea Script
   Una base de datos de productos o usuarios suele incluir imágenes además de datos de texto y numéricos. El espacio de nombres `System.Drawing` de Microsoft .NET Framework proporciona clases para manipular las imágenes.  
   
- [Ejemplo 1: Conversión de imágenes al formato JPEG](#example1)  
+ [Ejemplo 1: Convertir las imágenes al formato JPEG](#example1)  
   
- [Ejemplo 2: Creación y almacenamiento de imágenes en miniatura](#example2)  
+ [Ejemplo 2: Crear y guardar las imágenes en miniatura](#example2)  
   
 > [!NOTE]  
 >  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Descripción del ejemplo 1: Conversión de imágenes al formato JPEG  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> Ejemplo 1: Descripción: convertir las imágenes al formato JPEG  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable y se guarda como un archivo JPEG comprimido mediante un codificador. El código para recuperar la información del codificador se encapsula en una función privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  
   
 1.  Cree una variable de cadena denominada `CurrentImageFile` y establezca el valor en la ruta de acceso y nombre de un archivo de imagen existente.  
   
-2.  En el **Script** página de la **Editor de la tarea Script**, agregar el `CurrentImageFile` variable a la `ReadOnlyVariables` propiedad.  
+2.  En la página **script** del editor de la **tarea script**, agregue la `CurrentImageFile` variable a la `ReadOnlyVariables` propiedad.  
   
 3.  En el proyecto de script, establezca una referencia al espacio de nombres `System.Drawing`.  
   
@@ -149,7 +148,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Descripción del ejemplo 2: Creación y almacenamiento de imágenes en miniatura  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> Ejemplo 2: Descripción: crear y guardar las imágenes en miniatura  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable, se crea una miniatura de la imagen a la vez que se mantiene una relación de aspecto constante y se guarda la miniatura con un nombre de archivo modificado. El código que calcula el alto y ancho de la miniatura a la vez que mantiene una relación de aspecto constante se encapsula en una subrutina privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  
@@ -158,7 +157,7 @@ End Function
   
 2.  Cree también la variable entera `MaxThumbSize` y asígnela un valor en píxeles, como 100.  
   
-3.  En el **Script** página de la **Editor de la tarea Script**, agregue ambas variables a la `ReadOnlyVariables` propiedad.  
+3.  En la página **script** del editor de la **tarea script**, agregue ambas variables a la `ReadOnlyVariables` propiedad.  
   
 4.  En el proyecto de script, establezca una referencia al espacio de nombres `System.Drawing`.  
   
@@ -289,6 +288,6 @@ bool ThumbnailCallback()
   
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

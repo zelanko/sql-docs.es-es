@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e328c2fcf6b5f6ab6fc95383b7020deb9e172b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62911666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048877"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Propiedad PropertyIndex (clase SqlServiceAdvancedProperty)
   Obtiene o establece el índice de propiedad que especifica la posición de una propiedad avanzada en una matriz de propiedades avanzadas que pertenecen a un servicio al que se hace referencia.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

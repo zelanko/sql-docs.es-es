@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0611b37de9af37e5ae8442514ac0720e5eb89e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c30e5127bea29ecf1cd0d280adf0f5b1f2a6d766
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62772251"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439702"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -34,7 +33,7 @@ ms.locfileid: "62772251"
  **Tipo de autenticación**  
  Si copia desde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -43,7 +42,7 @@ ms.locfileid: "62772251"
  **Ruta de acceso del paquete**  
  Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete que quiere copiar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   

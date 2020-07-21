@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: f94281ef-331b-4432-9e59-839d3b0e6897
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e9c2db3908d18270690de8cb878660dedbe7b99c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48eed46de5248ac0960af947c4fa9bdfc2f795e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780592"
 ---
-# <a name="mssqlserver20557"></a>MSSQLSERVER_20557
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_20557"></a>MSSQLSERVER_20557
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|20557|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|20557|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum20557|  
 |Texto del mensaje|Cierre del agente. Para obtener más información, vea el trabajo '%s' en el historial de trabajos del Agente SQL Server.|  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103211"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66103211"
   
 -   Un valor de tiempo de espera de informe es el número máximo de segundos durante los cuales puede continuar el procesamiento del informe antes de que se detenga. Este valor se define en el nivel de sistema. Existe la posibilidad de modificarlo para informes individuales.  
   
- La mayoría de los errores de tiempo de espera se generan durante el procesamiento de las consultas. Si detecta errores de este tipo, intente aumentar el valor de tiempo de espera de la consulta. Asegúrese de ajustar el valor de tiempo de espera de ejecución del informe de forma que sea superior al de la consulta. El período de tiempo debería ser suficiente para completar el procesamiento tanto de la consulta como del informe.  
+ La mayoría de los errores de tiempo de espera se generan durante el procesamiento de las consultas. Si detecta errores de este tipo, intente aumentar el valor de tiempo de espera de la consulta. Asegúrese de ajustar el valor de tiempo de espera de la ejecución del informe para que sea mayor que el tiempo de espera de la consulta. El período de tiempo debe ser suficiente para completar el procesamiento de consultas e informes.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Establecer un tiempo de espera de la consulta para un conjunto de datos incrustados en un informe  
  Los valores de tiempo de espera de la consulta se especifican durante la creación del informe como un conjunto de datos incrustado. El valor de tiempo de espera se almacena junto con el informe, en el elemento `Timeout` de la definición de informe. De forma predeterminada, este valor está establecido en 30 segundos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "66103211"
 > [!NOTE]  
 >  Es posible establecer el parámetro `RunningRequestsDbCycle` del archivo RSReportServer.config para cambiar la frecuencia con la que se evalúan los trabajos en ejecución.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md)   

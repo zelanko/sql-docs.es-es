@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9441a002f7c6e7113970bd4fb847f3371fd67909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dca357f63065940963bad899086f9ac88dfdbaf6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762052"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551008"
 ---
-# <a name="mssqlserver7935"></a>MSSQLSERVER_7935
+# <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7935|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7935|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_MISSING_COLUMN|  
-|Texto del mensaje|Error de tabla: Un directorio Filestream que f_id identificador existe para una columna de objeto ID O_ID, ID. de índice, partición PN_ID, pero esa columna no existe en la partición.|  
+|Texto del mensaje|Error de tabla: existe un id. de directorio FILESTREAM F_ID para una columna con id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, pero esa columna no existe en la partición.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se encontró un directorio FILESTREAM para una columna en el objeto especificado; sin embargo, no se ha encontrado la columna en los metadatos correspondientes de la partición.  

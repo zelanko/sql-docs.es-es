@@ -17,15 +17,15 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 627fa6a19c88507034bfbd8a7236b94e17242851
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ffd74e1cf495ef3cfc1784011fb1d7c18b5ab15d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760876"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este tema se define el grado máximo de paralelismo y se explica cómo modificar este valor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
@@ -48,15 +48,15 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El número de procesadores que utiliza el optimizador de consultas suele proporcionar un rendimiento óptimo. No obstante, las operaciones como la creación, reconstrucción o eliminación de índices de gran tamaño utilizan una gran cantidad de recursos y pueden provocar la falta de recursos para otras aplicaciones y operaciones de base de datos durante la operación de índice. Cuando se produce este problema, se puede configurar manualmente el número máximo de procesadores que se emplean para ejecutar la instrucción de índice limitando el número de procesadores que se usarán para la operación de índice.  
   
 -   La opción de índice MAXDOP reemplaza la opción de configuración max degree of parallelism solo para la consulta que especifica esta opción. En la tabla siguiente se muestran los valores enteros válidos que se pueden especificar con la opción de configuración max degree of parallelism y la opción de índice MAXDOP.  
   
-    |Valor|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
     |0|Especifica que el servidor determina el número de CPU que se usan, según la carga de trabajo del sistema actual. Éste es el valor predeterminado y recomendado.|  
     |1|Suprime la generación de planes paralelos. La operación se ejecutará en serie.|  
@@ -78,10 +78,10 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 -   Los requisitos de memoria de las operaciones de índices con particiones que requieren ordenación pueden ser mayores si el Optimizador de consultas aplica grados de paralelismo a la operación de generación. Cuanto mayores sean los grados de paralelismo, mayor será el requisito de memoria. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Security"></a> <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Security"></a> <a name="Permissions"></a> Permisos  
  Debe tener un permiso de `ALTER` sobre la tabla o vista.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>Para establecer el grado máximo de paralelismo en un índice  
   
@@ -99,9 +99,9 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
   
 7.  Seleccione **Grado máximo de paralelismo**y, a continuación, escriba un valor entre 1 y 64.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Para establecer el grado máximo de paralelismo en un índice existente  
   
@@ -140,7 +140,7 @@ En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includ
     GO  
     ```  
  
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)   (Guía de arquitectura de procesamiento de consultas)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

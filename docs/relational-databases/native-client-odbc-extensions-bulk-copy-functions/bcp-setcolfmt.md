@@ -18,16 +18,14 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9615e455bee033af9f071bbb4a13ef3d98c81bf4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
-ms.translationtype: MT
+ms.openlocfilehash: 16b5cd47a776a426ce515946794f0385eb0222e0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707513"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010029"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La función **bcp_setcolfmt** reemplaza a [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para especificar la intercalación de columna, se debe usar la función **bcp_setcolfmt** . [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) se puede utilizar para especificar más de un formato de columna.  
   
@@ -51,13 +49,13 @@ RETCODE bcp_setcolfmt (
  *hdbc*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
- *field*  
+ *campo*  
  Es el número de columnas ordinal para el que se establece la propiedad.  
   
  *property*  
  Es una de las constantes de propiedad. Las constantes de propiedad se definen en esta tabla.  
   
-|propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Es el tipo de datos de esta columna del archivo de usuario. Si es distinto del tipo de datos de la columna correspondiente de la tabla de base de datos, la copia masiva convierte los datos si es posible.<br /><br /> Los tokens de tipo de datos de SQL Server enumeran el parámetro BCP_FMT_TYPE en sqlncli.h, en lugar de los enumeradores de tipo de datos de ODBC C. Por ejemplo, puede especificar una cadena de caracteres, tipo SQL_C_CHAR de ODBC, utilizando el tipo específico SQLCHARACTER de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar la representación de datos predeterminada para el tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , establezca este parámetro en 0.<br /><br /> Para realizar una copia masiva de SQL Server en un archivo, cuando BCP_FMT_TYPE es SQLDECIMAL o SQLNUMERIC, si la columna de origen no es **decimal** o **Numeric**, se usan la precisión y la escala predeterminadas. De lo contrario, si la columna de origen es **decimal** o **numérica**, se utilizan la precisión y la escala de la columna de origen.|  
 |BCP_FMT_INDICATOR_LEN|INT|Es la longitud en bytes del indicador (prefijo).<br /><br /> Es la longitud, en bytes, de un indicador de longitud o nulo en los datos de columna. Los valores de longitud de indicador válidos son 0 (cuando no se utiliza ningún indicador), 1, 2 ó 4.<br /><br /> Para especificar el uso del indicador de copia masiva predeterminado, establezca este parámetro en SQL_VARLEN_DATA.<br /><br /> Los indicadores aparecen directamente en memoria antes de cualquier dato y en el archivo de datos directamente antes de los datos a los que se aplican.<br /><br /> Si se utiliza más de un medio de especificar una longitud de columna del archivo de datos (como un indicador y una longitud máxima de columna o un indicador y una secuencia de terminador) , la copia masiva elige aquél por el que se copia la cantidad mínima de datos.<br /><br /> Los archivos de datos generados mediante la copia masiva cuando ninguna intervención de usuario ajusta el formato de los datos contienen indicadores acerca de cuándo los datos de columna pueden variar en longitud o cuándo la columna puede aceptar como valores los valores NULL.|  
@@ -72,10 +70,10 @@ RETCODE bcp_setcolfmt (
  *cbvalue*  
  Es la longitud del búfer de propiedad en bytes.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función reemplaza la función **bcp_colfmt** . Toda la funcionalidad de **bcp_colfmt** se proporciona en la función **bcp_setcolfmt** . Además, también se proporciona compatibilidad con la intercalación de columna. Se recomienda que los atributos de formato de columna siguientes se establezcan en el orden proporcionado a continuación:  
   
  BCP_FMT_SERVER_COL  
@@ -98,7 +96,7 @@ RETCODE bcp_setcolfmt (
   
 -   La longitud de la secuencia de bytes de terminación opcional.  
   
- Cada llamada a **bcp_setcolfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** y, a continuación, llame a **bcp_setcolfmt** cinco veces y con tres de esas llamadas establezca el formato personalizado. Para las dos llamadas restantes, establezca BCP_FMT_TYPE en 0 y establezca respectivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN y *cbValue* en 0, SQL_VARLEN_DATA y 0. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
+ Cada llamada a **bcp_setcolfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** y, a continuación, llame a **bcp_setcolfmt** cinco veces y con tres de esas llamadas establezca el formato personalizado. Para las dos llamadas restantes, establezca BCP_FMT_TYPE en 0 y establezca respectivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN y *cbValue* en 0, SQL_VARLEN_DATA y 0. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
  Se debe llamar a la función **bcp_columns** antes de llamar a **bcp_setcolfmt**.  
   
@@ -109,11 +107,11 @@ RETCODE bcp_setcolfmt (
  La función [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) se puede utilizar para conservar la especificación de formato.  
   
 ## <a name="bcp_setcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_setcolfmt admite las características mejoradas de fecha y hora  
- Los tipos utilizados con la propiedad BCP_FMT_TYPE para los tipos de fecha y hora se especifican en [cambios de copia masiva para los tipos &#40;de fecha y&#41;hora mejorados OLE DB y ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Los tipos utilizados con la propiedad BCP_FMT_TYPE para los tipos de fecha y hora se especifican en [cambios de copia masiva para los tipos de fecha y hora mejorados &#40;OLE DB y&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obtener más información, vea [mejoras &#40;de fecha y&#41;hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

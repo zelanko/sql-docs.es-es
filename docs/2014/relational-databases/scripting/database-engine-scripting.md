@@ -1,6 +1,6 @@
 ---
-title: Scripting del motor de base de datos | Microsoft Docs
-ms.custom: ''
+title: Scripting del motor de base de datos
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e7b4c7e2972ed797048dbcaedcaaeec4d682d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae905ba881e2337660d47306ce0ed84fdac35d8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056863"
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
   El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] admite el entorno de scripting de [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell para administrar las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los objetos en las instancias. También puede generar y ejecutar consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contengan [!INCLUDE[tsql](../../includes/tsql-md.md)] y XQuery en entornos muy similares a los de scripts.  
@@ -30,7 +29,7 @@ ms.locfileid: "66090515"
   
 -   Un proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell que expone las jerarquías del modelo de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como rutas de acceso de PowerShell que son similares a las rutas de acceso al sistema de archivos. Puede utilizar las clases del modelo de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para administrar los objetos representados en cada nodo de la ruta de acceso.  
   
--   Un conjunto de cmdlets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que implementan los comandos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uno de los cmdlets es **Invoke-Sqlcmd**. Esto se usa para ejecutar [!INCLUDE[ssDE](../../includes/ssde-md.md)] consultar las secuencias de comandos se ejecute con la `sqlcmd` utilidad.  
+-   Un conjunto de cmdlets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que implementan los comandos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Uno de los cmdlets es **Invoke-Sqlcmd**. Se utiliza para ejecutar [!INCLUDE[ssDE](../../includes/ssde-md.md)] scripts de consulta que se ejecutarán con la `sqlcmd` utilidad.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona estas características para ejecutar PowerShell:  
   
@@ -53,13 +52,13 @@ ms.locfileid: "66090515"
   
 -   Puede ejecutar y depurar interactivamente consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede codificar y depurar varias instrucciones en una sesión; a continuación, puede guardar todas las instrucciones en un único archivo de script.  
   
--   El `sqlcmd` utilidad de símbolo del sistema le permite ejecutar interactivamente [!INCLUDE[ssDE](../../includes/ssde-md.md)] las consultas y también ejecución existente [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivos de secuencia de comandos de consulta.  
+-   La `sqlcmd` utilidad del símbolo del sistema le permite ejecutar consultas de forma interactiva [!INCLUDE[ssDE](../../includes/ssde-md.md)] y también ejecutar [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivos de script de consulta existentes.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] se suelen codificar interactivamente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . El archivo se puede abrir después en uno de estos entornos:  
   
--   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+-   Use el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Archivo**/**Abrir** para abrir el archivo en una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
--   Use la **-i**_archivo_entrada_ parámetro para ejecutar el archivo con el `sqlcmd` utilidad.  
+-   Utilice el parámetro **-i**_input_file_ para ejecutar el archivo con la `sqlcmd` utilidad.  
   
 -   Use el parámetro **-QueryFromFile** para ejecutar el archivo con el cmdlet **Invoke-Sqlcmd** en los scripts de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66090515"
 |Describe cómo integrar los componentes de SQL Server en un entorno de Windows PowerShell 2.0 y, a continuación, compilar scripts de PowerShell y administrar instancias y objetos de SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Describe cómo usar el asistente de **Generar y publicar scripts** para crear scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] que vuelven a crear los objetos de una base de datos.|[Generar scripts &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
  [Tutorial: Escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

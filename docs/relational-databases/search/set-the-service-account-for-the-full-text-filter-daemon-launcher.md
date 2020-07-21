@@ -1,5 +1,5 @@
 ---
-title: Establecer la cuenta del servicio para el selector del demonio de filtro completo | Microsoft Docs
+title: Establecimiento de la cuenta del servicio para el selector del demonio de filtro de texto completo
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,15 +13,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21e427db754f9ba76895800cad047697fed47379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 4603d4a14461bb05576a6f6ffe34db4968223718
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628938"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Establecer la cuenta del servicio para el selector del demonio de filtro completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
  En este tema se describe cómo establecer o cambiar la cuenta de servicio para el servicio Selector del demonio de filtro de texto completo de SQL Server (MSSQLFDLauncher) mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta de servicio predeterminada usada por el programa de instalación de SQL Server es `NT Service\MSSQLFDLauncher`.
   
   
@@ -30,7 +31,7 @@ La búsqueda de texto completo usa el servicio Selector de demonio de filtro de 
   
 El servicio Selector del demonio de filtro de texto completo de SQL Server es un servicio que reconoce instancias y que está asociado a una instancia específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El servicio Selector de demonio de filtro de texto completo de SQL propaga la información de la cuenta de servicio a cada proceso de host de demonio de filtro que inicia.  
 
-##  <a name="setting"></a> Establecer la cuenta de servicio  
+##  <a name="set-the-service-account"></a><a name="setting"></a> Establecer la cuenta de servicio  
   
 1.  En el menú **Inicio**, seleccione **Todos los programas**, expanda [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] y, luego, haga clic en **Administrador de configuración de SQL Server 2016**.  
   
@@ -42,10 +43,10 @@ El servicio Selector del demonio de filtro de texto completo de SQL Server es un
   
 ![Propiedades del proceso del Selector de demonio de filtro de texto completo de SQL](../../relational-databases/search/media/sql-full-text-filter-daemon-launch-process-properties.png)
   
-##  <a name="error"></a> Solucionar problemas del servicio del Selector de demonio de filtro de texto completo de SQL si no se inicia  
+##  <a name="troubleshoot-the-sql-full-text-filter-daemon-launcher-service-if-it-doesnt-start"></a><a name="error"></a> Solucionar problemas del servicio del Selector de demonio de filtro de texto completo de SQL si no se inicia  
  Si el servicio del Selector de demonio de filtro de texto completo de SQL no se inicia, revise las siguientes causas posibles:  
   
-### <a name="permissions-issues"></a>Problemas de permisos
+### <a name="permissions-issues"></a>Incidencias de permisos
 -   El grupo de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene permiso para iniciar el servicio Selector de demonio de filtro de texto completo de SQL.  
 
      Asegúrese de que el grupo de servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenga permisos para la cuenta de servicio del Selector de demonio de filtro de texto completo de SQL. Durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], al grupo de servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se le concede el permiso predeterminado para administrar, consultar e iniciar el servicio Selector del demonio de filtro de texto completo de SQL. Si los permisos del grupo de servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la cuenta del servicio Selector de demonio de filtro de texto completo de SQL se han quitado después de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dicho servicio no se iniciará y la búsqueda de texto completo se deshabilitará.     

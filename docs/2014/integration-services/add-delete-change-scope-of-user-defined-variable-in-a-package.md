@@ -1,5 +1,5 @@
 ---
-title: Agregar, eliminar, cambiar el ámbito de Variable definido por el usuario en un paquete | Microsoft Docs
+title: Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 946a9f3ccecfcad30042d0264942836522e64c7d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061986"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439692"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete
-  Estos procedimientos describen cómo agregar, eliminar y cambiar el ámbito de una variable definida por el usuario en un paquete usando la ventana **Variables**.  
+  Estos procedimientos describen cómo agregar, eliminar y cambiar el ámbito de una variable definida por el usuario en un paquete usando la ventana **Variables** .  
   
  Para más información sobre el ámbito de las variables, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66061986"
   
 4.  En el menú **SSIS** , haga clic en **Variables**. También puede ver la ventana **Variables** si asigna el comando View.Variables a una combinación de teclas que desee en la página **Teclado** del cuadro de diálogo **Opciones** .  
   
-5.  En la ventana **Variables** , haga clic en el icono **Agregar variable** . Se agregará la nueva variable a la lista.  
+5.  En la ventana **variables** , haga clic en el icono **Agregar variable** . Se agregará la nueva variable a la lista.  
   
 6.  Opcionalmente, haga clic en el icono **Opciones de cuadrícula** , seleccione las columnas adicionales que desee mostrar en el cuadro de diálogo **Opciones de cuadrícula de variables** y haga clic en **Aceptar**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66061986"
   
 4.  Seleccione la variable que desee eliminar y haga clic en **Eliminar variable**.  
   
-     Si no ve la variable en la ventana Variables, haga clic en **Opciones de cuadrícula** y seleccione **Mostrar variables de todos los ámbitos**.  
+     Si no ve la variable en la ventana variables, haga clic en **Opciones de cuadrícula** y, a continuación, seleccione **Mostrar variables de todos los ámbitos**.  
   
 5.  Si se abre el cuadro de diálogo **Confirmar eliminación de variables** , haga clic en **Sí** para confirmar.  
   
@@ -76,16 +75,16 @@ ms.locfileid: "66061986"
   
 4.  Seleccione la variable y haga clic en **Mover variable**.  
   
-     Si no ve la variable en la ventana Variables, haga clic en **Opciones de cuadrícula** y seleccione **Mostrar variables de todos los ámbitos**.  
+     Si no ve la variable en la ventana variables, haga clic en **Opciones de cuadrícula** y, a continuación, seleccione **Mostrar variables de todos los ámbitos**.  
   
 5.  En el cuadro de diálogo **Seleccionar nuevo ámbito** , seleccione el paquete o un contenedor, una tarea o un controlador de eventos en el paquete, para cambiar el ámbito de la variable.  
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
- [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;&#41; variables de SSIS](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
- [Establecer las propiedades de una Variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
- [Uso de los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [Establecer las propiedades de una variable definida por el usuario](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
+ [Usar los valores de variables y parámetros en un paquete secundario](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
   

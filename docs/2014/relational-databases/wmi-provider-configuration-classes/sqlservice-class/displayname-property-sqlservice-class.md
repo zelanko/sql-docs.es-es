@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cb5a00278e8b740df5efa93e71c417ccb4943f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9439b7410821cffe5d959fda7a894e4f69e33ed0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002320"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Propiedad DisplayName (clase SqlService)
   Obtiene el nombre para mostrar del servicio.  
@@ -52,7 +51,7 @@ object
 mysqlservice.DisplayName = "Atdisk"  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

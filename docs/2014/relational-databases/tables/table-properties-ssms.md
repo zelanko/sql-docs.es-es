@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055063"
 ---
 # <a name="table-properties"></a>Propiedades de tabla
   En este tema se describen las propiedades de la tabla que se muestran en el cuadro de diálogo Propiedades de tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo mostrar estas propiedades, vea [Ver la definición de tabla](view-the-table-definition.md).  
@@ -36,21 +35,21 @@ ms.locfileid: "68196714"
   
 4.  [Página Almacenamiento](#Storage)  
   
-##  <a name="GeneralPage"></a> Página General  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Página General  
  **Base de datos**  
  Nombre de la base de datos que contiene esta tabla.  
   
  **Server**  
  Nombre de la instancia de servidor actual.  
   
- **Usuario**  
+ **User**  
  Nombre del usuario de esta conexión.  
   
  **Fecha de creación**  
  Fecha y hora de creación de la tabla.  
   
- **Name**  
- El nombre de la tabla.  
+ **Nombre**  
+ Nombre de la tabla.  
   
  **Esquema**  
  Esquema al que pertenece la tabla.  
@@ -83,8 +82,8 @@ ms.locfileid: "68196714"
  **Tabla replicada**  
  Indica si se ha replicado la tabla en otra base de datos mediante la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores posibles son `True` o `False`.  
   
-##  <a name="ChangeTracking"></a> Página Seguimiento de cambios  
- **Seguimiento de los cambios**  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>Change Tracking página  
+ **Seguimiento de cambios**  
  Indica si el seguimiento de cambios está habilitado para la tabla. El valor predeterminado es `False`.  
   
  Esta opción solo está disponible cuando el seguimiento de cambios está habilitado para la base de datos.  
@@ -96,7 +95,7 @@ ms.locfileid: "68196714"
   
  Para obtener más información sobre el seguimiento de cambios, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a> Página FileTable  
+##  <a name="filetable-page"></a><a name="FileTable"></a>Página de FileTable  
  Muestra las propiedades de la tabla relacionada con las tablas FileTable. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
  **Intercalación de la columna Nombre de una tabla FileTable**  
@@ -108,7 +107,7 @@ ms.locfileid: "68196714"
  **Espacio de nombres de FileTable habilitado**  
  Si es `True`, este valor indica que la tabla es una tabla FileTable. Si cambia este valor a `False`, cambiará la tabla FileTable a una tabla de usuario ordinaria. Si posteriormente desea cambiar la tabla a una tabla FileTable, la tabla tiene que pasar una comprobación de coherencia de FileTable antes de que la conversión se realice correctamente.  
   
-##  <a name="Storage"></a> Página Almacenamiento  
+##  <a name="storage-page"></a><a name="Storage"></a>Página almacenamiento  
  Muestra las propiedades relacionadas con el almacenamiento de la tabla seleccionada.  
   
 ### <a name="compression"></a>Compresión  
@@ -141,7 +140,7 @@ ms.locfileid: "68196714"
   
 ### <a name="general"></a>General  
  **El formato de almacenamiento Vardecimal está habilitado**  
- Cuando `True`, este valor de solo lectura indica que `decimal` y `numeric` tipos de datos se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, utilice el `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
+ Cuando `True` es, este valor de solo lectura indica `decimal` que `numeric` los tipos de datos y se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, utilice la `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
   
  **Espacio de índice**  
  La cantidad de espacio en megabytes que ocupan los índices en la tabla. Este valor no incluye el uso del espacio del índice XML en la tabla. Si los índices XML pertenecen a la tabla, use [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) en su lugar.  
@@ -169,7 +168,7 @@ ms.locfileid: "68196714"
   
  El esquema de partición FILESTREAM debe ser simétrico al esquema especificado en la opción **Esquema de partición** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver la definición de tabla](view-the-table-definition.md)   
  [Modificar columnas &#40;motor de base de datos&#41;](../tables/modify-columns-database-engine.md)  
   

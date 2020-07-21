@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un procedimiento almacenado con RPC y procesar la salida | Microsoft Docs
+title: Procedimiento almacenado, RPC, salida
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,19 +11,17 @@ helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b58abcebdc310a1a5979049495b610ffef37a7b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: 0bdf96d5f352f4b35f45112e86e16fa09a28a90a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909522"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006439"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ejecutar procedimiento almacenado con RPC y procesar la salida
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete del servidor y, por tanto, no están disponibles para la aplicación hasta que se haya lanzado al mercado completamente el conjunto de filas. Si el comando devuelve varios resultados, los datos de los parámetros de salida están disponibles cuando **IMultipleResults::GetResult** devuelve DB_S_NORESULT o cuando se libera por completo la interfaz **IMultipleResults**, lo que se produzca en primer lugar.  
   
@@ -38,13 +36,13 @@ ms.locfileid: "72909522"
   
 3.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructuras DBBINDING.  
   
-4.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor:: CreateAccessor** . El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+4.  Cree un descriptor de acceso para los parámetros definidos mediante el uso del método **IAccessor::CreateAccessor**. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 5.  Rellene la estructura DBPARAMS.  
   
 6.  Llame al comando **Execute** (en este caso, una llamada a un procedimiento almacenado).  
   
-7.  Procese el conjunto de filas y suéltelo mediante el método **IRowset:: Release** .  
+7.  Procese el conjunto de filas y libérelo mediante el método **IRowset::Release**.  
   
 8.  Procese el código de retorno y los valores de parámetro de salida que se reciben del procedimiento almacenado.  
 
@@ -59,7 +57,7 @@ ms.locfileid: "72909522"
   
  Ejecute la tercera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para eliminar el procedimiento almacenado utilizado por la aplicación.  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
@@ -81,7 +79,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -391,13 +389,13 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos para procesar resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

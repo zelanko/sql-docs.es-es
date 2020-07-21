@@ -1,7 +1,7 @@
 ---
 title: Montaje de S3 para los niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos S3 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]externo en HDFS en un.
+description: En este artículo se explica cómo configurar los niveles de HDFS para montar un sistema de archivos S3 externo en HDFS en un clúster de macrodatos de SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: fce89b5c2ee40fc7229c0c330fefe9e253a4fdc6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606594"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo montar S3 para los niveles de HDFS en un clúster de macrodatos
 
 En las secciones siguientes se proporciona un ejemplo de cómo configurar los niveles de HDFS con un origen de datos de almacenamiento S3.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -31,7 +31,7 @@ En las secciones siguientes se proporciona un ejemplo de cómo configurar los ni
 
 ## <a name="access-keys"></a>Claves de acceso
 
-### <a name="set-environment-variable-for-access-key-credentials"></a>Establecer la variable de entorno para las credenciales de clave de acceso
+### <a name="set-environment-variable-for-access-key-credentials"></a>Establecimiento de la variable de entorno para las credenciales de clave de acceso
 
 Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster de macrodatos. Establezca una variable de entorno con el siguiente formato. Tenga en cuenta que las credenciales deben estar en una lista separada por comas. El comando "set" se usa en Windows. Si usa Linux, use "Export" en su lugar.
 
@@ -43,7 +43,7 @@ Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster 
    > [!TIP]
    > Para obtener más información sobre cómo crear teclas de acceso S3, consulte [Claves de acceso S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
-## <a id="mount"></a> Montaje del almacenamiento de HDFS remoto
+## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montaje del almacenamiento de HDFS remoto
 
 Ahora que ha preparado un archivo de credenciales con claves de acceso, puede iniciar el montaje. En los pasos siguientes se monta el almacenamiento de HDFS remoto en S3 en el almacenamiento de HDFS local del clúster de macrodatos.
 
@@ -61,7 +61,7 @@ Ahora que ha preparado un archivo de credenciales con claves de acceso, puede in
    
 1. Establezca la variable de entorno MOUNT_CREDENTIALS siguiendo las instrucciones anteriores.
 
-1. Monte el almacenamiento de HDFS remoto en Azure mediante la **creación del montaje de azdata BDC HDFS**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
+1. Monte el almacenamiento de HDFS remoto en Azure con el comando **azdata bdc hdfs mount create**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
 
    ```bash
    azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -72,7 +72,7 @@ Ahora que ha preparado un archivo de credenciales con claves de acceso, puede in
 
 Si se ha montado correctamente, debería poder consultar los datos de HDFS y ejecutar trabajos de Spark en ellos. Aparecerán en el HDFS del clúster de macrodatos en la ubicación que especifique `--mount-path`.
 
-## <a id="status"></a> Obtención del estado de los montajes
+## <a name="get-the-status-of-mounts"></a><a id="status"></a> Obtención del estado de los montajes
 
 Para mostrar el estado de todos los montajes en el clúster de macrodatos, use el siguiente comando:
 
@@ -94,9 +94,9 @@ En el siguiente ejemplo se actualiza el montaje.
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Eliminación del montaje
+## <a name="delete-the-mount"></a><a id="delete"></a> Eliminación del montaje
 
-Para eliminar el montaje, use el comando **azdata BDC HDFS Mount Delete** y especifique la ruta de acceso de montaje en HDFS:
+Para eliminar el montaje, use el comando **azdata bdc hdfs mount delete** y especifique la ruta de acceso de montaje en HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]acerca de, vea [¿Qué es [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

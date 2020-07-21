@@ -1,6 +1,6 @@
 ---
-title: Propiedad AliasName (clase SqlServerAlias) | Microsoft Docs
-ms.custom: ''
+title: Propiedad AliasName (SqlServerAlias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38d845e9864535e8e0fb308d1dc2ed42030ff340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74fdba44ae1b4457b092f9b3439526552ec780a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052461"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888482"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Propiedad AliasName (clase SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre del alias de la conexión del servidor.  
   
 ## <a name="syntax"></a>Sintaxis  

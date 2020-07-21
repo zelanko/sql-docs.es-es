@@ -12,10 +12,10 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296250"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "71296250"
 ## <a name="screen-shot-of-the-specify-table-copy-or-query-page"></a>Captura de pantalla de la página Especificar copia de tabla o consulta    
  En la captura de pantalla siguiente se muestra la página **Especificar copia de tabla o consulta** del asistente.    
     
- ![Página Especificar copia de tabla o consulta del Asistente para importación y exportación](../../integration-services/import-export-data/media/table-copy-or-query.png "Página Especificar copia de tabla o consulta del Asistente para importación y exportación")    
+ ![Copia de tabla o página de consulta del Asistente para importar y exportar](../../integration-services/import-export-data/media/table-copy-or-query.png "Copia de tabla o página de consulta del Asistente para importar y exportar")    
     
 ## <a name="specify-whether-to-copy-an-entire-table-or-write-a-query"></a>Especifique si quiere copiar una tabla completa o escribir una consulta 
  **Copiar los datos de una o varias tablas o vistas**    
@@ -77,11 +77,11 @@ Puede seguir usando la opción **Write a query (Escribir una consulta)** , aunqu
     
 -   Si ha seleccionado **Copiar los datos de una o varias tablas o vistas**, para la mayoría de los destinos, la página siguiente será **Seleccionar tablas y vistas de origen**. En esta página, seleccione las tablas y vistas existentes que quiere copiar del origen de datos al destino. Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).    
     
--   Si ha seleccionado **Copiar los datos de una o varias tablas o vistas** y el destino es un archivo plano, la página siguiente será **Configurar el destino del archivo plano**. En esta página, especifique las opciones de formato del archivo plano de destino. (Después de configurar el archivo plano, la página siguiente será **Seleccionar tablas y vistas de origen**). Para más información, vea [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
+-   Si ha seleccionado **Copiar los datos de una o varias tablas o vistas** y el destino es un archivo plano, la página siguiente será **Configurar el destino del archivo plano**. En esta página, especifique las opciones de formato del archivo de destino plano. (Después de configurar el archivo plano, la página siguiente será **Seleccionar tablas y vistas de origen**). Para más información, vea [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).    
     
 -   Si ha seleccionado **Escribir una consulta para especificar los datos que se van a transferir**, la página siguiente será **Proporcionar una consulta de origen**. En esta página, escriba y pruebe la instrucción SQL que selecciona los datos que se van a copiar del origen de datos al destino. (Después de especificar una consulta, la página siguiente será **Seleccionar tablas y vistas de origen**). Para más información, vea [Proporcionar una consulta de origen](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

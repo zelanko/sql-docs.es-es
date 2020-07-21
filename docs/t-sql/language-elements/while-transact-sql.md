@@ -22,15 +22,15 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16ae636e92d109ea8bc9f9ddd67f70a1657cb564
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 500b2bddd1cb583672583e238668c5c5d0d773b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388445"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998560"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
   Establece una condición para la ejecución repetida de una instrucción o bloque de instrucciones SQL. Las instrucciones se ejecutan repetidamente siempre que la condición especificada sea verdadera. Se puede controlar la ejecución de instrucciones en el bucle WHILE con las palabras clave BREAK y CONTINUE.  
@@ -39,7 +39,7 @@ ms.locfileid: "68388445"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 WHILE Boolean_expression   
@@ -47,7 +47,7 @@ WHILE Boolean_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
@@ -68,7 +68,7 @@ WHILE Boolean_expression
  CONTINUE  
  Hace que se reinicie el bucle WHILE y omite las instrucciones que haya después de la palabra clave CONTINUE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si dos o más bucles WHILE están anidados, la instrucción BREAK interna sale al siguiente bucle más externo. Todas las instrucciones que se encuentran después del final del bucle interno deben ejecutarse primero y después se reinicia el siguiente bucle más externo.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -104,21 +104,20 @@ SELECT LoginID, JobTitle
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
-FETCH NEXT FROM Employee_Cursor;  
 FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
       Print '   ' + @EmployeeID + '      '+  @Title 
-      FETCH NEXT FROM Employee_Cursor;  
+      FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  
 GO 
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C. Bucle WHILE simple  
+### <a name="c-simple-while-loop"></a>C: Bucle WHILE simple  
  En el ejemplo siguiente, si el precio de venta promedio de un producto es inferior a `$300`, el bucle `WHILE` dobla los precios y, a continuación, selecciona el precio máximo. Si el precio máximo es menor o igual que `$500`, el bucle `WHILE` se reinicia y vuelve a doblar los precios. Este bucle continúa doblando los precios hasta que el precio máximo es mayor que `$500`, después de lo cual sale del bucle `WHILE`.  
   
 ```  

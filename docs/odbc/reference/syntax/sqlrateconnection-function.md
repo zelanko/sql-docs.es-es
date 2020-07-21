@@ -10,18 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74d7e2c52167682f0993006db3a1125ca741cf35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d29033460a7f89fc4a8b1c371a4d32bdf94a2a05
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053637"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288885"
 ---
 # <a name="sqlrateconnection-function"></a>Función SQLRateConnection
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 3,81 de ODBC: ODBC  
+ Versión introducida: ODBC 3,81 Standards Compliance: ODBC  
   
  **Resumen**  
  **SQLRateConnection** determina si un controlador puede reutilizar una conexión existente en el grupo de conexiones.  
@@ -40,50 +40,50 @@ SQLRETURN  SQLRateConnection(
   
 ## <a name="arguments"></a>Argumentos  
  *hRequest*  
- [Entrada] Identificador de token que representa la nueva solicitud de conexión de la aplicación.  
+ Entradas Identificador de token que representa la nueva solicitud de conexión de la aplicación.  
   
  *hCandidateConnection*  
- [Entrada] La conexión existente en el grupo de conexiones. La conexión debe estar en un estado abierto.  
+ Entradas La conexión existente en el grupo de conexiones. La conexión debe estar en un estado abierto.  
   
  *fRequiredTransactionEnlistment*  
- [Entrada] Si es TRUE, volver a usar la conexión existente *hCandidateConnection* para la nueva solicitud de conexión (*hRequest*) requiere una inscripción adicional.  
+ Entradas Si es TRUE, la reutilización de la *hCandidateConnection* de la conexión existente para la nueva solicitud de conexión (*hRequest*) requiere una inscripción adicional.  
   
  *transId*  
- [Entrada] Si *fRequiredTransactionEnlistment* es TRUE, *ID* representa la transacción de DTC se inscribirá la solicitud. Si *fRequiredTransactionEnlistment* es FALSE, *ID* se pasará por alto.  
+ Entradas Si *fRequiredTransactionEnlistment* es true, *transId* representa la transacción DTC a la que se dará de alta la solicitud. Si *fRequiredTransactionEnlistment* es false, *transId* se omitirá.  
   
  *pRating*  
- [Salida] *hCandidateConnection*reutilización de clasificación para el *hRequest*. Esta clasificación estará comprendido entre 0 y 100 (inclusivos).  
+ Genere clasificación de reutilización de *hCandidateConnection*para *hRequest*. Esta clasificación estará entre 0 y 100 (inclusive).  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- El Administrador de controladores no procesará la información de diagnóstico devuelta por esta función.  
+ El administrador de controladores no procesará la información de diagnóstico devuelta por esta función.  
   
-## <a name="remarks"></a>Comentarios  
- **SQLRateConnection** genera una puntuación entre 0 y 100 (inclusivos) que indica el grado en que una conexión existente coincide con la solicitud.  
+## <a name="remarks"></a>Observaciones  
+ **SQLRateConnection** genera una puntuación entre 0 y 100 (inclusive) que indica el grado de coincidencia de una conexión existente con la solicitud.  
   
 |Puntuación|Significado (cuando se devuelve SQL_SUCCESS)|  
 |-----------|-----------------------------------------------|  
-|0|*hCandidateConnection* no se debe reutilizar para el *hRequest*.|  
-|Cualquier valor entre 1 y 98 (inclusive)|Cuanto mayor sea la puntuación, más cerca que *hCandidateConnection* coincide con *hRequest*.|  
-|99|Hay solo discrepancias en los atributos no significativos.  El Administrador de controladores debe detener el bucle de clasificación.|  
-|100|Pareja perfecta.  El Administrador de controladores debe detener el bucle de clasificación.|  
-|Cualquier valor superior a 100|*hCandidateConnection* está marcado como inactivas y no se reutilizará incluso en una solicitud de conexión futuras.|  
+|0|*hCandidateConnection* no se debe reutilizar para *hRequest*.|  
+|Cualquier valor entre 1 y 98 (inclusivo)|Cuanto mayor sea la puntuación, más cerca de *hCandidateConnection* coincidirá con *hRequest*.|  
+|99|Solo hay discrepancias en los atributos insignificantes.  El administrador de controladores debe detener el bucle de clasificación.|  
+|100|Coincidencia perfecta.  El administrador de controladores debe detener el bucle de clasificación.|  
+|Cualquier otro valor mayor que 100|*hCandidateConnection* está marcado como Dead y no se volverá a usar incluso en una solicitud de conexión futura.|  
   
- El Administrador de controladores marcará una conexión como fallido si el código de retorno es algo distinto de SQL_SUCCESS (incluido SQL_SUCCESS_WITH_INFO) o la clasificación es mayor que 100. Esa conexión inactiva no se reutilizará (incluso en las solicitudes de conexión futuras) y se finalmente se agotó el tiempo después de pasadas CPTimeout. El Administrador de controladores seguirá encontrando otra conexión desde el grupo con frecuencia.  
+ El administrador de controladores marcará una conexión como muerta si el código de retorno es distinto de SQL_SUCCESS (incluido SQL_SUCCESS_WITH_INFO) o si la clasificación es mayor que 100. La conexión inactiva no se reutilizará (ni siquiera en solicitudes de conexión futuras) y, finalmente, se agotará el tiempo de espera después de que pase CPTimeout. El administrador de controladores seguirá encontrando otra conexión del grupo para valorar.  
   
- Si el Administrador de controladores se reutiliza una conexión cuya puntuación es estrictamente menor que 100 (incluido 99), el Administrador de controladores llamará SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN) para restablecer la conexión en el estado solicitado por la aplicación. El controlador no debe restablecer la conexión en esta llamada de función.  
+ Si el administrador de controladores reutiliza una conexión cuya puntuación es estrictamente menor que 100 (incluido 99), el administrador de controladores llamará a SQLSetConnectAttr (SQL_ATTR_DBC_INFO_TOKEN) para restablecer la conexión al estado solicitado por la aplicación. El controlador no debe restablecer la conexión en esta llamada de función.  
   
- Si *fRequiredTransactionEnlistment* es TRUE, reutilizar *hCandidateConnection* necesita una inscripción adicional (*ID* ! = NULL) o unenlistment ( *ID* == NULL). Esto indica que el costo de volver a usar una conexión y si el controlador debe dar de alta y dar de baja la conexión si se va a reutilizar la conexión. Si *fRequireTransactionEnlistment* es FALSE, controlador debe omitir el valor de *ID*.  
+ Si *fRequiredTransactionEnlistment* es true, la reutilización de *hCandidateConnection* necesita una inscripción adicional (*transId* ! = null) o una baja (*transId* = = null). Indica el costo de reutilizar una conexión y si el controlador debe dar de alta o baja la conexión si va a volver a usar la conexión. Si *fRequireTransactionEnlistment* es false, el controlador debe omitir el valor de *transId*.  
   
- El Administrador de controladores garantiza que el elemento primario HENV controlar de *hRequest* y *hCandidateConnection* son los mismos. El Administrador de controladores garantiza que el identificador del grupo asociado *hRequest* y *hCandidateConnection* son los mismos.  
+ El administrador de controladores garantiza que el identificador HENV primario de *hRequest* y *hCandidateConnection* es el mismo. El administrador de controladores garantiza que el identificador de grupo asociado con *hRequest* y *hCandidateConnection* es el mismo.  
   
- Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admite la agrupación de conexiones dependientes del controlador debe implementar esta función.  
+ Las aplicaciones no deben llamar directamente a esta función. Un controlador ODBC que admita la agrupación de conexiones compatible con controladores debe implementar esta función.  
   
- Incluir sqlspi.h para el desarrollo de controladores ODBC.  
+ Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Agrupación de conexiones dependientes del controlador](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

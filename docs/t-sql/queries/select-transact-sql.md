@@ -25,15 +25,15 @@ ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db5b1cc185c4fc3cb4c932867851703d8c134a14
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948285"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999741"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Recupera filas de la base de datos y habilita la selección de una o varias filas o columnas de una o varias tablas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sintaxis completa de la instrucción SELECT es compleja, aunque las cláusulas principales se pueden resumir del modo siguiente:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67948285"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 <SELECT statement> ::=    
@@ -80,7 +80,7 @@ SELECT [ ALL | DISTINCT ]
     [ HAVING < search_condition > ]   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Debido a la complejidad de la instrucción SELECT, se muestran elementos y argumentos detallados de la sintaxis de cada cláusula:  
   
 |||  
@@ -124,7 +124,7 @@ SELECT <select_criteria>
  Los pasos siguientes muestran el orden de procesamiento lógico, u orden de enlaces, de una instrucción SELECT. Este orden determina cuándo los objetos definidos en un paso están disponibles para las cláusulas en pasos posteriores. Por ejemplo, si el procesador de consultas puede enlazar (obtener acceso) a las tablas o las vistas definidas en la cláusula FROM, estos objetos y sus columnas están disponibles para todos los pasos siguientes. Por el contrario, dado que la cláusula SELECT es el paso 8, las cláusulas anteriores no pueden hacer referencia a los alias de columna o columnas derivadas definidas en esa cláusula. Sin embargo, las cláusulas siguientes, tales como la cláusula ORDER BY, sí pueden hacer referencia. La ejecución física real de la instrucción está determinada por el procesador de consultas y el orden puede variar en esta lista.  
   
 1.  FROM  
-2.  ON  
+2.  ACTIVAR  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -133,7 +133,7 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. ARRIBA  
+11. TOP  
 
 > [!WARNING]
 > La secuencia anterior suele ser la habitual, pero hay casos poco comunes en los que puede ser distinta.

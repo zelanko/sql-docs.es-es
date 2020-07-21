@@ -12,10 +12,10 @@ ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65503100"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
@@ -24,7 +24,7 @@ En la tabla siguiente se muestra la configuración de la información de los dis
 > [!IMPORTANT]  
 >  La configuración de información de dispositivo que aparece en la siguiente tabla con **(\*)** está en desuso y no se debe usar en nuevas aplicaciones. Para más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
-|Configuración|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
 |**AccessibleTablix**|Indica si se representa con metadatos de accesibilidad adicional para los usuarios con lectores verdes. Los metadatos de accesibilidad adicional provocan que el informe representado sea compatible con los siguientes estándares técnicos de la sección sobre información y aplicaciones de Internet y de la intranet basada en web (1194.22) del documento sobre estándares de accesibilidad de la tecnología de la información y la electrónica (sección 508):<br /><br /> (g) Los encabezados de fila y de columna se identificarán para las tablas de datos.<br /><br /> (h) Se usará marcado para asociar las celdas de datos y sus encabezados de las tablas que tengan dos o más niveles lógicos de encabezados de fila o columna.|  
 |**ActionScript(\*)**|Especifica el nombre de la función JavaScript que se usará cuando se produzca un evento de acción, como una obtención de detalles o un clic en un marcador. Si se especifica este parámetro, un evento de acción desencadenará la función JavaScript la con nombre en lugar de una devolución al servidor.|  

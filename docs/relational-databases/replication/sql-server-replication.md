@@ -1,5 +1,6 @@
 ---
 title: Replicación de SQL Server | Microsoft Docs
+description: Obtenga información sobre la replicación en SQL Server, las tecnologías para copiar y distribuir datos y objetos de base de datos entre bases de datos y la sincronización entre bases de datos.
 ms.custom: ''
 ms.date: 11/20/2018
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6644a84c2134735cefd489c4ddf6abdae775c412
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723100"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia. Utilice la replicación para distribuir datos entre diferentes ubicaciones y entre usuarios remotos o móviles mediante redes locales y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.  
   
  La replicación transaccional se usa normalmente en escenarios servidor a servidor que requieren un alto rendimiento, como por ejemplo, la mejora de la escalabilidad y la disponibilidad, el almacenamiento de datos y la creación de informes, la integración de datos procedentes de varios sitios, la integración de datos heterogéneos, y la descarga del procesamiento por lotes. La replicación de mezcla se ha diseñado principalmente para las aplicaciones móviles o de servidores distribuidos que pueden encontrarse con conflictos de datos. Los escenarios más frecuentes son: el intercambio de datos con usuarios móviles, las aplicaciones de punto de venta (POS) a consumidores, y la integración de datos de varios sitios. La replicación de instantáneas se usa para proporcionar el conjunto de datos inicial para la replicación transaccional y de mezcla; también se puede usar cuando está indicada una actualización completa de los datos. Con estos tres tipos de replicación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un sistema eficaz y flexible para la sincronización de datos en toda la organización. La replicación en SQLCE 3.5 y SQLCE 4.0 se admite tanto en [!INCLUDE[win8srv](../../includes/win8srv-md.md)] como en [!INCLUDE[win8](../../includes/win8-md.md)].  
@@ -48,7 +49,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
   
 ## <a name="publications-and-articles"></a>Publicaciones y artículos 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [Create a Publication](publish/create-a-publication.md) (Creación de una publicación)    
 -   [Definir un artículo](publish/define-an-article.md)   
 -   [Ver y modificar propiedades de publicación](publish/view-and-modify-publication-properties.md)   
 -   [er y modificar las propiedades de un artículo](publish/view-and-modify-article-properties.md)    
@@ -91,7 +92,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [Crear una suscripción de extracción](create-a-pull-subscription.md)    
 -   [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md)    
 -   [Eliminar una suscripción de extracción](delete-a-pull-subscription.md)    
--   [Crear una suscripción de inserción](create-a-push-subscription.md)   
+-   [Create a Push Subscription](create-a-push-subscription.md) (Creación de una suscripción de inserción)   
 -   [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md)   
 -   [Eliminar una suscripción de inserción](delete-a-push-subscription.md)   
 -   [Especificar programaciones de sincronización](specify-synchronization-schedules.md)    
@@ -129,7 +130,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [Configurar el trabajo del conjunto de transacciones para un publicador de Oracle &#40;programación de la replicación con Transact-SQL&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Actualizar scripts de replicación &#40;programación de la replicación con Transact-SQL&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Monitor
+## <a name="monitor"></a>Supervisión
   
 -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Supervisar la replicación mediante programación](monitor/programmatically-monitor-replication.md)    

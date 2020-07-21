@@ -12,32 +12,31 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5abd2e60f4f9bb5290b47f95349782f8b26ad8bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043200"
 ---
 # <a name="create-a-resource-pool"></a>Crear un grupo de recursos de servidor
   Puede crear un grupo de recursos de servidor con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para crear un grupo de recursos de servidor con:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Para crear un grupo de recursos, mediante:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  El porcentaje máximo de uso de la CPU debe ser igual o superior al porcentaje mínimo de uso de la CPU. El porcentaje máximo de uso de memoria debe ser igual o superior al porcentaje mínimo de uso de memoria.  
   
  Las sumas de los porcentajes mínimos de uso de la CPU y los porcentajes mínimos de uso de memoria de todos los grupos de recursos de servidor no deben superar el 100 por cien.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear un grupo de recursos de servidor se requiere un permiso CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Crear un grupo de recursos de servidor mediante SQL Server Management Studio  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Crear un grupo de recursos de servidor mediante SQL Server Management Studio  
  **Para crear un grupo de recursos de servidor con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta e incluyendo el nodo **Regulador de recursos**.  
@@ -52,12 +51,12 @@ ms.locfileid: "68211994"
   
 6.  Haga clic en **Aceptar**para guardar los cambios.  
   
-##  <a name="CreRPTSQL"></a> Crear un grupo de recursos de servidor mediante Transact-SQL  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>Crear un grupo de recursos mediante Transact-SQL  
  **Para crear un grupo de recursos de servidor con [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Ejecute la instrucción `CREATE RESOURCE POOL` especificando los valores de propiedad que desea establecer.  
   
-2.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR RECONFIGURE** .  
+2.  Ejecute la instrucción **ALTER Resource Governor REconfigure** .  
   
 ### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se crea un grupo de recursos de servidor denominado `poolAdhoc`.  
@@ -70,15 +69,15 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
- [Cambiar la configuración del grupo de recursos de servidor](change-resource-pool-settings.md)   
- [Eliminar un grupo de recursos de servidor](delete-a-resource-pool.md)   
+ [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   
+ [Cambiar la configuración del grupo de recursos](change-resource-pool-settings.md)   
+ [Eliminar un grupo de recursos](delete-a-resource-pool.md)   
  [Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)   
  [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
- [Función clasificadora del regulador de recursos](resource-governor-classifier-function.md)   
+ [Resource Governor función clasificadora](resource-governor-classifier-function.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   

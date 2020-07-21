@@ -10,51 +10,51 @@ ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896392"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Configuración global (registro) (MySQLToSQL)
-Use la **configuración Global** cuadro de diálogo para especificar la configuración de registro para SSMA. Normalmente, desea cambiar esta configuración solo cuando se trabaja con servicios de soporte técnico.  
+Utilice el cuadro de diálogo **configuración global** para especificar la configuración de registro para SSMA. Normalmente, esta configuración solo se puede cambiar cuando se trabaja con soporte técnico del producto.  
   
-Para obtener acceso a este cuadro de diálogo, en el **herramientas** menú, seleccione **configuración Global** y, a continuación, haga clic en el **registro** situado en la parte inferior del panel izquierdo.  
+Para obtener acceso a este cuadro de diálogo, en el menú **herramientas** , seleccione **configuración global** y, a continuación, haga clic en el botón **registro** situado en la parte inferior del panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
 **Nivel de mensajes**  
-Las siguientes opciones están disponibles en **mensajes nivel**:  
+Las siguientes opciones están disponibles en el **nivel de mensajes**:  
   
 |Opción|Descripción|  
 |----------|---------------|  
 |**[todas las categorías]**|Se usa para establecer el nivel de registro para todas las opciones siguientes.|  
-|**Recopilador**|Recopila metadatos sobre el esquema de origen y lo guarda en el proyecto.|  
-|**Convertidor de tipos**|Convierte las estructuras de objetos de base de datos de origen, como tablas y procedimientos almacenados, en correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructuras.|  
-|**Migrador de datos**|Migra los datos de la base de datos de origen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Recopilador**|Recopila metadatos sobre el esquema de origen y los guarda en el proyecto.|  
+|**Converter**|Convierte estructuras de objetos de base de datos de origen, como tablas y procedimientos almacenados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en estructuras correspondientes.|  
+|**Data Migrator**|Migra datos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]origen a.|  
 |**Formateador**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interfaz gráfica de usuario**|Mensajes que aparecen cuando se usa la herramienta SSMA.|  
-|**Vinculador**|Resuelve los identificadores de SQL y se proporciona información a otros componentes.|  
-|**Otro**|Todos los mensajes que no están en cualquier otra categoría.|  
+|**Enlazador**|Resuelve los identificadores de SQL y proporciona información a otros componentes.|  
+|**Otros**|Todos los mensajes que no están en ninguna otra categoría.|  
 |**Analizador**|Analiza el esquema de origen.|  
-|**Sincronizador**|En los objetos de base de datos del origen de carga [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**TreeConverter**|Convierte los objetos en los metadatos de origen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatos.|  
+|**Sincronizador**|Carga los objetos de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de datos de origen en.|  
+|**TreeConverter**|Convierte los objetos de los metadatos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen en metadatos.|  
   
-En cada opción **mensajes nivel**, configure uno de los siguientes niveles de registro para SSMA:  
+Para cada opción en **nivel de mensajes**, configure uno de los siguientes niveles de registro para SSMA:  
   
 |||  
 |-|-|  
-|**Error irrecuperable**|Escribir solo mensajes de error grave en el registro.|  
-|**Error**|Escribir error y mensajes de error grave en el registro.|  
-|**Advertencia**|Escribir mensajes de error grave, error y advertencia en el registro.|  
-|**Info**|Escribir informativo, advertencia, error y mensajes de error grave en el registro.|  
-|**Depuración**|Escribir todos los mensajes, incluidos los mensajes, en el registro de depuración.|  
+|**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
+|**Error**|Escriba mensajes de error y de error grave en el registro.|  
+|**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
+|**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
+|**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
-**Ruta de acceso de archivo de registro**  
-La ruta de acceso y nombre de los archivos de registro SSMA. Para especificar un nombre diferente, haga clic en la ruta de acceso actual y, a continuación, haga clic en el ( **...** ) botón.  
+**Ruta del archivo de registro**  
+La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  
   
 **Tamaño del archivo de registro**  
-El tamaño máximo del archivo de registro en KB. El tamaño mínimo es de 10 KB. El tamaño predeterminado es 10240 KB.  
+Tamaño máximo del archivo de registro en KB. El tamaño mínimo es de 10 KB. El tamaño predeterminado es 10240 KB.  
   
 **Número total de archivos de registro**  
-Cuando se llena un registro, SSMA se cambie el nombre del archivo de registro y comenzar una nueva. Con esta configuración, especifique el número máximo de archivos de registro para mantener. El valor mínimo es 2.  
+Cuando se llena un registro, SSMA cambiará el nombre del archivo de registro y se iniciará uno nuevo. Con esta opción, especifique el número máximo de archivos de registro que se deben conservar. El mínimo es 2.  
   

@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña cálculos, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña cálculos, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac81f846f3f85f2ed8ea91592aea28942d557857
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938441"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Cálculos, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Barra de herramientas** para realizar operaciones comunes en la pestaña **Cálculos** del Diseñador de cubos.  
@@ -25,11 +24,11 @@ ms.locfileid: "66066080"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Agregar Business Intelligence**|Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo.|  
-|**Procesar**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
-|**Reconnect**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Cálculos** por pérdida de conexión o exceso de tiempo de espera.|  
+|**Process**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
+|**Volver a conectar**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Cálculos** por pérdida de conexión o exceso de tiempo de espera.|  
 |**Nuevo miembro calculado**|Haga clic para mostrar el **Editor de Formulario de miembro calculado** y crear un nuevo miembro calculado. Esta opción solamente se habilita en la vista de formulario.|  
 |**Nuevo conjunto con nombre**|Haga clic para mostrar el **Editor de Formulario de conjuntos con nombres** y crear un nuevo conjunto con nombre. Esta opción solamente se habilita en la vista de formulario.|  
-|**Nuevo comando de Script**|Haga clic para mostrar el **Editor de script** y crear un nuevo comando de script. Esta opción solamente se habilita en la vista de formulario.|  
+|**Nuevo comando de script**|Haga clic para mostrar el **Editor de script** y crear un nuevo comando de script. Esta opción solamente se habilita en la vista de formulario.|  
 |**Eliminar**|Elimina el cálculo seleccionado en el panel **Organizador de script** o el script seleccionado en la Vista de script.|  
 |**Subir**|Sube el cálculo seleccionado en el panel **Organizador de script** una posición en la vista de formulario.|  
 |**Bajar**|Baja el cálculo seleccionado en el panel **Organizador de script** una posición en la vista de formulario.|  
@@ -41,7 +40,7 @@ ms.locfileid: "66066080"
 |**Propiedades de cálculo**|Haga clic para mostrar el cuadro de diálogo **Propiedades de cálculo** y editar los valores de propiedad de cálculo para los cálculos del script del cubo.|  
 |**Cambiar usuario**|Haga clic para mostrar el cuadro de diálogo **Contexto de seguridad** y cambiar el usuario y el rol usados en la pestaña **Cálculos** .|  
 |**Resaltar celdas cambiadas**|Esta opción no está disponible.|  
-|**Los totales de todos los elementos**|Esta opción no está disponible.|  
+|**Totales de todos los elementos**|Esta opción no está disponible.|  
 |**Mostrar celdas vacías**|Esta opción no está disponible.|  
 |**Borrar resultados**|Esta opción no está disponible.|  
 |**Comandos y opciones**|Esta opción no está disponible.|  

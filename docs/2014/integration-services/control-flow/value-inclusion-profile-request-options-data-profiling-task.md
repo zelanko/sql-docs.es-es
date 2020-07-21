@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5e39c227ede9890c1b7290a2e2dec8cdf7104a1a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62829474"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438062"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de inclusión de valores** seleccionadas en el panel de solicitudes. Un perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Por lo tanto, también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que utiliza un perfil de inclusión de valores para generar el perfil de la columna de identificadores de producto de una tabla de ventas. El perfil detecta que la columna contiene valores que no están en la columna IdProducto de la tabla Productos.  
@@ -61,7 +60,7 @@ ms.locfileid: "62829474"
   
 ### <a name="data-options"></a>Opciones de Data  
  **ConnectionManager**  
- Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) con el fin de conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se va a generar el perfil.  
+ Seleccione el administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] existente que usa el proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) para conectarse a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene la tabla o la vista con la que se generará el perfil.  
   
  **SubsetTableOrView**  
  Seleccione la tabla o vista cuyo perfil se va a generar.  
@@ -102,15 +101,15 @@ ms.locfileid: "62829474"
 > [!NOTE]  
 >  Cuando use el carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
+|**Valor predeterminado**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
 |**DictionarySort**|Ordena y compara los datos según el orden y las reglas de comparación definidas en los diccionarios del idioma o alfabeto asociado.|  
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
@@ -125,9 +124,9 @@ ms.locfileid: "62829474"
  **InclusionThresholdSetting**  
  Seleccione el valor de umbral para precisar la salida del perfil. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Ninguno**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
+|**None**|No especifica un umbral. El nivel de la clave se notifica independientemente de su valor.|  
 |**Specified**|Utilice el umbral que se especifica en **InclusionStrengthThreshold**. Solo se notifica el nivel de inclusión si es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. Solo se notifica el nivel de inclusión si los valores del subconjunto están completamente incluidos en los valores del superconjunto.|  
   
@@ -139,9 +138,9 @@ ms.locfileid: "62829474"
  **SupersetColumnsKeyThresholdSetting**  
  Especifique el umbral del superconjunto. El valor predeterminado de esta propiedad es **Specified**. Para obtener más información, vea la sección "Descripción de los valores del umbral" anteriormente en este tema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Ninguno**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
+|**None**|No especifica un umbral. El nivel de inclusión se notifica sin tener en cuenta el nivel de clave de la columna de superconjunto.|  
 |**Specified**|Utilice el umbral que se especifica en **SupersetColumnsKeyThreshold**. Solo se notifica el nivel de inclusión si el nivel de clave de la columna de superconjunto es mayor que el umbral.|  
 |**Exact**|No especifica un umbral. Solo se notifica el nivel de inclusión si las columnas de superconjunto son una clave exacta en la tabla de superconjunto.|  
   
@@ -153,7 +152,7 @@ ms.locfileid: "62829474"
  **MaxNumberOfViolations**  
  Especifique el número máximo de infracciones de la inclusión que va a notificarse en la salida. El valor predeterminado de esta propiedad es 100. Esta opción se deshabilita cuando la opción **Exact** se selecciona como **InclusionThresholdSetting**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Opciones (Explorador de objetos de SQL Server - página Script) | Microsoft Docs
-ms.custom: ''
+title: Opciones (Explorador de objetos de SQL Server - página Script)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264061"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251082"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opciones (Explorador de objetos de SQL Server - página Script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +32,14 @@ Use esta página para establecer las opciones de scripting que se aplican a los 
   
 -   Esta página también establece los valores predeterminados de las opciones de scripting del **Asistente para generar scripts de SQL Server**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los comandos **Editar** y **Modificar** pueden generar resultados distintos a los del comando **Script <object> como** para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El comando **Script<object> como** está diseñado para generar un script que se pueda usar posteriormente para crear objetos.  
   
 ## <a name="options"></a>Opciones  
-Para especificar las opciones de scripts, seleccione las opciones de configuración disponibles en la lista situada a la derecha de cada opción.  
+Para especificar las opciones de scripts, seleccione las opciones de configuración disponibles en la lista situada a la derecha de cada opción.
+
+> [!NOTE]
+> Los valores de configuración predeterminados solo se aplican a la opción **Crear un script a partir de toda la base de datos y todos los objetos de esta** y pueden variar al usar la opción **Seleccionar objetos de base de datos específicos**.
   
 ### <a name="general-scripting-options"></a>Opciones generales de scripting  
 **Delimitar instrucciones individuales**  
@@ -149,6 +152,6 @@ Incluye nombres de restricción generados por el sistema para aplicar la integri
 **Script para versión de servidor**  
 Los scripts generados se dirigirán a la versión especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características nuevas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden incluir en scripts para versiones anteriores. Algunos scripts creados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no pueden ejecutarse en servidores que ejecutan una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o en una base de datos con un [valor de nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)anterior.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Generar scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

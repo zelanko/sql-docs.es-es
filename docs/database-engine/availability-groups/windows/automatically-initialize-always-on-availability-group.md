@@ -1,7 +1,7 @@
 ---
-title: Uso de la propagación automática para inicializar un grupo de disponibilidad
-description: Cree automáticamente réplicas secundarias para todas las bases de datos de un grupo de disponibilidad Always On mediante la propagación automática.
-ms.custom: seodec18
+title: Inicialización de un grupo de disponibilidad mediante la propagación automática
+description: Use la propagación automática para crear automáticamente réplicas secundarias para todas las bases de datos de un grupo de disponibilidad AlwaysOn sin tener que realizar una copia de seguridad y restaurarla manualmente.
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fde90e8f64194265a74f866e27e4b2ef4a406d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a563558f6b7d20dd4ca8d5f6573d1b16f598fa1f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991582"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900873"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Con SQL Server 2016, se introduce la propagación automática de grupos de disponibilidad. Cuando se crea un grupo de disponibilidad con propagación automática, SQL Server crea automáticamente las réplicas secundarias para cada base de datos del grupo. Ya no es necesario realizar copias de seguridad de las réplicas secundarias ni restaurarlas de forma manual. Para habilitar la propagación automática, cree el grupo de disponibilidad con T-SQL o use la versión más reciente de SQL Server Management Studio.
 

@@ -1,27 +1,28 @@
 ---
-title: Configurar los valores predeterminados de presentación de seguimiento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Establecer los valores predeterminadas de presentación de seguimiento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc875bf091b2dac6f3bfb393c7a716c3fa49caea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059710"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307934"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Establecer los valores predeterminados de presentación de seguimiento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe el modo de establecer las opciones de la herramienta que especifican los tipos de fuente, tamaño y estilo que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utiliza para mostrar los seguimientos en la ventana de seguimiento. También puede especificar que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestre todas las fechas y horas con la misma configuración regional del sistema operativo.  
+
+En este tema se describe el modo de establecer las opciones de la herramienta que especifican los tipos de fuente, tamaño y estilo que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utiliza para mostrar los seguimientos en la ventana de seguimiento. También puede especificar que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestre todas las fechas y horas con la misma configuración regional del sistema operativo.  
   
 ### <a name="to-set-trace-display-defaults"></a>Para establecer las opciones predeterminadas de presentación de seguimiento  
   

@@ -1,5 +1,5 @@
 ---
-title: Administración de contenido del servidor de informes (Modo nativo de SSRS) | Microsoft Docs
+title: Administración de contenido del servidor de informes (Modo nativo) | Microsoft Docs
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67228746"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79286389"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
-En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido. A partir de SQL Server 2016 Reporting Services o posterior (SSRS) en CTP 3.2, la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] portal web está disponible. En este artículo examinaremos el portal web y la nueva experiencia de portal web.  
+En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido. A partir de SQL Server 2016 Reporting Services o posterior (SSRS) CTP 3.2, está disponible el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este artículo examinaremos el portal web y la nueva experiencia de portal web.  
   
 > [!NOTE]  
 > La administración de contenido es diferente de la administración de servidores de informes. Si quiere obtener más información sobre cómo administrar el entorno en el que se ejecuta un servidor de informes, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
@@ -46,7 +46,7 @@ En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administrac
   
 Las herramientas para administrar el contenido del servidor de informes son [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y el portal web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El portal web se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes. El portal web es un sitio actualizado que permite la mayoría de las funciones del Administrador de informes en desuso. Para obtener más información, vea [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Elementos del servidor de informes  
+##  <a name="report-server-items"></a><a name="bkmk_ReportServerItems"></a> Elementos del servidor de informes  
  Los elementos del servidor de informes incluyen informes, orígenes de datos compartidos, conjuntos de datos compartidos, elementos de informe, recursos (elementos que se almacenan pero que no procesa el servidor de informes) y carpetas. Los elementos pueden depender de otros elementos; por ejemplo, un informe puede depender de los orígenes de datos compartidos a los que hace referencia. Si mueve un elemento dependiente, el servidor de informes actualiza automáticamente la información de referencia.  
   
  Puede mover elementos del servidor de informes a diversas ubicaciones de carpeta en la jerarquía de carpetas del servidor de informes. Al mover un elemento, también se mueven todas las propiedades (incluida la configuración de seguridad) a la nueva ubicación. Cuando mueve una carpeta, se mueven todos los elementos de la carpeta.  
@@ -56,11 +56,11 @@ Las herramientas para administrar el contenido del servidor de informes son [!IN
   
  En el portal web, los elementos que se pueden mover aparecen indicados en la jerarquía de carpetas. La siguiente imagen muestra el icono correspondiente a cada uno de los elementos que se pueden mover.  
   
-  ![Iconos de servidor de informes para los elementos movibles](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+  ![Iconos del servidor de informes para elementos móviles](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
 
  No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar carpetas" y "Administrar orígenes de datos".  
   
-##  <a name="bkmk_Folders"></a> Carpetas  
+##  <a name="folders"></a><a name="bkmk_Folders"></a> Carpetas  
  Para tener acceso a los elementos que se almacenan y administran en un servidor de informes se utiliza una jerarquía de carpetas.  De forma predeterminada, la estructura de carpetas consta de un nodo raíz denominado Inicio y de carpetas reservadas compatibles con la característica opcional Mis informes. Las carpetas adicionales las define el usuario. Las carpetas del servidor de informes son útiles si desea conceder el mismo nivel de acceso a varios elementos. Los permisos que establece en la carpeta pueden heredarlos los elementos de la carpeta y las carpetas adicionales que cuelgan de esa carpeta. Por ejemplo, puede crear un conjunto de carpetas bajo la carpeta Inicio, asignar permisos de equipo a cada carpeta y permitir que los miembros del equipo personalicen las carpetas incluidas bajo la carpeta de equipo según sea necesario.  
   
  Si utiliza un explorador para conectarse directamente a un servidor de informes, el nodo raíz de la estructura de carpeta tendrá el nombre del directorio virtual del servidor de informes. Desde el nodo raíz, puede crear, modificar y eliminar carpetas según sus necesidades, para organizar el contenido del servidor de informes. Puede agregarse contenido a una carpeta, mover elementos entre carpetas, modificar los nombres o las ubicaciones de las carpetas y eliminar carpetas que hayan dejado de ser necesarias.  
@@ -92,7 +92,7 @@ Las herramientas para administrar el contenido del servidor de informes son [!IN
   
  En la siguiente tabla, se describen las carpetas predefinidas que fijan la jerarquía de carpetas y proporcionan un marco para varias características.  
   
-|Carpeta|Finalidad|  
+|Carpeta|Propósito|  
 |------------|-------------|  
 |Inicio|Nodo raíz de la jerarquía de carpetas.|  
 |Usuarios|Esta carpeta aparece cuando se habilita la característica Mis informes. Contiene subcarpetas para todos los usuarios que utilizan la característica Mis informes, y solo los administradores del servidor de informes tienen acceso a ella. El nombre de cada subcarpeta coincide con el de un usuario.|  
@@ -115,7 +115,7 @@ Las herramientas para administrar el contenido del servidor de informes son [!IN
   
  La visibilidad de un elemento en una carpeta depende de las asignaciones de roles (es decir, el permiso para ver un elemento) y de las opciones de visualización establecidas para la carpeta. En el portal web, se puede configurar la página Contenido como vista de lista o como vista de detalles. En algunos casos, un informe o un elemento puede estar oculto en una vista de lista. Es aconsejable ver una carpeta con la vista de detalles antes de eliminar su contenido.  
   
-##  <a name="bkmk_Resources"></a> Recursos  
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Recursos  
  Un recurso es un elemento administrado que se almacena en un servidor de informes pero no se procesa allí. Normalmente, un recurso proporciona contenido externo a los usuarios de los informes. Algunos ejemplos son una imagen de un archivo .jpg, un archivo de forma ESRI que contiene datos espaciales o un archivo HTML que describe las reglas de negocios usadas en un informe. El archivo JPG, SHP o HTML está almacenado en el servidor de informes, pero el servidor de informes pasa el archivo directamente al explorador en lugar de procesarlo primero. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) y la sección "Agregar datos a un mapa" en [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Incorporación y visualización de un recurso  
@@ -142,9 +142,9 @@ Las herramientas para administrar el contenido del servidor de informes son [!IN
   
  Para usar un recurso de imagen de un informe, agregue el archivo de imagen al proyecto y publíquelo junto con el informe. Una vez publicada la imagen, puede actualizar la referencia de la imagen en el informe de manera que señale al recurso del servidor de informes y, a continuación, vuelva a publicar únicamente el informe para guardar sus cambios. Puede actualizar ahora la imagen posteriormente con independencia del informe volviendo a publicar el recurso. El informe usa la versión más actual de la imagen disponible en el servidor de informes.  
   
- Para obtener más información, consulte [actualizar un recurso (portal web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
+ Para más información, vea [Actualizar un recurso (portal web)](../../reporting-services/report-server/update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Mis informes  
+##  <a name="my-reports"></a><a name="bkmk_MyReports"></a> Mis informes  
  La carpeta Mis informes es un área de trabajo personal para cada usuario que inicia una sesión en el servidor de informes con una cuenta de dominio válida. Esta carpeta especial ofrece un espacio de almacenamiento para los informes que están en curso y que no se han concebido para una distribución amplia, o para informes que se han modificado para adaptarlos a alguna necesidad especial. No es posible restringir el número o el tamaño de elementos que se almacenan en una carpeta Mis informes, ni tampoco configurar la carpeta para el uso compartido entre usuarios.  
   
  Desde el punto de vista técnico, Mis informes asigna el nombre de una carpeta virtual que ve cada usuario (Mis informes) a una carpeta maestra Carpetas de usuarios y a una subcarpeta única basada en el nombre del usuario. Cuando un usuario tiene acceso a su carpeta Mis informes, lo que sucede realmente es que es redireccionado a la subcarpeta de Carpetas de usuarios que tiene asignada. Cada subcarpeta ofrece espacio de almacenamiento para los informes y elementos que el usuario agrega a su carpeta Mis informes. En el portal web, no verá Mis informes en el nivel raíz. Deberá profundizar en la carpeta Usuarios.  
@@ -170,10 +170,10 @@ Las herramientas para administrar el contenido del servidor de informes son [!IN
 ## <a name="tasks"></a>Tareas  
  [Carga de archivos a una carpeta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [Creación, eliminación o modificación de una carpeta (portal web)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
- [Actualizar un recurso (portal web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
+ [Actualización de un recurso (portal web)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [Carga de archivos a una carpeta](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Roles y permisos &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Informes de Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

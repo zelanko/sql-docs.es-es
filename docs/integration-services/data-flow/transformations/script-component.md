@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297876"
 ---
 # <a name="script-component"></a>Componente de script
@@ -138,10 +138,10 @@ ms.locfileid: "71297876"
  **Descripción**  
  Escriba la descripción de la conexión.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue otra conexión a la lista **Administradores de conexiones** .  
   
- **Quitar**  
+ **Remove**  
  Quite la conexión seleccionada de la lista **Administradores de conexiones** .  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>Editor de transformación Script (página Columnas de entrada)
@@ -205,7 +205,7 @@ ms.locfileid: "71297876"
  **Propiedades**  
  Vea y modifique las propiedades de la transformación de script. Muchas de las propiedades mostradas son de solo lectura. Puede modificar las siguientes propiedades:  
   
-|Valor|Description|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Descripción**|Describe la transformación del script según su propósito.|  
 |**LocaleID**|Especifica la configuración regional para proporcionar información específica de la región para ordenar y para la conversión de fecha y hora.|  

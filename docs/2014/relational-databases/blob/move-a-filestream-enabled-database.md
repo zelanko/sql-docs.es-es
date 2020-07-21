@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79740ee86a89566113650865e3fd6ec54c7cb918
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66009956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970866"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Mover una base de datos habilitada para FILESTREAM
   En este tema se muestra cómo mover una base de datos habilitada para FILESTREAM.  
@@ -61,7 +60,7 @@ ms.locfileid: "66009956"
     GO  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   
   

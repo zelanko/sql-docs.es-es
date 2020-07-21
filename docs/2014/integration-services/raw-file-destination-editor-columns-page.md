@@ -1,5 +1,5 @@
 ---
-title: Editor de destino de archivo sin formato (página columnas) | Microsoft Docs
+title: Editor de destino de archivos sin formato (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,34 +9,33 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a0ceb00767715c3f0b5d149ecd7c8ac3116cf78
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056578"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423212"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Editor de destino de archivo sin formato (página Columnas)
   Use el editor de destino de archivos sin formato para configurar el destino de archivo sin formato con el fin de escribir datos sin formato en un archivo.  
   
  **¿Qué desea hacer?**  
   
--   [Abra el editor de destino de archivos sin formato](#open)  
+-   [Abrir el editor de destino de archivos sin formato](#open)  
   
--   [Establecer opciones en la pestaña Administrador de conexiones](#connection)  
+-   [Establecer opciones en la pestaña administrador de conexiones](#connection)  
   
 -   [Establecer las opciones de la pestaña Columnas](#mapping)  
   
-##  <a name="open"></a> Abra el editor de destino de archivos sin formato  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a> Abra el editor de destino de archivos sin formato  
   
 1.  Agregue el destino de archivo sin formato a un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
-##  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Modo de acceso**  
  Seleccione cómo se especifica el nombre de archivo. Seleccione **Nombre de archivo** para escribir el nombre de archivo y la ruta de acceso directamente o **Nombre de archivo de la variable** para especificar una variable que contiene el nombre de archivo.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66056578"
   
  Al hacer clic en el botón, aparece una lista de columnas. Puede hacer clic en Cancelar y modificar las columnas, o hacer clic en Aceptar y continuar con la creación del archivo.  
   
-##  <a name="mapping"></a> Establecer las opciones de la pestaña Columnas  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>Establecer las opciones de la pestaña columnas  
  **Columnas de entrada disponibles**  
  Seleccione una o varias columnas de entrada para escribir en el archivo sin formato.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66056578"
  **Alias de salida**  
  Especifique un nombre alternativo para usarlo en la columna de salida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Destino de archivo sin formato](data-flow/raw-file-destination.md)  
   
   

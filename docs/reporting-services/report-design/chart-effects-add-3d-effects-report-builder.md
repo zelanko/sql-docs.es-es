@@ -1,5 +1,5 @@
 ---
-title: Agregar efectos 3D a un gráfico (Generador de informes y SSRS) | Microsoft Docs
+title: Adición de efectos 3D a un gráfico (Generador de informes) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb5fd8c6130f7f10effc9f9682fbde6063dca093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1d8bf9b9951ac461f6aaa3a33602ecb4e2aa4c30
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581682"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77078788"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Efectos de gráfico: agregar efectos 3D (Generador de informes)
   Se pueden usar efectos tridimensionales (3D) para dar profundidad y agregar impacto visual a los gráficos de los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo, si desea resaltar un sector específico de un gráfico circular seccionado, puede girar y cambiar la perspectiva del gráfico para que los usuarios se fijen primero en dicho sector. Cuando se aplican efectos 3D al gráfico, se deshabilitan todos los colores de degradado y los estilos de sombreado.  
@@ -29,13 +29,13 @@ ms.locfileid: "65581682"
   
 3.  (Opcional) En **Opciones 3D**, puede establecer diversas propiedades relacionadas con opciones de ángulos y escenas 3D. Para obtener más información sobre estas propiedades, vea [Aplicar 3D, bisel y otros efectos a un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md).  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ## <a name="to-apply-3d-effects-to-a-funnel-chart"></a>Para aplicar efectos 3D a un gráfico de embudo  
   
 1.  Haga clic con el botón derecho en cualquier parte dentro del área del gráfico y seleccione **Efectos 3D**. Aparecerá el cuadro de diálogo **Propiedades del área de gráfico** .  
   
-2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **Aceptar**.  
+2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **OK**.  
   
 3.  (Opcional) Para personalizar el aspecto visual del gráfico de embudo, puede ir al panel Propiedades y cambiar propiedades específicas para ese tipo de gráfico.  
   
@@ -53,23 +53,23 @@ ms.locfileid: "65581682"
   
 1.  Haga clic con el botón secundario en cualquier parte dentro del área del gráfico y seleccione Efectos 3D. Aparecerá el cuadro de diálogo **Propiedades del área de gráfico** .  
   
-2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **Aceptar**.  
+2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **OK**.  
   
 3.  (Opcional) En **Giro**, escriba un valor entero que represente el giro horizontal del gráfico circular.  
   
 4.  (Opcional) En **Inclinación**, escriba un valor entero que represente el giro de inclinación vertical del gráfico circular.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 ## <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>Para aplicar efectos 3D a un gráfico de barras o de columnas  
   
 1.  Haga clic con el botón derecho en cualquier parte dentro del área del gráfico y seleccione **Efectos 3D**. Aparecerá el cuadro de diálogo **Propiedades del área de gráfico** .  
   
-2.  Seleccione la opción **Habilitar 3D** . Haga clic en **Aceptar**.  
+2.  Seleccione la opción **Habilitar 3D** . Haga clic en **OK**.  
   
 3.  (Opcional) Seleccione la opción **Habilitar agrupación en clústeres** . Si el gráfico contiene varias series de gráficos de barras o de columnas, esta opción mostrará las series agrupadas en clústeres. De forma predeterminada, cuando hay varias series de barras o de columnas se muestran unas al lado de otras.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  (Opcional) Para agregar efectos de cilindro a un gráfico de barras o de columnas, siga estos pasos:  
   

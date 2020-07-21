@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902813"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392753"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un objeto que envía información sobre un evento de servidor o base de datos para un servicio de Service Broker. Las notificaciones de eventos solo se pueden crear mediante instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67902813"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE EVENT NOTIFICATION event_notification_name   
 ON { SERVER | DATABASE | QUEUE queue_name }   
@@ -49,7 +49,9 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *event_notification_name*  
  Es el nombre de la notificación de eventos. El nombre de una notificación de eventos debe cumplir las reglas para [identificadores](../../relational-databases/databases/database-identifiers.md) y debe ser único dentro del ámbito en el que se creó: SERVER, DATABASE u *object_name*.  
   
@@ -100,7 +102,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] incluye un tipo de mensaje y un contrato específicos para notificaciones de evento. Por lo tanto, no se debe crear un servicio de inicio de Service Broker debido a que ya existe uno que especifica el nombre de contrato siguiente: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`.  
   
  El servicio de destino que recibe notificaciones de eventos debe respetar este contrato preexistente.  

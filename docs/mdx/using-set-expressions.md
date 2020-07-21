@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893502"
 ---
 # <a name="using-set-expressions"></a>Usar expresiones de conjunto
@@ -22,7 +22,7 @@ ms.locfileid: "68893502"
   
  La expresión completa de un conjunto consta de cero o más tuplas especificadas explícitamente entre corchetes:  
   
- {[{ *Tuple_expression* | *expresión_miembro* } [, { *Tuple_expression* | *expresión_miembro* }]...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  Las expresiones de miembro especificadas en expresiones de conjunto se convierten en expresiones de tupla de un miembro.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68893502"
   
  está compuesto de dos miembros de dimensión Measures. En el eje de filas, el conjunto  
   
- {([Product]. [Categorías de producto]. [Category]. & [4], [Date]. [Calendar]. [Año natural]. & [2004])  
+ {([Product]. [Categorías de producto]. [Category]. & [4], [Date]. [Calendar]. [Año natural]. & [2004]),  
   
  ([Product]. [Categorías de producto]. [Category]. & [1], [Date]. [Calendar]. [Año natural]. & [2003]),  
   
@@ -57,9 +57,9 @@ ms.locfileid: "68893502"
   
  está compuesto de tres tuplas, cada una de las cuales contiene dos referencias explícitas a miembros de la jerarquía Product Categories de la dimensión Product y de la jerarquía Calendar de la dimensión Date.  
   
- Para obtener ejemplos de funciones que devuelven conjuntos, vea [trabajar con miembros, tuplas &#40;y&#41;conjuntos MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Para obtener ejemplos de funciones que devuelven conjuntos, vea [trabajar con miembros, tuplas y conjuntos &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## <a name="see-also"></a>Vea también  
- [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)  
   
   

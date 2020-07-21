@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 603ca22a30c0c5ffe351db7370fc337e2e20e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099836"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Ejecutar un archivo de script de Reporting Services
@@ -54,7 +54,7 @@ ms.locfileid: "66099836"
     rs -i Script.rss -s http://servername/reportserver -b  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: Configuración del almacén de administración de datos (SQL Server Management Studio) | Microsoft Docs
+title: Configuración del acceso al almacén de administración de datos (SSMS)
+description: Obtenga información sobre cómo configurar el almacén de administración de datos para que admita almacenamiento de datos en una o varias instancias de SQL Server que utilizan el recopilador de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b1848be82d5ed1ddfbefd693303104ac4688eb59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733868"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
 >  Si se configura el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se ejecute mediante una de las cuentas de servicio del sistema (sistema local, servicio de red o servicio local) y el almacén de administración de datos se crea en una instancia diferente del recopilador de datos, debe configurar los conjuntos de recopilación para que utilicen un proxy para cargar los datos en el almacén de administración de datos.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurar el almacén de administración de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurar el almacén de administración de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Asegúrese de que el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se esté ejecutando.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "72909669"
   
 6.  Repita el paso 5 hasta que todas las instancias de base de datos que utilizan el recopilador de datos estén configuradas para cargar datos en el almacén de administración de datos compartido.  
 
-####  <a name="Wizard"></a> Asistente para configurar el almacén de administración de datos  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Asistente para configurar el almacén de administración de datos  
  **Página Asistente**  
   
  La página de bienvenida es la página de inicio del Asistente para configurar la recopilación de datos. El usuario decide si desea que se muestre.  
@@ -93,7 +94,7 @@ ms.locfileid: "72909669"
   
  Especifique un inicio de sesión activando la casilla **Asignar** para el inicio de sesión.  
   
- **Miembros del rol de base de datos para:** *\<nombre del almacenamiento de datos>*  
+ **Pertenencia del rol de base de datos para:** *\<data warehouse name>*  
  Seleccione el rol del almacén de administración de datos al que se ha asignado el inicio de sesión haciendo clic en la casilla correspondiente a una o varias de las opciones siguientes:  
   
 -   **mdw_admin**  
@@ -116,10 +117,10 @@ ms.locfileid: "72909669"
  **Detalles**  
  Muestra cada paso de configuración como una fila en la cuadrícula **Detalles** . Cada fila contiene una columna **Acción** que describe el paso y una columna **Estado** que indica si el paso se ha realizado correctamente o no. Si hay un error, aparece un mensaje en la columna **Mensaje** .  
   
- **Detener**  
+ **Detención**  
  Detiene el procesamiento del asistente.  
   
- **Informe**  
+ **Report**  
  Muestra un informe de la configuración de la recopilación de datos. Se proporcionan las opciones de informe siguientes:  
   
 -   Ver informe  
@@ -130,7 +131,7 @@ ms.locfileid: "72909669"
   
 -   Enviar informe como correo electrónico  
   
- **Cerrar**  
+ **Close**  
  Cierra el asistente.  
   
 ## <a name="see-also"></a>Consulte también  

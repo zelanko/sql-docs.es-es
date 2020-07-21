@@ -1,5 +1,5 @@
 ---
-title: Configurar una salida de Error en un componente de flujo de datos | Microsoft Docs
+title: Configurar una salida de error en un componente de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f5db0ec29fb6900dbe74ea021f31d0afc5551d7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060816"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434892"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurar una salida de error en un componente de flujo de datos
   Un gran número de componentes de flujo de datos admiten salidas de errores y, dependiendo del componente, el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] proporciona diferentes maneras de configurar una salida de error. Además de configurar una salida de error, también puede configurar sus columnas correspondientes. Esto incluye configurar las columnas **ErrorCode** y **ErrorColumn** agregadas por el componente.  
@@ -65,7 +64,7 @@ ms.locfileid: "66060816"
   
 6.  Establezca la opción **Truncamiento** para cada columna.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  Para guardar el paquete actualizado, en el menú **Archivo** , haga clic en **Guardar los elementos seleccionados**.  
   
@@ -82,18 +81,18 @@ ms.locfileid: "66060816"
   
 4.  Haga clic con el botón derecho en el componente cuyas columnas de salida de error quiere configurar y haga clic en **Mostrar editor avanzado**.  
   
-5.  Haga clic en la pestaña **Propiedades de entrada y salida** y expanda **Salida de error de \<nombre de componente>** y, después, expanda **Columnas de salida**.  
+5.  Haga clic en la pestaña **propiedades de entrada y salida** y expanda ** \<component name> salida de error** y, a continuación, expanda columnas de **salida**.  
   
 6.  Haga clic en una columna y actualice sus propiedades.  
   
     > [!NOTE]  
-    >  La lista de columnas incluye las columnas de la entrada de componentes, las columnas **ErrorCode** y **ErrorColumn** agregadas por salidas de errores previas, y las columnas **ErrorCode** y **ErrorColumn** agregadas por este componente.  
+    >   La lista de columnas incluye las columnas de la entrada de componentes, las columnas **ErrorCode** y **ErrorColumn** agregadas por salidas de errores previas, y las columnas **ErrorCode** y **ErrorColumn** agregadas por este componente.  
   
-7.  Haga clic en **Aceptar.**  
+7.  Haga clic en **Aceptar**.  
   
 8.  Para guardar el paquete actualizado, en el menú **Archivo** , haga clic en **Guardar los elementos seleccionados**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Control de errores en los datos](data-flow/error-handling-in-data.md)  
   
   

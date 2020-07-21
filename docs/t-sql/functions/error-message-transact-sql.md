@@ -19,18 +19,18 @@ helpviewer_keywords:
 - TRY...CATCH [SQL Server]
 - CATCH block
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e38e57bf64d20dcc4e16a8d7b31c372d877c038f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35241a392ef91c13b48da1bcdfa66a707d4c7680
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904395"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010379"
 ---
-# <a name="errormessage-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="error_message-transact-sql"></a>ERROR_MESSAGE (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve el texto del mensaje del error que ha provocado la ejecución del bloque CATCH de una construcción TRY…CATCH.  
   
@@ -42,7 +42,7 @@ Esta función devuelve el texto del mensaje del error que ha provocado la ejecuc
 ERROR_MESSAGE ( )   
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(4000)**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -50,7 +50,7 @@ Cuando se llama en un bloque CATCH, `ERROR_MESSAGE` devuelve el texto completo d
   
 `ERROR_MESSAGE` devuelve NULL si se llama desde fuera del ámbito de un bloque CATCH.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `ERROR_MESSAGE` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_MESSAGE` devuelve un mensaje de error relevante, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
@@ -59,7 +59,7 @@ En los bloques `CATCH` anidados, `ERROR_MESSAGE` devuelve el mensaje de error es
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-errormessage-in-a-catch-block"></a>A. Usar ERROR_MESSAGE en un bloque CATCH  
+### <a name="a-using-error_message-in-a-catch-block"></a>A. Usar ERROR_MESSAGE en un bloque CATCH  
 En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. El bloque `CATCH` devuelve el mensaje de error.  
   
 ```sql   
@@ -86,7 +86,7 @@ Divide by zero error encountered.
 
 ```  
   
-### <a name="b-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>B. Usar ERROR_MESSAGE en un bloque CATCH con otras herramientas de control de errores.  
+### <a name="b-using-error_message-in-a-catch-block-with-other-error-handling-tools"></a>B. Usar ERROR_MESSAGE en un bloque CATCH con otras herramientas de control de errores.  
 En este ejemplo se muestra una instrucción `SELECT` que genera un error de división por cero. Junto con el mensaje de error, el bloque `CATCH` devuelve información sobre ese error.  
   
 ```sql  

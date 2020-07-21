@@ -1,9 +1,7 @@
 ---
-title: Agregar un nodo raíz a la salida JSON con la opción ROOT (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/02/2016
+title: Agregar un nodo raíz a la salida JSON con la opción ROOT
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,16 +9,18 @@ helpviewer_keywords:
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f82e33c3b8d1168068d5ceb131467973984276e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 801fd50761c561db67405c5cc47210ba43facdf2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722310"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>Agregar un nodo raíz a la salida JSON con la opción ROOT (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Para agregar un solo elemento de nivel superior a la salida JSON de la cláusula **FOR JSON** , especifique la opción **ROOT** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68113605"
   
  Este es otro ejemplo de una cláusula **FOR JSON** con la opción **ROOT** . En este ejemplo se especifica un valor para el argumento *RootName* opcional.  
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT TOP 5   

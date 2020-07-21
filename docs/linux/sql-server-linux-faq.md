@@ -7,16 +7,16 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72929904"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895346"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Preguntas más frecuentes sobre SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En las secciones siguientes se proporcionan preguntas y respuestas comunes sobre SQL Server en Linux.
 
@@ -28,7 +28,7 @@ En las secciones siguientes se proporcionan preguntas y respuestas comunes sobre
 
 1. **¿SQL Server en Linux funcionará en otras plataformas?**
 
-   SQL Server se ha probado y se admite en Linux en las distribuciones mencionadas anteriormente. Existen otras distribuciones de Linux muy relacionadas en las que podría ejecutarse SQL Server (por ejemplo, CentOS está estrechamente ligado a Red Hat Enterprise Server). Si decide instalar SQL Server en un sistema operativo no compatible, revise la sección **Directiva de soporte técnico** de la [Directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) a fin de comprender las repercusiones para el soporte técnico. Tenga en cuenta también que algunas distribuciones de Linux mantenidas por la comunidad no tienen una manera formal de recibir soporte técnico si el sistema operativo subyacente es el problema.
+   SQL Server se ha probado y se admite en Linux en las distribuciones indicadas anteriormente. Existen otras distribuciones de Linux muy relacionadas en las que podría ejecutarse SQL Server (por ejemplo, CentOS está estrechamente ligado a Red Hat Enterprise Server). Si decide instalar SQL Server en un sistema operativo no compatible, revise la sección **Directiva de soporte técnico** de la [Directiva de soporte técnico de Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) a fin de comprender las repercusiones para el soporte técnico. Tenga en cuenta también que algunas distribuciones de Linux mantenidas por la comunidad no tienen una manera formal de recibir soporte técnico si el sistema operativo subyacente es el problema.
 
 1. **¿Es SQL Server en Linux igual que en Windows?**
 
@@ -46,7 +46,7 @@ En las secciones siguientes se proporcionan preguntas y respuestas comunes sobre
 
 1. **¿Cómo funciona la concesión de licencias en Linux?**
 
-   La licencia de SQL Server se concede de la misma manera para Windows y Linux. De hecho, primero se concede la licencia para SQL Server y, luego, se puede optar por usarla en la plataforma que se prefiera. Para obtener más información, vea [Cómo obtener una licencia de SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+   La licencia de SQL Server se concede de la misma manera para Windows y Linux. De hecho, primero se concede la licencia para SQL Server y, luego, se puede optar por usarla en la plataforma que se prefiera. Para obtener más información, vea [Cómo obtener una licencia de SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
 1. **¿Qué edición de SQL Server debo elegir después de comprarlo?**
 
@@ -75,7 +75,7 @@ En las secciones siguientes se proporcionan preguntas y respuestas comunes sobre
    SELECT SERVERPROPERTY('Edition')
    ```
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>Instalación
 
 1. **¿Cómo puedo instalar SQL Server en mis servidores Linux?**
 

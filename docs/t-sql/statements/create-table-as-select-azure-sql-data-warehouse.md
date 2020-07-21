@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961798"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279521"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) es una de las características más importantes de T-SQL disponibles. Se trata de una operación de ejecución completamente en paralelo que crea una tabla basada en la salida de una instrucción SELECT. CTAS es la forma más sencilla y rápida de crear una copia de una tabla.   
  
@@ -39,7 +39,7 @@ CREATE TABLE AS SELECT (CTAS) es una de las características más importantes de
 
 ## <a name="syntax"></a>Sintaxis   
 
-```  
+```syntaxsql
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
@@ -136,7 +136,8 @@ Para más información, vea [Notas generales](https://msdn.microsoft.com/library
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-Azure SQL Data Warehouse todavía no admite estadísticas de creación automática o actualización automática.  Para obtener el mejor rendimiento de las consultas, es importante crear estadísticas en todas las columnas de todas las tablas después de ejecutar CTAS y después de que se realicen cambios importantes en los datos. Para más información, consulte [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
+
+Se puede crear un índice de almacén de columnas agrupado y ordenado en columnas de cualquier tipo de datos que se admita en Azure SQL Data Warehouse, excepto en las columnas de cadena.  
 
 [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) no tiene ningún efecto en CTAS. Para lograr un comportamiento similar, use [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
  
@@ -164,7 +165,7 @@ Para evitar el movimiento de datos en las consultas posteriores, puede especific
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. Usar CTAS para copiar una tabla 
+### <a name="a-use-ctas-to-copy-a-table"></a>A. Uso de CTAS para copiar una tabla 
 Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
 
 Quizás uno de los usos más comunes de `CTAS` es crear una copia de una tabla para poder cambiar el DDL. Si, por ejemplo, creó inicialmente la tabla como `ROUND_ROBIN` y ahora quiere cambiarla a una tabla distribuida en una columna, cambiaría la columna de distribución con `CTAS`. `CTAS` también se puede usar para cambiar los tipos de particiones, indexación o columna.
@@ -677,7 +678,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. Indicar explícitamente el tipo de datos y la nulabilidad de salida  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. establezca explícitamente el tipo de datos y la nulabilidad de salida  
 Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos  
 
 Al migrar código de SQL Server a SQL Data Warehouse, puede encontrarse con este tipo de patrón de codificación:
@@ -748,7 +749,7 @@ AS
 SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 ```
 
-Observe lo siguiente:
+Tenga en cuenta lo siguiente:
 - Podían haberse usado CAST o CONVERT.
 - Se usa ISNULL para forzar la nulabilidad, no COALESCE.
 - ISNULL es la función más externa.
@@ -831,7 +832,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 Por lo tanto, puede ver que la coherencia de los tipos y el mantenimiento de las propiedades de nulabilidad en una instrucción CTAS es un procedimiento recomendado de ingeniería. Ayuda a mantener la integridad de los cálculos y también garantiza que la modificación de particiones sea posible.
 
-### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>N. Creación de un índice ordenado de almacén de columnas agrupado con MAXDOP 1  
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>Hora Creación de un índice ordenado de almacén de columnas agrupado con MAXDOP 1  
 ```sql
 CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
 AS SELECT * FROM ExampleTable

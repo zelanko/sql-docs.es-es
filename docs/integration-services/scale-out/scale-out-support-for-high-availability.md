@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con la escalabilidad horizontal de SQL Server Integration Services (SSIS) para una alta disponibilidad | Microsoft Docs
+title: Compatibilidad con la escalabilidad horizontal para una alta disponibilidad | Microsoft Docs
 description: En este artículo se describe cómo configurar Escalabilidad horizontal de SSIS para lograr alta disponibilidad.
 ms.custom: performance
 ms.date: 05/23/2018
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 2bcb7e2af7646059f6cb7ee38a4f136f1a62ae2b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028754"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924842"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -31,8 +31,8 @@ Como alternativa, la alta disponibilidad en el lado del servicio principal de es
 
 Para configurar la alta disponibilidad en el lado del servicio principal de escalabilidad horizontal con AlwaysOn para el catálogo de SSIS, haga lo siguiente:
 
-## <a name="1-prerequisites"></a>1. Prerequisites
-Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
+## <a name="1-prerequisites"></a>1. Prerrequisitos
+Configure un clúster de conmutación por error de Windows. Vea la entrada de blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) (Instalación de las herramientas y la característica de clúster de conmutación por error para Windows Server 2012) para obtener instrucciones. Instale la característica y las herramientas en todos los nodos del clúster.
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2. Instalación del Servicio principal de escalabilidad horizontal en el nodo principal
 Instale los servicios de motor de base de datos de SQL Server, Integration Services y el Servicio principal de escalabilidad horizontal en el nodo principal del servicio. 
@@ -53,7 +53,7 @@ Este nombre de host es el punto de conexión principal de Escalabilidad horizont
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Instalación del Servicio principal de escalabilidad horizontal en el nodo secundario
 Instale los servicios de motor de base de datos de SQL Server, Integration Services y el Servicio principal de escalabilidad horizontal en el nodo secundario del servicio. 
 
-Use el mismo certificado del Servicio principal de escalabilidad horizontal que usó con el nodo principal. Exporte el certificado SSL del Servicio principal de escalabilidad horizontal en el nodo principal con una clave privada e instálelo en el almacén de certificados raíz del equipo local en el nodo secundario. Seleccione este certificado cuando instale el Servicio principal de escalabilidad horizontal en el nodo secundario.
+Use el mismo certificado del Servicio principal de escalabilidad horizontal que usó con el nodo principal. Exporte el certificado TLS/SSL del patrón de escalabilidad horizontal en el nodo principal con una clave privada e instálelo en el almacén de certificados raíz del equipo local en el nodo secundario. Seleccione este certificado cuando instale el Servicio principal de escalabilidad horizontal en el nodo secundario.
 
 ![Configuración del patrón HA 2](media/ha-master-config2.PNG)
 
@@ -114,6 +114,6 @@ Ahora puede agregar trabajos de escalabilidad horizontal con la ayuda del [Admin
 Para actualizar la escalabilidad horizontal en entornos de alta disponibilidad, siga los [pasos de actualización de Always On para el catálogo de SSIS](../catalog/ssis-catalog.md#Upgrade), actualice el Servicio principal de escalabilidad horizontal y el Trabajo de escalabilidad horizontal en todas las máquinas y vuelva a crear el rol de clúster de conmutación por error de Windows Server en el paso 7 anterior con la nueva versión del Servicio principal de escalabilidad horizontal.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, vea los artículos siguientes:
+Para más información, consulte los siguientes artículos:
 -   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

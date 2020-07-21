@@ -1,5 +1,5 @@
 ---
-title: Función Aggregate (Generador de informes y SSRS) | Microsoft Docs
+title: Función Aggregate (Generador de informes) | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0c2590431193fa48bf4467fb30c5abc6cbf5a037
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576391"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079139"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funciones del Generador de informes: función Aggregate
   Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.  
@@ -32,13 +32,13 @@ Aggregate(expression, scope)
  *expression*  
  Expresión en la que se lleva a cabo la agregación. La expresión debe ser una referencia de campo sencilla.  
   
- *ámbito*  
+ *scope*  
  (**String**) Nombre de un conjunto de datos, grupo o región de datos que contiene los elementos de informe donde se aplicará la función de agregado. *Scope* tiene que ser una constante de cadena y no puede ser una expresión. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  El tipo de valor devuelto viene determinado por el proveedor de datos. Devuelve el valor **Nothing** si el proveedor de datos no admite esta función o no hay datos disponibles.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **Aggregate** proporciona una manera de utilizar los agregados que se calculan en el origen de datos externo. La extensión de datos determina la compatibilidad con esta característica. Por ejemplo, la extensión de procesamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recupera los conjuntos de filas planas de una consulta MDX. Algunas filas del conjunto de resultados pueden contener valores agregados calculados en el servidor del origen de datos. Estos se conocen como *agregados de servidor*. Para ver los agregados de servidor en el diseñador gráfico de consultas para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el botón **Mostrar agregaciones** de la barra de herramientas. Para más información, vea [Interfaz de usuario del Diseñador de consultas MDX de Analysis Services &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
   
  Cuando se muestra la combinación de valores agregados y valores de conjunto de datos de detalle en las filas de detalles de una región de datos Tablix, normalmente no se incluyen los agregados de servidor porque no son datos de detalle. Sin embargo, es probable que desee mostrar todos los valores recuperados para el conjunto de datos y personalizar la forma en que se calculan y se muestran los datos agregados.  

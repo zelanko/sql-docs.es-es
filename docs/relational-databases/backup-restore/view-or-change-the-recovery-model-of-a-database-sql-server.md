@@ -1,7 +1,8 @@
 ---
-title: Ver o cambiar el modelo de recuperación de una base de datos (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/10/2019
+title: Establecimiento del modelo de recuperación de la base de datos
+description: Aprenda a cambiar una base de datos de SQL Server de un modelo de recuperación a otro mediante SQL Server Management Studio o Transact-SQL.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4e3aa38d92dbd829ff4259ac384475781534b4a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747604"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema describe cómo ver o cambiar la base de datos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
   
@@ -35,10 +36,10 @@ ms.locfileid: "72908809"
   Para obtener una explicación más detallada, consulte los [modelos de recuperación](recovery-models-sql-server.md).
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de empezar  
   
 
--   [Haga una copia de seguridad del registro de transacciones](back-up-a-transaction-log-sql-server.md) **antes de** cambiar del [modelo de recuperación completa o del modelo de recuperación optimizado para cargas masivas de registros](recovery-models-sql-server.md).  
+-   [Haga copia de seguridad del registro de transacciones](back-up-a-transaction-log-sql-server.md) **antes** de cambiar del [modelo de recuperación completa o del de recuperación optimizado para cargas masivas de registros](recovery-models-sql-server.md).  
   
 -   La recuperación a un momento dado no es posible con el modelo optimizado para cargas masivas de registros. Si ejecuta transacciones bajo el modelo de recuperación optimizado para cargas masivas de registros que requieran una restauración del registro de transacciones, dichas transacciones podrían quedar expuestas a la pérdida de datos. Para aumentar la capacidad de recuperación de datos en un escenario de recuperación ante desastres, cambie al modelo de recuperación optimizado para cargas masivas de registros solo en las siguientes condiciones:  
   
@@ -50,10 +51,10 @@ ms.locfileid: "72908809"
   
 **Nota:** Si cambia al modelo de recuperación completa durante una operación masiva, el registro de la operación masiva se modifica del registro mínimo al registro completo y viceversa.  
   
-###  <a name="Security"></a> Permisos necesarios  
+###  <a name="required-permissions"></a><a name="Security"></a> Permisos necesarios  
    Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Para ver o cambiar el modelo de recuperación  
   
@@ -71,7 +72,7 @@ ms.locfileid: "72908809"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Para ver el modelo de recuperación  
   
@@ -91,7 +92,7 @@ GO
   
 #### <a name="to-change-the-recovery-model"></a>Para cambiar el modelo de recuperación  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -102,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recomendaciones: después de cambiar el modelo de recuperación  
+##  <a name="recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a> Recomendaciones: después de cambiar el modelo de recuperación  
   
 -   **Después de cambiar entre el modelo de recuperación completa y el modelo de recuperación optimizado para cargas masivas de registros**  
   
@@ -128,7 +129,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Asegúrese de que estén programadas copias de seguridad periódicas de la base de datos. Es esencial hacer copia de seguridad de la base de datos para proteger los datos y para truncar la parte inactiva del registro de transacciones.  
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -136,9 +137,9 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Deshabilitar o habilitar un trabajo](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Planes de mantenimiento de bases de datos](../maintenance-plans/maintenance-plans.md) (en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   

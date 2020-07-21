@@ -25,12 +25,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 428e6370a7e4afc1b43be1edb86b8fb032f9dd3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896007"
 ---
 # <a name="-modulus-transact-sql"></a>% (Módulo) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El operador aritmético de módulo se puede usar en la lista de selección de la instrucción SELECT con cualquier combinación de nombres de columnas, constantes numéricas o cualquier expresión válida de las categorías de tipos de datos entero y monetario o del tipo de datos **numeric**.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -64,8 +64,7 @@ dividend % divisor
  En el ejemplo siguiente se divide el número 38 por 5. Esto produce 7 como parte entera del resultado y muestra cómo el módulo devuelve un resto de 3.  
   
 ```  
-SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
-  
+SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. Ejemplo que usa columnas de una tabla  
@@ -80,9 +79,9 @@ FROM Sales.SalesOrderDetail;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C. Ejemplo sencillo  
+### <a name="c-simple-example"></a>C: ejemplo sencillo  
  En el siguiente ejemplo se muestran los resultados del operador `%` al dividir 3 entre 2.  
   
 ```  

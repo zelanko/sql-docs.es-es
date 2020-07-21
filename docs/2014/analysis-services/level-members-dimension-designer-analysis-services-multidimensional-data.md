@@ -1,5 +1,5 @@
 ---
-title: Nivel y miembros (pestaña explorador, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Nivel y miembros (pestaña explorador, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542017"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nivel y miembros (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use este panel para examinar los miembros del idioma y la jerarquía seleccionados actualmente. Para seleccionar el idioma o la jerarquía que se examinará, use las opciones **Jerarquía** e **Idioma** del panel **Barra de herramientas** . Para obtener más información sobre el panel Barra de herramientas, vea [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "66078110"
  **Nivel actual**  
  Muestra el nivel al que pertenece el miembro seleccionado actualmente en **Árbol** .  
   
- **Árbol**  
+ **Palmera**  
  Muestra los miembros del idioma y la jerarquía seleccionada actualmente.  
   
  Si están seleccionadas las propiedades del miembro en la opción **Propiedades del miembro** del panel Barra de herramientas, cada propiedad del miembro se muestra como una columna.  
@@ -50,7 +49,7 @@ ms.locfileid: "66078110"
 ## <a name="context-menu"></a>Menú contextual  
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en cualquier parte del panel **Nivel y miembros** del miembro seleccionado:  
   
- **Creación del mismo nivel**  
+ **Crear igual**  
  Crea un nuevo miembro en el mismo nivel que el miembro seleccionado.  
   
 > [!NOTE]  
@@ -68,7 +67,7 @@ ms.locfileid: "66078110"
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha habilitado el modo de reescritura.  
   
- **Cut**  
+ **Cortar**  
  Copia los miembros seleccionados en el portapapeles y los quita de la jerarquía.  
   
 > [!NOTE]  
@@ -92,7 +91,7 @@ ms.locfileid: "66078110"
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha habilitado el modo de reescritura.  
   
- **Cambiar el nombre**  
+ **Cambiar nombre**  
  Seleccione esta opción para modificar el nombre del miembro seleccionado.  
   
 > [!NOTE]  
@@ -119,11 +118,11 @@ ms.locfileid: "66078110"
  **Contraer miembro**  
  Contrae el miembro seleccionado en el **Árbol**.  
   
- **Writeback**  
+ **Reescritura**  
  Seleccione esta opción para habilitar el modo de reescritura.  
   
-## <a name="see-also"></a>Vea también  
- [Barra de herramientas &#40;pestaña del explorador, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Explorador &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Barra de herramientas &#40;pestaña explorador, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Explorador &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

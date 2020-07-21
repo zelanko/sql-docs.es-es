@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3d3883a2-c39c-439f-bbc0-01e73968672b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6775f44c2d220e6b0f13312b8fcf47d133def00d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: efc889cbf12e233a1bbdc4e3275d1166fef3ef47
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970967"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902281"
 ---
 # <a name="sqlservernclob-class"></a>Clase SQLServerNClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

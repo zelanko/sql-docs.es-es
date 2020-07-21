@@ -1,8 +1,10 @@
 ---
 title: Combinaciones admitidas de SharePoint y servidor de Reporting Services | Microsoft Docs
-ms.date: 07/01/2017
+description: Un servidor de informes de SQL Server Reporting Services instalado en modo de SharePoint exige una versión de SharePoint y el complemento SQL Server Reporting Services (rsSharePoint.msi) para productos de SharePoint, que se instalan en los servidores de SharePoint.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint mode
@@ -12,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 59cd04ffa97005edc1e957ed4fcefb66685c2256
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
-ms.translationtype: MTE75
+ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995866"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866068"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Combinaciones admitidas de SharePoint y servidor de Reporting Services
 

@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890917"
 ---
-# <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información acerca de uno o más perfiles de correo.  
   
@@ -39,9 +39,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Para devolver información para el identificador de perfil. *profile_id* es **int**, su valor predeterminado es null.  
+`[ @profile_id = ] profile_id`Identificador de perfil para el que se va a devolver información. *profile_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @profile_name = ] 'profile_name'` Para devolver información para el nombre del perfil. *nombre_perfil* es **sysname**, su valor predeterminado es null.  
+`[ @profile_name = ] 'profile_name'`Nombre del perfil para el que se va a devolver información. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,21 +51,21 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
   
 ||||  
 |-|-|-|  
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |**profile_id**|**int**|Id. del perfil.|  
 |**name**|**sysname**|Nombre del perfil.|  
-|**description**|**nvarchar(256)**|La descripción para el perfil.|  
+|**description**|**nvarchar(256)**|La descripción del perfil.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se especifica un nombre de perfil o el Id. de perfil, **sysmail_help_profile_sp** devuelve información acerca de dicho perfil. En caso contrario, **sysmail_help_profile_sp** devuelve información acerca de todos los perfiles de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
+ Cuando se especifica un nombre de perfil o un identificador de perfil, **sysmail_help_profile_sp** devuelve información acerca de ese perfil. De lo contrario, **sysmail_help_profile_sp** devuelve información sobre cada perfil de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
   
- El procedimiento almacenado **sysmail_help_profile_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_help_profile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- **A. Lista de todos los perfiles**  
+ **A. Mostrar una lista de todos los perfiles**  
   
  En el ejemplo siguiente se muestra una lista de todos los perfiles de una instancia.  
   
@@ -99,8 +99,8 @@ profile_id  name                          description
 56          AdventureWorks Administrator  Administrative mail profile.    
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 712c89918af1b66bb4c3e50c0ec08ef44d1222d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eeed332d6b41d8b81105b005df3011a39d0e084e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771425"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438842"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Servicio de captura de datos modificados para Oracle de Attunity (Guía de procedimientos)
   En esta sección se describe cómo realizar tareas en la Consola de configuración del servicio CDC.  

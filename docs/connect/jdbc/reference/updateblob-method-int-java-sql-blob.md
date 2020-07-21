@@ -1,5 +1,5 @@
 ---
-title: Método updateBlob (int, Java. SQL. BLOB) | Microsoft Docs
+title: Método updateBlob (int, java.sql.Blob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ce5c1c2e8ce635e5b53f5b5e609666e39e36bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9f255906e3e8397caa1199cd1988fe8fb36d2645
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997136"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903339"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>Método updateBlob (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,18 +36,18 @@ public void updateBlob(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el índice de la columna.  
   
  *x*  
   
- Objeto de BLOB.  
+ Un objeto Blob.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateBlob especifica este método updateBlob en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

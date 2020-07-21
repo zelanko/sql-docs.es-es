@@ -1,5 +1,5 @@
 ---
-title: Directiva de seguridad del clúster | Microsoft Docs
+title: Directiva de seguridad de clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 38afa421-2599-404f-8ba6-172668c6325e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b8b0e523020fcb17c49cdfc8ad778ccf59f8a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7504d34f8b0bfc4d9fa5b14a7bd6d0d6594fbc19
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037147"
 ---
 # <a name="cluster-security-policy"></a>Directiva de seguridad de clúster
   Utilice la página Directiva de seguridad de clúster para configurar la directiva de seguridad de la instancia del clúster de conmutación por error.  

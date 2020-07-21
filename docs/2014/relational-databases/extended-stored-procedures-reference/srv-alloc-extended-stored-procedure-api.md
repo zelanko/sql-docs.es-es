@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61157ab8ba2b9f47caf89b6a16a3edd830437abf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 729675f7df3a4e394bb28f4074644289489ef248
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138912"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050797"
 ---
 # <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (API de procedimiento almacenado extendido)
     
@@ -48,7 +47,7 @@ size
  *size*  
  Especifica el número de bytes para asignar.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  Un puntero al el espacio asignado más reciente. Si no se pueden asignar *size* bytes, se devuelve un puntero nulo.  
   
 ## <a name="remarks"></a>Comentarios  

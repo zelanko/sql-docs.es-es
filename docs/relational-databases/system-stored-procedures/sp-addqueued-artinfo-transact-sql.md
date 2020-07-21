@@ -13,24 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 25f91084afe2c2bdfc27bc0b2ad874bd87447b67
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716447"
 ---
-# <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   
   
 > [!IMPORTANT]  
->  Se debe usar el procedimiento [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) en lugar de **sp_addqueued_artinfo**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) genera un script que contiene las llamadas a **sp_addqueued_artinfo** y **sp_addsynctrigger** .  
+>  Se debe utilizar el procedimiento [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) en lugar de **sp_addqueued_artinfo**. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) genera un script que contiene las llamadas a **sp_addqueued_artinfo** y **sp_addsynctrigger** .  
   
- Crea la tabla [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) en el suscriptor que se usa para realizar el seguimiento de la información de suscripción del artículo (actualización en cola y actualización inmediata con actualización en cola como conmutación por error). Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
+ Crea el [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) tabla en el suscriptor que se usa para realizar un seguimiento de la información de suscripción de los artículos (actualización en cola y actualización inmediata con actualización en cola como conmutación por error). Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'`Es el nombre de la tabla de destino. *dest_table* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- **[@owner =** ] **'** _propietario_ **'**  
+ [** @owner =** ] **'**_propietario_**'**  
  Es el propietario de la suscripción. *Owner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 `[ @cft_table = ] 'cft_table'`Nombre de la tabla de conflictos de actualización en cola de este artículo. *cft_table*es de **tipo sysname**y no tiene ningún valor predeterminado.  
@@ -77,10 +77,10 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addqueued_artinfo**.  
   
-## <a name="see-also"></a>Vea también  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [Transact &#40;-SQL de MSsubscription_articles&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Suscripciones actualizables para la replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [sp_script_synctran_commands &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: end (método) (SQLServerXAResource) | Microsoft Docs
+title: Método end (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8aa3da36a6bffbcaf223ea72d4adf5f9e541d90c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fae16dbc10308a558b6b1a7e894ea4391b40326e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955043"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922146"
 ---
 # <a name="end-method-sqlserverxaresource"></a>Método end (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +38,16 @@ public void end(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>Parámetros  
  *xid*  
   
- Objeto XID.  
+ Un objeto Xid.  
   
  *flags*  
   
- Valor **int** .  
+ Un valor **int**.  
   
 ## <a name="exceptions"></a>Excepciones  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método end especifica este método end en la interfaz javax.transaction.xa.XAResource.  
   
 ## <a name="see-also"></a>Consulte también  

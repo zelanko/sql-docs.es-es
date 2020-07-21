@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2854cca3e231c479675a06857e24c3e09cfd8762
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 9fe58999c34e67ee0cf9b5c6fd92ad91b3796ea7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745337"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895120"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita una cola existente.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70745337"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DROP QUEUE <object>  
 [ ; ]  
@@ -56,7 +56,7 @@ DROP QUEUE <object>
  *queue_name*  
  Nombre de la cola que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No se puede quitar una cola si hay servicios que hacen referencia a ella.  
   
 ## <a name="permissions"></a>Permisos  

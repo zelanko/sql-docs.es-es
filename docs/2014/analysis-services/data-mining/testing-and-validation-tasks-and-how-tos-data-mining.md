@@ -1,5 +1,5 @@
 ---
-title: Pruebas y validación tareas y procedimientos (minería de datos) | Microsoft Docs
+title: Tareas y procedimientos de prueba y validación (minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8616afd3049a73e808bb014821de14e1d36c6f17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082871"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520333"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tareas y procedimientos de prueba y validación (minería de datos)
   Puede utilizar la pestaña **Gráfico de precisión de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para comparar la precisión predictiva de los modelos de minería de datos de su estructura de minería de datos.  
@@ -39,7 +38,7 @@ ms.locfileid: "66082871"
   
  Los primeros tres gráficos utilizan la pestaña **Selección de entrada** para definir los datos que se utilizan para generar el gráfico.  
   
- El gráfico de validación cruzada se crea usando las entradas adicionales, disponibles en la pestaña **Validación cruzada** . Para obtener más información, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md).  
+ El gráfico de validación cruzada se crea mediante entradas adicionales, disponibles en la pestaña **validación cruzada** . Para obtener más información, consulte [&#40;de la validación cruzada Analysis Services-Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  
   
  Para obtener más información sobre cómo usar el gráfico de precisión de minería de datos, vea [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md).  
   

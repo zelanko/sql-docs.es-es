@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736295"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT: cláusula FOR (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use la cláusula FOR para especificar una de las siguientes opciones para los resultados de la consulta.
   
@@ -44,7 +44,7 @@ Use la cláusula FOR para especificar una de las siguientes opciones para los re
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```syntaxsql
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  
@@ -92,7 +92,7 @@ JSON
  Especifica que se permiten las actualizaciones mientras se visualizan los datos en el cursor del modo de exploración de DB-Library. Una tabla se puede explorar en una aplicación si la tabla incluye una columna **timestamp**, la tabla tiene un índice único y la opción FOR BROWSE está al final de las instrucciones SELECT enviadas a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
-> No se puede usar \<lock_hint> HOLDLOCK en una instrucción SELECT que incluya la opción FOR BROWSE.
+> No se puede usar HOLDLOCK \<lock_hint> en una instrucción SELECT que incluya la opción FOR BROWSE.
   
  FOR BROWSE no puede aparecer en instrucciones SELECT combinadas mediante el operador UNION.  
   
@@ -216,7 +216,7 @@ _Suprimir los saltos de línea no deseados:_ es posible que quiera usar SQL Serv
  Especifica que las columnas se devuelven como subelementos. Sin embargo, se les asignan atributos XML. Esta opción solo se admite en los modos RAW, AUTO y PATH. Para obtener más información, vea [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Especifica que se va a crear un elemento con el atributo **xsi:nil** establecido en **True** para los valores de columna NULL. Esta opción solo se puede especificar con la directiva ELEMENTS. Para obtener más información, vea:
+ Especifica que se va a crear un elemento con el atributo **xsi:nil** establecido en **True** para los valores de columna NULL. Esta opción solo se puede especificar con la directiva ELEMENTS. Para más información, consulte:
 
 - [Generar elementos para valores NULL mediante el parámetro XSINIL](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
 - [FOR XML en la instrucción SELECT](../../relational-databases/xml/for-xml-sql-server.md)

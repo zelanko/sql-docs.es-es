@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846667"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159893"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   En este tema se describe cómo administrar columnas de identidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Cuando las inserciones del Suscriptor se replican de nuevo al Publicador, se deben administrar las columnas de identidad para evitar la asignación del mismo valor de identidad en el Suscriptor y el Publicador. La replicación puede administrar automáticamente intervalos de identidad o puede elegir procesar manualmente la administración de intervalos de identidad.  Para obtener información sobre las opciones de administración de intervalos de identidad proporcionadas por la replicación, vea [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **En este tema**  
@@ -40,22 +40,22 @@ ms.locfileid: "70846667"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Al publicar una tabla en más de una publicación, debe especificar las mismas opciones de administración de intervalos de identidad para ambas publicaciones. Para obtener más información, vea "Publicar tablas en más de una publicación" en [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 -   Para crear un número que se incremente automáticamente y que se pueda usar en varias tablas, o que se pueda llamar desde las aplicaciones sin hacer referencia a ninguna tabla, vea [Números de secuencia](../../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Especifique una opción de administración de columnas de identidad en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md). En el Asistente para nueva publicación:  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Especifique una opción de administración de columnas de identidad en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md). En el Asistente para nueva publicación:  
   
 -   Si selecciona **Publicación de combinación** o **Publicación transaccional con suscripciones actualizables** en la página **Tipo de publicación** , seleccione la administración automática o manual de los intervalos de identidad (se recomienda utilizar la opción predeterminada: la administración automática). Una vez publicada la tabla, la propiedad no se puede modificar, pero otras propiedades relacionadas sí se pueden modificar.  
   
 -   Si selecciona otros tipos de publicaciones, debe establecer la administración de los intervalos de identidad en manual.  
   
- Modifique los intervalos de identidad y los umbrales en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , disponible en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modifique los rangos de identidad y los umbrales en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , disponible en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-an-identity-column-management-option"></a>Para especificar una opción de administración de las columnas de identidad  
   
@@ -65,11 +65,11 @@ ms.locfileid: "70846667"
   
 3.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-4.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , en la sección **Administración de intervalos de identidad**, establezca la propiedad **Administrar intervalos de identidad automáticamente** en **Automático** o **Manual** (para publicadores que ejecuten [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior), o en **True** o **False** (para publicadores que ejecuten una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
+4.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , en la sección **Administración de intervalos de identidad**, establezca la propiedad **Administrar intervalos de identidad automáticamente** en **Automático** o **Manual** (para publicadores que ejecuten [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior), o en **True** o **False** (para publicadores que ejecuten una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]).  
   
 5.  Si seleccionó **Automático** o **True** en el paso 4, escriba los valores de las opciones en la siguiente tabla. Para obtener más información sobre cómo usar estos valores, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    |Opción|Valor|Descripción|  
+    |Opción|Value|Descripción|  
     |------------|-----------|-----------------|  
     |**Tamaño de intervalo del publicador**|Valor entero para el tamaño del intervalo (por ejemplo, 20 000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Tamaño de intervalo del suscriptor**|Valor entero para el tamaño del intervalo (por ejemplo, 10000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -82,17 +82,17 @@ ms.locfileid: "70846667"
   
 #### <a name="to-modify-identity-ranges-and-thresholds-after-a-table-is-published"></a>Para modificar los intervalos de identidad y los umbrales una vez publicada la tabla  
   
-1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla con una columna de identidad.  
+1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publication>** , seleccione una tabla con una columna de identidad.  
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , en la sección **Administración de intervalos de identidad**, escriba valores para una o varias de las siguientes propiedades: **Tamaño de intervalo del publicador**, **Tamaño de intervalo del suscriptor** y **Porcentaje de umbral del intervalo**.  
+3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<Article>** , en la sección **Administración de intervalos de identidad**, escriba valores para una o varias de las propiedades siguientes: **Tamaño de intervalo del publicador**, **Tamaño de intervalo del suscriptor** y **Porcentaje de umbral del intervalo**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+5.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede usar los procedimientos almacenados de replicación para especificar las opciones de administración de intervalos de identidad cuando se crea un artículo.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Para habilitar la administración automática de intervalos de identidad al definir artículos para una publicación transaccional  

@@ -11,10 +11,10 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296146"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lección 1-3: Adición y configuración de un administrador de conexiones OLE DB
@@ -53,8 +53,8 @@ En esta tarea, creará un administrador de conexiones OLE DB que usa la Autentic
   
 
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
-[Paso 4: Adición de una tarea Flujo de datos al paquete](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+[Paso 4: Adición de una tarea de flujo de datos al paquete](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Administrador de conexiones OLE DB](../integration-services/connection-manager/ole-db-connection-manager.md)  
   

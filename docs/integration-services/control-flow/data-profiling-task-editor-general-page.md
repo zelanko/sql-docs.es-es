@@ -15,10 +15,10 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 46eb7c7f0834f864aba8e3951f4caf9092f5bb7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294196"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
@@ -43,7 +43,7 @@ ms.locfileid: "71294196"
 3.  En el **Editor de tareas de generación de perfiles de datos**, haga clic en **General**.  
   
 ## <a name="data-profiling-options"></a>Opciones de la generación de perfiles de datos  
- **Timeout**  
+ **Tiempo de espera**  
  Especifique el número de segundos transcurridos los cuales la tarea de generación de datos debe agotar el tiempo de espera y dejar de ejecutarse. El valor predeterminado es 0, lo que no indica ningún tiempo de espera.  
   
 ## <a name="destination-options"></a>Opciones de destino  
@@ -54,10 +54,10 @@ ms.locfileid: "71294196"
  **DestinationType**  
  Especifique si guardar el perfil de los datos generado en un archivo o una variable:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos usar, utilice la opción **Destino**.|  
-|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Nota: Para especificar qué variable de paquete usar, utilice la opción **Destination**.|  
+|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos utilizar, use la opción **Destino** .|  
+|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Para especificar qué variable de paquete utilizar, use la opción **Destino** .|  
   
  **Destino**  
  Especifique qué administrador de conexiones de archivos o variable de paquete contiene el perfil de datos generado:  

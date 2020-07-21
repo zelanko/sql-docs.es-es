@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56f2efd4fe6b84cb7758c0da723d9c11c51afc21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101042"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748829"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una aproximación de la instancia de **geometry** especificada. La aproximación se produce al ejecutar una extensión del algoritmo de Douglas-Peucker en la instancia con la tolerancia especificada.
   
@@ -40,12 +40,12 @@ Devuelve una aproximación de la instancia de **geometry** especificada. La apro
  *tolerance*  
  Es un valor de tipo **float**. *tolerancia* es la tolerancia que se usa como entrada para el algoritmo de aproximación.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para los tipos de colección, este algoritmo funciona independientemente en cada tipo **geometry** contenido en la instancia.  
   
  Este algoritmo no modifica las instancias de **Point**.  

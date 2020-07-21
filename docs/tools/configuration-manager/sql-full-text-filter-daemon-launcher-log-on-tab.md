@@ -1,6 +1,6 @@
 ---
-title: Selector de demonio de filtro de texto completo de SQL (pestaña Iniciar sesión) | Microsoft Docs
-ms.custom: ''
+title: Selector del demonio de filtro de texto completo de SQL (pestaña Iniciar sesión)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 13e260f9-a75f-430b-88a3-959ddcead8fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 791079d881cf48c8eb5cdaa74f932cb29738003a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 81cca06132cd63bf344d54004895f1bd9a0ab2e7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058287"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306743"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-log-on-tab"></a>Selector del demonio de filtro de texto completo de SQL (pestaña Iniciar sesión)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68058287"
  **Iniciar**  
  Inicie el servicio.  
   
- **Detener**  
+ **Detención**  
  Detenga el servicio.  
   
  **Pausar**  

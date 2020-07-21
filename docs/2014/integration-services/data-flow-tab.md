@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowwindow.f1
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29504391addbc4dc76da6d0d9b612386ed4f6bee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059894"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432462"
 ---
 # <a name="data-flow-tab"></a>Pestaña Flujo de datos
   Utilice la pestaña **Flujo de datos** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para crear flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -34,9 +33,9 @@ ms.locfileid: "66059894"
   
  Para agregar estas funciones en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic con el botón secundario en la superficie de diseño y, a continuación, seleccione la opción que desee.  
   
-## <a name="see-also"></a>Vea también  
- [Rutas de Integration Services](data-flow/integration-services-paths.md)   
- [Tarea Flujo de datos](control-flow/data-flow-task.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services trazados](data-flow/integration-services-paths.md)   
+ [Tarea flujo de datos](control-flow/data-flow-task.md)   
  [Diseñador SSIS](ssis-designer.md)   
  [Flujo de datos](data-flow/data-flow.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Entorno de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Entorno de SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38a0417a7f934525c7d43e0a36a52ef918b573a6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f7c9339e5e374850bda986eedc28ace32b5630d1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266742"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247177"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Entorno de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

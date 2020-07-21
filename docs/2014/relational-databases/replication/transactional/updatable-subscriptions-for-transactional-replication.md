@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61cadcd3f8f8a7fa72a3eac69f3bdbd8546d3055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016443"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "62655498"
  **Para cambiar entre modos de actualización**  
   
  Para cambiar entre modos de actualización, debe habilitar la publicación y suscripción para ambos modos de actualización y, a continuación, cambiar entre ellos si es necesario. Para obtener más información, vea  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Cambiar entre modos de actualización para una suscripción transaccional actualizable](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Consideraciones para el uso de suscripciones actualizables  
   
@@ -122,10 +121,10 @@ ms.locfileid: "62655498"
   
     -   Si se esperan conflictos, no debe utilizar restricciones de clave externa en el publicador o suscriptor si utiliza la resolución de conflictos "El suscriptor gana"; no debe utilizar restricciones de clave externa en el suscriptor si utiliza la resolución de conflictos "El publicador gana".  
   
-## <a name="see-also"></a>Vea también  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+## <a name="see-also"></a>Consulte también  
+ [Replicación transaccional punto a punto](peer-to-peer-transactional-replication.md)   
  [Replicación transaccional](transactional-replication.md)   
  [Publicar datos y objetos de base de datos](../publish/publish-data-and-database-objects.md)   
- [Suscribirse a publicaciones](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

@@ -19,17 +19,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109697"
 ---
 # <a name="control-report-distribution"></a>Controlar la distribución de informes
   Puede configurar un servidor de informes para reducir los riesgos de seguridad asociados a la distribución por correo electrónico y a recursos compartidos de archivos.  
   
 ## <a name="securing-reports"></a>Proteger informes  
- El primer paso para controlar la distribución de informes consiste en proteger el informe contra accesos no autorizados. Para poder utilizarse en una suscripción, el informe debe utilizar un conjunto almacenado de credenciales que no varíen para las entregas individuales. Cualquier usuario con acceso al informe en el servidor de informes puede ejecutarlo y posiblemente distribuirlo. Para impedir que esto ocurra, debe limitar el acceso al informe únicamente a aquellos usuarios que lo necesiten. Para obtener más información, consulte [proteger informes y recursos](security/secure-reports-and-resources.md) y [proteger carpetas](security/secure-folders.md).  
+ El primer paso para controlar la distribución de informes consiste en proteger el informe contra accesos no autorizados. Para poder utilizarse en una suscripción, el informe debe utilizar un conjunto almacenado de credenciales que no varíen para las entregas individuales. Cualquier usuario con acceso al informe en el servidor de informes puede ejecutarlo y posiblemente distribuirlo. Para impedir que esto ocurra, debe limitar el acceso al informe únicamente a aquellos usuarios que lo necesiten. Para obtener más información, consulte [proteger informes y recursos](security/secure-reports-and-resources.md) y [carpetas seguras](security/secure-folders.md).  
   
  Los informes extremadamente confidenciales que utilicen la seguridad de base de datos para autorizar el acceso no pueden distribuirse mediante una suscripción.  
   
@@ -46,8 +46,8 @@ ms.locfileid: "66109697"
 ## <a name="controlling-file-share-delivery"></a>Controlar la entrega a recursos compartidos de archivos  
  La entrega a recursos compartidos de archivos se utiliza para enviar un informe a un archivo de un disco duro. Una vez que el archivo se ha guardado en un disco, ya no está sujeto al modelo de seguridad basada en roles que utiliza el servidor de informes para controlar el acceso de los usuarios. Para proteger un informe que se haya entregado a un disco, puede utilizar listas de control de acceso (ACL) en el archivo en sí o en la carpeta que lo contenga. Según el sistema operativo que utilice, es posible que existan opciones de seguridad adicionales.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar un servidor de informes para la entrega por correo electrónico &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Creación y administración de suscripciones para servidores de informes en modo nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   

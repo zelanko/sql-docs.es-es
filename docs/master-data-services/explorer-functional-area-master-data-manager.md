@@ -1,5 +1,5 @@
 ---
-title: Área funcional de Explorador (Master Data Manager) | Microsoft Docs
+title: Área funcional de Explorador
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 19ffb4b29de5e343234bdf77b3c324a766e72ee7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da27d391ac6f0a77f839e60b439c4b195f6a5b5a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915876"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811520"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional de Explorador (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En el área funcional de Explorador, puede actualizar datos y trabajar con jerarquías y colecciones.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67915876"
   
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

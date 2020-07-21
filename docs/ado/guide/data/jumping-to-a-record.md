@@ -11,33 +11,33 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924932"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757771"
 ---
 # <a name="jumping-to-a-record"></a>Saltar a un registro
-El [mover](../../../ado/reference/ado-api/move-method-ado.md) método le permite mover hacia delante o hacia atrás en el **Recordset** un número especificado de registros utilizando la sintaxis siguiente:  
+El método [Move](../../../ado/reference/ado-api/move-method-ado.md) permite desplazarse hacia delante o hacia atrás en el **conjunto** de registros un número especificado de registros utilizando la sintaxis siguiente:  
   
 ```  
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- El **mover** método es compatible con todas **Recordset** objetos.  
+## <a name="remarks"></a>Observaciones  
+ El método **Move** es compatible con todos los objetos de **conjunto de registros** .  
   
- Si el *NumRecords* argumento es mayor que cero, la posición actual del registro se mueve hacia delante (hacia el final de la **Recordset**). Si *NumRecords* es menor que cero, la posición actual del registro se mueve hacia atrás (hacia el principio de la **Recordset**).  
+ Si el argumento *NumRecords* es mayor que cero, la posición del registro actual se desplaza hacia delante (hacia el final del **conjunto de registros**). Si *NumRecords* es menor que cero, la posición del registro actual se desplaza hacia atrás (hacia el principio del **conjunto de registros**).  
   
- Si el **mover** llamada haría al mover la posición actual del registro a un punto antes del primer registro, ADO establece el registro actual en la posición delante del primer registro en el **Recordset** (**BOF** es **True**). Un intento de mover hacia atrás cuando el **BOF** propiedad ya está **True** genera un error.  
+ Si la llamada a **Move** movera la posición del registro actual a un punto anterior al primer registro, ADO establece el registro actual en la posición anterior al primer registro del **conjunto de registros** (**BOF** es **true**). Si se intenta retroceder cuando la propiedad **BOF** ya es **true** , se genera un error.  
   
- Si el **mover** llamada a mueve la posición actual del registro a un punto después del último registro, ADO establece el registro actual en la posición después del último registro en el **Recordset** (**EOF** es **True**). Un intento de mover hacia delante cuando la **EOF** propiedad ya está **True** genera un error.  
+ Si la llamada a **Move** movera la posición del registro actual a un punto después del último registro, ADO establece el registro actual en la posición posterior al último registro del **conjunto de registros** (**EOF** es **true**). Un intento de avanzar cuando la propiedad **EOF** ya es **true** genera un error.  
   
- Una llamada a la **mover** método desde un valor vacío **Recordset** objeto genera un error.  
+ Al llamar al método **Move** desde un objeto **Recordset** vacío, se genera un error.  
   
- Si se pasa un marcador en el *iniciar* argumento, que es el movimiento en relación con el registro con este marcador, suponiendo que el **Recordset** objeto admite marcadores. Un marcador se obtiene mediante la [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad. Si no se especifica, el movimiento es en relación con el registro actual.  
+ Si pasa un marcador en el argumento *Start* , el movimiento es relativo al registro con este marcador, suponiendo que el objeto de **conjunto de registros** admita marcadores. Un marcador se obtiene mediante la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) . Si no se especifica, el movimiento es relativo al registro actual.  
   
- Si usas el **CacheSize** propiedad localmente en caché los registros del proveedor, pasando un *NumRecords* argumento que se mueve la posición actual del registro fuera del grupo actual de registros almacenados en caché obliga a ADO para recuperar un nuevo grupo de registros, empezando por el registro de destino. El **CacheSize** propiedad determina el tamaño del grupo recién recuperado y el registro de destino es el primer registro recuperado.
+ Si está utilizando la propiedad **CacheSize** para almacenar en caché localmente los registros del proveedor, al pasar un argumento *NumRecords* que mueve la posición del registro actual fuera del grupo actual de registros almacenados en caché, ADO recupera un nuevo grupo de registros, empezando por el registro de destino. La propiedad **CacheSize** determina el tamaño del grupo recién recuperado y el registro de destino es el primer registro recuperado.

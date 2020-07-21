@@ -13,10 +13,10 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294763"
 ---
 # <a name="create-the-sql-server-change-database"></a>Crear la base de datos de cambios de SQL Server
@@ -41,12 +41,12 @@ ms.locfileid: "71294763"
   
 -   **Nombre**: escriba un nombre para el nuevo servicio. También será el nombre de la nueva base de datos Cambios.  
   
--   **Descripción**: escriba una descripción para la nueva instancia para que le ayude a identificarla. Esto es opcional.  
+-   **Descripción**: escriba una descripción de la nueva instancia como ayuda para identificarla. Esto es opcional.  
   
  **Base de datos de cambios de SQL Server**  
  Esta sección se emplea para crear la base de datos.  
   
-1.  **Cambiar la base de datos**: el nombre de la nueva base de datos cambiada. El nombre de la base de datos es el mismo que el que asignó a la instancia. Este campo de solo lectura muestra la ruta de acceso completa a la base de datos.  
+1.  **Base de datos de cambios**: el nombre de la nueva base de datos de cambios. El nombre de la base de datos es el mismo que el que asignó a la instancia. Este campo de solo lectura muestra la ruta de acceso completa a la base de datos.  
   
 2.  **Crear base de datos**: haga clic en **Crear base de datos** para crear la base de datos.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: 7345ae056c97bb0d84433e9cf15b8ca3d8cffd5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72782829"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540317"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implementar las soluciones de PowerPivot en SharePoint
   Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de PowerPivot a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar PowerPivot para SharePoint en un servidor SharePoint 2010. Para ver la lista completa de los pasos necesarios, consulte [Administración y configuración de servidores de PowerPivot en administración central](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -26,20 +25,20 @@ ms.locfileid: "72782829"
   
  Este tema contiene las siguientes secciones:  
   
- [Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación](#bkmk_classic)  
+ [Requisito previo: comprobar que la aplicación Web usa la autenticación de modo clásico](#bkmk_classic)  
   
- [Paso 1: implementar la solución de granja](#bkmk_farm)  
+ [Paso 1: implementar la solución de granja de servidores](#bkmk_farm)  
   
- [Paso 2: implementar la solución de aplicación Web de PowerPivot para administración central](#deployCA)  
+ [Pas 2: implementar la solución de aplicación web de PowerPivot para Administración central](#deployCA)  
   
- [Paso 3: implementar la solución de aplicación Web de PowerPivot en otras aplicaciones Web](#deployUI)  
+ [Paso 3: implementar la solución de aplicación web de PowerPivot en otras aplicaciones web](#deployUI)  
   
  [Volver a implementar o retirar la solución](#retract)  
   
  [Acerca de las soluciones de PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación  
- PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde el **Shell de administración de SharePoint 2010**, reemplazando `http://<top-level site name>` por el nombre del sitio de SharePoint:  
+##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación  
+ PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde el **Shell de administración de sharepoint 2010**, reemplazando `http://<top-level site name>` por el nombre de su sitio de SharePoint:  
   
 ```powershell
 Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  
@@ -47,8 +46,8 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Se debería devolver el valor **false**. Si es **true**, no se puede tener acceso a los datos PowerPivot con esta aplicación Web.  
   
-##  <a name="bkmk_farm"></a> Paso 1: implementar la solución de granja  
- En esta sección se muestra cómo implementar soluciones con PowerShell, pero también puede utilizar la Herramienta de configuración de PowerPivot para completar esta tarea. Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint &#40;herramienta&#41;de configuración de PowerPivot 2010](../configure-repair-powerpivot-sharepoint-2010.md).  
+##  <a name="step-1-deploy-the-farm-solution"></a><a name="bkmk_farm"></a> Paso 1: implementar la solución de granja  
+ En esta sección se muestra cómo implementar soluciones con PowerShell, pero también puede utilizar la Herramienta de configuración de PowerPivot para completar esta tarea. Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Esta tarea solo tiene que realizarse una vez, después de instalar PowerPivot para SharePoint.  
   
@@ -68,7 +67,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a>Paso 2: implementar la solución de aplicación Web de PowerPivot para administración central  
+##  <a name="step-2-deploy-the-powerpivot-web-application-solution-to-central-administration"></a><a name="deployCA"></a>Paso 2: implementar la solución de aplicación Web de PowerPivot para administración central  
  Después de implementar la solución de granja, debe implementar la solución de aplicación web para Administración central. Este paso agrega el Panel de administración de PowerPivot a Administración central.  
   
 1.  Abra un shell de administración de SharePoint 2010 utilizando la opción **Ejecutar como administrador** .  
@@ -95,22 +94,22 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Ahora que la solución de aplicación web se implementa en Administración central, puede usar Administración central para completar el resto de pasos de configuración.  
   
-##  <a name="deployUI"></a>Paso 3: implementar la solución de aplicación Web de PowerPivot en otras aplicaciones Web  
+##  <a name="step-3-deploy-the-powerpivot-web-application-solution-to-other-web-applications"></a><a name="deployUI"></a>Paso 3: implementar la solución de aplicación Web de PowerPivot en otras aplicaciones Web  
  En la tarea anterior, implementó Powerpivotwebapp.wsp en Administración central. En esta sección, implementa powerpivotwebapp.wsp en cada una de las aplicaciones web existentes que admiten el acceso a datos PowerPivot. Si agrega más aplicaciones web más adelante, asegúrese de repetir este paso para esas aplicaciones web adicionales.  
   
 1.  En Administración central, en Configuración del sistema, haga clic en **Administrar soluciones del conjunto de servidores**.  
   
-2.  Haga clic en **powerpivotwebapp.wsp**.  
+2.  Haga clic en **powerpivotwebapp. wsp**.  
   
 3.  Haga clic en **Implementar solución**.  
   
-4.  En **¿cómo implementar en?** , seleccione la aplicación Web de SharePoint para la que desea agregar compatibilidad con las características de PowerPivot.  
+4.  En **¿cómo implementar en?**, seleccione la aplicación Web de SharePoint para la que desea agregar compatibilidad con las características de PowerPivot.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Repita el mismo proceso con las demás aplicaciones web de SharePoint que también admitirán el acceso a datos PowerPivot.  
   
-##  <a name="retract"></a> Volver a implementar o retirar la solución  
+##  <a name="redeploy-or-retract-the-solution"></a><a name="retract"></a> Volver a implementar o retirar la solución  
  Aunque Administración central de SharePoint proporciona la retirada de la solución, no necesita retirar el archivo powerpivotwebapp.wsp a menos que esté solucionando problemas de una instalación o de la implementación de una revisión.  
   
 1.  En Administración central de SharePoint 2010, en Configuración del sistema, haga clic en **Administrar las soluciones de la granja**.  
@@ -119,7 +118,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 3.  Haga clic en **Retirar solución**.  
   
- Si encuentra problemas en la implementación del servidor que se reenvían a la solución de granja de servidores, puede volver a implementarla ejecutando la opción **reparar** en la herramienta de configuración de PowerPivot. Las operaciones de reparación mediante la herramienta se prefieren porque requieren menos pasos por su parte. Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint &#40;herramienta&#41;de configuración de PowerPivot 2010](../configure-repair-powerpivot-sharepoint-2010.md).  
+ Si encuentra problemas en la implementación del servidor que se reenvían a la solución de granja de servidores, puede volver a implementarla ejecutando la opción **reparar** en la herramienta de configuración de PowerPivot. Las operaciones de reparación mediante la herramienta se prefieren porque requieren menos pasos por su parte. Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Si aun así desea implementar de nuevo todas las soluciones, asegúrese de hacerlo en este orden:  
   
@@ -131,7 +130,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  Volver a implementar la solución de aplicación web de PowerPivot en todas las aplicaciones web de SharePoint.  
   
-##  <a name="intro"></a>Acerca de las soluciones de PowerPivot  
+##  <a name="about-the-powerpivot-solutions"></a><a name="intro"></a>Acerca de las soluciones de PowerPivot  
  PowerPivot para SharePoint usa dos paquetes de soluciones para implementar sus páginas de aplicaciones y archivos de programas en la granja y en aplicaciones web individuales.  
   
 -   La solución de granja es global. Se implementa una vez y después se convierte en disponible automáticamente para todos los servidores nuevos de PowerPivot para SharePoint que se agreguen posteriormente a la granja.  
@@ -142,12 +141,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  La solución de aplicación Web se implementa inicialmente en Administración central, seguida de las siguientes implementaciones de la solución en cualquier aplicación Web adicional que vaya a admitir solicitudes de los datos PowerPivot. Para implementar la solución de aplicación web de Administración central, debe usar el cmdlet de PowerShell o de la Herramienta de configuración de PowerPivot. Para todas las demás aplicaciones Web, puede implementar la solución de aplicación Web mediante Administración central o PowerShell.  
   
-|Solución|Description|  
+|Solución|Descripción|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Agrega los archivos Microsoft.AnalysisServices.SharePoint.Integration.dll al ensamblado global.<br /><br /> Agrega Microsoft.AnalysisServices.ChannelTransport.dll al ensamblado global.<br /><br /> Instala las características y los archivos de recursos, y registra los tipos de contenido.<br /><br /> Agrega plantillas de biblioteca para las bibliotecas Galería de PowerPivot y Fuentes de datos.<br /><br /> Agrega las páginas de aplicación para la configuración de aplicación de servicio, el panel de administración de PowerPivot, actualización de datos y la Galería de PowerPivot.|  
 |powerpivotwebapp.wsp|Agrega los archivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll a la carpeta de extensiones de servidor web del servidor front-end web.<br /><br /> Agrega el Servicio web PowerPivot al servidor front-end web.<br /><br /> Agrega la generación de imágenes en miniatura para la Galería de PowerPivot.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [PowerPivot para SharePoint de actualización](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [Administración y configuración del servidor PowerPivot en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Administración y configuración del servidor de PowerPivot en administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuración de PowerPivot mediante Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLDrivers function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 809ea368225809fa88e6902dd6f437ee81cb39d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b75d1cc79a5fe2b3113a6d65345956d5ea801f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053868"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307086"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel 2  
+ Conformidad con la API de ODBC: nivel 2  
   
- Enumera las descripciones de controlador y palabras clave del atributo de controlador.  
+ Enumera las descripciones de controladores y palabras clave de atributos de controlador.  
   
- Para obtener más información, consulte [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLDrivers](../../odbc/reference/syntax/sqldrivers-function.md) en la *Referencia del programador de ODBC*.

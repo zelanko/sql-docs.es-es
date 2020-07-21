@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 93b5666bd2d57fb0a8ffae435818a02ba152217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adf45ee211d61c38bad4c3d86d746866d0a15177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937476"
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
   En este tema se describe el uso de los dominios en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio contiene una representación semántica de los datos de un campo determinado del origen de datos que se va a analizar. Un dominio forma parte de la base de conocimiento creada para un origen de datos, y todo el conocimiento obtenido mediante el análisis de un origen de datos de ejemplo o la importación de datos se agrega a los dominios definidos en ella. El conocimiento de dichos dominios se utiliza posteriormente para realizar las tareas de limpieza y de búsqueda de coincidencias en un proyecto de calidad de datos. Los dominios son el núcleo de todas las actividades de Data Quality Services.  
@@ -45,18 +44,18 @@ ms.locfileid: "65484127"
 |||  
 |-|-|  
 |Crear una representación semántica de un campo de datos con un tipo de datos específico, especificar cómo se rellena el dominio y dar formato a los resultados del dominio|[Crear un dominio](../../2014/data-quality-services/create-a-domain.md)|  
-|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear un dominio vinculado](../../2014/data-quality-services/create-a-linked-domain.md)|  
+|Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear dominio vinculado](../../2014/data-quality-services/create-a-linked-domain.md)|  
 |Adjuntar un servicio de datos de referencia a un dominio único o compuesto|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Cambiar o aumentar los valores de una base de conocimiento|[Cambiar valores de dominio](../../2014/data-quality-services/change-domain-values.md)|  
-|Utilizar reglas de validación y normalización|[Crear una regla de dominio](../../2014/data-quality-services/create-a-domain-rule.md)|  
+|Utilizar reglas de validación y normalización|[Cree una regla de dominio](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Utilizar relaciones para corregir un término que forma parte de un valor de un dominio|[Crear relaciones basadas en términos](../../2014/data-quality-services/create-term-based-relations.md)|  
-|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad de administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
+|Completar, cerrar o cancelar la actividad de administración de dominios|[Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Importar conocimiento en una base de conocimiento o exportarlo desde esta.|[Importar y exportar conocimiento](../../2014/data-quality-services/importing-and-exporting-knowledge.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   

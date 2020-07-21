@@ -1,6 +1,6 @@
 ---
-title: Objetos del sistema relacionados con XEvents | Microsoft Docs
-ms.custom: ''
+title: Objetos del sistema relacionados con XEvents
+description: Estos recursos se refieren a eventos extendidos, incluido el modo en que los objetos del sistema los admiten, cómo los usa SQL Server y aspectos específicos de Azure SQL Database.
 ms.date: 03/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,16 +10,16 @@ ms.topic: reference
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8be742db65127eaeac24c54fbcf9386d49453c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e61edcb1f8c1dd9844d887818d208cde1615d5ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903393"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756798"
 ---
 # <a name="system-objects-that-support-extended-events"></a>Objetos del sistema que admiten eventos extendidos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El presente artículo proporciona vínculos a otros artículos relacionados con eventos extendidos. En este tipo de artículos se tratan los siguientes aspectos:
 

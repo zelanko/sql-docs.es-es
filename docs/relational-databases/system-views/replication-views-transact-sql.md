@@ -1,5 +1,6 @@
 ---
 title: Vistas de replicación (Transact-SQL) | Microsoft Docs
+description: Las vistas de replicación contienen información que utiliza la replicación en SQL Server. Las vistas facilitan el acceso a los datos de las tablas del sistema de replicación.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129566"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692661"
 ---
 # <a name="replication-views-transact-sql"></a>Vistas de replicación (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Estas vistas contienen información que se usa para la replicación en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las vistas permiten facilitar el acceso a los datos de [las tablas del sistema de replicación](../../relational-databases/system-tables/replication-tables-transact-sql.md). Las vistas se crean en una base de datos de usuario cuando ésta está habilitada como una base de datos de publicaciones o suscripciones. Todos los objetos de replicación se quitan de las bases de datos de usuario cuando se quita la base de datos de una topología de replicación. Es el método preferido para tener acceso a los metadatos de replicación mediante [procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Estas vistas contienen información que utiliza la replicación en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las vistas permiten un acceso más sencillo a los datos de [las tablas del sistema de replicación](../../relational-databases/system-tables/replication-tables-transact-sql.md). Las vistas se crean en una base de datos de usuario cuando ésta está habilitada como una base de datos de publicaciones o suscripciones.  Todos los objetos de replicación se quitan de las bases de datos de usuario cuando se quita la base de datos de una topología de replicación. El método preferido para obtener acceso a los metadatos de replicación es mediante [procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Ningún usuario debe modificar directamente las vistas del sistema.  
@@ -44,7 +45,7 @@ ms.locfileid: "68129566"
   
 |||  
 |-|-|  
-|[MSdatatype_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[sysdatatypemappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
+|[MSdatatype_mappings &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[sysdatatypemappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
   
 ### <a name="replication-views-in-the-distribution-database"></a>Vistas de replicación de la base de datos de distribución  
   
@@ -53,7 +54,7 @@ ms.locfileid: "68129566"
 |[IHextendedArticleView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
 |[IHextendedSubscriptionView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[sysextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
 |[IHsyscolumns &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
-|[MSdistribution_status &#40;Transact-SQL&#41;](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
+|[MSdistribution_status &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
 |[sysarticlecolumns &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
   
 ### <a name="replication-views-in-the-publication-database"></a>Vistas de replicación de la base de datos de publicaciones  
@@ -70,7 +71,7 @@ ms.locfileid: "68129566"
 |[sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
 |[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4095d76eb4710d67abd1e5ed25a05544142d1e3c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767387"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440452"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Paso 2: Creación de un archivo dañado
   Para demostrar los errores de configuración y el control de los errores de transformación, debe crear un archivo plano de ejemplo que, cuando se procese, genere un error en un componente.  
@@ -28,28 +27,28 @@ ms.locfileid: "62767387"
   
      Los datos de ejemplo se incluyen con los paquetes de lecciones de SSIS. Para descargar los datos de ejemplo y los paquetes de lecciones, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Vaya a [Integration Services ejemplos del producto](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
+    2.  Haga clic en la pestaña **descargas** .  
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Usar la búsqueda del editor de texto y para buscar todas las instancias de `VEB` y reemplácelas con `BAD`.  
+2.  Use la característica buscar y reemplazar del editor de texto para buscar todas las instancias de `VEB` y reemplazarlas por `BAD` .  
   
-3.  En la misma carpeta que los demás archivos de datos de ejemplo, guarde el archivo modificado como `Currency_BAD.txt`.  
+3.  En la misma carpeta que los demás archivos de datos de ejemplo, guarde el archivo modificado como `Currency_BAD.txt` .  
   
     > [!IMPORTANT]  
-    >  Asegúrese de que `Currency_BAD.txt` se guarda la misma carpeta que los demás archivos de datos de ejemplo.  
+    >  Asegúrese de que `Currency_BAD.txt` está guardado en la misma carpeta que los demás archivos de datos de ejemplo.  
   
 4.  Cierre el editor de texto.  
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Para comprobar que se producirá un error durante la ejecución  
   
-1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+1.  En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
      En la tercera iteración del flujo de datos, la transformación Lookup Currency Key intenta procesar el archivo Currency_BAD.txt y la transformación generará un error. El error de la transformación hará que todo el paquete genere un error.  
   
-2.  En el menú **Depurar** , haga clic en **Detener depuración**.  
+2.  En el menú **Depurar**, haga clic en **Detener depuración**.  
   
 3.  En la superficie de diseño, haga clic en la pestaña **Resultados de la ejecución** .  
   
@@ -61,6 +60,6 @@ ms.locfileid: "62767387"
     >  El número 27 es el Id. del componente. Este valor se asigna al generar el flujo de datos, y es posible que el valor del paquete sea diferente.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 3: Agregar redirección de flujo de Error](lesson-4-3-adding-error-flow-redirection.md)  
+ [Paso 3: Adición de redirección de flujo de errores](lesson-4-3-adding-error-flow-redirection.md)  
   
   

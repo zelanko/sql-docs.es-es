@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 4ff04042-8367-46f3-8a16-c94682d6eedb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f66a0ce65a0d16099d7371c003a813b129b3859f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b6ec643fb2bb3055779a09559a517ee8a53ecc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867879"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551350"
 ---
-# <a name="mssqlserver41396"></a>MSSQLSERVER_41396
+# <a name="mssqlserver_41396"></a>MSSQLSERVER_41396
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|41396|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|41396|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|MAX_SORT_ROWS_EXCEEDED|  
 |Texto del mensaje|La operación de ordenación ha superado el límite del búfer. La ejecución del procedimiento almacenado se anuló. Consulte los Libros en pantalla de SQL Server para obtener más información.|  
@@ -40,7 +39,7 @@ ms.locfileid: "62867879"
 ## <a name="user-action"></a>Acción del usuario  
  Seleccione menos filas o reduzca la complejidad de la consulta quitando combinaciones o funciones de agregado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

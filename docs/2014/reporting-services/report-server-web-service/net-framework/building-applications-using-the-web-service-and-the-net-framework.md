@@ -21,14 +21,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520354"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Generar aplicaciones utilizando el servicio web y .NET Framework
-  Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede usar construcciones de programación familiares (como métodos, tipos primitivos y tipos complejos definidos por el usuario) para trabajar con los servicios web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contiene una infraestructura y herramientas que puede utilizar para crear clientes de servicios web que pueden llamar a cualquier servicio web que cumpla los estándares del World Wide Web Consortium (W3C).  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Con, puede usar construcciones de programación familiares, como métodos, tipos primitivos y tipos complejos definidos por el usuario para trabajar con servicios Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contiene una infraestructura y herramientas que puede utilizar para crear clientes de servicios web que pueden llamar a cualquier servicio web que cumpla los estándares del World Wide Web Consortium (W3C).  
   
  Un cliente del servicio web del servidor de informes es cualquier componente o aplicación que se comunica con un servidor de informes utilizando los mensajes del Protocolo simple de acceso a objetos (SOAP).  
   
@@ -50,19 +50,19 @@ ms.locfileid: "62520354"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Creación del proxy del servicio web](creating-the-web-service-proxy.md)|Describe las formas de agregar una clase de proxy a un proyecto mediante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
-|[Autenticación del servicio web](web-service-authentication.md)|Describe cómo se autentican las llamadas al servicio web del servidor de informes.|  
-|[Llamada a métodos de servicio web](calling-web-service-methods.md)|Describe cómo usar la API de SOAP para llamar a los métodos de servicio web en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
-|[Definición de la propiedad Url del servicio web](setting-the-url-property-of-the-web-service.md)|Explica cómo dirigir mediante programación el proxy del servicio web a una dirección URL de un servidor nuevo después de haber creado su referencia web.|  
+|[Creación del proxy del servicio web](creating-the-web-service-proxy.md)|Describe las maneras de agregar una clase de proxy al proyecto mediante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
+|[Autenticación de servicio Web](web-service-authentication.md)|Describe cómo se autentican las llamadas al servicio web del servidor de informes.|  
+|[Llamar a métodos de servicio web](calling-web-service-methods.md)|Describe cómo utilizar la API SOAP para llamar a métodos de servicio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]en.|  
+|[Establecer la propiedad Url del servicio web](setting-the-url-property-of-the-web-service.md)|Explica cómo dirigir mediante programación el proxy del servicio web a una dirección URL de un servidor nuevo después de haber creado su referencia web.|  
 |[Proporcionar argumentos de métodos de servicio web](supplying-web-service-method-arguments.md)|Describe cómo invocar un método de servicio web y proporcionar los argumentos del método.|  
-|[Omisión de valores para objetos de servicio web opcionales](omitting-values-for-optional-web-service-objects.md)|Describe cómo omitir los valores para los objetos de servicio web opcionales.|  
-|[Uso de métodos de servicio web seguros](using-secure-web-service-methods.md)|Describe el valor **SecureConnectionLevel** y la forma en la que afecta al uso de la API de SOAP de Reporting Services.|  
-|[Transferencia de la configuración de la información de dispositivo a las extensiones de representación](passing-device-information-settings-to-rendering-extensions.md)|Describe la configuración de la información de dispositivos que se utiliza para representar los informes en formatos diferentes.|  
+|[Omitir valores para objetos de servicio web opcionales](omitting-values-for-optional-web-service-objects.md)|Describe cómo omitir los valores para los objetos de servicio web opcionales.|  
+|[Usar métodos de servicio web seguros](using-secure-web-service-methods.md)|Describe el valor **SecureConnectionLevel** y la forma en la que afecta al uso de la API de SOAP de Reporting Services.|  
+|[Pasar la configuración de información de dispositivo a las extensiones de representación](passing-device-information-settings-to-rendering-extensions.md)|Describe la configuración de la información de dispositivos que se utiliza para representar los informes en formatos diferentes.|  
 |[Configuración de la extensión de entrega de Reporting Services](reporting-services-delivery-extension-settings.md)|Describe la configuración que se utiliza para entregar informes mediante el correo electrónico del servidor de informes.|  
-|[Uso de encabezados SOAP de Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explica el uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Introducción a control de excepciones en Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Proporciona información sobre la manera en la que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] administra los errores.|  
+|[Utilizar los encabezados SOAP de Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explica el uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Introducción a la administración de excepciones en Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Proporciona información sobre la manera en la que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] administra los errores.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servicio web del servidor de informes](../report-server-web-service.md)   
  [Referencia técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)  
   

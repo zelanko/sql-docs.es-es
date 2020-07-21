@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Agrupación aproximada (pestaña columnas) | Microsoft Docs
+title: Editor de transformación agrupación aproximada (pestaña columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6194849367e89e2e7ba93e0f1138f4fdef59b3c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058356"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425292"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
   Use la pestaña **Columnas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas utilizadas para agrupar filas con valores duplicados.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058356"
  **Columnas de entrada disponibles**  
  Seleccione en esta lista las columnas de entrada utilizadas para agrupar filas con valores duplicados.  
   
- **Name**  
+ **Nombre**  
  Muestra los nombres de las columnas de entrada disponibles.  
   
  **Paso a través**  
@@ -57,7 +56,7 @@ ms.locfileid: "66058356"
  **Números**  
  Especifique la importancia de los números iniciales y finales en la comparación de los datos de la columna. Por ejemplo, si los números iniciales son significativos, "123 Main Street" no se agrupará con "456 Main Street."  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Neither**|Los números iniciales y finales no son significativos.|  
 |**Leading**|Solo son significativos los números iniciales.|  
@@ -67,7 +66,7 @@ ms.locfileid: "66058356"
  **Marcas de comparación**  
  Para más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](data-flow/comparing-string-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificar filas de datos similares mediante la transformación Agrupación aproximada](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

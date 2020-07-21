@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc666567edb0c09896953de58a5f98bef166fbd4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066725"
 ---
 # <a name="select-source-dialog-box"></a>Seleccionar origen (cuadro de diálogo)
   Utilice este cuadro de diálogo para seleccionar el origen de las directivas que se van a ejecutar. Para seleccionar uno o más archivos XML que contienen directivas, seleccione **Archivos**. Para ejecutar las directivas que se buscan en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Servidor**.  
@@ -36,7 +35,7 @@ ms.locfileid: "62691803"
  **Archivos**  
  Seleccione uno o más archivos XML que contienen directivas.  
   
- **Servidor**  
+ **Server**  
  Permite seleccionar un servidor que contiene las directivas que se desean ejecutar.  
   
  **Tipo de servidor**  
@@ -57,7 +56,7 @@ ms.locfileid: "62691803"
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la autenticación de Windows para conectarse.  
   
  **Inicio de sesión**  
@@ -66,7 +65,7 @@ ms.locfileid: "62691803"
  **Contraseña**  
  Escriba la contraseña del inicio de sesión. Esta opción solo es editable si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../ssms/object/object-explorer.md)   
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   

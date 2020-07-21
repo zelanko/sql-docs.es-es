@@ -16,18 +16,18 @@ helpviewer_keywords:
 - sp_helplanguage
 - default languages
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733198"
 ---
-# <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de un idioma alternativo concreto o de todos los idiomas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -41,24 +41,24 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @language = ] 'language'` Es el nombre del idioma alternativo para el que se va a mostrar información. *lenguaje* es **sysname**, su valor predeterminado es null. Si *lenguaje* está especificado, se devuelve información sobre el lenguaje especificado. Si no se especifica el idioma, información acerca de todos los idiomas en el **sys.syslanguages** se devuelve la vista de compatibilidad.  
+`[ @language = ] 'language'`Es el nombre del idioma alternativo para el que se va a mostrar información. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *Language* , se devuelve información sobre el idioma especificado. Si no se especifica Language, se devuelve información acerca de todos los lenguajes de la vista de compatibilidad de **lenguajessys.sys** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Número de identificación del idioma.|  
-|**dateformat**|**nchar(3)**|Formato de la fecha.|  
-|**datefirst**|**tinyint**|Primer día de la semana: 1 para el lunes, 2 para el martes y así sucesivamente hasta 7 para el domingo.|  
-|**upgrade**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
+|**DateFormat**|**nchar(3)**|Formato de la fecha.|  
+|**DATEFIRST**|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
+|**actualización**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
 |**name**|**sysname**|Nombre del idioma.|  
 |**alias**|**sysname**|Nombre alternativo del idioma.|  
-|**months**|**nvarchar(372)**|Nombres de los meses.|  
-|**SHORTMONTHS**|**nvarchar(132)**|Abreviaturas de los nombres de los meses.|  
-|**Días**|**nvarchar(217)**|Nombres de los días.|  
+|**months**|**nvarchar (372)**|Nombres de los meses.|  
+|**shortmonths**|**nvarchar (132)**|Abreviaturas de los nombres de los meses.|  
+|**durante**|**nvarchar (217)**|Nombres de los días.|  
 |**lcid**|**int**|Id. de configuración regional de Windows para el idioma.|  
 |**msglangid**|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -74,17 +74,17 @@ sp_helplanguage [ [ @language = ] 'language' ]
 sp_helplanguage French;  
 ```  
   
-### <a name="b-returning-information-about-all-languages"></a>b. Devolver información acerca de todos los idiomas  
+### <a name="b-returning-information-about-all-languages"></a>B. Devolver información acerca de todos los idiomas  
  El siguiente ejemplo muestra información acerca de todos los idiomas alternativos instalados.  
   
 ```  
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [ESTABLECER lenguaje &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

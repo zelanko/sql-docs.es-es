@@ -1,6 +1,6 @@
 ---
-title: 'Recuperar datos no utilizados mediante SQL: Overflow-Field (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Obtener datos no utilizados con SQL: Overflow-Field (SQLXML)'
+description: 'Obtenga información sobre cómo usar SQL: Overflow-Field en SQLXML 4,0 para recuperar datos que la función OPENXML no consumió.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,17 +17,18 @@ ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6714940fe14e2f7a1182a24c37f0d7c58b4d3e72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cb675f7440f0718e2b981992a129bb2b3b97fd41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764906"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperar datos no utilizados mediante sql:overflow-field (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Al recuperar datos de una base de datos mediante esquemas anotados, puede especificar el atributo **SQL: Overflow-Field** para identificar la columna de la tabla en la que se almacenan los datos de desbordamiento. Se puede especificar el atributo **SQL: Overflow-Field** en **\<elemento >** .  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Al recuperar datos de una base de datos mediante esquemas anotados, puede especificar el atributo **SQL: Overflow-Field** para identificar la columna de la tabla en la que se almacenan los datos de desbordamiento. El atributo **SQL: Overflow-Field** puede especificarse en **\<element>** .  
   
  Este dato se recupera después de las siguientes maneras:  
   

@@ -1,6 +1,6 @@
 ---
-title: Motor de SQL Server Extended Events | Microsoft Docs
-ms.custom: ''
+title: Motor de SQL Server Extended Events
+description: El motor de eventos extendidos de SQL Server permite la definición de eventos y el procesamiento de datos de eventos, administra eventos extendidos y mantiene una lista de sesiones.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,16 +13,16 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9178b6246c32c54aee6979bec00bac8b53e700fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756868"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motor de SQL Server Extended Events
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El motor de Extended Events [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de servicios y objetos que:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68009400"
   
  ![Arquitectura de eventos extendidos detallada](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Arquitectura de eventos extendidos detallada")  
   
- Observe lo siguiente:  
+ Tenga en cuenta lo siguiente:  
   
 -   Cada proceso de Windows puede tener uno o más módulos (**proceso Win32**, **módulo Win32**). También se les conoce como módulos *binarios* o *ejecutables*.  
   

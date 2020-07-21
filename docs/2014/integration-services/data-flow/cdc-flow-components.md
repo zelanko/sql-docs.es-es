@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 909c8a7d6bb9959a66681c317d5ba05b76028e91
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828566"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432422"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
   Los componentes de la captura de datos modificados de Attunity para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] ayudan a los desarrolladores de SSIS en su trabajo con CDC y reducen la complejidad de los paquetes CDC.  
@@ -62,7 +61,7 @@ ms.locfileid: "62828566"
 ### <a name="restart-ssis"></a>Reiniciar SSIS  
  Después de instalar los componentes CDC, debe reiniciar el servicio SSIS para asegurarse de que los componentes funcionarán correctamente cuando se desarrollen paquetes en SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
   
- Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí** cuando se le solicite.  
+ Aparecerá un mensaje después de instalar los componentes. Haga clic en **sí** cuando se le solicite.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Desinstalar los componentes CDC de Microsoft  
  Use el asistente para la desinstalación con el fin de desinstalar el origen de CDC, el divisor CDC o la tarea Control CDC. Antes de desinstalar los componentes, asegúrese de lo siguiente:  
@@ -79,7 +78,7 @@ ms.locfileid: "62828566"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Introducción a los componentes de la captura de datos modificados  
  Un paquete CDC típico procesa los cambios para un grupo de tablas. En la ilustración siguiente se muestra el flujo de control básico de este tipo de paquete CDC. Este paquete se denomina paquete de procesamiento de la fuente de generación.  
   
- ![Flujo de control de paquete de procesamiento de la fuente de generación](../media/tricklefeedprocessing.gif "Trickle Feed Processing Package Control Flow")  
+ ![Flujo de control de paquete de procesamiento de fuente de entrada](../media/tricklefeedprocessing.gif "Flujo de control de paquete de procesamiento de fuente de entrada")  
   
  Este flujo de control de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contiene dos tareas Control CDC y la tarea Flujo de datos. La primera tarea, denominada **Obtener intervalo de procesamiento CDC** , establece el intervalo de LSN para los cambios que se procesan en la tarea de flujo de datos denominada **Procesar cambios**. Este intervalo se establece según lo que se hubiera procesado durante la ejecución del último paquete y se hubiera guardado en un almacén persistente.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62828566"
   
  La ilustración siguiente muestra el flujo de datos **Procesar cambios** , que muestra en el plano conceptual cómo se procesan los cambios.  
   
- ![Flujo de datos de cambios de proceso](../media/processchangesdataflow.gif "Process Changes Data Flow")  
+ ![Flujo de datos de cambios de proceso](../media/processchangesdataflow.gif "Flujo de datos de cambios de proceso")  
   
  Los pasos que se muestran en esta ilustración son:  
   
@@ -123,11 +122,11 @@ ms.locfileid: "62828566"
   
  En la ilustración siguiente se muestra un paquete SSIS que podría controlar los dos primeros escenarios:  
   
- ![Primeros dos escenarios de control de paquetes SSIS](../media/scenarioonetwo.gif "SSIS package handling first two scenarios")  
+ ![Primeros dos escenarios de control de paquetes SSIS](../media/scenarioonetwo.gif "Primeros dos escenarios de control de paquetes SSIS")  
   
  En la ilustración siguiente se muestra un paquete SSIS que podría controlar el tercer escenario:  
   
- ![Tercer escenario de control de paquetes SSIS](../media/scenario3.gif "SSIS package handling third scenario")  
+ ![Tercer escenario de control de paquetes SSIS](../media/scenario3.gif "Tercer escenario de control de paquetes SSIS")  
   
  Después del paquete de carga inicial, se ejecuta de forma repetida un paquete de actualización de fuente de generación de acuerdo con una programación para procesar los cambios a medida que se encuentren disponibles para su consumo.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "62828566"
   
  Es necesario mantener el valor de la variable de estado CDC en un almacén persistente; este valor se debe leer antes de iniciar el procesamiento de CDC y debe guardarse con el estado actual después de finalizar el procesamiento. La tarea de carga y almacenamiento del estado CDC la puede controlar el desarrollador de SSIS, pero el componente Control CDC puede automatizar esta tarea conservando el valor de estado CDC en una tabla de base de datos.  
   
-## <a name="security-considerations"></a>Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
  En esta sección se enumeran algunas consideraciones de seguridad relacionadas con el uso de los componentes CDC en SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Autorización de acceso a datos modificados  
@@ -186,13 +185,13 @@ ms.locfileid: "62828566"
   
  Por ejemplo, al final de un paquete de carga inicial, cuando se intenta establecer el estado en ILEND, si el estado es TFSTART, el grupo CDC tendrá un estado de error y el paquete de actualización de fuente de generación no se ejecuta (el paquete de carga inicial sí se ejecuta).  
   
- ![Diagrama de estado](../media/statediagram.gif "State Diagram")  
+ ![Diagrama de estado](../media/statediagram.gif "Diagrama de estado")  
   
  Una vez que el paquete de carga inicial se ejecuta correctamente, el paquete de actualización de fuente de generación se ejecuta varias veces de acuerdo con un programa determinado para que se procesen los cambios en las tablas de origen. Cada ejecución del paquete de actualización de fuente de generación es una ejecución de CDC.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Origen de CDC](cdc-source.md)  
+-   [origen de CDC](cdc-source.md)  
   
 -   [Divisor CDC](cdc-splitter.md)  
   
@@ -216,7 +215,7 @@ ms.locfileid: "62828566"
   
 -   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Control CDC](../control-flow/cdc-control-task.md)  
   
   

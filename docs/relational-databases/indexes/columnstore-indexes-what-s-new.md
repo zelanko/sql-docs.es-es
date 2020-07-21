@@ -1,7 +1,7 @@
 ---
 title: Novedades de los índices de almacén de columnas | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009424"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279271"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Resumen de las características de almacén de columnas disponibles en cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en las últimas versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
@@ -49,17 +49,26 @@ ms.locfileid: "70009424"
 |El índice de almacén de columnas puede tener una columna calculada no persistente||||sí|||   
   
  <sup>1</sup> Para crear un índice de almacén de columnas no agrupado de solo lectura, almacénelo en un grupo de archivos de solo lectura.  
+ 
+> [!NOTE]
+> El grado de paralelismo (DOP) de las operaciones del [modo de proceso por lotes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) está limitado a dos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition y a uno para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web Edition y Express Edition. Se refiere a los índices de almacén de columnas que se crean en tablas basadas en disco y en tablas optimizadas para memoria.
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] agrega estas nuevas características.
+
+### <a name="functional"></a>Funcional
+- A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. Anteriormente, se necesitaba una operación de reorganización de índices para combinar grupos de filas con datos eliminados parcialmente. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo. 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] agrega estas nuevas características.
 
-### <a name="functional"></a>Funciones
+### <a name="functional"></a>Funcional
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admite columnas calculadas no persistentes en índices de almacén de columnas agrupados. No se admiten columnas persistentes en índices de almacén de columnas agrupados. No se puede crear un índice no agrupado en un índice de almacén columnas con una columna calculada. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] incorpora mejoras esenciales destinadas a mejorar el rendimiento y la flexibilidad de los índices de almacén de columnas. Estas mejoras optimizan los escenarios de almacenamiento de datos y facilitan los análisis operativos en tiempo real.  
   
-### <a name="functional"></a>Funciones  
+### <a name="functional"></a>Funcional  
   
 -   Una tabla de almacén de filas puede contar con un índice de almacén de columnas no agrupado actualizable. Antes, el índice de almacén de columnas no agrupado era de solo lectura.  
   
@@ -79,22 +88,26 @@ ms.locfileid: "70009424"
   
 -   El almacén de columnas admite con la desfragmentación de índices mediante la eliminación de filas suprimidas sin necesidad de volver a generar el índice explícitamente. La instrucción `ALTER INDEX ... REORGANIZE` quita las filas eliminadas, según una directiva definida internamente, del almacén de columnas como una operación en línea  
   
--   Es posible acceder a los índices de almacén de columnas en una réplica secundaria legible de AlwaysOn. Puede optimizar el rendimiento de los análisis operativos descargando consultas de análisis en una réplica secundaria de AlwaysOn.  
+-   Es posible acceder a los índices de almacén de columnas en una réplica secundaria legible de AlwaysOn. Se puede mejorar el rendimiento de los análisis operativos descargando consultas de análisis en una réplica secundaria de AlwaysOn.  
   
--   Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calcula las funciones de agregado `MIN`, `MAX`, `SUM`, `COUNT` y `AVG` durante los recorridos de tabla cuando el tipo de datos usa un máximo de ocho bytes (y no es de cadena). Se admite la aplicación de agregado con o sin la cláusula Agrupar por tanto para los índices de almacén de columnas agrupados como para los no agrupados.  
+-   La Aplicación de agregados calcula las funciones de agregado `MIN`, `MAX`, `SUM`, `COUNT` y `AVG` durante los recorridos de tabla cuando el tipo de datos usa un máximo de ocho bytes y no es de cadena. Se admite la Aplicación de agregados, con la cláusula `GROUP BY` o sin esta, tanto para los índices de almacén de columnas agrupados como para los no agrupados. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta mejora está reservada para la Enterprise Edition.
   
--   La aplicación de predicado acelera las consultas que comparan cadenas del tipo [v]archar o n[v]archar. Esto se aplica a los operadores de comparación habituales y se incluyen operadores que utilizan filtros de mapa de bits, como LIKE. Además, funciona con todas las intercalaciones que admite SQL Server.  
+-   La Aplicación de predicado de la cadena acelera las consultas que comparan cadenas del tipo VARCHAR/CHAR o NVARCHAR/NCHAR. Esto se aplica a los operadores de comparación habituales y se incluyen operadores que utilizan filtros de mapa de bits, como `LIKE`. Esto funciona con todas las intercalaciones admitidas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta mejora está reservada para Enterprise Edition. 
+
+-   Mejoras para las operaciones en modo de proceso por lotes mediante el uso de las capacidades de hardware basadas en vectores. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta el nivel de compatibilidad de la CPU para las extensiones de hardware AVX 2 (Extensiones de vector avanzadas) y SSE 4 (Extensiones SIMD de streaming 4) y las usa si son compatibles. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta mejora está reservada para Enterprise Edition.
   
 ### <a name="performance-for-database-compatibility-level-130"></a>Rendimiento del nivel de compatibilidad de base de datos 130  
   
 -   El modo de ejecución por lotes admite ahora consultas con cualquiera de estas operaciones:  
-    -   SORT  
-    -   Agregados con varias funciones distintas. Algunos ejemplos: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`.  
+    -   `SORT`  
+    -   Agregados con varias funciones distintas. Algunos ejemplos son los siguientes: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG` y `STDEV/STDEVP`.  
     -   Funciones de agregado de ventana: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` y `CLR`.  
     -   Agregados definidos por el usuario de ventana: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` y `GROUPING`.  
     -   Funciones analíticas de agregado de ventana: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` y `PERCENT_RANK`.  
+
 -   Las consultas de un solo proceso que se ejecuten con `MAXDOP 1` o un plan de consulta en serie se ejecutarán en el modo por lotes. Antes, solo las consultas multiproceso se ejecutaban por lotes.  
--   Las consultas de tabla con optimización para memoria pueden tener planes paralelos en el modo de interoperabilidad de SQL a la hora de acceder a datos de índices de almacén de columnas o almacén de filas.  
+
+-   Las consultas de tabla optimizada para memoria pueden tener planes paralelos en el modo de interoperabilidad de SQL a la hora de acceder a datos de índices de almacén de columnas o almacén de filas.
   
 ### <a name="supportability"></a>Compatibilidad  
 Las siguientes vistas del sistema son nuevas para el almacén de columnas:  

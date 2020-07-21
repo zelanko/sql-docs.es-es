@@ -18,17 +18,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 564f34822a6c674b20cb0fd54879ee44de16dd6b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064729"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732670"
 ---
-# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve la longitud definida de una columna, en bytes.
   
@@ -55,7 +55,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene el per
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de los elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos como COL_LENGTH es posible que devuelvan NULL, si el usuario no tiene el permiso correcto para el objeto. Vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md) para obtener más información.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Para las columnas de tipo **varchar** declaradas con el especificador **max** (**varchar(max)** ), COL_LENGTH devuelve el valor -1.
   
 ## <a name="examples"></a>Ejemplos  
@@ -79,7 +79,7 @@ VarChar     NVarChar
 40          80  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  

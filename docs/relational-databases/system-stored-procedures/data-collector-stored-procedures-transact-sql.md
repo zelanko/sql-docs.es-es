@@ -1,5 +1,5 @@
 ---
-title: Recopilador de datos procedimientos almacenados (Transact-SQL) | Microsoft Docs
+title: Procedimientos almacenados del recopilador de datos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d35bbc8be52beca58977a8eba224f79af4914311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942402"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898189"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procedimientos almacenados del recopilador de datos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   SQL Server admite los siguientes procedimientos almacenados del sistema que se usan para trabajar con el recopilador de datos y los componentes siguientes: conjuntos de recopilación, elementos de recopilación y tipos de colección.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67942402"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

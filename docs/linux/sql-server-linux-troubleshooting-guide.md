@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032207"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897224"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solución de problemas de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este documento se describe cómo solucionar problemas de Microsoft SQL Server en Linux o en un contenedor de Docker. A la hora de solucionar problemas de SQL Server en Linux, no olvide revisar las características admitidas y las limitaciones conocidas en las [Notas de la versión de SQL Server en Linux](sql-server-linux-release-notes.md).
 
 > [!TIP]
-> Para obtener respuesta a las preguntas más frecuentes, consulte las [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md).
+> Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md).
 
-## <a id="connection"></a> Solución de errores de conexión
+## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> Solución de errores de conexión
 Si tiene dificultades para conectarse a la instancia de SQL Server de Linux, hay que comprobar varias cosas.
 
 - Si no puede conectarse localmente mediante **localhost**, pruebe a usar la dirección IP 127.0.0.1. Es posible que **localhost** no esté asignado correctamente a esta dirección.
@@ -56,7 +56,7 @@ Si tiene dificultades para conectarse a la instancia de SQL Server de Linux, hay
 
 ## <a name="manage-the-sql-server-service"></a>Administración del servicio SQL Server
 
-En las secciones siguientes se muestra cómo iniciar, detener, reiniciar y comprobar el estado del servicio SQL Server. 
+En las secciones siguientes se muestra cómo iniciar, detener, reiniciar y comprobar el estado del servicio SQL Server.
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Administración del servicio mssql-server en Red Hat Enterprise Linux (RHEL) y Ubuntu 
 

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ba397d39378e6e45bf63dffa4eb2efbca3b432c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf427d357f5013b19cc5a9d23fd2090990615be2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953024"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901431"
 ---
 # <a name="getclob-method-javalangstring"></a>Método getClob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public java.sql.Clob getClob(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto CLOB.  
+ Un objeto Clob.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getClob especifica este método getClob en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

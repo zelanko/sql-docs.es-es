@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025551"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
   En este tema se describe cómo deshabilitar un índice o restricciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un índice, se impide que el usuario pueda tener acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición del índice se conserva en los metadatos y las estadísticas de índice se mantienen en índices no clúster. La deshabilitación de un índice clúster o no clúster en una vista elimina físicamente los datos del índice. Al deshabilitar un índice clúster en una tabla, se impide el acceso a los datos, que siguen en la tabla pero dejan de estar disponibles para las operaciones de lenguaje de manipulación de datos (DML) hasta que se quite o recompile el índice.  
@@ -47,9 +46,9 @@ ms.locfileid: "63162404"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El índice no se mantiene mientras está deshabilitado.  
   
@@ -85,12 +84,12 @@ ms.locfileid: "63162404"
   
 -   Al crear un nuevo índice clúster se habilitan los índices no clúster deshabilitados previamente. Para obtener más información, consulte [Enable Indexes and Constraints](enable-indexes-and-constraints.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para ejecutar ALTER INDEX, se necesita, como mínimo, el permiso ALTER en la tabla o en la vista.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Para deshabilitar un índice  
   
@@ -127,7 +126,7 @@ ms.locfileid: "63162404"
  Muestra el nombre de la tabla o vista en la que se ha creado el índice.  
   
  **Tipo de índice**  
- Muestra el tipo del índice: **Clúster**, **Nonclustered**, **espacial**, o **XML**.  
+ Muestra el tipo de índice: **Agrupado**, **No agrupado**, **Espacial**o **XML**.  
   
  **Estado**  
  Muestra el estado de la operación de deshabilitación. Los valores posibles tras la ejecución son:  
@@ -148,18 +147,18 @@ ms.locfileid: "63162404"
   
      Se ha encontrado un error durante la operación de deshabilitación de índices; la operación no ha finalizado correctamente.  
   
--   **Detenido**  
+-   **Stopped**  
   
      La deshabilitación del índice no ha finalizado correctamente porque el usuario ha detenido la operación.  
   
- **de mensaje**  
+ **Mensaje**  
  Proporciona el texto de los mensajes de error durante la operación de deshabilitación. Durante la ejecución, los errores aparecen como hipervínculos. El texto de los hipervínculos describe el cuerpo del error. La columna **Mensaje** pocas veces es lo suficientemente ancha para poder leer el texto completo del mensaje. Hay dos maneras de leer el texto completo:  
   
 -   Mueva el puntero sobre la celda del mensaje para que aparezca la información sobre herramientas con el texto de error.  
   
 -   Haga clic en el hipervínculo para mostrar un cuadro de diálogo con el error completo.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-disable-an-index"></a>Para deshabilitar un índice  
   

@@ -1,5 +1,5 @@
 ---
-title: Proteger los archivos | Microsoft Docs
+title: Proteger archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936046"
 ---
 # <a name="check-in-files"></a>Proteger archivos
   Para poner los archivos controlados por código fuente a disposición de otros usuarios, es necesario proteger esos archivos en el control de código fuente. Al proteger un archivo, la versión que se protege se escribe en el proveedor de control de código fuente y se convierte en la última versión del archivo.  
@@ -41,13 +40,13 @@ ms.locfileid: "62812589"
      **Comentarios**  
      Agregue un comentario para asociarlo a la operación de protección.  
   
-     **No mostrar en el cuadro de diálogo de comprobación al proteger elementos**  
+     **No mostrar el cuadro de diálogo Proteger al proteger elementos**  
      Suprime el cuadro de diálogo en las operaciones de protección.  
   
      **Vista plana**  
      Muestra los archivos que protege como listas planas en su conexión de control de código fuente.  
   
-     **Name**  
+     **Nombre**  
      Muestra los nombres de los elementos que se protegen. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea proteger un elemento determinado, desactive su casilla.  
   
      **Opciones**  
@@ -61,7 +60,7 @@ ms.locfileid: "62812589"
   
  Si el archivo que ha protegido no forma parte de una desprotección compartida, el entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] lo protege inmediatamente. De lo contrario, es posible que se le pida que combine su versión con las versiones creadas por otros usuarios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver una lista de archivos modificados](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [Administrar protecciones](../../2014/database-engine/manage-checkins.md)  
   

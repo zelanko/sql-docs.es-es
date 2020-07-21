@@ -1,5 +1,5 @@
 ---
-title: Referencias a campos globales y de usuario integrados (Generador de informes y SSRS) | Microsoft Docs
+title: Referencias a campos globales y de usuario integrados (Generador de informes) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581851"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082211"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -27,14 +27,14 @@ ms.locfileid: "65581851"
 |**Miembro**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|**DateTime**|Fecha y hora en que se empezó a ejecutar el informe.|  
-|PageNumber|**Integer**|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de los saltos de página para un rectángulo, una región de datos, un grupo de regiones de datos o una asignación, en la propiedad PageBreak, establezca la propiedad ResetPageNumber en **True**. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
+|PageNumber|**Entero**|Número de página actual relativo a los saltos de página que restablecieron el número de página. Al principio del procesamiento del informe, el valor inicial está establecido en 1. El número de página aumenta en cada página representada.<br /><br /> Para numerar las páginas dentro de los saltos de página para un rectángulo, una región de datos, un grupo de regiones de datos o una asignación, en la propiedad PageBreak, establezca la propiedad ResetPageNumber en **True**. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
 |ReportFolder|**String**|Ruta de acceso completa a la carpeta en la que se halla el informe. No incluye la dirección URL del servidor de informes.|  
 |ReportName|**String**|Nombre del informe tal como se almacena en la base de datos del servidor de informes.|  
 |ReportServerUrl|**String**|Dirección URL del servidor de informes en el que se ejecuta el informe.|  
-|TotalPages|**Integer**|Número total de páginas relativo a los saltos de página que restablecen PageNumber. Si no se establece ningún salto de página, este valor es igual que OverallTotalPages.<br /><br /> TotalPages solo se puede usar en una expresión en un encabezado o pie de página.|  
+|TotalPages|**Entero**|Número total de páginas relativo a los saltos de página que restablecen PageNumber. Si no se establece ningún salto de página, este valor es igual que OverallTotalPages.<br /><br /> TotalPages solo se puede usar en una expresión en un encabezado o pie de página.|  
 |PageName|**String**|Nombre de la página. Al comenzar el procesamiento del informe, el valor inicial se establece desde InitialPageName, una propiedad de informe. Cuando se procesa cada elemento de informe, el valor correspondiente de PageName reemplaza este valor de un rectángulo, una región de datos, un grupo de regiones de datos o una asignación. No se admite en grupos de jerarquías de columnas de Tablix.<br /><br /> PageName solo se puede usar en una expresión en un encabezado o pie de página.|  
-|OverallPageNumber|**Integer**|Número de página de la página actual para el informe completo. ResetPageNumber no afecta a este valor.<br /><br /> OverallPageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
-|OverallTotalPages|**Integer**|Número total de páginas de todo el informe. ResetPageNumber no afecta a este valor.<br /><br /> OverallTotalPages solo se puede usar en una expresión en un encabezado o pie de página.|  
+|OverallPageNumber|**Entero**|Número de página de la página actual para el informe completo. ResetPageNumber no afecta a este valor.<br /><br /> OverallPageNumber solo se puede usar en una expresión en un encabezado o pie de página.|  
+|OverallTotalPages|**Entero**|Número total de páginas de todo el informe. ResetPageNumber no afecta a este valor.<br /><br /> OverallTotalPages solo se puede usar en una expresión en un encabezado o pie de página.|  
 |RenderFormat|**RenderFormat**|Información sobre la solicitud de representación actual.<br /><br /> Para obtener más información, vea la sección "RenderFormat" más adelante.|  
   
  Los miembros de la colección **Globals** devuelven datos de tipo variant. Si desea usar un miembro de esta colección en una expresión que requiere un tipo de datos específico, primero deberá convertir la variable. Por ejemplo, para convertir los datos de tipo variant de la fecha y hora de ejecución a formato de fecha, utilice `=CDate(Globals!ExecutionTime)`. Para obtener más información, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "65581851"
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de **RenderFormat**.  
   
-|Miembro|Tipo|Descripción|  
+|Member|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |Nombre|**String**|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
 |IsInteractive|**Boolean**|Si la solicitud de representación actual utiliza un formato de representación interactivo.|  

@@ -1,8 +1,8 @@
 ---
-title: Realización de una evaluación de migración SQL Server (Data Migration Assistant) | Microsoft Docs
+title: Realización de una evaluación de migración SQL Server
+titleSuffix: Data Migration Assistant
 description: Aprenda a usar Data Migration Assistant para evaluar una SQL Server local antes de migrar a otro SQL Server o a Azure SQL Database
-ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,20 +12,24 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892689"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886112"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realización de una evaluación de migración SQL Server con Data Migration Assistant
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Evaluación de la migración de SQL Server con Data Migration Assistant
 
 Las siguientes instrucciones paso a paso le ayudarán a realizar la primera evaluación de la migración a SQL Server locales, SQL Server que se ejecutan en una máquina virtual de Azure o Azure SQL Database mediante el uso de Data Migration Assistant.
 
-## <a name="create-an-assessment"></a>Creación de una evaluación
+   > [!NOTE]
+   > Data Migration Assistant v 5.0 incluye compatibilidad para analizar la conectividad de base de datos y las consultas SQL incrustadas en el código de la aplicación. Para obtener más información, consulte la entrada de blog sobre el [uso de Data Migration Assistant para evaluar el nivel de acceso a datos de una aplicación](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+
+## <a name="create-an-assessment"></a>Crear una evaluación
 
 1. Seleccione el icono de **nuevo** (+) y, a continuación, seleccione el tipo de proyecto **evaluación** .
 
@@ -33,9 +37,9 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
     Si va a actualizar la instancia de SQL Server local a una instancia de SQL Server local moderna o a SQL Server hospedada en una máquina virtual de Azure, establezca el tipo de servidor de origen y de destino en **SQL Server**. Si va a migrar a Azure SQL Database, establezca el tipo de servidor de destino en **Azure SQL Database**.
 
-3. Haga clic en **Create**(Crear).
+3. Haga clic en **Crear**.
 
-   ![Creación de una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
+   ![Crear una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
 ## <a name="choose-assessment-options"></a>Elegir opciones de evaluación
 
@@ -52,8 +56,8 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
    Al evaluar la instancia de SQL Server de origen para migrar a Azure SQL Database, puede elegir uno de los siguientes tipos de informe de evaluación o ambos:
 
-    - **Comprobar la compatibilidad de bases de datos**
-    - **Comprobación de la paridad de características**
+    - **Check database compatibility (Comprobar compatibilidad de bases de datos)**
+    - **Check feature parity (Comprobar paridad de características)**
 
     ![Seleccionar el tipo de informe de evaluación para SQL Database destino](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
@@ -68,7 +72,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
     > [!NOTE]
     > Para quitar varias bases de datos, selecciónelas mientras mantiene presionadas las teclas Mayús o Ctrl y, a continuación, haga clic en **quitar orígenes**. También puede Agregar bases de datos de varias instancias de SQL Server si selecciona **Agregar orígenes**.
 
-4. Si tiene consultas SQL ad hoc o dinámicas o cualquier instrucción DML iniciada a través de la capa de datos de la aplicación, escriba la ruta de acceso a la carpeta en la que colocó todos los archivos de sesión de eventos extendidos que recopiló para capturar la carga de trabajo en el origen SQL Server .
+4. Si tiene consultas SQL ad hoc o dinámicas o cualquier instrucción DML iniciada a través de la capa de datos de la aplicación, escriba la ruta de acceso a la carpeta en la que colocó todos los archivos de sesión de eventos extendidos que recopiló para capturar la carga de trabajo en el SQL Server de origen.
 
      En el ejemplo siguiente se muestra cómo crear una sesión de eventos extendidos en el SQL Server de origen para capturar la carga de trabajo de la capa de datos de la aplicación.  Capture la carga de trabajo durante la duración que representa la carga de trabajo máxima.
 
@@ -76,7 +80,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
     DROP EVENT SESSION [DatalayerSession] ON SERVER
     go
     CREATE EVENT SESSION [DatalayerSession] ON SERVER  
-    ADD EVENT sqlserver.sql_statement_completed( 
+    ADD EVENT sqlserver.sql_batch_completed( 
         ACTION (sqlserver.sql_text,sqlserver.client_app_name,sqlserver.client_hostname,sqlserver.database_id))
     ADD TARGET package0.asynchronous_file_target(SET filename=N'C:\temp\Demos\DataLayerAppassess\DatalayerSession.xel')  
     WITH (MAX_MEMORY=2048 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=3 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
@@ -106,11 +110,14 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
         go
     ```
 
-5. Haga clic en **siguiente** para iniciar la evaluación.
+5. Haga clic en **Siguiente** para iniciar la evaluación.
 
     ![Adición de orígenes e inicio de la evaluación](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Ver resultados
+> [!NOTE]
+> Para ejecutar varias evaluaciones simultáneamente y ver su estado, abra la página **All Assessments** (Todas las evaluaciones).
+
+## <a name="view-results"></a>Vista de resultados
 
 La duración de la evaluación depende del número de bases de datos agregadas y el tamaño del esquema de cada base de datos. Los resultados se muestran para cada base de datos en cuanto están disponibles.
 
@@ -128,19 +135,19 @@ Las recomendaciones de características cubren distintos tipos de característic
 
 ![Ver recomendaciones de características](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la migración y problemas de paridad de características. Revise los resultados de ambas categorías seleccionando las opciones específicas.
+Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la migración y problemas de paridad de características.Revise los resultados de ambas categorías seleccionando las opciones específicas.
 
 - La categoría de **paridad de características SQL Server** proporciona un conjunto completo de recomendaciones, enfoques alternativos disponibles en Azure y procedimientos de mitigación. Le ayuda a planear este esfuerzo en los proyectos de migración.
 
   ![Ver información de SQL Server paridad de características](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- La categoría de **problemas de compatibilidad** proporciona características parcialmente compatibles o no compatibles que bloquean la migración de bases de datos locales de SQL Server a bases de datos SQL de Azure. A continuación, se proporcionan recomendaciones para ayudarle a solucionar esos problemas.
+- La categoría de **problemas de compatibilidad** proporciona características parcialmente compatibles o no compatibles que bloquean la migración de bases de datos locales de SQL Server a bases de datos SQL de Azure.A continuación, se proporcionan recomendaciones para ayudarle a solucionar esos problemas.
 
   ![Ver problemas de compatibilidad](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Evaluación de la disponibilidad de los datos para el destino
 
-Si desea ampliar aún más estas evaluaciones a toda la información y encontrar la preparación relativa de SQL Server instancias y bases de datos para la migración a Azure SQL Database, cargue los resultados en la instancia de Azure Migrate Hub seleccionando **cargar en Azure Migrate** .
+Si desea ampliar aún más estas evaluaciones a toda la información y encontrar la preparación relativa de SQL Server instancias y bases de datos para la migración a Azure SQL Database, cargue los resultados en el concentrador de Azure Migrate seleccionando **cargar en Azure Migrate**.
 
 Esto le permite ver los resultados consolidados en el proyecto de Azure Migrate Hub.
 
@@ -152,4 +159,6 @@ Esto le permite ver los resultados consolidados en el proyecto de Azure Migrate 
 
 Una vez finalizada la evaluación de todas las bases de datos, seleccione **exportar Informe** para exportar los resultados a un archivo JSON o a un archivo CSV. A continuación, puede analizar los datos con su comodidad.
 
-Puede ejecutar varias evaluaciones simultáneamente y ver el estado de las evaluaciones abriendo la página **todas las evaluaciones** .
+## <a name="save-and-load-assessments"></a>Guardado y carga de evaluaciones
+
+Además de exportar los resultados de una evaluación, puede guardar los detalles de la evaluación en un archivo y cargar un archivo de evaluación para revisarlo más adelante.  Para obtener más información, consulte el artículo sobre cómo [Guardar y cargar evaluaciones con Data Migration Assistant](../dma/dma-save-load-assessments.md).

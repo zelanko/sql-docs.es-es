@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffd365b0aea5fae01d0fbd968368d306eb378dbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024398"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de actividad de trabajo (Configuración del filtro)
   Utilice esta página para reducir el número de filas visibles en el Monitor de actividad de trabajo. Inserte criterios en uno o varios de los cuadros disponibles, para mostrar solo las filas que coinciden con los valores especificados. Algunos cuadros, como **Estado** o **Tipo de bloqueo** ofrecen un número determinado de valores posibles, en una lista desplegable. Otros, como **Aplicación** , permiten indicar un número indeterminado de valores, como una lista separada por comas. Los iconos de barra de herramientas permiten ordenar los cuadros disponibles alfabéticamente o por categoría. Haga clic en los criterios para consultar una descripción breve.  
@@ -27,7 +26,7 @@ ms.locfileid: "62856631"
 ## <a name="all-jobs"></a>Todos los trabajos  
  Este grupo de criterios de filtro está disponible cuando se filtra el Monitor de actividad de trabajo.  
   
- **Name**  
+ **Nombre**  
  Filtra trabajos por nombre.  
   
  **Siguiente ejecución**  
@@ -48,7 +47,7 @@ ms.locfileid: "62856631"
  **Categoría**  
  Filtra trabajos por su categoría.  
   
- **Programado**  
+ **Programada**  
  Muestra todos los trabajos con o sin programaciones.  
   
  **Estado**  
@@ -59,12 +58,12 @@ ms.locfileid: "62856631"
  Este cuadro sin nombre proporciona una descripción breve de los criterios a medida que se seleccionan.  
   
  **Aplicar filtro**  
- Para aplicar el filtro, haga clic en **aplicar filtro** y, a continuación, haga clic en **Aceptar**. Para conservar la configuración de filtro en el **configuración del filtro** diálogo cuadro, pero no aplicarlos, desactive la opción **aplicar filtro**y, a continuación, haga clic en **Aceptar**, para mostrar todas las filas.  
+ Para aplicar el filtro, haga clic en **aplicar filtro** y, a continuación, haga clic en **Aceptar**. Para conservar la configuración del filtro en el cuadro de diálogo **configuración del filtro** , pero no aplicarla, desactive **aplicar filtro**y, a continuación, haga clic en **Aceptar**para mostrar todas las filas.  
   
- **Desactivar**  
+ **Borrar**  
  Recupera la configuración predeterminada del filtro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actividad de trabajos de monitor](../../ssms/agent/monitor-job-activity.md)  
   
   

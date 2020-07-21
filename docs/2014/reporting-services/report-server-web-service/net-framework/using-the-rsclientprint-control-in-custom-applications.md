@@ -16,20 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155002"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
-  El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
+  El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
   
  La impresión del lado cliente ofrece un modo de controlar y mejorar la calidad de la copia impresa de un informe HTML anulando la configuración de impresión del explorador y utilizando, en su lugar, dimensiones de página, márgenes, texto de encabezados y pies de página del informe para crear la salida impresa. El control de impresión lee los valores de las propiedades del informe para establecer el tamaño de página y los márgenes.  
   
  Los desarrolladores que quieran habilitar la característica de impresión del lado cliente en barras de herramientas o visores de terceros pueden acceder al control ActiveX por medio del objeto COM **RSClientPrint**. El control se puede distribuir libremente. En la lista siguiente se ofrecen recomendaciones sobre el uso del control:  
   
--   Utilice el control para mejorar la impresión en informes basados en web. Puede especificar el objeto en cualquier lenguaje de programación compatible con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] o en script. El control no está diseñado para aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms.  
+-   Utilice el control para mejorar la impresión en informes basados en web. Puede especificar el objeto en cualquier lenguaje de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]programación compatible con o en script. El control no está diseñado para aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms.  
   
 -   Copie el archivo .cab de los archivos de programa  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y agréguelo al código base de la aplicación personalizada.  
   
@@ -65,17 +65,17 @@ ms.locfileid: "70155002"
   
 ### <a name="rsclientprint-properties"></a>Propiedades de RSClientPrint  
   
-|Property|Type|RW|Default|Descripción|  
+|Propiedad|Tipo|RW|Valor predeterminado|Descripción|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Double|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginRight|Double|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginTop|Double|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginBottom|Double|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|PageWidth|Double|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
-|PageHeight|Double|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
-|Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas si el idioma es el inglés (Estados Unidos). Los valores válidos incluyen: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|string|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir se localiza en estos idiomas: Chino simplificado, Chino tradicional, Inglés, Francés, alemán, Italiano, Japonés, Coreano y español. Los valores válidos incluyen: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Boolean|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
+|MarginLeft|Doble|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginRight|Doble|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginTop|Doble|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginBottom|Doble|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|PageWidth|Doble|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
+|PageHeight|Doble|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
+|Referencia cultural|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas si el idioma es el inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
+|UICulture|String|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir está traducido a los idiomas que se indican a continuación: alemán, chino simplificado, chino tradicional, coreano, español, francés, inglés, italiano y japonés. Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
+|Authenticate|Booleano|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Cuándo establecer la propiedad Authenticate  
  Al imprimir desde una sesión del explorador, no es necesario establecer la propiedad `Authenticate`. En el contexto de una sesión activa, todas las solicitudes del control de impresión que se hacen al servidor de informes se controlan a través del propio explorador. El explorador establece las variables de sesión necesarias para la comunicación con el servidor de informes.  
@@ -93,7 +93,7 @@ ms.locfileid: "70155002"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- Al ejecutar el informe en Azure SQL Reporting, se usan los siguientes valores de CLSID.  
+ Cuando ejecute el informe en Azure SQL Reporting, use los siguientes valores de CLSID.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -102,11 +102,11 @@ ms.locfileid: "70155002"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Compatibilidad de RSPrintClient con el método Print  
  El objeto **RSClientPrint** admite el método **Print** usado para iniciar el cuadro de diálogo Imprimir. El método **Print** dispone de los siguientes argumentos.  
   
-|Argumento|E/S|Type|Descripción|  
+|Argumento|E/S|Tipo|Descripción|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|En|string|Especifica el directorio virtual del servidor de informes (por https://adventure-works/reportserver) ejemplo,.|  
-|ReportPathParameters|En|string|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|En|string|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
+|ServerPath|En|String|Especifica el directorio virtual del servidor de informes (por https://adventure-works/reportserver)ejemplo,.|  
+|ReportPathParameters|En|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|En|String|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
   
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo HTML muestra cómo especificar el archivo .cab, el método **Print** y las propiedades en JavaScript:  
@@ -141,8 +141,8 @@ ms.locfileid: "70155002"
   
  `</BODY>`  
   
-## <a name="see-also"></a>Vea también  
- [Imprimir informes desde un explorador usando el control de impresión &#40;Generador de informes y SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Imprimir informes desde un explorador con el control de impresión &#40;Generador de informes y SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [Configuración de la información del dispositivo de imagen](../../image-device-information-settings.md)  
   

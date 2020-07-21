@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0d25394694fae10b2ff6faeb13d0087eb87d7b0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869204"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553470"
 ---
-# <a name="mssqlserver21879"></a>MSSQLSERVER_21879
+# <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|21879|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|21879|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum21879|  
 |Texto del mensaje|No se puede consultar al servidor redireccionado "%s" para el publicador original "%s" y la base de datos del publicador "%s" para determinar el nombre del servidor remoto; error %d, mensaje de error "%s".|  
@@ -54,8 +53,8 @@ ms.locfileid: "62869204"
   
 -   Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación Kerberos. Vea **Utilizar la autenticación Kerberos con SQL Server** en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Usar `sp_changedistpublisher` para cambiar el modo de seguridad asociado con el publicador original de MSdistpublishers, así como para especificar un inicio de sesión y contraseña que se utilizará para la conexión.  
+-   Use `sp_changedistpublisher` para cambiar el modo de seguridad asociado con el publicador original en MSdistpublishers, así como para especificar un inicio de sesión y una contraseña que se usarán para la conexión.  
   
--   Especifique el parámetro de línea de comandos *BypassPublisherValidation* en la línea de comandos del agente de mezcla para omitir la validación cuando `sp_get_redirected_publisher` se llama en el distribuidor.  
+-   Especifique el parámetro de línea de comandos *BypassPublisherValidation* en la línea de comandos del agente de mezcla para omitir la validación cuando `sp_get_redirected_publisher` se llama a en el distribuidor.  
   
   

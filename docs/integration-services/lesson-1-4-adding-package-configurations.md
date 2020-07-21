@@ -11,10 +11,10 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283681"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lección 1-4: Agregar configuraciones de paquetes
@@ -53,7 +53,7 @@ Compruebe el modelo de implementación actual del proyecto y establézcalo en **
     > [!NOTE]  
     > Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable. Si no desea reiniciar el equipo, puede escribir el nombre de la variable de entorno.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Finalización del asistente, escriba **Configuración de DataTransfer EV** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración en el panel **Vista previa** y, a continuación, haga clic en **Finalizar**.  
   
@@ -81,7 +81,7 @@ Compruebe el modelo de implementación actual del proyecto y establézcalo en **
   
 10. Dentro de Administradores de conexión, expanda NewCustomers y, después, active la casilla **Cadena de conexión** .  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página Finalización del asistente, escriba **Configuración de DataTransfer** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
@@ -104,7 +104,7 @@ Compruebe el modelo de implementación actual del proyecto y establézcalo en **
     > [!NOTE]  
     > Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Finalización del asistente, escriba **Configuración de LoadXMLData EV** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
@@ -128,7 +128,7 @@ Compruebe el modelo de implementación actual del proyecto y establézcalo en **
   
 9. En la página Seleccionar propiedades para la exportación, expanda LoadXMLData, Ejecutables, Cargar datos XML y Propiedades y, después, active las casillas **[XMLSource].[XMLData]** y **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Haga clic en **Siguiente**.  
+10. Haga clic en **Next**.  
   
 11. En la página Finalización del asistente, escriba **Configuración de LoadXMLData** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   

@@ -13,10 +13,10 @@ ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0ee3563074e2379061006b72f55dab99f80094cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193453"
 ---
 # <a name="removing-a-rendering-extension"></a>Quitar una extensión de representación

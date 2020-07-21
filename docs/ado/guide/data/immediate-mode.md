@@ -12,26 +12,26 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925013"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757911"
 ---
 # <a name="immediate-mode"></a>Modo inmediato
-Modo inmediato está en vigor cuando el **LockType** propiedad está establecida en **adLockOptimistic** o **adLockPessimistic**. En el modo inmediato, los cambios realizados en un registro se propagan al origen de datos tan pronto como se declara completo el trabajo en una fila mediante una llamada a la **actualización** método.  
+El modo inmediato está en vigor cuando la propiedad **LockType** está establecida en **adLockOptimistic** o **adLockPessimistic**. En el modo inmediato, los cambios en un registro se propagan al origen de datos en cuanto se declara el trabajo en una fila completa llamando al método **Update** .  
   
-## <a name="calling-update"></a>Llamar a Update  
- Si mueve del registro va a agregar o editar antes de llamar a la **actualización** método, ADO llamará automáticamente **actualización** para guardar los cambios. Debe llamar a la **CancelUpdate** método antes de la navegación si desea cancelar los cambios realizados en el registro actual o descartar un registro recién agregado.  
+## <a name="calling-update"></a>Llamando a Update  
+ Si se mueve del registro que está agregando o editando antes de llamar al método **Update** , ADO llamará automáticamente a **Update** para guardar los cambios. Debe llamar al método **CancelUpdate** antes de la navegación si desea cancelar los cambios realizados en el registro actual o descartar un registro recién agregado.  
   
- El registro actual permanece actual después de llamar a la **actualización** método.  
+ El registro actual sigue siendo actual después de llamar al método **Update** .  
   
 ## <a name="cancelupdate"></a>CancelUpdate  
- Use la **CancelUpdate** método para cancelar los cambios realizados en la fila actual o descartar una fila recién agregada. No se puede cancelar los cambios realizados en la fila actual o una nueva fila después de llamar a la **actualización** método, a menos que los cambios son parte de una transacción que se puede revertir con el **RollbackTrans** método o parte de una actualización por lotes. En el caso de una actualización por lotes, puede cancelar el **actualizar** con el **CancelUpdate** o **CancelBatch** método.  
+ Utilice el método **CancelUpdate** para cancelar los cambios realizados en la fila actual o para descartar una fila recién agregada. No se pueden cancelar los cambios realizados en la fila actual o en una nueva una vez que se llama al método **Update** , a menos que los cambios formen parte de una transacción que se pueda revertir con el método **RollbackTrans** o parte de una actualización por lotes. En el caso de una actualización por lotes, puede cancelar la **actualización** con el método **CancelUpdate** o **CancelBatch** .  
   
- Si va a agregar una nueva fila cuando se llama a la **CancelUpdate** método, la fila actual se convierte en la fila que era actual antes de la **AddNew** llamar.  
+ Si va a agregar una nueva fila al llamar al método **CancelUpdate** , la fila actual se convierte en la fila que era la actual antes de la llamada a **AddNew** .  
   
- Si no ha cambiado la fila actual o agrega una nueva fila, una llamada a la **CancelUpdate** método genera un error.
+ Si no ha cambiado la fila actual ni ha agregado una nueva fila, al llamar al método **CancelUpdate** se genera un error.

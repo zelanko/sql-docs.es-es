@@ -1,5 +1,5 @@
 ---
-title: Método setNull (int, int, Java. lang. String) | Microsoft Docs
+title: Método setNull (int, int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e59b32581d25370fa86da417fd71c1eb7b67b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f3ed2cca1d150c89418a1ba20fc110e199c457c5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973576"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913684"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>Método setNull (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public final void setNull(int paramIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setNull especifica este método setNull en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

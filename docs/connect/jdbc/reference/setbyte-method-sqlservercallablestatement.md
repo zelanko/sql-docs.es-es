@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0039322a86e0dd35c0da78e3173f835bcc47129d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 102d77049a1fef17a483c6302dcb7edb324d1490
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67975010"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928782"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>Método setByte (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public void setByte(java.lang.String sCol,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setByte especifica este método setByte en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

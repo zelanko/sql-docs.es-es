@@ -13,22 +13,21 @@ helpviewer_keywords:
 - undocumented [SQL Server]
 - documentation policy [SQL Server]
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d9bf67d1c71e9802ac7c90c79e69b1cea6af3a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62837525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926686"
 ---
 # <a name="legal-notice-for-documentation"></a>Aviso legal de la documentación
-  Este documento se proporciona "tal cual". La información y los puntos de vista que se proporcionan en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden sufrir modificaciones sin previo aviso. El usuario asume el riesgo de su uso.  
+  Este documento se ofrece "tal cual". La información y las vistas expresadas en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. El usuario asume el riesgo de su uso.  
   
- Algunos ejemplos descritos aquí se proporcionan solo para servir de ilustración y son ficticios. No se pretende ni debería deducirse ninguna asociación o conexión real.  
+ Algunos ejemplos descritos aquí se proporcionan únicamente con fines ilustrativos y son ficticios. No debe deducirse ninguna asociación ni conexión reales.  
   
- En este documento no se proporciona ningún derecho legal de ninguna propiedad intelectual de ningún producto de Microsoft. Puede copiar y utilizar este documento para su propia referencia.  
+ Este documento no le proporciona derechos legales sobre ninguna propiedad intelectual en ningún producto de Microsoft. Puede copiar y usar este documento para su referencia interna.  
   
  © 2013 Microsoft. Todos los derechos reservados.  
   

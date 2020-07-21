@@ -1,5 +1,5 @@
 ---
-title: Agregar una tabla (SSAS Tabular) | Microsoft Docs
+title: Agregar una tabla (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2727bc11de184f55ac332e11c75a46095af13f4a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939956"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Agregar una tabla (SSAS tabular)
   En este tema se describe cómo agregar una tabla de un origen de datos del que ha importado datos previamente en el modelo. Para agregar una tabla del mismo origen de datos, puede usar la conexión de origen de datos existente. Se recomienda usar siempre una conexión única al importar cualquier número de tablas de un origen de datos único.  
@@ -38,8 +37,8 @@ ms.locfileid: "66067784"
 > [!NOTE]  
 >  Cuando se importan varias tablas al mismo tiempo desde un único origen de datos, las relaciones entre dichas tablas en el origen se crean automáticamente en el modelo. Sin embargo, cuando posteriormente agregue una tabla, es posible que tenga que crear las relaciones manualmente en el modelo entre las tablas recién agregadas y las tablas que se importaron previamente.  
   
-## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS tabular&#41;](../import-data-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Importar datos &#40;&#41;tabular de SSAS](../import-data-ssas-tabular.md)   
  [Eliminar una tabla &#40;SSAS tabular&#41;](delete-a-table-ssas-tabular.md)  
   
   

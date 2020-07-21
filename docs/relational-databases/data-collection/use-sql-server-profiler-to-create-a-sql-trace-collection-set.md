@@ -1,7 +1,6 @@
 ---
-title: Usar SQL Server Profiler para crear un conjunto de colecciones de Seguimiento de SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/07/2017
+title: Creación del conjunto de colecciones de seguimiento de SQL con Profiler
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,15 +10,16 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69d5766b7431f1352b292306f595033a3070053b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909641"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715530"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  
   
 1.  Crear y exportar un seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "72909641"
   
 2.  En el cuadro de diálogo **Conectar con el servidor** , haga clic en **Cancelar**.  
   
-3.  Para este escenario, asegúrese de que los valores de duración estén configurados para mostrarse en milisegundos (valor predeterminado). Para ello, siga estos pasos:  
+3.  Para este escenario, asegúrese de que los valores de duración estén configurados para mostrarse en milisegundos (valor predeterminado). Para ello, siga estos pasos.  
   
     1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "72909641"
   
 4.  Haga clic en **Ejecutar** para ejecutar la consulta y crear el conjunto de recopilación.  
   
-5.  En el Explorador de objetos, compruebe que se ha creado el conjunto de recopilación. Para ello, siga estos pasos:  
+5.  En el Explorador de objetos, compruebe que se ha creado el conjunto de recopilación. Para ello, siga estos pasos.  
   
     1.  Haga clic con el botón derecho en **Administración**y, después, haga clic en **Actualizar**.  
   
@@ -113,13 +113,13 @@ ms.locfileid: "72909641"
 ## <a name="example"></a>Ejemplo  
  El ejemplo de código siguiente es el script final que resulta de los pasos que se documentan en los procedimientos anteriores.  
   
-```  
+```sql
 /*************************************************************/  
 -- SQL Trace collection set generated from SQL Server Profiler  
 -- Date: 11/19/2007  12:55:31 AM  
 /*************************************************************/  
   
-USE msdb  
+USE msdb;
 GO  
   
 BEGIN TRANSACTION  
@@ -165,7 +165,9 @@ N'<ns:SqlTraceCollector xmlns:ns"DataCollectorType" use_default="0">
   
 -- Retrieve the collector type GUID for the trace collector type.  
 DECLARE @collector_type_GUID uniqueidentifier;  
-SELECT @collector_type_GUID = collector_type_uid FROM [dbo].[syscollector_collector_types] WHERE name = N'Generic SQL Trace Collector Type';  
+SELECT @collector_type_GUID = collector_type_uid
+  FROM [dbo].[syscollector_collector_types]
+  WHERE name = N'Generic SQL Trace Collector Type';  
   
 -- Create the trace collection item.  
 -- ***  
@@ -199,7 +201,8 @@ SELECT @ErrorLine = ERROR_LINE(),
        @ErrorNumber = ERROR_NUMBER(),  
        @ErrorMessage = ERROR_MESSAGE(),  
        @ErrorProcedure = ISNULL(ERROR_PROCEDURE(), '-');  
-RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber, @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
+RAISERROR (14684, @ErrorSeverity, 1 , @ErrorNumber,
+  @ErrorSeverity, @ErrorState, @ErrorProcedure, @ErrorLine, @ErrorMessage);  
 END CATCH;  
 GO  
 ```  

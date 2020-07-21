@@ -1,6 +1,6 @@
 ---
-title: Propiedades de SQL Server (pestaña parámetros de inicio) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de SQL Server (pestaña Parámetros de inicio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a95a90271c6196c68a23d0ba416c5157c90ae9c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023913"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306774"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68023913"
   
 -   Todos los parámetros de inicio empiezan con un guion (–) y el segundo valor es una letra.  
   
-## <a name="required-parameters"></a>Parámetros necesarios  
+## <a name="required-parameters"></a>Parámetros obligatorios  
  Los parámetros siguientes son necesarios. Se pueden cambiar pero no quitar.  
   
 -   -d es la ruta de acceso al archivo **master.mdf** (el archivo de datos de la base de datos maestra).  
@@ -71,7 +71,7 @@ ms.locfileid: "68023913"
 > [!CAUTION]  
 >  Algunos parámetros opcionales pueden cambiar el comportamiento del servidor y afectar al rendimiento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  El uso de esta página está restringido a los usuarios que pueden cambiar las entradas relacionadas en el Registro. Esto incluye a los usuarios siguientes.  
   
 -   Miembros del grupo local de administradores.  

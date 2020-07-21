@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088353"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
@@ -34,18 +34,18 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Count*  
+ *Recuento*  
  Expresión numérica válida que especifica el número de conjuntos que serán devueltos.  
   
-## <a name="remarks"></a>Comentarios  
- El **NonEmptyCrossjoin** función devuelve el producto cruzado de dos o más conjuntos como un conjunto, excluidas las tuplas vacías o sin datos proporcionados por las tablas de hechos subyacentes. Debido a cómo el **NonEmptyCrossjoin** función, todas se calculan automáticamente se excluyen los miembros.  
+## <a name="remarks"></a>Observaciones  
+ La función **NonEmptyCrossjoin** devuelve el producto cruzado de dos o más conjuntos como un conjunto, excluyendo tuplas vacías o tuplas sin datos proporcionados por las tablas de hechos subyacentes. Debido a la forma en que funciona la función **NonEmptyCrossjoin** , se excluyen automáticamente todos los miembros calculados.  
   
- Si *recuento* no se especifica, la función cross une todos los conjuntos especificados y excluye los miembros vacíos del conjunto resultante. Si se especifica un número de conjuntos, la función realiza combinaciones cruzadas de los números de los conjuntos especificados, comenzando con el primer conjunto especificado. El **NonEmptyCrossjoin** función utiliza los conjuntos restantes que se especifican en los conjuntos especificados subsiguientes, pero que no han cruzado unido para determinar qué miembros se consideran no vacíos en el conjunto combinado de forma cruzada resultante. El **NonEmptyCrossjoin** función respeta el **NON_EMPTY_BEHAVIOR** de medidas calculadas.  
+ Si no se especifica *Count* , la función combina todos los conjuntos especificados y excluye los miembros vacíos del conjunto resultante. Si se especifica un número de conjuntos, la función realiza combinaciones cruzadas de los números de los conjuntos especificados, comenzando con el primer conjunto especificado. La función **NonEmptyCrossjoin** usa cualquier conjunto restante que se especifique en los conjuntos especificados subsiguientes, pero que no se hayan unido a la combinación para determinar qué miembros se consideran no vacíos en el conjunto combinado cruzado resultante. La función **NonEmptyCrossjoin** respeta el valor **NON_EMPTY_BEHAVIOR** de las medidas calculadas.  
   
 > [!IMPORTANT]  
->  Esta función está desusada y no debería utilizarla; solo se conserva para mantener la compatibilidad con las versiones anteriores. En su lugar, debe usar el [Exists (MDX)](../mdx/exists-mdx.md) canónica con el argumento de nombre de grupo de medida o la [NonEmpty (MDX)](../mdx/nonempty-mdx.md) función.  
+>  Esta función está desusada y no debería utilizarla; solo se conserva para mantener la compatibilidad con las versiones anteriores. En su lugar, debe utilizar la función [exists (MDX)](../mdx/exists-mdx.md) con el argumento de nombre del grupo de medida o la función [NonEmpty (MDX)](../mdx/nonempty-mdx.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

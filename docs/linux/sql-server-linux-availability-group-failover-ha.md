@@ -1,30 +1,30 @@
 ---
 title: 'Administrar la conmutación por error del grupo de disponibilidad: SQL Server en Linux'
-description: ''
-author: MikeRayMSFT
-ms.author: mikeray
+description: 'En este artículo se describen los tipos de conmutación por error: automática, conmutación por error manual planeada y conmutación por error manual forzada. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos.'
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892304"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad Always On en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado conmutación por error. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas conservan todos los datos. Un grupo de disponibilidad conmuta por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error en una de sus réplicas secundarias (el destino de la conmutación por error actual). 
 
 Para obtener información general sobre la conmutación por error, vea [Conmutación por error y modos de conmutación por error](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Conmutación por error manual
+## <a name="manual-failover"></a><a name="failover"></a>Conmutación por error manual
 
 Use las herramientas de administración de clústeres para conmutar por error un grupo de disponibilidad administrado por un administrador de clústeres externo. Por ejemplo, si una solución usa Pacemaker para administrar un clúster de Linux, use `pcs` para realizar las conmutaciones por error manuales en RHEL o Ubuntu. En SLES, use `crm`. 
 
@@ -43,7 +43,7 @@ Conmute por error de forma manual en dos pasos.
 
    En segundo lugar, [quite la restricción de ubicación](#removeLocConstraint).
 
-#### <a name="manualMove"></a> Paso 1. Conmutar por error de forma manual al mover el recurso de un grupo de disponibilidad
+#### <a name="step-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove"></a> Paso 1. Conmutar por error de forma manual al mover el recurso de un grupo de disponibilidad
 
 Para conmutar por error de forma manual el recurso de un grupo de disponibilidad denominado *ag_cluster* a un nodo de clúster denominado *nodeName2*, ejecute el comando adecuado para su distribución:
 
@@ -62,7 +62,7 @@ Para conmutar por error de forma manual el recurso de un grupo de disponibilidad
 >[!IMPORTANT]
 >Después de conmutar por error de forma manual un recurso, necesita quitar una restricción de ubicación que se agregará automáticamente.
 
-#### <a name="removeLocConstraint"> </a> Paso 2. Quitar la restricción de ubicación
+#### <a name="step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> </a> Paso 2. Quitar la restricción de ubicación
 
 Durante una conmutación por error manual, el comando `move` de `pcs` o el comando `migrate` de `crm` agregan una restricción de ubicación para el recurso que se aplicará en el nuevo nodo de destino. Para ver la nueva restricción, ejecute el comando siguiente después de mover manualmente el recurso:
 
@@ -81,14 +81,29 @@ Durante una conmutación por error manual, el comando `move` de `pcs` o el coman
 Un ejemplo de la restricción creada debido a una conmutación por error manual. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > El nombre del recurso de AG en los clústeres de Pacemaker en Red Hat Enterprise Linux 8.x y Ubuntu 18.04 puede ser similar a *ag_cluster-clon*, ya que la nomenclatura relacionada con los recursos ha evolucionado para usar *clonación que se puede promocionar*. 
+
 - **Ejemplo de RHEL/Ubuntu**
 
    En el comando siguiente, `cli-prefer-ag_cluster-master` es el identificador de la restricción que se debe quitar. `sudo pcs constraint list --full` devuelve este identificador. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   Or
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Como alternativa, puede realizar tanto el movimiento como el borrado de restricciones generadas automáticamente en una sola línea, como se indica a continuación. En el ejemplo siguiente se usa la terminología *clone* según Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **Ejemplo de SLES**
 
    En el comando siguiente, `cli-prefer-ms-ag_cluster` es el identificador de la restricción. `crm config show` devuelve este identificador. 
@@ -104,10 +119,10 @@ Un ejemplo de la restricción creada debido a una conmutación por error manual.
 
 Para obtener más información:
 - [Red Hat: Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Red Hat: Administración de recursos de clúster)
-- [Pacemaker - Move Resources Manually (Pacemaker: mover recursos de forma manual)](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
+- [Pacemaker - Move Resources Manually (Pacemaker: mover recursos de forma manual)](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources (Guía de administración de SLES: recursos)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Forzar la conmutación por error 
+## <a name="force-failover"></a><a name="forceFailover"></a> Forzar la conmutación por error 
 
 La conmutación por error forzada se usa estrictamente para la recuperación ante desastres. En este caso, no se puede conmutar por error con las herramientas de administración de clústeres porque el centro de datos principal está inactivo. Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Solo ejecute una conmutación por error forzada si necesita restaurar el servicio al grupo de disponibilidad de inmediato y está dispuesto a asumir el riesgo de que se pierdan datos.
 

@@ -1,6 +1,7 @@
 ---
-title: Uso del clúster compartido de Red Hat Enterprise Linux para SQL Server
-description: Implemente la alta disponibilidad al configurar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server.
+title: Funcionamiento de la FCI de RHEL para SQL Server en Linux
+description: Obtenga información sobre cómo usar una instancia de clúster de conmutación por error (FCI) de disco compartido de Red Hat Enterprise Linux (RHEL) para SQL Server de alta disponibilidad, como la conmutación por error manual de la FCI y agregar o quitar nodos del clúster.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 94ac1e7dbd6632d2346df2d7d1837b8ee66859c7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897267"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Uso del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Funcionamiento de la instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este documento se describe cómo realizar las siguientes tareas para SQL Server en un clúster de conmutación por error de disco compartido con Red Hat Enterprise Linux.
 
@@ -38,7 +39,7 @@ En el siguiente diagrama se ilustran los componentes de un clúster de Linux con
 
 Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y la administración, vaya a la [documentación de referencia de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Conmutación por error manual del clúster
+## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Conmutación por error manual del clúster
 
 El comando `resource move` crea una restricción que obliga al recurso a iniciarse en el nodo de destino.  Después de ejecutar el comando `move`, al ejecutar el recurso `clear` se quitará la restricción, por lo que es posible volver a colocar el recurso o hacer que este conmute por error automáticamente. 
 
@@ -143,7 +144,7 @@ Vea los registros del agente de recursos en `/var/log/cluster/corosync.log`.
    > [!NOTE]
    > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
    >
-   > * TCP: puertos 2224, 3121 y 21064
+   > * TCP: puertos 2224, 3121, 21064
    > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en el nuevo nodo.

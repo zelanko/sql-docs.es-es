@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 091cdef1316ace27dd2928fb9c263cbc19ea0e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570834"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75240622"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Roles y tareas de Reporting Services frente a grupos y permisos de SharePoint
   En este tema se comparan las características de autorización basadas en roles y tareas en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con las características de seguridad de los productos de SharePoint. En este tema se comparan la terminología y las características de los roles, las tareas, los grupos de SharePoint, los niveles de permiso y los permisos.  
@@ -38,22 +38,22 @@ ms.locfileid: "65570834"
   
 -   [Comparación de las tareas de modo nativo y los permisos de SharePoint](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a> Comparación de las herramientas y la terminología de permisos  
- **Modo nativo:** los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> Comparación de las herramientas y la terminología de permisos  
+ **Modo nativo:** Los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
   
- **Modo de SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
+ **Modo SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo SharePoint usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
   
  En la tabla siguiente se comparan los objetos y conceptos relacionados con los permisos entre el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Rol:** por ejemplo, "Administrador de contenido".|**Grupo:** por ejemplo, el grupo predeterminado "Visores".|  
-|---|**Grupo de nivel de permisos:** por ejemplo, "Solo ver" para el grupo "Visores".|  
-|**Tareas:** por ejemplo, "Administrar informes".|**Permisos:** por ejemplo, dentro del grupo "Solo ver" hay permisos relacionados con listas para ver elementos, ver versiones y ver páginas de aplicación.|  
+|**Rol:** Por ejemplo, "Administrador de contenido".|**Grupo:** Por ejemplo, el grupo "Visores" predeterminado.|  
+|---|**Grupo de nivel de permiso:** Por ejemplo, "Solo ver" para el grupo "Visores".|  
+|**Tareas:** por ejemplo, "Administrar informes".|**Permisos:** Por ejemplo, dentro del grupo "Solo ver" hay permisos relacionados con listas para ver elementos, ver versiones y ver páginas de aplicación.|  
   
- Para obtener más información sobre los permisos de SharePoint, vea [Niveles de permisos y permisos](https://support.office.com/en-us/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) y [Determinar grupos y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Para obtener más información sobre los permisos de SharePoint, vea [Niveles de permisos y permisos](https://support.office.com/article/Understand-groups-and-permissions-on-a-SharePoint-site-258E5F33-1B5A-4766-A503-D86655CF950D) y [Determinar grupos y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
-##  <a name="bkmk_compare_roles_groups"></a> Comparación de los roles de modo nativo y los grupos de SharePoint  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> Comparación de los roles de modo nativo y los grupos de SharePoint  
  En la tabla siguiente se comparan las definiciones de roles predefinidas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo con las de los grupos de SharePoint estándar. Si los grupos de SharePoint no coinciden con el rol específico que desea, puede crear un grupo personalizado y asignar niveles de permiso en SharePoint.  
   
  **Nota**: Los grupos predeterminados de SharePoint disponibles dependen de la plantilla de sitio usada para crear el sitio de SharePoint.  
@@ -63,12 +63,12 @@ ms.locfileid: "65570834"
 |**Browser**<br /><br /> Ver|Use el grupo **Visitantes** para conceder permisos para ver informes. El grupo **Visitantes** tiene permisos del nivel de lectura, lo que permite a los miembros del grupo ver páginas, elementos de lista y documentos.|  
 |**Administrador de contenido**<br /><br /> Permisos totales para todos los elementos y operaciones de nivel de elemento, incluidos los permisos para establecer la seguridad.|Use el grupo **Propietarios** para conceder un control total sobre la administración de los elementos del servidor de informes en un sitio de SharePoint. El grupo **Propietarios** tiene permisos de control total, lo que permite a los miembros del grupo realizar cambios en el contenido, las páginas o la funcionalidad del sitio. El acceso de control total debe estar limitado solamente a los administradores del sitio.|  
 |**Mis informes**|No hay ningún grupo equivalente. **Mis informes** no se admite para un servidor de informes que se ejecuta en modo de SharePoint. Puede usar las características de Mis informes en [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] si desea usar la funcionalidad equivalente.|  
-|**publicador**<br /><br /> Agregar, actualizar, ver y eliminar informes, modelos de informe, orígenes de datos compartidos y recursos.|Use el grupo **Miembros** para conceder permisos para agregar elementos, editar elementos y actualizar referencias a elementos dependientes en un sitio de SharePoint. El grupo **Miembros** tiene permisos del nivel Colaborar, lo que permite a los miembros del grupo ver páginas, agregar y actualizar elementos, así como enviar cambios para su aprobación.|  
+|**Publicador**<br /><br /> Agregar, actualizar, ver y eliminar informes, modelos de informe, orígenes de datos compartidos y recursos.|Use el grupo **Miembros** para conceder permisos para agregar elementos, editar elementos y actualizar referencias a elementos dependientes en un sitio de SharePoint. El grupo **Miembros** tiene permisos del nivel Colaborar, lo que permite a los miembros del grupo ver páginas, agregar y actualizar elementos, así como enviar cambios para su aprobación.|  
 |**Generador de informes**<br /><br /> Ver informes, administrar automáticamente la suscripción individual y abrir informes en el Generador de informes.|No hay ningún nivel de permiso o grupo de SharePoint predefinido que sea equivalente a la definición de informe del Generador de informes. De manera predeterminada, los usuarios que pertenecen al grupo **Miembros** o **Propietarios** tienen permiso para usar el Generador de informes. Si desea que el Generador de informes esté disponible para más usuarios, debe crear una configuración de seguridad personalizada para proporcionar un nivel de permiso similar al que ofrece el rol Generador de informes. Para obtener más información, vea [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
 |-|Use el grupo de **Visores** para conceder permisos para ver los informes representados. El grupo **Visores** no puede descargar ni ver el contenido de los elementos de informe.<br /><br /> **Nota:** A partir de SQL Server 2012 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el grupo **Visores** no tiene permisos para crear suscripciones.|  
 |**Usuario del sistema** y **Administrador del sistema**|Estos roles no son necesarios para un servidor de informes que se ejecuta en modo de SharePoint. **Usuario del sistema** y **Administrador del sistema** se corresponden con los permisos del nivel de conjunto de servidores o aplicación web de SharePoint. El servidor de informes no proporciona ninguna funcionalidad que requiera una autorización en dicho nivel.|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a> Comparación de las tareas de modo nativo y los permisos de SharePoint  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> Comparación de las tareas de modo nativo y los permisos de SharePoint  
  En la tabla siguiente se comparan las tareas de modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con los permisos de SharePoint. La columna **Tipo** indica si la tarea en modo nativo está relacionada con un rol del sistema o con roles y elementos estándar. Los roles del sistema administran los permisos en el nivel del sistema, como programaciones compartidas.  
   
 |Tarea de modo nativo|Tipo de rol|Permiso de SharePoint equivalente|  
@@ -76,14 +76,14 @@ ms.locfileid: "65570834"
 |Usar informes|Elemento|Editar elementos, Ver elementos.|  
 |Crear informes vinculados|Elemento|No compatible.|  
 |Administrar todas las suscripciones|Elemento|Administrar alertas.|  
-|Administrar orígenes de datos|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
+|Administración de orígenes de datos|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
 |Administrar carpetas|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
 |Administrar suscripciones individuales|Elemento|Editar elementos<br /><br /> Antes de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], el nivel de permiso necesario era Crear alertas.|  
-|Administrar modelos|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
+|Administración de modelos|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
 |Administrar historial de informe|Elemento|Editar elementos, Ver versiones, Eliminar versiones.|  
 |Administrar informes|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
 |Administrar recursos|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
-|Establecer la seguridad de elementos individuales|Elemento|Administrar permisos|  
+|Establecer la seguridad de elementos individuales|Elemento|Administración de permisos|  
 |Ver orígenes de datos|Elemento|Ver elementos.|  
 |Ver carpetas|Elemento|Ver elementos.|  
 |Ver modelos|Elemento|Ver elementos.|  
@@ -91,8 +91,8 @@ ms.locfileid: "65570834"
 |Ver recursos|Elemento|Ver elementos.|  
 ||||  
 |Ejecutar definiciones de informe|Sistema|Ver elementos.|  
-|Generar eventos|Sistema|Administración del sitio web.|  
-|Administrar trabajos|Sistema|Ninguno (no compatible).|  
+|Generación de eventos|Sistema|Administración del sitio web.|  
+|Trabajos de administración|Sistema|Ninguno (no compatible).|  
 |Administrar propiedades del servidor de informes|Sistema|Ninguno (no aplicable). El servidor de informes no controla si el usuario tiene permiso para ver la configuración de la integración en la Administración central.|  
 |Administrar roles|Sistema|Administrar permisos.|  
 |Administrar programaciones compartidas|Sistema|Administración del sitio Web, Abrir.|  

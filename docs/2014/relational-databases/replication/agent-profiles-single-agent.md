@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c6d6c421e976290f17a3e49848a1600445a7da1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06fe5d522eefa89ac33977f96a5de311e04795a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055689"
 ---
 # <a name="agent-profiles-single-agent"></a>Perfiles de agente (un solo agente)
   Use el cuadro de diálogo **Perfiles de agente** para administrar los perfiles de un agente. Los perfiles de agente proporcionan una manera cómoda de administrar los parámetros en tiempo de ejecución para cada agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos. Por ejemplo, el Agente de mezcla tiene un perfil de "vínculo lento" diseñado para conexiones de banda ancha lentas. Los perfiles predefinidos son suficientes para la mayoría de las aplicaciones, pero también pueden crearse perfiles definidos por el usuario, que permiten personalizar el comportamiento del agente.  
@@ -28,16 +27,16 @@ ms.locfileid: "63186970"
  **Predeterminado para nuevos**  
  Seleccione el perfil que se utilizará al crear los trabajos de un determinado tipo de agente. Por ejemplo, si crea varias suscripciones para una publicación de combinación, el trabajo del Agente de mezcla de cada suscripción utilizará el perfil seleccionado. Si desea cambiar el perfil de los trabajos existentes, seleccione un perfil y, a continuación, haga clic en **Cambiar agentes existentes**.  
   
- **Name**  
- El nombre del perfil.  
+ **Nombre**  
+ Nombre del perfil.  
   
  **Tipo**  
- Tipo de perfil: **Usuario** (definido por el usuario) o **System** (predefinido).  
+ Indica el tipo de perfil: **Usuario** (definido por el usuario) o **Sistema** (predefinido).  
   
  **Propiedades (...)**  
  Haga clic para ver los valores utilizados por cada parámetro en el perfil del agente.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic para crear un perfil nuevo.  
   
  **Eliminar**  
@@ -46,7 +45,7 @@ ms.locfileid: "63186970"
  **Cambiar agentes existentes**  
  Seleccione un perfil y, a continuación, haga clic en **Cambiar agentes existentes** para especificar que todos los trabajos existentes de un determinado tipo de agente deben utilizar el perfil seleccionado. Por ejemplo, si ha creado varias suscripciones para una publicación de combinación y desea cambiar el perfil para especificar que el trabajo del Agente de mezcla de cada una de esas suscripciones debe utilizar el **Perfil de agente de conexión lenta**, seleccione ese perfil y, a continuación, haga clic en **Cambiar agentes existentes**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con perfiles del Agente de replicación](agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Perfiles del Agente de replicación](agents/replication-agent-profiles.md)  

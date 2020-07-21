@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd163c5d3bc7a2cd9051b8d37b8127a1cc88c30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158800"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050350"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
   Un grupo de recursos de servidor representa un subconjunto de recursos físicos que se pueden regular. De forma predeterminada, las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están enlazadas a los recursos del grupo de recursos de servidor predeterminado y los consumen. Para proteger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que una o más tablas optimizadas para memoria no consuman sus recursos, y evitar que otros usuarios consuman memoria que las tablas optimizadas para memoria necesitan, debe crear un grupo de recursos de servidor diferente para administrar el consumo de memoria para la base de datos con tablas optimizadas para memoria.  
@@ -30,8 +29,8 @@ ms.locfileid: "63158800"
 ## <a name="create-the-database-and-resource-pool"></a>Crear la base de datos y el grupo de recursos de servidor  
  Puede crear la base de datos y el grupo de recursos de servidor en cualquier orden. Lo que importa es que ambos existan antes de enlazar la base de datos al grupo de recursos de servidor.  
   
-### <a name="create-the-database"></a>Crear la base de datos  
- El código [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente crea una base de datos denominada IMOLTP_DB que contendrá una o varias tablas optimizadas para memoria. La ruta de acceso \<driveAndPath> debe haberse creado antes de ejecutar este comando.  
+### <a name="create-the-database"></a>Creación de la base de datos  
+ El código [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente crea una base de datos denominada IMOLTP_DB que contendrá una o varias tablas optimizadas para memoria. La ruta de acceso \<driveAndPath> debe existir antes de ejecutar este comando.  
   
 ```sql  
 CREATE DATABASE IMOLTP_DB  
@@ -41,10 +40,10 @@ ALTER DATABASE IMOLTP_DB ADD FILE( NAME = 'IMOLTP_DB_fg' , FILENAME = 'c:\data\I
 GO  
 ```  
   
-### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>Determinar el valor mínimo de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT  
+### <a name="determine-the-minimum-value-for-min_memory_percent-and-max_memory_percent"></a>Determinar el valor mínimo de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT  
  Una vez que determine las necesidades de memoria para las tablas optimizadas para memoria, debe determinar qué porcentaje de memoria disponible se necesita y establecer los porcentajes de memoria en ese valor o uno superior.  
   
- **Ejemplo:**   
+ **Ejemplo:**    
 En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y los índices optimizados para memoria necesitan 16 GB de memoria. Suponga que tiene 32 GB de memoria asignada para su uso.  
   
  A primera vista, podría parecer que necesita establecer MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en 50 (16 es el 50 % de 32).  Sin embargo, ese valor no proporcionaría suficiente memoria a las tablas optimizadas para memoria. Si miramos la tabla siguiente ([Porcentaje de memoria disponible para tablas e índices optimizados para memoria](#percent-of-memory-available-for-memory-optimized-tables-and-indexes)), vemos que si hay 32 GB de memoria asignada, solo el 80 % está disponible para tablas e índices optimizados para memoria.  Por tanto, calculamos los porcentajes mínimo y máximo en función de la memoria disponible, no de la memoria asignada.  
@@ -63,7 +62,7 @@ En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y
 ### <a name="create-a-resource-pool-and-configure-memory"></a>Crear un grupo de recursos de servidor y configurar la memoria  
  A la hora de configurar memoria para las tablas optimizadas para memoria, el planeamiento de capacidad debe realizarse en función de MIN_MEMORY_PERCENT, no de MAX_MEMORY_PERCENT.  Vea [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql) para obtener más información sobre MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Esto proporciona una disponibilidad de memoria más predecible en las tablas optimizadas para memoria, ya que MIN_MEMORY_PERCENT produce presión de memoria en otros grupos de recursos de servidor para asegurarse de que se respeta. Para asegurarse de que hay memoria disponible e impedir condiciones de memoria insuficiente, los valores de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT deben ser iguales. Vea la tabla [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) de abajo para conocer el porcentaje de memoria disponible para las tablas optimizadas para memoria según la cantidad de memoria asignada.  
   
- Consulte [procedimientos recomendados: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información sobre cómo trabajar en un entorno de máquina virtual.  
+ Vea [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información sobre cómo trabajar en un entorno de máquinas virtuales.  
   
  El siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un grupo de recursos de servidor denominado Pool_IMOLTP con la mitad de memoria disponible para su uso.  Una vez creado el grupo, hay que reconfigurar el Regulador de recursos para incluir Pool_IMOLTP.  
   
@@ -118,14 +117,14 @@ GO
   
  Ahora, la base de datos está enlazada al grupo de recursos de servidor.  
   
-## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Cambiar el porcentaje de memoria mínima y porcentaje de memoria máxima en un grupo existente  
- Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
+## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Cambiar el porcentaje de memoria mínima y el porcentaje máximo de memoria en un grupo existente  
+ Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 1.  Utilice `ALTER RESOURCE POOL` para cambiar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  
   
 2.  Use `ALTER RESURCE GOVERNOR` para reconfigurar el regulador de recursos con los nuevos valores.  
   
- **Código muestra**  
+ **Código de ejemplo**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -142,13 +141,13 @@ GO
 ## <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a>Porcentaje de memoria disponible para tablas e índices optimizados para memoria  
  Si asigna una base de datos con tablas optimizadas para memoria y una carga de trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al mismo grupo de recursos de servidor, el regulador de recursos establece un umbral interno para uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] de modo que los usuarios del grupo no experimenten conflictos al usar el grupo. En general, el umbral para el uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] es aproximadamente el 80 % del valor del grupo. En la tabla siguiente se muestran los umbrales reales para diversos tamaños de memoria.  
   
- Al crear un grupo de recursos de servidor dedicado para la base de datos de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , debe evaluar cuánta memoria física necesita para las tablas en memoria después de tener en cuenta las versiones de filas y el aumento de datos. Una vez calculada la memoria necesaria, puede crear un grupo de recursos de servidor con un porcentaje de memoria de destino de confirmación para la instancia de SQL como se refleja en la columna "committed_target_kb" en la DMV `sys.dm_os_sys_info` (vea [sys.dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Por ejemplo, puede crear un grupo de recursos de servidor P1 con el 40 % de la memoria total disponible para la instancia. Fuera de este 40 %, el motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] obtiene un porcentaje inferior para almacenar los datos de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  Esto se hace para asegurarse de que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] no usa toda la memoria de este grupo.  Este valor del porcentaje menor depende de la memoria confirmada de destino. En la siguiente tabla se describe la memoria disponible para la base de datos de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en un grupo de recursos de servidor (designado o predeterminado) antes de que se genere un error de OOM.  
+ Al crear un grupo de recursos de servidor dedicado para la base de datos de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] , debe evaluar cuánta memoria física necesita para las tablas en memoria después de tener en cuenta las versiones de filas y el aumento de datos. Una vez que se calcula la memoria necesaria, se crea un grupo de recursos de sistema con un porcentaje de la memoria de destino de confirmación para la instancia de SQL como se refleja en la columna ' committed_target_kb ' en la DMV `sys.dm_os_sys_info` (vea [sys. dm_os_sys_info](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql)). Por ejemplo, puede crear un grupo de recursos de servidor P1 con el 40 % de la memoria total disponible para la instancia. Fuera de este 40 %, el motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] obtiene un porcentaje inferior para almacenar los datos de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  Esto se hace para asegurarse de que [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] no usa toda la memoria de este grupo.  Este valor del porcentaje menor depende de la memoria confirmada de destino. En la siguiente tabla se describe la memoria disponible para la base de datos de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en un grupo de recursos de servidor (designado o predeterminado) antes de que se genere un error de OOM.  
   
 |Memoria asignada de destino|Porcentaje disponible para tablas en memoria|  
 |-----------------------------|---------------------------------------------|  
 |<= 8 GB|70%|  
-|<= 16 GB|75%|  
-|<= 32 GB|80%|  
+|<= 16 GB|75 %|  
+|<= 32 GB|80 %|  
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
@@ -169,7 +168,7 @@ SELECT pool_id
   
  Esta salida de ejemplo muestra que la memoria usada por los objetos optimizados para memoria es de 1356 MB en el grupo de recursos de servidor, PoolIMOLTP, con un límite superior de 2307 MB. Este límite superior controla la memoria total que el usuario puede emplear y los objetos del sistema optimizados para memoria asignados a este grupo.  
   
- **Salida del ejemplo**   
+ **Salida de ejemplo**   
 Esta salida es de la base de datos y las tablas que hemos creado antes.  
   
 ```  
@@ -184,13 +183,13 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Si no enlaza la base de datos a un grupo de recursos de servidor con nombre, se enlaza al grupo "default". Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el grupo de recursos de servidor predeterminado para la mayoría de las demás asignaciones, no podrá supervisar con precisión la memoria usada por las tablas optimizadas para memoria mediante la DMV sys.dm_resource_governor_resource_pools para la base de datos de interés.  
   
-## <a name="see-also"></a>Vea también  
- [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
+ [Sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
  [Regulador de recursos](../resource-governor/resource-governor.md)   
- [Resource Governor Resource Pool](../resource-governor/resource-governor-resource-pool.md)   
- [Crear un grupo de recursos de servidor](../resource-governor/create-a-resource-pool.md)   
- [Cambiar la configuración del grupo de recursos de servidor](../resource-governor/change-resource-pool-settings.md)   
+ [Grupo de recursos de servidor del regulador de recursos](../resource-governor/resource-governor-resource-pool.md)   
+ [Crear un grupo de recursos](../resource-governor/create-a-resource-pool.md)   
+ [Cambiar la configuración del grupo de recursos](../resource-governor/change-resource-pool-settings.md)   
  [Eliminar un grupo de recursos de servidor](../resource-governor/delete-a-resource-pool.md)  
   
   

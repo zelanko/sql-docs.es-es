@@ -1,6 +1,6 @@
 ---
-title: Paquetes de SQL Server Extended Events | Microsoft Docs
-ms.custom: ''
+title: Paquetes de SQL Server Extended Events
+description: Un paquete es un contenedor para objetos de eventos extendidos de SQL Server. En este artículo se describen los objetos que puede contener un paquete.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +14,16 @@ ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19797e4f886a28662c9dce5df34fc9c2978b3098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce93ba3d2049315911ec7297991bf7ce416fab64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009389"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756856"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Un paquete es un contenedor para objetos de eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Hay tres tipos de paquetes de eventos extendidos, que son los siguientes:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68009389"
 ## <a name="package-contents"></a>Contenido de los paquetes  
  La ilustración siguiente muestra los objetos que pueden existir en paquetes, que se encuentran en un módulo. Un módulo puede ser un archivo ejecutable o una biblioteca de vínculos dinámicos.  
   
- ![La relación de un módulo, paquetes y un objeto](../../relational-databases/extended-events/media/xepackagesobjects.gif "La relación de un módulo, paquetes y un objeto")  
+ ![Relación de un módulo, varios paquetes y un objeto](../../relational-databases/extended-events/media/xepackagesobjects.gif "Relación de un módulo, varios paquetes y un objeto")  
   
 ### <a name="events"></a>Eventos  
  Los eventos son puntos de supervisión de interés en la ruta de ejecución de un programa, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La activación de un evento conlleva el hecho de que se ha llegado al punto de interés, así como información de estado del momento en que se activó el evento.  
@@ -74,7 +74,7 @@ ms.locfileid: "68009389"
 #### <a name="event-categorization"></a>Clasificación de eventos  
  Extended Events utiliza un modelo de clasificación de eventos parecido al Seguimiento de eventos para Windows (ETW). Para la clasificación se utilizan dos propiedades de eventos, canal y palabra clave. La utilización de estas propiedades es compatible con la integración de Extended Events en ETW y sus herramientas.  
   
- **Canal**  
+ **Channel**  
   
  Un canal identifica a los destinatarios de un evento. Estos canales se describen en la siguiente tabla.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68009389"
 |Administración|Los eventos de administración se destinan principalmente a usuarios finales, administradores y soporte técnico. Los eventos que se encuentran en los canales de administración indican un problema con una solución bien determinada ante la que un administrador puede emprender una acción. Un ejemplo de un evento de administración es cuando una aplicación no conecta a una impresora. Estos eventos están bien documentados o tienen un mensaje asociado que indica al lector qué hacer para rectificar el problema.|  
 |Operativos|Los eventos operativos se utilizan para analizar y diagnosticar un problema o situación concreta. Se pueden utilizar para activar herramientas o tareas basadas en el problema o situación concreta. Un ejemplo de evento operativo se produce cuando una impresora se agrega o quita de un sistema.|  
 |Analíticos|Los eventos analíticos se publican en grandes cantidades. Describen el funcionamiento del programa y se utilizan normalmente en investigaciones sobre rendimiento.|  
-|Depuración|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Los eventos del canal Depurar devuelven datos sobre el estado interno de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
+|Depurar|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Los eventos del canal Depurar devuelven datos sobre el estado interno de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
   
  **Palabra clave**  
   
@@ -145,13 +145,13 @@ where name = 'keyword_map'
   
 -   action  
   
--   target  
+-   Destino  
   
 -   pred_source  
   
 -   pred_compare  
   
--   Tipo  
+-   type  
   
  Para obtener más información, vea [sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md).  
   
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [Motor de SQL Server Extended Events](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [Destinos de SQL Server Extended Events](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

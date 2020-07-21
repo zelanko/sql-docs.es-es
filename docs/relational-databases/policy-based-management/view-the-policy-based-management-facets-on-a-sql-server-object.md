@@ -1,6 +1,7 @@
 ---
-title: Ver las facetas de administración basada en directivas en un objeto de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Consulta de las facetas de administración basada en directivas en un objeto
+description: Describe cómo ver todas las facetas de administración basada en directivas aplicadas a un objeto específico de SQL Server en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 82acf976fef80f62059b5a433bb74e3fbbadec80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a821f7a08ab5004cc8002988022a9873df1f0825
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774102"
 ---
-# <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Ver las facetas de administración basada en directivas en un objeto de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>Consulta de las facetas de administración basada en directivas en un objeto de SQL Server
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo ver todas las facetas de administración basada en directivas aplicadas a un objeto específico de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
@@ -33,14 +34,14 @@ ms.locfileid: "68021431"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-all-of-the-facets-in-an-object"></a>Para ver todas las facetas de un objeto  
   

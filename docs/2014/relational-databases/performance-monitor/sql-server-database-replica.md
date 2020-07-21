@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8830ae30ad3514e107b718f9a02fef873e20295
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038781"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de datos
   El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que ofrecen información acerca de las bases de datos secundarias de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este objeto solamente es válido en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica secundaria.  
   
-|Nombre de contador|Descripción|Vista en...|  
+|Nombre del contador|Descripción|Vista en...|  
 |------------------|-----------------|--------------|  
 |**Bytes de archivo recibidos/s**|Cantidad de datos de FILESTREAM recibidos por la réplica secundaria para la base de datos secundaria en el último segundo.|Réplica secundaria|  
 |**Bytes de registro recibidos/s**|Cantidad de entradas de registro recibidas por la réplica secundaria para la base de datos en el último segundo.|Réplica secundaria|  
@@ -39,10 +38,10 @@ ms.locfileid: "63250772"
 |**Registro total que requiere la operación de deshacer**|Kilobytes totales del registro que se deben deshacer.|Réplica secundaria|  
 |**Retraso de transacción**|Retraso en la espera de reconocimiento de confirmación no terminada, en milisegundos.|Réplica principal|  
   
-## <a name="see-also"></a>Vea también  
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
+## <a name="see-also"></a>Consulte también  
+ [Supervisar el uso de recursos &#40;el monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de disponibilidad](sql-server-availability-replica.md)   
- [Databases (objeto de SQL Server)](sql-server-databases-object.md)   
+ [SQL Server, objeto Databases](sql-server-databases-object.md)   
  [Grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

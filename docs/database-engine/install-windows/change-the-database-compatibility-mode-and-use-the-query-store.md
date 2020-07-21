@@ -1,7 +1,8 @@
 ---
-title: Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas | Microsoft Docs
-ms.custom: ''
-ms.date: 02/06/2019
+title: Uso del almacén de consultas después de la actualización
+description: En este artículo se explica el lugar en el que se usa el almacén de consultas para establecer una línea de base y cambiar el nivel de compatibilidad de la base de datos en una actualización de SQL Server.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,18 +15,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e84d60b0d5390712639314d93ecfbe42852f5fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b08dcd61e6e038f03bd4af22707fc0f518fdc4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034514"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895393"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], algunos cambios solo se habilitan una vez que se ha cambiado el [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Esto se realiza por varias razones:  
+En [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, algunos cambios solo se habilitan una vez que se ha cambiado el [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Esto se realiza por varias razones:  
   
 - Ya que la actualización es una operación unidireccional (no se puede degradar el formato de archivo), hay un valor en la separación de la habilitación de características nuevas para una operación independiente dentro de la base de datos. Es posible revertir un valor a un nivel de compatibilidad de la base de datos anterior.  El nuevo modelo reduce el número de pasos que hay que realizar durante una ventana de interrupción.  
   
@@ -45,7 +46,7 @@ El proceso de actualización para habilitar la nueva funcionalidad del procesado
   
 El flujo de trabajo recomendado para actualizar el procesador de consultas a la versión más reciente del código está documentado en la sección [Mantener la estabilidad del rendimiento al actualizar a una versión más reciente de SQL Server de Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), tal y como se muestra abajo.  
   
-![consultaDeAlmacénDeUso5](../../relational-databases/performance/media/query-store-usage-5.png "consultaDeAlmacénDeUso5") 
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
 
 A partir de la versión 18 de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se guía a los usuarios por el flujo de trabajo recomendado mediante el Asistente para la optimización de consultas. Para obtener más información, vea [Actualizar bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  

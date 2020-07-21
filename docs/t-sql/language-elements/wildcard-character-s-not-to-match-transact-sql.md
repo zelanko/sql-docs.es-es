@@ -1,6 +1,8 @@
 ---
-title: '[^] (caracteres comodín para no coincidencia) (Transact-SQL) | Microsoft Docs'
-ms.custom: ''
+title: '[^] Carácter comodín para excluir caracteres'
+description: Carácter comodín de T-SQL para que los caracteres no coincidan
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/06/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,35 +22,63 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eedf1db97477788489dd9b7c9c1789804ca064a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7291bc39092d4f65fd69f8c4050bb52a512ef04
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086087"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "76831737"
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (caracteres comodín para no coincidencia) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Coincide con cualquier carácter único que no se encuentre dentro del intervalo o del conjunto especificado entre los corchetes.  
+  Coincide con cualquier carácter único que no se encuentre dentro del intervalo o del conjunto especificado entre corchetes `[^]`. Estos caracteres comodín se pueden usar en comparaciones de cadenas donde se buscan coincidencias de patrón, como sucede con `LIKE` y `PATINDEX`. 
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se utiliza el operador [^] para buscar todas las personas de la tabla `Contact` cuyos nombres comiencen por `Al` y tengan una tercera letra que no es `a`.  
+### <a name="a-simple-example"></a>A. Ejemplo sencillo   
+ En el siguiente ejemplo se utiliza el operador [^] para buscar todas las 5 primeras personas de tabla `Contact` cuyos nombres comiencen por `Al` y tengan una tercera letra que no es `a`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
+SELECT TOP 5 FirstName, LastName  
 FROM Person.Person  
-WHERE FirstName LIKE 'Al[^a]%'  
-ORDER BY FirstName;  
+WHERE FirstName LIKE 'Al[^a]%';  
 ```  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+FirstName     LastName
+---------     --------
+Alex          Adams
+Alexandra     Adams
+Allison       Adams
+Alisha        Alan
+Alexandra     Alexander
+```
+### <a name="b-searching-for-ranges-of-characters"></a>B. Buscar intervalos de caracteres
+
+Un conjunto de caracteres comodín puede incluir caracteres individuales o intervalos de caracteres, así como combinaciones de caracteres e intervalos. En el ejemplo siguiente se usa el operador [^] para buscar una cadena que no comienza por una letra o un número.
+
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[^0-9A-z]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name   name    column_id
+---------     -----------   ----    ---------
+1591676718    JunkTable     _xyz    1
+```
   
 ## <a name="see-also"></a>Consulte también  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [% &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  (% [caracteres comodín para coincidencia] [Transact-SQL])  
+ [% &#40;caracteres comodín para coincidencia&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; &#40;Wildcard - Character&#40;s&#41; to Match&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  (&#91; &#93; [caracteres comodín para coincidencia] [Transact-SQL])  
- [\_ &#40;Wildcard - Match One Character&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md) (&#40; [comodín, coincidir un carácter] [Transact-SQL])  
+ [\_ &#40;comodín, coincidir un carácter&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   

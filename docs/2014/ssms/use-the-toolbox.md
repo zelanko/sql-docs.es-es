@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280668"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040855"
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
   Se pueden seleccionar y arrastrar elementos, texto y controles del cuadro de herramientas a formularios, páginas y diseñadores, y arrastrar de nuevo elementos de estos orígenes al cuadro de herramientas para volver a usarlos más adelante. Por ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede arrastrar una tarea a un plan de mantenimiento.  
@@ -42,7 +41,7 @@ ms.locfileid: "63280668"
 |Cambiar la posición de un elemento en una pestaña expandida del cuadro de herramientas|Arrastre el elemento a la nueva ubicación y suelte el botón del mouse.|  
 |Cambiar el nombre a un elemento del cuadro de herramientas|Haga clic con el botón derecho en el elemento del cuadro de herramientas y haga clic en **Cambiar nombre de elemento** en el menú contextual.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elementos generales de la interfaz de usuario](general-user-interface-elements.md)  
   
   

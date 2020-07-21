@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con versiones anteriores de las herramientas de administración de SQL Server | Microsoft Docs
+title: Compatibilidad con versiones anteriores de Herramientas de administración de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a57b4666-2177-419c-b9b6-28be93485b0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7468843aa111e8317efe4a9a088e93b675bc93c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928796"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>Compatibilidad con versiones anteriores de las herramientas de administración de SQL Server
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "62842981"
 |[Últimos cambios en las características de las herramientas de administración de SQL Server 2014](../../2014/database-engine/breaking-changes-to-management-tools-features-in-sql-server-2014.md)|Cambios en las características de las herramientas de administración que pueden requerir cambios en las aplicaciones.|  
 |[Cambios de comportamiento de las características de las herramientas de administración en SQL Server 2014](../../2014/database-engine/behavior-changes-to-management-tools-features-in-sql-server-2014.md)|Otros cambios en las características de las herramientas de administración en esta versión.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

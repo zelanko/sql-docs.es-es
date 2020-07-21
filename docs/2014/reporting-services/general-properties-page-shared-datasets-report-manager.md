@@ -1,5 +1,5 @@
 ---
-title: Página Propiedades generales, compartidos (Administrador de informes) | Microsoft Docs
+title: Página de propiedades generales, conjuntos de recursos compartidos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109067"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página de propiedades generales, conjuntos de datos compartidos (Administrador de informes)
@@ -36,7 +36,7 @@ ms.locfileid: "66109067"
 3.  En la lista desplegable, haga clic en **Administrar**. Se abre la página de propiedades General.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba un nombre para el conjunto de datos compartido, que se usa para identificar el elemento en la jerarquía de carpetas del servidor de informes.  
   
  **Descripción**  
@@ -45,8 +45,8 @@ ms.locfileid: "66109067"
  **Ocultar en la vista de lista**  
  Oculte el conjunto de datos compartido de los usuarios que están utilizando el modo de vista de lista en el Administrador de informes. El modo de vista de lista es el formato de vista predeterminado al explorar la jerarquía de carpetas del servidor de informes. En la vista de lista, los nombres y descripciones de elementos se presentan en formato horizontal. El formato alternativo es la vista Detalles. La vista Detalles no incluye descripciones, pero sí otra información acerca del elemento. Aunque se puede ocultar un elemento en la vista de lista, no se puede ocultar en la vista Detalles. Si desea restringir el acceso a un elemento, deberá crear una asignación de roles.  
   
- **Tiempo de espera de ejecución de consulta**  
- Escriba el número de segundos que deben transcurrir para que se supere el tiempo de espera de la consulta. Si es 0, el tiempo de espera de la consulta nunca se supera.  
+ **Tiempo de espera de ejecución de la consulta**  
+ Escriba el número de segundos hasta que se agote el tiempo de espera de la consulta. Si es 0, no se agota el tiempo de espera de la consulta.  
   
  **Aplicar**  
  Guarde los cambios.  
@@ -54,22 +54,22 @@ ms.locfileid: "66109067"
  **Eliminar**  
  Quite el conjunto compartido de la base de datos del servidor de informes. Al eliminar un conjunto de datos compartido desactiva los informes o las versiones en memoria caché. Para reactivar un informe, debe abrir uno por uno en una herramienta de creación de informes y especificar un conjunto de datos con el mismo nombre y la misma colección de campos. O bien, puede actualizar cada referencia a la región de datos para utilizar un conjunto de datos diferente con la misma colección de campos.  
   
- **Mover**  
- Cambie la posición de un conjunto de datos compartido en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta. Para obtener más información, consulte [página Mover elementos &#40;el Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Move**  
+ Cambie la posición de un conjunto de datos compartido en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta. Para obtener más información, vea [Página de elementos de movimiento &#40;Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Descargar**  
  Extraiga una copia de la definición del conjunto de datos compartido. En función de las asociaciones de archivos definidas en su equipo, el archivo se abrirá en Visual Studio o en otra aplicación. En la mayoría de los casos, el conjunto de datos compartido se abre como un archivo XML.  
   
- **Reemplazar**  
+ **Sustituya**  
  Reemplace la definición del conjunto de datos compartido por otra diferente de un archivo .rsd que se encuentra en el sistema de archivos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Opciones de actualización de caché &#40;el Administrador de informes&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
- [Página almacenamiento en caché, conjuntos de datos compartidos &#40;el Administrador de informes&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Opciones de actualización de caché &#40;Administrador de informes&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
+ [Página de almacenamiento en caché, conjuntos de recursos compartidos &#40;Administrador de informes&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
+ [Administrar conjuntos de recursos compartidos](report-data/manage-shared-datasets.md)   
  [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

@@ -1,10 +1,14 @@
 ---
-ms.openlocfilehash: 016abf8c186114726ebd99bbe34ae956cf618591
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
-ms.translationtype: HT
+author: MikeRayMSFT
+ms.service: sql
+ms.topic: include
+ms.date: 01/13/2020
+ms.author: mikeray
+ms.openlocfilehash: ea2e8370908bc283384df37ef4459bd852445f9b
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68161576"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80471718"
 ---
-<Token>**ESTE TEMA SE APLICA A:** ![sí](media/yes.png)SQL Server ![no](media/no.png)Azure SQL Database![no](media/no.png)Azure SQL Data Warehouse ![no](media/no.png)Almacenamiento de datos paralelos </Token>
-
+<Token>**ESTE TEMA SE APLICA A:** ![Sí](media/yes-icon.png)SQL Server 2019 y versiones posteriores ![No](media/no-icon.png)Azure SQL Database![No](media/no-icon.png)Azure Synapse Analytics ![No](media/no-icon.png)Almacenamiento de datos paralelos </Token>

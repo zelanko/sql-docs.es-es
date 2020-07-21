@@ -17,18 +17,18 @@ helpviewer_keywords:
 - UNICODE function
 - Unicode [SQL Server], UNICODE function
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29a9476f5835df326aa34d8ccfc4cc6d22ea7e3f
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 313a3b583c842b80827de704084a05707ea13cc3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670614"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85991976"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve el valor entero, según la definición del estándar Unicode, para el primer carácter de la expresión de entrada.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68670614"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 UNICODE ( 'ncharacter_expression' )  
 ```  
   
@@ -44,10 +44,10 @@ UNICODE ( 'ncharacter_expression' )
 **'** *ncharacter_expression* **'**  
 Es una expresión **nchar** o **nvarchar**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la función UNICODE devuelve un punto de código UCS-2 en el intervalo de 000000 a 00FFFF que es capaz de representar los 65 535 caracteres en el plano multilingüe básico (BMP) de Unicode. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cuando se usan intercalaciones con [caracteres complementarios (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) habilitados, UNICODE devuelve un punto de código UTF 16 en el intervalo de 000000 a 10FFFF. Para obtener más información sobre la compatibilidad con Unicode en [!INCLUDE[ssde_md](../../includes/ssde_md.md)], consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## <a name="examples"></a>Ejemplos  
@@ -144,7 +144,7 @@ Character # Unicode Character UNICODE Value
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

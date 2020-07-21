@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da4d35ec8647ba799986cc696a89718870dfb253
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041093"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887772"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  
   
  La replicación punto a punto de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores ofrece la posibilidad de habilitar la detección de conflictos en una topología punto a punto. Esta opción contribuye a evitar los problemas causados por los conflictos no detectados, como son el comportamiento incoherente de las aplicaciones y las actualizaciones perdidas. Cuando se habilita esta opción, de forma predeterminada, un cambio conflictivo se trata como un error crítico que produce el error del Agente de distribución. En caso de conflicto, la topología permanece en un estado incoherente hasta que se resuelve el conflicto y se restablece la coherencia de los datos en toda la topología.  
@@ -70,7 +70,7 @@ ms.locfileid: "68041093"
 ## <a name="enabling-conflict-detection"></a>Habilitar la detección de conflictos  
  Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los nodos. De forma predeterminada, en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores, la detección de conflictos está habilitada en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se recomienda tener habilitada la detección, incluso en escenarios en los que no se espere ningún conflicto. La detección de conflictos se puede habilitar y deshabilitar utilizando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o procedimientos almacenados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
--   Puede habilitar y deshabilitar la detección en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mediante la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** o con la página **Configurar topología** del Asistente de configuración de la topología punto a punto. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+-   Puede habilitar y deshabilitar la detección en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mediante la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** o con la página **Configurar topología** del Asistente de configuración de la topología punto a punto. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
      Si configura la detección de conflictos mediante [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], el Agente de distribución se configura para que deje de aplicar cambios cuando se detecte un conflicto.  
   

@@ -20,17 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e369ae57024b88ee65c4a81217661314e5533d47
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071502"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895783"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Esta función devuelve el número de identificación del archivo (id.) para el nombre lógico especificado de un archivo de datos, registro o texto completo de la base de datos actual. 
   
@@ -46,12 +46,12 @@ FILE_IDEX ( file_name )
  *file_name*  
 Una expresión de tipo **sysname** que devuelve el valor de id. de archivo "FILE_IDEX" del nombre del archivo. 
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **int**  
   
 **NULL** en caso de error  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 *file_name* corresponde al nombre de archivo lógico mostrado en la columna **name** de las vistas de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 Utilice `FILE_IDEX` en una lista SELECT, en una cláusula WHERE o en cualquier lugar que admita el uso de una expresión. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

@@ -1,7 +1,8 @@
 ---
-title: Planeación y realización de secuencias de restauración (modelo de recuperación completa) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Secuencias de restauración (modelo de recuperación completa) | Microsoft Docs
+description: Aprenda a planear y ejecutar una secuencia de restauración, que consta de instrucciones RESTORE, con una base de datos de SQL Server que normalmente usa el modelo de recuperación completa.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74a785caa2f8511bf11caf757793244d3c06c052
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033685"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670140"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planear y realizar secuencias de restauración (modelo de recuperación completa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se explica cómo planear y realizar una secuencia de restauración para bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa normalmente el modelo de recuperación completa. Una *secuencia de restauración* es una secuencia formada por una o varias instrucciones [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . Por lo general, una secuencia de restauración inicializa el contenido de la base de datos, archivos y/o páginas que se van a restaurar (la fase de copia de datos), pone al día las transacciones registradas (fase de rehacer) y revierte las transacciones no confirmadas (fase de deshacer).  
   

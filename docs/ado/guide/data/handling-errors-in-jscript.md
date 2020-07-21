@@ -1,5 +1,5 @@
 ---
-title: Control de errores en JScript | Microsoft Docs
+title: Controlar errores en JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 81ed99344a610e367b185f1acb1ae8cbae3da284
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925172"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758871"
 ---
 # <a name="handling-errors-in-jscript"></a>Control de errores en JScript
-Debe comprobar el código de Microsoft® JScript® el **recuento** propiedad de la **conexión** del objeto **errores** colección. Si el valor es mayor que 0, recorrer en iteración la colección e imprimir los valores como lo haría en cualquiera de los demás idiomas.  
+El código de Microsoft® JScript® debe comprobar la propiedad **Count** de la colección de **errores** del objeto de **conexión** . Si el valor es mayor que 0, recorra en iteración la colección e imprima los valores tal como lo haría en cualquiera de los demás lenguajes.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

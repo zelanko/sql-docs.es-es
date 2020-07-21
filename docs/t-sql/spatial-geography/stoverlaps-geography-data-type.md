@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0d0a449941c3d8a04526180cfa721931d98d09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2d70a6af55587d87272c2317ea13e23f1d3a9ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702318"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve 1 si una instancia de **geography** se superpone espacialmente a otra instancia de **geography**, o 0 en caso contrario.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "68120851"
  *other_geography*  
  Es otra instancia de **geography** con la que se compara la instancia en la que se invoca `STOverlaps()`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método siempre devuelve null si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
 ## <a name="examples"></a>Ejemplos  

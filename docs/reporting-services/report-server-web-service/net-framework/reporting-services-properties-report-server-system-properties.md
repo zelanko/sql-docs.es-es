@@ -1,5 +1,6 @@
 ---
 title: Propiedades del sistema del servidor de informes | Microsoft Docs
+description: Las propiedades del sistema son globales para la base de datos del servidor de informes. Puede leer o modificar muchas de estas propiedades utilizando los métodos de servicio web.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ecb90d65a011e5bb00c66f5f6ccd32ab4be663ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128817"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509637"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Propiedades de Reporting Services: propiedades del sistema del servidor de informes
   Los siguientes nombres de propiedades de sistema están reservados. No puede crear propiedades definidas por el usuario con el mismo nombre. Puede leer o modificar muchas de estas propiedades utilizando los métodos de servicio web.  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 538082f8d757579b7b2bbf57d82fc6cc5944f9ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057007"
 ---
 # <a name="replication-monitor"></a>Monitor de replicación
-  Esta sección de la documentación incluye información sobre el Monitor de replicación. Las páginas y cuadros de diálogo mostrados en el monitor son diferentes según el tipo de replicación y la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervise.  
+  Esta sección de la documentación incluye información sobre el Monitor de replicación. Las páginas y los cuadros de diálogo mostrados en el monitor difieren según el tipo de replicación y la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervise.  
   
 -   [Monitor de replicación, página Principal](replication-monitor-main-page.md)  
   
@@ -34,7 +33,7 @@ ms.locfileid: "63250376"
 
 -   [Configuración del publicador](publisher-settings.md)  
   
--   [Información del publicador, Publicaciones](publisher-information-publications.md)  
+-   [Información del publicador, publicaciones](publisher-information-publications.md)  
   
 -   [Información del publicador, Lista de supervisión de suscripciones &#40;Publicación transaccional, SQL Server 2005 y posteriores&#41;](publisher-information-subscription-watch-list-transactional.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "63250376"
   
 -   [Información de publicador, Lista de supervisión de suscripciones &#40;Publicación de instantáneas, SQL Server 2005 y posteriores&#41;](publisher-information-subscription-watch-list-snapshot.md)  
   
--   [Información de publicador, Agentes](publisher-information-agents.md)  
+-   [Información del publicador, agentes](publisher-information-agents.md)  
   
 -   [Información de publicación, Todas las suscripciones &#40;Publicación transaccional&#41;](publication-information-all-subscriptions-transactional-publication.md)  
   
@@ -80,12 +79,12 @@ ms.locfileid: "63250376"
   
 -   [Agente de instantáneas](snapshot-agent.md)  
   
--   [Configuración del filtro](filter-settings.md)  
+-   [Filter Settings](filter-settings.md)  
   
 -   [Ordenar columnas](sort-columns.md)  
   
-## <a name="see-also"></a>Vea también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Supervisar la replicación](monitoring-replication.md)   
+## <a name="see-also"></a>Consulte también  
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Supervisión de la replicación](monitoring-replication.md)   
   
   

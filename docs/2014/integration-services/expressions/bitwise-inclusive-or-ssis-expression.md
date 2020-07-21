@@ -10,15 +10,14 @@ helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3f7a092b8ad649285417ee7961ac891b90b87674
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f4256c4a619e24f12341616eca6c33542a23674
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898149"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429122"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit a bit) (expresión de SSIS)
   Lleva a cabo una operación OR bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si cualquiera de los bits es 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en cero (0).  
@@ -40,7 +39,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si alguna de las condiciones es NULL, el resultado de la expresión será NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
@@ -92,8 +91,8 @@ ReorderPoint | SafetyStockLevel
   
  00000111  
   
-## <a name="see-also"></a>Vea también  
- [&#124;&#124; &#40;OR lógico&#41; &#40;expresión de SSIS&#41;](logical-or-ssis-expression.md)   
+## <a name="see-also"></a>Consulte también  
+ [&#124;&#124; &#40;Operador OR lógico&#41; &#40;expresión de SSIS&#41;](logical-or-ssis-expression.md)   
  [^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  

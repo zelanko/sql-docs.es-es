@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2efc74fa2ba84335fcb5e03b42125fb9c6782f43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164111"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementar una extensión de procesamiento de datos
@@ -53,12 +53,12 @@ ms.locfileid: "63164111"
  [Depuración del código de extensión de procesamiento de datos](debugging-data-processing-extension-code.md)  
  Describe cómo depurar el código de las extensiones de procesamiento de datos.  
   
- [Eliminación de una extensión de procesamiento de datos](removing-a-data-processing-extension.md)  
+ [Quitar una extensión de procesamiento de datos](removing-a-data-processing-extension.md)  
  Describe cómo quitar una extensión de procesamiento de datos de un servidor de informes o del Diseñador de informes.  
   
  Para obtener un ejemplo de una extensión de procesamiento de datos totalmente implementada, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  
   

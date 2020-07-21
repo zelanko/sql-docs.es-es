@@ -11,10 +11,10 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cdb19c6df46e3c24625bfb740c82771f0adcc1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283180"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lección 3-3: Prueba del paquete del tutorial de la lección 3
@@ -30,11 +30,11 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
   
 **Flujo de control**  
   
-![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Control flow in package")  
+![Flujo de control del paquete](../integration-services/media/task4lesson2control.gif "Flujo de control del paquete")  
   
 **Flujo de datos**  
   
-![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Data flow in package")  
+![Flujo de datos del paquete](../integration-services/media/task9lesson1data.gif "Flujo de datos del paquete")  
   
 ## <a name="run-the-lesson-3-tutorial-package"></a>Ejecución del paquete del tutorial de la lección 3  
   

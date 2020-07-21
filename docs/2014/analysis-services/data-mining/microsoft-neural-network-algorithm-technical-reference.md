@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083860"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521771"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Referencia técnica del algoritmo de red neuronal de Microsoft
   La red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa una red de tipo *perceptrón multinivel* , que también se denomina *red de tipo regla delta de propagación hacia atrás*, compuesta por tres niveles de neuronas o *perceptrones*. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
@@ -88,7 +87,7 @@ ms.locfileid: "66083860"
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
-|Red neuronal|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo de redes neuronales puede usar ambos métodos de puntuación, el bayesiano y el basado en la entropía, siempre y cuando los datos contengan columnas continuas.<br /><br /> Predeterminado:|  
+|Red neuronal|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo de redes neuronales puede usar ambos métodos de puntuación, el bayesiano y el basado en la entropía, siempre y cuando los datos contengan columnas continuas.<br /><br /> Predeterminada.|  
 |Regresión logística|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Dado que no se puede pasar un parámetro a este algoritmo para controlar el comportamiento de la selección de características, se utilizan los valores predeterminados. Por consiguiente, si todos los atributos son discretos o contienen datos discretos, el valor predeterminado es BDEU.|  
   
  Los parámetros de algoritmo que controlan la selección de características para un modelo de red neuronal son MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES y MAXIMUM_STATES. También puede controlar el número de niveles ocultos mediante el establecimiento del parámetro HIDDEN_NODE_RATIO.  
@@ -102,15 +101,15 @@ ms.locfileid: "66083860"
   
  **Valores discretos**  
   
- Μ = p - la probabilidad de un estado anterior  
+ μ = p: la probabilidad anterior de un estado  
   
- StdDev  = sqrt(p(1-p))  
+ StdDev = sqrt(p(1-p))  
   
  **Valores continuos**  
   
- Valor presente = 1 - μ/σ  
+ Valor presente = 1-μ/σ  
   
- Ningún valor existente = - μ/σ  
+ Ningún valor existente =-μ/σ  
   
  Una vez codificados los valores, se realiza una suma ponderada de las entradas, con los extremos de la red como pesos.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "66083860"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente.  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Table y Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized y Ordered|  
@@ -200,9 +199,9 @@ ms.locfileid: "66083860"
 > [!NOTE]  
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)  
   
   

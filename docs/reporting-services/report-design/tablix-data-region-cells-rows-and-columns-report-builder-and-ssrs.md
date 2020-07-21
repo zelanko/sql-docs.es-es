@@ -1,6 +1,7 @@
 ---
-title: Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 03/07/2017
+title: Celdas, filas y columnas de una región de datos Tablix | Microsoft Docs
+description: Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de SQL Server Reporting Services, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -13,14 +14,15 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574713"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252398"
 ---
-# <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
+# <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Celdas, filas y columnas de una región de datos Tablix (Generador de informes y SSRS)
+
   Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrices](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) o [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Una región de datos Tablix muestra los datos detallados en filas y columnas de detalles, y los datos agrupados en filas y columnas de grupo. Al agregar grupos de filas y de columnas a una región de datos Tablix, las filas y las columnas en las que van a mostrarse los datos se agregan automáticamente. Puede agregar y quitar manualmente filas y columnas para personalizar una región de datos Tablix y controlar cómo se muestran los datos en el informe.  
@@ -38,7 +40,7 @@ ms.locfileid: "65574713"
   
 |Icono|Descripción|  
 |----------|-----------------|  
-|![Identificador de fila con 3 líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con 3 líneas paralelas para la fila de detalles")|Solo el grupo de detalles en la jerarquía de grupos de filas|  
+|![Identificador de fila con tres líneas paralelas para la fila de detalles](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")|Solo el grupo de detalles en la jerarquía de grupos de filas|  
 |![Identificador de fila con fila de detalles y un grupo exterior](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Identificador de fila con fila de detalles y un grupo exterior")|Un grupo exterior y el grupo de detalles secundario|  
 |![Dos corchetes en paralelo muestran los grupos anidados](../../reporting-services/report-design/media/rs-icontablix-nestedgroupnodetails.gif "Dos corchetes en paralelo muestran los grupos anidados")|Un grupo exterior y un grupo interno; ningún grupo de detalles|  
 |![Dos corchetes y tres líneas apiladas para anidados y detalles](../../reporting-services/report-design/media/rs-icontablix-nestedgroupwithdetails.gif "Dos corchetes y tres líneas apiladas para anidados y detalles")|Un grupo exterior, un grupo interno y el grupo de detalles secundario|  
@@ -60,12 +62,12 @@ ms.locfileid: "65574713"
 ### <a name="total-rows"></a>Filas de totales  
  Después de agregar grupos de filas y de columnas, puede agregar una fila para mostrar los totales para las columnas y una columna para mostrar los totales para las filas. En la ilustración siguiente se muestra una matriz con grupos de filas y de columnas, y una fila y una columna de totales.  
   
- ![Región de datos Tablix](../../reporting-services/report-design/media/rs-tablixparts.gif "Región de datos Tablix")  
+ ![Región de datos Tablix](../../reporting-services/report-design/media/rs-tablixparts.gif "Regiones de datos Tablix")  
   
 ### <a name="grouping-pane"></a>Panel de agrupación  
  El Panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente en la superficie de diseño. En la ilustración siguiente se muestra el Panel de agrupación para esta región de datos Tablix.  
   
- ![Panel de agrupación para grupos de filas y columnas anidadas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
+ ![Panel de agrupación para la fila anidada y grupos de columnas](../../reporting-services/report-design/media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
   
  El panel Grupos de filas muestra el grupo primario Category y el grupo secundario Subcat. El panel Grupos de columnas muestra el grupo primario Geography y el grupo secundario CountryRegion, así como el grupo Year, que es un grupo adyacente al grupo Geography. Al seleccionar el grupo Subcat en el panel Grupos de filas, la barra de grupo adquiere un sombreado naranja más oscuro y la celda de miembro del grupo de filas correspondiente se selecciona en la superficie de diseño.  
   

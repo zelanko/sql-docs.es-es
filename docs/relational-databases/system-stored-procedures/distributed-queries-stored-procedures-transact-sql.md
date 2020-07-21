@@ -1,5 +1,5 @@
 ---
-title: Distribuye las consultas, procedimientos almacenados (Transact-SQL) | Microsoft Docs
+title: Procedimientos almacenados de consultas distribuidas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a6cf13ee2f083a26d871272f5197b550cdf3dd49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6cb0a52e4a9b65f2b874d7e0419ff6221889ba98
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078181"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790390"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>Procedimientos almacenados de consultas distribuidas (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema que se utilizan para implementar y administrar consultas distribuidas.  
   
@@ -35,10 +35,10 @@ ms.locfileid: "68078181"
 |[sp_column_privileges_ex](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)|[sp_serveroption](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)|  
 |[sp_columns_ex](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)|[sp_table_privileges_ex](../../relational-databases/system-stored-procedures/sp-table-privileges-ex-transact-sql.md)|  
 |[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)|[sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)|  
-|[sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
+|[sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)|[sp_testlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)|  
 |[sp_foreignkeys](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

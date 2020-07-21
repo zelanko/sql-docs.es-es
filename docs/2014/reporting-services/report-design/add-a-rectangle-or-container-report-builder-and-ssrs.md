@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1f9750813d305834fe36f2c6ab7abfaa1d95075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106770"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>Agregar un rectángulo o un contenedor (Generador de informes y SSRS)
@@ -50,9 +50,9 @@ ms.locfileid: "66106770"
 2.  Haga clic en la flecha situada al lado del botón **Borde** para determinar qué lados del rectángulo va a cambiar.  
   
     > [!NOTE]  
-    >  Si establece el estilo de línea en **doble** y el ancho de línea es 1 1/2 pt o inferior, la línea es posible que no aparezca como doble cuando ejecute el informe en el generador de informes, Diseñador de informes o el Administrador de informes. Aparecerá como doble cuando exporte el informe a otros formatos, como Microsoft Word y Acrobat PDF.  
+    >  Si establece el estilo de línea en **doble** y el ancho de línea es 1 1/2 PT o más estrecho, es posible que la línea no aparezca como doble cuando ejecute el informe en Generador de informes, Diseñador de informes o administrador de informes. Aparecerá como doble cuando exporte el informe a otros formatos, como Microsoft Word y Acrobat PDF.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   

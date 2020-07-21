@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4461d22e62ebebd71b02fb7132b8ffed081d6d82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971485"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional de Explorador (Master Data Manager)
   En el área funcional de Explorador, puede actualizar datos y trabajar con jerarquías y colecciones.  
@@ -48,7 +47,7 @@ ms.locfileid: "65479424"
 ## <a name="hierarchies-and-collections"></a>Jerarquías y colecciones  
  [Jerarquías &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
- [Mover miembros dentro de una jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
+ [Movimiento de miembros dentro de una jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   
  [Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
@@ -58,7 +57,7 @@ ms.locfileid: "65479424"
   
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

@@ -7,47 +7,47 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 711086e881951d9e82fd34851c451e5472e49d7e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: e686e404ab4c948811b217291d1a9a7d2adc9feb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452341"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928955"
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Escenarios de seguridad de aplicaciones en SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-No existe una única manera correcta de crear una aplicación cliente de SQL Server segura. Cada aplicación es única en sus requisitos, en el entorno de implementación y en el rellenado de usuarios. Una aplicación que es razonablemente segura cuando está implementada inicialmente puede volverse menos segura con el tiempo. No es posible predecir con precisión qué amenazas pueden surgir en el futuro.  
+No hay una única manera correcta de crear una aplicación cliente de SQL Server segura. Cada aplicación es diferente en cuanto a requisitos, al entorno de implementación y al rellenado de usuarios. Una aplicación que es razonablemente segura cuando está implementada inicialmente puede volverse menos segura con el tiempo. No es posible predecir con precisión qué amenazas pueden surgir en el futuro.  
   
-SQL Server, como producto, ha evolucionado muchas versiones para incorporar las características de seguridad más recientes que permiten a los desarrolladores crear aplicaciones de base de datos seguras. Sin embargo, la seguridad no se incluye en el cuadro; requiere una supervisión y una actualización continuas.  
+SQL Server, como producto, ha evolucionado en muchas versiones para incorporar las características de seguridad más recientes que permitan a los desarrolladores crear aplicaciones de base de datos seguras. Sin embargo, la seguridad no viene incluida de forma predetermina; requiere tareas de supervisión y actualización continuas.  
   
 ## <a name="common-threats"></a>Amenazas comunes  
-Los desarrolladores deben comprender las amenazas de seguridad, las herramientas proporcionadas para contrarrestarlas y cómo evitar las carencias de seguridad. La seguridad se puede considerar mejor como una cadena, en la que una interrupción en cualquier vínculo pone en peligro la seguridad del todo. La lista siguiente incluye algunas amenazas de seguridad comunes que se describen con más detalle en los temas de esta sección.  
+Los desarrolladores deben comprender las amenazas de seguridad, las herramientas proporcionadas para contrarrestarlas y cómo evitar las vulnerabilidades de seguridad. La seguridad se entiende mejor si se piensa que es como una cadena, en la que, si se rompe algún eslabón, se deteriora la fuerza del conjunto. La lista siguiente incluye algunas amenazas de seguridad comunes que se describen con más detalle en los temas de esta sección.  
   
 ### <a name="sql-injection"></a>Inyección de código SQL  
-La inyección de SQL es el proceso por el que un usuario malintencionado escribe instrucciones Transact-SQL en lugar de entradas válidas. Si la entrada se pasa directamente al servidor sin ser validada y la aplicación ejecuta accidentalmente el código inyectado, el ataque tiene la posibilidad de dañar o destruir datos. Para evitar ataques de inyección de SQL Server, puede usar procedimientos almacenados y comandos con parámetros, con lo que se evita el SQL dinámico y se restringen los permisos en todos los usuarios.  
+La inyección de código SQL es el proceso por el que un usuario malintencionado escribe instrucciones Transact-SQL en lugar de entradas válidas. Si la entrada se pasa directamente al servidor sin ser validada y la aplicación ejecuta accidentalmente el código inyectado, el ataque tiene la posibilidad de dañar o destruir datos. Para evitar ataques de inyección de SQL Server, puede usar procedimientos almacenados y comandos con parámetros, con lo que se evita el SQL dinámico y se restringen los permisos en todos los usuarios.  
   
 ### <a name="elevation-of-privilege"></a>Elevación de privilegios  
-Los ataques de elevación de privilegios se producen cuando un usuario puede asumir los privilegios de una cuenta de confianza, como un propietario o administrador. Ejecútelo siempre con cuentas de usuario con privilegios mínimos y asigne solo los permisos necesarios. Evite el uso de cuentas administrativas o de propietario para ejecutar código. Esto limita la cantidad de daños que pueden producirse si un ataque se realiza correctamente. Cuando realice tareas que requieran permisos adicionales, use la firma de procedimiento o la suplantación solo mientras dure la tarea. Puede firmar procedimientos almacenados con certificados o usar la suplantación para asignar permisos temporalmente.  
+Los ataques de elevación de privilegios se producen cuando un usuario puede asumir los privilegios de una cuenta de confianza, como un propietario o administrador. Realice las operaciones de ejecución siempre con cuentas de usuario con privilegios mínimos y asigne solo aquellos que sean necesarios. Evite el uso de cuentas administrativas o de propietario para ejecutar código. De este modo, se limita la cantidad de daño que pueden producirse si un ataque se realiza correctamente. Cuando realice tareas que requieran permisos adicionales, use la firma de procedimiento o la suplantación solo mientras dure la tarea. Puede firmar procedimientos almacenados con certificados o usar la suplantación para asignar permisos temporalmente.  
   
 ### <a name="probing-and-intelligent-observation"></a>Sondeo y observación inteligente  
-Un ataque de sondeo puede utilizar los mensajes de error generados por una aplicación para buscar vulnerabilidades de seguridad. Implemente el control de errores en todo el código de procedimiento para evitar que se devuelva SQL Server información de error al usuario final.  
+Un ataque de sondeo puede utilizar los mensajes de error generados por una aplicación para buscar vulnerabilidades de seguridad. Implemente el control de errores en todo el código de procedimiento para evitar que las informaciones de errores de SQL Server lleguen al usuario final.  
   
-### <a name="authentication"></a>Autenticación  
-Se puede producir un ataque por inyección de cadena de conexión al utilizar SQL Server inicios de sesión si una cadena de conexión basada en la entrada del usuario se construye en tiempo de ejecución. Si en la cadena de conexión no se comprueba si hay pares de palabras clave válidos, un atacante puede insertar caracteres adicionales, tener acceso a datos confidenciales o a otros recursos del servidor. Use la autenticación de Windows siempre que sea posible. Si debe utilizar inicios de sesión de SQL Server, utilice la <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> para crear y validar cadenas de conexión en tiempo de ejecución.  
+### <a name="authentication"></a>Authentication  
+Se puede producir un ataque por inyección de cadena de conexión al utilizar inicios de sesión de SQL Server si una cadena de conexión basada en datos proporcionados por el usuario se construye en el tiempo de ejecución. Si en la cadena de conexión no se comprueba si hay pares de palabras clave válidos, un atacante puede insertar caracteres adicionales, tener acceso a información confidencial o a otros recursos del servidor. Use la autenticación de Windows siempre que sea posible. Si debe utilizar inicios de sesión de SQL Server, utilice <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> para crear y validar cadenas de conexión en el tiempo de ejecución.  
   
 ### <a name="passwords"></a>Contraseñas  
-Muchos ataques tienen éxito porque un intruso pudo obtener o adivinar una contraseña para un usuario con privilegios. Las contraseñas son la primera línea de defensa contra los intrusos, por lo que establecer contraseñas seguras es esencial para la seguridad del sistema. Crear y aplicar directivas de contraseñas para la autenticación en modo mixto.  
+Muchos ataques tienen éxito porque un intruso pudo obtener o adivinar la contraseña de un usuario con privilegios. Las contraseñas son la primera línea de defensa contra los intrusos, por lo que establecer contraseñas seguras es esencial para la seguridad del sistema. Cree y aplique directivas de uso de contraseñas para la autenticación en modo mixto.  
   
 Asigne siempre una contraseña segura a la cuenta `sa`, incluso cuando use la autenticación de Windows.  
   
 ## <a name="in-this-section"></a>En esta sección  
 [Escritura de SQL dinámico seguro en SQL Server](writing-secure-dynamic-sql.md)  
-Describe técnicas para escribir SQL dinámico seguro mediante procedimientos almacenados.  
+Describe técnicas para escribir instrucciones SQL dinámicas seguras mediante procedimientos almacenados.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 - [Seguridad de SQL Server](sql-server-security.md)

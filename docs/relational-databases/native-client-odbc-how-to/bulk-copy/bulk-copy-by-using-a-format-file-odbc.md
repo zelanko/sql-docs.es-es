@@ -1,5 +1,5 @@
 ---
-title: Realizar una copia masiva con un archivo de formato (ODBC) | Documentos de Microsoft
+title: Copia masiva mediante un archivo de formato (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,19 +11,17 @@ helpviewer_keywords:
 - bulk copy using format file [ODBC]
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 654a632024f5c004ea9c15d71b767b4cb6bf80b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: a299aad83a8a5d4287f84772590b6b8321d555d0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099405"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004306"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Realizar una copia masiva con un archivo de formato (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo se muestra cómo se usa la función ODBC bcp_init con un archivo de formato.  
   
@@ -35,7 +33,7 @@ ms.locfileid: "68099405"
   
 3.  Conectar con Microsoft® SQL Server™.  
   
-4.  Llame a [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para establecer la siguiente información:  
+4.  Llame a [bcp_init](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) para establecer la información siguiente:  
   
     -   El nombre de la tabla o vista desde la que se realizará la copia masiva o en la que se realizará la copia masiva.  
   
@@ -43,20 +41,20 @@ ms.locfileid: "68099405"
   
     -   El nombre de un archivo de datos donde recibir cualquier mensaje de error de la copia masiva (especifique NULL si no desea ningún archivo de mensajes).  
   
-    -   La dirección de la copia: DB_IN desde el archivo a la tabla o vista.  
+    -   La dirección de la copia: DB_IN al archivo desde la tabla o vista.  
   
-5.  Llame a [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para leer el archivo de formato que describa el archivo de datos que va a usar la operación de copia masiva.  
+5.  Llame a [bcp_readfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) para leer el archivo de formato que describe el archivo de datos que se va a usar en la operación de copia masiva.  
   
 6.  Llame a [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) para ejecutar la operación de copia masiva.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo no es compatible con IA64.  
   
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) lista para crear la tabla que va a usar el ejemplo de código.  
+ Ejecute la primera [!INCLUDE[tsql](../../../includes/tsql-md.md)] lista de código () para crear la tabla que utilizará el ejemplo.  
   
  Copie la segunda lista de código y péguela en un archivo denominado Bcpfmt.fmt. Cada columna de la tabla se separa con un carácter de tabulación.  
   
@@ -64,7 +62,7 @@ ms.locfileid: "68099405"
   
  Compile la cuarta lista de código (C++) con odbc32.lib y odbcbcp.lib. Si la generación se realizó con MSBuild.exe, copie Bcpfmt.fmt y Bcpodbc.bcp del directorio del proyecto al directorio que contiene el archivo .exe y, a continuación, invóquelo.  
   
- Ejecute la quinta ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) lista para eliminar la tabla que usó el ejemplo de código.  
+ Ejecute la quinta [!INCLUDE[tsql](../../../includes/tsql-md.md)] lista de código () para eliminar la tabla utilizada por el ejemplo.  
   
 ```  
 use AdventureWorks  
@@ -188,8 +186,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Copia masiva con los temas de procedimientos de controlador SQL Server ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de la copia masiva con el controlador ODBC de SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Utilizar archivos de datos y archivos de formato](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

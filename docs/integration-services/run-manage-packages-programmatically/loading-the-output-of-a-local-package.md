@@ -17,10 +17,10 @@ ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295751"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Cargar la salida de un paquete local
@@ -45,7 +45,7 @@ ms.locfileid: "71295751"
   
 2.  En el proyecto de desarrollo, para establecer una referencia al espacio de nombres **Microsoft.SqlServer.Dts.DtsClient**, ubique el ensamblado **Microsoft.SqlServer.Dts.DtsClient.dll**. De forma predeterminada, este ensamblado se instala en **C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn**. Importe el espacio de nombres en el código usando la instrucción **Using** o la instrucción [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** de C#.  
   
-3.  En el código, cree un objeto de tipo **DtsClient.DtsConnection** con una cadena de conexión que contenga los parámetros de línea de comandos que **dtexec.exe** necesita para ejecutar el paquete. Para más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md). A continuación, abra la conexión con esta cadena de conexión. También puede emplear la utilidad **dtexecui** para crear visualmente la cadena de conexión necesaria.  
+3.  En el código, cree un objeto de tipo **DtsClient.DtsConnection** con una cadena de conexión que contenga los parámetros de línea de comandos que **dtexec.exe** necesita para ejecutar el paquete. Para obtener más información, consulte [utilidad dtexec](../../integration-services/packages/dtexec-utility.md). A continuación, abra la conexión con esta cadena de conexión. También puede emplear la utilidad **dtexecui** para crear visualmente la cadena de conexión necesaria.  
   
     > [!NOTE]  
     >  En el código de ejemplo se muestra cómo cargar el paquete del sistema de archivos mediante la sintaxis `/FILE <path and filename>`. No obstante, puede también cargar el paquete desde la base de datos MSDB utilizando la sintaxis `/SQL <package name>` o desde el almacén de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizando la sintaxis `/DTS \<folder name>\<package name>`.  
@@ -112,7 +112,7 @@ ms.locfileid: "71295751"
   
 7.  Ejecute la aplicación y haga clic en el botón. Después de una breve pausa mientras el paquete se ejecuta, debería aparecer en el cuadro de texto del formulario el valor agregado calculado por el paquete (el recuento de clientes de Canadá).  
   
-### <a name="sample-code"></a>Código muestra  
+### <a name="sample-code"></a>Código de ejemplo  
   
 ```vb  
 Imports System.Data  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106226"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Gráficos de columnas (Generador de informes y SSRS)
@@ -35,21 +35,21 @@ ms.locfileid: "66106226"
   
 -   **Cilindro 3D**: Gráfico de columnas cuyas barras tienen forma de cilindro en un gráfico 3D.  
   
--   `Histogram` Gráfico de columnas que se calcula para que las barras se organicen en una distribución normal.  
+-   `Histogram`. Gráfico de columnas que se calcula para que las barras se organicen en una distribución normal.  
   
--   `Pareto` Gráfico de columnas cuyas barras se organizan de mayor a menor.  
+-   `Pareto`. Gráfico de columnas cuyas barras se organizan de mayor a menor.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Consideraciones sobre los datos para un gráfico de columnas  
   
--   Los gráficos de barras y de columnas se usan normalmente para mostrar comparaciones entre grupos. Si en un gráfico hay más de tres series, plantéese la posibilidad de usar un gráfico de barra apilada o un gráfico de columna apilada. Si tiene varias series en el gráfico, también puede combinar gráficos de barra apilada o de columna apilada en varios en grupos. Para obtener más información, consulte [gráficos de barras &#40;generador de informes y SSRS&#41; ](charts-report-builder-and-ssrs.md) y *gráficos de columnas*.  
+-   Los gráficos de barras y de columnas se usan normalmente para mostrar comparaciones entre grupos. Si en un gráfico hay más de tres series, plantéese la posibilidad de usar un gráfico de barra apilada o un gráfico de columna apilada. Si tiene varias series en el gráfico, también puede combinar gráficos de barra apilada o de columna apilada en varios en grupos. Para obtener más información, vea [gráficos de barras &#40;generador de informes y](charts-report-builder-and-ssrs.md) gráficos de&#41;y de *columnas*de SSRS.  
   
 -   En un gráfico de columnas, dispone de menos espacio para mostrar horizontalmente las etiquetas del eje de categorías. Si las etiquetas son largas, considere la posibilidad de usar un gráfico de barras o de cambiar el ángulo de giro de las etiquetas.  
   
 -   Puede agregar estilos de dibujo especiales a las barras de un gráfico de columnas para aumentar su impacto visual. Los estilos de dibujo incluyen cuñas, relieves, cilindros y degradados. Estos efectos han sido diseñados para mejorar el aspecto de los gráficos 2D. Si su gráfico es un gráfico 3D, se aplicarán los estilos de dibujo, pero el efecto puede no ser el mismo. Para más información sobre cómo agregar un estilo de dibujo a un gráfico de barras, vea [Agregar estilos con bisel, relieve y textura a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
--   Una característica exclusiva de los gráficos de columnas es su capacidad para mostrarse como un histograma o gráfico de Pareto. Para ello, establezca la propiedad ShowColumnAs `Histogram` o `Pareto` en la ventana Propiedades para `true`.  
+-   Una característica exclusiva de los gráficos de columnas es su capacidad para mostrarse como un histograma o gráfico de Pareto. Para ello, establezca la propiedad ShowColumnAs en `Histogram` o `Pareto` en el ventana Propiedades en. `true`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Gráficos de barras &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   

@@ -1,5 +1,6 @@
 ---
-title: Propiedades de SQL Server (pestaña de disponibilidad AlwaysOn alta) | Microsoft Docs
+title: Propiedades de SQL Server (pestaña alta disponibilidad de AlwaysOn) | Microsoft Docs
+description: Obtenga información acerca de cómo activar o desactivar la característica Grupos de disponibilidad AlwaysOn en SQL Server 2014. Ver los requisitos previos que debe cumplir la instancia de servidor para esta característica.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc145da0b6296d3f6e048905e4ab4e649294d38a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048485"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Propiedades de SQL Server (pestaña Alta disponibilidad de AlwaysOn)
   Use la pestaña **Alta disponibilidad de AlwaysOn** del cuadro de diálogo **Propiedades de SQL Server** del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar o deshabilitar la característica Grupos de disponibilidad de AlwaysOn de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La habilitación de los Grupos de disponibilidad de AlwaysOn es un requisito previo para que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use los grupos de disponibilidad como solución de alta disponibilidad y recuperación ante desastres.  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para tener habilitados los Grupos de disponibilidad de AlwaysOn, una instancia del servidor debe cumplir los requisitos previos siguientes.  
   
 -   La instancia de servidor debe residir en un nodo de clústeres de conmutación por error de Windows Server (WSFC).  
@@ -32,13 +32,13 @@ ms.locfileid: "62678471"
 -   Habilite los Grupos de disponibilidad de AlwaysOn para las distintas instancias del servidor de una en una. Después de habilitar los Grupos de disponibilidad de AlwaysOn, espere hasta que se haya reiniciado el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de habilitar la instancia del servidor siguiente.  
   
 > [!NOTE]  
->  Para más información sobre las características admitidas y sobre los requisitos previos, restricciones y recomendaciones adicionales para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vea los Libros en pantalla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  Para más información sobre las características admitidas y sobre los requisitos previos, restricciones y recomendaciones adicionales para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vea los Libros en pantalla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="dialog-options"></a>Opciones del cuadro de diálogo  
  **Nombre del clúster de conmutación por error de Windows**  
  Muestra el nombre del clúster de WSFC en el que el equipo local es un nodo.  
   
- **Habilitar los grupos de disponibilidad de AlwaysOn**  
+ **Habilitación de grupos de disponibilidad AlwaysOn**  
  Use esta casilla para habilitar o deshabilitar los Grupos de disponibilidad de AlwaysOn en esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tal como se indica a continuación:  
   
 -   Si esta casilla está los vacía, los Grupos de disponibilidad de AlwaysOn estarán deshabilitados. Para habilitar los Grupos de disponibilidad de AlwaysOn, seleccione esta casilla, haga clic en **Aceptar**y reinicie manualmente el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,7 +48,7 @@ ms.locfileid: "62678471"
     > [!TIP]  
     >  Después de deshabilitar los Grupos de disponibilidad de AlwaysOn, debe quitar todas las réplicas disponibilidad locales de la instancia del servidor. Si quita la última réplica de un grupo de disponibilidad determinado, también debe quitar el grupo.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
   
 > [!NOTE]  
 >  Para obtener más información sobre los pasos que se deben seguir después de deshabilitar los Grupos de disponibilidad de AlwaysOn y para obtener información sobre cómo crear y configurar grupos de disponibilidad, vea los Libros en pantalla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

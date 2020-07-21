@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2d50c789-eb9d-4f8a-81ca-974563040bbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7c74f251ebc915082f3d6249a84a258d3c84682
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 81a6f462a8483a849bbf171d830d36f229bb8747
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998320"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919636"
 ---
 # <a name="updateshort-method-sqlserverresultset"></a>Método updateShort (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67998320"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[updateShort (int, short)](../../../connect/jdbc/reference/updateshort-method-int-short.md)|Actualiza la columna designada con un valor **short** según el índice de columna.|  
+|[updateShort (int, short)](../../../connect/jdbc/reference/updateshort-method-int-short.md)|Actualiza la columna designada con un valor **short** según el índice de la columna.|  
 |[updateShort (java.lang.String, short)](../../../connect/jdbc/reference/updateshort-method-java-lang-string-short.md)|Actualiza la columna designada con un valor **short** según el nombre de columna.|  
   
 ## <a name="see-also"></a>Consulte también  

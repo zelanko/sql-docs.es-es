@@ -1,5 +1,5 @@
 ---
-title: Directrices para usar índices en tablas optimizadas para memoria | Microsoft Docs
+title: Instrucciones para usar índices en tablas optimizadas para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932876"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Directrices para usar índices en las tablas con optimización para memoria
   Los índices se utilizan para tener acceso a los datos de forma eficaz en las tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar los índices adecuados puede mejorar drásticamente el rendimiento de las consultas. Considere, por ejemplo, la consulta:  
@@ -28,9 +27,9 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Si no hay ningún índice en la columna c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesitará examinar toda la tabla t y, a continuación, filtrar en las filas que cumplen la condición c1=1. Sin embargo, si tiene un índice en la columna c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede buscar directamente en el valor 1 y recuperar las filas.  
   
- Para buscar los registros que tienen un valor específico o un intervalo de valores para una o varias columnas de la tabla, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede utilizar un índice en dichas columnas para buscar rápidamente los registros correspondientes. Tanto las tablas optimizadas para memoria como las basadas en disco se benefician de los índices. Sin embargo, hay algunas diferencias entre las estructuras de índice que deben tenerse en cuenta al utilizar las tablas optimizadas para memoria. (Los índices en tablas optimizadas para memoria se denominan índices optimizados para memoria.) Algunas de las principales diferencias son:  
+ Para buscar los registros que tienen un valor específico o un intervalo de valores para una o varias columnas de la tabla, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede utilizar un índice en dichas columnas para buscar rápidamente los registros correspondientes. Tanto las tablas optimizadas para memoria como las basadas en disco se benefician de los índices. Sin embargo, hay algunas diferencias entre las estructuras de índice que deben tenerse en cuenta al utilizar las tablas optimizadas para memoria. (Los índices de las tablas optimizadas para memoria se conocen como índices optimizados para memoria). Algunas de las principales diferencias son:  
   
--   Los índices optimizados para memoria deben crearse con [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Los índices basados en disco se pueden crear con `CREATE TABLE` y `CREATE INDEX`.  
+-   Los índices con optimización para memoria deben crearse con [CREATE TABLE &#40;&#41;de Transact-SQL ](/sql/t-sql/statements/create-table-transact-sql). Los índices basados en disco se pueden crear con `CREATE TABLE` y `CREATE INDEX`.  
   
 -   Los índices con optimización para memoria solo existen en la memoria. Las estructuras de índice no permanecen en el disco y las operaciones de índice no se graban en el registro de transacciones. Se crea la estructura de índice cuando la tabla optimizada para memoria se crea en la memoria, durante la operación CREATE TABLE y durante el inicio de la base de datos.  
   
@@ -40,7 +39,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Hay dos tipos de índices optimizados para memoria:  
   
--   Los índices de hash no clúster, que son convenientes para las búsquedas de puntos. Para obtener más información acerca de los índices de hash, vea [índices Hash](hash-indexes.md).  
+-   Los índices de hash no clúster, que son convenientes para las búsquedas de puntos. Para obtener más información sobre los índices hash, vea [índices hash](hash-indexes.md).  
   
 -   Los índices no clúster, que son para exámenes de intervalo y exámenes ordenados.  
   
@@ -50,7 +49,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Cada índice utiliza memoria. Los índices hash utilizan una cantidad fija de memoria, que es una función del número de cubos. Para los índices no clúster, el consumo de memoria depende del número de filas y del tamaño de las columnas de clave de índice, con una sobrecarga adicional que depende de la carga de trabajo. La memoria para los índices optimizados para memoria es adicional e independiente de la memoria usada para almacenar las filas de las tablas optimizadas para memoria.  
   
- Los valores de clave duplicados comparten siempre el mismo depósito de hash. Si un índice hash contiene muchos valores clave duplicados, las cadenas para el hash largas resultantes repercutirán negativamente en el rendimiento. Las colisiones de hash, que se producen en los índices hash, reducirán aún más el rendimiento en este escenario. Por ese motivo, si el número de claves de índice únicas es al menos 100 veces menor que el recuento de filas, puede reducir el riesgo de colisiones de hash mediante la realización del depósito contar mucho más grande (al menos ocho veces el número de claves de índice únicas; vea [determinar el El número correcto de depósitos para los índices Hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) para obtener más información) o bien puede eliminar las colisiones de hash completamente mediante el uso de un índice no agrupado.  
+ Los valores de clave duplicados comparten siempre el mismo depósito de hash. Si un índice hash contiene muchos valores clave duplicados, las cadenas para el hash largas resultantes repercutirán negativamente en el rendimiento. Las colisiones de hash, que se producen en los índices hash, reducirán aún más el rendimiento en este escenario. Por ese motivo, si el número de claves de índice único es al menos 100 veces menor que el recuento de filas, puede reducir el riesgo de colisiones de hash haciendo que el número de depósitos sea mucho mayor (al menos ocho veces el número de claves de índice único; vea [determinar el número de depósitos correcto para los índices de hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md) para obtener más información) o puede eliminar las colisiones de hash por completo mediante  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>Determinar qué índices se deben usar para una tabla con optimización para memoria  
  Cada tabla optimizada para memoria debe tener al menos un índice. Tenga en cuenta que cada restricción PRIMARY KEY crea implícitamente un índice. Por consiguiente, si una tabla tiene una clave principal, tiene un índice. Una clave principal es un requisito para una tabla optimizada para memoria perdurable.  
@@ -71,13 +70,13 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Index scan, recupera todas las filas de la tabla.|Sí|Sí|Sí|  
 |Index seek en predicados de igualdad (=).|Sí<br /><br /> (Clave completa necesaria.)|Sí <sup>1</sup>|Sí|  
-|Index seek en predicados de desigualdad (>, <, \<=, > =, BETWEEN).|No (resultados en un examen de índice)|Sí <sup>1</sup>|Sí|  
-|Recupere las filas en un orden que coincida con la definición de índice.|Sin|Sí|Sí|  
-|Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|Sin|Sin|Sí|  
+|Index Seek en predicados de desigualdad (>, <, \<=, > =, between).|No (resultados en un examen de índice)|Sí <sup>1</sup>|Sí|  
+|Recupere las filas en un orden que coincida con la definición de índice.|No|Sí|Sí|  
+|Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|No|No|Sí|  
   
  En la tabla, Sí se refiere a que el índice puede prestar servicio correctamente a la solicitud y No se refiere a que el índice no se puede usar correctamente para atender la solicitud.  
   
- <sup>1</sup> para un índice no agrupado optimizado para memoria, no se requiere la clave completa para realizar una búsqueda de índice. Sin embargo, dado el orden de las columnas de la clave de índice, se producirá un examen si el valor de una columna viene después de una columna que falta.  
+ <sup>1</sup> para un índice optimizado para memoria no agrupado, no se requiere la clave completa para realizar una búsqueda de índice. Sin embargo, dado el orden de las columnas de la clave de índice, se producirá un examen si el valor de una columna viene después de una columna que falta.  
   
 ## <a name="index-count"></a>Contador de índice  
  Una tabla optimizada para memoria puede tener hasta ocho índices, incluido el creado con la clave principal.  
@@ -90,7 +89,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      La recolección de elementos no utilizados funciona mejor si todos los índices de la tabla se utilizan con frecuencia. Los índices que se usan poco pueden hacer que el sistema de recopilación de elementos no utilizados no se comporten de forma óptimo en las versiones de fila anteriores.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Crear un índice optimizado para memoria: Ejemplos de código  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Crear un índice con optimización para memoria: ejemplos de código  
  Índice hash de nivel de columna:  
   
 ```sql  
@@ -172,9 +171,9 @@ create table t (
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Índices en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Determinar el número correcto de depósitos para los índices Hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
- [Índices de hash](hash-indexes.md)  
+ [Determinar el número correcto de depósitos para los índices hash](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
+ [Índices hash](hash-indexes.md)  
   
   

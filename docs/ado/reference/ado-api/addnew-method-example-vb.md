@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - AddNew method [ADO], Visual Basic example
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 573679e173f97840ccffee9ad93d73cf0075b4b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921303"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760631"
 ---
 # <a name="addnew-method-example-vb"></a>Ejemplo del método AddNew (VB)
-Este ejemplo se usa el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para crear un nuevo registro con el nombre especificado.  
+En este ejemplo se usa el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para crear un nuevo registro con el nombre especificado.  
   
 ```  
 'BeginAddNewVB  
@@ -107,6 +107,6 @@ End Sub
 'EndAddNewVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [AddNew (método, ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [AddNew (método) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Usar el origen OData [SSIS] | Microsoft Docs'
+title: 'Tutorial: usar el origen OData [SSIS] | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6affa33374df4bd8e05e6158a23a46016ef1c644
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770221"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429892"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Usar el origen OData [SSIS]
   En este tutorial se describe el proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) ) y, después, cargarlo en un archivo plano.  
@@ -24,7 +23,7 @@ ms.locfileid: "62770221"
   
 1.  Inicie **SQL Server Data Tools** o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-2.  Haga clic en **Archivo**, seleccione **Nuevo**y haga clic en **Proyecto**.  
+2.  Haga clic en **Archivo**, seleccione **Nuevo** y, luego, haga clic en **Proyecto**.  
   
 3.  En el cuadro de diálogo **Nuevo proyecto** , expanda **Instalado**, expanda **Plantillas**, expanda **Business Intelligence**y haga clic en **Integration Services**.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62770221"
   
 5.  Haga clic en **Nuevo…** para agregar un nuevo Administrador de conexiones OData.  
   
-6.  Escriba la dirección URL del servicio OData en **Ubicación de documento de servicio**. Puede ser la dirección URL del documento de servicio, o de una fuente o una entidad específica. Para este tutorial, escriba [ http://services.odata.org/V3/Northwind/Northwind.svc/ ](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Escriba la dirección URL del servicio OData en **Ubicación de documento de servicio**. Puede ser la dirección URL del documento de servicio, o de una fuente o una entidad específica. Para este tutorial, escriba [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) .  
   
 7.  Confirme que se ha seleccionado **Autenticación de Windows** como la **autenticación** que se usará para tener acceso al servicio OData. **Autenticación de Windows** está seleccionada de forma predeterminada. Para usar la autenticación básica, seleccione **Usar este nombre de usuario y esta contraseña**.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62770221"
   
 ## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. Agregar el destino del archivo plano y probar la solución  
   
-1.  Después, arrastre y coloque un **Destino de archivo plano** desde el **Cuadro de herramientas de SSIS** hasta la superficie de diseño Flujo de datos, debajo el componente **Origen OData**.  
+1.  Después, arrastre y coloque un **Destino de archivo plano** desde el **Cuadro de herramientas de SSIS** hasta la superficie de diseño Flujo de datos, debajo el componente **Origen OData** .  
   
 2.  Conecte el componente **Origen OData** con el componente **Destino de archivo plano** usando la flecha azul.  
   

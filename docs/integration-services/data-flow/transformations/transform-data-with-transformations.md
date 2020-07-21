@@ -15,10 +15,10 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccabb3d2964d1a2a5d4de6beab7e299eb9befb03
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297724"
 ---
 # <a name="transform-data-with-transformations"></a>Transformar datos con transformaciones
@@ -30,7 +30,7 @@ ms.locfileid: "71297724"
   
  El siguiente diagrama muestra un flujo de datos simple que tiene un origen, dos transformaciones y un destino.  
   
- ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![Flujo de datos](../../../integration-services/data-flow/media/mw-dts-08.gif "flujo de datos")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ofrecen la siguiente funcionalidad:  
   

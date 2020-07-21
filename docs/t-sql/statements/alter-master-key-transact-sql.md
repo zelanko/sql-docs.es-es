@@ -1,6 +1,6 @@
 ---
 title: ALTER MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+ms.custom: fasttrack-edit
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
@@ -27,12 +27,12 @@ ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5a7600f9657a11a25732aa9527bd6a775234eda
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071293"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868424"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -44,7 +44,7 @@ Cambia las propiedades de la clave maestra de una base de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER MASTER KEY <alter_option>
@@ -61,7 +61,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { SERVICE MASTER KEY | PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 -- Note: DROP ENCRYPTION BY SERVICE MASTER KEY is not supported on Azure SQL Database.
 
@@ -79,7 +79,7 @@ ALTER MASTER KEY <alter_option>
     DROP ENCRYPTION BY { PASSWORD = 'password' }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
 ALTER MASTER KEY <alter_option>
@@ -88,7 +88,9 @@ ALTER MASTER KEY <alter_option>
     <regenerate_option> | <encryption_option>
 
 <regenerate_option> ::=
-    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'<encryption_option> ::=
+    [ FORCE ] REGENERATE WITH ENCRYPTION BY PASSWORD ='password'
+
+<encryption_option> ::=
     ADD ENCRYPTION BY SERVICE MASTER KEY
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY
@@ -98,7 +100,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*' Especifica una contraseña con la que se va a cifrar o descifrar la clave maestra de la base de datos. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La opción REGENERATE vuelve a crear la clave maestra de la base de datos y todas las claves que ésta protege. Las claves se descifran primero con la antigua clave maestra y, a continuación, se cifran con la nueva clave maestra. Puesto que esta operación hace un uso intensivo de recursos, debe programarse durante un periodo de baja demanda, a menos que la clave maestra se encuentre en peligro.
 
@@ -124,7 +126,7 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO
 ```
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 En el siguiente ejemplo se crea una clave maestra de base de datos para `AdventureWorksPDW2012` y se vuelven a cifrar las claves inferiores en la jerarquía de cifrado.
 

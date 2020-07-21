@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282157"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "63282157"
 ## <a name="custom-authentication-in-reporting-services"></a>Autenticación personalizada en Reporting Services  
  En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], el sistema operativo Windows administra la autenticación de los usuarios a través de la seguridad integrada o de la recepción explícita y la validación de las credenciales del usuario. La autenticación personalizada se puede desarrollar en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para admitir esquemas de autenticación adicionales. Esto se posibilita a través de la interfaz de extensión de la seguridad <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>. Todas las extensiones heredan de la interfaz base <xref:Microsoft.ReportingServices.Interfaces.IExtension> para cualquier extensión que implemente y use el servidor de informes. <xref:Microsoft.ReportingServices.Interfaces.IExtension>, así como <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension>, son miembros del espacio de nombres <xref:Microsoft.ReportingServices.Interfaces>.  
   
- Para autenticar con un servidor de informes en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], se usa principalmente el método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Este miembro del servicio web de Reporting Services se puede utilizar con el objeto de pasar las credenciales del usuario a un servidor de informes para la validación. La extensión de seguridad subyacente implementa **IAuthenticationExtension.LogonUser** que contiene el código de autenticación personalizada. En el ejemplo de autenticación de formularios, **LogonUser**, que realiza una comprobación de la autenticación contra las credenciales proporcionadas y un almacén de usuario personalizado en una base de datos. Un ejemplo de implementación de **LogonUser** sería similar a:  
+ Para autenticar con un servidor de informes en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], se usa principalmente el método <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Este miembro del servicio web de Reporting Services se puede utilizar con el objeto de pasar las credenciales del usuario a un servidor de informes para la validación. La extensión de seguridad subyacente implementa **IAuthenticationExtension. LogonUser** , que contiene el código de autenticación personalizado. En el ejemplo de autenticación de formularios, **LogonUser**, que realiza una comprobación de la autenticación contra las credenciales proporcionadas y un almacén de usuario personalizado en una base de datos. Un ejemplo de implementación de **LogonUser** sería similar a:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -108,7 +108,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  Una aplicación cliente llama al método <xref:ReportService2010.ReportingService2010.LogonUser%2A> del servicio web para autenticar a un usuario.  
   
-2.  El servicio Web realiza una llamada a la <xref:ReportService2010.ReportingService2010.LogonUser%2A> método de la extensión de seguridad, en concreto, la clase que implementa **IAuthenticationExtension**.  
+2.  El servicio Web realiza una llamada al <xref:ReportService2010.ReportingService2010.LogonUser%2A> método de la extensión de seguridad, específicamente, la clase que implementa **IAuthenticationExtension**.  
   
 3.  La implementación de <xref:ReportService2010.ReportingService2010.LogonUser%2A> valida el nombre de usuario y la contraseña en el almacén del usuario o la entidad de seguridad.  
   
@@ -146,7 +146,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede autenticar y autorizar a los usuarios con la autenticación de Windows o la autenticación personalizada, pero no con ambos. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite el uso simultáneo de varias extensiones de seguridad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de una extensión de seguridad](../security-extension/implementing-a-security-extension.md)  
   
   

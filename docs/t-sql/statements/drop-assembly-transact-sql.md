@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aaf3f25807f1e7148e8f4229542a0ecacdd0bf95
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984286"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893381"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un ensamblado y todos sus archivos asociados de la base de datos actual. Los ensamblados se crean con [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) y se modifican con [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67984286"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]  
 [ WITH NO DEPENDENTS ]  
 [ ; ]  
@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  Si se especifica, solo quita *assembly_name* y ninguno de los ensamblados dependientes a los que hace referencia el ensamblado. Si no se especifica, DROP ASSEMBLY quita *assembly_name* y todos los ensamblados dependientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al quitar un ensamblado se quita el propio ensamblado y todos sus archivos asociados, como el código de origen y los archivos de depuración, de la base de datos.  
   
  Si no se especifica WITH NO DEPENDENTS, DROP ASSEMBLY quita *assembly_name* y todos los ensamblados dependientes. Si se generan errores al intentar quitar los ensamblados dependientes, DROP ASSEMBLY devuelve un error.  

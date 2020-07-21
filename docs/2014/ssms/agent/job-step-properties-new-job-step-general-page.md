@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página General) | Microsoft Docs'
+title: 'Propiedades de paso de trabajo: nuevo paso de trabajo (página general) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62510959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062248"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)
-  Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para definir un nuevo paso de trabajo.  
+  Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente, o para definir un nuevo paso de trabajo.  
   
  Para navegar a esta página, en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en **Trabajos**, haga clic en **Nuevo trabajo**, seleccione la página **Pasos** y haga clic en **Nuevo**. También puede navegar a esta página si hace clic con el botón derecho en un trabajo en el Explorador de objetos, hace clic en **Propiedades**, selecciona la página **Pasos** y hace clic en **Nuevo**, **Insertar**o **Editar**.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62510959"
  **Base de datos**  
  Establece la base de datos en la que se ejecuta el paso de trabajo. Esta opción no está disponible para todos los tipos de pasos de trabajo.  
   
- **Command**  
+ **Comando**  
  Establece el comando que ejecuta el paso de trabajo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opciones de pasos de trabajo Transact-SQL  
@@ -53,7 +52,7 @@ ms.locfileid: "62510959"
  **Pegar**  
  Pega el contenido del Portapapeles.  
   
- **Analizar**  
+ **Analiza**  
  Comprueba la sintaxis del comando.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Opciones de pasos de trabajo de scripts ActiveX  
@@ -67,7 +66,7 @@ ms.locfileid: "62510959"
  **JScript**  
  Especifica JScript como lenguaje de los pasos de trabajo.  
   
- **Otro**  
+ **Otros**  
  Escriba el nombre del lenguaje para los pasos de trabajo escritos en otro lenguaje de scripts.  
   
  **Abrir**  
@@ -205,7 +204,7 @@ ms.locfileid: "62510959"
  Especifique dónde se encuentra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) y qué método de autenticación se va a utilizar. Cuando seleccione esta pestaña, aparecerán las opciones siguientes.  
   
  **Origen del paquete**  
- Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija una de las siguientes opciones:  
+ Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija alguna de las acciones siguientes:  
   
 -   **SQL Server**  
   
@@ -219,7 +218,7 @@ ms.locfileid: "62510959"
  **Utilizar autenticación de Windows**  
  Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si selecciona este método de autenticación, escriba el **nombre de usuario** y la **contraseña**adecuados.  
   
 > [!IMPORTANT]  
@@ -237,7 +236,7 @@ ms.locfileid: "62510959"
  **Archivos de configuración**  
  Presenta una lista de los archivos de configuración del paquete.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un archivo de configuración para el paquete.  
   
  **Quitar**  
@@ -255,7 +254,7 @@ ms.locfileid: "62510959"
  **Archivos de comandos**  
  Presenta una lista de los archivos de comandos del paquete.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un archivo de comandos.  
   
  **Quitar**  
@@ -336,10 +335,10 @@ ms.locfileid: "62510959"
  **Ejecutar solo los paquetes firmados**  
  Solo ejecuta paquetes con firma. Si se selecciona esta opción, el paso de trabajo se rechaza si es un paquete sin firma.  
   
- **Comprobar la generación del paquete**  
+ **Comprobar la compilación del paquete**  
  Solo ejecuta paquetes con un número de generación específico. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el número de generación especificado.  
   
- **Compilar**  
+ **Compilación**  
  Escriba el número de generación del paquete.  
   
  **Comprobar el Id. del paquete**  
@@ -351,7 +350,7 @@ ms.locfileid: "62510959"
  **Comprobar el Id. de versión**  
  Ejecuta solo los paquetes que tienen un identificador de versión concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador de versión especificado.  
   
- **Id. de versión**  
+ **Id. de la versión**  
  Escriba el Id. de versión.  
   
 ### <a name="command-line-tab"></a>Línea de comandos (pestaña)  
@@ -366,9 +365,9 @@ ms.locfileid: "62510959"
  **Línea de comandos**  
  Escriba las opciones de línea de comandos que se van a utilizar en este paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar pasos de trabajo](manage-job-steps.md)   
- [Trabajos del Agente SQL Server para paquetes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
+ [Trabajos de Agente SQL Server para paquetes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

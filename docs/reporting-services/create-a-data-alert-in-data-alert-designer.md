@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65571577"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
@@ -45,7 +45,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
      Se abre el Diseñador de alertas de datos y en él se muestra una tabla con las 100 primeras filas de la primera fuente de distribución de datos generada por el informe.  
   
     > [!NOTE]  
-    >  Si no ve la opción **Nueva alerta de datos** , el servicio de alertas no está configurado en el sitio de SharePoint o la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no incluye alertas de datos. Para más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  Si no ve la opción **Nueva alerta de datos** , el servicio de alertas no está configurado en el sitio de SharePoint o la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no incluye alertas de datos. Para obtener más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  Si la opción **Nueva alerta de datos** aparece atenuada, el origen de datos del informe está configurado para utilizar las credenciales de seguridad integradas o para solicitar credenciales. Para que la opción **Nueva alerta de datos** esté disponible, debe actualizar el origen de datos de modo que use las credenciales almacenadas o no use credenciales.  
   
@@ -118,7 +118,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   
-22. Haga clic en **Guardar**.  
+22. Haga clic en **Save**(Guardar).  
 
 ## <a name="see-also"></a>Consulte también
 

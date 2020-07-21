@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 567ff9a01bd93323149168b9e3aa0f34d78aee39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049979"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
   Puede crear índices clúster en las tablas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con pocas excepciones, todas las tablas deben tener un índice clúster. Además de mejorar el rendimiento de las consultas, un índice clúster se puede recompilar o reorganizar a petición para controlar la fragmentación de las tablas. También se puede crear un índice clúster en una vista. (Los índices agrupados se definen en el tema [Índices agrupados y no agrupados descritos](clustered-and-nonclustered-indexes-described.md)).  
@@ -42,9 +41,9 @@ ms.locfileid: "63155372"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Implementations"></a> Implementaciones típicas  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Implementaciones típicas  
  Los clúster se implementan de las formas siguientes:  
   
 -   **Restricciones PRIMARY KEY y UNIQUE**  
@@ -59,7 +58,7 @@ ms.locfileid: "63155372"
   
      Puede crear un índice clúster en una columna que no sea la de clave principal si se especificó una restricción de clave principal no agrupada.  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Cuando se crea una estructura de índice clúster, se requiere espacio en disco para ambas estructuras, la antigua (origen) y la nueva (destino), en los archivos y grupos de archivos correspondientes. La asignación de la antigua estructura no se cancela hasta que se valide la transacción completa. Puede que también se necesite espacio en disco temporal para ordenar. Para más información, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
   
@@ -69,12 +68,12 @@ ms.locfileid: "63155372"
   
 -   La clave de índice de un índice clúster no puede contener columnas `varchar` con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice clúster en una columna `varchar` y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización de la columna que intenten insertar los datos de manera no consecutiva. Para obtener información sobre las tablas que pueden contener datos de desbordamiento de fila, use la función de administración dinámica [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Para crear un índice clúster mediante el Explorador de objetos  
   
@@ -86,9 +85,9 @@ ms.locfileid: "63155372"
   
 4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
-5.  En el cuadro de diálogo **Seleccionar columnas de**_table_name_ , active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
+5.  En el cuadro de diálogo **seleccionar columnas de**_TABLE_NAME_ , active la casilla de la columna de la tabla que se va a agregar al índice clúster.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "63155372"
   
 10. En el menú **Archivo** , haga clic en **Guardar**_table_name_.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-clustered-index"></a>Para crear un índice clúster  
   
@@ -142,7 +141,7 @@ ms.locfileid: "63155372"
   
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear claves principales](../tables/create-primary-keys.md)   
  [Crear restricciones UNIQUE](../tables/create-unique-constraints.md)  
   

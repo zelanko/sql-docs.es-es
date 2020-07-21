@@ -1,6 +1,7 @@
 ---
-title: sp_removedbreplication (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: sp_removedbreplication (T-SQL)
+description: Describe el sp_removedbreplication procedimiento almacenado que se usa para quitar todos los objetos de replicación de la base de datos de publicación para la replicación de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fdae843c3918013ec850c5d807853c10a8f3f190
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751675"
 ---
-# <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Este procedimiento almacenado quita todos los objetos de replicación de la base de datos de publicación en la instancia del publicador de SQL Server, o en la base de datos de suscripción en la instancia del suscriptor de SQL Server. Ejecute este procedimiento en una base de datos adecuada o, si la ejecución está en el contexto de otra base de datos en la misma instancia, especifique la base de datos donde se deben quitar los objetos de replicación. Este procedimiento no elimina los objetos de otras bases de datos como, por ejemplo, la base de datos de distribución.  
   
@@ -48,8 +49,8 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 |||  
 |-|-|  
 |**tran**|Quita los objetos de publicación de replicación transaccional.|  
-|**merge**|Quita los objetos de publicación de replicación de mezcla.|  
-|**ambos** predeterminada|Quita todos los objetos de publicación de replicación.|  
+|**sin**|Quita los objetos de publicación de replicación de mezcla.|  
+|**both** (valor predeterminado)|Quita todos los objetos de publicación de replicación.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,7 +58,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="remarks"></a>Comentarios  
  **sp_removedbreplication** se utiliza en todos los tipos de replicación.  
   
- **sp_removedbreplication** es útil cuando se restaura una base de datos replicada que no tiene ningún objeto de replicación que deba restaurarse.  
+ **sp_removedbreplication** es útil al restaurar una base de datos replicada que no tiene ningún objeto de replicación que deba restaurarse.  
   
  **sp_removedbreplication** no se puede usar en una base de datos marcada como de solo lectura.  
   
@@ -81,8 +82,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
+## <a name="see-also"></a>Consulte también  
+ [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

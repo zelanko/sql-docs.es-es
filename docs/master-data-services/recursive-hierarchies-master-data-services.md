@@ -1,5 +1,6 @@
 ---
-title: Jerarquías recursivas (Master Data Services) | Microsoft Docs
+title: Jerarquías recursivas
+description: En Master Data Services, una jerarquía recursiva incluye una relación recursiva, que existe cuando una entidad tiene un atributo basado en dominio basado en la entidad.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8c0f2770665a27db226b9da9f7253d602c90afd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69f65e0ab8a84d51552f50e1cee3f66933de9da4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812350"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Jerarquías recursivas (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una jerarquía recursiva es una jerarquía derivada que incluye una relación recursiva. Una relación recursiva existe cuando una entidad tiene un atributo basado en dominio en la propia entidad.  
   

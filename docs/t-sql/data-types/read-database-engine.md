@@ -1,7 +1,7 @@
 ---
 title: Read (motor de base de datos) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,21 +17,28 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee08e8278b2b302f91360a8f74690050c28ba556
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644022"
 ---
-# <a name="read-database-engine"></a>Read (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="read-database-engine-by-using-csharp"></a>Read (motor de base de datos) mediante CSharp
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Read lee una representación binaria de **SqlHierarchyId** desde la clase **BinaryReader** pasada y establece el objeto **SqlHierarchyId** en dicho valor. No se puede llamar a Read con [!INCLUDE[tsql](../../includes/tsql-md.md)]. En su lugar, use CAST o CONVERT.
   
 ## <a name="syntax"></a>Sintaxis  
-  
-```sql
+
+<!--
+This is not T-SQL, despite the ```sql colorizer specified.
+Neither should this be ```syntaxsql.
+Rather, this is C# (or C# syntax).  Same for the later code blocks.
+I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
+-->
+
+```csharp
 void Read( BinaryReader r )   
 ```  
   
@@ -42,7 +49,7 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>Tipos de valores devueltos
  **Tipo de valor devuelto de CLR: void**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Read no valida su entrada. Si se proporciona una entrada binaria no válida, Read puede provocar una excepción. O bien, la operación puede realizarse sin errores y producir un objeto **SqlHierarchyId** no válido cuyos métodos pueden producir resultados imprevisibles o provocar una excepción.  
   
  Solo se puede llamar a Read en un objeto **SqlHierarchyId** recién creado.  
@@ -51,7 +58,7 @@ void Read( BinaryReader r )
   
 ## <a name="examples"></a>Ejemplos  
   
-```sql
+```csharp
 Byte[] encoding = new byte[] { 0x58 };  
 MemoryStream stream = new MemoryStream(encoding, false /*not writable*/);  
 BinaryReader br = new BinaryReader(stream);  

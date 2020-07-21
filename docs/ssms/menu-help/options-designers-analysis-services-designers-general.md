@@ -1,6 +1,6 @@
 ---
-title: Opciones (Diseñadores - Diseñadores de Analysis Services - General) | Microsoft Docs
-ms.custom: ''
+title: Opciones (Diseñadores - Diseñadores de Analysis Services - General)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: be8d79eef8e8d4a1361db8f7d7502b52f48eb0fd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 54a65b4c8e6afe0605b4006a8d79838abc93cb74
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265941"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245770"
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>Opciones (Diseñadores - Diseñadores de Analysis Services - General)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

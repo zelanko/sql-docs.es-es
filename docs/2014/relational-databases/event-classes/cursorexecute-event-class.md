@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb8fb3ffafc001ed6bd63a10f8f1620521cc0435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663511"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030229"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute [clase de eventos]
-  La clase de evento **CursorExecute** describe eventos de ejecución de cursor que se producen en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de ejecución de cursor de producen cuando el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y llena un cursor desde el plan de ejecución creado por un evento de preparación de cursor.  
+  La clase de evento **CursorExecute** describe eventos de ejecución de cursor que se producen en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de ejecución de cursor se producen cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y rellena un cursor a partir del plan de ejecución creado por un evento de preparación de cursor.  
   
  Incluya la clase de evento **CursorExecute** en los seguimientos que registran el rendimiento de los cursores. Cuando la clase de evento **CursorExecute** se incluye en el seguimiento, la cantidad de sobrecarga que se produce depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
   
@@ -34,8 +33,8 @@ ms.locfileid: "62663511"
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database*para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**EventClass**|**int**|Tipo de evento registrado = 74.|27|Sin|  
-|**EventSequence**|**int**|Secuencia por lotes de la clase de evento **CursorExecute** .|51|Sin|  
+|**EventClass**|**int**|Tipo de evento registrado = 74.|27|No|  
+|**EventSequence**|**int**|Secuencia por lotes de la clase de evento **CursorExecute** .|51|No|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**Handle**|**int**|Valor entero utilizado por ODBC, OLE DB o DB-Library para coordinar la ejecución con el servidor.|33|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -53,7 +52,7 @@ ms.locfileid: "62663511"
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Cursores](../cursors.md)  

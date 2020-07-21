@@ -1,5 +1,5 @@
 ---
-title: Crear un mapa del documento (Generador de informes y SSRS) | Microsoft Docs
+title: Creación de un mapa del documento (Generador de informes) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65d4566a7337d25a16f23eb8411e4338dabf7af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c6f1d18c8559625c6e58b45b4e9810ed29e0ef28
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581570"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082287"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
 
@@ -26,7 +26,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
  El mapa del documento está pensado para usarlo en la extensión de representación de HTML, por ejemplo, en la vista previa y el visor de informes. Otras extensiones de representación tienen diferentes formas de articular un mapa del documento:  
   
 -   PDF representa un mapa del documento como el panel Marcadores.  
@@ -64,7 +64,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
   
 2.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo y, después, haga clic en **Editar grupo**. Se abre la página **General** del cuadro de diálogo **Propiedades de grupo de Tablix** .  
   
-3.  Haga clic en **Avanzado**.  
+3.  Haga clic en **Avanzadas**.  
   
 4.  En el cuadro de lista **Mapa del documento** , escriba o seleccione una expresión que coincida con la expresión de grupo.  
   
@@ -108,9 +108,9 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
 4.  Pegue la dirección URL en el portal web y, después, presione ENTRAR. El informe se ejecuta con el mapa del documento oculto.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [Informes de ejemplo del Generador de informes y el Diseñador de informes](https://social.technet.microsoft.com/wiki/contents/articles/1093.reporting-services-samples-on-codeplex-sql-server-reporting-services-ssrs.aspx).  
 >   
->  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
+  >  Para obtener más información, consulte [Acceso URL (SSRS)](../url-access-ssrs.md). 
 
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

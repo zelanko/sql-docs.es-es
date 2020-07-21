@@ -1,5 +1,5 @@
 ---
-title: Relaciones (SSAS Tabular) | Microsoft Docs
+title: Relaciones (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938697"
 ---
 # <a name="relationships-ssas-tabular"></a>relaciones (SSAS tabular)
   En los modelos tabulares, una relación es una conexión entre dos tablas de datos. La relación establece cómo se deben relacionar los datos de las dos tablas. Por ejemplo, una tabla de clientes y una tabla de pedidos se pueden relacionar para mostrar el nombre del cliente que está asociado a cada pedido.  
@@ -43,10 +42,10 @@ ms.locfileid: "66066699"
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="what"></a> Ventajas  
+##  <a name="benefits"></a><a name="what"></a> Ventajas  
  Una relación es una conexión entre dos tablas de datos, basada en una o más columnas de cada tabla. Para ver por qué son útiles las relaciones, imagine que realiza el seguimiento de los datos de los pedidos de los clientes de su negocio. Podría realizar el seguimiento de todos los datos en una sola tabla que tiene una estructura como la siguiente:  
   
-|CustomerID|NOMBRE|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
+|CustomerID|Nombre|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -56,7 +55,7 @@ ms.locfileid: "66066699"
   
 ### <a name="customers"></a>Clientes  
   
-|[CustomerID]|Name|EMail|  
+|[CustomerID]|Nombre|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -98,7 +97,7 @@ ms.locfileid: "66066699"
   
  En la siguiente tabla se muestran las relaciones entre las tres tablas:  
   
-|Relación|Tipo|columna de búsqueda|columna|  
+|Relación|Tipo|columna de búsqueda|Columna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|uno a uno|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|uno a varios|Customers.CustomerID|Orders.CustomerID|  
@@ -106,13 +105,13 @@ ms.locfileid: "66066699"
 ### <a name="relationships-and-performance"></a>Relaciones y rendimiento  
  Una vez creada una relación, el diseñador de modelos normalmente debe recalcular las fórmulas en que se usen columnas de las tablas de la relación recién creada. El proceso puede tardar algún tiempo, en función de la cantidad de datos y la complejidad de las relaciones.  
   
-##  <a name="requirements"></a> Requisitos para las relaciones  
+##  <a name="requirements-for-relationships"></a><a name="requirements"></a>Requisitos para las relaciones  
  El diseñador de modelos tiene varios requisitos que se deben seguir al crear relaciones:  
   
 ### <a name="single-active-relationship-between-tables"></a>Relación única activa entre tablas  
  Varias relaciones podrían producir dependencias ambiguas entre las tablas. Para crear cálculos precisos, se necesita una única ruta de una tabla a la tabla siguiente. Por lo tanto, puede haber solo una relación activa entre cada par de tablas. Por ejemplo, en AdventureWorks DW 2012, la tabla DimDate contiene una columna DateKey que está relacionada con tres columnas diferentes de la tabla FactInternetSales: OrderDate, DueDate y ShipDate. Si intenta importar estas tablas, la primera relación se creará correctamente, pero recibirá el error siguiente en las relaciones sucesivas en las que participe la misma columna:  
   
- \* Relación: tabla [columna 1] -> tabla [columna 2] - estado: error - motivo: No se puede crear una relación entre tablas \<tabla 1 > y \<la tabla 2 >. Entre dos tablas solo puede existir una relación directa o indirecta.  
+ \*Relación: tabla [columna 1]-> tabla [columna 2]-Estado: error-motivo: no se puede crear una relación entre las tablas \<table 1> y \<table 2> . Entre dos tablas solo puede existir una relación directa o indirecta.  
   
  Si tiene dos tablas y varias relaciones entre ellas, entonces deberá importar varias copias de la tabla que contenga la columna de búsqueda y crear una relación entre cada par de tablas.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "66066699"
   
  Si desea crear una relación entre dos tablas en el diseñador de modelos, y hay varias columnas que definen las claves principales y las claves externas, debe combinar los valores para crear una columna de clave única antes de crear la relación. Puede hacerlo antes de importar los datos, o hacerlo en el diseñador de modelos creando una columna calculada.  
   
-###  <a name="bkmk_many_to_many"></a> Relaciones varios a varios  
+###  <a name="many-to-many-relationships"></a><a name="bkmk_many_to_many"></a>Relaciones varios a varios  
  Los modelos tabulares no admiten las relaciones de varios a varios, y no se pueden agregar *tablas de unión* en el diseñador de modelos. Sin embargo, puede usar funciones de DAX para modelar las relaciones de varios a varios.  
   
 ### <a name="self-joins-and-loops"></a>Autocombinaciones y bucles  
@@ -153,7 +152,7 @@ ms.locfileid: "66066699"
   
  Si intenta crear una relación que crearía un bucle, se generará un error.  
   
-##  <a name="detection"></a> Inferencia de relaciones  
+##  <a name="inference-of-relationships"></a><a name="detection"></a>Inferencia de relaciones  
  En algunos casos, las relaciones entre las tablas se encadenan automáticamente. Por ejemplo, si crea una relación entre los dos primeros conjuntos de tablas del ejemplo siguiente, se deduce que existe una relación entre las otras dos tablas y se establece una relación automáticamente.  
   
  Productos y categorías: creadas manualmente  
@@ -164,17 +163,17 @@ ms.locfileid: "66066699"
   
  Para que las relaciones se encadenen automáticamente, las relaciones deben ir en una dirección, como se mostró antes. Si las relaciones iniciales fueran entre, por ejemplo, ventas y productos, y ventas y clientes, no se deduciría una relación. Esto se debe a que la relación entre los productos y los clientes es una relación de varios a varios.  
   
-##  <a name="bkmk_detection"></a> Detección de relaciones al importar datos  
+##  <a name="detection-of-relationships-when-importing-data"></a><a name="bkmk_detection"></a>Detección de relaciones al importar datos  
  Al importar de una tabla relacional de origen de datos, el Asistente para la importación de tablas detecta las relaciones existentes en las tablas de origen según los datos del esquema de origen. Si se importan las tablas relacionadas, esas relaciones se duplicarán en el modelo.  
   
-##  <a name="bkmk_manually_create"></a> Crear relaciones manualmente  
+##  <a name="manually-create-relationships"></a><a name="bkmk_manually_create"></a>Crear relaciones manualmente  
  Aunque la mayoría de las relaciones entre las tablas de un único origen de datos relacional se detectarán automáticamente y se crearán en el modelo tabular, hay también muchos casos en los que debe crear manualmente las relaciones entre las tablas del modelo.  
   
  Si su modelo contiene datos de varios orígenes, probablemente tendrá que crear las relaciones manualmente. Por ejemplo, puede importar las tablas Customers, CustomerDiscounts, y Orders de un origen de datos relacional. Las relaciones que existen entre esas tablas en el origen se crean automáticamente en el modelo. A continuación, puede agregar otra tabla de un origen diferente, por ejemplo, importar datos de la región de una tabla geográfica en un libro de Microsoft Excel. Después, puede crear manualmente una relación entre una columna de la tabla Clientes y una columna de la tabla Geografía.  
   
  Para crear manualmente las relaciones en un modelo tabular, puede usar la vista de diagrama del diseñador de modelos o el cuadro de diálogo Administrar relaciones. La vista de diagrama muestra las tablas, con las relaciones entre ellas, en un formato gráfico. Puede hacer clic en una columna de una tabla y arrastrar el cursor a otra tabla para crear fácilmente una relación, en el orden correcto, entre las tablas. El cuadro de diálogo Administrar relaciones muestra las relaciones entre las tablas en un formato de tabla simple. Para obtener información sobre cómo crear relaciones manualmente, vea [Crear una relación entre dos tablas &#40;SSAS tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md).  
   
-##  <a name="bkmk_dupl_errors"></a> Valores duplicados y otros errores  
+##  <a name="duplicate-values-and-other-errors"></a><a name="bkmk_dupl_errors"></a>Valores duplicados y otros errores  
  Si elige una columna que no se puede usar en la relación, aparece una X roja al lado de la columna. Puede pausar el cursor sobre el icono de error para ver un mensaje con más información sobre el problema. Entre los problemas que pueden impedir crear una relación entre las columnas seleccionadas están:  
   
 |Problema o mensaje|Solución|  
@@ -182,15 +181,15 @@ ms.locfileid: "66066699"
 |No se puede crear la relación porque las dos columnas seleccionadas contienen valores duplicados.|Para crear una relación válida, al menos una de las columnas del par seleccionado debe contener solo valores únicos.<br /><br /> Puede modificar las columnas para quitar los valores duplicados o revertir el orden de las columnas de manera que la columna que contiene valores únicos se use como **columna de búsqueda relacionada**.|  
 |La columna contiene un valor nulo o vacío.|Las columnas de datos no se pueden unir entre sí por un valor nulo. Para cada fila, debe haber un valor en las dos columnas que se usan en una relación.|  
   
-##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear una relación entre dos tablas &#40;SSAS tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Describe cómo crear manualmente una relación entre dos tablas.|  
 |[Eliminar relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md)|Describe cómo eliminar una relación y las consecuencias de la eliminación de relaciones.|  
   
-## <a name="see-also"></a>Vea también  
- [Definir tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)   
  [Importar datos &#40;SSAS tabular&#41;](../import-data-ssas-tabular.md)  
   
   

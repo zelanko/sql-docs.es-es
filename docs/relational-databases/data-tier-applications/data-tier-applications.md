@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278288"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781733"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociados a una base de datos de usuario, como tablas, vistas y objetos de instancia, incluidos los inicios de sesión. Una DAC es una unidad independiente de implementación de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un artefacto portátil denominado paquete DAC y también conocido como DACPAC.  
   
  Un BACPAC es un artefacto relacionado que encapsula el esquema de la base de datos junto con los datos almacenados en la base de datos.  
@@ -107,7 +107,7 @@ ms.locfileid: "72278288"
   
 -   **IMPORT**: el usuario puede importar el esquema y los datos a una base de datos nueva en el servidor de host.  
   
- Las dos funciones son compatibles con las herramientas de administración de base de datos: SQL Server Management Studio, Azure Portal y la API DACFx.  
+ Ambas funciones son compatibles con las herramientas de administración de bases de datos: SQL Server Management Studio, el Portal de Azure y la API de DACFx.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario ser miembro del rol **dbmanager** o tener asignados permisos **CREATE DATABASE** para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. Es necesario ser miembro del rol **dbmanager** o tener asignados permisos **DROP DATABASE** para quitar una base de datos.  
@@ -120,15 +120,15 @@ ms.locfileid: "72278288"
 |Describe cómo usar un archivo de paquete DAC para actualizar una instancia a una nueva versión de la DAC.|[Actualizar una aplicación de capa de datos](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)|  
 |Describe cómo quitar una instancia de DAC. Puede elegir también separar o quitar la base de datos asociada o dejar la base de datos intacta.|[Eliminar una aplicación de capa de datos](../../relational-databases/data-tier-applications/delete-a-data-tier-application.md)|  
 |Describe cómo ver estados de DAC actualmente implementados mediante la utilidad de SQL Server.|[Supervisar aplicaciones de capa de datos](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)|  
-|Describe cómo crear un archivo de .bacpac que contiene un archivo de datos y metadatos de la DAC.|[Exportar una aplicación de capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
+|Describe cómo crear un archivo de .bacpac que contiene un archivo de datos y metadatos de la DAC.|[Exportar una aplicación de la capa de datos](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)|  
 |Describe cómo usar un archivo de almacenamiento de DAC (.bacpac) para realizar una restauración lógica de DAC, o migrar DAC a otra instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importar un archivo de bacpac para crear una nueva base de datos de usuario](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Describe cómo importar un archivo BACPAC para crear una base de datos de usuario en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraer una DAC de una base de datos](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)|  
 |Describe cómo promover una base de datos existente para que sea una instancia de DAC. La definición de DAC está compilada y almacenada en las bases de datos del sistema.|[Registrar una base de datos como una DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
-|Describe cómo consultar el contenido de un paquete DAC y las acciones que una actualización de DAC realizará antes de usar el paquete en un sistema de producción.|[Validar un paquete DAC](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
-|Describe cómo colocar el contenido de un paquete DAC en una carpeta donde un administrador de bases de datos puede revisar lo que hace la DAC antes de implementarlo en un servidor de producción.|[Desempaquetar un paquete DAC](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
+|Describe cómo consultar el contenido de un paquete DAC y las acciones que una actualización de DAC realizará antes de usar el paquete en un sistema de producción.|[Validar un paquete de DAC](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
+|Describe cómo colocar el contenido de un paquete DAC en una carpeta donde un administrador de bases de datos puede revisar lo que hace la DAC antes de implementarlo en un servidor de producción.|[Desempaquetar un paquete de DAC](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Describe cómo usar un asistente para implementar una base de datos existente. El asistente usa DAC para realizar la implementación.|[Implementar una base de datos mediante una DAC](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de DAC con las versiones y objetos de SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   

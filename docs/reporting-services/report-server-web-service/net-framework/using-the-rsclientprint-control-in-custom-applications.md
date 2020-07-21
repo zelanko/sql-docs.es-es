@@ -1,5 +1,6 @@
 ---
 title: Usar el control RSClientPrint en aplicaciones personalizadas | Microsoft Docs
+description: RSPrintClient proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. El servidor de informes representa el informe en la extensión de representación Image (EMF).
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MTE75
+ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155732"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198562"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
-  El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
+  El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
   
  La impresión del lado cliente ofrece un modo de controlar y mejorar la calidad de la copia impresa de un informe HTML anulando la configuración de impresión del explorador y utilizando, en su lugar, dimensiones de página, márgenes, texto de encabezados y pies de página del informe para crear la salida impresa. El control de impresión lee los valores de las propiedades del informe para establecer el tamaño de página y los márgenes.  
   
@@ -29,15 +30,14 @@ ms.locfileid: "70155732"
   
 -   Utilice el control para mejorar la impresión en informes basados en web. Puede especificar el objeto en cualquier lenguaje de programación compatible con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] o en script. El control no está diseñado para aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms.  
   
--   Copie el archivo .cab de los archivos de programa  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y agréguelo al código base de la aplicación personalizada.  
-  
+-   Copie el archivo .cab de los archivos de programa  [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] y agréguelo al código base de la aplicación personalizada.  
+ 
 -   Use una etiqueta \<OBJECT> para especificar el control.  
   
 -   Especifique una dirección URL relativa o completa al archivo .cab en el atributo OBJECT CODEBASE.  
   
 -   Especifique la información de versión de su propia aplicación para el archivo .cab con el fin de realizar un seguimiento de la versión que se utiliza en su aplicación.  
-  
--   Revise los temas de los Libros en pantalla que abordan la representación en imágenes (EMF) con el objetivo de conocer cómo se representan las páginas para la vista previa de impresión y la salida.  
+    
   
 ## <a name="rsprintclient-overview"></a>Información general de RSPrintClient  
  El control muestra un cuadro de diálogo de impresión personalizado compatible con características comunes a otros cuadros de diálogo de impresión, incluida la vista previa de impresión, selecciones de páginas para especificar páginas e intervalos de páginas, márgenes y orientación. El control se empaqueta como un archivo CAB. El texto del cuadro de diálogo **Imprimir** aparece traducido a todos los idiomas admitidos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El control ActiveX **RSPrintClient** usa la extensión de representación en imágenes (EMF) para imprimir el informe. Se usa la siguiente información del dispositivo EMF: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight y PageWidth. No se admite ninguna otra configuración de información de dispositivo para la representación en imágenes.  
@@ -65,13 +65,13 @@ ms.locfileid: "70155732"
   
 |Propiedad|Tipo|RW|Valor predeterminado|Descripción|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Doble|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginRight|Doble|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginTop|Doble|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginBottom|Doble|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|PageWidth|Doble|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
-|PageHeight|Doble|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
-|Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe **3**, el valor se mide en milímetros si el idioma es el francés, o en pulgadas, si el idioma es el inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
+|MarginLeft|Double|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginRight|Double|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginTop|Double|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginBottom|Double|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|PageWidth|Double|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
+|PageHeight|Double|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
+|Referencia cultural|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe **3**, el valor se mide en milímetros si el idioma es el francés, o en pulgadas, si el idioma es el inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
 |UICulture|String|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir está traducido a los idiomas que se indican a continuación: alemán, chino simplificado, chino tradicional, coreano, español, francés, inglés, italiano y japonés. Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
 |Authenticate|Boolean|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
   
@@ -102,9 +102,9 @@ ms.locfileid: "70155732"
   
 |Argumento|E/S|Tipo|Descripción|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|Entrada|String|Especifica el directorio virtual del servidor de informes (por ejemplo, `https://adventure-works/reportserver`).|  
-|ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|Entrada|String|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
+|ServerPath|En|String|Especifica el directorio virtual del servidor de informes (por ejemplo, `https://adventure-works/reportserver`).|  
+|ReportPathParameters|En|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|En|String|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
   
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo HTML muestra cómo especificar el archivo .cab, el método **Print** y las propiedades en JavaScript:  

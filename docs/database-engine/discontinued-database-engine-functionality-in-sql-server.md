@@ -1,7 +1,8 @@
 ---
-title: Funcionalidad del motor de base de datos no incluida en SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 02/02/2017
+title: Funcionalidad del motor de base de datos no incluida
+description: Obtenga información sobre la funcionalidad y las características del motor de base de datos que se han suspendido en SQL Server 2019 (15.x), SQL Server 2016 (13.x) y versiones anteriores.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a708aad1d483eaf28d559ff04424e515ec9f6aa7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 512ea4be5a22f04379aa58b724befdf948934292
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659648"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidad del motor de base de datos no incluida en SQL Server
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)].  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssqlv15"></a>Características no incluidas en [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
 
 - Las siguientes opciones de configuración con ámbito de base de datos no se incluyen:
 
@@ -60,7 +61,7 @@ Para obtener las opciones de configuración actuales, vea [ALTER DATABASE SCOPED
 >[!NOTE]
 >Ninguna característica se ha dejado de incluir en [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)].
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
+## <a name="discontinued-features-in-sssql15"></a>Características no incluidas en [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] es una aplicación de 64 bits. La instalación de 32 bits está descontinuada, a pesar de que algunos de los elementos se ejecutan como componentes de 32 bits.  
 
@@ -76,7 +77,12 @@ Para obtener las opciones de configuración actuales, vea [ALTER DATABASE SCOPED
 
 - [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-## <a name="see-also"></a>Consulte también
+### <a name="see-also"></a>Consulte también
 
-- [Características desusadas del motor de base de datos de SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
-- [Características que ya no se usan en la replicación de SQL Server](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)
+- [Características en desuso del motor de base de datos de SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
+- [Características en desuso del motor de base de datos de SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)
+- [Características en desuso del motor de base de datos de SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)
+- [Cambios importantes en las características del motor de base de datos de SQL Server 2019](breaking-changes-to-database-engine-features-in-sql-server-version-15.md)
+- [Cambios importantes en las características del motor de base de datos de SQL Server 2017](breaking-changes-to-database-engine-features-in-sql-server-2017.md)
+- [Cambios importantes en las características del motor de base de datos de SQL Server 2016](breaking-changes-to-database-engine-features-in-sql-server-2016.md)
+- [Características en desuso en la replicación de SQL Server](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)

@@ -1,5 +1,5 @@
 ---
-title: Permisos de colección (Master Data Services) | Microsoft Docs
+title: Permisos de colección
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e2e1dbbf51533e03d3e1f5a6930dd0a022cf215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811632"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permisos de colección (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Los permisos de colección se aplican a todas las colecciones de una entidad. No puede conceder permisos a una colección específica; los permisos se aplican a todas las colecciones.  
   
@@ -32,14 +32,14 @@ ms.locfileid: "67941110"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer los miembros de las colecciones y los atributos de los miembros.|  
-|**Crear**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
+|**Creación**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
 |**Update**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
 |**Eliminar**|El usuario puede eliminar miembros de colecciones.|  
-|**Denegar**|Denegar todo el acceso a los miembros de las colecciones.|  
+|**Deny**|Denegar todo el acceso a los miembros de las colecciones.|  
   
  Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  

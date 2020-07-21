@@ -1,5 +1,5 @@
 ---
-title: Editor de origen ODBC (página Administrador de conexiones) | Microsoft Docs
+title: Editor de origen de ODBC (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0935ba4cd76a458bd26438556bab56e6cfa091c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057221"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424262"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor de origen de ODBC (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de ODBC** para seleccionar el administrador de conexiones de ODBC para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -34,7 +33,7 @@ ms.locfileid: "66057221"
 ## <a name="options"></a>Opciones  
   
 ### <a name="connection-manager"></a>Administrador de conexiones  
- Seleccione un administrador de conexiones de ODBC existente en la lista o haga clic en **Nueva** para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
+ Seleccione un administrador de conexiones ODBC existente en la lista o haga clic en **nuevo** para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
   
 ### <a name="new"></a>Nuevo  
  Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Configurar el administrador de conexiones ODBC** , donde puede crear un administrador de conexiones ODBC nuevo.  
@@ -44,7 +43,7 @@ ms.locfileid: "66057221"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|Nombre de tabla|Recupera datos de una tabla o vista del origen de datos de ODBC. Cuando seleccione esta opción, seleccione un valor de la lista para lo siguiente:|  
+|Nombre de la tabla|Recupera datos de una tabla o vista del origen de datos de ODBC. Cuando seleccione esta opción, seleccione un valor de la lista para lo siguiente:|  
 ||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista o escriba una expresión regular para identificar la tabla.|  
 ||Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
 |Comando SQL|Recupera datos del origen de datos de ODBC mediante una consulta SQL. Debe escribir la consulta con la sintaxis de la base de datos de origen con la que está trabajando. Cuando seleccione esta opción, escriba una consulta de una de las siguientes maneras:|  
@@ -55,9 +54,9 @@ ms.locfileid: "66057221"
 ### <a name="preview"></a>Vista previa  
  Haga clic en **Vista previa** para ver hasta las 200 primeras filas de los datos extraídos de la tabla o la vista seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades personalizadas del origen ODBC](data-flow/odbc-source-custom-properties.md)   
- [Editor de orígenes ODBC &#40;página Columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
+ [Editor de origen ODBC &#40;página columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Editor de orígenes ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

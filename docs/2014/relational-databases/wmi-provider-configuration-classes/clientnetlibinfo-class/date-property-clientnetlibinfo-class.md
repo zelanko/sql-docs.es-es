@@ -1,5 +1,5 @@
 ---
-title: Fecha de la propiedad (clase ClientNetLibInfo) | Microsoft Docs
+title: Propiedad Date (clase ClientNetLibInfo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6631dbf3162fcf3ded326bb386014d2c58d7642a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062760"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Propiedad Date (clase ClientNetLibInfo)
   Obtiene la fecha del archivo de biblioteca de red del cliente.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

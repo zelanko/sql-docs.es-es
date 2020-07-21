@@ -1,5 +1,5 @@
 ---
-title: Administrador de conexiones de Excel | Microsoft Docs
+title: Editor del administrador de conexiones con Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9951d9bfe7e95499c2b967e6329d206cdc4aa44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059265"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437412"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor de Administrador de conexiones con Excel
   Utilice el cuadro de diálogo **Editor del administrador de conexiones con Excel** para agregar una conexión a un archivo de libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] existente o nuevo.  
@@ -34,10 +33,10 @@ ms.locfileid: "66059265"
  Escriba la ruta de acceso y el nombre de archivo de un archivo de libro de Excel (.xls) nuevo o existente.  
   
 > [!WARNING]  
->  El **Editor de destino de Excel** crea automáticamente el archivo de Excel cuando se selecciona un **conexión de Excel** que apunta a un nuevo o inexistente de archivo y, a continuación, haga clic en **New** para **Nombre de la hoja de Excel**.  
+>  El **Editor de destino de Excel** creará automáticamente el archivo de Excel cuando seleccione una **conexión de Excel** que señale a un archivo nuevo o que no existe y, a continuación, haga clic en **nuevo** en **nombre de la hoja de Excel**.  
   
  **Examinar**  
- Use el cuadro de diálogo **Abrir** para ir a la carpeta donde se encuentra el archivo de Excel o a la ubicación en la que quiere crear el archivo.  
+ Utilice el cuadro de diálogo **abrir** para ir a la carpeta en la que se encuentra el archivo de Excel o donde desea crear el nuevo archivo.  
   
  **Versión de Excel**  
  Especifique la versión de Microsoft Excel utilizada para crear el archivo.  
@@ -45,15 +44,15 @@ ms.locfileid: "66059265"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Excel 97-2003|El archivo se ha creado con Excel 97 o una versión posterior.|  
-|Excel 3.0|Archivo creado con Excel 3.0.|  
-|Excel 4.0|El archivo se ha creado con Excel 4.0.|  
-|Excel 5.0|El archivo se ha creado con Excel 95 (7.0).|  
+|Excel 3,0|El archivo se creó con Excel 3,0.|  
+|Excel 4,0|El archivo se ha creado con Excel 4.0.|  
+|Excel 5,0|El archivo se ha creado con Excel 95 (7.0).|  
   
  **La primera fila tiene nombres de columna**  
  Especifique si la primera fila de datos de la hoja seleccionada contiene nombres de columna. El valor predeterminado de esta opción es **True**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
+ [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106878"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Agregar un borde a un informe (Generador de informes y SSRS)
@@ -32,11 +32,11 @@ ms.locfileid: "66106878"
     > [!NOTE]  
     >  Si no utiliza encabezados en el informe, basta con aplicar bordes alrededor del cuerpo del informe, o agregarlos desde la pestaña **Insertar** .  
   
-2.  Haga clic con el botón secundario en cualquier elemento del exterior del cuerpo en la superficie de diseño y, a continuación, haga clic en **Propiedades del cuerpo**. En la pestaña **Borde** , agregue un borde izquierdo y derecho con el estilo que desee.  
+2.  Haga clic con el botón derecho en el cuerpo, pero fuera de cualquier elemento de la superficie de diseño, y haga clic en **Propiedades del cuerpo**. En la pestaña **Borde** , agregue un borde izquierdo y derecho con el estilo que desee.  
   
 3.  Haga clic con el botón derecho en el pie de página, pero fuera de cualquier elemento del pie de página, y haga clic en **Propiedades de pie de página**. En la pestaña **Borde** , agregue un borde izquierdo, inferior y derecho con el estilo que desee.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Rectángulos y líneas &#40;Generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

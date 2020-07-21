@@ -1,5 +1,5 @@
 ---
-title: Comando COLLATE SET | Microsoft Docs
+title: ESTABLECER comando COLLAte | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4a9c1dfd59c00ad0ac0b7bd8b8f1cdfccc84d9b3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997743"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300895"
 ---
 # <a name="set-collate-command"></a>Comando COLLATE Set
-Especifica una secuencia de intercalación para los campos de carácter en posteriores de indización y operaciones de ordenación.  
+Especifica una secuencia de intercalación para los campos de caracteres en operaciones posteriores de indización y ordenación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,47 +31,47 @@ SET COLLATE TO cSequenceName
   
 ## <a name="arguments"></a>Argumentos  
  *cSequenceName*  
- Especifica una secuencia de intercalación. Se describen las opciones de la secuencia de intercalación disponible en la tabla siguiente.  
+ Especifica una secuencia de intercalación. En la tabla siguiente se describen las opciones de la secuencia de intercalación disponibles.  
   
-|Opciones|Lenguaje|  
+|Opciones|Idioma|  
 |-------------|--------------|  
-|HOLANDÉS|Neerlandés|  
-|GENERAL|Inglés, francés, alemán, español moderno, portugués y otros idiomas de Europa occidental|  
-|ALEMÁN|Orden de alemán de libreta de teléfonos (DIN)|  
-|ISLANDIA|Islandés|  
-|MÁQUINA|Máquina (la secuencia de intercalación predeterminada para las versiones anteriores de FoxPro)|  
+|Holandés|Neerlandés|  
+|GENERAL|Inglés, Francés, alemán, español moderno, Portugués y otros idiomas de Europa occidental|  
+|Alemán|Orden de la libreta de teléfonos alemán (DIN)|  
+|Islandia|Islandés|  
+|SISTEMA|Equipo (la secuencia de intercalación predeterminada para versiones anteriores de FoxPro)|  
 |NORDAN|Noruego, danés|  
-|ESPAÑOL|Español tradicional|  
-|SWEFIN|Sueco, finlandés|  
+|Español|Español tradicional|  
+|SWEFIN|Sueco, finés|  
 |UNIQWT|Peso único|  
   
 > [!NOTE]  
->  Cuando se especifica la opción español, *ch* es una letra única que ordena entre *c* y *d.* , y *ll* ordena entre  *l* y *m*.  
+>  Cuando se especifica la opción SPANISH, *CH* es una sola letra que se ordena entre *c* y *d*, y *ll* se ordena entre *l* y *m*.  
   
- Si especifica una opción de secuencia de intercalación como una cadena de caracteres literales, asegúrese de encerrarlo entre comillas en la opción:  
+ Si especifica una opción de secuencia de intercalación como una cadena de caracteres literales, asegúrese de incluir la opción entre comillas:  
   
 ```  
 SET COLLATE TO "SWEFIN"  
 ```  
   
- MÁQUINA es la opción de secuencia de intercalación predeterminada y está familiarizado con los usuarios de Xbase de secuencia. Caracteres se ordenan como aparecen en la página de códigos actual.  
+ El equipo es la opción de secuencia de intercalación predeterminada y es la secuencia con la que los usuarios están familiarizados. Los caracteres se ordenan tal y como aparecen en la página de códigos actual.  
   
- GENERAL puede ser preferible para los usuarios de Estados Unidos y Europa occidental. Caracteres se ordenan como aparecen en la página de códigos actual. En las versiones de FoxPro anteriores a la 2.5, los índices se haya creado mediante el **superior**() o **inferior**funciones () para convertir los campos de caracteres en un caso coherente. En versiones de FoxPro posteriores a la 2.5, en su lugar, puede especificar la opción de secuencia de intercalación GENERAL y omitir el **superior**conversión ().  
+ La GENERAL puede ser preferible para los usuarios de los Estados Unidos y europeo occidental. Los caracteres se ordenan tal y como aparecen en la página de códigos actual. En las versiones de FoxPro anteriores a 2,5, es posible que se hayan creado índices con las funciones **Upper**() o **Lower**() para convertir los campos de caracteres en un caso coherente. En las versiones de FoxPro posteriores a la 2,5, en su lugar, puede especificar la opción de secuencia de intercalación GENERAL y omitir la conversión **superior**().  
   
- Si especifica una opción de secuencia de intercalación distinta de la máquina y si se crea un archivo .idx, siempre se crea un .idx compact.  
+ Si se especifica una opción de secuencia de intercalación distinta de MACHINE y se crea un archivo. idx, siempre se crea un Compact. idx.  
   
- Utilice SET("COLLATE") para devolver la secuencia de intercalación actual.  
+ Utilice SET ("COLLAte") para devolver la secuencia de intercalación actual.  
   
- Puede especificar una secuencia de intercalación para un origen de datos mediante el [cuadro de diálogo de instalación de Visual FoxPro de ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) o mediante la palabra clave Collate en la cadena de conexión con [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Esto es idéntico al emitir el comando siguiente:  
+ Puede especificar una secuencia de intercalación para un origen de datos mediante el [cuadro de diálogo Configuración de ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) o mediante la palabra clave COLLATE en la cadena de conexión con [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md). Esto es idéntico a emitir el comando siguiente:  
   
 ```  
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- CONJUNTO de INTERCALACIONES permite a las tablas de orden que contiene los caracteres acentuados para cualquiera de los idiomas admitidos. Cambiar la configuración de conjunto de INTERCALACIONES no afecta a la secuencia de intercalación de los índices abiertos previamente. Visual FoxPro mantiene automáticamente los índices existentes, que proporciona la flexibilidad necesaria para crear muchos tipos diferentes de los índices, incluso para el mismo campo.  
+## <a name="remarks"></a>Observaciones  
+ SET COLLAte le permite ordenar las tablas que contienen caracteres acentuados para cualquiera de los idiomas admitidos. Cambiar la configuración de SET COLLAte no afecta a la secuencia de intercalación de los índices abiertos previamente. Visual FoxPro mantiene automáticamente los índices existentes, lo que proporciona la flexibilidad de crear muchos tipos diferentes de índices, incluso para el mismo campo.  
   
- Por ejemplo, si se crea un índice con el conjunto de INTERCALACIONES establecido en GENERAL y posteriormente se cambia la configuración de conjunto de INTERCALACIONES en español, el índice conserva la secuencia de intercalación GENERAL.  
+ Por ejemplo, si se crea un índice con SET COLLAte establecido en GENERAL y la opción establecer intercalación se cambia posteriormente a español, el índice conserva la secuencia de intercalación GENERAL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo de configuración de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

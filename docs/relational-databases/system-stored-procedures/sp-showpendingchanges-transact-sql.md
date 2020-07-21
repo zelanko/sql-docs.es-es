@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc02137e23c3871066c01ae1a7e9655232c349c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f6d22fb18989022676eb06751d583383a14d783
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032902"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881499"
 ---
-# <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve un conjunto de resultados que muestra los cambios que esperan para replicarse. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones y en el suscriptor de la base de datos de suscripciones.  
   
@@ -43,31 +43,27 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @destination_server **=** ] **'***destination_server***'**  
- Es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es **sysname**, su valor predeterminado es NULL.  
+`[ @destination_server = ] 'destination_server'`Es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @publication **=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Cuando *publicación* se especifica, los resultados se limitan solo a la publicación especificada.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica la *publicación* , los resultados solo se limitan a la publicación especificada.  
   
- [ @article **=** ] **'***artículo***'**  
- Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es null. Cuando *artículo* se especifica, los resultados se limitan exclusivamente al artículo especificado.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *article* , los resultados solo se limitan al artículo especificado.  
   
- [ @show_rows **=** ] *show_rows*  
- Especifica si el conjunto de resultados contiene información más específica acerca de los cambios pendientes, con un valor predeterminado de **0**. Si un valor de **1** se especifica, el conjunto de resultados contiene las columnas is_delete y rowguid.  
+`[ @show_rows = ] 'show_rows'`Especifica si el conjunto de resultados contiene información más específica sobre los cambios pendientes, con un valor predeterminado de **0**. Si se especifica el valor **1** , el conjunto de resultados contiene las columnas is_delete y ROWGUID.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|El nombre del servidor en el que se replican los cambios.|  
 |pub_name|**sysname**|Nombre de la publicación.|  
 |destination_db_name|**sysname**|El nombre de la base de datos en la que se replican los cambios.|  
-|is_dest_subscriber|**bit**|Indica que los cambios se replican en un suscriptor. Un valor de **1** indica que los cambios se replican a un suscriptor. **0** significa que los cambios se replican a un publicador.|  
+|is_dest_subscriber|**bit**|Indica que los cambios se replican en un suscriptor. Un valor de **1** indica que los cambios se replican en un suscriptor. **0** significa que los cambios se replican en un publicador.|  
 |article_name|**sysname**|Nombre del artículo de la tabla en la que se originaron los cambios.|  
 |pending_deletes|**int**|Número de eliminaciones a la espera de ser replicadas.|  
 |pending_ins_and_upd|**int**|Número de inserciones y actualizaciones a la espera de ser replicadas.|  
-|is_delete|**bit**|Indica si el cambio pendiente es una eliminación. Un valor de **1** indica que el cambio es una eliminación. Requiere un valor de **1** para @show_rows.|  
-|rowguid|**uniqueidentifier**|GUID que identifica la fila que cambió. Requiere un valor de **1** para @show_rows.|  
+|is_delete|**bit**|Indica si el cambio pendiente es una eliminación. Un valor de **1** indica que el cambio es una eliminación. Requiere un valor de **1** para @show_rows .|  
+|rowguid|**uniqueidentifier**|GUID que identifica la fila que cambió. Requiere un valor de **1** para @show_rows .|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -79,12 +75,12 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  El resultado de sp_showpendingchanges no incluye las filas de la generación 0.  
   
- Cuando el artículo especificado para *artículo* no pertenece a la publicación especificada para *publicación,* se devuelve un recuento de 0 para pending_deletes y pending_ins_and_upd.  
+ Cuando un artículo especificado para el *artículo* no pertenece a la publicación especificada para su *publicación,* se devuelve un recuento de 0 para pending_deletes y pending_ins_and_upd.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor sysadmin o del rol fijo de base de datos db_owner pueden ejecutar sp_showpendingchanges.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

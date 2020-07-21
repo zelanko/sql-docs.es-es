@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c58386630e3ee531e14af25306a1cc3b3ca3540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007514"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions (DTA, elemento)
   Contiene las opciones de optimización de una sesión de optimización concreta.  
@@ -51,9 +50,9 @@ ms.locfileid: "63061069"
 |**Elementos secundarios**|Elemento `ReportSet`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Elemento `TuningLogTable`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Elemento `NumberOfEvents`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> [TuningTimeInMin &#40;DTA, elemento&#41;](tuningtimeinmin-element-dta.md)<br /><br /> [StorageBoundInMB &#40;DTA, elemento&#41;](storageboundinmb-element-dta.md)<br /><br /> Elemento `MaxKeyColumnsInIndex`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Elemento `MaxColumnsInIndex`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Elemento `MinPercentageImprovement`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100)<br /><br /> [TestServer &#40;DTA, elemento&#41;](server-element-dta.md)<br /><br /> [FeatureSet &#40;DTA, elemento&#41;](featureset-element-dta.md)<br /><br /> [Partitioning &#40;DTA, elemento&#41;](partitioning-element-dta.md)<br /><br /> [DropOnlyMode &#40;DTA, elemento&#41;](droponlymode-element-dta.md)<br /><br /> [KeepExisting &#40;DTA, elemento&#41;](keepexisting-element-dta.md)<br /><br /> [OnlineIndexOperation &#40;DTA, elemento&#41;](onlineindexoperation-element-dta.md)<br /><br /> [DatabaseToConnect &#40;DTA, elemento&#41;](databasetoconnect-element-dta.md)<br /><br /> Elemento `IgnoreConstantsInWorkload`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).<br /><br /> Elemento `RetainShellDB`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="example"></a>Ejemplo  
- Para obtener ejemplos de la `TuningOptions` elemento, vea el [ejemplos de archivos de entrada XML &#40;DTA&#41;](xml-input-file-samples-dta.md).  
+ Para obtener ejemplos del `TuningOptions` elemento, vea los [ejemplos de archivos de entrada XML &#40;DTA&#41;](xml-input-file-samples-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

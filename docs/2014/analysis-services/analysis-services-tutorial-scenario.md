@@ -1,5 +1,5 @@
 ---
-title: Escenario del Tutorial de Analysis Services | Microsoft Docs
+title: Escenario de Analysis Services tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880662"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
   Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
@@ -27,7 +26,7 @@ ms.locfileid: "66062439"
 ## <a name="current-analysis-environment"></a>Entorno de análisis actual  
  Para dar respuesta a las necesidades de análisis de datos de los equipos de ventas y de marketing, la compañía obtiene actualmente los datos transaccionales de la base de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] y la información que no corresponde a las transacciones, como las cuotas de venta, la obtiene de hojas de cálculo y consolida toda esta información en el almacenamiento de datos relacionales **AdventureWorksDW2012** . No obstante, el almacenamiento de datos relacional presenta los siguientes problemas:  
   
--   Los informes son estáticos. Los usuarios no pueden explorar de forma interactiva los datos de los informes para obtener información más detallada, como podían hacer con una tabla dinámica de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Aunque el conjunto existente de informes predefinidos es suficiente para muchos usuarios, los usuarios más avanzados necesitan un acceso de consulta directo a la base de datos para realizar consultas interactivas y obtener informes especializados. No obstante, debido a la complejidad de la base de datos **AdventureWorksDW2012** , se necesita demasiado tiempo para que estos usuarios puedan aprender a crear consultas eficaces.  
+-   Los informes son estáticos. Los usuarios no pueden explorar de forma interactiva los datos de los informes para obtener información más detallada, como podían hacer con una tabla dinámica de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Aunque el conjunto existente de informes predefinidos es suficiente para muchos usuarios, los usuarios más avanzados necesitan un acceso de consulta directo a la base de datos para realizar consultas interactivas y obtener informes especializados. Sin embargo, debido a la complejidad de la base de datos **AdventureWorksDW2012** , se necesita demasiado tiempo para que estos usuarios obtengan información sobre cómo crear consultas eficaces.  
   
 -   El rendimiento de las consultas es muy variable. Por ejemplo, algunas consultas devuelven resultados con gran rapidez, en pocos segundos, mientras que otras tardan varios minutos en devolverlos.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66062439"
 -   Es difícil auditar la información. Actualmente, el departamento de finanzas usa la base de datos **AdventureWorksDW2012** solo como origen de datos en la que pueden realizarse consultas masivas. Luego descargan los datos en hojas de cálculo individuales e invierten mucho tiempo en preparar los datos y manipular dichas hojas de cálculo. Por consiguiente, el proceso de preparación, auditoría y administración de los informes financieros de la compañía es complejo.  
   
 ## <a name="the-solution"></a>Solución  
- Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para poder hacer lo siguiente:  
+ Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para realizar lo siguiente:  
   
 -   Proporcionar el acceso a datos unificados a través de una capa de metadatos común para la creación de informes y el análisis analítico.  
   
@@ -60,9 +59,9 @@ ms.locfileid: "66062439"
   
 -   Presentar una versión traducida a los usuarios de la compañía que se encuentran fuera de Estados Unidos.  
   
- Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
+ Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Página Resultado de evaluación de directiva (panel Always On) | Microsoft Docs
-description: Descripción de la página "Resultado de evaluación de directiva" del "Panel Always On" en SQL Server Management Studio.
+title: Página Resultado de evaluación de directiva (panel Always On)
+description: Descripción de la página "Resultado de evaluación de directiva" del "Panel AlwaysOn" en SQL Server Management Studio (SSMS).
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,23 +13,23 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6f13781e0d0820aaccf3a7fdc9e72145c08c6b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 333ff3e79bc92d82a224caf8af24fb9dc76a6082
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014540"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897008"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>Página Resultado de evaluación de directiva (panel Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Use la página **Resultado de evaluación de directiva** del panel AlwaysOn para ver cualquier problema de directivas actual.  
     
-##  <a name="Options"></a> Opciones del cuadro de diálogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a> Opciones del cuadro de diálogo  
  **Problema detectado**  
  Muestra una fila para cada problema detectado. El icono asociado a un problema proporciona un indicador visual para indicar la gravedad del mismo, del modo siguiente:  
   
-|Icono|Severity|  
+|Icono|severity|  
 |----------|--------------|  
 |![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|Crítico|  
 |![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|Advertencia|  
@@ -40,7 +40,7 @@ ms.locfileid: "68014540"
  **Más información**  
  Haga clic en este vínculo para abrir el tema de Ayuda para el problema seleccionado.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

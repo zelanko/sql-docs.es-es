@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2390c0b921368e7e06f0e5563a7eb59769d99c17
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62702297"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545035"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Crear y modificar objetos (XMLA)
   Los objetos principales se pueden crear, modificar y eliminar de forma independiente. Entre los objetos principales se incluyen los siguientes:  
@@ -32,7 +31,7 @@ ms.locfileid: "62702297"
   
 -   Bases de datos  
   
--   Dimensiones  
+-   Dimensions  
   
 -   Cubos  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62702297"
   
 -   Particiones  
   
--   perspectivas  
+-   Perspectivas  
   
 -   Modelos de minería de datos  
   
@@ -50,52 +49,52 @@ ms.locfileid: "62702297"
   
 -   Orígenes de datos  
   
- Usa el [crear](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) comando para crear un objeto principal en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y el [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) comandos para modificar un objeto principal existente en una instancia. Ambos comandos se ejecutan utilizando el [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método.  
+ Use el comando [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) para crear un objeto principal en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y el comando [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) para modificar un objeto principal existente en una instancia de. Ambos comandos se ejecutan mediante el método [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
-## <a name="creating-objects"></a>Creación de objetos  
- Al crear objetos mediante el método `Create`, primero debe identificar el objeto primario que contiene el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se va a crear. Identificar el objeto primario, ya que proporciona una referencia de objeto en el [ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propiedad de la `Create` comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma exclusiva el objeto primario para el comando `Create`. Para obtener más información acerca de las referencias a objetos, consulte [definir y que identifica objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
+## <a name="creating-objects"></a>Crear objetos  
+ Al crear objetos mediante el método `Create`, primero debe identificar el objeto primario que contiene el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se va a crear. Para identificar el objeto primario, proporcione una referencia de objeto en la propiedad [ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Create` comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma exclusiva el objeto primario para el comando `Create`. Para obtener más información acerca de las referencias a objetos, vea [definir e identificar objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
  Por ejemplo, debe proporcionar una referencia de objeto a un cubo para crear un nuevo grupo de medida para el cubo. La referencia de objeto para el cubo en la propiedad `ParentObject` contiene un identificador de base de datos y un identificador de cubo, ya que es posible que se utilice el mismo identificador de cubo en otra base de datos.  
   
- El [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) elemento contiene elementos de Analysis Services Scripting Language (ASSL) que definen el objeto principal que se va a crear. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ El elemento [ObjectDefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) contiene elementos del lenguaje de scripting de Analysis Services (ASSL) que definen el objeto principal que se va a crear. Para obtener más información sobre ASSL, vea [desarrollar con Analysis Services lenguaje de scripting &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  Si establece el atributo `AllowOverwrite` del comando `Create` en true, puede sobrescribir un objeto principal existente que tenga el identificador especificado. De lo contrario, si ya existe un objeto principal con el identificador especificado en el objeto primario, se produce un error.  
   
- Para obtener más información sobre la `Create` de comandos, consulte [crear elemento &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla).  
+ Para obtener más información sobre el `Create` comando, vea [Create Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla).  
   
 ### <a name="creating-session-objects"></a>Crear objetos de sesión  
- Los objetos de sesión son objetos temporales que solo están disponibles para la sesión explícita o implícita utilizada por una aplicación cliente y que se eliminan cuando finaliza la sesión. Puede crear objetos de sesión estableciendo la `Scope` atributo de la `Create` comando *sesión*.  
+ Los objetos de sesión son objetos temporales que solo están disponibles para la sesión explícita o implícita utilizada por una aplicación cliente y que se eliminan cuando finaliza la sesión. Puede crear objetos de sesión estableciendo el `Scope` atributo del `Create` comando en *Session*.  
   
 > [!NOTE]  
->  Cuando se usa el *sesión* establecimiento, el `ObjectDefinition` solo puede contener el elemento [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl), o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL elementos.  
+>  Cuando se usa la configuración de *sesión* , el `ObjectDefinition` elemento solo puede contener elementos ASSL de [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
   
 ## <a name="altering-objects"></a>Modificar objetos  
- Al modificar objetos mediante el uso de la `Alter` método, primero debe identificar el objeto que se puede modificar, ya que proporciona una referencia de objeto en el [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) propiedad de la `Alter` comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma exclusiva el objeto para el comando `Alter`. Para obtener más información acerca de las referencias a objetos, consulte [definir y que identifica objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
+ Al modificar objetos mediante el `Alter` método, primero debe identificar el objeto que se va a modificar proporcionando una referencia de objeto en la propiedad de [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Alter` comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma exclusiva el objeto para el comando `Alter`. Para obtener más información acerca de las referencias a objetos, vea [definir e identificar objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
   
  Por ejemplo, debe proporcionar una referencia de objeto a un cubo para modificar la estructura de un cubo. La referencia de objeto para el cubo en la propiedad `Object` contiene un identificador de base de datos y un identificador de cubo, ya que es posible que se utilice el mismo identificador de cubo en otra base de datos.  
   
- El elemento `ObjectDefinition` contiene elementos ASSL que definen el objeto principal que se va a modificar. Para obtener más información acerca de ASSL, vea [desarrollar con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
+ El elemento `ObjectDefinition` contiene elementos ASSL que definen el objeto principal que se va a modificar. Para obtener más información sobre ASSL, vea [desarrollar con Analysis Services lenguaje de scripting &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
  Si establece el atributo `AllowCreate` del comando `Alter` en true, puede crear el objeto principal especificado si éste no existe. De lo contrario, si un objeto principal especificado no existe aún, se produce un error.  
   
 ### <a name="using-the-objectexpansion-attribute"></a>Utilizar el atributo ObjectExpansion  
- Si va a cambiar solo las propiedades del objeto principal y no desea redefinir los objetos secundarios que se encuentran en el objeto principal, puede establecer el `ObjectExpansion` atributo de la `Alter` comando *ObjectProperties*. De este modo, la propiedad `ObjectDefinition` solo debe contener los elementos para las propiedades del objeto principal y el comando `Alter` conserva intactos los objetos secundarios asociados al objeto principal.  
+ Si solo va a cambiar las propiedades del objeto principal y no está redefiniendo los objetos secundarios contenidos en el objeto principal, puede establecer el `ObjectExpansion` atributo del `Alter` comando en *ObjectProperties*. De este modo, la propiedad `ObjectDefinition` solo debe contener los elementos para las propiedades del objeto principal y el comando `Alter` conserva intactos los objetos secundarios asociados al objeto principal.  
   
- Para redefinir los objetos secundarios de un objeto principal, debe establecer el `ObjectExpansion` atributo *ExpandFull* y la definición del objeto debe incluir todos los objetos secundarios que se encuentran en el objeto principal. Si la propiedad `ObjectDefinition` del comando `Alter` no incluye de forma explícita un objeto secundario contenido en el objeto principal, se elimina el objeto secundario no incluido.  
+ Para volver a definir los objetos secundarios de un objeto principal, debe establecer el `ObjectExpansion` atributo en *ExpandFull* y la definición del objeto debe incluir todos los objetos secundarios contenidos en el objeto principal. Si la propiedad `ObjectDefinition` del comando `Alter` no incluye de forma explícita un objeto secundario contenido en el objeto principal, se elimina el objeto secundario no incluido.  
   
 ### <a name="altering-session-objects"></a>Modificar objetos de sesión  
- Para modificar los objetos de sesión creados por el `Create` comando, establezca la `Scope` atributo de la `Alter` comando *sesión*.  
+ Para modificar los objetos de sesión creados por el `Create` comando, establezca el `Scope` atributo del `Alter` comando en *Session*.  
   
 > [!NOTE]  
->  Cuando se usa el *sesión* establecimiento, el `ObjectDefinition` solo puede contener el elemento [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl), o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL elementos.  
+>  Cuando se usa la configuración de *sesión* , el `ObjectDefinition` elemento solo puede contener elementos ASSL de [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Crear o modificar objetos subordinados  
- Aunque los comandos `Create` o `Alter` crean o modifican solamente un objeto principal de nivel superior, el objeto principal que se crea o modifica puede contener definiciones para otros objetos principales y secundarios subordinados a éste dentro de la propiedad `ObjectDefinition` envolvente. Por ejemplo, si define un cubo, la base de datos primaria se especifica en `ParentObject` y, dentro de la definición del cubo en `ObjectDefinition`, puede definir grupos de medida para éste; a su vez, dentro de los grupos de medida, puede definir particiones para cada grupo de este tipo. Un objeto secundario solamente se puede definir bajo el objeto principal que lo contiene. Para obtener más información acerca de los objetos principales y secundarias, consulte [objetos de base de datos &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
+ Aunque los comandos `Create` o `Alter` crean o modifican solamente un objeto principal de nivel superior, el objeto principal que se crea o modifica puede contener definiciones para otros objetos principales y secundarios subordinados a éste dentro de la propiedad `ObjectDefinition` envolvente. Por ejemplo, si define un cubo, la base de datos primaria se especifica en `ParentObject` y, dentro de la definición del cubo en `ObjectDefinition`, puede definir grupos de medida para éste; a su vez, dentro de los grupos de medida, puede definir particiones para cada grupo de este tipo. Un objeto secundario solamente se puede definir bajo el objeto principal que lo contiene. Para obtener más información sobre los objetos principales y secundarios, vea [objetos de base de datos &#40;Analysis Services-&#41;de datos multidimensionales ](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="description"></a>Descripción  
- En el ejemplo siguiente se crea un origen de datos relacional que hace referencia a la [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
+ En el ejemplo siguiente se crea un origen de datos relacional que hace referencia a la base de datos de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="code"></a>Código  
   
@@ -143,11 +142,11 @@ ms.locfileid: "62702297"
 ```  
   
 ### <a name="comments"></a>Comentarios  
- El `ObjectExpansion` atributo de la `Alter` comando se estableció en *ObjectProperties*. Esta configuración permite la [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) elemento, un objeto secundario, que se excluirán del origen de datos definido en `ObjectDefinition`. Por lo tanto, la información de suplantación de ese origen de datos permanece activa en la cuenta de servicio, como se especifica en el primer ejemplo.  
+ El `ObjectExpansion` atributo del `Alter` comando se estableció en *ObjectProperties*. Esta configuración permite excluir el elemento [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) , un objeto secundario, del origen de datos definido en `ObjectDefinition` . Por lo tanto, la información de suplantación de ese origen de datos permanece activa en la cuenta de servicio, como se especifica en el primer ejemplo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
- [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Desarrollo con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
+ [Desarrollo con Analysis Services lenguaje de scripting &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Desarrollar con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

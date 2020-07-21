@@ -12,15 +12,15 @@ ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5524bd8ed316780a9b0b8babd66e2c2582fb0585
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763094"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error [clase de eventos]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **Background Job Error** se produce cuando un trabajo en segundo plano finaliza de forma anómala. Esta condición podría requerir la atención de un administrador del sistema.  
   
 ## <a name="background-job-error-event-class-data-columns"></a>Columnas de datos de la clase de eventos Background Job Error  
@@ -38,7 +38,7 @@ ms.locfileid: "67999864"
 |**IntegerData2**|**int**|Número de secuencia de trabajo.|55|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sí|  
-|**Severity**|**int**|Nivel de gravedad del error del último intento (solo**EventSubClass** 1).|20|Sí|  
+|**Gravedad**|**int**|Nivel de gravedad del error del último intento (solo**EventSubClass** 1).|20|Sí|  
 |**StartTime**|**datetime**|Hora en que se creó el trabajo.|14|Sí|  
 |**State**|**int**|Estado del error del último intento (solo**EventSubClass** 1).|30|Sí|  
 |**TextData**|**ntext**|Descripción del valor de subclase de evento.|1|Sí|  

@@ -1,5 +1,5 @@
 ---
-title: Partición en el cuadro de diálogo de propiedades (SSMS) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la partición (SSMS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 754b2b61fc3b55cda694bcdad7cb492abe490188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072159"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541047"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Propiedades de la partición (cuadro de diálogo, SSMS)
   Use el cuadro de diálogo **Propiedades de la partición** de SQL Server Management Studio para definir las propiedades de una partición para un cubo de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -35,9 +34,9 @@ ms.locfileid: "66072159"
 |**Almacenamiento en caché automático**|Use la página **Almacenamiento en caché automático** para mostrar y modificar la configuración de almacenamiento y almacenamiento en caché automático de la partición seleccionada en la página **Selección** . Para más información sobre esta página, vea [Almacenamiento en caché automático &#40;cuadro de diálogo Propiedades de la partición, SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md).|  
 |**Configuración de errores**|Use la página **Configuración de errores** para mostrar y modificar la configuración de errores para procesar la partición seleccionada en la página **Selección** . Para más información sobre esta página, vea [Configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS - multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
-## <a name="see-also"></a>Vea también  
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Particiones remotas](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

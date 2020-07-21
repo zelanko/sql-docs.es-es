@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b8ca20f5304dae35a54357b79c763831ceb280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731359"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Bloquea la ejecución de un lote, un procedimiento almacenado o una transacción hasta alcanzar la hora o el intervalo de tiempo transcurrido, o hasta que una instrucción especificada modifique o devuelva al menos una fila.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68086112"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 WAITFOR   
 {  
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Solo se puede especificar WAITFOR con TIMEOUT en mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener más información, vea [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) y [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La transacción se está ejecutando mientras se ejecuta la instrucción WAITFOR y no se puede ejecutar ninguna otra solicitud para la misma transacción.  
   
  El retraso de tiempo real puede variar en relación con el tiempo especificado en *time_to_pass*, *time_to_execute* o *timeout*, y depende del nivel de actividad del servidor. El contador de tiempo se inicia cuando se programa el subproceso de la declaración WAITFOR. Si el servidor está ocupado, es posible que no se programe el subproceso inmediatamente; por tanto, el retraso de tiempo puede ser mayor que el tiempo especificado.  

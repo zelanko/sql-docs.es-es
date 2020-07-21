@@ -21,15 +21,15 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1266097e82f5db84f5a91951adc784d6d9580ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 470d72fba19cf398722dfa09264e64a871b11c27
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901852"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999793"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION (cláusula de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Especifica que en toda la consulta se debe utilizar la sugerencia de consulta especificada. Solo se puede especificar cada sugerencia de consulta una vez, aunque se permiten varias sugerencias de consulta. Solo se puede especificar una cláusula OPTION con la instrucción.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "67901852"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ OPTION ( <query_hint> [ ,...n ] ) ]   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 OPTION ( <query_option> [ ,...n ] )  
@@ -83,7 +83,7 @@ OPTION (HASH GROUP, FAST 10);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instrucción SELECT con una etiqueta en la cláusula OPTION  
  En el ejemplo siguiente se muestra una instrucción SELECT simple de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] con una etiqueta en la cláusula OPTION.  

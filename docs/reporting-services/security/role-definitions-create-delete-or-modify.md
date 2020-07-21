@@ -17,10 +17,10 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f079b7b16f485b92c60952d082281a1dba52d024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570543"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Definiciones de roles: creación, eliminación o modificación
@@ -72,8 +72,8 @@ Para crear, modificar o eliminar roles, puede usar [!INCLUDE[SQL Server Manageme
 
 - Para modificar una definición de roles del sistema, haga clic con el botón derecho en el elemento y seleccione **Propiedades**. De este modo se muestra la página General del cuadro de diálogo **Propiedades de rol del sistema** . Seleccione las tareas que pueden realizar los miembros de este rol y seleccione **Aceptar** para aplicar los cambios.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Conexión con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
- [Creación y administración de asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)  
+ [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)  
  [Reporting Services en SQL Server Management Studio &#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)

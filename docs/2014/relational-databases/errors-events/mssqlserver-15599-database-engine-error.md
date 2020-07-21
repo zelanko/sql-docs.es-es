@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 97e427a9-8587-46ea-954b-974b5df9c223
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e1e4988bea932b8279a1d5b754ef3d0271e3aa1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e377f8257000fc2e0695c2ef2624622760f1facb
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62915525"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553760"
 ---
-# <a name="mssqlserver15599"></a>MSSQLSERVER_15599
+# <a name="mssqlserver_15599"></a>MSSQLSERVER_15599
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|15599|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|15599|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SEC_LOCAL_TEMP_AUDIT_PERMISSIONS|  
 |Texto del mensaje|No se pueden establecer permisos ni auditoría y en objetos temporales locales.|  

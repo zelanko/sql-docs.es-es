@@ -11,17 +11,16 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MT
+ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148653"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012327"
 ---
 # <a name="overview-smo"></a>Información general (SMO)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) son objetos diseñados para [!INCLUDE[msCoName](../../includes/msconame-md.md)]la administración mediante programación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar SMO para crear aplicaciones de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizadas. Aunque [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una aplicación eficaz y completa para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habrá ocasiones en las que resultará más conveniente usar una aplicación SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) son objetos diseñados para la administración mediante programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede usar SMO para crear aplicaciones de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizadas. Aunque [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es una aplicación eficaz y completa para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habrá ocasiones en las que resultará más conveniente usar una aplicación SMO.  
   
  Por ejemplo, es posible que haya que simplificar las aplicaciones de usuario que controlan las tareas de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para satisfacer las necesidades de nuevos usuarios y reducir los costes de aprendizaje. Quizá tenga que crear bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personalizadas o crear una aplicación para crear y supervisar la eficacia de los índices. También podría utilizarse una aplicación SMO para incluir hardware o software de terceros sin ningún tipo de problema en la aplicación de administración de base de datos.  
   
@@ -47,17 +46,17 @@ ms.locfileid: "70148653"
   
 -   Extremos HTTP para administrar solicitudes SOAP. Para obtener más información, vea [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
--   Aislamiento de instantánea y control de versiones de nivel de fila de cara a una mayor simultaneidad. Para obtener más información, vea [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
+-   Aislamiento de instantánea y control de versiones de nivel de fila de cara a una mayor simultaneidad. Para obtener más información, vea [Trabajar con aislamiento de instantánea](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   Colección de esquemas XML, índices XML y tipos de datos XML que proporcionan validación y almacenamiento de datos XML. Para obtener más información, vea [colecciones &#40;de esquemas XML SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) y [utilizar esquemas XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   Colección de esquemas XML, índices XML y tipos de datos XML que proporcionan validación y almacenamiento de datos XML. Para obtener más información, vea [colecciones de esquemas xml &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md) y [uso de esquemas XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Bases de datos de instantánea para crear copias de solo lectura de bases de datos.  
   
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite una comunicación basada en mensajes. Para obtener más información, vea [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Compatibilidad con sinónimos para varios nombres de objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, [consulte &#40;sinónimos&#41;motor de base de datos](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Compatibilidad con sinónimos para varios nombres de objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [sinónimos &#40;Motor de base de datos&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
--   Administración del Correo electrónico de base de datos, que permite crear servidores de correo electrónico, perfiles del correo electrónico y cuentas de correo electrónico en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Database Mail](../../relational-databases/database-mail/database-mail.md).  
+-   Administración del Correo electrónico de base de datos, que permite crear servidores de correo electrónico, perfiles del correo electrónico y cuentas de correo electrónico en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md).  
   
 -   Servidores registrados que admiten el registro de información de conexión. Para obtener más información, vea [Register Servers](../../tools/sql-server-management-studio/register-servers.md).  
   
@@ -67,7 +66,7 @@ ms.locfileid: "70148653"
   
 -   Desencadenadores DDL para agregar funcionalidad cuando se producen eventos DDL. Para más información, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Esto significa que, para poder usar los objetos SMO, es necesario tener instalado Common Language Runtime de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los ensamblados se encuentran en C:\Archivos de Programa\microsoft SQL Server\130\SDK\Assemblies\. Para obtener más información, consulte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentación de.  
+ El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Esto significa que, para poder usar los objetos SMO, es necesario tener instalado Common Language Runtime de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los ensamblados se encuentran en C:\Archivos de Programa\microsoft SQL Server\130\SDK\Assemblies\. Para más información, consulte la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>Clases SMO  
  Las clases SMO incluyen dos categorías: clases de instancia y clases de utilidad.  
@@ -140,7 +139,7 @@ ms.locfileid: "70148653"
   
  Las particiones de tabla e índice permiten administrar la difusión de los datos de tablas e índices a través de grupos de archivos. Esta nueva característica se representa mediante objetos SMO.  
   
- **EndPoints**  
+ **Extremos**  
   
  Los extremos administran las solicitudes SOAP y de creación de reflejo de base de datos utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "70148653"
   
  El aislamiento de instantánea (control de versiones de nivel de fila) se representa mediante nuevas propiedades de objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
- **Espacio de nombres del esquema XML, índices XML y tipo de archivo XML**  
+ **Espacio de nombres de esquema XML, índices XML y tipos de datos XML**  
   
  Los espacios de nombres de esquema XML se representan en SMO mediante una colección de objetos. Los índices XML se representan en SMO mediante una propiedad de objeto **Index** .  
   
@@ -160,7 +159,7 @@ ms.locfileid: "70148653"
   
  El objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> representa las opciones de comprobación de páginas de base de datos.  
   
- **Bases de datos de instantáneas**  
+ **Bases de datos de instantánea**  
   
  Una base de datos de instantánea es una copia de solo lectura de una base de datos especificada en un punto concreto del tiempo. Una base de datos de instantánea puede especificarse utilizando la propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "70148653"
   
  Las mejoras de índice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se representan mediante nuevas propiedades del objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replication Management Objects Concepts (Conceptos de Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

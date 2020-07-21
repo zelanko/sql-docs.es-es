@@ -23,15 +23,15 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4410c086ed5fdca8fa4812a96c13bac6f692c8ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbe3458915e61de820c50d47ac8892223f98f58
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942956"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990870"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (OR bit a bit) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Realiza una operación OR bit a bit lógica entre dos valores de tipo entero especificados tal y como aparecen traducidos en expresiones binarias en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -53,7 +53,7 @@ expression | expression
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve un **int** si los valores de entrada son **int**; un **smallint** si los valores de entrada son **smallint**, o un **tinyint** si los valores de entrada son **tinyint**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El operador | de bit a bit realiza una operación OR lógica de bit a bit entre las dos expresiones y, para ello, toma cada bit correspondiente de ambas expresiones. Los bits del resultado se establecen en 1 si alguno o ambos bits (para el bit actual que se resuelve) de las expresiones de entrada tienen el valor 1; si ninguno de los bits de la expresión de entrada es 1, el bit del resultado se establece en 0.  
   
  Si las expresiones de la izquierda y de la derecha tienen tipos de datos de entero diferentes (por ejemplo, *expression* de la izquierda es de tipo **smallint** y *expression* de la derecha es de tipo **int**), el argumento del tipo de datos más pequeño se convierte al tipo de datos mayor. En este ejemplo, **smallint**_expression_ se convierte en **int**.  
@@ -62,11 +62,9 @@ expression | expression
  En el ejemplo siguiente se crea una tabla con tipos de datos **int** para mostrar los valores originales y se pone la tabla en una fila.  
   
 ```sql  
-CREATE TABLE bitwise  
-(   
- a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (  
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);  
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  
@@ -101,7 +99,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Bitwise Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  (Operadores bit a bit [Transact-SQL])  
+ [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
  [&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)  (&#124;= [Asignación de OR bit a bit] [Transact-SQL])  
  [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728440"
 ---
 # <a name="master-database"></a>Base de datos maestra
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La base de datos **maestra** registra toda la información de sistema de un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dentro de esta información se incluyen los metadatos de una sola instancia, como las cuentas de inicio de sesión, los extremos, los servidores vinculados y la configuración del sistema. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los objetos de sistema ya no se almacenan en la base de datos **maestra** , sino en la [base de datos de recursos](../../relational-databases/databases/resource-database.md). Asimismo, **maestra** es la base de datos que registra la existencia de las demás bases de datos, la ubicación de los archivos de las bases de datos y la información de inicialización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede iniciarse si la base de datos **maestra** no está disponible.  
 
 > [!IMPORTANT]
@@ -34,7 +34,7 @@ En la siguiente tabla se enumeran los valores de configuración iniciales de los
   
 |Archivo|Nombre lógico|Nombre físico|Crecimiento del archivo|  
 |----------|------------------|-------------------|-----------------|  
-|Datos principales|maestra|master.mdf|Crecimiento automático del 10 por ciento hasta llenar el disco.|  
+|Datos principales|maestro|master.mdf|Crecimiento automático del 10 por ciento hasta llenar el disco.|  
 |Log|mastlog|mastlog.ldf|Crecimiento automático del 10 por ciento hasta un máximo de 2 terabytes.|  
   
 Para obtener información sobre cómo mover los archivos de registro y los datos **maestros** , vea [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md).  
@@ -51,39 +51,39 @@ En la siguiente tabla se enumera el valor predeterminado de cada opción de base
 
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
-|ANSI_NULL_DEFAULT|OFF|Sí|  
-|ANSI_NULLS|OFF|Sí|  
-|ANSI_PADDING|OFF|Sí|  
-|ANSI_WARNINGS|OFF|Sí|  
-|ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|No|  
-|AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|No|  
-|AUTO_UPDATE_STATISTICS|ON|Sí|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
+|ALLOW_SNAPSHOT_ISOLATION|ACTIVAR|No|  
+|ANSI_NULL_DEFAULT|Apagado|Sí|  
+|ANSI_NULLS|Apagado|Sí|  
+|ANSI_PADDING|Apagado|Sí|  
+|ANSI_WARNINGS|Apagado|Sí|  
+|ARITHABORT|Apagado|Sí|  
+|AUTO_CLOSE|Apagado|No|  
+|AUTO_CREATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_SHRINK|Apagado|No|  
+|AUTO_UPDATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_UPDATE_STATISTICS_ASYNC|Apagado|Sí|  
+|CHANGE_TRACKING|Apagado|No|  
+|CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
+|CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
 |Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|ON|No|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
-|NUMERIC_ROUNDABORT|OFF|Sí|  
+|DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
+|DB_CHAINING|ACTIVAR|No|  
+|ENCRYPTION|Apagado|No|  
+|MIXED_PAGE_ALLOCATION|ACTIVAR|No|  
+|NUMERIC_ROUNDABORT|Apagado|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
-|QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|QUOTED_IDENTIFIER|Apagado|Sí|  
+|READ_COMMITTED_SNAPSHOT|Apagado|No|  
 |RECOVERY|SIMPLE|Sí|  
-|RECURSIVE_TRIGGERS|OFF|Sí|  
+|RECURSIVE_TRIGGERS|Apagado|Sí|  
 |Opciones de Service Broker|DISABLE_BROKER|No|  
-|TRUSTWORTHY|OFF|Sí|  
+|TRUSTWORTHY|Apagado|Sí|  
   
 Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
 Las siguientes operaciones no se pueden realizar en la base de datos **maestra** :  
   
 - Agregar archivos o grupos de archivos.  

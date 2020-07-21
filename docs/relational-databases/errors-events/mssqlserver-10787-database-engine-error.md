@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: fcc78e5f-e2cf-47df-8c3e-c169367f893b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c35a58b8db6c707c4921365e5b001421e3822176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5048b2abbccb5133d8678b0599ffda773c64469a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025829"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781308"
 ---
-# <a name="mssqlserver10787"></a>MSSQLSERVER_10787
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_10787"></a>MSSQLSERVER_10787
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|10787|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|10787|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P3_HASH_INDEX|  
 |Texto del mensaje|*construct* '*feature*' no es compatible con un índice de hash.|  

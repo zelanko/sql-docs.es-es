@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f3ab74c6dd095fd92e0f9d20ba622be70a37ef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f84ab465da0a1b7ac1da1211de1d5199fd28ee95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058179"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>Crear consultas de búsqueda de texto completo (Visual Database Tools)
-  Las búsquedas de texto completo utilizan el predicado CONTAINS para buscar las filas que contienen el texto especificado en una determinada columna. Las búsquedas de texto completo solo pueden realizarse en las columnas que tienen índices de texto completo activos. Si intenta utilizar la cláusula CONTAINS en una columna que no tiene un índice de texto completo activo, recibirá un error. Para obtener más información sobre los índices de texto completo y la cláusula CONTAINS, consulte [Full-Text Search](../../relational-databases/search/full-text-search.md) y [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
+  Las búsquedas de texto completo utilizan el predicado CONTAINS para buscar las filas que contienen el texto especificado en una determinada columna. Las búsquedas de texto completo solo pueden realizarse en las columnas que tienen índices de texto completo activos. Si intenta utilizar la cláusula CONTAINS en una columna que no tiene un índice de texto completo activo, recibirá un error. Para obtener más información sobre los índices de texto completo y la cláusula Contains, vea [búsqueda de texto completo](../../relational-databases/search/full-text-search.md) y [contiene &#40;&#41;de Transact-SQL ](/sql/t-sql/queries/contains-transact-sql).  
   
 ### <a name="to-create-a-full-text-search-query"></a>Para crear una consulta de búsqueda de texto completo  
   
@@ -30,9 +29,9 @@ ms.locfileid: "63184347"
   
 2.  Utilice la función CONTAINS en la cláusula WHERE de su consulta para buscar una columna de texto completo.  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tipos de consultas admitidos &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

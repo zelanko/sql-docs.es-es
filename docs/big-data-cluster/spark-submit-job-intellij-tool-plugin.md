@@ -1,28 +1,29 @@
 ---
-title: Ejecución de trabajos de Spark en Azure Toolkit for IntelliJ en un clúster de macrodatos de SQL
-titleSuffix: SQL Server big data clusters
+title: 'Ejecución de trabajos de Spark: Kit de herramientas de Azure para IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: Envíe trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Toolkit for IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653714"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634947"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Envío de trabajos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark en IntelliJ
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Uno de los escenarios clave de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] es la capacidad de enviar trabajos de Spark. La característica de envío de trabajos de Spark permite enviar un archivo jar o py local con referencias [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]a. También permite ejecutar archivos Jar o Py, que ya se encuentran en el sistema de archivos HDFS. 
+Uno de los escenarios clave para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] es la capacidad de enviar trabajos de Spark. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con referencias a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. También permite ejecutar archivos Jar o Py, que ya se encuentran en el sistema de archivos HDFS. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Clúster de macrodatos de SQL Server.
 - Java Development Kit para Oracle. Puede instalarlo desde el [sitio web de Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -32,9 +33,9 @@ Uno de los escenarios clave de [!INCLUDE[big-data-clusters-2019](../includes/ssb
 ## <a name="link-sql-server-big-data-cluster"></a>Vincular el clúster de macrodatos de SQL Server
 1. Abra la herramienta IntelliJ IDEA.
 
-2. Si usa un certificado autofirmado, deshabilite la validación de certificados SSL en el menú **Herramientas**, seleccione **Azure**, **Validate Spark Cluster SSL Certificate** (Validar certificado SSL de clúster de Spark) y, luego, **Deshabilitar**.
+2. Si usa un certificado autofirmado, deshabilite la validación de certificados TLS/SSL en el menú **Herramientas**, seleccione **Azure**, **Validate Spark Cluster SSL Certificate** (Validar certificado SSL de clúster de Spark) y, luego, **Deshabilitar**.
 
-    ![Vinculación de clúster de macrodatos de SQL Server: deshabilitación de SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![Vinculación de clúster de macrodatos de SQL Server: deshabilitación de TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Abra Azure Explorer desde el menú **Ver**, seleccione **Ventanas de herramientas** y, luego, **Azure Explorer**.
 4. Haga clic con el botón derecho en **SQL Server big data cluster** (Clúster de macrodatos de SQL Server) y seleccione **Link SQL Server big data cluster** (Vincular clúster de macrodatos de SQL Server). Escriba el **Servidor**, el **Nombre de usuario** y la **Contraseña** y haga clic en **Aceptar**.
@@ -139,7 +140,7 @@ Asegúrese de que cumple el requisito previo de WINUTILS.EXE.
 
 4. Proporcione los valores siguientes y seleccione **Aceptar**:
 
-    |Property |Valor |
+    |Propiedad |Value |
     |----|----|
     |Clase principal del trabajo|el valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase si selecciona los puntos suspensivos ( **...** ) y elige otra clase.|
     |Variables de entorno|Asegúrese de que el valor de HADOOP_HOME sea correcto.|
@@ -173,7 +174,7 @@ La consola de sesión interactiva de Spark Livy (Scala) solo se admite en Intell
 
 4. Proporcione los valores siguientes y seleccione **Aceptar**:
 
-    |Property |Valor |
+    |Propiedad |Value |
     |----|----|
     |Clústeres de Spark (solo Linux)|Seleccione el clúster de macrodatos de SQL Server en el que quiere ejecutar la aplicación.|
     |Nombre de clase principal|el valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase si selecciona los puntos suspensivos ( **...** ) y elige otra clase.|
@@ -195,4 +196,4 @@ Por comodidad, puede ver el resultado del script si envía algún código a la c
    ![Enviar selección a consola de Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre SQL Server clúster de macrodatos y escenarios relacionados, vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)?
+Para obtener más información sobre los clústeres de macrodatos de SQL Server y los escenarios relacionados, vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)?

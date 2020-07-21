@@ -13,68 +13,68 @@ f1_keywords:
 helpviewer_keywords:
 - Stream object [ADO]
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9812344008bc066b18328036cf36fe106e8845a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916719"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759661"
 ---
 # <a name="stream-object-ado"></a>Objeto de secuencia (ADO)
-Representa un flujo de datos binarios o texto.  
+Representa un flujo de datos binarios o de texto.  
   
- En las jerarquías de estructura de árbol como un sistema de archivos o un sistema de correo electrónico, un [registro](../../../ado/reference/ado-api/record-object-ado.md) puede tener una secuencia binaria predeterminada de bits asociados que contiene el contenido del archivo o el correo electrónico. Un **Stream** objeto puede utilizarse para manipular campos o registros que contienen estas secuencias de datos. Un **Stream** puede obtenerse un objeto de las siguientes maneras:  
+ En las jerarquías estructuradas por árbol, como un sistema de archivos o un sistema de correo electrónico, un [registro](../../../ado/reference/ado-api/record-object-ado.md) puede tener una secuencia binaria predeterminada de bits asociada a él que incluye el contenido del archivo o el correo electrónico. Un objeto de **secuencia** se puede utilizar para manipular los campos o registros que contienen estos flujos de datos. Un objeto de **secuencia** se puede obtener de estas maneras:  
   
--   Desde una dirección URL que apunta a un objeto (normalmente un archivo) que contiene datos binarios o texto. Este objeto puede ser un documento simple, un **registro** objeto que representa un documento estructurado, o una carpeta.  
+-   Desde una dirección URL que apunta a un objeto (normalmente un archivo) que contiene datos binarios o de texto. Este objeto puede ser un documento simple, un objeto de **registro** que representa un documento estructurado o una carpeta.  
   
--   Abriendo el valor predeterminado **Stream** objeto asociado con un **registro** objeto. Puede obtener la secuencia predeterminada asociada con un **registro** objeto cuando la **registro** se abre, para eliminar una vuelta sólo para abrir la secuencia.  
+-   Abriendo el objeto de **secuencia** predeterminado asociado a un objeto de **registro** . Puede obtener el flujo predeterminado asociado a un objeto de **registro** cuando se abre el **registro** , para eliminar un recorrido de ida y vuelta solo para abrir la secuencia.  
   
--   Creando un **Stream** objeto. Estos **Stream** objetos pueden utilizarse para almacenar los datos para los fines de la aplicación. A diferencia de un **Stream** asociado con una dirección URL o el valor predeterminado **Stream** de un **registro**, con instancias **Stream** no tiene asociación con una origen subyacente de forma predeterminada.  
+-   Creando una instancia de un objeto de **secuencia** . Estos objetos **Stream** se pueden usar para almacenar datos para los fines de la aplicación. A diferencia de un **flujo** asociado a una dirección URL, o la **secuencia** predeterminada de un **registro**, una **secuencia** con instancias no tiene ninguna asociación con un origen subyacente de forma predeterminada.  
   
- Con los métodos y propiedades de un **Stream** objeto, puede hacer lo siguiente:  
+ Con los métodos y las propiedades de un objeto de **secuencia** , puede hacer lo siguiente:  
   
--   Abra un **Stream** objeto desde un **registro** o la dirección URL con el [abierto](../../../ado/reference/ado-api/open-method-ado-stream.md) método.  
+-   Abra un objeto de **secuencia** desde un **registro** o una dirección URL con el método [Open](../../../ado/reference/ado-api/open-method-ado-stream.md) .  
   
--   Cerrar un **Stream** con el [cerrar](../../../ado/reference/ado-api/close-method-ado.md) método.  
+-   Cierre una **secuencia** con el método [Close](../../../ado/reference/ado-api/close-method-ado.md) .  
   
--   Entrada de bytes o texto en un **Stream** con el [escribir](../../../ado/reference/ado-api/write-method.md) y [WriteText](../../../ado/reference/ado-api/writetext-method.md) métodos.  
+-   Escriba bytes o texto en una **secuencia** con los métodos de [escritura](../../../ado/reference/ado-api/write-method.md) y [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md) .  
   
--   Leer los bytes desde el **Stream** con el [lectura](../../../ado/reference/ado-api/read-method.md) y [ReadText](../../../ado/reference/ado-api/readtext-method.md) métodos.  
+-   Leer bytes de la **secuencia** con los métodos [Read](../../../ado/reference/ado-api/read-method.md) y [READTEXT](../../../ado/reference/ado-api/readtext-method.md) .  
   
--   Las escriba **Stream** del búfer de datos en la propiedad ADO al objeto subyacente con el [vaciar](../../../ado/reference/ado-api/flush-method-ado.md) método.  
+-   Escriba los datos de **secuencia** que todavía estén en el búfer de ADO en el objeto subyacente con el método [Flush](../../../ado/reference/ado-api/flush-method-ado.md) .  
   
--   Copie el contenido de un **Stream** a otro **Stream** con el [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) método.  
+-   Copie el contenido de una **secuencia** en otra **secuencia** con el método [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) .  
   
--   Controlar cómo se leen las líneas del archivo de origen con la [SkipLine](../../../ado/reference/ado-api/skipline-method.md)método y el [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) propiedad.  
+-   Controla cómo se leen las líneas del archivo de código fuente con el método [SkipLine](../../../ado/reference/ado-api/skipline-method.md)y la propiedad [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) .  
   
--   Determinar el final de la secuencia con el [EOS](../../../ado/reference/ado-api/eos-property.md)propiedad y [SetEOS](../../../ado/reference/ado-api/seteos-method.md) método.  
+-   Determine el final de la posición de la secuencia con la propiedad [EOS](../../../ado/reference/ado-api/eos-property.md)y el método [seteos](../../../ado/reference/ado-api/seteos-method.md) .  
   
--   Guardar y restaurar datos en archivos con la [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)y [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) métodos.  
+-   Guardar y restaurar datos en archivos con los métodos [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)y [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md) .  
   
--   Especificar el juego de caracteres utilizado para almacenar el **Stream** con el [Charset](../../../ado/reference/ado-api/charset-property-ado.md) propiedad.  
+-   Especifique el juego de caracteres utilizado para almacenar la **secuencia** con la propiedad [CharSet](../../../ado/reference/ado-api/charset-property-ado.md) .  
   
--   Detener asincrónico **Stream** operación con el [cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método.  
+-   Detiene una operación de **secuencia** asincrónica con el método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   
--   Determinar el número de bytes en un **Stream** con el [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) propiedad.  
+-   Determine el número de bytes de una **secuencia** con la propiedad [size](../../../ado/reference/ado-api/size-property-ado-stream.md) .  
   
--   Controlar la posición actual dentro de un **Stream** con el [posición](../../../ado/reference/ado-api/position-property-ado.md) propiedad.  
+-   Controlar la posición actual dentro de una **secuencia** con la propiedad [Position](../../../ado/reference/ado-api/position-property-ado.md) .  
   
--   Determinar el tipo de datos en un **Stream** con el [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) propiedad.  
+-   Determine el tipo de datos en una **secuencia** con la propiedad [Type](../../../ado/reference/ado-api/type-property-ado-stream.md) .  
   
--   Determinar el estado actual de la **Stream** (cerrar, abrir o ejecutar) con el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad.  
+-   Determine el estado actual de la **secuencia** (cerrada, abierta o en ejecución) con la propiedad [State](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Especificar el modo de acceso para el **Stream** con el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad.  
+-   Especifique el modo de acceso para la **secuencia** con la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) .  
   
 > [!NOTE]
->  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
- El **Stream** objeto es seguro para scripting.  
+ El objeto de **secuencia** es seguro para el scripting.  
   
  Esta sección contiene los temas siguientes.  
   
--   [Los eventos, métodos y propiedades del objeto Stream](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos del objeto Stream](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registros y secuencias](../../../ado/guide/data/records-and-streams.md)

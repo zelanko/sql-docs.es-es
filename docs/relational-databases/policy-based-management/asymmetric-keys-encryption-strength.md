@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3c8baf2b846e33d7df51dfef3e24ee2b6028babb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82c217eb64c0471b1d4261880a0dc61b1a18995d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655132"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidad del cifrado de claves asimétricas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Esta regla comprueba si las claves asimétricas se crearon utilizando 1024 bits o un cifrado más seguro.  
   
 ## <a name="best-practices-recommendations"></a>Prácticas recomendadas  

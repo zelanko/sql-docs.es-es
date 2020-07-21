@@ -1,10 +1,9 @@
 ---
-title: Organizar trabajos | Microsoft Docs
-ms.custom: ''
+title: organizar los trabajos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,13 +12,15 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b2167ec7aaf1656312e81abc842c3910a5522947
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a02f50ed88a2883d0149dbbd37df63b27e87dfa4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260030"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247614"
 ---
 # <a name="organize-jobs"></a>organizar los trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,10 +37,10 @@ Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrar
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo crear una categoría de trabajo.|[Crear una categoría de trabajo](../../ssms/agent/create-a-job-category.md)|  
 |Describe cómo eliminar una categoría de trabajo.|[Eliminar una categoría de trabajo](../../ssms/agent/delete-a-job-category.md)|  
 |Describe cómo asignar un trabajo a una categoría de trabajo.|[Asignar un trabajo a una categoría de trabajo](../../ssms/agent/assign-a-job-to-a-job-category.md)|  
-|Describe cómo cambiar la pertenencia a una categoría de trabajo.|[Change the Membership of a Job Category](../../ssms/agent/change-the-membership-of-a-job-category.md)|  
+|Describe cómo cambiar la pertenencia a una categoría de trabajo.|[Cambiar la pertenencia de una categoría de trabajo](../../ssms/agent/change-the-membership-of-a-job-category.md)|  
 |Describe cómo mostrar información de categorías.|[Mostrar información de categorías de trabajo](../../ssms/agent/list-job-category-information.md)|  
   

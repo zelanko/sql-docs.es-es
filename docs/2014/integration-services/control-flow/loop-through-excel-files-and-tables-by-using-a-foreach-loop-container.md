@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1c3272afb28c50b721cbd22d9bca77b6c90adac0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62830586"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438192"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -32,7 +31,7 @@ ms.locfileid: "62830586"
   
      Si no usa una variable para el argumento Propiedades extendidas, debe agregarlo manualmente a la expresión que contiene la cadena de conexión.  
   
-3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](foreach-loop-container.md).  
+3.  Agregue un contenedor de bucles foreach a la pestaña **flujo de control** . Para obtener información sobre cómo configurar el contenedor de bucles foreach, vea [configurar un contenedor de bucles foreach](foreach-loop-container.md).  
   
 4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de archivos para Foreach, especifique la carpeta en la que se encuentran los libros de Excel e indique el filtro de archivos (generalmente *.xls).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62830586"
   
 8.  Seleccione el nuevo administrador de conexiones de Excel, haga clic en la propiedad **Expresiones** en la ventana Propiedades y luego haga clic en los puntos suspensivos.  
   
-9. En el **Editor de expresiones de propiedad**, seleccione el `ConnectionString` propiedad y, a continuación, haga clic en el botón de puntos suspensivos.  
+9. En el **Editor de expresiones de propiedad**, seleccione la `ConnectionString` propiedad y, a continuación, haga clic en los puntos suspensivos.  
   
 10. En el Generador de expresiones, escriba la siguiente expresión:  
   
@@ -73,7 +72,7 @@ ms.locfileid: "62830586"
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   
-3.  Agregue un contenedor de bucles Foreach a la pestaña **Flujo de control** . Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](foreach-loop-container.md).  
+3.  Agregue un contenedor de bucles foreach a la pestaña **flujo de control** . Para obtener información sobre cómo configurar el contenedor de bucles foreach, vea [configurar un contenedor de bucles foreach](foreach-loop-container.md).  
   
 4.  En la página **Colección** del **Editor de bucles Foreach**, seleccione el enumerador de conjunto de filas del esquema para Foreach de ADO.NET.  
   
@@ -90,10 +89,10 @@ ms.locfileid: "62830586"
   
 9. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada tabla de Excel en el libro especificado. Si usa una tarea Script para examinar el nombre de la tabla enumerada o para trabajar con cada tabla, recuerde agregar la variable de cadena a la propiedad ReadOnlyVariables de la tarea Script.  
   
-## <a name="see-also"></a>Vea también  
- [Importar datos desde Excel o exportarlos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar un contenedor de bucles Foreach](foreach-loop-container.md)   
+## <a name="see-also"></a>Consulte también  
+ [Importar datos desde Excel o exportar datos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [configurar un contenedor de bucles foreach](foreach-loop-container.md)   
  [Agregar o cambiar una expresión de propiedad](../expressions/add-or-change-a-property-expression.md)   
- [Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)   
+ [Administrador de conexiones con Excel](../connection-manager/excel-connection-manager.md)   
  [Origen de Excel](../data-flow/excel-source.md)   
  [Destino de Excel](../data-flow/excel-destination.md)   
  [Trabajar con archivos de Excel con la tarea Script](script-task.md)  

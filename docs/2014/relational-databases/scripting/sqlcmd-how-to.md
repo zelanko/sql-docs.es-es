@@ -1,6 +1,6 @@
 ---
-title: Temas de procedimientos sobre SQLCMD | Microsoft Docs
-ms.custom: ''
+title: Temas de procedimientos sobre sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.technology: database-engine
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eac85390764c260b9823d53666966c1ee35e9e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c6a870acc884804083aae20f69aabb7ef14c975
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047503"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Temas de procedimientos sobre sqlcmd
 
-Consulte [temas de procedimientos sobre sqlcmd](../../database-engine/sqlcmd-how-to-topics.md).
+Vea los [temas de procedimientos de SQLCMD](../../database-engine/sqlcmd-how-to-topics.md).

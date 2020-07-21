@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 996b93f04d9e9fc063bbacbb5f4a7588794ad208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04d4cbdd2197745d2d795814d88c4f7bc28eb90e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191523"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049240"
 ---
-# <a name="mssqleng014121"></a>MSSQL_ENG014121
+# <a name="mssql_eng014121"></a>MSSQL_ENG014121
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14121|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14121|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|No se pudo quitar el distribuidor '%s'. Tiene asociadas bases de datos de distribución.|  
@@ -40,7 +39,7 @@ ms.locfileid: "63191523"
   
  Ejecute [sp_dropdistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql) para todas las bases de datos de distribución asociadas con este distribuidor. Cuando haya quitado todas las asociaciones con bases de datos de distribución, puede deshabilitar la distribución.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)   
  [Configurar distribución](configure-distribution.md)  
   

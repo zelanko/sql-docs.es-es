@@ -13,15 +13,14 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9abcaf4ad4256fb600e57567ed7e7bf0d54e61e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63140471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055928"
 ---
 # <a name="fetching-rows"></a>Capturar filas
   La interfaz **IRowset** es la interfaz de conjunto de filas base. La interfaz **IRowset** proporciona métodos para capturar filas secuencialmente, obtiene los datos de esas filas y administra las filas. Los consumidores usan los métodos de **IRowset** para todas las operaciones básicas de conjunto de filas. Esto incluye la captura y liberación de filas y la obtención de los valores de columna.  
@@ -63,7 +62,7 @@ ms.locfileid: "63140471"
   
 -   [Posición de captura siguiente](fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de filas](rowsets.md)  
   
   

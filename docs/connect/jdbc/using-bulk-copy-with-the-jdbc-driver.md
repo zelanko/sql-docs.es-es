@@ -1,5 +1,6 @@
 ---
-title: Uso de la copia masiva con el controlador JDBC | Microsoft Docs
+title: Uso de la copia masiva con el controlador JDBC
+description: La clase SQLServerBulkCopy permite escribir soluciones de carga de datos en Java que ofrecen importantes ventajas de rendimiento con respecto a las API de JDBC estándares.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 945bdaf05c9a10e3ab72b11e0049c6053dd108b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026413"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634025"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso de la copia masiva con el controlador JDBC
 
@@ -117,7 +118,7 @@ El método más sencillo para realizar una operación de copia masiva de SQL Ser
   
 > [!NOTE]  
 > Si necesita revertir toda o parte de la copia masiva cuando se produce un error, puede usar una transacción administrada por SQLServerBulkCopy o realizar la operación de copia masiva en una transacción existente.  
-> Para obtener más información, consulte [Operaciones de transacción y de copia masiva](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations)  
+> Para obtener más información, consulte [Operaciones de transacción y de copia masiva](#transaction-and-bulk-copy-operations)  
   
  Los pasos generales para realizar una operación de copia masiva son:  
   
@@ -143,7 +144,7 @@ El método más sencillo para realizar una operación de copia masiva de SQL Ser
 La aplicación siguiente muestra cómo cargar datos mediante la clase SQLServerBulkCopy. En este ejemplo, se usa ResultSet para copiar datos de la tabla Production.Product en la base de datos de AdventureWorks de SQL Server a una tabla similar en la misma base de datos.  
   
 > [!IMPORTANT]  
-> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
+> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
 
 ```java
 import java.sql.Connection;
@@ -237,7 +238,7 @@ Puede realizar varias operaciones de copia masiva con una única instancia de un
 Si se realizan varias operaciones de copia masiva con el mismo objeto SQLServerBulkCopy, no hay restricciones en cuanto a si la información de origen o destino es igual o diferente en cada operación. Sin embargo, debe asegurarse de que la información de asociación de la columna está establecida correctamente cada vez que se escribe en el servidor.  
   
 > [!IMPORTANT]  
-> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
+> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
 
 ```java
 import java.sql.Connection;
@@ -366,7 +367,7 @@ En el ejemplo, la tabla de origen y la de destino incluyen, cada una, una column
 La operación de copia masiva se ejecuta con la propiedad **BatchSize** establecida en 10. Cuando la operación encuentra la fila no válida, se produce una excepción. En este primer ejemplo, la operación de copia masiva es sin transacciones. Se confirman todos los lotes copiados hasta el punto del error; el lote que contiene la clave duplicada se revierte y la operación de copia masiva se detiene antes de procesar el resto de los lotes.  
   
 > [!NOTE]  
-> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
+> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
 
 ```java
 import java.sql.Connection;
@@ -475,7 +476,7 @@ Puede pasar un objeto de conexión que tiene las transacciones habilitadas como 
 La siguiente aplicación es similar a **BulkCopyNonTransacted**, con una diferencia: en este ejemplo, la operación de copia masiva se incluye en una transacción externa más grande. Cuando se produce la infracción de la clave principal, toda la transacción se revierte y no se agrega ninguna fila a la tabla de destino.
 
 > [!NOTE]  
-> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
+> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](#table-setup). Este código se proporciona para mostrar la sintaxis para usar solo SQLServerBulkCopy. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar una instrucción Transact-SQL INSERT... Instrucción SELECT para copiar los datos.  
 
 ```java
 import java.sql.Connection;
@@ -570,7 +571,7 @@ public class BulkCopyExistingTransactions {
  La aplicación siguiente muestra cómo cargar datos mediante la clase SQLServerBulkCopy. En este ejemplo, se usa un archivo CSV para copiar datos exportados de la tabla Production.Product en la base de datos de AdventureWorks de SQL Server a una tabla similar en la base de datos.  
   
 > [!IMPORTANT]  
-> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](../../ssms/download-sql-server-management-studio-ssms.md) para obtenerlo.  
+> Este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [Configuración de tabla](#table-setup) para obtenerlo.  
   
 1. Abra **SQL Server Management Studio** y conéctese a SQL Server con la base de datos de AdventureWorks.  
   
@@ -582,7 +583,7 @@ public class BulkCopyExistingTransactions {
   
 5. Seleccione **Escribir una consulta para especificar los datos que se van a transferir** y haga clic en **Siguiente**.  Escriba la **instrucción SQL** SELECT ProductID, Name, ProductNumber FROM Production.Product y después haga clic en **Siguiente**.  
   
-6. Compruebe la configuración: puede dejar el delimitador de filas como {CR}{LF} y el delimitador de columnas como coma {,}.  Seleccione **Editar asignaciones** y compruebe que el **Tipo de datos** es correcto para cada columna (por ejemplo, entero para ProductID y cadena Unicode para las demás).  
+6. Comprobar la configuración: Puede dejar el delimitador de filas como {CR}{LF} y el delimitador de columna como coma {,}.  Seleccione **Editar asignaciones** y compruebe que el **Tipo de datos** es correcto para cada columna (por ejemplo, entero para ProductID y cadena Unicode para las demás).  
   
 7. Vaya directamente a **Finalizar** y ejecute la exportación.  
 
@@ -658,7 +659,7 @@ A partir de Microsoft JDBC Driver 6.0 para SQL Server, la copia masiva es co
   
 En función de las opciones de copia masiva y el tipo de cifrado de las tablas de origen y destino, el controlador JDBC puede descifrar los datos de forma transparente y después volver a cifrarlos, o bien puede enviar los datos cifrados tal como están. Por ejemplo, cuando se copian datos masivamente desde una columna cifrada a una columna sin cifrar, el controlador descifra de forma transparente los datos antes de enviarlos a SQL Server. De igual forma, cuando se copian datos masivamente desde una columna sin cifrar (o desde un archivo .csv) a una columna cifrada, el controlador descifra de forma transparente los datos antes de enviarlos a SQL Server. Si tanto el origen como el destino están cifrados, según la opción de copa masiva **allowEncryptedValueModifications**, el controlador enviaría los datos tal como están o los descifraría y los volvería a cifrar antes de enviarlos a SQL Server.  
   
-Para obtener más información, consulte la opción de copia masiva **allowEncryptedValueModifications** y [Usar Always Encrypted con el controlador JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+Para obtener más información, consulte la opción de copia masiva **allowEncryptedValueModifications** y [Usar Always Encrypted con el controlador JDBC](using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
 > Limitación de Microsoft JDBC Driver 6.0 para SQL Server, al copiar masivamente datos desde un archivo .csv a columnas cifradas:  
@@ -723,7 +724,7 @@ La clase SQLServerBulkCopy puede usarse para escribir datos solo en tablas de SQ
 | Valor booleano UseInternalTransaction           | Si se especifica, cada lote de la operación de copia masiva tendrá lugar en una transacción. Si SQLServerBulkCopy está usando una conexión existente (como se especifica en el constructor), se producirá una SQLServerException.  Si SQLServerBulkCopy crea una conexión dedicada, se habilitará una transacción.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False: no hay ninguna transacción                                               |
 | Int BatchSize                            | Número de filas en cada lote. Al final de cada lote, las filas del lote se envían al servidor.<br /><br /> Un lote estará completo cuando se hayan procesado las filas de BatchSize o no haya más filas para enviar al origen de datos de destino.  Si la instancia de SQLServerBulkCopy se ha declarado sin la opción UseInternalTransaction activa, las filas se envían a la vez a las filas de BatchSize del servidor pero no se realiza ninguna acción relacionada con la transacción. Si UseInternalTransaction está activa, cada lote de filas se inserta como una transacción independiente.                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0: indica que cada operación writeToServer es un lote único    |
 | Int BulkCopyTimeout                      | Cantidad de segundos para que se complete la operación antes de que se agote el tiempo de espera. Un valor de 0 indica sin límite; la copia masiva esperará indefinidamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 segundos.                                                          |
-| Valor booleano allowEncryptedValueModifications | Esta opción está disponible con Microsoft JDBC Driver 6.0 (o superior) para SQL Server.<br /><br /> Cuando se especifica, **allowEncryptedValueModifications** permite la copia masiva de datos cifrados entre tablas o bases de datos, sin descifrar los datos. Normalmente, una aplicación seleccionaría datos de las columnas cifradas de una tabla sin descifrar los datos (la aplicación se conectaría a la base de datos con la palabra clave de configuración de cifrado de columnas establecida en deshabilitada) y después usaría esta opción para insertar masivamente los datos, que siguen estando cifrados. Para obtener más información, vea [Uso de Always Encrypted con JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Tenga cuidado al especificar **allowEncryptedValueModifications**, ya que puede provocar daños en la base de datos dado que el controlador no comprueba si los datos están realmente cifrados, o si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino. |
+| Valor booleano allowEncryptedValueModifications | Esta opción está disponible con Microsoft JDBC Driver 6.0 (o superior) para SQL Server.<br /><br /> Cuando se especifica, **allowEncryptedValueModifications** permite la copia masiva de datos cifrados entre tablas o bases de datos, sin descifrar los datos. Normalmente, una aplicación seleccionaría datos de las columnas cifradas de una tabla sin descifrar los datos (la aplicación se conectaría a la base de datos con la palabra clave de configuración de cifrado de columnas establecida en deshabilitada) y después usaría esta opción para insertar masivamente los datos, que siguen estando cifrados. Para obtener más información, vea [Uso de Always Encrypted con JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Tenga cuidado al especificar **allowEncryptedValueModifications**, ya que puede provocar daños en la base de datos dado que el controlador no comprueba si los datos están realmente cifrados, o si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino. |
   
  Captadores y establecedores:  
   
@@ -794,6 +795,6 @@ Limitaciones y notas de implementación:
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | Establece el formato para analizar los datos Time desde el archivo como java.sql.Types.TIME_WITH_TIMEZONE.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | Establece el formato para analizar los datos Time desde el archivo como java.sql.Types.TIME_WITH_TIMEZONE.           |
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
-[Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Introducción al controlador JDBC](overview-of-the-jdbc-driver.md)  

@@ -1,6 +1,7 @@
 ---
-title: Usar el Conector de SQL Server con características de cifrado de SQL | Microsoft Docs
-ms.custom: ''
+title: Uso del cifrado del conector de SQL Server con Azure Key Vault
+description: Obtenga información sobre cómo usar el Conector de SQL Server con características de cifrado comunes como TDE, cifrado de copias de seguridad y cifrado de nivel de columna mediante Azure Key Vault.
+ms.custom: seo-lt-2019
 ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,17 +11,17 @@ helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929744"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725955"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Las actividades de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comunes con una clave asimétrica protegida por el Almacén de claves de Azure incluyen las siguientes tres áreas:  
   
 -   Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
@@ -40,7 +41,7 @@ Después de completar las partes I a IV del tema Setup Steps for Extensible Key 
  
 Necesitará crear una credencial y un inicio de sesión, además de una clave de cifrado de base de datos, que cifrará los datos y registros de la base de datos. Para cifrar una base de datos, es necesario tener el permiso **CONTROL** en la base de datos. En el siguiente gráfico se muestra la jerarquía de la clave de cifrado al usar el Almacén de claves de Azure.  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
+ ![Jerarquía&#45;de&#45;claves&#45;de&#45;EKM&#45;con&#45;AKV](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **Crear una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el motor de base de datos que se usará para TDE**  
   
@@ -52,12 +53,14 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
         - Si usa la **versión global de Azure**, reemplace el argumento `IDENTITY` por el nombre de Azure Key Vault de la parte II.
         - Si usa **nube pública de Azure** (por ejemplo, Azure Government, Azure China, 21Vianet o Azure Germany), reemplace el argumento `IDENTITY` por el URI de almacén que se devolvió en la parte II, paso 3. No incluya "https://" en el URI de almacén.   
   
-    -   Reemplace la primera parte del argumento `SECRET` con el **id. de cliente** de Azure de la parte I. En este ejemplo, el **id. de cliente** es `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Reemplace la primera parte del argumento `SECRET` con el **id. de cliente** de Azure de la parte I. En este ejemplo, el **id. de cliente** es `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  Debe quitar los guiones de **Client ID**.  
   
-    -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte I. En este ejemplo, el **secreto de cliente** de la parte I es `Replace-With-AAD-Client-Secret`. La cadena final para el argumento `SECRET` será una secuencia larga de letras y números, *sin guiones*.  
+    -   Complete la segunda parte del argumento `SECRET` con el **secreto de cliente** de la parte 1. En este ejemplo, el **secreto de cliente** de la parte 1 es `ReplaceWithAADClientSecret`. 
+  
+    -   La cadena final del argumento SECRET es una secuencia larga de letras y números, sin guiones.
   
     ```sql  
     USE master;  
@@ -66,7 +69,7 @@ Necesitará crear una credencial y un inicio de sesión, además de una clave de
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   
@@ -195,7 +198,7 @@ El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] necesita las credenciales al a
   
 3.  **Copia de seguridad de la base de datos**  
   
-     Haga una copia de seguridad de la base de datos especificando el cifrado con la clave asimétrica almacenada en Key Vault.
+     Realice una copia de seguridad de la base de datos especificando el cifrado con la clave asimétrica guardada en el almacén de claves.
      
      En el ejemplo siguiente, tenga en cuenta que si la base de datos ya se ha cifrado con TDE y la clave asimétrica `CONTOSO_KEY_BACKUP` es diferente de la clave asimétrica de TDE, la copia de seguridad se cifrará tanto por la clave asimétrica TDE como por `CONTOSO_KEY_BACKUP`. La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de destino necesitará ambas claves para descifrar la copia de seguridad.
   
@@ -280,8 +283,8 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
   
 ## <a name="see-also"></a>Consulte también  
  [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
- [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Administración extensible de claves con Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Mantenimiento y solución de problemas del conector de SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

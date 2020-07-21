@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81f487db3622de86fdf041acab5acee93c68d1ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85656450"
 ---
 # <a name="sql-server-buffer-manager-object"></a>Buffer Manager (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **Buffer Manager** proporciona contadores para supervisar cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza:  
   
 -   La memoria para almacenar las páginas de datos.  
@@ -39,13 +39,13 @@ ms.locfileid: "67986934"
 -   La frecuencia con que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita leer los datos del disco. En comparación con otras operaciones, como el acceso a memoria, la E/S física consume mucho tiempo. La reducción de la E/S física puede mejorar el rendimiento de las consultas.  
   
 ## <a name="buffer-manager-performance-objects"></a>Objetos de rendimiento del administrador de búfer  
- En esta tabla se describen los objetos de rendimiento del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** .  
+ En esta tabla se describen los objetos de rendimiento del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]administrador de búfer**de**.  
   
 |Contadores de SQLServer:Buffer Manager|Descripción|  
 |----------------------------------------|-----------------|  
 |**Páginas del escritor en segundo plano/s**|Número de páginas vaciadas para aplicar la configuración de intervalo de recuperación.| 
 |**Frecuencia de aciertos de caché del búfer**|Indica el porcentaje de páginas encontradas en la memoria caché del búfer sin necesidad de leer el disco. Esta frecuencia es el número total de aciertos de caché dividido por el número total de búsquedas en los últimos miles de accesos a la página. Tras un largo período, la proporción varía muy poco. Como la lectura de la caché es mucho más económica que la lectura del disco, es conveniente que esta frecuencia sea alta. Normalmente, puede aumentar la frecuencia de aciertos de caché del búfer si aumenta la cantidad de memoria disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o utiliza la característica de extensión del grupo de búferes.|  
-|**Base de aciertos de caché del búfer**|Exclusivamente para uso interno.|
+|**Base de aciertos de caché del búfer**|Solo para uso interno.|
 |**Páginas de punto de comprobación/seg.**|Indica el número de páginas limpiadas en el disco por segundo por los puntos de comprobación u otras operaciones que requieren la limpieza de todas las páginas desfasadas.|  
 |**Páginas de base de datos**|Indica el número de páginas en el grupo de búferes con contenido de la base de datos.|  
 |**Páginas asignadas de extensión**|Número total de páginas no disponibles en el archivo de la extensión del grupo de búferes.|  

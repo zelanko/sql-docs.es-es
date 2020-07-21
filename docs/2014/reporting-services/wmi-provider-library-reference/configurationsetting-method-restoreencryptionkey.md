@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098125"
 ---
-# <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Vuelve a aplicar la clave de cifrado especificada a la base de datos del servidor de informes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -60,7 +60,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si ya existe una entrada para el servidor de informes en la base de datos del servidor de informes, se elimina. Después, se crea la entrada con la clave de cifrado especificada y la clave pública del servidor de informes.  
   
  El método es más efectivo cuando se llama después del método [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) , que borra la lista de claves de cifrado.  
@@ -68,7 +68,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

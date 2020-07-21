@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff51a836-7cff-4ddc-a92a-893f86e637cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 174691a92836a2548e1fa5776872801cd1225afc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0812887130fd0df3e3aae6f2aa88e992dd09ceb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059919"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>Propiedad ProtocolDisplayName (clase ServerNetworkProtocol)
   Obtiene el nombre para mostrar del protocolo de red del servidor.  
@@ -38,14 +37,14 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase ServerNetworkProtocol](servernetworkprotocol-class.md) objeto que representa el protocolo de red utilizado por la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Objeto de la [clase ServerNetworkProtocol](servernetworkprotocol-class.md) que representa el protocolo de red utilizado por la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre para mostrar del protocolo de red del servidor.  
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

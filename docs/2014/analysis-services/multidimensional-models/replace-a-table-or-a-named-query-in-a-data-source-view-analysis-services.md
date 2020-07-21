@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b625081a4b7cafaab537e91f9c2730578d37efab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545760"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services)
   En el Diseñador de vistas del origen de datos, puede reemplazar una tabla, una vista o una consulta con nombre de una vista del origen de datos (DSV) por una vista o tabla diferente del mismo origen de datos o de otro, o por una consulta con nombre definida en la DSV. Cuando se reemplaza una tabla, los demás objetos de la base de datos o proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contienen referencias a dicha tabla continúan haciendo referencia a ella, ya que el identificador de objeto de la tabla no cambia en la DSV. Se conservan todas las relaciones que siguen siendo pertinentes (basadas en la coincidencia de nombre y tipo de columna). Por el contrario, si elimina y luego agrega una tabla, las referencias y relaciones se pierden y se tienen que volver a crear.  
@@ -33,7 +32,7 @@ ms.locfileid: "66073127"
 > [!IMPORTANT]  
 >  Si cambia el nombre de una tabla en un origen de datos, siga los pasos para reemplazar una tabla y especifique la tabla cuyo nombre acaba de cambiar como el origen de la tabla correspondiente en la DSV antes de actualizar una DSV. Si se completa el proceso de reemplazo y cambio de nombre de la tabla, se conservan la tabla, las referencias de la tabla y las relaciones de la tabla en la DSV. En caso contrario, cuando actualice la DSV, se interpretará que se ha eliminado la tabla a la que se ha cambiado el nombre en el origen de datos. Para obtener más información, vea [Actualizar el esquema de una vista del origen de datos &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_nq"></a> Reemplazar una tabla por una consulta con nombre  
+##  <a name="replace-a-table-with-a-named-query"></a><a name="bkmk_nq"></a> Reemplazar una tabla por una consulta con nombre  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto o conéctese a la base de datos que contiene la vista del origen de datos en la que desea reemplazar una tabla o una consulta con nombre.  
   
@@ -59,11 +58,11 @@ ms.locfileid: "66073127"
   
     2.  Seleccione la tabla por la que desea reemplazar la tabla o consulta con nombre.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Guarde la vista del origen de datos modificada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)  
   
   

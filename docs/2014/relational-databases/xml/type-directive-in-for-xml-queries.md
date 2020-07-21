@@ -10,18 +10,17 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059439"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad con la [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) le permite solicitar el resultado de una consulta FOR XML se devuelven como `xml` tipo de datos mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a un `xml` variable de tipo, o escribir [consultas FOR XML anidadas](use-nested-for-xml-queries.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la compatibilidad con [xml &#40;&#41;de Transact-SQL](/sql/t-sql/xml/xml-transact-sql) permite solicitar opcionalmente que el resultado de una consulta for XML se devuelva como `xml` tipo de datos especificando la Directiva Type. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una expresión XQuery en ella, asignar el resultado a una `xml` variable de tipo o escribir [consultas for XML anidadas](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve al cliente datos de instancia de tipo XML como resultado de distintas construcciones de servidor, como por ejemplo consultas FOR XML que utilizan la directiva TYPE o en las que se utiliza el tipo de datos `xml` para devolver valores de datos de instancia XML procedentes de columnas de tablas SQL y parámetros de salida. En el código de las aplicaciones cliente, el proveedor ADO.NET solicita que se envíe esta información de tipo de datos XML con una codificación binaria desde el servidor. Sin embargo, si utiliza FOR XML sin la directiva TYPE, se devolverán los datos XML en forma de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML. Tenga en cuenta que la cláusula FOR XML de nivel superior sin la directiva TYPE no puede utilizarse con cursores.  
@@ -50,7 +49,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>Asignar resultados de consultas FOR XML a una variable de tipo xml  
- En el ejemplo siguiente, se asigna un resultado de FOR XML a una variable de tipo `xml`, `@x`. La consulta recupera información de contacto, como el `BusinessEntityID`, `FirstName`, `LastName`, adicional y números de teléfono desde el `AdditionalContactInfo` columna de `xml``TYPE`. Puesto que la cláusula `FOR XML` especifica la directiva `TYPE`, se devuelve XML en forma de tipo `xml` y se asigna a una variable.  
+ En el ejemplo siguiente, se asigna un resultado de FOR XML a una variable de tipo `xml`, `@x`. La consulta recupera información de contacto, como `BusinessEntityID` , `FirstName` , `LastName` y números de teléfono adicionales, de la `AdditionalContactInfo` columna de `xml``TYPE` . Puesto que la cláusula `FOR XML` especifica la directiva `TYPE`, se devuelve XML en forma de tipo `xml` y se asigna a una variable.  
   
 ```  
 USE AdventureWorks2012;  
@@ -89,7 +88,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  La consulta `SELECT ... FOR XML` interna devuelve un resultado de tipo `xml` al que la instrucción `SELECT` externa aplica el método `query()` al tipo `xml`. Observe la directiva `TYPE` especificada.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   
@@ -147,7 +146,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   
   

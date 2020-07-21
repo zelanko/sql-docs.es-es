@@ -15,10 +15,10 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65577776"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
@@ -29,7 +29,7 @@ ms.locfileid: "65577776"
 ## <a name="how-to-enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes  
  Para habilitar Mis informes con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia del servidor de informes y abra la página **Propiedades del servidor** . Después, en la pestaña **General** , seleccione la opción **Habilitar una carpeta Mis informes para cada usuario** .  
   
- La definición de roles empleada para Mis informes determinará las acciones admitidas en el área de trabajo Mis informes. Por ejemplo, si el rol Mis informes excluye "Crear informes vinculados", los usuarios no podrán crear informes vinculados en las carpetas Mis informes. Para más información, vea [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md).  
+ La definición de roles empleada para Mis informes determinará las acciones admitidas en el área de trabajo Mis informes. Por ejemplo, si el rol Mis informes excluye "Crear informes vinculados", los usuarios no podrán crear informes vinculados en las carpetas Mis informes. Para obtener más información, vea [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md).  
   
  Para desactivar Mis informes, desactive la opción **Habilitar una carpeta Mis informes para cada usuario**. Al desactivar la característica Mis informes, se quitan todas las indicaciones visibles para los usuarios de la carpeta Mis informes. Las carpetas que ofrecen almacenamiento real (es decir, las subcarpetas de Carpetas de usuarios) deben eliminarse manualmente tras deshabilitar la característica.  
   

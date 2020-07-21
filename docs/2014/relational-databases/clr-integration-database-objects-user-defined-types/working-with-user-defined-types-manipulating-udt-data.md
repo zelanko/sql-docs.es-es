@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea8d8ef411c8766ebecb98ca1c9eeaa1be11f156
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954415"
 ---
 # <a name="manipulating-udt-data"></a>Manipular datos UDT
   [!INCLUDE[tsql](../../includes/tsql-md.md)] no proporciona ninguna sintaxis especializada para las instrucciones INSERT, UPDATE o DELETE al modificar datos en columnas de tipo definido por el usuario (UDT). Para convertir los tipos de datos nativos al tipo UDT, se utilizan las funciones CAST o CONVERT de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Insertar datos en una columna UDT  
- La siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones insertan tres filas de datos de ejemplo en el **puntos** tabla. El **punto** X formado por tipo de datos de valores enteros e Y que se exponen como propiedades del UDT. Se deben usar funciones CAST o CONVERT para convertir la coma valores X e Y para el **punto** tipo. Las dos primeras instrucciones use la función CONVERT para convertir un valor de cadena para la **punto** tipo y la tercera instrucción utiliza la función CAST:  
+ Las [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones siguientes insertan tres filas de datos de ejemplo en la tabla **Points** . El tipo de datos **Point** consta de valores enteros X e y que se exponen como propiedades del UDT. Debe utilizar la función CAST o CONVERT para convertir los valores X e y delimitados por comas en el tipo de **punto** . Las dos primeras instrucciones utilizan la función CONVERT para convertir un valor de cadena en el tipo de **punto** y la tercera instrucción usa la función CAST:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,7 +54,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Para ver la salida mostrada en un formato legible, llame a la `ToString` método de la **punto** UDT, que convierte el valor en su representación de cadena.  
+ Para ver la salida mostrada en un formato legible, llame al `ToString` método del UDT **Point** , que convierte el valor en su representación de cadena.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -82,7 +81,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- El **punto** UDT expone sus coordenadas X e Y como propiedades, que, a continuación, puede seleccionar individualmente. La siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] selecciona las coordenadas X e Y por separado:  
+ El UDT **Point** expone sus coordenadas X e y como propiedades, que puede seleccionar individualmente. La siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] selecciona las coordenadas X e Y por separado:  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -129,7 +128,7 @@ SELECT @PointValue.ToString() AS PointValue;
  La diferencia entre el uso de SELECT y SET para la asignación de variable es que SELECT permite asignar varias variables en una instrucción SELECT, mientras que la sintaxis de SET exige que cada asignación de variable tenga su propia instrucción SET.  
   
 ## <a name="comparing-data"></a>Comparar datos  
- Puede utilizar operadores de comparación para comparar valores del UDT si ha establecido la propiedad `IsByteOrdered` en `true` al definir la clase. Para obtener más información, consulte [creación de un tipo definido por el usuario](creating-user-defined-types.md).  
+ Puede utilizar operadores de comparación para comparar valores del UDT si ha establecido la propiedad `IsByteOrdered` en `true` al definir la clase. Para obtener más información, vea [crear un tipo definido por el usuario](creating-user-defined-types.md).  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -156,7 +155,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Invocar métodos del UDT  
- También puede invocar métodos que se definen en el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El **punto** clase contiene tres métodos `Distance`, `DistanceFrom`, y `DistanceFromXY`. Para las listas de código que se definen estos tres métodos, consulte [codificación de tipos](creating-user-defined-types-coding.md).  
+ También puede invocar métodos que se definen en el UDT en [!INCLUDE[tsql](../../includes/tsql-md.md)]. La clase **Point** contiene tres métodos, `Distance` , `DistanceFrom` y `DistanceFromXY` . Para ver las listas de código que definen estos tres métodos, vea [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
  La siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] llama al método `PointValue.Distance`:  
   
@@ -177,7 +176,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- El `DistanceFrom` método toma un argumento de **punto** tipo de datos y muestra la distancia desde el punto especificado hasta PointValue:  
+ El `DistanceFrom` método toma un argumento de tipo de datos **Point** y muestra la distancia desde el punto especificado hasta PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -263,7 +262,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con tipos definidos por el usuario en SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

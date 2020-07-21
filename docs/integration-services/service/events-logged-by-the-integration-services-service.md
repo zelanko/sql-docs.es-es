@@ -15,10 +15,10 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296927"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados por el servicio Integration Services
@@ -35,28 +35,28 @@ ms.locfileid: "71296927"
 ## <a name="service-status-messages"></a>Mensajes de estado personalizados
  Cuando selecciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para la instalación, el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se instala y se inicia, y el tipo de inicio del servicio se establece como automático.  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Id. de evento|Nombre simbólico|Texto|Notas|  
 |--------------|-------------------|----------|-----------|  
-|256|DTS_MSG_SERVER_STARTING|Iniciando el Servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|El servicio está a punto de iniciarse.|  
-|257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] Se ha iniciado el servicio  de.|El servicio se ha iniciado.|  
-|260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%nError:%1|El servicio no se ha podido iniciar. Esta imposibilidad de iniciarse puede deberse a una instalación dañada o a una cuenta de servicio inapropiada.|  
-|258|DTS_MSG_SERVER_STOPPING|Deteniendo el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%n%nDetener todos los paquetes en ejecución al salir:%1|El servicio se está deteniendo, y si se configura el servicio para ello, detendrá todos los paquetes en ejecución. Puede establecer un valor de verdadero o falso en el archivo de configuración que determina si el servicio detiene los paquetes en ejecución cuando el propio servicio se detiene. El mensaje para este evento incluye el valor de esta configuración.|  
-|259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] .%nVersión de servidor %1|El servicio se ha detenido.|  
+|256|DTS_MSG_SERVER_STARTING|Iniciando el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)].|El servicio está a punto de iniciarse.|  
+|257|DTS_MSG_SERVER_STARTED|Se ha iniciado el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)].|El servicio se ha iniciado.|  
+|260|DTS_MSG_SERVER_START_FAILED|El servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] no se ha podido iniciar.%nError: %1|El servicio no se ha podido iniciar. Esta imposibilidad de iniciarse puede deberse a una instalación dañada o a una cuenta de servicio inapropiada.|  
+|258|DTS_MSG_SERVER_STOPPING|Deteniendo el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)].%n%nDetener todos los paquetes en ejecución al salir: %1|El servicio se está deteniendo, y si se configura el servicio para ello, detendrá todos los paquetes en ejecución. Puede establecer un valor de verdadero o falso en el archivo de configuración que determina si el servicio detiene los paquetes en ejecución cuando el propio servicio se detiene. El mensaje para este evento incluye el valor de esta configuración.|  
+|259|DTS_MSG_SERVER_STOPPED|El servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] se ha detenido.%nVersión de servidor %1|El servicio se ha detenido.|  
   
 ## <a name="settings-file-messages"></a>Mensajes de archivo de configuración  
  La configuración para el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se almacena en un archivo XML que se puede modificar. Para más información, vea [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Id. de evento|Nombre simbólico|Texto|Notas|  
 |--------------|-------------------|----------|-----------|  
-|274|DTS_MSG_SERVER_MISSING_CONFIG_REG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] : %nLa configuración del Registro que especifica el archivo de configuración no existe. %nIntentando cargar el archivo de configuración.|La entrada del Registro que contiene la ruta de acceso del archivo de configuración no existe o esta vacía.|  
-|272|DTS_MSG_SERVER_MISSING_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] no existe.%nCargando la configuración predeterminada.|El archivo de configuración no existe en la ubicación especificada.|  
-|273|DTS_MSG_SERVER_BAD_CONFIG|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] es incorrecto.%nError al leer el archivo de configuración: %1%n%nCargando el servidor con la configuración predeterminada.|El archivo de configuración no se puede leer o no es válido. Este error puede ser el resultado de un error de sintaxis XML en el archivo.|  
+|274|DTS_MSG_SERVER_MISSING_CONFIG_REG|Servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)]: %nLa configuración del Registro que especifica el archivo de configuración no existe. %nIntentando cargar el archivo de configuración.|La entrada del Registro que contiene la ruta de acceso del archivo de configuración no existe o esta vacía.|  
+|272|DTS_MSG_SERVER_MISSING_CONFIG|El archivo de configuración de servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] no existe.%nCargando la configuración predeterminada.|El archivo de configuración no existe en la ubicación especificada.|  
+|273|DTS_MSG_SERVER_BAD_CONFIG|El archivo de configuración de servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] es incorrecto.%nError al leer el archivo de configuración: %1%n%nCargando el servidor con la configuración predeterminada.|El archivo de configuración no se puede leer o no es válido. Este error puede ser el resultado de un error de sintaxis XML en el archivo.|  
   
 ## <a name="other-messages"></a>Otros mensajes  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Id. de evento|Nombre simbólico|Texto|Notas|  
 |--------------|-------------------|----------|-----------|  
-|336|DTS_MSG_SERVER_STOPPING_PACKAGE|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] deteniendo el paquete en ejecución.%nId. de instancia del paquete: %1%nId. del paquete: %2%nNombre del paquete: %3%nDescripción del paquete: %4%nPaquete iniciado por: %5.|El servicio está intentando detener un paquete en ejecución. Puede supervisar y detener los paquetes en ejecución en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener información sobre cómo administrar paquetes en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vea [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).|  
+|336|DTS_MSG_SERVER_STOPPING_PACKAGE|Servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)]: deteniendo el paquete en ejecución.%nId. de instancia del paquete: %1%nId. del paquete: %2%nNombre del paquete: %3%nDescripción del paquete: %4%nPaquete|El servicio está intentando detener un paquete en ejecución. Puede supervisar y detener los paquetes en ejecución en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener información sobre cómo administrar paquetes en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vea [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).|  
 
 ## <a name="view-events"></a>Ver eventos
   Hay dos herramientas en las que puede ver los eventos para el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -95,7 +95,7 @@ ms.locfileid: "71296927"
   
 7.  Elija si desea ver los datos del evento en bytes o en palabras.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En el menú **Archivo** , haga clic en **Salir** para salir del cuadro de diálogo **Visor de eventos** .  
  

@@ -1,6 +1,7 @@
 ---
-title: Cuadros de diálogo de replicación de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Cuadros de diálogo de replicación de SQL Server Management Studio
+description: Referencia para los artículos que describen los distintos cuadros de diálogo para la replicación dentro de SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5f932a5729b039436f952aeab8ad78f8d220d22e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 537040f98aeb99b580b0109e0e472571b05907ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783110"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Cuadros de diálogo de replicación de SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Esta sección incluye información acerca de diversos cuadros de diálogo de replicación disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Esta sección incluye información sobre diversos cuadros de diálogo de replicación disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Seguridad del Agente de instantáneas](../../relational-databases/replication/snapshot-agent-security.md)  
   

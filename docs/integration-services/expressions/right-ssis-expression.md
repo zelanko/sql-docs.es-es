@@ -13,10 +13,10 @@ ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1dcd15de93893b34a6842110767b2242fbc3a146
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297411"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (expresión de SSIS)
@@ -43,7 +43,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si *integer_expression* es mayor que la longitud de *character_expression*, la función devuelve *character_expression*.  
   
  Si *integer_expression* es cero, la función devuelve una cadena de longitud cero.  

@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos para cubos o modelos (Analysis Services) | Microsoft Docs
+title: Conceder permisos de cubo o de modelo (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546717"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Otorgar permisos para cubos o modelos (Analysis Services)
   Un cubo o modelo tabular es el objeto de consulta principal en un modelo de datos de Analysis Services. Cuando se conecte a datos multidimensionales o tabulares desde Excel para una exploración de datos ad hoc, los usuarios por lo general comienzan seleccionando un cubo o modelo tabular específico como la estructura de datos que subyace tras el objeto de informe dinámico. En este tema, se describe cómo otorgar los permisos necesarios para tener acceso a cubos o datos tabulares.  
@@ -34,9 +33,9 @@ ms.locfileid: "66075025"
  Para preservar las definiciones de roles respecto a implementaciones de soluciones sucesivas, uno de los procedimientos recomendados es definir roles en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] como parte integrante del modelo y, después, que un administrador de bases de datos asigne pertenencias a roles en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tras haber publicado la base de datos. Pero también puede usar cualquiera de las herramientas para ambas tareas. Para que este ejercicio sea más sencillo, usaremos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para las definiciones de rol y para la pertenencia.  
   
 > [!NOTE]  
->  Solamente los administradores de servidor o de base de datos con permisos de Control total pueden implementar cubos a partir de archivos de origen en un servidor o crear roles y asignar miembros. Consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [conceder permisos de base de datos &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) para obtener más información acerca de estos permisos niveles.  
+>  Solamente los administradores de servidor o de base de datos con permisos de Control total pueden implementar cubos a partir de archivos de origen en un servidor o crear roles y asignar miembros. Vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [conceder permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) para obtener más información sobre estos niveles de permisos.  
   
-#### <a name="step-1-create-the-role"></a>Paso 1: Crear el rol  
+#### <a name="step-1-create-the-role"></a>Paso 1: Creación del role  
   
 1.  En SSMS, conéctese a Analysis Services. Vea [Conectarse desde aplicaciones cliente &#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md) si necesita ayuda con este paso.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66075025"
   
 5.  Proceda con el siguiente paso después de especificar un nombre y una descripción opcional.  
   
-#### <a name="step-2-assign-membership"></a>Paso 2: Asignar la pertenencia  
+#### <a name="step-2-assign-membership"></a>Paso 2: Asignación de la pertenencia  
   
 1.  En el panel **Pertenencia** , haga clic en **Agregar** para especificar las cuentas de usuario o grupo de Windows que van a tener acceso al cubo con este rol. Analysis Services solo es compatible con identidades de seguridad de Windows. Tenga en cuenta que en este paso no va a crear inicios de sesión de base de datos. En Analysis Services, los usuarios se conectan a través de cuentas Windows.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "66075025"
   
      Tenga en cuenta que va a omitir el panel Origen de datos. La mayoría de los consumidores habituales de datos de Analysis Services no necesitan permisos para el objeto de origen de datos. Para más información sobre estos niveles de permisos, vea [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Paso 3: Establecer permisos de cubo  
+#### <a name="step-3-set-cube-permissions"></a>Paso 3: Establecimiento de los permisos de los cubos  
   
-1.  En el **cubos** panel, seleccione un cubo y, a continuación, haga clic en `Read` o **lectura/escritura** acceso.  
+1.  En el panel **cubos** , seleccione un cubo y, a continuación, haga clic en `Read` acceso de lectura y **escritura** .  
   
-     `Read` acceso es suficiente para la mayoría de las operaciones. **Lectura y escritura** solo se usa para reescribir y no para procesar. Para obtener más información acerca de esta capacidad, vea [Set Partition Writeback](set-partition-writeback.md) .  
+     `Read`el acceso es suficiente para la mayoría de las operaciones. **Lectura y escritura** solo se usa para reescribir y no para procesar. Para obtener más información acerca de esta capacidad, vea [Set Partition Writeback](set-partition-writeback.md) .  
   
      Tenga en cuenta que puede seleccionar varios cubos, así como otros objetos disponibles en el cuadro de diálogo Crear rol. Cuando se otorgan permisos a un cubo, se está autorizando el acceso a dimensiones y perspectivas asociadas con el cubo. No es necesario agregar manualmente objetos que ya estén representados en el cubo.  
   
@@ -79,13 +78,13 @@ ms.locfileid: "66075025"
     > [!NOTE]  
     >  Si es administrador de Analysis Services, los permisos de administrador se combinarán con los roles que tienen menos permisos, de forma que resultará más complicado probar los permisos de rol de forma aislada. Para hacer más sencilla la labor de las pruebas, se recomienda abrir una segunda instancia de SSMS con la cuenta que se ha asignado al rol que está probando.  
   
-2.  Mantenga presionada la tecla Mayúsculas y haga clic con el botón derecho en el acceso directo **Excel** para acceder a la opción **Ejecutar como otro usuario** . Especifique una de las cuentas de usuario o grupo de Windows con pertenencia a este rol.  
+2.  Mantenga pulsada la tecla MAYÚS y haga clic con el botón derecho en el acceso directo **Excel** para tener acceso a la opción **Ejecutar como otro usuario** . Especifique una de las cuentas de usuario o grupo de Windows con pertenencia a este rol.  
   
 3.  Cuando se abra Excel, use la pestaña Datos para conectarse a Analysis Services. Dado que está ejecutando Excel como un usuario diferente de Windows, la opción **Utilizar autenticación de Windows** es el tipo de credencial correcto que se debe usar cuando se hacen pruebas a los roles. Vea [Conectarse desde aplicaciones cliente &#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md) si necesita ayuda con este paso.  
   
-     Si se producen errores en la conexión, compruebe la configuración del puerto para Analysis Services y compruebe que el servidor acepta las conexiones remotas. Para obtener información acerca de la configuración del puerto, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+     Si se producen errores en la conexión, compruebe la configuración del puerto para Analysis Services y compruebe que el servidor acepta las conexiones remotas. Consulte [configurar Firewall de Windows para permitir el acceso Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) para la configuración de puertos.  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Paso 5: Las asignaciones y la definición de función de script  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Paso 5: Definición y asignaciones del rol con el script  
   
 1.  El último paso es generar un script que contenga la definición del rol que acaba de crear.  
   
@@ -93,16 +92,16 @@ ms.locfileid: "66075025"
   
 2.  En SSMS, vaya a la carpeta **Roles** y haga clic con el botón derecho en un rol existente.  
   
-3.  Seleccione **Incluir rol como** | **CREATE TO** | **archivo**.  
+3.  Seleccione **rol de script como**  |  **crear para**  |  **archivo**.  
   
 4.  Guarde el archivo con una extensión de archivo .xmla. Para probar el script, elimine el rol actual, abra el archivo en SSMS y presione F5 para ejecutar el script.  
   
 ## <a name="next-step"></a>Paso siguiente  
  Puede refinar los permisos de los cubos para restringir el acceso a celdas o datos de dimensiones. Para más información, vea [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) y [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Metodologías de autenticación admitidas por Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Nuevo o editar el registro del servidor (pestaña General) (SSIS) | Microsoft Docs
+title: Nuevo o editar el registro de servidor (pestaña general) (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b586b736-344b-4e42-83ee-96f66ad433a5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ddb7ae175cb7a95e777806e9fdd3d469a55f4fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930478"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General de SSIS)
   Utilice esta pestaña para especificar las opciones cuando se registra [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -26,7 +25,7 @@ ms.locfileid: "62774177"
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
- Cuando registra un servidor en Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y corresponde al tipo de servidor que se muestra en Servidores registrados. Para registrar un tipo diferente de servidor, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de iniciar el registro de un nuevo servidor.  
+ Cuando registra un servidor en Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y corresponde al tipo de servidor que se muestra en Servidores registrados. Para registrar un tipo diferente de servidor, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de iniciar el registro de un nuevo servidor.  
   
  **Nombre del servidor**  
  Seleccione el servidor con el que se va a establecer conexión. De forma predeterminada, aparecerá el servidor con el que se realizó la última conexión.  
@@ -34,7 +33,7 @@ ms.locfileid: "62774177"
  **Autenticación**  
  El modo de autenticación de Windows permite al usuario conectarse mediante una cuenta de usuario de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Esta opción no está disponible en esta versión.  
   
  **Contraseña**  

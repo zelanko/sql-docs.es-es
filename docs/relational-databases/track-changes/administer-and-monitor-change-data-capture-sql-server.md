@@ -1,5 +1,5 @@
 ---
-title: Administrar y supervisar la captura de datos modificados (SQL Server) | Microsoft Docs
+title: Administrar y supervisar la captura de datos modificados
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,19 +13,20 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909927"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889176"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
   
-## <a name="Capture"></a> Trabajo de captura
+## <a name="capture-job"></a><a name="Capture"></a> Trabajo de captura
 
 El trabajo de captura se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_capture_job`. Este procedimiento almacenado empieza extrayendo los valores configurados para `maxtrans`, `maxscans`, `continuous` y `pollinginterval` para el trabajo de captura desde msdb.dbo.cdc_jobs. A continuación, estos valores configurados se pasan como parámetros al procedimiento almacenado `sp_cdc_scan`. Esto se utiliza para llamar a `sp_replcmds` con el fin de realizar el examen del registro.  
   
@@ -64,19 +65,19 @@ En el modo monoestable, el trabajo de captura solicita que `sp_cdc_scan` realice
 En el modo continuo, el trabajo de captura solicita que `sp_cdc_scan` se ejecute continuamente. Esto permite que el procedimiento almacenado administre su propio bucle de espera proporcionando no solo los valores de los parámetros maxtrans y maxscans sino también un valor para el número de segundos entre el procesamiento de registros (el intervalo de sondeo). Al ejecutarse en este modo, el trabajo de captura sigue estando activo, ejecutando un `WAITFOR` entre el examen de registros.  
   
 > [!NOTE]  
-> Cuando el valor del intervalo de sondeo es mayor que 0, el mismo límite superior para el rendimiento del trabajo monoestable repetido se aplica también al funcionamiento del trabajo en el modo continuo. Es decir, (`maxtrans` \* `maxscans`) dividido entre un intervalo de sondeo distinto de cero impondrá un límite superior en el número medio de transacciones que puede procesar el trabajo de captura.  
+> Cuando el valor del intervalo de sondeo es mayor que 0, el mismo límite superior para el rendimiento del trabajo monoestable repetido se aplica también al funcionamiento del trabajo en el modo continuo. Es decir, (`maxtrans` \* `maxscans`) dividido por un intervalo de sondeo distinto de cero impone un límite superior en el número medio de transacciones que puede procesar el trabajo de captura.  
   
 ### <a name="capture-job-customization"></a>Personalización del trabajo de captura
 
 En el trabajo de captura se puede aplicar una lógica adicional para determinar si un examen nuevo comienza inmediatamente o si se impone una suspensión antes de iniciarse en lugar de basarse en un intervalo de sondeo fijo. La opción podría basarse simplemente en la hora del día, exigiendo quizás suspensiones muy largas durante las horas de actividad máxima, e incluso el paso a un intervalo de sondeo igual a 0 al final del día, cuando es importante completar el procesamiento de los días y preparar las ejecuciones nocturnas. El progreso del proceso de captura también se puede supervisar para determinar el momento en que todas las transacciones confirmadas a media noche han sido examinadas y depositadas en las tablas de cambios. Esto permite que el trabajo de captura finalice y se reinicie de la forma programada diariamente. Al reemplazar el paso de trabajo entregado llamando a `sp_cdc_scan` con una llamada a un contenedor escrito por el usuario para `sp_cdc_scan`, se puede obtener un comportamiento muy personalizado con poco esfuerzo adicional.  
 
-## <a name="Cleanup"></a> Trabajo de limpieza
+## <a name="cleanup-job"></a><a name="Cleanup"></a> Trabajo de limpieza
 
 En esta sección se proporciona información sobre cómo funciona el trabajo de limpieza de la captura de datos modificados.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Estructura del trabajo de limpieza
 
-La captura de datos modificados usa una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.
+La captura de datos modificados usa una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.
   
 El trabajo de limpieza se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_cleanup_job`. Este procedimiento almacenado comienza extrayendo los valores configurados para la retención y el umbral del trabajo de limpieza de `msdb.dbo.cdc_jobs`. El valor de retención se utiliza para calcular una nueva marca de límite inferior para las tablas de cambios. El número especificado de minutos se resta del valor de `tran_end_time` máximo en la tabla `cdc.lsn_time_mapping` para obtener la nueva marca de límite inferior expresada como un valor datetime. A continuación, la tabla CDC.lsn_time_mapping se utiliza para convertir este valor datetime en un valor de `lsn` correspondiente. Si varias entradas comparten el mismo tiempo de confirmación en la tabla, el `lsn` que corresponde a la entrada que tiene el valor de `lsn` más bajo se elige como nueva marca de límite inferior. Este valor de `lsn` se pasa al procedimiento `sp_cdc_cleanup_change_tables` para quitar las entradas de las tablas de cambios de base de datos.  
   
@@ -89,7 +90,7 @@ Cuando se realiza una limpieza, la marca de límite inferior para todas las inst
 
  La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Como los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de en el tiempo, se puede usar cualquier cantidad de estrategias para determinar el valor `lsn` más bajo que se debe conservar en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de cambios de todas las bases de datos, también se puede llamar al procedimiento de limpieza subyacente para limpiar en el nivel de la instancia de captura.  
 
-## <a name="Monitor"></a> Supervisar el proceso de captura de datos modificados
+## <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Supervisar el proceso de captura de datos modificados
 
 Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos vistas de administración dinámica para ayudar a supervisar la captura de datos modificados: [sys.dm_cdc_log_scan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md) y [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).  
   
@@ -175,7 +176,7 @@ El recopilador de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
   
 4. En el almacenamiento de datos que configuró en el paso 1, busque la tabla custom_snapshots.cdc_log_scan_data. En esta tabla se proporciona una instantánea histórica de los datos de las sesiones de examen del registro. Estos datos se pueden utilizar para analizar la latencia, el rendimiento y otras medidas de rendimiento a lo largo del tiempo.  
 
-## <a name="ScriptUpgrade"></a> Modo de actualización de script
+## <a name="script-upgrade-mode"></a><a name="ScriptUpgrade"></a> Modo de actualización de script
 
 Cuando se aplican Service Pack o actualizaciones acumulativas a una instancia, durante el reinicio, la instancia puede entrar en modo de actualización de script. En este modo, SQL Server puede ejecutar un paso para analizar y actualizar las tablas de CDC internas, lo cual puede dar lugar a que se vuelvan a crear objetos, como los índices de las tablas de captura. Según la cantidad de datos implicados, este paso puede ser lento o generar un uso elevado del registro de transacciones para las bases de datos CDC habilitadas.
 

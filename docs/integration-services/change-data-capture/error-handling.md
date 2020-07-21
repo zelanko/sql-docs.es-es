@@ -11,10 +11,10 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a4aebf354f999b26be59efc2f3c25a205dd3d9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298790"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
@@ -38,13 +38,13 @@ ms.locfileid: "71298790"
   
  En la tabla siguiente se describen los distintos códigos de estado que la instancia CDC de Oracle puede notificar en su tabla de estado.  
   
-|Estado|Código de estado de active|Código de estado de error|Descripción|Subestado|  
+|Status|Código de estado de active|Código de estado de error|Descripción|Subestado|  
 |------------|------------------------|-----------------------|-----------------|---------------|  
 |ABORTED|0|1|La instancia CDC de Oracle no se está ejecutando. El subestado ABORTED indica que la instancia CDC de Oracle estaba ACTIVE y se ha detenido inesperadamente.|La instancia principal del servicio CDC de Oracle establece el subestado ABORTED cuando detecta que la instancia CDC de Oracle no se está ejecutando mientras su estado es ACTIVE.|  
-|error|0|1|La instancia CDC de Oracle no se está ejecutando. El estado ERROR indica que la instancia CDC estaba ACTIVE pero encontró un error no recuperable y se deshabilitó a sí misma.|MISCONFIGURED: se detectó un error de configuración irrecuperable.<br /><br /> PASSWORD-REQUIRED: no hay ninguna contraseña establecida en Change Data Capture Designer para Oracle de Attunity o la contraseña configurada no es válida. Esto puede deberse a un cambio en la contraseña de clave asimétrica del servicio.|  
+|ERROR|0|1|La instancia CDC de Oracle no se está ejecutando. El estado ERROR indica que la instancia CDC estaba ACTIVE pero encontró un error no recuperable y se deshabilitó a sí misma.|MISCONFIGURED: se detectó un error de configuración irrecuperable.<br /><br /> PASSWORD-REQUIRED: no hay ninguna contraseña establecida en el Diseñador de captura de datos modificados para Oracle de Attunity o la contraseña configurada no es válida. Esto puede deberse a un cambio en la contraseña de clave asimétrica del servicio.|  
 |RUNNING|1|0|La instancia CDC se está ejecutando y está procesando registros de cambios.|IDLE: todos los registros de cambios se han procesado y almacenado en las tablas de control de destino ( **_CT**). No hay ninguna transacción activa con las tablas de control.<br /><br /> PROCESSING: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de control ( **_CT**).|  
 |STOPPED|0|0|La instancia CDC no se está ejecutando.|El subestado STOP indica que la instancia CDC estaba ACTIVE y se detuvo correctamente.|  
-|SUSPENDED|1|1|La instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error recuperable.|DISCONNECTED: no se puede establecer la conexión con la base de datos Oracle de origen. El procesamiento se reanudará una vez que se restaure la conexión.<br /><br /> STORAGE: el almacenamiento está lleno. El procesamiento se reanudará cuando haya disponible más almacenamiento. En algunos casos, este estado puede no aparecer porque la tabla de estado no se puede actualizar.<br /><br /> LOGGER: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal.|  
+|SUSPENDED|1|1|La instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error recuperable.|DISCONNECTED: no se puede establecer la conexión con la base de datos de Oracle de origen. El procesamiento se reanudará una vez que se restaure la conexión.<br /><br /> STORAGE: el almacenamiento está lleno. El procesamiento se reanudará cuando haya disponible más almacenamiento. En algunos casos, este estado puede no aparecer porque la tabla de estado no se puede actualizar.<br /><br /> LOGGER: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal.|  
 |DATAERROR|x|x|Este código de estado solo se usa para la tabla **xdbcdc_trace** . No aparece en la tabla **xdbcdc_state** . Los registros de seguimiento que tienen este estado indican un problema con una entrada de registro de Oracle. La entrada de registro no válida se almacena en la columna **data** como un BLOB.|BADRECORD: la entrada de registro adjunta no se pudo analizar.<br /><br /> CONVERT-ERROR: los datos de algunas columnas no se pudieron convertir a las columnas de destino de la tabla de captura. Este estado puede aparecer solo si la configuración especifica que los errores de conversión deben producir registros de seguimiento.|  
   
  Puesto que el estado del servicio CDC de Oracle se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede haber casos en los que el valor de estado de la base de datos no refleje el estado actual del servicio. El escenario más común es cuando el servicio pierde su conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se puede reanudar (por cualquier motivo). En ese caso, el estado almacenado en **cdc.xdbcdc_state** se queda obsoleto. Si la marca de tiempo (UTC) de la última actualización tiene más de un minuto de antigüedad, probablemente el estado esté obsoleto. En este caso, use el Visor de eventos de Windows para buscar información adicional sobre el estado del servicio.  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e8e8139427c7f2ad92eea856be8da542f65e344
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63071828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050274"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
-  Los procedimientos almacenados compilados de forma nativa no implementan el área expuesta completa de programación y consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Hay ciertas construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se pueden usar en los procedimientos almacenados compilados de forma nativa. Para obtener más información, consulte [construcciones admitidas en Natively Compiled Stored Procedures](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
+  Los procedimientos almacenados compilados de forma nativa no implementan el área expuesta completa de programación y consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Hay ciertas construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se pueden usar en los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [construcciones admitidas en procedimientos almacenados compilados de forma nativa](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
  Sin embargo, hay varias características de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se admiten solo para los procedimientos almacenados compilados de forma nativa:  
   
@@ -55,21 +54,21 @@ go
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Los procedimientos almacenados compilados de forma nativa se debe enlazar al esquema de objetos al que hacen referencia. Esto significa que no se puede anular la tabla a la que hace referencia el procedimiento. Las tablas que se hace referencia en el procedimiento deben incluir su nombre de esquema y los caracteres comodín (\*) no se permiten en las consultas. `SCHEMABINDING` solo se admite para los procedimientos almacenados compilados de forma nativa en esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|`EXECUTE AS`|Los procedimientos almacenados compilados de forma nativa no admiten `EXECUTE AS CALLER`, que es el contexto de ejecución predeterminado. Por tanto, se deberá especificar el contexto de ejecución. Las opciones `EXECUTE AS OWNER`, `EXECUTE AS` *usuario*, y `EXECUTE AS SELF` son compatibles.|  
-|`BEGIN ATOMIC`|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> `TRANSACTION ISOLATION LEVEL` Consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) para los niveles de aislamiento admitidos.<br /><br /> `LANGUAGE` El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
+|`SCHEMABINDING`|Los procedimientos almacenados compilados de forma nativa se debe enlazar al esquema de objetos al que hacen referencia. Esto significa que no se puede anular la tabla a la que hace referencia el procedimiento. Las tablas a las que se hace referencia en el procedimiento deben incluir el nombre de esquema y \* no se permiten caracteres comodín () en las consultas. `SCHEMABINDING` solo se admite para los procedimientos almacenados compilados de forma nativa en esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`EXECUTE AS`|Los procedimientos almacenados compilados de forma nativa no admiten `EXECUTE AS CALLER`, que es el contexto de ejecución predeterminado. Por tanto, se deberá especificar el contexto de ejecución. `EXECUTE AS OWNER`Se admiten las opciones, el `EXECUTE AS` *usuario*y `EXECUTE AS SELF` .|  
+|`BEGIN ATOMIC`|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Vea [niveles](../../database-engine/transaction-isolation-levels.md) de aislamiento de transacción para los niveles de aislamiento admitidos.<br /><br /> `LANGUAGE`. El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
   
- En relación con `EXECUTE AS` y los inicios de sesión de Windows, puede aparecer un error debido a la suplantación realizada con `EXECUTE AS`. Si una cuenta de usuario usa la autenticación de Windows, debe haber plena confianza entre la cuenta de servicio utilizada para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el dominio del inicio de sesión de Windows. Si no hay plena confianza, se devuelve el siguiente mensaje de error al crear compilado de forma nativa de procedimiento almacenado: Mensaje 15404, no se pudo obtener información acerca de Windows NT grupo o usuario 'nombreDeUsuario', código de error 0 x 5.  
+ En relación con `EXECUTE AS` y los inicios de sesión de Windows, puede aparecer un error debido a la suplantación realizada con `EXECUTE AS`. Si una cuenta de usuario usa la autenticación de Windows, debe haber plena confianza entre la cuenta de servicio utilizada para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el dominio del inicio de sesión de Windows. Si no hay plena confianza, se devuelve el siguiente mensaje de error al crear un procedimiento almacenado compilado de forma nativa: mensaje 15404, no se pudo obtener información acerca del grupo o usuario de Windows NT ' nombredeusuario '; código de error 0X5.  
   
- Para resolver este error, use uno de los siguientes:  
+ Para resolver este error, utilice uno de los siguientes:  
   
 -   Use una cuenta del mismo dominio que el usuario de Windows para el servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es utilizar una cuenta de equipo, como el servicio de red o sistema Local, la máquina debe ser de confianza del dominio que contiene el usuario de Windows.  
+-   Si [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza una cuenta de equipo, como servicio de red o sistema local, el equipo debe ser de confianza para el dominio que contiene el usuario de Windows.  
   
 -   Use la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- También puede ver el error 15517 al crear un procedimiento almacenado compilado de forma nativa. Para obtener más información, consulte [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md).  
+ También puede ver el error 15517 al crear un procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md).  
   
 ## <a name="updating-a-natively-compiled-stored-procedure"></a>Actualizar un procedimiento almacenado compilado de forma nativa  
  No se permite la realización de operaciones de modificación en procedimientos almacenados compilados de forma nativa. Una manera de modificar un procedimiento almacenado compilado de forma nativa es quitar y volver a crear el procedimiento almacenado:  
@@ -109,7 +108,7 @@ go
   
  La ventaja de este método es que la aplicación no se queda sin conexión. Sin embargo, es necesario más trabajo para mantener las referencias y asegurarse de que siempre señalan a la última versión del procedimiento almacenado.  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Consulte también  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

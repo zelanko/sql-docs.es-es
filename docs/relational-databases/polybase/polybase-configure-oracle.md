@@ -1,7 +1,8 @@
 ---
-title: Configurar PolyBase para acceder a datos externos en Oracle | Microsoft Docs
+title: 'Acceso a datos externos: Oracle: PolyBase'
 description: En este artículo se muestra cómo usar PolyBase con el fin de crear un origen de datos externos para tener acceso a datos de Oracle.
-ms.date: 04/23/2019
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -9,20 +10,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 4c2b212ea77d9cf9b58dbb7019c19dddd3c507e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 322c858a9b20548662136e395c0db1c76171f5fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740952"
 ---
-# <a name="configure-polybase-to-access-external-data-in-oracle"></a>Configurar PolyBase para acceder a datos externos en Oracle
+# <a name="configure-polybase-to-access-external-data-in-oracled"></a>Configurar PolyBase para acceder a datos externos en Oracle
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Oracle.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md).
 

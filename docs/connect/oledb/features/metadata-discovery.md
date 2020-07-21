@@ -1,6 +1,6 @@
 ---
 title: Detección de metadatos | Microsoft Docs
-description: Detección de metadatos en OLE DB controlador para SQL Server
+description: Detección de metadatos en OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67989060"
 ---
 # <a name="metadata-discovery"></a>Detección de metadatos
@@ -28,18 +28,18 @@ ms.locfileid: "67989060"
   
  Si desarrolla una aplicación mediante el controlador OLE DB para SQL Server pero se conecta a una versión de servidor anterior a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], la funcionalidad de detección de metadatos se corresponderá con la versión del servidor.  
   
-## <a name="remarks"></a>Notas   
+## <a name="remarks"></a>Observaciones   
  Las funciones miembro de OLE DB siguientes se han perfeccionado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] para proporcionar una detección de metadatos mejorada:  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (consulte [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) para obtener más información)  
+-   ICommandWithParameters::GetParameterInfo (consulte [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) para más información)  
   
  También percibirá una mejora del rendimiento si especifica el formato de metadatos mediante IBCPSession::BCPSetBulkMode.  
   
- La detección de metadatos mejorada en OLE DB controlador para SQL Server es posible gracias a la adición de dos procedimientos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]almacenados en:  
+ La detección de metadatos mejorada en OLE DB Driver for SQL Server es posible debido a la adición de dos procedimientos almacenados de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
   
 -   sp_describe_first_result_set  
   

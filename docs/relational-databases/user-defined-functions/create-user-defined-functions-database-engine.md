@@ -19,20 +19,20 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722881"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Crear funciones definidas por el usuario (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo crear una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Las funciones definidas por el usuario no se pueden utilizar para realizar acciones que modifican el estado de la base de datos.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "68138752"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Permisos 
+###  <a name="permissions"></a><a name="Security"></a> Permisos 
 
 Se requiere el permiso `CREATE FUNCTION` en la base de datos y el permiso `ALTER` en el esquema en el que se va a crear la función. Si la función especifica un tipo definido por el usuario, requiere el permiso `EXECUTE` en el tipo.  
   
-##  <a name="Scalar"></a> Funciones escalares  
+##  <a name="scalar-functions"></a><a name="Scalar"></a> Funciones escalares  
  En el ejemplo siguiente se crea una **función escalar (UDF escalar)** de varias instrucciones en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La función toma un valor de entrada, `ProductID`, y devuelve un valor de devolución único, la cantidad agregada del producto especificado en el inventario.  
   
 ```sql  
@@ -104,7 +104,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > [!NOTE]  
 > Para obtener más información y ejemplos de funciones escalares, vea [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
-##  <a name="TVF"></a> Funciones con valores de tabla  
+##  <a name="table-valued-functions"></a><a name="TVF"></a> Funciones con valores de tabla  
 En el ejemplo siguiente se crea una **función insertada con valores de tabla(TVF)** en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La función toma un parámetro de entrada, Id. de cliente (almacén), y devuelve las columnas `ProductID`, `Name`, y el agregado de las ventas del año hasta la fecha como `YTD Total` para cada producto vendido en el almacén.  
   
 ```sql  
@@ -185,7 +185,7 @@ FROM dbo.ufn_FindReports(1);
 > [!NOTE]  
 > Para obtener más información y ejemplos de funciones insertadas con valores de tabla (TVF insertadas) y funciones con valores de tabla de varias instrucciones (MSTVF), vea [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md). 
 
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 Si una función definida por el usuario (UDF) no se crea con la cláusula `SCHEMABINDING`, los cambios que se realicen en los objetos subyacentes pueden afectar a la definición de la función y generar resultados inesperados al invocarla. Recomendamos implementar uno de los siguientes métodos para garantizar que la función no queda sin actualizar como consecuencia de los cambios realizados en sus objetos subyacentes:  
   
 -   Especifique la cláusula `WITH SCHEMABINDING` cuando vaya a crear la UDF. Así se asegura de que no se pueden modificar los objetos a los que se hace referencia en la definición de la función a menos que también se modifique la función.  

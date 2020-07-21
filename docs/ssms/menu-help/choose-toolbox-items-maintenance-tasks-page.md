@@ -1,6 +1,6 @@
 ---
-title: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento) | Microsoft Docs
-ms.custom: ''
+title: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffbc5973d32de6d7fdf8a880ebc2bdf758ff2e73
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265298"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257736"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de infor
 **Nombre**  
 Muestra el nombre de los componentes disponibles. Delante del nombre aparece una casilla. Si está activada, indica que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha encontrado una entrada para el componente en el Registro del equipo. El componente ya se encuentra en la pestaña **Cuadro de herramientas** activa o se agregará a ella cuando haga clic en **Aceptar**. Si está desactivada, indica que el componente no se encuentra en el **Cuadro de herramientas**o que se quitará del **Cuadro de herramientas** cuando haga clic en **Aceptar**.  
   
-**Ruta de acceso**  
+**Path**  
 Muestra la ruta de acceso completa al componente. Para identificar los componentes predeterminados enviados con el producto, ordene esta columna y localice los almacenados en la ruta de instalación de [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 **Modificado por última vez**  
@@ -41,7 +41,7 @@ Muestra la fecha de la última modificación del componente.
 Haga clic en un nombre para mostrar los atributos del componente en los cuadros **Idioma** y **Versión** , además del icono.  
   
 ## <a name="options"></a>Opciones  
-**Idioma**  
+**Lenguaje**  
 Idioma del componente.  
   
 **Versión**  

@@ -13,20 +13,20 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6999d409c81f19e0a8ae3903fe220e0c75235c8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678688"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Un catálogo de texto completo es un contenedor lógico para un grupo de índices de texto completo. Tendrá que crear un catálogo de texto completo antes de poder crear un índice de texto completo.
 
 Un catálogo de texto completo es un objeto virtual y no pertenece a ningún grupo de archivos.
   
-##  <a name="creating"></a> Crear un catálogo de texto completo  
+##  <a name="create-a-full-text-catalog"></a><a name="creating"></a> Crear un catálogo de texto completo  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Crear un catálogo de texto completo con Transact-SQL
 Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Por ejemplo:
@@ -45,15 +45,15 @@ GO
   
 3.  Seleccione **Nuevo catálogo de texto completo**.  
   
-4.  En el cuadro de diálogo **Nuevo catálogo de texto completo**, especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](/sql/database-engine/new-full-text-catalog-general-page).  
+4.  En el cuadro de diálogo **Nuevo catálogo de texto completo** , especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](/sql/database-engine/new-full-text-catalog-general-page).  
   
     > [!NOTE]  
     >  Los identificadores de los catálogos de texto completo comienzan por 00005 y se incrementan en uno con cada nuevo catálogo que se crea.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-##  <a name="props"></a> Obtener las propiedades de un catálogo de texto completo  
-Use la función de [!INCLUDE[tsql](../../includes/tsql-md.md)] **FULLTEXTCATALOGPROPERTY** para obtener el valor de diversas propiedades relacionadas con los catálogos de texto completo. Para obtener más información, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
+##  <a name="get-the-properties-of-a-full-text-catalog"></a><a name="props"></a> Obtener las propiedades de un catálogo de texto completo  
+Use la función de [!INCLUDE[tsql](../../includes/tsql-md.md)]**FULLTEXTCATALOGPROPERTY** para obtener el valor de diversas propiedades relacionadas con los catálogos de texto completo. Para obtener más información, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
 Por ejemplo, ejecute la siguiente consulta para obtener el recuento de índices en el catálogo de texto completo `Catalog1`.
 
@@ -77,7 +77,7 @@ En la siguiente tabla se muestran las propiedades relacionadas con los catálogo
 |**PopulateStatus**|Estado del rellenado.<br /><br /> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**UniqueKeyCount**|Número de claves únicas en el catálogo de texto completo.| 
 
-##  <a name="rebuildone"></a> Regenerar un catálogo de texto completo  
+##  <a name="rebuild-a-full-text-catalog"></a><a name="rebuildone"></a> Regenerar un catálogo de texto completo  
 
 Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 ../../t-sql/statements/alter-fulltext-catalog-transact-sql.md) o realice las siguientes tareas en SQL Server Management Studio (SSMS).
@@ -92,7 +92,7 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar**.  
    
-##  <a name="rebuildall"></a> Recompilar todos los catálogos de texto completo para una base de datos  
+##  <a name="rebuild-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a> Recompilar todos los catálogos de texto completo para una base de datos  
 
 1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene los catálogos de texto completo que quiere volver a generar.  
   
@@ -106,7 +106,7 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
   
   
-##  <a name="removing"></a> Quitar un catálogo de texto completo de una base de datos  
+##  <a name="remove-a-full-text-catalog-from-a-database"></a><a name="removing"></a> Quitar un catálogo de texto completo de una base de datos  
 
 Ejecute la instrucción de Transact-SQL [DROP FULLTEXT CATALOG](
 ../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) o realice las siguientes acciones en SQL Server Management Studio (SSMS).

@@ -13,22 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - MemberTypeEnum enumeration [ADO MD]
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e05d8307f4dca4479b407db7364ab4d893d684e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949407"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765146"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
-Especifica la configuración para el [tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md) propiedad de un [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto.  
+Especifica el valor para la propiedad [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) de un objeto [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adMemberAll**|4|Indica que el **miembro** representa todos los miembros del nivel de objeto.|  
-|**adMemberFormula**|3|Indica que el **miembro** objeto se calcula utilizando una expresión de la fórmula.|  
-|**adMemberMeasure**|2|Indica que el **miembro** objeto pertenece a la dimensión de medidas y representa un atributo cuantitativo.|  
-|**adMemberRegular**|1|Predeterminado: Indica que el **miembro** objeto representa una instancia de una entidad de negocio.|  
+|**adMemberAll**|4|Indica que el objeto **miembro** representa todos los miembros del nivel.|  
+|**adMemberFormula**|3|Indica que el objeto **miembro** se calcula mediante una expresión de fórmula.|  
+|**adMemberMeasure**|2|Indica que el objeto **miembro** pertenece a la dimensión Measures y representa un atributo cuantitativo.|  
+|**adMemberRegular**|1|Predeterminada. Indica que el objeto **miembro** representa una instancia de una entidad comercial.|  
 |**adMemberUnknown**|0|No se puede determinar el tipo del miembro.|

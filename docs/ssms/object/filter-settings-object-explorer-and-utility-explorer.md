@@ -1,6 +1,6 @@
 ---
-title: Configuración de filtro (Explorador de objetos y Explorador de Utilidad) | Microsoft Docs
-ms.custom: ''
+title: Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3a5cfecc4bf111e16da6451b56637abe9214c65
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe88e33261171b0c1584c89561e9fac2f081b816
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264108"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257185"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Seleccione la forma en que el filtro va a aplicar el valor a la propiedad. Exist
   
     El filtro muestra los elementos en los que la propiedad y el valor coinciden plenamente.  
   
--   **Contiene**  
+-   **Contains**  
   
     El filtro muestra los elementos en los que la propiedad contiene el valor. La propiedad puede contener otro texto.  
   
@@ -67,7 +67,7 @@ Seleccione la forma en que el filtro va a aplicar el valor a la propiedad. Exist
   
     Disponible para fechas; este filtro muestra los elementos cuya fecha es anterior o posterior a dos fechas proporcionadas. Seleccione **No entre** y salga de la columna **Operador** para agregar otra fila a fin de escribir la segunda fecha.  
   
-**Value**  
+**Valor**  
 Escriba el valor que va a compararse con la propiedad. Para seleccionar una fecha, haga clic en la flecha abajo para que aparezca un calendario donde seleccionarla.  
   
 **Borrar filtro**  

@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5aea14840dd92c0fa6fb571081044e2d84e0f27b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018714"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
     
@@ -69,7 +68,7 @@ ms.locfileid: "63200323"
   
 8.  Llame a [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md) con un *HandleType* de SQL_HANDLE_STMT para liberar el identificador de instrucción.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de ejecución de consultas &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

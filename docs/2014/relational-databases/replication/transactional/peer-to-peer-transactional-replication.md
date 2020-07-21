@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 8c781435bdf8458b7f2714141d659750b0f31055
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793924"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998047"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La replicación punto a punto proporciona una solución escalada y de alta disponibilidad manteniendo copias de datos en varias instancias de servidor, también denominadas *nodos*. Generada en la base de replicación transaccional, la replicación punto a punto propaga transaccionalmente los cambios coherentes en tiempo casi real. Esto permite a las aplicaciones que requieran una escalada de las operaciones de lectura distribuir las lecturas de los clientes en varios nodos. Dado que los datos se mantienen en los nodos en tiempo casi real, la replicación punto a punto proporciona redundancia de datos, lo que aumenta la disponibilidad de los mismos.  
@@ -49,7 +48,7 @@ ms.locfileid: "67793924"
  En los siguientes escenarios se ilustran los usos típicos de la replicación punto a punto.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topología en la que participan dos bases de datos  
- ![Replicación punto a punto: dos nodos](../media/repl-multinode-01.gif "Replicación punto a punto: dos nodos")  
+ ![Replicación punto a punto, dos nodos](../media/repl-multinode-01.gif "Replicación punto a punto, dos nodos")  
   
  En las ilustraciones anteriores se muestran dos bases de datos participantes, con tráfico de usuario dirigido a las bases de datos a través de un servidor de aplicaciones. Esta configuración se puede usar en varias aplicaciones, desde sitios web hasta aplicaciones de grupos de trabajo, y proporciona las siguientes ventajas:  
   
@@ -66,7 +65,7 @@ ms.locfileid: "67793924"
  La replicación punto a punto puede admitir este método, pero el ejemplo de actualización centralizada de la derecha también se utiliza frecuentemente con la replicación transaccional estándar.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topología en la que participan tres o más bases de datos  
- ![Replicación punto a punto en ubicaciones dispersas](../media/repl-multinode-02.gif "Replicación punto a punto en ubicaciones dispersas")  
+ ![Replicación punto a punto a ubicaciones dispersas](../media/repl-multinode-02.gif "Replicación punto a punto a ubicaciones dispersas")  
   
  En la ilustración anterior se muestran tres bases de datos participantes que proporcionan datos para una organización de soporte de software internacional, con oficinas en Los Ángeles, Londres y Taipei. Los ingenieros de soporte de cada oficina reciben llamadas de clientes e incluyen y actualizan la información de las llamadas de los clientes. Las zonas horarias de las tres oficinas tienen una diferencia de ocho horas, por lo que no se superponen en la jornada laboral. Cuando la oficina de Taipei cierra, se abre la oficina de Londres. Si hay una llamada en curso cuando se cierra una oficina, la llamada se transfiere a un representante de la siguiente oficina abierta.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "67793924"
   
 -   Alta disponibilidad en caso de error o para permitir el mantenimiento en una o más de las bases de datos participantes.  
   
-     ![Replicación punto a punto: tres y cuatro nodos](../media/repl-multinode-04.gif "Replicación punto a punto: tres y cuatro nodos")  
+     ![Replicación punto a punto, tres y cuatro nodos](../media/repl-multinode-04.gif "Replicación punto a punto, tres y cuatro nodos")  
   
  La ilustración anterior muestra la adición de un nodo a la topología de tres nodos. Se podría agregar un nodo en este escenario por las razones siguientes:  
   
@@ -137,19 +136,19 @@ ms.locfileid: "67793924"
   
 -   El parámetro **-SubscriptionStreams** del Agente de distribución y el parámetro **-MaxCmdsInTran**del Agente de registro del LOG.  
   
--   Las propiedades del artículo  **\@destination_owner** y  **\@destination_table**.  
+-   Las propiedades del artículo ** \@ destination_owner** y ** \@ destination_table**.  
 
 -   La replicación transaccional punto a punto no admite la creación de una suscripción transaccional unidireccional para una publicación punto a punto.
   
  Las siguientes propiedades requieren consideraciones especiales:  
   
--   La propiedad de publicación  **\@allow_initialize_from_backup** requiere un valor de `true`.  
+-   La propiedad de publicación ** \@ allow_initialize_from_backup** requiere un valor de `true` .  
   
--   La propiedad de artículo  **\@replicate_ddl** requiere un valor de `true`;  **\@identityrangemanagementoption** requiere un valor de `manual`; y  **\@estado** requiere que la opción **24** se establece.  
+-   La propiedad del artículo ** \@ replicate_ddl** requiere un valor de `true` ; ** \@ identityrangemanagementoption** requiere un valor de `manual` ; and ** \@ status** requiere que se establezca la opción **24** .  
   
--   El valor de las propiedades de artículo  **\@ins_cmd**,  **\@del_cmd**, y  **\@upd_cmd** no puede establecerse en `SQL`.  
+-   El valor de las propiedades del artículo ** \@ ins_cmd**, ** \@ del_cmd**y ** \@ upd_cmd** no se puede establecer en `SQL` .  
   
--   La propiedad de suscripción  **\@sync_type** requiere un valor de `none` o `automatic`.  
+-   La propiedad de suscripción ** \@ sync_type** requiere un valor de `none` o `automatic` .  
   
 ### <a name="maintenance-considerations"></a>Consideraciones de mantenimiento  
  Las acciones siguientes exigen que se detenga el sistema. Esto significa que hay que detener la actividad de las tablas publicadas en todos los nodos y asegurarse de que cada nodo haya recibido todos los cambios de los demás nodos.  
@@ -168,9 +167,9 @@ ms.locfileid: "67793924"
   
 -   No puede reinicializar las suscripciones en una topología punto a punto. Si tiene que asegurarse de que un nodo tiene una copia nueva de los datos, restaure una copia de seguridad en el nodo.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar una topología punto a punto &#40;la programación de la replicación con Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Estrategias para realizar copias de seguridad y restaurar la replicación transaccional y de instantáneas](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Tipos de publicaciones para la replicación transaccional](transactional-replication.md)  
   
   

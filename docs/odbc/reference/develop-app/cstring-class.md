@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CString class [ODBC]
 ms.assetid: 18630642-76fa-43c4-a154-3f0969ec9b50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90c92476337bb1059b7272830e33094edc58dbd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0f941061bf1bc7671d4744d309770fc92c95dd6e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002071"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301654"
 ---
 # <a name="cstring-class"></a>Clase CString
-Dado que los objetos de la **CString** clase en Microsoft® Visual C++® están firmados y argumentos de cadena en las funciones ODBC no están firmados, aplicaciones que pasan **CString** objetos a las funciones ODBC sin conversión de ellos recibirá advertencias del compilador.
+Dado que los objetos de la clase **CString** en Microsoft® Visual C++® están firmados y los argumentos de cadena en funciones ODBC no están firmados, las aplicaciones que pasan objetos **CSTRING** a funciones ODBC sin convertirlos recibirán advertencias del compilador.

@@ -1,6 +1,6 @@
 ---
 title: ROW_NUMBER (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para la función ROW_NUMBER. Esta función enumera los resultados de un conjunto de resultados.
 ms.date: 09/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed067b55bf96a50f612370ce2d3caa56f9be728b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095379"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003698"
 ---
-# <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Enumera los resultados de un conjunto de resultados. Concretamente, devuelve el número secuencial de una fila dentro de una partición de un conjunto de resultados, empezando por 1 para la primera fila de cada partición. 
   
@@ -43,19 +43,19 @@ Enumera los resultados de un conjunto de resultados. Concretamente, devuelve el 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ROW_NUMBER ( )   
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  PARTITION BY *value_expression*  
- Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función ROW_NUMBER. *value_expression* especifica la columna a partir de la cual se particiona el conjunto de resultados. Si no se especifica `PARTITION BY`, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. Para más información, vea [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) (OVER &#40;cláusula de Transact-SQL&#41;.  
+ Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función ROW_NUMBER. *value_expression* especifica la columna a partir de la cual se particiona el conjunto de resultados. Si no se especifica `PARTITION BY`, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  *order_by_clause*  
  La cláusula `ORDER BY` determina la secuencia en la que se asigna a las filas el `ROW_NUMBER` único correspondiente en una partición especificada. Es obligatorio. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
 ## <a name="general-remarks"></a>Notas generales  
@@ -85,9 +85,9 @@ ORDER BY name ASC;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|NAME    |recovery_model_desc |  
+|name    |recovery_model_desc |  
 |-----------  |------------ |  
-|maestra |SIMPLE |
+|maestro |SIMPLE |
 |model |FULL |
 |msdb |SIMPLE |
 |tempdb |SIMPLE |
@@ -104,9 +104,9 @@ WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
-|1 |maestra |SIMPLE |
+|1 |maestro |SIMPLE |
 |2 |model |FULL |
 |3 |msdb |SIMPLE |
 |4 |tempdb |SIMPLE |
@@ -123,10 +123,10 @@ FROM sys.databases WHERE database_id < 5;
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
    
-|Row# |NAME    |recovery_model_desc |  
+|Row# |name    |recovery_model_desc |  
 |------- |-----------  |------------ |  
 |1 |model |FULL |
-|1 |maestra |SIMPLE |
+|1 |maestro |SIMPLE |
 |2 |msdb |SIMPLE |
 |3 |tempdb |SIMPLE |
 
@@ -182,7 +182,7 @@ FROM OrderedOrders
 WHERE RowNumber BETWEEN 50 AND 60;  
 ```  
   
-### <a name="d-using-rownumber-with-partition"></a>D. Usar ROW_NUMBER() con PARTITION  
+### <a name="d-using-row_number-with-partition"></a>D. Usar ROW_NUMBER() con PARTITION  
  En el ejemplo siguiente se usa el argumento `PARTITION BY` para crear particiones del conjunto de resultados de la consulta por la columna `TerritoryName`. La cláusula `ORDER BY` especificada en la cláusula `OVER` ordena las filas de cada partición por la columna `SalesYTD`. La cláusula `ORDER BY` de la instrucción `SELECT` ordena todo el conjunto de resultados de la consulta por `TerritoryName`.  
   
 ```sql  
@@ -218,7 +218,7 @@ Shu        Ito                  Southwest            2458535.61    2
 Jae        Pak                  United Kingdom       4116871.22    1  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-returning-the-row-number-for-salespeople"></a>E. Devolver el número de fila de vendedor  
  En este ejemplo se devuelve `ROW_NUMBER` para los representantes de ventas en función de su cuota de ventas asignada.  
@@ -249,7 +249,7 @@ RowNumber  FirstName  LastName            SalesQuota
 4          Jae        Pak                 10,514,000.00  
 ```
 
-### <a name="f-using-rownumber-with-partition"></a>F. Usar ROW_NUMBER() con PARTITION  
+### <a name="f-using-row_number-with-partition"></a>F. Usar ROW_NUMBER() con PARTITION  
  El ejemplo siguiente muestra cómo utilizar la función `ROW_NUMBER` con el argumento `PARTITION BY`. Esto provoca que la función `ROW_NUMBER` enumere las filas de cada partición.  
   
 ```sql  

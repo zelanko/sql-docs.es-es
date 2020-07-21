@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades de acción (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la acción (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110078"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
@@ -47,10 +47,10 @@ ms.locfileid: "66110078"
  **Habilitar como una acción**  
  Seleccione una opción para indicar la acción que tendrá lugar cuando el usuario haga clic en el elemento.  
   
- **Ninguno**  
+ **None**  
  Elija esta opción para indicar que el elemento no tiene ninguna acción.  
   
- **Ir a informe**  
+ **Ir al informe**  
  Elija esta opción para crear un vínculo a un informe detallado que se encuentra en un servidor de informes. Al seleccionar **Ir a informe**, aparecen las siguientes opciones adicionales.  
   
  **Especificar un informe**  
@@ -58,14 +58,14 @@ ms.locfileid: "66110078"
   
  En el caso de un informe publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa sin la extensión del nombre de archivo. Si el informe se encuentra en la misma carpeta que el actual, use solo el nombre del informe. Si el informe está en una carpeta diferente del mismo servidor de informes, use una ruta de acceso relativa o una ruta de acceso completa. Una ruta de acceso relativa comienza en la carpeta actual y sube por la jerarquía de carpetas, por ejemplo, ../Carpeta2/Informe1. Una ruta de acceso completa se inicia en /, la carpeta Inicio. Por ejemplo, /Informes/Informe1.  
   
- En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http:// *\<Nombredeservidorsharepoint > /\<sitio >* /Documents/Report1.rdl. No se admiten las rutas de acceso relativas.  
+ En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http://*\<SharePointservername>/\<site>*/Documents/Report1.RDL. No se admiten las rutas de acceso relativas.  
   
  Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) en la [la documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
- **Use estos parámetros para ejecutar el informe**  
+ **Usar estos parámetros para ejecutar el informe**  
  Agregue una lista de parámetros para pasárselos al informe detallado. Los nombres de los parámetros deben coincidir con los de los parámetros definidos para el informe de destino. Use los botones **Agregar** y **Eliminar** para agregar y quitar parámetros, y las flechas hacia arriba y hacia abajo para ordenar la lista de parámetros.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un nuevo parámetro para pasárselo al informe detallado.  
   
  **Eliminar**  
@@ -77,14 +77,14 @@ ms.locfileid: "66110078"
  **Flecha abajo**  
  Mueve el parámetro hacia abajo en la lista.  
   
- **Name**  
+ **Nombre**  
  Escriba el nombre de un parámetro definido en el informe detallado.  
   
  **Valor**  
  Escriba o seleccione el valor que debe pasarse al parámetro especificado para el informe detallado. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
  **Omitir**  
- Seleccione esta opción para impedir que el parámetro se ejecute. De forma predeterminada, esta casilla está desactivada. Para activar la casilla, haga clic en el botón **Expresión** (*fx*) y escriba **True** o cree una expresión. La casilla se activa al hacer clic en **Aceptar** en el cuadro de diálogo **Expresión** .  
+ Seleccione esta opción para impedir que el parámetro se ejecute. De forma predeterminada, esta casilla está desactivada. Para activar la casilla, haga clic en el botón **Expresión** (*fx*) y escriba **True** o cree una expresión. La casilla se activa al hacer clic en **Aceptar** en el cuadro de diálogo **expresión** .  
   
  **Ir a marcador**  
  Elija esta opción para definir un vínculo a un marcador en el informe actual. Al seleccionar **Ir a marcador**, aparece la siguiente opción adicional.  
@@ -97,12 +97,12 @@ ms.locfileid: "66110078"
  **Ir a dirección URL**  
  Elija esta opción para definir un vínculo a una página web. Escriba o seleccione la dirección URL de una página web o una expresión que se evalúe como la dirección URL de una página web. Haga clic en el botón **Expresión** (*fx*) para modificar la expresión. Esta expresión puede incluir un campo que contenga una dirección URL. Al seleccionar **Ir a dirección URL**, aparece la siguiente opción adicional.  
   
- **Seleccione la dirección URL**  
- Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http:// *\<servername >*  /images/image1.jpg. Un elemento publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http:// *\<Nombredeservidorsharepoint > /\<sitio >*  /documentos/images / Image1.jpg).  
+ **Seleccionar dirección URL**  
+ Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http://*\<ServerName>*/images/image1.jpg. En el caso de un elemento publicado en un servidor de informes configurado en el modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http://*\<SharePointservername>/\<site>*/Documents/images/image1.jpg).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Generador de informes ayuda para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Agregar un subinforme y parámetros &#40;Generador de informes y SSRS&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  

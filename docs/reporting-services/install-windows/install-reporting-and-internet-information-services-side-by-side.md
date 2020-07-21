@@ -10,10 +10,10 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "64330629"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar Reporting Services e Internet Information Services en paralelo
@@ -24,7 +24,7 @@ ms.locfileid: "64330629"
 
 Puede instalar y ejecutar SQL Server Reporting Services (SSRS) e Internet Information Services (IIS) en el mismo equipo. La versión de IIS que utilice determinará los problemas de interoperabilidad que debe tratar.  
   
-|Versión de IIS|Problemas|Descripción|  
+|Versión de IIS|Issues|Descripción|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|Las solicitudes destinadas a una aplicación las acepta una aplicación diferente.<br /><br /> HTTP.SYS exige reglas de prioridad para las reservas de direcciones URL. Puede que las solicitudes que se envían a aplicaciones con el mismo nombre de directorio virtual y que supervisan de manera conjunta el puerto 80, no alcancen el destino deseado si la reserva de direcciones URL es débil en relación con la reserva de direcciones URL de otra aplicación.|En determinadas condiciones, un extremo registrado que reemplaza otro extremo de dirección URL en el esquema de reserva de direcciones URL podría recibir solicitudes HTTP pensadas para la otra aplicación.<br /><br /> El uso de nombres de directorio virtual únicos para el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] ayuda a evitar este conflicto.<br /><br /> En este tema se proporciona información detallada acerca de este escenario.|  
   
@@ -52,7 +52,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) e Internet Inform
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Reservas de direcciones URL para IIS 8.0 y 8.5 con SQL Server Reporting Services  
  Dadas las reglas de prioridad descritas en la sección anterior, puede empezar a entender cómo las reservas de direcciones URL definidas para Reporting Services e IIS promueven la interoperabilidad. Reporting Services recibe las solicitudes que especifican explícitamente los nombres de directorio virtual para sus aplicaciones; IIS recibe todas las solicitudes restantes, que se pueden dirigir a continuación a las aplicaciones que se ejecutan dentro del modelo de proceso de IIS.  
   
-|Aplicación|Reserva de direcciones URL|Descripción|Confirmación de solicitud|  
+|Application|Reserva de direcciones URL|Descripción|Confirmación de solicitud|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Servidor de informes|`https://+:80/ReportServer`|Carácter comodín fuerte en el puerto 80, con directorio virtual del servidor de informes.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual del servidor de informes. El servicio web del servidor de informes recibe todas las solicitudes para https://\<nombreDeEquipo>/servidorDeInformes.|  
 |Portal web|`https://+:80/Reports`|Carácter comodín fuerte en el puerto 80, con directorio virtual Reports.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual de informes. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recibe todas las solicitudes para https://\<nombreDeEquipo>/reports.|  

@@ -15,10 +15,10 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 91f0ca0980eceb5ccdd2b1c0814661695f573d50
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71291657"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar salidas mediante el Asistente para dimensión de variación lenta
@@ -78,12 +78,12 @@ ms.locfileid: "71291657"
   
      El siguiente diagrama muestra un ejemplo de flujo de datos que admite cambios de atributo fijo, atributo variable y atributo histórico, miembros deducidos y cambios en los registros coincidentes.  
   
-     ![Flujo de datos del Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
+     ![Flujo de datos del Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Flujo de datos del Asistente para dimensiones de variación lenta")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Actualizar salidas de dimensión de variación lenta  
  La manera más simple de actualizar la configuración de la transformación Dimensión de variación lenta es volver a ejecutar el Asistente para dimensiones variablesy modificar las propiedades en las páginas del asistente. También puede actualizar la transformación Dimensión de variación lenta mediante el cuadro de diálogo **Editor avanzado** o mediante programación.  
   
 ## <a name="see-also"></a>Consulte también  
- [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+ [Transformación Dimensión de variación lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

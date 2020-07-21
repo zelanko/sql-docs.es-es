@@ -1,5 +1,6 @@
 ---
-title: Conectar con MySQL (MySQLToSQL) | Microsoft Docs
+title: Conexión a MySQL (MySQLToSQL) | Microsoft Docs
+description: Obtenga información sobre cómo conectarse a una base de datos de iMySQL de destino para migrar una base de datos MySQL. SSMA obtiene metadatos acerca de las bases de datos en Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,107 +13,107 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103171"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293662"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Conexión a MySQL (MySQLToSQL)
-Para migrar bases de datos MySQL a SQL Server o SQL Azure, debe conectarse a la base de datos MySQL que se va a migrar. Cuando se conecta, SSMA obtiene metadatos sobre todos los esquemas de MySQL y, a continuación, muestra en el panel Explorador de metadatos de MySQL. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
+Para migrar las bases de datos de MySQL a SQL Server o SQL Azure, debe conectarse a la base de datos MySQL que desea migrar. Cuando se conecta, SSMA obtiene los metadatos de todos los esquemas de MySQL y, a continuación, los muestra en el panel del explorador de metadatos de MySQL. SSMA almacena información sobre el servidor de base de datos, pero no almacena contraseñas.  
   
-La conexión a la base de datos permanece activa hasta que cierre el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea que una conexión activa a la base de datos.  
+La conexión a la base de datos permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea una conexión activa a la base de datos.  
   
-Metadatos acerca de la base de datos MySQL no se actualizan automáticamente. En su lugar, si desea actualizar los metadatos en el Explorador de metadatos de MySQL, debe actualizarlo manualmente. Para obtener más información, consulte la sección "Actualizar metadatos de MySQL" más adelante en este tema.  
+Los metadatos de la base de datos MySQL no se actualizan automáticamente. En su lugar, si desea actualizar los metadatos en el explorador de metadatos de MySQL, debe actualizarlos manualmente. Para obtener más información, vea la sección "actualizar metadatos de MySQL" más adelante en este tema.  
   
-## <a name="required-mysql-permissions"></a>Permisos necesarios de MySQL  
-La cuenta que se usa para conectarse a la base de datos MySQL debe tener al menos **CONNECT** permisos. Esto permite SSMA obtener los metadatos de los esquemas de usuario que se conecta. Para obtener los metadatos de objetos en otros esquemas y, a continuación, convertir objetos en los esquemas, la cuenta debe tener los permisos siguientes:  
+## <a name="required-mysql-permissions"></a>Permisos de MySQL necesarios  
+La cuenta que se utiliza para conectarse a la base de datos MySQL debe tener al menos permisos de **conexión** . Esto permite a SSMA obtener los metadatos de los esquemas que pertenecen al usuario que se conecta. Para obtener los metadatos de los objetos de otros esquemas y, a continuación, convertir los objetos en esos esquemas, la cuenta debe tener los permisos siguientes:  
   
--   Mostrar privilegios en objetos de base de datos  
+-   Privilegios "Mostrar" en objetos de base de datos  
   
--   Privilegio 'SELECT' en 'Information_schema'  
+-   Privilegio ' SELECT ' en ' Information_schema '  
   
--   'SELECT' privilegio en mysql (para UDF)  
+-   Privilegio ' SELECT ' en MySQL (para UDF)  
   
-## <a name="establishing-a-connection-to-mysql"></a>Establecer una conexión a MySQL  
-Cuando se conecta a una base de datos, SSMA lee los metadatos de la base de datos y, a continuación, agrega estos metadatos al archivo de proyecto. Estos metadatos se usan por SSMA cuando convierte objetos a la sintaxis de SQL Server o SQL Azure, y cuando migra los datos a SQL Server o SQL Azure. Puede examinar estos metadatos en el panel Explorador de metadatos de MySQL y revisar las propiedades de objetos de base de datos individual.  
+## <a name="establishing-a-connection-to-mysql"></a>Establecer una conexión con MySQL  
+Cuando se conecta a una base de datos, SSMA Lee los metadatos de la base de datos y, a continuación, agrega estos metadatos al archivo de proyecto. SSMA utiliza estos metadatos cuando convierte objetos en SQL Server o SQL Azure sintaxis, y cuando migra datos a SQL Server o SQL Azure. Puede examinar estos metadatos en el panel Explorador de metadatos de MySQL y revisar las propiedades de los objetos de base de datos individuales.  
   
 > [!IMPORTANT]  
-> Antes de intentar conectarse, asegúrese de que el servidor de base de datos se está ejecutando y puede aceptar conexiones.  
+> Antes de intentar conectarse, asegúrese de que el servidor de base de datos se está ejecutando y de que puede aceptar conexiones.  
   
 **Para conectarse a MySQL**  
   
-1.  En el **archivo** menú, seleccione **conectar con MySQL** (esta opción se habilitará después de la creación del proyecto).  
+1.  En el menú **archivo** , seleccione **conectarse a MySQL** (esta opción se habilitará después de la creación del proyecto).  
   
-    Si se conectó a MySQL, será el nombre del comando **volver a conectar con MySQL**.  
+    Si ya está conectado a MySQL, el nombre del comando se volverá **a conectar a MySQL**.  
   
-2.  En el **proveedor** , seleccione el controlador de 5.1 de ODBC de MySQL (de confianza). Es el proveedor predeterminado en el modo estándar.  
+2.  En el cuadro **proveedor** , seleccione MySQL ODBC 5,1 driver (de confianza). Es el proveedor predeterminado en el modo estándar.  
   
-3.  En el **modo** cuadro, seleccione **modo estándar**. Este es el modo predeterminado.  
+3.  En el cuadro **modo** , seleccione **modo estándar**. Este es el modo predeterminado.  
   
-    Utilice el modo estándar para especificar el nombre del servidor y puerto.  
+    Utilice el modo estándar para especificar el nombre del servidor y el puerto.  
   
-4.  En **modo estándar**, proporcione los valores siguientes:  
+4.  En el **modo estándar**, proporcione los valores siguientes:  
   
-    1.  En el **nombre del servidor** , escriba el nombre del servidor MySQL. En el **puerto del servidor** , escriba el número de puerto para que sea 3306. Es el puerto predeterminado.  
+    1.  En el cuadro **nombre del servidor** , escriba el nombre del servidor MySQL. En el cuadro **Puerto del servidor** , escriba el número de puerto para que sea 3306. Es el puerto predeterminado.  
   
-    2.  En el **nombre de usuario** , escriba una cuenta de MySQL que tenga los permisos necesarios.  
+    2.  En el cuadro **nombre de usuario** , escriba una cuenta de MySQL que tenga los permisos necesarios.  
   
-    3.  En el **contraseña** , escriba la contraseña del nombre de usuario especificado.  
+    3.  En el cuadro **contraseña** , escriba la contraseña del nombre de usuario especificado.  
   
-5.  **SSL:** Si desea conectarse de forma segura a MySQL, asegúrese de utilizar capa de sockets seguros (SSL) al comprobar la **SSL** casilla de verificación.  
+5.  **SSL:** Si desea conectarse de forma segura a MySQL, haga uso de la capa de sockets seguros (SSL). para ello, active la casilla **SSL** .  
   
 6.  **Configurar:** Proporciona una opción para configurar la conexión a MySQL a través de la capa de sockets seguros (SSL).  
   
     > [!NOTE]  
-    > Para habilitar **configurar**, SSL debe establecerse en **True**.  
+    > Para habilitar **configurar**, SSL debe establecerse en **true**.  
   
-    Al hacer clic en el botón "Configurar", aparece un cuadro de diálogo. Para usar el cifrado mientras se conecta a la base de datos MySQL, ruta de acceso a los siguientes archivos de tres certificado presentes en el cuadro de diálogo debe ser definido [privacidad mejorada correo certificados (PEM)]:  
+    Al hacer clic en el botón "configurar", aparece un cuadro de diálogo. Para usar el cifrado al conectarse a la base de datos MySQL, se debe definir la ruta de acceso a los tres archivos de certificado siguientes presentes en el cuadro de diálogo [certificados de correo mejorado de privacidad (PEM)]:  
   
-    -   **Entidad emisora de certificados SSL:** Especifica la ruta de acceso a un archivo con una lista de confianza de entidades emisoras de certificados SSL.  
+    -   **Entidad de certificación SSL:** Especifica la ruta de acceso a un archivo con una lista de entidades de certificación SSL de confianza.  
   
-    -   **Certificado SSL:** Especifica el nombre del archivo de certificado SSL que se utilizará para establecer una conexión segura.  
+    -   **Certificado SSL:** Especifica el nombre del archivo de certificado SSL que se va a usar para establecer una conexión segura.  
   
-    -   **CLAVE SSL:** Especifica el nombre del archivo de clave SSL que se utilizará para establecer una conexión segura.  
+    -   **clave SSL:** Especifica el nombre del archivo de clave SSL que se va a usar para establecer una conexión segura.  
   
     > [!NOTE]  
-    > -   El **Aceptar** botón se habilita cuando se ha proporcionado la información necesaria. Si cualquiera de las rutas de acceso de archivo son válida, el botón "Aceptar" permanecerá deshabilitado.  
-    > -   El **cancelar** botón cierra el cuadro de diálogo y **desactiva** la opción SSL desde el formulario principal de la conexión.  
+    > -   El botón **Aceptar** está habilitado cuando se ha proporcionado la información necesaria. Si alguna de las rutas de acceso de archivo no es válida, el botón "Aceptar" permanecerá deshabilitado.  
+    > -   El botón **Cancelar** cierra el cuadro de diálogo y **desactiva** la opción SSL del formulario de conexión principal.  
   
-7.  Para obtener más información, consulte [conectar con MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+7.  Para obtener más información, consulte [conexión a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-## <a name="reconnecting-to-mysql"></a>Volver a conectarse a MySQL  
-La conexión al servidor de base de datos permanece activa hasta que cierre el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea que una conexión activa a la base de datos. Puede trabajar sin conexión hasta que desee actualizar los metadatos, cargará los objetos de base de datos en SQL Server o SQL Azure y migrar los datos.  
+## <a name="reconnecting-to-mysql"></a>Volver a conectar a MySQL  
+La conexión al servidor de base de datos permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse si desea una conexión activa a la base de datos. Puede trabajar sin conexión hasta que desee actualizar los metadatos, cargar los objetos de base de datos en SQL Server o SQL Azure y migrar los datos.  
   
-## <a name="refreshing-mysql-metadata"></a>Actualizar metadatos de MySQL  
-Metadatos acerca de la base de datos MySQL no se actualizan automáticamente. Los metadatos en el Explorador de metadatos de MySQL están una instantánea de los metadatos cuando conectó en primer lugar, o la última vez que actualiza manualmente los metadatos. Puede actualizar manualmente los metadatos para todos los esquemas, un único esquema u objetos de base de datos individual.  
+## <a name="refreshing-mysql-metadata"></a>Actualización de metadatos de MySQL  
+Los metadatos de la base de datos MySQL no se actualizan automáticamente. Los metadatos del explorador de metadatos de MySQL son una instantánea de los metadatos al conectarse por primera vez o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todos los esquemas, un esquema único o los objetos de base de datos individuales.  
   
 **Para actualizar los metadatos**  
   
 1.  Asegúrese de que está conectado a la base de datos.  
   
-2.  En el Explorador de metadatos de MySQL, seleccione la casilla de verificación junto a cada objeto de esquema o base de datos que desea actualizar.  
+2.  En el explorador de metadatos de MySQL, active la casilla situada junto a cada esquema u objeto de base de datos que desee actualizar.  
   
-3.  Haga clic en **esquemas**, o el esquema en particular o la base de datos de objeto y, a continuación, seleccione **actualizar desde la base de datos**.  
+3.  Haga clic con el botón secundario en **esquemas**o en el objeto de esquema o base de datos individual y, a continuación, seleccione **actualizar desde base de datos**.  
   
-    Si no tiene una conexión activa, SSMA mostrará el **conectar con MySQL** cuadro de diálogo para que pueda conectarse.  
+    Si no tiene una conexión activa, SSMA mostrará el cuadro de diálogo **conectar con MySQL** para que pueda conectarse.  
   
-4.  En la actualización desde el cuadro de diálogo de la base de datos, especificar qué objetos desea actualizar.  
+4.  En el cuadro de diálogo actualizar desde base de datos, especifique los objetos que se van a actualizar.  
   
-    -   Para actualizar un objeto, haga clic en el **Active** campo junto al objeto hasta que aparezca una flecha.  
+    -   Para actualizar un objeto, haga clic en el campo **activo** adyacente al objeto hasta que aparezca una flecha.  
   
-    -   Para evitar que un objeto que se va a actualizar, haga clic en el **Active** campo adyacente para el objeto hasta que un **X** aparece.  
+    -   Para evitar que se actualice un objeto, haga clic en el campo **activo** adyacente al objeto hasta que aparezca una **X** .  
   
-    -   Para actualizar o rechazar una categoría de objetos, haga clic en el **Active** campo junto a la carpeta de la categoría.  
+    -   Para actualizar o rechazar una categoría de objetos, haga clic en el campo **activo** adyacente a la carpeta categoría.  
   
-    -   Para ver las definiciones de la codificación en colores, haga clic en el **leyenda** botón.  
+    -   Para ver las definiciones de la codificación de colores, haga clic en el botón **leyenda** .  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [conectarse a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso del proceso de migración consiste en [conectarse a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>Vea también  
-[Bases de datos de migración desde MySQL a SQL Server: base de datos SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Migración de bases de datos de MySQL a SQL Server: Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

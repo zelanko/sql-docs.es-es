@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 59842dc6ee0fa2d0438aeed0620cf7ac04094c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74743e0a91601ff210236a355739559ad03ecdb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703030"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una instancia de **geographyMultiLineString** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
@@ -38,19 +38,19 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *cadena_de_varias_líneas_WKB*  
- Es la representación WKB de la instancia de **geographyMultiLineString** que se va a devolver. *WKB_multilinestring* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geographyMultiLineString** que se va a devolver. *cadena_de_varias_líneas_WKB* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiLineString** que se quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo de OGC: **MultiLineString**  
+ Tipo OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,6 @@
 ---
 title: Importación de archivos planos en SQL | Microsoft Docs
+description: El Asistente para la importación de archivos planos es una forma muy sencilla de copiar datos de un archivo .csv o .txt a una nueva tabla de la base de datos. En este artículo se muestra cómo y cuándo usar el asistente.
 ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751222"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > Para obtener más información sobre el Asistente para importación y exportación, consulte [Asistente para importación y exportación de SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 El Asistente para la importación de archivos planos es una forma muy sencilla de copiar datos de un archivo plano (.csv, .txt) a una nueva tabla de la base de datos. En la información general puede consultar los motivos por los que el asistente resulta tan útil, el proceso para encontrarlo y un ejemplo que podrá seguir fácilmente.
@@ -32,12 +33,12 @@ PROSE analiza los patrones de datos del archivo de entrada e infiere los nombres
 
 Para comprender mejor la mejora de la experiencia de usuario del Asistente para la importación de archivos planos, vea este vídeo:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Esta característica solo está disponible para la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
  
-## <a id="started"></a>Introducción
+## <a name="getting-started"></a><a id="started"></a>Introducción
 Para acceder al Asistente para importación de archivos planos, siga estos pasos:
 
 1. Abra **SQL Server Management Studio**.
@@ -84,7 +85,7 @@ Esta página es simplemente un resumen en el que figura la configuración actual
 
 ![Asistente: resumen](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>Paso 6: Resultado
+### <a name="step-6-results"></a>Paso 6: Results
 En esta página se indica si la importación se ha realizado correctamente. Si la operación se ha efectuado correctamente, aparecerá una marca de verificación verde. De lo contrario, deberá comprobar que no haya errores con los archivos de entrada o con la configuración.
 
 ![Asistente: resultados](media/import-flat-file-wizard/importffresults.png)

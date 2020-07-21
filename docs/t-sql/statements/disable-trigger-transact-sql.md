@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8179c57a2d472d4cdddda10dacdd07ffe473504
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766605"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deshabilita un desencadenador.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67984306"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }  
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
@@ -64,14 +64,14 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de la base de datos.  
   
  ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de servidor. ALL SERVER también se aplica a los desencadenadores de inicio de sesión.  
   
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  De forma predeterminada, los desencadenadores se habilitan cuando se crean. Al deshabilitar un desencadenador no se quita. Sigue siendo un objeto de la base de datos actual. Sin embargo, el desencadenador no se activa cuando se ejecuta una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en la que se programó. Los desencadenadores se pueden volver a habilitar con [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Los desencadenadores DML definidos en tablas también se pueden habilitar o deshabilitar mediante el uso de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  Si se cambia el desencadenador mediante la instrucción **ALTER TRIGGER**, se habilita el desencadenador.  
@@ -85,9 +85,9 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 Los ejemplos siguientes se describen en la base de datos AdventureWorks2012.
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. Deshabilitar un desencadenador DML en una tabla  
- En el ejemplo siguiente se deshabilita el desencadenador `uAddress`, que se creó en la tabla `Address`.  
+ En el ejemplo siguiente se deshabilita el desencadenador `uAddress`, que se creó en la tabla `Person`.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -95,7 +95,7 @@ GO
 ### <a name="b-disabling-a-ddl-trigger"></a>B. Deshabilitar un desencadenador DDL  
  En el ejemplo siguiente se crea un desencadenador DDL `safety`, con ámbito en la base de datos, y después se deshabilita.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

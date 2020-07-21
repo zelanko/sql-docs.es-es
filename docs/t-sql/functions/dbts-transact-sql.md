@@ -16,17 +16,17 @@ helpviewer_keywords:
 - '@@DBTS function'
 - timestamp data type
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 61743139f35ed3e8a5dd4bbac9bd1f4660cb2ec2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682947"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve el valor del tipo de datos **timestamp** actual de la base de datos actual. La base de datos actual tendrá un valor de marca de tiempo único garantizado.
   
@@ -41,7 +41,7 @@ Esta función devuelve el valor del tipo de datos **timestamp** actual de la bas
 ## <a name="return-types"></a>Tipos de valores devueltos
 **varbinary**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 @@DBTS devuelve el último valor de marca de tiempo de la base de datos actual que se ha usado. Cuando se inserta o actualiza una fila con una columna de tipo **timestamp** se genera un valor de marca de tiempo nuevo.
   
 Los cambios en los niveles de aislamiento de transacción no afectan a la función @@DBTS.
@@ -55,7 +55,7 @@ GO
 SELECT @@DBTS;  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)  
 [Cursor Concurrency &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md) (Simultaneidad de cursor [ODBC])  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

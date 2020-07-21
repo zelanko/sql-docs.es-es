@@ -10,41 +10,41 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc2addcc74551e754218f200ae977e6641c214b9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922174"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758951"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluciones de acceso a datos remotos
 ## <a name="the-issue"></a>El problema  
- ADO permite que la aplicación obtener acceso a directamente y modificar orígenes de datos (también conocidos como un sistema de dos niveles). Por ejemplo, si la conexión es el origen de datos que contiene los datos, es una conexión directa en un sistema de dos niveles.  
+ ADO permite a la aplicación obtener acceso directamente a los orígenes de datos y modificarlos (a veces denominado sistema de dos niveles). Por ejemplo, si la conexión es con el origen de datos que contiene los datos, es una conexión directa en un sistema de dos niveles.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Sin embargo, desea tener acceso a orígenes de datos indirectamente a través de un intermediario, como Microsoft® Internet Information Services (IIS). Esta disposición se denomina a veces un sistema de tres niveles. IIS es un sistema cliente/servidor que proporciona una manera eficaz para una aplicación local o de cliente invocar un programa de servidor, o remoto a través de Internet o una intranet. El programa de servidor obtiene acceso al origen de datos y, opcionalmente, procesa los datos obtenidos.  
+ Sin embargo, puede que desee tener acceso indirectamente a los orígenes de datos a través de un intermediario como Microsoft® Internet Information Services (IIS). Esta disposición a veces se denomina sistema de tres niveles. IIS es un sistema cliente/servidor que proporciona una manera eficaz de que una aplicación local o de cliente invoque un programa remoto, o servidor, a través de Internet o de una intranet. El programa de servidor obtiene acceso al origen de datos y, opcionalmente, procesa los datos adquiridos.  
   
- Por ejemplo, la página Web de intranet contiene una aplicación creada en Microsoft® Visual Basic Scripting Edition (VBScript), que se conecta a IIS. IIS a su vez se conecta al origen de datos real, recupera los datos, lo procesa de alguna manera y, a continuación, devuelve la información procesada para la aplicación.  
+ Por ejemplo, la Página Web de la intranet contiene una aplicación escrita en Microsoft® Visual Basic Scripting Edition (VBScript), que se conecta a IIS. IIS a su vez se conecta al origen de datos real, recupera los datos, los procesa de algún modo y, a continuación, devuelve la información procesada a la aplicación.  
   
- En este ejemplo, la aplicación nunca conectado directamente al origen de datos; IIS se ha hecho. Y IIS tiene acceso a los datos por medio de ADO.  
+ En este ejemplo, la aplicación nunca se conecta directamente al origen de datos; IIS. Y IIS obtienen acceso a los datos por medio de ADO.  
   
 > [!NOTE]
->  La aplicación cliente/servidor no tiene que estar basado en Internet o una intranet (es decir, basada en Web): puede constar únicamente de programas compilados en una red de área local. Sin embargo, el caso típico es una aplicación basada en Web.  
+>  No es necesario que la aplicación cliente/servidor se base en Internet o en una intranet (es decir, basada en Web); puede constar únicamente de programas compilados en una red de área local. Sin embargo, el caso típico es una aplicación basada en Web.  
   
- Dado que algunos controles visuales, como una cuadrícula, la casilla de verificación o la lista, pueden usar la información devuelta, debe usarse fácilmente la información devuelta por un control visual.  
+ Dado que un control visual, como una cuadrícula, una casilla o una lista, puede usar la información devuelta, el control visual debe usar fácilmente la información devuelta.  
   
- Desea una interfaz de programación de aplicaciones sencilla y eficaz que es compatible con sistemas de tres niveles y devuelve la información como fácilmente como si se recuperó en un sistema de dos niveles. Servicio de datos remoto (RDS) es esta interfaz.  
+ Desea una interfaz de programación de aplicaciones sencilla y eficaz que admita sistemas de tres niveles, y devuelve información tan fácilmente como si se hubiera recuperado en un sistema de dos niveles. El servicio de datos remotos (RDS) es esta interfaz.  
   
 ## <a name="the-solution"></a>Solución  
- RDS define un modelo de programación: la secuencia de actividades necesarias para tener acceso a y actualizar un origen de datos: para tener acceso a datos a través de un intermediario, como Internet Information Services (IIS). El modelo de programación Resume toda la funcionalidad de RDS.  
+ RDS define un modelo de programación: la secuencia de actividades necesarias para obtener acceso y actualizar un origen de datos, para obtener acceso a los datos a través de un intermediario, como Internet Information Services (IIS). El modelo de programación resume toda la funcionalidad de RDS.  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de programación de RDS básica](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [Escenario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modelo de programación básica de RDS](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
+ [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
  [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 

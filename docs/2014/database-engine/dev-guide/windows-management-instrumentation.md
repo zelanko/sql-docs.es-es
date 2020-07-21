@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 80f1e02c-5e71-4610-ae62-fde62c4189d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e07550b4a6990f8d4f4cfeb00400440f98ee7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d472a46392ef1a4949da53e800cb8a48035027b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933166"
 ---
 # <a name="windows-management-instrumentation"></a>Instrumental de administración de Windows
   Esta sección contiene los siguientes temas:  

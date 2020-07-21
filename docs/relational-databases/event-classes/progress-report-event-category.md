@@ -14,16 +14,16 @@ ms.assetid: 15eba54b-ad75-4eda-9fc3-429672da46f2
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfe1638d6bb1bc1d56e7160ec51cd15138be1f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 393ca541b06fa44cc7cca6967db840c5be36d246
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733724"
 ---
 # <a name="progress-report-event-category"></a>Informe de progreso (categoría de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En la categoría de eventos **Informe de progreso** se incluye la clase de eventos **Informe de progreso: Online Index Operation**.  
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
+  La categoría de eventos **Informe de progreso** contiene la clase de eventos **Progress Report: Online Index Operation** .  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

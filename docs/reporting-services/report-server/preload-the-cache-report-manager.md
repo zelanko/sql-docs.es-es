@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "66174994"
 ---
 # <a name="preload-the-cache"></a>Carga previa de la memoria caché  
@@ -23,7 +23,7 @@ ms.locfileid: "66174994"
   
  Puede cargar previamente la memoria caché para un informe de dos maneras:  
   
-1.  Cree un plan de actualización de caché para el informe. Éste es el método preferido.  
+1.  Cree un plan de actualización de caché para el informe. Este es el método preferido.  
   
 2.  Utilice una suscripción controlada por datos para cargar previamente la memoria caché con instancias de informes con parámetros. Esa era la única manera de cargar previamente la memoria caché en las versiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anteriores a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66174994"
   
 ## <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>Para cargar previamente la memoria caché creando un plan de actualización de caché  
   
-1. Inicie el [portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md "Portal web de un servidor de informes").  
+1. Inicie [el portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md "El portal web de un servidor de informes").  
   
 2. Seleccione **Examinar** en la pantalla de inicio y navegue por la jerarquía de carpetas para localizar el elemento que desea almacenar en caché.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "66174994"
 5. Para activar el almacenamiento en caché para un conjunto de datos, seleccione el botón de radio **Copiar en caché copias de este conjunto de datos y usarlas cuando estén disponibles** . Aparecerá la sección **Expiración de la caché** debajo de él. Seleccione uno de los siguientes botones de radio:
 
     - **La memoria caché expira después de x minutos** (escriba el número de minutos que desee en x).
-    - **La memoria caché expira en una programación.** .  Reporting Services proporciona programaciones compartidas y programaciones específicas de informe para ayudarlo a controlar el procesamiento, el contenido coherente y el rendimiento de la distribución de informes. Para más información, consulte [Create, Modify, and Delete Schedules] (Creación, modificación y eliminación de programaciones)(../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Tiene varias opciones sobre cómo crear una programación, en este caso para la expiración de caché. Seleccione una de las dos opciones de programación siguientes:  
-      - Botón de radio **Programación compartida** y luego seleccione una programación desde el cuadro de texto desplegable **Seleccionar una programación compartida**. Para más información, consulte [Programaciones](../../reporting-services/subscriptions/schedules.md "Schedules").  
+    - **La memoria caché expira en una programación.** .  Reporting Services proporciona programaciones compartidas y programaciones específicas de informe para ayudarlo a controlar el procesamiento, el contenido coherente y el rendimiento de la distribución de informes. Para obtener más información, consulte [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules"). Tiene varias opciones sobre cómo crear una programación, en este caso para la expiración de caché. Seleccione una de las dos opciones de programación siguientes:  
+      - Botón de radio **Programación compartida** y luego seleccione una programación desde el cuadro de texto desplegable **Seleccionar una programación compartida**. Para obtener más información, vea [Schedules](../../reporting-services/subscriptions/schedules.md "Programaciones").  
       - Botón de radio **Programación específica del informe** y luego seleccione el vínculo **Editar programación** si es necesario para mostrar la página *Detalles de programación*.  
 
-         ![Página de detalles de programación de la expiración de caché del portal web para conjuntos de datos](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Página de detalles de programación de caché de conjunto de datos")
+         ![Página de detalles de programación de la expiración de caché del portal web para conjuntos de datos](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "Página detalles de programación de caché de conjunto de datos")
 
           En esta página puede seleccionar:
          - El tipo de programación:
            - **Hora**: ejecute la programación en horas y minutos específicos así como la hora de inicio.
            - **Día**: seleccione una de las tres opciones siguientes:  
-              - **En los siguientes días**: Dom., Lun., Mar., Mié., Jue., Vie. y Sáb.
+              - **En los siguientes días**: (Dom, Lun, Mar, Mié, Jue, Vie, Sáb).
               - **Todos los días de la semana**
               - **Repetir tras este número de días**: especifique un número.  
            - **Semana**: especifique los dos elementos siguientes:
@@ -94,7 +94,7 @@ ms.locfileid: "66174994"
   
 ## <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>Para cargar previamente la memoria caché con un informe específico del usuario utilizando una suscripción controlada por datos
 
-1. Inicie el [portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md "Portal web de un servidor de informes").  
+1. Inicie [el portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md "El portal web de un servidor de informes").  
 2. Seleccione **Examinar** en la pantalla de inicio y navegue por la jerarquía de carpetas para localizar el informe al que desea suscribirse.  
 3. Haga clic con el botón derecho en el informe y seleccione **Suscribirse** en el menú desplegable. Se mostrará el página **Nuevas suscripciones**.  
 4. Escriba una descripción para la suscripción en el cuadro de texto **Descripción**.  
@@ -132,14 +132,14 @@ ms.locfileid: "66174994"
 
 13. Seleccione **Crear suscripción**.  
   
-14. Aparece la página **Suscripciones** que muestra la nueva suscripción controlada por datos. Desde esta página puede habilitar la suscripción cuando haya terminado seleccionando la casilla situada a su izquierda y seleccionando el botón **Habilitar**. ![botón para habilitar página de suscripciones](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "Botón Habilitar de la página de suscripciones")
+14. Aparece la página **Suscripciones** que muestra la nueva suscripción controlada por datos. Desde esta página puede habilitar la suscripción cuando haya terminado seleccionando la casilla situada a su izquierda y seleccionando el botón **Habilitar**. ![botón habilitar de la página suscripciones](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "El botón Habilitar de la página suscripciones")
 
 15. Especifique cuándo se procesa la suscripción. No elija **Cuando los datos del informe se actualizan en el servidor de informes** . Este valor solo es para instantáneas. Si quiere usar una programación existente, seleccione **Según una programación compartida**.  
   
      O bien, para crear una programación personalizada, seleccione **Según una programación creada para esta suscripción** y luego elija **Siguiente**. Configure la programación y seleccione **Finalizar**.  
   
     > [!NOTE]  
-    > Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, consulte el [portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md  "Portal web de un servidor de informes").  
+    > Para que los suscriptores reciban el informe más reciente, el programa que configure debe ser coherente con la programación de entrega del informe que haya definido para los suscriptores. Para más información, consulte el [portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md  "El portal web de un servidor de informes").  
   
 16. Configure las opciones de Ejecución correspondientes al informe de la forma siguiente: En la página del informe, seleccione la pestaña **Propiedades**.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "66174994"
   
 20. Seleccione **Aplicar**.
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
  [Suscripciones controladas por datos](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
  [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  

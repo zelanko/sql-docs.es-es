@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: enviar y recuperar datos ASCII en Linux y macOS (SQL) | Microsoft Docs'
+title: 'Procedimientos: Envío y recuperación de datos ASCII en Linux y macOS (SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -15,33 +15,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68251903"
 ---
-# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Envío y recuperación de datos ASCII en Linux y Mac OS 
+# <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Procedimientos: Envío y recuperación de datos ASCII en Linux y Mac OS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-En este artículo se da por supuesto que las configuraciones regionales ASCII (no UTF-8) se han generado o instalado en los sistemas Linux o macOS. 
+En este artículo se da por sentado que las configuraciones regionales ASCII (no UTF-8) se han generado o instalado en sus sistemas Linux o macOS. 
 
-Para enviar o recuperar juegos de caracteres ASCII en el servidor:  
+Para enviar conjuntos de caracteres ASCII al servidor o recuperarlos:  
 
-1.  Si la configuración regional deseada no es la predeterminada en el entorno del sistema, asegúrese de invocarla `setlocale(LC_ALL, $locale)` antes de realizar la primera conexión. La función de PHP setlocale () cambia la configuración regional solo del script actual y, si se invoca después de realizar la primera conexión, puede omitirse.
+1.  Si la configuración regional deseada no es la predeterminada del entorno del sistema, asegúrese de invocar `setlocale(LC_ALL, $locale)` antes de realizar la primera conexión. La función setlocale() PHP cambia la configuración regional solo para el script actual y, en caso de invocarse tras realizarse la primera conexión, es posible que se omita.
  
-2.  Al usar el controlador SQLSRV, puede especificar `'CharacterSet' => SQLSRV_ENC_CHAR` como una opción de conexión, pero este paso es opcional porque es la codificación predeterminada.
+2.  Al usar el controlador SQLSRV, puede especificar `'CharacterSet' => SQLSRV_ENC_CHAR` como opción de conexión, pero este paso es opcional, ya que se trata de la codificación predeterminada.
 
-3.  Al utilizar el controlador PDO_SQLSRV, hay dos maneras. En primer lugar, al establecer la conexión `PDO::SQLSRV_ATTR_ENCODING` , `PDO::SQLSRV_ENCODING_SYSTEM` establezca en (para obtener un ejemplo de la configuración de una opción de conexión, consulte [PDO:: __construct](../../connect/php/pdo-construct.md)). Como alternativa, después de conectarse correctamente, agregue esta línea`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  Al usar el controlador PDO_SQLSRV, hay dos maneras. En primer lugar, al establecer la conexión, establezca `PDO::SQLSRV_ATTR_ENCODING` en `PDO::SQLSRV_ENCODING_SYSTEM` (para ver un ejemplo de establecimiento de una opción de conexión, consulte [PDO:: __construct](../../connect/php/pdo-construct.md)). Como alternativa, después de conectarse correctamente, agregue esta línea `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-Cuando se especifica la codificación de un recurso de conexión (en SQLSRV) o del objeto de conexión (PDO_SQLSRV), el controlador supone que las otras cadenas de opciones de conexión usan esa misma codificación. También se da por hecho que las cadenas de nombre del servidor y consulta utilizan el mismo juego de caracteres.  
+Al especificar la codificación de un recurso de conexión (en SQLSRV) u objeto de conexión (PDO_SQLSRV), el controlador da por sentado que las otras cadenas de opciones de conexión usan esa misma codificación. También se da por hecho que las cadenas de nombre del servidor y consulta utilizan el mismo juego de caracteres.  
   
-La codificación predeterminada para el controlador PDO_SQLSRV es UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), a diferencia del controlador SQLSRV. Para obtener más información sobre estas constantes de PHP, vea [Constantes &#40;Controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+La codificación predeterminada para el controlador PDO_SQLSRV es UTF-8 (PDO::SQLSRV_ENCODING_UTF8), a diferencia del controlador SQLSRV. Para obtener más información sobre estas constantes de PHP, vea [Constantes &#40;Controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## <a name="example"></a>Ejemplo  
-En los siguientes ejemplos se muestra cómo enviar y recuperar datos ASCII mediante los controladores PHP para SQL Server mediante la especificación de una configuración regional determinada antes de establecer la conexión. Las configuraciones regionales de varias plataformas de Linux pueden tener un nombre diferente de las configuraciones regionales de macOS. Por ejemplo, la configuración regional ISO-8859-1 (Latin 1) de EE. `en_US.ISO-8859-1` UU. está en Linux mientras que en MacOS `en_US.ISO8859-1`el nombre es.
+En los siguientes ejemplos se muestra cómo enviar y recuperar datos ASCII mediante los controladores para PHP para SQL Server especificando una configuración regional particular antes del realizar la conexión. A las configuraciones regionales en diversas plataformas de Linux se les puede asignar nombres distintos de los de las mismas configuraciones regionales en macOS. Por ejemplo, la configuración regional ISO-8859-1 (Latín 1) de Estados Unidos es `en_US.ISO-8859-1` en Linux, mientras que en macOS el nombre es `en_US.ISO8859-1`.
   
-En los ejemplos se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da por supuesto que está instalado en un servidor. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
+En los ejemplos se da por sentado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado en un servidor. Los resultados se agregan al explorador cuando se ejecuta el ejemplo en el explorador.  
   
 ```  
 <?php  
@@ -166,8 +166,8 @@ try {
 
 ## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
-[Trabajar con](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-datos[&#41; de actualización de datos UTF-8 controladores de Microsoft para PHP para SQL Server &#40;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Trabajo con datos UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+[Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

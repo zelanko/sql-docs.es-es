@@ -1,5 +1,5 @@
 ---
-title: Procedimientos de ODBC | Microsoft Docs
+title: Procedimientos ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - procedures [ODBC], defined
 - procedures [ODBC]
 ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18955db5c11f4f338091598ac717a71e7c78969e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d16c5353d2a8bd58563753d92cccade2968d09cc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023274"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81282225"
 ---
 # <a name="procedures-odbc"></a>Procedimientos de ODBC
 Un *procedimiento* es un objeto ejecutable almacenado en el origen de datos. Normalmente, se trata de una o varias instrucciones SQL compiladas.  

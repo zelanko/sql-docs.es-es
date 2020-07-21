@@ -16,10 +16,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297899"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar una búsqueda en modo No hay caché o Caché parcial
@@ -58,17 +58,17 @@ ms.locfileid: "71297899"
   
 7.  En la página **Conexión** , seleccione un administrador de conexiones en la lista **Administradores de conexión OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-8.  Realice uno de los pasos siguientes:  
+8.  Realice uno de los siguientes pasos:  
   
     -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
     -   Haga clic en **Usar los resultados de una consulta SQL**y, a continuación, genere una consulta en la ventana **Comando SQL** .  
   
-         -O bien-  
+         O bien  
   
          Haga clic en **Generar consulta** para generar una consulta con las herramientas gráficas que proporciona el **Generador de consultas** .  
   
-         -O bien-  
+         O bien  
   
          Haga clic en **Examinar** para importar una instrucción SQL de un archivo.  
   

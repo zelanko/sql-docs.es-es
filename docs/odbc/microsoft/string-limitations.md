@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de cadena | Microsoft Docs
+title: Limitaciones de las cadenas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7faab41bd52397ac0d352e04a9ec153571e93f1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61f81ff3da882095a0a6c41bb5061addd497a5d2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948763"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306066"
 ---
 # <a name="string-limitations"></a>Limitaciones de cadena
-La longitud máxima de una cadena de instrucción SQL es 65 000 caracteres.  
+La longitud máxima de una cadena de instrucción SQL es de 65.000 caracteres.  
   
- Cuando se usa el controlador de Microsoft Access, se admiten solo constantes de cadena de SQL-92 (con comillas simples, comillas dobles no).  
+ Cuando se usa el controlador de Microsoft Access, solo se admiten las constantes de cadena de SQL-92 (con comillas simples, no comillas dobles).  
   
- El carácter de barra vertical (&#124;) no se puede usar en una cadena, si el carácter está entre comillas atrás o no.  
+ El carácter de barra vertical (&#124;) no se puede usar en una cadena, tanto si el carácter está entre comillas como si no.  
   
- Para obtener la máxima interoperatividad, las aplicaciones deben pasar cadenas de parámetros, en lugar de pasar cadenas de comillas.
+ Para obtener la máxima interoperabilidad, las aplicaciones deben pasar cadenas en parámetros, en lugar de pasar cadenas entre comillas.

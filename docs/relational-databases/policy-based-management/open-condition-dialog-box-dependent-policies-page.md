@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Abrir condición, página Directivas dependientes | Microsoft Docs
-ms.custom: ''
+title: Página "Directivas dependientes" del cuadro de diálogo "Abrir condición"
+description: Describe la página "Directivas dependientes" del cuadro de diálogo "Abrir condición" para la administración basada en directivas en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1f89570284ecee36ea998a82f7b9dbb966d2683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 461bed154720f1e17fb4aeff92a4ba2993b16538
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087040"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785057"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Abrir condición, página Directivas dependientes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use este cuadro de diálogo para mostrar una lista de las directivas que hacen referencia actualmente a esta condición de administración basada en directivas. Para obtener más información sobre cómo se relacionan las condiciones con las facetas y las directivas, vea [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Opciones  

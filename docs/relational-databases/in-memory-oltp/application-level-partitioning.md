@@ -1,5 +1,6 @@
 ---
 title: Creación de particiones en el nivel de aplicación | Microsoft Docs
+description: Revise este ejemplo de procesamiento de pedidos. Esta aplicación almacena los pedidos recientes en una tabla optimizada para memoria y los más antiguos en una tabla basada en disco.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20fe12efc4bbc7ba948a89e5b15fb3f869651d4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 047d337dd8ce561924a6f27de7ac43a4d57f4c60
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629711"
 ---
 # <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Esta aplicación procesa pedidos. Hay mucho trabajo de procesamiento para los pedidos recientes. Sin embargo, hay poco para los pedidos antiguos. Los pedidos recientes están en una tabla optimizada para memoria. Los pedidos antiguos están en una tabla basada en disco. Todos los pedidos posteriores a *hotDate* están en la tabla optimizada para memoria. Todos los pedidos anteriores a *hotDate* están en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  
   
  En este ejemplo no se usa una tabla con particiones para la tabla basada en disco, pero se hace un seguimiento de un punto de división explícito entre las dos tablas, mediante una tercera tabla. El punto de división se puede usar para asegurarse de que los datos recién insertados se insertan siempre en la tabla adecuada según la fecha. También se puede usar para determinar dónde buscar datos. Los últimos datos en llegar siguen estando en la tabla adecuada.  

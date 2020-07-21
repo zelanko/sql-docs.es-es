@@ -1,6 +1,6 @@
 ---
-title: Apertura de un editor (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Abrir un editor (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267017"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253778"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68267017"
 ### <a name="permissions"></a>Permisos  
  Las operaciones que realiza en un editor de código están sujetas a los permisos concedidos a la cuenta de autenticación que usó para iniciar sesión. Por ejemplo, si abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la autenticación de Windows, no puede ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que hacen referencia a los objetos para los que no tiene acceso la cuenta de inicio de sesión de Windows.  
   
-## <a name="how-to-open-editors"></a>Procedimientos: Abrir editores  
+## <a name="how-to-open-editors"></a>Cómo: abrir editores  
  En esta sección se explica cómo abrir varios editores en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  

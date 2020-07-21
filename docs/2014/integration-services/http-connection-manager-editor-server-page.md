@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones HTTP (página servidor) | Microsoft Docs
+title: Editor del administrador de conexiones HTTP (página servidor) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab0e8bfe2d0cda5ded11566023406b73ed7058c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058252"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436892"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor del administrador de conexiones HTTP (página Servidor)
   Utilice la pestaña **Servidor** del cuadro de diálogo **Editor del administrador de conexiones HTTP** para configurar el Administrador de conexiones HTTP especificando propiedades como la dirección URL y las credenciales de seguridad. Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. Después de configurar el Administrador de conexiones HTTP, también puede probar la conexión.  
@@ -38,7 +37,7 @@ ms.locfileid: "66058252"
  **Utilizar credenciales**  
  Especifique si desea que el Administrador de conexiones HTTP utilice las credenciales de seguridad del usuario para la autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
   
  **Contraseña**  
@@ -50,7 +49,7 @@ ms.locfileid: "66058252"
  **Utilizar certificado de cliente**  
  Especifique si desea que el Administrador de conexiones HTTP utilice un certificado de cliente para la autenticación.  
   
- **Certificado**  
+ **Certificate**  
  Seleccione un certificado de la lista mediante el cuadro de diálogo **Seleccionar certificado** . El cuadro de texto muestra el nombre asociado con este certificado.  
   
  **Tiempo de espera (en segundos)**  
@@ -59,10 +58,10 @@ ms.locfileid: "66058252"
  **Tamaño del fragmento (en KB)**  
  Indique un tamaño de fragmento para escribir datos.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Después de configurar el Administrador de conexiones HTTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   

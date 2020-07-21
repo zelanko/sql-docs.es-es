@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de la directiva ELEMENT | Microsoft Docs'
+title: 'Ejemplo: Especificar la directiva ELEMENT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d91c0ddc4bd9c15a033e728d450abd153cac2756
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067806"
 ---
-# <a name="example-specifying-the-element-directive"></a>Ejemplo: Especificación de la directiva ELEMENT
+# <a name="example-specifying-the-element-directive"></a>Ejemplo: Especificar la directiva ELEMENT
   Se recupera información de los empleados y se genera XML centrado en elementos como se muestra a continuación:  
   
 ```  
@@ -83,7 +82,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

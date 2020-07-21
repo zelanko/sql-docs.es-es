@@ -1,9 +1,7 @@
 ---
-title: Trabajar con datos JSON en SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 05/14/2019
+title: Uso de datos JSON
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,13 +10,15 @@ helpviewer_keywords:
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc0abe6cb47bff38fd7f8fa63852d6042b9ee9c1
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 380d5d51a5286bac66d89c5d79df34cc3834cf9b
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928466"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423523"
 ---
 # <a name="json-data-in-sql-server"></a>Datos JSON en SQL Server
 
@@ -60,7 +60,7 @@ SQL Server proporciona funciones y operadores integrados que permiten hacer lo s
 En las siguientes secciones se analizan las funcionalidades clave que proporciona SQL Server con su compatibilidad de JSON integrada. Puede ver cómo se usan los operadores y las funciones JSON en el vídeo siguiente:
 
 *SQL Server 2016 and JSON Support* (SQL Server 2016 y compatibilidad con JSON)
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support/player?WT.mc_id=dataexposed-c9-niner]
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Extraer valores de texto JSON y usarlos en consultas
 
@@ -103,7 +103,7 @@ SET @json = JSON_MODIFY(@json, '$.info.address[1].town', 'London');
 SELECT modifiedJson = @json;
 ```
 
-**Resultado**
+**Resultados**
 
 |modifiedJson|  
 |--------|  
@@ -133,12 +133,12 @@ FROM OPENJSON(@json)
   );
 ```
 
-**Resultado**
+**Resultados**
 
-|Id.|firstName|lastName|age|dateOfBirth|  
+|id|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
-|5|Jane|Smith||2005-11-04T12:00:00|  
+|5|Julia|Smith||2005-11-04T12:00:00|  
   
 **OPENJSON** transforma la matriz de objetos JSON en una tabla, donde cada objeto se representa como una fila y los pares clave-valor se devuelven en forma de celdas. El resultado detecta las siguientes reglas:
 
@@ -179,14 +179,14 @@ OUTER APPLY OPENJSON(skills)
 La matriz **aptitudes** se devuelve en la primera `OPENJSON` como el fragmento de texto JSON original y se pasa a otra función `OPENJSON` mediante el operador `APPLY`. La segunda función `OPENJSON` analizará la matriz JSON y los valores de cadena devueltos como un conjunto de filas de una columna única que se combinarán con el resultado de la primera `OPENJSON`.
 El resultado de esta consulta se muestra en la tabla siguiente:
 
-**Resultado**
+**Resultados**
 
-|Id.|firstName|lastName|age|dateOfBirth|aptitudes|  
+|id|firstName|lastName|age|dateOfBirth|aptitudes|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
-|5|Jane|Smith||2005-11-04T12:00:00|SQL|
-|5|Jane|Smith||2005-11-04T12:00:00|C#|
-|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+|5|Julia|Smith||2005-11-04T12:00:00|SQL|
+|5|Julia|Smith||2005-11-04T12:00:00|C#|
+|5|Julia|Smith||2005-11-04T12:00:00|Azure|
 
 `OUTER APPLY OPENJSON` se unirá a la entidad de primer nivel con la submatriz y devolverá un conjunto de resultados sin formato. Debido a JOIN, la segunda fila se repetirá para cada aptitud.
 
@@ -207,7 +207,7 @@ FOR JSON PATH;
 
 El **FOR JSON** cambia el formato de los resultados SQL a texto JSON que podrá usarse en cualquier aplicación que comprenda JSON. En la opción PATH se usan alias separados por puntos en la cláusula SELECT para anidar objetos en los resultados de la consulta.  
   
-**Resultado**
+**Resultados**
 
 ```json  
 [
@@ -374,7 +374,7 @@ El resultado de esta consulta es un texto JSON totalmente compatible con la espe
   
 ## <a name="test-drive-built-in-json-support-with-the-adventureworks-sample-database"></a>Probar la compatibilidad integrada de JSON con la base de datos de ejemplo de AdventureWorks
 
-Para obtener la base de datos de ejemplo de AdventureWorks, descargue al menos el archivo de base de datos y el archivo de ejemplos y scripts desde el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=49502).
+Para obtener la base de datos de ejemplo de AdventureWorks, descargue al menos el archivo de base de datos y el archivo de ejemplos y scripts en [GitHub](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).
 
 Después de restaurar la base de datos de ejemplo en una instancia de SQL Server 2016, extraiga el archivo de ejemplos y abra el archivo *JSON Sample Queries procedures views and indexes.sql* desde la carpeta JSON. Ejecute los scripts de este archivo para cambiar el formato de algunos datos existentes a datos JSON, probar consultas de ejemplo e informes basados en los datos JSON, indexar los datos JSON e importar y exportar JSON.  
   
@@ -403,7 +403,7 @@ Esto es lo que se puede hacer con los scripts incluidos en el archivo:
 Para obtener una introducción visual a la compatibilidad integrada de JSON en SQL Server y Azure SQL Database, vea el siguiente vídeo:
 
 *Using JSON in SQL Server 2016 and Azure SQL Database* (Uso de JSON en SQL Server 2016 y Azure SQL Database)
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player?WT.mc_id=dataexposed-c9-niner]
 
 *Compilar una API de REST con SQL Server mediante funciones JSON*
 > [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]

@@ -1,5 +1,5 @@
 ---
-title: Opciones (página de planes de mantenimiento de los diseñadores) | Microsoft Docs
+title: Opciones (diseñadores-página planes de mantenimiento) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d2f62ecdb772ccb6b9ad4b32386786e68659ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048704"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>Opciones (página de planes de mantenimiento de los diseñadores)
+# <a name="options-designers-maintenance-plans-page"></a>Opciones (diseñadores-página planes de mantenimiento)
   Utilice el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Conectar una nueva forma a la forma seleccionada de manera predeterminada**  
  Cuando se selecciona esta casilla, las nuevas formas se conectan automáticamente a otras formas cuando se agregan a la superficie de diseño. Cuando esta casilla está desactivada, las nuevas formas no se conectan al agregarse. Al activar esta casilla, se habilitan los siguientes cuadros.  
   

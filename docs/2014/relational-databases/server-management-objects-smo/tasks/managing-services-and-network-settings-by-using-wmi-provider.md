@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72796629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996805"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
   El proveedor WMI es una interfaz publicada que la Consola de administración de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MMC) utiliza para administrar los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y protocolos de red. En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> representa el proveedor WMI.  
@@ -30,7 +29,7 @@ ms.locfileid: "72796629"
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- En el caso de los programas que utilizan el proveedor WMI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción `Imports` para certificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
+ En el caso de los programas que utilizan el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor WMI, debe incluir la `Imports` instrucción para certificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -175,5 +174,5 @@ $svc.ServiceState
 "Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos del proveedor WMI de administración de configuración](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

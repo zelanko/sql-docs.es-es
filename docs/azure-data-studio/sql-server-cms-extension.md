@@ -1,23 +1,23 @@
 ---
 title: Extensión Servidores de administración central de SQL Server
-titleSuffix: Azure Data Studio
 description: Instalación y uso de la extensión Servidores de administración central de SQL Server (versión preliminar) para Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/06/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/06/2019
+ms.openlocfilehash: 5c866ee04194bcbb1d26598766483f03019ebb47
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758356"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Extensión Servidores de administración central de SQL Server (versión preliminar)
+
 La extensión Servidores de administración central permite a los usuarios almacenar una lista de instancias de SQL Server organizadas en uno o más grupos. Las acciones que se llevan a cabo mediante un servidor de administración central (CMS) actúan en todos los servidores del grupo.
 
 Esta experiencia está actualmente en su versión preliminar inicial. Puede notificar cualquier problema y solicitar nuevas características [aquí](https://github.com/microsoft/azuredatastudio/issues).
@@ -26,7 +26,7 @@ Esta experiencia está actualmente en su versión preliminar inicial. Puede noti
 
 ## <a name="install-the-sql-server-central-management-servers-extension"></a>Instalación de la extensión Servidores de administración central de SQL Server
 
-1. Para abrir el administrador de extensiones y acceder a las extensiones disponibles, seleccione el icono extensiones, o bien seleccione **Extensiones** en el menú **Ver**.
+1. Para abrir el administrador de extensiones y acceder a las extensiones disponibles, seleccione el icono de extensiones, o bien seleccione **Extensiones** en el menú **Ver**.
 2. Seleccione una extensión disponible para ver sus detalles.
 1. Seleccione la extensión que desee (Servidores de administración central de SQL Server) y seleccione **Instalar**.
 

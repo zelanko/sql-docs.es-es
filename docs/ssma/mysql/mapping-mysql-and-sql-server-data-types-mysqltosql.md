@@ -1,5 +1,5 @@
 ---
-title: Asignación de MySQL y tipos de datos SQL Server (MySQLToSQL) | Microsoft Docs
+title: Asignación de tipos de datos de MySQL y SQL Server (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,74 +13,74 @@ ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908988"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Asignación de tipos de datos de MySQL y de SQL Server (MySQLToSQL)
-Tipos de base de datos MySQL difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tipos de base de datos de SQL Azure. Al convertir los objetos de base de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u objetos de SQL Azure, debe especificar cómo asignar tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en los procedimientos siguientes.  
+Los tipos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos MySQL difieren de o SQL Azure tipos de base de datos. Al convertir objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL en objetos o SQL Azure, debe especificar cómo se asignan los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de MySQL a o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
-SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para ver la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;asignación de tipos&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
-## <a name="type-mapping-inheritance"></a>Tipo de asignación de herencia  
-Puede personalizar las asignaciones de tipos en el nivel de proyecto, el nivel de categoría de objeto (por ejemplo, todos los procedimientos almacenados) o el nivel de objeto. Configuración se hereda del nivel superior, a menos que se invaliden en un nivel inferior. Por ejemplo, si asigna **smallint** a **int** en el nivel de proyecto, todos los objetos en el proyecto usará esta asignación a menos que personalice la asignación en el nivel de objeto o una categoría.  
+## <a name="type-mapping-inheritance"></a>Herencia de asignación de tipos  
+Puede personalizar las asignaciones de tipos en el nivel de proyecto, el nivel de categoría de objeto (como todos los procedimientos almacenados) o el nivel de objeto. La configuración se hereda del nivel superior a menos que se invalide en un nivel inferior. Por ejemplo, si asigna **smallint** a **int** en el nivel de proyecto, todos los objetos del proyecto usarán esta asignación a menos que personalice la asignación en el nivel de objeto o categoría.  
   
-Cuando ve el **Type Mapping** ficha en SSMA, el fondo está codificada por colores para mostrar qué asignaciones de tipos se heredan. El fondo de una asignación de tipo está en amarillo para cualquier asignación de tipo heredado y en blanco para cualquier asignación que se especifica en el nivel actual.  
+Al ver la pestaña **asignación de tipos** en SSMA, el fondo está codificado por colores para mostrar las asignaciones de tipo que se heredan. El fondo de una asignación de tipos es amarillo para cualquier asignación de tipo heredada y blanco para cualquier asignación que se especifique en el nivel actual.  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizar asignaciones de tipos de datos  
   
 -   **Para asignar tipos de datos:**  
   
-    Los procedimientos siguientes muestran cómo asignar tipos de datos en el proyecto, la base de datos o el nivel de objeto de base de datos:  
+    En los procedimientos siguientes se muestra cómo asignar tipos de datos en el nivel de proyecto, base de datos u objeto de base de datos:  
   
-    1.  Para personalizar la asignación de tipos de datos para todo el proyecto, abra el **configuración del proyecto** cuadro de diálogo. En el menú Herramientas, seleccione **configuración del proyecto**.  
+    1.  Para personalizar la asignación de tipos de datos para todo el proyecto, abra el cuadro de diálogo **configuración del proyecto** . En el menú herramientas, seleccione **configuración del proyecto**.  
   
-        En el panel izquierdo, seleccione **Type Mapping**. El gráfico de asignación de tipo y los botones aparecen en el panel derecho.  
+        En el panel izquierdo, seleccione **asignación de tipos**. El gráfico de asignación de tipos y los botones aparecen en el panel derecho.  
   
-    2.  Para personalizar asignaciones de tipos de datos en el nivel de base de datos o tabla, seleccione la tabla o base de datos en el Explorador de metadatos de MySQL. En el Explorador de metadatos de MySQL, seleccione la carpeta o el objeto que se va a personalizar.  
+    2.  Para personalizar las asignaciones de tipos de datos en el nivel de base de datos o de tabla, seleccione la base de datos o la tabla en el explorador de metadatos de MySQL. En el explorador de metadatos de MySQL, seleccione la carpeta o el objeto que desea personalizar.  
   
-        En el panel derecho, haga clic en **Type Mapping**.  
+        En el panel derecho, haga clic en **asignación de tipos**.  
   
--   **Para agregar una nueva asignación, realice lo siguiente:**  
+-   **Para agregar una nueva asignación, haga lo siguiente:**  
   
-    1.  En el panel de asignación de tipo, haga clic en **agregar** .  
+    1.  En el panel asignación de tipos, haga clic en **Agregar** .  
   
-    2.  En el nuevo tipo de cuadro de diálogo de asignación en **tipo de origen**, seleccione el tipo de datos de MySQL para asignar.  
+    2.  En el cuadro de diálogo nueva asignación de tipos, en **tipo de origen**, seleccione el tipo de datos MySQL que desea asignar.  
   
-    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínimo y máximo para la asignación seleccionando la **desde** y **a** casillas de verificación y, a continuación, escriba los valores.  
+    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínima y máxima para la asignación; para ello, active las casillas **desde** y **hasta** y, a continuación, escriba los valores.  
   
-    4.  Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos. En **tipo de destino**, seleccione el tipo de datos de SQL Azure o SQL Server de destino.  
+    4.  Esto le permite personalizar la asignación de datos para valores más pequeños y mayores del mismo tipo de datos. En **tipo de destino**, seleccione el tipo de datos SQL Server o SQL Azure de destino.  
   
-        1.  Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
+        1.  Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-        2.  Algunos tipos requieren un tipo de datos de destino **precisión** y **escala**. Si es necesario, escriba la nueva precisión y escala en la **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
+        2.  Algunos tipos requieren una **escala**y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
--   **Para editar una asignación de tipo, realice lo siguiente:**  
+-   **Para editar una asignación de tipos, haga lo siguiente:**  
   
-    1.  En el panel de asignación de tipo, haga clic en **editar**.  
+    1.  En el panel asignación de tipos, haga clic en **Editar**.  
   
-    2.  En la asignación de tipos de lista en el cuadro de diálogo, **tipo de origen**, seleccione el tipo de datos de MySQL para asignar.  
+    2.  En el cuadro de diálogo lista de asignación de tipos, en **tipo de origen**, seleccione el tipo de datos MySQL que desea asignar.  
   
-    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínimo y máximo para la asignación seleccionando la **desde** y **a** casillas de verificación y, a continuación, escriba los valores.  
+    3.  Si el tipo requiere una longitud, especifique las longitudes de datos mínima y máxima para la asignación; para ello, active las casillas **desde** y **hasta** y, a continuación, escriba los valores.  
   
-    Esto le permite personalizar la asignación de datos para los valores más pequeños y más grandes del mismo tipo de datos. En **tipo de destino**, seleccione el tipo de datos de SQL Azure o SQL Server de destino.  
+    Esto le permite personalizar la asignación de datos para valores más pequeños y mayores del mismo tipo de datos. En **tipo de destino**, seleccione el tipo de datos SQL Server o SQL Azure de destino.  
   
-    1.  Algunos tipos requieren una longitud del tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar**.  
+    1.  Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-    2.  Algunos tipos requieren un tipo de datos de destino **precisión** y **escala** . Si es necesario, escriba la nueva precisión y escala en la **reemplazar con** cuadro y, a continuación, haga clic en **Aceptar** .  
+    2.  Algunos tipos requieren una **escala** y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar** .  
   
--   **Para quitar una asignación de tipos de datos, realice lo siguiente:**  
+-   **Para quitar una asignación de tipo de datos, haga lo siguiente:**  
   
-    1.  En el panel de asignación de tipos, seleccione la fila en la lista de asignación de tipo que contiene la asignación de tipos de datos que desea quitar.  
+    1.  En el panel asignación de tipos, seleccione la fila de la lista asignación de tipos que contiene la asignación de tipo de datos que desea quitar.  
   
     2.  Haga clic en **Quitar**.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-mysql-databases-for-conversion-mysqltosql.md) o [MySQL convertir objetos de base de datos a la sintaxis de SQL Server o SQL Azure](converting-mysql-databases-mysqltosql.md). Si crea un informe, los objetos de MySQL se convierten automáticamente durante la evaluación.  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-mysql-databases-for-conversion-mysqltosql.md) o [convertir los objetos de base de datos MySQL en SQL Server o SQL Azure sintaxis](converting-mysql-databases-mysqltosql.md). Si crea un informe, los objetos de MySQL se convierten automáticamente durante la evaluación.  
   
-## <a name="see-also"></a>Vea también  
-[Bases de datos de migración desde MySQL a SQL Server: base de datos SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Migración de bases de datos de MySQL a SQL Server: Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

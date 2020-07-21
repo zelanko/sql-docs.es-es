@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e3e1dfb6447907caa0bd5970df47fe9989b4aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 64b1800ddd64358a9a6bcc11027391ef258b82a9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972629"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926634"
 ---
 # <a name="setstring-method-long-javalangstring"></a>Método setString (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,13 +50,13 @@ public int setString(long pos,
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setString especifica este método setString en la interfaz java.sql.Clob.  
   
  Los datos de caracteres se sobrescriben tomando como punto de inicio la posición especificada y pueden saturar la longitud inicial del CLOB. Si se especifica un valor position+1, se anexará la cadena. Si especifica valores de position+2 o superiores (o cero o menos), producirán un error de la posición.  
   
 ## <a name="see-also"></a>Consulte también  
- [Método &#40;setString SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
+ [Método setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Clase SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fc588fad85c94f1d04295156a0c6d4de34269ab4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792686"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040216"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Guardar los resultados de un seguimiento en una tabla (SQL Server Profiler)
   En este tema se describe cómo utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para guardar los resultados de un seguimiento en una tabla de base de datos.  
@@ -40,11 +39,11 @@ ms.locfileid: "67792686"
   
 5.  En la lista **Propietario** , seleccione el propietario del seguimiento.  
   
-6.  En la lista **Tabla** , escriba o seleccione el nombre de tabla para los resultados de seguimiento. Haga clic en **Aceptar.**  
+6.  En la lista **Tabla** , escriba o seleccione el nombre de tabla para los resultados de seguimiento. Haga clic en **Aceptar**.  
   
-7.  En el **propiedades de seguimiento** cuadro de diálogo, seleccione el **Establecer número máximo de filas (en miles)** casilla de verificación para especificar el número máximo de filas que se va a guardar.  
+7.  En el cuadro de diálogo **propiedades de seguimiento** , active la casilla establecer número **máximo de filas (en miles)** para especificar el número máximo de filas que se van a guardar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

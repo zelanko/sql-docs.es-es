@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e803e60568030eb105fa52a15bc2c2bc4b3e8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 165a2096a1d34152de6956b56d5273f179faf8ea
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972289"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926465"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>Método setTransactionIsolation (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,8 +52,8 @@ public void setTransactionIsolation(int level)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setTransactionIsolation se especifica mediante el método setTransactionIsolation en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método setTransactionIsolation especifica este método setTransactionIsolation en la interfaz java.sql.Connection.  
   
  No se confirman las transacciones si se llama a este método durante el transcurso de una transacción.  
   

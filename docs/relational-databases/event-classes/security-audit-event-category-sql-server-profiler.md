@@ -1,7 +1,6 @@
 ---
-title: Auditoría de seguridad (categoría de eventos, SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Auditoría de seguridad (categoría de eventos): Profiler'
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -14,15 +13,16 @@ ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0849a7180f6ababe9fa1311473ebcfd994d13b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c7f92e7c56cd6b13527d1d2e658dd04f51c4988f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726197"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Auditoría de seguridad (categoría de eventos, SQL Server Profiler)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La categoría de eventos **Auditoría de seguridad** contiene eventos de auditoría de seguridad.  
   
 ## <a name="in-this-section"></a>En esta sección  
@@ -49,9 +49,9 @@ ms.locfileid: "67911224"
 |[Audit Database Operation (clase de eventos)](../../relational-databases/event-classes/audit-database-operation-event-class.md)|Indica que se han realizado varias operaciones como la notificación de una consulta de punto de comprobación o suscripción.|  
 |[Audit Database Principal Impersonation (clase de eventos)](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|Indica que se ha producido una suplantación en el ámbito de la base de datos.|  
 |[Audit Database Principal Management (clase de eventos)](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|Indica que se han creado, modificado o quitado entidades de seguridad en una base de datos.|  
-|[Audit Database Scope GDR (clase de eventos)](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Indica que un usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ha emitido una instrucción GRANT, REVOKE o DENY para un permiso de instrucción.|  
+|[Audit Database Scope GDR (clase de eventos)](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Indica que un usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha emitido una instrucción GRANT, REVOKE o DENY para un permiso de instrucción.|  
 |[Audit DBCC (clase de eventos)](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indica que se ha emitido un comando DBCC.|  
-|[Clase de eventos Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica que se ha producido un evento de texto completo.|  
+|[Audit Fulltext (clase de eventos)](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica que se ha producido un evento de texto completo.|  
 |[Audit Login Change Password (clase de eventos)](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica que un usuario ha cambiado su contraseña de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Audit Login Change Property (clase de eventos)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica que se ha usado **sp_defaultdb**, **sp_defaultlanguage**o ALTER LOGIN para modificar una propiedad de un inicio de sesión.|  
 |[Audit Login (clase de eventos)](../../relational-databases/event-classes/audit-login-event-class.md)|Indica que un usuario ha iniciado una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

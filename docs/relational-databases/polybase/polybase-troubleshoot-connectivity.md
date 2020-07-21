@@ -1,5 +1,6 @@
 ---
 title: Solución de problemas de conectividad de Kerberos con PolyBase | Microsoft Docs
+description: Para solucionar problemas de autenticación de PolyBase con un clúster de Hadoop protegido con Kerberos, puede usar el diagnóstico interactivo integrado en PolyBase.
 author: alazad-msft
 ms.author: alazad
 ms.reviewer: mikeray
@@ -10,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909150"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196200"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 
@@ -30,7 +31,7 @@ Este artículo sirve como guía para describir el proceso de depuración de ese 
 > Esta herramienta le ayudará a evitar incidencias que no son de SQL Server, para ayudarle a concentrarse en la resolución de problemas de instalación de HDFS de Kerberos, en especial la identificación de incidencias de errores de configuración de nombre de usuario y contraseña, y de instalación de clúster de Kerberos.      
 > Esta herramienta es completamente independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Está disponible como Jupyter Notebook y requiere Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6 / [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3 / [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] o superior con PolyBase instalado
 1. Un clúster de Hadoop (Cloudera o Hortonworks) protegido con Kerberos (Active Directory o MIT)
@@ -51,11 +52,11 @@ En PolyBase, cuando se solicita autenticación con respecto a cualquier recurso 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve al Centro de distribución de claves, devuelve el TGT y solicita un ST para acceder a ese recurso protegido concreto. El ST se cifra con la clave privada del servicio protegido.
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desvía el ST a Hadoop y se autentica para que se cree una sesión sobre ese servicio.
 
-![](./media/polybase-sqlserver.png)
+![Polybase SQL Server](./media/polybase-sqlserver.png)
 
 Los problemas con la autenticación pertenecen a uno o más de los cuatro pasos mencionados. Para facilitar una depuración más rápida, PolyBase introdujo una herramienta de diagnóstico integrada para permitir la identificación del punto de error.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 PolyBase tiene los siguientes archivos XML de configuración que contienen las propiedades del clúster de Hadoop:
 
@@ -88,6 +89,8 @@ Actualice **core-site.xml** y agregue las tres propiedades siguientes. Establezc
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> El valor de la propiedad `polybase.kerberos.realm` debe estar en mayúsculas.
 
 Los otros XML también se deberán actualizar más adelante si se desean operaciones de inserción pero, con solo este archivo configurado, al menos se debería poder acceder al sistema de archivos HDFS.
 
@@ -104,7 +107,7 @@ La herramienta se ejecuta de forma independiente a [!INCLUDE[ssNoVersion](../../
 | --- | --- |
 | *Dirección del nodo de nombre* | La dirección IP o el nombre de dominio completo del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL.|
 | *Puerto del nodo de nombre* | El puerto del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL. Por ejemplo, 8020. |
-| *Entidad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
+| *Entidad de seguridad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Contraseña del servicio* | En lugar de escribir la contraseña en la consola, almacénela en un archivo y pase aquí la ruta de acceso al archivo. El contenido del archivo debe coincidir con el que use como argumento "SECRET" en `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
 | *Ruta de acceso al archivo HDFS remoto (opcional)* | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
 
@@ -229,7 +232,7 @@ Resulta útil tener cierta experiencia en Java para revisar los registros y depu
 
 Si sigue teniendo problemas para acceder a Kerberos, siga los pasos que hay a continuación para depurar:
 
-1. Asegúrese de que puede acceder a los datos de HDFS de Kerberos desde fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede elegir entre lo siguiente: 
+1. Asegúrese de que puede acceder a los datos de HDFS de Kerberos desde fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede: 
 
     - Escribir su propio programa de Java, o
     - Usar la clase `HdfsBridge` desde la carpeta de instalación de PolyBase. Por ejemplo:
@@ -249,7 +252,7 @@ Si sigue teniendo problemas para acceder a Kerberos, siga los pasos que hay a co
 
 4. Si el Centro de distribución de claves solo puede admitir AES256, asegúrese de que los [archivos de directiva de JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) estén instalados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication) (Integración de PolyBase con Cloudera mediante Autenticación de Active Directory)  
 [Cloudera's Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html) (Guía de Cloudera para configurar Kerberos para CDH)  
 [Hortonworks' Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html) (Guía de Hortonworks para configurar Kerberos para HDP)  

@@ -1,5 +1,5 @@
 ---
-title: Función InScope (Generador de informes y SSRS) | Microsoft Docs
+title: Función InScope (Generador de informes) | Microsoft Docs
 ms.date: 03/08/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 02ba83e15f22e28d3378996c98af4468ae425366
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579504"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081260"
 ---
 # <a name="report-builder-functions---inscope-function"></a>Funciones del Generador de informes: función InScope
   Indica si la instancia actual de un elemento se encuentra en el ámbito especificado.  
@@ -28,13 +28,13 @@ InScope(scope)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (**Cadena**) Nombre de un conjunto de datos, una región de datos o un grupo que especifica un ámbito.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un **Boolean**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **InScope** comprueba si el ámbito de la instancia actual de un elemento de informe pertenece al ámbito especificado por el parámetro *scope*.  
   
  *Scope* no puede ser una expresión.  

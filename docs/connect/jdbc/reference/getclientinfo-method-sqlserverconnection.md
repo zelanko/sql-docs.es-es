@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 241536e1-fae6-4980-85a5-d8cfcd50b8bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e35e2a640d65e72ab7c956999e7e0b7795ce643
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bab0330b1ea77ec09d02a0762fb1d927f4907004
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907485"
 ---
 # <a name="getclientinfo-method-sqlserverconnection"></a>Método getClientInfo (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

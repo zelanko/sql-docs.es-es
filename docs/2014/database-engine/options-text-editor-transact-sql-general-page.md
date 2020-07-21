@@ -1,5 +1,5 @@
 ---
-title: Opciones (Editor de texto - página General-Transact-SQL) | Microsoft Docs
+title: Opciones (editor de texto-Transact-SQL-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 513fe574fa19d743a69b7c92943d04e44d7f3334
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929796"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>Opciones (Editor de texto - página General-Transact-SQL)
-  Utilice el cuadro de diálogo **General** para cambiar el comportamiento general de la edición del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para modificar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **Transact-SQL** y luego haga clic en **General**.  
+# <a name="options-text-editor---transact-sql--general-page"></a>Opciones (editor de texto-Transact-SQL-página general)
+  Utilice el cuadro de diálogo **General** para cambiar el comportamiento general de la edición del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para modificar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas**, expanda la subcarpeta **Transact-SQL** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
  Las opciones del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] también se pueden establecer en el cuadro de diálogo **General de Todos los idiomas** . Si utiliza los cuadros de diálogo **Todos los lenguajes** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] mediante este cuadro de diálogo.  
@@ -34,7 +33,7 @@ ms.locfileid: "66089170"
  **Ocultar miembros avanzados**  
  Esta casilla no está disponible.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  Cuando se selecciona esta casilla, se muestra información sobre los parámetros para una función o un procedimiento almacenado que se encuentre inmediatamente a la izquierda del punto de inserción (cursor). Esta información incluye una lista de todos los parámetros disponibles con sus nombres y tipos de datos.  
   
 ## <a name="settings"></a>Configuración  
@@ -47,7 +46,7 @@ ms.locfileid: "66089170"
  **Mostrar glifos visuales para ajuste de línea**  
  Cuando esta casilla está activada, aparecerá un indicador de flecha de retorno donde una línea larga se ajusta respecto a la línea siguiente.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
+ **Aplicar comandos Cortar o Copiar a líneas en blanco si no hay selección**  
  Esta casilla establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  
@@ -63,7 +62,7 @@ ms.locfileid: "66089170"
 > [!NOTE]  
 >  Estos números de línea no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Habilitar navegación a direcciones URL con un solo clic**  
+ **Habilitar acceso a direcciones URL con un solo clic**  
  Cuando se selecciona esta casilla, el cursor cambia a una mano cuando pasa por encima de una dirección URL en el editor. Puede hacer clic en la dirección URL para abrir la página indicada en el explorador web.  
   
  **Barra de navegación**  

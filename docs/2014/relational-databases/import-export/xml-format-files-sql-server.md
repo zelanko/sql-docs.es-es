@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cc1e8de30fa582898ef8516b9767dec14c4fa81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050459"
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona un esquema XML que define la sintaxis para escribir *archivos de formato XML* que se usarán para la importación masiva de datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los archivos de formato XML deben adherirse a este esquema, que se define en el lenguaje de definición de esquemas XML (XSDL). Los archivos con formato XML solamente se admiten cuando se instalan herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -31,7 +30,7 @@ ms.locfileid: "66011554"
   
 
   
-##  <a name="BenefitsOfXmlFFs"></a> Ventajas de los archivos de formato XML  
+##  <a name="benefits-of-xml-format-files"></a><a name="BenefitsOfXmlFFs"></a> Ventajas de los archivos de formato XML  
   
 -   Los archivos de formato XML son autodescriptivos, lo que facilita su lectura, creación y ampliación. Los usuarios pueden leerlos, lo que facilita la comprensión del modo en que se interpretan los datos durante las operaciones masivas.  
   
@@ -52,39 +51,39 @@ ms.locfileid: "66011554"
     > [!NOTE]  
     >  Es necesaria una tabla de destino con el comando **bcp** y la instrucción BULK INSERT, que usa las columnas de la tabla de destino para realizar la conversión de tipos.  
   
-##  <a name="StructureOfXmlFFs"></a> Estructura de los archivos de formato XML  
+##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> Estructura de los archivos de formato XML  
  Al igual que un archivo de formato no XML, un archivo de formato XML define el formato y la estructura de los campos de datos de un archivo de datos y asigna dichos campos a columnas de una sola tabla de destino.  
   
- Un archivo de formato XML posee dos componentes principales, \<RECORD> y \<ROW>:  
+ Un archivo de formato XML posee dos componentes principales \<RECORD> y \<ROW> :  
   
--   \<RECORD> describe los datos tal como se almacenan en el archivo de datos.  
+-   \<RECORD>describe los datos tal como se almacenan en el archivo de datos.  
   
-     Cada elemento \<RECORD> contiene un conjunto de uno o más elementos \<FIELD>. Dichos elementos corresponden a los campos del archivo de datos. La sintaxis básica es la siguiente:  
+     Cada \<RECORD> elemento contiene un conjunto de uno o varios \<FIELD> elementos. Dichos elementos corresponden a los campos del archivo de datos. La sintaxis básica es la siguiente:  
   
      \<RECORD>  
   
-     \<FIELD .../> [ ...*n* ]  
+     \<FIELD .../>[ ... *n* ]  
   
      \</RECORD>  
   
-     Cada elemento \<FIELD> describe el contenido de un determinado campo de datos. Un campo solo puede asignarse a una columna de la tabla. No es necesario asignar todos los campos a columnas.  
+     Cada \<FIELD> elemento describe el contenido de un campo de datos específico. Un campo solo puede asignarse a una columna de la tabla. No es necesario asignar todos los campos a columnas.  
   
      Un campo de un archivo de datos puede tener una longitud fija o variable, o bien terminar mediante un carácter. Un *valor de campo* puede representarse como: un carácter (mediante una representación de un solo byte), un carácter ancho (mediante la representación Unicode de dos bytes), un formato de base de datos nativo o un nombre de archivo. Si un valor de campo se representa como un nombre de archivo, éste apunta al archivo que contiene el valor de una columna BLOB en la tabla de destino.  
   
--   \<ROW> describe el modo de construir filas de datos a partir de un archivo de datos cuando los datos del archivo se importan en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   \<ROW>describe cómo construir filas de datos a partir de un archivo de datos cuando los datos del archivo se importan en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla.  
   
-     Un elemento \<ROW> contiene un conjunto de elementos \<COLUMN>. Estos elementos corresponden a las columnas de la tabla. La sintaxis básica es la siguiente:  
+     Un \<ROW> elemento contiene un conjunto de \<COLUMN> elementos. Estos elementos corresponden a las columnas de la tabla. La sintaxis básica es la siguiente:  
   
      \<ROW>  
   
-     \<COLUMN .../> [ ...*n* ]  
+     \<COLUMN .../>[ ... *n* ]  
   
      \</ROW>  
   
-     Cada elemento \<COLUMN> puede asignarse únicamente a un campo del archivo de datos. El orden de los elementos \<COLUMN> del elemento \<ROW> define el orden en el que la operación masiva los devuelve. El archivo de formato XML asigna a cada elemento \<COLUMN> un nombre local que no tiene ninguna relación con la columna de la tabla de destino de una operación de importación en bloque.  
+     Cada \<COLUMN> elemento se puede asignar a un solo campo en el archivo de datos. El orden de los \<COLUMN> elementos en el \<ROW> elemento define el orden en el que la operación masiva los devuelve. El archivo de formato XML asigna a cada \<COLUMN> elemento un nombre local que no tiene ninguna relación con la columna de la tabla de destino de una operación de importación masiva.  
   
-##  <a name="SchemaSyntax"></a> Sintaxis de esquema para archivos de formato XML  
- Esta sección contiene un resumen de los elementos y atributos del esquema XML para archivos de formato XML. La sintaxis de un archivo de formato es independiente de la dirección de la operación; es decir, la sintaxis es la misma para exportaciones e importaciones masivas. En esta sección también se trata cómo la importación en bloque usa los elementos \<ROW> y \<COLUMN> y cómo colocar el valor xsi:type de un elemento en un conjunto de datos.  
+##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> Sintaxis de esquema para archivos de formato XML  
+ Esta sección contiene un resumen de los elementos y atributos del esquema XML para archivos de formato XML. La sintaxis de un archivo de formato es independiente de la dirección de la operación; es decir, la sintaxis es la misma para exportaciones e importaciones masivas. En esta sección también se considera cómo la importación en bloque usa los \<ROW> \<COLUMN> elementos y y cómo colocar el valor xsi: Type de un elemento en un conjunto de datos.  
   
  Para ver cómo la sintaxis corresponde a los archivos de formato XML reales, vea [Archivos de formato XML de ejemplo](#SampleXmlFFs), más adelante en este tema.  
   
@@ -93,8 +92,8 @@ ms.locfileid: "66011554"
   
   
   
-###  <a name="BasicSyntax"></a> Sintaxis básica del esquema XML  
- Las instrucciones de esta sintaxis muestran solo los elementos (\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW> y \<COLUMN>) y sus atributos básicos.  
+###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> Sintaxis básica del esquema XML  
+ Estas instrucciones de sintaxis muestran solo los elementos ( \<BCPFORMAT> , \<RECORD> , \<FIELD> , \<ROW> y \<COLUMN> ) y sus atributos básicos.  
   
  \<BCPFORMAT ...>  
   
@@ -117,76 +116,76 @@ ms.locfileid: "66011554"
  \</BCPFORMAT>  
   
 > [!NOTE]  
->  Los atributos adicionales asociados al valor de xsi:type en un elemento \<FIELD> o \<COLUMN> se describen más adelante en este tema.  
+>  Los atributos adicionales asociados al valor de xsi: Type en un \<FIELD> \<COLUMN> elemento o se describen más adelante en este tema.  
   
 
   
-####  <a name="SchemaElements"></a> Elementos de esquema  
+####  <a name="schema-elements"></a><a name="SchemaElements"></a> Elementos de esquema  
  En esta sección se resume la finalidad de cada elemento que define el esquema XML para los archivos de formato XML. Los atributos se describen más adelante, en otras secciones de este tema.  
   
- \<BCPFORMAT >  
+ \<BCPFORMAT>  
  Es el elemento de archivo de formato que define la estructura de los registros de un determinado archivo de datos y su correspondencia con las columnas de una fila de tabla en la tabla.  
   
  \<RECORD .../>  
- Define un elemento complejo que contiene uno o más elementos \<FIELD>. El orden en que se declaran los campos en el archivo de formato es el orden en que estos campos aparecen en el archivo de datos.  
+ Define un elemento complejo que contiene uno o más \<FIELD> elementos. El orden en que se declaran los campos en el archivo de formato es el orden en que estos campos aparecen en el archivo de datos.  
   
  \<FIELD .../>  
  Define un campo del archivo de datos que contiene datos.  
   
- Los atributos de este elemento se tratan en la sección [Atributos del elemento \<FIELD>](#AttrOfFieldElement) más adelante en este tema.  
+ Los atributos de este elemento se tratan en los [atributos del \<FIELD> elemento](#AttrOfFieldElement), más adelante en este tema.  
   
  \<ROW .../>  
- Define un elemento complejo que contiene uno o más elementos \<COLUMN>. El orden de los elementos \<COLUMN> es independiente del orden de los elementos \<FIELD> de una definición RECORD. Más bien, el orden de los elementos \<COLUMN> de un archivo de formato determina el orden de las columnas del conjunto de filas resultante. Los campos de datos se cargan en el orden en que los elementos \<COLUMN> correspondientes se declaran en el elemento \<COLUMN>.  
+ Define un elemento complejo que contiene uno o más \<COLUMN> elementos. El orden de los \<COLUMN> elementos es independiente del orden de los \<FIELD> elementos de una definición de registro. En su lugar, el orden de los \<COLUMN> elementos en un archivo de formato determina el orden de las columnas del conjunto de filas resultante. Los campos de datos se cargan en el orden en que \<COLUMN> se declaran los elementos correspondientes en el \<COLUMN> elemento.  
   
- Para obtener más información, consulte la sección [Cómo usa la importación en bloque el elemento \<ROW>](#HowUsesROW) más adelante en este tema.  
+ Para obtener más información, vea [cómo utiliza la importación masiva el \<ROW> elemento](#HowUsesROW), más adelante en este tema.  
   
  \<COLUMN>  
- Define una columna como elemento (\<COLUMN>). Cada elemento \<COLUMN> corresponde a un elemento \<FIELD> (cuyo identificador se especifica en el atributo SOURCE del elemento \<COLUMN>).  
+ Define una columna como elemento ( \<COLUMN> ). Cada \<COLUMN> elemento corresponde a un \<FIELD> elemento (cuyo identificador se especifica en el atributo de origen del \<COLUMN> elemento).  
   
- Los atributos de este elemento se tratan en la sección [Atributos del elemento \<COLUMN>](#AttrOfColumnElement) más adelante en este tema. Consulte también [Cómo usa la importación en bloque el elemento \<COLUMN>](#HowUsesColumn) más adelante en este tema.  
+ Los atributos de este elemento se tratan en los [atributos del \<COLUMN> elemento](#AttrOfColumnElement), más adelante en este tema. Vea también [Cómo usa la importación masiva el \<COLUMN> elemento](#HowUsesColumn), más adelante en este tema.  
   
  \</BCPFORMAT>  
  Obligatorio para finalizar el archivo de formato.  
   
-####  <a name="AttrOfFieldElement"></a> Atributos del elemento \<FIELD>  
- En esta sección se describen los atributos del elemento \<FIELD>, que se resumen en la sintaxis de esquema siguiente:  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>Atributos del \<FIELD> elemento  
+ En esta sección se describen los atributos del \<FIELD> elemento, que se resumen en la sintaxis de esquema siguiente:  
   
  <FIELD  
   
- ID **=" *`fieldID`* "**  
+ ID **= " *`fieldID`* "**  
   
- xsi **:** type **=" *`fieldType`* "**  
+ XSi **:** Type **= " *`fieldType`* "**  
   
- [ LENGTH **=" *`n`* "** ]  
+ [ LENGTH **="*`n`*"** ]  
   
- [ PREFIX_LENGTH **=" *`p`* "** ]  
+ [PREFIX_LENGTH **= " *`p`* "** ]  
   
- [ MAX_LENGTH **=" *`m`* "** ]  
+ [MAX_LENGTH **= " *`m`* "** ]  
   
- [ COLLATION **=" *`collationName`* "** ]  
+ [COLLAtion **= " *`collationName`* "** ]  
   
- [ TERMINATOR **=" *`terminator`* "** ]  
+ [TERMINATOR **= " *`terminator`* "** ]  
   
  />  
   
- Cada elemento \<FIELD> es independiente de los demás. Un campo se describe según los atributos siguientes:  
+ Cada \<FIELD> elemento es independiente de los demás. Un campo se describe según los atributos siguientes:  
   
 |Atributo de FIELD|Descripción|Opcional /<br /><br /> Obligatorio|  
 |---------------------|-----------------|------------------------------|  
-|ID **=" *`fieldID`* "**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> < FIELD ID **= " *`fieldID`* "** / > se asigna a < COLUMN SOURCE **= " *`fieldID`* "** />|Obligatorio|  
-|xsi:type **=" *`fieldType`* "**|Es una construcción XML (utilizada como atributo) que identifica el tipo de la instancia del elemento. El valor de *fieldType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.|Obligatorio (en función del tipo de datos)|  
-|LENGTH **=" *`n`* "**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
-|PREFIX_LENGTH **=" *`p`* "**|Este atributo define la longitud del prefijo para una representación de datos binarios. El valor de PREFIX_LENGTH, *p*, debe ser uno de los siguientes: 1, 2, 4 u 8.|Opcional a no ser que el valor de xsi:type lo requiera|  
-|MAX_LENGTH **= " *`m`* "**|Este atributo es el número máximo de bytes que se pueden almacenar en un campo determinado. Sin una tabla de destino, la longitud máxima de la columna se desconoce. El atributo MAX_LENGTH restringe la longitud máxima de una columna de caracteres de salida y limita el almacenamiento asignado al valor de la columna. Esto resulta especialmente útil al usar la opción BULK de la función OPENROWSET en una cláusula SELECT FROM.<br /><br /> El valor de *m* debe ser un entero positivo. De forma predeterminada, la longitud máxima es de 8.000 caracteres para una columna **char** y de 4.000 caracteres para una columna **nchar** .|Opcional|  
-|INTERCALACIÓN **= " *`collationName`* "**|COLLATION solo se permite para campos de caracteres. Para ver una lista de los nombres de intercalación de SQL, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Opcional|  
-|TERMINADOR **= " *`terminator`* "**|Este atributo especifica el terminador de un campo de datos. El terminador puede ser cualquier carácter. Debe ser un carácter único que no forme parte de los datos.<br /><br /> De forma predeterminada, el terminador del campo es el carácter de tabulación (representado como \t). Para representar una marca de párrafo, utilice \r\n.|Solo se usa con xsi:type de datos de caracteres, que requiere este atributo|  
+|ID **= " *`fieldID`* "**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> <ID. de campo **= " *`fieldID`* "**/> se asigna a <columna source **= " *`fieldID`* "**/>|Requerido|  
+|xsi: Type **= " *`fieldType`* "**|Es una construcción XML (utilizada como atributo) que identifica el tipo de la instancia del elemento. El valor de *fieldType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.|Obligatorio (en función del tipo de datos)|  
+|LONGITUD **= " *`n`* "**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
+|PREFIX_LENGTH **= " *`p`* "**|Este atributo define la longitud del prefijo para una representación de datos binarios. El valor de PREFIX_LENGTH, *p*, debe ser uno de los siguientes: 1, 2, 4 u 8.|Opcional a no ser que el valor de xsi:type lo requiera|  
+|MAX_LENGTH **= " *`m`* "**|Este atributo es el número máximo de bytes que se pueden almacenar en un campo determinado. Sin una tabla de destino, la longitud máxima de la columna se desconoce. El atributo MAX_LENGTH restringe la longitud máxima de una columna de caracteres de salida y limita el almacenamiento asignado al valor de la columna. Esto resulta especialmente útil al usar la opción BULK de la función OPENROWSET en una cláusula SELECT FROM.<br /><br /> El valor de *m* debe ser un entero positivo. De forma predeterminada, la longitud máxima es de 8.000 caracteres para una columna **char** y de 4.000 caracteres para una columna **nchar** .|Opcionales|  
+|COLLAtion **= " *`collationName`* "**|COLLATION solo se permite para campos de caracteres. Para ver una lista de los nombres de intercalación de SQL, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Opcional|  
+|TERMINATOR **= " *`terminator`* "**|Este atributo especifica el terminador de un campo de datos. El terminador puede ser cualquier carácter. Debe ser un carácter único que no forme parte de los datos.<br /><br /> De forma predeterminada, el terminador del campo es el carácter de tabulación (representado como \t). Para representar una marca de párrafo, utilice \r\n.|Solo se usa con xsi:type de datos de caracteres, que requiere este atributo|  
   
-#####  <a name="XsiTypeValuesOfFIELD"></a> Valores xsi:type del elemento \<FIELD>  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>Valores xsi: Type del \<FIELD> elemento  
  El valor xsi:type es una construcción XML (usada como atributo) que identifica el tipo de datos de una instancia de un elemento. Para obtener más información acerca de su uso, vea "Colocar el valor xsi:type en un conjunto de datos", más adelante en este tema.  
   
- El valor xsi:type del elemento \<FIELD> admite los siguientes tipos de datos.  
+ El valor xsi: Type del \<FIELD> elemento admite los siguientes tipos de datos.  
   
-|Valores xsi:type de \<FIELD>|Atributos XML obligatorios<br /><br /> para el tipo de datos|Atributos XML opcionales<br /><br /> para el tipo de datos|  
+|\<FIELD>valores xsi: Type|Atributos XML obligatorios<br /><br /> para el tipo de datos|Atributos XML opcionales<br /><br /> para el tipo de datos|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
 |**NativeFixed**|`LENGTH`|Ninguno.|  
 |**NativePrefix**|`PREFIX_LENGTH`|MAX_LENGTH|  
@@ -197,10 +196,10 @@ ms.locfileid: "66011554"
 |**CharTerm**|`TERMINATOR`|MAX_LENGTH, COLLATION|  
 |**NCharTerm**|`TERMINATOR`|MAX_LENGTH, COLLATION|  
   
- Para obtener más información sobre los tipos de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
+ Para obtener más información sobre los tipos de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
-####  <a name="AttrOfColumnElement"></a> Atributos del elemento \<COLUMN>  
- En esta sección se describen los atributos del elemento \<COLUMN>, que se resumen en la sintaxis de esquema siguiente:  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>Atributos del \<COLUMN> elemento  
+ En esta sección se describen los atributos del \<COLUMN> elemento, que se resumen en la sintaxis de esquema siguiente:  
   
  \<COLUMN  
   
@@ -224,24 +223,24 @@ ms.locfileid: "66011554"
   
  Un campo se asigna a una columna de la tabla de destino mediante los atributos siguientes:  
   
-|Atributo de COLUMN|Descripción|Opcional /<br /><br /> Obligatorio|  
+|Atributo de COLUMN|Descripción|Opcional /<br /><br /> Requerido|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **=" *`fieldID`* "**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> < COLUMN SOURCE **= " *`fieldID`* "** / > se asigna a < FIELD ID **= " *`fieldID`* "** />|Obligatorio|  
+|SOURCE **= " *`fieldID`* "**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> <columna source **= " *`fieldID`* "**/> se asigna a <ID. de campo **= " *`fieldID`* "**/>|Obligatorio|  
 |NAME = "*columnName*"|Especifica el nombre de la columna en el conjunto de filas representado por el archivo de formato. Este nombre de columna se utiliza para identificar la columna en el conjunto de resultados y no es necesario que corresponda al nombre de columna usado en la tabla de destino.|Obligatorio|  
-|xsi **:** type **=" *`ColumnType`* "**|Es una construcción XML (utilizada como atributo) que identifica el tipo de datos de la instancia del elemento. El valor de *ColumnType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.<br /><br /> Nota: Los valores posibles de *ColumnType* y sus atributos asociados aparecen en la tabla siguiente.|Opcional|  
-|LENGTH **=" *`n`* "**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
-|PRECISION **=" *`n`* "**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
-|SCALE **=" *`int`* "**|Indica el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una escala de 2.<br /><br /> El valor debe ser un entero.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
+|XSi **:** Type **= " *`ColumnType`* "**|Es una construcción XML (utilizada como atributo) que identifica el tipo de datos de la instancia del elemento. El valor de *ColumnType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.<br /><br /> Nota: los valores posibles de *ColumnType* y sus atributos asociados se muestran en la tabla siguiente.|Opcionales|  
+|LONGITUD **= " *`n`* "**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
+|PRECISION **="*`n`*"**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
+|ESCALA **= " *`int`* "**|Indica el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una escala de 2.<br /><br /> El valor debe ser un entero.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Indica si una columna puede aceptar valores NULL. Este atributo es completamente independiente de FIELDS. No obstante, si una columna tiene el valor de NULLABLE establecido en NO y el campo especifica NULL (es decir, no especifica ningún valor), se produce un error de tiempo de ejecución.<br /><br /> El atributo NULLABLE solo se usa si escribe una instrucción SELECT FROM OPENROWSET(BULK...) simple.|Opcional (disponible para cualquier tipo de datos)|  
   
-#####  <a name="XsiTypeValuesOfCOLUMN"></a> Valores xsi:type del elemento \<COLUMN>  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>Valores xsi: Type del \<COLUMN> elemento  
  El valor xsi:type es una construcción XML (usada como atributo) que identifica el tipo de datos de una instancia de un elemento. Para obtener más información acerca de su uso, vea "Colocar el valor xsi:type en un conjunto de datos", más adelante en este tema.  
   
- El elemento \<COLUMN> admite tipos de datos SQL nativos, de la forma siguiente:  
+ El \<COLUMN> elemento admite los tipos de datos nativos de SQL, como se indica a continuación:  
   
-|Categoría de tipo|Tipos de datos de \<COLUMN>|Atributos XML obligatorios<br /><br /> para el tipo de datos|Atributos XML opcionales<br /><br /> para el tipo de datos|  
+|Categoría de tipo|\<COLUMN>Tipos de datos|Atributos XML obligatorios<br /><br /> para el tipo de datos|Atributos XML opcionales<br /><br /> para el tipo de datos|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fixed|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` y `SQLUNIQUEID`|Ninguno.|NULLABLE|  
+|Corregido|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` y `SQLUNIQUEID`|Ninguno.|NULLABLE|  
 |Número de variable|`SQLDECIMAL` y `SQLNUMERIC`|Ninguno.|NULLABLE, PRECISION, SCALE|  
 |LOB|`SQLIMAGE`, `CharLOB`, `SQLTEXT` y `SQLUDT`.|Ninguno.|NULLABLE|  
 |LOB de caracteres|`SQLNTEXT`|Ninguno.|NULLABLE|  
@@ -253,24 +252,24 @@ ms.locfileid: "66011554"
   
  Para obtener más información sobre los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
-###  <a name="HowUsesROW"></a> Cómo usa la importación en bloque el elemento \<ROW>  
- El elemento \<ROW> se omite en algunos contextos. El hecho de que un elemento \<ROW> afecte a una operación de importación en bloque depende de cómo se realice la operación:  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a>Cómo usa la importación masiva el \<ROW> elemento  
+ El \<ROW> elemento se omite en algunos contextos. El hecho de que el \<ROW> elemento afecte a una operación de importación masiva depende de cómo se realice la operación:  
   
 -   Comando **bcp**  
   
-     Al cargar datos en una tabla de destino, **bcp** omite al componente \<ROW>. En su lugar, **bcp** carga los datos en función de los tipos de columnas de la tabla de destino.  
+     Cuando los datos se cargan en una tabla de destino, **BCP** omite el \<ROW> componente. En su lugar, **bcp** carga los datos en función de los tipos de columnas de la tabla de destino.  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones (proveedor de conjuntos de filas BULK de BULK INSERT y OPENROWSET)  
   
-     Al realizar una importación en bloque de datos en una tabla, las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] usan el componente \<ROW> para generar el conjunto de filas de entrada. Además, las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] realizan las conversiones de tipos adecuadas en función de los tipos de columna especificados en \<ROW> y de la columna correspondiente en la tabla de destino. Si los tipos de columna especificados en el archivo de formato y la tabla de destino no coinciden, se realiza una conversión de tipo adicional. Esta conversión de tipo adicional puede llevar a discrepancias (es decir, a una pérdida de precisión) en cuanto al comportamiento en el proveedor de conjuntos de filas BULK de OPENROWSET o BULK INSERT en comparación con **bcp**.  
+     Cuando se importan datos de forma masiva en una tabla, las [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones usan el \<ROW> componente para generar el conjunto de filas de entrada. Además, las [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones realizan conversiones de tipos adecuadas basadas en los tipos de columna especificados en \<ROW> y en la columna correspondiente de la tabla de destino. Si los tipos de columna especificados en el archivo de formato y la tabla de destino no coinciden, se realiza una conversión de tipo adicional. Esta conversión de tipo adicional puede llevar a discrepancias (es decir, a una pérdida de precisión) en cuanto al comportamiento en el proveedor de conjuntos de filas BULK de OPENROWSET o BULK INSERT en comparación con **bcp**.  
   
-     La información del elemento \<ROW> permite construir una fila sin necesidad de información adicional. Por este motivo, puede generar un conjunto de filas mediante una instrucción SELECT (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
+     La información del \<ROW> elemento permite construir una fila sin necesidad de información adicional. Por este motivo, puede generar un conjunto de filas mediante una instrucción SELECT (SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*).  
   
     > [!NOTE]  
     >  La cláusula OPENROWSET BULK requiere un archivo de formato (tenga en cuenta que solo se puede convertir desde el tipo de datos del campo al tipo de datos de una columna con un archivo de formato XML).  
   
-###  <a name="HowUsesColumn"></a> Cómo usa la importación en bloque el elemento \<COLUMN>  
- Para realizar una importación en bloque de datos en una tabla, los elementos \<COLUMN> de un archivo de formato asignan un campo de archivo de datos a columnas de tabla al especificar:  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a>Cómo usa la importación masiva el \<COLUMN> elemento  
+ Para la importación masiva de datos en una tabla, los \<COLUMN> elementos de un archivo de formato asignan un campo de archivo de datos a las columnas de la tabla especificando:  
   
 -   La posición de cada campo dentro de una fila del archivo de datos.  
   
@@ -278,9 +277,9 @@ ms.locfileid: "66011554"
   
  Si un campo no tiene asignada ninguna columna, el campo no se copia en las filas generadas. Este comportamiento permite a un archivo de datos generar filas con distintas columnas (en tablas diferentes).  
   
- De forma similar, para exportar de forma masiva datos de una tabla, cada elemento \<COLUMN> del archivo de formato asigna la columna de la fila de la tabla de entrada a su campo correspondiente en el archivo de datos de salida.  
+ De forma similar, para exportar datos de forma masiva desde una tabla, cada \<COLUMN> en el archivo de formato asigna la columna de la fila de la tabla de entrada a su campo correspondiente en el archivo de datos de salida.  
   
-###  <a name="PutXsiTypeValueIntoDataSet"></a> Colocar el valor xsi:type en un conjunto de datos  
+###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> Colocar el valor xsi:type en un conjunto de datos  
  Si un documento XML se valida con el lenguaje de definición de esquema XML (XSD), el valor xsi:type no se coloca en el conjunto de datos. No obstante, puede colocar la información de xsi:type en el conjunto de datos si carga el archivo de formato XML en un documento XML (por ejemplo, `myDoc`), tal como ilustra el siguiente fragmento de código:  
   
 ```  
@@ -294,7 +293,7 @@ for(int i=0;i<ColumnList.Count;i++)
 }  
 ```  
   
-##  <a name="SampleXmlFFs"></a> Archivos de formato XML de ejemplo  
+##  <a name="sample-xml-format-files"></a><a name="SampleXmlFFs"></a> Archivos de formato XML de ejemplo  
  Esta sección contiene información sobre el uso de archivos de formato XML en diversos casos, incluido un ejemplo de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] .  
   
 > [!NOTE]  
@@ -305,12 +304,12 @@ for(int i=0;i<ColumnList.Count;i++)
 > [!NOTE]  
 >  Para obtener información sobre cómo crear archivos de formato, vea [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-###  <a name="OrderCharFieldsSameAsCols"></a> A. Ordenar campos de datos de caracteres igual que columnas de tabla  
+###  <a name="a-ordering-character-data-fields-the-same-as-table-columns"></a><a name="OrderCharFieldsSameAsCols"></a> A. Ordenar campos de datos de caracteres igual que columnas de tabla  
  En el ejemplo siguiente se muestra un archivo de formato XML que describe un archivo de datos que contiene tres campos de datos de caracteres. El archivo de formato asigna el archivo de datos a una tabla que contiene tres columnas. Los campos de datos se corresponden uno a uno con las columnas de la tabla.  
   
  **Tabla (fila):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Archivo de datos (registro):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **Archivo de datos (registro):** Age \<tab> FirstName \<tab> LastName\<return>  
   
  El siguiente archivo de formato XML lee del archivo de datos a la tabla.  
   
@@ -343,12 +342,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Para ver un ejemplo equivalente de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , vea [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
-###  <a name="OrderFieldsAndColsDifferently"></a> B. Ordenar campos de datos y columnas de tabla de forma diferente  
+###  <a name="b-ordering-data-fields-and-table-columns-differently"></a><a name="OrderFieldsAndColsDifferently"></a> B. Ordenar campos de datos y columnas de tabla de forma diferente  
  En el ejemplo siguiente se muestra un archivo de formato XML que describe un archivo de datos que contiene tres campos de datos de caracteres. El archivo de formato asigna el archivo de datos a una tabla que contiene tres columnas que están ordenadas de forma diferente a los campos del archivo de datos.  
   
  **Tabla (fila):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
   
- **Archivo de datos** (registro): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **Archivo de datos** (registro): Age \<tab> LastName \<tab> FirstName\<return>  
   
  En el elemento `<RECORD>` , el archivo de formato representa los valores de datos de los tres campos como datos de caracteres.  
   
@@ -376,14 +375,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ```  
   
 > [!NOTE]  
->  Para ver un ejemplo equivalente de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , vea [Use a Format File to Map Table Columns to Data-File Fields &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
+>  Para ver un ejemplo equivalente de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , vea [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md).  
   
 ### <a name="c-omitting-a-data-field"></a>C. Omitir un campo de datos  
  En el ejemplo siguiente se muestra un archivo de formato XML que describe un archivo de datos que contiene cuatro campos de datos de caracteres. El archivo de formato asigna el archivo de datos a una tabla que contiene tres columnas. El segundo campo de datos no se corresponde con ninguna columna de la tabla.  
   
  **Tabla (fila):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **Archivo de datos (registro):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **Archivo de datos (registro):** Age \<tab> EmployeeID \<tab> FirstName \<tab> LastName\<return>  
   
  En el elemento `<RECORD>` , el archivo de formato representa los valores de datos de los cuatro campos como datos de caracteres. Para cada campo, el atributo TERMINATOR indica el terminador que sigue al valor de datos.  
   
@@ -417,7 +416,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  Para ver un ejemplo equivalente de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , vea [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md).  
   
-###  <a name="MapXSItype"></a> D. Asignar el xsi:type \<FIELD> al xsi:type \<COLUMN>  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> D. Asignación \<FIELD> de xsi: Type a \<COLUMN> xsi: Type  
  En el ejemplo siguiente se muestran tipos de campos diferentes y sus asignaciones a columnas.  
   
 ```  
@@ -454,7 +453,7 @@ xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 </BCPFORMAT>  
 ```  
   
-###  <a name="MapXMLDataToTbl"></a> E. Asignar datos XML a una tabla  
+###  <a name="e-mapping-xml-data-to-a-table"></a><a name="MapXMLDataToTbl"></a> E. Asignar datos XML a una tabla  
  En el ejemplo siguiente se crea una tabla vacía de dos columnas (`t_xml`), en la que la primera columna se asigna al tipo de datos `int` y la segunda columna se asigna al tipo de datos `xml` .  
   
 ```  
@@ -478,7 +477,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="ImportFixedFields"></a> F. Importar campos de longitud fija o de ancho fijo  
+###  <a name="f-importing-fixed-length-or-fixed-width-fields"></a><a name="ImportFixedFields"></a> F. Importar campos de longitud fija o de ancho fijo  
  En el siguiente ejemplo se describen campos fijos de `10` o `6` caracteres cada uno. El archivo de formato representa estas longitudes y anchos de campo como `LENGTH="10"` y `LENGTH="6"`, respectivamente. Cada una de las filas de los archivos de datos termina con una combinación de retorno de carro y avance de línea, {CR}{LF}, que el archivo de formato representa como `TERMINATOR="\r\n"`.  
   
 ```  
@@ -498,7 +497,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 </BCPFORMAT>  
 ```  
   
-###  <a name="AdditionalExamples"></a> Otros ejemplos  
+###  <a name="additional-examples"></a><a name="AdditionalExamples"></a> Otros ejemplos  
  Para obtener más ejemplos tanto de archivos de formato XML como de formato no XML, vea los siguientes temas:  
   
 -   [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
@@ -507,7 +506,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -519,10 +518,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Importar y exportar datos en bloque &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

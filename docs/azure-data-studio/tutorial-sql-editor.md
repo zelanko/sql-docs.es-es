@@ -1,23 +1,22 @@
 ---
-title: 'Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos'
-titleSuffix: Azure Data Studio
+title: usar el editor de Transact-SQL para crear objetos de la base de datos
 description: En este tutorial, se muestran las características principales de Azure Data Studio que simplifican el trabajo con T-SQL.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.reviewer: alayu, maghan, sstein
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726741"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos ([!INCLUDE[name-sos](../includes/name-sos-short.md)])
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Tutorial: Uso del editor de Transact-SQL para crear objetos de base de datos: Azure Data Studio
 
 Crea y ejecutar consultas, procedimientos almacenados, scripts, etc., son las tareas principales de los profesionales de bases de datos. En este tutorial, se muestran las características principales del editor de T-SQL para crear objetos de bases de datos.
 
@@ -29,11 +28,11 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos-sho
 > * Ver detalles de objetos de la base de datos mediante *Ver la definición* e *Ir a la definición*
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
-En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
-- [Conectarse y consultar SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
@@ -60,7 +59,7 @@ En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azur
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usar fragmentos de código de T-SQL para crear procedimientos almacenados
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona una gran cantidad de fragmentos de código de T-SQL integrados para crear rápidamente instrucciones.
+Azure Data Studio proporciona una gran cantidad de fragmentos de código de T-SQL integrados para crear rápidamente instrucciones.
 
 
 1. Abra un nuevo editor de consultas al presionar **Ctrl+N**.
@@ -114,7 +113,7 @@ Se creará el procedimiento almacenado y, en el panel de **RESULTADOS**, se most
 
 ## <a name="use-peek-definition"></a>Usar Ver la definición 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] permite ver la definición de un objeto con la característica “Ver la definición”. En esta sección, se crea un segundo procedimiento almacenado y se usa opción “Ver la definición” para ver las columnas de una tabla y crear rápidamente el cuerpo del procedimiento almacenado.
+Azure Data Studio permite ver la definición de un objeto con la característica "Ver la definición". En esta sección, se crea un segundo procedimiento almacenado y se usa opción “Ver la definición” para ver las columnas de una tabla y crear rápidamente el cuerpo del procedimiento almacenado.
 
 1. Para abrir un nuevo editor, presione **Ctrl+N**. 
 

@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c36c06ad91cb9082f06d57f622db4209ac94212
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9233bdc46da46568af2e50f5c711629d234a2ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723758"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2814|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2814|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PR_POSSIBLE_INFINITE_RECOMPILE|  
 |Texto del mensaje|Se detectó una posible recompilación infinita de SQLHANDLE %hs, PlanHandle %hs, desplazamiento de inicio %d, desplazamiento de fin %d. El motivo de la última recompilación fue % d.|  
@@ -71,5 +71,5 @@ En la siguiente tabla se muestran los motivos de la recompilación.
 3.  Si el problema persiste, póngase en contacto con los Servicios de soporte al cliente (CSS) de Microsoft.  
   
 ## <a name="see-also"></a>Consulte también  
-[SQL:StmtRecompile Event Class](../event-classes/sql-stmtrecompile-event-class.md)  
+[SQL:StmtRecompile (clase de eventos)](../event-classes/sql-stmtrecompile-event-class.md)  
   

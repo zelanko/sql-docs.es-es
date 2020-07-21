@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66b4473d-a8c1-4d19-8487-b39d6d0597c7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85a8b46d88ab783c7742ba2af911211baefcffe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 481528507cab371dd44c108167b5c9efbbb518f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985984"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922936"
 ---
 # <a name="updatearray-method-sqlserverresultset"></a>Método updateArray (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

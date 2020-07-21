@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 96b7636b1987a6b210af06436dee4b7a9ad788f2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978672"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911430"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>Método getTransactionIsolation (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,8 +52,8 @@ public int getTransactionIsolation()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getTransactionIsolation se especifica mediante el método getTransactionIsolation en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ Este método getTransactionIsolation se especifica mediante el método getTransactionIsolation en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

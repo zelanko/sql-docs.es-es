@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971725"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
@@ -28,7 +27,7 @@ ms.locfileid: "65479912"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Debe existir un modelo. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md).  
   
@@ -42,20 +41,20 @@ ms.locfileid: "65479912"
   
 4.  Haga clic en **Agregar entidad**.  
   
-5.  En el **nombre de entidad** , escriba el nombre de la entidad.  
+5.  En el cuadro **nombre de entidad** , escriba el nombre de la entidad.  
   
-6.  En el **nombre de las tablas de ensayo** , escriba un nombre para la tabla de ensayo.  
+6.  En el cuadro **nombre de las tablas de ensayo** , escriba un nombre para la tabla de ensayo.  
   
     > [!TIP]  
-    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para obtener más información acerca de las tablas de ensayo, consulte [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+    >  El nombre del modelo debe formar parte del nombre de la tabla de almacenamiento provisional, por ejemplo *Nombremodelo_Nombreentidad*. Esto hace que resulte más sencillo buscar tablas en la base de datos. Para obtener más información sobre las tablas de almacenamiento provisional, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-7.  Opcional. Active la casilla **Crear automáticamente valores Code** . Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
+7.  Opcional. Active la casilla **Crear automáticamente valores Code** . Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md).  
   
-8.  Desde el **habilitar jerarquías explícitas y colecciones** lista, seleccione una de las siguientes opciones:  
+8.  En la lista **Habilitar jerarquías explícitas y colecciones** , seleccione una de las siguientes opciones:  
   
     -   **No**. Seleccione esta opción si no necesita habilitar la entidad para las jerarquías explícitas y las colecciones. Puede cambiar esta opción posteriormente, si es necesario.  
   
-    -   **Sí**. Seleccione esta opción si desea habilitar la entidad para las jerarquías explícitas y colecciones. En el **nombre de jerarquía explícita** , escriba un nombre. Si lo desea, seleccione **jerarquía obligatoria (todos los miembros hoja están incluidos** para hacer que la jerarquía explícita obligatoria.  
+    -   **Sí**. Seleccione esta opción si desea habilitar la entidad para las jerarquías explícitas y colecciones. En el cuadro **nombre de jerarquía explícita** , escriba un nombre. Opcionalmente, seleccione **jerarquía obligatoria (todos los miembros hoja se incluyen** para convertir la jerarquía explícita en una jerarquía obligatoria.  
   
 9. Haga clic en **Guardar entidad**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "65479912"
   
 -   [Crear un atributo de archivo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Cambiar el nombre de una entidad &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   

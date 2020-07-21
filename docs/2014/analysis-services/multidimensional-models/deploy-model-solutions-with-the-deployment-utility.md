@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546891"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implementar soluciones de modelos con la utilidad de implementación
   La utilidad **Microsoft.AnalysisServices.Deployment** permite iniciar el motor de implementación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desde el símbolo del sistema. Como archivo de entrada, la utilidad utiliza archivos de salida XML creados al construir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Los archivos de entrada se pueden modificar fácilmente para personalizar la implementación de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El script de implementación generado puede ejecutarse inmediatamente o guardarse para su implementación posterior.  
@@ -33,14 +32,14 @@ ms.locfileid: "66075345"
     {[/s[:logfile]] | [/a] | [[/o[:output_script_file]] [/d]]}  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  *ASdatabasefile*  
  Ruta de acceso completa de la carpeta en la que se encuentra el archivo de script de implementación (.asdatabase) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este archivo se genera al implementar un proyecto en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Se encuentra en la carpeta bin del proyecto. El archivo .asdatabase contiene la ubicación de las definiciones de objetos que se implementarán. Si no se especifica, se usa la carpeta actual.  
   
- **/s**  
+ **modificado**  
  Ejecuta la utilidad en modo silencioso y no muestra cuadros de diálogo. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
- *archivoDeRegistro*  
+ *MSDTC*  
  Ruta completa y nombre del archivo de registro. Los eventos de seguimiento se registrarán en el archivo de registro especificado. Si el archivo de registro ya existe, se reemplazará el contenido del archivo.  
   
  **/a**  
@@ -60,15 +59,15 @@ ms.locfileid: "66075345"
 > [!NOTE]  
 >  El argumento **/d** se usa solamente en modo de salida. Este argumento se omite si se especifica en modo silencioso o de respuesta. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La utilidad **Microsoft.AnalysisServices.Deployment** toma un conjunto de archivos que proporcionan definiciones de objetos, destinos de implementación y parámetros de configuración, e intenta implementar las definiciones de objetos en los destinos de implementación especificados mediante les opciones de implementación y los parámetros de configuración que se han indicado. Esta utilidad puede proporcionar una interfaz de usuario cuando se invoca en el modo de salida o en el archivo de salida. Para obtener más información sobre cómo usar la interfaz de usuario proporcionada por esta utilidad para crear archivos de respuesta, vea [Implementar soluciones de modelos con la utilidad de implementación](deploy-model-solutions-using-the-deployment-wizard.md).  
   
  La utilidad está ubicada en la carpeta \Archivos de programa (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a> Modos  
+##  <a name="modes"></a><a name="Modes"></a>Formas  
  La utilidad se puede ejecutar en los modos que se enumeran en la siguiente tabla.  
   
-|Modo|Descripción|  
+|Mode|Descripción|  
 |----------|-----------------|  
 |Modo silencioso|No se muestra ninguna interfaz de usuario y toda la información necesaria para la implementación la proporcionan los archivos de entrada. La utilidad no muestra el progreso en el modo silencioso. En su lugar, se puede usar un archivo de registro opcional para capturar el progreso y la información de errores para su posterior revisión.|  
 |Modo de respuesta|Se muestra la interfaz de usuario del Asistente para la implementación y las respuestas del usuario se guardan en los archivos de entrada especificados para la posterior implementación. La implementación no se produce en el modo de respuesta. El único propósito del modo de respuesta es capturar las respuestas del usuario|  
@@ -85,7 +84,7 @@ ms.locfileid: "66075345"
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

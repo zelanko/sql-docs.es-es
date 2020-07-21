@@ -1,5 +1,5 @@
 ---
-title: Asignar el cuadro de diálogo Propiedades de ventanilla, General | Microsoft Docs
+title: Cuadro de diálogo Propiedades de ventanilla de mapa, general | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ec0aaa051ba317cd05a9784c80fb997f5fa19e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108235"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, General
@@ -84,7 +84,7 @@ ms.locfileid: "66108235"
  **Latitud máxima**  
  El valor de latitud superior. Solo está disponible para **Geographic** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

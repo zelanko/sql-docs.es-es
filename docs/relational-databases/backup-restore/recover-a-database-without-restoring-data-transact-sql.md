@@ -1,7 +1,8 @@
 ---
-title: Recuperación de una base de datos sin restaurar los datos (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 10/23/2019
+title: 'Recuperación de una base de datos: sin restauración (Transact-SQL)'
+description: En SQL Server, una restauración de solo recuperación recupera una base de datos sin restaurar una copia de seguridad, normalmente como último paso en la restauración de una secuencia de copias de seguridad.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 68cf8bc2412ff715d42ad22b2000f832d86b1f63
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: 2d82dd94f3419b0f25c6c5ece04b94277144742c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85669943"
 ---
-# <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar una base de datos sin restaurar los datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperación de una base de datos sin restaurar los datos (Transact-SQL)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Normalmente, todos los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se restauran antes de que se recupere la base de datos. Sin embargo, una operación de restauración puede recuperar una base de datos sin restaurar realmente una copia de seguridad; por ejemplo, al recuperar un archivo de solo lectura que es coherente con la base de datos. Esto se conoce como *restauración de solo recuperación*. Cuando los datos sin conexión ya son coherentes con la base de datos y solo es necesario lograr que estén disponibles, una operación de solo restauración completa la recuperación de la base de datos y pone los datos en línea.  
   
  Una restauración de solo recuperación se puede realizar para una base de datos completa o para uno o varios archivos o grupos de archivos.  
@@ -43,7 +44,7 @@ ms.locfileid: "72916049"
  `RESTORE DATABASE *database_name* WITH RECOVERY`  
   
 > [!NOTE]  
-> La cláusula FROM **=** \<*dispositivoDeCopiaDeSeguridad>* no se usa en las restauraciones de solo recuperación porque no es necesario realizar una copia de seguridad.  
+> La cláusula FROM **=** \<*backup_device>* no se usa en las restauraciones de solo recuperación porque no es necesario hacer una copia de seguridad.  
   
  **Ejemplo**  
   

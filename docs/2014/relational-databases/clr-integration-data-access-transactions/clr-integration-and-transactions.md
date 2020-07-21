@@ -1,5 +1,5 @@
 ---
-title: Integración con CLR y transacciones | Microsoft Docs
+title: Integración de CLR y transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de72a2113aeb568decbdc9b5ee0174160cc0d3ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62874822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955074"
 ---
 # <a name="clr-integration-and-transactions"></a>Integración CLR y transacciones
   El espacio de nombres `System.Transactions` proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `System.Transactions` y ADO.NET trabajan en conjunto para extender y simplificar el uso de transacciones locales y distribuidas en aplicaciones administradas.  
@@ -45,7 +44,7 @@ ms.locfileid: "62874822"
  [Período de duración de las transacciones](transaction-lifetimes.md)  
  Describe la diferencia en duración entre las transacciones iniciadas en procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] y las transacciones iniciadas en aplicaciones CLR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acceso a datos de objetos de base de datos de CLR](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

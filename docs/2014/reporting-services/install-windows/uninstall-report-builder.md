@@ -1,5 +1,5 @@
 ---
-title: Desinstalar la versión independiente del generador de informes (generador de informes) | Microsoft Docs
+title: Desinstalar la versión independiente de Generador de informes (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108659"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Desinstalar la versión independiente del Generador de informes (Generador de informes)
@@ -30,7 +30,7 @@ ms.locfileid: "66108659"
   
 2.  En el Panel de control, haga clic en **Programas y características**.  
   
-3.  Busque Generador de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en la lista **Nombre** y haga clic en él.  
+3.  Busque Generador de informes de  en la lista Nombre y haga clic en él.  
   
 4.  Haga clic en **Desinstalar**.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "66108659"
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>Para desinstalar el Generador de informes desde la línea de comandos  
   
-1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
+1.  En el menú **Inicio**, haga clic en **Ejecutar**.  
   
-2.  En el **abierto** cuadro de texto, escriba `cmd.`  
+2.  En el cuadro de texto **abrir** , escriba`cmd.`  
   
 3.  En la ventana del símbolo del sistema, navegue hasta la carpeta con ReportBuilder3_x86.msi.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "66108659"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  Presione **ENTRAR**.  
+1.  Presione **Entrar**.  
   
-## <a name="see-also"></a>Vea también  
- [Instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md)   
- [Instalar la versión independiente del generador de informes &#40;generador de informes&#41;](install-report-builder.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instalación, desinstalación y compatibilidad Generador de informes](../install-uninstall-and-report-builder-support.md)   
+ [Instale la versión independiente de Generador de informes &#40;Generador de informes&#41;](install-report-builder.md)  
   
   

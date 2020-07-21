@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580106"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
@@ -66,18 +66,18 @@ ms.locfileid: "65580106"
 |Acciones|Roles|  
 |-------------|-----------|  
 |Agregar, eliminar, modificar propiedades de elementos, administrar la seguridad y descargar elementos de informe|Administrador de contenido<br /><br /> Mis informes|  
-|Agregar, eliminar y descargar elementos de informe|publicador|  
+|Agregar, eliminar y descargar elementos de informe|Publicador|  
 |Buscar y reutilizar|Browser<br /><br /> Generador de informes|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Servidor en el modo integrado de SharePoint  
   
-|Acciones|Rol|  
+|Acciones|Role|  
 |-------------|----------|  
 |Agregar, eliminar, modificar propiedades de elementos, administrar la seguridad y descargar elementos de informe|Control total|  
-|Agregar, eliminar, modificar propiedades de elementos y descargar elementos de informe|Diseño<br /><br /> Contribuir|  
+|Agregar, eliminar, modificar propiedades de elementos y descargar elementos de informe|Diseño<br /><br /> Contribuciones|  
 |Buscar y reutilizar|Lectura<br /><br /> Solo ver|  
   
-### <a name="security-considerations"></a>Consideraciones relativas a la seguridad  
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
   
 -   Cuando se reutilizan definiciones de elementos de informe en un informe, se copian en la definición de informe por completo, junto con el ComponentID que las identifica. Si un elemento de informe se actualiza en el servidor, los usuarios pueden decidir descargar los elementos de informe actualizados para su informe. Las actualizaciones descargadas también son copias completas del elemento de informe, que reemplazan a la versión existente del elemento de informe que estaba en su informe.  
   

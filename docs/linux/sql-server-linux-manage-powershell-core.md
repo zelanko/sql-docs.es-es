@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 3f70d69e58d513abcba8f27bbda53ab09d5e00ab
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028721"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807657"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Administración de SQL Server en Linux con PowerShell Core
 
@@ -79,8 +79,8 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 En los pasos siguientes se usa PowerShell Core para conectar con la instancia de SQL Server en Linux y mostrar un par de propiedades de servidor.
 
 Copie y pegue los siguientes comandos en el símbolo del sistema de PowerShell. Al ejecutar estos comandos, PowerShell:
-- Mostrará un cuadro de diálogo que le pida el nombre de host o la dirección IP de la instancia
-- Mostrará el cuadro de diálogo *Solicitud de credenciales para Windows PowerShell*, que le solicita las credenciales. Puede usar el *nombre de usuario* y la  *contraseña de SQL* para conectarse a su instancia de SQL Server en Linux
+- Muestran un cuadro de diálogo que le pide el nombre de host o la dirección IP de la instancia.
+- Mostrará el cuadro de diálogo *Solicitud de credenciales para Windows PowerShell*, que le solicita las credenciales. Puede usar el *nombre de usuario* y la  *contraseña de SQL* para conectarse a su instancia de SQL Server en Linux.
 - Use el cmdlet **Get-SqlInstance** para conectarse al **servidor** y mostrar algunas propiedades
 
 Opcionalmente, puede reemplazar la variable `$serverInstance` por la dirección IP o el nombre de host de la instancia de SQL Server.
@@ -149,7 +149,7 @@ Si necesita ver todas las bases de datos en la instancia, una opción es usar el
 
 ## <a name="get-databases"></a>Obtención de bases de datos
 
-Un cmdlet importante que debe conocer es `Get-SqlDatabase`.  Puede usar el cmdlet `Get-SqlDatabase` para muchas operaciones que implican una base de datos u objetos contenidos en una.  Si proporciona valores para los parámetros `-ServerInstance` y `-Database`, solo se recuperará ese objeto de base de datos,  pero si solo especifica el parámetro `-ServerInstance`, se devolverá una lista completa de todas las bases de datos de esa instancia.
+Un cmdlet importante que debe conocer es `Get-SqlDatabase`.  Puede usar el cmdlet `Get-SqlDatabase` para muchas operaciones que implican una base de datos u objetos contenidos en una.  Si proporciona valores para los parámetros `-ServerInstance` y `-Database`, solo se recuperará ese objeto de base de datos,  Pero, si solo especifica el parámetro `-ServerInstance`, se devolverá una lista completa de todas las bases de datos de esa instancia.
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -198,13 +198,13 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Exploración de los cmdlets disponibles actualmente en PS Core
-Aunque el módulo SqlServer actualmente tiene 109 cmdlets disponibles en Windows PowerShell, solo 62 de 109 están disponibles en PSCore. A continuación se incluye una lista completa con los 59 cmdlets disponibles actualmente.  Para obtener documentación detallada de todos los cmdlets del módulo SqlServer, vea la [referencia de cmdlets](https://docs.microsoft.com/powershell/module/sqlserver/) de SqlServer.
+Aunque el módulo SqlServer actualmente tiene 109 cmdlets disponibles en Windows PowerShell, solo 62 de 109 están disponibles en PSCore. A continuación se incluye una lista completa con los 62 cmdlets disponibles actualmente.  Para obtener documentación detallada de todos los cmdlets del módulo SqlServer, vea la [referencia de cmdlets](https://docs.microsoft.com/powershell/module/sqlserver/) de SqlServer.
 
 El siguiente comando le mostrará todos los cmdlets disponibles en la versión de PowerShell que está usando.
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
-SORT -Property Noun |
+Sort-Object -Property Noun |
 SELECT Name
 ```
 
@@ -271,5 +271,5 @@ SELECT Name
 - Read-SqlXEvent
 - Convert-UrnToPath
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

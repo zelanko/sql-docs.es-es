@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11d0a2c40462784558f4d618c7e3d0a206d6d382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 71fac2e8febc9959dc6790d06f1eac097895476f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953298"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928190"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>Método getCharacterStream () (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +35,8 @@ public java.io.Reader getCharacterStream()
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto Reader que contiene los datos **NCLOB**.  
   
-## <a name="remarks"></a>Notas  
- Este método getCharacterStream se especifica mediante el método getCharacterStream en la interfaz java. SQL. NClob.  
+## <a name="remarks"></a>Observaciones  
+ El método getCharacterStream especifica este método getCharacterStream en la interfaz java.sql.NClob.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getCharacterStream &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

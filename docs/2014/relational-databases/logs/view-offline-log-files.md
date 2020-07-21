@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63144601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024743"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
   A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ver desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar.  
@@ -28,7 +27,7 @@ ms.locfileid: "63144601"
 > [!NOTE]  
 >  También puede utilizar estos métodos para conectar a una instancia que está en línea, pero por el motivo que sea no puede conectarse a través de una conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Introducción  
  Para conectarse a los archivos de registro sin conexión, debe haber una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada en el equipo que está utilizando para ver los archivos de registro sin conexión y en el equipo donde se encuentran los archivos de registro que desea ver. Si hay una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada en los dos equipos, puede ver los archivos sin conexión para las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y para las instancias que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cualquiera de los dos equipos.  
   
  Si utiliza servidores registrados, la instancia a la que desea conectarse debe estar registrada en **Grupos de servidores locales** o en **Servidores de administración central**. La instancia se puede registrar sola o pertenecer a un grupo de servidores. Para obtener más información acerca de cómo agregar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a servidores registrados, vea los temas siguientes:  
@@ -45,14 +44,14 @@ ms.locfileid: "63144601"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (en este tema se muestra cómo recuperar información sobre todos los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para conectarse a un archivo de registro sin conexión, debe tener los siguientes permisos en los equipos local y remoto:  
   
 -   Acceso de lectura al espacio de nombres de WMI **raíz\Microsoft\SqlServer\ComputerManagement12** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta. Para obtener más información, vea el procedimiento sobre comprobación de permisos de WMI más adelante en esta sección.  
   
--   Permiso de lectura a la carpeta que contiene los archivos de registro de errores. Los archivos de registro de errores se encuentran de forma predeterminada en la siguiente ruta de acceso (donde \<*unidad>* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*nombreInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permiso de lectura a la carpeta que contiene los archivos de registro de errores. De forma predeterminada, los archivos de registro de errores se encuentran en la siguiente ruta de acceso (donde \<*Drive> * representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*InstanceName*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **\<Unidad >: \Program Files\Microsoft SQL Server\MSSQL12. \<NombreDeInstancia > \MSSQL\Log**  
+     **\<Drive>: \Archivos de Programa\microsoft SQL Server\MSSQL12. \<InstanceName> \Mssql\log.**  
   
  Para comprobar la configuración de seguridad del espacio de nombres WMI, puede utilizar el complemento Control WMI.  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144601"
   
 1.  Abra el complemento Control WMI. Para hacerlo, realice una de las operaciones siguientes, en función del sistema operativo:  
   
-    -   Haga clic en **iniciar**, tipo `wmimgmt.msc` en el **Iniciar búsqueda** cuadro y, a continuación, presione ENTRAR.  
+    -   Haga clic en **Inicio**, escriba `wmimgmt.msc` en el cuadro **Iniciar búsqueda** y presione ENTRAR.  
   
-    -   Haga clic en **iniciar**, haga clic en **ejecutar**, tipo `wmimgmt.msc`, y, a continuación, presione ENTRAR.  
+    -   Haga clic en **Inicio**, haga clic en **Ejecutar**, escriba `wmimgmt.msc` y, a continuación, presione Entrar.  
   
 2.  De forma predeterminada, el complemento Control WMI administra el equipo local.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "63144601"
   
 3.  En el árbol de consola, busque la instancia en la que desea ver los archivos sin conexión.  
   
-4.  Realice una de las siguientes operaciones:  
+4.  Realice una de las siguientes acciones:  
   
     -   Si la instancia está en **Grupos de servidor locales**, expanda **Grupos de servidor locales**, expanda el grupo de servidores (si la instancia pertenece a un grupo), haga clic con el botón derecho en la instancia y, después, haga clic en **Ver registro de SQL Server**.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "63144601"
     > [!NOTE]  
     >  Si los archivos de registro tardan demasiado en cargarse, puede hacer clic en **Detener** en la barra de herramientas del Visor del archivo de registros.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Visor de archivos de registro](log-file-viewer.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02ee75dbee946558171ffd1c3d06aabe9f418188
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077973"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732783"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el nodo secundario del nodo primario.
   
@@ -48,12 +48,12 @@ NULL o el **hierarchyid** de un nodo secundario del nodo actual.
 *child2*  
 NULL o el **hierarchyid** de un nodo secundario del nodo actual.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **Tipo de valor devuelto de SQL Server: hierarchyid**
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Devuelve un nodo secundario que es un descendiente del nodo primario.
 -   Si el elemento primario es NULL, devolverá NULL.  
 -   Si el elemento primario no es NULL, y child1 y child2 son NULL, devuelve un elemento secundario del elemento primario.  
@@ -151,7 +151,7 @@ child2 = parent.GetDescendant(child1, SqlHierarchyId.Null);
 Console.Write(parent.GetDescendant(child1, child2).ToString());  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Método CompareTo (DateTimeOffset) | Microsoft Docs
+title: Método compareTo (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ac80b43813106f1de991da5114b2473871222a68
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955517"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923579"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Método compareTo (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Compara este objeto **DateTimeOffset** con otro objeto **DateTimeOffset** basándose en la hora de GMT.  
+  Compara este objeto **DateTimeOffset** con otro objeto **DateTimeOffset** según la hora en GMT.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,11 +37,11 @@ public int compareTo(DateTimeOffset other)
   
 |Valor devuelto|Descripción|  
 |------------------|-----------------|  
-|0|Ambos objetos **DateTimeOffset** representan el mismo punto en el tiempo.|  
-|número negativo|Este objeto **DateTimeOffset** representa un punto en el tiempo que es anterior a *otro*.|  
-|número positivo|Este objeto **DateTimeOffset** representa un punto en el tiempo que es posterior a *otro*.|  
+|0|Ambos objetos **DateTimeOffset** representan el mismo punto cronológico.|  
+|número negativo|Este objeto **DateTimeOffset** representa un punto cronológico anterior a *other*.|  
+|número positivo|Este objeto **DateTimeOffset** representa un punto cronológico posterior a *other*.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando dos objetos **DateTimeOffset** tienen la misma hora de GMT, no se produce ninguna ordenación adicional de los objetos basados en el desplazamiento.  
   
 ## <a name="see-also"></a>Consulte también  

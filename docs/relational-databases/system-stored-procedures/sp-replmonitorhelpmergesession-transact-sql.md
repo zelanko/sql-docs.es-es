@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725695"
 ---
-# <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve información acerca de sesiones pasadas de un Agente de mezcla de replicación concreto, con una fila por cada sesión que coincida con el criterio de filtrado. Este procedimiento almacenado, que se utiliza para supervisar la replicación de mezcla, se ejecuta en el distribuidor de la base de datos de distribución o en el suscriptor de la base de datos de suscripciones.  
   
@@ -48,9 +48,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|< **0**|Devuelve información sobre las ejecuciones pasadas del agente, hasta un máximo de 100.|  
+|< **0,1**|Devuelve información sobre las ejecuciones pasadas del agente, hasta un máximo de 100.|  
 |**0** (valor predeterminado)|Devuelve información sobre todas las ejecuciones pasadas del agente.|  
-|> **0**|Devuelve información sobre las ejecuciones del agente que se produjeron en el último número de horas.|  
+|> **0,1**|Devuelve información sobre las ejecuciones del agente que se produjeron en *el último número de horas.*|  
   
 `[ @session_type = ] session_type`Filtra el conjunto de resultados según el resultado final de la sesión. *session_type* es de **tipo int**y puede tener uno de estos valores.  
   
@@ -67,7 +67,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|Identificador de la sesión de trabajo del agente.|  
 |**Estado**|**int**|Estado de la ejecución del agente:<br /><br /> **1** = Inicio<br /><br /> **2** = correcto<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintento<br /><br /> **6** = error|  
@@ -81,7 +81,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**PercentageDone**|**decimal**|Porcentaje estimado de los cambios totales que ya se han entregado en una sesión activa.|  
 |**TimeRemaining**|**int**|Número estimado de segundos que restan en una sesión activa.|  
 |**CurrentPhase**|**int**|Es la fase actual de una sesión activa y puede ser una de las siguientes.<br /><br /> **1** = carga<br /><br /> **2** = descargar|  
-|**LastMessage**|**nvarchar(500)**|Es el último mensaje registrado por el Agente de mezcla durante la sesión.|  
+|**LastMessage**|**nvarchar (500)**|Es el último mensaje registrado por el Agente de mezcla durante la sesión.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -92,9 +92,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesession** solo devuelve información sobre las últimas cinco sesiones agente de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** de la base de datos de distribución en el distribuidor o en la base de datos de suscripciones del suscriptor pueden ejecutar **sp_replmonitorhelpmergesession**.  
+ Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución en el distribuidor o en la base de datos de suscripciones del suscriptor pueden ejecutar **sp_replmonitorhelpmergesession**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

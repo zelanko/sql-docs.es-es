@@ -1,25 +1,26 @@
 ---
-title: Instalación de Extensiones de lenguaje (Java) de SQL Server en Linux
-description: Aprenda a instalar Extensiones de lenguaje (Java) de SQL Server en Red Hat, Ubuntu y SUSE.
+title: Instalación de extensiones de lenguaje de SQL Server en Linux
+titleSuffix: ''
+description: Aprenda a instalar Extensiones de lenguaje de SQL Server en Red Hat, Ubuntu y SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: eecea181dc6ac96021df2db0707537e86d4a50ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653527"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895291"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalación de Extensiones de lenguaje (Java) de SQL Server 2019 en Linux
+# <a name="install-sql-server-language-extensions-on-linux"></a>Instalación de extensiones de lenguaje de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Extensiones de lenguaje es un complemento del motor de base de datos. Aunque puede [instalar el motor de base de datos y Extensiones de lenguaje de forma simultánea](#install-all), el procedimiento recomendado es instalar y configurar primero el motor de base de datos de SQL Server para poder resolver cualquier problema antes de agregar más componentes. 
 
@@ -29,9 +30,11 @@ La ubicación del paquete de las extensiones de Java está en los repositorios d
 
 Extensiones de lenguaje también se admite en contenedores de Linux. No se proporcionan contenedores preintegrados con Extensiones de lenguaje, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp-version"></a>Desinstalación de una versión CTP anterior
+Las extensiones de lenguaje y [Machine Learning Services](../machine-learning/index.yml) se instalan de forma predeterminada en Clústeres de macrodatos de SQL Server. Si usa Clústeres de macrodatos, no es necesario que siga los pasos de este artículo. Para más información, vea [Uso de Machine Learning Services (Python y R) en Clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
 
-La lista de paquetes ha cambiado con las últimas versiones CTP, lo que ha dado lugar a menos paquetes. Antes de instalar RC 1, se recomienda desinstalar la versión CTP para quitar todos los paquetes anteriores. La instalación en paralelo de varias versiones no se admite.
+## <a name="uninstall-preview-version"></a>Desinstalación de la versión preliminar
+
+Si ha instalado una versión preliminar, como Community Technical Preview (CTP) o Release Candidate (RC), se recomienda desinstalarla para quitar todos los paquetes anteriores antes de instalar SQL Server 2019. No se admite la instalación en paralelo de varias versiones. Además, la lista de paquetes ha cambiado en varias de las últimas versiones preliminares (CTP/RC).
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmación de la instalación del paquete
 
@@ -41,7 +44,7 @@ Es posible que quiera comprobar la existencia de una instalación anterior como 
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2. Desinstalación de paquetes anteriores de CTP
+### <a name="2-uninstall-previous-ctprc-packages"></a>2. Desinstalación de paquetes anteriores de CTP/RC
 
 Realice la desinstalación en el nivel de paquete más bajo. Los paquetes superiores que dependen de un paquete de nivel inferior se desinstalan automáticamente.
 
@@ -51,15 +54,15 @@ Los comandos para quitar paquetes aparecen en la tabla siguiente.
 
 | Plataforma  | Comandos de eliminación de paquetes | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove msssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL  | `sudo yum remove mssql-server-extensibility-java` |
+| SLES  | `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu    | `sudo apt-get remove mssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3. Instalación de la versión candidata para lanzamiento 1 (RC 1)
+### <a name="3-install-sql-server-2019"></a>3. Instalación de SQL Server 2019
 
 Realice la instalación en el nivel de paquete más alto, siguiendo las instrucciones de este artículo correspondientes a su sistema operativo.
 
-Para cada conjunto específico de un sistema operativo de instrucciones de instalación, el  *nivel de paquete superior* es **Ejemplo 1: instalación completa** para el conjunto completo de paquetes o **Ejemplo 2: instalación mínima** para el número mínimo de paquetes necesario para una instalación viable.
+En cada conjunto de instrucciones de instalación específico del sistema operativo, el *nivel de paquete más alto* será o **Ejemplo 1: instalación completa** en el caso del conjunto completo de paquetes o **Ejemplo 2: instalación mínima** si se trata del número mínimo de paquetes necesarios para una instalación viable.
 
 1. Ejecute los comandos de instalación mediante los administradores de paquetes y la sintaxis de la distribución de Linux: 
 
@@ -67,7 +70,7 @@ Para cada conjunto específico de un sistema operativo de instrucciones de insta
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 + La versión de Linux debe ser [compatible con SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), pero no incluye el motor de Docker. Las versiones admitidas son:
 
@@ -77,7 +80,7 @@ Para cada conjunto específico de un sistema operativo de instrucciones de insta
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ Debe tener una herramienta para ejecutar comandos de T-SQL. Se necesita un editor de consultas para la configuración y la validación posteriores a la instalación. Se recomienda [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), una descarga gratuita que se ejecuta en Linux.
++ Debe tener una herramienta para ejecutar comandos de T-SQL. Se necesita un editor de consultas para la configuración y la validación posteriores a la instalación. Recomendamos [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), una descarga gratuita que se ejecuta en Linux.
 
 ## <a name="package-list"></a>Lista de paquetes
 
@@ -162,7 +165,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. Habilite el acceso de red saliente. El acceso de red saliente está deshabilitado de forma predeterminada. Para habilitar las solicitudes salientes, establezca la propiedad booleana "outboundnetworkaccess" con la herramienta mssql-conf. Para obtener más información, vea [Configuración de SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Habilite el acceso de red saliente. El acceso de red saliente está deshabilitado de forma predeterminada. Para habilitar las solicitudes salientes, establezca la propiedad booleana "outboundnetworkaccess" con la herramienta mssql-conf. Para más información, vea [Configuración de SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -197,9 +200,13 @@ En el ejemplo siguiente se agrega un lenguaje externo denominada Java a una base
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+Respecto a la extensión de Java, se usa la variable de entorno "JRE_HOME" para determinar la ruta de acceso donde JVM se va a buscar e inicializar.
+
+El ddl CREATE EXTERNAL LANGUAGE proporciona un parámetro (ENVIRONMENT_VARIABLES) para establecer variables de entorno expresamente para el proceso que hospeda la extensión. Esta es la forma recomendada y más eficaz de establecer las variables de entorno necesarias para las extensiones de lenguaje externas.
 
 Para obtener más información, vea [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
@@ -229,9 +236,9 @@ Puede instalar y configurar el motor de base de datos y Extensiones de lenguaje 
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  Se le pide que acepte el contrato de licencia del motor de base de datos, elija una edición y establezca la contraseña de administrador. 
+  Se le pedirá que acepte el contrato de licencia del motor de base de datos, que elija una edición y que establezca la contraseña de administrador. 
 
-4. Reinicie el servicio si se le pide.
+4. Reinicie el servicio, si se le pide.
 
   ```bash
   sudo systemctl restart mssql-server.service
@@ -259,19 +266,19 @@ Puede descargar paquetes desde [https://packages.microsoft.com/](https://package
 
 |||
 |--|----|
-| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Rutas de acceso de Ubuntu/16.04
 
 |||
 |--|----|
-| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>Rutas de acceso de SUSE/12
 
 |||
 |--|----|
-| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Lista de paquetes
 
@@ -286,18 +293,15 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>Limitaciones de la versión RC 1
-
-Extensiones de lenguaje y la extensibilidad de Java en Linux todavía están en desarrollo activo. Las siguientes características aún no están habilitadas en la versión preliminar.
+## <a name="limitations"></a>Limitaciones
 
 + En este momento, la autenticación implícita no está disponible en Linux, lo que significa que no se puede volver a conectar al servidor desde Java en curso para acceder a datos u otros recursos.
-
 
 ### <a name="resource-governance"></a>Regulación de recursos
 
 Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) de los grupos de recursos externos, pero las estadísticas de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) tienen actualmente unidades diferentes en Linux. 
  
-| Nombre de columna   | Descripción | Valor en Linux | 
+| Nombre de la columna   | Descripción | Valor en Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | Cantidad máxima de memoria usada con el grupo de recursos | En Linux, esta estadística tiene como origen el subsistema CGroups memory, donde el valor es memory.max_usage_in_bytes. |
 |write_io_count | Total de operaciones de E/S de escritura emitidas desde el restablecimiento de las estadísticas de Resource Governor | En Linux, esta estadística tiene como origen el subsistema CGroups blkio, donde el valor de la fila de escritura es blkio.throttle.io_serviced. | 
@@ -308,6 +312,6 @@ Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los desarrolladores de Java pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de Java con SQL Server. Para el siguiente paso, vea los vínculos siguientes:
+Los desarrolladores de Java pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de Java con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
 + [Tutorial: Expresiones regulares con Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

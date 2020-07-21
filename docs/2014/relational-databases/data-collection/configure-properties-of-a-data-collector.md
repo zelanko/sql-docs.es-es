@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37df9ccdd0bc2b44384bb9fd3d130c8d3bf8ca36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75c888b225901130eb0f28ea0f2bd21a106b2dc2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970499"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>Configurar las propiedades de un recopilador de datos
   En este tema se describe cómo puede configurar las propiedades de un recopilador de datos.  
@@ -47,7 +46,7 @@ ms.locfileid: "62873429"
  **Número de reintentos si no se puede realizar la carga**  
  Especifica el número de reintentos de carga en el almacén de administración de datos si no se puede realizar una carga. El valor predeterminado es 1.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar la recopilación de datos](data-collection.md)   
  [Configurar el almacén de administración de datos &#40;SQL Server Management Studio&#41;](configure-the-management-data-warehouse-sql-server-management-studio.md)  
   

@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a9ad1938f94c090bd0f7e3746d565d2f0fce25d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f392059e68e459a820752a74aa32389eeb7ead2e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85721742"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|20554|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|20554|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|El agente de replicación no ha registrado un mensaje de progreso en %ld minutos. Esto podría indicar que un agente no responde o una gran actividad en el sistema. Compruebe que se están replicando los registros en el destino y que las conexiones al suscriptor, publicador y distribuidor están activas.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68770462"
   
 -   Si un agente no puede iniciar sesión en uno de los equipos de la topología:  
   
-     Se recomienda que establezca **-LoginTimeOut** en un valor inferior al intervalo en el que se ejecuta el trabajo de comprobación del agente de replicación. En algunos casos, **-LoginTimeOut** se establece en un valor mayor debido a problemas de red que causan que los inicios de sesión agoten el tiempo de espera. Si **-LoginTimeOut** se establece en un valor menor, la replicación puede informar sobre errores más específicos, lo que le permite solucionar problemas de inicio de sesión que pueden estar causados por permisos, problemas de red u otros factores. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+     Se recomienda que establezca **-LoginTimeOut** en un valor inferior al intervalo en el que se ejecuta el trabajo de comprobación del agente de replicación. En algunos casos, **-LoginTimeOut** se establece en un valor mayor debido a problemas de red que causan que los inicios de sesión agoten el tiempo de espera. Si **-LoginTimeOut** se establece en un valor menor, la replicación puede informar sobre errores más específicos, lo que le permite solucionar problemas de inicio de sesión que pueden estar causados por permisos, problemas de red u otros factores. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
     -   [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -73,10 +73,10 @@ ms.locfileid: "68770462"
 ## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [Agente de distribución de replicación](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Agente de mezcla de replicación](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

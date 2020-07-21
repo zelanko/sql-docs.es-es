@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff5a978fa005f32e5ebe3fd02323be998e2cb71e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62755182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934806"
 ---
 # <a name="sql-server-monitor-overview"></a>Información general del Monitor de SQL Server
   Monitor de SQL Server no realiza funciones de supervisión, sino que hospeda módulos que sí lo hacen. Los módulos del Monitor de SQL Server incluyen el Monitor de replicación y el Monitor de creación de reflejo de la base de datos.  
@@ -50,10 +49,10 @@ ms.locfileid: "62755182"
  **Acción**  
  Contiene el menú contextual del nodo seleccionado en el árbol de navegación.  
   
- **Ir**  
+ **Go**  
  Contiene una lista de componentes de supervisión  
   
--   Creación de reflejo de base de datos  
+-   Creación de reflejo de la base de datos  
   
 -   Replicación  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62755182"
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../database-mirroring/database-mirroring-sql-server.md)  
   
   

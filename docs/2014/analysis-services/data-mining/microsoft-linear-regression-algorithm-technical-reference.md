@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084061"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522011"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión lineal de Microsoft
   El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una versión especial del algoritmo de árboles de decisión de Microsoft que está optimizado para modelar pares de atributos continuos. Este tema explica la implementación del algoritmo, describe cómo personalizar su comportamiento y proporciona vínculos a información adicional sobre cómo consultar los modelos.  
@@ -29,14 +28,14 @@ ms.locfileid: "66084061"
   
  Para lograr esto, el parámetro *MINIMUM_LEAF_CASES* del algoritmo se establece para ser mayor o igual que el número total de casos que el algoritmo usa para entrenar el modelo de minería de datos. Con el parámetro así establecido, el algoritmo no crea nunca una división y, por tanto, lleva a cabo una regresión lineal.  
   
- La ecuación que representa la recta de regresión toma la forma general de y = ax + b y se conoce como ecuación de regresión. La variable Y representa la variable de salida, X representa la variable de entrada, y a y b son coeficientes ajustables. Puede recuperar los coeficientes, intersecciones y otra información sobre la fórmula de regresión consultando el modelo de minería de datos completado. Para obtener más información, vea [Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md).  
+ La ecuación que representa la recta de regresión toma la forma general de y = ax + b y se conoce como ecuación de regresión. La variable Y representa la variable de salida, X representa la variable de entrada, y a y b son coeficientes ajustables. Puede recuperar los coeficientes, intersecciones y otra información sobre la fórmula de regresión consultando el modelo de minería de datos completado. Para más información, vea [Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Métodos de puntuación y selección de características  
- Todos los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizan automáticamente la selección de características para mejorar el análisis y reducir la carga de procesamiento. El método utilizado para la selección de características en la regresión lineal es la puntuación de grado de interés, porque el modelo únicamente admite las columnas continuas. Como referencia, la tabla siguiente muestra la diferencia en la selección de características para el algoritmo de regresión lineal y el algoritmo de árboles de decisión.  
+ Todos los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usan automáticamente la selección de características para mejorar el análisis y reducir la carga de procesamiento. El método utilizado para la selección de características en la regresión lineal es la puntuación de grado de interés, porque el modelo únicamente admite las columnas continuas. Como referencia, la tabla siguiente muestra la diferencia en la selección de características para el algoritmo de regresión lineal y el algoritmo de árboles de decisión.  
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
-|Regresión lineal|Puntuación interestingness|Predeterminado:<br /><br /> Otros métodos de selección de características que están disponibles con el algoritmo de árboles de decisión se aplican únicamente a las variables discretas y, por consiguiente, no son aplicables a los modelos de regresión lineal.|  
+|Regresión lineal|Puntuación interestingness|Predeterminada.<br /><br /> Otros métodos de selección de características que están disponibles con el algoritmo de árboles de decisión se aplican únicamente a las variables discretas y, por consiguiente, no son aplicables a los modelos de regresión lineal.|  
 |Árboles de decisión|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Si alguna columna contiene valores continuos no binarios, se utiliza la puntuación interestingness (grado de interés) en todas las columnas para asegurar la coherencia. En caso contrario, se utiliza el método predeterminado o el especificado.|  
   
  Los parámetros del algoritmo que controlan la selección de características para el modelo de árboles de decisión son MAXIMUM_INPUT_ATTRIBUTES y MAXIMUM_OUTPUT.  
@@ -44,7 +43,7 @@ ms.locfileid: "66084061"
 ## <a name="customizing-the-linear-regression-algorithm"></a>Personalizar el algoritmo de regresión lineal  
  El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los parámetros que afectan al comportamiento, el rendimiento y la precisión del modelo de minería de datos resultante. También puede establecer marcas de modelado en las columnas del modelo de minería de datos o de la estructura de minería de datos para controlar la manera en que se procesan los datos.  
   
-### <a name="setting-algorithm-parameters"></a>Establecer los parámetros del algoritmo  
+### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
  En la tabla siguiente se enumeran los parámetros que se proporcionan para el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 |Parámetro|Descripción|  
@@ -59,12 +58,12 @@ ms.locfileid: "66084061"
 |Marca de modelado|Descripción|  
 |-------------------|-----------------|  
 |NOT NULL|Indica que la columna no puede contener un valor NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a las columnas de la estructura de minería de datos.|  
-|REGRESSOR|Indica que la columna contiene valores numéricos continuos que se deberían tratar como posibles variables independientes durante el análisis.<br /><br /> Nota: Al marcar una columna como regresor no garantiza que la columna se utilizará como regresor en el modelo final.<br /><br /> Se aplica a las columnas del modelo de minería de datos.|  
+|REGRESSOR|Indica que la columna contiene valores numéricos continuos que se deberían tratar como posibles variables independientes durante el análisis.<br /><br /> Nota: Al marcar una columna como regresor, no se asegura de que la columna se utilizará como regresor en el modelo final.<br /><br /> Se aplica a las columnas del modelo de minería de datos.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regresores en modelos de regresión lineal  
  Los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Sin embargo, aun cuando no utilice el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , cualquier modelo de árbol de decisión puede contener un árbol o nodos que representen una regresión en un atributo continuo.  
   
- No es necesario especificar que una columna continua representa un regresor. El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dividirá el conjunto de datos en regiones con patrones significativos aunque no establezca la marca REGRESSOR en la columna. La diferencia es que cuando se establece la marca de modelado, el algoritmo intentará buscar ecuaciones de regresión del formulario un * C1 + b\*C2 + … para ajustar los patrones en los nodos del árbol. Se calcula la suma de los valores residuales y, si la desviación es demasiado grande, se fuerza una división en el árbol.  
+ No es necesario especificar que una columna continua representa un regresor. El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dividirá el conjunto de datos en regiones con patrones significativos aunque no establezca la marca REGRESSOR en la columna. La diferencia estriba en que al establecer la marca de modelado, el algoritmo intentará buscar ecuaciones de regresión con el formato a * C1 + b \* C2 +... para ajustarse a los patrones de los nodos del árbol. Se calcula la suma de los valores residuales y, si la desviación es demasiado grande, se fuerza una división en el árbol.  
   
  Por ejemplo, si está prediciendo los hábitos de compra de los clientes utilizando **Income** como atributo y ha establecido la marca de modelado REGRESSOR en la columna, el algoritmo intentará en primer lugar ajustar los valores de **Income** mediante una fórmula de regresión estándar. Si la desviación es demasiado grande, se abandona la fórmula de regresión y el árbol se dividirá de acuerdo con algún otro atributo. A continuación, el algoritmo de árboles de decisión intentará ajustar un regresor para los ingresos en cada una de las ramas después de la división.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66084061"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuo, cíclico, clave, tabla y ordenado|  
 |Atributo de predicción|Continuo, cíclico y ordenado|  
@@ -84,7 +83,7 @@ ms.locfileid: "66084061"
 > [!NOTE]  
 >  Se admiten los tipos de contenido `Cyclical` and `Ordered`, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  

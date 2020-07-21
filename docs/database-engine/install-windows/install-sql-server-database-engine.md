@@ -1,5 +1,6 @@
 ---
 title: Instalar el Motor de base de datos de SQL Server | Microsoft Docs
+description: Obtenga información sobre las características que se pueden instalar al seleccionar Motor de base de datos de SQL Server en Componentes para instalar en el Asistente para la instalación de SQL Server.
 ms.custom: ''
 ms.date: 07/26/2019
 ms.prod: sql
@@ -12,16 +13,16 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148039"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883247"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar el motor de base de datos de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## <a name="overview"></a>Información general
 El componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un acceso controlado y un procesamiento de transacciones rápido para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa.  
@@ -39,15 +40,15 @@ Las siguientes características se instalan al seleccionar **Motor de base de da
 -   [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md): es un componente opcional  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R y Python) y [extensiones de lenguaje](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java): es un componente opcional
+-   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R y Python) y [extensiones de lenguaje](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java): es un componente opcional
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
--   [Machine Learning Services (En base de datos)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) (R y Python): es un componente opcional
+-   [Machine Learning Services (En base de datos)](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R y Python): es un componente opcional
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
--   [R Services (En base de datos](../../advanced-analytics/install/sql-r-services-windows-install.md)): es un componente opcional
+-   [R Services (En base de datos](../../machine-learning/install/sql-r-services-windows-install.md)): es un componente opcional
 ::: moniker-end
 
 -   Búsqueda de texto completo: es un componente opcional  
@@ -75,7 +76,7 @@ Las siguientes características se instalan al seleccionar **Motor de base de da
 >  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo, vea [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Vea los ejemplos anteriores en [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ediciones y características admitidas de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   

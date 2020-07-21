@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996581"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Crear, construir y consultar instancias de Geometry
   El tipo de datos espacial plano `geometry` representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Common Language Runtime (CLR).  
@@ -35,9 +34,9 @@ ms.locfileid: "66014309"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto del estándar GML 3.1 existente que se define en el siguiente esquema: [https://schemas.microsoft.com/sqlserver/profiles/gml/SpatialGML.xsd](https://go.microsoft.com/fwlink/?LinkId=230959).  
   
-##  <a name="creating"></a> Crear o construir una instancia de geometry  
+##  <a name="creating-or-constructing-a-new-geometry-instance"></a><a name="creating"></a> Crear o construir una instancia de geometry  
   
-###  <a name="existing"></a> Crear una instancia de geometry a partir de una instancia existente  
+###  <a name="creating-a-new-geometry-instance-from-an-existing-instance"></a><a name="existing"></a> Crear una instancia de geometry a partir de una instancia existente  
  El tipo de datos `geometry` proporciona numerosos métodos integrados que puede usar para crear nuevas instancias de `geometry` basadas en instancias existentes.  
   
  **Para crear un búfer alrededor de un objeto geometry**  
@@ -68,7 +67,7 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="wkt"></a> Construir una instancia de geometry a partir de datos Well-Known Text  
+###  <a name="constructing-a-geometry-instance-from-well-known-text-input"></a><a name="wkt"></a> Construir una instancia de geometry a partir de datos Well-Known Text  
  El tipo de datos `geometry` proporciona varios métodos integrados que generan un objeto geometry a partir de la representación WKT de Open Geospatial Consortium (OGC). La norma WKT consiste en una cadena de texto que permite intercambiar datos de geometría de forma textual.  
   
  **Para construir cualquier tipo de instancia de geometry a partir de datos WKT**  
@@ -99,7 +98,7 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="wkb"></a> Construir una instancia de geometry a partir de datos Well-Known Binary  
+###  <a name="constructing-a-geometry-instance-from-well-known-binary-input"></a><a name="wkb"></a> Construir una instancia de geometry a partir de datos Well-Known Binary  
  WKB es un formato binario especificado por Open Geospatial Consortium (OGC) que permite intercambiar datos de tipo `geometry` entre una aplicación cliente y una base de datos SQL. Las funciones siguientes aceptan datos WKB para construir las instancias de geometry:  
   
  **Para construir cualquier tipo de instancia de geometry a partir de datos WKB**  
@@ -128,15 +127,15 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="gml"></a> Para construir una instancia de geometry a partir de datos de texto GML  
- El `geometry` tipo de datos proporciona un método que genera un `geometry` instancia a partir de GML, una representación XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
+###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Para construir una instancia de geometry a partir de datos de texto GML  
+ El `geometry` tipo de datos proporciona un método que genera una `geometry` instancia de GML, una representación XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
   
  **Para construir un tipo de instancia de geometry a partir de datos GML**  
  [GeomFromGml &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
   
   
   
-##  <a name="returning"></a> Devolver Well-Known Text y Well-Known Binary a partir una instancia de geometry  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geometry-instance"></a><a name="returning"></a> Devolver Well-Known Text y Well-Known Binary a partir una instancia de geometry  
  Puede usar los métodos siguientes para devolver el formato WKT o WKB de una instancia de `geometry`:  
   
  **Para devolver la representación WKT de una instancia de geometry**  
@@ -155,10 +154,10 @@ ms.locfileid: "66014309"
   
   
   
-##  <a name="querying"></a> Consultar propiedades y comportamientos de instancias de geometry  
- Todos los `geometry` instancias tienen un número de propiedades que se pueden recuperar a través de métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona. Los temas siguientes definen las propiedades y los comportamientos de tipos geometry, y los métodos para consultar cada uno.  
+##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Consultar propiedades y comportamientos de instancias de geometry  
+ Todas las `geometry` instancias de tienen varias propiedades que se pueden recuperar a través de los métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona. Los temas siguientes definen las propiedades y los comportamientos de tipos geometry, y los métodos para consultar cada uno.  
   
-###  <a name="valid"></a> Validez, tipo de instancia e información de GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Validez, tipo de instancia e información de GeometryCollection  
  Una vez construida una instancia de `geometry`, puede usar los métodos siguientes para determinar si su formato es correcto, devolver el tipo de instancia o, si es una instancia de una colección, devolver una instancia de `geometry` específica.  
   
  **Para devolver el tipo de instancia de un objeto geometry**  
@@ -181,8 +180,8 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="number"></a> Número de puntos  
- Vacía todos los `geometry` están formadas por instancias *puntos*. Estos puntos representan las coordenadas X e Y del plano en el cual se dibujan los objetos geometry. El tipo de datos de `geometry` proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
+###  <a name="number-of-points"></a><a name="number"></a> Número de puntos  
+ Todas las instancias no vacías `geometry` se componen de *puntos*. Estos puntos representan las coordenadas X e Y del plano en el cual se dibujan los objetos geometry. El tipo de datos de `geometry` proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
   
  **Devolver el número de puntos que comprende una instancia**  
  [STNumPoints &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -210,7 +209,7 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="dimension"></a> Dimensión  
+###  <a name="dimension"></a><a name="dimension"></a> Dimensión  
  Una instancia de `geometry` no vacía puede ser no dimensional, unidimensional o bidimensional. `geometries` no dimensionales, como `Point` y `MultiPoint`, no tienen ninguna longitud ni área. Los objetos unidimensionales, como `LineString, CircularString, CompoundCurve` y `MultiLineString`, tienen longitud. Las instancias bidimensionales, como `Polygon`, `CurvePolygon` y `MultiPolygon`, tienen área y longitud. Las instancias vacías informarán de una dimensión de -1 y `GeometryCollection` informará de un área dependiente de los tipos de su contenido.  
   
  **Devolver la dimensión de una instancia**  
@@ -224,16 +223,16 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="empty"></a> Vacía  
- Un *vacía* `geometry` instancia no tiene puntos. La longitud de instancias de `LineString, CircularString`, `CompoundCurve` y `MultiLineString` es cero. El área de las instancias de `Polygon`, `CurvePolygon` y `MultiPolygon` vacías es 0.  
+###  <a name="empty"></a><a name="empty"></a> Vacía  
+ Una instancia *vacía* no `geometry` tiene ningún punto. La longitud de instancias de `LineString, CircularString`, `CompoundCurve` y `MultiLineString` es cero. El área de las instancias de `Polygon`, `CurvePolygon` y `MultiPolygon` vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
   
   
   
-###  <a name="simple"></a> Simple  
- Para un `geometry` de la instancia sea *simple*, debe cumplir estos requisitos:  
+###  <a name="simple"></a><a name="simple"></a> Simple  
+ Para `geometry` que un de la instancia sea *simple*, debe cumplir estos requisitos:  
   
 -   Cada figura de la instancia no debe cortarse, excepto en sus extremos.  
   
@@ -247,8 +246,8 @@ ms.locfileid: "66014309"
   
   
   
-###  <a name="boundary"></a> Límite, interior y exterior  
- El *interiores* de un `geometry` instancia es el espacio ocupado por la instancia y el *exterior* es el espacio no ocupado.  
+###  <a name="boundary-interior-and-exterior"></a><a name="boundary"></a> Límite, interior y exterior  
+ El *interior* de una `geometry` instancia es el espacio ocupado por la instancia y el *exterior* es el espacio no ocupado.  
   
  El*límite* lo define OGC de la siguiente manera:  
   
@@ -275,16 +274,16 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="envelope"></a> Envolvente  
- El *sobres* de un `geometry` , también conocida como instancia el *rectángulo*, es el rectángulo alineado con el eje formado por el mínimo y máximo (X, Y) coordenadas de la instancia.  
+###  <a name="envelope"></a><a name="envelope"></a> Envolvente  
+ El *sobre* de una `geometry` instancia, también conocido como el *cuadro de límite*, es el rectángulo alineado con el eje formado por las coordenadas mínima Y máxima (X, Y) de la instancia.  
   
  **Para devolver la envolvente de una instancia**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
   
   
   
-###  <a name="closure"></a> Clausura  
- Un *cerrado* `geometry` instancia es una figura cuyos puntos de inicio y puntos de conexión son los mismos. Las instancias `Polygon` se consideran cerradas. Las instancias `Point` no son cerradas.  
+###  <a name="closure"></a><a name="closure"></a> Clausura  
+ Una instancia *cerrada* `geometry` es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias `Polygon` se consideran cerradas. Las instancias `Point` no son cerradas.  
   
  Un anillo es una instancia de `LineString` simple y cerrada.  
   
@@ -305,7 +304,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-###  <a name="srid"></a> Identificador de referencia espacial (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> Identificador de referencia espacial (SRID)  
  El identificador de referencia espacial (SRID) es un identificador que especifica en qué sistema de coordenadas está representada la instancia de `geometry`. Dos instancias con SRID diferentes son incomparables.  
   
  **Para establecer o devolver el SRID de una instancia**  
@@ -315,7 +314,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-##  <a name="rel"></a> Determinar las relaciones entre instancias de geometry  
+##  <a name="determining-relationships-between-geometry-instances"></a><a name="rel"></a> Determinar las relaciones entre instancias de geometry  
  El tipo de datos `geometry` proporciona muchos métodos integrados que puede usar para determinar las relaciones entre dos instancias de `geometry`.  
   
  **Para determinar si dos instancias comprenden el mismo conjunto de puntos**  
@@ -353,10 +352,10 @@ SELECT @g.STBoundary().ToString();
   
   
   
-##  <a name="defaultsrid"></a> Las instancias de geometry tienen como valor predeterminado SRID cero  
+##  <a name="geometry-instances-default-to-zero-srid"></a><a name="defaultsrid"></a> Las instancias de geometry tienen como valor predeterminado SRID cero  
  El SRID predeterminado para instancias de `geometry` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es 0. Con los datos espaciales de `geometry`, no se necesita el SRID específico de la instancia espacial para realizar cálculos; por tanto, las instancias pueden encontrarse en un espacio plano indefinido. Para indicar el espacio plano indefinido en los cálculos de métodos de tipo de datos `geometry`, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa SRID 0.  
   
-##  <a name="examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="examples"></a> Ejemplos  
  En los dos ejemplos siguientes se muestra cómo agregar y consultar datos de geometry.  
   
 -   En el primer ejemplo se crea una tabla con una columna de identidad y una columna de tipo `geometry` , `GeomCol1`. Una tercera columna representa la columna de tipo `geometry` en su representación Well-Known Text (WKT) de Open Geospatial Consortium (OGC) y utiliza el método `STAsText()` . A continuación se insertan dos filas: una que contiene una instancia de `LineString` de `geometry`y otra que contiene una instancia de `Polygon` .  
@@ -395,7 +394,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Datos espaciales &#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

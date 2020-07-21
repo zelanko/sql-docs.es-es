@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Propiedades del distribuidor de Replicación de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Propiedades del distribuidor, cuadro de diálogo
+description: Describe las distintas páginas del cuadro de diálogo "Propiedades del distribuidor" en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 10cb78d3804ed022619ed6c19a69e4722c518562
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653292"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Cuadro de diálogo Propiedades del distribuidor de Replicación de SQL Server 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 En esta página se describen las páginas del cuadro de diálogo Propiedades del distribuidor. 
 
@@ -37,11 +38,11 @@ La página **General** del cuadro de diálogo **Propiedades del distribuidor** l
   
  Haga clic en el botón de propiedades ( **...** ) en la cuadrícula de propiedades de **Bases de datos** para abrir el cuadro de diálogo **Propiedades de base de datos de distribución** .  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic para crear una nueva base de datos de distribución.  
   
  **Eliminar**  
- Para eliminar una base de datos, seleccione una base de datos de distribución existente en la cuadrícula de propiedades de **Bases de datos** y haga clic en **Eliminar** . No puede eliminar la base de datos de distribución si solo existe dicha base de datos; cada distribuidor debe poseer al menos una base de datos de distribución. Para eliminar todas las bases de datos de distribución, deberá deshabilitar la distribución en el equipo. Para más información, vea [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md) (Deshabilitar la publicación y la distribución).  
+ Para eliminar una base de datos, seleccione una base de datos de distribución existente en la cuadrícula de propiedades de **Bases de datos** y haga clic en **Eliminar** . No puede eliminar la base de datos de distribución si solo existe dicha base de datos; cada distribuidor debe poseer al menos una base de datos de distribución. Para eliminar todas las bases de datos de distribución, deberá deshabilitar la distribución en el equipo. Para obtener más información, vea [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md).  
   
  **Valores predeterminados de perfil**  
  Haga clic para tener acceso a los perfiles del agente de replicación en el cuadro de diálogo **Perfiles de agente** . Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
@@ -52,8 +53,8 @@ La página **Publicadores** del cuadro de diálogo **Propiedades del distribuido
  **Publicadores**  
  Seleccione los servidores que pueden utilizar este distribuidor. Haga clic en el botón **(...)** de Propiedades que se encuentra junto a un publicador para ver y establecer propiedades adicionales.  
   
- **Agregar**  
- Si el servidor que desea habilitar no aparece, haga clic en **Agregar** para agregar un publicador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un publicador de Oracle a la lista de publicadores disponibles. Si el servidor que agrega es el primer servidor que utilizará este distribuidor como distribuidor remoto, se le solicitará que proporcione una contraseña de vínculo administrativo.  
+ **Add (Agregar)**  
+ Si el servidor que quiere habilitar no aparece, haga clic en **Agregar** para agregar un publicador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un publicador de Oracle a la lista de publicadores disponibles. Si el servidor que agrega es el primer servidor que utilizará este distribuidor como distribuidor remoto, se le solicitará que proporcione una contraseña de vínculo administrativo.  
   
  **Contraseña de vínculo administrativo**  
  Use esta opción para especificar o actualizar la contraseña para la conexión que hace la replicación entre el publicador y el distribuidor remoto con el inicio de sesión **distributor_admin** :  

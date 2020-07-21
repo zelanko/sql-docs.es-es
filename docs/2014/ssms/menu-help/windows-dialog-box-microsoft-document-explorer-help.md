@@ -11,25 +11,24 @@ helpviewer_keywords:
 ms.assetid: 7a53478c-e8e1-4d15-b484-c242495c1f4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdf21fd472d0a29172771883537c3c09489a5fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62510017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001425"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Cuadro de diálogo Ventanas (Ayuda de Microsoft Document Explorer)
   Este cuadro de diálogo permite mostrar, cerrar y organizar documentos abiertos en editores y diseñadores. Para visualizar este cuadro de diálogo, puede hacer clic en **Ventanas** en el menú **Ventana** .  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Muestra los nombres de las ventanas de documento y herramientas, con el elemento activo seleccionado.  
   
- **Ruta de acceso**  
+ **Path**  
  Muestra la ruta de acceso completa a los documentos. Generalmente, las ventanas no disponen de ruta de acceso.  
   
- **Activate**  
+ **Activar**  
  Convierte la ventana de documento o herramienta seleccionada en el elemento activo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Document Explorer.  
   
  **Guardar**  

@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Recordset collection [ADO], ADO for Visual C++ syntax
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a8c377ee920122a18f6a848923605c7007c6f25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13a094c5cbbc6af8e61bd221f06ff197a00d2524
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931375"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761893"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Conjunto de registros (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  
@@ -102,7 +102,7 @@ put_StayInSync(VARIANT_BOOL bStayInSync)
 get_Fields(ADOFields **ppvObject)  
 ```  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
   
 ```  
 EndOfRecordset(VARIANT_BOOL *fMoreData, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
@@ -118,5 +118,5 @@ WillChangeRecordset(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORec
 WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

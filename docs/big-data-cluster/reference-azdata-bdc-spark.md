@@ -5,33 +5,31 @@ description: Artículo de referencia sobre los comandos de azdata bdc spark.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8b7158269ca144bd1c4115dcf121e4cc331067ac
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 0d563b2ce959e5d531dd3f3464e702b544f5e233
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154413"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74821203"
 ---
 # <a name="azdata-bdc-spark"></a>azdata bdc spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artículo es un artículo de referencia para **azdata**. 
+En el artículo siguiente se proporciona una referencia de los comandos `bdc spark` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
-[Estado de Spark de BDC de azdata](reference-azdata-bdc-spark-status.md) | Comandos de estado del servicio Spark.
+[azdata bdc spark status](reference-azdata-bdc-spark-status.md) | Comandos de estado del servicio de Spark.
 [azdata bdc spark batch](reference-azdata-bdc-spark-batch.md) | Administra las operaciones por lotes dentro del sistema Spark.
 [azdata bdc spark session](reference-azdata-bdc-spark-session.md) | Administra las operaciones de la sesión activa dentro del sistema Spark.
 [azdata bdc spark statement](reference-azdata-bdc-spark-statement.md) | Administra instrucciones de Spark.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). 
-
-- Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

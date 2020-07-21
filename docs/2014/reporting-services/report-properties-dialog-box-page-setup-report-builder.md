@@ -1,5 +1,5 @@
 ---
-title: Informe de cuadro de diálogo de propiedades, Configurar página (generador de informes) | Microsoft Docs
+title: Cuadro de diálogo Propiedades del informe, configurar página (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104370"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Propiedades del informe (cuadro de diálogo), Configurar página (Generador de informes)
-  Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  
+  Seleccione **Configurar página** en el cuadro de diálogo **propiedades del informe**para establecer las opciones de página para todo el informe.  
   
 ## <a name="options"></a>Opciones  
  **Pulgadas**  
@@ -44,10 +44,10 @@ ms.locfileid: "66104370"
  **Height**  
  Muestra el alto del tamaño de papel seleccionado en la lista **Tipo de papel** .  
   
- **Top**  
+ **Arriba**  
  Define la distancia entre la parte superior del informe y la parte superior de la primera línea del mismo.  
   
- **parte inferior**  
+ **Descendente**  
  Define la distancia entre la parte inferior del informe y la parte inferior de la última línea del mismo.  
   
  **Left**  
@@ -56,10 +56,10 @@ ms.locfileid: "66104370"
  **Right**  
  Define la distancia entre el borde derecho del informe y el borde derecho de las filas del mismo.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>Consulte también  
+ [Generador de informes ayuda para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Cuadro de diálogo Propiedades de informes de código &#40;generador de informes&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
- [Cuadro de diálogo Propiedades del informe referencias &#40;generador de informes&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
+ [Cuadro de diálogo Propiedades del informe, &#40;de código Generador de informes&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
+ [Propiedades del informe (cuadro de diálogo), referencias &#40;Generador de informes&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   
   

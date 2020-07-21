@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc505c0fe87a298ba4a9015f467119c1b7d6d3f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebbe01dcc03ef670ac41ca0842f702c8e637cb37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760461"
 ---
 # <a name="select-source-dialog-box"></a>Seleccionar origen (cuadro de diálogo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice este cuadro de diálogo para seleccionar el origen de las directivas que se van a ejecutar. Para seleccionar uno o más archivos XML que contienen directivas, seleccione **Archivos**. Para ejecutar las directivas que se buscan en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Servidor**.  
   
  Puede abrir este cuadro de diálogo de varias maneras.  
@@ -37,7 +37,7 @@ ms.locfileid: "68021721"
  **Archivos**  
  Seleccione uno o más archivos XML que contienen directivas.  
   
- **Servidor**  
+ **Server**  
  Permite seleccionar un servidor que contiene las directivas que se desean ejecutar.  
   
  **Tipo de servidor**  
@@ -58,7 +58,7 @@ ms.locfileid: "68021721"
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
- **User name**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la autenticación de Windows para conectarse.  
   
  **Inicio de sesión**  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 447b350aae97ded341788dd4b398441d6b1efdb2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084823"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522713"
 ---
 # <a name="data-mining-ssas"></a>Minería de datos (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona una plataforma integrada para las soluciones que incorporan la minería de datos. Puede usar datos relacionales o de cubo para crear soluciones de Business Intelligence con análisis predictivos.  
@@ -30,21 +29,21 @@ ms.locfileid: "66084823"
 ## <a name="key-data-mining-features"></a>Características clave de la minería de datos  
  SQL Server proporciona las siguientes características para las soluciones integradas de minería de datos:  
   
--   Varios orígenes de datos: No es necesario que crear un almacén de datos o un cubo OLAP para realizar la minería de datos. Puede usar datos tabulares de proveedores eternos, hojas de cálculo e incluso archivos de texto. También puede minar con facilidad cubos OLAP creados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, no se pueden usar datos de una base de datos en memoria.  
+-   Varios orígenes de datos: no es necesario crear un almacenamiento de datos o un cubo OLAP para realizar la minería de datos. Puede usar datos tabulares de proveedores eternos, hojas de cálculo e incluso archivos de texto. También puede minar con facilidad cubos OLAP creados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, no se pueden usar datos de una base de datos en memoria.  
   
--   Limpieza de datos integradas, administración de datos y ETL: Data Quality Services proporciona herramientas avanzadas de generación de perfiles y la limpieza de datos. Se puede usar Integration Services para generar procesos ETL de limpieza de datos, y también para tareas de creación, procesamiento, entrenamiento y actualización de modelos.  
+-   Limpieza de los datos integrados, administración de datos y ETL: Data Quality Services proporcionan herramientas avanzadas para la generación de perfiles y la limpieza de datos. Se puede usar Integration Services para generar procesos ETL de limpieza de datos, y también para tareas de creación, procesamiento, entrenamiento y actualización de modelos.  
   
--   Varios algoritmos personalizables: Además de proporcionar algoritmos como la agrupación en clústeres, redes neurales y árboles de decisión, la plataforma admite el desarrollo de sus propios algoritmos complementarios personalizados.  
+-   Varios algoritmos personalizables: además de proporcionar algoritmos como la agrupación en clústeres, las redes neuronales y los árboles de decisión, la plataforma le permite desarrollar sus propios complementos con algoritmos personalizados.  
   
--   Infraestructura de prueba de modelo: Probar sus modelos y conjuntos de datos usando herramientas estadísticas importantes como la validación cruzada, las matrices de clasificación, gráficos de elevación, y los gráficos de dispersión. Cree y administre fácilmente conjuntos de prueba y entrenamiento.  
+-   Infraestructura de prueba del modelo: pruebe los modelos y los conjuntos de datos usando herramientas estadísticas tan importantes como la validación cruzada, las matrices de clasificación, los gráficos de mejora respecto al modelo predictivo y los gráficos de dispersión. Cree y administre fácilmente conjuntos de prueba y entrenamiento.  
   
--   Consultas y obtención de detalles: Crear consultas de predicción, recuperar las estadísticas y patrones del modelo y profundizar en los datos de los casos.  
+-   Consultas y obtención de detalles: cree consultas de predicción, recupere patrones y estadísticas de modelos, y obtenga información detallada de los datos de los casos.  
   
--   Herramientas de cliente: Además de los estudios de desarrollo y diseño proporcionados por SQL Server, puede usar los complementos minería de datos para Excel para crear, consultar y examinar los modelos. O bien crear clientes personalizados, incluidos servicios web.  
+-   Herramientas de cliente: además de los estudios de desarrollo y diseño proporcionados por SQL Server, puede usar los Complementos de minería de datos para Excel para crear, consultar y examinar los modelos. O bien crear clientes personalizados, incluidos servicios web.  
   
--   Compatibilidad de idioma de scripting y API administrada: Todos los objetos de minería de datos son totalmente programables. El scripting es posible mediante MDX, XMLA o las extensiones de PowerShell para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Use el lenguaje DMX (Extensiones de minería de datos) para crear rápidamente consultas y scripts.  
+-   Compatibilidad con el lenguaje de scripting y API administrada: todos los objetos de minería de datos son completamente programables. El scripting es posible mediante MDX, XMLA o las extensiones de PowerShell para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Use el lenguaje DMX (Extensiones de minería de datos) para crear rápidamente consultas y scripts.  
   
--   Seguridad e implementación: Proporciona seguridad basada en roles mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluidos permisos distintos para la obtención de detalles en el modelo y estructura de datos. Fácil implementación de modelos en otros servidores, de forma que los usuarios puedan tener acceso a los patrones o realizar predicciones.  
+-   Seguridad e implementación: proporciona seguridad basada en roles a través de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluidos permisos distintos para la obtención de detalles del modelo y los datos de la estructura. Fácil implementación de modelos en otros servidores, de forma que los usuarios puedan tener acceso a los patrones o realizar predicciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección presentan las características principales de la minería de datos de SQL Server y las tareas relacionadas.  

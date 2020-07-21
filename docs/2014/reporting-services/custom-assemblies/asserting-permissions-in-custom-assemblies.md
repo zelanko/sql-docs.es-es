@@ -19,16 +19,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f66896479ec06d78b94d6fe084ff806e3af67727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265380"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Validar los permisos en ensamblados personalizados
   De forma predeterminada, el código de ensamblado personalizado se ejecuta con el conjunto de permisos de **Ejecución** limitado. En algunos casos, puede desear implementar un ensamblado personalizado que realice llamadas protegidas a los recursos protegidos dentro del sistema de seguridad (como un archivo o el Registro). Para ello, debe hacer lo siguiente:  
   
-1.  Identifique los permisos exactos que el código necesita para realizar la llamada segura. Si este método forma parte de una biblioteca de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], esta información debe incluirse en la documentación del método.  
+1.  Identifique los permisos exactos que el código necesita para realizar la llamada segura. Si este método forma parte de una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] biblioteca, esta información debe incluirse en la documentación del método.  
   
 2.  Modifique los archivos de configuración de directiva de servidor de informes para conceder los permisos necesarios al ensamblado personalizado. Para más información sobre los archivos de configuración de directivas de seguridad, vea [Usar los archivos de directivas de seguridad de Reporting Services](../extensions/secure-development/using-reporting-services-security-policy-files.md).  
   
@@ -89,7 +89,7 @@ try
   
  Para obtener más información, vea el tema sobre la seguridad de .NET Framework en la Guía del programador de .NET Framework.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
   
   

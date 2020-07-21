@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de consultas de modelo agrupación en clústeres | Microsoft Docs
+title: Ejemplos de consultas de modelos de agrupación en clústeres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085719"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524211"
 ---
 # <a name="clustering-model-query-examples"></a>Ejemplos de consultas de modelos de agrupación en clústeres
   Al crear una consulta en un modelo de minería de datos, puede recuperar metadatos sobre el modelo o crear una consulta de contenido que proporcione detalles sobre los patrones detectados en el análisis. También puede crear una consulta de predicción, que usa los patrones del modelo para realizar predicciones para los nuevos datos. Cada tipo de consulta proporcionará información diferente. Por ejemplo, una consulta de contenido puede proporcionar detalles adicionales sobre los clústeres encontrados, mientras que una consulta de predicción puede indicar a qué clúster pertenece con mayor probabilidad un nuevo punto de datos.  
@@ -50,12 +49,12 @@ ms.locfileid: "66085719"
   
  [Devolver todos los clústeres posibles con probabilidad y distancia](#bkmk_Query10)  
   
-##  <a name="bkmk_top2"></a> Buscar información sobre el modelo  
+##  <a name="finding-information-about-the-model"></a><a name="bkmk_top2"></a> Buscar información sobre el modelo  
  Todos los modelos de minería de datos exponen el contenido aprendido por el algoritmo de acuerdo con un esquema normalizado, el conjunto de filas de esquema del modelo de minería de datos. Puede crear consultas en el conjunto de filas de esquema del modelo de minería de datos usando instrucciones de Extensiones de minería de datos (DMX). En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], también puede consultar directamente los conjuntos de filas de esquema como tablas del sistema.  
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: Obtener metadatos del modelo usando DMX  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a> Consulta de ejemplo 1: obtener metadatos del modelo usando DMX  
  La consulta siguiente devuelve metadatos básicos sobre el modelo de agrupación en clústeres, `TM_Clustering`, que creó en el Tutorial básico de minería de datos. Los metadatos disponibles en el nodo primario de un modelo de agrupación en clústeres incluyen el nombre del modelo, la base de datos en la que se encuentra almacenado el modelo y el número de nodos secundarios existentes en el modelo. Esta consulta usa una consulta de contenido DMX para recuperar los metadatos del nodo primario del modelo:  
   
 ```  
@@ -68,22 +67,22 @@ WHERE NODE_TYPE = 1
 > [!NOTE]  
 >  El nombre de la columna CHILDREN_CARDINALITY debe ir entre corchetes para distinguirlo de la palabra clave reservada de Expresiones multidimensionales (MDX) del mismo nombre.  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |||  
 |-|-|  
 |MODEL_CATALOG|TM_Clustering|  
 |MODEL_NAME|Adventure Works DW|  
-|NODE_CAPTION|Cluster Model|  
+|NODE_CAPTION|Modelo de clúster|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|Todo|  
   
  Para ver una definición de lo que significan estas columnas en un modelo de agrupación en clústeres, vea [Contenido del modelo de minería de datos para modelos de agrupaciones en clúster &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: Recuperar metadatos del modelo a partir del conjunto de filas de esquema  
+###  <a name="sample-query-2-retrieving-model-metadata-from-the-schema-rowset"></a><a name="bkmk_Query2"></a>Consulta de ejemplo 2: recuperar metadatos del modelo del conjunto de filas de esquema  
  Mediante una consulta al conjunto de filas de esquema de minería de datos, puede obtener la misma información que a través de una consulta de contenido DMX. Sin embargo, el conjunto de filas de esquema proporciona algunas columnas adicionales. Esto incluye los parámetros que se usaron cuando se creó el modelo, la fecha y la hora en que se procesó el modelo por última vez, y el propietario del modelo.  
   
  En el ejemplo siguiente se devuelve la fecha en la que se creó, modificó y procesó el modelo por última vez, junto con los parámetros de agrupación en clústeres que se usaron para generar el modelo y el tamaño del conjunto de entrenamiento. Esta información puede ser útil para documentar el modelo o para determinar qué opciones de agrupación en clústeres se usaron para crear un modelo existente.  
@@ -94,7 +93,7 @@ from $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM_Clustering'  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |||  
 |-|-|  
@@ -109,7 +108,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>Buscar información sobre clústeres  
  Las consultas de contenido más útiles que se realizan en los modelos de agrupación en clústeres generalmente devuelven el mismo tipo de información que se puede examinar usando el **Visor de clústeres**. Esto incluye perfiles del clúster, características del clúster y distinción del clúster. En esta sección se proporcionan ejemplos de consultas que recuperan esta información.  
   
-###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: Devolver un clúster o una lista de clústeres  
+###  <a name="sample-query-3-returning-a-cluster-or-list-of-clusters"></a><a name="bkmk_Query3"></a> Consulta de ejemplo 3: devolver un clúster o una lista de clústeres  
  Dado que todos los clústeres tienen un tipo de nodo 5, se puede recuperar con facilidad una lista de los clústeres consultando solamente los nodos de ese tipo en el contenido del modelo. También se pueden filtrar los nodos devueltos según la probabilidad o el soporte, tal y como se muestra en este ejemplo.  
   
 ```  
@@ -118,7 +117,7 @@ FROM TM_Clustering.CONTENT
 WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |||  
 |-|-|  
@@ -135,7 +134,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: Devolver los atributos de un clúster  
+###  <a name="sample-query-4-returning-attributes-for-a-cluster"></a><a name="bkmk_Query4"></a> Consulta de ejemplo 4: devolver atributos para un clúster  
  Para cada clúster, el **Visor de clústeres** muestra un perfil con los atributos y sus valores. El visor también muestra un histograma con la distribución de valores para el conjunto completo de casos del modelo. Si está examinando el modelo en el visor, puede copiar fácilmente el histograma de la Leyenda de minería de datos y, a continuación, pegarlo en un documento de Excel o de Word. También puede usar el panel Características del clúster del visor para comparar gráficamente los atributos de clústeres diferentes.  
   
  Sin embargo, si necesita obtener valores para varios clústeres a la vez, le resultará más fácil consultar el modelo. Por ejemplo, al examinar el modelo, podrá observar que los dos clústeres superiores difieren en lo que respecta al atributo `Number Cars Owned`. Por consiguiente, desea extraer los valores para cada clúster.  
@@ -158,7 +157,7 @@ WHERE NODE_TYPE = 5
 > [!NOTE]  
 >  La columna de tabla anidada, `PROBABILITY`, debe ir entre corchetes porque también es el nombre de una palabra clave reservada de MDX.  
 >   
->  Resultados del ejemplo:  
+>  Resultados de ejemplo:  
   
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
@@ -177,7 +176,7 @@ WHERE NODE_TYPE = 5
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: Devolver un perfil de clúster mediante el sistema de los procedimientos almacenados  
+###  <a name="sample-query-5-return-a-cluster-profile-using-system-stored-procedures"></a><a name="bkmk_Query5"></a> Consulta de ejemplo 5: devolver un perfil de clúster usando los procedimientos almacenados del sistema  
  Como método abreviado, en lugar de escribir sus propias consultas usando DMX, también puede llamar a los procedimientos almacenados del sistema que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa para trabajar con clústeres. En el ejemplo siguiente se muestra cómo usar los procedimientos almacenados internos para devolver el perfil de un clúster con el identificador 002.  
   
 ```  
@@ -190,12 +189,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterPr
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCharacteristics('TM_Clustering", '009',0.0005  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |Atributos|Valores|Frecuencia|Soporte técnico|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
-|Region|North America|0.999852875241508|899|  
+|Region|Norteamérica|0.999852875241508|899|  
 |Total Children|0|0.993860958572323|893|  
   
 > [!NOTE]  
@@ -203,7 +202,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> Consulta de ejemplo 6: Buscar los factores de distinción para un clúster  
+###  <a name="sample-query-6-find-discriminating-factors-for-a-cluster"></a><a name="bkmk_Query6"></a> Consulta de ejemplo 6: buscar factores de distinción para un clúster  
  La pestaña **Distinción del clúster** del **Visor de clústeres** permite comparar fácilmente un clúster con otro, o bien un clúster con el resto de los casos (el complemento del clúster).  
   
  Sin embargo, crear consultas para devolver esta información puede resultar complejo y podría ser necesario algún procesamiento adicional en el cliente para almacenar los resultados temporales y comparar los resultados de dos o más consultas. Como método abreviado, puede utilizar los procedimientos almacenados del sistema.  
@@ -214,13 +213,13 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
 CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDiscrimination('TM_Clustering','009','007',0.0005,true)  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
-|Atributos|Valores|Puntuación|  
+|Atributos|Valores|Score|  
 |----------------|------------|-----------|  
-|Region|North America|100|  
+|Region|Norteamérica|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
-|Region|Europe|-72.5041051379789|  
+|Region|Europa|-72.5041051379789|  
 |English Occupation|Manual|-69.6503163202722|  
   
  Esta es la misma información que se presenta en el gráfico del visor **Distinción del clúster** si selecciona el clúster 9 en la primera lista desplegable y el clúster 7 en la segunda lista desplegable. Para comparar el clúster 9 con su complemento, utilice la cadena vacía en el segundo parámetro, tal como se muestra en el ejemplo siguiente:  
@@ -234,7 +233,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> Consulta de ejemplo 7: Devolver los casos que pertenecen a un clúster  
+###  <a name="sample-query-7-returning-cases-that-belong-to-a-cluster"></a><a name="bkmk_Query7"></a> Consulta de ejemplo 7: devolver casos que pertenecen a un clúster  
  Si se ha habilitado la obtención de detalles en el modelo de minería de datos, puede crear consultas que devuelvan información detallada sobre los casos utilizados en el modelo. Es más, si se ha habilitado la obtención de detalles en la estructura de minería de datos, puede incluir columnas de la estructura interna con la función [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
  En el ejemplo siguiente se devuelven dos columnas que se utilizaron en el modelo, Age y Region, y una columna más, First Name, que no se utilizó en el modelo. La consulta solo devuelve casos que se clasificaron en el clúster 1.  
@@ -252,11 +251,11 @@ WHERE IsInNode('001')
 ## <a name="making-predictions-using-the-model"></a>Realizar predicciones utilizando el modelo  
  Aunque la agrupación en clústeres se utiliza normalmente para describir y entender los datos, la implementación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también permite realizar una predicción sobre la pertenencia al clúster y devolver probabilidades asociadas a dicha predicción. En esta sección se proporcionan ejemplos de cómo crear consultas de predicción en modelos de agrupación en clústeres. Puede realizar predicciones para varios casos, especificando un origen de datos tabular, o puede proporcionar nuevos valores de uno en uno creando una consulta singleton. Para mayor claridad, todos los ejemplos de esta sección son consultas singleton.  
   
- Para obtener más información sobre cómo crear consultas de predicción utilizando DMX, vea [Interfaces de consultas de minería de datos](data-mining-query-tools.md).  
+ Para obtener más información sobre cómo crear consultas de predicción mediante DMX, vea [interfaces de consulta de minería de datos](data-mining-query-tools.md).  
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> Consulta de ejemplo 8: Predecir resultados de un modelo de clústeres  
+###  <a name="sample-query-8-predicting-outcomes-from-a-clustering-model"></a><a name="bkmk_Query8"></a> Consulta de ejemplo 8: predecir resultados de un modelo de agrupación en clústeres  
  Si el modelo de agrupación en clústeres creado contiene un atributo de predicción, puede utilizar el modelo para realizar predicciones sobre los resultados. Sin embargo, el modelo procesa el atributo de predicción de manera diferente dependiendo de si se establece la columna de predicción en `Predict` o en `PredictOnly`. Si establece el uso de la columna en `Predict`, los valores para ese atributo se agregan al modelo de agrupación en clústeres y aparecen como atributos en el modelo finalizado. Sin embargo, si establece el uso de la columna en `PredictOnly`, los valores no se utilizan para crear clústeres. En su lugar, una vez completado el modelo, el algoritmo de clústeres crea nuevos valores para el atributo `PredictOnly` basándose en los clústeres a los que pertenece cada caso.  
   
  La consulta siguiente proporciona al modelo un único caso nuevo, en que la única información sobre el caso es la edad y el género. La instrucción SELECT especifica el par atributo/valor de predicción en que está interesado y la función [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) indica la probabilidad de que un caso con esos atributos tenga el resultado deseado.  
@@ -299,7 +298,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |NormalizedValue|NonNormalizedValue|  
 |---------------------|------------------------|  
@@ -309,7 +308,7 @@ NATURAL PREDICTION JOIN
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> Consulta de ejemplo 9: Determinar la pertenencia al clúster  
+###  <a name="sample-query-9-determining-cluster-membership"></a><a name="bkmk_Query9"></a> Consulta de ejemplo 9: determinar la pertenencia al clúster  
  En este ejemplo se usa la función [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) para devolver el clúster al que pertenece con mayor probabilidad el nuevo caso y se usa la función [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) para devolver la probabilidad de pertenencia a ese clúster.  
   
 ```  
@@ -322,17 +321,17 @@ NATURAL PREDICTION JOIN
   'S' AS [Marital Status]) AS t  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |$CLUSTER|Expresión|  
 |--------------|----------------|  
 |Clúster 2|0.397918596951617|  
   
- **Tenga en cuenta** de forma predeterminada, el `ClusterProbability` función devuelve la probabilidad de que el clúster más probable. Sin embargo, puede especificar otro clúster utilizando la sintaxis `ClusterProbability('cluster name')`. Si lo hace, sea consciente de que los resultados de cada función de predicción son independientes de los demás resultados. Por consiguiente, la puntuación de probabilidad en la segunda columna podría hacer referencia a un clúster distinto del clúster mencionado en la primera columna.  
+ **Nota:** De forma predeterminada, la `ClusterProbability` función devuelve la probabilidad del clúster más probable. Sin embargo, puede especificar otro clúster utilizando la sintaxis `ClusterProbability('cluster name')`. Si lo hace, sea consciente de que los resultados de cada función de predicción son independientes de los demás resultados. Por consiguiente, la puntuación de probabilidad en la segunda columna podría hacer referencia a un clúster distinto del clúster mencionado en la primera columna.  
   
  [Volver al principio](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> Consulta de ejemplo 10: Devolver todos los clústeres posibles con probabilidad y distancia  
+###  <a name="sample-query-10-returning-all-possible-clusters-with-probability-and-distance"></a><a name="bkmk_Query10"></a> Consulta de ejemplo 10: devolver todos los clústeres posibles con probabilidad y distancia  
  En el ejemplo anterior, la puntuación de probabilidad no fue muy alta. Para determinar si hay un clúster mejor, puede usar la función [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) con la función [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) para devolver una tabla anidada donde se incluyan todos los clústeres posibles, además de la probabilidad de que el nuevo caso pertenezca a cada clúster. La palabra clave FLATTENED se utiliza para cambiar el conjunto de filas jerárquico por una tabla plana para facilitar la visualización.  
   
 ```  
@@ -387,7 +386,7 @@ NATURAL PREDICTION JOIN
   
  Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)   
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)  

@@ -1,7 +1,7 @@
 ---
 title: Azure Feature Pack para Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 5099b46b611043dcbfa0f5b4c3ca4e72c70a5800
+ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807435"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80607862"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack para Integration Services (SSIS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "72807435"
 
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
 
-[![Descargar Feature Pack de SSIS para Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Descargar**
+[![Descarga de Feature Pack de SIS para Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Descargar**
 
 - Para SQL Server 2019 - [Feature Pack de Microsoft SQL Server 2019 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - Para SQL Server 2017 - [Feature Pack de Microsoft SQL Server 2017 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=54798)
@@ -48,9 +48,9 @@ En las páginas de descarga también se incluye información sobre los requisito
 
     -   [Administrador de conexiones de Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
     
-    -   [Administrador de conexiones de almacenamiento de Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
+    -   [Administrador de conexiones de Azure Storage](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
-    -   [Administrador de conexiones de suscripciones de Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
+    -   [Administrador de conexiones de suscripción de Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
 -   Tareas
 
@@ -66,7 +66,7 @@ En las páginas de descarga también se incluye información sobre los requisito
 
     -   [Tarea de eliminación de clúster de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Tarea de Hive de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Tarea de Hive de Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
     -   [Tarea de Pig de Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
 
@@ -100,8 +100,8 @@ Para usar TLS 1.2, agregue un valor `REG_DWORD` denominado `SchUseStrongCrypto` 
 
 ## <a name="dependency-on-java"></a>Dependencia en Java
 
-Java es necesario para usar formatos de archivo ORC/Parquet con conectores de Azure Data Lake Store/archivos planos.  
-La arquitectura (32 o 64 bits) de la compilación de Java debe coincidir con la del runtime de SSIS que se va a usar.
+Java es necesario para usar formatos de archivo ORC/Parquet con conectores de Azure Data Lake Store/archivos flexibles.  
+La arquitectura (32 o 64 bits) de la compilación de Java debe coincidir con la del entorno de ejecución de SSIS que se va a usar.
 Se han probado las siguientes compilaciones de Java.
 
 - [OpenJDK 8u192 de Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
@@ -119,6 +119,13 @@ Se han probado las siguientes compilaciones de Java.
 7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Nueva variable del sistema**.
 8. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Variables de entorno**.
 9. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Propiedades del sistema**.
+
+> [!TIP]
+> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space**, puede agregar una variable de entorno *`_JAVA_OPTIONS`* para ajustar el tamaño mínimo y máximo del montón de JVM.
+>
+>![montón de jvm](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Ejemplo: establecimiento de la variable *`_JAVA_OPTIONS`* con el valor *`-Xms256m -Xmx16g`* . La marca Xms especifica el grupo de asignación de memoria inicial para una Máquina virtual Java (JVM), mientras que Xmx especifica el grupo de asignación de memoria máxima. Esto significa que JVM se iniciará con la cantidad de memoria *`Xms`* y podrá utilizar como máximo *`Xmx`* . Los valores predeterminados son 64 MB como mínimo y 1 G como máximo.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configuración de OpenJDK de Zulú en Azure-SSIS Integration Runtime
 
@@ -139,6 +146,13 @@ Como punto de entrada, `main.cmd` desencadena la ejecución del script `install_
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space**, puede agregar un comando en *`main.cmd`* para ajustar el tamaño mínimo y máximo del montón de JVM. Ejemplo:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> La marca Xms especifica el grupo de asignación de memoria inicial para una Máquina virtual Java (JVM), mientras que Xmx especifica el grupo de asignación de memoria máxima. Esto significa que JVM se iniciará con la cantidad de memoria *`Xms`* y podrá utilizar como máximo *`Xmx`* . Los valores predeterminados son 64 MB como mínimo y 1 G como máximo.
 
 **install_openjdk.ps1**
 
@@ -177,8 +191,29 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  Utilice el contenedor de bucles Foreach con el enumerador de blobs de Azure para procesar los datos de varios archivos de blob.
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## <a name="release-notes"></a>Notas de la versión
+
+### <a name="version-1180"></a>Versión 1.18.0
+
+#### <a name="improvements"></a>Mejoras
+
+1. En el caso de la tarea de archivo flexible, se han introducido tres mejoras: (1) se ha agregado compatibilidad con caracteres comodín para las operaciones de copia y eliminación; (2) el usuario puede habilitar o deshabilitar la búsqueda recursiva para la operación de eliminación; y (3) el nombre del archivo de destino para la operación de copia puede estar vacío para conservar el nombre del archivo de origen.
+
+### <a name="version-1170"></a>Versión 1.17.0
+
+Se trata de una versión de revisión publicada solo para SQL Server 2019.
+
+#### <a name="bugfixes"></a>Correcciones
+
+1. Al ejecutarse en Visual Studio 2019 y establecer como destino SQL Server 2019, podría producirse un error en la tarea, origen o destino del archivo flexible con el mensaje de error `Attempted to access an element as a type incompatible with the array.`.
+1. Al ejecutarse en Visual Studio 2019 y establecer como destino SQL Server 2019, podría producirse un error en el origen o destino del archivo flexible mediante el formato ORC/Parquet con el mensaje de error `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.`.
+
+### <a name="version-1160"></a>Versión 1.16.0
+
+#### <a name="bugfixes"></a>Correcciones
+
+1. En algunos casos, la ejecución de paquetes informa de "Error: No se puede cargar el archivo o ensamblado 'Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed' ni una de sus dependencias".
 
 ### <a name="version-1150"></a>Versión 1.15.0
 

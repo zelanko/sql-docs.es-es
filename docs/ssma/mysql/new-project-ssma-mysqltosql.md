@@ -10,27 +10,27 @@ ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908853"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nuevo proyecto (SSMA) (MySQLToSQL)
-Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  
+Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA. Para tener acceso al cuadro de diálogo **nuevo proyecto** , en el menú **archivo** , haga clic en **nuevo proyecto**.  
   
 ## <a name="options"></a>Opciones  
-**Name**  
+**Nombre**  
   
 Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.  
   
 **Ubicación**  
   
-Escriba o busque la carpeta o ubicación de red para guardar el proyecto.  
+Escriba o busque la carpeta o la ubicación de red en la que desea guardar el proyecto.  
   
-**MigrateTo**  
+**Migrara**  
   
-Seleccione uno de la versión de la base de datos de destino desde abajo de la lista:  
+Seleccione una de las siguientes versiones de la base de datos de destino en la lista siguiente:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -38,7 +38,7 @@ Seleccione uno de la versión de la base de datos de destino desde abajo de la l
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

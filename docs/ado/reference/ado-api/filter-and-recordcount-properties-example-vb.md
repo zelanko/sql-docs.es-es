@@ -1,5 +1,5 @@
 ---
-title: Ejemplo Filter y RecordCount propiedades (VB) | Microsoft Docs
+title: Ejemplo de las propiedades Filter y RecordCount (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918638"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756765"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Ejemplo de las propiedades Filter y RecordCount (VB)
-En este ejemplo abierto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla de publicadores en el ***Pubs*** base de datos. A continuación, usa el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para limitar el número de registros visibles a esos publicadores en un determinado país o región. El **RecordCount** propiedad se utiliza para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  
+En este ejemplo se abre un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla Publishers en la base de datos ***pubs*** . A continuación, usa la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) para limitar el número de registros visibles a los publicadores de un país o región determinados. La propiedad **RecordCount** se usa para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  
   
 ```  
 'BeginFilterVB  
@@ -108,13 +108,13 @@ End Sub
 ```  
   
 > [!NOTE]
->  Cuando sepa los datos que desea seleccionar, es normalmente más eficaz para abrir un **Recordset** con una instrucción SQL. En este ejemplo se muestra cómo puede crear simplemente una **Recordset** y obtener registros de un país determinado.  
+>  Cuando conozca los datos que desea seleccionar, suele ser más eficaz abrir un **conjunto de registros** con una instrucción SQL. En este ejemplo se muestra cómo se puede crear un solo **conjunto de registros** y obtener registros de un país determinado.  
   
 ```  
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad de filtro](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedad Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

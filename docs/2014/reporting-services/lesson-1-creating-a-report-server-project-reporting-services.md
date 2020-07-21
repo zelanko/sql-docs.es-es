@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108532"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
@@ -24,15 +24,15 @@ ms.locfileid: "66108532"
   
 ### <a name="to-create-a-report-server-project"></a>Para crear un proyecto de servidor de informes  
   
-1.  Haga clic en **iniciar**, apunte a **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Data Tools**. Si esta es la primera vez haya abierto [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en **configuración de Business Intelligence** para la configuración del entorno predeterminado.  
+1.  Haga clic en **Inicio**, seleccione **todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Data Tools**. Si es la primera vez que se abre [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en configuración de **Business Intelligence** para la configuración predeterminada del entorno.  
   
 2.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**.  
   
 3.  En la lista **Plantillas instaladas** , haga clic en **Business Intelligence**.  
   
-4.  Haga clic en **Report Server Project**.  
+4.  Haga clic en **proyecto de servidor de informes**.  
   
-5.  En **Nombre**, escriba **tutorial**.  
+5.  En **nombre**, escriba **tutorial**.  
   
 6.  Haga clic en **Aceptar** para crear el proyecto.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "66108532"
   
 ### <a name="to-create-a-new-report-definition-file"></a>Para crear un nuevo archivo de definición de informe  
   
-1.  En el Explorador de soluciones, haga clic en **informes**, apunte a **agregar**y haga clic en **nuevo elemento**.  
+1.  En Explorador de soluciones, haga clic con el botón secundario en **informes**, seleccione **Agregar**y haga clic en **nuevo elemento**.  
   
     > [!NOTE]  
     >  Si la ventana **Explorador de soluciones** no está visible, en el menú **Ver** , haga clic en **Explorador de soluciones**.  
   
-2.  En el **Agregar nuevo elemento** cuadro de diálogo **plantillas**, haga clic en **informe**.  
+2.  En el cuadro de diálogo **Agregar nuevo elemento** , en **plantillas**, haga clic en **Informe**.  
   
 3.  En **Nombre**, escriba **Sales Orders.rdl** y, después, haga clic en **Agregar**.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66108532"
  Los datos se definen en el panel **Datos de informe** . El diseño del informe se define en la vista **Diseño** . Puede ejecutar el informe y ver su aspecto en la vista **Vista previa** .  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Consulte [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
+ Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Vea [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076290"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536487"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Crear una dimensión de tiempo generando una tabla de tiempos
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando ninguna tabla de tiempos está disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando no haya ninguna tabla de tiempos disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
   
 -   **Generar una tabla de tiempos en el origen de datos** : seleccione esta opción cuando tenga el permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará una tabla de tiempos y la almacenará en el origen de datos. El asistente crea entonces la dimensión de tiempo de esa tabla de tiempos.  
   
@@ -53,12 +52,12 @@ ms.locfileid: "66076290"
 ## <a name="completing-the-dimension-wizard"></a>Completar el Asistente para dimensiones  
  En la página **Finalización del asistente** , podrá revisar los atributos y jerarquías creados en el asistente y asignar un nombre a la dimensión de tiempo. Haga clic en **Finalizar** para completar el asistente y crear la dimensión. Una vez haya finalizado la dimensión, podrá cambiarla con el Diseñador de dimensiones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
  [Crear una dimensión de tipo Date](database-dimensions-create-a-date-type-dimension.md)   
  [Propiedades de la dimensión de base de datos](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Crear una dimensión mediante el uso de una tabla existente](create-a-dimension-by-using-an-existing-table.md)   
+ [Crear una dimensión usando una tabla existente](create-a-dimension-by-using-an-existing-table.md)   
  [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

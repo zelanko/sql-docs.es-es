@@ -17,18 +17,18 @@ helpviewer_keywords:
 - tangent
 - ATN2 function
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 993020892a992800a8fb8fab2c7801fe7caf9493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28ba622527afb105cf63625de307f1b5f0ec43b1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040195"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002257"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Devuelve el ángulo (en radianes) formado por el eje X positivo y la línea que se extiende desde el origen al punto (y, x), donde x e y son los valores de las dos expresiones de punto flotante especificadas.
   
@@ -36,7 +36,7 @@ Devuelve el ángulo (en radianes) formado por el eje X positivo y la línea que 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 ATN2 ( float_expression , float_expression )  
 ```  
   
@@ -63,7 +63,7 @@ The ATN2 of the angle is: 1.30545
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
 [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

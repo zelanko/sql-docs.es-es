@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017184"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
@@ -31,8 +31,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- De forma predeterminada, MDX excluye los miembros calculados cuando resuelve funciones de conjunto. El **AddCalculatedMembers** función examina la expresión de conjunto especificada en *expresión_conjunto,* e incluye miembros calculados que están relacionados con los miembros incluidos dentro del ámbito de ese conjunto expresión.  
+## <a name="remarks"></a>Observaciones  
+ De forma predeterminada, MDX excluye los miembros calculados cuando resuelve funciones de conjunto. La función **AddCalculatedMembers** examina la expresión de conjunto especificada en *set_expression* e incluye miembros calculados que son del mismo nivel que los miembros contenidos en el ámbito de esa expresión de conjunto.  
   
 > [!NOTE]  
 >  Esta función puede utilizarse solo con expresiones de conjunto de una dimensión.  
@@ -50,7 +50,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- El ejemplo siguiente devuelve el `Measures.[Unit Price]` miembro, además de todos los miembros calculados en el **medidas** dimensión, desde el **Adventure Works** cubo.  
+ En el ejemplo siguiente se `Measures.[Unit Price]` devuelve el miembro, además de todos los miembros calculados de la dimensión **Measures** , del cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -59,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

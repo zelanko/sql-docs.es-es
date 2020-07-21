@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 120c7418d8b16fe6d083961affcf0b8a9c9f6c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061555"
 ---
 # <a name="replication-log-reader-agent"></a>Agente de registro del LOG de replicación
   El Agente de registro del LOG de replicación es un archivo ejecutable que supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para ser replicadas desde el registro de transacciones a la base de datos de distribución.  
@@ -69,7 +68,7 @@ ms.locfileid: "63127014"
  Muestra información de uso.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ Es el nombre del publicador. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
@@ -81,7 +80,7 @@ ms.locfileid: "63127014"
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
  **-Distributor** _server_name_[ **\\** _instance_name_]  
- Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-DistributorLogin** _distributor_login_  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -104,7 +103,7 @@ ms.locfileid: "63127014"
  > [!NOTE]  
  >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" se debe establecer en el nombre completo de la instancia de SQL Server.
  
- Para obtener más información, consulte [seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obtener más información, consulte [replicación de SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-ExtendedEventConfigFile** _configuration_path_and_file_name_  
  Especifica el nombre y la ruta del archivo para el archivo de configuración XML de eventos extendidos. El archivo de configuración de eventos extendidos le permite configurar sesiones y habilitar eventos para su seguimiento.  
@@ -115,7 +114,7 @@ ms.locfileid: "63127014"
 |Valor HistoryVerboseLevel|Descripción|  
 |-------------------------------|-----------------|  
 |**0**||  
-|**1**|Predeterminado: Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
+|**1**|Predeterminada. Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
 |**2**|Inserta nuevos registros de historial a menos que el registro sea para mensajes de inactividad o mensajes de trabajos de ejecución prolongada, en cuyo caso actualiza los registros anteriores.|  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
@@ -133,7 +132,7 @@ ms.locfileid: "63127014"
 > [!NOTE]  
 >  Este parámetro se omite para las publicaciones que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea la sección "Configurar el trabajo del conjunto de transacciones" en [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md).  
   
- **-MessageInterval** _intervalo_de_mensajes_  
+ **-MessageInterval** _message_interval_  
  Es el intervalo de tiempo utilizado para el registro del historial. Un evento del historial se registra cuando se alcanza el valor de **MessageInterval** una vez registrado el último evento de historial.  
   
  Si no hay ninguna transacción replicada disponible en el origen, el agente envía un mensaje de no transacción al distribuidor. Esta opción especifica cuánto tiempo espera el agente para enviar otro mensaje que indica que no hay ninguna transacción. Los agentes siempre envían un mensaje que indica que no hay ninguna transacción cuando detectan que no hay ninguna transacción disponible en el origen después de procesar previamente las transacciones replicadas. El valor predeterminado es 60 segundos.  
@@ -144,7 +143,7 @@ ms.locfileid: "63127014"
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Especifica si el resultado debería ser detallado.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Solo se imprimen los mensajes de error.|  
 |**1**|Se imprimen todos los mensajes de informe de progreso de agente.|  
@@ -187,7 +186,7 @@ ms.locfileid: "63127014"
  **-RecoverFromDataErrors**  
  Especifica que el Agente de registro del LOC continúe ejecutándose cuando encuentra errores en datos de columna publicados en un Publicador que no es de SQL Server. De forma predeterminada, tales errores hacen el Agente de registro del LOG devuelva un error. Al utilizar **-RecoverFromDataErrors**, los datos de columna erróneos se replican como NULL o un valor nonnull adecuado y los mensajes de advertencia se registran en la tabla [MSlogreader_history](/sql/relational-databases/system-tables/mslogreader-history-transact-sql) . Este parámetro solamente se admite en publicadores de Oracle.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de debajo de una cuenta de usuario de dominio (el valor predeterminado), el servicio puede tener acceso solamente al equipo local. Si el Agente de registro del LOG que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de registro del LOC devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de cómo cambiar cuentas de seguridad, vea [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  
@@ -200,7 +199,7 @@ ms.locfileid: "63127014"
 |---------------------|  
 |Se ha agregado el parámetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](replication-agent-administration.md)  
   
   

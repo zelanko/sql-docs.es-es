@@ -1,5 +1,5 @@
 ---
-title: Permisos de carpetas y archivos (Master Data Services) | Microsoft Docs
+title: Permisos de carpetas y archivos
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811510"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Permisos de carpetas y archivos (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Al instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], las carpetas y archivos se instalan en el sistema de archivos en la ruta de instalación que especifica para las características compartidas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si usa la ruta de instalación predeterminada para las características compartidas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , la ruta de instalación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es *unidad*:\Archivos de programa\Microsoft SQL Server\130\Master Data Services. Aunque puede cambiar la ruta de instalación de las características compartidas, sea consciente de los permisos que se heredan de la carpeta primaria y de los que se establecen explícitamente para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67945269"
 |---------------------------|-----------------|  
 |CREATOR OWNER|Permisos especiales|  
 |SYSTEM|Permisos especiales|  
-|Administradores de|Permisos especiales|  
+|Administradores|Permisos especiales|  
 |Usuarios|Lectura y ejecución, mostrar contenido de carpetas, lectura|  
 |TrustedInstaller|Mostrar contenido de carpetas, permisos especiales|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "67945269"
 |Nombre de grupo o cuenta|Permisos|  
 |---------------------------|-----------------|  
 |SYSTEM|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
-|Administradores de|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
+|Administradores|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
 |MDS_ServiceAccounts|Modificar, lectura y ejecución, mostrar contenido de carpetas, lectura, escritura|  
   
 ###### <a name="webconfig-permissions"></a>Permisos de Web.config  
@@ -59,12 +59,12 @@ ms.locfileid: "67945269"
 |Nombre de grupo o cuenta|Permisos|  
 |---------------------------|-----------------|  
 |SYSTEM|Control total, modificar, lectura y ejecución, lectura, escritura|  
-|Administradores de|Control total, modificar, lectura y ejecución, lectura, escritura|  
+|Administradores|Control total, modificar, lectura y ejecución, lectura, escritura|  
 |MDS_ServiceAccounts|Lectura y ejecutar, lectura|  
   
  Para obtener más información sobre el contenido del archivo Web.config de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [Referencia de la configuración web &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

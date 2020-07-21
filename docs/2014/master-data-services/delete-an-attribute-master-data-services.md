@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6eb278610a8e50effb9c14fd76a13d453c2fb348
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93b3867a55c66ebc5a0a26bc211104d63b01692f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962015"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Eliminar un atributo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine un atributo cuando desee eliminar permanentemente el atributo y todos los valores de atributo asociados.  
@@ -28,7 +27,7 @@ ms.locfileid: "65483083"
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute"></a>Para eliminar un atributo  
   
@@ -42,21 +41,21 @@ ms.locfileid: "65483083"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **editar entidad** página, haga clic en el atributo que desea eliminar.  
+6.  En la página **Editar entidad** , haga clic en el atributo que desea eliminar.  
   
     > [!NOTE]  
     >  No puede eliminar los atributos Code o Name.  
   
-7.  Haga clic en **atributo seleccionado Delete**.  
+7.  Haga clic en **eliminar atributo seleccionado**.  
   
 8.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
 9. En el cuadro de diálogo de confirmación adicional, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
- [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
- [Crear un atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
+ [Atributos basados en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)   
+ [Cree un atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)   
  [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   

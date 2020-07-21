@@ -10,15 +10,14 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0163077a2751759d0f48ee20afc75abdcf6b58d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054891"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permisos para una colección de esquemas XML
   Puede conceder permisos para crear una colección de esquemas XML y también puede concederlos para un objeto de colección de esquemas XML.  
@@ -120,7 +119,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>b. Conceder permisos para utilizar una colección de esquemas XML existente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Conceder permisos para utilizar una colección de esquemas XML existente  
  El ejemplo siguiente muestra el modelo de permisos para la colección de esquemas XML. Ilustra los diferentes permisos que se necesitan para crear y utilizar la colección de esquemas XML.  
   
  En el ejemplo, se crea una base de datos de prueba y un inicio de sesión, `TestLogin1`. `TestLogin1` crea una colección de esquemas XML en la base de datos. El inicio de sesión crea una tabla y utiliza la colección de esquemas XML para crear una columna xml con tipo. A continuación, el usuario inserta los datos y los consulta. Todos estos pasos requieren los permisos de esquema necesarios que muestra el código.  
@@ -502,7 +501,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](xml-data-sql-server.md)   
  [Comparar XML con tipo y XML sin tipo](compare-typed-xml-to-untyped-xml.md)   
  [Colecciones de esquemas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   

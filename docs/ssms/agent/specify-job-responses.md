@@ -1,10 +1,9 @@
 ---
-title: Especificar respuestas de trabajos | Microsoft Docs
-ms.custom: ''
+title: Especificar respuestas de trabajos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e41c0c0d543a65e67afcc733a301d15deac790d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3208c2543292fd67ec36ad25dd5a065e08988ca6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259799"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245785"
 ---
 # <a name="specify-job-responses"></a>Especificar respuestas de trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,9 +48,9 @@ Las respuestas de trabajos especifican acciones que realizará el servicio del A
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo notificar a un operador el estado de un trabajo.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Escribir el estado de un trabajo en el registro de aplicación de Windows](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>Consulte también  
 [Supervisar y responder a eventos](../../ssms/agent/monitor-and-respond-to-events.md)  

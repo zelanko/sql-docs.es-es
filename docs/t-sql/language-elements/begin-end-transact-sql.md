@@ -24,15 +24,15 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe87e41f31ff7c85152138015c3ba3649cacda50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82a5b3d8ee0f037fc8ea2909d333ea7de13841fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130141"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85990587"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Incluye una serie de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de forma que se pueda ejecutar un grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. BEGIN y END son palabras clave del lenguaje de control de flujo.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68130141"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 BEGIN  
     { sql_statement | statement_block }   
 END  
@@ -50,7 +50,7 @@ END
  { *sql_statement* | *statement_block* }  
  Se trata de cualquier instrucción o grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] definidas con un bloque de instrucciones.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los bloques BEGIN...END pueden anidarse.  
   
  Aunque todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] son válidas en un bloque BEGIN...END, ciertas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] no deben agruparse en el mismo proceso por lotes o bloque de instrucciones.  
@@ -58,48 +58,43 @@ END
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo, `BEGIN` y `END` definen un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan juntas. Si el bloqueo `BEGIN...END` no se incluye, ambas instrucciones `ROLLBACK TRANSACTION` se ejecutarán y se devolverán ambos mensajes `PRINT`.  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012
 GO  
-BEGIN TRANSACTION;  
+BEGIN TRANSACTION
 GO  
 IF @@TRANCOUNT = 0  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM Person.Person WHERE LastName = 'Adams';  
-    ROLLBACK TRANSACTION;  
-    PRINT N'Rolling back the transaction two times would cause an error.';  
-END;  
-ROLLBACK TRANSACTION;  
-PRINT N'Rolled back the transaction.';  
+    FROM Person.Person WHERE LastName = 'Adams'
+    ROLLBACK TRANSACTION
+    PRINT N'Rolling back the transaction two times would cause an error.'
+END
+ROLLBACK TRANSACTION
+PRINT N'Rolled back the transaction.'
 GO  
 /*  
 Rolled back the transaction.  
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo, `BEGIN` y `END` definen un conjunto de instrucciones [!INCLUDE[DWsql](../../includes/dwsql-md.md)] que se ejecutan juntas. Si no se incluye el bloque `BEGIN...END`, en el ejemplo siguiente se estará en un bucle continuo.  
   
-```  
+```sql
 -- Uses AdventureWorks  
-  
+
 DECLARE @Iteration Integer = 0  
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM dbo.DimCustomer WHERE LastName = 'Adams';  
-SET @Iteration += 1  
-END;  
-  
+    FROM dbo.DimCustomer WHERE LastName = 'Adams'
+    SET @Iteration += 1  
+END
 ```  
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
-  
-  
-
-
+ [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)

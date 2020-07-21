@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaObjectTypeEnum enumeration [ADO MD]
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cfb208880586d0bda6bfe6bf956bbb544b48e69a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6d7f908c6d74d71c5d4aece216e825ac23487f26
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949187"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765006"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
-Especifica el tipo de objeto que se va a recuperar el [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) método.  
+Especifica el tipo de objeto que va a recuperar el método [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) .  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adObjectTypeDimension**|1|Un [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) objeto.|  
-|**adObjectTypeHierarchy**|2|Un [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objeto.|  
-|**adObjectTypeLevel**|3|Un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.|  
-|**adObjectTypeMember**|4|Un [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto.|
+|**adObjectTypeDimension**|1|Objeto [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) .|  
+|**adObjectTypeHierarchy**|2|Objeto de [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) .|  
+|**adObjectTypeLevel**|3|Objeto de [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) .|  
+|**adObjectTypeMember**|4|Objeto de [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .|

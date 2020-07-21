@@ -1,5 +1,5 @@
 ---
-title: Caché proactiva (particiones) | Microsoft Docs
+title: Almacenamiento en caché automático (particiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a903d73394b191dbfe96dea710fb2c6c86165402
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727279"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545237"
 ---
 # <a name="proactive-caching-partitions"></a>Almacenamiento en caché automático (Particiones)
   El almacenamiento en caché automático proporciona la creación y administración automáticas de la memoria caché MOLAP para objetos OLAP. Los cubos incorporan inmediatamente los cambios que se realizan en los datos de la base de datos, basándose en las notificaciones recibidas de la base de datos. El objetivo del almacenamiento en caché automático consiste en proporcionar el rendimiento de MOLAP tradicional, a la vez que se conserva la inmediatez y la facilidad de administración que proporciona ROLAP.  
@@ -42,7 +41,7 @@ ms.locfileid: "62727279"
 ### <a name="maximizing-performance"></a>Maximizar el rendimiento  
  Para maximizar el rendimiento y al mismo tiempo reducir la latencia, el almacenamiento en caché también se puede utilizar sin quitar los objetos MOLAP actuales. Pueden continuar ejecutándose las consultas en los objetos MOLAP mientras se leen y se procesan los datos en una nueva caché. Este método proporciona un mejor rendimiento, pero podría devolver datos desusados en algunas consultas mientras se genera la nueva caché.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenamiento de dimensiones](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [Establecer el almacenamiento de particiones &#40;Analysis Services - Multidimensional&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   

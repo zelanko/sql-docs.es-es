@@ -1,5 +1,5 @@
 ---
-title: Gráfico (visores de modelos de minería de datos) de la pestaña | Microsoft Docs
+title: Pestaña gráfico (visores de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,26 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 219ff4143b0f673b36ca6092d5ef8d5bf39f06ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088176"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527577"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Pestaña Gráfico (Visores de modelos de minería de datos)
   Utilice el panel **Gráfico** para mostrar los datos históricos utilizados para entrenar un modelo de serie temporal, junto con los valores de predicción. El eje vertical del gráfico representa el valor de la serie y el eje horizontal representa el tiempo. Las predicciones futuras se representan mediante una línea de puntos.  
   
- **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [examinar un modelo usando el Visor de Series temporales de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Para más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Examinar un modelo usando el Visor de serie temporal de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Opciones  
- **Actualizar el contenido del Visor**  
+ **Actualizar el contenido del visor**  
  Vuelva a cargar el modelo de minería de datos en el visor.  
   
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Viewer**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de los modelos de serie temporal o el Visor de contenido de minería de datos genérico de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  
@@ -58,9 +57,9 @@ ms.locfileid: "66088176"
  **Selección de serie**  
  Abra un cuadro de diálogo desde el que puede seleccionar la serie que desea incluir en el visor.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   
   

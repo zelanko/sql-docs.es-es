@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6c854560982ceddf7d6237d77ba81562e97fc9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705941"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT (cláusula de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica las columnas que va a devolver la consulta.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68141062"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SELECT [ ALL | DISTINCT ]  
 [ TOP ( expression ) [ PERCENT ] [ WITH TIES ] ]   
@@ -73,7 +73,7 @@ SELECT [ ALL | DISTINCT ]
  TOP (*expression* ) [ PERCENT ] [ WITH TIES ]  
  Indica que el conjunto de resultados de la consulta solamente devolverá un primer conjunto o porcentaje de filas especificado. *expression* puede ser un número o un porcentaje de las filas.  
   
- Por compatibilidad con versiones anteriores, se permite el uso de TOP *expression* sin paréntesis en las instrucciones SELECT, aunque no se recomienda. Para obtener más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
+ Por compatibilidad con versiones anteriores, se permite el uso de TOP *expression* sin paréntesis en las instrucciones SELECT, aunque no se recomienda. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
 \< select_list > Columnas que se van a seleccionar para el conjunto de resultados. La lista de selección es una serie de expresiones separadas por comas. El número máximo de expresiones que se puede especificar en la lista de selección es 4.096.  
   
@@ -145,7 +145,7 @@ FROM Cities;
   
  *column_alias* se puede usar en una cláusula ORDER BY. Sin embargo, no puede utilizarse en una cláusula WHERE, GROUP BY o HAVING. Si la expresión de consulta forma parte de una instrucción DECLARE CURSOR, *column_alias* no se puede usar en la cláusula FOR UPDATE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La longitud de los datos devueltos de las columnas **text** o **ntext** incluidas en la lista de selección se establece en el valor menor de los siguientes: el tamaño real de la columna **text**, la configuración predeterminada de TEXTSIZE para la sesión o el límite de la aplicación codificado de forma rígida. Para cambiar la longitud del texto devuelto de la sesión, utilice la instrucción SET. De forma predeterminada, la longitud máxima de los datos de texto que se devuelven con una instrucción SELECT es de 4.000 bytes.  
   
  El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provoca la excepción 511 y revierte la instrucción que se está ejecutando en ese momento si se produce alguno de estos comportamientos:  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acd8ec235d357853266b0419024ae406fa62fb90
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969945"
 ---
 # <a name="database-engine-error-severities"></a>Niveles de gravedad de error del motor de base de datos
   Cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]muestra un error, la gravedad del error indica el tipo de problema detectado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +67,7 @@ ms.locfileid: "62870983"
 ## <a name="retrieving-error-severity"></a>recuperar la gravedad del error  
  Se puede usar la función del sistema ERROR_SEVERITY para recuperar la gravedad del error que ha provocado la ejecución del bloque CATCH de una construcción TRY...CATCH. Si se le llama fuera del ámbito de un bloque CATCH, ERROR_SEVERITY devuelve el valor NULL. Para obtener más información, vea [ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de errores del motor de base de datos](../native-client-ole-db-errors/errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [Funciones del sistema &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   

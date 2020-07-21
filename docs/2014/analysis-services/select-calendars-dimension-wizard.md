@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6a51b44e9b467881c4aeaa8e0a63f48b617a22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538327"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Seleccionar calendarios (Asistente para dimensiones)
   Use la página **Seleccionar calendarios** para crear jerarquías adicionales que representan calendarios fiscales, de generación de informes, de fabricación o International Standards Organization (ISO) 8601 para la dimensión de tiempo.  
   
 > [!NOTE]  
->  Esta página se muestra solo si se ha seleccionado la opción **Dimensión de tiempo de servidor** en la página **Seleccionar el tipo de dimensión** o se ha seleccionado la opción **Build the dimension without using a data source** (Generar la dimensión sin un origen de datos) en la página **Dimension Definition** (Definición de dimensión) y se ha seleccionado **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
+>   Esta página se muestra solo si se ha seleccionado la opción **Dimensión de tiempo de servidor** en la página **Seleccionar el tipo de dimensión** o se ha seleccionado la opción **Generar la dimensión sin un origen de datos** en la página **Seleccionar método de generación** y se ha seleccionado **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
   
 ## <a name="options"></a>Opciones  
  **Calendario fiscal**  
@@ -33,13 +32,13 @@ ms.locfileid: "66069692"
  Seleccione el día y el mes en el que comienza el calendario fiscal.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
+>   Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
   
- **Convención de nomenclatura de calendario fiscal**  
+ **Convención de nomenclatura del año fiscal**  
  Seleccione la convención de nomenclatura usada por el calendario fiscal. Seleccione **Nombre del año natural** o **Nombre del año natural +1**.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
+>   Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
   
  **Calendario de informe (o marketing)**  
  Seleccione esta opción para crear una jerarquía de tiempo basada en un calendario de informe.  
@@ -58,10 +57,10 @@ ms.locfileid: "66069692"
   
  En la tabla siguiente se enumeran las opciones disponibles para la semana por patrón mensual.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Semana 445**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 4 semanas y el tercero tiene 5 semanas.|  
-|**Semana 454**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 5 semanas y el tercero tiene 4 semanas.|  
+|**Week 445**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 4 semanas y el tercero tiene 5 semanas.|  
+|**Week 454**|El primer mes del trimestre tiene 4 semanas, el segundo mes tiene 5 semanas y el tercero tiene 4 semanas.|  
 |**Semana 544**|El primer mes del trimestre tiene 5 semanas, el segundo mes tiene 4 semanas y el tercero tiene 4 semanas.|  
   
  **Calendario de fabricación**  
@@ -71,20 +70,20 @@ ms.locfileid: "66069692"
  Seleccione la semana y el mes en que comienza el calendario de fabricación.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario de fabricación** .  
+>   Esta opción solo está disponible cuando si se ha seleccionado **Calendario de fabricación** .  
   
  **Trimestre con períodos adicionales**  
  Seleccione o escriba el trimestre que contendrá los periodos adicionales.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario de fabricación** .  
+>   Esta opción solo está disponible cuando si se ha seleccionado **Calendario de fabricación** .  
   
  **Calendario ISO 8601**  
  Seleccione esta opción para crear una jerarquía de tiempo basada en el calendario ISO 8601.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

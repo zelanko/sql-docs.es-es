@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ce45cb7fb76c1b01b57d96d86e34b051dc73043
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027139"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916951"
 ---
 # <a name="user-defined-types"></a>Tipos definidos por el usuario
 
@@ -25,6 +25,6 @@ Los tipos definidos por el usuario (UDT) se incorporaron en [!INCLUDE[ssVersion2
 
 No existe un cambio de comportamiento para los UDT con un tamaño menor o igual que 8.000 bytes, pero se admiten UDT de mayor tamaño y notifican su tamaño como "ilimitado".
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

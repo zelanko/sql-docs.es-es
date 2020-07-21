@@ -1,5 +1,5 @@
 ---
-title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: Sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561126"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833968"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Contiene una fila para cada dependencia por nombre en una entidad definida por el usuario en la base de datos actual. Esto incluye las dependencias entre las funciones escalares definidas por el usuario y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los módulos que se compilan de forma nativa. Se crea una dependencia entre dos entidades cuando una entidad, denominada entidad a la *que se hace referencia*, aparece por nombre en una expresión SQL persistente de otra entidad, denominada *entidad de referencia*. Por ejemplo, si en la definición de una vista se hace referencia a una tabla, la vista, como entidad que hace la referencia, depende de la tabla, la entidad a la que se hace referencia. Si desapareciera la tabla, la vista sería inservible.  
+  Contiene una fila para cada dependencia por nombre en una entidad definida por el usuario en la base de datos actual. Esto incluye las dependencias entre las funciones escalares definidas por el usuario y los módulos que se compilan de forma nativa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se crea una dependencia entre dos entidades cuando una entidad, denominada entidad a la *que se hace referencia*, aparece por nombre en una expresión SQL persistente de otra entidad, denominada *entidad de referencia*. Por ejemplo, si en la definición de una vista se hace referencia a una tabla, la vista, como entidad que hace la referencia, depende de la tabla, la entidad a la que se hace referencia. Si desapareciera la tabla, la vista sería inservible.  
   
  Para obtener más información, vea [Funciones escalares definidas por el usuario para OLTP en memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -42,11 +42,11 @@ ms.locfileid: "69561126"
   
 -   Entidades entre servidores y entre bases de datos. Se notifican los nombres de entidad; en cambio, no se resuelve el identificador de la entidad.  
   
--   Dependencias de nivel de columna en entidades enlazadas a un esquema. Las dependencias de nivel de columna para objetos no enlazados a un esquema se pueden devolver mediante [Sys. DM _ _sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
+-   Dependencias de nivel de columna en entidades enlazadas a un esquema. Las dependencias de nivel de columna para objetos no enlazados a un esquema se pueden devolver mediante [Sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
   
 -   Desencadenadores DDL de nivel de servidor en el contexto de la base de datos maestra.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |referencing_id|**int**|Identificador de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_minor_id|**int**|Identificador de la columna cuando la entidad de referencia es una columna; en caso contrario, es 0. No admite valores NULL.|  
@@ -55,7 +55,7 @@ ms.locfileid: "69561126"
 |is_schema_bound_reference|**bit**|1 = La entidad a la que se hace referencia está enlazada a un esquema.<br /><br /> 0 = La entidad a la que se hace referencia no está enlazada a un esquema.<br /><br /> No admite valores NULL.|  
 |referenced_class|**tinyint**|Clase de la entidad a la que se hace referencia.<br /><br /> 1 = Objeto o columna<br /><br /> 6 = Tipo<br /><br /> 10 = Colección de esquemas XML<br /><br /> 21 = Función de partición<br /><br /> No admite valores NULL.|  
 |referenced_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> No admite valores NULL.|  
-|referenced_server_name|**sysname**|Nombre del servidor de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las dependencias entre servidores especificadas con un nombre de cuatro partes válido. Para obtener información sobre los nombres de varias partes, vea [convenciones &#40;de sintaxis de&#41;TRANSACT-SQL Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para las entidades no enlazadas a un esquema a las que se hizo referencia sin especificar un nombre de cuatro partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo se pueden definir mediante un nombre de dos partes (*Schema. Object*).|  
+|referenced_server_name|**sysname**|Nombre del servidor de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las dependencias entre servidores especificadas con un nombre de cuatro partes válido. Para obtener información sobre los nombres de varias partes, vea [convenciones de sintaxis de Transact-sql &#40;&#41;de Transact-SQL ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para las entidades no enlazadas a un esquema a las que se hizo referencia sin especificar un nombre de cuatro partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo se pueden definir mediante un nombre de dos partes (*Schema. Object*).|  
 |referenced_database_name|**sysname**|Nombre de la base de datos de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las referencias entre bases de datos o entre servidores especificadas con un nombre válido de tres o cuatro partes.<br /><br /> NULL para las referencias no enlazadas a esquema especificadas con un nombre de una o dos partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo se pueden definir mediante un nombre de dos partes (*Schema. Object*).|  
 |referenced_schema_name|**sysname**|Esquema al que pertenece la entidad a la que se hace referencia.<br /><br /> NULL para las referencias no enlazadas a esquema en las que se hacía referencia a la entidad sin especificar el nombre del esquema.<br /><br /> Nunca es NULL para las referencias enlazadas a un esquema porque las entidades enlazadas a un esquema deben definirse y hacerse referencia con un nombre de dos partes.|  
 |referenced_entity_name|**sysname**|Nombre de la entidad a la que se hace referencia. No admite valores NULL.|  
@@ -64,7 +64,7 @@ ms.locfileid: "69561126"
 |is_caller_dependent|**bit**|Indica que el enlace de esquema de la entidad a la que se hace referencia se realiza en tiempo de ejecución; por consiguiente, la resolución del identificador de la entidad depende del esquema del autor de la llamada. Esto se produce cuando la entidad a la que se hace referencia es un procedimiento almacenado, un procedimiento almacenado extendido o una función definida por el usuario no enlazada a un esquema llamada en una instrucción EXECUTE.<br /><br /> 1 = la entidad a la que se hace referencia es dependiente del autor de la llamada y se resuelve en tiempo de ejecución. En este caso, referenced_id es NULL.<br /><br /> 0 = El identificador de la entidad a la que se hace referencia no es dependiente del autor de la llamada.<br /><br /> Es siempre 0 para las referencias enlazadas a esquema y para las referencias entre bases de datos o entre servidores que especifican explícitamente un nombre de esquema. Por ejemplo, una referencia a una entidad con el formato `EXEC MyDatabase.MySchema.MyProc` no es dependiente del autor de la llamada. Sin embargo, una referencia con el formato `EXEC MyDatabase..MyProc` es dependiente del autor de la llamada.|  
 |is_ambiguous|**bit**|Indica que la referencia es ambigua y se puede resolver en tiempo de ejecución en una función definida por el usuario, un tipo definido por el usuario (UDT) o una referencia XQuery a una columna de tipo **XML**.<br /><br /> Por ejemplo, suponga que la instrucción `SELECT Sales.GetOrder() FROM Sales.MySales` está definida en un procedimiento almacenado. Hasta que no se ejecute el procedimiento almacenado, no se sabrá si `Sales.GetOrder()` es una función definida por el usuario en el esquema `Sales` o en la columna con nombre `Sales` de tipo UDT con un método denominado `GetOrder()`.<br /><br /> 1 = La referencia es ambigua.<br /><br /> 0 = La referencia no es ambigua o la entidad puede enlazarse correctamente cuando se llama a la vista.<br /><br /> Siempre es 0 para las referencias enlazadas a un esquema.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
 
 > [!NOTE]
@@ -73,25 +73,25 @@ ms.locfileid: "69561126"
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
-|Ver|Sí|Sí|  
-|Índice filtrado|Sí**|Sin|  
-|Estadísticas filtradas|Sí**|Sin|  
-|Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sí|Sí|  
-|procedimiento almacenado CLR|Sin|Sí|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|Sin|Sí|  
-|Desencadenador CLR (DML y DDL)|Sin|Sin|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
-|Procedimientos almacenados extendidos|Sin|Sí|  
-|Cola|Sin|Sí|  
-|Synonym (Sinónimo)|Sin|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|Sin|Sí|  
-|Colección de esquemas XML|Sin|Sí|  
-|Función de partición|Sin|Sí|  
+|Ver|Yes|Yes|  
+|Índice filtrado|Sí**|No|  
+|Estadísticas filtradas|Sí**|No|  
+|Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Yes|Yes|  
+|procedimiento almacenado CLR|No|Yes|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
+|Función CLR definida por el usuario|No|Yes|  
+|Desencadenador CLR (DML y DDL)|No|No|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Procedimientos almacenados extendidos|No|Yes|  
+|Cola|No|Yes|  
+|Synonym (Sinónimo)|No|Yes|  
+|Tipo (tipo CLR y alias definido por el usuario)|No|Yes|  
+|Colección de esquemas XML|No|Yes|  
+|Función de partición|No|Yes|  
   
- \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando [!INCLUDE[tsql](../../includes/tsql-md.md)] hace referencia a un módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
+ \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
   
  ** Se realiza el seguimiento de cada una de las columnas usadas en el predicado de filtro como una entidad de referencia.  
   
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-returning-entities-that-reference-another-entity"></a>b. Devolver las entidades que hacen referencia a otra entidad  
+### <a name="b-returning-entities-that-reference-another-entity"></a>B. Devolver las entidades que hacen referencia a otra entidad  
  El ejemplo siguiente devuelve las entidades que hacen referencia a la tabla `Production.Product`. Las entidades devueltas en la columna `referencing_entity_name` dependen de la tabla `Product`.  
   
 ```  
@@ -171,7 +171,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

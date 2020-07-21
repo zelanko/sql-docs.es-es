@@ -1,10 +1,9 @@
 ---
-title: 'Tutorial: Incorporación y cambio de un diagrama de base de datos | Microsoft Docs'
-ms.custom: ''
+title: Incorporación y cambio de un diagrama de base de datos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +13,20 @@ helpviewer_keywords:
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30177e5dc9061fb66bffda6203f0740bcac3b5af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8333c2120868f8d929d937faa155b7d595abff20
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258923"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246249"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Incorporación y cambio de un diagrama de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Para completar esta visita guiada, necesitará:  
   
 -   Acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -77,11 +78,11 @@ Para completar esta visita guiada, necesitará:
   
 3.  Agregue la siguiente información a **Table1**:  
   
-    |**Nombre de columna**|**Tipo de datos**|**Permitir valores NULL**|  
+    |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|activado|  
-    |**T1col2**|**varchar(50)**|activado|  
-    |**T1col3**|**float**|activado|  
+    |**T1col1**|**int**|Activado|  
+    |**T1col2**|**varchar(50)**|Activado|  
+    |**T1col3**|**float**|Activado|  
   
 4.  Haga clic con el botón derecho en `T1col1` y seleccione **Establecer clave principal**.  
   
@@ -123,8 +124,8 @@ Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el 
     |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|no seleccionado|  
-    |**T2col2**|**varchar(50)**|activado|  
-    |**T2col3**|**xml**|activado|  
+    |**T2col2**|**varchar(50)**|Activado|  
+    |**T2col3**|**xml**|Activado|  
   
     > [!NOTE]  
     > Las columnas del lado de la clave principal de una relación de clave externa deben participar en una restricción PRIMARY KEY o UNIQUE.  
@@ -192,11 +193,11 @@ Todos los cambios realizados en el diagrama no se publican en la base de datos h
   
     Aparecerá el cuadro de diálogo **Guardar** . Si selecciona la opción **Advertir sobre las tablas afectadas** , se proporcionará información acerca de las tablas nuevas o modificadas.  
   
-2.  Haga clic en **Aceptar**.  
+2.  Haga clic en **OK**.  
   
 3.  Si se produce algún error, aparecerá el cuadro de diálogo **Notificaciones después de guardar** con los errores y las causas. Solucione los errores y guarde el diagrama de nuevo.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Este diagrama es básico, únicamente con dos tablas existentes y otras dos nuevas, pero muestra el potencial de la creación de diagramas en una base de datos existente o de la creación de un nuevo esquema visual. Algunas sugerencias de investigación adicional son:  
   
 -   Crear nuevos diagramas que incluyan grupos de tablas relacionadas  

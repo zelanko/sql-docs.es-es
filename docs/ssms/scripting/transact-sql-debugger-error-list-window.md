@@ -1,10 +1,8 @@
 ---
-title: Lista de errores (ventana, Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ventana de lista de errores
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,20 +12,28 @@ helpviewer_keywords:
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253630"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243393"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Depurador de Transact-SQL: ventana Lista de errores
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La ventana [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+La ventana [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Lista de errores**de** muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="features-of-the-error-list"></a>Características de la ventana Lista de errores  
- La ventana **Lista de errores** proporciona la funcionalidad siguiente:  
+
+La ventana **Lista de errores** proporciona la funcionalidad siguiente:  
   
 -   A medida que se modifican los scripts, la **Lista de errores** muestra las advertencias y los errores generados por IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   

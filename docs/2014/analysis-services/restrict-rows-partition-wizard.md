@@ -11,30 +11,29 @@ f1_keywords:
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4207f617b4f6fafde5392fdea013196c54501314
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547437"
 ---
 # <a name="restrict-rows-partition-wizard"></a>Restringir filas (Asistente para particiones)
   Utilice la página **Restringir filas** para restringir las filas que se recuperarán de la tabla especificada y que se agregarán e incluirán en la partición.  
   
 > [!NOTE]  
->  Esta página solo aparece si se ha seleccionado una única tabla en la página **Especificar información de origen** .  
+>   Esta página solo aparece si se ha seleccionado una única tabla en la página **Especificar información de origen** .  
   
 > [!CAUTION]  
->  Si, en **Tablas disponibles** en la página **Especificar información de origen** , ha especificado una tabla que se usa en otra partición, debe proporcionar una consulta en la página **Restringir filas** ; de lo contrario, corre el riesgo de duplicar datos en el cubo.  
+>   Si, en **Tablas disponibles** en la página **Especificar información de origen** , ha especificado una tabla que se utiliza en otra partición, debe proporcionar una consulta en la página **Restringir filas** ; de lo contrario, corre el riesgo de duplicar datos en el cubo.  
   
 ## <a name="options"></a>Opciones  
- **Especifique una consulta para restringir las filas**  
+ **Especificar una consulta para restringir las filas**  
  Seleccione esta opción para escribir una consulta que restrinja las filas del cuadro **Consulta** .  
   
  Si la opción **Consulta** está vacía cuando se selecciona esta opción, dicha opción se rellena con una instrucción SQL que recupera todas las columnas y todas las filas de la tabla seleccionada con anterioridad.  
   
- **Consulta**  
+ **Consultar**  
  Escriba o modifique la instrucción SQL que se utiliza al recuperar filas de la tabla cuando se procesa la partición.  
   
 > [!IMPORTANT]  
@@ -43,7 +42,7 @@ ms.locfileid: "66070212"
  **Comprobación**  
  Comprueba si la instrucción de **Consulta** es una instrucción SQL válida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

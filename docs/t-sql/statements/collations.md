@@ -19,16 +19,16 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271910"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380878"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Define una intercalación de una base de datos o una columna de tabla, o una operación de conversión de intercalación cuando se aplica a una expresión de cadena de caracteres. El nombre de intercalación puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica durante la creación de la base de datos, a esta se le asigna la intercalación predeterminada de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se especifica durante la creación de la columna de tabla, a la columna se le asigna la intercalación predeterminada de la base de datos.
 
@@ -36,11 +36,13 @@ Define una intercalación de una base de datos o una columna de tabla, o una ope
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -52,7 +54,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Hace que la cláusula COLLATE herede la intercalación de la base de datos actual.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La cláusula COLLATE se puede especificar en varios niveles. Entre ellas, figuran:
 
@@ -148,14 +150,14 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. Otros ejemplos
+### <a name="b-additional-examples"></a>B. Ejemplos adicionales
 
 Para ver más ejemplos en los que se usa **COLLATE**, consulte el ejemplo de [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples)**G. Crear una base de datos y especificar un nombre de intercalación y sus opciones**, y el ejemplo de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)**V. Cambiar la intercalación de columnas**.
 
 ## <a name="see-also"></a>Consulte también
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [Constantes](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)

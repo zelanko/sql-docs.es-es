@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dd7119d66dbd2e904e83d434f1319867b7aa7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62843488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929206"
 ---
 # <a name="set-and-retrieve-version-information"></a>Establecer y recuperar información de versión
   La información de versión incluye el historial y el estado actual de un archivo controlado por código fuente. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe conserva un historial completo de cada archivo controlado por código fuente, lo que permite realizar un seguimiento de la evolución de uno o más archivos a lo largo del tiempo. Además, esta información se puede utilizar para recuperar una copia local de cualquier versión del archivo o para comparar dos versiones cualesquiera.  
@@ -33,7 +32,7 @@ ms.locfileid: "62843488"
   
 -   El número de versión, que identifica su secuencia entre otras versiones del mismo archivo.  
   
--   La acción llevada a cabo. Las operaciones realizadas incluyen la creación del archivo, la protección y la eliminación.  
+-   acción realizada. Las operaciones realizadas incluyen la creación del archivo, la protección y la eliminación.  
   
 -   El nombre de usuario de la persona que realizó una acción con el archivo.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62843488"
   
 -   [Crear informes de historial y estado](../../2014/database-engine/create-history-and-status-reports.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Fundamentos del control de código fuente](../../2014/database-engine/source-control-basics.md)  
   
   

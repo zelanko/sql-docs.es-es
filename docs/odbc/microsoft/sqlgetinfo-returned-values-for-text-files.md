@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo devuelve valores para los archivos de texto | Microsoft Docs
+title: SQLGetInfo devuelve valores para archivos de texto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - text file driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 98dcfb671a96e9b82d7349193926e8f0f5349324
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898807"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298525"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo devuelve valores para los archivos de texto
-La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información puede recuperarse transfiriendo el lenguaje C enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el [referencia del programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la [Referencia del programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 > [!NOTE]  
 >  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
   
-|tipo de información|Valor devuelto|  
+|InfoType|Valor devuelto|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Todo listo|  
+|SQL_AGGREGATE_FUNCTIONS|Todo establecido|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|Active|  
 |SQL_CATALOG_USAGE|Varios valores|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|El DSN de archivo Odbc.ini, o "" si se usa la palabra clave DRIVER en Odbc.ini|  
+|SQL_DATA_SOURCE_NAME|El DSN de ODBC. ini o "" si se usa la palabra clave DRIVER en ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|Directorio de base de datos actual|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"TEXT"|  
-|SQL_DBMS_VER|ISAM: Text<br /><br /> Versión: 1.0<br /><br /> Formato de número de versión: 01.00.0000|  
+|SQL_DBMS_NAME|NEGRITA|  
+|SQL_DBMS_VER|ISAM: texto<br /><br /> Versión: 1.0<br /><br /> Formato del número de versión: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HENV|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HLIB|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HSTMT|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HENV|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HLIB|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HSTMT|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -143,7 +143,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_NUMERIC_FUNCTIONS|Varios valores|  
 |SQL_ODBC_SAG_CLI_ CONFORMIDAD|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Desde el Administrador de controladores|  
+|SQL_ODBC_VER|Desde el administrador de controladores|  
 |SQL_OJ_CAPABILITIES|Varios valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"TEXT"|  
-|SQL_SPECIAL_CHARACTERS|' ~\`@# $% ^ & * _-+=\\} {"';:? / ><,.!' []&#124;"|  
+|SQL_SERVER_NAME|NEGRITA|  
+|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! ' [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|CUADRO|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Varios valores|  

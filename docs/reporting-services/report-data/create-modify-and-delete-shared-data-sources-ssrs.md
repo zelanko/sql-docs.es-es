@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar orígenes de datos compartidos (SSRS) | Microsoft Docs
+title: Creación, modificación y eliminación de orígenes de datos compartidos | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573207"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081819"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Crear, modificar y eliminar orígenes de datos compartidos (SSRS)
   Un origen de datos compartido es un conjunto de propiedades de conexión de un origen de datos a las que pueden hacer referencia varios informes, modelos y suscripciones controladas por datos que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Los orígenes de datos compartidos proporcionan una manera fácil de administrar las propiedades del origen de datos que, a menudo, cambian con el tiempo. Si una cuenta de usuario o una contraseña cambia, o si mueve la base de datos a otro servidor, puede actualizar la información de conexión en un único lugar.  
@@ -35,7 +35,7 @@ ms.locfileid: "65573207"
 |Nombre|Un nombre que identifica el origen dentro de la jerarquía de carpetas del servidor de informes.|  
 |Descripción|Una descripción que aparece con el elemento en el portal web cuando el usuario ve el contenido de la carpeta.|  
 |Tipo de conexión|La extensión de procesamiento de datos usada con el origen de datos. Solo puede usar extensiones de procesamiento de datos implementadas en el servidor de informes. Para más información sobre las extensiones de procesamiento de datos que se incluyen con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
-|Cadena de conexión|La cadena de conexión para la base de datos. Para más información y para consultar los ejemplos más usados de cadenas de conexión a orígenes, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
+|Cadena de conexión|La cadena de conexión para la base de datos. Para obtener más información y para consultar ejemplos de cadenas de conexión a orígenes de datos usados frecuentemente, consulte [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo de credencial|Especifica cómo se obtienen las credenciales para la conexión y si se van a usar una vez establecida la conexión. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  El origen de datos compartido no contiene información de consulta utilizada para recuperar datos. La consulta siempre se conserva en la definición de informe.  
@@ -103,7 +103,7 @@ ms.locfileid: "65573207"
     > [!NOTE]  
     >  El botón Probar conexión no se admite para el tipo de origen de datos XML.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **Aceptar**  
   
  **Para modificar un origen de datos compartido en el portal web**  
   
@@ -167,7 +167,7 @@ Si elimina un origen de datos compartido se desactivan todos los informes, model
   
 4.  En **Tipo de origen de datos**, seleccione en la lista el tipo de origen de datos. Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
-5.  En **Cadena de conexión**, especifique un puntero al origen de datos y cualquier otra opción de configuración necesaria para establecer una conexión al origen de datos externo. El tipo de origen de datos que esté utilizando determinará la sintaxis de la cadena de conexión. Para más información y consultar algunos ejemplos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+5.  En **Cadena de conexión**, especifique un puntero al origen de datos y cualquier otra opción de configuración necesaria para establecer una conexión al origen de datos externo. El tipo de origen de datos que esté utilizando determinará la sintaxis de la cadena de conexión. Para más información y ejemplos, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 6.  En **Credenciales**, especifique el modo en que el servidor de informes debe obtener las credenciales para obtener acceso al origen de datos externo. Las credenciales pueden almacenarse, solicitarse, integrarse o configurarse para el procesamiento de informes en modo desatendido.  
   
@@ -214,7 +214,7 @@ Si elimina un origen de datos compartido se desactivan todos los informes, model
      En el caso de los modelos de informe, la lista de elementos dependientes muestra los informes creados en el Generador de informes. En el caso de los orígenes de datos compartidos, la lista de elementos dependientes puede incluir tanto informes como modelos de informe.  
   
 ## <a name="see-also"></a>Consulte también  
- [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configuración de propiedades de origen de datos para un informe paginado](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

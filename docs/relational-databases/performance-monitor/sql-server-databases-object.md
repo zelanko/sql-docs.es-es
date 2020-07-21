@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655960"
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SQLServer:Databases** de SQL Server proporciona contadores para supervisar las operaciones de copia masiva, el rendimiento de las copias de seguridad y restauración, y las actividades del registro de transacciones. La supervisión de las transacciones y del registro de transacciones determina el volumen de actividad de los usuarios en la base de datos y el espacio libre que queda en el registro de transacciones. El volumen de actividad de los usuarios puede determinar el rendimiento de la base de datos y puede afectar al tamaño del registro, los bloqueos y la replicación. La supervisión de la actividad de registro de bajo nivel para medir la actividad de los usuarios y el uso de los recursos puede ayudar a identificar cuellos de botella en el rendimiento.  
   
  Se pueden supervisar simultáneamente varias instancias del objeto **Databases** que representen una única base de datos cada una.  
@@ -43,7 +43,7 @@ ms.locfileid: "68093600"
 |**Tiempo de confirmación de grupo/seg.**|Tiempo de obstrucción de grupo (microsegundos) por segundo.|
 |**Bytes de registro vaciados/s**|Número total de bytes de registro vaciados.|  
 |**Frecuencia de aciertos de caché del registro**|Porcentaje de lecturas de la caché del registro atendidas desde la caché del registro.|  
-|**Base de frecuencia de aciertos de caché de registro**|Exclusivamente para uso interno.| 
+|**Base de frecuencia de aciertos de caché de registro**|Solo para uso interno.| 
 |**Lecturas de caché del registro/seg.**|Lecturas realizadas por segundo a través de la caché del administrador de registros.|  
 |**Tamaño de los archivos de registro (KB)**|Tamaño acumulado (en kilobytes) de todos los archivos de registro de transacciones de la base de datos.|  
 |**Tamaño (KB) utilizado en los archivos de registro**|Tamaño acumulado de todos los archivos de registro de la base de datos.|  
@@ -63,7 +63,7 @@ ms.locfileid: "68093600"
 |**Baja memoria de inserción de grupo de registros/s**|Tasa de errores de inserción de bloques de registro debido a una memoria baja.|
 |**Búfer no disponible de inserción de grupo de registros/s**|Tasa de errores de inserción de bloques de registro debido a un búfer no disponible.|
 |**Requisitos de grupo de registro detrás de truncamiento por segundo**|Errores de caché de grupo de registros debidos a que el bloque solicitado se encuentra detrás del LSN de truncamiento.|
-|**Base de solicitudes de grupo de registro**|Exclusivamente para uso interno.| 
+|**Base de solicitudes de grupo de registro**|Solo para uso interno.| 
 |**VLF antiguo de solicitudes de grupo de registros/seg**|Solicitudes del grupo de registros que no estaban en el último VLF del registro.|  
 |**Solicitudes de grupo de registros/s**|Número de solicitudes de bloque de registro procesadas por el grupo de registros.|  
 |**Tamaño de registro activo total de grupo de registros**|Registro activo total actual almacenado en el administrador de búfer de caché compartido en bytes.|
@@ -77,7 +77,7 @@ ms.locfileid: "68093600"
 |**Transacciones con seguimiento/s**|Número de transacciones confirmadas que se registraron en la tabla de confirmación para la base de datos.|  
 |**Transacciones/seg.**|Número de transacciones iniciadas para la base de datos por segundo.<br /><br /> **Transacciones/s** no cuenta las transacciones solo de XTP (las transacciones iniciadas por un procedimiento almacenado compilado de forma nativa).|  
 |**Transacciones de escritura/s**|Número de transacciones que se escribieron en la base de datos y se confirmaron, en el último segundo.|  
-|**Base de latencia del DLC del controlador del XTP**|Exclusivamente para uso interno.| 
+|**Base de latencia del DLC del controlador del XTP**|Solo para uso interno.| 
 |**Latencia/recuperación del DLC del controlador del XTP**|Latencia promedio en microsegundos desde que los bloques del registro entran al consumidor directo del registro hasta que son tomados por el controlador del XTP, por segundo.|
 |**Latencia máxima del DLC del controlador del XTP**|La mayor latencia registrada, en microsegundos, de una recuperación del consumidor directo del registro por el controlador del XTP.|
 |**Procesados/seg por el registro del controlador de XTP**|La cantidad de bytes del registro procesada por el subproceso controlador del XTP, por segundo.|

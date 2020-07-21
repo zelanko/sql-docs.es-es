@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48790cae2251bdad7d958f1adee38235edb20abb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067455"
 ---
 # <a name="advanced-save-options"></a>Opciones avanzadas para guardar
-  Utilice este cuadro de diálogo para seleccionar un esquema de codificación de idioma y especificar los caracteres que se van a insertar al final de cada línea. Para tener acceso a la **opciones avanzadas para guardar** cuadro de diálogo el **archivo** menú, haga clic en **guardar** \<nombre de la consulta > **.sql como** a Abra el **Guardar archivo como** cuadro de diálogo, haga clic en la flecha abajo en la **guardar** botón y, a continuación, haga clic en **guardar con codificación**.  
+  Utilice este cuadro de diálogo para seleccionar un esquema de codificación de idioma y especificar los caracteres que se van a insertar al final de cada línea. Para tener acceso al cuadro de diálogo **Opciones avanzadas para guardar** , en el menú **Archivo**, haga clic en **Guardar** \<query name> **.sql como** para abrir el cuadro de diálogo **Guardar archivo como** , haga clic en la flecha hacia abajo del botón **Guardar** y, luego, haga clic en **Guardar con codificación**.  
   
 ## <a name="options"></a>Opciones  
- **Codificación**  
+ **Encoding**  
  Utilice este cuadro de lista para aplicar un nuevo esquema de codificación de idioma al archivo de destino.  
   
  **Fin de línea**  

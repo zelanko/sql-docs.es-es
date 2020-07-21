@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples [ADO MD], VBScript
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d17bd016470e7b6f6f6b5452ed049168b977e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef0828d9bc67db5856b5299d03a8970b83c251ef
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938660"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764376"
 ---
 # <a name="cubedef-example-vbscript"></a>Ejemplo de CubeDef (VBScript)
-Este ejemplo muestra los metadatos del cubo en una página web.  
+En este ejemplo se muestran metadatos de cubo en una página web.  
   
 ```  
 <%@ Language=VBScript %>  

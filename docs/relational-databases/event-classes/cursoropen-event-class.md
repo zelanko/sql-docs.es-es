@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773536"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **CursorOpen** describe los eventos de cursor abierto que tienen lugar en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de cursor abierto ocurren cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] define la instrucción SQL que se desea asociar con el cursor y las opciones de cursor y, a continuación, rellena el cursor.  
   
  Incluya la clase de evento **CursorOpen** en los seguimientos que registran el rendimiento de los cursores. Cuando la clase de evento **CursorOpen** se incluye en un seguimiento, la cantidad de sobrecarga impuesta depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
@@ -41,7 +41,7 @@ ms.locfileid: "68093704"
 |**IntegerData**|**int**|Tipo de cursor. Los valores son:<br /><br /> 1 = Conjunto de claves<br /><br /> 2 = Dinámico<br /><br /> 4 = Solo avance<br /><br /> 8 = Estático<br /><br /> 16 = Avance rápido|25|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que ha abierto el cursor.|49|Sí|  

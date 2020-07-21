@@ -18,132 +18,131 @@ helpviewer_keywords:
 - finding printers [SQL Server]
 - Script task [Integration Services], printers
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: abc0228063e62447c34b0236009977a33bddb176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7dc14bdad65d5315f61d464d6fe2af5ae2e2ee9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768501"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426752"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Buscar impresoras instaladas con la tarea Script
-  Los datos que se transforman con los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tienen a menudo un informe impreso como último destino. El `System.Drawing.Printing` espacio de nombres en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona clases para trabajar con impresoras.  
-  
-> [!NOTE]  
->  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
-  
-## <a name="description"></a>Descripción  
- En el ejemplo siguiente se buscan impresoras instaladas en el servidor que admiten el tamaño de papel legal (que se utiliza en Estados Unidos). El código para comprobar los tamaños de papel compatibles está encapsulado en una función privada. Para permitir realizar el seguimiento del progreso del script a medida que se comprueban los valores de cada impresora, el script utiliza el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para provocar un mensaje informativo para las impresoras con papel de tamaño legal y una advertencia para las impresoras sin papel de tamaño legal. Estos mensajes aparecen en la ventana **Salida** del IDE de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) al ejecutar el paquete en el diseñador.  
-  
-#### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
-  
-1.  Cree la variable denominada `PrinterList` con el tipo `Object`.  
-  
-2.  En la página **Script** del **Editor de la tarea Script**, agregue esta variable a la propiedad ReadWriteVariables.  
-  
-3.  Agregue una referencia al espacio de nombres **System.Drawing** en el proyecto de script.  
-  
-4.  En el código, utilice `Imports` instrucciones para importar el **System.Collections** y `System.Drawing.Printing` espacios de nombres.  
-  
-### <a name="code"></a>Código  
-  
-```vb  
-Public Sub Main()  
-  
-    Dim printerName As String  
-    Dim currentPrinter As New PrinterSettings  
-    Dim size As PaperSize  
-  
-    Dim printerList As New ArrayList  
-    For Each printerName In PrinterSettings.InstalledPrinters  
-        currentPrinter.PrinterName = printerName  
-        If PrinterHasLegalPaper(currentPrinter) Then  
-            printerList.Add(printerName)  
-            Dts.Events.FireInformation(0, "Example", _  
-                "Printer " & printerName & " has legal paper.", _  
-                String.Empty, 0, False)  
-        Else  
-            Dts.Events.FireWarning(0, "Example", _  
-                "Printer " & printerName & " DOES NOT have legal paper.", _  
-                String.Empty, 0)  
-        End If  
-    Next  
-  
-    Dts.Variables("PrinterList").Value = printerList  
-  
-    Dts.TaskResult = ScriptResults.Success  
-  
-End Sub  
-  
-Private Function PrinterHasLegalPaper( _  
-    ByVal thisPrinter As PrinterSettings) As Boolean  
-  
-    Dim size As PaperSize  
-    Dim hasLegal As Boolean = False  
-  
-    For Each size In thisPrinter.PaperSizes  
-        If size.Kind = PaperKind.Legal Then  
-            hasLegal = True  
-        End If  
-    Next  
-  
-    Return hasLegal  
-  
-End Function  
-```  
-  
-```csharp  
-public void Main()  
-        {  
-  
-            PrinterSettings currentPrinter = new PrinterSettings();  
-            PaperSize size;  
-            Boolean Flag = false;  
-  
-            ArrayList printerList = new ArrayList();  
-            foreach (string printerName in PrinterSettings.InstalledPrinters)  
-            {  
-                currentPrinter.PrinterName = printerName;  
-                if (PrinterHasLegalPaper(currentPrinter))  
-                {  
-                    printerList.Add(printerName);  
-                    Dts.Events.FireInformation(0, "Example", "Printer " + printerName + " has legal paper.", String.Empty, 0, ref Flag);  
-                }  
-                else  
-                {  
-                    Dts.Events.FireWarning(0, "Example", "Printer " + printerName + " DOES NOT have legal paper.", String.Empty, 0);  
-                }  
-            }  
-  
-            Dts.Variables["PrinterList"].Value = printerList;  
-  
-            Dts.TaskResult = (int)ScriptResults.Success;  
-  
-        }  
-  
-        private bool PrinterHasLegalPaper(PrinterSettings thisPrinter)  
-        {  
-  
-            bool hasLegal = false;  
-  
-            foreach (PaperSize size in thisPrinter.PaperSizes)  
-            {  
-                if (size.Kind == PaperKind.Legal)  
-                {  
-                    hasLegal = true;  
-                }  
-            }  
-  
-            return hasLegal;  
-  
-        }  
-```  
-  
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
-  
-## <a name="see-also"></a>Vea también  
- [Ejemplos de tarea Script](../extending-packages-scripting-task-examples/script-task-examples.md)  
-  
-  
+  Los datos que se transforman con los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tienen a menudo un informe impreso como último destino. El `System.Drawing.Printing` espacio de nombres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona clases para trabajar con impresoras.
+
+> [!NOTE]
+>  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).
+
+## <a name="description"></a>Descripción
+ En el ejemplo siguiente se buscan impresoras instaladas en el servidor que admiten el tamaño de papel legal (que se utiliza en Estados Unidos). El código para comprobar los tamaños de papel compatibles está encapsulado en una función privada. Para permitir realizar el seguimiento del progreso del script a medida que se comprueban los valores de cada impresora, el script utiliza el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> para provocar un mensaje informativo para las impresoras con papel de tamaño legal y una advertencia para las impresoras sin papel de tamaño legal. Estos mensajes aparecen en la ventana **Salida** del IDE de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) al ejecutar el paquete en el diseñador.
+
+#### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script
+
+1.  Cree la variable denominada `PrinterList` con el tipo `Object`.
+
+2.  En la página **Script** del **Editor de la tarea Script**, agregue esta variable a la propiedad ReadWriteVariables.
+
+3.  Agregue una referencia al espacio de nombres **System.Drawing** en el proyecto de script.
+
+4.  En el código, use las `Imports` instrucciones para importar los espacios de nombres **System. Collections** y `System.Drawing.Printing` .
+
+### <a name="code"></a>Código
+
+```vb
+Public Sub Main()
+
+    Dim printerName As String
+    Dim currentPrinter As New PrinterSettings
+    Dim size As PaperSize
+
+    Dim printerList As New ArrayList
+    For Each printerName In PrinterSettings.InstalledPrinters
+        currentPrinter.PrinterName = printerName
+        If PrinterHasLegalPaper(currentPrinter) Then
+            printerList.Add(printerName)
+            Dts.Events.FireInformation(0, "Example", _
+                "Printer " & printerName & " has legal paper.", _
+                String.Empty, 0, False)
+        Else
+            Dts.Events.FireWarning(0, "Example", _
+                "Printer " & printerName & " DOES NOT have legal paper.", _
+                String.Empty, 0)
+        End If
+    Next
+
+    Dts.Variables("PrinterList").Value = printerList
+
+    Dts.TaskResult = ScriptResults.Success
+
+End Sub
+
+Private Function PrinterHasLegalPaper( _
+    ByVal thisPrinter As PrinterSettings) As Boolean
+
+    Dim size As PaperSize
+    Dim hasLegal As Boolean = False
+
+    For Each size In thisPrinter.PaperSizes
+        If size.Kind = PaperKind.Legal Then
+            hasLegal = True
+        End If
+    Next
+
+    Return hasLegal
+
+End Function
+```
+
+```csharp
+public void Main()
+        {
+
+            PrinterSettings currentPrinter = new PrinterSettings();
+            PaperSize size;
+            Boolean Flag = false;
+
+            ArrayList printerList = new ArrayList();
+            foreach (string printerName in PrinterSettings.InstalledPrinters)
+            {
+                currentPrinter.PrinterName = printerName;
+                if (PrinterHasLegalPaper(currentPrinter))
+                {
+                    printerList.Add(printerName);
+                    Dts.Events.FireInformation(0, "Example", "Printer " + printerName + " has legal paper.", String.Empty, 0, ref Flag);
+                }
+                else
+                {
+                    Dts.Events.FireWarning(0, "Example", "Printer " + printerName + " DOES NOT have legal paper.", String.Empty, 0);
+                }
+            }
+
+            Dts.Variables["PrinterList"].Value = printerList;
+
+            Dts.TaskResult = (int)ScriptResults.Success;
+
+        }
+
+        private bool PrinterHasLegalPaper(PrinterSettings thisPrinter)
+        {
+
+            bool hasLegal = false;
+
+            foreach (PaperSize size in thisPrinter.PaperSizes)
+            {
+                if (size.Kind == PaperKind.Legal)
+                {
+                    hasLegal = true;
+                }
+            }
+
+            return hasLegal;
+
+        }
+```
+
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.
+
+## <a name="see-also"></a>Consulte también
+ [Ejemplos de tarea Script](../extending-packages-scripting-task-examples/script-task-examples.md)
+
+

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81faa132ccdba32537615aeed4a34aa39e1b7c76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a111ab8d62fc43f3c4e23b227ed11e400122c1f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983532"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917271"
 ---
 # <a name="getdouble-method-javalangstring"></a>Método getDouble (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public double getDouble(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Valor **Double** .  
+ Un valor **double**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getDouble especifica este método getDouble en la interfaz java.sql.CallableStatement.  
   
  Este método devuelve todos los tipos de datos basados en número con fidelidad **double** de Java.  

@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31e95bf970f4050315ed1b74b7bb87d3ed3788fd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124002"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881639"
 ---
-# <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve un identificador único para la transacción. Este identificador único es una cadena que se utiliza para enlazar sesiones mediante sp_bindsession.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, utilice conjuntos de resultados activos múltiples (MARS) o transacciones distribuidas. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, utilice conjuntos de resultados activos múltiples (MARS) o transacciones distribuidas. Para obtener más información, vea [usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,8 +42,8 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@out_token=]'*return_value*'  
- Es el token que se va a utilizar para enlazar las sesiones. *RETURN_VALUE* es **varchar (255)** no tiene ningún valor predeterminado.  
+ [ @out_token =] '*RETURN_VALUE*'  
+ Es el token que se va a utilizar para enlazar las sesiones. *RETURN_VALUE* es de tipo **VARCHAR (255)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -51,8 +51,8 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- sp_getbindtoken devolverá un token válido solamente cuando el procedimiento almacenado se ejecuta dentro de una transacción activa. En caso contrario, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un mensaje de error. Por ejemplo:  
+## <a name="remarks"></a>Observaciones  
+ sp_getbindtoken devolverá un token válido solo cuando el procedimiento almacenado se ejecute dentro de una transacción activa. En caso contrario, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un mensaje de error. Por ejemplo:  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Cuando se utiliza sp_getbindtoken para dar de alta una conexión de transacción distribuida dentro de una transacción abierta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el mismo token. Por ejemplo:  
+ Cuando se usa sp_getbindtoken para dar de alta una conexión de transacción distribuida dentro de una transacción abierta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el mismo token. Por ejemplo:  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,9 +125,9 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken &#40;API procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [srv_getbindtoken API de procedimiento almacenado extendido &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

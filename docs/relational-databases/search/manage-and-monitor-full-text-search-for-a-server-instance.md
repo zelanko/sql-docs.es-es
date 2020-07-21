@@ -1,5 +1,5 @@
 ---
-title: Administración y supervisión de la búsqueda de texto completo para una instancia de servidor | Microsoft Docs
+title: Administración y supervisión de la búsqueda de texto completo para una instancia de SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -13,15 +13,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8926e74c96c6da9796466a39c1a9ea3cb2bd953d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629461"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Administrar y supervisar la búsqueda de texto completo para una instancia de servidor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La administración de texto completo de una instancia del servidor incluye:  
   
 -   Tareas de administración del sistema como administrar el servicio del iniciador de FDHOST (MSSQLFDLauncher), reiniciar el proceso de host de demonio de filtro si cambia las credenciales de la cuenta de servicio, configurar las propiedades de texto completo del servidor y realizar copia de seguridad de los catálogos de texto completo. En el nivel del servidor, por ejemplo, puede especificar un idioma de texto completo predeterminado que sea diferente del idioma predeterminado de la instancia del servidor en su totalidad.  
@@ -30,7 +31,7 @@ ms.locfileid: "72903837"
   
 -   Configurar una base de datos de usuario para la búsqueda de texto completo. Esto implica crear uno o más catálogos de texto completo para la base de datos y definir un índice de texto completo en cada tabla o vista indizada en la que desee ejecutar las consultas de texto completo.  
   
-##  <a name="props"></a> Ver o cambiar las propiedades del servidor para la búsqueda de texto completo  
+##  <a name="viewing-or-changing-server-properties-for-full-text-search"></a><a name="props"></a> Ver o cambiar las propiedades del servidor para la búsqueda de texto completo  
  Puede ver las propiedades de texto completo de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-view-and-change-server-properties-for-full-text-search"></a>Para ver y cambiar las propiedades del servidor para la búsqueda de texto completo  
@@ -57,10 +58,10 @@ ms.locfileid: "72903837"
   
          Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-         **Volver a generar**  
+         **Recompilación**  
          Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. La regeneración de los índices puede llevar cierto tiempo y, después de la actualización, podría ser necesaria una cantidad significativa de CPU y de memoria.  
   
-         **Restablecer**  
+         **Reset**  
          Los catálogos de texto completo se restablecen. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Los archivos de catálogo de texto completo se quitan, pero los metadatos de los catálogos de texto completo y los índices de texto completo se conservan. Después de actualizarse, todos los índices de texto completo quedan deshabilitados para el seguimiento de cambios y los rastreos no se inician de forma automática. El catálogo permanecerá vacío hasta que se emita manualmente un rellenado completo después de que se complete la actualización.  
   
          Para obtener información sobre cómo elegir una opción de actualización de texto completo, vea[Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -68,7 +69,7 @@ ms.locfileid: "72903837"
         > [!NOTE]  
         >  La opción de actualización de texto completo también se puede establecer mediante la acción [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** .  
   
-##  <a name="metadata"></a> Ver propiedades de servidor de texto completo adicionales  
+##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Ver propiedades de servidor de texto completo adicionales  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] Las funciones se pueden usar para obtener el valor de varias propiedades de búsqueda de texto completo de nivel de servidor. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la tabla siguiente se enumeran las propiedades de texto completo de una instancia de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus funciones [!INCLUDE[tsql](../../includes/tsql-md.md)] relacionadas.  
@@ -80,7 +81,7 @@ ms.locfileid: "72903837"
 |**LoadOSResources**|Si los separadores de palabras y filtros del sistema operativo se registran y utilizan con esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|Especifica si el motor de texto completo carga únicamente datos binarios firmados.|FULLTEXTSERVICEPROPERTY|  
   
-##  <a name="monitor"></a> Supervisar la actividad de búsqueda de texto completo  
+##  <a name="monitoring-full-text-search-activity"></a><a name="monitor"></a> Supervisar la actividad de búsqueda de texto completo  
  Para supervisar la actividad de búsqueda de texto completo en una instancia del servidor se pueden usar varias vistas y funciones de administración dinámica.  
   
  **Para ver información sobre los catálogos de texto completo con actividad de rellenado en curso**  

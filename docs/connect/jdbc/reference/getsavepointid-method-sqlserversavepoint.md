@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 48037dab-165d-4310-93ad-86f9d7963b41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 01d5861b25c1a6633f85f62b96a5895bfebdd537
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 78605f67f3514de24ed037b3c1a6c2fda4112312
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980239"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921778"
 ---
 # <a name="getsavepointid-method-sqlserversavepoint"></a>Método getSavepointId (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public int getSavepointId()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Valor **int** .  
+ Un valor **int**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getSavepointId se especifica mediante el método getSavepointId en la interfaz java. SQL. punto de retorno.  
+## <a name="remarks"></a>Observaciones  
+ El método getSavepointId especifica este método getSavepointId en la interfaz java.sql.Savepoint.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5591d721bde378023ef2b1f285426d036fc76cc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952134"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764186"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Ejemplos de código ADOX en Microsoft Visual Basic
-Estos temas proporcionan ejemplos de código para ayudarle a entender cómo usar ADOX. Todos los ejemplos de código se escriben con Microsoft Visual Basic.  
+En estos temas se proporciona código de ejemplo para ayudarle a entender cómo usar ADOX. Todos los ejemplos de código se escriben con Microsoft Visual Basic.  
   
 > [!NOTE]
->  Pegue el ejemplo de código completo, desde Sub hasta End Sub, en el editor de código. El ejemplo no funcionen correctamente si utiliza ejemplos parciales o si se pierde el formato de párrafo.  
+>  Pegue el ejemplo de código completo, de sub a End Sub, en el editor de código. Es posible que el ejemplo no se ejecute correctamente si utiliza ejemplos parciales o si se pierde el formato de párrafo.  
   
 ## <a name="methods"></a>Métodos  
   
@@ -43,7 +43,7 @@ Estos temas proporcionan ejemplos de código para ayudarle a entender cómo usar
   
 -   [Ejemplo de método Append de índices (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [Append de claves, método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades ejemplo (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule de Keys (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Ejemplo de método Append de procedimientos (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -67,9 +67,9 @@ Estos temas proporcionan ejemplos de código para ayudarle a entender cómo usar
   
 -   [Ejemplo de propiedades Command y CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [Propiedad de comando de ejemplo de la colección de parámetros (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Ejemplo de propiedad Command, colección Parameters (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [Propiedad CommandText, ejemplo de la colección de vistas (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [Ejemplo de colección de vistas (propiedad CommandText) (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [Ejemplo de propiedades DateCreated y DateModified (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -79,11 +79,11 @@ Estos temas proporcionan ejemplos de código para ayudarle a entender cómo usar
   
 -   [Ejemplo de propiedad IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [Tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades, claves de anexar el ejemplo del método (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Propiedades de tipo de clave, RelatedColumn, RelatedTable y UpdateRule, ejemplo de método Append de claves (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Propiedad de nombre, columnas y tablas anexar métodos ejemplo (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Ejemplo de la propiedad Name, Columns and tables Append Methods (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [NumericScale y Precision propiedades (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [Ejemplo de las propiedades NumericScale y Precision (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
 -   [Ejemplo de propiedad ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
   
@@ -91,7 +91,7 @@ Estos temas proporcionan ejemplos de código para ayudarle a entender cómo usar
   
 -   [Ejemplo de propiedad SortOrder (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [Ejemplo de propiedad, método Connection Close, de tipo de tabla (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Propiedades de tipo de tabla, método de cierre de conexión, ejemplo (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>Colecciones  
   

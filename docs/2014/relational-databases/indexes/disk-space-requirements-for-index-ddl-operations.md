@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ac25fc1555d6b6cfd8ee97b50d261cf5788f587
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63161808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025404"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espacio en disco para operaciones DDL de índice
   El espacio en disco es una consideración importante a la hora de crear, volver a generar o quitar índices. Un espacio en disco inadecuado puede degradar el rendimiento e incluso provocar errores en las operaciones de índice. En este tema se proporciona información general que puede ayudar a determinar la cantidad de espacio necesario para las operaciones de lenguaje de definición de datos (DDL).  
@@ -78,7 +77,7 @@ ms.locfileid: "63161808"
  Las operaciones de índice en línea utilizan versiones de fila para aislar la operación de índice de los efectos de modificaciones efectuadas por otras transacciones. Así se evita la necesidad de solicitar que se compartan bloqueos en filas que se han leído. Las operaciones simultáneas de eliminación y actualización de usuarios durante las operaciones de índice en línea requieren espacio para registros de versión en **tempdb**. Para obtener más información, vea [Realizar operaciones de índice en línea](perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Index Disk Space Example](index-disk-space-example.md)  
+ [Ejemplo de espacio en disco del índice](index-disk-space-example.md)  
   
  [Espacio en disco del registro de transacciones para operaciones de índice](transaction-log-disk-space-for-index-operations.md)  
   

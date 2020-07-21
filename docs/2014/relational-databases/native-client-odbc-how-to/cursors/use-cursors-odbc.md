@@ -1,5 +1,5 @@
 ---
-title: Usar cursores (ODBC) | Documentos de Microsoft
+title: Usar cursores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63718cf227197cfe6c009311339924a05fd6c665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018905"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
     
@@ -27,7 +26,7 @@ ms.locfileid: "63200488"
   
      Establezca los atributos SQL_ATTR_CURSOR_TYPE y SQL_ATTR_CONCURRENCY (ésta es la opción preferida).  
   
-     o bien  
+     Or  
   
      Establezca los atributos SQL_CURSOR_SCROLLABLE y SQL_CURSOR_SENSITIVITY.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63200488"
   
      Puede controlar el tipo de cursor usado estableciendo SQL_ATTR_CURSOR_TYPE y SQL_ATTR_CONCURRENCY o estableciendo SQL_ATTR_CURSOR_SENSITIVITY y SQL_ATTR_CURSOR_SCROLLABLE. No debe mezclar los dos métodos que se utilizan para especificar el comportamiento del cursor.  
   
-## <a name="see-also"></a>Vea también  
- [Uso de temas de procedimientos de los cursores &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de uso de cursores &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

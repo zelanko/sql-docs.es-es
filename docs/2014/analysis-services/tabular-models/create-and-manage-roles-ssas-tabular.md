@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar Roles (SSAS Tabular) | Microsoft Docs
+title: Crear y administrar roles (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284906"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Crear y administrar roles (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "67284906"
 ## <a name="tasks"></a>Tareas  
  Para crear, modificar, copiar y eliminar roles, utilice el cuadro de diálogo **Administrador de roles** . Para ver el cuadro de diálogo **Administrador de roles** , en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y en **Administrador de roles**.  
   
-###  <a name="bkmk_new_role"></a> Para crear un rol  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a> Para crear un rol  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y en **Administrador de roles**.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "67284906"
   
     |Permiso|Descripción|  
     |----------------|-----------------|  
-    |**Ninguno**|Los miembros no pueden realizar ninguna modificación en el esquema del modelo y no pueden consultar los datos.|  
+    |**None**|Los miembros no pueden realizar ninguna modificación en el esquema del modelo y no pueden consultar los datos.|  
     |**Lectura**|Los miembros pueden consultar los datos (según los filtros de fila), pero no pueden realizar cambios en el esquema del modelo.|  
     |**Leer y actualizar**|Los miembros pueden actualizar los datos (según los filtros de fila) y ejecutar las operaciones Procesar y Procesar todo, pero no pueden realizar cambios en el esquema del modelo.|  
-    |**Procesar**|Los miembros pueden ejecutar las operaciones Procesar y Procesar todo. No pueden modificar el esquema del modelo y no pueden consultar los datos.|  
+    |**Proceso**|Los modelos pueden ejecutar las operaciones Procesar y Procesar todo. No pueden modificar el esquema de modelo ni pueden consultar datos.|  
     |**Administrador**|Los miembros pueden realizar modificaciones en el esquema del modelo y pueden consultar todos los datos.|  
   
 5.  Para especificar una descripción para el rol, haga clic en el campo **Descripción** y escriba una descripción.  
@@ -63,11 +63,11 @@ ms.locfileid: "67284906"
   
 9. Haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)   
  [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
  [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md)   
- [Función USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
+ [Función USERNAME &#40;&#41;DAX](/dax/username-function-dax)   
  [Función CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Administración del editor y el modo de vista | Microsoft Docs
-ms.custom: ''
+title: Administrar el editor y el modo de vista
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,15 +17,14 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3333b41a4ff1c341f0ae0290f838cd2c76c6254e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 97540979cee50c1d9b27772f994cd92e6d5de411
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009773"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Administrar el editor y el modo de vista
   El editor permite controlar la vista del código de diferentes maneras.  

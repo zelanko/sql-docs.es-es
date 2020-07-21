@@ -1,5 +1,6 @@
 ---
 title: Reparar una instalación de SQL Server con errores | Microsoft Docs
+deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9130fd4fae0660008ede059418179b1bb9777a9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990840"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900313"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Reparar una instalación de SQL Server con errores
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 La operación de reparación se puede utilizar en los escenarios siguientes:  
   
@@ -49,7 +50,7 @@ La operación de reparación se puede utilizar en los escenarios siguientes:
   
 - Para reparar un nodo de clúster de conmutación por error después una operación de preparación con errores, use **Eliminar nodo de un clúster de conmutación por error de SQL Server** y, a continuación, vuelva a realizar el paso de preparación. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
-## <a name="repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>Reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el Centro de instalación 
+## <a name="repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>Reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el Centro de instalación 
   
 1. Inicie el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (setup.exe) desde el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
@@ -70,7 +71,7 @@ La operación de reparación se puede utilizar en los escenarios siguientes:
   
 8. La página Progreso de la reparación muestra el estado de la operación de reparación. La página Operación completada indica que la operación ha finalizado. 
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el símbolo del sistema  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el símbolo del sistema  
   
 1. Ejecute el comando siguiente en el símbolo del sistema:  
   

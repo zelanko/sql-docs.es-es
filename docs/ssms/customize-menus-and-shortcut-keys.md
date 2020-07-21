@@ -1,10 +1,9 @@
 ---
-title: Personalizar los menús y los métodos abreviados de teclado | Microsoft Docs
-ms.custom: ''
+title: Personalizar los menús y los métodos abreviados de teclado
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,14 +19,16 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.openlocfilehash: e2b398a1acd5e91a55e18f25b2094f9b671c70b8
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266933"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75243920"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Una tecla de método abreviado permite seleccionar un botón o comando de menú presionando ALT+ *\<una letra>* . Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
   
@@ -56,7 +57,7 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
   
 1.  Haga clic en el botón en la barra de herramientas.  
   
-2.  En el cuadro de diálogo **Personalizar**, en la pestaña **Comandos**, haga clic en **Modificar selección**.  
+2.  En el cuadro de diálogo **Personalizar** , en la pestaña **Comandos** , haga clic en **Modificar selección**.  
   
 3.  En el cuadro **Nombre** del menú contextual, escriba un nombre para el botón de la barra de herramientas con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   
@@ -72,7 +73,7 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
   
 2.  Haga clic en el comando del menú.  
   
-3.  En el cuadro de diálogo **Personalizar**, haga clic en **Modificar selección**.  
+3.  En el cuadro de diálogo **Personalizar** , haga clic en **Modificar selección**.  
   
 4.  En el cuadro **Nombre** del menú contextual, escriba un nombre para el comando del menú con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   
@@ -106,7 +107,7 @@ Las teclas de aceleración de los procedimientos almacenados que usan la tecla C
   
 4.  Vaya a la lista **Controles** mediante la tecla TAB y use las teclas de flecha para seleccionar el botón que desea cambiar.  
   
-5.  Presione **ALT+M** para seleccionar **Modificar selección**.  
+5.  Presione **ALT+M**para seleccionar **Modificar selección**.  
   
 6.  Vaya al cuadro **Nombre** del menú contextual mediante la tecla TAB, escriba un nombre para el botón de la barra de herramientas con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   

@@ -3,8 +3,6 @@ title: Tarea Sistema de archivos de Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +10,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: cab5a97beb9f1bfe4d47844e2d0acdb49b28b924
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: maghan
+ms.openlocfilehash: f5cd88953a9f33fa4ba44784d30333487a8d832b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947346"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763660"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarea Sistema de archivos de Azure Data Lake Store
 
@@ -35,8 +34,8 @@ Para agregar una tarea Sistema de archivos de Azure Data Lake Store a un paquete
 
 La propiedad **Operación** especifica la operación del sistema de archivos que se va a realizar. Seleccione una de las siguientes operaciones:
 
-- **CopyToADLS:** Cargue archivos en ADLS.
-- **CopyFromADLS:** Descargue archivos de ADLS.
+- **CopyToADLS:** cargar archivos a ADLS.
+- **CopyToADLS:** descargar archivos de ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Configurar las propiedades de la operación
 Para cualquier operación, tendrá que especificar un administrador de conexiones de Azure Data Lake.

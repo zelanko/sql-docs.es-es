@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Procedimientos almacenados con un certificado de firma | Microsoft Docs'
+title: 'Tutorial: Firmar procedimientos almacenados con un certificado | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fe387c43431436ba5fba5bcab879584ecdad533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62524098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002508"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Firmar procedimientos almacenados con un certificado
   En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "62524098"
  Cada bloque de código incluido en este ejemplo se describe en línea. Para copiar el ejemplo completo, vea [Ejemplo completo](#CompleteExample) al final de este tutorial.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurar el entorno  
- Para establecer el contexto inicial del ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra una consulta nueva y ejecute el código siguiente para abrir la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Este código cambia el contexto de la base de datos a `AdventureWorks2012` y crea un inicio de sesión de servidor y una cuenta de usuario de base de datos nuevos (`TestCreditRatingUser`) mediante una contraseña.  
+ Para establecer el contexto inicial del ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] abra una consulta nueva y ejecute el código siguiente para abrir la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Este código cambia el contexto de la base de datos a `AdventureWorks2012` y crea un inicio de sesión de servidor y una cuenta de usuario de base de datos nuevos (`TestCreditRatingUser`) mediante una contraseña.  
   
 ```  
 USE AdventureWorks2012;  
@@ -192,7 +191,7 @@ GO
   
  Para obtener más información sobre la instrucción REVERT, consulte [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
-##  <a name="CompleteExample"></a> Ejemplo completo  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>Ejemplo completo  
  En esta sección se muestra el código de ejemplo completo.  
   
 ```  
@@ -288,7 +287,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+## <a name="see-also"></a>Consulte también  
+ [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

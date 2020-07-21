@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299006"
 ---
 # <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
@@ -36,7 +36,7 @@ ms.locfileid: "71299006"
   
 -   [Establecer las opciones de la página Referencias](#references)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar.  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71299006"
   
 5.  Haga clic con el botón derecho en el paquete o proyecto y, después, haga clic en **Configurar**.  
   
-##  <a name="parameter"></a> Establecer las opciones de la página Parámetros  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Establecer las opciones de la página Parámetros  
  Use la página **Parámetros** para ver los nombres de los parámetros y valores, así como para modificar los valores.  
   
  Seleccione el ámbito de los parámetros que aparecen en las pestañas **Parámetros** y **Administradores de conexiones** , en la lista desplegable **Ámbito** .  
@@ -63,7 +63,7 @@ ms.locfileid: "71299006"
  **Nombre**  
  Muestra el nombre de parámetro.  
   
- **Value**  
+ **Valor**  
  Muestra el valor del parámetro. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** .  
   
  La siguiente es una lista de las opciones de la pestaña de **Administradores de conexiones** . Use esta pestaña para cambiar los valores de las propiedades del administrador de conexiones. En el servidor SSIS se generan automáticamente parámetros para las propiedades.  
@@ -74,13 +74,13 @@ ms.locfileid: "71299006"
  **Nombre**  
  Muestra el nombre del administrador de conexiones.  
   
- **Nombre de la propiedad**  
+ **Nombre de propiedad**  
  Muestra el nombre de la propiedad del administrador de conexiones.  
   
- **Value**  
+ **Valor**  
  Muestra el valor asignado a la propiedad del administrador de conexiones. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** . Puede especificar un valor literal, asignar una variable de entorno que contiene el valor que desea usar o emplear el valor predeterminado del paquete.  
   
-##  <a name="references"></a> Establecer las opciones de la página Referencias  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Establecer las opciones de la página Referencias  
  Use la página **Referencias** para agregar y quitar las referencias a los entornos y a las propiedades del entorno de acceso.  
   
  Un entorno especifica los valores en tiempo de ejecución para los paquetes contenidos en los proyectos que ha implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -94,12 +94,12 @@ ms.locfileid: "71299006"
  **Abrir**  
  Haga clic para abrir el cuadro de diálogo de **Propiedades del entorno** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una referencia a un entorno. En el cuadro de diálogo **Examinar entornos** , haga clic en un entorno y después en **Aceptar**.  
   
  Puede seleccionar un entorno contenido en cualquier carpeta del proyecto bajo el nodo de **SSISDB** .  
   
- **Quitar**  
+ **Remove**  
  Haga clic en un entorno que se muestra en el área de **Referencias** y, después, haga clic **Quitar**.  
   
   

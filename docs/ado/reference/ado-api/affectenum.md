@@ -13,34 +13,34 @@ f1_keywords:
 helpviewer_keywords:
 - AffectEnum enumeration [ADO]
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 06d3234317e38177defeacdf6f258bc2301dde9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920756"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747047"
 ---
 # <a name="affectenum"></a>AffectEnum
 Especifica qué registros se ven afectados por una operación.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Si no hay un [filtro](../../../ado/reference/ado-api/filter-property.md) aplicado a la **Recordset**, afecta a todos los registros.<br /><br /> Si el **filtro** propiedad está establecida en un criterio de cadena (como "autor ="Smith""), la operación afecta a los registros visibles en el capítulo actual.<br /><br /> Si el **filtro** propiedad está establecida en un miembro de la [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matriz de marcadores y, a continuación, la operación afectará a todas las filas de la **Recordset**. **Nota: adAffectAll** está oculto en el Examinador de objetos de Visual Basic.|  
-|**adAffectAllChapters**|4|Afecta a todos los registros en todos los capítulos del mismo nivel de la **Recordset**, los que no es visible a través de cualquiera incluidos **filtro** que se aplica actualmente.|  
-|**adAffectCurrent**|1|Afecta a solo el registro actual.|  
-|**adAffectGroup**|2|Afecta a solo los registros que cumplen actual [filtro](../../../ado/reference/ado-api/filter-property.md) configuración de la propiedad. Debe establecer el **filtro** propiedad a un **FilterGroupEnum** valor o una matriz de **marcadores** para usar esta opción.|  
+|**adAffectAll**|3|Si no hay ningún [filtro](../../../ado/reference/ado-api/filter-property.md) aplicado al conjunto de **registros**, afecta a todos los registros.<br /><br /> Si la propiedad **Filter** está establecida en un criterio de cadena (por ejemplo, "author = ' Smith '"), la operación afectará a los registros visibles en el capítulo actual.<br /><br /> Si la propiedad **Filter** está establecida en un miembro de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matriz de marcadores, la operación afectará a todas las filas del conjunto de **registros**. **Nota: adAffectAll** está oculto en el examinador de objetos Visual Basic.|  
+|**adAffectAllChapters**|4|Afecta a todos los registros de todos los capítulos del mismo nivel del **conjunto de registros**, incluidos los que no están visibles a través de cualquier **filtro** aplicado actualmente.|  
+|**adAffectCurrent**|1|Afecta solo al registro actual.|  
+|**adAffectGroup**|2|Afecta únicamente a los registros que cumplen la configuración de propiedad de [filtro](../../../ado/reference/ado-api/filter-property.md) actual. Debe establecer la propiedad **Filter** en un valor **FilterGroupEnum** o una matriz de **marcadores** para usar esta opción.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.Affect.ALL|  
-|AdoEnums.Affect.ALLCHAPTERS|  
-|AdoEnums.Affect.CURRENT|  
-|AdoEnums.Affect.GROUP|  
+|AdoEnums. Reverse. ALL|  
+|AdoEnums. afecte a. ALLCHAPTERS|  
+|AdoEnums. afectar a. CURRENT|  
+|AdoEnums. afectar al grupo|  
   
 ## <a name="applies-to"></a>Se aplica a  
   

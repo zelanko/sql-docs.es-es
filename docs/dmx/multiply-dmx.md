@@ -1,19 +1,19 @@
 ---
-title: '* (Multiplicar) (DMX) | Microsoft Docs'
+title: '* Multiplica (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 840dc41afe689b7beb6af4b2272f1851fdde72e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13ec459afba8080b9708fa49a00ff945ce7e320b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008270"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667670"
 ---
 # <a name="-multiply-dmx"></a>* (Multiplicar) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,12 +34,12 @@ Numeric_Expression * Numeric_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Valor cuyo tipo de datos es el del parámetro con la mayor precedencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Ambas expresiones deben ser del mismo tipo de datos o una se debe poder convertir implícitamente en el tipo de datos de la otra. Si una expresión se evalúa como un valor NULL, el operador devuelve un valor NULL.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Referencia de operadores &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

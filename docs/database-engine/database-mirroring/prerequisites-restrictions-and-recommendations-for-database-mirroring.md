@@ -1,6 +1,7 @@
 ---
-title: Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos | Microsoft Docs
-ms.custom: ''
+title: 'Creación de reflejo de la base de datos: Requisitos previos, restricciones y recomendaciones'
+description: Obtenga información sobre los requisitos previos, restricciones y recomendaciones para configurar la creación de reflejo de la base de datos con SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -18,29 +19,29 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 135c0d98dd1be7e00ccaafdccba8115e1af8d54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6a98658ec6d550ff9255361cc343bb617fac46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735216"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
  En este tema se describen los requisitos previos y las recomendaciones para configurar la creación de reflejo de la base de datos. Para obtener una introducción a la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
   
-##  <a name="DbmSupport"></a> Compatibilidad con la creación de reflejo de la base de datos  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> Compatibilidad con la creación de reflejo de la base de datos  
  Para más información sobre la compatibilidad con la creación de reflejo de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
   
  Tenga en cuenta que la creación de reflejo de la base de datos funciona con cualquier nivel de compatibilidad de base de datos. Para obtener información sobre los niveles de compatibilidad admitidos, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Para establecer una sesión de creación de reflejo, los asociados y el testigo, si los hay, deben estar en ejecución en la misma versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +63,7 @@ ms.locfileid: "68025431"
     >  Si la creación de reflejo de la base de datos se ha detenido, para poder reiniciarla, cualquier copia de seguridad de registros posterior que se realice en la base de datos principal se debe aplicar a la base de datos reflejada.  
   
   
-##  <a name="Restrictions"></a> Restricciones  
+##  <a name="restrictions"></a><a name="Restrictions"></a> Restricciones  
   
 -   Solo se pueden reflejar las bases de datos de usuario. No es posible reflejar las bases de datos **maestra**, **msdb**, **tempdb**o **model** .  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68025431"
 -   La creación de reflejo de la base de datos no está admitida con transacciones entre bases de datos o transacciones distribuidas. Para obtener más información, vea [Transacciones entre bases de datos y transacciones distribuidas para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
   
-##  <a name="RecommendationsForPartners"></a> Recomendaciones para configurar servidores asociados  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> Recomendaciones para configurar servidores asociados  
   
 -   Los servidores asociados deben ejecutarse en sistemas comparables que puedan manejar cargas de trabajo idénticas.  
   
@@ -94,7 +95,7 @@ ms.locfileid: "68025431"
 -   No hay ninguna recomendación acerca de si una red de área extensa (WAN) es lo suficientemente confiable para la creación de reflejo de la base de datos en modo de alta seguridad. Si decide usar el modo de alta seguridad en una WAN, tenga cuidado al agregar un testigo a la sesión, ya que se pueden producir conmutaciones automáticas por error no deseadas. Para obtener más información, vea [Recomendaciones para implementar la creación de reflejo de la base de datos](#RecommendationsForDeploying)más adelante en este tema.  
   
   
-##  <a name="RecommendationsForDeploying"></a> Recomendaciones para implementar la creación de reflejo de la base de datos  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> Recomendaciones para implementar la creación de reflejo de la base de datos  
  El rendimiento óptimo de la creación de reflejo de la base de datos se obtiene mediante el funcionamiento asincrónico. Una sesión de creación de reflejo que utiliza el funcionamiento sincrónico puede disminuir el rendimiento cuando su carga de trabajo genera grandes cantidades de datos del registro de transacciones.  
   
  En entornos de prueba, es adecuado explorar todos los modos de funcionamiento para evaluar la forma en que tiene lugar la creación de reflejo de la base de datos. Sin embargo, antes de implementar la creación de reflejo en un entorno de producción, asegúrese de que comprende cómo funciona red en la realidad.  

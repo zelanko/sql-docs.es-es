@@ -1,5 +1,5 @@
 ---
-title: Análisis del flujo de datos | Microsoft Docs
+title: Análisis de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4faa8626fd0237477fb521e5eaacf6afc823fd0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061602"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439502"
 ---
 # <a name="analysis-of-data-flow"></a>Análisis de flujo de datos
-  Puede usar el [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista para analizar el flujo de datos de los paquetes de la base de datos. Esta vista muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior. La información se puede utilizar para obtener una descripción más profunda de las filas que se envían a cada componente.  
+  Puede utilizar la [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista de base de datos para analizar el flujo de datos de los paquetes. Esta vista muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior. La información se puede utilizar para obtener una descripción más profunda de las filas que se envían a cada componente.  
   
 > [!NOTE]  
 >  El nivel de registro se debe establecer en **Verbose** para capturar información en la vista catalog.execution_data_statistics.  
@@ -42,7 +41,7 @@ order by source_component_name, destination_component_name
   
 -   **num_rows_per_millisecond**: número de filas por milisegundo enviadas por cada componente.  
   
- El `HAVING` cláusula se utiliza para evitar un error de división por cero en los cálculos.  
+ La `HAVING` cláusula se usa para evitar un error de división por cero en los cálculos.  
   
 ```  
 use SSISDB  
@@ -61,9 +60,9 @@ order by source_component_name desc
 ## <a name="related-tasks"></a>Related Tasks  
  [Depurar el flujo de datos](troubleshooting/debugging-data-flow.md)  
   
- [Herramientas para solucionar problemas de la ejecución de paquetes](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Datos de flujos de datos](data-flow/data-in-data-flows.md)  
   
   

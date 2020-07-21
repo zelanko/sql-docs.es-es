@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b2377aa37747a1e6e58f4494129afd2b2adcd78
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082960"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520463"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>Quitar columnas de una estructura de minería de datos
   Puede usar el Diseñador de minería de datos para quitar columnas de la estructura de minería de datos después de que haya sido creada. Algunos ejemplos de razones para quitar una columna de la estructura de minería de datos son:  
@@ -43,7 +42,7 @@ ms.locfileid: "66082960"
   
 4.  En el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)  
   
   

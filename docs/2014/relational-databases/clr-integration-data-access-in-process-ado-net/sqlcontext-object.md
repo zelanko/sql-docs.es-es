@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ff29ff35f1f09898b6f6e890aae5aba1d3d2d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955251"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
   Se invoca el código administrado en el servidor al llamar a un procedimiento o función, al llamar a un método en un tipo definido por el usuario de Common Language Runtime (CLR) o cuando su acción activa un desencadenador definido en cualquiera de los lenguajes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Dado que la ejecución de este código se solicita como parte de una conexión de usuario, se requiere el acceso al contexto del autor de la llamada desde el código que se ejecuta en el servidor. Además, ciertas operaciones de acceso a datos solo pueden ser válidas si se ejecutan bajo el contexto del autor de la llamada. Por ejemplo, el acceso a pseudo tablas insertadas y eliminadas utilizadas en operaciones del desencadenador solo es válido bajo el contexto del autor de la llamada.  
@@ -28,13 +27,13 @@ ms.locfileid: "62920043"
   
  `SqlContext` proporciona acceso a los componentes siguientes:  
   
--   `SqlPipe`: La `SqlPipe` objeto representa la "canalización" por qué los resultados fluyen hacia el cliente. Para obtener más información sobre la `SqlPipe` de objetos, consulte [SqlPipe, objetos](sqlpipe-object.md).  
+-   `SqlPipe`: el objeto `SqlPipe` representa la "canalización" a través de la que los resultados fluyen al cliente. Para obtener más información sobre el `SqlPipe` objeto, vea [SqlPipe (objeto](sqlpipe-object.md)).  
   
--   `SqlTriggerContext`: La `SqlTriggerContext` objeto sólo se puede recuperar desde dentro de un desencadenador CLR. Proporciona información sobre la operación que hizo que se activara el desencadenador y un mapa de las columnas actualizadas. Para obtener más información sobre la `SqlTriggerContext` de objetos, consulte [objeto SqlTriggerContext](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: el objeto `SqlTriggerContext` solo se puede recuperar desde un desencadenador CLR. Proporciona información sobre la operación que hizo que se activara el desencadenador y un mapa de las columnas actualizadas. Para obtener más información sobre el `SqlTriggerContext` objeto, vea [objeto SqlTriggerContext](sqltriggercontext-object.md).  
   
--   `IsAvailable`: El `IsAvailable` propiedad se utiliza para determinar la disponibilidad de contexto.  
+-   `IsAvailable`: la propiedad `IsAvailable` se utiliza para determinar la disponibilidad de contexto.  
   
--   `WindowsIdentity`: El `WindowsIdentity` propiedad se utiliza para recuperar la identidad de Windows del llamador.  
+-   `WindowsIdentity`: la propiedad `WindowsIdentity` se utiliza para recuperar la identidad de Windows del autor de la llamada.  
   
 ## <a name="determining-context-availability"></a>Determinar la disponibilidad del contexto  
  Consulte la clase `SqlContext` para ver si el código actualmente en ejecución se ejecuta en proceso. Para ello, compruebe la propiedad `IsAvailable` del objeto `SqlContext`. La propiedad `IsAvailable` es de solo lectura y devuelve `True` si el código de llamada se está ejecutando dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si se puede tener acceso a otros miembros de `SqlContext`. Si la propiedad `IsAvailable` devuelve `False`, todos los demás miembros de `SqlContext` producen una excepción `InvalidOperationException`, si se utilizan. Si `IsAvailable` devuelve `False`, cualquier intento de abrir un objeto de conexión con "context connection=true" en la cadena de conexión genera un error.  
@@ -127,8 +126,8 @@ Public Shared Sub  WindowsIDTestProcVB ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto SqlPipe](sqlpipe-object.md)   
+## <a name="see-also"></a>Consulte también  
+ [SqlPipe (objeto)](sqlpipe-object.md)   
  [Objeto SqlTriggerContext](sqltriggercontext-object.md)   
  [Desencadenadores CLR](../../database-engine/dev-guide/clr-triggers.md)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  

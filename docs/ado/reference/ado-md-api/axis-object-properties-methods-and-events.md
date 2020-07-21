@@ -1,5 +1,5 @@
 ---
-title: Los eventos, métodos y propiedades del objeto de eje | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto AXIS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,20 +11,20 @@ apitype: COM
 helpviewer_keywords:
 - Axis object [ADO MD], members
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dfd4bc3cca4b8ff71d58ab60fbbed45f9df2302
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930508"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765176"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de eje
-## <a name="propertiescollections"></a>Propiedades y colecciones  
+## <a name="propertiescollections"></a>Propiedades/colecciones  
  [Propiedad DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
   
- [Propiedad de nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Propiedad Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Colección de posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   
@@ -33,8 +33,8 @@ ms.locfileid: "67930508"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

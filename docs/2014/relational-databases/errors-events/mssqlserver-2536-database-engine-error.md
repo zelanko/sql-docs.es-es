@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 6307cce7-e5a4-4f7f-a105-977eefd7a1b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4604722a4d32b0c47918350e277af1b840e46951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d73d35f537189617f21c226087d4ec05983be71
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914546"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552020"
 ---
-# <a name="mssqlserver2536"></a>MSSQLSERVER_2536
+# <a name="mssqlserver_2536"></a>MSSQLSERVER_2536
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2536|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2536|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_SUMMARY_FIRST_LINE|  
 |Texto del mensaje|Resultados de DBCC para 'COMMAND'.|  

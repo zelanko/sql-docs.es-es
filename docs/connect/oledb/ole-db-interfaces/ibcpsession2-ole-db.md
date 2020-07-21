@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7fe71aa439b54785e30adf4c4192be0f924318e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994522"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "67994522"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La interfaz IBCPSession2 es una extensión de IBCPSession que proporciona una función miembro que es una alternativa a la llamada a IBCPSession:: BCPColFmt para cada columna.  IBCPSession2 hereda de IBCPSession y agrega un nuevo método: [IBCPSession2:: BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
+  La interfaz IBCPSession2 es una extensión de IBCPSession que proporciona una función miembro que es una alternativa a la llamada a IBCPSession::BCPColFmt para cada columna.  IBCPSession2 hereda de IBCPSession y agrega un nuevo método: [IBCPSession2::BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)

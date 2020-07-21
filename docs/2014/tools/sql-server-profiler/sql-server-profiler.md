@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040243"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una interfaz enriquecida para crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema.  
@@ -183,7 +182,7 @@ ms.locfileid: "68211046"
 |Enumera los temas de ayuda contextual de SQL Server Profiler.|[SQL Server Profiler (Ayuda F1)](sql-server-profiler-f1-help.md)|  
 |Enumera los procedimientos almacenados del sistema que usa [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar el rendimiento y la actividad.|[Procedimientos almacenados de SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Bloqueos (categoría de eventos)](../../relational-databases/event-classes/locks-event-category.md)   
  [Sesiones (categoría de eventos)](../../relational-databases/event-classes/sessions-event-category.md)   
  [Procedimientos almacenados (categoría de eventos)](../../relational-databases/event-classes/stored-procedures-event-category.md)   

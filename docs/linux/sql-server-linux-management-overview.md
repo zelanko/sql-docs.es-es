@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 51feab9c5cc38f1e9b67b3de68ce29c597cdb83a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68000058"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883915"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Selección de la herramienta adecuada para administrar SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Hay varias maneras de administrar SQL Server en Linux. En la siguiente sección se proporciona una introducción rápida a las distintas herramientas y técnicas de administración con referencias a más recursos.
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
-La herramienta **mssql-conf** configura SQL Server en Linux. Para obtener más información, consulte [Configurar SQL Server en Linux con la herramienta mssql-conf](sql-server-linux-configure-mssql-conf.md).
+La herramienta **mssql-conf** configura SQL Server en Linux. Para más información, vea [Configuración de SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
 
@@ -47,4 +47,4 @@ PowerShell proporciona un entorno de línea de comandos enriquecido para adminis
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre SQL Server en Linux, vea [SQL Server en Linux](sql-server-linux-overview.md).
+Para obtener más información sobre SQL Server en Linux, consulte [SQL Server en Linux](sql-server-linux-overview.md).

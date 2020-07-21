@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: f1d97a3b694eebb924f9e1ff228d4d38da4f45ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932926"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Hay varios orígenes de información sobre cómo utilizar los cmdlets y el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell. Esto incluye la ayuda que está disponible en el entorno de Windows PowerShell.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Para obtener información sobre Windows PowerShell, vea el [Guía de Introducción de Windows PowerShell](https://technet.microsoft.com/library/hh857337.aspx).  
   
  Para ver una introducción a los cmdlets y el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
@@ -44,12 +43,12 @@ ms.locfileid: "72797875"
   
 -   Variables y comandos de**sqlcmd** . Para obtener información sobre estas variables y comandos, consulte la sección Comentarios de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] . Para obtener más información sobre el idioma [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference).  
+-   Instrucciones[!INCLUDE[tsql](../includes/tsql-md.md)] . Para obtener más información sobre el idioma [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference).  
   
 -   Instrucciones XQuery. Para obtener más información sobre lenguaje XQuery admitido por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>Obtener ayuda para un cmdlet de SQL Server.  
- **Para obtener ayuda para un cmdlet**  
+ **Obtención de ayuda sobre un cmdlet**  
   
 -   Ejecute Get-Help especificando el nombre del cmdlet y el nivel de ayuda que se va a devolver.  
   
@@ -122,6 +121,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Proveedor de PowerShell de SQL Server](../powershell/sql-server-powershell-provider.md)   
- [Usar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+## <a name="see-also"></a>Consulte también  
+ [Proveedor de SQL Server PowerShell](../powershell/sql-server-powershell-provider.md)   
+ [Utilizar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

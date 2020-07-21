@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95216c6ecca08c48d845a63fb43486ace9bb44a5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 22f4a0a20039af5ea274d9b6c0fc00aa1f7b10f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85674185"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Detiene una validación o instancia de ejecución en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   La operación ya se ha detenido  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Solo un usuario, y no más de uno a la vez, debe detener una operación en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si varios usuarios intentan detener la operación, el procedimiento almacenado indicará que se ha realizado correctamente (valor `0`) en el primer intento, pero los intentos subsiguientes producirán un error.  
   
   

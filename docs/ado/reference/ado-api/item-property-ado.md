@@ -1,5 +1,5 @@
 ---
-title: Item (propiedad, ADO) | Microsoft Docs
+title: Item (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -43,17 +43,17 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5925bc0e2ab4991c1067c6d1c26cfff2c237b37
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763436"
 ---
 # <a name="item-property-ado"></a>Propiedad Item (ADO)
-Indica a un miembro específico de una colección, por nombre o número ordinal.  
+Indica un miembro específico de una colección, por nombre o número ordinal.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,13 +65,13 @@ Set object = collection.Item ( Index )
  Devuelve una referencia de objeto.  
   
 ## <a name="parameters"></a>Parámetros  
- *Index*  
- Un **Variant** expresión que se evalúa como el nombre o el número ordinal de un objeto en una colección.  
+ *Índice*  
+ Expresión **Variant** que se evalúa como el nombre o el número ordinal de un objeto de una colección.  
   
-## <a name="remarks"></a>Comentarios  
- Use la **elemento** propiedad para devolver un objeto específico en una colección. Si **elemento** no se encuentra un objeto en la colección correspondiente a la *índice* argumento, que se produce un error. Además, algunas colecciones no admiten objetos con nombre; para estas colecciones, debe utilizar las referencias de número ordinal.  
+## <a name="remarks"></a>Observaciones  
+ Use la propiedad **Item** para devolver un objeto específico de una colección. Si el **elemento** no encuentra un objeto en la colección correspondiente al argumento de *Índice* , se produce un error. Además, algunas colecciones no admiten objetos con nombre. para estas colecciones, debe utilizar referencias de número ordinal.  
   
- El **elemento** es la propiedad predeterminada para todas las colecciones; por lo tanto, las siguientes formas de sintaxis son intercambiables:  
+ La propiedad **Item** es la propiedad predeterminada para todas las colecciones; por lo tanto, los siguientes formatos de sintaxis son intercambiables:  
   
 ```  
 collection.Item (Index)  
@@ -90,6 +90,6 @@ collection (Index)
 |[Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad Item (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Ejemplo de la propiedad de elemento (VC ++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

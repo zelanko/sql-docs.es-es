@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de Hello World Ready | Microsoft Docs
+title: Ejemplo de Hola mundo preparado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933574"
 ---
 # <a name="hello-world-ready-sample"></a>Ejemplo de Hola a todos preparado
   El ejemplo Hello World Ready muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado de integración con CLR (Common Language Runtime) simple internacionalizado. Un componente internacionalizado se puede localizar fácilmente a distintos idiomas para diferentes mercados del mundo entero sin cambiar el código fuente del componente. Este ejemplo también muestra cómo devolver datos al cliente a través de un parámetro de salida y a través de un registro que el procedimiento almacenado crea dinámicamente. Este ejemplo es casi idéntico al descrito en Hello World, salvo que es mucho más fácil y seguro localizar esta aplicación. Para cambiar el texto localizado se requiere lo siguiente:  
   
-1.  Cambiar un archivo XML (el.`resx` archivo) para la referencia cultural concreta en el directorio de recursos  
+1.  Cambiar un archivo XML (.`resx` archivo) para la referencia cultural concreta en el directorio de recursos  
   
 2.  Generar el archivo de recursos de la referencia cultural con `resgen`.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62781176"
   
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62781176"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly**  para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62781176"
   
 4.  En c:\MySample, cree el archivo `messages.resx` y copie el código de ejemplo en el archivo.  
   
-5.  En c:\MySample, cree el archivo `messages.de.resx` guardando el archivo `messages.resx` como `messages.de.resx` después de cambiar la línea  
+5.  En c:\MySample, cree el archivo `messages.de.resx` guardando el archivo `messages.resx` como `messages.de.resx` después de cambiar la línea.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62781176"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  En c:\MySample, cree el archivo `messages.es.resx` guardando el archivo `messages.resx` como `messages.es.resx` después de cambiar la línea  
+6.  En c:\MySample, cree el archivo `messages.es.resx` guardando el archivo `messages.resx` como `messages.es.resx` después de cambiar la línea.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "62781176"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  En c:\MySample, cree el archivo `messages.fr.resx` guardando el archivo `messages.resx` como `messages.fr.resx` después de cambiar la línea  
+7.  En c:\MySample, cree el archivo `messages.fr.resx` guardando el archivo `messages.resx` como `messages.fr.resx` después de cambiar la línea.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62781176"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  En c:\MySample, cree el archivo `messages.fr-FR.resx` guardando el archivo `messages.resx` como `messages.fr-FR.resx` después de cambiar la línea  
+8.  En c:\MySample, cree el archivo `messages.fr-FR.resx` guardando el archivo `messages.resx` como `messages.fr-FR.resx` después de cambiar la línea.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62781176"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. En c:\MySample, cree el archivo `messages.it.resx` guardando el archivo `messages.resx` como `messages.it.resx` después de cambiar la línea  
+9. En c:\MySample, cree el archivo `messages.it.resx` guardando el archivo `messages.resx` como `messages.it.resx` después de cambiar la línea.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +117,7 @@ ms.locfileid: "62781176"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. En c:\MySample, cree el archivo `messages.ja.resx` guardando el archivo `messages.resx` como `messages.ja.resx` después de cambiar la línea  
+10. En c:\MySample, cree el archivo `messages.ja.resx` guardando el archivo `messages.resx` como `messages.ja.resx` después de cambiar la línea.  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -154,7 +153,7 @@ ms.locfileid: "62781176"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -450,7 +449,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

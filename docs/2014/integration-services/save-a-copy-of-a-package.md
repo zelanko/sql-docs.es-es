@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d68eac95885b6c40d607237eeb51050a9c6130f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056266"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422542"
 ---
 # <a name="save-a-copy-of-a-package"></a>Guardar una copia de un paquete
   Este procedimiento describe cómo guardar una copia de un paquete en el sistema de archivos, en el almacén de paquetes o en la base de datos **msdb** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al especificar una ubicación para guardar la copia del paquete, puede actualizar también el nombre del paquete.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056266"
   
 1.  En el Explorador de soluciones, haga doble clic en el paquete cuya copia desea guardar.  
   
-2.  En el menú **Archivo**, haga clic en **Guardar copia de \<archivo de paquete> como**.  
+2.  En el menú **archivo** , haga clic en **Guardar copia de \<package file> como**.  
   
 3.  En el cuadro de diálogo **Guardar copia del paquete** , seleccione una ubicación de paquete en la lista **Ubicación del paquete** .  
   
@@ -59,12 +58,12 @@ ms.locfileid: "66056266"
   
     -   En el cuadro de diálogo **Nivel de protección de paquetes** , seleccione un nivel de protección diferente.  
   
-    -   Haga clic en **Aceptar**.  
+    -   Haga clic en **OK**.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
- [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Configurar la integración de servicios de Service &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;paquetes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

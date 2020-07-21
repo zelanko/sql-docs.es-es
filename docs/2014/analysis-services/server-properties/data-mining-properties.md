@@ -56,13 +56,12 @@ helpviewer_keywords:
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ed1c47faafeb0c680e6afb6f8e509c426760da2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940726"
 ---
 # <a name="data-mining-properties"></a>Propiedades de minería de datos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de minería de datos descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -117,8 +116,8 @@ ms.locfileid: "66069058"
 > [!NOTE]  
 >  Además de las propiedades que definen los servicios de minería de datos disponibles en el servidor, existen propiedades de minería de datos que definen el comportamiento de algoritmos concretos. Estas propiedades se configuran al crear un modelo de minería de datos individual, no en el nivel de servidor. Para obtener más información, vea [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Vea también  
- [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Arquitectura física &#40;Analysis Services:&#41;de minería de datos](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

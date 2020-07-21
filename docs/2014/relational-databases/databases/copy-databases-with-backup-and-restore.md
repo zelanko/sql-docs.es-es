@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8ffed36767f961f7482aa0dccf755118c80c019
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917472"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952158"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear una base de datos nueva restaurando una copia de seguridad de una base de datos de usuario creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior. Sin embargo, las copias de seguridad de las bases de datos **maestra**, **modelo** y **msdb** creadas utilizando una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueden restaurarse con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Asimismo, las copias de seguridad de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden restaurar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "62917472"
   
 1.  Cree una copia de seguridad de la base de datos de origen que pueda residir en una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior. El equipo en el que se ejecute esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será el *equipo de origen*.  
   
-2.  En el equipo al que van a copiar la base de datos (el *equipo de destino*), conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que se va a restaurar la base de datos. Si es necesario, cree en la instancia de servidor de destino los mismos dispositivos de copia de seguridad utilizados para la copia de seguridad de las bases de datos de origen.  
+2.  En el equipo en el que desea copiar la base de datos (el *equipo de destino*), conéctese a la instancia de en la que va [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a restaurar la base de datos. Si es necesario, cree en la instancia de servidor de destino los mismos dispositivos de copia de seguridad utilizados para la copia de seguridad de las bases de datos de origen.  
   
 3.  Restaure la copia de seguridad de la base de datos de origen en el equipo de destino. Al restaurar la base de datos se crean automáticamente todos los archivos de la base de datos.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "62917472"
   
 -   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **Para restaurar archivos y grupos de archivos a una nueva ubicación**  
+ **Para restaurar archivos y grupos de archivos en una nueva ubicación**  
   
 -   [Restaurar archivos en una nueva ubicación &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62917472"
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
- **Para copiar una base de datos mediante SQL Server Management Objects (SMO)**  
+ **Para copiar una base de datos mediante los objetos de administración de SQL Server (SMO)**  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>  
   
@@ -130,7 +129,7 @@ ms.locfileid: "62917472"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Copiar bases de datos en otros servidores](copy-databases-to-other-servers.md)   
  [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   

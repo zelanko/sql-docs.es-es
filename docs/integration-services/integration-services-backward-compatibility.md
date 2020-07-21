@@ -18,10 +18,10 @@ ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296241"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Integration Services
@@ -33,13 +33,13 @@ ms.locfileid: "71296241"
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Características desusadas de Integration Services en SQL Server 2016
 
-En este tema se describen las características desusadas de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que siguen estando disponibles en la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No use características en desuso en aplicaciones nuevas.  
+En este tema se describen las características en desuso de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que siguen estando disponibles en la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No use características en desuso en aplicaciones nuevas.  
   
  No hay características obsoletas de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
 ## <a name="discontinued-integration-services-functionality-in-sql-server-2016"></a>Funcionalidad de Integration Services no incluida en SQL Server 2016
 
-En este tema se describen las características de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que ya no están disponibles en la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+En esta sección se describen las características de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que ya no están disponibles en la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  No se ha quitado ninguna característica de Integration Services en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 

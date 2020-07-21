@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39e84cf00810a45e48d1d1210bca54cd30ddfff6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62634281"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061892"
 ---
 # <a name="change-the-environment-layout"></a>Cambiar el diseño del entorno
   Los componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] compiten por tener espacio en la pantalla. Para aprovechar mejor el espacio, puede cerrar, ocultar o mover los componentes de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Las prácticas de esta página muestran cómo mover los componentes a ubicaciones diferentes.  
@@ -50,7 +49,7 @@ ms.locfileid: "62634281"
   
 1.  Haga clic con el botón secundario en la barra de título del Explorador de objetos; verá las siguientes opciones de menú:  
   
-    -   float  
+    -   Float  
   
     -   Acoplar  
   

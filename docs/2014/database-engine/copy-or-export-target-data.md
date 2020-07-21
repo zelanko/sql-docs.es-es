@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c44b821-7a0e-4c96-8994-cba4e6337bdc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 610c9d33ecb2423a64ae76708d2f38d1f8fd88a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 040529d40e0fd6db8873add8ee998f2bef57c485
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934546"
 ---
 # <a name="copy-or-export-target-data"></a>Copiar o exportar datos de destino
   Puede copiar los datos de destino y también puede exportarlos a un archivo .CSV.  

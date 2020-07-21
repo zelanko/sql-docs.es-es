@@ -1,22 +1,23 @@
 ---
-title: Nodo Alertas (Ayuda F1 del Agente SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Nodo Alertas (Ayuda F1 del Agente SQL Server)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: dc5013c1-692c-4cc4-820c-1c09482c6886
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f28ba5d7be73e5d695b32cbf5a4d7f61b00d07ea
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 81a74d7f0cee1e63fc1e5a85e0cdd83bcba78155
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266371"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254503"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>Nodo Alertas (Ayuda F1 del Agente SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

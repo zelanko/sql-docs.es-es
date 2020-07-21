@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo para los modelos de regresión logística de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de regresión logística (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3232e4344b94e0b812df72ddebdc9a8d389d9f05
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083622"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521371"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión logística (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de regresión logística de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "66083622"
   
  Sin embargo, en un modelo de regresión logística, el nodo que representa el nivel oculto está vacío y no tiene ningún elemento secundario. Por consiguiente, el modelo contiene nodos que representan salidas individuales (NODE_TYPE = 23) y entradas individuales (NODE_TYPE = 21) pero ningún nodo oculto individual.  
   
- ![estructura del contenido de modelo de regresión logística](../media/skt-modelcontentstructure-logregc.gif "estructura del contenido de modelo de regresión logística")  
+ ![estructura del contenido del modelo de regresión logística](../media/skt-modelcontentstructure-logregc.gif "estructura del contenido del modelo de regresión logística")  
   
  De forma predeterminada, un modelo de regresión logística se muestra en el **Visor de redes neuronales de Microsoft**. Con este visor personalizado, puede filtrar los atributos de entrada y sus valores, y ver gráficamente cómo afectan a las salidas. La información sobre herramientas del visor muestra la probabilidad y la mejora respecto al modelo de predicción asociados a cada par de valores de entrada y de salida. Para más información, vea [Examinar un modelo usando el Visor de redes neuronales de Microsoft](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66083622"
 |Nodo de salida|Nombre del atributo de salida|  
   
  NODE_NAME  
- Nombre del nodo. Actualmente, esta columna contiene el mismo valor que NODE_UNIQUE_NAME, aunque esto podría cambiar en versiones futuras.  
+ El nombre del nodo. Actualmente, esta columna contiene el mismo valor que NODE_UNIQUE_NAME, aunque esto podría cambiar en versiones futuras.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo.  
@@ -140,7 +139,7 @@ ms.locfileid: "66083622"
  Probabilidad de alcanzar el nodo desde el nodo primario. En los modelos de regresión logística, siempre es 0.  
   
  NODE_DISTRIBUTION  
- Tabla anidada que contiene la información estadística para el nodo. Para más información sobre el contenido de esta tabla para cada tipo de nodo, vea la sección Interpretar la información de la tabla NODE_DISTRIBUTION en [Mining Model Content for Neural Network Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ Tabla anidada que contiene la información estadística para el nodo. Para más información sobre el contenido de esta tabla para cada tipo de nodo, vea la sección Interpretar la información de la tabla NODE_DISTRIBUTION en [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  En los modelos de regresión logística, siempre es 0.  
@@ -167,7 +166,7 @@ ms.locfileid: "66083622"
  MSOLAP_NODE_SHORT_CAPTION  
  En modelos de regresión logística, siempre está en blanco.  
   
-##  <a name="bkmk_NodeIDs"></a> Usar nombres de nodo e identificadores  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Usar nombres de nodo e identificadores  
  La denominación de los nodos en un modelo de regresión logística proporciona información adicional sobre las relaciones entre los nodos del modelo. En la tabla siguiente se muestran las convenciones para los identificadores que están asignados a los nodos de cada nivel.  
   
 |Tipo de nodo|Convención para el identificador de nodo|  
@@ -183,9 +182,9 @@ ms.locfileid: "66083622"
   
  Puede utilizar estos identificadores para determinar cómo se relacionan los atributos de salida con atributos concretos del nivel de entrada, viendo la tabla NODE_DISTRIBUTION del nodo de salida. Cada fila de esa tabla contiene un identificador que apunta a un nodo de atributo de entrada concreto. La tabla NODE_DISTRIBUTION también contiene el coeficiente para ese par de entrada-salida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)   
- [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de regresión logística](logistic-regression-model-query-examples.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

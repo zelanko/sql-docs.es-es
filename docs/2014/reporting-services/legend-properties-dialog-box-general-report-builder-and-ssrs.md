@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades de leyenda, General (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la leyenda, general (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108556"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la leyenda, General (Generador de informes y SSRS)
-  Use el cuadro de diálogo **Leyenda** para definir el aspecto y el diseño de la leyenda del gráfico. Para obtener más información, consulte [aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
+  Use el cuadro de diálogo **Leyenda** para definir el aspecto y el diseño de la leyenda del gráfico. Para obtener más información, vea [aplicar formato a la leyenda de un gráfico &#40;generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba el nombre de la leyenda.  
   
  **Diseño**  
@@ -46,13 +46,13 @@ ms.locfileid: "66108556"
  **Mostrar leyenda fuera del área de gráfico**  
  Seleccione esta opción para mostrar la leyenda fuera del área de gráfico. Esta opción solo se aplica si la leyenda está acoplada a un área de gráfico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Trazar datos en un eje secundario &#40;generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Trazar datos en un eje secundario &#40;Generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Aplicar formato a la leyenda de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Agregar una media móvil a un gráfico &#40;Generador de informes y SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   

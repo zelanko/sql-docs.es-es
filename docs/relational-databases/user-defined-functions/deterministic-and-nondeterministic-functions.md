@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786888"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funciones deterministas y no deterministas
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Las funciones deterministas devuelven siempre el mismo resultado cada vez que se invocan con un conjunto específico de valores de entrada y cuando el estado de la base de datos es el mismo. Las funciones no deterministas pueden devolver resultados diferentes cada vez que se llaman con un conjunto específico de valores de entrada aunque el estado de la base de datos a la que tienen acceso permanezca sin cambios. Por ejemplo, la función AVG siempre devuelve el mismo resultado dadas las condiciones indicadas anteriormente pero la función GETDATE, que devuelve el valor datetime actual, siempre devuelve un resultado diferente.  
   
  Son varias las propiedades de las funciones definidas por el usuario que determinan la capacidad de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para indizar los resultados de la función, ya sea mediante índices en columnas calculadas que llaman a la función o mediante vistas indizadas que hacen referencia a la función. El determinismo de una función es una propiedad así. Por ejemplo, no se puede crear un índice clúster en una vista si ésta hace referencia a funciones no deterministas. Para obtener más información sobre las propiedades de las funciones, incluido el determinismo, vea [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "68123599"
 ## <a name="built-in-function-determinism"></a>Determinismo de las funciones integradas  
  El determinismo de las funciones integradas no se ve afectado por el usuario. Las funciones integradas son deterministas o no deterministas según el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementa cada función. Por ejemplo, al especificar una cláusula ORDER BY en una consulta, no se cambia el determinismo de una función que se usa en la consulta.  
   
- Todas las funciones integradas de cadena son deterministas. Para obtener una lista de estas funciones, vea [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
+ Todas las funciones integradas de cadena son deterministas, excepto [FORMAT](../../t-sql/functions/format-transact-sql.md). Para obtener una lista de estas funciones, vea [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
  Las siguientes funciones integradas procedentes de categorías de funciones integradas que no son de cadena siempre son deterministas.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68123599"
 |ATN2|FLOOR|SIN|  
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
-|COS|LOG|TAN|  
+|COS|REGISTRO|TAN|  
 |COT|LOG10|YEAR|  
 |DATALENGTH|MONTH||  
 |DATEADD|NULLIF||  

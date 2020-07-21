@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70ccd24e72671255ea0c929b19110794e1c0412a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072668"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536027"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
   En este artículo se describe la característica Power View para modelos multidimensionales de Microsoft SQL Server 2014 y se proporciona información importante para los profesionales y los administradores de BI que pretenden implementar Power View para modelos multidimensionales en su organización.  
@@ -26,7 +25,7 @@ ms.locfileid: "66072668"
   
  **Arquitectura de Power View para modelos multidimensionales**  
   
- ![Power View para modelos multidimensionales arquitectura](../media/daxmd-architecture.gif "Power View para modelos multidimensionales arquitectura")  
+ ![Power View para la arquitectura de modelos multidimensionales](../media/daxmd-architecture.gif "Power View para la arquitectura de modelos multidimensionales")  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  **Requisitos de servidor**  
@@ -35,9 +34,9 @@ ms.locfileid: "66072668"
   
 -   Complemento Microsoft SQL Server 2014 Reporting Services para Microsoft SharePoint Server 2010 o 2013 Enterprise Edition.  
   
- **Requisitos de cliente**  
+ **Requisitos del cliente**  
   
--   La funcionalidad de cliente de Power View requiere Microsoft Silverlight 5. Para obtener más información, consulte [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   La funcionalidad de cliente de Power View requiere Microsoft Silverlight 5. Para obtener más información, consulte [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
 ## <a name="features"></a>Características  
  **Compatibilidad nativa con Power View**  
@@ -56,13 +55,13 @@ ms.locfileid: "66072668"
 |Objeto multidimensional|Objeto tabular|  
 |-----------------------------|--------------------|  
 |Cube|Modelo|  
-|Dimensión de cubo|Table|  
-|Atributos de dimensión (claves, nombre)|columna|  
-|Grupo de medida|Table|  
+|Dimensión de cubo|Tabla|  
+|Atributos de dimensión (claves, nombre)|Columna|  
+|Grupo de medida|Tabla|  
 |Measure|Measure|  
 |Medida sin grupo de medida|En una tabla denominada Medidas|  
 |Relación de la dimensión del cubo del grupo de medida|Relación|  
-|Perspective|Perspective|  
+|Perspectiva|Perspectiva|  
 |KPI|KPI|  
 |Jerarquías de usuario y elementos primarios y secundarios|Hierarchy|  
 |Carpeta para mostrar|Carpeta para mostrar|  
@@ -76,7 +75,7 @@ ms.locfileid: "66072668"
   
  **Grupos de medida en la lista de campos de Power View**  
   
- ![Campo de lista en la vista avanzada](../media/daxmd-powerviewfieldlist.gif "campo de lista en la vista avanzada")  
+ ![Lista de campos de Power View](../media/daxmd-powerviewfieldlist.gif "Lista de campos de Power View")  
   
  Las medidas dentro de un grupo de medida aparecen como medidas. Si hay medidas calculadas que no tienen un grupo de medida asociado, se agruparán en una tabla especial denominada Medidas.  
   
@@ -84,10 +83,10 @@ ms.locfileid: "66072668"
   
  **Medidas y KPI en un grupo de medida**  
   
- ![Grupo de medida en la lista de campos de Power View](../media/daxmd-fieldlist-group.gif "grupo de medida en la lista de campos de Power View")  
+ ![Grupo de medida en la lista de campos de Power View](../media/daxmd-fieldlist-group.gif "Grupo de medida en la lista de campos de Power View")  
   
 ### <a name="measures-as-variants"></a>Medidas como variantes  
- Las medidas en los modelos multidimensionales son variantes. Esto significa que las medidas no tienen establecimiento inflexible de tipos y pueden tener tipos de datos diferentes. Por ejemplo, en la imagen siguiente, la medida Amount en la tabla Financial Reporting de forma predeterminada es de tipo de datos Currency pero también tiene un valor de cadena "NA" para el subtotal de "Statistical Accounts", que es el tipo de datos String. Power View reconoce ciertas medidas como variantes y muestra los valores correctos y el formato en las diferentes visualizaciones.  
+ Las medidas en los modelos multidimensionales son variantes. Esto significa que las medidas no tienen establecimiento inflexible de tipos y pueden tener tipos de datos diferentes. Por ejemplo, en la imagen siguiente, la medida amount de la tabla Financial Reporting de forma predeterminada es Currency Data Type, pero también tiene un valor de cadena "NA" para el subtotal de "Statisticed Accounts", que es un tipo de datos de cadena. Power View reconoce ciertas medidas como variantes y muestra los valores correctos y el formato en las diferentes visualizaciones.  
   
  **Medida como variante**  
   
@@ -97,18 +96,18 @@ ms.locfileid: "66072668"
  Los modelos tabulares proporcionan a los usuarios la posibilidad de crear medidas *implícitas* como recuento, suma o promedio en los campos. En los modelos multidimensionales, dado que los datos de los atributos de dimensión se almacenan de forma diferente, la consulta de medidas implícitas puede tardar mucho. Por ello, las medidas implícitas no están disponibles en Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensiones, atributos y jerarquías  
- Las dimensiones de cubo se exponen como tablas en los metadatos tabulares. En la lista de campos de Power View, los atributos de dimensión se muestran como columnas dentro de carpetas para mostrar.  Los atributos de dimensión que tienen la propiedad AttributeHierarchyEnabled establecida en false; Por ejemplo: Atributo de fecha de nacimiento en la dimensión Customer o la propiedad AttributeHierarchyVisible establecida en false no aparecerá en la lista de campos de Power View. Las jerarquías de varios niveles o las jerarquías de usuario, por ejemplo Customer Geography en la dimensión Customer, se exponen como jerarquías en la lista de campos de Power View. Los miembros desconocidos ocultos de un atributo de dimensión se exponen en consultas DAX en Power View.  
+ Las dimensiones de cubo se exponen como tablas en los metadatos tabulares. En la lista de campos de Power View, los atributos de dimensión se muestran como columnas dentro de carpetas para mostrar.  Estos atributos tienen establecida en false la propiedad AttributeHierarchyEnabled; por ejemplo, el atributo Birth Date de la dimensión Customer o la propiedad AttributeHierarchyVisible establecida en false no aparecerá en la lista de campos de Power View. Las jerarquías de varios niveles o las jerarquías de usuario, por ejemplo Customer Geography en la dimensión Customer, se exponen como jerarquías en la lista de campos de Power View. Los miembros desconocidos ocultos de un atributo de dimensión se exponen en consultas DAX en Power View.  
   
  **La dimensión, los atributos y las jerarquías de SQL Server Data Tools (SSDT) y la lista de campos de Power View**  
   
- ![Dimensiones en SSDT y en la lista de campos de Power View](../media/daxmd-ssdt-dimensions.gif "dimensiones en SSDT y en la lista de campos de Power View")  
+ ![Dimensiones en SSDT y en la lista de campos de Power View](../media/daxmd-ssdt-dimensions.gif "Dimensiones en SSDT y en la lista de campos de Power View")  
   
 ### <a name="dimension-attribute-type"></a>Tipo de atributo de dimensión  
  Los modelos multidimensionales permiten asociar atributos de dimensión con tipos de atributos de dimensión específicos. La imagen siguiente muestra la dimensión Geography, en la que los atributos de dimensión City, State-Province, Country y Postal Code tienen asociados tipos geography. Se exponen en los metadatos tabulares. Power View reconoce los metadatos que permiten que los usuarios creen visualizaciones de mapas. Esto se indica con el icono de mapa situado junto a las columnas City, Country, Postal Code y State-Province en la tabla Geography de la lista de campos de Power View.  
   
  **Tipos geography de atributos de dimensión en SSDT y en la lista de campos de Power View**  
   
- ![Tipos geography de atributos de dimensión](../media/daxmd-ssdt-attribute-geog-types.gif "tipos geography de atributos de dimensión")  
+ ![Tipos de geografía de atributos de dimensión](../media/daxmd-ssdt-attribute-geog-types.gif "Tipos de geografía de atributos de dimensión")  
   
 ### <a name="dimension-calculated-members"></a>Miembros calculados de dimensión  
  Los modelos multidimensionales admiten miembros calculados para los secundarios de todos con un único miembro real. Las restricciones adicionales al exponer este tipo de miembro calculado son:  
@@ -121,11 +120,11 @@ ms.locfileid: "66072668"
   
  Los miembros calculados de las jerarquías de usuario no se exponen en Power View; sin embargo, los usuarios finales seguirán pudiendo conectarse a un cubo que contenga miembros calculados en jerarquías de usuario.  
   
- La imagen siguiente muestra un informe de Power View para un cubo que contiene a los miembros calculados de inteligencia de tiempo en el atributo de dimensión "Fiscal Date Calculations" de la dimensión Date.  
+ La imagen siguiente muestra un informe de Power View para un cubo que contiene miembros calculados de inteligencia de tiempo en el atributo de dimensión "fiscal Date Calculations" de la dimensión Date.  
   
  **Informe de Power View con miembros calculados**  
   
- ![Miembros calculados en Power View](../media/daxmd-calcmembersinpowerview.gif "miembros calculados en Power View")  
+ ![Miembros calculados en Power View](../media/daxmd-calcmembersinpowerview.gif "Miembros calculados en Power View")  
   
 ### <a name="default-members"></a>Miembros predeterminados  
  Los modelos multidimensionales admiten miembros predeterminados para los atributos de dimensión. El miembro predeterminado se usa en Analysis Services al agregar datos para una consulta. El miembro predeterminado de un atributo de dimensión se expone como valor predeterminado o filtro para la columna correspondiente en los metadatos tabulares.  
@@ -136,7 +135,7 @@ ms.locfileid: "66072668"
  Los modelos multidimensionales admiten la seguridad de celdas y dimensiones a través de roles. Un usuario que se conecta a un cubo con Power View se autentica y se evalúa si tiene los permisos apropiados. Cuando se aplica seguridad de dimensiones, el usuario de Power View no verá los miembros de dimensión respectivos; sin embargo, si un usuario tiene un permiso de seguridad de celda definido en el que ciertas celdas están restringidas, ese usuario no puede conectarse al cubo con Power View. En algunos casos, los usuarios pueden agregar datos cuando partes de esos datos se calculan a partir de datos protegidos.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Atributos y jerarquías no agregables  
- En un modelo multidimensional, los atributos de una dimensión pueden tener la propiedad IsAggregatable establecida en false. Esto significa que el autor del modelo que ha especificado aplicaciones cliente no debe agregar los datos a través de jerarquías (atributo o multinivel) cuando consulten los datos. En Power View, este atributo de dimensión se expone como una columna para los que los subtotales no están disponibles. En la imagen siguiente, puede ver un ejemplo de una jerarquía no agregable: Las cuentas. El nivel superior de la jerarquía primario-secundario Accounts es no agregable mientras que otros niveles son agregables. En una visualización de matriz de la jerarquía Accounts (primeros dos niveles), ve los subtotales para el nivel de cuenta 02 pero no para el nivel superior, el nivel de cuenta 01.  
+ En un modelo multidimensional, los atributos de una dimensión pueden tener la propiedad IsAggregatable establecida en false. Esto significa que el autor del modelo que ha especificado aplicaciones cliente no debe agregar los datos a través de jerarquías (atributo o multinivel) cuando consulten los datos. En Power View, este atributo de dimensión se expone como una columna para los que los subtotales no están disponibles. En la imagen siguiente, puede ver un ejemplo de jerarquía no agregable: Accounts. El nivel superior de la jerarquía primario-secundario Accounts es no agregable mientras que otros niveles son agregables. En una visualización de matriz de la jerarquía Accounts (primeros dos niveles), ve los subtotales para el nivel de cuenta 02 pero no para el nivel superior, el nivel de cuenta 01.  
   
  **Jerarquía no agregable de Power View**  
   
@@ -147,7 +146,7 @@ ms.locfileid: "66072668"
   
  **Tipo de atributo de dimensión ImageURL en SSDT**  
   
- ![Propiedades de los atributos de dimensión](../media/daxmd-dimattribute-properties.gif "las propiedades de atributo de dimensión")  
+ ![Propiedades de los atributos de dimensión](../media/daxmd-dimattribute-properties.gif "Propiedades de los atributos de dimensión")  
   
 ## <a name="parent-child-hierarchies"></a>Jerarquías de elementos primarios y secundarios  
  Los modelos multidimensionales admiten jerarquías de elementos primarios y secundarios, que se exponen como jerarquía en los metadatos tabulares. Cada nivel de la jerarquía se expone como una columna oculta. El atributo clave de la dimensión primaria-secundaria no se expone en los metadatos tabulares.  
@@ -157,11 +156,11 @@ ms.locfileid: "66072668"
  ![Jerarquías de elementos primarios y secundarios](../media/daxmd-ssdt-hierarchies.gif "Jerarquías de elementos primarios y secundarios")  
   
 ## <a name="perspectives-and-translations"></a>Perspectivas y traducciones  
- Las perspectivas son vistas de cubos donde solo ciertas dimensiones o grupos de medida son visibles en las herramientas de cliente. Puede especificar un nombre de perspectiva como valor en la propiedad de la cadena de conexión Cube. Por ejemplo, en la siguiente cadena de conexión, 'Direct Sales' es una perspectiva en el modelo multidimensional:  
+ Las perspectivas son vistas de cubos donde solo ciertas dimensiones o grupos de medida son visibles en las herramientas de cliente. Puede especificar un nombre de perspectiva como valor en la propiedad de la cadena de conexión Cube. Por ejemplo, en la siguiente cadena de conexión, ' Direct sales ' es una perspectiva del modelo multidimensional:  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
   
- Los cubos pueden tener traducciones de datos y metadatos especificados para varios idiomas dentro del modelo. Para ver las traducciones (datos y metadatos), deberá agregar la propiedad "Identificador de configuración regional" opcional para la cadena de conexión en el archivo RSDS según se muestra a continuación.  
+ Los cubos pueden tener traducciones de datos y metadatos especificados para varios idiomas dentro del modelo. Para ver las traducciones (datos y metadatos), necesita agregar la propiedad "identificador regional" opcional a la cadena de conexión en el archivo RSDS, como se muestra a continuación.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Adventure Works'; Locale Identifier=3084`  
   
@@ -174,10 +173,10 @@ ms.locfileid: "66072668"
   
  **Filtros anclados**  
   
- ![Anclar filtro](../media/daxmd-pinnedfilterinpowerview.gif "anclar filtro")  
+ ![Filtro anclado](../media/daxmd-pinnedfilterinpowerview.gif "Filtro anclado")  
   
 ## <a name="unsupported-features"></a>Características no admitidas  
- **Power View en Excel 2013** -no admite la conexión a y la creación de informes para modelos multidimensionales. Power View para modelos multidimensionales permite la exploración basada en clientes de Power View únicamente.  
+ **Power View en Excel 2013** : no admite la conexión a y la creación de informes para modelos multidimensionales. Power View para modelos multidimensionales permite la exploración basada en clientes de Power View únicamente.  
   
  **Acciones** : no se admiten en informes de Power View ni en consultas DAX con un modelo multidimensional.  
   
@@ -186,7 +185,7 @@ ms.locfileid: "66072668"
 > [!NOTE]  
 >  Las acciones y los conjuntos con nombre no admitidos no impiden que los usuarios se conecten a modelos multidimensionales ni los exploren con Power View.  
   
- **Seguridad de nivel de celda** -no se admite en informes de Power View.  
+ **Seguridad de nivel de celda** : no se admite en informes de Power View.  
   
 ## <a name="csdlbi-annotations"></a>Anotaciones CSDLBI  
  Los metadatos de cubos multidimensionales se exponen como un Entity Data Model (EDM) basado en un modelo conceptual según el Lenguaje de definición de esquemas conceptuales con anotaciones Business Intelligence (CSDLBI).  
@@ -217,7 +216,7 @@ ms.locfileid: "66072668"
   
  La solicitud DISCOVER_CSDL_METADATA tiene las restricciones siguientes:  
   
-|NOMBRE|Obligatorio|Descripción|  
+|Nombre|Obligatorio|Descripción|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Sí|El nombre de la base de datos o catálogo.|  
 |PERSPECTIVE_NAME|Sí, si el cubo contiene más de una perspectiva. Opcional si hay solo un cubo o una perspectiva predeterminada.|El nombre del cubo o de la perspectiva en la base de datos multidimensional.|  
@@ -225,13 +224,12 @@ ms.locfileid: "66072668"
   
  El documento CSDL out devuelto representa el modelo como un espacio de nombres que contiene entidades, asociaciones y propiedades.  
   
- Para obtener más información acerca de las anotaciones CSDLBI para los modelos tabulares, vea [referencia técnica para las anotaciones de Business Intelligence en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) en MSDN, y [ \[MS-CSDLBI\]: Definiciones de esquema conceptual formato de archivo con anotaciones de Business Intelligence](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx).  
+ Para obtener información más detallada sobre las anotaciones CSDLBI para los modelos tabulares, vea [Referencia técnica para las anotaciones de Business Intelligence en CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) en MSDN y [\[MS-CSDLBI\]: Conceptual Schema Definitions File Format with Business Intelligence Annotations](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)([MS-CSDLBI]: Formato de archivo de definiciones de esquema conceptual con anotaciones de Business Intelligence).  
   
 ## <a name="client-help-on-officecom"></a>Ayuda de cliente en Office.com  
  Los artículos siguientes se proporcionan en Office.com para ayudar a los usuarios a conocer el modo en que los objetos del modelo multidimensional aparecen en Power View y cómo crear un informe de ejemplo:  
   
- [Descripción de los objetos del modelo multidimensional en Power View](http://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Descripción de los objetos del modelo multidimensional en Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Explorar el modelo multidimensional de Adventure Works con Power View](http://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
-  
+ [Explorar el modelo multidimensional de Adventure Works con Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

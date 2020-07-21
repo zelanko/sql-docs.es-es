@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3b4c3234-09f6-44fa-9757-0a20ca90e13e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6cac17e028a8d17f26b593b61b0fdf0440ea8dce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb2d9dfd2c056c320a65374c3192eb80ecad1ae2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974660"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929035"
 ---
 # <a name="setcharacterstream-method-sqlservercallablestatement"></a>Método setCharacterStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

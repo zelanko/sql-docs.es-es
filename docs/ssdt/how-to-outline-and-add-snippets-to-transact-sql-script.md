@@ -1,24 +1,25 @@
 ---
-title: 'Procedimientos: Esquematizar y agregar fragmentos de código a script Transact-SQL | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Esquematización e incorporación de fragmentos de código a script Transact-SQL
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035119"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241359"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedimientos: Esquematización e incorporación de fragmentos de código a script Transact-SQL
-SQL Server Data Tools incluye una biblioteca de código formada por fragmentos de código que están listos para insertarse en la aplicación. Cada fragmento de código realiza una tarea de script completa como la creación de una función, tabla, desencadenador, índice, vista, tipo de datos definido por el usuario, etc. Bastan unos pocos clics del mouse para insertar un fragmento de código en el código fuente. Estos fragmentos de código aumentan la productividad al reducir el tiempo dedicado a escribir.  
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Cómo: Esquematizar y agregar fragmentos de código a script Transact-SQL
+
+SQL Server Data Tools incluye una biblioteca de código formada por fragmentos de código que están listos para insertarse en la aplicación. Cada fragmento de código realiza una tarea de scripting completa como crear una función, una tabla, un desencadenador, un índice, una vista, un tipo de datos definido por el usuario, etc. Puede insertar un fragmento de código en el código fuente con unos pocos clics con el mouse. Estos fragmentos de código aumentan la productividad al reducir el tiempo dedicado a escribir.  
   
 Si necesita buscar un fragmento de código adecuado, puede usar el selector de fragmentos de código, que proporciona listas clasificadas por categorías de fragmentos de código entre las que puede elegir. Una vez agregado el fragmento de código al código, puede que haya que personalizar algunas partes del mismo, como reemplazar nombres de variable con nombres más apropiados o poner la lógica real de un procedimiento almacenado. Observará que el fragmento de código insertado contiene uno o varios puntos de reemplazo resaltados en el código para este fin. Si sitúa el puntero del mouse sobre el punto de reemplazo, aparecerá una información sobre herramientas en la que se explica cómo puede cambiar el código.  
   

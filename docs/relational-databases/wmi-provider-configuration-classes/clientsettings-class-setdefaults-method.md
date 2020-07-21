@@ -1,6 +1,6 @@
 ---
-title: Método SetDefaults (clase ClientSettings) | Microsoft Docs
-ms.custom: ''
+title: Método SetDefaults (ClientSettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2b079d70a8fb70a2b28c139a862f0689bd33d5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd88ef9b93dd20a7cf77e70dddb8a2733ee5a4ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072490"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888867"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Clase ClientSettings: método SetDefaults
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Establece todos los valores predeterminados de la instancia del cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la opción para sobrescribir los datos existentes.  
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Establece todos los valores predeterminados para la instancia del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cliente con la opción de sobrescribir los datos existentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   

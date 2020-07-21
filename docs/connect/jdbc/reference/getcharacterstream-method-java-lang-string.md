@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2b01b2aa7972404318ff4b229a999218be49e812
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953281"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80911691"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Método getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  Valor **String** que contiene el nombre de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de lector.  
+ Un objeto Reader.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getCharacterStream se especifica mediante el método getCharacterStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getCharacterStream especifica este método getCharacterStream en la interfaz java.sql.ResultSet.  
   
  Este método solamente leerá tipos de datos de carácter Unicode de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como nchar, nvarchar, nvarchar(max) y ntext. El resto de tipos de datos, incluso los tipos de carácter ASCII, producirán una excepción. Para leer los tipos de datos ASCII, utilice el método [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

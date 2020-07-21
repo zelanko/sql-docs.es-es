@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7cc6c6ec614acb33938433f081dfcafc2cc5fb25
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ff52e42beb47e69e3dab9af73573b42029f29710
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716743"
 ---
 # <a name="replication-monitor-main-page"></a>Monitor de replicación, página Principal
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   El Monitor de replicación permite realizar un seguimiento del estado y del rendimiento de las publicaciones y las suscripciones en una topología de replicación. Los siguientes temas proporcionan más información:  
   
 -   Para obtener información general sobre el Monitor de replicación, vea [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md) (Supervisar la replicación).  
@@ -36,7 +36,7 @@ ms.locfileid: "68769673"
   
     -   [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
-    -   [Establecer umbrales y advertencias en el Monitor de replicación](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+    -   [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
     -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   

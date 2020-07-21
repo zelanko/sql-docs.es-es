@@ -7,24 +7,23 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bf4123a46cc13359c936e6f9cfc0db3dcfdaa175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013463"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Crear, modificar y quitar índices XML selectivos
   Describe cómo crear un nuevo índice XML selectivo, o cómo modificar o quitar un índice XML selectivo existente.  
   
  Para obtener más información sobre los índices XML selectivos, vea [Índices XML selectivos &#40;SXI&#41;](selective-xml-indexes-sxi.md).  
   
-##  <a name="create"></a> Crear un índice XML selectivo  
+##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> Crear un índice XML selectivo  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Procedimientos: Crear un índice XML selectivo  
+### <a name="how-to-create-a-selective-xml-index"></a>Crear un índice XML selectivo  
  **Crear un nuevo índice XML selectivo con Transact-SQL**  
  Crear un índice XML selectivo llamado a la instrucción CREATE SELECTIVE XML INDEX. Para obtener más información, vea [CREAR ÍNDICE XML SELECTIVO &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
@@ -46,9 +45,9 @@ FOR(
   
   
   
-##  <a name="alter"></a> Modificar un índice XML selectivo  
+##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> Modificar un índice XML selectivo  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Procedimientos: Modificar un índice XML selectivo  
+### <a name="how-to-alter-a-selective-xml-index"></a>Modificar un índice XML selectivo  
  **Modificar un índice XML selectivo con Transact-SQL**  
  Modificar un índice XML selectivo existente llamado a la instrucción ALTER INDEX. Para obtener más información, vea [ALTER INDEX &#40;Selective XML Indexes&#41;](../indexes/indexes.md).  
   
@@ -68,9 +67,9 @@ FOR
   
   
   
-##  <a name="drop"></a> Quitar un índice XML selectivo  
+##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> Quitar un índice XML selectivo  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Procedimientos: Quitar un índice XML selectivo  
+### <a name="how-to-drop-a-selective-xml-index"></a>Quitar un índice XML selectivo  
  **Quitar un índice XML selectivo con Transact-SQL**  
  Quitar un índice XML selectivo llamando a la instrucción DROP INDEX. Para obtener más información, vea [DROP INDEX &#40;índices XML selectivos&#41;](/sql/t-sql/statements/drop-index-selective-xml-indexes).  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones WMI | Microsoft Docs
+title: Editor del administrador de conexiones WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 33effc06f6ef63e4e6f8946fd7db0179e506e998
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054480"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439832"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor del administrador de conexiones WMI
   Use el cuadro de diálogo **Administrador de conexiones WMI** para especificar una conexión del Instrumental de administración de Microsoft Windows (WMI) a un servidor.  
@@ -27,7 +26,7 @@ ms.locfileid: "66054480"
  Para obtener más información acerca del administrador de conexiones WMI, vea [WMI Connection Manager](connection-manager/wmi-connection-manager.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para el administrador de conexiones.  
   
  **Descripción**  
@@ -39,10 +38,10 @@ ms.locfileid: "66054480"
  **Espacio de nombres**  
  Especifique el espacio de nombres WMI.  
   
- **Usar la autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Seleccione el uso de la autenticación de Windows. Si utiliza la autenticación de Windows, no será necesario que proporcione un nombre de usuario o una contraseña para la conexión.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si no utiliza la autenticación de Windows, deberá proporcionar un nombre de usuario para la conexión.  
   
  **Contraseña**  
@@ -51,9 +50,9 @@ ms.locfileid: "66054480"
  **Prueba**  
  Permite probar la configuración del administrador de conexiones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Conceptos del proveedor WMI de administración de configuración](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [Conceptos del proveedor WMI para la administración de configuración](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Conceptos del proveedor WMI para eventos de servidor](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

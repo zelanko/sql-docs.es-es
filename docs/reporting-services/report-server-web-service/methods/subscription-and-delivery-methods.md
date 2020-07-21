@@ -1,5 +1,6 @@
 ---
 title: Métodos de suscripción y entrega | Microsoft Docs
+description: En Reporting Services, puede usar estos métodos para crear y administrar las suscripciones y la entrega de elementos del catálogo.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 6f9c880453fbd90f02d95e287aa23294c68ec9aa
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284478"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509736"
 ---
 # <a name="subscription-and-delivery-methods"></a>Métodos de suscripción y entrega
   Puede utilizar estos métodos para crear y administrar las suscripciones y la entrega de elementos del catálogo.  

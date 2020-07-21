@@ -19,17 +19,17 @@ helpviewer_keywords:
 - time [SQL Server], ticks
 - number of microseconds per tick
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a797e6ccd507a1d7dda259bccb5adb5171ad4596
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: bdd3770bb282184193f8bb2cfb64e01f4abbcda5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098992"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858497"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número de microsegundos por tic-tac.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68098992"
 @@TIMETICKS  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **integer**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La cantidad de tiempo por tic depende de cada equipo. Cada tic del sistema operativo dura 31,25 milisegundos o un treintaidosavo de segundo.  
   
 ## <a name="examples"></a>Ejemplos  

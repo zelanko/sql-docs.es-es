@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0009ec924ebe935b60194f950da5d30593adfd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffb26c669a819c3599c36cea15d47724def5bd87
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232255"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381289"
 ---
-# <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica las propiedades de una columna calculada que se agrega a una tabla por medio de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68232255"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -50,12 +50,14 @@ column_name AS computed_column_expression
 ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *column_name*  
  Es el nombre de la columna que se va a modificar, agregar o quitar. *column_name* puede tener entre 1 y 128 caracteres. Si se trata de columnas nuevas, *column_name* se puede omitir para las columnas creadas con un tipo de datos **timestamp**. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.  
   
 *computed_column_expression*  
- Es una expresión que define el valor de una columna calculada. Una columna calculada es una columna virtual que no está almacenada físicamente en la tabla, sino que se calcula a partir de una expresión que utiliza otras columnas de la misma tabla. Por ejemplo, una columna calculada podría tener la definición: cost AS price * qty. La expresión puede ser un nombre de columna no calculada, una constante, una función, una variable o cualquier combinación de estos elementos conectados mediante uno o más operadores. La expresión no puede ser una subconsulta ni incluir un tipo de datos alias.  
+ Es una expresión que define el valor de una columna calculada. Una columna calculada es una columna virtual que no está almacenada físicamente en la tabla, sino que se calcula a partir de una expresión que utiliza otras columnas de la misma tabla. Una expresión debe proporcionar un valor. Por ejemplo, una columna calculada podría tener la definición: cost AS price * qty. Otro ejemplo con operadores bit a bit: is_finalised COMO is_checked | is_approved. La expresión puede ser un nombre de columna no calculada, una constante, una función, una variable o cualquier combinación de estos elementos conectados mediante uno o más operadores. La expresión no puede ser una condición de búsqueda, una subconsulta ni incluir un tipo de datos alias.  
   
  Las columnas calculadas se pueden utilizar en listas de selección, cláusulas WHERE, cláusulas ORDER BY o cualquier otra ubicación donde se puedan emplear expresiones regulares, pero con las siguientes excepciones:  
   
@@ -127,7 +129,7 @@ ON UPDATE { **NO ACTION** }
  Especifica la acción que se produce en las filas de la tabla creada, si esas filas tienen una relación referencial y la fila a la que se hace referencia se actualiza en la tabla principal. Cuando se especifica NO ACTION, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un error y revierte la acción de actualización de la fila Vendor si existe al menos una fila de la tabla ProductVendor que hace referencia a ella.  
   
 NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Se puede especificar para restricciones FOREIGN KEY y CHECK. Si se especifica esta cláusula para una restricción, la restricción no se aplica cuando los agentes de replicación realizan operaciones de inserción, actualización o eliminación.  
   
@@ -138,14 +140,14 @@ CHECK
  Es una expresión lógica que devuelve TRUE o FALSE. La expresión no puede ser una referencia ni incluir un tipo de datos alias.  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica la ubicación de almacenamiento del índice creado para la restricción. Si se especifica *partition_scheme_name*, el índice se divide en particiones y las particiones se asignan a los grupos de archivos que se han especificado con *partition_scheme_name*. Si se especifica *filegroup*, el índice se crea en el grupo de archivos indicado. Si se especifica el parámetro "default" o si no se especifica ON en ningún caso, el índice se crea en el mismo grupo de archivos que la tabla. Si se especifica ON al agregar un índice clúster para una restricción PRIMARY KEY o UNIQUE, la tabla completa se mueve al grupo de archivos especificado cuando se crea el índice clúster.  
   
 > [!NOTE]  
 >  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON"default" o en ON [default]. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cada restricción PRIMARY KEY y UNIQUE genera un índice. El número de restricciones UNIQUE y PRIMARY KEY no puede hacer que el número de índices de la tabla supere 999 índices no clúster y 1 índice clúster.  
   
 ## <a name="see-also"></a>Consulte también  

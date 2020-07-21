@@ -1,6 +1,7 @@
 ---
-title: Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria | Microsoft Docs
-ms.custom: ''
+title: 'Alta disponibilidad: bases de datos OLTP en memoria'
+description: Las bases de datos de SQL Server que contienen tablas optimizadas para memoria, con o sin procedimientos almacenados compilados nativos, son totalmente compatibles con la característica Grupos de disponibilidad Always On.
+ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 955cef8cf41afffeceb2a342cb4f11e7c2c69557
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723208"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Las bases de datos que contienen tablas optimizadas para memoria, con o sin procedimientos almacenados compilados nativos, son totalmente compatibles con grupos de disponibilidad AlwaysOn.  No hay ninguna diferencia en la configuración y la compatibilidad de las bases de datos que contienen objetos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] en comparación con las que no tienen.  
   
  Cuando se implementa una base de datos de OLTP en memoria en una configuración de Grupo de disponibilidad AlwaysOn, los cambios en las tablas optimizadas para memoria en la réplica principal se aplican en memoria a las tablas de las réplicas secundarias, cuando se aplica REDO. Esto significa que la conmutación por error a una réplica secundaria puede ser muy rápida, puesto que los datos ya están en memoria. Además, las tablas están disponibles para las consultas en las réplicas secundarias que se han configurado para el acceso de lectura.  

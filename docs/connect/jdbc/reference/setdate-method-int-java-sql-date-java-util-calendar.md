@@ -1,5 +1,5 @@
 ---
-title: Método setDate hasta Date y Calendar-int | Microsoft Docs
+title: 'Método setDate para fecha y calendario: int | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2c46f694-6dc4-429f-a037-a3bad369a7c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04cd1f41909cdd5088548eebdd15e2246ae64cd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f1f8fafa9498c6b0237a36ae1728b53212d9c693
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974480"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901311"
 ---
 # <a name="setdate-method-int-javasqldate-javautilcalendar"></a>Método setDate (int, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,16 +43,16 @@ public final void setDate(int n,
   
  *x*  
   
- Objeto Date.  
+ Un objeto Date.  
   
  *cal*  
   
- Un objeto de calendario.  
+ Un objeto Calendar.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setDate especifica este método setDate en la interfaz java.sql.PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  

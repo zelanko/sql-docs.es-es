@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e319f5f924fc82b3b7dfac31d5d64d8ea15ee3ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f0dcd2b67ef5dcfed234e7fe54ce5c3c5e368d2f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978391"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910831"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>Método getUpdateCount (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final int getUpdateCount()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getUpdateCount se especifica mediante el método getUpdateCount en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método getUpdateCount especifica este método getUpdateCount en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

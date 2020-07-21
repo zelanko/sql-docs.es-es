@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 161eae146ce0b6e80eee3e2a94b55350ee7415f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995218"
 ---
 # <a name="delete-operator"></a>Eliminar operador
   Utilice esta página para eliminar un operador.  
@@ -32,7 +31,7 @@ ms.locfileid: "62666606"
  **Propiedades**  
  Muestra las propiedades del operador al que se volverán a asignar las notificaciones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores](operators.md)  
   
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ef0b7952cd589592f6ad6798e4d6f7720b368619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70873884"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633425"
 ---
 # <a name="edge-constraints"></a>Restricciones perimetrales
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
 Las restricciones perimetrales se pueden usar para aplicar la integridad de datos y una semántica específica en las tablas perimetrales de una base de datos de grafos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Connection"></a> Restricciones perimetrales
+## <a name="edge-constraints"></a><a name="Connection"></a> Restricciones perimetrales
 
 En la primera versión de las características de los gráficos, las tablas perimetrales no aplicaban nada para los puntos de conexión del perímetro. Es decir, los perímetros de una base de datos de gráficos no podían conectar ningún nodo con ninguno otro, independientemente del tipo.
 

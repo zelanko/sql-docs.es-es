@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a76d1d1c3621700028107fab87e40929332b14ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934019"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos).
-  Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *quórum* . Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
+   Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *cuórum*. Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
   
  Si una instancia concreta de servidor se desconecta de una sesión de creación de reflejo, esa instancia pierde el quórum. Si no hay instancias de servidor conectadas, la sesión pierde el quórum y la base de datos no está disponible. Hay tres tipos de quórum posibles:  
   
@@ -101,10 +100,10 @@ ms.locfileid: "62754418"
   
  En el escenario 2, el testigo pierde el cuórum, mientras que los asociados, **Partner_A** y **Partner_B**, conservan el cuórum entre sí y la base de datos permanece en línea. A continuación, los asociados pierden también su quórum y la base de datos se queda sin conexión. Más adelante, el servidor principal, **Partner_A**, se vuelve a conectar al testigo y recupera el cuórum. El testigo confirma que **Partner_A** sigue siendo el propietario del rol principal y **Partner_A** vuelve a poner la base de datos en línea.  
   
-## <a name="see-also"></a>Vea también  
- [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modos de funcionamiento de la creación de reflejo de base de datos](database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](database-mirroring-witness.md)   
+ [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md)   
  [Estados de creación de reflejo &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

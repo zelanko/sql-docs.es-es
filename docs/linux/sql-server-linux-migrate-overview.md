@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.openlocfilehash: e7affa88f1856571d0b2142f7dcfdf762ed79197
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 185d62a67309f9e76e5f738494ee2137e2ef4a73
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68129352"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897763"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migración de bases de datos y datos estructurados a SQL Server en Linux 
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Puede migrar sus bases de datos y datos a una instancia de SQL Server que se ejecute en Linux. El método que use depende de los datos de origen y del escenario específico. En las secciones siguientes, encontrará procedimientos recomendados para distintos escenarios de migración.
 
@@ -32,7 +32,7 @@ Vea el tema siguiente para obtener instrucciones paso a paso de cómo migrar una
 
 - [Restaurar una base de datos SQL Server de Windows a Linux](sql-server-linux-migrate-restore-database.md).
 
-También puede exportar la base de datos a un archivo BACPAC (un archivo comprimido que contiene el esquema de la base de datos y los datos). Si tiene un archivo BACPAC, puede transferir el archivo al equipo con Linux y, después, importarlo en SQL Server. Para obtener más información, consulte los temas siguientes:
+También puede exportar la base de datos a un archivo BACPAC (un archivo comprimido que contiene el esquema de la base de datos y los datos). Si tiene un archivo BACPAC, puede transferir el archivo al equipo con Linux y, después, importarlo en SQL Server. Para obtener más información, vea los temas siguientes:
 
 - [Exportar e importar una base de datos con SSMS o SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 

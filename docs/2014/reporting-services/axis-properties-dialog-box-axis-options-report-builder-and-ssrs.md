@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades del eje, opciones del eje (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Propiedades del eje, opciones del eje (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109960"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del eje, Opciones del eje (Generador de informes y SSRS)
-  Seleccione **opciones del eje** en el **Horizontal** o **propiedades del eje vertical** cuadro de diálogo para definir la apariencia del eje del gráfico especificado. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el gráfico mostraba todas las etiquetas en el eje X de forma predeterminada. Sin embargo, en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, el gráfico omite las etiquetas para generar una imagen más limpia en el gráfico y evitar las colisiones entre etiquetas. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Seleccione **Opciones del eje** en el cuadro de diálogo Propiedades de **horizontal** o **del eje vertical** para definir la apariencia del eje especificado del gráfico. En versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el gráfico mostraba todas las etiquetas en el eje X de forma predeterminada. Sin embargo, en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, el gráfico omite las etiquetas para generar una imagen más limpia en el gráfico y evitar las colisiones entre etiquetas. Para más información, vea [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
  **Habilitar quiebres de escala**  
@@ -33,7 +33,7 @@ ms.locfileid: "66109960"
  **Usar color de entrelazado**  
  Seleccione esta opción para agregar franjas al gráfico y, a continuación, seleccione un color o escriba una expresión. Las franjas son bandas sombreadas situadas en el área de gráfico que proporcionan un efecto de áreas claras que se alternan con áreas oscuras entre las líneas de cuadrícula. Estas franjas son útiles para resaltar patrones que se repiten en un eje.  
   
- **Incluir siempre el cero**  
+ **Siempre incluir el cero**  
  Seleccione esta opción para incluir siempre el cero en la escala del eje. Si esta opción no está habilitada, el gráfico no pondrá una etiqueta al valor cero en el eje. Los valores cero resultan útiles cuando el conjunto de datos incluye valores negativos o valores cero.  
   
  **Eje escalar**  
@@ -44,13 +44,13 @@ ms.locfileid: "66109960"
   
  En el cuadro, escriba la base logarítmica que se usará cuando el eje se haya establecido para usar una escala logarítmica. De forma predeterminada, el gráfico usa una base de 10 para la escala logarítmica de un eje. Esta opción solo está disponible en el eje Y si el eje es numérico.  
   
- **Mínima**  
+ **Cantidad**  
  Escriba una expresión o un valor para el valor mínimo del eje X. Si se omite, el valor mínimo se determina mediante los datos devueltos por el conjunto de datos.  
   
- **Máximo**  
+ **Máxima**  
  Escriba una expresión o un valor para el valor máximo del eje X. Si se omite, el valor máximo se determina mediante los datos devueltos por el conjunto de datos.  
   
- **Interval**  
+ **Intervalo**  
  Escriba una expresión o un valor para el intervalo entre las etiquetas del eje. Por ejemplo, escriba 1 para mostrar cada etiqueta de categoría en el eje. Escriba 2 para mostrar una de cada dos etiquetas de categoría. Si se omite, las etiquetas se calculan automáticamente basándose en los valores del conjunto de datos.  
   
  **Tipo de intervalo**  
@@ -59,14 +59,14 @@ ms.locfileid: "66109960"
  **Márgenes laterales**  
  Escriba una expresión o seleccione un valor para agregar o quitar un margen entre los elementos del gráfico y los lados del gráfico. Si esta opción se establece en **Automático**, se agregan márgenes laterales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Especifique un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Trazar datos en un eje secundario &#40;generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Trazar datos en un eje secundario &#40;Generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Los minigráficos y las barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Agregar o quitar márgenes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
   

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098524"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definición de datos de MDX: ALTER CUBE
 
 
-  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte este blog: [Compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Tenga en cuenta que las reescrituras en dimensiones simultáneas pueden producir un interbloqueo, donde la primera reescritura no se puede confirmar debido al bloqueo compartido que mantiene la segunda reescritura. En esta situación no se genera ningún error, pero ninguna de las operaciones puede progresar. Al final, ambas operaciones agotan el tiempo de espera y se revierten los cambios.  
   
@@ -97,7 +97,7 @@ CELL CALCULATION Calculation_Name
  *Key_Value*  
  Expresión escalar válida que define el valor de clave del nuevo miembro de dimensión.  
   
- *Property_name*  
+ *Property_Name*  
  Identificador de expresión MDX válido que representa una propiedad de miembro.  
   
  *Property_Value*  
@@ -113,11 +113,11 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Expresión de cadena válida que proporciona un nombre de miembro o una clave de miembro.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Observaciones  
  Si no se utiliza la cláusula WITH DESCENDANTS, los elementos secundarios de un miembro quitado se convierten en elementos secundarios del elemento primario del miembro quitado. Si se utiliza la cláusula WITH DESCENDANTS, también se quitan todos los descendientes y sus filas de la tabla de dimensiones.  
   
 > [!NOTE]  
->  Para obtener información acerca de cómo quitar miembros calculados, conjuntos con nombre, acciones y los cálculos de celda, vea [DROP MEMBER, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [establecer la instrucción DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), y [DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Para obtener información acerca de cómo quitar miembros calculados, conjuntos con nombre, acciones y cálculos de celdas, vea [instrucción DROP MEMBER &#40;mdx&#41;](../mdx/mdx-data-definition-drop-member.md), [instrucción DROP SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [instrucción DROP Action &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)y [drop Cell Calculation Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Actualizar el miembro de dimensión predeterminado  
  Esta cláusula actualiza el miembro predeterminado de un cubo y se utiliza en el script de cálculo MDX para definir un miembro predeterminado. El miembro predeterminado puede especificarse para la dimensión de base de datos, una dimensión de cubo o para un inicio de sesión de usuario. Además, se puede cambiar el miembro predeterminado durante una sesión.  
@@ -129,7 +129,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expresión MDX válida que devuelve un miembro único.  
   
-### <a name="remarks"></a>Comentarios  
+### <a name="remarks"></a>Observaciones  
  La expresión MDX especificada puede ser estática o dinámica.  
   
 ## <a name="moving-a-dimension-member"></a>Mover un miembro de dimensión  
@@ -161,9 +161,9 @@ CELL CALCULATION Calculation_Name
  Expresión escalar MDX válida que define el valor de la propiedad de miembro calculado.  
   
 ## <a name="creating-a-cell-calculation"></a>Crear un cálculo de celda  
- Para obtener más información acerca de cómo crear un cálculo de celda mediante la instrucción ALTER CUBE, vea [DROP CELL CALCULATION instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Para obtener más información sobre cómo crear un cálculo de celda mediante la instrucción ALTER CUBE, vea [instrucción DROP Cell calculation &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

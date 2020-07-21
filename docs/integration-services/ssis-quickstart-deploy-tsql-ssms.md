@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 20285fed8ca477eb95d04ee60b6a3283d2028b97
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b854e6c7db8bb042ced1c883e17fb4ac6d484fe7
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281501"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "74947097"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Implementar un proyecto de SSIS desde SSMS con Transact-SQL
 
@@ -39,25 +39,30 @@ No puede usar la información que aparece en este inicio rápido para implementa
 
 No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
+## <a name="supported-authentication-method"></a>Método de autenticación compatible
+
+Consulte [Métodos de autenticación para la implementación](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar con la base de datos del catálogo de SSIS
 
 Use SQL Server Management Studio para establecer una conexión con el catálogo de SSIS. 
 
 1. Abra SQL Server Management Studio.
 
-2. En el cuadro de diálogo **Conectar con el servidor**, escriba la información siguiente:
+2. En el cuadro de diálogo **Conectar con el servidor**, especifique la siguiente información:
 
    | Configuración       | Valor sugerido | Más información | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo de servidor** | Motor de base de datos | Este valor es necesario. |
    | **Nombre del servidor** | Nombre completo del servidor |  |
    | **Autenticación** | Autenticación de SQL Server | |
-   | **Inicio de sesión** | Cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña** | Contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
+   | **Inicio de sesión** | La cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña** | La contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
 
 3. Haga clic en **Conectar**. La ventana Explorador de objetos se abre en SSMS. 
 
 4. En el Explorador de objetos, expanda la opción **Catálogos de Integration Services** y, a continuación, expanda **SSISDB** para ver los objetos de la base de datos del catálogo de SSIS.
+
 
 ## <a name="run-the-t-sql-code"></a>Ejecutar el código T-SQL
 Ejecute el siguiente código Transact-SQL para implementar un proyecto de SSIS.
@@ -86,12 +91,12 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de implementar un paquete.
-    - [Deploy an SSIS package with SSMS](./ssis-quickstart-deploy-ssms.md) (Implementar un paquete SSIS con SSMS)
+    - [Implementar un paquete SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
     - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md) [Implementar un paquete SSIS con Transact-SQL (VSCode)]
     - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md) (Implementar un paquete SSIS desde el símbolo del sistema)
     - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md) (Implementar un paquete SSIS con PowerShell)
     - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) (Implementar un paquete SSIS con C#) 
-- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para obtener más información, vea los artículos siguientes:
+- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para más información, consulte los siguientes artículos:
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

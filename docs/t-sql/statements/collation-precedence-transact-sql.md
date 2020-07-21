@@ -26,15 +26,15 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cfd6c1c64c4e5d99ebddc8d610d7c6d56015b6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51c3975cb0db2b93ebcaefcc6d2c423da62ba0e0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141150"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011335"
 ---
 # <a name="collation-precedence"></a>Prioridad de intercalación
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La prioridad de intercalación, o reglas de coerción de intercalación, determina lo siguiente:  
   
@@ -145,7 +145,7 @@ Msg 448, Level 16, State 9, Line 2
 Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_AS' in equal to operation.  
 ```  
   
-#### <a name="explicit-label-vs-implicit-label"></a>Diferencias entre las etiquetas Explicit e Implicit  
+#### <a name="explicit-label-vs-implicit-label"></a>Etiqueta Explicit y etiqueta Implicit  
  El predicado de la siguiente consulta se evalúa en la intercalación `greek_ci_as` porque la expresión de la derecha tiene la etiqueta Explicit. Ésta tiene prioridad sobre la etiqueta Implicit de la expresión de la izquierda.  
   
 ```sql  

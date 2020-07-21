@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 33113482d021b1f0aa105ccb039f8076cf6a6549
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81dc37daded9c368cf0d9cadb6b42b13731155c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062735"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Propiedad ProtocolDisplayName (clase ClientNetLibInfo)
   Obtiene o establece el nombre utilizado para mostrar el protocolo.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

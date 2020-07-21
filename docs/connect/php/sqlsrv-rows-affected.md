@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93c7ec396d3388a2de6c0d6518fc516de7156f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06c661c0ab5075082df0c1753f7fcc17942e9ffa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014955"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928549"
 ---
-# <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
+# <a name="sqlsrv_rows_affected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Devuelve el número de filas modificadas mediante la última instrucción ejecutada. Esta función no devuelve el número de filas que devuelve una instrucción SELECT.  

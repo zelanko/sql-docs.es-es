@@ -1,5 +1,6 @@
 ---
 title: Descripción de errores del motor de base de datos | Microsoft Docs
+description: Obtenga información sobre los atributos de los errores que genera el Motor de base de datos de SQL Server y cómo acceder a todos los mensajes de error del sistema y definidos por el usuario desde sys.messages.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,29 +17,29 @@ ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49e62b7fc66a462701ea65a537edee84c9735b86
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903751"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009211"
 ---
 # <a name="understanding-database-engine-errors"></a>Descripción de errores del motor de base de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  En la tabla siguiente se describen los atributos de los errores mostrados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  Los errores producidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] tienen los atributos descritos en la tabla siguiente.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |Número de error|Cada mensaje de error tiene un número de error único.|  
 |Cadena de mensaje de error|El mensaje de error contiene información de diagnóstico acerca de la causa del error. Muchos mensajes de error tienen variables de sustitución en las que se inserta información como, por ejemplo, el nombre del objeto que genera el error.|  
-|Severity|La gravedad indica la importancia del error. Los errores que tienen una gravedad baja, como 1 o 2, son mensajes informativos o advertencias de bajo nivel. Los errores que tienen una gravedad alta indican problemas que deben ser atendidos tan pronto como sea posible. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).|  
+|severity|La gravedad indica la importancia del error. Los errores que tienen una gravedad baja, como 1 o 2, son mensajes informativos o advertencias de bajo nivel. Los errores que tienen una gravedad alta indican problemas que deben ser atendidos tan pronto como sea posible. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).|  
 |State|Algunos mensajes de error se pueden generar en varios puntos del código de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, el error 1105 se puede generar bajo diferentes condiciones. Cada condición específica bajo la que se genera un error asigna un código de estado único.<br /><br /> Cuando vea bases de datos que contengan información sobre problemas conocidos como, por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, puede utilizar el número de estado para determinar si el problema registrado es el mismo que el error con el que se ha encontrado. Por ejemplo, si un artículo de Knowledge Base describe un error 1105 que tiene un estado 2 y el mensaje de error 1105 que ha recibido tenía un estado 3, el error tendrá probablemente una causa diferente a la explicada en el artículo.<br /><br /> Un ingeniero de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también puede utilizar el código de estado de un error para localizar la ubicación del código fuente donde se ha generado el código de error. Esta información puede proporcionar ideas adicionales sobre cómo diagnosticar el problema.|  
 |Nombre del procedimiento|Nombre del procedimiento almacenado o desencadenador en que se ha producido el error.|  
 |Número de línea|Indica qué instrucción de un lote, procedimiento almacenado, desencadenador o función ha generado el error.|  
   
  Todos los mensajes de error (del sistema o definidos por el usuario) de una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se encuentran en la vista de catálogo **sys.messages** . Puede utilizar la instrucción RAISERROR para devolver a una aplicación errores definidos por el usuario.  
   
- Todas las API de base de datos, como el espacio de nombres [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** , Objetos de datos ActiveX (ADO), OLE DB y Conectividad abierta de bases de datos (ODBC), notifican los atributos de error básicos. Esta información incluye el número de error y la cadena del mensaje. No obstante, no todas las API informan de los demás atributos de error.  
+ Todas las API de base de datos, como el espacio de nombres **SQLClient** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], Objetos de datos ActiveX (ADO), OLE DB y conectividad abierta de bases de datos (ODBC), notifican los atributos de error básicos. Esta información incluye el número de error y la cadena del mensaje. No obstante, no todas las API informan de los demás atributos de error.  
   
  La información sobre un error que se produce en el ámbito del bloque TRY de una construcción TRY...CATCH se puede obtener en código [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante funciones como ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY y ERROR_STATE en el ámbito del bloque CATCH asociado. Para obtener más información, vea [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md).  
   

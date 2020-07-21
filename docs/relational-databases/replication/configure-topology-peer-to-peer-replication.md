@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e06e271f8f75fea1cf98c9d8f9697cbfe49c412e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773987"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice la página **Configurar topología** para realizar las tareas de configuración comunes, como agregar nuevos nodos, eliminando nodos y agregar las nuevas conexiones entre los nodos existentes. El nodo que seleccionó en la página **Publicación** de este asistente se muestra en la superficie de diseño. Para especificar las opciones de configuración, haga clic con el botón secundario en un nodo, una conexión o la superficie de diseño.  
   
 > [!NOTE]  
@@ -33,8 +33,8 @@ ms.locfileid: "67903119"
 |-----------------------|-----------------|  
 |Superficie de diseño|Muestra otros elementos de interfaz. Para agregar elementos, haga clic con el botón secundario en la superficie de diseño.|  
 |![El primer nodo de una topología](../../relational-databases/replication/media/p2pwizard-firstnode.gif "El primer nodo de una topología")|El nodo original en la topología. Los nodos nuevos se inicializan utilizando una copia de la base de datos de publicación del nodo original.|  
-|![Un nodo para el que tenemos información completa](../../relational-databases/replication/media/p2pwizard-complete.gif "Un nodo para el que tenemos información completa")|Un nodo que está ejecutando una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, para el que la replicación tiene información completa. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo.|  
-|![Un nodo para el que tenemos información incompleta](../../relational-databases/replication/media/p2pwizard-incomplete.gif "Un nodo para el que tenemos información incompleta")|Un nodo para el que la replicación tiene información incompleta. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo.<br /><br /> La replicación tiene información incompleta debido a una de las razones siguientes:<br /><br /> -El nodo está ejecutando una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], que no almacena todos los metadatos requeridos por el asistente.<br /><br /> -El nodo está ejecutando una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero la replicación no puede recuperar información de la suscripción del nodo. Para solucionar esta situación:<br /><br /> Asegúrese de que la base de datos en el nodo está en línea y que puede conectar con ella utilizando las mismas credenciales que los Agentes de distribución que se conectan al nodo.<br /><br /> Asegúrese de que se estén ejecutando el Agente del registro del LOG y los Agentes de distribución que se conectan al nodo.<br /><br /> Asegúrese de que el tiempo de espera de actualización esté establecido en un valor suficientemente alto para recopilar toda la información de la topología. Para establecer el tiempo de espera, haga clic con el botón secundario en la superficie de diseño y haga clic en **Establecer tiempo de espera de la actualización**.|  
+|![Un nodo sobre el que se dispone de información completa](../../relational-databases/replication/media/p2pwizard-complete.gif "Un nodo sobre el que se dispone de información completa")|Un nodo que está ejecutando una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o una versión posterior, para el que la replicación tiene información completa. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo.|  
+|![Un nodo sobre el que se dispone de información incompleta](../../relational-databases/replication/media/p2pwizard-incomplete.gif "Un nodo sobre el que se dispone de información incompleta")|Un nodo para el que la replicación tiene información incompleta. Para especificar las opciones de configuración, haga clic con el botón secundario en el nodo.<br /><br /> La replicación tiene información incompleta debido a una de las razones siguientes:<br /><br /> -El nodo está ejecutando una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], que no almacena todos los metadatos requeridos por el asistente.<br /><br /> -El nodo está ejecutando una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero la replicación no puede recuperar información de la suscripción del nodo. Para solucionar esta situación:<br /><br /> Asegúrese de que la base de datos en el nodo está en línea y que puede conectar con ella utilizando las mismas credenciales que los Agentes de distribución que se conectan al nodo.<br /><br /> Asegúrese de que se estén ejecutando el Agente del registro del LOG y los Agentes de distribución que se conectan al nodo.<br /><br /> Asegúrese de que el tiempo de espera de actualización esté establecido en un valor suficientemente alto para recopilar toda la información de la topología. Para establecer el tiempo de espera, haga clic con el botón secundario en la superficie de diseño y haga clic en **Establecer tiempo de espera de la actualización**.|  
 |Línea gris con flechas|La conexión entre dos nodos. Para agregar una conexión, haga clic con el botón secundario en uno de los nodos que desea conectar. Para quitar una conexión, haga clic con el botón secundario en la conexión.<br /><br /> Si la línea tiene una flecha única, la replicación tiene información incompleta para uno de los nodos.|  
   
 ### <a name="options-for-the-design-surface"></a>Opciones para la superficie de diseño  
@@ -63,7 +63,7 @@ ms.locfileid: "67903119"
   
 ### <a name="options-for-each-node"></a>Opciones para cada nodo  
  **Agregar una nueva conexión del mismo nivel**  
- Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el nodo A y el nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
+ Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el Nodo A y el Nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
   
  **Eliminar nodo del mismo nivel**  
  Quita un nodo de la topología. Por ejemplo, si quita el Nodo C, se quita la publicación en ese nodo. También se quitan las suscripciones entre el Nodo A y el Nodo C, y el Nodo B y el Nodo C. No se elimina la base de datos del Nodo C y no se deshabilitan la publicación y la distribución.  

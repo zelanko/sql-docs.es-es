@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1df24fe2-0873-4cd1-9151-2306d08418bc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e57f77430152ec5c549436d0deade821a48e93db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059797"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>Propiedad IpAddressName (clase ServerNetworkProtocolIPAddress)
   Obtiene el nombre de la dirección IP.  
@@ -38,12 +37,12 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) objeto que representa una dirección IP para el protocolo de red en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ A [clase ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) que representa una dirección IP del protocolo de red en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre de la dirección IP.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

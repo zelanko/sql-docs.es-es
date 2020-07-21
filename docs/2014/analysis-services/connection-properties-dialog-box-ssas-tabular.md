@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades de conexión (SSAS - Tabular) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de conexión (SSAS-tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6e68e92658bcc32530d787630998c52e1295596
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086992"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526831"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Propiedades de conexión (cuadro de diálogo) (SSAS: tabular)
   Utilice esta página para ver o modificar en SQL Server Management Studio las propiedades de conexión de un origen de datos que usa una base de datos modelo tabular.  
@@ -28,8 +27,8 @@ ms.locfileid: "66086992"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|Especifica el nombre del origen de datos.|  
-|**ID**|Muestra el identificador del objeto de origen de datos.|  
+|**Nombre**|Especifica el nombre del origen de datos.|  
+|**Id**|Muestra el identificador del objeto de origen de datos.|  
 |**Descripción**|Muestra la descripción del objeto de origen de datos.|  
 |**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la base de datos.|  

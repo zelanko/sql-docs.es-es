@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c578b2ebb686c28fc34b2f99e5215bdd54154aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061725"
 ---
 # <a name="activity-monitor"></a>Monitor de actividad
   El Monitor de actividad muestra información acerca de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el modo en que estos afectan a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Ventajas del Monitor de actividad  
- Monitor de actividad es una ventana de documento con pestañas que tiene los siguientes paneles pueden expandibles y contraer: **Información general**, **Tareas de usuario activas**, **Esperas de recursos**, **E/S de archivos de datos** y **Consultas costosas recientes**. Cuando un panel está expandido, el Monitor de actividad consulta la instancia en busca de información. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad de la instancia.  
+ El monitor de actividad es una ventana de documento con pestañas que tiene los siguientes paneles que se pueden expandir y contraer: **información general**, **tareas de usuario activas**, **esperas de recursos**, **e/s de archivos de datos**y **consultas costosas recientes**. Cuando un panel está expandido, el Monitor de actividad consulta la instancia en busca de información. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad de la instancia.  
   
- Para las columnas que se incluyen en el **tareas de usuario activas**, **esperas de recursos**, **E/S de archivos de datos**, y **consultas costosas recientes** paneles, puede personalizar la presentación de las maneras siguientes:  
+ En el caso de las columnas incluidas en los paneles **tareas de usuario activas**, **esperas de recursos**, **e/s de archivos de datos**y **consultas costosas recientes** , puede personalizar la presentación de las siguientes maneras:  
   
 1.  Para reorganizar el orden de las columnas, haga clic en el encabezado de una columna y arrástrelo hasta otra ubicación de la cinta de opciones del encabezado.  
   

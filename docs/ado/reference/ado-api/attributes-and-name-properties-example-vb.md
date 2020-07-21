@@ -1,5 +1,5 @@
 ---
-title: Atributos y ejemplo de las propiedades nombre (VB) | Microsoft Docs
+title: Ejemplo de propiedades de atributos y nombres (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920587"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762933"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Ejemplo de propiedades de nombre (VB) y atributos
-Este ejemplo muestra el valor de la [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [campo](../../../ado/reference/ado-api/field-object.md), y [propiedad](../../../ado/reference/ado-api/property-object-ado.md) objetos. Usa el [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad para mostrar el nombre de cada **campo** y **propiedad** objeto.  
+En este ejemplo se muestra el valor de la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) para los objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md)y [Property](../../../ado/reference/ado-api/property-object-ado.md) . Usa la propiedad [nombre](../../../ado/reference/ado-api/name-property-ado.md) para mostrar el nombre de cada **campo** y objeto de **propiedad** .  
   
 ```  
 ' BeginAttributesVB  
@@ -126,9 +126,9 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Propiedad Name (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
+ [Name (propiedad, ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
  [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643860"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Informa sobre imprecisiones de recuento de filas y páginas de las vistas de catálogo y las corrige. Estas imprecisiones pueden causar la devolución de informes incorrectos sobre uso de espacio por parte del procedimiento almacenado del sistema sp_spaceused.
   
@@ -49,7 +49,7 @@ Informa sobre imprecisiones de recuento de filas y páginas de las vistas de cat
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   
@@ -67,7 +67,7 @@ Es el nombre o el identificador de la tabla o la vista indizada sobre cuyas esta
 *index_id* | *index_name*  
 Es el identificador o el nombre del índice que se va a utilizar. Si no se especifica, la instrucción procesa todos los índices de la tabla o la vista especificada.  
   
-por  
+WITH  
 Permite la especificación de opciones.  
   
 NO_INFOMSGS  
@@ -76,12 +76,12 @@ Suprime todos los mensajes de información.
 COUNT_ROWS  
 Especifica que la columna row count se actualiza con el recuento actual del número de filas de la tabla o la vista.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si una tabla o un índice tienen particiones, DBCC UPDATEUSAGE corrige los recuentos de las filas, las páginas utilizadas, las páginas reservadas, las páginas hoja y las páginas de datos. Si no hay imprecisiones en las tablas del sistema, DBCC UPDATEUSAGE no devuelve datos. Si se encuentran y se corrigen imprecisiones y no se utiliza WITH NO_INFOMSGS, DBCC UPDATEUSAGE devuelve las filas y las columnas que se están actualizando en las tablas del sistema.
   
 DBCC CHECKDB se ha mejorado para detectar si los recuentos de páginas o filas devuelven valores negativos. En caso de que se detecte un recuento negativo, la salida de DBCC CHECKDB contiene una advertencia y una recomendación para que se ejecute DBCC UPDATEUSAGE con el fin de solucionar el problema.
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 Se recomienda lo siguiente:
 -   No ejecute DBCC UPDATEUSAGE de forma rutinaria. Dado que DBCC UPDATEUSAGE puede tardar algún tiempo en ejecutarse con tablas o bases de datos grandes, no se debería utilizar a menos que sospeche que sp_spaceused está devolviendo valores incorrectos.
 -   Considere ejecutar DBCC UPDATEUSAGE habitualmente, por ejemplo cada semana, solo si la base de datos sufre con frecuencia modificaciones del Lenguaje de definición de datos (DDL), por ejemplo, con las instrucciones CREATE, ALTER o DROP.  

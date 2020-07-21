@@ -1,23 +1,26 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Controlador ODBC de Microsoft para SQL Server
+description: Microsoft ODBC Driver for SQL Server proporciona conectividad a SQL Server y Azure SQL Database a través de API de ODBC estándar.
 ms.custom: ''
-ms.date: 02/05/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702688"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886343"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Controlador ODBC de Microsoft para SQL Server
+
+[!INCLUDE[ODBC_Current_Version](../../includes/odbc-latest-release.md)]
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
@@ -33,7 +36,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 
 ## <a name="download"></a>Descargar
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar un controlador ODBC](download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar un controlador ODBC](download-odbc-driver-for-sql-server.md)
 
 ## <a name="documentation"></a>Documentación
 
@@ -50,7 +53,8 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 
 ### <a name="linux-and-macos"></a>Linux y macOS
 
-- [Instalación del controlador](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Instalación del controlador en Linux](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Instalación del controlador en macOS](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [Conexión a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Conexión con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Conexión con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
@@ -72,8 +76,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 - [Notas de la versión de ODBC para SQL Server en Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [Requisitos del sistema, instalación y archivos del controlador](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## <a name="community"></a>Comunidad
 
-
-## <a name="community"></a>Comunidad  
-- [Blog del equipo de Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [Blog de controladores de SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [Foro para el acceso a los datos de SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

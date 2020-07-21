@@ -1,6 +1,6 @@
 ---
 title: 'Anclado de elementos de informe paginados en paneles de Power BI: Reporting Services | Microsoft Docs'
-ms.date: 12/05/2018
+ms.date: 01/14/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892001"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75952479"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anclado de elementos de informe paginados de Reporting Services a paneles de Power BI
 
@@ -28,7 +28,7 @@ ms.locfileid: "68892001"
 
 Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] local a un panel del servicio [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], como un nuevo icono.   Para anclarlos, el administrador tendrá que integrar primero el servidor de informes con Azure Active Directory y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
-##  <a name="bkmk_requirements_to_pin"></a> Requisitos para el anclado  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> Requisitos para el anclado  
   
 -   El servidor de informes está configurado para su integración con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] . Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md). Si no se ha configurado el servidor de informes, no verá el botón **Anclar al panel de Power BI** en la barra de herramientas del visor de informes.  
   
@@ -40,11 +40,11 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
   
 -   Tendrá que configurar los informes para las credenciales almacenadas si quiere que el elemento anclado se actualice.  Cuando se ancla un elemento, se crea automáticamente una suscripción de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para administrar la actualización de datos del elemento en el panel.  Si en el informe no se usan credenciales almacenadas, cuando se ejecute la suscripción, verá un mensaje de error similar a este en la página **Mis suscripciones**.  
   
-    "PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: (Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error:) La acción actual no se puede completar. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario".
+    "Error de entrega de Power BI: panel: objeto visual, IT Spend Analysis Sample: Chart2, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario".
  
     Para más información sobre cómo almacenar credenciales, vea la sección "Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)" de [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
-##  <a name="bkmk_supported_items"></a> Elementos que puede anclar  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> Elementos que puede anclar  
  Los siguientes elementos de informe se pueden anclar en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .  No se pueden anclar elementos que estén anidados dentro de una región de datos. Por ejemplo, no se puede anclar un elemento que esté anidado dentro de una tabla o lista de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 -   Gráficos  
@@ -54,7 +54,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
 -   Los artículos deben estar en el cuerpo del informe.  No se pueden anclar elementos que se encuentren en el encabezado o en el pie de página.  
 -   Puede anclar elementos individuales que estén dentro de un rectángulo de nivel superior, pero no puede anclarlos todos como un único grupo.  
   
-##  <a name="bkmk_to_pin"></a> Para anclar un elemento de informe  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> Para anclar un elemento de informe  
   
 1. Compruebe que haya iniciado sesión en [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. En el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el elemento de menú **Mi configuración** e inicie sesión. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](my-settings-for-power-bi-integration-web-portal.md).
 
@@ -78,7 +78,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
   
 6. Haga clic en **Cerrar** para devolver el informe a la vista normal.  
   
-##  <a name="bkmk_in_the_dashboard"></a> En el panel
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> En el panel
 
 Después de anclar el elemento de informe en el panel, el icono parece igual que cualquier otro del panel y no existe ninguna indicación visual de que provenga de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. En la siguiente lista se resume cómo se rellenan las propiedades del icono a partir de elemento de informe.  
   
@@ -94,40 +94,42 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
--   **No[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] hay ningún botón en la barra de herramientas del Visor de informes:** este mensaje indica que el servidor de informes no se ha integrado con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **No hay botón de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] en la barra de herramientas del Visor de informes:**  Este mensaje indica que el servidor de informes no se ha integrado con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
-- **No se puede anclar:** al intentar anclar un elemento, se muestra el siguiente mensaje de error (vea la sección [Elementos que puede anclar](#bkmk_supported_items)).  
+- **No se puede anclar**: cuando trata de anclar un elemento, verá el mensaje de error siguiente: Vea la sección [Elementos que se pueden anclar](#bkmk_supported_items).  
   
-      Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
+    "No se puede anclar: no hay ningún elemento de informe en esta página que pueda anclar a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]".  
   
 -   **En los elementos anclados se muestran datos obsoletos** en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] y ya se han actualizado durante un período de tiempo.  El token de las credenciales de usuario ha expirado y tendrá que volver a iniciar sesión.  El registro de las credenciales de usuario en Azure y [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] es válido durante 90 días. En el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración**. Para más información, vea [La configuración de la integración de Power BI &#40;portal web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
 -   **Los elementos anclados muestran datos obsoletos** en un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] y no se han actualizado ni siquiera una vez.  El problema es que el informe no está configurado para utilizar credenciales almacenadas. Un informe debe usar credenciales almacenadas, porque la acción de anclar un elemento de informe crea una suscripción de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para administrar la programación de actualización de los iconos. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] requieren credenciales almacenadas. Si revisa la página **Mis suscripciones**, verá un mensaje de error similar a este:  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
+    "Error de entrega de Power BI: panel: elementos SSRS, objeto visual: Image3, error: No se puede completar la acción actual. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario no estén almacenadas en la base de datos del servidor de informes, o bien que el origen de datos del usuario esté configurado para no requerir credenciales pero no se haya configurado la cuenta de ejecución desatendida. (rsInvalidDataSourceCredentialSetting)"
   
--   **Credenciales de Power BI expiradas:**  está tratando de anclar un elemento y se le muestra el siguiente mensaje de error. En el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración** y, en la página que se muestre, haga clic en **Iniciar sesión**. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
+-   **Credenciales de Power BI expiradas:**  está tratando de anclar un elemento y se le muestra el mensaje de error siguiente. En el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], haga clic en **Mi configuración** y, en la página que se muestre, haga clic en **Iniciar sesión**. Para más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](my-settings-for-power-bi-integration-web-portal.md).  
   
-        Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
+    "No se puede anclar: error de servidor inesperado: Faltan las credenciales de Power BI, no son válidas o expiraron".  
   
--   **No se puede anclar**: si intenta anclar elementos a un panel que se encuentra en estado de solo lectura, verá un mensaje de error similar a este:  
+-   **No se puede anclar**: si intenta anclar un elemento a un panel que se encuentra en estado de solo lectura, verá un mensaje de error similar a este:  
   
-        Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
-  
-##  <a name="bkmk_subscription_management"></a> Administración de suscripciones  
+    "Error de servidor: No se encuentra el elemento "Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0". (rsItemNotFound)"  
+
+-   **Los iconos de las aplicaciones Power BI muestran datos obsoletos:** Si ancla un elemento de informe de Reporting Services a un panel y, a continuación, distribuye ese panel en una aplicación, el elemento de informe anclado de ese panel no se actualizará. 
+
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> Administración de suscripciones  
  Además de los problemas relacionados con las suscripciones descritos en la sección de solución de problemas, la información siguiente ayuda a mantener las suscripciones relacionadas con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].
   
--   **Se ha cambiado el nombre de un elemento:** si se cambia el nombre de un elemento de informe anclado o lo elimina, el icono de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] no se volverá a actualizar y verá un mensaje de error similar al siguiente.  Si cambia el nombre del elemento al que tenía originalmente, la suscripción comenzará a funcionar de nuevo y el icono se actualizará de acuerdo con la programación establecida para tal fin.  
+-   **Se ha cambiado el nombre de un elemento:** si se cambia el nombre de un elemento de informe anclado o se elimina, el icono de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] no se volverá a actualizar y verá un mensaje de error similar al siguiente.  Si cambia el nombre del elemento al que tenía originalmente, la suscripción comenzará a funcionar de nuevo y el icono se actualizará de acuerdo con la programación establecida para tal fin.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
+    "Error de entrega de Power BI: panel: elementos SSRS, objeto visual: Image1, error: Error: No se encuentra el elemento de informe "image1".  
   
-     También puede editar las propiedades de suscripción y cambiar el **nombre visual del informe** al nombre del elemento de informe pertinente. ![cambiar el objeto visual que se usa para la actualización de power bi](../reporting-services/media/ssrs-powerbi-subscription-visual.png "cambiar el objeto visual que se usa para la actualización de power bi")  
+    También puede editar las propiedades de suscripción y cambiar el **nombre visual del informe** al nombre del elemento de informe pertinente. ![Cambio del objeto visual usado para la actualización de Power BI](../reporting-services/media/ssrs-powerbi-subscription-visual.png "Cambio del objeto visual usado para la actualización de Power BI")  
   
--   **Eliminación de un icono**. Si elimina un icono en [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], la suscripción asociada no se elimina en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , y en la página **Mis suscripciones**, verá un error similar al siguiente. Puede eliminar la suscripción.  
+-   **Eliminación de un icono**. Si elimina un icono en [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)], la suscripción asociada no se elimina en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], y en la página **Mis suscripciones**, verá un error similar al siguiente. Puede eliminar la suscripción.  
   
-        PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
+    "Error de entrega de Power BI: panel: elementos SSRS, objeto visual: Image3, error: No se encuentra el elemento "Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f".  
 
 ## <a name="video"></a>Vídeo
 

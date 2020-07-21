@@ -1,5 +1,6 @@
 ---
-title: Administrar varios servidores mediante Servidores de administración central | Microsoft Docs
+title: Administración de varios servidores mediante Servidores de administración central
+description: Obtenga información sobre cómo administrar varios servidores en SQL Server mediante la designación de los Servidores de administración central y la creación de grupos de servidores.
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 967f2f582b3d0bc5b5a7b6277b97f6557e19e7cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fc7868735a05a81afe324755d880cc9e63353c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754576"
 ---
-# <a name="administer-multiple-servers-using-central-management-servers"></a>Administrar varios servidores mediante Servidores de administración central
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="administer-multiple-servers-using-central-management-servers"></a>Administración de varios servidores mediante Servidores de administración central
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   Puede administrar varios servidores designando los servidores de administración central y creando grupos de servidores.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>¿Qué son un servidor de administración central y los grupos de servidores?  
@@ -39,7 +41,7 @@ ms.locfileid: "67934561"
  
  Para obtener más información sobre cómo crear servidores de administración central y grupos de servidores, consulte [Crear un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

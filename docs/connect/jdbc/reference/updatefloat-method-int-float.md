@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b8cb92a23a9d3c3c9725dc555ff66c967ed4ecd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998958"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927867"
 ---
 # <a name="updatefloat-method-int-float"></a>Método updateFloat (int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,18 +36,18 @@ public void updateFloat(int index,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Valor **int** que indica el índice de la columna.  
   
  *x*  
   
- Un valor de **tipo float** .  
+ Un valor **float**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateFloat especifica este método updateFloat en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

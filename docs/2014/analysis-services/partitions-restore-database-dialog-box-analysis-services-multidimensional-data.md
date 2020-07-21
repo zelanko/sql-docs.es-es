@@ -1,5 +1,5 @@
 ---
-title: Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Particiones (cuadro de diálogo restaurar base de datos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072112"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540757"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
   Utilice la página **Particiones** del cuadro de diálogo **Restaurar base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar la ubicación en la que se restaurarán las particiones locales y si es necesario restaurar particiones remotas, así como los archivos de copia de seguridad remotos que se utilizarán al restaurar las particiones remotas.  
@@ -28,7 +27,7 @@ ms.locfileid: "66072112"
 > [!NOTE]  
 >  Después de restaurar una base de datos existente, el usuario que restauró la base de datos podría perder el acceso a la base de datos restaurada. Esta pérdida de acceso puede producirse si, en el momento en que se realizó la copia de seguridad, el usuario no era miembro del rol de servidor o no era miembro de rol de base de datos con permisos de Control total (Administrador).  
   
- **Para mostrar la página particiones en el cuadro de diálogo Restaurar base de datos**  
+ **Para mostrar la página particiones en el cuadro de diálogo restaurar base de datos**  
   
 -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o en una base de datos en el **Explorador de objetos**, haga clic en **Restaurar**y, después, en **Seleccionar una página**, haga clic en **Particiones**.  
   
@@ -59,14 +58,14 @@ ms.locfileid: "66072112"
   
  La siguiente cuadrícula, que se habilita cuando se selecciona esta opción, se utiliza para especificar una carpeta de restauración para cada partición local:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
-|**Cubo**|Muestra el nombre del cubo que contiene la partición local.|  
+|**BD**|Muestra el nombre del cubo que contiene la partición local.|  
 |**MeasureGroup**|Muestra el nombre del grupo de medida que contiene la partición local.|  
 |**Partición**|Muestra el nombre de la partición local.|  
 |**Tamaño (MB)**|Muestra el tamaño de la partición local en megabytes.|  
 |**Carpeta original**|Muestra el nombre de la carpeta original en la que se almacenó la partición local.|  
-|**Carpeta de restauración**|Escriba el nombre de la carpeta de restauración de la partición local, o bien haga clic en el botón de puntos suspensivos ( **…** ) para mostrar el cuadro de diálogo **Buscar carpeta remota** y seleccione la ruta de acceso a la carpeta que quiera usar. Para obtener más información sobre el cuadro de diálogo **Buscar carpeta remota**, vea [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services - Datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Carpeta de restauración**|Escriba el nombre de la carpeta de restauración de la partición local, o bien haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Buscar carpeta remota** y seleccione la ruta de acceso a la carpeta que quiera usar. Para obtener más información sobre el cuadro de diálogo **Buscar carpeta remota**, vea [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services - Datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Restaurar particiones remotas**  
  Seleccione esta opción para restaurar particiones remotas almacenadas en archivos de copia de seguridad remotos.  
@@ -76,16 +75,16 @@ ms.locfileid: "66072112"
   
  La siguiente cuadrícula, que se habilita cuando se selecciona esta opción, se utiliza para especificar una carpeta de restauración para cada partición local:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**Server**|Muestra el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra la partición remota.|  
-|**Origen de datos**|Muestra el nombre del origen de datos del archivo de copia de seguridad que representa la base de datos que contiene la partición remota.|  
-|**Archivo de copia de seguridad**|Escriba la ruta de acceso completa y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar, o bien haga clic en el botón de puntos suspensivos ( **…** ) para mostrar el cuadro de diálogo **Buscar archivos de la base de datos** y seleccionar la ruta de acceso y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar. Para más información sobre el cuadro de diálogo **Buscar archivos de base de datos**, vea [Cuadro de diálogo Buscar archivos de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Data Source** (Origen de datos)|Muestra el nombre del origen de datos del archivo de copia de seguridad que representa la base de datos que contiene la partición remota.|  
+|**Archivo de copia de seguridad**|Escriba la ruta de acceso completa y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar, o bien haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Buscar archivos de la base de datos** y seleccionar la ruta de acceso y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar. Para más información sobre el cuadro de diálogo **Buscar archivos de base de datos**, vea [Cuadro de diálogo Buscar archivos de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Haga clic en este botón para mostrar el cuadro de diálogo **Particiones remotas - Configuración avanzada** y modificar opciones avanzadas, como la cadena de conexión del origen de datos, para restaurar la partición remota. Para más información sobre el cuadro de diálogo **Particiones remotas - Configuración avanzada**, vea [Cuadro de diálogo Particiones remotas: configuración avanzada &#40;Analysis Services - Datos multidimensionales&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Restaurar base de datos &#40;Analysis Services - Datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [General &#40;restaurar la base de datos cuadro de diálogo&#41; &#40;Analysis Services - datos multidimensionales&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo restaurar base de datos &#40;Analysis Services-datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Cuadro de diálogo restaurar base de datos de &#40;general&#41; &#40;Analysis Services de datos multidimensionales&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

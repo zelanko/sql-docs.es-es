@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137685"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893579"
 ---
-# <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de los filtros de mezcla. Este procedimiento almacenado se ejecuta en el publicador de cualquier base de datos.  
   
@@ -39,27 +39,27 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es **%** , que devuelve los nombres de todos los artículos.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve los nombres de todos los artículos.  
   
-`[ @filtername = ] 'filtername'` Es el nombre del filtro que se va a devolver información. *filtername* es **sysname**, su valor predeterminado es **%** , que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
+`[ @filtername = ] 'filtername'`Es el nombre del filtro sobre el que se va a devolver información. *filtername* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|Id. del filtro de combinación.|  
-|**filtername**|**sysname**|Nombre del filtro.|  
-|**nombre de artículo de combinación**|**sysname**|Nombre del artículo de combinación.|  
-|**join_filterclause**|**nvarchar(2000)**|Cláusula de filtro que califica la combinación.|  
+|**FilterName**|**sysname**|Nombre del filtro.|  
+|**join article name**|**sysname**|Nombre del artículo de combinación.|  
+|**join_filterclause**|**nvarchar (2000)**|Cláusula de filtro que califica la combinación.|  
 |**join_unique_key**|**int**|Indica si la combinación se hace sobre una clave exclusiva.|  
-|**propietario de la tabla base**|**sysname**|Nombre del propietario de la tabla base.|  
-|**nombre de la tabla base**|**sysname**|Nombre de la tabla base.|  
-|**propietario de la tabla de combinación**|**sysname**|Nombre del propietario de la tabla que se combina con la tabla base.|  
-|**nombre de tabla combinada**|**sysname**|Nombre de la tabla que se combina con la tabla base.|  
-|**nombre de artículo**|**sysname**|Nombre del artículo de la tabla que se combina con la tabla base.|  
-|**filter_type**|**tinyint**|Tipo de filtro de mezcla, que puede ser uno de los siguientes:<br /><br /> **1** = solo filtro de combinación<br /><br /> **2** = relación de registros lógicos<br /><br /> **3** = both|  
+|**base table owner**|**sysname**|Nombre del propietario de la tabla base.|  
+|**base table name**|**sysname**|Nombre de la tabla base.|  
+|**join table owner**|**sysname**|Nombre del propietario de la tabla que se combina con la tabla base.|  
+|**join table name**|**sysname**|Nombre de la tabla que se combina con la tabla base.|  
+|**article name**|**sysname**|Nombre del artículo de la tabla que se combina con la tabla base.|  
+|**filter_type**|**tinyint**|Tipo de filtro de mezcla, que puede ser uno de los siguientes:<br /><br /> **1** = solo filtro de combinación<br /><br /> **2** = relación de registros lógicos<br /><br /> **3** = ambos|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -68,12 +68,12 @@ sp_helpmergefilter [ @publication= ] 'publication'
  **sp_helpmergefilter** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpmergefilter**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** y del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpmergefilter**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_addmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_dropmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

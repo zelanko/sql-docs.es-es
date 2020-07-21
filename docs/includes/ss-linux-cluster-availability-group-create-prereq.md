@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215576"
----
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de crear el grupo de disponibilidad, debe:
 
@@ -59,7 +51,7 @@ Antes de crear el grupo de disponibilidad, debe:
     10.128.15.33 node3
     ```
 
-### <a name="install-sql-server"></a>Instalar SQL Server
+### <a name="install-sql-server"></a>Instalación de SQL Server
 
 Instale SQL Server. Los siguientes vínculos apuntan a las instrucciones de instalación de SQL Server para varias distribuciones: 
 
@@ -69,7 +61,7 @@ Instale SQL Server. Los siguientes vínculos apuntan a las instrucciones de inst
 
 ## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>Habilitar los grupos de disponibilidad AlwaysOn y reiniciar mssql-server
 
-Habilite los grupos de disponibilidad AlwaysOn en cada nodo en el que se hospede una instancia de SQL Server. A continuación, reinicie `mssql-server`. Ejecute el script siguiente:
+Habilite los grupos de disponibilidad AlwaysOn en cada nodo en el que se hospede una instancia de SQL Server. A continuación, reinicie `mssql-server`. Ejecute el siguiente script:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -85,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Para obtener más información sobre esta sesión de XE, vea [Eventos extendidos de AlwaysOn](https://msdn.microsoft.com/library/dn135324.aspx).
+Para obtener más información sobre esta sesión de XE, vea [Eventos extendidos de AlwaysOn](../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## <a name="create-a-certificate"></a>Crear un certificado
 

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36b01d25ada5c0dd5cbbfdeff8bdae1c4cbd3f34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205706"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048538"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools)
-  Los diagramas de bases de datos creados en las ediciones anteriores de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan automáticamente al preparar la creación de diagramas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más pasos de configuración de diagramas, vea [establecer seguridad del Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Los diagramas de bases de datos creados en las ediciones anteriores de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan automáticamente al preparar la creación de diagramas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo configurar los diagramas, vea [configurar el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Para actualizar diagramas de base de datos heredados  
   
@@ -38,8 +37,8 @@ ms.locfileid: "63205706"
   
      Así se actualizarán los diagramas almacenados en la base de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Descripción de la propiedad del diagrama de base de datos &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Descripción de la propiedad de diagrama de base de datos &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
  [Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

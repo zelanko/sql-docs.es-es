@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36409f2ce256325da1c9849e5bec7e7ce114cf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014709"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Administrar el seguimiento de cambios (SQL Server)
   En este tema se describe cómo administrar el seguimiento de los cambios. También se describe cómo configurar la seguridad, así como determinar los efectos en el almacenamiento y en el rendimiento cuando se utiliza esta característica.  
@@ -101,7 +100,7 @@ sp_spaceused 'sys.change_tracking_309576141'
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [Propiedades de la base de datos &#40;página ChangeTracking&#41;](../databases/database-properties-changetracking-page.md)   

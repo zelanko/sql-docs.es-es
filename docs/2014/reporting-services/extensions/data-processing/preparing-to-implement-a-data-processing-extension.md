@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165026"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Prepararse para implementar una extensión de procesamiento de datos
@@ -80,7 +80,7 @@ ms.locfileid: "63165026"
   
  Las interfaces de extensión de procesamiento de datos son idénticas a un subconjunto de las interfaces, métodos y propiedades del proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], siempre que sea posible. Para obtener más información sobre cómo implementar un proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] completo, vea el tema sobre la implementación de un proveedor de datos de .NET Framework en la documentación del Kit de desarrollo de software (SDK) de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  

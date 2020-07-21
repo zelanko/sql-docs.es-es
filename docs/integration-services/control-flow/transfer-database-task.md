@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293899"
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
@@ -135,7 +135,7 @@ ms.locfileid: "71293899"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Sobrescribir la base de datos del servidor de destino.|  
 |**False**|No sobrescribir la base de datos del servidor de destino.|  
@@ -164,7 +164,7 @@ ms.locfileid: "71293899"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Volver a adjuntar la base de datos de origen.|  
 |**False**|No volver a adjuntar la base de datos de origen.|  

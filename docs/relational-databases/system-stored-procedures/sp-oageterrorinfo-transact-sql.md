@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107913"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893409"
 ---
-# <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Obtiene información de errores de OLE Automation.  
   
@@ -44,58 +44,58 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- Es el testigo de un objeto OLE creado anteriormente mediante el uso de **sp_OACreate** o es NULL. Si *objecttoken* está especificado, se devuelve información de error para ese objeto. Si se especifica NULL, se devuelve la información de error de todo el lote.  
+ Es el token de objeto de un objeto OLE creado previamente mediante **sp_OACreate** o es NULL. Si se especifica *objecttoken* , se devuelve información de error para ese objeto. Si se especifica NULL, se devuelve la información de error de todo el lote.  
   
- _origen_ **salida**  
- Es el origen de la información de error. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
+ _source_ **salida** de origen  
+ Es el origen de la información de error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _descripción_ **salida**  
- Es la descripción del error. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
+ _description_ **salida** de Descripción  
+ Es la descripción del error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _HelpFile_ **salida**  
- Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
+ _helpfile_ **salida** de HelpFile  
+ Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _HelpID_ **salida**  
- Es el identificador de contexto del archivo de ayuda. Si se especifica, debe ser una variable local **int** variable.  
+ _helpid_ **salida** de helpID  
+ Es el identificador de contexto del archivo de ayuda. Si se especifica, debe ser una variable local **int** .  
   
 > [!NOTE]  
->  Los parámetros para este procedimiento almacenado se especifican por posición, no por el nombre.  
+>  Los parámetros para este procedimiento almacenado se especifican por posición, no por nombre.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
   
- Para obtener más información sobre los códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obtener más información sobre los códigos de retorno de HRESULT, vea [códigos de retorno e información de error de automatización OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Si no se especifican parámetros de salida, la información de error se devuelve al cliente como un conjunto de resultados.  
   
 |Nombres de columna|Tipo de datos|Descripción|  
 |------------------|---------------|-----------------|  
-|**Error**|**binary (4)**|Representación binaria del número de error.|  
-|**Origen**|**nvarchar(nn)**|Origen del error.|  
-|**Descripción**|**nvarchar(nn)**|Descripción del error.|  
-|**Helpfile**|**nvarchar(nn)**|Archivo de ayuda del origen.|  
+|**Error**|**binario (4)**|Representación binaria del número de error.|  
+|**Origen**|**nvarchar (NN)**|Origen del error.|  
+|**Descripción**|**nvarchar (NN)**|Descripción del error.|  
+|**HelpFile**|**nvarchar (NN)**|Archivo de ayuda del origen.|  
 |**HelpID**|**int**|Id. del contexto de Ayuda del archivo de origen correspondiente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Procedimiento almacenado de cada llamada a OLE Automation (excepto **sp_OAGetErrorInfo**) restablece la información de error; por lo tanto, **sp_OAGetErrorInfo** obtiene información de errores solo para OLE más reciente Automatización de la llamada al procedimiento almacenado. Tenga en cuenta que dado que **sp_OAGetErrorInfo** no restablece la información de error, puede llamarse varias veces para obtener la misma información de error.  
+ Cada llamada a un procedimiento almacenado de OLE Automation (excepto **sp_OAGetErrorInfo**) restablece la información de error; por tanto, **sp_OAGetErrorInfo** solo obtiene la información de error de la llamada más reciente a un procedimiento almacenado de OLE Automation. Tenga en cuenta que, dado que **sp_OAGetErrorInfo** no restablece la información de error, se puede llamar varias veces para obtener la misma información de error.  
   
  La tabla siguiente muestra los errores de OLE Automation y sus causas comunes.  
   
 |Error y HRESULT|Causa común|  
 |-----------------------|------------------|  
-|**Tipo de variable incorrecto (0 x 80020008)**|Tipo de datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] valor pasado como un parámetro de método no coincide con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo de datos de parámetro del método o un valor NULL se pasó como un parámetro de método.|  
-|**Nombre desconocido (0 x 8002006)**|No se encontró el nombre de la propiedad o del método especificado para el objeto especificado.|  
-|**Cadena de clase no válida (0x800401f3)**|El ProgID o CLSID especificado no está registrado como objeto OLE en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Servidores de automatización OLE personalizados deben registrarse antes de que se pueden crear instancias mediante **sp_OACreate**. Esto puede hacerse mediante la utilidad Regsvr32.exe para los servidores de proceso (.dll), o la **/regserver** conmutador de línea de comandos para los servidores locales (.exe).|  
-|**Error en la ejecución de servidor (0 x 80080005)**|El objeto OLE especificado está registrado como servidor OLE local (archivo .exe), pero no se pudo encontrar o iniciar el archivo .exe.|  
-|**El módulo especificado no se encontró (0x8007007e)**|El objeto OLE especificado está registrado como servidor OLE en proceso (archivo .dll), pero no se pudo encontrar o cargar el archivo .dll.|  
-|**Discordancia de tipos (0 x 80020005)**|El tipo de datos de una variable local de [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizada para almacenar un valor de propiedad o un valor de método devueltos no coincidió con el tipo de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para el valor devuelto de la propiedad o método. O bien, se solicitó el valor devuelto de una propiedad o método, pero no se devuelve un valor.|  
-|**Tipo de datos o el valor del parámetro 'context' de sp_OACreate no es válido. (0x8004275B)**|El valor del parámetro de contexto debe ser uno de: 1, 4 o 5.|  
+|**Tipo de variable incorrecto ?(0x80020008)**|El tipo de datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] valor pasado como parámetro de método no coincidía con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo de datos del parámetro de método o se pasó un valor NULL como parámetro de método.|  
+|**Nombre desconocido? (0x8002006)**|No se encontró el nombre de la propiedad o del método especificado para el objeto especificado.|  
+|**Cadena de clase no válida (0x800401f3)**|El ProgID o CLSID especificado no está registrado como objeto OLE en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores de automatización OLE personalizados deben registrarse para poder crear instancias de ellos mediante **sp_OACreate**. Esto puede hacerse mediante el uso de la utilidad de Regsvr32.exe para servidores en proceso (. dll) o el modificador de línea de comandos **/regserver** para servidores locales (. exe).|  
+|**Error de ejecución del servidor (0x80080005)**|El objeto OLE especificado está registrado como servidor OLE local (archivo .exe), pero no se pudo encontrar o iniciar el archivo .exe.|  
+|**No se pudo encontrar el módulo especificado (0x8007007e)**|El objeto OLE especificado está registrado como servidor OLE en proceso (archivo .dll), pero no se pudo encontrar o cargar el archivo .dll.|  
+|**El tipo no coincide (0x80020005)**|El tipo de datos de una variable local de [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizada para almacenar un valor de propiedad o un valor de método devueltos no coincidió con el tipo de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para el valor devuelto de la propiedad o método. O bien, se solicitó el valor devuelto de una propiedad o método, pero no se devuelve un valor.|  
+|**El tipo de valor o el valor del parámetro ' context ' de sp_OACreate no es válido. (0x8004275B)**|El valor del parámetro de contexto debe ser uno de los siguientes: 1, 4 o 5.|  
   
- Para obtener más información acerca de cómo procesar códigos de retorno HRESULT, vea [OLE Automation códigos de retorno e información de Error](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obtener más información sobre el procesamiento de códigos de retorno HRESULT, vea [códigos de retorno e información de error de automatización OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** rol fijo de servidor o permiso de ejecución directamente en este procedimiento almacenado. `Ole Automation Procedures` configuración de debe ser **habilitado** utilizar ningún procedimiento del sistema relacionadas con la automatización OLE.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures`la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra la información de errores de OLE Automation.  
@@ -121,8 +121,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [OLE Automation procedimientos almacenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de automatización OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ejemplo de script de automatización OLE](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

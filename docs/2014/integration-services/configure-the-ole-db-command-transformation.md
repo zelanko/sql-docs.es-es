@@ -1,5 +1,5 @@
 ---
-title: Configurar la transformación comando OLE DB | Microsoft Docs
+title: Configurar la transformación comando de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - parameters [Integration Services]
 - OLE DB Command transformation
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7d9e0c2601968f7174f5250b7af88a92e75693fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060556"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434622"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurar la transformación Comando de OLE DB
   Para agregar y configurar una transformación Comando de OLE DB, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen tal como origen de archivo plano y un origen de OLE DB. Esta transformación normalmente se usa para ejecutar consultas con parámetros.  
@@ -67,14 +66,14 @@ ms.locfileid: "66060556"
   
     -   Haga clic en **Asignaciones de columnas** y asigne las columnas de la lista **Columnas de entrada disponibles** a parámetros de la lista **Columnas de destino disponibles** .  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
 15. Para guardar el paquete actualizado, haga clic en **Guardar** en el menú **Archivo** .  
   
-## <a name="see-also"></a>Vea también  
- [OLE DB Command Transformation](data-flow/transformations/ole-db-command-transformation.md)   
- [Transformaciones de Integration Services](data-flow/transformations/integration-services-transformations.md)   
- [Rutas de Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Consulte también  
+ [OLE DB la transformación de comandos](data-flow/transformations/ole-db-command-transformation.md)   
+ [Integration Services transformaciones](data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services trazados](data-flow/integration-services-paths.md)   
  [Tarea Flujo de datos](control-flow/data-flow-task.md)  
   
   

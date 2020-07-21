@@ -1,21 +1,21 @@
 ---
 title: Descripción de la compatibilidad con Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 03/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 45d77963651ee5d7c796204c02bb65d88c60fcb8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027264"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920287"
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 
@@ -38,8 +38,10 @@ Para el controlador JDBC Driver 7.0, el controlador se encuentra en **mssql-jdbc
 Para el controlador JDBC Driver 7.2, el controlador se encuentra en **mssql-jdbc-7.2.2.jre8.jar** o **mssql-jdbc-7.2.2.jre11.jar**.
 
 Para el controlador JDBC Driver 7.4, el controlador se encuentra en **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** o **mssql-jdbc-7.4.1.jre12.jar**.
-  
-El nombre de clase se usa siempre que se carga el controlador con la clase DriverManager de JDBC y siempre que se especifica el nombre de clase del controlador en cualquier configuración de controlador. Por ejemplo, configurar un origen de datos dentro de un servidor de aplicaciones de Java EE podría requerir que se escribiera el nombre de clase del controlador.  
+
+Para JDBC Driver 8.2, el controlador se encuentra en **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** o **mssql-jdbc-8.2.2.jre13.jar**.
+
+El nombre de clase se usa siempre que carga el controlador con la clase DriverManager de JDBC y siempre que especifica el nombre de clase del controlador en cualquier configuración de controlador. Por ejemplo, configurar un origen de datos dentro de un servidor de aplicaciones de Java EE podría requerir que se escribiera el nombre de clase del controlador.  
   
 ## <a name="data-sources"></a>Orígenes de datos
 
@@ -76,6 +78,6 @@ Connection c = ds.getConnection("user", "pwd");
 
 Para obtener más información sobre las propiedades de origen de datos, vea [Establecimiento de las propiedades de origen de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

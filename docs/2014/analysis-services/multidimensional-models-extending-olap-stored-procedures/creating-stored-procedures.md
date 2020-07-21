@@ -1,5 +1,5 @@
 ---
-title: Creación de procedimientos almacenados | Microsoft Docs
+title: Crear procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a997244a2d54cca8732196107dd21927b5f9e2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62703093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545457"
 ---
 # <a name="creating-stored-procedures"></a>Creación de procedimientos almacenados
-  Todos los procedimientos almacenados deben asociarse a una clase de Common Language Runtime (CLR) o Modelo de objetos componentes (COM) para poder usarse. La clase debe estar instalada en el servidor - normalmente en forma de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® dinámicos (DLL): biblioteca de vínculos y registrado como un ensamblado en el servidor o en un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos.  
+  Todos los procedimientos almacenados deben asociarse a una clase de Common Language Runtime (CLR) o Modelo de objetos componentes (COM) para poder usarse. La clase debe instalarse en el servidor (normalmente en forma de una [!INCLUDE[msCoName](../../includes/msconame-md.md)] biblioteca de vínculos dinámicos (dll) de ActiveX® y registrada como un ensamblado en el servidor o en una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos.  
   
- Los procedimientos almacenados se registran en un servidor o en una base de datos. Se puede llamar a los procedimientos almacenados del servidor desde cualquier contexto de consulta. Solo se puede tener acceso a los procedimientos almacenados de base de datos si el contexto de base de datos es la base de datos bajo la cual se define el procedimiento almacenado. Si las funciones de un ensamblado llaman a las funciones en otro ensamblado, debe registrar ambos ensamblados en el mismo contexto (servidor o base de datos). Para un servidor o una implementada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos en un servidor, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para registrar un ensamblado. Para un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Diseñador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar un ensamblado en el proyecto.  
+ Los procedimientos almacenados se registran en un servidor o en una base de datos. Se puede llamar a los procedimientos almacenados del servidor desde cualquier contexto de consulta. Solo se puede tener acceso a los procedimientos almacenados de base de datos si el contexto de base de datos es la base de datos bajo la cual se define el procedimiento almacenado. Si las funciones de un ensamblado llaman a las funciones en otro ensamblado, debe registrar ambos ensamblados en el mismo contexto (servidor o base de datos). Para un servidor o una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos implementada en un servidor, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para registrar un ensamblado. Para un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Diseñador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar un ensamblado en el proyecto.  
   
 > [!IMPORTANT]  
 >  Los ensamblados COM pueden suponer un riesgo para la seguridad. Debido a esto y a otras consideraciones, los ensamblados COM están en desuso en [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]. Es posible que este tipo de ensamblados no esté disponible en versiones futuras.  
@@ -36,57 +35,57 @@ ms.locfileid: "62703093"
   
 ### <a name="to-create-a-server-assembly"></a>Para crear un ensamblado de servidor  
   
-1.  Expanda la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos, haga clic en el **ensamblados** carpeta y, a continuación, haga clic en **nuevo ensamblado**. Esto muestra la **registrar ensamblado de servidor** cuadro de diálogo.  
+1.  Expanda la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y, a continuación, haga clic en **nuevo ensamblado**. Esto muestra el cuadro de diálogo **registrar ensamblado de servidor** .  
   
-2.  Para **tipo** especificar el tipo de ensamblado:  
+2.  En **tipo** , especifique el tipo de ensamblado:  
   
     -   Para una DLL de código administrado (CLR), especifique Ensamblado .NET.  
   
-    -   Para código nativo (COM) DLL, especifique DLL COM.  
+    -   Para un archivo DLL de código nativo (COM), especifique DLL de COM.  
   
-3.  Para **nombre de archivo**, especifique el archivo DLL que contiene los procedimientos almacenados.  
+3.  En **nombre de archivo**, especifique el archivo DLL que contiene los procedimientos almacenados.  
   
-4.  Para **nombre del ensamblado**, especifique un nombre para el ensamblado.  
+4.  En **nombre de ensamblado**, especifique un nombre para el ensamblado.  
   
-5.  Si se trata de una compilación de depuración de la biblioteca que se va a usar para depurar procedimientos almacenados, seleccione el **incluir información de depuración** casilla de verificación. Para obtener más información sobre cómo depurar procedimientos almacenados, vea [depurar procedimientos almacenados](debugging-stored-procedures.md).  
+5.  Si se trata de una compilación de depuración de la biblioteca que va a usar para depurar procedimientos almacenados, active la casilla **incluir información de depuración** . Para obtener más información sobre la depuración de procedimientos almacenados, vea [depurar procedimientos almacenados](debugging-stored-procedures.md).  
   
-6.  Puede hacer clic en **Aceptar** para registrar el ensamblado de inmediato o, en la barra de herramientas del cuadro de diálogo, puede hacer clic en un comando en el **Script** menú para generar el script de la acción de registro en una ventana de consulta, un archivo o el Portapapeles.  
+6.  Puede hacer clic en **Aceptar** para registrar el ensamblado inmediatamente, o bien, en la barra de herramientas del cuadro de diálogo, puede hacer clic en un comando del menú **script** para incluir en el script la acción de registro en una ventana de consulta, un archivo o el portapapeles.  
   
- Después de registrar un ensamblado de servidor, puede configurarlo haciendo clic en el ensamblado en el Explorador de objetos y, a continuación, haga clic en **propiedades**.  
+ Después de registrar un ensamblado de servidor, puede configurarlo haciendo clic con el botón secundario en el ensamblado en Explorador de objetos y, a continuación, haciendo clic en **propiedades**.  
   
 ## <a name="registering-a-database-assembly-on-the-server"></a>Registrar un ensamblado de base de datos en el servidor  
  En el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], los ensamblados de base de datos aparecen en la carpeta Ensamblados bajo una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los ensamblados de base de datos pueden contener ensamblados .NET (CLR) y bibliotecas COM.  
   
 ### <a name="to-create-a-database-assembly-on-a-server"></a>Para crear un ensamblado de base de datos en un servidor  
   
-1.  Expanda la instancia de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos de base de datos, haga clic en el **ensamblados** carpeta y, a continuación, haga clic en **nuevo ensamblado**. Esto muestra la **registrar ensamblado de base de datos** cuadro de diálogo.  
+1.  Expanda la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la base de datos en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y, a continuación, haga clic en **nuevo ensamblado**. Esto muestra el cuadro de diálogo **registrar ensamblado de base de datos** .  
   
-2.  Para **tipo** especificar el tipo de ensamblado:  
+2.  En **tipo** , especifique el tipo de ensamblado:  
   
     -   Para una DLL de código administrado (CLR), especifique Ensamblado .NET.  
   
     -   Para una DLL de código nativo (COM), especifique DLL COM.  
   
-3.  Para **nombre de archivo**, especifique el archivo DLL que contiene los procedimientos almacenados.  
+3.  En **nombre de archivo**, especifique el archivo DLL que contiene los procedimientos almacenados.  
   
-4.  Para **nombre del ensamblado**, especifique un nombre para el ensamblado.  
+4.  En **nombre de ensamblado**, especifique un nombre para el ensamblado.  
   
-5.  Si se trata de una compilación de depuración de la biblioteca que se va a usar para depurar procedimientos almacenados, seleccione el **incluir información de depuración** casilla de verificación. Para obtener más información sobre cómo depurar procedimientos almacenados, vea [depurar procedimientos almacenados](debugging-stored-procedures.md).  
+5.  Si se trata de una compilación de depuración de la biblioteca que va a usar para depurar procedimientos almacenados, active la casilla **incluir información de depuración** . Para obtener más información sobre la depuración de procedimientos almacenados, vea [depurar procedimientos almacenados](debugging-stored-procedures.md).  
   
-6.  Puede hacer clic en **Aceptar** para registrar el ensamblado de inmediato o, en la barra de herramientas del cuadro de diálogo, puede hacer clic en un comando en el **Script** menú para generar el script de la acción de registro en una ventana de consulta, un archivo o el Portapapeles.  
+6.  Puede hacer clic en **Aceptar** para registrar el ensamblado inmediatamente, o bien, en la barra de herramientas del cuadro de diálogo, puede hacer clic en un comando del menú **script** para incluir en el script la acción de registro en una ventana de consulta, un archivo o el portapapeles.  
   
- Después de registrar un ensamblado de la base de datos, puede configurarlo haciendo clic en el ensamblado en el Explorador de objetos y, a continuación, haga clic en **propiedades**.  
+ Después de registrar un ensamblado de base de datos, puede configurarlo haciendo clic con el botón secundario en el ensamblado en Explorador de objetos y, a continuación, haciendo clic en **propiedades**.  
   
 ## <a name="registering-a-database-assembly-in-a-project"></a>Registrar un ensamblado de base de datos en un proyecto  
  En el Explorador de soluciones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los ensamblados de base de datos aparecen en la carpeta Ensamblados bajo un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los ensamblados de base de datos pueden contener ensamblados .NET (CLR) y bibliotecas COM.  
   
 ### <a name="to-create-a-database-assembly-in-an-analysis-service-project"></a>Para crear un ensamblado de base de datos en un proyecto de Analysis Service  
   
-1.  Expanda la instancia de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos de base de datos, haga clic en el **ensamblados** carpeta y, a continuación, haga clic en **nueva referencia de ensamblado**. Esto muestra la **Agregar referencia** cuadro de diálogo. El **.NET** pestaña de la **Agregar referencia** cuadro de diálogo enumera los ensamblados .NET (CLR) existentes, mientras que el **proyectos** ficha enumera los proyectos.  
+1.  Expanda la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la base de datos en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y haga clic en **nueva referencia de ensamblado**. Esto muestra el cuadro de diálogo **Agregar referencia** . En la pestaña **.net** del cuadro de diálogo **Agregar referencia se** enumeran los ensamblados .net (CLR) existentes, mientras que la pestaña **proyectos** enumera los proyectos.  
   
-2.  Puede hacer clic de un componente existente o un proyecto y, a continuación, haga clic en **agregar** para agregarlo a la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto. Para agregar una referencia a un archivo DLL de COM, haga clic en el **examinar** ficha para buscar el archivo. El **proyectos y componentes seleccionados** lista muestra el nombre, tipo, versión y la ubicación de cada componente que se va a agregar al proyecto.  
+2.  Puede hacer clic en un componente o proyecto existente y, a continuación, hacer clic en **Agregar** para agregarlo al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto. Para agregar una referencia a una DLL COM, haga clic en la pestaña **examinar** para buscar el archivo. La lista **proyectos y componentes seleccionados** muestra el nombre, el tipo, la versión y la ubicación de cada componente que se va a agregar al proyecto.  
   
-3.  Cuando haya terminado de seleccionar los componentes para agregar, haga clic en **Aceptar** para agregarlos a la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto.  
+3.  Cuando haya terminado de seleccionar los componentes que desea agregar, haga clic en **Aceptar** para agregarlos al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto.  
   
 ## <a name="script-format-for-an-assembly"></a>Formato de script para un ensamblado  
  Registrar un ensamblado .NET es bastante sencillo. Un ensamblado .NET se agrega a una base de datos en formato binario con el siguiente formato:  
@@ -112,8 +111,8 @@ ms.locfileid: "62703093"
 </Create>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Administración de los ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md)   
- [Definición de procedimientos almacenados](defining-stored-procedures.md)  
+## <a name="see-also"></a>Consulte también  
+ [Administración de ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Definir procedimientos almacenados](defining-stored-procedures.md)  
   
   

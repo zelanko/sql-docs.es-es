@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0644d2bfc49ecd34869c134f163897990c147713
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061989"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un entorno integrado para administrar la infraestructura de SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] proporciona herramientas para configurar, para supervisar, y administrar instancias de SQL Server. También proporciona herramientas para implementar, supervisar y actualizar los componentes de capa de datos, como bases de datos y almacenamientos de datos usados por aplicaciones, y para compilar consultas y scripts.  
@@ -35,8 +34,8 @@ ms.locfileid: "63154994"
 |Describe cómo usar las herramientas de diseño visual incluidas en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |Describe cómo usar los editores de lenguaje de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para compilar y depurar interactivamente consultas y scripts.|[Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Escritura de instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

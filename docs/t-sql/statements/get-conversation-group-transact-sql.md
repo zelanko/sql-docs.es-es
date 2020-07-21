@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 3fe4dd0be7b453bfa01feac2b60f1ec6a915320b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899175"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve el identificador del grupo de conversación del siguiente mensaje que se va a recibir y bloquea el grupo de la conversación que contiene el mensaje. El identificador del grupo de conversación se puede utilizar para recuperar información del estado de la conversación antes de recuperar el propio mensaje.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72252189"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
    GET CONVERSATION GROUP @conversation_group_id  
@@ -74,7 +74,7 @@ ms.locfileid: "72252189"
  TIMEOUT *tiempo_de_espera*  
  Especifica el tiempo, en milisegundos, que espera Service Broker a que llegue un mensaje a la cola. Esta cláusula solo se puede usar con la cláusula WAITFOR. Si una instrucción que usa WAITFOR no incluye esta cláusula o *tiempo_de_espera* es -1, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, GET CONVERSATION GROUP establece la variable *\@conversation_group_id* en NULL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si la instrucción GET CONVERSATION GROUP no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma ( **;** ), que es el terminador de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  

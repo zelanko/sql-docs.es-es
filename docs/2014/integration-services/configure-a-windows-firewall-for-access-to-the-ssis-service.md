@@ -1,5 +1,5 @@
 ---
-title: Configurar un Firewall de Windows para el acceso al servicio SSIS | Microsoft Docs
+title: Configurar un firewall de Windows para el acceso al servicio SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, firewalls
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af43443b110be4d30d748aa3ce409e5167ce0371
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060850"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434972"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurar Firewall de Windows para el acceso al servicio SSIS
     
@@ -33,9 +32,9 @@ ms.locfileid: "66060850"
  El sistema Firewall de Windows impide el acceso no autorizado a los recursos de los equipos de una conexión de red. Para obtener acceso a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mediante este firewall, debe configurarlo para permitir el acceso.  
   
 > [!IMPORTANT]  
->  Para administrar paquetes almacenados en un servidor remoto, no tiene que conectarse a la instancia del servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en ese servidor remoto. En su lugar, modifique el archivo de configuración para el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de manera que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] muestre los paquetes almacenados en el servidor remoto. Para obtener más información, vea [Configuring the Integration Services Service &#40;SSIS Service&#41;](configuring-the-integration-services-service-ssis-service.md).  
+>  Para administrar paquetes almacenados en un servidor remoto, no tiene que conectarse a la instancia del servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en ese servidor remoto. En su lugar, modifique el archivo de configuración para el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de manera que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] muestre los paquetes almacenados en el servidor remoto. Para obtener más información, vea [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](configuring-the-integration-services-service-ssis-service.md).  
   
- El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza el protocolo DCOM. Para obtener más información sobre cómo funciona el protocolo DCOM a través de firewalls, consulte el artículo "[utilizar COM distribuido con Firewalls](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)".  
+ El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza el protocolo DCOM. Para obtener más información acerca de cómo funciona el protocolo DCOM a través de firewalls, consulte el artículo sobre el[uso de com distribuido con firewalls](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...).  
   
  Existen varios sistemas de firewall. Si ejecuta un firewall distinto de Firewall de Windows, vea la documentación del firewall para obtener información específica del sistema que utiliza.  
   
@@ -87,8 +86,8 @@ ms.locfileid: "66060850"
     > [!NOTE]  
     >  Para configurar el Firewall de Windows, este procedimiento utiliza el elemento **Firewall de Windows** del Panel de control. El elemento **Firewall de Windows** solo configura el firewall para el perfil de la ubicación de red actual. En cambio, también puede configurar el Firewall de Windows mediante la herramienta de línea de comandos **netsh** o el complemento [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (MMC) denominado Firewall de Windows con Seguridad avanzada. Para obtener más información sobre estas herramientas, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="see-also"></a>Vea también  
- [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configuración del servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)   
  [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
   

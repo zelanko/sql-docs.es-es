@@ -1,5 +1,6 @@
 ---
 title: Información general sobre la integración CLR | Microsoft Docs
+description: Microsoft SQL Server hospedar CLR se denomina integración CLR. La creación en código administrado puede mejorar el rendimiento. SQL Server utiliza CAS para ayudar a proteger el código administrado.
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d87768886150b06b23c6ff5053e4f0f524828904
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 5779e5982ee6c9c3729b2995b25771b993a5e442
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212396"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727607"
 ---
 # <a name="clr-integration---overview"></a>Integración CLR: información general
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Common Language Runtime (CLR) es el núcleo de Microsoft .NET Framework y proporciona el entorno de ejecución de todo el código de .NET Framework. Se hace referencia al código que se ejecuta en CLR como código administrado. CLR proporciona varias funciones y servicios necesarios para la ejecución de programas, que incluyen la compilación Just-In-Time (JIT), la asignación y administración de memoria, el forzado de la seguridad de tipos, el control de excepciones, la administración de subprocesos y la seguridad.  Para obtener información, vea .NET Framework SDK.  
   
  Con CLR hospedado en Microsoft SQL Server (denominado integración CLR), puede crear procedimientos almacenados, desencadenadores, funciones definidas por el usuario, tipos definidos por el usuario y agregados definidos por el usuario en código administrado. Dado que el código administrado se compila a código nativo antes de la ejecución, puede lograr un aumento importante del rendimiento en algunas situaciones.  
@@ -58,7 +59,7 @@ ms.locfileid: "70212396"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Elegir entre los procedimientos almacenados extendidos y el código administrado  
  Se pueden crear procedimientos almacenados extendidos para llevar a cabo funcionalidades que no son posibles con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los procedimientos almacenados extendidos pueden, sin embargo, poner en peligro la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mientras que el código administrado, cuya seguridad de tipos se comprueba, no puede. Además, la administración de memoria, la programación de subprocesos y fibras y los servicios de sincronización se integran más plenamente entre el código administrado de CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con la integración CLR, tiene una manera más segura que los procedimientos almacenados extendidos de escribir los procedimientos almacenados necesarios para realizar las tareas que no son posibles en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información acerca de la integración CLR y los procedimientos almacenados extendidos, vea [rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalación del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Arquitectura de la integración CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Acceso a datos desde objetos de base de datos CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   

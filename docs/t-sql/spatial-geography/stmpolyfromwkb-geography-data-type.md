@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bb3ad4cf2da399c32af4ccdcb183ebebc393dbe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77de4f1e1fb5e76316101312f9c30b1b0663f0f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702825"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una instancia de **geographyMultiPolygon** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
@@ -43,12 +43,12 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiPolygon** que se quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo de OGC: **MultiPolígono**  
+ Tipo OGC: **MultiPolygon**  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `STMPolyFromWKB()` para crear una instancia de `geography`.  

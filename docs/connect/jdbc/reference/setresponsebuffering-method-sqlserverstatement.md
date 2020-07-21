@@ -13,14 +13,14 @@ apilocation:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f3a6765bf5665704293233293982edfc1e746ce5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973111"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927451"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Método setResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,14 +42,14 @@ public final void setResponseBuffering(java.lang.String value)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor **adaptive** especifica que se almacenen en búfer los menos datos posibles cuando sea necesario.  
   
  El valor **full** se especifica mediante la lectura del resultado completo desde el servidor en el tiempo de ejecución.  
   
- Adaptive es el valor predeterminado en la versión 2,0 y 3,0 del controlador JDBC. Full era el valor predeterminado antes de la versión 2,0 del controlador JDBC.  
+ adaptive es el valor predeterminado en las versiones 2.0 y 3.0 del controlador JDBC. full era el valor predeterminado antes de la versión 2.0 del controlador JDBC.  
   
- El método [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) le permite invalidar la propiedad **String** de la conexión **responseBuffering** para el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) actual. Para obtener más información sobre cómo usar el modo de almacenamiento en búfer de respuesta, vea [usar el almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
+ El método [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) le permite invalidar la propiedad **String** de la conexión **responseBuffering** para el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) actual. Para más información sobre cómo utilizar el modo de almacenamiento en búfer de respuesta, vea [Empleo de almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
   
  Si la aplicación especifica un valor de parámetro no válido para el método [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md), se produce una excepción [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md).  
   

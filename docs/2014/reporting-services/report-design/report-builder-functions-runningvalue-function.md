@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105158"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Función RunningValue (Generador de informes y SSRS)
@@ -37,13 +37,13 @@ RunningValue(expression, function, scope)
  *function*  
  (`Enum`). Nombre de la función de agregado que se aplica a la expresión; por ejemplo, `Sum`. Esta función no puede ser `RunningValue`, `RowNumber` ni `Aggregate`.  
   
- *ámbito*  
+ *scope*  
  (`String`) Constante de cadena que es el nombre de un conjunto de datos, grupo, región de datos o NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que evaluar la agregación. `Nothing` especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Viene determinado por la función de agregado especificada en el parámetro *function* .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor para `RunningValue` se restablece en 0 para cada nueva instancia del ámbito. Si se especifica un grupo, el valor actual se restablece cuando cambia la expresión de grupo. Si se especifica una región de datos, el valor actual se restablece en cada instancia nueva de la región de datos. Si se especifica un conjunto de datos, el valor actual no se restablece en todo el conjunto de datos.  
   
  `RunningValue` no se puede utilizar en un filtro o expresión de ordenación.  
@@ -58,7 +58,7 @@ RunningValue(expression, function, scope)
   
 -   El ámbito para los agregados anidados no puede ser el nombre de un conjunto de datos.  
   
--   *Expresión* no puede contener `First`, `Last`, `Previous`, o `RunningValue` funciones.  
+-   *Expression* no debe contener `First`las `Last`funciones `Previous`,, `RunningValue` o.  
   
 -   *Expression* no debe contener a los agregados anidados que especifican *recursive*.  
   
@@ -87,7 +87,7 @@ RunningValue(expression, function, scope)
 =RunningValue(Fields!Traffic Charges.Value, Sum, Nothing)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   

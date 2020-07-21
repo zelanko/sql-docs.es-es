@@ -1,5 +1,5 @@
 ---
-title: Referencia de expresiones (Generador de informes y SSRS) | Microsoft Docs
+title: Referencia de expresiones (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35bcbd777ac703ad0db2bf6693a1987ef8e124d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1e7f44eef3fe86685bee473a5e985aad36d21c6d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576369"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080226"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Referencia de expresiones (Generador de informes y SSRS)
   Las expresiones de informe admiten diversas referencias a funciones integradas y colecciones integradas. Las expresiones deben tener una sintaxis válida de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para que un informe se pueda publicar o procesar.  

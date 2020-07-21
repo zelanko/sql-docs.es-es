@@ -1,6 +1,8 @@
 ---
-title: Referencia de mensajes de Error de LocalDB de SQL Server Express | Microsoft Docs
-ms.custom: ''
+title: Referencia de mensajes de error de LocalDB
+description: En esta sección se proporciona información de referencia acerca de los siguientes mensajes de error de LocalDB SQL Server Express.
+titleSuffix: SQL Server Express
+ms.custom: seo-dt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +11,15 @@ ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f59e898dcb8c51155bebb53352265eb95ebebd4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdfff620e2a83dbd151c7c5a1034ec8d206b7e1f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126959"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458879"
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>Referencia de SQL Server Express LocalDB: mensajes de error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En esta sección se proporciona información de referencia acerca de los siguientes mensajes de error de SQL Server Express LocalDB:  
   
  [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](../../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)  
@@ -69,7 +71,7 @@ ms.locfileid: "68126959"
  El búfer de entrada es demasiado corto y no se ha solicitado truncamiento.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
  [LOCALDB_ERROR_INVALID_INSTANCE_NAME](../../relational-databases/express-localdb-error-messages/localdb-error-invalid-instance-name.md)  
  El nombre de instancia de especificado no es válido.  

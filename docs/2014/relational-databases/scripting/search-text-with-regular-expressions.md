@@ -1,6 +1,6 @@
 ---
-title: Buscar texto mediante expresiones regulares | Microsoft Docs
-ms.custom: ''
+title: Buscar texto mediante expresiones regulares
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060315"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
-  Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+  Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Buscar y reemplazar**.  
   
 #### <a name="to-find-using-regular-expressions"></a>Para buscar mediante expresiones regulares  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66063770"
   
  En la tabla siguiente se describen las expresiones regulares disponibles en la **Lista de referencias**.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Un carácter cualquiera|.|Devuelve cualquier carácter único excepto un salto de línea.|  
 |Cero o más|*|Devuelve cero o más repeticiones de la expresión anterior, realizando todas las correspondencias posibles.|  
@@ -49,22 +48,22 @@ ms.locfileid: "66063770"
 |Salto de línea|\n|Devuelve un salto de línea independiente de la plataforma. En una expresión de Reemplazar, inserta un salto de línea.|  
 |Un carácter cualquiera del conjunto|[]|Devuelve cualquier carácter situado dentro de []. Para especificar un intervalo de caracteres, escriba los caracteres inicial y final separados por un guión (-), como en [a-z].|  
 |Un carácter cualquiera no perteneciente al conjunto|[^...]|Devuelve cualquier carácter que no se encuentre en el juego de caracteres que sigue a ^.|  
-|o bien|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
+|Or|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
 |Escape|\|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|  
 |Expresión de etiqueta|{}|Devuelve texto etiquetado con la expresión entre comillas.|  
 |Identificador de C/C++|:i|Devuelve la expresión ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadena entre comillas|:q|Devuelve la expresión (("[^"]*")&#124;('[^']\*')).|  
 |Espacio o tabulación|:b|Devuelve caracteres de espacio o tabulación.|  
-|Integer|:z|Devuelve la expresión ([0-9]+).|  
+|Entero|:z|Devuelve la expresión ([0-9]+).|  
   
  La lista de todas las expresiones regulares válidas en las operaciones de **Buscar y reemplazar** es más amplia que lo que se puede mostrar en este **Generador de expresiones**. En una cadena **Buscar** también puede insertar las expresiones regulares siguientes:  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de cuatro dígitos.|  
-|Agrupar|()|Agrupa una subexpresión.|  
+|Agrupación|()|Agrupa una subexpresión.|  
 |N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar** , \0 inserta todo el texto coincidente.|  
 |Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
 |Campo justificado a la izquierda|\\(-w,n)|En una expresión de **Reemplazar** , justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
@@ -83,7 +82,7 @@ ms.locfileid: "66063770"
   
  En la tabla siguiente se muestra la sintaxis de coincidencias para propiedades estándar de caracteres Unicode. La abreviatura de dos letras es la misma que la que aparece en la base de datos de propiedades de caracteres Unicode. Éstas se pueden especificar como parte de un juego de caracteres. Por ejemplo, la expresión [:Nd:Nl:No] devuelve cualquier tipo de dígito.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Letra en mayúscula|:Lu|Devuelve cualquier letra en mayúscula. Por ejemplo, :Luhe devuelve "The" pero no "the".|  
 |Letra en minúscula|:Ll|Devuelve cualquier letra en minúscula. Por ejemplo, :Llhe devuelve "the" pero no "The".|  
@@ -106,7 +105,7 @@ ms.locfileid: "66063770"
 |Marca de no-espaciado|:Mn|Devuelve marcas de no-espaciado.|  
 |Marca de combinación|:Mc|Devuelve marcas de combinación.|  
 |Marca contenedora|:Me|Devuelve marcas contenedoras.|  
-|Símbolo matemático|:Sm|Devuelve +, =, ~, &#124;, \<, y >.|  
+|Símbolo matemático|:Sm|Coincide con +, =, ~, &#124;, \<, and > .|  
 |Símbolo de moneda|:Sc|Devuelve $ y otros símbolos de moneda.|  
 |Símbolo de modificador|:Sk|Devuelve símbolos de modificador, como acentos circunflejos, acentos graves y acentos largos.|  
 |Otro símbolo|:So|Devuelve otros símbolos, como el signo de Copyright, el signo de antígrafo y el signo de grado.|  
@@ -118,11 +117,11 @@ ms.locfileid: "66063770"
   
  Además de las propiedades de caracteres Unicode, es posible especificar las siguientes propiedades adicionales como parte de un juego de caracteres.  
   
-|Expresión|Sintaxis|Descripción|  
+|Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
-|Numérico|:Nu|Devuelve cualquier número o dígito.|  
-|Signo de puntuación|:Pu|Devuelve cualquier signo de puntuación, como ?, @, ', etc.|  
+|Numeric|:Nu|Devuelve cualquier número o dígito.|  
+|Signos de puntuación|:Pu|Devuelve cualquier signo de puntuación, como ?, @, ', etc.|  
 |Espacio en blanco|:Wh|Devuelve cualquier tipo de espacio en blanco, incluidos los espacios de publicación y los ideográficos.|  
 |Bidireccional|:Bi|Devuelve caracteres de alfabetos con escritura de derecha a izquierda, como el árabe y el hebreo.|  
 |Hangul|:Ha|Devuelve caracteres de combinación y Hangul Jamos coreanos.|  
@@ -130,6 +129,6 @@ ms.locfileid: "66063770"
 |Katakana|:Ka|Devuelve caracteres Katakana.|  
 |Ideográfico/Han/Kanji|:Id|Devuelve caracteres ideográficos, como Han y Kanji.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)  

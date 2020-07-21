@@ -28,16 +28,16 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 01221e7bf5ff8b6bc0b8bb1a32f2aca66e8c6ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706140"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Barra diagonal inversa (continuación de línea) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\` divide una constante de cadena larga, de carácter o binaria, en dos o más líneas para facilitar la lectura.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "68495443"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<primera sección de la cadena>  
+ \<first section of string>  
  Es el principio de una cadena.  
   
- \<sección de continuación de la cadena>  
+ \<continued section of string>  
  Es la continuación de una cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Este comando devuelve las secciones primera y de continuación de la cadena como una cadena, sin la barra diagonal inversa. La nueva línea después de la barra diagonal inversa debe ser un carácter de avance de línea (U + 000A) o una combinación de retorno de carro (U + 000D) y avance de línea (U + 000A) en ese orden. 
 
 ## <a name="examples"></a>Ejemplos  

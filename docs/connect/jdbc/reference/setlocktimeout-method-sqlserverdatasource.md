@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95dc93b8695f9bfe464545ab5f1aa6096a4476be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8143233de52f1272cf63a31f79ed280cf5124a9a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974112"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925766"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>Método setLockTimeout (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void setLockTimeout(int lockTimeout)
   
  Un valor **int** que contiene el número de milisegundos que transcurrirán.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El tiempo de espera de bloqueo es el número de milisegundos que hay que esperar antes de que la base de datos informe del tiempo de espera para la exclusión. El valor predeterminado de -1 indica que la espera será indefinida. Si se especifica, este valor será el predeterminado para todas las instrucciones de la conexión.  
   
 > [!NOTE]  

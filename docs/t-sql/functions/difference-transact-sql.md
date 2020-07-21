@@ -17,18 +17,18 @@ helpviewer_keywords:
 - comparing SOUNDEX values
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe01e0d9465495cbf4943ba7867ebf262a1f3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b22244b43ca70dab2d549c62cae247137b649fec
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135930"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005910"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve un valor entero que mide la diferencia entre los valores de [SOUNDEX()](./soundex-transact-sql.md) de dos expresiones de caracteres diferentes.  
   
@@ -36,7 +36,7 @@ Esta función devuelve un valor entero que mide la diferencia entre los valores 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 DIFFERENCE ( character_expression , character_expression )  
 ```  
   
@@ -44,10 +44,10 @@ DIFFERENCE ( character_expression , character_expression )
 *character_expression*  
 Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) alfanumérica de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **int**  
  
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DIFFERENCE` compara dos valores `SOUNDEX` diferentes y devuelve un valor entero. Este valor mide el grado de coincidencia de los valores `SOUNDEX`, en una escala de 0 a 4. Un valor de 0 indica una similitud escasa o nula entre los valores de SOUNDEX; 4 indica que los valores son muy similares o incluso idénticos.  
   
 `DIFFERENCE` y `SOUNDEX` tienen distinción de intercalación.  

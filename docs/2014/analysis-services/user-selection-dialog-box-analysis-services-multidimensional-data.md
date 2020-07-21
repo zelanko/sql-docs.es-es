@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de selección de usuarios (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Selección de usuario (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f02f01e4f578dbe80f4b13ab2f324e0b8519ce8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938186"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Selección de usuarios (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Selección de usuarios** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para seleccionar los usuarios sobre los que va a filtrar consultas almacenadas en el registro de consultas del Asistente para optimización basada en el uso.  
@@ -25,11 +24,11 @@ ms.locfileid: "66065489"
  Para abrir el cuadro de diálogo **Selección de usuarios** , en el Asistente para optimización basada en el uso, vaya a la página **Especificar los criterios de consulta** y, en la opción **Usuarios** , haga clic en el botón de puntos suspensivos (…).  
   
 ## <a name="options"></a>Opciones  
- **Seleccione los usuarios**  
+ **Seleccionar usuarios**  
  Seleccione los usuarios en los que filtrar consultas desde el registro de consultas.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Especifique los criterios de consulta &#40;Asistente para optimización basada en uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Especificar criterios de consulta &#40;Asistente para optimización basada en el uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
   

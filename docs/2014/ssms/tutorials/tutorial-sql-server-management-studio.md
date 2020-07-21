@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 005e71195fc294ef7c2590886208d7184ec00474
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066346"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   El tutorial [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] le muestra el entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta una interfaz gráfica para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También permite implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, como bases de datos y almacenamientos de datos. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también proporciona editores de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML para editar y depurar scripts.  
@@ -42,10 +41,10 @@ ms.locfileid: "62753467"
  [Lección 1: Navegación básica en SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  En esta lección, aprenderá a utilizar los componentes de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], a configurar nuevamente el diseño del entorno y a restaurar el diseño predeterminado.  
   
- [Lección 2: Escribir Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Lección 2: Escribir Transact-SQL](lesson-2-writing-transact-sql.md)  
  En esta lección, aprenderá a abrir el Editor de consultas, a administrar código y a utilizar otras características nuevas del editor.  
   
- [Lección 3: Trabajar con plantillas, soluciones y proyectos de Script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lección 3: Trabajar con plantillas, soluciones, proyectos de script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  En esta lección, aprenderá a usar las plantillas y a organizar los scripts en soluciones y proyectos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -57,7 +56,7 @@ ms.locfileid: "62753467"
   
 -   Internet Explorer 9.0 o posterior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  
   
   

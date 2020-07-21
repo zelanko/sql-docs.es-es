@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5de15c91aec132d7ead409a726c867487cf2f745
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056255"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422362"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Guardar un paquete en el sistema de archivos
   Este procedimiento describe cómo guardar un paquete existente en el sistema de archivos como archivo .dtsx.  
@@ -37,8 +36,8 @@ ms.locfileid: "66056255"
     > [!NOTE]  
     >  Puede comprobar la ruta y el nombre de archivo donde se guardó el paquete en la ventana Propiedades.  
   
-## <a name="see-also"></a>Vea también  
- [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;paquetes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Guardar una copia de un paquete](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

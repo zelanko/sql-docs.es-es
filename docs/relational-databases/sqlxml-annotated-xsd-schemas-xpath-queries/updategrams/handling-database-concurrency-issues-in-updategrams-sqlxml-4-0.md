@@ -1,6 +1,6 @@
 ---
-title: Control de problemas de simultaneidad de la base de datos en actualización (SQLXML 4.0) | Documentos de Microsoft
-ms.custom: ''
+title: Problemas de simultaneidad de bases de datos en diagramas (SQLXML)
+description: Aprenda a usar el mecanismo de control de simultaneidad optimista en diagramas (SQLXML 4,0) para controlar los problemas de simultaneidad de bases de datos.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11e4a7a875dd2c9b9450619f389b2f082136c536
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790587"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Controlar problemas de simultaneidad de base de datos en diagramas de actualización (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Actualización incluye estos valores de instantánea en el  **\<antes >** bloque de la actualización. Antes de actualizar la base de datos, updategram comprueba los valores que se especifican en el  **\<antes >** bloque contra los valores actualmente en la base de datos para asegurarse de que la actualización es válida.  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  Al igual que otros mecanismos de actualización de base de datos, los diagramas de actualización deben lidiar con actualizaciones simultáneas de datos en un entorno multiusuario. Los diagramas de actualización usan el control de simultaneidad optimista, que usa la comparación de datos de campos de selección como instantáneas para asegurarse de que otra aplicación de usuario no haya modificado los datos que van a actualizarse desde que se leyeron de la base de datos. Diagramas incluye estos valores de instantánea en el **\<before>** bloque de diagramas. Antes de actualizar la base de datos, diagrama comprueba los valores especificados en el **\<before>** bloque con los valores que hay actualmente en la base de datos para asegurarse de que la actualización es válida.  
   
  El control de simultaneidad optimista ofrece tres niveles de protección en un diagrama de actualización: bajo (ninguno), intermedio y alto. Puede decidir qué nivel de protección necesita especificando el diagrama de actualización en consecuencia.  
   
 ## <a name="lowest-level-of-protection"></a>Nivel de protección más bajo  
- Este nivel es en realidad una actualización “ciega”, donde la actualización se procesa sin hacer referencia a otras actualizaciones que se hayan realizado desde que la base de datos se leyó por última vez. En tal caso, se especifican las columnas de clave principales en la  **\<antes >** bloquear para identificar el registro y especificar la información actualizada de la  **\<después de >** bloque.  
+ Este nivel es en realidad una actualización “ciega”, donde la actualización se procesa sin hacer referencia a otras actualizaciones que se hayan realizado desde que la base de datos se leyó por última vez. En tal caso, solo se especifican las columnas de clave principal en el **\<before>** bloque para identificar el registro y se especifica la información actualizada en el **\<after>** bloque.  
   
- Por ejemplo, el nuevo número de teléfono del contacto en el diagrama de actualización siguiente es correcto, independientemente de cuál fuera el número de teléfono anterior. Observe cómo el  **\<antes >** bloque especifica sólo la columna de clave principal (ID de contacto).  
+ Por ejemplo, el nuevo número de teléfono del contacto en el diagrama de actualización siguiente es correcto, independientemente de cuál fuera el número de teléfono anterior. Observe cómo el **\<before>** bloque especifica únicamente la columna de clave principal (ContactID).  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -55,9 +56,9 @@ ms.locfileid: "68086864"
 ## <a name="intermediate-level-of-protection"></a>Nivel de protección intermedio  
  En este nivel de protección, el diagrama de actualización compara los valores actuales de los datos que se están actualizando con los valores de las columnas de la base de datos para asegurarse de que ninguna otra transacción los haya modificado desde que la transacción del usuario leyó el registro.  
   
- Puede obtener este nivel de protección mediante la especificación de las columnas de clave principales y las columnas que se están actualizando en el  **\<antes >** bloque.  
+ Puede obtener este nivel de protección si especifica las columnas de clave principal y las columnas que se van a actualizar en el **\<before>** bloque.  
   
- Por ejemplo, este diagrama de actualización cambia el valor de la columna Phone de la tabla Person.Contact para el contacto cuyo ContactID es igual a 1. La  **\<antes >** bloque especifica la **teléfono** atributo para garantizar que este valor de atributo coincide con el valor de la columna correspondiente en la base de datos antes de aplicar el valor actualizado .  
+ Por ejemplo, este diagrama de actualización cambia el valor de la columna Phone de la tabla Person.Contact para el contacto cuyo ContactID es igual a 1. El **\<before>** bloque especifica el atributo **Phone** para asegurarse de que este valor de atributo coincide con el valor de la columna correspondiente en la base de datos antes de aplicar el valor actualizado.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -77,11 +78,11 @@ ms.locfileid: "68086864"
   
  Existen dos formas de obtener este nivel de protección alto en las actualizaciones simultáneas:  
   
--   Especificar columnas adicionales en la tabla de la  **\<antes >** bloque.  
+-   Especifique columnas adicionales en la tabla en el **\<before>** bloque.  
   
-     Si especifica columnas adicionales en el  **\<antes >** bloque de updategram compara los valores que se especifican para estas columnas con los valores que se encontraban en la base de datos antes de aplicar la actualización. Si alguna de las columnas del registro ha cambiado desde que la transacción leyó el registro, el diagrama de actualización no realizará la actualización.  
+     Si especifica columnas adicionales en el **\<before>** bloque, diagrama compara los valores especificados para estas columnas con los valores que estaban en la base de datos antes de aplicar la actualización. Si alguna de las columnas del registro ha cambiado desde que la transacción leyó el registro, el diagrama de actualización no realizará la actualización.  
   
-     Por ejemplo, el siguiente updategram actualiza el nombre de la tecla MAYÚS, pero especifica columnas adicionales (StartTime, EndTime) en el  **\<antes >** bloque, para indicar un mayor nivel de protección contra concurrentes actualizaciones.  
+     Por ejemplo, el siguiente diagrama actualiza el nombre de desplazamiento, pero especifica columnas adicionales (StartTime, EndTime) en el **\<before>** bloque, lo que solicita un mayor nivel de protección frente a las actualizaciones simultáneas.  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -99,15 +100,15 @@ ms.locfileid: "68086864"
     </ROOT>  
     ```  
   
-     Este ejemplo especifica el máximo nivel de protección mediante la especificación de todos los valores de columna para el registro en el  **\<antes >** bloque.  
+     Este ejemplo especifica el nivel de protección más alto especificando todos los valores de columna del registro en el **\<before>** bloque.  
   
--   Especifique la columna de marca de tiempo (si está disponible) en el  **\<antes >** bloque.  
+-   Especifique la columna de marca de tiempo (si está disponible) en el **\<before>** bloque.  
   
-     En lugar de especificar todas las columnas del registro en el  **\<antes**> bloque, sólo puede especificar la columna de marca de tiempo (si la tabla tiene uno), junto con las columnas de clave principal en el  **\<antes >** bloque. La base de datos actualizará la columna de marca de tiempo a un valor único tras cada actualización del registro. En este caso, el diagrama de actualización compara el valor de la marca de tiempo con el valor correspondiente de la base de datos. El valor de marca de tiempo almacenado en la base de datos es un valor binario. Por lo tanto, se debe especificar la columna de marca de tiempo en el esquema como **dt:type="bin.hex"** , **dt:type="bin.base64"** , o **SQL: DataType = "timestamp"** . (Puede especificar el **xml** tipo de datos o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos.)  
+     En lugar de especificar todas las columnas de registro en el bloque * * \<before**> , solo puede especificar la columna de marca de tiempo (si la tabla tiene una) junto con las columnas de clave principal en el **\<before>** bloque. La base de datos actualizará la columna de marca de tiempo a un valor único tras cada actualización del registro. En este caso, el diagrama de actualización compara el valor de la marca de tiempo con el valor correspondiente de la base de datos. El valor de marca de tiempo almacenado en la base de datos es un valor binario. Por lo tanto, la columna TIMESTAMP debe especificarse en el esquema como **DT: type = "bin. hex"**, **DT: type = "bin. base64"** o **SQL: DataType = "timestamp"**. (Puede especificar el tipo de datos **XML** o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos).  
   
 #### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
-1.  Cree esta tabla en la **tempdb** base de datos:  
+1.  Cree esta tabla en la base de datos **tempdb** :  
   
     ```  
     USE tempdb  
@@ -167,7 +168,7 @@ ms.locfileid: "68086864"
   
 5.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el esquema XDR equivalente:  
   
@@ -188,7 +189,7 @@ ms.locfileid: "68086864"
 </Schema>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

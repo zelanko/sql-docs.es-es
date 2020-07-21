@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e9fa606aab5d42a7b56171ca3720742d4d119a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963507"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751058"
 ---
 # <a name="refresh-method-rds"></a>Método Refresh (RDS)
-Vuelve a consultar el origen de datos especificado en el [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad y las actualizaciones de los resultados de consulta.  
+Vuelve a consultar el origen de datos especificado en la propiedad [Connect](../../../ado/reference/rds-api/connect-property-rds.md) y actualiza los resultados de la consulta.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,22 +39,22 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>Parámetros  
  *DataControl*  
- Una variable de objeto que representa un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Comentarios  
- Debe establecer el [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), y [SQL](../../../ado/reference/rds-api/sql-property.md) propiedades antes de usar el **actualizar** método. Todos los controles enlazados a datos en el formulario asociado con un **RDS. DataControl** objeto reflejará el nuevo conjunto de registros. Las preexistentes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) se libera el objeto y se descartan los cambios no guardados. El **actualizar** método convierte automáticamente el primer registro del registro actual.  
+## <a name="remarks"></a>Observaciones  
+ Debe establecer las propiedades [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)y [SQL](../../../ado/reference/rds-api/sql-property.md) antes de usar el método **Refresh** . Todos los controles enlazados a datos del formulario asociados a un **objeto RDS. **El objeto DataControl reflejará el nuevo conjunto de registros. Se libera cualquier objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) ya existente y se descartan los cambios no guardados. El método **Refresh** convierte automáticamente el primer registro en el registro actual.  
   
- Es una buena idea para llamar a la **actualizar** método periódicamente cuando se trabaja con datos. Si recuperar los datos y, a continuación, deje en un equipo cliente durante un tiempo, es probable que quede obsoleta. Es posible que los cambios que realice se producirá un error, porque otra persona podría haber cambiado el registro y enviado cambios.  
+ Se recomienda llamar al método **Refresh** periódicamente al trabajar con datos. Si recupera datos y, a continuación, los deja en un equipo cliente durante un tiempo, es probable que quede obsoleto. Es posible que se produzcan errores en cualquier cambio que realice, ya que otra persona podría haber cambiado el registro y enviado los cambios antes de usted.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Vea también  
- [Actualización de ejemplo del método (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Actualización de ejemplo del método (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo del método Refresh (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [Ejemplo del método Refresh (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [Botones de comando de la libreta de direcciones](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Método CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Actualizar (método) (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
+ [Refresh (método) (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

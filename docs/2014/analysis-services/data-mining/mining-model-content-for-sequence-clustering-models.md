@@ -1,5 +1,5 @@
 ---
-title: Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083565"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521277"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia(Analysis Services - Minería de datos)
-  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de secuencia de Microsoft. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de secuencia de Microsoft. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Descripción de la estructura de un modelo de agrupación en clústeres de secuencia  
  Un modelo de agrupación en clústeres de secuencia tiene un nodo primario único (NODE_TYPE = 1) que representa el modelo y sus metadatos. El nodo primario, que se etiqueta **(Todos)**, tiene un nodo de secuencia relacionado (NODE_TYPE = 13) que muestra todas las transiciones que se hayan detectado en los datos de entrenamiento.  
   
- ![Estructura del modelo de clústeres de secuencia](../media/modelcontent-seqclust.gif "estructura del modelo de clústeres de secuencia")  
+ ![Estructura de un modelo de agrupación en clústeres de secuencia](../media/modelcontent-seqclust.gif "Estructura de un modelo de agrupación en clústeres de secuencia")  
   
  El algoritmo también crea varios clústeres, según las transiciones que se encontraran en los datos y cualquier otro atributo de entrada incluido al crear el modelo, como la información demográfica de los clientes o de otro tipo. Cada clúster (NODE_TYPE = 5) contiene su propio nodo de secuencia (NODE_TYPE = 13) que muestra únicamente las transiciones que se utilizaron para generar ese clúster concreto. A partir del nodo de secuencia, puede explorar en profundidad para ver los detalles de las transiciones de estados individuales (NODE_TYPE = 14).  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66083565"
  Siempre en blanco.  
   
  NODE_NAME  
- Nombre del nodo. Actualmente, el mismo valor que NODE_UNIQUE_NAME.  
+ El nombre del nodo. Actualmente, el mismo valor que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo.  
@@ -151,14 +150,14 @@ ms.locfileid: "66083565"
 |Nodos de secuencia para clústeres individuales|Varios nodos con transiciones para las secuencias en ese clúster únicamente|Exactamente la misma información que en los nodos de clúster individuales.|  
 |Transiciones|Ningún nodo secundario|Muestra las transiciones para el primer estado relacionado.<br /><br /> La compatibilidad un valor ajustado, que indica los casos que toman parte en cada transición. La probabilidad es la probabilidad ajustada, representada como un porcentaje.|  
   
-###  <a name="bkmk_NODEDIST"></a> Tabla NODE_DISTRIBUTION  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION tabla  
  En la tabla NODE_DISTRIBUTION se proporciona información detallada de la compatibilidad y la probabilidad de las transiciones y secuencias de un clúster concreto.  
   
- Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información acerca de lo que el `Missing` valor medio, y cómo afecta a los cálculos, vea [los valores que faltan &#40;Analysis Services - minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información sobre lo que `Missing` significa el valor y cómo afecta a los cálculos, vea [valores ausentes &#40;Analysis Services-&#41;de minería de datos ](missing-values-analysis-services-data-mining.md).  
   
  Los cálculos de compatibilidad y probabilidad difieren en función de si el cálculo se aplica a los casos de entrenamiento o al modelo terminado. Esto se debe a que el método de agrupación en clústeres predeterminado, maximización de la expectativa (EM), supone que cualquier caso puede pertenecer a más de un clúster. Al calcular la compatibilidad para los casos en el modelo, es posible utilizar recuentos netos y probabilidades netas. Sin embargo, las probabilidades de una secuencia determinada en un clúster deben ser compensadas por la suma de todas las combinaciones posibles de clústeres y secuencias.  
   
-###  <a name="bkmk_cardinality"></a> Cardinalidad  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a>Cardinalidad  
  En un modelo de agrupación en clústeres, la cardinalidad del nodo primario generalmente indica cuántos clústeres contiene el modelo. Sin embargo, un modelo de agrupación en clústeres de secuencia tiene dos tipos de nodos en el nivel de clúster: un tipo de nodo contiene los clústeres y el otro contiene una lista de secuencias para el modelo como un todo.  
   
  Por consiguiente, para obtener información sobre el número de clústeres del modelo, puede tomar el valor de NODE_CARDINALITY para el nodo (Todos) y restar uno. Por ejemplo, si el modelo creara 9 clústeres, la cardinalidad de la raíz del modelo sería de 10. Esto es porque el modelo contiene 9 nodos de clúster, cada uno con su propio nodo de secuencia, más un nodo de secuencia adicional denominado clúster 10, que representa las secuencias para el modelo.  
@@ -233,17 +232,17 @@ ORDER BY Count(*) DESC
 |Producto|Compatibilidad (tabla NODE_DISTRIBUTION)|Probabilidad (tabla NODE_DISTRIBUTION))|Probabilidad (del gráfico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(no se muestra)|  
-|Cycling Cap|10.876056|0.030985915|0.03|  
-|Fender Set - Mountain|80.087324|0.228169014|0.23|  
+|Cycling Cap|10.876056|0.030985915|0,03|  
+|Fender Set - Mountain|80.087324|0.228169014|0,23|  
 |Half-Finger Gloves|0.9887324|0.002816901|0.00|  
 |Hydration Pack|0.9887324|0.002816901|0.00|  
-|LL Mountain Tire|51.414085|0.146478873|0.15|  
-|Long-Sleeve Logo Jersey|2.9661972|0.008450704|0.01|  
-|Mountain Bottle Cage|87.997183|0.250704225|0.25|  
-|Mountain Tire Tube|16.808451|0.047887324|0.05|  
-|Short-Sleeve Classic Jersey|10.876056|0.030985915|0.03|  
+|LL Mountain Tire|51.414085|0.146478873|0,15|  
+|Long-Sleeve Logo Jersey|2.9661972|0.008450704|0,01|  
+|Mountain Bottle Cage|87.997183|0.250704225|0,25|  
+|Mountain Tire Tube|16.808451|0.047887324|0,05|  
+|Short-Sleeve Classic Jersey|10.876056|0.030985915|0,03|  
 |Sport-100|20.76338|0.05915493|0.06|  
-|Water Bottle|18.785915|0.053521127|0.25|  
+|Water Bottle|18.785915|0.053521127|0,25|  
   
  Aunque el caso que seleccionamos inicialmente en los datos de entrenamiento contenía el producto 'Mountain-500' seguido de 'LL Mountain Tire', puede ver que hay muchas otras secuencias posibles. Para buscar información detallada de un clúster en especial, debe repetir el proceso de explorar en profundidad en la lista de secuencias del clúster hasta las transiciones reales de cada estado o producto.  
   
@@ -260,9 +259,9 @@ ORDER BY Count(*) DESC
   
  Para conocer cómo obtener la lista de rutas de acceso observadas consultando el contenido del modelo y ver otros ejemplos de consultas en un modelo de agrupación en clústeres de secuencia, vea [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md)  
   
   

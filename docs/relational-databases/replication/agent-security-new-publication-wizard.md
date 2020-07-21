@@ -12,23 +12,23 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: db3e9b71b5e19e4dec55d64f9e0dde75a38947f5
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b4ce62808a8613cb39200231badcf2e853dcc7af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85739134"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Seguridad del agente (Asistente para nueva publicación)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La página **Seguridad del agente** permite especificar las cuentas en las que se ejecutarán los siguientes agentes y a partir de las cuales establecerán conexiones con los equipos que conforman una topología de replicación:  
   
 -   Agente de instantáneas para todas las publicaciones.  
   
 -   Agente de registro del LOG para todas las publicaciones transaccionales.  
   
--   Agente de lectura de cola para publicaciones transaccionales que permiten suscripciones actualizables. Se crea el trabajo de Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente a este agente si especificó **Publicación transaccional con suscripciones actualizables** en la página **Tipo de publicación** , independientemente del tipo de suscripciones actualizables que se use. Para obtener más información sobre las suscripciones actualizables, consulte [Suscripciones actualizables para replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+-   Agente de lectura de cola para publicaciones transaccionales que permiten suscripciones actualizables. Se crea el trabajo de Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente a este agente si se ha especificado **Publicación transaccional con suscripciones actualizables** en la página **Tipo de publicación**, independientemente del tipo de suscripciones actualizables que se use. Para obtener más información sobre las suscripciones actualizables, vea [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) y [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68770778"
   
  Haga clic en **Ayuda** en el cuadro de diálogo **Seguridad del Agente de instantáneas** para obtener más información sobre los permisos requeridos para las cuentas utilizadas por el Agente de instantáneas.  
   
- **Agente de registro del LOG**  
+ **Agente de lector del registro**  
  Se muestra en todas las publicaciones transaccionales. Haga clic en **Configuración de seguridad** para especificar la configuración de seguridad en el cuadro de diálogo **Seguridad del Agente de registro del LOG** .  
   
  Haga clic en **Ayuda** en el cuadro de diálogo **Seguridad del Agente de registro del LOG** para obtener más información sobre los permisos requeridos para las cuentas utilizadas por el Agente de registro del LOG.  
@@ -47,7 +47,7 @@ ms.locfileid: "68770778"
 >  Existe un Agente de registro del LOG para cada base de datos que se publica utilizando la replicación transaccional. Si ya existe una publicación transaccional en la base de datos, la configuración de seguridad será de solo lectura. Es posible modificar la configuración del cuadro de diálogo **Propiedades de la publicación** , aunque los cambios afectarán a todas las publicaciones transaccionales de la base de datos.  
   
  **Agente de lectura de cola**  
- Se muestra para las publicaciones transaccionales que admiten suscripciones actualizables Haga clic en **Configuración de seguridad** para especificar la configuración de seguridad en el cuadro de diálogo **Seguridad del Agente de lectura de cola** . Se crea un trabajo de Agente de lectura de cola cuando finaliza este asistente. Esto no depende de que se hayan creado suscripciones de actualización en cola. Si no tiene previsto crear una suscripción de actualización en cola, puede deshabilitar el trabajo. Haga clic con el botón derecho en el trabajo (que recibe un nombre con el formato: *[\<Publisher>].\<integer>* .) en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Trabajos del **Agente** y después haga clic en **Deshabilitar**.  
+ Se muestra para las publicaciones transaccionales que admiten suscripciones actualizables Haga clic en **Configuración de seguridad** para especificar la configuración de seguridad en el cuadro de diálogo **Seguridad del Agente de lectura de cola** . Se crea un trabajo de Agente de lectura de cola cuando finaliza este asistente. Esto no depende de que se hayan creado suscripciones de actualización en cola. Si no tiene previsto crear una suscripción de actualización en cola, puede deshabilitar el trabajo. Haga clic con el botón derecho en el trabajo (con el formato de nombre *[\<Publisher>].\<integer>* .) en la carpeta **Trabajos** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, después, haga clic en **Deshabilitar**.  
   
  Haga clic en **Ayuda** en el cuadro de diálogo **Seguridad del Agente de lectura de cola** para obtener más información sobre los permisos requeridos para las cuentas utilizadas por el Agente de lectura de cola.  
   

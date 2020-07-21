@@ -1,5 +1,6 @@
 ---
 title: 'Limitar el historial de informes: Reporting Services | Microsoft Docs'
+description: Obtenga información sobre cómo configurar el historial de informes para un servidor de informes. Aprenda también a configurar un historial de informes para un informe específico.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2dd66078363e281c2a73bfcc70ba685493bc3b88
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 634a033c06b2ed6815e32cf97829118dafa13b5f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492593"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79510126"
 ---
 # <a name="limit-report-history---reporting-services"></a>Limitar el historial de informes: Reporting Services
   El historial de informes es un conjunto de instantáneas de informe que se crean a lo largo del tiempo. Puede crear el historial de informes a petición o programar la frecuencia con que una instantánea se crea y se agrega al historial de informes.  
@@ -40,7 +41,7 @@ ms.locfileid: "67492593"
   
 1.  En el Administrador de informes, navegue al informe para el cual desea configurar el historial y, a continuación, haga clic en el informe para abrirlo.  
   
-2.  Haga clic en la pestaña **Propiedades** .  
+2.  Haga clic en la pestaña **Propiedades**.  
   
 3.  Haga clic en la pestaña **Historial** .  
   
@@ -66,7 +67,7 @@ ms.locfileid: "67492593"
   
 1.  En el portal web, navegue al informe para el cual desea configurar el historial y, a continuación, haga clic en el informe para abrirlo.  
   
-2.  Haga clic en la pestaña **Propiedades** .  
+2.  Haga clic en la pestaña **Propiedades**.  
   
 3.  Haga clic en la pestaña **Historial** .  
   

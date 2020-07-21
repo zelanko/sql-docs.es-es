@@ -1,6 +1,7 @@
 ---
-title: 'Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada | Microsoft Docs'
-ms.custom: ''
+title: 'Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada'
+description: Tutorial que le enseña a crear y aplicar una directiva Desactivado de forma predeterminada para la administración basada en directivas en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: security
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760476"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 El uso de directivas de administración basada en directivas permite administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uno o varios objetos de instancia, instancias de servidor, una o varias bases de datos o uno o varios objetos de base de datos. Como administrador de bases de datos, debe asegurarse de que ciertos servidores no tienen habilitado Correo electrónico de base de datos. En esta lección, creará una condición y una directiva que establezca esa opción de servidor. Probará el servidor para ver si cumple con la directiva. A continuación, utilizará la directiva para volver a configurar el servidor de modo que cumpla con ella.  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y acceso a un servidor que ejecute SQL Server. 
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

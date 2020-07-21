@@ -20,10 +20,10 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 10deeb5de3a74e765f99a76d59d2184a6b76b106
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294013"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
@@ -35,13 +35,13 @@ ms.locfileid: "71294013"
   
  Una restricción de precedencia vincula dos ejecutables: el ejecutable de precedencia y el ejecutable restringido. El ejecutable de precedencia se ejecuta antes del ejecutable restringido y el resultado de la ejecución del ejecutable de precedencia puede determinar si se ejecuta el ejecutable restringido. El siguiente diagrama muestra dos ejecutables vinculados por una restricción de precedencia.  
   
- ![Ejecutables conectados mediante una restricción de precedencia](../../integration-services/control-flow/media/ssis-pcsimple.gif "Executables connected by a precedence constraint")  
+ ![Ejecutables conectados mediante una restricción de precedencia](../../integration-services/control-flow/media/ssis-pcsimple.gif "Ejecutables conectados mediante una restricción de precedencia")  
   
  En un flujo de control lineal, es decir, un flujo sin bifurcaciones, las restricciones de precedencia controlan ellas mismas la secuencia en que se ejecutan las tareas. Si un flujo de control se bifurca, el motor de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] determina el orden de ejecución entre las tareas y contenedores que siguen inmediatamente la bifurcación. El motor de tiempo de ejecución también determina el orden de ejecución entre los flujos de trabajo no conectados en un flujo de control.  
   
  La arquitectura de contenedor anidado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] habilita todos los contenedores, salvo el contenedor del host de la tarea que encapsula una sola tarea, para incluir otros contenedores, cada uno de los cuales tiene su propio flujo de control. Los contenedores de bucles For, de bucles Foreach y de secuencia pueden incluir varias tareas y otros contenedores, que a su vez pueden incluir varias tareas y contenedores. Por ejemplo, un paquete con una tarea Script y un contenedor de secuencias tiene una restricción de precedencia que vincula la tarea Script y el contenedor de secuencias. El contenedor de secuencias incluye tres tareas Script y las restricciones de precedencia vinculan las tres tareas Script en un flujo de control. El siguiente diagrama muestra las restricciones de precedencia en un paquete con dos niveles de anidamiento.  
   
- ![Restricciones de precedencia en un paquete](../../integration-services/control-flow/media/mw-dts-12.gif "Precedence contraints in a package")  
+ ![Restricciones de precedencia en un paquete](../../integration-services/control-flow/media/mw-dts-12.gif "Restricciones de precedencia en un paquete")  
   
  Dado que el paquete se encuentra en la parte superior de la jerarquía de contenedores de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , no se pueden vincular varios paquetes mediante restricciones de precedencia. Sin embargo, puede agregar una tarea Ejecutar paquete a un paquete y vincular indirectamente otro paquete en el flujo de control.  
   
@@ -116,16 +116,16 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
  **Operación de evaluación**  
  Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
   
- **Value**  
+ **Valor**  
  Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**.  
   
 > [!NOTE]  
 >  La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
   
- **Expresión**  
+ **Expression**  
  Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión o inicie el Generador de expresiones para crear la expresión. La expresión debe evaluarse como un valor booleano.  
   
- **Prueba**  
+ **Test**  
  Permite validar la expresión.  
   
  **Y lógico**  
@@ -154,11 +154,11 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
     |--------------------------|--------------------------|  
     |Descripción|Escribir una descripción.|  
     |EvalOp|Seleccionar una operación de evaluación. Si seleccionan las operaciones **Expression**, **ExpressionAndConstant**o **ExpressionOrConstant** , se puede especificar una expresión.|  
-    |Expresión|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
+    |Expression|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |AND lógico|Configure **AND lógico** para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido.|  
     |Nombre|Actualizar el nombre de la restricción de precedencia.|  
     |ShowAnnotation|Especificar el tipo de anotación que se va a usar. Elija **Never** para deshabilitar anotaciones, **AsNeeded** para habilitar anotaciones a petición, **ConstraintName** para realizar anotaciones automáticamente usando el valor de la propiedad Name, **ConstraintDescription** para realizar anotaciones automáticamente usando el valor de la propiedad Description y **ConstraintOptions** para realizar anotaciones automáticamente al usar el valor de las propiedades Value y Expression.|  
-    |Valor|Si la operación de evaluación especificada en la propiedad EvalOP contiene una restricción, seleccione el resultado de la ejecución del ejecutable de restricción.|  
+    |Value|Si la operación de evaluación especificada en la propiedad EvalOP contiene una restricción, seleccione el resultado de la ejecución del ejecutable de restricción.|  
   
 5.  Cierre la ventana Propiedades.  
   
@@ -183,11 +183,11 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
  En la ilustración siguiente, la tarea A y la tarea B están vinculadas por una restricción de precedencia que usa un resultado de ejecución y una expresión. El valor de restricción se establece en **Success** y la expresión es  `@X >== @Z`. La tarea B, la tarea restringida, se ejecuta solamente si la tarea A se completa correctamente y el valor de la variable **X** es mayor o igual al valor de la variable **Z**.  
   
- ![Restricciones de precedencia entre dos tareas](../../integration-services/control-flow/media/mw-dts-03.gif "Precedence constraint between two tasks")  
+ ![Restricciones de precedencia entre dos tareas](../../integration-services/control-flow/media/mw-dts-03.gif "Restricciones de precedencia entre dos tareas")  
   
  Los ejecutables también se pueden vincular mediante varias restricciones de precedencia que contienen diferentes expresiones. Por ejemplo, en la siguiente ilustración, las tareas B y C están vinculadas a la tarea A por restricciones de precedencia que usan resultados de ejecución y expresiones. Los dos valores de restricción se establecen en **Success**. Una restricción de precedencia incluye la expresión `@X >== @Z`, y la otra restricción de precedencia la expresión `@X < @Z`. Según los valores de la variable **X** y la variable **Z**, se ejecuta la tarea C o la tarea B.  
   
- ![Expresiones en restricciones de precedencia](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions on precedence constraints")  
+ ![Expresiones en restricciones de precedencia](../../integration-services/control-flow/media/mw-dts-04.gif "Expresiones en restricciones de precedencia")  
   
  Puede agregar o modificar una expresión mediante el **Editor de restricciones de precedencia** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o en la ventana Propiedades que proporciona [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Sin embargo, la ventana Propiedades no proporciona ninguna comprobación de la sintaxis de la expresión.  
   
@@ -218,8 +218,8 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Restricción|True|N/D|True|  
 |Restricción|False|N/D|False|  
-|Expresión|N/D|True|True|  
-|Expresión|N/D|False|False|  
+|Expression|N/D|True|True|  
+|Expression|N/D|False|False|  
 |Restricción y expresión|True|True|True|  
 |Restricción y expresión|True|False|False|  
 |Restricción y expresión|False|True|False|  
@@ -231,11 +231,11 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
 
 
 ## <a name="complex-constraint-scenarios-with-multiple-precedence-constraints"></a>Escenarios de restricciones complejas con varias restricciones de precedencia 
-Una restricción de precedencia conecta dos ejecutables: dos tareas, dos contenedores o uno de cada. Se conocen como el ejecutable de precedencia y el ejecutable restringido. Un ejecutable restringido puede tener varias restricciones de precedencia. Para más información, consulte [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+Una restricción de precedencia conecta dos ejecutables: dos tareas, dos contenedores o uno de cada. Se conocen como el ejecutable de precedencia y el ejecutable restringido. Un ejecutable restringido puede tener varias restricciones de precedencia. Para obtener más información, vea [Restricciones de precedencia](../../integration-services/control-flow/precedence-constraints.md).  
   
  El ensamblaje de escenarios de restricciones complejas mediante la agrupación de restricciones le permite implementar un flujo de control complejo en paquetes. Por ejemplo, en la siguiente ilustración, la tarea D se vincula a la tarea A mediante una restricción **Success** , la tarea D se vincula a la tarea B mediante una restricción **Failure** , y la tarea D se vincula a la tarea C mediante una restricción **Success** . Las restricciones de precedencia entre la tarea D y la tarea A, entre la tarea D y la tarea B, y entre la tarea D y la tarea C participan en una relación lógica *and* . Por lo tanto, para que la tarea D se ejecute, la tarea A se debe ejecutar correctamente, la tarea B debe sufrir un error en su ejecución, y la tarea C se debe ejecutar correctamente.  
   
- ![Tareas vinculadas por las restricciones de precedencia](../../integration-services/control-flow/media/precedenceconstraints.gif "Tasks linked by precedence constraints")  
+ ![Tareas vinculadas por las restricciones de precedencia](../../integration-services/control-flow/media/precedenceconstraints.gif "Tareas vinculadas por las restricciones de precedencia")  
   
 ### <a name="logicaland-property"></a>Propiedad LogicalAnd  
  Si una tarea o contenedor tiene varias restricciones, la propiedad **LogicalAnd** especifica si se evalúa una restricción de precedencia individualmente o en conjunto con otras restricciones.  
@@ -255,7 +255,7 @@ Cuando se usa por primera vez el Diseñador [!INCLUDE[ssIS](../../includes/ssis-
   
 5.  En la lista desplegable, elija **Usar una restricción de error en la operación para la nueva forma** o **Usar una restricción de operación completada para la nueva forma**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ## <a name="create-a-default-precedence-constraint"></a>Crear una restricción de precedencia predeterminada  
   

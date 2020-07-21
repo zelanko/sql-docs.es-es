@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ffcb57a48c7d6e265daa786912cfd37f0b43754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001527"
 ---
 # <a name="comments-mdx-syntax"></a>Comentarios (sintaxis de MDX)
@@ -22,20 +22,20 @@ ms.locfileid: "68001527"
   
  Los comentarios MDX deben seguir las siguientes directrices:  
   
--   En los comentarios se pueden usar todos los caracteres o símbolos alfanuméricos.  Se omiten todos los caracteres dentro de un comentario.  
+-   En los comentarios se pueden usar todos los caracteres o símbolos alfanuméricos.  Se omiten todos los caracteres de un comentario.  
   
 -   No hay longitud máxima para un comentario dentro de una instrucción o script. Un comentario puede estar formado por una o varias líneas.  
   
  MDX admite tres tipos de caracteres para indicar comentarios:  
   
  // (barras diagonales dobles)  
- Estos caracteres de comentarios se pueden usar en la misma línea que el código que se va a ejecutar o en una línea aparte. Todo lo que se encuentre entre las barras diagonales dobles y el final de la línea es parte del comentario. En el caso de que un comentario ocupe varias líneas, las barras diagonales dobles deben aparecer al inicio de cada línea de comentarios. Para obtener más información, consulte [ &#40;comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
+ Estos caracteres de comentarios se pueden usar en la misma línea que el código que se va a ejecutar o en una línea aparte. Todo lo que se encuentre entre las barras diagonales dobles y el final de la línea es parte del comentario. En el caso de que un comentario ocupe varias líneas, las barras diagonales dobles deben aparecer al inicio de cada línea de comentarios. Para obtener más información, vea [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md).  
   
  -- (guiones dobles)  
- Estos caracteres de comentarios se pueden usar en la misma línea que el código que se va a ejecutar o en una línea aparte. Todo lo que se encuentre entre los dos guiones y el final de la línea es parte del comentario. En el caso de que un comentario ocupe varias líneas, los guiones dobles deben aparecer al principio de cada línea de comentarios. Para obtener más información, consulte [-- &#40;comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
+ Estos caracteres de comentarios se pueden usar en la misma línea que el código que se va a ejecutar o en una línea aparte. Todo lo que se encuentre entre los dos guiones y el final de la línea es parte del comentario. En el caso de que un comentario ocupe varias líneas, los guiones dobles deben aparecer al principio de cada línea de comentarios. Para obtener más información, consulte [--&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md).  
   
- /* ... \*/ (barra diagonal y asterisco pares de caracteres)  
- Estos caracteres de comentarios se pueden usar en la misma línea que el código que se va a ejecutar, en líneas separadas o, incluso, en el código ejecutable. Todo, desde el par de comentario de apertura (/\*) para el par de comentario de cierre (\*/) se considera parte del comentario. Para un comentario de varias líneas, el par de caracteres de apertura de comentario (/\*) debe iniciar el comentario y el par de caracteres de cierre de comentario (\*/) debe finalizarlo. Ningún otro carácter de comentario puede aparecer en las líneas de comentario. Para obtener más información, consulte [/ *... \*/ (Comentario)](../mdx/comment-mdx.md).  
+ /* ... \*/(pareja de caracteres de barra diagonal y asterisco)  
+ Estos caracteres de comentarios se pueden usar en la misma línea que el código que se va a ejecutar, en líneas separadas o, incluso, en el código ejecutable. Todo lo que haya desde el par de\*comentario de apertura (/) hasta\*el par de comentario de cierre (/) se considera parte del comentario. En el caso de los comentarios de varias líneas, el par de caracteres de\*apertura de comentario (/) debe iniciar el comentario y el par de\*caracteres de cierre de comentario (/) debe finalizar el comentario. No puede aparecer ningún otro carácter de comentario en las líneas del comentario. Para obtener más información, vea [/*... / \*(Comentario)](../mdx/comment-mdx.md).  
   
 ## <a name="example"></a>Ejemplo  
  La consulta siguiente muestra ejemplos de los tres tipos de comentario:  
@@ -62,7 +62,7 @@ ms.locfileid: "68001527"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
- [Los elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Elementos de la sintaxis de MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

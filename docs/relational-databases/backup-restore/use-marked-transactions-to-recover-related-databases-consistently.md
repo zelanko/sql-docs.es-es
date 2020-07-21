@@ -1,5 +1,6 @@
 ---
-title: Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente | Microsoft Docs
+title: Restauración de bases de datos en una transacción marcada
+description: Al realizar actualizaciones relacionadas con dos o más bases de datos relacionadas, utilice marcas de transacción en SQL Server para recuperarlas en un punto con coherencia lógica.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c884662acb111ab197ebf437d7eaacd5859ebde7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 7d456054b4edd45b15182a511235e640a03337b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631233"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema solamente es aplicable a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa.  
   

@@ -1,27 +1,24 @@
 ---
 title: Extensión dacpac de SQL Server
-titleSuffix: Azure Data Studio
-description: Instale y use la extensión dacpac de SQL Server (versión preliminar) para Azure Data Studio.
+description: Instalación y uso de la extensión dacpac de SQL Server para Azure Data Studio
 ms.custom: seodec18
-ms.date: 10/21/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.date: 11/04/2019
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: 2062c32f5af698f635abba684eb1ea1bbe59250b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783322"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758336"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>Extensión dacpac de SQL Server (versión preliminar)
+# <a name="sql-server-dacpac-extension"></a>Extensión dacpac de SQL Server
 
 El **Asistente para aplicaciones de capa de datos** proporciona una experiencia de asistente fácil de usar para implementar y extraer archivos dacpac, así como para importar y exportar archivos bacpac.
-
-Esta experiencia está actualmente en su versión preliminar inicial. Puede notificar cualquier problema y solicitar nuevas características [aquí](https://github.com/microsoft/azuredatastudio/issues).
 
 
 ## <a name="features"></a>Características
@@ -60,3 +57,4 @@ Para iniciar el asistente, haga clic con el botón secundario en la carpeta Data
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre dacpac, [vea nuestra documentación](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017).
+Puede notificar cualquier problema y solicitar nuevas características [aquí](https://github.com/microsoft/azuredatastudio/issues).

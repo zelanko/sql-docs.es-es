@@ -1,5 +1,5 @@
 ---
-title: Base de datos de cuadro de diálogo de propiedades (SSAS - Multidimensional) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la base de datos (SSAS-multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281dc08a4674949758e4abbc8142f78eb97700f6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082319"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528941"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Propiedades de la base de datos (cuadro de diálogo) (SSAS: multidimensional)
   Use el cuadro de diálogo **Propiedades de la base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de una base de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades de la base de datos** , haga clic con el botón derecho en una base de datos del Explorador de objetos y seleccione **Propiedades**.  
@@ -26,8 +25,8 @@ ms.locfileid: "66082319"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Name**|Escriba un nombre para cambiar el nombre de la base de datos.|  
-|**ID**|Muestra el identificador de la base de datos.|  
+|**Nombre**|Escriba un nombre para cambiar el nombre de la base de datos.|  
+|**Id**|Muestra el identificador de la base de datos.|  
 |**Descripción**|Escriba una descripción para cambiar la descripción de la base de datos.|  
 |**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la base de datos.|  
@@ -37,8 +36,8 @@ ms.locfileid: "66082319"
 |**Tamaño estimado**|Muestra el tamaño estimado de la base de datos.|  
 |**Ubicación de almacenamiento**|Especifica la ubicación de la base de datos. Si la base de datos se encuentra en el directorio de datos predeterminado, este valor estará vacío.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

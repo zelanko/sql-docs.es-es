@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09fe23c827b1d3d4561a4333180ad3eb508a3adc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88684e76718c3a16f3949dc3b7cbef04c9e655be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766352"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quita un índice de texto completo de una vista indizada o una tabla especificada.  
   
@@ -46,7 +46,7 @@ DROP FULLTEXT INDEX ON table_name
  *table_name*  
  Se trata del nombre de la tabla o vista indizada que contiene el índice de texto completo que se va quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No necesita quitar todas las columnas del índice de texto completo para poder utilizar el comando DROP FULLTEXT INDEX.  
   
 ## <a name="permissions"></a>Permisos  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ca6d56440b06d285cbb90f8d92325d59a452c16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008561"
 ---
 # <a name="manage-events"></a>Administrar eventos
   Puede reenviar todos los mensajes de eventos que tengan o superen un nivel de gravedad de error específico a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto se denomina *reenvío de eventos*. El servidor de reenvío es un servidor dedicado que también puede ser un servidor maestro. Puede utilizar el reenvío de eventos para centralizar la administración de alertas para un grupo de servidores, con lo que se reduce la carga de trabajo de los servidores con un alto grado de utilización.  
@@ -46,7 +45,7 @@ ms.locfileid: "63188213"
   
 -   **Único punto de error**. Si el servidor de administración de alertas se deja sin conexión, no se emite ninguna alerta para los eventos del grupo de servidores administrado.  
   
--   **Sobrecarga del servidor**. La administración de alertas de los eventos reenviados provoca un aumento de la carga de procesamiento en el servidor de administración de alertas.  
+-   **Carga del servidor**. La administración de alertas de los eventos reenviados provoca un aumento de la carga de procesamiento en el servidor de administración de alertas.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>Directrices de uso de un servidor de administración de alertas  
  Al configurar un servidor de administración de alertas, siga las siguientes directrices:  
@@ -87,7 +86,7 @@ ms.locfileid: "63188213"
 > [!NOTE]  
 >  Dado que un trabajo puede activar un evento, tenga cuidado de no crear un bucle recursivo de trabajos y alertas.  
   
-## <a name="see-also"></a>Vea también  
- [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [Mensajes desys.sys&#40;&#41;de Transact-SQL](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

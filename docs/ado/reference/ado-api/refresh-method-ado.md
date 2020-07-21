@@ -1,5 +1,5 @@
 ---
-title: Actualizar (método) (ADO) | Microsoft Docs
+title: Refresh (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756535"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
-Actualiza los objetos de una colección para reflejar los objetos disponibles y específicos del proveedor.  
+Actualiza los objetos de una colección para reflejar los objetos disponibles en el proveedor y específicos de este.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,38 +35,38 @@ collection.Refresh
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **actualizar** método realiza diferentes tareas según la colección desde la que se llame al método.  
+ El método **Refresh** realiza diferentes tareas en función de la colección de la que se llama.  
   
 ### <a name="parameters"></a>Parámetros  
- Mediante el **actualizar** método en el [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección de un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto recupera información de parámetros del proveedor para el procedimiento almacenado o consulta parametrizada especificados en el **comando** objeto. La colección estará vacía para los proveedores que no admiten llamadas a procedimientos almacenados o consultas con parámetros.  
+ El uso del método **Refresh** en la colección [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de un objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) recupera información de parámetros del proveedor para el procedimiento almacenado o la consulta con parámetros especificados en el objeto **Command** . La colección estará vacía para los proveedores que no admitan llamadas a procedimientos almacenados o consultas parametrizadas.  
   
- Debe establecer el [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad de la **comando** objeto válido [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto, el [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad en un comando válido y el [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) propiedad **adCmdStoredProc** antes de llamar a la **actualizar** método.  
+ Debe establecer la propiedad [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) del objeto de **comando** en un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) válido, la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) en un comando válido y la propiedad [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) en **adCmdStoredProc** antes de llamar al método **Refresh** .  
   
- Si tiene acceso a la **parámetros** colección antes de llamar a la **actualizar** método, ADO automáticamente llame al método y rellenará la colección.  
+ Si obtiene acceso a la colección **Parameters** antes de llamar al método **Refresh** , ADO llamará automáticamente al método y rellenará la colección.  
   
 > [!NOTE]
->  Si usas el **actualizar** método para obtener información de parámetros desde el proveedor y devuelve uno o varios tipos de datos de longitud variable [parámetro](../../../ado/reference/ado-api/parameter-object.md) objetos, ADO puede asignar memoria para los parámetros de acuerdo en su tamaño máximo potencial, lo que provocará un error durante la ejecución. Debe establecer explícitamente el [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md) propiedad de estos parámetros antes de llamar a la [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método para evitar errores.  
+>  Si usa el método **Refresh** para obtener información de parámetros del proveedor y devuelve uno o más objetos de [parámetro](../../../ado/reference/ado-api/parameter-object.md) de tipo de datos de longitud variable, ADO puede asignar memoria para los parámetros en función de su tamaño máximo potencial, lo que producirá un error durante la ejecución. Debe establecer explícitamente la propiedad [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) para estos parámetros antes de llamar al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) para evitar errores.  
   
-### <a name="fields"></a>Fields  
- Mediante el **actualizar** método en el [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección no tiene ningún efecto visible. Para recuperar los cambios de la estructura subyacente de la base de datos, debe usar el [Requery](../../../ado/reference/ado-api/requery-method.md) método o, si la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto no admite marcadores, el [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)método.  
+### <a name="fields"></a>Campos  
+ El uso del método **Refresh** en la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) no tiene ningún efecto visible. Para recuperar los cambios de la estructura de base de datos subyacente, debe utilizar el método [Requery](../../../ado/reference/ado-api/requery-method.md) o, si el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) no admite marcadores, el método [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
 ### <a name="properties"></a>Propiedades  
- Mediante el **actualizar** método en un **propiedades** colección de algunos objetos rellena la colección con las propiedades dinámicas que expone el proveedor. Estas propiedades proporcionan información sobre la funcionalidad específica del proveedor, más allá de las propiedades integradas ADO admite.  
+ El uso del método **Refresh** en una colección **Properties** de algunos objetos rellena la colección con las propiedades dinámicas que expone el proveedor. Estas propiedades proporcionan información sobre la funcionalidad específica del proveedor, más allá de las propiedades integradas que admite ADO.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
 ||||  
 |-|-|-|  
 |[Colección Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Colección de columnas](../../../ado/reference/adox-api/columns-collection-adox.md)|[Colección CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Colección de dimensiones](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Colección de errores](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields (colección)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
+|[Colección de dimensiones](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Colección de errores](../../../ado/reference/ado-api/errors-collection-ado.md)|[Colección Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|  
 |[Colección de grupos](../../../ado/reference/adox-api/groups-collection-adox.md)|[Colección Hierarchies](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Colección de índices](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
 |[Colección de claves](../../../ado/reference/adox-api/keys-collection-adox.md)|[Colección de niveles](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Colección de miembros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Colección de parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Colección de posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Colección de procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|[Colección de tablas](../../../ado/reference/adox-api/tables-collection-adox.md)|[Colección de usuarios](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Colección Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Colección de posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Colección de procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|[Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|[Colección de tablas](../../../ado/reference/adox-api/tables-collection-adox.md)|[Recopilación de usuarios](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Colección de vistas](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>Vea también  
- [Actualización de ejemplo del método (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Actualización de ejemplo del método (VC ++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
- [Count (propiedad, ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo del método Refresh (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [Ejemplo del método Refresh (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
+ [Propiedad Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

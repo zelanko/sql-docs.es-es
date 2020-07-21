@@ -1,5 +1,5 @@
 ---
-title: exist() (método del tipo de datos xml) | Microsoft Docs
+title: exist() (método del tipo de datos xml)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: e2f8643b9c76f2abf8a6ffb49620b85f9b150891
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278157"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392713"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() (método del tipo de datos xml)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve un **bit** que representa una de las siguientes condiciones:  
   
@@ -39,11 +39,13 @@ ms.locfileid: "72278157"
 exist (XQuery)   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  XQuery  
  Es una expresión XQuery, un literal de cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]  
 >  El método **exist()** devuelve 1 para la expresión XQuery que devuelve un resultado no vacío. Si se especifican las funciones **true()** o **false()** dentro del método **exist()** , el método **exist()** devolverá 1, porque las funciones **true()** y **false()** devuelven los valores booleanos True y False respectivamente. En otras palabras, devuelven un resultado no vacío. Por tanto, **exist()** devolverá 1 (True), como se muestra en el siguiente ejemplo:  

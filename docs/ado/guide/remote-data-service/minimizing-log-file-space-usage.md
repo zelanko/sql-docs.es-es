@@ -1,5 +1,5 @@
 ---
-title: Minimizar el uso de espacio de archivo de registro | Microsoft Docs
+title: Minimizar el uso del espacio del archivo de registro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,42 +10,42 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922554"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747880"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimización del uso de espacio de archivo de registro
-Un archivo de registro puede llenar rápidamente (detener, por tanto, el servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **Truncate en punto de comprobación** ampliar significativamente la vida del archivo de registro para una base de datos.  
+Un archivo de registro puede llenarse rápidamente (con lo que se detiene el servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **truncar en el punto de comprobación** para ampliar significativamente la duración del archivo de registro de una base de datos.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>Para habilitar truncar en punto de comprobación en Microsoft SQL Server 6.5  
+### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-65"></a>Para habilitar TRUNCATE on Checkpoint en Microsoft SQL Server 6,5  
   
-1.  Iniciar el Administrador corporativo de Microsoft SQL Server, abra el árbol para el servidor y, a continuación, abra el árbol de los dispositivos de la base de datos.  
+1.  Inicie el administrador de Microsoft SQL Server Enterprise, abra el árbol del servidor y, a continuación, abra el árbol dispositivos de base de datos.  
   
-2.  Haga doble clic en el nombre de la base de datos en el que se habilitará esta característica.  
+2.  Haga doble clic en el nombre de la base de datos en la que se habilitará esta característica.  
   
-3.  Desde el **base de datos** ficha, seleccione **Truncate**.  
+3.  En la pestaña **base de datos** , seleccione **truncar**.  
   
-4.  Desde el **opciones** ficha, seleccione **truncar registro en punto de comprobación**y, a continuación, haga clic en **Aceptar**.  
+4.  En la pestaña **Opciones** , seleccione **truncar registro en punto de comprobación**y, a continuación, haga clic en **Aceptar**.  
   
-### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Para habilitar truncar en punto de comprobación en Microsoft SQL Server 7.0  
+### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>Para habilitar TRUNCATE on Checkpoint en Microsoft SQL Server 7,0  
   
-1.  Iniciar el Administrador corporativo de Microsoft SQL Server, abra el árbol para el servidor y, a continuación, abra el árbol de las bases de datos.  
+1.  Inicie el administrador de Microsoft SQL Server Enterprise, abra el árbol del servidor y, a continuación, abra el árbol de bases de datos.  
   
-2.  Haga clic en el nombre de la base de datos en el que se habilitará esta característica y elija **propiedades**.  
+2.  Haga clic con el botón secundario en el nombre de la base de datos en la que se habilitará esta característica y elija **propiedades**.  
   
-3.  Desde el **opciones** ficha, seleccione **truncar registro en punto de comprobación**y, a continuación, haga clic en **Aceptar**.  
+3.  En la pestaña **Opciones** , seleccione **truncar registro en punto de comprobación**y, a continuación, haga clic en **Aceptar**.  
   
- Para obtener más información sobre la **Truncate en punto de comprobación** de características, consulte la documentación de Microsoft SQL Server.  
+ Para obtener más información acerca de la característica **truncar en punto de comprobación** , consulte la documentación de Microsoft SQL Server.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: Tipo de imagen para preparar | Microsoft Docs
+title: Tipo de imagen de preparación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b61a6d14-eabb-4b09-ab18-683a037f8ca4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2070ff33a17aaf690c3154a2aa16343e55405f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73c0e6e5f5c423876191a536083b149c01ba3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093479"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041831"
 ---
 # <a name="prepare-image-type"></a>Tipo de imagen para preparar
   Use la página **Tipo de imagen para preparar** del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar si desea instalar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o agregar características a una instancia existente.  

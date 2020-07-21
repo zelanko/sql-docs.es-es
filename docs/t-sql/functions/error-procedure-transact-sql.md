@@ -21,21 +21,23 @@ helpviewer_keywords:
 - messages [SQL Server], stored procedure where occurred
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 087e1cad75702da5b1077fcfaee2ec283074c1e9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094682"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999076"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 
-Esta función devuelve el nombre del procedimiento almacenado o del desencadenador en el que se produce un error, si ese error ha causado la ejecución de un bloque CATCH de una construcción TRY…CATCH.  
-  
+Esta función devuelve el nombre del procedimiento almacenado o del desencadenador en el que se produce un error, si ese error ha causado la ejecución de un bloque CATCH de una construcción TRY…CATCH. 
+- Desde SQL Server 2017 hasta la [versión actual](../../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15) se devuelve nombre_de_esquema.nombre_de_procedimiento_almacenado
+- SQL Server 2016 devuelve nombre_de_procedimiento_almacenado
+
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -44,7 +46,7 @@ Esta función devuelve el nombre del procedimiento almacenado o del desencadenad
 ERROR_PROCEDURE ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -54,14 +56,14 @@ Cuando se le llama en un bloque CATCH, `ERROR_PROCEDURE` devuelve el nombre del 
   
 `ERROR_PROCEDURE` devuelve NULL si se llama desde fuera del ámbito de un bloque CATCH.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `ERROR_PROCEDURE` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado o desencadenador en el que se produce un error, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
    
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Utilizar ERROR_PROCEDURE en un bloque CATCH  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>A. Utilizar ERROR_PROCEDURE en un bloque CATCH  
 En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado en el que se produjo el error.  
   
 ```  
@@ -98,7 +100,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_PROCEDURE en un bloque CATCH con otras herramientas de control de errores  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_PROCEDURE en un bloque CATCH con otras herramientas de control de errores  
 En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. Junto con el nombre del procedimiento almacenado en el que se produjo el error, el procedimiento almacenado devuelve información sobre el error.  
   
 ```  

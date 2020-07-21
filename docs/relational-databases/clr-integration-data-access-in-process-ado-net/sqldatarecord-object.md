@@ -1,5 +1,6 @@
 ---
 title: Objeto SqlDataRecord | Microsoft Docs
+description: En la integración de CLR de SQL Server, los procedimientos almacenados pueden utilizar la clase SqlDataRecord para enviar conjuntos de resultados personalizados al cliente.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da1735c17a4d87e085fbe1e8b5f960d14a70b86c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765431"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord, objeto
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SqlDataRecord** representa una fila única de datos, junto con sus metadatos relacionados.  
   
  Los procedimientos almacenados administrados se pueden enviar a los conjuntos de resultados del cliente que no son de **SqlDataReader**. La clase **SqlDataRecord** , junto con los métodos **SendResultsStart**, **SendResultsRow**y **SendResultsEnd** del objeto **SqlPipe** , permite a los procedimientos almacenados enviar conjuntos de resultados personalizados al cliente.  
@@ -87,7 +88,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
+## <a name="see-also"></a>Consulte también  
+ [SqlPipe, objetos](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

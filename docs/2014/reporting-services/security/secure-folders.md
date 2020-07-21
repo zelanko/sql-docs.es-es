@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101707"
 ---
 # <a name="secure-folders"></a>Proteger carpetas
@@ -36,15 +36,15 @@ ms.locfileid: "66101707"
   
 |Seleccione esta tarea|Para conceder permiso para|  
 |----------------------|---------------------------|  
-|Ver carpetas|Ver la jerarquía de carpetas y las propiedades de solo lectura que indican cuándo se creó y modificó la carpeta.<br /><br /> Los usuarios no pueden ver elementos en la carpeta a menos que se asignan a roles que también se incluyen las siguientes tareas: "Ver informes", "Modelos de vista", "Ver recursos" y "Ver orígenes de datos".|  
+|Ver carpetas|Ver la jerarquía de carpetas y las propiedades de solo lectura que indican cuándo se creó y modificó la carpeta.<br /><br /> Los usuarios no pueden ver los elementos de la carpeta a no ser que estén asignados a los roles que también incluyan las tareas siguientes: "Ver informes", "Ver modelos", "Ver recursos" y "Ver orígenes de datos".|  
 |Administrar carpetas|Ver las propiedades de la carpeta, cambiar el nombre o la descripción, o bien mover la carpeta a otra ubicación. Esta tarea permite a los usuarios crear carpetas.|  
 |Administrar informes|Agregar informes del sistema de archivos a una carpeta, así como publicar informes desde el Diseñador de informes al servidor de informes.|  
-|Administrar orígenes de datos|Agregar nuevos elementos de orígenes de datos compartidos a una carpeta y cambiar los orígenes de datos compartidos existentes.|  
+|Administración de orígenes de datos|Agregar nuevos elementos de orígenes de datos compartidos a una carpeta y cambiar los orígenes de datos compartidos existentes.|  
 |Establecer la seguridad de elementos individuales|Puede definir y modificar las asignaciones de roles que controlan el acceso a la carpeta. Esta tarea debe utilizarse con "Ver carpetas" o "Administrar carpetas". De lo contrario, no surtirá efecto, ya que el usuario no podrá seleccionar el elemento.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Proteger informes y recursos](secure-reports-and-resources.md)   
- [Proteger elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
+ [Protección de elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)  
   
   

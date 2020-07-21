@@ -1,5 +1,6 @@
 ---
-title: Trabajar con datos modificados (SQL Server) | Microsoft Docs
+title: Trabajar con datos modificados
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d08ef02a81832ad532e184d6cae79d7fd03119a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006056"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889092"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  
   
  Se proporcionan varias funciones que ayudan a determinar los valores de LSN adecuados para utilizarse al consultar una función TVF. La función [sys.fn_cdc_get_min_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md) devuelve el LSN más pequeño asociado a un intervalo de validez de la instancia de captura. El intervalo de validez es el intervalo de tiempo durante el cual los datos modificados están actualmente disponibles en sus instancias de captura. La función [sys.fn_cdc_get_max_lsn](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md) devuelve el LSN más grande del intervalo de validez. Las funciones [sys.fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) y [sys.fn_cdc_map_lsn_to_time](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) están disponibles para ayudar a ubicar los valores LSN en una escala de tiempo convencional. Dado que la captura de datos modificados utiliza intervalos de consulta cerrados, a veces es necesario generar el valor de LSN siguiente en un flujo para garantizar que los cambios no estén duplicados en ventanas de consulta consecutivas. Las funciones [sys.fn_cdc_increment_lsn](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md) y [sys.fn_cdc_decrement_lsn](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md) son útiles cuando es necesario realizar un ajuste incremental en un valor LSN.  
   
-##  <a name="LSN"></a> Validar los límites de LSN  
+##  <a name="validating-lsn-boundaries"></a><a name="LSN"></a> Validar los límites de LSN  
  Se recomienda validar los límites de LSN que se van a utilizar en una consulta de TVF antes de su uso. Los extremos nulos o los que quedan fuera del intervalo de validez para una instancia de captura obligarán a la función TVF de captura de datos modificados a devolver un error.  
   
  Por ejemplo, el error siguiente se devuelve en una consulta de todos los cambios cuando un parámetro que se utiliza para definir el intervalo de la consulta no es válido o está fuera del intervalo, o bien cuando la opción de filtro de filas no es válida.  
@@ -62,7 +63,7 @@ ms.locfileid: "68006056"
 > [!NOTE]  
 >  Para buscar las plantillas de captura de datos modificados en SQL Server Management Studio, en el menú **Ver** , haga clic en **Explorador de plantillas**, expanda **Plantillas de SQL Server** y, luego, la carpeta **Captura de datos modificados** .  
   
-##  <a name="Functions"></a> Funciones de consulta  
+##  <a name="query-functions"></a><a name="Functions"></a> Funciones de consulta  
  Según sean las características de la tabla de origen que se someta a seguimiento y la manera en que se configure su instancia de captura, se generarán una o las dos funciones TVF para la consulta de datos modificados.  
   
 -   La función [cdc.fn_cdc_get_all_changes_<instancia_captura>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) devuelve todos los cambios producidos durante el intervalo especificado. Siempre se genera esta función. Las entradas siempre se devuelven ordenadas, primero por el SLN de confirmación de la transacción del cambio y, a continuación, por un valor que secuencia el cambio dentro de su transacción. Según sea la opción de filtro de filas elegida, se devuelve la fila final de la actualización (opción de filtro de filas "all") o los valores nuevo y antiguo de la actualización (opción de filtro de filas "all update old").  
@@ -72,11 +73,11 @@ ms.locfileid: "68006056"
     > [!NOTE]  
     >  Solo se admite esta opción si la tabla de origen tiene definida una clave principal o si el parámetro @index_name se ha usado para identificar un índice único.  
   
-     La función **netchanges** devuelve un cambio por cada fila de la tabla de origen modificada. Si se registra más de un cambio para la fila durante el intervalo especificado, los valores de la columna reflejarán el contenido final de la fila. Para identificar correctamente la operación necesaria para actualizar el entorno de destino, la función TVF debe considerar tanto la operación inicial en la fila durante el intervalo como la operación final en la fila. Cuando se especifica la opción de filtro de filas “all”, las operaciones que devuelva una consulta **net changes** podrán ser inserciones, eliminaciones o actualizaciones (valores nuevos). Esta opción siempre devuelve el valor NULL para la máscara de actualización porque hay un costo asociado al cálculo de una máscara agregada. Si necesita una máscara agregada que refleje todos los cambios efectuados en una fila, use la opción 'all with mask'. Si el procesamiento posterior no precisa distinguir entre inserciones y actualizaciones, use la opción 'all with merge'. En este caso, el valor de la operación solo tomará dos valores: 1 para la eliminación y 5 para una operación que podría ser de inserción o actualización. Esta opción elimina el procesamiento adicional necesario para determinar si la operación derivada debía ser una inserción o una actualización, y puede mejorar el rendimiento de la consulta cuando no sea necesaria esta diferenciación.  
+     La función **netchanges** devuelve un cambio por cada fila de la tabla de origen modificada. Si se registra más de un cambio para la fila durante el intervalo especificado, los valores de la columna reflejarán el contenido final de la fila. Para identificar correctamente la operación necesaria para actualizar el entorno de destino, la función TVF debe considerar tanto la operación inicial en la fila durante el intervalo como la operación final en la fila. Cuando se especifica la opción de filtro de filas “all”, las operaciones que devuelva una consulta **net changes** podrán ser inserciones, eliminaciones o actualizaciones (valores nuevos). Esta opción siempre devuelve el valor NULL para la máscara de actualización porque hay un costo asociado al cálculo de una máscara agregada. Si necesita una máscara agregada que refleje todos los cambios efectuados en una fila, use la opción 'all with mask'. Si el procesamiento posterior no precisa distinguir entre inserciones y actualizaciones, use la opción 'all with merge'. En este caso, el valor de la operación aceptará solo dos valores: 1 para la eliminación y 5 para una operación que podría ser una inserción o una actualización. Esta opción elimina el procesamiento adicional necesario para determinar si la operación derivada debía ser una inserción o una actualización, y puede mejorar el rendimiento de la consulta cuando no sea necesaria esta diferenciación.  
   
  La máscara de la actualización devuelta por una función de consulta es una representación compacta que identifica todas las columnas que han cambiado en una fila de datos modificados. Normalmente, esta información solo es necesaria para un pequeño subconjunto de las columnas capturadas. Hay funciones que se pueden usar para ayudar a extraer información de la máscara de una forma que sea más fácilmente utilizable por las aplicaciones. La función [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) devuelve la posición ordinal de una columna con nombre de una determinada instancia de captura, mientras que la función [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) devuelve la paridad del bit de la máscara proporcionada en función del ordinal que se pasó en la llamada a la función. La combinación de estas dos funciones permite extraer eficazmente información de la máscara de actualización y devolverla con la solicitud de datos modificados. Vea la plantilla para enumerar cambios netos con 'All With Mask', que contiene una demostración acerca de cómo se utilizan estas funciones.  
   
-##  <a name="Scenarios"></a> Escenarios de funciones de consulta  
+##  <a name="query-function-scenarios"></a><a name="Scenarios"></a> Escenarios de funciones de consulta  
  En las secciones siguientes se describen los escenarios comunes de consulta de los datos modificados de las capturas mediante las funciones de consulta cdc.fn_cdc_get_all_changes_<capture_instance> y cdc.fn_cdc_get_net_changes_<capture_instance>.  
   
 ### <a name="querying-for-all-changes-within-the-capture-instance-validity-interval"></a>Consultar todos los cambios del intervalo de validez de la instancia de captura  
@@ -112,7 +113,7 @@ ms.locfileid: "68006056"
   
  El nombre de la función que va a contener la consulta de todos los cambios es fn_all_changes_ seguido del nombre de la instancia de captura. El prefijo que se utiliza para el contenedor de los cambios netos es fn_net_changes_. Las dos funciones toman tres argumentos, al igual que sus TVF de captura de cambios modificados. Sin embargo, el intervalo de la consulta de los contenedores está limitado por dos valores de fecha y hora y no por dos valores LSN. El parámetro @row_filter_option es el mismo para los dos conjuntos de funciones.  
   
- Las funciones de contenedor generadas admiten la convención siguiente para recorrer sistemáticamente la escala de tiempo de captura de datos modificados: se espera que el parámetro @end_time del intervalo anterior se use como el parámetro @start_time del intervalo siguiente. La función contenedora se encarga de asignar los valores de fecha y hora a los valores LSN y se asegura de que no se pierde ni se repite ningún dato si se sigue esta convención.  
+ Las funciones contenedoras generadas admiten la siguiente convención para recorrer de forma sistemática la escala de tiempo de captura de datos modificados: se espera que el parámetro @end_time del intervalo anterior se use como parámetro @start_time del intervalo siguiente. La función contenedora se encarga de asignar los valores de fecha y hora a los valores LSN y se asegura de que no se pierde ni se repite ningún dato si se sigue esta convención.  
   
  Los contenedores se pueden generar para admitir un límite superior cerrado o un límite superior abierto en la ventana de consulta especificada. Es decir, al autor de la llamada puede especificar si las entradas que tienen un tiempo de confirmación igual al límite superior del intervalo de extracción se van a incluir en el intervalo. De forma predeterminada, se incluye el límite superior.  
   

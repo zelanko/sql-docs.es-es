@@ -1,6 +1,6 @@
 ---
-title: Archivos de formato para importar o exportar datos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Archivos de formato para importar y exportar datos
+description: Al realizar una importación en bloque en una tabla de SQL Server o una exportación masiva desde una tabla, un archivo de formato puede almacenar información de formato de campo para un archivo de datos relativo a una tabla.
 ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,28 +15,29 @@ ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13d20bfe453843fa8809cfc02c5bd34876dbd497
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680700"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006250"
 ---
-# <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Archivos de formato para importar o exportar datos (SQL Server)
+# <a name="format-files-to-import-or-export-data-sql-server"></a>Archivos de formato para importar y exportar datos (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Al importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o exportar masivamente datos de una tabla, puede usar un *archivo de formato* para almacenar toda la información de formato necesaria para exportar o importar datos masivamente. Esto incluye la información de formato para cada campo de un archivo de datos relativo a la tabla.
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite dos tipos de archivos de formato: formatos XML y archivos de formato no XML. Tanto los archivos con formato XML como los archivos no XML contienen descripciones de todos los campos de un archivo de datos, y los archivos de formato XML también contienen descripciones de las columnas de tabla correspondientes. Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).
 
-## <a name="Benefits"></a> Ventajas de los archivos de formato
+## <a name="benefits-of-format-files"></a><a name="Benefits"></a> Ventajas de los archivos de formato
 
 - El archivo de formato proporciona una manera flexible de escribir archivos de datos que requiere poca o ninguna modificación para adaptarlos a otros formatos de datos y para leer archivos de datos de otros programas.
 - Permite realizar la importación masiva de datos sin tener que agregar o eliminar datos innecesarios o reordenar los datos existentes en el archivo de datos. Los archivos de formato resultan especialmente útiles cuando existe una discrepancia entre los campos del archivo de datos y las columnas de la tabla.
 
-## <a name="ExamplesOfFFs"></a> Ejemplos de archivos de formato
+## <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Ejemplos de archivos de formato
 
-Los siguientes ejemplos muestran el diseño de un archivo de formato no XML y de un archivo de formato XML. Estos archivos de formato corresponden a la tabla `HumanResources.myTeam` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esta tabla tiene cuatro columnas: `EmployeeID`, `Name`, `Title` y `ModifiedDate`.
+Los siguientes ejemplos muestran el diseño de un archivo de formato no XML y de un archivo de formato XML. Estos archivos de formato corresponden a la tabla `HumanResources.myTeam` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esta tabla tiene cuatro columnas: `EmployeeID`, `Name`, `Title`y `ModifiedDate`.
 
 > [!NOTE]
 > Para obtener más información sobre la tabla y cómo crearla, vea [Tabla de ejemplo HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).
@@ -87,7 +88,7 @@ El archivo de formato contiene:
 
 Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). 
 
-## <a name="WhenFFrequired"></a> ¿Cuándo se necesita un archivo de formato?
+## <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> ¿Cuándo se necesita un archivo de formato?
 
 - Una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) necesita siempre un archivo de formato.
 - Para **bcp** o BULK INSERT, en situaciones simples, el uso de un archivo de formato es opcional y pocas veces necesario. Sin embargo, en situaciones de importación masiva complejas, el archivo de formato suele ser necesario.
@@ -107,7 +108,7 @@ Los archivos de formato se necesitan cuando:
 > [!NOTE]
 > En caso de no disponer de ningún archivo de formato, si un comando **bcp** especifica un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**) o una operación BULK INSERT especifica la opción DATAFILETYPE, se usará el formato de datos especificado como método predeterminado para interpretar los campos del archivo de datos.
 
-## <a name="RelatedTasks"></a> Tareas relacionadas
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas
 
 - [Crear un archivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md)
 - [Usar un archivo de formato para importar datos en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)

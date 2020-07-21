@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa83e1bfc466f9eaf92faf1bb32868d1781f283a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705067"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica si la instancia de **geography** que hace la llamada contiene espacialmente a la instancia de **geography** que se pasa al método.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "68042463"
  *other_geography*  
  Es otra instancia de **geography** con la que se compara la instancia en la que se invoca `STContains()`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Devuelve 1 si la instancia de **geography** que hace la llamada contiene espacialmente a la instancia de **geography** que se pasa al método, y devuelve 0 si no lo hace. Devuelve **null** si el SRID de las dos instancias de **geography** no coincide.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -20,15 +20,15 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce5cd6a457608671ad359ab4bc81423f4441ecbc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075310"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005028"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Impone condiciones en la ejecución de una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) tras *Boolean_expression* se ejecuta si *Boolean_expression* se evalúa como TRUE. La palabra clave opcional ELSE es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] alternativa que se ejecuta cuando *Boolean_expression* se evalúa como FALSE o NULL.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68075310"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. Utilizar una expresión booleana simple  
  En el ejemplo siguiente hay una expresión booleana simple (`1=1`) que es TRUE y, por tanto, se imprime la primera instrucción.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  En el ejemplo siguiente hay una expresión booleana simple (`1=2`) que es FALSE y, por tanto, se imprime la segunda instrucción.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Utilizar una consulta en una expresión booleana  
  En el ejemplo siguiente se ejecuta una consulta en la expresión booleana. Dado que hay 10 bicicletas en la tabla `Product` que cumplen la cláusula `WHERE`, se ejecutará la primera instrucción de impresión. Cambie `> 5` por `> 15` para ver cómo podría ejecutarse la segunda parte de la instrucción.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. Utilizar un bloque de instrucciones  
  En el ejemplo siguiente se ejecuta una consulta en la expresión booleana y, a continuación, se ejecutan bloques de instrucciones con pequeñas diferencias que dependen del resultado de la expresión booleana. Cada bloque de instrucciones comienza con `BEGIN` y finaliza con `END`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. Utilizar instrucciones IF...ELSE anidadas  
  En el ejemplo siguiente, se muestra cómo anidar una instrucción IF… ELSE dentro de otra. Establezca la variable `@Number` en `5`, `50` y `500` para probar cada instrucción.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -134,12 +134,12 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Utilizar una consulta en una expresión booleana  
  En el ejemplo siguiente se usa `IF...ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

@@ -13,15 +13,15 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0904966eb334b182646818b98449472122741f6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086129"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000727"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Una variable local de Transact-SQL es un objeto que contiene un valor individual de datos de un tipo específico. Normalmente, las variables se utilizan en lotes y scripts: 
 
@@ -31,6 +31,9 @@ Una variable local de Transact-SQL es un objeto que contiene un valor individual
 
 > [!NOTE]
 > Los nombres de algunas funciones del sistema Transact-SQL comienzan por dos *arrobas* (\@\@). A pesar de que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hacía referencia a las funciones que empiezan por \@\@ como variables globales, no son variables y no tienen el mismo comportamiento que las variables. Las funciones que empiezan por \@\@ son funciones del sistema, y el uso de su sintaxis sigue las reglas de las funciones.
+
+> [!NOTE]
+> Las variables no se pueden usar en las vistas.
 
 Este script crea una pequeña tabla de prueba y la rellena con 26 filas. El script usa una variable para hacer tres cosas: 
 

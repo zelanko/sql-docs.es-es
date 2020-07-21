@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947495"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764416"
 ---
 # <a name="writetext-method"></a>Método WriteText
-Escribe una cadena de texto especificado en un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Escribe una cadena de texto especificada en un objeto de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,24 +34,24 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Datos*  
- Un **cadena** valor que contiene el texto de caracteres que se escribirá.  
+ *Data*  
+ Valor de **cadena** que contiene el texto en caracteres que se va a escribir.  
   
  *Opciones*  
- Opcional. Un [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valor que especifica si se debe escribir un carácter separador de línea al final de la cadena especificada.  
+ Opcional. Valor [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) que especifica si se debe escribir un carácter separador de línea al final de la cadena especificada.  
   
 ## <a name="remarks"></a>Comentarios  
- Cadenas especificadas se escriben en el **Stream** objeto sin espacios intermedios ni caracteres entre cada cadena.  
+ Las cadenas especificadas se escriben en el objeto de **secuencia** sin espacios ni caracteres intermedios entre cada cadena.  
   
- Actual [posición](../../../ado/reference/ado-api/position-property-ado.md) se establece en el carácter que sigue a los datos escritos. El **WriteText** método no trunca el resto de los datos en una secuencia. Si desea truncar estos caracteres, llame a [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ La [posición](../../../ado/reference/ado-api/position-property-ado.md) actual se establece en el carácter que sigue a los datos escritos. El método **WRITETEXT** no trunca el resto de los datos de una secuencia. Si desea truncar estos caracteres, llame a [seteos](../../../ado/reference/ado-api/seteos-method.md).  
   
- Si escribe más allá de la actual [EOS](../../../ado/reference/ado-api/eos-property.md) posición, el [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **Stream** se incrementará para contener los caracteres nuevos, y **EOS** se moverá hasta el último byte nuevo en el **Stream**.  
+ Si escribe más allá de la posición actual de [EOS](../../../ado/reference/ado-api/eos-property.md) , se aumentará el [tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) de la **secuencia** para que contenga cualquier carácter nuevo y **EOS** se moverá al nuevo último byte de la **secuencia**.  
   
 > [!NOTE]
->  El **WriteText** método se utiliza con secuencias de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Para secuencias binarias (**tipo** es **adTypeBinary**), utilice [escribir](../../../ado/reference/ado-api/write-method.md).  
+>  El método **WRITETEXT** se usa con secuencias de texto (el[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). En el caso de secuencias binarias (el**tipo** es **adTypeBinary**), utilice [Write](../../../ado/reference/ado-api/write-method.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Método Write](../../../ado/reference/ado-api/write-method.md)
+## <a name="see-also"></a>Consulte también  
+ [Write (método)](../../../ado/reference/ado-api/write-method.md)

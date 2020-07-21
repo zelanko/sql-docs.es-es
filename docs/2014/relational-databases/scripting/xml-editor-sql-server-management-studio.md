@@ -1,6 +1,6 @@
 ---
-title: Editores XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor XML
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18efec618d3f4afd0c740147ec2612be36442028
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068422"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editores XML (SQL Server Management Studio)
   Proporciona un conjunto de herramientas visuales para trabajar con esquemas XML, conjuntos de datos ADO.NET y documentos XML. El Diseñador XML admite el lenguaje de definición de esquemas XML (XSD) definido por el World Wide Web Consortium (WC3). El diseñador no admite definiciones de tipo de documento (DTD) ni otros lenguajes de esquemas XML, como el esquema XML simplificado (XDR).  
@@ -37,7 +36,7 @@ ms.locfileid: "66063200"
 |Ver|Descripción|Tipos de archivos compatibles|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para crear y modificar visualmente esquemas XML y conjuntos de datos ADO.NET.|.xsd|  
-|**Datos**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
+|**Data**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
 |**XML**|Para editar XML; el editor de origen proporciona codificación de colores e IntelliSense, e incluye las características Palabra completa y Lista de miembros.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
 |**ShowPlan**|Muestra los planes de consulta xml creados mediante la opción SET SHOWPLAN_XML ON.|.showplan|  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66063200"
 ## <a name="data-view"></a>Vista de datos  
  La vista de datos proporciona una cuadrícula de datos que puede utilizarse para modificar archivos .xml. En la vista de datos, solo se puede editar el contenido (pero no las etiquetas ni la estructura) de un archivo XML.  
   
- Hay dos áreas independientes en la vista de datos: **Tablas de datos** y **Datos**. El área **Tablas de datos** es una lista de relaciones definidas en el archivo XML, colocadas en el orden de su anidamiento (de exterior a interior). El área **Datos** es una cuadrícula de datos que muestra los datos en función de la selección realizada en el área Tablas de datos.  
+ En la vista de datos, hay dos áreas bien diferenciadas: **Tablas de datos** y **Datos**. El área **Tablas de datos** es una lista de relaciones definidas en el archivo XML, colocadas en el orden de su anidamiento (de exterior a interior). El área **Datos** es una cuadrícula de datos que muestra los datos en función de la selección realizada en el área Tablas de datos.  
   
 > [!NOTE]  
 >  Los archivos XML recién creados no contienen ningún dato y, por lo tanto, no pueden mostrarse en la vista de datos. Existen también algunas instancias de documentos XML donde no se puede invocar la vista de datos. Aunque se considere que el documento XML tiene un formato correcto, si no está formado por datos estructurados que están intentando cambiar a la vista de datos, se generará el siguiente mensaje: "Aunque este documento XML está bien formado, contiene una estructura que la Vista de datos no puede mostrar".  
@@ -95,7 +94,7 @@ ms.locfileid: "66063200"
 -   Generar un esquema XML a partir de un documento XML  
   
 ## <a name="xml-view"></a>Vista XML  
- La vista XML proporciona un editor para editar XML sin formato y proporciona también IntelliSense y codificación de colores. La finalización automática de instrucciones estará disponible cuando se trabaje con archivos .xsd y .xml que dispongan de un esquema asociado. Tipo \< iniciar una etiqueta y se le presentará una lista de elementos que son válidos en esa ubicación. Después de escribir el nombre del elemento y de presionar la BARRA ESPACIADORA, se le mostrará una lista de atributos compatibles con dicho elemento.  
+ La vista XML proporciona un editor para editar XML sin formato y proporciona también IntelliSense y codificación de colores. La finalización automática de instrucciones estará disponible cuando se trabaje con archivos .xsd y .xml que dispongan de un esquema asociado. Escriba \< para iniciar una etiqueta y se le presentará una lista de elementos que son válidos en esa ubicación. Después de escribir el nombre del elemento y de presionar la BARRA ESPACIADORA, se le mostrará una lista de atributos compatibles con dicho elemento.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense no están disponibles en la barra de herramientas. Para obtener acceso a las opciones desde el Editor XML, haga clic en **IntelliSense** , en el menú **Edición**.  
@@ -103,7 +102,7 @@ ms.locfileid: "66063200"
 ## <a name="showplan-view"></a>Vista SHOWPLAN  
  Los planes de consulta pueden guardarse en formato XML cuando se crean mediante la opción SET SHOWPLAN_XML ON. Haga doble clic en un archivo con la extensión .showplan para abrir el plan de consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar un plan de ejecución en formato XML](../performance/save-an-execution-plan-in-xml-format.md)  
   
   

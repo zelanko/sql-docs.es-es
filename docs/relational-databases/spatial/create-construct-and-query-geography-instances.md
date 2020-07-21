@@ -14,22 +14,22 @@ ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2ab74d3cb24118b147743165d6db221ea337629
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730815"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Crear, construir y consultar instancias de Geography
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  El tipo de datos espaciales geography, **geography**, representa los datos en un sistema de coordenadas de tierra redonda. Se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  El tipo de datos espaciales geography, **geography**, representa los datos en un sistema de coordenadas de tierra redonda. Se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** almacena datos elipsoidales (globo), como coordenadas de latitud y longitud de GPS.  
   
  El tipo **geography** está predefinido y está disponible en cada base de datos. Puede crear columnas de tabla de tipo **geography** y operar con los datos **geography** de la misma manera que con los demás tipos proporcionados por el sistema.  
   
-##  <a name="creating"></a> Crear o construir una instancia de geography  
+##  <a name="creating-or-constructing-a-new-geography-instance"></a><a name="creating"></a> Crear o construir una instancia de geography  
   
-###  <a name="existing"></a> Crear una instancia de geography a partir de una instancia existente  
+###  <a name="creating-a-new-geography-instance-from-an-existing-instance"></a><a name="existing"></a> Crear una instancia de geography a partir de una instancia existente  
  El tipo de datos **geography** proporciona numerosos métodos integrados que puede usar para crear nuevas instancias de **geography** basadas en instancias existentes.  
   
  **Crear un búfer alrededor de un objeto geography**  
@@ -47,7 +47,7 @@ ms.locfileid: "68048748"
  **Para crear un objeto geography a partir de los puntos en los que un objeto geography no se superpone a otro**  
  [STDifference &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
-###  <a name="wkt"></a> Construir una instancia de geography a partir de datos Well-Known Text  
+###  <a name="constructing-a-geography-instance-from-well-known-text-input"></a><a name="wkt"></a> Construir una instancia de geography a partir de datos Well-Known Text  
  El tipo de datos **geography** proporciona varios métodos integrados que generan un objeto geography a partir de la representación WKT de Open Geospatial Consortium (OGC). La norma WKT consiste en una cadena de texto que permite intercambiar datos de geography de forma textual.  
   
  **Para construir cualquier tipo de instancia de geography a partir de datos WKT**  
@@ -76,7 +76,7 @@ ms.locfileid: "68048748"
  **Para construir una instancia de geography de tipo GeometryCollection a partir de datos WKT**  
  [STGeomCollFromText &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stgeomcollfromtext-geography-data-type.md)  
   
-###  <a name="wkb"></a> Construir una instancia de geography a partir de datos Well-Known Binary  
+###  <a name="constructing-a-geography-instance-from-well-known-binary-input"></a><a name="wkb"></a> Construir una instancia de geography a partir de datos Well-Known Binary  
  WKB es un formato binario especificado por OGC que permite intercambiar datos de tipo **Geography** entre una aplicación cliente y una base de datos SQL. Las funciones siguientes aceptan datos WKB para construir las instancias de geography:  
   
  **Para construir cualquier tipo de instancia de geography a partir de datos WKB**  
@@ -103,15 +103,15 @@ ms.locfileid: "68048748"
  **Para construir una instancia de geography de tipo GeometryCollection a partir de datos WKB**  
  [STGeomCollFromWKB &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type.md)STGeomCollFromWKB (tipo de datos geography)  
   
-###  <a name="gml"></a> Para construir una instancia de geography a partir de datos de texto GML  
+###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Para construir una instancia de geography a partir de datos de texto GML  
  El tipo de datos **geography** proporciona un método que genera una instancia de **geography** a partir de GML, una representación XML de una instancia de **geography** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
   
- Para más información sobre el lenguaje de marcado de geografía, vea la especificación de OGC: [Especificaciones de OGC, Lenguaje de marcado de geografía](https://go.microsoft.com/fwlink/?LinkId=93629).  
+ Para obtener más información sobre el lenguaje de marcado de geografía, vea las especificaciones de OGC: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
  **Para construir cualquier tipo de instancia de geography a partir de datos de GML**  
  [GeomFromGML &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  
   
-##  <a name="returning"></a> Devolver Well-Known Text y Well-Known Binary a partir una instancia de geography  
+##  <a name="returning-well-known-text-and-well-known-binary-from-a-geography-instance"></a><a name="returning"></a> Devolver Well-Known Text y Well-Known Binary a partir una instancia de geography  
  Puede usar los métodos siguientes para devolver el formato WKT o WKB de una instancia de **geography** :  
   
  **Para devolver la representación WKT de una instancia de geography**  
@@ -128,10 +128,10 @@ ms.locfileid: "68048748"
  **Para devolver la representación GML de una instancia de geography**  
  [AsGml &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/asgml-geography-data-type.md)  
   
-##  <a name="query"></a> Consultar propiedades y comportamientos de instancias de geography  
+##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Consultar propiedades y comportamientos de instancias de geography  
  Todas las instancias de **geography** tienen varias propiedades que se pueden recuperar a través de los métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona. Los temas siguientes definen las propiedades y los comportamientos de los tipos geography y los métodos para consultar cada uno.  
   
-###  <a name="valid"></a> Validez, tipo de instancia e información de GeometryCollection  
+###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Validez, tipo de instancia e información de GeometryCollection  
  Una vez construida una instancia de **geography** , puede usar los métodos siguientes para devolver el tipo de instancia o, si es una instancia de **GeometryCollection** , devolver una instancia de **geography** específica.  
   
  **Para devolver el tipo de instancia de una geografía**  
@@ -146,7 +146,7 @@ ms.locfileid: "68048748"
  **Para devolver un objeto geography específico de una instancia de GeometryCollection**  
  [STGeometryN &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stgeometryn-geography-data-type.md)STGeometryN (tipo de datos geography)  
   
-###  <a name="number"></a> Número de puntos  
+###  <a name="number-of-points"></a><a name="number"></a> Número de puntos  
  Todas las instancias de **geography** no vacías están compuestas de *puntos*. Estos puntos representan las coordenadas de latitud y longitud de la tierra en la que se dibujan las instancias de **geography** . El tipo de datos **geography** proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
   
  **Devolver el número de puntos que comprende una instancia**  
@@ -161,7 +161,7 @@ ms.locfileid: "68048748"
  **Devolver el punto final de una instancia**  
  [STEndpoint &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
-###  <a name="dimension"></a> Dimensión  
+###  <a name="dimension"></a><a name="dimension"></a> Dimensión  
  Una instancia de **geography** no vacía puede ser no dimensional, unidimensional o bidimensional. Las instancias de **geography** no dimensionales, como **Point** y **MultiPoint**, no tienen longitud ni área. Los objetos unidimensionales, como **LineString, CircularString**, **CompoundCurve**y **MultiLineString**, tienen longitud. Las instancias bidimensionales, como **Polygon, CurvePolygon**y **MultiPolygon**, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y **GeometryCollection** informa de la dimensión máxima de su contenido.  
   
  **Devolver la dimensión de una instancia**  
@@ -173,14 +173,14 @@ ms.locfileid: "68048748"
  **Devolver el área de una instancia**  
  [STArea &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
-###  <a name="empty"></a> Vacía  
+###  <a name="empty"></a><a name="empty"></a> Vacía  
  Una instancia _empty_**geography** no tiene puntos. La longitud de las instancias de **LineString, CircularString**, **CompoundCurve**y **MultiLineString** vacías es 0. El área de las instancias de **Polygon, CurvePolygon** y **MultiPolygon** vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
-###  <a name="closure"></a> Clausura  
- Una instancia de **geography** _cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
+###  <a name="closure"></a><a name="closure"></a> Clausura  
+ Una instancia de **geography**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
   
  Un anillo es una instancia de **LineString** simple y cerrada.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "68048748"
  **Para devolver un anillo especificado de una instancia de Geography**  
  [RingN &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
-###  <a name="srid"></a> Identificador de referencia espacial (SRID)  
+###  <a name="spatial-reference-id-srid"></a><a name="srid"></a> Identificador de referencia espacial (SRID)  
  El identificador de referencia espacial (SRID) es un identificador que especifica en qué sistema de coordenadas elipsoidales está representada la instancia **geography** . No se pueden comparar dos instancias **geography** con SRID diferentes.  
   
  **Para establecer o devolver el SRID de una instancia**  
@@ -201,7 +201,7 @@ ms.locfileid: "68048748"
   
  Esta propiedad se puede modificar.  
   
-##  <a name="rel"></a> Determinar las relaciones entre instancias de geography  
+##  <a name="determining-relationships-between-geography-instances"></a><a name="rel"></a> Determinar las relaciones entre instancias de geography  
  El tipo de datos **geography** proporciona muchos métodos integrados que puede usar para determinar las relaciones entre dos instancias de **geography** .  
   
  **Para determinar si dos instancias comprenden el mismo conjunto de puntos**  
@@ -225,12 +225,12 @@ ms.locfileid: "68048748"
  **Para obtener la diferencia simétrica, o puntos únicos, de una instancia de geography comparada con otra instancia**  
  [STSymDifference &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
-##  <a name="supportedsrid"></a> Las instancias de geography deben usar SRID compatibles  
+##  <a name="geography-instances-must-use-supported-srid"></a><a name="supportedsrid"></a> Las instancias de geography deben usar SRID compatibles  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite SRID basados en las normas de EPSG. Se debe usar un SID compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para instancias de **geography** cuando se realicen cálculos o se usen los métodos con datos espaciales de geografía. El SRID debe coincidir con uno de los SRID mostrados en la vista de catálogo **sys.spatial_reference_systems** . Como se mencionó anteriormente, al realizar cálculos en sus datos espaciales usando el tipo de datos **geography** , sus resultados dependerán de qué elipsoide se usó en la creación de sus datos, ya que cada elipsoide está asignado a un identificador de referencia espacial concreto (SRID).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el SRID predeterminado de 4326, que se asigna al sistema de referencia espacial WGS 84, al usar métodos en instancias de **geography** . Si usa datos de un sistema de referencia espacial distinto de WGS 84 (o SRID 4326), tendrá que determinar el SRID concreto para sus datos espaciales de geography.  
   
-##  <a name="examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="examples"></a> Ejemplos  
 En los ejemplos siguientes se muestra cómo agregar y consultar datos geography.  
   
 ### <a name="example-a"></a>Ejemplo A. 

@@ -1,5 +1,5 @@
 ---
-title: Desarrollador&#39;guía (replicación) | Microsoft Docs
+title: Guía para desarrolladores&#39;(replicación) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce595518fc33903a9438a9a702d19725fa605f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f27caa4e2932740bb85ba368fb6177ac60571765
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047720"
 ---
-# <a name="developer39s-guide-replication"></a>Desarrollador&#39;guía (replicación)
+# <a name="developer39s-guide-replication"></a>Guía para desarrolladores&#39;(replicación)
   La capacidad de configurar, mantener y supervisar mediante programación una topología de replicación permite simplificar las tareas de replicación repetidas y mejorar la experiencia del usuario en las aplicaciones basadas en la replicación. Al programar la replicación, se puede proporcionar a los usuarios finales funcionalidades de replicación personalizadas sin que sea necesario conocer los procedimientos almacenados de replicación o las aplicaciones ejecutables del agente de replicación, ni tener que usar la interfaz de usuario de replicación que implementa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  A continuación se muestran escenarios en los que las aplicaciones podrían beneficiarse del acceso mediante programación a servicios de replicación:  
@@ -43,7 +42,7 @@ ms.locfileid: "62721937"
  [Conceptos de procedimientos almacenados del sistema de replicación](replication-system-stored-procedures-concepts.md)  
  Describe cómo se pueden usar los procedimientos almacenados del sistema para proporcionar acceso mediante programación en una topología de replicación.  
   
- [Conceptos de los Replication Management Objects (RMO)](replication-management-objects-concepts.md)  
+ [Replication Management Objects Concepts (Conceptos de Replication Management Objects)](replication-management-objects-concepts.md)  
  Explica los conceptos para utilizar Replication Management Objects (RMO). El siguiente es un ensamblado de código administrado que encapsula las funcionalidades de replicación para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Conceptos de los ejecutables del Agente de replicación](replication-agent-executables-concepts.md)  

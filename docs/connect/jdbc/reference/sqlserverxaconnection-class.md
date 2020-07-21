@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d5503084440427c43989a740e9197423fc5438aa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970313"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926958"
 ---
 # <a name="sqlserverxaconnection-class"></a>Clase SQLServerXAConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67970313"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un objeto SQLServerXAConnection se puede dar de alta en una transacción distribuida por medio de un objeto [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md). Un administrador de transacciones, que normalmente forma parte de un servidor de nivel intermedio, administra un objeto SQLServerXAConnection a través del objeto SQLServerXAResource.  
   
 > [!NOTE]  

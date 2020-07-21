@@ -1,5 +1,6 @@
 ---
-title: 'Restauración sin conexión de ejemplo: grupo de archivo principal y otro grupo de archivos (modelo de recuperación completa) | Microsoft Docs'
+title: 'Restauración sin conexión: principal y un grupo de archivos'
+description: En este ejemplo se muestra una restauración sin conexión en SQL Server de un grupo de archivos principal y otro más para una base de datos que usa el modelo de recuperación completa con varios grupos de archivos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 390db80fc88e3d115bad292e5bf0bf1a4a921639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c708d0f8743b993e8df58d9eff607e615ee7b7fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718095"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>Ejemplo: Restauración sin conexión del grupo de archivo principal y de otro grupo de archivos (modelo de recuperación completa)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>Ejemplo: Restauración sin conexión del grupo de archivo principal y de otro grupo de archivos (modelo de recuperación completa)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este tema solo es relevante para las bases de datos con el modelo de recuperación completa que contienen varios grupos de archivos.  
   

@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026689"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
-  De manera predeterminada, cuando se importan datos en una tabla, el comando **bcp** y la instrucción BULK INSERT aplican los valores predeterminados definidos para las columnas de la tabla. Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna. El comando **bcp** y la instrucción BULK INSERT permiten especificar que se mantengan los valores NULL.  
+  De manera predeterminada, cuando se importan datos en una tabla, el comando **BCP** y la instrucción BULK INSERT aplican los valores predeterminados definidos para las columnas de la tabla. Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna. El comando **BCP** y la instrucción BULK INSERT permiten especificar que se mantengan los valores NULL.  
   
- Por el contrario, una instrucción INSERT normal mantiene el valor NULL en lugar de insertar un valor predeterminado. La instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) proporciona el mismo comportamiento básico que la instrucción INSERT regular, pero además admite una sugerencia de tabla para insertar los valores predeterminados.  
+ Por el contrario, una instrucción INSERT normal mantiene el valor NULL en lugar de insertar un valor predeterminado. La instrucción INSERT ... La instrucción SELECT * FROM OPENROWSET(BULK...) proporciona el mismo comportamiento básico que la instrucción INSERT regular, pero además admite una sugerencia de tabla para insertar los valores predeterminados.  
   
 > [!NOTE]  
 >  En los archivos de formato de ejemplo que omiten una columna de tabla, vea [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66011901"
  Para ejecutar los ejemplos de este tema, es necesario crear una tabla y un archivo de datos de ejemplo.  
   
 ### <a name="sample-table"></a>Tabla de ejemplo  
- Los ejemplos requieren la creación de una tabla denominada **MyTestDefaultCol2** en la base de datos de ejemplo **AdventureWorks** , bajo el esquema **dbo** . Para crear esta tabla, en el Editor de consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ejecute:  
+ Los ejemplos requieren la creación de una tabla denominada **MyTestDefaultCol2** en la base de datos de ejemplo **AdventureWorks** , bajo el esquema **dbo** . Para crear esta tabla, en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, ejecute:  
   
 ```  
 USE AdventureWorks;  
@@ -77,12 +76,12 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 ## <a name="keeping-null-values-with-bcp-or-bulk-insert"></a>Mantener valores NULL con bcp o BULK INSERT  
  Los siguientes calificadores especifican que un campo vacío del archivo de datos mantiene su valor NULL durante la operación de importación masiva, en lugar de heredar un valor predeterminado (si existe) para las columnas de la tabla.  
   
-|Comando|Qualifier|Tipo de calificador|  
+|Get-Help|Qualifier|Tipo de calificador|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|Modificador|  
+|**bcp**|`-k`|Switch|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argumento|  
   
- <sup>1</sup> para BULK INSERT, si los valores predeterminados no están disponibles, la columna de tabla debe definirse para permitir valores null.  
+ <sup>1</sup> para Bulk Insert, si los valores predeterminados no están disponibles, se debe definir la columna de la tabla para permitir valores NULL.  
   
 > [!NOTE]  
 >  Estos calificadores deshabilitan la comprobación de definiciones DEFAULT en una tabla mediante los comandos de importación masiva. Sin embargo, para cualquier instrucción INSERT simultánea, se esperan definiciones DEFAULT.  
@@ -99,10 +98,10 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Para insertar "`NULL`"en lugar de"`Default value of Col2`", deberá usar el `-k` switch o la opción KEEPNULL, como se muestra en la siguiente **bcp** y ejemplos de BULK INSERT.  
+ Para insertar " `NULL` " en lugar de " `Default value of Col2` ", debe usar la `-k` opción switch o KEEPNULL, tal y como se muestra en los siguientes ejemplos de **BCP** y Bulk Insert.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Usar bcp y mantener valores NULL  
- En el siguiente ejemplo se muestra cómo mantener valores NULL en un comando **bcp** . El comando **bcp** contiene los siguientes modificadores:  
+ En el siguiente ejemplo se muestra cómo mantener valores NULL en un comando **bcp** . El comando **BCP** contiene los siguientes modificadores:  
   
 |Modificador|Descripción|  
 |------------|-----------------|  
@@ -134,22 +133,22 @@ GO
   
 ```  
   
-## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>Mantener valores predeterminados con INSERT ... SELECT * FROM OPENROWSET(BULK...)  
- De forma predeterminada, cualquier columna no especificada en la operación de carga masiva se establece como NULL mediante INSERT ... SELECT * FROM OPENROWSET(BULK...). Sin embargo, puede especificar que para un campo vacío del archivo de datos, la columna de tabla correspondiente utilice su valor predeterminado (si existe). Para usar los valores predeterminados, especifique la siguiente sugerencia de tabla:  
+## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>Manteniendo los valores predeterminados con INSERT... SELECT * FROM OPENROWSET (BULK...)  
+ De forma predeterminada, las columnas que no se especifican en la operación de carga masiva se establecen en NULL mediante INSERT... SELECT * FROM OPENROWSET (BULK...). Sin embargo, puede especificar que para un campo vacío del archivo de datos, la columna de la tabla correspondiente utilice su valor predeterminado (si existe). Para usar los valores predeterminados, especifique la siguiente sugerencia de tabla:  
   
-|Comando|Qualifier|Tipo de calificador|  
+|Get-Help|Qualifier|Tipo de calificador|  
 |-------------|---------------|--------------------|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|Sugerencia de tabla|  
   
 > [!NOTE]  
->  Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) y [Sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
+>  para obtener más información, vea [INSERT &#40;Transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql), [Select &#40;transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)y [sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>Ejemplos  
- El siguiente ejemplo de INSERT ... El ejemplo SELECT * FROM OPENROWSET(BULK...) realiza importaciones masivas de datos y mantiene los valores predeterminados.  
+ La siguiente instrucción INSERT... El ejemplo SELECT * FROM OPENROWSET (BULK...) realiza importaciones masivas de datos y mantiene los valores predeterminados.  
   
  Para ejecutar los ejemplos es necesario crear la tabla de ejemplo **MyTestDefaultCol2** y el archivo de datos `MyTestEmptyField2-c.Dat` y usar un archivo de formato, `MyTestDefaultCol2-f-c.Fmt`. Para obtener más información acerca de la creación de estos ejemplos, vea "Tabla y archivo de datos de ejemplo", más arriba en este tema.  
   
- La segunda columna de la tabla, **Col2**, tiene un valor predeterminado. El campo correspondiente del archivo de datos contiene una cadena vacía. Cuando INSERT ... SELECT \* FROM OPENROWSET(BULK...) importa los campos de este archivo de datos a la tabla **MyTestDefaultCol2**; de modo predeterminado, en **Col2** se inserta NULL en lugar del valor predeterminado. Este comportamiento predeterminado genera el siguiente resultado:  
+ La segunda columna de la tabla, **Col2**, tiene un valor predeterminado. El campo correspondiente del archivo de datos contiene una cadena vacía. Cuando INSERT... SELECT \* from OPENROWSET (bulk...) importar los campos de este archivo de datos en la tabla **MyTestDefaultCol2** , de forma predeterminada, NULL se inserta en **Col2** en lugar del valor predeterminado. Este comportamiento predeterminado genera el siguiente resultado:  
   
 ||||  
 |-|-|-|  
@@ -171,7 +170,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
@@ -209,7 +208,7 @@ GO
   
 -   [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   

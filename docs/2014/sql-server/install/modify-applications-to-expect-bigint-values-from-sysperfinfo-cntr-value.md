@@ -1,5 +1,5 @@
 ---
-title: Modificar las aplicaciones para que esperen valores bigint de sysperfinfo.cntr_value | Microsoft Docs
+title: Modifique las aplicaciones para esperar valores BIGINT de sysperfinfo. cntr_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 108a9b981debc95e182b16847c39a03d4b242088
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012214"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Modificar las aplicaciones para obtener valores bigint de sysperfinfo.cntr_value
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>Modificar las aplicaciones para obtener valores bigint de sysperfinfo.cntr_value
   sysperfinfo devuelve un `bigint` valor para la columna cntr_value.  
   
 ## <a name="component"></a>Componente  
@@ -32,8 +31,8 @@ ms.locfileid: "66093962"
 > [!NOTE]  
 >  sysperfinfo es una vista de compatibilidad. Debe utilizar en su lugar la vista de administración dinámica sys.dm_os_performance_counter.  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

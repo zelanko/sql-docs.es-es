@@ -11,18 +11,17 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, stored procedures
 - stored procedures [OLE DB], about OLE DB stored procedures
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d978b53754d8b233f1f8b7e58b30d806c0bfdb26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055798"
 ---
 # <a name="stored-procedures"></a>Procedimientos almacenados
-  Un procedimiento almacenado ([Stored Procedures &#40;motor de base de datos&#41;](../../stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
+  Un procedimiento almacenado ([Procedimientos almacenados &#40;Motor de base de datos&#41;](../../stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos de. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
   
 -   Procedimientos almacenados  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62638322"
   
 -   [Llamar a un procedimiento almacenado &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
   
   

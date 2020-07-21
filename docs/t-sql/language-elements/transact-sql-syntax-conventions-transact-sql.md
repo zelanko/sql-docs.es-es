@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121599"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "73981900"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +42,14 @@ En la siguiente tabla se incluyen y describen las convenciones utilizadas en los
   
 |Convención|Se usa para|  
 |----------------|--------------|  
-|UPPERCASE|Palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
+|MAYÚSCULAS|Palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |_cursiva_|Parámetros proporcionados por el usuario para la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**Negrita**|Escriba los nombres de bases de datos, tablas, columnas e índices, procedimientos almacenados, utilidades, nombres de tipos de datos y texto exactamente como se muestra.|  
 |subrayado|Indica el valor predeterminado que se aplica cuando la cláusula que contiene el valor subrayado se omite en la instrucción.|  
 |&#124; (barra vertical)|Separa los elementos de sintaxis escritos entre corchetes o llaves. Solo puede utilizar uno de los elementos.|  
 |`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |{} (llaves)|Elementos obligatorios de sintaxis. No escriba las llaves.|  
-|[ **,** …_n_]|Indica que el elemento anterior puede repetirse _n_ veces. Cada repetición se separa de la siguiente con una coma.|  
+|[ **,** …_n_]|Indica que el elemento anterior puede repetirse _n_ veces. Los elementos se separan por comas.|  
 |[..._n_]|Indica que el elemento anterior puede repetirse _n_ veces. Cada repetición se separa del siguiente con un espacio en blanco.|  
 |;|Terminador de instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque el punto y coma no es necesario en la mayoría de las instrucciones de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se exigirá en una versión futura.|  
 |\<label> ::=|Nombre de un bloque de sintaxis. Use esta convención para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en que se podría usar el bloque de sintaxis se indica con la etiqueta situada entre comillas angulares: \<label>.<br /><br /> Un conjunto es una colección de expresiones, por ejemplo \<grouping set>; una lista es una colección de conjuntos, por ejemplo \<composite element list>.|  
@@ -110,9 +110,9 @@ La mayoría de los ejemplos de código de la referencia de [!INCLUDE[tsql](../..
 Muchos ejemplos de código agregan como prefijo a las constantes de cadenas de caracteres Unicode la letra **N**. Sin el prefijo **N**, la cadena se convierte a la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.  
   
 ## <a name="applies-to-references"></a>Referencias de "Se aplica a"  
-La referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye temas relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+La referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye temas relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-Hay una sección en la parte superior de cada artículo que indica qué productos son compatibles con el tema del artículo. Si se omite un producto, la característica descrita en el artículo no estará disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En el artículo **CREATE AVAILABILITY GROUP** se indica que se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+Hay una sección en la parte superior de cada artículo que indica qué productos son compatibles con el tema del artículo. Si se omite un producto, la característica descrita en el artículo no estará disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En el artículo **CREATE AVAILABILITY GROUP** se indica que se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Se puede usar el tema general del artículo en un producto, pero no se admiten todos los argumentos en algunos casos. Por ejemplo, los usuarios de bases de datos independientes se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Use la instrucción **CREATE USER** en cualquier producto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; en cambio, la sintaxis **WITH PASSWORD** no se puede usar con versiones anteriores. Las secciones **Se aplica a** adicionales se insertan en las descripciones del argumento correspondiente en el cuerpo del artículo.  
   

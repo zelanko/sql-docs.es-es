@@ -1,5 +1,5 @@
 ---
-title: Core.sp_update_data_source (Transact-SQL) | Microsoft Docs
+title: Core. sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942467"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898213"
 ---
-# <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza una fila existente o inserta una fila nueva en la tabla core.source_info_internal del almacén de administración de datos. El componente en tiempo de ejecución del recopilador de datos llama a este procedimiento cada vez que un paquete de carga comienza a cargar los datos en el almacén de administración de datos.  
   
@@ -47,22 +47,22 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_set_uid =] '*collection_set_uid*'  
- GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier**, sin valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
+ GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
- [ @machine_name =] '*nombre_equipo*'  
- Nombre del servidor en el que reside el conjunto de recopilación. *nombre_equipo* es **sysname** con ningún valor predeterminado.  
+ [ @machine_name =] '*machine_name*'  
+ Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
- [ @named_instance =] '*instanciaconnombre*'  
- Nombre de la instancia del conjunto de recopilación. *instanciaconnombre* es **sysname**, sin valor predeterminado.  
+ [ @named_instance =] '*named_instance*'  
+ Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
->  *instanciaconnombre* debe ser el nombre de instancia completo, que está formado por el nombre del equipo y el nombre de instancia en el formulario *computername*\\*nombreDeInstancia*.  
+>  *named_instance* debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo* \\ *nombreDeInstancia*.  
   
  [ @days_until_expiration =] *days_until_expiration*  
  Número de días restantes en el período de retención de datos de la instantánea. *days_until_expiration* es **smallint**.  
   
- [ @source_id =] *source_id*  
- El identificador único del origen de la actualización. *Source_ID* es **int** y se devuelve como OUTPUT.  
+ [ @source_id =] *Source_ID*  
+ El identificador único del origen de la actualización. *Source_ID* es de **tipo int** y se devuelve como salida.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -75,7 +75,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 -   El valor de days_until_expiration ha cambiado.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **mdw_writer** (con permiso EXECUTE) rol fijo de base de datos.  
+ Requiere la pertenencia al rol fijo de base de datos **mdw_writer** (con permiso Execute).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se actualiza el origen de datos (en este caso el conjunto de recopilación Uso de disco), establece el número de días hasta la expiración y devuelve el identificador del origen. En este ejemplo se usa la instancia predeterminada.  
@@ -92,9 +92,9 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

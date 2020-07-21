@@ -1,8 +1,8 @@
 ---
-title: Ver informes de análisis en el Asistente de experimentación de base de datos para las actualizaciones de SQL Server
-description: Ver informes de análisis en el Asistente de experimentación de base de datos
-ms.custom: ''
-ms.date: 10/22/2018
+title: Ver informes de análisis para actualizaciones de SQL Server
+description: Ver informes de análisis en Asistente para experimentación con bases de datos
+ms.custom: seo-lt-2019
+ms.date: 02/04/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,84 +10,79 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050449"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "76977618"
 ---
-# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Ver informes de análisis en el Asistente de experimentación de base de datos
+# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Ver informes de análisis en Asistente para experimentación con bases de datos
 
-Después de [crear el informe de análisis](database-experimentation-assistant-create-report.md) en base de datos experimentación Assistant (DEA), complete los pasos descritos en este artículo para ver el informe y obtener información de rendimiento de su prueba A/b.
+Después de usar Asistente para experimentación con bases de datos (DEA) para [crear un informe de análisis](database-experimentation-assistant-create-report.md), puede revisar el informe para obtener información sobre el rendimiento en función de la prueba A/B realizada.
 
-## <a name="select-a-server"></a>Seleccione un servidor
+## <a name="open-an-existing-analysis-report"></a>Abrir un informe de análisis existente
 
-En DEA, seleccione el icono de menú. En el menú expandido, seleccione **informes de análisis** junto al icono de la lista de comprobación para abrir la ventana de informes de análisis.
+1. En DEA, seleccione el icono de lista, especifique el nombre del servidor y el tipo de autenticación, Active o desactive las casillas **cifrar conexión** y **confiar en certificado de servidor** según corresponda para su escenario y, a continuación, seleccione **conectar**.
 
-En **informes de análisis de**, escriba el nombre de un equipo que ejecuta SQL Server que tiene una base de datos de análisis. Seleccione **Conectar**. 
+   ![Conectarse al servidor con el informe](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
-![Conectarse a un informe existente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+2. En la pantalla **informes de análisis** , en el lado izquierdo, seleccione la entrada para el informe que desea ver.
 
-Si faltan las dependencias, el **requisitos previos** le pide página con vínculos a instalarlos. Instalar los requisitos previos y, a continuación, seleccione **intentarlo**.
-
-![Página de requisitos previos](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
-
-## <a name="select-an-analysis-report-to-view"></a>Seleccione un informe de análisis para ver
-
-En la lista de informes de análisis, haga doble clic en un informe para abrirlo.
-
-![Ver un informe existente](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
-
-Puede obtener información sobre cómo se representa la carga de trabajo, como se muestra en este gráfico de ejemplo:
-
-![Gráficos del representante de la carga de trabajo](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+   ![Abrir un archivo de informe existente](./media/database-experimentation-assistant-view-report/dea-select-report-to-view.png)
 
 ## <a name="view-and-understand-the-analysis-report"></a>Ver y entender el informe de análisis
 
-En esta sección le guiará a través del informe de análisis.
+Esta sección le guía a través del informe de análisis.
 
-### <a name="query-categories"></a>Categorías de consulta
+En la primera página del informe, aparece la información sobre la versión y la información de compilación de los servidores de destino en los que se ejecutó el experimento. El umbral le permite ajustar la sensibilidad o la tolerancia del análisis de prueba A/B. De forma predeterminada, el umbral se establece en el 5%; cualquier mejora en el rendimiento >= 5% se clasifica como ' mejorado '.  La lista desplegable permite evaluar el informe con distintos umbrales de rendimiento.
 
-Seleccione los distintos segmentos del gráfico circular izquierdo para mostrar solo las consultas que se encuentran en esa categoría.
+Puede exportar los datos del informe a un archivo CSV seleccionando el botón **exportar** .  En cualquier página del informe de análisis, puede seleccionar **Imprimir** para imprimir lo que está visible en la pantalla en ese momento.
 
-![Informes gráficos circulares](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+### <a name="query-distribution"></a>Distribución de consultas
 
-- **Degradado consultas**: Consultas que realizan mejor en el que en B.  
-- **Errores**: Consultas que se muestran errores en la instancia B pero no en la instancia de A.  
-- **Mejorar las consultas**: Consultas que se ejecutaron mejor en la instancia B que en la instancia de A.  
-- **Las consultas indeterminadas**: Consultas que han tenido un cambio de rendimiento indeterminado.  
-- **Mismo**: Consultas en el que rendimiento sigue siendo igual en todas las instancias A y B.
+- Seleccione distintos sectores de los gráficos circulares para mostrar solo las consultas que pertenecen a esa categoría.
 
-### <a name="individual-query-drill-down"></a>Exploración en profundidad de consulta individual
+   ![Categorías de informe como segmentos del gráfico circular](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
-Puede seleccionar los vínculos de la plantilla de consulta para ver información más detallada sobre consultas concretas.
+  - **Degradado**: consultas que han realizado peor en el destino 2 que en el destino 1.
+  - **Errores**: consultas que mostraron errores al menos una vez en al menos uno de los destinos.
+  - **Mejorado**: consultas que se realizaron mejor en el destino 2 que en el destino 1.
+  - **No se puede evaluar**: las consultas que tenían un tamaño de muestra demasiado pequeño para el análisis estadístico. Para el análisis de pruebas A/B, DEA requiere que las mismas consultas tengan al menos 15 ejecuciones en cada destino.
+  - Lo **mismo**: consultas que no tienen ninguna diferencia estadística entre el destino 1 y el destino 2.
 
-![Consulta de exploración en profundidad](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
+  Las consultas de error, si las hay, se muestran en gráficos independientes; un gráfico de barras que clasifica los errores por tipo y un gráfico circular que clasifica los errores por identificador de error.
 
-Seleccione una consulta específica para abrir una comparación de resumen para la consulta.
+   ![Gráficos de consultas de error](./media/database-experimentation-assistant-view-report/dea-error-query-charts.png)
 
-![Resumen de comparación](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
+  Hay cuatro tipos posibles de errores:
 
-Puede ver las instancias de A y B que se ejecutó la consulta en. También puede ver una plantilla del aspecto que podría tener la consulta. Una tabla muestra información de consulta que es específico de instancias A y B.
+  - **Errores existentes**: errores que existen tanto en el destino 1 como en el destino 2.
+  - **Nuevos errores**: errores que son nuevos en el destino 2.
+  - **Errores resueltos**: errores que existen en el destino 1, pero se resuelven en el destino 2.
+  - **Actualizar bloqueadores**: errores que bloquean la actualización al servidor de destino.
 
-### <a name="error-queries"></a>Consultas de error
+  Al hacer clic en cualquier barra o sección circular de los gráficos se profundiza en la categoría y se muestran las métricas de rendimiento, incluso para la categoría **no se puede evaluar** .
 
-El informe de resumen de comparación tiene expandible **información de Error** y **información del Plan de consulta** secciones. Las secciones muestran los errores e información para ambas instancias del plan.
+  Además, el panel muestra las cinco mejores consultas mejoradas y degradadas para proporcionar una introducción rápida al rendimiento.
 
-Seleccione el gráfico circular de error (rojo) para mostrar estos tipos de errores:
-- **Los errores existentes**: Errores que estaban en A.
-- **Nuevos errores**: Errores que estaban en B.
-- **Resolver errores**: Errores que estaban en una, pero no en B.
+### <a name="individual-query-drill-down"></a>Obtención de detalles de consulta individual
 
-![Gráficos de error](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+Puede seleccionar vínculos de plantilla de consulta para obtener información más detallada sobre consultas específicas.
 
-## <a name="next-steps"></a>Pasos siguientes
+![Explorar en profundidad una consulta específica](./media/database-experimentation-assistant-view-report/dea-query-drill-down-report.png)
 
-- Para obtener información sobre cómo generar un informe de análisis en un símbolo del sistema, consulte [ejecutar en el símbolo del sistema](database-experimentation-assistant-run-command-prompt.md).
+- Seleccione una consulta específica para abrir el Resumen de la comparación relacionada.
 
-- Para obtener una introducción minutos 19 DEA y demostración, vea el vídeo siguiente:
+   ![Resumen de comparación](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+   Puede encontrar estadísticas de resumen para esa consulta, como el número de ejecuciones, la duración media, la CPU media, las lecturas y escrituras medias y el recuento de errores.  Si la consulta es una consulta de error, en la pestaña **información de error** se muestran más detalles sobre el error.  En la pestaña **información del plan de consulta** , puede encontrar información sobre los planes de consulta usados para la consulta en el destino 1 y el destino 2.
+
+   > [!NOTE]
+   > Si está analizando el evento extendido (. XEL), la información del plan de consulta no se recopila para limitar la presión de memoria en el equipo del usuario.
+
+## <a name="see-also"></a>Consulte también
+
+- Para obtener información sobre cómo generar un informe de análisis en un símbolo del sistema, vea [ejecutar en el símbolo del sistema](database-experimentation-assistant-run-command-prompt.md).

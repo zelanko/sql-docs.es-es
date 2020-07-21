@@ -7,17 +7,16 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f0e928ad5349538b11f81949a01f5a986f7d296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050098"
 ---
-# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementar SQL_VARIANT en una tabla con optimización para memoria
+# <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>Implementar SQL_VARIANT en una tabla con optimización para memoria
   Considere una tabla de ejemplo con la columna `SQL_VARIANT`:  
   
 ```sql  
@@ -120,7 +119,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

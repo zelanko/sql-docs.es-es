@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298212"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
@@ -33,19 +33,19 @@ ms.locfileid: "71298212"
   
  El destino ODBC tiene una salida normal y una salida de error.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
  El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Los dos modos son:  
   
--   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las funcionalidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
+-   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
--   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Ejecutar SQL** para insertar las filas de una en una.  
+-   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Execute de SQL** para insertar las filas de una en una.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  El destino ODBC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
 -   **Código de error**: número que corresponde al error actual. Vea la documentación de la base de datos de origen para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
   
--   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
   
 -   Columnas estándar de datos de salida.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "71298212"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Nombre de la tabla - Lote|Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Cuando seleccione esta opción, aparecerán las opciones siguientes:|  
-||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible de la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
+||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
 |Nombre de la tabla - Fila a fila|Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Cuando seleccione esta opción, aparecerá la opción siguiente:|  
-||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
+||**Nombre de la tabla o la vista**: seleccione en la lista una tabla o vista disponible en la base de datos.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
   
 #### <a name="preview"></a>Vista previa  
  Haga clic en **Vista previa** para ver hasta 200 filas de datos para la tabla que ha seleccionado.  
@@ -155,7 +155,7 @@ ms.locfileid: "71298212"
 #### <a name="inputoutput"></a>Entrada/salida  
  Muestra el nombre del origen de datos.  
   
-#### <a name="column"></a>columna  
+#### <a name="column"></a>Columna  
  No se usa.  
   
 #### <a name="error"></a>Error  
@@ -177,7 +177,7 @@ ms.locfileid: "71298212"
  Use las opciones siguientes para configurar la forma en la que el destino de ODBC controla errores y truncamientos.  
   
 #### <a name="fail-component"></a>Error de componente  
- La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Este es el comportamiento predeterminado.  
   
 #### <a name="ignore-failure"></a>Omitir error  
  Se omite el error o el truncamiento.  

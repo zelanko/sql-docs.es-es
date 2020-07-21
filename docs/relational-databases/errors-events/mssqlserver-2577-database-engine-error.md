@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: f53256a2-2fb0-47fd-9ed9-c45389104145
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7fb2c67a1d2e0ea80f0fb54c0136831109a9c3f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8b561cb80a28281bc938a81aeb54765109b6705b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023065"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723840"
 ---
-# <a name="mssqlserver2577"></a>MSSQLSERVER_2577
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_2577"></a>MSSQLSERVER_2577
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2577|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2577|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_IAM_CHAIN_SEQUENCE_OUT_OF_ORDER|  
 |Texto del mensaje|Los números de secuencia de cadena no están ordenados en la cadena IAM (Mapa de asignación de índices) para el Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE). La página P_ID1 con el número de secuencia SEQUENCE1 apunta a la página P_ID2 con el número de secuencia SEQUENCE2.|  

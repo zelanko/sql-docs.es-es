@@ -1,5 +1,5 @@
 ---
-title: Roles de usuario para los datos modificados Capture Service para Oracle de Attunity | Microsoft Docs
+title: Roles de usuario para Change Data Capture Service para Oracle de Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 87b05f4d6d20144614954cec1b5671321e7569bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771091"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435192"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity
   En esta sección se describen los roles de usuario para el Servicio de captura de datos modificados para Oracle de Attunity. Los roles descritos son roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , roles de Windows o roles de base de datos de Oracle.  
@@ -23,7 +22,7 @@ ms.locfileid: "62771091"
 ## <a name="windows-user-roles"></a>Roles de usuario de Windows  
  A continuación se describen los roles de usuario de Windows que el servicio CDC de Oracle emplea.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Administrador de equipo: Servicio CDC de Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrador del equipo: Servicio CDC de Oracle  
  El administrador del equipo es un usuario de Windows responsable de crear y mantener el servicio CDC en el equipo. Este usuario debe pertenecer al grupo Administradores del equipo local.  
   
  Entre las tareas realizadas por el administrador del equipo del servicio CDC de Oracle se incluyen:  
@@ -139,7 +138,7 @@ ms.locfileid: "62771091"
   
  En la lista siguiente se describen los privilegios necesarios que se deben conceder al usuario de minería de registros:  
   
--   SELECT en \<any-captured-table>  
+-   SELECCIONAR activado\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

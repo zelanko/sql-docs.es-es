@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar jerarquías (SSAS Tabular) | Microsoft Docs
+title: Crear y administrar jerarquías (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad85e4c70e5185de83a8d3e259e397c5673ac9aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939846"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Crear y administrar jerarquías (SSAS tabular)
   Las jerarquías se pueden crear y administrar en la Vista de diagrama del diseñador de modelos. Para ver el diseñador de modelos en la Vista de diagrama, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Modelo** , seleccione **Vista de modelo**y haga clic en **Vista de diagrama**.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067495"
   
 -   [Eliminar una jerarquía](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a> Crear una jerarquía  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> Crear una jerarquía  
  Puede crear una jerarquía usando las columnas y el menú contextual de la tabla. Al crear una jerarquía, se muestra un nuevo nivel primario con las columnas seleccionadas como niveles secundarios.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Para crear una jerarquía desde el menú contextual  
@@ -41,12 +40,12 @@ ms.locfileid: "66067495"
   
 2.  Escriba el nombre de la jerarquía.  
   
- Puede arrastrar columnas adicionales al nivel primario de la jerarquía, que copia las columnas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
+ Puede arrastrar columnas adicionales al nivel primario de la jerarquía, lo que copia las columnas. Arrastre y coloque el nivel secundario para situarlo donde desea que aparezca en la jerarquía.  
   
 > [!NOTE]  
 >  El comando Crear jerarquía está deshabilitado en el menú contextual si realiza una selección múltiple de una medida junto con una o varias columnas, o si selecciona columnas de varias tablas.  
   
-##  <a name="bkmk_edit"></a> Editar una jerarquía  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>Editar una jerarquía  
  Puede cambiar el nombre de una jerarquía, cambiar el nombre de un nivel secundario, cambiar el orden de los niveles secundarios, agregar columnas adicionales como niveles secundarios, quitar un nivel secundario de una jerarquía, mostrar el nombre del origen de un nivel secundario (el nombre de columna) y ocultar un nivel secundario si tiene el mismo nombre que el nivel primario de la jerarquía.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Para cambiar el nombre de una jerarquía o de un nivel secundario  
@@ -85,7 +84,7 @@ ms.locfileid: "66067495"
   
 -   Haga clic con el botón derecho en un nivel secundario de la jerarquía y, después, haga clic en **Show Source Name**(Mostrar nombre del origen). Aparece el nombre de la columna de la que se copió la jerarquía.  
   
-##  <a name="bkmk_delete"></a> Eliminar una jerarquía  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a>Eliminar una jerarquía  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Para eliminar una jerarquía y quitar sus niveles secundarios  
   
@@ -93,9 +92,9 @@ ms.locfileid: "66067495"
   
 -   O bien, haga clic en el nivel primario de la jerarquía y, a continuación, presione Supr. Esto también quitará todos los niveles secundarios.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-designer-ssas-tabular.md)   
- [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de modelos tabulares &#40;&#41;tabular de SSAS](../tabular-model-designer-ssas-tabular.md)   
+ [Jerarquías &#40;&#41;tabular de SSAS](hierarchies-ssas-tabular.md)   
  [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)  
   
   

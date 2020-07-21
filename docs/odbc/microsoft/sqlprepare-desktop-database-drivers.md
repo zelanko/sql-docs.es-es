@@ -1,5 +1,5 @@
 ---
-title: SQLPrepare (controladores de escritorio de la base de datos) | Microsoft Docs
+title: SQLPrepare (controladores de base de datos de escritorio) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLPrepare function [ODBC], Desktop Database Drivers
 ms.assetid: dbc8f17b-2913-4bdf-841c-d79213993cd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62d91d6e5493665af55e440dcdd8594e03241978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c52676146ee609df5beacdfd14d7e4b56d2f9149
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996345"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301589"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (controladores de escritorio de la base de datos)
-Una instrucción preparada con un número incorrecto de columnas, devuelve un error en tiempo de ejecución, no en la preparación de instrucciones.
+Una instrucción preparada con un número incorrecto de columnas devuelve un error en tiempo de ejecución, no en la preparación de la instrucción.

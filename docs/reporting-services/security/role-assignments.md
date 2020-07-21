@@ -15,10 +15,10 @@ ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570569"
 ---
 # <a name="role-assignments"></a>Asignaciones de roles
@@ -33,7 +33,7 @@ En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las *asignacio
   - **Browser**
   - **Administrador de contenido**
   - **Mis informes**
-  - **publicador**
+  - **Publicador**
   - **Generador de informes**
   - **Administrador del sistema**
   - **Usuario del sistema**
@@ -57,7 +57,7 @@ Diagrama de asignaciones de roles
  La seguridad basada en roles en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se organiza en los siguientes niveles:
 
 - Las asignaciones de roles de nivel de elemento controlan el acceso a los elementos de la jerarquía de carpetas del servidor de informes, como:
-  - informes
+  - reports
   - carpetas
   - Modelos de informe
   - orígenes de datos compartidos

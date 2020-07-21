@@ -1,5 +1,5 @@
 ---
-title: Función Last (Generador de informes y SSRS) | Microsoft Docs
+title: Función Last (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6f6a30101e4ee1472845d11dc1ab6b7cb3d70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e1856df527f071c5366be84c8260d16ea92bf087
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579538"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081254"
 ---
 # <a name="report-builder-functions---last-function"></a>Funciones del Generador de informes: función Last
   Devuelve el último valor de la expresión especificada en el ámbito especificado.  
@@ -32,20 +32,20 @@ Last(expression, scope)
  *expression*  
  (**Variant** o **Binario**) Expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!Fieldname.Value`.  
   
- *ámbito*  
+ *scope*  
  (**String**) (opcional). Nombre de un conjunto de datos, una región de datos o un grupo que contiene los elementos de informe a los que se va a aplicar la función. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Varía según el tipo de expresión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **Last** devuelve el último valor de un conjunto de datos después de aplicar todos los filtros y la configuración de ordenación al ámbito especificado.  
   
  La función **Last** solo se puede usar en expresiones de filtro de grupo con el ámbito actual (valor predeterminado).  
   
  También puede usar **Last** en un encabezado de página para devolver el último valor de la colección **ReportItems** de una página; esto permite generar encabezados de estilo diccionario que muestren la primera y la última entrada de cada página.  
   
- El valor de *scope* debe ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
+ El valor de *scope* tiene que ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
   
  *Expression* puede contener las llamadas a las funciones de agregados anidados con las siguientes excepciones y condiciones:  
   

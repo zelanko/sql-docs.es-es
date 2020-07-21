@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2972088ba9191df93fcb7236753513a7ac9db1fe
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040447"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85685263"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve las opciones SET activas (establecidas) para la conexión actual.
   
@@ -70,7 +70,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON y el nivel de aislamiento de transacción está establecido en 'read committed', DBCC USEROPTIONS notifica un nivel de aislamiento de transacción 'read committed snapshot'. El nivel de aislamiento real es read committed.
   
 ## <a name="permissions"></a>Permisos  

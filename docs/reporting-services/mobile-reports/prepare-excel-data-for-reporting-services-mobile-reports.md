@@ -1,5 +1,6 @@
 ---
 title: Preparación de los datos de Excel para informes móviles de Reporting Services | Microsoft Docs
+description: Los informes móviles de Reporting Services pueden usar datos de archivos de Excel. Siga estas sugerencias a fin de preparar archivos y hojas de cálculo de Excel para facilitar la importación.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9285b9b89930fe540f9b5493f1730184cf4e9526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62499950"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448372"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparación de los datos de Excel para informes móviles de Reporting Services
   
@@ -63,7 +64,7 @@ Si una hoja de cálculo contiene celdas calculadas o fórmulas, solo se importa 
   
 No existen restricciones en lo relativo a la ubicación donde puede almacenar los archivos de Excel que importe en el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]. Sin embargo, si mueve el archivo o cambia su nombre después de importarlo, no podrá actualizar los datos con el comando **Actualizar todos los datos** que se encuentra en la vista de datos.   
   
->**Nota**: el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] no actualiza automáticamente los datos de Excel. Puede actualizar los datos mediante el comando [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **refresh** command, but only if the file hasn't moved.  
+>**Nota**: el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] no actualiza automáticamente los datos de Excel. Puede actualizar los datos a través del comando **refresh** de [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], pero solo si el archivo no se ha movido.  
   
 ## <a name="dates"></a>Fechas  
   
@@ -83,8 +84,8 @@ Los datos de hojas de cálculo con formatos distintos a los descritos anteriorme
   
 Los objetos personalizados de hojas de cálculo de Excel, como tablas dinámicas, visualizaciones e imágenes, no se importan en el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].  
   
-### <a name="see-also"></a>Vea también  
-- [Preparar datos para informes de Reporting Services móviles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>Consulte también  
+- [Preparación de datos para informes móviles de Reporting Services](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPhone](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI para iOS)  

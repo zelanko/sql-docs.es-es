@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061933"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Conectar con el Explorador de objetos y Servidores registrados
   Este tutorial muestra el uso de Servidores registrados y del Explorador de objetos.  
@@ -37,7 +36,7 @@ ms.locfileid: "62636429"
   
 5.  En el cuadro **Nombre del servidor registrado** , escriba [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  En el **las propiedades de conexión** ficha la **conectar con base de datos** lista, seleccione  **\<Examinar servidor... >** .  
+6.  En la pestaña **propiedades de conexión** , en la lista **conectar con base de datos** , seleccione **\<Browse server...>** .  
   
 7.  En el cuadro de diálogo **Buscar bases de datos** , haga clic en **Sí**.  
   

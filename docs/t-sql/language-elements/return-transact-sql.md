@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e16193e0bf6a9596a17f767b157fc825ff3e0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d47b798f9af00fc3cae3699001b645fc5564b4b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072369"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706209"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Sale incondicionalmente de una consulta o procedimiento. RETURN es inmediata y completa, y se puede utilizar en cualquier punto para salir de un procedimiento, lote o bloque de instrucciones. Las instrucciones que siguen a RETURN no se ejecutan.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68072369"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  
@@ -49,13 +49,13 @@ RETURN [ integer_expression ]
  *integer_expression*  
  Es el valor entero que se devuelve. Los procedimientos almacenados pueden devolver un valor entero al procedimiento que realiza la llamada o a una aplicación.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve opcionalmente **int**.  
   
 > [!NOTE]  
 >  A menos que se documente de otra manera, todos los procedimientos almacenados del sistema devuelven el valor 0. Esto indica que son correctos y un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se utiliza con un procedimiento almacenado, RETURN no puede devolver un valor NULL. Si un procedimiento intenta devolver un valor NULL (por ejemplo, al utilizar RETURN @status cuando @status es NULL), se genera un mensaje de advertencia y se devuelve un valor 0.  
   
  El valor de estado devuelto se puede incluir en las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del lote o procedimiento que ha ejecutado el procedimiento actual, pero se debe escribir de la forma siguiente: `EXECUTE @return_status = <procedure_name>`.  

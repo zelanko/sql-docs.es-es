@@ -1,6 +1,6 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para la función SUBSTRING. Esta función devuelve parte de una expresión especificada de caracteres, binaria, de texto o de imagen.
 ms.date: 10/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cecc99e2612acb17013f47619f32d64b7968ebc9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117676"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85994239"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Devuelve parte de una expresión de caracteres, binaria, de texto o de imagen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -54,7 +54,7 @@ SUBSTRING ( expression ,start , length )
  *length*  
  Es un entero positivo o una expresión **bigint** que especifica cuántos caracteres de *expression* se van a devolver. Si *length* es negativo, se genera un error y finaliza la instrucción. Si la suma de *start* y *length* es mayor que el número de caracteres de *expression*, se devuelve la expresión de valor completa que empieza en *start*.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve datos de caracteres si *expression* es de alguno de los tipos de datos de caracteres admitidos. Devuelve datos binarios si *expression* es de alguno de los tipos de datos **binary** admitidos. La cadena devuelta es del mismo tipo que la expresión indicada, con las excepciones mostradas en la tabla:  
   
 |Expresión especificada|Tipo de valor devuelto|  
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los valores de *start* y *length* deben especificarse en número de caracteres para los tipos de datos **ntext**, **char** o **varchar** y bytes para los tipos de datos **text**, **image**, **binary** o **varbinary**.  
   
  *expresión* debe ser de tipo **varchar(max)** o **varbinary(max)** cuando *start* o *length* contienen un valor mayor que 2 147 483 647.  
@@ -85,12 +85,12 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|NAME |Initial |ThirdAndFourthCharacters|
+|name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|maestra  |m  |st |
-|tempdb  |t  |mp |
-|model   |m  |de |
-|msdb    |m  |db |
+|maestro    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. Usar SUBSTRING con una cadena de caracteres  
  En el siguiente ejemplo se muestra cómo devolver únicamente una parte de una cadena de caracteres. En la tabla `dbo.DimEmployee`, esta consulta devuelve el apellido en una columna y solo la primera inicial en la segunda columna.  

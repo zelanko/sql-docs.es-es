@@ -1,5 +1,6 @@
 ---
 title: Ejecutar SQL Server con o sin red | Microsoft Docs
+description: Obtenga información sobre cómo ejecutar SQL Server con y sin red. Para el uso local, vea cómo usar una canalización local. Para el uso en red, vea cómo comprobar los servicios necesarios.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - starting Server service
 - SQL Server, running
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: db02b300e0f327a9186fb9b9af612d8f3f1ec452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40da72c64afd53e01e7ce5060d18a273c5263796
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651509"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>Ejecutar SQL Server con o sin red
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede ejecutar en una red o puede funcionar sin ella.  
   
 ## <a name="running-sql-server-on-a-network"></a>Ejecutar SQL Server en una red  

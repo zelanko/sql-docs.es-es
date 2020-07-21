@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f4fcc8f39f668422189780f89da0935f21444173
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 588014047b66183c770b4d5a84b9f9eaca05e8b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63184254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054399"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportar una plantilla de seguimiento (SQL Server Profiler)
   En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para exportar una plantilla de seguimiento existente y guardarla como un archivo de plantilla (.tdf). Si exporta una plantilla de seguimiento y la guarda como un archivo, puede utilizar la plantilla con otra instancia de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "63184254"
   
 3.  Escriba un nombre para el archivo de plantilla exportado y, después, haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   

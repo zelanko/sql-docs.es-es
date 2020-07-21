@@ -1,7 +1,6 @@
 ---
-title: Ver los registros del conjunto de recopilación (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Visualización de los registros del conjunto de recopilación (SSMS)
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -12,15 +11,16 @@ helpviewer_keywords:
 ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 41ad2257f18b73794fa788cefdd3e77e602e11b7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b347a88187e7f7b961c8ad86b50b334e0837333
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733831"
 ---
-# <a name="view-collection-set-logs-sql-server-management-studio"></a>Ver los registros del conjunto de recopilación (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="view-collection-set-logs-sql-server-management-studio"></a>Visualización de los registros del conjunto de recopilación (SQL Server Management Studio)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Puede ver todos los registros del conjunto de recopilación o registros de conjunto de recopilación individuales de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="to-view-collection-set-logs"></a>Para ver los registros del conjunto de recopilación  

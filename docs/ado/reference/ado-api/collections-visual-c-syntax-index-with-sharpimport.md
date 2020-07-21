@@ -1,5 +1,5 @@
 ---
-title: 'Colecciones (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
+title: 'Colecciones (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9142282c2ee2cda5a2b545a3ef164581403ccba3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919894"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758821"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>Colecciones (Visual C++ índice de sintaxis con #import)
-Resulta útil saber que las colecciones heredan ciertos métodos y propiedades comunes.  
+# <a name="collections-visual-c-syntax-index-with-import"></a>Colecciones (Visual C++ Índice de sintaxis con #import)
+Resulta útil saber que las colecciones heredan determinados métodos y propiedades comunes.  
   
- Todas las colecciones heredan la **recuento** propiedad y **actualizar** agregan método y todas las colecciones de la **elemento** propiedad. El **errores** agrega la colección el **clara** método. El **parámetros** hereda de la colección el **Append** y **eliminar** métodos, mientras que el **campos** colección agrega el **Append**, **eliminar**, y **actualización** métodos.  
+ Todas las colecciones heredan la propiedad **Count** y el método **Refresh** y todas las colecciones agregan la propiedad **Item** . La colección de **errores** agrega el método **Clear** . La colección **Parameters** hereda los métodos **Append** y **Delete** , mientras que la colección **Fields** agrega los métodos **Append**, **Delete**y **Update** .  
   
 ## <a name="properties-collection"></a>Colección de propiedades  
   
@@ -96,8 +96,8 @@ long GetCount( ); __declspec(property(get=GetCount)) long Count;
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

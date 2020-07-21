@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fa9c65d02de70b93b97d4f31901ea7615574791
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040708"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Cambiar el nombre de las consultas (Visual Database Tools)
   Puede cambiar el nombre de una consulta que no esté abierta para su edición. En el procedimiento siguiente se presupone que la consulta cuyo nombre quiere cambiar está cerrada.  
@@ -31,8 +30,8 @@ ms.locfileid: "63316837"
   
 3.  Escriba un nuevo nombre para la consulta y, a continuación, presione ENTRAR.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

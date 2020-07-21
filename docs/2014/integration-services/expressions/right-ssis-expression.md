@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b84cdce4bd540c285211d012a8c08ee364b833de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768801"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428252"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (expresión de SSIS)
   Devuelve el número de caracteres especificado de la parte más a la derecha de la expresión de caracteres dada.  
@@ -39,7 +38,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si *integer_expression* es mayor que la longitud de *character_expression*, la función devuelve *character_expression*.  
   
  Si *integer_expression* es cero, la función devuelve una cadena de longitud cero.  
@@ -71,7 +70,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [LEFT &#40;expresión de SSIS&#41;](left-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   

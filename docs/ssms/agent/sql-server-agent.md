@@ -1,8 +1,7 @@
 ---
-title: Agente SQL Server | Microsoft Docs
+title: Agente SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +10,17 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e62d4502feb6985717e9aad1bf2f6da63100e60c
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552668"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257932"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
 
@@ -30,7 +31,7 @@ ms.locfileid: "69552668"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
 
-## <a name="Benefits"></a>Ventajas del Agente SQL Server 
+## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Ventajas del Agente SQL Server 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar información de los trabajos. Los trabajos contienen uno o más pasos. Cada paso contiene su propia tarea; por ejemplo, realizar una copia de seguridad de una base de datos.  
   
@@ -39,11 +40,11 @@ ms.locfileid: "69552668"
 > [!NOTE]  
 > El servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está deshabilitado de manera predeterminada cuando se instala [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , a menos que el usuario elija explícitamente iniciar automáticamente el servicio.  
   
-## <a name="Components"></a>Componentes del Agente SQL Server  
+## <a name="sql-server-agent-components"></a><a name="Components"></a>Componentes del Agente SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea los siguientes componentes para definir las tareas que se van a realizar, cuándo se van a llevar a cabo y cómo se va a informar de si se han realizado correctamente o no.  
   
-### <a name="jobs"></a>trabajos  
-Un *trabajo* es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice los trabajos para definir tareas administrativas de manera que se ejecuten una o más veces, y se pueda supervisar si se realizan o no correctamente. Un trabajo se puede ejecutar en un servidor local o en varios servidores remotos.  
+### <a name="jobs"></a>Trabajos  
+Un *trabajo* es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use trabajos para definir una tarea administrativa que se puede ejecutar una o varias veces y supervisar para detectar si lo hace correctamente o con errores. Un trabajo se puede ejecutar en un servidor local o en varios servidores remotos.  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están ejecutando en el momento de un evento de conmutación por error en una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se reanudan después de la conmutación por error a otro nodo de clúster de conmutación por error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los trabajos del Agente que se están ejecutando en el momento que se pausa un nodo de Hyper-V no se reanudan si la pausa origina una conmutación por error a otro nodo. Los trabajos que empiezan pero no se finalizan como consecuencia de un evento de conmutación por error se registran como iniciados, pero no muestran entradas de registro adicionales para que indiquen finalización o error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran como nunca finalizados.  
@@ -61,7 +62,7 @@ Cada acción de un trabajo es un *paso de trabajo*. Por ejemplo, un paso de trab
 Cada paso se ejecuta en un contexto de seguridad específico. En el caso de los pasos de trabajo que utilizan [!INCLUDE[tsql](../../includes/tsql-md.md)], use la instrucción EXECUTE AS para establecer el contexto de seguridad para éstos. Para los demás tipos de pasos de trabajo, utilice una cuenta de proxy para establecer el contexto de seguridad.  
   
 ### <a name="schedules"></a>Programaciones  
-Una *programación* especifica cuándo se ejecuta un trabajo. Se puede ejecutar más de un trabajo en la misma programación y se puede aplicar más de una programación al mismo trabajo. Una programación puede definir las condiciones siguientes del momento en el que se ejecuta un trabajo:  
+Una *programación* especifica cuándo se ejecuta un trabajo. Se puede ejecutar más de un trabajo en la misma programación y se puede aplicar más de una programación al mismo trabajo. Una programación puede definir las condiciones siguientes para el momento en que se ejecuta un trabajo:  
   
 -   Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -69,11 +70,11 @@ Una *programación* especifica cuándo se ejecuta un trabajo. Se puede ejecutar 
   
 -   Una vez, a una hora y una fecha específicas.  
   
--   Periódicamente.  
+-   Según una programación periódica.  
   
 Para obtener más información, vea [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Trabajos  
+### <a name="alerts"></a>Alertas  
 Una *alerta* es una respuesta automática a un evento específico. Por ejemplo, un evento puede ser el inicio de un trabajo o que los recursos del sistema alcancen un umbral específico. Debe definir las condiciones en las que se genera una alerta.  
   
 Una alerta puede responder a una de las condiciones siguientes:  
@@ -88,9 +89,9 @@ Una alerta puede realizar las acciones siguientes:
   
 -   Notificar a uno o varios operadores  
   
--   Ejecutar un trabajo  
+-   Ejecución de un trabajo  
   
-Para obtener más información, consulte [Alertas](../../ssms/agent/alerts.md).  
+Para más información, consulte [Alertas](../../ssms/agent/alerts.md).  
   
 ### <a name="operators"></a>Operadores  
 Un *operador* define información de contacto para las personas responsables del mantenimiento de una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En algunas compañías, las responsabilidades de operador están asignadas a una sola persona. En compañías con varios servidores, muchas personas comparten las responsabilidades de operador. Un operador no contiene información de seguridad y no define una entidad de seguridad.  
@@ -109,11 +110,11 @@ Un *operador* define información de contacto para las personas responsables del
 > [!IMPORTANT]  
 > Las opciones Buscapersonas y **net send** se quitarán del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
-Para enviar a los operadores notificaciones por correo electrónico o buscapersonas, deberá configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos. Para más información, consulte [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md).  
+Para enviar a los operadores notificaciones por correo electrónico o buscapersonas, deberá configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos. Para obtener más información, consulte [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md).  
   
 Puede definir un operador como alias de un grupo de personas. De esta manera, todos los miembros de este alias pueden recibir notificaciones al mismo tiempo. Para obtener más información, consulte [Operadores](../../ssms/agent/operators.md).  
   
-## <a name="Security"></a>Seguridad en la administración del Agente SQL Server  
+## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Seguridad en la administración del Agente SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** en la base de datos **msdb** para controlar el acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aquellos usuarios que no son miembros del rol fijo de servidor **sysadmin** . Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
   
 ### <a name="roles"></a>Roles  

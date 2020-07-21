@@ -1,5 +1,5 @@
 ---
-title: El programa de instalación y mantenimiento de la instalación | Microsoft Docs
+title: Instalación de instalación y mantenimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6df72a78-6b36-4bc1-948e-04b4ebe46094
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 15f3c898faf97f5e013fa3665971d55830f0c68d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804c2f55047a69e75622fbab23a3524a3f082695
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036180"
 ---
 # <a name="setup-and-servicing-installation"></a>Instalación inicial y de servicio
   Esta sección contiene los temas siguientes:  

@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 2e25bc43-606a-40de-8b87-3b55b96f4a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400a754f58b2a4bbe5c0512cf7bae36d34f9fa70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 988a515b47a4bc38d6fd2dce33fed09eb5ba6cc6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62868790"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551900"
 ---
-# <a name="mssqlserver2593"></a>MSSQLSERVER_2593
+# <a name="mssqlserver_2593"></a>MSSQLSERVER_2593
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2593|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2593|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_OBJECT_ROW_PAGE_SUMMARY|  
 |Texto del mensaje|Hay ROWCOUNT filas en PAGECOUNT páginas para el objeto 'OBJECT'.|  

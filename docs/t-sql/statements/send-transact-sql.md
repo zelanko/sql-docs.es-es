@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 024b038da647f36731a3a23d97033cad74f55a39
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895949"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Envía un mensaje utilizando una o varias conversaciones existentes.  
   
-![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
   
 SEND  
    ON CONVERSATION [(]conversation_handle [,.. @conversation_handle_n][)]  
@@ -59,7 +59,7 @@ Especifica el tipo de mensaje enviado. Este tipo de mensaje se debe incluir en l
 *message_body_expression*  
 Proporciona una expresión que representa el cuerpo del mensaje. *message_body_expression* es opcional, pero si *message_body_expression* está presente, la expresión debe ser de un tipo que se pueda convertir a **varbinary(max)** . La expresión no puede ser NULL. Si se omite esta cláusula, el cuerpo del mensaje está vacío.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si la instrucción SEND no es la primera instrucción de un lote o procedimiento almacenado, la instrucción anterior debe finalizar con un punto y coma (;).  

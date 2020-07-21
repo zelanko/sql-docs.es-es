@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 1d62a2042221bebf04e19a46a21ba81caa7c877b
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: e27277c5626cbc6922d6f7370327da34e257b5b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847256"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881854"
 ---
 # <a name="iservervirtualdeviceset2getconfiguration-vdi"></a>IServerVirtualDeviceSet2::GetConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **GetConfiguration** obtiene la configuración solicitada por el cliente.
 
@@ -38,7 +38,7 @@ HRESULT IServerVirtualDeviceSet2::GetConfiguration (
 
 Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de NOERROR indica que la llamada al método se ha realizado correctamente. Un valor distinto de cero indica que se ha producido un error.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Se espera que el servidor inspeccione y responda a la configuración proporcionada por el cliente. Para más información, vea Configuración. El servidor puede usar SignalAbort si determina que no puede funcionar correctamente con la configuración proporcionada.
 

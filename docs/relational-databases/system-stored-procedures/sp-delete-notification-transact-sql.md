@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_notification
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 19c0a4d2a95b81c26b746a8ece9defce61fe712f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862638"
 ---
-# <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita una definición de notificación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una alerta y un operador específicos.  
   
@@ -41,9 +41,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert'` El nombre de la alerta. *alerta* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alert_name = ] 'alert'`El nombre de la alerta. la *alerta* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @operator_name = ] 'operator'` El nombre del operador. *operador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @operator_name = ] 'operator'`Nombre del operador. *Operator* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -51,11 +51,11 @@ sp_delete_notification
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Aunque se quite una notificación, la alerta y el operador se mantienen intactos.  
   
 ## <a name="permissions"></a>Permisos  
- Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
+ Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente quita la notificación enviada al operador `François Ajenstat` cuando se produce la alerta `Test Alert`.  
@@ -70,15 +70,15 @@ EXEC dbo.sp_delete_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_add_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+ [sp_help_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_help_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

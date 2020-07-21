@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94e4bf75384f880fb42172462f9505d5ab9ab238
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766273"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quita una función de partición de la base de datos actual. Las funciones de partición se crean mediante CREATE PARTITION FUNCTION y se modifican mediante ALTER PARTITION FUNCTION.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68044107"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  
@@ -46,7 +46,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
  *partition_function_name*  
  Es el nombre de la función de partición que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una función de partición solo se puede quitar si no hay esquemas de partición que estén utilizando esa función en ese momento. Si hay esquemas de partición que la estén utilizando, DROP PARTITION FUNCTION devuelve un error.  
   
 ## <a name="permissions"></a>Permisos  

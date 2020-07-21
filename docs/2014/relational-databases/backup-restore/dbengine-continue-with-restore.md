@@ -8,13 +8,12 @@ ms.technology: backup-restore
 ms.topic: conceptual
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b342941c163208703d6cef932cb52cac3694d8e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d0dff2366370209296b1cd07b3c3bb9aa112f97
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876460"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958575"
 ---
 # <a name="continue-with-restore"></a>Continuar con la restauración
-Consulte [continuar con la restauración](../../database-engine/continue-with-restore.md).
+Vea [continuar con la restauración](../../database-engine/continue-with-restore.md).

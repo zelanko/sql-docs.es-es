@@ -1,5 +1,5 @@
 ---
-title: Página de propiedades de parámetros (Administrador de informes) | Microsoft Docs
+title: Página de propiedades parámetros (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108119"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parámetros (página de propiedades del Administrador de informes)
@@ -33,10 +33,10 @@ ms.locfileid: "66108119"
   
 3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades General correspondiente al informe.  
   
-4.  Seleccione la pestaña **Parámetros** . Si la pestaña **Parámetros** no está visible, el informe no contiene parámetros.  
+4.  Seleccione la pestaña **parámetros** . Si la pestaña **parámetros** no está visible, el informe no contiene parámetros.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de parámetro**  
+ **Nombre del parámetro**  
  Especifica el nombre del parámetro.  
   
  **Tipo de datos**  
@@ -52,10 +52,10 @@ ms.locfileid: "66108119"
   
  Si después especifica que se pregunte al usuario, el valor predeterminado se convierte en un valor inicial que los usuarios pueden utilizar o modificar. Si no se pide un valor de parámetro, se utiliza este valor para todos los usuarios que ejecuten el informe.  
   
- **Null**  
+ **Acepta**  
  Active esta casilla para especificar Null como valor predeterminado. Un valor Null implica que el informe se ejecuta incluso aunque el usuario no proporcione un valor de parámetro. Si no hay ninguna casilla en esta columna, el parámetro no acepta valores Null.  
   
- **Hide**  
+ **Ocultar**  
  Active esta casilla para ocultar el parámetro en el área de parámetros que aparece en la parte superior del informe. El parámetro seguirá apareciendo en las páginas de definición de suscripciones y todavía se podrá especificar en una dirección URL de informe. Ocultar el parámetro resulta útil si se desea que el informe se ejecute siempre con un valor predeterminado que especifique.  
   
  Desactive la casilla si desea que el parámetro esté visible en el informe.  
@@ -68,7 +68,7 @@ ms.locfileid: "66108119"
  **Mostrar texto**  
  Escriba la cadena de texto que desea que aparezca junto al cuadro de texto del parámetro. Esta cadena proporciona una etiqueta o texto descriptivo. No hay límite para la longitud de la cadena. Las cadenas de texto más largas se ajustan al espacio proporcionado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

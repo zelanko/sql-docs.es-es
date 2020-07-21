@@ -1,7 +1,6 @@
 ---
-title: Errores y advertencias (categoría de eventos del motor de base de datos) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Errores y advertencias (categoría de eventos)
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -14,15 +13,16 @@ ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fd2ee391b2223c7c2db0d086d561594ebec1125
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716934"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errores y advertencias (categoría de eventos del motor de base de datos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La categoría de eventos **Errores y advertencias** contiene eventos generales de errores y advertencias.  
   
 ## <a name="in-this-section"></a>En esta sección  

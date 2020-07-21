@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: ecac7a16-c638-4703-ab08-753b63295f3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afeb7605c544ee1442a7f7ace91cdd91ad97db95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62912139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013884"
 ---
 # <a name="sqlservice-class"></a>Clase SqlService
   La [Clase SqlService](sqlservice-class.md) representa una instancia de un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  La [Clase SqlService](sqlservice-class.md) se utiliza para administrar el servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante programación. Con el objeto de la [clase SqlService](sqlservice-class.md) se pueden realizar las siguientes tareas:  
   
--   Conectarse al servicio.  
+-   Conéctese al servicio.  
   
 -   Modificar la cuenta y la contraseña que se utilizan para conectarse al servicio.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62912139"
   
 -   Comprobar las propiedades del servicio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Propiedad ServerName (clase SqlServerAlias) | Microsoft Docs
-ms.custom: ''
+title: Propiedad ServerName (SqlServerAlias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4114038d5d583825d590f5754b03117686d1a2ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2933791b9fef30a49340a5781cdbeec9305fac69
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052385"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888438"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>Propiedad ServerName (clase SqlServerAlias)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtiene el nombre de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificado por el alias de conexión de servidor.  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Obtiene el nombre de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] especificada por el alias de conexión de servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -10,19 +10,17 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 294c441ec2b27a33325aa10ce51513fa9613df47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: 6e89af069c7255396d797047c805fe5ae80a9882
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908197"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009408"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Administrar columnas de texto e imagen: utilizar columnas de datos en ejecución
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-columns"></a>Para utilizar columnas text, ntext o image de datos en ejecución  
@@ -50,11 +48,11 @@ ms.locfileid: "72908197"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para crear la tabla utilizada por el ejemplo.  
+ Ejecute la primera [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () para crear la tabla utilizada por el ejemplo.  
   
  Compile el segundo fragmento de código (C++) con odbc32.lib. A continuación, ejecute el programa.  
   
- Ejecute la tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para eliminar la tabla utilizada por el ejemplo.  
+ Ejecute la tercera [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () para eliminar la tabla utilizada por el ejemplo.  
   
 ```  
 use AdventureWorks  
@@ -187,7 +185,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp3')
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Temas &#40;de procedimientos de administración de columnas de texto e imagen ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de administración de columnas de texto e imagen &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

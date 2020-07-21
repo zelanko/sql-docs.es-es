@@ -1,5 +1,5 @@
 ---
-title: Complete el Asistente para informes | Microsoft Docs
+title: Completar el Asistente para informes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08d78fc30dbdafa8d65ac01943e729b6cf0d890d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109792"
 ---
 # <a name="complete-the-report-wizard"></a>Completar el Asistente para informes
@@ -32,7 +32,7 @@ ms.locfileid: "66109792"
  **Vista previa del informe**  
  Elija esta opción para obtener una vista previa del informe que ha creado. De lo contrario, se abrirá en la vista Diseño.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda del Asistente para informes](../../2014/reporting-services/report-wizard-help.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760264"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la ruta de acceso UNC para un archivo o directorio de un objeto FileTable.  
   
@@ -37,21 +37,21 @@ ms.locfileid: "72278334"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *column-name*  
- El nombre de columna de la columna VARBINARY (MAX) **file_stream** de una filetable.  
+ *nombre de columna*  
+ Nombre de columna de la columna de **FILE_STREAM** varbinary (Max) de una filetable.  
   
  El valor de *nombre de columna* debe ser un nombre de columna válido. No puede ser una expresión ni un valor convertido de una columna de otro tipo de datos.  
   
  *is_full_path*  
- Expresión entera que especifica si se devuelve una ruta de acceso absoluta o relativa. *is_full_path* puede tener uno de los siguientes valores:  
+ Expresión entera que especifica si se devuelve una ruta de acceso absoluta o relativa. *is_full_path* puede tener uno de los valores siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Devuelve la ruta de acceso relativa al directorio de base de datos.<br /><br /> Este es el valor predeterminado|  
 |**1**|Devuelve la ruta de acceso UNC completa, empezando por `\\computer_name`.|  
   
- *@no__t 1option*  
- Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@option* puede tener uno de los siguientes valores:  
+ *\@desea*  
+ Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la * \@ opción* puede tener uno de los siguientes valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -59,7 +59,7 @@ ms.locfileid: "72278334"
 |**1**|Devuelve el nombre del servidor sin la conversión, por ejemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|Devuelve la ruta de acceso al servidor completa, por ejemplo:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **nvarchar(max)**  
   
  Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en clúster en un clúster de conmutación por error, el nombre de la máquina que se devuelve como parte de esta ruta de acceso es el nombre del host virtual de la instancia en clúster.  
@@ -73,7 +73,7 @@ ms.locfileid: "72278334"
   
  Esta ruta de acceso lógica no se corresponde directamente con una ruta de acceso NTFS física. Se convierte en la ruta de acceso física mediante el controlador de filtro del sistema de archivos de FILESTREAM y el agente de FILESTREAM. Esta separación entre la ruta de acceso lógica y la ruta de acceso física permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reorganizar internamente los datos sin afectar a la validez de la ruta de acceso.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante las funciones **FileTableRootPath** y **GetFileNamespacePath** , como se muestra en el ejemplo siguiente. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  
@@ -101,7 +101,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

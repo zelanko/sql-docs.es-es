@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067197"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar las filas de una tabla (Visual Database Tools)
   Puede contar las filas de una tabla para determinar:  
@@ -43,7 +42,7 @@ ms.locfileid: "63217812"
   
 2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agregar grupo por** en el menú contextual. El [Diseñador de consultas y vistas](visual-database-tools.md) agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
   
-3.  Seleccione  **\* (todas las columnas)** en el rectángulo que representa la tabla u objeto con valores de tabla.  
+3.  Seleccione ** \* (todas las columnas)** en el rectángulo que representa la tabla o el objeto con valores de tabla.  
   
      El Diseñador de consultas y vistas escribe automáticamente el término **Recuento** en la columna **Agrupar por** del panel Criterios y asigna un alias a la columna que se va a resumir. Puede sustituir este alias generado automáticamente por otro más significativo. Para más información, consulte [Crear alias de columna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63217812"
   
 2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agregar grupo por** en el menú contextual. El Diseñador de consultas y vistas agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
   
-3.  Seleccione  **\*(todas las columnas)** en el rectángulo que representa la tabla u objeto estructurado en tabla.  
+3.  Seleccione ** \* (todas las columnas)** en el rectángulo que representa la tabla o el objeto con estructura de tabla.  
   
      El Diseñador de consultas y vistas escribe automáticamente el término **Recuento** en la columna **Agrupar por** del panel Criterios y asigna un alias a la columna que se va a resumir. Para crear un encabezado de columna más útil en el resultado de la consulta, vea [Crear alias de columna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
@@ -86,8 +85,8 @@ ms.locfileid: "63217812"
   
 5.  Ejecuta la consulta.  
   
-## <a name="see-also"></a>Vea también  
- [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

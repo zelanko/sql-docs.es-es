@@ -1,5 +1,5 @@
 ---
-title: 'Capturar columnas mediante IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: Capturar columnas mediante IRow::GetColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb08c4640265e311a36723af9985af006ec96c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039219"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
   La interfaz `IRow` permite el acceso directo a las columnas de una fila única del conjunto de resultados. Así, `IRow` supone una manera eficaz de recuperar las columnas de un conjunto de resultados con una fila.  
@@ -26,10 +25,10 @@ ms.locfileid: "62468501"
   
 -   Cómo capturar un grupo de columnas (en secuencia).  
   
--   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a `IRow` - `>GetColumns()` devuelve solo la longitud real de la columna. En este caso, se puede llamar a `IRow->GetColumns()` de nuevo en la misma columna para recuperar los datos reales.  
+-   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pdata** es NULL y **cbMaxLen** es 0, la llamada a `IRow` - `>GetColumns()` solo devuelve la longitud real de la columna. En este caso, se puede llamar a `IRow->GetColumns()` de nuevo en la misma columna para recuperar los datos reales.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Para capturar columnas mediante IRow::GetColumns  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62468501"
   
 -   Cómo acceder dos veces a una columna - la primera vez se obtiene el ancho de columna real y, a continuación, se obtiene acceso a los datos reales.  
   
- En la estructura DBCOLUMNACCESS, si pData es NULL y cbMaxLen es 0, la llamada a IRow -> GetColumns devuelve solo la longitud real de la columna. En este caso IRow -> GetColumns puede llamar de nuevo en la misma columna para recuperar los datos reales. Este ejemplo no es compatible con IA64.  
+ En la estructura DBCOLUMNACCESS, si pData es NULL y cbMaxLen es 0, la llamada a IRow->GetColumns devuelve solo la longitud de columna real. En este caso, se puede llamar a IRow->GetColumns de nuevo sobre la misma columna para recuperar los datos reales. Este ejemplo no es compatible con IA64.  
   
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
@@ -516,7 +515,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de OLE DB](ole-db-how-to-topics.md)  
   
   

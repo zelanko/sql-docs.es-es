@@ -37,15 +37,15 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2f1214064c11537f4752f9ec824123c3d601a1c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730744"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Genera un clon de solo esquema de una base de datos mediante DBCC CLONEDATABASE para investigar problemas de rendimiento relacionados con el optimizador de consultas.
 
@@ -53,7 +53,7 @@ Genera un clon de solo esquema de una base de datos mediante DBCC CLONEDATABASE 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```syntaxsql
 DBCC CLONEDATABASE   
 (  
     source_database_name
@@ -88,7 +88,7 @@ Especifica si los catálogos del sistema relacionados con Service Broker deben i
 BACKUP_CLONEDB  
 Crea y comprueba una copia de seguridad de la base de datos clonada.  Si se usa en combinación con VERIFY_CLONEDB, la base de datos clonada se comprueba antes de que se realice la copia de seguridad.  Esta opción está disponible a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 DBCC CLONEDATABASE lleva a cabo las siguientes validaciones. Se produce un error en el comando si alguna de las validaciones no se efectúa correctamente.
 - La base de datos de origen debe ser una base de datos de usuario. No se permite clonar bases de datos del sistema (master, model, msdb, tempdb, bases de datos de distribución, etc.).
 - La base de datos de origen debe ser legible o estar en línea.
@@ -153,7 +153,7 @@ Solo se pueden clonar los siguientes objetos en la base de datos de destino. Los
 - Texto completo (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2)
 - FUNCTION
 - INDEX
-- Login
+- LOGIN
 - PARTITION FUNCTION
 - PARTITION SCHEME
 - PROCEDURE   
@@ -177,7 +177,7 @@ Solo se pueden clonar los siguientes objetos en la base de datos de destino. Los
 - TRIGGER
 - TYPE
 - UPGRADED DB
-- User
+- USER
 - VIEW
 - XML INDEX
 - XML SCHEMA COLLECTION  

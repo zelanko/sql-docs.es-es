@@ -1,23 +1,24 @@
 ---
-title: Archivos de prueba unitaria de SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Archivos de prueba unitaria de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 45c43cbf392e795eb0f5aee6876ad9e649b09788
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110662"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256335"
 ---
 # <a name="sql-server-unit-test-files"></a>Archivos de prueba unitaria de SQL Server
+
 Al igual que las pruebas unitarias para código administrado, las pruebas unitarias de SQL Server residen en proyectos de prueba. Puede ver los elementos que conforman una prueba unitaria de SQL Server en la jerarquía de un proyecto de prueba en el **Explorador de soluciones**.  
   
 Una prueba unitaria de SQL Server consta de varios elementos incluidos en varios archivos. En la tabla siguiente se describen los archivos que interactúan para formar una prueba unitaria de SQL Server.  

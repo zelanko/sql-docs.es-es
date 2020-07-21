@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892625"
 ---
-# <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información de tabla acerca de las tablas del servidor vinculado especificado.  
   
@@ -44,46 +44,46 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado que se va a devolver información de la tabla. *table_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'`Es el nombre del servidor vinculado del que se va a devolver información de la tabla. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-``[ , [ @table_name = ] 'table_name']`` Es el nombre de la tabla para que se va a devolver información de tipo de datos. *table_name*es **sysname**, su valor predeterminado es null.  
+``[ , [ @table_name = ] 'table_name']``Es el nombre de la tabla para la que se va a devolver información de tipo de datos. *TABLE_NAME*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_schema = ] 'table_schema']` Es el esquema de tabla. *TABLE_SCHEMA*es **sysname**, su valor predeterminado es null.  
+`[ @table_schema = ] 'table_schema']`Es el esquema de la tabla. *TABLE_SCHEMA*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Es el nombre de la base de datos en el que el especificado *table_name* reside. *TABLE_CATALOG* es **sysname**, su valor predeterminado es null.  
+`[ @table_catalog = ] 'table_catalog'`Es el nombre de la base de datos en la que reside el *TABLE_NAME* especificado. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_type = ] 'table_type'` Es el tipo de la tabla para devolver. *TABLE_TYPE* es **sysname**, su valor predeterminado es null y puede tener uno de los siguientes valores.  
+`[ @table_type = ] 'table_type'`Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es de **tipo sysname, su**valor predeterminado es NULL y puede tener uno de los valores siguientes.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**ALIAS**|Nombre de un alias.|  
-|**TEMPORAL GLOBAL**|Nombre de una tabla temporal disponible en todo el sistema.|  
-|**TEMPORAL LOCAL**|Nombre de una tabla temporal disponible solo para el trabajo actual.|  
+|**GLOBAL TEMPORARY**|Nombre de una tabla temporal disponible en todo el sistema.|  
+|**LOCAL TEMPORARY**|Nombre de una tabla temporal disponible solo para el trabajo actual.|  
 |**SYNONYM**|Nombre de un sinónimo.|  
 |**TABLA DEL SISTEMA**|Nombre de una tabla del sistema.|  
 |**VISTA DEL SISTEMA**|Nombre de una vista del sistema.|  
-|**TABLE**|Nombre de una tabla de usuario.|  
-|**VIEW**|Nombre de una vista.|  
+|**CUADRO**|Nombre de una tabla de usuario.|  
+|**Visores**|Nombre de una vista.|  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina si los caracteres **_** , **%** , **[** , y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Determina si los caracteres **_**, **%** , **[** y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_ **.** _propietario_ **.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En otros productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
-|**TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En otros productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabla, tabla del sistema o vista.|  
-|**COMENTARIOS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**COMENTARIOS**|**VARCHAR (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_tables_ex** se ejecuta al consultar el conjunto de filas TABLES de la **IDBSchemaRowset** interfaz del proveedor OLE DB correspondiente a *table_server*. El *table_name*, *table_schema*, *table_catalog*, y *columna* los parámetros se pasan a esta interfaz para restringir las filas Devuelve.  
+ **sp_tables_ex** se ejecuta consultando el conjunto de filas tables de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
- **sp_tables_ex** devuelve un resultado vacío se establece si el proveedor OLE DB del servidor vinculado especificado no es compatible con el conjunto de filas TABLES de la **IDBSchemaRowset** interfaz.  
+ **sp_tables_ex** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas tables de la interfaz **IDBSchemaRowset** .  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
@@ -98,15 +98,15 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
 @table_type = 'TABLE';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Distribuye los procedimientos almacenados de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
- [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
- [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de consultas distribuidas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [sp_catalogs &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_columns_ex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
+ [sp_column_privileges &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_foreignkeys &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_table_privileges &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

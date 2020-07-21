@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25073bd212ec8b468c0388d11d7701744998d036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940405"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883637"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Los suscriptores siguientes que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se pueden suscribir a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
   
@@ -67,11 +67,11 @@ Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2
   
 -   La replicación es compatible con la publicación de tablas y vistas indizadas como tablas en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (las vistas indizadas no se pueden replicar como vistas indizadas).  
   
--   Al crear una publicación en el Asistente para nueva publicación y, a continuación, habilitarla para suscriptores que no son de SQL Server mediante el cuadro de diálogo Propiedades de la publicación, no se específica el propietario de todos los objetos en la base de datos de suscripciones para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mientras que para los suscriptores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se establece en el propietario del objeto correspondiente en la base de datos de publicación.  
+-   Al crear una publicación en el Asistente para nueva publicación y luego habilitarla para suscriptores que no son de SQL Server mediante el cuadro de diálogo Propiedades de la publicación, no se específica el propietario de todos los objetos de la base de datos de suscripción para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mientras que para los suscriptores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se establece en el propietario del objeto correspondiente de la base de datos de publicación.  
   
 -   Si una publicación tiene suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se debe habilitar la publicación para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de crear cualquier suscripción a suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   De forma predeterminada, los scripts generados por el Agente de instantáneas para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usan identificadores sin comillas en la sintaxis `CREATE TABLE`. Por lo tanto, una tabla publicada denominada 'test' se replica como 'TEST'. Para usar mayúsculas y minúsculas como en la tabla de la base de datos de publicación, utilice el parámetro **-QuotedIdentifier** para el Agente de distribución. También se debe utilizar el parámetro **-QuotedIdentifier** si los nombres de objeto publicados (como tablas, columnas y restricciones) contienen espacios o palabras que son palabras reservadas en la versión de la base de datos de suscriptor que no es de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de este parámetro, vea [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   De forma predeterminada, los scripts generados por el Agente de instantáneas para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usan identificadores sin comillas en la sintaxis `CREATE TABLE`. Por lo tanto, una tabla publicada denominada 'test' se replica como 'TEST'. Para usar mayúsculas y minúsculas como en la tabla de la base de datos de publicación, utilice el parámetro **-QuotedIdentifier** para el Agente de distribución. También se debe utilizar el parámetro **-QuotedIdentifier** si los nombres de objeto publicados (como tablas, columnas y restricciones) contienen espacios o palabras que son palabras reservadas en la versión de la base de datos de suscriptor que no es de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de este parámetro, vea [Agente de distribución de replicación](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   La cuenta con la que se ejecuta el agente de distribución debe tener acceso de lectura en el directorio de instalación del proveedor OLE DB.  
   
@@ -87,11 +87,11 @@ Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2
   
 -   Si se agrega o elimina un artículo de una publicación, se deben reinicializar las suscripciones a suscriptores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Las únicas restricciones que admiten los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son: NULL y NOT NULL. Las restricciones de clave principal se replican como índices únicos.  
+-   Las únicas restricciones que admiten los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son: NULL y NOT NULL. Las restricciones de clave principal se replican como índices únicos.  
   
 -   El valor NULL se trata de manera distinta en diferentes bases de datos y esto afecta al modo de representar un valor en blanco, una cadena vacía y un valor NULL. A su vez, afecta al comportamiento de los valores insertados en columnas con restricciones únicas definidas. Por ejemplo, Oracle permite varios valores NULL en una columna considerada única, mientras que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo permite un valor NULL en una columna única.  
   
-     Otro factor es cómo se tratan los valores NULL, las cadenas vacías y los valores en blanco cuando se define la columna como NOT NULL. Para obtener información acerca de cómo tratar este problema en suscriptores de Oracle, vea [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Otro factor es cómo se tratan los valores NULL, las cadenas vacías y los valores en blanco cuando se define la columna como NOT NULL. Para obtener información acerca de cómo tratar este problema en suscriptores de Oracle, vea [suscriptores de Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   Los metadatos relacionados con la replicación (tabla de secuencias de transacciones) no se elimina de los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando se quita la suscripción.  
   

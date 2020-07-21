@@ -1,5 +1,5 @@
 ---
-title: Emisión de comandos al proveedor de datos subyacente | Microsoft Docs
+title: Emitir comandos para el proveedor de datos subyacente | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - underlying providers [ADO]
 - data shaping [ADO], commands
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bc30f35ebfe2ddc59e9ef1404253e9bc99d62e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924944"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757811"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Emitir comandos al proveedor de datos subyacente
-Cualquier comando que no comienzan con la forma se pasa al proveedor de datos. Esto equivale a enviar un comando de la forma en la forma "SHAPE {comando de proveedor}". Estos comandos *no* tienen que producir una **Recordset**. Por ejemplo, "SHAPE {DROP TABLE MyTable} es un comando shape perfectamente válido, suponiendo que el proveedor de datos admite DROP TABLE.  
+Cualquier comando que no empiece por SHAPE se pasa a través del proveedor de datos. Esto es equivalente a emitir un comando de forma con el formato "SHAPE {Provider Command}". Estos comandos *no* tienen que generar un **conjunto de registros**. Por ejemplo, "SHAPE {DROP TABLE MyTable} es un comando Shape perfectamente válido, suponiendo que el proveedor de datos admite DROP TABLE.  
   
- Esta funcionalidad permite a los comandos de proveedor normal y comandos de forma que comparten la misma conexión y transacción.  
+ Esta funcionalidad permite que los comandos de proveedor normales y los comandos de forma compartan la misma conexión y transacción.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
+ [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)

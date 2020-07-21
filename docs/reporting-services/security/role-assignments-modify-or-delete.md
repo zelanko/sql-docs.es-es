@@ -15,10 +15,10 @@ ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 28695a4849b29c6e593f42489fc149efd9a8db53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570648"
 ---
 # <a name="role-assignments---modify-or-delete"></a>Asignaciones de roles: modificación o eliminación
@@ -59,7 +59,7 @@ De forma similar, si es un administrador del sistema o de red, probablemente le 
 
 6. Para eliminar una asignación de rol, seleccione la casilla situada junto al nombre de usuario o grupo y, después, seleccione **Eliminar**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Creación y administración de asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md)  
 [Asignaciones de roles](../../reporting-services/security/role-assignments.md)  

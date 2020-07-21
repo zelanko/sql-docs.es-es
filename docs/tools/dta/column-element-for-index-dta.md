@@ -1,10 +1,8 @@
 ---
-title: Column (DTA, elemento de index) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/09/2017
+title: Column (DTA, elemento de Index)
+description: En la utilidad DTA, el elemento Column de Index establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3abd394ea3b7c061deac894e611d1cae3e7d1c03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/09/2017
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949852"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831632"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.  
+
+Establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +43,7 @@ ms.locfileid: "67949852"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
- **Type**: opcional. Especifica el tipo de columna de índice. Utilice un tipo de datos **string** para especificar este atributo mediante uno de los siguientes valores permitidos:  
+ **Tipo**: Opcional. Especifica el tipo de columna de índice. Utilice un tipo de datos **string** para especificar este atributo mediante uno de los siguientes valores permitidos:  
   
 -   **KeyColumn**  
   
@@ -61,7 +65,7 @@ ms.locfileid: "67949852"
   
      Para obtener más información sobre las columnas incluidas, vea [Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
- **SortOrder**: opcional. Especifica el orden de la columna. Utilice un tipo de datos **string** para especificar un orden **"Ascending"** (ascendente) o **"Descending"** (descendente), como se muestra a continuación:  
+ **SortOrder**: Opcional. Especifica el orden de la columna. Utilice un tipo de datos **string** para especificar un orden **"Ascending"** (ascendente) o **"Descending"** (descendente), como se muestra a continuación:  
   
 ```  
 <Column SortOrder="Ascending">  

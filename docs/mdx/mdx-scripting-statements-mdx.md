@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893335"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Instrucciones para scripting de MDX (MDX)
@@ -31,10 +31,10 @@ ms.locfileid: "68893335"
 |[IF &#40;instrucción de MDX&#41;](../mdx/mdx-scripting-if.md)|Ejecuta una instrucción si la condición es true.|  
 |[SCOPE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-scope.md)|Limita el ámbito de las instrucciones MDX especificadas a un subcubo especificado.|  
   
-## <a name="see-also"></a>Vea también  
- [MDX de referencia &#40;de instrucción MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Instrucciones &#40;de definición de datos MDX MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Instrucciones &#40;de manipulación de datos MDX MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de instrucciones MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
+ [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   
   

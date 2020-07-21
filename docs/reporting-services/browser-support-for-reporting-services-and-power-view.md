@@ -18,10 +18,10 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65574819"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Compatibilidad del explorador de Reporting Services y Power View
@@ -98,7 +98,7 @@ Esta es la lista actual de exploradores admitidos para el portal web.
 |**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Internet Explorer.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Negotiate|Sí. La configuración de autenticación predeterminada funciona con Chrome.|
 |**Mozilla Firefox**(+)|NTLM, Basic|NTLM|Sí. La configuración de autenticación predeterminada funciona con Firefox.|
-|**Apple Safari**(+)|NTLM, Basic|Básico|Sí. La configuración de autenticación predeterminada funciona con Safari.|
+|**Apple Safari**(+)|NTLM, Basic|Básica|Sí. La configuración de autenticación predeterminada funciona con Safari.|
 
  **(+)** Última versión publicada
 
@@ -108,7 +108,7 @@ Esta es la lista actual de exploradores admitidos para el portal web.
 
  Si el scripting no está habilitado, verá un mensaje de error similar al siguiente al abrir un informe:
 
-- **Su explorador no admite scripts o está configurado para no admitir su ejecución. Haga clic aquí para ver este informe sin scripts**.
+- **Su explorador no admite secuencias de comandos o está configurado para no admitir su ejecución. Haga clic aquí para ver este informe sin scripts**.
 
  Si decide ver el informe prescindiendo de la compatibilidad con script, se representará en formato HTML y no incorporará funcionalidad del Visor de informes, como la barra de herramientas Informes y el mapa del documento.
 
@@ -157,7 +157,7 @@ Esta es la lista actual de exploradores admitidos para el portal web.
 [Búsqueda y visualización de informes en el portal web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Portal web (modo nativo de SSRS)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
-[HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
+[Visor HTML y la barra de herramientas del informe](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

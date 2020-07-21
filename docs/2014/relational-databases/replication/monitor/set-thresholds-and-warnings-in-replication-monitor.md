@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060804"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
-  En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] monitor de replicación muestra información de estado de las publicaciones y las suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
   
  Al habilitar una advertencia, debe especificar un umbral. Cuando se alcanza o se supera ese umbral, aparece la advertencia (a menos que haya un problema de mayor prioridad). Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Se pueden habilitar advertencias para las siguientes condiciones:  
   
@@ -55,17 +54,17 @@ ms.locfileid: "62667188"
   
 -   [Establecer umbrales y advertencias para una publicación de instantánea](#Snapshot)  
   
-##  <a name="Transactional"></a> Para establecer umbrales y advertencias para una publicación transaccional  
+##  <a name="to-set-thresholds-and-warnings-for-a-transactional-publication"></a><a name="Transactional"></a>Para establecer umbrales y advertencias para una publicación transaccional  
   
 1.  Expanda un grupo de publicador en el panel izquierdo, expanda un publicador y, a continuación, haga clic en una publicación.  
   
-2.  Haga clic en la pestaña **Advertencias** . Para ver más información acerca de las opciones de esta pestaña, haga clic en **Ayuda** en la barra de menús.  
+2.  Haga clic en la pestaña **advertencias** . Para ver más información sobre las opciones de esta pestaña, haga clic en **ayuda** en la barra de menús.  
   
 3.  Para habilitar una advertencia, active la casilla apropiada: **Advertir si una suscripción expirará dentro del umbral** o **Advertir si la latencia supera el valor de umbral**.  
   
 4.  En la columna **Umbral** , establezca un umbral para las advertencias. Por ejemplo, si activó la casilla **Advertir si la latencia supera el valor de umbral** en el paso 3, puede seleccionar una latencia de **60 segundos** en la columna **Umbral** .  
   
-5.  Haga clic en **guardar cambios**.  
+5.  Haga clic en **Guardar cambios**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>** :  
+3.  Establezca las opciones en el cuadro de diálogo ** \<AlertName> propiedades de alerta** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -87,11 +86,11 @@ ms.locfileid: "62667188"
   
 5.  Haga clic en **Cerrar**.  
   
-##  <a name="Merge"></a> Establecer umbrales y advertencias para una publicación de mezcla  
+##  <a name="set-thresholds-and-warnings-for-a-merge-publication"></a><a name="Merge"></a>Establecer umbrales y advertencias para una publicación de combinación  
   
 1.  Expanda un grupo de publicador en el panel izquierdo, expanda un publicador y, a continuación, haga clic en una publicación.  
   
-2.  Haga clic en la pestaña **Advertencias** . Para ver más información acerca de las opciones de esta pestaña, haga clic en **Ayuda** en la barra de menús.  
+2.  Haga clic en la pestaña **advertencias** . Para ver más información sobre las opciones de esta pestaña, haga clic en **ayuda** en la barra de menús.  
   
 3.  Para habilitar una advertencia, active la casilla apropiada:  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión.  
   
-3.  Establezca opciones en el cuadro de diálogo **\<Propiedades de la alerta <nombreDeAlerta**:  
+3.  Establezca las opciones en el cuadro de diálogo ** \<AlertName> propiedades de alerta** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -129,17 +128,17 @@ ms.locfileid: "62667188"
   
 5.  Haga clic en **Cerrar**.  
   
-##  <a name="Snapshot"></a> Establecer umbrales y advertencias para una publicación de instantánea  
+##  <a name="set-thresholds-and-warnings-for-a-snapshot-publication"></a><a name="Snapshot"></a>Establecer umbrales y advertencias para una publicación de instantáneas  
   
 1.  Expanda un grupo de publicador en el panel izquierdo, expanda un publicador y, a continuación, haga clic en una publicación.  
   
-2.  Haga clic en la pestaña **Advertencias** . Para ver más información acerca de las opciones de esta pestaña, haga clic en **Ayuda** en el menú superior.  
+2.  Haga clic en la pestaña **advertencias** . Para ver más información acerca de las opciones de esta pestaña, haga clic en **ayuda** en el menú superior.  
   
 3.  Para habilitar una advertencia, active la casilla **Advertir si una suscripción expirará dentro del umbral**.  
   
 4.  En la columna **Umbral** , establezca un umbral para la advertencia. Por ejemplo, puede seleccionar un valor de **70%** en la columna **Umbral** .  
   
-5.  Haga clic en **guardar cambios**.  
+5.  Haga clic en **Guardar cambios**.  
   
 #### <a name="to-configure-an-alert-for-a-threshold"></a>Para configurar una alerta para un umbral  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>** :  
+3.  Establezca las opciones en el cuadro de diálogo ** \<AlertName> propiedades de alerta** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -161,7 +160,7 @@ ms.locfileid: "62667188"
   
 5.  Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Vea también  
- [Supervisar la replicación](../monitoring-replication.md)  
+## <a name="see-also"></a>Consulte también  
+ [Supervisión de la replicación](../monitoring-replication.md)  
   
   

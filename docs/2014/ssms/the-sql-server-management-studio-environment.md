@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8d448e0af854cab5944062368f2f13e1d81efc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53db591f9e82ce7dbe8d5c222df8b6d2b33a38d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061922"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Entorno de SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proporciona numerosas características para la administración y el desarrollo de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

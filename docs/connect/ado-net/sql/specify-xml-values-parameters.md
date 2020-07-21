@@ -9,19 +9,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: f53811919e6bec8e1d5c5985c303e282ce81ed07
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452115"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920001"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Si una consulta requiere un parámetro cuyo valor es una cadena XML, los desarrolladores pueden proporcionar ese valor mediante una instancia del tipo de datos **SqlXml**. En realidad no se trata de ningún truco; las columnas XML de SQL Server aceptan valores de parámetro exactamente igual que otros tipos de datos.  
   
@@ -29,11 +29,11 @@ Si una consulta requiere un parámetro cuyo valor es una cadena XML, los desarro
 En la siguiente aplicación de consola se crea una nueva tabla en la base de datos **AdventureWorks**. La nueva tabla incluye una columna denominada **SalesID** y una columna XML de nombre **SalesInfo**.  
   
 > [!NOTE]
->  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución de SQL Server programa de instalación.  
+>  De forma predeterminada, la base de datos de ejemplo **AdventureWorks** no se instala al instalar SQL Server. Puede instalarlo mediante la ejecución del programa de instalación de SQL Server.  
   
 En el ejemplo se prepara un objeto <xref:Microsoft.Data.SqlClient.SqlCommand> para insertar una fila en la nueva tabla. Un archivo guardado proporciona los datos XML necesarios para la columna **SalesInfo**.  
   
-Para crear el archivo necesario para que se ejecute el ejemplo, cree un nuevo archivo de texto en la misma carpeta que el proyecto. Asigne al archivo el nombre nombre myteststoredata. Xml. Abra el archivo en el Bloc de notas y copie y pegue el texto siguiente:  
+Para crear el archivo necesario para que se ejecute el ejemplo, cree un archivo de texto en la misma carpeta que el proyecto. Asigne al archivo el nombre MyTestStoreData.xml. Abra el archivo en el Bloc de notas y copie y pegue el texto siguiente:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  

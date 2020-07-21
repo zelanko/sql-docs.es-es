@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c537ff20c91cd280d56050dd3514a7345a69c90
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770349"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430332"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Combinar datos mediante la transformación Unión de todo
   Para agregar y configurar una transformación Unión de todo, el paquete ya debe incluir al menos una tarea Flujo de datos y dos orígenes de datos.  
@@ -38,7 +37,7 @@ ms.locfileid: "62770349"
   
 4.  Haga doble clic en la transformación Unión de todo.  
   
-5.  En el **Editor de transformación Unión de todo**, asigne una columna de una entrada a una columna en la lista **Nombre de la columna de salida** haciendo clic en una fila y luego seleccionando una columna en la lista de entrada. Seleccione **\<omitir>** en la lista de entrada para omitir la asignación de la columna.  
+5.  En el **Editor de transformación Unión de todo**, asigne una columna de una entrada a una columna en la lista **Nombre de la columna de salida** haciendo clic en una fila y luego seleccionando una columna en la lista de entrada. Seleccione **\<ignore>** en la lista de entrada para omitir la asignación de la columna.  
   
     > [!NOTE]  
     >  La asignación entre dos columnas requiere que los metadatos de las columnas coincidan.  
@@ -50,12 +49,12 @@ ms.locfileid: "62770349"
   
 7.  Repita los pasos 5 y 6 para cada columna en cada entrada.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
- [Union All Transformation](union-all-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación Unión de todo](union-all-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
  [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  

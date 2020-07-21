@@ -11,10 +11,10 @@ ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69027112"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Empleo de un procedimiento almacenado con un estado de retorno
@@ -28,7 +28,7 @@ Al llamar a este tipo de procedimiento almacenado mediante el controlador JDBC, 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obtener más información sobre las secuencias de escape de SQL, vea [usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obtener más información sobre las secuencias de escape de SQL, consulte [Usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Al crear la secuencia de escape `call`, especifique el parámetro de estado de devolución mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para el valor del parámetro que devolverá el procedimiento almacenado. Para especificar un valor para un parámetro de estado de devolución, debe especificar el tipo de datos del parámetro mediante el método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la clase SQLServerCallableStatement antes de ejecutar el procedimiento almacenado.
 
@@ -59,6 +59,6 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 
 [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Empleo de instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

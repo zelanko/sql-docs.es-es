@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: e47aebb82c0cc3149dae7de697e92c965903a753
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f94b30d3f9f44fac2af7483ab0cfb7396666951
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705877"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve el número total de anillos de una instancia de **Polygon**. En el tipo **geography** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se distingue entre los anillos externos y los internos, dado que cualquier anillo puede usarse como anillo externo.  
+  Devuelve el número total de anillos de una instancia de **Polygon**. En el tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**de**, no se distingue entre los anillos externos y los internos, dado que cualquier anillo puede usarse como anillo externo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68101791"
 .NumRings ()  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método devolverá NULL si no se trata de una instancia de **Polygon** y devolverá 0 si la instancia está vacía. Este método es preciso.  
   
 ## <a name="examples"></a>Ejemplos  

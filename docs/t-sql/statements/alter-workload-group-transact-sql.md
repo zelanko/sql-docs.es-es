@@ -1,7 +1,7 @@
 ---
-title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
+title: ALTER WORKLOAD GROUP (Transact-SQL)
 ms.custom: ''
-ms.date: 08/23/2019
+ms.date: 05/05/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,182 +17,146 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
+ms.openlocfilehash: d4b70d64da9d87a8bab61f1881473dd7daaefb28
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026231"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606798"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia una configuración existente del grupo de cargas de trabajo de Resource Governor y, opcionalmente, la asigna a un grupo de recursos de Resource Governor.  
-  
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-ALTER WORKLOAD GROUP { group_name | "default" }  
-[ WITH  
-    ([ IMPORTANCE = { LOW | MEDIUM | HIGH } ]  
-      [ [ , ] REQUEST_MAX_MEMORY_GRANT_PERCENT = value ]  
-      [ [ , ] REQUEST_MAX_CPU_TIME_SEC = value ]  
-      [ [ , ] REQUEST_MEMORY_GRANT_TIMEOUT_SEC = value ]   
-      [ [ , ] MAX_DOP = value ]  
-      [ [ , ] GROUP_MAX_REQUESTS = value ] )  
- ]  
-[ USING { pool_name | "default" } ]  
-[ ; ]  
-```  
-  
-## <a name="arguments"></a>Argumentos  
- *group_name* | "**default**"       
- Es el nombre de un grupo de cargas de trabajo definido por un usuario ya existente o el grupo de cargas de trabajo predeterminado del regulador de recursos.  
-  
-> [!NOTE]  
-> El regulador de recursos crea los grupos "default" e internos al instalarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- La opción "default" debe estar incluida entre comillas ("") o corchetes ([]) si se utiliza con ALTER WORKLOAD GROUP para evitar el conflicto con DEFAULT, que es una palabra reservada del sistema. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
-> [!NOTE]  
-> Todos los grupos de cargas de trabajo y de recursos predefinidos usan nombres en minúsculas, como "predeterminado". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
-  
- IMPORTANCE = { LOW | **MEDIUM** | HIGH }       
- Especifica la importancia relativa de una solicitud en el grupo de cargas de trabajo. IMPORTANCE puede ser es uno de los siguientes valores:  
-  
--   LOW  
--   MEDIUM (predeterminado)  
--   HIGH  
-  
-> [!NOTE]  
-> Internamente, cada valor de IMPORTANCE se almacena como un número que se usa para los cálculos.  
-  
- IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas de trabajo de importancia distinta dentro del mismo grupo de recursos de servidor se influyen entre sí, pero no influyen en los grupos de cargas de trabajo de otro grupo de recursos de servidor.  
-  
- REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
- Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. *valor* es un porcentaje relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
+## <a name="click-a-product"></a>Haga clic en un producto.
 
-El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y un elemento de float a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. El valor predeterminado es de 25. El intervalo permitido para *value* es de 1 a 100.
-  
-> [!NOTE]  
-> La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.  
-  
-> [!IMPORTANT]
-> Establecer *valor* en 0 evita la ejecución de consultas con operaciones SORT y HASH JOIN en grupos de cargas de trabajo definidos por el usuario.     
->
-> No se recomienda establecer el elemento *value* en un valor superior a 70 porque es posible que el servidor no pueda reservar memoria suficiente si se están ejecutando otras consultas simultáneas. Esto puede dar lugar al final a un error de tiempo de espera de consulta 8645.      
-  
-> [!NOTE]  
-> Si los requisitos de memoria de consulta superan el límite especificado por este parámetro, el servidor hace lo siguiente:  
->   
-> -  En el caso de los grupos de cargas de trabajo definidos por el usuario, el servidor intenta reducir el grado de paralelismo de consulta hasta que el requisito de memoria cae por debajo del límite, o hasta que el grado de paralelismo sea igual a 1. Si el requisito de memoria de consulta sigue siendo mayor que el límite, se produce el error 8657.  
->   
-> -  En el caso de los grupos de cargas de trabajo internos y predeterminados, el servidor permite que la consulta obtenga la memoria necesaria.  
->   
-> Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
-  
- REQUEST_MAX_CPU_TIME_SEC = *value*       
- Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *value* es 0, que indica una cantidad ilimitada.  
-  
-> [!NOTE]  
-> De forma predeterminada, Resource Governor no evita que una solicitud continúe si se supera el tiempo máximo. Sin embargo, se generará un evento. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
+En la siguiente fila, haga clic en cualquier nombre de producto que le interese. Al hacer clic, en esta página web se muestra otro contenido, adecuado para el producto que seleccione.
 
-> [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3, y si se usa la [marca de seguimiento 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor anula una solicitud cuando se supera el tiempo máximo.
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+|||||
+|---|---|---|---|
+|**_\* SQL Server \*_** &nbsp;||[Instancia administrada de<br />SQL Database](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>Instancia administrada de SQL Server y SQL Database
+
+[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
- Especifica el tiempo máximo, en segundos, que una consulta puede esperar hasta que esté disponible la concesión de memoria (memoria de búfer de trabajo).  
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
+||||
+
+&nbsp;
+
+## <a name="sql-server-and-sql-database-managed-instance"></a>Instancia administrada de SQL Server y SQL Database
+
+[!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+||||
+|---|---|---|
+|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|[Instancia administrada de<br />SQL Database](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|
+||||
+
+&nbsp;
+
+## <a name="azure-synapse-analytics"></a>Azure Synapse Analytics
+
+Modifica un grupo de cargas de trabajo existente.
+
+Vea la sección sobre el comportamiento de `ALTER WORKLOAD GROUP` a continuación para obtener más información sobre cómo se comporta `ALTER WORKLOAD GROUP` en un sistema con solicitudes en ejecución y en cola. 
+
+Las restricciones aplicadas a [CREATE WORKLOAD GROUP](create-workload-group-transact-sql.md) también se aplican a `ALTER WORKLOAD GROUP`.  Antes de modificar los parámetros, consulte [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) para asegurarse de que los valores se encuentren dentro de los rangos aceptables.
+
+## <a name="syntax"></a>Sintaxis
+
+```syntaxsql
+ALTER WORKLOAD GROUP group_name
+ WITH
+ ([       MIN_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
+  [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ] 
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
+  [ ; ]
+  ```
+
+## <a name="arguments"></a>Argumentos
+
+group_name  
+Es el nombre del grupo de cargas de trabajo definido por el usuario existente que se va a modificar.  group_name no es modificable. 
+
+MIN_PERCENTAGE_RESOURCE = valor  
+El valor es un entero comprendido entre 0 y 100.  Al modificar min_percentage_resource, la suma de min_percentage_resource en todos los grupos de cargas de trabajo no puede superar 100.  La modificación de min_percentage_resource requiere que todas las consultas en ejecución se completen en el grupo de cargas de trabajo antes de que se complete el comando.  Consulte la sección sobre el comportamiento de ALTER WORKLOAD GROUP de este documento para obtener más información.
+
+CAP_PERCENTAGE_RESOURCE = valor  
+El valor es un entero comprendido entre 1 y 100.  El valor de cap_percentage_resource debe ser mayor que min_percentage_resource.  La modificación de cap_percentage_resource requiere que todas las consultas en ejecución se completen en el grupo de cargas de trabajo antes de que se complete el comando.  Consulte la sección sobre el comportamiento de ALTER WORKLOAD GROUP de este documento para obtener más información. 
+
+REQUEST_MIN_RESOURCE_GRANT_PERCENT = valor  
+El valor es un decimal comprendido entre 0,75 y 100.  El valor de request_min_resource_grant_percent debe ser un divisor de min_percentage_resource y ser menor que cap_percentage_resource. 
   
-> [!NOTE]  
-> Una consulta no tiene por qué generar un error cuando se agota el tiempo de espera para la concesión de memoria. Solo se producirá un error si se ejecutan demasiadas consultas simultáneamente. De lo contrario, es posible que la consulta obtenga la concesión de memoria mínima, lo que reducirá su rendimiento.  
-  
- *value* debe ser un entero positivo. El valor predeterminado de *valor*, 0, usa un cálculo interno basado en el costo de la consulta para determinar el tiempo máximo.  
-  
- MAX_DOP =*value*       
- Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *value* debe ser 0 o un entero positivo entre 1 y 255. Cuando *value* es 0, el servidor elige el grado máximo de paralelismo. Esta es la configuración predeterminada y recomendada.  
-  
-> [!NOTE]  
-> El valor real que [!INCLUDE[ssDE](../../includes/ssde-md.md)] establece para MAX_DOP puede ser menor que el valor especificado. El valor final se determinada mediante la fórmula min(255, *número de CPU)* .  
-  
-> [!CAUTION]  
-> El cambio de MAX_DOP puede afectar negativamente al rendimiento de un servidor. Si debe cambiar MAX_DOP, se recomienda que se establezca en un valor menor o igual que el número máximo de programadores de hardware que hay en un solo nodo NUMA. Se recomienda no establecer MAX_DOP en un valor mayor que 8.  
-  
- MAX_DOP se trata de la siguiente manera:  
-  
--   MAX_DOP como sugerencia de consulta, se acepta con tal de que no supere el MAX_DOP del grupo de cargas de trabajo.  
-  
--   MAX_DOP como sugerencia de consulta, siempre invalida el 'grado máximo de paralelismo' de sp_configure.  
-  
--   MAX_DOP del grupo de cargas de trabajo invalida el 'grado máximo de paralelismo' de sp_configure.  
-  
--   Si se marca la consulta en tiempo de compilación como serie (MAX_DOP = 1), no se podrá volver a establecer como paralela en tiempo de ejecución, independientemente del grupo de cargas de trabajo o del valor de sp_configure.  
-  
- Una vez configurado DOP, solo se puede reducir ante la concesión de presión de memoria. La reconfiguración del grupo de cargas de trabajo no es visible mientras se espera en la cola de concesión de memoria.  
-  
- GROUP_MAX_REQUESTS = *value*      
- Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, permite solicitudes ilimitadas. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
-  
- USING { *pool_name* | "**default**" }      
- Asocia el grupo de cargas de trabajo al grupo de recursos definido por el usuario identificado por *pool_name*, lo que coloca el grupo de cargas de trabajo en el grupo de recursos. Si no se proporciona *pool_name* o si no se usa el argumento USING, el grupo de cargas de trabajo se coloca en el grupo predeterminado de Resource Governor que se haya definido previamente.  
-  
- La opción "default" debe estar incluida entre comillas ("") o corchetes ([]) si se utiliza con ALTER WORKLOAD GROUP para evitar el conflicto con DEFAULT, que es una palabra reservada del sistema. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
-  
-> [!NOTE]  
-> La opción "default" distingue entre mayúsculas y minúsculas.  
-  
-## <a name="remarks"></a>Notas  
- ALTER WORKLOAD GROUP está permitido en el grupo predeterminado.  
-  
- Los cambios en la configuración del grupo de cargas de trabajo no surtirán efecto hasta que se ejecute ALTER RESOURCE GOVERNOR RECONFIGURE. Cuando se cambia un plan que afecta al valor, el nuevo valor solo se aplica a los planes previamente almacenados en caché después de ejecutar DBCC FREEPROCCACHE (*pool_name*), donde *pool_name* es el nombre de un grupo de recursos de Resource Governor con el que está asociado el grupo de cargas de trabajo.  
-  
--   Si va a cambiar MAX_DOP a 1, la ejecución de DBCC FREEPROCCACHE no es necesaria porque los planes paralelos se pueden ejecutar en serie. Pero puede que no sea tan eficaz como un plan compilado como un plan en serie.  
-  
--   Si va a cambiar MAX_DOP de 1 a 0 o a un valor mayor que 1, no es necesario ejecutar DBCC FREEPROCCACHE. Pero los planes en serie no se pueden ejecutar en paralelo, así que el borrado de la memoria caché respectiva permite compilar potencialmente nuevos planes mediante paralelismo.  
-  
-> [!CAUTION]  
-> El borrado de los planes almacenados en caché de un grupo de recursos asociado a más de un grupo de cargas de trabajo afecta a todos los grupos de cargas de trabajo con el grupo de recursos definido por el usuario identificado por *pool_name*.  
-  
- Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados de Resource Governor. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
-  
- REQUEST_MEMORY_GRANT_PERCENT: En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
-  
- **Creación de índices en una tabla con particiones**  
-  
- La memoria usada para la creación de índices en una tabla con particiones no alineada es proporcional al número de particiones involucradas.  Si la memoria total necesaria supera el límite por consulta (REQUEST_MAX_MEMORY_GRANT_PERCENT) impuesto por la configuración del grupo de cargas de trabajo del regulador de recursos, puede que esta creación de índices no se ejecute. Dado que el grupo de cargas de trabajo "predeterminado" permite que una consulta supere el límite por consulta con la memoria mínima necesaria para iniciar la compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], es posible que el usuario pueda ejecutar la misma creación de índices en el grupo de cargas de trabajo "predeterminado" si el grupo de recursos de servidor "predeterminado" tiene configurada una memoria total suficiente para ejecutar dicha consulta.  
-  
-## <a name="permissions"></a>Permisos  
- Requiere el permiso `CONTROL SERVER`.  
-  
-## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se cambia la importancia de las solicitudes en el grupo predeterminado de `MEDIUM` a `LOW`.  
-  
-```sql  
-ALTER WORKLOAD GROUP "default"  
-WITH (IMPORTANCE = LOW);  
-GO  
-ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-```  
-  
- En el ejemplo siguiente se muestra cómo mover un grupo de cargas de trabajo del grupo de recursos actual al predeterminado.  
-  
-```sql  
-ALTER WORKLOAD GROUP adHoc  
-USING [default];  
-GO  
-ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-```  
-  
-## <a name="see-also"></a>Consulte también  
- [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
- [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
- [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
-  
-  
+REQUEST_MAX_RESOURCE_GRANT_PERCENT = valor  
+El valor es un decimal y debe ser mayor que request_min_resource_grant_percent.
+
+IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+Modifica la importancia predeterminada de una solicitud para el grupo de cargas de trabajo.
+
+QUERY_EXECUTION_TIMEOUT_SEC = valor  
+Modifica el tiempo máximo, en segundos, que se puede ejecutar una consulta antes de que se cancele. El valor debe ser 0 o un entero positivo. El valor predeterminado de value es 0, que indica una cantidad ilimitada.   
+
+## <a name="permissions"></a>Permisos
+
+Requiere el permiso CONTROL DATABASE
+
+## <a name="example"></a>Ejemplo
+
+En el ejemplo siguiente se comprueban los valores de la vista de catálogo para wgDataLoads y se cambian los valores.
+
+```sql
+SELECT *
+FROM sys.workload_management_workload_groups  
+WHERE [name] = 'wgDataLoads'
+
+ALTER WORKLOAD GROUP wgDataLoads WITH
+( MIN_PERCENTAGE_RESOURCE            = 40
+ ,CAP_PERCENTAGE_RESOURCE            = 80
+ ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 10 )
+ ```
+
+## <a name="alter-workload-group-behavior"></a>Comportamiento de ALTER WORKLOAD GROUP
+
+En todo momento hay tres tipos de solicitudes en el sistema:
+- Solicitudes que todavía no se han clasificado.
+- Solicitudes que están clasificadas y en espera para los bloqueos de objetos o los recursos del sistema.
+- Solicitudes que están clasificadas y en ejecución.
+
+En función de las propiedades del grupo de cargas de trabajo que se esté modificando, el momento en el que se aplique la configuración será diferente.
+
+**Importance o query_execution_timeout** En el caso de las propiedades Importance y query_execution_timeout, las solicitudes non-classified obtienen los nuevos valores de configuración.  Las solicitudes en espera y en ejecución se ejecutan con la configuración anterior.  La solicitud `ALTER WORKLOAD GROUP` se ejecuta inmediatamente, sin tener en cuenta si hay consultas en ejecución en el grupo de cargas de trabajo.
+
+**Request_min_resource_grant_percent o request_max_resource_grant_percent** En el caso de request_min_resource_grant_percent y request_max_resource_grant_percent, las solicitudes en ejecución se ejecutan con la configuración anterior.  Las solicitudes en espera y las no clasificadas obtienen los nuevos valores de configuración.  La solicitud `ALTER WORKLOAD GROUP` se ejecuta inmediatamente, sin tener en cuenta si hay consultas en ejecución en el grupo de cargas de trabajo.
+
+**Min_percentage_resource o cap_percentage_resource** En el caso de min_percentage_resource y cap_percentage_resource, las solicitudes en ejecución se ejecutan con la configuración anterior.  Las solicitudes en espera y las no clasificadas obtienen los nuevos valores de configuración. 
+
+Para cambiar min_percentage_resource y cap_percentage_resource, es necesario purgar las solicitudes en ejecución en el grupo de cargas de trabajo que se esté modificando.  Al reducir min_percentage_resource, los recursos liberados se devuelven al grupo de recursos compartidos, lo que permite que las solicitudes de otros grupos de cargas de trabajo puedan usarlos.  Por el contrario, al aumentar min_percentage_resource, se esperará hasta que se completen las solicitudes que usen solo los recursos necesarios del grupo compartido.  La operación ALTER WORKLOAD GROUP tendrá acceso prioritario a los recursos compartidos en comparación con otras solicitudes que estén en espera para su ejecución en el grupo compartido.  Si la suma de min_percentage_resource supera el 100 %, se producirá inmediatamente un error en la solicitud ALTER WORKLOAD GROUP. 
+
+**Comportamiento de bloqueo** La modificación de un grupo de cargas de trabajo requiere un bloqueo global en todos los grupos de cargas de trabajo.  Se colocará una solicitud para modificar un grupo de cargas de trabajo detrás de las solicitudes de creación o anulación de grupos de carga de trabajo en la cola.  Si las instrucciones de modificación se envían en un lote, estas se procesarán siguiendo el orden de envío.  
+
+## <a name="see-also"></a>Consulte también
+
+- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](create-workload-group-transact-sql.md)
+- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
+- [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
+- [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
+- [Inicio rápido: Configuración del aislamiento de cargas de trabajo mediante T-SQL](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)
+
+::: moniker-end

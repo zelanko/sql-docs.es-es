@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb80bf30529c8948b164735b21eaf3025c386a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb2601bb5fd85313fd66f58cdd0ab616bc8c13c4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893371"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita una prioridad de conversación de la base de datos actual.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67898285"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DROP BROKER PRIORITY ConversationPriorityName  
 [;]  
@@ -43,7 +43,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Especifica el nombre de la prioridad de conversación que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al quitar una prioridad de conversación, cualquier conversación existente continúa funcionando con los niveles de prioridad asignados por la prioridad de conversación.  
   
 ## <a name="permissions"></a>Permisos  

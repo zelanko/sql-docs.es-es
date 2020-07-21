@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c577b06866db12ecd4ccc4b28fbf36e3314f76d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63070914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000930"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Ordenar varias columnas en las consultas (Visual Database Tools)
   Puede especificar el orden en el que desea usar las columnas para ordenar los datos utilizando la columna **Criterio de ordenación** en el [panel Criterios](visual-database-tools.md).  
@@ -30,8 +29,8 @@ ms.locfileid: "63070914"
   
      Repita los pasos para cada columna por la que desee ordenar los resultados.  
   
-## <a name="see-also"></a>Vea también  
- [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

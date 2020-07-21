@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 68a3a2b030ef5b731fa437b8c9f4b57f3eedaa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784508"
 ---
-# <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indica si en el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es miembro del rol de servidor especificado.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "68132812"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
@@ -51,13 +51,13 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> public|  
+|diskadmin|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> público|  
 |processadmin||  
   
  **'** *login* **'**  
  Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a comprobar. *login* es de tipo **sysname** y su valor predeterminado es NULL. Si no se especifica ningún valor, el resultado se basa en el contexto de ejecución actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 |Valor devuelto|Descripción|  
@@ -66,7 +66,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |1|*login* es miembro del grupo *role*.|  
 |NULL|*role* o *login* no son válidos o no tienen permiso para ver la pertenencia a roles.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use IS_SRVROLEMEMBER para determinar si el usuario actual puede realizar una acción que necesite los permisos del rol de servidor.  
   
  Si se especifica un inicio de sesión de Windows, como Contoso\María5, para *login*, **IS_SRVROLEMEMBER** devuelve **NULL**, a menos que se haya concedido o denegado el acceso directo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al inicio de sesión.  

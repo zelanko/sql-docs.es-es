@@ -1,5 +1,6 @@
 ---
 title: Establecimiento de opciones predeterminadas para el Generador de informes | Microsoft Docs
+description: En este artículo se describen los valores predeterminados útiles que puede establecer en el Generador de informes. Estos valores predeterminados facilitan y agilizan la creación de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577917"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290773"
 ---
 # <a name="set-default-options-for-report-builder"></a>Establecimiento de opciones predeterminadas para el Generador de informes
   En Generador de informes, puede establecer un número de valores predeterminados útiles para que la creación de informes resulte más sencilla y más rápida.  Por ejemplo, si puede establecer o cambiar el servidor de informes predeterminado, Generador de informes guarda los informes en el mismo servidor de informes automáticamente, a menos que se especifique lo contrario.  

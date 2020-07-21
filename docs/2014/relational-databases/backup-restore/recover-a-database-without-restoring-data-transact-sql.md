@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04e4f78e51adb803bb65530c0b3b903aa7f76419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921820"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957615"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar una base de datos sin restaurar los datos (Transact-SQL)
   Normalmente, todos los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se restauran antes de que se recupere la base de datos. Sin embargo, una operación de restauración puede recuperar una base de datos sin restaurar realmente una copia de seguridad; por ejemplo, al recuperar un archivo de solo lectura que es coherente con la base de datos. Esto se conoce como *restauración de solo recuperación*. Cuando los datos sin conexión ya son coherentes con la base de datos y solo es necesario lograr que estén disponibles, una operación de solo restauración completa la recuperación de la base de datos y pone los datos en línea.  
@@ -42,7 +41,7 @@ ms.locfileid: "62921820"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  La cláusula FROM **=** \<*dispositivoDeCopiaDeSeguridad>* no se usa en las restauraciones de solo recuperación porque no es necesario realizar una copia de seguridad.  
+>  La **=** \<*backup_device> cláusula FROM * no se utiliza para las restauraciones de solo recuperación porque no es necesario realizar ninguna copia de seguridad.  
   
  **Ejemplo**  
   
@@ -63,7 +62,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La sintaxis de [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) para una restauración de solo recuperación de archivos es:  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ RESTOre DATABASE *database_name* {file **=** _logical_file_name_ | **=** _Logical_filegroup_name_ **de grupo de**archivos} [,... *n* ] con recuperación  
   
  **Ejemplo**  
   
@@ -88,7 +87,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Restauraciones por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](file-restores-simple-recovery-model.md)   

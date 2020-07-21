@@ -1,6 +1,6 @@
 ---
 title: IDBProperties (OLE DB) | Microsoft Docs
-description: IDBProperties (interfaz) (OLE DB)
+description: Interfaz de IDBProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d8515ef92ce1284379327e63a4bd1730577bd8df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994477"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo ActualSize y DefinedSize propiedades (JScript) | Microsoft Docs
+title: Ejemplo de propiedades ActualSize y DefinedSize (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b465f5e567262aead6ffe73f696968d736b472eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2282aa7df82f7bb7b42c1ab9e37b3c2a2cf94bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921504"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760741"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>Ejemplo ActualSize y DefinedSize propiedades (JScript)
-Este ejemplo se usa el [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades para mostrar el tamaño definido y el tamaño real de un campo. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ActualSizeJS.asp**.  
+En este ejemplo se usan las propiedades [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) para mostrar el tamaño definido y el tamaño real de un campo. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **ActualSizeJS. asp**.  
   
 ```  
 <!-- BeginActualSizeJS -->  
@@ -130,7 +130,7 @@ body {
 <!-- EndActualSizeJS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [Propiedad DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)

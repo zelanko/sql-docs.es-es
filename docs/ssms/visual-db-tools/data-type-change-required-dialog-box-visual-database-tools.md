@@ -1,10 +1,9 @@
 ---
-title: Se requiere cambio en el tipo de datos (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Es necesario un cambio de tipo de datos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6b91de4bdb0e637f4ec7bc2833de4a52e322fef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 061beab81a7b338438866256d63f88151c6769e1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263915"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75242777"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Se requiere cambio en el tipo de datos (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

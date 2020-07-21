@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706652"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Genera un punto de comprobación manual en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que está conectado actualmente.  
   
@@ -59,7 +59,7 @@ CHECKPOINT [ checkpoint_duration ]
   
  El impacto que *duración_del_punto_de_comprobación* tiene en el rendimiento depende del número de páginas desfasadas, la actividad del sistema y la duración real especificada. Por ejemplo, si el punto de comprobación normalmente se completa en 120 segundos, especificar un valor de 45 segundos para *duración_del_punto_de_comprobación* hará que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destine más recursos al punto de comprobación de los que asignaría de forma predeterminada. Por el contrario, si se especifica un valor de 180 segundos para *duración_del_punto_de_comprobación*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinará un número inferior de recursos de los que asignaría de forma predeterminada. En general, un valor bajo de *duración_del_punto_de_comprobación* incrementará el número de recursos destinados al punto de comprobación, mientras que un valor elevado de *duración_del_punto_de_comprobación* lo reducirá. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre completa los puntos de comprobación si es posible, y la instrucción CHECKPOINT devuelve un valor inmediatamente cuando se completa un punto de comprobación. Por tanto, en algunos casos, un punto de comprobación puede llevar más o menos tiempo que la duración especificada.  
   
-##  <a name="Security"></a> Seguridad  
+##  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ### <a name="permissions"></a>Permisos  
  De forma predeterminada, disponen de permisos de CHECKPOINT los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**; estos permisos no se pueden transferir.  

@@ -1,5 +1,5 @@
 ---
-title: delete (XML DML) | Microsoft Docs
+title: delete (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 340ad7968aeb31449f4b5200944ab591e08ae08b
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051321"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393103"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Elimina nodos de una instancia XML.  
   
@@ -35,8 +35,10 @@ ms.locfileid: "68051321"
 delete Expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
- *Expresión*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+ *Expression*  
  Es una expresión XQuery que identifica los nodos que se deben eliminar. Se eliminarán todos los nodos seleccionados por la expresión y los nodos o valores incluidos en los mismos. Tal y como se describe en [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), debe ser una referencia a un nodo existente en el documento. No puede ser un nodo construido. La expresión no puede ser el nodo raíz (/). Si la expresión devuelve una secuencia vacía, no se produce ninguna eliminación y no se devuelven errores.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,6 @@
 ---
-title: Utilizar System.Transactions | Microsoft Docs
+title: Usar System. Transactions | Microsoft Docs
+description: El espacio de nombres System. Transactions proporciona un marco de trabajo de transacciones que está totalmente integrado con ADO.NET y SQL Server la integración con CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765367"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El espacio de nombres **System.Transactions** proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La clase **System.Transactions.TransactionScope** crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método **Complete** al final del bloque de código marcado por **TransactionScope**. Se llama al método **Dispose** cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método **Complete** . Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  
   
  Se recomienda emplear un bloque **using** para asegurarse de que se llama al método **Dispose** en el objeto **TransactionScope** cuando se sale del bloque **using** . El hecho de no confirmar o revertir las transacciones pendientes puede reducir significativamente el rendimiento, porque el tiempo de espera predeterminado para **TransactionScope** es un minuto. Si no utiliza una instrucción **using** , debe realizar todo el trabajo de un bloque **Try** y llamar explícitamente al método **Dispose** del bloque **Finally** .  
@@ -105,7 +106,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Integración CLR y transacciones](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

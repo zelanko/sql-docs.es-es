@@ -1,5 +1,5 @@
 ---
-title: Asignar y liberar búferes | Microsoft Docs
+title: Asignación y liberación de búferes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e6aab888d24fcbc987b3db921436f14812618519
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077194"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81288405"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Asignar y liberar búferes
-Todos los búferes se asigna y libera la aplicación. Si no se aplaza un búfer, sólo debe existir para el tiempo que dure la llamada a una función. Por ejemplo, **SQLGetInfo** devuelve el valor asociado con una opción concreta en el búfer señalado por el *InfoValuePtr* argumento. Este búfer se puede liberar inmediatamente después de llamar a **SQLGetInfo**, tal y como se muestra en el ejemplo de código siguiente:  
+La aplicación asigna y libera todos los búferes. Si no se aplaza un búfer, solo debe existir mientras dure la llamada a una función. Por ejemplo, **SQLGetInfo** devuelve el valor asociado a una opción determinada en el búfer señalado por el argumento *InfoValuePtr* . Este búfer se puede liberar inmediatamente después de la llamada a **SQLGetInfo**, tal y como se muestra en el ejemplo de código siguiente:  
   
 ```  
 SQLSMALLINT   InfoValueLen;  
@@ -34,7 +34,7 @@ SQLGetInfo(hdbc, SQL_DBMS_NAME, (SQLPOINTER)InfoValuePtr, 50,
 free(InfoValuePtr);                        // OK to free InfoValuePtr.  
 ```  
   
- Dado que búferes diferidos se especifica en una función y se usa en otro, es un error de programación de aplicaciones para liberar un búfer aplazado mientras el controlador todavía espera que exista. Por ejemplo, la dirección de la \* *ValuePtr* búfer se pasa a **SQLBindCol** para su uso posterior por **SQLFetch**. Este búfer no se podrá liberar hasta que la columna es independiente, como con una llamada a **SQLBindCol** o **SQLFreeStmt** tal como se muestra en el ejemplo de código siguiente:  
+ Dado que los búferes diferidos se especifican en una función y se usan en otro, se trata de un error de programación de aplicaciones para liberar un búfer diferido mientras el controlador espera que exista. Por ejemplo, la dirección \*del búfer *ValuePtr* se pasa a **SQLBindCol** para su uso posterior por **SQLFetch**. Este búfer no se puede liberar hasta que la columna esté desenlazada, como con una llamada a **SQLBindCol** o **SQLFreeStmt** , tal como se muestra en el ejemplo de código siguiente:  
   
 ```  
 SQLRETURN    rc;  
@@ -59,7 +59,7 @@ SQLFreeStmt(hstmt, SQL_UNBIND);
 free(ValuePtr);  
 ```  
   
- Este error se realiza fácilmente declarando el búfer de forma local en una función; el búfer se libera cuando la aplicación sale la función. Por ejemplo, el siguiente código, comportamiento no definido y probablemente irrecuperable en el controlador:  
+ Este tipo de error se realiza fácilmente al declarar el búfer localmente en una función; el búfer se libera cuando la aplicación deja la función. Por ejemplo, el código siguiente produce un comportamiento no definido y probablemente irrecuperable en el controlador:  
   
 ```  
 SQLRETURN   rc;  

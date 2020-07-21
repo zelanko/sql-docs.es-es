@@ -16,16 +16,16 @@ helpviewer_keywords:
 - stored procedure support
 - API Reference, sqlsrv_next_result
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8ffdab9700e32cb2c10e85950db54e6c78c54349
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014998"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926432"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Activa el siguiente resultado (conjunto de resultados, recuento de filas o parámetro de salida) de la instrucción especificada.  

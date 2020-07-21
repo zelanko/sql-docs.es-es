@@ -1,5 +1,5 @@
 ---
-title: Página de selección de conjunto de datos (Administrador de informes) compartidas | Microsoft Docs
+title: Página selección de conjunto de conjuntos compartidos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101269"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Página de selección de conjuntos de datos compartidos (Administrador de informes)
@@ -48,12 +48,12 @@ ms.locfileid: "66101269"
  **Aplicar**  
  Guarde los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrar conjuntos de recursos compartidos](report-data/manage-shared-datasets.md)   
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Elementos de informe y conjuntos de valores en Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

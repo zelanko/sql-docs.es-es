@@ -13,15 +13,14 @@ helpviewer_keywords:
 - mapping schema [SQLXML], XPath queries
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d7430b8e32353e40ede0baf42b6c5306461988f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015320"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Ejecutar consultas XPath (clases administradas de SQLXML)
   En este ejemplo se muestra cómo se ejecutan consultas XPath para un esquema de asignación.  
@@ -88,7 +87,7 @@ class Test
   
 2.  Guarde el esquema XSD (MySchema.xml) que se proporciona en este ejemplo en una carpeta.  
   
-3.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta donde se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
+3.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
   
 4.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   

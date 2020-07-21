@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 ms.assetid: 017301a2-4a23-4e68-82af-134f3d4892b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1648cca415f37f9c54f13857d25af90a65372c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eeed1432c6f3c3ba4f6dcd80608c2c40bd0db374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728209"
 ---
-# <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Habilita y deshabilita la funcionalidad de Índice XML selectivo en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se llama sin ningún parámetro, el procedimiento almacenado devuelve 1 si el índice XML selectivo está habilitado en una base de datos determinada.  
   
 > [!NOTE]  
->  Para deshabilitar el índice XML selectivo con este procedimiento almacenado, la base de datos debe colocarse en modo de recuperación simple mediante el [ALTER DATABASE SET Options &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) comando.  
+>  Para deshabilitar el índice XML selectivo mediante este procedimiento almacenado, la base de datos se debe poner en modo de recuperación simple mediante el comando de [opciones set de Alter database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68108230"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ db_name = ] 'db_name'` El nombre de la base de datos para habilitar o deshabilitar el índice XML selectivo. Si *db_name* es NULL, se supone que la base de datos actual.  
+`[ @ db_name = ] 'db_name'`Nombre de la base de datos en la que se va a habilitar o deshabilitar el índice XML selectivo. Si *db_name* es null, se supone que es la base de datos actual.  
   
-`[ @action = ] 'action'` Determina si se debe habilitar o deshabilitar el índice. Si otro valor que no sea 'on', se pasa 'true', 'off' o 'false', se producirá un error.  
+`[ @action = ] 'action'`Determina si se debe habilitar o deshabilitar el índice. Si se pasa otro valor, excepto ' on ', ' true ', ' OFF ' o ' false ', se producirá un error.  
   
 ```  
   
@@ -76,7 +76,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="b-disable-selective-xml-index-functionality"></a>b. Deshabilitar la funcionalidad de índice XML selectivo  
+### <a name="b-disable-selective-xml-index-functionality"></a>B. Deshabilitar la funcionalidad de índice XML selectivo  
  En el ejemplo siguiente se deshabilita el índice XML selectivo en la base de datos actual.  
   
 ```  
@@ -103,7 +103,7 @@ EXECUTE sys.sp_db_selective_xml_index;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Índices XML selectivos &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)  
   
   

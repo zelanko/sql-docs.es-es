@@ -12,15 +12,14 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 524bea3f8b2c4e9770892f8936951a1d387dfc6f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060223"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437952"
 ---
 # <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services
   Este procedimiento crea un nuevo proyecto y una nueva solución de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -48,10 +47,10 @@ ms.locfileid: "66060223"
     > [!NOTE]  
     >  Para ver y cambiar el complemento de control de código fuente seleccionado y para configurar el entorno de control de código fuente, haga clic en **Opciones** en el menú **Herramientas** y, después, expanda el nodo **Control de código fuente**.  
   
-8.  Haga clic en **Aceptar** para agregar la solución a **el Explorador de soluciones**r y agregar el proyecto a la solución.  
+8.  Haga clic en **Aceptar** para agregar la solución a la solución **explorar**r y agregar el proyecto a la solución.  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; proyectos](integration-services-ssis-projects-and-solutions.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;proyectos&#41; de SSIS](integration-services-ssis-projects-and-solutions.md)   
  [Agregar o quitar un proyecto de Integration Services en una solución](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

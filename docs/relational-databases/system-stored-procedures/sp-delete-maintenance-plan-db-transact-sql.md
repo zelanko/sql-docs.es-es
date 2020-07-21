@@ -18,17 +18,17 @@ helpviewer_keywords:
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 114240ad0916a664e95dbc980093b857ecd500a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056522"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862851"
 ---
-# <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina las asociaciones del plan de mantenimiento especificado de la base de datos especificada.  
   
@@ -48,32 +48,32 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] 'plan\_id'` Especifica el identificador del plan de mantenimiento. *plan_id* es **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'`Especifica el identificador del plan de mantenimiento. *plan_id* es de tipo **uniqueidentifier**.  
   
-`[ @db_name = ] 'database\_name'` Especifica el nombre de la base de datos que se puede eliminar el plan de mantenimiento. *database_name* es **sysname**.  
+`[ @db_name = ] 'database\_name'`Especifica el nombre de la base de datos que se va a eliminar del plan de mantenimiento. *database_name* es **sysname**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_delete_maintenance_plan_db** se debe ejecutar desde la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_delete_maintenance_plan_db** se debe ejecutar desde la base de datos **msdb** .  
   
- El **sp_delete_maintenance_plan_db** procedimiento almacenado quita la asociación entre el plan de mantenimiento y la base de datos especificado; no quita ni destruye la base de datos.  
+ El **sp_delete_maintenance_plan_db** procedimiento almacenado quita la asociación entre el plan de mantenimiento y la base de datos especificada; no quita ni destruye la base de datos.  
   
  Cuando **sp_delete_maintenance_plan_db** quita la última base de datos del plan de mantenimiento, el procedimiento almacenado también elimina el plan de mantenimiento.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_delete_maintenance_plan_db**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Ejemplos  
- Elimina el plan de mantenimiento de la **AdventureWorks2012** base de datos, previamente agregado mediante **sp_add_maintenance_plan_db**.  
+ Elimina el plan de mantenimiento de la base de datos **AdventureWorks2012** , que se ha agregado anteriormente mediante **sp_add_maintenance_plan_db**.  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Procedimientos almacenados de planes de mantenimiento de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del plan de mantenimiento de bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

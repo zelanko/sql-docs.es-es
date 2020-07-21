@@ -1,6 +1,6 @@
 ---
-title: Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Visualización de relaciones varios a varios en jerarquías derivadas
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085652"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811404"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En las jerarquías derivadas se muestran relaciones uno a varios y, ahora, también se pueden ver en ellas relaciones varios a varios.  
   
@@ -42,17 +42,17 @@ ms.locfileid: "68085652"
   
  En la captura de pantalla anterior, observe que la entidad **Employee** figura en **Niveles actuales** , en la parte intermedia, como el único nivel. En la **vista previa** de la jerarquía derivada del lado derecho podrá ver una lista de todos los miembros de la entidad **Employee** . En la sección **Niveles disponibles** del lado izquierdo se muestran los niveles que se pueden agregar encima del nivel superior actual (**Employee**). La mayoría de ellos son atributos basados en dominio (DBA) de la entidad **Employee** , incluido el DBA **Department** .  
   
- A partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], existe un nuevo tipo de nivel que modela las relaciones de M2M, por ejemplo: **Class (asignado mediante ClassRegistration.Student)** . El nombre del nivel es más detallado que los demás a fin de reflejar la información adicional necesaria para describir la relación de asignación de forma inequívoca. Arrastre este nivel y colóquelo en el nivel **Employee** , que se encuentra en la sección **Niveles actuales** :  
+ A partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], existe un nuevo tipo de nivel que modela las relaciones de M2M, por ejemplo: **Class (asignado mediante ClassRegistration.Student)**. El nombre del nivel es más detallado que los demás a fin de reflejar la información adicional necesaria para describir la relación de asignación de forma inequívoca. Arrastre este nivel y colóquelo en el nivel **Employee** , que se encuentra en la sección **Niveles actuales** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- Ahora, en la vista previa, se muestran los empleados agrupados por las clases de aprendizaje en las que están inscritos. Como se trata de una relación de M2M, cada miembro secundario puede tener varios elementos primarios. En el ejemplo anterior, el empleado **6 {Hillman, Reinout N}** está inscrito como alumno en dos clases: **1 {Master Data Services 101}** y **4 {Career-Limiting Moves}** .  
+ Ahora, en la vista previa, se muestran los empleados agrupados por las clases de aprendizaje en las que están inscritos. Como se trata de una relación de M2M, cada miembro secundario puede tener varios elementos primarios. En el ejemplo anterior, el empleado **6 {Hillman, Reinout N}** está inscrito como alumno en dos clases: **1 {Master Data Services 101}** y **4 {Career-Limiting Moves}**.  
   
  Esta relación de asignación también puede mostrarse invertida; es decir, con las clases agrupadas por alumno:  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- Una vez más, vemos como un elemento secundario puede aparecer bajo más de un primario: la clase de aprendizaje **1 {Master Data Services 101}** se muestra bajo **6 {Hillman, Reinout N}** y **40 {Ford, Jeffrey L}** .  
+ Una vez más, vemos como un elemento secundario puede aparecer bajo más de un primario: la clase de aprendizaje **1 {Master Data Services 101}** se muestra bajo **6 {Hillman, Reinout N}** y **40 {Ford, Jeffrey L}**.  
   
  Los miembros de la entidad de asignación **ClassRegistration** no aparecen en ningún lugar de la jerarquía derivada. Se utilizan simplemente para definir las relaciones entre los miembros primarios y secundarios de la jerarquía.  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68085652"
   
  Asimismo, se pueden ocultar los niveles de M2M, al igual que los demás niveles de una jerarquía derivada.  
    
-### <a name="M2MSample"></a> Relación de M2M en el modelo de ejemplo  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> Relación de M2M en el modelo de ejemplo  
 Para obtener una demostración de una relación de M2M, vea la jerarquía derivada Region Climate del modelo de ejemplo Customer que se incluye con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Como se muestra en la siguiente imagen, el nombre del nivel que modela esta relación es ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (asignado mediante RegionClimate.Region)** . ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** muestra las regiones agrupadas por los tipos de climas con los que se asocian. Se trata de una relación de M2M porque hay regiones (miembros secundarios) que están asociadas a varias climas (elementos primarios). Por ejemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** está asociada a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** y ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** .  
+Como se muestra en la siguiente imagen, el nombre del nivel que modela esta relación es ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (asignado mediante RegionClimate.Region)**. ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** muestra las regiones agrupadas por los tipos de climas con los que se asocian. Se trata de una relación de M2M porque hay regiones (miembros secundarios) que están asociadas a varias climas (elementos primarios). Por ejemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacifico}** está asociada a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** y ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -90,7 +90,7 @@ Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a> Seguridad de miembros  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> Seguridad de miembros  
  No se puede usar una jerarquía que permita la duplicación de los miembros (permite a un miembro a tener más de un elemento primario) para asignar permisos de seguridad de miembros. Por ejemplo:  
   
 -   Un jerarquía derivada recursiva que no delimite recursiones nulas (cada miembro del nivel recursivo aparece bajo la raíz y su elemento primario recursivo).  
@@ -102,7 +102,7 @@ Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer
 ## <a name="collections"></a>Colecciones  
  Las colecciones y las jerarquías explícitas se encuentran en desuso. El procedimiento almacenado de conversión (udpConvertCollectionAndConsolidatedMembersToLeaf) convierte los miembros de la colección en miembros hoja y crea jerarquías derivadas de varios a varios para capturar información de pertenencia a la colección.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

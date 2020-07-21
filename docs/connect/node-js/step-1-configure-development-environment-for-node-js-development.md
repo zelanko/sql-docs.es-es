@@ -1,5 +1,6 @@
 ---
-title: 'Paso 1: Configurar el entorno de desarrollo para el desarrollo de Node.js | Microsoft Docs'
+title: 'Paso 1: Configuración del entorno de desarrollo para Node.js'
+description: Tendrá que configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación mediante el controlador de Node.js para SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,94 +9,93 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bce89cc12c7493522de55adffb69fcbe3307cbdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003762"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528139"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Paso 1: configurar el entorno de desarrollo para el desarrollo de Node.js
-Tendrá que configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación con el controlador node. js para SQL Server.  El método más común es usar el administrador de paquetes de node (NPM) para instalar el módulo tedioso, pero puede descargar el módulo tedioso directamente en [GitHub](https://github.com/pekim/tedious) si lo prefiere.  
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Paso 1:  Configuración del entorno de desarrollo para el desarrollo de Node.js
+Tendrá que configurar el entorno de desarrollo con los requisitos previos para desarrollar una aplicación mediante el controlador de Node.js para SQL Server.  El método más común es usar el administrador de paquetes de Node (npm) para instalar el módulo tedioso, pero puede descargarlo directamente en [GitHub](https://github.com/pekim/tedious) si lo prefiere.  
   
-Tenga en cuenta que el controlador node. js usa el protocolo TDS, que está habilitado de forma predeterminada en SQL Server y Azure SQL Database.  No se requiere ninguna configuración adicional.  
+El controlador de Node.js usa el protocolo TDS, que está habilitado de forma predeterminada en SQL Server y Azure SQL Database.  No se requiere ninguna configuración adicional.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Instalar el tiempo de ejecución de node. js y el administrador de paquetes NPM**  
-A. Vaya a [node. js](https://nodejs.org/en/download/)  
-B. Haga clic en el vínculo MSI de Windows Installer adecuado.   
-c. Una vez descargado, ejecute el archivo MSI para instalar node. js.  
+1. **Instale el entorno de ejecución de Node.js y el administrador de paquetes npm.**  
+a. Vaya a [Node.js](https://nodejs.org/en/download/).  
+b. Haga clic en el vínculo del archivo MSI adecuado de Windows Installer.   
+c. Una vez descargado, ejecútelo para instalar Node.js.  
   
-2. **Abra cmd. exe**  
+2. **Abrir cmd.exe**  
   
-3. **Cree un directorio de proyecto** y navegue hasta él.    
+3. **Cree un directorio de proyecto** y vaya a él.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
-4. **Cree un proyecto de nodo.**  Para conservar los valores predeterminados durante la creación del proyecto, presione entrar hasta que se cree el proyecto. Al final de este paso, debería ver un archivo package. JSON en el directorio del proyecto.  
+4. **Cree un proyecto de Node.**  Para conservar los valores predeterminados durante la creación del proyecto, presione Entrar hasta que se cree el proyecto. Al final de este paso, verá un archivo package.json en el directorio del proyecto.  
 ```  
 > npm init  
 ```  
   
-5. **Instale el módulo tedioso en el proyecto.**  Se trata de la implementación del protocolo TDS que el controlador utiliza para comunicarse con SQL Server.  
+5. **Instale el módulo tedioso en el proyecto.**  La implementación del protocolo TDS, que el controlador usa para comunicarse con SQL Server, es tediosa.  
 ```  
 > npm install tedious  
 ```  
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1.  **Abrir terminal**  
+1.  **Abra el terminal**.  
   
-2. **Instalación del tiempo de ejecución de node. js**  
+2. **Instale el entorno de ejecución de Node.js.**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **Instalación de NPM (Administrador de paquetes de node)**  
+3. **Instale npm (administrador de paquetes de Node).**  
 ```  
 > sudo apt-get install npm  
 ```  
-4. **Cree un directorio de proyecto** y navegue hasta él.    
+4. **Cree un directorio de proyecto** y vaya a él.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-5. **Cree un proyecto de nodo.**  Para conservar los valores predeterminados durante la creación del proyecto, presione entrar hasta que se cree el proyecto. Al final de este paso, debería ver un archivo package. JSON en el directorio del proyecto.  
+5. **Cree un proyecto de Node.**  Para conservar los valores predeterminados durante la creación del proyecto, presione Entrar hasta que se cree el proyecto. Al final de este paso, verá un archivo package.json en el directorio del proyecto.  
 ```  
 > sudo npm init  
 ```  
   
-6. **Instale el módulo tedioso en el proyecto.**  Se trata de la implementación del protocolo TDS que el controlador utiliza para comunicarse con SQL Server.  
+6. **Instale el módulo tedioso en el proyecto.**  La implementación del protocolo TDS, que el controlador usa para comunicarse con SQL Server, es tediosa.  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-1. **Instalar el tiempo de ejecución de node. js y el administrador de paquetes NPM**  
-A. Vaya a [node. js](https://nodejs.org/en/download/)  
-B. Haga clic en el vínculo del instalador de Mac OS adecuado.  
-c. Una vez descargado, ejecute el DMG para instalar node. js.  
+1. **Instale el entorno de ejecución de Node.js y el administrador de paquetes npm.**  
+a. Vaya a [Node.js](https://nodejs.org/en/download/).  
+b. Haga clic en el vínculo del instalador de macOS adecuado.  
+c. Una vez descargado, ejecute el archivo "dmg" para instalar Node.js.  
   
-2. **Abrir terminal**  
+2. **Abra el terminal**.  
   
-3. **Cree un directorio de proyecto** y navegue hasta él.    
+3. **Cree un directorio de proyecto** y vaya a él.    
 ```  
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
   
-4. **Cree un proyecto de nodo.**  Para conservar los valores predeterminados durante la creación del proyecto, presione entrar hasta que se cree el proyecto. Al final de este paso, debería ver un archivo package. JSON en el directorio del proyecto.  
+4. **Cree un proyecto de Node.**  Para conservar los valores predeterminados durante la creación del proyecto, presione Entrar hasta que se cree el proyecto. Al final de este paso, verá un archivo package.json en el directorio del proyecto.  
 ```  
 > npm init  
 ```  
   
-5. **Instale el módulo tedioso en el proyecto.**  Se trata de la implementación del protocolo TDS que el controlador utiliza para comunicarse con SQL Server.  
+5. **Instale el módulo tedioso en el proyecto.**  Se trata de la implementación del protocolo TDS que el controlador usa para comunicarse con SQL Server.  
 ```  
 > npm install tedious  
 ```  
-  

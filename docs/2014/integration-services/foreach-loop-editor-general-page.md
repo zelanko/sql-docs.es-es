@@ -1,5 +1,5 @@
 ---
-title: Editor de bucles foreach (página General) | Microsoft Docs
+title: Editor de bucles foreach (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ebf86dde82ea4bc7f4e5f4f488e9bedbebbcae4a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058521"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425352"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor de bucles Foreach (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach** para asignar nombre y describir un contenedor de bucles Foreach que utiliza un enumerador especificado para repetir un flujo de trabajo para cada miembro de una colección.  
@@ -25,7 +24,7 @@ ms.locfileid: "66058521"
  Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para el contenedor de bucles Foreach. Este nombre se utiliza como etiqueta en el icono de tarea y en los registros.  
   
 > [!NOTE]  
@@ -34,12 +33,12 @@ ms.locfileid: "66058521"
  **Descripción**  
  Escriba una descripción del contenedor de bucles Foreach.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de bucles foreach &#40;página de la colección&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Página colección de &#40;del editor de bucles foreach&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Editor de bucles foreach &#40;página asignaciones de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
- [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   
+ [Página expresiones](expressions/expressions-page.md)   
+ [Contenedor de bucles foreach](control-flow/foreach-loop-container.md)   
  [Contenedor de bucles For](control-flow/for-loop-container.md)  
   
   

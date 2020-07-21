@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8012115ff5f5a7fbd85de36b6263ea4380b44ccc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722244"
 ---
 # <a name="plan-guides"></a>Guías de plan
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no desee cambiar directamente el texto de la consulta real en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
   
  El número total de guías de plan que se pueden crear solo está limitado por los recursos de los que disponga el sistema. No obstante, las guías de plan deberían limitarse a aquellas consultas de gran importancia cuyo rendimiento se desea mejorar o estabilizar. No se deben usar las guías de plan para influenciar la mayor parte de la carga de la consulta de una aplicación implementada.  
@@ -56,7 +56,7 @@ BEGIN
 END;  
 ```  
   
- Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region` .  
+ Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region`.  
   
  Puede solucionar este problema modificando el procedimiento almacenado y agregando la sugerencia de consulta `OPTIMIZE FOR` a la consulta. No obstante, puesto que el procedimiento almacenado se encuentra en una aplicación implementada, no puede modificar directamente el código de la aplicación. En su lugar, puede crear la guía de plan siguiente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -161,7 +161,7 @@ where SalesOrderID =  @so_id',
 |Tarea|Tema|  
 |----------|-----------|  
 |Describe cómo crear una guía de plan.|[Crear una nueva guía de plan](../../relational-databases/performance/create-a-new-plan-guide.md)|  
-|Describe cómo crear una guía de plan para consultas con parámetros.|[Crear una guía de plan para consultas parametrizadas](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
+|Describe cómo crear una guía de plan para consultas con parámetros.|[Crear una guía de plan para consultas con parámetros](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
 |Describe cómo controlar el comportamiento de parametrización de consultas mediante guías de plan.|[Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)|  
 |Describe cómo incluir un plan de consulta fijo en una guía de plan.|[Aplicar un plan de consulta fijo a una guía de plan](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Describe cómo especificar sugerencias de consulta en una guía de plan.|[Asociar sugerencias de consulta a una guía de plan](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  

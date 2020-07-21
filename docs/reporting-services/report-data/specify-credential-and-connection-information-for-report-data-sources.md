@@ -1,6 +1,7 @@
 ---
-title: Especificar información de credenciales y conexión para los orígenes de datos de informes | Microsoft Docs
-ms.date: 08/17/2018
+title: Especificación de información de credenciales y conexión para los orígenes de datos de informes | Microsoft Docs
+description: Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6b5041b07551ba8bbd23cc3f737fc0c09d72ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: ab7f9d0717cac0dae86eb2b5202fd02de254c5e0
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575350"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244561"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  
@@ -39,7 +40,7 @@ ms.locfileid: "65575350"
 > [!NOTE]  
 >  Las credenciales también sirven para autenticar a usuarios que tengan acceso a un servidor de informes. La información acerca de la autenticación de usuarios en un servidor de informes se proporciona en otro tema.  
   
- La conexión a un origen de datos externo se define cuando se crea el informe. Una vez publicado éste, se puede administrar por separado. Puede especificar una cadena de conexión estática o una expresión que permita a los usuarios seleccionar un origen de datos de una lista dinámica. Para más información sobre cómo especificar un tipo de origen de datos y una cadena de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ La conexión a un origen de datos externo se define cuando se crea el informe. Una vez publicado éste, se puede administrar por separado. Puede especificar una cadena de conexión estática o una expresión que permita a los usuarios seleccionar un origen de datos de una lista dinámica. Para más información sobre cómo especificar un tipo de origen de datos y una cadena de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ## <a name="when-credentials-are-used-in-report-builder"></a>Cuando se usan las credenciales en el Generador de informes  
  En el Generador de informes, se suelen usar credenciales al conectarse a un servidor de informes o para las tareas relacionadas con datos, como crear un origen de datos incrustado, ejecutar una consulta del conjunto de datos u ofrecer una vista previa de un informe. Las credenciales no se guardan en el informe. Se administran separadamente en el servidor de informes o en el cliente local. La siguiente lista describe los tipos de credenciales que podría necesitar proporcionar, donde están almacenadas y cómo se utilizan:  
@@ -146,22 +147,22 @@ ms.locfileid: "65575350"
 ## <a name="user-name-and-password-login"></a>Inicio de sesión con nombre de usuario y contraseña  
  Cuando se selecciona la opción **Usar este nombre de usuario y esta contraseña**, debe especificarse un nombre de usuario y una contraseña para obtener acceso al origen de datos. En el caso de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las credenciales podrían servir para iniciar sesión en la base de datos. Las credenciales se pasan al origen de datos externo para su autenticación.  
   
-##  <a name="DataSourceConfigurationConnections"></a> Configuración de orígenes de datos y conexiones de red  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Configuración de orígenes de datos y conexiones de red  
  La tabla siguiente muestra cómo se realizan las conexiones para combinaciones específicas de tipos de credenciales y extensiones de procesamiento de datos. Si usa una extensión de procesamiento de datos personalizada, vea [Especificar conexiones para extensiones de procesamiento de datos personalizadas](../../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md).  
   
 |**Tipo**|**Contexto para la conexión de red**|**Tipos de orígenes de datos**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Seguridad integrada|Suplantar al usuario actual|Para todos los tipos de orígenes de datos, conectar mediante la cuenta de usuario actual.|  
 |Credenciales de Windows|Suplantar al usuario especificado|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB: conectar mediante la cuenta de usuario suplantado.|  
-|Credenciales de base de datos|Suplantar la cuenta de ejecución desatendida o la cuenta de servicio.<br /><br /> Reporting Services quita los permisos de administrador cuando la solicitud de conexión se envía utilizando la identidad de servicio.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Anexe el nombre de usuario y la contraseña a la cadena de conexión.<br /><br /> Si trabaja con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión será satisfactoria si está utilizando el protocolo TCP/IP; de lo contrario, la conexión generará error.<br /><br /> Para XML:<br /><br /> La conexión dará error en el servidor de informes si se utilizan las credenciales de la base de datos.|  
-|None|Suplantar la cuenta de ejecución desatendida.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Use las credenciales definidas en la cadena de conexión. La conexión generará error en el servidor de informes si la cuenta de ejecución desatendida está sin definir.<br /><br /> Si trabaja con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión siempre generará error si no se han especificado credenciales, aunque se haya definido la cuenta de ejecución desatendida.<br /><br /> Para XML:<br /><br /> Conéctese como usuario anónimo si la cuenta de ejecución desatendida se ha definido; de lo contrario, la conexión generará error.|  
+|Credenciales de base de datos|Suplantar la cuenta de ejecución desatendida o la cuenta de servicio.<br /><br /> Reporting Services quita los permisos de administrador cuando la solicitud de conexión se envía utilizando la identidad de servicio.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Anexe el nombre de usuario y la contraseña a la cadena de conexión.<br /><br /> Para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión será satisfactoria si está utilizando el protocolo TCP/IP; de lo contrario, la conexión generará error.<br /><br /> Para XML:<br /><br /> La conexión dará error en el servidor de informes si se utilizan las credenciales de la base de datos.|  
+|None|Suplantar la cuenta de ejecución desatendida.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB:<br /><br /> Use las credenciales definidas en la cadena de conexión. La conexión generará error en el servidor de informes si la cuenta de ejecución desatendida está sin definir.<br /><br /> Para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> La conexión siempre generará error si no se han especificado credenciales, aunque se haya definido la cuenta de ejecución desatendida.<br /><br /> Para XML:<br /><br /> Conéctese como usuario anónimo si la cuenta de ejecución desatendida se ha definido; de lo contrario, la conexión generará error.|  
   
 ## <a name="setting-credentials-programmatically"></a>Establecer credenciales mediante programación  
  Puede establecer credenciales en el código para controlar el acceso a informes y al servidor de informes. Para más información, consulte [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Configuración de propiedades de origen de datos para un informe](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

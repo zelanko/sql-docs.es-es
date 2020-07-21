@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9183495887233e94d9ff43a52e04eaf5ed3c6b36
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483693"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972185"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>Creación automática de código (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los valores numéricos pueden generarse automáticamente para el atributo Code o para cualquier otro atributo numérico. Cuando se generan códigos automáticamente, no se impide introducir otros valores para los códigos; en su lugar, se establece automáticamente un valor inicial.  
@@ -31,11 +30,11 @@ ms.locfileid: "65483693"
  Al escribir valores de atributo en MDS, ya sea en una de las herramientas o mediante el proceso de almacenamiento provisional, puede dejar en blanco el valor de atributo. Cuando se aplican reglas de negocios, los valores se incrementan en función del mayor valor existente. Por ejemplo, si la regla es "Atributo predeterminado para un valor generado que comienza en 1 y se incrementa en 4" y el valor actual más grande del atributo es 700, el valor del siguiente miembro que se agregue será 704.  
   
 ## <a name="deleting-automatically-generated-values"></a>Eliminar valores generados automáticamente  
- Una vez que un administrador ha habilitado los valores generados automáticamente para el atributo Code, los usuarios pueden eliminar accidentalmente un miembro que tenía un valor de código que desean usar. Se mostrará el mensaje de error "el código de miembro ya se usa un miembro que se ha eliminado". Hay dos posibles soluciones:  
+ Una vez que un administrador ha habilitado los valores generados automáticamente para el atributo Code, los usuarios pueden eliminar accidentalmente un miembro que tenía un valor de código que desean usar. Se mostrará el mensaje de error "el código de miembro ya lo usa un miembro que se eliminó". Hay dos soluciones posibles:  
   
--   En el área funcional **Administración de versiones** , un administrador puede invertir las transacción que se produjo cuando se eliminó el miembro. Sin embargo, esto significa que todos los atributos y pertenencia a jerarquías y colecciones del miembro anterior se restaura. Para obtener más información, consulte [invertir una transacción &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
+-   En el área funcional **Administración de versiones** , un administrador puede invertir las transacción que se produjo cuando se eliminó el miembro. Sin embargo, esto significa que se restauran todos los atributos del miembro anterior y la pertenencia a jerarquías y colecciones. Para obtener más información, vea [invertir una transacción &#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md).  
   
--   Un administrador puede utilizar el proceso de almacenamiento provisional para eliminar permanentemente el miembro. Para obtener más información, consulte [desactivar o eliminar miembros usando el proceso de ensayo &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
+-   Un administrador puede utilizar el proceso de almacenamiento provisional para eliminar permanentemente el miembro. Para obtener más información, consulte [desactivación o eliminación de miembros mediante el proceso de almacenamiento provisional &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

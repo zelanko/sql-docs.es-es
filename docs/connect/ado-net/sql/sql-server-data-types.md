@@ -7,44 +7,44 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 12ad13d6788ae2b8995289100883b06c5ab6d7c6
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: d2cfd61efa1ffed78b96f4ef22e01de20f200dfb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452036"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920966"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Tipos de datos de SQL Server en ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-SQL Server y .NET se basan en sistemas de tipos diferentes, lo que puede dar lugar a una posible pérdida de datos. Para conservar la integridad de los datos, el proveedor de datos SqlClient de Microsoft para SQL Server (<xref:Microsoft.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar <xref:Microsoft.Data.SqlClient.SqlParameter> tipos de datos.  
+SQL Server y .NET se basan en sistemas de tipos diferentes, lo que puede dar lugar a una posible pérdida de datos. Para conservar la integridad de los datos, el proveedor de datos SqlClient de Microsoft para SQL Server (<xref:Microsoft.Data.SqlClient>) proporciona métodos de descriptor de acceso con tipo para trabajar con datos de SQL Server. Puede usar las enumeraciones de las clases <xref:System.Data.SqlDbType> para especificar tipos de datos <xref:Microsoft.Data.SqlClient.SqlParameter>.  
   
-SQL Server 2008 introduce nuevos tipos de datos que están diseñados para satisfacer las necesidades empresariales de trabajar con datos de fecha y hora, estructurados, semiestructurados y no estructurados. Están documentados en los Libros en pantalla de SQL Server 2008.  
+SQL Server 2008 introduce nuevos tipos de datos que están diseñados para satisfacer las necesidades empresariales de trabajar con datos de fecha y hora, estructurados, semiestructurados y no estructurados. Están documentados en los Libros en pantalla de SQL Server 2008.  
   
-Los tipos de datos de SQL Server que están disponibles para su uso en la aplicación dependen de la versión de SQL Server que esté usando. Para obtener más información, vea [tipos de datos (motor de base de datos)](https://go.microsoft.com/fwlink/?LinkID=107468) de libros en pantalla de SQL Server.
+Los tipos de datos de SQL Server que están disponibles para su uso en la aplicación dependen de la versión de SQL Server que esté usando. Para obtener más información, vea [Tipo de datos (motor de base de datos) ](https://go.microsoft.com/fwlink/?LinkID=107468) en los Libros en pantalla de SQL Server.
   
 ## <a name="in-this-section"></a>En esta sección  
 [SqlTypes y DataSet](sqltypes-dataset.md)  
 Describe la compatibilidad de tipos con `SqlTypes` en `DataSet`.  
   
 [Tratamiento de valores NULL](handle-null-values.md)  
-Muestra cómo trabajar con valores NULL y la lógica de tres valores.  
+Demuestra cómo trabajar con valores NULL y la lógica de tres valores.  
   
 [Comparación de valores GUID y uniqueidentifier](compare-guid-uniqueidentifier-values.md)  
-Muestra cómo trabajar con valores GUID y uniqueidentifier en SQL Server y .NET.  
+Muestra cómo trabajar con valores GUID y de identificador único en SQL Server y .NET.  
   
 [Datos de fecha y hora](date-time-data.md)  
-Describe cómo usar los nuevos tipos de datos de fecha y hora introducidos en SQL Server 2008.  
+Describe cómo usar los nuevos tipos de datos de hora y fecha incorporados en SQL Server 2008.  
   
 [UDT grandes](large-udts.md)  
-Muestra cómo recuperar datos de UDT de valor grande introducidos en SQL Server 2008.  
+Muestra cómo recuperar datos de UDT de valores grandes introducidos en SQL Server 2008.  
   
 [Datos XML en SQL Server](xml-data-sql-server.md)  
-Describe cómo trabajar con datos XML recuperados de SQL Server.  
+Muestra cómo recuperar datos XML recuperados de SQL Server y cómo trabajar con ellos.  
   
 ## <a name="reference"></a>Referencia  
 <xref:System.Data.DataSet>  

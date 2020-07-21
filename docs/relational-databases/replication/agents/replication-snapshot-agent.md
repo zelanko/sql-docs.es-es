@@ -1,5 +1,6 @@
 ---
 title: Agente de instantáneas de replicación | Microsoft Docs
+description: En SQL Server, el Agente de instantáneas de replicación prepara los archivos de instantáneas, los almacena en una carpeta y registra los trabajos de sincronización en la base de datos de distribución.
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7132154bcb61e84d052891c200589cf157b31f65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730221"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
   
 > [!NOTE]  
@@ -83,7 +84,7 @@ snapshot [ -?]
  Imprime todos los parámetros disponibles.  
   
  **-Publisher**  _server_name_[ **\\** _instance\_name_]  
- Es el nombre del publicador. Especifique nombreDeServidor para conectarse a la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server\_name_ **\\** _instance\_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ Es el nombre del publicador. Especifique server_name para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server\_name_ **\\** _instance\_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-Publication** _publication_  
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
@@ -91,7 +92,7 @@ snapshot [ -?]
  **-70Subscribers**  
  Se debe usar si algún suscriptor ejecuta la versión 7.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-BcpBatchSize** _tamaño_\_ *lote*\_ *bcp*  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
  Es el número de filas para enviar en una operación de copia masiva. Al realizar una operación **bcp in** , el tamaño del lote es el número de filas para enviar al servidor como una transacción y también el número de filas que se deben enviar antes de que el Agente de distribución registre un mensaje de progreso de **bcp** . Al realizar una operación **bcp out** , se usa un tamaño de lote fijo de 1000. Un valor 0 indica que no se registran mensajes.  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -128,16 +129,16 @@ snapshot [ -?]
  Es la ubicación donde se generará la instantánea dinámica.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Es el nivel de cifrado de Capa de sockets seguros (SSL) que usa el Agente de instantáneas cuando realiza conexiones.  
+ Es el nivel de cifrado de la Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), utilizado por el Agente de instantáneas cuando realiza conexiones.  
   
 |Valor de EncryptionLevel|Descripción|  
 |---------------------------|-----------------|  
-|**0**|Especifica que no se utiliza SSL.|  
-|**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
-|**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
+|**0**|Especifica que no se utiliza TLS.|  
+|**1**|Especifica que se utiliza TLS, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor TLS/SSL.|  
+|**2**|Especifica que se usa TLS y que se ha comprobado el certificado.|  
 
  > [!NOTE]  
- >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" debe establecerse en el nombre completo de la instancia de SQL Server.
+ >  Un certificado TLS/SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" debe establecerse en el nombre completo de la instancia de SQL Server.
   
  Para más información, consulte [Ver y modificar la configuración de seguridad de la replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
@@ -234,7 +235,7 @@ snapshot [ -?]
  **-PublisherLogin** _publisher_login_  
  Es el inicio de sesión que se usa al conectar con el publicador mediante autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-PublisherPassword**  _contraseña_de_publicador_  
+ **-PublisherPassword**  _publisher_password_  
  Es la contraseña que se usa al conectar con el publicador mediante autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -252,10 +253,10 @@ snapshot [ -?]
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
  Es el número máximo de segundos que el Agente de instantáneas espera cuando el número de procesos de instantánea dinámicos simultáneos en ejecución ha alcanzado el límite establecido por la propiedad `@max_concurrent_dynamic_snapshots` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Si se alcanza el número máximo de segundos y el Agente de instantáneas todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque se puede cancelar.  
   
- \- **UsePerArticleContentsView** _vistaDeContenidoDeUsoPorArtículo_  
+ \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  Este parámetro ha quedado desusado y solamente se admite por compatibilidad con versiones anteriores.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si ha instalado el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de hacerlo en una cuenta de usuario de dominio (el valor predeterminado), el servicio solamente puede tener acceso al equipo local. Si el Agente de instantáneas que se ejecuta en el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para usar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de instantáneas devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

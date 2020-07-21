@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61719cd9ddf153c2552bdac3046a7e24ce8deb86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704065"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una aproximación poligonal de una instancia de **geography** que contiene segmentos de arco circulares.  
   
@@ -36,15 +36,15 @@ ms.locfileid: "68042391"
 .STCurveToLine()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Devuelve una instancia de **LineString** para una instancia de **CircularString** o **CompoundCurve**.  
   
- Devuelve una instancia de **Polygon** para una instancia **CurvePolygon**.  
+ Devuelve una instancia de **Polygon** para una instancia de **CurvePolygon**.  
   
  Devuelve una copia de instancias de **geography** que no contienen instancias de **CircularString**, **CompoundCurve** o **CurvePolygon**.  
   

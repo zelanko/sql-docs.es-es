@@ -1,5 +1,5 @@
 ---
-title: Niveles de compatibilidad de la interfaz | Microsoft Docs
+title: Niveles de cumplimiento de la interfaz | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138910"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304605"
 ---
 # <a name="interface-conformance-levels"></a>Niveles de compatibilidad de interfaz
-El propósito de la redistribución es informar a la aplicación qué características están disponibles a él desde el controlador. Un esquema de nivelación de basadas en funciones no lo suficientemente lograr este objetivo. En ODBC 3. *x*, los controladores se clasifican según las características que poseen. Compatibilidad con la característica puede incluir compatibilidad con la función; También puede incluir compatibilidad con un campo descriptor, un atributo de instrucción, un valor "Y" para un tipo de información devolviendo por **SQLGetInfo**, y así sucesivamente.  
+El propósito de la redistribución es informar a la aplicación de qué características están disponibles en el controlador. Un esquema de nivelación basado en funciones no logra de manera suficiente este objetivo. En ODBC 3. *x*, los controladores se clasifican en función de las características que poseen. La compatibilidad con la característica puede incluir compatibilidad con la función. también puede incluir compatibilidad con un campo de descriptor, un atributo de instrucción, un valor "Y" para un tipo de información devuelto por **SQLGetInfo**, etc.  
   
- Para simplificar la especificación de conformidad de interfaz, ODBC define tres niveles de compatibilidad. Para cumplir con un nivel de conformidad determinado, un controlador debe cumplir todos los requisitos de ese nivel de conformidad. Conformidad con un nivel determinado implica conformidad completa con todos los niveles inferiores.  
+ Para simplificar la especificación del cumplimiento de la interfaz, ODBC define tres niveles de cumplimiento. Para cumplir un determinado nivel de cumplimiento, un controlador debe cumplir todos los requisitos de ese nivel de cumplimiento. La conformidad con un nivel determinado implica una conformidad completa con todos los niveles inferiores.  
   
- Niveles de compatibilidad no siempre dividen perfectamente en soporte técnico para obtener una lista específica de las funciones ODBC, pero especifican las características admitidas, como se muestra en las secciones siguientes. Para proporcionar soporte técnico para una característica, un controlador debe admitir algunos o todos los formularios de las llamadas a determinadas funciones ODBC (para obtener más información, consulte [conformidad de función](../../../odbc/reference/develop-app/function-conformance.md)), establecer determinados atributos (consulte [conformidad de atributo ](../../../odbc/reference/develop-app/attribute-conformance.md)) y algunos de los campos descriptor (consulte [conformidad de campo Descriptor](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
+ Los niveles de cumplimiento no siempre se dividen en compatibilidad con una lista específica de funciones ODBC, sino que especifican las características admitidas como se indica en las secciones siguientes. Para proporcionar compatibilidad con una característica, un controlador debe admitir algunas o todas las formas de llamadas a determinadas funciones de ODBC (para obtener más información, vea [conformidad con funciones](../../../odbc/reference/develop-app/function-conformance.md)), establecer ciertos atributos (vea [cumplimiento de atributos](../../../odbc/reference/develop-app/attribute-conformance.md)) y ciertos campos de descriptor (vea conformidad del [Campo descriptor](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
   
- La aplicación detecta el nivel de conformidad con la interfaz de un controlador mediante la conexión a un origen de datos y llamar a **SQLGetInfo** con la opción SQL_ODBC_INTERFACE_CONFORMANCE.  
+ La aplicación detecta el nivel de conformidad de la interfaz de un controlador mediante la conexión a un origen de datos y la llamada a **SQLGetInfo** con la opción SQL_ODBC_INTERFACE_CONFORMANCE.  
   
- Los controladores son gratis implementar características más allá del nivel al que dicen conformidad completa. Las aplicaciones detección cualquier estas capacidades adicionales mediante una llamada a **SQLGetFunctions** (para determinar qué funciones ODBC están presentes) y **SQLGetInfo** (para consultar varias otras funciones de ODBC).  
+ Los controladores son gratuitos para implementar características más allá del nivel al que notifican la conformidad completa. Las aplicaciones detectan estas capacidades adicionales mediante una llamada a **SQLGetFunctions** (para determinar qué funciones ODBC están presentes) y a **SQLGetInfo** (para consultar otras funciones de ODBC).  
   
- Hay tres niveles de compatibilidad de interfaz ODBC: Core, nivel 1 y nivel 2.  
+ Hay tres niveles de cumplimiento de la interfaz ODBC: Core, nivel 1 y nivel 2.  
   
 > [!NOTE]
->  Estos niveles tienen requisitos diferentes que los niveles de compatibilidad de la API de ODBC del mismo nombre en el 2 de ODBC *.x*. En concreto, todas las características implícito en el 2 de ODBC *.x* conformidad 1 nivel de API ahora forman parte del nivel de conformidad de interfaz de núcleo. Como resultado, muchos controladores ODBC pueden notificar el cumplimiento de la interfaz de nivel básico.  
+>  Estos niveles de conformidad tienen requisitos diferentes a los niveles de compatibilidad de la API de ODBC del mismo nombre en ODBC 2 *. x*. En concreto, todas las características implícitas por el nivel de conformidad de la API de ODBC 2 *. x* son parte del nivel de cumplimiento de la interfaz principal. Como resultado, muchos controladores ODBC pueden informar del cumplimiento de la interfaz de nivel básico.  
   
  Esta sección contiene los temas siguientes.  
   

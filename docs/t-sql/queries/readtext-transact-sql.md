@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 516c2c3efefd0c9a1384823b8eb1f6c04abd29c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705967"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Lee los valores **text**, **ntext** o **image** de una columna **text**, **ntext** o **image**. Comienza a leer desde un desplazamiento especificado el número de bytes definido.  
   
@@ -38,7 +38,7 @@ Lee los valores **text**, **ntext** o **image** de una columna **text**, **ntext
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]  
 ```  
@@ -58,7 +58,7 @@ _size_ es el número de bytes cuando se usan los tipos de datos **text** o **ima
 HOLDLOCK  
 Hace que se bloquee el valor de texto para lectura hasta el final de la transacción. Otros usuarios pueden leer el valor, pero no pueden modificarlo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use la función [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) para obtener un valor _text\_ptr_ válido. TEXTPTR devuelve un puntero a la columna **text**, **ntext** o **image** de la fila especificada. TEXTPRT también puede devolver un puntero a la columna **text**, **ntext** o **image** de la última fila que la consulta devuelve si esta devuelve más de una fila. Debido a que TEXTPTR devuelve una cadena binaria de 16 bytes, se recomienda declarar una variable local para que contenga el puntero de texto y, a continuación, utilizar la variable con READTEXT. Para más información sobre la declaración de una variable local, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pueden existir punteros de texto consecutivos, aunque quizás no sean válidos. Para más información sobre la opción **text in row**, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para más información sobre cómo invalidar punteros de texto, vea [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
@@ -72,7 +72,7 @@ Los permisos READTEXT se conceden de manera predeterminada a los usuarios con pe
 En el siguiente ejemplo se lee desde el segundo carácter hasta el 26 de la columna `pr_info` de la tabla `pub_info`.  
   
 > [!NOTE]  
->  Para ejecutar este ejemplo, es necesario instalar la base de datos de ejemplo **pubs**.  
+>  Para ejecutar este ejemplo, debe instalar la base de datos de ejemplo [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases).  
   
 ```  
 USE pubs;  

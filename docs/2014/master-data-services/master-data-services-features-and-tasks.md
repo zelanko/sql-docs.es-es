@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1c22abff9c86d53d1c502d776709df80b49fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482889"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971235"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Características y tareas de Master Data Services
   Obtenga información sobre cómo usar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para administrar los datos maestros de la organización. Aprenda a crear y manipular objetos del modelo, que son contenedores de los datos. Aprenda a organizar y mantener los propios datos maestros. Aprenda a importar y exportar datos maestros, y a compartir modelos entre entornos de prueba y producción. Por último, aprenda a desarrollar aplicaciones personalizadas que tengan acceso al servicio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -58,9 +57,9 @@ ms.locfileid: "65482889"
   
 -   [Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
-## <a name="move-data"></a>Mover datos  
+## <a name="move-data"></a>Traslado de datos  
   
--   [Importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+-   [Master Data Services de &#40;de importación de datos&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 -   [Exportar datos &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   

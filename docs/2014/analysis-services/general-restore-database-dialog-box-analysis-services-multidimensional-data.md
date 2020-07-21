@@ -1,5 +1,5 @@
 ---
-title: General (cuadro de diálogo Restaurar base de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: General (cuadro de diálogo restaurar base de datos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 787488570627e2c8c7fc9a37e8f814847c40f3ca
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080946"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544387"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>General (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
   Use la página **General** del cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar el archivo de copia de seguridad y la configuración general que se utilizará al restaurar una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -51,19 +50,19 @@ ms.locfileid: "66080946"
  **Restaurar base de datos**  
  Seleccione la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que se restaurará.  
   
- **Desde el archivo de copia de seguridad**  
+ **Del archivo de copia de seguridad**  
  Seleccione el archivo de copia de seguridad a partir del que se restaurará la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionada.  
   
  **Examinar**  
  Haga clic para mostrar el cuadro de diálogo **Buscar archivos de base de datos** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad que se usará. Para más información sobre el cuadro de diálogo **Buscar archivos de base de datos**, vea [Cuadro de diálogo Buscar archivos de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Permitir la sobrescritura de base de datos**  
+ **Permitir sobrescritura de base de datos**  
  Seleccione esta opción para permitir a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] restaurar el contenido del archivo de copia de seguridad seleccionado sobre objetos existentes en la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionada.  
   
  **Incluir información de seguridad**  
  Seleccione esta opción para copiar la información de seguridad almacenada en el archivo de copia de seguridad en la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- Si esta opción está seleccionada, puede elegir la cantidad de información de seguridad de la lista desplegable habilitada al seleccionar esta opción. Las siguientes opciones están disponibles:  
+ Si esta opción está seleccionada, puede elegir la cantidad de información de seguridad de la lista desplegable habilitada al seleccionar esta opción. Están disponibles las siguientes opciones:  
   
 |Opción|Descripción|  
 |------------|-----------------|  
@@ -73,9 +72,9 @@ ms.locfileid: "66080946"
  **Contraseña**  
  Si el archivo de copia de seguridad está cifrado, escriba la contraseña usada para cifrarlo.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Restaurar base de datos &#40;Analysis Services - Datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Las particiones &#40;restaurar la base de datos cuadro de diálogo&#41; &#40;Analysis Services - datos multidimensionales&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo restaurar base de datos &#40;Analysis Services-datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Particiones &#40;cuadro de diálogo restaurar base de datos&#41; &#40;Analysis Services-datos multidimensionales&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

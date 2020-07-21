@@ -1,7 +1,7 @@
 ---
 title: Cursores | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2018
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,15 +19,15 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733906"
 ---
 # <a name="cursors"></a>Cursores
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción `SELECT` está compuesto por todas las filas que satisfacen las condiciones de la cláusula `WHERE` de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
   
  Los cursores amplían el procesamiento de los resultados porque:  
@@ -71,7 +71,7 @@ Un cursor de solo avance se especifica como `FORWARD_ONLY` y `READ_ONLY`, y no a
   
  Aunque los modelos de cursor de la API de base de datos consideran el cursor de solo avance como un tipo más, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no establece esta distinción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que las opciones de desplazamiento de solo avance y de desplazamiento son las que se pueden aplicar a los cursores estáticos, a los controlados por conjunto de claves y a los dinámicos. [!INCLUDE[tsql](../includes/tsql-md.md)] cursores admiten cursores estáticos controlados por conjunto de claves y dinámicos que sean de solo avance. Los modelos de cursor de la API de bases de datos dan por sentado que los cursores estáticos, los controlados por conjunto de claves y los dinámicos siempre se pueden desplazar. Cuando se establece el atributo o propiedad de un cursor de la API de bases de datos como de solo avance, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lo implementa como cursor dinámico de solo avance.  
   
-### <a name="static"></a>Estático  
+### <a name="static"></a>estática  
  El conjunto de resultados completo de un cursor estático se genera en **tempdb** cuando se abre el cursor. Un cursor estático siempre muestra el conjunto de resultados tal como estaba al abrir el cursor. Los cursores estáticos detectan pocos cambios o ningún cambio, pero consumen relativamente pocos recursos al desplazarse.  
   
 El cursor no refleja las modificaciones realizadas en la base de datos que afectan a la pertenencia al conjunto de resultados o a los valores modificados en las columnas de las filas que forman el conjunto de resultados. Un cursor estático no muestra las nuevas filas insertadas en la base de datos después de abrir el cursor, aunque coincidan con las condiciones de búsqueda de la instrucción `SELECT` del cursor. Si otros usuarios actualizan las filas que conforman el conjunto de resultados, los nuevos valores de datos no se muestran en el cursor estático. El cursor estático muestra las filas eliminadas de la base de datos una vez que se ha abierto el cursor. Las operaciones `UPDATE`, `INSERT` o `DELETE` no se reflejan en un cursor estático (a menos que se cierre y se vuelva a abrir), ni tampoco las modificaciones realizadas con la misma conexión que abrió el cursor.  
@@ -81,7 +81,7 @@ El cursor no refleja las modificaciones realizadas en la base de datos que afect
   
 > [!NOTE]
 > Como el conjunto de resultados de un cursor estático se almacena en una tabla de trabajo de **tempdb**, el tamaño de las filas del conjunto de resultados no puede exceder el tamaño máximo de fila en una tabla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> Para obtener más información, vea las [tablas de trabajo en la Guía de arquitectura de procesamiento de consultas](../relational-databases/query-processing-architecture-guide.md#worktables). Para obtener más información sobre el tamaño máximo de fila, vea [Especificaciones de capacidad máxima para SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine).  
+> Para obtener más información, vea las [tablas de trabajo en la Guía de arquitectura de procesamiento de consultas](../relational-databases/query-processing-architecture-guide.md#worktables). Para obtener más información sobre el tamaño máximo de fila, vea [Especificaciones de capacidad máxima para SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] utiliza el término INSENSITIVE para los cursores estáticos. Algunas API de base de datos los identifican como cursores de instantánea.  
   
@@ -89,7 +89,7 @@ El cursor no refleja las modificaciones realizadas en la base de datos que afect
 La pertenencia y el orden de las filas en un cursor dinámico se fijan al abrir el cursor. Los cursores dinámicos se supervisan mediante un conjunto de identificadores únicos (claves) denominado conjunto de claves. Las claves se generan a partir de un conjunto de columnas que identifican las filas del conjunto de resultados de forma unívoca. El conjunto de claves es el conjunto de valores de clave de todas las filas que han sido calificadas para la instrucción `SELECT` en el momento de abrirse el cursor. El conjunto de claves de un cursor dinámico se genera en **tempdb** al abrir el cursor.  
   
 ### <a name="dynamic"></a>Dinámica  
-Los cursores dinámicos son los opuestos a los cursores estáticos. Reflejan todas las modificaciones realizadas en las filas de su conjunto de resultados al desplazarse por el cursor. Los valores de datos, el orden y la pertenencia de las filas del conjunto de resultados pueden cambiar con cada captura. Todas las instrucciones `UPDATE`, `INSERT` y `DELETE` que realizan todos los usuarios son visibles a través del cursor. Las actualizaciones se muestran inmediatamente si se realizan a través del cursor mediante una función de API, como **SQLSetPos** o la cláusula `WHERE CURRENT OF` de [!INCLUDE[tsql](../includes/tsql-md.md)]. Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman, a menos que el nivel de aislamiento de transacción del cursor sea de lectura no confirmada. Para obtener más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
+Los cursores dinámicos son los opuestos a los cursores estáticos. Reflejan todas las modificaciones realizadas en las filas de su conjunto de resultados al desplazarse por el cursor. Los valores de datos, el orden y la pertenencia de las filas del conjunto de resultados pueden cambiar con cada captura. Todas las instrucciones `UPDATE`, `INSERT` y `DELETE` que realizan todos los usuarios son visibles a través del cursor. Las actualizaciones se muestran inmediatamente si se realizan a través del cursor mediante una función de API, como **SQLSetPos**, o la cláusula [!INCLUDE[tsql](../includes/tsql-md.md)] de `WHERE CURRENT OF`. Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman, a menos que el nivel de aislamiento de transacción del cursor sea de lectura no confirmada. Para obtener más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
  
 > [!NOTE]
 > Los planes de cursor dinámico no utilizan nunca índices espaciales.  

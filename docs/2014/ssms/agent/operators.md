@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d141a2db9a69603701200bc50dcac57ef402968a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064428"
 ---
 # <a name="operators"></a>Operadores
   Los operadores son alias para personas o grupos que pueden recibir una notificación electrónica cuando los trabajos se completan o se activa una alerta. El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la notificación de administradores a través de operadores. Los operadores habilitan las capacidades de notificación y supervisión del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,9 +46,9 @@ ms.locfileid: "68189016"
  La información de contacto de un operador define cómo se va a notificar a dicho operador. Se puede notificar a los operadores mediante correo electrónico, buscapersonas o con el comando **net send** :  
   
 > [!IMPORTANT]  
->  Las opciones Buscapersonas y **net send** se quitarán del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
+>  Las opciones buscapersonas y **net send** se quitarán del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
--   **Notificación mediante correo electrónico**  
+-   **Notificación por correo electrónico**  
   
      La notificación por correo electrónico envía un mensaje de correo electrónico al operador. Para la notificación por correo electrónico debe proporcionar una dirección de correo electrónico al operador.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "68189016"
   
          **CC**:  
   
-         **Para**:  
+         **A**:  
   
     > [!NOTE]  
     >  Si utiliza un sistema de localización alfanumérica de baja capacidad, puede reducir el texto enviado si excluye el texto del error de la notificación del buscapersonas. Un sistema de localización alfanumérica de baja capacidad es, por ejemplo, uno que esté limitado a 64 caracteres por página.  
@@ -118,10 +117,10 @@ ms.locfileid: "68189016"
 |||  
 |-|-|  
 |**Tareas**|**Tema**|  
-|Tareas relacionadas con la creación de un operador|[Crear un operador](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Asignar alertas a un operador](assign-alerts-to-an-operator.md)|  
+|Tareas relacionadas con la creación de un operador|[Create an Operator](create-an-operator.md)<br /><br /> [Designar un operador para notificaciones de error](designate-a-fail-safe-operator.md)|  
+|Tareas relacionadas con la asignación de alertas|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  
   
   

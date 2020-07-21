@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto de modelos de tabulares nuevo (SSAS Tabular) | Microsoft Docs
+title: Crear un proyecto de modelo de tabulares nuevo (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c8f449eb21e53a22a1a8d8f2eaa1aa39cf58c99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939856"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Crear un proyecto de modelos de tabulares nuevo (SSAS tabular)
   En este tema se describe cómo crear un proyecto de modelos tabulares en blanco en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un nuevo proyecto de modelos, puede empezar importando datos de orígenes de datos.  
@@ -28,10 +27,10 @@ ms.locfileid: "66067628"
   
 3.  En **Nombre**, escriba un nombre para el proyecto, después especifique una ubicación y un nombre de solución, y haga clic en **Aceptar**.  
   
- Una vez creado el proyecto, es importante establecer sus propiedades y las del modelo. Para más información, vea [Project Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md) y [Model Properties &#40;SSAS Tabular&#41;](model-properties-ssas-tabular.md).  
+ Una vez creado el proyecto, es importante establecer sus propiedades y las del modelo. Para más información, vea [Propiedades del proyecto &#40;SSAS tabular&#41;](properties-ssas-tabular.md) y [Propiedades del modelo &#40;SSAS tabular&#41;](model-properties-ssas-tabular.md).  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades del proyecto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedades del proyecto &#40;&#41;tabular de SSAS](properties-ssas-tabular.md)   
  [Propiedades del modelo &#40;SSAS tabular&#41;](model-properties-ssas-tabular.md)  
   
   

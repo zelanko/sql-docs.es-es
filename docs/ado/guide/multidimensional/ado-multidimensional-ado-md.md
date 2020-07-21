@@ -1,5 +1,5 @@
 ---
-title: ADO (Multidimensional) (ADO MD) | Microsoft Docs
+title: ADO (multidimensional) (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO (Multidimensional) [ADO MD]
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2b0e7b3ad36067c7ef2ba9cc80cf9abd2f418a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 96857286964b0407d7b1e9b9e436a410f8caf055
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923194"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748114"
 ---
 # <a name="ado-multidimensional-ado-md"></a>ADO (multidimensional) (ADO MD)
 Esta sección contiene el siguiente tema.  

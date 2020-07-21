@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6760ec93961075afa09ef265a80e8beb8434a5e5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044186"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Guardar (cuadro de diálogo, Visual Database Tools)
   Aparece cuando guarda el trabajo en el Diseñador de tablas y ese trabajo afecta a otras tablas. Este cuadro de diálogo permite confirmar las tablas que se van a guardar.  
@@ -33,7 +32,7 @@ ms.locfileid: "63241155"
  **Guardar archivo de texto**  
  Muestra el cuadro de diálogo **Guardar como** , que permite especificar una ubicación para guardar el archivo de texto que contiene la lista de tablas. Este archivo proporciona una lista de las tablas afectadas por los cambios realizados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñar tablas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

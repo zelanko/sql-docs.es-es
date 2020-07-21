@@ -1,5 +1,5 @@
 ---
-title: Usar parámetros de instrucciones | Documentos de Microsoft
+title: Usar parámetros de instrucción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8657c439d35a539892e7f166d8a0a443a5fb759b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049728"
 ---
 # <a name="using-statement-parameters"></a>Usar parámetros de instrucciones
   Un parámetro es una variable en una instrucción SQL que puede habilitar una aplicación ODBC:  
@@ -32,9 +31,9 @@ ms.locfileid: "63200247"
   
 -   Mejorando la interacción del usuario para construir criterios de consulta.  
   
--   Administrar **texto**, **ntext**, y **imagen** datos y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipos de datos C específicos.  
+-   Administrar datos de tipo **Text**, **ntext**e **Image** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de C específicos.  
   
- Por ejemplo, un **partes** tabla tiene columnas denominadas **PartID**, **descripción**, y **precio**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
+ Por ejemplo, una tabla **Parts** tiene columnas **denominadas**el nombre del campo, la **Descripción**y el **precio**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,7 +53,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Enlazar parámetros](using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución de consultas &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ejecutar consultas &#40;&#41;ODBC](executing-queries-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Especificar predicados con valores booleanos en consultas XPath (SQLXML 4.0) | Microsoft Docs
+title: Especificar predicados con valores booleanos en consultas XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,17 @@ helpviewer_keywords:
 - Boolean-valued predicates
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6eef537f60e6e2bccfe5fea77aeb2afe2c1468ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996245"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Especificar los predicados con valores booleanos en las consultas XPath (SQLXML 4.0)
-  En los ejemplos siguientes se muestra cómo se especifican los predicados con valores booleanos en las consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  En los ejemplos siguientes se muestra cómo se especifican los predicados con valores booleanos en las consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66012462"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanValuedPredicatesA.xml) y guárdela en el directorio donde esté guardado SampleSchema1.xml.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66012462"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
      Éste es el resultado:  
   
@@ -88,14 +87,14 @@ ms.locfileid: "66012462"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. Especificar los predicados sucesivos y anidados  
- La consulta siguiente muestra cómo utilizar los predicados sucesivos. La consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que tienen tanto una **SalesPersonID** atributo con un valor de 277 y un **TerritoryID**atributo con un valor de 3:  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Especificar los predicados sucesivos y anidados  
+ La consulta siguiente muestra cómo utilizar los predicados sucesivos. La consulta devuelve todos los **\<Customer>** elementos secundarios del nodo de contexto que tienen un atributo **SalesPersonID** con un valor de 277 y un atributo **TerritoryID** con un valor de 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- La consulta devuelve el  **\<cliente >** los elementos que satisfacen las condiciones especificadas en los predicados.  
+ La consulta devuelve los **\<Customer>** elementos que cumplen las condiciones especificadas en los predicados.  
   
  Se puede especificar un acceso directo al eje `attribute` (@) y, puesto que el eje `child` es el valor predeterminado, puede omitirse en la consulta:  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66012462"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- La consulta XPath siguiente muestra el uso de los predicados anidados. La consulta devuelve todos los  **\<cliente >** elementos secundarios del nodo de contexto que incluyen  **\<orden >** elementos secundarios con al menos una  **\<Orden >** elemento que tiene un **SalesPersonID** valor de atributo de 2.  
+ La consulta XPath siguiente muestra el uso de los predicados anidados. La consulta devuelve todos los **\<Customer>** elementos secundarios del nodo de contexto que incluyen los **\<Order>** elementos secundarios con al menos un **\<Order>** elemento que tiene un valor de atributo **SalesPersonID** de 2.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -111,7 +110,7 @@ ms.locfileid: "66012462"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (nestedSuccessive.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "66012462"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  A continuación figura un resultado parcial:  
   
@@ -166,7 +165,7 @@ ms.locfileid: "66012462"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. Especificar un predicado de nivel superior  
- La consulta siguiente devuelve el  **\<cliente >** nodos de elemento secundarios del nodo de contexto que tengan  **\<orden >** elementos secundarios. La consulta prueba la ruta de acceso de la ubicación como el predicado de nivel superior:  
+ La consulta siguiente devuelve los **\<Customer>** nodos de elemento secundario del nodo de contexto que tienen elementos **\<Order>** secundarios. La consulta prueba la ruta de acceso de la ubicación como el predicado de nivel superior:  
   
 ```  
 /child::Customer[child::Order]  
@@ -180,7 +179,7 @@ ms.locfileid: "66012462"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (TopLevelPredicate.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -200,7 +199,7 @@ ms.locfileid: "66012462"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este es el conjunto de resultados parciales:  
   

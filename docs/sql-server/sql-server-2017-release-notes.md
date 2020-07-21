@@ -1,5 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2017 | Microsoft Docs
+description: En este artículo se describen las limitaciones y los problemas de SQL Server 2017 y se proporcionan vínculos a información relacionada.
 ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136484"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001135"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
-En este artículo se describen las limitaciones y los problemas de SQL Server 2017. Para obtener información relacionada, consulte estos artículos:
+En este artículo se describen las limitaciones y los problemas de SQL Server 2017. Para obtener información relacionada, consulte:
 - [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notas de la versión de SQL Server en Linux](../linux/sql-server-linux-release-notes.md)
 - [Actualizaciones acumulativas de SQL Server 2017](https://aka.ms/sql2017cu) para más información sobre la versión de la última actualización acumulativa (CU)
@@ -149,7 +150,7 @@ No hay notas de la versión de SQL Server en Windows relacionadas con esta versi
 
 ## <a name="more-information"></a>Más información
 - [notas de la versión de SQL Server Reporting Services](../reporting-services/release-notes-reporting-services.md).
-- [Problemas conocidos de Machine Learning Services](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
+- [Problemas conocidos de Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 - [Vínculos e información del Centro de actualizaciones de SQL Server sobre todas las versiones compatibles](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

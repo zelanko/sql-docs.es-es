@@ -1,5 +1,5 @@
 ---
-title: Vistas de catálogo de datos espaciales | Microsoft Docs
+title: Vistas Data Catalog espaciales | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: c40bc75a-73f3-4d3f-82e1-4c023dfe958f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b6558e944df0107eb13abb4658ebefe048af33da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56798156950b4d616ee1df3ceab5ccf7306567c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720394"
 ---
 # <a name="spatial-data-catalog-views"></a>Vistas de catálogo de datos espaciales
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se describen las vistas de catálogo que proporcionan información sobre los datos espaciales.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68018254"
  [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
  Representa la información del índice principal de los índices espaciales.  
   
- [Sys.spatial_reference_systems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
+ [Sys. spatial_reference_systems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md)  
  Enumera los sistemas de referencia espacial (SRID) admitidos.  
   
   

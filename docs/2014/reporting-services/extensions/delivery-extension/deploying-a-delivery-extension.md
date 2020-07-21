@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164416"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
@@ -33,7 +33,7 @@ ms.locfileid: "63164416"
   
  En la tabla siguiente se describen los atributos para el elemento `Extension` correspondiente a las extensiones de entrega.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`Name`|Un nombre único para la extensión (por ejemplo, "Correo electrónico del servidor de informes", para la extensión de entrega por correo electrónico, o "Recurso compartido de archivos del servidor de informes", para la extensión de entrega en recursos compartidos de archivos). La longitud máxima para el atributo `Name` es de 255 caracteres. El nombre debe ser único entre todas las entradas en el elemento `Extension` del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |`Type`|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
@@ -46,12 +46,12 @@ ms.locfileid: "63164416"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>Para implementar un ensamblado de extensión de entrega en un servidor de informes  
   
-1.  Copie el ensamblado desde la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de entrega. La ubicación predeterminada del directorio de bin del servidor de informes es %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting.  
+1.  Copie el ensamblado desde la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de entrega. La ubicación predeterminada del directorio bin del servidor de informes es%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<NombreDeInstancia> \reporting Services\ReportServer\bin.  
   
     > [!IMPORTANT]  
     >  Si está intentando sobrescribir un ensamblado de extensión de entrega existente, primero debe detener el servicio del servidor de informes antes de copiar el ensamblado actualizado. Reinicie el servicio después de que el ensamblado termine la copia.  
   
-2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer.config se encuentra en el %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting Services\ReportServer. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de entrega. Puede abrir el archivo de configuración con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un simple editor de texto, como el Bloc de notas.  
+2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer. config se encuentra en la carpeta% archivos de programa%\Microsoft SQL Server \ MSRS10_50. \<NombreDeInstancia> directorio \reporting Services\ReportServer Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de entrega. Puede abrir el archivo de configuración con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto simple, como el Bloc de notas.  
   
 3.  Busque el elemento `Delivery` en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una extensión de entrega creada recientemente:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63164416"
   
      El valor de `Name` es el nombre único de la extensión de entrega. El valor de `Type` es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la clase que implementa la interfaz <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de entrega están visibles. Para ocultar una extensión de las interfaces de usuario, como el Administrador de informes, agregue un atributo `Visible` al elemento `Extension` y establézcalo en `false`.  
   
-5.  Finalmente, agregue un grupo de código para el ensamblado personalizado que conceda el permiso  `FullTrust` para la extensión de entrega. Para ello, agregue el grupo de código al archivo rssrvpolicy.config que se encuentra de forma predeterminada en %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting. El grupo de código podría tener la apariencia siguiente:  
+5.  Finalmente, agregue un grupo de código para el ensamblado personalizado que conceda el permiso  `FullTrust` para la extensión de entrega. Para ello, agregue el grupo de código al archivo archivo rssrvpolicy. config que se encuentra de forma predeterminada en%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<NombreDeInstancia> \reporting Services\ReportServer. El grupo de código podría tener la apariencia siguiente:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -93,9 +93,9 @@ ms.locfileid: "63164416"
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-report-manager"></a>Para implementar un ensamblado de extensión de entrega en el Administrador de informes  
   
-1.  Copie el ensamblado desde la ubicación de almacenamiento provisional al directorio bin del Administrador de informes. La ubicación predeterminada del directorio bin de administrador de informes es %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager\bin.  
+1.  Copie el ensamblado desde la ubicación de almacenamiento provisional al directorio bin del Administrador de informes. La ubicación predeterminada del directorio Administrador de informes bin es%ProgramFiles%\Microsoft SQL Server \ MSRS10_50. \<NombreDeInstancia> \reporting Services\ReportManager\bin.  
   
-2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer.config se encuentra en el %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \<NombreDeInstancia > \Reporting Services\ReportServer. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de entrega. Puede abrir el archivo de configuración con Visual Studio .NET o un editor de texto simple, como el Bloc de notas.  
+2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportServer.config. El archivo RSReportServer. config se encuentra en la carpeta% archivos de programa%\Microsoft SQL Server \ MSRS10_50. \<NombreDeInstancia> directorio \reporting Services\ReportServer Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de entrega. Puede abrir el archivo de configuración con Visual Studio .NET o con un procesador de texto sencillo como el Bloc de notas.  
   
 3.  Busque el elemento `DeliveryUI` en el archivo RSReportServer.config. En la ubicación siguiente se debería realizar una extensión de entrega creada recientemente:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63164416"
     </Extensions>  
     ```  
   
-4.  Agregue una entrada para la extensión de entrega. La entrada debería incluir un `Extension` elemento con los valores para `Name` y `Type` y podría parecerse a lo siguiente:  
+4.  Agregue una entrada para la extensión de entrega. La entrada debe incluir un `Extension` elemento con valores para `Name` y `Type` y podría ser similar al siguiente:  
   
     ```  
     <Extension Name="My Delivery Extension Name" Type="CompanyName.ExtensionName.MyDeliveryUIExtensionClass, AssemblyName" />  
@@ -118,7 +118,7 @@ ms.locfileid: "63164416"
     > [!IMPORTANT]  
     >  El valor del atributo `Name` debe ser idéntico para el servidor de informes y para las entradas de los archivos de configuración del Administrador de informes. Si no son idénticos, la configuración del servidor no es válida.  
   
-     Finalmente, agregue un grupo de código para el ensamblado personalizado que conceda el permiso  `FullTrust` para la extensión de entrega. Para ello, agregue el grupo de código al archivo RSmgrpolicy.config que se encuentra de forma predeterminada en C:\Program Files\Microsoft SQL Server\MSRS10_50. \<InstanceName > \Reporting Services\ReportManager. El grupo de código podría tener la apariencia siguiente:  
+     Finalmente, agregue un grupo de código para el ensamblado personalizado que conceda el permiso  `FullTrust` para la extensión de entrega. Para ello, agregue el grupo de código al archivo RSmgrpolicy. config que se encuentra de forma predeterminada en C:\Archivos de Programa\microsoft SQL Server \ MSRS10_50. \<NombreDeInstancia> \reporting Services\ReportManager. El grupo de código podría tener la apariencia siguiente:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -133,12 +133,12 @@ ms.locfileid: "63164416"
     </CodeGroup>  
     ```  
   
-     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRS](../../../includes/ssrs.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
+     La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de entrega. Para obtener más información sobre la seguridad de [!INCLUDE[ssRS](../../../includes/ssrs.md)]acceso del código en, vea [&#40;de desarrollo seguro Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
- Puede comprobar si la extensión de entrega se implementó correctamente en el servidor de informes utilizando el método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servicio web. También puede abrir el Administrador de informes y comprobar que la extensión está incluida en la lista de extensiones de entrega disponibles para una suscripción. Para obtener más información sobre el Administrador de informes y suscripciones, vea [suscripciones y entrega &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
+ Puede comprobar si la extensión de entrega se implementó correctamente en el servidor de informes utilizando el método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> del servicio web. También puede abrir el Administrador de informes y comprobar que la extensión está incluida en la lista de extensiones de entrega disponibles para una suscripción. Para obtener más información sobre Administrador de informes y suscripciones, consulte [suscripciones y entrega &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de entrega](implementing-a-delivery-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  
   

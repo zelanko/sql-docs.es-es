@@ -1,6 +1,8 @@
 ---
-title: Subconsultas (Azure SQL Data Warehouse, Almacenamiento de datos paralelos) | Microsoft Docs
-ms.custom: ''
+title: Subconsultas
+description: Subconsultas en Azure SQL Data Warehouse y Almacenamiento de datos paralelos
+ms.custom: seo-lt-2019
+titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,15 +12,15 @@ ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 675dcd165ec164c9149486d2abae8d4b910df17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c4ef78ed05046064dd00f534bf76b2adae069f1e
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948264"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196469"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>Subconsultas (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   En este tema se ofrecen ejemplos de uso de subconsultas en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
@@ -28,9 +30,9 @@ ms.locfileid: "67948264"
   
 -   [Conceptos básicos](#Basics)  
   
--   [Ejemplos: SQL Data Warehouse y almacenamiento de datos paralelos](#Examples)  
+-   [Ejemplos: SQL Data Warehouse y Almacenamiento de datos paralelos](#Examples)  
   
-##  <a name="Basics"></a> Conceptos básicos  
+##  <a name="basics"></a><a name="Basics"></a> Conceptos básicos  
  Subconsulta  
  Una subconsulta es una consulta anidada en una instrucción SELECT, INSERT, UPDATE o DELETE, o bien en otra subconsulta. Eso también se denomina consulta interna o selección interna.  
   
@@ -40,7 +42,7 @@ ms.locfileid: "67948264"
  Subconsulta correlacionada  
  Una subconsulta que hace referencia a una tabla en la consulta externa.  
   
-##  <a name="Examples"></a> Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+##  <a name="examples-sssdw-and-sspdw"></a><a name="Examples"></a> Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En esta sección se proporcionan ejemplos de consultas admitidas en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-top-and-order-by-in-a-subquery"></a>A. TOP y ORDER BY en una subconsulta  
@@ -139,7 +141,7 @@ WHERE EXISTS
 ORDER BY EnglishProductName;  
 ```  
   
- o bien  
+ Or  
   
 ```  
 SELECT DISTINCT EnglishProductName  

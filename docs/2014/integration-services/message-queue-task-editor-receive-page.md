@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057673"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424592"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -28,7 +27,7 @@ ms.locfileid: "66057673"
   
 ## <a name="options"></a>Opciones  
  **RemoveFromMessageQueue**  
- Indique si desea eliminar el mensaje de la cola una vez recibido. De forma predeterminada, este valor se establece en `False`.  
+ Indique si desea eliminar el mensaje de la cola una vez recibido. De forma predeterminada, este valor está establecido en `False`.  
   
  **ErrorIfMessageTimeOut**  
  Indique si desea mostrar un mensaje de error si se produce un error en la tarea al exceder el tiempo de espera. De manera predeterminada, es `False`.  
@@ -39,7 +38,7 @@ ms.locfileid: "66057673"
  **MessageType**  
  Seleccione el tipo de mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Mensaje de archivo de datos**|El mensaje se almacena en un archivo. Al seleccionar este valor se muestra la opción dinámica **DataFileMessage**.|  
 |**Mensaje de variable**|El mensaje se almacena en una variable. Al seleccionar este valor se muestra la opción dinámica **VariableMessage**.|  
@@ -58,7 +57,7 @@ ms.locfileid: "66057673"
  **Filter**  
  Indique si desea aplicar un filtro al mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
@@ -79,13 +78,13 @@ ms.locfileid: "66057673"
  **Filter**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…** > y configure una nueva variable.  
+ Escriba el nombre de la variable o haga clic en \<**New variable...**> y, a continuación, configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66057673"
  **Comparar**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**None**|Los mensajes no se comparan.|  
 |**Coincidencia exacta**|Los mensajes deben coincidir exactamente con la cadena de la opción **CompareString** .|  
@@ -119,7 +118,7 @@ ms.locfileid: "66057673"
  **Comparar**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**None**|Los mensajes no se comparan.|  
 |**Coincidencia exacta**|Los mensajes deben coincidir exactamente con la cadena de la opción **CompareString** .|  
@@ -130,15 +129,15 @@ ms.locfileid: "66057673"
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…** > y configure una nueva variable.  
+ Escriba el nombre de la variable que contendrá el mensaje recibido o haga clic \<**New variable...**> y, a continuación, configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Cola de mensajes &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea Cola de mensajes &#40;página Enviar&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [Editor de la tarea cola de mensajes &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea cola de mensajes &#40;página envío&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
+ [Tarea Cola de mensajes](control-flow/message-queue-task.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Configurar registros de errores de SQL Server | Microsoft Docs
+description: Obtenga información sobre el reciclaje de registros de errores. Vea cómo establecer un tamaño máximo de archivo de registro y cómo establecer el número de archivos de registro anteriores que SQL Server archiva y del que hace una copia de seguridad.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.configurelogs.configureerrorlogs.f1
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 060b3828c772a030ab095ae1bea857dc8eaa3b5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651375"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Servicios SCM - Configurar registros de errores de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo ver o modificar la forma en que se reciclan los registros de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
 ## <a name="to-open-the-configure-sql-server-error-logs-dialog-box"></a>Para abrir el cuadro de diálogo Configurar registros de errores de SQL Server  
@@ -30,7 +31,7 @@ ms.locfileid: "71688327"
 
 2. En el cuadro de diálogo **Configurar registros de errores de SQL Server** , elija una de las siguientes opciones.
 
-    A. Número de archivos de registro
+    a. Número de archivos de registro
 
       **Limitar el número de archivos de registro de error antes de reciclarlos**
 
@@ -38,9 +39,9 @@ ms.locfileid: "71688327"
   
       **Número máximo de archivos de registro de errores**
 
-      Especifica el número máximo de archivos de registro de errores que se pueden crear antes de reciclarse. El valor predeterminado es 6: el actual más los 5 registros de copia de seguridad anteriores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva antes de reciclarlos.
+      Especifica el número máximo de archivos de registro de errores archivados que se pueden crear antes de reciclarse. El valor predeterminado es 6, sin incluir el actual. Este valor determina el número de registros de copia de seguridad anteriores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva antes de reciclarlos.
 
-    B. Tamaño de archivo de registro
+    b. Tamaño de archivo de registro
 
       **Tamaño máximo del archivo de registro de errores en KB**
 

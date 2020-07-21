@@ -1,5 +1,5 @@
 ---
-title: Búsqueda de texto completo y funciones de búsqueda semántica (Transact-SQL) | Microsoft Docs
+title: Funciones de búsqueda de texto completo y de búsqueda semántica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdf480d27a0cc0a1b1b646a5c902d7994ad88b5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734373"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>Funciones de búsqueda de texto completo y de búsqueda semántica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta sección se describen las funciones del sistema relacionadas con la búsqueda semántica y de texto completo.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68042754"
  Devuelve una tabla con cero, una o más filas para las columnas que contienen coincidencias exactas o aproximadas (menos precisas) de palabras o frases únicas, palabras próximas a otra dada (dentro de una distancia determinada) o coincidencias ponderadas.  
   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- Devuelve una tabla de cero, uno o más filas para las columnas que contienen valores que coinciden con el significado y no solo literalmente, del texto especificado *cadena_freetext*.  
+ Devuelve una tabla de cero, una o más filas para las columnas que contienen valores que coinciden con el significado, y no solo las palabras exactas, del texto del *freetext_string*especificado.  
   
 ## <a name="semantic-search-functions"></a>Funciones de búsqueda semántica  
  [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001495"
 ---
 # <a name="members-string-mdx"></a>Members (String) (MDX)
@@ -31,18 +31,18 @@ Members(Member_Name)
  *Member_Name*  
  Expresión de cadena válida que especifica un nombre de miembro.  
   
-## <a name="remarks"></a>Comentarios  
- El **Members (cadena)** función devuelve un único miembro cuyo nombre se especifica. Normalmente, se usa el **Members (cadena)** función con funciones externas, que proporciona a los **Members (cadena)** funcionar una cadena que identifica un miembro, y el **Members (cadena)**  función devuelve el valor de este miembro especificado.  
+## <a name="remarks"></a>Observaciones  
+ La función **Members (String)** devuelve un único miembro cuyo nombre se especifica. Normalmente, se usa la función **Members (String)** con funciones externas, lo que proporciona a la función **Members (String)** una cadena que identifica un miembro, y la función **Members (String)** devuelve el valor de este miembro especificado.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el **Members (cadena)** función para convertir la cadena especificada en un miembro válido y, a continuación, devuelve la medida predeterminada para el miembro especificado en la cadena. La cadena se especifica entre comillas simples. La medida predeterminada es la medida Reseller Sales Amount.  
+ En el ejemplo siguiente se usa la función **Members (String)** para convertir la cadena especificada en un miembro válido y, a continuación, se devuelve la medida predeterminada para el miembro especificado en la cadena. La cadena se especifica entre comillas simples. La medida predeterminada es la medida Reseller Sales Amount.  
   
 ```  
 SELECT Members ('[Geography].[Geography].[Country].&[United States] ') ON 0  
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

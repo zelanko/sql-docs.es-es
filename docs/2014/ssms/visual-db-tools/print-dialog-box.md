@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c55300150e64060cc06594fc4b8847fdb5132151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001084"
 ---
 # <a name="print-dialog-box"></a>Cuadro de diálogo Imprimir
   Puede especificar cómo desea imprimir un documento seleccionando las opciones del cuadro de diálogo **Imprimir** .  
   
 ## <a name="printer"></a>Impresora  
- **Name**  
+ **Nombre**  
  Especifica la impresora. Seleccione una impresora de la lista. La impresora que seleccione se convierte en la impresora predeterminada hasta que cierre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o seleccione una impresora diferente. La información que aparece en los campos debajo de la lista se refiere a la impresora seleccionada.  
   
  **Estado**  
@@ -35,17 +34,17 @@ ms.locfileid: "63313020"
  **Where**  
  Identifica la ubicación de la impresora seleccionada y el puerto de impresora que utiliza.  
   
- **Comentario**  
+ **Comment**  
  Muestra cualquier información adicional sobre la impresora seleccionada.  
   
  **Propiedades**  
- Haga clic para abrir el cuadro de diálogo \<*propiedades de nombre de impresora*>.  
+ Haga clic para abrir el \<*printer name properties*> cuadro de diálogo.  
   
  **Imprimir en archivo**  
  Imprime el documento en un archivo en lugar de en una impresora.  
   
 ## <a name="page-range"></a>Intervalo de páginas  
- **Todos**  
+ **Todo**  
  Imprime todo el documento.  
   
  **Selección**  

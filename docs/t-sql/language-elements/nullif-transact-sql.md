@@ -21,15 +21,15 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8876fe591eadb0946b3f54cdf52644b39c040089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 534c9fb569f8098ed4a9cf11bb3ac002f62c555d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121977"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012175"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve un valor NULL si las dos expresiones especificadas son iguales. Por ejemplo, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` devuelve NULL para la primera columna (4 y 4) porque los dos valores de entrada son iguales. La segunda columna devuelve el primer valor (5) porque los dos valores de entrada son diferentes. 
   
@@ -45,12 +45,12 @@ NULLIF ( expression , expression )
  *expression*  
  Cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) escalar válida.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el mismo tipo que el primer parámetro *expression*.  
   
  NULLIF devuelve el primer parámetro *expression* si las dos expresiones no son iguales. Si las expresiones son iguales, NULLIF devuelve un valor NULL del tipo del primer parámetro *expression*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  NULLIF equivale a una expresión CASE buscada en la que las dos expresiones son iguales y la expresión resultante es NULL.  
   
  Se recomienda no usar funciones dependientes del tiempo, como RAND(), dentro de una función NULLIF. La función podría evaluarse dos veces y las dos invocaciones podrían devolver resultados diferentes.  
@@ -63,9 +63,9 @@ NULLIF ( expression , expression )
 ```sql  
 CREATE TABLE dbo.budgets  
 (  
-   dept            tinyint   IDENTITY,  
-   current_year      decimal   NULL,  
-   previous_year   decimal   NULL  
+   dept            TINYINT   IDENTITY,  
+   current_year    DECIMAL   NULL,  
+   previous_year   DECIMAL   NULL  
 );  
 INSERT budgets VALUES(100000, 150000);  
 INSERT budgets VALUES(NULL, 300000);  
@@ -96,7 +96,7 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, MakeFlag, FinishedGoodsFlag,   
-   NULLIF(MakeFlag,FinishedGoodsFlag)AS 'Null if Equal'  
+   NULLIF(MakeFlag,FinishedGoodsFlag) AS 'Null if Equal'  
 FROM Production.Product  
 WHERE ProductID < 10;  
 GO  
@@ -116,9 +116,9 @@ GO
   
 ```sql  
 CREATE TABLE budgets (  
-   dept           tinyint,  
-   current_year   decimal(10,2),  
-   previous_year  decimal(10,2)  
+   dept           TINYINT,  
+   current_year   DECIMAL(10,2),  
+   previous_year  DECIMAL(10,2)  
 );  
   
 INSERT INTO budgets VALUES(1, 100000, 150000);  
@@ -146,8 +146,8 @@ FROM budgets;
   
 ## <a name="see-also"></a>Consulte también  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  (decimal y numeric [Transact-SQL])  
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

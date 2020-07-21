@@ -12,20 +12,19 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 3b2c5292b4a00a3ad81e53fdbc603bb584130613
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997358"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
   El cifrado es una de las medidas defensivas con que cuenta cualquier administrador que desee proteger una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Los algoritmos de cifrado definen transformaciones de datos que los usuarios no autorizados no pueden revertir con facilidad. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los administradores y los desarrolladores de software elegir entre varios algoritmos, incluidos DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits y AES de 256 bits.  
+ Los algoritmos de cifrado definen las transformaciones de datos que los usuarios no autorizados no pueden revertir fácilmente. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los administradores y los desarrolladores de software elegir entre varios algoritmos, incluidos DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits y AES de 256 bits.  
   
  Ningún algoritmo único resulta idóneo para todas las situaciones. Además, ofrecer información detallada sobre las ventajas de cada uno queda fuera del ámbito de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, se aplican los siguientes principios generales:  
   
@@ -68,7 +67,7 @@ ms.locfileid: "63011386"
 |Cifrar los archivos de base de datos mediante el cifrado de datos transparente.|[Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md)|  
 |Cómo cifrar una columna de una tabla.|[Cifrar una columna de datos](encrypt-a-column-of-data.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cifrado de SQL Server](sql-server-encryption.md)   
  [Jerarquía de cifrado](encryption-hierarchy.md)  
   

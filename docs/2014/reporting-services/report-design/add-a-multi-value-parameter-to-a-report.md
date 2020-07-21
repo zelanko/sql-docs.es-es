@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106812"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Agregar un parámetro de varios valores a un informe
@@ -22,7 +22,7 @@ ms.locfileid: "66106812"
   
  Puede pasar varios valores de parámetro al informe dentro de la dirección URL del informe. Para ver un ejemplo de dirección URL que incluye un parámetro de varios valores, vea [Pasar un parámetro de informe en una dirección URL](../pass-a-report-parameter-within-a-url.md).  
   
- Para obtener información sobre cómo pasar varios valores de parámetro a un procedimiento almacenado, vea [Trabajar con parámetros de selección múltiple en informes de SSRS](https://go.microsoft.com/fwlink/?LinkId=321529) en mssqltips.com.  
+ Para obtener información sobre cómo pasar varios valores de parámetro a un procedimiento almacenado, vea [Working With Multi-Select Parameters for SSRS Reports](https://go.microsoft.com/fwlink/?LinkId=321529) (Trabajar con parámetros de selección múltiple en informes de SSRS) en mssqltips.com.  
   
 ### <a name="to-add-a-multi-value-parameter"></a>Para agregar un parámetro de varios valores  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66106812"
     ```  
   
     > [!IMPORTANT]  
-    >  Si no incluye los paréntesis alrededor de la variable como se indicó anteriormente, no se puede representar el informe y se muestra el error "debe declarar la variable escalar".  
+    >  Si no incluye los paréntesis alrededor de la variable como se muestra arriba, el informe no se representa y se muestra el error "debe declarar la variable escalar".  
   
      Se crea automáticamente un parámetro de conjunto de datos para un conjunto de datos incrustado o compartido para la variable de consulta. Se crea automáticamente un parámetro de informe para el parámetro de conjunto de datos.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66106812"
     ```  
   
     > [!IMPORTANT]  
-    >  Si no incluye los paréntesis alrededor de la variable como se indicó anteriormente, no se puede representar el informe y se muestra el error "debe declarar la variable escalar".  
+    >  Si no incluye los paréntesis alrededor de la variable como se muestra arriba, el informe no se representa y se muestra el error "debe declarar la variable escalar".  
   
      Se crea automáticamente un parámetro de conjunto de datos para un conjunto de datos incrustado o compartido para la variable de consulta. Se crea automáticamente un parámetro de informe para el parámetro de conjunto de datos.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66106812"
   
      Para más información, vea [Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

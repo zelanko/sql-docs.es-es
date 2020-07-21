@@ -1,5 +1,5 @@
 ---
-title: Configurar los puntos de comprobación para reiniciar un paquete con error | Microsoft Docs
+title: Configurar puntos de comprobación para reiniciar un paquete con errores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3345ff33c620b1e6fee62b5adba5c2695c47061
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060768"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438582"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar puntos de comprobación para reiniciar un paquete con error
   Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configuran para que se reinicien desde un punto de error, en lugar de volver a ejecutar todo el paquete, estableciendo las propiedades que afectan a los puntos de comprobación.  
@@ -28,13 +27,13 @@ ms.locfileid: "66060768"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea configurar.  
   
-2.  En el **Explorador de soluciones**, haga doble clic en el paquete para abrirlo.  
+2.  En **Explorador de soluciones**, haga doble clic en el paquete para abrirlo.  
   
 3.  Haga clic en la pestaña **Flujo de control** .  
   
 4.  Haga clic con el botón derecho en cualquier parte del fondo de la superficie de diseño de flujo de control y haga clic en **Propiedades**.  
   
-5.  Establezca la propiedad SaveCheckpoints en `True`.  
+5.  Establezca la propiedad SaveCheckpoints en `True` .  
   
 6.  Escriba el nombre del archivo de punto de comprobación en la propiedad CheckpointFileName.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66060768"
   
     -   Establezca la propiedad FailPackageOnFailure en `True` para cada tarea y contenedor seleccionados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reiniciar paquetes de usando puntos de comprobación](packages/restart-packages-by-using-checkpoints.md)  
   
   

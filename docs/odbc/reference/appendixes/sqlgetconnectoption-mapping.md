@@ -11,44 +11,44 @@ helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d0533a0ee616d4097793eca46c7d45a269142737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8d2905bd6793d032e485183c8f553cef2cdefda3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086403"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302006"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>Asignación de SQLGetConnectOption
-Cuando una aplicación llama **SQLGetConnectOption** a través de un ODBC *3.x* controlador, la llamada a  
+Cuando una aplicación llama a **SQLGetConnectOption** a través de un controlador ODBC *3. x* , la llamada a  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
 ```  
   
- se asigna como sigue:  
+ se asigna de la siguiente manera:  
   
--   Si *fOption* indica una opción de conexión definida por ODBC que devuelve una cadena, las llamadas del Administrador de controladores  
+-   Si *fOption* indica una opción de conexión definida por ODBC que devuelve una cadena, el administrador de controladores llama a  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   Si *fOption* indica una opción de conexión definida por ODBC que devuelve un valor entero de 32 bits, las llamadas del Administrador de controladores  
+-   Si *fOption* indica una opción de conexión definida por ODBC que devuelve un valor entero de 32 bits, el administrador de controladores llama a  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   Si *fOption* indica una opción de instrucción definidos por el controlador, el Administrador de controladores de llamadas  
+-   Si *fOption* indica una opción de instrucción definida por el controlador, el administrador de controladores llama a  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- En los tres casos anteriores, el *ConnectionHandle* argumento está establecido en el valor de *hdbc*, *atributo* argumento está establecido en el valor de *fOption* y el *ValuePtr* argumento está establecido en el mismo valor que *pvParam*.  
+ En los tres casos anteriores, el argumento *ConnectionHandle* se establece en el valor de *hdbc*, el argumento del *atributo* se establece en el valor de *fOption*y el argumento *ValuePtr* se establece en el mismo valor que *pvParam*.  
   
- Para las opciones de conexión de cadena definida por ODBC, el Administrador de controladores establece el *BufferLength* argumento en la llamada a **SQLGetConnectAttr** a la longitud máxima predefinida (SQL_MAX_OPTION_STRING_LENGTH); para una opción de conexión que no son cadenas, *BufferLength* se establece en 0.  
+ En el caso de las opciones de conexión de cadenas definidas por ODBC, el administrador de controladores establece el argumento *BufferLength* en la llamada a **SQLGetConnectAttr** en la longitud máxima predefinida (SQL_MAX_OPTION_STRING_LENGTH); en el caso de una opción de conexión que no sea de cadena, *BufferLength* se establece en 0.  
   
- Para un ODBC *3.x* controlador, el Administrador de controladores ya no comprueba si *opción* es entre SQL_CONN_OPT_MIN y SQL_CONN_OPT_MAX, o es mayor que SQL_CONNECT_OPT_DRVR_START. El controlador debe comprobar la validez de los valores de opción.
+ Para un controlador ODBC *3. x* , el administrador de controladores ya no comprueba si la *opción* está entre SQL_CONN_OPT_MIN y SQL_CONN_OPT_MAX, o es mayor que SQL_CONNECT_OPT_DRVR_START. El controlador debe comprobar la validez de los valores de opción.

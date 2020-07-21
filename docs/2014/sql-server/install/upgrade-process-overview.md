@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb4bfb2073427d0f48b3d4a7ac7b7ab496299030
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc4da63dd1baba8ffd599dc751744a3e0d9377ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058895"
 ---
 # <a name="upgrade-process-overview"></a>Información general sobre el proceso de actualización
   En este tema se proporciona información sobre el procedimiento recomendado para el Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y un resumen del proceso recomendado para actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="upgrade-process"></a>Proceso de actualización  
- Los servidores que estén ejecutando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se pueden actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mientras que algunos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes pueden actualizarse in situ, otros usuarios se deben migrar y todavía otros han sido reemplazados por los nuevos componentes. Por ejemplo, a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) reemplaza Data Transformation Services (DTS) y DTS ya no se admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al formular el plan de actualización, es posible que sea necesario planear la actualización de los paquetes DTS a los paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+ Los servidores que estén ejecutando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se pueden actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Mientras que algunos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes se pueden actualizar en su lugar, otros se deben migrar y otros se han sustituido por componentes nuevos. Por ejemplo, a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) reemplaza Data Transformation Services (DTS) y DTS ya no se admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al formular el plan de actualización, es posible que sea necesario planear la actualización de los paquetes DTS a los paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
  El Asesor de actualizaciones permite evaluar instalaciones, componentes y archivos relacionados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actuales para identificar problemas conocidos que aparecerán durante y después de la migración o actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Algunos de estos problemas conocidos bloquean la actualización de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. En el informe del Asesor de actualizaciones, estos problemas se identifican como Bloqueos de la actualización. Si no ha solucionado los bloqueos de la actualización antes de ejecutar el programa de instalación, el programa de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sale y recomienda actualizar el Asesor de actualizaciones para identificar los problemas específicos que impiden la actualización.  
   
@@ -52,8 +51,8 @@ ms.locfileid: "66091520"
   
 9. Resuelva cualquier problema de migración o posterior a la actualización.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecute el Asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejecutar el asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
  [Uso de informes](../../../2014/sql-server/install/using-reports.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

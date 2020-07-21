@@ -1,24 +1,30 @@
 ---
-title: Virtualización de datos externos en SQL Server 2019 | Microsoft Docs
+title: Virtualizar datos externos
 description: En esta página se detallan los pasos para usar al Asistente para crear tablas externas para orígenes de datos relacionales
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 719584bda1a289694c6e5ff7483e320073323be4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710595"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588100"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Uso del Asistente para tablas externas con orígenes de datos relacionales
 
 Uno de los escenarios clave de SQL Server 2019 es la posibilidad de virtualizar datos. Este proceso permite que los datos permanezcan en su ubicación original. Puede *virtualizar* los datos de una instancia de SQL Server para que se puedan consultar como cualquier otra tabla de SQL Server. Este proceso minimiza la necesidad de procesos ETL. Este proceso es posible gracias a los conectores de PolyBase. Para obtener más información sobre la virtualización de datos, vea [Introducción a PolyBase](polybase-guide.md).
+
+En este vídeo se proporciona una introducción a la virtualización de datos:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>Iniciar el Asistente para tablas externas
 
@@ -58,7 +64,7 @@ El siguiente paso es configurar una credencial. Escriba un nombre para la creden
 
 En la siguiente página, seleccione las tablas para las que quiere crear vistas externas. Al seleccionar bases de datos principales, también se incluyen las tablas secundarias. Después de seleccionar las tablas, aparece una tabla de asignación a la derecha. En ella puede realizar cambios en los tipos. También puede cambiar el nombre de la propia tabla externa seleccionada.
 
-![Credenciales del origen de datos externo](media/data-virtualization/data-table-mapping.png)
+![Credenciales del origen de datos externo](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Para cambiar la vista de asignación, haga doble clic en otra tabla seleccionada.

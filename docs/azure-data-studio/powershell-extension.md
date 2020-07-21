@@ -1,22 +1,21 @@
 ---
 title: Extensión de PowerShell
-titleSuffix: Azure Data Studio
 description: Instalar y usar PowerShell para Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "65105949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637739"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Compatibilidad del Editor de PowerShell para Azure Data Studio
 
@@ -24,7 +23,6 @@ Esta extensión proporciona compatibilidad avanzada del Editor de PowerShell con
 Ahora, puede escribir y depurar scripts de PowerShell mediante la excelente interfaz tipo IDE que proporciona Azure Data Studio.
 
 ![Extensión de PowerShell](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>Características
 
@@ -38,7 +36,6 @@ Ahora, puede escribir y depurar scripts de PowerShell mediante la excelente inte
 - Ejecutar la selección de código de PowerShell mediante <kbd>F8</kbd>
 - Iniciar la ayuda en línea para el símbolo debajo del cursor con <kbd>Ctrl</kbd>+<kbd>F1</kbd>
 - Compatibilidad básica de la consola interactiva.
-
 
 ## <a name="installing-the-extension"></a>Instalar la extensión
 
@@ -64,7 +61,7 @@ Vea las [preguntas más frecuentes](https://github.com/PowerShell/vscode-powersh
 Si ejecuta Azure Data Studio en macOS o Linux, puede que también necesite instalar PowerShell Core.
 
 PowerShell Core es un proyecto de código abierto hospedado en [GitHub](https://github.com/powershell/powershell).
-Para obtener más información sobre cómo instalar PowerShell Core en las plataformas de macOS o Linux, vea los artículos siguientes:
+Para obtener más información sobre cómo instalar PowerShell Core en las plataformas macOS o Linux, vea los artículos siguientes:
 
 - [Instalación de PowerShell Core en Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Instalación de PowerShell Core en macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
@@ -147,7 +144,7 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-El módulo `SqlServer` contiene un proveedor denominado `SQLRegistration` que le permite acceder mediante programación a los siguientes tipos de conexiones de SQL Server guardadas:
+El módulo `SqlServer` contiene un proveedor denominado `SQLRegistration` que permite acceder mediante programación a los siguientes tipos de conexiones de SQL Server guardadas:
 
 + Servidor de motor de base de datos (servidores registrados)
 + Servidor de administración central (CMS)
@@ -252,19 +249,18 @@ Para obtener más información sobre cómo colaborar en el desarrollo de esta ex
 ## <a name="maintainers"></a>Mantenedores
 
 - [Keith Hill](https://github.com/rkeithhill) - [@r_keith_hill](http://twitter.com/r_keith_hill)
-- [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
+- Tyler Leonhardt - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
 - [Rob Holt](https://github.com/rjmholt)
 
 ## <a name="license"></a>Licencia
 
 Esta extensión se [concederá bajo la licencia MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Para obtener más información sobre los archivos binarios de terceros que incluimos con las versiones de este proyecto, vea el archivo de [avisos de terceros](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Código de conducta][conduct-md]
+## <a name="code-of-conduct"></a>Código de conducta
 
 El proyecto ha adoptado el [Código de conducta de código abierto de Microsoft][conduct-code].
 Para obtener más información, vea las [Preguntas más frecuentes sobre el código de conducta][conduct-FAQ], o póngase en contacto con [opencode@microsoft.com][conduct-email] si tiene preguntas o comentarios.
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

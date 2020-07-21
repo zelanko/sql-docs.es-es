@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e8d13678bd1d54a61217b87136fc09e17206e99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062579"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalación de clúster de conmutación por error de SQL Server
   Para instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear y configurar una instancia en clúster de conmutación por error mediante la ejecución del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -41,7 +40,7 @@ ms.locfileid: "63067651"
   
 3.  Especificar varias direcciones IP para cada instancia en clúster de conmutación por error. Puede especificar varias direcciones IP para cada subred. Si las diversas direcciones IP están en la misma subred, el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establece la dependencia en AND. Si está agrupando en clústeres los nodos en varias subredes, el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establece la dependencia en OR.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opciones de instalación de clústeres de conmutación por error  
+## <a name="ssnoversion-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Opciones de instalación de clústeres de conmutación por error  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>Opción 1: instalación integrada con Agregar nodo  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrada consta de dos pasos:  
@@ -50,7 +49,7 @@ ms.locfileid: "63067651"
   
 2.  En cada nodo que se va a agregar al clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el programa de instalación con la función Agregar nodo para agregar ese nodo.  
   
-##### <a name="option-2-advancedenterprise-installation"></a>Opción 2: Instalación de Advanced/Enterprise  
+##### <a name="option-2-advancedenterprise-installation"></a>Opción 2: instalación de Advanced/Enterprise  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La instalación de clústeres de conmutación por error Advanced/Enterprise consta de dos pasos:  
   
 1.  En cada nodo que va a formar parte del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el programa de instalación con la función Preparar clúster de conmutación por error. En este paso se preparan los nodos para su agrupación en clústeres, pero al final de este paso no hay ninguna instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] operativa.  
@@ -76,13 +75,13 @@ ms.locfileid: "63067651"
   
  **Nota** : se admiten las direcciones IP de IPV6.  Si configura tanto IPV4 como IPV6, se tratan como subredes diferentes y se espera que IPV6 se ponga primero en conexión.  
   
-##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clúster de conmutación por error de varias subredes  
+##### <a name="ssnoversion-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Clúster de conmutación por error de varias subredes  
  Puede establecer dependencias OR cuando los nodos en el clúster están en subredes diferentes. Sin embargo, cada nodo del clúster de conmutación por error de varias redes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ser un posible propietario de al menos una de las direcciones IP especificadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Antes de instalar los clústeres de conmutación por error](before-installing-failover-clustering.md)   
- [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
- [Instalar a SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Cree una nueva configuración de clúster de conmutación por error de SQL Server &#40;&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
+ [Instalación de SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Actualizar un clúster de conmutación por error de SQL Server](../windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   

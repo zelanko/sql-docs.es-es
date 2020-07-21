@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65579819"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ámbito de expresión para los totales, agregados y colecciones integradas
@@ -41,7 +41,7 @@ ms.locfileid: "65579819"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DataScope"></a> Descripción del ámbito de datos y la jerarquía de datos  
+##  <a name="understanding-data-scope-and-data-hierarchy"></a><a name="DataScope"></a> Descripción del ámbito de datos y la jerarquía de datos  
  El ámbito de datos especifica un conjunto de datos del informe. Tiene una jerarquía natural con una relación de contención inherente. Los ámbitos superiores de la jerarquía contienen los ámbitos inferiores de la jerarquía. En la siguiente lista de ámbitos de datos se describe la jerarquía, en orden de más a menos datos:  
   
 -   **Conjuntos de datos, después de la aplicación de filtros de conjunto de datos** Especifica el conjunto de datos de informe vinculado a la región de datos o a un elemento de informe del cuerpo del informe. Los datos utilizados para la agregación proceden del conjunto de datos de informe después de aplicar las expresiones de filtro al conjunto de datos. En el caso de conjuntos de datos compartidos, se trata de los filtros en la definición del conjunto de datos compartido y los filtros en la instancia del conjunto de datos compartido del informe.  
@@ -56,7 +56,7 @@ ms.locfileid: "65579819"
   
  Entender bien los ámbitos contenedores y contenidos es importante al escribir expresiones que incluyen funciones de agregado.  
   
-##  <a name="Aggregates"></a> Ámbito y expresiones de celda  
+##  <a name="cell-scope-and-expressions"></a><a name="Aggregates"></a> Ámbito y expresiones de celda  
  Al especificar un ámbito, está indicando al procesador de informes qué datos se deben usar para un cálculo agregado. Dependiendo de la expresión y su ubicación, pueden ser ámbitos válidos los *ámbitos contenedores*, denominados también ámbitos principales, o los *ámbitos contenidos*, denominados también ámbitos secundarios o anidados. En general, no puede especificar una instancia de grupo individual en un cálculo agregado. Puede especificar un agregado en todas las instancias del grupo.  
   
  Cuando el procesador de informes combina los datos de un conjunto de datos de informe con la región de datos Tablix, evalúa las expresiones de grupo y crea las filas y columnas necesarias para representar las instancias de grupo. El valor de las expresiones de un cuadro de texto de cada celda de Tablix se evalúa en el contexto del ámbito de celda. Dependiendo de la estructura de Tablix, una celda puede pertenecer a varios grupos de filas y grupos de columnas. Para las funciones de agregado, puede especificar qué ámbito usar mediante uno de los siguientes ámbitos:  
@@ -77,7 +77,7 @@ ms.locfileid: "65579819"
   
  En cada tema de función de agregado se ofrece una lista de los ámbitos válidos para su uso. Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
-##  <a name="Examples"></a> Ejemplo de expresiones de agregado para una región de datos de tabla  
+##  <a name="example-aggregate-expressions-for-a-table-data-region"></a><a name="Examples"></a> Ejemplo de expresiones de agregado para una región de datos de tabla  
  La escritura de expresiones que especifiquen ámbitos no predeterminado requiere cierta práctica. Como ayuda para entender los distintos ámbitos, estudie la siguiente figura y tabla. En la figura, tiene una etiqueta cada celda de una tabla de información de ventas que muestra la cantidad de elementos vendida por año y trimestre, y también por territorio de ventas. Observe las indicaciones visuales en los identificadores de fila e identificadores de columna que muestran la estructura de grupos de filas y columnas, para indicar los grupos anidados. La tabla tiene la siguiente estructura:  
   
 -   Un encabezado de tabla que contiene la celda de esquina y tres filas con los encabezados de grupo de columnas.  
@@ -96,11 +96,11 @@ ms.locfileid: "65579819"
   
  Suponga que el conjunto de datos se llama DataSet1 y la tabla se llama Tablix1. En la siguiente tabla se ofrece una lista de la etiqueta de celda, el ámbito predeterminado y ejemplos. Los valores para el texto del marcador de posición se muestran en sintaxis de expresión.  
   
-|Celda|Ámbito predeterminado|Etiquetas de marcador de posición|Texto o valores de marcador de posición|  
+|Cell|Ámbito predeterminado|Etiquetas de marcador de posición|Texto o valores de marcador de posición|  
 |----------|-------------------|------------------------|--------------------------------|  
 |C01|Tablix1|[Sum(Qty)]|Agregados y ámbito<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C02|Grupo de columnas externo "Year"|[Year]<br /><br /> ([YearQty])|`=Fields!Year.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
-|C03|Tablix1|[Sum(Qty)]|Totals<br /><br /> `=Sum(Fields!Qty.Value)`|  
+|C03|Tablix1|[Sum(Qty)]|Totales<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C04|Grupo de columnas del mismo nivel "Territory"|([Total])|Territory<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C05|Grupo interno "Qtr"|[Qtr]<br /><br /> ([QtrQty])|Q<br /><br /> `=Fields!Qtr.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C06|Grupo de columnas del mismo nivel "Territory"|[Territory]<br /><br /> ([Tty])<br /><br /> [Pct]|`=Fields!Territory.Value`<br /><br /> `=Sum(Fields!Qty.Value)`<br /><br /> `=FormatPercent(Sum(Fields!Qty.Value,"Territory")/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
@@ -117,7 +117,7 @@ ms.locfileid: "65579819"
  Para obtener más información sobre la forma de interpretar las indicaciones visuales en las regiones de datos Tablix, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para más información sobre la región de datos Tablix, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Para obtener más información sobre las expresiones y los agregados, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) y [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
-##  <a name="Sparklines"></a> Sincronizar las escalas de los minigráficos  
+##  <a name="synchronizing-scales-for-sparklines"></a><a name="Sparklines"></a> Sincronizar las escalas de los minigráficos  
  Para comparar valores a lo largo del tiempo en el eje horizontal de un minigráfico anidado en una tabla o matriz, puede sincronizar los valores de grupo de categorías. Esto se denomina alinear los ejes. Si se selecciona la opción para alinear los ejes, el informe establece automáticamente los valores mínimo y máximo para un eje, y proporciona marcadores de posición para los valores agregados que no existen en todas las categorías. De esta forma, los valores del minigráfico se alinean en todas las categorías, lo que permite comparar los valores para cada fila de datos agregados. Si selecciona esta opción, cambia el ámbito de la evaluación de la expresión al *ámbito de dominio*. Al establecer el ámbito de dominio para un gráfico anidado, también se controla indirectamente la asignación de color a cada categoría en la leyenda.  
   
  Por ejemplo, en un minigráfico que muestra tendencias semanales, imagine que una ciudad tuviera datos de ventas de 3 meses y otra tuviera datos de ventas de 12 meses. Sin escalas sincronizadas, en el minigráfico de la primera ciudad solo habría 3 barras, que serían mucho más anchas y ocuparían el mismo espacio que el conjunto de barras de 12 meses de la segunda ciudad.  
@@ -125,13 +125,13 @@ ms.locfileid: "65579819"
  Para obtener más información, vea [Alinear los datos en un gráfico en una tabla o una matriz &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
   
-##  <a name="Indicators"></a> Sincronizar los intervalos de los indicadores  
+##  <a name="synchronizing-ranges-for-indicators"></a><a name="Indicators"></a> Sincronizar los intervalos de los indicadores  
  Para especificar los valores de datos que se van a usar para un conjunto de indicadores, debe especificar un ámbito. Dependiendo del diseño de la región de datos que contenga el indicador, se especifica un ámbito o un ámbito contenedor. Por ejemplo, en una fila de encabezado de grupo asociada a ventas de categoría, un conjunto de flechas (hacia arriba, abajo, y los lados) puede indicar los valores de ventas relativos a un umbral. El ámbito contenedor es el nombre de la tabla o matriz que contiene los indicadores.  
   
  Para obtener más información, vea [Establecer el ámbito de sincronización &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md).  
   
   
-##  <a name="Page"></a> Especificar ámbitos del encabezado de página o pie de página  
+##  <a name="specifying-scopes-from-the-page-header-or-page-footer"></a><a name="Page"></a> Especificar ámbitos del encabezado de página o pie de página  
  Para mostrar datos diferentes en cada página de un informe, debe agregar expresiones a un elemento de informe que debe estar en la página representada. Dado que un informe se divide en páginas cuando se representa, solo se puede determinar qué elementos hay en una página durante la representación. Por ejemplo, una celda de una fila de detalle tiene un cuadro de texto que tiene muchas instancias en una página.  
   
  Por este motivo, hay una colección global llamada a ReportItems. Es el conjunto de cuadros de texto de la página actual.  
@@ -139,7 +139,7 @@ ms.locfileid: "65579819"
  Para obtener más información, vea [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md) y [Usar referencias a la colección ReportItems &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md).  
   
   
-##  <a name="Toggles"></a> Especificar un elemento de alternancia para la obtención de detalles y la visibilidad condicional  
+##  <a name="specifying-a-toggle-item-for-drilldown-and-conditional-visibility"></a><a name="Toggles"></a> Especificar un elemento de alternancia para la obtención de detalles y la visibilidad condicional  
  Los comandos alternantes son signos de más o menos que se agregan a un cuadro de texto, en los que el usuario puede hacer clic para mostrar u ocultar otros elementos de informe. En la página **Visibilidad** de la mayoría de las propiedades de elemento de informe, puede especificar a qué elemento de informe se va a agregar el comando alternante. El elemento de comando alternante debe estar en un ámbito de contención más alto que el elemento que se va a mostrar u ocultar.  
   
  En una región de datos Tablix, para crear un efecto de obtención de detalles en el que se hace clic en un cuadro de texto para expandir la tabla y mostrar más datos, debe establecer la propiedad **Visibilidad** en el grupo y seleccionar como comando alternante un cuadro de texto en un encabezado de grupo que esté asociado a un grupo contenedor.  
@@ -147,13 +147,13 @@ ms.locfileid: "65579819"
  Para obtener más información, vea [Agregar una acción de expandir y contraer a un elemento &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md).  
   
   
-##  <a name="Sort"></a> Especificar una expresión de orden para sincronizar el criterio de ordenación  
+##  <a name="specifying-a-sort-expression-to-synchronize-sort-order"></a><a name="Sort"></a> Especificar una expresión de orden para sincronizar el criterio de ordenación  
  Al agregar un botón de orden interactivo a una columna de la tabla, puede sincronizar la ordenación para varios elementos que tengan un ámbito contenedor común. Por ejemplo, puede agregar un botón de ordenación a un encabezado de columna en una matriz y especificar el ámbito contenedor como nombre del conjunto de datos enlazado a la matriz. Cuando un usuario hace clic en el botón de ordenación, no solo se ordenan las filas de la matriz, sino que también se ordenan los grupos de series de gráfico de los gráficos que estén enlazados al mismo conjunto de datos. De esta manera, todas las regiones de datos que dependen de ese conjunto de datos se pueden sincronizar para que muestren el mismo criterio de ordenación.  
   
  Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
   
-##  <a name="Nulls"></a> Suprimir valores NULL o cero en una celda  
+##  <a name="suppressing-null-or-zero-values-in-a-cell"></a><a name="Nulls"></a> Suprimir valores NULL o cero en una celda  
  Para muchos informes, los cálculos cuyo ámbito son grupos pueden crear muchas celdas con valores cero (0) o NULL. Para conseguir que el informe esté más despejado, agregue una expresión que devuelva espacios en blanco si el valor de agregado es 0. Para obtener más información, vea los ejemplos de "Suprimir valores NULL o valores cero" en [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
   
   

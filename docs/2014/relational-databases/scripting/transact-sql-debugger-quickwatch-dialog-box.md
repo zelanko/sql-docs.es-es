@@ -1,6 +1,6 @@
 ---
-title: Inspección rápida (cuadro de diálogo) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Inspección rápida
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48e4bda558b75bec0c81815c90feff9d6500a803
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063278"
 ---
 # <a name="quickwatch-dialog-box"></a>Cuadro de diálogo Inspección rápida
   Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el tipo de datos y el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como una variable o un parámetro, cuando esté depurando el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para inspeccionar varias expresiones, puede agregar también la expresión a una ventana **Inspección** .  
@@ -41,7 +40,7 @@ ms.locfileid: "66063385"
   
     -   Expresiones generadas mediante la aplicación de operadores a una o más variables, parámetros o funciones del sistema, como @IntegerCounter + 1 o FirstName + LastName.  
   
-    -   Instrucciones de Transact-SQL que devuelven un valor único, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Instrucciones Transact-SQL que devuelven un valor único, como SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Haga clic en **Actualizar**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "66063385"
  **Cuadrícula Valor**  
  Muestra las propiedades de la expresión que se está inspeccionando.  
   
- **Name**  
+ **Nombre**  
  Expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a observar.  
   
  **Valor**  
@@ -73,7 +72,7 @@ ms.locfileid: "66063385"
  **Tipo**  
  Muestra el tipo de datos de la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
  [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
  [Ventana de inspección](transact-sql-debugger-watch-window.md)   

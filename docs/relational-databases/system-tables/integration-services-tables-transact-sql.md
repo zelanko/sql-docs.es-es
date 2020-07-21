@@ -1,5 +1,5 @@
 ---
-title: Tablas (Transact-SQL) de Integration Services | Microsoft Docs
+title: Tablas de Integration Services (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c341ae73981eb0d06a2a1e64e804db9f81297fdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773757"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Tablas de Integration Services (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  En los temas de esta sección se describen las tablas del sistema de la base de datos msdb que almacenan información usada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  En los temas de esta sección se describen las tablas del sistema de la base de datos msdb que almacenan información utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>En esta sección  
  [sysssislog](../../relational-databases/system-tables/sysssislog-transact-sql.md)  

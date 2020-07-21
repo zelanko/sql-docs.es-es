@@ -1,5 +1,5 @@
 ---
-title: Comentarios sobre SQL Server 2014 | Microsoft Docs
+title: Proporcionar comentarios para SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,14 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-author: mightypen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 324f221742152ebfc0850a609b04f2f6bf956fea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62772283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926736"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Comentarios sobre SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] agradece que dedique parte de su tiempo a ayudarnos a mejorar nuestros productos y documentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Puede transmitirnos sus sugerencias e informes de errores sobre las características e interfaz de usuario del producto, presentarnos sus comentarios acerca de la documentación y, si lo desea, enviarnos de manera automática sus informes de errores y datos de uso a [!INCLUDE[msCoName](../includes/msconame-md.md)] para su estudio. En el presente documento se describen las tres opciones para transmitirnos sus comentarios.  
@@ -49,7 +48,7 @@ ms.locfileid: "62772283"
   
 -   Obtenga acceso a la ayuda desde la utilidad.  
   
--   Seleccione el **ayuda** casilla de verificación en la **las barras de herramientas** pestaña de la **herramientas/Personalizar...**  comando.  
+-   Active la casilla **ayuda** en la pestaña **barras de herramientas** del comando **herramientas/personalizar..** ..  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Informes automáticos de errores y usos  
  Puede habilitar determinadas características para notificar errores de manera automática y enviar información acerca de cómo utiliza el software y los servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../includes/msconame-md.md)] utiliza esta información para mejorar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toda los datos se consideran información confidencial.  

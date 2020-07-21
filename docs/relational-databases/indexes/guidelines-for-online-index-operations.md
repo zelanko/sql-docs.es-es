@@ -1,7 +1,7 @@
 ---
 title: Directrices para operaciones de índices en línea | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629619"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Al realizar operaciones de índice en línea se aplican las siguientes directrices:  
 
@@ -47,8 +47,8 @@ En la siguiente tabla se muestran operaciones de índice que se pueden llevar a 
 |CREATE INDEX|Índice XML<br /><br /> Índice clúster único inicial en una vista<br /><br /> Índice de una tabla temporal local||  
 |CREATE INDEX WITH DROP_EXISTING|Índice clúster deshabilitado o vista indizada deshabilitada<br /><br /> Índice de una tabla temporal local<br /><br /> Índice XML||  
 |DROP INDEX|Índice deshabilitado<br /><br /> Índice XML<br /><br /> Índice no clúster<br /><br /> Índice de una tabla temporal local|No se pueden especificar varios índices en una única instrucción.|  
-|ALTER TABLE ADD CONSTRAINT (PRIMARY KEY o UNIQUE)|Índice de una tabla temporal local<br /><br /> Índice clúster|Solo se permite una subcláusula cada vez. Por ejemplo, no puede agregar y quitar restricciones PRIMARY KEY o UNIQUE en la misma instrucción ALTER TABLE.|  
-|ALTER TABLE DROP CONSTRAINT (PRIMARY KEY o UNIQUE)|Índice clúster||  
+|ALTER TABLE ADD CONSTRAINT (PRIMARY KEY o UNIQUE)|Índice de una tabla temporal local<br /><br /> Índice agrupado|Solo se permite una subcláusula cada vez. Por ejemplo, no puede agregar y quitar restricciones PRIMARY KEY o UNIQUE en la misma instrucción ALTER TABLE.|  
+|ALTER TABLE DROP CONSTRAINT (PRIMARY KEY o UNIQUE)|Índice agrupado||  
   
  La tabla subyacente no se puede modificar, truncar o quitar mientras se está llevando a cabo una operación de índice en línea.  
   
@@ -84,7 +84,7 @@ En los equipos con varios procesadores que ejecutan SQL Server 2016, puede que l
   
 Debido a que un bloqueo S o un bloqueo Sch-M se conservan en la fase final de la operación de índice, debe tener cuidado cuando ejecute una operación de índice en línea dentro de una transacción de usuario explícita, como el bloque BEGIN TRANSACTION...COMMIT. De esta manera el bloqueo se conserva hasta el final de la transacción y se impide la simultaneidad de usuarios.  
   
-La regeneración de índices en línea puede aumentar la fragmentación cuando se puede ejecutar con las opciones `MAX DOP > 1` y `ALLOW_PAGE_LOCKS = OFF` . Para más información, vea [Cómo funciona: la recompilación de índices en línea puede provocar más fragmentación](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+La regeneración de índices en línea puede aumentar la fragmentación cuando se puede ejecutar con las opciones `MAX DOP > 1` y `ALLOW_PAGE_LOCKS = OFF` . Para obtener más información, vea el blog [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)(Cómo la regeneración de índices en línea puede provocar una fragmentación mayor).  
   
 ## <a name="transaction-log-considerations"></a>Consideraciones del registro de transacciones
 
@@ -93,7 +93,7 @@ Las operaciones de índice a gran escala, realizadas sin conexión o en línea, 
 ## <a name="resumable-index-considerations"></a>Consideraciones sobre índices reanudables
 
 > [!NOTE]
-> La opción de índice reanudable se aplica a SQL Server (a partir de SQL Server 2017) (solo recompilación de índice) y SQL Database (creación de índice y recompilación de índice). Consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) (actualmente en versión preliminar pública para [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) y [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
+> La opción de índice reanudable para crear y recompilar índices se aplica a SQL Server (la recompilación de índices empieza con SQL Server 2017 y la creación de índices también se admite en SQL Server 2019) y SQL Database. Consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) y [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 
 Al realizar la recompilación o la creación de índices en línea reanudables, se aplican las siguientes directrices:
 

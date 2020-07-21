@@ -1,5 +1,6 @@
 ---
 title: Escenarios de consulta de PolyBase | Microsoft Docs
+description: Vea ejemplos de consultas en las que se usa la característica PolyBase de SQL Server, como SELECT, la instrucción JOIN externa con tablas locales, importación y exportación de datos, y nuevas vistas de catálogo.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -17,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 92416e1dc528880767ccebd1873707e0a1259a31
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901263"
 ---
 # <a name="polybase-query-scenarios"></a>Escenarios de consulta de PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 En este artículo se proporcionan ejemplos de consultas mediante el uso de la característica [PolyBase](../../relational-databases/polybase/polybase-guide.md) de SQL Server (a partir de la versión de 2016). Antes de usar estos ejemplos, debe instalar y configurar PolyBase. Para más información, consulte la [información general de PolyBase](polybase-guide.md).
   

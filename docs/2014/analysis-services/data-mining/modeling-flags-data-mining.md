@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083307"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521083"
 ---
 # <a name="modeling-flags-data-mining"></a>Marcas de modelado (Minería de datos)
-  Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos acerca de los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
+  Puede utilizar marcas de modelado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar información adicional a un algoritmo de minería de datos sobre los datos que se definen en una tabla de casos. El algoritmo puede usar esta información para crear un modelo de minería de datos más preciso.  
   
  Algunas marcas de modelado se definen en la estructura de minería de datos, mientras que otras se definen en la columna del modelo de minería de datos. Por ejemplo, la marca de modelado `NOT NULL` se utiliza con las columnas de la estructura de minería de datos. Puede definir marcas de modelado adicionales en las columnas del modelo de minería de datos, dependiendo del algoritmo que se utilice para crear el modelo.  
   
@@ -71,7 +70,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Puede especificar las marcas de modelado en una nueva estructura o modelo de minería de datos mediante DMX, o utilizando AMO o XMLA. Sin embargo, no puede cambiar las marcas de modelado utilizadas en un modelo y en una estructura de minería de datos existentes utilizando DMX. Puede crear un nuevo modelo de minería de datos utilizando la sintaxis `ALTER MINING STRUCTURE....ADD MINING MODEL`.  
   
-##  <a name="bkmk_UseRegressors"></a> Usos de la marca de modelado REGRESSOR  
+##  <a name="uses-of-the-regressor-modeling-flag"></a><a name="bkmk_UseRegressors"></a>Usos de la marca de modelado del REGRESOr  
  Cuando se establece la marca de modelado REGRESSOR en una columna, se indica al algoritmo que la columna contiene regresores potenciales. Los regresores reales que se utilizan en el modelo los determina el algoritmo. Se puede descartar un regresor potencial si no modela el atributo de predicción.  
   
  Cuando se genera un modelo mediante el Asistente para minería de datos, todas las columnas de entrada continuas se marcan como posibles regresores. Por tanto, aunque no establezca explícitamente la marca REGRESSOR en una columna, la columna podría utilizarse como regresor en el modelo.  
@@ -105,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
 |Tarea|Tema|  
 |----------|-----------|  
 |Modificar las marcas de modelado mediante el Diseñador de minería de datos|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
-|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para usar como regresor en un modelo](specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Especificar una sugerencia al algoritmo para recomendar regresores probables|[Especificar una columna para utilizar como regresor en un modelo](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Ver las marcas de modelado admitidas por algoritmos concretos (en la sección Marcas de modelado de cada tema de referencia del algoritmo)|[Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Obtener más información acerca de las columnas de la estructura de minería de datos y las propiedades que se pueden establecer en ellas|[Columnas de la estructura de minería de datos](mining-structure-columns.md)|  
 |Obtener información sobre las marcas de modelado y las columnas del modelo de minería de datos que se pueden aplicar en el modelo|[Columnas del modelo de minería de datos](mining-model-columns.md)|  

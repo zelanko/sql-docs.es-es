@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad StayInSync (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad StayInSync (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930754"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759671"
 ---
 # <a name="stayinsync-property-example-vc"></a>Ejemplo de la propiedad StayInSync (VC ++)
-Este ejemplo se muestra cómo el [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propiedad facilita el acceso a las filas en una jerárquica [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+En este ejemplo se muestra cómo la propiedad [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)jerárquico.  
   
- El bucle externo muestra el nombre y apellido de cada autor, estado e identificación. Anexa **Recordset** para cada fila se recupera de la [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección y asignada automáticamente a **rstTitleAuthor** por el **StayInSync**  propiedad cada vez que el elemento primario **Recordset** se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila del conjunto de registros anexados.  
+ El bucle exterior muestra el nombre y el apellido de cada autor, el estado y la identificación. El conjunto de **registros** anexado para cada fila se recupera de la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) y se asigna automáticamente a **rstTitleAuthor** mediante la propiedad **StayInSync** siempre que el **conjunto de registros** primario se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila del conjunto de registros anexado.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -143,7 +143,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

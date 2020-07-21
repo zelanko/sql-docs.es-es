@@ -14,17 +14,17 @@ ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e6a8c9ad32e12d78a04579a0d93a4659546a9c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907087"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637553"
 ---
 # <a name="page-compression-implementation"></a>Implementación de la compresión de página
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de página. Este resumen proporciona la información básica para ayudarlo a planear el espacio de almacenamiento que necesita para sus datos.  
+  En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de página. Este resumen proporciona la información básica para ayudarle a planear el espacio de almacenamiento que necesita para sus datos.  
   
  La compresión de página es similar para las tablas, las particiones de tabla, los índices y las particiones de índice. La descripción siguiente de la compresión de página para una tabla se aplica a la compresión de página para todos los tipos de objeto. En los ejemplos siguientes se comprimen las cadenas de caracteres, pero la compresión de prefijo y de diccionario aplican los mismos principios a otros tipos de datos.  
   

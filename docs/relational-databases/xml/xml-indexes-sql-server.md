@@ -1,5 +1,6 @@
 ---
 title: Índices XML (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo el hecho de crear índices XML en columnas de tipo de datos XML puede beneficiar a la aplicación y mejorar el rendimiento de las consultas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f5ab347d15e0363411640431f4d833f38e13234
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729781"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Es posible crear índices XML en columnas del tipo de datos **xml** . Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
   
 -   Las consultas en columnas XML son habituales en su carga de trabajo. Es preciso considerar el costo de mantenimiento del índice XML durante la modificación de datos.  
@@ -110,7 +111,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
 ```  
   
- En relación con el índice XML principal, en lugar de dividir cada instancia de BLOB XML en la tabla base, las filas del índice que corresponden a cada BLOB XML se examinan secuencialmente para determinar la expresión especificada en el método `exist()`. Si la ruta de acceso se encuentra en la columna Path del índice, el elemento <`Summary`> y sus subárboles se recuperan a partir del índice XML principal y se convierten en un BLOB XML como resultado del método `query()`.  
+ En relación con el índice XML principal, en lugar de dividir cada instancia de BLOB XML en la tabla base, las filas del índice que corresponden a cada BLOB XML se examinan secuencialmente para determinar la expresión especificada en el método `exist()` . Si la ruta de acceso se encuentra en la columna Path del índice, el elemento <`Summary`> y sus subárboles se recuperan a partir del índice XML principal y se convierten en un BLOB XML como resultado del método `query()`.  
   
  Tenga en cuenta que el índice XML principal no se utiliza al recuperar una instancia XML completa. Por ejemplo, la consulta siguiente recupera de la tabla la instancia XML completa que describe las instrucciones de fabricación para un modelo determinado de producto.  
   
@@ -133,7 +134,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Si la carga de trabajo recupera varios valores a partir de instancias XML individuales empleando expresiones de ruta de acceso, puede resultar útil la agrupación en clústeres de las rutas dentro de cada instancia XML en el índice PROPERTY. Éste suele ser el caso de una bolsa de propiedades, cuando se capturan las propiedades de un objeto y se conoce el valor de su clave principal.  
   
--   Si la carga de trabajo implica consultar valores dentro de instancias XML sin conocer los nombres de los elementos o atributos que contienen dichos valores, puede ser útil crear el índice VALUE. Esto suele ocurrir con búsquedas en ejes descendentes, como //author[last-name="Howard"], en que los elementos \<author> pueden aparecer en cualquier nivel de la jerarquía. También ocurre en consultas con caracteres comodín, como /book [@* = "novel"], en que la consulta busca elementos \<book> que tengan algún atributo con el valor "novel".  
+-   Si la carga de trabajo implica consultar valores dentro de instancias XML sin conocer los nombres de los elementos o atributos que contienen dichos valores, puede ser útil crear el índice VALUE. Esto suele ocurrir con búsquedas en ejes descendentes, como //author[last-name="Howard"], donde los elementos \<author> pueden aparecer en cualquier nivel de la jerarquía. También ocurre en consultas con caracteres comodín, como /book [@* = "novel"], donde la consulta busca elementos \<book> que tengan algún atributo con el valor "novel".  
   
 ### <a name="path-secondary-xml-index"></a>Índice XML secundario PATH  
  Si sus consultas suelen especificar expresiones de ruta de acceso en columnas de tipo **xml** , un índice secundario PATH podría acelerar la búsqueda. Como se indicó anteriormente en este tema, el índice principal resulta útil cuando se realizan consultas que especifican el método **exist()** en la cláusula WHERE. Si agrega un índice secundario PATH, también puede mejorar los resultados de búsqueda en dichas consultas.  

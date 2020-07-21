@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b48511e9e737f4fb775925d8a6bff81e31ef2a5a
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077475"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196763"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Implementación de un clúster de Pacemaker para SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este tutorial se documentan las tareas necesarias para implementar un clúster de Pacemaker de Linux para un grupo de disponibilidad Always On (AG) de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] o una instancia de clúster de conmutación por error (FCI). A diferencia de la pila ligada estrechamente de Windows Server/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], la creación de clústeres de Pacemaker, así como la configuración de grupos de disponibilidad (AG) en Linux, se pueden realizar antes o después de la instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. La integración y configuración de los recursos para la parte de Pacemaker de una implementación de AG o FCI se realiza una vez configurado el clúster.
 > [!IMPORTANT]
@@ -129,7 +129,7 @@ En esta sección se documenta cómo crear y configurar el clúster para cada dis
    ```
    
    donde *NodeX* es el nombre del nodo.
-2. Cree el clúster
+2. Creación del clúster
    
    ```bash
    sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
@@ -175,7 +175,7 @@ El proceso para crear un clúster de Pacemaker es completamente diferente en SLE
    ```
    
 7. Si ha configurado una dirección IP para la administración, puede probarla en un explorador, que también prueba el cambio de contraseña de *hacluster*.
-   ![](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
+   ![hacLuster](./media/sql-server-linux-deploy-pacemaker-cluster/image2.png)
    
 8. En otro servidor SLES que será un nodo del clúster, ejecute 
    ```bash

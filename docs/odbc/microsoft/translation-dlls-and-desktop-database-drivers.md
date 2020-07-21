@@ -1,5 +1,5 @@
 ---
-title: Archivos DLL de traducción y el escritorio en controladores de base de datos | Microsoft Docs
+title: Archivos dll de traducción y controladores de base de datos de escritorio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], translation DLL
 - desktop database drivers [ODBC], translation DLL
 ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5222d7956cbf7ffe678cc339778c60659ed90260
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 20346e705cfe3a20d305b9d517ee05198c8b2879
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912420"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303056"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>Archivos DLL de traducción y controladores de escritorio de la base de datos
-No compatible.
+No se admite.

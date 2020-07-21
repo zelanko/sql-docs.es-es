@@ -1,6 +1,7 @@
 ---
-title: Implementar SQL_VARIANT en una tabla con optimización para memoria | Microsoft Docs
-ms.custom: ''
+title: SQL_VARIANT en una tabla con optimización para memoria
+description: Use este ejemplo para obtener información sobre cómo implementar SQL_VARIANT en una tabla optimizada para memoria en SQL Server y Azure SQL Database.
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fee7c55c95d60329ca7b3721416569d83902a6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76acc2e061ff550d2da90b167637ad7efa76b1d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723157"
 ---
-# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementar SQL_VARIANT en una tabla con optimización para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>Implementar SQL_VARIANT en una tabla con optimización para memoria
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Considere una tabla de ejemplo con la columna **SQL_VARIANT** :  
   

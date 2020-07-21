@@ -1,5 +1,6 @@
 ---
 title: Apertura del visor de archivos de registro | Microsoft Docs
+description: Aprenda a utilizar el Visor del archivo de registros de SQL Server Management Studio para obtener acceso a la información sobre los errores y eventos capturados en varios registros.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083981"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667957"
 ---
 # <a name="open-log-file-viewer"></a>Abrir el Visor de archivos de registro
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Puede usar el Visor del archivo de registros de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para obtener acceso a la información sobre los errores y eventos capturados en los registros siguientes:  
   
 -   Recopilación de auditoría  
@@ -41,7 +42,7 @@ ms.locfileid: "68083981"
   
  El Visor del archivo de registros se puede abrir de varias maneras, dependiendo de la información que se desee ver.  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en línea, se requiere pertenecer al rol fijo de servidor securityadmin.  
   
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin conexión, se debe tener acceso de lectura tanto al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** como a la carpeta donde están almacenados los archivos de registro. Para obtener más información, vea la sección Seguridad del tema [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md).  
@@ -55,7 +56,7 @@ ms.locfileid: "68083981"
   
 1.  En el Explorador de objetos, expanda **Administración**.  
   
-2.  Realice una de las acciones siguientes:  
+2.  Realice cualquiera de las siguientes acciones:  
   
     -   Haga clic con el botón derecho en **Registros de SQL Server**, seleccione **Ver**y, después, haga clic en **Registro de SQL Server** o **Registro de Windows y SQL Server**.  
   

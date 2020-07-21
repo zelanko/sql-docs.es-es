@@ -17,15 +17,15 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1bd6350c31b29855915de1be8288ec1fcbe2a56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751117"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Un índice espacial puede realizar determinadas operaciones de manera más eficaz en una columna del tipo de datos **geometry** o **geography** (una *columna espacial*). Se puede especificar más de un índice espacial en una columna espacial. Por ejemplo, esto es útil para indizar diferentes parámetros de teselación en una columna única.  
   
  Existen varias restricciones para la creación de índices espaciales. Para obtener más información, vea [Restricciones en los índices espaciales](#restrictions) más adelante en este tema.  
@@ -33,9 +33,9 @@ ms.locfileid: "68048708"
 > [!NOTE]  
 >  Para obtener más información sobre la relación de índices espaciales para partición y para grupos de archivos, vea la sección "Comentarios" en [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
-##  <a name="creating"></a> Crear, modificar y quitar índices espaciales  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Crear, modificar y quitar índices espaciales  
   
-###  <a name="create"></a> Para crear un índice espacial  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> Para crear un índice espacial  
  **Para crear un índice espacial mediante Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68048708"
   
 7.  Para especificar la columna espacial que desee indizar, haga clic en **Agregar**.  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de** *\<nombre tabla>* , seleccione una columna de tipo **geometry** o **geography**. Para ello, active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **Seleccionar columnas de** *\<table name>* , seleccione una columna de tipo **geometry** o **geography**. Para ello, active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
   
 9. Compruebe su selección de columna en la cuadrícula **Columnas de clave de índice** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68048708"
   
      Para obtener más información acerca de estas propiedades, vea [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
 > [!NOTE]  
 >  Para crear otro índice espacial en la misma columna o en otra columna espacial diferente, repita los pasos anteriores.  
@@ -94,7 +94,7 @@ ms.locfileid: "68048708"
 5.  Seleccione el nuevo índice en la lista **Índice espacial seleccionado** y configure las propiedades del índice espacial en la cuadrícula de la derecha. Para obtener información sobre las propiedades, vea [Cuadro de diálogo Índices espaciales &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/4d84239a-68c7-4aa2-8602-2b51dd07260f).  
   
   
-###  <a name="alter"></a> Para modificar un índice espacial  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> Para modificar un índice espacial  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
@@ -106,7 +106,7 @@ ms.locfileid: "68048708"
 -   [Mover un índice existente a un grupo de archivos diferente](../../relational-databases/indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a> Para quitar un índice espacial  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> Para quitar un índice espacial  
  **Para quitar un índice espacial mediante Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68048708"
 4.  Haga clic en **Eliminar**.  
   
   
-##  <a name="restrictions"></a> Restricciones en los índices espaciales  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Restricciones en los índices espaciales  
  Un índice espacial solamente puede crearse en una columna de tipo **geometría** o **geografía**.  
   
 ### <a name="table-and-view-restrictions"></a>Restricciones de las vistas y tablas  

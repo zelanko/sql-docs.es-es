@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d9e45b2d725eedc3931f15f4272eabdb45db532
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050088"
 ---
 # <a name="in-memory-oltp-code-samples"></a>Ejemplos de código de OLTP en memoria
   Esta sección contiene ejemplos de código que muestran el uso de OLTP en memoria:  
@@ -28,7 +27,7 @@ ms.locfileid: "63157885"
   
 -   [Creación de particiones en el nivel de aplicación](application-level-partitioning.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

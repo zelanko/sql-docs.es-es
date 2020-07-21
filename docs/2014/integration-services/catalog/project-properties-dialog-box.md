@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.isprojectprop.general.f1
 - sql12.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d5fd68fc4569dfb4cd151c2751fa3a466c49961b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439042"
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
   Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una unidad de implementación. Cada proyecto puede contener paquetes, parámetros y referencias de entorno. Un proyecto es un objeto protegible y puede definir permisos en las entidades de seguridad de base de datos. Cuando se vuelve a implementar un proyecto, la versión anterior del mismo puede almacenarse en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "62771661"
   
 -   [Establecer las opciones de la página Permisos](#permissions)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo de Propiedades del proyecto  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo de Propiedades del proyecto  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -47,10 +46,10 @@ ms.locfileid: "62771661"
   
 5.  Haga clic con el botón derecho en el proyecto y, después, haga clic en **Propiedades**.  
   
-##  <a name="general"></a> Establecer las opciones de la página General  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  Use la página General para ver las propiedades del proyecto.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del proyecto.  
   
  **Identificador**  
@@ -65,13 +64,13 @@ ms.locfileid: "62771661"
  **Fecha de implementación**  
  Muestra la fecha y hora en que el proyecto se implementó por primera vez o se volvió a implementar.  
   
-##  <a name="permissions"></a> Establecer las opciones de la página Permisos  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Establecer las opciones de la página Permisos  
  Use la página **Permisos** para ver y establecer permisos explícitos para el proyecto.  
   
  Examinar  
  Haga clic en **Examinar** para seleccionar los usuarios y los roles para los que quiere establecer permisos con el cuadro de diálogo **Examinar todas las entidades** .  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del usuario o del rol.  
   
  **Tipo**  
@@ -86,7 +85,7 @@ ms.locfileid: "62771661"
  **Conceder**  
  Al seleccionar **Conceder** , se concede el permiso al usuario o al rol seleccionado.  
   
- **Denegar**  
+ **Deny**  
  Al seleccionar **Denegar** , se deniega el permiso al usuario o al rol seleccionado.  
   
   

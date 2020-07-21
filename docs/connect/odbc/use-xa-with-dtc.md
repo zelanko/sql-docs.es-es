@@ -1,7 +1,8 @@
 ---
-title: Uso de XA con Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Uso de XA con Microsoft ODBC Driver
+description: Microsoft ODBC Driver for SQL Server ofrece compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y macOS.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252148"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886332"
 ---
 # <a name="using-xa-transactions"></a>Uso de las transacciones XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +26,13 @@ ms.locfileid: "68252148"
 
 ## <a name="overview"></a>Información general
 
-El Microsoft ODBC Driver for SQL Server a partir de la versión 17,3 proporciona compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y Mac. La implementación de XA en el lado del controlador permite a la aplicación cliente enviar operaciones en serie (como iniciar, confirmar, revertir una bifurcación de transacción, etc.) al administrador de transacciones (TM). Y, a continuación, el TM se comunicará con el Administrador de recursos (RM) de acuerdo con estas operaciones. Para obtener más información acerca de la especificación de XA y la implementación de Microsoft para DTC (MS DTC), vea [Cómo funciona: SQL Server DTC (transacciones MSDTC y XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+A partir de la versión 17.3, Microsoft ODBC Driver for SQL Server ofrece compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y macOS. La implementación XA en el lado del controlador permite que la aplicación cliente envíe operaciones en serie (como iniciar, confirmar, revertir una rama de transacción, etc.) al administrador de transacciones (TM). Luego, el TM se comunicará con Resource Manager (RM) de acuerdo con estas operaciones. Para más información sobre la especificación de XA y la implementación de Microsoft para DTC (MS DTC), consulte el artículo sobre el [funcionamiento de DTC de SQL Server (transacciones XA y MSDTC)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 
 
 ## <a name="the-xacallparam-structure"></a>Estructura XACALLPARAM
 
-La `XACALLPARAM` estructura define la información necesaria para una solicitud del administrador de transacciones XA. Se define de la siguiente manera:
+La estructura `XACALLPARAM` define la información necesaria para una solicitud del administrador de transacciones XA. Se define de la manera siguiente:
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +47,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-Tamaño de la `XACALLPARAM` estructura. Esto excluye el tamaño de los datos que se `XACALLPARAM`indican a continuación.
+El tamaño de la estructura `XACALLPARAM`. Esto excluye el tamaño de los datos que aparecen después de `XACALLPARAM`.
 
 *operation*  
-Operación XA que se va a pasar a TM. Las operaciones posibles se definen en [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+La operación XA que se va a pasar al TM. Las operaciones posibles se definen en [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *xid*  
-Identificador de rama de transacción.
+El identificador de la rama de transacción.
 
 *flags*  
-Marcas asociadas a la solicitud de TM. Los valores posibles se definen en [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Marcas asociadas a la solicitud del TM. Los valores posibles se definen en [xadefs.h](use-xa-with-dtc.md#xadefsh).
 
 *status*  
-Devuelve el estado de TM. Vea el encabezado [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) para ver los posibles estados de devolución.
+Devuelve el estado del TM. Consulte el encabezado [xadefs.h](use-xa-with-dtc.md#xadefsh) para ver posibles estados de devolución.
 
 *sizeData*  
-Tamaño del búfer de datos siguiente `XACALLPARAM`. 
+El tamaño del búfer de datos que aparecen después de `XACALLPARAM`. 
 
 *sizeReturned*  
-Tamaño de los datos devueltos.
+El tamaño de los datos devueltos.
 
-Para realizar una solicitud de TM, se debe llamar a la función [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con el atributo _SQL_COPT_SS_ENLIST_IN_XA_ y un `XACALLPARAM` puntero al objeto.  
+Para realizar una solicitud del TM, es necesario llamar a la función [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con el atributo _SQL_COPT_SS_ENLIST_IN_XA_ y un puntero al objeto `XACALLPARAM`.  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +76,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Ejemplo de código 
 
-En el ejemplo siguiente se muestra cómo comunicarse con las transacciones de TM para XA y ejecutar distintas operaciones desde una aplicación cliente. Si la prueba se ejecuta con Microsoft SQL Server, MS DTC debe estar configurado correctamente para habilitar las transacciones XA. Las definiciones de XA se pueden encontrar en el archivo de encabezado [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) . 
+En el ejemplo siguiente se muestra cómo comunicarse con el TM para las transacciones XA y ejecutar distintas operaciones desde una aplicación cliente. Si la prueba se ejecuta en Microsoft SQL Server, MS DTC debe estar configurado correctamente para habilitar las transacciones XA. Las definiciones XA se pueden encontrar en el archivo de encabezado [xadefs.h](#xadefsh). 
 
 ```
 
@@ -89,7 +90,6 @@ En el ejemplo siguiente se muestra cómo comunicarse con las transacciones de TM
 #include <sqlext.h>
 #include "XaTestRunner.h"
 
-#include <stdio.h>
 #include <iostream>
 #include <string>
 #include <memory>
@@ -105,21 +105,21 @@ RETCODE GetRowCount(HSTMT hstmt, const std::string tableName, int& count)
     count = 0;
     sprintf_s(query, sizeof(query), "SELECT COUNT(*) FROM %s", tableName.c_str());
     RETCODE rc = SQLExecDirectA(hstmt, (SQLCHAR*)query, SQL_NTS);
-    TestRunner::CheckRC(rc, "GetRowCount::SQLExecDirectA", hstmt, SQL_HANDLE_STMT);
+    XaTestRunner::CheckRC(rc, "GetRowCount::SQLExecDirectA", hstmt, SQL_HANDLE_STMT);
     if (!SQL_SUCCEEDED(rc))
     {
         return rc;
     }
 
     rc = SQLFetch(hstmt);
-    TestRunner::CheckRC(rc, "GetRowCount::SQLFetch", hstmt, SQL_HANDLE_STMT);
+    XaTestRunner::CheckRC(rc, "GetRowCount::SQLFetch", hstmt, SQL_HANDLE_STMT);
     if (!SQL_SUCCEEDED(rc))
     {
         return rc;
     }
 
     rc = SQLGetData(hstmt, 1, SQL_C_LONG, &count, sizeof(count), NULL);
-    TestRunner::CheckRC(rc, "GetRowCount::SQLGetData", hstmt, SQL_HANDLE_STMT);
+    XaTestRunner::CheckRC(rc, "GetRowCount::SQLGetData", hstmt, SQL_HANDLE_STMT);
 
     return rc;
 }
@@ -127,7 +127,7 @@ RETCODE GetRowCount(HSTMT hstmt, const std::string tableName, int& count)
 bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int timeout = 0)
 {
     SQLRETURN rc = SQLDriverConnect(hdbc, NULL, (SQLCHAR*)connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
-    TestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
+    XaTestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
     if (!SQL_SUCCEEDED(rc))
     {
         return false;
@@ -135,9 +135,9 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
 
     SQLHSTMT hstmt;
     rc = SQLAllocHandle(SQL_HANDLE_STMT, hdbc, &hstmt);
-    TestRunner::CheckRC(rc, "TestXaRunner::Alloc statement", hdbc, SQL_HANDLE_DBC);
+    XaTestRunner::CheckRC(rc, "TestXaRunner::Alloc statement", hdbc, SQL_HANDLE_DBC);
 
-    const int ROWS_TO_TEST = 10; 
+    const int ROWS_TO_TEST = 10;
     int rowCount = 0;
     bool result = false;
 
@@ -171,7 +171,7 @@ bool TestXaRunner(HDBC hdbc, const char* connString, TestType testType, int time
             if (SQL_SUCCEEDED(xaStatus))
             {                
                 rc = testRunner->ExecuteInsertSequence(tableName, ROWS_TO_TEST, hstmt);
-                TestRunner::CheckRC(rc, "TestXaRunner::ExecuteInsertSequence", hstmt, SQL_HANDLE_STMT);
+                XaTestRunner::CheckRC(rc, "TestXaRunner::ExecuteInsertSequence", hstmt, SQL_HANDLE_STMT);
 
                 if (isTimeoutTest)
                 {
@@ -289,7 +289,7 @@ bool TestSetTimeout(HDBC hdbc, const char* connectionString)
 bool TestRecover(HDBC hdbc, const char* connectionString)
 {
     SQLRETURN rc = SQLDriverConnect(hdbc, NULL, (SQLCHAR*)connectionString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);
-    TestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
+    XaTestRunner::CheckRC(rc, "TestXaRunner::Connecting", hdbc, SQL_HANDLE_DBC);
     if (!SQL_SUCCEEDED(rc))
     {
         return false;
@@ -368,7 +368,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -411,13 +411,12 @@ int main(int argc, char** argv)
     SQLRETURN rc;
 
     rc = SQLAllocHandle(SQL_HANDLE_ENV, NULL, &henv);
-    TestRunner::CheckRC(rc, "Allocating environment", NULL, 0);
+    XaTestRunner::CheckRC(rc, "Allocating environment", NULL, 0);
 
     rc = SQLSetEnvAttr(henv, SQL_ATTR_ODBC_VERSION, (SQLPOINTER)SQL_OV_ODBC3, 0);
 
     rc = SQLAllocHandle(SQL_HANDLE_DBC, henv, &hdbc);
-    TestRunner::CheckRC(rc, "Allocating connection", henv, SQL_HANDLE_ENV);
-
+    XaTestRunner::CheckRC(rc, "Allocating connection", henv, SQL_HANDLE_ENV);
     bool result;
 
     result = TestSetTimeout(hdbc, pConnStr);
@@ -434,14 +433,97 @@ int main(int argc, char** argv)
 
 ```
 
-La `XATestRunner` clase implementa las posibles llamadas XA al comunicarse con el servidor.
+La clase `XATestRunner` implementa las posibles llamadas de XA al comunicarse con el servidor.
+
+## <a name="xatestrunnerh"></a>XaTestRunner.h
+```
+#pragma once
+#include "xadefs.h"
+#include "sqlwindef.h"
+#include "xplatsec.h"
+
+#include <sql.h>
+#include <sqlext.h>
+#include <random>
+
+
+struct RandomProvider
+{
+    std::random_device rd;    
+};
+
+class XidMgr 
+{
+public:
+    static void GetUniqueXid(XID& xid);    
+    static void GetUniqueXid(XID& xid, int formatId, unsigned char* globalId = nullptr, unsigned int sizeGlobalId = 0);
+    static int  GetRandomNumber(int low = 0, int high = 0xffffffff);
+    static void GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer);
+
+    static RandomProvider rndPrv;
+
+};
+
+class XaTestRunner
+{
+public:
+    XaTestRunner(HDBC dbc);
+    ~XaTestRunner();
+
+    RETCODE Start(const XID& xid, const int flags, RETCODE& xaStatus);
+    RETCODE End(const XID& xid, const int flags, RETCODE& xaStatus);
+    RETCODE Prepare(const XID& xid, RETCODE& xaStatus);
+    RETCODE Commit(const XID& xid, const bool onePhase, RETCODE& xaStatus);
+    RETCODE Rollback(const XID& xid, RETCODE& xaStatus);
+    RETCODE Forget(const XID& xid, RETCODE& xaStatus);
+    RETCODE Recover(const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
+
+    bool CreateTable(const std::string& name, SQLHSTMT stmt = NULL);
+    bool DropTable(const std::string& name, SQLHSTMT stmt = NULL);
+
+    void GetUniqueName(std::string& name);
+    bool ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt = NULL);
+
+    static int CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype);
+
+    void SetTimeout(const int tmo);
+    int GetTimeout();
+
+    static void GetUniqueXid(XID& xid) { XidMgr::GetUniqueXid(xid); }
+    static void GetUniqueXid(XID& xid, int formatId, unsigned char* globalId = nullptr, unsigned int sizeGlobalId = 0)
+    {
+        XidMgr::GetUniqueXid(xid, formatId, globalId, sizeGlobalId);
+    }
+
+    static void XidShortToXid(const XID_SHORT& xids, XID& xid);
+
+private:
+    HDBC m_hdbc;
+    std::string m_tableName;
+    std::string m_commandCreateTable;
+    std::string m_commandInsertRow;
+
+    static const char* COMMAND_CREATE_TABLE;
+    static const char* COMMAND_INSERT_ROW;
+
+    bool ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt = NULL);
+    RETCODE IssueXaCall(const XID* xid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus);
+
+};
+
 
 ```
 
-// XATestRunner.cpp : Implemented XA calls to communicate with the server.
-//
-
+## <a name="xatestrunnercpp"></a>XaTestRunner.cpp
+```
 #include "XaTestRunner.h"
+#include <chrono>
+#include <thread>
+#include <ctime>
+#include <atomic>
+
+const char* XaTestRunner::COMMAND_CREATE_TABLE = "CREATE TABLE %s (c1 INT, c2 VARCHAR(300))";
+const char* XaTestRunner::COMMAND_INSERT_ROW = "INSERT INTO %s Values (%d, 'Varchar data for row %d')";
 
 RandomProvider XidMgr::rndPrv;
 
@@ -463,8 +545,11 @@ void XidMgr::GetRandomBuffer(unsigned char* buffer, unsigned int sizeBuffer)
 }
 
 XaTestRunner::XaTestRunner(HDBC dbc)
-             : TestRunner(dbc)
+             : m_hdbc(dbc)
 {
+    GetUniqueName(m_tableName);
+    m_commandCreateTable = COMMAND_CREATE_TABLE;
+    m_commandInsertRow = COMMAND_INSERT_ROW;
 }
 
 XaTestRunner::~XaTestRunner()
@@ -496,6 +581,48 @@ void XidMgr::GetUniqueXid(XID& xid, int formatId, unsigned char* globalId, unsig
     GetRandomBuffer(&xid.data[xid.gtrid_length], xid.bqual_length);
 }
 
+int XaTestRunner::CheckRC(SQLRETURN rc, const char *msg, SQLHANDLE handle, SQLSMALLINT htype)
+{
+    if (rc == SQL_ERROR)
+    {
+        printf("Error occurred upon [%s]\n", msg);
+
+        if (handle)
+        {
+            SQLSMALLINT i = 0;
+            SQLSMALLINT outlen = 0;
+            SQLCHAR errmsg[1024];
+            SQLCHAR sql_state[6];
+            SQLINTEGER native_error = 0;
+
+            while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
+                || rc == SQL_SUCCESS_WITH_INFO)
+            {
+                printf("Error# %d: [%s] state [%s]\n", i, errmsg, sql_state);
+            }
+        }
+
+        return 0;
+    }
+    else if (rc == SQL_SUCCESS_WITH_INFO && handle)
+    {
+        SQLSMALLINT i = 0;
+        SQLSMALLINT outlen = 0;
+        SQLCHAR errmsg[1024];
+        SQLCHAR sql_state[6];
+        SQLINTEGER native_error = 0;
+
+        printf("Success with info for [%s]:\n", msg);
+
+        while ((rc = SQLGetDiagRec(htype, handle, ++i, sql_state, &native_error, errmsg, sizeof(errmsg), &outlen)) == SQL_SUCCESS
+            || rc == SQL_SUCCESS_WITH_INFO)
+        {
+            printf("Msg# %d: [%s] state [%s]\n", i, errmsg, sql_state);
+        }
+    }
+    return 1;
+}
+
 RETCODE XaTestRunner::IssueXaCall(const XID* pXid, int operation, const int flags, unsigned char* buffer, unsigned int& sizeBuffer, RETCODE& xaStatus)
 {
     auto sizeLimit = sizeBuffer;
@@ -516,8 +643,8 @@ RETCODE XaTestRunner::IssueXaCall(const XID* pXid, int operation, const int flag
         memcpy_s(&param[1], sizeBuffer, buffer, sizeBuffer);
     }
 
-    RETCODE rc = SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);
-    CheckRC(rc, " XaTestRunner::IssueXaCall", hdbc, SQL_HANDLE_DBC);
+    RETCODE rc = SQLSetConnectAttr(m_hdbc, SQL_ATTR_ENLIST_IN_XA, param, SQL_IS_POINTER);
+    CheckRC(rc, " XaTestRunner::IssueXaCall", m_hdbc, SQL_HANDLE_DBC);
     xaStatus = SQL_SUCCEEDED(rc) ? param->status : rc;
     sizeBuffer = param->sizeReturned;
     if (sizeBuffer)
@@ -595,7 +722,98 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
     memcpy_s(&xid.data[0], sizeof(xid.data), &xids.data[0], sizeof(xids.data));
 }
 
+void XaTestRunner::GetUniqueName(std::string& name)
+{
+    static std::atomic<unsigned short> counter(0);
+    auto id = counter++;
 
+    auto duration = std::chrono::system_clock::now().time_since_epoch();
+    long long millis = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count();
+    char szName[64];
+    sprintf_s(szName, sizeof(szName), "test_%d_%lld", id, millis);
+    name = szName;
+}
+
+bool XaTestRunner::ExecuteQuery(const char* query, const char* msg, SQLHSTMT stmt)
+{
+    RETCODE rc = SQL_SUCCESS;
+    SQLHSTMT hstmt = stmt;
+    bool isAllocateStatement = (stmt == NULL);
+
+    if (isAllocateStatement)
+    {
+        rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
+    }
+
+    if (SQL_SUCCEEDED(rc))
+    {
+        rc = SQLExecDirectA(hstmt, (SQLCHAR*)query, SQL_NTS);
+        if (!SQL_SUCCEEDED(rc))
+        {
+            CheckRC(rc, msg, hstmt, SQL_HANDLE_STMT);
+        }
+
+        if (isAllocateStatement)
+        {
+            SQLFreeStmt(hstmt, SQL_CLOSE);
+        }
+    }
+    else
+    {
+        CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
+    }
+
+    return SQL_SUCCEEDED(rc);
+
+}
+
+bool XaTestRunner::CreateTable(const std::string& name, SQLHSTMT stmt)
+{
+    char query[256];
+    sprintf_s(query, sizeof(query), m_commandCreateTable.c_str(), name.empty() ? "testRunner" : name.c_str());
+
+    return ExecuteQuery(query, "Create Table", stmt);
+}
+
+bool XaTestRunner::DropTable(const std::string& name, SQLHSTMT stmt)
+{
+    char query[256];
+    const char* tableName = name.empty() ? "testRunner" : name.c_str();
+    sprintf_s(query, sizeof(query), " IF OBJECT_ID('%s', 'U') IS NOT NULL DROP TABLE %s", tableName, tableName);
+
+    return ExecuteQuery(query, "Drop Table", stmt);
+}
+
+bool XaTestRunner::ExecuteInsertSequence(const std::string& nameTable, int rows, SQLHSTMT stmt)
+{
+    SQLHSTMT hstmt = stmt;
+    bool isAllocateStatement = (stmt == NULL);
+    RETCODE rc = SQL_SUCCESS;
+
+    if (isAllocateStatement)
+    {
+        rc = SQLAllocHandle(SQL_HANDLE_STMT, m_hdbc, &hstmt);
+        if (!SQL_SUCCEEDED(rc))
+        {
+            CheckRC(rc, "Alloc Statement", m_hdbc, SQL_HANDLE_DBC);
+            return false;
+        }
+    }
+
+    for (auto r = 0; r < rows; r++)
+    {
+        char query[256];
+        sprintf_s(query, sizeof(query), m_commandInsertRow.c_str(), nameTable.c_str(), r, r);
+        rc = ExecuteQuery(query, "Insert Row", hstmt);
+    }
+
+    if (isAllocateStatement)
+    {
+        SQLFreeStmt(hstmt, SQL_CLOSE);
+    }
+
+    return true;
+}
 ```
 
 

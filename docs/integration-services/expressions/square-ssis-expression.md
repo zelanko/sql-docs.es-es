@@ -14,10 +14,10 @@ ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06bf3ea82f026a36fece8266354e79992473df44
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288640"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expresión de SSIS)
@@ -41,7 +41,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SQUARE devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Antes de realizar la operación de raíz cuadrada, se convierte el argumento al tipo de datos DT_R8.  

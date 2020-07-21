@@ -12,35 +12,35 @@ helpviewer_keywords:
 - installing ODBC components [ODBC], about installing
 - ODBC [ODBC], component installation
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bf2ef856d8970bf60b3f1f329c57a2379eb528dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bbd0a6aeba8073ce14b08b8635396b1f231895fb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094020"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298985"
 ---
 # <a name="installing-odbc-components"></a>Instalar componentes de ODBC
 > [!NOTE]  
->  Desde Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. ODBC explícitamente sólo debe instalar en versiones anteriores de Windows.  
+>  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar explícitamente ODBC en versiones anteriores de Windows.  
   
- En esta sección se describe cómo instalar y quitar componentes de ODBC. Dado que los desarrolladores de controladores siempre instalación un componente ODBC (su controlador), que necesitan leer esta sección. Los desarrolladores de aplicaciones deben leer esta sección solo si enviará a los componentes ODBC con sus aplicaciones. Componentes ODBC incluyen el Administrador de controladores, controladores, traductores, el archivo DLL de instalador, la biblioteca de cursores y los archivos relacionados. Para los fines de esta sección, las aplicaciones ODBC no se consideran como componentes ODBC.  
+ En esta sección se describe cómo se instalan y se quitan los componentes ODBC. Dado que los desarrolladores de controladores siempre instalan un componente ODBC (su controlador), necesitan leer esta sección. Los desarrolladores de aplicaciones deben leer esta sección solo si van a enviar componentes ODBC con sus aplicaciones. Los componentes ODBC incluyen el administrador de controladores, los controladores, los traductores, la DLL del instalador, la biblioteca de cursores y los archivos relacionados. Para los fines de esta sección, las aplicaciones ODBC no se consideran componentes ODBC.  
   
 > [!NOTE]  
->  En esta sección es específica para las plataformas de Microsoft Windows. Cómo se instalan los componentes de ODBC en otras plataformas es específico de la plataforma.  
+>  Esta sección es específica de las plataformas de Microsoft Windows. La forma en que se instalan los componentes ODBC en otras plataformas es específica de la plataforma.  
   
- Componentes de ODBC se instalan y se quitan según el componente a componente, no es una base por archivo. Por ejemplo, si un traductor consta del traductor de sí mismo y un número de archivos de datos, estos archivos están instalados y quitados como un grupo; deben no instalados y quitan según el archivo por archivo. La razón de esto es para asegurarse de que existen componentes sólo completados en el sistema.  
+ Los componentes ODBC se instalan y se quitan componente por componente, no por archivo. Por ejemplo, si un traductor está formado por el propio traductor y varios archivos de datos, estos archivos se instalan y se quitan como un grupo. no deben instalarse y quitarse de forma individual para cada archivo. El motivo es asegurarse de que solo existen componentes completos en el sistema.  
   
- Para fines de instalación y desinstalación de componentes, el siguiente se define los componentes ODBC:  
+ A efectos de la instalación y la eliminación de componentes, se define lo siguiente como componentes ODBC:  
   
--   **Componentes principales.** El Administrador de controladores, biblioteca de cursores, instalador de DLL y cualquier otro relacionados con archivos constituyen los componentes principales y deben estar instalados y quitar como grupo.  
+-   **Componentes principales.** El administrador de controladores, la biblioteca de cursores, el instalador DLL y cualquier otro archivo relacionado componen los componentes principales y deben instalarse y quitarse como un grupo.  
   
--   **Controladores.** Cada controlador es un componente independiente.  
+-   **Dispositivos.** Cada controlador es un componente independiente.  
   
--   **Traductores.** Cada translator es un componente independiente.  
+-   **Traductores.** Cada traductor es un componente independiente.  
   
- Con la compatibilidad de Unicode en ODBC 3.5 y versiones posteriores, debe proporcionarse cierta consideración al uso de componentes OLE DB con ODBC. La versión 1.1 del proveedor OLE DB para ODBC se escribió para las especificaciones de Unicode específicas dentro de ODBC 3.0. Dado que estas especificaciones cambian en ODBC 3.5, es necesario tener la versión 1.5 o posterior del proveedor cuando se usa ODBC 3.5 y versiones posteriores. Esta sección contiene los temas siguientes.  
+ Con la compatibilidad con Unicode en ODBC 3,5 y versiones posteriores, se debe tener en cuenta el uso de componentes de OLE DB con ODBC. La versión 1,1 del proveedor de OLE DB para ODBC se escribió en especificaciones Unicode específicas en ODBC 3,0. Dado que estas especificaciones han cambiado en ODBC 3,5, es necesario tener la versión 1,5 o posterior del proveedor al usar ODBC 3,5 y versiones posteriores. Esta sección contiene los temas siguientes.  
   
 -   [Componentes de instalación](../../../odbc/reference/install/installation-components.md)  
   

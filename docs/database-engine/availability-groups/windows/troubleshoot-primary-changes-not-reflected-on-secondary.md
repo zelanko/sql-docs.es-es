@@ -1,24 +1,24 @@
 ---
-title: 'Determinación de por qué los cambios no son visibles en la réplica secundaria para un grupo de disponibilidad: SQL Server'
-ms.description: Troubleshoot to determine why changes occurring on a primary replica are not reflected on the secondary replica for an Always On availability group.
-ms.custom: ag-guide,seodec18
+title: Cambios no visibles en la réplica del grupo de disponibilidad secundario
+description: Obtenga información sobre cómo determinar por qué los cambios de una réplica principal no se reflejan en la secundaria de un grupo de disponibilidad Always On.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: bed83c98489d1622e97dd84c9f5c1994715b60fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013682"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888007"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Determinación de por qué los cambios de la réplica principal no se reflejan en una réplica secundaria de un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado. En este caso, se presupone que el estado de sincronización de su disponibilidad es correcto. En la mayoría de casos, este comportamiento se resuelve pasados unos minutos.  
   
  Si los cambios aún no se reflejan en la réplica secundaria pasados unos minutos, puede haber un cuello de botella en el flujo de trabajo de sincronización. La ubicación del cuello de botella depende de si la réplica secundaria se establece en confirmación sincrónica o asincrónica.  
@@ -50,7 +50,7 @@ ms.locfileid: "68013682"
 En las siguientes secciones se describen las causas comunes de los cambios en la réplica principal que no se reflejan en la réplica secundaria para las consultas de solo lectura.  
 
 
-##  <a name="BKMK_OLDTRANS"></a> Transacciones activas de ejecución prolongada  
+##  <a name="long-running-active-transactions"></a><a name="BKMK_OLDTRANS"></a> Transacciones activas de ejecución prolongada  
  Una transacción de ejecución prolongada en la réplica principal impide que las actualizaciones se lean en la réplica secundaria.  
   
 ### <a name="explanation"></a>Explicación  
@@ -59,7 +59,7 @@ En las siguientes secciones se describen las causas comunes de los cambios en la
 ### <a name="diagnosis-and-resolution"></a>Diagnóstico y resolución  
  En la réplica principal, use [DBCC OPENTRAN &#40;Transact-SQL&#41; ](~/t-sql/database-console-commands/dbcc-opentran-transact-sql.md) para ver las transacciones activas más antiguas y vea si se pueden revertir. Cuando las transacciones activas más antiguas se han revertido y sincronizado en la réplica secundaria, las cargas de trabajo de lectura en la réplica secundaria pueden ver las actualizaciones en la base de datos de disponibilidad hasta el principio de la transacción activa que en aquel momento sea la más antigua.  
   
-##  <a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
+##  <a name="high-network-latency-or-low-network-throughput-causes-log-build-up-on-the-primary-replica"></a><a name="BKMK_LATENCY"></a> La alta latencia de red o el bajo rendimiento de red producen una acumulación de registros en la réplica principal  
  La alta latencia de red o el bajo rendimiento pueden impedir que los registros se envíen a la réplica secundaria lo suficientemente rápido.  
   
 ### <a name="explanation"></a>Explicación  
@@ -92,7 +92,7 @@ En las siguientes secciones se describen las causas comunes de los cambios en la
   
  Para solucionar este problema, intente actualizar el ancho de banda de red o eliminar o reducir el tráfico de red innecesario.  
   
-##  <a name="BKMK_REDOBLOCK"></a> Otra carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
+##  <a name="another-reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> Otra carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
  El subproceso de la fase de puesta al día de la réplica secundaria no puede hacer cambios en el lenguaje de definición de datos (DDL) a partir de una consulta de solo lectura de ejecución prolongada. El subproceso de la fase de puesta al día debe desbloquearse para poder poner más actualizaciones a disposición de la carga de trabajo de lectura.  
   
 ### <a name="explanation"></a>Explicación  
@@ -108,7 +108,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Puede esperar a que la carga de trabajo de los informes finalice, momento en que el subproceso de la fase de puesta al día se desbloqueará, o puede desbloquear inmediatamente el subproceso de la fase de puesta al día mediante la ejecución del comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) en el identificador de sesión de bloqueo.  
   
-##  <a name="BKMK_REDOBEHIND"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_REDOBEHIND"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
  Una gran carga de trabajo de informes en la réplica secundaria ha ralentizado el rendimiento de la réplica secundaria y el subproceso de la fase de puesta al día se ha retrasado.  
   
 ### <a name="explanation"></a>Explicación  
@@ -127,6 +127,6 @@ from sys.dm_hadr_database_replica_states
  Si realmente el subproceso de la fase de puesta al día se retrasa, debe investigar la causa principal de la degradación del rendimiento en la réplica secundaria. Si se produce una contención de E/S en la carga de trabajo de los informes, puede usar [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) para controlar, hasta cierto punto, los ciclos de CPU que usa la carga de trabajo de informes para controlar indirectamente los ciclos de E/S realizados. Por ejemplo, si la carga de trabajo de los informes está consumiendo un 10 % de la CPU, pero la carga de trabajo está enlazada a E/S, puede utilizar Resource Governor para limitar el uso de recursos de la CPU al 5 % y regular así la carga de trabajo de lectura. De esta forma, se reduce el impacto en la E/S.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Solucionar problemas de rendimiento en SQL Server 2008) 
+ [Troubleshooting performance problems in SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx) (Solucionar problemas de rendimiento en SQL Server 2008)
   
   

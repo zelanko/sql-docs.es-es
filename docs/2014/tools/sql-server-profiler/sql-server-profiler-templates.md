@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26082eaf429aae38012c7da31cfebff7434edd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68186144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999804"
 ---
 # <a name="sql-server-profiler-templates"></a>Plantillas de SQL Server Profiler
   Puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear plantillas que definan las clases de eventos y columnas de datos que desea incluir en los seguimientos. Después de definir y guardar la plantilla, ejecute un seguimiento que registre los datos de cada clase de evento que ha seleccionado. Una sola plantilla puede utilizarse en varios seguimientos puesto que la plantilla no se ejecuta como tal.  
@@ -37,7 +36,7 @@ ms.locfileid: "68186144"
 ## <a name="predefined-templates"></a>Plantillas predefinidas  
  Además de la plantilla Standard (predeterminada), el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] incluye varias plantillas predefinidas para supervisar determinados tipos de evento. En la siguiente tabla figura una lista de las plantillas predefinidas, su finalidad y las clases de eventos sobre las que capturan información.  
   
-|Nombre de plantilla|Finalidad de la plantilla|Clases de evento|  
+|Nombre de la plantilla|Finalidad de la plantilla|Clases de eventos|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|Captura el comportamiento de la ejecución de procedimientos almacenados a lo largo del tiempo.|**SP:Starting**|  
 |Estándar|Punto de inicio genérico para crear un seguimiento. Captura todos los procedimientos almacenados y lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan. Utilice esta plantilla para supervisar la actividad general del servidor de base de datos.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
@@ -47,19 +46,19 @@ ms.locfileid: "68186144"
 |TSQL_Locks|Captura todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que los clientes envían a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , junto con los eventos de bloqueo excepcionales. Úselo para solucionar problemas de eventos de interbloqueos, de tiempo de espera de bloqueo y de extensión de bloqueo.|**Blocked Process Report**<br /><br /> **SP:StmtCompleted**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:StmtCompleted**<br /><br /> **SQL:StmtStarting**<br /><br /> **Deadlock Graph**<br /><br /> **Lock:Cancel**<br /><br /> **Lock:Deadlock**<br /><br /> **Lock:Deadlock Chain**<br /><br /> **Lock:Escalation**<br /><br /> **Lock:Timeout (timeout>0)**|  
 |TSQL_Replay|Captura información detallada acerca de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] necesaria para cuando se reproduzca el seguimiento. Utilice esta plantilla para ejecutar optimizaciones iterativas tales como pruebas comparativas.|**CursorClose**<br /><br /> **CursorExecute**<br /><br /> **CursorOpen**<br /><br /> **CursorPrepare**<br /><br /> **CursorUnprepare**<br /><br /> **Audit Login**<br /><br /> **Audit Logout**<br /><br /> **Existing Connection**<br /><br /> **RPC Output Parameter**<br /><br /> **RPC:Completed**<br /><br /> **RPC:Starting**<br /><br /> **Exec Prepared SQL**<br /><br /> **Prepare SQL**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_SPs|Captura información detallada acerca de todos los procedimientos almacenados en ejecución. Utilice esta plantilla para analizar los pasos de componente de los procedimientos almacenados. Agregue el evento **SP:Recompile** si sospecha que se están volviendo a compilar los procedimientos.|**Audit Login**<br /><br /> **Audit Logout**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SP:Completed**<br /><br /> **SP:Starting**<br /><br /> **SP:StmtStarting**<br /><br /> **SQL:BatchStarting**|  
-|Tuning|Captura información acerca de los procedimientos almacenados y la ejecución de lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Utilice esta plantilla para crear un archivo de salida del seguimiento que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueda utilizar como carga de trabajo para optimizar las bases de datos.|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
+|Ajuste|Captura información acerca de los procedimientos almacenados y la ejecución de lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Utilice esta plantilla para crear un archivo de salida del seguimiento que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pueda utilizar como carga de trabajo para optimizar las bases de datos.|**RPC:Completed**<br /><br /> **SP:StmtCompleted**<br /><br /> **SQL:BatchCompleted**|  
   
  Para obtener información acerca de las clases de eventos, vea [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
 ## <a name="default-template"></a>Plantilla predeterminada  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] designa de forma automática la plantilla **Standard** como plantilla predeterminada para aplicar a cualquier seguimiento nuevo. No obstante, puede cambiar la plantilla predeterminada por cualquier otra predefinida o definida por el usuario. Para cambiar la plantilla predeterminada, active la casilla **Usar como plantilla predeterminada para tipo de servidor seleccionado** cuando cree o edite una plantilla desde la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** .  
   
- Para obtener acceso al cuadro de diálogo **Propiedades de la plantilla de seguimiento** , en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **del** , elija **Plantillas**y haga clic en **Nueva plantilla** o **Editar plantilla**.  
+ Para obtener acceso al cuadro de diálogo **Propiedades de la plantilla de seguimiento**, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**, elija **Plantillas**y haga clic en **Nueva plantilla** o **Editar plantilla**.  
   
 > [!NOTE]  
 >  La plantilla predeterminada es específica para un tipo de servidor concreto. Si la cambia para un tipo de servidor, seguirá siendo la misma para el resto de tipos de servidor. Para obtener más información sobre cómo configurar una plantilla predeterminada para un servidor específico, vea [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Exportar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   

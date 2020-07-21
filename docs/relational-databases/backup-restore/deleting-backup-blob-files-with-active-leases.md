@@ -1,5 +1,6 @@
 ---
 title: Eliminación de archivos de blob de copia de seguridad con concesiones activas | Microsoft Docs
+description: Si se produce un error en una copia de seguridad o una restauración de SQL Server, un blob de Azure Storage puede quedar huérfano. Obtenga más información sobre cómo eliminar un blob huérfano.
 ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908935"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737823"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cuando se hace una copia de seguridad en Microsoft Azure Storage, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita para bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema, se describe cómo liberar (interrumpir) la concesión y eliminar el blob.
   
@@ -42,7 +43,7 @@ En los pasos siguientes se describe cómo realizar la limpieza después de una a
   
 1. **Eliminar el blob:** para eliminar un blob con una concesión activa, primero debe interrumpir la concesión.  
 
-###  <a name="Code_Example"></a> Ejemplo de script de PowerShell  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Ejemplo de script de PowerShell  
   
 > [!IMPORTANT]
 > Si está ejecutando PowerShell 2.0, quizás tenga problemas al cargar el ensamblado de Microsoft WindowsAzure.Storage.dll. Recomendamos que actualice [PowerShell](https://docs.microsoft.com/powershell/) para resolver el problema. También puede usar la solución alternativa siguiente para crear o modificar el archivo powershell.exe.config para cargar los ensamblados de .NET 2.0 y .NET 4.0 en tiempo de ejecución con lo siguiente:  
@@ -125,6 +126,6 @@ if($lockedBlobs.Count -gt 0)
 } else { Write-Host " There are no blobs with locked lease status." }
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

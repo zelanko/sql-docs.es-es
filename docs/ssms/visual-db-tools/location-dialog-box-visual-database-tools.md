@@ -1,10 +1,9 @@
 ---
-title: Cuadro de diálogo Ubicación (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Ubicación
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cd2e40972e790068b6ce0c19f8d85bcc0e4fa805
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2188d0ede38f7cc5afbbb7f1a918e8428e7924c2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265230"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75224649"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Ubicación (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +26,7 @@ Utilice este cuadro de diálogo para ubicar y seleccionar la carpeta que contien
   
 -   Elija **Nuevo** en el menú **Archivo** y seleccione **Proyecto**. Cuando se muestre el cuadro de diálogo **Nuevo proyecto** , elija **Examinar**. El cuadro de diálogo **Ubicación** se abre con el título **Ubicación del proyecto**.  
   
-**Buscar en**  
+**Look in**  
 Permite buscar la carpeta que desee de esta lista. Se muestran las subcarpetas de la carpeta seleccionada.  
   
 ## <a name="my-places-bar"></a>Barra Mis direcciones  

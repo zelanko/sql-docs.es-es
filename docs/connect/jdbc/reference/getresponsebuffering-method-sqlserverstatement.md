@@ -13,14 +13,14 @@ apilocation:
 - SQLServerStatement.getResponseBuffering()
 apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5848bd6b1f77d3989bed1300a7127391e1ff3c27
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980401"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921865"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>María getResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **Cadena** que contiene un **completo** o **adaptable**en minúsculas.  
+ Un objeto **String** que contiene un atributo **full** o **adaptive** en minúscula.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor **adaptive** especifica que se almacenen en búfer los menos datos posibles cuando sea necesario.  
   
  El valor **full** se especifica mediante la lectura del resultado completo desde el servidor en el tiempo de ejecución.  
   
- **Adaptive** es el valor predeterminado en la versión 2,0 y 3,0 del controlador JDBC. **Full** era el valor predeterminado antes de la versión 2,0 del controlador JDBC.  
+ El valor **adaptive** es el predeterminado en la versión 2.0 y 3.0 del controlador JDBC. El valor **full** era el valor predeterminado antes de la versión 2.0 del controlador JDBC.  
   
- Para obtener más información sobre cómo usar el modo de almacenamiento en búfer de respuesta, vea [usar el almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Para más información sobre cómo utilizar el modo de almacenamiento en búfer de respuesta, vea [Empleo de almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Método setResponseBuffering &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

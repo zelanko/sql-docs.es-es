@@ -1,5 +1,5 @@
 ---
-title: Cómo consultas y vistas representa combinaciones el diseñador (Visual Database Tools) | Microsoft Docs
+title: Cómo representa combinaciones el diseñador de consultas y vistas (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f91e8f226fe97cdced78deb6b8c239806461d426
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067191"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
   Si las tablas están combinadas, el [Diseñador de consultas y vistas](visual-database-tools.md) representa la combinación de forma gráfica en el [panel Diagrama](diagram-pane-visual-database-tools.md) y mediante sintaxis SQL en el [panel SQL](sql-pane-visual-database-tools.md).  
@@ -31,7 +30,7 @@ ms.locfileid: "63155266"
   
  Si las tablas están combinadas mediante más de una condición de combinación, el Diseñador de consultas y vistas muestra varias líneas de combinación, como en el ejemplo siguiente:  
   
- ![Tablas combinadas mediante más de una condición de combinación](../../database-engine/media//dv3w9n1.gif "Tablas combinadas mediante más de una condición de combinación")  
+ ![Tablas combinadas usando más de una condición de combinación](../../database-engine/media//dv3w9n1.gif "Tablas combinadas usando más de una condición de combinación")  
   
  Si no se muestran las columnas de datos combinadas (por ejemplo, el rectángulo que representa la tabla o el objeto con estructura de tabla está minimizado o la combinación incluye una expresión), el Diseñador de consultas coloca la línea de combinación en la barra de título del rectángulo que representa la tabla o el objeto con estructura de tabla.  
   
@@ -80,8 +79,8 @@ ms.locfileid: "63155266"
     WHERE publishers.pub_id = pub_info.pub_id  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Cuadro de diálogo Combinar &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   
   

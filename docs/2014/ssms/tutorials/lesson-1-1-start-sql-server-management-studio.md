@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94466dc6c069ced5b2743cbd8a14d98271303477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061964"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar SQL Server Management Studio
   Para empezar este tutorial, veamos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -27,9 +26,9 @@ ms.locfileid: "63188836"
 1.  En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no está instalado de forma predeterminada. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible, ejecute el programa de instalación para instalarlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Express está disponible como descarga gratuita en el [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=37075&clcid=0x409), pero tiene una interfaz de usuario diferente que se describe en este tutorial.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no está instalado de forma predeterminada. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible, ejecute el programa de instalación para instalarlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express está disponible como descarga gratuita en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), pero tiene una interfaz de usuario diferente a la que se describe en este tutorial.  
   
-2.  En el cuadro de diálogo **Conectar al servidor** , compruebe la configuración predeterminada y, después, haga clic en **Conectar**. Para conectarse, el **nombre del servidor** cuadro debe contener el nombre del equipo donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una instancia con nombre, el **nombre del servidor** cuadro también debe contener el nombre de instancia en el formato \< *computer_name* > \\ < *instance_name*>.  
+2.  En el cuadro de diálogo **Conectar al servidor** , compruebe la configuración predeterminada y, después, haga clic en **Conectar**. Para conectarse, el cuadro **nombre del servidor** debe contener el nombre del equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una instancia con nombre, el cuadro **nombre del servidor** también debe contener el nombre de la instancia en el formato \<*computer_name*> \\ < *instance_name*>.  
   
 ## <a name="management-studio-components"></a>Componentes de Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presenta la información en ventanas dedicadas a tipos de información específicos. La información de la base de datos se muestra en las ventanas de documentos y en el Explorador de objetos.  
@@ -46,7 +45,7 @@ ms.locfileid: "63188836"
   
      La ventana Servidores registrados aparece encima del Explorador de objetos. Servidores registrados enumera los servidores que el usuario administra habitualmente. Puede agregar y quitar los servidores de esta lista. Solo aparecerán en la lista los servidores de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se encuentren en el equipo donde se ejecuta [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Si no aparece su servidor, en servidores registrados, haga clic en **motor de base de datos**y, a continuación, haga clic en **actualizar registro de servidor Local**.  
+2.  Si el servidor no aparece, en servidores registrados, haga clic con el botón secundario en **motor de base de datos**y, a continuación, haga clic en **Actualizar registro de servidor local**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Conectar con el Explorador de objetos y Servidores registrados](../object/object-explorer.md)  

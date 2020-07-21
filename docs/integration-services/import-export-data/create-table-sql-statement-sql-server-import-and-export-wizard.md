@@ -12,10 +12,10 @@ ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285228"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server)
@@ -33,7 +33,7 @@ Si selecciona **Crear tabla de destino** y luego **Editar SQL** en el cuadro de 
  
 En este ejemplo, el cuadro **Instrucción SQL** contiene la instrucción **CREATE TABLE** predeterminada generada por el asistente. Esta instrucción crea una tabla de destino denominada **Person.AddressNew** que es una copia de la tabla de origen **Person.Address**. 
   
- ![Página Crear tabla del Asistente para importación y exportación](../../integration-services/import-export-data/media/create-table.png "Create table page of the Import and Export Wizard")  
+ ![Creación de una página de tabla del Asistente para importar y exportar](../../integration-services/import-export-data/media/create-table.png "Creación de una página de tabla del Asistente para importar y exportar")  
   
 ## <a name="review-or-regenerate-the-create-table-statement"></a>Revisar o volver a generar la instrucción CREATE TABLE  
  **Instrucción SQL**  
@@ -58,7 +58,7 @@ Para obtener más información sobre la sintaxis, vea [CREATE TABLE &#40;Transac
 ## <a name="whats-next"></a>¿Qué sigue?  
  Después de revisar y personalizar el comando CREATE TABLE y de hacer clic en **Aceptar**, el cuadro de diálogo **Instrucción Create Table de SQL** le volverá a dirigir al cuadro de diálogo **Asignaciones de columnas** . Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

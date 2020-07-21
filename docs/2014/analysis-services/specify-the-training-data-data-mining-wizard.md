@@ -1,5 +1,5 @@
 ---
-title: Especifique los datos de entrenamiento (Asistente para minería de datos) | Microsoft Docs
+title: Especificar los datos de entrenamiento (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940266"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar los datos de entrenamiento (Asistente para minería de datos)
   Utilice la página **Especificar los datos de aprendizaje** para identificar las columnas que se van a incluir en la estructura de minería de datos. Puede seleccionar columnas para que se incluyan en la estructura aunque no las utilice en todos los modelos. Por ejemplo, si desea obtener detalles de las columnas del modelo de minería, puede incluirlas en la estructura pero no en el modelo.  
@@ -27,18 +26,18 @@ ms.locfileid: "66068064"
 > [!NOTE]  
 >  Los diferentes algoritmos de minería utilizan las claves de forma diferente. Para más información sobre los diferentes tipos de claves, vea [Tipos de contenido &#40;minería de datos&#41;](data-mining/content-types-data-mining.md).  
   
- **Para obtener más información:** [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [columnas del modelo de minería de datos](data-mining/mining-model-columns.md), [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Columnas del modelo de minería de datos](data-mining/mining-model-columns.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
- **Las tablas y columnas**  
+ **Tablas y columnas**  
  Muestra las tablas y columnas seleccionadas en la página anterior del asistente.  
   
- **\<casilla de verificación >**  
+ **\<check box>**  
  Seleccione las columnas que desea incluir en la estructura de minería de datos.  
   
  Si su origen de datos incluye tablas anidadas o vistas múltiples, expanda la lista de columnas para ver las tablas anidadas.  
   
- **Key**  
+ **Clave**  
  Seleccione esta opción para utilizar la columna como un identificador único para los datos.  
   
  Para una tabla de casos, la clave es normalmente el identificador único.  
@@ -58,15 +57,15 @@ ms.locfileid: "66068064"
   
  **Nota** : esta columna solo está disponible cuando se crea un modelo de minería junto con la estructura de minería de datos.  
   
- **Suggest**  
+ **Propone**  
  Haga clic para abrir el cuadro de diálogo **Sugerir columnas relacionadas** , que realiza un análisis de una muestra de datos para identificar las columnas de entrada más relacionadas con la columna **Predicción** seleccionada según la entropía. Este análisis también se aplica a las columnas de la tabla anidada o a las estructuras de minería basadas en orígenes OLAP.  
   
  **Nota** : esta columna solo está disponible cuando se crea un modelo de minería junto con la estructura de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para minería de datos (ayuda F1) &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Sugerir columnas relacionadas &#40;Asistente para minería de datos&#41;](suggest-related-columns-data-mining-wizard.md)   
  [Especificar tipos de tablas &#40;Asistente para minería de datos&#41;](specify-table-types-data-mining-wizard.md)   
- [Especificar el contenido y el tipo de datos de la columna &#40;Asistente para minería de datos&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [Especifique el contenido y el tipo de datos de la columna &#40;Asistente para minería de datos&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

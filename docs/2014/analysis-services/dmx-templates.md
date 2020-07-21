@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081560"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528518"
 ---
 # <a name="dmx-templates"></a>Plantillas DMX
   Las plantillas de minería de datos ayudan a crear rápidamente consultas sofisticadas. Aunque la sintaxis general de las consultas DMX está bien documentada, el uso de plantillas facilita la creación de consultas haciendo clic y apuntando a los argumentos y orígenes de datos.  
@@ -24,13 +23,13 @@ ms.locfileid: "66081560"
   
 1.  En el cliente de minería de datos para Excel, haga clic en **consulta**.  
   
-2.  En el Asistente para **iniciar** página, haga clic en **siguiente**.  
+2.  En la página **Inicio** del asistente, haga clic en **siguiente**.  
   
-3.  En la página, **Seleccionar modelo**, haga clic en **avanzadas**.  
+3.  En la página, **Seleccione modelo**y haga clic en **Opciones avanzadas**.  
   
-     **Sugerencia:** Si va a crear una consulta de predicción en un modelo, puede seleccionar el modelo primero y, a continuación, haga clic en **avanzadas**, para rellenar previamente la plantilla con el nombre del modelo.  
+     **Sugerencia:** Si va a crear una consulta de predicción en un modelo, puede seleccionar primero el modelo y, a continuación, hacer clic en **avanzadas**, para rellenar previamente la plantilla con el nombre del modelo.  
   
-4.  En el **Editor minería de datos avanzada consulta**, haga clic en **plantillas DMX**y seleccione una plantilla.  
+4.  En el **Editor de consultas avanzadas de minería de datos**, haga clic en **plantillas DMX**y seleccione una plantilla.  
   
 5.  Presione ENTRAR para cargar la plantilla en el panel Consulta DMX.  
   
@@ -38,16 +37,16 @@ ms.locfileid: "66081560"
   
      Para las consultas de predicción, elija el conjunto de datos de entrada primero y asigne después las columnas.  
   
-7.  Haga clic en **Editar consulta** para cambiar a la vista del editor de texto y cambie manualmente la consulta.  
+7.  Haga clic en **Editar consulta** para cambiar a la vista del editor de texto y cambiar manualmente la consulta.  
   
      Sin embargo, tenga en cuenta que si cambia las vistas al trabajar en el editor de consultas, se borrará cualquier información que tuviera en la vista anterior. Antes de cambiar de vista, guarde el trabajo; para ello, copie y pegue las instrucciones DMX en un archivo independiente.  
   
-8.  Haga clic en **Finalizar**. En el **elegir destino** diálogo cuadro, especifique dónde desea que se guarden los resultados. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  Haga clic en **Finalizar** En el cuadro de diálogo **elegir destino** , especifique dónde desea que se guarde el resultado. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  Si ha ejecutado una instrucción correctamente, la instrucción DMX que envía al servidor también se registra en el **seguimiento** ventana. Para obtener más información sobre cómo usar la característica de seguimiento, vea [seguimiento &#40;cliente de minería de datos para Excel&#41;](trace-data-mining-client-for-excel.md).  
+>  Si ha ejecutado una instrucción correctamente, la instrucción DMX que envió al servidor también se registra en la ventana de **seguimiento** . Para obtener más información sobre cómo usar la característica de seguimiento, vea [seguimiento &#40;cliente de minería de datos para Excel&#41;](trace-data-mining-client-for-excel.md).  
   
- Para obtener más información sobre cómo usar los datos de minería de datos Editor de consultas avanzadas, vea [consulta &#40;complementos de minería de datos de SQL Server&#41; ](query-sql-server-data-mining-add-ins.md) y [Editor de consultas avanzadas de minería de datos](advanced-data-mining-query-editor.md).  
+ Para obtener más información sobre cómo usar el editor de consultas avanzadas de minería de datos, vea [&#40;de consultas SQL Server complementos de minería de datos&#41;](query-sql-server-data-mining-add-ins.md) y [Editor de consultas avanzadas de minería de datos](advanced-data-mining-query-editor.md).  
   
 ## <a name="list-of-dmx-templates"></a>Lista de plantillas DMX  
  En el Cliente de minería de datos para Excel se incluyen las siguientes plantillas DMX.  
@@ -72,9 +71,9 @@ ms.locfileid: "66081560"
   
 -   Consulta de predicción TOP en tabla anidada  
   
- **Crear**  
+ **Creación**  
   
- Use estas plantillas para crear modelos o estructuras de datos personalizados. No se limita a los modelos admitidos por los asistentes; puede usar cualquier algoritmo de minería de datos admitido por la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que están conectados, incluidos los algoritmos de complemento.  
+ Use estas plantillas para crear modelos o estructuras de datos personalizados. No está limitado a los modelos que admiten los asistentes: puede usar cualquier algoritmo de minería de datos admitido por la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que está conectado, incluidos los algoritmos de complemento.  
   
 -   Modelo de minería de datos  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66081560"
   
 -   Estructura temporal  
   
- **Propiedades de modelo**  
+ **Propiedades del modelo**  
   
  Use estas plantillas para crear consultas que obtienen metadatos sobre el modelo y el conjunto de entrenamiento. También puede recuperar detalles del contenido del modelo u obtener un perfil estadístico de los datos de entrenamiento.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66081560"
 ### <a name="requirements"></a>Requisitos  
  Dependiendo de la plantilla que esté utilizando, es posible que necesite permisos administrativos para tener acceso al servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y ejecutar la consulta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un modelo de minería de datos](creating-a-data-mining-model.md)  
   
   

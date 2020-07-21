@@ -20,10 +20,10 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f963a3f8bf82ed3de76e31b6872ac6475d6dfd83
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297848"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
@@ -60,7 +60,7 @@ ms.locfileid: "71297848"
   
  Para obtener información sobre cómo establecer las propiedades de esta transformación, haga clic en uno de los temas siguientes:  
   
--   [Ampliar un conjunto de datos con la transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)  
+-   [Ampliación de un conjunto de datos con la transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   

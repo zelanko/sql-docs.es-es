@@ -1,6 +1,6 @@
 ---
-title: Cargar datos en almacenamiento de datos paralelos | Microsoft Docs
-description: Puede cargar o insertar datos en almacenamiento de datos paralelos de SQL Server (PDW) mediante el uso de la instrucción SQL INSERT, dwloader, utilidad bcp o Integration Services.
+title: Carga de datos
+description: Puede cargar o insertar datos en SQL Server almacenamiento de datos paralelos (PDW) mediante Integration Services, la utilidad BCP, dwloader o la instrucción INSERT de SQL.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,33 +8,34 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b046839b7c4932b43230d28cc106db1e2ea5d5a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960692"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74401045"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Cargar datos en almacenamiento de datos paralelos
-Puede cargar o insertar datos en almacenamiento de datos paralelos de SQL Server (PDW) mediante el uso de Integration Services, [bcp (utilidad)](../tools/bcp-utility.md), **dwloader** del cargador de la línea de comandos o la instrucción SQL INSERT.  
+Puede cargar o insertar datos en SQL Server almacenamiento de datos paralelos (PDW) mediante Integration Services, la [utilidad BCP](../tools/bcp-utility.md), el cargador de línea de comandos **dwloader** o la instrucción INSERT de SQL.  
 
-## <a name="loading-environment"></a>Cargando el entorno  
-Para cargar datos, necesita uno o más servidores de carga. Puede usar su propio ETL existente u otros servidores, o puede comprar nuevos servidores. Para obtener más información, consulte [adquirir y configurar un servidor al cargar](acquire-and-configure-loading-server.md). Estas instrucciones incluyen un [hoja de planeamiento de capacidad de cargar Server](loading-server-capacity-planning-worksheet.md) le ayudará a planear la solución adecuada para la carga.  
+## <a name="loading-environment"></a>Cargando entorno  
+Para cargar datos, necesita uno o más servidores de carga. Puede usar su propio ETL existente u otros servidores, o puede adquirir nuevos servidores. Para obtener más información, vea [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md). Estas instrucciones incluyen una [hoja de cálculo de planeamiento](loading-server-capacity-planning-worksheet.md) de la capacidad del servidor de carga para ayudarle a planear la solución adecuada para la carga.  
   
-## <a name="load-with-dwloader"></a>Cargar con dwloader  
-Mediante el [del cargador de la línea de comandos de dwloader](dwloader.md) es la forma más rápida para cargar datos en PDW.  
+## <a name="load-with-dwloader"></a>Carga con dwloader  
+Usar el [cargador de línea de comandos dwloader](dwloader.md) es la forma más rápida de cargar datos en PDW.  
   
-![Proceso de carga](media/loading-process.png "proceso de carga")  
+![Proceso de carga](media/loading-process.png "Cargando proceso")  
   
-dwloader carga datos directamente a los nodos de proceso sin pasar los datos a través del nodo de Control. Para cargar datos, dwloader en primer lugar se comunica con el nodo de Control para obtener información de contacto para los nodos de proceso. dwloader configura un canal de comunicación con cada nodo de proceso y, a continuación, envía fragmentos de 256KB de datos a los nodos de proceso de forma round robin.  
+dwloader carga los datos directamente en los nodos de proceso sin pasar los datos a través del nodo de control. Para cargar datos, dwloader primero se comunica con el nodo de control para obtener información de contacto para los nodos de proceso. dwloader configura un canal de comunicación con cada nodo de proceso y, a continuación, envía fragmentos de datos de 256 KB a los nodos de proceso de manera Round Robin.  
   
-En cada nodo de proceso, el servicio de movimiento de datos (DMS) recibe y procesa los fragmentos de datos. Procesamiento de los datos incluye la conversión de cada fila en formato nativo de SQL Server y calcular el hash de distribución para determinar el nodo de proceso al que pertenece cada fila.  
+En cada nodo de proceso, el servicio de movimiento de datos (DMS) recibe y procesa los fragmentos de datos. El procesamiento de los datos incluye la conversión de cada fila en SQL Server formato nativo y el cálculo del hash de distribución para determinar el nodo de proceso al que pertenece cada fila.  
   
-Después de procesar las filas, DMS usa un movimiento de orden aleatorio para cada fila de transferencia para el nodo de proceso correcto y la instancia de SQL Server. Como SQL Server recibe las filas, crea los lotes según la **-b** parámetro de tamaño de lote establecido en dwloader y, a continuación, el lote carga masiva.  
+Después de procesar las filas, DMS usa un movimiento de orden aleatorio para transferir cada fila al nodo de proceso y la instancia de SQL Server correctos. Como SQL Server recibe las filas, las procesa por lotes según el parámetro de tamaño de lote **-b** establecido en dwloader y, a continuación, carga de forma masiva el lote.  
 
 ## <a name="load-with-prepared-statements"></a>Cargar con instrucciones preparadas
 
-Puede usar las instrucciones preparadas para cargar datos en tablas replicadas y distribuidas. Cuando los datos de entrada no coincide con el tipo de datos de destino, se realiza una conversión implícita. Las conversiones implícitas compatibles con PDW instrucciones preparadas son un subconjunto de las conversiones compatibles con SQL Server. Es decir, se admiten solo un subconjunto de las conversiones, pero las conversiones compatibles coinciden con las conversiones implícitas de SQL Server. Independientemente de si la tabla de destino que se va a cargar se define como una tabla replicada o distribuida, las conversiones implícitas se aplican (si es necesario) a todas las columnas que existen en la tabla de destino. 
+Puede usar instrucciones preparadas para cargar datos en tablas distribuidas y replicadas. Cuando los datos de entrada no coinciden con el tipo de datos de destino, se realiza una conversión implícita. Las conversiones implícitas admitidas por las instrucciones preparadas de PDW son un subconjunto de conversiones admitidas por SQL Server. Es decir, solo se admite un subconjunto de conversiones, pero las conversiones admitidas coinciden SQL Server conversiones implícitas. Independientemente de si la tabla de destino que se va a cargar se define como una tabla distribuida o replicada, se aplican las conversiones implícitas (si es necesario) a todas las columnas que existen en la tabla de destino. 
 
 <!-- MISSING LINK
 For more information, see [Prepared statements](prepared-statements.md).
@@ -44,11 +45,11 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 |Tarea|Descripción|  
 |--------|---------------|  
-|Crear la base de datos de almacenamiento provisional.|[Crear la base de datos provisional](staging-database.md)|  
-|Carga con Integration Services.|[Carga con Integration Services](load-with-ssis.md)|  
-|Comprender las conversiones de tipos para dwloader.|[Reglas de conversión de tipos de datos para dwloader](dwloader-data-type-conversion-rules.md)|  
-|Carga de datos con dwloader.|[Cargador de la línea de comandos de dwloader](dwloader.md)|  
-|Comprender las conversiones de tipos para insertar.|[Carga de datos con INSERT](load-with-insert.md)|  
+|Crear la base de datos de ensayo.|[Crear la base de datos de ensayo](staging-database.md)|  
+|Cargue con Integration Services.|[Carga con Integration Services](load-with-ssis.md)|  
+|Comprenda las conversiones de tipos para dwloader.|[Reglas de conversión de tipos de datos para dwloader](dwloader-data-type-conversion-rules.md)|  
+|Carga de datos con dwloader.|[Cargador de línea de comandos de dwloader](dwloader.md)|  
+|Comprender las conversiones de tipos de INSERT.|[Carga de datos con INSERT](load-with-insert.md)|  
  
 <!-- MISSING LINKS
 ## See Also  

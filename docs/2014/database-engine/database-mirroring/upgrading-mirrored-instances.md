@@ -1,5 +1,5 @@
 ---
-title: Minimizar el tiempo de inactividad para las bases de datos reflejadas al actualizar instancias de servidor | Microsoft Docs
+title: Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933891"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor
-  Al actualizar instancias de servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una sola conmutación por error manual realizando una actualización secuencial, conocido como un *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
+  Al actualizar instancias de servidor a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , puede reducir el tiempo de inactividad de cada base de datos reflejada a una sola conmutación por error manual realizando una actualización secuencial, denominada *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
   
 > [!NOTE]  
->  Para obtener información acerca de cómo realizar una actualización gradual para instalar un service pack o revisión, consulte [instalar un Service Pack en un sistema con el tiempo de inactividad mínimo para bases de datos reflejadas](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
+>  Para obtener información acerca de la realización de una actualización gradual para instalar un Service Pack o revisión, consulte [instalación de un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
  **Preparación recomendada (prácticas recomendadas)**  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62754288"
   
     -   [Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [Realizar una conmutación por error manualmente de una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
+    -   [Conmutar por error manualmente una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md).  
   
     > [!NOTE]  
     >  Para obtener más información sobre el funcionamiento de la conmutación por error manual, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
@@ -44,16 +43,16 @@ ms.locfileid: "62754288"
   
     1.  Realice una copia de seguridad completa de cada base de datos principal:  
   
-         [Cree una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
+         [Cree una copia de seguridad completa de la base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
     2.  Ejecute el comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en cada base de datos principal.  
   
- **Fases de una actualización gradual**  
+ **Etapas de una actualización gradual**  
   
  Los pasos específicos de una actualización gradual dependen del modo de funcionamiento de la configuración de creación de reflejo. No obstante, las etapas básicas son las mismas.  
   
 > [!NOTE]  
->  Para obtener información sobre los modos de funcionamiento, vea [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md).  
+>   Para obtener información acerca de los modos de funcionamiento, vea [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
  La ilustración siguiente es un diagrama de flujo en el que se muestran las etapas básicas de una actualización gradual para cada modo de funcionamiento. Los procedimientos correspondientes se describen después de la ilustración.  
   
@@ -69,22 +68,22 @@ ms.locfileid: "62754288"
     > [!IMPORTANT]  
     >  Si el servidor reflejado está geográficamente distante del servidor principal, puede no ser conveniente realizar una actualización gradual.  
   
-    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Cambiar el **modo de funcionamiento** opción a **seguridad alta sin conmutación automática por error (sincrónico)** mediante el uso de la [página creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) de la **base de datos Propiedades** cuadro de diálogo. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
+    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Seguridad alta sin conmutación automática por error (sincrónico)** mediante la página [Creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos**. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: Seguridad de las transacciones se establece en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: establezca la seguridad de transacciones en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>Para quitar un testigo de una sesión  
   
 1.  Si una sesión de creación de reflejo conlleva un testigo, recomendamos que lo quite antes de realizar una actualización gradual. Si no lo hace, al actualizar la instancia del servidor reflejado, la disponibilidad de la base de datos depende del testigo que sigue estando conectado a la instancia del servidor principal. Después de quitar un testigo, puede actualizarlo en cualquier momento durante el proceso de actualización gradual sin aumentar el tiempo de inactividad de la base de datos.  
   
     > [!NOTE]  
-    >  Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Quitar el testigo de una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Para realizar la actualización gradual  
   
-1.  Para minimizar el tiempo de inactividad, se recomienda lo siguiente: Inicie la actualización gradual actualizando cualquier asociado de creación de reflejo que es actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
+1.  Para minimizar el tiempo de inactividad, recomendamos que inicie la actualización gradual actualizando todos los asociados de creación de reflejo que sean actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
   
     > [!NOTE]  
     >  Un testigo se puede actualizar en cualquier momento del proceso de actualización gradual. Por ejemplo, si una instancia del servidor es un servidor reflejado en la Sesión 1 y es un testigo en la Sesión 2, puede actualizar ahora la instancia del servidor.  
@@ -108,7 +107,7 @@ ms.locfileid: "62754288"
     > [!NOTE]  
     >  El establecimiento de una nueva sesión de creación de reflejo requiere que todas las instancias del servidor se ejecuten en la misma versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-3.  Después de conmutar, le recomendamos que ejecute la [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) comando theprincipal base de datos.  
+3.  Después de la conmutación por error, se recomienda ejecutar el comando [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos principal.  
   
 4.  Actualice todas las instancias del servidor que es ahora el servidor reflejado en todas las sesiones de creación de reflejo en las que sea asociado. Podría tener que actualizar varios servidores en este momento.  
   
@@ -126,9 +125,9 @@ ms.locfileid: "62754288"
   
 1.  Si lo desea, vuelva al modo de alto rendimiento utilizando uno de los métodos siguientes:  
   
-    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Cambio la **modo de funcionamiento** opción a **rendimiento alto (asincrónico)** mediante el uso de la [página creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) de la **propiedades de la base de datos**cuadro de diálogo.  
+    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Rendimiento alto (asincrónico)** mediante la página [Creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos** .  
   
-    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)para establecer la seguridad de las transacciones en OFF.  
+    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: utilice [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)para desactivar la seguridad de las transacciones.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Para volver a agregar un testigo a una sesión de creación de reflejo  
   
@@ -140,15 +139,15 @@ ms.locfileid: "62754288"
   
     -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
- [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+## <a name="see-also"></a>Consulte también  
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Ver el estado de una base de datos reflejada &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Instalar un Service Pack en un sistema con el tiempo de inactividad mínimo para bases de datos reflejadas](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
+ [Instalar un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Forzar el servicio en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
- [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Iniciar Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)  
   
   

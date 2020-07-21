@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 03e76d4a-d463-4673-8843-08e4ecaefe27
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6db88a8bb5e44090e5201220fee36a432b69767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 402fcc160c823cd5975e2ede4d13f49dfcd9d10a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869880"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553814"
 ---
-# <a name="mssqlserver14421"></a>MSSQLSERVER_14421
+# <a name="mssqlserver_14421"></a>MSSQLSERVER_14421
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14421|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14421|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum14421|  
 |Texto del mensaje|La base de datos secundaria de trasvase de registros %s.%s tiene un umbral de restauración de %d minutos y no está sincronizada. No se ha realizado ninguna operación de restauración durante %d minutos. La latencia restaurada es de %d minutos. Compruebe la información del registro de agente y del monitor de trasvase de registros.|  
@@ -35,7 +34,7 @@ ms.locfileid: "62869880"
 ## <a name="explanation"></a>Explicación  
  Este mensaje indica que el trasvase de registros no está sincronizado más allá del umbral de restauración. El umbral de restauración es la cantidad de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere un mensaje.  
   
-### <a name="possible-causes"></a>Posibles causas  
+### <a name="possible-causes"></a>Causas posibles  
  Este mensaje no indica necesariamente un problema en el trasvase de registros. En su lugar, puede indicar uno de los siguientes problemas:  
   
 -   El trabajo de restauración no está en ejecución.  
@@ -66,11 +65,11 @@ ms.locfileid: "62869880"
     > [!NOTE]  
     >  El hecho de que existan diferentes zonas horarias en las dos instancias de servidor no debería causar problemas.  
   
-## <a name="see-also"></a>Vea también  
- [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [log_shipping_monitor_secondary &#40;&#41;de Transact-SQL](/sql/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
+ [sp_help_log_shipping_monitor_secondary &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)   
+ [sp_refresh_log_shipping_monitor &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

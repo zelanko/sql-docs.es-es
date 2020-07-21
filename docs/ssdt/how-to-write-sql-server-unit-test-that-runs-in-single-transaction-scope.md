@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Escritura de una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119880"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75246485"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedimientos: Escritura de una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
+
 Puede modificar las pruebas unitarias para ejecutarlas en el ámbito de una única transacción. Si elige este enfoque, puede revertir los cambios activados por la prueba una vez finalizada esta. Los procedimientos siguientes explican cómo:  
   
 -   Cree una transacción en el script de prueba Transact\-SQL que usa **BEGIN TRANSACTION** y **ROLLBACK TRANSACTION**.  
@@ -155,7 +156,7 @@ En este ejemplo se usa una transacción ambiente cuando se usa el tipo [System.T
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar el servicio Coordinador de transacciones distribuidas  
-En algunos procedimientos de este tema se usan los tipos del ensamblado System.Transactions. Antes de seguir estos procedimientos, debe asegurarse de que el servicio Coordinador de transacciones distribuidas se ejecuta en el equipo donde se ejecutan las pruebas unitarias. En caso contrario, las pruebas dan error y aparece el mensaje de error siguiente: "El método de prueba *ProjectName*.*TestName*.*MethodName* lanzó la excepción: System.Data.SqlClient.SqlException: MSDTC en el servidor *ComputerName* no está disponible".  
+En algunos procedimientos de este tema se usan los tipos del ensamblado System.Transactions. Antes de seguir estos procedimientos, debe asegurarse de que el servicio Coordinador de transacciones distribuidas se ejecuta en el equipo donde se ejecutan las pruebas unitarias. De lo contrario, se producirá un error en las pruebas y se mostrará el siguiente mensaje de error: "El método de prueba *NombreDeProyecto*.*NombreDePrueba*.*NombreDeMétodo* produjo una excepción: System.Data.SqlClient.SqlException: MSDTC en el servidor '*NombreDeEquipo*' no está disponible".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar el servicio Coordinador de transacciones distribuidas  
   

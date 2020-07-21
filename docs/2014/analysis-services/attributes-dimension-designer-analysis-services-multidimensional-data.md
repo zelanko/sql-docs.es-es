@@ -1,5 +1,5 @@
 ---
-title: Atributos (pestaña estructura de dimensión, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Atributos (pestaña estructura de dimensión, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527861"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use este panel para administrar los atributos asociados con la dimensión seleccionada. Los atributos se pueden arrastrar desde este panel hasta el panel **Jerarquías** para crear jerarquías y niveles. Para obtener más información, vea [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
   
  Para crear un atributo, arrastre una columna desde el panel **Vista del origen de datos** hasta el panel **Atributos** mientras está en el modo de lista, árbol o vista. Para quitar un atributo, seleccione **Eliminar** en el menú contextual.  
   
- **Para mostrar el panel atributos**  
+ **Para mostrar el panel Atributos**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, abra la dimensión que desea.  
   
@@ -49,16 +48,16 @@ ms.locfileid: "66064398"
 ## <a name="grid-mode-options"></a>Opciones del modo de cuadrícula  
  Cuando se visualizan los atributos en modo de cuadrícula, se tiene acceso a las columnas enumeradas en la tabla siguiente.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del atributo.  
   
- **Usage**  
+ **Uso**  
  Establece el uso del atributo seleccionado. Haga clic en la flecha abajo para seleccionar entre las siguientes opciones:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Regular|Identifica un atributo normal.|  
-|Key|Identifica el atributo clave de la dimensión. Esto corresponde a los miembros hoja de la dimensión. Solo puede haber un atributo clave por dimensión. Para modificarlo, haga clic en el botón de puntos suspensivos ( **…** ) que aparece junto a la propiedad **KeyColumns** en el panel **Propiedades** .|  
+|Normal|Identifica un atributo normal.|  
+|Clave|Identifica el atributo clave de la dimensión. Esto corresponde a los miembros hoja de la dimensión. Solo puede haber un atributo clave por dimensión. Para modificarlo, haga clic en el botón de puntos suspensivos (**…**) que aparece junto a la propiedad **KeyColumns** en el panel **Propiedades** .|  
 |Parent|Indica el atributo primario para una relación de elementos primarios y secundarios. El atributo secundario de esta relación siempre debe ser el atributo clave.|  
 |AccountType|Indica un atributo de tipo de cuenta. Lo usa el servidor o el motor cuando la función de agregación para una medida está establecida en “por cuenta”.|  
   
@@ -68,12 +67,12 @@ ms.locfileid: "66064398"
  **Columna de clave**  
  Muestra el tipo de datos de las columnas subyacentes. Al crear un atributo nuevo, haga clic en la flecha abajo para seleccionar entre las opciones disponibles.  
   
- **Columna de nombre**  
+ **Columna Nombre**  
  Muestra la ubicación de la columna subyacente. Al crear un atributo nuevo, haga clic en la flecha abajo para seleccionar entre **Igual que la clave** y **Columna separada**. Si selecciona **Columna separada** , la propiedad **NameColumn** del panel **Propiedades** establece la columna en la que se almacena el nombre que debe utilizarse para el atributo.  
   
-## <a name="see-also"></a>Vea también  
- [Estructura de dimensión &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Jerarquías &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Estructura de dimensión &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Jerarquías &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1570207dca6e944b54c553a1d83256d8f4fa3244
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251316"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429682"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implementar y ejecutar paquetes SSIS mediante procedimientos almacenados
   Al configurar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para que use el modelo de implementación de proyectos, puede emplear procedimientos almacenados del catálogo de [!INCLUDE[ssIS](../includes/ssis-md.md)] implementar el proyecto y ejecutar los paquetes. Para obtener información acerca del modelo de implementación de proyectos, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "72251316"
   
 1.  Llame a [catalog.deploy_project &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) para implementar el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Para recuperar el contenido binario del archivo de implementación del proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], para el parámetro *\@project_stream* , use una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas bulk. El proveedor de conjuntos de filas BULK le permite leer datos de un archivo. El argumento SINGLE_BLOB del proveedor de conjuntos de filas BULK devuelve el contenido del archivo de datos como un conjunto de filas de una sola fila y una sola columna de tipo varbinary(max). Para obtener más información, vea [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Para recuperar el contenido binario del [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] archivo de implementación del proyecto, para el parámetro * \@ project_stream* , use una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas bulk. El proveedor de conjuntos de filas BULK le permite leer datos de un archivo. El argumento SINGLE_BLOB del proveedor de conjuntos de filas BULK devuelve el contenido del archivo de datos como un conjunto de filas de una sola fila y una sola columna de tipo varbinary(max). Para obtener más información, vea [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     En el ejemplo siguiente, el proyecto SSISPackages_ProjectDeployment se implementa en la carpeta Paquetes SSIS del servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Los datos binarios se leen del archivo de proyecto (SSISPackage_ProjectDeployment. ISPAC) y se almacenan en el parámetro *\@ProjectBinary* de tipo varbinary (Max). El valor del parámetro *\@ProjectBinary* se asigna al parámetro *\@project_stream* .  
+     En el ejemplo siguiente, el proyecto SSISPackages_ProjectDeployment se implementa en la carpeta Paquetes SSIS del servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Los datos binarios se leen del archivo de proyecto (SSISPackage_ProjectDeployment. ISPAC) y se almacenan en el parámetro * \@ ProjectBinary* de tipo varbinary (Max). El valor del parámetro * \@ ProjectBinary* se asigna al parámetro * \@ project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  
@@ -122,9 +121,9 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Implementar proyectos en el servidor de Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
- [Ejecutar un paquete en herramientas de datos de SQL Server](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
- [Ejecutar un paquete en el Servidor SSIS con SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementación de proyectos en Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
+ [Ejecutar un paquete en SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)   
+ [Ejecutar un paquete en el servidor SSIS con SQL Server Management Studio](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
   

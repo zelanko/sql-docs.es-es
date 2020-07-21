@@ -15,16 +15,15 @@ f1_keywords:
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aeb4d01cae7c09c27cafa8284638bf0a7de9691
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62990201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058218"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
-  Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
+  Hay dos conjuntos de propiedades para columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
   
 > [!NOTE]  
 >  Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  
@@ -41,7 +40,7 @@ ms.locfileid: "62990201"
  **Categoría Identidad**  
  Se expande para mostrar las propiedades de **Nombre** y **Base de datos** .  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna.  
   
  **Base de datos**  
@@ -83,7 +82,7 @@ ms.locfileid: "62990201"
  **Categoría General**  
  Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión**y **Escala**.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna. Para editar el nombre, escriba en el cuadro de texto.  
   
 > [!CAUTION]  
@@ -179,12 +178,12 @@ ms.locfileid: "62990201"
  Muestra si esta columna se replica en otra ubicación.  
   
  **RowGuid**  
- Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la columna como ROWGUID. Puede establecer este valor en **Sí** sólo para una columna con el tipo de datos de `uniqueidentifier`. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+ Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la columna como ROWGUID. Puede establecer este valor en **sí** solo para una columna con el tipo de datos `uniqueidentifier` . Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
  **Tamaño**  
  Muestra el tamaño en bytes permitido por el tipo de datos de la columna. Por ejemplo, un tipo de datos `nchar` puede tener una longitud de 10 (el número de caracteres) pero tendría un tamaño de 20 para los juegos de caracteres Unicode.  
   
 > [!NOTE]  
->  La longitud de un tipo de datos `varchar(max)` varía en cada fila. sp_help devuelve (-1) como la longitud de `varchar(max)` columna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra -1 como tamaño de columna.  
+>  La longitud de un tipo de datos `varchar(max)` varía en cada fila. sp_help devuelve (-1) como longitud de la `varchar(max)` columna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra -1 como tamaño de columna.  
   
   

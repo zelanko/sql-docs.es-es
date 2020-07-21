@@ -1,5 +1,5 @@
 ---
-title: ':: :: (Resolución de ámbito) (Transact-SQL) | Microsoft Docs'
+title: ':: (Resolución de ámbito) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68072295"
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (Resolución de ámbito) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (Resolución de ámbito)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   El operador de resolución de ámbito **::** proporciona acceso a los miembros estáticos de un tipo de datos compuesto. Un tipo de datos compuesto es aquel que contiene varios métodos y tipos de datos simples. En los tipos de datos compuestos, se incluyen los tipos de CLR integrados y los tipos definidos por el usuario de SQLCLR personalizados (UDT).  

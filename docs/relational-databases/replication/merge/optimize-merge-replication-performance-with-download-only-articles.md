@@ -1,6 +1,7 @@
 ---
-title: Optimización el rendimiento de la replicación de mezcla con artículos de solo descarga | Microsoft Docs
-ms.custom: ''
+title: Optimización del rendimiento de los artículos de solo descarga (combinación)
+description: Describe cómo optimizar el rendimiento de los artículos de solo descarga usados por la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d773da4bf6159727e928fa6a735366b706c1a5b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882259"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   La replicación de mezcla ofrece dos tipos de artículos diferentes para satisfacer las necesidades de distintas aplicaciones. Las publicaciones pueden contener uno o varios de cada uno de estos tipos de artículos, según sea necesario para la aplicación:  
   
 -   Artículos estándar  

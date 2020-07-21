@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 999cfba0f0bd98bfc7e13f436303160ef66962b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c2c6530e6df31502841ad931852f317a2e838b7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978732"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924519"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>Método getTimestamp (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,15 +40,15 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto timestamp.  
+ Un objeto Timestamp.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getTimestamp especifica este método getTimestamp en la interfaz java.sql.CallableStatement.  
   
- Este método solamente devuelve valores de columnas **datetime** y **smalldatetime** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Este método solamente devuelve valores de columnas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime** y **smalldatetime**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

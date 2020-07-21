@@ -1,5 +1,6 @@
 ---
 title: Métodos de programación | Microsoft Docs
+description: En Reporting Services, estos métodos sirven para crear y administrar las programaciones compartidas para la ejecución y la entrega de informes, así como para almacenar en caché los planes de actualización que usa el servidor de informes.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 087e2111987de00b347c400ce7255cb7f9eee97e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284440"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198342"
 ---
 # <a name="scheduling-methods"></a>Métodos de programación
   Puede utilizar estos métodos para crear y administrar las programaciones compartidas para la ejecución y la entrega de informes, así como para almacenar en memoria caché los planes de actualización que utiliza el servidor de informes.  

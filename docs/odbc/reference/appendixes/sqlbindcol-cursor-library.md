@@ -10,27 +10,27 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocStmt function [ODBC], Cursor Library
 ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1c29909a96f147a0f5ebc2140a68072dfe544255
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064976"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305476"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLBindCol** función en la biblioteca de cursores. Para obtener información general sobre **SQLBindCol**, consulte [función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ En este tema se describe el uso de la función **SQLBindCol** en la biblioteca de cursores. Para obtener información general acerca de **SQLBindCol**, consulte [SQLBindCol (función](../../../odbc/reference/syntax/sqlbindcol-function.md)).  
   
- Una aplicación asigna uno o varios búferes para la biblioteca de cursores devolver el conjunto de filas actual. Llama a **SQLBindCol** una o varias veces para enlazar estos búferes al conjunto de resultados.  
+ Una aplicación asigna uno o más búferes para que la biblioteca de cursores devuelva el conjunto de filas actual. Llama a **SQLBindCol** una o más veces para enlazar estos búferes con el conjunto de resultados.  
   
- Una aplicación puede llamar a **SQLBindCol** para volver a enlazar el resultado de establece las columnas después de haber llamado **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**, siempre que el tipo de datos C, tamaño de la columna y los dígitos decimales de la columna dependiente que siguen siendo los mismos. La aplicación no necesita cerrar el cursor para volver a enlazar columnas a diferentes direcciones.  
+ Una aplicación puede llamar a **SQLBindCol** para volver a enlazar las columnas del conjunto de resultados después de haber llamado a **SQLExtendedFetch**, **SQLFetch**o **SQLFetchScroll**, siempre que el tipo de datos de C, el tamaño de la columna y los dígitos decimales de la columna enlazada sigan siendo los mismos. La aplicación no tiene que cerrar el cursor para volver a enlazar columnas a direcciones diferentes.  
   
- La biblioteca de cursores es compatible con el atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR utilizar desplazamientos de enlace. (**SQLBindCol** no tiene que llamarse para este reenlace para que se produzca.) Si se utiliza la biblioteca de cursores con un ODBC *3.x* controlador, el desplazamiento de enlace no es cuando usa **SQLFetch** se llama. El desplazamiento de enlace se utiliza si **SQLFetch** se llama cuando se usa la biblioteca de cursores con un ODBC *2.x* controlador porque **SQLFetch** , a continuación, se asigna a  **SQLExtendedFetch**.  
+ La biblioteca de cursores admite el establecimiento del atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR para usar desplazamientos de enlace. (No es necesario llamar a**SQLBindCol** para que se produzca este reenlace). Si la biblioteca de cursores se utiliza con un controlador ODBC *3. x* , el desplazamiento de enlace no se utilizará cuando se llame a **SQLFetch** . El desplazamiento de enlace se utiliza si se llama a **SQLFetch** cuando la biblioteca de cursores se utiliza con un controlador ODBC *2. x* , ya que **SQLFetch** se asigna a **SQLExtendedFetch**.  
   
- Admite las llamadas a la biblioteca de cursores **SQLBindCol** para enlazar la columna de marcador.  
+ La biblioteca de cursores admite la llamada a **SQLBindCol** para enlazar la columna de marcador.  
   
- Cuando se trabaja con un ODBC *2.x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) cuando **SQLBindCol** se llama para establecer la longitud del búfer para una columna de marcador en un valor no igual a 4. Cuando se trabaja con un ODBC *3.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.
+ Cuando se trabaja con un controlador ODBC *2. x* , la biblioteca de cursores devuelve SQLSTATE HY090 (cadena o longitud de búfer no válida) cuando se llama a **SQLBindCol** para establecer la longitud del búfer de una columna de marcador en un valor distinto de 4. Cuando se trabaja con un controlador ODBC *3. x* , la biblioteca de cursores permite que el búfer tenga cualquier tamaño.

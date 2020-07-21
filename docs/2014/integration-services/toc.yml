@@ -154,7 +154,7 @@
       href: integration-services-ssis-package-and-project-parameters.md
     - name: Parameterize Dialog Box
       href: parameterize-dialog-box.md
-    - name: Create Parameters
+    - name: Creación de parámetros
       href: create-parameters.md
     - name: Establecer valores de parámetro después de la implementación del proyecto
       href: set-parameter-values-after-the-project-is-deployed.md
@@ -326,7 +326,7 @@
           href: lesson-2-1-building-the-deployment-utility.md
         - name: 'Paso 2: Comprobación del paquete de implementación'
           href: lesson-2-2-verifying-the-deployment-bundle.md
-    - name: 'Lección 3: Instalación de paquetes'
+    - name: 'Lección 3: Instalar paquetes'
       href: lesson-3-install-ssis-package.md
       items:
         - name: 'Paso 1: Copia del paquete de implementación'

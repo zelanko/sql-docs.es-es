@@ -1,5 +1,5 @@
 ---
-title: Elemento de grupo de archivos de índice (DTA) | Microsoft Docs
+title: Filegroup (DTA, elemento de index) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a320b0cea686cdec953b2a508d7f0c277fc2e817
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048389"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup (DTA, elemento de Index)
   Especifica el grupo de archivos de una configuración especificada por el usuario en que se va a crear el índice.  
@@ -53,7 +52,7 @@ ms.locfileid: "63154601"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

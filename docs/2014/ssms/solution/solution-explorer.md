@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 023e7296e1e83cb7fae5becc3e846930c73ab257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058343"
 ---
 # <a name="solution-explorer"></a>Explorador de soluciones
   El panel Explorador de soluciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona contenedores denominados proyectos para administrar elementos, tales como scripts de base de datos, consultas, conexiones de datos y archivos. Uno o varios proyectos que están relacionados entre sí se pueden combinar en un contenedor denominado solución.  
@@ -52,7 +51,7 @@ ms.locfileid: "63025721"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo recopilar uno o varios proyectos en una solución.|[Soluciones &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)|  
 |Describe cómo crear un proyecto y agregar elementos como scripts y conexiones.|[Proyectos &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)|  
 |Describe cómo integrar soluciones o proyectos individuales en un sistema de control de código fuente.|[Control de código fuente del Explorador de soluciones](../../database-engine/solution-explorer-source-control.md)|  

@@ -11,22 +11,22 @@ dev_langs:
 helpviewer_keywords:
 - SubmitChanges method [ADO], VBScript example
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a74f69947d6d1a1d730d39875f32a0cfc7286705
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a102d2894d8d989ac04762bbab60b7645e7f35d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750589"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Ejemplo del método SubmitChanges (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- El siguiente fragmento de código muestra cómo usar el [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) método con un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
+ En el fragmento de código siguiente se muestra cómo utilizar el método [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) con un [objeto RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
- Para probar este ejemplo, cortar y pegar este código en un documento ASP normal y asígnele el nombre **SubmitChangesCtrlVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
+ Para probar este ejemplo, corte y pegue este código en un documento ASP normal y asígnele el nombre **SubmitChangesCtrlVBS. asp**. El script ASP identificará el servidor.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -116,7 +116,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

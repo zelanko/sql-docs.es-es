@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caae904bc1e25288e81d3baba21719be28c05d31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63161993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050233"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Definir la durabilidad de los objetos con optimización para memoria
   OLTP en memoria garantiza las propiedades completas de atomicidad, coherencia, aislamiento y durabilidad (ACID). La durabilidad en el contexto de las tablas optimizadas para memoria y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece las garantías siguientes:  
@@ -57,7 +56,7 @@ ms.locfileid: "63161993"
   
 -   La cantidad de entradas de registro en la parte activa del registro que tienen que rehacerse.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4920f5ef2282478f4d12a19b0806cf6ff9632cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097899"
 ---
-# <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
+# <a name="databaselogontimeout-property-wmi-msreportserver_configurationsetting"></a>Propiedad DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
   Especifica el número de segundos de espera antes de que se produzca un error al intentar iniciar sesión en la base de datos del servidor de informes. Si el valor es **0** , indica un período de tiempo de espera infinito. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,7 +47,7 @@ public Int32 DatabaseLogonTimeout;
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

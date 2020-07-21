@@ -1,5 +1,5 @@
 ---
-title: Calcula la representación de la columna (Tabular) | Microsoft Docs
+title: Representación de la columna calculada (tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7a56c01a1c4af7a2e618c6b6a6cb586424e639
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940056"
 ---
 # <a name="calculated-column-representation-tabular"></a>Representación de la columna calculada (tabular)
   Una columna calculada es una expresión de DAX que crea una nueva columna en una tabla, en la que se almacenan los valores obtenidos. La expresión de columna calculada se evalúa cada vez que se procesa la tabla.  

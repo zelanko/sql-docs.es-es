@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -16,16 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17bf3d47fe394407f848f4d9536fb202652e04db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899717"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829329"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información sobre el volumen (directorio) del sistema operativo en que están almacenados los archivos y bases de datos especificados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilice esta función de administración dinámica para comprobar los atributos de la unidad de disco física y obtener información sobre el espacio disponible en el directorio.  
@@ -38,12 +38,12 @@ ms.locfileid: "67899717"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  *database_id*  
  Identificador de la base de datos. *database_id* es de tipo **int** y no tiene ningún valor predeterminado. No puede ser NULL.  
   
  *file_id*  
- Id. del archivo. *file_ID* es **int**, no tiene ningún valor predeterminado. No puede ser NULL.  
+ Id. del archivo. *file_id* es de **tipo int**y no tiene ningún valor predeterminado. No puede ser NULL.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -80,7 +80,7 @@ FROM sys.master_files AS f
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
 ```  
   
-### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>b. Devolver el espacio total y el espacio disponible de la base de datos actual  
+### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>B. Devolver el espacio total y el espacio disponible de la base de datos actual  
  El ejemplo siguiente devuelve el espacio total y el espacio disponible (en bytes) de los archivos de base de datos de la base de datos actual.  
   
 ```sql  
@@ -89,8 +89,8 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

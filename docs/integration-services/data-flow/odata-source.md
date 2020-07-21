@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 2177b4d1c4454aca803f11980340407362236c8c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298226"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75546530"
 ---
 # <a name="odata-source"></a>Origen OData
 
@@ -41,13 +41,15 @@ El componente admite los protocolos OData v3 y v4.
 
 El origen OData incluye compatibilidad con los orígenes de datos siguientes:
 -   Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online
--   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la dirección URL siguiente: https://\<servidor>/_vti_bin/ListData.svc. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
+-   Listas de SharePoint. Para ver todas las listas en un servidor de SharePoint, use la dirección URL siguiente: `https://<server>/_vti_bin/ListData.svc`. Para obtener más información sobre las convenciones de direcciones URL de SharePoint, vea [Interfaz de REST de SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## <a name="supported-data-types"></a>Tipos de datos admitidos
 
 El origen OData admite los siguientes tipos de datos simples: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string y TimeSpan.
 
 Para detectar los tipos de datos de las columnas del origen de datos, vea la página `https://<OData feed endpoint>/$metadata`.
+
+En el caso del tipo de datos **decimal**, los metadatos de origen determinan la precisión y la escala. Si los metadatos de origen no especifican las propiedades **Precisión** y **Escala**, los datos se podrían truncar.
 
 > [!IMPORTANT]
 > El componente de origen de OData no admite tipos complejos, como los elementos de opción múltiple, en las listas de SharePoint.
@@ -77,7 +79,7 @@ Para detectar los tipos de datos de las columnas del origen de datos, vea la pá
   
  Después de seleccionar o crear un administrador de conexiones, el cuadro de diálogo muestra la versión del Protocolo OData que está utilizando el Administrador de conexiones.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Editor del administrador de conexiones OData** .  
   
  **Usar ruta de acceso de colección o a recursos**  
@@ -85,22 +87,22 @@ Para detectar los tipos de datos de las columnas del origen de datos, vea la pá
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|Collection|Recupera datos del origen OData mediante un nombre de colección.|  
+|Colección|Recupera datos del origen OData mediante un nombre de colección.|  
 |Ruta de acceso a recursos|Recupera datos del origen OData mediante una ruta de acceso a recursos.|  
   
  **Opciones de consulta**  
- Especifique las opciones de consulta. Por ejemplo, `$top=5` 
+ Especifique las opciones de consulta. Por ejemplo: `$top=5` 
   
  **Dirección URL de fuente**  
  Muestra la dirección URL de la fuente de solo lectura según las opciones que ha seleccionado en este cuadro de diálogo.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista previa** . **Vista previa** puede mostrar hasta 20 filas.  
   
 ### <a name="dynamic-options"></a>Opciones dinámicas  
   
 #### <a name="use-collection-or-resource-path--collection"></a>Usar ruta de acceso de colección o de recurso = Colección  
- **Collection**  
+ **Colección**  
  Seleccione una colección de la lista desplegable.  
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Usar ruta de acceso de colección o de recurso = Ruta de acceso a recursos  

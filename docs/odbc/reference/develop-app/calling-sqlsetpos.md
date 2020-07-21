@@ -14,17 +14,17 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 46cfbb4e2e6b60f620cd7e38272bf9308ece91bc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068685"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306246"
 ---
 # <a name="calling-sqlsetpos"></a>Llamar a SQLSetPos
-En ODBC *2.x*, el puntero a la matriz de Estados de fila era un argumento a **SQLExtendedFetch**. La matriz de Estados de fila se actualizó más adelante mediante una llamada a **SQLSetPos**. Algunos controladores se basaban en el hecho de que esta matriz no cambia entre **SQLExtendedFetch** y **SQLSetPos**. En ODBC *3.x*, el puntero a la matriz de Estados es un campo de descriptor y, por tanto, la aplicación puede cambiarla fácilmente para que apunte a una matriz distinta. Esto puede ser un problema cuando un ODBC *3.x* aplicación funciona con un ODBC *2.x* controlador, pero llama a **SQLSetStmtAttr** para establecer el puntero de estado de la matriz y llama a  **SQLFetchScroll** para capturar los datos. El Administrador de controladores se asigna como una secuencia de llamadas a **SQLExtendedFetch**. En el código siguiente, generará un error haría normalmente cuando el Administrador de controladores se asigna el segundo **SQLSetStmtAttr** llamar cuando se trabaja con un ODBC *2.x* controlador:  
+En ODBC *2. x*, el puntero a la matriz de estado de fila era un argumento de **SQLExtendedFetch**. La matriz de estado de fila se actualizó más adelante mediante una llamada a **SQLSetPos**. Algunos controladores han confiado en el hecho de que esta matriz no cambia entre **SQLExtendedFetch** y **SQLSetPos**. En ODBC *3. x*, el puntero a la matriz de estado es un campo de descriptor y, por tanto, la aplicación puede cambiarlo fácilmente para que apunte a una matriz diferente. Esto puede ser un problema cuando una aplicación ODBC *3. x* está trabajando con un controlador ODBC *2. x* , pero está llamando a **SQLSetStmtAttr** para establecer el puntero de estado de la matriz y está llamando a **SQLFetchScroll** para capturar datos. El administrador de controladores lo asigna como una secuencia de llamadas a **SQLExtendedFetch**. En el código siguiente, normalmente se produciría un error cuando el administrador de controladores asigna la segunda llamada a **SQLSetStmtAttr** al trabajar con un controlador ODBC *2. x* :  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStatus, 0);  
@@ -33,12 +33,12 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_STATUS_PTR, rgfRowStat1, 0);
 SQLSetPos(hstmt, iRow, fOption, fLock);  
 ```  
   
- ¿Se produce el error si no hubiera ninguna manera de cambiar el puntero de estado de fila en ODBC *2.x* entre las llamadas a **SQLExtendedFetch**. En su lugar, el Administrador de controladores realiza los pasos siguientes cuando se trabaja con un ODBC *2.x* controlador:  
+ El error se producirá si no hay ninguna manera de cambiar el puntero de estado de fila en ODBC *2. x* entre las llamadas a **SQLExtendedFetch**. En su lugar, el administrador de controladores realiza los pasos siguientes cuando se trabaja con un controlador ODBC *2. x* :  
   
-1.  Inicializa un indicador de administrador de controladores interno *fSetPosError* en TRUE.  
+1.  Inicializa una marca interna del administrador de controladores *fSetPosError* en true.  
   
-2.  Cuando una aplicación llama **SQLFetchScroll**, Establece el Administrador de controladores *fSetPosError* en FALSE.  
+2.  Cuando una aplicación llama a **SQLFetchScroll**, el administrador de controladores establece *fSetPosError* en false.  
   
-3.  Cuando la aplicación llama **SQLSetStmtAttr** para establecer SQL_ATTR_ROW_STATUS_PTR, Establece el Administrador de controladores *fSetPosError* toTRUE igual.  
+3.  Cuando la aplicación llama a **SQLSetStmtAttr** para establecer SQL_ATTR_ROW_STATUS_PTR, el administrador de controladores establece *fSetPosError* igual toTRUE.  
   
-4.  Cuando la aplicación llama **SQLSetPos**, con *fSetPosError* igual a TRUE, el Administrador de controladores genera SQL_ERROR con SQLSTATE HY011 (atributo no se puede establecer ahora) para indicar que la aplicación intentó llamar a **SQLSetPos** después de cambiar el puntero de estado de fila, pero antes de llamar a **SQLFetchScroll**.
+4.  Cuando la aplicación llama a **SQLSetPos**, con *FSETPOSERROR* igual a true, el administrador de controladores genera SQL_ERROR con SQLSTATE HY011 (el atributo no se puede establecer ahora) para indicar que la aplicación intentó llamar a **SQLSetPos** después de cambiar el puntero de estado de fila, pero antes de llamar a **SQLFetchScroll**.

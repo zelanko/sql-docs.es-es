@@ -20,15 +20,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 320f7fc2255e9f665141929836d2e7bb7375429f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828050"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432302"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -90,11 +89,11 @@ ms.locfileid: "62828050"
 ## <a name="configuring-individual-data-flow-components"></a>Configurar cada uno de los componentes de flujo de datos  
  Hay algunas directrices generales que permiten configurar cada uno de los componentes de flujo de datos con objeto de mejorar el rendimiento. También hay instrucciones específicas relativas a cada tipo de componente de flujo de datos: origen, transformación y destino.  
   
-### <a name="general-guidelines"></a>Directrices generales  
+### <a name="general-guidelines"></a>Instrucciones generales  
  Hay dos directrices generales que no dependen del componente de flujo de datos y que debería seguir para mejorar el rendimiento: optimizar las consultas y evitar las cadenas innecesarias.  
   
 #### <a name="optimize-queries"></a>Optimizar las consultas  
- Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada usa la sintaxis SELECT * FROM \<tableName>. Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
+ Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada usa la sintaxis SELECT * FROM \<tableName> . Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
   
  Para crear una consulta, puede escribirla o utilizar el Generador de consultas.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "62828050"
  Utilice las sugerencias de esta sección para mejorar el rendimiento de las transformaciones Agregado, Búsqueda aproximada, Agrupación aproximada, Búsqueda, Combinación de mezcla y Dimensión de variación lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformación Agregado  
- La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una **Agrupar por** operación, establezca el `Keys` y `KeysScale` propiedades, respectivamente. Si conoce el número exacto o aproximado de valores distintos que esperan obtenerse como resultado de una **recuento distintivo** operación, establezca el `CountDistinctKeys` y `CountDistinctScale` propiedades, respectivamente.  
+ La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , establezca `Keys` las `KeysScale` propiedades y, respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación de **recuento distintiva** , establezca las `CountDistinctKeys` `CountDistinctScale` propiedades y, respectivamente.  
   
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   
@@ -143,9 +142,9 @@ ms.locfileid: "62828050"
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
   
- Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección dedicada al escenario de dimensión única en las notas del producto, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección "Unique dimension scenario" en las notas del producto [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
-### <a name="destinations"></a>Destinos  
+### <a name="destinations"></a>Destinations  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
   
 #### <a name="sql-server-destination"></a>SQL Server, destino  
@@ -155,20 +154,20 @@ ms.locfileid: "62828050"
  Es posible que guardar datos en los destinos lleve más tiempo del esperado. Para identificar si esto se debe a que el destino no es capaz de procesar los datos con suficiente rapidez, puede sustituir el destino por una transformación Recuento de filas temporalmente. Si el rendimiento mejora de forma significativa, es probable que el destino que carga los datos sea la causa de la tardanza.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Revisar la información de la pestaña Progreso  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona información sobre el flujo de control y sobre el flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **Progreso** se muestran las tareas y los contenedores en orden de ejecución; incluye las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el paquete en sí. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona información sobre el flujo de control y sobre el flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **progreso** se muestran las tareas y los contenedores en orden de ejecución, y se incluyen las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el propio paquete. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
   
- Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
   
--   Artículo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
+-   Artículo técnico con una [estrategia para el rendimiento en SQL Server 2005 Integration Services](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
   
--   Artículo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
+-   Artículo técnico con [técnicas de ajuste del rendimiento en SQL Server 2005 Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
   
 -   Artículo técnico sobre cómo [incrementar el rendimiento en las canalizaciones dividiendo las transformaciones sincrónicas en varias tareas](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), en sqlcat.com  
   
@@ -196,8 +195,8 @@ ms.locfileid: "62828050"
   
 -   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas para solucionar problemas con el desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+## <a name="see-also"></a>Consulte también  
+ [Herramientas de solución de problemas para el desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

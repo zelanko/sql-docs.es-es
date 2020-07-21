@@ -1,5 +1,6 @@
 ---
 title: Establecer la opción de configuración del servidor Memoria para creación de índices | Microsoft Docs
+description: Vea cómo usar la opción de memoria para crear índices para establecer la cantidad máxima de memoria que SQL Server asigna inicialmente para las operaciones de ordenación durante la creación de índices.
 ms.custom: ''
 ms.date: 11/24/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - index create memory option
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: afe6724ebac116e091072ab74ee37142a2ab8230
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85697208"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Establecer la opción de configuración del servidor Memoria para creación de índices
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo establecer la opción de configuración del servidor **memoria para creación de índices** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **memoria para creación de índices** controla la cantidad máxima de memoria asignada inicialmente para las operaciones de ordenación durante la creación de índices. El valor predeterminado para esta opción es 0 (configuración automática). Si más adelante se necesita más memoria para la creación de índices y hay memoria disponible, el servidor la utilizará; por lo tanto, se excederá el valor de esta opción. Si no hay más memoria disponible, la creación de índices continuará utilizando la asignada.  
   
@@ -42,9 +43,9 @@ ms.locfileid: "68012609"
   
 -   **Seguimiento:**  [Después de configurar la opción de memoria para creación de índices](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El valor de la opción de **[memoria mínima por consulta](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** tiene prioridad sobre la opción **memoria para creación de índices**. Si cambia ambas opciones y el valor de **memoria para creación de índices** es inferior al de **memoria mínima por consulta**, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de consultas, recibirá una advertencia similar.  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68012609"
   
 -   El valor de ejecución de esta opción no excederá la cantidad real de memoria que se puede usar para el sistema operativo y la plataforma de hardware en los que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un profesional certificado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -60,12 +61,12 @@ ms.locfileid: "68012609"
 
 -   Crear un índice en un sistema de producción suele ser una tarea poco frecuente y que, a menudo, se programa como un trabajo que se ejecutará en horas de poca actividad. Por tanto, si se crean índices con poca frecuencia y durante las horas de poca actividad, el incremento de la **memoria para creación de índices** puede mejorar el rendimiento de la creación de índices. Sin embargo, mantenga la opción de configuración **[memoria mínima por consulta](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** con un número bajo para que el trabajo de creación de índices se inicie aunque no esté disponible toda la memoria solicitada.
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>Para configurar la opción index create memory  
   
@@ -77,7 +78,7 @@ ms.locfileid: "68012609"
   
      Utilice la opción **index create memory** para controlar la cantidad de memoria que se utiliza para ordenaciones de creación de índices. La opción **Memoria para creación de índices** se configura automáticamente y, en la mayoría de los casos, debería funcionar sin necesidad de ajuste alguno. No obstante, si tiene dificultades para crear índices, puede probar a aumentar el valor de esta opción a partir del valor de ejecución. Las ordenaciones de consultas se controlan mediante la opción de **memoria mínima por consulta** .  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-index-create-memory-option"></a>Para configurar la opción index create memory  
   
@@ -101,7 +102,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de memoria para creación de índices  
+##  <a name="follow-up-after-you-configure-the-index-create-memory-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de memoria para creación de índices  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

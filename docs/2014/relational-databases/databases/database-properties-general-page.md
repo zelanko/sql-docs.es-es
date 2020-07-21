@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a29d99ebbb0ce0d12096ee92f833278ebda15e7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916963"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970135"
 ---
 # <a name="database-properties-general-page"></a>Propiedades de la base de datos (página General)
   Utilice esta página para ver o modificar las propiedades de la base de datos seleccionada.  
@@ -29,7 +28,7 @@ ms.locfileid: "62916963"
  **Última copia de seguridad del registro de la base de datos**  
  Muestra la fecha de la última copia de seguridad del registro de transacciones de la base de datos.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la base de datos.  
   
  **Estado**  
@@ -53,7 +52,7 @@ ms.locfileid: "62916963"
  **Nombre de intercalación**  
  Muestra la intercalación usada para la base de datos. La intercalación puede modificarse en la página **Opciones** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

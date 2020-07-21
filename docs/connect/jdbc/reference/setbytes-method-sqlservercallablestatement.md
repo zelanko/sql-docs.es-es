@@ -16,10 +16,10 @@ ms.assetid: f264f1a6-ee35-4eaf-81d8-ecf99f03b35d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 53a75e8bd85a3601673f51111d87c34eb050a980
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67974872"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>Método setBytes (SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setBytes(java.lang.String sCol,
   
  *b*  
   
- Matriz de valores de **byte** .  
+ Una matriz de valores de **byte**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En una versión anterior del controlador, se podía usar SQLServerCallableStatement.setBytes para convertir valores entre las matrices de bytes y los tipos de datos **date**, **time**, **datetime2** o **datetimeoffset** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ahora, al usar este método con esos tipos de datos, se producirá una excepción que indica que no se admite la conversión.  
   
  El método setBytes especifica este método setBytes en la interfaz java.sql.CallableStatement.  

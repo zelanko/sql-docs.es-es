@@ -1,5 +1,6 @@
 ---
 title: Crear reflejo de la base de datos y trasvase de registros (SQL Server) | Microsoft Docs
+description: Obtenga información sobre las consideraciones relativas a la combinación del trasvase de registros y la creación de reflejos de las bases de datos en SQL Server, incluido el número de servidores de destino que se necesitan.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789705"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Crear reflejo de la base de datos y trasvase de registros (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Se puede crear el reflejo de una determinada base de datos o realizar un trasvase de registros; también es posible realizar ambos procesos de forma simultánea. Para elegir qué método se debe utilizar, tenga en cuenta los siguientes aspectos:  
   
 -   ¿Cuántos servidores de destino necesita?  
@@ -64,7 +65,7 @@ ms.locfileid: "68006463"
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Conmutación por error de la base de datos principal a la base de datos reflejada  
  En la siguiente ilustración se muestra el funcionamiento conjunto del trasvase de registros y la creación de reflejo de la base de datos cuando la creación de reflejo se ejecuta en el modo de alta seguridad con conmutación automática por error. Inicialmente, **Server_A** es el servidor principal para la creación de reflejo y el servidor principal del trasvase de registros. **Server_B** es el servidor reflejado y además está configurado como servidor principal, que actualmente está inactivo. **Server_C** y **Server_D** son servidores secundarios de trasvase de registros. Para ofrecer la máxima disponibilidad de la sesión de trasvase de registros, la ubicación de copias de seguridad se encuentra en un directorio de recurso compartido en un equipo host independiente.  
   
- ![Combinar el trasvase de registros y la creación de reflejo de la base de datos](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Combinar el trasvase de registros y la creación de reflejo de la base de datos")  
+ ![Trasvase de registros y creación de reflejo de la base de datos](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "Trasvase de registros y creación de reflejo de la base de datos")  
   
  Tras una conmutación por error de la creación de reflejo, el nombre del servidor principal definido en el servidor secundario no se modifica. .  
   

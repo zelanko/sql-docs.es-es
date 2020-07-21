@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046011"
 ---
 # <a name="detail-property"></a>Propiedad Detail
-  La propiedad **Detail** de la clase **SoapException** de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiene la estructura XML siguiente:  
+  La propiedad **Detail** de la clase [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** de  tiene la estructura XML siguiente:  
   
 ## <a name="elements"></a>Elementos  
  **Detail**  
@@ -31,9 +31,9 @@ ms.locfileid: "63046011"
  Código de error específico de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  **HttpStatus**  
- Código de estado HTTP.  
+ El código de estado HTTP.  
   
- **de mensaje**  
+ **Mensaje**  
  Mensaje de error y código de error asignados por el servidor de informes.  
   
  **HelpLink**  
@@ -42,16 +42,16 @@ ms.locfileid: "63046011"
  **LinkID**  
  Identificador asignado al vínculo.  
   
- **ProductName**  
+ **NombreDeProducto**  
  Nombre del producto. El valor predeterminado es **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Versión de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La longitud máxima es de 15 caracteres. El formato del número de versión debe ser como sigue: 8.00.0xxx.00.  
+ Versión de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La longitud máxima es de 15 caracteres. El formato del número de versión debería ser como sigue: 8.00.0xxx.00.  
   
  **ProductLocaleId**  
  Identificador de configuración regional o de idioma de la DLL INTL de la aplicación (por ejemplo, 0x41A).  
   
- **OperatingSystem**  
+ **Identifica**  
  Sistema operativo en el que está instalado [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los valores válidos incluyen **0** para un sistema operativo independiente, **1** para [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] y **16** para Windows XP.  
   
  **CountryLocaleId**  
@@ -60,18 +60,18 @@ ms.locfileid: "63046011"
  **MoreInformation**  
  Cadena XML que contiene las excepciones anidadas que se produjeron mientras el método se ejecutaba.  
   
- **Source**  
+ **Origen**  
  Elemento secundario de **MoreInformation**. Origen del error.  
   
- **de mensaje**  
+ **Mensaje**  
  Elemento secundario de **MoreInformation**. Mensaje de error de una excepción anidada. Este elemento incluye atributos XML para **ErrorCode** y **HelpLink**.  
   
  **Advertencias**  
  Cadena XML que contiene las advertencias que se devolvieron al procesar el informe.  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Clase SoapException de Reporting Services](reporting-services-soapexception-class.md)   
- [Uso de la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+## <a name="see-also"></a>Consulte también  
+ [Introducción al control de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services (clase SoapException)](reporting-services-soapexception-class.md)   
+ [Usar la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

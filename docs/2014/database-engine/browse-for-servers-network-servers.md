@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a59ffcd6-4b69-4c5c-9740-699ccb2183fb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ba5e4e5dd6d9a6541a98e0cb30229d7335bac24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62786694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936086"
 ---
 # <a name="browse-for-servers-network-servers"></a>Buscar servidores (Servidores de redes)
-  Si se conecta a un componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no conoce el nombre exacto de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic en **Buscar más** del cuadro **Nombre del servidor** para abrir el cuadro de diálogo **Buscar servidores**.  
+  Si se conecta a un componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y no conoce el nombre exacto de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic en **Buscar más **del cuadro **Nombre del servidor** para abrir el cuadro de diálogo **Buscar servidores**.  
   
  Este cuadro de diálogo se rellena con el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en los equipos de servidor. Existen varios motivos por los que es posible que el nombre de una instancia no aparezca en la lista:  
   
@@ -34,6 +33,6 @@ ms.locfileid: "62786694"
   
 ## <a name="options"></a>Opciones  
  **Seleccionar una de las instancias de SQL Server de la red para la conexión**  
- Indique el servidor con el que desea conectarse, haciendo clic en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se muestra en el árbol. Puede mostrar u ocultar partes de la vista de árbol, haga clic en los nodos marcados con un **+** o **-** símbolos.  
+ Indique el servidor con el que desea conectarse, haciendo clic en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se muestra en el árbol. Para mostrar u ocultar partes de la vista de árbol, haga clic en los nodos marcados con un **+** **-** símbolo o.  
   
   

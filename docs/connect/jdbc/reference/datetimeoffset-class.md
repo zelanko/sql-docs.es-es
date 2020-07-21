@@ -1,5 +1,5 @@
 ---
-title: DateTimeOffset (clase) | Microsoft Docs
+title: Clase DateTimeOffset | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d697554d246d9bcc1720455137287029880d90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b044113ed3419afe002c50cef119cab3ba050f40
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955168"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922240"
 ---
 # <a name="datetimeoffset-class"></a>Clase DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este tipo representa un objeto de tipo Microsoft. SQL. DateTimeOffset y es el tipo de Java que se corresponde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el tipo de datos **DateTimeOffset** .  
+  Este tipo representa un objeto de tipo microsoft.sql.DateTimeOffset y es el tipo de Java que se corresponde con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetimeoffset**de**.  
   
  **Paquete:** microsoft.sql  
   
@@ -35,8 +35,8 @@ ms.locfileid: "67955168"
 public final class DateTimeOffset  
 ```  
   
-## <a name="remarks"></a>Notas  
- Para obtener más información sobre los tipos de datos, vea [Descripción de los tipos de datos del controlador JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
+## <a name="remarks"></a>Observaciones  
+ Para más información sobre los tipos de datos, consulte [Descripción de los tipos de datos del controlador JDBC](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   

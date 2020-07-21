@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6005c92d0d48850461c01353ddf94c61140d0f2e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890721"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437452"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Consulta)
   Use la pestaña **Consulta** del cuadro de diálogo **Tarea Consulta de minería de datos** para crear consultas de predicción según un modelo de minería de datos. En este cuadro de diálogo también puede enlazar parámetros y conjuntos de resultados con variables.  
@@ -27,7 +26,7 @@ ms.locfileid: "68890721"
  Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opciones generales  
- **Name**  
+ **Nombre**  
  Escriba un nombre único para la tarea Consulta de minería de datos. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -45,16 +44,16 @@ ms.locfileid: "68890721"
  **Generar nueva consulta**  
  Cree la consulta de minería de datos con una herramienta gráfica.  
   
- **Temas relacionados:** [Consulta de minería de datos](control-flow/data-mining-query.md)  
+ **Temas relacionados:** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opciones de la pestaña Asignación de parámetros  
- **Nombre de parámetro**  
+ **Nombre del parámetro**  
  Opcionalmente, actualice el nombre del parámetro. Para asignar el parámetro a una variable, seleccione una variable de la lista **Nombre de variable** .  
   
  **Nombre de variable**  
  Seleccione una variable de la lista para asignarla al parámetro.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un parámetro a la lista.  
   
  **Quitar**  
@@ -72,16 +71,16 @@ ms.locfileid: "68890721"
  **Tipo de resultado**  
  Indique si desea devolver una fila única o un conjunto de resultados completo.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un conjunto de resultados a la lista.  
   
  **Quitar**  
  Seleccione un resultado y haga clic en **Quitar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor de la tarea Consulta de minería de datos &#40;pestaña Salida&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Editor de la tarea consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor de la tarea consulta de minería de datos &#40;pestaña salida&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

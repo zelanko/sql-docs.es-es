@@ -1,5 +1,5 @@
 ---
-title: Exportar a Editor de transformación de columna (página salida de Error) | Microsoft Docs
+title: Editor de transformación exportar columna (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26cedb4233ec7bca5b8178bbb97eb7ffee94e85d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058938"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437342"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Editor de transformación Exportar columna (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar cómo se controlan los errores.  
@@ -48,7 +47,7 @@ ms.locfileid: "66058938"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de transformación Exportar columna &#40;página Columnas&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   

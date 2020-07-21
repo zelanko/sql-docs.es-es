@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d793f394b9ffdf329eefbd73889d3233476372b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8da7a2f89bbe0a63cb438b464a217805cfa97db6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719505"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Puede elegir entre una amplia variedad de topologías de replicación de sincronización web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Entre las maneras habituales de configurar una sincronización web se incluyen:  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Puede elegir entre una serie de topologías de replicación de sincronización web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entre las maneras habituales de configurar una sincronización web se incluyen:  
   
 -   Servidor único  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68129812"
  ![Sincronización web con nueva publicación](../../relational-databases/replication/media/web-sync05.gif "Sincronización web con nueva publicación")  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar la sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
+ [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
  [Sincronización web para la replicación de mezcla](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Especificar ejes en consultas XPath (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Especificar ejes en consultas XPath (SQLXML)
+description: Obtenga información sobre cómo especificar ejes en consultas SQLXML 4,0 XPath.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,30 +18,31 @@ helpviewer_keywords:
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fd00cae14d5dd3f00a848edc166b7fbe8c4b7c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aabd650308ecab085b121bb5ac8f5253b681a92c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773037"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Los ejemplos siguientes muestran cómo se especifican los ejes en las consultas XPath.  
   
- Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+ Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Recuperar elementos secundarios del nodo de contexto  
- La consulta XPath siguiente selecciona todos los  **\<contacto >** elementos secundarios del nodo de contexto:  
+ La consulta XPath siguiente selecciona todos los **\<Contact>** elementos secundarios del nodo de contexto:  
   
 ```  
 /child::Contact  
 ```  
   
- En la consulta, `child` es el eje y `Contact` es la prueba de nodo (TRUE si `Contact` es un  **\<elemento >** nodo, porque \<elemento > es el tipo de nodo principal asociado con el `child` eje).  
+ En la consulta, `child` es el eje y `Contact` es la prueba de nodo (true si `Contact` es un **\<element>** nodo, porque \<element> es el tipo de nodo principal asociado al `child` eje).  
   
  El eje `child` es el valor predeterminado. Por tanto, la consulta puede escribirse como:  
   
@@ -51,7 +52,7 @@ ms.locfileid: "68102410"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (XPathAxesSampleA.xml) y guárdela en el mismo directorio en el que esté guardado el archivo SampleSchema1.xml.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "68102410"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este es el conjunto parcial de resultados de ejecución de la plantilla:  
   
@@ -85,16 +86,16 @@ ms.locfileid: "68102410"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>b. Recuperar descendientes del nodo de contexto  
- La consulta XPath siguiente selecciona todos los  **\<orden >** elementos secundarios del elemento el  **\<cliente >** elementos secundarios del nodo de contexto:  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperar descendientes del nodo de contexto  
+ La consulta XPath siguiente selecciona todos los elementos **\<Order>** secundarios del elemento **\<Customer>** secundarios del nodo de contexto:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- En la consulta, `child` es el eje y `Customer` y `Order` son las pruebas de nodo (estas pruebas de nodo son TRUE si Customer y Order son  **\<elemento >** nodos, porque el  **\<elemento >** nodo es el nodo principal para el **secundarios** eje). Para cada nodo que coincide con  **\<cliente >** , los nodos que coinciden con  **\<pedidos >** se agregan al resultado. Solo  **\<orden >** se devuelve en el conjunto de resultados.  
+ En la consulta, `child` es el eje y `Customer` y `Order` son las pruebas de nodo (estas pruebas de nodo son verdaderas si Customer y Order son **\<element>** nodos, porque el **\<element>** nodo es el nodo principal del eje **secundario** ). Para cada nodo que coincide con **\<Customer>** , los nodos que coinciden con **\<Orders>** se agregan al resultado. Solo **\<Order>** se devuelve en el conjunto de resultados.  
   
- El **secundarios** es el eje predeterminado. Por lo tanto, la consulta puede especificarse como:  
+ El eje **secundario** es el valor predeterminado. Por lo tanto, la consulta puede especificarse como:  
   
 ```  
 /Customer/Order  
@@ -102,7 +103,7 @@ ms.locfileid: "68102410"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la plantilla siguiente (XPathAxesSampleB.xml) y guárdela en el directorio donde:  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68102410"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este es el conjunto parcial de resultados de ejecución de la plantilla:  
   
@@ -161,16 +162,16 @@ ms.locfileid: "68102410"
 </ROOT>  
 ```  
   
- Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, desde cada nodo que coincide con  **\<cliente >** la consulta navega a su  **\<orden >** elementos. Y para cada nodo que coincide con  **\<orden >** , la consulta agrega los nodos  **\<OrderDetail >** al resultado. Solo  **\<OrderDetail >** se devuelve en el conjunto de resultados.  
+ Si la consulta XPath se especifica como `Customer/Order/OrderDetail` , de cada nodo que coincida con **\<Customer>** la consulta navega a sus **\<Order>** elementos. Y para cada nodo coincidente **\<Order>** , la consulta agrega los nodos **\<OrderDetail>** al resultado. Solo **\<OrderDetail>** se devuelve en el conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
- La consulta siguiente recupera todos los  **\<orden >** elementos con un elemento primario  **\<cliente >** elemento con un **CustomerID** atributo valor 1. La consulta utiliza la **secundarios** eje en el predicado para buscar el elemento primario de la  **\<orden >** elemento.  
+ La consulta siguiente recupera todos los **\<Order>** elementos con un elemento primario **\<Customer>** con un valor de atributo **CustomerID** de 1. La consulta usa el eje **secundario** en el predicado para buscar el elemento primario del **\<Order>** elemento.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
 ```  
   
- El **secundarios** eje es el eje predeterminado. Por lo tanto, la consulta puede especificarse como:  
+ El eje **secundario** es el eje predeterminado. Por lo tanto, la consulta puede especificarse como:  
   
 ```  
 /Customer/Order[../@CustomerID="1"]  
@@ -183,11 +184,11 @@ ms.locfileid: "68102410"
 ```  
   
 > [!NOTE]  
->  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de  **\<orden >** . Aunque puede haber elementos en el esquema de asignación que contengan  **\<orden >** , la expresión XPath no comenzó en ninguno de ellos; por lo tanto,  **\<orden >** se considera el tipo de elemento de nivel superior en el documento.  
+>  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de **\<Order>** . Aunque puede haber elementos en el esquema de asignación que contengan **\<Order>** , el XPath no comenzó en ninguno de ellos; por lo tanto, **\<Order>** se considera que es el tipo de elemento de nivel superior del documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la plantilla siguiente (XPathAxesSampleC.xml) y guárdela en el directorio donde:  
   
@@ -207,7 +208,7 @@ ms.locfileid: "68102410"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este es el conjunto parcial de resultados de ejecución de la plantilla:  
   
@@ -248,13 +249,13 @@ ms.locfileid: "68102410"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar el eje de atributo  
- La consulta XPath siguiente selecciona todos los  **\<cliente >** elementos secundarios del nodo de contexto con un **CustomerID** valor de atributo de 1:  
+ La consulta XPath siguiente selecciona todos los **\<Customer>** elementos secundarios del nodo de contexto con un valor de atributo **CustomerID** de 1:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- En el predicado `attribute::CustomerID`, `attribute` es el eje y `CustomerID` es la prueba de nodo (si `CustomerID` es un atributo de la prueba de nodo es TRUE, porque el  **\<atributo >** nodo es el nodo principal para el `attribute` eje).  
+ En el predicado `attribute::CustomerID` , `attribute` es el eje y `CustomerID` es la prueba de nodo (si `CustomerID` es un atributo, la prueba de nodo es true, porque el **\<attribute>** nodo es el nodo principal del `attribute` eje).  
   
  Se puede especificar un acceso directo al eje `attribute` (@) y, puesto que el eje `child` es el eje predeterminado, puede omitirse en la consulta:  
   
@@ -264,7 +265,7 @@ ms.locfileid: "68102410"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (XPathAxesSampleD.xml) y guárdela en el mismo directorio en el que esté guardado el archivo SampleSchema1.xml.  
   
@@ -284,7 +285,7 @@ ms.locfileid: "68102410"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este es el conjunto parcial de resultados de ejecución de la plantilla:  
   

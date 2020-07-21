@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: aa71ebe23557ab470748b3108fc1263469a193cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "62745526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050563"
 ---
-# <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimiento almacenado extendido)
+# <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -61,18 +60,18 @@ count
  *status*  
  Es un campo de 2 bytes para varias marcas *status* . Varias marcas se pueden establecer mediante los operadores lógicos AND y OR con valores de marca *status* . En la tabla siguiente se enumeran las marcas posibles *status* .  
   
-|Marca de estado|Descripción|  
+|Marca de estado|Description|  
 |-----------------|-----------------|  
 |SRV_DONE_COUNT|El parámetro *count* contiene un recuento válido.|  
 |SRV_DONE_ERROR|El comando de cliente actual recibió un error.|  
   
- *info*  
+ *superclase*  
  Es un campo reservado de 2 bytes. Establezca este valor en 0.  
   
- *Recuento*  
+ *count*  
  Es un campo de 4 bytes que se usa para indicar un recuento para el conjunto de resultados actual. Si la marca SRV_DONE_COUNT se establece en el campo *status* , *count* contiene un recuento válido.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL  
   
 ## <a name="remarks"></a>Comentarios  

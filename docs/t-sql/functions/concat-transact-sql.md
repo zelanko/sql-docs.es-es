@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 785b1d1cb8dfd2b36da981d0194ed9651eeedfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732605"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ Esta función devuelve una cadena resultante de la concatenación, o la combinac
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   
@@ -46,15 +46,15 @@ Valor de cadena que se va a concatenar con los demás valores. La función `CONC
 *string_value*  
 Un valor de cadena cuya longitud y tipo dependen de la entrada.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `CONCAT` toma un número variable de argumentos de cadena y los concatena (o combina) en una sola cadena. Necesita un mínimo de dos valores de entrada; de lo contrario, se produce un error en `CONCAT`. `CONCAT` convierte implícitamente todos los argumentos en tipos de cadena antes de la concatenación. `CONCAT` convierte implícitamente los valores NULL en cadenas vacías. Si `CONCAT` recibe argumentos en los que todos los valores son **NULL**, devolverá una cadena vacía de tipo **varchar**(1). La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) para obtener más información sobre las conversiones de tipo de datos.
   
 El tipo devuelto depende del tipo de los argumentos. En esta tabla se muestra la asignación:
   
 |Tipo de entrada|Tipo de salida y longitud de datos|  
 |---|---|
-|1. Cualquier argumento de<br><br />un tipo de sistema de CLR de SQL<br><br />un UDT de CLR de SQL<br><br />o Administrador de configuración de<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. De lo contrario, cualquier argumento de tipo<br><br />**varbinary(max)**<br><br />o Administrador de configuración de<br><br />**ntext**|**varchar(max)** , a menos que uno de los parámetros sea un tipo **nvarchar** de cualquier longitud. En este caso, `CONCAT` devuelve un resultado de tipo **nvarchar (max)** .|  
+|1. Cualquier argumento de<br><br />un tipo de sistema de CLR de SQL<br><br />un UDT de CLR de SQL<br><br />or<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2. De lo contrario, cualquier argumento de tipo<br><br />**varbinary(max)**<br><br />or<br><br />**ntext**|**varchar(max)** , a menos que uno de los parámetros sea un tipo **nvarchar** de cualquier longitud. En este caso, `CONCAT` devuelve un resultado de tipo **nvarchar (max)** .|  
 |3. De lo contrario, cualquier argumento de tipo **nvarchar** de 4000 caracteres como máximo<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4. En todos los demás casos|**varchar**(<= 8000) (un tipo **varchar** de 8 000 caracteres como máximo) a menos que uno de los parámetros sea un tipo nvarchar de cualquier longitud. En ese caso, `CONCAT` devuelve un resultado de tipo **nvarchar (max)** .|  
   
@@ -105,7 +105,7 @@ NameLastname
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  

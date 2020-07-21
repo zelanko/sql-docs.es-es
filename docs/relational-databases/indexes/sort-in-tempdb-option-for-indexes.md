@@ -18,15 +18,15 @@ ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80c0651be14f30f14d95b949d5d3f941df5c7cda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722329"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>Opción SORT_IN_TEMPDB para índices
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="sort_in_tempdb-option-for-indexes"></a>Opción SORT_IN_TEMPDB para índices
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cuando crea o vuelve a generar un índice, si establece la opción SORT_IN_TEMPDB en ON, puede indicar a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que use **tempdb** para almacenar los resultados de ordenación intermedios que se usan para generar el índice. Aunque esta opción aumenta la cantidad de espacio en disco temporal utilizado para crear un índice, reduce el tiempo que tarda en crear o volver a generar un índice cuando **tempdb** está en un conjunto de discos diferente al de la base de datos de usuario. Para obtener más información acerca de **tempdb**, vea [Establecer la opción de configuración del servidor Memoria para creación de índices](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67909543"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] mezcla las ordenaciones de las filas hoja del índice en un único flujo ordenado. El componente de mezcla de ordenación de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se inicia con la primera página de cada ordenación, busca la clave más baja en todas las páginas y pasa esa fila hoja al componente de creación del índice. La siguiente clave más baja se procesa a continuación, después la siguiente, etc. Cuando se extrae la última fila del índice hoja de una página de ordenación, el proceso cambia a la página siguiente desde esa ordenación. Cuando se han procesado todas las páginas de una extensión de ordenación, la extensión se libera. Conforme se pasa cada fila de índice hoja al componente de creación del índice, se coloca en una página de índice hoja en el búfer. Cada página hoja se escribe conforme se llena. A medida que se escriben las páginas hoja, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea también los niveles superiores del índice. Cada página de índice de nivel superior se escribe cuando se llena.  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB, opción  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB, opción  
  Cuando SORT_IN_TEMPDB se establece en OFF (valor predeterminado), las ordenaciones se almacenan en el grupo de archivos de destino. Durante la primera fase de la creación del índice, las lecturas alternas de las páginas de la tabla base y las escrituras de las ordenaciones mueven los cabezales de lectura/escritura del disco de un área a otra del disco. Los cabezales están en el área de páginas de datos cuando se recorren las páginas de datos. Se mueven a un área de espacio disponible cuando los búferes de orden se llenan y se tiene que escribir la ordenación actual en el disco. A continuación, vuelven al área de páginas de datos cuando se reanuda el recorrido de páginas de la tabla. El movimiento de los cabezales de lectura/escritura es superior en la segunda fase. En ese momento, el proceso de ordenación está alternando lecturas de cada área de ordenación. Tanto las ordenaciones como las nuevas páginas de índice se crean en el grupo de archivos de destino, lo que significa que, al mismo tiempo que [!INCLUDE[ssDE](../../includes/ssde-md.md)] está repartiendo lecturas entre las ordenaciones, tiene que saltar periódicamente a las extensiones de índice para escribir nuevas páginas de índice conforme se llenan.  
   
  Si la opción SORT_IN_TEMPDB se ha establecido en ON y **tempdb** está en un conjunto de discos diferente del grupo de archivos de destino, durante la primera fase, las lecturas de las páginas de datos tienen lugar en un disco diferente que las escrituras en el área de trabajo de ordenación de **tempdb**. Esto significa que las lecturas del disco de las claves de datos tienden a proceder en serie en el disco, y las escrituras en el disco **tempdb** también tienden a ser en serie, igual que las escrituras para crear el índice final. Incluso si otros usuarios están utilizando la base de datos y están teniendo acceso a diferentes direcciones de disco, el patrón global de lecturas y escrituras es más eficaz cuando se especifica SORT_IN_TEMPDB que cuando no se especifica.  

@@ -1,5 +1,6 @@
 ---
 title: Realización de cambios de esquema en bases de datos de publicación | Microsoft Docs
+description: La replicación admite varios cambios en el esquema de objetos publicados. Obtenga información sobre los cambios en el esquema que se propagan de forma predeterminada a todos los suscriptores de SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f69d57fd4d81e150df3694386ebe44650a13a9a8
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769875"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160133"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando realice cualquiera de los siguientes cambios de esquema en el objeto publicado correspondiente en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ese cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68769875"
   
 -   Todos los objetos del suscriptor a los que se hace referencia al agregar una clave externa deben tener el mismo nombre y propietario que el objeto correspondiente en el publicador.  
   
--   No se permite agregar, quitar ni alterar índices explícitamente. Se admiten los índices creados implícitamente para las restricciones (como la restricción de clave principal).  
+-   Los índices de adición, eliminación o modificación explícitos no se replican y cualquier cambio que suponga un índice explícito deberá ejecutarse de forma individual en cada conjunto de réplicas. Se admiten los índices creados implícitamente para las restricciones (como la restricción de clave principal).  
   
 -   No se permite alterar ni quitar columnas de identidad administradas por la replicación. Para obtener más información sobre la administración automática de las columnas de identidad, vea [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
@@ -89,11 +90,11 @@ ms.locfileid: "68769875"
   
 #### <a name="adding-columns"></a>Agregar columnas  
   
--   Para agregar una columna nueva a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<tabla> ADD \<columna>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
+-   Para agregar una columna nueva a una tabla e incluirla en una publicación existente, ejecute ALTER TABLE \<Table> ADD \<Column>. De manera predeterminada, la columna se replicará en todos los suscriptores. La columna debe admitir valores NULL o incluir una restricción predeterminada. Para obtener más información sobre la forma de agregar columnas, consulte la sección "Replicación de mezcla" de este tema.  
   
--   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
+-   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y, después, ejecute ALTER TABLE \<Table> ADD \<Column>.  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
@@ -101,9 +102,9 @@ ms.locfileid: "68769875"
   
 #### <a name="dropping-columns"></a>Quitar columnas  
   
--   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
+-   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<Table> DROP \<Column>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publication>** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "68769875"
   
     -   Las restricciones deben tener un nombre explícito para permitir la eliminación. Para obtener más información, vea la sección "Consideraciones generales" de este tema.  
   
-### <a name="transactional-replication"></a>replicación transaccional  
+### <a name="transactional-replication"></a>Replicación transaccional  
   
 -   Los cambios de esquema se propagan a los suscriptores que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero la instrucción DDL solo debe incluir sintaxis compatible con la versión instalada en el suscriptor.  
   

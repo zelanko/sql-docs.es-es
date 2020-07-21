@@ -1,5 +1,5 @@
 ---
-title: Parámetros de salida de la compatibilidad con Streaming para BLOBs | Microsoft Docs
+title: Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e21f3e56380ed4ccd96fb6f2ffa9d969c2ad0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056403"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
   Este tema contiene un ejemplo que muestra la compatibilidad de la transmisión por secuencias con los parámetros de salida BLOB, que enlaza los parámetros de salida BLOB como ISequentialStreams.  
@@ -507,7 +506,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BLOB y objetos OLE](blobs-and-ole-objects.md)  
   
   

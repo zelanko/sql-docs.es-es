@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de elementos de informe (generador de informes y SSRS) | Microsoft Docs
+title: Solucionar problemas de elementos de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099389"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Solucionar problemas de elementos de informe (Generador de informes y SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66099389"
  Para ver qué permisos tienen usted y su colaborador, pregunte al administrador del servidor de informes.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Cuando busco elementos de informe que cargué en un servidor de SharePoint, no los veo. ¿Por qué no?  
- Los elementos de informe que ha cargado manualmente en una biblioteca de documentos de SharePoint, en lugar de publicarlos mediante el Generador de informes, podrían no aparecer en la galería de elementos de informe. El servidor de informes utilizado para la búsqueda en la galería podría tener que sincronizarse con el contenido de la biblioteca de documentos de SharePoint. Para obtener más información, consulte [activar la característica de sincronización de archivos de servidor de informes en Administración Central de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  
+ Los elementos de informe que ha cargado manualmente en una biblioteca de documentos de SharePoint, en lugar de publicarlos mediante el Generador de informes, podrían no aparecer en la galería de elementos de informe. El servidor de informes utilizado para la búsqueda en la galería podría tener que sincronizarse con el contenido de la biblioteca de documentos de SharePoint. Para obtener más información, vea [activar la característica File Sync del servidor de informes en administración central de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] los libros en [pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) de en MSDN.Microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>¿Por qué otros no pueden ver la imagen en sus informes?  
  Si publica un elemento de informe que es un vínculo a un archivo de imagen, el elemento de informe es en realidad solo un vínculo. Si otros no pueden ver la imagen cuando agregan el elemento de informe de imagen a sus informes, puede que no dispongan de los permisos para la imagen a la que les está vinculando.  
@@ -42,7 +42,7 @@ ms.locfileid: "66099389"
 ## <a name="why-do-i-get-a-circular-reference-error-message-when-i-try-to-publish-my-report-part"></a>¿Por qué obtengo un mensaje de error de "referencia circular" cuándo intento publicar mi elemento de informe?  
  Si los elementos de informe tienen una referencia circular, no podrá publicarlos como elementos de informe. Por ejemplo, un elemento de informe señala a un conjunto de datos, que a su vez señala a un parámetro. Por último, el parámetro también señala al conjunto de datos. Tendrá que eliminar una de las referencias para poder publicar el elemento de informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

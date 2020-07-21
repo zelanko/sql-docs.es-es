@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VC ++) Find | Microsoft Docs
+title: Ejemplo del método Find (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932524"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760101"
 ---
 # <a name="find-method-example-vc"></a>Ejemplo del método Find (VC ++)
-Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el **Pubs** base de datos. El ejemplo se supone que el proveedor subyacente no admite una funcionalidad similar.  
+En este ejemplo se usa el método [Find](../../../ado/reference/ado-api/find-method-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos **pubs** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -154,6 +154,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Buscar (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Find (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

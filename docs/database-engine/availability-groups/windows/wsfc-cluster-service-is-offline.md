@@ -1,5 +1,6 @@
 ---
 title: El servicio de clúster WSFC está sin conexión | Microsoft Docs
+description: Estado de clúster de WSFC comprueba el estado del clúster de conmutación por error de Windows Server. La directiva es incorrecta cuando el clúster está sin conexión o en el estado de cuórum forzado.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8a5b8b3d7c512ca57cf2bd154f1db6a5d3cc4979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013355"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439952"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>El servicio de clúster de WSFC está sin conexión
 
@@ -31,7 +32,7 @@ ms.locfileid: "68013355"
 |-|-|  
 |**Nombre de directiva**|Estado de clúster de WSFC|  
 |**Problema**|El servicio de clúster de WSFC está sin conexión.|  
-|**Categoría**|**Crítico**|  
+|**Categoría**|**Critical)** (Crítico)|  
 |**Faceta**|Instancia de SQL Server|  
   
 ## <a name="description"></a>Descripción  
@@ -42,7 +43,7 @@ ms.locfileid: "68013355"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El servicio de clúster de WSFC está desconectado](https://go.microsoft.com/fwlink/p/?LinkId=220849) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  Esto puede deberse a un problema del servicio de clúster o a la pérdida del quorum en el clúster.  
   
 ## <a name="possible-solution"></a>Solución posible  

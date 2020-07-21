@@ -1,5 +1,6 @@
 ---
 title: Actualización de instancias reflejadas | Microsoft Docs
+description: Obtenga información sobre cómo reducir el tiempo de inactividad al actualizar una instancia reflejada de SQL Server mediante una actualización gradual. En este artículo se incluyen los procedimientos recomendados.
 ms.custom: ''
 ms.date: 02/01/2016
 ms.prod: sql
@@ -14,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeb7b6d13a49262554dc98767b2bc8117ba007ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758218"
 ---
 # <a name="upgrading-mirrored-instances"></a>Actualización de instancias reflejadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Al actualizar una instancia reflejada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , que puede ser un Service Pack o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o a un nuevo Service Pack o una actualización acumulativa de Windows, puede reducir el tiempo de inactividad de cada base de datos reflejada a solo una conmutación por error manual realizando una actualización gradual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original). Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización de la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de la base de datos principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se van a actualizar.  
   
 > [!NOTE]  
 >  Para obtener más información sobre el uso de la creación de reflejo de la base de datos con el trasvase de registros durante una migración, descargue este [documento](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Antes de empezar, revise la siguiente información importante:  
   
 -   [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -163,6 +164,6 @@ ms.locfileid: "68050633"
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Forzar el servicio en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   

@@ -1,20 +1,21 @@
 ---
 title: Conectarse a un origen de datos ODBC (Asistente para importación y exportación de SQL Server) | Microsoft Docs
+description: Cómo configurar un DSN de ODBC o crear una cadena de conexión ODBC para utilizarla con el Asistente para importación y exportación de SQL Server
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd4dbec9e08b19a0c06c991a7007b449dff02485
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773586"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos ODBC (Asistente para importación y exportación de SQL Server)
 
@@ -28,7 +29,7 @@ Puede que tenga que descargar el controlador ODBC desde Microsoft o desde un ter
 Puede que también tenga que buscar la información de conexión necesaria que debe proporcionar. Este sitio de terceros, [The Connection Strings Reference](https://www.connectionstrings.com/) (Referencia de cadenas de conexión), contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la información de conexión que necesitan.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Comprobar que el controlador deseado está instalado
-1.  Busque o examine el applet **Orígenes de datos ODBC (64 bits)** en el Panel de control. Si solo tiene un controlador de 32 bits o sabe que tiene que usar un controlador de 32 bits, busque o examine **Orígenes de datos ODBC (32 bits)** en su lugar.
+1.  Busque o vaya al applet **Orígenes de datos ODBC (64 bits)** en el menú Inicio o el Panel de control. Si solo tiene un controlador de 32 bits o sabe que tiene que usar un controlador de 32 bits, busque o examine **Orígenes de datos ODBC (32 bits)** en su lugar.
 2.  Inicie el applet. Se abre la ventana **Administrador de origen de datos ODBC**.
 3.  En la pestaña **Controladores**, encontrará una lista de todos los controladores ODBC instalados en su equipo. (Los nombres de algunos de los controladores pueden mostrarse en varios idiomas).
 
@@ -39,7 +40,7 @@ Puede que también tenga que buscar la información de conexión necesaria que d
 > [!TIP]
 > Si sabe que el controlador está instalado y no lo ve en el applet de 64 bits, busque en el applet de 32 bits en su lugar. Esto también le indica si tiene que ejecutar el Asistente para importación y exportación de SQL Server de 64 bits o de 32 bits.
 >
-> Para usar la versión de 64 bits del Asistente para importación y exportación de SQL Server, debe instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
+> Para usar la versión de 64 bits del asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
     
 ## <a name="step-1---select-the-data-source"></a>Paso 1: Seleccionar el origen de datos
 Los controladores ODBC instalados en el equipo no aparecen en la lista desplegable de orígenes de datos. Para conectarse con un controlador ODBC, empiece seleccionando el **proveedor de datos de .NET Framework para ODBC** como origen de datos en la página **Elegir un origen de datos** o **Elegir un destino** del asistente. Este proveedor actúa como un contenedor para el controlador ODBC.
@@ -50,7 +51,7 @@ Esta es la pantalla genérica que se ve inmediatamente después de seleccionar e
 
 ## <a name="step-2---provide-the-connection-info"></a>Paso 2: Proporcionar la información de conexión
 El siguiente paso es proporcionar la información de conexión del controlador ODBC y el origen de datos. Tiene dos opciones.
-1.  Proporcione un **DSN** (nombre de origen de datos) que ya exista o que cree con el applet **Administrador de origen de datos ODBC** en el Panel de control. Un DSN es la colección guardada de la configuración necesaria para conectarse a un origen de datos ODBC.
+1.  Proporcione un **DSN** (nombre de origen de datos) que ya exista o que cree con el applet **Administrador de origen de datos ODBC**. Un DSN es la colección guardada de la configuración necesaria para conectarse a un origen de datos ODBC.
 
     Si ya conoce el nombre DSN o sabe cómo crear un nuevo DSN ahora, puede omitir el resto de esta página. Escriba el nombre DSN en el campo **Dsn** en la página **Elegir un origen de datos** o **Elegir un destino** y, a continuación, continúe con el paso siguiente del asistente.
 
@@ -64,9 +65,9 @@ El siguiente paso es proporcionar la información de conexión del controlador O
 
 Si proporciona una cadena de conexión, la página **Elegir un origen de datos** o **Elegir un destino** muestra toda la información de conexión que el asistente va a usar para conectarse al origen de datos, como el nombre del servidor y la base de datos, o el método de autenticación. Si proporciona un DSN, esta información no se mostrará.
 
-## <a name="odbc_dsn"></a> Opción 1: Proporcionar un DSN
+## <a name="option-1---provide-a-dsn"></a><a name="odbc_dsn"></a> Opción 1: Proporcionar un DSN
 Si quiere proporcionar la información de conexión con un DSN (nombre de origen de datos), use el applet **Administrador de origen de datos ODBC** para buscar el nombre del DSN existente o para crear un nuevo DSN.
-1.  Busque o examine el applet **Orígenes de datos ODBC (64 bits)** en el Panel de control. Si solo tiene un controlador de 32 bits o tiene que usar un controlador de 32 bits, busque o examine **Orígenes de datos ODBC (32 bits)** en su lugar.
+1.  Busque o vaya al applet **Orígenes de datos ODBC (64 bits)** en el menú Inicio o el Panel de control. Si solo tiene un controlador de 32 bits o tiene que usar un controlador de 32 bits, busque o examine **Orígenes de datos ODBC (32 bits)** en su lugar.
 2.  Inicie el applet. Se abre la ventana **Administrador de origen de datos ODBC**. El applet tiene el siguiente aspecto.
 
     ![Applet Administrador de ODBC del Panel de control](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -87,14 +88,14 @@ Si quiere proporcionar la información de conexión con un DSN (nombre de origen
     
 8.  Vuelva al asistente e introduzca el nombre DSN en el campo **Dsn** en la página **Elegir un origen de datos** o **Elegir un destino**. Continúe con el paso siguiente del asistente.
 
-## <a name="odbc_connstring"></a> Opción 2: Proporcionar una cadena de conexión
+## <a name="option-2---provide-a-connection-string"></a><a name="odbc_connstring"></a> Opción 2: Proporcionar una cadena de conexión
 Si quiere proporcionar la información de conexión con una cadena de conexión, el resto de este tema le ayudará a obtener la cadena de conexión que necesita.
 
-En este ejemplo se va a usar la siguiente cadena de conexión, que se conecta a Microsoft SQL Server.
+En este ejemplo se va a usar la siguiente cadena de conexión, que se conecta a Microsoft SQL Server. El ejemplo de base de datos que se usa es **WideWorldImporters** y se va a conectar a SQL Server en la máquina local.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Escriba la cadena de conexión en el campo **ConnectionString** en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
 
@@ -106,12 +107,12 @@ Esta es la pantalla que verá después de escribir la cadena de conexión.
 > Las opciones de conexión de un controlador ODBC son las mismas sin importar si se configura el origen o el destino. Es decir, las opciones que ve son las mismas en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
 ## <a name="get-the-connection-string-online"></a>Obtener la cadena de conexión en línea
-Para buscar cadenas de conexión para el controlador ODBC en línea, consulte [The Connection Strings Reference](https://www.connectionstrings.com/) (Referencia de cadenas de conexión). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la información de conexión que necesitan.
+Para buscar cadenas de conexión para el controlador ODBC en línea, consulte [The Connection Strings Reference](https://www.connectionstrings.com/) (Referencia de cadenas de conexión). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la conexión que estos necesitan.
 
 ## <a name="get-the-connection-string-with-an-app"></a>Obtener la cadena de conexión con una aplicación
 Para compilar y probar la cadena de conexión para el controlador ODBC en su propio equipo, puede usar el applet **Administrador de origen de datos ODBC** en el Panel de control. Cree un DSN de archivo para su conexión y, a continuación, copie la configuración del DSN de archivo para ensamblar la cadena de conexión. Esto requiere varios pasos, pero le ayuda a comprobar que tiene una cadena de conexión válida.
 
-1.  Busque o examine el applet **Orígenes de datos ODBC (64 bits)** en el Panel de control. Si solo tiene un controlador de 32 bits o tiene que usar un controlador de 32 bits, busque o examine **Orígenes de datos ODBC (32 bits)** en su lugar.
+1.  Busque o vaya al applet **Orígenes de datos ODBC (64 bits)** en el menú Inicio o el Panel de control. Si solo tiene un controlador de 32 bits o tiene que usar un controlador de 32 bits, busque o examine **Orígenes de datos ODBC (32 bits)** en su lugar.
 2.  Inicie el applet. Se abre la ventana **Administrador de origen de datos ODBC**.
 3.  Ahora, vaya a la pestaña **DSN de archivo** del applet. Haga clic en **Agregar**.
 
@@ -139,7 +140,7 @@ Para compilar y probar la cadena de conexión para el controlador ODBC en su pro
 
 10. Abra el archivo guardado con el Bloc de notas u otro editor de texto. Este es el contenido de nuestro ejemplo de SQL Server.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -154,20 +155,20 @@ Para compilar y probar la cadena de conexión para el controlador ODBC en su pro
 
     Después de ensamblar los valores necesarios del DSN de archivo de ejemplo, tendrá la cadena de conexión siguiente.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Normalmente, no necesita todas las configuraciones de un DSN creado con el Administrador de origen de datos ODBC para crear una cadena de conexión que funcione.  
     -   Siempre tiene que especificar el controlador ODBC.
-    -   Para un origen de datos basado en servidor, como SQL Server, normalmente se necesita el servidor, la base de datos y la información de inicio de sesión. Por tanto, en el DSN de ejemplo, no necesita TrustServerCertificate, WSID ni APP.
+    -   Para un origen de datos basado en servidor, como SQL Server, normalmente se necesita el servidor, la base de datos y la información de inicio de sesión. En el DSN de ejemplo, no necesita TrustServerCertificate, WSID ni APP.
     -   Para un origen de datos basado en archivos, se necesitan al menos el nombre de archivo y la ubicación.
     
 12. Pegue la cadena de conexión en el campo **ConnectionString** en la página **Elegir un origen de datos** o **Elegir un destino** del asistente. El asistente analiza la cadena y ya puede continuar.
 
     ![Conectarse antes a SQL con ODBC](../../integration-services/import-export-data/media/connect-to-sql-with-odbc-after.jpg)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

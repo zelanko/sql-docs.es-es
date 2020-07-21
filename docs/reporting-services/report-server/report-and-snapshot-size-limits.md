@@ -16,10 +16,10 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65581448"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
@@ -35,7 +35,7 @@ ms.locfileid: "65581448"
  Tenga en cuenta que el valor establecido para el elemento **maxRequestLength** debe ser mayor que los límites de tamaño reales que desea aplicar. Tiene que usar el valor más grande para tener en cuenta el aumento inevitable del tamaño de la solicitud HTTP que se produce una vez encapsulados todos los parámetros en un sobre SOAP y aplicada la codificación Base64 a ciertos parámetros. La codificación Base64 aumenta el tamaño de los datos originales en un 33 % aproximadamente. Por tanto, el valor que especifique para el elemento **maxRequestLength** debe ser aproximadamente un 33 % mayor que el tamaño del elemento utilizable real. Por ejemplo, si especifica un valor de 64 MB para **maxRequestLength**, puede esperar de forma realista que el tamaño máximo de los archivos de informe que se envían al servidor de informes sea aproximadamente 48 MB.  
   
 ## <a name="report-size-in-memory"></a>Tamaño de informes en memoria  
- Cuando se ejecuta un informe, el tamaño del informe es igual a la cantidad de datos que se devuelven en el informe más el tamaño del flujo de salida. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no impone un límite máximo en cuanto al tamaño de un informe representado. La memoria del sistema determina el límite superior del tamaño (de forma predeterminada, un servidor de informes usa toda la memoria configurada disponible al representar un informe), pero puede especificar los ajustes de configuración para establecer umbrales de memoria y directivas de administración de memoria. Para más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
+ Cuando se ejecuta un informe, el tamaño del informe es igual a la cantidad de datos que se devuelven en el informe más el tamaño del flujo de salida. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no impone un límite máximo en cuanto al tamaño de un informe representado. La memoria del sistema determina el límite superior del tamaño (de forma predeterminada, un servidor de informes usa toda la memoria configurada disponible al representar un informe), pero puede especificar los ajustes de configuración para establecer umbrales de memoria y directivas de administración de memoria. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
   
  El tamaño de un informe puede variar considerablemente en función de la cantidad de datos devueltos y del formato de representación que se utilice para el informe. Un informe con parámetros puede ser mayor o menor en función de cómo afectan los valores de los parámetros a los resultados de la consulta. El formato de salida que se elija para el informe influye en su tamaño de la manera siguiente:  
   
@@ -80,6 +80,6 @@ EXEC sp_spaceused
 ## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [Procesar informes grandes](../../reporting-services/report-server/process-large-reports.md)  
+ [Procesamiento de informes grandes](../../reporting-services/report-server/process-large-reports.md)  
   
   

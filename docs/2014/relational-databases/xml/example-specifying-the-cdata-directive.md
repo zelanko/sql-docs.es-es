@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de la directiva CDATA | Microsoft Docs'
+title: 'Ejemplo: Especificar la directiva CDATA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46a95265228c006e61448d16352a529f8232dd95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067842"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Ejemplo: Especificación de la directiva CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Ejemplo: Especificar la directiva CDATA
   Si se establece la directiva en **CDATA**, los datos contenidos no se codifican por entidad, pero se colocan en la sección CDATA. Los atributos **CDATA** no deben tener nombre.  
   
  La siguiente consulta engloba la descripción resumida de modelos de productos en una sección CDATA.  
@@ -38,7 +37,7 @@ WHERE   ProductModelID=19
 FOR XML EXPLICIT  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <ProductModel ProdModelID="19" Name="Mountain-100">  
@@ -46,7 +45,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

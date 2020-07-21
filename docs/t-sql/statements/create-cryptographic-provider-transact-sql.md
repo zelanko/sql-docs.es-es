@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d17e61de477b896a8fcdaead01d12674d3b9fddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061021"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392823"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un proveedor criptográfico dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de un proveedor de Administración extensible de claves (EKM).  
   
@@ -43,15 +43,17 @@ ms.locfileid: "68061021"
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
-  
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *provider_name*  
  Es el nombre del proveedor de Administración extensible de claves.  
   
  *path_of_DLL*  
  Es la ruta de acceso del archivo .dll que implementa la interfaz de Administración extensible de claves de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se usa el **Conector de SQL Server para Microsoft Azure Key Vault**, la ubicación predeterminada es **'C:\Archivos de programa\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Todas las claves creadas por un proveedor harán referencia al proveedor por su GUID. El GUID se retiene para todas las versiones de la DLL.  
   
  La DLL que implementa la interfaz SQLEKM debe estar firmada digitalmente con cualquier certificado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprobará la firma. Esto incluye su cadena de certificados, que debe tener su raíz instalada en la ubicación **Entidades de certificación raíz de confianza** en un sistema Windows. Si se verifica que la firma no es correcta, se producirá un error en la instrucción CREATE CRYPTOGRAPHIC PROVIDER. Para más información sobre certificados y cadenas de certificados, vea [Certificados y claves asimétricas de SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  

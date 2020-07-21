@@ -1,5 +1,5 @@
 ---
-title: Utilice sp_rename para cambiar el nombre de índice duplicados | Microsoft Docs
+title: Usar sp_rename para cambiar el nombre del índice duplicado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8ffe3b9befd0c7239d32094e5738e0fb2947c5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058817"
 ---
-# <a name="use-sprename-to-rename-duplicate-index-name"></a>Utilizar sp_rename para cambiar el nombre de índice duplicado
+# <a name="use-sp_rename-to-rename-duplicate-index-name"></a>Utilizar sp_rename para cambiar el nombre de índice duplicado
   El Asesor de actualizaciones ha detectado nombres de índice de vista o tabla duplicados. Cambie los nombres de los índices o quite los duplicados antes de actualizar.  
   
 ## <a name="component"></a>Componente  
@@ -60,8 +59,8 @@ ms.locfileid: "66091358"
   
 4.  Si fuera necesario, utilice de nuevo **sp_rename** para corregir los nombres de índice.  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

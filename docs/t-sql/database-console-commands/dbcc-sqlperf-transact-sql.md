@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: f3142f2474dbf00e165878d20fbdda53528fa930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4132d5ec459f5fb180ebea94665449cefa7e961a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040624"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882010"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Proporciona estadísticas de uso del espacio del registro de transacciones para todas las bases de datos. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también se puede usar para restablecer las estadísticas de esperas y bloqueos temporales.
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,14 +69,14 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
  En la tabla siguiente se describen las columnas del conjunto de resultados.  
   
-|Nombre de columna|Definición|  
+|Nombre de la columna|Definición|  
 |---|---|
-|**Database Name**|Nombre de la base de datos para la que se presentan las estadísticas del registro.|  
+|**Nombre de la base de datos**|Nombre de la base de datos para la que se presentan las estadísticas del registro.|  
 |**Tamaño del registro (MB)**|Tamaño actual asignado al registro. Este valor siempre es menor que la cantidad asignada originalmente como espacio del registro, ya que [!INCLUDE[ssDE](../../includes/ssde-md.md)] reserva una pequeña cantidad de espacio en disco para información interna de encabezados.|  
 |**Espacio de registro utilizado (%)**|Porcentaje del archivo de registro que se usa actualmente para almacenar la información del registro de transacciones.|  
 |**Estado**|Estado del archivo de registro. Siempre es 0.|  
   
-## <a name="Remarks"></a> Comentarios  
+## <a name="remarks"></a><a name="Remarks"></a> Comentarios  
 A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use la DMV [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) en lugar de `DBCC SQLPERF(LOGSPACE)` para devolver información de uso de espacio del registro de transacciones por cada base de datos.    
  
 Las entradas del registro de transacciones que realizó cada transacción en una base de datos. Para obtener más información, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) y [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).

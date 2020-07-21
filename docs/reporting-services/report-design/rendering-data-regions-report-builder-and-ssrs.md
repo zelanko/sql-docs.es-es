@@ -1,5 +1,5 @@
 ---
-title: Representar regiones de datos (Generador de informes y SSRS) | Microsoft Docs
+title: Representación de regiones de datos (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 368b17a6ffe7355569a9d60509a9a2db61931fee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576440"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077001"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Representar regiones de datos (Generador de informes y SSRS)
   Además de los comportamientos generales de representación que se aplican a todos los elementos de informe, las regiones de datos están sujetas a comportamientos de paginación y de representación adicionales. Las reglas de representación específicas de las regiones de datos describen la forma en la que crece una región de datos, cómo se representan las celdas especiales, como la celda de la esquina o las celdas de encabezado, y cómo se representa una región de datos para la lectura de derecha a izquierda. En este tema se explica cómo se representan las distintas partes de una región de datos.  
@@ -22,7 +22,7 @@ ms.locfileid: "65576440"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Regiones de datos Tablix  
- La región de datos Tablix, que permite crear tablas, matrices y listas, se representa como una cuadrícula formada por columnas y filas. La intersección de una fila y una columna es una celda. Cuando se representa, esta celda puede contener datos u otros elementos de informe, como imágenes, rectángulos, cuadros de texto o subinformes. Una región de datos Tablix puede crecer tanto vertical como horizontalmente. Además, la celda de la esquina, las celdas de encabezado de la región de datos y las celdas del cuerpo de la región de datos pueden crecer en función de su contenido. Si la región de datos ocupa varias páginas, los elementos de informe configurados para que se repitan con la región de datos se representan en cada una de las páginas en las que se muestra ésta. Para obtener más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ La región de datos Tablix, que permite crear tablas, matrices y listas, se representa como una cuadrícula formada por columnas y filas. La intersección de una fila y una columna es una celda. Cuando se representa, esta celda puede contener datos u otros elementos de informe, como imágenes, rectángulos, cuadros de texto o subinformes. Una región de datos Tablix puede crecer tanto vertical como horizontalmente. Además, la celda de la esquina, las celdas de encabezado de la región de datos y las celdas del cuerpo de la región de datos pueden crecer en función de su contenido. Si la región de datos ocupa varias páginas, los elementos de informe configurados para que se repitan con la región de datos se representan en cada una de las páginas en las que se muestra ésta. Para más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="right-to-left"></a>De derecha a izquierda  
  Una región de datos Tablix que se haya configurado para mostrarse de derecha a izquierda se representa con su estructura como una imagen reflejada de la región de datos tal como se representaría de izquierda a derecha. La esquina de la región de datos aparece en la esquina superior derecha. Si el informe incluye columnas dinámicas, éstas se expanden hacia la izquierda. La configuración de derecha a izquierda no afecta al orden de los datos en la región de datos; simplemente, las columnas se ordenan de forma diferente.  

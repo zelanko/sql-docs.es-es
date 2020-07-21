@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8217f3571c7ec285d10e04d1c289f1a4963ee384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933246"
 ---
 # <a name="udt-utilities"></a>Utilidades UDT
   El ejemplo sobre funciones de la utilidad UDT contiene una serie de funciones de utilidades. Entre ellas se incluyen funciones para exponer metadatos de ensamblado en Transact-SQL, ejemplos de funciones con valores de tabla (TVF) de transmisión para devolver los tipos de datos de un ensamblado en forma de tabla, así como funciones para devolver los campos, los métodos y las propiedades en un tipo de datos definido por el usuario. Algunas de las tecnologías que se muestran son las funciones con valores de tabla de transmisión de datos, las API de reflexión de .NET Framework y la invocación de funciones con valores de tabla de Transact-SQL.  
@@ -23,7 +22,7 @@ ms.locfileid: "62780225"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que está disponible en el [sitio web](https://go.microsoft.com/fwlink/?linkid=62796)de Codeplex.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62780225"
   
 -   La base de datos de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está utilizando.  
   
--   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa, solicite a un administrador que le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -90,7 +89,7 @@ ms.locfileid: "62780225"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -1318,7 +1317,7 @@ Public NotInheritable Class UdtServices
 End Class  
 ```  
   
- Este es el script (`Install.sql`) de instalación de [!INCLUDE[tsql](../../includes/tsql-md.md)], que implementa el ensamblado y crea las funciones en la base de datos.  
+ Este es el script ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) de instalación de`Install.sql`, que implementa el ensamblado y crea las funciones en la base de datos.  
   
 ```  
 USE AdventureWorks2012;  
@@ -1596,7 +1595,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

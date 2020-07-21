@@ -1,5 +1,5 @@
 ---
-title: Características y tareas de Reporting Services (SSRS) | Microsoft Docs
+title: Características y tareas de Reporting Services | Microsoft Docs
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e0b79b8a76b36071f8d5f0767ac313a6ed5489b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 764eda3b356a42272b5f26790574746f842768ae
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580055"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081855"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Características y tareas de Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se organiza mediante los informes y las características de informes, las características del servidor de informes y las características del producto [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

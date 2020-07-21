@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 619ce91eb47d69298c2b4bc53741f2a8cb7461dd
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: f2f1989f65dfae7d772dfd7d14a9fb3dd285b0a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784542"
 ---
 # <a name="ident_current-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el último valor de identidad generado para una tabla o vista especificadas. El último valor de identidad generado puede ser para cualquier sesión y cualquier ámbito.  
   
@@ -44,7 +44,7 @@ IDENT_CURRENT( 'table_or_view' )
 *table_or_view*  
 Es el nombre de la tabla o vista cuyo valor de identidad se devuelve. *table_or_view* es **varchar**, sin valor predeterminado.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -52,7 +52,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como IDENT_CURRENT, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 IDENT_CURRENT es similar a las funciones de identidad SCOPE_IDENTITY y @@IDENTITY de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Las tres funciones devuelven los últimos valores de identidad generados. Pero la definición de *últimos valores de identidad* para cada una de estas funciones es diferente en cuanto al ámbito y la sesión:  
 
 -   IDENT_CURRENT devuelve el último valor de identidad generado para una tabla específica en cualquier sesión y cualquier ámbito.  
@@ -143,6 +143,6 @@ SELECT IDENT_CURRENT('t7');
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cac3a3feb6b4d3126b9c1629d4f2e4c8884e8dbf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438732"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
   Una instancia CDC de Oracle realiza minería de datos en los cambios de una sola base de datos de origen de Oracle (un clúster de Oracle RAC se considera una sola base de datos) y escribe los cambios confirmados en las tablas de cambios en una base de datos CDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -37,10 +36,10 @@ ms.locfileid: "62835658"
 |Estado|Código de estado de active|Código de estado de error|Descripciones|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|La instancia CDC de Oracle no se está ejecutando. El subestado ABORTED indica que la instancia CDC de Oracle estaba ACTIVE y se ha detenido inesperadamente.<br /><br /> La instancia principal del servicio CDC de Oracle establece el subestado ABORTED cuando detecta que la instancia CDC de Oracle no se está ejecutando mientras su estado es ACTIVE.|  
-|error|0|1|La instancia CDC de Oracle no se está ejecutando. El estado ERROR indica que la instancia CDC estaba ACTIVE pero encontró un error no recuperable y se deshabilitó a sí misma. El estado ERROR contiene los códigos de subestado siguientes:<br /><br /> MISCONFIGURED: se detectó un error de configuración irrecuperable.<br /><br /> PASSWORD-REQUIRED: no hay ninguna contraseña establecida en Change Data Capture Designer para Oracle de Attunity o la contraseña configurada no es válida. Esto puede deberse a un cambio en la contraseña de clave asimétrica del servicio.|  
-|RUNNING|1|0|La instancia CDC se está ejecutando y está procesando registros de cambios. El estado RUNNING contiene los códigos de subestado siguientes:<br /><br /> IDLE: todos los registros de cambios se han procesado y almacenado en las tablas de control de destino ( **_CT**). No hay ninguna transacción activa con las tablas de control.<br /><br /> PROCESSING: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de control ( **_CT**).|  
+|ERROR|0|1|La instancia CDC de Oracle no se está ejecutando. El estado ERROR indica que la instancia CDC estaba ACTIVE pero encontró un error no recuperable y se deshabilitó a sí misma. El estado ERROR contiene los códigos de subestado siguientes:<br /><br /> MISCONFIGURED: se detectó un error de configuración irrecuperable.<br /><br /> PASSWORD-REQUIRED: no hay ninguna contraseña establecida en el Diseñador de captura de datos modificados para Oracle de Attunity o la contraseña configurada no es válida. Esto puede deberse a un cambio en la contraseña de clave asimétrica del servicio.|  
+|RUNNING|1|0|La instancia CDC se está ejecutando y está procesando registros de cambios. El estado RUNNING contiene los códigos de subestado siguientes:<br /><br /> IDLE: todos los registros de cambios se han procesado y almacenado en las tablas de control de destino (**_CT**). No hay ninguna transacción activa con las tablas de control.<br /><br /> PROCESSING: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de control (**_CT**).|  
 |STOPPED|0|0|La instancia CDC no se está ejecutando. El subestado STOP indica que la instancia CDC estaba ACTIVE y se detuvo correctamente.|  
-|SUSPENDED|1|1|La instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error recuperable. El estado SUSPENDED contiene los códigos de subestado siguientes:<br /><br /> DISCONNECTED: no se puede establecer la conexión con la base de datos Oracle de origen. El procesamiento se reanudará una vez que se restaure la conexión.<br /><br /> STORAGE: el almacenamiento está lleno. El procesamiento se reanudará cuando haya disponible más almacenamiento. En algunos casos, este estado puede no aparecer porque la tabla de estado no se puede actualizar.<br /><br /> LOGGER: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal.|  
+|SUSPENDED|1|1|La instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error recuperable. El estado SUSPENDED contiene los códigos de subestado siguientes:<br /><br /> DISCONNECTED: no se puede establecer la conexión con la base de datos de Oracle de origen. El procesamiento se reanudará una vez que se restaure la conexión.<br /><br /> STORAGE: el almacenamiento está lleno. El procesamiento se reanudará cuando haya disponible más almacenamiento. En algunos casos, este estado puede no aparecer porque la tabla de estado no se puede actualizar.<br /><br /> LOGGER: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal.|  
 |DATAERROR|x|x|Este código de estado solo se usa para la tabla **xdbcdc_trace** . No aparece en la tabla **xdbcdc_state** . Los registros de seguimiento que tienen este estado indican un problema con una entrada de registro de Oracle. La entrada de registro no válida se almacena en la columna **data** como un BLOB. El estado DATAERROR contiene los códigos de subestado siguientes:<br /><br /> BADRECORD: la entrada de registro adjunta no se pudo analizar.<br /><br /> CONVERT-ERROR: los datos de algunas columnas no se pudieron convertir a las columnas de destino de la tabla de captura. Este estado puede aparecer solo si la configuración especifica que los errores de conversión deben producir registros de seguimiento.|  
   
  Puesto que el estado del servicio CDC de Oracle se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede haber casos en los que el valor de estado de la base de datos no refleje el estado actual del servicio. El escenario más común es cuando el servicio pierde su conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se puede reanudar (por cualquier motivo). En ese caso, el estado almacenado en **cdc.xdbcdc_state** se queda obsoleto. Si la marca de tiempo (UTC) de la última actualización tiene más de un minuto de antigüedad, probablemente el estado esté obsoleto. En este caso, use el Visor de eventos de Windows para buscar información adicional sobre el estado del servicio.  
@@ -55,7 +54,7 @@ ms.locfileid: "62835658"
   
 -   La tabla MSXDBCDC.dbo.xdbcdc_trace, que el proceso principal del servicio CDC de Oracle emplea para el registro y el seguimiento generales.  
   
--   La tabla \<cdc-database>.cdc.xdbcdc_trace, que las instancias Oracle CDC usan para el registro y el seguimiento generales. Esto significa que los errores relacionados con una instancia CDC de Oracle específica se registran en la tabla de seguimiento de esa instancia.  
+-   La \<cdc-database> tabla. cdc. xdbcdc_trace, que las instancias CDC de Oracle usan para el registro y el seguimiento generales. Esto significa que los errores relacionados con una instancia CDC de Oracle específica se registran en la tabla de seguimiento de esa instancia.  
   
  El servicio CDC de Oracle registra información cuando el servicio:  
   
@@ -112,6 +111,6 @@ ms.locfileid: "62835658"
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Controlar errores inesperados de la instancia CDC de Oracle  
  El servicio CDC de Oracle supervisa los subprocesos de la instancia CDC. Cuando se anula un subproceso de instancia CDC, el servicio CDC lo deshabilita en la tabla MSXDBCDC.dbo.xdbcdc_databases y actualiza su estado de cdc.xdbcdc_state a ABORTED. En este caso, se emplea el cuadro de diálogo estándar de informe de errores de Windows para informar del error para su análisis.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de captura de datos modificados para Oracle de Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
+## <a name="see-also"></a>Consulte también  
+ [Change Data Capture Designer para Oracle por Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [La instancia CDC de Oracle](the-oracle-cdc-instance.md)  

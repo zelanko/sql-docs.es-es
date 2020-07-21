@@ -1,5 +1,6 @@
 ---
-title: Exportar a un archivo PDF (Generador de informes y SSRS) | Microsoft Docs
+title: Exportación a un archivo PDF (Generador de informes) | Microsoft Docs
+description: En el Generador de informes, la extensión de representación en PDF representa informes paginados en archivos que se pueden abrir en Adobe Acrobat y otros visores de PDF de terceros.
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e9c00901c1a409ec2a8a52476b201f2bf7992017
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580786"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342855"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
   La extensión de representación en PDF representa informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de terceros compatibles con PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 11.0 o versiones posteriores. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.  
@@ -25,7 +26,7 @@ ms.locfileid: "65580786"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Incrustación de fuentes  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a> Incrustación de fuentes  
  Siempre que sea posible, la extensión de representación en PDF incrustará el subconjunto de cada una de las fuentes que sea necesaria para mostrar el informe en el archivo PDF. Las fuentes que se utilicen en el informe deberán instalarse en el servidor de informes. Cuando el servidor de informes genera un informe en formato PDF, usa la información almacenada en la fuente a la que hace referencia el informe para crear asignaciones de caracteres en el archivo PDF. Si la fuente a la que se hace referencia no está instalada en el servidor de informes, es posible que el archivo PDF resultante no contenga las asignaciones correctas y, por lo tanto, no se muestre correctamente cuando se visualice.  
   
  Las fuentes se incrustan en el archivo PDF cuando se dan las siguientes condiciones:  
@@ -54,20 +55,20 @@ ms.locfileid: "65580786"
   
  Las fuentes incrustadas en el archivo PDF se incluyen en la propiedad Fonts que se guarda con el archivo, en forma de metadatos.  
   
-##  <a name="Metadata"></a> Metadatos  
+##  <a name="metadata"></a><a name="Metadata"></a> Metadatos  
  Además del diseño del informe, la extensión de representación en PDF escribe los metadatos siguientes en el diccionario de información del documento PDF.  
   
 |Propiedad de PDF|Creada a partir de|  
 |------------------|------------------|  
-|**Title**|El atributo **Name** del elemento RDL **Report** .|  
+|**Título**|El atributo **Name** del elemento RDL **Report** .|  
 |**Autor**|El elemento RDL **Author** .|  
-|**Asunto**|El elemento RDL **Description** .|  
+|**Subject**|El elemento RDL **Description** .|  
 |**Creador**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**Productor**|El nombre y la versión de la extensión de representación.|  
 |**CreationDate**|La hora de ejecución del informe en el formato **datetime** de PDF.|  
   
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactividad  
  Algunos elementos interactivos se admiten en PDF. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -88,7 +89,7 @@ ms.locfileid: "65580786"
  Los hipervínculos de los informes se representan como vínculos en los que puede hacerse clic en el archivo PDF. Al hacer clic en ellos, Acrobat abrirá el explorador predeterminado del cliente y navegará a la dirección URL del hipervínculo.  
   
   
-##  <a name="Compression"></a> Compresión  
+##  <a name="compression"></a><a name="Compression"></a> Compresión  
  La compresión de imágenes está basada en el tipo de archivo original de la imagen. La extensión de representación en PDF comprime los archivos PDF de forma predeterminada.  
   
  Para conservar la compresión de las imágenes incluidas en el archivo PDF siempre que sea posible, las imágenes JPEG se almacenan como JPEG y el resto de tipos de imagen se almacenan como BMP.  
@@ -97,7 +98,7 @@ ms.locfileid: "65580786"
 >  Los archivos PDF no admiten la inserción de imágenes PNG.  
   
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando los valores de configuración de la información del dispositivo. Para obtener más información, consulte [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md).  
   
   

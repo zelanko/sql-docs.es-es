@@ -1,5 +1,6 @@
 ---
-title: Componentes de SQL Server Native Client | Documentos de Microsoft
+title: Componentes
+description: Obtenga información sobre los componentes de la SQL Server Native Client como sqlncli11.dll, sqlnclir11. RLL, SQLNCLI. h y sqlncli11. lib.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +13,17 @@ helpviewer_keywords:
 - components [SQL Server Native Client]
 - SQLNCLI, about SQL Server Native Client
 ms.assetid: 65f932d5-daa1-4eff-b6df-ee633fcf2a7c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b0f5000c84f06991d28fd80167bdae1dfae9610
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 50bd63e573cfabd28d5b1503a9ac1f6ff74914a5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069341"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005774"
 ---
 # <a name="components-of-sql-server-native-client"></a>Componentes de SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client contiene los componentes siguientes:  
   
@@ -32,10 +31,10 @@ ms.locfileid: "68069341"
 |---------------|-----------------|  
 |sqlncli11.dll|El archivo de biblioteca de vínculos dinámicos (DLL) que contiene toda la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Esto incluye el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
 |sqlnclir11.rll|El archivo de recursos adjunto para la biblioteca de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|   
-|sqlncli.h|El archivo de encabezado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que contiene todas las definiciones nuevas necesarias para utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Este archivo de encabezado reemplaza a los archivos de encabezado odbcss.h y sqloledb.h.<br /><br /> Nota: No se puede hacer referencia a sqlncli.h y odbcss.h en el mismo programa, pero puede hacer referencia a sqlncli.h y sqloledb.h en el mismo programa, siempre sqloledb.h se defina en primer lugar.|  
-|sqlncli11.lib|El archivo de biblioteca necesario directamente llamada la **bcp** funciones de utilidad que forman parte de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC Native Client.<br /><br /> Nota: Si hace referencia al archivo sqlncli11.lib en el código de programación, deberá asegurarse de que el archivo sqlncli11.dll está en la ruta del sistema y en la ruta de acceso del sistema de los usuarios que utilizan la aplicación.|  
+|sqlncli.h|El archivo de encabezado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que contiene todas las definiciones nuevas necesarias para utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Este archivo de encabezado reemplaza a los archivos de encabezado odbcss.h y sqloledb.h.<br /><br /> Nota: no puede hacer referencia a SQLNCLI. h y odbcss. h en el mismo programa, pero puede hacer referencia a SQLNCLI. h y SQLOLEDB. h en el mismo programa, siempre que se defina primero SQLOLEDB. h.|  
+|sqlncli11.lib|El archivo de biblioteca necesario para llamar directamente a las funciones de la utilidad **BCP** que forman parte del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client.<br /><br /> Nota: Si hace referencia al archivo sqlncli11. lib en el código de programación, debe asegurarse de que el archivo de sqlncli11.dll está en la ruta de acceso del sistema y en la ruta de acceso del sistema de los usuarios que usan la aplicación.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

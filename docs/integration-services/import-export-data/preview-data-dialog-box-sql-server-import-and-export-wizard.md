@@ -12,10 +12,10 @@ ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: feeef370bc64697e3fa9ef3a279e31ba047301fd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296320"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Vista previa de los datos (Asistente para importación y exportación de SQL Server)
@@ -28,10 +28,10 @@ ms.locfileid: "71296320"
 ## <a name="screen-shot-of-the-preview-data-page"></a>Captura de pantalla de la página Vista previa de los datos 
  En la siguiente captura de pantalla se muestra el cuadro de diálogo **Vista previa de los datos** del asistente.  
  
-![Página Vista previa de datos del Asistente para importación y exportación](../../integration-services/import-export-data/media/preview-data.png "Preview data page of the Import and Export Wizard")  
+![Página Vista previa de los datos del Asistente para importar y exportar](../../integration-services/import-export-data/media/preview-data.png "Página Vista previa de los datos del Asistente para importar y exportar")  
   
 ## <a name="preview-sample-data"></a>Obtener una vista previa de los datos de ejemplo  
- **Source**  
+ **Origen**  
 Muestra la consulta que usa el asistente para cargar datos del origen de datos.
 
 Si ha seleccionado una tabla para copiar, el campo **Origen** muestra una consulta `SELECT * FROM <table>` en lugar del nombre de la tabla. 
@@ -46,5 +46,5 @@ Después de obtener una vista previa de los datos, es posible que quiera cambiar
 ## <a name="whats-next"></a>¿Qué sigue?  
  Después de obtener una vista previa de los datos que se van a copiar y de hacer clic en **Aceptar**, el cuadro de diálogo **Vista previa de los datos** devuelve a la página **Seleccionar tablas y vistas de origen** o **Configurar el destino del archivo plano** . Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) o [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)

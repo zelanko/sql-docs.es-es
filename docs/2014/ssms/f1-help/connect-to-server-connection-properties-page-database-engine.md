@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30382bcb0c70fb985c88866602cb997988b88569
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 733066f73b7adab950defcb2552364eda2bde7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062113"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
-  Use esta pestaña para ver o especificar opciones cuando se conecte a una enstancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde-md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  Use esta pestaña para ver o especificar opciones cuando se conecte a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde-md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="options"></a>Opciones  
- **Conectar con base de datos**  
- Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<>** predeterminadas, se conectará a la base de datos predeterminada del servidor. Si selecciona  **\<examinar servidor >** , puede examinar el servidor de la base de datos a la que se va a conectar.  
+ **Conexión a la base de datos**  
+ Seleccione en la lista una base de datos a la que conectarse. Si selecciona **\<default>** , se conectará a la base de datos predeterminada del servidor. Si selecciona **\<Browse server>** , puede examinar el servidor de la base de datos a la que se va a conectar.  
   
  Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
   
@@ -33,11 +32,11 @@ ms.locfileid: "70153750"
  **Protocolo de red**  
  Seleccione un protocolo de la lista. Los protocolos de cliente disponibles son los que se han configurado con la Configuración de red de cliente en Administración de equipos.  
   
- **Tamaño del paquete de red**  
+ **Tamaño de paquete de red**  
  Escriba el tamaño de los paquetes de red que desea enviar. El valor predeterminado es 4096 (bytes).  
   
- **Tiempo de espera de la conexión**  
- Escriba el número de segundos que hay que esperar a que se establezca una conexión antes de que se agote el tiempo de espera. El valor predeterminado es 15 segundos.  
+ **Tiempo de espera de conexión**  
+ Escriba el número de segundos que se debe esperar para que se establezca una conexión antes de que se agote el tiempo de espera. El valor predeterminado es 15 segundos.  
   
  **Tiempo de espera de ejecución**  
  Escriba el intervalo de tiempo (en segundos) que hay que esperar antes de que finalice la ejecución de una tarea en el servidor. El valor predeterminado es de cero segundos, que indica que no hay tiempo de espera.  
@@ -57,19 +56,19 @@ ms.locfileid: "70153750"
  **Restablecer todo**  
  Reemplaza todos los valores de las propiedades de conexión especificadas manualmente por los valores predeterminados.  
   
- **Conectar**  
+ **Conexión**  
  Intenta establecer una conexión utilizando los valores de la lista.  
   
  **Opciones**  
  Haga clic aquí para modificar el cuadro de diálogo y ocultar las opciones adicionales de conexión al servidor, como recordar la contraseña.  
   
- **Probar**  
+ **Prueba**  
  Al registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)] en **Servidores registrados**, haga clic para probar la conexión.  
   
  **Guardar**  
  Guarda la configuración en **Servidores registrados**.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo Propiedades de conexión](../../database-engine/connection-properties-dialog-box.md)  
+## <a name="see-also"></a>Consulte también  
+ [Propiedades de conexión, cuadro de diálogo](../../database-engine/connection-properties-dialog-box.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria | Microsoft Docs
-ms.custom: ''
+title: ¿Debería una tabla o un procedimiento almacenado pasarse a OLTP en memoria?
+description: Utilice el informe de análisis de rendimiento de transacciones de SQL Server Management Studio para evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos.
+ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a392904b378514bb22816a3c325535fbe94cbacf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907857"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723274"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El informe de análisis del rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. En el informe también se indicará cuánto trabajo debe hacer para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa. Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
@@ -133,7 +134,7 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
     PS SQLSERVER: \SQL\{Instance Name}\DEFAULT\Databases\{two-part DB Name}>  
     ```  
   
-2.  Escriba el comando siguiente.  
+2.  Escriba el comando siguiente:  
   
     ```  
     Save-SqlMigrationReport -FolderPath "<folder_path>"  

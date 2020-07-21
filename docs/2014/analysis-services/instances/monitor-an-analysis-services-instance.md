@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b98037ea9f26c339cdf7aba22c37e2cfb3dfbb97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543817"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Supervisar una instancia de Analysis Services
   Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o mediante el Monitor de Rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079744"
   
  [Usar SQL Server Profiler para supervisar Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   
- [Usar SQL Server extendida Events &#40;XEvents&#41; supervisar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [Use SQL Server Extended Events &#40;XEvents&#41; para supervisar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
  [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   

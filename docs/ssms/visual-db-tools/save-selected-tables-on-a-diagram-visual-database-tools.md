@@ -1,10 +1,9 @@
 ---
-title: Guardar tablas seleccionadas en un diagrama (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Guardar las tablas seleccionadas en un diagrama
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c473a6af4ee2bcf10c482f223d442da0936c0a40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256387"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255079"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Guardar tablas seleccionadas en un diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,5 +40,5 @@ Puede guardar una tabla específica o un conjunto de tablas si no desea guardar 
     > La lista de tablas puede contener otras tablas además de las seleccionadas. Por ejemplo, si cambia el tipo de datos de una columna que participa en una relación con otra tabla, se incluirán las dos tablas en esta lista.  
   
 ## <a name="see-also"></a>Consulte también  
-[Trabajar con diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Trabajar con diagramas de bases de datos](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

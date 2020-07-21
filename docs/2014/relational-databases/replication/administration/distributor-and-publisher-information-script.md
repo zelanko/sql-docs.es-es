@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060825"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Script de información del distribuidor y del publicador
   Este script utiliza tablas del sistema y procedimientos almacenados de replicación para responder a las preguntas más frecuentes sobre los objetos del distribuidor y del publicador. El script se puede utilizar "tal cual" y puede también proporcionar la base para crear scripts personalizados. Para poder ejecutar el script en el entorno, puede que sea necesario realizar las dos modificaciones siguientes:  
   
 -   Cambie la línea `use AdventureWorks2012` para utilizar el nombre de la base de datos de publicaciones.  
   
--   Quite los comentarios (`--`) de la línea `exec sp_helparticle @publication='<PublicationName>'` y reemplace \<nombrePublicación> por el nombre de una publicación.  
+-   Quite los comentarios ( `--` ) de la línea `exec sp_helparticle @publication='<PublicationName>'` y reemplace \<PublicationName> por el nombre de una publicación.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  
@@ -95,7 +94,7 @@ SELECT object_name(object_id) AS tran_published_table, name AS published_column 
 SELECT object_name(object_id) AS merge_published_table, name AS published_column FROM sys.columns WHERE is_merge_published = 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md)   
  [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql)   
  [sp_helparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)   

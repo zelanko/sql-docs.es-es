@@ -1,5 +1,6 @@
 ---
-title: Last (función de XQuery) | Microsoft Docs
+title: Función Last (XQuery) | Microsoft Docs
+description: Obtenga información sobre la función Last () de XQuery que devuelve el índice entero del último elemento de una secuencia.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729521"
 ---
 # <a name="context-functions---last-xquery"></a>Funciones de contexto: last (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número de elementos de la secuencia que se está procesando. En concreto, devuelve el índice entero del último elemento de la secuencia. El primer elemento de la secuencia tiene un valor de índice de 1.  
   
@@ -35,13 +36,13 @@ fn:last() as xs:integer
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- En SQL Server, **fn:Last()** sólo puede utilizarse en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
+ En SQL Server, **FN: Last ()** solo se puede usar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Usar la función last() de XQuery para recuperar los dos últimos pasos de fabricación  
- La consulta siguiente recupera los dos últimos pasos de fabricación de un modelo de producto determinado. El valor, el número de pasos de fabricación, devuelto por la **last()** función se usa en esta consulta para recuperar los dos últimos pasos de fabricación.  
+ La consulta siguiente recupera los dos últimos pasos de fabricación de un modelo de producto determinado. En esta consulta se usa el valor, el número de pasos de fabricación, devueltos por la función **Last ()** para recuperar los dos últimos pasos de fabricación.  
   
 ```  
 SELECT ProductModelID, Instructions.query('   
@@ -59,9 +60,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- En la consulta anterior, el **last()** funcionando en /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` devuelve el número de pasos de fabricación. Este valor se utiliza para recuperar el último paso de fabricación de la ubicación de centro de trabajo.  
+ En la consulta anterior, la función **Last ()** de/ `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` devuelve el número de pasos de fabricación. Este valor se utiliza para recuperar el último paso de fabricación de la ubicación de centro de trabajo.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductModelID Result    
@@ -77,7 +78,7 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cambie el cuadro de diálogo de configuración (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Cambiar configuración (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527651"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Cambiar configuración (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Cambiar configuración** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para cambiar la configuración que controla el procesamiento de los objetos enumerados en el cuadro de diálogo **Procesar** . Para mostrar el cuadro de diálogo **Cambiar configuración** , haga clic en **Cambiar configuración** en el cuadro de diálogo **Proceso** .  
   
 > [!NOTE]  
->  La configuración especificada en este cuadro de diálogo invalida la configuración heredada de la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para los objetos enumerados en el cuadro de diálogo **Proceso** .  
+>   La configuración especificada en este cuadro de diálogo invalida la configuración heredada de la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para los objetos enumerados en el cuadro de diálogo **Proceso** .  
   
 ## <a name="options"></a>Opciones  
  **Opciones de procesamiento**  
@@ -35,7 +34,7 @@ ms.locfileid: "66088250"
  **Tareas paralelas máximas**  
  Seleccione el número máximo de tareas que quiere que la operación de procesamiento ejecute en paralelo o elija **Dejar que el servidor decida** para que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccione el número óptimo de tareas paralelas.  
   
- **Sequential**  
+ **secuencial**  
  Haga clic en esta opción procesar los objetos de manera secuencial.  
   
  **Modo de transacción**  
@@ -46,7 +45,7 @@ ms.locfileid: "66088250"
 -   **Transacciones independientes** procesa todos los objetos, incluidos los objetos dependientes, en transacciones independientes.  
   
 > [!NOTE]  
->  Esta opción solo se habilita si se selecciona **Secuenciales** .  
+>   Esta opción solo se habilita si se selecciona **Secuenciales** .  
   
  **Opción de tabla de reescritura**  
  Elija la opción usada para administrar la tabla de reescritura:  
@@ -63,10 +62,10 @@ ms.locfileid: "66088250"
  **Errores de clave de dimensión**  
  Utilice esta pestaña para modificar la configuración relacionada con la configuración de errores de la operación de procesamiento. Esta pestaña contiene las siguientes opciones:  
   
- **Use la configuración de error predeterminada**  
+ **Usar configuración de error predeterminada**  
  Seleccione esta opción para utilizar la configuración de errores predeterminada para los objetos en la operación de procesamiento.  
   
- **Utilizar la configuración de error personalizado**  
+ **Utilizar la configuración de error personalizada**  
  Seleccione esta opción para definir la configuración de error para los objetos de la operación de procesamiento.  
   
  **Acción del error de clave**  
@@ -110,7 +109,7 @@ ms.locfileid: "66088250"
   
 -   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
   
- **Clave NULL convertida en desconocida**  
+ **Clave null convertida en Unknown**  
  Especifique una de las siguientes acciones para que se lleve a cabo cuando se agregue una clave de miembro NULL al miembro desconocido durante el procesamiento de un objeto:  
   
 -   **Omitir error** omite el error.  
@@ -119,7 +118,7 @@ ms.locfileid: "66088250"
   
 -   **Informar y detenerse** informa del error y detiene la operación de procesamiento.  
   
- **Clave NULL no permitida**  
+ **Clave null no permitida**  
  Especifique una de las siguientes acciones para que se lleve a cabo si se encuentra una clave NULL que no está permitida cuando se procesa un objeto:  
   
 -   **Omitir error** omite el error.  
@@ -137,8 +136,8 @@ ms.locfileid: "66088250"
  **Procesar objetos afectados**  
  Haga clic en esta acción para procesar los objetos que dependan de los objetos seleccionados en el cuadro de diálogo **Proceso** .  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cuadro de diálogo procesar &#40;Analysis Services - datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cuadro de diálogo procesar &#40;Analysis Services-datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
   

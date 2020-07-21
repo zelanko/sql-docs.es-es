@@ -1,6 +1,6 @@
 ---
-title: Crear, modificar y quitar claves externas | Microsoft Docs
-ms.custom: ''
+title: Crear, modificar y eliminar las claves externas
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,24 +13,23 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4894535c0c9e7fc6908dd4e6a7129f874f16d4b5
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MT
+ms.openlocfilehash: 04d0980f880ecca7ec21c3c8d41f009972df2798
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148509"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001324"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Crear, modificar y eliminar las claves externas
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> representa las claves externas.  
   
- Para crear una clave externa en SMO, debe especificar la tabla en la que la clave externa se define en el constructor del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. En la tabla, debe seleccionar al menos una columna para ser la clave externa. Para ello, cree una variable de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> y especifique el nombre de la columna que es la clave externa. A continuación, especifique la tabla y la columna a las que se hace referencia. Utilice el <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para agregar la columna a la propiedad de objeto Columns.  
+ Para crear una clave externa en SMO, debe especificar la tabla en la que la clave externa se define en el constructor del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. En la tabla, debe seleccionar al menos una columna para ser la clave externa. Para ello, cree una variable de objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> y especifique el nombre de la columna que es la clave externa. A continuación, especifique la tabla y la columna a las que se hace referencia. Utilice el <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> método para agregar la columna a la propiedad de objeto **Columns** .  
   
- Las columnas que representan la clave externa se enumeran en la propiedad de objeto Columns del <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. La propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que se encuentra en la tabla especificada en la propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> representa la clave principal a la que hace referencia la clave externa.  
+ Las columnas que representan la clave externa se enumeran en la propiedad de objeto **Columns** del <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> objeto. La propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que se encuentra en la tabla especificada en la propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> representa la clave principal a la que hace referencia la clave externa.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Crear, modificar y quitar una clave externa en Visual Basic  
  En este ejemplo de código se muestra cómo crear una relación de clave externa entre una o varias columnas de una tabla y una columna de clave principal de otra tabla.  
@@ -120,8 +119,8 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: Claves externas, claves principales y columnas de restricción UNIQUE  
- Este ejemplo explica cómo:  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: claves externas, claves principales y columnas de restricción UNIQUE  
+ En este ejemplo se muestra:  
   
 -   Buscar una clave externa en un objeto existente.  
   

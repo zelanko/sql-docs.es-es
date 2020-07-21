@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a02fa726d7fef74c4baf3ba44a24519a5cbb680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805157"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933926"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
   Utilice este cuadro de diálogo para habilitar y configurar uno o varios umbrales de advertencia para la base de datos seleccionada en el árbol de navegación del cuadro de diálogo **Monitor de creación de reflejo de la base de datos** .  
@@ -30,18 +29,18 @@ ms.locfileid: "65805157"
   
 ## <a name="options"></a>Opciones  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato _SYSTEM_ **\\** _INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato _sistema_ **\\** _INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   
--   **No conectado a**  *nombre_instancia_servidor*  
+-   **No conectado a** *nombre de instancia de servidor*  
   
--   **Intentando conectar a**  *nombre_instancia_servidor*  
+-   **Intentando conectar a** *nombre de instancia de servidor*  
   
--   **Conectado a**  *nombre_instancia_servidor*  
+-   **Conectado a** *nombre de instancia de servidor*  
   
     > [!NOTE]  
-    >  Si no es miembro del rol fijo de servidor **sysadmin** , este estado es **Conectado a** *nombre_instancia_servidor* **(permisos limitados)** .  
+    >  Si no es miembro del rol fijo de servidor **sysadmin**, este estado es **Conectado a** *nombre de instancia de servidor*  **(permisos limitados)** .  
   
  El nombre de cada una de las instancias del servidor asociado se muestra en otro campo de *instancia del servidor y su estado de conexión* . En el campo superior se muestra el servidor principal cuando el monitor inició su ejecución.  
   
@@ -67,30 +66,30 @@ ms.locfileid: "65805157"
   
 |Advertencia|Descripción|  
 |-------------|-----------------|  
-|**Advertir si el registro sin enviar sobrepasa el umbral**|El umbral indica el número de kilobytes (KB) del registro sin enviar en la cola de envío del servidor principal.|  
+|**Advierte si el registro sin enviar supera el valor de umbral**|El umbral indica el número de kilobytes (KB) del registro sin enviar en la cola de envío del servidor principal.|  
 |**Advertir si el registro sin restaurar sobrepasa el umbral**|El umbral indica el número de KB de la cola rehecha en la instancia del servidor reflejado.|  
 |**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|El umbral indica el número de minutos de transacciones que no se han enviado desde la cola de envío a la instancia del servidor reflejado. Este valor ayuda a medir la posibilidad de pérdida de datos con respecto a la hora.|  
 |**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|El umbral indica el número de milisegundos de retraso por transacción (solo relevante en el modo de seguridad alta). Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día.|  
   
- **Habilitado en '** *\<instancia de servidor>* **'**  
+ **Habilitado en '** *\<server instance>* **'**  
  Una casilla en blanco indica que la advertencia está deshabilitada actualmente en la instancia del servidor. Para habilitar una advertencia, haga clic en su casilla.  
   
- **Umbral en '** *\<>* **'**  
+ **Umbral en '** *\<server instance>* **'**  
  Al habilitar una advertencia, establezca el umbral en la parte izquierda de esta columna. Se produce un evento si se ha alcanzado el umbral especificado al actualizarse la tabla de estado. Si deshabilita un umbral tras la configuración de un valor, su valor permanece en este campo y se usará si vuelve a habilitar la advertencia.  
   
  Cuando no se habilita una advertencia, este campo está inactivo.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Al hacer clic en **Aceptar** , se cierra este cuadro de diálogo y se muestran los valores especificados actualmente de los umbrales de advertencia de la cuadrícula **Umbrales** en la página con pestañas **Advertencias**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un umbral solo se puede aplicar a un asociado a la vez, aunque es recomendable que establezca un umbral para un evento específico en los dos asociados, con lo que podrá asegurarse de que la advertencia persiste si se produce una conmutación por error en la base de datos. El umbral adecuado para cada asociado depende de la capacidad de rendimiento del sistema de dicho asociado.  
   
  Un evento solo se escribe en el registro de eventos para un rendimiento si su valor se encuentra en el umbral, o por encima de éste, cuando se actualiza la tabla de estado. Si un valor máximo alcanza el umbral momentáneamente entre las actualizaciones de estado, se pierde dicho máximo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

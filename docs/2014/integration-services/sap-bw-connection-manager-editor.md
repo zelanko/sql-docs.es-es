@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones de SAP BW | Microsoft Docs
+title: SAP BW editor del administrador de conexiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26425e367512ae9fc778afa24e3cade04fb826f3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056277"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422512"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor del administrador de conexiones SAP BW
   Use el **Editor del administrador de conexiones de SAP BW** para especificar las propiedades que se van a usar para establecer una conexión con la versión 7 del sistema SAP Netweaver BW.  
@@ -33,7 +32,7 @@ ms.locfileid: "66056277"
   
     -   Haga doble clic en administrador de conexiones de SAP BW.  
   
-         -o bien-  
+         o bien  
   
     -   Haga clic con el botón derecho en el administrador de conexiones de SAP BW y, después, seleccione **Editar**.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66056277"
  **Lenguaje**  
  Permite especificar el idioma que usa el sistema. Por ejemplo, especifique **EN** para inglés.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Permite especificar el nombre de usuario que se va a utilizar para establecer la conexión al sistema.  
   
  **Contraseña**  
@@ -76,23 +75,23 @@ ms.locfileid: "66056277"
   
  Para conectarse a un único servidor de aplicaciones, use en su lugar la opción **Usar un solo servidor de aplicaciones** .  
   
- **Servidor de Mensajería**  
+ **Servidor de mensajes**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el nombre del servidor del mensaje.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
+>   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
  **Grupo**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el nombre del grupo de servidores.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
+>   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
- **SID**  
+ **Junction**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el identificador del sistema para la conexión.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
+>   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
  **Directorio de registro**  
  Permite habilitar el registro para los componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW.  
@@ -109,10 +108,10 @@ ms.locfileid: "66056277"
  **Examinar**  
  Permite examinar para seleccionar una carpeta para el directorio de registro.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Permite probar la conexión con los valores que ha especificado. Después de hacer clic en **Probar conexión**, aparecerá un cuadro de mensaje que indica si la conexión se realizó correctamente o no.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

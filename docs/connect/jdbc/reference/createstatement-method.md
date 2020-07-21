@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54a69c6a7ae62d96b6d2df08c671a5f8d92ced3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fcb82d90c030f4ebee6bd3ebae262aafb8c4e929
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955220"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927638"
 ---
 # <a name="createstatement-method-"></a>Método createStatement ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public java.sql.Statement createStatement()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de instrucción.  
+ El objeto Statement.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método createStatement se especifica mediante el método createStatement en la interfaz java. SQL. Connection.  
+## <a name="remarks"></a>Observaciones  
+ El método createStatement method especifica este método createStatement en la interfaz java.sql.Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método createStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

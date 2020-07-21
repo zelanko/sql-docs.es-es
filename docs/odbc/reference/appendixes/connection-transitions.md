@@ -12,164 +12,164 @@ helpviewer_keywords:
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019191"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81284775"
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
-Las conexiones de ODBC tienen los siguientes estados.  
+Las conexiones ODBC tienen los Estados siguientes.  
   
-|Estado|Descripción|  
+|State|Descripción|  
 |-----------|-----------------|  
-|C0|Entorno sin asignar, sin asignar la conexión|  
-|C1|Entorno asignado, sin asignar la conexión|  
-|C2|Asigna el entorno, asignada la conexión|  
-|C3|Función de conexión necesita datos|  
-|C4|Conexión conectado|  
-|C5|Conectado la conexión, asignada la instrucción|  
-|C6|Conexión conectado, la transacción en curso. Es posible que una conexión a estar en estado C6 con ninguna de las instrucciones asignada en la conexión. Por ejemplo, suponga que la conexión está en modo de confirmación manual y está en estado C4. Si una instrucción asigna, ejecuta (a partir de una transacción) y, a continuación, se libera, la transacción permanece activa pero no hay ninguna instrucción en la conexión.|  
+|C0|Entorno sin asignar, conexión sin asignar|  
+|C1|Entorno asignado, conexión sin asignar|  
+|C2|Entorno asignado, conexión asignada|  
+|C3|La función de conexión necesita datos|  
+|C4|Conexión conectada|  
+|C5|Conexión conectada, instrucción asignada|  
+|C6|Conexión conectada, transacción en curso. Es posible que una conexión esté en el estado C6 sin instrucciones asignadas en la conexión. Por ejemplo, supongamos que la conexión está en modo de confirmación manual y está en el estado C4. Si se asigna una instrucción, se ejecuta (iniciando una transacción) y, a continuación, se libera, la transacción permanece activa, pero no hay ninguna instrucción en la conexión.|  
   
- Las tablas siguientes muestran cómo cada función ODBC afecta al estado de conexión.  
+ En las tablas siguientes se muestra cómo afecta cada función ODBC al estado de la conexión.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> No hay Env.|C1 sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1 sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH)[3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(IH)[4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|ADMITIR dos|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|ADMITIR 3|ADMITIR|(08003)|(08003)|C5|--[5]|--[5]|  
+|ADMITIR 4|ADMITIR|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
- [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
+ [1] esta fila muestra las transiciones cuando se SQL_HANDLE_ENV *HandleType* .  
   
- [2] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DBC.  
+ [2] esta fila muestra las transiciones cuando se SQL_HANDLE_DBC *HandleType* .  
   
- [3] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_STMT.  
+ [3] esta fila muestra las transiciones cuando se SQL_HANDLE_STMT *HandleType* .  
   
- [4] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DESC.  
+ [4] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
- [5] llamada **SQLAllocHandle** con *OutputHandlePtr* apuntando a un identificador válido sobrescribe dicho identificador sin tener en cuenta el identificador de ofthat contenido anterior y podría causar problemas para los controladores ODBC. Es incorrecta programación de aplicaciones de ODBC para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para  *\*OutputHandlePtr* sin llamar a  **SQLFreeHandle** para liberar el identificador antes de reasignación de él. Sobrescribir ODBC controla de manera puede provocar un comportamiento incoherente o errores por parte de los controladores ODBC.  
+ [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior de ese control y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \*OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de este modo, se puede producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C3 [d] C4 [s]|--C2 [d] [e] C4 [s]|(08002)|(08002)|(08002)|  
+|ADMITIR|ADMITIR|C3 [d] C4 [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5[2]|  
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--|--[1] C5 [2]|  
   
- [1] en la conexión estaba en modo de confirmación manual.  
+ [1] la conexión estaba en modo de confirmación manual.  
   
- [2] en la conexión estaba en modo de confirmación automática.  
+ [2] la conexión estaba en modo de confirmación automática.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges y SQLTables  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--[1] C6 [2]|--|  
   
- [1] en la conexión estaba en modo de confirmación automática, o el origen de datos no ha iniciado una transacción.  
+ [1] la conexión estaba en modo de confirmación automática o el origen de datos no ha comenzado una transacción.  
   
- [2] en la conexión estaba en modo de confirmación manual, y el origen de datos comenzó una transacción.  
+ [2] la conexión estaba en modo de confirmación manual y el origen de datos comenzó una transacción.  
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
+|ADMITIR|ADMITIR|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField y SQLSetDescRec  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--[1]|--|--|  
   
- [1] en este estado, los descriptores solo disponibles para la aplicación se asignan explícitamente descriptores.  
+ [1] en este estado, los únicos descriptores disponibles para la aplicación son descriptores asignados explícitamente.  
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources y SQLDrivers  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|--|--|--|--|  
+|ADMITIR|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(08003)|C2|C2|C2|25000|  
+|ADMITIR|ADMITIR|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|S C4--n [f]|(08002)|(08002)|(08002)|(08002)|  
+|ADMITIR|ADMITIR|C4 s--n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|--[3]|--[3]|--[3]|--|--|: [4] o ([5], [6] y [8]) C4 [5] y [7] C5 [5], [6] y [9]|  
-|(IH)[2]|(IH)|(08003)|(08003)|--|--|C5|  
+|ADMITIR dimensional|--[3]|--[3]|--[3]|--|--|--[4] o ([5], [6] y [8]) C4 [5] y [7] C5 [5], [6] y [9]|  
+|ADMITIR dos|ADMITIR|(08003)|(08003)|--|--|C5|  
   
- [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
+ [1] esta fila muestra las transiciones cuando se SQL_HANDLE_ENV *HandleType* .  
   
- [2] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DBC.  
+ [2] esta fila muestra las transiciones cuando se SQL_HANDLE_DBC *HandleType* .  
   
- [3] porque la conexión no está en estado conectado, se ve afectado por la transacción.  
+ [3] debido a que la conexión no está en estado conectado, no se ve afectada por la transacción.  
   
- [4] en la confirmación o reversión error en la conexión. La función devuelve SQL_ERROR en este caso.  
+ [4] error en la confirmación o reversión de la conexión. La función devuelve SQL_ERROR en este caso.  
   
- [5] la confirmación o reversión correcta en la conexión. La función devuelve SQL_ERROR si no se pudo confirmar o revertir en otra conexión o la función devuelve SQL_SUCCESS si la confirmación o reversión se realizó correctamente en todas las conexiones.  
+ [5] la confirmación o reversión se realizó correctamente en la conexión. La función devuelve SQL_ERROR si no se pudo realizar la operación commit o ROLLBACK en otra conexión, o si la función devuelve SQL_SUCCESS si la instrucción COMMIT o Rollback se realizó correctamente en todas las conexiones.  
   
- [6] se produjo al menos una instrucción asignada en la conexión.  
+ [6] había al menos una instrucción asignada en la conexión.  
   
- [7] se han producido ninguna de las instrucciones asignada en la conexión.  
+ [7] no se asignaron instrucciones en la conexión.  
   
- [8] la conexión tenía al menos una instrucción para el que existe era un cursor abierto, y el origen de datos conserva los cursores cuando las transacciones se confirman o se revierte, lo que corresponda (dependiendo de si *Sql_commit* fue SQL_ CONFIRMACIÓN o SQL_ROLLBACK). Para obtener más información, vea los atributos SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR en [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
+ [8] la conexión tenía al menos una instrucción para la que había un cursor abierto y el origen de datos conserva los cursores cuando las transacciones se confirman o se revierten, lo que se aplique (dependiendo de si *CompletionType* se SQL_COMMIT o SQL_ROLLBACK). Para obtener más información, vea los atributos SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR en [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
- [9] si la conexión tenía las instrucciones para el que se produjeron los cursores abiertos, los cursores no se conservan cuando la transacción se ha confirmado o revertido.  
+ [9] si la conexión tuviera instrucciones para las que había cursores abiertos, no se conservarían los cursores cuando se confirmara o revirtió la transacción.  
   
 ## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect y SQLExecute  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2] C6[3]|--|  
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--[1] C6 [2] C6 [3]|--|  
   
- [1] en la conexión estaba en modo de confirmación automática y la instrucción ejecutada no era un *cursor* *especificación* (por ejemplo, una instrucción SELECT); o la conexión estaba en modo de confirmación manual y la instrucción ejecutar no se ha iniciado una transacción.  
+ [1] la conexión estaba en modo de confirmación automática y la instrucción ejecutada no era una *cursor* *especificación* de cursor (como una instrucción SELECT). o la conexión estaba en modo de confirmación manual y la instrucción ejecutada no inició una transacción.  
   
- [2] en la conexión estaba en modo de confirmación automática y la instrucción ejecutada fue un *cursor* *especificación* (por ejemplo, una instrucción SELECT).  
+ [2] la conexión estaba en modo de confirmación automática y la instrucción ejecutada era una *cursor* *especificación* de cursor (como una instrucción SELECT).  
   
- [3] en la conexión estaba en modo de confirmación manual, y el origen de datos comenzó una transacción.  
+ [3] la conexión estaba en modo de confirmación manual y el origen de datos comenzó una transacción.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--C4 [7] [5] y [8] C5 [6] y [8]|  
-|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
+|ADMITIR dimensional|C0|HY010|HY010|HY010|HY010|HY010|  
+|ADMITIR dos|ADMITIR|C1|HY010|HY010|HY010|HY010|  
+|ADMITIR 3|ADMITIR|ADMITIR|ADMITIR|ADMITIR|C4 [5]--[6]|--[7] C4 [5] y [8] C5 [6] y [8]|  
+|ADMITIR 4|ADMITIR|ADMITIR|ADMITIR|--|--|--|  
   
- [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
+ [1] esta fila muestra las transiciones cuando se SQL_HANDLE_ENV *HandleType* .  
   
- [2] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DBC.  
+ [2] esta fila muestra las transiciones cuando se SQL_HANDLE_DBC *HandleType* .  
   
- [3] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_STMT.  
+ [3] esta fila muestra las transiciones cuando se SQL_HANDLE_STMT *HandleType* .  
   
- [4] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DESC.  
+ [4] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
- [5] se ha producido una única instrucción asignada en la conexión.  
+ [5] solo había una instrucción asignada en la conexión.  
   
- [6] había varias instrucciones asignadas en la conexión.  
+ [6] se asignaron varias instrucciones en la conexión.  
   
  [7] la conexión estaba en modo de confirmación manual.  
   
@@ -177,126 +177,126 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
-|(IH)[2]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|ADMITIR dimensional|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--|C5 [3]--[4]|  
+|ADMITIR dos|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--|--|  
   
- [1] esta fila muestra las transacciones cuando la *opción* argumento es SQL_CLOSE.  
+ [1] esta fila muestra las transacciones cuando el argumento de *opción* es SQL_CLOSE.  
   
- [2] esta fila muestra las transacciones cuando la *opción* argumento es SQL_UNBIND o SQL_RESET_PARAMS.  
+ [2] esta fila muestra las transacciones cuando el argumento de *opción* es SQL_UNBIND o SQL_RESET_PARAMS.  
   
- [3] en la conexión estaba en modo de confirmación automática y no hay cursores estaban abiertos en las instrucciones excepto este.  
+ [3] la conexión estaba en modo de confirmación automática y no hay ningún cursor abierto en ninguna instrucción excepto en esta.  
   
- [4] en la conexión estaba en modo de confirmación manual, o estaba en modo de confirmación automática y un cursor estaba abierto en al menos un otra instrucción.  
+ [4] la conexión estaba en modo de confirmación manual o estaba en modo de confirmación automática y un cursor estaba abierto al menos en otra instrucción.  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--|--|--|  
+|ADMITIR|ADMITIR|--[1] 08003 [2]|HY010|--|--|--|  
   
- [1] el *atributo* argumento era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE o se haya establecido un valor para el atributo de conexión.  
+ [1] el argumento de *atributo* era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE, o se ha establecido un valor para el atributo de conexión.  
   
- [2] el *atributo* argumento no era SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE y no se haya establecido un valor para la conexión atributo.  
+ [2] el argumento de *atributo* no se SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE o SQL_ATTR_TRACEFILE, y no se ha establecido un valor para el atributo de conexión.  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField y SQLGetDiagRec  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|--|--|--|--|--|--|  
-|(IH)[2]|(IH)|--|--|--|--|--|  
-|(IH)[3]|(IH)|(IH)|(IH)|(IH)|--|--|  
-|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
+|ADMITIR dimensional|--|--|--|--|--|--|  
+|ADMITIR dos|ADMITIR|--|--|--|--|--|  
+|ADMITIR 3|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--|--|  
+|ADMITIR 4|ADMITIR|ADMITIR|ADMITIR|--|--|--|  
   
- [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
+ [1] esta fila muestra las transiciones cuando se SQL_HANDLE_ENV *HandleType* .  
   
- [2] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DBC.  
+ [2] esta fila muestra las transiciones cuando se SQL_HANDLE_DBC *HandleType* .  
   
- [3] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_STMT.  
+ [3] esta fila muestra las transiciones cuando se SQL_HANDLE_STMT *HandleType* .  
   
- [4] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_DESC.  
+ [4] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|--|--|--|--|--|--|  
+|ADMITIR|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|HY010|HY010|--|--|--|  
+|ADMITIR|ADMITIR|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|08003|--|--|--|  
+|ADMITIR|ADMITIR|--[1] 08003 [2]|08003|--|--|--|  
   
- [1] el *InfoType* argumento era SQL_ODBC_VER.  
+ [1] el argumento *InfoType* se SQL_ODBC_VER.  
   
- [2] el *InfoType* argumento no era SQL_ODBC_VER.  
+ [2] el argumento *InfoType* no se SQL_ODBC_VER.  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--[3] C5[1]|  
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--[1] C6 [2]|--[3] C5 [1]|  
   
- [1] en la conexión estaba en modo de confirmación automática y la llamada a **SQLMoreResults** no se ha inicializado el procesamiento de un conjunto de resultados de una especificación de cursor.  
+ [1] la conexión estaba en modo de confirmación automática y la llamada a **SQLMoreResults** no ha inicializado el procesamiento de un conjunto de resultados de una especificación de cursor.  
   
- [2] en la conexión estaba en modo de confirmación automática y la llamada a **SQLMoreResults** se ha inicializado el procesamiento de un conjunto de resultados de una especificación de cursor.  
+ [2] la conexión estaba en modo de confirmación automática y la llamada a **SQLMoreResults** ha inicializado el procesamiento de un conjunto de resultados de una especificación de cursor.  
   
- [3] en la conexión estaba en modo de confirmación manual.  
+ [3] la conexión estaba en modo de confirmación manual.  
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(08003)|(08003)|--|--|--|  
+|ADMITIR|ADMITIR|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--[1] C6 [2]|--|  
   
- [1] en la conexión estaba en modo de confirmación automática, o el origen de datos no ha iniciado una transacción.  
+ [1] la conexión estaba en modo de confirmación automática o el origen de datos no ha comenzado una transacción.  
   
- [2] en la conexión estaba en modo de confirmación manual, y el origen de datos comenzó una transacción.  
+ [2] la conexión estaba en modo de confirmación manual y el origen de datos comenzó una transacción.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--08002 [3] [4] HY011 [5]|--08002 [3] [4] HY011 [5]|: [3] y [6] C5 [8] 08002 HY011 [4] [5] o [7]|  
+|ADMITIR|ADMITIR|--[1] 08003 [2]|HY010|--[3] 08002 [4] HY011 [5]|--[3] 08002 [4] HY011 [5]|--[3] y [6] C5 [8] 08002 [4] HY011 [5] o [7]|  
   
- [1] el *atributo* argumento no era SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
+ [1] el argumento de *atributo* no se SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
   
- [2] el *atributo* argumento era SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
+ [2] el argumento de *atributo* se SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
   
- [3] el *atributo* argumento no era SQL_ATTR_ODBC_CURSORS o SQL_ATTR_PACKET_SIZE.  
+ [3] el argumento de *atributo* no se SQL_ATTR_ODBC_CURSORS ni SQL_ATTR_PACKET_SIZE.  
   
- [4] el *atributo* argumento era SQL_ATTR_ODBC_CURSORS.  
+ [4] el argumento de *atributo* se SQL_ATTR_ODBC_CURSORS.  
   
- [5] el *atributo* argumento era SQL_ATTR_PACKET_SIZE.  
+ [5] el argumento de *atributo* se SQL_ATTR_PACKET_SIZE.  
   
- [6] el *atributo* argumento no era SQL_ATTR_AUTOCOMMIT, o la *atributo* argumento era SQL_ATTR_AUTOCOMMIT y establecer este atributo no se confirmaron la transacción.  
+ [6] el argumento de *atributo* no se SQL_ATTR_AUTOCOMMIT o el argumento de *atributo* se SQL_ATTR_AUTOCOMMIT y el establecimiento de este atributo no confirmó la transacción.  
   
- [7] el *atributo* argumento era SQL_ATTR_TXN_ISOLATION.  
+ [7] el argumento de *atributo* se SQL_ATTR_TXN_ISOLATION.  
   
- [8] el *atributo* argumento era SQL_ATTR_AUTOCOMMIT y establecer este atributo confirma la transacción.  
+ [8] el argumento de *atributo* se SQL_ATTR_AUTOCOMMIT y el establecimiento de este atributo confirmó la transacción.  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|(HY010)|--|--|--|  
+|ADMITIR|--|--|HY010|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>Todas las demás funciones ODBC  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
+|C0<br /><br /> No env.|C1<br /><br /> Sin asignar|C2<br /><br /> Allocated|C3<br /><br /> Necesidad de datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--|
+|ADMITIR|ADMITIR|ADMITIR|ADMITIR|ADMITIR|--|--|

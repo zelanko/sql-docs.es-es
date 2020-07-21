@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: afa95f660c04bf38bf12cee66b1053b935cc5113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bae3ccf4e9eadc6e0df1843753cc38d8fceec7be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85703688"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una instancia de **GeometryCollection** a partir de una representación Well-Known Binary (WKB) de Open Geospatial Consortium (OGC).
   
@@ -43,12 +43,12 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia **GeometryCollection** que se quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El tipo OGC de la instancia de **geography** devuelto por STGeomCollFromWKB() se establece en **GeometryCollection**, **MultiPolygon**, **MultiLineString** o **MultiPoint**, en función de los datos WKB correspondientes.  
   
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  

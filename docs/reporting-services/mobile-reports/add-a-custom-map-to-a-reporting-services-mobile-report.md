@@ -1,6 +1,7 @@
 ---
 title: Agregar un mapa personalizado a un informe de Reporting Services móvil | Microsoft Docs
-ms.date: 03/01/2017
+description: Puede agregar un mapa personalizado a un informe para dispositivos móviles de Reporting Services. En este artículo se describe cómo cargar y conectar datos a un mapa personalizado.
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a1c15d5b5155d68f94a1672ca55654485c6b1835
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63141257"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448347"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Agregar un mapa personalizado a un informe de Reporting Services móvil
 Los mapas personalizados requieren dos archivos:  
@@ -22,11 +23,11 @@ Los mapas personalizados requieren dos archivos:
   
 Obtenga más información sobre los [Mapas personalizados en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).  
   
-Almacene ambos archivos en la misma carpeta. Los nombres de los dos archivos deben coincidir (por ejemplo, canada.shp y canada.dbf). Los metadatos (archivo DBF) deben incluir el campo "NAME" con el valor del nombre de la forma correspondiente (clave), que se usará para rellenar el mapa con datos.   
+Almacene ambos archivos en la misma carpeta. Los nombres de los dos archivos deben coincidir (por ejemplo, canada.shp y canada.dbf). La primera columna de metadatos (archivo DBF) se usa para comparar con el valor de clave del nombre de la forma correspondiente (clave), que se usará para rellenar el mapa con datos.
   
 ## <a name="load-a-custom-map"></a>Cargar un mapa personalizado  
   
-1. En la pestaña **Diseño** , seleccione un tipo de mapa: **Gradient Heat Map**(Mapa térmico de degradado), **Range Stop Heat Map**(Mapa térmico de umbrales de rangos) or **Bubble Map**(Mapa de burbujas), arrástrelo a la superficie de diseño y desígnele el tamaño que desee.  
+1. En la pestaña **Diseño**, seleccione un tipo de mapa: **Mapa término degradado**, **Mapa térmico de detención de rango** o **Mapa de burbujas**, arrástrelo a la superficie de diseño y desígnele el tamaño que desee.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
@@ -45,9 +46,9 @@ Cuando agregue un mapa personalizado a su informe por primera vez, [!INCLUDE[SS_
   
 Mostrar datos reales en el mapa personalizado es igual que mostrarlos en los mapas integrados. Siga los pasos que aparecen en [Mapas de informes de Reporting Services móviles](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md) para mostrar los datos.  
   
-### <a name="see-also"></a>Vea también  
-- [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
-- [Mapas de informes de Reporting Services móviles](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>Consulte también  
+- [Mapas personalizados en informes móviles de Reporting Services](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+- [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   

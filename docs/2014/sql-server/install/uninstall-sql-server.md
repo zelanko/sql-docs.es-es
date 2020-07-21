@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 365ce473045741d9b4ada003917c7bd4797c0b47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470223"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062397"
 ---
 # <a name="uninstall-sql-server-2014"></a>Desinstalar SQL Server 2014
   Consulte los temas siguientes para desinstalar totalmente una instancia existente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y preparar el sistema para poder volver a instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,9 +43,9 @@ ms.locfileid: "62470223"
   
 -   [Anular una instalación de SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planear una instalación de SQL Server](planning-a-sql-server-installation.md)   
- [Instalar a SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
+ [Instalación de SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
  [Actualizar a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

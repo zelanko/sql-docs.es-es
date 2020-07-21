@@ -19,18 +19,18 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 761e6f43f1199d4eb16060cd769a30ebba220ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92e56faee85f5e80bd516896c8468fd06b5ad5b4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914254"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003769"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una cadena Unicode con los delimitadores agregados para convertirla en un identificador delimitado válido de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67914254"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   
@@ -49,30 +49,39 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  '*quote_character*'  
  Es una cadena de un solo carácter que se utiliza como delimitador. Puede ser una comilla simple ( **'** ), un corchete de apertura o cierre ( **[]** ), comillas dobles ( **"** ), un paréntesis de apertura o cierre ( **()** ), un signo de mayor que o menor que ( **><** ), una llave de apertura o cierre ( **{}** ) o un acento grave ( **\`** ). Se devuelve NULL si se proporciona un carácter no admitido. Si no se especifica *quote_character*, se usarán corchetes.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(258)**  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se toma la cadena de caracteres `abc[]def` y se utilizan los caracteres `[` y `]` para crear un identificador delimitado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido.  
   
-```  
-SELECT QUOTENAME('abc[]def');  
+```sql
+SELECT QUOTENAME('abc[]def');
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-[abc[]]def]  
+[abc[]]def]
   
 (1 row(s) affected)  
 ```  
   
  Observe que el corchete derecho de la cadena `abc[]def` aparece dos veces para indicar que se trata de un carácter de escape.  
+ 
+ En el siguiente ejemplo se prepara una cadena entrecomillada para usarla para dar nombre a una columna.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+```sql
+DECLARE @columnName NVARCHAR(255)='user''s "custom" name'
+DECLARE @sql NVARCHAR(MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName) + ' FROM dbo.DimCustomer'
+
+EXEC sp_executesql @sql
+```
+  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo se toma la cadena de caracteres `abc def` y se utilizan los caracteres `[` y `]` para crear un identificador delimitado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido.  
   
-```  
+```sql
 SELECT QUOTENAME('abc def');   
 ```  
   
@@ -96,6 +105,3 @@ SELECT QUOTENAME('abc def');
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

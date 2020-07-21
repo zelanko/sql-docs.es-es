@@ -1,5 +1,5 @@
 ---
-title: Llamadores de confianza parcial permitir | Microsoft Docs
+title: Permitir llamadores de confianza parcial | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e76005b6314f074d4f54f64d42a03b4b79dcef3a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933776"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitir llamadores de confianza parcial
   Compartir bibliotecas de código es un escenario común con la integración con Common Language Runtime (CLR), donde a menudo un ensamblado o una aplicación obtienen acceso a un ensamblado que contiene un tipo definido por el usuario, un procedimiento almacenado, una función definida por el usuario, un agregado definido por el usuario, un desencadenador o una clase de utilidad. Las bibliotecas de código que se van a compartir entre varias aplicaciones se deben firmar con un nombre seguro.  
@@ -60,7 +59,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  En este ejemplo también se muestra el uso del atributo "Allow partially trusted callers" para indicar que el ensamblado Conjunto de resultados es una biblioteca a la que se puede llamar de forma segura desde otros ensamblados. Este enfoque es algo más complejo pero mucho más seguro que registrar el ensamblado de llamada utilizando el permiso UNSAFE. Es más seguro porque al registrar el ensamblado de llamada como seguro se limitan los recursos afectados fuera del servidor y se evitan daños en la integridad del mismo.  
   
- Las instrucciones de compilación de este ejemplo suponen que los archivos de código fuente están en un directorio denominado c:\samples.  Si utiliza otro directorio, tendrá que modificar los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. El [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts también requiere la base de datos AdventureWorks. Puede descargar la base de datos de ejemplo AdventureWorks desde el [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) página principal.  
+ Las instrucciones de compilación de este ejemplo suponen que los archivos de código fuente están en un directorio denominado c:\samples.  Si utiliza otro directorio, tendrá que modificar los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts también requieren la base de datos AdventureWorks. Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server.  
   
  Para compilar y ejecutar el ejemplo, pegue la primera lista de código en un archivo denominado ResultSet.cs y compile con csc /target:library ResultSet.cs.  
   
@@ -1098,7 +1097,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

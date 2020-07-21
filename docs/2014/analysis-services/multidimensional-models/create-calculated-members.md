@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03ce064e08e28e4a5245c2cf18d110797e3ebce4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076275"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535997"
 ---
 # <a name="create-calculated-members"></a>Crear miembros calculados
   Puede crear medidas o miembros de una dimensión personalizados, denominados miembros calculados, combinando datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado denominado Euros que convierta dólares en euros multiplicando una medida de dólar existente por una tasa de cambio. De esta manera, se puede mostrar a los usuarios finales el valor en euros en una fila o una columna independiente.  
@@ -29,7 +28,7 @@ ms.locfileid: "66076275"
   
  Los miembros calculados se crean en cubos. Para crear un miembro calculado, en el Diseñador de cubos, en la pestaña **Cálculos** , haga clic en el icono de **Nuevo miembro calculado** de la barra de herramientas. Este comando abre un formulario para especificar las siguientes opciones para el miembro calculado:  
   
- **Name**  
+ **Nombre**  
  Seleccione el nombre del miembro calculado. Este nombre aparece como encabezado de columna o de fila de los valores de miembros calculados cuando los usuarios finales examinan el cubo.  
   
  **Jerarquía primaria**  
@@ -42,7 +41,7 @@ ms.locfileid: "66076275"
   
  Las jerarquías se dividen en niveles que contienen miembros. Cada miembro produce un encabezado. Mientras examinan los datos de un cubo, los usuarios finales pueden obtener detalles de un encabezado seleccionado a cualquier encabezado subordinado que no se haya mostrado previamente. El encabezado del miembro calculado se agrega al nivel inmediatamente inferior del miembro primario que haya seleccionado.  
   
- **Expresión**  
+ **Expression**  
  Especifique la expresión que produce los valores del miembro calculado. Esta expresión puede escribirse en expresiones multidimensionales (MDX). La expresión puede contener cualquiera de los elementos siguientes:  
   
 -   Expresiones de datos que representan los componentes del cubo, como dimensiones, niveles, medidas, etc.  
@@ -80,7 +79,7 @@ ms.locfileid: "66076275"
   
 -   Si un miembro calculado se crea en la dimensión de medidas, el miembro calculado puede tener direcciones en esa dimensión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cálculos en modelos multidimensionales](calculations-in-multidimensional-models.md)  
   
   

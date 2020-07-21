@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b32c37a278c0498e23988edfb6c8461998540c95
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998468"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919740"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>Método updateObject (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,14 +45,14 @@ public void updateObject(java.lang.String columnName,
   
  Valor **Object**.  
   
- *escala*  
+ *scale*  
   
  Para tipos java.sql.Types.NUMERIC o java.sql.Types.DECIMAL, este es el número de dígitos tras el separador decimal. Para el resto de tipos este valor se omite.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateObject especifica este método updateObject en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

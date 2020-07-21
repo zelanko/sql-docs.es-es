@@ -1,6 +1,7 @@
 ---
-title: Algunas réplicas sincrónicas no están sincronizadas | Microsoft Docs
-ms.custom: ''
+title: Algunas réplicas sincrónicas no están sincronizadas
+description: Describe algunas causas posibles y soluciones para los casos en los que una réplica sincrónica no está sincronizada para un grupo de disponibilidad Always On.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d091cb3151daf161818124d6b4473637355a3674
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76c8ce29a0061f32fe7c7a42bb44b2156406b493
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014030"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883101"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algunas réplicas sincrónicas no están sincronizadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introducción  
   
@@ -29,7 +30,7 @@ ms.locfileid: "68014030"
 |-|-|  
 |**Nombre de directiva**|Estado de sincronización de los datos de réplicas sincrónicas|  
 |**Problema**|Algunas réplicas sincrónicas no están sincronizadas.|  
-|**Categoría**|**Advertencia**|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
 |**Faceta**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -38,7 +39,7 @@ ms.locfileid: "68014030"
 > [!NOTE]  
 >  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas sincrónicas no están sincronizadas](https://go.microsoft.com/fwlink/p/?LinkId=220853) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  En este grupo de disponibilidad, al menos una réplica sincrónica no está sincronizada actualmente. El estado de sincronización de la réplica puede ser SYNCHRONIZING o NOT SYNCHRONIZING.  
   
 ## <a name="possible-solution"></a>Solución posible  

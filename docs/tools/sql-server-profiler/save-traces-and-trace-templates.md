@@ -1,34 +1,29 @@
 ---
-title: Guardar seguimientos y plantillas de seguimiento | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Guardar seguimientos y plantillas de seguimiento
+titleSuffix: SQL Server Profiler
+description: Descubra cómo guardar los datos de eventos capturados en un archivo de seguimiento o en una tabla de base de datos en SQL Server Profiler y cómo guardar plantillas de seguimiento definidas por el usuario.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- exporting trace templates
-- importing trace templates
-- SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928746"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151693"
 ---
 # <a name="save-traces-and-trace-templates"></a>Guardar seguimientos y plantillas de seguimiento
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Es importante distinguir entre guardar archivos de seguimiento y guardar plantillas de seguimiento. Guardar un archivo de seguimiento implica guardar los datos de eventos capturados en un lugar especificado. Guardar una plantilla de seguimiento implica guardar la definición del seguimiento, como las columnas de datos, las clases de eventos o los filtros especificados.  
+
+Es importante distinguir entre guardar archivos de seguimiento y guardar plantillas de seguimiento. Guardar un archivo de seguimiento implica guardar los datos de eventos capturados en un lugar especificado. Guardar una plantilla de seguimiento implica guardar la definición del seguimiento, como las columnas de datos, las clases de eventos o los filtros especificados.  
   
 ## <a name="saving-traces"></a>guardar seguimientos  
  Guarde los datos de los eventos capturados en un archivo o una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando necesite analizar o reproducir los datos capturados más adelante. Utilice un archivo de seguimiento para lo siguiente:  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893690"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal avanzadas (Tutorial intermedio de minería de datos)
@@ -36,11 +36,11 @@ ms.locfileid: "68893690"
   
 5.  [Crear el modelo de predicción cruzada](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [Predecir con Replace](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [Predecir con REPLACE](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 7.  [Revisar las nuevas predicciones](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="bkmk_newExtendData"></a>Creación de los nuevos datos de ventas extendidos  
+##  <a name="creating-the-new-extended-sales-data"></a><a name="bkmk_newExtendData"></a>Creación de los nuevos datos de ventas extendidos  
  Para actualizar los datos de ventas, necesitará obtener las últimas cifras de ventas. Los datos que se acaban de introducir de la región del Pacífico son de interés particular. Allí se inició una promoción de ventas regional para llamar la atención sobre las nuevas tiendas y aumentar el conocimiento de sus productos.  
   
  En este escenario, se supone que los datos se han importado desde un libro de Excel que contiene solo tres meses de nuevos datos para un par de regiones. Creará una tabla para los datos mediante un script Transact-SQL y, a continuación, definirá una vista del origen de datos que se usará para la predicción.  
@@ -93,7 +93,7 @@ ms.locfileid: "68893690"
     >   
     >  Observe que las fechas usadas en la base de datos de ejemplo han cambiado en esta versión. Si está usando una edición anterior de AdventureWorks, quizás necesite ajustar las fechas insertadas en consecuencia.  
   
-###  <a name="bkmk_newReplaceData"></a>Crear una vista del origen de datos con los nuevos datos de ventas  
+###  <a name="create-a-data-source-view-using-the-new-sales-data"></a><a name="bkmk_newReplaceData"></a>Crear una vista del origen de datos con los nuevos datos de ventas  
   
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos**y, a continuación, seleccione **Nueva vista del origen de datos**.  
   
@@ -101,17 +101,17 @@ ms.locfileid: "68893690"
   
      **Origen de datos**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Seleccionar tablas y vistas**: Seleccione la tabla que acaba de crear, NewSalesData.  
+     **Seleccionar tablas y vistas**: seleccione la tabla que acaba de crear, NewSalesData.  
   
-3.  Haga clic en **Finalizar**  
+3.  Haga clic en **Finalizar**.  
   
 4.  En la superficie de diseño de la vista del origen de datos, haga clic con el botón secundario en NewSalesData y seleccione **explorar datos** para comprobar los datos.  
   
 > [!WARNING]  
 >  Usará estos datos solo para la predicción, por lo que no importa que sean incompletos.  
   
-##  <a name="bkmk_CrossData2"></a>Crear los datos para el modelo de predicción cruzada  
- Los datos que se usaron en el modelo de previsión original ya estaban agrupados por la vista vTimeSeries, que contrajo varios modelos de bicicletas en un número menor de categorías y los resultados combinados de países individuales en regiones. Para crear un modelo que se puede usar para las proyecciones mundiales, creará algunas agregaciones simples adicionales directamente en el Diseñador de vistas del origen de datos. La nueva vista del origen de datos contiene solo una suma y un promedio de las ventas de todos los productos para todas las regiones.  
+##  <a name="creating-the-data-for-the-cross-prediction-model"></a><a name="bkmk_CrossData2"></a>Crear los datos para el modelo de predicción cruzada  
+ Los datos que se usaron en el modelo de pronóstico original ya están agrupados de algún modo en la vista vTimeSeries. Los diversos modelos de bicicletas se han contraído en un número menor de categorías y los resultados de países individuales se han combinado por regiones. Para crear un modelo que se puede usar para las proyecciones mundiales, creará algunas agregaciones simples adicionales directamente en el Diseñador de vistas del origen de datos. La nueva vista del origen de datos contiene solo una suma y un promedio de las ventas de todos los productos para todas las regiones.  
   
  Después de crear el origen de datos usado para el modelo, debe crear una nueva vista del origen de datos que usará para la predicción. Por ejemplo, si desea predecir las ventas de Europa con el nuevo modelo mundial, debe suministrar los datos de la región de Europa solamente. De esta forma, configurará una nueva vista del origen de datos que filtra los datos originales y cambiará la condición de filtro para cada conjunto de consultas de predicción.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68893690"
   
 6.  Después, haga clic con el botón secundario en la superficie de diseño de la vista del origen de datos en blanco y seleccione **Nueva consulta con nombre**.  
   
-7.  En el cuadro de diálogo **crear consulta con** nombre, en nombre `AllRegions`, escriba y para **Descripción**, escriba **suma y promedio de ventas para todos los modelos y regiones**.  
+7.  En el cuadro de diálogo **crear consulta con** nombre **Name**, en nombre `AllRegions`, escriba y para **Descripción**, escriba **suma y promedio de ventas para todos los modelos y regiones**.  
   
 8.  En el panel de texto SQL, escriba la siguiente instrucción y, a continuación, haga clic en Aceptar:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68893690"
   
 9. Haga clic con el `AllRegions` botón secundario en la tabla y seleccione **explorar datos**.  
   
-###  <a name="bkmk_CrossData"></a>Para crear los datos de la serie para la predicción cruzada  
+###  <a name="to-create-the-series-data-for-cross-prediction"></a><a name="bkmk_CrossData"></a>Para crear los datos de la serie para la predicción cruzada  
   
 1.  En el **Explorador de soluciones**, haga clic con el botón secundario en **Vistas del origen de datos**y, a continuación, seleccione **Nueva vista del origen de datos**.  
   
@@ -152,19 +152,19 @@ ms.locfileid: "68893690"
   
      **Origen de datos**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Seleccionar tablas y vistas**: No seleccione ninguna tabla  
+     **Seleccionar tablas y vistas**: no seleccione ninguna tabla  
   
-     **Nombre**: `T1000 Pacific Region`  
+     **Nombre**:`T1000 Pacific Region`  
   
-3.  Haga clic en **Finalizar**  
+3.  Haga clic en **Finalizar**.  
   
 4.  Haga clic con el botón secundario en la superficie de diseño vacía correspondiente a **T1000 Pacific Region.dsv**y, después, seleccione **Nueva consulta con nombre**.  
   
      Aparecerá el cuadro de diálogo **Crear consulta con nombre** . Vuelva a escribir el nombre y agregue la descripción siguiente:  
   
-     **Nombre**: `T1000 Pacific Region`  
+     **Nombre**:`T1000 Pacific Region`  
   
-     **Descripción**: **Filtrar`vTimeSeries`por región y modelo**  
+     **Descripción**: **filtro`vTimeSeries`por región y modelo**  
   
 5.  En el panel de texto, escriba la siguiente consulta y, a continuación, haga clic en Aceptar:  
   
@@ -182,9 +182,9 @@ ms.locfileid: "68893690"
      Usará estos datos como la entrada del modelo al crear consultas de predicción cruzada.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Predicciones de serie temporal con datos &#40;actualizados tutorial intermedio de minería de datos&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [Predicciones de serie temporal que usan datos actualizados &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Vistas del origen de datos en modelos multidimensionales](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4: Probar el paquete del Tutorial lección 5 | Microsoft Docs'
+title: 'Paso 4: Probar el paquete del tutorial de la lección 5 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7fcaa0ecab3561e49fc8080251d2523034f5149
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62890947"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440382"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Paso 4: Prueba del paquete del tutorial de la lección 5
   Durante la ejecución, el paquete obtendrá el valor de la propiedad `Directory` de una variable actualizada en tiempo de ejecución, en lugar de utilizar el nombre de directorio original especificado al crear el paquete. El valor de la variable lo rellena el archivo SSISTutorial.dtsConfig.  
@@ -27,19 +26,19 @@ ms.locfileid: "62890947"
   
  **Flujo de control**  
   
- ![Flujo de control del paquete](../../2014/tutorials/media/task4lesson2control.gif "Control flow in package")  
+ ![Flujo de control del paquete](../../2014/tutorials/media/task4lesson2control.gif "Flujo de control del paquete")  
   
  **Flujo de datos**  
   
- ![Flujo de datos del paquete](../../2014/tutorials/media/task9lesson1data.gif "Data flow in package")  
+ ![Flujo de datos del paquete](../../2014/tutorials/media/task9lesson1data.gif "Flujo de datos del paquete")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Para probar el paquete de tutorial de la lección 5  
   
-1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+1.  En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
-2.  Una vez que haya finalizado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
+2.  Una vez finalizada la ejecución del paquete, en el menú **depurar** , haga clic en **detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 6: Usar parámetros con el modelo de implementación del proyecto](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [Lección 6: Uso de parámetros con el modelo de implementación de proyectos](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

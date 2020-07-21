@@ -1,5 +1,5 @@
 ---
-title: Alerta de propiedades-nueva alerta (página General) | Microsoft Docs
+title: Propiedades de alerta-nueva alerta (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63062153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056618"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Alerta de propiedades de nueva alerta (página General)
-  Utilice esta página para ver y modificar las propiedades generales de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+# <a name="alert-properties-new-alert-general-page"></a>Propiedades de alerta-nueva alerta (página general)
+  Utilice esta página para ver y modificar las propiedades generales de las [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas del agente.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Cambie el nombre de la alerta.  
   
- **Habilitar**  
+ **Habilitación**  
  Habilita la alerta. Si la alerta no está habilitada, no se producirán acciones especificadas en la alerta.  
   
  **Tipo**  
@@ -45,7 +44,7 @@ ms.locfileid: "63062153"
  **Número de error**  
  Especifica que este evento responde a un error e indica el número de error.  
   
- **Severity**  
+ **Gravedad**  
  Especifica que este evento responde a mensajes con un nivel de gravedad específico e indica dicho nivel.  
   
  **Mostrar alerta cuando el mensaje contenga**  
@@ -55,7 +54,7 @@ ms.locfileid: "63062153"
  Especifica la cadena que se va a utilizar para filtrar eventos.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertas de condición de rendimiento de SQL Server  
- **Objeto**  
+ **Object**  
  Especifica el objeto de rendimiento que se supervisará.  
   
  **Contador**  
@@ -74,13 +73,13 @@ ms.locfileid: "63062153"
  **Espacio de nombres**  
  Especifica el espacio de nombres que se utilizará para la instrucción WQL (Lenguaje de consulta WMI). Solo se admite el espacio de nombres del equipo que ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Consulta**  
+ **Consultar**  
  Especifica la instrucción WQL que identifica el evento al que responde la alerta.  
   
-## <a name="see-also"></a>Vea también  
- [Alerts](alerts.md)   
+## <a name="see-also"></a>Consulte también  
+ [Alarmas](alerts.md)   
  [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
- [Crear una alerta con un número de Error](create-an-alert-using-an-error-number.md)   
+ [Crear una alerta con un número de error](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  
   
   

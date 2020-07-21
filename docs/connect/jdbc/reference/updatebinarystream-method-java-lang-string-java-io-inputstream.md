@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 56883144-26a0-4f45-ad36-4f616369af3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc247cd3f97aeebeb6f52e1b4f3f36d8d97f6548
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 66063c90e3a2f161589a5a70b22d6185fea5b2b8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997161"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903712"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream"></a>Método updateBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,15 +37,15 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  *x*  
   
- Objeto InputStream.  
+ Un objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método updateBinaryStream se especifica mediante el método updateBinaryStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método updateBinaryStream especifica este método updateBinaryStream en la interfaz java.sql.ResultSet.  
   
- El uso de este método para los tipos de datos **Image**, **text**y **ntext** SQL Server podría afectar al rendimiento.  
+ El uso de este método con los tipos de datos de SQL Server **image**, **text** y **ntext** podría afectar al rendimiento.  
   
  Este método pasa bytes desde un objeto InputStream a las columnas binarias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionadas, como binary, varbinary, varbinary(max), image, xml y udt. Este método no admite la actualización de columnas de caracteres. Para actualizar las columnas de caracteres con un elemento InputStream, use el método [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

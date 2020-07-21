@@ -1,5 +1,6 @@
 ---
 title: Resolver problemas de memoria insuficiente | Microsoft Docs
+description: Obtenga información sobre las situaciones de memoria insuficiente en OLTP en memoria de SQL Server, cómo restaurar y resolver impactos, resolver errores de asignación de páginas y procedimientos recomendados.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0db5cb560b4e50d903ceca431556f2bdc18365ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908451"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722395"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa más memoria y de maneras diferentes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es posible que la cantidad de memoria que instaló y asignó para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sea suficiente para sus necesidades en crecimiento. En ese caso, podría quedarse sin memoria. En este tema se describe cómo recuperarse de una situación de OOM (memoria insuficiente). Vea [Supervisar y solucionar problemas del uso de la memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md) para obtener instrucciones específicas que pueden ayudarle a evitar muchas situaciones de memoria insuficiente.  
   
@@ -26,13 +27,13 @@ ms.locfileid: "72908451"
   
 |Tema|Información general|  
 |-----------|--------------|  
-|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<nombreDeGrupoDeRecursos>* "".|  
+|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<databaseName>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<resourcePoolName>* "".|  
 |[Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo](#bkmk_recoverFromOOM)|Se describe lo que hay que hacer si percibe que las condiciones de memoria insuficiente están afectando negativamente al rendimiento.|  
-|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos " *\<nombreDeGrupoDeRecursos>* ". ..." cuando hay suficiente memoria disponible para la operación.|
+|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<databaseName>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<resourcePoolName>* "". ..." cuando hay suficiente memoria disponible para la operación.|
 |[Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs)|Qué debe tener en cuenta al usar OLTP en memoria en un entorno virtualizado.|
   
-##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando intenta restaurar una base de datos, es posible que obtenga el mensaje de error "No se pudo realizar la operación de restauración para la base de datos ' *\<nombreDeBaseDeDatos>* ' debido a que la memoria es insuficiente en el grupo de recursos ' *\<nombreDeGrupoDeRecursos>* '." Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
+##  <a name="resolve-database-restore-failures-due-to-oom"></a><a name="bkmk_resolveRecoveryFailures"></a> Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
+ Cuando intenta restaurar una base de datos, es posible que obtenga el mensaje de error "No se pudo realizar la operación de restauración para la base de datos " *\<databaseName>* " debido a que la memoria es insuficiente en el grupo de recursos " *\<resourcePoolName>* "". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
    
 El servidor en el que restaura una base de datos debe tener suficiente memoria disponible para las tablas optimizadas para memoria en la copia de seguridad de la base de datos; de lo contrario, la base de datos no se conectará y se marcará como sospechosa.  
   
@@ -70,19 +71,19 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
 -   Aumente la **memoria máxima del servidor**.  
     Para obtener información acerca de cómo configurar **memoria de servidor máxima**, vea el tema [Opciones de configuración de memoria del servidor](../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
-##  <a name="bkmk_recoverFromOOM"></a> Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo  
+##  <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a><a name="bkmk_recoverFromOOM"></a> Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo  
  Evidentemente, es mejor no verse en una situación de memoria insuficiente u OOM. Un planeamiento y supervisión adecuados puede ayudar a evitar situaciones OOM. Aún así, incluso el mejor planeamiento no siempre puede prever lo que sucede en realidad y podría terminar con un problema de memoria insuficiente u OOM. Hay dos pasos para recuperarse de una situación OOM:  
   
 1.  [Abrir una DAC (conexión de administrador dedicada)](#bkmk_openDAC)  
   
 2.  [Tomar una acción correctora](#bkmk_takeCorrectiveAction)  
 
-###  <a name="bkmk_openDAC"></a> Abrir una DAC (conexión de administrador dedicada)  
+###  <a name="open-a-dac-dedicated-administrator-connection"></a><a name="bkmk_openDAC"></a> Abrir una DAC (conexión de administrador dedicada)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de administrador dedicada (DAC). La DAC permite a los administradores acceder a una instancia en ejecución del motor de base de datos de SQL Server para solucionar problemas en el servidor, aunque el servidor no responda a otras conexiones de cliente. DAC está disponible a través de la utilidad `sqlcmd` y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Para obtener instrucciones sobre el uso de DAC a través de SSMS o `sqlcmd`, consulte [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).  
   
-###  <a name="bkmk_takeCorrectiveAction"></a> Tomar una acción correctora  
+###  <a name="take-corrective-action"></a><a name="bkmk_takeCorrectiveAction"></a> Tomar una acción correctora  
  Para resolver la situación OOM, deberá liberar memoria existente reduciendo su uso u obtener más memoria disponible para las tablas en memoria.  
   
 #### <a name="free-up-existing-memory"></a>Libere memoria existente  
@@ -135,14 +136,14 @@ GO
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
 > Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs) para obtener más información.  
   
-##  <a name="bkmk_PageAllocFailure"></a> Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible  
+##  <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a><a name="bkmk_PageAllocFailure"></a> Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible  
  Si recibe el mensaje de error, `Disallowing page allocations for database '*\<databaseName>*' due to insufficient memory in the resource pool '*\<resourcePoolName>*'. See 'https://go.microsoft.com/fwlink/?LinkId=330673' for more information.` en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
   
  Para resolver este problema necesita habilitar el Regulador de recursos.  
   
  Vea [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md) para obtener información sobre los límites y las restricciones, así como instrucciones para habilitar el Regulador de recursos mediante el Explorador de objetos, propiedades del Regulador de recursos o Transact-SQL.  
  
-## <a name="bkmk_VMs"></a> Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales
+## <a name="best-practices-using-in-memory-oltp-in-a-vm-environment"></a><a name="bkmk_VMs"></a> Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales
 La virtualización del servidor puede ayudar a reducir la inversión y los costos operativos de TI y aumentar la eficacia de TI con mejores procesos de aprovisionamiento, mantenimiento, disponibilidad, copia de seguridad y recuperación. Con los avances tecnológicos recientes, es más fácil consolidar cargas de trabajo de base de datos complejas gracias a la virtualización. En este tema se tratan las prácticas recomendadas para usar OLTP en memoria de SQL Server en un entorno virtualizado.
 
 ### <a name="memory-pre-allocation"></a>Asignación previa de memoria
@@ -154,7 +155,7 @@ Es necesario modificar algunas prácticas recomendadas para virtualizar y admini
 
 Si sigue los procedimientos anteriores para una base de datos con tablas optimizadas para memoria, el intento de restaurar y recuperar una base de datos podría dar lugar a que esta pasara a un estado "Pendiente de recuperación", incluso si hay memoria suficiente para recuperarla. El motivo es que, al iniciarse, OLTP en memoria pone los datos en memoria de forma mucho más dinámica que la forma en que la asignación de memoria dinámica asigna la memoria necesaria a la base de datos.
 
-### <a name="resolution"></a>Solución
+### <a name="resolution"></a>Resolución
 Para mitigar este problema, asigne previamente memoria suficiente a la base de datos para recuperar o reiniciar la base de datos; no especifique un valor mínimo confiando en que la memoria dinámica proporcionará memoria adicional cuando sea necesario.
   
 ## <a name="see-also"></a>Consulte también  

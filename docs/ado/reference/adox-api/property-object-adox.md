@@ -11,36 +11,36 @@ apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965392"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748565"
 ---
 # <a name="property-object-adox"></a>Objeto Property (ADOX)
 Representa una característica de un objeto ADOX.  
   
 ## <a name="remarks"></a>Comentarios  
- Objetos ADOX tienen dos tipos de propiedades: integradas y dinámicas.  
+ Los objetos ADOX tienen dos tipos de propiedades: integrado y dinámico.  
   
- Las propiedades integradas son aquellas propiedades inmediatamente disponibles para cualquier objeto nuevo, utilizando la sintaxis MyObject.Property. No aparecen como objetos de propiedad en un objeto [colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md), por lo que aunque se pueden cambiar sus valores, no se puede modificar sus características.  
+ Las propiedades integradas son aquellas que están inmediatamente disponibles para cualquier objeto nuevo, mediante la sintaxis de la propiedad objeto. No aparecen como objetos de propiedad en la [colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)de un objeto, por lo que, aunque se pueden cambiar sus valores, no se pueden modificar sus características.  
   
- Propiedades dinámicas se definen mediante el proveedor de datos subyacente y aparecen en la colección de propiedades para el objeto ADOX apropiado.  Pueden hacer referencia a las propiedades dinámicas sólo a través de la colección, utilizando la sintaxis MyObject.Properties(0) o MyObject.Properties.  
+ El proveedor de datos subyacente define las propiedades dinámicas y aparecen en la colección de propiedades para el objeto ADOX adecuado.  Solo se puede hacer referencia a las propiedades dinámicas a través de la colección mediante la sintaxis de objetos. Properties (0) o DataObject. Properties ("Name").  
   
- No se puede eliminar cualquier tipo de propiedad.  
+ No se puede eliminar ningún tipo de propiedad.  
   
- Un objeto dinámico de la propiedad tiene cuatro propiedades integradas de su propio:  
+ Un objeto de propiedad dinámica tiene cuatro propiedades integradas propias:  
   
- El [nombre](../../../ado/reference/ado-api/name-property-ado.md) propiedad es una cadena que identifica la propiedad.  
+ La propiedad [Name](../../../ado/reference/ado-api/name-property-ado.md) es una cadena que identifica la propiedad.  
   
- El [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad es un entero que especifica el tipo de datos de propiedad.  
+ La propiedad [Type](../../../ado/reference/ado-api/type-property-ado.md) es un entero que especifica el tipo de datos de la propiedad.  
   
- El [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad es una variante que contiene el valor de propiedad. Valor es la propiedad predeterminada para un objeto de propiedad.  
+ La propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) es una variante que contiene el valor de la propiedad. Value es la propiedad predeterminada de un objeto Property.  
   
- El [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propiedad es un valor long que indica características de la propiedad específica del proveedor.  
+ La propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) es un valor largo que indica las características de la propiedad específica del proveedor.  
   
  Esta sección contiene el siguiente tema.  
   

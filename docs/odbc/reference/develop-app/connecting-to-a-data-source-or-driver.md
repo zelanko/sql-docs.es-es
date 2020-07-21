@@ -1,5 +1,5 @@
 ---
-title: Conectarse a datos de un origen o el controlador | Microsoft Docs
+title: Conectando con un origen de datos o un controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083139"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307467"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectarse a datos de un origen o el controlador
-Una aplicación se puede conectar a cualquier número de controladores y orígenes de datos. Puede tratarse de una variedad de orígenes de datos y los controladores, el mismo controlador y una variedad de orígenes de datos o incluso de varias conexiones con el mismo controlador y el origen de datos.  
+Una aplicación puede estar conectada a cualquier número de controladores y orígenes de datos. Pueden ser una variedad de controladores y orígenes de datos, el mismo controlador y una variedad de orígenes de datos, o incluso varias conexiones al mismo controlador y origen de datos.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -38,4 +38,4 @@ Una aplicación se puede conectar a cualquier número de controladores y orígen
   
 -   [Desconectarse de datos de un origen o el controlador](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [Rol del Administrador de controladores en el proceso de conexión](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [El rol del administrador de controladores en el proceso de conexión](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

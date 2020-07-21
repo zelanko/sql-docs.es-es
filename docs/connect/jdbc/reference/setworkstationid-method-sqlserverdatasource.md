@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 08b09958276a5cc7f7cc3de6e56f7d7336ca9e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2c7664cb50f25d429ee74a163c589436bacf8902
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67972035"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901601"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>Método setWorkstationID (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,8 +39,8 @@ public void setWorkstationID(java.lang.String workstationID)
   
  Un objeto **String** que contiene el nombre del equipo cliente.  
   
-## <a name="remarks"></a>Notas  
- WorkstationID es el nombre del equipo cliente o de la estación de trabajo. Si no se establece la propiedad workstationID, el valor predeterminado se construye llamando al método InetAddress. getLocalHost (). GetHostName ((). Si GetHostName (devuelve un valor en blanco, se llama al método getHostAddress (). toString ().  
+## <a name="remarks"></a>Observaciones  
+ WorkstationID es el nombre del equipo cliente o de la estación de trabajo. Si no se establece la propiedad workstationID, el valor predeterminado se genera mediante una llamada al método InetAddress.getLocalHost().getHostName(). Si getHostName devuelve un valor en blanco, se llama al método getHostAddress().toString().  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

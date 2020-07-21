@@ -1,5 +1,5 @@
 ---
-title: Ver las entradas del registro en la ventana Registrar eventos | Microsoft Docs
+title: Ver entradas del registro en la ventana registrar eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed348a4525024052946ac30bfe6ec780ca86a4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7a2fddc08a92477d18f4bf7ce14312d1ef531fae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054627"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420092"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Ver entradas del registro en la ventana Registrar eventos
   En este procedimiento se describe cómo ejecutar un paquete y ver las entradas de registro que escribe. Se pueden ver las entradas del registro en tiempo real. Las entradas del registro escritas en la ventana **Registrar eventos** también se pueden copiar y guardar para futuros análisis.  
@@ -30,13 +29,13 @@ ms.locfileid: "66054627"
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
-2.  En el menú **SSIS** , haga clic en **Registrar eventos**. Opcionalmente, se puede mostrar la ventana **Registrar eventos** asignando el comando View.LogEvents a una combinación de teclas elegida por el usuario en la página **Teclado** del cuadro de diálogo **Opciones** .  
+2.  En el menú **SSIS** , haga clic en **registrar eventos**. Opcionalmente, se puede mostrar la ventana **Registrar eventos** asignando el comando View.LogEvents a una combinación de teclas elegida por el usuario en la página **Teclado** del cuadro de diálogo **Opciones** .  
   
-3.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+3.  En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
      A medida que el tiempo de ejecución encuentra eventos y mensajes personalizados que están habilitados para el registro, las entradas del registro para cada evento o mensaje se escriben en la ventana **Registrar eventos** .  
   
-4.  En el menú **Depurar** , haga clic en **Detener depuración**.  
+4.  En el menú **Depurar**, haga clic en **Detener depuración**.  
   
      Las entradas del registro permanecen disponibles en la ventana **Registrar eventos** hasta que vuelve a ejecutar el paquete, ejecuta un paquete diferente o cierra [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66054627"
   
 9. Abra un editor de texto, pegue y luego guarde la entrada del registro en un archivo de texto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Mejoras de rendimiento con las recomendaciones de DTA | Microsoft Docs
-ms.custom: ''
+title: Mejoras de rendimiento recomendadas por DTA
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dcd1405bb41243bf2bd618d3fe8ed89393ed5d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762844"
 ---
-# <a name="performance-improvements-using-dta-recommendations"></a>Mejoras de rendimiento con las recomendaciones de DTA
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Mejoras de rendimiento mediante las recomendaciones del Asistente para la optimización de motor de base de datos (DTA)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 ---
@@ -29,9 +29,9 @@ El Asistente para la optimización de motor de base de datos (DTA), a partir de 
 
 Para demostrar las ventajas de las recomendaciones de DTA en el rendimiento de las cargas de trabajo, hemos probado varias cargas de trabajo de clientes reales. Para cada carga de trabajo de cliente, dejamos que DTA examinara las consultas individuales, así como la carga de trabajo completa de las consultas. Tuvimos en cuenta tres alternativas:
   
-  1. **Solo el almacén de columnas**: genere solo los índices de almacén de columnas para todas las tablas sin usar DTA. 
-  2. **DTA (solo el almacén de filas)** : ejecute DTA con la opción para recomendar solo los índices de almacén.
-  3. **DTA (almacén de filas y de columnas)** : ejecute DTA con la opción para recomendar índices de almacén de filas y de columnas.  
+  1. **Solo el almacén de columnas**: genere solo los índices de almacén de columnas para todas las tablas sin utilizar DTA. 
+  2. **DTA (solo el almacén de filas)** :ejecute DTA con la opción para recomendar solo los índices de almacén.
+  3. **DTA (almacén de filas y de columnas)** : ejecute DTA con la opción recomendar índices de almacén de filas y de columnas.  
    
 En cada caso, implementamos los índices recomendados. Informamos sobre el promedio de tiempo de CPU (en milisegundos) en varias ejecuciones de la consulta o la carga de trabajo. En la figura siguiente se traza el tiempo de CPU en milisegundos de las cargas de trabajo de dos bases de datos de cliente distintas. Tenga en cuenta que el eje y (tiempo de CPU) utiliza una escala logarítmica.   
 
@@ -42,7 +42,7 @@ En cada caso, implementamos los índices recomendados. Informamos sobre el prome
 
 **Necesario para los diseños físicos mixtos**: el primer conjunto de barras correspondientes a la consulta 1 del cliente 1. DTA (almacén de filas y de columnas) recomienda un conjunto de 4 índices de columnas y 6 índices de almacén de filas, con lo que se obtiene un tiempo de CPU entre 2,5 y 4 veces inferior en comparación con solo el índice de almacén de columnas y DTA (solo el almacén de filas). Esto muestra las ventajas de los diseños físicos mixtos que constan de indices de almacén de filas y de columnas *incluso para una sola consulta*. 
 
-**Eficacia de las recomendaciones de índices de almacén de filas**: el segundo y tercer conjunto de barras (correspondientes a la consulta 2 del cliente 1 y a la consulta del cliente 1 del cliente 2) son casos en los que las consultas tienen predicados de filtro selectivos que aprovechan los índices de almacén de filas adecuados. Para estas dos consultas, DTA (solo el almacén de filas) y DTA (almacén de filas y de columnas) recomienda solo los índices de almacén de filas. Estos ejemplos también demuestran que incluso cuando se invoca DTA con la opción para recomendar índices de almacén de columnas, el enfoque basado en costos garantiza que recomiende un índice de almacén solo si la carga de trabajo puede realmente beneficiarse de él.
+**Eficacia de las recomendaciones de índices de almacén de filas**: el segundo y tercer conjunto de barras (correspondiente a la consulta 2 del cliente 1 y a la consulta del cliente 1 del cliente 2) son casos en los que las consultas tienen predicados de filtro selectivos que aprovechan los índices de almacén de filas adecuados. Para estas dos consultas, DTA (solo el almacén de filas) y DTA (almacén de filas y de columnas) recomienda solo los índices de almacén de filas. Estos ejemplos también demuestran que incluso cuando se invoca DTA con la opción para recomendar índices de almacén de columnas, el enfoque basado en costos garantiza que recomiende un índice de almacén solo si la carga de trabajo puede realmente beneficiarse de él.
 
 **Eficacia de las recomendaciones de índices de almacén de columnas**: el cuarto conjunto de barras correspondiente a la consulta 2 del cliente 2 representa un caso en el que la consulta examina las tablas de gran tamaño que aprovecharían los índices de almacén de columnas. DTA (solo el almacén de filas) genera una recomendación cuyo tiempo de CPU es superior en comparación con cuando estaban los índices de almacén de columnas. DTA (almacén de filas y de columnas) recomienda los índices de almacén de columnas adecuados, con lo que los hace coincidir con el rendimiento de ejecución de consultas de la opción de solo el almacén de columnas.
 
@@ -56,7 +56,7 @@ En resumen, en los ejemplos anteriores se muestra la capacidad de DTA para aprov
 
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 
-[Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)
+[Descripción de los índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)
 
 [Índices de almacén de columnas para el almacenamiento de datos](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 

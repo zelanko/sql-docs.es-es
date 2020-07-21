@@ -1,6 +1,8 @@
 ---
-title: Configurar PolyBase para obtener acceso a datos externos en Teradata | Microsoft Docs
-ms.date: 04/23/2019
+title: 'Acceso a datos externos: Teradata: PolyBase'
+description: Obtenga información sobre cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Teradata. Cree tablas externas para hacer referencia a los datos externos.
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,20 +10,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 25912e5d68f03c98c4148f295a7fba76236892e2
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: ec09eca0568d1213fce850362be7c889af3a3258
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722228"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurar PolyBase para obtener acceso a datos externos en Teradata
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Teradata.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
 

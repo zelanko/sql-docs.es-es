@@ -1,5 +1,5 @@
 ---
-title: Establecer las opciones de suplantación (SSAS - Multidimensional) | Microsoft Docs
+title: Establecer opciones de suplantación (SSAS-multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072958"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545637"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
   Al crear un objeto de `data source` en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
@@ -37,7 +36,7 @@ ms.locfileid: "66072958"
 3.  Elija una opción descrita en [Opciones de suplantación](#bkmk_options) en este tema.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Establezca las opciones de suplantación en Management Studio  
- En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra el cuadro de diálogo **Información de suplantación** , haga clic en el botón de puntos suspensivos ( **…** ) para las propiedades siguientes de estos cuadros de diálogo:  
+ En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra el cuadro de diálogo **Información de suplantación** , haga clic en el botón de puntos suspensivos (**…**) para las propiedades siguientes de estos cuadros de diálogo:  
   
 -   El cuadro de diálogo**Propiedades de la base de datos** , mediante la propiedad Información de suplantación de origen de datos.  
   
@@ -45,11 +44,11 @@ ms.locfileid: "66072958"
   
 -   El cuadro de diálogo**Propiedades del ensamblado** , mediante la propiedad Información de suplantación.  
   
-##  <a name="bkmk_options"></a> Opciones de suplantación  
+##  <a name="impersonation-options"></a><a name="bkmk_options"></a> Opciones de suplantación  
  Todas las opciones están disponibles en el cuadro de diálogo, pero no todas las opciones son adecuadas para cada escenario. Utilice la siguiente información para determinar la mejor opción para el escenario.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos usar las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<Nombre de dominio >***\\***\<nombre de la cuenta de usuario >* .  
+ Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto use las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<Domain name>***\\***\<User account name>* .  
   
  Elija esta opción para usar una identidad de usuario de Windows dedicada con los privilegios mínimos que ha creado específicamente para el acceso a los datos. Por ejemplo, si suele crear una cuenta de uso general para leer los datos que se recuperan en los informes, puede especificar esa cuenta aquí.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66072958"
  Para las instrucciones DMX OPENQUERY, los cubos locales y los modelos de minería de datos, las credenciales del usuario actual se utilizarán aunque elija la opción de cuenta de servicio. La opción de cuenta de servicio no se admite para los enlaces fuera de línea.  
   
 > [!NOTE]  
->  Pueden producirse errores al procesar un modelo de minería de datos de un cubo si la cuenta de servicio no tiene permisos de administrador en la instancia de Analysis Services. Para obtener más información, consulte [estructura de minería de datos: Problema al procesar cuando el origen de datos es un cubo OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
+>  Pueden producirse errores al procesar un modelo de minería de datos de un cubo si la cuenta de servicio no tiene permisos de administrador en la instancia de Analysis Services. Para obtener más información, vea [Estructura de minería de datos: problema al procesar cuando el origen de datos es un cubo OLAP](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
  **Utilizar las credenciales del usuario actual**  
  Seleccione esta opción para que el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] use las credenciales de seguridad del usuario actual para los enlaces fuera de línea, las instrucciones DMX OPENQUERY, los cubos locales y los modelos de minería de datos.  
@@ -86,7 +85,7 @@ ms.locfileid: "66072958"
  **Predeterminado** o **Heredar**  
  El cuadro de diálogo usa **Predeterminado** para las opciones de suplantación establecidas en el nivel de base de datos y **Heredar** para las opciones de suplantación establecidas en el nivel de origen de datos.  
   
- **Orígenes de datos: opción Heredar**  
+ **Orígenes de datos: opción heredar**  
   
  En el origen de datos, **Heredar** especifica que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] debe utilizar la opción de suplantación del objeto primario. En un modelo multidimensional, el objeto primario es la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Elegir la opción **Heredar** permite administrar de forma centralizada la configuración de suplantación para este y de otros orígenes de datos que forman parte de la misma base de datos. Para que esta opción tenga significado, elija un nombre de usuario de Windows específico y una contraseña en la base de datos. En caso contrario, la combinación de **Heredar** en el origen de datos y **Valor predeterminado** en la base de datos es equivalente a la opción de cuenta de servicio.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66072958"
   
 2.  En **Información de suplantación de origen de datos**, especifique el nombre de usuario de Windows y la contraseña.  
   
-3.  Haga clic con el botón derecho en cada origen de datos y vea sus propiedades para asegurarse de que cada una usa la opción **Heredar**.  
+3.  Haga clic con el botón derecho en cada origen de datos y vea sus propiedades para asegurarse de que cada una usa la opción **Heredar** .  
   
  Para obtener más información sobre la configuración predeterminada en el nivel de base de datos, vea [Establecer propiedades de bases de datos multidimensionales &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md).  
   
@@ -106,9 +105,9 @@ ms.locfileid: "66072958"
   
  En las bases de datos multidimensionales, **Predeterminado** especifica que se debe utilizar la cuenta de servicio y el usuario actual para las operaciones de minería de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un origen de datos &#40;SSAS multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)   
- [Establecer las propiedades del origen de datos &#40;SSAS Multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)   
- [Escenarios de implementación de DirectQuery &#40;Tabular de SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear un origen de datos &#40;&#41;de SSAS multidimensional](create-a-data-source-ssas-multidimensional.md)   
+ [Establecer propiedades de origen de datos &#40;&#41;de SSAS multidimensional](set-data-source-properties-ssas-multidimensional.md)   
+ [Escenarios de implementación de DirectQuery &#40;&#41;tabular de SSAS](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

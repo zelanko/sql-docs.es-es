@@ -11,25 +11,24 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 2e232566-1c3d-4134-adfc-bfd9db210e6d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bd32f9e2bfdac3655acb9d12c8fd0c070aa599fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fd7544225acd64140d674d7c7c94b6d7c33a023
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060731"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438552"
 ---
 # <a name="configure-data-viewer-column-chart-tab"></a>Configurar visor de datos (pestaña Gráfico de columnas)
   Utilice la pestaña **Gráfico de columnas** del cuadro de diálogo **Configurar visor de datos** para especificar una columna que se va a mostrar como gráfico de barras. La cantidad de barras muestra la cantidad de valores de datos discretos de la columna y la altura de la barra muestra la cantidad de instancias de cada valor. El gráfico solo refleja el contenido de un búfer.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de la columna**  
+ **Nombre de columna**  
  Seleccione una columna para visualizarla en el gráfico de columnas.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar visor de datos &#40;General (ficha)&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar visor de datos &#40;pestaña General&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Configurar visor de datos &#40;pestaña cuadrícula&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurar visor de datos &#40;pestaña histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Configurar visor de datos &#40;pestaña gráfico de dispersión&#41;](../../2014/integration-services/configure-data-viewer-scatter-plot-tab.md)   

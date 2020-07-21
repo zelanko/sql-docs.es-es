@@ -1,5 +1,5 @@
 ---
-title: Copia masiva de datos mediante IRowsetFastLoad (OLE DB) | Documentos de Microsoft
+title: Copiar datos de forma masiva mediante IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,27 +12,26 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a19029a98daa5411f0e915b62f3c7556cafad97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50590ebc6635aab6025c1caf6f68e27f8f6da294
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043364"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar datos de forma masiva mediante IRowsetFastLoad (OLE DB)
   En este ejemplo se muestra el uso de IRowsetFastLoad para la copia masiva de los registros en una tabla.  
   
  El consumidor notifica a SQLOLEDB su necesidad de realizar una copia masiva estableciendo la propiedad SSPROP_ENABLEFASTLOAD específica del proveedor SQLOLEDB en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea una sesión SQLOLEDB. La nueva sesión permite el acceso del consumidor a `IRowsetFastLoad`.  
   
- Tiene a su disposición un ejemplo completo donde se muestra el uso de `IRowsetFastLoad` para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Es necesario crear la tabla **IRFLTable** en la base de datos.  
+ Tiene a su disposición un ejemplo completo donde se muestra el uso de `IRowsetFastLoad` para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Debe crear la tabla **IRFLTable** en la base de datos.  
   
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Para realizar una copia masiva de datos en una tabla de SQL Server  
   

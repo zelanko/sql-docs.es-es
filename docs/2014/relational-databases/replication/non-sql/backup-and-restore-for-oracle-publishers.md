@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e5f181d0-cacf-442b-8b7a-202b3cfc358b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fb07772da3bdcf485ca7668fc9a9e34a8e51c5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060568"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Copias de seguridad y restauración de publicadores de Oracle
   Siga estas instrucciones para hacer copias de seguridad y restaurar:  
@@ -45,7 +44,7 @@ ms.locfileid: "63022483"
   
      Si es necesario quitar y volver a configurar el publicador, quite el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** para quitar todos los objetos de la replicación del publicador de Oracle.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../administration/back-up-and-restore-replicated-databases.md)   
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](oracle-publishing-overview.md)  

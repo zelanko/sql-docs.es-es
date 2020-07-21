@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 26d861da-bb6a-4197-8b32-13dc7781c2bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eefde521b4a8dab594b4c42799f1b42e5bf445ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ef88415db781721815be6de51c6b94303e59b07
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213674"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922292"
 ---
 # <a name="setfloat-method-sqlservercallablestatement"></a>Método setFloat (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,12 +42,12 @@ public void setFloat(java.lang.String sCol,
   
  *f*  
   
- Un valor de **tipo float** .  
+ Un valor **float**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método setFloat especifica este método setFloat en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

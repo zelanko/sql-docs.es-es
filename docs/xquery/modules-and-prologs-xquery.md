@@ -1,5 +1,6 @@
 ---
-title: Módulos y prólogos (XQuery) | Microsoft Docs
+title: Módulos y proregistros (XQuery) | Microsoft Docs
+description: Obtenga información sobre qué especificaciones no se admiten al declarar un espacio de nombres en un prólogo de XQuery.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0f17b4a4-6234-41d4-a996-6db4e27bff7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7a2df8ea534622c4ff4c1695c7e44a7aea7611d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7d982e8c944ff1c596dfa4178ce613ec3be709e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759492"
 ---
 # <a name="modules-and-prologs-xquery"></a>Módulos y prólogos (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  [Prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) es una serie de declaraciones de espacio de nombres. Al utilizar la declaración de espacio de nombres en el prólogo, se puede especificar un enlace entre el prefijo y el espacio de nombres y utilizar el prefijo en el cuerpo de la consulta.  
+  El [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) es una serie de declaraciones de espacios de nombres. Al utilizar la declaración de espacio de nombres en el prólogo, se puede especificar un enlace entre el prefijo y el espacio de nombres y utilizar el prefijo en el cuerpo de la consulta.  
   
 ## <a name="implementation-limitations"></a>Limitaciones de la implementación  
  En esta implementación no se admiten las siguientes especificaciones de XQuery:  
@@ -34,7 +35,7 @@ ms.locfileid: "67946584"
   
 -   Declaración de módulos (`module namespace`)  
   
--   Xmpspacedeclaration (`xmlspace`)  
+-   Xmpspacedeclaration ( `xmlspace` )  
   
 -   Declaración de intercalaciones predeterminadas (`declare default collation`)  
   
@@ -53,10 +54,10 @@ ms.locfileid: "67946584"
 -   Declaración de funciones (`declare function`)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
+ [Prólogo de las consultas XQuery](../xquery/modules-and-prologs-xquery-prolog.md)  
  Describe el prólogo de XQuery.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

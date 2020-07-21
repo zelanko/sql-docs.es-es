@@ -10,15 +10,14 @@ helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774e7e689dab8b329ec11d2c2c2a7286592c8bdb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241198"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046722"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Reglas de escape y caracteres no válidos
   En este tema se describe cómo la cláusula FOR XML controla los caracteres XML no válidos y se enumeran las reglas de escape para los caracteres que no son válidos en los nombres XML.  
@@ -65,7 +64,7 @@ ms.locfileid: "63241198"
   
      Tenga en cuenta que el uso de WITH XMLNAMESPACES es la forma recomendada de agregar espacios de nombres XML.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

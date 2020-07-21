@@ -1,6 +1,6 @@
 ---
-title: Usar tipos de valor grande | Microsoft Docs
-description: Usar tipos de valor grande con OLE DB controlador para SQL Server
+title: Uso de tipos de valor grande | Microsoft Docs
+description: Uso de tipos de valor grande con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67988859"
 ---
 # <a name="using-large-value-types"></a>Usar tipos de valor grande
@@ -33,7 +33,7 @@ ms.locfileid: "67988859"
 > [!NOTE]  
 >  Los tipos de datos de valor grande pueden tener un tamaño máximo comprendido entre 1 y 8 KB, o bien pueden especificarse como ilimitados.  
   
- Anteriormente, solo podían alcanzar tales longitudes los tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como **text**, **ntext** e **image**. El especificador **max** de **varchar**, **nvarchar** y **varbinary** hace que estos tipos de datos sean redundantes. Pero como los tipos de datos Long siguen estando disponibles, la mayoría de las interfaces a los componentes de acceso a datos de OLE DB seguirán siendo iguales. Para mantener la compatibilidad con versiones anteriores, la marca DBCOLUMNFLAGS_ISLONG del controlador de OLE DB para SQL Server permanece en uso. Los proveedores y controladores escritos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores siguen utilizando estos términos para los tipos nuevos cuando se establecen en una longitud máxima ilimitada.  
+ Anteriormente, solo podían alcanzar tales longitudes los tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como **text**, **ntext** e **image**. El especificador **max** de **varchar**, **nvarchar** y **varbinary** hace que estos tipos de datos sean redundantes. Pero como los tipos de datos Long siguen estando disponibles, la mayoría de las interfaces a los componentes de acceso a datos de OLE DB seguirán siendo iguales. Para mantener la compatibilidad con versiones anteriores, la marca de DBCOLUMNFLAGS_ISLONG de OLE DB Driver for SQL Server permanece en uso. Los proveedores y controladores escritos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores siguen utilizando estos términos para los tipos nuevos cuando se establecen en una longitud máxima ilimitada.  
   
 > [!NOTE]  
 >  También pueden especificarse tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** como tipos de parámetros de entrada y salida de procedimientos almacenados, tipos devueltos de función o en funciones [CAST y CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "67988859"
   
 -   Enlazar como DBTYPE_IUNKNOWN y usar la transmisión por secuencias.  
   
- Al notificar el tamaño máximo de una columna, el controlador de OLE DB para SQL Server notificará:  
+ Al notificar el tamaño máximo de una columna, OLE DB Driver for SQL Server notificará:  
   
 -   El tamaño máximo definido que, por ejemplo, es 2000 para una columna **varchar(** 2000 **)** , o bien  
   
@@ -690,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Para obtener más información sobre cómo el controlador de OLE DB para SQL Server expone tipos de datos de valores grandes, vea [blobs y objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Para más información sobre cómo OLE DB Driver for SQL Server expone tipos de datos de valores grandes, consulte [Blobs y objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>Consulte también  

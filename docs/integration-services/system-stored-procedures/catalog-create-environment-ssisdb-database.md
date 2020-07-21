@@ -10,28 +10,28 @@ ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77fea02dc933b63fff97b359673ab702e63f50ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8e6ca772f59aea6646df88af9355e00d98224a7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749707"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un entorno en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```sql  
-catalog.create_environment [@folder_name =] folder_name  
-     , [@environment_name =] environment_name  
-  [  , [@environment_description =] environment_description ]  
+catalog.create_environment [ @folder_name = ] folder_name  
+     , [ @environment_name = ] environment_name  
+  [  , [ @environment_description = ] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   Un entorno con el mismo nombre ya existe en la carpeta especificada  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El nombre del entorno debe ser único en la carpeta.  
   
   

@@ -15,30 +15,30 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_options system table
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98d25db72c7067147a34fa21b0bfa8da16ae1d3e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063003"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889445"
 ---
-# <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **MSreplication_options** tabla almacena los metadatos que se usan internamente para la replicación. Esta tabla se almacena en el **maestro** base de datos.  
+  En la tabla **MSreplication_options** se almacenan los metadatos que la replicación usa internamente. Esta tabla se almacena en la base de datos **maestra** .  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|Exclusivamente para uso interno.|  
 |**value**|**bit**|Exclusivamente para uso interno.|  
 |**major_version**|**int**|Exclusivamente para uso interno.|  
-|**versión_secundaria**|**int**|Exclusivamente para uso interno.|  
-|**revision**|**int**|Exclusivamente para uso interno.|  
+|**minor_version**|**int**|Exclusivamente para uso interno.|  
+|**revisión**|**int**|Exclusivamente para uso interno.|  
 |**install_failures**|**int**|Exclusivamente para uso interno.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

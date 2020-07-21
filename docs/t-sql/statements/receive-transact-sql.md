@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: 2ff0b9740cbdd8eb25bdfa6d8c55e7551fe946a8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897854"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Recupera uno o más mensajes de una cola. En función del valor de retención de la cola, se quita el mensaje de la cola o se actualiza el estado del mensaje de la cola.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70211442"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
@@ -105,7 +105,7 @@ ms.locfileid: "70211442"
  TIMEOUT *tiempo_de_espera*  
  Especifica el tiempo, en milisegundos, durante el que la instrucción espera un mensaje. Esta cláusula solo se puede utilizar con la cláusula WAITFOR. Si no se especifica esta cláusula o el tiempo de espera es -**1**, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, RECEIVE devuelve un conjunto de resultados vacío.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si la instrucción RECEIVE no es la primera instrucción de un lote o de un procedimiento almacenado, la instrucción anterior deberá finalizar con un punto y coma (;).  
@@ -155,7 +155,7 @@ ms.locfileid: "70211442"
 ## <a name="queue-columns"></a>Poner las columnas en una cola  
  La siguiente tabla enumera las columnas que contiene una cola:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Estado del mensaje. Para los mensajes devueltos por el comando RECEIVE, el estado es siempre **0**. Los mensajes de la cola pueden contener uno de los siguiente valores:<br /><br /> **0**=Listo**1**=Mensaje recibido**2**=Sin completar**3**=Mensaje enviado retenido|  
 |**priority**|**tinyint**|Nivel de prioridad de la conversación que se aplica al mensaje.|  

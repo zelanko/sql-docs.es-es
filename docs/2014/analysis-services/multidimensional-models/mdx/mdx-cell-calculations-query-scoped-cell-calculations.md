@@ -1,5 +1,5 @@
 ---
-title: Creación de cálculos de celdas del ámbito de consulta (MDX) | Microsoft Docs
+title: Crear cálculos de celda de ámbito de consulta (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a9c9d529bfeb26b959b2521e4ce3c3d7f10d082
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66074422"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546449"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Crear cálculos de celdas del ámbito de consulta (MDX)
   La palabra clave `WITH` en las expresiones multidimensionales (MDX) se usa para describir las celdas calculadas en el contexto de una consulta. La palabra clave `WITH` tiene la siguiente sintaxis:  
@@ -33,8 +32,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |Conjunto vacío|Una expresión de conjunto MDX que se resuelve en un conjunto vacío. En este caso, el ámbito de la celda calculada es todo el cubo.|  
 |Conjunto de un solo miembro|Una expresión de conjunto MDX que se resuelve en un solo miembro.|  
-|Conjunto de miembros de nivel|Una expresión de conjunto MDX que se resuelve en miembros de un solo nivel. Un ejemplo de expresión de conjunto es el *Level_Expression*.`Members` Función MDX. Para incluir los miembros calculados, use el *Level_Expression*.`AllMembers` Función MDX. Para más información, vea [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Conjunto de descendientes|Una expresión de conjunto MDX que se resuelve en los descendientes de un miembro determinado. Un ejemplo de expresión de conjunto es el `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) función MDX. Para más información, vea [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Conjunto de miembros de nivel|Una expresión de conjunto MDX que se resuelve en miembros de un solo nivel. Un ejemplo de este tipo de expresión de conjunto es el *Level_Expression*.`Members` Función MDX. Para incluir miembros calculados, use el *Level_Expression*.`AllMembers` Función MDX. Para más información, vea [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Conjunto de descendientes|Una expresión de conjunto MDX que se resuelve en los descendientes de un miembro determinado. Un ejemplo de este tipo de expresión de conjunto es la `Descendants` función MDX (*Member_Expression*, *Level_Expresion*, *Desc_Flag*). Para más información, vea [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Si el argumento `String_Expression` no describe ninguna dimensión, MDX considera que se han incluido todos los miembros para generar el subcubo de cálculo. Por lo tanto, si el argumento `String_Expression` tiene el valor NULL, la definición de las celdas calculadas se aplica a todo el cubo.  
   
@@ -53,7 +52,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  Por otro lado, MDX procesa la fórmula de cálculo siempre que se emite una consulta MDX en el cubo y ésta implica celdas incluidas en la definición de celdas calculadas. Este procesamiento se lleva a cabo independientemente del ámbito de creación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE CELL CALCULATION &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

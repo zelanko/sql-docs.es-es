@@ -1,7 +1,7 @@
 ---
-title: Modificar las cuentas de servicios de controlador y de cliente | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Modificación de las cuentas de servicios de controlador y de cliente
+titleSuffix: SQL Server Distributed Replay
+description: Obtenga información sobre cómo modificar las cuentas de los servicios Distributed Replay Controller y Distributed Replay Client y, después, volver a aplicar las listas de control de acceso.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e946949debc6d5a1fa3c586ece94da58e5241b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950045"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000470"
 ---
-# <a name="modify-the-controller-and-client-services-accounts"></a>Modificar las cuentas de servicios de controlador y de cliente
+# <a name="modify-the-controller-and-client-services-accounts"></a>Modificación de las cuentas de servicios de controlador y de cliente
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema, aprenderá a modificar las cuentas de servicio del cliente y Distributed Replay Controller; y, a continuación, volverá a aplicar las listas de control de acceso (ACL).  
+
+En este tema, aprenderá a modificar las cuentas de servicio del cliente y Distributed Replay Controller; y, a continuación, volverá a aplicar las listas de control de acceso (ACL).  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>Iniciar o detener los servicios de Distributed Replay utilizando Administración de equipos  
   
@@ -34,7 +38,7 @@ ms.locfileid: "67950045"
   
 3.  En la ventana **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , en la pestaña **Iniciar sesión** , seleccione **Esta cuenta**, escriba la nueva cuenta de inicio de sesión o haga clic en **Examinar** para buscarla y, a continuación, haga clic en **Aceptar**.  
   
-     **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   
@@ -60,7 +64,7 @@ ms.locfileid: "67950045"
   
     3.  En la ventana **Servicios de componentes**, vaya a **Raíz de consola -> Servicios de componentes -> Equipos -> Mi PC -> DCOM Config ->DReplayController**.  
   
-    4.  Haga clic con el botón derecho en **DReplayController** y luego haga clic en **Propiedades**.  
+    4.  Haga clic con el botón derecho en **DReplayController**y luego haga clic en **Propiedades**.  
   
     5.  En la ventana **Propiedades de DReplayController** , en la pestaña **Seguridad** , haga clic en **Editar** en la sección **Permisos de inicio y activación** .  
   

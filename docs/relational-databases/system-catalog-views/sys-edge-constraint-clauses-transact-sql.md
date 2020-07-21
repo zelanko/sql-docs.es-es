@@ -1,5 +1,5 @@
 ---
-title: sys.edge_constraint_clauses (Transact-SQL) | Microsoft Docs
+title: Sys. edge_constraint_clauses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/17/2018
 ms.prod: sql
@@ -20,31 +20,31 @@ ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26b347703a632a4147f8dcba369efaa272b4cef9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8adad7e110d387a0abd7ad0b6f5adcaf1df5c3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079355"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648916"
 ---
-# <a name="sysedgeconstraintclauses-transact-sql"></a>sys.edge_constraint_clauses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sysedge_constraint_clauses-transact-sql"></a>Sys. edge_constraint_clauses (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/applies-to-version/sqlserver2019.md)]
 
 Contiene una fila por cada cláusula de una restricción perimetral.
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|object_id de la restricción perimetral.|  
-|**from_object_id**|**int**|object_id de la tabla de nodo FROM.|  
-|**to_object_id**|**int**|object_id de la tabla de nodo a.|  
+|**from_object_id**|**int**|object_id de la tabla de nodo de.|  
+|**to_object_id**|**int**|object_id de la tabla TO node.|  
 |**clause_number**|**int**|Índice de entero generado internamente de la cláusula.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

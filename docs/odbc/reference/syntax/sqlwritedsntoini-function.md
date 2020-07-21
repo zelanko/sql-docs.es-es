@@ -17,18 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b8bb141c8f54c49ca3a5c6fc4bc15d434f91795c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039510"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286965"
 ---
 # <a name="sqlwritedsntoini-function"></a>Función SQLWriteDSNToIni
 **Conformidad**  
- Versión de introducción: ODBC 1.0  
+ Versión introducida: ODBC 1,0  
   
  **Resumen**  
  **SQLWriteDSNToIni** agrega un origen de datos a la información del sistema.  
@@ -44,38 +44,38 @@ BOOL SQLWriteDSNToIni(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszDSN*  
- [Entrada] Nombre del origen de datos para agregar.  
+ Entradas Nombre del origen de datos que se va a agregar.  
   
  *lpszDriver*  
- [Entrada] Descripción del controlador (el nombre del DBMS asociado) presentada a los usuarios en lugar del nombre de controlador físico.  
+ Entradas Descripción del controlador (normalmente, el nombre del DBMS asociado) que se presenta a los usuarios en lugar del nombre del controlador físico.  
   
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLWriteDSNToIni** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLWriteDSNToIni** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Error del instalador general|Se produjo un error para que se ha producido ningún error de instalación concreto.|  
-|ODBC_ERROR_INVALID_DSN|DSN no válido|El *lpszDSN* argumento contiene una cadena que no era válida para un DSN.|  
-|ODBC_ERROR_INVALID_NAME|Nombre de controlador o traductor no válido|El *lpszDriver* argumento no era válido.|  
-|ODBC_ERROR_REQUEST_FAILED|Error en la solicitud|El programa de instalación no se pudo crear un DSN en el registro.|  
-|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El programa de instalación no pudo realizar la función debido a la falta de memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
+|ODBC_ERROR_INVALID_DSN|DSN no válido|El argumento *lpszDSN* contenía una cadena que no era válida para un DSN.|  
+|ODBC_ERROR_INVALID_NAME|Nombre de traductor o controlador no válido|El argumento *lpszDriver* no era válido.|  
+|ODBC_ERROR_REQUEST_FAILED|Error en la solicitud|El instalador no pudo crear un DSN en el registro.|  
+|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLWriteDSNToIni** agrega el origen de datos a la sección [ODBC Data Sources] de la información del sistema. A continuación, crea una sección de la especificación del origen de datos y agrega una única palabra clave (**controlador**) con el nombre del controlador del archivo DLL como su valor. Si ya existe la sección de especificación del origen de datos, **SQLWriteDSNToIni** quita la sección anterior antes de crear uno nuevo.  
+ **SQLWriteDSNToIni** agrega el origen de datos a la sección [ODBC Data Sources] de la información del sistema. A continuación, crea una sección de especificación para el origen de datos y agrega una palabra clave única (**driver**) con el nombre de la dll del controlador como su valor. Si la sección especificación de origen de datos ya existe, **SQLWriteDSNToIni** quita la sección anterior antes de crear la nueva.  
   
- El llamador de esta función debe agregar los valores y palabras clave específicas del controlador a la sección de especificación del origen de datos de la información del sistema.  
+ El autor de la llamada de esta función debe agregar las palabras clave y los valores específicos del controlador a la sección especificación de origen de datos de la información del sistema.  
   
- Si el nombre del origen de datos es el predeterminado, **SQLWriteDSNToIni** también crea la sección de especificación del controlador predeterminado en la información del sistema.  
+ Si el nombre del origen de datos es predeterminado, **SQLWriteDSNToIni** también crea la sección especificación predeterminada del controlador en la información del sistema.  
   
- Esta función se debe llamar solo desde un archivo DLL de configuración.  
+ Solo se debe llamar a esta función desde un archivo DLL de instalación.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Agregar, modificar o quitar un origen de datos|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(en el archivo DLL de configuración)|  
+|Agregar, modificar o quitar un origen de datos|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(en el archivo dll de instalación)|  
 |Agregar, modificar o quitar un origen de datos|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Quitar un nombre de origen de datos de la información del sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

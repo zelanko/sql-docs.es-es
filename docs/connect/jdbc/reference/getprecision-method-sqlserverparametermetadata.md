@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0c6b7d8c69e1cc6bc4a9e8d239c3a47c24573d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dbca77be55cd855f2e293324d6cd7c4ca5471b7e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980782"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925219"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>Método getPrecision (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public int getPrecision(int param)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getPrecision se especifica mediante el método getPrecision de la interfaz java. SQL. ParameterMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getPrecision especifica este método getPrecision en la interfaz java.sql.ParameterMetaData.  
   
  Para los tipos de número, este método obtiene el número de dígitos decimales. Para los tipos de caracteres, obtiene la longitud máxima en caracteres. Para los tipos binarios, obtiene la longitud máxima en bytes. Cuando se desconozca el número de dígitos, este método devuelve "0."  
   

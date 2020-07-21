@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a6b398a4dd7e93521b38708d3a7e37ae09e70a15
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 718309e24e9ad7936dfc359e6db6ac529c926345
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646101"
 ---
-# <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita una columna de un artículo de tabla existente que ha sido publicado. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -56,12 +56,12 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  [ @schema_change_script =] '*schema_change_script*'  
  Especifica el nombre y la ruta de acceso de un script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para modificar los procedimientos almacenados personalizados generados por el sistema. *schema_change_script* es de tipo nvarchar (4000) y su valor predeterminado es NULL. La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. *schema_change_script* se ejecuta después de realizar un cambio de esquema en un artículo de tabla replicada mediante sp_repldropcolumn y se puede usar para realizar una de las acciones siguientes:  
   
--   Si los procedimientos almacenados personalizados se regeneran automáticamente, *schema_change_script* se puede usar para quitar estos procedimientos almacenados personalizados y reemplazarlos con procedimientos almacenados personalizados definidos por el usuario que admitan el nuevo esquema.  
+-   Si los procedimientos almacenados personalizados se vuelven a generar automáticamente, *schema_change_script* se pueden utilizar para quitar estos procedimientos almacenados personalizados y reemplazarlos con procedimientos almacenados personalizados definidos por el usuario que admitan el nuevo esquema.  
   
--   Si los procedimientos almacenados personalizados no se vuelven a generar automáticamente, se puede usar *schema_change_script*para volver a generar estos procedimientos almacenados o para crear procedimientos almacenados personalizados definidos por el usuario.  
+-   Si los procedimientos almacenados personalizados no se vuelven a generar automáticamente, *schema_change_script*se pueden usar para volver a generar estos procedimientos almacenados o para crear procedimientos almacenados personalizados definidos por el usuario.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es de bit y su valor predeterminado es 1.  
+ Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un bit, con un valor predeterminado de 1.  
   
  El valor 1 significa que, al cambiar un artículo, la instantánea puede quedar invalidada y, en tal caso, el valor 1 concede el permiso necesario para que se produzca la nueva instantánea.  
   
@@ -80,7 +80,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor sysadmin en el publicador o los miembros de los roles fijos de base de datos db_owner o db_ddladmin de la base de datos de publicaciones pueden ejecutar sp_repldropcolumn.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características desusadas en Replicación de SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

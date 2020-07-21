@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1816630332b7691d9d85216df7ac242baa65f4bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748702"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve la curva especificada a partir de una instancia de **geometry** que es **LineString**, **CircularString**, **CompoundCurve** o **MultiLineString**.
   
@@ -37,7 +37,7 @@ Devuelve la curva especificada a partir de una instancia de **geometry** que es 
  *curve_index*  
  Es una expresión **int** entre 1 y el número de curvas de la instancia de **geometry**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
@@ -45,7 +45,7 @@ Devuelve la curva especificada a partir de una instancia de **geometry** que es 
 ## <a name="exceptions"></a>Excepciones  
  Si *curve_index* < 1, se produce una `ArgumentOutOfRangeException`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se devuelve **NULL** cuando se da alguna de las condiciones siguientes:  
   
 -   La instancia de **geometry** se declara, pero no se crea.  

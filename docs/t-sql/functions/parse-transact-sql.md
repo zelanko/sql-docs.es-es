@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 412099db82b2b16e538b1b2f742dde6548b93ce6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737999"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el resultado de una expresión, traducido al tipo de datos solicitado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -47,15 +47,15 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Valor literal que representa el tipo de datos solicitado para el resultado.  
   
- *culture*  
+ *referencia cultural*  
  Cadena opcional que identifica la referencia cultural en la que se da formato a *string_value*.  
   
  Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, PARSE desencadena un error.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el resultado de la expresión, traducido al tipo de datos solicitado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los valores NULL que se pasan como argumentos a PARSE se tratan de dos maneras:  
   
 1.  Si se pasa una constante NULL, se produce un error. Un valor NULL no se puede analizar en otro tipo de datos diferente teniendo en cuenta la referencia cultural.  
@@ -72,21 +72,21 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Los valores del parámetro *data_type* están restringidos a los tipos que aparecen en la tabla siguiente, junto con estilos. La información de estilo se proporciona como ayuda para determinar los tipos de modelos permitidos. Para más información sobre los estilos, vea la documentación de .NET Framework para las enumeraciones **System.Globalization.NumberStyles** y **DateTimeStyles** .  
   
-|Categoría|Tipo|Tipo de .NET Framework|Estilos usados|  
+|Category|Tipo|Tipo de .NET Framework|Estilos usados|  
 |--------------|----------|-------------------------|-----------------|  
-|Numérico|BIGINT|Int64|NumberStyles.Number|  
-|Numérico|INT|Int32|NumberStyles.Number|  
-|Numérico|SMALLINT|Int16|NumberStyles.Number|  
-|Numérico|TINYINT|Byte|NumberStyles.Number|  
-|Numérico|Decimal|Decimal|NumberStyles.Number|  
-|Numérico|NUMERIC|Decimal|NumberStyles.Number|  
-|Numérico|FLOAT|Doble|NumberStyles.Float|  
-|Numérico|REAL|Único|NumberStyles.Float|  
-|Numérico|SMALLMONEY|Decimal|NumberStyles.Currency|  
-|Numérico|money|Decimal|NumberStyles.Currency|  
-|Fecha y hora|Date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|time|Timespan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Fecha y hora|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Numeric|bigint|Int64|NumberStyles.Number|  
+|Numeric|int|Int32|NumberStyles.Number|  
+|Numeric|SMALLINT|Int16|NumberStyles.Number|  
+|Numeric|TINYINT|Byte|NumberStyles.Number|  
+|Numeric|Decimal|Decimal|NumberStyles.Number|  
+|Numeric|NUMERIC|Decimal|NumberStyles.Number|  
+|Numeric|FLOAT|Double|NumberStyles.Float|  
+|Numeric|real|Single|NumberStyles.Float|  
+|Numeric|SMALLMONEY|Decimal|NumberStyles.Currency|  
+|Numeric|money|Decimal|NumberStyles.Currency|  
+|Fecha y hora|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Fecha y hora|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Fecha y hora|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Fecha y hora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Fecha y hora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -97,26 +97,26 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |Nombre completo|Alias|LCID|Referencia cultural específica|  
 |---------------|-----------|----------|----------------------|  
-|us_english|Inglés|3082|en-US|  
-|Deutsch|German|1031|de-DE|  
+|us_english|Inglés|3082|es-ES|  
+|Deutsch|Alemán|1031|de-DE|  
 |Français|Francés|1036|fr-FR|  
 |日本語|Japonés|1041|ja-JP|  
-|Dansk|Danish|1030|da-DK|  
+|Dansk|Danés|1030|da-DK|  
 |Español|Español|3082|es-ES|  
 |Italiano|Italiano|1040|it-IT|  
 |Nederlands|Neerlandés|1043|nl-NL|  
 |Norsk|Noruego|2068|nn-NO|  
 |Português|Portugués|2070|pt-PT|  
-|Suomi|Finlandés|1035|fi-FI|  
+|Suomi|Finés|1035|fi-FI|  
 |Svenska|Sueco|1053|sv-SE|  
-|čeština|Czech|1029|Cs-CZ|  
+|čeština|Checo|1029|Cs-CZ|  
 |magyar|Húngaro|1038|Hu-HU|  
 |polski|Polaco|1045|Pl-PL|  
 |română|Rumano|1048|Ro-RO|  
 |hrvatski|Croata|1050|hr-HR|  
 |slovenčina|Eslovaco|1051|Sk-SK|  
 |slovenski|Esloveno|1060|Sl-SI|  
-|ελληνικά|Greek|1032|El-GR|  
+|ελληνικά|Griego|1032|El-GR|  
 |български|Búlgaro|1026|bg-BG|  
 |русский|Ruso|1049|Ru-RU|  
 |Türkçe|Turco|1055|Tr-TR|  

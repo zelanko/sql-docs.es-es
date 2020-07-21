@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082069"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488264"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
@@ -31,9 +31,9 @@ Puede configurar el servicio de trabajador de escalabilidad horizontal mediante 
 |Configuración  |Descripción  |Valor predeterminado|
 |---------|---------|---------|
 |DisplayName|Nombre para mostrar del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nombre de equipo|
-|Descripción|Descripción del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vacía|
+|Descripción|Descripción del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vacío|
 |MasterEndpoint|Punto de conexión para conectarse al patrón de escalado horizontal.|Punto de conexión establecido durante la instalación del trabajador de escalado horizontal|
-|MasterHttpsCertThumbprint|Huella digital del certificado SSL de cliente usado para autenticar el patrón de escalado horizontal|Huella digital del certificado de cliente especificado durante la instalación del trabajador de escalado horizontal.|
+|MasterHttpsCertThumbprint|Huella digital del certificado TLS/SSL de cliente usado para autenticar el patrón de escalabilidad horizontal|Huella digital del certificado de cliente especificado durante la instalación del trabajador de escalado horizontal.|
 |WorkerHttpsCertThumbprint|Huella digital del certificado del patrón de escalado horizontal usado para autenticar el trabajador de escalado horizontal.|Huella digital de un certificado creado e instalado automáticamente durante la instalación del trabajador de escalado horizontal|
 |StoreLocation|Ubicación del almacén del certificado del trabajador.|LocalMachine|
 |StoreName|Nombre del almacén en el que está el certificado de ese trabajador.|My|
@@ -44,11 +44,11 @@ Puede configurar el servicio de trabajador de escalabilidad horizontal mediante 
 |TaskRequestMinMemory|Límite inferior de memoria en MB del trabajador de escalado horizontal para solicitar tareas.|100.0|
 |MaxTaskCount|Número máximo de tareas que puede contener el trabajador de escalado horizontal.|10|
 |LeaseInterval|Intervalo de concesión de una tarea por parte del trabajador de escalado horizontal.|00:01:00|
-|TasksRootFolder|Carpeta de registros de tareas. Si el valor está vacío, se usará la ruta de acceso de carpeta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacía|
+|TasksRootFolder|Carpeta de registros de tareas. Si el valor está vacío, se usará la ruta de acceso de carpeta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacío|
 |TaskLogLevel|Nivel de registro de tarea del trabajador de escalado horizontal. (Verbose 0x01, Information 0x02, Warning 0x04, Error 0x08, Progress 0x10, CriticalError 0x20, Audit 0x40)|126 (Information, Warning, Error, Progress, CriticalError, Audit)|
 |TaskLogSegment|Intervalo de tiempo de un archivo de registro de tarea.|00:00:00|
 |TaskLogEnabled|Especifica si el registro de tarea está habilitado.|true|
-|ExecutionLogCacheFolder|Carpeta que se usa para almacenar en caché el registro de ejecución del paquete. Si el valor está vacío, se usará la ruta de acceso de carpeta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacía|
+|ExecutionLogCacheFolder|Carpeta que se usa para almacenar en caché el registro de ejecución del paquete. Si el valor está vacío, se usará la ruta de acceso de carpeta `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache`. [cuenta] es la cuenta que ejecuta el servicio de trabajador de escalado horizontal. De forma predeterminada, la cuenta es SSISScaleOutWorker140.|Vacío|
 |ExecutionLogMaxBufferLogCount|Número máximo de registros de ejecución en caché en un búfer de registro de ejecución en memoria.|10000|
 |ExecutionLogMaxInMemoryBufferCount|Número máximo de búferes de registro de ejecución en memoria para los registros de ejecución.|10|
 |ExecutionLogRetryCount|Número de reintentos si se produce un error en el registro de ejecución.|3|

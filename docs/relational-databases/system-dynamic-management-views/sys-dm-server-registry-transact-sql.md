@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Transact-SQL) | Microsoft Docs
+title: Sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,25 +16,25 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e4de0271647e20a56942e17b8ba52520d1a169f0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898633"
 ---
-# <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve instalación de configuración y información que se almacena en el Registro de Windows para la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Devuelve una fila por cada clave del Registro. Use esta vista de administración dinámica para devolver información como los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles en el equipo host o los valores de configuración de red para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nombre de clave del Registro. Acepta valores NULL.|  
-|value_name|**nvarchar(256)**|Nombre del valor de clave. Este es el elemento que se muestra en el **nombre** del Editor del registro de la columna. Acepta valores NULL.|  
-|value_data|**sql_variant**|Valor de los datos de la clave. Este es el valor se muestra en el **datos** columna del Editor del registro para una entrada determinada. Acepta valores NULL.|  
+|value_name|**nvarchar(256)**|Nombre del valor de clave. Este es el elemento que se muestra en la columna **nombre** del editor del registro. Acepta valores NULL.|  
+|value_data|**sql_variant**|Valor de los datos de la clave. Este es el valor que se muestra en la columna de **datos** del editor del registro para una entrada determinada. Acepta valores NULL.|  
   
 ## <a name="security"></a>Seguridad  
   
@@ -52,7 +52,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%ControlSet%';  
 ```  
   
-### <a name="b-display-the-sql-server-agent-registry-key-values"></a>b. Mostrar los valores de clave del Registro del Agente SQL Server  
+### <a name="b-display-the-sql-server-agent-registry-key-values"></a>B. Mostrar los valores de clave del Registro del Agente SQL Server  
  En el ejemplo siguiente se devuelven los valores de clave del Registro del Agente SQL Server para la instancia actual de SQL Server.  
   
 ```  
@@ -67,7 +67,7 @@ WHERE registry_key LIKE N'%SQLAgent%';
 ```  
 SELECT registry_key, value_name, value_data  
 FROM sys.dm_server_registry  
-WHERE registry_key = N'CurrentVersion';  
+WHERE value_name = N'CurrentVersion';  
 ```  
   
 ### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D. Mostrar los parámetros pasados a la instancia de SQL Server durante el inicio  
@@ -88,7 +88,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sys.dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

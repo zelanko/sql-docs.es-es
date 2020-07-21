@@ -1,5 +1,5 @@
 ---
-title: Ayuda F1 del Asistente para la dimensión | Microsoft Docs
+title: Asistente para dimensiones (ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081660"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528591"
 ---
 # <a name="dimension-wizard-f1-help"></a>Asistente para dimensiones (Ayuda F1)
-  Use el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una dimensión de base de datos en un proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Tras crear una dimensión de base de datos, puede usar el Diseñador de dimensiones para modificar sus propiedades. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
+  Use el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una dimensión de base de datos en un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto de. Tras crear una dimensión de base de datos, puede usar el Diseñador de dimensiones para modificar sus propiedades. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Para abrir al Asistente para dimensiones**  
+ **Para abrir el Asistente para dimensiones**  
   
 -   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** para un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, luego, haga clic en **Nueva dimensión**.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "66081660"
   
 -   [Seleccionar método de creación &#40;Asistente para dimensiones&#41;](select-creation-method-dimension-wizard.md)  
   
--   [Definir períodos de tiempo &#40;origen de datos&#41; &#40;Asistente para dimensiones&#41;](define-time-periods-data-source-dimension-wizard.md)  
+-   [Definir períodos de tiempo &#40;Asistente para dimensiones de&#41; &#40;de origen de datos&#41;](define-time-periods-data-source-dimension-wizard.md)  
   
 -   [Definir períodos de tiempo &#40;Asistente para dimensiones&#41;](define-time-periods-dimension-wizard.md)  
   
@@ -40,19 +39,19 @@ ms.locfileid: "66081660"
   
 -   [Seleccionar tablas relacionadas &#40;Asistente para dimensiones&#41;](select-related-tables-dimension-wizard.md)  
   
--   [Seleccione los atributos de dimensión &#40;Asistente para dimensiones&#41;](select-dimension-attributes-dimension-wizard.md)  
+-   [Seleccionar atributos de dimensión &#40;Asistente para dimensiones&#41;](select-dimension-attributes-dimension-wizard.md)  
   
--   [Especifique el tipo de dimensión &#40;Asistente para dimensiones&#41;](specify-dimension-type-dimension-wizard.md)  
+-   [Especificar el tipo de dimensión &#40;Asistente para dimensiones&#41;](specify-dimension-type-dimension-wizard.md)  
   
--   [Especificar clave de dimensión y el tipo &#40;Asistente para dimensiones&#41;](specify-dimension-key-and-type-dimension-wizard.md)  
+-   [Especificar clave de dimensión y tipo &#40;Asistente para dimensiones&#41;](specify-dimension-key-and-type-dimension-wizard.md)  
   
 -   [Definir la inteligencia de cuentas &#40;Asistente para dimensiones&#41;](define-account-intelligence-dimension-wizard.md)  
   
 -   [Finalización del asistente &#40;Asistente para dimensiones&#41;](completing-the-wizard-dimension-wizard.md)  
   
-## <a name="see-also"></a>Vea también  
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

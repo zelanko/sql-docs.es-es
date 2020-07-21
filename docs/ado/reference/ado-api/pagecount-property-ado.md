@@ -1,5 +1,5 @@
 ---
-title: PageCount (propiedad, ADO) | Microsoft Docs
+title: PageCount (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,32 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - PageCount property [ADO]
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea893a019ab6d1333cecc5da5f1f66928467adfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ebb85eee8ea976f1ef078ebfe22eca195081bba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931783"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762009"
 ---
 # <a name="pagecount-property-ado"></a>PageCount (propiedad, ADO)
-Indica cuántas páginas de datos la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contiene el objeto.  
+Indica el número de páginas de datos que contiene el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un **largo** valor que indica el número de páginas en el **Recordset**.  
+ Devuelve un valor de **tipo Long** que indica el número de páginas del **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
- Use la **PageCount** propiedad para determinar cuántas páginas de datos están en el **Recordset** objeto. *Páginas* son grupos de registros cuyo tamaño es igual a la [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) configuración de la propiedad. Incluso si la última página está incompleta porque hay menos registros que el **PageSize** valor, cuenta como una página adicional en el **PageCount** valor. Si el **Recordset** objeto no admite esta propiedad, el valor será -1 para indicar que el **PageCount** no es posible determinar.  
+## <a name="remarks"></a>Observaciones  
+ Use la propiedad **PageCount** para determinar el número de páginas de datos que se encuentran en el objeto de **conjunto de registros** . *Las páginas* son grupos de registros cuyo tamaño es igual al valor de la propiedad [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) . Incluso si la última página está incompleta porque hay menos registros que el valor de **pageSize** , cuenta como página adicional en el valor de **PageCount** . Si el objeto de **conjunto de registros** no admite esta propiedad, el valor será-1 para indicar que **PageCount** es Indeterminista.  
   
- Consulte la **PageSize** y [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propiedades para obtener más acerca de la funcionalidad de página.  
+ Vea las propiedades **pageSize** y [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) para obtener más información sobre la funcionalidad de la página.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [AbsolutePage, PageCount y ejemplo de las propiedades PageSize (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage, PageCount y ejemplo de las propiedades PageSize (VC ++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de propiedades AbsolutePage, PageCount y PageSize (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [Ejemplo de propiedades AbsolutePage, PageCount y PageSize (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [Propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [Propiedad PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
+ [PageSize (propiedad, ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
  [Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)

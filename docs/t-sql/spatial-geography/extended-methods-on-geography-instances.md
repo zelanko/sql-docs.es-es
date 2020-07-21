@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 00c70a3b5b7bfba6bcd04fd622b4520c3a419848
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3688e530362dd313c9e5f5b4623cce1c64d5caae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731207"
 ---
 # <a name="extended-methods-on-geography-instances"></a>Métodos extendidos en instancias de geography
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios métodos extendidos en instancias de Geography de Open Geospatial Consortium (OGC).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "67930467"
   
 -   [RingN](../../t-sql/spatial-geography/ringn-geography-data-type.md)  
   
--   [ShortestLineTo &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+-   [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md) (ShortestLineTo [tipo de datos geography])  
   
 -   [ToString](../../t-sql/spatial-geography/tostring-geography-data-type.md)  
   

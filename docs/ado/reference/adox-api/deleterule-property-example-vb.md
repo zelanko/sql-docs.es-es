@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], Visual Basic example
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 928da8cdfa8bb693bde69781ce40ecad7343c038
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966406"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763926"
 ---
 # <a name="deleterule-property-example-vb"></a>Ejemplo de propiedad DeleteRule (VB)
-Este ejemplo se muestra el [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) propiedad de un [clave](../../../ado/reference/adox-api/key-object-adox.md) objeto. El código anexa una nueva [tabla](../../../ado/reference/adox-api/table-object-adox.md) y, a continuación, define una nueva clave principal, estableciendo **DeleteRule** a **adRICascade**.  
+En este ejemplo se muestra la propiedad [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) de un objeto de [clave](../../../ado/reference/adox-api/key-object-adox.md) . El código anexa una nueva [tabla](../../../ado/reference/adox-api/table-object-adox.md) y, a continuación, define una nueva clave principal, estableciendo **DeleteRule** en **adRICascade**.  
   
 ```  
 ' BeginDeleteRuleVB  
@@ -84,6 +84,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DeleteRule (propiedad, ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

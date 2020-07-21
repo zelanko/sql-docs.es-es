@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985741"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Seguridad de acceso del código en Reporting Services
-  La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para obtener información detallada sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la documentación del SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+  La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para información detallada sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la documentación del SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa seguridad de acceso del código porque, aunque el servidor de informes está generado sobre tecnología [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], hay una diferencia sustancial entre una aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típica y el servidor de informes. Una aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] típica no ejecuta código de usuario. Por el contrario, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa una arquitectura abierta y extensible que permite a los usuarios programar con los archivos de definición de informes mediante el elemento **Code** del lenguaje RDL (Report Definition Language) y desarrollar funciones especializadas en un ensamblado personalizado para su uso en informes. Además, los programadores pueden diseñar e implementar extensiones eficaces que mejoran las capacidades del servidor de informes. Con esta eficacia y flexibilidad se hace necesario proporcionar tanta protección y seguridad como sea posible.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62985741"
 </CodeGroup>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollo seguro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

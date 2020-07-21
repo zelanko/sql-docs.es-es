@@ -6,7 +6,6 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 f1_keywords:
@@ -25,12 +24,12 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3751c7876af92ac32fc7836583cbf9e06bcf414c
+ms.sourcegitcommit: da836a2e23bd2ed56d2a72983f7b5b18c6f13342
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68223596"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85088335"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -39,7 +38,7 @@ Quita los metadatos de la clasificación de confidencialidad de una o varias col
 
 ## <a name="syntax"></a>Sintaxis
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 
@@ -58,7 +57,7 @@ Es el nombre de la columna de base de datos de la que se va a quitar la clasific
     - *table_name*: es el nombre de la tabla a la que pertenece la columna clasificada.
     - *column_name*: es el nombre de la columna de la que se va a quitar la clasificación.
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 - Se pueden quitar varias clasificaciones de objetos con una sola instrucción "DROP SENSITIVITY CLASSIFICATION".
 

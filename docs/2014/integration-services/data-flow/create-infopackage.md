@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fdd95c6ec096fdbbe564651f27f4ad2724312b4f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827973"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432312"
 ---
 # <a name="create-infopackage"></a>Crear InfoPackage
   Use el cuadro de diálogo **Crear nuevo InfoPackage** para crear un nuevo InfoPackage en el sistema SAP Netweaver BW.  
@@ -51,13 +50,13 @@ ms.locfileid: "62827973"
  **Textos**  
  Permite indicar que el InfoPackage cargará los datos de texto.  
   
- **Transaction**  
+ **Transacción**  
  Permite indicar que el InfoPackage cargará los datos de transacciones.  
   
  **Guardar y activar**  
  Permite guardar y activar el nuevo InfoPackage.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

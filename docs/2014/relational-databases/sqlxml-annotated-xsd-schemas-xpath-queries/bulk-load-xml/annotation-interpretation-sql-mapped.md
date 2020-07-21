@@ -1,5 +1,5 @@
 ---
-title: sql:mapped (SQLXML 4.0) | Microsoft Docs
+title: 'SQL: asignado (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068233"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
-  Carga masiva XML procesa la `sql:mapped` anotación en el esquema XSD como se esperaba que es, si especifica el esquema de asignación `sql:mapped="false"` para cualquier elemento o atributo, la carga masiva XML no intenta almacenar los datos asociados en la columna correspondiente.  
+  La carga masiva XML procesa la `sql:mapped` anotación en el esquema XSD según lo esperado, es decir, si el esquema de asignación especifica `sql:mapped="false"` para cualquier elemento o atributo, la carga masiva XML no intenta almacenar los datos asociados en la columna correspondiente.  
   
  La carga masiva XML omite los elementos y atributos que no están asignados (ya sea porque no se describen en el esquema o porque se anotan en el esquema XSD con `sql:mapped="false"`). Todos los datos no asignados van a la columna de desbordamiento si este tipo de columna está especificado utilizando `sql:overflow-field`.  
   
@@ -53,11 +52,11 @@ ms.locfileid: "66013475"
 </xsd:schema>  
 ```  
   
- Dado que el **HomePhone** atributo especifica `sql:mapped="false"`, carga masiva XML no se asigna este atributo a la columna correspondiente. El esquema XSD identifica una columna de desbordamiento (**OverflowColumn**) en el que la carga masiva XML almacena estos datos no consumidos.  
+ Dado que el atributo **HomePhone** especifica `sql:mapped="false"` , la carga masiva XML no asigna este atributo a la columna correspondiente. El esquema XSD identifica una columna de desbordamiento (**OverflowColumn**) en la que la carga masiva XML almacena estos datos no consumidos.  
   
 ### <a name="to-test-a-working-sample"></a>Para probar un ejemplo funcional  
   
-1.  Cree la siguiente tabla en la **tempdb** base de datos:  
+1.  Cree la siguiente tabla en la base de datos **tempdb** :  
   
     ```  
     USE tempdb  

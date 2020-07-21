@@ -23,21 +23,21 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 840ae1f66eb9bbc8d578a677f743df679d08eb83
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001637"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380998"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una propiedad de búsqueda especificada o la quita de la lista de propiedades de búsqueda especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ALTER SEARCH PROPERTY LIST list_name  
 {  
    ADD 'property_name'  
@@ -52,7 +52,10 @@ ALTER SEARCH PROPERTY LIST list_name
 ;  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *list_name*  
  Es el nombre de la lista de propiedades que se está modificando. *list_name* es un identificador.  
   
@@ -106,7 +109,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Quita la propiedad especificada de la lista de propiedades especificada por *list_name*. Si se quita una propiedad, se elimina del registro y, por tanto, ya no se pueden realizar búsquedas en ella.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cada índice de texto completo puede tener solo una lista de propiedades de búsqueda.  
   
  Para habilitar la realización de consultas en una propiedad de búsqueda dada, debe agregarla a la lista de propiedades de búsqueda del índice de texto completo y, a continuación, volver a rellenar el índice.  
@@ -169,7 +172,7 @@ GO
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso CONTROL en la lista de propiedades.  
   
 ## <a name="examples"></a>Ejemplos  

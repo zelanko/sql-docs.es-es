@@ -10,20 +10,19 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ad905027458e7594a46e3ab416aaa1f4f43cbc59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205004"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061235"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Compatibilidad de FOR XML con el tipo de datos xml
   Si una consulta FOR XML especifica una columna de tipo `xml` en la cláusula SELECT, los valores de columna se asignan como elementos en el XML devuelto, aunque no se especifique la directiva ELEMENTS. Las declaraciones XML en la columna de tipo `xml` no se serializan.  
   
- Por ejemplo, la consulta siguiente recupera información de contacto de cliente, como el `BusinessEntityID`, `FirstName`, y `LastName` columnas y los números de teléfono desde el `AdditionalContactInfo` columna de `xml` tipo.  
+ Por ejemplo, la consulta siguiente recupera información de contacto del cliente, como `BusinessEntityID` las `FirstName` columnas, y `LastName` , y los números de teléfono de la `AdditionalContactInfo` columna de `xml` tipo.  
   
 ```  
 USE AdventureWorks2012;  
@@ -203,7 +202,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Compatibilidad con FOR XML para varios tipos de datos de SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
+## <a name="see-also"></a>Consulte también  
+ [Compatibilidad de FOR XML con varios tipos de datos de SQL Server](for-xml-support-for-various-sql-server-data-types.md)  
   
   

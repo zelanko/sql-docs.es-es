@@ -15,15 +15,14 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e489ccd60039cc45667571e504ef1e1a5ffdea6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900171"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430272"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
   La transformación Combinación de mezcla proporciona una salida que se genera combinando dos conjuntos de datos ordenados mediante una combinación FULL, LEFT o INNER. Por ejemplo, puede utilizar una combinación LEFT para combinar una tabla que incluye información de productos con una tabla que incluye el país o la región en que se fabricó un producto. El resultado es una tabla que muestra todos los productos y su país o región de origen.  
@@ -55,15 +54,15 @@ ms.locfileid: "62900171"
   
  Para obtener información sobre cómo establecer las propiedades de esta transformación, haga clic en uno de los temas siguientes:  
   
--   [Ampliar un conjunto de datos con la transformación Combinación de mezcla](merge-join-transformation.md)  
+-   [Ampliación de un conjunto de datos con la transformación Combinación de mezcla](merge-join-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Vea también  
- [Editor de transformación Combinación de mezcla](../../merge-join-transformation-editor.md)   
- [Transformación Mezclar](merge-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de transformación combinación de mezcla](../../merge-join-transformation-editor.md)   
+ [Transformación mezclar](merge-transformation.md)   
  [Transformación Unión de todo](union-all-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4a44a38d2475537e639ece0b35829cfed1c596e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63044230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028790"
 ---
 # <a name="server-event-category"></a>Servidor (categoría de eventos)
   La categoría de eventos **Servidor** contiene eventos de servidor generales.  
@@ -31,7 +30,7 @@ ms.locfileid: "63044230"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Mount Tape (clase de eventos)](mount-tape-event-class.md)|Indica que se ha recibido una solicitud para montar una cinta.|  
-|[Server Memory Change (clase de eventos)](server-memory-change-event-class.md)|Indica que se ha cambiado el uso de memoria de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Server Memory Change (clase de eventos)](server-memory-change-event-class.md)|Indica que se ha cambiado el uso de memoria de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Trace File Close (clase de eventos)](trace-file-close-event-class.md)|Indica que se ha cerrado un archivo de seguimiento durante la reversión de los archivos de seguimiento.|  
   
   

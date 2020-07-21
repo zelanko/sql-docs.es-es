@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251950"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898458"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API de OpenSqlFilestream usa esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos del BLOB mediante el uso de las API de Win32. PathName es de solo lectura.  
   
@@ -44,8 +44,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La solicitud del nombreruta para una columna de cualquier otro tipo de datos o de un columnthat **varbinary (Max)** no tiene el atributo de almacenamiento FileStream producirá un error en tiempo de compilación de la consulta.  
   
- *@no__t 1option*  
- [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@option* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
+ *\@desea*  
+ [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la * \@ opción* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -66,7 +66,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |0|La función devuelve el nombre de red virtual (VNN) en la ruta de acceso.|  
 |1|La función devuelve el nombre del equipo en la ruta de acceso.|  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **nvarchar(max)**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>b. Mostrar las rutas de acceso de BLOB FILESTREAM en una tabla  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. Mostrar las rutas de acceso de BLOB FILESTREAM en una tabla  
  En el ejemplo siguiente se crean y muestran las rutas de acceso para tres BLOB FILESTREAM.  
   
 ```sql  
@@ -147,9 +147,9 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objeto binario grande &#40;BLOB&#41; datos &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;&#41;de Transact-SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

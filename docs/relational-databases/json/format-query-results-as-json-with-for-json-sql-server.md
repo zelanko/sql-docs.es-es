@@ -1,9 +1,7 @@
 ---
-title: Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/06/2019
+title: Aplicación de formato JSON a los resultados de consulta con FOR JSON
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,17 +11,19 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a8746b0d63b4c16776244cbb953cf91dd2fa7b3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4e9aee7c2c8de20c50c101e3573e4d3d9259b661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722266"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Dé formato JSON a los resultados de las consultas o exporte datos de SQL Server como JSON mediante la adición de la cláusula **FOR JSON** a una instrucción **SELECT**. Use la cláusula **FOR JSON** para simplificar las aplicaciones cliente mediante la delegación del formato de la salida JSON desde la aplicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -199,15 +199,14 @@ La salida de la cláusula **FOR JSON** tiene las características siguientes:
 Este es un ejemplo que muestra cómo la cláusula **FOR JSON** da formato al resultado JSON.  
   
 **Resultados de la consulta**  
-  
-|||||  
-|-|-|-|-|  
-|**A**|**B**|**C**|**D**|  
+
+|A|B|C|D|
+|-|-|-|-|
 |10|11|12|X|  
-|20|21|22|S|  
+|20|21|22|Y|  
 |30|31|32|Z|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-  
+
  **Salida JSON**  
   
 ```json  

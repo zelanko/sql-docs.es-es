@@ -1,5 +1,5 @@
 ---
-title: Seleccione cómo definir la conexión (Asistente de origen de datos) (Analysis Services) | Microsoft Docs
+title: Seleccionar cómo definir la conexión (Asistente para orígenes de datos) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b249b3603b23884e218e893ae6e7a7bc0c93be1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069499"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940996"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Seleccionar cómo definir la conexión (Asistente para orígenes de datos) (Analysis Services)
   Use la página **Seleccione cómo definir la conexión** para crear o seleccionar la conexión de datos para un origen de datos.  
@@ -38,7 +37,7 @@ ms.locfileid: "66069499"
  **Eliminar**  
  Elija esta opción para eliminar un origen de datos existente.  
   
- **Crear un origen de datos basado en otro objeto**  
+ **Crear un origen de datos basado en otro proyecto**  
  Elija esta opción para basar el nuevo origen de datos en un proyecto u objeto de origen de datos existente.  
   
   

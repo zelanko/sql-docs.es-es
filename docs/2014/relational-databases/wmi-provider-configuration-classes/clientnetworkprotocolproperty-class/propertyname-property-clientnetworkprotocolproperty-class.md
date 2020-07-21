@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bcbe0d14d95d7ba003969a31b8a87d692edb7435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8554245e177347c5746ff18f54b7d4a404f7e8f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63246016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061374"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyName (clase ClientNetworkProtocolProperty)
   Obtiene el nombre de la propiedad actual a la que hace referencia el valor de la propiedad [PropertyIdx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+## <a name="see-also"></a>Consulte también  
+ [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

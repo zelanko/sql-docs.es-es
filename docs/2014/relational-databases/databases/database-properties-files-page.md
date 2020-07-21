@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62871991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970175"
 ---
 # <a name="database-properties-files-page"></a>Propiedades de la base de datos (página Archivos)
   Utilice esta página para crear una nueva base de datos o para ver o modificar las propiedades de la base de datos seleccionada. Este tema se aplica a **Propiedades de la base de datos (página Archivos)** de las bases de datos existentes y a **Nueva base de datos (página General)** .  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre de la base de datos**  
  Agregue o muestre el nombre de la base de datos.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62871991"
  Para agregar archivos (contenedores) a un grupo de archivos de datos FILESTREAM, debe haber habilitado FILESTREAM. Puede habilitar FILESTREAM mediante el cuadro de diálogo [Propiedades del servidor (página Opciones avanzadas)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Grupo de archivos**  
- Seleccione el grupo de archivos en la lista. El grupo de archivos es PRIMARY de forma predeterminada. Puede crear un nuevo grupo de archivos si selecciona **\<nuevo grupo de archivos>** y escribe información sobre el grupo de archivos en el cuadro de diálogo **Grupo de archivos nuevo**. También se puede crear un nuevo grupo de archivos en la página **Grupo de archivos** . No se puede modificar el grupo de archivos de un archivo existente.  
+ Seleccione el grupo de archivos en la lista. El grupo de archivos es PRIMARY de forma predeterminada. Puede crear un nuevo grupo de archivos si selecciona **\<new filegroup>** y escribe información sobre el grupo de archivos en el cuadro de diálogo **nuevo grupo de archivos** . También se puede crear un nuevo grupo de archivos en la página **Grupo de archivos** . No se puede modificar el grupo de archivos de un archivo existente.  
   
  Al agregar archivos (contenedores) a un grupo de archivos optimizados para memoria, el campo **Grupo de archivos** se rellenará con el nombre del grupo de archivos optimizados para memoria de la base de datos.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62871991"
   
  En el caso de los archivos de los grupos de archivos optimizados para memoria, este campo debe establecerse en **Ilimitado**.  
   
- **Ruta de acceso**  
+ **Path**  
  Muestra la ruta de acceso del archivo seleccionado. Para especificar una ruta de acceso a un nuevo archivo, haga clic en el botón de edición situado junto a la ruta de acceso al archivo y navegue a la carpeta de destino. No se puede modificar la ruta de acceso de un archivo existente.  
   
  Para los archivos FILESTREAM, la ruta de acceso es una carpeta. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] creará los archivos subyacentes en esta carpeta.  
@@ -74,15 +73,15 @@ ms.locfileid: "62871991"
   
  Este campo no es válido para los archivos FILESTREAM, lo cual incluye los archivos en grupos de archivos optimizados para memoria.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un nuevo archivo a la base de datos.  
   
- **Quitar**  
+ **Remove**  
  Elimina el archivo seleccionado de la base de datos. No podrá eliminarse un archivo a menos que esté vacío. El archivo de datos principal y el archivo de registro principal no se pueden quitar.  
   
  Para obtener información acerca de los archivos, vea [Database Files and Filegroups](database-files-and-filegroups.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

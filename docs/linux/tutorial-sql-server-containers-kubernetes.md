@@ -1,24 +1,24 @@
 ---
-title: Implementación de un contenedor de SQL Server en Kubernetes con Azure Kubernetes Service (AKS)
+title: Implementación de un contenedor de SQL Server con Azure Kubernetes Service (AKS)
 description: En este tutorial se explica cómo implementar una solución de alta disponibilidad de SQL Server con Kubernetes en Azure Kubernetes Service.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653704"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902310"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implementación de un contenedor de SQL Server en Kubernetes con Azure Kubernetes Service (AKS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Aprenda a configurar una instancia de SQL Server en Kubernetes en Azure Kubernetes Service (AKS), con almacenamiento persistente para la alta disponibilidad. La solución proporciona resistencia. Si se produce un error en la instancia de SQL Server, Kubernetes vuelve a crearla automáticamente en un nuevo pod. Kubernetes también proporciona resistencia frente a un error de nodo.
 
@@ -47,7 +47,7 @@ En el diagrama siguiente, se ha producido un error en el nodo que hospeda el con
 
 ![Diagrama de clúster de SQL Server de Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 * **Clúster de Kubernetes**
    - El tutorial requiere un clúster de Kubernetes. En los pasos se usa [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) para administrar el clúster. 
@@ -160,12 +160,15 @@ En este paso, cree un manifiesto para describir el contenedor basado en la image
 1. Cree un manifiesto (un archivo YAML) para describir la implementación. En el ejemplo siguiente se describe una implementación, incluido un contenedor basado en la imagen de contenedor de SQL Server.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:
@@ -182,7 +185,7 @@ En este paso, cree un manifiesto para describir el contenedor basado en la image
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: MSSQL_SA_PASSWORD
+           - name: SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -250,7 +253,7 @@ En este paso, cree un manifiesto para describir el contenedor basado en la image
 
    ![Captura de pantalla del comando get pod](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
-   En la imagen anterior, el pod tiene un estado de `Running`. Este estado indica que el contenedor está listo. Esto puede tardar varios minutos.
+   En la imagen anterior, el pod tiene un estado de `Running`. Este estado indica que el contenedor está listo. Esto podría tardar varios minutos.
 
    >[!NOTE]
    >Una vez creada la implementación, pueden pasar unos minutos hasta que el pod se pueda ver. El retraso se debe a que el clúster extrae la imagen [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) del centro de Docker. Una vez que se extrae la imagen por primera vez, las implementaciones posteriores pueden ser más rápidas si la implementación se realiza en un nodo que ya tiene la imagen almacenada en la memoria caché. 

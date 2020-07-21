@@ -14,19 +14,19 @@ helpviewer_keywords:
 - sqlsrv_num_fields
 - API Reference, sqlsrv_num_fields
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a1155a01de68a9c4d45fc2c7e4e6660c581c3bb7
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992668"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926426"
 ---
-# <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
+# <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recupera el número de campos de un conjunto de resultados activo. Se puede llamar a esta función en cualquier instrucción preparada, antes o después de la ejecución.  
+Recupera el número de campos de un conjunto de resultados activo. Esta función se puede llamar en cualquier instrucción preparada, con independencia de que sea anterior o posterior a la ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   

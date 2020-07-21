@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de la directiva XMLTEXT | Microsoft Docs'
+title: 'Ejemplo: Especificar la directiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 541e214399a0f91c63c5cf053f5a99dafe9fb837
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013337"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificar la directiva XMLTEXT
   En este ejemplo se muestra cómo se tratan los datos de la columna de desbordamiento mediante la directiva `XMLTEXT` en una instrucción `SELECT` con el modo EXPLICIT.  
   
  Considere la tabla `Person` . Esta tabla dispone de una columna `Overflow` que almacena la parte no utilizada del documento XML.  
@@ -52,7 +51,7 @@ FOR XML EXPLICIT;
   
 -   Dado que el atributo `PersonID` del elemento <`xmltext`> está en conflicto con el atributo `PersonID` recuperado en el mismo nivel de elementos, se omite el atributo del elemento <`xmltext`>, incluso aunque `PersonID` sea NULL. En general, un atributo invalida un atributo del mismo nombre en el desbordamiento.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +85,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -98,9 +97,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- Si se especifica *AttributeName* con la directiva `xmltext`, se agregan los atributos del elemento <`overflow`> como atributos de los subelementos del elemento <`Parent`> que los incluye. El nombre especificado para *AttributeName* se convierte en el nombre del subelemento.  
+ Si se especifica *AttributeName* con la directiva `xmltext`, se agregan los atributos del elemento <`overflow`> como atributos de los subelementos del elemento <`Parent`> que los incluye. El nombre especificado para *attributeName* se convierte en el nombre del subelemento.  
   
- En esta consulta, *AttributeName*, <`overflow`>, se especifica junto con el `xmltext` directiva:  
+ En esta consulta, se especifica *attributeName*, <`overflow`>, junto con la `xmltext` Directiva:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -112,7 +111,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -136,7 +135,7 @@ FOR XML EXPLICIT
   
  `</Parent>`  
   
- En este elemento de consulta, se especifica *directive* para el atributo `PersonName`. De este modo, `PersonName` se agrega como subelemento del elemento <`Parent`> que lo incluye. Los atributos de <`xmltext`> se siguen agregando al elemento <`Parent`> que lo incluye. El contenido del elemento <`overflow`> (los subelementos) se antepone a otros subelementos de los elementos <`Parent`> que lo incluyen.  
+ En este elemento de consulta, se especifica *directive* para el atributo `PersonName` . De este modo, `PersonName` se agrega como subelemento del elemento <`Parent`> que lo incluye. Los atributos de <`xmltext`> se siguen agregando al elemento <`Parent`> que lo incluye. El contenido del elemento <`overflow`> (los subelementos) se antepone a otros subelementos de los elementos <`Parent`> que lo incluyen.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -147,7 +146,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   
@@ -194,7 +193,7 @@ FOR XML EXPLICIT, xmldata;
   
  `</overflow>`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

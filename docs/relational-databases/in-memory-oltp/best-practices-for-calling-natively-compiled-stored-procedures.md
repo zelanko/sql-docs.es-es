@@ -1,25 +1,26 @@
 ---
-title: Procedimientos recomendados para llamar a procedimientos almacenados compilados de forma nativa | Microsoft Docs
-ms.custom: ''
+title: 'Prácticas recomendadas: procedimientos almacenados compilados de forma nativa'
+description: Conozca los procedimientos recomendados que se aplican en relación con los procedimientos almacenados compilados de forma nativa; estos normalmente se usan en partes de una aplicación en las que el rendimiento es crítico.
+ms.custom: seo-dt-2019
 ms.date: 03/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
-ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
+ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b78fe54f7643421328f6d6a2ec61544db725488
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc9fffa0c2b916163e0b9e8698cdf1f7df59667a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723393"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Prácticas recomendadas para llamar a un procedimiento almacenado compilado de forma nativa
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Los procedimientos almacenados compilados de forma nativa:  
   
 -   Se suelen usar en componentes esenciales para el rendimiento de una aplicación.  

@@ -14,10 +14,10 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293830"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -29,7 +29,7 @@ ms.locfileid: "71293830"
   
  La siguiente captura de pantalla muestra el **Editor de la tarea XML** con la configuración necesaria para la validación de XML con la salida de error completa.  
   
- ![Propiedades de la tarea XML en el Editor de la tarea XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
+ ![Propiedades de la tarea XML en el Editor de la tarea XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "Propiedades de la tarea XML en el Editor de la tarea XML")  
   
  Antes de que la propiedad **ValidationDetails** estuviera disponible, la validación de XML efectuada mediante la tarea XML solo devolvía un resultado true o false, sin información sobre errores o sus ubicaciones. Ahora, al establecer **ValidationDetails** como true, el archivo de salida contiene información detallada sobre cada uno de los errores, incluido el número de línea y su posición. Puede usar esta información para comprender, buscar y corregir errores en documentos XML.  
   
@@ -120,7 +120,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Este es el resultado de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de la segunda consulta de ejemplo que se muestra en el texto anterior.  
   
- ![Consulta para agrupar errores de XML en Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![Consulta para agrupar errores de XML en Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Consulta para agrupar errores de XML en Management Studio")  
   
 ## <a name="see-also"></a>Consulte también  
  [Tarea XML](../../integration-services/control-flow/xml-task.md)   

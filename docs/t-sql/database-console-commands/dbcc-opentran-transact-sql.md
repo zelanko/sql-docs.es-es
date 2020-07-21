@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ccef337d7b693561ec2d328fcc3a2f8afae72c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039083"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748919"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN ayuda a identificar las transacciones activas que pueden evitar el truncamiento del registro. DBCC OPENTRAN muestra información acerca de la transacción activa más antigua y las transacciones distribuidas y no distribuidas replicadas más antiguas, si las hubiera, dentro del registro de transacciones de la base de datos especificada. Solo se presentan resultados si hay una transacción activa que existe en el registro o si la base de datos contiene información de replicación. Si no hay transacciones activas en el registro, se muestra un mensaje informativo.
   
@@ -44,7 +44,7 @@ DBCC OPENTRAN ayuda a identificar las transacciones activas que pueden evitar el
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
     ( [ database_name | database_id | 0 ] )   
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Utilice DBCC OPENTRAN para determinar si hay alguna transacción abierta dentro del registro de transacciones. Cuando utiliza la instrucción BACKUP LOG, solo puede truncar la parte inactiva del registro; una transacción abierta puede evitar que el registro se trunque completamente. Para identificar una transacción abierta, utilice sp_who para obtener el Id. del proceso del sistema.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

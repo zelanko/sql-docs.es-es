@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña KPI, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña KPI, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2be57c8f3ca02e2e182f13240a32ac4255f367d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938406"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña KPI) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Barra de herramientas** para llevar a cabo acciones comunes de la pestaña **KPI** del Diseñador de cubos.  
@@ -24,10 +23,10 @@ ms.locfileid: "66066009"
  **Agregar Business Intelligence**  
  Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo.  
   
- **Procesar**  
+ **Process**  
  Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.  
   
- **Reconnect**  
+ **Volver a conectar**  
  Haga clic en esta opción para volver a conectar la pestaña **KPI** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si la sesión de la pestaña **KPI** se ha desconectado debido a una pérdida de conexión o se ha excedido el tiempo de espera.  
   
  **Nuevo KPI**  

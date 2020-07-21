@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones (página columnas) varios archivos planos | Microsoft Docs
+title: Editor del administrador de conexiones de varios archivos planos (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207c6e9837f2a828316c91c642d7397b72c4ddc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057494"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440172"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor del administrador de conexiones de varios archivos planos (página Columnas)
   Utilice el nodo **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para especificar la información de filas y columnas, y para obtener una vista previa del primer archivo seleccionado.  
@@ -39,28 +38,28 @@ ms.locfileid: "66057494"
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
+|**COMPRA**|Las filas se delimitan mediante un retorno de carro.|  
 |**{LF}**|Las filas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
-|**Coma {,}**|Las filas se delimitan mediante una coma.|  
+|**Unas{,}**|Las filas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las filas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
   
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
+|**COMPRA**|Las columnas se delimitan mediante un retorno de carro.|  
 |**{LF}**|Las columnas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las columnas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las columnas se delimitan mediante un punto y coma.|  
-|**Coma {,}**|Las columnas se delimitan mediante una coma.|  
+|**Unas{,}**|Las columnas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las columnas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
   
@@ -94,24 +93,24 @@ ms.locfileid: "66057494"
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
+|**COMPRA**|Las filas se delimitan mediante un retorno de carro.|  
 |**{LF}**|Las filas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
-|**Coma {,}**|Las filas se delimitan mediante una coma.|  
+|**Unas{,}**|Las filas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las filas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
   
  **Restablecer columnas**  
  Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
  [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

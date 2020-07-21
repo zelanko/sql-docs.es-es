@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105460"
 ---
 # <a name="planning-a-report-report-builder"></a>Planear un informe (Generador de informes)
@@ -25,11 +25,11 @@ ms.locfileid: "66105460"
   
 -   **¿En qué formato desea que aparezca el informe?**  
   
-     Puede representar en línea los informes en un explorador, como el Administrador de informes, o exportarlos a otros formatos como Excel, Word o PDF. La forma final que adopta el informe es una consideración importante porque no todas las características están disponibles en todos los formatos de exportación. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+     Puede representar en línea los informes en un explorador, como el Administrador de informes, o exportarlos a otros formatos como Excel, Word o PDF. La forma final que adopta el informe es una consideración importante porque no todas las características están disponibles en todos los formatos de exportación. Para obtener más información, vea [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **¿Qué estructura desea utilizar para presentar los datos en el informe?**  
   
-     Tiene varias opciones entre las que elegir para presentar los datos, como formato tabular, matriz (similar a un informe de tabla de referencias cruzadas o de tabla dinámica), gráfico, las estructuras de forma libre, o cualquier combinación de estos. Para obtener más información, consulte [enumera &#40;generador de informes y SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md) y [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+     Tiene varias opciones entre las que elegir para presentar los datos, como formato tabular, matriz (similar a un informe de tabla de referencias cruzadas o de tabla dinámica), gráfico, las estructuras de forma libre, o cualquier combinación de estos. Para obtener más información, vea [las listas &#40;generador de informes y ssrs&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md) y [gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 -   **¿Qué aspecto desea que tenga el informe?**  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66105460"
   
      Puede guardar el informe en el equipo local y continuar trabajando en él, o ejecutarlo localmente para obtener su propia información. Sin embargo, para compartir el informe con otros usuarios, tendrá que guardarlo en un servidor de informes configurado en el modo nativo o en un servidor de informes en el modo integrado de SharePoint. Guardarlo en un servidor permite a otros usuarios ejecutarlo cuando lo deseen. Como alternativa, el administrador del servidor de informes puede configurar una suscripción al informe o configurar la distribución del informe por correo electrónico a otros individuos. Puede hacer que el informe se entregue en un formato de exportación concreto si lo prefiere. Para obtener más información, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)  
+ [Tutoriales &#40;Generador de informes&#41;](../report-builder-tutorials.md)  
   
   

@@ -10,25 +10,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetch function [ODBC], Cursor Library
 ms.assetid: 35a0d493-778b-4fb1-84ee-a13540e2fe0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2cb829f065421a13d3c7df06c670808bc3d9d77c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bee83ccb5497888b57a45673599af6b92931a704
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064432"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298725"
 ---
 # <a name="sqlfetch-cursor-library"></a>SQLFetch (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLFetch** función en la biblioteca de cursores. Para obtener información general sobre **SQLFetch**, consulte [función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
+ En este tema se describe el uso de la función **SQLFetch** en la biblioteca de cursores. Para obtener información general sobre **SQLFetch**, vea [función SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md).  
   
- Cuando se utiliza la biblioteca de cursores, las llamadas a **SQLFetch** no se pueden mezclar con las llamadas a **SQLFetchScroll** o **SQLExtendedFetch**.  
+ Cuando se usa la biblioteca de cursores, las llamadas a **SQLFetch** no se pueden mezclar con llamadas a **SQLFetchScroll** o **SQLExtendedFetch**.  
   
- Si **SQLFetch** se llama con SQL_ATTR_ROW_ARRAY_SIZE establecido en un valor mayor que 1, la biblioteca de cursores pasará a la llamada al controlador. Si el controlador es un ODBC 2. *x* controlador, se omitirá el tamaño del conjunto de filas y la llamada a **SQLFetch** devolverá una sola fila de datos.  
+ Si se llama a **SQLFetch** con SQL_ATTR_ROW_ARRAY_SIZE establecido en un valor mayor que 1, la biblioteca de cursores pasará la llamada al controlador. Si el controlador es un ODBC 2. *x* , se omitirá el tamaño del conjunto de filas y la llamada a **SQLFetch** devolverá una sola fila de datos.  
   
- Si se usa la biblioteca de cursores con un ODBC 2. *x* controlador, un enlace de desplazamiento (como se define por el atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR) no es cuando usa **SQLFetch** se llama.  
+ Si la biblioteca de cursores se usa con ODBC 2. el controlador *x* , un desplazamiento de enlace (tal y como se define en el atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR), no se utiliza cuando se llama a **SQLFetch** .  
   
- Cuando se carga la biblioteca de cursores, no puede llamar una aplicación **SQLFetch** para capturar las columnas de marcadores. La biblioteca de cursores pasa la llamada a **SQLFetch** a través para el controlador, pero la función se interceptan las llamadas a habilitar marcadores y enlazar la columna de marcador por la biblioteca de cursores.
+ Cuando se carga la biblioteca de cursores, una aplicación no puede llamar a **SQLFetch** para capturar columnas de marcador. La biblioteca de cursores pasa la llamada a **SQLFetch** a través del controlador, pero las llamadas de función para habilitar marcadores y enlazar la columna de marcador se interceptan mediante la biblioteca de cursores.

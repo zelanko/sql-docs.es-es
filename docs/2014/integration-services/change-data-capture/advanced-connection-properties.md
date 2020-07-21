@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8dc844d1fdfb1e82f0ffa8de93a6a1060ef190cd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771521"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438952"
 ---
 # <a name="advanced-connection-properties"></a>Propiedades avanzadas de conexión
   Use el cuadro de diálogo **Propiedades avanzadas de conexión** para agregar más parámetros de conexión a la cadena de conexión.  
@@ -31,7 +30,7 @@ ms.locfileid: "62771521"
 > [!IMPORTANT]  
 >  No incluya credenciales de inicio de sesión en el cuadro de diálogo **Propiedades avanzadas de conexión** . No se cifrarán cuando se pasen a través de la red.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtener acceso a la Consola del diseñador CDC](access-the-cdc-designer-console.md)   
  [Conexión de SQL Server para la creación de instancias](sql-server-connection-for-instance-creation.md)  
   

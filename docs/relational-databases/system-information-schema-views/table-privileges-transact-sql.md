@@ -19,35 +19,35 @@ ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86bd404320063ec134f18c1707ff8c12470e42a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783063"
 ---
-# <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="table_privileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila por cada privilegio de tabla concedido a o por el usuario actual en la base de datos actual.  
   
  Para recuperar información de estas vistas, especifique el nombre completo de **INFORMATION_SCHEMA.** _view_name_.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**OTORGANTE DE PERMISOS**|**nvarchar(** 128 **)**|La persona que concede el privilegio.|  
-|**RECEPTOR DE PERMISOS**|**nvarchar(** 128 **)**|La persona que recibe el privilegio.|  
-|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**GRANTOR**|**nvarchar (** 128 **)**|La persona que concede el privilegio.|  
+|**GRANTEE**|**nvarchar (** 128 **)**|La persona que recibe el privilegio.|  
+|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> Importante solo la forma confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects. <strong> \* \* \* \* </strong>|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla.|  
-|**PRIVILEGE_TYPE**|**varchar(** 10 **)**|Tipo de privilegio.|  
-|**IS_GRANTABLE**|**varchar(** 3 **)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  
+|**PRIVILEGE_TYPE**|**VARCHAR (** 10 **)**|Tipo de privilegio.|  
+|**IS_GRANTABLE**|**VARCHAR (** 3 **)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [Sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
+ [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys. database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
   
   

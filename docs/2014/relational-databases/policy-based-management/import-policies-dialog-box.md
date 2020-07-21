@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4a0830e5db32fcc651b59114e1a2dad870e48d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5820a49a51358a409e5f87ddca0b79c797a9eeab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063869"
 ---
 # <a name="import-policies-dialog-box"></a>Importar directivas (cuadro de diálogo)
   Utilice este cuadro de diálogo para importar una o varias directivas (y su condición a la que se hace referencia) que se guardaron como archivos XML, en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] actual.  
@@ -38,7 +37,7 @@ ms.locfileid: "62705241"
   
 -   **Deshabilitar todas las directivas al importar**  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
  [Importar una directiva de administración basada en directivas](import-a-policy-based-management-policy.md)   
  [Exportar una directiva de administración basada en directivas](export-a-policy-based-management-policy.md)  

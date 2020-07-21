@@ -1,6 +1,7 @@
 ---
-title: 'Lección 2: Creación y aplicación de una directiva de normas de denominación | Microsoft Docs'
-ms.custom: ''
+title: 'Lección 2: Creación y aplicación de una directiva de convenciones de nomenclatura'
+description: Este tutorial le enseña a crear y aplicar una directiva de convenciones de nomenclatura para la administración basada en directivas en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: security
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bd3b1b4d07b68ae693cd741e471dd5f53efae6e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 86014f1a4c7ee4f9c002df67d2f739124dc70e2a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907059"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785083"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Creación y aplicación de una directiva de normas de denominación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Algunos tipos de directivas de administración basada en directivas pueden crear desencadenadores para exigir el cumplimiento futuro con la directiva. En esta lección, va a crear una directiva que exige una denominación estándar para tablas. A continuación, va a probar la directiva intentando crear una tabla que infrinja dicha directiva.  
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y acceso a un servidor que ejecute SQL Server.
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).

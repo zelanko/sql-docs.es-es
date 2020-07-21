@@ -1,5 +1,5 @@
 ---
-title: Extensiones del controlador SQL Server | Microsoft Docs
+title: Extensiones de controlador de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 1043bc93-965d-4939-bd1c-21e9d8d3e9ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1cee588e7db1e219f3d2810e29bb77a68a21b7ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b690b93a99578e5cb9c7cf876c4a4b3fd6440e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933356"
 ---
 # <a name="sql-server-driver-extensions"></a>Extensiones del controlador de SQL Server
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa funciones específicas del controlador que permiten a las aplicaciones ODBC obtener acceso a las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
+-   [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
-## <a name="see-also"></a>Vea también  
- [SQL Server Native Client &#40;ODBC&#41; referencia](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Server Native Client &#40;referencia de&#41; ODBC](../../../2014/database-engine/dev-guide/sql-server-native-client-odbc-reference.md)  
   
   

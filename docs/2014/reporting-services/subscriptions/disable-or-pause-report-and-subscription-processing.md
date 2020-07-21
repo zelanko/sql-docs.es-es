@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100921"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar el procesamiento de informes y suscripciones
@@ -44,9 +44,9 @@ ms.locfileid: "66100921"
  Tenga en cuenta que el informe se carga igualmente aunque el origen de datos no esté disponible. El informe no contiene datos, pero los usuarios que dispongan de los permisos adecuados pueden tener acceso a las páginas de propiedades, a la configuración de seguridad, al historial del informe y a la información de suscripción asociada al informe.  
   
 ## <a name="pause-a-shared-schedule"></a>Pausar una programación compartida  
- Cuando un informe o una suscripción se ejecutan desde una programación compartida, es posible pausar la programación para evitar el procesamiento. Cualquier proceso de informes o suscripciones controlado por una programación se pospone hasta que se vuelve a reanudar la programación. Para obtener más información, consulte [pausar y reanudar las programaciones compartidas](schedules.md).  
+ Cuando un informe o una suscripción se ejecutan desde una programación compartida, es posible pausar la programación para evitar el procesamiento. Cualquier proceso de informes o suscripciones controlado por una programación se pospone hasta que se vuelve a reanudar la programación. Para obtener más información, vea [pausar y reanudar programaciones compartidas](schedules.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](../security-properties-page-items-report-manager.md)  

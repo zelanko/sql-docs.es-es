@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63045997"
 ---
 # <a name="soapexception-errors-table"></a>Tabla de errores de SoapException
@@ -99,10 +99,10 @@ ms.locfileid: "63045997"
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Introducción al control de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
- [Clase SoapException de Reporting Services](reporting-services-soapexception-class.md)   
- [Uso de la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Reporting Services (clase SoapException)](reporting-services-soapexception-class.md)   
+ [Usar la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 855d754750e9c5e58c63a3cfd2dee4ac7f9ce3e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067116"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Reglas para actualizar resultados (Visual Database Tools)
   En muchos casos, puede actualizar el conjunto de resultados mostrado en el [panel Resultados](visual-database-tools.md). Sin embargo, en algunos casos no es posible realizar esta actualización.  
@@ -64,7 +63,7 @@ ms.locfileid: "63066483"
   
 -   Columnas de marca de tiempo o BLOB  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

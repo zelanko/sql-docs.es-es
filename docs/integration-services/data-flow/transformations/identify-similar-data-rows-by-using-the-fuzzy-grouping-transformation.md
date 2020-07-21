@@ -1,5 +1,5 @@
 ---
-title: Identificar filas de datos similares mediante la transformación Agrupación aproximada | Microsoft Docs
+title: Identificación de filas de datos similares mediante la transformación Agrupación aproximada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c47bd07fd48431f850744e58ba2838b61d5969d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: a8acc9dfcfc908a0e1c196eb7b9ac2c6af088eaf
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71291547"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903926"
 ---
-# <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar filas de datos similares mediante la transformación Agrupación aproximada
+# <a name="identify-similar-data-rows-with-the-fuzzy-grouping-transformation"></a>Identificación de filas de datos similares con la transformación Agrupación aproximada
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -79,7 +79,7 @@ ms.locfileid: "71291547"
   
 18. También puede desactivar las casillas de delimitadores de token para omitir los delimitadores en los datos.  
   
-19. Haga clic en **Aceptar**.  
+19. Haga clic en **OK**.  
   
 20. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   

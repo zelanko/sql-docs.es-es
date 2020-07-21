@@ -1,5 +1,5 @@
 ---
-title: Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo | Microsoft Docs
+title: Configuración y administración de palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -17,15 +17,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c474a387002070534fe228b67e4ef1152fdbd64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725981"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Para evitar que un índice de texto completo se llene demasiado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un mecanismo que descarta las cadenas más frecuentes que no ayudan en la búsqueda. Estas cadenas descartadas se denominan *palabras irrelevantes*. Durante la creación de índices, el motor de texto completo omite las palabras irrelevantes del índice de texto completo. Eso significa que las consultas de texto completo no buscarán las palabras irrelevantes.  
    
 **Palabras irrelevantes**. Una palabra irrelevante puede ser una palabra con significado en un idioma específico. Por ejemplo, en inglés, las palabras como "a", "and", "is" y "the" se omiten en el índice de texto completo porque se ha determinado que no son útiles en una búsqueda. Una palabra irrelevante también puede ser un *token* que carezca de significado lingüístico.  
@@ -90,13 +91,13 @@ Use [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alte
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
   
-3.  Expanda **Almacenamiento**y, a continuación, seleccione **Listas de palabras irrelevantes de texto completo**.  
+3.  Expanda **Almacenamiento** y, a continuación, seleccione **Listas de palabras irrelevantes de texto completo**.  
   
 4.  Haga clic con el botón derecho en la lista de palabras irrelevantes cuyas propiedades quiere cambiar y seleccione **Propiedades**.  
   
 5.  En el cuadro de diálogo [Propiedades de lista de palabras irrelevantes de texto completo](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
   
-    1.  En el cuadro de lista **Acción**, seleccione una de las siguientes acciones: **Agregar palabra irrelevante**, **Eliminar palabra irrelevante**, **Eliminar todas las palabras irrelevantes** o **Borrar lista de palabras irrelevantes**.  
+    1.  En el cuadro de lista **Acción** , seleccione una las acciones siguientes: **Agregar palabra irrelevante**, **Eliminar palabra irrelevante**, **Eliminar todas las palabras irrelevantes**o **Borrar lista de palabras irrelevantes**.  
   
     2.  Si el cuadro de texto **Palabra irrelevante** está habilitado para la acción seleccionada, escriba una única palabra irrelevante. Esta palabra irrelevante debe ser única; es decir, no debe estar todavía en esta lista de palabras irrelevantes para el idioma que seleccione.  
   
@@ -126,7 +127,7 @@ Utilice la [opción de configuración del servidor transform noise words](../../
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|en|4|  
+|to|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716114"
 ---
-# <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Enlaza un valor predeterminado con una columna o un tipo de datos de alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda crear definiciones predeterminadas utilizando la palabra clave DEFAULT de la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instrucciones en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Se recomienda crear las definiciones predeterminadas mediante la palabra clave DEFAULT de las instrucciones [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,29 +45,29 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @defname = ] 'default'` Es el nombre del valor predeterminado creado por CREATE DEFAULT. *valor predeterminado* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
+`[ @defname = ] 'default'`Es el nombre del valor predeterminado creado por CREATE DEFAULT. el *valor predeterminado* es **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @objname = ] 'object_name'` Es el nombre de tabla y columna o a la que el valor predeterminado es enlazar el tipo de datos de alias. *object_name* es **nvarchar(776)** no tiene ningún valor predeterminado. *object_name* no se pueden definir con la **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, o CLR tipos definidos por el usuario.  
+`[ @objname = ] 'object_name'`Es el nombre de la tabla y columna, o el tipo de datos del alias al que se va a enlazar el valor predeterminado. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. *object_name* no se pueden definir con los tipos definidos por el usuario **VARCHAR (Max**), **nvarchar (Max)**, **varbinary (Max)**, **XML**o CLR.  
   
- Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y columna. y si se produce un error en esta solución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan *predeterminada*, a menos que el valor predeterminado se ha enlazado directamente a la columna. No se puede enlazar un valor predeterminado para un **texto**, **ntext**, **imagen**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **timestamp**, o CLR columna de tipo definido por el usuario, una columna con la propiedad IDENTITY, una columna calculada o una columna que ya tiene una restricción DEFAULT.  
+ Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y una columna. y si se produce un error en esta resolución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan de forma *predeterminada*, a menos que se haya enlazado un valor predeterminado directamente a la columna. Un valor predeterminado no se puede enlazar a una columna de tipo **Text**, **ntext**, **Image**, **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML**, **timestamp**o CLR definido por el usuario, una columna con la propiedad Identity, una columna calculada o una columna que ya tenga una restricción default.  
   
 > [!NOTE]  
 >  *object_name* puede contener corchetes **[]** como identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Se usa sólo cuando se enlaza un valor predeterminado a un tipo de datos de alias. *futureonly_flag* es **varchar (15)** con el valor predeterminado es NULL. Cuando este parámetro se establece en **futureonly**, las columnas existentes de ese tipo de datos no pueden heredar el nuevo valor predeterminado. Este parámetro nunca se utiliza al enlazar un valor predeterminado con una columna. Si *futureonly_flag* es NULL, el nuevo valor predeterminado se enlaza a las columnas del tipo de datos de alias que actualmente no tiene ningún valor predeterminado o que está usando el valor predeterminado existente del tipo de datos de alias.  
+`[ @futureonly = ] 'futureonly_flag'`Solo se usa cuando se enlaza un valor predeterminado a un tipo de datos de alias. *futureonly_flag* es de tipo **VARCHAR (15)** y su valor predeterminado es NULL. Cuando este parámetro se establece en **futureonly**, las columnas existentes de ese tipo de datos no pueden heredar el nuevo valor predeterminado. Este parámetro nunca se utiliza al enlazar un valor predeterminado con una columna. Si *futureonly_flag* es null, el nuevo valor predeterminado se enlaza a todas las columnas del tipo de datos de alias que actualmente no tengan ningún valor predeterminado o que utilicen el valor predeterminado existente del tipo de datos de alias.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Puede usar **sp_bindefault** para enlazar un nuevo valor predeterminado a una columna, aunque es preferible usar la restricción predeterminada, o a un tipo de datos de alias sin desenlazar un valor predeterminado existente. El valor predeterminado anterior se reemplaza. No puede enlazar un valor predeterminado con un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un tipo definido por el usuario CLR. Si el valor predeterminado no es compatible con la columna con la que se debe enlazar, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de error cuando intenta insertar el valor predeterminado y no cuando lo enlaza.  
+## <a name="remarks"></a>Observaciones  
+ Puede usar **sp_bindefault** para enlazar un nuevo valor predeterminado a una columna, aunque se prefiere usar la restricción predeterminada, o a un tipo de datos de alias sin desenlazar un valor predeterminado existente. El valor predeterminado anterior se reemplaza. No puede enlazar un valor predeterminado con un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un tipo definido por el usuario CLR. Si el valor predeterminado no es compatible con la columna con la que se debe enlazar, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de error cuando intenta insertar el valor predeterminado y no cuando lo enlaza.  
   
- Las columnas existentes del tipo de datos de alias heredan el nuevo valor predeterminado, a menos que un valor predeterminado se enlaza directamente a ellos o *futureonly_flag* se especifica como **futureonly**. Las nuevas columnas del tipo de datos de alias siempre heredan el valor predeterminado.  
+ Las columnas existentes del tipo de datos de alias heredan el nuevo valor predeterminado, a menos que un valor predeterminado esté enlazado directamente a ellos o *futureonly_flag* se especifique como **futureonly**. Las nuevas columnas del tipo de datos de alias siempre heredan el valor predeterminado.  
   
- Al enlazar un valor predeterminado a una columna, la información relacionada se agrega a la **sys.columns** vista de catálogo. Al enlazar un valor predeterminado a un tipo de datos de alias, la información relacionada se agrega a la **sys.types** vista de catálogo.  
+ Al enlazar un valor predeterminado a una columna, la información relacionada se agrega a la vista de catálogo **Sys. Columns** . Cuando se enlaza un valor predeterminado a un tipo de datos de alias, la información relacionada se agrega a la vista de catálogo **Sys. Types** .  
   
 ## <a name="permissions"></a>Permisos  
- Usuario debe ser propietario de la tabla o ser miembro de la **sysadmin** rol fijo de servidor o el **db_owner** y **db_ddladmin** funciones fijas de base de datos.  
+ El usuario debe poseer la tabla o ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -80,8 +80,8 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>b. Enlazar un valor predeterminado con un tipo de datos de alias  
- El valor predeterminado denominado `def_ssn` y el tipo de datos de alias denominado `ssn` ya existen. En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con `ssn`. Al crear una tabla, el valor predeterminado es heredado por todas las columnas a las que se asigna el tipo de datos de alias `ssn`. Las columnas existentes del tipo **ssn** también heredan el valor predeterminado **def_ssn**, a menos que **futureonly** se especifica para *futureonly_flag* valor, o bien, a menos que la columna tiene un valor predeterminado enlazado directamente a él. Los valores predeterminados enlazados con columnas siempre tienen preferencia sobre los enlazados con tipos de datos.  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Enlazar un valor predeterminado con un tipo de datos de alias  
+ El valor predeterminado denominado `def_ssn` y el tipo de datos de alias denominado `ssn` ya existen. En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con `ssn`. Al crear una tabla, el valor predeterminado es heredado por todas las columnas a las que se asigna el tipo de datos de alias `ssn`. Las columnas existentes de tipo **SSN** también heredan la **def_ssn**predeterminada, a menos que se especifique **futureonly** para *futureonly_flag* valor, o a menos que la columna tenga un valor predeterminado enlazado directamente a ella. Los valores predeterminados enlazados con columnas siempre tienen preferencia sobre los enlazados con tipos de datos.  
   
 ```  
 USE master;  
@@ -89,8 +89,8 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>C. Utilizar futureonly_flag  
- En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con el tipo de datos de alias `ssn`. Dado que **futureonly** se especifica, no hay columnas existentes del tipo `ssn` se ven afectados.  
+### <a name="c-using-the-futureonly_flag"></a>C. Usar el futureonly_flag  
+ En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con el tipo de datos de alias `ssn`. Dado que se especifica **futureonly** , no se ven afectadas las columnas existentes de tipo `ssn` .  
   
 ```  
 USE master;  
@@ -98,8 +98,8 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. Uso de identificadores delimitados  
- El ejemplo siguiente muestra el uso de identificadores delimitados, `[t.1]`, en *object_name*.  
+### <a name="d-using-delimited-identifiers"></a>D. Usar identificadores delimitados  
+ En el ejemplo siguiente se muestra el uso de identificadores delimitados, `[t.1]` , en *object_name*.  
   
 ```  
 USE master;  
@@ -112,11 +112,11 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [sp_unbindefault &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

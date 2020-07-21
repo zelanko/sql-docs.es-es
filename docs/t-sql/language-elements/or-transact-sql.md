@@ -20,15 +20,15 @@ ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec4d7e1ab51d963c7e235db3a40eee7553cf30d0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121871"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009311"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Combina dos condiciones. Cuando en una instrucción se utiliza más de un operador lógico, los operadores OR se evalúan después de los operadores AND. Sin embargo, se puede cambiar el orden de evaluación gracias a los paréntesis.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68121871"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 boolean_expression OR boolean_expression  
 ```  
   
@@ -50,14 +50,14 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Valor del resultado  
  OR devuelve TRUE cuando alguna de las condiciones es TRUE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente tabla se muestra el resultado del operador OR.  
   
-||TRUE|FALSE|UNKNOWN|  
+||TRUE|FALSE|DESCONOCIDO|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
+|**FALSE**|TRUE|FALSE|DESCONOCIDO|  
+|**UNKNOWN**|TRUE|DESCONOCIDO|DESCONOCIDO|  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se utiliza la vista `vEmployeeDepartmentHistory` para recuperar los nombres del personal de `Quality Assurance` que trabaja en el turno de tarde o en el de noche. Si se omiten los paréntesis, la consulta devuelve los empleados de `Quality Assurance` que trabajan en el turno de tarde y todos los empleados que trabajan en el turno de noche.  
@@ -80,7 +80,7 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se recuperan los nombres de los empleados que ganan un `BaseRate` menor de 20 o cuya `HireDate` es el 1 de enero de 2001 o posterior.  
   
 ```  

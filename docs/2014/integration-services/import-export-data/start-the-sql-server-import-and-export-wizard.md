@@ -1,5 +1,5 @@
 ---
-title: Ejecute el servidor SQL de importación y exportación de Asistente | Microsoft Docs
+title: Ejecutar el Asistente para importación y exportación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -12,38 +12,37 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1803dd3357d2a725f2196e2c692f7470e27a03f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768037"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436862"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ejecutar el Asistente para importación y exportación de SQL Server
-  El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el método más sencillo para copiar datos entre orígenes de datos y crear paquetes básicos. Para obtener más información sobre el asistente, consulte [SQL Server Import and Export Wizard](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+  El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el método más sencillo para copiar datos entre orígenes de datos y crear paquetes básicos. Para obtener más información sobre el asistente, vea [SQL Server Asistente para importación y exportación](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)de.  
   
- Para ver un vídeo que muestra cómo usar la importación de SQL Server y el Asistente para exportación para crear un paquete que exporta los datos desde una base de datos de SQL Server a una hoja de cálculo de Microsoft Excel, [exportar datos de SQL Server a Excel (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131024).  
+ Para ver un vídeo en el que se muestra cómo usar el Asistente para importación y exportación de SQL Server para crear un paquete que exporta datos de una base de datos de SQL Server a una hoja de cálculo de Microsoft Excel, vea [exportar datos de SQL Server a Excel (SQL Server vídeo)](https://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>Para iniciar el Asistente para importación y exportación de SQL Server  
   
--   En el **iniciar** menú, elija **todos los programas**, apunte a**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
+-   En el menú **Inicio** , seleccione **todos los programas**,**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
   
-     -o bien-  
+     o bien  
   
-     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic en el **paquetes SSIS** carpeta y, a continuación, haga clic en **SSISImport y Asistente para exportación de**.  
+     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , haga clic con el botón secundario en la carpeta **paquetes SSIS** y, a continuación, haga clic en **Asistente para SSISImport y exportar**.  
   
-     -o bien-  
+     o bien  
   
-     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el **proyecto** menú, haga clic en **SSISImport y Asistente para exportación de**.  
+     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , en el menú **proyecto** , haga clic en **Asistente para SSISImport y exportar**.  
   
-     -o bien-  
+     o bien  
   
-     En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conectarse a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
+     En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic con el botón secundario en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
   
-     -o bien-  
+     o bien  
   
      En una ventana de símbolo del sistema, ejecute DTSWizard.exe, ubicado en C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62768037"
   
     -   Indicar si se debe crear una nueva base de datos y establecer las propiedades de base de datos. Las siguientes propiedades no pueden configurarse y el asistente usa los valores predeterminados especificados:  
   
-        |Property|Valor|  
+        |Propiedad|Value|  
         |--------------|-----------|  
         |Intercalación|Latin1_General_CS_AS_KS_WS|  
         |modelo de recuperación|Completo|  
@@ -103,7 +102,7 @@ ms.locfileid: "62768037"
   
     -   Establecer la precisión y la escala de las columnas con tipos de datos numéricos.  
   
-    -   Especifique si la columna puede contener valores null.  
+    -   Especifique si la columna puede contener valores NULL.  
   
 5.  Si se desea, seleccionar varias tablas y actualizar los metadatos y las opciones para aplicar a esas tablas:  
   
@@ -117,16 +116,16 @@ ms.locfileid: "62768037"
   
 6.  Guardar y ejecutar un paquete.  
   
-     Si se inicia el asistente desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o desde el símbolo del sistema, el paquete se puede ejecutar de inmediato. Opcionalmente, puede guardar el paquete en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** base de datos o al sistema de archivos. Para obtener más información sobre la **msdb** de base de datos, vea [administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md).  
+     Si se inicia el asistente desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o desde el símbolo del sistema, el paquete se puede ejecutar de inmediato. Opcionalmente, puede guardar el paquete en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos **msdb** o en el sistema de archivos. Para obtener más información acerca de la base de datos **msdb** , vea [Administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md).  
   
-     Al guardar el paquete, puede establecer su nivel de protección y, si el nivel utiliza una contraseña, proporcionarla. Para obtener más información acerca de los niveles de protección de paquetes, consulte [Control del acceso a datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
+     Al guardar el paquete, puede establecer su nivel de protección y, si el nivel utiliza una contraseña, proporcionarla. Para obtener más información acerca de los niveles de protección de paquetes, consulte [Access Control de datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
   
      Si se inicia el asistente desde un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el paquete no se puede ejecutar desde el asistente. En lugar de ello, el paquete se agrega al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde el cual se inició el asistente. En ese caso, se puede ejecutar el paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  
+    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , la opción para guardar el paquete creado por el asistente no está disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Crear paquetes en herramientas de datos de SQL Server](../create-packages-in-sql-server-data-tools.md)  
   

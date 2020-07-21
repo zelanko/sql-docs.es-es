@@ -1,8 +1,10 @@
 ---
-title: 'Configuración de correo electrónico: modo nativo de Reporting Services (Administrador de configuración) | Microsoft Docs'
-ms.date: 06/01/2016
+title: Configuración de correo electrónico en modo nativo de SSRS (Administrador de configuración) | Microsoft Docs
+description: SQL Server Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico.
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.emailsettings.F1
@@ -11,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9ceb9ccbbe9c54ab24b6a37e8f86c109f0e69bd6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513607"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74866008"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Configuración de correo electrónico: Modo nativo de Reporting Services (Administrador de configuración)
-Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
+SQL Server Reporting Services incluye una extensión de entrega por correo electrónico para distribuir informes por correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.
 
 La extensión de entrega por correo electrónico del servidor de informes no está configurada de manera predeterminada. Debe utilizar el Administrador de configuración de Reporting Services para configurar dicha extensión mínimamente. Para establecer propiedades avanzadas, debe editar el archivo RSReportServer.config. Si no puede configurar el servidor de informes para que utilice esta extensión, puede entregar los informes en una carpeta compartida. Para obtener más información, vea Entrega a recursos compartidos en Reporting Services.
 
@@ -41,12 +43,12 @@ Para configurar un servidor de informes para la entrega por correo electrónico,
 
 - Use el Administrador de configuración de Reporting Services si solo va a especificar un servidor SMTP y una cuenta de usuario que tenga permiso para enviar correo electrónico. Ésta es la configuración mínima necesaria para configurar la extensión de entrega por correo electrónico del servidor de informes.
 
-- (Opcionalmente) Utilice un procesador de texto para especificar valores adicionales en el archivo RSreportserver.config. Este archivo contiene toda la configuración para la distribución del correo electrónico del servidor de informes. Si utiliza un servidor SMTP adicional o limita la entrega de correo electrónico a hosts específicos, debe configurar opciones adicionales en estos archivos. Para obtener más información sobre cómo buscar y modificar archivos de configuración, vea [Modificar un archivo de configuración de Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) en los Libros en pantalla de SQL Server.
+- (Opcionalmente) Utilice un procesador de texto para especificar valores adicionales en el archivo RSreportserver.config. Este archivo contiene toda la configuración para la distribución del correo electrónico del servidor de informes. Si utiliza un servidor SMTP adicional o limita la entrega de correo electrónico a hosts específicos, debe configurar opciones adicionales en estos archivos. Para obtener más información sobre cómo buscar y modificar archivos de configuración, consulte [Modificar un archivo de configuración de Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).
 
 > [!NOTE] 
 > Las opciones de correo electrónico del servidor de informes se basan en CDO. Si desea obtener más detalles acerca de opciones específicas, puede consultar la documentación de producción de CDO.
 
-## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurar el correo electrónico del servidor de informes mediante el Administrador de configuración de Reporting Services
+## <a name="configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Configurar el correo electrónico del servidor de informes mediante el Administrador de configuración de Reporting Services
 
 1. Inicie el Administrador de configuración de Reporting Services y conéctese a la instancia del servidor de informes
 
@@ -77,7 +79,7 @@ Para configurar un servidor de informes para la entrega por correo electrónico,
 6. Opcionalmente, puede ajustar otros campos relativos a la configuración de correo electrónico en el archivo rsreportserver.config.
 
 ## <a name="example-report-server-e-mail-configuration"></a>Ejemplo de configuración de correo electrónico del servidor de informes
-El ejemplo siguiente muestra las opciones de configuración del archivo RSreportserver.config para un servidor SMTP remoto. Para obtener más información sobre las descripciones de configuración y los valores válidos, vea [El archivo de configuración RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) en los Libros en pantalla de SQL Server.
+El ejemplo siguiente muestra las opciones de configuración del archivo RSreportserver.config para un servidor SMTP remoto. Para obtener más información sobre las descripciones de configuración y los valores válidos, consulte [Archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).
 
 ```
 <RSEmailDPConfiguration>
@@ -109,7 +111,7 @@ El ejemplo siguiente muestra las opciones de configuración del archivo RSreport
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opciones de configuración para establecer el campo Para: de un mensaje
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>Opciones de configuración para configurar el campo Para: de un mensaje
 Las suscripciones definidas por el usuario que se crean según los permisos otorgados por la tarea Administrar suscripciones individuales contienen un nombre de usuario establecido previamente basado en la cuenta de usuario de dominio. Cuando el usuario crea la suscripción, el nombre del destinatario del campo **Para:** se rellena automáticamente a partir de la cuenta de usuario de dominio de la persona que está creando la suscripción.
 
 Si está utilizando un servidor SMTP o reenviador que emplee cuentas de correo electrónico distintas a la cuenta de usuario de dominio, la entrega del informe generará un error cuando el servidor SMTP intente entregar el informe al usuario.

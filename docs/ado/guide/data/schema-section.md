@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924290"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760901"
 ---
 # <a name="schema-section"></a>Sección de esquema
-La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna para conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar el XML, ADO requiere sólo los nombres de las columnas y el conjunto de filas al que pertenecen. Este es un ejemplo de un esquema mínimo:  
+La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna para conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar en el XML, ADO solo requiere los nombres de las columnas y el conjunto de filas al que pertenecen. A continuación se muestra un ejemplo de un esquema mínimo:  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
@@ -40,10 +40,10 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
 </xml>  
 ```  
   
- En el ejemplo anterior, ADO tratará los datos como cadenas de longitud variable porque no hay información de tipo se incluye en el esquema.  
+ En el ejemplo anterior, ADO tratará los datos como cadenas de longitud variable porque no se incluye ninguna información de tipo en el esquema.  
   
-## <a name="creating-aliases-for-column-names"></a>Creación de alias para nombres de columna  
- El atributo rs: name permite crear un alias para un nombre de columna para que aparezca un nombre descriptivo en la información de la columna expuesta por el conjunto de filas y un nombre más corto puede usarse en la sección de datos. Por ejemplo, el esquema anterior podría modificarse para asignar ShipperID a s1, s2, CompanyName y Phone a s3 como sigue:  
+## <a name="creating-aliases-for-column-names"></a>Crear alias para nombres de columna  
+ El atributo RS: Name permite crear un alias para un nombre de columna para que pueda aparecer un nombre descriptivo en la información de columna expuesta por el conjunto de filas y se puede usar un nombre más corto en la sección de datos. Por ejemplo, el esquema anterior podría modificarse para asignar ShipperID a S1, CompanyName a S2 y teléfono a S3 de la manera siguiente:  
   
 ```  
 <s:Schema id="RowsetSchema">   
@@ -62,19 +62,19 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
 </s:Schema>  
 ```  
   
- A continuación, en la sección de datos, la fila utilizaría el atributo name (no rs: name) para hacer referencia a esa columna:  
+ A continuación, en la sección de datos, la fila usaría el atributo name (no RS: Name) para hacer referencia a esa columna:  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
 ```  
   
- Es necesario crear alias para nombres de columna, siempre que sea un nombre de columna no es un atributo válido o el nombre de etiqueta en XML. Por ejemplo, "LastName" debe tener un alias porque los nombres con espacios incrustados son atributos no válidos. La línea siguiente no se correctamente controlará el analizador XML, por lo que debe crear un alias para otro nombre que no tiene un espacio incrustado.  
+ Es necesario crear alias para los nombres de columna cuando un nombre de columna no es un nombre de atributo o etiqueta válido en XML. Por ejemplo, "LastName" debe tener un alias porque los nombres con espacios insertados son atributos no válidos. El analizador XML no controlará correctamente la línea siguiente, por lo que debe crear un alias para otro nombre que no tenga un espacio incrustado.  
   
 ```  
 <row last name="Jones"/>  
 ```  
   
- Cualquier valor que se usa para el atributo name debe usarse de forma coherente en cada lugar que se hace referencia a la columna en el esquema y los datos de las secciones del documento XML. El ejemplo siguiente muestra el uso coherente de s1:  
+ Cualquier valor que use para el atributo name debe usarse de forma coherente en cada lugar en el que se haga referencia a la columna en las secciones de esquema y de datos del documento XML. En el ejemplo siguiente se muestra el uso coherente de S1:  
   
 ```  
 <s:Schema id="RowsetSchema">  
@@ -95,10 +95,10 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
 </rs:data>  
 ```  
   
- De forma similar, porque no hay no definido ningún alias para `CompanyName` en el ejemplo anterior, `CompanyName` debe usarse de forma coherente en todo el documento.  
+ Del mismo modo, dado que no hay ningún alias definido para `CompanyName` en el ejemplo anterior, `CompanyName` se debe usar de forma coherente en todo el documento.  
   
-## <a name="data-types"></a>Tipos de datos  
- Puede aplicar un tipo de datos a una columna con el atributo dt: Type. Para obtener la guía definitiva para los tipos permitidos de XML, vea la sección tipos de datos de la [especificación W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/). Puede especificar un tipo de datos de dos maneras: especificar el atributo dt: Type directamente en la propia definición de columna o utilizar la construcción s: DataType como un elemento anidado de la definición de columna. Por ejemplo,  
+## <a name="data-types"></a>Tipo de datos  
+ Puede aplicar un tipo de datos a una columna con el atributo dt: Type. Para obtener la guía definitiva de tipos XML permitidos, vea la sección tipos de datos de la [especificación W3C XML-Data Specification](http://www.w3.org/TR/1998/NOTE-XML-data/). Puede especificar un tipo de datos de dos maneras: especifique el atributo dt: Type directamente en la propia definición de columna o utilice la construcción s:DataType como un elemento anidado de la definición de columna. Por ejemplo,  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -112,11 +112,11 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
 <s:AttributeType name="Phone" dt:type="string"/>  
 ```  
   
- Si se omite el atributo dt: Type completamente de la definición de fila, de forma predeterminada, el tipo de la columna será una cadena de longitud variable.  
+ Si omite el atributo dt: Type completamente de la definición de fila, de forma predeterminada, el tipo de la columna será una cadena de longitud variable.  
   
- Si tiene más información de tipos que simplemente el nombre de tipo (por ejemplo, dt: MaxLength), resulta más legible para usar el elemento secundario de s: DataType. Esto es simplemente una convención, sin embargo y no es un requisito.  
+ Si tiene más información de tipo que simplemente el nombre de tipo (por ejemplo, DT: maxLength), hace que sea más legible usar el elemento secundario s:DataType. Sin embargo, esto es solo una Convención, y no un requisito.  
   
- Los ejemplos siguientes muestran aún más cómo incluir información de tipo en el esquema.  
+ En los siguientes ejemplos se muestra cómo incluir información de tipo en el esquema.  
   
 ```  
 <!-- 1. String with no max length -->  
@@ -138,10 +138,10 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
- Hay un uso sutil del atributo rs: fixedlength en el segundo ejemplo. Una columna con el atributo rs: fixedlength se establece en true significa que los datos deben tener la longitud definida en el esquema. En este caso, un valor válido para title_id es "123456", tal como está "123". Sin embargo, "123" no sería válido porque su longitud es 3, no 6. Ver Guía del programador de OLE DB para obtener la descripción de la propiedad fixedlength completa.  
+ Hay un uso sutil del atributo RS: fixedlength en el segundo ejemplo. Una columna con el atributo RS: fixedlength establecida en true significa que los datos deben tener la longitud definida en el esquema. En este caso, un valor válido para title_id es "123456", como es "123". Sin embargo, "123" no sería válido porque su longitud es 3, no 6. Vea la guía del programador de OLE DB para obtener una descripción más completa de la propiedad fixedlength.  
   
-## <a name="handling-nulls"></a>Controlar los valores null  
- Los valores NULL se controlan mediante el atributo rs: maybenull. Si este atributo se establece en true, el contenido de la columna puede contener un valor null. Además, si la columna no se encuentra en una fila de datos, el usuario que lee los datos desde el conjunto de filas obtendrá un estado null desde IRowset::GetData(). Tenga en cuenta las siguientes definiciones de columna de la tabla de distribuidores.  
+## <a name="handling-nulls"></a>Controlar valores NULL  
+ Los valores NULL se controlan mediante el atributo RS: maybenull. Si este atributo se establece en true, el contenido de la columna puede contener un valor null. Además, si la columna no se encuentra en una fila de datos, el usuario que lea los datos del conjunto de filas obtendrá un estado null de IRowset:: GetData (). Considere las siguientes definiciones de columna de la tabla Shippers.  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -152,27 +152,27 @@ La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO
 </s:AttributeType>  
 ```  
   
- Permite la definición de `CompanyName` sea null, pero `ShipperID` no puede contener un valor null. Si la sección de datos contiene la fila siguiente, el proveedor de persistencia establecería el estado de los datos para el `CompanyName` columna a la constante de estado DBSTATUS_S_ISNULL de OLE DB:  
+ La definición permite `CompanyName` que sea NULL, pero `ShipperID` no puede contener un valor null. Si la sección de datos contiene la fila siguiente, el proveedor de persistencia establecería el estado de los datos de la `CompanyName` columna en la constante de estado OLE DB DBSTATUS_S_ISNULL:  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- Si la fila estaba totalmente vacía, como se indica a continuación, el proveedor de persistencia devolvería un estado de OLE DB de DBSTATUS_E_UNAVAILABLE para `ShipperID` y DBSTATUS_S_ISNULL para CompanyName.  
+ Si la fila estaba completamente vacía, como se indica a continuación, el proveedor de persistencia devolvería un estado OLE DB de DBSTATUS_E_UNAVAILABLE para `ShipperID` y DBSTATUS_S_ISNULL para CompanyName.  
   
 ```  
 <z:row/>   
 ```  
   
- Tenga en cuenta que una cadena de longitud cero no es igual a null.  
+ Tenga en cuenta que una cadena de longitud cero no es igual que null.  
   
 ```  
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- Para la fila anterior, el proveedor de persistencia devolverá un estado de OLE DB de DBSTATUS_S_OK para ambas columnas. El `CompanyName` en este caso es simplemente "" (una cadena de longitud cero).  
+ En el caso de la fila anterior, el proveedor de persistencia devolverá un OLE DB estado de DBSTATUS_S_OK para ambas columnas. `CompanyName`En este caso, es simplemente "" (una cadena de longitud cero).  
   
- Para obtener más información acerca de OLE DB construye disponibles para su uso dentro del esquema de un documento XML para OLE DB, consulte la definición de "urn: schemas-microsoft-Rowset" y la Guía de la base de datos del programador de OLE.  
+ Para obtener más información sobre las construcciones de OLE DB disponibles para su uso en el esquema de un documento XML para OLE DB, vea la definición de "urn: schemas-microsoft-com: Rowset" y la guía del programador de OLE DB.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

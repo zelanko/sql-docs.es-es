@@ -10,20 +10,19 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d0bcc4ffa9141e8a86a2d8d4de8dfbe05fc8dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036905"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opciones de actualización de búsqueda de texto completo
   Use la página de opciones de actualización de búsqueda de texto completo del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar la opción de actualización de búsqueda de texto completo que usará con las bases de datos cuya actualización está realizando en este momento.  
   
- En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , cada índice de texto completo reside en un catálogo de texto completo que pertenece a un grupo de archivos, tiene una ruta de acceso física y es tratado como un archivo de base de datos. Ahora, un catálogo de texto completo es un objeto lógico de un concepto virtual-que hace referencia a un grupo de índices de texto completo. Por consiguiente, no se trata a cada nuevo catálogo de texto completo como un archivo de base de datos con una ruta de acceso física. Sin embargo, durante la actualización de cualquier catálogo de texto completo que contiene archivos de datos, se crea un nuevo grupo de archivos en el mismo disco. Esto conserva el comportamiento de E/S del disco antiguo después de la actualización. Si la ruta de acceso raíz existe, todos los índices de texto completo del catálogo se situarán en el nuevo grupo de archivos. Si la ruta de acceso al catálogo de texto completo antiguo no es válida, la actualización mantiene el índice de texto completo en el mismo grupo de archivos que la tabla base o, si se trata de una tabla con particiones, en el grupo de archivos principal.  
+ En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , cada índice de texto completo reside en un catálogo de texto completo que pertenece a un grupo de archivos, tiene una ruta de acceso física y es tratado como un archivo de base de datos. Ahora, un catálogo de texto completo es un concepto lógico (un objeto virtual) que hace referencia a un grupo de índices de texto completo. Por consiguiente, no se trata a cada nuevo catálogo de texto completo como un archivo de base de datos con una ruta de acceso física. Sin embargo, durante la actualización de cualquier catálogo de texto completo que contiene archivos de datos, se crea un nuevo grupo de archivos en el mismo disco. Esto conserva el comportamiento de E/S del disco antiguo después de la actualización. Si la ruta de acceso raíz existe, todos los índices de texto completo del catálogo se situarán en el nuevo grupo de archivos. Si la ruta de acceso al catálogo de texto completo antiguo no es válida, la actualización mantiene el índice de texto completo en el mismo grupo de archivos que la tabla base o, si se trata de una tabla con particiones, en el grupo de archivos principal.  
   
 ## <a name="options"></a>Opciones  
  Al actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], elija una de las opciones de actualización de texto completo siguientes.  
@@ -38,7 +37,7 @@ ms.locfileid: "66095086"
   
  Para obtener información sobre el impacto de importar un índice de texto completo, vea "Consideraciones sobre la elección de una opción de actualización de texto completo" más adelante en este tema.  
   
- **Volver a generar**  
+ **Recompilación**  
  Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. El proceso de recompilación de los índices puede llevar mucho tiempo y podría ser necesaria una cantidad significativa de CPU y de memoria después de la actualización.  
   
  **Restablecer**  

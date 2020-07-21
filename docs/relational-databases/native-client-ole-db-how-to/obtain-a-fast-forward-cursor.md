@@ -1,5 +1,5 @@
 ---
-title: Obtener un cursor FAST_FORWARD | Microsoft Docs
+title: Obtención de un cursor FAST_FORWARD | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,26 +10,24 @@ ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec168903543e42dff34d03086949bee79829f328
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: cd52acb22e4ce5304e0a1598b44fc562607b48b9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909535"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006479"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Obtener un cursor FAST_FORWARD
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Para obtener un cursor de solo avance y de solo lectura, establezca las propiedades del conjunto de filas DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT y DBPROP_OWNUPDATEDELETE en VARIANT_TRUE.  
   
- En un ejemplo completo se muestra cómo establecer las propiedades del conjunto de filas para obtener un cursor FAST_FORWARD. Una vez que se han establecido las propiedades, se ejecuta una instrucción SELECT para recuperar y mostrar la columna **Name** de la tabla **Purchasing.Vendor** de la base de datos **AdventureWorks** .  
+ En un ejemplo completo se muestra cómo establecer las propiedades del conjunto de filas para obtener un cursor FAST_FORWARD. Una vez establecidas las propiedades, se ejecuta una instrucción SELECT para recuperar y mostrar la columna **Name** de la tabla **Purchasing. Vendor** de la base de datos **AdventureWorks** .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>Para obtener el cursor FAST_FORWARD  
   

@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af86780bc2c54dfa504c63d2fc18f11e8bf22f2c
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983633"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917566"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>Método getDisableStatementPooling (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Devuelve el valor de la propiedad de conexión **disableStatementPooling** . Esta configuración controla si la agrupación de instrucciones está habilitada o no para esta conexión.
+ Devuelve el valor de la propiedad de conexión **disableStatementPooling**. Este valor controla si la agrupación de instrucciones está habilitada o no para esta conexión.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ public boolean getDisableStatementPooling()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- Valor **booleano** que contiene el valor de la propiedad de conexión **disableStatementPooling** .
+ Un valor **booleano** que contiene el valor de la propiedad de conexión **disableStatementPooling**.
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notas  
- Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
+## <a name="remarks"></a>Observaciones  
+ Este método está disponible en la versión 6.4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

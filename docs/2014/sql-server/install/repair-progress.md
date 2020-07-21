@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: fd22d285-0816-43de-ae1d-b7c49147614e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 819725e342f6718ec8e84428331bf2ee0e7d5786
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1514c65eaf0e650cc3c69eb735f110ccba81cabd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011944"
 ---
 # <a name="repair-progress"></a>Progreso de la reparación
   Utilice la página **Progreso de la reparación** del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para supervisar el estado de la reparación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

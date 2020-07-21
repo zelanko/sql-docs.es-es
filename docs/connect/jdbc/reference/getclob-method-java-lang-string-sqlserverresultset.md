@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0e0eee2cafe95e04ffd5c697667cac2701ee0b80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4b549dd11a6b3d06b6d969e22d69ab7cbfa1d5c0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953031"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80901429"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>Método getClob (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public java.sql.Clob getClob(java.lang.String colName)
  Valor **String** que contiene el nombre de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto CLOB.  
+ Un objeto Clob.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getClob especifica este método getClob en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

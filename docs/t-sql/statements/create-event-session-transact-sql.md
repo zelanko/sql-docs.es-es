@@ -22,24 +22,24 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 359f2bdba7722c5ff30490d2648f68bf4b2c3db5
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902799"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392733"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Crea una sesión de eventos extendidos que identifica el origen de los eventos, los destinos de la sesión de eventos y las opciones de la sesión de eventos.
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 CREATE EVENT SESSION event_session_name
 ON { SERVER | DATABASE }
 {  
@@ -105,6 +105,8 @@ ON { SERVER | DATABASE }
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
 *event_session_name* es el nombre definido por el usuario para la sesión de eventos. *event_session_name* es alfanumérico, puede tener hasta 128 caracteres, debe ser único dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).
@@ -117,7 +119,7 @@ ADD EVENT [ *event_module_guid* ].*event_package_name*.*event_name* es el evento
 
 Los eventos aparecen en la vista sys.dm_xe_objects como object_type "event".
 
-SET { *event_customizable_attribute*= \<value> [ ,...*n*] } permite establecer los atributos personalizables del evento. Los atributos personalizables aparecen en la vista sys.dm_xe_object_columns como column_type "customizable" y object_name = *event_name*.
+SET { *atributos_personalizables_de_evento*= \<value> [ ,...*n*] } Permite establecer atributos personalizables para el evento. Los atributos personalizables aparecen en la vista sys.dm_xe_object_columns como column_type "customizable" y object_name = *event_name*.
 
 ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] }) es la acción que se va a asociar con la sesión de eventos, donde:
 
@@ -127,7 +129,7 @@ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*
 
 Las acciones aparecen en la vista sys.dm_xe_objects como object_type 'action'.
 
-WHERE \<predicate_expression> Especifica la expresión de predicado usada para determinar si un evento se debe procesar. Si \<predicate_expression> es true, las acciones y los destinos de la sesión siguen procesando el evento. Si \<predicate_expression> es false, la sesión elimina el evento antes de que las acciones y los destinos de la sesión lo procesen. Las expresiones de predicado se limitan a 3.000 caracteres, lo que limita los argumentos de cadena.
+WHERE \<predicate_expression> Especifica la expresión de predicado usada para determinar si se debe procesar un evento. Si \<predicate_expression> es true, las acciones y los destinos de la sesión siguen procesando el evento. Si \<predicate_expression> es false, la sesión elimina el evento antes de que las acciones y los destinos de la sesión lo procesen. Las expresiones de predicado se limitan a 3.000 caracteres, lo que limita los argumentos de cadena.
 
 *event_field_name* es el nombre del campo de evento que identifica el origen del predicado.
 
@@ -153,7 +155,7 @@ ADD TARGET [*event_module_guid*].*event_package_name*.*target_name* es el destin
 - *event_package_name* es el paquete que contiene el objeto de la acción.
 - *target_name* es el destino. Los destinos aparecen en la vista sys.dm_xe_objects como object_type 'target'.
 
-SET { *target_parameter_name*= \<value> [, ...*n*] } establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.
+SET { *nombre_parámetro_de_destino*= \<value> [, ...*n*] } Establece un parámetro de destino. Los parámetros de destino aparecen en la vista sys.dm_xe_object_columns como column_type 'customizable' y object_name = *target_name*.
 
 > [!IMPORTANT]
 > Si usa el destino de búfer en anillo, le recomendamos que establezca el parámetro de destino max_memory en 2048 kilobytes (KB) para intentar evitar el truncamiento de los datos en la salida XML. Para más información sobre cuándo usar los diferentes tipos de destino, vea [Destinos para eventos extendidos en SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).
@@ -200,7 +202,7 @@ ON: la sesión de eventos se inicia en el inicio.
 
 **OFF**: la sesión de eventos no se inicia en el inicio.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El orden de prioridad de los operadores lógicos es `NOT` (el más alto), seguido de `AND` y `OR`.
 

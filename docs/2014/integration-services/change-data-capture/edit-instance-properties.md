@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7873f616e2a6e9657f2e7c59c745fdab77c9b61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 990b1305ea97ed2bfd6dc65a0db42a2d33e4b922
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62836054"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438742"
 ---
 # <a name="edit-instance-properties"></a>Editar propiedades de la instancia
   Use el editor de propiedades para realizar cambios en la instancia CDC después de crear las configuraciones iniciales. Puede hacer lo siguiente en el editor de propiedades.  

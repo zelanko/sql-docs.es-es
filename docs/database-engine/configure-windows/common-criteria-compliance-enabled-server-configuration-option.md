@@ -1,5 +1,6 @@
 ---
 title: Configuración de compatibilidad con criterio común habilitada | Microsoft Docs
+description: Obtenga información sobre los criterios que la opción common criteria compliance habilita en SQL Server y vea cómo cumplir el nivel de garantía de evaluación de criterios comunes 4+.
 ms.custom: ''
 ms.date: 08/21/2018
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - Risidual Information Protection [Database Engine]
 - RIP (Residual Information Protection)
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a33ce838ce32c6a7d2b883c5b256f668c213745
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85659817"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuración de compatibilidad con criterio común habilitada
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 La opción de compatibilidad con el criterio común habilita los elementos siguientes necesarios para los [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org/) (Criterios comunes para la evaluación de seguridad de tecnologías de la información).  
   
@@ -42,7 +43,7 @@ La opción de compatibilidad con el criterio común habilita los elementos sigui
   
  Si está usando el procedimiento almacenado del sistema `sp_configure` para cambiar la configuración, solo podrá cambiar la opción common criteria compliance enabled si Mostrar opciones avanzadas está establecido en 1. La configuración surte efecto cuando se reinicia el servidor. Los valores posibles son 0 y 1:  
   
--   0 indica que no está habilitada la opción de cumplimiento del criterio común. Ésta es la opción predeterminada.  
+-   0 indica que no está habilitada la opción de cumplimiento del criterio común. Este es el valor predeterminado.  
   
 -   1 indica que está habilitada la opción de cumplimiento del criterio común.  
   

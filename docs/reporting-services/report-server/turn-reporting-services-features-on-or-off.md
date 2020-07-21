@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140380"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activar o desactivar las características de Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "67140380"
   
 -   [Seguridad integrada de Windows para los orígenes de datos de informes](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Servicio web del servidor de informes  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a> Servicio web del servidor de informes  
   
 ### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Para activar o desactivar el servicio web del servidor de informes editando la configuración  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67140380"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> Eventos programados y entrega programada  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Eventos programados y entrega programada  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Para activar o desactivar los eventos programados y la entrega programada editando la configuración  
   
@@ -94,11 +94,11 @@ ms.locfileid: "67140380"
 > [!NOTE]  
 >  No puede desactivar completamente ningún procesamiento en segundo plano porque proporciona la funcionalidad de mantenimiento de las bases de datos que se requiere para las operaciones de servidor.  
   
-##  <a name="WebPortal"></a> Portal web
+##  <a name="web-portal"></a><a name="WebPortal"></a> Portal web
   
-A partir de SQL Server 2016 Reporting Services actualización acumulativa 2, el portal web siempre estará habilitado.
+A partir de la Actualización acumulativa 2 de SQL Server 2016 Reporting Services, el portal web siempre estará habilitado.
   
-##  <a name="WinIntSec"></a> Seguridad integrada de Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Seguridad integrada de Windows  
   
 ### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>Para activar o desactivar la seguridad integrada de Windows con SQL Server Management Studio  
   
@@ -114,7 +114,7 @@ A partir de SQL Server 2016 Reporting Services actualización acumulativa 2, el 
   
 4.  Seleccione **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Administrador de configuración de Reporting Services (modo nativo)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,6 +1,7 @@
 ---
-title: Detectar y solucionar conflictos en registros lógicos | Microsoft Docs
-ms.custom: ''
+title: Detección y resolución de conflictos en registros lógicos (combinación)
+description: Obtenga información sobre las diferentes combinaciones de opciones de detección y resolución de conflictos posibles al utilizar registros lógicos con la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 62c862fdd67d7b4432595572175d87ae0bd44304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f076f67c09d28ff4725587e3470d56e81b1c9aef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033321"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883818"
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>Conflictos de replicación de mezcla avanzada: resolver en un registro lógico
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se tratan las diferentes combinaciones de opciones de detección y resolución de conflictos posibles al utilizar registros lógicos. Los conflictos en la replicación de mezcla se producen cuando más de un nodo cambia los mismos datos o, al replicar cambios, la replicación de mezcla encuentra determinados tipos de errores, por ejemplo una infracción de restricción. Para obtener más información acerca de la detección y resolución de conflictos, vea [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Modify Merge Replication options](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Modificación de las opciones de replicación de mezcla).  
@@ -75,7 +76,7 @@ ms.locfileid: "68033321"
   
  Debido a que los conflictos se resuelven en el nivel de registro lógico, los cambios ganadores realizados en el publicador sustituyen a los cambios realizados en las tablas del suscriptor durante el proceso de replicación.  
   
- ![Serie de tablas que muestran los cambios en filas relacionadas](../../../relational-databases/replication/merge/media/logical-records-06.gif "Serie de tablas que muestran los cambios en filas relacionadas")  
+ ![Series de tablas en las que se muestran cambios en filas relacionadas](../../../relational-databases/replication/merge/media/logical-records-06.gif "Series de tablas en las que se muestran cambios en filas relacionadas")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Detección en el nivel de fila, resolución de registro lógico  
  En este ejemplo, la publicación se ha configurado de la siguiente manera:  
@@ -90,7 +91,7 @@ ms.locfileid: "68033321"
   
  Debido a que los conflictos se resuelven en el nivel de registro lógico, durante la sincronización los cambios ganadores realizados en el publicador reemplazan los cambios realizados en las tablas del suscriptor.  
   
- ![Serie de tablas que muestran los cambios en filas relacionadas](../../../relational-databases/replication/merge/media/logical-records-07.gif "Serie de tablas que muestran los cambios en filas relacionadas")  
+ ![Series de tablas en las que se muestran cambios en filas relacionadas](../../../relational-databases/replication/merge/media/logical-records-07.gif "Series de tablas en las que se muestran cambios en filas relacionadas")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Detección en el nivel de registro lógico, resolución de registro lógico  
  En este ejemplo, la publicación se ha configurado de la siguiente manera:  
@@ -103,7 +104,7 @@ ms.locfileid: "68033321"
   
  Puesto que los conflictos también se resuelven en el nivel de registro lógico, durante la sincronización los cambios ganadores realizados en el publicador reemplazan los cambios realizados en las tablas del suscriptor.  
   
- ![Serie de tablas que muestran los cambios en filas relacionadas](../../../relational-databases/replication/merge/media/logical-records-08.gif "Serie de tablas que muestran los cambios en filas relacionadas")  
+ ![Series de tablas en las que se muestran cambios en filas relacionadas](../../../relational-databases/replication/merge/media/logical-records-08.gif "Series de tablas en las que se muestran cambios en filas relacionadas")  
   
 ## <a name="see-also"></a>Consulte también  
  [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)  

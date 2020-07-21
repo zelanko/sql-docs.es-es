@@ -1,5 +1,5 @@
 ---
-title: Temas "Cómo..." de rendimiento de controlador ODBC (ODBC) de generación de perfiles | Microsoft Docs
+title: Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d27547862138b511a4defaa3cae80f48f69fdc4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048173"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC (ODBC)
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos opciones específicas del controlador para generar perfiles de rendimiento del controlador.  
@@ -26,11 +25,11 @@ ms.locfileid: "63200284"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Generar perfiles de datos de rendimiento del controlador &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
+-   [Datos de rendimiento del controlador de perfil &#40;ODBC&#41;](profiling-odbc-driver-performance-data.md)  
   
--   [Registrar consultas de larga ejecución &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [Registrar consultas de ejecución prolongada &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de ODBC](odbc-how-to-topics.md)  
   
   

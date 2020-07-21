@@ -15,29 +15,28 @@ helpviewer_keywords:
 ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71279981c5fd3879d633e0fdd8cdec74bed6deac
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2c3d9a7c27533666c75102d9eac3b8311bfe4af6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544921"
 ---
 # <a name="updating-cells-xmla"></a>Actualizar celdas (XMLA)
-  Puede usar el comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) para cambiar el valor de una o más celdas de un cubo habilitado para la reescritura del cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenalainformaciónactualizadaenunatabladereescrituraindependienteparacadaparticiónquecontieneceldasque[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se van a actualizar.  
+  Puede usar el comando [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) para cambiar el valor de una o más celdas de un cubo habilitado para la reescritura del cubo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] almacena la información actualizada en una tabla de reescritura independiente para cada partición que contiene celdas que se van a actualizar.  
   
 > [!NOTE]  
->  El comando `UpdateCells` no admite las asignaciones durante la reescritura del cubo. Para usar la reescritura asignada, debe utilizar el comando [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) para enviar una instrucción UPDATE de expresiones multidimensionales (MDX). Para obtener más información, vea [Update Cube &#40;Statement&#41;MDX](/sql/mdx/mdx-data-manipulation-update-cube).  
+>  El comando `UpdateCells` no admite las asignaciones durante la reescritura del cubo. Para usar la reescritura asignada, debe utilizar el comando [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) para enviar una instrucción UPDATE de expresiones multidimensionales (MDX). Para obtener más información, vea [instrucción UPDATE CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube).  
   
 ## <a name="specifying-cells"></a>Especificar celdas  
- La propiedad de [celda](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) del `UpdateCells` comando contiene las celdas que se van a actualizar. Para identificar cada una de las celdas en la propiedad `Cell`, utilice el número ordinal de esa celda. Conceptualmente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] numera las celdas de un cubo como si el cubo fuerauna matriz unidimensional, donde *p* es el número de ejes. Las celdas se ordenan por importancia de fila. En la ilustración siguiente se muestra la fórmula para calcular el número ordinal de una celda.  
+ La propiedad de [celda](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) del `UpdateCells` comando contiene las celdas que se van a actualizar. Para identificar cada una de las celdas en la propiedad `Cell`, utilice el número ordinal de esa celda. Conceptualmente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] numera las celdas de un cubo como si el cubo fuera *p*una matriz unidimensional, donde *p* es el número de ejes. Las celdas se ordenan por importancia de fila. En la ilustración siguiente se muestra la fórmula para calcular el número ordinal de una celda.  
   
- ![Fórmula para calcular la posición ordinal de la celda](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cellordinalformula.gif "Fórmula para calcular la posición ordinal de la celda")  
+ ![Fórmula para calcular la posición ordinal de la celda](../../analysis-services/dev-guide/media/cellordinalformula.gif "Fórmula para calcular la posición ordinal de la celda")  
   
  Una vez que conozca el número ordinal de una celda, puede indicar el valor previsto de la celda en la propiedad [Value](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla) de la propiedad [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) .  
   
-## <a name="see-also"></a>Vea también  
- [Elemento &#40;Update XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
- [Desarrollo con XMLA en Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Elemento Update &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [Desarrollar con XMLA en Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

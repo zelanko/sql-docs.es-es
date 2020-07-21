@@ -1,7 +1,8 @@
 ---
-title: Requisitos de hardware y software para instalar SQL Server | Microsoft Docs
-ms.custom: sqlfreshmay19
-ms.date: 07/24/2019
+title: 'SQL Server 2016 y 2017: Requisitos de hardware y software'
+description: Una lista de los requisitos de hardware, software y sistema operativo para instalar y ejecutar SQL Server 2016 y SQL Server 2017.
+ms.custom: seo-lt-2019
+ms.date: 02/19/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,70 +45,34 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 79818fa5cb41b27a15d531f22a21b86c10cb018a
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: a46ffca543701f7c74c83b3f39d7902c8a588577
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008471"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342944"
 ---
-# <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
+# <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 y 2017: Requisitos de hardware y de software
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] en el sistema operativo Windows. 
+En el artículo se enumeran los requisitos mínimos de hardware y software para instalar y ejecutar SQL Server 2016 y SQL Server 2017 en el sistema operativo Windows.  
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] ha introducido compatibilidad con [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] en Linux. Para obtener más información, consulte [Requisitos de hardware y software para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux](../../linux/sql-server-linux-setup.md#system). 
+Para los requisitos de hardware y software para otras versiones de SQL Server, vea:
+- [SQL Server 2019](hardware-and-software-requirements-for-installing-sql-server-ver15.md)
+- [SQL Server en Linux](../../linux/sql-server-linux-setup.md#system)
 
-  
-**Pruébelo:**  
-  
--   Descargue SQL Server desde el [**Centro de evaluación**.](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 
-  
--   Ponga en marcha una máquina virtual con [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) ya instalado.  
-  
-**Las siguientes consideraciones son válidas para todas las ediciones:**  
-  
--   Se recomienda ejecutar [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en equipos con los formatos de archivo NTFS o ReFS. [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] se puede instalar en un equipo con el sistema de archivos FAT32, pero no se recomienda porque es menos seguro que el sistema de archivos NTFS o ReFS.  
-  
--   El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloqueará las instalaciones en unidades de disco de solo lectura, asignadas o comprimidas.  
-  
--   La instalación no se lleva a cabo si el programa de instalación se inicia a través de una Conexión a Escritorio remoto con los medios de un recurso local en el cliente RDC. Para realizar la instalación de forma remota, los medios deben estar en un recurso compartido de red o localmente en una máquina virtual o física. Los medios de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden estar en un recurso compartido de red, en una unidad asignada, en una unidad local o como una imagen ISO de una máquina virtual.  
-  
--   Un requisito previo de la instalación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es tener .NET 4.6.1. El programa de instalación instalará automáticamente .NET 4.6.1 cuando se seleccione [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
-  
--   El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los siguientes componentes de software que el producto necesita:  
-  
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
-  
-    -   Archivos auxiliares del programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
--   Para conocer los requisitos mínimos de versión para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[win8srv](../../includes/win8srv-md.md)] o [!INCLUDE[win8](../../includes/win8-md.md)], vea [Usar SQL Server en Windows 8 y versiones posteriores del sistema operativo Windows](https://support.microsoft.com/kb/2681562).  
-  
-##  <a name="hwswr"></a> Requisitos de hardware y software  
-Los siguientes requisitos se aplican a todas las instalaciones:  
+## <a name="hardware-requirements"></a>Requisitos de hardware
+
+ Los siguientes requisitos de hardware se aplican a SQL Server 2016 y SQL Server 2017: 
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 y las versiones posteriores necesitan [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para el Motor de base de datos, Master Data Services o la replicación. El programa de instalación de SQL Server instala automáticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] también se puede instalar manualmente desde [Microsoft .NET Framework 4.6 (instalador web) para Windows](https://support.microsoft.com/kb/3045560).<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] requiere .NET Framework 4.6.2. Está disponible en el [Centro de descarga](https://www.microsoft.com/download/details.aspx?id=53344).<br/><br/> Para ver más información, recomendaciones y directrices sobre [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte la [Guía de implementación de .NET Framework para desarrolladores](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]y [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] necesitan [KB2919355](https://support.microsoft.com/kb/2919355) para instalar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
-|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, canalizaciones con nombre, TCP/IP y VIA.<br/><br/> **Nota:** El protocolo VIA no es compatible con los clústeres de conmutación por error. Los clientes o las aplicaciones que se ejecutan en el mismo nodo del clúster de conmutación por error que la instancia de SQL Server pueden usar el protocolo de memoria compartida para conectarse a SQL Server con la dirección de la canalización local. Sin embargo, este tipo de conexión no es compatible con clúster y generará un error después de la conmutación por error de una instancia. Por tanto, no se recomienda y solo se debe usar en escenarios muy específicos.<br/><br/> **Importante:** El protocolo VIA está desusado. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
-|Disco duro|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br/><br/> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que instale. Para obtener más información, vea [Requisitos de espacio en disco duro](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) en este artículo. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)|  
-|Unidad|Para la instalación desde disco se necesita una unidad de DVD.|  
-|Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  
+|Disco duro|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br/><br/> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que instale. Para obtener más información, vea [Requisitos de espacio en disco duro](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) en este artículo. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Tipos de almacenamiento para los archivos de datos](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes) <br/><br/> Se recomienda la instalación de SQL Server en equipos con los formatos de archivo NTFS o ReFS. Se admite el sistema de archivos FAT32, pero no se recomienda porque es menos seguro que los sistemas de archivos NTFS o ReFS. <br/><br/>  Durante la instalación se bloquean las unidades de solo lectura, asignadas o comprimidas. |  
+|Unidad|Para la instalación desde disco se necesita una unidad de DVD.  |  
+|Supervisión|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  
 |Internet|La funcionalidad de Internet necesita acceso a Internet (no necesariamente de carácter gratuito).|  
-  
-> [!NOTE]
-> La ejecución de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en una máquina virtual será más lenta que la ejecución nativa debido a la sobrecarga de virtualización.  
-  
-> [!IMPORTANT]
-> Existen otros requisitos de hardware y software para la característica PolyBase. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
-  
-##  <a name="pmosr"></a> Requisitos de procesador, memoria y sistema operativo  
- Los siguientes requisitos de memoria y procesador se aplican a todas las ediciones de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]:  
-  
-|Componente|Requisito|  
-|---------------|-----------------|  
-|Memoria \*|**Mínimo:**<br/><br/> Ediciones Express: 512 MB<br/><br/> Las demás ediciones: 1 GB<br/><br/> **Recomendado:**<br/><br/> Ediciones Express: 1 GB<br/><br/> Las demás ediciones: Al menos 4 GB, que debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
-|Velocidad del procesador|**Mínimo:** Procesador x64: 1,4 GHz<br/><br/> **Recomendado:** 2.0 GHz o superior|  
+|Memoria \*|**Mínimo:**<br/><br/> Ediciones Express: 512 MB<br/><br/> Las demás ediciones: 1 GB<br/><br/> **Se recomienda que use:**<br/><br/> Ediciones Express: 1 GB<br/><br/> Las demás ediciones: Al menos 4 GB, que debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
+|Velocidad del procesador|**Mínimo:** Procesador x64: 1,4 GHz<br/><br/> **Se recomienda que use:** 2.0 GHz o superior|  
 |Tipo de procesador|Procesador x64: AMD Opteron, AMD Athlon 64, Intel Xeon compatible con Intel EM64T, Intel Pentium IV compatible con EM64T|  
   
 > [!NOTE]  
@@ -115,77 +80,32 @@ Los siguientes requisitos se aplican a todas las instalaciones:
   
  \* La memoria mínima necesaria para instalar el componente [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] en [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es de 2 GB de RAM, que es independiente del requisito de memoria mínima de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]. Para obtener información acerca de cómo instalar DQS, vea [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md).  
   
- **Compatibilidad con WOW64:**  
   
- WOW64 ((Windows de 32 bits sobre Windows de 64 bits) es una característica de las ediciones de 64 bits de Windows que permite que las aplicaciones de 32 bits se ejecuten de forma nativa en el modo de 32 bits. Las aplicaciones funcionan en el modo de 32 bits, aunque el sistema operativo subyacente sea de 64 bits. WOW64 no se admite en instalaciones de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Sin embargo, las Herramientas de administración sí se admiten en WOW64.  
+##  <a name="software-requirements"></a><a name="hwswr"></a> Requisitos de software  
 
+En la tabla de esta sección se enumeran los requisitos mínimos de software para ejecutar SQL Server. También hay opciones de configuración recomendadas para obtener el [rendimiento óptimo](https://support.microsoft.com/help/4465518/recommended-updates-and-configurations-for-sql-server). 
 
-**Compatibilidad con Server Core:**
+Los siguientes requisitos de software se aplican a todas las instalaciones:  
+  
+|Componente|Requisito|  
+|---------------|-----------------|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] y versiones posteriores necesitan [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 para el Motor de base de datos, Master Data Services o la replicación. El programa de instalación de SQL Server instala automáticamente [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] también se puede instalar manualmente desde [Microsoft .NET Framework 4.6 (instalador web) para Windows](https://support.microsoft.com/kb/3045560).<br/><br/> Para ver más información, recomendaciones y directrices sobre [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6, consulte la [Guía de implementación de .NET Framework para desarrolladores](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx).<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]y [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] necesitan [KB2919355](https://support.microsoft.com/kb/2919355) para instalar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.|  
+|Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, canalizaciones con nombre, TCP/IP y VIA.<br/><br/> **Nota:** El protocolo VIA no es compatible con los clústeres de conmutación por error. Los clientes o las aplicaciones que se ejecutan en el mismo nodo del clúster de conmutación por error que la instancia de SQL Server pueden usar el protocolo de memoria compartida para conectarse a SQL Server con la dirección de la canalización local. Sin embargo, este tipo de conexión no es compatible con clúster y generará un error después de la conmutación por error de una instancia. Por tanto, no se recomienda y solo se debe usar en escenarios muy específicos.<br/><br/> **Importante:** El protocolo VIA está desusado. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> Para obtener más información acerca de los protocolos de red y las bibliotecas de red, vea [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md).|  
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-
-La instalación de SQL Server 2019 en el modo Server Core es compatible con las siguientes ediciones de Windows Server:
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-   | &nbsp; | &nbsp; |
-
-::: moniker-end
-
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
-
-La instalación de SQL Server 2016 y 2017 en el modo Server Core es compatible con las siguientes ediciones de Windows Server:
-
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
-| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
-   | &nbsp; | &nbsp; |
-::: moniker-end
-
-Para obtener más información sobre cómo instalar SQL Server en Server Core, vea [Instalar SQL Server en Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los siguientes componentes de software que el producto necesita:  
+  
+   - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client    
+   - Archivos auxiliares del programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
   
-### <a name="features-supported-on-32-bit-client-operating-systems"></a>Características admitidas en sistemas operativos de cliente de 32 bits  
- Los sistemas operativos de cliente de Windows, como Windows 10 y Windows 8.1, están disponibles en arquitecturas tanto de 32 bits como de 64 bits.   Los sistemas operativos de cliente de 64 bits admiten todas las características de SQL Server. En cuanto a los sistemas operativos de cliente de 32 bits compatibles, Microsoft admite las siguientes características:  
   
--   Cliente de calidad de datos
--   Conectividad con las herramientas de cliente
--   Integration Services
--   Compatibilidad con versiones anteriores de las herramientas de cliente
--   SDK de las herramientas de cliente
--   Componentes de documentación
--   Componentes de Distributed Replay
--   Distributed Replay Controller
--   Distributed Replay Client
--   SDK de conectividad de cliente SQL
-  
- [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] y los sistemas operativos de servidor posteriores no están disponibles en arquitecturas de 32 bits. Todos los sistemas operativos de servidor admitidos están disponibles únicamente en 64 bits. Los sistemas operativos de servidor de 64 bits admiten todas las características.  
-  
-###  <a name="TOP_Principal"></a> Compatibilidad de SO   
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
-La siguiente tabla muestra qué ediciones de SQL Server 2019 son compatibles con las versiones de Windows:  
+> [!IMPORTANT]
+> Existen otros requisitos de hardware y software para la característica PolyBase. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
   
 
-| Edición de SQL Server:               | Enterprise | Desarrollador | Estándar | Web | Express |  
-| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
-| Windows Server 2019 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2019 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2019 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2016 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2016 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2016 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| &nbsp; | &nbsp; |
-::: moniker-end
 
-::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+## <a name="operating-system-support"></a>Compatibilidad con sistemas operativos
 
 La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compatibles con las versiones de Windows:  
   
@@ -194,7 +114,7 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 | Windows Server 2019 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2019 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2019 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2016 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
+| Windows Server 2016 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2016 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2016 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2012 R2 Datacenter |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
@@ -215,19 +135,49 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 | Windows 8 Pro                     |    No      |    Sí    |    Sí   | No  |   Sí   |
 | Windows 8                         |    No      |    Sí    |    Sí   | No  |   Sí   | 
 
-> [!NOTE]  
-> Dos excepciones a la compatibilidad de sistema operativo indicada en esta sección son las siguientes características de Business Intelligence para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones anteriores, que se pueden instalar en Windows Server 2008 R2 SP1 o posteriores:  
->  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
->-   Complemento[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint  
-::: moniker-end
+Para conocer los requisitos mínimos de versión para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[win8srv](../../includes/win8srv-md.md)] o [!INCLUDE[win8](../../includes/win8-md.md)], vea [Usar SQL Server en Windows 8 y versiones posteriores del sistema operativo Windows](https://support.microsoft.com/kb/2681562). 
 
+
+### <a name="server-core-support"></a>Compatibilidad con Server Core
+
+La instalación de SQL Server 2016 y 2017 en el modo Server Core es compatible con las siguientes ediciones de Windows Server:
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| &nbsp; | &nbsp; |
+
+Para obtener más información sobre cómo instalar SQL Server en Server Core, vea [Instalar SQL Server en Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+
+### <a name="wow64-support"></a>Compatibilidad con WOW64
+  
+ WOW64 ((Windows de 32 bits sobre Windows de 64 bits) es una característica de las ediciones de 64 bits de Windows que permite que las aplicaciones de 32 bits se ejecuten de forma nativa en el modo de 32 bits. Las aplicaciones funcionan en el modo de 32 bits, aunque el sistema operativo subyacente sea de 64 bits. WOW64 no se admite en instalaciones de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] . Sin embargo, las Herramientas de administración sí se admiten en WOW64.  
 
   
-##  <a name="CrossLanguageSupport"></a> Compatibilidad entre idiomas  
+### <a name="features-supported-on-32-bit-client-operating-systems"></a>Características admitidas en sistemas operativos de cliente de 32 bits 
+ Los sistemas operativos de cliente de Windows, como Windows 10 y Windows 8.1, están disponibles en arquitecturas tanto de 32 bits como de 64 bits.   Los sistemas operativos de cliente de 64 bits admiten todas las características de SQL Server. En cuanto a los sistemas operativos de cliente de 32 bits compatibles, Microsoft admite las siguientes características:  
+  
+-   Cliente de calidad de datos
+-   Conectividad con las herramientas de cliente
+-   Integration Services
+-   Compatibilidad con versiones anteriores de las herramientas de cliente
+-   SDK de las herramientas de cliente
+-   Componentes de documentación
+-   Componentes de Distributed Replay
+-   Distributed Replay Controller
+-   Distributed Replay Client
+-   SDK de conectividad de cliente SQL
+  
+ [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] y los sistemas operativos de servidor posteriores no están disponibles en arquitecturas de 32 bits. Todos los sistemas operativos de servidor admitidos están disponibles únicamente en 64 bits. Los sistemas operativos de servidor de 64 bits admiten todas las características.  
+
+
+##  <a name="cross-language-support"></a><a name="CrossLanguageSupport"></a> Compatibilidad entre idiomas  
  Para más información sobre la compatibilidad entre idiomas y consideraciones sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en idiomas localizados, consulte [Versiones en idioma local en SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md).  
   
-##  <a name="HardDiskSpace"></a> Requisitos de espacio en disco duro  
+##  <a name="disk-space-requirements"></a><a name="HardDiskSpace"></a> Requisitos de espacio en disco  
  Durante la instalación de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)], Windows Installer crea archivos temporales en la unidad del sistema. Antes de ejecutar el programa de instalación para instalar o actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que dispone de al menos 6,0 GB de espacio en disco en la unidad del sistema para estos archivos. Este requisito es aplicable incluso si instala todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una unidad distinta de la predeterminada.  
   
  Los requisitos reales de disco duro dependen de la configuración del sistema y de las características que decida instalar. En la tabla siguiente se muestran los requisitos de espacio en disco de los componentes de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] :  
@@ -252,7 +202,7 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
   
  *Los requisitos de espacio en disco para el contenido descargado de los Libros en pantalla son 200 MB.  
   
-##  <a name="StorageTypes"></a> Tipos de almacenamiento para los archivos de datos  
+##  <a name="storage-types-for-data-files"></a><a name="StorageTypes"></a> Tipos de almacenamiento para los archivos de datos  
  Los tipos admitidos de almacenamiento para los archivos de datos son:  
   
 -   Disco local 
@@ -266,7 +216,7 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
   
   
   
-##  <a name="DC_support"></a> Instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio  
+##  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="DC_support"></a> Instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio  
  Por razones de seguridad, se recomienda que no se instale [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] en un controlador de dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no bloqueará la instalación en un equipo que sea un controlador de dominio, pero se aplican las limitaciones siguientes:  
   
 -   No puede ejecutar los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio bajo una cuenta del servicio local.    
@@ -282,8 +232,18 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 
   > [!NOTE]
   > Esta restricción también se aplica a las instalaciones en nodos de miembros de dominio.
+
+## <a name="installation-media"></a>Medios de instalación
+
+Puede obtener los medios de instalación adecuados desde las ubicaciones siguientes: 
   
-## <a name="see-also"></a>Consulte también  
- [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
+- [Centro de evaluación de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)
+- [Actualizaciones acumulativas más recientes](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+
+Como alternativa, puede crear una máquina virtual de [Azure que ya ejecute SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal), aunque la ejecución de SQL Server en una máquina virtual será más lenta que si se hace de forma nativa debido a la sobrecarga de la virtualización.
+  
+  
+## <a name="next-steps"></a>Pasos siguientes
+
+Una vez que haya revisado los requisitos de hardware y software para instalar SQL Server, puede empezar a [planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) o revisar las [consideraciones de seguridad para SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
 

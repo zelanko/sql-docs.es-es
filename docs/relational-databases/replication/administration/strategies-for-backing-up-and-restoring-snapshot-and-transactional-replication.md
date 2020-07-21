@@ -1,5 +1,6 @@
 ---
 title: Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional | Microsoft Docs
+description: Obtenga información sobre las consideraciones para diseñar una estrategia de copia de seguridad y restauración para la replicación transaccional y de instantáneas en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 490dc9907114db22c0b506f6fa436f429cbd1fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710340"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85740847"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
   
 -   Qué bases de datos se incluirán en la copia de seguridad.
@@ -80,7 +81,7 @@ ms.locfileid: "71710340"
   
  La replicación permite restaurar las bases de datos replicadas en el mismo servidor y base de datos de los que se creó la copia de seguridad. Si restaura una copia de seguridad de una base de datos replicada en otro servidor o base de datos, no se conservará la configuración de la replicación. En este caso, deberá volver a crear todas las publicaciones y suscripciones después de restaurar las copias de seguridad.  
   
-### <a name="publisher"></a>publicador  
+### <a name="publisher"></a>Publicador  
  Se proporcionan los pasos de restauración para los siguientes tipos de replicación:  
   
 -   Replicación de instantáneas  

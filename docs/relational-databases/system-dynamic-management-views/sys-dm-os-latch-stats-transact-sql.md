@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -16,34 +16,34 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289404"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754148"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve información acerca de todas las esperas de bloqueos temporales organizadas por clase. 
   
 > [!NOTE]  
-> Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **Sys. DM _ _pdw_nodes_os_latch_stats**.  
+> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_latch_stats**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Nombre de la clase de bloqueo temporal.|  
+|latch_class|**nvarchar(60)**|Nombre de la clase de bloqueo temporal.|  
 |waiting_requests_count|**bigint**|Número de esperas en bloqueos temporales en esta clase Este recuento se incrementa al inicio de una espera de bloqueo temporal.|  
 |wait_time_ms|**bigint**|Tiempo total de espera, en milisegundos, en bloqueos temporales en esta clase<br /><br /> **Nota:** Esta columna se actualiza cada cinco minutos durante una espera de bloqueo temporal y al final de una espera de bloqueo temporal.|  
 |max_wait_time_ms|**bigint**|Tiempo máximo que un objeto de memoria ha esperado en este bloqueo temporal. Si este valor es extraordinariamente alto, puede indicar un bloqueo interno.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere @no__t permiso-1.   
-En los niveles Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar y básico de @no__t 0, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="remarks"></a>Comentarios  
  sys.dm_os_latch_stats se puede utilizar para identificar el origen de la contención del bloqueo temporal examinando los tiempos y números de esperas relativos en las diferentes clases de bloqueos temporales. En algunas situaciones, se puede resolver o reducir la contención de bloqueos temporales. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
@@ -60,15 +60,15 @@ GO
 > [!NOTE]  
 >  Estas estadísticas no permanecen si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Todos los datos se acumulan desde la última vez que se restablecieron las estadísticas o desde que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="latches"></a>Bloqueos temporales  
- Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa en varios componentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
+## <a name="latches"></a><a name="latches"></a>Bloqueos temporales  
+ Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa en varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
   
  Una espera de bloqueo temporal se produce cuando no se puede conceder una solicitud de bloqueo temporal inmediatamente, porque otro subproceso mantiene el bloqueo temporal en un modo de conflictos. A diferencia de los bloqueos, un bloqueo temporal se libera inmediatamente después de la operación, incluso en operaciones de escritura.  
   
  Los bloqueos temporales se agrupan en clases basándose en componentes y usos. En una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden existir cero o más bloqueos temporales de una determinada clase en cualquier momento.  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` no realiza un seguimiento de las solicitudes de bloqueo temporal que se concedieron inmediatamente o que dieron error sin esperar.  
+> `sys.dm_os_latch_stats` no realiza el seguimiento de solicitudes de bloqueos temporales que se concedieron inmediatamente o que tuvieron errores sin esperar.  
   
  En la siguiente tabla se ofrecen descripciones breves de las diversas clases de bloqueos temporales.  
   
@@ -100,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Se utiliza para sincronizar operaciones de copia de seguridad diferencial con DBCC.|  
 |BACKUP_OPERATION|Se utiliza para sincronizar estructuras de datos internas en una operación de copia de seguridad, como base de datos, registro o copia de seguridad de archivos.|  
 |BACKUP_FILE_HANDLE|Se utiliza para sincronizar operaciones de apertura de archivos durante una operación de restauración.|  
-|BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys. DM _ _os_wait_stats crea una diferencia entre las esperas de bloqueos temporales de página causadas por operaciones de e/s y las operaciones de lectura y escritura en la página.|  
+|BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys. dm_os_wait_stats crea una diferencia entre las esperas de bloqueos temporales de página causadas por operaciones de e/s y las operaciones de lectura y escritura en la página.|  
 |BUFFER_POOL_GROW|Se utiliza para sincronizar el administrador del búfer interno durante operaciones de ampliación del grupo de búferes.|  
 |DATABASE_CHECKPOINT|Se utiliza para serializar puntos de comprobación en una base de datos.|  
 |CLR_PROCEDURE_HASHTABLE|Exclusivamente para uso interno.|  
@@ -164,14 +164,14 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar un mapa de nivel de instancia de colas de espera. Existe una cola por el identificador de base de datos, la versión de base de datos y la tupla de ID. de cola. La contención de bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: En un estado de espera de WAITFOR (RECEIVE); llamar a WAITFOR (RECEIVE); supera el tiempo de espera de WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene WAITFOR (RECEIVE); Puede reducir la contención reduciendo el número de subprocesos en un estado de espera de WAITFOR (RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar un mapa de nivel de instancia de colas de espera. Existe una cola por el identificador de base de datos, la versión de base de datos y la tupla de ID. de cola. La contención en bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: en un estado de espera de WAITFOR (RECEIVE); llamar a WAITFOR (RECEIVE); supera el tiempo de espera de WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene WAITFOR (RECEIVE); Puede reducir la contención reduciendo el número de subprocesos en un estado de espera de WAITFOR (RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_MIRROR_ROUTE|Exclusivamente para uso interno.|  
 |TRACE_ID|Exclusivamente para uso interno.|  
 |TRACE_AUDIT_ID|Exclusivamente para uso interno.|  
-|seguimiento|Exclusivamente para uso interno.|  
+|TRACE|Exclusivamente para uso interno.|  
 |TRACE_CONTROLLER|Exclusivamente para uso interno.|  
 |TRACE_EVENT_QUEUE|Exclusivamente para uso interno.|  
 |TRANSACTION_DISTRIBUTED_MARK|Exclusivamente para uso interno.|  
@@ -193,7 +193,7 @@ GO
 |VERSIONING_STATE_CHANGE|Exclusivamente para uso interno.|  
 |KTM_VIRTUAL_CLOCK|Exclusivamente para uso interno.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Latches (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

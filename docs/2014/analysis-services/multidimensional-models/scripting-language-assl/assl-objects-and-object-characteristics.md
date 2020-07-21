@@ -1,5 +1,5 @@
 ---
-title: ASSL y características de objetos | Microsoft Docs
+title: Objetos de ASSL y características de objeto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62736620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545704"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos y características de objetos ASSL
   Los objetos en ASSL (Analysis Services Scripting Language) siguen instrucciones concretas con respecto a los grupos de objetos, herencia, nomenclatura, expansión y procesamiento.  
   
 ## <a name="object-groups"></a>Grupos de objetos  
- Todos los objetos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] deben tener una representación XML. Los objetos están divididos en dos grupos:  
+ Todos los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos tienen una representación XML. Los objetos están divididos en dos grupos:  
   
  **Objetos principales**  
  Los objetos principales se pueden crear, modificar y eliminar de forma independiente. Los objetos principales incluyen:  
@@ -39,7 +38,7 @@ ms.locfileid: "62736620"
   
 -   Bases de datos  
   
--   Dimensiones  
+-   Dimensions  
   
 -   Cubos  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62736620"
   
 -   Particiones  
   
--   perspectivas  
+-   Perspectivas  
   
 -   Modelos de minería de datos  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62736620"
 ## <a name="object-expansion"></a>Expansión de objetos  
  La restricción `ObjectExpansion` se puede usar para controlar el grado de expansión para XML de ASSL que devuelve el servidor. Esta restricción tiene las opciones que se muestran en la tabla siguiente.  
   
-|Valor de enumeración|Permitido para \<Alter >|Descripción|  
+|Valor de enumeración|Permitido para\<Alter>|Descripción|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|no|Devuelve solamente el nombre, identificador y marca de tiempo para el objeto solicitado y para todos los objetos principales contenidos de forma recursiva.|  
 |*ObjectProperties*|sí|Expande el objeto solicitado y los objetos secundarios contenidos, pero no devuelve los objetos principales contenidos.|  

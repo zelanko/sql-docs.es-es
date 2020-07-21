@@ -1,5 +1,6 @@
 ---
 title: Habilitar y configurar FILESTREAM | Microsoft Docs
+description: Para usar FILESTREAM, habilítelo primero en la instancia del Motor de base de datos de SQL Server. Obtenga información sobre cómo habilitar FILESTREAM con el Administrador de configuración de SQL Server.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -11,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b57c86074f91d5be0790294641dafe1cf0ccfc6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767991"
 ---
 # <a name="enable-and-configure-filestream"></a>Habilitar y configurar FILESTREAM
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para empezar a utilizar FILESTREAM, debe habilitarlo en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En este tema se describe cómo habilitar FILESTREAM con el Administrador de configuración de SQL Server.  
   
-##  <a name="enabling"></a> Habilitar FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Habilitar FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>Para habilitar y cambiar la configuración de FILESTREAM  
   
@@ -58,9 +59,9 @@ ms.locfileid: "72908768"
   
 13. Reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-##  <a name="best"></a> Procedimientos recomendados  
+##  <a name="best-practices"></a><a name="best"></a> Procedimientos recomendados  
   
-###  <a name="config"></a> Configuración física y mantenimiento  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Configuración física y mantenimiento  
  Cuando configure volúmenes de almacenamiento FILESTREAM, tenga en cuenta las directrices siguientes:  
   
 -   Desactive la opción de nombres cortos de archivo en equipos FILESTREAM. Los nombres cortos de archivo requieren mucho más tiempo para su creación. Para deshabilitar la opción de nombres cortos de archivo, emplee la utilidad **fsutil** de Windows.  
@@ -77,14 +78,14 @@ ms.locfileid: "72908768"
   
 ||||||  
 |-|-|-|-|-|  
-|Nivel RAID|Rendimiento de escritura|Rendimiento de lectura|Tolerancia a errores|Notas|  
+|Nivel RAID|Rendimiento de escritura|Rendimiento de lectura|Tolerancia a errores|Observaciones|  
 |RAID 5|Normal|Normal|Excelente|El rendimiento es mejor que en el caso de un disco o JBOD y menor que RAID 0 o RAID 5 con creación de bandas.|  
 |RAID 0|Excelente|Excelente|None||  
 |RAID 5 con creación de bandas|Excelente|Excelente|Excelente|Opción más cara.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
-###  <a name="database"></a> Diseño físico de base de datos  
+###  <a name="physical-database-design"></a><a name="database"></a> Diseño físico de base de datos  
  Cuando diseñe una base de datos de FILESTREAM, tenga en cuenta las directrices siguientes:  
   
 -   Las columnas FILESTREAM deben ir acompañadas de una columna **uniqueidentifier**ROWGUID correspondiente. Estos tipos de tablas también deben ir acompañados de un índice único. Normalmente, este índice no es un índice clúster. Si la lógica de negocios de bases de datos requiere un índice clúster, debe asegurarse de que los valores almacenados en el índice no sean aleatorios. Los valores aleatorios harán que el índice se vuelva a ordenar cada vez que se agregue o se quite una fila en la tabla.  

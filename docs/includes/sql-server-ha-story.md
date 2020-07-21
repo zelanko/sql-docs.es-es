@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212300"
----
 En este artículo se ofrece una visión global de las soluciones de continuidad empresarial para alta disponibilidad y recuperación ante desastres en SQL Server. 
 
 Una tarea habitual que todo usuario que implemente SQL Server debe tener en cuenta es la comprobación de que todas las instancias de SQL Server críticas y las bases de datos que contienen están disponibles en el momento en que el negocio y los usuarios finales las necesitan; ya sea de 9 a 5 o durante todo el día. El objetivo es mantener la empresa en funcionamiento con una interrupción mínima o inexistente. Este concepto se conoce también como continuidad empresarial.
@@ -75,7 +67,7 @@ Un clúster WSFC y Pacemaker se parecen más de lo que se diferencian. Ambos pro
 Debido a la diferencia en la pila de clúster, se necesitan algunos cambios para los grupos de disponibilidad porque SQL Server tiene que controlar algunos de los metadatos que se controlan de forma nativa por un clúster WSFC. El mayor [!IMPORTANT] cambio es la introducción de un tipo de clúster para un grupo de disponibilidad. Está almacenado en sys.availability_groups en las columnas cluster_type y cluster_type_desc. Hay tres tipos de clústeres:
 
 * WSFC 
-* External
+* Externo
 * None
 
 Todos los grupos de disponibilidad que necesitan disponibilidad deben utilizar un clúster subyacente, lo que en el caso de SQL Server 2017 significa un clúster WSFC o Pacemaker. Para los grupos de disponibilidad basados en Windows Server que usan un clúster WSFC subyacente, el tipo de clúster predeterminado es WSFC (y no es necesario configurarlo). Para los grupos de disponibilidad basados en Linux, al crear el grupo de disponibilidad, el tipo de clúster debe establecerse como Externo. La integración con Pacemaker se configura después de crear el grupo de disponibilidad, mientras que en un clúster de WSFC esto se hace en el momento de la creación.
@@ -91,7 +83,7 @@ La captura de pantalla siguiente muestra la compatibilidad para los distintos ti
 
 ![Opciones de AG de SSMS](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 aumentó la compatibilidad para el número de réplicas sincrónicas de dos a tres en la versión Enterprise Edition. Sin embargo, si se sincronizaba una réplica secundaria pero la otra experimentaba un problema, no existía ningún modo de controlar el comportamiento a fin de indicar a la principal que esperase a la réplica que tenía un comportamiento inadecuado o que le permitiera continuar. Esto significa que la réplica principal en algún momento seguiría recibiendo tráfico de escritura, incluso si la réplica secundaria no estuviera en estado sincronizado, con lo que se produciría una pérdida de datos en la réplica secundaria.
 SQL Server 2017 incluye ahora una opción que permite controlar el comportamiento de lo que sucede cuando hay réplicas sincrónicas denominada REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. La opción funciona como se describe a continuación:
@@ -165,7 +157,7 @@ FCI puede usarse para la recuperación ante desastres. Al igual que con un grupo
 ### <a name="log-shipping"></a>Trasvase de registros
 El trasvase de registros es uno de los métodos más antiguo de proporcionar recuperación ante desastres para bases de datos de SQL Server. El trasvase de registros se suele usarse junto con los grupos de disponibilidad y FCI para proporcionar una funcionalidad de recuperación ante desastres más sencilla y rentable en comparación con otras opciones que pueden resultar complejas debido al entorno, las exigencias de tipo administrativo o el presupuesto. De forma similar al caso de alta disponibilidad para el trasvase de registros, muchos entornos retrasarán la carga de un registro de transacciones para tener en cuenta los errores humanos.
 
-## <a name = "Migrations"></a> Migraciones y actualizaciones
+## <a name="migrations-and-upgrades"></a><a name = "Migrations"></a> Migraciones y actualizaciones
 
 Al implementar nuevas instancias o actualizar las antiguas, una empresa no puede asumir una interrupción prolongada. En esta sección se analizará cómo se pueden utilizar las características de disponibilidad de SQL Server para minimizar el tiempo de inactividad en un cambio de arquitectura planeado, el paso de un servidor a otro o el cambio de plataforma (por ejemplo, de Windows Server a Linux o viceversa), o durante la aplicación de revisiones.
 
@@ -232,7 +224,7 @@ Si se configura un grupo de disponibilidad con un clúster de tipo Ninguno, este
 
 Dado que el trasvase de registros se basa simplemente en la copia de seguridad y restauración, no existen diferencias en las bases de datos, las estructuras de archivos, etc., para SQL Server en Windows Server en comparación con SQL Server en Linux. Esto significa que se puede configurar el trasvase de registros entre una instalación de SQL Server basada en Windows Server y otra de Linux, así como entre distintas distribuciones de Linux. Todo lo demás permanece igual. La única advertencia es que el trasvase de registros, al igual que un grupo de disponibilidad, no puede funcionar cuando el origen se encuentra en una versión principal de SQL Server posterior en relación con un destino que está en una versión anterior de SQL Server. 
 
-## <a name = "ReadScaleOut"></a> Escalado de lectura
+## <a name="read-scale"></a><a name = "ReadScaleOut"></a> Escalado de lectura
 
 Desde su introducción en SQL Server 2012, las réplicas secundarias han podido utilizarse para consultas de solo lectura. Hay dos maneras de hacerlo con un grupo de disponibilidad: permitiendo el acceso directo a la secundaria, así como [configurando el enrutamiento de solo lectura](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server), lo que requiere el uso del agente de escucha.  SQL Server 2016 introdujo la posibilidad de equilibrar la carga de las conexiones de solo lectura a través del agente de escucha mediante un algoritmo round-robin, lo que permite a las solicitudes de solo lectura su expansión por todas las réplicas legibles. 
 

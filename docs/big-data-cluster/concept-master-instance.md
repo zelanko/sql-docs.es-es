@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es la instancia maestra?
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describe el SQL Server instancia maestra [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]en un.
+description: En este artículo, se describe la instancia maestra de SQL Server en un clúster de macrodatos de SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652276"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606652"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe el rol del *SQL Server instancia maestra* en un clúster de big data para SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de Big Data para administrar la conectividad, las consultas de escalado horizontal, los metadatos y las bases de datos de usuario y los servicios de machine learning.
+En este artículo, se describe el rol de la *instancia maestra de SQL Server* en un clúster de macrodatos para SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de macrodatos para administrar la conectividad, las consultas de escalabilidad horizontal, los metadatos y las bases de datos de usuario, así como los servicios de aprendizaje automático.
 
 La instancia maestra de SQL Server proporciona las siguientes funciones:
 
@@ -53,7 +53,7 @@ Como parte del clúster de macrodatos de SQL Server, la característica Machine 
 
 SQL Server 2019 permite encontrar fácilmente macrodatos para unirlos a los datos dimensionales que suelen almacenarse en la base de datos empresarial. Este valor de los macrodatos se incrementa en gran medida cuando no solo pertenece a una organización, sino que también se incluye en informes, paneles y aplicaciones. Al mismo tiempo, los científicos de datos pueden seguir usando las herramientas del ecosistema de Spark/HDFS y acceder fácilmente y en tiempo real a los datos en la instancia maestra de SQL Server y en orígenes de datos externos accesibles _mediante_ la instancia maestra de SQL Server.
 
-Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], puede hacer más cosas con los lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
+Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], puede hacer más cosas con sus lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
 
 * Crear aplicaciones que usen datos de lagos de datos empresariales.
 * Razonar sobre todos los datos con consultas Transact-SQL.
@@ -67,7 +67,7 @@ Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de, consulte los siguientes recursos:
+Para obtener más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea los recursos siguientes:
 
-- [¿Qué [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]son?](big-data-cluster-overview.md)
-- [Taller: Arquitectura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Taller: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

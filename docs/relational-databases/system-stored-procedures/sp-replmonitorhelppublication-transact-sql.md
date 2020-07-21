@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublication
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8dc952f03ea2538412c864e1a9e9b228bf3ca877
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6468bcb1c97b6f995afadfe422e11dec98463620
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720202"
 ---
-# <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve la información de estado actual para una o varias publicaciones del publicador. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
@@ -60,7 +60,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publisher_db**|**sysname**|Es el nombre del publicador.|  
 |**publicaciones**|**sysname**|Es el nombre de una publicación.|  
@@ -71,7 +71,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_latency**|**int**|La menor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**average_latency**|**int**|La latencia promedio, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**last_distsync**|**datetime**|Es el valor de datetime correspondiente a la última ejecución del Agente de distribución.|  
-|**retention**|**int**|Es el período de retención de la publicación.|  
+|**políticas**|**int**|Es el período de retención de la publicación.|  
 |**latencythreshold**|**int**|Es el umbral de latencia definido para la publicación transaccional.|  
 |**expirationthreshold**|**int**|Es el umbral de expiración definido para la publicación si se trata de una publicación de combinación.|  
 |**agentnotrunningthreshold**|**int**|Es el umbral definido para el período de tiempo más largo transcurrido sin que se haya ejecutado un agente.|  
@@ -84,7 +84,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**best_runspeedPerf**|**int**|Es el menor tiempo de sincronización de la publicación de combinación.|  
 |**average_runspeedPerf**|**int**|Es el tiempo medio de sincronización de la publicación de combinación.|  
 |**retention_period_unit**|**int**|Es la unidad que se usa para expresar la *retención*.|  
-|**publicador**|**sysname**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publica la publicación.|  
+|**publisher**|**sysname**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publica la publicación.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -93,9 +93,9 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
  **sp_replmonitorhelppublication** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** de la base de datos de distribución pueden ejecutar **sp_replmonitorhelppublication**.  
+ Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución pueden ejecutar **sp_replmonitorhelppublication**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

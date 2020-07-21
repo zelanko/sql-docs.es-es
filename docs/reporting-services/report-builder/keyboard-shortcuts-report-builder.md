@@ -1,5 +1,6 @@
 ---
 title: Métodos abreviados de teclado (Generador de informes) | Microsoft Docs
+description: Al crear y editar informes paginados de Reporting Services en el Generador de informes, tiene acceso a todas las teclas de método abreviado para la navegación del entorno de Windows.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
-ms.translationtype: MTE75
+ms.openlocfilehash: 624f48c3c3a118aecd20a389973cb7f79a6f448d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037862"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342764"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Al crear y editar informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Generador de informes, tendrá acceso a todas las teclas de método abreviado para la navegación que se proporcionan para el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  
@@ -32,14 +33,14 @@ ms.locfileid: "67037862"
   
 |Descripción|Combinación de teclas|  
 |-----------------|---------------------|  
-|Abrir el menú Generador de informes.|ALT+F|  
+|Abrir el menú Generador de informes.|ALT + F|  
 |Crear un informe.|CTRL+N|  
 |Abra un informe.|CTRL+O|  
 |Guardar un informe.|CTRL+S, ALT+S|  
 |Moverse entre las áreas del Generador de informes, como Cinta de opciones, superficie de diseño, Panel de agrupación, Panel de propiedades y Panel de datos.|F6, MAYÚS+F6|  
 |Ir a la Cinta de opciones.|ALT|  
-|Ir a la pestaña Inicio de la Cinta de opciones.|ALT+H|  
-|Ir a la pestaña Insertar de la Cinta de opciones.|ALT+I|  
+|Ir a la pestaña Inicio de la Cinta de opciones.|ALT + H|  
+|Ir a la pestaña Insertar de la Cinta de opciones.|Alt+I|  
 |Ir a la pestaña Vista de la Cinta de opciones.|ALT+V|  
 |Activar las líneas de división entre áreas, como la línea existente entre el Panel de agrupación y la superficie de diseño.|TAB|  
 |Mover las líneas de división entre las áreas.|Cualquier tecla de dirección. Utilice las flechas ARRIBA y ABAJO para mover la línea que hay entre el Panel de agrupación y la superficie de diseño. Use las flechas DERECHA e IZQUIERDA para mover la línea que hay entre el panel Datos de informe y la superficie de diseño.|  

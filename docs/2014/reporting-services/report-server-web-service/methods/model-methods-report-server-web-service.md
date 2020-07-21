@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a1246d422b8ed88b0e9411dc5df5b398d0bfef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283441"
 ---
 # <a name="model-methods"></a>Métodos para los modelos
@@ -36,7 +36,7 @@ ms.locfileid: "63283441"
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|Asocia un conjunto de informes detallados junto con un modelo.|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|Establece las directivas de seguridad en un elemento de modelo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](report-server-web-service-methods.md)   

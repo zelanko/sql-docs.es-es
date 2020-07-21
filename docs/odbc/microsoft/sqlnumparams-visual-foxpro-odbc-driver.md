@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLNumParams function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 4fe4eec8-6a65-4b1f-aac3-25b14fe4ea94
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8020bdd1339cf9b46682e85456c3d1a26db6c517
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 52c695c3b37df90f3c675a28b5bb63a53c42f5c0
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002262"
+ms.lasthandoff: 04/26/2020
+ms.locfileid: "81299495"
 ---
 # <a name="sqlnumparams-visual-foxpro-odbc-driver"></a>SQLNumParams (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel 2  
+ Conformidad con la API de ODBC: nivel 2  
   
- Devuelve el número de parámetros en una instrucción SQL. El número de parámetros debe igual al número de signos de interrogación en la instrucción SQL que se pasa a [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
+ Devuelve el número de parámetros de una instrucción SQL. El número de parámetros debe ser igual al número de signos de interrogación en la instrucción SQL que se pasa a [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md).  
   
- Para obtener más información sobre la gramática de SQL, consulte [admite la gramática de SQL de ODBC](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md). Para obtener más información acerca de esta función, vea [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información sobre la gramática de SQL, vea [gramática de SQL de ODBC compatible](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md). Para obtener más información sobre esta función, vea [SQLNumParams](../../odbc/reference/syntax/sqlnumparams-function.md) en la *Referencia del programador de ODBC*.

@@ -26,15 +26,15 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c926d7ecebea11ea054b2a63ddb1e7b62d9cb84f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914863"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010865"
 ---
-# <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve el número de Id. del objeto de base de datos de un objeto de ámbito de esquema.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67914863"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]   
   object_name' [ ,'object_type' ] )  
 ```  
@@ -57,7 +57,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  **'** *object_type* **'**  
  Es el tipo de objeto de ámbito del esquema. *object_type* es **varchar** o **nvarchar**. Si *object_type* es **varchar**, se convierte implícitamente en **nvarchar**. Para ver una lista de tipos de objeto, eche un vistazo a la columna **type** en [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -67,7 +67,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como OBJECT_ID, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando el parámetro de una función del sistema es opcional, se asumen la base de datos, el equipo host, el usuario del servidor o el usuario de la base de datos actuales. Las funciones integradas siempre deben ir seguidas de paréntesis.  
   
  Cuando se especifica un nombre de tabla temporal, el nombre de base de datos debe ir antes del nombre de tabla temporal, a menos que la base de datos temporal sea **tempdb**. Por ejemplo: `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
@@ -97,7 +97,7 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. Usar OBJECT_ID para especificar el valor de un parámetro de función del sistema  
+### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. Usar OBJECT_ID para especificar el valor de un parámetro de función del sistema  
  En este ejemplo se devuelve información de todos los índices y particiones de la tabla `Person.Address` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con la función [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md).  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. Devolver el identificador de objeto de un objeto especificado  
  En este ejemplo se devuelve el Id. de objeto para la tabla `FactFinance` en la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  

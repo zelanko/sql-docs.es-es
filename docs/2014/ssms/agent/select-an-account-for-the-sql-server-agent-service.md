@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067629"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
   La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , donde se pueden elegir las opciones siguientes:  
   
 -   **Cuenta integrada**. Puede elegirla de una lista con las siguientes cuentas de servicio de Windows integradas:  
   
-    -   Cuenta de**sistema local** . El nombre de esta cuenta es NT AUTHORITY\System. Es una cuenta eficaz con acceso sin restricciones a todos los recursos del sistema local. Es miembro del grupo **Administradores** de Windows del equipo local y, por tanto, miembro del rol fijo de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **en** .  
+    -   Cuenta de **sistema local** . El nombre de esta cuenta es NT AUTHORITY\System. Es una cuenta eficaz con acceso sin restricciones a todos los recursos del sistema local. Es miembro del grupo **Administradores** de Windows del equipo local y, por tanto, miembro del rol fijo de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**.  
   
         > [!IMPORTANT]  
         >  La opción **Cuenta del sistema local** se mantiene solo por motivos de compatibilidad con versiones anteriores. La cuenta del sistema local tiene permisos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita. Evite ejecutar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la cuenta del sistema local. Para mejorar la seguridad, utilice una cuenta de dominio de Windows con los permisos que se enumeran en la sección siguiente, "Permisos de cuentas de dominio de Windows".  
@@ -74,14 +73,14 @@ ms.locfileid: "68811084"
 ## <a name="supported-service-account-types"></a>Tipos de cuenta de servicio compatibles  
  En la tabla siguiente se muestran los tipos de cuenta de Windows que se pueden usar para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Tipo de cuenta de servicio|Servidor no agrupado|Servidor en clúster|Controlador de dominio (no agrupado)|  
+|Tipo de cuenta de servicio|Índice no agrupado|Servidor en clúster|Controlador de dominio (no agrupado)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Compatible|Compatible|Compatible|  
 |Cuenta de dominio de Windows (no administrativa)|Compatible<sup>1</sup>|Compatible<sup>1</sup>|Compatible<sup>1</sup>|  
-|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Compatible<sup>1, 3, 4</sup>|No compatible|No compatible|  
-|Cuenta de usuario local (no administrativa)|Compatible<sup>1</sup>|No compatible|No aplicable|  
-|Cuenta del sistema local (NT AUTHORITY\System)|Compatible<sup>2</sup>|No compatible|Compatible<sup>2</sup>|  
-|Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatible|No compatible|  
+|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Compatible<sup>1, 3, 4</sup>|No compatibles|No compatibles|  
+|Cuenta de usuario local (no administrativa)|Compatible<sup>1</sup>|No compatibles|No aplicable|  
+|Cuenta del sistema local (NT AUTHORITY\System)|Compatible<sup>2</sup>|No compatibles|Compatible<sup>2</sup>|  
+|Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatibles|No compatibles|  
   
  <sup>1</sup> consulte la limitación 1 a continuación.  
   
@@ -92,9 +91,9 @@ ms.locfileid: "68811084"
  <sup>4</sup> consulte la limitación 4 a continuación.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitación 1: utilizar cuentas no administrativas para la administración multiservidor  
- Dar de alta servidores de destino en el servidor maestro puede producir un error acompañado del siguiente mensaje: "Error en la operación de alta."  
+ Dar de alta servidores de destino en el servidor maestro puede producir un error acompañado del siguiente mensaje: “Error en la operación de alta”.  
   
- Para resolver este error, reinicie los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Para resolver este error, reinicie los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [iniciar, detener, pausar, reanudar, reiniciar el servicio de motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Limitación 2: utilizar la cuenta de sistema local para la administración multiservidor  
  Solo se admite la administración multiservidor cuando el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta bajo la cuenta de sistema local y tanto el servidor maestro como el servidor de destino residen en el mismo equipo. Si usa esta configuración, cuando lleve a cabo el alta de los servidores de destino en el servidor maestro se devuelve el siguiente mensaje:  
@@ -125,7 +124,7 @@ ms.locfileid: "68811084"
 > [!NOTE]  
 >  Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe iniciarse cuando se inicie el sistema operativo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)   
  [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md)  

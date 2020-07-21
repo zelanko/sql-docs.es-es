@@ -13,38 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932843"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757141"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica cómo un proveedor debe ejecutar un comando.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adAsyncExecute**|0x10|Indica que el comando debería ejecutarse de forma asincrónica.<br /><br /> Este valor no puede combinarse con el [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valor **adCmdTableDirect**.|  
-|**adAsyncFetch**|0x20|Indica que las filas restantes después de la cantidad inicial especificado en el [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad se debe recuperar de forma asincrónica.|  
-|**adAsyncFetchNonBlocking**|0x40|Indica que el subproceso principal bloquee nunca al recuperar. Si la fila solicitada no se ha recuperado, la fila actual se desplaza automáticamente al final del archivo.<br /><br /> Si abre un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) desde un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) que contiene una forma persistente almacenado **Recordset**, **adAsyncFetchNonBlocking** no tendrán un efecto. la operación será sincrónica y de bloqueo.<br /><br /> **adAsynchFetchNonBlocking** no tiene ningún efecto cuando el [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) opción se utiliza para abrir el **Recordset**.|  
-|**adExecuteNoRecords**|0x80|Indica que el texto del comando es un comando o procedimiento almacenado que no devuelve filas (por ejemplo, un comando que sólo inserta datos). Si se recuperan las filas, se descartan y no se devuelve.<br /><br /> **adExecuteNoRecords** sólo se puede pasar como un parámetro opcional para el **comando** o **conexión ejecute** método.|  
-|**adExecuteStream**|0x400|Indica que se deben devolver los resultados de una ejecución de comandos como una secuencia.<br /><br /> **adExecuteStream** sólo se puede pasar como un parámetro opcional para el **ejecutar comando** método.|  
-|**adExecuteRecord**||Indica que el **CommandText** es un comando o procedimiento almacenado que devuelve una sola fila que se debe devolver como un **registro** objeto.|  
+|**adAsyncExecute**|0x10|Indica que el comando debe ejecutarse de forma asincrónica.<br /><br /> Este valor no se puede combinar con el valor **adCmdTableDirect**de [commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) .|  
+|**adAsyncFetch**|0x20|Indica que las filas restantes después de la cantidad inicial especificada en la propiedad [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) deben recuperarse de forma asincrónica.|  
+|**adAsyncFetchNonBlocking**|0x40|Indica que el subproceso principal nunca se bloquea mientras se recupera. Si no se ha recuperado la fila solicitada, la fila actual se mueve automáticamente al final del archivo.<br /><br /> Si abre un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) desde una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) que contiene un **conjunto de registros**almacenado de forma persistente, **adAsyncFetchNonBlocking** no tendrá ningún efecto; la operación será sincrónica y se bloqueará.<br /><br /> **adAsynchFetchNonBlocking** no tiene ningún efecto cuando se usa la opción [adCmdTableDirect](../../../ado/reference/ado-api/commandtypeenum.md) para abrir el **conjunto de registros**.|  
+|**adExecuteNoRecords**|0x80|Indica que el texto del comando es un comando o un procedimiento almacenado que no devuelve filas (por ejemplo, un comando que solo inserta datos). Si se recuperan filas, se descartan y no se devuelven.<br /><br /> **adExecuteNoRecords** solo se puede pasar como parámetro opcional al método **Execute** de la conexión o **comando** .|  
+|**adExecuteStream**|0x400|Indica que los resultados de la ejecución de un comando deben devolverse como una secuencia.<br /><br /> **adExecuteStream** solo se puede pasar como parámetro opcional al método **Execute de comando** .|  
+|**adExecuteRecord**||Indica que **CommandText** es un comando o un procedimiento almacenado que devuelve una sola fila que debe devolverse como un objeto de **registro** .|  
 |**adOptionUnspecified**|-1|Indica que el comando no está especificado.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.ExecuteOption.ASYNCEXECUTE|  
-|AdoEnums.ExecuteOption.ASYNCFETCH|  
-|AdoEnums.ExecuteOption.ASYNCFETCHNONBLOCKING|  
-|AdoEnums.ExecuteOption.NORECORDS|  
-|AdoEnums.ExecuteOption.UNSPECIFIED|  
+|AdoEnums. ExecuteOption. ASYNCEXECUTE|  
+|AdoEnums. ExecuteOption. ASYNCFETCH|  
+|AdoEnums. ExecuteOption. ASYNCFETCHNONBLOCKING|  
+|AdoEnums. ExecuteOption. NORECORDS|  
+|AdoEnums. ExecuteOption. no especificado|  
   
 ## <a name="applies-to"></a>Se aplica a  
   

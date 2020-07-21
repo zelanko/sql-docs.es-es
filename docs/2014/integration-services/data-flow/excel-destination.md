@@ -12,15 +12,14 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eff97cfad0091d2794d895f2f9b4ac086690bb05
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827228"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437832"
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -40,7 +39,7 @@ ms.locfileid: "62827228"
 ## <a name="usage-considerations"></a>Consideraciones de uso  
  El Administrador de conexiones con Excel usa el Proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para Jet 4.0 y el controlador ISAM (Método de acceso secuencial indexado) de Excel asociado para conectar con orígenes Excel de datos y leer y escribir datos en ellos.  
   
- Muchos artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base documentan el comportamiento de este proveedor y el controlador. Aunque estos artículos no son específicos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de Servicios de transformación de datos (su predecesor), posiblemente le interese conocer determinados comportamientos que pueden provocar resultados inesperados. Para obtener información general sobre el uso y el comportamiento del controlador de Excel, vea [HOWTO: Usar ADO con datos de Excel desde Visual Basic o VBA](https://support.microsoft.com/kb/257819).  
+ Muchos artículos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base documentan el comportamiento de este proveedor y el controlador. Aunque estos artículos no son específicos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni de Servicios de transformación de datos (su predecesor), posiblemente le interese conocer determinados comportamientos que pueden provocar resultados inesperados. Para obtener información general sobre el uso y el comportamiento del controlador de Excel, vea [Cómo usar ADO con datos de Excel procedentes de Visual Basic o VBA](https://support.microsoft.com/kb/257819).  
   
  Los siguientes comportamientos del proveedor Jet que se incluye con el controlador de Excel pueden provocar resultados inesperados al guardar datos en un destino de Excel.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62827228"
   
      Si desea información sobre cómo evitar incluir las comillas simples, consulte esta entrada de blog, [Se añade una comilla simple a todas las cadenas al transformar los datos a Excel cuando se utiliza el componente de flujo de datos de destino Excel en un paquete SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), en msdn.com.  
   
--   **Guardar datos de memorando (ntext)** . Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, a continuación, la instrucción CREATE TABLE debe usar LONGTEXT (o uno de sus sinónimos) como el tipo de datos de la columna de memorando.  
+-   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, la instrucción CREATE TABLE debe utilizar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de memorando.  
   
 -   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
   
@@ -89,7 +88,7 @@ ms.locfileid: "62827228"
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de Excel](excel-custom-properties.md)  
   
@@ -99,21 +98,13 @@ ms.locfileid: "62827228"
   
 -   [Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
   
--   [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](../control-flow/foreach-loop-container.md)  
+-   [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](../control-flow/foreach-loop-container.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenido relacionado  
-  
--   Entrada de blog, [Excel en Integration Services, parte 1 de 3: Conexiones y componentes](https://go.microsoft.com/fwlink/?LinkId=217674), en dougbert.com  
-  
--   Entrada de blog, [Excel en Integration Services, parte 2 de 3: Tipos de datos y tablas](https://go.microsoft.com/fwlink/?LinkId=217675), en dougbert.com.  
-  
--   Entrada de blog, [Excel en Integration Services, parte 3 de 3: Problemas y alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
-  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Origen de Excel](excel-source.md)   
- [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)   
  [Trabajar con archivos de Excel con la tarea Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

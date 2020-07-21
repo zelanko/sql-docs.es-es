@@ -1,38 +1,51 @@
 ---
-title: ¿Qué son los clústeres de Big Data?
+title: ¿Qué son los clústeres de macrodatos?
 titleSuffix: SQL Server Big Data Clusters
-description: Obtenga información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar) que se ejecuta en Kubernetes y proporcione opciones de escalado horizontal para datos relacionales y de HDFS.
+description: Obtenga información sobre los clústeres de macrodatos de SQL Server que se ejecutan en Kubernetes y proporcionan opciones de escalabilidad horizontal para datos relacionales y HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MT
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72359530"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152006"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
+# <a name="what-are-big-data-clusters-2019"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-A partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] permiten implementar clústeres escalables de contenedores SQL Server, Spark y HDFS que se ejecutan en Kubernetes. Estos componentes se ejecutan en paralelo con objeto de que se puedan leer, escribir y procesar macrodatos de Transact-SQL o Spark, lo que permite combinar y analizar fácilmente los datos relacionales de alto valor con grandes volúmenes de datos.
+A partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ahora permiten implementar clústeres escalables de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. Estos componentes se ejecutan en paralelo con objeto de que se puedan leer, escribir y procesar macrodatos de Transact-SQL o Spark, lo que permite combinar y analizar fácilmente los datos relacionales de alto valor con grandes volúmenes de datos.
+
+En [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se introducen los clústeres de macrodatos de SQL Server.
+
+Use los clústeres de macrodatos de SQL Server para:
+
+- [Implementación de clústeres escalables](../big-data-cluster/deploy-get-started.md) de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. 
+- Leer, escribir y procesar macrodatos desde Transact-SQL o Spark.
+- Combinar y analizar de forma sencilla datos relacionales de alto valor con macrodatos de gran volumen.
+- Consultar orígenes de datos externos.
+- Almacenar macrodatos en HDFS administrados mediante SQL Server.
+- Consultar datos de varios orígenes de datos externos a través del clúster.
+- Usar los datos para tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis.
+- [Implementar y ejecutar aplicaciones](../big-data-cluster/concept-application-deployment.md) en [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- Virtualización de datos con [PolyBase](../relational-databases/polybase/polybase-guide.md). Consulte datos de orígenes de datos externos de SQL Server, Oracle, Teradata, MongoDB y ODBC con tablas externas.
+- Proporcione alta disponibilidad para la instancia maestra de SQL Server y todas las bases de datos mediante la tecnología de grupos de disponibilidad AlwaysOn.
 
 Para obtener más información sobre las nuevas características y los problemas conocidos de la versión más reciente, consulte las [notas de la versión](release-notes-big-data-cluster.md).
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
 ## <a name="scenarios"></a>Escenarios
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] proporcionan flexibilidad en la forma de interactuar con los macrodatos. Puede consultar orígenes de datos externos, almacenar macrodatos en HDFS administrados por SQL Server o consultar datos de varios orígenes de datos externos a través del clúster. Luego puede usar los datos en tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis. En las secciones siguientes se proporciona más información sobre estos escenarios.
+Los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ofrecen flexibilidad a la hora de interactuar con los macrodatos. Puede consultar orígenes de datos externos, almacenar macrodatos en HDFS administrados por SQL Server o consultar datos de varios orígenes de datos externos a través del clúster. Luego puede usar los datos en tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis. En las secciones siguientes se proporciona más información sobre estos escenarios.
 
 ### <a name="data-virtualization"></a>Virtualización de datos
 
-Al aprovechar [SQL Server polybase](../relational-databases/polybase/polybase-guide.md), [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] puede consultar orígenes de datos externos sin mover o copiar los datos. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce nuevos conectores para orígenes de datos.
+Al aprovechar [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] pueden consultar orígenes de datos externos sin necesidad de mover o copiar los datos. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduce nuevos conectores para orígenes de datos.
 
 ![Virtualización de datos](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -42,15 +55,15 @@ Un clúster de macrodatos de SQL Server incluye un *bloque de almacenamiento* d
 
 ![Data Lake](media/big-data-cluster-overview/data-lake.png)
 
-### <a name="scale-out-data-mart"></a>DataMart de escalabilidad horizontal
+### <a name="scale-out-data-mart"></a>Data mart de escalado horizontal
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] proporcionan almacenamiento y proceso de escalado horizontal para mejorar el rendimiento del análisis de los datos. Se pueden ingerir y distribuir datos procedentes de diversos orígenes en varios nodos de *grupo de datos* como caché para su análisis posterior.
+Los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ofrecen almacenamiento y procesos de escalabilidad horizontal para mejorar el rendimiento del análisis de los datos. Se pueden ingerir y distribuir datos procedentes de diversos orígenes en varios nodos de *grupo de datos* como caché para su análisis posterior.
 
 ![DataMart](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>IA y Machine Learning integradas
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] habilita las tareas de inteligencia artificial y aprendizaje automático en los datos almacenados en grupos de almacenamiento de HDFS y en los grupos de datos. Puede usar Spark y las herramientas de inteligencia artificial integradas en SQL Server, con R, Python, Scala o Java.
+Los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] permiten realizar tareas de aprendizaje automático y de inteligencia artificial en los datos almacenados en bloques de almacenamiento de HDFS y en los grupos de datos. Puede usar Spark y las herramientas de inteligencia artificial integradas en SQL Server, con R, Python, Scala o Java.
 
 ![IA y ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -58,14 +71,13 @@ Un clúster de macrodatos de SQL Server incluye un *bloque de almacenamiento* d
 
 Se ofrece administración y supervisión mediante una combinación de herramientas de línea de comandos, interfaces API, portales y vistas de administración dinámica.
 
-Puede usar Azure Data Studio para realizar diversas tareas en el clúster de macrodatos. Esto es posible gracias a la nueva **extensión SQL Server 2019 (versión preliminar)** . Esta extensión proporciona:
-
+Puede usar [Azure Data Studio](../azure-data-studio/what-is.md) para realizar diversas tareas en el clúster de macrodatos:
 - Fragmentos de código integrados para las tareas de administración comunes.
 - Capacidad de examinar HDFS, cargar archivos, obtener una vista previa de los archivos y crear directorios.
 - Capacidad para crear, abrir y ejecutar cuadernos compatibles con Jupyter.
-- Asistente para la virtualización de datos para simplificar la creación de orígenes de datos externos.
+- Asistente para la virtualización de datos para simplificar la creación de orígenes de datos externos (habilitado por la **Extensión de virtualización de datos**).
 
-## <a id="architecture"></a> Arquitectura
+## <a name="architecture"></a><a id="architecture"></a> Arquitectura
 
 Un clúster de macrodatos SQL Server es un clúster de contenedores de Linux organizados por [Kubernetes](https://kubernetes.io/docs/concepts/).
 
@@ -75,12 +87,12 @@ Kubernetes es un orquestador de contenedores de código abierto, que puede escal
 
 |||
 |:--|:--|
-| **Cluster** | Un clúster de Kubernetes es un conjunto de máquinas, conocidas como nodos. Un nodo controla el clúster y se designa como nodo maestro; los nodos restantes son nodos de trabajo. El maestro de Kubernetes es responsable de distribuir el trabajo entre los nodos de trabajo y de supervisar el estado del clúster. |
+| **Clúster** | Un clúster de Kubernetes es un conjunto de máquinas, conocidas como nodos. Un nodo controla el clúster y se designa como nodo maestro; los nodos restantes son nodos de trabajo. El maestro de Kubernetes es responsable de distribuir el trabajo entre los nodos de trabajo y de supervisar el estado del clúster. |
 | **Node** | Un nodo ejecuta aplicaciones en contenedores. Puede ser una máquina física o una máquina virtual. Un clúster de Kubernetes puede contener una combinación de nodos de máquina física y de máquina virtual. |
 | **Pod** | Un pod es la unidad de implementación atómica de Kubernetes. Un pod es un grupo lógico de uno o más contenedores y recursos asociados necesarios para ejecutar una aplicación. Cada pod se ejecuta en un nodo; un nodo puede ejecutar uno o varios pods. El maestro de Kubernetes asigna pods automáticamente a los nodos del clúster. |
 | &nbsp; ||
 
-En [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes es responsable del estado del [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]; Kubernetes compila y configura los nodos del clúster, asigna pods a los nodos y supervisa el estado del clúster.
+En los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], Kubernetes es responsable del estado de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]; Kubernetes compila y configura los nodos del clúster, asigna pods a los nodos y supervisa el estado del clúster.
 
 ### <a name="big-data-clusters-architecture"></a>Arquitectura de clústeres de macrodatos
 
@@ -88,25 +100,25 @@ En el diagrama siguiente se muestran los componentes de un clúster de macrodato
 
 ![Información general sobre la arquitectura](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Controlador
+### <a name="controller"></a><a id="controlplane"></a> Controlador
 
-El controlador proporciona seguridad y administración para el clúster. Contiene el servicio de control, el almacén de configuración y otros servicios de nivel de clúster como Kibana, Grafana y búsqueda elástica.
+El controlador proporciona seguridad y administración para el clúster. Contiene el servicio de control, el almacén de configuración y otros servicios en el nivel de clúster, como Kibana, Grafana y búsqueda elástica.
 
-### <a id="computeplane"></a> Grupo de proceso
+### <a name="compute-pool"></a><a id="computeplane"></a> Grupo de proceso
 
 El grupo de proceso proporciona recursos de cálculo al clúster. Contiene nodos que ejecutan SQL Server en pods de Linux. Los pods del grupo de proceso se dividen en *instancias de proceso de SQL* para tareas de procesamiento específicas. 
 
-### <a id="dataplane"></a> Grupo de datos
+### <a name="data-pool"></a><a id="dataplane"></a> Grupo de datos
 
 El grupo de datos se usa para el almacenamiento en caché y la persistencia de datos. El grupo de datos consta de uno o varios pods que ejecutan SQL Server en Linux. Se usa para ingerir datos de consultas SQL o trabajos de Spark. Los data marts del clúster de macrodatos de SQL Server se guardan en el grupo de datos. 
 
-### <a name="storage-pool"></a>Grupo de almacenamiento
+### <a name="storage-pool"></a>Bloque de almacenamiento
 
 El grupo de almacenamiento consiste en módulos de almacenamiento que se componen de SQL Server en Linux, Spark y HDFS. Todos los nodos de almacenamiento de un clúster de macrodatos de SQL Server son miembros de un clúster de HDFS.
 
 > [!TIP]
-> Para obtener una visión detallada de la arquitectura y la instalación del clúster de Big Data, consulte [Workshop: arquitectura de Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Para obtener una visión detallada de la arquitectura y la instalación del clúster de macrodatos, consulte [Workshop: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/microsoft/sqlworkshops-bdc).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre cómo implementar clústeres de macrodatos SQL Server, consulte Introducción [a los clústeres de macrodatos de SQL Server](deploy-get-started.md).
+Para más información sobre cómo implementar clústeres de macrodatos de SQL Server, vea [Introducción a clústeres de macrodatos de SQL Server](deploy-get-started.md).

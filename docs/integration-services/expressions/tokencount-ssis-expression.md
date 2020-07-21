@@ -11,10 +11,10 @@ ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0fd9c3a09bf5e901591b2837fcd163534db5f52c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71288147"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expresión de SSIS)
@@ -40,7 +40,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las observaciones siguientes se aplican a la función TOKEN:  
   
 -   La cadena delimitadora puede contener uno o más caracteres delimitadores.  
@@ -54,7 +54,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Puede usar variables y columnas como argumentos de esta expresión.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
- En el ejemplo siguiente, la función TOKENCOUNT devuelve 3 porque la cadena contiene tres tokens: "01", "12" y "2011".  
+ En el ejemplo siguiente, la función TOKENCOUNT devuelve 3 porque la cadena contiene tres tokens: “01”, “12”, “2011”.  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

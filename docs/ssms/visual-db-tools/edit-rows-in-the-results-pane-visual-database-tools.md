@@ -1,10 +1,9 @@
 ---
-title: Editar filas del panel Resultados (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Editar filas en el panel de resultados
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,14 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12e635f0bf6f4810494d04044cba0d30ace6e631
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 48cd8bc534413fa340da8f74fc1412fb2d3a96df
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254611"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247220"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Editar filas del panel Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

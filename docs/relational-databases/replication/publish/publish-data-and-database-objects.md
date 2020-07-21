@@ -1,5 +1,6 @@
 ---
 title: Publicación de datos y objetos de base de datos | Microsoft Docs
+description: En este artículo se resumen las tablas y otros objetos de base de datos que se pueden publicar para la replicación en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -41,16 +42,16 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7c1b58a9396daba1a4b10b4a52fd02eaa30fc642
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769904"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159543"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Al crear una publicación puede elegir las tablas y otros objetos de base de datos que desee publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
   
 |Objeto de base de datos|Replicación de instantáneas y replicación transaccional|Replicación de mezcla|  
@@ -82,7 +83,7 @@ ms.locfileid: "68769904"
 -   Un nombre y una descripción para la publicación.  
   
  Para obtener información acerca de cómo trabajar con publicaciones, vea los siguientes temas:    
--   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)    
+-   [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Creación de una publicación)    
 -   [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md)    
 -   [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)    
 -   [er y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)    
@@ -97,7 +98,7 @@ ms.locfileid: "68769904"
   
 -   [Filtrar datos publicados](../../../relational-databases/replication/publish/filter-published-data.md)    
 -   [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)
--   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
+-   [Opciones de artículos para replicación de mezcla](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)    
 -   [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  Cuando se publica una tabla para replicación, puede especificar qué objetos de esquema se deben copiar al suscriptor, como la integridad referencial declarada (restricciones de clave principal, de referencia y UNIQUE), los índices, los desencadenadores DML de usuario (los desencadenadores DDL no se pueden replicar), las propiedades extendidas y la intercalación. Las propiedades extendidas solo se replican en la sincronización inicial entre el publicador y el suscriptor. Si agrega o modifica una propiedad extendida después de la sincronización inicial, el cambio no se replica.  
@@ -110,7 +111,7 @@ ms.locfileid: "68769904"
 ## <a name="publishing-stored-procedures"></a>Publicar procedimientos almacenados  
  Todos los tipos de replicación permiten replicar definiciones de procedimientos almacenados: CREATE PROCEDURE se copia en cada suscriptor. En el caso de los procedimientos almacenados CLR (Common Language Runtime), también se copia el ensamblado asociado. Los cambios en los procedimientos se replican en los suscriptores, a diferencia de los cambios en los ensamblados asociados.  
   
- Además de replicar la definición de un procedimiento almacenado, la replicación transaccional permite replicar la ejecución de procedimientos almacenados. Esto resulta de utilidad al replicar los resultados de los procedimientos almacenados orientados al mantenimiento que afectan a grandes cantidades de datos. Para obtener más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ Además de replicar la definición de un procedimiento almacenado, la replicación transaccional permite replicar la ejecución de procedimientos almacenados. Esto resulta de utilidad al replicar los resultados de los procedimientos almacenados orientados al mantenimiento que afectan a grandes cantidades de datos. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="publishing-views"></a>Publicar vistas  
  Todos los tipos de replicación permiten replicar vistas: la vista (y el índice asociado, si se trata de una vista indizada) se puede copiar en el suscriptor, pero la tabla base también se debe replicar.  
@@ -182,7 +183,7 @@ ms.locfileid: "68769904"
   
 -   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
- El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<** _artículo_ **>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para obtener más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) (Definir un artículo) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<**_Article_**>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicar datos en suscriptores que se ejecutan en versiones anteriores de SQL Server  
   
@@ -195,7 +196,7 @@ ms.locfileid: "68769904"
   
 -   Si un artículo se publica en una publicación transaccional y en una publicación de combinación, asegúrese de que la propiedad *\@published_in_tran_pub* está establecida en TRUE para el artículo de combinación. Para obtener más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
-     También debe establecer la propiedad *\@published_in_tran_pub* si un artículo forma parte de una suscripción transaccional y está incluido en una publicación de combinación. Si éste es el caso, tenga en cuenta que, de forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura; si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, se puede producir la no convergencia de los datos. Para evitar esta posibilidad, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para obtener más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     También debe establecer la propiedad *\@published_in_tran_pub* si un artículo forma parte de una suscripción transaccional y está incluido en una publicación de combinación. Si éste es el caso, tenga en cuenta que, de forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura; si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, se puede producir la no convergencia de los datos. Para evitar esta posibilidad, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   No es posible publicar un artículo en una publicación de combinación y en una publicación transaccional con suscripciones de actualización en cola.  
   
@@ -236,7 +237,7 @@ ms.locfileid: "68769904"
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Configurar la distribución](../../../relational-databases/replication/configure-distribution.md)   
+ [Configurar distribución](../../../relational-databases/replication/configure-distribution.md)   
  [Initialize a Subscription](../../../relational-databases/replication/initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Crear script para la replicación](../../../relational-databases/replication/scripting-replication.md)   
  [Proteger el publicador](../../../relational-databases/replication/security/secure-the-publisher.md)   

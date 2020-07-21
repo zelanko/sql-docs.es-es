@@ -1,6 +1,6 @@
 ---
-title: Supervisar los registros de errores | Microsoft Docs
-ms.custom: ''
+title: Supervisar los registros de errores
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -25,12 +25,12 @@ ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80cee3338046bcfd1259e68e98cdbb9212eed010
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: f953f91d7def8c0363fe131540640047ef41f889
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010157"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306453"
 ---
 # <a name="monitoring-the-error-logs"></a>Supervisar los registros de errores
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

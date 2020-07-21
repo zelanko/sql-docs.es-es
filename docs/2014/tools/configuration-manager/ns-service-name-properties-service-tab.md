@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;nombre del servicio&gt; propiedades (pestaña servicio) | Microsoft Docs
+title: Propiedades de NS $ &lt; nombre de servicio &gt; (pestaña servicio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3c5d473f8f57a6ecec7084af912940a2687c0cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008021"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propiedades de NS$&lt;nombre de servicio&gt; (pestaña Servicio)
-  Éste es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
+  Este es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
  **Ruta de acceso binaria**  
  Muestra la ubicación de los archivos de programa utilizados por el servicio.  
   
- **Control de errores**  
+ **Control de error**  
  1 indica `SERVICE_ERROR_NORMAL`. Si el servicio no se inicia al iniciar el equipo, el programa de inicio registra el error y muestra un cuadro de mensaje emergente pero continúa con la operación de inicio. Este valor no puede modificarse.  
   
  **Código de salida**  
@@ -33,7 +32,7 @@ ms.locfileid: "63049612"
  **Host Name**  
  Muestra el nombre del equipo o clúster que ejecuta la búsqueda de texto completo.  
   
- **Name**  
+ **Nombre**  
  Indica el nombre para mostrar del servicio.  
   
  **Id. del proceso**  
@@ -45,13 +44,13 @@ ms.locfileid: "63049612"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: Este servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: No se puede iniciar este servicio.  
+-   Deshabilitado: el servicio no se puede iniciar.  
   
- **Estado**  
+ **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  
   
   

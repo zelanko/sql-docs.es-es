@@ -1,5 +1,5 @@
 ---
-title: Solucionar problemas de gráficos (Generador de informes y SSRS) | Microsoft Docs
+title: Solución de problemas de gráficos (Generador de informes) | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a327ffa-3b69-40d6-8015-cc01cfae9161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 365128fe0fd67f1b270481f827eef6871acccb5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 96579c7dadc33c9d8dd74e823cee9cc5ef8e3367
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573749"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77078446"
 ---
 # <a name="troubleshoot-charts-report-builder-and-ssrs"></a>Solucionar problemas de gráficos (Generador de informes y SSRS)
   Estos temas pueden resultar útiles al trabajar con gráficos.  
@@ -26,7 +26,7 @@ ms.locfileid: "65573749"
 
 ## <a name="need-more-help"></a>¿Necesita ayuda?  
    
-  Pruebe:  
+  Pruebe lo siguiente:  
  * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) en Stack Overflow  
  * Registre un problema o sugerencia en [UserVoice de Microsoft SQL Server](https://feedback.azure.com/forums/908035-sql-server).  
   

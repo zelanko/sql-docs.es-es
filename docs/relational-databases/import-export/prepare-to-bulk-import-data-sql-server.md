@@ -1,5 +1,6 @@
 ---
 title: Preparación para importar datos de forma masiva (SQL Server) | Microsoft Docs
+description: Puede usar el comando bcp, la instrucción BULK INSERT o la función OPENROWSET(BULK) para la importación en bloque de datos solo desde un archivo de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 997033c334543e26b5f769d31b1816df707a84bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772304"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararse para importar datos de forma masiva (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Puede usar el comando **bcp** , la instrucción BULK INSERT o la función OPENROWSET(BULK) para la importación masiva de datos solo desde un archivo de datos.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "68063165"
 > [!NOTE]  
 >  No se admite la importación masiva de datos en una tabla remota.  
   
- Utilice las siguientes directrices al importar masivamente datos de un archivo de datos a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Use las siguientes directrices cuando importe en bloque datos de un archivo de datos a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Obtenga los permisos necesarios para la cuenta de usuario.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68063165"
   
 ## <a name="see-also"></a>Consulte también  
  [Importar y exportar datos en bloque con la utilidad bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [Importar datos en bloque mediante BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [Importación en bloque de datos mediante las instrucciones BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   

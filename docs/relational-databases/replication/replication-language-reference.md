@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5206158bf84280fc84f6ad43edb3b09c5fce2796
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0166e4ede7f493869ccc7bed83369131c17e54e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767687"
 ---
 # <a name="replication-language-reference"></a>Referencia del lenguaje de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   La referencia del lenguaje de replicación contiene las siguientes secciones.  
   

@@ -1,7 +1,7 @@
 ---
-title: Mecanismos del tiempo de espera de comprobación de estado de concesión del grupo de disponibilidad
+title: Tiempo de expiración de comprobación de estado de concesión del grupo de disponibilidad
 description: Instrucciones y mecanismos para los tiempos de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/02/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 78db83e29b7fe8671d1cf048275f379592bd0d95
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874359"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75254058"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -63,13 +63,13 @@ Desde la perspectiva del resto del clúster, actualmente no hay ninguna réplica
 
 El tiempo de espera de concesión evita los casos de cerebro dividido frente a errores de comunicación. Incluso si se produce un error en todas las comunicaciones, el proceso de la DLL de recursos finalizará y no podrá actualizar la concesión. Una vez que expire la concesión, pondrá al grupo de disponibilidad sin conexión por su cuenta. La instancia de SQL Server debe tener en cuenta que ya no hospeda la réplica principal antes de que el clúster establezca una nueva. Como el resto del clúster, que es responsable de elegir una nueva réplica principal, no tiene ningún medio para coordinarse con la réplica principal actual, los valores de tiempo de espera garantizan que no se establecerá una nueva réplica principal antes de que la réplica principal actual se ponga a sí misma sin conexión. 
 
-Cuando se produce una conmutación por error en el clúster, la instancia de SQL Server que hospeda la réplica principal anterior debe realizar la transición a un estado de resolución antes de que la nueva réplica principal se ponga en línea. El subproceso de concesión de SQL Server en cualquier punto tiene un período de vida de ½\*LeaseTimeout, porque cada vez que se renueva la concesión, el nuevo período de vida se actualiza a `LeaseInterval` o ½\*LeaseTimeout. Si el servicio de clúster o el host de recursos se detiene o se cierra sin señalar el evento de detención de concesión, el clúster declarará que el nodo principal está inactivo después de `SameSubnetThreshold`\ `SameSubnetDelay` milisegundos. Durante este intervalo de tiempo, la concesión debe expirar para garantizar que el nodo principal esté sin conexión. Dado que el período de vida máximo para el tiempo de espera de concesión es ½\*`LeaseTimeout`, ½\*`LeaseTimeout` debe ser menor que `SameSubnetThreshold`\*`SameSubnetDelay`. 
+Cuando se produce una conmutación por error en el clúster, la instancia de SQL Server que hospeda la réplica principal anterior debe realizar la transición a un estado de resolución antes de que la nueva réplica principal se ponga en línea. El subproceso de concesión de SQL Server en cualquier punto tiene un período de vida de ½\*LeaseTimeout, porque cada vez que se renueva la concesión, el nuevo período de vida se actualiza a `LeaseInterval` o ½\*LeaseTimeout. Si el servicio de clúster o el host de recursos se detiene o se cierra sin señalar el evento de detención de concesión, el clúster declarará que el nodo principal está inactivo después de `SameSubnetThreshold`\ `SameSubnetDelay` milisegundos. Durante este intervalo de tiempo, la concesión debe expirar para garantizar que el nodo principal esté sin conexión. Como el período de vida máximo para el tiempo de expiración de concesión es de ½ \* `LeaseTimeout`, ½ \* `LeaseTimeout` debe ser menor que `SameSubnetThreshold` \* `SameSubnetDelay`. 
 
 `SameSubnetThreshold \<= CrossSubnetThreshold` y `SameSubnetDelay \<= CrossSubnetDelay` deben ser true en todos los clústeres de SQL Server. 
 
 ### <a name="health-check-timeout-operation"></a>Operación de tiempo de espera de comprobación de estado 
 
-El tiempo de espera de comprobación de estado es más flexible porque ningún otro mecanismo de conmutación por error depende directamente de él. El valor predeterminado de 30 segundos establece el intervalo de `sp_server_diagnostics` en 10 segundos, con un valor mínimo de 15 segundos para el tiempo de espera y un intervalo de 5 segundos. Por lo general, el intervalo de actualización de `sp_server_diagnositcs` siempre es 1/3 \* `HealthCheckTimeout`. Cuando la DLL de recursos no recibe un nuevo conjunto de datos de mantenimiento en un intervalo, seguirá usando los datos de mantenimiento del intervalo anterior para determinar el estado de la instancia y el grupo de disponibilidad actuales. Si se aumenta el valor de tiempo de espera de comprobación de mantenimiento, el nodo principal será más tolerante a la presión de la CPU, lo que puede impedir a `sp_server_diagnostics` proporcionar nuevos datos en cada intervalo, aunque dependerá de comprobaciones de estado de datos no actualizados durante más tiempo. Independientemente del valor de tiempo de espera, una vez que se reciben los datos que indican que la réplica no es correcta, la siguiente llamada a `IsAlive` devolverá que la instancia es incorrecta y el servicio de clúster iniciará una conmutación por error. 
+El tiempo de espera de comprobación de estado es más flexible porque ningún otro mecanismo de conmutación por error depende directamente de él. El valor predeterminado de 30 segundos establece el intervalo de `sp_server_diagnostics` en 10 segundos, con un valor mínimo de 15 segundos para el tiempo de espera y un intervalo de 5 segundos. Por lo general, el `sp_server_diagnositcs`intervalo de actualización siempre es de 1/3 \* `HealthCheckTimeout`. Cuando la DLL de recursos no recibe un nuevo conjunto de datos de mantenimiento en un intervalo, seguirá usando los datos de mantenimiento del intervalo anterior para determinar el estado de la instancia y el grupo de disponibilidad actuales. Si se aumenta el valor de tiempo de espera de comprobación de mantenimiento, el nodo principal será más tolerante a la presión de la CPU, lo que puede impedir a `sp_server_diagnostics` proporcionar nuevos datos en cada intervalo, aunque dependerá de comprobaciones de estado de datos no actualizados durante más tiempo. Independientemente del valor de tiempo de espera, una vez que se reciben los datos que indican que la réplica no es correcta, la siguiente llamada a `IsAlive` devolverá que la instancia es incorrecta y el servicio de clúster iniciará una conmutación por error. 
 
 El nivel de condición de error del grupo de disponibilidad cambia las condiciones de error para la comprobación de estado. Para cualquier nivel de error, si `sp_server_diagnostics` notifica que el elemento del grupo de disponibilidad es incorrecto, se producirá un error en la comprobación de estado. Cada nivel hereda todas las condiciones de error de los niveles inferiores. 
 
@@ -130,13 +130,13 @@ El mecanismo de concesión se controla mediante un único valor específico para
 
 Dos valores controlan la comprobación de estado de Always On: FailureConditionLevel y HealthCheckTimeout. FailureConditionLevel indica el nivel de tolerancia a determinadas condiciones de error indicado por `sp_server_diagnostics` y HealthCheckTimeout configura el tiempo que la DLL de recursos puede estar sin recibir una actualización de `sp_server_diagnostics`. El intervalo de actualización de `sp_server_diagnostics` siempre es HealthCheckTimeout/3. 
 
-Para configurar el nivel de condición de conmutación por error, use la opción `FAILURE_CONDITION_LEVEL = <n>` de la instrucción `CREATE` o `ALTER` `AVAILABILITY GROUP`, donde `<n>` es un entero entre 1 y 5. El siguiente comando establece el nivel de condición de error en 1 para el grupo de disponibilidad “AG1”: 
+Para configurar el nivel de condición de conmutación por error, use la opción `FAILURE_CONDITION_LEVEL = <n>` de la instrucción `CREATE` o `ALTER``AVAILABILITY GROUP`, donde `<n>` es un entero entre 1 y 5. El siguiente comando establece el nivel de condición de error en 1 para el grupo de disponibilidad “AG1”: 
 
 ```sql
 ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1); 
 ```
 
-Para configurar el tiempo de espera de comprobación de estado, use la opción `HEALTH_CHECK_TIMEOUT` de las instrucciones `CREATE` o `ALTER` `AVAILABILITY GROUP`. El siguiente comando establece el tiempo de espera de comprobación de estado en 60 000 milisegundos para el grupo de disponibilidad AG1: 
+Para configurar el tiempo de expiración de comprobación de estado, use la opción `HEALTH_CHECK_TIMEOUT` de las instrucciones `CREATE` o `ALTER` `AVAILABILITY GROUP`. El siguiente comando establece el tiempo de espera de comprobación de estado en 60 000 milisegundos para el grupo de disponibilidad AG1: 
 
 
 ```sql
@@ -153,7 +153,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
 
   - SameSubnetDelay \<= CrossSubnetDelay 
   
- | Configuración de tiempo de espera | Finalidad | Entre | Usos | IsAlive y LooksAlive | Causas | Resultado 
+ | Configuración de tiempo de espera | Propósito | Entre las | Usos | IsAlive y LooksAlive | Causas | Resultado 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Tiempo de espera de concesión </br> **Valor predeterminado: 20000** | Evitar cerebro dividido (split-brain) | Principal a clúster </br> (HADR) | [Objetos de eventos de Windows](/windows/desktop/Sync/event-objects)| Usado en ambas | Falta de respuesta del sistema operativo, memoria virtual baja, paginación del espacio de trabajo, generación de volcado de memoria, CPU fijado, WSFC fuera de servicio (pérdida de cuórum) | Recurso de grupo de disponibilidad sin conexión-en línea, conmutación por error |  
  | Tiempo de espera de sesión </br> **Valor predeterminado: 10 000** | Informar de problema de comunicación entre réplica principal y secundaria | Secundaria a principal </br> (HADR) | [Sockets de TCP (mensajes enviados a través del extremo DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | No se usa en ninguna | Comunicación de red, </br> Problemas en la réplica secundaria: fuera de servicio, falta de respuesta del SO, contención de recursos | Secundaria - DESCONECTADA | 

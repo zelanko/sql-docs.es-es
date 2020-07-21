@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02fadc1b87393e02d1ff27f9596d6d7677e23cb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032419"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058614"
 ---
 # <a name="object-dependencies"></a>Dependencias del objeto
   Algunos objetos de base de datos dependen de otros objetos de base de datos. Por ejemplo, las vistas y los procedimientos almacenados dependen de la existencia de tablas que contengan los datos devueltos por la vista o procedimiento. En la página general de **Dependencias del objeto (página General)** del objeto actual se indican los objetos de la base de datos que deben estar presentes para que el objeto funcione correctamente, así como los objetos que dependen del objeto seleccionado. Un objeto que hace referencia a otro objeto en su definición y esa definición se almacena en el catálogo del sistema se denomina una *entidad de referencia*. Un objeto al que se hace referencia por otro objeto se denomina una *entidad a la que se hace referencia*.  
@@ -26,23 +25,23 @@ ms.locfileid: "63032419"
   
  Use este cuadro de diálogo para saber qué dependencias existen antes de cambiar o eliminar el objeto seleccionado.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
- **Objetos que dependen de** _\<objeto seleccionado >_  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+ **Objetos que dependen de**  _\<selected object>_  
  Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y que dependen del objeto seleccionado.  
   
- **Objetos de los cuales** _\<objeto seleccionado >_ **depende**  
+ **Objetos en los que** _\<selected object>_ **depende**      
  Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y de los que depende el objeto seleccionado.  
   
  **Dependencias**  
- Si **objetos que dependen de**  _\<objeto seleccionado >_ es hacer clic en, se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si **objetos de los cuales**  _\<objeto seleccionado >_ **depende** es hacer clic en, se muestra una vista jerárquica de objetos de los que depende el objeto seleccionado .  
+ Si se hace clic en **Objetos que dependen de** _\<selected object>_ , aquí se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en **Objetos de los que** _\<selected object>_ **depende**, se muestra una vista jerárquica objetos de los cuales depende el objeto seleccionado.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del objeto seleccionado en la vista de árbol **Dependencias** anterior.  
   
  **Tipo**  
  Muestra el tipo del objeto seleccionado en la vista de árbol **Dependencias** anterior.  
   
- **Fecha de la última sincronización**  
+ **Hora de última sincronización**  
  > [!NOTE]  
 >  Esta opción solo está disponible en la página **Opciones avanzadas** .  
   
@@ -52,7 +51,7 @@ ms.locfileid: "63032419"
  > [!NOTE]  
 >  Esta opción solo está disponible en la página **General** .  
   
- Muestra el tipo de dependencia entre dos objetos. Puede ser uno de los valores siguientes:  
+ Muestra el tipo de dependencia entre dos objetos. Puede ser uno de los siguientes:  
   
 -   Dependencia enlazada a esquema  
   

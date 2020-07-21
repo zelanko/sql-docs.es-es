@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68016245"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "68016245"
   Estas propiedades aparecen en el panel inferior del Diseñador de tablas. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades cuando la columna esté seleccionada. Las **Propiedades de columna** pueden mostrarse en categorías o en orden alfabético. Muchas propiedades solo aparecen o solo se pueden cambiar por ciertos tipos de datos.  
   
 > [!NOTE]  
->  Si se publica la tabla para replicación, debe modificar el esquema mediante la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o SMO (Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
+>  Si se publica la tabla para replicación, debe modificar el esquema mediante la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o SMO (Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
   
  **General**  
  Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión**y **Escala**.  
@@ -125,7 +125,7 @@ ms.locfileid: "68016245"
  **No disponible para replicación**  
  Indica si los valores de identidad originales se conservan durante la replicación. Para obtener más información sobre la replicación, vea CREATE TABLE. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
- **Replicada**  
+ **Replicado**  
  Muestra si esta columna se replica en otra ubicación.  
   
  **RowGuid**  

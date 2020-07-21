@@ -1,5 +1,5 @@
 ---
-title: Conceptos básicos de ADO | Microsoft Docs
+title: Aspectos básicos de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -8,58 +8,58 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926064"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761301"
 ---
 # <a name="ado-fundamentals"></a>Conceptos básicos de ADO
-ADO ofrece a los desarrolladores un modelo de objetos lógica y eficaz para el acceso mediante programación a, editar y actualizar datos desde una amplia variedad de orígenes de datos a través de las interfaces del sistema de OLE DB. El uso más común de ADO es consultar una o varias tablas en una base de datos relacional, recuperar y mostrar los resultados en una aplicación y permiten a los usuarios quizás realiza y guarda los cambios en los datos. Otras tareas incluyen lo siguiente:  
+ADO ofrece a los desarrolladores un modelo de objetos lógico y eficaz para obtener acceso, editar y actualizar datos mediante programación desde una amplia variedad de orígenes de datos a través de interfaces del sistema OLE DB. El uso más común de ADO es consultar una tabla o tablas en una base de datos relacional, recuperar y mostrar los resultados en una aplicación y, quizás, permitir que los usuarios realicen y guarden los cambios en los datos. Entre otras tareas se incluyen las siguientes:  
   
 -   Consultar una base de datos mediante SQL y mostrar los resultados.  
   
--   Acceso a la información en un almacén de archivos a través de Internet.  
+-   Obtener acceso a la información de un almacén de archivos a través de Internet.  
   
 -   Manipular mensajes y carpetas en un sistema de correo electrónico.  
   
--   Guardar los datos de una base de datos en un archivo XML.  
+-   Guardar datos de una base de datos en un archivo XML.  
   
--   Ejecutar comandos que se describen con XML y recuperar una secuencia XML.  
+-   Ejecutar comandos descritos con XML y recuperar una secuencia XML.  
   
 -   Guardar datos en una secuencia binaria o XML.  
   
--   Permite que un usuario revisar y cambiar datos en tablas de base de datos.  
+-   Permitir a los usuarios revisar y cambiar los datos de las tablas de base de datos.  
   
--   Crear y reutilizar parametrizar los comandos de base de datos.  
+-   Crear y volver a usar comandos de base de datos parametrizados.  
   
 -   Ejecutar procedimientos almacenados.  
   
--   Crear dinámicamente una estructura flexible, que se denomina un **Recordset**, para almacenar, desplácese y manipular los datos.  
+-   Crear dinámicamente una estructura flexible, denominada **conjunto de registros**, para contener, navegar y manipular los datos.  
   
--   Realizar operaciones de base de datos transaccional.  
+-   Realización de operaciones de base de datos transaccionales.  
   
--   Filtrar y ordenar copias locales de información de la base de datos según los criterios de tiempo de ejecución.  
+-   Filtrar y ordenar copias locales de información de base de datos en función de los criterios de tiempo de ejecución.  
   
--   Crear y manipular resultados jerárquicos de bases de datos.  
+-   Crear y manipular los resultados jerárquicos de las bases de datos.  
   
--   Campos de base de datos de enlace para los componentes dependientes de datos.  
+-   Enlazar campos de base de datos a componentes con datos.  
   
--   Crear desconectados remotos **conjuntos de registros**.  
+-   Crear **conjuntos de registros**desconectados remotos.  
   
- ADO expone una amplia variedad de opciones y configuración para proporcionar dicha flexibilidad. Por lo tanto, es importante adoptar un enfoque metódico para aprender a utilizar ADO en una aplicación, desglosando cada uno de sus objetivos en partes manejables.  
+ ADO expone una amplia variedad de opciones y configuraciones para proporcionar esta flexibilidad. Por lo tanto, es importante adoptar un enfoque metódico para aprender a usar ADO en una aplicación, desglosando cada uno de sus objetivos en piezas administrables.  
   
- Cuatro operaciones principales que intervienen en la mayoría de las aplicaciones que usan ADO: obtención de datos, examinar los datos, edición de datos y actualizar datos. Estas operaciones se examinan con más detalle más adelante en esta sección.  
+ Hay cuatro operaciones principales implicadas en la mayoría de las aplicaciones que usan ADO: obtener datos, examinar datos, editar datos y actualizar datos. Estas operaciones se examinan con más detalle más adelante en esta sección.  
   
- Sin embargo, antes de describir estos detalles, se presentará información general sobre el modelo de objetos ADO y una aplicación ADO simple, que está escrita en Microsoft® Visual Basic® y realiza cada una de las cuatro operaciones principales de ADO:  
+ Sin embargo, antes de describir estos detalles, presentaremos información general sobre el modelo de objetos ADO y una sencilla aplicación ADO, que está escrita en Microsoft® Visual Basic® y realiza cada una de las cuatro operaciones principales de ADO:  
   
 -   [Colecciones y los objetos ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData: Una aplicación ADO Simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: una aplicación ADO sencilla](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
--   [Proveedores OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [Proveedores de OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
   
 -   [Errores](../../../ado/guide/data/errors-ado.md)

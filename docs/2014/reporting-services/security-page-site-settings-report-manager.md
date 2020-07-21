@@ -1,5 +1,5 @@
 ---
-title: Página de seguridad (Configuración del sitio. El Administrador de informes) | Microsoft Docs
+title: Página de seguridad (Configuración del sitio. Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102178"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página de seguridad (Configuración del sitio. Administrador de informes)
@@ -33,26 +33,26 @@ ms.locfileid: "66102178"
   
 2.  En la parte superior de la página, haga clic en **Configuración del sitio**. Esto abre la página de propiedades General del sitio.  
   
-3.  Seleccione la pestaña **Seguridad** .  
+3.  Selecciona la pestaña **Seguridad**.  
   
 ## <a name="options"></a>Opciones  
  **Eliminar**  
  Haga clic para eliminar una asignación de roles existente. Antes de hacer clic en **Eliminar**, active la casilla que aparece junto al nombre de grupo o usuario que desea quitar. No puede eliminar una asignación de roles si es la única que permanece. Si se elimina una asignación de roles, no se elimina la cuenta de usuario o grupo ni las definiciones de roles.  
   
  **Nueva asignación de roles**  
- Haga clic para abrir la página Nueva asignación de roles del sistema, que se utiliza para crear asignaciones de roles del sistema adicionales para el sitio del servidor de informes. Para obtener más información, consulte [nuevas asignaciones de roles de sistema: Editar página de asignaciones de roles de sistema &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Haga clic para abrir la página Nueva asignación de roles del sistema, que se utiliza para crear asignaciones de roles del sistema adicionales para el sitio del servidor de informes. Para obtener más información, vea [nuevas asignaciones de roles del sistema: página Editar asignaciones de roles del sistema &#40;Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
- **Editar**  
- Haga clic para abrir la página Editar asignaciones de roles del sistema, que se usa para editar las asignaciones de roles del sistema individuales para el sitio del servidor de informes. Para obtener más información, consulte [nuevas asignaciones de roles de sistema: Editar página de asignaciones de roles de sistema &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ **Edición**  
+ Haga clic para abrir la página Editar asignaciones de roles del sistema, que se usa para editar las asignaciones de roles del sistema individuales para el sitio del servidor de informes. Para obtener más información, vea [nuevas asignaciones de roles del sistema: página Editar asignaciones de roles del sistema &#40;Administrador de informes&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Grupo o usuario**  
  Muestra los grupos y usuarios que forman parte de una asignación de roles existente. Se han definido las asignaciones de roles existentes para la carpeta actual de los grupos y usuarios que se muestran en esta columna. Haga clic en **Editar** junto a un nombre de usuario o grupo para ver o editar los detalles de las asignaciones de roles.  
   
  **Roles**  
- Muestra una o varias definiciones de roles que son parte de una asignación de roles existente. Si se asignan varios roles a una cuenta de usuario o grupo, ese usuario o grupo puede realizar todas las tareas de todos los roles. Para ver el conjunto de tareas que admite cada rol, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. No puede ver, crear, modificar ni eliminar roles en el Administrador de informes. Para obtener instrucciones, consulte [crear, eliminar o modificar un rol &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Muestra una o varias definiciones de roles que son parte de una asignación de roles existente. Si se asignan varios roles a una cuenta de usuario o grupo, ese usuario o grupo puede realizar todas las tareas de todos los roles. Para ver el conjunto de tareas que admite cada rol, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. No puede ver, crear, modificar ni eliminar roles en el Administrador de informes. Para obtener instrucciones, vea [crear, eliminar o modificar un rol &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
-## <a name="see-also"></a>Vea también  
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Consulta (cuadro de diálogo origen de partición) de detalle del enlace (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Detalle del enlace de consultas (cuadro de diálogo origen de la partición) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 697874d4-3f7a-4126-96f5-37cc8e2ee306
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 604a42cc0b3519f1034733e12f72dc1a7c969ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59d2ae1fed9d22366786e21a287a621f08418a5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070570"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539758"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Detalle del enlace de consultas (cuadro de diálogo Origen de la partición) (Analysis Services - Datos multidimensionales)
   Use la opción **Enlace de consultas** del cuadro de diálogo **Origen de la partición** para especificar la consulta que proporciona los datos para la partición. Puede mostrar este panel seleccionando **Enlace de consultas** en la opción **Tipo de enlace** del cuadro de diálogo **Origen de la partición** .  
@@ -26,7 +25,7 @@ ms.locfileid: "66070570"
  **Origen de datos**  
  Seleccione el origen de datos en el que se ejecuta la consulta para proporcionar datos de hechos para la partición.  
   
- **Consulta**  
+ **Consultar**  
  Escriba o modifique la instrucción SQL que se utiliza al recuperar datos de hechos cuando se procesa la partición.  
   
 > [!IMPORTANT]  
@@ -35,7 +34,7 @@ ms.locfileid: "66070570"
  **Comprobación**  
  Haga clic para comprobar que la instrucción en **Consultar** sea una instrucción SQL válida.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo origen de la partición &#40;Analysis Services - datos multidimensionales&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo origen de la partición &#40;Analysis Services de datos multidimensionales&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

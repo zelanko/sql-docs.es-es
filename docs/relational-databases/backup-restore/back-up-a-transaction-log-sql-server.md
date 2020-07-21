@@ -1,5 +1,6 @@
 ---
 title: Copia de seguridad de un registro de transacciones | Microsoft Docs
+description: En este artículo se describe cómo realizar una copia de seguridad de un registro de transacciones en SQL Server mediante SQL Server Management Studio, Transact-SQL o PowerShell.
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
@@ -14,35 +15,35 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 965b6957f9428a2c1d12b307db0a0f2b77ea16e8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 1e01e01544a0417210a8f2e3a40bb10398875c37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719970"
 ---
 # <a name="back-up-a-transaction-log"></a>Copia de seguridad de un registro de transacciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo realizar una copia de seguridad de un registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
 
 ## <a name="before-you-begin"></a>Antes de empezar
-### <a name="Restrictions"></a> Limitaciones y restricciones  
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 La instrucción `BACKUP` no se permite en una transacción explícita o [implícita](../../t-sql/statements/set-implicit-transactions-transact-sql.md). Una transacción explícita es aquella en que se define explícitamente el inicio y el final de la transacción.
 
-### <a name="Recommendations"></a> Recomendaciones  
+### <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 - Si una base de datos usa el [modelo de recuperación](recovery-models-sql-server.md) optimizado para cargas masivas de registros o completo, debe hacer una copia de seguridad del registro de transacciones con suficiente regularidad para proteger los datos e impedir que el [registro de transacciones se llene](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md). De este modo se trunca el registro y se admite la restauración de la base de datos a un momento concreto. 
   
 - De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si se hace una copia de seguridad del registro con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, lo que da lugar a registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro usando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-### <a name="Permissions"></a> Permisos
+### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 De forma predeterminada, los permisos `BACKUP DATABASE` y `BACKUP LOG` necesarios se conceden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**. Compruebe los permisos correctos antes de empezar.
   
  Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. En cambio, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que los problemas con los permisos del archivo físico del dispositivo de copia de seguridad no sean evidentes para usted hasta que intente tener acceso al [recurso físico](backup-devices-sql-server.md) al tratar de restaurar o realizar una copia de seguridad. Por tanto, una vez más, compruebe los permisos antes de empezar.
 
-## <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio
+## <a name="using-sql-server-management-studio"></a>Uso de SQL Server Management Studio
 
 1. Después de conectarse a la instancia apropiada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
@@ -150,7 +151,7 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell
 
 Configure y use el [Proveedor de SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md). Use el cmdlet **Backup-SqlDatabase** y especifique **Log** como valor del parámetro **-BackupAction** .  
   
@@ -160,7 +161,7 @@ En el ejemplo siguiente se crea una copia de seguridad de registro de la base de
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -BackupAction Log  
 ```
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 - [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
@@ -168,7 +169,7 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database <myDatabase> -Bac
   
 - [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

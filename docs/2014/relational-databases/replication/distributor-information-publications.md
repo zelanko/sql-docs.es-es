@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de información del distribuidor de replicación de SQL Server | Microsoft Docs
+title: Cuadro de diálogo Replicación de SQL Server ' información del distribuidor ' | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,15 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010792"
 ---
-# <a name="distributor-information-dialog-box"></a>Cuadro de diálogo de información de distribuidor 
-Este tema proporciona información sobre la **distribuidor** cuadro de diálogo 
+# <a name="distributor-information-dialog-box"></a>Información del distribuidor (cuadro de diálogo) 
+En este tema se proporciona información sobre el cuadro de diálogo **distribuidor** 
 
 ## <a name="publications"></a>Publicaciones
 
@@ -45,7 +44,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
   El nombre del publicador se incluye en la información para las suscripciones de publicaciones de instantáneas. De lo contrario, la funcionalidad y la información proporcionadas en este cuadro de diálogo son las mismas que las de la vista Publicador. Para más información sobre cómo utilizar este cuadro de diálogo, vea [Publisher Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](publisher-information-subscription-watch-list-snapshot.md) (Información del publicador, Lista de supervisión de suscripciones (Publicación de instantáneas, SQL Server 2005 y versiones posteriores)).  
 
 ## <a name="agents"></a>Agentes
-  La pestaña **Agentes** muestra información acerca de los agentes y trabajos de mantenimiento asociados con el publicador y el suscriptor.  
+   La pestaña **Agentes** muestra información acerca de los agentes y trabajos de mantenimiento asociados con el publicador y el suscriptor.  
   
  Los agentes que están disponibles en la pestaña **Agentes** de un distribuidor en la vista Distribuidor incluyen todos los agentes que están disponibles en la pestaña **Agentes** de un publicador. Sin embargo, la pestaña **Agentes** para un distribuidor en la vista Distribuidor también incluye un Agente de distribuidor y un Agente de mezcla.  
   
@@ -59,12 +58,12 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintentar    
+-   Volver a intentar    
 -   En ejecución    
 -   No está en ejecución    
 -   No se ha iniciado nunca  
   
- **publicador**  
+ **Publicador**  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador.  
   
  **Publicación**  
@@ -88,7 +87,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los comandos de inicialización en la base de datos de distribución durante la última ejecución del agente.  
   
- **Latencia**  
+ **Latency**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
  **#Trans**  
@@ -97,7 +96,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  **#Cmds**  
  El número de comandos confirmados en la base de datos de distribución durante la última ejecución del agente. Un comando es lo mismo que un cambio en los datos, como una actualización.  
   
- **Promedio de número de comandos**  
+ **Avg. #Cmds**  
  El promedio de comandos por transacción durante la última ejecución del agente.  
   
 ### <a name="merge-agent"></a>Agente de mezcla  
@@ -105,12 +104,12 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintentar    
+-   Volver a intentar    
 -   En ejecución    
 -   No está en ejecución    
 -   No se ha iniciado nunca  
   
- **publicador**  
+ **Publicador**  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador.  
   
  **Publicación**  
@@ -159,8 +158,8 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  Número de conflictos producidos en el suscriptor durante el proceso de mezcla.  
   
  
-## <a name="see-also"></a>Vea también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Supervisar la replicación](monitoring-replication.md)  
+## <a name="see-also"></a>Consulte también  
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Supervisión de la replicación](monitoring-replication.md)  
   
   

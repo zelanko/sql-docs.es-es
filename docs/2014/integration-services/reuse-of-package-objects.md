@@ -13,15 +13,14 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ab572e7c0793f9d3a673698bf54a0109ad42551c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7612cb2684bb842108068b062e54fbe9dee4327
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62889683"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422932"
 ---
 # <a name="reuse-of-package-objects"></a>Volver a utilizar objetos de paquete
   Funcionalidad frecuente de paquetes que desea volver a usar. Por ejemplo, si creó un conjunto de tareas, es posible que desee volver a utilizar todos los elementos como grupo, o que desee volver a utilizar un único elemento, como por ejemplo, un administrador de conexiones que creó en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] diferente.  
@@ -43,6 +42,6 @@ ms.locfileid: "62889683"
   
 -   [Copiar los elementos de proyectos](../../2014/integration-services/copy-project-items.md)  
   
--   [guardar un paquete como una plantilla de paquete](../../2014/integration-services/save-a-package-as-a-package-template.md)  
+-   [Guardar un paquete como una plantilla de paquete](../../2014/integration-services/save-a-package-as-a-package-template.md)  
   
   

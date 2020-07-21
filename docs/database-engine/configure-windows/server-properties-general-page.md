@@ -1,5 +1,6 @@
 ---
 title: Propiedades del servidor (página General) - SQL Server Management Studio | Microsoft Docs
+description: Familiarícese con las propiedades de solo lectura de SQL Server. Entre los ejemplos se incluyen el nombre del servidor, el sistema operativo, la intercalación y la versión de SQL Server.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,18 +13,18 @@ f1_keywords:
 - sql13.swb.serverproperties.activedirectory.f1
 - sql13.swb.serverproperties.prodinfo.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da2180230cfc80775f07a73dbc41f12ad9e46641
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726652"
 ---
 # <a name="server-properties---general-page"></a>Propiedades del servidor - Página General
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use esta página para ver información de solo lectura sobre la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Use esta página para ver información de solo lectura sobre la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Cuadrícula de propiedades  
  Presenta las propiedades del servidor seleccionado, como el nombre del servidor, el sistema operativo del servidor o el número de procesadores.  
@@ -31,7 +32,7 @@ ms.locfileid: "68025485"
  **Nombre**  
  Muestra el nombre de la instancia del servidor.  
   
- **Product**  
+ **Producto**  
  Muestra la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se está ejecutando en la actualidad.  
   
  **Sistema operativo**  

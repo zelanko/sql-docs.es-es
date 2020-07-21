@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 87aca78d68921b2f90cde68d52eff06df7044a4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: addc83f1c3344059167ac96ef7460f84fca1673d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832897"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433972"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propiedades personalizadas de la tarea de control CDC
   En la tabla siguiente se describen las propiedades personalizadas de la tarea de control CDC. Todas las propiedades son de lectura y escritura.  
@@ -32,8 +31,8 @@ ms.locfileid: "62832897"
 |StateTable|String|Especifica el nombre de la tabla donde se almacena el estado del contexto CDC. Esta tabla debe estar accesible mediante la conexión configurada para este componente. Esta tabla debe incluir las columnas varchar denominadas **name** y **state**. (La columna **state** necesita tener como mínimo 256 caracteres).<br /><br /> Esta propiedad solo se aplica cuando **AutomaticStatePersistence** se establece en **true**.|  
 |CommandTimeout|integer|Este valor indica el tiempo de espera (en segundos) que se usará al comunicarse con la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se utiliza este valor siempre que el tiempo de respuesta de la base de datos sea muy lento y el valor predeterminado (30 segundos) no sea suficiente.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CDC Control Task](cdc-control-task.md)   
- [CDC Control Task Editor](../cdc-control-task-editor.md)  
+ [Editor de la tarea Control CDC](../cdc-control-task-editor.md)  
   
   

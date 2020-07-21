@@ -1,5 +1,5 @@
 ---
-title: Recuperando información de error | Microsoft Docs
+title: Recuperar información sobre errores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e99842237bee512d3489e83be07612715a5a6e1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048070"
 ---
 # <a name="retrieving-error-information"></a>Recuperar información sobre errores
-  En este ejemplo se obtiene información de las diversas interfaces de error expuestas por el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de Native Client.  
+  En este ejemplo se obtiene información de las diversas interfaces de error expuestas por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -216,7 +215,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Errores](errors.md)  
   
   

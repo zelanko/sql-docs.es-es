@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos de la página de propiedades (Administrador de informes) | Microsoft Docs
+title: Página de propiedades orígenes de datos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109420"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Orígenes de datos (página de propiedades del Administrador de informes)
@@ -31,16 +31,16 @@ ms.locfileid: "66109420"
   
 2.  Mantenga el mouse sobre el informe y haga clic en la flecha de lista desplegable.  
   
-3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades **General** correspondiente al informe.  
+3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades **General** del informe.  
   
 4.  Seleccione la pestaña **Orígenes de datos** .  
   
 ## <a name="options"></a>Opciones  
  **Un origen de datos compartido**  
- Especifique un origen de datos compartido para utilizarlo con el informe. Para obtener más información acerca de cómo crear un nuevo origen de datos, vea [crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
+ Especifique un origen de datos compartido para utilizarlo con el informe. Para obtener más información sobre cómo crear un nuevo origen de datos, vea [crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
  **Examinar**  
- Haga clic en **Examinar** para abrir la página Selección de origen de datos, que se utiliza para seleccionar un origen de datos compartido. Para obtener más información, consulte [página de selección de origen de datos &#40;el Administrador de informes&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md).  
+ Haga clic en **Examinar** para abrir la página Selección de origen de datos, que se utiliza para seleccionar un origen de datos compartido. Para obtener más información, vea la [Página selección de origen de datos &#40;Administrador de informes&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md).  
   
  **Un origen de datos personalizado**  
  Especifique cómo se conecta el informe al origen de datos.  
@@ -48,7 +48,7 @@ ms.locfileid: "66109420"
  Para especificar una conexión con un origen de datos personalizado, se utilizan las opciones siguientes.  
   
  **Tipo de origen de datos**  
- Especifique la extensión de procesamiento de datos que se va a utilizar para procesar los datos del origen de datos. Para obtener la lista de extensiones de datos integradas, consulte [orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Es posible que otros fabricantes ofrezcan extensiones de procesamiento de datos adicionales.  
+ Especifique la extensión de procesamiento de datos que se va a utilizar para procesar los datos del origen de datos. Para ver la lista de extensiones de datos integradas, vea [orígenes de datos compatibles con Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md). Es posible que otros fabricantes ofrezcan extensiones de procesamiento de datos adicionales.  
   
  **Cadena de conexión**  
  Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos. En el siguiente ejemplo, se muestra la cadena de conexión utilizada para conectarse a una base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] denominada MyData:  
@@ -57,7 +57,7 @@ ms.locfileid: "66109420"
   
  La cadena de conexión puede configurarse como expresión para que pueda especificar el origen de datos en tiempo de ejecución. Las expresiones de origen de datos se definen en el informe en el Diseñador de informes. Las expresiones de origen de datos no se pueden definir, ver ni modificar en el Administrador de informes. Sin embargo, una expresión de origen de datos se puede reemplazar haciendo clic en **Reemplazar predeterminado** para escribir una cadena de conexión estática. Si desea recuperar la expresión, haga clic en **Volver al valor predeterminado**. El servidor de informes almacena la cadena de conexión original por si necesita restaurarla. Para usar expresiones de origen de datos, debe usar la información de conexión a un origen de datos que se publicó originalmente en el informe. Los orígenes de datos compartidos no admiten el uso de expresiones en la cadena de conexión.  
   
- **Conectar utilizando**  
+ **Conectar mediante**  
  Especifica las opciones que determinan cómo se obtienen las credenciales.  
   
 > [!IMPORTANT]  
@@ -69,7 +69,7 @@ ms.locfileid: "66109420"
  Seleccione **Usar como credenciales de Windows para la conexión al origen de datos** si las credenciales que el usuario suministra son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Credenciales almacenadas de forma segura en el servidor de informes**  
- Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Seleccione esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta con este formato: \<dominio >\\< nombre de usuario\>. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
+ Almacene un nombre de usuario y una contraseña cifrados en la base de datos del servidor de informes. Seleccione esta opción para ejecutar un informe de manera desatendida; por ejemplo, informes iniciados por programaciones o eventos en lugar de una acción del usuario. Si va a usar la seguridad predeterminada, el nombre de usuario debe ser una cuenta de dominio de Windows. Especifique la cuenta con este formato: \<dominio>\\<nombre\>de usuario. La cuenta que especifica debe tener permisos de inicio de sesión local en el equipo que hospeda el origen de datos usado por el informe.  
   
  Active la casilla **Utilizar como credenciales de Windows para la conexión al origen de datos** si las credenciales son las credenciales de autenticación de Windows. No active esta casilla si va a usar la autenticación de la base de datos (por ejemplo, autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
@@ -88,12 +88,12 @@ ms.locfileid: "66109420"
  **No se necesitan credenciales**  
  Especifique que no se necesitan credenciales para obtener acceso al origen de datos. Tenga en cuenta que, si un origen de datos requiere un inicio de sesión de usuario, esta opción no tendrá ningún efecto. Elija esta opción solo si la conexión al origen de datos no requiere credenciales de usuario.  
   
- Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para la implementación del servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes.  Para obtener más información acerca de esta cuenta, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para la implementación del servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes.  Para obtener más información acerca de esta cuenta, vea [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  **Aplicar**  
  Haga clic para guardar los cambios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

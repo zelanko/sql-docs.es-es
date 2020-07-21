@@ -1,5 +1,5 @@
 ---
-title: Establecer las bases de datos definido por el usuario de intercalación coinciden con los del patrón y bases de datos modelo | Microsoft Docs
+title: Establezca la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos maestra y modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c686446f-dae1-4b05-a3df-837b3422988d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b48696fb56c40062d62f04845715170887f84fda
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929180"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>Establecer la intercalación de bases de datos definidas por el usuario para que coincidan con las de las bases de datos modelo y maestra
   Esta regla comprueba si las bases de datos definidas por el usuario se definen utilizando una intercalación de base de datos que es igual a la intercalación de las bases de datos maestra o modelo.  
@@ -29,7 +28,7 @@ ms.locfileid: "62773321"
   
 -   Exporte los datos de la base de datos de usuario e impórtelos en tablas nuevas que tengan la misma intercalación que las bases de datos modelo y maestra.  
   
--   Vuelva a generar las bases de datos del sistema para utilizar una intercalación que coincida con la intercalación de las bases de datos de usuario. Para obtener más información acerca de cómo volver a generar las bases de datos del sistema, consulte [volver a generar las bases de datos del sistema](../relational-databases/databases/system-databases.md).  
+-   Vuelva a generar las bases de datos del sistema para utilizar una intercalación que coincida con la intercalación de las bases de datos de usuario. Para obtener más información acerca de cómo volver a generar las bases de datos del sistema, vea [volver a generar bases de datos del sistema](../relational-databases/databases/system-databases.md).  
   
 -   Modifique cualquier procedimiento almacenado que una las tablas de usuario a las tablas en tempdb para crear las tablas en tempdb utilizando la intercalación de la base de datos de usuario. Para ello, agregue la cláusula `COLLATE database_default` a las definiciones de columna de la tabla temporal, como se muestra en el ejemplo siguiente:  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62773321"
   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Artículo de Microsoft Knowledge Base 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [Artículo 325335 de Microsoft Knowledge base](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [Cómo: Instalar a SQL Server 2008 desde el símbolo del sistema](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [Cómo instalar SQL Server 2008 desde el símbolo del sistema](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Instalar SQL Server con el almacenamiento de recursos compartidos de archivos SMB | Microsoft Docs
+description: En SQL Server, las bases de datos del sistema y las bases de datos de usuario del Motor de base de datos se pueden instalar con el servidor de archivos del Bloque de mensajes del servidor (SMB) como opción de almacenamiento.
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b1d78acdaee97c38536969481c79fc3a94d6c9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990929"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883506"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar SQL Server con el almacenamiento de recursos compartidos de archivos SMB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de datos del sistema (Master, Model, MSDB y TempDB) y las bases de datos de usuario del [!INCLUDE[ssDE](../../includes/ssde-md.md)] se pueden instalar con el servidor de archivos del Bloque de mensajes del servidor (SMB) como opción de almacenamiento. Esto se aplica tanto a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como a las instalaciones de clústeres de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -80,7 +81,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
   
      Para obtener más información sobre el uso de varias opciones de parámetros de línea de comandos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Los distintos sistemas operativos Windows tienen diferentes versiones del protocolo SMB y la versión del protocolo SMB es transparente para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación se muestran las ventajas de las distintas versiones del protocolo SMB con respecto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operativo|Versión del protocolo SMB2|Ventajas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -90,19 +91,19 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluido Server Core|3.0|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluido Server Core|3.2|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red, con SMB multicanal.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA con SMB Direct.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes de servidor, vea [Información general del bloque de mensajes de servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.<br /><br /> Optimizado para E/S pequeñas de lectura/escritura aleatoria comunes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Se activa la Unidad de transmisión máxima (MTU) de forma predeterminada, lo que mejora significativamente el rendimiento en las transferencias secuenciales grandes como el almacenamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la copia de seguridad o restauración de la base de datos.|  
   
-## <a name="security-considerations"></a>Consideraciones relativas a la seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
   
 -   La cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la cuenta de servicio del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben tener permisos de recurso compartido CONTROL TOTAL y permisos NTFS en las carpetas de recursos compartidos SMB. Si se usa un servidor de archivos SMB, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser una cuenta de dominio o una cuenta del sistema. Para obtener más información sobre los permisos NTFS y de uso compartido, vea [Permisos NTFS y de uso compartido en un servidor de archivos](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535).  
   
     > [!NOTE]  
     >  Los permisos de recursos compartidos y los permisos NTFS FULL CONTROL en las carpetas de recursos compartidos SMB deben limitarse a la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los usuarios de windows con roles de servidor de administración.  
   
-     Se recomienda usar una cuenta de dominio como cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la cuenta del sistema se usa como cuenta de servicio, conceda los permisos para la cuenta de equipo con el siguiente formato: \<*nombre_dominio*>\\<*nombre_equipo*>\*$*.  
+     Se recomienda usar una cuenta de dominio como cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la cuenta del sistema se usa como cuenta de servicio, conceda los permisos para la cuenta de equipo en el formato \<*domain_name*>\\<*nombre_de_equipo*>\*$*.  
   
     > [!NOTE]  
     >  Durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es necesario especificar la cuenta de dominio como una cuenta de servicio si el recurso compartido de archivos de SMB se especifica como opción de almacenamiento. Con el recurso compartido de archivos de SMB, la cuenta del sistema solo se puede especificar como una cuenta de servicio después de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
     >   
-    >  Las cuentas virtuales no se pueden autenticar en una ubicación remota. Todas las cuentas virtuales usan el permiso de la cuenta del equipo. Aprovisione la cuenta de equipo con el formato \<*nombre_dominio*>\\<*nombre_equipo*>\*$*.  
+    >  Las cuentas virtuales no se pueden autenticar en una ubicación remota. Todas las cuentas virtuales usan el permiso de la cuenta del equipo. Aprovisione la cuenta de equipo en el formato \<*domain_name*>\\<*nombre_de_equipo*>\*$*.  
   
 -   La cuenta usada para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos CONTROL TOTAL en la carpeta de recurso compartido de archivos de SMB empleada como directorio de datos, o cualquier otra carpeta de datos (directorio de la base de datos de usuario, directorio de registro de la base de datos de usuario, directorio de TempDB, directorio de registro de TempDB, directorio de copia de seguridad) durante la instalación del clúster.  
   
@@ -116,14 +117,14 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
   
     1.  Conceda permisos de lectura y escritura en el recurso compartido de archivo a todos los objetos de equipo del clúster.  
   
-    2.  Establezca la ubicación de los registros de diagnóstico en una ruta de acceso de archivo local. Vea el ejemplo siguiente:  
+    2.  Establezca la ubicación de los registros de diagnóstico en una ruta de acceso de archivo local. Observe el ejemplo siguiente:  
   
         ```sql  
         ALTER SERVER CONFIGURATION  
         SET DIAGNOSTICS LOG PATH = 'C:\logs';  
         ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   

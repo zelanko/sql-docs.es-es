@@ -1,6 +1,7 @@
 ---
-title: Configurar PolyBase para acceder a datos externos en Azure Blob Storage | Microsoft Docs
-ms.date: 04/23/2019
+title: 'Acceso a datos externos: Azure Blob Storage: PolyBase'
+description: En el artículo se usa PolyBase en una instancia de SQL Server con Azure Blob Storage. PolyBase es adecuado para consultas ad hoc de tablas externas y de importación y exportación de datos.
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,12 +9,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81334dbfee970f7ce26ef723a463e10f7349d841
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: eb9e04b48a6eb6894e3ef8f8227d573443934ab4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710654"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80215881"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar PolyBase para acceder a datos externos en Azure Blob Storage
 
@@ -21,7 +23,7 @@ ms.locfileid: "71710654"
 
 En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Azure Blob Storage.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
 
@@ -47,7 +49,7 @@ En primer lugar, configure SQL Server PolyBase para usar Azure Blob Storage.
    - Servicio de movimiento de datos de SQL Server PolyBase  
    - Motor de SQL Server PolyBase  
   
-   ![detener e iniciar los servicios de PolyBase en services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "detener e iniciar los servicios de PolyBase en services.msc")  
+   ![detener e iniciar servicios de PolyBase en services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "detener e iniciar servicios de PolyBase en services.msc")  
   
 ## <a name="configure-an-external-table"></a>Configurar una tabla externa
 

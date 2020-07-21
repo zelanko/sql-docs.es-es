@@ -1,10 +1,9 @@
 ---
-title: Crear consultas UNION (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Crear consultas de UNIÓN
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,14 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04a8206b39ff3138bccbc4ffbbed05972010833a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 23d918da8b938322c478682ea499136d4bf97b05
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264632"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254213"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Crear consultas UNION (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,8 +52,7 @@ La palabra clave UNION permite incluir los resultados de dos instrucciones SELEC
     El Diseñador de consultas da formato a su consulta UNION.  
   
 ## <a name="see-also"></a>Consulte también  
-[Tipos de consultas compatibles (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
-[Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
-  
+[Tipos de consulta admitidos](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)

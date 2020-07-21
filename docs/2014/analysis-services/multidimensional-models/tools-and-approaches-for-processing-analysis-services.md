@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: d2b28ecf29adc8240f76ec9888f9d4cb06dda887
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530939"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547327"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Herramientas y enfoques de procesamiento (Analysis Services)
   El procesamiento es una operación en la que Analysis Services consulta un origen de datos relacional y rellena objetos de Analysis Services utilizando esos datos.  
@@ -46,7 +45,7 @@ ms.locfileid: "69530939"
  El procesamiento es una operación altamente configurable, controlada por un conjunto de opciones de procesamiento que determinan si se produce un procesamiento completo o incremental en el nivel de objeto. Para más información sobre las opciones de procesamiento, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) y [Procesar objetos de Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información sobre el procesamiento de modelos tabulares, vea [procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos &#40;&#41;tabulares](../process-data-ssas-tabular.md).  
+>  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información sobre el procesamiento de modelos tabulares, vea [procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos &#40;&#41;tabular de SSAS ](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Procesar objetos en SQL Server Management Studio  
   
@@ -74,7 +73,7 @@ ms.locfileid: "69530939"
   
 5.  Opcionalmente, haga clic en **Cambiar configuración** para modificar el orden de procesamiento, el comportamiento de procesamiento relativo a tipos de errores concretos y otras opciones de configuración.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
      El cuadro de diálogo Progreso del proceso proporciona el estado actual de cada comando. Si un mensaje de estado aparece truncado, puede hacer clic en **Ver detalles** para leer la totalidad del mismo.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "69530939"
   
 6.  Cuando el procesamiento haya finalizado, haga clic en **Cerrar**.  
   
-##  <a name="bkmk_impactanalysis"></a> Ejecutar el análisis de impacto para identificar las dependencias del objeto y el ámbito de las operaciones  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>Ejecutar el análisis de impacto para identificar las dependencias de objetos y el ámbito de las operaciones  
   
 1.  Antes de procesar un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede analizar el efecto sobre los objetos relacionados haciendo clic en **Análisis de impacto** en uno de los cuadros de diálogo **Procesar objetos** .  
   
@@ -156,7 +155,7 @@ ms.locfileid: "69530939"
   
 3.  Edite la tarea para especificar una conexión con la base de datos, qué objetos se van a procesar y la opción de proceso. Para obtener más información acerca de cómo implementar esta tarea, vea [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procesamiento de objetos del modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

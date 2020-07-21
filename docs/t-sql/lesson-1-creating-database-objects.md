@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa027f58bd673539dd09f118ea1b9433c42c7990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000279"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79198412"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lección 1: Creación y consulta de objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ En esta lección se muestra cómo crear una base de datos, crear una tabla en la
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] se pueden escribir y enviar a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las siguientes maneras:  
   
--   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://go.microsoft.com/fwlink/?linkid=67359).  
+-   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=14630).  
   
 -   Mediante el uso de la [utilidad sqlcmd](../tools/sqlcmd-utility.md).  
   
@@ -39,12 +39,12 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, as
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-Si no tiene acceso a ninguna instancia de SQL Server, seleccione su plataforma en uno de los vínculos siguientes. Si elige la autenticación de SQL, use sus credenciales de inicio de sesión de SQL Server.
+Si no tiene ninguna instancia de SQL Server, cree una. Para ello, seleccione su plataforma en los vínculos siguientes. Si elige la autenticación de SQL, use sus credenciales de inicio de sesión de SQL Server.
 - **Windows**: [Descargar SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [Descargar SQL Server 2017 en Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 ## <a name="create-a-database"></a>Crear una base de datos
-Como muchas instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] , la instrucción CREATE DATABASE tiene un parámetro requerido: el nombre de la base de datos. CREATE DATABASE también tiene muchos parámetros opcionales, como la ubicación de disco donde se desean colocar los archivos de la base de datos. Si se ejecuta CREATE DATABASE sin los parámetros opcionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa los valores predeterminados para muchos de estos parámetros. Este tutorial usa algunos de los parámetros de sintaxis opcionales.   
+Como muchas instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)], la instrucción [`CREATE DATABASE`](statements/create-database-transact-sql.md) tiene un parámetro obligatorio: el nombre de la base de datos. ` CREATE DATABASE` también tiene muchos parámetros opcionales, como la ubicación de disco donde se quieren colocar los archivos de la base de datos. Si se ejecuta `CREATE DATABASE` sin los parámetros opcionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa los valores predeterminados para muchos de estos parámetros.
 
 1.  En una ventana del Editor de consultas, escriba el código siguiente, pero no lo ejecute:  
   
@@ -53,7 +53,7 @@ Como muchas instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] , la instr
     GO  
     ```  
   
-2.  Use el puntero para seleccionar las palabras `CREATE DATABASE`y, a continuación, presione **F1**. Debe abrirse el tema CREATE DATABASE de los Libros en pantalla de SQL Server. Puede usar esta técnica para encontrar la sintaxis completa de CREATE DATABASE y de otras instrucciones que se usan en este tutorial.  
+2.  Use el puntero para seleccionar las palabras `CREATE DATABASE`y, a continuación, presione **F1**. Debe abrirse el tema `CREATE DATABASE` de los Libros en pantalla de SQL Server. Puede usar esta técnica para buscar la sintaxis completa de `CREATE DATABASE` y de otras instrucciones que se usan en este tutorial.  
   
 3.  En el Editor de consultas, presione **F5** para ejecutar la instrucción y crear una base de datos con el nombre `TestData`.  
   
@@ -62,7 +62,8 @@ Al crear una base de datos, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > [!NOTE]  
 > La palabra clave GO separa las instrucciones cuando se envían varias instrucciones en un solo lote. GO es opcional cuando el lote solo contiene una instrucción.  
 
-## <a name="create-a-table"></a>Crear una tabla
+## <a name="create-a-table"></a>Creación de una tabla
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para crear una tabla, debe proporcionar un nombre para ésta además de los nombres y los tipos de datos de cada columna de la tabla. También es recomendable indicar si se permiten valores NULL en cada columna. Para crear una tabla, debe tener el permiso `CREATE TABLE` y el permiso `ALTER SCHEMA` en el esquema que contiene la tabla. El rol fijo de base de datos [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) tiene estos permisos.  
@@ -76,6 +77,7 @@ Para obtener una lista de tipos de datos y vínculos para una descripción de ca
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>Cambie la conexión del Editor de consultas a la base de datos TestData  
+
 En una ventana del Editor de consultas, escriba y ejecute el siguiente código para cambiar la conexión a la base de datos `TestData` .  
   
   ```sql  
@@ -84,14 +86,15 @@ En una ventana del Editor de consultas, escriba y ejecute el siguiente código p
   ```  
   
 ### <a name="create-the-table"></a>Creación de la tabla
-En una ventana del Editor de consultas, escriba y ejecute el siguiente código para crear una tabla sencilla denominada `Products`. Las columnas de la tabla son `ProductID`, `ProductName`, `Price`y `ProductDescription`. La columna `ProductID` es la clave principal de la tabla. `int`, `varchar(25)`, `money`y `text` son todos los tipos de datos. Solo las columnas `Price` y `ProductionDescription` pueden no tener datos cuando se inserta o cambia una fila. Esta instrucción contiene un elemento opcional (`dbo.`) denominado esquema. El esquema es el objeto de base de datos propietario de la tabla. Si es un administrador, `dbo` es el esquema predeterminado. `dbo` hace referencia al propietario de la base de datos.  
+
+En una ventana del Editor de consultas, escriba y ejecute el código siguiente para crear una tabla denominada `Products`. Las columnas de la tabla son `ProductID`, `ProductName`, `Price`y `ProductDescription`. La columna `ProductID` es la clave principal de la tabla. `int`, `varchar(25)`, `money`y `varchar(max)` son todos los tipos de datos. Solo las columnas `Price` y `ProductionDescription` pueden no tener datos cuando se inserta o cambia una fila. Esta instrucción contiene un elemento opcional (`dbo.`) denominado esquema. El esquema es el objeto de base de datos propietario de la tabla. Si es un administrador, `dbo` es el esquema predeterminado. `dbo` hace referencia al propietario de la base de datos.  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
@@ -103,13 +106,13 @@ Ahora que ha creado la tabla **Products** , ya está listo para insertar datos e
 |1|Clamp|12,48|Workbench clamp|  
 |50|Screwdriver|3,17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
-|3000|3mm Bracket|,52||  
+|3000|Corchete de 3 mm|0,52||  
   
 La sintaxis básica es: INSERT, nombre de tabla, lista de columnas, VALUES y, a continuación, una lista de los valores que se van a insertar. Los dos guiones dobles antes de cada línea indican que la línea es un comentario y el compilador ignorará el texto. En este caso, el comentario describe una variación permitida de la sintaxis.  
   
 ### <a name="insert-data-into-a-table"></a>Inserción de datos en una tabla  
   
-1.  Ejecute la instrucción siguiente para insertar una fila en la tabla `Products` que se ha creado en la tarea anterior. Ésta es la sintaxis básica.  
+1.  Ejecute la instrucción siguiente para insertar una fila en la tabla `Products` que se ha creado en la tarea anterior.
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ La sintaxis básica es: INSERT, nombre de tabla, lista de columnas, VALUES y, a 
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > Si la inserción se realiza correctamente, continúe con el paso siguiente.
+   >
+   > Si se produce un error en la inserción, se puede deber a que la tabla `Product` ya tiene una fila con ese id. del producto. Para continuar, elimine todas las filas de la tabla y repita el paso anterior. [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) elimina todas las filas de la tabla. 
+   >
+   > Ejecute el comando siguiente para eliminar todas las filas de la tabla:
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > Después de truncar la tabla, repita el comando `INSERT` en este paso.
+
 2.  La instrucción siguiente muestra cómo se puede cambiar el orden en que se proporcionan los parámetros modificando la situación de `ProductID` y `ProductName` en la lista de campos (entre paréntesis) y en la lista de valores.  
   
    ```sql  
@@ -141,7 +158,7 @@ La sintaxis básica es: INSERT, nombre de tabla, lista de columnas, VALUES y, a 
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ Use la instrucción SELECT para leer los datos de una tabla. La instrucción SEL
   GO  
   ```  
   
-2.  Puede usar un asterisco para seleccionar todas las columnas de la tabla. Esto se suele usar en las consultas ad hoc. Debe proporcionar la lista de columnas en el código permanente de modo que la instrucción devuelva las columnas previstas, incluso si más tarde se agrega una columna nueva a la tabla.  
+2.  Puede usar un asterisco (`*`) para seleccionar todas las columnas de la tabla. El asterisco es para las consultas ad hoc. En el código permanente, proporcione la lista de columnas de modo que la instrucción devuelva las columnas previstas, incluso si más tarde se agrega una columna nueva a la tabla.  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ Para este ejemplo, usará CREATE VIEW para crear una vista que seleccione solo d
   
 ### <a name="create-a-view"></a>Creación de una vista  
   
-Ejecute la instrucción siguiente para crear una vista muy sencilla que ejecuta una instrucción SELECT y devuelve los nombres y los precios de nuestros productos al usuario.  
+Ejecute la instrucción siguiente para crear una vista que ejecuta una instrucción SELECT y devuelve los nombres y los precios de los productos al usuario.  
   
   ```sql  
   CREATE VIEW vw_Names  

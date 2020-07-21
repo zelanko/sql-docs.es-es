@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eb709f6b-64e1-4d0c-a704-290891627dd7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ec61791897011781cbe93776bb58bfdd144bd6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7396b38c70fa39034a4eeaca07292cb619a236fa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978292"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910717"
 ---
 # <a name="geturl-method-javalangstring"></a>Método getURL (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public java.net.URL getURL(java.lang.String s)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto de dirección URL.  
+ Un objeto URL.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getURL especifica este método getURL en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

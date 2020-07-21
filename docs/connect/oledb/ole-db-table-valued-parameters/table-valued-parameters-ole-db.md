@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015273"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parámetros con valores de tabla (OLE DB)
@@ -25,12 +25,12 @@ ms.locfileid: "68015273"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En esta sección se describe la compatibilidad con parámetros con valores de tabla en OLE DB driver for SQL Server. Para obtener información general adicional, consulte [parámetros &#40;con valores de tabla OLE DB driver&#41;for SQL Server](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Para obtener un ejemplo, vea [usar parámetros &#40;con valores de&#41;tabla OLE DB](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  En esta sección se describe la compatibilidad con los parámetros con valores de tabla de OLE DB Driver for SQL Server. Para información general adicional, consulte [Parámetros con valores de tabla &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Para ver un ejemplo, consulte [Uso de parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Actualmente, puede enviar datos de varias filas al servidor como parámetros de un procedimiento con conjuntos de parámetros (el parámetro DBPARAMS en **ICommand::Execute**). Con los conjuntos de parámetros, cada elemento del conjunto se debe enviar al servidor en una solicitud de llamada a procedimiento remoto (RPC) independiente. Los parámetros con valores de tabla proporcionan una funcionalidad similar, pero existe una mejor integración con el servidor. Esto reduce el número de solicitudes RPC y habilita las operaciones basadas en conjunto en el servidor.  
   
- Los parámetros de valores de tabla se admiten en OLE DB controlador para SQL Server como objetos de **conjunto de filas** OLE DB. El consumidor (es decir, la aplicación cliente que usa el controlador OLE DB para SQL Server) puede proporcionar cualquier objeto **Rowset** como un marcador de posición para los parámetros con valores de tabla. Los parámetros con valores de tabla se tratan como otros tipos de parámetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador de OLE DB para SQL Server proporciona interfaces de creación, detección, especificación, enlace y esquema.  
+ Se admiten parámetros con valores de tabla en OLE DB Driver for SQL Server como objetos **Rowset** de OLE DB. El consumidor (es decir, la aplicación cliente que usa el controlador OLE DB para SQL Server) puede proporcionar cualquier objeto **Rowset** como un marcador de posición para los parámetros con valores de tabla. Los parámetros con valores de tabla se tratan como otros tipos de parámetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. OLE DB Driver for SQL Server proporciona interfaces de creación, detección, especificación, enlace y esquema.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

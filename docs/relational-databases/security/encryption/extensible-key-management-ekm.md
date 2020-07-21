@@ -1,5 +1,6 @@
 ---
 title: Administración extensible de claves (EKM) | Microsoft Docs
+description: Obtenga información sobre cómo configurar y usar la Administración extensible de claves y cómo ajustarla a las funcionalidades de cifrado de datos de SQL Server.
 ms.custom: ''
 ms.date: 07/25/2019
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 6421c442c5cbb45b9e076d3353abcbad6217fa53
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148792"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896793"
 ---
 # <a name="extensible-key-management-ekm"></a>Administración extensible de claves (EKM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona las funciones del cifrado de datos junto con la *Administración extensible de claves* (EKM), las cuales usan la *API criptográfica de Microsoft* (MSCAPI) para el cifrado y generación de clave. Las claves de cifrado utilizadas para cifrar datos y claves se crean en contenedores transitorios de claves y se deben exportar desde un proveedor antes de que se almacenen en la base de datos. Este enfoque permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
   
  Con la creciente demanda para cumplir con las leyes y con las políticas de privacidad de datos, las organizaciones están aprovechándose del cifrado como una forma de obtener una solución de "defensa en profundidad". Este enfoque es a menudo poco práctico si solo se utilizan las herramientas de administración del cifrado de base de datos. Los fabricantes de hardware proporcionan productos específicamente diseñados para la administración de claves de la empresa usando *Módulos de seguridad por hardware* (HSM). Los dispositivos HSM almacenan las claves de cifrado en módulos de hardware o de software. Ésta es una solución más segura porque las claves de cifrado no residen junto a los datos de cifrado.  
@@ -90,7 +91,7 @@ GO
 #### <a name="ekm-device-specific-basic-authentication-using-usernamepassword"></a>Autenticación básica específica del dispositivo EKM utilizando el nombre de usuario y contraseña  
  Para aquellos módulos EKM que admitan la autenticación básica usando una combinación de *nombre de usuario/contraseña*, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una autenticación transparente por medio de credenciales. Para obtener más información sobre las credenciales, vea [Credenciales &#40;motor de base de datos&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Se puede crear una credencial para un proveedor de EKM y asignarse a un inicio de sesión (tanto para cuentas Windows como para cuentas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) con el fin de obtener acceso a un módulo EKM en base a un inicio de sesión. El campo *Identify* de la credencial contiene el nombre de usuario; el campo *secret* contiene una contraseña para conectar con un módulo EKM.  
+ Se puede crear una credencial para un proveedor de EKM y asignarse a un inicio de sesión (tanto para cuentas Windows como para cuentas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) con el fin de obtener acceso a un módulo EKM en base a un inicio de sesión. El campo *identity* de la credencial contiene el nombre de usuario; el campo *secret* contiene una contraseña para conectar con un módulo EKM.  
   
  Si no hay ninguna credencial de inicio de sesión asignada para el proveedor de EKM, se utiliza la credencial asignada a la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

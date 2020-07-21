@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 399dd83a531267ada3456ccbe9c71308a7c99b92
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927048"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761693"
 ---
-# <a name="ado-programmers-guide-for-using-ado-objects"></a>Guía del programador de ADO para el uso de objetos ADO
-Esta documentación proporciona información general sobre cómo usar los objetos ADO para trabajar con datos de varios orígenes de datos. En primer lugar, la introducción resume las nuevas características y los requisitos para instalar, usar y redistribuir el componente de ADO. Las secciones siguientes describen el uso de los distintos tipos de objetos ADO. Por último, los apéndices tratan diversos datos proporcionados por Microsoft y proveedores de servicios, los mensajes de error y sugerencias sobre cómo usar ADO en varios lenguajes de programación, además de ejemplos y un glosario.
+# <a name="ado-programmers-guide-for-using-ado-objects"></a>Guía del programador de ADO sobre el uso de objetos ADO
+En esta documentación se proporciona información general sobre cómo utilizar objetos ADO para trabajar con datos de varios orígenes de datos. En primer lugar, la introducción resume las nuevas características y el requisito de instalar, usar y redistribuir el componente de ADO. En las secciones siguientes se describe el uso de los distintos tipos de objetos de ADO. Por último, en los apéndices se describen los distintos proveedores de datos y servicios proporcionados por Microsoft, los mensajes de error y sugerencias sobre cómo usar ADO en varios lenguajes de programación, además de los ejemplos y el glosario.
 
  Esta sección contiene los temas siguientes.
 
@@ -28,7 +28,7 @@ Esta documentación proporciona información general sobre cómo usar los objeto
 
 -   [Objetos de datos ActiveX (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
 
--   [Servicios de datos remotos (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
+-   [Data Services remoto (RDS)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO (multidimensional) (ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 

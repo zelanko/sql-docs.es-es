@@ -11,14 +11,14 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993669"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928030"
 ---
 # <a name="default-php-data-types"></a>Tipos de datos PHP predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,46 +29,46 @@ Cuando se devuelven datos utilizando el controlador PDO_SQLSRV, el tipo de datos
   
 En el resto del contenido de este tema, se describen los tipos de datos predeterminados que utilizan el controlador SQLSRV.  
   
-En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de datos que se recupera del servidor), el tipo de datos PHP predeterminado (el tipo de datos al que se efectúa la conversión) y la codificación predeterminada de secuencias y cadenas. Para obtener información más detallada acerca de cómo especificar los tipos de datos cuando se recuperan datos del servidor, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de datos que se recupera del servidor), el tipo de datos PHP predeterminado (el tipo de datos al que se efectúa la conversión) y la codificación predeterminada de secuencias y cadenas. Para obtener información más detallada acerca de cómo especificar los tipos de datos cuando se recuperan datos del servidor, consulte [ Especificación de los tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 |Tipo de datos de SQL Server|Tipo de datos PHP predeterminado|Codificación predeterminada|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|String|Carácter de 8 bits<sup>1</sup>|  
+|bigint|String|Carácter de 8 bits<sup>1</sup>|  
 |binary|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
-|bit|Integer|Carácter de 8 bits<sup>1</sup>|  
+|bit|Entero|Carácter de 8 bits<sup>1</sup>|  
 |char|String|Carácter de 8 bits<sup>1</sup>|  
-|date<sup>4</sup>|DATETIME|No aplicable|  
-|datetime<sup>4</sup>|DATETIME|No aplicable|  
-|datetime2<sup>4</sup>|DATETIME|No aplicable|  
-|datetimeoffset<sup>4</sup>|DATETIME|No aplicable|  
+|date<sup>4</sup>|Datetime|No aplicable|  
+|datetime<sup>4</sup>|Datetime|No aplicable|  
+|datetime2<sup>4</sup>|Datetime|No aplicable|  
+|datetimeoffset<sup>4</sup>|Datetime|No aplicable|  
 |Decimal|String|Carácter de 8 bits<sup>1</sup>|  
-|FLOAT|float|Carácter de 8 bits<sup>1</sup>|  
+|FLOAT|Float|Carácter de 8 bits<sup>1</sup>|  
 |geography|Stream|Binaria<sup>3</sup>|  
 |geometry|Stream|Binaria<sup>3</sup>|  
 |imagen<sup>5</sup>|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
-|INT|Integer|Carácter de 8 bits<sup>1</sup>|  
+|int|Entero|Carácter de 8 bits<sup>1</sup>|  
 |money|String|Carácter de 8 bits<sup>1</sup>|  
 |NCHAR|String|Carácter de 8 bits<sup>1</sup>|  
 |NUMERIC|String|Carácter de 8 bits<sup>1</sup>|  
 |NVARCHAR|String|Carácter de 8 bits<sup>1</sup>|  
 |nvarchar(MAX)|Stream<sup>2</sup>|Carácter de 8 bits<sup>1</sup>|  
 |ntext<sup>6</sup>|Stream<sup>2</sup>|Carácter de 8 bits<sup>1</sup>|  
-|REAL|float|Carácter de 8 bits<sup>1</sup>|  
-|smalldatetime|DATETIME|Carácter de 8 bits<sup>1</sup>|  
-|SMALLINT|Integer|Carácter de 8 bits<sup>1</sup>|  
+|real|Float|Carácter de 8 bits<sup>1</sup>|  
+|smalldatetime|Datetime|Carácter de 8 bits<sup>1</sup>|  
+|SMALLINT|Entero|Carácter de 8 bits<sup>1</sup>|  
 |SMALLMONEY|String|Carácter de 8 bits<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|Carácter de 8 bits<sup>1</sup>|  
 |texto<sup>8</sup>|Stream<sup>2</sup>|Carácter de 8 bits<sup>1</sup>|  
-|time<sup>4</sup>|DATETIME|No aplicable|  
-|TIMESTAMP|String|Carácter de 8 bits<sup>1</sup>|  
-|TINYINT|Integer|Carácter de 8 bits<sup>1</sup>|  
+|time<sup>4</sup>|Datetime|No aplicable|  
+|timestamp|String|Carácter de 8 bits<sup>1</sup>|  
+|TINYINT|Entero|Carácter de 8 bits<sup>1</sup>|  
 |UDT|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
 |UNIQUEIDENTIFIER|Cadena<sup>9</sup>|Carácter de 8 bits<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
 |varbinary(MAX)|Stream<sup>2</sup>|Binaria<sup>3</sup>|  
 |varchar|String|Carácter de 8 bits<sup>1</sup>|  
 |varchar(MAX)|Stream<sup>2</sup>|Carácter de 8 bits<sup>1</sup>|
-|xml|Stream<sup>2</sup>|Carácter de 8 bits<sup>1</sup>|  
+|Xml|Stream<sup>2</sup>|Carácter de 8 bits<sup>1</sup>|  
   
 
 1.  Los datos se devuelven en caracteres de 8 bits tal y como se especifica en la página de códigos de la configuración regional de Windows del sistema. Los caracteres multibyte, o aquellos que no tengan una correspondencia con esta página de códigos, se sustituyen por un carácter de signo de interrogación de cierre (?) de un solo byte.  
@@ -77,13 +77,13 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
   
 3.  Los datos se devuelven del servidor como una secuencia de bytes sin procesar, sin que se realicen procesos de codificación o traducción.  
 
-4.  Los tipos de datos de fecha y hora se pueden recuperar como cadenas. Para obtener más información, vea [Cómo recuperar el tipo de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
+4.  Los tipos de datos de fecha y hora se pueden recuperar como cadenas. Para más información, vea: [Cómo: Recuperación del tipo de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
 
 5.  Se trata de un tipo heredado que se asigna al tipo varbinary(max).
 
 6. Se trata de un tipo heredado que se asigna al tipo nvarchar(max).
 
-7.  no se admite sql_variant en parámetros bidireccionales o de salida.
+7.  sql_variant no se admite en parámetros de salida o bidireccionales.
 
 8.  Se trata de un tipo heredado que se asigna al tipo varchar(max).  
   
@@ -110,7 +110,7 @@ En el caso de que la compatibilidad del tipo en cuestión sea parcial, no se pod
 ## <a name="see-also"></a>Consulte también  
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Converting Data Types](../../connect/php/converting-data-types.md)
+[Conversión de tipos de datos](../../connect/php/converting-data-types.md)
 
 [Tipos de datos PHP](https://php.net/manual/en/language.types.php)
 

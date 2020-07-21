@@ -1,5 +1,5 @@
 ---
-title: 'Jet: Combinaciones externas | Microsoft Docs'
+title: 'Jet: combinaciones externas | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL grammar [ODBC], outer join clause
 - outer join clauses [ODBC]
 ms.assetid: 02e0394e-ddd7-47ae-9180-b4d8a3b648ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8ab2c4f7e66338c792fb62f9192cf312c5d19e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 173f785dae601ad733aa73eb536e5f410d9a10d0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085477"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299945"
 ---
 # <a name="jet-outer-joins"></a>Jet: Combinaciones externas
-Una instrucción SELECT puede contener una lista de cláusulas OUTER JOIN. Se admiten combinaciones externas anidadas. Para obtener más información sobre combinaciones externas, consulte el *Guía del programador del motor de base de datos Jet de Microsoft*.
+Una instrucción SELECT puede contener una lista de cláusulas de combinación externa. Se admiten las combinaciones externas anidadas. Para obtener más información acerca de las combinaciones externas, vea la *Guía del programador de Microsoft Jet motor de base de datos*.

@@ -15,18 +15,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108639"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
   La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  
   
- **Modo nativo:** En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo nativo, la base de datos del servidor de informes consta realmente de dos bases de datos que tienen los nombres predeterminados "ReportServer y ReportServerTempDB".  
+ **Modo nativo:** En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] el modo nativo, la base de datos del servidor de informes se compone en realidad de dos bases de datos que tienen nombres predeterminados "ReportServer y ReportServerTempDB".  
   
- **Modo SharePoint:** En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la base de datos del servidor de informes de modo de SharePoint es realmente una colección de bases de datos que se crea para cada instancia de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicación de servicio.  
+ **Modo de SharePoint:** En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] el modo de SharePoint, la base de datos del servidor de informes es realmente una colección de bases de datos que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se crea para cada instancia de la aplicación de servicio.  
   
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Formas de actualizar una base de datos del servidor de informes en modo nativo  
  En la lista siguiente se identifican las condiciones en las que se actualiza una base de datos del servidor de informes:  
@@ -48,12 +48,12 @@ ms.locfileid: "66108639"
   
 2.  Los descriptores de seguridad se actualizan la primera vez que se usa la base de datos del servidor de informes después de haber actualizado el esquema.  
   
-3.  Los informes publicados y las instantáneas de informes compilados se actualizan la primera vez que se utilizan. Para obtener más información, vea [Upgrade Reports](upgrade-reports.md).  
+3.  Los informes publicados y las instantáneas de informes compilados se actualizan la primera vez que se utilizan. Para más información, consulte [Upgrade Reports](upgrade-reports.md).  
   
  Además de la base de datos del servidor de informes, un servidor de informes utiliza también una base de datos temporal. La base de datos temporal se actualiza automáticamente al actualizar la base de datos del servidor de informes.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Permisos necesarios para actualizar una base de datos del servidor de informes  
- Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
+ Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin**de** en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
   
  Sin embargo, si no tiene permiso **sysadmin** para la base de datos del equipo remoto, se rechazará la conexión y aparecerá un error que indica lo siguiente:  
   
@@ -64,11 +64,11 @@ ms.locfileid: "66108639"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Para actualizar una base de datos en modo nativo con scripts  
  Puede utilizar scripts de WMI para actualizar una base de datos del servidor de informes. Para obtener más información, vea [Método GenerateDatabaseUpgradeScript &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Asistente para la base de datos cambiar &#40;modo nativo de SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
- [Actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md)   
+ [Crear una base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Asistente para cambiar base de datos &#40;el modo nativo de SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [Actualización y migración de Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

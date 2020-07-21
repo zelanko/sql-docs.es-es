@@ -11,21 +11,20 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b843710b9418cfd3f40411e49a30a1c23b7b8113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62467588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039125"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
   Los datos grandes pueden enlazarse o recuperarse mediante la interfaz `ISequentialStream`. En el caso de las columnas enlazadas, la marca de estado DBSTATUS_S_TRUNCATED indica que se truncan los datos.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Para capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream  
   
@@ -37,9 +36,9 @@ ms.locfileid: "62467588"
   
     -   `IRow::Open()` puede utilizarse para abrir una interfaz `ISequentialStream` en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (`IStream` o `ISequentialStream` puede usarse a para leer los datos de la columna).  
   
-    -   Si `IRow::GetColumns()` se usa, la **pData** elemento de la estructura DBCOLUMNACCESS se establece para que apunte a un objeto de secuencia.  
+    -   Si `IRow::GetColumns()` se usa, el elemento **pdata** de la estructura DBCOLUMNACCESS se establece de forma que apunte a un objeto de flujo.  
   
-4.  Use **ISequentialStream::Read()** repetidamente para leer el número de bytes especificado en el búfer del consumidor.  
+4.  Use repetidamente **ISequentialStream::Read()** para leer el número de bytes especificado en el búfer del consumidor.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo capturar una sola fila con IRow. En este ejemplo se recupera una columna a la vez de la fila. En este ejemplo se ilustra el uso de IRow::Open() y de IRow::GetColumns(). Para leer los datos de la columna, en el ejemplo se usa ISequentialStream::Read.  
@@ -669,7 +668,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de OLE DB](ole-db-how-to-topics.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Agrupar cambios en filas relacionadas con registros lógicos | Microsoft Docs
-ms.custom: ''
+title: Agrupación de cambios en filas relacionadas con registros lógicos
+description: Obtenga información sobre cómo realizar cambios en las filas relacionadas como una unidad con replicación de combinación en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 653698d6bb6699d5434d2bfd10b21ccd93aaefa1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033249"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882480"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar cambios en filas relacionadas con registros lógicos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -86,7 +87,7 @@ ms.locfileid: "68033249"
   
     -   **text** y **ntext**  
   
-    -   **imagen**  
+    -   **image**  
   
     -   **XML**  
   
@@ -98,7 +99,7 @@ ms.locfileid: "68033249"
   
 -   No se admite la resolución de conflictos personalizada con controladores de lógica de negocios o solucionadores personalizados para los artículos incluidos en un registro lógico.  
   
--   Si se utilizan registros lógicos en una publicación que incluye filtros con parámetros, debe inicializar cada suscripción con una instantánea para su partición. Si inicializa un suscriptor con otro método, se producirá un error en el Agente de mezcla. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+-   Si se utilizan registros lógicos en una publicación que incluye filtros con parámetros, debe inicializar cada suscripción con una instantánea para su partición. Si inicializa un suscriptor con otro método, se producirá un error en el Agente de mezcla. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   

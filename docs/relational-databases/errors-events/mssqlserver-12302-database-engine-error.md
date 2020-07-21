@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: c1ab574c-c277-4ba7-ab82-f0d09f54a5d0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aac4cf05bc7569614fcaaa67e3bfbca6df1bb110
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 60b466125a5965825aa4e2a87724192d9ea2b59e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781182"
 ---
-# <a name="mssqlserver12302"></a>MSSQLSERVER_12302
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_12302"></a>MSSQLSERVER_12302
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12302|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12302|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_COMPUTED_COLUMNS|  
 |Texto del mensaje|No se admite la actualización de columnas que forman parte de la restricción PRIMARY KEY con '*construct*'.|  

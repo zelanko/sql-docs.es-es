@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: b3df27d1211807f1863ac40859a833d570191c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716605"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vistas de esquema de información del sistema (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Una vista de esquema de información es uno de los diversos métodos que proporciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obtener metadatos. Las vistas de esquema de información proporcionan una vista interna e independiente de las tablas del sistema de los metadatos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las vistas de esquema de información permiten que las aplicaciones funcionen correctamente aunque se hayan realizado cambios significativos en las tablas del sistema subyacentes. Las vistas de esquema de información incluidas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cumplen la definición del estándar ISO para INFORMATION_SCHEMA.
 
@@ -36,10 +36,10 @@ Una vista de esquema de información es uno de los diversos métodos que proporc
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la convención de nomenclatura de tres partes cuando se hace referencia al servidor actual. El estándar ISO también admite la convención de nomenclatura de tres partes. Sin embargo, los nombres utilizados en ambas convenciones de nomenclatura son diferentes. Las vistas de esquema de información se definen en un esquema especial llamado INFORMATION_SCHEMA. Este esquema se incluye en cada base de datos. Cada vista de esquema de información contiene metadatos para todos los objetos de datos almacenados en esa base de datos en concreto. La siguiente tabla muestra las relaciones existentes entre los nombres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los nombres estándar de SQL.
 
-|Nombre del SQL Server|Se asigna a este nombre estándar equivalente de SQL|
+|Nombre de servidor SQL|Se asigna a este nombre estándar equivalente de SQL|
 |---------------------|-----------------------------------------------|
-|Base de datos|Catálogo|
-|Esquema|Esquema|
+|Capa|Catálogo|
+|Schema|Schema|
 |Object|Object|
 |tipo de datos definido por el usuario|Dominio|
 
@@ -56,7 +56,7 @@ Esta asignación entre convenciones de nomenclaturas se aplica a las siguientes 
 |[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABLAS](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|
 |[DOMINIOS](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|
 |[KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)|[VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)|
-|[PARÁMETROS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
+|[PARÁMETROS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VISTAS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|
 
 Además, algunas vistas contienen referencias a diferentes clases de datos, como los datos de caracteres o los datos binarios.
 
@@ -68,8 +68,8 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-- [Vistas &#40;del sistema TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [Vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
 - [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
 - [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

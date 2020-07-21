@@ -1,5 +1,5 @@
 ---
-title: Usar la autenticación NTLM para conectarse a SQL Server | Microsoft Docs
+title: Empleo de autenticación NTLM para conectar con SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -13,32 +13,32 @@ author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
 ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026100"
 ---
-# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usar la autenticación NTLM para conectarse a SQL Server
+# <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Empleo de autenticación NTLM para conectar con SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Permite que una aplicación use la propiedad de conexión **authenticationScheme** para indicar que desea conectarse a una base de datos mediante la autenticación NTLM v2. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 
 
-Las siguientes propiedades también se usan para la autenticación NTLM:
+También se usan las siguientes propiedades para la autenticación NTLM:
 
-- **dominio = nombreDeDominio** opta
-- **usuario = nombre de usuario**
+- **domain = domainName** (opcional)
+- **user = userName**
 - **password = contraseña**
 - **integratedSecurity = true**
 
-Aparte de **dominio**, las demás propiedades son obligatorias, el controlador producirá un error si faltan cuando se utiliza la propiedad AuthenticationScheme de **NTLM** . 
+Salvo **domain**, las otras propiedades son obligatorias. El controlador generará un error si falta alguna al usarse la propiedad authenticationScheme **NTLM**. 
 
-Para obtener más información sobre las propiedades de conexión, vea [establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md). Para obtener más información sobre el protocolo de autenticación NTLM de Microsoft, consulte [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
+Para más información sobre las propiedades de conexión, consulte [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md). Para más información sobre el protocolo de autenticación NTLM de Microsoft, consulte [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
-Consulte [seguridad de red: nivel de autenticación de LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para obtener una descripción de la configuración de SQL Server, que controla el comportamiento de la autenticación NTLM. 
+Consulte [Seguridad de red: nivel de autenticación de LAN Manager](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) para ver una descripción de la configuración de SQL Server, que controla el comportamiento de la autenticación NTLM. 
 
 ## <a name="logging"></a>Registro
 
@@ -46,7 +46,7 @@ Se ha agregado un nuevo registrador para admitir la autenticación NTLM: com.mic
 
 ## <a name="datasource"></a>DataSource
 
-Cuando se usa un origen de orígenes para crear conexiones, las propiedades de NTLM se pueden establecer mediante programación con **setAuthenticationScheme**, **setDomain**y, opcionalmente, **setServerSpn**.
+Al usar un origen de datos para crear conexiones, las propiedades de NTLM se pueden establecer mediante programación con **setAuthenticationScheme**, **setDomain**, y (opcionalmente) **setServerSpn**.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -72,9 +72,9 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Un nombre principal de servicio (SPN) es el nombre por el que un cliente identifica de forma unívoca una instancia de un servicio.
 
-Puede especificar el SPN con la propiedad de conexión **serverSpn** o dejar que el controlador lo genere automáticamente (el valor predeterminado). Esta propiedad tiene el formato "MSSQLSvc/fqdn:port\@REALM", donde fqdn es el nombre de dominio completo, port es el número de puerto y REALM es el dominio de SQL Server en letras mayúsculas. La parte del dominio Kerberos de esta propiedad es opcional, ya que el dominio Kerberos predeterminado es el mismo que el del servidor.
+Puede especificar el SPN con la propiedad de conexión **serverSpn** o dejar que el controlador lo genere automáticamente (el valor predeterminado). Esta propiedad es en forma de: "MSSQLSvc/fqdn:port\@REALM" donde fqdn es el nombre de dominio completo, port es el número de puerto y el REALM es el dominio Kerberos de SQL Server en letras mayúsculas. La parte correspondiente al dominio Kerberos de esta propiedad es opcional, ya que el dominio Kerberos predeterminado es el mismo que el dominio Kerberos del servidor.
 
-Por ejemplo, el SPN podría tener el siguiente aspecto: "MSSQLSvc/some-Server. zzz. Corp. contoso. com: 1433"
+Por ejemplo, el SPN podría ser: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 
 Para obtener más información sobre los nombres de entidad de seguridad de servicio (SPN), vea:
 
@@ -83,25 +83,25 @@ Para obtener más información sobre los nombres de entidad de seguridad de serv
 > [!NOTE]  
 > El atributo de conexión serverSpn solo es compatible con Microsoft JDBC Driver 4.2 y superior.
 
-> Antes de la versión 6,2 del controlador JDBC, tendría que establecer explícitamente el valor de **serverSpn**. A partir de la versión 6,2, el controlador podrá compilar el **serverSpn** de forma predeterminada, aunque también puede usar **serverSpn** explícitamente.
+> Antes de la versión 6.2 del controlador JDBC, debe establecer **serverSpn** explícitamente. A partir de la versión 6.2, el controlador podrá compilar **serverSpn** de forma predeterminada, aunque también se puede usar **serverSpn** explícitamente.
 
 ## <a name="security-risks"></a>Riesgos de seguridad
 
-El protocolo NTLM es un protocolo de autenticación antiguo con diversas vulnerabilidades, que suponen un riesgo para la seguridad. Se basa en un esquema criptográfico relativamente débil y es vulnerable a varios ataques. Se reemplaza con Kerberos, que es mucho más seguro y recomendado. La autenticación NTLM solo debe usarse en un entorno de confianza seguro o cuando no se puede usar Kerberos.
+El protocolo NTLM es un protocolo de autenticación antiguo con diversas vulnerabilidades, que suponen un riesgo de seguridad. Se basa en un esquema criptográfico relativamente débil y es vulnerable a distintos ataques. Se reemplaza por Kerberos, que es mucho más seguro y recomendado. La autenticación NTLM solo debe usarse en un entorno de confianza seguro o en caso de que no se pueda utilizar Kerberos.
 
-El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] solo admite NTLM v2, que tiene algunas mejoras de seguridad sobre el protocolo v1 original. It'ss también se recomienda para habilitar la protección ampliada o usar el cifrado SSL para mejorar la seguridad. 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] solo admite NTLM v2, que cuenta con algunas mejoras de seguridad con respecto al protocolo v1 original. También se recomienda habilitar la protección ampliada o usar el cifrado SSL para aumentar la seguridad. 
 
-Para obtener más información sobre cómo habilitar la protección ampliada y, consulte:
+Para obtener más información sobre cómo habilitar la protección ampliada, consulte:
 
 - [Conectar al motor de base de datos con protección ampliada](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)
 
-Para obtener más información sobre cómo conectarse con el cifrado SSL, vea:
+Para obtener más información sobre cómo conectarse con el cifrado SSL, consulte:
 
 - [Conexión con cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
 > En la versión 7,4, no **se** admite la habilitación de la protección ampliada y el cifrado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

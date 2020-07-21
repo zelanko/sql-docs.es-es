@@ -1,5 +1,6 @@
 ---
 title: Movimiento de un UCP desde una instancia de SQL Server a otra (utilidad de SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo usar SQL Server Management Studio para trasladar un punto de control de la utilidad (UCP) de una instancia de SQL Server a otra.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,28 +11,28 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4eef85ed3e12c5ba25d5ba778c83914dfb69c245
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115391"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784072"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Mover un UCP desde una instancia de SQL Server a otra (utilidad de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo mover un punto de control de la utilidad (UCP) de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="move-a-ucp-from-one-instance-of-sql-server-to-another"></a>Mover un UCP desde una instancia de SQL Server a otra.  
   
-1.  Cree un nuevo UCP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que será la nueva instancia del host del UCP. Para obtener más información, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
+1.  Cree un nuevo UCP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que será la nueva instancia del host del UCP. Para obtener más información, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-2.  Si se ha establecido la configuración de la directiva no predeterminada para alguna de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en su utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tome nota de los umbrales de la directiva, de forma que pueda restablecerlos en el UCP nuevo. Las directivas predeterminadas se aplicarán cuando se agreguen las instancias al UCP nuevo. Si las directivas predeterminadas están en vigor, la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Global** en la columna **Tipo de directiva** .  
+2.  Si se ha establecido la configuración de la directiva no predeterminada para alguna de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en su utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tome nota de los umbrales de la directiva, de forma que pueda restablecerlos en el UCP nuevo. Las directivas predeterminadas se aplicarán cuando se agreguen las instancias al UCP nuevo. Si las directivas predeterminadas están en vigor, la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Global** en la columna **Tipo de directiva** .  
   
 3.  Quite todas las instancias administradas del UCP anterior. Para obtener más información, vea [Quitar una instancia de SQL Server de la Utilidad de SQL Server](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-4.  Haga una copia de seguridad del almacén de administración de datos de la utilidad (UMDW) del UCP anterior. El nombre de archivo es Sysutility_mdw_\<GUID>_DATA y la ubicación predeterminada de la base de datos es \<unidadDelSistema>:\Archivos de programa\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, donde \<unidadDelSistema> es, por lo general, la unidad C:\. Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
+4.  Haga una copia de seguridad del almacén de administración de datos de la utilidad (UMDW) del UCP anterior. El nombre de archivo es Sysutility_mdw_\<GUID>_DATA y la ubicación predeterminada de la base de datos es \<System drive>:\Archivos de programa\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, donde \<System drive> es, por lo general, la unidad C:\. Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   
 5.  Restaure la copia de seguridad del UMDW en el nuevo UCP. Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md).  
   

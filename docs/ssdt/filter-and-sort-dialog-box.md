@@ -1,25 +1,26 @@
 ---
-title: Cuadro de diálogo Filtrar y ordenar | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Cuadro de diálogo Filtrar y ordenar
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datafilterdialog.dialog
 ms.assetid: f81ce28b-eaad-4c47-9efd-8f23f0f25870
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d33257f0293e90682775f11fd4ef62da74e9524e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: b9e275ac7dac2cdb21736f6e9cf9390eaca31ca3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912788"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241635"
 ---
 # <a name="filter-and-sort-dialog-box"></a>Cuadro de diálogo Filtrar y ordenar
+
 En el Explorador de objetos de SQL Server, puede hacer clic con el botón derecho en una tabla o vista y seleccionar **Ver datos** (para obtener más información, consulte [Cómo: Ver y editar datos de una tabla](../ssdt/how-to-view-and-edit-data-in-a-table.md)). A partir de la versión de marzo de 2014 de SQL Server Data Tools, el **Editor de datos** tiene un botón de ordenación y filtrado en la barra de herramientas. Puede modificar los datos que se muestran en una tabla o vista.  
   
 En el cuadro de diálogo **Filtrar y ordenar** puede especificar qué datos se mostrarán en el **Editor de datos**:  

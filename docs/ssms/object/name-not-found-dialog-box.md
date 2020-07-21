@@ -1,6 +1,6 @@
 ---
-title: Cuadro de diálogo Nombre no encontrado | Microsoft Docs
-ms.custom: ''
+title: Nombre no encontrado, cuadro de diálogo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264068"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75257171"
 ---
-# <a name="name-not-found-dialog-box"></a>Nombre no encontrado (cuadro de diálogo)
+# <a name="name-not-found-dialog-box"></a>Nombre no encontrado, cuadro de diálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 No se ha podido encontrar uno o varios nombres de objetos en el cuadro de diálogo. Seleccione una opción para continuar.  
   
@@ -38,6 +38,6 @@ Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tipos d
 **Escriba el nombre de objeto**  
 Contiene el nombre del objeto que no se ha encontrado. Corrija el nombre del objeto o escriba un nuevo nombre.  
   
-**Quitar** *<object name>* **de la selección**  
+**Quite** *<object name>* **de la selección**  
 Seleccione esta opción para cerrar el cuadro de diálogo **Nombre no encontrado** y quitar el elemento del cuadro de diálogo **Seleccionar objetos** .  
   

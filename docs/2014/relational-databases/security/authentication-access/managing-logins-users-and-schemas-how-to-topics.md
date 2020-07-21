@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7427c05643a8619a5913f568ec50fb7ecf4ae34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016250"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Temas de procedimientos de la administración de inicios de sesión, usuarios y esquemas
   Esta página proporciona vínculos a temas que muestran cómo administrar inicios de sesión, usuarios de base de datos y esquemas de base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y cómo unir un rol y conceder permisos a una entidad de seguridad.  
@@ -28,13 +27,13 @@ ms.locfileid: "63011497"
   
 -   [Crear un usuario de base de datos](create-a-database-user.md)  
   
--   [Crear un esquema de la base de datos](create-a-database-schema.md)  
+-   [Crear un esquema de base de datos](create-a-database-schema.md)  
   
--   [Combinar un rol](join-a-role.md)  
+-   [Unirse a un rol](join-a-role.md)  
   
 -   [Conceder un permiso a una entidad de seguridad](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](principals-database-engine.md)   
  [Proteger SQL Server](../securing-sql-server.md)  
   

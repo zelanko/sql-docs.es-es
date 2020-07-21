@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 428127147d00885dc379752e97154e8eabad54d1
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954686"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924205"
 ---
 # <a name="executeupdate-method-javalangstring"></a>Método executeUpdate (java.lang.String)
 
@@ -43,7 +43,7 @@ Un valor **int** que indica el número de filas afectadas o 0 si se usa una inst
 ## <a name="exceptions"></a>Excepciones
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 El método executeUpdate especifica este método executeUpdate en la interfaz java.sql.PreparedStatement.
 
 Si se llama a este método se producirá una excepción, ya que la instrucción SQL para el objeto SQLServerPreparedStatement se especificó cuando se creó el objeto.

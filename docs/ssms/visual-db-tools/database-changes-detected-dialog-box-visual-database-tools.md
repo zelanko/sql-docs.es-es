@@ -1,10 +1,9 @@
 ---
-title: Se han detectado cambios en la base de datos (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Se han detectado cambios en la base de datos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +13,14 @@ f1_keywords:
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f1927d25ebbb5e93dc8ea94eb5ce4895ada000b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: b3944c7fa09ba71ea79eef976bab8ad4e88a56ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263877"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254698"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Se han detectado cambios en la base de datos (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

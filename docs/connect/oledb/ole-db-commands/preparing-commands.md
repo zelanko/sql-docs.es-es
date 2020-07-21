@@ -1,6 +1,6 @@
 ---
-title: Preparando comandos | Microsoft Docs
-description: Preparación de comandos con OLE DB controlador para SQL Server
+title: Preparar comandos | Microsoft Docs
+description: Preparar comandos mediante OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68016048"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
@@ -29,7 +29,7 @@ ms.locfileid: "68016048"
 
   El controlador OLE DB para SQL Server admite la preparación de comandos para la ejecución múltiple y optimizada de un único comando; en cambio, la preparación de comandos genera una sobrecarga y no es necesario que un consumidor prepare un comando para ejecutarlo más de una vez. En general, un comando debería prepararse si va a ejecutarse más de tres veces.  
   
- Por razones de rendimiento, la preparación del comando se difiere hasta que se ejecuta el comando. Éste es el comportamiento predeterminado. Cualquier error que se produzca en el comando que se está preparando no se dará a conocer hasta que el comando se ejecute o hasta que se realice una operación de metapropiedad. Establecer la propiedad SSPROP_DEFERPREPARE de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en FALSE puede desactivar este comportamiento predeterminado.  
+ Por razones de rendimiento, la preparación del comando se difiere hasta que se ejecuta el comando. Este es el comportamiento predeterminado. Cualquier error que se produzca en el comando que se está preparando no se dará a conocer hasta que el comando se ejecute o hasta que se realice una operación de metapropiedad. Establecer la propiedad SSPROP_DEFERPREPARE de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en FALSE puede desactivar este comportamiento predeterminado.  
   
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cuando un comando se ejecuta directamente (sin prepararlo antes), se crea un plan de ejecución y se almacena en la memoria caché. Si vuelve a ejecutarse la instrucción SQL, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dispone de un algoritmo eficaz para hacer coincidir la nueva instrucción con el plan de ejecución existente en la memoria caché, y reutiliza el plan de ejecución para esa instrucción.  
   

@@ -1,10 +1,8 @@
 ---
 title: JSON_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7201224aa89f4add1d618b976f8bff0b8857f5c9
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109356"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196804"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +36,7 @@ ms.locfileid: "68109356"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```syntaxsql
 JSON_VALUE ( expression , path )  
 ```  
   
@@ -67,7 +66,7 @@ En [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y en [!INCLUDE[ssSDSfu
   
  Si tiene que devolver valores escalares mayores que 4000 caracteres, use **OPENJSON** en lugar de **JSON_VALUE**. Para obtener más información, vea [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo lax y modo strict
 
@@ -92,11 +91,11 @@ SET @jsonInfo=N'{
   
  En la tabla siguiente se compara el comportamiento de **JSON_VALUE** en modo lax y modo strict. Para más información sobre la especificación del modo de ruta de acceso opcional (lax o strict), vea [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Ruta de acceso|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
+|Path|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Error|No es un valor escalar.<br /><br /> Use **JSON_QUERY** en su lugar.|  
-|$.info.type|N'1'|N'1'|N/A|  
-|$.info.address.town|N'Bristol'|N'Bristol'|N/A|  
+|$.info.type|N'1'|N'1'|N/a|  
+|$.info.address.town|N'Bristol'|N'Bristol'|N/a|  
 |$.info."address"|NULL|Error|No es un valor escalar.<br /><br /> Use **JSON_QUERY** en su lugar.|  
 |$.info.tags|NULL|Error|No es un valor escalar.<br /><br /> Use **JSON_QUERY** en su lugar.|  
 |$.info.type[0]|NULL|Error|No es una matriz.|  
@@ -122,11 +121,11 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### <a name="example-2"></a>Ejemplo 2
  En el ejemplo siguiente se extrae el valor de la propiedad JSON `town` en una variable local.  
   
-```sql  
+```sql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
-SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
+SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}}';
 
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[0].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
@@ -140,13 +139,13 @@ CREATE TABLE dbo.Store
  (
   StoreID INT IDENTITY(1,1) NOT NULL,
   Address VARCHAR(500),
-  jsonContent NVARCHAR(8000),
+  jsonContent NVARCHAR(4000),
   Longitude AS JSON_VALUE(jsonContent, '$.address[0].longitude'),
   Latitude AS JSON_VALUE(jsonContent, '$.address[0].latitude')
  )
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

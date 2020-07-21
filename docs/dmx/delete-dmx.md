@@ -1,19 +1,19 @@
 ---
-title: DELETE (DMX) | Microsoft Docs
+title: ELIMINAR (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 600f3bc6d5ad4b9f7f67e15b894185123dccca8b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070763"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669767"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,21 +32,21 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *model*  
  Identificador de modelo.  
   
- *estructura*  
+ *structure*  
  Identificador de estructura.  
   
-## <a name="remarks"></a>Comentarios  
- Si no especifica **MINING MODEL** o **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] busca el tipo de objeto según el nombre y procesa el objeto correcto. Si el servidor contiene una estructura y un modelo de minería de datos con el mismo nombre, se devuelve un error.  
+## <a name="remarks"></a>Observaciones  
+ Si no especifica el **modelo** o la **estructura**de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] busca el tipo de objeto basándose en el nombre y procesa el objeto correcto. Si el servidor contiene una estructura y un modelo de minería de datos con el mismo nombre, se devuelve un error.  
   
  En la siguiente tabla se describen los resultados de usar las diferentes formas de sintaxis.  
   
-|Instrucción|Resultado|  
+|.|Resultado|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE *\<estructura >*<br /><br /> o Administrador de configuración de<br /><br /> DELETE FROM MINING STRUCTURE *\<estructura >* . CONTENIDO|Realiza ProcessClear en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y sus modelos de minería de datos asociados.|  
-|DELETE FROM MINING STRUCTURE *\<estructura >* . CASOS|Realiza ProcessClearStructureOnly en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y se dejan intactos sus modelos de minería de datos asociados. La obtención de detalles de los modelos de minería de datos asociados produce un error tras el borrado de la estructura de minería de datos.|  
-|ELIMINAR del modelo de minería de datos *\<modelo >*<br /><br /> o Administrador de configuración de<br /><br /> ELIMINAR del modelo de minería de datos *\<modelo >* . CONTENIDO|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
+|ELIMINAR de la estructura de la estructura de minería de datos* \<>*<br /><br /> o<br /><br /> ELIMINAR de la estructura de la estructura de minería de datos* \<>*. CONTENT|Realiza ProcessClear en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y sus modelos de minería de datos asociados.|  
+|ELIMINAR de la estructura de la estructura de minería de datos* \<>*. VECES|Realiza ProcessClearStructureOnly en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y se dejan intactos sus modelos de minería de datos asociados. La obtención de detalles de los modelos de minería de datos asociados produce un error tras el borrado de la estructura de minería de datos.|  
+|ELIMINAR del modelo de modelo de minería de datos* \<>*<br /><br /> o<br /><br /> ELIMINAR del modelo de modelo de minería de datos* \<>*. CONTENT|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
   
- Para obtener más información acerca de los tipos de procesamiento, vea [elemento Type &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
+ Para obtener más información sobre los tipos de procesamiento, vea [elemento Type &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita todo el contenido del modelo NB_Sample.  
@@ -55,7 +55,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 DELETE FROM NB_Sample.CONTENT  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

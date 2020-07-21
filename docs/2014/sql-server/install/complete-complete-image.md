@@ -1,5 +1,5 @@
 ---
-title: Completar - completar imagen | Microsoft Docs
+title: Completar-completar imagen | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 810738a0-d286-492e-8888-1795e55a72c6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a58215b08bbb14c41f36c5d798f764f34ba4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cafbfbcf18462ba6dd4f709a95d50f692ede799d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037007"
 ---
 # <a name="complete---complete-image"></a>Completar - Completar imagen
   Use la página **Completar** para comprobar que la configuración de la instancia preparada se ha completado.  

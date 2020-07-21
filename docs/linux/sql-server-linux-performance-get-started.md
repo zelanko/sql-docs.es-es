@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2a9c81bf046d30bd997409389ca91d213a01437f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67896162"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893072"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Descripción de las características de rendimiento de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Si es usuario de Linux y está empezando a usar SQL Server, en las tareas siguientes se explican algunas de las características de rendimiento. No son exclusivas ni específicas de Linux, pero le ayudarán a hacerse una idea de las áreas en las que puede profundizar. En los ejemplos, se proporciona un vínculo a documentación detallada de cada área.
 
@@ -161,7 +161,7 @@ Para obtener más información sobre OLTP en memoria, vea los temas siguientes:
 - [Migrar a OLTP en memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Supervisar y solucionar problemas de uso de memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
-- [OLTP en memoria (optimización en memoria)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (optimización In-Memory)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>Usar el Almacén de consultas
 El Almacén de consultas recopila información de rendimiento detallada sobre consultas, planes de ejecución y estadísticas del entorno de ejecución.

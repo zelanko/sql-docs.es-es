@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Propiedades de faceta, página Directivas dependientes | Microsoft Docs
-ms.custom: ''
+title: Página "Directivas dependientes" del cuadro de diálogo "Propiedades de faceta"
+description: Describe la página "Directivas dependientes" del cuadro de diálogo "Propiedades de faceta" para la administración basada en directivas en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 538752d8752eb9cdba0adda94d03af498ccfbe05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb5cb5798118e1b88a0e6ee1b85ab2f8a4846be2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749390"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Propiedades de faceta, página Directivas dependientes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use este cuadro de diálogo para mostrar una lista de las directivas que hacen referencia actualmente a esta faceta de administración basada en directivas.  
   
 ## <a name="options"></a>Opciones  

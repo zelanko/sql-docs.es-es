@@ -1,5 +1,5 @@
 ---
-title: Procedimientos almacenados de CLR | Microsoft Docs
+title: Procedimientos almacenados CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -20,38 +19,37 @@ helpviewer_keywords:
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4998058d55cd49c0eecfdecce2edc609a4d62c1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933738"
 ---
 # <a name="clr-stored-procedures"></a>Procedimientos almacenados de CLR
-  Los procedimientos almacenados son rutinas que no pueden usarse en expresiones escalares. A diferencia de las funciones escalares, pueden devolver mensajes y resultados tabulares al cliente, invocar instrucciones del lenguaje de definición de datos (DDL) e instrucciones del lenguaje de manipulación de datos (DML), así como devolver parámetros de salida. Para obtener información acerca de las ventajas de la integración de CLR y elegir entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [información general de la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Los procedimientos almacenados son rutinas que no pueden usarse en expresiones escalares. A diferencia de las funciones escalares, pueden devolver mensajes y resultados tabulares al cliente, invocar instrucciones del lenguaje de definición de datos (DDL) e instrucciones del lenguaje de manipulación de datos (DML), así como devolver parámetros de salida. Para obtener información sobre las ventajas de la integración CLR y la elección entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Requisitos de los procedimientos almacenados CLR  
- En common language runtime (CLR), los procedimientos almacenados se implementan como métodos estáticos públicos en una clase en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. El método estático puede declararse como void o devolver un valor entero. Si devuelve un valor entero, el entero devuelto se trata como el código de retorno del procedimiento. Por ejemplo:  
+ En el Common Language Runtime (CLR), los procedimientos almacenados se implementan como métodos estáticos públicos en una clase de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. El método estático puede declararse como void o devolver un valor entero. Si devuelve un valor entero, el entero devuelto se trata como el código de retorno del procedimiento. Por ejemplo:  
   
  `EXECUTE @return_status = procedure_name`  
   
- El @return_status variable contendrá el valor devuelto por el método. Si el método se declara como void, el código de retorno es 0.  
+ La @return_status variable contendrá el valor devuelto por el método. Si el método se declara como void, el código de retorno es 0.  
   
  Si el método toma parámetros, el número de parámetros de la implementación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe ser igual al número de parámetros utilizados en la declaración [!INCLUDE[tsql](../../includes/tsql-md.md)] del procedimiento almacenado.  
   
- Los parámetros pasados a un procedimiento almacenado CLR pueden ser cualquiera de los tipos nativos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tienen un equivalente en código administrado. Para crear el procedimiento mediante la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)], estos tipos deben especificarse con el tipo nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente más adecuado. Para obtener más información sobre las conversiones de tipos, vea [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Los parámetros pasados a un procedimiento almacenado CLR pueden ser cualquiera de los tipos nativos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tienen un equivalente en código administrado. Para crear el procedimiento mediante la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)], estos tipos deben especificarse con el tipo nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equivalente más adecuado. Para obtener más información sobre las conversiones de tipos, vea [asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="table-valued-parameters"></a>Parámetros con valores de tabla  
- Los parámetros con valores de tabla (TVP), tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los TVP presentan una funcionalidad similar a las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Además, los TVP ayudan a reducir el número de ciclos de ida y vuelta al servidor. En lugar de enviar varias solicitudes al servidor, como con una lista de parámetros escalares, los datos pueden enviarse al servidor como un TVP. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para obtener más información acerca de Tvp, vea [usar parámetros &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Los parámetros con valores de tabla (TVP), tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los TVP presentan una funcionalidad similar a las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Además, los TVP ayudan a reducir el número de ciclos de ida y vuelta al servidor. En lugar de enviar varias solicitudes al servidor, como con una lista de parámetros escalares, los datos pueden enviarse al servidor como un TVP. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para obtener más información sobre TVP, vea [usar parámetros con valores de tabla &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>Devolver resultados de los procedimientos almacenados CLR  
  La información puede devolverse de varios modos de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], entre los que se incluyen parámetros de salida, resultados tabulares y mensajes.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Parámetros OUTPUT y procedimientos almacenados CLR  
- Al igual que ocurre con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede devolverse información de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante el uso de parámetros OUTPUT. La sintaxis DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es igual que la que se utiliza para crear procedimientos almacenados escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El parámetro correspondiente en el código de implementación de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar la \<Out() > atributo para representar un parámetro de salida, como en el siguiente ejemplo:  
+ Al igual que ocurre con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede devolverse información de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante el uso de parámetros OUTPUT. La sintaxis DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es igual que la que se utiliza para crear procedimientos almacenados escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El parámetro correspondiente en el código de implementación de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida de la misma forma que en C#. Debe especificar el parámetro por referencia y aplicar el \<Out()> atributo para representar un parámetro de salida, como se muestra a continuación:  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -59,9 +57,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  A continuación se muestra un procedimiento almacenado que devuelve información a través de un parámetro OUTPUT:  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -91,9 +87,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -127,9 +121,9 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- Una vez que almacena el ensamblado que contiene el CLR anterior ha generado y creado en el servidor, el siguiente procedimiento [!INCLUDE[tsql](../../includes/tsql-md.md)] se utiliza para crear el procedimiento en la base de datos y especifica *suma* como un parámetro de salida.  
+ Cuando el ensamblado que contiene el procedimiento almacenado CLR anterior se ha compilado y creado en el servidor, [!INCLUDE[tsql](../../includes/tsql-md.md)] se utiliza lo siguiente para crear el procedimiento en la base de datos y se especifica *SUM* como parámetro de salida.  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -137,7 +131,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Tenga en cuenta que *suma* se declara como un `int` tipo de datos de SQL Server y que la *valor* parámetro definido en el procedimiento almacenado CLR se especifica como un `SqlInt32` tipo de datos CLR. Cuando un programa que realiza la llamada ejecuta el procedimiento almacenado CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte automáticamente el `SqlInt32` tipo de datos CLR a un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  Para obtener más información acerca de qué CLR, tipos de datos pueden y no se puede convertir, vea [asignación de datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Tenga en cuenta que *SUM* se declara como un `int` tipo de datos SQL Server y que el parámetro *Value* definido en el procedimiento almacenado CLR se especifica como un `SqlInt32` tipo de datos CLR. Cuando un programa que realiza la llamada ejecuta el procedimiento almacenado CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte automáticamente el `SqlInt32` tipo de datos CLR a un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  Para obtener más información acerca de los tipos de datos CLR que se pueden y no se pueden convertir, vea [asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
  La devolución de mensajes y resultados tabulares al cliente se realiza a través del objeto `SqlPipe`, que se obtiene utilizando la propiedad `Pipe` de la clase `SqlContext`. El objeto `SqlPipe` tiene un método `Send`. Al llamar al método `Send`, puede transmitir datos a la aplicación que realiza la llamada a través de la canalización.  
@@ -150,9 +144,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>Devolver resultados tabulares  
  Para enviar los resultados de una consulta directamente al cliente, use una de las sobrecargas del método `Execute` en el objeto `SqlPipe`. Se trata del modo más eficaz de devolver resultados al cliente, puesto que los datos se transfieren a los búferes de red sin copiarse en la memoria administrada. Por ejemplo:  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -177,9 +169,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -230,10 +220,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -287,9 +275,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -339,9 +325,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -372,7 +356,7 @@ End Class
   
  Tenga en cuenta que se trata de ejemplos meramente ilustrativos. Las funciones CLR resultan más apropiadas que las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] simples para las aplicaciones que requieren un uso intensivo de los recursos para realizar cálculos. Un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] casi equivalente al ejemplo anterior es el siguiente:  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -381,17 +365,17 @@ END;
 ```  
   
 > [!NOTE]  
->  Los mensajes y los conjuntos de resultados se recuperan de manera diferente en la aplicación cliente. Por ejemplo, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conjuntos de resultados aparecen en la **resultados** vista y los mensajes aparecen en la **mensajes** panel.  
+>  Los mensajes y los conjuntos de resultados se recuperan de manera diferente en la aplicación cliente. Por ejemplo, los [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conjuntos de resultados aparecen en la vista **resultados** y los mensajes aparecen en el panel **mensajes** .  
   
  Si el código de Visual C# anterior se guarda en un archivo MyFirstUdp.cs y se compila con:  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  O bien, si el código de Visual Basic anterior se guarda en un archivo MyFirstUdp.vb y se compila con:  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -400,16 +384,16 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  Es posible registrar el ensamblado resultante y el punto de entrada invocado con el siguiente DDL:  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  
 EXEC HelloWorld;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  (Funciones definidas por el usuario CLR)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones definidas por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [Desencadenadores CLR](../../../2014/database-engine/dev-guide/clr-triggers.md)  
+ [Desencadenadores de CLR](../../../2014/database-engine/dev-guide/clr-triggers.md)  
   
   

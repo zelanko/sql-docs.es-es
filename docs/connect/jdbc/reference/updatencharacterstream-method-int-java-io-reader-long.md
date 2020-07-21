@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8b77af97e077ff787b06ffbe25c070c8c29708c6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998759"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928380"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Método updateNCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void updateNCharacterStream(int columnIndex,
   
  *x*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
  *length*  
   
@@ -47,10 +47,10 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método updateNCharacterStream se especifica mediante el método updateNCharacterStream de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ Este método updateNCharacterStream se especifica mediante el método updateNCharacterStream de la interfaz java.sql.ResultSet.  
   
- Este método pasa los caracteres Unicode de un objeto lector a las columnas **nchar**, **nvarchar (Max)** , **ntext**y **XML** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
+ Este método pasa los caracteres Unicode de un objeto Reader a columnas **nchar**, **nvarchar(max)** , **ntext** y **xml** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

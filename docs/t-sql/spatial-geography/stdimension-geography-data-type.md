@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a681baef72aaab151c3c65f2694778882bb56d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704205"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve la dimensión máxima de una instancia de **geography**.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68042331"
 .STDimension ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  STDimension() devuelve 1 si una instancia de **geography** está vacía.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -60,7 +60,7 @@ FROM @temp;
   
  Después, el ejemplo devuelve las dimensiones de cada instancia de `geography`.  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
 |Punto|0|  
 |LineString|1|  

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66652cac6436c399487c33f35ab94d408f0b6f1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766041"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quita uno o varios desencadenadores DML o DDL de la base de datos actual.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68042041"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
 DROP TRIGGER [ IF EXISTS ] [schema_name.]trigger_name [ ,...n ] [ ; ]  
@@ -74,14 +74,14 @@ ON ALL SERVER
  Indica que el ámbito del desencadenador DDL se aplica a la base de datos actual. Debe especificarse DATABASE si también se especificó al crear o modificar el desencadenador.  
   
  ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Indica que el ámbito del desencadenador DDL se aplica al servidor actual. Debe especificarse ALL SERVER si también se especificó al crear o modificar el desencadenador. ALL SERVER también se aplica a los desencadenadores de inicio de sesión.  
   
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede eliminar un desencadenador DML si quita éste o quita la tabla del desencadenador. Cuando se quita una tabla, también se quitan todos los desencadenadores asociados.  
   
  Cuando se quita un desencadenador, se quita la información acerca del desencadenador de las vistas de catálogos **sys.objects**, **sys.triggers** y **sys.sql_modules**.  

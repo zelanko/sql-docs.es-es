@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75db9df496282ba6b1ef78012164e13682d5b11e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85702293"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el punto especificado de una instancia de **geography**.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "68120822"
  *expression*  
  Es una expresión **int** entre 1 y el número de puntos de la instancia de **geography**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se trata de una instancia de **geography** creada por el usuario, STPointN() devuelve el punto especificado por *expression* considerando los puntos en el orden en el que se especificaron inicialmente.  
   
  Si se trata de una instancia de **geography** generada por el sistema, STPointN() devuelve el punto especificado por *expression* considerando todos los puntos en el orden en que se generarían: primero por instancias de **geography**, después por anillos dentro de la instancia (si procede) y, luego, por puntos dentro del anillo. Este orden es determinista.  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 59444faf-bcb6-4421-a3df-8715753e453b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c26ffa3421cca7ec2359bb94eabcec9921a57391
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064625"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  Puede elegir entre una amplia variedad de topologías de replicación de sincronización web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Entre las maneras habituales de configurar una sincronización web se incluyen:  
+  Puede elegir entre una serie de topologías de replicación de sincronización web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entre las maneras habituales de configurar una sincronización web se incluyen:  
   
 -   Servidor único  
   
@@ -56,8 +55,8 @@ ms.locfileid: "63273557"
   
  ![Sincronización web con nueva publicación](media/web-sync05.gif "Sincronización web con nueva publicación")  
   
-## <a name="see-also"></a>Vea también  
- [Configurar la sincronización web](configure-web-synchronization.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar sincronización web](configure-web-synchronization.md)   
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)  
   
   

@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 01e75618-afec-4232-ba68-93ab7bc31003
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2808c76867092777a50cd56b917b8431e5dabe2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d872809cb8bddf62424523927eed37b44ec966a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867929"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551474"
 ---
-# <a name="mssqlserver41302"></a>MSSQLSERVER_41302
+# <a name="mssqlserver_41302"></a>MSSQLSERVER_41302
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|41302|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|41302|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|WRITE_WRITE_CONFLICT|  
 |Texto del mensaje|La transacción actual intentó actualizar un registro que se ha actualizado desde que esta transacción se inició. Se anuló la transacción.|  
@@ -38,7 +37,7 @@ ms.locfileid: "62867929"
 ## <a name="user-action"></a>Acción del usuario  
  Intente de nuevo la operación posterior en otra transacción. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

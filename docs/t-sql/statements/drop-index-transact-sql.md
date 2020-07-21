@@ -32,15 +32,15 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba3db3dae69f7b8353fd4f6a00e333b0e28be7f9
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4d6e1349f98bdf5b98d1d70ff68d50014f0dcdde
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155430"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009254"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Quita uno o más índices XML, filtrados, espaciales o relacionales de la base de datos actual. Puede quitar un índice clúster y mover la tabla resultante a otro grupo de archivos o esquema de partición en una sola transacción especificando la opción MOVE TO.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "70155430"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server (All options except filegroup and filestream apply to Azure SQL Database.)  
   
 DROP INDEX [ IF EXISTS ]   
@@ -85,7 +85,7 @@ DROP INDEX [ IF EXISTS ]
 }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Database  
   
 DROP INDEX  
@@ -99,7 +99,7 @@ DROP INDEX
 { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
@@ -129,12 +129,12 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  Azure SQL Database admite el formato de nombre de tres partes nombre_basededatos.[nombre_esquema].nombre_objeto cuando nombre_basededatos es la base de datos actual o tempdb y nombre_objeto comienza con #.  
   
  \<drop_clustered_index_option>  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Controla las opciones de los índices clúster. Estas opciones no se pueden utilizar con otros tipos de índices.  
   
  MAXDOP = *max_degree_of_parallelism*  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (solo niveles de rendimiento P2 y P3).  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (solo los niveles de rendimiento P2 y P3)  
   
  Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -158,14 +158,14 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE = ON | **OFF**  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  No se mantienen los bloqueos de tabla a largo plazo. Esto permite que continúen las consultas o actualizaciones en la tabla subyacente.  
   
- OFF  
+ Apagado  
  Se aplican bloqueos de tabla y la tabla deja de estar disponible mientras dure la operación con índices.  
   
  La opción ONLINE solo se puede especificar cuando se quitan índices clúster. Para obtener más información, vea la sección Comentarios.  
@@ -174,21 +174,21 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] admite "default" como el nombre del grupo de archivos.  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] admite "default" como el nombre del grupo de archivos.  
   
  Especifica la ubicación donde se moverán las filas de datos que están actualmente en el nivel hoja del índice clúster. Los datos se mueven a la nueva ubicación en forma de montón. Se puede especificar un esquema de partición o un grupo de archivos como la nueva ubicación, pero es necesario que ya existan. MOVE TO no es válido para vistas indizadas o índices no clúster. Si no se especifica ningún esquema de partición o grupo de archivos, la tabla resultante se colocará en el mismo esquema de partición o grupo de archivos que se definió para el índice clúster.  
   
  Si se quita un índice clúster mediante MOVE TO, se vuelven a generar todos los índices no clúster de la tabla base, pero permanecen en sus grupos de archivos o esquemas de partición originales. Si la tabla base se mueve a un grupo de archivos o esquema de partición diferente, los índices no clúster no se mueven para hacerlos coincidir con la nueva ubicación de la tabla base (montón). Por lo tanto, aunque los índices no clúster estuvieran previamente alineados con el índice clúster, es posible que ya no lo estén con el montón. Para más información sobre la alineación de índices con particiones, vea [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  _partition_scheme_name_ **(** _column_name_ **)**  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Especifica un esquema de partición como la ubicación de la tabla resultante. Es necesario que el esquema de partición se haya creado previamente ejecutando [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). Si no se especifica ninguna ubicación y la tabla tiene particiones, la tabla se incluye en el mismo esquema de partición que el índice clúster existente.  
   
  El nombre de columna del esquema no se limita a las columnas de la definición del índice. Se puede especificar cualquier columna de la tabla base.  
   
  *filegroup_name*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica un grupo de archivos como la ubicación de la tabla resultante. Si no se especifica ninguna ubicación y la tabla no tiene particiones, la tabla resultante se incluye en el mismo grupo de archivos que el índice clúster. El grupo de archivos debe existir previamente.  
   
@@ -199,7 +199,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 >  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en MOVE TO **"** default **"** o MOVE TO **[** default **]** . Si se especifica el parámetro **"** default **"** , la opción QUOTED_IDENTIFIER debe establecerse en ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica la ubicación donde se moverá la tabla FILESTREAM que está actualmente en el nivel hoja del índice clúster. Los datos se mueven a la nueva ubicación en forma de montón. Se puede especificar un esquema de partición o un grupo de archivos como la nueva ubicación, pero es necesario que ya existan. FILESTREAM ON no es válida para vistas indizadas ni índices no clúster. Si no se especifica un esquema de partición, los datos se ubicarán en el mismo esquema de partición que se definió para el índice clúster.  
   
@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  En este contexto, el valor predeterminado no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en MOVE TO **"** default **"** o MOVE TO **[** default **]** . Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se quita un índice no clúster, se quita la definición del índice de los metadatos y las páginas de datos del índice (árbol b) se quitan de los archivos de la base de datos. Cuando se quita un índice clúster, se quita la definición del índice de los metadatos y las filas de datos que se almacenaron en el nivel hoja del índice clúster se almacenan en la tabla resultante no ordenada, un montón. Se recuperará todo el espacio anteriormente ocupado por el índice. Después, se puede utilizar este espacio para cualquier objeto de base de datos.  
   
  Un índice no se puede quitar si el grupo de archivos en el que se encuentra está sin conexión o se ha definido como de solo lectura.  
@@ -290,7 +290,7 @@ GO
 ### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. Quitar un índice clúster en línea y establecer la opción MAXDOP  
  En el ejemplo siguiente se elimina un índice clúster con la opción `ONLINE` establecida en `ON` y `MAXDOP` establecida en `8`. Dado que no se ha especificado la opción MOVE TO, la tabla resultante se almacena en el mismo grupo de archivos que el índice. En este ejemplo se usa la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
 ```  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -301,7 +301,7 @@ GO
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D. Quitar un índice clúster en línea y mover la tabla a un nuevo grupo de archivos  
  En el ejemplo siguiente se elimina un índice clúster en línea y se mueve la tabla resultante (montón) al grupo de archivos `NewGroup` mediante la cláusula `MOVE TO` . Las vistas de catálogo `sys.indexes`, `sys.tables`y `sys.filegroups` se consultan para comprobar la ubicación del índice y la tabla en los grupos de archivos antes y después del desplazamiento. (A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] se puede usar la sintaxis DROP INDEX IF EXISTS).  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
@@ -374,7 +374,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
 ### <a name="g-dropping-a-clustered-index-on-a-filestream-table"></a>G. Quitar un índice clúster en una tabla FILESTREAM  
  En el ejemplo siguiente se elimina un índice clúster en línea y se mueven la tabla resultante (montón) y los datos FILESTREAM al esquema de partición `MyPartitionScheme` mediante las cláusulas `MOVE TO` y `FILESTREAM ON`.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```  
 DROP INDEX PK_MyClusteredIndex   

@@ -24,15 +24,15 @@ ms.assetid: a300ac43-e4c0-4329-8b79-a1a05e63370a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cd7682ec9377fe0163add5986bd0cc406d325cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eba14b85c18ed8f64288839f5758ed4c4e456e08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928958"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004971"
 ---
-# <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Establece el modo BEGIN TRANSACTION en *implícito* para la conexión.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "67928958"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando está en ON, el sistema está en modo de transacción *implícito*. Esto significa que si @@TRANCOUNT = 0, cualquiera de las instrucciones de Transact-SQL siguientes inicia una transacción nueva. Es equivalente a una instrucción BEGIN TRANSACTION oculta que se ejecuta en primer lugar:  
   
 ||||  
@@ -54,6 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |CREATE|INSERT|TRUNCATE TABLE|  
 |Delete|OPEN|UPDATE|  
 |DROP|.|.|  
+||||
   
  Cuando está en OFF, cada una de las instrucciones T-SQL anteriores está limitada por las instrucciones ocultas BEGIN TRANSACTION y COMMIT TRANSACTION. Cuando está en OFF, decimos que el modo de transacción es de *confirmación automática*. Si el código de T-SQL emite visiblemente una instrucción BEGIN TRANSACTION, se dice que el modo de transacción es *explícito*.  
   
@@ -73,7 +74,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  Para ver la configuración actual de IMPLICIT_TRANSACTIONS, ejecute la consulta siguiente.  
   
-```  
+```sql
 DECLARE @IMPLICIT_TRANSACTIONS VARCHAR(3) = 'OFF';  
 IF ( (2 & @@OPTIONS) = 2 ) SET @IMPLICIT_TRANSACTIONS = 'ON';  
 SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;  
@@ -149,9 +150,9 @@ INSERT INTO dbo.t1 VALUES (42);
 PRINT N'[D.03] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 go  
 COMMIT TRANSACTION;  
-PRINT N'[D.04] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.04] @@TranCount, after a COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 COMMIT TRANSACTION;  
-PRINT N'[D.05] @@TranCount, after INSERTs, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
+PRINT N'[D.05] @@TranCount, after another COMMIT, == ' + CAST(@@TRANCOUNT AS NVARCHAR(10));  
 go  
   
 -- Clean up.  

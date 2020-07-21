@@ -1,5 +1,5 @@
 ---
-title: 'Paso 8: Lo más fácil de entender el paquete de la lección 1 | Microsoft Docs'
+title: 'Paso 8: Facilitar la comprensión del paquete de la lección 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e3a8837cbf3b102435a94706ee277aab9a42fb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767597"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440682"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Paso 8: Facilitar la comprensión del paquete de la lección 1
   Ahora que ha terminado la configuración del paquete de la lección 1, es una buena idea ordenar el diseño del paquete. Si las formas de los diseños de los flujos de datos y de control tienen tamaños aleatorios o no están alineadas o agrupadas, la funcionalidad del paquete puede resultar más difícil de comprender.  
@@ -51,6 +50,6 @@ ms.locfileid: "62767597"
      Si no agrega texto al cuadro de anotación, desaparecerá al hacer clic fuera del cuadro.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 9: Probar el paquete del Tutorial de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [Paso 9: Prueba del paquete del tutorial de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

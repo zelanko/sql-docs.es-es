@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970088"
 ---
 # <a name="databases"></a>Bases de datos
   Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
@@ -45,7 +44,7 @@ ms.locfileid: "70154581"
 |[SQL Server de los archivos de datos en Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)|  
 |[Archivos y grupos de archivos de base de datos](database-files-and-filegroups.md)|[Cambiar el nombre de una base de datos](rename-a-database.md)|  
 |[Estados de base de datos](database-states.md)|[Establecer una base de datos en modo de usuario único](set-a-database-to-single-user-mode.md)|  
-|[Estados de los archivos](file-states.md)|[Reducir una base de datos](shrink-a-database.md)|  
+|[Estados de archivo](file-states.md)|[Reducir una base de datos](shrink-a-database.md)|  
 |[Estimar el tamaño de una base de datos](estimate-the-size-of-a-database.md)|[Reducir un archivo](shrink-a-file.md)|  
 |[Copiar bases de datos en otros servidores](copy-databases-to-other-servers.md)|[Ver o cambiar las propiedades de una base de datos](view-or-change-the-properties-of-a-database.md)|  
 |[Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Ver una lista de bases de datos en una instancia de SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
@@ -59,6 +58,6 @@ ms.locfileid: "70154581"
   
  [Vistas](../views/views.md)  
   
- [Procedimientos almacenados &#40;Database Engine&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [Procedimientos almacenados &#40;motor de base de datos&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

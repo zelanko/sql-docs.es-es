@@ -1,5 +1,5 @@
 ---
-title: Programa de página (Administrador de informes) | Microsoft Docs
+title: Página programaciones (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102316"
 ---
 # <a name="schedules-page-report-manager"></a>Página de Programaciones (Administrador de informes)
@@ -46,22 +46,22 @@ ms.locfileid: "66102316"
  **Pausar**  
  Haga clic para impedir que una programación compartida se ejecute temporalmente. Al pausar una programación, se impide la ejecución de suscripciones y otros procesos programados.  
   
- **Reanudar**  
+ **Recuper**  
  Haga clic para restablecer una programación compartida. Los procesos que estaban programados para ejecutarse mientras la programación estaba pausada no se completan.  
   
  **Programación**  
  Muestra las programaciones compartidas actualmente definidas. Haga clic en una programación compartida para ver o editar la información de frecuencia.  
   
- **Creador**  
+ **Creado**  
  Muestra el nombre del usuario que creó la programación compartida.  
   
- **Última ejecución, siguiente ejecución**  
+ **Última ejecución, Siguiente ejecución**  
  Muestran cuándo se ejecutó la programación compartida por última vez y cuándo se volverá a ejecutar.  
   
  **Estado**  
  Indica si una programación compartida está en pausa o activa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

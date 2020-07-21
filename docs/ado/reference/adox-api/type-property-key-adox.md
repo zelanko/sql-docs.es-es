@@ -1,5 +1,5 @@
 ---
-title: Propiedad tipo (clave) (ADOX) | Microsoft Docs
+title: Propiedad Type (Key) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,28 +17,28 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADOX]
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 000169993f3aae1047369449b7df71551b52ea22
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965043"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763256"
 ---
 # <a name="type-property-key-adox"></a>Type (propiedad, clave, ADOX)
 Indica el tipo de la clave.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **largo** valor que puede ser uno de los [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) constantes. El valor predeterminado es **adKeyPrimary**.  
+ Establece o devuelve un valor **Long** que puede ser una de las constantes [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) . El valor predeterminado es **adKeyPrimary**.  
   
-## <a name="remarks"></a>Comentarios  
- Esta propiedad es de solo lectura en [clave](../../../ado/reference/adox-api/key-object-adox.md) ya anexados a una colección de objetos.  
+## <a name="remarks"></a>Observaciones  
+ Esta propiedad es de solo lectura en objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [Append de claves, método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Tipo de propiedad (columna) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Type (propiedad, Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Type (propiedad, tabla, ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

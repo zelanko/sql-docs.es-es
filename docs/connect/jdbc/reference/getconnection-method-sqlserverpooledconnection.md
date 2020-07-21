@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 352d867e444158cb2b8754a9cce1752bc4c2ee4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aad1cac0f8d627350ad3a4eab5730509148e8ffb
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952697"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923368"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>Método getConnection (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.sql.Connection getConnection()
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notas  
- Este método getConnection se especifica mediante el método getConnection en la interfaz javax. SQL. PooledConnection.  
+## <a name="remarks"></a>Observaciones  
+ El método getConnection especifica este método getConnection en la javax.sql.PooledConnection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

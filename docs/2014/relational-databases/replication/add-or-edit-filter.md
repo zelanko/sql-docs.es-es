@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e5d4f03ead294ee591e0a478d15e3d5f10747a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068807"
 ---
 # <a name="add-or-edit-filter"></a>Agregar filtro o Editar filtro
   Los cuadros de diálogo **Agregar filtro** y **Editar filtro** le permiten agregar y editar filtros de filas estáticos y filtros de filas con parámetros.  
@@ -25,7 +24,7 @@ ms.locfileid: "62676877"
 > [!NOTE]  
 >  La edición de un filtro en una publicación existente requiere una nueva instantánea para la publicación. Si una publicación tiene suscripciones, es necesario reinicializar las suscripciones. Para obtener más información sobre los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](publish/change-publication-and-article-properties.md).  
   
- Todos los tipos de publicaciones pueden incluir filtros estáticos; las publicaciones de combinación también pueden incluir filtros con parámetros. Se evalúa un filtro estático cuando se crea la publicación: todos los Suscriptores a la publicación reciben los mismos datos. Un filtro parametrizado se evalúa durante la sincronización de la replicación: Suscriptores diferentes pueden recibir particiones distintas de datos según el inicio de sesión o nombre de equipo de cada Suscriptor. Haga clic en el vínculo **Instrucciones de ejemplo** del cuadro de diálogo para ver ejemplos de cada tipo de filtro. Para obtener más información sobre las opciones de filtrado, consulte [Filtrar datos publicados](publish/filter-published-data.md).  
+ Todos los tipos de publicaciones pueden incluir filtros estáticos; las publicaciones de combinación también pueden incluir filtros con parámetros. Se evalúa un filtro estático cuando se crea la publicación: todos los Suscriptores a la publicación reciben los mismos datos. Un filtro parametrizado se evalúa durante la sincronización de la replicación: Suscriptores diferentes pueden recibir particiones distintas de datos según el inicio de sesión o nombre de equipo de cada Suscriptor. Haga clic en el vínculo **Instrucciones de ejemplo** del cuadro de diálogo para ver ejemplos de cada tipo de filtro. Para obtener más información sobre las opciones de filtrado, vea [Filtrar datos publicados](publish/filter-published-data.md).  
   
  Mediante los filtros de fila, puede especificar un subconjunto de filas de la tabla que desea publicar. Puede utilizar filtros de filas para eliminar filas que no necesitan ver los usuarios (como las filas que contienen información importante o confidencial) o crear distintas particiones de datos que se enviarán a distintos suscriptores. La publicación de distintas particiones de datos para distintos suscriptores también puede ayudar a evitar conflictos que podrían causar la actualización simultánea de los mismos datos realizada por varios suscriptores.  
   
@@ -55,16 +54,16 @@ ms.locfileid: "62676877"
   
 3.  **Especifique cuántas suscripciones recibirán datos de esta tabla**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores únicamente; solo para la replicación de mezcla. La replicación de mezcla le permite especificar el tipo de partición más adecuado para sus datos y aplicación. Si selecciona **Una fila de esta tabla irá a una sola suscripción**, la replicación de mezcla establece la opción de particiones no superpuestas. Las particiones no superpuestas funcionan junto con las particiones precalculadas para aumentar el rendimiento: la finalidad de las particiones no superpuestas es minimizar el costo de carga asociado a las particiones precalculadas. La ventaja en el rendimiento de las particiones no superpuestas es más evidente cuando los filtros con parámetros y de combinación utilizados son más complejos. Si selecciona esta opción, debe asegurarse de que los datos se dividen en particiones de forma que una fila no se pueda replicar en más de un suscriptor. Para obtener más información, vea la sección sobre cómo configurar opciones de partición en el tema [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores únicamente; solo replicación de mezcla. La replicación de mezcla le permite especificar el tipo de partición más adecuado para sus datos y aplicación. Si selecciona **Una fila de esta tabla irá a una sola suscripción**, la replicación de mezcla establece la opción de particiones no superpuestas. Las particiones no superpuestas funcionan junto con las particiones precalculadas para aumentar el rendimiento: la finalidad de las particiones no superpuestas es minimizar el costo de carga asociado a las particiones precalculadas. La ventaja en el rendimiento de las particiones no superpuestas es más evidente cuando los filtros con parámetros y de combinación utilizados son más complejos. Si selecciona esta opción, debe asegurarse de que los datos se dividen en particiones de forma que una fila no se pueda replicar en más de un suscriptor. Para obtener más información, vea la sección sobre cómo configurar opciones de partición en el tema [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  Una vez agregado o editado un filtro, haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo. El filtro que ha especificado se analiza y se ejecuta según la tabla de la cláusula SELECT. Si la instrucción de filtro contiene errores de sintaxis u otros problemas, se le notificará para que pueda editar la instrucción de filtro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](publish/view-and-modify-publication-properties.md)   
  [Filtrar datos publicados](publish/filter-published-data.md)   
  [Join Filters](merge/join-filters.md)   
- [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
+ [Filtros de fila con parámetros](merge/parameterized-filters-parameterized-row-filters.md)   
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)  
   
   

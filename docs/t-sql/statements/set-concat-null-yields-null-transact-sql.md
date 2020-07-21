@@ -23,14 +23,14 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdaa57594049ca9c7bd088120ae119ec7c58c151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac123431796331485544b34b15023d34c26a7d6e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041845"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634427"
 ---
-# <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+# <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Determina si los resultados de la concatenación se tratan como valores NULL o como valores de cadena vacía.  
@@ -42,19 +42,19 @@ ms.locfileid: "68041845"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando SET CONCAT_NULL_YIELDS_NULL es ON, al concatenar un valor NULL con una cadena se produce como resultado NULL. Por ejemplo, `SELECT 'abc' + NULL` produce `NULL`. Cuando SET CONCAT_NULL_YIELDS_NULL es OFF, al concatenar un valor NULL con una cadena se obtiene la propia cadena (el valor NULL se trata como una cadena vacía). Por ejemplo, `SELECT 'abc' + NULL` produce `abc`.  
   
  Si no se especifica SET CONCAT_NULL_YIELDS_NULL, se aplica la configuración de la opción de base de datos **CONCAT_NULL_YIELDS_NULL**.  
@@ -70,17 +70,16 @@ SET CONCAT_NULL_YIELDS_NULL debe ser **ON** al crear o cambiar vistas indexadas,
   
  Para ver la configuración actual de este valor, ejecute la consulta siguiente.  
   
-```  
-DECLARE @CONCAT_NULL_YIELDS_NULL VARCHAR(3) = 'OFF';  
-IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_NULL_YIELDS_NULL = 'ON';  
-SELECT @CONCAT_NULL_YIELDS_NULL AS CONCAT_NULL_YIELDS_NULL;  
-  
+```sql
+DECLARE @CONCAT_SETTING VARCHAR(3) = 'OFF';  
+IF ( (4096 & @@OPTIONS) = 4096 ) SET @CONCAT_SETTING = 'ON';  
+SELECT @CONCAT_SETTING AS CONCAT_NULL_YIELDS_NULL; 
 ```  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra el uso de los dos valores de `SET CONCAT_NULL_YIELDS_NULL`.  
   
-```  
+```sql
 PRINT 'Setting CONCAT_NULL_YIELDS_NULL ON';  
 GO  
 -- SET CONCAT_NULL_YIELDS_NULL ON and testing.  

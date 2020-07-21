@@ -1,5 +1,5 @@
 ---
-title: Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página General) | Microsoft Docs
+title: Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62815658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937106"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página General)
-  Este tema se aplica a la pestaña **General** del cuadro de diálogo de **Nuevo grupo de disponibilidad** y el cuadro de diálogo de **Propiedades de grupo de disponibilidad** .  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
+   Este tema se aplica a la pestaña **General** del cuadro de diálogo **Nuevo grupo de disponibilidad** y el cuadro de diálogo **Propiedades de grupo de disponibilidad**.  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
   
  **Para ver las propiedades del grupo de disponibilidad**  
   
@@ -28,15 +27,15 @@ ms.locfileid: "62815658"
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre del grupo de disponibilidad**  
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Bases de datos de disponibilidad  
- **Database Name**  
+ **Nombre de la base de datos**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una base de datos al grupo de disponibilidad.  
   
  **Quitar**  
@@ -46,7 +45,7 @@ ms.locfileid: "62815658"
  **Instancia del servidor**  
  Nombre de servidor de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda esta réplica y, para una instancia no predeterminada, su nombre de instancia.  
   
- **Rol**  
+ **Role**  
  **Principal**  
  Actualmente la réplica principal.  
   
@@ -65,12 +64,12 @@ ms.locfileid: "62815658"
  **Confirmación sincrónica**  
  La réplica principal espera para confirmar una determinada transacción hasta que la réplica secundaria escribe la transacción en el disco.  
   
- Para obtener más información, consulte [modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Para obtener más información, vea [modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  **Modo de conmutación por error**  
  Modo de conmutación por error de la réplica, que puede ser uno de los siguientes:  
   
- **Automático**  
+ **Automática**  
  Conmutación por error automática. La réplica es un destino de las conmutaciones por error automáticas. Esto solo se admite si el modo de disponibilidad se establece en confirmación sincrónica.  
   
  **Manual**  
@@ -103,13 +102,13 @@ ms.locfileid: "62815658"
  **Dirección URL del extremo**  
  La dirección URL del extremo. Para obtener más información sobre el formato de estas direcciones URL, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
   
  **Quitar**  
  Haga clic para quitar una réplica secundaria del grupo de disponibilidad.  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Introducción a la búsqueda de texto completo | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,15 +15,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e1df3f06d5973f5ec0002da4c67b82519435a61d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903828"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767586"
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Las bases de datos de SQL Server están habilitadas para texto completo de manera predeterminada. Pero para poder ejecutar consultas de texto completo debe crear primero un catálogo de texto completo y un índice de texto completo en las vistas indexadas o tablas en las que quiere realizar una búsqueda.
 
 ## <a name="set-up-full-text-search-in-two-steps"></a>Configurar una búsqueda de texto completo en dos pasos
@@ -55,10 +55,17 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
 2.  Para crear un índice de texto completo en la tabla Document, antes debe asegurarse de que dicha tabla tiene un índice único, de una sola columna y que no admite valores NULL. La siguiente instrucción [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) crea un índice único, `ui_ukDoc`, en la columna DocumentID de la tabla Document:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  Después de tener una clave única, puede crear un índice de texto completo en la tabla `Document` mediante la siguiente instrucción [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
+3.  Quite el índice de texto completo existente en la tabla `Document` mediante la siguiente instrucción [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md). 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  Después de tener una clave única, puede crear un índice de texto completo en la tabla `Document` mediante la siguiente instrucción [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,12 +79,14 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
     GO  
   
     ```  
+    
+  
   
      El elemento TYPE COLUMN definido en este ejemplo especifica la columna de tipo de la tabla que contiene el tipo del documento en cada fila de la columna "Document" (que es del tipo binario). La columna de tipo almacena la extensión de archivo proporcionada por el usuario (".doc", ".xls", etc.) del documento en una fila determinada. El motor de búsqueda de texto completo utiliza la extensión de archivo almacenada en una fila determinada para invocar el filtro adecuado para analizar los datos de esa fila. Cuando el filtro haya analizado los datos binarios de la fila, el separador de palabras especificado analiza el contenido. (En este ejemplo, se usa el separador de palabras para inglés del Reino Unido). Para obtener más información, vea [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 
     Para obtener más información, vea [Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md) (Crear y administrar índices de texto completo).
 
-##  <a name="options"></a> Elegir opciones para un índice de texto completo 
+##  <a name="choose-options-for-a-full-text-index"></a><a name="options"></a> Elegir opciones para un índice de texto completo 
   
 ### <a name="choose-a-language"></a>Elegir un idioma  
  Para información sobre cómo elegir el idioma de la columna, consulte [Elegir un idioma al crear un índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
@@ -101,14 +110,14 @@ Seleccione siempre el índice exclusivo más pequeño disponible para la clave e
 ### <a name="associate-a-stoplist"></a>Asociar una lista de palabras irrelevantes   
   Una *lista de palabras irrelevantes* es una lista de palabras sin importancia. Cada índice de texto completo tiene asociada una lista de palabras irrelevantes, y las palabras de dicha lista se aplican a las consultas de texto completo que se realizan en ese índice. De forma predeterminada, a cada índice de texto completo nuevo se asocia la lista de palabras irrelevantes del sistema. También puede crear y usar su propia lista de palabras irrelevantes.   
   
- Por ejemplo, la siguiente instrucción [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] crea una lista de palabras irrelevantes de texto completo denominada myStoplist copiando la lista de palabras irrelevantes del sistema:  
+ Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) crea una lista de palabras irrelevantes de texto completo denominada myStoplist al copiar la lista de palabras irrelevantes del sistema:  
   
 ```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
- La siguiente instrucción [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] modifica una lista de palabras irrelevantes denominada myStoplist; para ello, agrega la palabra "en", primero para el idioma español y, a continuación, para el francés:  
+ La siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) modifica una lista de palabras irrelevantes denominada myStoplist; para ello, agrega la palabra "en", primero para el idioma español y luego para el francés:  
   
 ```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
@@ -118,7 +127,7 @@ GO
 Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
 ## <a name="update-a-full-text-index"></a>Actualizar un índice de texto completo  
- Al igual que los índices normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los índices de texto completo se pueden actualizar automáticamente cuando se modifican los datos de las tablas asociadas. Éste es el comportamiento predeterminado. Como alternativa, puede mantener actualizados los índices de texto completo de forma manual o durante los intervalos programados especificados. Rellenar un índice de texto completo puede consumir mucho tiempo y muchos recursos. Por consiguiente, la actualización del índice se suele realizar como un proceso asincrónico que se ejecuta en segundo plano para mantenerlo al día después de haber llevado a cabo modificaciones en la tabla base. 
+ Al igual que los índices normales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los índices de texto completo se pueden actualizar automáticamente cuando se modifican los datos de las tablas asociadas. Este es el comportamiento predeterminado. Como alternativa, puede mantener actualizados los índices de texto completo de forma manual o durante los intervalos programados especificados. Rellenar un índice de texto completo puede consumir mucho tiempo y muchos recursos. Por consiguiente, la actualización del índice se suele realizar como un proceso asincrónico que se ejecuta en segundo plano para mantenerlo al día después de haber llevado a cabo modificaciones en la tabla base. 
  
 Actualizar un índice de texto completo inmediatamente después de cada cambio realizado en la tabla también consume muchos recursos. Por tanto, si el porcentaje de actualizaciones, inserciones y eliminaciones es muy elevado, es posible que experimente una disminución en el rendimiento de las consultas. Si se da esta situación, plantéese la posibilidad de programar las actualizaciones provocadas por el seguimiento de cambios manual; es decir, en lugar de disputarse los recursos con las consultas, lleve a cabo una actualización de vez en cuando.  
   

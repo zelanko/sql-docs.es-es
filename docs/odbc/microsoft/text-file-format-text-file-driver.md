@@ -13,40 +13,40 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912443"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81303096"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato de archivo de texto (controlador de archivo de texto)
-El controlador de texto de ODBC admite tanto archivos de texto de ancho fijo y delimitado. Un archivo de texto consta de una línea de encabezado opcional y cero o más líneas de texto.  
+El controlador de texto de ODBC admite archivos de texto delimitados y de ancho fijo. Un archivo de texto consta de una línea de encabezado opcional y cero o más líneas de texto.  
   
- Aunque la línea de encabezado utiliza el mismo formato que las demás líneas del archivo de texto, el controlador ODBC texto interpreta las entradas de la línea de encabezado como nombres de columna, no datos.  
+ Aunque la línea de encabezado utiliza el mismo formato que las demás líneas del archivo de texto, el controlador de texto ODBC interpreta las entradas de la línea de encabezado como nombres de columna, no como datos.  
   
- Una línea de texto delimitado contiene uno o más valores de datos separados por delimitadores: comas, tabulaciones o un delimitador personalizado. En el archivo se debe usar el mismo delimitador. Los valores de datos nulos se denotan mediante dos delimitadores de una fila sin datos entre ellos. Las cadenas de caracteres en una línea de texto delimitados pueden incluirse entre comillas dobles (""). No pueden producirse espacios en blanco antes o después de valores delimitados.  
+ Una línea de texto delimitado contiene uno o varios valores de datos separados por delimitadores: comas, tabulaciones o un delimitador personalizado. Se debe utilizar el mismo delimitador en todo el archivo. Los valores de datos NULL se indican mediante dos delimitadores en una fila sin datos entre ellos. Las cadenas de caracteres de una línea de texto delimitada se pueden incluir entre comillas dobles (""). No se puede producir ningún espacio en blanco antes o después de los valores delimitados.  
   
- Se especifica el ancho de cada entrada de datos en una línea de texto de ancho fijo en un esquema. Los valores de datos nulos se denotan mediante espacios en blanco.  
+ El ancho de cada entrada de datos en una línea de texto de ancho fijo se especifica en un esquema. Los valores de datos NULL se indican por espacios en blanco.  
   
- Las tablas están limitadas a un máximo de 255 campos. Los nombres de campo se limitan a 64 caracteres, y se limita a 32.766 caracteres anchos de campo. Los registros están limitados a 65 000 bytes.  
+ Las tablas están limitadas a un máximo de 255 campos. Los nombres de campo se limitan a 64 caracteres y los anchos de campo se limitan a 32.766 caracteres. Los registros se limitan a 65.000 bytes.  
   
- Solo para un solo usuario, se puede abrir un archivo de texto. No se admiten varios usuarios.  
+ Un archivo de texto solo se puede abrir para un único usuario. No se admiten varios usuarios.  
   
- La gramática siguiente, escrita para los programadores, define el formato de un archivo de texto que se puede leer mediante el controlador ODBC de texto:  
+ La gramática siguiente, escrita para los programadores, define el formato de un archivo de texto que el controlador de texto ODBC puede leer:  
   
 |Formato|Representación|  
 |------------|--------------------|  
-|No cursiva|Caracteres que deben escribirse tal como se muestra|  
-|*italics*|Argumentos que se definen en otro lugar en la gramática|  
+|No cursiva|Caracteres que se deben escribir como se muestra|  
+|*cursiva*|Argumentos definidos en otra parte de la gramática|  
 |corchetes ([])|Elementos opcionales|  
-|las llaves ({})|Una lista de opciones mutuamente exclusivas|  
-|barras verticales (&#124;)|Opciones mutuamente excluyentes independientes|  
-|botón de puntos suspensivos (...)|Elementos que se pueden repetir una o más veces|  
+|llaves ({})|Una lista de opciones mutuamente excluyentes|  
+|barras verticales (&#124;)|Separación de opciones mutuamente excluyentes|  
+|puntos suspensivos (...)|Elementos que se pueden repetir una o más veces|  
   
- El formato de archivo de texto es:  
+ El formato de un archivo de texto es:  
   
 ```  
 text-file ::=  
@@ -67,7 +67,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  Se especifica el ancho de cada columna en un archivo de texto de ancho fijo en el archivo Schema.ini.  
+>  El ancho de cada columna en un archivo de texto de ancho fijo se especifica en el archivo Schema. ini.  
   
 ```  
   
@@ -87,7 +87,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  El delimitador de un archivo de texto delimitado con personalizado se especifica en el archivo Schema.ini.  
+>  El delimitador de un archivo de texto delimitado personalizado se especifica en el archivo Schema. ini.  
   
 ```  
 quote-character ::= "  
@@ -113,11 +113,11 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Para los archivos delimitados, un valor NULL se representa mediante ningún dato entre dos delimitadores.  
+>  En el caso de los archivos delimitados, un valor NULL se representa sin datos entre dos delimitadores.  
   
 ```  
 fixed-width-null ::= <SPACE>...  
 ```  
   
 > [!NOTE]  
->  Para los archivos de ancho fijo, un valor NULL se representa mediante espacios.
+>  En el caso de los archivos de ancho fijo, un valor NULL se representa mediante espacios.

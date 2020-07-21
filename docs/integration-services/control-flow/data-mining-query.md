@@ -13,10 +13,10 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298320"
 ---
 # <a name="data-mining-query"></a>Consulta de minería de datos
@@ -30,9 +30,9 @@ ms.locfileid: "71298320"
  Botón Cambiar vista  
  Haga clic en un icono para cambiar entre el panel de diseño y el de consulta. De forma predeterminada, el panel de diseño está abierto.  
   
- Para cambiar al panel de diseño, haga clic en el icono ![icono de diseño](../../integration-services/control-flow/media/ssis-designicon.gif "Design icon").  
+ Para cambiar al panel de diseño, haga clic en el icono ![icono de diseño](../../integration-services/control-flow/media/ssis-designicon.gif "Icono de diseño").  
   
- Para cambiar al panel de consulta, haga clic en el icono ![icono de SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "icono de SQL").  
+ Para cambiar al panel de consulta, haga clic en el icono ![icono de SQL](../../integration-services/control-flow/media/ssis-queryicon.gif "Icono de SQL").  
   
  **Modelo de minería de datos**  
  Muestra el modelo de minería de datos seleccionado en el que desea basar las predicciones.  
@@ -43,7 +43,7 @@ ms.locfileid: "71298320"
  **Columnas de entrada**  
  Muestra las columnas de entrada seleccionadas que se utilizan para generar las predicciones.  
   
- **Source**  
+ **Origen**  
  Seleccione el origen que contiene el campo que utilizará para la columna desde la lista desplegable. Puede usar el modelo de minería de datos seleccionado en la tabla **Modelo de minería de datos** , la tabla o las tablas de entrada seleccionadas en la tabla **Seleccionar tabla(s) de entrada** , una función de predicción o una expresión personalizada.  
   
  Las columnas pueden arrastrarse desde las tablas que contienen el modelo de minería de datos y las columnas de entrada a la celda.  

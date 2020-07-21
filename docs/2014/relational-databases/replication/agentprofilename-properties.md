@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 490b922cc76b6443317dbe7368db734f23e002fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016575"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propiedades de &lt;Nombredeperfildeagente&gt;
   Utilice el cuadro de diálogo **Propiedades del perfil de agente** para ver los valores especificados para cada parámetro de agente y modificar los valores de los perfiles definidos por el usuario.  
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- El nombre del perfil.  
+ Nombre del perfil.  
   
  **Descripción**  
  Descripción del perfil.  
@@ -40,7 +39,7 @@ ms.locfileid: "62721849"
   
 -   [Replication Distribution Agent](agents/replication-distribution-agent.md)  
   
--   [Agente de mezcla de replicación](agents/replication-merge-agent.md)  
+-   [Replication Merge Agent](agents/replication-merge-agent.md)  
   
 -   [Agente de lectura de cola de replicación](agents/replication-queue-reader-agent.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62721849"
  **Mostrar solo los parámetros utilizados en este perfil**  
  Desactive esta opción si desea mostrar todos los parámetros válidos para un agente determinado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con perfiles del Agente de replicación](agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Perfiles del Agente de replicación](agents/replication-agent-profiles.md)  

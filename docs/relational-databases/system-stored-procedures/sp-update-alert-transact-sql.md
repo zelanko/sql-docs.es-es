@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 36b04c00625792fc34b3fc833ea07a3ea2e71dab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890846"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891372"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza la configuración de una alerta existente.  
   
@@ -70,13 +70,13 @@ sp_update_alert
   
 `[ @message_id = ] message_id`Un nuevo mensaje o número de error para la definición de la alerta. Normalmente, *message_id* corresponde a un número de error de la tabla **sysmessages** . *message_id* es de **tipo int**y su valor predeterminado es NULL. Solo se puede utilizar un identificador de mensaje si el valor de nivel de gravedad de la alerta es **0**.  
   
-`[ @severity = ] severity`Un nuevo nivel de gravedad (de **1** a **25**) para la definición de la alerta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cualquier[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado al registro de aplicación de Windows con la gravedad especificada activará la alerta. *Severity* es de **tipo int**y su valor predeterminado es NULL. Un nivel de gravedad solo se puede usar si el valor de ID. de mensaje de la alerta es **0**.  
+`[ @severity = ] severity`Un nuevo nivel de gravedad (de **1** a **25**) para la definición de la alerta. Cualquier [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensaje enviado al registro de aplicación de Windows con la gravedad especificada activará la alerta. *Severity* es de **tipo int**y su valor predeterminado es NULL. Un nivel de gravedad solo se puede usar si el valor de ID. de mensaje de la alerta es **0**.  
   
 `[ @delay_between_responses = ] delay_between_responses`El nuevo período de espera, en segundos, entre las respuestas a la alerta. *delay_between_responses* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @notification_message = ] 'notification_message'`Texto revisado de un mensaje adicional que se envía al operador como parte de la notificación por correo electrónico, **net send**o buscapersonas. *notification_message* es de tipo **nvarchar (512)** y su valor predeterminado es NULL.  
   
-`[ @include_event_description_in = ] include_event_description_in`Especifica si la descripción del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error del registro de aplicación de Windows debe incluirse en el mensaje de notificación. *include_event_description_in* es de **tinyint**, su valor predeterminado es NULL y puede tener uno o varios de estos valores.  
+`[ @include_event_description_in = ] include_event_description_in`Especifica si la descripción del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error del registro de aplicación de Windows debe incluirse en el mensaje de notificación. *include_event_description_in* es de **tinyint**, su valor predeterminado es NULL y puede ser uno o varios de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -84,11 +84,11 @@ sp_update_alert
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
 |**4**|**net send**|  
-|**7**|Todo|  
+|**7**|Todas|  
   
 `[ @database_name = ] 'database'`Nombre de la base de datos en la que debe producirse el error para que se desencadene la alerta. *Database* es de **tipo sysname.** No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'`Secuencia de caracteres que se debe encontrar en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es de tipo **nvarchar (100)** y su valor predeterminado es NULL. Este parámetro es útil para filtrar los nombres de objeto (por ejemplo, **% customer_table%** ).  
+`[ @event_description_keyword = ] 'event_description_keyword'`Secuencia de caracteres que se debe encontrar en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es de tipo **nvarchar (100)** y su valor predeterminado es NULL. Este parámetro es útil para filtrar los nombres de objeto (por ejemplo, **% customer_table%**).  
   
 `[ @job_id = ] job_id`El número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Si se especifica *job_id* , se debe omitir *job_name* .  
   
@@ -110,12 +110,12 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap`Sector.  
   
-`[ @performance_condition = ] 'performance_condition'`Valor expresado en el formato **'** _itemcomparatorvalue_ **'** . *performance_condition* es de tipo **nvarchar (512)** , su valor predeterminado es NULL y consta de estos elementos.  
+`[ @performance_condition = ] 'performance_condition'`Valor expresado en el formato **'**_itemcomparatorvalue_**'**. *performance_condition* es de tipo **nvarchar (512)**, su valor predeterminado es NULL y consta de estos elementos.  
   
 |Elemento de formato|Descripción|  
 |--------------------|-----------------|  
-|*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparador*|Uno de estos operadores: **>** , **<** , **=**|  
+|*Item*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
+|*Comparador*|Uno de estos operadores: **>** , **<** ,**=**|  
 |*Valor*|Valor numérico del contador|  
   
 `[ @category_name = ] 'category'`El nombre de la categoría de alerta. *Category* es de **tipo sysname y su** valor predeterminado es NULL.  
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Solo los **sysmessages** escritos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] el registro de aplicación de Windows pueden activar una alerta.  
+ Solo los **sysmessages** escritos en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows pueden activar una alerta.  
   
  **sp_update_alert** solo cambia la configuración de alerta para la que se proporcionan los valores de parámetro. Si se omite un parámetro, se conserva la configuración actual.  
   
@@ -148,9 +148,9 @@ EXEC dbo.sp_update_alert
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_help_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

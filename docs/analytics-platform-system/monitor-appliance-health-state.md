@@ -1,6 +1,6 @@
 ---
-title: Supervisar el estado del dispositivo - Analytics Platform System
-description: Cómo supervisar el estado de un dispositivo de Analytics Platform System mediante el uso de la consola de administración o consultando directamente las vistas de administración dinámica de almacenamiento de datos paralelos.
+title: Supervisar el estado del dispositivo
+description: Cómo supervisar el estado de un dispositivo de sistema de plataforma de análisis mediante la consola de administración o mediante la consulta directa de las vistas de administración dinámica de almacenamiento de datos paralelos.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,32 +8,33 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960612"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "74400991"
 ---
-# <a name="monitor-appliance-health-state"></a>Monitor de estado de dispositivo
-En este artículo se explica cómo supervisar el estado de un dispositivo de Analytics Platform System mediante el uso de la consola de administración o consultando directamente las vistas de administración dinámica de almacenamiento de datos paralelos. 
+# <a name="monitor-appliance-health-state"></a>Supervisar el estado de mantenimiento del dispositivo
+En este artículo se explica cómo supervisar el estado de un dispositivo de sistema de plataforma de análisis mediante la consola de administración de o mediante la consulta directa de las vistas de administración dinámica de almacenamiento de datos paralelos. 
   
 ## <a name="to-monitor-the-appliance-state"></a>Para supervisar el estado del dispositivo  
-Un administrador del sistema puede utilizar la consola de administración o las vistas de administración dinámica (DMV) de SQL Server PDW para recuperar la jerarquía completa del software, los componentes y los nodos. El diagrama siguiente ofrece una visión de alto nivel de los componentes que supervisa PDW de SQL Server.  
+Un administrador del sistema puede usar la consola de administración de o las PDW de SQL Server vistas de administración dinámica (DMV) para recuperar la jerarquía completa de nodos, componentes y software. En el siguiente diagrama se ofrece una descripción de alto nivel de los componentes que PDW de SQL Server supervisa.  
   
-![Información general sobre supervisión](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Información general de la supervisión](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
-### <a name="monitor-component-status-by-using-the-admin-console"></a>Supervisar el estado de componente mediante el uso de la consola de administración  
-Para recuperar el estado del componente mediante el uso de la consola de administración:  
+### <a name="monitor-component-status-by-using-the-admin-console"></a>Supervisar el estado de los componentes mediante la consola de administración  
+Para recuperar el estado de los componentes mediante la consola de administración:  
   
-1.  Haga clic en el **estado de dispositivo** ficha.  
+1.  Haga clic en la pestaña **Estado del dispositivo** .  
   
-2.  En la página de estado del dispositivo, haga clic en un nodo específico para ver los detalles del nodo.  
+2.  En la página estado del dispositivo, haga clic en un nodo específico para ver los detalles del nodo.  
   
-    ![Estado de consola de administración de PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
+    ![Estado de la consola de administración de PDW](./media/monitor-appliance-health-state/SQL_Server_PDW_AdminConsol_State.png "SQL_Server_PDW_AdminConsol_State")  
   
-### <a name="monitor-component-status-by-using-system-views"></a>Supervisar el estado de componente mediante el uso de vistas del sistema  
-Para recuperar el estado del componente mediante el uso de vistas del sistema, use [sys.dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Por ejemplo, la consulta siguiente recupera el estado de todos los componentes.  
+### <a name="monitor-component-status-by-using-system-views"></a>Supervisar el estado de los componentes mediante las vistas del sistema  
+Para recuperar el estado de los componentes mediante las vistas del sistema, utilice [Sys. dm_pdw_component_health_status](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md). Por ejemplo, la consulta siguiente recupera el estado de todos los componentes.  
   
 ```sql  
 SELECT   
@@ -66,30 +67,30 @@ ORDER BY
    p.[property_name];  
 ```  
   
-Posibles valores devueltos para la propiedad de estado son:  
+Los valores posibles devueltos para la propiedad status son:  
   
--   De acuerdo  
+-   Aceptar  
   
 -   No crítico  
   
 -   Crítico  
   
--   Desconocido  
+-   Unknown  
   
 -   No compatible  
   
--   Inaccesible  
+-   No accesible  
   
--   Irrecuperable  
+-   irrecuperable  
   
-Para ver todas las propiedades de todos los componentes, quite el `WHERE  p.property_name = 'Status'` cláusula.  
+Para ver todas las propiedades de todos los componentes, quite `WHERE  p.property_name = 'Status'` la cláusula.  
   
-El **[update_time]** columna muestra la última vez que el componente se sondeó por los agentes de mantenimiento de PDW de SQL Server.  
+La columna **[Update_time]** muestra la última vez que los agentes de mantenimiento de PDW de SQL Server sondean el componente.  
   
 > [!CAUTION]  
-> Asegúrese de investigar el problema cuando un componente no ha sido encuestado durante 5 minutos o más. podría haber una alerta que indica un problema con los latidos de software.  
+> Asegúrese de investigar el problema cuando un componente no se ha sondeado durante 5 minutos o más. podría haber una alerta que indique un problema con los latidos de software.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Supervisión del dispositivo &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[Supervisión de dispositivos &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

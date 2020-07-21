@@ -1,5 +1,6 @@
 ---
 title: 'Métodos de modelo: servicio web del servidor de informes | Microsoft Docs'
+description: Obtenga información sobre estos métodos que puede usar para administrar modelos en el servicio web del servidor de informes.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 73d4a0ee4c5db4059dfe5ceac908b92d41ab8a45
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284558"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198242"
 ---
 # <a name="model-methods---report-server-web-service"></a>Métodos de modelo: servicio web del servidor de informes
   Puede utilizar estos métodos para administrar los modelos.  

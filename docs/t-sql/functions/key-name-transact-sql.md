@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 981014acd2c250406254c53d4e245e9dd3aca280
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752211"
 ---
-# <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="key_name-transact-sql"></a>KEY_NAME (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el nombre de la clave simétrica a partir de un GUID de clave simétrica o de texto de cifrado.  
   
@@ -53,7 +53,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>A. Mostrar el nombre de una clave simétrica utilizando key_guid  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-key_guid"></a>A. Mostrar el nombre de una clave simétrica utilizando key_guid  
  La base de datos **maestra** contiene una clave simétrica denominada ##MS_ServiceMasterKey##. En el ejemplo siguiente se obtiene el GUID de esa clave a partir de la vista de administración dinámica sys.symmetric_keys, se asigna a una variable y, a continuación, se pasa esa variable a la función KEY_NAME para mostrar la forma de devolver el nombre que corresponde al GUID.  
   
 ```  

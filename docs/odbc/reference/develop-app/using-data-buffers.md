@@ -1,5 +1,5 @@
 ---
-title: Uso de los búferes de datos | Microsoft Docs
+title: Usar búferes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - buffers [ODBC], data
 - data buffers [ODBC]
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079583"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306776"
 ---
 # <a name="using-data-buffers"></a>Utilizar los búferes de datos
-Los búferes de datos se describen en los tres tipos de información: longitud de su tipo, dirección y byte. Cuando una función necesita uno de estos fragmentos de información y aún no la conoce, tiene un argumento con el que la aplicación pasa.  
+Los búferes de datos se describen en tres fragmentos de información: su tipo, dirección y longitud de bytes. Cada vez que una función necesita una de estas partes de información y no la conoce, tiene un argumento con el que la aplicación la pasa.  
   
  Esta sección contiene los temas siguientes.  
   

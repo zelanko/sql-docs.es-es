@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d07502256418b1d528f73bac3296045c393ddc1b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62891800"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436122"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Paso 2: Adición y configuración de un administrador de conexiones de archivos planos
   En esta tarea, agregará un administrador de conexiones de archivos planos al paquete que acaba de crear. Un administrador de conexiones de archivos planos permite a un paquete extraer datos de un archivo plano. Mediante el administrador de conexiones de archivos planos puede especificar el nombre y la ubicación del archivo, la configuración regional y la página de códigos, y el formato del archivo, incluyendo los delimitadores de columna, que deben aplicarse cuando el paquete extrae datos del archivo plano. Además, puede especificar de forma manual el tipo de datos para columnas individuales, o usar el cuadro de diálogo **Sugerir tipos de columna** para asignar de forma automática las columnas de datos extraídos a los tipos de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -24,11 +23,11 @@ ms.locfileid: "62891800"
   
  En este tutorial, configurará las propiedades siguientes en el administrador de conexiones de archivos planos:  
   
--   **Nombres de columna:** Porque el archivo plano no tiene nombres de columna, el Administrador de conexiones de archivos planos crea de forma predeterminada los nombres de columna. Estos nombres predeterminados no son útiles para identificar qué representa cada columna. Para que estos nombres predeterminados sean más útiles, debe cambiar los nombres predeterminados por nombres que coincidan con la tabla de hechos en la que deben cargarse los datos del archivo plano.  
+-   **Nombres de columna:** El archivo plano no tiene nombres de columna, por lo que el administrador de conexiones de archivos planos crea nombres de columna predeterminados. Estos nombres predeterminados no son útiles para identificar qué representa cada columna. Para que estos nombres predeterminados sean más útiles, debe cambiar los nombres predeterminados por nombres que coincidan con la tabla de hechos en la que deben cargarse los datos del archivo plano.  
   
--   **Asignaciones de datos:** Todos los componentes de origen de datos de archivo plano que hagan referencia al administrador de conexión usará las asignaciones de tipos de datos que especifique para el Administrador de conexiones de archivos sin formato. Puede asignar los tipos de datos de forma manual mediante el administrador de conexiones de archivos planos o usar el cuadro de diálogo **Sugerir tipos de columna** . En este tutorial, verá las asignaciones sugeridas en el cuadro de diálogo **Sugerir tipos de columna** y luego realizará de forma manual las asignaciones necesarias en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
+-   **Asignaciones de datos:** Las asignaciones de tipo de datos que especifique para el administrador de conexiones de archivos planos se usarán en todos los componentes de origen de datos de archivo plano que hagan referencia al administrador de conexiones. Puede asignar los tipos de datos de forma manual mediante el administrador de conexiones de archivos planos o usar el cuadro de diálogo **Sugerir tipos de columna** . En este tutorial, verá las asignaciones sugeridas en el cuadro de diálogo **Sugerir tipos de columna** y luego realizará de forma manual las asignaciones necesarias en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
   
- El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si no tiene configurado el equipo para usar la opción de configuración regional Inglés (Estados Unidos), debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
+ El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si el equipo no está configurado para usar la opción regional inglés (Estados Unidos), debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
   
 ### <a name="to-add-a-flat-file-connection-manager-to-the-ssis-package"></a>Para agregar un administrador de conexiones de archivos planos al paquete SSIS  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62891800"
   
     1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
-    2.  Haga clic en la pestaña **DOWNLOADS** .  
+    2.  Haga clic en la pestaña **descargas** .  
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62891800"
   
 1.  En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , haga clic en **General**.  
   
-2.  Establezca **Configuración regional** en Inglés (Estados Unidos) y **Página de códigos** en 1252.  
+2.  Establezca **configuración regional** en inglés (Estados Unidos) y **Página de códigos** en 1252.  
   
 ### <a name="to-rename-columns-in-the-flat-file-connection-manager"></a>Para cambiar el nombre de las columnas del administrador de conexiones de archivos planos  
   
@@ -62,13 +61,13 @@ ms.locfileid: "62891800"
   
 2.  En el panel de propiedades, realice los cambios siguientes:  
   
-    -   Cambiar el **columna 0** nombre de propiedad para `AverageRate`.  
+    -   Cambie la propiedad nombre de **columna 0** a `AverageRate` .  
   
-    -   Cambiar el **1 columna** nombre de propiedad para `CurrencyID`.  
+    -   Cambie la propiedad **columna 1** nombre a `CurrencyID` .  
   
-    -   Cambiar el **columna 2** nombre de propiedad para `CurrencyDate`.  
+    -   Cambie la propiedad **columna 2** nombre a `CurrencyDate` .  
   
-    -   Cambiar el **columna 3** nombre de propiedad para `EndOfDayRate`.  
+    -   Cambie la propiedad **columna 3** nombre a `EndOfDayRate` .  
   
     > [!NOTE]  
     >  De forma predeterminada, las cuatro columnas están inicialmente establecidas en el tipo de datos de cadena [DT_STR] con `OutputColumnWidth` con el valor 50.  
@@ -90,18 +89,18 @@ ms.locfileid: "62891800"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     El tipo de datos sugerido para la `CurrencyID` columna no es compatible con el tipo de datos del campo en la tabla de destino. Dado que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar (3), `CurrencyID` debe cambiarse de la cadena [DT_STR] a cadena [DT_WSTR]. Además, el campo `DimDate.FullDateAlternateKey` se define como un tipo de datos de fecha; por lo tanto, `CurrencyDate` debe cambiarse del tipo fecha [DT_Date] a fecha de base de datos [DT_DBDATE].  
+     El tipo de datos sugerido para la `CurrencyID` columna no es compatible con el tipo de datos del campo en la tabla de destino. Dado que el tipo de datos de `DimCurrency.CurrencyAlternateKey` es NCHAR (3), `CurrencyID` debe cambiarse de la cadena [DT_STR] a la cadena [DT_WSTR]. Además, el campo `DimDate.FullDateAlternateKey` se define como un tipo de datos de fecha; por lo tanto, `CurrencyDate` debe cambiarse de la fecha [DT_Date] a la fecha de base de datos [DT_DBDATE].  
   
-2.  En la lista, seleccione la columna CurrencyID y, en el panel de propiedades, cambie el tipo de datos de columna `CurrencyID` de cadena [DT_STR] a Unicode, cadena [DT_WSTR].  
+2.  En la lista, seleccione la columna CurrencyID y, en el panel de propiedades, cambie el tipo de datos de la columna `CurrencyID` de cadena [DT_STR] a cadena Unicode [DT_WSTR].  
   
-3.  En el panel de propiedades, cambie el tipo de datos de columna `CurrencyDate` de fecha [DT_DATE] a fecha de base de datos [DT_DBDATE].  
+3.  En el panel de propiedades, cambie el tipo de datos de la columna `CurrencyDate` de fecha [DT_DATE] a fecha de base de datos [DT_DBDATE].  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Paso 3: Adición y configuración de un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)   
  [Tipos de datos de Integration Services](data-flow/integration-services-data-types.md)  
   

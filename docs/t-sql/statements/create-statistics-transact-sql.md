@@ -26,25 +26,25 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 3a2d74236b0c58776a43f4f2a56f7f240de72d2c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798378"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002501"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea estadísticas de optimización de consultas en una o más columnas de una tabla, en una vista indizada o en una tabla externa. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para mejorar el rendimiento de la consulta necesita crear estadísticas adicionales con CREATE STATISTICS modificar el diseño de la consulta.  
   
  Para obtener más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create statistics on an external table  
@@ -88,7 +88,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
     [ PAGECOUNT = numeric_contant ] 
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
@@ -168,7 +168,7 @@ CREATE STATISTICS statistics_name
  > [!NOTE]
  > Si se trunca la tabla, todas las estadísticas creadas en el HoBT truncado volverán a usar el porcentaje de muestreo predeterminado.
 
- **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
+ **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) y versiones posteriores (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1)    
   
  STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -196,7 +196,7 @@ CREATE STATISTICS statistics_name
 -   Estadísticas creadas sobre tablas internas.  
 -   Estadísticas creadas con índices espaciales o índices XML.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
 MAXDOP = *max_degree_of_parallelism*  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
@@ -243,6 +243,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Puede mostrar hasta 64 columnas por objeto de estadísticas.
 * La opción MAXDOP no es compatible con opciones STATS_STREAM, ROWCOUNT y PAGECOUNT.
 * La opción MAXDOP está limitada por la configuración MaX_DOP del grupo de cargas de trabajo de Resource Governor, si se usa.
+* En Azure SQL Database no se admiten CREATE y DROP STATISTICS en las tablas externas.
   
 ## <a name="examples"></a>Ejemplos  
 
@@ -278,7 +279,7 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. Crear estadísticas en una tabla externa  
- La única decisión que debe tomar al crear las estadísticas en una tabla externa, además de proporcionar la lista de columnas, es si desea crear las estadísticas mediante el muestreo de las filas o examinando todas las filas.  
+ La única decisión que debe tomar al crear las estadísticas en una tabla externa, además de proporcionar la lista de columnas, es si desea crear las estadísticas mediante el muestreo de las filas o examinando todas las filas. En Azure SQL Database no se admiten CREATE y DROP STATISTICS en las tablas externas.
   
  Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa datos de la tabla externa en una tabla temporal para crear estadísticas, la opción de examen completo tardará mucho más tiempo. En una tabla grande, el método de muestreo predeterminado generalmente es suficiente.  
   

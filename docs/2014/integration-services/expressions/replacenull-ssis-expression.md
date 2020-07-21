@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 884561561f9b5a37d69f7246b446d547599920b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42111e6a6c322808decd1f807646e8905bc59551
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897512"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437152"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (expresión SSIS)
   Devuelve el valor del parámetro de la segunda expresión si el parámetro de la primera expresión es NULL; en caso contrario, devuelve el valor de la primera expresión.  
@@ -36,7 +35,7 @@ REPLACENULL(expression 1,expression 2)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   La longitud de *expression 2* puede ser cero.  
   

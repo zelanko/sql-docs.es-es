@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124661"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891918"
 ---
-# <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
+# <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra los permisos de acceso a subsistemas concedidos a los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -43,20 +43,20 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] proxy_id` El número de identificación del proxy que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
+`[ @proxy_id = ] proxy_id`Número de identificación del proxy para el que se va a mostrar información. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` El nombre del servidor proxy para mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
+`[ @proxy_name = ] 'proxy_name'`Nombre del proxy del que se va a mostrar información. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar el *identificador* o el *proxy_name* .  
   
-`[ @subsystem_id = ] subsystem_id` El número de identificación del subsistema para mostrar información. El *subsystem_id* es **int**, su valor predeterminado es null. Ya sea el *subsystem_id* o *subsystem_name* se puede especificar.  
+`[ @subsystem_id = ] subsystem_id`Número de identificación del subsistema del que se va a mostrar información. La *subsystem_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar el *subsystem_id* o el *subsystem_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` El nombre del subsistema para mostrar información. El *subsystem_name* es **sysname**, su valor predeterminado es null. Ya sea el *subsystem_id* o *subsystem_name* se puede especificar.  
+`[ @subsystem_name = ] 'subsystem_name'`Nombre del subsistema del que se va a mostrar información. La *subsystem_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar el *subsystem_id* o el *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Número de identificación del subsistema.|  
 |**subsystem_name**|**sysname**|Nombre del subsistema.|  
@@ -65,16 +65,16 @@ sp_enum_proxy_for_subsystem
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Comentarios  
- Si no se proporcionan parámetros, **sp_enum_proxy_for_subsystem** muestra información acerca de todos los servidores proxy en la instancia para cada subsistema.  
+ Cuando no se proporcionan parámetros, **sp_enum_proxy_for_subsystem** muestra información acerca de todos los servidores proxy de la instancia para cada subsistema.  
   
- Cuando se proporciona un Id. o nombre del proxy, **sp_enum_proxy_for_subsystem** subsistemas de listas que el proxy tenga acceso a. Cuando se proporciona un Id. o nombre de subsistema, **sp_enum_proxy_for_subsystem** muestra los servidores proxy que tienen acceso a ese subsistema.  
+ Cuando se proporciona un identificador de proxy o un nombre de proxy, **sp_enum_proxy_for_subsystem** muestra los subsistemas a los que tiene acceso el proxy. Cuando se proporciona un identificador de subsistema o un nombre de subsistema, **sp_enum_proxy_for_subsystem** muestra los servidores proxy que tienen acceso a ese subsistema.  
   
  Cuando se suministra información acerca del proxy y del subsistema, el conjunto de resultados devuelve una fila si el proxy especificado tiene acceso al subsistema especificado.  
   
  Este procedimiento almacenado se encuentra en **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución para este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -89,7 +89,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>b. Determinar si un proxy tiene acceso a un subsistema específico  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. Determinar si un proxy tiene acceso a un subsistema específico  
  En el ejemplo siguiente se devuelve una fila si el proxy `Catalog application proxy` tiene acceso al subsistema `ActiveScripting`. En caso contrario, se devuelve un conjunto de resultados vacío.  
   
 ```sql
@@ -102,7 +102,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_grant_proxy_to_subsystem &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

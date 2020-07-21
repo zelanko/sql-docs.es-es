@@ -11,25 +11,25 @@ helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 521a2ffbf0f8eb5e2590ae6e42d50dc71d536683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086041"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81297960"
 ---
 # <a name="transactions-odbc"></a>Transacciones ODBC
-Un *transacciones* es una unidad de trabajo que se realiza como una única operación atómica; es decir, la operación se realiza correctamente o no como un todo. Por ejemplo, considere la posibilidad de transferir dinero de una cuenta bancaria a otra. Esto implica dos pasos: retirar el dinero de la primera cuenta y el depósito en el segundo. Es importante que ambos pasos se realizan correctamente; no es aceptable para un solo paso, lleve a cabo correctamente y el otro. Una base de datos que admite transacciones es capaz de garantizar esto.  
+Una *transacción* es una unidad de trabajo que se realiza como una operación única y atómica. es decir, la operación se realiza correctamente o se produce un error en su conjunto. Por ejemplo, considere la posibilidad de transferir dinero de una cuenta bancaria a otra. Esto implica dos pasos: retirar el dinero de la primera cuenta y depositarlo en el segundo. Es importante que ambos pasos se realicen correctamente; no es aceptable que un paso se lleve a cabo correctamente y el otro para que se produzca un error. Una base de datos que admite transacciones es capaz de garantizar esto.  
   
- Las transacciones pueden realizarse por siendo *confirmada* o que se va a *revierte*. Cuando se confirma una transacción, los cambios realizados en que la transacción se hacen permanentes. Cuando se revierte una transacción, se devuelven las filas afectadas al estado que se encontraban antes de que se inició la transacción. Para ampliar el ejemplo de transferencia de la cuenta, una aplicación ejecuta una instrucción SQL para la primera cuenta de débito y una instrucción SQL diferente a la segunda cuenta de crédito. Si ambas instrucciones se realice correctamente, a continuación, la aplicación confirma la transacción. Pero si se produce un error en cualquier instrucción por cualquier motivo, la aplicación revierte la transacción. En cualquier caso, la aplicación garantiza un estado coherente al final de la transacción.  
+ Las transacciones se pueden completar si se *confirman* o se *revierten*. Cuando se confirma una transacción, los cambios realizados en esa transacción se realizan de forma permanente. Cuando se revierte una transacción, las filas afectadas se devuelven al estado en que se encontraban antes de que se iniciara la transacción. Para extender el ejemplo de transferencia de cuenta, una aplicación ejecuta una instrucción SQL para adeudar la primera cuenta y una instrucción SQL diferente para abonar la segunda cuenta. Si ambas instrucciones se ejecutan correctamente, la aplicación confirma la transacción. Pero si se produce un error en cualquiera de las instrucciones por algún motivo, la aplicación revierte la transacción. En cualquier caso, la aplicación garantiza un estado coherente al final de la transacción.  
   
- Una única transacción puede abarcar varias operaciones de base de datos que se producen en momentos diferentes. Si otras transacciones tenían acceso completo a los resultados intermedios, las transacciones pueden interferir entre sí. Por ejemplo, supongamos que una transacción inserta una fila, una segunda transacción lee esa fila y la primera transacción se revierte. La segunda transacción tiene datos de una fila que no existe.  
+ Una sola transacción puede abarcar varias operaciones de base de datos que se producen en momentos diferentes. Si otras transacciones tenían acceso completo a los resultados intermedios, las transacciones podrían interferir entre sí. Por ejemplo, supongamos que una transacción inserta una fila, una segunda transacción Lee esa fila y la primera transacción se revierte. La segunda transacción tiene ahora datos para una fila que no existe.  
   
- Para solucionar este problema, existen varios esquemas para aislar las transacciones entre sí. *Aislamiento de transacción* generalmente se implementa mediante el bloqueo de filas, lo que impide a más de una transacción del uso de la misma fila al mismo tiempo. En algunas bases de datos, el bloqueo de una fila también puede bloquear otras filas.  
+ Para solucionar este problema, hay varios esquemas para aislar las transacciones entre sí. Normalmente, el *aislamiento de transacciones* se implementa mediante el bloqueo de filas, lo que impide que más de una transacción utilice la misma fila al mismo tiempo. En algunas bases de datos, el bloqueo de una fila también puede bloquear otras filas.  
   
- Transacciones mayor aislamiento conlleva reducido *simultaneidad,* o la capacidad de dos transacciones para usar los mismos datos al mismo tiempo. Para obtener más información, consulte [establecer el nivel de aislamiento de transacción](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md).  
+ Con un mayor aislamiento de transacción se reduce la *simultaneidad,* o la capacidad de dos transacciones de usar los mismos datos al mismo tiempo. Para obtener más información, vea [establecer el nivel de aislamiento de transacción](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md).  
   
  Esta sección contiene los temas siguientes.  
   

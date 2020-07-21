@@ -1,6 +1,6 @@
 ---
 title: Información general de los tipos de datos espaciales | Microsoft Docs
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,20 +15,20 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7bc2464e8304a46fcbeada30453e2295e4fd2015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758820"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   
 Hay dos tipos de datos espaciales. El tipo de datos **geometry** admite datos planares o euclidianos (planisferio). El tipo de datos **geometry** se ajusta tanto a las características simples de Open Geospatial Consortium (OGC) para la especificación SQL versión 1.1.0 como a SQL MM (estándar ISO).
 Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el tipo de datos **geography** , que almacena datos elipsoidales (tierra redonda), como coordenadas de latitud y longitud GPS.
 
-##  <a name="objects"></a> Objetos de datos espaciales  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> Objetos de datos espaciales  
 Los tipos de datos **geometry** y **geography** admiten dieciséis objetos de datos espaciales o tipos de instancia. Pero solo se pueden *crear instancias*de once de estos tipos de instancia; puede crear y trabajar con estas instancias (o crear instancias de ellas) en una base de datos. Estas instancias obtienen determinadas propiedades de sus tipos de datos primarios que los distinguen como **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** o como varias instancias de **geometry** o **geography** en una **GeometryCollection**. El tipo**Geography** tiene un tipo de instancia adicional, **FullGlobe**.  
 
 La figura siguiente describe la jerarquía de **geometry** en la que se basan los tipos de datos **geometry** y **geography** . Los tipos a partir de los que pueden crearse instancias de **geometry** y **geography** se indican en azul.  
@@ -44,7 +44,7 @@ Los tipos simples incluyen:
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [Polígono](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 Los tipos de colección incluyen:  
@@ -53,7 +53,7 @@ Los tipos de colección incluyen:
 -   [MultiPolígono](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> Diferencias entre los tipos de datos geometry y geography  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> Diferencias entre los tipos de datos geometry y geography  
 Los dos tipos de datos espaciales se comportan a menudo de manera bastante similar pero hay algunas diferencias clave en la manera en la que los datos se almacenan y se manipulan.  
 
 ### <a name="how-connecting-edges-are-defined"></a>Definición de bordes de conexión  
@@ -70,7 +70,7 @@ En el sistema elíptico o de tierra redonda, las coordenadas se proporcionan en 
 ### <a name="orientation-of-spatial-data"></a>Orientación de datos espaciales  
 En el sistema plano, la orientación de anillo de un polígono no es un factor importante. Por ejemplo, un polígono descrito por ((0, 0), (10, 0), (0, 20), (0, 0)) es igual que un polígono descrito por ((0, 0), (0, 20), (10, 0), (0, 0)). Las características simples de OGC para la especificación de SQL no dictan una ordenación de anillos y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no exige la ordenación de anillos.  
 
-En un sistema elíptico, un polígono no tiene ningún significado, o es ambiguo, sin una orientación. Por ejemplo, ¿un anillo alrededor del ecuador describe el hemisferio norte o el hemisferio sur? Si usamos el tipo de datos **geography** para almacenar la instancia espacial, debemos especificar la orientación del anillo y describir con precisión la ubicación de la instancia. El interior del polígono de un sistema elipsoidal se define mediante la regla de la mano izquierda.  
+En un sistema elíptico, un polígono no tiene ningún significado, o es ambiguo, sin una orientación. Por ejemplo, ¿un anillo alrededor del ecuador describe el hemisferio norte o el hemisferio sur? Si usamos el tipo de datos **geography** para almacenar la instancia espacial, debemos especificar la orientación del anillo y describir con precisión la ubicación de la instancia. El interior del polígono de un sistema elipsoidal se define a partir de la "regla del lado izquierdo": si recorriéramos el anillo de un polígono de tipo geography siguiendo los puntos en el orden en que aparecen, el área de la izquierda se considera el interior del polígono y el área de la derecha, el exterior.
 
 Cuando el nivel de compatibilidad es 100 o menor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el tipo de datos **geography** tiene las siguientes restricciones:  
 -   Cada instancia de **geography** debe ajustarse en un hemisferio único. No se puede almacenar ningún objeto espacial mayor que un hemisferio.  
@@ -80,13 +80,13 @@ Cuando el nivel de compatibilidad es 100 o menor en [!INCLUDE[ssCurrent](../../i
 En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** es un tipo especial de Polygon que abarca el mundo entero. **FullGlobe** tiene un área, pero no tiene bordes o vértices.  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Anillos externos e internos no importantes en el tipo de datos `geography`  
-Las características simples de OGC para la especificación de SQL analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** ; se puede tomar cualquier anillo de un polígono como anillo externo.  
+Las características simples de OGC para la especificación de SQL analizan los anillos externos e internos, pero esta distinción tiene poco sentido para el tipo de datos **geography** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; se puede tomar cualquier anillo de un polígono como anillo externo.  
 
 Para obtener más información acerca de las especificaciones de OGC, vea lo siguiente:  
 -   [Especificaciones de OGC, Acceso a características simples, Parte 1 - Arquitectura común](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [Especificaciones de OGC, acceso a características simples, parte 2: opciones de SQL](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> Segmentos de arco circular  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> Segmentos de arco circular  
 Tres tipos de los que se pueden crear instancias pueden tomar segmentos de arco circular: **CircularString**, **CompoundCurve** y **CurvePolygon**.  Un segmento de arco circular se define mediante tres puntos en un plano bidimensional y el tercer punto no puede ser igual que el primero.  
 
 Las figuras A y B muestran segmentos de arco circular. Observe que cada uno de los tres puntos pertenece al perímetro de un círculo.  

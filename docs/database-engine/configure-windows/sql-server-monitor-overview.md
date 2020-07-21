@@ -1,5 +1,6 @@
 ---
 title: Información general del Monitor de SQL Server | Microsoft Docs
+description: Obtenga más información sobre SQL Server. Vea cómo usar los módulos Monitor de replicación y Monitor de creación de reflejo de la base de datos. Vea los permisos necesarios para su uso.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bb99ef49e22c578ec1ebd8cc715a6e70e5bb6df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771795"
 ---
 # <a name="sql-server-monitor-overview"></a>Información general del Monitor de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitor de SQL Server no realiza funciones de supervisión, sino que hospeda módulos que sí lo hacen. Los módulos del Monitor de SQL Server incluyen el Monitor de replicación y el Monitor de creación de reflejo de la base de datos.  
   
  Para utilizar uno de estos módulos, selecciónelo en el menú **Ir** . El módulo seleccionado actualmente posee el contenido de los paneles de navegación y de detalles, la interacción con el usuario en los paneles de detalles y las consultas de contenido y estado.  
@@ -51,10 +52,10 @@ ms.locfileid: "68032489"
  **Acción**  
  Contiene el menú contextual del nodo seleccionado en el árbol de navegación.  
   
- **Ir**  
+ **Go**  
  Contiene una lista de componentes de supervisión  
   
--   Creación de reflejo de base de datos  
+-   Creación de reflejo de la base de datos  
   
 -   Replicación  
   

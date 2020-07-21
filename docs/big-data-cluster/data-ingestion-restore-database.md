@@ -1,7 +1,7 @@
 ---
 title: Restaurar una base de datos
 titleSuffix: SQL Server big data clusters
-description: En este artículo se muestra cómo restaurar una base de datos en la instancia [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]maestra de un.
+description: En este artículo se explica cómo restaurar una base de datos en la instancia maestra de un clúster de macrodatos de SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 722c826f5b9a9dd7d1ebe7e1cf444b779f7d4e67
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652233"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606778"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restauración de una base de datos en la instancia maestra del clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo restaurar una base de datos existente en la instancia [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]maestra de un. El método recomendado consiste en seguir una estrategia de copia de seguridad, copia y restauración.
+En este artículo se describe cómo restaurar una base de datos existente en la instancia maestra de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. El método recomendado consiste en seguir una estrategia de copia de seguridad, copia y restauración.
 
 ## <a name="backup-your-existing-database"></a>Copia de seguridad de la base de datos existente
 
@@ -29,7 +29,7 @@ En primer lugar, realice una copia de seguridad de la base de datos de SQL Serve
 En este artículo se muestra cómo restaurar la base de datos AdventureWorks, pero puede usar cualquier copia de seguridad de base de datos. 
 
 > [!TIP]
-> Puede descargar [aquí](https://www.microsoft.com/download/details.aspx?id=49502) la copia de seguridad de AdventureWorks.
+> Descargue la [copia de seguridad de AdventureWorks](../samples/adventureworks-install-configure.md).
 
 ## <a name="copy-the-backup-file"></a>Copia del archivo de copia de seguridad
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de, consulte la información general siguiente:
+Para obtener más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea la siguiente introducción:
 
-- [¿Qué [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]son?](big-data-cluster-overview.md)
+- [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

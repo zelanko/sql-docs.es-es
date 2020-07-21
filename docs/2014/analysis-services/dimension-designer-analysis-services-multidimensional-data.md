@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services - datos multidimensionales) del Diseñador de dimensiones | Microsoft Docs
+title: Diseñador de dimensiones (Analysis Services de datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081780"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528615"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Diseñador de dimensiones (Analysis Services - Datos multidimensionales)
   Use el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para examinar los datos que contiene la dimensión, y para modificar las distintas propiedades de una dimensión existente: atributos, jerarquías, niveles, relaciones de atributo y traducciones.  
@@ -28,7 +27,7 @@ ms.locfileid: "66081780"
   
     -   Haga clic con el botón derecho en una dimensión y, después, haga clic en **Abrir** o en **Diseñador de vistas**.  
   
-         -o bien-  
+         o bien  
   
     -   Haga doble clic en una dimensión.  
   
@@ -41,15 +40,15 @@ ms.locfileid: "66081780"
  [Relaciones de atributo](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
  Use esta página para crear, modificar o eliminar las relaciones de atributo de la dimensión seleccionada.  
   
- [Traducciones](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Translations](translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Use esta página para ver y modificar las traducciones asociadas con la dimensión y sus atributos, jerarquías y niveles.  
   
  [Browser](browser-dimension-designer-analysis-services-multidimensional-data.md)  
  Use esta página para examinar los miembros de una jerarquía contenida en la dimensión.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

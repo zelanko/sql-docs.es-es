@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749313"
 ---
-# <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve las propiedades de la base datos de distribución especificada. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -37,16 +37,16 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database_name'`Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su**valor **%** predeterminado es para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
+`[ @database = ] 'database_name'`Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su**valor predeterminado es **%** para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre de la base de datos de distribución.|  
 |**min_distretention**|**int**|Período mínimo de retención, en horas, antes de que se eliminen las transacciones.|  
 |**max_distretention**|**int**|Período máximo de retención, en horas, antes de que se eliminen las transacciones.|  
-|**retención del historial**|**int**|Número de horas que se conserva el historial.|  
+|**history retention**|**int**|Número de horas que se conserva el historial.|  
 |**history_cleanup_agent**|**sysname**|Nombre del Agente de limpieza del historial.|  
 |**distribution_cleanup_agent**|**sysname**|Nombre del Agente de limpieza de distribución.|  
 |**status**|**int**|Exclusivamente para uso interno.|  
@@ -64,13 +64,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  **sp_helpdistributiondb** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Los miembros del rol fijo de base de datos **db_owner** o del rol **replmonitor** en una base de datos de distribución y los usuarios de la lista de acceso a la publicación de una publicación que usa la base de datos de distribución pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con archivos. Los miembros del rol **Public** pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con archivos de las bases de datos de distribución a las que tienen acceso.  
+ Los miembros del rol fijo de base de datos **db_owner** o el rol **replmonitor** en una base de datos de distribución y los usuarios de la lista de acceso a la publicación de una publicación que utiliza la base de datos de distribución pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con archivos. Los miembros del rol **Public** pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con archivos de las bases de datos de distribución a las que tienen acceso.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

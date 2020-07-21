@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffd259662c4ee4e48ff6b8c5469f72e96bf9778e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62657495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062677"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Instalar las herramientas de cliente en un clúster de conmutación por error de SQL Server
   Las herramientas de cliente tales como [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] son características compartidas comunes a todas las instancias del mismo equipo. Son compatibles con versiones anteriores, con versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admitidas que se pueden instalar en paralelo. Solo existe una versión de las herramientas de cliente en un nodo a la vez.  
@@ -29,7 +28,7 @@ ms.locfileid: "62657495"
   
 ## <a name="installation-procedures"></a>Procedimientos de instalación  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-using-the-setup-user-interface"></a>Instalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando la interfaz de usuario del programa de instalación  
+#### <a name="installing-ssnoversion-client-tools-using-the-setup-user-interface"></a>Instalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando la interfaz de usuario del programa de instalación  
   
 1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En la carpeta de instalación raíz, haga doble clic en Setup.exe. Para realizar la instalación desde el recurso compartido de red, localice la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
@@ -41,18 +40,18 @@ ms.locfileid: "62657495"
   
 5.  En la página **Selección de características** , seleccione las herramientas que desee instalar y siga realizando los pasos restantes del proceso de instalación.  
   
-#### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Instalar las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando el símbolo del sistema  
+#### <a name="installing-ssnoversion-client-tools-at-the-command-prompt"></a>Instalar las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando el símbolo del sistema  
   
-1.  Para instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las herramientas de cliente y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los libros en línea, ejecute el siguiente comando: Setup.exe/q/Action=Install /Features=Tools  
+1.  Para instalar las herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el comando siguiente: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  Para instalar sólo las opciones básicas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las herramientas de administración ejecutan el siguiente comando: Setup.exe/q/Action=Install Features = SSMS. De este modo se instalará la compatibilidad de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], la utilidad sqlcmd y el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell.  
+2.  Para instalar solo las herramientas de administración básica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el comando siguiente: Setup.exe/q/Action=Install Features=SSMS. De este modo se instalará la compatibilidad de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], la utilidad sqlcmd y el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell.  
   
-3.  Para instalar la completa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herramientas de administración, ejecute el siguiente comando: Setup.exe/q/Action=Install /Features=ADV_SSMS. Para obtener más información acerca de los valores de parámetro para las características, consulte [instalar SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+3.  Para instalar todas las herramientas de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el comando siguiente: Setup.exe/q/Action=Install /Features=ADV_SSMS. Para obtener más información acerca de los valores de los parámetros de las características, consulte [Install SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Desinstalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="uninstalling-ssnoversion-client-tools"></a>Desinstalar las Herramientas de cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  Aparecen en Agregar o quitar programas en el Panel de control como **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** y se pueden quitar desde ahí. Si usa Quitar nodo para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del clúster de conmutación por error, los componentes cliente no se desinstalarán al mismo tiempo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

@@ -7,22 +7,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9de552ddd54168f516f42d9988302561616fd65
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670506"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439372"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Copia de seguridad, restauración y traslado del catálogo de SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] incluye la base de datos de SSISDB. En la base de datos de SSISDB, se consultan vistas para inspeccionar objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de SSISDB. Este tema proporciona instrucciones para hacer una copia de seguridad de la base de datos y restaurarla.  
   
  El catálogo de **SSISDB** almacena los paquetes que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para más información sobre el catálogo, vea [Catálogo de SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a> Para realizar una copia de seguridad de la base de datos de SSIS  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a>Para realizar una copia de seguridad de la base de datos de SSIS  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y conéctese a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -38,7 +37,7 @@ ms.locfileid: "68670506"
   
     ```  
   
-3.  Use el cuadro de diálogo **Copia de seguridad de la base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para realizar una copia de seguridad de la base de datos de SSISDB. Para más información, vea [Cómo: Realizar una copia de seguridad de una base de datos (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Use el cuadro de diálogo **Copia de seguridad de la base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para realizar una copia de seguridad de la base de datos de SSISDB. Para más información, vea [Cómo realizar una copia de seguridad de una base de datos (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Realice el procedimiento siguiente para generar el script CREATE LOGIN para ##MS_SSISServerCleanupJobLogin##. Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "68670506"
   
 5.  Si restaura la base de datos de SSISDB a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que nunca se ha creado el catálogo de SSISDB, genere el script CREATE PROCEDURE para sp_ssis_startup como se indica aquí. Para obtener más información, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  En explorador de objetos, expanda el nodo **bases de datos** y, a continuación, expanda el > nodo >  **bases de datos del sistema**y**procedimientos almacenados** de**programación** > **maestra**.  
+    1.  En explorador de objetos, expanda el nodo **bases de datos** y, a continuación, expanda el nodo **bases de datos del sistema**y  >  **master**  >  **Programmability**  >  **procedimientos almacenados** de programación maestra.  
   
     2.  Haga clic con el botón derecho en **dbo.sp_ssis_startup**y, después, haga clic en **Incluir procedimiento almacenado como** > **CREATE To** > **Nueva ventana del Editor de consultas**.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670506"
   
     1.  En el Explorador de objetos, expanda el nodo **Agente SQL Server** y luego expanda el nodo **Trabajos** .  
   
-    2.  Haga clic con el botón derecho en el trabajo de mantenimiento del Servidor SSIS y, después, haga clic en **Incluir trabajo como** > **CREATE To** > **Nueva ventana del Editor de consultas**.  
+    2.  Haga clic con el botón secundario en trabajo de mantenimiento del servidor SSIS y, a continuación, haga clic en **incluir trabajo como**  >  **crear en**  >  **nueva ventana del editor de consultas**.  
   
 ### <a name="to-restore-the-ssis-database"></a>Para restaurar la base de datos de SSIS  
   
@@ -89,7 +88,7 @@ ms.locfileid: "68670506"
   
     ```  
   
-3.  Use el cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para restaurar la base de datos de SSISDB a partir de una copia de seguridad. Para obtener más información, vea los siguientes temas.  
+3.  Use el cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para restaurar la base de datos de SSISDB a partir de una copia de seguridad. Para obtener más información, vea los temas siguientes:  
   
     -   [Restaurar la base de datos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)  
   

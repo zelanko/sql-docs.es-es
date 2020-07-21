@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33384f1e764cbc60bbd8e836aceffe6db3610c57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972235"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Asignar permisos del área funcional (Master Data Services)
   Asigne el permiso de área funcional para conceder a los usuarios o grupos acceso a las áreas funcionales de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -48,8 +47,8 @@ ms.locfileid: "65480098"
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crear un administrador de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree un administrador de modelos &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
  [Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

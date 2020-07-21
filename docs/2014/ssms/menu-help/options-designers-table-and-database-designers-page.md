@@ -1,5 +1,5 @@
 ---
-title: Opciones (diseñadores-Table y página diseñadores de base de datos) | Microsoft Docs
+title: Opciones (diseñadores-página diseñadores de tablas y bases de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5eee59aae7ca1b448b448b4e8f69fca55c664772
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283662"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048684"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Opciones (diseñadores-Table y página diseñadores de base de datos)
+# <a name="options-designers-table-and-database-designers-page"></a>Opciones (diseñadores-página diseñadores de tablas y bases de datos)
   Utilice esta página para determinar el comportamiento predeterminado del diseñador. Para tener acceso a esta configuración, en el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Diseñadores** y haga clic en **Diseñador de tablas**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Sobrescribir el valor de tiempo de espera de la cadena de conexión para actualizaciones del diseñador de tabla**  
  Permite establecer un nuevo valor de tiempo de espera para las acciones del diseñador de tablas. Esto puede resultar útil si el diseñador de tablas afecta a una tabla grande y requiere más tiempo para completar la modificación.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63283662"
  **Vista de tabla predeterminada**  
  Seleccione la forma en que desea ver las tablas en los diseñadores:  
   
--   **Standard**  
+-   **Estándar**  
   
      Muestra el encabezado de tablas, todos los nombres de columna, tipos de datos y la configuración Permitir valores NULL.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63283662"
   
      Muestra los nombres de columna.  
   
--   **Key**  
+-   **Clave**  
   
      Muestra el encabezado de tabla y las columnas de clave principal.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "63283662"
   
      Solo muestra el encabezado de tabla con su nombre.  
   
--   **Personalizado**  
+-   **Personalizada**  
   
      Permite elegir las columnas que se muestran.  
   

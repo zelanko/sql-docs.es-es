@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9a0b20947892510f09790b0592bee58b350d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62473054"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067672"
 ---
 # <a name="post-download-instructions"></a>Exponer instrucciones de descarga
   Utilice esta página para especificar las instrucciones de descarga de un servidor de destino.  
@@ -50,7 +49,7 @@ ms.locfileid: "62473054"
  **Intervalo de sondeo**  
  Presenta el intervalo de sondeo actual del servidor de destino.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  
   
   

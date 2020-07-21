@@ -23,21 +23,22 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70148837"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008048"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Define una fecha que se combina con una hora del día con reconocimiento de zona horaria y basado en un reloj de 24 horas.
-  
+
 ## <a name="datetimeoffset-description"></a>Descripción de datetimeoffset
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |---|---|
 |Sintaxis|**datetimeoffset** [(*precisión de fracciones de segundo*)]|  
 |Uso|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
@@ -208,7 +209,7 @@ Las conversiones de literales de cadena en tipos de fecha y hora son posibles cu
 |Solo TIME|La parte de DATE tiene como valor predeterminado 1900-1-1. TIMEZONE tendrá como valor predeterminado +00:00.|  
 |Solo TIMEZONE|Se proporcionan los valores predeterminados.|  
 |DATE + TIME|TIMEZONE tiene como valor predeterminado +00:00.|  
-|DATE + TIMEZONE|No permitido|  
+|DATE + TIMEZONE|No permitida|  
 |TIME + TIMEZONE|La parte de DATE tiene como valor predeterminado 1900-1-1.|  
 |DATE + TIME + TIMEZONE|Trivial|  
   
@@ -232,16 +233,16 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Tipo de datos|Salida|  
+|Tipo de datos|Output|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
-|**Fecha y hora**|2007-05-08 12:35:29.123|  
+|**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

@@ -10,15 +10,15 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891137"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas relacionales
-  El Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
+  Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] deben recuperarse de y para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
   
 > [!NOTE]  
 >  El diseñador gráfico de consultas con el que escribe las consultas para recuperar los datos de [!INCLUDE[ssSDS](../includes/sssds-md.md)] y[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] es diferente del diseñador de consultas que se utiliza con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para escribir consultas que recuperen datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se utiliza el [!INCLUDE[vspnvdt](../includes/vspnvdt-md.md)] que proporciona Visual Studio. Para más información, consulte [Graphical Query Designer User Interface](report-data/graphical-query-designer-user-interface.md).  
@@ -36,11 +36,11 @@ ms.locfileid: "68891137"
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con tablas o vistas.  
   
- ![Diseñador gráfico de consultas](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Diseñador gráfico de consultas")  
+ ![Diseñador gráfico para consultas](../analysis-services/media/rsqd-relational-graphical.gif "Diseñador gráfico para consultas")  
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con funciones con valores de tabla o procedimientos almacenados.  
   
- ![Procedimiento almacenado en un diseñador gráfico de consultas](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Procedimiento almacenado en un diseñador gráfico de consultas")  
+ ![Procedimiento almacenado en el diseñador gráfico de consultas](../analysis-services/media/rs-relational-graphical-sp.gif "Procedimiento almacenado en el diseñador gráfico de consultas")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "68891137"
  [Resultados de la consulta](#QueryResults)  
  Muestra datos de ejemplo para el conjunto de resultados de la consulta generada automáticamente.  
   
-###  <a name="DatabaseView"></a> Panel Vista de base de datos  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Panel Vista de base de datos  
  El panel Vista de base de datos muestra los metadatos de los objetos de base de datos que el usuario tiene permiso para ver, que se determinan mediante la conexión a un origen de datos y las credenciales. La vista jerárquica muestra objetos de base de datos organizados por esquema de la base de datos. Expanda el nodo de cada esquema para ver las tablas, vistas, procedimientos almacenados y funciones con valores de tabla. Expanda una tabla o vista para ver las columnas.  
   
-###  <a name="SelectedFields"></a> Panel Campos seleccionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Panel Campos seleccionados  
  El panel Campos seleccionados muestra los campos en el conjunto de datos de informe y los grupos y agregados para incluir en la consulta.  
   
  Se muestran las siguientes opciones:  
@@ -83,9 +83,9 @@ ms.locfileid: "68891137"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] usa.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
- Para obtener más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de  en msdn.microsoft.com.  
   
  En la siguiente tabla se enumeran los agregados y se proporciona una breve descripción de los mismos.  
   
@@ -110,14 +110,14 @@ ms.locfileid: "68891137"
 |Var Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VAR y la palabra clave DISTINCT.|  
 |VarP Distinct|Devuelve varianzas estadísticas únicas. Implementa una combinación del agregado VARP y la palabra clave DISTINCT.|  
   
-###  <a name="FunctionParameters"></a> Panel Parámetros de función  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a> Panel Parámetros de función  
  El panel Parámetros de función muestra los parámetros para un procedimiento almacenado o función con valores de tabla. Se muestran las siguientes columnas:  
   
 -   **Nombre de parámetro** : muestra el nombre del parámetro definido por el procedimiento almacenado o la función con valores de tabla.  
   
 -   **Valor** : valor que se usa para el parámetro cuando la consulta se ejecuta a fin de recuperar los datos que deben mostrarse en el panel Resultados de la consulta en tiempo de diseño. Este valor no se usa cuando el informe se ejecuta en el tiempo de ejecución.  
   
-###  <a name="Relationships"></a> Panel Relaciones  
+###  <a name="relationships-pane"></a><a name="Relationships"></a> Panel Relaciones  
  El panel Relaciones muestra las relaciones de la combinación. Las relaciones pueden detectarse automáticamente en las relaciones de clave externa que se recuperan a partir de los metadatos de base de datos, o bien puede crearlas usted mismo.  
   
  Se muestran las siguientes opciones:  
@@ -155,7 +155,7 @@ ms.locfileid: "68891137"
   
 -   **Campos de combinación** : muestra los pares de campos combinados; si una relación tiene varias condiciones de combinación, los pares de campos combinados están separados por comas (,).  
   
-###  <a name="AppliedFilters"></a> Panel Filtros aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Panel Filtros aplicados  
  El panel Filtros aplicados muestra los criterios que se usan para limitar el número de filas de datos que deben recuperarse en tiempo de ejecución. Los criterios especificados en este panel se usan para generar una cláusula WHERE de SQL. Al seleccionar la opción de parámetro, se crea automáticamente un parámetro de informe. Los parámetros de informe basados en los parámetros de consulta permiten a un usuario especificar valores para que la consulta controle los datos del informe.  
   
  Se muestran las siguientes columnas:  
@@ -168,7 +168,7 @@ ms.locfileid: "68891137"
   
 -   **Parámetro** : muestra la opción de agregar un parámetro de consulta a la consulta. Use las propiedades del conjunto de datos para ver la relación que existe entre el parámetro de consulta y el parámetro de informe.  
   
-###  <a name="QueryResults"></a> Panel Resultados de la consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Panel Resultados de la consulta  
  El panel Resultados de la consulta muestra los resultados de la consulta generada automáticamente que se especifica mediante selecciones en los otros paneles. Las columnas del conjunto de resultados son los campos que se especifican en el panel Campos seleccionados y los datos de fila quedan limitados por los filtros especificados en el panel Filtros aplicados. Si la consulta incluye agrega el conjunto de resultados incluye las nuevas columnas agregadas. Por ejemplo, si la columna **Color** se agrega utilizando el agregado Count, los resultados de la consulta incluyen una nueva columna. De forma predeterminada, esta columna se denomina **Count_Color**.  
   
  Estos datos representan los valores del origen de datos en el momento de ejecución de la consulta. Los datos no se guardan en la definición de informe. Los datos reales del informe se recuperar al procesar el informe.  
@@ -181,7 +181,7 @@ ms.locfileid: "68891137"
 |Botón|Descripción|  
 |------------|-----------------|  
 |**Editar como texto**|Cambie al diseñador de consultas basado en texto para ver la consulta generada automáticamente o para modificar la consulta.|  
-|**Importaciónación**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo .sql y .rdl.|  
+|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo .sql y .rdl.|  
 |**Ejecutar consulta**|Ejecuta la consulta. El panel Resultados de la consulta muestra el conjunto de resultados.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Descripción de las consultas generadas automáticamente  
@@ -190,7 +190,7 @@ ms.locfileid: "68891137"
 ## <a name="text-based-query-designer"></a>Diseñador de consultas basado en texto  
  Para obtener el máximo control sobre la consulta, use el diseñador de consultas basado en texto. Para cambiar al diseñador de consultas basado en texto, en la barra de herramientas, haga clic en **Editar como texto**. Una vez que haya modificado una consulta en el diseñador de consultas basado en texto, ya no podrá usar el diseñador de consultas relacionales. La consulta se abrirá siempre en el diseñador de consultas basado en texto. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../../2014/reporting-services/text-based-query-designer-user-interface.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñadores de consultas de Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   
   

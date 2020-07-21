@@ -1,6 +1,7 @@
 ---
-title: 'Encuesta rápida 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL | Microsoft Docs'
-ms.custom: ''
+title: OLTP en memoria para acelerar el rendimiento de Transact-SQL
+description: Obtenga información sobre los conceptos básicos de las características de rendimiento de OLTP en memoria de SQL Server y Azure SQL Database con explicaciones rápidas y ejemplos de código básicos para desarrolladores.
+ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,16 +12,16 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: e90d523b4dc17d640ebaae825abef59d80582389
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712944"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650864"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 Este artículo está destinado a los desarrolladores que necesitan aprender rápidamente los conceptos básicos de las características de rendimiento de OLTP en memoria de Microsoft SQL Server y Base de datos SQL de Azure.  
@@ -78,7 +79,7 @@ Hay dos escenarios principales:
 El presente artículo se centra en OLTP y no en el análisis. Para obtener información sobre cómo los índices de almacén de columnas llevan el análisis a SQL, vea:  
   
 - [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
-- [Guía de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)  
+- [Descripción de los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)  
   
   
 > [!NOTE]
@@ -122,7 +123,7 @@ Una secuencia de entradas de blog excelentes explica de manera elegante los índ
 Veamos las características principales de OLTP en memoria.  
   
   
-#### <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
+#### <a name="memory-optimized-tables"></a>Tablas optimizadas para memoria  
   
 La palabra clave MEMORY_OPTIMIZED de T-SQL, en la instrucción CREATE TABLE, indica que se crea una tabla en la memoria activa, en lugar de en disco.  
   
@@ -253,7 +254,7 @@ ALTER TABLE... ADD/DROP puede agregar o quitar una columna de una tabla optimiza
   
   
 - [Índices de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-- [Construcciones Transact-SQL no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+- [Construcciones de Transact-SQL no admitidas en In-Memory OLTP.](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
   
@@ -403,7 +404,7 @@ En el resto de esta sección se enumeran algunas de las consideraciones principa
 - [Tamaño de tabla y fila de las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Dividir la tabla grande:** una manera de satisfacer la demanda de grandes cantidades de memoria activa es dividir la tabla grande en partes en memoria que almacenen filas de datos *recientes frecuentes* frente a otras partes en el disco que almacenen filas *heredadas inactivas* (por ejemplo, pedidos de ventas que se han enviado y completado totalmente). Esta división es un proceso manual de diseño e implementación. Vea:  
+**Dividir la tabla grande:** una manera de satisfacer la demanda de grandes cantidades de memoria activa es dividir la tabla grande en partes en memoria que almacenen filas de datos *recientes frecuentes* frente a otras partes en el disco que almacenen filas *heredadas inactivas* (por ejemplo, pedidos de ventas que se han enviado y completado totalmente). Esta división es un proceso manual de diseño e implementación. Consulte:  
   
 - [Creación de particiones en el nivel de aplicación](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Patrón de aplicación para crear particiones de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -424,9 +425,9 @@ Los[índices de tablas con optimización para memoria](../../relational-database
 - [Índices de hash de tablas con optimización para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index)
 - [Índice no agrupado de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
-Debe tener un plan para asegurarse de que haya suficiente memoria activa para la tabla optimizada para memoria planeada y sus índices. Vea:  
+Debe tener un plan para asegurarse de que haya suficiente memoria activa para la tabla optimizada para memoria planeada y sus índices. Consulte:  
   
-- [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+- [Crear y administrar el almacenamiento de objetos optimizados para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
 Es posible declarar una tabla optimizada para memoria con DURABILITY = SCHEMA_ONLY:  
   
@@ -434,7 +435,7 @@ Es posible declarar una tabla optimizada para memoria con DURABILITY = SCHEMA_ON
 - Cuando la base de datos vuelva a estar en línea, la tabla optimizada para memoria se vuelve a cargar en la memoria activa, vacía de datos.  
 - Las tablas SCHEMA_ONLY pueden ser una mejor [alternativa a las tablas temporales](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) en tempdb, cuando hay implicados varios miles de filas.  
   
-Las variables de tabla también pueden declararse como optimizadas para memoria. Vea:  
+Las variables de tabla también pueden declararse como optimizadas para memoria. Consulte:  
   
 - [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
@@ -493,7 +494,7 @@ El siguiente artículo, y los artículos secundarios en la tabla de contenido (T
   
 ## <a name="related-links"></a>Vínculos relacionados  
   
-- Artículo inicial: [OLTP en memoria (optimización en memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Artículo inicial: [In-Memory OLTP (optimización In-Memory)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Los artículos siguientes incluyen código para demostrar las mejoras de rendimiento que se pueden lograr con el uso de OLTP en memoria:  
   

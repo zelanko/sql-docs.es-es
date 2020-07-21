@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0) | Microsoft Docs
+title: Ejecutar un diagrama mediante ADO (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,29 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fb903ddd3d8639b3e33d04d9d8853585f83fc894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014835"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009444"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0)
   Esta aplicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utiliza ADO para establecer una conexión a una instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y ejecutar un diagrama de actualización. El diagrama de actualización actualiza el apellido de un empleado concreto. En este ejemplo se utiliza la base de datos de ejemplo AdventureWorks.  
   
  En esta aplicación de ejemplo:  
   
--   El **conn** objeto (**ADODB. Conexión**) establece una conexión a una instancia de ejecución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo servidor concreto.  
+-   Objeto **Conn** (**ADODB. Conexión**) establece una conexión a una instancia en ejecución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo servidor específico.  
   
--   El **cmd** objeto (**ADODB.Command**) se ejecuta en la conexión establecida.  
+-   El objeto **cmd** (**ADODB. Command**) se ejecuta en la conexión establecida.  
   
 -   El lenguaje de comandos está establecido en DBGUID_MSSQLXML.  
   
--   El diagrama de actualización se copia en la secuencia de comandos (**strmIn**).  
+-   Diagrama se copia en la secuencia de comandos (**strmIn**).  
   
--   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Stream**) a reciba cualquiera de los datos devueltos.  
+-   El flujo de salida del comando se establece en el objeto **StrmOut** (**ADODB. Stream**) para recibir los datos devueltos.  
   
 -   Finalmente se ejecuta el comando (diagrama de actualización).  
   
@@ -182,7 +181,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Pasar parámetros  
- En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, el **ContactID** y **MiddleName** valores se pasan como entrada parametrizada en el diagrama de actualización.  
+ En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, los valores **ContactID** y **MiddleName** se pasan como entrada parametrizada a diagrama.  
   
 ```vb  
 Private Sub Form_Load()  

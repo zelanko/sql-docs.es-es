@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893553"
 ---
 # <a name="unary-operators"></a>Operadores unarios
@@ -22,7 +22,7 @@ ms.locfileid: "68893553"
   
  MDX es compatible con los operadores unarios que se indican en la siguiente tabla.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |[- (Negativo)](../mdx/negative-mdx.md)|Devuelve el valor negativo de una expresión numérica.|  
 |[+ (Positivo)](../mdx/positive-mdx.md)|Devuelve el valor positivo de una expresión numérica.|  
@@ -42,7 +42,7 @@ WHERE [Product].[Category].[Bikes]
   
  Además, MDX utiliza operadores unarios especiales para determinar la operación de agregación realizada por la función [RollupChildren](../mdx/rollupchildren-mdx.md) . Para obtener más información sobre estos operadores unarios especiales, vea [Agregar una agregación personalizada a una dimensión](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

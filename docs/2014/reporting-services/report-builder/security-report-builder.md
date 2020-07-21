@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107604"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
-  El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
+  Generador de informes es una aplicación cliente de creación de informes diseñada para trabajar con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servidor de informes. El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
   
  En el Generador de informes puede crear informes, conjuntos de datos compartidos y elementos de informe reutilizables. Desde un servidor de informes o sitio de SharePoint, puede editar los informes y agregar orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe compartidos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66107604"
   
  Revise la información de este tema para saber cómo utilizar las características de seguridad para administrar y proteger mejor los informes y los elementos relacionados con los informes.  
   
-##  <a name="ReportServers"></a> Descripción de la seguridad de los servidores de informes  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Descripción de la seguridad de los servidores de informes  
  La publicación y visualización de informes son operaciones que requieren permisos. El administrador de un servidor de informes concede permisos para asegurarse de que solo los usuarios autorizados pueden publicar y ver los informes de uno de los siguientes tipos de servidores de informes:  
   
 -   Servidor de informes configurado en modo nativo  
@@ -57,7 +57,7 @@ ms.locfileid: "66107604"
   
 =
   
-##  <a name="Reports"></a> Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
  El administrador del servidor de informes administra la seguridad de los informes y los elementos relacionados con los informes. Son elementos relacionados con los informes los orígenes de datos incrustados y compartidos como credenciales, conjuntos de datos compartidos, parámetros, elementos de informe y modelos.  
   
  En un servidor de informes o sitio de SharePoint, los informes y elementos y operaciones relacionados con los informes se pueden proteger por separado. Los permisos para obtener acceso a los elementos y a las operaciones se conceden a través de directivas de seguridad que asignan una cuenta de usuario o grupo a un nivel de permiso relativo a un elemento. Para reducir la complejidad y la sobrecarga de mantener un gran número de directivas, los elementos de un contenedor, como una carpeta, heredan los permisos del contenedor. Por ejemplo, si un usuario tiene el permiso concreto Ver informes en una carpeta, tiene dicho permiso para los elementos de la carpeta.  
@@ -72,7 +72,7 @@ ms.locfileid: "66107604"
   
 -   [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
--   [Administración de conjuntos de datos compartidos](../report-data/manage-shared-datasets.md)  
+-   [Administrar conjuntos de datos compartidos](../report-data/manage-shared-datasets.md)  
   
 ### <a name="update-notifications-for-report-parts"></a>Actualizar notificaciones de los elementos de informe  
  Los elementos de informe se publican en un servidor de informes para que otros usuarios puedan compartirlos. Por cuestiones de diseño, se especifica la ubicación en la que se deben publicar los elementos de informe.  
@@ -85,7 +85,7 @@ ms.locfileid: "66107604"
   
 =  
   
-##  <a name="Data"></a> Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
  Para tener acceso a los datos de cada origen de datos externo de un informe, debe crear origen de datos incrustado o agregar una referencia a un origen de datos compartido o conjunto de datos compartido en el informe.  
   
  Para cada origen de datos externo, debe proporcionar credenciales suficientes para tener acceso al origen y los datos subyacentes. El propietario del origen de datos especifica el tipo de credenciales que proporciona este acceso.  
@@ -96,20 +96,20 @@ ms.locfileid: "66107604"
   
  Para obtener más información acerca de cómo proteger los datos, consulte el siguiente tema en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312):  
   
--   [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  Para más información sobre orígenes de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 =
   
-##  <a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
  Cuando se recuperan datos de un modelo de informe basado en datos externos, puede aplicar filtros de seguridad en el modelo. De esta manera se protegen los datos de forma que cada usuario que ejecuta un informe pueda ver solo los datos para los que tiene permiso.  
   
  Los parámetros de informe no se utilizan para la seguridad en el nivel de fila; no evitan que los usuarios o grupos de usuarios vean filas de datos específicas. Para aplicar seguridad a los datos que se muestran en un informe, es necesario utilizar filtros de seguridad o seguridad de elemento de modelo.  
   
 =
   
-##  <a name="Interactive"></a> Descripción de la seguridad de las características interactivas en la creación de informes  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Descripción de la seguridad de las características interactivas en la creación de informes  
  A menudo, los informes utilizan parámetros para que un usuario pueda personalizar interactivamente la vista de un informe. A continuación se ofrecen algunas sugerencias para diseñar informes correctamente:  
   
 -   No utilice parámetros basados en parámetros de consulta y que son de tipo **Texto** , a menos que proporcione valores válidos. Una lista de valores disponibles ayuda al usuario a elegir solo valores válidos. Sin una lista de valores disponibles, no se pueden restringir los valores que puede especificar un usuario.  
@@ -120,8 +120,8 @@ ms.locfileid: "66107604"
   
  
   
-## <a name="see-also"></a>Vea también  
- [Instalar, desinstalar y asistencia del generador de informes](../install-uninstall-and-report-builder-support.md)   
+## <a name="see-also"></a>Consulte también  
+ [Instalación, desinstalación y compatibilidad Generador de informes](../install-uninstall-and-report-builder-support.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

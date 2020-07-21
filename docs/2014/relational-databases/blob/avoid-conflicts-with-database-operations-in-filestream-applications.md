@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fa9321cffd3b6b5edb7ac90fac67867804637b6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955855"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
   Las aplicaciones que usan SqlOpenFilestream() para abrir los identificadores de archivos de Win32 con el fin de leer o escribir datos BLOB de FILESTREAM pueden encontrar errores de conflictos con las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se administran en una transacción común. Esto incluye las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] o MARS que tardan mucho en finalizar la ejecución. Las aplicaciones deben diseñarse cuidadosamente para ayudar a evitar estos tipos de conflictos.  
@@ -26,9 +25,9 @@ ms.locfileid: "66010368"
   
 |Instrucciones Transact-SQL|Abierto para lectura|Abierto para escritura|  
 |------------------------------|---------------------|----------------------|  
-|Instrucciones DDL que trabajan con los metadatos de la base de datos, como CREATE TABLE, CREATE INDEX, DROP TABLE y ALTER TABLE.|Permitido|Se bloquean y agotan el tiempo de espera con un error.|  
-|Instrucciones DML que trabajan con los datos que están almacenados en la base de datos, como UPDATE, DELETE e INSERT.|Permitido|Denegado|  
-|SELECT|Permitido|Permitido|  
+|Instrucciones DDL que trabajan con los metadatos de la base de datos, como CREATE TABLE, CREATE INDEX, DROP TABLE y ALTER TABLE.|Permitida|Se bloquean y agotan el tiempo de espera con un error.|  
+|Instrucciones DML que trabajan con los datos que están almacenados en la base de datos, como UPDATE, DELETE e INSERT.|Permitida|Denegado|  
+|SELECT|Permitida|Permitida|  
 |COMMIT TRANSACTION|Denegado*|Denegado*|  
 |SAVE TRANSACTION|Denegado*|Denegado*|  
 |ROLLBACK|Permitido*|Permitido*|  
@@ -61,7 +60,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>b. Abrir un BLOB de FILESTREAM para acceso de lectura  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>B. Abrir un BLOB de FILESTREAM para acceso de lectura  
  En el ejemplo siguiente se muestra el efecto de abrir únicamente un archivo para acceso de lectura.  
   
 ```  
@@ -140,7 +139,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   

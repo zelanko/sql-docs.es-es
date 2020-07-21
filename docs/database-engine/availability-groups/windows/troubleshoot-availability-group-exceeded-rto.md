@@ -1,5 +1,6 @@
 ---
 title: 'Solución de problemas: el grupo de disponibilidad superó el RTO (SQL Server) | Microsoft Docs'
+description: Obtenga información sobre cómo solucionar problemas de una conmutación por error en un grupo de disponibilidad Always On cuando tarda más tiempo que el objetivo de tiempo de recuperación en SQL Server.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888027"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Solución de problemas: El grupo de disponibilidad superó el RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Después de una conmutación por error automática o manual planeada sin pérdida de datos en un grupo de disponibilidad, es posible que el tiempo de conmutación por error supere su objetivo de tiempo de recuperación (RTO). También puede ser que al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error) usando el método que se describe en [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisión del rendimiento de grupos de disponibilidad Always On), descubra que supera el RTO.  
   
  Si la conmutación por error automática todavía no se ha completado, consulte [Solucionar problemas de conmutación por error automática en entornos de SQL Server 2012 Always On](https://support.microsoft.com/kb/2833707).  
@@ -28,7 +29,7 @@ ms.locfileid: "68013753"
   
 2.  [El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos](#BKMK_CONTENTION)  
   
-##  <a name="BKMK_REDOBLOCK"></a> La carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
+##  <a name="reporting-workload-blocks-the-redo-thread-from-running"></a><a name="BKMK_REDOBLOCK"></a> La carga de trabajo de los informes impide que se ejecute el subproceso de la fase de puesta al día de ejecución  
  El subproceso de la fase de puesta al día de la réplica secundaria no puede hacer cambios en el lenguaje de definición de datos (DDL) a partir de una consulta de solo lectura de ejecución prolongada.  
   
 ### <a name="explanation"></a>Explicación  
@@ -44,7 +45,7 @@ from sys.dm_exec_requests where command = 'DB STARTUP'
   
  Puede esperar a que la carga de trabajo de los informes finalice, momento en que el subproceso de la fase de puesta al día se desbloqueará, o puede desbloquear inmediatamente el subproceso de la fase de puesta al día mediante la ejecución del comando [KILL &#40;Transact-SQL&#41;](~/t-sql/language-elements/kill-transact-sql.md) en el identificador de sesión de bloqueo.  
   
-##  <a name="BKMK_CONTENTION"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
+##  <a name="redo-thread-falls-behind-due-to-resource-contention"></a><a name="BKMK_CONTENTION"></a> El subproceso de la fase de puesta al día se retrasa debido a la contención de recursos  
  Una gran carga de trabajo de informes en la réplica secundaria ha ralentizado el rendimiento de la réplica secundaria y el subproceso de la fase de puesta al día se ha retrasado.  
   
 ### <a name="explanation"></a>Explicación  

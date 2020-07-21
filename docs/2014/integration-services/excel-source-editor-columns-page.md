@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0713d8d3d0c1f56bf322684a924a286e8b81af55
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059211"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429362"
 ---
 # <a name="excel-source-editor-columns-page"></a>Editor de origen de Excel (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de Excel** para asignar una columna de salida a cada columna externa (origen).  
@@ -36,11 +35,11 @@ ms.locfileid: "66059211"
  **Columna de salida**  
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor de origen de Excel &#40;página Salida de error&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
- [Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)   
- [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
+ [Editor de origen de Excel &#40;página salida de error&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Administrador de conexiones con Excel](connection-manager/excel-connection-manager.md)   
+ [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)  
   
   

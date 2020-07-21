@@ -1,10 +1,7 @@
 ---
-title: Crear y actualizar estadísticas | Microsoft Docs
-ms.custom: ''
-ms.date: 08/06/2017
+title: Crear y actualizar estadísticas
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -12,27 +9,33 @@ helpviewer_keywords:
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: markingmyname
 ms.author: maghan
+ms.reviewer: matteot
+ms.custom: seo-dt-2019
+ms.date: 06/04/2020
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a1a48bd559ee3af794129d7a6559efba65b30c8
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MT
+ms.openlocfilehash: 8f916833f97db69370a4a01eb7d796d4016c00c9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911155"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001238"
 ---
-# <a name="creating-and-updating-statistics"></a>Crear y actualizar estadísticas
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  En SMO, la información estadística sobre las consultas de procesamiento en la base de datos se puede recopilar utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>.  
-  
- Es posible de crear estadísticas para cualquier columna utilizando los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. El método <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> se puede ejecutar para actualizar las estadísticas en el objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Los resultados se pueden ver en el optimizador de consultas.  
-  
-## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
-  
-## <a name="creating-and-update-statistics-in-visual-basic"></a>Crear y actualizar estadísticas en Visual Basic  
- En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  
-  
-```VBNET
+# <a name="create-and-update-statistics"></a>Crear y actualizar estadísticas
+
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+
+En SMO, la información estadística sobre las consultas de procesamiento en la base de datos se puede recopilar utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>.
+
+Es posible crear estadísticas para cualquier columna mediante el <xref:Microsoft.SqlServer.Management.Smo.Statistic> <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> objeto y. El método <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> se puede ejecutar para actualizar las estadísticas en el objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Los resultados se pueden ver en el optimizador de consultas.
+
+## <a name="example"></a>Ejemplo
+
+Para usar cualquier ejemplo de código que se proporcione, puede elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en el que se va a crear la aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).
+
+## <a name="create-and-update-statistics-in-visual-basic"></a>Crear y actualizar estadísticas en Visual Basic
+
+En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.
+
+```vb
 'Connect to the local, default instance of SQL Server.
 Dim srv As Server
 srv = New Server
@@ -51,80 +54,83 @@ statcol = New StatisticColumn(stat, "CardType")
 stat.StatisticColumns.Add(statcol)
 'Create the statistic counter on the instance of SQL Server.
 stat.Create()
-``` 
-  
-## <a name="creating-and-update-statistics-in-visual-c"></a>Crear y actualizar estadísticas en Visual C#  
- En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  
-  
-```csharp  
-{  
-            //Connect to the local, default instance of SQL Server.  
-            Server srv = new Server();  
-            //Reference the AdventureWorks2012 database.   
-            Database db = default(Database);  
-            db = srv.Databases["AdventureWorks2012"];  
-            //Reference the CreditCard table.   
-  
-           Table tb = db.Tables["CreditCard", "Sales"];  
-            //Define a Statistic object by supplying the parent table and name   
-            //arguments in the constructor.   
-            Statistic stat = default(Statistic);  
-            stat = new Statistic(tb, "Test_Statistics");  
-            //Define a StatisticColumn object variable for the CardType column   
-            //and add to the Statistic object variable.   
-            StatisticColumn statcol = default(StatisticColumn);  
-            statcol = new StatisticColumn(stat, "CardType");  
-            stat.StatisticColumns.Add(statcol);  
-            //Create the statistic counter on the instance of SQL Server.   
-            stat.Create();  
-        }  
-```  
-  
-## <a name="creating-and-update-statistics-in-powershell"></a>Crear y actualizar estadísticas en PowerShell  
- En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  
-  
-```powershell  
-# Example of implementing a full text search on the default instance.  
-# Set the path context to the local, default instance of SQL Server and database tables  
-  
-CD \sql\localhost\default\databases  
-$db = get-item AdventureWorks2012  
-  
-CD AdventureWorks2012\tables  
-  
-#Get a reference to the table  
-$tb = get-item Production.ProductCategory  
-  
-# Define a FullTextCatalog object variable by specifying the parent database and name arguments in the constructor.  
-  
-$ftc = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextCatalog -argumentlist $db, "Test_Catalog2"  
-$ftc.IsDefault = $true  
-  
-# Create the Full Text Search catalog on the instance of SQL Server.  
-$ftc.Create()  
-  
-# Define a FullTextIndex object variable by supplying the parent table argument in the constructor.  
-$fti = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndex -argumentlist $tb  
-  
-#  Define a FullTextIndexColumn object variable by supplying the parent index   
-#  and column name arguments in the constructor.  
-  
-$ftic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.FullTextIndexColumn -argumentlist $fti, "Name"  
-  
-# Add the indexed column to the index.  
-$fti.IndexedColumns.Add($ftic)  
-  
-# Set change tracking  
-$fti.ChangeTracking = [Microsoft.SqlServer.Management.SMO.ChangeTracking]::Automatic  
-  
-# Specify the unique index on the table that is required by the Full Text Search index.  
-$fti.UniqueIndexName = "AK_ProductCategory_Name"  
-  
-# Specify the catalog associated with the index.  
-$fti.CatalogName = "Test_Catalog2"  
-  
-# Create the Full Text Search Index  
-$fti.Create()  
-```  
-  
-  
+```
+
+## <a name="create-and-update-statistics-in-c"></a>Crear y actualizar estadísticas en C #
+
+En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.
+
+```csharp
+public static void CreatingAndUpdatingStatistics()
+{
+    // Connect to the local, default instance of SQL Server.
+    var srv = new Server();
+
+    // Reference the AdventureWorks2012 database.
+    var db = srv.Databases["AdventureWorks"];
+
+    // Reference the CreditCard table.
+    var tb = db.Tables["CreditCard", "Sales"];
+
+    // Define a Statistic object by supplying the parent table and name
+    // arguments in the constructor.
+    var stat = new Statistic(tb, "Test_Statistics");
+
+    // Define a StatisticColumn object variable for the CardType column
+    // and add to the Statistic object variable.
+    var statcol = new StatisticColumn(stat, "CardType");
+    stat.StatisticColumns.Add(statcol);
+
+    //Create the statistic counter on the instance of SQL Server.
+    stat.Create();
+
+    // List all the statistics object on the table (you will see the newly created one)
+    foreach (var s in tb.Statistics.Cast<Statistic>())
+        Console.WriteLine($"{s.ID}\t{s.Name}");
+
+    // Output:
+    //  2       AK_CreditCard_CardNumber
+    //  1       PK_CreditCard_CreditCardID
+    //  3       Test_Statistics
+ }
+```
+
+## <a name="create-and-update-statistics-in-powershell"></a>Crear y actualizar estadísticas en PowerShell
+
+En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.
+
+```powershell
+Import-Module SQLServer
+
+# Connect to the local, default instance of SQL Server.  
+$srv = Get-Item SQLSERVER:\SQL\localhost\DEFAULT
+
+# Reference the AdventureWorks database.
+$db = $srv.Databases["AdventureWorks"]
+
+# Reference the CreditCard table.
+$tb = $db.Tables["CreditCard", "Sales"]
+
+# Define a Statistic object by supplying the parent table and name
+# arguments in the constructor.
+$stat = New-Object Microsoft.SqlServer.Management.Smo.Statistic($tb, "Test_Statistics")
+
+# Define a StatisticColumn object variable for the CardType column
+# and add to the Statistic object variable.
+$statcol = New-Object Microsoft.SqlServer.Management.Smo.StatisticColumn($stat, "CardType")
+$stat.StatisticColumns.Add($statcol)
+
+# Create the statistic counter on the instance of SQL Server.
+$stat.Create()
+
+# Finally dump all the statistics (you can see the newly created one at the bottom)
+$tb.Statistics
+
+# Output:
+# Name                                Last Updated Is From Index  Statistic Columns
+#                                                  Creation
+# ----                                ------------ -------------- -----------------
+# AK_CreditCard_CardNumber      10/27/2017 2:33 PM True           {CardNumber}
+# PK_CreditCard_CreditCardID    10/27/2017 2:33 PM True           {CreditCardID}
+# Test_Statistics                 6/4/2020 8:11 PM False          {CardType}
+```

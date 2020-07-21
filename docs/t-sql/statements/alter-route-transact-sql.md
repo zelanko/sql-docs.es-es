@@ -22,15 +22,15 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7e5bfe755ab485b1470f2dfe066165c577de2d1
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927183"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381129"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifica la información de ruta de una ruta existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -39,7 +39,7 @@ ms.locfileid: "67927183"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ALTER ROUTE route_name  
 WITH    
@@ -52,11 +52,14 @@ WITH
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *route_name*  
  Es el nombre de la ruta que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
- por  
+ WITH  
  Presenta las cláusulas que definen la ruta que se va a modificar.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -128,7 +131,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La tabla de enrutamiento en la que se almacenan las rutas es una tabla de metadatos que se puede leer mediante la vista de catálogo **sys.routes**. La tabla de enrutamiento solo se puede actualizar mediante las instrucciones CREATE ROUTE, ALTER ROUTE y DROP ROUTE.  
   
  Las cláusulas que no se especifican en el comando ALTER ROUTE no varían. Por consiguiente, no se puede aplicar ALTER a una ruta para especificar que dicha ruta no agota el tiempo de espera, que coincide con un nombre de servicio o que coincide con una instancia de agente. Para cambiar estas características de la ruta, debe quitar la ruta existente y crear otra ruta con la información nueva.  

@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71286540"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificar y depurar el componente de script
@@ -172,7 +172,7 @@ public class ScriptMain : UserComponent
   
 |Característica del paquete|Método de acceso|  
 |---------------------|-------------------|  
-|Variables|Usa las propiedades de descriptor de acceso con nombre y tipo en la clase de colección **Variables** del elemento de proyecto **ComponentWrapper**, expuesto a través de la propiedad **Variables** de la clase **ScriptMain**.<br /><br /> El método **PreExecute** únicamente puede obtener acceso a variables de solo lectura. El método **PostExecute** puede obtener acceso a variables de solo lectura y de lectura/escritura.|  
+|variables|Usa las propiedades de descriptor de acceso con nombre y tipo en la clase de colección **Variables** del elemento de proyecto **ComponentWrapper**, expuesto a través de la propiedad **Variables** de la clase **ScriptMain**.<br /><br /> El método **PreExecute** únicamente puede obtener acceso a variables de solo lectura. El método **PostExecute** puede obtener acceso a variables de solo lectura y de lectura/escritura.|  
 |Conexiones|Usa las propiedades de descriptor de acceso con nombre y tipo en la clase de colección **Connections** del elemento de proyecto **ComponentWrapper**, expuesto a través de la propiedad **Connections** de la clase **ScriptMain**.|  
 |Eventos|Genera eventos mediante la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> de la clase **ScriptMain** y los métodos **Fire\<X>** de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.|  
 |Registro|Realiza registros mediante el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la clase **ScriptMain**.|  

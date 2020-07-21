@@ -1,5 +1,5 @@
 ---
-title: Editor de formulario de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Editor de formulario de KPI (pestaña KPI, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f86ba3b79638c73c403b208158ceb72500eaf5bf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079451"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543674"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de Formulario de KPI** de la pestaña **KPI** del Diseñador de cubos para crear o modificar el indicador clave de rendimiento (KPI) seleccionado.  
@@ -26,7 +25,7 @@ ms.locfileid: "66079451"
 >  Este panel solo se muestra en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba el nombre del KPI.  
   
  **Grupo de medida asociado**  
@@ -60,12 +59,12 @@ ms.locfileid: "66079451"
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
   
- Se recomienda que esta expresión devuelva un número decimal comprendido entre -1 y 1. Un número menor representa una situación negativa, mientras que un número mayor representa una situación positiva.  
+ Se recomienda que esta expresión devuelva un número decimal entre-1 y 1. Un número menor representa una situación negativa, mientras que un número mayor representa una situación positiva.  
   
 > [!NOTE]  
->  Los valores inferiores a -1 y superiores a 1 son posibles, pero no se pueden interpretar correctamente las aplicaciones cliente de terceros.  
+>  Los valores inferiores a 1 y superiores a 1 son posibles, pero es posible que las aplicaciones cliente de terceros no los interpreten correctamente.  
   
- **Tendencia**  
+ **Evolución**  
  Expanda para ver las opciones **Gráfico de tendencia** y **Expresión de tendencia** .  
   
  **Gráfico de tendencia**  
@@ -79,10 +78,10 @@ ms.locfileid: "66079451"
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
   
- La expresión de tendencia puede basarse en cualquier criterio basado en el tiempo que tenga sentido en un contexto empresarial determinado. Se recomienda que esta expresión devuelva un número decimal comprendido entre -1 y 1. Un número menor representa una tendencia negativa a lo largo del tiempo; un número mayor representa una tendencia positiva a lo largo del tiempo.  
+ La expresión de tendencia puede basarse en cualquier criterio basado en el tiempo que tenga sentido en un contexto empresarial determinado. Se recomienda que esta expresión devuelva un número decimal entre-1 y 1. Un número menor representa una tendencia negativa a lo largo del tiempo; un número mayor representa una tendencia positiva a lo largo del tiempo.  
   
 > [!NOTE]  
->  Los valores inferiores a -1 y superiores a 1 son posibles, pero no se pueden interpretar correctamente las aplicaciones cliente de terceros.  
+>  Los valores inferiores a 1 y superiores a 1 son posibles, pero es posible que las aplicaciones cliente de terceros no los interpreten correctamente.  
   
  **Propiedades adicionales**  
  Expanda para ver las opciones **Carpeta para mostrar**, **KPI primario**, **Miembro de hora actual**, **Peso**y **Descripción** .  
@@ -106,7 +105,7 @@ ms.locfileid: "66079451"
 > [!IMPORTANT]  
 >  La expresión MDX debe devolver el nombre único de un miembro en una dimensión de tiempo asociada con el grupo de medida especificado en **Grupo de medida asociado**.  
   
- **Weight**  
+ **Peso**  
  Expanda para ver o editar la expresión MDX para el factor de peso del KPI.  
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  
@@ -114,7 +113,7 @@ ms.locfileid: "66079451"
  **Descripción**  
  Escriba la descripción opcional del KPI.  
   
-## <a name="see-also"></a>Vea también  
- [KPI &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [KPI &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

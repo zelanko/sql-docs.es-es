@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetsvrgrp_member
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026731"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85861904"
 ---
-# <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un servidor de destino de un grupo de servidores de destino.  
   
@@ -39,9 +39,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @group_name = ] 'group_name'` El nombre del grupo. *group_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @group_name = ] 'group_name'`Nombre del grupo. *group_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @server_name = ] 'server_name'` El nombre del servidor para quitar el grupo especificado. *nombre_servidor* es **nvarchar (30)** , no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server_name'`Nombre del servidor que se va a quitar del grupo especificado. *SERVER_NAME* es de tipo **nvarchar (30)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -50,7 +50,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
  None  
   
 ## <a name="permissions"></a>Permisos  
- Para ejecutar este procedimiento almacenado, los usuarios debe concederse el **sysadmin** rol fijo de servidor.  
+ Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se quita el servidor `LONDON1` del grupo Servers Maintaining Customer Information.  
@@ -65,8 +65,8 @@ EXEC sp_delete_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_targetsvrgrp_member &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,33 +1,34 @@
 ---
 title: Depuración y diagnóstico de aplicaciones Spark
-titleSuffix: SQL Server big data clusters
-description: Use el servidor de historial de Spark para depurar y diagnosticar aplicaciones de Spark que se ejecutan en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+titleSuffix: SQL Server Big Data Clusters
+description: Use el servidor de historial de Spark para depurar y diagnosticar aplicaciones Spark que se ejecutan en clústeres de macrodatos de SQL Server 2019.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878696"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606507"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark en el servidor de historial de Spark
+# <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con el servidor de historial de Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se proporcionan instrucciones para usar el servidor de historial de Spark extendido para depurar y diagnosticar aplicaciones Spark en un clúster de macrodatos de SQL Server 2019 (versión preliminar). Estas funcionalidades de depuración y diagnóstico están integradas en el servidor de historial de Spark y tienen tecnología de Microsoft. La extensión incluye la pestaña de datos, la pestaña de gráfico y la pestaña de diagnóstico. En la pestaña de datos, los usuarios pueden comprobar los datos de entrada y salida del trabajo de Spark. En la pestaña de gráfico, los usuarios pueden comprobar el flujo de datos y reproducir el gráfico de trabajo. En la pestaña de diagnóstico, el usuario puede hacer referencia a la asimetría de datos, el desfase horario y el análisis de uso del ejecutor.
+En este artículo se proporcionan instrucciones para usar el servidor de historial de Spark extendido para depurar y diagnosticar aplicaciones Spark en un clúster de macrodatos de SQL Server. Estas funcionalidades de depuración y diagnóstico están integradas en el servidor de historial de Spark y tienen tecnología de Microsoft. La extensión incluye la pestaña de datos, la pestaña de gráfico y la pestaña de diagnóstico. En la pestaña de datos, los usuarios pueden comprobar los datos de entrada y salida del trabajo de Spark. En la pestaña de gráfico, los usuarios pueden comprobar el flujo de datos y reproducir el gráfico de trabajo. En la pestaña de diagnóstico, el usuario puede hacer referencia a la asimetría de datos, el desfase horario y el análisis de uso del ejecutor.
 
 ## <a name="get-access-to-spark-history-server"></a>Obtener acceso al servidor de historial de Spark
 
 La experiencia del usuario del servidor de historial de Spark de código abierto se ha mejorado con información, como, por ejemplo, datos específicos del trabajo y visualización interactiva de los flujos de datos y del gráfico de trabajo para el clúster de macrodatos. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Apertura de la interfaz de usuario web del servidor de historial de Spark mediante URL
-Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Tenga en cuenta que en una configuración de clúster de Big Data (nombre de usuario/contraseña) básica, debe proporcionar la **raíz** del usuario cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
+Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Tenga en cuenta que en una configuración de clúster de macrodatos (nombre de usuario/contraseña) de autenticación básica, debe proporcionar el usuario **raíz** cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +92,7 @@ Seleccione el id. de trabajo y haga clic en **Gráfico** en el menú de herramie
 
     ![id. de trabajo del gráfico](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ Se deja **Progreso** como valor predeterminado. El usuario puede comprobar el flujo de datos mediante la selección de **lectura** o **escritura** en la lista desplegable de **visualización**.
++ Se deja **Progreso** como valor predeterminado. El usuario puede comprobar el flujo de datos seleccionando **Leer** o **Escrito** en la lista desplegable **Visualización**.
 
     ![presentación de gráfico](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -163,9 +164,9 @@ Seleccione el id. de trabajo y haga clic **Diagnóstico** en el menú de herrami
 ### <a name="data-skew"></a>Asimetría de datos
 Haga clic en **Asimetría de datos**. Las tareas sesgadas correspondientes se mostrarán en función de los parámetros especificados. 
 
-+ **Especificar parámetros**: en la primera sección se muestran los parámetros, que se usan para detectar la asimetría de datos. La regla integrada es: La lectura de los datos de la tarea es mayor que tres veces el promedio de lectura de los datos de la tarea y la lectura de los datos de la tarea es superior a 10 MB. Si desea definir su propia regla para las tareas sesgadas, puede elegir los parámetros; la **fase sesgada** y la sección **Char de sesgo** se actualizarán en consecuencia. 
++ **Especificar parámetros**: la primera sección muestra los parámetros que se usan para detectar la Asimetría de datos. La regla integrada es: La lectura de datos de tarea es tres veces mayor que la lectura de datos de tarea promedio y la lectura de datos de tarea es mayor que 10 MB. Si desea definir su propia regla para las tareas sesgadas, puede elegir los parámetros; la **fase sesgada** y la sección **Char de sesgo** se actualizarán en consecuencia. 
 
-+ **Fase sesgada**: la segunda sección muestra las fases, que tienen tareas sesgadas que cumplen los criterios especificados anteriormente. Si hay más de una tarea sesgada en una fase, la tabla de fase sesgada solo muestra la tarea más sesgada (por ejemplo, los datos más grandes para la asimetría de datos). 
++ **Fase sesgada**: la segunda sección muestra las fases que tienen tareas con desfase que cumplen los criterios especificados anteriormente. Si hay más de una tarea sesgada en una fase, la tabla de fase sesgada solo muestra la tarea más sesgada (por ejemplo, los datos más grandes para la asimetría de datos). 
 
     ![Sección de sesgo de datos 2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
@@ -176,7 +177,7 @@ Haga clic en **Asimetría de datos**. Las tareas sesgadas correspondientes se mo
 ### <a name="time-skew"></a>Desfase horario
 En la pestaña **Desfase horario** se muestran las tareas sesgadas en función del tiempo de ejecución de la tarea. 
 
-+ **Especificar parámetros**: en la primera sección se muestran los parámetros, que se usan para detectar el desfase horario. Los criterios predeterminados para detectar el sesgo horario son: el tiempo de ejecución de la tarea es superior a tres veces el tiempo medio de ejecución y el tiempo de ejecución de la tarea es superior a 30 segundos. Puede cambiar los parámetros en función de sus necesidades. La **fase sesgada** y el **gráfico de sesgo** muestran información sobre las fases y las tareas correspondientes del mismo modo que la pestaña **Asimetría de datos**.
++ **Especificar parámetros**: la primera sección muestra los parámetros que se usan para detectar el desfase horario. Los criterios predeterminados para detectar el desfase horario son: el tiempo de ejecución de la tarea es mayor que tres veces el tiempo de ejecución promedio y el tiempo de ejecución de la tarea es superior a 30 segundos. Puede cambiar los parámetros en función de sus necesidades. La **fase sesgada** y el **gráfico de sesgo** muestran información sobre las fases y las tareas correspondientes del mismo modo que la pestaña **Asimetría de datos**.
 
 + Haga clic en **Desfase horario** y el resultado filtrado se mostrará en la sección **Fase sesgada** según los parámetros establecidos en la sección **Especificar parámetros**. Haga clic en un elemento en la sección **Fase sesgada**. A continuación, el gráfico correspondiente se creará en la sección 3 y los detalles de la tarea se mostrarán en el panel inferior derecho.
 
@@ -203,5 +204,6 @@ El servidor de historial de Spark tiene los siguientes problemas conocidos:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Introducción[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Configurar las opciones de Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [Introducción a los clústeres de macrodatos de SQL Server](../big-data-cluster/deploy-get-started.md)
+* Configuración de las opciones de Spark
+* [Configurar las opciones de Spark](/azure/hdinsight/spark/apache-spark-settings/)

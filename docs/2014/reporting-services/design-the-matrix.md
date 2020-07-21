@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109294"
 ---
 # <a name="design-the-matrix"></a>Diseñar la matriz
@@ -29,7 +29,7 @@ ms.locfileid: "66109294"
  **Campos mostrados**  
  Muestra los campos que se han asignado a la página, al grupo o a los detalles. Haga clic en **Quitar** para eliminar el campo de la lista.  
   
- **Página**  
+ **Del**  
  Vea la lista de campos que aparecen en el nivel de página. Para cambiar el orden de los campos, seleccione uno y, después, haga clic en el botón Subir o Bajar.  
   
  **Columnas**  
@@ -41,7 +41,7 @@ ms.locfileid: "66109294"
  **Detalles**  
  Vea la lista de campos que aparecen en la sección de detalles de la matriz. Para cambiar el orden de los campos, seleccione uno y, después, haga clic en el botón Subir o Bajar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Matrices &#40;Generador de informes y SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Ayuda del Asistente para informes](../../2014/reporting-services/report-wizard-help.md)  
   

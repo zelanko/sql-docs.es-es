@@ -15,10 +15,10 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1ebc4f10802f7a90dc828bab4b6f2aa1d01d6ccd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68058617"
 ---
 # <a name="logon-triggers"></a>Desencadenadores logon
@@ -69,7 +69,7 @@ END;
 -   Un error con una gravedad mayor que 20 se genera dentro del cuerpo del desencadenador.  
   
 ## <a name="disabling-a-logon-trigger"></a>Deshabilitar un desencadenador logon  
- Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+ Un desencadenador LOGON puede evitar la conexión a [!INCLUDE[ssDE](../../includes/ssde-md.md)] de todos los usuarios, incluidos los miembros del rol fijo de servidor **sysadmin** . Cuando el desencadenador LOGON evita que se realicen las conexiones, los miembros del rol fijo de servidor **sysadmin** pueden conectarse mediante la conexión de administrador dedicada o iniciando [!INCLUDE[ssDE](../../includes/ssde-md.md)] en modo de configuración mínima (-f). Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

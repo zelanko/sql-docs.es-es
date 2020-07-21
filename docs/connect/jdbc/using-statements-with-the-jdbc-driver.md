@@ -1,5 +1,5 @@
 ---
-title: Usar instrucciones con el controlador JDBC | Microsoft Docs
+title: Empleo de instrucciones con el controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b94782d6e36f6ef6fb2997ceb195bf9ecdb1e947
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025792"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923953"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Empleo de instrucciones con el controlador JDBC
 
@@ -45,6 +45,6 @@ El controlador JDBC proporciona tres clases para la recuperación de datos desde
 | [Realización de operaciones por lotes](../../connect/jdbc/performing-batch-operations.md)                         | Describe cómo usar el controlador JDBC para llevar a cabo operaciones en lote.                                                                                      |
 | [Control de instrucciones complejas](../../connect/jdbc/handling-complex-statements.md)                         | Describe cómo usar el controlador JDBC para ejecutar instrucciones complejas que realizan diversas tareas y pueden devolver tipos diferentes de datos.               |
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

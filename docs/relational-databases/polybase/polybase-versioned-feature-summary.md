@@ -1,5 +1,6 @@
 ---
 title: Características y limitaciones de PolyBase | Microsoft Docs
+descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -9,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b9da1c78f9f312574a0a914f0956357412a35d4e
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710455"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216035"
 ---
 # <a name="polybase-features-and-limitations"></a>Características y limitaciones de PolyBase
 
@@ -28,7 +29,7 @@ En esta tabla se indican las características fundamentales de PolyBase y los pr
   
 ||||||
 |-|-|-|-|-|   
-|**Característica**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Almacenamiento de datos paralelos**| 
+|**Característica**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Almacenamiento de datos paralelos**| 
 |Consultar datos de Hadoop con [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|No|Sí|
 |Importar datos desde Hadoop|Sí|No|No|Sí|
 |Exportar datos a Hadoop  |Sí|No|No| Sí|
@@ -46,7 +47,7 @@ En SQL Server y APS, no todos los operadores T-SQL se pueden aplicar al clúster
 
 ||||
 |-|-|-| 
-|**Tipo de operador**|**Aplicable a Hadoop**|**Aplicable a Blob Storage**|
+|**Nombre de operador**|**Aplicable a Hadoop**|**Aplicable a Blob Storage**|
 |Proyecciones de columna|Sí|No|
 |Predicados|Sí|No|
 |Agregados|Parcial|No|

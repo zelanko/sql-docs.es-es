@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd7773177f6ec9d02df9d3d669abf561919ffe0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a9d3a934e7b08e863c4ca5241c6bfc20600a539
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047876"
 ---
 # <a name="sql-server-locks-object"></a>Locks (objeto de SQL Server)
   El objeto **SQLServer:Locks** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de los bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tipos de recursos individuales. Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como filas leídas o modificadas durante una transacción, para evitar que varias transacciones utilicen simultáneamente los recursos. Por ejemplo, si una transacción mantiene un bloqueo exclusivo (X) en una fila de una tabla, ninguna otra transacción podrá modificar esa fila hasta que se libere el bloqueo. La reducción de bloqueos aumenta la simultaneidad, lo que puede mejorar el rendimiento. Se pueden supervisar al mismo tiempo varias instancias del objeto **Locks** ; cada instancia representa un bloqueo en un tipo de recurso.  
   
- En la siguiente tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** .  
+ En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bloqueos**de**.  
   
 |Contadores de bloqueos de SQL Server|Descripción|  
 |-------------------------------|-----------------|  
@@ -43,16 +42,16 @@ ms.locfileid: "63250606"
 |**Unidad de asignación**|Bloqueo en una unidad de asignación.|  
 |**Aplicación**|Bloqueo en un recurso de una aplicación especificada.|  
 |**Base de datos**|Bloqueo en una base de datos, incluidos todos los objetos de la base de datos.|  
-|**Extensión**|Bloqueo en un grupo contiguo de 8 páginas.|  
+|**Expresa**|Bloqueo en un grupo contiguo de 8 páginas.|  
 |**Archivo**|Bloqueo en un archivo de base de datos.|  
 |**Montón o árbol b**|Montón o árbol b (HOBT). Bloqueo en un montón de páginas de datos o en la estructura árbol b de un índice.|  
-|**Key**|Bloqueo en una fila de un índice.|  
-|**Metadatos**|Bloqueo en información de catálogo, también conocida como metadatos.|  
+|**Clave**|Bloqueo en una fila de un índice.|  
+|**Metadata**|Bloqueo en información de catálogo, también conocida como metadatos.|  
 |**Object**|Bloqueo en una tabla, procedimiento almacenado, vista, etc. incluidos todos los datos e índices. El objeto puede ser cualquier elemento que tenga una entrada en **sys.all_objects**.|  
 |**Página**|Bloqueo en una página de 8 kilobytes (KB) de una base de datos.|  
-|**RID**|Id. de fila. Un bloqueo sobre una sola fila en un montón.|  
+|**LIBRA**|Id. de fila. Un bloqueo sobre una sola fila en un montón.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

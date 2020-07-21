@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062644"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
   Para instalar o actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ejecutar el programa de instalación en cada nodo de los clústeres de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No ejecute el programa de instalación en el nodo activo para administrar los demás nodos.  
@@ -45,7 +44,7 @@ ms.locfileid: "68893714"
   
     -   Si el nodo que agrega tiene subredes adicionales o diferentes, el programa de instalación le permite especificar más direcciones IP. Si el nodo que va a agregar está en una subred diferente, también debe confirmar el cambio de dependencias de recursos de dirección IP a OR. Para obtener más información sobre los posibles escenarios durante las operaciones de adición de un nodo, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación)&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Opción 2: Instalación de Advanced/Enterprise**  
+ **Opción 2: instalación de Advanced/Enterprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La instalación de clústeres de conmutación por error de Advanced/Enterprise consta de los pasos siguientes:  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68893714"
   
  Para obtener más información acerca de cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un clúster de conmutación por error de Windows, vea [Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Antes de empezar, revise los siguientes temas de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   [Planear una instalación de SQL Server](../../install/planning-a-sql-server-installation.md)  
@@ -82,7 +81,7 @@ ms.locfileid: "68893714"
 > [!NOTE]  
 >  Tome nota de la ubicación de la unidad compartida en el Administrador de clústeres antes de ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Debe tener esta información para crear un nuevo clústeres de conmutación por error.  
   
-### <a name="to-install-a-new-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-integrated-install-with-add-node"></a>Para instalar un nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando la instalación integrada con Agregar nodo  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>Para instalar un nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando la instalación integrada con Agregar nodo  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, desplácese a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Para obtener más información acerca de cómo instalar los requisitos previos, vea [Before Installing Failover Clustering](before-installing-failover-clustering.md).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "68893714"
   
 7.  En la página Clave del producto, indique si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, vea [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
-8.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente** . Para salir del programa de instalación, haga clic en **Cancelar**.  
+8.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Haga clic en **Siguiente** para continuar. Para salir del programa de instalación, haga clic en **Cancelar**.  
   
 9. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
@@ -135,7 +134,7 @@ ms.locfileid: "68893714"
   
      **Directorio raíz de instancia**: de forma predeterminada, el directorio raíz de la instancia es C:\Archivos de programa\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar un directorio raíz no predeterminado, utilice el campo proporcionado o haga clic en el botón de puntos suspensivos para buscar una carpeta de instalación.  
   
-     **Características e instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detectadas en este equipo**: la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para continuar, haga clic en **Siguiente** .  
+     **Características e instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detectadas en este equipo**: la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Haga clic en **Siguiente** para continuar.  
   
 12. Use la página Grupo de recursos de clúster para especificar el nombre del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tiene dos opciones:  
   
@@ -143,7 +142,7 @@ ms.locfileid: "68893714"
   
     -   Escriba el nombre del grupo que desea crear. Tenga en cuenta que el nombre "Available storage" no es un nombre de grupo válido.  
   
-13. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Para continuar, haga clic en **Siguiente** .  
+13. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Haga clic en **Siguiente** para continuar.  
   
     > [!NOTE]  
     >  La primera unidad se utiliza como unidad predeterminada para todas las bases de datos, pero se puede cambiar en las páginas de configuración del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
@@ -154,7 +153,7 @@ ms.locfileid: "68893714"
   
     -   **Configuración de red**: especifique el tipo de IP y la dirección IP de la instancia del clúster de conmutación por error.  
   
-     Para continuar, haga clic en **Siguiente** .  
+     Haga clic en **Siguiente** para continuar.  
   
 15. Utilice esta página para especificar la Directiva de seguridad de clúster.  
   
@@ -162,13 +161,13 @@ ms.locfileid: "68893714"
   
     -   En [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], especifique grupos de dominio para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Todos los permisos de recursos se controlan mediante grupos de nivel de dominio que incluyen cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como miembros de grupo.  
   
-     Para continuar, haga clic en **Siguiente** .  
+     Haga clic en **Siguiente** para continuar.  
   
 16. El flujo de trabajo para el resto del tema depende de las características que haya especificado para la instalación. Dependiendo de las selecciones ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]y [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]), es posible que no vea todas las páginas.  
   
 17. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
   
-     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](../../install/server-configuration-service-accounts.md) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](../../install/server-configuration-service-accounts.md) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las credenciales se proporcionan en los campos de la parte inferior de la página.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "68893714"
   
      Para obtener más información, vea [Configuración del motor de base de datos - Directorios de datos](../../install/database-engine-configuration-data-directories.md).  
   
-21. Use la página Configuración de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre FILESTREAM, vea [Configuración del motor de base de datos - Secuencia de archivo](../../install/database-engine-configuration-filestream.md). Para continuar, haga clic en **Siguiente** .  
+21. Use la página Configuración de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre FILESTREAM, vea [Configuración del motor de base de datos - Secuencia de archivo](../../install/database-engine-configuration-filestream.md). Haga clic en **Siguiente** para continuar.  
   
 22. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obtener más información, vea [Configuración de Analysis Services - Aprovisionamiento de cuentas](../../install/analysis-services-configuration-account-provisioning.md).  
   
@@ -221,20 +220,20 @@ ms.locfileid: "68893714"
   
 27. La página Progreso de la instalación muestra el estado para que pueda supervisar el progreso de la instalación durante la ejecución del programa de instalación.  
   
-28. Después de la instalación, en la página **Operación completada** se proporciona un vínculo al archivo de registro de resumen de la instalación y a otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**.  
+28. Después de la instalación, la página **completada** proporciona un vínculo al archivo de registro de resumen para la instalación y otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**.  
   
 29. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-30. Para agregar nodos a la conmutación por error de nodo único que acaba de crear, ejecute el programa de instalación en cada nodo adicional y siga los pasos para la operación AddNode. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+30. Para agregar nodos a la conmutación por error de nodo único que acaba de crear, ejecute el programa de instalación en cada nodo adicional y siga los pasos para la operación AddNode. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;&#41;de instalación ](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
     >  Si va a agregar más de un nodo, puede utilizar el archivo de configuración para implementar las instalaciones. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
     >   
     >  La edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que va a instalar debe coincidir en todos los nodos de un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si agrega un nuevo nodo a un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, asegúrese de especificar que la edición coincida con la edición de los clústeres de conmutación por error existente.  
   
-##  <a name="prepare"></a> Preparar  
+##  <a name="prepare"></a><a name="prepare"></a>Prepara  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso 1 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Preparación  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso 1 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Preparar  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, desplácese a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Para obtener más información acerca de cómo instalar los requisitos previos, vea [Before Installing Failover Clustering](before-installing-failover-clustering.md). Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
   
@@ -257,7 +256,7 @@ ms.locfileid: "68893714"
     > [!NOTE]  
     >  Debe especificar la misma clave del producto en todos los nodos que va a preparar para el mismo clústeres de conmutación por error.  
   
-9. En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente** . Para salir del programa de instalación, haga clic en **Cancelar**.  
+9. En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Haga clic en **Siguiente** para continuar. Para salir del programa de instalación, haga clic en **Cancelar**.  
   
 10. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
@@ -270,7 +269,7 @@ ms.locfileid: "68893714"
   
 11. En la página Configuración de instancia, especifique si desea instalar una instancia predeterminada o una instancia con nombre. Para obtener más información, vea [Instance Configuration](../../install/instance-configuration.md).  
   
-     **Id. de instancia** : de manera predeterminada, el nombre de instancia se usa como identificador de la instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para utilizar un identificador de instancia no predeterminado, seleccione el cuadro de texto **Id. de instancia** y proporcione un valor.  
+     **ID** . de instancia: de forma predeterminada, el nombre de instancia se usa como identificador de instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para utilizar un identificador de instancia no predeterminado, seleccione el cuadro de texto **Id. de instancia** y proporcione un valor.  
   
     > [!NOTE]  
     >  Las instancias independientes típicas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tanto si son predeterminadas como si son instancias con nombre, no usan un valor no predeterminado para el cuadro de texto **Id. de instancia** .  
@@ -278,9 +277,9 @@ ms.locfileid: "68893714"
     > [!IMPORTANT]  
     >  Use el mismo identificador de instancia para todos los nodos que se preparen para los clústeres de conmutación por error  
   
-     **Directorio raíz de instancia**: de forma predeterminada, el directorio raíz de la instancia es C:\Archivos de programa\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar un directorio raíz no predeterminado, utilice el campo proporcionado o haga clic en el botón de puntos suspensivos para buscar una carpeta de instalación.  
+     **Directorio raíz de instancia** : de forma predeterminada, el directorio raíz de la instancia es c:\Archivos de programa \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ . Para especificar un directorio raíz no predeterminado, utilice el campo proporcionado o haga clic en el botón de puntos suspensivos para buscar una carpeta de instalación.  
   
-     **Instancias instaladas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para continuar, haga clic en **Siguiente** .  
+     **Instancias instaladas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Haga clic en **Siguiente** para continuar.  
   
 12. La página Requisitos de espacio en disco calcula el espacio en disco necesario para las características especificadas y compara los requisitos con el espacio en disco disponible en el equipo donde se ejecuta el programa de instalación.  
   
@@ -290,13 +289,13 @@ ms.locfileid: "68893714"
   
     -   En [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)], especifique grupos de dominio para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Todos los permisos de recursos se controlan mediante grupos de nivel de dominio que incluyen cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como miembros de grupo.  
   
-     Para continuar, haga clic en **Siguiente** .  
+     Haga clic en **Siguiente** para continuar.  
   
 14. El flujo de trabajo para el resto del tema depende de las características que haya especificado para la instalación. Dependiendo de las selecciones, es posible que no vea todas las páginas.  
   
 15. En la página Configuración del servidor - Cuentas de servicio, especifique las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
   
-     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](../../install/server-configuration-service-accounts.md) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. El tipo de inicio se establece en manual para todos los servicios que reconocen clústeres, incluidos la búsqueda de texto completo y el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], y no se puede cambiar durante la instalación. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configuración del servidor - Cuentas de servicio](../../install/server-configuration-service-accounts.md) y [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las credenciales se proporcionan en los campos de la parte inferior de la página.  
   
@@ -304,9 +303,9 @@ ms.locfileid: "68893714"
   
      Cuando termine de especificar la información de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Siguiente**.  
   
-16. Use la pestaña **Configuración del servidor - Intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obtener más información, vea [Configuración del servidor - Intercalación](../../install/server-configuration-collation.md).  
+16. Use la pestaña **configuración del servidor-intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Para obtener más información, vea [Configuración del servidor - Intercalación](../../install/server-configuration-collation.md).  
   
-17. Use **Configuración del servidor - Secuencia de archivo** para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos - Secuencia de archivo](../../install/database-engine-configuration-filestream.md). Para continuar, haga clic en **Siguiente** .  
+17. Use **Configuración del servidor - Secuencia de archivo** para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos - Secuencia de archivo](../../install/database-engine-configuration-filestream.md). Haga clic en **Siguiente** para continuar.  
   
 18. Use la página Configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar el tipo de instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que se creará. Para la instalación del clúster de conmutación por error, la opción se establece en Instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sin configurar. Debe configurar los servicios de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] una vez completada la instalación.  
   
@@ -318,7 +317,7 @@ ms.locfileid: "68893714"
   
 21. La página Listo para instalar muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. Para continuar, haga clic en **Instalar**. El programa de instalación instalará primero los requisitos previos necesarios para las características seleccionadas y a continuación realizará la instalación de características.  
   
-     La página Progreso de la instalación muestra el estado para que pueda supervisar el progreso de la instalación durante la ejecución del programa de instalación. Después de la instalación, en la página **Operación completada** se proporciona un vínculo al archivo de registro de resumen de la instalación y a otras notas importantes.  
+     La página Progreso de la instalación muestra el estado para que pueda supervisar el progreso de la instalación durante la ejecución del programa de instalación. Después de la instalación, la página **completada** proporciona un vínculo al archivo de registro de resumen para la instalación y otras notas importantes.  
   
 22. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**.  
   
@@ -326,15 +325,15 @@ ms.locfileid: "68893714"
   
 24. Repita los pasos anteriores para preparar los demás nodos para los clústeres de conmutación por error. También puede utilizar el archivo de configuración autogenerado para ejecutar la preparación en los demás nodos. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
-## <a name="complete"></a>Operación completada  
+## <a name="complete"></a>Completo  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Operación completada  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Completar  
   
 1.  Después de preparar todos los nodos como se describe en el [paso de preparación](#prepare), ejecute el programa de instalación en uno de los nodos preparados, preferiblemente el que posee el disco compartido. En la página **Opciones avanzadas** del Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Finalización avanzada de clúster**.  
   
 2.  El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
-3.  En la página Archivos auxiliares del programa de instalación, haga clic en **Instalar** para instalar los archivos auxiliares del programa de instalación.  
+3.  En la página archivos auxiliares del programa de instalación, haga clic en **instalar** para instalar los archivos auxiliares del programa de instalación.  
   
 4.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
@@ -355,16 +354,16 @@ ms.locfileid: "68893714"
   
     -   Escriba el nombre del grupo que desea crear. Tenga en cuenta que el nombre "Available storage" no es un nombre de grupo válido.  
   
-9. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Para continuar, haga clic en **Siguiente** .  
+9. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Haga clic en **Siguiente** para continuar.  
   
     > [!NOTE]  
     >  La primera unidad se utiliza como unidad predeterminada para todas las bases de datos, pero se puede cambiar en las páginas de configuración del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 10. En la página Configuración de red en clúster, especifique los recursos de red para la instancia de clústeres de conmutación por error:  
   
-    -   **Configuración de red**: especifique el tipo de IP y la dirección IP para todos los nodos y subredes de la instancia de clústeres de conmutación por error. Puede especificar varias direcciones IP para un clústeres de conmutación por error de varias subredes, pero solo se admite una dirección IP por subred. Cada nodo preparado debe ser propietario de al menos una dirección IP. Si tiene varias subredes en su clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se le solicitará que establezca la dependencia de recursos de dirección IP en OR.  
+    -   **Configuración de red** : especifique el tipo de IP y la dirección IP para todos los nodos y subredes de la instancia de clúster de conmutación por error. Puede especificar varias direcciones IP para un clústeres de conmutación por error de varias subredes, pero solo se admite una dirección IP por subred. Cada nodo preparado debe ser propietario de al menos una dirección IP. Si tiene varias subredes en su clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se le solicitará que establezca la dependencia de recursos de dirección IP en OR.  
   
-     Para continuar, haga clic en **Siguiente** .  
+     Haga clic en **Siguiente** para continuar.  
   
 11. El flujo de trabajo para el resto del tema depende de las características que haya especificado para la instalación. Dependiendo de las selecciones, es posible que no vea todas las páginas.  
   
@@ -402,14 +401,14 @@ ms.locfileid: "68893714"
   
 18. La página Progreso de la instalación muestra el estado para que pueda supervisar el progreso de la instalación durante la ejecución del programa de instalación.  
   
-19. Después de la instalación, en la página **Operación completada** se proporciona un vínculo al archivo de registro de resumen de la instalación y a otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**. Con este paso, todos los nodos preparados para el mismo clústeres de conmutación por error forman parte de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completado.  
+19. Después de la instalación, la página **completada** proporciona un vínculo al archivo de registro de resumen para la instalación y otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**. Con este paso, todos los nodos preparados para el mismo clústeres de conmutación por error forman parte de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completado.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información, vea [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información, vea [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Para obtener más información sobre las ubicaciones de los archivos de registro, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
   

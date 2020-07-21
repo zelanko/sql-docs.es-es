@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d887853b475f7b4d673d7b04343ae9bc71644d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046047"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Administrar las excepciones en Reporting Services
@@ -28,9 +28,9 @@ ms.locfileid: "63046047"
 ## <a name="soap-faults-and-the-net-framework"></a>Errores de SOAP y .NET Framework  
  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], si se produce un error en una solicitud de cliente al servicio web, el servidor de informes comunica el error al código de cliente que llama al servicio web iniciando un objeto **SoapException**. **SoapException** ajusta la información contenida en un error de SOAP. La propiedad **Detail** de **SoapException** se asigna al elemento **detail** en el error de SOAP. Las aplicaciones deberían detectar el objeto **SoapException** con un bloque try/catch y utilizar la propiedad **Detail** de **SoapException** para tomar las medidas apropiadas. Para más información sobre la clase **SoapException** y la propiedad **Detail** en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Clase SoapException de Reporting Services](soapexception-class/reporting-services-soapexception-class.md). Para más información sobre la clase **SoapException**, vea la documentación del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad Detail](soapexception-class/detail-property.md)   
- [Introducción a la administración de excepciones en Reporting Services](introducing-exception-handling-in-reporting-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedad detail](soapexception-class/detail-property.md)   
+ [Introducción al control de excepciones en Reporting Services](introducing-exception-handling-in-reporting-services.md)   
  [Clase SoapException de Reporting Services](soapexception-class/reporting-services-soapexception-class.md)  
   
   

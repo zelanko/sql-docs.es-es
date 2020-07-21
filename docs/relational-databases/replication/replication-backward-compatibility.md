@@ -1,5 +1,6 @@
 ---
 title: Compatibilidad con versiones anteriores de replicación | Microsoft Docs
+description: Revise estos recursos para mantener la compatibilidad con versiones anteriores en la replicación antes de actualizar o si tiene varias versiones de SQL Server en una topología de replicación.
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 4ef157ef3c8a95bd08cc8dd2d8567dbc6e8ec6ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767713"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilidad con versiones anteriores de replicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Es importante entender la compatibilidad con versiones anteriores si se va a realizar una actualización, o bien si tiene más de una versión de SQL Server en una topología de replicación. 
 
@@ -46,7 +47,7 @@ Las reglas generales son las siguientes:
 
 ## <a name="additional-resources"></a>Recursos adicionales
  [Características que ya no se usan en la replicación de SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se han conservado las características de replicación para la compatibilidad con versiones anteriores, pero que se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se han conservado las características de replicación para la compatibilidad con versiones anteriores, pero se van a quitar en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Principales cambios en la replicación de SQL Server](../../relational-databases/replication/breaking-changes-in-sql-server-replication.md)  
  Cambios en las características de replicación que pueden requerir cambios en las aplicaciones. 

@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: edb8443da58baba0207425a67d5c92810c5e17dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ebd23e009eda9a3273f6572ac020b2a587499a51
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998931"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927849"
 ---
 # <a name="updatefloat-method-sqlserverresultset"></a>Método updateFloat (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

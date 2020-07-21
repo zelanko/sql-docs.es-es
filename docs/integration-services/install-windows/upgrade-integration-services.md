@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68262790"
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
@@ -57,7 +57,7 @@ ms.locfileid: "68262790"
   
 -   Ejecutar la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y seleccionar la opción para **Actualizar desde SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
--   Ejecutar **setup.exe** en el símbolo del sistema y especificar la opción **/ACTION=upgrade**. Para obtener más información, vea la sección "Scripts de instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" en [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Ejecutar **setup.exe** en el símbolo del sistema y especificar la opción **/ACTION=upgrade** . Para obtener más información, vea la sección "Scripts de instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" en [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  No puede utilizar la actualización para realizar las acciones siguientes:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68262790"
   
  Al actualizar, puede actualizar tanto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como el [!INCLUDE[ssDE](../../includes/ssde-md.md)], actualizar solo el [!INCLUDE[ssDE](../../includes/ssde-md.md)]o simplemente actualizar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si solo actualiza [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o posterior siguen siendo funcionales, pero no dispone de la funcionalidad de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si solo actualiza [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] es totalmente funcional, pero solo puede almacenar paquetes en el sistema de archivos, a menos que se disponga de una instancia de [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] en otro equipo.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Actualizar tanto Integration Services como el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Actualizar tanto Integration Services como el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  En esta sección se describen los efectos de realizar una actualización que tenga los criterios siguientes:  
   
 -   Actualiza [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -129,7 +129,7 @@ ms.locfileid: "68262790"
   
 -   De forma predeterminada, en una instalación de actualización, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para registrar en el registro de eventos de aplicación los eventos relacionados con la ejecución de paquetes. Esta configuración podría generar demasiadas entradas en el registro de eventos al utilizar la característica de recopilador de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los eventos que se registran incluyen EventID 12288, "Se ha iniciado el paquete" y EventID 12289, "El paquete finalizó correctamente". Para detener el registro de estos dos eventos en el registro de eventos de aplicación, abra el Registro para editarlo. A continuación, en el Registro, busque el nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS y cambie el valor DWORD de la opción LogPackageExecutionToEventLog de 1 a 0.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Actualizar solo el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Actualizar solo el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  En esta sección se describen los efectos de realizar una actualización que tenga los criterios siguientes:  
   
 -   Actualiza únicamente una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Es decir, la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] ahora es una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], pero la instancia de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las herramientas cliente son de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

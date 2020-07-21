@@ -1,5 +1,6 @@
 ---
 title: Obtener acceso a FileTables con API de entrada-salida de archivo | Microsoft Docs
+description: Descubra cómo usar las API de E/S de archivos con FileTables y obtenga información sobre qué operaciones del sistema de archivos son compatibles con FileTables.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d73f6f8e993784def2dd9325933778e2048d5eae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744699"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe el funcionamiento de E/S del sistema de archivos en una FileTable.  
   
-##  <a name="accessing"></a> Empezar a usar API de E/S con FileTables  
+##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> Empezar a usar API de E/S con FileTables  
  El principal uso previsto para las FileTables se realizará a través del sistema de archivos de Windows y las API de E/S de archivos. Las FileTables no admiten el acceso no transaccional a través del variado conjunto de API de E/S de archivos disponibles.  
   
 1.  El acceso de las API de E/S de archivos se inicia normalmente mediante la obtención de una ruta de acceso UNC lógica del archivo o directorio. Las aplicaciones pueden usar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] con la función [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) para obtener la ruta de acceso lógica del archivo o directorio. Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  A continuación la aplicación usa esta ruta de acceso lógica para obtener un identificador del archivo o directorio y hacer algo con el objeto. La ruta de acceso se puede pasar a cualquier función de API admitida, como CreateFile () o CreateDirectory (), para crear o abrir un archivo y obtener un identificador. El identificador se puede usar después para transmitir datos, enumerar u organizar directorios, obtener o establecer atributos de archivo, eliminar archivos o directorios, etc.  
 
-##  <a name="create"></a> Crear los archivos y directorios de una FileTable  
+##  <a name="creating-files-and-directories-in-a-filetable"></a><a name="create"></a> Crear los archivos y directorios de una FileTable  
  Un archivo o directorio se puede crear en una FileTable llamando a las API de E/S de archivos, como CreateFile o CreateDirectory.  
   
 -   Se admiten todas las marcas de disposición de creación, todos los modos de uso compartido y todos los modos de acceso, incluidas la creación, eliminación y modificación en contexto de archivos. Asimismo, se admiten las actualizaciones del espacio de nombres de archivos. Es decir, las operaciones de creación y eliminación, cambio de nombre y movimiento de directorios.  
@@ -43,10 +44,10 @@ ms.locfileid: "72908774"
   
 -   El uso compartido y la simultaneidad de acceso se aplican cuando varias operaciones de E/S de archivos o varias operaciones [!INCLUDE[tsql](../../includes/tsql-md.md)] simultáneas afectan al mismo archivo o directorio de la jerarquía.  
   
-##  <a name="read"></a> Leer los archivos y directorios de una FileTable  
+##  <a name="reading-files-and-directories-in-a-filetable"></a><a name="read"></a> Leer los archivos y directorios de una FileTable  
  La semántica de aislamiento de lectura confirmada se aplica en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a todas las operaciones de acceso de E/S de archivos, para datos de atributo y de flujo.  
   
-##  <a name="write"></a> Escribir y actualizar los archivos y directorios de una FileTable  
+##  <a name="writing-and-updating-files-and-directories-in-a-filetable"></a><a name="write"></a> Escribir y actualizar los archivos y directorios de una FileTable  
   
 -   Todas las operaciones de lectura y escritura de E/S de los archivos de una FileTable son no transaccionales; es decir, no hay ninguna transacción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enlazada a estas operaciones, y no se proporcionan garantías ACID.  
   
@@ -54,14 +55,14 @@ ms.locfileid: "72908774"
   
 -   Las actualizaciones de los atributos o datos de FILESTREAM a través de las API de E/S de archivos tendrán como resultado la actualización de las columnas de atributos de archivos y la columna **file_stream** correspondiente de la FileTable.  
   
-##  <a name="delete"></a> Eliminar los archivos y directorios de una FileTable  
+##  <a name="deleting-files-and-directories-in-a-filetable"></a><a name="delete"></a> Eliminar los archivos y directorios de una FileTable  
  Toda la semántica de las API de E/S de archivos de Windows se aplica cuando se elimina un archivo o directorio.  
   
 -   Se produce un error al eliminar un directorio si este contiene archivos o subdirectorios.  
   
 -   Al eliminar un archivo o directorio, se quita la fila correspondiente de la FileTable. Esto es equivalente a eliminar la fila mediante una operación [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-##  <a name="supported"></a> Operaciones compatibles del sistema de archivos  
+##  <a name="supported-file-system-operations"></a><a name="supported"></a> Operaciones compatibles del sistema de archivos  
  Las FileTables admiten las API del sistema de archivos relacionadas con las siguientes operaciones del sistema de archivos:  
   
 -   Administración de directorios  
@@ -76,15 +77,15 @@ ms.locfileid: "72908774"
   
 -   NTFS de transacciones  
   
-##  <a name="considerations"></a> Consideraciones adicionales sobre el acceso de E/S de archivos a FileTables  
+##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> Consideraciones adicionales sobre el acceso de E/S de archivos a FileTables  
   
-###  <a name="vnn"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
+###  <a name="using-virtual-network-names-vnns-with-always-on-availability-groups"></a><a name="vnn"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn, todo acceso a los datos de FILESTREAM o FileTable a través de las API del sistema de archivos debe usar los VNN en lugar de nombres de equipo. Para obtener más información, vea [FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-###  <a name="partial"></a> Actualizaciones parciales  
+###  <a name="partial-updates"></a><a name="partial"></a> Actualizaciones parciales  
  Se puede usar un identificador de escritura obtenido para los datos de FILESTREAM en una FileTable mediante la función [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) para llevar a cabo actualizaciones parciales en contexto del contenido de FILESTREAM. Este comportamiento es diferente al acceso de FILESTREAM con transacciones a través del identificador que se obtiene llamando a **OpenSQLFILESTREAM()** y pasando un contexto de transacción explícita.  
   
-###  <a name="trans"></a> Semántica transaccional  
+###  <a name="transactional-semantics"></a><a name="trans"></a> Semántica transaccional  
  Cuando se obtiene acceso a los archivos de una FileTable con las API de E/S de archivos, estas operaciones no están asociadas con ninguna transacción de usuario y tienen las características adicionales siguientes:  
   
 -   Como el acceso sin transacciones de los datos de FILESTREAM de una FileTable no está asociado a ninguna transacción, no tiene una semántica específica de aislamiento. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar transacciones internas para aplicar la semántica de bloqueo o simultaneidad en los datos de FileTable. Cualquier transacción interna de este tipo se realiza con el aislamiento de lectura confirmada.  
@@ -95,13 +96,13 @@ ms.locfileid: "72908774"
   
  Pero también se puede obtener acceso a la columna FILESTREAM de una FileTable a través de FILESTREAM con transacciones llamando a **OpenSqlFileStream ()** . Este tipo de acceso puede ser totalmente transaccional y respetará todos los niveles de coherencia transaccional que se admiten actualmente.  
   
-###  <a name="concurrency"></a> Control de simultaneidad  
+###  <a name="concurrency-control"></a><a name="concurrency"></a> Control de simultaneidad  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica el control de simultaneidad para el acceso de FileTable entre las aplicaciones del sistema de archivos, así como entre las aplicaciones del sistema de archivos y las aplicaciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este control de simultaneidad se logra aplicando los bloqueos adecuados en las filas de la FileTable.  
   
-###  <a name="triggers"></a> Desencadenadores  
+###  <a name="triggers"></a><a name="triggers"></a> Desencadenadores  
  La creación, modificación o eliminación de archivos o directorios o de sus atributos a través del sistema de archivos tendrán como resultado las operaciones de inserción, actualización o eliminación correspondientes en la FileTable. Los desencadenadores DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] asociados se activarán como parte de estas operaciones.  
   
-##  <a name="funclist"></a> Funcionalidad del sistema de archivos admitida en FileTables  
+##  <a name="file-system-functionality-supported-in-filetables"></a><a name="funclist"></a> Funcionalidad del sistema de archivos admitida en FileTables  
   
 |Capacidad|Compatible|Comentarios|  
 |----------------|---------------|--------------|  

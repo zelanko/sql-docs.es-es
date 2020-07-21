@@ -1,5 +1,5 @@
 ---
-title: Sys.sysreferences (Transact-SQL) | Microsoft Docs
+title: Sys. sysreferences (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986492"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67986492"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|Id. de la restricción FOREIGN KEY.|  
 |**fkeyid**|**int**|Id. de la tabla que hace referencia.|  
@@ -63,24 +63,24 @@ ms.locfileid: "67986492"
 |**fkey14**|**smallint**|Id. de la columna que hace referencia.|  
 |**fkey15**|**smallint**|Id. de la columna que hace referencia.|  
 |**fkey16**|**smallint**|Id. de la columna que hace referencia.|  
-|**rkey1**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey2**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey3**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey4**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey5**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey6**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey7**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey8**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey9**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey10**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey11**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey12**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey13**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey14**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey15**|**smallint**|Id. de columna de la columna que se hace referencia.|  
-|**rkey16**|**smallint**|Id. de columna de la columna que se hace referencia.|  
+|**rkey1**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey2**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey3**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey4**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey5**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey6**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey7**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey8**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey9**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey10**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey11**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey12**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey13**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey14**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey15**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
+|**rkey16**|**smallint**|ID. de columna de la columna a la que se hace referencia.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

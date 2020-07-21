@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63162453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049894"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
   Los índices se pueden definir en columnas calculadas si se cumplen estos requisitos:  
@@ -88,13 +87,13 @@ ms.locfileid: "63162453"
   
  **Data Type Requirements**  
   
--   El *computed_column_expression* definida para la columna calculada no se puede evaluar para la `text`, `ntext`, o `image` tipos de datos.  
+-   Los *computed_column_expression* definidos para la columna calculada no se pueden evaluar `text` como `ntext` tipos de `image` datos, o.  
   
 -   Las columnas calculadas derivadas de los tipos de datos `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` y `xml` se pueden indizar, siempre que el tipo de datos esté disponible como una columna de clave de índice.  
   
 -   Las columnas calculadas derivadas de los tipos de datos `image`, `ntext` y `text` pueden ser columnas sin clave (incluidas) en un índice no clúster, siempre que el tipo de datos esté disponible como una columna de índice sin clave.  
   
- **SET Option Requirements**  
+ **Requisitos de la opción SET**  
   
 -   La opción de nivel de conexión ANSI_NULLS debe estar establecida en ON si se ejecuta la instrucción CREATE TABLE o ALTER TABLE que define la columna calculada. La función [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) informa de si la opción está activada a través de la propiedad **IsAnsiNullsOn** .  
   
@@ -116,8 +115,8 @@ ms.locfileid: "63162453"
   
      Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior.  
   
-##  <a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
- Puede crear un índice en una columna calculada definida con una expresión determinista pero imprecisa si se marca la columna como PERSISTED en la instrucción CREATE TABLE o ALTER TABLE. Esto significa que el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna y cuando el índice se hace referencia en una consulta. Esta opción le permite crear un índice en una columna calculada cuando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], es determinista y precisa.  
+##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
+ Puede crear un índice en una columna calculada definida con una expresión determinista pero imprecisa si se marca la columna como PERSISTED en la instrucción CREATE TABLE o ALTER TABLE. Esto significa que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna y cuando se hace referencia al índice en una consulta. Esta opción permite crear un índice en una columna calculada cuando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] es determinista y precisa.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

@@ -1,5 +1,6 @@
 ---
 title: Preparar datos para informes móviles de Reporting Services | Microsoft Docs
+description: Publicador de informes móviles de Microsoft SQL Server admite operaciones de datos complejas, como el filtrado, la agregación y la segmentación de tiempo. Aprenda a preparar los datos para estas operaciones.
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: bbd04e9eef6d0775407e9b9893c59daefd7dc0a9
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62499930"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448382"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Preparar datos para informes de Reporting Services móviles
   
@@ -38,7 +39,7 @@ Los campos de fecha en modelos tabulares y multidimensionales de [!INCLUDE[ssASn
 ## <a name="preparing-filter-data"></a>Preparar los datos del filtro ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] puede filtrar datos basándose tanto en los campos de fecha y hora como en los campos clave. Aunque los campos clave pueden ser numéricos, en la mayoría de los casos, son un id. o un valor de cadena. Para preparar un campo de filtro para usarlo con un elemento de navegador, como la lista de selección, la clave del filtro debe ser una sola columna en la tabla de datos. De este modo, puede agrupar las filas de la tabla según el valor de la columna del filtro. Tener varias columnas que contengan claves de filtro diferentes o criterios de filtro permite que se usen conjuntamente informes móviles con varios navegadores de filtro jerárquica o individualmente.  
   
-| Sector  | País   | Region    |  
+| Sector  | Country   | Region    |  
 | ------------- | ------------- | ------------- |  
 | Bancos     | AFGANISTÁN   | ASIA      |  
 | Servicios comerciales y profesionales | AFGANISTÁN | ASIA |  
@@ -59,7 +60,7 @@ En esta tabla, los elementos ParentKey aparecen primero en la columna ItemKey, d
 | Básicos del consumidor |    |  
 | Consumo discrecional |  |     
 | Asistencia sanitaria   |   |  
-| Tecnologías de la información |  |  
+| Information Technology |  |  
 | Bancos | Datos financieros |  
 | Inmobiliaria | Datos financieros |  
 | Finanzas diversificadas |  Datos financieros |   
@@ -77,13 +78,13 @@ En esta tabla, los elementos ParentKey aparecen primero en la columna ItemKey, d
 | Venta al por menor | Consumo discrecional |  
 | Productos farmacéuticos   | Asistencia sanitaria |  
 | Equipo y servicios de asistencia sanitaria |    Asistencia sanitaria |  
-| Software y servicios | Tecnologías de la información |  
-| Equipos y hardware de tecnología   | Tecnologías de la información |  
-| Servicios de telecomunicaciones |Tecnologías de la información |  
+| Software y servicios | Information Technology |  
+| Equipos y hardware de tecnología   | Information Technology |  
+| Servicios de telecomunicaciones |Information Technology |  
   
-### <a name="see-also"></a>Vea también  
+### <a name="see-also"></a>Consulte también  
 - [Preparación de los datos de Excel para informes móviles de Reporting Services](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)  
-- [Conservar el formato de fecha para Analysis Services en los informes móviles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
+- [Conservación del formato de fecha para Analysis Services en los informes móviles](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md)
 - [Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
   
   

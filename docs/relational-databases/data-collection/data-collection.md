@@ -1,5 +1,6 @@
 ---
 title: Recopilación de datos | Microsoft Docs
+description: Obtenga información introductoria sobre el recopilador de datos, un componente de SQL Server 2019 que recopila diferentes conjuntos de datos.
 ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e50a46d53e1bf8fbee2b711ddce80e21a65beca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140747"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733839"
 ---
 # <a name="data-collection"></a>Recopilación de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El recopilador de datos es un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.  
   
 ## <a name="what-is-data-collector"></a>¿Qué es el recopilador de datos? 
@@ -33,7 +34,7 @@ ms.locfileid: "68140747"
   
  La ilustración siguiente muestra cómo encaja el recopilador de datos en la estrategia global para la recopilación y la administración de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Rol del recopilador de datos en la administración de datos](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Rol del recopilador de datos en la administración de datos")  
+ ![Rol del recopilador de datos en Administración de datos](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Rol del recopilador de datos en Administración de datos")  
   
 ## <a name="concepts"></a>Conceptos  
  El recopilador de datos se integra en el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y usa ambos exhaustivamente. Antes de trabajar con el recopilador de datos, debe conocer ciertos conceptos relacionados con cada uno de estos componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +47,7 @@ ms.locfileid: "68140747"
   
 -   Programación de trabajo  
   
--   Subsistema  
+-   Subsystem  
   
 -   Cuentas de proxy  
   
@@ -61,7 +62,7 @@ ms.locfileid: "68140747"
  Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="terminology"></a>Terminología  
- **destino**  
+ **Destino**  
  Instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admite la recopilación de datos. Para obtener más información sobre las ediciones compatibles, vea la sección "Facilidad de uso" de [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Una *raíz de destino* define un subárbol en la jerarquía de destino. Un *conjunto de destinos* es el grupo de destinos resultante de aplicar un filtro a un subárbol definido por una raíz de destino. Una raíz de destino puede ser una base de datos, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o una instancia del equipo.  

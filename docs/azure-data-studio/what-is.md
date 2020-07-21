@@ -1,43 +1,40 @@
 ---
 title: Qué es Azure Data Studio
-titleSuffix: Azure Data Studio
 description: Azure Data Studio es una herramienta gratuita y ligera que se ejecuta en Windows, macOS y Linux para administrar SQL Server, Azure SQL Database y Azure SQL Data Warehouse.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.date: 01/15/2020
+ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771930"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
 Azure Data Studio es una herramienta de base de datos multiplataforma para profesionales de datos que usan la familia de las plataformas de datos locales y en la nube de Microsoft en Windows, macOS y Linux.
 
-Azure Data Studio, que anteriormente se había publicado con el nombre de versión preliminar SQL Operations Studio, ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado con el usuario de la plataforma de datos en mente, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
+Azure Data Studio ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado para usuarios de plataformas de datos, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
 
 El código fuente de Azure Data Studio y sus proveedores de datos está disponible en GitHub en un CLUF de código fuente que proporciona derechos para modificar y usar el software, pero no para redistribuirlo ni hospedarlo en un servicio en la nube. Para obtener más información, vea [Preguntas más frecuentes de Azure Data Studio](faq.md).
 
-**[Descargar e instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
+**[Descarga e instalación de Azure Data Studio](download.md)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor de código SQL con IntelliSense
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ofrece una experiencia de código SQL moderna y centrada en el teclado que hace que sus tareas diarias sean más fáciles con características integradas como varias ventanas de pestañas, un editor de SQL completo, IntelliSense, finalización de palabras clave, fragmentos de código, navegación de código e integración del control de código fuente (Git). Ejecute consultas SQL a petición, vea y guarde los resultados como texto, JSON o Excel. Edite los datos, organice sus conexiones de bases de datos favoritas y examine los objetos de base de datos en una experiencia de exploración de objetos conocida. Para obtener información sobre cómo usar el editor de SQL, vea [Usar el editor de SQL para crear objetos de base de datos](tutorial-sql-editor.md).
+Azure Data Studio ofrece una experiencia de código SQL moderna y centrada en el teclado que hace que sus tareas diarias sean más fáciles con características integradas como varias ventanas de pestañas, un editor de SQL completo, IntelliSense, finalización de palabras clave, fragmentos de código, navegación de código e integración del control de código fuente (Git). Ejecute consultas SQL a petición, vea y guarde los resultados como texto, JSON o Excel. Edite los datos, organice sus conexiones de bases de datos favoritas y examine los objetos de base de datos en una experiencia de exploración de objetos conocida. Para obtener información sobre cómo usar el editor de SQL, vea [Usar el editor de SQL para crear objetos de base de datos](tutorial-sql-editor.md).
 
 ## <a name="smart-sql-code-snippets"></a>Fragmentos de código SQL inteligentes
 
-Los fragmentos de código SQL generan la sintaxis SQL adecuada para crear bases de datos, tablas, vistas, procedimientos almacenados, usuarios, inicios de sesión, roles, etc., y para actualizar los objetos de base de datos existentes. Use fragmentos de código inteligentes para crear rápidamente copias de la base de datos con fines de desarrollo o prueba, y para generar y ejecutar scripts CREATE e INSERT.
+Los fragmentos de código SQL generan la sintaxis SQL adecuada para crear bases de datos, tablas, vistas, procedimientos almacenados, usuarios, inicios de sesión y roles, así como para actualizar los objetos de base de datos existentes. Use fragmentos de código inteligentes para crear rápidamente copias de la base de datos con fines de desarrollo o prueba, y para generar y ejecutar scripts CREATE e INSERT.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] también proporciona una funcionalidad para crear fragmentos de código SQL personalizados. Para obtener más información, vea [Crear y usar fragmentos de código](code-snippets.md).
-
+Azure Data Studio también proporciona una funcionalidad para crear fragmentos de código SQL personalizados. Para obtener más información, vea [Crear y usar fragmentos de código](code-snippets.md).
 
 ## <a name="customizable-server-and-database-dashboards"></a>Paneles de servidor y base de datos personalizables
 
@@ -49,18 +46,19 @@ Los grupos de servidores proporcionan una manera de organizar la información de
 
 ## <a name="integrated-terminal"></a>Terminal integrado
 
-Use sus herramientas de línea de comandos favoritas (por ejemplo, Bash, PowerShell, sqlcmd, bcp y ssh) en la ventana del terminal integrado directamente desde la interfaz de usuario de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Para obtener información sobre el terminal integrado, consulte [Terminal integrado](integrated-terminal.md).
+Use sus herramientas de línea de comandos favoritas (por ejemplo, Bash, PowerShell, sqlcmd, bcp y ssh) en la ventana del terminal integrado directamente desde la interfaz de usuario de Azure Data Studio. Para obtener información sobre el terminal integrado, consulte [Terminal integrado](integrated-terminal.md).
 
 ## <a name="extensibility-and-extension-authoring"></a>Extensibilidad y creación de extensiones
 
-Amplíe la funcionalidad de la instalación básica para mejorar la experiencia de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. [!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona puntos de extensibilidad para las actividades de administración de datos, así como compatibilidad con la creación de extensiones.
+Amplíe la funcionalidad de la instalación básica para mejorar la experiencia de Azure Data Studio. Azure Data Studio proporciona puntos de extensibilidad para las actividades de administración de datos, así como compatibilidad con la creación de extensiones.
 
-Para obtener información sobre la extensibilidad en [!INCLUDE[name-sos](../includes/name-sos-short.md)], vea [Extensibilidad](extensibility.md).
+Para obtener información sobre la extensibilidad en Azure Data Studio, consulte [Extensibilidad](extensibility.md).
 Para obtener información sobre las extensiones, vea [Crear extensiones](extension-authoring.md).
 
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Comparación de características con SQL Server Management Studio (SSMS)
 
 **Use Azure Data Studio si:**
+
 - Necesita ejecutarlo en macOS o Linux.
 - Se está conectando a un clúster de macrodatos de SQL Server 2019.
 - Dedica la mayor parte del tiempo a editar o ejecutar consultas.
@@ -68,9 +66,9 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 - Puede ejecutar la mayoría de las tareas administrativas mediante el terminal integrado con sqlcmd o PowerShell.
 - Tiene una necesidad mínima de las experiencias del asistente.
 - No necesita realizar una configuración administrativa profunda.
-- Quiero 
 
 **Use SQL Server Management Studio si:**
+
 - Dedica la mayor parte del tiempo a las tareas de administración de bases de datos.
 - Realiza una configuración administrativa profunda.
 - Administra la seguridad, incluida la administración de usuarios, la evaluación de vulnerabilidades y la configuración de características de seguridad.
@@ -95,12 +93,11 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Panel de tareas|Sí||
 |Temas|Sí||
 |Modo oscuro|Sí||
-|Azure Resource Explorer|Vista previa||
-|Asistente para generar scripts||Sí|
-|Importación o exportación de DACPAC||Sí|
-|Propiedades de objeto||Sí|
+|Azure Resource Explorer|Versión preliminar||
+|Asistente para generar scripts||Versión preliminar|
+|Importación y exportación de DACPAC||Sí|
+|Propiedades de objeto||Versión preliminar|
 |Diseñador de tablas||Sí|
-
 
 ### <a name="query-editor"></a>Editor de consultas
 
@@ -110,7 +107,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Exportar resultados a CSV, JSON o XLSX|Sí||
 |IntelliSense|Sí|Sí|
 |Fragmentos de código|Sí|Sí|
-|Mostrar plan|Vista previa|Sí|
+|Mostrar plan|Versión preliminar|Sí|
 |Estadísticas de clientes||Sí|
 |Estadísticas de consultas dinámicas||Sí|
 |Opciones de consulta||Sí|
@@ -121,7 +118,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Cuaderno|Sí||
 |Guardar consulta como fragmento de código|Sí||
 
-### <a name="operating-system-support"></a>Sistemas operativos admitidos
+### <a name="operating-system-support"></a>Compatibilidad con sistema operativo
 
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -133,9 +130,9 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Asistente para crear tablas externas|Vista previa||
-|Integración de HDFS|Vista previa||
-|Cuaderno|Vista previa||
+|Asistente para crear tablas externas|Sí||
+|Integración de HDFS|Sí||
+|Cuaderno|Sí||
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
@@ -143,21 +140,21 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |:---|:---|:---|
 |Copia de seguridad o restauración|Sí|Sí|
 |Compatibilidad con clúster de macrodatos|Sí||
-|Importación de archivos planos|Vista previa|Sí|
-|Agente SQL|Vista previa|Sí|
-|SQL Profiler|Vista previa|Sí|
-|AlwaysOn||Sí|
+|Importación de archivos planos|Versión preliminar|Sí|
+|Agente SQL|Versión preliminar|Sí|
+|SQL Profiler|Versión preliminar|Sí|
+|Always On||Sí|
 |Always Encrypted||Sí|
 |Asistente para copiar datos||Sí|
-|Asistente para la optimización de datos||Sí|
+|Database Engine Tuning Advisor||Sí|
 |Visor de registros de errores||Sí|
 |Planes de mantenimiento||Sí|
 |Consulta multiservidor||Sí|
-|Administración basada en directivas||Sí|
+|administración basada en directivas||Sí|
 |PolyBase||Sí|
 |Almacén de consultas||Sí|
 |Servidores registrados||Sí|
-|REPLICATION||Sí|
+|Replicación||Sí|
 |Administración de seguridad||Sí|
 |Service Broker||Sí|
 |SQL Mail||Sí|
@@ -168,7 +165,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Descargar e instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Descarga e instalación de Azure Data Studio](download.md)
 - [Conectarse y consultar SQL Server](quickstart-sql-server.md)
 - [Conectarse y consultar Azure SQL Database](quickstart-sql-database.md)
 

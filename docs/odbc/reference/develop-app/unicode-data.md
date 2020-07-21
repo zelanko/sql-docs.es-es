@@ -13,38 +13,38 @@ helpviewer_keywords:
 - C data types [ODBC], Unicode
 - SQL data types [ODBC], Unicode
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 899924b5c0847d5f42e383a9e04c33298bb368b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 73ea9035b05f04fec1527ca2aa98531a807db8cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087754"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307402"
 ---
 # <a name="unicode-data"></a>Datos Unicode
-Tipos de datos Unicode de SQL se proporcionan para describir los datos que residen en Unicode de forma nativa en el DBMS. Un tipo de datos Unicode C se proporciona para permitir que una aplicación enlazar datos a un búfer de Unicode. El Administrador de controladores puede convertir los datos de un tipo de C de Unicode (SQL_C_WCHAR) para que sea la función con un controlador de ANSI.  
+Los tipos de datos Unicode de SQL se proporcionan para describir los datos que residen en Unicode de forma nativa en el DBMS. Se proporciona un tipo de datos Unicode de C para permitir que una aplicación enlace datos a un búfer Unicode. El administrador de controladores puede convertir datos de un tipo C de Unicode (SQL_C_WCHAR) para que funcionen con un controlador ANSI.  
   
- Un ODBC 3.0 o 2. *x* aplicación siempre se enlazará a los tipos de datos ANSI. Para un rendimiento óptimo, una aplicación de ODBC 3.5 (o posterior) debe enlazar al tipo de datos C ANSI si el tipo de columna SQL es ANSI y debe enlazarse con el tipo de datos Unicode C si el tipo de columna SQL es Unicode.  
+ ODBC 3,0 o 2. la aplicación *x* siempre se enlazará a los tipos de datos ANSI. Para obtener un rendimiento óptimo, una aplicación ODBC 3,5 (o posterior) debe enlazarse al tipo C de datos ANSI si el tipo de columna SQL es ANSI y debe enlazarse al tipo de datos C de Unicode si el tipo de columna SQL es Unicode.  
   
- Los indicadores de tipo Unicode de SQL son SQL_WCHAR, SQL_WVARCHAR y SQL_WLONGVARCHAR. Datos SQL_WCHAR tienen una longitud de cadena fija mientras SQL_WVARCHAR tiene una longitud variable con un máximo declarado y SQL_WLONGVARCHAR tiene una longitud variable con un máximo que depende del origen de datos.  
+ Los indicadores de tipo Unicode de SQL son SQL_WCHAR, SQL_WVARCHAR y SQL_WLONGVARCHAR. SQL_WCHAR datos tienen una longitud de cadena fija, mientras que SQL_WVARCHAR tiene una longitud variable con un máximo declarado y SQL_WLONGVARCHAR tiene una longitud variable con un valor máximo que depende del origen de datos.  
   
- El indicador de tipo Unicode C es SQL_C_WCHAR. Este es el valor predeterminado para cada uno de los indicadores de tipo Unicode de SQL. Todos los tipos SQL pueden convertirse en SQL_C_WCHAR, y SQL_C_WCHAR puede convertirse en todos los tipos SQL. Una aplicación puede recuperar datos en una de estas tres maneras:  
+ El indicador de tipo Unicode de C está SQL_C_WCHAR. Este es el valor predeterminado para cada uno de los indicadores de tipo Unicode de SQL. Todos los tipos SQL se pueden convertir en SQL_C_WCHAR y SQL_C_WCHAR se pueden convertir en todos los tipos de SQL. Una aplicación puede recuperar datos de una de estas tres maneras:  
   
--   Recuperar los datos como SQL_C_CHAR.  
+-   Recupere los datos como SQL_C_CHAR.  
   
--   Recuperar los datos como SQL_C_WCHAR.  
+-   Recupere los datos como SQL_C_WCHAR.  
   
--   Declare los datos como SQL_C_TCHAR. Se trata de una macro que inserta SQL_C_WCHAR si la aplicación se compila como una aplicación Unicode o inserta SQL_C_CHAR si se ha compilado como una aplicación de ANSI.  
+-   Declare los datos como SQL_C_TCHAR. Se trata de una macro que inserta SQL_C_WCHAR si la aplicación se compila como una aplicación Unicode o inserta SQL_C_CHAR si se compila como una aplicación ANSI.  
   
- SQL_C_TCHAR se declara en una función como sigue:  
+ SQL_C_TCHAR se declara en una función como se indica a continuación:  
   
 ```  
 SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, NameLen, 0, Name, 0, &Name)  
 ```  
   
- Cuando se compila la aplicación como una aplicación de Unicode, el *ValueType* argumento SQL_C_TCHAR se cambiaría a SQL_C_WCHAR. Cuando se compila la aplicación como una aplicación ANSI, el *ValueType* argumento cambiaría a SQL_C_CHAR.  
+ Cuando la aplicación se compila como una aplicación Unicode, el argumento *ValueType* se cambiaría de SQL_C_TCHAR a SQL_C_WCHAR. Cuando la aplicación se compila como una aplicación ANSI, el argumento *ValueType* se cambiaría a SQL_C_CHAR.  
   
- Controladores de Unicode aún deben admitir los tipos de datos de ANSI, incluidos SQL_CHAR. Si una aplicación trabaja con un controlador de Unicode se enlaza a SQL_CHAR, el Administrador de controladores no asigna los datos SQL_CHAR a SQL_WCHAR. El controlador de Unicode debe aceptar los datos SQL_CHAR.  
+ Los controladores Unicode todavía deben admitir tipos de datos ANSI, incluidos SQL_CHAR. Si una aplicación que trabaja con un controlador Unicode se enlaza a SQL_CHAR, el administrador de controladores no asignará los datos de SQL_CHAR a SQL_WCHAR. El controlador Unicode debe aceptar los datos de SQL_CHAR.  
   
- El Administrador de controladores almacena los controladores y los nombres DSN en Unicode y los asigna a ANSI según sea necesario. Si un carácter Unicode no se puede asignar a un carácter ANSI (ya que puede ocurrir si se utilizan caracteres de una página de códigos que no es la página de código nativo del equipo en el controlador y los nombres de los DSN), los caracteres que no se podrían convertir se representan mediante un sup de carácter predeterminado plied por el sistema.
+ El administrador de controladores almacena los nombres de controlador y DSN en Unicode y los asigna a ANSI según sea necesario. Si un carácter Unicode no se puede asignar a un carácter ANSI (como puede ocurrir si los caracteres de una página de códigos que no es la página de códigos nativa del equipo se utilizan en los nombres de controlador y DSN), los caracteres que no se pudieron convertir se representan mediante un carácter predeterminado proporcionado por el sistema.

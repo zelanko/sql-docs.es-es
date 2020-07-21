@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c86c8e8678fc821dc3796a511349c1c3498bdb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068019"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Realizar una consulta a una tabla jerárquica mediante métodos de jerarquía
   Ahora que está totalmente rellena la tabla HumanResources.EmployeeOrg, esta tarea mostrará cómo realizar una consulta en la jerarquía utilizando alguno de los métodos jerárquicos.  

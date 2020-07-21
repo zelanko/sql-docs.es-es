@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 9dd14245e10963d7a685c17b24ffd1666c3223a7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847226"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896290"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **Open** abre el dispositivo virtual establecido en el servidor y debe ser la primera llamada realizada mediante el identificador de interfaz proporcionado por COM.
 
@@ -44,7 +44,7 @@ HRESULT IServerVirtualDeviceSet2::Open (
 | NOERROR | La función se ha realizado correctamente. |
 | VD_E_INVALID | El nombre proporcionado no ha identificado un conjunto de dispositivos virtuales accesible para el servidor. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Después de invocar correctamente esta función, el servidor puede continuar con la configuración del conjunto de dispositivos virtuales mediante GetConfiguration y SetConfiguration.
 

@@ -1,5 +1,5 @@
 ---
-title: Ayuda F1 del Visor de perfil de datos | Microsoft Docs
+title: Visor de perfil de datos ayuda de F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d541e0c6143c9652629f80d911bf42db26e9a4ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059719"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429722"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Visor de perfiles de datos (Ayuda F1)
   Utilice el Visor de perfil de datos para ver la salida de la Tarea de generación de perfiles de datos.  
@@ -46,7 +45,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>Tipo de perfil = Perfil de distribución de longitud de columnas  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas - panel \<columna>  
+#### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas: \<column> Panel  
  **Longitud mínima**  
  Muestra la longitud mínima de los valores de esta columna.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66059719"
  **Longitud**  
  Muestra las longitudes de columna encontradas en la columna de perfiles.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que el valor de la columna de perfiles tiene la longitud que se muestra en la columna **Longitud** .  
   
  **Porcentaje**  
@@ -74,7 +73,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo de perfil = Perfil de proporción de columnas nulas  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas nulas - panel \<columna>  
+#### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas nulas- \<column> Panel  
  **Recuento nulo**  
  Muestra el número de filas en las que la columna de perfiles tiene el valor null.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-pattern-profile"></a>Tipo de perfil = Perfil de patrón de columnas  
   
-#### <a name="column-pattern-profile---column-pane"></a>Perfil de patrón de columnas - panel \<columna>  
+#### <a name="column-pattern-profile---column-pane"></a>Panel de Perfil de patrón de columnas \<column>  
  **Recuento de filas**  
  Muestra el número de filas de la tabla o vista.  
   
@@ -99,14 +98,14 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-statistics-profile"></a>Tipo de perfil = Perfil de estadísticas de columnas  
   
-#### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas - panel \<columna>  
- **Mínima**  
+#### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas- \<column> Panel  
+ **Mínimo**  
  Muestra el valor mínimo situado en la columna de perfiles.  
   
  **Máximo**  
  Muestra el valor máximo situado en la columna de perfiles.  
   
- **Promedio**  
+ **Aritmética**  
  Muestra el promedio de los valores que se encuentran en la columna de perfiles.  
   
  **Desviación estándar**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>Tipo de perfil = Perfil de distribución de valores de columna  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna - panel \<columna>  
+#### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna- \<column> Panel  
  **Número de valores distintos**  
  Muestra el recuento de valores distintos que se encuentran en la columna de perfiles.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66059719"
  **Valor**  
  Muestra los distintos valores que se encuentran en la columna de perfiles.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que la columna de perfiles tiene el valor que se muestra en la columna **Valor** .  
   
  **Porcentaje**  
@@ -133,7 +132,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--candidate-key-profile"></a>Tipo de perfil = Perfil de claves candidatas  
   
-#### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas - panel \<tabla>  
+#### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas: \<table> Panel  
  **Columnas de clave**  
  Muestra las columnas que se seleccionaron para los perfiles como clave candidata.  
   
@@ -141,10 +140,10 @@ ms.locfileid: "66059719"
  Muestra el nivel (como porcentaje) de la columna de clave candidata o de una combinación de columnas. Un nivel de clave menor del 100% indica que hay valores duplicados.  
   
 #### <a name="key-violations-pane"></a>Panel Infracciones de clave  
- **\<columna1>, \<columna2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Muestra los valores duplicados que se encontraron en la columna de perfiles.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Tipo de perfil = Perfil de dependencia funcional  
@@ -164,17 +163,17 @@ ms.locfileid: "66059719"
 > [!NOTE]  
 >  Un porcentaje alto de valores erróneos en los datos podría provocar resultados inesperados en un perfil Dependencia funcional. Por ejemplo, el 90% de las filas tienen el valor "WI" como estado para el valor "98052" de código postal. El perfil notifica filas que contienen valor de estado correcto de "WA" como infracciones.  
   
- **\<nombre de columna determinante>**  
+ **\<determinant column name>**  
  Muestra el valor de la columna determinante o la combinación de columnas en esta infracción de la dependencia funcional.  
   
- **\<nombre de columna dependiente>**  
+ **\<dependent column name>**  
  Muestra el valor de la columna dependiente en esta infracción de la dependencia funcional.  
   
  **Recuento de soporte**  
  Muestra el número de filas en las que el valor de columna determinante determina la columna dependiente.  
   
  **Recuento de infracciones**  
- Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el que se muestra en la columna **\<nombre de columna dependiente>** ).  
+ Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el valor que se muestra en la **\<dependent column name>** columna).  
   
  **Porcentaje admitido**  
  Muestra el porcentaje de filas en las que el valor de columna determinante determina la columna dependiente.  
@@ -192,13 +191,13 @@ ms.locfileid: "66059719"
  Muestra el nivel (como porcentaje) de la superposición entre las columnas. Un nivel de clave menor que 100% indica que hay casos en los que el valor de subconjunto no se encuentra entre los valores del superconjunto.  
   
 #### <a name="inclusion-violations-pane"></a>Panel Infracciones de inclusión  
- **\<columna1>, \<columna2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Muestra los valores en la columna o columnas del subconjunto que no se encontraban en la columna o columnas del superconjunto.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Visor de perfil de datos](control-flow/data-profile-viewer.md)   
  [Visor y tarea de generación de perfiles de datos](control-flow/data-profiling-task-and-viewer.md)  
   

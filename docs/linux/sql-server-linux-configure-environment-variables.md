@@ -1,23 +1,24 @@
 ---
-title: Configuración de opciones de SQL Server con variables de entorno
+title: Configuración de variables de entorno para SQL Server en Linux
 description: En este artículo se describe cómo usar variables de entorno para configurar opciones específicas de SQL Server 2017 en Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/24/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: a09f79c3e5dec6c181855119e36ff0d4f0d7210e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807468"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899631"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de opciones de SQL Server con variables de entorno en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -28,7 +29,7 @@ Puede usar diversas variables de entorno para configurar SQL Server 2017 en Lin
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Puede usar diversas variables de entorno para configurar la versión preliminar de SQL Server 2019 en Linux. Estas variables se usan en dos escenarios:
+Puede usar diversas variables de entorno para configurar SQL Server 2019 en Linux. Estas variables se usan en dos escenarios:
 
 ::: moniker-end
 
@@ -47,8 +48,8 @@ Puede usar diversas variables de entorno para configurar la versión preliminar 
 |-----|-----|
 | **ACCEPT_EULA** | Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](https://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
 | **MSSQL_SA_PASSWORD** | Configure la contraseña de usuario SA. |
-| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
-| **MSSQL_LCID** | Establece el identificador de idioma que se va a usar para SQL Server. Por ejemplo, 1036 es francés. |
+| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles son: </br></br>**Evaluación**</br>**Developer**</br>**Express**</br>**Web**</br>**Estándar**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
+| **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada para SQL Server. Esto reemplaza la asignación predeterminada de identificador de idioma (LCID) por la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede usar SQL Server. De forma predeterminada, es el 80 % de la memoria física total. |
 | **MSSQL_TCP_PORT** | Configure el puerto TCP en el que escucha SQL Server (valor predeterminado: 1433). |
@@ -58,7 +59,7 @@ Puede usar diversas variables de entorno para configurar la versión preliminar 
 | **MSSQL_LOG_DIR** | Cambie el directorio en el que se crean los archivos de registro (.ldf) de la base de datos de SQL Server. |
 | **MSSQL_DUMP_DIR** | Cambie el directorio en el que SQL Server depositará de forma predeterminada los volcados de memoria y otros archivos de solución de problemas. |
 | **MSSQL_ENABLE_HADR** | Habilite el grupo de disponibilidad. Por ejemplo, "1" significa que está habilitado y "0", deshabilitado. |
-| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
+| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
 | **MSSQL_MASTER_DATA_FILE** | Establece la ubicación del archivo de datos de la base de datos maestra. Debe denominarse **master.mdf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_MASTER_LOG_FILE** | Establece la ubicación del archivo de registro de la base de datos maestra. Debe denominarse **mastlog.ldf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Establece la ubicación de los archivos del registro de errores. |
@@ -71,8 +72,8 @@ Puede usar diversas variables de entorno para configurar la versión preliminar 
 |-----|-----|
 | **ACCEPT_EULA** | Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](https://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
 | **MSSQL_SA_PASSWORD** | Configure la contraseña de usuario SA. |
-| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
-| **MSSQL_LCID** | Establece el identificador de idioma que se va a usar para SQL Server. Por ejemplo, 1036 es francés. |
+| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles son: </br></br>**Evaluación**</br>**Developer**</br>**Express**</br>**Web**</br>**Estándar**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
+| **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada para SQL Server. Esto reemplaza la asignación predeterminada de identificador de idioma (LCID) por la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede usar SQL Server. De forma predeterminada, es el 80 % de la memoria física total. |
 | **MSSQL_TCP_PORT** | Configure el puerto TCP en el que escucha SQL Server (valor predeterminado: 1433). |
@@ -82,7 +83,7 @@ Puede usar diversas variables de entorno para configurar la versión preliminar 
 | **MSSQL_LOG_DIR** | Cambie el directorio en el que se crean los archivos de registro (.ldf) de la base de datos de SQL Server. |
 | **MSSQL_DUMP_DIR** | Cambie el directorio en el que SQL Server depositará de forma predeterminada los volcados de memoria y otros archivos de solución de problemas. |
 | **MSSQL_ENABLE_HADR** | Habilite el grupo de disponibilidad. Por ejemplo, "1" significa que está habilitado y "0", deshabilitado. |
-| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
+| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
 | **MSSQL_MASTER_DATA_FILE** | Establece la ubicación del archivo de datos de la base de datos maestra. Debe denominarse **master.mdf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_MASTER_LOG_FILE** | Establece la ubicación del archivo de registro de la base de datos maestra. Debe denominarse **mastlog.ldf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Establece la ubicación de los archivos del registro de errores. |
@@ -136,13 +137,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Si ejecuta Docker en Linux/macOS, use la siguiente sintaxis con comillas simples:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 Si ejecuta Docker en Windows, use la siguiente sintaxis con comillas dobles:
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 ```
 
 ::: moniker-end

@@ -19,10 +19,10 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 418d3c214f667807df997902f97bfa271c8c4742
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292819"
 ---
 # <a name="excel-destination"></a>Destino de Excel
@@ -69,7 +69,7 @@ ms.locfileid: "71292819"
  **Administrador de conexiones con Excel**  
  Seleccione un Administrador de conexiones con Excel en la lista o cree una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Administrador de conexiones con Excel** .  
   
  **Modo de acceso a datos**  
@@ -84,7 +84,7 @@ ms.locfileid: "71292819"
  **Nombre de la hoja de Excel**  
  Seleccione el destino de Excel de la lista desplegable. Si la lista está vacía, haga clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic en **Nuevo** para iniciar el cuadro de diálogo **Crear tabla** . Al hacer clic en **Aceptar**, el cuadro de diálogo crea el archivo de Excel al que señala el **Administrador de conexiones con Excel** .  
   
  **Datos existentes de la vista**  
@@ -97,7 +97,7 @@ ms.locfileid: "71292819"
  Seleccione el nombre de la hoja de cálculo o el rango con nombre de los disponibles en el origen de datos.  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el nombre de la hoja de cálculo o el rango con nombre.  
   
 #### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
@@ -107,7 +107,7 @@ ms.locfileid: "71292819"
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  

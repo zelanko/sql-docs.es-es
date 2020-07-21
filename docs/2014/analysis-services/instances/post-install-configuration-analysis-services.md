@@ -1,5 +1,5 @@
 ---
-title: Posterior a la instalación de configuración (Analysis Services) | Microsoft Docs
+title: Configuración posterior a la instalación (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5299fb250858a0c75ea3f80e254bd143e49df2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543797"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuración posterior a la instalación (Analysis Services)
   Después de instalar Analysis Services, se necesita cierta configuración adicional para que el servidor sea totalmente operativo y esté disponible para su uso general. En esta sección se presentan las tareas adicionales que completan la instalación. Según los requisitos de conexión, puede ser necesario configurar también la autenticación (vea [Conectar a Analysis Services](connect-to-analysis-services.md)).  
   
- Más adelante, será necesario realizar tareas adicionales una vez que tenga bases de datos listas para implementar. Tendrá que configurar las pertenencias a roles de la base de datos para conceder al usuario acceso a los datos, diseñar una estrategia de copia de seguridad y recuperación de la base de datos, y determinar si necesita una carga de trabajo de procesamiento programada para actualizar los datos periódicamente. En estos vínculos, se puede encontrar más información sobre la implementación de la base de datos y administración: [Bases de datos modelo multidimensionales &#40;SSAS&#41; ](../multidimensional-models/multidimensional-model-databases-ssas.md) y [bases de datos modelo tabulares &#40;Tabular de SSAS&#41;](../tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Más adelante, será necesario realizar tareas adicionales una vez que tenga bases de datos listas para implementar. Tendrá que configurar las pertenencias a roles de la base de datos para conceder al usuario acceso a los datos, diseñar una estrategia de copia de seguridad y recuperación de la base de datos, y determinar si necesita una carga de trabajo de procesamiento programada para actualizar los datos periódicamente. Encontrará más información sobre la implementación y administración de bases de datos en estos vínculos: [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md) y [Bases de datos de modelo tabular &#40;SSAS tabular&#41;](../tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configuración de instancia  
  Analysis Services es un servicio replicable, lo que significa que puede instalar varias instancias del servicio en un único servidor. Cada instancia adicional se instala por separado como una instancia con nombre, mediante el programa de instalación de SQL Server, y se configura independientemente para admitir su propósito previsto. Por ejemplo, un servidor de desarrollo puede ejecutar Caja negra o usar valores predeterminados para el almacenamiento de datos que de otra forma cambiaría en los servidores que atienden cargas de trabajo de producción. Otro ejemplo que precisa ajustar la configuración del sistema es la instalación de la instancia de Analysis Services en hardware compartido por otros servicios. Cuando se hospedan en el mismo hardware varias aplicaciones que usan muchos datos, puede que desee configurar las propiedades del servidor que reducen los umbrales de memoria para optimizar los recursos disponibles en todas las aplicaciones.  
   
 ## <a name="post-installation-tasks"></a>Tareas posteriores a la instalación  
   
-|Vínculo|Descripción de la tarea|  
+|Link|Descripción de la tarea|  
 |----------|----------------------|  
 |[Configurar Firewall de Windows para permitir el acceso a Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Cree una regla de entrada en Firewall de Windows de manera que se puedan enrutar las solicitudes a través del puerto TCP usado por la instancia de Analysis Services. Esta tarea es obligatoria. Nadie puede tener acceso a Analysis Services desde un equipo remoto hasta que no se defina una regla de firewall de entrada.|  
 |[Conceder permisos de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Durante la instalación, tenía que agregar al menos una cuenta de usuario al rol Administrador de la instancia de Analysis Services. Los permisos administrativos son necesarios para muchas operaciones rutinarias del servidor, como el procesamiento de datos de bases de datos relacionales externas. Use la información de este tema para agregar o modificar la pertenencia del rol Administrador.|  
@@ -39,10 +38,10 @@ ms.locfileid: "66079657"
 ## <a name="next-steps"></a>Pasos siguientes  
  Aprenda a conectarse a Analysis Services desde aplicaciones de Microsoft o aplicaciones personalizadas mediante las bibliotecas de cliente. En función de los requisitos de la solución, puede ser necesario configurar también el servicio para la autenticación Kerberos. Las conexiones que deben cruzar límites de dominio necesitarán acceso HTTP. Para obtener instrucciones acerca de los pasos siguientes, vea [Connect to Analysis Services](connect-to-analysis-services.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalación de SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
- [Instalar Analysis Services en el modo de minería de datos y multidimensional](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [Instalar Analysis Services en modo Tabular](install-windows/install-analysis-services.md)   
+ [Instalar Analysis Services en modo multidimensional y de minería de datos](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
+ [Instalar Analysis Services en modo tabular](install-windows/install-analysis-services.md)   
  [Instalación de PowerPivot para SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

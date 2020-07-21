@@ -1,6 +1,5 @@
 ---
-title: Habilitar o deshabilitar notificaciones de generación de perfiles en DQS | Microsoft Docs
-ms.custom: ''
+title: Habilitar o deshabilitar notificaciones de generación de perfiles en DQS
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -12,31 +11,31 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 55a276a6ade36169df25e46f826420f77d57b13f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 26e0026e1ea9b22c87a590639d605b17da7fcf16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935307"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895376"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Habilitar o deshabilitar notificaciones de generación de perfiles en DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   En este tema se describe cómo habilitar o deshabilitar las notificaciones de generación de perfiles en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). De forma predeterminada, las notificaciones de generación de perfiles están habilitadas en DQS. Las notificaciones de generación de perfiles le permiten conocer hechos importantes sobre el origen de datos y la eficacia de la actividad actual llevada a cabo en los datos. Para obtener más información, consulte [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para habilitar las notificaciones.  
   
-##  <a name="Enable"></a> Habilitar o deshabilitar las notificaciones de generación de perfiles  
+##  <a name="enable-or-disable-profiling-notifications"></a><a name="Enable"></a>Habilitar o deshabilitar las notificaciones de generación de perfiles  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Configuración**.  
   

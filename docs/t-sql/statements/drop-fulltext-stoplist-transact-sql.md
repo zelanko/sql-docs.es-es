@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4396fe9586dfffe5e88bf7949216206d95e2a96b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48111db11e943f6a1e306f290e48e318579a99f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766340"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Quita una lista de palabras irrelevantes de texto completo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,7 +50,7 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  Es el nombre de la lista de palabras irrelevantes de texto completo que se va a quitar de la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  DROP FULLTEXT STOPLIST produce un error si algún índice de texto completo hace referencia a la lista de palabras irrelevantes de texto completo que se va a quitar.  
   
 ## <a name="permissions"></a>Permisos  

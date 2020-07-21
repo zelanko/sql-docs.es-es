@@ -1,5 +1,5 @@
 ---
-title: Funcionamiento de los comandos sin parámetros | Microsoft Docs
+title: Operación de comandos sin parámetros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924748"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759131"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
-Para los comandos sin parámetros, se ejecutan todos los comandos de proveedor y el **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todas las **conjuntos de registros** se llenará totalmente. Si se ha seleccionado un modo de llenado asincrónico, el estado relleno de la **conjuntos de registros** dependerá del modo de llenado y el tamaño de la **conjuntos de registros**.  
+En el caso de comandos sin parámetros, se ejecutan todos los comandos de proveedor y los **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todos los **conjuntos de registros** se rellenarán por completo. Si se ha seleccionado un modo de llenado asincrónico, el estado rellenado de los **conjuntos de registros** dependerá del modo de llenado y del tamaño de los **conjuntos de registros**.  
   
- Por ejemplo, el *comando primario* podría devolver un **Recordset** de clientes para una compañía de una tabla de clientes y el *comando secundario* podría devolver un **Recordset** de pedidos de todos los clientes de una tabla de pedidos.  
+ Por ejemplo, el *comando Parent* podría devolver un **conjunto de registros** de clientes para una empresa de una tabla Customers y el *comando secundario* podría devolver un **conjunto de registros** de pedidos para todos los clientes de una tabla Orders.  
   
 ```  
 SHAPE {SELECT * FROM Customers}   
@@ -31,17 +31,17 @@ SHAPE {SELECT * FROM Customers}
    RELATE customerID TO customerID)  
 ```  
   
- Para las relaciones de elementos primarios y secundarios sin parámetros, cada elemento primario y secundario **Recordset** objeto debe tener una columna en común para asociarlos. Las columnas se mencionen en la cláusula RELATE, *columna principal* primero y, a continuación, *columna secundaria*. Las columnas pueden tener nombres distintos en sus respectivos **Recordset** objetos pero debe hacer referencia a la misma información con el fin de especificar una relación significativa. Por ejemplo, el **clientes** y **registros Orders** objetos podrían tener un campo customerID. Dado que la pertenencia del elemento secundario **Recordset** viene determinada por el comando de proveedor, el elemento secundario **Recordset** puede contener filas huérfanas. Estas filas huérfanas son inaccesibles sin cambiar de forma adicional.  
+ En el caso de las relaciones de elementos primarios y secundarios sin parámetros, cada objeto de **conjunto de registros** primario y secundario debe tener una columna en común para asociarlos. Las columnas se denominan en la cláusula Relate, primero la *columna primaria* y, a continuación, la *columna secundaria*. Las columnas pueden tener nombres diferentes en sus respectivos objetos de **conjunto de registros** , pero deben hacer referencia a la misma información para especificar una relación significativa. Por ejemplo, los objetos de conjunto de registros **Customers** y **Orders** podrían tener un campo CustomerID. Dado que la pertenencia del **conjunto de registros** secundario viene determinada por el comando del proveedor, el **conjunto de registros** secundario puede contener filas huérfanas. No se puede acceder a estas filas huérfanas sin tener que remodelar adicional.  
   
- La forma de datos anexa una columna de capítulo con el elemento primario **Recordset**. Los valores de la columna de capítulo son referencias a las filas en el elemento secundario **Recordset**, que cumplen la cláusula RELATE. Es decir, el mismo valor en el *columna principal* de una fila principal determinada en el *columna secundaria* de todas las filas del secundario del capítulo. Cuando se usan varias cláusulas TO en la misma cláusula RELATE, implícitamente se combinan mediante un operador AND. Si las columnas primarias de la cláusula RELATE no constituyen una clave con el elemento primario **Recordset**, una fila secundaria única puede tener varias filas principales.  
+ La forma de datos anexa una columna de capítulo al **conjunto de registros**primario. Los valores de la columna Chapter son referencias a las filas del **conjunto de registros**secundario, que cumplen la cláusula Relate. Es decir, el mismo valor está en la *columna primaria* de una fila primaria determinada, tal y como se encuentra en la *columna secundaria* de todas las filas del elemento secundario Chapter. Cuando se utilizan varias cláusulas TO en la misma cláusula Relate, se combinan implícitamente mediante un operador AND. Si las columnas primarias de la cláusula Relate no constituyen una clave para el **conjunto de registros**primario, una sola fila secundaria puede tener varias filas primarias.  
   
- Cuando tenga acceso a la referencia de la columna de capítulo, ADO recupera automáticamente el **Recordset** representado por la referencia. Tenga en cuenta que en un comando sin parámetros, aunque todo el secundario **Recordset** ha sido recuperado, el capítulo sólo presenta un subconjunto de filas.  
+ Cuando se tiene acceso a la referencia en la columna Chapter, ADO recupera automáticamente el **conjunto de registros** representado por la referencia. Tenga en cuenta que en un comando sin parámetros, aunque se ha recuperado todo el **conjunto de registros** secundario, el capítulo solo presenta un subconjunto de filas.  
   
- Si la columna anexada no tiene ningún *alias de capítulo*, se generará un nombre para ella automáticamente. Un [campo](../../../ado/reference/ado-api/field-object.md) objeto para la columna se anexará a la **Recordset** del objeto [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección y su tipo de datos será **adChapter**.  
+ Si la columna anexada no tiene ningún *alias de capítulo*, se generará un nombre automáticamente. Un objeto de [campo](../../../ado/reference/ado-api/field-object.md) de la columna se anexará a la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) del objeto de **conjunto de registros** y su tipo de datos será **adChapter**.  
   
- Para obtener información sobre la navegación jerárquica **Recordset**, consulte [obtener acceso a filas en un conjunto de registros jerárquicos](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Para obtener información sobre cómo navegar por un **conjunto de registros**jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
+ [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)

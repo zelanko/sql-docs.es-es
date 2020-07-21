@@ -10,15 +10,14 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bfb82476d42bf471853a66b3c93736952d876071
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5edad70330a5745f9d150cf8a0ad0d540132c029
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62897341"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437112"
 ---
 # <a name="round-ssis-expression"></a>ROUND (expresión de SSIS)
   Devuelve una expresión numérica, redondeada a la longitud o precisión especificada. La evaluación del parámetro de longitud debe devolver un entero.  
@@ -40,7 +39,7 @@ ROUND(numeric_expression,length)
 ## <a name="result-types"></a>Tipos de resultado  
  El mismo tipo que *numeric*_*expression*.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La evaluación del argumento *length* debe devolver cero o un entero positivo.  
   
  ROUND devuelve un resultado NULL si el valor del argumento es NULL.  
@@ -53,7 +52,7 @@ ROUND(137.1574,3)
 ROUND(137.1575,3)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   
   

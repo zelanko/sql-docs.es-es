@@ -1,5 +1,5 @@
 ---
-title: 'Paso 5: Control de datos es realizado utilizable (Tutorial de RDS) | Microsoft Docs'
+title: 'Paso 5: DataControl se puede usar (tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,26 +10,26 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71576df284f3345d1f72b4043e904ae39ab031d4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67922057"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764656"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Paso 5: Habilitación del uso del control de datos (Tutorial de RDS)
-El valor devuelto **Recordset** objeto está disponible para su uso. Puede examinar, desplácese o editarlo tal y como lo haría con cualquier otro **Recordset**. ¿Qué puede hacer con el **Recordset** depende del entorno. Visual Basic y Visual C++ tienen controles visuales que pueden usar un **Recordset** directa o indirectamente con la Ayuda de un control de datos.  
+El objeto de **conjunto de registros** devuelto está disponible para su uso. Puede examinarlo, desplazarse o editarlo como lo haría con cualquier otro **conjunto de registros**. Lo que puede hacer con el **conjunto de registros** depende de su entorno. Visual Basic y Visual C++ tienen controles visuales que pueden usar un **conjunto de registros** directa o indirectamente con la ayuda de un control de datos habilitado.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Por ejemplo, si va a mostrar una página Web en Microsoft Internet Explorer, es posible que desee mostrar el **Recordset** datos en un control visual del objeto. No pueden acceder los controles visuales de una página Web un **Recordset** objeto directamente. Sin embargo, puede tener acceso a la **Recordset** objeto a través de la [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md). El **RDS. DataControl** puede ser utilizado por un objeto visual controlar cuándo su [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) propiedad está establecida en el **Recordset** objeto.  
+ Por ejemplo, si va a mostrar una página web en Microsoft Internet Explorer, es posible que desee mostrar los datos del objeto de **conjunto de registros** en un control visual. Los controles visuales de una página web no pueden tener acceso directamente a un objeto de **conjunto de registros** . Sin embargo, pueden tener acceso al objeto de **conjunto de registros** a través de [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md). **Objeto RDS. DataControl** se puede usar con un control visual cuando su propiedad [SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) está establecida en el objeto de **conjunto de registros** .  
   
- El objeto visual del control debe tener su **DATASRC** parámetro establecido en el **RDS. DataControl**y su **DATAFLD** propiedad establecida en un **Recordset** campo (columna) del objeto.  
+ El objeto de control visual debe tener su parámetro **DATASRC** establecido en **RDS. DataControl**y su propiedad **DATAFLD** establecida en un campo de objeto de **conjunto de registros** (columna).  
   
- En este tutorial, establezca la **SourceRecordset** propiedad:  
+ En este tutorial, establezca la propiedad **SourceRecordset** :  
   
 ```vb
 Sub RDSTutorial5()  
@@ -43,6 +43,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Paso 6: Los cambios se envían al servidor (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+## <a name="see-also"></a>Consulte también  
+ [Paso 6: los cambios se envían al servidor (tutorial de RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [Tutorial de RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

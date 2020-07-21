@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98df2bd789a9f5ca4c81aa83b152c4170546594b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773867"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad de diálogo se debe configurar manualmente según el modelo de seguridad de diálogo completa de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El modelo de seguridad completa habilita el cifrado y el descifrado de los mensajes que se envían a servidores remotos o desde los mismos. Aunque las notificaciones de eventos se envían en una dirección, otros mensajes, como los errores, también se devuelven en la dirección opuesta.  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos  
@@ -29,11 +29,11 @@ ms.locfileid: "68048903"
 > [!IMPORTANT]  
 >  Todos los certificados deben crearse con fechas de inicio y de expiración válidas.  
   
- **Paso 1: Establezca un número de puerto TCP y un nombre del servicio de destino.**  
+ **Paso 1: establezca un número de puerto TCP y un nombre del servicio de destino.**  
   
  Establezca un puerto TCP en el que tanto el servidor de origen como el de destino recibirán los mensajes. Asimismo, debe determinar el nombre del servicio de destino.  
   
- **Paso 2: Configure el cifrado y los certificados compartidos para la autenticación en la base de datos.**  
+ **Paso 2: configure el cifrado y los certificados compartidos para la autenticación en la base de datos.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68048903"
 |[Realice una copia de seguridad del certificado](../../t-sql/statements/backup-certificate-transact-sql.md) en un archivo al que se pueda obtener acceso a través del servidor de destino.|Realice una copia de seguridad del certificado en un archivo al que se pueda obtener acceso a través del servidor de origen.|  
 |[Cree un usuario](../../t-sql/statements/create-user-transact-sql.md), especificando el usuario de la base de datos de destino y WITHOUT LOGIN. El usuario será el propietario del certificado de la base de datos de destino que se creará a partir del archivo de la copia de seguridad. No es necesario que el usuario esté asignado a un inicio de sesión, puesto que el único propósito del usuario es poseer el certificado de la base de datos de destino creado en el paso 3 que viene a continuación.|Cree un usuario, especificando el usuario de la base de datos de origen y WITHOUT LOGIN. El usuario será el propietario del certificado de la base de datos de origen que se creará a partir del archivo de la copia de seguridad. No es necesario que el usuario esté asignado a un inicio de sesión, puesto que el único propósito del usuario es poseer el certificado de la base de datos de origen creado en el paso 3 que viene a continuación.|  
   
- **Paso 3: Comparta los certificados y conceda permisos para la autenticación en la base de datos.**  
+ **Paso 3: comparta los certificados y conceda permisos para la autenticación en la base de datos.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68048903"
 ||[Conceda el permiso SEND](../../t-sql/statements/grant-transact-sql.md) para el servicio de destino al usuario de la base de datos de origen.|  
 |Proporcione el identificador de Service Broker de la base de datos de origen al servidor de destino. Este identificador se puede obtener realizando una consulta en la columna **service_broker_guid** de la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . En caso de una notificación de eventos en el servidor, use el identificador de Service Broker de **msdb**.|Proporcione el identificador de Service Broker de la base de datos de destino al servidor de origen.|  
   
- **Paso 4: Cree rutas y establezca la autenticación en el servidor.**  
+ **Paso 4: cree rutas y establezca la autenticación en el servidor.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68048903"
 |[Conceda el permiso CONNECT](../../t-sql/statements/grant-transact-sql.md) para el extremo al inicio de sesión del autenticador de destino.|Conceda el permiso CONNECT para el extremo al inicio de sesión del autenticador de origen.|  
 |[Cree un usuario](../../t-sql/statements/create-user-transact-sql.md)y especifique el inicio de sesión del autenticador de destino.|Cree un usuario y especifique el inicio de sesión del autenticador de origen.|  
   
- **Paso 5: Comparta certificados para la autenticación en el servidor y cree la notificación de eventos.**  
+ **Paso 5: comparta certificados para la autenticación en el servidor y cree la notificación de eventos.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   

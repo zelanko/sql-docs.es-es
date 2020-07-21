@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b3d74dcc6be62ae8a01d911a8404c7bc32fd651
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63216000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066617"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   El Agente de mezcla de replicación es una utilidad ejecutable que aplica la instantánea inicial contenida en las tablas de base de datos a los Suscriptores. También mezcla los cambios incrementales de los datos que tienen lugar en el publicador después de la creación de la instantánea inicial y reconcilia los conflictos según las reglas configuradas por el usuario o mediante un solucionador personalizado creado por el usuario.  
@@ -110,7 +109,7 @@ ms.locfileid: "63216000"
  Imprime todos los parámetros disponibles.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ Es el nombre del publicador. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
@@ -137,7 +136,7 @@ ms.locfileid: "63216000"
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de símbolo del sistema para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
  **-Distributor** _server_name_[ **\\** _instance_name_]  
- Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Para la distribución del distribuidor (inserción), el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
+ Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Para la distribución del distribuidor (inserción), el nombre tiene como valor predeterminado el nombre de la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo local.  
   
  **-DistributorLogin** _distributor_login_  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -172,7 +171,7 @@ ms.locfileid: "63216000"
  > [!NOTE]  
  >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" se debe establecer en el nombre completo de la instancia de SQL Server.
   
- Para obtener más información, consulte [seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obtener más información, consulte [replicación de SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **- ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
@@ -201,7 +200,7 @@ ms.locfileid: "63216000"
   
 |Valor ForceConvergenceLevel|Descripción|  
 |---------------------------------|-----------------|  
-|**0** (valor predeterminado)|Predeterminado: Realiza una mezcla estándar sin convergencia adicional.|  
+|**0** (valor predeterminado)|Predeterminada. Realiza una mezcla estándar sin convergencia adicional.|  
 |**1**|Fuerza la convergencia para todas las generaciones.|  
 |**2**|Fuerza la convergencia para todas las generaciones y corrige los linajes dañados. Al especificar este valor, especifique dónde se deben corregir los linajes: en el Publicador, en el Suscriptor o en el Publicador y el Suscriptor.|  
   
@@ -224,7 +223,7 @@ ms.locfileid: "63216000"
 |-------------------------------|-----------------|  
 |**0**|Registre el mensaje final de estado de agente, los detalles finales de la sesión y cualquier error.|  
 |**1**|Registre la sesión incremental detalla en cada estado de la sesión, incluso el porcentaje completado, además del mensaje de estado final de agente, los detalles finales de la sesión y cualquier error.|  
-|**2**|Predeterminado: Registre los detalles de sesión incremental en cada estado de la sesión y los detalles de sesión de nivel del artículo, incluso el porcentaje completado, además del mensaje de estado final de agente, los detalles finales de la sesión y cualquier error. Los mensajes de estado de agente también se registran.|  
+|**2**|Predeterminada. Registre los detalles de sesión incremental en cada estado de la sesión y los detalles de sesión de nivel del artículo, incluso el porcentaje completado, además del mensaje de estado final de agente, los detalles finales de la sesión y cualquier error. Los mensajes de estado de agente también se registran.|  
 |**3**|Igual que **-HistoryVerboseLevel** = **2**, salvo que se registran más mensajes de progreso de agente.|  
   
  **-Hostname** _host_name_  
@@ -317,7 +316,7 @@ ms.locfileid: "63216000"
  Especifica el número de subprocesos de origen que el Agente de mezcla utiliza para enumerar los cambios desde el origen. El origen es el Suscriptor durante la carga y el Publicador durante la descarga. El valor predeterminado es **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Es el número máximo de segundos que el Agente de mezcla espera cuando el número de procesos de mezcla simultáneos en ejecución ha alcanzado el límite establecido por la propiedad **@max_concurrent_merge** de **sp_addmergepublication**. Si se alcanza el número máximo de segundos y el Agente de mezcla todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque puede cancelarse.  
+ Es el número máximo de segundos que el Agente de mezcla espera cuando el número de procesos de mezcla simultáneos que se están ejecutando es el límite establecido por la **@max_concurrent_merge** propiedad de **sp_addmergepublication**. Si se alcanza el número máximo de segundos y el Agente de mezcla todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque puede cancelarse.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Es la ruta de acceso a la base de datos Jet (archivo .mdb) si **SubscriberType** es **2** (permite una conexión a una base de datos Jet sin un nombre del origen de datos ODBC (DSN)).  
@@ -384,7 +383,7 @@ ms.locfileid: "63216000"
  **-ValidateInterval** _validate_interval_  
  Frecuencia, en minutos, con la que se valida la suscripción en modo continuo. El valor predeterminado es **60** minutos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de bajo una cuenta de usuario de dominio (valor predeterminado), el servicio puede acceder solamente al equipo local. Si el Agente de mezcla que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el Agente de mezcla devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -393,7 +392,7 @@ ms.locfileid: "63216000"
   
  El historial del agente de mezcla de la sesión actual no se quita mientras se está ejecutando de forma continua. Una ejecución prolongada del agente puede tener como resultado un gran número de entradas en las tablas del historial de mezcla, lo que puede afectar al rendimiento. Para resolver este problema cambie al modo programado o siga usando el modo continuado, pero cree un trabajo dedicado para reiniciar periódicamente el agente de mezcla, o reduzca el nivel de detalle para reducir el número de filas y, en consecuencia, reducir el impacto en el rendimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](replication-agent-administration.md)  
   
   

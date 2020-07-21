@@ -12,15 +12,15 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f64b5ae594f766b7182bdde427c5138245721a83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726290"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos **CursorImplicitConversion** describe los eventos de conversión implícita de cursor que se producen en los cursores de las API (interfaces de programación de aplicaciones) o de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los eventos de conversión implícita de cursor se producen cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ejecuta una instrucción Transact-SQL no compatible con los cursores de servidor del tipo solicitado. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error que indica que el tipo de cursor ha cambiado.  
   
  Incluya la clase de evento **CursorImplicitConversion** en seguimientos que están registrando el rendimiento de cursores.  
@@ -32,7 +32,7 @@ ms.locfileid: "68001834"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
-|**BinaryData**|**imagen**|Tipo de cursor resultante. Los valores son:<br /><br /> 1 = Conjunto de claves<br /><br /> 2 = Dinámico<br /><br /> 4 = Solo avance<br /><br /> 8 = Estático<br /><br /> 16 = Avance rápido|2|Sí|  
+|**BinaryData**|**image**|Tipo de cursor resultante. Los valores son:<br /><br /> 1 = Conjunto de claves<br /><br /> 2 = Dinámico<br /><br /> 4 = Solo avance<br /><br /> 8 = Estático<br /><br /> 16 = Avance rápido|2|Sí|  
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database*para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
@@ -44,7 +44,7 @@ ms.locfileid: "68001834"
 |**IntegerData**|**int**|Tipo de cursor solicitado. Los valores son:<br /><br /> 1 = Conjunto de claves<br /><br /> 2 = Dinámico<br /><br /> 4 = Solo avance<br /><br /> 8 = Estático<br /><br /> 16 = Avance rápido|25|No|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud de la conversión implícita.|49|Sí|  

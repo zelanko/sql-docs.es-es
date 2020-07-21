@@ -1,6 +1,6 @@
 ---
-title: Método SetNumericalValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetNumericalValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2479e1591764590289470d7ef4a326f6a9e9a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770bf78be4f1967a7b67c8eb8563b9365925c345
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091842"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880485"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumericalValue (clase SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Establece el valor numérico de una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,7 +51,7 @@ object.SetNumericalValue(NumValue)
 ## <a name="remarks"></a>Comentarios  
  El tipo de valor de propiedad debe ser numérico para poder establecer la propiedad en un valor numérico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

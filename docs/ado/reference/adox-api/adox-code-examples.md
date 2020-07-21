@@ -10,41 +10,41 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADOX code examples
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ac4e07dd4721cf2ae38f480563350fa0fbbaf51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8de0ecf246e05a6cdbb65df1f0e457ad7b65086c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952075"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764166"
 ---
 # <a name="adox-code-examples"></a>Ejemplos de código ADOX
-Utilice los siguientes ejemplos de código para obtener información sobre cómo usar los objetos ADOX, métodos, propiedades y eventos.  
+Use los siguientes ejemplos de código para obtener información sobre cómo usar los objetos, métodos, propiedades y eventos de ADOX.  
   
 > [!NOTE]
->  Pegue el ejemplo de código completo en el editor de código. El ejemplo no funcionen correctamente si se usan ejemplos parciales o si se pierde el formato de párrafo.  
+>  Pegue el ejemplo de código completo en el editor de código. Es posible que el ejemplo no se ejecute correctamente si se usan ejemplos parciales o si se pierde el formato del párrafo.  
   
 -   [Ejemplos de código ADOX en Microsoft Visual Basic](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-basic.md)  
   
 -   [Ejemplos de código ADOX en Microsoft Visual C++](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de propiedad ActiveConnection de catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Ejemplo de la propiedad de nombre (VB), métodos Append columnas y tablas](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Comando y ejemplo de las propiedades CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Método Connection Close, ejemplo de propiedad de tipo de tabla (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [GetPermissions y SetPermissions métodos ejemplo (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Los índices de ejemplo de método Append (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Append de claves, método, tipo de clave, RelatedColumn, RelatedTable y UpdateRule propiedades (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Ejemplo de propiedad Name, métodos Append de columnas y tablas (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Ejemplo de propiedades Command y CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Ejemplo de propiedad de tipo de tabla método de cierre de conexión (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Ejemplo de métodos GetPermissions y SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Ejemplo de método Append de índices (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
- [Colección de parámetros, ejemplo de la propiedad comando (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Ejemplo de propiedad de comando, colección de parámetros (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Ejemplo de propiedad ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Procedimientos de ejemplo de método Append (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Eliminación de procedimientos de ejemplo del método (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Procedimientos de actualización de ejemplo del método (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Las vistas y ejemplo de colecciones de campos (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Vistas de ejemplo de método Append (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Colección de vistas, ejemplo de la propiedad CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Eliminación de vistas de ejemplo del método (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Ejemplo de método Append de procedimientos (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Ejemplo de método Delete de procedimientos (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+ [Ejemplo de método de actualización de procedimientos (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
+ [Ejemplo de colecciones y campos de vistas (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Ejemplo del método Append de vistas (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Colección views, ejemplo de propiedad CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Ejemplo de método Delete de vistas (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Ejemplo de método Refresh de vistas (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)

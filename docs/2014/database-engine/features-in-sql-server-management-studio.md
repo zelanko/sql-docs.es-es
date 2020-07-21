@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e75504b9-7968-4e3b-8411-fd79fe09021e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 790e02374fe209576c963c5f1e9c6e63e8e2d16b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd2d11c35f46d3cd60cb2180eca40fe45f41105a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933081"
 ---
 # <a name="features-in-sql-server-management-studio"></a>Características de SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] incluye las siguientes características generales:  
@@ -84,7 +83,7 @@ ms.locfileid: "62779829"
   
  Microsoft no admite las instalaciones de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] con las extensiones de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presentes, por lo que si ha instalado extensiones de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , puede quitarlas antes de llamar al servicio de soporte al cliente de Microsoft acerca de un problema de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Propiedades del origen de datos (OLE DB) | Microsoft Docs
+title: Propiedades de orígenes de datos (OLE DB) | Microsoft Docs
 description: Propiedades de orígenes de datos (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 13dd6afde96d42ac1fcc82b6fb24c721997b951d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015931"
 ---
 # <a name="data-source-properties-ole-db"></a>Propiedades de orígenes de datos (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "68015931"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador de OLE DB para SQL Server implementa las propiedades de origen de datos como se indica a continuación.  
+  OLE DB Driver for SQL Server implementa las propiedades del origen de datos del siguiente modo.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
@@ -42,6 +42,6 @@ ms.locfileid: "68015931"
 |SSPROP_ENABLEBULKCOPY|L/E: Lectura/escritura. Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: Para habilitar la copia masiva desde archivos, la propiedad SSPROP_ENABLEBULKCOPY debe establecerse en VARIANT_TRUE. Con esta propiedad establecida en el origen de datos, el acceso del consumidor a la interfaz IBCPSession está disponible en el mismo nivel que Sessions.<br /><br /> SSPROP_IRowsetFastLoad también debe establecerse en VARIANT_TRUE.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Objetos &#40;de origen de datos OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

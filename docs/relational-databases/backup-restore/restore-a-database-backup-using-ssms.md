@@ -1,5 +1,6 @@
 ---
 title: Restaurar una copia de seguridad de base de datos con SSMS | Microsoft Docs
+description: En este artículo se explica cómo restaurar una copia de seguridad completa de base de datos de SQL Server con SQL Server Management Studio.
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e23cceab272e11eedb1fa99250dce5520ada073
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718020"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se explica cómo restaurar una copia de seguridad completa de base de datos con SQL Server Management Studio.    
        
@@ -42,7 +43,7 @@ Si restaura una base de datos de una versión anterior en [!INCLUDE[ssCurrent](.
   
 Normalmente, la base de datos está disponible inmediatamente. Pero si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Según la cantidad de datos que se indexen, la importación puede tardar varias horas y la opción de recompilación puede necesitar hasta diez veces más.     
     
-Si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo**, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
+Si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).    
 
 Para obtener más información sobre la restauración de SQL Server en el servicio de almacenamiento de blobs de Microsoft Azure, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
@@ -65,14 +66,14 @@ Para obtener más información sobre la restauración de SQL Server en el servic
     
     -   **Dispositivo**    
     
-         Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . 
+         Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . 
          
-        -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**   
+        -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**  
         
             **Tipo de medio de copia de seguridad**  
          Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
 
-            **Agregar**  
+            **Add (Agregar)**  
             En función del tipo de medio que seleccione en la lista desplegable **Tipo de medio de copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo. (Si la lista del cuadro de lista **Medio de copia de seguridad** está llena, el botón **Agregar** no está disponible).
 
             |Tipo de medio|Cuadro de diálogo|Descripción|    
@@ -80,7 +81,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
             |**Archivo**|**Buscar archivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un archivo local en el árbol, o bien especificar un archivo remoto mediante su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|    
             |**Dispositivo**|**Seleccionar dispositivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un dispositivo de una lista de dispositivos lógicos de copia de seguridad en la instancia del servidor.|    
             |**Cinta**|**Seleccionar cinta de copia de seguridad**|En este cuadro de diálogo, puede seleccionar una cinta de la lista de unidades de cinta que están conectadas físicamente al equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|    
-            |**Dirección URL**|**Seleccionar ubicación de archivo de copia de seguridad**|En este cuadro de diálogo puede seleccionar un contenedor de almacenamiento de Azure o de credenciales de SQL Server existente, agregar un nuevo contenedor de almacenamiento de Azure con una firma de acceso compartido o generar una firma de acceso compartido y las credenciales de SQL Server para un contenedor de almacenamiento existente.  Vea también [Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).|  
+            |**URL**|**Seleccionar ubicación de archivo de copia de seguridad**|En este cuadro de diálogo puede seleccionar un contenedor de almacenamiento de Azure o de credenciales de SQL Server existente, agregar un nuevo contenedor de almacenamiento de Azure con una firma de acceso compartido o generar una firma de acceso compartido y las credenciales de SQL Server para un contenedor de almacenamiento existente.  Vea también [Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).|  
          
              **Quitar**    
              Quita uno o varios archivos, cintas o dispositivos lógicos de copia de seguridad seleccionados.    
@@ -130,7 +131,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
   
    5. Seleccione **Preguntar antes de restaurar cada copia de seguridad** si desea que se le pregunte en cada operación de restauración. No suele ser necesario a menos que la base de datos sea grande y desee supervisar el estado de la operación de restauración.    
     
-Para obtener más información sobre estas opciones de restauración, vea [Restaurar base de datos &#40;página Opciones&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
+Para obtener más información sobre estas opciones de restauración, vea [Restaurar base de datos &#40;página Opciones&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)).    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -140,15 +141,15 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
 2.  Haga clic con el botón derecho en **Bases de datos** y seleccione **Restaurar base de datos...**  
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
-4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  Haga clic en **Opciones** en el panel **Seleccionar una página** .
-7.  En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)**.
+7.  En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)** .
 
     > [!NOTE]
     > Si no activa esta opción, puede aparecer el mensaje de error siguiente: "System.Data.SqlClient.SqlError: El conjunto de copia de seguridad contiene una copia de una base de datos distinta de la existente "`Sales`". (Microsoft.SqlServer.SmoExtended)"
 
-8.  En la sección **Copia del final del registro**, desactive **Realizar copia del final del registro de la cola antes de la restauración**.
+8.  En la sección **Copia del final del registro** , desactive **Realizar copia del final del registro de la cola antes de la restauración**.
 
     > [!NOTE]
     > No todos los escenarios de restauración requieren una copia del final del registro. No necesita una copia del final del registro si el punto de recuperación está incluido en una copia de seguridad de registros anterior. Además, no es necesaria una copia del final del registro si va a mover o reemplazar (sobrescribir) la base de datos y no necesita restaurarla a un momento posterior de la copia de seguridad más reciente. Para obtener más información, vea [Copias del final del registro (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).
@@ -168,7 +169,7 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
 2.  Haga clic con el botón derecho en **Bases de datos** y seleccione **Restaurar base de datos...**  
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
-4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  En la sección **Destino** , el cuadro **Base de datos** se rellena automáticamente con el nombre de la base de datos que se va a restaurar. Para cambiar el nombre de la base de datos, especifique el nuevo nombre en el cuadro **Base de datos** .
 7.  Haga clic en **Opciones** en el panel **Seleccionar una página** .
@@ -190,7 +191,7 @@ En el ejemplo siguiente se restaura una base de datos al estado en que se encont
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
 2.  Haga clic con el botón derecho en **Bases de datos** y seleccione **Restaurar base de datos...**  
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
-4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad completa y a todas las copias de seguridad del registro de transacciones pertinentes.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad completa y a todas las copias de seguridad del registro de transacciones pertinentes.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  En la sección **Destino** , haga clic en **Escala de tiempo** para tener acceso al cuadro de diálogo **Escala de tiempo de la copia de seguridad** para seleccionar manualmente un momento a fin de que se detenga la acción de recuperación.
 7.  Seleccione **Fecha y hora específicas**.  
@@ -208,7 +209,7 @@ En los dos ejemplos siguientes se realiza una restauración de `Sales` desde una
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
 4.  Haga clic en el botón Examinar (...) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** .    
 5.  Seleccione **Dirección URL** en la lista desplegable **Tipo de medio de copia de seguridad:** .
-6.  Haga clic en **Agregar** y se abrirá el cuadro de diálogo **Seleccionar ubicación de archivo de copia de seguridad**.
+6.  Haga clic en **Agregar** y se abrirá el cuadro de diálogo **Seleccionar ubicación de archivo de copia de seguridad** .
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Restaurar una copia de seguridad seccionada en una base de datos existente cuando existe una firma de acceso compartido
 Se ha creado una directiva de acceso almacenada con derechos de lectura, escritura, eliminación y lista.  Además, se ha creado para el contenedor `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`una firma de acceso compartido asociada a la directiva de acceso almacenada.  Los pasos son básicamente los mismos si ya existe una credencial de SQL Server.  La base de datos `Sales` ya existe actualmente en el servidor.  Los archivos de copia de seguridad son `Sales_stripe1of2_20160601.bak` y `Sales_stripe2of2_20160601.bak`.  
@@ -218,13 +219,13 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
 1. Haga clic en **Aceptar** y se abrirá el cuadro de diálogo **Buscar archivo de copia de seguridad en Microsoft Azure** .
 1. Expanda **Contenedores** y vaya a `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
 1. Mantenga pulsada la tecla CTRL y seleccione los archivos `Sales_stripe1of2_20160601.bak` y `Sales_stripe2of2_20160601.bak`.
-1. Haga clic en **Aceptar**.
+1. Haga clic en **OK**.
 1. Haga clic en **Aceptar** para volver a la página **General** .
 1. Haga clic en **Opciones** en el panel **Seleccionar una página** .
-1. En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)**.
+1. En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)** .
 1. En la sección **Copia del final del registro** , desactive **Realizar copia del final del registro de la cola antes de la restauración**.
 1. En la sección **Conexiones de servidor** , active **Cerrar las conexiones existentes con la base de datos de destino**.
-1. Haga clic en **Aceptar**.
+1. Haga clic en **OK**.
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   No existe ninguna firma de acceso compartido
 En este ejemplo, la base de datos `Sales` no existe actualmente en el servidor.
@@ -234,7 +235,7 @@ En este ejemplo, la base de datos `Sales` no existe actualmente en el servidor.
 1. Expanda **Contenedores** y vaya a `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
 1. Seleccione el archivo de copia de seguridad y haga clic en **Aceptar**.
 1. Haga clic en **Aceptar** para volver a la página **General** .
-1. Haga clic en **Aceptar**.
+1. Haga clic en **OK**.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Restaurar copia de seguridad local en el almacenamiento de Microsoft Azure (dirección URL)
 La base de datos `Sales` se restaurará en el contenedor de almacenamiento de Microsoft Azure `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` desde una copia de seguridad que se encuentra en `E:\MSSQL\BAK`.  Ya se ha creado la credencial de SQL Server para el contenedor de Azure.  Debe existir una credencial de SQL Server para el contenedor de destino, ya que no se puede crear mediante la tarea **Restaurar** .  La base de datos `Sales` no existe actualmente en el servidor.
@@ -248,8 +249,8 @@ La base de datos `Sales` se restaurará en el contenedor de almacenamiento de Mi
 8.  Haga clic en **Aceptar** para volver a la página **General** .
 9.  Haga clic en **Archivos** en el panel **Seleccionar una página** .
 10. Active la casilla **Reubicar todos los archivos en la carpeta**.
-11. Especifique el contenedor, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, en los cuadros de texto para **Carpeta de archivos de datos:** y **Carpeta de archivos de registro:**.
-12. Haga clic en **Aceptar**.
+11. Especifique el contenedor, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, en los cuadros de texto para **Carpeta de archivos de datos:** y **Carpeta de archivos de registro:** .
+12. Haga clic en **OK**.
 
 ## <a name="see-also"></a>Consulte también    
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     

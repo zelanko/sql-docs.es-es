@@ -1,6 +1,7 @@
 ---
-title: Hacer copia de seguridad de una base de datos con tablas con optimización para memoria | Microsoft Docs
-ms.custom: ''
+title: Copia de seguridad de una base de datos de ejemplo con tablas optimizadas para memoria
+description: Obtenga información sobre cómo se hace una copia de seguridad de las tablas optimizadas para memoria como parte de las copias de seguridad periódicas de las bases de datos. Consulte más detalles sobre las copias de seguridad diferenciales y la copia de seguridad completa de bases de datos.
+ms.custom: seo-dt-2019
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e1b2bf585b1b44f0f8e3b01eca46faaeda2a053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723405"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Hacer copia de seguridad de una base de datos con tablas con optimización para memoria
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   La copia de seguridad de las tablas con optimización para memoria se realiza como parte de las copias de seguridad periódicas de las bases de datos. En cuanto a las tablas basadas en disco, la función CHECKSUM de los pares de archivos de datos y delta se valida como parte de la copia de seguridad de la base de datos para detectar si hay daños en el almacenamiento.  
   

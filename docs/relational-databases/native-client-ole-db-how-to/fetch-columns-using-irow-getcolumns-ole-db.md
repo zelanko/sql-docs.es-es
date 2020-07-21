@@ -1,5 +1,5 @@
 ---
-title: 'Capturar columnas mediante IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: Capturar columnas mediante IRow::GetColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,19 +10,17 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fec568cae05e791d3d1263fddabdf695fd879bcb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
-ms.translationtype: MT
+ms.openlocfilehash: db4a869049b0092f314e2cb89035d4a5549c0760
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907609"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004555"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La interfaz **IRow** permite el acceso directo a las columnas de una fila única del conjunto de resultados. Así, **IRow** supone una manera eficaz de recuperar las columnas de un conjunto de resultados con una fila.  
   
@@ -30,10 +28,10 @@ ms.locfileid: "72907609"
   
 -   Cómo capturar un grupo de columnas (en secuencia).  
   
--   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**- **>GetColumns()** devuelve solo la longitud de columna real. En este caso, se puede volver a llamar a **IRow->GetColumns()** en la misma columna para recuperar los datos reales.  
+-   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**-**>GetColumns()** devuelve solo la longitud de columna real. En este caso, se puede volver a llamar a **IRow->GetColumns()** en la misma columna para recuperar los datos reales.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Para capturar columnas mediante IRow::GetColumns  
   
@@ -520,7 +518,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

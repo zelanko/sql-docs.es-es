@@ -1,6 +1,6 @@
 ---
-title: Gráfico de procesamiento con SQL Server y Azure SQL Database | Microsoft Docs
-ms.custom: ''
+title: Procesamiento de Graph
+titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,51 +13,52 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb84f1cc40a05078910d10a48de67f1ac3467fe3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776472"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece capacidades de base de datos de gráfico para modelar las relaciones de varios a varios. Las relaciones de graph se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y recibir las ventajas de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como el sistema de administración de base de datos fundamentales.
-
-
-## <a name="what-is-a-graph-database"></a>¿Qué es una base de datos de gráfico?  
-Una base de datos de gráficos es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que conecta (por ejemplo, "Me gusta" o amigos). Los nodos y bordes pueden tener propiedades asociadas a ellos. Estas son algunas características que hacen que una base de datos de grafos sea única:  
--   Los bordes o las relaciones son entidades de primera clase en una base de datos de grafos y pueden tener atributos o propiedades asociados a ellas. 
--   Un solo borde puede conectar flexiblemente varios nodos en una base de datos de grafos.
--   Puede expresar fácilmente coincidencias de patrones y consultas de navegación en saltos múltiples.
--   Puede expresar fácilmente consultas polimórficas y cierres transitivos.
-
-## <a name="when-to-use-a-graph-database"></a>Cuándo usar una base de datos de gráfico
-
-No hay nada que una base de datos de grafos puede conseguir, que no se puede lograr mediante una base de datos relacional. Sin embargo, una base de datos de gráfico puede facilitar su express cierto tipo de consultas. Además, con optimizaciones específicas, pueden funcionar mejor determinadas consultas. La decisión para elegir una u otra puede basarse en los siguientes factores:  
--   La aplicación tiene datos jerárquicos. El tipo de datos HierarchyID se puede usar para implementar las jerarquías, pero tiene algunas limitaciones. Por ejemplo, no permite almacenar varios elementos primarios de un nodo.
--   La aplicación tiene relaciones complejas de varios a varios; a medida que evoluciona la aplicación, se agregan nuevas relaciones.
--   Necesita analizar las relaciones y los datos interconectados.
-
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>Características del gráfico presentadas en [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
-Hemos empezado a agregar extensiones graph a SQL Server, para que sea más fácil almacenar y consultar datos del gráfico. Las características siguientes se presentan en la primera versión. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ofrece capacidades de base de datos de gráficos para modelar relaciones varios a varios. Las relaciones de gráficos se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y reciben las ventajas de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sistema de administración de bases de datos base.
 
 
-### <a name="create-graph-objects"></a>Crear objetos de grafos
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] las extensiones le permitirá a los usuarios crear tablas de nodo o perimetral. Los nodos y bordes pueden tener propiedades asociadas a ellos. Puesto que los nodos y bordes se almacenan como tablas, se admiten todas las operaciones que se admiten en tablas relacionales en la tabla de nodo o perimetral. A continuación, se muestra un ejemplo:  
+## <a name="what-is-a-graph-database"></a>¿Qué es una base de datos de grafos?  
+Una base de datos de gráficos es una colección de nodos (o vértices) y bordes (o relaciones). Un nodo representa una entidad (por ejemplo, una persona o una organización) y un borde representa una relación entre los dos nodos que conecta (por ejemplo, "Me gusta" o amigos). Tanto los nodos como los bordes pueden tener propiedades asociadas. Estas son algunas características que hacen que una base de datos de grafos sea única:  
+-    Los bordes o las relaciones son entidades de primera clase en una base de datos de grafos y pueden tener atributos o propiedades asociados a ellas. 
+-    Un solo borde puede conectar flexiblemente varios nodos en una base de datos de grafos.
+-    Puede expresar fácilmente coincidencias de patrones y consultas de navegación en saltos múltiples.
+-    Puede expresar fácilmente consultas polimórficas y cierres transitivos.
+
+## <a name="when-to-use-a-graph-database"></a>Cuándo usar una base de datos de grafos
+
+Una base de datos relacional puede lograr todo lo que puede hacer una base de datos de gráficos. Sin embargo, una base de datos de gráficos facilita la rápida expresión de determinados tipos de consultas. Además, con optimizaciones específicas, algunas consultas pueden funcionar mejor. La decisión de elegir una base de datos relacional o de grafos se basa en los siguientes factores:  
+-    La aplicación tiene datos jerárquicos. El tipo de texto HierarchyID se puede usar para implementar jerarquías, pero tiene algunas limitaciones. Por ejemplo, no permite almacenar varios elementos primarios para un nodo.
+-    La aplicación tiene relaciones de varios a varios complejas; a medida que la aplicación evoluciona, se agregan nuevas relaciones.
+-    Necesita analizar las relaciones y los datos interconectados.
+
+## <a name="graph-features-introduced-in-sssqlv14"></a>Características de gráficos introducidas en[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+Vamos a empezar a agregar extensiones de grafos a SQL Server para facilitar el almacenamiento y la consulta de datos de gráfico. Las siguientes características se incluyen en la primera versión. 
+
+
+### <a name="create-graph-objects"></a>Crear objetos de gráfico
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]las extensiones permitirán a los usuarios crear tablas de nodos o perimetrales. Tanto los nodos como los bordes pueden tener propiedades asociadas. Dado que los nodos y los bordes se almacenan como tablas, todas las operaciones que se admiten en las tablas relacionales se admiten en el nodo o la tabla perimetral. Este es un ejemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
 CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
-![tablas de amigos de persona](../../relational-databases/graphs/media/person-friends-tables.png "nodo Person y amigos perimetral tablas")  
-Los nodos y bordes se almacenan como tablas  
+![persona-Friends-tablas](../../relational-databases/graphs/media/person-friends-tables.png "Tablas de los límites de amigos y nodos de personas")  
+Los nodos y los bordes se almacenan como tablas  
 
 ### <a name="query-language-extensions"></a>Extensiones de lenguaje de consulta  
-Nuevo `MATCH` cláusula se introdujo para admitir la coincidencia de patrones y navegación en saltos múltiples a través del gráfico. El `MATCH` función emplea la sintaxis de estilo de-arte ASCII para la coincidencia de patrones. Por ejemplo:  
+`MATCH`La nueva cláusula se incluye para admitir la búsqueda de coincidencias de patrones y la navegación de varios saltos a través del gráfico. La `MATCH` función utiliza la sintaxis de estilo ASCII-Art para la coincidencia de patrones. Por ejemplo:  
 
 ```   
 -- Find friends of John
@@ -67,27 +68,27 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Completamente integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor 
-Extensiones Graph están totalmente integradas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor. Use el mismo motor de almacenamiento, los metadatos, el procesador de consultas, etc. para almacenar y consultar datos del gráfico. Consulta a través de graph y datos relacionales en una sola consulta. Combinación de funcionalidades de gráfico con otros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologías como almacén de columnas, de alta disponibilidad, servicios de R, etcetera. Base de datos SQL graph también es compatible con todas la seguridad y cumplimiento de las características disponibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Totalmente integrado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor 
+Las extensiones de grafos están totalmente integradas en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor. Use el mismo motor de almacenamiento, metadatos, procesador de consultas, etc. para almacenar y consultar los datos del gráfico. Realizar consultas en los datos de gráfico y relacionales en una sola consulta. Combinación de funcionalidades de gráficos con otras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologías, como almacén de columnas, ha, R Services, etc. La base de datos de SQL Graph también es compatible con todas las características de seguridad y cumplimiento disponibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
-### <a name="tooling-and-ecosystem"></a>Las herramientas y el ecosistema
+### <a name="tooling-and-ecosystem"></a>Herramientas y ecosistema
 
-Beneficiarse de las herramientas existentes y el ecosistema que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece. Herramientas como copia de seguridad y restauración, importación y exportación, funcionan sin problemas BCP desde el principio. Otras herramientas o servicios como SSIS, SSRS o Power BI funcionará con tablas de graph, simplemente la forma de trabajar con tablas relacionales.
+Benefíciese de las herramientas y el ecosistema existentes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece. Herramientas como la copia de seguridad y la restauración, la importación y la exportación, BCP funciona fuera de la caja. Otras herramientas o servicios como SSIS, SSRS o Power BI funcionarán con las tablas de gráficos, de la misma forma en que trabajan con tablas relacionales.
 
 ## <a name="edge-constraints"></a>Restricciones perimetrales
-Una restricción perimetral se define en una tabla de borde del gráfico y es un par de tablas de nodo que se puede conectar a un tipo de borde determinado. Esto ofrece a los usuarios un mejor control sobre su esquema de gráfico. Con la Ayuda de las restricciones perimetrales, los usuarios pueden restringir el tipo de nodos que se puede conectar un borde determinado. 
+Se define una restricción perimetral en una tabla irregular del gráfico y es un par de tablas de nodos a las que puede conectarse un tipo de borde determinado. Esto proporciona a los usuarios un mejor control sobre el esquema del grafo. Con la ayuda de las restricciones perimetrales, los usuarios pueden restringir el tipo de nodos a los que se puede conectar un borde determinado. 
 
-Para obtener información acerca de cómo crear y usar las restricciones perimetrales, consulte [las restricciones perimetrales](../../relational-databases/tables/graph-edge-constraints.md)
+Para obtener más información sobre cómo crear y usar restricciones perimetrales, consulte [restricciones perimetrales](../../relational-databases/tables/graph-edge-constraints.md) .
 
-## <a name="merge-dml"></a>Mezcla de DML 
-El [mezcla](../../t-sql/statements/merge-transact-sql.md) instrucción lleva a cabo Insertar, actualizar o eliminar operaciones en una tabla de destino basándose en los resultados de una combinación con una tabla de origen. Por ejemplo, puede sincronizar dos tablas insertando, actualizando o eliminando las filas de una tabla de destino basándose en las diferencias entre la tabla de destino y la tabla de origen. Ahora se admite el uso de predicados de coincidencia en una instrucción MERGE en Azure SQL Database y SQL Server vNext. Es decir, ahora es posible combinar los datos de gráfico actual (tablas de nodo o perimetral) con nuevos datos mediante los predicados de coincidencia para especificar relaciones de gráfico en una sola instrucción, en lugar de instrucciones INSERT, UPDATE o DELETE independientes.
+## <a name="merge-dml"></a>Combinar DML 
+La instrucción [Merge](../../t-sql/statements/merge-transact-sql.md) realiza operaciones de inserción, actualización o eliminación en una tabla de destino en función de los resultados de una combinación con una tabla de origen. Por ejemplo, puede sincronizar dos tablas insertando, actualizando o eliminando filas en una tabla de destino en función de las diferencias entre la tabla de destino y la tabla de origen. Ahora se admite el uso de predicados MATCH en una instrucción MERGE en Azure SQL Database y SQL Server vNext. Es decir, ahora es posible fusionar mediante combinación los datos actuales del grafo (tablas de nodo o perimetrales) con nuevos datos mediante los predicados de coincidencia para especificar las relaciones de los gráficos en una sola instrucción, en lugar de las instrucciones INSERT/UPDATE/DELETE independientes.
 
-Para obtener información acerca de cómo se puede usar la coincidencia de mezcla DML, consulte [instrucción MERGE](../../t-sql/statements/merge-transact-sql.md)
+Para obtener más información sobre cómo se puede usar la coincidencia en Merge DML, consulte [instrucción Merge](../../t-sql/statements/merge-transact-sql.md) .
 
-## <a name="shortest-path"></a>Ruta de acceso más corta
-El [SHORTEST_PATH](./sql-graph-shortest-path.md) función busca la ruta más corta entre 2 nodos en un gráfico o a partir de un nodo determinado a todos los nodos en el gráfico. También puede utilizarse para buscar un cierre transitivo ruta más corta o para los recorridos de longitud arbitraria en el gráfico. 
+## <a name="shortest-path"></a>Ruta más corta
+La función [SHORTEST_PATH](./sql-graph-shortest-path.md) encuentra la ruta más corta entre los dos nodos de un gráfico o el inicio de un nodo determinado a todos los demás nodos del gráfico. La ruta de acceso más corta también se puede usar para buscar un cierre transitivo o para recorridos de longitud arbitrarios en el gráfico. 
 
  ## <a name="next-steps"></a>Pasos siguientes  
-Leer el [gráfico SQL Database: arquitectura](./sql-graph-architecture.md)
+Leer la [arquitectura de base de datos de SQL Graph](./sql-graph-architecture.md)
    
 

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de la base de datos (Analysis Services - datos multidimensionales) de copia de seguridad | Microsoft Docs
+title: Cuadro de diálogo copia de seguridad de base de datos (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064380"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527834"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Copia de seguridad de la base de datos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Copia de seguridad de la base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para hacer una copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un archivo de copia de seguridad con el formato de copia de seguridad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (.abf).  
@@ -25,9 +24,9 @@ ms.locfileid: "66064380"
 > [!IMPORTANT]  
 >  Para cada archivo de copia de seguridad, el usuario que ejecuta el comando de copia de seguridad debe tener permiso para escribir en la ubicación de copia de seguridad especificada. Además, el usuario debe tener uno de los roles siguientes: miembro de un rol de servidor para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos de la que se va a hacer una copia de seguridad.  
   
- **Para mostrar el cuadro de diálogo de la base de datos de copia de seguridad**  
+ **Para mostrar el cuadro de diálogo Copia de seguridad de la base de datos**  
   
--   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o en una base de datos del **Explorador de objetos**y, después, haga clic en **Copia de seguridad**.  
+-   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o en una base de datos del **Explorador de objetos**y, a continuación, haga clic en **Copia de seguridad**.  
   
 ## <a name="options"></a>Opciones  
  **Script**  
@@ -54,11 +53,11 @@ ms.locfileid: "66064380"
  **Examinar**  
  Haga clic para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Permitir sobrescritura de archivos**  
+ **Permitir la sobrescritura de archivos**  
  Seleccione esta opción para sobrescribir un archivo de copia de seguridad existente o un archivo de copia de seguridad remoto, si existiese.  
   
 > [!NOTE]  
->  Si no selecciona esta opción y existe el archivo de copia de seguridad especificado en **Archivo de copia de seguridad** o el archivo de copia de seguridad remoto especificado en **Archivo de copia de seguridad remoto** , se producirá un error.  
+>  Si no selecciona esta opción y existe el archivo de seguridad especificado en **Archivo de copia de seguridad** o el archivo de copia de seguridad remoto en **Archivo de copia de seguridad remoto**, se producirá un error.  
   
  **Aplicar compresión**  
  Seleccione esta opción para comprimir el contenido de un archivo de copia de seguridad o los archivos de copia de seguridad remotos especificados.  
@@ -70,13 +69,13 @@ ms.locfileid: "66064380"
  Escriba la contraseña que desea utilizar para cifrar el archivo de copia de seguridad o los archivos de copia de seguridad remotos especificados.  
   
 > [!NOTE]  
->  Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
+>   Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
   
- **Confirmar contraseña**  
+ **Confirm Password**  
  Escriba la contraseña proporcionada en **Contraseña** para confirmar la contraseña del archivo de copia de seguridad y los archivos de copia de seguridad remotos especificados.  
   
 > [!NOTE]  
->  Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
+>   Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
   
  **Copia de seguridad de particiones remotas**  
  Seleccione esta opción para incluir información y datos de la ubicación para las particiones remotas del archivo de copia de seguridad.  
@@ -84,18 +83,18 @@ ms.locfileid: "66064380"
 > [!NOTE]  
 >  Esta opción solo se habilita si la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionada usa particiones remotas.  
   
- **Ubicación de copia de seguridad de la partición remota**  
+ **Ubicación de la copia de seguridad de la partición remota**  
  Muestra la ubicación de las particiones remotas asociadas a la base de datos seleccionada, así como el archivo de copia de seguridad remoto usado para hacer una copia de seguridad de los datos y metadatos de las particiones remotas. Están disponibles las siguientes columnas:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**Server**|Muestra la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra las particiones remotas.|  
 |**Base de datos**|Muestra la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene las particiones remotas.|  
 |**Lista de particiones**|Muestra la lista de particiones remotas contenidas en la base de datos que se muestra en **Base de datos**.|  
-|**Archivo de copia de seguridad remoto**|Escriba la ruta de acceso completa y el nombre del archivo de copia de seguridad remoto que quiere usar o haga clic en el botón de puntos suspensivos ( **…** ) para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad remoto que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Archivo de copia de seguridad remoto**|Escriba la ruta de acceso completa y el nombre del archivo de copia de seguridad remoto que quiere usar o haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad remoto que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

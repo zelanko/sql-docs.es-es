@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0bf806900b25b69d98cc1abaab4bd49db444e5e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085293"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891712"
 ---
-# <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información sobre la configuración de detección de conflictos para una publicación que participa en una topología de replicación transaccional punto a punto.  
   
@@ -38,11 +38,11 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication=] '*publicación*'  
- Es el nombre de la publicación para la que se devuelve información. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+ [ @publication =] '*publicación*'  
+ Es el nombre de la publicación para la que se devuelve información. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @timeout= ] *timeout*  
- Especifica la cantidad de tiempo, en segundos, tras la cual el procedimiento quedará a la espera de respuesta de cada nodo en la topología. Si hay un suscriptor de solo lectura en la topología, no se puede especificar un valor de tiempo de espera. Los suscriptores de solo lectura nunca responderán a una llamada de este procedimiento. *tiempo de espera* es **int**, su valor predeterminado es 60.  
+ [ @timeout =] *tiempo de espera*  
+ Especifica la cantidad de tiempo, en segundos, tras la cual el procedimiento quedará a la espera de respuesta de cada nodo en la topología. Si hay un suscriptor de solo lectura en la topología, no se puede especificar un valor de tiempo de espera. Los suscriptores de solo lectura nunca responderán a una llamada de este procedimiento. *timeout* es de **tipo int**y su valor predeterminado es 60.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_help_peerconflictdetection devuelve tres conjuntos de resultados. Estos resultados se documentan en los siguientes temas:  
@@ -62,9 +62,9 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor sysadmin o al rol fijo de base de datos db_owner.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Detección de conflictos en la replicación punto a punto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2baea8e71a3730a100eda8971ad70a28f1a97773
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296466"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
@@ -33,7 +33,7 @@ A continuación se presentan las características nuevas más importantes de Int
 
 -   **Escalabilidad horizontal**. Distribuya la ejecución de paquetes SSIS más fácilmente en varios equipos de trabajo, y administre ejecuciones y trabajos de un único equipo maestro. Para obtener más información, consulte [Integration Services Scale Out](../integration-services/scale-out/integration-services-ssis-scale-out.md) (Escalabilidad horizontal de Integration Services).
 
--   **Integration Services en Linux**. Ejecute paquetes SSIS en equipos Linux. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+-   **Integration Services en Linux**. Ejecute paquetes SSIS en equipos Linux. Para obtener más información, consulte [Extracción, transformación y carga de datos en Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md) .
 
 -   **Mejoras en la conectividad**. Conéctese a fuentes de OData de Microsoft Dynamics AX Online y Microsoft Dynamics CRM Online con los componentes de OData actualizados. 
 

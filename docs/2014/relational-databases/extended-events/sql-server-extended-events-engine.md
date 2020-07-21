@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 43ccc0f4b72b8ddd6f1fed66ead95d19247dc5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027266"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motor de SQL Server Extended Events
   El motor de Extended Events [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de servicios y objetos que:  
@@ -56,7 +55,7 @@ ms.locfileid: "62638245"
   
     -   Cuando se llenan los búferes, dichos búferes se envían a los destinos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](extended-events.md)  
   
   

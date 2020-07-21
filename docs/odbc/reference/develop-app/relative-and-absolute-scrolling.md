@@ -1,5 +1,5 @@
 ---
-title: Desplazamiento relativas y absolutas | Microsoft Docs
+title: Desplazamientos relativos y absolutos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,34 +13,34 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138061"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300105"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Desplazamiento relativas y absolutas
-La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el cursor en relación con la posición actual o a una posición absoluta. **SQLFetchScroll** admite la recuperación de la siguiente, anterior, primero y último conjuntos de filas, como una captura relativa también como (capturar el conjunto de filas *n* filas desde el principio del conjunto de filas actual) y una captura absoluta (el conjunto de filas a partir de fetch en la fila *n*). Si *n* es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Por lo tanto, una captura absoluta de la fila -1 significa que se capturará el conjunto de filas que comienza con la última fila del conjunto de resultados.  
+La mayoría de las opciones de desplazamiento de **SQLFetchScroll** sitúan el cursor en relación con la posición actual o con una posición absoluta. **SQLFetchScroll** admite la captura de los conjuntos de filas siguiente, anterior, primero y último, así como la captura relativa (capturar el conjunto de filas *n* filas desde el inicio del conjunto de filas actual) y la captura absoluta (capturar el conjunto de filas a partir de la fila *n*). Si *n* es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Por lo tanto, una captura absoluta de la fila-1 significa que se va a capturar el conjunto de filas que comienza con la última fila del conjunto de resultados.  
   
- Los cursores dinámicos detectan filas insertadas en y eliminadas del conjunto de resultados, por lo que no hay ninguna manera fácil para los cursores dinámicos recuperar la fila en un número determinado que no sea de lectura desde el principio del conjunto de resultados, que es probable que sea lento. Además, una captura absoluta no es muy útil en los cursores dinámicos porque los números de fila cambian según las filas se insertan o eliminan; por lo tanto, consecutivamente capturando el mismo número de fila puede producir filas diferentes.  
+ Los cursores dinámicos detectan las filas insertadas y eliminadas del conjunto de resultados, por lo que no hay ninguna manera fácil de que los cursores dinámicos recuperen la fila en un número determinado que no sea la lectura desde el principio del conjunto de resultados, lo que es probable que sea lento. Además, la obtención absoluta no es muy útil en los cursores dinámicos, ya que los números de fila cambian a medida que se insertan y eliminan filas. por lo tanto, la obtención sucesiva del mismo número de fila puede producir diferentes filas.  
   
- Las aplicaciones que usan **SQLFetchScroll** sólo para su bloque de las capacidades del cursor, como informes, es probable que atraviese el conjunto de resultados de una sola vez, con solo la opción para capturar el siguiente conjunto de filas. Las aplicaciones basadas en la pantalla, por otro lado, pueden aprovechar todas las capacidades de **SQLFetchScroll**. Si la aplicación establece el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla y enlaza los búferes de pantalla al conjunto de resultados, pueden traducir las operaciones de la barra de desplazamiento directamente a las llamadas a **SQLFetchScroll**.  
+ Las aplicaciones que usan **SQLFetchScroll** solo para sus capacidades de cursor de bloque, como los informes, es probable que pasen por el conjunto de resultados una sola vez, usando solo la opción para capturar el siguiente conjunto de filas. Por otro lado, las aplicaciones basadas en pantalla pueden aprovechar todas las funcionalidades de **SQLFetchScroll**. Si la aplicación establece el tamaño del conjunto de filas en el número de filas que se muestra en la pantalla y enlaza los búferes de pantalla al conjunto de resultados, puede traducir las operaciones de la barra de desplazamiento directamente a las llamadas a **SQLFetchScroll**.  
   
 |Funcionamiento de la barra de desplazamiento|Opción de desplazamiento de SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
 |Re Pág|SQL_FETCH_PRIOR|  
-|AV PÁG|SQL_FETCH_NEXT|  
-|Línea arriba|SQL_FETCH_RELATIVE con *FetchOffset* igual a -1|  
+|Av Pág|SQL_FETCH_NEXT|  
+|Línea arriba|SQL_FETCH_RELATIVE con *FetchOffset* igual a-1|  
 |Línea abajo|SQL_FETCH_RELATIVE con *FetchOffset* igual a 1|  
 |Cuadro de desplazamiento en la parte superior|SQL_FETCH_FIRST|  
 |Cuadro de desplazamiento en la parte inferior|SQL_FETCH_LAST|  
 |Posición del cuadro de desplazamiento aleatoria|SQL_FETCH_ABSOLUTE|  
   
- Estas aplicaciones también se deben colocar el cuadro de desplazamiento después de una operación de desplazamiento, lo que requiere el número de fila actual y el número de filas. Para el número de fila actual, las aplicaciones pueden o realizar un seguimiento del número de fila actual o una llamada **SQLGetStmtAttr** con el atributo SQL_ATTR_ROW_NUMBER para recuperarlo.  
+ Estas aplicaciones también necesitan colocar el cuadro de desplazamiento después de una operación de desplazamiento, que requiere el número de fila actual y el número de filas. En el número de fila actual, las aplicaciones pueden realizar el seguimiento del número de fila actual o llamar a **SQLGetStmtAttr** con el atributo SQL_ATTR_ROW_NUMBER para recuperarlo.  
   
- El número de filas del cursor, que es el tamaño del resultado se establece, está disponible como el campo SQL_DIAG_CURSOR_ROW_COUNT del encabezado de diagnóstico. El valor de este campo está definido solo una vez **SQLExecute**, **SQLExecDirect**, o **SQLMoreResult** se ha llamado. Este número puede ser un recuento aproximado o un recuento exacto, dependiendo de las capacidades del controlador. Se puede determinar la compatibilidad del controlador mediante una llamada a **SQLGetInfo** con los tipos de información de atributos de cursor y la comprobación de si se devuelve el bit SQL_CA2_CRC_APPROXIMATE o SQL_CA2_CRC_EXACT para el tipo de cursor.  
+ El número de filas del cursor, que es el tamaño del conjunto de resultados, está disponible como SQL_DIAG_CURSOR_ROW_COUNT campo del encabezado de diagnóstico. El valor de este campo solo se define después de llamar a **SQLExecute**, **SQLExecDirect**o **SQLMoreResult** . Este recuento puede ser un recuento aproximado o un recuento exacto, en función de las capacidades del controlador. La compatibilidad del controlador se puede determinar mediante una llamada a **SQLGetInfo** con los tipos de información de atributos de cursor y la comprobación de si se devuelve el SQL_CA2_CRC_APPROXIMATE o el bit de SQL_CA2_CRC_EXACT para el tipo de cursor.  
   
- Nunca se admite un recuento de filas exacta para un cursor dinámico. Para otros tipos de cursores, el controlador puede admitir recuentos de filas exacto o aproximado, pero no ambos. Si el controlador admite exacto ni aproximado recuentos de filas para un tipo de cursor específico, el campo SQL_DIAG_CURSOR_ROW_COUNT contiene el número de filas que se han capturado hasta ahora. Independientemente de lo que el controlador admite, **SQLFetchScroll** con un *operación* de SQL_FETCH_LAST hará que el campo SQL_DIAG_CURSOR_ROW_COUNT contener el número exacto de filas.
+ Nunca se admite un recuento exacto de filas para un cursor dinámico. Para otros tipos de cursores, el controlador puede admitir recuentos de filas exactas o aproximadas, pero no ambos. Si el controlador no admite recuentos de filas exactas ni aproximados para un tipo de cursor específico, el campo SQL_DIAG_CURSOR_ROW_COUNT contiene el número de filas que se han capturado hasta ahora. Independientemente de lo que admita el controlador, **SQLFetchScroll** con una *operación* de SQL_FETCH_LAST hará que el campo SQL_DIAG_CURSOR_ROW_COUNT contenga el recuento exacto de filas.

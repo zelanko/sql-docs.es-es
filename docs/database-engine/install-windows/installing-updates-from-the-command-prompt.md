@@ -1,5 +1,6 @@
 ---
 title: Instalar actualizaciones desde el símbolo del sistema | Microsoft Docs
+description: En este artículo se describe la sintaxis de comandos para la instalación de actualizaciones de SQL Server. Puede probar y modificar los scripts de instalación a fin de adaptarlos a las necesidades de la organización.
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22821930b8d0e10826fcaad0f33258262f59f2ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990913"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900385"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalar actualizaciones desde el símbolo del sistema
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Pruebe y modifique los scripts de instalación para adaptarlos a las necesidades de su organización. 
  
@@ -31,7 +32,7 @@ El nombre del paquete de actualización puede variar y es posible que incluya un
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    o Administrador de configuración de 
+    or 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -88,7 +89,7 @@ El nombre del paquete de actualización puede variar y es posible que incluya un
  
  *No puede especificar este parámetro para aplicar una actualización a una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Debe especificar el parámetro /instanceID en su lugar. 
  
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
  [Información general sobre la instalación de servicios de SQL Server](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 
  
  

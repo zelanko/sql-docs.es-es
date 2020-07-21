@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c75cd206557547f55d47eec0a7aec52cc0069b71
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a125eaaa4fa61acaa037e518dbcfb0bd177e1a3d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847516"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896823"
 ---
 # <a name="iservervirtualdevicesendcommand-vdi"></a>IServerVirtualDevice::SendCommand (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **SendCommand** envía un comando al cliente mediante un objeto de dispositivo virtual devuelto desde IServerVirtualDeviceSet2::OpenDevice.
 
@@ -49,7 +49,7 @@ El agente de finalización realiza esta devolución de llamada cuando el cliente
 | VD_E_IO_ERROR | El dispositivo se encuentra en un estado de IO-ERROR. |
 | VD_E_PROTOCOL | El dispositivo no está activo. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cuando se produce un error al intentar enviar el comando, se invoca la función de devolución de llamada y el valor completionCode del búfer de comandos se establece de esta forma:
 

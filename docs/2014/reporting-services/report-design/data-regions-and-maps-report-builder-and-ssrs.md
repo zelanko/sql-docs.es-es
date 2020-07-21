@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106088"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Regiones de datos y mapas (Generador de informes y SSRS)
@@ -27,26 +27,26 @@ ms.locfileid: "66106088"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabla  
  Una tabla es una región de datos que muestra los datos fila por fila. La columnas de tabla son estáticas: el número de columnas del informe se define al diseñarlo. Las filas de tabla son dinámicas: se expanden hacia abajo para incluir los datos. Se pueden agregar grupos a las tablas, que organizan los datos por campos o expresiones seleccionados. Para obtener información sobre cómo agregar una tabla a un informe, vea [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md).  
   
-## <a name="matrix"></a>Matriz  
- Las matrices también se denominan tablas de referencias cruzadas. Una región de datos de matriz contiene columnas y filas dinámicas: se expanden para dar cabida a los datos. Una matriz puede tener columnas y filas dinámicas y estáticas. Las columnas o las filas pueden contener otras columnas o filas, y se pueden usar para agrupar datos. Para obtener información acerca de cómo agregar una matriz a un informe, vea [Matrices &#40;generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)  
+## <a name="matrix"></a>Matrix  
+ Las matrices también se denominan tablas de referencias cruzadas. Una región de datos de matriz contiene columnas y filas dinámicas: se expanden para dar cabida a los datos. Una matriz puede tener columnas y filas dinámicas y estáticas. Las columnas o las filas pueden contener otras columnas o filas, y se pueden usar para agrupar datos. Para obtener información sobre cómo agregar una matriz a un informe, consulte [Matrices &#40;generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)  
   
-## <a name="list"></a>Lista  
- Una lista es una región de datos que muestra los datos organizados con un formato libre. Los elementos de informe se pueden organizar para crear un formulario con cuadros de texto, imágenes y otras regiones de datos colocadas en cualquier lugar de la lista. Para obtener información acerca de cómo agregar una lista a un informe, vea [enumera &#40;generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+## <a name="list"></a>List  
+ Una lista es una región de datos que muestra los datos organizados con un formato libre. Los elementos de informe se pueden organizar para crear un formulario con cuadros de texto, imágenes y otras regiones de datos colocadas en cualquier lugar de la lista. Para obtener información sobre cómo agregar una lista a un informe, vea [listas &#40;generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ## <a name="chart"></a>Gráfico  
- Un gráfico muestra los datos de forma gráfica. Los gráficos de barras, circulares y de líneas son algunos ejemplos, pero se admiten muchos más estilos. Para obtener información acerca de cómo agregar un gráfico a un informe, vea [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Un gráfico muestra los datos de forma gráfica. Los gráficos de barras, circulares y de líneas son algunos ejemplos, pero se admiten muchos más estilos. Para obtener información sobre cómo agregar un gráfico a un informe, vea [gráficos &#40;generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
-## <a name="gauge"></a>Medidor  
- Un medidor presenta los datos como un intervalo con un indicador que apunta a un valor determinado dentro del intervalo. Los medidores se utilizan para mostrar indicadores clave de rendimiento (KPI) y otras métricas. Los medidores pueden ser lineales y circulares. Para obtener más información acerca de cómo agregar un medidor a un informe, vea [medidores &#40;generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md).  
+## <a name="gauge"></a>Indicador  
+ Un medidor presenta los datos como un intervalo con un indicador que apunta a un valor determinado dentro del intervalo. Los medidores se utilizan para mostrar indicadores clave de rendimiento (KPI) y otras métricas. Los medidores pueden ser lineales y circulares. Para obtener más información sobre cómo agregar un medidor a un informe, vea [medidores &#40;generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md).  
   
-## <a name="map"></a>Asignación  
- Con los mapas podrá presentar datos comparándolos con un entorno geográfico. Los datos del mapa pueden ser datos espaciales de una consulta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un archivo de forma ESRI o mosaicos Bing Map de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los datos espaciales están formados por conjuntos de coordenadas que definen polígonos que representan formas o áreas, líneas que representan rutas o rutas de acceso, y puntos representados por marcadores. Puede asociar los datos agregados a elementos de asignación para modificar automáticamente su color y tamaño. Por ejemplo, puede cambiar el tipo de marcador para una tienda según la cantidad de ventas o el color de una carretera según el límite de velocidad. Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
+## <a name="map"></a>Map  
+ Con los mapas podrá presentar los datos en un contexto geográfico. Los datos del mapa pueden ser datos espaciales de una consulta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un archivo de forma ESRI o mosaicos Bing Map de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los datos espaciales están formados por conjuntos de coordenadas que definen polígonos que representan formas o áreas, líneas que representan rutas o rutas de acceso, y puntos representados por marcadores. Puede asociar los datos agregados a elementos de asignación para modificar automáticamente su color y tamaño. Por ejemplo, puede cambiar el tipo de marcador para una tienda según la cantidad de ventas o el color de una carretera según el límite de velocidad. Para obtener más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ## <a name="data-regions-in-the-report-layout"></a>Regiones de datos del diseño del informe  
- Es posible agregar varias regiones de datos a un informe. Las regiones de datos crecen para alojar los datos del conjunto de datos de informe al que están vinculadas. Por ejemplo, una matriz que muestra las ventas anuales de cada producto tiene un grupo de filas basado en los nombres del producto y un grupo de columnas basado en los años. Al ejecutar el informe, la matriz se expande hacia abajo en la página para cada producto y hacia los lados para cada año. Un gráfico que se coloque junto a la matriz en la superficie de diseño del informe se mostrará junto a la matriz expandida en el informe representado. La manera de representar las regiones de datos en una página sigue un conjunto de reglas basadas en el formato de salida de un informe. Por ejemplo, para ayudar a controlar el modo en que un gráfico y una matriz se representan en una página, puede usar un rectángulo como contenedor o anidar ambas regiones de datos en una lista. Para obtener más información, vea [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md).  
+ Es posible agregar varias regiones de datos a un informe. Las regiones de datos crecen para alojar los datos del conjunto de datos de informe al que están vinculadas. Por ejemplo, una matriz que muestra las ventas anuales de cada producto tiene un grupo de filas basado en los nombres del producto y un grupo de columnas basado en los años. Al ejecutar el informe, la matriz se expande hacia abajo en la página para cada producto y hacia los lados para cada año. Un gráfico que se coloque junto a la matriz en la superficie de diseño del informe se mostrará junto a la matriz expandida en el informe representado. La manera de representar las regiones de datos en una página sigue un conjunto de reglas basadas en el formato de salida de un informe. Por ejemplo, para ayudar a controlar el modo en que un gráfico y una matriz se representan en una página, puede usar un rectángulo como contenedor o anidar ambas regiones de datos en una lista. Para obtener más información, vea [representación y diseño de páginas &#40;generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md).  
   
 ## <a name="nested-data-regions"></a>Regiones de datos anidadas  
  Se pueden anidar regiones de datos en otras regiones de datos. Por ejemplo, si desea crear un registro de ventas para cada vendedor de una base de datos, puede crear una lista con cuadros de texto y una imagen que muestre información acerca del empleado y, a continuación, agregar regiones de datos tabulares y gráficas a la lista para mostrar el registro de ventas del empleado. Para más información, vea [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
@@ -63,11 +63,11 @@ ms.locfileid: "66106088"
   
  Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Representación y diseño de páginas &#40;Generador de informes y SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
- [Tutoriales &#40;generador de informes&#41;](../report-builder-tutorials.md)   
+ [Tutoriales &#40;Generador de informes&#41;](../report-builder-tutorials.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   

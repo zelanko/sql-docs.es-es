@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 49861de7be207875c554e02d3f3b1b2f941fff64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062218"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439802"
 ---
 # <a name="active-operations-dialog-box"></a>Operaciones activas, cuadro de diálogo
   Utilice el cuadro de diálogo **Operaciones activas** para ver el estado de las operaciones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se están ejecutando actualmente en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , como implementación, validación, y ejecución del paquete. Estos datos se almacenan en el catálogo de SSISDB.  
@@ -31,7 +30,7 @@ ms.locfileid: "66062218"
   
 2.  [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Operaciones activas  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>Abrir el cuadro de diálogo operaciones activas  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -39,11 +38,11 @@ ms.locfileid: "66062218"
   
 3.  En el Explorador de objetos, expanda el nodo **Integration Services** , haga clic con el botón derecho en **SSISDB**y, después, haga clic en **Operaciones activas**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurar las opciones  
   
 ### <a name="options"></a>Opciones  
  **Tipo**  
- Especifica el tipo de operación. Los siguientes son los valores posibles para el **tipo** campo y los valores correspondientes en la columna operations_type de la instrucción Transact-SQL `catalog.operations` vista.  
+ Especifica el tipo de operación. A continuación se muestran los valores posibles para el campo de **tipo** y los valores correspondientes en la columna operations_type de la vista de TRANSACT-SQL `catalog.operations` .  
   
 |||  
 |-|-|  
@@ -58,7 +57,7 @@ ms.locfileid: "66062218"
 |Validar paquete|301|  
 |Configurar catálogo|1000|  
   
- **Detener**  
+ **Detención**  
  Haga clic para detener una operación que se esté ejecutando actualmente.  
   
   

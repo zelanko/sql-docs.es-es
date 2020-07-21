@@ -1,5 +1,5 @@
 ---
-title: Importar desde un origen de datos multidimensionales (SSAS Tabular) | Microsoft Docs
+title: Importar desde un origen de datos multidimensionales (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f0793ea-a4c7-42e9-b722-2164a454ebca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c062bab47317d121a2b1895742d70c79048413d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544237"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>Importar datos de un origen de datos multidimensionales (SSAS tabular)
   Puede usar una base de datos de cubo de Analysis Services como origen de datos para un modelo tabular. Para importar datos de un cubo de Analysis Services, debe definir una consulta MDX para seleccionar los datos que desea importar.  
@@ -32,8 +31,8 @@ ms.locfileid: "66080558"
   
 3.  Siga los pasos en el Asistente para la importación de tablas. Podrá especificar una consulta MDX en la página de **Especificar una consulta MDX** . Para usar el Diseñador de consultas MDX, haga clic en **Diseño**en la página Especificar una consulta MDX.  
   
-## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Importar datos &#40;&#41;tabular de SSAS](import-data-ssas-tabular.md)   
  [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

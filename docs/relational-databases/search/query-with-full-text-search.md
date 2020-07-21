@@ -17,23 +17,23 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629247"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Escriba consultas de texto completo mediante los predicados **CONTAINS** y **FREETEXT** y las funciones de conjunto de filas **CONTAINSTABLE** y **FREETEXTTABLE** con la instrucción **SELECT**. En este artículo se proporcionan ejemplos de cada predicado y función, para que le resulte más fácil elegir cuál le conviene más.
 
 -   Para hacer coincidir palabras y frases, use **CONTAINS** y **CONTAINSTABLE**.
 -   Para hacer coincidir el significado, aunque no con la redacción exacta, use **FREETEXT** y **FREETEXTTABLE** .
 
-## <a name="examples_simple"></a> Ejemplos de cada predicado y función
+## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Ejemplos de cada predicado y función
 
-En los siguientes ejemplos, se usa la base de datos de ejemplo AdventureWorks. Para obtener la versión final de AdventureWorks, vea [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Bases de datos y scripts de AdventureWorks para SQL Server 2016 CTP3). Para ejecutar las consultas de ejemplo, también tendrá que configurar la búsqueda de texto completo. Para obtener más información, vea [Introducción a la búsqueda de texto completo](get-started-with-full-text-search.md). 
+En los siguientes ejemplos, se usa la base de datos de ejemplo AdventureWorks. Para obtener la versión final de AdventureWorks, vea [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) (Bases de datos y scripts de AdventureWorks para SQL Server 2016 CTP3). Para ejecutar las consultas de ejemplo, también tendrá que configurar la búsqueda de texto completo. Para obtener más información, vea [Introducción a la búsqueda de texto completo](get-started-with-full-text-search.md). 
 
 ### <a name="example---contains"></a>Ejemplo: CONTAINS  
 En este ejemplo, se buscan todos los productos con un precio de `$80.99` que contengan la palabra `"Mountain"`:
@@ -172,9 +172,9 @@ Las consultas que usan una de estas funciones también devuelven un valor de cla
 
 **Más información** Para obtener más información sobre la sintaxis y los argumentos de estos predicados, vea [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).
 
-## <a name="examples_specific"></a> Determinados tipos de búsquedas
+## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> Determinados tipos de búsquedas
 
-###  <a name="Simple_Term"></a> Búsqueda de una palabra o frase específica (término simple)  
+###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> Búsqueda de una palabra o frase específica (término simple)  
  Puede usar [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para buscar una palabra o frase específica en una tabla. Por ejemplo, si quiere buscar en la tabla **ProductReview** de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] todos los comentarios sobre un producto que contengan la frase "learning curve", puede usar el predicado CONTAINS del siguiente modo:  
   
 ```sql
@@ -197,7 +197,7 @@ Por ejemplo, "croissant" es una palabra y "café au lait" es una frase. Las pala
 
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) y [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) buscan una coincidencia exacta para la frase. [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) y [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) dividen la frase en palabras independientes.
 
-###  <a name="Prefix_Term"></a> Búsqueda de una palabra con prefijo (término de prefijo)  
+###  <a name="search-for-a-word-with-a-prefix-prefix-term"></a><a name="Prefix_Term"></a> Búsqueda de una palabra con prefijo (término de prefijo)  
  Puede usar [CONTAINS](../../t-sql/queries/contains-transact-sql.md) o [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para buscar palabras o frases con un prefijo especificado. Se devuelven todas las entradas de la columna que contenga el texto que comience por el prefijo especificado. Por ejemplo, para buscar todas las filas que contengan el prefijo `top`-, como en `top``ple`, `top``ping`y `top`. La consulta sería parecida al ejemplo siguiente:  
   
 ```sql  
@@ -224,7 +224,7 @@ Un *término de prefijo* hace referencia a una cadena que se anexa al principio 
 
 Las búsquedas de prefijos son compatibles con [CONTAINS](../../t-sql/queries/contains-transact-sql.md) y [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).
   
-###  <a name="Inflectional_Generation_Term"></a> Búsqueda de las formas con inflexión de una palabra específica (término de generación)  
+###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> Búsqueda de las formas con inflexión de una palabra específica (término de generación)  
 Puede usar [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)o [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) para buscar todos los tiempos y conjugaciones de un verbo o las formas tanto singular como plural de un nombre (búsqueda con inflexión). O bien, los sinónimos de una palabra especificada (búsqueda de diccionario de sinónimos).  
   
 En el siguiente ejemplo, se busca cualquier forma de "foot" ("foot", "feet", etc.) en la columna `Comments` de la tabla `ProductReview` de la base de datos `AdventureWorks`: 
@@ -267,7 +267,7 @@ Por ejemplo, quizá desee buscar las filas en las que la palabra "ice" esté rel
 
 Para obtener más información sobre las búsquedas por proximidad, vea [Buscar palabras cerca de otra palabra con NEAR](search-for-words-close-to-another-word-with-near.md).
 
-###  <a name="Weighted_Term"></a> Búsqueda de palabras o frases mediante valores ponderados (término ponderado)  
+###  <a name="search-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a> Búsqueda de palabras o frases mediante valores ponderados (término ponderado)  
 Puede usar [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) para buscar palabras o frases, y especificar un valor de ponderación. La ponderación, medida como número comprendido entre 0,0 y 1,0, indica la importancia de cada palabra y frase en un conjunto de palabras y frases. Una ponderación de 0,0 es la más baja y una ponderación de 1,0, la más alta.  
   
 En el ejemplo siguiente se muestra una consulta que busca las direcciones de todos los clientes, mediante valores ponderados, en las que cualquier texto que comience por la cadena "Bay" contenga "Street" o "View". Los resultados asignan un rango superior a las filas que contengan más palabras de las especificadas.  
@@ -297,7 +297,7 @@ Por ejemplo, en una consulta en la que se buscan varios términos, puede asignar
 
 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) admite búsquedas de términos ponderadas.
 
-##  <a name="Using_Boolean_Operators"></a> Uso de operadores booleanos (AND, OR y NOT)
+##  <a name="use-and-or-and-not-boolean-operators"></a><a name="Using_Boolean_Operators"></a> Uso de operadores booleanos (AND, OR y NOT)
  
 El predicado CONTAINS y la función CONTAINSTABLE usan las mismas condiciones de búsqueda. Ambos admiten que se combinen varios términos de búsqueda con los operadores booleanos AND, OR y NOT para realizar operaciones lógicas. Por ejemplo, puede usar AND para buscar filas que contienen "latte" y "New York-style bagel". También puede, por ejemplo, utilizar AND NOT para buscar las filas que contienen "bagel" pero no contienen "cream cheese".  
   
@@ -319,7 +319,7 @@ WHERE ProductDescriptionID <> 5 AND
 GO  
 ```  
   
-##  <a name="Additional_Considerations"></a> Caso, palabras irrelevantes, idioma y diccionario de sinónimos
+##  <a name="case-stopwords-language-and-thesaurus"></a><a name="Additional_Considerations"></a> Caso, palabras irrelevantes, idioma y diccionario de sinónimos
 
  Al escribir consultas de texto completo, también puede especificar las siguientes opciones:
   
@@ -331,7 +331,7 @@ GO
   
 -   **Diccionario de sinónimos**. Las consultas FREETEXT y FREETEXTTABLE usan de forma predeterminada el diccionario de sinónimos. CONTAINS y CONTAINSTABLE admiten un argumento THESAURUS opcional. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](configure-and-manage-thesaurus-files-for-full-text-search.md).
   
-##  <a name="tokens"></a> Comprobación de los resultados de la tokenización
+##  <a name="check-the-tokenization-results"></a><a name="tokens"></a> Comprobación de los resultados de la tokenización
 
 Después de aplicar una combinación determinada de separador de palabras, diccionario de sinónimos y lista de palabras irrelevantes a una consulta, puede ver los resultados de la tokenización de la búsqueda de texto completo mediante la vista de administración dinámica **sys.dm_fts_parser**. Para obtener más información, vea [sys.dm_fts_parser &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   

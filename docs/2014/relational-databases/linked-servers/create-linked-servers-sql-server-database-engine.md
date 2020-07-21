@@ -16,35 +16,34 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024970"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
   En este tema se muestra cómo crear un servidor vinculado y tener acceso a los datos desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creación de un servidor vinculado permite trabajar con datos de varios orígenes. El servidor vinculado no necesita ser otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sino que es un escenario común.  
   
-##  <a name="Background"></a> Información previa  
+##  <a name="background"></a><a name="Background"></a> Información previa  
  Un servidor vinculado permite obtener acceso a consultas heterogéneas distribuidas en orígenes de datos OLE DB. Después de crear un servidor vinculado, las consultas distribuidas se pueden ejecutar en este servidor. Las consultas pueden unir tablas de varios orígenes de datos. Si el servidor vinculado se define como una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se pueden ejecutar procedimientos almacenados remotos.  
   
  Las capacidades y los argumentos requeridos de los servidores vinculados pueden variar significativamente. Los ejemplos de este tema proporcionan un ejemplo típico. Sin embargo, no se describen todas las opciones. Para obtener más información, vea [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
-##  <a name="Security"></a> Seguridad  
+##  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Cuando se usa [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, requiere `ALTER ANY LINKED SERVER` permiso en el servidor o la pertenencia a la **setupadmin** rol fijo de servidor. Cuando se usa [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiere `CONTROL SERVER` permiso o la pertenencia a la **sysadmin** rol fijo de servidor.  
+ Cuando se usan [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, requiere `ALTER ANY LINKED SERVER` el permiso en el servidor o la pertenencia al rol fijo de servidor **setupadmin** . Cuando se usa, se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiere `CONTROL SERVER` el permiso o la pertenencia al rol fijo de servidor **sysadmin** .  
   
-##  <a name="Procedures"></a> Crear un servidor vinculado  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Crear un servidor vinculado  
  Puede usar cualquiera de los elementos siguientes:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Para crear un servidor vinculado a otra instancia de SQL Server utilizando SQL Server Management Studio  
   
@@ -99,7 +98,7 @@ ms.locfileid: "62743508"
      **Contraseña remota**  
      Permite especificar la contraseña del usuario remoto.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Permite agregar un nuevo inicio de sesión local.  
   
      **Quitar**  
@@ -147,7 +146,7 @@ ms.locfileid: "62743508"
   
      El servidor vinculado debe permitir el uso de una única intercalación para todas las columnas de ese servidor. No establezca esta opción si el servidor vinculado admite varias intercalaciones dentro de un único origen de datos o si no se puede determinar si la intercalación del servidor vinculado coincide con alguna de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Tiempo de espera de la conexión**  
+     **Tiempo de espera de conexión**  
      Valor del tiempo de espera en segundos para conectarse a un servidor vinculado.  
   
      Si es 0, use el valor de la opción **Tiempo de espera de inicio de sesión remoto** predeterminado [sp_configure](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
@@ -160,7 +159,7 @@ ms.locfileid: "62743508"
      **Habilitar promoción de transacciones distribuidas**  
      Use esta opción para proteger las acciones de un procedimiento entre servidores a través de una transacción del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC). Cuando esta opción es TRUE, al llamar a un procedimiento remoto almacenado se inicia una transacción distribuida y se da de alta en MS DTC. Para obtener más información, vea [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql).  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ##### <a name="to-view-the-provider-options"></a>Para ver las opciones de proveedor  
   
@@ -192,7 +191,7 @@ ms.locfileid: "62743508"
      **Admite el operador LIKE**  
      Indica que el proveedor admite consultas mediante la palabra clave LIKE.  
   
-###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Para crear un servidor vinculado mediante [!INCLUDE[tsql](../../includes/tsql-md.md)], use las instrucciones [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) y [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>Para crear un servidor vinculado a otra instancia de SQL Server con Transact-SQL  
@@ -220,7 +219,7 @@ ms.locfileid: "62743508"
   
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Pasos para realizar después de crear un servidor vinculado  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Seguimiento: pasos que se deben realizar después de crear un servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para probar el servidor vinculado  
   
@@ -246,9 +245,9 @@ ms.locfileid: "62743508"
   
      Cuando se devuelve NULL para el inicio de sesión del servidor vinculado, se indica que el inicio de sesión no existe en el servidor vinculado. Estos inicios de sesión no podrán usar el servidor vinculado a menos que este se configure para pasar un contexto de seguridad distinto o el servidor vinculado acepte conexiones anónimas.  
   
-## <a name="see-also"></a>Vea también  
- [Servidores vinculados &#40;motor de base de datos&#41;](linked-servers-database-engine.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [Servidores vinculados &#40;Motor de base de datos&#41;](linked-servers-database-engine.md)   
+ [sp_addlinkedserver &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   
   

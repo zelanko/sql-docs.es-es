@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c39d03d60cb66f3b2e26b2e660bd85f4e5e9d4ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66073764"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546137"
 ---
 # <a name="tuples"></a>Tuplas
   Una tupla identifica de forma inequívoca un segmento de datos de un cubo. Una combinación de miembros de dimensión forma la tupla, siempre que no haya dos o más miembros que pertenecen a la misma jerarquía.  
@@ -62,8 +61,8 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  Se puede hacer referencia a un miembro de atributo por su nombre de miembro o su clave de miembro. En el ejemplo anterior, se podía reemplazar la referencia a [CY 2004] con &[2004].  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos clave de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conceptos clave de &#40;MDX Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Espacio de cubo](cube-space.md)   
  [Autoexists](autoexists.md)   
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a5bcf05ccb3876ab22227ea2f5a5e5c9d7bbbbc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6f90cdcc77b587ad04a22dd7b3f853cc66adbc0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068852"
 ---
 # <a name="device-driver-control-error"></a>Error de control del controlador de dispositivo
   Esta regla comprueba si el identificador EventId 11 se encuentra en el registro de eventos del sistema. Esto podría deberse a un controlador de dispositivo dañado, un problema de hardware, cableado defectuoso o a problemas de conectividad.  

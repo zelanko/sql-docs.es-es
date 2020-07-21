@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 497585a187a8e34250e825e3c8c96f6c2b9ed176
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759528"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Convierte una instancia no válida de **geometry** en una instancia de **geometry** con un tipo de Open Geospatial Consortium (OGC) válido.
   
@@ -36,12 +36,12 @@ Convierte una instancia no válida de **geometry** en una instancia de **geometr
 .MakeValid ()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método puede producir un cambio en el tipo de la instancia de **geometry** y hacer que los puntos de una instancia de **geometry** se desplacen ligeramente.  
   
 ## <a name="examples"></a>Ejemplos  

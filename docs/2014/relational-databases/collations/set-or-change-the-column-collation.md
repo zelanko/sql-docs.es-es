@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970565"
 ---
 # <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
   Puede invalidar la intercalación de base de datos para los datos `char`, `varchar`, `text`, `nchar`, `nvarchar` y `ntext` especificando una intercalación diferente para una columna específica de una tabla y utilizando una de las siguientes cláusulas:  
@@ -36,9 +35,9 @@ ms.locfileid: "62918969"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Para obtener más información, vea [Collation and Unicode Support](collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Collation and Unicode Support](collation-and-unicode-support.md).  
   
--   Mediante el `Column.Collation` propiedad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
+-   Usar la `Column.Collation` propiedad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de administración de (SMO).  
   
  No puede cambiar una intercalación de una columna a la que se hace referencia mediante uno de los siguientes elementos:  
   
@@ -87,7 +86,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Dado que **tempdb** utiliza la intercalación predeterminada del servidor y `TestPermTab.Col1` usa una intercalación diferente, SQL Server devuelve este error: "No puede resolver el conflicto de intercalación entre 'Latin1_General_CI_AS_KS_WS' y 'Estonian_CS_AS' en igual a la operación".  
+ Dado que **tempdb** usa la intercalación de servidor predeterminada y `TestPermTab.Col1` usa una intercalación diferente, SQL Server devuelve este error: "No se puede resolver el conflicto de intercalación entre 'Latin1_General_CI_AS_KS_WS' y 'Estonian_CS_AS' en la operación Igual a".  
   
  Para evitar el error, puede utilizar cualquiera de las alternativas siguientes:  
   
@@ -109,9 +108,9 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Configurar o cambiar la intercalación del servidor](set-or-change-the-server-collation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Establecer o cambiar la intercalación del servidor](set-or-change-the-server-collation.md)   
  [Establecer o cambiar la intercalación de base de datos](set-or-change-the-database-collation.md)   
- [Collation and Unicode Support](collation-and-unicode-support.md)  
+ [Compatibilidad con la intercalación y Unicode](collation-and-unicode-support.md)  
   
   

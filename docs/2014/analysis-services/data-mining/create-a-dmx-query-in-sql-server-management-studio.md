@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d20fc7a618f4977058203d8f35d235b543609dd9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085470"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524031"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Crear una consulta DMX en SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en los modelos y estructuras de minería de datos.  
@@ -36,12 +35,12 @@ ms.locfileid: "66085470"
   
  En este tema se describe cómo crear una consulta DMX mediante el Explorador de metadatos y el editor de consultas DMX.  
   
-##  <a name="BKMK_Templates"></a> Plantillas de consulta DMX  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a>Plantillas de consulta DMX  
  Las plantillas para crear consultas DMX básicas están disponibles en el Explorador de plantillas. La carpeta **DMX** contiene las plantillas de minería de datos, que se dividen en las categorías siguientes:  
   
 -   **Contenido del modelo**  
   
--   **Administración del modelo**  
+-   **Administración de modelos**  
   
 -   **Consultas de predicción**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66085470"
   
  También hay algunas diferencias clave en la manera en que las operaciones se tratan en DMX y en XMLA. Por ejemplo, puede usar XMLA para realizar operaciones administrativas como la copia de seguridad de una base de datos completa de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pero, si quiere realizar la copia de seguridad de un único modelo de minería de datos, DMX proporciona un sencillo comando, [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx), que es más adecuado para ese fin.  
   
-##  <a name="BKMK_Building_Queries"></a> Generar y ejecutar una consulta DMX  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a>Compilar y ejecutar una consulta DMX  
   
 #### <a name="open-a-new-dmx-query-window"></a>Abrir una nueva ventana de consulta DMX  
   
@@ -84,8 +83,8 @@ ms.locfileid: "66085470"
   
  [Crear una consulta de contenido en un modelo de minería de datos](create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>Vea también  
- [Interfaces de consultas de minería de datos](data-mining-query-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Interfaces de consulta de minería de datos](data-mining-query-tools.md)   
  [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

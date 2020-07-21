@@ -17,18 +17,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629496"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 En este tema se describen algunas de las causas comunes de un rendimiento deficiente de las consultas y los índices de texto completo. También se proporcionan algunas sugerencias para mitigar estos problemas y mejorar el rendimiento.
   
-##  <a name="causes"></a> Common causes of performance issues
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a> Common causes of performance issues
 ### <a name="hardware-resource-issues"></a>Problemas de los recursos de hardware
 El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
 
@@ -57,7 +57,7 @@ La causa principal de un rendimiento reducido de la indización de texto complet
   
     La combinación maestra de una cantidad grande de datos puede crear una transacción de larga duración, con lo que se retrasa el truncamiento del registro de transacciones durante el punto de comprobación. En este caso, bajo el modelo de recuperación completa, el registro de transacciones podría crecer significativamente. Como práctica recomendada, antes de reorganizar un índice de texto completo grande en una base de datos que use el modelo de recuperación completa, asegúrese de que el registro de transacciones contenga el espacio suficiente para una transacción de larga duración. Para obtener más información, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="tuning"></a> Optimizar el rendimiento de los índices de texto completo  
+##  <a name="tune-the-performance-of-full-text-indexes"></a><a name="tuning"></a> Optimizar el rendimiento de los índices de texto completo  
 Para obtener el máximo rendimiento de los índices de texto completo, implemente las prácticas recomendadas siguientes:  
   
 -   Para obtener el máximo rendimiento de todos los procesadores o núcleos de la CPU, establezca [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) “**max full-text crawl ranges**” en el número de CPU del sistema. Para obtener más información sobre esta opción de configuración, vea [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ Para obtener el máximo rendimiento de los índices de texto completo, implement
 
 -   Si usa rellenado incremental basado en una columna de marca de tiempo, cree un índice secundario en una columna **timestamp** si desea mejorar el rendimiento del rellenado incremental.  
   
-##  <a name="full"></a> Solucionar problemas de rendimiento de los rellenados completos  
+##  <a name="troubleshoot-the-performance-of-full-populations"></a><a name="full"></a> Solucionar problemas de rendimiento de los rellenados completos  
 ### <a name="review-the-full-text-crawl-logs"></a>Revisar los registros de rastreo de texto completo
  Para ayudar a diagnosticar problemas de rendimiento, examine los registros de rastreo de texto completo.
  
@@ -81,7 +81,7 @@ El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Las partes variables del nombre de archivo de registro de rastreo son las siguientes.
--   \<**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   \<**DatabaseID**>: identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. \<**catid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**n**> - Es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
   
@@ -152,7 +152,7 @@ Para información esencial sobre las fórmulas siguientes, vea las notas que sig
   
  #### <a name="example-setting-max-server-memory"></a>Ejemplo: Establecimiento de max server memory  
   
- En este ejemplo, se usan las instrucciones [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer **max server memory** en el valor que se calculó para *M* en el ejemplo precedente, `7052`:  
+ En este ejemplo se usan las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) para establecer **max server memory** en el valor calculado para *M* en el ejemplo anterior, `7052`:  
   
 ```  
 USE master;  
@@ -195,7 +195,7 @@ El rendimiento de los rellenados completos no es el óptimo cuando el consumo de
   
          Para reducir la fragmentación, puede reorganizar o volver a generar el índice clúster. Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
-##  <a name="filters"></a> Solucionar problemas de indización de documentos lenta
+##  <a name="troubleshoot-slow-indexing-of-documents"></a><a name="filters"></a> Solucionar problemas de indización de documentos lenta
 
 > [!NOTE]
 > En esta sección se describe un problema que solo afecta a los clientes que indizan documentos (como documentos de Microsoft Word) en los que están insertados otros tipos de documento.

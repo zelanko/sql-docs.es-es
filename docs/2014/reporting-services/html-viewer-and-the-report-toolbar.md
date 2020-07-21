@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109049"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
@@ -33,11 +33,11 @@ ms.locfileid: "66109049"
   
  La barra de herramientas de informe es similar a la que se muestra en la siguiente ilustración. Es posible que la suya difiera un poco de la que se muestra en la ilustración, dependiendo de las características del informe o las opciones de representación disponibles.  
   
- ![Report toolbar](media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Barra de herramientas de informe](media/htmlviewer-toolbar.gif "Barra de herramientas de informe")  
   
  En la tabla siguiente se describen las características más comunes de la barra de herramientas de informe. Cada característica se identifica con el control que se utiliza para obtener acceso a ella.  
   
-|Utilice este icono o control||En|  
+|Utilice este icono o control||A|  
 |------------------------------|-|--------|  
 |![Controles de navegación en páginas](media/htmlviewer-pagenav.gif "Controles de navegación en páginas")|**Controles de navegación en páginas**|Abrir la primera o la última página de un informe, ver un informe página a página y abrir una página concreta de un informe. Para ver una página específica, escriba el número de página y presione ENTRAR.|  
 |![Controles para mostrar páginas](media/htmlviewer-pagesize.gif "Controles para mostrar páginas")|**Controles para mostrar páginas**|Aumentar o reducir el tamaño de la página del informe. Además de los cambios basados en porcentajes, puede seleccionar **Ancho de página** para que la página del informe se ajuste al ancho de la ventana del explorador o **Toda la página** para que la página del informe se ajuste al alto de la ventana. **Internet Explorer 5.5 y versiones posteriores admiten la opción** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  
@@ -71,9 +71,9 @@ ms.locfileid: "66109049"
 ## <a name="credentials"></a>Credenciales  
  Las credenciales son valores de nombre de usuario y contraseña que conceden acceso a un origen de datos. Después de especificar las credenciales, haga clic en **Ver informe** para obtener los datos. Si un informe requiere que se inicie sesión, los datos que puede ver un usuario pueden ser diferentes de los datos que puede ver otro usuario. En consecuencia, dos usuarios pueden procesar el mismo informe y obtener resultados distintos. Además, algunos informes contienen áreas ocultas que se revelan en función de las credenciales de inicio de sesión del usuario o de las selecciones realizadas en el propio informe. Las áreas ocultas del informe no se incluyen en las operaciones de búsqueda, por lo que se pueden obtener resultados diferentes a cuando están visibles todas las partes del informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

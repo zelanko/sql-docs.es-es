@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, views limitations
 - views limitations [ODBC]
 ms.assetid: 1be24fce-0653-43a0-9cda-3496694c3ace
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b799fd96a8c4aa60466aaa56804b29f16759b02e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cccd7208980b20711b25e25d15e7b7a028536a0e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087943"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304816"
 ---
 # <a name="views-limitations"></a>Limitaciones de vistas
-No admite el dBASE, controladores de Microsoft Excel, Paradox o texto.
+No es compatible con los controladores de dBASE, Microsoft Excel, Paradox o Text.

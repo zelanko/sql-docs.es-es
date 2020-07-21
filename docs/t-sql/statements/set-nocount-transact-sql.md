@@ -24,12 +24,12 @@ ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb582717e0a98e8aaba60b4d7a100a09d0076f1a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034954"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634689"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "68034954"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se establece SET NOCOUNT en ON, no se devuelve el recuento. Cuando SET NOCOUNT es OFF, sí se devuelve ese número.  
   
  La función @@ROWCOUNT se actualiza incluso cuando SET NOCOUNT está en ON.  
@@ -56,7 +56,7 @@ SET NOCOUNT { ON | OFF }
   
  Para ver la configuración actual de este valor, ejecute la consulta siguiente.  
   
-```  
+```sql
 DECLARE @NOCOUNT VARCHAR(3) = 'OFF';  
 IF ( (512 & @@OPTIONS) = 512 ) SET @NOCOUNT = 'ON';  
 SELECT @NOCOUNT AS NOCOUNT;  
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo no se muestra el mensaje que indica el número de filas afectado.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT OFF;  

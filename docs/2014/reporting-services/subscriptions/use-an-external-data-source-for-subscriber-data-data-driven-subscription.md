@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100639"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
@@ -60,7 +60,7 @@ ms.locfileid: "66100639"
 -   El servidor de informes creará una entrega de informe para cada fila del conjunto de resultados. Si el conjunto de resultados está formado por trescientas filas, el servidor de informes intentará entregar trescientos informes.  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>Configurar las opciones de entrega con datos variables procedentes de una base de datos de suscriptor  
- Se pueden utilizar los datos de la base de datos de suscriptor para personalizar las opciones de entrega de cada destinatario. La clase de extensión de entrega que se utilice determina las opciones disponibles. Si utiliza la extensión de entrega por correo electrónico del servidor de informes, la consulta debería contener un alias de correo electrónico para cada suscriptor. Si se está usando la entrega a recursos compartidos de archivos, los datos de suscriptor deberán incluir valores que puedan utilizarse para crear archivos de informe específicos del suscriptor o para proporcionar un destino para la entrega. Para obtener más información, consulte [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) y [entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md).  
+ Se pueden utilizar los datos de la base de datos de suscriptor para personalizar las opciones de entrega de cada destinatario. La clase de extensión de entrega que se utilice determina las opciones disponibles. Si utiliza la extensión de entrega por correo electrónico del servidor de informes, la consulta debería contener un alias de correo electrónico para cada suscriptor. Si se está usando la entrega a recursos compartidos de archivos, los datos de suscriptor deberán incluir valores que puedan utilizarse para crear archivos de informe específicos del suscriptor o para proporcionar un destino para la entrega. Para obtener más información, consulte [entrega de recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md) y [entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Pasar valores de parámetro desde la base de datos de suscriptores al informe  
  Si se va a crear una suscripción controlada por datos para un informe con parámetros, se pueden utilizar valores de parámetro variables para personalizar los resultados de cada informe. Por ejemplo, la base de datos de suscriptores puede contener información sobre los números de identificación de los empleados, las fechas de contratación, los puestos de trabajo y la ubicación en la oficina que puede utilizarse para filtrar datos del informe. Si el informe acepta parámetros basados en estos u otros datos de columnas disponibles, puede asignar el parámetro a la columna adecuada.  
@@ -78,7 +78,7 @@ ms.locfileid: "66100639"
   
  Si realiza cualquiera de estos cambios, deberá actualizar la suscripción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar una suscripción controlada por datos](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  

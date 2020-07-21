@@ -1,5 +1,6 @@
 ---
-title: Las tablas de replicación (Transact-SQL) | Microsoft Docs
+title: Tablas de replicación (Transact-SQL) | Microsoft Docs
+description: Las tablas del sistema de replicación admiten una topología de replicación. La replicación agrega tablas del sistema a una base de datos configurada como publicador o suscriptor.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - system tables [SQL Server], replication
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 709f99ce8e45e9a362aa8ef1aa0d5607d3b79172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67910234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751584"
 ---
 # <a name="replication-tables-transact-sql"></a>Tablas de replicación (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Las tablas del sistema de replicación son las que permiten el uso de una topología de replicación. Cuando una base de datos de usuario se configura como publicador o suscriptor, la replicación agrega tablas del sistema a la base de datos. Estas tablas se quitan cuando se quita una base de datos de usuario de una topología de replicación. Normas generales sobre uso de las tablas del sistema, vea [las tablas del sistema &#40;Transact-SQL&#41;](system-tables-transact-sql.md).  
+  Las tablas del sistema de replicación son las que permiten el uso de una topología de replicación. Cuando una base de datos de usuario se configura como publicador o suscriptor, la replicación agrega tablas del sistema a la base de datos. Estas tablas se quitan cuando se quita una base de datos de usuario de una topología de replicación. Para obtener instrucciones generales sobre el uso de tablas del sistema, vea [tablas del sistema &#40;&#41;de Transact-SQL ](system-tables-transact-sql.md).  
   
 ## <a name="replication-tables"></a>Tablas de replicación  
  A continuación, se ofrece una lista de las tablas del sistema utilizadas en la replicación, agrupadas por base de datos.  
@@ -34,7 +35,7 @@ ms.locfileid: "67910234"
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;Transact-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;&#41;de Transact-SQL](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
 ### <a name="replication-tables-in-the-msdb-database"></a>Tablas de replicación de la base de datos msdb  
@@ -73,7 +74,7 @@ ms.locfileid: "67910234"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- Estas tablas en la base de datos de distribución se utilizan para replicar datos desde el que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. Para obtener más información, consulte [publicadores que no son de SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
+ Estas tablas de la base de datos de distribución se utilizan para replicar datos de un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [publicadores que no son de SQL Server](../../relational-databases/replication/non-sql/non-sql-server-publishers.md).  
   
 |||  
 |-|-|  
@@ -91,7 +92,7 @@ ms.locfileid: "67910234"
  
 |||  
 |-|-|  
-|[conflict_\<schema>_\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \<schema> _\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -138,8 +139,8 @@ ms.locfileid: "67910234"
 |[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
+ [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

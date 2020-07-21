@@ -1,5 +1,5 @@
 ---
-title: Comando (ADO - sintaxis WFC) | Microsoft Docs
+title: Comando (ADO-sintaxis WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,17 +11,17 @@ apitype: COM
 helpviewer_keywords:
 - Command collection [ADO], ADO/WFC syntax
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4722316cc92567000294c57089afd8840bea1bcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919827"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760451"
 ---
 # <a name="command-ado---wfc-syntax"></a>Comando (ADO - sintaxis WFC)
-## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  
   
 ### <a name="constructor"></a>Constructor  
   
@@ -44,7 +44,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- El **executeUpdate** método es un caso especial de método que llama a ADO subyacente **ejecutar** método con determinados parámetros. El **executeUpdate** método no admite la devolución de un **Recordset** objeto, por lo que la **ejecutar** del método *opciones* parámetro es puede modificar con **AdoEnums.ExecuteOptions.NORECORDS**. Después de la **ejecutar** método se completa, su actualizada *RecordsAffected* parámetro se pasa a la **executeUpdate** método, que, por último, se devuelve como un **int**.  
+ El método **ExecuteUpdate** es un método especial de case que llama al método **Execute** de ADO subyacente con ciertos parámetros. El método **ExecuteUpdate** no admite la devolución de un objeto de **conjunto de registros** , por lo que el parámetro *Options* del método **Execute** se modifica con **AdoEnums. ExecuteOptions. NORECORDS**. Una vez completado el método **Execute** , el parámetro *RecordsAffected* actualizado se vuelve a pasar al método **ExecuteUpdate** , que finalmente se devuelve como un valor **int**.  
   
 ### <a name="properties"></a>Propiedades  
   
@@ -69,5 +69,5 @@ public com.ms.wfc.data.Parameters getParameters()
 public AdoProperties getProperties()  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

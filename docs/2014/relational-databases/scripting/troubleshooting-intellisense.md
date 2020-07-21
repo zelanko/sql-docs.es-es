@@ -1,6 +1,6 @@
 ---
-title: Solución de problemas IntelliSense (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Solución de problemas IntelliSense
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f4eb3c9d7ad23dc414db71dfe12912f8e89a082
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997915"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>Solución de problemas IntelliSense (SQL Server Management Studio)
   Hay algunos casos en que es posible que las opciones de IntelliSense no funcionen como se espera.  

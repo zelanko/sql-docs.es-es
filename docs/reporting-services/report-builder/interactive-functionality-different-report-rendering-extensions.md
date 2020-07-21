@@ -1,5 +1,6 @@
 ---
 title: Funcionalidad interactiva para diferentes extensiones de representación de informes | Microsoft Docs
+description: Reporting Services permite interactuar con un informe paginado en tiempo de ejecución. En este artículo se describe cómo funcionan las características interactivas en formatos concretos.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8df9a5b08f4aa8883bb9351fa59df147e80bac95
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580696"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80342772"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características para interactuar con un informe paginado en tiempo de ejecución. No todos los formatos de representación de informes son compatibles con todas las características interactivas. Use la tabla siguiente para comprender el funcionamiento de las características interactivas en los diferentes formatos.  

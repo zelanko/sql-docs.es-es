@@ -11,15 +11,14 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 228034102b460b7149d51d3dfe798949a9527689
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062101"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439742"
 ---
 # <a name="add-an-annotation-to-a-package"></a>agregar una anotación a un paquete
   Este procedimiento describe el método para agregar una anotación a un paquete.  
@@ -47,7 +46,7 @@ ms.locfileid: "66062101"
   
 8.  Para guardar el paquete actualizado, en el menú **Archivo** , haga clic en **Guardar todo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar anotaciones en paquetes](use-annotations-in-packages.md)  
   
   

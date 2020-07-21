@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71f51e9076b4f5c4be8a0875df323deeaaf80068
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107131"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629675"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espacio en disco para operaciones DDL de índice
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El espacio en disco es una consideración importante a la hora de crear, volver a generar o quitar índices. Un espacio en disco inadecuado puede degradar el rendimiento e incluso provocar errores en las operaciones de índice. En este tema se proporciona información general que puede ayudar a determinar la cantidad de espacio necesario para las operaciones de lenguaje de definición de datos (DDL).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68107131"
  Las operaciones de índice en línea utilizan versiones de fila para aislar la operación de índice de los efectos de modificaciones efectuadas por otras transacciones. Así se evita la necesidad de solicitar que se compartan bloqueos en filas que se han leído. Las operaciones simultáneas de eliminación y actualización de usuarios durante las operaciones de índice en línea requieren espacio para registros de versión en **tempdb**. Para obtener más información, vea [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
+ [Ejemplo de espacio en disco del índice](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Espacio en disco del registro de transacciones para operaciones de índice](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 811ba74855879dac573695a45564631b90ef3f77
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065938"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301966"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Modifica una clave de cifrado de columna en una base de datos agregando o quitando un valor cifrado. Una clave de cifrado de columna puede tener hasta dos valores de cara a la rotación de la correspondiente clave maestra de columna. Las claves de cifrado de columna se usan al cifrar columnas con la característica [Always Encrypted &#40;motor de base de datos&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Antes de agregar un valor de clave de cifrado de columna, debe definir la clave maestra de columna que se usó para cifrar el valor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o la instrucción [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
+  Modifica una clave de cifrado de columna en una base de datos agregando o quitando un valor cifrado. Una clave de cifrado de columna puede tener hasta dos valores de cara a la rotación de la correspondiente clave maestra de columna. La clave de cifrado de columna se usa para cifrar columnas mediante [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Antes de agregar un valor de clave de cifrado de columna, debe definir la clave maestra de columna que se usó para cifrar el valor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o la instrucción [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  
@@ -45,7 +45,10 @@ ALTER COLUMN ENCRYPTION KEY key_name
     ) [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *key_name*  
  Clave de cifrado de columna que va a cambiar.  
   
@@ -61,14 +64,17 @@ ALTER COLUMN ENCRYPTION KEY key_name
 > [!WARNING]  
 >  En esta instrucción no se deben pasar nunca valores de clave de cifrado de columna con texto simple. Si lo hace, perderá las ventajas que ofrece esta característica.  
   
-## <a name="remarks"></a>Notas  
- Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. Cuando es necesario rotar una clave maestra de columna (la clave maestra de columna actual debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, que se cifra con la nueva clave maestra de columna. Este flujo de trabajo le permite garantizar que las aplicaciones cliente pueden acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para tener acceso a datos confidenciales. Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits. Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna.  
+## <a name="remarks"></a>Observaciones  
+Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. Cuando es necesario rotar una clave maestra de columna (la clave maestra de columna actual debe reemplazarse con la nueva clave maestra de columna), puede agregar un nuevo valor de la clave de cifrado de columna, que se cifra con la nueva clave maestra de columna. Este flujo de trabajo le permite garantizar que las aplicaciones cliente pueden acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra podrá usar el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para tener acceso a datos confidenciales. Los algoritmos de cifrado, compatibles con Always Encrypted, necesitan que el valor de texto simple tenga 256 bits. 
+ 
+Se recomienda usar herramientas, como SQL Server Management Studio (SSMS) o PowerShell para rotar las claves maestras de columna. Consulte [Rotación de claves de Always Encrypted mediante SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) y [Rotación de claves de Always Encrypted con de PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).
+
+Un valor cifrado se debe generar usando un proveedor de almacén de claves que encapsule el almacén de claves que contiene la clave maestra de columna.  
 
  Las claves maestras de columna se rotan por las siguientes razones:
 - Puede que la normativa de cumplimiento exija que las claves se roten periódicamente.
 - Una clave maestra de columna está en riesgo y es necesario rotarla por motivos de seguridad.
-- Para habilitar o deshabilitar el uso compartido de claves de cifrado de columna con enclave seguro en el lado servidor. Por ejemplo, si la clave maestra de columna actual no admite cálculos de enclave (no se ha definido con la propiedad ENCLAVE_COMPUTATIONS) y quiere habilitar estos cálculos en columnas protegidas con una clave de cifrado de columna que se cifra con la clave maestra de columna, deberá reemplazar la clave maestra de columna por la nueva clave con la propiedad ENCLAVE_COMPUTATIONS. Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-
+- Para habilitar o deshabilitar el uso compartido de claves de cifrado de columna con enclave seguro en el lado servidor. Por ejemplo, si la clave maestra de columna actual no admite cálculos de enclave (no se ha definido con la propiedad ENCLAVE_COMPUTATIONS) y quiere habilitar estos cálculos en columnas protegidas con una clave de cifrado de columna que se cifra con la clave maestra de columna, deberá reemplazar la clave maestra de columna por la nueva clave con la propiedad ENCLAVE_COMPUTATIONS. [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) y [Administración de claves para Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md).
 
 Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) y [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) para saber más sobre las claves de cifrado de columna.  
   
@@ -80,7 +86,7 @@ Eche un vistazo a [sys.columns &#40;Transact-SQL&#41;](../../relational-database
 ### <a name="a-adding-a-column-encryption-key-value"></a>A. Agregar un valor de clave de cifrado de columna  
  En el siguiente ejemplo se modifica una clave de cifrado de columna denominada `MyCEK`.  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 ADD VALUE  
 (  
@@ -95,7 +101,7 @@ GO
 ### <a name="b-dropping-a-column-encryption-key-value"></a>B. Quitar un valor de clave de cifrado de columna  
  En el siguiente ejemplo se quita un valor para modificar una clave de cifrado de columna denominada `MyCEK`.  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 DROP VALUE  
 (  
@@ -112,5 +118,8 @@ GO
  [sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Información general sobre la administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Administración de claves para Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL row count [ODBC]
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ddfa668a95345117aee3abfec638d50f49f2575b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6c4ac1e4d780285e80fd22f3adebb042c20d8e78
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063341"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81300676"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>Recuento de filas de SQL (el controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel básico  
+ Conformidad con la API de ODBC: nivel básico  
   
- Devuelve el número de filas afectadas por la última [actualización](../../odbc/microsoft/update-sql-command.md), [insertar](../../odbc/microsoft/insert-sql-command.md), o [eliminar](../../odbc/microsoft/delete-sql-command.md) instrucción.  
+ Devuelve el número de filas afectadas por la última instrucción [Update](../../odbc/microsoft/update-sql-command.md), [Insert](../../odbc/microsoft/insert-sql-command.md)o [Delete](../../odbc/microsoft/delete-sql-command.md) .  
   
- Para obtener más información, consulte [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) en la *Referencia del programador de ODBC*.

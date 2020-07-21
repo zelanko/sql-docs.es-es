@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: d2dcc2f69223c4d4c3a700ade7d7b6da5417f3b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71682076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732870"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Un tipo de datos para las variables o para los parámetros de resultado de los procedimientos almacenados que contiene una referencia a un cursor.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las operaciones a las que pueden hacer referencia las variables y los parámetros que tienen un tipo de datos **cursor** son:
 -   Las instrucciones DECLARE *\@variable_local* y SET *\@variable_local*.  
 -   Las instrucciones del cursor OPEN, FETCH, CLOSE y DEALLOCATE.  
@@ -40,7 +40,7 @@ Cualquier variable creada con el tipo de datos **cursor** acepta valores NULL.
   
 El tipo de datos **cursor** no se puede usar para una columna en una instrucción CREATE TABLE.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)  
 [Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  

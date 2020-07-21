@@ -1,6 +1,6 @@
 ---
-title: Cambiar el nombre de las soluciones y los elementos de un proyecto | Microsoft Docs
-ms.custom: ''
+title: Cambiar el nombre de las soluciones y los elementos de un proyecto
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 028ab587298879bc3bbb8be444e8d5094921fab2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 03f10d193373eff22c913598d3a67f281e1faa3d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264719"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241447"
 ---
 # <a name="rename-solutions-and-project-items"></a>Cambiar el nombre de las soluciones y los elementos de un proyecto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

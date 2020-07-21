@@ -14,15 +14,14 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e77b9f442ae8478c57d5b0e68955b541eda38aff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831773"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433192"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -56,7 +55,7 @@ ms.locfileid: "62831773"
   
  Si las instrucciones SQL se almacenan en un archivo, la tarea utiliza un administrador de conexiones de archivos para conectar con el archivo. Para obtener más información, consulte [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
- En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede utilizar el cuadro de diálogo **Editor de la tarea Ejecutar SQL** para escribir instrucciones SQL, o utilizar el **Generador de consultas**, una interfaz gráfica de usuario para crear consultas SQL. Para más información, vea [Editor de la tarea Ejecutar SQL &#40;página General&#41;](../execute-sql-task-editor-general-page.md) y [Generador de consultas](../query-builder.md).  
+ En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede utilizar el cuadro de diálogo **Editor de la tarea Ejecutar SQL** para escribir instrucciones SQL, o utilizar el **Generador de consultas**, una interfaz gráfica de usuario para crear consultas SQL. Para más información, vea [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) y [Generador de consultas](../query-builder.md).  
   
 > [!NOTE]  
 >  Es posible que la tarea Ejecutar SQL no pueda analizar correctamente instrucciones SQL válidas escritas fuera de dicha tarea.  
@@ -127,11 +126,11 @@ ms.locfileid: "62831773"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página General&#41;](../execute-sql-task-editor-general-page.md)  
+-   [Editor de la tarea ejecutar SQL &#40;página general&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página asignación de parámetros&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [&#40;página de asignación de parámetros del editor de la tarea ejecutar SQL&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Editor de la tarea ejecutar SQL &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62831773"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Asignar parámetros de consulta a variables en una tarea Ejecutar SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
 -   [Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   

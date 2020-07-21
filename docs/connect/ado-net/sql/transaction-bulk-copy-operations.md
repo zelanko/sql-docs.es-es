@@ -9,19 +9,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c2e855407edd6b2af51ae5710cd6601e9aa25654
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 82e7e9b5dcae2f3878104757823112022064d7e6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451910"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80918516"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Operaciones de transacción y de copia masiva
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Descargar ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Las operaciones de copia masiva se pueden realizar como operaciones aisladas o como parte de una transacción en varios pasos. Esta última opción permite realizar más de una operación de copia masiva en la misma transacción, así como realizar otras operaciones de base de datos (como inserciones, actualizaciones y eliminaciones) mientras todavía se puede confirmar o revertir la transacción entera.  
   
@@ -40,7 +40,7 @@ La operación de copia masiva se ejecuta con la propiedad <xref:Microsoft.Data.S
 [!code-csharp[DataWorks SqlBulkCopyOpeions_Default#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_Default.cs#1)]
   
 ## <a name="performing-a-dedicated-bulk-copy-operation-in-a-transaction"></a>Realización de una operación de copia masiva dedicada en una transacción  
-De forma predeterminada, una operación de copia masiva es su propia transacción. Si desea realizar una operación de copia masiva dedicada, cree una nueva instancia de <xref:Microsoft.Data.SqlClient.SqlBulkCopy> con una cadena de conexión o use un objeto de <xref:Microsoft.Data.SqlClient.SqlConnection> existente sin una transacción activa. En cada escenario, la operación de copia masiva crea y confirma o revierte la transacción.  
+De forma predeterminada, una operación de copia masiva es su propia transacción. Si desea realizar una operación de copia masiva dedicada, cree una nueva instancia de <xref:Microsoft.Data.SqlClient.SqlBulkCopy> con una cadena de conexión o use un objeto <xref:Microsoft.Data.SqlClient.SqlConnection> existente sin una transacción activa. En cada escenario, la operación de copia masiva crea y confirma o revierte la transacción.  
   
 Puede especificar explícitamente la opción <xref:Microsoft.Data.SqlClient.SqlBulkCopyOptions.UseInternalTransaction> en el constructor de la clase <xref:Microsoft.Data.SqlClient.SqlBulkCopy> para provocar de forma explícita una operación de copia masiva que se ejecute en su propia transacción, lo que da lugar a que cada lote de la operación de copia masiva se ejecute en una transacción independiente.  
   
@@ -55,9 +55,9 @@ La aplicación de consola siguiente es similar al ejemplo anterior, con una exce
 [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## <a name="using-existing-transactions"></a>Uso de transacciones existentes  
-Puede especificar un objeto de <xref:Microsoft.Data.SqlClient.SqlTransaction> existente como un parámetro en un constructor de <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. En esta situación, la operación de copia masiva se realiza en una transacción existente y el estado de la transacción no sufre ningún cambio (es decir, no se confirma ni se anula). Esto permite que una aplicación incluya la operación de copia masiva en una transacción con otras operaciones de base de datos. Sin embargo, si no se especifica un objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> y se pasa una referencia nula, y la conexión tiene una transacción activa, se produce una excepción.  
+Puede especificar un objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> existente como un parámetro en un constructor de <xref:Microsoft.Data.SqlClient.SqlBulkCopy>. En esta situación, la operación de copia masiva se realiza en una transacción existente y el estado de la transacción no sufre ningún cambio (es decir, no se confirma ni se anula). Esto permite que una aplicación incluya la operación de copia masiva en una transacción con otras operaciones de base de datos. Sin embargo, si no se especifica un objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> y se pasa una referencia nula, y la conexión tiene una transacción activa, se produce una excepción.  
   
-Si necesita revertir toda la operación de copia masiva porque se produce un error, o si la copia masiva debe ejecutarse como parte de un proceso más grande que se puede revertir, puede proporcionar un objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> al constructor <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.  
+Si se produce un error y necesita revertir toda la operación de copia masiva, o si la copia masiva debe ejecutarse como parte de un proceso más grande que se pueda revertir, puede proporcionar un objeto <xref:Microsoft.Data.SqlClient.SqlTransaction> al constructor de <xref:Microsoft.Data.SqlClient.SqlBulkCopy>.  
   
 La siguiente aplicación de consola es similar al primer ejemplo (sin transacciones), con una excepción: en este ejemplo, la operación de copia masiva se incluye en una transacción externa más grande. Cuando se produce la infracción de la clave principal, toda la transacción se revierte y no se agrega ninguna fila a la tabla de destino.  
   

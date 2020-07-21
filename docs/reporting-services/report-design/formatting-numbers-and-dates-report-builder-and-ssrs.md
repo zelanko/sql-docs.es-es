@@ -1,5 +1,5 @@
 ---
-title: Aplicar formato a números y fechas (Generador de informes y SSRS) | Microsoft Docs
+title: Aplicación de formato a números y fechas (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2802da2b5b227f3cdb4e4ea3bfa59ca15f5d8d2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db780abef8f2d0078ce398e2ab0d30f29ac82a6b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576088"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079823"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Aplicar formato a números y fechas (Generador de informes y SSRS)
   Para dar formato a los números y fechas de las regiones de datos, seleccione un formato en la página **Número** del cuadro de diálogo **Propiedades** de la región de datos correspondiente.  
@@ -50,7 +50,7 @@ ms.locfileid: "65576088"
   
 -   Si especifica una cadena de formato no válida, el texto con formato se interpreta como una cadena literal que invalida el formato.  
   
--   Si va a dar formato a una mezcla de números y caracteres en el mismo cuadro de texto, considere la posibilidad de usar un marcador de posición para dar formato al número de forma independiente del resto del texto. Para obtener más información, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Si se especifica una cadena de formato no válida para la propiedad Format en el cuadro de texto, dicha cadena no se tendrá en cuenta. Si se especifica una cadena de formato no válida para la propiedad Format en el gráfico o en el medidor, dicha cadena de formato se interpreta como una cadena y no se aplicará el formato.  
+-   Si va a dar formato a una mezcla de números y caracteres en el mismo cuadro de texto, considere la posibilidad de usar un marcador de posición para dar formato al número de forma independiente del resto del texto. Para más información, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md). Si se especifica una cadena de formato no válida para la propiedad Format en el cuadro de texto, dicha cadena no se tendrá en cuenta. Si se especifica una cadena de formato no válida para la propiedad Format en el gráfico o en el medidor, dicha cadena de formato se interpreta como una cadena y no se aplicará el formato.  
   
 -   Si selecciona **Moneda** en **Categoría** y activa **Mostrar valores en**, puede seleccionar **Miles**, **Millones**o **Miles de millones** para mostrar los números mediante formatos financieros. Por ejemplo, si el valor del campo es 1.789.905.394, y selecciona **Miles de millones** y especifica 2 decimales, el valor mostrado en el informe será 1,78.  
   

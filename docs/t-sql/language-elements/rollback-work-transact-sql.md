@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31a95060be1802cbbef306d039f1f2da61a972a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706196"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revierte una transacción especificada por el usuario al principio de la misma.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "68072353"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ROLLBACK [ WORK ]  
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta instrucción funciona de forma idéntica a ROLLBACK TRANSACTION, con la diferencia de que ROLLBACK TRANSACTION acepta nombres de transacción definidos por el usuario. Se especifique o no la palabra clave opcional WORK, esta sintaxis de ROLLBACK es compatible con ISO.  
   
  Al anidar transacciones, ROLLBACK WORK siempre revierte las transacciones hasta la instrucción BEGIN TRANSACTION más externa y disminuye la función del sistema @@TRANCOUNT a 0.  

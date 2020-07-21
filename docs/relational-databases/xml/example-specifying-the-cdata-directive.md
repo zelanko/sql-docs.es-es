@@ -1,5 +1,6 @@
 ---
 title: 'Ejemplo: Especificación de la directiva CDATA | Microsoft Docs'
+description: Vea un ejemplo de cómo especificar la directiva CDATA para encapsular los datos especificados en una sección CDATA.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e0c768d68c1bf7bb8d5c08b3967b4172fbdca36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632624"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Ejemplo: Especificación de la directiva CDATA
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Si se establece la directiva en **CDATA**, los datos contenidos no se codifican por entidad, pero se colocan en la sección CDATA. Los atributos **CDATA** no deben tener nombre.  
   
  La siguiente consulta engloba la descripción resumida de modelos de productos en una sección CDATA.  

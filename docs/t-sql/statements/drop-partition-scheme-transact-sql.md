@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0343ae4c796f5b10c9e59159b2aa26a832422f2c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766291"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un esquema de partición de la base de datos actual. Los esquemas de partición se crean mediante [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) y se modifican mediante [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68044018"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
@@ -46,7 +46,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  Es el nombre del esquema de partición que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los esquemas de partición solo se pueden quitar si no hay ninguna tabla ni índice que utilice el esquema de partición actualmente. Si hay alguna tabla o índice que utilice el esquema de partición, DROP PARTITION SCHEME devolverá un error. DROP PARTITION SCHEME no quita los grupos de archivos.  
   
 ## <a name="permissions"></a>Permisos  

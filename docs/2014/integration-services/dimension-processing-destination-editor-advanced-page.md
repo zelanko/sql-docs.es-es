@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1962b2e2a59c8fabfb2ee1dcb9691863354c1504
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059485"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429432"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de dimensiones (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para configurar el control de errores.  
@@ -28,12 +27,12 @@ ms.locfileid: "66059485"
   
 ## <a name="options"></a>Opciones  
  **Utilizar la configuración de error predeterminada**  
- Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Este valor es `True` de forma predeterminada.  
+ Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . De forma predeterminada, este valor es `True`.  
   
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convierte el valor de clave no aceptable en el valor `UnknownMember`.|  
 |**DiscardRecord**|Descarta el registro.|  
@@ -50,7 +49,7 @@ ms.locfileid: "66059485"
  **Acción ante el error**  
  Especifica la acción que se realizará cuando se alcance el umbral de error (si ha seleccionado **Detenerse ante errores**).  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
@@ -58,7 +57,7 @@ ms.locfileid: "66059485"
  **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -67,25 +66,25 @@ ms.locfileid: "66059485"
  **Clave duplicada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
 |**ReportAndStop**|Informa del error y detiene el procesamiento.|  
   
- **Clave NULL convertida en desconocida**  
+ **Clave null convertida en Unknown**  
  Especifica la acción que debe llevarse a cabo cuando una clave NULL se ha convertido en el valor `UnknownMember`. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
 |**ReportAndStop**|Informa del error y detiene el procesamiento.|  
   
- **Clave NULL no permitida**  
+ **Clave null no permitida**  
  Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -97,7 +96,7 @@ ms.locfileid: "66059485"
  **Examinar (...)**  
  Seleccione una ruta de acceso para el registro de errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  

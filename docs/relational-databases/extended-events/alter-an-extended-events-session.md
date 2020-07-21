@@ -1,6 +1,6 @@
 ---
-title: Modificar una sesión de eventos extendidos | Microsoft Docs
-ms.custom: ''
+title: Modificar una sesión de eventos extendidos
+description: Use el Asistente para eventos extendidos de SQL Server para modificar una sesión de eventos extendidos. Los cambios que puede realizar dependen de si la sesión está activa o inactiva.
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,20 +11,20 @@ ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3c0b3584edd804768bbbe94bdc570448ab6e653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26c54a8100f697275e87826e949f8b83276507a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021923"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85778455"
 ---
 # <a name="alter-an-extended-events-session"></a>Modificar una sesión de eventos extendidos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Después de crear una sesión de eventos extendidos, puede modificarla según sus necesidades con el **Asistente para eventos extendidos de SQL Server**.  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Introducción  
  No puede modificar un destino para las sesiones activas e inactivas, y no puede cambiar las configuraciones de propiedades avanzadas de una sesión activa.  
   
  Puede realizar las siguientes modificaciones en las sesiones de eventos activas e inactivas:  

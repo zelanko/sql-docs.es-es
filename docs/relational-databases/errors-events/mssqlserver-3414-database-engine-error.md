@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: f25852f9-b91c-4356-b817-78bec9ec8db4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f02dafba3f6fbb8742c8b81ded8fccf39f0509f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2f4f14c2a6fe2b732d3fdcf4d507c7c6e59bd519
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723521"
 ---
-# <a name="mssqlserver3414"></a>MSSQLSERVER_3414
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_3414"></a>MSSQLSERVER_3414
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|3414|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|3414|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|REC_GIVEUP|  
 |Texto del mensaje|Se ha producido un error durante la recuperación que impide reiniciar la base de datos '%.*ls' (id. de base de datos %d). Diagnostique los errores de recuperación y corríjalos, o restaure desde una copia de seguridad en buen estado. Si los errores no se han corregido o se espera que haya errores, póngase en contacto con el soporte técnico.|  

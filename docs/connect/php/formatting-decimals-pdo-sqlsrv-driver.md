@@ -12,33 +12,33 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68265150"
 ---
-# <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)
+# <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para conservar la precisión, los [tipos decimales o numéricos](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) siempre se capturan como cadenas con precisión y escalas exactas. Si un valor es menor que 1, falta el cero inicial. Es lo mismo que los campos Money y smallmoney, ya que son campos decimales con una escala fija igual a 4.
+Para conservar la precisión, los [tipos decimales o numéricos](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) siempre se capturan como cadenas con precisiones y escalas exactas. Si cualquier valor es inferior a 1, falta el cero inicial. Lo mismo ocurre con los campos money y smallmoney, ya que son campos decimales con una escala fija igual a 4.
 
-## <a name="add-leading-zeroes-if-missing"></a>Agregar ceros a la izquierda si falta
-A partir de la versión 5.6.0 del, el atributo `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` Connection o Statement permite al usuario dar formato a las cadenas decimales. Este atributo espera un valor booleano (true o false) y solo afecta al formato de los valores decimales o numéricos de los resultados capturados. En otras palabras, este atributo no tiene ningún efecto en otras operaciones, como la inserción o actualización.
+## <a name="add-leading-zeroes-if-missing"></a>Adición de ceros iniciales si faltan
+A partir de la versión 5.6.0, el atributo de instrucción o conexión `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` permite al usuario aplicar formato a las cadenas decimales. Este atributo espera un valor booleano (true o false) y solo afecta al formato de los valores decimales o numéricos de los resultados capturados. Es decir, este atributo no tiene ningún efecto en otras operaciones como la inserción o la actualización.
 
 De forma predeterminada, `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` es **false**. Si se establece en true, se agregarán los ceros iniciales a las cadenas decimales para cualquier valor decimal inferior a 1.
 
-## <a name="configure-number-of-decimal-places"></a>Configurar el número de posiciones decimales
-Con `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` activado, otro atributo de conexión o instrucción, `PDO::SQLSRV_ATTR_DECIMAL_PLACES`, permite a los usuarios configurar el número de posiciones decimales al mostrar los datos de Money y smallmoney. Acepta valores enteros en el intervalo de [0, 4] y el redondeo puede producirse cuando se muestra. Sin embargo, los datos monetarios subyacentes siguen siendo los mismos.
+## <a name="configure-number-of-decimal-places"></a>Configuración del número de posiciones decimales
+Con `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` activados, otro atributo de instrucción o conexión, `PDO::SQLSRV_ATTR_DECIMAL_PLACES`, permite a los usuarios configurar el número de posiciones decimales al mostrar los datos money y smallmoney. Acepta valores enteros en el intervalo de [0, 4] y el redondeo puede producirse al mostrarse. Sin embargo, los datos money subyacentes no cambian.
 
-Los atributos de instrucción siempre invalidan la configuración de conexión correspondiente. Tenga en cuenta `PDO::SQLSRV_ATTR_DECIMAL_PLACES` que la opción **solo** afecta a los `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` datos Money y debe establecerse en true. De lo contrario, el formato se desactiva `PDO::SQLSRV_ATTR_DECIMAL_PLACES` independientemente de la configuración.
+Los atributos de instrucción siempre invalidan la configuración de conexión correspondiente. Tenga en cuenta que la opción `PDO::SQLSRV_ATTR_DECIMAL_PLACES` **solo** afecta a los datos money y `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` debe establecerse en true. De lo contrario, el formato se desactiva independientemente del valor `PDO::SQLSRV_ATTR_DECIMAL_PLACES`.
 
 > [!NOTE]
-> Dado que los campos Money o smallmoney tienen una escala `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 4, se omitirá la configuración en cualquier número negativo o en cualquier valor superior a 4. No se recomienda usar ningún dato de moneda con formato como entradas para cualquier cálculo.
+> Puesto que los campos money y smallmoney tienen una escala 4, se omitirá el establecimiento de `PDO::SQLSRV_ATTR_DECIMAL_PLACES` en cualquier número negativo o cualquier valor superior a 4. No se recomienda usar los datos money con formato como entradas a cualquier cálculo.
 
 ### <a name="to-set-the-connection-attributes"></a>Para establecer los atributos de conexión
 
--   Establecer atributos en el punto de conexión:
+-   Establezca atributos en el punto de conexión:
 
     ```php
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
@@ -47,7 +47,7 @@ Los atributos de instrucción siempre invalidan la configuración de conexión c
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
     ```
 
--   Establecer atributos después de la conexión:
+-   Establezca atributos después de la conexión:
 
     ```php
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
@@ -55,8 +55,8 @@ Los atributos de instrucción siempre invalidan la configuración de conexión c
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## <a name="example---format-money-data"></a>Ejemplo: formato de datos Money
-En el ejemplo siguiente se muestra cómo capturar datos de Money mediante [PDOStatement:: bindColumn](../../connect/php/pdostatement-bindcolumn.md):
+## <a name="example---format-money-data"></a>Ejemplo: dar formato a datos money
+En el siguiente ejemplo se muestra cómo capturar los datos money mediante [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md):
 
 ```php
 <?php
@@ -81,7 +81,7 @@ unset($conn);
 ```
 
 ## <a name="example---override-connection-attributes"></a>Ejemplo: invalidar atributos de conexión
-En el ejemplo siguiente se muestra cómo invalidar los atributos de conexión:
+En el siguiente ejemplo se muestra cómo invalidar los atributos de conexión:
 
 ```php
 <?php

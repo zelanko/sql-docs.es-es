@@ -1,5 +1,5 @@
 ---
-title: Informes (Ayuda F1) | Microsoft Docs
+title: Informe ayuda de F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104593"
 ---
 # <a name="report-f1-help"></a>Ayuda F1 del informe
@@ -25,7 +25,7 @@ ms.locfileid: "66104593"
   
  Para obtener acceso a estos temas desde el cuadro de diálogo **Propiedades del informe** , haga clic en **Ayuda**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Informes de Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

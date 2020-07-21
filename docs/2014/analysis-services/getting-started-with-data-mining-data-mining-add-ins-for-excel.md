@@ -1,5 +1,5 @@
 ---
-title: Introducción a minería de datos (complementos de minería de datos para Excel de datos) | Microsoft Docs
+title: Introducción con minería de datos (complementos de minería de datos para Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1578e071f0ca0f511e6443f7b4462520adcda6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544357"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introducción a la minería de datos (Complementos de minería de datos para Excel)
   La minería de datos es el proceso de detectar patrones significativos en los datos. La minería de datos es un complemento natural al proceso de explorar y entender los datos a través de BI tradicional. Los algoritmos automáticos pueden procesar cantidades de datos muy grandes y detectar patrones y tendencias que, de lo contrario, estarían ocultos.  
   
- Para realizar la minería de datos, recopila datos que es relevantes para una pregunta específica, como "¿quién son mis clientes?" o "¿qué productos adquirieron?" y, a continuación, aplique un algoritmo para encontrar correlaciones estadísticas en los datos. Los patrones y las tendencias que se detectan en el análisis se almacenan en forma de modelo de minería de datos. Después puede aplicar el modelo de minería de datos a nuevos datos en escenarios empresariales como los siguientes:  
+ Para realizar la minería de datos, puede recopilar datos relevantes para una pregunta específica, como "¿quiénes son mis clientes?". o "¿Qué productos se compraron?" y, a continuación, aplique un algoritmo para buscar correlaciones estadísticas en los datos. Los patrones y las tendencias que se detectan en el análisis se almacenan en forma de modelo de minería de datos. Después puede aplicar el modelo de minería de datos a nuevos datos en escenarios empresariales como los siguientes:  
   
 -   Usar tendencias anteriores para predecir las ventas del siguiente trimestre, los requisitos de inventario o la satisfacción de los clientes.  
   
@@ -51,19 +50,19 @@ ms.locfileid: "66080937"
 ## <a name="define-your-goal"></a>Definir el objetivo  
  Antes de empezar, dedique un par de minutos a considerar cuál es la pregunta a la que verdaderamente quiere dar una respuesta. La exploración en sí misma es reveladora, pero si desea aplicar sus hallazgos a nuevos datos, debe ser capaz de indicar claramente qué espera que genere el modelo y cómo medirá si el modelo logra los objetivos.  
   
- Por ejemplo, en lugar de un objetivo de "Buscar nuevos clientes", aclarar su objetivo a algo más concreto, como "identificar la demografía de clientes que están probables que compren nuestro producto, con una probabilidad de al menos un 65%".  
+ Por ejemplo, en lugar de un objetivo de "buscar nuevos clientes", aclare su objetivo a algo más concreto, como "identificar los datos demográficos de los clientes que es probable que compren nuestro producto, con una probabilidad de al menos el 65%".  
   
--   El conjunto de datos debe contener al menos un atributo de "resultado" que puede usar para el entrenamiento y predicción. Si no existe ese tipo de atributo, puede etiquetar manualmente algunos datos de entrenamiento o usar otras columnas para crear un proxy para el resultado.  
+-   El conjunto de resultados debe contener al menos un atributo "result" que pueda usar para el entrenamiento y la predicción. Si no existe ese tipo de atributo, puede etiquetar manualmente algunos datos de entrenamiento o usar otras columnas para crear un proxy para el resultado.  
   
-     Por ejemplo, si desea predecir "las mejores perspectivas", se debe aplicar alguna regla de negocios con antelación para etiquetar los clientes existentes, por lo que puede aprender la minería de datos de los ejemplos que proporciona.  
+     Por ejemplo, si desea predecir "las mejores perspectivas", debe aplicar alguna regla de negocios antes de etiquetar a los clientes existentes para que la minería de datos pueda aprender de los ejemplos proporcionados.  
   
 -   Si trabaja con un valor que cambia con el paso del tiempo y desea predecir las tendencias futuras, piense en cuál va a ser la granularidad de los resultados que necesita. ¿Desea que las predicciones se realicen diaria, mensual o anualmente? Los datos tienen que analizarse con las mismas unidades que desea predecir.  
   
-     Con los patrones cíclicos, si no obtiene buenos resultados con datos diarios, pruebe distintos intervalos de tiempo o pruebe a usar días de la semana, meses o incluso días no laborables.  
+     Con patrones cíclicos, si no obtiene buenos resultados con datos diarios, pruebe diferentes intervalos de tiempo o intente usar días de la semana, meses o incluso festivos.  
   
 -   Antes de iniciar un asistente para encontrar correlaciones nuevas en los datos, examine una vez más los datos y considere qué clase de relaciones existentes podría haber en el conjunto de datos. ¿Hay variables poco claras? ¿Hay duplicados o servidores proxy?  
   
--   ¿Cuáles son las métricas por el que se va a evaluar el éxito del modelo? ¿Cómo sabrá que el modelo es "suficientemente bueno"?  
+-   ¿Cuáles son las métricas por las que se evaluará el éxito del modelo? ¿Cómo sabrá que el modelo es "lo suficientemente bueno"?  
   
 -   ¿Desea realizar predicciones a partir del modelo de minería de datos o sólo buscar asociaciones y patrones interesantes?  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66080937"
   
  Dedique un minuto a ver la distribución de valores e identificar posibles problemas como valores o marcadores de posición ausentes.  
   
- Si va a realizar la minería de datos en un conjunto de datos que era demasiado grande y complejo que no se pudo analizar con otros métodos, considere la posibilidad de muestreo o la reducción de datos.  
+ Si tiene previsto realizar la minería de datos en un conjunto de datos demasiado grande o complejo que no se pudo analizar con otros métodos, considere la posibilidad de usar el muestreo o la reducción de los datos.  
   
 -   ¿Cómo se distribuyen los datos?  
   
@@ -86,12 +85,12 @@ ms.locfileid: "66080937"
   
  Una vez completado el modelo, dedique un tiempo a revisar los resultados e identifique maneras de modificar datos u obtener mejores resultados. Es excepcionalmente raro que el primer modelo proporcione todas las respuestas. La minería de datos suele ser un proceso iterativo.  
   
- Cuando intente discretizar los datos de distintas formas, o agregar nuevas columnas, recuerde que debe usar el **documentar modelo** Asistente para capturar una instantánea de los metadatos y los resultados de cada modelo. El hecho de tener un registro facilitará el seguimiento del progreso en la exploración.  
+ Al intentar discretización los datos de distintas maneras o agregar nuevas columnas, recuerde usar el Asistente para **documentar modelo** para capturar una instantánea de los metadatos y los resultados de cada modelo. El hecho de tener un registro facilitará el seguimiento del progreso en la exploración.  
   
- [Exploración y limpieza de datos](exploring-and-cleaning-data.md)  
+ [Explorar y limpiar datos](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Validar el modelo  
- A medida que se ejecuta cada asistente o herramienta, el algoritmo analiza el contenido de los datos y determina si existe un patrón estadísticamente válido. Si el algoritmo no puede encontrar patrones válidos, obtendrá un mensaje de error. Sin embargo, incluso si se ha creado correctamente un modelo, desea probar el modelo para ver si valida sus suposiciones. Puede usar herramientas como el [gráfico de precisión &#40;complementos de minería de datos de SQL Server&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) o [validación cruzada &#40;complementos de minería de datos de SQL Server&#41; ](cross-validation-sql-server-data-mining-add-ins.md) para generar estadísticas medidas de calidad del modelo.  
+ A medida que se ejecuta cada asistente o herramienta, el algoritmo analiza el contenido de los datos y determina si existe un patrón estadísticamente válido. Si el algoritmo no encuentra patrones válidos, aparecerá un mensaje de error. Sin embargo, aunque un modelo se haya creado correctamente, querrá probar el modelo para ver si valida sus suposiciones. Puede usar herramientas como el gráfico de [precisión &#40;SQL Server complementos de minería de datos&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) o la [validación cruzada &#40;SQL Server](cross-validation-sql-server-data-mining-add-ins.md) complementos de minería de datos&#41;para generar medidas estadísticas de calidad del modelo.  
   
  Cuando evalúe los resultados del primer modelo, hágase preguntas como estas:  
   
@@ -103,9 +102,9 @@ ms.locfileid: "66080937"
   
 -   ¿Está equilibrado el conjunto de datos? La validación cruzada puede probar la representatividad de los datos.  
   
- [Herramientas de análisis de tablas para Excel](table-analysis-tools-for-excel.md)  
+ [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  
   
- [Cliente de minería de datos para Excel &#40;complementos de minería de datos de SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [Cliente de minería de datos para Excel &#40;SQL Server complementos de minería de datos&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
  [Elegir un modelo](choosing-a-model.md)  
   
@@ -122,12 +121,12 @@ ms.locfileid: "66080937"
   
  Un uso importante de los modelos de minería de datos es la creación de predicciones y recomendaciones. Los Complementos de minería de datos para Excel incluyen herramientas que facilitan la generación de consultas de predicción complejas para convertir nuevas percepciones en resultados procesables. Todas estas herramientas están totalmente integradas con Excel.  
   
- [Ver modelos &#40;datos complementos de minería de datos para Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [Ver modelos &#40;complementos de minería de datos para Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Validar modelos y usar modelos para la predicción &#40;datos complementos de minería de datos para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validar modelos y usar modelos para la predicción &#40;complementos de minería de datos para Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Vea también  
- [Qué incluye en los datos de los complementos de minería de datos para Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Referencia técnica &#40;datos complementos de minería de datos para Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Consulte también  
+ [Qué se incluye en los complementos de minería de datos para Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Referencia técnica &#40;complementos de minería de datos para Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

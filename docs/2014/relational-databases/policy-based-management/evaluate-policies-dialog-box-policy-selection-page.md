@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b163f9e984a3fa9933cdc57150357596f4face8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061746"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Cuadro de diálogo Evaluar directivas, página Selección de directiva
   Utilice este cuadro de diálogo para evaluar las directivas de administración basada en directivas. Al seleccionar la página **Resultados de la evaluación** , puede aplicar directivas a los elementos de un conjunto de destinos que no cumplen las directivas.  
   
 ## <a name="options"></a>Opciones  
- **Source**  
- Especifica el origen de las directivas. Para cambiar el origen, haga clic en el botón Examinar ( **...** ) para abrir el cuadro de diálogo **Seleccionar origen** .  
+ **Origen**  
+ Especifica el origen de las directivas. Para cambiar el origen, haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar origen** .  
   
  **Archivos**  
- Escriba la ruta de acceso de un archivo que contenga una directiva de administración basada en directivas, o use el botón Examinar ( **...** ) para seleccionar el archivo.  
+ Escriba la ruta de acceso de un archivo que contenga una directiva de administración basada en directivas, o use el botón Examinar (**...**) para seleccionar el archivo.  
   
  **Server**  
  Seleccione esta opción para conectarse a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que contenga la directiva que desea.  
@@ -38,10 +37,10 @@ ms.locfileid: "62705127"
  **Directivas: Categoría**  
  Categoría de la directiva. Este cuadro es de solo lectura.  
   
- **Directivas: Facet**  
+ **Directivas: Faceta**  
  Faceta implementada por la directiva. Este cuadro es de solo lectura.  
   
- **Evaluar**  
+ **Evaluate**  
  Ejecuta la directiva en modo de evaluación. De esta forma se genera un informe de compatibilidad para el conjunto de destino, pero no se vuelve a configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni se exige la compatibilidad en el futuro.  
   
 ## <a name="possible-errors"></a>Errores posibles  
@@ -60,8 +59,8 @@ ms.locfileid: "62705127"
   
     -   El tipo de servidor de destino es diferente del tipo de servidor en el que se evalúa la directiva. Por ejemplo, en [!INCLUDE[ssDE](../../includes/ssde-md.md)], si intenta evaluar una directiva creada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], recibirá un conjunto de destinos vacío.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar servidores mediante la administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
  [Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

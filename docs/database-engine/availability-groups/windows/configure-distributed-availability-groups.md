@@ -2,7 +2,7 @@
 title: Configuración de un grupo de disponibilidad distribuido
 description: 'Se describe cómo crear y configurar un grupo de disponibilidad Always On distribuido. '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250956"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896128"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Para crear un grupo de disponibilidad distribuido, debe tener dos grupos de disponibilidad, cada uno con su propio agente de escucha. Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave.
+Para crear un grupo de disponibilidad distribuido, debe crear dos grupos de disponibilidad, cada uno con su propio cliente de escucha. Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave.
 
 Para ver una introducción técnica de los grupos de disponibilidad distribuidos, vea [Distributed availability groups](distributed-availability-groups.md) (Grupos de disponibilidad distribuidos).
 
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>Creación de un agente de escucha para el grupo de disponibilidad secundario  
  Después, agregue un agente de escucha para el grupo de disponibilidad secundaria del segundo WSFC. En este ejemplo, el agente de escucha se denomina " `ag2-listener`". Para obtener instrucciones detalladas sobre cómo crear un agente de escucha, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -180,7 +180,8 @@ GO
 >  **LISTENER_URL** especifica el agente de escucha de cada grupo de disponibilidad, con el punto de conexión de creación de reflejo de la base de datos del grupo de disponibilidad. En este ejemplo, es el puerto `5022` (no el puerto `60173` usado para crear el agente de escucha). Si usa un equilibrador de carga, por ejemplo, en Azure, [agregue una regla de equilibrio de carga para el puerto del grupo de disponibilidad distribuido](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Agregue la regla al puerto de escucha, además del puerto de la instancia de SQL Server. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>Cancelación de la propagación automática al reenviador
-Si es necesario cancelar la inicialización del reenviador antes de que se sincronicen los dos grupos de disponibilidad, modifique el grupo de disponibilidad distribuido estableciendo el parámetro SEEDING_MODE del reenviador en MANUAL y cancele inmediatamente la propagación. Ejecute el comando en el principal global: 
+
+Si, por cualquier motivo, es necesario cancelar la inicialización del reenviador _antes_ de que se sincronicen los dos grupos de disponibilidad, modifique el grupo de disponibilidad distribuido estableciendo el parámetro SEEDING_MODE del reenviador en MANUAL y cancele inmediatamente la propagación. Ejecute el comando en el principal global: 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
@@ -216,26 +217,26 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> Unión a la base de datos de la réplica secundaria del segundo grupo de disponibilidad
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> Unión a la base de datos de la réplica secundaria del segundo grupo de disponibilidad
 Una vez que la base de datos de la réplica secundaria del segundo grupo de disponibilidad se encuentre en un estado de restauración, deberá unirla manualmente al grupo de disponibilidad.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> Conmutación por error de un grupo de disponibilidad secundario  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> Conmutación por error de un grupo de disponibilidad secundario  
 
 En estos momentos, solo se admite la conmutación por error manual. Para conmutar por error manualmente un grupo de disponibilidad distribuido:
 
-1. Para garantizar que no se pierden datos, establezca el grupo de disponibilidad distribuido en confirmación sincrónica.
-1. Espere a que el grupo de disponibilidad distribuido esté sincronizado.
+1. Para asegurarse de que no se pierde ningún dato, detenga todas las transacciones en las bases de datos principales globales (es decir, las del grupo de disponibilidad principal) y, después, establezca el grupo de disponibilidad distribuido en confirmación sincrónica.
+1. Espere hasta que el grupo de disponibilidad distribuido esté sincronizado y tenga el mismo valor last_hardened_lsn por base de datos. 
 1. En la réplica principal global, establezca el rol del grupo de disponibilidad distribuido en `SECONDARY`.
 1. Pruebe la preparación de la conmutación por error.
 1. Conmute por error el grupo de disponibilidad principal.
 
 Los ejemplos de Transact-SQL siguientes muestran los pasos detallados para conmutar por error el grupo de disponibilidad distribuido denominado `distributedag`:
 
-1. Establezca el grupo de disponibilidad distribuido en confirmación sincrónica ejecutando el siguiente código *tanto* en el principal global como en el reenviador.   
+1. Para asegurarse de que no se pierde ningún dato, detenga todas las transacciones en las bases de datos principales globales (es decir, las del grupo de disponibilidad principal). Después, establezca el grupo de disponibilidad distribuido en confirmación sincrónica mediante la ejecución del siguiente código *tanto* en la réplica principal global como en el reenviador.   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -261,24 +262,29 @@ Los ejemplos de Transact-SQL siguientes muestran los pasos detallados para conmu
        GO
 
       ```  
-   >[!NOTE]
-   >En los grupos de disponibilidad distribuidos, el estado de sincronización entre dos elementos de réplica de grupos de disponibilidad depende del modo de disponibilidad de ambas réplicas. Para el modo de confirmación sincrónica, tanto el grupo de disponibilidad principal actual como el grupo de disponibilidad secundario actual deben estar configurados en modo de disponibilidad `SYNCHRONOUS_COMMIT`. Por este motivo, debe ejecutar el script anterior en la réplica principal global y en el reenviador.
+   > [!NOTE]
+   > En los grupos de disponibilidad distribuidos, el estado de sincronización entre dos elementos de réplica de grupos de disponibilidad depende del modo de disponibilidad de ambas réplicas. Para el modo de confirmación sincrónica, tanto el grupo de disponibilidad principal actual como el grupo de disponibilidad secundario actual deben estar configurados en modo de disponibilidad `SYNCHRONOUS_COMMIT`. Por este motivo, debe ejecutar el script anterior en la réplica principal global y en el reenviador.
 
-1. Espere hasta que el estado del grupo de disponibilidad distribuida haya cambiado a `SYNCHRONIZED`. Ejecute la siguiente consulta en el principal global, que es la réplica principal del grupo de disponibilidad principal. 
+
+1. Espere hasta que el estado del grupo de disponibilidad distribuido haya cambiado a `SYNCHRONIZED` y todas las réplicas tengan el mismo valor last_hardened_lsn (por base de datos). Ejecute la consulta siguiente en la réplica principal global, que es la réplica principal del grupo de disponibilidad principal, y el reenviador para comprobar los valores synchronization_state_desc y last_hardened_lsn: 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    Continúe después de que el grupo de disponibilidad **synchronization_state_desc** sea `SYNCHRONIZED`. Si **synchronization_state_desc** no es `SYNCHRONIZED`, ejecute el comando cada cinco segundos hasta que cambie. No continúe hasta **synchronization_state_desc** = `SYNCHRONIZED`. 
+    Continúe hasta que el valor **synchronization_state_desc** del grupo de disponibilidad sea `SYNCHRONIZED` y el valor last_hardened_lsn sea el mismo por base de datos en la réplica principal global y en el reenviador.  Si **synchronization_state_desc** no es `SYNCHRONIZED` o el valor last_hardened_lsn no es el mismo, ejecute el comando cada cinco segundos hasta que cambie. No continúe hasta que los valores **synchronization_state_desc** = `SYNCHRONIZED` y last_hardened_lsnsea sean los mismos en cada base de datos. 
 
 1. En el principal global, establezca el rol del grupo de disponibilidad distribuido en `SECONDARY`. 
 
@@ -288,23 +294,41 @@ Los ejemplos de Transact-SQL siguientes muestran los pasos detallados para conmu
 
     En este punto, el grupo de disponibilidad distribuido no estará disponible.
 
-1. Pruebe la preparación de la conmutación por error. Ejecute la siguiente consulta:
+1. Pruebe la preparación de la conmutación por error. Ejecute la consulta siguiente tanto en la réplica principal global como en el reenviador:
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    El grupo de disponibilidad estará preparado para la conmutación por error cuando **synchronization_state_desc** sea `SYNCHRONIZED` y **end_of_log_lsn** sea igual para ambos grupos de disponibilidad. 
 
-1. Conmute por error el grupo de disponibilidad secundario desde el grupo de disponibilidad principal. Ejecute el siguiente comando en SQL Server que hospeda la réplica principal para el grupo de disponibilidad principal. 
+    El grupo de disponibilidad estará preparado para la conmutación por error cuando el valor **last_hardened_lsn** sea el mismo para ambos grupos de disponibilidad por cada base de datos. Si el valor last_hardened_lsn no es el mismo después de un período de tiempo, para evitar la pérdida de datos, realice la conmutación por recuperación a la réplica principal global mediante la ejecución de este comando y, después, vuelva a empezar desde el segundo paso: 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. Conmute por error el grupo de disponibilidad secundario desde el grupo de disponibilidad principal. Ejecute el comando siguiente en el reenviador, la instancia de SQL Server en la que se hospeda la réplica principal para el grupo de disponibilidad secundario. 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

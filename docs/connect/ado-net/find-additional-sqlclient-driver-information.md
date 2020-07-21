@@ -10,29 +10,29 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: fce101e64123e3fbc1100610aeea03cee16b0e75
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452395"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80929014"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Búsqueda de información adicional del controlador SqlClient
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 Para obtener más información sobre el proveedor de datos SqlClient de Microsoft para el desarrollo de SQL Server en general, vea los siguientes recursos en línea:
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
-|[Repositorio de GitHub de .net CoreFX](https://github.com/dotnet/corefx)|Este repositorio contiene la implementación de biblioteca para .NET Core.|
-|[Repositorio de Microsoft SqlClient Data Provider for SQL Server GitHub](https://github.com/dotnet/SqlClient)|Este repositorio contiene el código fuente del controlador SqlClient.|  
-|[Explorador de API de .NET](https://docs.microsoft.com/dotnet/api/)|Este sitio contiene información de la API de .NET para el controlador.|  
+|[Repositorio de GitHub de .Net CoreFX](https://github.com/dotnet/corefx)|Este repositorio contiene la implementación de biblioteca para .NET Core.|
+|[Repositorio de GitHub del proveedor de datos SqlClient de Microsoft para SQL Server](https://github.com/dotnet/SqlClient)|Este repositorio contiene el código fuente del controlador SqlClient.|  
+|[Explorador de API de .NET](https://docs.microsoft.com/dotnet/api/)|Este sitio web contiene información de la API de .NET para el controlador.|  
   
 ## <a name="next-steps"></a>Pasos siguientes
  [Información general sobre el controlador SqlClient](overview-sqlclient-driver.md)  

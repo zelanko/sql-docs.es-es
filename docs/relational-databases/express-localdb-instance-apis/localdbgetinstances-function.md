@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7804207c887d95a719575406cfc85ae78d1bd7f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765229"
 ---
 # <a name="localdbgetinstances-function"></a>Función LocalDBGetInstances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Devuelve todas las instancias de SQL Server Express LocalDB con la versión indicada.  
   
  **Archivo de encabezado:** sqlncli.h  
@@ -40,12 +40,12 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parámetros  
  *pInstanceNames*  
- [Salida] Cuando esta función devuelve, contiene los nombres de ambos denominado y predeterminada de las instancias de LocalDB en la estación de trabajo del usuario.  
+ Genere Cuando esta función devuelve un valor, contiene los nombres de las instancias de LocalDB con nombre y predeterminadas en la estación de trabajo del usuario.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encuentra en la estación de trabajo del usuario.  
+ [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encuentran en la estación de trabajo del usuario.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -68,12 +68,12 @@ HRESULT LocalDBGetInstances(
  Una configuración de instancia está dañada.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

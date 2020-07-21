@@ -1,5 +1,6 @@
 ---
 title: Actualización o revisión de bases de datos replicadas | Microsoft Docs
+description: SQL Server admite la actualización de bases de datos replicadas desde versiones anteriores de SQL Server sin detener la actividad en otros nodos.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008456"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900220"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Actualización o revisión de bases de datos replicadas
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] admite la actualización de bases de datos replicadas desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a la versión admitida en una topología:  
   
@@ -72,7 +73,7 @@ La mayor parte de este artículo se centra en la actualización de la versión d
 -   [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
 -   [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
 -   [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
--   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 
 Para más información sobre la ejecución del Agente de mezcla, vea estos artículos:
@@ -88,7 +89,7 @@ Antes de actualizar desde una edición de [!INCLUDE[ssnoversion](../../includes/
 ## <a name="steps-to-upgrade-a-replication-topology"></a>Pasos para actualizar una topología de replicación
 En estos pasos se describe el orden en que se deben actualizar los servidores de una topología de replicación. Se aplican los mismos pasos con independencia de que se ejecute la replicación transaccional o de mezcla. Pero en estos pasos no se describe la replicación punto a punto, las suscripciones de actualización en cola ni las suscripciones de actualización inmediata. 
 
-### <a name="in-place-upgrade"></a>Actualización en contexto 
+### <a name="in-place-upgrade"></a>Actualización local 
 1. Actualice el distribuidor. 
 2. Actualice el publicador y el suscriptor. Se pueden actualizar en cualquier orden. 
 

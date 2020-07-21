@@ -1,7 +1,7 @@
 ---
-title: Sys. DM _ _db_resource_stats (Azure SQL Database) | Microsoft Docs
+title: Sys. dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/21/2019
+ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,23 +19,23 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 71efbc5abad150c599a674ea66409207fc2bf628
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738719"
 ---
-# <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Devuelve el consumo de CPU, E/S y memoria para una base de datos [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Hay una fila para cada 15 segundos, incluso si no hay ninguna actividad en la base de datos. Los datos históricos se conservan durante una hora.  
+  Devuelve el consumo de CPU, E/S y memoria para una base de datos [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Hay una fila para cada 15 segundos, incluso si no hay ninguna actividad en la base de datos. Los datos históricos se mantienen durante aproximadamente una hora.  
   
 |Columnas|Tipo de datos|Descripción|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Hora UTC que indica el fin del intervalo de informes actual.|  
 |avg_cpu_percent|**decimal (5, 2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
-|avg_data_io_percent|**decimal (5, 2)**|Uso promedio de e/s de datos en porcentaje del límite del nivel de servicio.|  
+|avg_data_io_percent|**decimal (5, 2)**|Uso promedio de e/s de datos en porcentaje del límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Promedio de escrituras del registro de transacciones (en MBps) como porcentaje del límite del nivel de servicio.|  
 |avg_memory_usage_percent|**decimal (5, 2)**|Uso de memoria promedio como porcentaje del límite del nivel de servicio.<br /><br /> Esto incluye la memoria usada para las páginas del grupo de búferes y el almacenamiento de objetos OLTP en memoria.|  
 |xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes objetos OLTP en memoria: tablas, índices y variables de tabla con optimización para memoria. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|  
@@ -43,24 +43,24 @@ ms.locfileid: "68471082"
 |max_session_percent|**decimal (5, 2)**|Número máximo de sesiones simultáneas en porcentaje del límite del nivel de servicio de la base de datos.|  
 |dtu_limit|**int**|Valor actual máximo de DTU de base de datos para esta base de datos durante este intervalo. En el caso de las bases de datos que usan el modelo basado en núcleo virtual, esta columna es NULL.|
 |cpu_limit|**decimal (5, 2)**|Número de núcleos virtuales para esta base de datos durante este intervalo. En el caso de las bases de datos que usan el modelo basado en DTU, esta columna es NULL.|
-|avg_instance_cpu_percent|**decimal (5, 2)**|Uso promedio de la CPU de la base de datos como porcentaje del proceso de base de datos de SQL.|
-|avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria de base de datos como porcentaje del proceso de base de datos de SQL.|
+|avg_instance_cpu_percent|**decimal (5, 2)**|Promedio de uso de la CPU para la instancia de SQL Server que hospeda la base de datos, medida por el sistema operativo. Incluye el uso de CPU por parte de cargas de trabajo tanto de usuario como internas.|
+|avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria para la instancia de SQL Server que hospeda la base de datos, medida por el sistema operativo. Incluye el uso de memoria por parte de cargas de trabajo tanto de usuario como internas.|
 |avg_login_rate_percent|**decimal (5, 2)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
 |replica_role|**int**|Representa el rol de la réplica actual con 0 como principal, 1 como secundario y 2 como reenviador (principal de la secundaria geográfica). Verá "1" cuando esté conectado con intención de solo lectura a todas las secundarias legibles. Si se conecta a una región secundaria geográfica sin especificar la intención de solo lectura, debería ver "2" (conexión al reenviador).|
 |||
   
 > [!TIP]  
->  Para más información sobre estos límites y los niveles de servicio, consulte los temas [niveles](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) de servicio y [capacidades y límites de nivel](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)de servicio.  
+> Para más información sobre estos límites y los niveles de servicio, consulte los temas [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [ajuste manual del rendimiento de las consultas en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)y [SQL Database límites de recursos y regulación de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permisos
  Esta vista necesita el permiso VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Comentarios  
- Los datos devueltos por **Sys. DM _ _db_resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.
+## <a name="remarks"></a>Comentarios
+ Los datos devueltos por **Sys. dm_db_resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.
  
- Si la base de datos se conmutó por error a otro servidor en los últimos 60 minutos, la vista solo devolverá datos correspondientes al tiempo que ha sido la base de datos principal desde la conmutación por error.  
+ Si la base de datos ha conmutado por error a otro servidor en los últimos 60 minutos, la vista solo devolverá datos durante el tiempo transcurrido desde esa conmutación por error.  
   
- Para obtener una vista menos granular de estos datos, use la vista de catálogo **Sys. resource_stats** en la base de datos **maestra** . Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, vea [Sys. &#40;resource_stats&#41;Azure SQL Database](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Para obtener una vista menos granular de estos datos con un período de retención más largo, utilice la vista de catálogo **Sys. resource_stats** de la base de datos **maestra** . Esta vista captura datos cada 5 minutos y mantiene datos históricos durante 14 días.  Para obtener más información, vea [Sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
  Cuando una base de datos es miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores porcentuales se expresan como el porcentaje del límite máximo de las bases de datos establecidas en la configuración del grupo elástico.  
   
@@ -100,9 +100,5 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Capacidades y límites del nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+## <a name="see-also"></a>Consulte también  
+ [Sys. resource_stats &#40;Azure SQL Database](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)&#41;

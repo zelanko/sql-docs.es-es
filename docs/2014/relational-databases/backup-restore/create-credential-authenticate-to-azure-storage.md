@@ -11,28 +11,27 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 5f76a455637e28c06e967b0609cea19a874d7967
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70175955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958595"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Crear credencial - autenticarse en Azure Storage
   Use el cuadro de diálogo **Copia de seguridad en URL - Crear credencial** para crear una credencial de SQL.  
   
- Al usar este cuadro de diálogo para crear una credencial, debe proporcionar un certificado de administración de Azure agregado al almacén de certificados local o un perfil de publicación descargado en el equipo para validar la suscripción y la información de la cuenta de almacenamiento.  
+ Al utilizar este cuadro de diálogo para crear una credencial, debe proporcionar un certificado de administración de Azure agregado al almacén de certificados local o un perfil de publicación descargado en el equipo para validar la suscripción y la información de la cuenta de almacenamiento.  
   
  **Credencial SQL**  
  Especifique el nombre de la credencial SQL que desea crear.  
   
 ## <a name="azure-credentials"></a>Credenciales de Azure  
  **Certificado de administración**  
- Use esta opción para especificar un certificado del almacén de certificados local que coincida con el certificado de administración de Azure. Para obtener más información sobre el certificado de administración de Azure, consulte [creación y carga de un certificado de administración para Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Use esta opción para especificar un certificado del almacén de certificados local que coincida con el certificado de administración de Azure. Para obtener más información sobre el certificado de administración de Azure, vea [Creación y actualización de un certificado de administración para Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Suscripción**  
- Seleccione, escriba o pegue el identificador de suscripción de Azure que coincida con el certificado de administración del almacén de certificados local.  
+ Seleccione, escriba o pegue el identificador de su suscripción de Azure que coincida con el certificado de administración del almacén de certificados local.  
   
  **Perfil de publicación**  
  Use esta opción si tiene un perfil de publicación descargado en el equipo. Si utiliza esta opción, el identificador de suscripción y el certificado se rellenan de forma automática.  

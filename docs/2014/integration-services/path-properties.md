@@ -12,18 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca263b866fb6d5d7ceb6352f708f387d79cad4f7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056662"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423472"
 ---
 # <a name="path-properties"></a>Propiedades de la ruta de acceso
-  Los objetos de flujo de datos del modelo de objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades comunes y propiedades personalizadas en el nivel del componente, de las entradas y salidas, y de las columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
+  Los objetos de flujo de datos del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modelo de objetos de tienen propiedades comunes y propiedades personalizadas en el nivel del componente, entradas y salidas, y columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
   
  En este tema se enumeran y describen las propiedades personalizadas de las rutas de acceso que conectan los objetos del flujo de datos.  
   
@@ -38,10 +37,10 @@ ms.locfileid: "66056662"
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|La entrada asociada a la ruta de acceso.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|La salida asociada a la ruta de acceso.|  
   
-## <a name="see-also"></a>Vea también  
- [Rutas de Integration Services](data-flow/integration-services-paths.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services trazados](data-flow/integration-services-paths.md)   
  [Propiedades comunes](../../2014/integration-services/common-properties.md)   
- [Propiedades personalizadas de transformación](data-flow/transformations/transformation-custom-properties.md)   
+ [Propiedades personalizadas de la transformación](data-flow/transformations/transformation-custom-properties.md)   
  [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  
   
   

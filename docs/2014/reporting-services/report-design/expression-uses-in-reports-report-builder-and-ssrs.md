@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105902"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105902"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Usar expresiones simples  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Usar expresiones simples  
  Las expresiones simples aparecen en la superficie de diseño y en los cuadros de diálogo entre corchetes, por ejemplo, un campo de conjunto de datos aparece como `[ProductID]`. Este tipo de expresiones se crea automáticamente cuando se arrastra un campo desde un conjunto de datos hasta un cuadro de texto. Se crea un marcador de posición y la expresión define el valor subyacente. También puede escribir directamente las expresiones en una celda o en un cuadro de texto de la región de datos, tanto en la superficie de diseño como en un cuadro de diálogo (por ejemplo, `[ProductID]`).  
   
  En la tabla siguiente, se muestran ejemplos de cómo se pueden usar las expresiones simples. En la tabla se describe la funcionalidad, la propiedad que se va a establecer, el cuadro de diálogo que se usa normalmente para establecerla y el valor de la propiedad. Puede escribir la expresión simple directamente en la superficie de diseño, en un cuadro de diálogo o en el panel de propiedades, o puede modificarla en el cuadro de dialogo Expresión, tal y como lo haría con cualquier expresión.  
@@ -50,7 +50,7 @@ ms.locfileid: "66105902"
   
  
   
-##  <a name="Complex"></a> Usar expresiones complejas  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Usar expresiones complejas  
  Las expresiones complejas pueden contener varias referencias integradas, operadores y llamadas a función, y aparecen en la superficie de diseño como `<<Expr>>`. Para ver o cambiar el texto de la expresión, debe abrir el cuadro de diálogo **Expresión** o escribir directamente en el panel Propiedades. En la tabla siguiente, se muestran las formas más habituales de usar una expresión compleja para mostrar u organizar datos o para cambiar el aspecto de un informe, incluida la propiedad que se va a establecer, el cuadro de diálogo que se usa normalmente para establecerla y el valor de la propiedad. Puede escribir una expresión directamente en un cuadro de diálogo, en la superficie de diseño o en el panel de propiedades.  
   
 |Funcionalidad|Propiedad, contexto y cuadro de diálogo|Valor de la propiedad|  
@@ -72,7 +72,7 @@ ms.locfileid: "66105902"
   
  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   

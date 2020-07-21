@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105598"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
@@ -29,18 +29,18 @@ ms.locfileid: "66105598"
   
  En la ilustración siguiente se muestra una tabla.  
   
- ![Tabla](../media/table.png "Tabla")  
+ ![Table](../media/table.png "Tabla")  
   
  En la ilustración siguiente se muestra una matriz.  
   
- ![Matriz](../media/matrix.png "Matriz")  
+ ![Matriz](../media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>Para mantener visibles los encabezados de grupo de matrices al desplazarse  
   
-1.  Haga clic con el botón derecho en la fila, columna o controlador de tabla de una región de datos Tablix y, después, haga clic en **Propiedades de Tablix**.  
+1.  Haga clic con el botón derecho en la fila o columna o en el controlador de tabla de una región de datos Tablix y, después, haga clic en **Propiedades de Tablix**.  
   
 2.  En la pestaña **General** , bajo **Encabezados de fila** o **Encabezados de columna**, seleccione **El encabezado debe permanecer visible durante el desplazamiento**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66105598"
   
      ![Propiedades de Miembro de Tablix](../media/grouppane-tablixmember-updated.png "Propiedades de Miembro de Tablix")  
   
-4.  En el panel Propiedades, establezca **FixedData** a `True`.  
+4.  En el panel Propiedades, establezca **FixedData** en `True`.  
   
 5.  Repita esto con tantos miembros adyacentes como desee que sean visibles durante el desplazamiento.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "66105598"
   
  Cuando recorra el informe, los miembros de Tablix estáticos permanecerán visibles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [Panel de agrupación &#40;Generador de informes&#41;](grouping-pane-report-builder.md)  

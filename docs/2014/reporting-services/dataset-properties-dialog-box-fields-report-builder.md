@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de conjunto de datos, campos (generador de informes) | Microsoft Docs
+title: Propiedades del conjunto de propiedades (cuadro de diálogo), campos (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 375d8eda6f0863dbe3852f1a88ea2e58ecc85b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109431"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Campos (Generador de informes)
@@ -25,13 +25,13 @@ ms.locfileid: "66109431"
  Los campos calculados solo se admiten en conjuntos de datos insertados. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un nuevo campo calculado o de consulta al conjunto de datos.  
   
  **Eliminar**  
  Elimina el campo seleccionado del conjunto de datos.  
   
- **Nombre de campo**  
+ **Nombre del campo**  
  Escriba el nombre del campo. El campo debe ser único en el conjunto de datos. Para cada campo existente en el conjunto de datos, el nombre se rellena previamente.  
   
  **Origen del campo**  
@@ -44,14 +44,14 @@ ms.locfileid: "66109431"
  **Expresión (fx)**  
  Agregue o cambie una expresión para el nuevo campo calculado. Este botón solamente aparece cuando se hace clic en **Agregar** y se selecciona **Campo calculado**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Cuadro de diálogo de propiedades de conjunto de datos, las opciones de &#40;generador de informes&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
- [Cuadro de diálogo de propiedades de conjunto de datos, filtros &#40;generador de informes&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
- [Cuadro de diálogo de propiedades de conjunto de datos, parámetros &#40;generador de informes&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
- [Cuadro de diálogo de propiedades de conjunto de datos, la consulta &#40;generador de informes&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
+ [Crear un conjunto de DataSet compartido o un conjunto de &#40;incrustado Generador de informes y SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Generador de informes ayuda para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Propiedades del conjunto de propiedades (cuadro de diálogo), opciones &#40;Generador de informes&#41;](report-data/dataset-properties-dialog-box-options-report-builder.md)   
+ [Propiedades del conjunto de propiedades (cuadro de diálogo), filtros &#40;Generador de informes&#41;](../../2014/reporting-services/dataset-properties-dialog-box-filters-report-builder.md)   
+ [Propiedades del conjunto de propiedades (cuadro de diálogo), parámetros &#40;Generador de informes&#41;](../../2014/reporting-services/dataset-properties-dialog-box-parameters-report-builder.md)   
+ [Cuadro de diálogo Propiedades del conjunto de propiedades, &#40;de consultas Generador de informes&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Administración de marcadores | Microsoft Docs
-ms.custom: ''
+title: Administrar marcadores
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6741660b7b7985356c59ffe47b53c376a55338e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c20b7008ca447e278dd07e9c483a3147117dbf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063403"
 ---
 # <a name="manage-bookmarks"></a>Administrar marcadores
   Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear vínculos a líneas específicas de código en el documento. Puede abrir esta ventana desde el menú **Ver** .  
@@ -90,5 +89,5 @@ ms.locfileid: "66063909"
  **Deshabilitar/Habilitar todos los marcadores**  
  Activa o desactiva las casillas de todos los marcadores de la ventana **Marcadores** . No elimina los marcadores ni modifica las líneas de código marcadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

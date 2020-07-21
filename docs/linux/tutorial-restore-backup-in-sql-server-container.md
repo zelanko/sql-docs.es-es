@@ -3,21 +3,21 @@ title: Restauración de una base de datos de SQL Server en Docker
 description: En este tutorial se muestra cómo restaurar una copia de seguridad de base de datos de SQL Server en un nuevo contenedor de Docker para Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0a91e3fd121cf5e49aca3bbe079d41416aca805a
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5d5fd2e96e9d0695f098eab02fb3d4ab86e5d256
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902333"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restauración de una base de datos de SQL Server en un contenedor de Docker para Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -28,7 +28,7 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-En este tutorial se muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de la versión preliminar de SQL Server 2019 que se ejecuta en Docker.
+En este tutorial se muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de SQL Server 2019 que se ejecuta en Docker.
 
 ::: moniker-end
 
@@ -82,10 +82,10 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-   Este comando crea un contenedor de SQL Server 2017 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
+   Este comando crea un contenedor de SQL Server 2017 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
 
-   > [!NOTE]
-   > El proceso para ejecutar ediciones de producción de SQL Server en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción). Si usa los mismos nombres y puertos de contenedor, el resto de este tutorial funciona con los contenedores de producción.
+   > [!IMPORTANT]
+   > En este ejemplo se usa un contenedor de volúmenes de datos dentro de Docker. Si en su lugar decide asignar un directorio host, tenga en cuenta que existen limitaciones para este enfoque en Docker para Mac y Windows. Para obtener más información, consulte [Configuración de imágenes de contenedor de SQL Server en Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
@@ -112,14 +112,14 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
 
 1. Abra un terminal de Bash en Linux/Mac o una sesión de PowerShell con privilegios elevados en Windows.
 
-1. Extraiga la imagen de contenedor de Linux de la versión preliminar de SQL Server 2019 de Docker Hub.
+1. Extraiga la imagen de contenedor de SQL Server 2019 para Linux de Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    > [!TIP]
@@ -131,17 +131,17 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
-   Este comando crea un contenedor de la versión preliminar de SQL Server 2019 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
+   Este comando crea un contenedor de SQL Server 2019 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
 
 1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
@@ -402,7 +402,7 @@ Después de haber restaurado la base de datos en un contenedor, puede que tambi�
    ```PowerShell
    cd ~
    docker cp sql1:/var/opt/mssql/backup/wwi_2.bak wwi_2.bak
-   ls -l wwi*
+   ls wwi*
    ```
 
 ## <a name="use-the-persisted-data"></a>Uso de los datos almacenados
@@ -492,13 +492,13 @@ Además de realizar copias de seguridad de las bases de datos para proteger los 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
 1. La base de datos Wide World Importers está ahora en el nuevo contenedor. Ejecute una consulta para comprobar el cambio anterior que ha realizado.
@@ -531,7 +531,7 @@ En este tutorial ha aprendido a realizar una copia de seguridad de una base de d
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con la versión preliminar de SQL Server 2019. Ha aprendido a:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2019. Ha aprendido a:
 
 ::: moniker-end
 
@@ -542,7 +542,7 @@ En este tutorial ha aprendido a realizar una copia de seguridad de una base de d
 > * Crear y extraer archivos de copia de seguridad desde un contenedor.
 > * Usar contenedores de volúmenes de datos en Docker para almacenar datos de SQL Server.
 
-A continuación revise otros escenarios de configuración y solución de problemas de Docker:
+Después, revise otros escenarios de configuración y solución de problemas de Docker:
 
 > [!div class="nextstepaction"]
 >[Guía de configuración de SQL Server 2017 en Docker](sql-server-linux-configure-docker.md)

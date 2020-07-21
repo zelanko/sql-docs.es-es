@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VC ++) Move | Microsoft Docs
+title: Ejemplo del método move (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Move method [ADO], VC++ example
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 400af9af904820e05da2de3a1a0aabd3f3458ca8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932099"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762476"
 ---
 # <a name="move-method-example-vc"></a>Ejemplo del método Move (VC ++)
-Este ejemplo se usa el [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero de registro basado en la entrada del usuario.  
+En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro en función de los datos proporcionados por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -241,7 +241,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Record 1 of 23  
@@ -257,5 +257,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

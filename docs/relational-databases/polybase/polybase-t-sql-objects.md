@@ -1,5 +1,6 @@
 ---
 title: Referencia de Transact-SQL de PolyBase | Microsoft Docs
+description: Para usar PolyBase, cree tablas externas para los datos externos en Hadoop, Azure Blob Storage, Azure Data Lake Store, SQL Server, Oracle, Teradata y MongoDB.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -12,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0e2ea6896d8ffc3450a57a44ea10c30ac6890d92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773061"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referencia de Transact-SQL de PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/applies-to-version/sqlserver.md)]
 
 Para usar PolyBase, debe crear tablas externas para hacer referencia a los datos externos.  
   
@@ -38,7 +39,7 @@ Para usar PolyBase, debe crear tablas externas para hacer referencia a los datos
 >[!NOTE]
 >Para poder usar PolyBase debe tener permisos a nivel de CONTROL SERVER o sysadmin en la base de datos.
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 
 Configure PolyBase. Consulte [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md).  
   
@@ -195,7 +196,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Crear tablas externas para Azure Data Lake Store
-Se aplica a: Almacenamiento de datos SQL de Azure
+Se aplica a: Azure SQL Data Warehouse
 
 Para obtener más información, vea [Carga de datos de Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 
@@ -554,4 +555,4 @@ Para obtener ejemplos de consultas, vea [Consultas de PolyBase](../../relational
   
 ## <a name="see-also"></a>Consulte también  
 [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
-[Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)
+[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

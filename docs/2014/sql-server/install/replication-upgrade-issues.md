@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011854"
 ---
 # <a name="replication-upgrade-issues"></a>Problemas de actualización de replicación
   Los temas siguientes describen los problemas de replicación que podrían afectar a la actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los temas describen acciones que se pueden llevar a cabo para reducir los efectos de estos cambios en el entorno.  
@@ -29,8 +28,8 @@ ms.locfileid: "66092745"
   
 -   [Otros problemas de actualización de replicación](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con el asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Resolver problemas de la actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

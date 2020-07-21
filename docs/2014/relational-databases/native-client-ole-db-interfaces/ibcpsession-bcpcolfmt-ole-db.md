@@ -13,15 +13,14 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4f8cbd2789fbf4f941642439545f7c8fa349cf66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048044"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Crea un enlace entre las variables de programa y las columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -64,18 +63,18 @@ DBORDINALidxServerCol);
  En cada llamada a **BCPColFmt** se especifica el formato para un campo de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres campos en un archivo de datos de usuario de cinco campos, primero debe llamar a `BCPColumns(5)`y, a continuación, debe llamar a **BCPColFmt** cinco veces, con tres de cuyas llamadas establecerá el formato personalizado. Para las dos llamadas restantes, establezca *eUserDataType* en BCP_TYPE_DEFAULT y establezca *cbIndicator*, *cbUserData*y *cbUserDataTerm* en 0, BCP_VARIABLE_LENGTH y 0, respectivamente. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
 > [!NOTE]  
->  Debe llamar al método [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) antes de realizar cualquier llamada a **BCPColFmt**. Debe llamar a **BCPColFmt** una vez para cada columna del archivo de usuario. Si llama más de una vez a **BCPColFmt** para cualquier columna de archivo de usuario, se generará un error.  
+>  Es necesario llamar al método [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) antes de realizar cualquier llamada a **BCPColFmt**. Debe llamar a **BCPColFmt** una vez para cada columna del archivo de usuario. Si llama más de una vez a **BCPColFmt** para cualquier columna de archivo de usuario, se generará un error.  
   
  No es necesario copiar todos los datos de un archivo de usuario en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para omitir una columna, debe especificar el formato de los datos de la columna estableciendo el parámetro idxServerCol en 0. Si desea omitir un campo, necesitará toda la información para que el método funcione correctamente.  
   
- **Nota** La función [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) puede usarse para conservar la especificación de formato que se proporciona a través de **BCPColFmt**.  
+ **Nota** La función [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) puede usarse para conservar la especificación de formato que se proporciona mediante **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argumentos  
  *idxUserDataCol*[in]  
  Índice de campo del archivo de datos del usuario.  
   
  *eUserDataType*[in]  
- Tipo de datos de campo del archivo de datos del usuario. Los tipos de datos disponibles se muestran en el archivo de encabezado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) con el formato BCP_TYPE_XXX como, por ejemplo, BCP_TYPE_SQLINT4. Si se especifica el valor BCP_TYPE_DEFAULT, el proveedor intenta usar el mismo tipo que el tipo de columna de tabla o vista. Operaciones de copia masiva fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en un archivo cuando el `eUserDataType` argumento sea BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
+ Tipo de datos de campo del archivo de datos del usuario. Los tipos de datos disponibles se muestran en el archivo de encabezado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (sqlncli.h) con el formato BCP_TYPE_XXX como, por ejemplo, BCP_TYPE_SQLINT4. Si se especifica el valor BCP_TYPE_DEFAULT, el proveedor intenta usar el mismo tipo que el tipo de columna de tabla o vista. Para operaciones de copia masiva fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en un archivo cuando el `eUserDataType` argumento está BCP_TYPE_SQLDECIMAL o BCP_TYPE_SQLNUMERIC:  
   
 -   Si la columna de origen no es decimal o numérica, se usarán la precisión y la escala predeterminadas.  
   
@@ -87,13 +86,13 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  Longitud máxima (en bytes) de los datos de este campo del archivo de usuario, sin incluir la longitud de los indicadores de longitud o terminadores.  
   
- Establecer `cbUserData` en BCP_LENGTH_NULL se indica que todos los valores de los datos de campos del archivo están, o debería estar establecido en NULL. Establecer `cbUserData` en BCP_LENGTH_VARIABLE se indica que el sistema debe determinar la longitud de datos para cada campo. Para algunos campos, esto podría significar que se genera un indicador de longitud o NULL que precede a los datos en una copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o que se espera el indicador en los datos copiados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si `cbUserData` se establece en BCP_LENGTH_NULL, se indica que todos los valores de los campos del archivo de datos son o deben establecerse en NULL. Establecer `cbUserData` en BCP_LENGTH_VARIABLE indica que el sistema debe determinar la longitud de los datos de cada campo. Para algunos campos, esto podría significar que se genera un indicador de longitud o NULL que precede a los datos en una copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o que se espera el indicador en los datos copiados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres y tipos de datos binarios, `cbUserData` puede ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o algún valor positivo. Si `cbUserData` es BCP_LENGTH_VARIABLE, el sistema utiliza un indicador de longitud, si está presente, o una secuencia de terminador para determinar la longitud de los datos. Si se proporciona un indicador de longitud y una secuencia de terminador, la copia masiva usa aquél por el que se copia la mínima cantidad de datos. Si `cbUserData` es BCP_LENGTH_VARIABLE, los datos de tipo es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres o tipo binaria, y si se especifica ni un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
+ En el caso de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de caracteres y binarios, `cbUserData` se puede BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o algún valor positivo. Si `cbUserData` es BCP_LENGTH_VARIABLE, el sistema usa el indicador de longitud, si está presente, o una secuencia de terminador para determinar la longitud de los datos. Si se proporciona un indicador de longitud y una secuencia de terminador, la copia masiva usa aquél por el que se copia la mínima cantidad de datos. Si `cbUserData` es BCP_LENGTH_VARIABLE, el tipo de datos es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carácter o un tipo binario y, si no se especifica un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
   
- Si `cbUserData` es 0 o un valor positivo, el sistema utiliza `cbUserData` como la longitud máxima de los datos. Sin embargo, si además un positivo `cbUserData`, se proporciona una secuencia de longitud de indicador o un terminador, el sistema determina la longitud de datos mediante el método que da como resultado la menor cantidad de datos que se va a copiar.  
+ Si `cbUserData` es 0 o un valor positivo, el sistema utiliza `cbUserData` como longitud máxima de los datos. Sin embargo, si, además de un positivo `cbUserData` , se proporciona un indicador de longitud o una secuencia de terminador, el sistema determina la longitud de los datos mediante el método que hace que se copie la menor cantidad de datos.  
   
- El `cbUserData` valor representa el número de bytes de datos. Si los datos de caracteres se representan mediante caracteres anchos de Unicode, un positivo `cbUserData` el valor del parámetro representa el número de caracteres multiplicado por el tamaño, en bytes, de cada carácter.  
+ El `cbUserData` valor representa el recuento de bytes de datos. Si los datos de caracteres se representan mediante caracteres anchos de Unicode, un `cbUserData` valor de parámetro positivo representa el número de caracteres multiplicado por el tamaño, en bytes, de cada carácter.  
   
  *pbUserDataTerm*[size_is][in]  
  Secuencia de terminador que se va a usar para el campo. Este parámetro es principalmente útil para los tipos de datos de caracteres porque todos los demás tipos son de longitud fija o, en el caso de los datos binarios, requieren un indicador de longitud que grabe con precisión el número de bytes presentes.  
@@ -126,7 +125,7 @@ DBORDINALidxServerCol);
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../native-client/features/performing-bulk-copy-operations.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs
+title: Sys. dm_cryptographic_provider_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_sessions dynamic management function
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 852566e9f337536717273c18b8034f3854fd7d48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005097"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894564"
 ---
-# <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de las sesiones abiertas para un proveedor criptográfico.  
  
@@ -47,20 +47,20 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Número de identificación del proveedor de servicios criptográficos.|  
-|**session_handle**|**varbytes(8)**|Controlador de la sesión criptográfico.|  
+|**session_handle**|**varbytes (8)**|Controlador de la sesión criptográfico.|  
 |**identity**|**nvarchar(128)**|Identidad utilizada para autenticar con el proveedor criptográfico.|  
-|**spid**|**short**|Id. de la sesión SPID de la conexión. Para más información, vea [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
+|**identificador**|**short**|Id. de la sesión SPID de la conexión. Para más información, vea [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>Comentarios  
- El **sys.dm_cryptographic_provider_sessions** vista está visible para el público para la conexión actual. Para ver todas las conexiones criptográficas, debe tener la **CONTROL** permiso de servidor.  
+ La vista **Sys. dm_cryptographic_provider_sessions** es visible para el público de la conexión actual. Para ver todas las conexiones criptográficas, debe tener el permiso **control** Server.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [CREAR proveedor de servicios CRIPTOGRÁFICOs &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

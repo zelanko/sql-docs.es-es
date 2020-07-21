@@ -1,10 +1,9 @@
 ---
-title: Administrar pasos de trabajo | Microsoft Docs
-ms.custom: ''
+title: Administrar pasos de trabajo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,13 +23,15 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dfb4633efcc190782ce62c17d8c7f26f29b8a0a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258040"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75256112"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ Puesto que los pasos de trabajo se ejecutan en el contexto de un usuario especí
   
 -   Programas ejecutables y comandos del sistema operativo.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   Instrucciones[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] tareas.  
   
@@ -162,7 +163,7 @@ Al crear un paso de trabajo de comando de [!INCLUDE[ssASnoversion](../../include
   
 -   Identificar el servidor OLAP de la base de datos en el que se ejecutará el paso de trabajo.  
   
--   Escribir la instrucción que se debe ejecutar. Esta instrucción debe ser XML para el método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **de** . Puede que la instrucción no contenga un elemento SOAP completo o un método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **de XML para** . Observe que, mientras que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es compatible con los sobres SOAP completos y con el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no lo son.  
+-   Escribir la instrucción que se debe ejecutar. Esta instrucción debe ser XML para el método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Execute**. Puede que la instrucción no contenga un elemento SOAP completo o un XML para el método [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] **Discover**. Observe que, mientras que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es compatible con los sobres SOAP completos y con el método **Discover** , los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no lo son.  
   
 ### <a name="analysis-services-query-job-steps"></a>Pasos de trabajo de consulta de Analysis Services  
 Al crear un paso de trabajo de consulta de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] , debe:  
@@ -204,7 +205,7 @@ Para más información sobre cómo crear pasos de trabajo que ejecutan paquetes 
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

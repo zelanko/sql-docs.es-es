@@ -14,18 +14,17 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78b8d2b687654583722456cb428d0bcea7aa845b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62892301"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424822"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Integration Services
-  En esta sección se describe los cambios entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior. También describe los cambios en el producto que afectan o cambian el comportamiento de una aplicación existente que incluye la funcionalidad de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  En esta sección se describen los cambios entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior. También describe los cambios en el producto que afectan o cambian el comportamiento de una aplicación existente que incluye la funcionalidad de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -33,8 +32,8 @@ ms.locfileid: "62892301"
   
 -   [Funcionalidad de Integration Services no incluida en SQL Server 2014](../../2014/integration-services/discontinued-integration-services-functionality-in-sql-server-2014.md)  
   
--   [Cambios importantes en las características de Integration Services en SQL Server 2014](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [Últimos cambios en las características de Integration Services en SQL Server 2014](../../2014/integration-services/breaking-changes-to-integration-services-features-in-sql-server-2014.md)  
   
--   [Cambios de comportamiento en las características de Integration Services en SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
+-   [Cambios del comportamiento en las características de Integration Services en SQL Server 2014.](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)  
   
   

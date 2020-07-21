@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17df08b401c7e1ae4e1f5d3b386808f11e3bb180
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8b19314337fd78f85ab79d186c0d0956f0ed5aaa
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974299"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922362"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>Método setEscapeProcessing (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public final void setEscapeProcessing(boolean enable)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método setEscapeProcessing se especifica mediante el método setEscapeProcessing en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método setEscapeProcessing especifica este método setEscapeProcessing en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

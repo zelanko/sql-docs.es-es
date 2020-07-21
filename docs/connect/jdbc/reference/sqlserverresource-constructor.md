@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e9761462-b580-41cc-b326-a47ff78e6965
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b816fa1e1e8624f26f560bb9aa700254bdc8ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 37a5846c26af18cfc34dd22cbfd77c54cf02587f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67970689"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925941"
 ---
 # <a name="sqlserverresource-constructor-"></a>Constructor SQLServerResource ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

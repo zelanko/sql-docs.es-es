@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ddc0a4147623753e04b14e60359c397b00a8d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807479"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934376"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Crear reflejo de la base de datos y trasvase de registros (SQL Server)
   Se puede crear el reflejo de una determinada base de datos o realizar un trasvase de registros; también es posible realizar ambos procesos de forma simultánea. Para elegir qué método se debe utilizar, tenga en cuenta los siguientes aspectos:  
@@ -63,7 +62,7 @@ ms.locfileid: "62807479"
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Conmutación por error de la base de datos principal a la base de datos reflejada  
  En la siguiente ilustración se muestra el funcionamiento conjunto del trasvase de registros y la creación de reflejo de la base de datos cuando la creación de reflejo se ejecuta en el modo de alta seguridad con conmutación automática por error. Inicialmente, **Server_A** es el servidor principal para la creación de reflejo y el servidor principal del trasvase de registros. **Server_B** es el servidor reflejado y además está configurado como servidor principal, que actualmente está inactivo. **Server_C** y **Server_D** son servidores secundarios de trasvase de registros. Para ofrecer la máxima disponibilidad de la sesión de trasvase de registros, la ubicación de copias de seguridad se encuentra en un directorio de recurso compartido en un equipo host independiente.  
   
- ![Combinar el trasvase de registros y la creación de reflejo de la base de datos](../media/logshipping-and-dbm-automatic-failover.gif "Combinar el trasvase de registros y la creación de reflejo de la base de datos")  
+ ![Trasvase de registros y creación de reflejo de la base de datos](../media/logshipping-and-dbm-automatic-failover.gif "Trasvase de registros y creación de reflejo de la base de datos")  
   
  Tras una conmutación por error de la creación de reflejo, el nombre del servidor principal definido en el servidor secundario no se modifica. .  
   

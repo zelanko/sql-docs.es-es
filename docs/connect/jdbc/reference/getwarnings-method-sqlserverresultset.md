@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 242ad42751fac88a08046346915f298378a66b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7ed0ac3af651471c112a1d0b9d9d1c84ea9e8a1e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67978093"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910351"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>Método getWarnings (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +38,13 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto SQLWarning.  
+ Un objeto SQLWarning.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getWarnings se especifica mediante el método getWarnings en la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método getWarnings especifica este método getWarnings en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

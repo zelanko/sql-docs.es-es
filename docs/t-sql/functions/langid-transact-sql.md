@@ -19,17 +19,17 @@ helpviewer_keywords:
 - ID for language in use
 - local language IDs [SQL Server]
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bf0aa9d1bcdd2fc8de86d64c4a70455ef8f8864a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752226"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el identificador (Id.) de idioma local del idioma que se está utilizando actualmente.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "68109247"
 @@LANGID  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **smallint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para ver información sobre la configuración de idioma, incluidos los números de identificador de idioma, ejecute **sp_helplanguage** sin especificar parámetros.  
   
 ## <a name="examples"></a>Ejemplos  

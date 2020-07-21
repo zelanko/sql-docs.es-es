@@ -15,16 +15,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 089cc2fd9a2131ab18fea01262f9bc0d476355e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773142"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Análisis de un plan de ejecución real
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describe cómo puede analizar planes de ejecución gráficos reales mediante la función Plan Analysis (Análisis de plan) de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta característica está disponible a partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4. Por lo general, se recomienda que [instale la versión más reciente de SSMS](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -44,10 +44,10 @@ Para poder solucionar problemas de rendimiento de consulta, es necesario tener u
 
 2.  Haga clic en un área en blanco del plan de ejecución y haga clic en **Analizar el plan de ejecución real**. 
 
-    ![Hacer clic con el botón derecho en Analizar el plan de ejecución real](../../relational-databases/performance/media/plananalysismenuoption.png "Right-click Analyze Actual Execution Plan")   
+    ![Analizar el plan de ejecución real haciendo clic con el botón derecho](../../relational-databases/performance/media/plananalysismenuoption.png "Analizar el plan de ejecución real haciendo clic con el botón derecho")   
 
 3.  Se abre la ventana **Análisis del plan de presentación** en la parte inferior. La pestaña **Instrucción múltiple** es útil para analizar los planes con varias instrucciones, permitiendo que se analice la instrucción correcta.
 
 4.  Seleccione la pestaña Escenarios para ver detalles sobre los problemas encontrados en el plan de ejecución real. Para cada operador enumerado en el panel izquierdo, el panel derecho muestra detalles sobre el escenario en el vínculo *Para más información sobre este escenario, haga clic aquí* y se muestran los motivos posibles para explicar ese escenario.
 
-    ![Resultados del análisis del plan de ejecución](../../relational-databases/performance/media/plananalysis-scenarios.png "Execution Plan Analysis results") 
+    ![Resultados del análisis del plan de ejecución](../../relational-databases/performance/media/plananalysis-scenarios.png "Resultados del análisis del plan de ejecución") 

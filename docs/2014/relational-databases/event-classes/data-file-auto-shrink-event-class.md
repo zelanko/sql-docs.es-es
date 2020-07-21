@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eed8a4c35aba41af5b5fbc446e8275d14c8a9ca8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029923"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink, clase de eventos
   La clase de eventos **Data File Auto Shrink** indica que el archivo de datos se ha reducido. Este evento no se desencadena si el archivo de datos se reduce debido a una instrucción ALTER DATABASE explícita. Incluya la clase de eventos **Data File Auto Shrink** en seguimientos que supervisen los cambios de tamaño del archivo de datos.  
@@ -34,9 +33,9 @@ ms.locfileid: "62663178"
 |**ClientProcessID**|**Int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**Duración**|**bigint**|Tiempo (en milisegundos) necesario para reducir el archivo.|13|Sí|  
+|**Duration**|**bigint**|Tiempo (en milisegundos) necesario para reducir el archivo.|13|Sí|  
 |**EndTime**|**datetime**|Hora de finalización de la reducción automática.|18|Sí|  
-|**EventClass**|**int**|Tipo de evento registrado = 94.|27|Sin|  
+|**EventClass**|**int**|Tipo de evento registrado = 94.|27|No|  
 |**EventSequence**|**int**|Secuencia de la clase de eventos en el lote.|51|No|  
 |**Nombre de archivo**|**nvarchar**|Nombre lógico del archivo que se va a reducir.|36|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se llena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -50,7 +49,7 @@ ms.locfileid: "62663178"
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

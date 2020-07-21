@@ -1,7 +1,7 @@
 ---
-title: Vistas de administración dinámica y vistas de catálogo del sistema para grupos de disponibilidad
-description: Una colección de vistas de administración dinámica y vistas de catálogo que pueden ayudar a supervisar y diagnosticar el estado de un grupo de disponibilidad Always On.
-ms.custom: ag-guide, seodec18
+title: DMV y vistas de catálogo del sistema para grupos de disponibilidad
+description: Colección de vistas de administración dinámica y vistas de catálogo que pueden ayudar a supervisar y diagnosticar el estado de un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 591365dfd1aff7e4c4dc8811ea640cc3885dfeb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d8c71bc806bc01443b07c9cb43cb5ea5be939fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894487"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>Vistas de administración dinámica y vistas de catálogo del sistema (Grupos de disponibilidad Always On)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se muestran algunas de las consultas comunes en las vistas de administración dinámica (DMV) de Always On que puede usar para supervisar grupos de disponibilidad y solucionar problemas de ellos.  
   
 > [!TIP]  

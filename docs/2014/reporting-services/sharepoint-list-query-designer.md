@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 62428860419dd42b263b9408bb2c0d39514ca0e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101184"
 ---
 # <a name="sharepoint-list-query-designer"></a>Diseñador de consultas de lista de SharePoint
@@ -54,15 +54,15 @@ ms.locfileid: "66101184"
  [Resultados de la consulta](#QueryResults)  
  Muestra datos de ejemplo para el conjunto de resultados de la consulta generada automáticamente.  
   
-###  <a name="DatabaseView"></a> Panel Listas de SharePoint  
+###  <a name="sharepoint-lists-pane"></a><a name="DatabaseView"></a>Panel listas de SharePoint  
  El panel Listas de SharePoint muestra los metadatos de los objetos de base de datos que el usuario tiene permiso para ver, que se determinan mediante la conexión a un origen de datos y las credenciales. La vista jerárquica muestra objetos de base de datos organizados por esquema de la base de datos. Expanda el nodo de cada esquema para ver las tablas, vistas, procedimientos almacenados y funciones con valores de tabla. Expanda una tabla o vista para ver las columnas.  
   
-###  <a name="SelectedFields"></a> Panel Campos seleccionados  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a> Panel Campos seleccionados  
  El panel Campos seleccionados muestra los campos de elemento de lista que selecciona para los elementos de lista de SharePoint. Los campos que se muestran en este panel se convierten en la colección de campos para el conjunto de datos de informe. Una vez creado el conjunto de datos y una consulta, use el panel Datos de informe para ver la colección de campos para un conjunto de datos de informe. Estos campos representan los datos que pueden mostrarse en tablas, gráficos y otros elementos de informe al visualizar un informe.  
   
  Para agregar o quitar campos en este panel, active o desactive las casillas de los campos de tabla o vista en el panel Listas de SharePoint.  
   
-###  <a name="AppliedFilters"></a> Panel Filtros aplicados  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a> Panel Filtros aplicados  
  El panel Filtros aplicados muestra los criterios que se usan para limitar el número de filas de datos que deben recuperarse en tiempo de ejecución. Los criterios especificados en este panel se usan para generar una cláusula WHERE de [!INCLUDE[tsql](../includes/tsql-md.md)] . Al seleccionar la opción de parámetro, se crea automáticamente un parámetro de informe. Los parámetros de informe basados en los parámetros de consulta permiten a un usuario especificar valores para que la consulta controle los datos del informe.  
   
  Se muestran las siguientes columnas:  
@@ -75,7 +75,7 @@ ms.locfileid: "66101184"
   
 -   **Parámetro** : muestra la opción de agregar un parámetro de consulta a la consulta. Use las propiedades del conjunto de datos para ver la relación que existe entre el parámetro de consulta y el parámetro de informe.  
   
-###  <a name="QueryResults"></a> Panel Resultados de la consulta  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Panel Resultados de la consulta  
  El panel Resultados de la consulta muestra los resultados de la consulta generada automáticamente que se especifica mediante selecciones en los otros paneles. Las columnas del conjunto de resultados son los campos que se especifican en el panel Campos seleccionados y los datos de fila quedan limitados por los filtros especificados en el panel Filtros aplicados.  
   
  Estos datos representan los valores del origen de datos en el momento de ejecución de la consulta. Los datos no se guardan en la definición de informe. Los datos reales del informe se recuperar al procesar el informe.  
@@ -92,7 +92,7 @@ ms.locfileid: "66101184"
 |**Ejecutar consulta**|Ejecuta la consulta. El panel Resultados de la consulta muestra el conjunto de resultados.|  
 |**Mostrar campos ocultos**|Alterna entre mostrar u ocultar los campos que SharePoint generó automáticamente como el ProgID y Level para los elementos de vínculo de SharePoint, pero normalmente no se utiliza en informes. Al ocultar estos campos, la lista de campos se hace más corta y más fácil de utilizar.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñadores de consultas de Reporting Services](../../2014/reporting-services/reporting-services-query-designers.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b6b37879dc3f2e274a5cd322f14cd9050c66a2d
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070336"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381089"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifica los argumentos de un objeto de secuencia existente. Si la secuencia se creara con la opción **CACHE**, al modificar la secuencia se volverá a crear la memoria caché.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68070336"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
@@ -50,7 +50,9 @@ ALTER SEQUENCE [schema_name. ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *sequence_name*  
  Especifica el nombre exclusivo por el que se conoce la secuencia en la base de datos. El tipo es **sysname**.  
   
@@ -77,7 +79,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  Para obtener más información sobre el comportamiento de la memoria caché, vea [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para obtener información sobre cómo se crean las secuencias y cómo se administra la memoria caché de secuencias, vea [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  Los valores MINVALUE de las secuencias ascendentes y MAXVALUE de las secuencias descendentes no se pueden modificar con un valor que no permite el valor START WITH de la secuencia. Para cambiar el valor MINVALUE de una secuencia ascendente a un número mayor que el valor START WITH o cambiar el valor MAXVALUE de una secuencia descendente a un número menor que el valor START WITH, incluya el argumento RESTART WITH para reiniciar la secuencia en un punto deseado que esté dentro del rango mínimo y máximo.  
@@ -96,7 +98,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
   
  La propiedad de un objeto de secuencia se puede transferir mediante la instrucción **ALTER AUTHORIZATION**.  
   
-### <a name="audit"></a>Auditar  
+### <a name="audit"></a>Auditoría  
  Para auditar **ALTER SEQUENCE**, supervise el **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Ejemplos  

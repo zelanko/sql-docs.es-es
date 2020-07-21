@@ -15,15 +15,14 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059387"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
   Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
@@ -290,9 +289,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` soporte permite solicitar que se devuelva el resultado de una consulta FOR XML como tipo de datos `xml` tipo de datos, en lugar de como cadena o imagen de tipos de datos, especificando el [directiva TYPE](type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](use-xml-data-in-applications.md).  
+>  La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` compatibilidad con tipos de datos permite solicitar que el resultado de una consulta for XML se devuelva como `xml` tipo de datos, en lugar de datos con tipo de cadena o imagen, especificando la [Directiva Type](type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](use-xml-data-in-applications.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

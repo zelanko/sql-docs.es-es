@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e8b98135d07ecc51ce2570a481fac4924266668
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f99da3e23253323b3783173f85ed6e779f3a9397
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771142"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438602"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>Realizar cambios en las tablas seleccionadas para capturar cambios
   En este cuadro de diálogo, puede seleccionar determinadas columnas de la tabla seleccionada desde las que se van a capturar datos. También puede editar la información de **Rol de seguridad** y de **Instancia de captura** .  
@@ -49,8 +48,8 @@ ms.locfileid: "62771142"
   
  En el campo **Instancia de captura** , escriba un nombre para la instancia de captura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
- [Seleccionar tablas y columnas de Oracle](select-oracle-tables-and-columns.md)  
+ [Seleccione las columnas y tablas de Oracle ](select-oracle-tables-and-columns.md)  
   
   

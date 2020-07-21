@@ -1,6 +1,7 @@
 ---
-title: Compilación nativa de tablas y procedimientos almacenados | Microsoft Docs
-ms.custom: ''
+title: Compilación nativa de tablas y procedimientos almacenados
+description: Obtenga información sobre cómo OLTP en memoria puede compilar tablas optimizadas para memoria y procedimientos almacenados que acceden a tablas optimizadas para memoria en código nativo a fin de mejorar el rendimiento.
+ms.custom: seo-dt-2019
 ms.date: 04/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09e1e143f22c36e66670f9c02590e009e939a048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e26bb81bb4289d2b60f069444230e6fb25142ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722443"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 OLTP en memoria introduce el concepto de compilación nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas optimizadas para memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas optimizadas para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.
 
 Se admite también la compilación nativa de los tipos de tabla con optimización para memoria. Para obtener más información, vea [Faster temp table and table variable by using memory optimization (Tabla temporal y variable de tabla más rápidas con optimización de memoria)](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md).
@@ -211,6 +212,6 @@ No se necesita ninguna interacción del usuario para administrar estos archivos.
 
 ## <a name="see-also"></a>Consulte también
 
-[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+[Tablas optimizadas para la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
-[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

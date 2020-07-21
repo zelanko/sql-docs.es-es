@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8b7373754e9f2cd8323e5fdd421a556167380b73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf1eb5767f02e3b6d97ae0ff8392e13732fd46f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736047"
 ---
 # <a name="extended-static-geometry-methods"></a>Métodos de geometría estáticos ampliados
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varias extensiones a los métodos de geometría estáticos de Open Geospatial Consortium (OGC).  
   

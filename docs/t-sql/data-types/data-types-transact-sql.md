@@ -1,6 +1,6 @@
 ---
 title: Tipos de datos (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: En este artículo se proporciona un resumen de los diferentes tipos de datos disponibles en SQL Server.
 ms.date: 09/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,15 +17,15 @@ ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2050627a712c705ad15711a147eb78da65569ddc
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113739"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008084"
 ---
 # <a name="data-types-transact-sql"></a>Tipos de datos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cada columna, variable local, expresión y parámetro tiene un tipo de datos relacionado. Un tipo de datos es un atributo que especifica el tipo de datos que el objeto puede contener: datos de enteros, datos de caracteres, datos de moneda, datos de fecha y hora, cadenas binarias, etc.
   
@@ -36,7 +36,7 @@ Cuando dos expresiones que tienen tipos de datos, intercalaciones, precisión, e
 -   La intercalación del resultado viene determinada por las reglas de precedencia de intercalación cuando el tipo de datos del resultado es **char**, **varchar**, **text**, **nchar**, **nvarchar** o **ntext**. Para más información, vea [Prioridad de intercalación &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   La precisión, escala y longitud del resultado dependen de la precisión, escala y longitud de las expresiones de entrada. Para más información, vea [Precisión, escala y longitud &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona sinónimos de tipos de datos para la compatibilidad con ISO. Para obtener más información, vea [Sinónimos de tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona sinónimos de tipos de datos para la compatibilidad con ISO. Para más información, vea [Sinónimos de tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
 ## <a name="data-type-categories"></a>Categorías de tipos de datos
 Los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se organizan en las siguientes categorías:
@@ -84,7 +84,7 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], según las caracte
 |||  
 |-|-|  
 |[char](../../t-sql/data-types/char-and-varchar-transact-sql.md)|[varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)|  
-|[texto](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="unicode-character-strings"></a>Cadenas de caracteres Unicode
   
@@ -97,8 +97,8 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], según las caracte
   
 |||  
 |-|-|  
-|[binario](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
-|[imagen](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
+|[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="other-data-types"></a>Otros tipos de datos
   
@@ -110,7 +110,7 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], según las caracte
 |[Tipos de geometría espacial](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Tipos de geografía espacial](../../t-sql/spatial-geography/spatial-types-geography.md)|  
 |[table](../../t-sql/data-types/table-transact-sql.md) | |
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)

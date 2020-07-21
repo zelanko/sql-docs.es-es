@@ -11,24 +11,24 @@ helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - SQL grammar [ODBC], create index
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ad15ad436b0f34f00acbd75e371e998183f22d2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081909"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81280975"
 ---
 # <a name="create-index-statement"></a>Instrucción CREATE INDEX
-La sintaxis de la instrucción CREATE INDEX es:  
+La sintaxis de la instrucción CREATE INDEX es la siguiente:  
   
- Crear índice [UNIQUE] *nombre del índice* ON *nombre-tabla* (*identificador de columna* [ASC] [DESC] [, *identificador de columna* [ASC][DESC]...]) CON \< *lista de opciones de índice*>  
+ CREATE [UNIQUE] index *index-Name* en *TABLE-Name* (*identificador de columna* [asc] [Desc] [, *identificador de columna* [asc] [Desc]...]) \< *Lista de opciones* de with index>  
   
- donde \< *lista de opciones de índice*> puede ser: PRINCIPAL &#124; DISALLOW NULL &#124; OMITIR NULL  
+ donde \<la *lista de opciones de índice*> puede ser: principal &#124; no permitir null &#124; omitir null  
   
- Solo el controlador de Microsoft Access utiliza las opciones de índice no permitir NULL e IGNORE NULL. Los controladores de Paradox y dBASE aceptan la sintaxis, pero omitir la presencia de cualquiera de las opciones.  
+ Solo el controlador de Microsoft Access usa las opciones Disallow NULL e IGNORE NULL index. Los controladores dBASE y Paradox aceptan la sintaxis, pero omiten la presencia de ambas opciones.  
   
- Cuando se usa el controlador de Paradox, la instrucción CREATE INDEX crea Paradox archivos de clave principales y secundaria.  
+ Cuando se usa el controlador de Paradox, la instrucción CREATE INDEX crea archivos de clave principal y archivos secundarios de Paradox.  
   
- Esta instrucción no es compatible con los controladores de Microsoft Excel o texto.
+ Esta instrucción no es compatible con los controladores de texto o de Microsoft Excel.

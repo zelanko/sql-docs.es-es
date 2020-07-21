@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar KPI (SSAS Tabular) | Microsoft Docs
+title: Crear y administrar KPI (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b64c5014f6f32d2e6e702937a739b66f38362e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067511"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939826"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Crear y administrar KPI (SSAS tabular)
-  En este tema se describe cómo crear, editar o eliminar un KPI (indicador clave de rendimiento) en un modelo tabular. Para crear un KPI, seleccione una medida que se evalúa como valor Base del KPI. A continuación, use el cuadro de diálogo Indicador clave de rendimiento para seleccionar una segunda medida o un valor absoluto que se evalúe como un valor de destino. Después puede definir umbrales de estado que miden el rendimiento entre las medidas Base y Destino.  
+  En este tema se describe cómo crear, editar o eliminar un KPI (indicador clave de rendimiento) en un modelo tabular. Para crear un KPI, seleccione una medida que se evalúe como el valor base del KPI. A continuación, use el cuadro de diálogo Indicador clave de rendimiento para seleccionar una segunda medida o un valor absoluto que se evalúe como un valor de destino. Después puede definir umbrales de estado que miden el rendimiento entre las medidas Base y Destino.  
   
  En este tema se incluyen las tareas siguientes:  
   
@@ -35,9 +34,9 @@ ms.locfileid: "66067511"
 ## <a name="tasks"></a>Tareas  
   
 > [!IMPORTANT]  
->  Antes de crear un KPI, debe crear primero una medida base que se evalúe como un valor. Después, extienda la medida base a un KPI. La forma de crear medidas se describe en el tema [Create and Manage Measures &#40;SSAS Tabular&#41;](measures-ssas-tabular.md). Un KPI también necesita un valor de destino. Este valor puede ser de otra medida predefinida o puede ser un valor absoluto. Una vez extendida una medida base a un KPI, puede seleccionar el valor de destino y definir umbrales de estado en el cuadro de diálogo Indicador clave de rendimiento.  
+>  Antes de crear un KPI, debe crear primero una medida base que se evalúe como un valor. Después, extienda la medida base a un KPI. La forma de crear medidas se describe en el tema [Crear y administrar medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md). Un KPI también necesita un valor de destino. Este valor puede ser de otra medida predefinida o puede ser un valor absoluto. Una vez extendida una medida base a un KPI, puede seleccionar el valor de destino y definir umbrales de estado en el cuadro de diálogo Indicador clave de rendimiento.  
   
-###  <a name="bkmk_create_KPI"></a> Para crear un KPI  
+###  <a name="to-create-a-kpi"></a><a name="bkmk_create_KPI"></a> Para crear un KPI  
   
 1.  En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actuará como medida base (valor) y, después, haga clic en **Crear KPI**.  
   
@@ -56,15 +55,15 @@ ms.locfileid: "66067511"
 > [!TIP]  
 >  Puede usar la característica Analizar en Excel para probar el KPI. Para obtener más información, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
-###  <a name="bkmk_edit_KPI"></a> Para editar un KPI  
+###  <a name="to-edit-a-kpi"></a><a name="bkmk_edit_KPI"></a> Para editar un KPI  
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Editar configuración de KPI**.  
   
-###  <a name="bkmk_delete"></a> Para eliminar un KPI y la medida base  
+###  <a name="to-delete-a-kpi-and-the-base-measure"></a><a name="bkmk_delete"></a> Para eliminar un KPI y la medida base  
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Eliminar**.  
   
-###  <a name="bkmk_delete_KPI"></a> Para eliminar un KPI, pero mantener la medida base  
+###  <a name="to-delete-a-kpi-but-keep-the-base-measure"></a><a name="bkmk_delete_KPI"></a>Para eliminar un KPI, pero mantener la medida base  
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Eliminar KPI**.  
   
@@ -75,16 +74,16 @@ ms.locfileid: "66067511"
 |Medida de base de KPI|ALT+B|  
 |Estado de KPI|ALT+S|  
 |Measure|ALT+M|  
-|Valor absoluto|ALT+A|  
+|Valor absoluto|ALT + A|  
 |Definir umbrales de estado|ALT+U|  
 |Seleccionar estilo de icono|Alt+I|  
 |Tendencia|ALT+T|  
 |Descripciones|ALT+D|  
 |Tendencia|ALT+T|  
   
-## <a name="see-also"></a>Vea también  
- [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)   
- [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [KPI &#40;&#41;tabular de SSAS](kpis-ssas-tabular.md)   
+ [Medidas &#40;&#41;tabular de SSAS](measures-ssas-tabular.md)   
  [Crear y administrar medidas &#40;SSAS tabular&#41;](create-and-manage-measures-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096253"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196513"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-Devuelve el histograma de estadísticas para el objeto de base de datos especificado (tabla o vista indizada) en el actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+Devuelve el histograma de estadísticas para el objeto de base de datos especificado (tabla o vista indizada) en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos actual. Similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> Está disponible a partir de esta DMF [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2
+> Esta DMF está disponible a partir de [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 Cu2
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,22 +51,22 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|Identificador del objeto (tabla o vista indizada) para el que se devuelven las propiedades del objeto de estadísticas.|  
 |stats_id |**int**|Identificador del objeto de estadísticas. Es único dentro de la vista indizada o la tabla. Para obtener más información, vea [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**int** |El número de paso del histograma. |
+|step_number |**int** |Número de pasos del histograma. |
 |range_high_key |**sql_variant** |Valor de columna límite superior de un paso del histograma. El valor de columna también se denomina valor de clave.|
-|RANGE_ROWS |**real** |Número calculado de filas cuyo valor de columna está comprendido en un paso del histograma, sin incluir el límite superior. |
+|range_rows |**real** |Número calculado de filas cuyo valor de columna está comprendido en un paso del histograma, sin incluir el límite superior. |
 |equal_rows |**real** |Número calculado de filas cuyo valor de columna es igual al límite superior del paso del histograma. |
-|DISTINCT_RANGE_ROWS |**bigint** |Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior. |
-|average_range_rows |**real** |Número promedio de filas con valores de columna duplicados en un paso del histograma, excluido el límite superior (`RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0`). |
+|distinct_range_rows |**bigint** |Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior. |
+|average_range_rows |**real** |Número promedio de filas con valores de columna duplicados dentro de un paso del histograma, excluido el límite superior ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` para `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Comentarios  
+ ## <a name="remarks"></a>Observaciones  
  
- El conjunto de resultados de `sys.dm_db_stats_histogram` devuelve información similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM` y también incluye `object_id`, `stats_id`, y `step_number`.
+ El conjunto de resultados de `sys.dm_db_stats_histogram` devuelve información similar a `DBCC SHOW_STATISTICS WITH HISTOGRAM` y también incluye `object_id` , `stats_id` y `step_number` .
 
- Dado que la columna `range_high_key` es una de datos sql_variant tipo, es posible que deba usar `CAST` o `CONVERT` si lleva a un predicado de comparación con una constante que no son de cadena.
+ Dado que la columna `range_high_key` es un tipo de datos sql_variant, puede que tenga que usar `CAST` o `CONVERT` si un predicado realiza una comparación con una constante que no es de cadena.
 
 ### <a name="histogram"></a>Histograma
   
@@ -75,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma")  
+ ![Histograma](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma")  
   
  En cada paso del histograma:  
   
@@ -83,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   El área de color sólido situada a la izquierda de *range_high_key* representa el rango de valores de columna y el número medio de veces que tiene lugar cada valor de columna (*average_range_rows*). El valor de *average_range_rows* en el primer paso del histograma siempre es 0.  
   
--   Las líneas de puntos representan los valores de las muestras utilizados para estimar el número total de valores distintos que hay en el rango (*distinct_range_rows*) y el número total de valores que hay en el rango (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.  
+-   Las líneas de puntos representan los valores muestreados que se utilizan para estimar el número total de valores distintos en el intervalo (*distinct_range_rows*) y el número total de valores del intervalo (*range_rows*). El optimizador de consultas utiliza *range_rows* y *distinct_range_rows* para calcular *average_range_rows* y no almacena los valores de las muestras.  
   
  El optimizador de consultas define los pasos del histograma en función de su importancia estadística. Utiliza un algoritmo de diferencias máximas para minimizar el número de pasos del histograma a la vez que minimiza las diferencias entre los valores límite. El número máximo de pasos es 200. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por ejemplo, una columna con 100 valores distintos puede tener un histograma con menos de 100 puntos de límite.  
   
@@ -94,7 +95,7 @@ Necesita que el usuario tenga permisos de selección en columnas de estadística
 ## <a name="examples"></a>Ejemplos  
 
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo    
-El ejemplo siguiente se crea y rellena una tabla sencilla. A continuación, crea las estadísticas en la `Country_Name` columna.
+En el ejemplo siguiente se crea y rellena una tabla simple. Después crea las estadísticas en la `Country_Name` columna.
 
 ```sql
 CREATE TABLE Country
@@ -105,12 +106,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-La clave principal se ocupa `stat_id` número 1, por lo que se llame a `sys.dm_db_stats_histogram` para `stat_id` número 2, para devolver el histograma de estadísticas para el `Country` tabla.    
+La clave principal ocupa el `stat_id` número 1, por lo que debe llamar a `sys.dm_db_stats_histogram` para el `stat_id` número 2 para devolver el histograma de estadísticas de la `Country` tabla.    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>b. Consultas útiles:   
+### <a name="b-useful-query"></a>B. Consulta útil:   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -119,15 +120,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. Consultas útiles:
-Selecciona el siguiente ejemplo de tabla `Country` con un predicado en la columna `Country_Name`.
+### <a name="c-useful-query"></a>C. Consulta útil:
+En el ejemplo siguiente se selecciona de la tabla `Country` con un predicado en la columna `Country_Name` .
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-El ejemplo siguiente se examina la estadística creada anteriormente en la tabla `Country` y la columna `Country_Name` el paso del histograma que coinciden con el predicado en la consulta anterior.
+En el ejemplo siguiente se examina la estadística creada anteriormente en la tabla `Country` y la columna `Country_Name` para el paso del histograma que coincide con el predicado de la consulta anterior.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -144,7 +145,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[Funciones (Transact-SQL) y vistas de administración dinámica relacionadas con objetos](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+[Funciones y vistas de administración dinámica relacionadas con objetos (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

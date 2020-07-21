@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d3f78c3c97c5bbe862867d5f51ff35f57d147df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026354"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar un archivo de formato para omitir un campo de datos (SQL Server)
   Un archivo de datos puede contener más campos que el número de columnas de la tabla. En este tema se describe la modificación de archivos de formato XML y no XML para adaptarse a un archivo de datos con más campos asignando las columnas de la tabla a los campos de datos correspondientes y omitiendo los campos adicionales.  
   
 > [!NOTE]  
->  Puede usarse un archivo de formato XML o no XML para importar en bloque un archivo de datos en la tabla mediante un comando **bcp**, una instrucción BULK INSERT o una instrucción INSERT… SELECT * FROM OPENROWSET(BULK...). Para obtener más información, vea [Usar un archivo de formato para importar datos en bloque &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Se puede usar un archivo de formato XML o no XML para realizar una importación masiva de un archivo de datos en la tabla mediante un comando **BCP** , una instrucción BULK INSERT o una instrucción INSERT... SELECT * FROM OPENROWSET (BULK...). Para obtener más información, vea [Usar un archivo de formato para importar datos en bloque &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-data-file-and-table"></a>Archivo de datos y tabla de ejemplo  
  Los ejemplos de archivos de formato modificados de este tema se basan en la siguiente tabla y archivo de datos.  
   
 ### <a name="sample-table"></a>Tabla de ejemplo  
- Los ejemplos requieren la creación de una tabla denominada `myTestSkipField` en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , bajo el esquema `dbo` . Para crear esta tabla, en el Editor de consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ejecute el código siguiente:  
+ Los ejemplos requieren la creación de una tabla denominada `myTestSkipField` en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , bajo el esquema `dbo` . Para crear esta tabla, en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] el editor de consultas, ejecute el código siguiente:  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,7 +83,7 @@ GO
 ### <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se utiliza `INSERT ... SELECT * FROM OPENROWSET(BULK...)` , que usa el archivo de formato `myTestSkipField.fmt` . En el ejemplo se importa masivamente el archivo de datos `myTestSkipField-c.dat` a la tabla `myTestSkipField` . Para crear la tabla y el archivo de datos de ejemplo, vea "Tabla y archivo de datos de ejemplo", anteriormente en este tema.  
   
- En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ejecute el siguiente código:  
+ En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecute el siguiente código:  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,8 +140,8 @@ GO
 > [!NOTE]  
 >  Para obtener más información sobre la sintaxis del esquema XML y ejemplos adicionales de archivos de formato XML, vea [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte también  
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   

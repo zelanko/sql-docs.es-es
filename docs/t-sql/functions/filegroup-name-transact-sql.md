@@ -22,17 +22,17 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fb566c311d57f9ba04f79798f0d4f50e910456bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 329b354b5b5e3fe66637962d2808742083c4cfac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071447"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895757"
 ---
-# <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Esta función devuelve el nombre del grupo de archivos correspondiente al número de identificación (id.) del grupo de archivos especificado.  
   
@@ -49,10 +49,10 @@ FILEGROUP_NAME ( filegroup_id )
 
 El número de identificación del grupo de archivos cuyo nombre de grupo de archivos `FILEGROUP_NAME` va a devolver. *filegroup_id* tiene un tipo de datos **smallint**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 *filegroup_id* corresponde a la columna **data_space_id** de la vista de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Ejemplos  

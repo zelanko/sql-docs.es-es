@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 378b8c95f5b7f4ed1e247a89f3e3ad6111654303
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062029"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439712"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>agregar un controlador de eventos a un paquete
   En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear controladores de eventos personalizados que respondan a estos eventos ejecutando un flujo de trabajo cuando se produce el evento. Por ejemplo, puede crear un controlador de eventos que envíe un mensaje de correo electrónico cuando una tarea genera un error.  
@@ -38,7 +37,7 @@ ms.locfileid: "66062029"
   
 3.  Haga clic en la pestaña **Controladores de eventos** .  
   
-     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](media/eventhandlers.gif "Captura de pantalla de la superficie de diseño con el controlador de eventos")  
   
      La creación del flujo de control y de los flujos de datos en un controlador de eventos se asemeja a la creación del flujo de control y de los flujos de datos en un paquete. Para obtener más información, consulte [Control Flow](control-flow/control-flow.md) y [Data Flow](data-flow/data-flow.md).  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66062029"
   
 9. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

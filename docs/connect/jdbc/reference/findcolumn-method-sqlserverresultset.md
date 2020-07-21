@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 56e01d155c90e5e57dc9c2add6f8fd3540892596
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67954569"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920950"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>Método findColumn (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public int findColumn(java.lang.String columnName)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método findColumn se especifica mediante el método findColumn de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ El método findColumn especifica este método findColumn en la interfaz java.sql.ResultSet.  
   
  Si hay varias columnas con el mismo nombre, el método findColumn devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas. Si no hay coincidencias con distinción entre mayúsculas y minúsculas, este método devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas.  
   

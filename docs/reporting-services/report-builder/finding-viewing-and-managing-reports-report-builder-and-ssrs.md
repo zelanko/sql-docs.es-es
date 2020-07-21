@@ -1,6 +1,7 @@
 ---
-title: Buscar, ver y administrar informes (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 05/20/2019
+title: Búsqueda, visualización y administración de informes (Generador de informes y SSRS) | Microsoft Docs
+description: En el Generador de informes y Diseñador de informes, puede buscar informes paginados, orígenes de datos compartidos, modelos y otros elementos de informe relacionados.
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-builder
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.openlocfilehash: 74c4591122fa45d4e050718e78296ed672a4c210
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492865"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258104"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
-  En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
+  En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes paginados, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
   
  En el Diseñador de informes, también puede examinar su equipo para buscar informes locales. Después de implementar informes en un servidor de informes o un sitio de SharePoint, podrá examinar el servidor de informes utilizando el portal web o buscar en el sitio de SharePoint para encontrar informes. Los informes y elementos relacionados siguen estando disponibles localmente después de implementarse.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "67492865"
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a> Buscar y ver informes en el Generador de informes  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> Buscar y ver informes en el Generador de informes  
  Para buscar un informe con el que desea trabajar o para seleccionar un origen de datos compartido, una imagen o un subinforme para usarlos en un informe, puede examinar el equipo, las carpetas de un servidor de informes, o el sitio de SharePoint integrado con Reporting Services.  
   
  Para encontrar informes en un servidor de informes, debe especificar una dirección URL correspondiente al servidor de informes, así como tener para las carpetas los permisos adecuados para leer y guardar los elementos de informe. Pida el administrador del sistema del servidor de informes los permisos y la dirección URL que correspondan.  
@@ -48,7 +49,7 @@ ms.locfileid: "67492865"
 -   **Ver informes** Puede obtener una vista previa de un informe en el Generador de informes al crear o actualizar los informes. Cuando el Generador de informes está conectado a un servidor de informes, éste carga y procesa el informe; en caso contrario, los informes se procesan localmente. El visor de informes del Generador de informes muestra el informe representado.  
   
  
-##  <a name="ViewingAndManagingReportServer"></a> Ver y administrar informes en un servidor de informes  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> Ver y administrar informes en un servidor de informes  
  Para ver y administrar los informes del servidor de informes se usa el portal web. Examine las carpetas del servidor para buscar informes, ejecute los informes para verlos en un explorador y realice las tareas de administración.  
   
  El portal web puede ayudarle con las siguientes tareas de administración:  
@@ -85,11 +86,11 @@ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE
 |Opción|Resultado|  
 |------------|------------|  
 |Botón**Actualizar** de la ventana del explorador|Muestra el informe almacenado en la memoria caché de la sesión. Cuando un usuario abre un informe, se crea una memoria caché de la sesión. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa las sesiones del explorador para mantener una experiencia de visualización coherente mientras permanece abierto un informe.|  
-|![Botón para actualizar el explorador de la barra de herramientas de informes](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|Al hacer clic en el botón **Actualizar** de la barra de herramientas de informes, el servidor de informes vuelve a ejecutar la consulta y actualiza los datos del informe si este se ejecuta a petición. Si el informe está almacenado en la memoria caché o es una instantánea, **Actualizar** muestra el informe almacenado en la base de datos del servidor de informes.|  
+|![Botón para actualizar el explorador de la barra de herramientas](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|Al hacer clic en el botón **Actualizar** de la barra de herramientas de informes, el servidor de informes vuelve a ejecutar la consulta y actualiza los datos del informe si este se ejecuta a petición. Si el informe está almacenado en la memoria caché o es una instantánea, **Actualizar** muestra el informe almacenado en la base de datos del servidor de informes.|  
 |Combinación de teclas CTRL+F5|Produce el mismo efecto que hacer clic en el botón **Actualizar** de la barra de herramientas de informe.|  
   
   
-##  <a name="ViewingAndManagingSharePointSite"></a> Ver y administrar elementos del servidor de informes desde un sitio de SharePoint  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> Ver y administrar elementos del servidor de informes desde un sitio de SharePoint  
  Cuando el administrador de sistema configura un servidor de informes para que se ejecute en el modo integrado de SharePoint, puede ver y administrar informes y otros elementos del servidor de informes desde un sitio de SharePoint.  
   
  El sitio de SharePoint contiene páginas donde se pueden establecer propiedades del origen de datos, el historial de informes, opciones de procesamiento de informes, programaciones, suscripciones y parámetros de informe, así como crear programaciones compartidas. Puede administrar elementos del servidor de informes en un sitio de SharePoint del mismo modo que los crearía y administraría desde otras herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -118,11 +119,11 @@ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE
  ![Comandos de menú para elementos del servidor de informes](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "Comandos de menú para elementos del servidor de informes")  
   
   
-##  <a name="DeskTop"></a> Ver informes en una aplicación de escritorio  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> Ver informes en una aplicación de escritorio  
  Si lo prefiere, puede omitir la visualización con el explorador y, en su lugar, usar una aplicación de escritorio (como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) como el visor de informes. Para ello, defina una suscripción que especifique un formato de aplicación de escritorio y un destino para la carpeta compartida. El servidor de informes generará el informe como si se tratara de un archivo de la aplicación, le anexará una extensión al nombre de archivo y lo guardará como archivo en el disco duro. Después, podrá usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel (u otra aplicación) en lugar de un explorador para ver el informe.  
   
   
-##  <a name="AboutUserSessions"></a> Acerca de las sesiones de usuario  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> Acerca de las sesiones de usuario  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza las sesiones del explorador para mantener la coherencia durante la visualización de los informes. Las sesiones se basan en conexiones de explorador en lugar de en usuarios autenticados. Cada vez que un usuario abre un informe en una nueva ventana del explorador, se crea una sesión nueva. Una vez establecida una sesión de explorador, puede continuar trabajando en la versión del informe abierta al iniciar la sesión, incluso si el informe se modifica en el servidor de informes. Por ejemplo, si abre un informe a las 11:00 p. m. y un autor lo vuelve a publicar a las 11:01 p. m., la sesión que tenga abierta contendrá la versión que ha abierto para la sesión.  
   
  Si actualiza un informe en la misma sesión mediante el botón **Actualizar** del explorador, se muestra la versión de la sesión original del informe. Si actualiza un informe a petición con el botón **Actualizar** de la barra de herramientas del informe, se volverá a ejecutar el informe y, si hay nuevos datos, se mostrarán.  
@@ -130,7 +131,7 @@ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE
  La información relativa a la sesión se almacena en la base de datos temporal del servidor de informes. El servidor de informes no utiliza la administración de sesiones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Si reinicia el servidor o realiza una operación de recuperación de la base de datos, no podrá restaurar el estado de la sesión. Para más información sobre la administración de sesiones, vea [Identificar el estado de ejecución](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  En los artículos siguientes se proporciona información adicional sobre cómo ver y administrar informes.  
   
  [Buscar, ver y administrar informes](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
@@ -141,7 +142,7 @@ Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE
  [Vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Describe cómo obtener una vista previa de los informes mientras se crean o actualizan.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar informes &#40;Generador de informes&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  

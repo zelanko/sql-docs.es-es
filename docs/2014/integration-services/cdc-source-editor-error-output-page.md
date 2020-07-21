@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de CDC (página salida de Error) | Microsoft Docs
+title: Editor de origen de CDC (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4e44aea5cfd2cee5a4da920687d0f063df11460
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061040"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438972"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Editor de origen de CDC (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de CDC** para seleccionar las opciones de control de errores.  
@@ -59,7 +58,7 @@ ms.locfileid: "66061040"
  Use las opciones siguientes para configurar la forma en la que el origen de CDC controla errores y truncamientos.  
   
  **Error de componente**  
- La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Éste es el comportamiento predeterminado.  
+ La tarea Flujo de datos genera un error cuando se produce un error o truncamiento. Este es el comportamiento predeterminado.  
   
  **Omitir error**  
  El error o el truncamiento se omite y la fila de datos se dirige a la salida de origen de CDC.  
@@ -67,7 +66,7 @@ ms.locfileid: "66061040"
  **Redirigir fila**  
  La fila de datos de error o truncamiento se dirige a la salida de error del origen de CDC. En este caso, se usa el control de errores de origen de CDC. Para más información, consulte [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Editor de origen de CDC &#40;página Columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   

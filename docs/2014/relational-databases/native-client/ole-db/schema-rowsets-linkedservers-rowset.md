@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas LINKEDSERVERS (OLE DB) | Documentos de Microsoft
+title: Conjunto de filas LINKEDSERVERS (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,21 @@ helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80eded31ebae744e272757a53a7fd1f4b56bf358
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998478"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de filas LINKEDSERVERS (OLE DB)
   El conjunto de filas **LINKEDSERVERS** enumera los orígenes de datos de la organización que pueden participar en consultas distribuidas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  El conjunto de filas **LINKEDSERVERS** contiene las siguientes columnas.  
   
-|Nombre de columna|Indicador de tipo|Descripción|  
+|Nombre de la columna|Indicador de tipo|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nombre de un servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante u otro nombre que identifica el tipo de almacén de datos representado por el nombre del servidor vinculado.|  
@@ -36,7 +35,7 @@ ms.locfileid: "62667340"
   
  El conjunto de filas está ordenado en SRV_NAME y se admite una restricción única en SRV_NAME.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

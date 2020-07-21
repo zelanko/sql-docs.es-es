@@ -1,5 +1,5 @@
 ---
-title: Procesamiento XML en el lado cliente (clases administradas de SQLXML) | Documentos de Microsoft
+title: Procesar XML en el lado cliente (clases administradas de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,19 @@ helpviewer_keywords:
 - SQLXML Managed Classes, client-side XML formatting
 - ClientSideXml property
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22c8b5e11ced4cdff95a6cc2d8aeeaa7e25a4d90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015308"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>Procesar XML en el cliente (clases administradas de SQLXML)
-  En este ejemplo se muestra el uso de la clientsidexml, propiedad. La aplicación ejecuta un procedimiento almacenado en el servidor. El resultado del procedimiento almacenado (un conjunto de filas de dos columnas) se procesa en el cliente para generar un documento XML.  
+  En este ejemplo se muestra el uso de la propiedad Clientsidexml,. La aplicación ejecuta un procedimiento almacenado en el servidor. El resultado del procedimiento almacenado (un conjunto de filas de dos columnas) se procesa en el cliente para generar un documento XML.  
   
- El siguiente GetContacts procedimiento almacenado devuelve **FirstName** y **LastName** de los empleados de la tabla Person.Contact de la base de datos AdventureWorks.  
+ El siguiente procedimiento almacenado GetContacts devuelve el **nombre** y el **Apellido** de los empleados de la tabla person. contact de la base de datos AdventureWorks.  
   
 ```  
 USE AdventureWorks  
@@ -38,7 +37,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- Esta aplicación de C# ejecuta el procedimiento almacenado y especifica la opción FOR XML AUTO en especificando el valor CommandText. En la aplicación, el clientsidexml, propiedad del objeto SqlXmlCommand se establece en true. Esto le permite ejecutar procedimientos almacenados preexistentes que devuelven un conjunto de filas y aplican a este último una transformación XML en el cliente.  
+ Esta aplicación de C# ejecuta el procedimiento almacenado y especifica la opción FOR XML AUTO en la especificación del valor CommandText. En la aplicación, la propiedad Clientsidexml, del objeto SqlXmlCommand se establece en true. Esto le permite ejecutar procedimientos almacenados preexistentes que devuelven un conjunto de filas y aplican a este último una transformación XML en el cliente.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104102"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar un servidor de informes para la administración remota
@@ -34,7 +34,7 @@ ms.locfileid: "66104102"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para modificar la configuración del firewall, es necesario iniciar sesión de manera local y ser miembro del grupo local Administradores. No se puede modificar la configuración del firewall de Windows de un equipo remoto a través de una conexión remota.  
   
  Si se desea habilitar la administración remota para un usuario que no es administrador, es necesario conceder a la cuenta permisos para la activación remota del Modelo de objetos componentes distribuido (DCOM). En este tema se ofrecen instrucciones para configurar el servidor para el acceso de usuarios que no son administradores.  
@@ -60,9 +60,9 @@ ms.locfileid: "66104102"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>Abrir puertos en Firewall de Windows  
   
-1.  [Configurar un Firewall de Windows para acceder al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Configurar un firewall de Windows para el acceso a motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-2.  [Configurar un Firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md).  
+2.  [Configurar un firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md).  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Configurar las conexiones remotas a la base de datos del servidor de informes  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66104102"
   
 1.  Inicie sesión como administrador local en el equipo para el que desea habilitar la administración remota.  
   
-2.  Si el servidor de informes se ejecuta en Windows Vista, haga clic en **símbolo** y seleccione **ejecutar como administrador**. En otros sistemas operativos, abra una ventana del símbolo del sistema.  
+2.  Si el servidor de informes se ejecuta en Windows Vista, haga clic con el botón secundario en **símbolo del sistema** y seleccione **Ejecutar como administrador**. En otros sistemas operativos, abra una ventana del símbolo del sistema.  
   
 3.  Ejecute el siguiente comando:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66104102"
   
 1.  En el menú Inicio, seleccione **Herramientas administrativas**y haga clic en **Servicios de componente**.  
   
-     Windows Vista, en el menú Inicio, haga clic en **todos los programas**, haga clic en **ejecutar**y, a continuación, escriba `mmc comexp.msc`.  
+     En Windows Vista, en el menú Inicio, haga clic en **todos los programas**, haga clic en `mmc comexp.msc` **Ejecutar**y, a continuación, escriba.  
   
 2.  Abra la carpeta Servicios de componente.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66104102"
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Para establecer permisos para el espacio de nombres de WMI del servidor de informes para usuarios que no son administradores  
   
-1.  En el menú Inicio, seleccione **Herramientas administrativas**y haga clic en **Administración de equipos**.  
+1.  En el menú Inicio, seleccione **Herramientas administrativas** y haga clic en **Administración de equipos**.  
   
 2.  Abra la carpeta Servicios y Aplicaciones.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66104102"
   
 13. En la columna **Permitir** , seleccione **Habilitar cuenta**, **Llamada remota habilitada**y **Seguridad de lectura**y, a continuación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

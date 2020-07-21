@@ -1,6 +1,6 @@
 ---
-title: Notas para (SSRS) 2017 y versiones posteriores de la versión | Microsoft Docs
-ms.date: 02/18/2019
+title: Notas de la versión para Reporting Services 2017 y posterior | Microsoft Docs
+ms.date: 04/06/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,20 +9,20 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
-ms.translationtype: MTE75
+ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533829"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809845"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notas de la versión de SQL Server Reporting Services (SSRS) 2017 y versiones posteriores
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2017-and-later](../includes/ssrs-appliesto-2017-and-later.md)]
 
-En este artículo se describe los cambios en [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS), para las versiones 2017 y versiones posteriores.
+En este artículo se describen los cambios en [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS) para las versiones 2017 y posteriores.
 
-Para las notas para los controles de Visor de informes, vea [notas de la versión para el Visor de informes los controles de formularios Web Forms y formularios Windows Forms de SSRS](application-integration/release-notes-ssrs-application-integration.md).
+Para ver las notas de la versión de los controles del visor de informes, vea [Notas de la versión de los controles del visor de informes para WebForms y WinForms de SSRS](application-integration/release-notes-ssrs-application-integration.md).
 
 <!--
 We are "standardizing" all our 'Release Notes' style articles:
@@ -50,27 +50,49 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="1406001572-20200406"></a>14.0.600.1572, 2020/04/06 
+
+| Problema corregido | Detalles |
+| :---------- | :------ |
+| Interfaz de usuario de JQuery actualizada a 1.12  | &nbsp; |
+| Se ha corregido la distinción de mayúsculas y minúsculas en direcciones URL.  | &nbsp; |
+| Se ha corregido la ubicación de parámetro cuando hay muchos parámetros.  | &nbsp; |
+| Se ha corregido FindString cuando no funciona en la representación de HTML5.  | &nbsp; |
+| Se han actualizado las bibliotecas cliente de Analysis Services para abordar el desuso de TLS 1.0/1.1. | &nbsp; |
+
+## <a name="1406001451-20191113"></a>14.0.600.1451, 2019/11/13 
+
+| Problema corregido | Detalles |
+| :---------- | :------ |
+| Actualizaciones de seguridad | &nbsp; |
+| Los informes paginados no funcionaban correctamente con los parámetros de filtro cuando la instantánea está habilitada.  | &nbsp; |
+| Los usuarios con la función de explorador y la configuración predeterminada no tenían permisos para descargar archivos de Excel.  | &nbsp; |
+| No se pudo actualizar a Power BI Report Server desde SQL Server 2016 Reporting Services durante la actualización. | &nbsp; |
+| Después de actualizar desde SQL Server 2012 Reporting Services, se produjo un error en las suscripciones que indicaba que se encontró un carácter no válido en el mensaje de encabezado de correo electrónico. | &nbsp; |
+| Herramienta de configuración: si se cancelan las ventanas modales en la sección de la base de datos, se reiniciará el servicio Reporting Services. | &nbsp; |
+| La expresión de propiedad BorderStyle de controles TextBox no se representó en formato Excel.  | &nbsp; |
+| Problema de paginación que pudo provocar el bloqueo de determinados informes que representaban la misma página sin llegar nunca a la última página del informe. | &nbsp; |
 
 ## <a name="1406001274-20190701"></a>14.0.600.1274, 2019/07/01
 
-| Se corrigió un problema | Detalles |
+| Problema corregido | Detalles |
 | :---------- | :------ |
 | Actualizaciones de seguridad | &nbsp; |
-| No se puede seleccionar los días laborables al crear una programación semanal | &nbsp; |
-| Informe no muestra retornos de carro correctamente en formato de Word | &nbsp; |
-| No funciona más con la reciente SSRS 2017 actualiza a System Center Operations Manager(SCOM) 2019 | &nbsp; |
-| Se produjo un error al invocar la extensión de la autorización para el conjunto de datos compartido | &nbsp; |
-| Lógica que puede cambiado en el procedimiento almacenado GetAllProperties en SSRS 2017 y PBIRS, lo que hace que el extremo del servicio Web ReportingService2010.GetProperties método no se puede obtener todos los datos de informe vinculado | &nbsp; |
-| Encabezado de fila de cuadrícula sencillo en el informe móvil desaparece cuando se hace clic en un elemento dentro de la cuadrícula | &nbsp; |
-| No se puede usar el campo de fecha en el parámetro de la suscripción controlada por datos | &nbsp; |
-| Muestra un tablix anidado fuente pequeña o parcial en SSRS 2016 y versiones posteriores | &nbsp; |
-| Suscripciones con error de parámetro de fecha y hora después de que el usuario con cambios de configuración regional diferentes la suscripción | &nbsp; |
-| Crear una suscripción controlada por datos con la extensión de entrega Null se producen errores con "se ha producido un error de entrega" | &nbsp; |
-| Codificación de dirección URL es incorrecta al establecer el valor en formato Excel\Word | &nbsp; |
+| No se pueden seleccionar los días de la semana al crear una programación compartida semanal. | &nbsp; |
+| El informe no muestra los retornos de carro correctamente en formato de Word. | &nbsp; |
+| System Center Operations Manager (SCOM) 2019 ya no funciona con las actualizaciones recientes de SSRS 2017. | &nbsp; |
+| Error al invocar la extensión de autorización para el conjunto de datos compartido. | &nbsp; |
+| Se ha cambiado la lógica del procedimiento almacenado GetAllProperties en SSRS 2017 y PBIRS, lo que hace que el método ReportingService2010.GetProperties del punto de conexión de servicio Web no pueda obtener datos para el informe vinculado. | &nbsp; |
+| El encabezado de fila de cuadrícula simple en el informe para dispositivos móviles desaparece cuando se hace clic en un elemento de la cuadrícula. | &nbsp; |
+| No se puede usar el campo de fecha en el parámetro de suscripción controlada por datos. | &nbsp; |
+| El elemento Tablix anidado muestra una fuente pequeña o parcial en SSRS 2016 y versiones posteriores. | &nbsp; |
+| Suscripciones con error de parámetro de fecha y hora después de que un usuario con una configuración regional diferente edite la suscripción. | &nbsp; |
+| La creación de una suscripción controlada por datos con una extensión de entrega nula indica que se ha producido un error de entrega. | &nbsp; |
+| La codificación de la dirección URL es incorrecta al establecer el valor en formato Excel\Word. | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 2019/02/12
 
-| Se corrigió un problema | Detalles |
+| Problema corregido | Detalles |
 | :---------- | :------ |
 | El almacenamiento en caché de las programaciones de instantáneas de informes cambia a "Programación específica del informe" tras modificar la suscripción. | &nbsp; |
 | rc:Toolbar=false no funciona en la edición Express. | &nbsp; |
@@ -82,7 +104,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | Actualizaciones de seguridad. | &nbsp; |
 | No se muestra la interfaz de usuario de los informes vinculados. | &nbsp; |
 | Algunos informes paginados con controles Tablix anidados tienen fuentes incorrectas. | &nbsp; |
-| Espacio en blanco incorrectamente se agrega a determinados informes paginados que contienen regiones de datos tablix. | &nbsp; |
+| Se agrega un espacio en blanco de forma errónea a determinados informes paginados que contienen regiones de datos Tablix. | &nbsp; |
 | Las filas de encabezado desaparecen al expandir las cuadrículas de datos simples de un informe móvil. | &nbsp; |
 | &nbsp; | &nbsp; |
 
@@ -90,30 +112,30 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 
 Se corrigió el problema siguiente:
 
-| Se corrigió un problema | Detalles |
+| Problema corregido | Detalles |
 | :---------- | :------ |
 | La autenticación personalizada no devuelve información de cookies correcta. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="140600892-20180831"></a>14.0.600.892, 2018/08/31
 
-| Se corrigió un problema | Detalles |
+| Problema corregido | Detalles |
 | :---------- | :------ |
 | El cuadro de texto dentro del rectángulo hace que el rectángulo no crezca verticalmente si rc:Toolbar=False y tiene texto largo. | &nbsp; |
 | El tamaño del texto no se escala si pageHeight es inferior a 0,5 pulgadas. | &nbsp; |
-| Se produce interbloqueo en la base de datos de catálogos SSRS cuando se usa con CRM. | &nbsp; |
+| Se produce un interbloqueo en la base de datos del catálogo de SSRS cuando se usa con CRM. | &nbsp; |
 | Encabezados de columna alineados de manera vertical mostrados de forma incorrecta al desplazarse hasta el informe. | &nbsp; |
-| Los usuarios agregados a la función informes de System Center Operations Manager tienen acceso bloqueado al portal web SSRS. | &nbsp; |
-| Caracteres tailandés no se exportan correctamente en el archivo PDF. | &nbsp; |
+| Los usuarios agregados al rol de informes de System Center Operations Manager tienen bloqueado el acceso al portal web de SSRS. | &nbsp; |
+| El carácter tailandés no se exporta correctamente a PDF. | &nbsp; |
 | Cambio de comportamiento del rol Explorador. | &nbsp; |
 | rc:Toolbar=false no funciona en la edición Express. | &nbsp; |
-| Falta la barra de desplazamiento vertical en el área de mensajes de parámetros. | &nbsp; |
+| Falta la barra de desplazamiento vertical en el área de mensajes del parámetro. | &nbsp; |
 | Tiempo de ejecución de informes móviles actualizado. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="140600744-20180425"></a>14.0.600.744, 2018/04/25
 
-| Se corrigió un problema | Detalles |
+| Problema corregido | Detalles |
 | :---------- | :------ |
 | La página Suscripción controlada por datos no muestra la opción de entrega una vez creada. | &nbsp; |
 | La actualización de SSRS 2012 a SSRS 2017 tiene como resultado que RSManagement lanza una excepción cada pocos segundos. | &nbsp; |
@@ -123,11 +145,11 @@ Se corrigió el problema siguiente:
 
 ## <a name="140600689-20180228"></a>14.0.600.689, 2018/02/28
 
-| Se corrigió un problema | Detalles |
+| Problema corregido | Detalles |
 | :---------- | :------ |
 | La visibilidad del parámetro de informe de un informe vinculado se revierte después de editar sus propiedades. | &nbsp; |
 | El parámetro de la dirección URL rc:Toolbar=false no funciona en la edición Express. | &nbsp; |
-| Tener expresiones en un cuadro de texto con el CanGrow propiedad se establece en false, se producirá en los valores que no se están mostrando. | &nbsp; |
+| Las expresiones en TextBox con la propiedad CanGrow establecida en false hace que no se muestren los valores. | &nbsp; |
 | Se agregó el vínculo _Más información_ para la clave de producto en la configuración. | &nbsp; |
 | El portal web con autenticación de formularios personalizados omite el deslizamiento de la cookie de expiración. | &nbsp; |
 | Exportar a Word crea un alto de fila desigual si el contenido de la fila está vacío. | &nbsp; |
@@ -135,7 +157,7 @@ Se corrigió el problema siguiente:
 
 ## <a name="140600594-20180109"></a>14.0.600.594, 2018/01/09
 
-Algunas actualizaciones de seguridad se implementaron.
+Se implementaron algunas actualizaciones de seguridad.
 
 ### <a name="140600490-20171101"></a>14.0.600.490, 2017/11/01
 

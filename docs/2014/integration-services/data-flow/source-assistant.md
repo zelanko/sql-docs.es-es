@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sourceassistant.f1
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5954782efeebcb3bc4007988b8033adf47f969b3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900804"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437652"
 ---
 # <a name="source-assistant"></a>Asistente de orígenes
   El componente Asistente de orígenes ayuda a crear un componente de origen y un administrador de conexiones. El componente está ubicado en la sección **Favoritos** del cuadro de herramientas de SSIS.  

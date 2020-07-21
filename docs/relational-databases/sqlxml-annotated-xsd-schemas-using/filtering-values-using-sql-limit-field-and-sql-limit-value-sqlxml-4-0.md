@@ -1,6 +1,6 @@
 ---
-title: 'Filtrar valores mediante SQL: Limit-Field y SQL: Limit-Value (SQLXML 4,0) | Microsoft Docs'
-ms.custom: ''
+title: 'Filtrar con SQL: Limit-Field y SQL: Limit-Value (SQLXML)'
+description: 'Aprenda a usar las anotaciones SQL: Limit-Field y SQL: Limit-Value en SQLXML 4,0 para filtrar los datos devueltos por una consulta en función de un valor de limitación.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,16 +18,17 @@ ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65c26209ed058e5d93663bae9587f8cf5d59abdf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72906100"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750768"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. Las anotaciones **SQL: limit-field** y **SQL: Limit-Value** se utilizan para identificar la columna de base de datos que contiene valores de limitación y para especificar un valor de limitación concreto que se va a usar para filtrar los datos devueltos.  
   
  La anotación **SQL: limit-field** se usa para identificar una columna que contiene un valor de limitación. se permite en cada elemento o atributo asignado.  
@@ -165,7 +166,7 @@ ms.locfileid: "72906100"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitar los resultados basándose en un valor de descuento de datos de tipo real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitar los resultados basándose en un valor de descuento de datos de tipo real  
  En este ejemplo, una base de datos contiene dos tablas:  
   
 -   Orders (OrderID)  
@@ -306,9 +307,9 @@ ms.locfileid: "72906100"
     </root>  
     ```  
   
-## <a name="see-also"></a>Ver también  
- [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [Transact-SQL &#40;&#41; nchar y nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [nchar y nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Instalación de SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Usar esquemas XSD anotados en consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

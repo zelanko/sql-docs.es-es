@@ -16,10 +16,10 @@ ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67979211"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Método getTables (SQLServerDatabaseMetaData)
@@ -60,7 +60,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getTables especifica este método getTables en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getTables contendrá la siguiente información:  
@@ -71,7 +71,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |TABLE_SCHEM|**String**|Esquema de la tabla.|  
 |TABLE_NAME|**String**|El nombre de la tabla.|  
 |TABLE_TYPE|**String**|Tipo de la tabla.|  
-|REMARKS|**String**|Descripción de la tabla.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no devuelve ningún valor relativo a esta columna.|  
+|COMENTARIOS|**String**|Descripción de la tabla.<br /><br /> **Nota:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no devuelve ningún valor relativo a esta columna.|  
 |TYPE_CAT|**String**|El controlador JDBC no lo admite.|  
 |TYPE_SCHEM|**String**|El controlador JDBC no lo admite.|  
 |TYPE_NAME|**String**|El controlador JDBC no lo admite.|  

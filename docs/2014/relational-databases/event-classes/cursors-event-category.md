@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd614cc08e22b936c0f5f5468ded70d2adb9726f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b31ff8ccb9c662a2f0ea54adc9cd2d466103be2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029970"
 ---
 # <a name="cursors-event-category"></a>Cursores (categoría de eventos)
   La categoría de eventos **Cursores** contiene clases de eventos que se utilizan para supervisar el comportamiento de los cursores.  
@@ -38,7 +37,7 @@ ms.locfileid: "62663210"
 |[CursorRecompile (clase de eventos)](cursorrecompile-event-class.md)|Describe los eventos de recompilación de cursores que se producen en los cursores API.|  
 |[CursorUnprepare (clase de eventos)](cursorunprepare-event-class.md)|Describe los eventos de cancelación de preparación de cursores que se producen en los cursores API.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)  
   
   

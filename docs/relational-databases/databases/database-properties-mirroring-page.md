@@ -1,5 +1,6 @@
 ---
 title: Propiedades de la base de datos (página Creación de reflejo) | Microsoft Docs
+description: Obtenga información sobre cómo configurar las propiedades de creación de reflejo y ver el estado de una sesión de creación de reflejo. Vea cómo iniciar, pausar o quitar una sesión de creación de reflejo.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630987"
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Acceda a esta página desde la base de datos principal y utilícela para configurar y modificar las propiedades de la creación de reflejo de una base de datos. Utilícela también para iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos, ver el estado de una sesión de creación de reflejo y pausar o quitar la sesión de creación de reflejo de la base de datos.  
   
 > **IMPORTANTE** La seguridad debe configurarse antes de empezar la creación del reflejo. Si la creación de reflejo no se ha iniciado, debe empezar con el asistente. Los cuadros de texto de la página **Creación de reflejo** se deshabilitan hasta que finalice el asistente.  
@@ -49,7 +50,7 @@ ms.locfileid: "68099591"
   
  TCP **://** _fully_qualified_domain_name_ **:** _port_  
   
- donde  
+ , donde  
   
 -   *fully_qualified_domain_name* es el servidor en el que existe la instancia del servidor.  
   
@@ -76,7 +77,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
      Antes de iniciar la creación del reflejo, debe haberse creado la base de datos reflejada mediante la restauración de una copia de seguridad reciente WITH NORECOVERY y, quizás, de las copias de seguridad de los registros de la base de datos principal en el servidor reflejado. Para obtener más información, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
--   Las direcciones TCP de las instancias del servidor principal y reflejado ya están especificadas (en la sección **Direcciones de red de servidor**).  
+-   Las direcciones TCP de las instancias del servidor principal y reflejado ya están especificadas (en la sección **Direcciones de red de servidor** ).  
   
 -   Si el modo de funcionamiento está establecido en seguridad alta con conmutación automática por error (sincrónica), también se especifica la dirección TCP de la instancia del servidor reflejado.  
   
@@ -125,21 +126,21 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Estado**  
  Una vez que empieza la creación de reflejo, el panel **Estado** muestra el estado de la sesión de creación de reflejo de una base de datos desde que se ha seleccionado la página **Creación de reflejo** . Para actualizar el panel **Estado** , haga clic en el botón **Actualizar** . Los posibles estados son los siguientes:  
   
-|Estados|Explicación|  
+|States|Explicación|  
 |------------|-----------------|  
 |**Esta base de datos no se ha configurado para la creación de reflejo**|No existe ninguna sesión de creación de reflejo de la base de datos y no hay actividad de la que informar en la página **Creación de reflejo** .|  
 |**En pausa**|La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.|  
 |**Sin conexión**|La instancia del servidor principal no se puede conectar a su asociado.|  
-|**Sincronizando**|El contenido de la base de datos reflejada va por detrás del contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
+|**Sincronizando**|El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
 |**Conmutación por error**|En la instancia de servidor principal se ha iniciado una conmutación por error manual (intercambio de roles); el servidor actualmente está pasando al rol reflejado. En este estado, las conexiones de los usuarios a la base de datos principal finalizan rápidamente. La base de datos adopta el rol reflejado poco después.|  
-|**Sincronizado**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, es posible la conmutación por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado**.|  
+|**Sincronizada**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, es posible la conmutación por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .|  
   
  Para obtener más información, vea [Estados de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
   
  **Actualizar**  
  Haga clic para actualizar el cuadro **Estado** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si no está familiarizado con la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Agregar un testigo a una sesión existente  
@@ -167,7 +168,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Para obtener más información, vea [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   

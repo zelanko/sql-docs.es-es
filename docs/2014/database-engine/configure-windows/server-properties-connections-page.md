@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b894d7b554dffcb0941ddf38182519cf85a84c2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809360"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934966"
 ---
 # <a name="server-properties-connections-page"></a>Propiedades del servidor (página Conexiones)
   Utilice esta página para ver o modificar sus opciones de conexión.  
@@ -70,8 +69,8 @@ ms.locfileid: "62809360"
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
- [Opciones de &#40;consultas de ejecución: SQL Server: página Opciones avanzadas&#41;](../options-query-execution-sql-server-advanced-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Opciones &#40;ejecución de consultas: SQL Server: Página avanzadas&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

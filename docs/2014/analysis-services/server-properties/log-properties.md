@@ -1,5 +1,5 @@
 ---
-title: Registrar propiedades | Microsoft Docs
+title: Propiedades del registro | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -52,13 +52,12 @@ helpviewer_keywords:
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af365a21443f3feeb54ce2f76c729ba40909b9df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940659"
 ---
 # <a name="log-properties"></a>Propiedades de registro
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -76,7 +75,7 @@ ms.locfileid: "66068919"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>Registro de errores  
- Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Consulte [configuración de errores de procesamiento de dimensiones, particiones y cubos &#40;SSAS - multidimensionales&#41; ](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
+ Puede establecer estas propiedades en la instancia de servidor level para modificar los valores predeterminados de Configuración de errores que aparecen en otras herramientas y diseñadores. Vea [configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS-multidimensional&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) y <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> para obtener más información.  
   
  **ErrorLog\ErrorLogFileName**  
  Una propiedad utilizada como valor predeterminado durante la operación de procesamiento realizada por el servidor.  
@@ -198,9 +197,9 @@ ms.locfileid: "66068919"
  El valor predeterminado para esta propiedad es False, que indica que el servidor no creará automáticamente la tabla del registro y no registrará eventos de consulta.  
   
 > [!NOTE]  
->  Para obtener más información acerca de cómo configurar el registro de consultas, vea [las operaciones de registro en Analysis Services](../instances/log-operations-in-analysis-services.md).  
+>  Para obtener más información acerca de cómo configurar el registro de consultas, consulte [operaciones de registro en Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
-## <a name="trace"></a>Trace  
+## <a name="trace"></a>Seguimiento  
  **Trace\TraceBackgroundDistributionPeriod**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -231,7 +230,7 @@ ms.locfileid: "66068919"
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Almacena el ejemplo de propiedades de procedimiento (VC ++) | Microsoft Docs
+title: Ejemplo de propiedades de procedimiento almacenado (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Direction property [ADO], VC++ example
 - ActiveConnection property [ADO], VC++ example
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ff30099e951ec5b461b9f0e22c21164e7258ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7d22f2cb5500522ee525a778f9333be527d3f86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921629"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762976"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, tamaño y ejemplo de propiedades de dirección (VC ++)
-Este ejemplo se usa el [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md), y [dirección](../../../ado/reference/ado-api/direction-property.md) propiedades para ejecutar un procedimiento almacenado.  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction (VC + +)
+En este ejemplo se usan las propiedades [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)y [Direction](../../../ado/reference/ado-api/direction-property.md) para ejecutar un procedimiento almacenado.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -202,7 +202,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Authors With  25  Percent Royalty  
@@ -210,10 +210,10 @@ Authors With  25  Percent Royalty
         899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ActiveConnection (propiedad, ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
- [Propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [CommandText (propiedad, ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout (propiedad, ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [Propiedad CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Propiedad Direction](../../../ado/reference/ado-api/direction-property.md)   
+ [CommandType (propiedad, ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
+ [Direction (propiedad)](../../../ado/reference/ado-api/direction-property.md)   
  [Propiedad Size (parámetro de ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

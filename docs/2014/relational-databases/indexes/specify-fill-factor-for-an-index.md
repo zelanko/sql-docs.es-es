@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac54f2b22de55ed74c4635ec0f86d008c7624a42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025259"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Especificar el factor de relleno para un índice
   Este tema describe qué es el factor de relleno y cómo especificar un valor de factor de relleno en un índice de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,9 +43,9 @@ ms.locfileid: "63036244"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Performance"></a> Consideraciones de rendimiento  
+###  <a name="performance-considerations"></a><a name="Performance"></a> Consideraciones de rendimiento  
   
 #### <a name="page-splits"></a>Divisiones de páginas  
  Si el valor de factor de relleno se elige correctamente, se pueden reducir las posibles divisiones de página al proporcionarse espacio suficiente para la expansión del índice a medida que se agregan datos a la tabla subyacente. Cuando se agrega una fila nueva a una página de índice llena, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] mueve aproximadamente la mitad de las filas a una página nueva con el fin de hacer espacio para la nueva fila. Esta reorganización se denomina división de página. Una división de página genera espacio para los nuevos registros, pero puede tardar en realizarse y es una operación que consume muchos recursos. Además, puede causar fragmentación que, a su vez, causa más operaciones de E/S. Cuando se llevan a cabo divisiones de páginas con frecuencia, el índice se puede volver a generar utilizando un valor de factor de relleno nuevo o existente para redistribuir los datos. Para obtener más información, vea [Reorganizar y volver a generar índices](reorganize-and-rebuild-indexes.md).  
@@ -56,12 +55,12 @@ ms.locfileid: "63036244"
 #### <a name="adding-data-to-the-end-of-the-table"></a>Agregar datos al final de la tabla  
  Un factor de relleno distinto de cero o de cien puede ser conveniente para el rendimiento si los datos nuevos se distribuyen uniformemente en toda la tabla. Sin embargo, si todos los datos se agregan al final de la tabla, el espacio vacío en las páginas de índice no se rellenará. Por ejemplo, si la columna de clave de índice es una columna IDENTITY, la clave de las nuevas filas siempre aumenta y las filas de índice se agregan lógicamente al final del índice. Si las filas existentes se van a actualizar con datos que hacen aumentar el tamaño de las filas, use un factor de relleno menor que 100. Los bytes adicionales en cada página ayudarán a reducir las divisiones de página ocasionadas por la longitud extra de las filas.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>Para especificar un factor de relleno con el Diseñador de tablas  
   
@@ -97,9 +96,9 @@ ms.locfileid: "63036244"
   
 7.  En la fila **Factor de relleno** , escriba el factor de relleno que desee.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>Para especificar un factor de relleno en un índice existente  
   

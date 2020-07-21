@@ -7,27 +7,27 @@ ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893081"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000705"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] proporciona tutoriales para ayudarle a obtener más información sobre nuevas tecnologías y características. Normalmente se pueden usar los tutoriales de versiones anteriores con las versiones más recientes. Cuando un tutorial se dirige a una característica más reciente, se indicará la versión mínima necesaria para completarlo.  
      
--   Si un tutorial usa una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], debe descargar y usar la versión más reciente de CodePlex. Para obtener más información, consulte [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Scripts y bases de datos de AdventureWorks para SQL Server 2016 CTP3).    
+-   Si un tutorial usa una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], debe descargar y usar la versión más reciente de CodePlex. Para obtener más información, consulte [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) (Scripts y bases de datos de AdventureWorks para SQL Server 2016 CTP3).    
 -   Descargue un libro de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e informes de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usarlos con los tutoriales de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vaya a [Power View Samples for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=220734)(Ejemplos de Power View para SQL Server 2012).  
 - Visite el nuevo ejemplo [Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md) disponible en el repositorio de GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples) . 
 
  
 ## <a name="current-tutorials"></a>Tutoriales actuales  
   
-|Tecnología|Descripción|  
+|Technology|Descripción|  
 |--------------|---------------|  
 |[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md)|Aprenda a conectarse a una instancia del motor de base de datos, así como a escribir y ejecutar instrucciones Transact-SQL.|  
@@ -35,7 +35,7 @@ ms.locfileid: "68893081"
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales de replicación](../relational-databases/replication/replication-tutorials.md)|Aprenda a configurar y ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
-|[Tutoriales sobre aprendizaje automático de SQL Server](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
+|[Tutoriales sobre aprendizaje automático de SQL Server](../machine-learning/tutorials/sql-server-r-tutorials.md)|Aprenda a trabajar con datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante R o Python. Ejecute scripts de R o Python desde [!INCLUDE[tsql](../includes/tsql-md.md)].|  
   
  ## <a name="previously-published-tutorials"></a>Tutoriales publicados anteriormente 
   

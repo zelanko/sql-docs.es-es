@@ -9,23 +9,22 @@ ms.topic: reference
 ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5939ace6c8f09bdf4ab2025dc4858c0236fd4920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 796455f93248522108d349de5e9c0036b8a0cb2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63071683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051066"
 ---
-# <a name="localdberrorunknowninstance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
+# <a name="localdb_error_unknown_instance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|263|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|263|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|La instancia de Local Database especificada no existe.|  
   

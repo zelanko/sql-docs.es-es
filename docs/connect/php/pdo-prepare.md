@@ -1,21 +1,21 @@
 ---
 title: PDO::prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2019
+ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bb02fefe4e4845a1ab1e7b7a7117845fdaebf13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e8765718829f3df3bca5fd289ec326f9d7aad861
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993204"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919200"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,12 +36,12 @@ $*statement*: una cadena que contiene la instrucción SQL.
 ## <a name="return-value"></a>Valor devuelto
 Devuelve un objeto PDOStatement si se ejecuta correctamente. En caso de error, devuelve un objeto PDOException o false, según el valor de `PDO::ATTR_ERRMODE`.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] no evalúan instrucciones preparadas hasta la ejecución.
 
 En la siguiente tabla se incluyen los posibles valores *key_pair*.
 
-|Key|Descripción|
+|Clave|Descripción|
 |-------|---------------|
 |PDO::ATTR_CURSOR|Especifica el comportamiento del cursor. El valor predeterminado es `PDO::CURSOR_FWDONLY`, un cursor de avance que no es desplazable. `PDO::CURSOR_SCROLL` es un cursor desplazable.<br /><br />Por ejemplo, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Cuando se establece en `PDO::CURSOR_SCROLL`, puede usar `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` para establecer el tipo de cursor desplazable, que se describe a continuación.<br /><br />Vea [Cursor Types &#40;PDO_SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador PDO_SQLSRV&#41;)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) para obtener más información sobre los conjuntos de resultados y los cursores del controlador PDO_SQLSRV.|
 |PDO::ATTR_EMULATE_PREPARES|De forma predeterminada, este atributo es false, que se puede cambiar por `PDO::ATTR_EMULATE_PREPARES => true`. Vea [Emulate Prepare](#emulate-prepare) para consultar detalles y ejemplos.|
@@ -60,7 +60,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
 ```
 En la tabla siguiente se muestran los valores posibles para `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE`. Para más información sobre los cursores desplazables, vea [Tipos de cursor &#40;controlador PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
-|Valor|Descripción|
+|Value|Descripción|
 |---------|---------------|
 |PDO::SQLSRV_CURSOR_BUFFERED|Crea un cursor estático del lado cliente (en búfer), que almacena en búfer el conjunto de resultados en memoria en el equipo cliente.|
 |PDO::SQLSRV_CURSOR_DYNAMIC|Crea un cursor dinámico de servidor (no almacenado en búfer), que le permite acceder a las filas en cualquier orden y reflejará los cambios de la base de datos.|
@@ -137,6 +137,33 @@ print_r($row);
 $row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
 print_r($row);
 ?>
+```
+
+## <a name="example"></a>Ejemplo
+En los dos fragmentos de código siguientes se muestra cómo usar PDO::prepare con los datos destinados a las columnas CHAR/VARCHAR. Dado que la codificación predeterminada de PDO::prepare es UTF-8, el usuario puede usar la opción `PDO::SQLSRV_ENCODING_SYSTEM` para evitar conversiones implícitas.
+
+**Opción 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**Opción 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
 ```
 
 <a name="emulate-prepare" />
@@ -216,6 +243,52 @@ Si el usuario desea enlazar parámetros con distintas codificaciones (por ejempl
 El controlador PDO_SQLSRV comprueba primero la codificación especificada en `PDO::bindParam()` (por ejemplo, `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`).
 
 Si no se encuentra, el controlador comprueba si cualquier codificación está establecida en `PDO::prepare()` o `PDOStatement::setAttribute()`. En caso contrario, el controlador utilizará la codificación especificada en `PDO::__construct()` o `PDO::setAttribute()`.
+
+Además, a partir de la versión 5.8.0, cuando se usa PDO::prepare con `PDO::ATTR_EMULATE_PREPARES` establecido en true, el usuario puede usar [los tipos de cadenas extendidas introducidos en PHP 7.2](https://wiki.php.net/rfc/extended-string-types-for-pdo) para asegurarse de que se usa el prefijo de `N`. En los fragmentos de código siguientes se muestran varias alternativas.
+
+> [!NOTE]
+> De forma predeterminada, emulate prepares está establecido en false, en cuyo caso se omitirán las constantes de cadena PDO extendidas.
+
+**Uso de la opción de controlador PDO::SQLSRV_ENCODING_UTF8 al enlazar**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**Uso del atributo PDO::SQLSRV_ATTR_ENCODING**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**Usar la constante PDO PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**Establecer el tipo de parámetro de cadena predeterminado PDO::PARAM_STR_NATL**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### <a name="limitations"></a>Limitaciones
 

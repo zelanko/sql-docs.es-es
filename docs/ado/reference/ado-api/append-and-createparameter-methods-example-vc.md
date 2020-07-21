@@ -1,5 +1,5 @@
 ---
-title: Anexar y ejemplo de los métodos CreateParameter (VC ++) | Microsoft Docs
+title: Ejemplo de los métodos Append y CreateParameter (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CreateParameter method [ADO], VC++ example
 - Append method [ADO], VC++ example
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0abc0742f3313e127d3c0478d9be600b0e02d908
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920693"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746984"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>Anexar y ejemplo de los métodos CreateParameter (VC ++)
-Este ejemplo se usa el [Append](../../../ado/reference/ado-api/append-method-ado.md) y [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para ejecutar un procedimiento almacenado con un parámetro de entrada.  
+# <a name="append-and-createparameter-methods-example-vc"></a>Ejemplo de los métodos Append y CreateParameter (VC + +)
+En este ejemplo se utilizan los métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) y [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para ejecutar un procedimiento almacenado con un parámetro de entrada.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -194,7 +194,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Authors with 25 percent royalty  
@@ -202,6 +202,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Append (método) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

@@ -1,5 +1,6 @@
 ---
 title: Instalar SQL Server PowerShell | Microsoft Docs
+description: En este artículo se describen los componentes de SQL Server PowerShell que instala el programa de instalación al seleccionar características de SQL Server que necesitan compatibilidad con PowerShell.
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad6dc50d1144b0efa13bf4b429a1ca2103fefcd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991062"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883531"
 ---
 # <a name="install-sql-server-powershell"></a>Instalar SQL Server PowerShell
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación configura automáticamente los componentes de PowerShell.  
 
@@ -34,9 +35,9 @@ Debe instalar el software que proporciona compatibilidad con [!INCLUDE[ssNoVersi
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite el inicio de sesiones de Windows PowerShell desde el árbol del Explorador de objetos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con los pasos de trabajo de Windows PowerShell.  
   
-Windows Server 2012 y versiones posteriores y Windows 8 y versiones posteriores incluyen PowerShell instalado y configurado. Para información sobre cómo instalar Windows PowerShell, vea [Instalación de Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
+Windows Server 2012 y versiones posteriores y Windows 8 y versiones posteriores incluyen PowerShell instalado y configurado. Para información sobre cómo instalar Windows PowerShell, vea [Instalación de Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell).  
 
-Para obtener más información, vea:   
+Para más información, consulte:   
 
 - [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

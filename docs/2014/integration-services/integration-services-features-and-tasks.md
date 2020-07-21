@@ -1,5 +1,5 @@
 ---
-title: Características y tareas de Integration Services | Microsoft Docs
+title: Integration Services características y tareas | Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,20 @@ helpviewer_keywords:
 - development [Integration Services]
 - Integration Services, programming
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70747bd224d58379696ed81ff751f1969e14220f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058030"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436462"
 ---
 # <a name="integration-services-features-and-tasks"></a>Características y tareas de Integration Services
-  Buscar información que cualquier persona-diseñador, desarrollador, analista o administrador-necesita para crear y desarrollar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes. A continuación, obtenga información sobre cómo incorporar esos paquetes a las aplicaciones y sitios web.  
+  Busque información que cualquier usuario-diseñador, programador, analista o administrador necesite para crear y desarrollar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes. A continuación, obtenga información sobre cómo incorporar esos paquetes a las aplicaciones y sitios web.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Servicios de integración &#40;SSIS&#41; y entornos de Studio](integration-services-ssis-development-and-management-tools.md)  
+ [Integration Services &#40;entornos&#41; y Studio de SSIS](integration-services-ssis-development-and-management-tools.md)  
   
  [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
@@ -32,9 +31,9 @@ ms.locfileid: "66058030"
   
  [Proyectos de Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md)  
   
- [Servicios de integración &#40;SSIS&#41; parámetros](integration-services-ssis-package-and-project-parameters.md)  
+ [Integration Services &#40;los parámetros de&#41; SSIS](integration-services-ssis-package-and-project-parameters.md)  
   
- [Servicios de integración &#40;SSIS&#41; consultas](integration-services-ssis-queries.md)  
+ [Integration Services &#40;consultas&#41; SSIS](integration-services-ssis-queries.md)  
   
  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)  
   
@@ -44,11 +43,11 @@ ms.locfileid: "66058030"
   
  [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md)  
   
- [Servicios de integración &#40;SSIS&#41; Server](catalog/integration-services-ssis-server-and-catalog.md)  
+ [Servidor de Integration Services &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md)  
   
  [Implementación de proyectos y paquetes](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
- [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
+ [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)  
   
  [Supervisar las ejecuciones de paquetes y otras operaciones](performance/monitor-running-packages-and-other-operations.md)  
   

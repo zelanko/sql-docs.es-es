@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906040"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
@@ -37,13 +37,13 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  Expresión MDX válida que devuelve una jerarquía.  
   
-## <a name="remarks"></a>Comentarios  
- El **extraer** función devuelve un conjunto que consta de tuplas de los elementos de jerarquía extraídos. En cada tupla del conjunto especificado, se extraen los miembros de las jerarquías especificadas en nuevas tuplas en el conjunto de resultados. Esta función quita siempre las tuplas duplicadas.  
+## <a name="remarks"></a>Observaciones  
+ La función **Extract** devuelve un conjunto que consta de tuplas de los elementos de jerarquía extraídos. En cada tupla del conjunto especificado, se extraen los miembros de las jerarquías especificadas en nuevas tuplas en el conjunto de resultados. Esta función quita siempre las tuplas duplicadas.  
   
- El **extraer** función realiza la acción opuesta el [Crossjoin](../mdx/crossjoin-mdx.md) función.  
+ La función **Extract** realiza la acción opuesta a la función [Crossjoin](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Ejemplos  
- La consulta siguiente muestra cómo usar el **extraer** función en un conjunto de tuplas devueltas por la **NonEmpty** función:  
+ En la consulta siguiente se muestra cómo usar la función **Extract** en un conjunto de tuplas devueltas por la función **NonEmpty** :  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -77,7 +77,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5f880de91cad3925e43a65e6282319dbb1e57ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059647"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429712"
 ---
 # <a name="date-and-time-formats"></a>Formatos de fecha y hora
   El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. El análisis rápido admite los siguientes formatos para los tipos de datos de fecha y hora.  
@@ -36,7 +35,7 @@ ms.locfileid: "66059647"
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Los formatos básico y extendido para un año de cuatro dígitos, un mes de dos dígitos y un día de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
     |YYYY-MM|Formatos básico y extendido de precisión reducida para un año de cuatro dígitos y un mes de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
-    |YYYY|El formato de precisión reducida es un año de cuatro dígitos.|  
+    |AAAA|El formato de precisión reducida es un año de cuatro dígitos.|  
   
  El análisis rápido no admite los siguientes formatos para datos de fecha:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66059647"
   
  El análisis rápido genera los datos como DT_DBDATE. Los valores de fechas en formatos truncados se rellenan. Por ejemplo, YYYY pasa a ser YYYY0101.  
   
- Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
 ## <a name="time-data-type"></a>Tipo de datos de hora  
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de hora:  
@@ -80,7 +79,7 @@ ms.locfileid: "66059647"
     |-HH|Formato truncado que indica el número de horas que se restan a la UTC para obtener la hora local.|  
     |Z|Un valor de 0 que indica que la hora se representa en UTC.|  
   
-     Los formatos para todos los datos de fecha/hora pueden incluir un elemento de zona horaria. Sin embargo, el sistema omite el valor de zona horaria, excepto cuando los datos son del tipo DT_DBTIMESTAMPOFFSET. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+     Los formatos para todos los datos de fecha/hora pueden incluir un elemento de zona horaria. Sin embargo, el sistema omite el valor de zona horaria, excepto cuando los datos son del tipo DT_DBTIMESTAMPOFFSET. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
      En formatos que incluyen un elemento de zona horaria, no hay ningún espacio entre el elemento de tiempo y el elemento de zona horaria, como se muestra en el ejemplo siguiente:  
   
@@ -107,7 +106,7 @@ ms.locfileid: "66059647"
   
  El análisis rápido genera cadenas como DT_DBTIME y DT_DBTIME2. Los valores de horas en formatos truncados se rellenan. Por ejemplo, HH:MI pasa a ser HH:MM:00.000.  
   
- Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
 ## <a name="datetime-data-type"></a>Tipo de datos de fecha/hora  
  El análisis rápido admite los siguientes formatos de cadena para tipos de datos de fecha/hora:  
@@ -120,14 +119,14 @@ ms.locfileid: "66059647"
   
  El análisis rápido genera cadenas como DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 y DT_DBTIMESTAMPOFFSET. Los valores de fecha/hora en formatos truncados se rellenan. En la siguiente tabla se muestran los valores que se agregan para las partes de fecha y hora que faltan.  
   
-|Parte de fecha y hora|Relleno|  
+|Parte de fecha y hora|Espaciado interno|  
 |---------------------|-------------|  
 |Segundos|Agregar 00.|  
 |Minutos|Agregar 00:00.|  
-|Hour|Agregar 00:00:00.|  
-|Day|Agregar 01 para el día del mes.|  
-|Month|Agregar 01 para el mes del año.|  
+|Hora|Agregar 00:00:00.|  
+|Día|Agregar 01 para el día del mes.|  
+|Mes|Agregar 01 para el mes del año.|  
   
- Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80fe147fcdeb205752429521887d1c0b8f76234f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731315"
 ---
 # <a name="hints-transact-sql---join"></a>Sugerencias (Transact-SQL): combinación
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Las sugerencias de combinación especifican que el optimizador de consultas aplique una estrategia de combinación entre dos tablas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información general sobre las combinaciones y la sintaxis de combinación, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67902016"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 <join_hint> ::=   
      { LOOP | HASH | MERGE | REMOTE }  
@@ -57,7 +57,7 @@ ms.locfileid: "67902016"
   
 ## <a name="arguments"></a>Argumentos  
  LOOP | HASH | MERGE  
- Especifica que la combinación de la consulta utiliza bucles, hash o mezclas. El uso de LOOP | HASH | MERGE JOIN aplica una combinación particular entre dos tablas. LOOP no se puede especificar junto con RIGHT o FULL como un tipo de combinación.  
+ Especifica que la combinación de la consulta utiliza bucles, hash o mezclas. El uso de LOOP | HASH | MERGE JOIN aplica una combinación particular entre dos tablas. LOOP no se puede especificar junto con RIGHT o FULL como un tipo de combinación. Para más información, vea [Combinaciones](../../relational-databases/performance/joins.md).
   
  REMOTE  
  Especifica que la operación de combinación se realice en el sitio de la tabla derecha. Esto es útil cuando la tabla izquierda es una tabla local y la tabla derecha es una tabla remota. REMOTE solo se debe utilizar cuando la tabla izquierda tenga menos filas que la tabla derecha.  
@@ -68,7 +68,7 @@ ms.locfileid: "67902016"
   
  REMOTE solo puede utilizarse en operaciones INNER JOIN.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las sugerencias de combinación se especifican en la cláusula FROM de una consulta. Las sugerencias de combinación exigen una estrategia de combinación entre dos tablas. Si se especifica una sugerencia de combinación entre dos tablas, el optimizador de consultas aplica automáticamente el orden de combinación de todas las tablas combinadas de la consulta, basándose en la posición de las palabras clave ON. Cuando se utiliza CROSS JOIN sin la cláusula ON, se pueden utilizar paréntesis para indicar el orden de combinación.  
   
 ## <a name="examples"></a>Ejemplos  

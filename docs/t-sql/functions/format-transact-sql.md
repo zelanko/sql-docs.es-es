@@ -1,6 +1,6 @@
 ---
 title: FORMAT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para la función FORMAT.
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FORMAT function
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 10136ba5d2b0d241de0960acb9df657dadfe9cc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155798"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752407"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 
@@ -35,7 +35,7 @@ Devuelve un valor con formato con el formato y la referencia cultural opcional e
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   
@@ -49,18 +49,18 @@ FORMAT ( value, format [, culture ] )
   
  El argumento *format* debe contener una cadena de formato de .NET Framework válida, ya sea como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para los valores de fecha y numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)"). No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, vea la documentación de .NET Framework sobre el formato de cadena en general, los formatos de fecha y hora personalizados, y los formatos de número personalizados. Un buen punto de partida es el tema "[Formatting Types](https://go.microsoft.com/fwlink/?LinkId=211776)" (Tipos de formato).  
   
- *culture*  
+ *referencia cultural*  
  Argumento opcional de tipo **nvarchar** que especifica una referencia cultural.  
   
  Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta como argumento cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, FORMAT desencadena un error.  
   
-## <a name="return-types"></a>Tipos devueltos
+## <a name="return-types"></a>Tipos de valor devuelto
 
  **nvarchar** o null  
   
  La longitud del valor devuelto viene determinada por *format*.  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
  FORMAT devuelve NULL para los errores distintos de *culture* que no son *válidos*. Por ejemplo, se devuelve NULL si el valor especificado en *format* no es válido.  
 
@@ -74,21 +74,21 @@ FORMAT ( value, format [, culture ] )
   
  En esta tabla se muestran los tipos de datos aceptables para el argumento *value*, junto con sus tipos equivalentes de asignación de .NET Framework.  
   
-|Categoría|Tipo|Tipo de .NET|  
+|Category|Tipo|Tipo de .NET|  
 |--------------|----------|---------------|  
-|Numérico|BIGINT|Int64|  
-|Numérico|INT|Int32|  
-|Numérico|SMALLINT|Int16|  
-|Numérico|TINYINT|Byte|  
-|Numérico|Decimal|SqlDecimal|  
-|Numérico|NUMERIC|SqlDecimal|  
-|Numérico|FLOAT|Doble|  
-|Numérico|REAL|Único|  
-|Numérico|SMALLMONEY|Decimal|  
-|Numérico|money|Decimal|  
-|Fecha y hora|Date|DateTime|  
-|Fecha y hora|time|Timespan|  
-|Fecha y hora|DATETIME|DateTime|  
+|Numeric|bigint|Int64|  
+|Numeric|int|Int32|  
+|Numeric|SMALLINT|Int16|  
+|Numeric|TINYINT|Byte|  
+|Numeric|Decimal|SqlDecimal|  
+|Numeric|NUMERIC|SqlDecimal|  
+|Numeric|FLOAT|Double|  
+|Numeric|real|Single|  
+|Numeric|SMALLMONEY|Decimal|  
+|Numeric|money|Decimal|  
+|Fecha y hora|date|DateTime|  
+|Fecha y hora|time|TimeSpan|  
+|Fecha y hora|datetime|DateTime|  
 |Fecha y hora|smalldatetime|DateTime|  
 |Fecha y hora|datetime2|DateTime|  
 |Fecha y hora|datetimeoffset|DateTimeOffset|  
@@ -190,16 +190,16 @@ ORDER BY CurrencyRateID;
 ```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
-1              1.0002        1,00            1,0002          1,00 €  
-2              1.55          1,55            1,5500          1,55 €  
-3              1.9419        1,94            1,9419          1,94 €  
-4              1.4683        1,47            1,4683          1,47 €  
-5              8.2784        8,28            8,2784          8,28 €  
+1              1.0002        1,00            1,0002          1,00 &euro;  
+2              1.55          1,55            1,5500          1,55 &euro;  
+3              1.9419        1,94            1,9419          1,94 &euro;  
+4              1.4683        1,47            1,4683          1,47 &euro;  
+5              8.2784        8,28            8,2784          8,28 &euro;  
   
  (5 row(s) affected)  
 ```  
   
-### <a name="ExampleD"></a> D. FORMAT con tipos de datos de tiempo
+### <a name="d-format-with-time-data-types"></a><a name="ExampleD"></a> D. FORMAT con tipos de datos de tiempo
 
  FORMAT devuelve NULL en estos casos porque `.` y `:` no incluyen caracteres de escape.  
   
@@ -244,6 +244,6 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
   
 ## <a name="see-also"></a>Consulte también
 
- [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+- [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

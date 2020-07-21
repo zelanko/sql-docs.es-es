@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027271"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920277"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Descripción de los tipos de datos del controlador JDBC
 
@@ -40,6 +40,6 @@ En los temas de esta sección se describe cómo utilizar los tipos de datos bás
 | [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Describe la interfaz SQLXML. También describe cómo leer y escribir datos XML desde y en una base de datos relacional con el tipo de datos Java de **SQLXML**.                                                                                                             |
 | [Contenedores e interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Explica las interfaces que tienen los métodos y constantes específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] que permiten que un servidor de aplicaciones cree un proxy de la clase; asimismo, describe la compatibilidad con la interfaz `java.sql.Wrapper`. |
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

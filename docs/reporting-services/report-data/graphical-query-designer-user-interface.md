@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572747"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
@@ -34,7 +34,7 @@ ms.locfileid: "65572747"
   
  Dispone de tres tipos de consultas:  
   
--   El tipo**Text** admite texto de consultas estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)] para orígenes de datos de bases de datos relacionales, incluidas las extensiones de procesamiento de datos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Oracle.  
+-   El tipo **Text** admite texto de consultas estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)] para orígenes de datos de bases de datos relacionales, incluidas las extensiones de procesamiento de datos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Oracle.  
   
 -   El tipo**TableDirect** selecciona todas las columnas de la tabla especificada. Por ejemplo, para una tabla denominada Customers, éste es el equivalente de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] de `SELECT * FROM Customers`.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "65572747"
 |![Botón de alternancia Mostrar u ocultar panel de cuadrícula](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "Botón de alternancia Mostrar u ocultar panel de cuadrícula")|Muestra u oculta el panel Cuadrícula.|  
 |![Botón de alternancia Mostrar u ocultar panel de SQL](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "Botón de alternancia Mostrar u ocultar panel de SQL")|Muestra u oculta el panel de SQL.|  
 |![Botón de alternancia Mostrar u ocultar panel de resultados](../../reporting-services/report-data/media/rsqdicon-showhideresult.gif "Botón de alternancia Mostrar u ocultar panel de resultados")|Muestra u oculta el panel Resultado.|  
-|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta.|  
+|![Ejecución de la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecución de la consulta")|Ejecuta la consulta.|  
 |![Botón Comprobar SQL en el panel de SQL](../../reporting-services/report-data/media/rsqdicon-verifysql.gif "Botón Comprobar SQL en el panel de SQL")|Comprueba que la sintaxis del texto de consulta sea correcta.|  
 |![Establecer orden ascendente en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-sortascending.gif "Establecer orden ascendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden ascendente** para la columna seleccionada en el panel Diagrama.|  
 |![Establecer orden descendente en el campo seleccionado](../../reporting-services/report-data/media/rsqdicon-sortdescending.gif "Establecer orden descendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden descendente** para la columna seleccionada en el panel Diagrama.|  
@@ -116,7 +116,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|  
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Icono del botón Diseñador de consultas genérico](../../reporting-services/report-data/media/icongenericquerydesigner.gif "Icono del botón Diseñador de consultas genérico")|Alterna el diseñador de consultas genérico y el diseñador gráfico de consultas, a la vez que mantiene el texto de consulta o la vista del procedimiento almacenado.|  
-|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Selecciona todas las columnas de la tabla seleccionada.|  
+|![Ejecución de la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecución de la consulta")|Selecciona todas las columnas de la tabla seleccionada.|  
   
 ### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure  
  En el tipo **StoredProcedure** , el diseñador gráfico de consultas muestra una lista desplegable de los procedimientos almacenados disponibles del origen de datos y el panel Resultado. En la siguiente tabla se describe la función de cada panel.  
@@ -133,7 +133,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|  
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta el procedimiento almacenado.|  
+|![Ejecución de la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecución de la consulta")|Ejecuta el procedimiento almacenado.|  
 |Lista desplegable de procedimientos almacenados|Haga clic en la flecha abajo para mostrar una lista de procedimientos almacenados disponibles del origen de datos. Haga clic en un procedimiento almacenado de la lista para seleccionarlo.|  
   
 #### <a name="example"></a>Ejemplo  

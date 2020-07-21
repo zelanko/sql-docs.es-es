@@ -1,5 +1,5 @@
 ---
-title: Función Level (Generador de informes y SSRS) | Microsoft Docs
+title: Función Level (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1e70847a25230be39166ac6fa489f1fdc3f23e43
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579497"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081240"
 ---
 # <a name="report-builder-functions---level-function"></a>Funciones del Generador de informes: función Level
   Devuelve el nivel actual de profundidad de una jerarquía recursiva.  
@@ -29,13 +29,13 @@ Level(scope)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (**Cadena**) Opcional. Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un **Integer**. Si el parámetro *scope* especifica un conjunto de datos o una región de datos, o bien una agrupación no recursiva (es decir, una agrupación que no contenga el elemento **Parent** ), la función **Level** devuelve 0. Si se omite el parámetro *scope* , devuelve el nivel del ámbito actual.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor que devuelve la función **Level** se basa en cero; es decir, el primer nivel de una jerarquía es 0.  
   
  La función **Level** puede utilizarse para aplicar sangría en una jerarquía recursiva, como puede ser una lista de empleados.  

@@ -1,5 +1,5 @@
 ---
-title: Importar la referencia de la interfaz de usuario del cuadro de diálogo de paquete | Microsoft Docs
+title: Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2765eef14ac8c3e84684e95f67bcd7e837e5cdea
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058078"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424892"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete
   Utilice el cuadro de diálogo **Importar paquete** , disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para importar un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y para establecer o modificar el nivel de protección del paquete.  
   
 ## <a name="options"></a>Opciones  
  **Ubicación del paquete**  
- Seleccione el tipo de ubicación de almacenamiento a la que se importará el paquete. Las siguientes opciones están disponibles:  
+ Seleccione el tipo de ubicación de almacenamiento a la que se importará el paquete. Están disponibles las siguientes opciones:  
   
  **SQL Server**  
   
@@ -46,13 +45,13 @@ ms.locfileid: "66058078"
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
- **Ruta de acceso del paquete**  
+ **Ruta de acceso de paquete**  
  Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete.  
   
  **Nombre del paquete**  
@@ -61,7 +60,7 @@ ms.locfileid: "66058078"
  **Nivel de protección**  
  Haga clic en el botón Examinar **(…)** y, en el cuadro de diálogo **Nivel de protección de paquetes**, actualice el nivel de protección. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   

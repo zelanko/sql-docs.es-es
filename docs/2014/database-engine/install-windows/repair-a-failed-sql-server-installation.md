@@ -1,5 +1,5 @@
 ---
-title: Reparar una instalación de SQL Server 2014 | Microsoft Docs
+title: Reparación de una instalación de SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 508167dcb0f263e319a2cf2f90c2eda3fbe2a714
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932136"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Anular una instalación de SQL Server 2014
   La operación de reparación se puede utilizar en los escenarios siguientes:  
@@ -46,7 +45,7 @@ ms.locfileid: "67046665"
   
 -   Para reparar un nodo de clúster de conmutación por error después una operación de preparación con errores, use **Eliminar nodo de un clúster de conmutación por error de SQL Server** y, a continuación, vuelva a realizar el paso de preparación. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el Centro de instalación  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el Centro de instalación  
   
 1.  Inicie el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (setup.exe) desde el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -67,7 +66,7 @@ ms.locfileid: "67046665"
   
 8.  La página Progreso de la reparación muestra el estado de la operación de reparación. La página Operación completada indica que la operación ha finalizado.  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el símbolo del sistema  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el símbolo del sistema  
   
 1.  Ejecute el comando siguiente en el símbolo del sistema:  
   
@@ -75,7 +74,7 @@ ms.locfileid: "67046665"
     Setup.exe /q /ACTION=Repair /INSTANCENAME=instancename  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](view-and-read-sql-server-setup-log-files.md)   
  [Temas de procedimientos de instalación](../../sql-server/install/installation-how-to-topics.md)  
   

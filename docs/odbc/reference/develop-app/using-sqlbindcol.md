@@ -1,5 +1,5 @@
 ---
-title: Uso de SQLBindCol | Microsoft Docs
+title: Usar SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: da49ad4db80b93d02534a0c4ecacdc2621c9cf8d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022166"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81294635"
 ---
 # <a name="using-sqlbindcol"></a>Uso de SQLBindCol
-La aplicación enlaza las columnas mediante una llamada a **SQLBindCol**. Esta función enlaza una columna a la vez. Con ella, la aplicación especifica lo siguiente:  
+La aplicación enlaza las columnas llamando a **SQLBindCol**. Esta función enlaza una columna cada vez. Con él, la aplicación especifica lo siguiente:  
   
--   El número de columna. 0 es la columna de marcador; Esta columna no se incluye en algunos conjuntos de resultados. Todas las demás columnas se numeran comenzando por el número 1. Es un error al enlazar una columna con el número más alto que columnas hay en el conjunto de resultados; Este error no se puede detectar hasta que se ha creado el conjunto de resultados, por lo que es devuelto por **SQLFetch**, no **SQLBindCol**.  
+-   Número de columna. La columna 0 es la columna de marcador; Esta columna no se incluye en algunos conjuntos de resultados. Todas las demás columnas se numeran a partir del número 1. Es un error enlazar una columna con un número superior que contiene columnas en el conjunto de resultados. Este error no se puede detectar hasta que se haya creado el conjunto de resultados, por lo que se devuelve por **SQLFetch**, no **SQLBindCol**.  
   
--   La longitud de bytes, la dirección y el tipo de datos C de la variable enlazada a la columna. Es un error especificar un tipo de datos C a la que no se puede convertir el tipo de datos SQL de la columna; Este error podría no detectarse hasta que se ha creado el conjunto de resultados, por lo que es devuelto por **SQLFetch**, no **SQLBindCol**. Para obtener una lista de conversiones admitidas, vea [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en el apéndice D: Tipos de datos. Para obtener información acerca de la longitud en bytes, consulte [longitud del búfer de datos](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   El tipo de datos de C, la dirección y la longitud de bytes de la variable enlazada a la columna. Es un error especificar un tipo de datos de C al que no se puede convertir el tipo de datos SQL de la columna; es posible que este error no se detecte hasta que se haya creado el conjunto de resultados, por lo que se devuelve por **SQLFetch**, no **SQLBindCol**. Para obtener una lista de las conversiones admitidas, vea [convertir datos de SQL a tipos de datos de C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en el Apéndice D: tipos de datos. Para obtener información sobre la longitud de bytes, vea [longitud del búfer de datos](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
--   La dirección de un búfer de longitud/indicador. El búfer de longitud/indicador es opcional. Sirve para devolver la longitud de bytes de datos de caracteres o binarios o de SQL_NULL_DATA devuelto si los datos son NULL. Para obtener más información, consulte [con valores de longitud/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Dirección de un búfer de longitud/indicador. El búfer de longitud/indicador es opcional. Se utiliza para devolver la longitud de bytes de los datos binarios o de caracteres, o para devolver SQL_NULL_DATA si los datos son NULL. Para obtener más información, vea [usar valores de longitud/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Cuando **SQLBindCol** es el controlador llama, asocia esta información con la instrucción. Cuando se captura cada fila de datos, utiliza la información para colocar los datos de cada columna en las variables de aplicación enlazadas.  
+ Cuando se llama a **SQLBindCol** , el controlador asocia esta información con la instrucción. Cuando se captura cada fila de datos, se usa la información para colocar los datos de cada columna en las variables de aplicación enlazadas.  
   
- Por ejemplo, el código siguiente enlaza variables a las columnas de vendedor y CustID. Datos de las columnas se devolverán en *vendedor* y *CustID*. Dado que *vendedor* es un búfer de caracteres, la aplicación especifica la longitud de bytes (11) para que el controlador puede determinar si se debe truncar los datos. La longitud de bytes devuelto del título o, si es NULL, se devolverán en *SalesPersonLenOrInd*.  
+ Por ejemplo, el código siguiente enlaza las variables a las columnas SalesPerson y CustID. Los datos de las columnas se devolverán en *SalesPerson* y *CustID*. Dado que el *vendedor* es un búfer de caracteres, la aplicación especifica su longitud de bytes (11) para que el controlador pueda determinar si se truncan los datos. La longitud de bytes del título devuelto o si es NULL, se devolverá en *SalesPersonLenOrInd*.  
   
- Dado que *CustID* es una variable de entero y tiene una longitud, fija no es necesario especificar la longitud de bytes; el controlador se considera que es **sizeof (** SQLUINTEGER **)** . La longitud en bytes del cliente devuelta Id. de datos, o si es NULL, se devolverán en *CustIDInd*. Tenga en cuenta que la aplicación está interesada únicamente en si el salario es NULL, dado que la longitud en bytes es siempre **sizeof (** SQLUINTEGER **)** .  
+ Dado que *CustID* es una variable de tipo entero y tiene una longitud fija, no es necesario especificar su longitud de bytes; el controlador supone que es **sizeof (** sqluinteger que incluya **)**. La longitud de bytes de los datos devueltos del identificador de cliente, o si es NULL, se devolverá en *CustIDInd*. Tenga en cuenta que la aplicación solo está interesada en si el salario es NULL, ya que la longitud de bytes siempre es **sizeof (** sqluinteger que incluya **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -70,7 +70,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- El código siguiente ejecuta un **seleccione** instrucción especificada por el usuario e imprime cada fila de datos del conjunto de resultados. Dado que la aplicación no puede predecir la forma del resultado conjunto creado por el **seleccione** instrucción, no puede enlazar variables codificado de forma rígida para el conjunto como se muestra en el ejemplo anterior de resultados. En su lugar, la aplicación asigna un búfer que contiene los datos y un búfer de longitud/indicador para cada columna de esa fila. Para cada columna, calcula el desplazamiento al principio de la memoria para la columna y ajusta este desplazamiento para que los búferes de datos y el indicador de longitud de la columna de inicio en los límites de alineación. A continuación, enlaza la memoria a partir del desplazamiento a la columna. Desde el punto de vista del controlador, la dirección de esta memoria es indistinguible de la dirección de una variable enlazada en el ejemplo anterior. Para obtener más información sobre la alineación, vea [alineación](../../../odbc/reference/develop-app/alignment.md).  
+ El código siguiente ejecuta una instrucción **Select** especificada por el usuario e imprime cada fila de datos en el conjunto de resultados. Dado que la aplicación no puede predecir la forma del conjunto de resultados creado por la instrucción **Select** , no puede enlazar variables codificadas de forma rígida al conjunto de resultados como en el ejemplo anterior. En su lugar, la aplicación asigna un búfer que contiene los datos y un búfer de longitud/indicador para cada columna de esa fila. Para cada columna, calcula el desplazamiento hasta el inicio de la memoria de la columna y ajusta este desplazamiento para que los datos y los búferes de indicador/longitud de la columna se inicien en los límites de alineación. A continuación, enlaza la memoria a partir de la posición de desplazamiento a la columna. Desde el punto de vista del controlador, la dirección de esta memoria no se distingue de la dirección de una variable enlazada en el ejemplo anterior. Para obtener más información sobre la alineación, vea [alignment](../../../odbc/reference/develop-app/alignment.md).  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

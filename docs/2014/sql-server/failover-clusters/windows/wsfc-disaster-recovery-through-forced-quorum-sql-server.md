@@ -13,39 +13,38 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2c9399472c6e67c9e2121a008f9283ba05943da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045918"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperación ante desastres del clúster WSFC mediante quórum forzado (SQL Server)
   El error de quórum se produce normalmente por un desastre sistémico, un error de comunicaciones persistente o una configuración incorrecta que afecta a varios nodos del clúster WSFC.  Es necesaria la intervención manual para la recuperación de un error de quórum.  
   
 -   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
   
--   **Recuperación ante desastres de WSFC con el procedimiento de quórum forzado** [Recuperación ante desastres de WSFC con el procedimiento de quórum forzado](#Main)  
+-   **Recuperación ante desastres de WSFC con el procedimiento de cuórum forzado** [Recuperación ante desastres de WSFC con el procedimiento de cuórum forzado](#Main)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> Antes de empezar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  El procedimiento de quórum forzado presupone que existía un quórum en estado correcto antes de que se produjera el error.  
   
 > [!WARNING]  
 >  El usuario debe conocer perfectamente los conceptos y las interacciones de los clústeres de conmutación por error de Windows Server, los modelos de quórum de WSFC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y la configuración de implementación específica del entorno.  
 >   
->  Para obtener más información, vea:  [Agrupación en clústeres (WSFC) con SQL Server de conmutación por error de Windows Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [modos de quórum WSFC y configuración de votación (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
+>  Para obtener más información, vea:  [Clústeres de conmutación por error de Windows Server (WSFC) con SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [Configuración de los votos y modos de cuórum WSFC (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  El usuario debe ser una cuenta de dominio que sea miembro del grupo Administradores en cada nodo del clúster de WSFC.  
   
-##  <a name="Main"></a> Recuperación ante desastres de WSFC con el procedimiento de quórum forzado  
+##  <a name="wsfc-disaster-recovery-through-the-forced-quorum-procedure"></a><a name="Main"></a> Recuperación ante desastres de WSFC con el procedimiento de quórum forzado  
  Recuerde que el error de quórum provocará que todos los servicios de clúster, instancias de SQL Server y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]del clúster WSFC se pongan sin conexión porque el clúster, tal y como está configurado, no puede asegurar la tolerancia a errores de nivel de nodo.  Un error de quórum significa que los nodos con derecho en buen estado del clúster WSFC ya no cumplen el modelo de quórum. Puede que se haya producido un error en algunos nodos y puede que algunos simplemente hayan cerrado el servicio del clúster WSFC y de lo contrario estar en buen estado, excepto por la pérdida de la capacidad de comunicarse con un quórum.  
   
  Para poner de nuevo en línea el clúster WSFC, debe corregir la causa principal del error de quórum en virtud de la configuración existente, recuperar las bases de datos afectadas según sea necesario y puede volver a configurar los nodos restantes del clúster WSFC para reflejar la topología de clúster superviviente.  
@@ -103,7 +102,7 @@ ms.locfileid: "63224628"
   
 8.  **Análisis de la conducta de RPO/RTO.** Debe analizar los registros del sistema de SQL Server, las marcas de tiempo de la base de datos y los registros de eventos de Windows para determinar la causa principal del error, así como para documentar las experiencias reales del punto de recuperación y del tiempo de recuperación.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Forzar el inicio de un clúster WSFC sin un quórum](force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -111,17 +110,17 @@ ms.locfileid: "63224628"
   
 -   [Ver la configuración de NodeWeight de cuórum de clúster](view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configurar los valores de NodeWeight de quórum de clúster](configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configurar los valores de NodeWeight de cuórum de clúster](configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Ver eventos y registros para un clúster de conmutación por error](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   
 -   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - f1Help
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 873aaee7641c84ad3e204c860a61ea5bc138fae6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8ba47ee41c6aba217b03c2a1fbacbdb64ef24d53
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835757"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438892"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1)
   El Diseñador de captura de datos modificados para Oracle de Attunity se emplea para crear y administrar la instancia CDC de Oracle. En los temas de esta sección se explica cómo realizar las tareas disponibles en la Consola del diseñador CDC.  
@@ -32,7 +31,7 @@ ms.locfileid: "62835757"
   
 -   [Usar el Asistente para nueva instancia](use-the-new-instance-wizard.md) (o vaya directamente a una de las tareas siguientes)  
   
-    -   [Crear la base de datos de cambios de SQL Server](create-the-sql-server-change-database.md)  
+    -   [Crear la base de datos de cambio SQL Server ](create-the-sql-server-change-database.md)  
   
     -   [Conectarse a una base de datos de origen de Oracle ](connect-to-an-oracle-source-database.md)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62835757"
   
     -   [Generar y ejecutar el Script de registro complementario ](generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Generar tablas reflejadas e instancias de captura CDC](generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Generar tablas reflejadas e instancias de captura CDC ](generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Finalizar](finish.md)  
   

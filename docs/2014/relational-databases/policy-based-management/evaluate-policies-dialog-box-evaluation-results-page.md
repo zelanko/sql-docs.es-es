@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e645d5cd606f9a466bec35bef4159ef7dd32644
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047785"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación
   Utilice este cuadro de diálogo para ver los resultados de la evaluación de directivas y para aplicar directivas de administración basada en directivas a un conjunto de destinos que no las cumple.  
@@ -29,10 +28,10 @@ ms.locfileid: "62705141"
  **Resultados: Mensaje**  
  Vínculo a información si se produce un error.  
   
- **Detalles del destino: Server**  
+ **Detalles del destino: Servidor**  
  Instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se evalúan las directivas.  
   
- **Detalles del destino: Target**  
+ **Detalles del destino: Destino**  
  Destino con el que se evalúan las directivas.  
   
  **Detalles del destino: Detalles**  
@@ -41,9 +40,9 @@ ms.locfileid: "62705141"
  **Detalles del destino: Mensaje**  
  Vínculo a información si se produce un error.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
- [Cuadro de diálogo Evaluar directivas, página Selección de directiva](evaluate-policies-dialog-box-policy-selection-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar servidores mediante la administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
+ [Cuadro de diálogo evaluar directivas, página selección de Directiva](evaluate-policies-dialog-box-policy-selection-page.md)   
  [Cuadro de diálogo Vista detallada de resultados](results-detailed-view-dialog-box.md)  
   
   

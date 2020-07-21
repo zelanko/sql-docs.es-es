@@ -10,18 +10,16 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
-ms.openlocfilehash: 43e8e235a00465b2f2bd6f30769ac173f620dcf5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295886"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75924989"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carga de datos en SQL Server o Azure SQL Database con SQL Server Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-xxxx-xxx.md)]
 
 Cree un paquete de SQL Server Integration Services (SSIS) para cargar datos en SQL Server o [Azure SQL Database](/azure/sql-database/). Si quiere, puede reestructurar, transformar y limpiar los datos a medida que pasan a través del flujo de datos de SSIS.
 
@@ -30,7 +28,6 @@ En este artículo se explica cómo realizar las siguientes tareas:
 * Crear un nuevo proyecto de Integration Services en Visual Studio.
 * Diseñar un paquete de SSIS que cargue datos del origen en el destino.
 * Ejecutar el paquete de SSIS para cargar los datos.
-
 
 ## <a name="basic-concepts"></a>Conceptos básicos
 
@@ -60,7 +57,7 @@ Para realizar este tutorial, necesita lo siguiente:
 3. **SQL Server Data Tools para Visual Studio (SSDT)** . Para obtener SQL Server Data Tools para Visual Studio, vea [Descargar SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. Este tutorial se conecta a una instancia de SQL Server o SQL Database y carga datos en ella. Necesita permisos para conectarse, crear una tabla y cargar datos en:
    - **Una base de datos de Azure SQL Database**. Para obtener más información, vea [Azure SQL Database](/azure/sql-database/).  
-      o Administrador de configuración de
+      or
    - **Una instancia de SQL Server**. SQL Server se ejecuta en local o en una máquina virtual de Azure. Para descargar una edición gratuita de evaluación o desarrollador de SQL Server, vea [Descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 5. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como los datos de origen. Para obtener la base de datos de ejemplo AdventureWorks, vea [Bases de datos de ejemplo de AdventureWorks][AdventureWorks 2014 Sample Databases].
@@ -140,8 +137,8 @@ Se abre Visual Studio y crea un nuevo proyecto de Integration Services (SSIS). L
    2. En **Nombre del servidor**, escriba el nombre de SQL Server o del servidor de SQL Database.
    3. En la sección **Iniciar sesión en el servidor**, seleccione **Usar la autenticación de SQL Server** y escriba la información de autenticación.
    4. En la sección **Conectar con una base de datos**, seleccione una base de datos existente.
-    A. Haga clic en **Probar conexión**.
-    B. En el cuadro de diálogo que informa de los resultados de la prueba de conexión, haga clic en **Aceptar** para volver al cuadro de diálogo **Administrador de conexiones**.
+    a. Haga clic en **Probar conexión**.
+    b. En el cuadro de diálogo que informa de los resultados de la prueba de conexión, haga clic en **Aceptar** para volver al cuadro de diálogo **Administrador de conexiones**.
     c. En el cuadro de diálogo **Administrador de conexiones**, haga clic en **Aceptar** para volver al cuadro de diálogo **Configurar el administrador de conexiones ADO.NET**.
 5. En el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET**, haga clic en **Aceptar** para volver al **Editor de destinos de ADO.NET**.
 6. En el **Editor de destinos de ADO.NET**, haga clic en **Nuevo** junto a la lista **Usar una tabla o una vista** para abrir el cuadro de diálogo **Crear tabla** para crear una tabla de destino con una lista de columnas que coincida con la tabla de origen.
@@ -172,13 +169,13 @@ Cuando el paquete termina de ejecutarse, se ven marcas de verificación verdes p
 
 ![][15]
 
-¡Enhorabuena! Ha usado correctamente SQL Server Integration Services para cargar datos en SQL Server o Azure SQL Database.
+Felicidades. Ha usado correctamente SQL Server Integration Services para cargar datos en SQL Server o Azure SQL Database.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Obtenga más información sobre cómo depurar paquetes y solucionar los problemas que planteen en el entorno de diseño. Empiece aquí: [Herramientas para solucionar problemas del desarrollo de paquetes][Troubleshooting Tools for Package Development].
+- Obtenga más información sobre cómo depurar paquetes y solucionar los problemas que planteen en el entorno de diseño. Comience aquí: [Herramientas para solucionar problemas con el desarrollo de paquetes][Troubleshooting Tools for Package Development].
 
-- Obtenga más información sobre cómo implementar los paquetes y los proyectos de SSIS en Integration Services Server u otra ubicación de almacenamiento. Empiece aquí: [Implementación de proyectos y paquetes][Deployment of Projects and Packages].
+- Obtenga más información sobre cómo implementar los paquetes y los proyectos de SSIS en Integration Services Server u otra ubicación de almacenamiento. Comience aquí: [Implementación de proyectos y paquetes][Deployment of Projects and Packages].
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

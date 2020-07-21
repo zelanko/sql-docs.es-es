@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763196"
 ---
 # <a name="event-parameters"></a>Parámetros de eventos
-Cada controlador de eventos tiene un parámetro de estado que controla el controlador de eventos. Para los eventos de finalización, este parámetro también se utiliza para indicar el éxito o fracaso de la operación que generó el evento. Eventos más completos también tienen un parámetro de error para proporcionar información sobre los errores que pudieran haberse producido y uno o más parámetros de objeto que hacen referencia a los objetos ADO que se usa para realizar la operación. Por ejemplo, el [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento incluye parámetros de objeto para el **comando**, **Recordset**, y **conexión** objetos asociado al evento. En el siguiente ejemplo de Microsoft® Visual Basic®, puede ver los objetos pCommand, Connection y pConnection los objetos que representan el **comando**, **Recordset**, y **conexión** objetos utilizados por el **Execute** método.  
+Cada controlador de eventos tiene un parámetro de estado que controla el controlador de eventos. En el caso de los eventos completos, este parámetro también se utiliza para indicar si la operación que generó el evento se ha realizado correctamente o no. Los eventos más completos también tienen un parámetro de error para proporcionar información sobre cualquier error que se pudiera haber producido y uno o varios parámetros de objeto que hacen referencia a los objetos ADO utilizados para realizar la operación. Por ejemplo, el evento [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) incluye parámetros de objeto para los objetos de **comando**, **conjunto de registros**y **conexión** asociados al evento. En el siguiente ejemplo de Microsoft® Visual Basic®, puede ver los objetos pCommand, pRecordset y pConnection que representan los objetos de **comando**, **conjunto de registros**y **conexión** utilizados por el método **Execute** .  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -36,36 +36,36 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
      ByVal pConnection As ADODB.Connection)  
 ```  
   
- Excepto para el **Error** objeto, los mismos parámetros se pasan a los eventos Will. Esto le permite examinar cada uno de los objetos que se usará en la operación pendiente y determinan si se debe permitir la operación finalice.  
+ Excepto en el caso del objeto de **error** , los mismos parámetros se pasan a los eventos Events. Esto le permite examinar cada uno de los objetos que se usarán en la operación pendiente y determinar si se debe permitir que finalice la operación.  
   
- Algunos controladores de eventos tienen un *motivo* parámetro, que proporciona información adicional acerca de por qué se produjo el evento. Por ejemplo, el **WillMove** y **MoveComplete** los eventos pueden producirse debido a uno de los métodos de navegación (**MoveNext**, **MovePrevious**, y así sucesivamente) llamado o como el resultado de una nueva consulta.  
+ Algunos controladores de eventos tienen un parámetro *Reason* , que proporciona información adicional sobre el motivo del evento. Por ejemplo, los eventos **WillMove** y **MoveComplete** pueden producirse debido a que se llama a uno de los métodos de navegación (**MoveNext**, **MovePrevious**, etc.) o como resultado de una nueva consulta.  
   
-## <a name="status-parameter"></a>Parámetro de estado  
- Cuando se llama a la rutina de controlador de eventos, el *estado* parámetro se establece en uno de los siguientes valores.  
-  
-|Valor|Descripción|  
-|-----------|-----------------|  
-|**adStatusOK**|Pasa a la usará y eventos de finalización. Este valor significa que la operación que provocó el evento que se completó correctamente.|  
-|**adStatusErrorsOccurred**|Se pasa a solo eventos de finalización. Este valor significa que la operación que provocó el evento se realizó correctamente, o un evento Will canceló la operación. Compruebe el *Error* parámetro para obtener más detalles.|  
-|**adStatusCantDeny**|Pasan solo a voluntad. Este valor significa que la operación no se puede cancelar el evento de voluntad. Deben realizarse.|  
-  
- Si se determina en el evento Will que la operación debe continuar, deje el *estado* parámetro sin modificar. Siempre y cuando no se estableció el parámetro de estado entrante **adStatusCantDeny**, sin embargo, puede cancelar la operación pendiente cambiando *estado* a **adStatusCancel**. Al hacerlo, el evento Complete asociado a la operación tiene su *estado* parámetro establecido en **adStatusErrorsOccurred**. El **Error** objeto pasado al evento Complete contendrá el valor **adErrOperationCancelled**.  
-  
- Si ya no desea procesar un evento, puede establecer *estado* a **adStatusUnwantedEvent** y la aplicación ya no recibirá notificación de ese evento. Sin embargo, recuerde que algunos eventos se pueden generar más de uno de los motivos. En ese caso, debe especificar **adStatusUnwantedEvent** para todas las razones posibles. Por ejemplo, para dejar de recibir notificación pendiente **RecordChange** eventos, debe establecer el *estado* parámetro **adStatusUnwantedEvent** para  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, y **adRsnFirstChange** cuando se producen.  
+## <a name="status-parameter"></a>Parámetro status  
+ Cuando se llama a la rutina del controlador de eventos, el parámetro *status* se establece en uno de los valores siguientes.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**adStatusUnwantedEvent**|La solicitud que este controlador de eventos deje de recibir notificaciones.|  
+|**adStatusOK**|Se pasa a los eventos y se completan. Este valor significa que la operación que causó el evento se completó correctamente.|  
+|**adStatusErrorsOccurred**|Se pasa solo a eventos de finalización. Este valor significa que la operación que causó el evento no se ha realizado correctamente o que un evento se cancelará la operación. Compruebe el parámetro de *error* para obtener más detalles.|  
+|**adStatusCantDeny**|Solo se pasa a eventos de. Este valor significa que la operación no puede ser cancelada por el evento. Debe realizarse.|  
+  
+ Si determina en el evento se producirá que la operación debe continuar, deje el parámetro *status* sin modificar. Sin embargo, siempre que el parámetro de estado de entrada no se haya establecido en **adStatusCantDeny**, puede cancelar la operación pendiente cambiando el *Estado* a **adStatusCancel**. Al hacerlo, el evento complete asociado a la operación tiene su parámetro *status* establecido en **adStatusErrorsOccurred**. El objeto de **error** que se pasa al evento complete contendrá el valor **adErrOperationCancelled**.  
+  
+ Si ya no desea procesar un evento, puede establecer el *Estado* en **adStatusUnwantedEvent** y la aplicación ya no recibirá la notificación de ese evento. Sin embargo, recuerde que algunos eventos se pueden generar por más de un motivo. En ese caso, debe especificar **adStatusUnwantedEvent** para cada posible motivo. Por ejemplo, para dejar de recibir la notificación de eventos pendientes de **RecordChange** , debe establecer el parámetro *status* en **adStatusUnwantedEvent** para **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**y **adRsnFirstChange** a medida que se producen.  
+  
+|Valor|Descripción|  
+|-----------|-----------------|  
+|**adStatusUnwantedEvent**|Solicite que este controlador de eventos no reciba más notificaciones.|  
 |**adStatusCancel**|Solicitar la cancelación de la operación que está a punto de producirse.|  
   
 ## <a name="error-parameter"></a>Parámetro de error  
- El *Error* parámetro es una referencia a ADO [Error](../../../ado/reference/ado-api/error-object.md) objeto. Cuando el *estado* parámetro está establecido en **adStatusErrorsOccurred**, **Error** objeto contiene detalles sobre el motivo del error de la operación. Si el evento Will asociado a un evento Complete ha cancelado la operación estableciendo el *estado* parámetro **adStatusCancel**, el objeto de error siempre se establece en  **adErrOperationCancelled**.  
+ El parámetro *error* es una referencia a un objeto de [error](../../../ado/reference/ado-api/error-object.md) de ADO. Cuando el parámetro *status* se establece en **adStatusErrorsOccurred**, el objeto **error** contiene información sobre por qué se produjo un error en la operación. Si el evento que va a asociar a un evento completo ha cancelado la operación estableciendo el parámetro *status* en **adStatusCancel**, el objeto de error siempre se establece en **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Parámetro de objeto  
- Cada evento recibe uno o más objetos que representan los objetos que están implicados en la operación. Por ejemplo, el **ExecuteComplete** evento recibe un **comando** objeto, un **Recordset** objeto y un **conexión** objeto.  
+ Cada evento recibe uno o más objetos que representan los objetos implicados en la operación. Por ejemplo, el evento **ExecuteComplete** recibe un objeto de **comando** , un objeto de **conjunto de registros** y un objeto de **conexión** .  
   
 ## <a name="reason-parameter"></a>Parámetro Reason  
- El *motivo* parámetro, *adReason*, proporciona información adicional sobre por qué se produjo el evento. Los eventos con un *adReason* parámetro puede llamarse varias veces, incluso para la misma operación por un motivo distinto cada vez. Por ejemplo, el **WillChangeRecord** se llama al controlador de eventos para las operaciones que se van a realizar o deshacer la inserción, eliminación o modificación de un registro. Si desea que procese un evento solo cuando se produce por una razón determinada, puede usar el *adReason* parámetro para filtrar las repeticiones que no le interesa. Por ejemplo, si desea procesar los eventos de cambio de registro solo cuando se producen porque se ha agregado un registro, puede usar algo similar al siguiente.  
+ El parámetro *Reason* , *adReason*, proporciona información adicional acerca de por qué se produjo el evento. Se puede llamar varias veces a los eventos con un parámetro *adReason* , incluso para la misma operación, por un motivo diferente cada vez. Por ejemplo, se llama al controlador de eventos **WillChangeRecord** para las operaciones que están a punto de realizar o deshacer la inserción, eliminación o modificación de un registro. Si desea procesar un evento solo cuando se produce por un motivo determinado, puede usar el parámetro *adReason* para filtrar las repeticiones que no le interesan. Por ejemplo, si desea procesar eventos de cambio de registro solo cuando se producen porque se agregó un registro, puede usar algo parecido a lo siguiente.  
   
 ```  
 ' BeginEventExampleVB01  
@@ -82,12 +82,12 @@ End Sub
 ' EndEventExampleVB01  
 ```  
   
- En este caso, la notificación potencialmente puede producirse para cada uno de los otros motivos. Sin embargo, se producirá una sola vez por cada razón. Después de la notificación se ha producido una vez por cada razón, recibirá notificación solo para la adición de un nuevo registro.  
+ En este caso, la notificación puede producirse por cada uno de los demás motivos. Sin embargo, solo se producirá una vez por cada motivo. Una vez que la notificación se ha producido una vez por cada motivo, recibirá una notificación solo para la adición de un nuevo registro.  
   
- En cambio, deberá establecer *adStatus* a **adStatusUnwantedEvent** solo una vez para solicitar que un controlador de eventos sin una **adReason** receptora evento de detención de parámetro notificaciones.  
+ Por el contrario, debe establecer el valor de *adStatus* en **adStatusUnwantedEvent** solo una vez para solicitar que un controlador de eventos sin un parámetro **adReason** dejen de recibir notificaciones de eventos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Creación de instancias de eventos de ADO por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [Creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Cómo funcionan conjuntamente los controladores de eventos](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Tipos de eventos](../../../ado/guide/data/types-of-events.md)

@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad de streaming con parámetros de salida de BLOB | Microsoft Docs
+title: Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB | Microsoft Docs
 description: Compatibilidad con el streaming de parámetros de salida BLOB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67936515"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
@@ -30,7 +30,7 @@ ms.locfileid: "67936515"
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```cpp
 // blob_out_param.cpp  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d31e81b28ef28a60ac9d7bc44f81327bc0591db4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831594"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433082"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -33,7 +32,7 @@ ms.locfileid: "62831594"
   
      El destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete del tipo de datos `Object`. Normalmente usa un contenedor de bucles Foreach con el enumerador Foreach ADO para procesar una fila del conjunto cada vez. La variable especificada para el enumerador Foreach ADO debe ser del tipo de datos Object. Para obtener más información acerca del destino de conjunto de registros, vea [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
--   Enumerador de conjunto de filas del esquema para Foreach de ADO.NET, para enumerar la información de esquema sobre un origen de datos. Por ejemplo, puede enumerar y obtener una lista de tablas de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Enumerador de conjunto de filas del esquema para Foreach de ADO.NET, para enumerar la información de esquema sobre un origen de datos. Por ejemplo, puede enumerar y obtener una lista de tablas de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Enumerador Foreach File para enumerar los archivos de una carpeta. El enumerador puede recorrer subcarpetas. Por ejemplo, puede leer todos los archivos de la carpeta y subcarpetas de Windows que tengan la extensión de nombre de archivo *.log.  
   
@@ -43,17 +42,17 @@ ms.locfileid: "62831594"
   
 -   Enumerador de lista de nodos para Foreach para enumerar el conjunto de resultados de una expresión del Lenguaje de rutas XML (XPath). Por ejemplo, esta expresión enumera y obtiene una lista de todos los autores de la época clásica: `/authors/author[@period='classical']`.  
   
--   Enumerador de SMO para Foreach para enumerar objetos de Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](SMO). Por ejemplo, puede enumerar y obtener una lista de vistas de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Enumerador de SMO para Foreach para enumerar objetos de Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO). Por ejemplo, puede enumerar y obtener una lista de vistas de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Para cada enumerador de blobs de Azure usado para enumerar blobs en un contenedor de blobs en el Almacenamiento de Azure.  
   
--   Enumerador de archivos de ADLS de foreach para enumerar los archivos en un directorio ADLS.
+-   Enumerador de archivos ADLS para foreach para enumerar archivos en un directorio ADLS.
   
  El siguiente diagrama muestra un contenedor de bucles Foreach que tiene una tarea Sistema de archivos. El bucle Foreach utiliza el Enumerador de archivos para Foreach y la tarea Sistema de archivos está configurada para copiar un archivo. Si la carpeta especificada por el enumerador contiene cuatro archivos, el bucle se repetirá cuatro veces y copiará cuatro archivos.  
   
- ![Contenedor de bucles Para cada uno que enumera una carpeta](../media/ssis-foreachloop.gif "A Foreach Loop container that enumerates a folder")  
+ ![Contenedor de bucles Foreach que enumera una carpeta](../media/ssis-foreachloop.gif "Contenedor de bucles Foreach que enumera una carpeta")  
   
- Puede utilizar una combinación de variables y expresiones de propiedades para actualizar la propiedad del objeto de paquete con el valor de colección de enumerador. Primero debe asignar el valor de colección a una variable definida por el usuario y después debe implementar una expresión de propiedad en la propiedad que utiliza la variable. Por ejemplo, el valor de la colección del enumerador de archivos para Foreach se asigna a una variable denominada `MyFile` y la variable, a continuación, se usa en la expresión de propiedad de la propiedad Subject de una tarea Enviar correo. Cuando se ejecuta el paquete, la propiedad Subject se actualiza con el nombre de un archivo cada vez que se repite el bucle. Para más información, vea [Usar expresiones de propiedad en paquetes](../expressions/use-property-expressions-in-packages.md).  
+ Puede utilizar una combinación de variables y expresiones de propiedades para actualizar la propiedad del objeto de paquete con el valor de colección de enumerador. Primero debe asignar el valor de colección a una variable definida por el usuario y después debe implementar una expresión de propiedad en la propiedad que utiliza la variable. Por ejemplo, el valor de colección del enumerador de archivos para foreach se asigna a una variable denominada `MyFile` y, a continuación, se usa la variable en la expresión de propiedad para la propiedad Subject de una tarea enviar correo. Cuando se ejecuta el paquete, la propiedad Subject se actualiza con el nombre de un archivo cada vez que se repite el bucle. Para más información, vea [Usar expresiones de propiedad en paquetes](../expressions/use-property-expressions-in-packages.md).  
   
  Las variables asignadas al valor de colección del enumerador también se pueden usar en expresiones y en scripts.  
   
@@ -75,8 +74,8 @@ ms.locfileid: "62831594"
 |Foreach Item|Defina los elementos de la colección Foreach Item, incluidas las columnas y los tipos de datos de columna.|  
 |Lista de nodos para Foreach|Especifique el origen del documento XML y configure la operación de XPath.|  
 |SMO para Foreach|Especifique la conexión a una base de datos y los objetos SMO que se van a enumerar.|  
-|Por cada blob de Azure|Especifique el contenedor de blobs de Azure que contiene la enumeración de blobs.|  
-|Archivo de ADLS para Para cada uno|Especifique el directorio ADLS que contiene los archivos que se enumerarán junto con algunos filtros.|
+|Por cada blob de Azure|Especifique el contenedor de blobs de Azure que contiene los blobs que se van a enumerar.|  
+|Archivo de ADLS para Para cada uno|Especifique el directorio ADLS que contiene los archivos que se van a enumerar, junto con algunos filtros.|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Expresiones de propiedad en contenedores de bucles Foreach  
  Se puede configurar que los paquetes ejecuten varios ejecutables simultáneamente. Esta configuración se debe utilizar con precaución cuando el paquete incluye un contenedor de bucles Foreach que implementa expresiones de propiedad.  
@@ -101,7 +100,7 @@ ms.locfileid: "62831594"
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada de blog, sobre [SSIS para cada enumerador de lista de nodo](https://go.microsoft.com/fwlink/?LinkId=220671), en bidn.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de control](control-flow.md)   
  [Contenedores de Integration Services](integration-services-containers.md)  
   

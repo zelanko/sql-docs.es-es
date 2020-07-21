@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 54a13abc-4c33-43f0-b55d-e2e74a1381c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df810e28070c797cb24aa3faa308b5419c877139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba84c9ad2dd5cab85fe538d2933b8d0a610485e9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62914704"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552090"
 ---
-# <a name="mssqlserver2518"></a>MSSQLSERVER_2518
+# <a name="mssqlserver_2518"></a>MSSQLSERVER_2518
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2518|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2518|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
 |Texto del mensaje|Id. de objeto O_ID (objeto "O_NAME"): no es posible comprobar las columnas calculadas y los tipos definidos por el usuario para este objeto porque el entorno Common Language Runtime (CLR) está deshabilitado.|  
@@ -38,7 +37,7 @@ ms.locfileid: "62914704"
 ## <a name="user-action"></a>Acción del usuario  
  Habilite el CLR y vuelva a ejecutar la instrucción DBCC.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar la integración con CLR](../clr-integration/clr-integration-enabling.md)  
   
   

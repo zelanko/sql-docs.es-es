@@ -12,14 +12,14 @@ helpviewer_keywords:
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fe406ec4c1a198a6657da987e58bcfea289c41fd
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993383"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916011"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Cómo enviar y recuperar datos UTF-8 gracias a la compatibilidad integrada con UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -221,7 +221,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
-[Trabajar con datos ASCII en no Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[Envío y recuperación de datos ASCII en Linux y Mac OS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 
 [Actualización de datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 

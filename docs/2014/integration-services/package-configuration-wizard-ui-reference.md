@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario del Asistente para configuración de paquete | Microsoft Docs
+title: Referencia de la interfaz de usuario del Asistente para configuración de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,14 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70576676604340a3239d4903d895f1dd385882d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056936"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424052"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
   Use el **Asistente para la configuración de paquetes** para crear configuraciones que actualizan las propiedades de un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus objetos en tiempo de ejecución. Este asistente se ejecuta al agregar una nueva configuración o modificar una existente en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Para abrir el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Configuraciones de paquetes** en el menú **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md).  
@@ -49,11 +48,11 @@ ms.locfileid: "66056936"
  **Tipo de configuración**  
  Seleccione el tipo de origen en el que se almacenará la configuración, utilizando las siguientes opciones:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Archivo de configuración XML**|Almacenar la configuración como un archivo XML. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
-|**Variable de entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
-|**Entrada del Registro**|Almacenar la configuración en el Registro. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
+|**Variable del entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
+|**Entrada del registro**|Almacenar la configuración en el Registro. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**Variable de paquete primario**|Almacenar la configuración como una variable en el paquete que contiene la tarea.  Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**SQL Server**|Almacenar la configuración en una tabla en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66056936"
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Nombre del archivo de configuración**|Escriba la ruta de acceso del archivo de configuración que genera el asistente.|  
 |**Examinar**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
@@ -74,66 +73,66 @@ ms.locfileid: "66056936"
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 #### <a name="configuration-type-option--environment-variable"></a>Opción de tipo de configuración = Variable de entorno  
- **Variable de entorno**  
+ **Variable del entorno**  
  Seleccione la variable de entorno que contiene la información de configuración.  
   
 #### <a name="configuration-type-option--registry-entry"></a>Opción de tipo de configuración = Entrada del Registro  
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
+|**Entrada del registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<registry key>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si desea usar una clave del registro que no está en la raíz de HKEY_CURRENT_USER, use el formato \<Registry key\registry key\\...> para identificar la clave.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 #### <a name="configuration-type-option--parent-package-variable"></a>Opción de tipo de configuración = Variable de paquete primario  
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable primaria**|Especifique la variable del paquete primario que contiene la información de configuración.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 #### <a name="configuration-type-options--sql-server"></a>Opción de tipo de configuración = SQL Server  
  **Especificar valores de configuración directamente**  
  Se utiliza para especificar la configuración directamente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Conexión**|Seleccione una conexión de la lista o haga clic en **Nueva** para crear una nueva conexión.|  
+|**Connection**|Seleccione una conexión de la lista o haga clic en **Nueva** para crear una nueva conexión.|  
 |**Tabla de configuración**|Seleccione una tabla existente o haga clic en **Nueva** para escribir una instrucción SQL que cree la nueva tabla.|  
 |**Filtro de la configuración**|Seleccione un nombre de configuración existente o escriba uno nuevo.<br /><br /> Muchas de las configuraciones de SQL Server se pueden almacenar en la misma tabla, y cada configuración puede incluir varios elementos de configuración.<br /><br /> Este valor definido por el usuario se almacena en la tabla para identificar los elementos de configuración de una configuración determinada.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde se almacena la configuración.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 ## <a name="select-objects-to-export-page"></a>Página Seleccionar objetos para la exportación  
  Use la página **Seleccionar propiedad de destino o Seleccionar propiedades para la exportación** para especificar las propiedades de objetos contenidas en la configuración. La posibilidad de seleccionar varias propiedades solo está disponible si se selecciona el tipo de configuración XML.  
   
 ### <a name="options"></a>Opciones  
- **Objetos**  
+ **Objects**  
  Expanda la jerarquía de paquetes y seleccione las propiedades que desea exportar.  
   
  **Atributos de propiedad**  
@@ -149,13 +148,13 @@ ms.locfileid: "66056936"
  **Nombre de la configuración**  
  Escriba el nombre de la configuración.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra los valores utilizados por el asistente para crear la configuración.  
   
  **Finalizar**  
  Crea la configuración y sale del **Asistente para configuración de paquetes**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)  
   
   

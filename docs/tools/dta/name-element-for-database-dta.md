@@ -1,10 +1,8 @@
 ---
-title: Name (DTA, elemento de Database) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Name (DTA, elemento de Database)
+description: En la utilidad DTA, el elemento Name de Database especifica el nombre de la base de datos que se quiere optimizar.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b86c6a16dc8bf86e02a8d4d30170077e63fb85af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 7f675e4e5c46318a5497221e893b81e59f6ed6c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034730"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82803170"
 ---
 # <a name="name-element-for-database-dta"></a>Name (DTA, elemento de Database)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica el nombre de la base de datos que se desea optimizar.  
+
+Especifica el nombre de la base de datos que se desea optimizar.  
   
 ## <a name="syntax"></a>Sintaxis  
   

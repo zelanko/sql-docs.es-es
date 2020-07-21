@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -17,38 +17,38 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_gc_cycle_stats dynamic management view
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026851"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830825"
 ---
-# <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Genera el estado actual de las transacciones confirmadas que han eliminado una o varias filas. El subproceso principal de recolección de elementos no utilizados se reactiva cada minuto o cuando el número de transacciones DML confirmadas supera un umbral interno desde el último ciclo de recolección de elementos no utilizados. Como parte del ciclo de recolección de elementos no utilizados, mueve las transacciones que se han confirmado a una o varias colas asociadas con las generaciones. Las transacciones que han generado versiones obsoletas se agrupan en una unidad de 16 transacciones en 16 generaciones de la manera siguiente:  
   
--   Generación 0: Almacena todas las transacciones que se confirmaron antes que la transacción activa más antigua. Las versiones de fila generadas por estas transacciones están disponibles inmediatamente para la recolección de elementos no utilizados.  
+-   Generación 0: almacena todas las transacciones que se confirmaron antes que la transacción activa más antigua. Las versiones de fila generadas por estas transacciones están disponibles inmediatamente para la recolección de elementos no utilizados.  
   
--   Generaciones 1-14: Almacena las transacciones cuya marca de tiempo mayor que la transacción activa más antigua. No se pueden recolectar las versiones de fila no utilizadas. Cada generación puede contener hasta 16 transacciones. En estas generaciones pueden existir un total de 224 (14 * 16) transacciones.  
+-   Generaciones 1 a 14: almacena las transacciones cuya marca de tiempo es mayor que la transacción activa más antigua. No se pueden recolectar las versiones de fila no utilizadas. Cada generación puede contener hasta 16 transacciones. En estas generaciones pueden existir un total de 224 (14 * 16) transacciones.  
   
--   Generación 15: Las transacciones restantes cuya marca de tiempo mayor que la transacción activa más antigua que se van a la generación 15. Al igual que ocurre con la generación 0, no hay ningún límite en cuanto al número de transacciones de la generación 15.  
+-   Generación 15: las transacciones restantes cuya marca de tiempo es mayor que la transacción activa más antigua van a la generación 15. Al igual que ocurre con la generación 0, no hay ningún límite en cuanto al número de transacciones de la generación 15.  
   
  Cuando hay presión de memoria, el subproceso de recolección de elementos no utilizados actualiza la sugerencia de la transacción activa más antigua de forma absoluta, lo que fuerza la recolección de elementos no utilizados.  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nombre de columna|Type|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificador único del ciclo de recolección de elementos no utilizados.|  
 |ticks_at_cycle_start|**bigint**|Tics en el momento en el que se inició el ciclo.|  
 |ticks_at_cycle_end|**bigint**|Tics en el momento en el que finalizó el ciclo.|  
-|base_generation|**bigint**|El valor de generación base actual de la base de datos. Representa la marca de tiempo de la transacción activa más antigua usada para identificar transacciones para la recolección de elementos no utilizados. El identificador de la transacción activa más antigua se actualiza en incrementos de 16. Por ejemplo, si tiene los identificadores de transacción 124, 125, 126... 139, el valor será 124. Cuando agregue otra transacción, por ejemplo 140, el valor será 140.|  
+|base_generation|**bigint**|El valor de generación base actual de la base de datos. Representa la marca de tiempo de la transacción activa más antigua usada para identificar transacciones para la recolección de elementos no utilizados. El identificador de la transacción activa más antigua se actualiza en incrementos de 16. Por ejemplo, si tiene identificadores de transacción como 124, 125, 126... 139, el valor será 124. Cuando agregue otra transacción, por ejemplo 140, el valor será 140.|  
 |xacts_copied_to_local|**bigint**|El número de transacciones copiadas de la canalización de transacciones en la matriz de generación de la base de datos.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Número de transacciones de cada generación.|  
   
@@ -91,7 +91,7 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

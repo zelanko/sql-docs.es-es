@@ -1,5 +1,5 @@
 ---
-title: Preparar y ejecutar una instrucción (ODBC) | Documentos de Microsoft
+title: Preparar y ejecutar una instrucción (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,19 +11,17 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3fd2ff0c2dae01c10b720ed31fee88430a82cbe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: a2ae98d59558738e4bcff979b38e341dd852661f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898522"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009468"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar y ejecutar una instrucción (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### <a name="to-prepare-a-statement-once-and-then-execute-it-multiple-times"></a>Para preparar una instrucción una sola vez y ejecutarla varias veces  
@@ -44,7 +42,7 @@ ms.locfileid: "67898522"
   
     -   Llame a [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) para ejecutar la instrucción preparada.  
   
-    -   Si se usan parámetros de entrada de datos en ejecución, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizando [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+    -   Si se usan parámetros de entrada de datos en ejecución, [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>Para preparar una instrucción con enlace de parámetros de modo de columna  
   
@@ -62,7 +60,7 @@ ms.locfileid: "67898522"
   
 3.  Puede llamar a [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) para determinar el número de parámetros de la instrucción preparada.  
   
-4.  Opcionalmente, para cada parámetro de la instrucción preparada, llame a SQLDescribeParam para obtener información de parámetros.  
+4.  Opcionalmente, para cada parámetro de la instrucción preparada, llame a SQLDescribeParam para obtener información sobre los parámetros.  
   
 5.  Para cada marcador de parámetro:  
   
@@ -70,7 +68,7 @@ ms.locfileid: "67898522"
   
     -   Asigne una matriz de S búferes de parámetros donde almacenar las longitudes de datos.  
   
-    -   Llame a SQLBindParameter para enlazar las matrices de longitud de datos y el valor de datos de parámetro para el parámetro de instrucción.  
+    -   Llame a SQLBindParameter para enlazar el valor de datos de parámetro y las matrices de longitud de datos al parámetro de instrucción.  
   
     -   Si el parámetro es un parámetro de imagen o texto de datos en ejecución, configúrelo.  
   
@@ -82,7 +80,7 @@ ms.locfileid: "67898522"
   
     -   Llame a SQLExecute para ejecutar la instrucción preparada.  
   
-    -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
+    -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo SQLParamData y SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Para preparar una instrucción con parámetros enlazados de modo de fila  
   
@@ -104,7 +102,7 @@ ms.locfileid: "67898522"
   
 3.  Llame a SQLPrepare para preparar la instrucción.  
   
-4.  Para cada marcador de parámetro, llame a SQLBindParameter para señalar el puntero de longitud de datos y el valor de datos de parámetro a sus variables en el primer elemento de la matriz de estructuras asignada en el paso 1. Si el parámetro es un parámetro de datos en ejecución, configúrelo.  
+4.  Para cada marcador de parámetro, llame a SQLBindParameter para que el valor de datos de parámetro y el puntero de longitud de datos apunten a sus variables en el primer elemento de la matriz de estructuras asignada en el paso 1. Si el parámetro es un parámetro de datos en ejecución, configúrelo.  
   
 5.  Para cada ejecución de una instrucción preparada:  
   
@@ -112,9 +110,9 @@ ms.locfileid: "67898522"
   
     -   Llame a SQLExecute para ejecutar la instrucción preparada. El controlador ejecuta eficazmente la instrucción SQL S veces, una vez para cada conjunto de parámetros.  
   
-    -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Enviar los datos en fragmentos mediante SQLParamData y SQLPutData.  
+    -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo SQLParamData y SQLPutData.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de ejecución de consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

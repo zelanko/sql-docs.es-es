@@ -5,26 +5,26 @@ description: En este artículo, se explica cómo ver el estado de un clúster de
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653273"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73531585"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos 
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo, se describe cómo acceder a los puntos de conexión del servicio y ver el estado de un clúster de macrodatos de SQL Server (versión preliminar). Puede usar tanto Azure Data Studio como **azdata**, y en este artículo se describen las dos técnicas.
+En este artículo se describe cómo acceder a los puntos de conexión del servicio y ver el estado de los componentes de un clúster de macrodatos de SQL Server. Puede usar tanto Azure Data Studio como **azdata**, y en este artículo se describen las dos técnicas.
 
-## <a id="datastudio"></a> Usar Azure Data Studio
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Usar Azure Data Studio
 
-Después de descargar la versión más reciente de la **compilación para los participantes del programa Insider** de [Azure Data Studio](https://aka.ms/azdata-insiders), podrá ver los puntos de conexión del servicio y el estado de un clúster de macrodatos con el panel del clúster de macrodatos de SQL Server. Tenga en cuenta que algunas de las características siguientes solo estarán disponibles antes para la compilación de los participantes del programa Insider de Azure Data Studio.
+Después de descargar la versión más reciente de la **compilación para los participantes del programa Insider** de [Azure Data Studio](https://aka.ms/getazuredatastudio), podrá ver los puntos de conexión del servicio y el estado de un clúster de macrodatos con el panel del clúster de macrodatos de SQL Server. Algunas de las siguientes características solo estarán disponibles por primera vez en la compilación de los participantes del programa Insider de Azure Data Studio.
 
 1. Primero, cree una conexión al clúster de macrodatos en Azure Data Studio. Para obtener más información, vea [Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 
@@ -42,13 +42,6 @@ Es importante que se pueda acceder fácilmente a distintos servicios de un clús
 
 ![puntos de conexión del servicio](media/view-cluster-status/service-endpoints.png)
 
-En las primeras filas, se muestran estos servicios:
-
-- Proxy de aplicación
-- Servicio de administración de clústeres
-- HDFS y Spark
-- Proxy de administración
-
 En estos servicios, se muestran los puntos de conexión que se pueden copiar y pegar si necesita usar el punto de conexión para conectarse a esos servicios. Por ejemplo, puede hacer clic en el icono de copiar a la derecha del punto de conexión y, después, pegarlo en una ventana de texto en la que se solicite este punto de conexión. El punto de conexión del servicio de administración de clústeres es necesario para ejecutar el [cuaderno de estado del clúster](#notebook).
 
 ### <a name="dashboards"></a>Paneles
@@ -60,9 +53,9 @@ En la tabla de puntos de conexión del servicio, también se muestran varios pan
 - Supervisión de trabajos de Spark
 - Administración de recursos de Spark
 
-Puede hacer clic directamente de estos vínculos. Antes de conectarse al servicio, se le pedirá dos veces que especifique el nombre de usuario y la contraseña.
+Puede hacer clic directamente de estos vínculos. Se le pedirá que se autentique al acceder a estos paneles. En el caso de los paneles de métricas y registros, indique las credenciales de administrador del controlador que estableció en el momento de la implementación mediante las variables de entorno **AZDATA_USERNAME** y **AZDATA_PASSWORD**. Los paneles de Spark usarán credenciales de puerta de enlace (Knox), ya sea la identidad de AD en un clúster integrado con AD o el usuario **raíz** y **AZDATA_PASSWORD**, si se usa la autenticación básica en el clúster. 
 
-### <a id="notebook"></a> Cuaderno de estado del clúster
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> Cuaderno de estado del clúster
 
 1. También puede ver el estado del clúster de macrodatos si inicia el cuaderno de estado del clúster. Para iniciar el cuaderno, haga clic en la tarea **Estado del clúster**.
 
@@ -84,7 +77,7 @@ Puede hacer clic directamente de estos vínculos. Antes de conectarse al servici
     > [!Note]
     > Si no tiene un archivo de configuración preparado con los macrodatos, se le pedirá que especifique el punto de conexión del controlador. Escríbalo o péguelo y, después, presione ENTRAR para continuar.
 
-5. Si la conexión se establece correctamente, en el resto del cuaderno se mostrará el resultado de cada componente del clúster de macrodatos. Para volver a ejecutar una determinada celda de código, mantenga el mouse sobre la celda de código y haga clic en el icono de **Ejecutar**.
+5. Si la conexión se establece correctamente, en el resto del cuaderno se mostrará el resultado de cada componente del clúster de macrodatos. Para volver a ejecutar una determinada celda de código, mantenga el puntero sobre la celda de código y haga clic en el icono de **Ejecutar**.
 
 ## <a name="use-azdata"></a>Usar azdata
 
@@ -92,26 +85,20 @@ También puede usar los comandos de [azdata](deploy-install-azdata.md) para ver 
 
 ### <a name="service-endpoints"></a>Puntos de conexión del servicio
 
-Siga este procedimiento para obtener las direcciones IP de los puntos de conexión externos del clúster de macrodatos.
-
-1. Para conocer la dirección IP del punto de conexión del controlador, vea el resultado de EXTERNAL-IP del siguiente comando de **kubectl**:
-
-   ```bash
-   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
-   ```
-
-   > [!TIP]
-   > Si no ha cambiado el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. **mssql-cluster** es el nombre predeterminado del clúster de macrodatos.
-
 1. Inicie sesión en el clúster de macrodatos con [azdata login](reference-azdata.md). Establezca el parámetro **--controller-endpoint** en la dirección IP externa del punto de conexión del controlador.
 
    ```bash
-   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   Especifique el nombre de usuario y la contraseña que ha configurado para el controlador (CONTROLLER_USERNAME y CONTROLLER_PASSWORD) durante la implementación.
+   Especifique el nombre de usuario y la contraseña que configuró para el controlador (AZDATA_USERNAME y AZDATA_PASSWORD) durante la implementación. 
+   En la autenticación de AD, el comando es:
 
-1. Ejecute [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
+  ```bash
+   azdata login --endpoint https://<control_domain_name>:30080 --auth ad
+   ```
+
+1. Ejecute [`azdata bdc endpoint list`](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -137,10 +124,10 @@ Siga este procedimiento para obtener las direcciones IP de los puntos de conexi�
 
 ### <a name="view-cluster-status"></a>Vista del estado del clúster
 
-Puede ver el estado del clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md).
+Puede ver el estado del clúster con el comando [`azdata bdc status show`](reference-azdata-bdc-status.md).
 
 ```bash
-azdata bdc status show -o table
+azdata bdc status show
 ```
 
 > [!TIP]
@@ -149,60 +136,177 @@ azdata bdc status show -o table
 Este es un resultado de ejemplo de este comando:
 
 ```output
-Kind     Name           State
--------  -------------  -------
-BDC      mssql-cluster  Ready
-Control  default        Ready
-Master   default        Ready
-Compute  default        Ready
-Data     default        Ready
-Storage  default        Ready
+ Bdc: ready                                                                                                                                                                                                          Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Services: ready                                                                                                                                                                                                     Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Servicename    State    Healthstatus    Details
+
+ spark          ready    healthy         -
+ sql            ready    healthy         -
+ hdfs           ready    healthy         -
+ control        ready    healthy         -
+ gateway        ready    healthy         -
+ app            ready    healthy         -
+
+
+ Spark Services: ready                                                                                                                                                                                               Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Sql Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ master          ready    healthy         StatefulSet master is healthy
+ compute-0       ready    healthy         StatefulSet compute-0 is healthy
+ data-0          ready    healthy         StatefulSet data-0 is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Hdfs Services: ready                                                                                                                                                                                                Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ nmnode-0        ready    healthy         StatefulSet nmnode-0 is healthy
+ zookeeper       ready    healthy         StatefulSet zookeeper is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+
+
+ Control Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ controldb       ready    healthy         StatefulSet controldb is healthy
+ control         ready    healthy         ReplicaSet control is healthy
+ metricsdc       ready    healthy         DaemonSet metricsdc is healthy
+ metricsui       ready    healthy         ReplicaSet metricsui is healthy
+ metricsdb       ready    healthy         StatefulSet metricsdb is healthy
+ logsui          ready    healthy         ReplicaSet logsui is healthy
+ logsdb          ready    healthy         StatefulSet logsdb is healthy
+ mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
+ controlwd       ready    healthy         ReplicaSet controlwd is healthy
+
+
+ Gateway Services: ready                                                                                                                                                                                             Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ gateway         ready    healthy         StatefulSet gateway is healthy
+
+
+ App Services: ready                                                                                                                                                                                                 Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-### <a name="view-pool-status"></a>Ver estado del grupo
+### <a name="view-specific-resource-status"></a>Visualización del estado de un recurso específico
 
-Puede ver el estado de los grupos en el clúster con el comando [azdata bdc pool status show](reference-azdata-bdc-pool-status.md). Para usar este comando, especifique el tipo de grupo con el parámetro `--kind`. Los tipos de grupo son:
+Puede ver el estado de un recurso específico en el clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md). Cuando se usa este comando, se puede filtrar con el parámetro `--resource`. Estos son algunos ejemplos de entradas del parámetro `--resource`:
 
-- compute
-- data
-- maestra
-- spark
-- storage
+- maestro
+- control
+- compute-0
+- storage-0
+- gateway
 
-Por ejemplo, el comando siguiente muestra el estado del grupo de almacenamiento:
+Por ejemplo, el siguiente comando muestra el estado del grupo de almacenamiento:
 
 ```bash
-azdata bdc pool status show --kind storage
+azdata bdc status show --all --resource storage-0
 ```
 
-Verá un texto similar al resultado siguiente:
+Para ver el estado de todos los componentes que ejecutan un servicio específico, deberá usar el grupo de comandos correspondiente `azdata bdc <serviceName> status show`. Por ejemplo:
+
+- azdata bdc sql status show --all
+- azdata bdc hdfs status show --all
+- azdata bdc spark status show --all
+
+Esta es una salida de ejemplo:
 
 ```output
-[
-  {
-    "kind": "Pod",
-    "logsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/logs/ui",
-    "name": "storage-0-0",
-    "nodeMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/nodemetrics/ui",
-    "sqlMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-0/sqlmetrics/ui",
-    "state": "Running"
-  },
-  {
-    "kind": "Pod",
-    "logsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/logs/ui",
-    "name": "storage-0-1",
-    "nodeMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/nodemetrics/ui",
-    "sqlMetricsUrl": "https://11.111.111.111:30080/clusters/mssql-cluster/pods/storage-0-1/sqlmetrics/ui",
-    "state": "Running"
-  }
-]
+  Storage-0: ready                                                                                                                                                                                                    Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Instances: running                                                                                                                                                                                                  Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+ Dashboards
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Name            Url
+
+ nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+ sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+ logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
+ ```
+
+> [!TIP]
+> Ejecute el comando de estado con parámetros `--all` para ver más detalles sobre el estado, como los vínculos a paneles de métricas y registros correspondientes a la instancia específica. Esta es una salida de ejemplo cuando se usan parámetros `--all`:
+
+```output
+ Spark: ready                                                                                                                                                                                                        Health Status:  healthy
+ ===========================================================================================================================================================================================================================================
+ Resources: ready                                                                                                                                                                                                    Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Resourcename    State    Healthstatus    Details
+
+ sparkhead       ready    healthy         StatefulSet sparkhead is healthy
+ storage-0       ready    healthy         StatefulSet storage-0 is healthy
+
+
+ Sparkhead Resources: running                                                                                                                                                                                        Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ sparkhead-0     running  healthy         Pod sparkhead-0 is healthy
+ sparkhead-1     running  healthy         Pod sparkhead-1 is healthy
+
+
+      Dashboards
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Name            Url
+
+      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/nodemetrics/ui
+      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/sqlmetrics/ui
+      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/sparkhead-1/status/logs/ui
+
+
+ Storage-0 Resources: running                                                                                                                                                                                        Health Status:  healthy
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Instancename    State    Healthstatus    Details
+
+ storage-0-0     running  healthy         Pod storage-0-0 is healthy
+ storage-0-1     running  healthy         Pod storage-0-1 is healthy
+
+
+      Dashboards
+      --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      Name            Url
+
+      nodeMetricsUrl  https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/nodemetrics/ui
+      sqlMetricsUrl   https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/sqlmetrics/ui
+      logsUrl         https://13.91.50.9:30777/api/v1/bdc/instances/storage-0-1/status/logs/ui
 ```
 
-El valor `logsUrl` vincula a un panel de Kibana con información de registro:
+El valor `logsUrl` vincula a un panel de Kibana:
 
 ![Panel de Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
-Los valores `nodeMetricsUrl` y `sqlMetricsUrl` vinculan a un panel de Grafana para supervisar el estado del nodo y las métricas de SQL:
+> [!NOTE]
+> El explorador Microsoft Edge (antiguo) no es compatible con Kibana; deberá usar el explorador basado en Chromium para que el panel se muestre correctamente. Si se usa un explorador no compatible, aparecerá una página en blanco al cargar los paneles. Consulte aquí qué exploradores son compatibles con Kibana.
+
+Los valores `nodeMetricsUrl` y `sqlMetricsUrl` vinculan a un panel de Grafana para supervisar las métricas de nodo de Kubernetes y las métricas de servicio del clúster de macrodatos:
 
 ![Panel de Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -210,8 +314,8 @@ Los valores `nodeMetricsUrl` y `sqlMetricsUrl` vinculan a un panel de Grafana pa
 
 ### <a name="view-controller-status"></a>Ver el estado del controlador
 
-Puede ver el estado del controlador con el comando [azdata bdc control status show](reference-azdata-bdc-control-status.md). Proporciona vínculos similares a los paneles de supervisión relacionados con los nodos de controlador del clúster de macrodatos.
+Puede ver el estado del controlador con el comando [`azdata bdc control status show`](reference-azdata-bdc-control-status.md). Proporciona vínculos similares a los paneles de supervisión relacionados con los complementos de controlador del clúster de macrodatos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.

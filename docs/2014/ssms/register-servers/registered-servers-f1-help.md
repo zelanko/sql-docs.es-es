@@ -1,6 +1,6 @@
 ---
-title: Servidores registrados (Ayuda F1) | Microsoft Docs
-ms.custom: ''
+title: Servidores registrados (Ayuda F1)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,26 +11,25 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc15477759c7039533250cf98323729334cf5b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5221e40aedc4b8f257998ebcf683037d73e4bd4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058385"
 ---
 # <a name="registered-servers-f1-help"></a>Servidores registrados (Ayuda F1)
   Esta sección contiene los temas de la Ayuda F1 del componente Servidores registrados de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [Nuevo o editar el registro de servidor &#40;: ficha General&#41; &#40;Analysis Services - datos multidimensionales&#41;](../../database-engine/new-edit-server-registration-analysis-services-multidimensional-data.md)  
+ [Nuevo o editar el registro de servidor &#40;pestaña General&#41; &#40;Analysis Services de datos multidimensionales&#41;](../../database-engine/new-edit-server-registration-analysis-services-multidimensional-data.md)  
   
- [Nuevo o editar el registro de servidor &#40;: ficha General&#41; &#40;Reporting Services&#41;](../../database-engine/new-or-edit-server-registration-general-tab-reporting-services.md)  
+ [Nuevo o editar el registro de servidor &#40;pestaña General&#41; &#40;Reporting Services&#41;](../../database-engine/new-or-edit-server-registration-general-tab-reporting-services.md)  
   
- [Nuevo o editar el registro de servidor &#40;: ficha General&#41; &#40;SSIS&#41;](../../database-engine/new-or-edit-server-registration-general-tab-ssis.md)  
+ [Nuevo o editar el registro de servidor &#40;pestaña General&#41; &#40;SSIS&#41;](../../database-engine/new-or-edit-server-registration-general-tab-ssis.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registrar servidores](register-servers.md)  
   
   

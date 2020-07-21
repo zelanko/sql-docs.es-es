@@ -17,17 +17,17 @@ helpviewer_keywords:
 - '@@OPTIONS function'
 - current SET options
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 14cbea00419743408b8ae15c34cefbb0dcaddb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 4103fef5cf8faa87de2ed0870687d7880135ee04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738059"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información acerca de las opciones SET actuales.  
   
@@ -39,17 +39,17 @@ ms.locfileid: "67914644"
 @@OPTIONS  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **integer**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las opciones pueden proceder del empleo del comando **SET** o del valor **sp_configure user options**. Los valores para la sesión que se hayan configurado con el comando **SET** invalidan las opciones de **sp_configure**. Muchas herramientas, como [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] configuran opciones automáticamente. Cada usuario tiene una función @@OPTIONS que representa la configuración.  
   
- Con la instrucción SET puede cambiar el idioma y las opciones de procesamiento de consultas para una sesión de usuario específica. **@@OPTIONS** solo puede detectar las opciones establecidas en ON o en OFF.  
+ Con la instrucción SET puede cambiar el idioma y las opciones de procesamiento de consultas para una sesión de usuario específica. **\@\@OPTIONS** solo puede detectar las opciones establecidas en ON o en OFF.  
   
- La función **@@OPTIONS** devuelve un mapa de bits de las opciones, convertido a un entero de base 10 (decimal). La configuración de bits se almacena en las ubicaciones descritas en una tabla en el tema [Establecer la opción de configuración del servidor Opciones de usuario](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ La función **\@\@OPTIONS** devuelve un mapa de bits de las opciones, convertido a un entero en base 10 (decimal). La configuración de bits se almacena en las ubicaciones descritas en una tabla en el tema [Establecer la opción de configuración del servidor Opciones de usuario](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Para descodificar el valor **@@OPTIONS** , convierta el entero que ha devuelto **@@OPTIONS** a binario y, después, busque los valores en la tabla del tema [Establecer la opción de configuración del servidor Opciones de usuario](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Por ejemplo, si `SELECT @@OPTIONS;` devuelve el valor `5496`, use la calculadora del programador de Windows (**calc.exe**) para convertir el valor decimal `5496` a binario. El resultado es `1010101111000`. Los caracteres en el extremo derecho (binario 1, 2 y 4) son 0, lo cual indica que los tres primeros elementos de la tabla están establecidos en OFF. Al consultar la tabla, ve que esos elementos son **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** y **CURSOR_CLOSE_ON_COMMIT**. El siguiente elemento (**ANSI_WARNINGS** en la posición `1000`) está establecido en ON. Siga examinando hacia la izquierda en el mapa de bits y trabaje en dirección descendente en la lista de opciones. Cuando las opciones en el extremo izquierdo sean 0, se indica que están truncadas por el tipo de conversión. El mapa de bits `1010101111000` es en realidad `001010101111000` para poder representar la totalidad de las 15 opciones.  
+ Para descodificar el valor **\@\@OPTIONS**, convierta el entero que ha devuelto **\@\@OPTIONS** a binario y, después, busque los valores en la tabla del tema [Establecimiento de la opción de configuración del servidor Opciones de usuario](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Por ejemplo, si `SELECT @@OPTIONS;` devuelve el valor `5496`, use la calculadora del programador de Windows (**calc.exe**) para convertir el valor decimal `5496` a binario. El resultado es `1010101111000`. Los caracteres en el extremo derecho (binario 1, 2 y 4) son 0, lo cual indica que los tres primeros elementos de la tabla están establecidos en OFF. Al consultar la tabla, ve que esos elementos son **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** y **CURSOR_CLOSE_ON_COMMIT**. El siguiente elemento (**ANSI_WARNINGS** en la posición `1000`) está establecido en ON. Siga examinando hacia la izquierda en el mapa de bits y trabaje en dirección descendente en la lista de opciones. Cuando las opciones en el extremo izquierdo sean 0, se indica que están truncadas por el tipo de conversión. El mapa de bits `1010101111000` es en realidad `001010101111000` para poder representar la totalidad de las 15 opciones.  
   
 ## <a name="examples"></a>Ejemplos  
   

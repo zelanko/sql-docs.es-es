@@ -1,5 +1,5 @@
 ---
-title: Copiar y pegar datos (SSAS Tabular) | Microsoft Docs
+title: Copiar y pegar datos (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086966"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526842"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiar y pegar datos (SSAS tabular)
   Puede copiar los datos de tabla de las aplicaciones externas y pegarlos en una tabla nueva o en una ya existente en el diseñador de modelos. Los datos que pega del Portapapeles deben estar en formato HTML, como los datos que se copian de Excel o Word. El diseñador de modelos detectará y aplicará automáticamente tipos de datos a los datos pegados. También puede modificar el tipo de datos o el formato para mostrar de una columna de forma manual.  
@@ -34,7 +33,7 @@ ms.locfileid: "66086966"
   
 -   [Cuadro de diálogo Vista previa de pegado](#bkmk_paste_preview)  
   
-##  <a name="bkmk_prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> Requisitos previos  
  Hay algunas restricciones al pegar los datos:  
   
 -   Las tablas pegadas no pueden tener más de 10.000 filas.  
@@ -47,7 +46,7 @@ ms.locfileid: "66086966"
   
 -   Al usar **Pegar datos anexados** o **Pegar datos reemplazados**, los nuevos datos deben contener exactamente el mismo número de columnas que los originales. Si es posible, las columnas de datos que se pegan o anexan también deberían ser de los mismos tipos de datos que los de la tabla de destino, o ser de un tipo de datos compatible. En algunos casos puede usar un tipo de datos diferente, pero es posible que se muestre un error de **coincidencia de tipos** .  
   
-##  <a name="bkmk_paste_data"></a> Pegar datos  
+##  <a name="paste-data"></a><a name="bkmk_paste_data"></a> Pegar datos  
   
 #### <a name="to-paste-data-into-the-designer"></a>Para pegar datos en el diseñador  
   
@@ -59,13 +58,13 @@ ms.locfileid: "66086966"
   
     -   Haga clic en **Pegar datos reemplazados** para reemplazar la tabla seleccionada con el contenido del Portapapeles. Todos los nombres de encabezado de columna existentes permanecerán en la tabla y se conservarán las relaciones.  
   
-##  <a name="bkmk_paste_preview"></a> Cuadro de diálogo Vista previa de pegado  
+##  <a name="paste-preview-dialog-box"></a><a name="bkmk_paste_preview"></a>Cuadro de diálogo vista previa de pegado  
  El cuadro de diálogo **Vista previa de pegado** le permite ver una vista previa de los datos que se copian en la ventana del diseñador y asegurarse de que se copian correctamente. Para obtener acceso a este cuadro de diálogo, copie datos basados en tabla en formato HTML en el diseñador, haga clic en el menú **Editar** y, después, en **Pegar**, **Pegar y anexar**o **Pegar y reemplazar**. Las opciones **Pegar y anexar** y **Pegar y reemplazar** solo están disponibles al agregar o reemplazar datos en una tabla creada copiando y pegando mediante el Portapapeles. No se puede usar **Pegar y anexar** ni **Pegar y reemplazar** para agregar datos en una tabla de datos importados.  
   
  Las opciones de este cuadro de diálogo son diferentes en función de que los datos se peguen en una tabla completamente nueva, en una tabla existente y reemplacen a los datos existentes, o se agreguen al final de una tabla existente.  
   
 ### <a name="paste-to-new-table"></a>Pegar en una nueva tabla  
- **Nombre de la tabla**  
+ **Nombre de tabla**  
  Especifique el nombre de la tabla que se creará en el diseñador.  
   
  **Datos que se van a pegar**  
@@ -85,9 +84,9 @@ ms.locfileid: "66086966"
  **Datos que se van a pegar**  
  Muestra un ejemplo del contenido del Portapapeles. Se eliminarán los datos existentes en la tabla de destino y se incrustarán las nuevas filas en la tabla.  
   
-## <a name="see-also"></a>Vea también  
- [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)   
- [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Importar datos &#40;&#41;tabular de SSAS](import-data-ssas-tabular.md)   
+ [Orígenes de datos admitidos &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
  [Establecer el tipo de datos de una columna &#40;SSAS tabular&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

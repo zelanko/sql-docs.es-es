@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec67a0330bca614e5224b01d8df81a5e07ff8e95
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771121"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432142"
 ---
 # <a name="look-up-infoobject"></a>Buscar InfoObject
   Use el cuadro de diálogo **Buscar InfoObject** para buscar un InfoObject que se haya definido en el sistema de SAP Netweaver BW. Cuando aparezca la lista de InfoObjects disponibles, seleccione el InfoObject que desee y el destino de SAP BW rellenará las opciones asociadas a los valores necesarios.  
@@ -58,7 +57,7 @@ ms.locfileid: "62771121"
  **Características de tiempo**  
  Permite buscar InfoObjects que representan características de tiempo.  
   
- **Name**  
+ **Nombre**  
  Permite escribir el nombre del InfoObject que desea buscar o un nombre parcial con el carácter comodín de asterisco (*). O bien, use el carácter comodín de asterisco por sí solo para incluir todos los InfoObjects.  
   
  **Descripción**  
@@ -78,7 +77,7 @@ ms.locfileid: "62771121"
   
  Cuando aparezca la lista de InfoObjects disponibles, seleccione el InfoObject que desee y el destino rellenará las opciones asociadas a los valores necesarios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear InfoCube para datos de transacción](create-infocube-for-transaction-data.md)   
  [Crear InfoSource](create-infosource.md)   
  [Crear InfoSource para datos de transacción](create-infosource-for-transaction-data.md)   

@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 90165738dfcea8818353d602f72390bb08eea792
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 27601b860d5f0cff6efcbd6ff800ab58e06a750a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847356"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896916"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **CreateEx** crea el conjunto de dispositivos virtuales.
 
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 | VD_E_NOTSUPPORTED | Uno o varios de los campos de la configuración no eran válidos o no se admiten. |
 | VD_E_PROTOCOL | Se ha creado el conjunto de dispositivos virtuales. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El método CreateEx solo se debe llamar una vez por operación BACKUP o RESTORE. Después de invocar el método Close, el cliente puede volver a usar la interfaz para crear otro conjunto de dispositivos virtuales.
 

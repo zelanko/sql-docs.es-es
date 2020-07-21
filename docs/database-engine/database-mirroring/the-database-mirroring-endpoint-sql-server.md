@@ -1,5 +1,6 @@
 ---
 title: El punto de conexión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
+description: Obtenga información sobre los puntos de conexión dedicados para la creación de reflejos de las bases de datos, necesarios para que cada servidor participe en los grupos de disponibilidad Always On o en la creación de reflejos de las bases de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f8652f227c43354f54e8ec76f9c174f4551dcb2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd3477fb75040443fdfa56969ba9772baaabb0c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896997"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Para participar en la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , una instancia de servidor requiere su propio *extremo de creación de reflejo de la base de datos*dedicado. Se trata de un extremo especial que se utiliza exclusivamente para recibir conexiones procedentes de otras instancias de servidor. En una instancia de servidor determinada, todas las conexiones de creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a cualquier otra instancia de servidor utilizan un único extremo de creación de reflejo de la base de datos.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "68047990"
 >  La característica de creación de reflejo de la base de datos se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente utilizan la creación de reflejo de la base de datos para utilizar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
   
-##  <a name="ServerNetworkAddress"></a> Dirección de red de servidor  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> Dirección de red de servidor  
  La dirección de red de una instancia de servidor (su *dirección de red de servidor* o *dirección URL de punto de conexión*) contiene el número de puerto de su punto de conexión, así como el nombre de sistema y de dominio del equipo host. El número de puerto identifica de forma exclusiva una instancia de servidor específica.  
   
  En la siguiente ilustración se muestra cómo dos instancias de servidor en el mismo servidor se identifican de forma exclusiva. Las direcciones de red de las dos instancias de servidor contienen el mismo nombre de sistema, `MYSYSTEM`, y el mismo nombre de dominio, `Adventure-Works.MyDomain.com`. Para habilitar el sistema de forma que enrute conexiones a una instancia de servidor, una dirección de red de servidor incluye el número de puerto asociado al extremo para la creación de reflejo de una instancia de servidor en particular.  
@@ -57,7 +58,7 @@ ms.locfileid: "68047990"
 >  No reconfigure un extremo de creación de reflejo de la base de datos en uso. Las instancias de servidor usan los extremos de todas las demás instancias para conocer el estado de los otros sistemas. Si reconfigura el extremo, podría reiniciarse, lo que podría parecer un error en las otras instancias de servidor. Esto es especialmente importante en el modo de conmutación automática por error, en el que volver a configurar el extremo en un asociado podría dar lugar a una conmutación por error.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> Determinar el tipo de autenticación para un extremo de creación de reflejo de la base de datos  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> Determinar el tipo de autenticación para un extremo de creación de reflejo de la base de datos  
  Es importante saber que las cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de las instancias del servidor determinan el tipo de autenticación que se puede usar para los extremos de creación de reflejo de la base de datos, del modo siguiente:  
   
 -   Si cada instancia de servidor se ejecuta en una cuenta de servicio de dominio, puede utilizar la autenticación de Windows para los extremos de creación de reflejo de la base de datos. Si las instancias del servidor se ejecutan como la misma cuenta de usuario de dominio, automáticamente existen los inicios de sesión de usuario correctos en ambas bases de datos **maestras** . Esto simplifica la configuración de seguridad de las base de datos de disponibilidad y es recomendable su aplicación.  
@@ -74,7 +75,7 @@ ms.locfileid: "68047990"
      No hay ningún método automatizado para configurar la seguridad de creación de reflejo de la base de datos mediante certificados. Tendrá que usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT o el cmdlet de PowerShell **New-SqlHadrEndpoint** . Para obtener más información, vea [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md). Para obtener información sobre cómo habilitar la autenticación de certificados en una instancia de servidor, vea [Usar certificados para un punto de conexión de creación de reflejo de la base de datos (Transact-SQL)](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar un extremo de creación del reflejo de la base de datos**  
   
 -   [Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  

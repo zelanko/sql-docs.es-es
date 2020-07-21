@@ -1,5 +1,5 @@
 ---
-title: Asignar el cuadro de diálogo Propiedades de ventanilla, optimización | Microsoft Docs
+title: Cuadro de diálogo Propiedades de ventanilla de mapa, optimización | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108277"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, Optimización
@@ -31,13 +31,13 @@ ms.locfileid: "66108277"
  **Rendimiento**  
  Deslice el puntero más cerca de **Rendimiento** para simplificar el mapa y mostrar menos detalle.  
   
- **Calidad**  
+ **Quality**  
  Deslice el puntero más cerca de **Calidad** para dibujar el mapa con mayor detalle.  
   
- **resolución de mapa**  
+ **Resolución de mapa**  
  Especifique una resolución para el mapa. Este valor especifica el menor detalle que desea ver en el mapa representado en puntos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   

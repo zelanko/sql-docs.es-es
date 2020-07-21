@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cbcc9f1efc477b8c54ad131f9efa9ff49cc5845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62654981"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014607"
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
   Los desencadenadores DDL se inician en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
@@ -114,11 +113,11 @@ GO
 |----------|-----------|  
 |Describe cómo crear, modificar, eliminar o deshabilitar los desencadenadores DDL.|[Implementar desencadenadores DDL](implement-ddl-triggers.md)|  
 |Describe cómo crear un desencadenador DDL de CLR.|[Crear desencadenadores CLR](create-clr-triggers.md)|  
-|Describe cómo devolver información acerca de los desencadenadores DDL.|[Obtener información acerca de los desencadenadores DDL](get-information-about-ddl-triggers.md)|  
+|Describe cómo devolver información acerca de los desencadenadores DDL.|[Obtener información sobre los desencadenadores DDL](get-information-about-ddl-triggers.md)|  
 |Describe cómo devolver información acerca de un evento que activa un desencadenador DDL mediante la función EVENTDATA.|[Usar la función EVENTDATA](use-the-eventdata-function.md)|  
 |Describe cómo administrar la seguridad de los desencadenadores.|[Administrar la seguridad de los desencadenadores](manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desencadenadores DML](dml-triggers.md)   
  [Desencadenadores logon](logon-triggers.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)  

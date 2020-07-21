@@ -5,7 +5,7 @@
       href: prereqs-restrictions-recommendations-always-on-availability.md
     - name: Modos de disponibilidad
       href: availability-modes-always-on-availability-groups.md
-- name: Inicio rápido
+- name: Guía de inicio rápido
   items:
     - name: Introducción
       href: getting-started-with-always-on-availability-groups-sql-server.md

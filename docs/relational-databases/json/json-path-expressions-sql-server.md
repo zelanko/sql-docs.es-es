@@ -1,9 +1,7 @@
 ---
-title: Expresiones de ruta de acceso JSON (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/23/2017
+title: Expresiones de ruta de acceso JSON
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +10,18 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bca9bcff4a622964d6f6e05fb46b458a1cd78ddf
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 90f30c6fc18915b96f17ddf8e775e06bf94559a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715375"
 ---
 # <a name="json-path-expressions-sql-server"></a>Expresiones de ruta de acceso JSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
  Use expresiones de rutas de acceso JSON para hacer referencia a las propiedades de los objetos JSON.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72909915"
   
 2.  La [ruta de acceso](#PATH) en sí.  
 
-##  <a name="PATHMODE"></a> Path mode  
+##  <a name="path-mode"></a><a name="PATHMODE"></a> Path mode  
  Al principio de la expresión de ruta de acceso, puede optar por declarar el modo de la ruta de acceso con las palabras clave **lax** o **strict**. El valor predeterminado es **lax**.  
   
 -   En el modo **lax**, las funciones devuelven valores vacíos si la expresión de ruta de acceso contiene un error. Por ejemplo, si se solicita el valor **$.name** y el texto JSON no contiene una clave **name**, la función devuelve NULL, pero no genera ningún error.  
@@ -52,13 +52,13 @@ ms.locfileid: "72909915"
 La consulta siguiente especifica explícitamente el modo `lax` en la expresión de ruta de acceso.
 
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{ ... }'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{ ... }';
 
-SELECT * FROM OPENJSON(@json, N'lax $.info')
+SELECT * FROM OPENJSON(@json, N'lax $.info');
 ```  
   
-##  <a name="PATH"></a> Path  
+##  <a name="path"></a><a name="PATH"></a> Path  
  Después de declarar (opcionalmente) el modo de ruta de acceso, se especifica la ruta de acceso.  
   
 -   El signo de dólar (`$`) representa el elemento de contexto.  
@@ -89,7 +89,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
  En la siguiente tabla se muestran algunos ejemplos de expresiones de ruta de acceso.  
   
-|Expresión de ruta de acceso|Valor|  
+|Expresión de ruta de acceso|Value|  
 |---------------------|-----------|  
 |$.people[0].name|John|  
 |$.people[1]|{ "name": "Jane",  "surname": null, "active": true }|  
@@ -100,11 +100,11 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
  Si el texto JSON contiene propiedades duplicadas (por ejemplo, dos claves con el mismo nombre en el mismo nivel), las funciones **JSON_VALUE** y **JSON_QUERY** devuelven solo el primer valor que coincida con la ruta de acceso. Para analizar un objeto JSON que contiene claves duplicadas y devuelve todos los valores, use **OPENJSON**, como se muestra en el siguiente ejemplo.  
   
 ```sql  
-DECLARE @json NVARCHAR(MAX)
-SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
+DECLARE @json NVARCHAR(MAX);
+SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}';
 
 SELECT value
-FROM OPENJSON(@json,'$.person.info') 
+  FROM OPENJSON(@json,'$.person.info');
 ```  
 
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>Más información sobre JSON en SQL Server y Azure SQL Database  

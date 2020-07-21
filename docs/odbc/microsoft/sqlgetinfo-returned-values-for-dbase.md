@@ -14,20 +14,20 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLGetInfo
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ea3a937fe7e877eaf70c405678d82111a691dd3b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794687"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298555"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo devuelve valores para dBASE
 En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la *Referencia del programador de ODBC*.  
   
 > [!NOTE]  
->  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra&#124;vertical () representa una operación OR bit a bit.  
+>  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
   
 |InfoType|Valor devuelto|  
 |--------------|--------------------|  
@@ -85,7 +85,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_DATA_SOURCE_READ_ONLY|"N" (depende del origen de datos).|  
 |SQL_DATABASE_NAME|Directorio de base de datos actual|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|DBASE|  
+|SQL_DBMS_NAME|DBase|  
 |SQL_DBMS_VER|Varios valores|  
 |SQL_DDL_INDEX|Varios valores|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -141,7 +141,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Varios valores|  
-|CONFORMIDAD CON SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMIDAD|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Desde el administrador de controladores|  
 |SQL_OJ_CAPABILITIES|Varios valores|  
@@ -155,8 +155,8 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SERVER_NAME|DBase|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! '\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  

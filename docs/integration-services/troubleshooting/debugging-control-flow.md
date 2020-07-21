@@ -20,10 +20,10 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295132"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
@@ -31,7 +31,7 @@ ms.locfileid: "71295132"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluyen características y herramientas que se pueden utilizar para solucionar los problemas del flujo de control en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite puntos de interrupción en contenedores y tareas.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "71295132"
   
 |Tipo de número de llamadas|Descripción|  
 |--------------------|-----------------|  
-|Always|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
+|Siempre|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |Número de llamadas igual a|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  
 |Número de llamadas mayor o igual que|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual a o mayor que el número de llamadas.|  
 |Múltiplo del número de llamadas|La ejecución se suspende cuando se produce un múltiplo de número de llamadas. Por ejemplo, si establece esta opción en 5, la ejecución se suspende cada cinco veces.|  
@@ -103,7 +103,7 @@ ms.locfileid: "71295132"
   
  El diagrama siguiente muestra la pestaña **Progreso** .  
   
- ![Pestaña Progreso del Diseñador SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
+ ![Pestaña Progreso del Diseñador SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Pestaña Progreso del Diseñador SSIS")  
   
 ## <a name="debug-windows"></a>Ventanas de depuración  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye varias ventanas que se pueden usar para trabajar con puntos de interrupción y para depurar paquetes que contienen puntos de interrupción. Para obtener más información sobre cada ventana, abra la ventana y luego presione F1 para mostrar la Ayuda correspondiente de esa ventana.  
@@ -112,13 +112,13 @@ ms.locfileid: "71295132"
   
  Las ventanas se describen en la siguiente tabla.  
   
-|Ventana|Descripción|  
+|Periodo|Descripción|  
 |------------|-----------------|  
 |Puntos de interrupción|Enumera los puntos de interrupción de un paquete y proporciona opciones para habilitar y eliminar puntos de interrupción.|  
-|Salida|Muestra mensajes de estado para las características en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
+|Output|Muestra mensajes de estado para las características en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
 |Inmediata|Se usa para depurar y evaluar expresiones e imprimir valores de variable.|  
 
-## <a name="debug"></a> Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
+## <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a><a name="debug"></a> Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
   Este procedimiento describe cómo establecer puntos de interrupción en un paquete, una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias.  
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>Para establecer puntos de interrupción en un paquete, una tarea o un contenedor  
@@ -148,15 +148,15 @@ ms.locfileid: "71295132"
  **Enabled**  
  Seleccione esta opción para habilitar un punto de interrupción en un evento.  
   
- **Condición de interrupción**  
+ **Break Condition**  
  Vea una lista de los eventos disponibles en los que se establecen puntos de interrupción.  
   
- **Tipo de número de llamadas**  
+ **Hit Count Type**  
  Especifique el momento en el que el punto de interrupción surte efecto.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Always**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
+|**Siempre**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |**Número de llamadas igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  
 |**Recuento de visitas mayor que o igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual a o mayor que el número de llamadas.|  
 |**Múltiplo del número de llamadas**|La ejecución se suspende cuando se produce un múltiplo de número de llamadas. Por ejemplo, si establece esta opción en 5, la ejecución se suspende cada cinco veces.|  
@@ -165,5 +165,5 @@ ms.locfileid: "71295132"
  Especifique el número de visitas en el que se desencadena una interrupción. Esta opción no está disponible si la interrupción está siempre activa.  
   
 ## <a name="see-also"></a>Consulte también  
- [Herramientas para solucionar problemas del desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Depurar un script mediante el establecimiento de puntos de interrupción en una tarea Script y un componente de script](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   

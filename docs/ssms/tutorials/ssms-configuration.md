@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Componentes y configuración de SQL Server Management Studio'
+title: Configuración y componentes de SSMS
 description: Tutorial en el que se describen los componentes y las opciones de configuración básicas para su entorno de SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe7518959f62328e038e7afb619b79cf2acbda86
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267076"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247290"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Componentes y configuración de SQL Server Management Studio
 
@@ -25,7 +25,7 @@ En este tutorial se describen los distintos componentes de ventana que hay en SQ
 > * Identificar los componentes que conforman el entorno de SSMS
 > * Cambiar el diseño del entorno y restablecerlo a los valores predeterminados
 > * Maximizar el editor de consultas
-> * Cambio del tamaño de fuente
+> * Cambio de la fuente
 > * Configurar las opciones de inicio
 > * Restablecer la configuración predeterminada
 
@@ -44,22 +44,22 @@ En esta sección se describen los distintos componentes de ventana que están di
 
     ![Menú Ver](media/ssms-configuration/viewmenu.png)
 
-* **Explorador de objetos** (F8): El Explorador de objetos es una vista de árbol de todos los objetos de base de datos que contiene un servidor. Esta vista incluye las bases de datos de Motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Reporting Services y SQL Server Integration Services. El Explorador de objetos incluye información de todos los servidores a los que está conectado. 
+* **Explorador de objetos** (F8): el Explorador de objetos es una vista de árbol de todos los objetos de base de datos que contiene un servidor. Esta vista incluye las bases de datos de Motor de base de datos de SQL Server, SQL Server Analysis Services, SQL Server Reporting Services y SQL Server Integration Services. El Explorador de objetos incluye información de todos los servidores a los que está conectado. 
 
     ![Explorador de objetos](media/ssms-configuration/objectexplorer.png)
-* **Ventana de consulta** (Ctrl+N): después de seleccionar **Nueva consulta**, escriba las consultas de Transact-SQL (T-SQL) en esta ventana. Los resultados de las consultas también aparecerán aquí.
+* **Ventana Consulta** (Ctrl + N): después de seleccionar **Nueva consulta**, escriba las consultas de Transact-SQL (T-SQL) en esta ventana. Los resultados de las consultas también aparecerán aquí.
 
     ![Ventana Nueva consulta](media/ssms-configuration/newquery.png)
 
-* **Propiedades** (F4): puede ver la vista Propiedades cuando se abre la ventana de consulta. La vista muestra las propiedades básicas de la consulta. Por ejemplo, se muestra la hora de inicio de una consulta, el número de filas devueltas o los detalles de conexión.  
+* **Propiedades** (F4): puede ver la vista Propiedades cuando la ventana Consulta esté abierta. La vista muestra las propiedades básicas de la consulta. Por ejemplo, se muestra la hora de inicio de una consulta, el número de filas devueltas o los detalles de conexión.  
 
     ![Propiedades](media/ssms-configuration/properties.png)
 
-* **Explorador de plantillas** (Ctrl+Alt+T): el Explorador de plantillas tiene diversas plantillas predefinidas de T-SQL. Puede usar estas plantillas para llevar a cabo varias funciones, como crear una base de datos o hacer una copia de seguridad de la base de datos. 
+* **Explorador de plantillas** (Ctrl + Alt + T): el Explorador de plantillas tiene varias plantillas de T-SQL predefinidas. Puede usar estas plantillas para llevar a cabo varias funciones, como crear una base de datos o hacer una copia de seguridad de la base de datos. 
 
     ![Explorador de plantillas](media/ssms-configuration/templates.png)
 
-* **Detalles del Explorador de objetos** (F7): esta vista es más pormenorizada que la vista del Explorador de objetos. Puede usar Detalles del Explorador de objetos para manipular varios objetos a la vez. Por ejemplo, en esta ventana puede seleccionar varias bases de datos y, después, eliminarlas o generar un script para ellas de forma simultánea. 
+* **Detalles del Explorador de objetos** (F7): esta vista está más granular que la vista del Explorador de objetos. Puede usar Detalles del Explorador de objetos para manipular varios objetos a la vez. Por ejemplo, en esta ventana puede seleccionar varias bases de datos y, después, eliminarlas o generar un script para ellas de forma simultánea. 
 
     ![Detalles del Explorador de objetos](media/ssms-configuration/objectexplorerdetails.PNG) 
 
@@ -116,7 +116,7 @@ En esta sección se describe cómo modificar algunas opciones básicas de SSMS d
 
     ![Personalizar una barra de herramientas](media/ssms-configuration/toolbar.png)
 
-### <a name="change-the-font"></a>Cambio del tamaño de fuente
+### <a name="change-the-font"></a>Cambio de la fuente
 
 * Para cambiar la fuente, seleccione **Herramientas** > **Opciones** > **Fuentes y colores**:
 

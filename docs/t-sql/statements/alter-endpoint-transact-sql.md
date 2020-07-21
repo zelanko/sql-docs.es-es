@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7bbdefbd6a418bb6dece10fb8abd919fc0dadc8
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065670"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81628365"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68065670"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ALTER ENDPOINT endPointName [ AUTHORIZATION login ]  
 [ STATE = { STARTED | STOPPED | DISABLED } ]  
@@ -104,13 +104,13 @@ FOR DATABASE_MIRRORING (
  **AS** { **TCP** }  
  No puede cambiar el protocolo de transporte con **ALTER ENDPOINT**.  
   
- **AUTHORIZATION** *inicio_de_sesión*  
+ **AUTHORIZATION** *login*  
  La opción **AUTHORIZATION** no está disponible en **ALTER ENDPOINT**. La propiedad solo puede asignarse cuando se crea el extremo.  
   
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  No se puede cambiar el tipo de carga útil con **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando use ALTER ENDPOINT, especifique solo los parámetros que desee actualizar. Todas las propiedades de un extremo se conservan a menos que las cambie explícitamente.  
   
  Las instrucciones ENDPOINT DDL no se pueden ejecutar dentro de una transacción de usuario.  

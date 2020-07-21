@@ -1,5 +1,5 @@
 ---
-title: Pantalla 1 del Asistente para orígenes de datos (controlador ODBC para SQL Server) | Microsoft Docs
+title: Pantalla del Asistente para orígenes de datos 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936602"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928258"
 ---
 # <a name="data-source-wizard-screen-1"></a>Pantalla del Asistente para orígenes de datos 1
 
@@ -33,7 +33,7 @@ El nombre del origen de datos usado por una aplicación ODBC cuando solicita una
 
 ### <a name="select-or-enter-a-server-name"></a>Seleccionar o especificar un nombre de servidor
 
-El nombre de una instancia de SQL Server en la red. Tendrá que especificar un servidor en el siguiente cuadro de edición.
+Nombre de una instancia de SQL Server en la red. Tendrá que especificar un servidor en el siguiente cuadro de edición.
 
 En la mayoría de los casos, el controlador ODBC puede conectarse utilizando el orden de protocolo predeterminado y el nombre del servidor proporcionado en este cuadro. Use el Administrador de configuración de SQL Server si desea crear un alias para el servidor o configurar las bibliotecas de red de cliente.
 
@@ -47,7 +47,7 @@ Si la información especificada en esta pantalla es todo lo que se necesita para
 
 ### <a name="next"></a>Siguiente
 
-Para continuar con la siguiente pantalla del asistente, haga clic en **siguiente**.
+Para continuar con la siguiente pantalla del asistente, haga clic en **Siguiente**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

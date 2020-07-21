@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2fe813f8714bf9171873731cee68ac228dd3ace2
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982069"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80906891"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>Método getMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final int getMaxRows()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getMaxRows se especifica mediante el método getMaxRows en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método getMaxRows especifica este método getMaxRows en la interfaz java.sql.Statement.  
   
  Este método getMaxRows siempre devuelve 0 para los cursores desplazables dinámicos.  
   

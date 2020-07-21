@@ -1,10 +1,9 @@
 ---
-title: Cómo representa combinaciones el Diseñador de consultas y vistas | Microsoft Docs
-ms.custom: ''
+title: Cómo representa combinaciones el Diseñador de consultas y vistas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6318dfe2cc886e3ea2ea10d089023325ff074c95
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7e0d4b8ff645ad918cea32cbbed3eade62017254
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254439"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255868"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Cómo representa combinaciones el Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ En el panel Diagrama, el Diseñador de consultas y vistas muestra una línea de 
   
 Si las tablas están combinadas mediante más de una condición de combinación, el Diseñador de consultas y vistas muestra varias líneas de combinación, como en el ejemplo siguiente:  
   
-![Tablas combinadas mediante más de una condición de combinación](../../ssms/visual-db-tools/media/dv3w9n1.gif "Tablas combinadas mediante más de una condición de combinación")  
+![Tablas combinadas usando más de una condición de combinación](../../ssms/visual-db-tools/media/dv3w9n1.gif "Tablas combinadas usando más de una condición de combinación")  
   
 Si no se muestran las columnas de datos combinadas (por ejemplo, el rectángulo que representa la tabla o el objeto con estructura de tabla está minimizado o la combinación incluye una expresión), el Diseñador de consultas coloca la línea de combinación en la barra de título del rectángulo que representa la tabla o el objeto con estructura de tabla.  
   

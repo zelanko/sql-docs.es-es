@@ -1,5 +1,5 @@
 ---
-title: Nuevo o editar el registro del servidor (pestaña General) (Reporting Services) | Microsoft Docs
+title: Nuevo o editar el registro de servidor (pestaña general) (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5f899a8e-52ef-46b5-b7a9-f200ccd9f724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9892a6fb3033be549d95b708a012e55d40bcb80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62844281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930516"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General de Reporting Services)
   Utilice esta pestaña para especificar opciones cuando registre una instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -26,7 +25,7 @@ ms.locfileid: "62844281"
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
- Cuando se registra un servidor desde Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el panel **Servidores registrados** . Para registrar un tipo de servidor diferente, haga clic en el servidor que desee en la barra de herramientas de **Servidores registrados** antes de comenzar a registrar un nuevo servidor.  
+ Cuando se registra un servidor desde servidores registrados, el cuadro **tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el panel **servidores registrados** . Para registrar un tipo de servidor diferente, haga clic en el servidor que desee en la barra de herramientas de **Servidores registrados** antes de comenzar a registrar un nuevo servidor.  
   
  **Nombre del servidor**  
  Especifique la instancia de servidor de informes a la que se va a conectar. En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], puede tener acceso al servidor de informes a través de su nombre de instancia. Puede tener una instancia de servidor de informes para cada instancia de SQL Server que instale. Si utiliza la instancia predeterminada, escriba el nombre de la instancia de SQL Server. Si utiliza una instancia con nombre, especifique la instancia con nombre para conectar al servidor de informes en el formato MSSQL$InstanceName.  
@@ -53,7 +52,7 @@ ms.locfileid: "62844281"
  Guarda la contraseña que ha escrito. Esta opción solo se encuentra disponible si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
 > [!NOTE]  
->  Si ha guardado la contraseña y ya no quiere conservarla, desactive esta casilla y luego haga clic en **Guardar**.  
+>   Si ha guardado la contraseña y ya no quiere conservarla, desactive esta casilla y luego haga clic en **Guardar**.  
   
  **Nombre del servidor registrado**  
  El nombre que desea que aparezca en Servidores registrados. Este nombre no tiene que coincidir con el cuadro **Nombre del servidor** .  

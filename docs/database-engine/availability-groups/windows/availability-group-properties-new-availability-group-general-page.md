@@ -1,8 +1,8 @@
 ---
-title: 'Propiedades del grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)'
+title: Página General (cuadro de diálogo Nuevo grupo de disponibilidad y Propiedades)
 titleSuffix: SQL Server
-description: Una descripción de las distintas propiedades de la página "General" del "Asistente para nuevo grupo de disponibilidad" en SQL Server Management Studio.
-ms.custom: seodec18
+description: Descripción de las distintas propiedades de la página "General" de los cuadros de diálogo "Nuevo grupo de disponibilidad" y "Propiedades del grupo de disponibilidad" en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,35 +13,35 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df0484ee5fdbd6dc5890c661cf1d0cf914fe3289
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934877"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900389"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propiedades del grupo de disponibilidad: Nuevo grupo de disponibilidad (página General)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Este tema se aplica a la pestaña **General** del cuadro de diálogo de **Nuevo grupo de disponibilidad** y el cuadro de diálogo de **Propiedades de grupo de disponibilidad** .  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
   
  **Para ver las propiedades del grupo de disponibilidad**  
   
 -   [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre del grupo de disponibilidad**  
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
 ## <a name="availability-databases"></a>Bases de datos de disponibilidad  
- **Database Name**  
+ **Nombre de la base de datos**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una base de datos al grupo de disponibilidad.  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar una base de datos seleccionada del grupo de disponibilidad.  
   
 ## <a name="availability-replicas"></a>Réplicas de disponibilidad  
@@ -105,10 +105,10 @@ ms.locfileid: "67934877"
  **Dirección URL del extremo**  
  La dirección URL del extremo. Para obtener más información sobre el formato de estas direcciones URL, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar una réplica secundaria del grupo de disponibilidad.  
   
 ## <a name="see-also"></a>Consulte también  

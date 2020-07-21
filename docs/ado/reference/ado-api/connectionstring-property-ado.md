@@ -1,5 +1,5 @@
 ---
-title: Propiedad ConnectionString (ADO) | Microsoft Docs
+title: ConnectionString (propiedad, ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,58 +13,58 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionString property [ADO]
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933497"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762636"
 ---
 # <a name="connectionstring-property-ado"></a>Propiedad ConnectionString (ADO)
-Indica la información utilizada para establecer una conexión a un origen de datos.  
+Indica la información utilizada para establecer una conexión con un origen de datos.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **cadena** valor.  
+ Establece o devuelve un valor de **cadena** .  
   
-## <a name="remarks"></a>Comentarios  
- Use la **ConnectionString** propiedad para especificar un origen de datos pasando una cadena de conexión detallada que contiene una serie de *argumento* *= valor* instrucciones separan por punto y coma.  
+## <a name="remarks"></a>Observaciones  
+ Use la propiedad **ConnectionString** para especificar un origen de datos pasando una cadena de conexión detallada que contenga una serie de instrucciones *argument* *= Value* separadas por punto y coma.  
   
- ADO admite cinco argumentos para el **ConnectionString** propiedad; en cualquier otro pase argumentos directamente al proveedor sin ningún procesamiento ADO. Los argumentos admitidos por ADO son los siguientes.  
+ ADO admite cinco argumentos para la propiedad **ConnectionString** ; cualquier otro argumento pasa directamente al proveedor sin ningún procesamiento por parte de ADO. Los argumentos que admite ADO son los siguientes.  
   
 |Argumento|Descripción|  
 |--------------|-----------------|  
-|*Provider=*|Especifica el nombre de un proveedor que se usará para la conexión.|  
-|*Nombre de archivo =*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos almacenados) que contiene información de conexión predefinida.|  
-|*Proveedor remoto =*|Especifica el nombre de un proveedor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
-|*Servidor remoto =*|Especifica el nombre de ruta de acceso del servidor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
-|*URL=*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o directorio.|  
+|*Proveedor =*|Especifica el nombre de un proveedor que se va a utilizar para la conexión.|  
+|*Nombre de archivo =*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos persistente) que contiene información de conexión preestablecida.|  
+|*Proveedor remoto =*|Especifica el nombre de un proveedor que se va a utilizar al abrir una conexión del lado cliente. (Solo el servicio de datos remoto).|  
+|*Servidor remoto =*|Especifica el nombre de la ruta de acceso del servidor que se va a utilizar al abrir una conexión del lado cliente. (Solo el servicio de datos remoto).|  
+|*Dirección URL =*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o un directorio.|  
   
- Después de establecer el **ConnectionString** propiedad y abra el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto, el proveedor puede alterar el contenido de la propiedad, por ejemplo, asignando los nombres de argumento definidos por ADO a sus equivalentes para el proveedor específico.  
+ Después de establecer la propiedad **ConnectionString** y abrir el objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) , el proveedor puede modificar el contenido de la propiedad, por ejemplo, asignando los nombres de argumento definidos por ADO a sus equivalentes para el proveedor específico.  
   
- El **ConnectionString** propiedad hereda automáticamente el valor utilizado para la *ConnectionString* argumento de la [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método, para que pueda sustituir actual  **ConnectionString** propiedad durante el **abierto** llamada al método.  
+ La propiedad **ConnectionString** hereda automáticamente el valor utilizado para el argumento *ConnectionString* del método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) , por lo que puede invalidar la propiedad **ConnectionString** actual durante la llamada al método **Open** .  
   
- Dado que el *nombre de archivo* ADO cargar el proveedor asociado hace que el argumento, no se puede pasar tanto el *proveedor* y *nombre de archivo* argumentos.  
+ Dado que el argumento de *nombre de archivo* hace que ADO cargue el proveedor asociado, no se pueden pasar los argumentos de *nombre de archivo* y *proveedor* .  
   
- El **ConnectionString** propiedad es de lectura/escritura cuando la conexión está cerrada y de solo lectura cuando se abre.  
+ La propiedad **ConnectionString** es de lectura y escritura cuando se cierra la conexión y de solo lectura cuando está abierta.  
   
- Duplicados de un argumento en el **ConnectionString** propiedad se omite. Se utiliza la última instancia de uno de los argumentos.  
+ Se omiten los duplicados de un argumento en la propiedad **ConnectionString** . Se usa la última instancia de cualquier argumento.  
   
 > [!NOTE]
->  **Uso del servicio de datos remoto** cuando se usa en un cliente **conexión** objeto, el **ConnectionString** propiedad puede incluir solo el *proveedor remoto* y *servidor remoto* parámetros.  
+>  **Uso del servicio de datos remotos** Cuando se usa en un objeto de **conexión** del lado cliente, la propiedad **ConnectionString** solo puede incluir los parámetros de *proveedor remoto* y *servidor remoto* .  
   
- En la tabla siguiente se enumera el proveedor de ADO predeterminado para cada sistema operativo de Windows:  
+ En la tabla siguiente se enumeran los proveedores de ADO predeterminados para cada sistema operativo Windows:  
   
-|Proveedor de ADO predeterminado|Sistema operativo de Windows|  
+|Proveedor de ADO predeterminado|Sistema operativo Windows|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> (Para mejorar la legibilidad del código fuente, especificar explícitamente el nombre del proveedor en la cadena de conexión.)|Windows 2000 (32 bits)<br /><br /> Windows XP (32 bits)<br /><br /> Windows 2003 Server (32 bits)<br /><br /> Windows Vista (32 bits)<br /><br /> Windows Vista Service Pack 1 o posterior (32 bits y 64 bits)<br /><br /> Versiones de Windows posteriores a Windows Vista (32 bits y 64 bits)|  
-|No tiene valor predeterminado.<br /><br /> Cuando una aplicación ADO se ejecuta en los siguientes sistemas operativos y no especifica explícitamente el proveedor, ADO devuelve el error siguiente: "ADODB. Conexión: no se especifica el proveedor y no hay ningún proveedor predeterminado designado "|Windows 2000 (64 bits)<br /><br /> Windows XP (64 bits)<br /><br /> Windows 2003 Server (64 bits)<br /><br /> Windows Vista (64 bits)|  
+|MSDASQL<br /><br /> (Para mejorar la legibilidad del código fuente, especifique explícitamente el nombre del proveedor en la cadena de conexión).|Windows 2000 (32 bits)<br /><br /> Windows XP (32 bits)<br /><br /> Windows 2003 Server (32 bits)<br /><br /> Windows Vista (32 bits)<br /><br /> Windows Vista Service Pack 1 o posterior (32 bits y 64 bits)<br /><br /> Versiones de Windows posteriores a Windows Vista (32 bits y 64 bits)|  
+|No hay valor predeterminado.<br /><br /> Cuando una aplicación ADO se ejecuta en los siguientes sistemas operativos y no especifica el proveedor explícitamente, ADO devuelve el siguiente error: "ADODB. Conexión: no se ha especificado el proveedor y no hay ningún proveedor predeterminado designado "|Windows 2000 (64 bits)<br /><br /> Windows XP (64 bits)<br /><br /> Windows 2003 Server (64 bits)<br /><br /> Windows Vista (64 bits)|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VC ++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

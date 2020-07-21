@@ -1,5 +1,5 @@
 ---
-title: Cambiar las conexiones de Control de código fuente | Microsoft Docs
+title: Cambiar las conexiones del control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 077a09cdca0c0aff777184f04467ca39592690aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62812794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936079"
 ---
 # <a name="change-source-control-connections"></a>Cambiar las conexiones del control de código fuente
   La primera vez que se agrega una solución al control de código fuente o se abre desde él, el proveedor de control de código fuente crea una asociación entre la carpeta raíz del directorio local de la solución y su correspondiente carpeta del servidor.  
@@ -31,11 +30,11 @@ ms.locfileid: "62812794"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Para abrir la interfaz de usuario del control de código fuente desde el entorno de Visual Studio  
   
-1.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **iniciar Microsoft Visual SourceSafe**.  
+1.  En el menú **archivo** , seleccione **control de código fuente**y, a continuación, haga clic en **iniciar Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>Vea también  
- [Fundamentos del Control de código fuente](../../2014/database-engine/source-control-basics.md)   
- [Establecer opciones de Control de código fuente](../../2014/database-engine/set-source-control-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Aspectos básicos del control de código fuente](../../2014/database-engine/source-control-basics.md)   
+ [Establecer opciones de control de código fuente](../../2014/database-engine/set-source-control-options.md)   
  [Excluir archivos desde el control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones FTP | Microsoft Docs
+title: Editor del administrador de conexiones FTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5aebb659db6eabd79c6e707b8b47abf21909a88
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058489"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425342"
 ---
 # <a name="ftp-connection-manager-editor"></a>Editor del administrador de conexiones FTP
   Utilice el cuadro de diálogo **Editor del administrador de conexiones FTP** para especificar propiedades de conexión con un servidor FTP.  
@@ -33,17 +32,17 @@ ms.locfileid: "66058489"
  **Nombre del servidor**  
  Proporcione el nombre del servidor FTP.  
   
- **Puerto del servidor**  
+ **Puerto de servidor**  
  Especifique el número de puerto del servidor FTP que va a utilizar en la conexión. El valor predeterminado de esta propiedad es **21**.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Indique un nombre de usuario para tener acceso al servidor FTP. El valor predeterminado de esta propiedad es **anonymous**.  
   
  **Contraseña**  
  Indique la contraseña para tener acceso al servidor FTP.  
   
  **Tiempo de espera (en segundos)**  
- Especifique el número de segundos que transcurrirán antes de que se exceda el tiempo de espera de la consulta. Si el valor es **0** , indica un período de tiempo infinito. El valor predeterminado de esta propiedad es **60**.  
+ Especifique el número de segundos que tarda la tarea en agotarse el tiempo de espera. Un valor de **0** indica una cantidad de tiempo infinita. El valor predeterminado de esta propiedad es **60**.  
   
  **Usar modo pasivo**  
  Especifique si inicia la conexión el servidor o el cliente. El servidor inicia la conexión en modo activo y el cliente en modo pasivo. El valor predeterminado de esta propiedad es **active mode**.  
@@ -54,10 +53,10 @@ ms.locfileid: "66058489"
  **Tamaño del fragmento (en KB)**  
  Indique un tamaño de fragmento en kilobytes para transmitir datos.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

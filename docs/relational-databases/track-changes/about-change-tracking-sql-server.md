@@ -1,5 +1,6 @@
 ---
-title: Acerca del seguimiento de cambios (SQL Server) | Microsoft Docs
+title: Seguimiento de cambios
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,15 +17,15 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9d361d6746a9900c0db3e3f955774b1d79fad20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0393313d6c57de73be26f55f93814460dcfd2027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768332"
 ---
 # <a name="about-change-tracking-sql-server"></a>Acerca del seguimiento de cambios (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   El seguimiento de cambios es una solución ligera que proporciona un mecanismo de seguimiento de cambios eficaz para las aplicaciones. Normalmente, para permitir que las aplicaciones consulten los cambios de los datos en una base de datos y tener acceso a la información relacionada con los mismos, los programadores de aplicaciones tenían que implementar mecanismos personalizados de seguimiento de cambios. Crear estos mecanismos normalmente implica mucho trabajo y, frecuentemente, conlleva el uso de una combinación de desencadenadores, columnas **timestamp** , tablas nuevas para almacenar información de seguimiento, y procesos de limpieza personalizados.  
   

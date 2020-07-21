@@ -1,5 +1,5 @@
 ---
-title: No se pudo cargar el archivo o ensamblado &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o uno de sus dependencias. El sistema no encuentra el archivo especificado. | Microsoft Docs
+title: No se pudo cargar el archivo o ensamblado &#39;Microsoft. Data. Services, version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una de sus dependencias. El sistema no encuentra el archivo especificado. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bcfdde8b3536bbbf8b2429d51a9ee9aecf0d437
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547507"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>No se pudo cargar el archivo o ensamblado &#39;Microsoft.Data.Services, Version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o uno de sus dependencias. El sistema no encuentra el archivo especificado.
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>No se pudo cargar el archivo o ensamblado &#39;Microsoft. Data. Services, version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una de sus dependencias. El sistema no encuentra el archivo especificado.
   En entornos de SharePoint 2010 que tienen PowerPivot para SharePoint, este error se producirá si intenta realizar la exportación de una fuente de distribución de datos y el sistema no tiene la versión necesaria de Microsoft ADO.NET Data Services.  
   
 ## <a name="details"></a>Detalles  
@@ -36,13 +35,13 @@ ms.locfileid: "66071628"
   
 ## <a name="user-action"></a>Acción del usuario  
   
-1.  Vaya a la documentación de los requisitos de hardware y software para SharePoint 2010, [requisitos de Hardware y Software (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  Vaya a la documentación sobre los requisitos de hardware y software para SharePoint 2010, [determinar los requisitos de hardware y software (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) ( https://go.microsoft.com/fwlink/?LinkId=169734) .  
   
 2.  En **Instalar requisitos previos de software**, busque el vínculo de ADO.NET Data Services 3.5 correspondiente al sistema operativo que está usando.  
   
 3.  Haga clic en el vínculo y ejecute el programa de instalación que instala el servicio.  
   
-## <a name="see-also"></a>Vea también  
- [Implementar soluciones de PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementar las soluciones de PowerPivot en SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

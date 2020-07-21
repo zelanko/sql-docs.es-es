@@ -18,17 +18,17 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 521c012ec8e05cf288aab78021b83c45c2d7bd62
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099032"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895727"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funciones de texto e imagen - TEXTPTR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el valor de puntero de texto que corresponde a una columna **text**, **ntext** o **image** en formato **varbinary**. El valor del puntero de texto devuelto se puede utilizar en las instrucciones READTEXT, WRITETEXT y UPDATE.  
   
@@ -48,10 +48,10 @@ TEXTPTR ( column )
  *column*  
  Se utilizará la columna **text**, **ntext** o **image**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En las tablas con texto consecutivo, TEXTPTR devuelve un controlador para el texto que se va a procesar. Es posible obtener un puntero de texto válido aunque el valor del texto sea NULL.  
   
  La función TEXTPTR no se puede utilizar en columnas de vistas. Solo se puede utilizar en columnas de tablas. Para utilizar la función TEXTPTR en una columna de una vista, debe establecerse el nivel de compatibilidad en 80 mediante el [nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Si la tabla no dispone de texto consecutivo y la instrucción UPDATETEXT no ha inicializado una columna **text**, **ntext** o **image**, TEXTPTR devuelve un puntero NULL.  
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  Para ejecutar estos ejemplos, es necesario instalar la base de datos **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Usar TEXTPTR  
- En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna `logo` de **image** asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
+ En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna **de**image`logo` asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
   
 ```  
 USE pubs;  

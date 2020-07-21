@@ -20,18 +20,18 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - dateparts [SQL Server], day
 ms.assetid: 2f4410ea-fd3e-4d69-ac4b-3b0091a084bc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f1d58e89e6fd7cdc4d8af85d3d8745e1bc15fa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a58ac7e29f6a7c41fd0b8e617a04b9a52368fd15
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119062"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011373"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Esta función devuelve un entero que representa el día (del mes) del argumento *date* especificado.
   
@@ -58,7 +58,7 @@ Una expresión que se resuelve en uno de los tipos de datos siguientes:
 
 Para *date*, `DAY` aceptará una expresión de columna, una expresión, un literal de cadena o una variable definida por el usuario.
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
 **int**
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -79,7 +79,7 @@ Esta instrucción devuelve `1900, 1, 1`. El argumento *date* tiene un valor num�
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

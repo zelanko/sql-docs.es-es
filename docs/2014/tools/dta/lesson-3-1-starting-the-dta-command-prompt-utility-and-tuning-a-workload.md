@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b051320d2f797fa55c1d84192a1b6246f437b1ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110155"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011568"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo
-  Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md).  
+   Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Usa la carga de trabajo, script. SQL, que creó para la Asistente para la optimización de motor de base de datos práctica de la interfaz gráfica de usuario (GUI) para [optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md).  
   
  En este tutorial se usa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](http://sqlserversamples.codeplex.com).  
   
@@ -62,9 +61,9 @@ ms.locfileid: "66110155"
   
 -   [dta (utilidad)](dta-utility.md) para obtener material de referencia sobre la utilidad de símbolo del sistema y el archivo XML opcional que puede usar para controlar el funcionamiento de la utilidad.  
   
- Para volver al principio del tutorial, vea [Tutorial: Asistente para la optimización de motor de base de datos](tutorial-database-engine-tuning-advisor.md).  
+ Para volver al principio del tutorial, consulte [Tutorial: Asistente para la optimización de motor de base de datos](tutorial-database-engine-tuning-advisor.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Referencia de objeto del sistema de creación de reflejo de la base de datos | Microsoft Docs
+description: 'Obtenga información sobre los objetos del sistema de creación de reflejo de la base de datos: vistas de catálogo del sistema, vista de administración dinámica del sistema y tablas del sistema.'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e61f8d9df3cb6dcaf545819d630c70bc18709d15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c37c75f9824f85705f92d1fabb6519303a76fafb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754710"
 ---
 # <a name="database-mirroring-system-object-reference"></a>Referencia de objeto del sistema de creación de reflejo de la base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="system-catalog-views"></a>Vistas de catálogo del sistema
 

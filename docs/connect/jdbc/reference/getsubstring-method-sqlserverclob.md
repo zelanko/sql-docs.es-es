@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f5409040a5f7bb8cf7c03923da8ff976e4ab08ce
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979334"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926180"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>Método getSubString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,8 +50,8 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getSubString se especifica mediante el método getSubString de la interfaz java. SQL. CLOB.  
+## <a name="remarks"></a>Observaciones  
+ El método getSubString especifica este método getSubString en la interfaz java.sql.Clob.  
   
  Si se intenta obtener un número de caracteres igual a cero a partir de un CLOB que sea NULL o de longitud cero, se obtiene una cadena vacía. Si se intentar obtener una longitud de caracteres cualquiera en alguna posición que no sea la posición 1 en un CLOB de longitud cero, se producirá una excepción relativa a la posición.  
   

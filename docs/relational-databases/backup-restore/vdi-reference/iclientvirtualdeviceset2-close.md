@@ -9,16 +9,16 @@ ms.technology: backup-restore
 ms.topic: reference
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 785513f99dd669850110aa7b62a0e9f4fd6efd3d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70847386"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896925"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 La función **Close** cierra el conjunto de dispositivos virtuales creado por IClientVirtualDeviceSet2::Create. Como resultado, se liberan todos los recursos asociados al conjunto de dispositivos virtuales.
 
@@ -36,7 +36,7 @@ HRESULT IClientVirtualDeviceSet2::Close ();
 | VD_E_PROTOCOL | No se realizó ninguna acción porque el conjunto de dispositivos virtuales no estaba abierto. |
 | VD_E_OPEN | Los dispositivos aún estaban abiertos. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La invocación de Close es una declaración por parte del cliente de que se deben liberar todos los recursos usados por el conjunto de dispositivos virtuales. El cliente debe asegurarse de que toda actividad que implique búferes de datos y dispositivos virtuales haya finalizado antes de invocar Close. Todas las interfaces de dispositivo virtual devueltas por OpenDevice se invalidan con Close.
 

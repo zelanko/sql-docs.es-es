@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e9d945123fae29e8cb629348b41e811f25e0e71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68210734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068765"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar alertas para eventos del Agente de replicación
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionan un modo de supervisar eventos, tales como eventos de Agente de replicación, mediante alertas. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionan un modo de supervisar eventos, como eventos del agente de replicación, mediante alertas. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
   
  Las siguientes alertas se instalan cuando un equipo se configura como distribuidor:  
   
@@ -38,14 +37,14 @@ ms.locfileid: "68210734"
 |14150|**Replicación: éxito de agente**|Un agente termina correctamente.|Sí|  
 |14151|**Replicación: error de agente**|Un agente termina con un error.|Sí|  
 |14152|**Replicación: reintento de agente**|El agente termina después de volver a intentar sin éxito una operación (el agente encuentra un error, por ejemplo que el servidor no está disponible, interbloqueo, error en la conexión o error de tiempo de espera).|Sí|  
-|14157|**Replicación: suscripción expirada quitada**|Se quitó la suscripción expirada.|Sin|  
-|20572|**Replicación: suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
+|14157|**Replicación: suscripción expirada quitada**|Se quitó la suscripción expirada.|No|  
+|20572|**Replicación: Suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
 |20574|**Replicación: el suscriptor no ha superado la validación de datos**|Un agente de distribución o de mezcla no puede validar los datos.|Sí|  
-|20575|**Replicación: el suscriptor ha superado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
+|20575|**Replicación: El suscriptor ha pasado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
 |20578|**Replicación: cierre personalizado del agente**|||  
 |22815|**Alerta de detección de conflictos punto a punto**|El Agente de distribución detecta un conflicto cuando intenta aplicar un cambio en un nodo punto a punto.|Sí|  
   
- Además de estas alertas, el Monitor de replicación proporciona una serie de advertencias y alertas relacionadas con el estado y el rendimiento. Para obtener más información, consulte [establecer umbrales y advertencias en el Monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) infraestructura de alertas. Para obtener más información, consulte [Create a User-Defined Event](../../../ssms/agent/create-a-user-defined-event.md) (Crear un evento definido por el usuario).  
+ Además de estas alertas, el Monitor de replicación proporciona una serie de advertencias y alertas relacionadas con el estado y el rendimiento. Para obtener más información, vea [establecer umbrales y advertencias en la infraestructura de alertas del monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) . Para obtener más información, consulte [Create a User-Defined Event](../../../ssms/agent/create-a-user-defined-event.md) (Crear un evento definido por el usuario).  
   
  **Para configurar las alertas de replicación predefinidas**  
   
@@ -60,7 +59,7 @@ ms.locfileid: "68210734"
 ### <a name="framework-for-automating-responses"></a>Marco de trabajo para la automatización de respuestas  
  Normalmente, cuando se produce una alerta, la única información de que dispone para comprender qué la ha provocado y la acción más apropiada que puede llevar a cabo está contenida en el propio mensaje de la alerta. El análisis de esta información puede estar sujeta a errores y lleva mucho tiempo. La replicación facilita la automatización de respuestas al proporcionar información adicional sobre la alerta en la tabla del sistema **sysreplicationalerts** ; la información que se proporciona ya está analizada de una forma que los programas personalizados pueden utilizar fácilmente.  
   
- Por ejemplo, si se produce un error al validar los datos de la tabla **Sales.SalesOrderHeader** en el suscriptor A, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede desencadenar el mensaje 20574, que le notifica dicho error. El mensaje que reciba será: "Suscriptor 'A', la suscripción al artículo 'SalesOrderHeader' de la publicación 'MyPublication' error de validación de datos."  
+ Por ejemplo, si se produce un error al validar los datos de la tabla **Sales.SalesOrderHeader** en el suscriptor A, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede desencadenar el mensaje 20574, que le notifica dicho error. El mensaje que reciba será: "La suscripción del suscriptor 'A' al artículo 'SalesOrderHeader' de la publicación 'MyPublication', no pasó la validación de datos."  
   
  Si crea un trabajo de respuesta basado en el mensaje, debe analizar manualmente el nombre del suscriptor, el nombre del artículo, el nombre de la publicación y el error del mensaje. Sin embargo, como el Agente de distribución y el Agente de mezcla escriben la misma información en **sysreplicationalerts** (junto con detalles como el tipo de agente, la hora de la alerta, la base de datos de publicaciones, la base de datos del suscriptor y el tipo de publicación), el trabajo de respuesta puede consultar directamente la información relevante en dicha tabla. Aunque la fila exacta no puede asociarse con una instancia específica de la alerta, la tabla tiene una columna **status** que se puede utilizar para realizar un seguimiento de las entradas atendidas. Las entradas de esta tabla se mantienen durante el período de retención del historial.  
   
@@ -86,9 +85,9 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Administración del Agente de replicación](replication-agent-administration.md)   
- [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
- [Monitoring &#40;Replication&#41;](../monitoring-replication.md) (Monitorización [replicación])  
+## <a name="see-also"></a>Consulte también  
+ [Administración del agente de replicación](replication-agent-administration.md)   
+ [Prácticas recomendadas para la administración de replicación](../administration/best-practices-for-replication-administration.md)   
+ [Supervisar (replicación)](../monitoring-replication.md)  
   
   

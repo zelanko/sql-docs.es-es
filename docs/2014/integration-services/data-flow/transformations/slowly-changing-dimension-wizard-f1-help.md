@@ -9,22 +9,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d377fe18423ba24252afcfa1634713798f815dd3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900028"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430162"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Asistente para dimensiones variables (Ayuda F1)
   Utilice el **Asistente para dimensiones variables** para configurar la carga de datos en diferentes tipos de dimensiones de variación lenta. En esta sección se ofrece la Ayuda F1 de las páginas del **Asistente para dimensiones variables**. En la tabla siguiente se describen los temas de esta sección.  
   
  Para obtener más información acerca de este asistente, vea [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md).  
   
- [Asistente para dimensiones variables (página de bienvenida)](welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [Asistente para dimensiones de variación lenta (página de bienvenida)](welcome-to-the-slowly-changing-dimension-wizard.md)  
  Presenta el Asistente para dimensiones variables.  
   
  [Seleccionar una tabla de dimensiones y claves &#40;Asistente para dimensiones de variación lenta&#41;](select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -42,11 +41,11 @@ ms.locfileid: "62900028"
  [Miembros de dimensión deducidos &#40;Asistente para dimensiones de variación lenta&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  Especifique opciones para miembros de dimensión deducidos.  
   
- [Finalizar el Asistente para dimensiones variables](finish-the-slowly-changing-dimension-wizard.md)  
+ [Finalización del Asistente para dimensiones de variación lenta](finish-the-slowly-changing-dimension-wizard.md)  
  Muestra las opciones de configuración seleccionadas por el usuario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)   
- [Configurar salidas mediante el Asistente para dimensión de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configuración de salidas con el Asistente para dimensiones de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

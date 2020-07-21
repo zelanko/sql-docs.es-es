@@ -10,29 +10,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], types
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923855"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759051"
 ---
 # <a name="types-of-cursors-ado"></a>Tipos de cursores (ADO)
-Como norma general, la aplicación debe usar el cursor más sencillo que proporciona acceso a los datos necesarios. Cada característica de cursor adicional más allá de los aspectos básicos (solo avance, de solo lectura, estáticos, desplazamiento, sin almacenamiento en búfer) tiene un precio, en la memoria del cliente, la carga de red o el rendimiento. En muchos casos, las opciones de cursor predeterminado generan un cursor más complejo que la aplicación realmente necesita.  
+Como norma general, la aplicación debe utilizar el cursor más sencillo que proporciona el acceso a datos requerido. Cada característica de cursor adicional más allá de los aspectos básicos (solo avance, solo lectura, estático, desplazable, sin almacenamiento en búfer) tiene un precio en la memoria de cliente, carga de red o rendimiento. En muchos casos, las opciones de cursor predeterminadas generan un cursor más complejo de lo que realmente necesita la aplicación.  
   
- La elección del tipo de cursor depende de cómo la aplicación usa el conjunto de resultados y también en varias consideraciones de diseño, incluido el tamaño del conjunto de resultados, el porcentaje de los datos que se utilizan probablemente, la sensibilidad a los cambios de datos y rendimiento de la aplicación requisitos.  
+ La elección del tipo de cursor depende del modo en que la aplicación utiliza el conjunto de resultados y también en varias consideraciones de diseño, incluido el tamaño del conjunto de resultados, el porcentaje de los datos que se pueden usar, la sensibilidad a los cambios de datos y los requisitos de rendimiento de la aplicación.  
   
- En lo más básico, la elección del cursor depende de si tiene que cambiar o simplemente ver los datos:  
+ En su nivel más básico, la elección del cursor depende de si necesita cambiar o simplemente ver los datos:  
   
--   Si solo necesita desplazarse por un conjunto de resultados, pero no los datos modificados, utilice un [progresivo](../../../ado/guide/data/forward-only-cursors.md) o [estático](../../../ado/guide/data/static-cursors.md) cursor.  
+-   Si solo necesita desplazarse por un conjunto de resultados, pero no los datos modificados, utilice un cursor [de solo avance](../../../ado/guide/data/forward-only-cursors.md) o [estático](../../../ado/guide/data/static-cursors.md) .  
   
--   Si tiene un conjunto de resultados grande y es necesario seleccionar unas pocas filas, use un [keyset](../../../ado/guide/data/keyset-cursors.md) cursor.  
+-   Si tiene un conjunto de resultados grande y necesita seleccionar solo unas pocas filas, use un cursor de [conjunto de claves](../../../ado/guide/data/keyset-cursors.md) .  
   
--   Si desea sincronizar un conjunto de resultados con reciente agrega, cambia y elimina todos los usuarios simultáneos, utilice un [dinámica](../../../ado/guide/data/dynamic-cursors.md) cursor.  
+-   Si desea sincronizar un conjunto de resultados con adiciones, cambios y eliminaciones recientes de todos los usuarios simultáneos, utilice un cursor [dinámico](../../../ado/guide/data/dynamic-cursors.md) .  
   
- Aunque cada tipo de cursor parece distinto, tenga en cuenta que estos tipos de cursor no son tantas diferentes variedades como simple resultado de las características y opciones superpuestas.  
+ Aunque parece que cada tipo de cursor es distinto, tenga en cuenta que estos tipos de cursor no son tantas clases, como el resultado de la superposición de características y opciones.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -44,8 +44,8 @@ Como norma general, la aplicación debe usar el cursor más sencillo que proporc
   
 -   [Cursores dinámicos](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cursores de solo avance](../../../ado/guide/data/forward-only-cursors.md)   
  [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
- [Cursores KEYSET](../../../ado/guide/data/keyset-cursors.md)   
+ [Cursores de conjunto de claves](../../../ado/guide/data/keyset-cursors.md)   
  [Cursores dinámicos](../../../ado/guide/data/dynamic-cursors.md)

@@ -1,5 +1,5 @@
 ---
-title: Tareas del Visor de modelos y procedimientos de minería de datos | Microsoft Docs
+title: Tareas y procedimientos del visor de modelos de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04b6eb40999ca009184d438e0c0dc514d2c3f009
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083479"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521210"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tareas y procedimientos del Visor de modelos de minería de datos
   El Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que pueden usarse para explorar modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
@@ -45,7 +44,7 @@ ms.locfileid: "66083479"
   
 -   [Cambiar los colores usados en los visores de minería de datos](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Propiedades de SQL Server (pestaña Avanzadas) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de SQL Server (pestaña Avanzadas)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b64a1c1b9d40061d5319d1e629d0f2215df72e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023969"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306836"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Propiedades de SQL Server (pestaña Avanzadas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68023969"
  Muestra la ubicación donde se colocan los volcados de memoria en caso de producirse un error.  
   
  **Informes de errores**  
- Cuando se establece en **Yes**, el programa Dr. Watson envía información a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o a su servidor de errores si se produce un error grave. Para obtener más información acerca de Informes de errores, busque el tema sobre la configuración de informes de errores y uso en los Libros en pantalla. Para cambiar este valor, en el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Explorador de objetos, haga clic con el botón derecho en el servidor, haga clic en **Propiedades** y luego haga clic en la página **Configuración adicional del servidor**. Las opciones se presentan en el **área de información**.  
+ Cuando se establece en **Sí**, el programa Dr. Watson envía información a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o a su servidor de errores si se produce un error grave. Para obtener más información acerca de Informes de errores, busque el tema sobre la configuración de informes de errores y uso en los Libros en pantalla. Para cambiar este valor, en el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Explorador de objetos, haga clic con el botón derecho en el servidor, haga clic en **Propiedades**y luego haga clic en la página **Configuración adicional del servidor** . Las opciones se presentan en el **área de información**.  
   
  **Versión del archivo**  
  Muestra la versión del archivo ejecutable de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

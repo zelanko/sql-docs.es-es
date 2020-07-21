@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5148411792f1ea881bba59e599252284575bbdf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754380"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933976"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>Establecer una base de datos reflejada cifrada
 
@@ -33,7 +32,7 @@ Para habilitar el descifrado automático de la clave maestra de base de datos de
 
 <!-- Note: We cannot append '?view=sql-server-2016' to these, even tho in theory we might want to. -->
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 

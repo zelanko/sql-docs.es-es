@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098140"
 ---
-# <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Método ReserveURL (MSReportServer_ConfigurationSetting de WMI)
+# <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>Método ReserveURL (MSReportServer_ConfigurationSetting de WMI)
   Agrega una reserva URL para una aplicación determinada.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -54,7 +54,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente; un código de error indica que la llamada no se realizó correctamente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  *UrlString* no incluye el nombre del directorio virtual. El método [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) se proporciona para ese fin.  
   
  Las reservas de dirección URL se crean para la cuenta de servicio de Windows actual. El cambio de la cuenta de servicio de Windows requiere la actualización manual de todas las reservas de dirección URL.  
@@ -64,7 +64,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

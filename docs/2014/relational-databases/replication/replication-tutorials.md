@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4d70abd6c58b3eb0fa4a53e2806ab1b3fbe9245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064621"
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
   La replicación incluye tutoriales que se pueden utilizar para aprender a configurar y a ejecutar topologías de replicación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -39,7 +38,7 @@ ms.locfileid: "62960804"
  [Replicar datos con clientes móviles](tutorial-replicating-data-with-mobile-clients.md)  
  Aprenda cómo utilizar la replicación de mezcla para intercambiar datos entre un servidor y uno o más clientes que solo se conectan en determinadas ocasiones.  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
+## <a name="see-also"></a>Consulte también  
+ [Seguridad de Replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

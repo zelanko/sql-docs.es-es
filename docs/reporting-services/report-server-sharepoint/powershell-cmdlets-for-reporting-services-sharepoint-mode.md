@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68892405"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
@@ -39,7 +39,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   
 -   Install-SPRSService : El término 'Install-SPRSService' no se reconoce como  
-    nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe la ortografía del nombre o si una ruta de acceso se incluyó, compruebe que la ruta de acceso es correcta e inténtelo de nuevo.  
+    nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.  
   
  Se está produciendo uno de los problemas siguientes:  
   
@@ -109,7 +109,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 |New-SPRSExtension|Registra una nueva extensión con una aplicación de servicio de Reporting Services.|  
 |Set-SPRSExtension|Establece las propiedades de una extensión de Reporting Services existente.|  
 |Remove-SPRSExtension|Quita una extensión de una aplicación de servicio de Reporting Services.|  
-|Get-SPRSExtension|Obtiene una o más extensiones de Reporting Services para un aplicación de servicio de Reporting Services.<br /><br /> Los valores válidos son:<br /><br /> <br /><br /> Entrega<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> Seguridad<br /><br /> Autenticación<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Diseñador<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Obtiene una o más extensiones de Reporting Services para un aplicación de servicio de Reporting Services.<br /><br /> Los valores válidos son:<br /><br /> <br /><br /> Entrega<br /><br /> DeliveryUI<br /><br /> Representación<br /><br /> data<br /><br /> Seguridad<br /><br /> Authentication<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> Diseñador<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|Obtiene los sitios de SharePoint basándose en si está habilitada la característica "ReportingService". De forma predeterminada, se devuelven los sitios que habilitan la característica "ReportingService".|  
   
 ## <a name="basic-samples"></a>Ejemplos básicos
@@ -259,7 +259,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 }  
 ```  
   
- **Salida de ejemplo:**  
+ **Ejemplo:**  
   
 -   `Name           ExtensionType`  
   

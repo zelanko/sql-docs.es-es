@@ -1,6 +1,7 @@
 ---
-title: Opción Status (herramienta de administración de Distributed Replay) | Microsoft Docs
-ms.date: 03/14/2017
+title: Opción de estado en la herramienta de administración
+titleSuffix: SQL Server Distributed Replay
+description: En este artículo se describe la opción de la línea de comandos de estado y la sintaxis de la herramienta de administración Distributed Replay de SQL Server, que muestra el estado actual.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: tools-other
@@ -8,16 +9,20 @@ ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6370d68b3575e80c4094aa2df82aa4bf6c0b4dd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 658b32d8c66d07505cfc8a95e143decfa26f8013
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949848"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152078"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opción Status (herramienta de administración de Distributed Replay)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La herramienta de administración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, **DReplay.exe**, es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describe la opción del símbolo del sistema **status** y la sintaxis correspondiente.  
+
+La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, **DReplay.exe**, es una herramienta de línea de comandos que se puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describe la opción del símbolo del sistema **status** y la sintaxis correspondiente.  
   
  La opción **status** consulta el controlador y muestra el estado actual.  
   

@@ -1,5 +1,5 @@
 ---
-title: Optimizar el ejemplo de la propiedad (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad Optimize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931837"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762078"
 ---
 # <a name="optimize-property-example-vc"></a>Ejemplo de la propiedad Optimize (VC ++)
-Este ejemplo se muestra el [campo](../../../ado/reference/ado-api/field-object.md) objeto dinámico **optimizar** propiedad. El **zip** campo de la **autores** de tabla en la **Pubs** base de datos no está indizada. Establecer el [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad **True** en el **zip** campo autoriza a ADO para generar un índice que mejora el rendimiento de la [buscar](../../../ado/reference/ado-api/find-method-ado.md)método.  
+En este ejemplo se muestra la propiedad **optimizar** dinámica del objeto de [campo](../../../ado/reference/ado-api/field-object.md) . El campo **zip** de la tabla **authors** en la base de datos **pubs** no está indizado. Al establecer la propiedad [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) en **true** en el campo **zip** , se autoriza a ADO a generar un índice que mejora el rendimiento del método [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -132,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto CT de 3 Silver. Walnut Creek CA**   
-## <a name="see-also"></a>Vea también  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
+ **Akiko Yokomoto 3 Silver CT. nogal Creek CA**   
+## <a name="see-also"></a>Consulte también  
+ [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
  [Propiedad dinámica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

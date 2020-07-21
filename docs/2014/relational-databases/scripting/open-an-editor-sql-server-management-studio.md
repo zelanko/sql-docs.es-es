@@ -1,21 +1,20 @@
 ---
-title: Apertura de un editor (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Abrir un editor
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 30ac906882fd80fcab00977534f83a2438fb7ca3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009757"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
   En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66090301"
 ### <a name="permissions"></a>Permisos  
  Las operaciones que realiza en un editor de código están sujetas a los permisos concedidos a la cuenta de autenticación que usó para iniciar sesión. Por ejemplo, si abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la autenticación de Windows, no puede ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que hacen referencia a los objetos para los que no tiene acceso la cuenta de inicio de sesión de Windows.  
   
-## <a name="how-to-open-editors"></a>Procedimientos: Abrir editores  
+## <a name="how-to-open-editors"></a>Cómo: abrir editores  
  En esta sección se explica cómo abrir varios editores en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  

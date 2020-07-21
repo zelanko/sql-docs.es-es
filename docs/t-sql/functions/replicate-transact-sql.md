@@ -17,18 +17,18 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27078aceb7bbeb4918c6884bd8a1e984e9384ce5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db82218c76a9459c992b3cb8a5177cd06e319053
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944488"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003731"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Repite un valor de cadena un número especificado de veces.  
   
@@ -36,21 +36,24 @@ ms.locfileid: "67944488"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-REPLICATE ( string_expression ,integer_expression )   
+```syntaxsql
+REPLICATE ( string_expression , integer_expression )   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *string_expression*  
- Es una expresión de un tipo de datos binario o de cadena de caracteres. *string_expression* pueden ser datos binarios o de caracteres.  
+ Es una expresión de un tipo de datos binario o de cadena de caracteres.  
   
 > [!NOTE]  
->  Si *string_expression* no es de tipo **varchar(max)** o **nvarchar(max)** , REPLICATE trunca el valor devuelto en 8000 bytes. Para devolver valores mayores de 8000 bytes, *string_expression* debe convertirse explícitamente al tipo de datos de valores grandes apropiado.  
+> Si *string_expression* es de tipo **binary**, REPLICATE realizará una conversión implícita a **varchar** y, por tanto, no conservará la entrada binaria.  
+
+> [!NOTE]  
+> Si la entrada *string_expression* es de tipo **varchar(max)** o **nvarchar(max)** , REPLICATE trunca el valor devuelto en 8000 bytes. Para devolver valores mayores de 8000 bytes, *string_expression* debe convertirse explícitamente al tipo de datos de valores grandes apropiado.  
   
  *integer_expression*  
  Es una expresión de cualquier tipo entero, incluido **bigint**. Si *integer_expression* es negativo, se devuelve NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el mismo tipo que *string_expression*.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -117,7 +120,7 @@ Varchar Column        Char Column
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-replicate"></a>C. Usar REPLICATE  
  En el siguiente ejemplo se replica un carácter `0` cuatro veces delante de un valor `ItemCode`.  

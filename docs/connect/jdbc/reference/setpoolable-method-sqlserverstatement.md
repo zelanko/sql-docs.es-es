@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8651644bbf67f70642385b8c9b4bd2925dfce5a6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67973199"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920755"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>Método setPoolable (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,16 +37,16 @@ public void setPoolable(boolean poolable) throws SQLException
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor especificado en el parámetro *poolable* es una sugerencia de implementación para el grupo de instrucciones que indica si la aplicación quiere que se agrupe la instrucción. El administrador del grupo de instrucciones decide si va a utilizar la sugerencia.  
   
  El valor del grupo de una instrucción se aplica a las memorias caché de instrucciones internas que implementa el controlador y a las memorias caché de instrucciones externas que implementan los servidores y otras aplicaciones.  
   
- De forma predeterminada, un objeto SQLServerStatement no se pudo agrupar cuando se crea. Los objetos SQLServerPreparedStatement y SQLServerCallableStatement se pueden agrupar cuando se crean.  
+ De forma predeterminada, un objeto SQLServerStatement no se puede agrupar cuando se crea. Los objetos SQLServerPreparedStatement y SQLServerCallableStatement se pueden agrupar cuando se crean.  
   
  Se produce una excepción [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) si se llama a este método en una instrucción cerrada.  
   
- [isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md) devuelve un valor que indica si el objeto es agrupable.  
+ [isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md) devuelve un valor que indica si el objeto se puede agrupar.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

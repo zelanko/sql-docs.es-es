@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28516f0ce220f0a75de9aad2c6b9dadc2f074c8c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752272"
 ---
-# <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el GUID de una clave simétrica de la base de datos.  
   
@@ -44,10 +44,10 @@ Key_GUID( 'Key_Name' )
  **'** *Key_Name* **'**  
  El nombre de una clave simétrica en la base de datos.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se ha especificado un valor de identidad al crear la clave, su GUID es un hash MD5 de ese valor de identidad. Si no se ha especificado ningún valor de identidad, el GUID es generado por el servidor.  
   
  Si la clave es temporal, su nombre debe comenzar con un signo de número (#).  

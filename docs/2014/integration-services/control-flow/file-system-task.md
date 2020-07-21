@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486fb3fd6edcd50ba90a5ce76fb34119f4c1e681
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831750"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433052"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
   La tarea Sistema de archivos realiza operaciones en archivos y directorios del sistema de archivos. Por ejemplo, un paquete puede utilizar la tarea Sistema de archivos para crear, mover o eliminar directorios y archivos. También puede utilizar la tarea Sistema de archivos para establecer atributos en archivos y directorios. Por ejemplo, la tarea Sistema de archivos puede convertir los archivos en archivos ocultos o de solo lectura.  
@@ -35,14 +34,14 @@ ms.locfileid: "62831750"
 |---------------|-----------------|  
 |Copiar directorio|Copia una carpeta de una ubicación a otra.|  
 |Copiar archivo|Copia un archivo de una ubicación a otra.|  
-|Crear directorio|Crea una carpeta en una ubicación especificada.|  
+|Creación del directorio|Crea una carpeta en una ubicación especificada.|  
 |Eliminar directorio|Elimina una carpeta de una ubicación especificada.|  
 |Eliminar contenido de directorio|Elimina todos los archivos y carpetas de una carpeta.|  
 |Eliminar archivo|Elimina un archivo de una ubicación especificada.|  
 |Mover directorio|Mueve una carpeta de una ubicación a otra.|  
 |Mover archivo|Mueve un archivo de una ubicación a otra.|  
 |Cambiar nombre de archivo|Cambia el nombre de un archivo de una ubicación especificada.|  
-|Establecer atributos|Establece atributos de archivos y carpetas. Estos atributos son Archivar, Oculto, Normal, Solo lectura y Sistema. El atributo Normal indica que no hay atributos establecidos; no se puede combinar con otros atributos. Todos los demás atributos se pueden usar en combinación.|  
+|Definir atributos|Establece atributos de archivos y carpetas. Estos atributos son Archivar, Oculto, Normal, Solo lectura y Sistema. El atributo Normal indica que no hay atributos establecidos; no se puede combinar con otros atributos. Todos los demás atributos se pueden usar en combinación.|  
   
  La tarea Sistema de archivos trabaja con un solo archivo o directorio. Por consiguiente, esta tarea no admite el uso de caracteres comodín para realizar la misma operación en varios archivos. Para hacer que la tarea Sistema de archivos realice una determinada operación sobre varios archivos o directorios, coloque la tarea Sistema de archivos en un contenedor de bucles Foreach, como se describe en los pasos siguientes.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62831750"
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye una tarea que descarga y carga archivos de datos, y administra directorios en servidores. Para más información, consulte [FTP Task](ftp-task.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: Inicializar una suscripción transaccional sin una instantánea | Microsoft Docs
-ms.custom: ''
+title: Inicialización de una suscripción sin una instantánea (transaccional)
+description: Aprenda a inicializar una replicación transaccional sin usar una instantánea para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790801"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   De forma predeterminada, una suscripción a una publicación transaccional se inicializa con una instantánea generada por el Agente de instantáneas y aplicada por el Agente de distribución. En algunos escenarios, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método. Otros métodos para inicializar un suscriptor incluyen:  
   
 -   Especificar una copia de seguridad. Se restaura la copia de seguridad en el suscriptor y, a continuación, el Agente de distribución copia los metadatos de replicación y los procedimientos del sistema necesarios. La inicialización con una copia de seguridad es la forma más rápida de entregar datos al suscriptor, además de resultar cómoda, ya que se puede utilizar cualquier copia de seguridad reciente si se ha realizado después de que se habilitara la publicación para inicialización mediante una copia de seguridad.  
@@ -48,7 +49,7 @@ ms.locfileid: "68767772"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional desde una copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional a partir de un copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Si una suscripción se inicializa sin una instantánea, la cuenta con la que se ejecuta el servicio SQL Server en el publicador debe contar con permisos de escritura en la carpeta de instantáneas en el distribuidor. Para obtener más información sobre los permisos, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

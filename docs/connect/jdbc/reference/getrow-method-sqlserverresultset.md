@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a266e3bc-05c2-44e2-9346-125ae6780216
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c9d83bbdb3f724c7d28d3881e7f27c1c0f70584
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fa8184320f12843ee25765202d6e21607f31b32e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980285"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921808"
 ---
 # <a name="getrow-method-sqlserverresultset"></a>Método getRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public int getRow()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getRow especifica este método getRow en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

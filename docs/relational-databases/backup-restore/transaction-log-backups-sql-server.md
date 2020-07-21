@@ -1,5 +1,6 @@
 ---
 title: Copias de seguridad de registros de transacciones (SQL Server) | Microsoft Docs
+description: Independientemente de las copias de seguridad de la base de datos, se puede realizar una copia de seguridad del registro de transacciones de SQL Server con frecuencia. La secuencia de copias de seguridad del registro de transacciones es una cadena de registros.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec8d0f5d72a6f195f489d67d6df32c2f33da7f12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642882"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Copias de seguridad de registros de transacciones (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este tema solamente es aplicable a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa. En este tema se describe cómo se realizan copias de seguridad del registro de transacciones de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Como mínimo, debe haber creado al menos una copia de seguridad completa antes de poder generar una copia de seguridad de registros. A continuación, la copia de seguridad del registro de transacciones se podrá crear en cualquier momento, a menos que ya se haya realizado previamente. 
@@ -32,7 +33,7 @@ Se recomienda realizar copias de seguridad de registros con frecuencia para mini
  
 Un administrador de bases de datos normalmente crea una copia de seguridad completa de la base de datos, por ejemplo, semanalmente; si lo desea, también puede crear una serie de copias de seguridad diferenciales de la base de datos a intervalos más cortos, por ejemplo, a diario. Con independencia de las copias de seguridad de la base de datos, el administrador de la base de datos hace copias de seguridad del registro de transacciones cada poco tiempo. En el caso de un tipo de copia de seguridad concreto, el intervalo óptimo dependerá de diversos factores, como la importancia de los datos, el tamaño de la base de datos y la carga de trabajo del servidor. Para obtener más información sobre cómo implementar una buena estrategia, vea [Recomendaciones](#Recommendations) en este tema. 
    
-##  <a name="LogBackupSequence"></a> Cómo funciona una secuencia de copias de seguridad de registros  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a> Cómo funciona una secuencia de copias de seguridad de registros  
  La secuencia de las copias de seguridad del registro de transacciones ( *cadena de registros* ) es independiente de las copias de seguridad de los datos. Por ejemplo, suponga la siguiente secuencia de eventos.  
   
 |Time|Evento|  
@@ -45,7 +46,7 @@ Un administrador de bases de datos normalmente crea una copia de seguridad compl
   
  La copia de seguridad del registro de transacciones creada a las 20:00 contiene las entradas del registro de transacciones comprendidas entre las 16:00 y las 20:00, período que abarca el momento en que se creó la copia de seguridad de base de datos completa (a las 18:00). La secuencia de copias de seguridad del registro de transacciones es continua, desde la primera copia de seguridad de base de datos completa, creada a las 8:00, hasta la última copia de seguridad del registro de transacciones, creada a las 20:00. Para obtener más información sobre cómo aplicar estas copias de seguridad de registros, vea el ejemplo de [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Si el registro de transacciones resulta dañado, perderá el trabajo realizado desde la última copia de seguridad válida. Por tanto, le recomendamos encarecidamente que sitúe los archivos de registro en un almacenamiento con tolerancia a errores.  
   
@@ -61,7 +62,7 @@ Un administrador de bases de datos normalmente crea una copia de seguridad compl
 > Para limitar el número de copias de seguridad del registro que necesita restaurar, es esencial que realice una copia de seguridad de sus datos periódicamente. Por ejemplo, podría programar una copia de seguridad completa de la base de datos cada semana y copias de seguridad diferenciales de la base de datos a diario.  
 > Una vez más, tenga en cuenta los [RTO](https://wikipedia.org/wiki/Recovery_time_objective) y [RPO](https://wikipedia.org/wiki/Recovery_point_objective) necesarios al implementar la estrategia de recuperación, específicamente el ritmo de realización de copias de seguridad de base de datos completas y diferenciales.
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para crear una copia de seguridad del registro de transacciones**  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  

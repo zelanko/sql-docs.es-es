@@ -47,7 +47,7 @@
         - name: Crear trabajos
           href: create-jobs.md
           items:
-            - name: Crear un trabajo
+            - name: Creación de un trabajo
               href: create-a-job.md
             - name: Give Others Ownership of a Job
               href: give-others-ownership-of-a-job.md
@@ -103,7 +103,7 @@
         - name: Ejecutar trabajos
           href: run-jobs.md
           items:
-            - name: Start a Job
+            - name: Iniciar un trabajo
               href: start-a-job.md
             - name: Stop a Job
               href: stop-a-job.md
@@ -146,7 +146,7 @@
     - name: Supervisar y responder a eventos
       href: monitor-and-respond-to-events.md
       items:
-        - name: Trabajos
+        - name: Alertas
           href: alerts.md
           items:
             - name: Create a WMI Event Alert

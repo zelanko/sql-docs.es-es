@@ -1,10 +1,8 @@
 ---
-title: Name (DTA, elemento de Schema) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Name (DTA, elemento de Schema)
+description: En la utilidad DTA, el elemento Name del esquema contiene el nombre del esquema. En este artículo se describe ese elemento.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 014e4854-fed2-454b-8557-5f7c5bb6b17a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b92dbbee5762e2e2e5e29a3cc3765369e7c45404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: a0430897aa54a57637cac6eb7c3b99246b0cedfe
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034700"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151942"
 ---
 # <a name="name-element-for-schema-dta"></a>Name (DTA, elemento de Schema)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contiene el nombre del esquema.  
+
+Contiene el nombre del esquema.  
   
 ## <a name="syntax"></a>Sintaxis  
   

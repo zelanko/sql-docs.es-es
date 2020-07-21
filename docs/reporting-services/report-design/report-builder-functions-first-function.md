@@ -1,5 +1,5 @@
 ---
-title: Función First (Generador de informes y SSRS) | Microsoft Docs
+title: Función First (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c7dee0fc2085ff370a5c76ece56f9ed54f6e2e4a
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579531"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081274"
 ---
 # <a name="report-builder-functions---first-function"></a>Funciones del Generador de informes: función First
   Devuelve el primer valor de la expresión especificada en el ámbito especificado.  
@@ -32,13 +32,13 @@ First(expression, scope)
  *expression*  
  (**Variant** o **Binario**) Expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!FieldName.Value`.  
   
- *ámbito*  
+ *scope*  
  (**String**) Opcional. Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Varía según el tipo de expresión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **First** devuelve el primer valor de un conjunto de datos después de aplicar todos los filtros y la configuración de ordenación al ámbito especificado.  
   
  La función **First** solo se puede usar en expresiones de filtro de grupo con el ámbito actual (predeterminado).  

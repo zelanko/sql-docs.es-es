@@ -19,17 +19,17 @@ ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1bf8d568031541df8f4dfa80a4148ad759dad54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b3b32313c296af2d7e08e9797a991171a4be40d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738623"
 ---
-# <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="change_tracking_current_version-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve una versión que está asociada a la última transacción confirmada. Esta versión se puede usar cuando se enumeren los cambios mediante [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
+  Devuelve una versión que está asociada a la última transacción confirmada. Esta versión se puede usar al enumerar los cambios mediante [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68043000"
 CHANGE_TRACKING_CURRENT_VERSION ( )  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **bigint**  
   
 ## <a name="remarks"></a>Comentarios  
@@ -54,10 +54,10 @@ DECLARE @next_baseline bigint;
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de seguimiento de cambios &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Funciones de Change Tracking &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

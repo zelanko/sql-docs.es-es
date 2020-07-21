@@ -1,5 +1,5 @@
 ---
-title: Seguimiento de propiedades de la plantilla (pestaña General) | Microsoft Docs
+title: Propiedades de la plantilla de seguimiento (pestaña general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eaed6350c6a6dde394e2ccff1617ac3bab2ba19c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c62ec98e826a14b1472345d40ce9ad440df8f133
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928133"
 ---
 # <a name="trace-template-properties-general-tab"></a>Propiedades de la plantilla de seguimiento (pestaña General)
   Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para tener acceso a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , elija **Plantillas**y haga clic en **Nueva plantilla**.  
@@ -37,7 +36,7 @@ ms.locfileid: "66088700"
  **Usar como plantilla predeterminada para tipo de servidor seleccionado**  
  Utilice esta plantilla como valor predeterminado en seguimientos creados para este tipo de servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

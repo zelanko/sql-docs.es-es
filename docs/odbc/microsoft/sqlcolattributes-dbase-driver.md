@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (dBASE controlador) | Microsoft Docs
+title: SQLColAttributes (dBASE driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - SQLColAttribute function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLColAttributes
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 66a37f3c9ceccdf3fb226ea423552886d36ed99f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9e9d5adb75a99784d7244852bfda0499e481fc4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903973"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81307956"
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes (dBASE controlador)
 > [!NOTE]  
->  Este tema proporciona información específica del controlador de dBASE. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de dBASE. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
 |Atributo|Comentarios|  
 |---------------|--------------|  
-|SQL_COLUMN_DISPLAY_SIZE|Datos LONGVARBINARY, SQL_COLUMN_DISPLAY_SIZE es la longitud máxima de la columna, no la longitud máxima de la columna veces 2.|  
-|SQL_OWNER_NAME|Una cadena vacía ("") se devuelve en esta columna porque no se admite el nombre del propietario.|  
+|SQL_COLUMN_DISPLAY_SIZE|En el caso de los datos de LONGVARBINARY, SQL_COLUMN_DISPLAY_SIZE es la longitud máxima de la columna, no la longitud máxima de los tiempos de la columna 2.|  
+|SQL_OWNER_NAME|Se devuelve una cadena vacía ("") en esta columna porque no se admite el nombre del propietario.|  
 |SQL_QUALIFIER_NAME|Se devuelve la ruta de acceso a un directorio.|  
-|SQL_COLUMN_SEARCHABLE|Columnas LONGVARBINARY y LONGVARCHAR se notifican como SQL_UNSEARCHABLE.<br /><br /> Binario de longitud fija y variable de longitud y tipos de datos de caracteres son para la búsqueda, aunque no sean LONGVARBINARY y LONGVARCHAR.|  
+|SQL_COLUMN_SEARCHABLE|Las columnas LONGVARBINARY y LONGVARCHAR se muestran como SQL_UNSEARCHABLE.<br /><br /> Los tipos de datos de caracteres y binarios de longitud fija y de longitud variable se pueden buscar, aunque LONGVARBINARY y LONGVARCHAR no lo son.|  
   
 > [!NOTE]  
->  El ejemplo anterior no es una lista completa de los atributos devueltos por **SQLColAttributes**.
+>  Lo anterior no es una lista completa de los atributos devueltos por **SQLColAttributes**.

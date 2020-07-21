@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ad50e54-8246-4012-bd88-4aaaaf7f0f77
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f759ed3e4b2d21866ddd74d6ac21681ae216d024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a9dee27e968b45edbe30fcdc33dea447f3ccff67
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953513"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926355"
 ---
 # <a name="getboolean-method-sqlservercallablestatement"></a>Método getBoolean (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

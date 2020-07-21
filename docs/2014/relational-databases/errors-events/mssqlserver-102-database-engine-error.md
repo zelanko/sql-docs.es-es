@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 264dc1a2-c8a0-4c89-b5f6-951baf950299
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee88ba8a77602fd50412669f96e1e16ddcdd37c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6c196eb323497817753abda7cdccb0492cd286
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870743"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554200"
 ---
-# <a name="mssqlserver102"></a>MSSQLSERVER_102
+# <a name="mssqlserver_102"></a>MSSQLSERVER_102
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|102|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|102|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P_SYNTAXERR2|  
 |Texto del mensaje|Sintaxis incorrecta cerca de '%.*ls'.|  

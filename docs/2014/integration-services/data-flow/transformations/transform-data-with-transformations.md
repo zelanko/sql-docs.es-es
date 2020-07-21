@@ -11,22 +11,21 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa5d7788650cd1a36dfcf3f59531ff4b09182b61
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770311"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437542"
 ---
 # <a name="transform-data-with-transformations"></a>Transformar datos con transformaciones
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos.  
   
  El siguiente diagrama muestra un flujo de datos simple que tiene un origen, dos transformaciones y un destino.  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![Flujo de datos](../../media/mw-dts-08.gif "flujo de datos")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ofrecen la siguiente funcionalidad:  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62770311"
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Flujo de datos](../../control-flow/data-flow-task.md)   
  [Flujo de datos](../data-flow.md)   
  [Conectar componentes con rutas de acceso](../../connect-components-with-paths.md)   

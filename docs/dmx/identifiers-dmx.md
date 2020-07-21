@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074811"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670390"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Todos los objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe tener un identificador. El nombre del objeto es su identificador. Servidores, bases de datos y objetos de base de datos como orígenes de datos, vistas del origen de datos, cubos, dimensiones, modelos de minería de datos etc. tienen identificadores.  
+  Todos los objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deben tener un identificador. El nombre del objeto es su identificador. Los servidores, las bases de datos y los objetos de base de datos, como los orígenes de datos, las vistas del origen de datos, los cubos, las dimensiones, los modelos de minería de datos, etc., tienen identificadores.  
   
  Existen dos clases de identificadores en Extensiones de minería de datos (DMX):  
   
@@ -28,8 +28,8 @@ ms.locfileid: "68074811"
   
  El identificador de un objeto se crea cuando se define el objeto. Así puede utilizar el identificador para hacer referencia al objeto. Los identificadores pueden tener 100 caracteres como máximo.  
   
-##  <a name="RegularIdentifiers"></a> Identificadores normales  
- Los identificadores normales de DMX siguen las reglas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecto al formato de identificadores. Los identificadores normales de DMX no requieren delimitadores. Este es un ejemplo de una instrucción DMX que utiliza un identificador normal no delimitado:  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Identificadores normales  
+ Los identificadores normales de DMX siguen las reglas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecto al formato de identificadores. Los identificadores normales de DMX no requieren delimitadores. A continuación se encuentra un ejemplo de una instrucción DMX que utiliza un identificador normal no delimitado:  
   
 ```  
 SELECT * FROM Clustering.CONTENT;  
@@ -40,25 +40,25 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  El primer carácter de un identificador normal debe ser uno de los siguientes:  
   
-    -   Una letra, como se define en el estándar Unicode 2.0. Incluye los caracteres latinos de la "a" a la "z" y de la "A" a la "Z", además de los caracteres de letras de otros idiomas.  
+    -   Una letra, tal como se define en el estándar Unicode 2,0. Incluye los caracteres latinos de la "a" a la "z" y de la "A" a la "Z", además de los caracteres de letras de otros idiomas.  
   
     -   Un carácter de subrayado (_).  
   
 2.  Los caracteres siguientes pueden ser:  
   
-    -   Letras, tal como se define en el estándar Unicode 2.0.  
+    -   Letras como se define en el estándar Unicode 2,0.  
   
     -   Números decimales del alfabeto Latín básico u otros alfabetos de otros idiomas.  
   
     -   Un carácter de subrayado (_).  
   
-3.  El identificador no debe ser una palabra reservada de DMX. En las palabras reservadas de DMX, no se distinguen mayúsculas de minúsculas. Para obtener más información, consulte [palabras clave reservadas &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
+3.  El identificador no debe ser una palabra reservada de DMX. En las palabras reservadas de DMX, no se distinguen mayúsculas de minúsculas. Para obtener más información, vea [palabras clave reservadas &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
   
 4.  El identificador no puede contener espacios o caracteres especiales incrustados.  
   
  Deberá escribir entre corchetes los identificadores que no sigan estas reglas cuando los emplee en instrucciones DMX.  
   
-##  <a name="DelimitedIdentifiers"></a> Identificadores delimitados  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Identificadores delimitados  
  Los identificadores delimitados se escriben entre corchetes ([ ]).  A continuación, figura un ejemplo de una instrucción DMX que utiliza un identificador delimitado que sigue las reglas.  
   
 ```  
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Cuando utilice palabras reservadas en los nombres de objeto o partes de nombres de objeto.  
   
-     Se recomienda evitar el uso de palabras clave reservadas en los nombres de objeto. Las bases de datos que se actualizan desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podrían contener identificadores que incluyan palabras que no estaban reservadas en la versión anterior de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , pero que son palabras reservadas para[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede hacer referencia al objeto con identificadores delimitados hasta que se pueda cambiar el nombre.  
+     Se recomienda evitar el uso de palabras clave reservadas en los nombres de objeto. Las bases de datos que se actualizan desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pueden contener identificadores que incluyen palabras que no estaban reservadas en la versión anterior de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pero que son palabras reservadas para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede hacer referencia al objeto con identificadores delimitados hasta que se pueda cambiar el nombre.  
   
 -   Cuando utilice caracteres no considerados como identificadores aceptados.  
   
@@ -95,13 +95,13 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Delimitar identificadores con varias partes  
  Cuando se utilizan nombres de objetos completos, podría ser necesario delimitar varios de los identificadores que componen el nombre de objeto. Deberá delimitar cada uno de ellos por separado.  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Referencia de operadores &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Convenciones de sintaxis de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  

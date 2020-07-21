@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fe6e5bc6e4f60bc0703482f3bf4d761104b3c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955685"
 ---
 # <a name="create-a-filestream-enabled-database"></a>crear una base de datos habilitada para FILESTREAM
   En este tema se muestra la forma de crear una base de datos que admite FILESTREAM. Dado que FILESTREAM utiliza un tipo especial de grupo de archivos, cuando cree la base de datos, debe especificar la cláusula CONTAINS FILESTREAM para un grupo de archivos como mínimo.  
@@ -28,7 +27,7 @@ ms.locfileid: "66010314"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en **Nueva consulta** para mostrar el Editor de consultas.  
   
-2.  Copia el [!INCLUDE[tsql](../../includes/tsql-md.md)] código crea una base de datos habilitada para FILESTREAM denominada Archive.  
+2.  Copiar el [!INCLUDE[tsql](../../includes/tsql-md.md)] código crea una base de datos habilitada para FileStream denominada Archive.  
   
     > [!NOTE]  
     >  Para este script, debe existir el directorio C:\Data.  
@@ -59,7 +58,7 @@ GO
   
  Para las bases de datos existentes, puede usar la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) para agregar un grupo de archivos FILESTREAM.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

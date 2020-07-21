@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902879"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391730"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuevo contrato. Un contrato define los tipos de mensaje usados en una conversación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] y también determina qué lado de la conversación puede enviar mensajes de ese tipo. Cada conversación obedece a un contrato. El servicio iniciador especifica el contrato para la conversación cuando se inicia la conversación. El servicio de destino especifica los contratos que el servicio de destino acepta para conversaciones.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67902879"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE CONTRACT contract_name  
    [ AUTHORIZATION owner_name ]  
@@ -46,8 +46,10 @@ CREATE CONTRACT contract_name
        } [ ,...n] )   
 [ ; ]  
 ```  
-  
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *contract_name*  
  Es el nombre del contrato que se va a crear. Se crea un contrato nuevo en la base de datos actual, que pertenece a la entidad de seguridad especificada en la cláusula AUTHORIZATION. No se pueden especificar nombres de servidor, base de datos o esquema. *contract_name* puede tener hasta 128 caracteres.  
   
@@ -75,7 +77,7 @@ CREATE CONTRACT contract_name
  [DEFAULT]  
  Indica que este contrato admite mensajes del tipo predeterminado. De forma predeterminada, todas las bases de datos contienen un tipo de mensaje denominado DEFAULT. Este tipo de mensaje usa una validación de NONE. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. Microsoft SQL Server también proporciona un contrato DEFAULT que especifica el tipo de mensaje DEFAULT.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El orden de los tipos de mensaje del contrato no es significativo. Después de que el destino haya recibido el primer mensaje, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite a cualquier lado de la conversación enviar los mensajes permitidos para ese lado de la conversación en cualquier momento. Por ejemplo, si el iniciador de la conversación puede enviar el tipo de mensaje **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite al iniciador enviar cualquier número de mensajes **SubmitExpense** durante la conversación.  
   
  Los tipos de mensaje y direcciones de un contrato no se pueden cambiar. Para cambiar AUTHORIZATION para un contrato, utilice la instrucción ALTER AUTHORIZATION.  
@@ -98,7 +100,7 @@ CREATE CONTRACT contract_name
   
  En el siguiente ejemplo se crea un contrato de reembolso de gastos basándose en tres tipos de mensaje.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]           
     VALIDATION = WELL_FORMED_XML ;           

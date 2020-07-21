@@ -1,5 +1,6 @@
 ---
 title: Supervisar el trasvase de registros (Transact-SQL) | Microsoft Docs
+description: Obtenga información sobre qué tablas almacenan el historial que contiene información de supervisión y procedimientos almacenados para supervisar el trasvase de registros en SQL Server.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33bb8320abf11400e5224af747d71bcb49fc2d16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 87d17a3f6051e497b64dd88c1dd2e005a4411e27
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85695878"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Supervisar el trasvase de registros (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Después de configurar el trasvase de registros, puede supervisar la información acerca del estado de todos los servidores de trasvase de registros. El historial y el estado de las operaciones de trasvase de registros siempre se guardan de forma local en los trabajos de trasvase de registros. El historial y el estado de la operación de copia de seguridad se almacenan en el servidor principal, y el historial y el estado de las operaciones de copia y restauración se almacenan en el servidor secundario. Si ha implementado un servidor de supervisión remoto, esta información se almacena también en dicho servidor.  
   
  Puede configurar alertas que se activarán si las operaciones de trasvase de registros no se producen según lo programado. Los errores se indican mediante un trabajo de alerta que vigila el estado de las operaciones de copias de seguridad y restauración. Puede definir alertas que envíen una notificación a un operador cuando aparezcan estos errores. Si hay un servidor de supervisión configurado, el trabajo de alerta se ejecuta en el servidor de supervisión que detecta los errores de todas las operaciones de la configuración de trasvase de registros. Si no se ha especificado ningún servidor de supervisión, el trabajo de alerta se ejecuta en la instancia de servidor principal, que supervisa la operación de copia de seguridad. Si no se ha especificado ningún servidor de supervisión, el trabajo de alerta se ejecuta también en cada instancia de servidor secundario para supervisar las operaciones locales de copia y restauración.  
@@ -38,7 +39,7 @@ ms.locfileid: "68030709"
   
  Estas tablas se pueden consultar para supervisar el estado de una sesión de trasvase de registros. Por ejemplo, para conocer el estado del trasvase de registros, compruebe el estado y el historial del trabajo de copia de seguridad, trabajo de copia y trabajo de restauración. Puede ver el historial y los detalles de errores específicos del trasvase de registros mediante la consulta de las siguientes tablas de supervisión.  
   
-|Table|Descripción|  
+|Tabla|Descripción|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de errores de los trabajos de trasvase de registros. Puede consultar esta tabla para ver los errores de una sesión de agente. Opcionalmente, puede ordenar los errores por la fecha y la hora en que se registraron. Cada error se registra como una secuencia de excepciones y se pueden registrar varios errores (secuencias) por sesión de agente.|  

@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927576"
 ---
 # <a name="view-a-list-of-modified-files"></a>Ver una lista de archivos modificados
-  Puede usar el **protecciones pendientes** ventana para mostrar en todo momento una lista de los archivos desprotegidos en la solución actual y para proteger estos archivos con un solo botón, haga clic en.  
+  Puede usar la ventana **protecciones pendientes** para mostrar en todo momento una lista de los archivos desprotegidos de la solución actual y para proteger estos archivos con un solo clic de botón.  
   
 ### <a name="to-view-a-list-of-modified-files"></a>Para ver una lista de los archivos modificados  
   
-1.  En el **vista** menú, haga clic en **protecciones pendientes**.  
+1.  En el menú **Ver** , haga clic en **protecciones pendientes**.  
   
-2.  Para proteger los archivos seleccionados, haga clic en **proteger**. Como alternativa, puede acoplar el **protecciones pendientes** ventana en el lado derecho de la [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno para que pueda comprobar en los archivos cuando haya terminado de trabajar.  
+2.  Para proteger los archivos seleccionados, haga clic en **proteger**. También puede acoplar la ventana **protecciones pendientes** en el lado derecho del [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno para que pueda proteger los archivos cuando termine de trabajar.  
   
      **Check-in**  
      Protege la solución.  
@@ -39,7 +38,7 @@ ms.locfileid: "62773436"
      Asocia un comentario de texto simple a la protección pendiente. Con cada versión del proyecto se crea un comentario, que se almacena en la base de datos de control de código fuente.  
   
      **Opciones**  
-     Especifica las acciones que debe tomar el control de código fuente al hacer clic en el **proteger** botón.  
+     Especifica las acciones que debe realizar el control de código fuente al hacer clic en el botón **proteger** .  
   
     -   **Mantener todo desprotegido**  
   
@@ -58,15 +57,15 @@ ms.locfileid: "62773436"
      Muestra los archivos que se protegen como listas planas, bajo su conexión de control de código fuente.  
   
      **Comparar versiones**  
-     Se abre Visual SourceSafe **opciones de diferencia** cuadro de diálogo, que compara un archivo seleccionado en el entorno de desarrollo para cualquier otro archivo seleccionado y se muestra las diferencias, si existe.  
+     Abre el cuadro de diálogo **Opciones de diferencia** de Visual SourceSafe, que compara un archivo seleccionado en el proyecto del entorno de desarrollo con cualquier otro archivo seleccionado y muestra las diferencias, si existen.  
   
      **Deshacer desprotección**  
-     Revierte la desprotección de todos los elementos seleccionados en el **protecciones pendientes** ventana.  
+     Invierte la desprotección de todos los elementos seleccionados en la ventana **protecciones pendientes** .  
   
-     **Name**  
+     **Nombre**  
      Muestra una lista de elementos disponibles para la protección. Los elementos aparecen con la casilla que se encuentra junto a ellos activada. Si no desea proteger un elemento determinado, desactive la casilla adyacente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar protecciones](../../2014/database-engine/manage-checkins.md)   
  [Administrar desprotecciones](../../2014/database-engine/manage-checkouts.md)  
   

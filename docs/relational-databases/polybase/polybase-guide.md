@@ -1,5 +1,6 @@
 ---
 title: ¿Qué es PolyBase? | Microsoft Docs
+description: PolyBase permite que la instancia de SQL Server procese consultas de Transact-SQL que lean datos de orígenes de datos externos como Hadoop y Azure Blob Storage.
 ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: polybase
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 0772efddcd9743f23e1658c5e29e12310b029275
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710581"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818201"
 ---
 # <a name="what-is-polybase"></a>¿Qué es PolyBase?
 
@@ -34,7 +35,7 @@ ms.locfileid: "71710581"
 
 PolyBase permite que la instancia de SQL Server 2016 procese consultas Transact-SQL que leen datos de Hadoop. La misma consulta también puede acceder a las tablas relacionales de SQL Server. PolyBase permite que la misma consulta también combine los datos de Hadoop y SQL Server. En SQL Server, una [tabla externa](../../t-sql/statements/create-external-table-transact-sql.md) o un [origen de datos externo](../../t-sql/statements/create-external-data-source-transact-sql.md) proporciona la conexión a Hadoop.
 
-![Lógica de PolyBase](../../relational-databases/polybase/media/polybase-logical.png "Lógica de PolyBase")
+![PolyBase lógico](../../relational-databases/polybase/media/polybase-logical.png "PolyBase lógico")
 
 PolyBase inserta algunos cálculos en el nodo de Hadoop para optimizar la consulta global. Sin embargo, el acceso externo de PolyBase no se limita a Hadoop. También se admiten otras tablas no relacionales no estructuradas, como archivos de texto delimitado.
 
@@ -59,7 +60,7 @@ PolyBase proporciona estas mismas funcionalidades para los siguientes productos 
 
 - SQL Server 2016 y versiones posteriores (solo Windows)
 - Analytics Platform System (anteriormente Almacenamiento de datos paralelos)
-- Almacenamiento de datos SQL de Azure
+- Azure SQL Data Warehouse
 
 ### <a name="azure-integration"></a>Integración con Azure
 
@@ -92,7 +93,7 @@ PolyBase permite estos escenarios en SQL Server:
 
 ## <a name="performance"></a>Rendimiento
 
-- **Inserción de cálculo en Hadoop.** El optimizador de consultas toma una decisión basada en costos para insertar cálculo en Hadoop cuando, al hacerlo, se va a mejorar el rendimiento de las consultas.  Para tomar esa decisión basada en costos, usa estadísticas relativas a las tablas externas. La inserción de cálculo crea trabajos MapReduce y aprovecha los recursos de cálculo distribuidos de Hadoop.
+- **Inserción de cálculo en Hadoop.** El optimizador de consultas toma una decisión basada en costos para insertar cálculo en Hadoop si, al hacerlo, se va a mejorar el rendimiento de las consultas.  El optimizador de consultas usa estadísticas relativas a las tablas externas para tomar la decisión basada en costos. La inserción de cálculo crea trabajos MapReduce y aprovecha los recursos de cálculo distribuidos de Hadoop.
 
 - **Escala de los recursos de cálculo.** Para mejorar el rendimiento de las consultas, puede usar [grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md)de SQL Server. Gracias a esto, la transferencia de datos paralelos entre instancias de SQL Server y nodos de Hadoop es factible y, además, se agregan recursos de cálculo para operar en los datos externos.
 

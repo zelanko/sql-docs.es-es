@@ -1,5 +1,5 @@
 ---
-title: Bienvenida | Microsoft Docs
+title: Página principal | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: a6457a2c-18ca-4ffb-97d4-e72a80d57b45
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc4c96a9890f8a354d4403bf46a98e78a517e55d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 028d21cba646c1fc7bf1971432ae2a4cf4535eaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065036"
 ---
-# <a name="welcome"></a>información general
+# <a name="welcome"></a>Bienvenido
   Las reglas de instalación examinan el equipo donde se instalará la actualización.  
   
   

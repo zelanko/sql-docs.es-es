@@ -12,19 +12,19 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930817"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759681"
 ---
 # <a name="stayinsync-property-example-vb"></a>Ejemplo de la propiedad StayInSync (VB)
-Este ejemplo se muestra cómo el [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propiedad facilita el acceso a las filas en una jerárquica [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+En este ejemplo se muestra cómo la propiedad [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)jerárquico.  
   
- El bucle externo muestra el nombre y apellido de cada autor, estado e identificación. Anexa **Recordset** para cada fila se recupera de la [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección y asignada automáticamente a **rstTitleAuthor** por el **StayInSync**  propiedad cada vez que el elemento primario **Recordset** se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila del conjunto de registros anexados.  
+ El bucle exterior muestra el nombre y el apellido de cada autor, el estado y la identificación. El conjunto de **registros** anexado para cada fila se recupera de la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) y se asigna automáticamente a **rstTitleAuthor** mediante la propiedad **StayInSync** siempre que el **conjunto de registros** primario se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila del conjunto de registros anexado.  
   
 ```  
 'BeginStayInSyncVB  
@@ -89,7 +89,7 @@ End Sub
 'EndStayInSyncVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

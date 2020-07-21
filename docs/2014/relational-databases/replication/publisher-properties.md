@@ -1,5 +1,5 @@
 ---
-title: Propiedades del publicador de replicación de SQL Server | Microsoft Docs
+title: Propiedades del publicador de Replicación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,24 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005099"
 ---
-# <a name="sql-server-replication-publisher-properties"></a>Propiedades del publicador de replicación de SQL Server
-  Esta sección contiene información sobre las propiedades del publicador disponibles en el distribuidor y el publicador. 
+# <a name="sql-server-replication-publisher-properties"></a>Propiedades del publicador de Replicación de SQL Server
+  Esta sección contiene información sobre las propiedades del publicador disponibles en el distribuidor y en el publicador. 
 
 ## <a name="general"></a>General  
-  La página **General** del cuadro de diálogo **Propiedades del publicador** muestra información de solo lectura sobre el distribuidor y la base de datos de distribución usada por el publicador. Para cambiar el distribuidor o la base de datos de distribución de un publicador:  
+   La página **General** del cuadro de diálogo **Propiedades del publicador** muestra información de solo lectura sobre el distribuidor y la base de datos de distribución que usa el publicador. Para cambiar el distribuidor o la base de datos de distribución de un publicador:  
   
 1.  Deshabilite la publicación en el publicador. Para obtener más información, vea [Deshabilitar la publicación y distribución](disable-publishing-and-distribution.md).    
 2.  Vuelva a configurar la publicación y la distribución. Para obtener más información, consulte [Configure Publishing and Distribution](configure-publishing-and-distribution.md).  
 
-## <a name="distributor"></a>Distribuidor
-  El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modificar las propiedades asociadas a la relación entre el publicador y el distribuidor.  
+## <a name="distributor"></a>Distribuidor.
+   El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modificar las propiedades asociadas con la relación entre el publicador y el distribuidor.  
   
 ### <a name="options"></a>Opciones  
  **Conexión del agente al publicador**  
@@ -61,7 +60,7 @@ ms.locfileid: "63261974"
  **Transaccional**  
  Active esta casilla para permitir que los usuarios que tengan el rol fijo de base de datos **db_owner** creen publicaciones de instantáneas o publicaciones transaccionales en la base de datos. 
   
- **Mezcla**  
+ **Combinar**  
  Active esta casilla para permitir que los usuarios que tengan el rol fijo de base de datos **db_owner** creen publicaciones de combinación en la base de datos.  
 
 ## <a name="subscribers"></a>Suscriptores
@@ -70,12 +69,12 @@ ms.locfileid: "63261974"
   
 ### <a name="options"></a>Opciones  
  **Suscriptores**  
- La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades ( **...** ) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
+ La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades (**...**) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en **Agregar** para agregar un suscriptor, y luego haga clic en **Agregar suscriptor de SQL Server** o en **Agregar suscriptor que no sea de SQL Server**.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   
 
   

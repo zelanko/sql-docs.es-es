@@ -1,5 +1,5 @@
 ---
-title: Editor de origen de ADO NET (página Administrador de conexiones) | Microsoft Docs
+title: Editor de orígenes de ADO NET (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ae18b66e93d7c3c363596b2bf0bc42d4357191f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061687"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439582"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de orígenes de ADO NET (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de orígenes de ADO NET** para seleccionar el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -36,7 +35,7 @@ ms.locfileid: "66061687"
  **Administrador de conexiones de ADO.NET**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** .  
   
  **Modo de acceso a datos**  
@@ -47,11 +46,11 @@ ms.locfileid: "66061687"
 |Tabla o vista|Recupera datos de una tabla o vista del origen de datos [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupera datos del origen de datos [!INCLUDE[vstecado](../includes/vstecado-md.md)] mediante una consulta SQL.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
->  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System.Byte[]. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor [!INCLUDE[vstecado](../includes/vstecado-md.md)] y el último, cuando se utiliza el proveedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
+>  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System. Byte []. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor [!INCLUDE[vstecado](../includes/vstecado-md.md)] y el último, cuando se utiliza el proveedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
   
@@ -69,9 +68,9 @@ ms.locfileid: "66061687"
  **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de orígenes de ADO NET &#40;página Columnas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor de orígenes de ADO NET &#40;página Salida de error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de orígenes de ADO NET &#40;página columnas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor de orígenes de ADO NET &#40;página salida de error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: STX (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b870071f474203a699494993f56f87109f9baf43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762110"
 ---
 # <a name="stx-geometry-data-type"></a>STX (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-La propiedad de la coordenada x de una instancia de **Point**.
+Propiedad de la coordenada X de una instancia de **Point**.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,12 +36,12 @@ La propiedad de la coordenada x de una instancia de **Point**.
 .STX  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de esta propiedad será NULL si la instancia de **geometry** no es un punto.  
   
  Esta propiedad es de solo lectura.  

@@ -22,10 +22,10 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edae052096c67e294f12a8f0f35e77b7f5a46187
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294890"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Seleccionar mediante programación las columnas de entrada
@@ -40,7 +40,7 @@ ms.locfileid: "71294890"
   
  No seleccione las columnas llamando directamente al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSVirtualInput100.SetUsageType%2A> del objeto de entrada virtual, porque esto omite la capacidad del componente de rechazar las columnas basándose en tipos de datos inadecuados o en otras propiedades.  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el ejemplo de código siguiente se muestra cómo utilizar la instancia de un componente en tiempo de diseño para seleccionar las columnas de un componente.  
   
 ```csharp  

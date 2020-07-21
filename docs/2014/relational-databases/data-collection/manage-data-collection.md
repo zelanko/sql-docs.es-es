@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970455"
 ---
 # <a name="manage-data-collection"></a>Administrar la recopilación de datos
   Puede utilizar procedimientos almacenados y funciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.  
@@ -161,7 +160,7 @@ ms.locfileid: "62918597"
 |--------------------|-----------------|  
 |[sp_syscollector_delete_execution_log_tree &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-delete-execution-log-tree-transact-sql)|Elimina entradas del conjunto de recopilación del registro de ejecución.|  
   
-### <a name="functions"></a>Funciones  
+### <a name="functions"></a>Functions  
  La tabla siguiente describe las funciones que puede usar para obtener información de seguimiento y ejecución.  
   
 |Nombre de función|Descripción|  
@@ -170,7 +169,7 @@ ms.locfileid: "62918597"
 |[fn_syscollector_get_execution_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|Obtenga las estadísticas de ejecución para un paquete o un conjunto de recopilación. Esta información incluye errores que están registrados.|  
 |[snapshots.fn_trace_getdata &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Obtenga los eventos que se registran cuando se usa el tipo de recopilador de Seguimiento de SQL genérico para recopilar datos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar un procedimiento almacenado](../stored-procedures/execute-a-stored-procedure.md)   
  [Usar SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
  [Recopilación de datos](data-collection.md)  

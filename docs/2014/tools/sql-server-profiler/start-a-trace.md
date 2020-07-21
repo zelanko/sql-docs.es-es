@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2b75519631269a1213077a4e295ac73fca1b950
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040118"
 ---
 # <a name="start-a-trace"></a>Iniciar un seguimiento
   Una vez definida un nuevo seguimiento o creada una plantilla mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede iniciar, pausar o detener la captura de datos con la nueva definición de seguimiento o plantilla.  
@@ -43,11 +42,11 @@ ms.locfileid: "68211038"
 > [!NOTE]  
 >  Si trabaja con seguimientos existentes, puede ver las propiedades, pero no modificarlas. Para modificar las propiedades, detenga o pause el seguimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Pausar un seguimiento &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
- [Detener un seguimiento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
- [Borrar el contenido de una ventana de seguimiento &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
+ [Pausar un SQL Server Profiler de &#40;de seguimiento&#41;](pause-a-trace-sql-server-profiler.md)   
+ [Detener un SQL Server Profiler de &#40;de seguimiento&#41;](stop-a-trace-sql-server-profiler.md)   
+ [Borrar una ventana de seguimiento &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
  [Ejecutar un seguimiento después de haberlo pausado o detenido &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

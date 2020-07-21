@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 7d284cb8c39307a6ee2568bd8e4fa5fa0df2c3e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940107"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898998"
 ---
-# <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve un token que representa el contexto de transacción actual de una sesión. Las aplicaciones usan este token para enlazar las operaciones de transmisión por secuencias del sistema de archivos FILESTREAM a la transacción. Para obtener una lista de temas sobre FILESTREAM, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -38,13 +38,13 @@ ms.locfileid: "67940107"
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **varbinary(max)**  
   
 ## <a name="return-value"></a>Valor devuelto  
  Se devuelve NULL si no se ha iniciado la transacción o si se ha cancelado o confirmado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La transacción debe ser explícita. Use BEGIN TRANSACTION seguido de COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
  Cuando se llama a GET_FILESTREAM_TRANSACTION_CONTEXT, el autor de la llamada obtiene acceso a la transacción a través del sistema de archivos mientras dure la transacción. Para que otro usuario pueda tener acceso a la transacción a través del sistema de archivos, use EXECUTE AS para ejecutar GET_FILESTREAM_TRANSACTION_CONTEXT como el otro usuario.  

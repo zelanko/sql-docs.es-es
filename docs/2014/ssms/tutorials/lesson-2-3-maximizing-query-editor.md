@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 635c2845-93c5-4c7f-8f33-ea848ca48b7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45719efb24e2af38230badf96961621e1e99ee55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63222533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040988"
 ---
 # <a name="maximizing-query-editor"></a>Maximizar el Editor de consultas
   Los programadores a menudo se preguntan cómo pueden lograr más espacio para escribir código. La respuesta es que hay dos maneras sencillas de hacerlo: maximizar la ventana del editor de consultas y ocultar sus ventanas de herramientas no usadas.  

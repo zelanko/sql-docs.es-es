@@ -1,5 +1,5 @@
 ---
-title: Desarrollador&#39;guía (Integration Services) | Microsoft Docs
+title: Guía para desarrolladores&#39;(Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3a32868cbba92e623f0b8ec55039bdb27761d4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62892419"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424672"
 ---
-# <a name="developer39s-guide-integration-services"></a>Desarrollador&#39;guía (Integration Services)
+# <a name="developer39s-guide-integration-services"></a>Guía para desarrolladores&#39;(Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye un modelo de objetos completamente reescrito, que se ha mejorado con muchas características que consiguen que la extensión y la programación de paquetes resulten más sencillas, flexibles y eficaces. Los desarrolladores pueden extender y programar prácticamente cualquier aspecto de los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Como desarrollador de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], existen dos enfoques fundamentales que puede aplicar en la programación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
@@ -77,14 +76,14 @@ ms.locfileid: "62892419"
  Enumera los códigos de error predefinidos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], junto con sus nombres simbólicos y descripciones.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Herramientas para solucionar problemas del desarrollo de paquetes](troubleshooting/troubleshooting-tools-for-package-development.md)  
+ [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting/troubleshooting-tools-for-package-development.md)  
  Describe las características y herramientas que ofrece [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para solucionar problemas de los paquetes durante el desarrollo.  
   
 ## <a name="external-resources"></a>Recursos externos  
   
 -   Ejemplos de CodePlex, en la página [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204)de www.codeplex.com/MSFTISProdSamples.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Integration Services](sql-server-integration-services.md)  
   
   

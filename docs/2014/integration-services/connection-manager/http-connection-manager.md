@@ -13,22 +13,21 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f79a882e3a3e4520cb8cfcd4468f3c908b79abf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bf206182c73f179857ab6197fac3b7ae36a1dbc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833763"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438462"
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
   Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. La tarea Servicio web que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa este administrador de conexiones.  
   
  Cuando agrega un administrador de conexiones HTTP a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve como una conexión HTTP en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la colección `Connections` del paquete.  
   
- El `ConnectionManagerType` propiedad del Administrador de conexiones se establece en `HTTP.`  
+ La `ConnectionManagerType` propiedad del administrador de conexiones se establece en`HTTP.`  
   
  Puede configurar el administrador de conexiones HTTP de las maneras siguientes:  
   
@@ -54,8 +53,8 @@ ms.locfileid: "62833763"
   
  Para más información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
-## <a name="see-also"></a>Vea también  
- [Tarea Servicio web](../control-flow/web-service-task.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tarea servicio Web](../control-flow/web-service-task.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

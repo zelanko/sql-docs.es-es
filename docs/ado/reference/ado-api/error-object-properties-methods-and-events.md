@@ -1,5 +1,5 @@
 ---
-title: Los eventos, métodos y propiedades del objeto Error | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto error | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - error object [ADO], members
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2baa9e6dcbc6dd67b93867cdf4f4b5e558cf8861
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933013"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765506"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto Error
 ## <a name="properties"></a>Propiedades  
@@ -27,7 +27,7 @@ ms.locfileid: "67933013"
   
  [Propiedad NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
   
- [Propiedad de número](../../../ado/reference/ado-api/number-property-ado.md)  
+ [Propiedad Number](../../../ado/reference/ado-api/number-property-ado.md)  
   
  [Propiedad Source (Error de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)  
   
@@ -36,8 +36,8 @@ ms.locfileid: "67933013"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
- [Objeto de error](../../../ado/reference/ado-api/error-object.md)
+## <a name="see-also"></a>Consulte también  
+ [Error (objeto)](../../../ado/reference/ado-api/error-object.md)

@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multicast Transformation Editor
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c4013483838f81e9147eb45c84598c9cc73016fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfe53eaf946af96a9f49398e50aed0fdf53727f8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057622"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440162"
 ---
 # <a name="multicast-transformation-editor"></a>Editor de trasformación Multidifusión
   Use el cuadro de diálogo **Editor de transformación Multidifusión** para ver y establecer las propiedades de cada salida de la transformación.  
@@ -27,13 +26,13 @@ ms.locfileid: "66057622"
  Para obtener más información acerca de la transformación Multidifusión, vea [Multicast Transformation](data-flow/transformations/multicast-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Resultados**  
+ **Salidas**  
  Seleccione una salida de la izquierda para ver sus propiedades en la tabla de la derecha.  
   
  **Propiedades**  
  Todas las propiedades que se muestran para la salida son de solo lectura, excepto **Nombre** y **Descripción**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformación División condicional](data-flow/transformations/conditional-split-transformation.md)  
   

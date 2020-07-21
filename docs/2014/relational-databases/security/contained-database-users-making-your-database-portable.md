@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aef800c41b0c1b44e285f959d1b9e12c58ea937
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997495"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuarios de base de datos independiente: hacer que la base de datos sea portátil
   Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el nivel de base de datos. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. En este tema se revisan las diferencias y ventajas de utilizar el modelo de base de datos independiente en comparación con el modelo de inicio de sesión o usuario tradicionales y las reglas de firewall de Windows o de nivel de servidor. Es posible que la lógica de escenarios específicos, de manejabilidad o de software empresarial todavía pueda necesitar el uso de reglas de inicio de sesión o usuario tradicionales y de firewall de nivel de servidor.  
@@ -29,7 +28,7 @@ ms.locfileid: "62655483"
 ## <a name="traditional-login-and-user-model"></a>Inicio de sesión tradicional y modelo de usuario  
  En el modelo tradicional de conexión, los usuarios de Windows o los miembros de los grupos de Windows se conectan a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] al proporcionar las credenciales de usuario o grupo autenticadas por Windows. O bien, la conexión proporciona un nombre y contraseña, y se conecta mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (que es la única opción cuando se conecta a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). En ambos casos, la base de datos maestra debe tener un inicio de sesión que coincida con las credenciales de conexión. Después de que la [!INCLUDE[ssDE](../../includes/ssde-md.md)] confirme las credenciales de autenticación de Windows o autentica las credenciales de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la conexión normalmente intenta conectarse a una base de datos de usuario. Para conectarse a una base de datos de usuario, el inicio de sesión se debe poder asignar (es decir, asociar) a un usuario de base de datos en la base de datos de usuario. También es posible que la cadena de conexión especifique la conexión a una base de datos que es opcional en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero obligatoria en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- El principio importante es que tanto el inicio de sesión (en la base de datos maestra) como el usuario (en la base de datos de usuario) deben existir y estar relacionados entre sí. Esto significa que la conexión a la base de datos de usuario tiene una dependencia en el inicio de sesión en la base de datos maestra y esto limita la capacidad de la base de datos de moverse a un servidor host de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] diferente. Además, si por cualquier motivo no hay una conexión a la base de datos maestra disponible (por ejemplo, una conmutación por error está en curso), aumentará el tiempo total de conexión o es posible que se agote el tiempo de espera de la conexión. En consecuencia, esto puede reducir la escalabilidad de la conexión.  
+ El principio importante es que tanto el inicio de sesión (en la base de datos maestra) como el usuario (en la base de datos de usuario) deben existir y estar relacionados entre sí. Esto significa que la conexión a la base de datos de usuario tiene una dependencia en el inicio de sesión en la base de datos maestra y esto limita la capacidad de la base de datos de moverse a un servidor host de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] diferente. Y si, por cualquier motivo, no hay disponible una conexión a la base de datos maestra (por ejemplo, una conmutación por error está en curso), se aumentará el tiempo de conexión total o se puede agotar el tiempo de espera de la conexión. En consecuencia, esto puede reducir la escalabilidad de la conexión.  
   
 ## <a name="contained-database-user-model"></a>Modelo de usuario de base de datos independiente  
  En el modelo de usuario de base de datos independiente, el inicio de sesión en la base de datos maestra no está presente. En su lugar, el proceso de autenticación se produce en la base de datos de usuario y el usuario de base de datos de la base de datos de usuario no tiene asociado ningún inicio de sesión en la base de datos maestra. El modelo de usuario de base de datos independiente admite tanto la autenticación de Windows (en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) como la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). Para conectarse como un usuario de base de datos independiente, la cadena de conexión siempre debe contener un parámetro para la base de datos de usuario de modo que la [!INCLUDE[ssDE](../../includes/ssde-md.md)] sepa qué base de datos es responsable de la administración del proceso de autenticación. La actividad del usuario de base de datos independiente se limita a la autenticación de base de datos, por lo que al conectarse como un usuario de base de datos independiente, la cuenta de usuario de base de datos debe crearse independientemente en cada base de datos que el usuario necesitará. Para cambiar las bases de datos, los usuarios de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] deben crear una nueva conexión. Los usuarios de base de datos independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden cambiar bases de datos si hay un usuario idéntico en otra base de datos.  
@@ -42,14 +41,14 @@ ms.locfileid: "62655483"
 ## <a name="firewalls"></a>Firewalls  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Las reglas de Firewall de Windows se aplican a todas las conexiones y tienen el mismo efecto en los inicios de sesión (conexiones de modelo tradicional) y los usuarios de la base de datos independiente. Para obtener más información sobre el Firewall de Windows, consulte [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+ Las reglas de Firewall de Windows se aplican a todas las conexiones y tienen el mismo efecto en los inicios de sesión (conexiones de modelo tradicional) y los usuarios de la base de datos independiente. Para obtener más información sobre el Firewall de Windows, consulte [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permite reglas de: firewall independientes para las conexiones de nivel de servidor (inicios de sesión) y las conexiones de nivel de base de datos (usuarios de base de datos independiente). Al conectarse a una base de datos de usuario, primero se comprueban las reglas de firewall de base de datos. Si no hay ninguna regla que permita acceder a la base de datos, se comprueban las reglas de firewall de nivel de servidor, lo que requiere acceso a la base de datos maestra del servidor lógico. Las reglas de firewall de nivel de base de datos combinadas con los usuarios de la base de datos independiente pueden eliminar la necesidad de acceder a la base de datos maestra del servidor durante la conexión, lo que puede mejorar la escalabilidad de la conexión.  
   
  Para obtener más información sobre las reglas de firewall de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vea los temas siguientes:  
   
--   [Firewall de la base de datos SQL de Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Firewall de Azure SQL Database](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
 -   [Cómo: Configurar los valores del firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62655483"
   
 ## <a name="remarks"></a>Comentarios  
   
--   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los usuarios de la base de datos independiente deben estar habilitados para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
+-   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los usuarios de la base de datos independiente deben estar habilitados para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, consulte la [opción de configuración del servidor de autenticación de base de datos independiente](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   
 -   Los usuarios de base de datos independiente y los inicios de sesión con nombres no superpuestos pueden coexistir en las aplicaciones.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "62655483"
   
 -   Use las mismas contraseñas seguras que usaría normalmente para los inicios de sesión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Bases de datos independientes](../databases/contained-databases.md)   
  [Prácticas recomendadas de seguridad con bases de datos independientes](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  

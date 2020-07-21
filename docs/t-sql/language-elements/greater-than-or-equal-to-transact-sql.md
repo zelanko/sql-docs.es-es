@@ -24,15 +24,15 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a661006b04f5af7116d03bf736bdabc70cf421c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c44e0c3ef987120fda177b2c4f36baca778d6e5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075165"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007384"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (Mayor o igual que) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Compara dos expresiones para "mayor o igual que" (un operador de comparación).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68075165"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 expression >= expression  
 ```  
   
@@ -51,7 +51,7 @@ expression >= expression
 ## <a name="result-types"></a>Tipos de resultado  
  Boolean  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se comparan expresiones no nulas, el resultado es TRUE si el operando de la izquierda tiene un valor mayor que o igual al del operando de la derecha; de otra forma, el resultado es FALSE.  
   
  A diferencia del operador de igualdad =, el resultado de la comparación >= de dos valores NULL no depende del valor de ANSI_NULLS.  

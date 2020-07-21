@@ -22,12 +22,12 @@ ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 549d1e478c15999dec12c5cd170d94e5d0ec0804
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928935"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634329"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67928935"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  Es el nombre del idioma tal como está almacenado en [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Este argumento puede ser Unicode o DBCS convertido a Unicode. Para especificar un idioma en Unicode, use **N'** _language_ **'** . Si se especifica como variable, esta debe ser **sysname**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La opción SET LANGUAGE se establece en tiempo de ejecución, no en tiempo de análisis.  
   
  SET LANGUAGE establece la opción [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) de forma implícita.  
@@ -59,7 +59,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se establece el idioma predeterminado en `Italian`, se muestra el nombre del mes y, después, se cambia de nuevo a `us_english` y se vuelve a mostrar el nombre del mes.  
   
-```  
+```sql
 DECLARE @Today DATETIME;  
 SET @Today = '12/5/2007';  
   

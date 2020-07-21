@@ -1,5 +1,5 @@
 ---
-title: Enviar datos largos | Microsoft Docs
+title: Enviando datos largos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,37 +11,37 @@ helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: aeeeb716aa2f9a72338f3aeb586dffce86f84069
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094342"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304186"
 ---
 # <a name="sending-long-data"></a>Enviar datos de tipo Long
-Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, por ejemplo, 254 caracteres. No sería posible almacenar un elemento de datos largos en memoria, como cuando el elemento representa un mapa de bits o un documento de texto largo. Porque no se puede almacenar estos datos en un único búfer, el origen de datos lo envía al controlador en partes con **SQLPutData** cuando se ejecuta la instrucción. Los parámetros para el que se envían los datos en tiempo de ejecución se conocen como *parámetros de datos en ejecución*.  
+Los DBMS definen *datos largos* como cualquier carácter o dato binario a lo largo de un determinado tamaño, como 254 caracteres. Es posible que no sea posible almacenar un elemento completo de datos largos en memoria, como cuando el elemento representa un documento de texto largo o un mapa de bits. Dado que estos datos no se pueden almacenar en un solo búfer, el origen de datos lo envía al controlador en partes con **SQLPutData** cuando se ejecuta la instrucción. Los parámetros para los que se envían los datos en tiempo de ejecución se conocen como *parámetros de datos en ejecución*.  
   
 > [!NOTE]  
->  Una aplicación puede enviar cualquier tipo de datos en tiempo de ejecución con **SQLPutData**, aunque sólo caracteres y datos binarios pueden enviarse en partes. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un único búfer, normalmente hay ninguna razón para utilizar **SQLPutData**. Es mucho más fácil enlazar el búfer y dejar que el controlador de recuperar los datos desde el búfer.  
+>  En realidad, una aplicación puede enviar cualquier tipo de datos en tiempo de ejecución con **SQLPutData**, aunque solo los datos de caracteres y binarios se pueden enviar en partes. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un solo búfer, generalmente no hay ningún motivo para usar **SQLPutData**. Es mucho más fácil enlazar el búfer y dejar que el controlador recupere los datos del búfer.  
   
- Para enviar datos en tiempo de ejecución, la aplicación realiza las acciones siguientes:  
+ Para enviar datos en tiempo de ejecución, la aplicación realiza las siguientes acciones:  
   
-1.  Pasa un valor de 32 bits que identifica el parámetro en el *ParameterValuePtr* argumento en **SQLBindParameter** en lugar de pasar la dirección de un búfer. Este valor no se analizará el controlador. Se le devolverá a la aplicación más adelante, por lo que deben significar algo a la aplicación. Por ejemplo, podría ser el número del parámetro o el identificador de un archivo que contiene los datos.  
+1.  Pasa un valor de 32 bits que identifica el parámetro en el argumento *ParameterValuePtr* en **SQLBindParameter** en lugar de pasar la dirección de un búfer. El controlador no analiza este valor. Se devolverá a la aplicación más adelante, por lo que debe significar algo a la aplicación. Por ejemplo, podría ser el número del parámetro o el identificador de un archivo que contiene datos.  
   
-2.  Pasa la dirección de un búfer de longitud/indicador en el *StrLen_or_IndPtr* argumento de **SQLBindParameter**.  
+2.  Pasa la dirección de un búfer de longitud/indicador en el argumento *StrLen_or_IndPtr* de **SQLBindParameter**.  
   
-3.  Almacena SQL_DATA_AT_EXEC o el resultado de la SQL_LEN_DATA_AT_EXEC (*longitud*) macro en el búfer de longitud/indicador. Ambos de estos valores indican al controlador que se enviarán los datos para el parámetro con **SQLPutData**. SQL_LEN_DATA_AT_EXEC (*longitud*) se usa al enviar datos largos a un origen de datos que necesita saber cuántos bytes de datos largos se enviarán para que puede preasignar el espacio. Para determinar si un origen de datos necesita este valor, la aplicación llama a **SQLGetInfo** con la opción SQL_NEED_LONG_DATA_LEN. Todos los controladores deben admitir esta macro; Si el origen de datos no requiere la longitud en bytes, el controlador puede ignorarla.  
+3.  Almacena SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC (*length*) en el búfer de longitud/indicador. Ambos valores indican al controlador que los datos para el parámetro se enviarán con **SQLPutData**. SQL_LEN_DATA_AT_EXEC (*longitud*) se usa al enviar datos largos a un origen de datos que necesita saber el número de bytes de datos largos que se enviarán para que pueda asignar espacio previamente. Para determinar si un origen de datos requiere este valor, la aplicación llama a **SQLGetInfo** con la opción SQL_NEED_LONG_DATA_LEN. Todos los controladores deben admitir esta macro; Si el origen de datos no requiere la longitud de bytes, el controlador puede pasarlo por alto.  
   
-4.  Las llamadas **SQLExecute** o **SQLExecDirect**. El controlador detecta que un búfer de longitud/indicador contiene el valor SQL_DATA_AT_EXEC o el resultado de la SQL_LEN_DATA_AT_EXEC (*longitud*) macro y devuelve SQL_NEED_DATA, como el valor devuelto de la función.  
+4.  Llama a **SQLExecute** o **SQLExecDirect**. El controlador detecta que un búfer de longitud/indicador contiene el valor SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC (*longitud*) y devuelve SQL_NEED_DATA como valor devuelto de la función.  
   
-5.  Las llamadas **SQLParamData** en respuesta a la SQL_NEED_DATA de valor devuelto. Si deben enviarse, datos de tipo long **SQLParamData** devuelve SQL_NEED_DATA. En el búfer señalado por el *ValuePtrPtr* argumento, el controlador devuelve el valor que identifica el parámetro de datos en ejecución. Si hay más de un parámetro de datos en ejecución, la aplicación debe utilizar este valor para determinar qué parámetro para enviar datos; el controlador no es necesario para solicitar datos de los parámetros de datos en ejecución en ningún orden concreto.  
+5.  Llama a **SQLParamData** en respuesta a la SQL_NEED_DATA valor devuelto. Si es necesario enviar datos largos, **SQLParamData** devuelve SQL_NEED_DATA. En el búfer señalado por el argumento *ValuePtrPtr* , el controlador devuelve el valor que identifica el parámetro de datos en ejecución. Si hay más de un parámetro de datos en ejecución, la aplicación debe usar este valor para determinar el parámetro para el que se van a enviar datos; no es necesario que el controlador solicite datos para los parámetros de datos en ejecución en un orden determinado.  
   
-6.  Las llamadas **SQLPutData** para enviar los datos del parámetro para el controlador. Si los datos del parámetro no caben en un único búfer, como suele ocurrir con datos de tipo long, la aplicación llama a **SQLPutData** varias veces para enviar los datos de partes; es hasta el origen de datos y el controlador para volver a ensamblar los datos. Si la aplicación pasa los datos de cadena terminada en null, el controlador u origen de datos debe quitar el carácter de terminación null como parte del proceso de reensamblado.  
+6.  Llama a **SQLPutData** para enviar los datos del parámetro al controlador. Si los datos del parámetro no caben en un solo búfer, como suele ser el caso de los datos de tipo Long, la aplicación llama a **SQLPutData** varias veces para enviar los datos en partes; depende del controlador y del origen de datos volver a ensamblar los datos. Si la aplicación pasa datos de cadena terminada en null, el controlador o el origen de datos debe quitar el carácter de terminación NULL como parte del proceso de reensamblado.  
   
-7.  Las llamadas **SQLParamData** nuevo para indicar que ha enviado todos los datos para el parámetro. Si hay algún parámetro de datos en ejecución para el que no se han enviado datos, el controlador devuelve SQL_NEED_DATA y el valor que identifica el parámetro siguiente; la aplicación vuelve al paso 6. Si se ha enviado los datos para todos los parámetros de datos en ejecución, se ejecuta la instrucción. **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO y puede devolver cualquier valor devuelto o diagnóstico que **SQLExecute** o **SQLExecDirect** puede devolver.  
+7.  Llama de nuevo a **SQLParamData** para indicar que se han enviado todos los datos para el parámetro. Si hay parámetros de datos en ejecución para los que no se han enviado datos, el controlador devuelve SQL_NEED_DATA y el valor que identifica el parámetro siguiente; la aplicación vuelve al paso 6. Si se han enviado datos para todos los parámetros de datos en ejecución, se ejecuta la instrucción. **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO y puede devolver cualquier valor devuelto o diagnóstico que puede devolver **SQLExecute** o **SQLExecDirect** .  
   
- Después de **SQLExecute** o **SQLExecDirect** devuelve SQL_NEED_DATA y antes de datos se han enviado por completo para el último parámetro de datos en ejecución, la instrucción está en un estado de datos necesita. Mientras una instrucción está en un estado de datos necesita, la aplicación puede llamar solo **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, o **SQLGetDiagRec**; todas las demás funciones devuelven SQLSTATE HY010 (función de error de secuencia). Una llamada a **SQLCancel** cancela la ejecución de la instrucción y lo devuelve a su estado anterior. Para obtener más información, consulte [Apéndice B: Las tablas de transición de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Después de que **SQLExecute** o **SQLExecDirect** devuelva SQL_NEED_DATA y antes de que los datos se hayan enviado completamente para el último parámetro de datos en ejecución, la instrucción se encuentra en un estado de necesidad de datos. Mientras que una instrucción está en un estado de datos necesario, la aplicación solo puede llamar a **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**o **SQLGetDiagRec**; todas las demás funciones devuelven SQLSTATE HY010 (error de secuencia de función). Al llamar a **SQLCancel** se cancela la ejecución de la instrucción y se devuelve a su estado anterior. Para obtener más información, vea el [Apéndice B: tablas de transición de estado ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Para obtener un ejemplo de envío de datos en tiempo de ejecución, consulte el [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) descripción de la función.
+ Para obtener un ejemplo de envío de datos en tiempo de ejecución, vea la descripción de la función [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) .

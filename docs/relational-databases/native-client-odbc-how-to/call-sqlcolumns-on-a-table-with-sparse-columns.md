@@ -1,5 +1,5 @@
 ---
-title: Llamar a SQLColumns sobre una tabla con columnas dispersas | Documentos de Microsoft
+title: Llamar a SQLColumns en una tabla con columnas dispersas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -9,19 +9,17 @@ ms.technology: native-client
 yms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 1a8cf47763d1705821cfc70708595185c21cf23c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987589"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009552"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Llamar a SQLColumns sobre una tabla con columnas dispersas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo, se muestra cómo llamar a SQLColumns sobre una tabla con columnas dispersas definidas mediante ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -36,7 +34,7 @@ ms.locfileid: "67987589"
   
  Compile con /EHsc /D, "UNICODE", y odbc32.lib.  
   
- El segundo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código elimina la tabla creada por este ejemplo.  
+ La segunda [!INCLUDE[tsql](../../includes/tsql-md.md)] lista de código () elimina la tabla creada por este ejemplo.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

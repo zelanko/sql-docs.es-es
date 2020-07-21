@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3508e1585c7a73a42a69549805835c91d778bf83
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072211"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409214"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68072211"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 THROW [ { error_number | @local_variable },  
         { message | @local_variable },  
         { state | @local_variable } ]   
@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  Es una constante o una variable comprendida entre 0 y 255 que indica el estado que se ha de asociar al mensaje. *state* es **tinyint**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La instrucción anterior a la instrucción THROW debe ir seguida del terminador de instrucción punto y coma (;).  
   
  Si una construcción TRY…CATCH no está disponible, el lote de instrucciones se finaliza. Se establecen el número de línea y el procedimiento donde se produce la excepción. La gravedad se establece en 16.  
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |Si se pasa *msg_id* a RAISERROR, el identificador se debe definir en sys.messages.|El parámetro *error_number* no tiene que definirse en sys.messages.|  
 |El parámetro *msg_str* puede contener estilos de formato de **printf**.|El parámetro *message* no acepta el formato de estilo de **printf**.|  
-|El parámetro *severity* especifica la gravedad de la excepción.|No hay ningún parámetro *severity*. La gravedad de la excepción siempre está establecida en 16.|  
+|El parámetro *severity* especifica la gravedad de la excepción.|No hay ningún parámetro *severity*. Cuando THROW se usa para iniciar la excepción, la gravedad siempre se establece en 16, pero cuando se usa para volver a producir una excepción existente, la gravedad se establecerá en el nivel de gravedad de la excepción en cuestión.|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -123,15 +123,14 @@ END CATCH;
 ```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
-,@severity = 16  
-,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
+    ,@severity = 16  
+    ,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
     ,@lang = 'us_english';   
 GO  
   
 DECLARE @msg NVARCHAR(2048) = FORMATMESSAGE(60000, 500, N'First string', N'second string');   
   
 THROW 60000, @msg, 1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

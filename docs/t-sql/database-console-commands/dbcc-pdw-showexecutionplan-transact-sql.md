@@ -12,32 +12,32 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7d350d78a4a79bd66cd6bda5794b87d97cf043dc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809842"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196901"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Muestra el plan de ejecución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una consulta que se ejecuta en un nodo de ejecución o un nodo de control determinado de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Úselo para solucionar problemas de rendimiento de consultas mientras se ejecutan las consultas en los nodos de ejecución y de control.
   
 Una vez que se conozcan los problemas de rendimiento de las consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de SMP que se ejecutan en los nodos de ejecución, hay varias maneras de mejorar el rendimiento. Entre las diversas formas de mejorar el rendimiento de las consultas de los nodos de ejecución se incluye crear estadísticas de varias columnas, crear índices no agrupados o usar sugerencias de consulta.
   
-![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
 Sintaxis de Azure SQL Data Warehouse:
 
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  
 [;]  
 ```  
 Sintaxis para Almacenamiento de datos paralelos de Azure:
   
-```sql
+```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )  
 [;]  
 ```  
@@ -57,7 +57,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
   
 Requiere el permiso VIEW-SERVER-STATE en el dispositivo.
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+## <a name="examples-sssdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
 ### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
  Cuando se ejecuta en una instancia de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], modifique la consulta anterior para seleccionar también el valor de distribution_id.  
@@ -75,7 +75,7 @@ Esto devolverá el spid de cada distribución que se ejecuta activamente. Si le 
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
  Cuando una consulta se ejecuta durante mucho tiempo, significa que está ejecutando una operación de plan de consulta DMS o una operación de plan de consulta SQL.  
   
@@ -95,6 +95,6 @@ En función de los resultados de la consulta anterior, use los parámetros sql_s
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  
 ```  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

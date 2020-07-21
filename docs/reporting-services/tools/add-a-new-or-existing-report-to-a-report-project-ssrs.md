@@ -1,5 +1,5 @@
 ---
-title: Agregar un informe nuevo o existente a un proyecto de informe (SSRS) | Microsoft Docs
+title: Adición de un informe nuevo o existente a un proyecto de informe | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d9afb31b4c2793e7196fda36280fed3d590a32cf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576798"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77077894"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Agregar un informe nuevo o existente a un proyecto de informe (SSRS)
   En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puede agregar un nuevo informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usando el Asistente para informes o agregando un nuevo informe en blanco al proyecto. También puede agregar un informe existente. Después de agregar un informe, puede ver el nombre de informe en la lista que se muestra bajo la carpeta **Informes** del proyecto.  
@@ -29,7 +29,7 @@ ms.locfileid: "65576798"
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta Informes y, después, haga clic en **Agregar nuevo informe**. Se abrirá el cuadro de diálogo **Asistente para informes** .  
   
-     Los pasos del asistente le guiarán a lo largo del proceso de creación de un origen de datos, creación de un conjunto de datos con una consulta, definición de grupos, especificación de un diseño y creación del informe. Entre estos pasos se incluyen los siguientes:  
+     Los pasos del asistente le guiarán a lo largo del proceso de creación de un origen de datos, creación de un conjunto de datos con una consulta, definición de grupos, especificación de un diseño y creación del informe. Entre los pasos se incluyen:  
   
     -   **Seleccionar un origen de datos.** El primer paso para crear un informe es definir un origen de datos. El Asistente para informes muestra una lista de todos los orígenes de datos compartidos del proyecto de informe y, además, una opción para crear un nuevo origen de datos.  
   

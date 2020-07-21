@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DATETIMEOFFSETFROMPARTS function
 ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 786729a6bfcae37e3c2fb1aa9a9e85839ca9c127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21004da03ef694633b28518777c2ed2f0ac59d06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85683354"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ Valor literal entero que especifica la precisión del valor **datetimeoffset** q
 ## <a name="return-types"></a>Tipos de valores devueltos
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 `DATETIMEOFFSETFROMPARTS` devuelve un tipo de datos **datetimeoffset** totalmente inicializado. Los argumentos de desplazamiento representan el desplazamiento de zona horaria. En el caso de los argumentos de desplazamiento omitidos, `DATETIMEOFFSETFROMPARTS` supone un desplazamiento de zona horaria de `00:00`; en otras palabras, no hay ningún desplazamiento de zona horaria. En el caso de los argumentos de desplazamiento especificados, `DATETIMEOFFSETFROMPARTS` espera valores para ambos argumentos y ambos valores positivos o negativos. Si *minute_offset* tiene un valor y *hour_offset* no tiene ningún valor, `DATETIMEOFFSETFROMPARTS` generará un error. `DATETIMEOFFSETFROMPARTS` generará un error si los demás argumentos tienen valores no válidos. Si al menos uno de los argumentos requeridos tiene un valor `NULL`, `DATETIMEOFFSETFROMPARTS` va a devolver `NULL`. Pero si el argumento *precision* tiene un valor `NULL`, `DATETIMEOFFSETFROMPARTS` generará un error.  
   
@@ -135,7 +135,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   

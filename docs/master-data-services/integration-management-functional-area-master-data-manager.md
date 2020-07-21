@@ -1,5 +1,5 @@
 ---
-title: Área funcional de Administración de integraciones (Master Data Manager) | Microsoft Docs
+title: Área funcional de Administración de integraciones
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2f12e6246ac08be29c673514ad7f35dbaa74a820
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b859fe26c6daf5fd8b2b3135f833867a9c6d7020
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812945"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional de Administración de integraciones (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En el área funcional de Administración de integraciones, los administradores pueden importar datos de tablas de ensayo y crear vistas de suscripciones que se usarán para sistemas de suscripción. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -30,14 +30,14 @@ ms.locfileid: "68007211"
   
  [Solucionar problemas del proceso de almacenamiento provisional (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
-## <a name="export-data"></a>Exportar datos  
- [Información general: exportación de datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
+## <a name="export-data"></a>Exportación de datos  
+ [Información general: exportar datos &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)  
   
  [Crear una vista de suscripciones para exportar datos &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
  [Eliminar una vista de suscripciones &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

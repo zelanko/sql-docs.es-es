@@ -1,6 +1,6 @@
 ---
-title: Especificar funciones booleanas en consultas XPath (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Usar funciones booleanas en consultas XPath (SQLXML)
+description: Obtenga información sobre cómo se especifican las funciones booleanas de SQLXML 4,0 true (), false () y not () en las consultas XPath.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,22 +16,23 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d00bf01660c212b19c529f6012ec29eda60295c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d7180a820a8b5a6daf6ef02d94582ff07ad6f6a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907754"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773027"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones booleanas en consultas XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado &#40;para&#41;XPath ejemplos SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Especificar la función booleana not()  
- Esta consulta devuelve todos los elementos secundarios **\<Customer >** del nodo de contexto que no tienen **\<orden >** elementos secundarios:  
+ Esta consulta devuelve todos los **\<Customer>** elementos secundarios del nodo de contexto que no tienen **\<Order>** elementos secundarios:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -78,8 +79,8 @@ ms.locfileid: "72907754"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>b. Especificar las funciones booleanas true () y false ()  
- Esta consulta devuelve todos los elementos secundarios del elemento **\<Customer >** del nodo de contexto que no tienen **\<orden >** elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar las funciones booleanas true () y false ()  
+ Esta consulta devuelve todos los elementos **\<Customer>** secundarios del nodo de contexto que no tienen **\<Order>** elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
   
 ```  
 /child::Customer[child::Order=false()]  

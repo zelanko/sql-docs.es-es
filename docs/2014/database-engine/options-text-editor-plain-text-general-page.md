@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (página General del Editor de texto: texto sin formato -) | Microsoft Docs'
+title: Opciones (editor de texto-texto sin formato-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8a3a172a29949db0ab83bce0d771c98afa6ef64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929836"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Editor de texto - Texto sin formato - Página General)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto simple** y, a continuación, haga clic en **General**.  
@@ -30,7 +29,7 @@ ms.locfileid: "66089277"
  **Ocultar miembros avanzados**  
  El editor de texto simple no admite esta característica.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  El editor de texto simple no admite esta característica.  
   
 ## <a name="settings"></a>Configuración  
@@ -46,7 +45,7 @@ ms.locfileid: "66089277"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
+ **Aplicar comandos Cortar o Copiar a líneas en blanco si no hay selección**  
  Establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  
@@ -62,7 +61,7 @@ ms.locfileid: "66089277"
 > [!NOTE]  
 >  Estos números de línea no se agregan al texto y no se imprimen. Solo sirven como referencia.  
   
- **Habilitar navegación a direcciones URL con un solo clic**  
+ **Habilitar acceso a direcciones URL con un solo clic**  
  El cursor cambia a una mano cuando pasa por encima de una dirección URL en el editor. Puede hacer clic en la dirección URL para abrir la página indicada en el explorador web.  
   
  **Barra de navegación**  

@@ -16,42 +16,42 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939803"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81301446"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisitos del sistema (controlador ODBC de Visual FoxPro)
-Los requisitos del sistema para la instalación de proporcionan la mínima sistema operativo y el espacio en disco necesario para instalar correctamente el controlador. Después de instalar al controlador, puede seleccionar el software de aplicación específica que desea utilizar para tener acceso a datos de Visual FoxPro.  
+Los requisitos del sistema para la instalación de proporcionan el sistema operativo y el espacio de disco mínimos necesarios para instalar correctamente el controlador. Después de instalar el controlador, puede seleccionar el software de aplicación específico que desea usar para tener acceso a los datos de Visual FoxPro.  
   
 ## <a name="installation-requirements"></a>Requisitos de instalación  
- Para los requisitos de instalación y otra información, consulte [el sitio de descarga de Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Para obtener información sobre los requisitos de instalación y otros datos, consulte [el sitio de descarga del controlador ODBC de Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
-## <a name="accessing-visual-foxpro-data"></a>Acceso a datos de Visual FoxPro  
- Para obtener acceso a Microsoft Visual FoxPro o FoxPro 2. *x* datos, debe tener lo siguiente:  
+## <a name="accessing-visual-foxpro-data"></a>Obtener acceso a los datos de Visual FoxPro  
+ Para tener acceso a Microsoft Visual FoxPro o FoxPro 2. *x* datos, debe tener lo siguiente:  
   
--   Software de cliente de ODBC (se instala automáticamente con el controlador)  
+-   Software cliente ODBC (instalado automáticamente con el controlador)  
   
 -   Controlador ODBC de Microsoft Visual FoxPro  
   
 -   Cualquiera de los siguientes tipos de software de aplicación:  
   
-    -   Aplicación de Microsoft Office como Microsoft Excel o Microsoft Word  
+    -   Microsoft Office aplicación como Microsoft Excel o Microsoft Word  
   
-    -   Lenguaje de C o C++ aplicación ODBC  
+    -   Aplicación ODBC de lenguaje C o C++  
   
-    -   Aplicación de ODBC de Microsoft Visual Basic  
+    -   Aplicación ODBC de Microsoft Visual Basic  
   
 -   Cualquiera de los siguientes tipos de datos:  
   
-    -   Visual FoxPro [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) o un directorio de [libre de tablas](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   Base de [datos](../../odbc/microsoft/visual-foxpro-terminology.md) de Visual FoxPro o un directorio de [tablas disponibles](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2.0, 2.5, 2.6 [tabla](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   [Tabla](../../odbc/microsoft/visual-foxpro-terminology.md) FoxPro 2,0, 2,5 y 2,6  
   
- El controlador ODBC de Visual FoxPro admite conjuntos de caracteres de doble byte (DBCS). Para obtener más información, consulte [soporte internacional](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
+ El controlador ODBC de Visual FoxPro admite juegos de caracteres de doble byte (DBCS). Para obtener más información, consulte [soporte internacional](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- El controlador no es compatible con aplicaciones de Microsoft Windows 3.1 de 16 bits.
+ El controlador no es compatible con las aplicaciones de 16 bits de Microsoft Windows 3,1.

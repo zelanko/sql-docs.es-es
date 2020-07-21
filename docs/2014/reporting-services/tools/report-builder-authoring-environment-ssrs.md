@@ -1,5 +1,5 @@
 ---
-title: (SSRS) del generador de informes | Microsoft Docs
+title: Generador de informes (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100116"
 ---
 # <a name="report-builder-ssrs"></a>Generador de informes (SSRS)
@@ -43,8 +43,8 @@ ms.locfileid: "66100116"
   
  El Generador de informes y el Diseñador de informes comparten muchas características. Para obtener más información acerca de Generador de informes, vea la [documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar el acceso al Generador de informes](../report-server/configure-report-builder-access.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar el acceso a Generador de informes](../report-server/configure-report-builder-access.md)   
  [Herramientas de Reporting Services](reporting-services-tools.md)   
  [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

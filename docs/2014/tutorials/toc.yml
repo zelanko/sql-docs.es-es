@@ -260,7 +260,7 @@
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
         - name: 'Tutorial: Aplicación de formato a un texto (Generador de informes)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico de columnas a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
         - name: 'Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md

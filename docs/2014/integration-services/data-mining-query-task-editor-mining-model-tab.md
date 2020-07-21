@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a79b0966dd43d5da8599699cb4b345bb34f30cc7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890775"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437522"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Modelo de minería de datos)
   Utilice la pestaña **Modelo de minería de datos** del cuadro de diálogo **Tarea Consulta de minería de datos** para especificar la estructura y el modelo de minería de datos que se van a utilizar.  
@@ -27,7 +26,7 @@ ms.locfileid: "68890775"
  Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opciones generales  
- **Name**  
+ **Nombre**  
  Escriba un nombre único para la tarea Consulta de minería de datos. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -37,7 +36,7 @@ ms.locfileid: "68890775"
  Escriba una descripción de la tarea Consulta de minería de datos.  
   
 ## <a name="mining-model-tab-options"></a>Opciones de la pestaña Modelo de minería de datos  
- **Conexión**  
+ **Connection**  
  Seleccione un administrador de conexiones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de la lista, o bien haga clic en **Nuevo** para crear un administrador de conexiones.  
   
  **Temas relacionados:**  [Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)  
@@ -53,10 +52,10 @@ ms.locfileid: "68890775"
  **Modelos de minería de datos**  
  Seleccione un modelo de minería de datos que se haya generado en la estructura de minería de datos seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Consulta de minería de datos &#40;pestaña Consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Editor de la tarea Consulta de minería de datos &#40;pestaña Salida&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Editor de la tarea consulta de minería de datos &#40;pestaña consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Editor de la tarea consulta de minería de datos &#40;pestaña salida&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

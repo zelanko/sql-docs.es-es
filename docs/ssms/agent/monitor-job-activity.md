@@ -1,10 +1,9 @@
 ---
-title: Supervisar la actividad de trabajos | Microsoft Docs
-ms.custom: ''
+title: Actividad de trabajos de monitor
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,13 +20,15 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a227b7ee1723dd8a77d7eb118476969575c5951c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0fdb46ddca31f870363385bef70adde37a7a36ef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267502"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75252359"
 ---
 # <a name="monitor-job-activity"></a>Actividad de trabajos de monitor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ También puede ver la actividad de trabajo de la sesión actual mediante el proc
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe cómo ver el estado de tiempo de ejecución de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Ver actividad de trabajo](../../ssms/agent/view-job-activity.md)|  
   
 ## <a name="see-also"></a>Consulte también  

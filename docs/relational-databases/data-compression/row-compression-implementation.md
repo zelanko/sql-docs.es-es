@@ -14,15 +14,15 @@ ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2127b9164537afca99b8bd556458137d6713001c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5af131c9824de651a198fb99afaa526f3dd0bd6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637302"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de fila. Este resumen proporciona la información básica para ayudarle a planear el espacio de almacenamiento que necesita para sus datos.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "68030523"
 |**datetimeoffset**|Sí|Se parece a **datetime2**, salvo que hay 2 bytes de zona horaria del formato (HH:MM).<br /><br /> Al igual que **datetime2**, la compresión puede ahorrar 2 bytes.<br /><br /> Para valores de zona horaria, el valor MM podría ser 0 en la mayoría de los casos. Por consiguiente, la compresión solo podrá ahorrar 1 byte.<br /><br /> No hay ningún cambio en el almacenamiento para la compresión de fila.|  
 |**char**|Sí|Se quitan los caracteres de relleno final. Observe que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta el mismo carácter de relleno, independientemente de la intercalación que se utilice.|  
 |**varchar**|No|Ningún efecto.|  
-|**texto**|No|Ningún efecto.|  
+|**text**|No|Ningún efecto.|  
 |**nchar**|Sí|Se quitan los caracteres de relleno final. Observe que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta el mismo carácter de relleno, independientemente de la intercalación que se utilice.|  
 |**nvarchar**|No|Ningún efecto.|  
 |**ntext**|No|Ningún efecto.|  
-|**binario**|Sí|Se quitan los ceros finales.|  
+|**binary**|Sí|Se quitan los ceros finales.|  
 |**varbinary**|No|Ningún efecto.|  
-|**imagen**|No|Ningún efecto.|  
+|**image**|No|Ningún efecto.|  
 |**cursor**|No|Ningún efecto.|  
 |**timestamp** / **rowversion**|Sí|Usa la representación de datos enteros con 8 bytes. Hay un contador de marca de tiempo que se mantiene para cada base de datos y su valor se inicia en 0. Se puede comprimir como cualquier otro valor entero.|  
 |**sql_variant**|No|Ningún efecto.|  

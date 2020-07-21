@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 561f6a893803aba1e545356b05de9a5e86088476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706151"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compara un valor escalar con un conjunto de valores de una sola columna. SOME y ANY son equivalentes.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68072261"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   
@@ -62,7 +62,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ## <a name="result-value"></a>Valor del resultado  
  SOME o ANY devuelven **TRUE** cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_ **,** _x_), donde *x* es un valor del conjunto de una sola columna; en caso contrario, devuelve **FALSE**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SOME requiere que la *scalar_expression* se compare de forma positiva con al menos un valor devuelto por la subconsulta. Para ver instrucciones que requieren que *scalar_expression* se compare de forma positiva con solo un valor devuelto por la subconsulta, vea [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = SOME (subconsulta) se evaluaría como TRUE para una *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor 3) no cumplirían los criterios de la expresión.  
   
 ## <a name="examples"></a>Ejemplos  

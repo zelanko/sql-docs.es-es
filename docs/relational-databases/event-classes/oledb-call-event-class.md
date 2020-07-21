@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115862"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753343"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call, clase de eventos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de evento **OLEDB Call** tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama a un proveedor OLE DB para consultas distribuidas y procedimientos almacenados remotos.  
   
  Incluya la clase de evento **OLEDB Call** en seguimientos para supervisar solo aquellas llamadas que no solicitan datos o que no se realizan al método **QueryInterface** . Cuando se incluye la clase de evento **OLEDB Call** en un seguimiento, la cantidad de sobrecarga depende de la frecuencia con que se produzcan las llamadas OLE DB a la base de datos durante el seguimiento. Si se realizan llamadas con frecuencia, el seguimiento puede mermar notablemente el rendimiento.  
@@ -34,7 +34,7 @@ ms.locfileid: "68115862"
 |DatabaseID|**Int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duration|**Bigint**|Tiempo necesario para completar el evento de llamada OLE DB.|13|No|  
-|EndTime|**Fecha y hora**|Hora a la que finalizó el evento.|15|Sí|  
+|EndTime|**Datetime**|Hora a la que finalizó el evento.|15|Sí|  
 |Error|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo sys.messages.|31|Sí|  
 |EventClass|**Int**|Tipo de evento = 119.|27|No|  
 |EventSequence|**Int**|Secuencia de la clase de eventos OLE DB en el lote.|51|No|  
@@ -49,7 +49,7 @@ ms.locfileid: "68115862"
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ProviderName|**nvarchar**|Nombre del proveedor OLE DB.|46|Sí|  
-|IdSolicitud|**Int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|RequestID|**Int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**Int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  

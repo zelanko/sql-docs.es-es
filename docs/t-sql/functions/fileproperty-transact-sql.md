@@ -20,17 +20,17 @@ helpviewer_keywords:
 - FILEPROPERTY function
 - file names [SQL Server], FILEPROPERTY
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 518751aa443d2a2a93843fb79c5bcfdd2196db08
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071403"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882642"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el valor de una propiedad de nombre de archivo especificada al especificar un nombre de archivo en la base de datos actual y un nombre de propiedad. Devuelve NULL para los archivos que no estén en la base de datos actual.  
   
@@ -50,17 +50,17 @@ FILEPROPERTY ( file_name , property )
  *property*  
  Es una expresión que contiene el nombre de la propiedad de archivo que se va a devolver. *property* es **varchar (128)** y puede ser uno de estos valores.  
   
-|Valor|Descripción|Valor devuelto|  
+|Value|Descripción|Valor devuelto|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|El grupo de archivos es de solo lectura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsPrimaryFile**|El archivo es el archivo principal.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsLogFile**|El archivo es un archivo de registro.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**SpaceUsed**|Cantidad de espacio utilizada por el archivo especificado.|Número de páginas asignadas en el archivo.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  *file_name* corresponde a la columna **name** de la vista de catálogo **sys.master_files** o **sys.database_files**.  
   
 ## <a name="examples"></a>Ejemplos  

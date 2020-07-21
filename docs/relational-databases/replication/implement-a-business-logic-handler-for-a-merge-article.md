@@ -1,6 +1,7 @@
 ---
-title: Implementar un controlador de lógica de negocios para un artículo de mezcla | Microsoft Docs
-ms.custom: ''
+title: Configuración de un controlador de lógica de negocios para un artículo de combinación
+description: Use la programación de la replicación o Replication Management Objects para configurar un controlador de lógica de negocios para la sincronización de la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: ea4a56fdd17978bffa633bf1c466f493969074a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716806"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar un controlador de lógica de negocios para un artículo de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo implementar un controlador de lógica de negocios para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante programación de la replicación o Replication Management Objects (RMO).  
   
  El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos que se producen durante el proceso de sincronización de la replicación de mezcla. El proceso de la replicación puede invocar los métodos en el controlador de lógica de negocios para cada fila cambiada que se replica durante la sincronización.  
@@ -51,7 +52,7 @@ ms.locfileid: "70846684"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> Usar programación de la replicación  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> Usar programación de la replicación  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>Para crear e implementar un controlador de lógica de negocios  
   
@@ -59,7 +60,7 @@ ms.locfileid: "70846684"
   
 2.  Agregue referencias al proyecto para los siguientes espacios de nombres.  
   
-    |Referencia de ensamblado|Ubicación|  
+    |Referencia de ensamblado|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalación predeterminada)|  
     |<xref:System.Data>|GAC (componente de .NET Framework)|  
@@ -113,7 +114,7 @@ ms.locfileid: "70846684"
   
 1.  Ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) y especifique **\@publication**, **\@article**, un valor de **article_resolver** para **\@property** y el nombre descriptivo del controlador de lógica de negocios para **\@value**.  
   
-###  <a name="TsqlExample"></a> Ejemplos (programación de la replicación)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Ejemplos (programación de la replicación)  
  Este ejemplo muestra un controlador de lógica de negocios que crea un registro de auditoría.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -124,7 +125,7 @@ ms.locfileid: "70846684"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>Para crear un controlador de lógica de negocios  
   
@@ -132,7 +133,7 @@ ms.locfileid: "70846684"
   
 2.  Agregue referencias al proyecto para los siguientes espacios de nombres.  
   
-    |Referencia de ensamblado|Ubicación|  
+    |Referencia de ensamblado|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalación predeterminada)|  
     |<xref:System.Data>|GAC (componente de .NET Framework)|  
@@ -171,11 +172,11 @@ ms.locfileid: "70846684"
   
 1.  Cree una conexión al distribuidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
 3.  Llame a <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> y compruebe el objeto <xref:System.Collections.ArrayList> devuelto para asegurarse de que el ensamblado aún no se ha registrado como un controlador de lógica de negocios.  
   
-4.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Especifique las propiedades siguientes:  
+4.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Especifique las propiedades siguientes:  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - nombre del ensamblado .NET. Si el ensamblado no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica dicho agente o en la GAC, debe incluir la ruta de acceso completa con el nombre del ensamblado. Debe incluir la ruta de acceso completa con el nombre del ensamblado al usar un controlador de lógica de negocios con la sincronización web.  
   
@@ -193,7 +194,7 @@ ms.locfileid: "70846684"
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle> . Establezca las siguientes propiedades:  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle>. Establezca las siguientes propiedades:  
   
     -   El nombre del artículo para <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -209,7 +210,7 @@ ms.locfileid: "70846684"
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>y <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -219,7 +220,7 @@ ms.locfileid: "70846684"
   
 6.  Establezca el nombre descriptivo del controlador de negocios para <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>. Este es el valor de la propiedad <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> especificado al registrar el controlador de lógica de negocios.  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  En este ejemplo se muestra un controlador de lógica de negocios que registra información acerca de inserciones, actualizaciones y eliminaciones en el suscriptor.  
   
  [!code-cs[HowTo#rmo_BusinessLogicCode](../../relational-databases/replication/codesnippet/csharp/rmohowto/businesslogic.cs#rmo_businesslogiccode)]  
@@ -241,7 +242,7 @@ ms.locfileid: "70846684"
 ## <a name="see-also"></a>Consulte también  
  [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Depurar un controlador de lógica de negocios &#40;programación de la replicación&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
- [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Conceptos de Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Management Objects Concepts (Conceptos de Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

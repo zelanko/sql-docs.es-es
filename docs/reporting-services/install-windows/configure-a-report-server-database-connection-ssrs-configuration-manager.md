@@ -1,19 +1,20 @@
 ---
-title: Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs
+title: Configuración de una conexión a la base de datos del servidor de informes (Administrador de configuración) | Microsoft Docs
+description: Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, orígenes de datos compartidos, recursos y metadatos administrados por el servidor.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239379"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531166"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
 
@@ -31,11 +32,11 @@ Debe configurar una conexión a la base de datos del servidor de informes en los
 
 - Cambiar la cuenta o contraseña de usuario que se utiliza para la conexión a la base de datos. Solo tiene que actualizar la conexión a la base de datos cuando la información de la cuenta esté almacenada en el archivo RSReportServer.config. Si utiliza la cuenta de servicio para la conexión (que utiliza la seguridad integrada de Windows como tipo de credenciales), la contraseña no se almacena, por lo que no es necesario actualizar la información de conexión. Para obtener más información sobre cómo cambiar cuentas, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
 
-- Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para obtener más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+- Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
 
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Cómo se conecta Reporting Services al motor de base de datos
 
-El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para obtener más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 La base de datos del servidor de informes es un componente interno, al que solo tiene acceso el servidor de informes. El servidor de informes utiliza exclusivamente las credenciales y la información de conexión que se especifique para la base de datos del servidor de informes. Los usuarios que solicitan los informes no requieren permisos de bases de datos o un inicio de sesión de base de datos para la base de datos del servidor de informes.  
 
@@ -90,6 +91,13 @@ Hay tres tipos de credenciales que se pueden utilizar en una conexión a la base
   
 Si la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para la autenticación de Windows y está en el mismo dominio o en un dominio de confianza con el equipo del servidor de informes, puede configurar la conexión para utilizar la cuenta de servicio o una cuenta de usuario de dominio que administre como una propiedad de conexión a través de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si el servidor de bases de datos está en un dominio diferente o si utiliza la seguridad del grupo de trabajo, debe configurar la conexión para utilizar un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En este caso, asegúrese de cifrar la conexión.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Al usar Instancia administrada de Azure SQL Database para hospedar las bases de datos del servidor de informes, la autenticación de SQL Server es el único tipo de credencial compatible. Además, tenga en cuenta que Instancia administrada no puede hospedar la instancia del servidor de informes.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>Usar cuentas de servicio y seguridad integrada
 
 Puede utilizar la seguridad integrada de Windows para conectarse a través de la cuenta del servicio Servidor de informes. A la cuenta se le conceden derechos de inicio de sesión en la base de datos del servidor de informes. Éste es el tipo de credenciales predeterminado que elige el programa de instalación si instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada.  
@@ -104,14 +112,7 @@ Puede especificar una cuenta de usuario de Windows para la conexión del servido
 
 #### <a name="using-a-sql-server-login"></a>Usar un inicio de sesión de SQL Server
 
-Puede especificar un solo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la base de datos del servidor de informes. Si utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos del servidor de informes se encuentra en un equipo remoto, utilice IPSEC para contribuir a proteger la transmisión de datos entre los servidores. Si utiliza un inicio de sesión de base de datos, debe actualizar la conexión a la base de datos del servidor de informes cada vez que cambie la contraseña o la cuenta.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Cuando se usa una Instancia administrada de Azure SQL para hospedar bases de datos de Reporting Services 2019, la compatibilidad se limita al uso de SQL Server credenciales de inicio de sesión para la conexión.
-
-::: moniker-end
+Puede especificar un solo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la base de datos del servidor de informes. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos del servidor de informes se encuentra en un equipo remoto, utilice IPSEC para contribuir a proteger la transmisión de datos entre los servidores. Si utiliza un inicio de sesión de base de datos, debe actualizar la conexión a la base de datos del servidor de informes cada vez que cambie la contraseña o la cuenta.
 
 ### <a name="database-permissions"></a>Permisos para la base de datos
 

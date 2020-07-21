@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VB) Delete | Microsoft Docs
+title: Ejemplo del método Delete (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], Visual Basic example
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1b2906515b09eb32caf6def6e84d3b2bbd21dd15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 83caae41ad4e8e5dc06863c1a714f59fc97379c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933113"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765596"
 ---
 # <a name="delete-method-example-vb"></a>Eliminar el ejemplo del método (VB)
-Este ejemplo se usa el [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para quitar un registro especificado de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+En este ejemplo se usa el método [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para quitar un registro especificado de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginDeleteVB  
@@ -128,6 +128,6 @@ End Sub
 'EndDeleteVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Eliminar método (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+## <a name="see-also"></a>Consulte también  
+ [Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

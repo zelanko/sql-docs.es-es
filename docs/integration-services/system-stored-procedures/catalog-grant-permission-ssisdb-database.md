@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9053a5ab4ac64bea8104ce7d9079bf891ffa887a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 948f49d0de9b3160cececa569dd8e29686519260
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637743"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Concede un permiso en un objeto protegible del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -78,14 +78,14 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Los inicios de sesión que se autenticaron con SQL Server no pueden llamar a este procedimiento. El inicio de sesión de SA no puede llamarlo.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento almacenado le permite conceder los tipos de permiso descritos en la tabla siguiente:  
   
 |Valor de permission_type|Nombre del permiso|Descripción del permiso|Tipos de objetos aplicables|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permite a la entidad de seguridad leer información que se considera parte del objeto, como las propiedades. No permite a la entidad de seguridad enumerar o leer el contenido de otros objetos contenidos dentro del objeto.|Carpeta, proyecto, entorno, operación|  
 |`2`|MODIFY|Permite a la entidad de seguridad modificar información que se considera parte del objeto, como las propiedades. No permite a la entidad de seguridad modificar otros objetos contenidos dentro del objeto.|Carpeta, proyecto, entorno, operación|  
-|`3`|Ejecute|Permite a la entidad de seguridad ejecutar todos los paquetes del proyecto.|Proyecto|  
+|`3`|Ejecute|Permite a la entidad de seguridad ejecutar todos los paquetes del proyecto.|proyecto|  
 |`4`|MANAGE_PERMISSIONS|Permite a la entidad de seguridad asignar permisos a los objetos.|Carpeta, proyecto, entorno, operación|  
 |`100`|CREATE_OBJECTS|Permite a la entidad de seguridad crear objetos en la carpeta.|Carpeta|  
 |`101`|READ_OBJECTS|Permite a la entidad de seguridad leer todos los objetos de la carpeta.|Carpeta|  

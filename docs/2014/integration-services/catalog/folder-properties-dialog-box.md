@@ -11,18 +11,17 @@ f1_keywords:
 - sql12.ssis.ssms.isfolderprop.general.f1
 - sql12.ssis.ssms.isfolderprop.permissions.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4075a429f94451d7b00ee44ac1ac799c29787a41
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771591"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439082"
 ---
 # <a name="folder-properties-dialog-box"></a>Propiedades de la carpeta (cuadro de diálogo)
-  Una carpeta contiene proyectos y entornos del catálogo de `SSISDB`. Cada carpeta define los permisos que se aplican a su contenido. Para más información sobre los permisos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [catalog.grant_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
+  Una carpeta contiene proyectos y entornos del catálogo de `SSISDB`. Cada carpeta define los permisos que se aplican a su contenido. Para más información sobre los permisos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [catalog.grant_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>Para establecer la descripción de la carpeta y los permisos  
   
@@ -30,14 +29,14 @@ ms.locfileid: "62771591"
   
 2.  En la página **General** , seleccione **Descripción** en **General** y escriba una descripción opcional.  
   
-3.  En la página **Permisos** , haga clic **Examinar…**, seleccione una o más entidades de base de datos y haga clic en **Aceptar**.  
+3.  En la página **Permisos** , haga clic **Examinar…** , seleccione una o más entidades de base de datos y haga clic en **Aceptar**.  
   
 4.  Seleccione un nombre en **Inicios de sesión o roles** y especifique los permisos adecuados en **Permisos**.  
   
 5.  Haga clic en **Aceptar** para aceptar los cambios y cierre el cuadro de diálogo **Propiedades de carpetas** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de Integration Services &#40;SSIS&#41;](integration-services-ssis-server-and-catalog.md)   
- [catalog.grant_permission &#40;base de datos SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
+ [catalog.grant_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   
   

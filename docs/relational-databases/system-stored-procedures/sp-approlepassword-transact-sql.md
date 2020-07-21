@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_approlepassword
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d6fb44101952c5fe5fe28ba9764c43658a6208a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874854"
 ---
-# <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia la contraseña de un rol de aplicación en la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, use [ALTER Application role](../../t-sql/statements/alter-application-role-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,18 +42,18 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'` Es el nombre del rol de aplicación. *rol* es **sysname**, no tiene ningún valor predeterminado. *rol* debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'`Es el nombre del rol de aplicación. *Role* es de **tipo sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
   
-`[ @newpwd = ] 'password'` Es la nueva contraseña para el rol de aplicación. *contraseña* es **sysname**, no tiene ningún valor predeterminado. *contraseña* no puede ser NULL.  
+`[ @newpwd = ] 'password'`Es la nueva contraseña para el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* no puede ser null.  
   
 > [!IMPORTANT]  
->  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Contraseñas seguras](../../relational-databases/security/strong-passwords.md).  
+>  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_approlepassword** no se puede ejecutar dentro de una transacción definida por el usuario.  
+## <a name="remarks"></a>Observaciones  
+ **sp_approlepassword** no se puede ejecutar en una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos.  
@@ -65,11 +65,11 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_addapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_addapprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_setapprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

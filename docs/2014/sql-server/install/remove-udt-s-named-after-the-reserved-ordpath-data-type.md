@@ -1,5 +1,5 @@
 ---
-title: Quitar UDT&#39;s con el nombre del tipo de datos reservado ORDPATH | Microsoft Docs
+title: Quitar UDT&#39;s con nombre del tipo de datos ORDPATH reservado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0528d19de17781d863e3a42fdef7db558fe5d190
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092922"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059129"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Quitar UDT&#39;s con el nombre del tipo de datos ORDPATH reservado
+# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Quitar UDT&#39;s con nombre del tipo de datos Reserved ORDPATH
   El Asesor de actualizaciones detectó un tipo definido por el usuario (UDT) que se denomina con un término reservado para el tipo de datos `ORDPATH`.  
   
 ## <a name="component"></a>Componente  

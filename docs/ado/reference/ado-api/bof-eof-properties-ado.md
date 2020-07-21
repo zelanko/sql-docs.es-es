@@ -1,5 +1,5 @@
 ---
-title: BOF, EOF (propiedades) (ADO) | Microsoft Docs
+title: Propiedades BOF, EOF (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,59 +15,59 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920385"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748734"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
--   **BOF** indica que la posición actual del registro es antes del primer registro en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+-   **BOF** Indica que la posición del registro actual es anterior al primer registro de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
--   **EOF** indica que es la posición actual del registro después del último registro en un **Recordset** objeto.  
+-   **EOF** Indica que la posición del registro actual es posterior al último registro de un objeto de **conjunto de registros** .  
   
 ## <a name="return-value"></a>Valor devuelto  
- El **BOF** y **EOF** devuelven propiedades **booleano** valores.  
+ Las propiedades **BOF** y **EOF** devuelven valores **booleanos** .  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **BOF** y **EOF** propiedades para determinar si un **Recordset** objeto contiene registros o si se ha desplazado más allá de los límites de un **conjunto de registros**  objeto cuando se mueve de un registro a otro.  
+ Use las propiedades **BOF** y **EOF** para determinar si un objeto de **conjunto de registros** contiene registros o si ha ido más allá de los límites de un objeto de conjunto de **registros** al desplazarse de un registro a otro.  
   
- El **BOF** propiedad devuelve **True** (-1) si la posición actual del registro es antes del primer registro y **False** (0) si la posición actual del registro está en o después del primer registro.  
+ La propiedad **BOF** devuelve **true** (-1) si la posición del registro actual es anterior al primer registro y **false** (0) si la posición del registro actual está en el primer registro o después del mismo.  
   
- El **EOF** propiedad devuelve **True** si es la posición actual del registro después del último registro y **False** si la posición actual del registro está en o antes del último registro.  
+ La propiedad **EOF** devuelve **true** si la posición del registro actual está después del último registro y **false** si la posición del registro actual es el último registro o anterior.  
   
- Si el **BOF** o **EOF** propiedad es **True**, no hay ningún registro actual.  
+ Si el valor de la propiedad **BOF** o **EOF** es **true**, no hay ningún registro actual.  
   
- Si abre un **Recordset** objeto que no contiene registros, la **BOF** y **EOF** propiedades se establecen en **True** (consulte la [ RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para obtener más información sobre este estado de un **Recordset**). Al abrir un **Recordset** objeto que contiene al menos un registro, el primer registro es el registro actual y el **BOF** y **EOF** propiedades son **False** .  
+ Si abre un objeto **de conjunto de registros** que no contiene registros, las propiedades **BOF** y **EOF** se establecen en **true** (vea la propiedad [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para obtener más información sobre este estado de un **conjunto de registros**). Al abrir un objeto de **conjunto de registros** que contiene al menos un registro, el primer registro es el registro actual y las propiedades **BOF** y **EOF** son **false**.  
   
- Si elimina el último registro que queda en el **Recordset** objeto, el **BOF** y **EOF** propiedades pueden permanecer **False** hasta que intenta colocar el registro actual.  
+ Si elimina el último registro restante en el objeto de **conjunto de registros** , las propiedades **BOF** y **EOF** pueden seguir siendo **false** hasta que intente volver a colocar el registro actual.  
   
- Esta tabla muestra qué **mover** se permiten métodos con diferentes combinaciones de la **BOF** y **EOF** propiedades.  
+ En esta tabla se muestran los métodos de **movimiento** que se permiten con diferentes combinaciones de las propiedades **BOF** y **EOF** .  
   
-||Métodos MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Mover < 0|Mover 0|MoveNext,<br /><br /> Mover > 0|  
+||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Desplazamiento < 0|Movimiento 0|MoveNext<br /><br /> Desplazamiento > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Permitido|Error|Error|Permitido|  
-|**BOF**=**False**, **EOF**=**True**|Permitido|Permitido|Error|Error|  
-|Ambos **True**|Error|Error|Error|Error|  
-|Ambos **False**|Permitido|Permitido|Permitido|Permitido|  
+|**BOF** = **True**, **EOF** = **false**|Permitida|Error|Error|Permitida|  
+|**BOF** = **False**, **EOF** = **true**|Permitida|Permitida|Error|Error|  
+|Ambos **verdaderos**|Error|Error|Error|Error|  
+|Ambos **falsos**|Permitida|Permitida|Permitida|Permitida|  
   
- Lo que permite un **mover** método no garantiza que busque correctamente un registro; sólo significa que al llamar al especificado **mover** método no generará un error.  
+ Al permitir un método **Move** no se garantiza que el método busque un registro correctamente. solo significa que al llamar al método de **movimiento** especificado no se generará un error.  
   
- En la tabla siguiente se muestra lo que ocurre en el **BOF** y **EOF** valores de propiedad cuando se llama a varios **mover** métodos son pero no se puede encontrar un registro.  
+ En la tabla siguiente se muestra lo que ocurre con los valores de la propiedad **BOF** y **EOF** cuando se llama a varios métodos de **movimiento** , pero no se puede localizar correctamente un registro.  
   
 ||BOF|EOF|  
 |------|---------|---------|  
-|**MoveFirst**, **MoveLast**|Establecido en **True**|Establecido en **True**|  
-|**Mover** 0|Sin cambios|Sin cambios|  
-|**MovePrevious**, **mover** < 0|Establecido en **True**|Sin cambios|  
-|**MoveNext**, **mover** > 0|Sin cambios|Establecido en **True**|  
+|**MoveFirst**, **MoveLast**|Establézcalo en **true**|Establézcalo en **true**|  
+|**Movimiento** 0|Sin cambios|Sin cambios|  
+|**MovePrevious**, **Move** < 0|Establézcalo en **true**|Sin cambios|  
+|**MoveNext**, **Move** > 0|Sin cambios|Establézcalo en **true**|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [BOF, EOF y Bookmark propiedades ejemplo (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF y Bookmark ejemplo de propiedades (VC ++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades BOF, EOF y Bookmark (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
+ [Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   

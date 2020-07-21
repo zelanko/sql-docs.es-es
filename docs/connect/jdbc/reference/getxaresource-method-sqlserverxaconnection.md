@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: beee81cbc62a1257c9f9f0fbe8c93720fa54a523
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977980"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80910143"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>Método getXAResource (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,13 +35,13 @@ public javax.transaction.xa.XAResource getXAResource()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Objeto XAResource.  
+ Un objeto XAResource.  
   
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notas  
- Este método getXAResource se especifica mediante el método getXAResource en la interfaz javax. SQL. XAConnection.  
+## <a name="remarks"></a>Observaciones  
+ El método getXAResource especifica este método getXAResource en la interfaz javax.sql.XAConnection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

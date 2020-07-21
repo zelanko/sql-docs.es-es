@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494073"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definición de datos de MDX: CREATE MEMBER
@@ -46,10 +46,10 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  *Property_Value*  
  Expresión escalar válida que define el valor de la propiedad de miembro calculado.  
   
-## <a name="remarks"></a>Comentarios  
- La instrucción CREATE MEMBER define los miembros calculados disponibles durante la sesión y que, por lo tanto, se pueden utilizar en varias consultas mientras la sesión esté activa. Para obtener más información, vea [crear miembros &#40;calculados de ámbito de&#41;sesión MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+## <a name="remarks"></a>Observaciones  
+ La instrucción CREATE MEMBER define los miembros calculados disponibles durante la sesión y que, por lo tanto, se pueden utilizar en varias consultas mientras la sesión esté activa. Para obtener más información, vea [crear miembros calculados de ámbito de sesión &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear miembros &#40;calculados de ámbito de&#41;consulta MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear miembros calculados de ámbito de consulta &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  *Property_Name* puede hacer referencia a propiedades de miembro calculadas estándar u opcionales. Las propiedades de miembro estándares se indican más adelante, en este mismo tema. Los miembros calculados creados con CREATE MEMBER sin un valor de **sesión** tienen ámbito de sesión. Además, las cadenas incluidas en las definiciones del miembro calculado se delimitan mediante comillas dobles. Este método es distinto del definido por OLE DB, en el que las cadenas deben delimitarse con comillas simples.  
   
@@ -57,11 +57,11 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Para obtener más información acerca de las propiedades de miembro definidas por OLE DB, vea la documentación de OLE DB.  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Ámbito  
  Los miembros calculados pueden existir en cualquiera de los ámbitos que se incluyen en la siguiente tabla:  
   
- Ámbito de consulta  
- La visibilidad y la duración del miembro calculado se limita a la consulta. El miembro calculado se define en una consulta individual. El ámbito de consulta prevalece sobre el ámbito de sesión. Para obtener más información, vea [crear miembros &#40;calculados de ámbito de&#41;consulta MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ Ámbito de la consulta  
+ La visibilidad y la duración del miembro calculado se limita a la consulta. El miembro calculado se define en una consulta individual. El ámbito de consulta prevalece sobre el ámbito de sesión. Para obtener más información, vea [crear miembros calculados de ámbito de consulta &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Ámbito de sesión  
  La visibilidad y duración del miembro calculado se limita a la sesión en la que se crea. (La duración es menor que la duración de la sesión si se emite una instrucción DROP MEMBER en el miembro calculado). La instrucción CREATE MEMBER crea un miembro calculado con ámbito de sesión.  
@@ -94,7 +94,7 @@ WHERE ProfitRatio
   
  El resultado deseado de la consulta anterior es el ratio de ventas en USA sin WA, para almacenar el costo de USA sin WA. La consulta anterior no devuelve el resultado deseado, sino la ratio de EE.UU. menos la ratio de WA, que es un resultado que carece de significado. Para obtener el resultado deseado, puede utilizar la propiedad de cálculo SCOPE_ISOLATION.  
   
- **Consulta MDX mediante la propiedad de cálculo SCOPE_ISOLATION:**  
+ **Consulta MDX con la propiedad de cálculo SCOPE_ISOLATION:**  
   
 ```  
 WITH MEMBER [Customer].[Customers].[USA]. USAWithoutWA AS  
@@ -114,14 +114,14 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Orden de resolución del miembro calculado en aquellos casos en los que un miembro calculado haga referencia a otro miembro calculado (es decir, cuando exista una intersección de miembros calculados).|  
 |FORMAT_STRING|Cadena de formato de estilo de Office que la aplicación cliente puede usar al mostrar valores de celda.|  
 |VISIBLE|Valor que indica si el miembro calculado es visible en el conjunto de filas del esquema. Los miembros calculados visibles se pueden agregar a un conjunto con la función [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valor distinto de cero indica que el miembro calculado es visible. El valor predeterminado de esta propiedad es *visible*.<br /><br /> Los miembros calculados no visibles (cuando el valor se establece en cero) suelen utilizarse como pasos intermedios en miembros calculados más complejos. También otros tipos de miembro, como las medidas, pueden hacer referencia a estos miembros calculados.|  
-|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> **Advertencia :esta\* propiedad estáendesuso.\* \* \*** No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obtener más información.|  
+|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> ** \* ADVERTENCIA de \* \* ** Esta propiedad está en desuso. No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obtener más información.|  
 |CAPTION|Cadena que utiliza la aplicación cliente como título para el miembro.|  
 |DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]por, la barra diagonal\\inversa () es el separador de nivel. Si va a asignar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas.|  
 |ASSOCIATED_MEASURE_GROUP|Nombre del grupo de medida al que se asocia el miembro.|  
   
-## <a name="see-also"></a>Vea también  
- [Instrucción &#40;Drop Member, MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [Instrucción &#40;Update Member, MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
- [Instrucciones &#40;de definición de datos MDX MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instrucción DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [Instrucción UPDATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
+ [Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

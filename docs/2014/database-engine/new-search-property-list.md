@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.newsearchpropertylist.f1
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48c9e475b380d5f0c7310e33717f261c38acbbd4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774509"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930376"
 ---
 # <a name="new-search-property-list"></a>Nueva lista de propiedades de búsqueda
   Utilice este cuadro de diálogo para crear una lista de propiedades de búsqueda.  
@@ -45,13 +44,13 @@ ms.locfileid: "62774509"
  Seleccione el nombre de una de las listas de propiedades de búsqueda existentes que pertenecen a la base de datos seleccionada.  
   
 ## <a name="permissions"></a>Permisos  
- Consulte [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
+ Vea [Create Search Property LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Para usar SQL Server Management Studio con el fin de administrar listas de propiedades de búsqueda  
  Para obtener información sobre cómo crear, ver, cambiar o eliminar una lista de propiedades de búsqueda, y sobre cómo configurar un índice de texto completo para la búsqueda de propiedades, vea [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>Vea también  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [CREAR lista de propiedades de búsqueda &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   

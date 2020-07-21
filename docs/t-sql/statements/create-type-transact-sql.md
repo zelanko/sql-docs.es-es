@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,17 +26,17 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766922"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Crea un tipo de datos de alias o un tipo definido por el usuario en la base de datos actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La implementación de un tipo de datos de alias se basa en un tipo nativo del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo definido por el usuario se implementa a través de una clase de un ensamblado de Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para enlazar un tipo definido por el usuario a su implementación, el ensamblado CLR que contiene la implementación del tipo debe registrarse primero en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por medio de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
+  Crea un tipo de datos de alias o un tipo definido por el usuario en la base de datos actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La implementación de un tipo de datos de alias se basa en un tipo nativo del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo definido por el usuario se implementa a través de una clase de un ensamblado de Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para enlazar un tipo definido por el usuario a su implementación, el ensamblado CLR que contiene la implementación del tipo debe registrarse primero en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por medio de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
  De manera predeterminada, la posibilidad de ejecutar código de CLR está desactivada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de código administrado, pero estas referencias no se ejecutarán en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) por medio de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
  
@@ -47,7 +47,7 @@ ms.locfileid: "68809820"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
@@ -121,7 +121,7 @@ column_name AS computed_column_expression
      [ CLUSTERED | NONCLUSTERED ]   (column [ ASC | DESC ] [ ,... n ] )} }  
 ```  
   
-```  
+```syntaxsql
 -- User-defined Memory Optimized Table Types Syntax  
 CREATE TYPE [schema_name. ] type_name  
 AS TABLE ( { <column_definition> [ ,... n ] }  
@@ -179,10 +179,10 @@ column_name <data_type>
 |-|-|-|-|  
 |**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**imagen**|**int**|  
+|**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
 |**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
-|**smallmoney**|**sql_variant**|**texto**|**time**|  
+|**smallmoney**|**sql_variant**|**text**|**time**|  
 |**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
   
  *base_type* también puede ser cualquier sinónimo de tipo de datos que esté asignado a uno de estos tipos de datos del sistema.  
@@ -190,14 +190,14 @@ column_name <data_type>
  *precisión*  
  Para **decimal** o **numeric**, es un entero no negativo que indica el número máximo de dígitos decimales que se pueden almacenar en total, tanto a la derecha como a la izquierda del separador decimal. Para más información, vea [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *escala*  
+ *scale*  
  Para **decimal** o **numeric**, es un entero no negativo que indica el número máximo de dígitos decimales que se pueden almacenar a la derecha del separador decimal, y debe ser menor o igual que el valor de precisión. Para más información, vea [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  **NULL** | NOT NULL  
  Especifica si el tipo puede contener un valor NULL. Si no se especifica, el valor predeterminado es NULL.  
   
  *assembly_name*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica el ensamblado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hace referencia a la implementación del tipo definido por el usuario en Common Language Runtime. *assembly_name* debe coincidir con un ensamblado existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual.  
   
@@ -205,7 +205,7 @@ column_name <data_type>
 >  EXTERNAL_NAME no está disponible en una base de datos independiente.  
   
  **[.** *class_name*  **]**  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica la clase en el ensamblado que implementa el tipo definido por el usuario. *class_name* debe ser un identificador válido y debe existir como clase en el ensamblado con visibilidad de ensamblado. *class_name* distingue entre mayúsculas y minúsculas, independientemente de la intercalación de base de datos, y debe coincidir exactamente con el nombre de la clase del ensamblado correspondiente. El nombre de clase puede ser un nombre de espacio de nombres entre corchetes ( **[ ]** ) si el lenguaje de programación usado para escribir la clase usa el concepto de espacios de nombres, como es el caso de C#. Si no se especifica *class_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que es el mismo que *type_name*.  
   
@@ -229,7 +229,7 @@ column_name <data_type>
  
   `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica que se creará un índice en la tabla. Puede tratarse de un índice agrupado o un índice que no esté en clúster. El índice incluirá las columnas enumeradas y ordenará los datos en orden ascendente o descendente.
   
@@ -237,21 +237,21 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
  Debe especificar los índices de columna y de tabla como parte de la instrucción CREATE TABLE. CREATE INDEX y DROP INDEX no se admiten en las tablas optimizadas para memoria.  
   
  MEMORY_OPTIMIZED  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indica si el tipo de tabla está con optimización para memoria. Esta opción está desactivada de forma predeterminada; la tabla (tipo) no es una tabla con optimización para memoria (tipo). Los tipos de tablas optimizadas para memoria son tablas de usuario cuyo esquema se conserva en el disco de forma similar al de otras tablas de usuario.  
   
  BUCKET_COUNT  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indica el número de cubos que se deben crear en el índice hash. El valor máximo para BUCKET_COUNT en índices hash es 1 073 741 824. Para más información sobre los números de cubos, vea [Índices de las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md). *bucket_count* es un argumento obligatorio.  
   
  HASH  
- **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Indica que se ha creado un índice HASH. Los índices hash solo se admiten en las tablas optimizadas para memoria.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La clase del ensamblado a la que se hace referencia en *assembly_name*, junto con sus métodos, debe cumplir todos los requisitos para implementar un tipo definido por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre estos requisitos, vea [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (Tipos definidos por el usuario CLR).  
   
  Existen algunas consideraciones adicionales, entre las que se pueden citar las siguientes:  
@@ -268,7 +268,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
   
  A diferencia de los tipos definidos por el usuario y creados por medio de **sp_addtype**, el rol de base de datos **public** no recibe automáticamente el permiso REFERENCES para los tipos creados usando CREATE TYPE. Este permiso debe concederse por separado.  
   
- En los tipos de tabla definidos por el usuario, los tipos definidos por el usuario estructurados que se usan en *column_name* \<data type> forman parte del ámbito del esquema de la base de datos en el que se define el tipo de tabla. Para tener acceso a los tipos definidos por el usuario estructurados en un ámbito diferente dentro de la base de datos, utilice nombres de dos partes.  
+ En los tipos de tabla definidos por el usuario, los tipos definidos por el usuario estructurados que se usan en *nombre_columna* \<data type> forman parte del ámbito del esquema de la base de datos en el que se define el tipo de tabla. Para tener acceso a los tipos definidos por el usuario estructurados en un ámbito diferente dentro de la base de datos, utilice nombres de dos partes.  
   
  En los tipos de tabla definidos por el usuario, la clave principal en las columnas calculadas debe ser PERSISTED y NOT NULL.  
   
@@ -289,7 +289,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. Crear un tipo de alias basado en el tipo de datos varchar  
  En el ejemplo siguiente se crea un tipo de alias basado en el tipo de datos `varchar` suministrado por el sistema.  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -297,9 +297,9 @@ FROM varchar(11) NOT NULL ;
 ### <a name="b-creating-a-user-defined-type"></a>B. Crear un tipo definido por el usuario  
  En el siguiente ejemplo se crea un tipo `Utf8String` que hace referencia a la clase `utf8string` del ensamblado `utf8string`. Antes de crear el tipo, se registra el ensamblado `utf8string` en la base de datos local. Reemplace la parte binaria de la instrucción CREATE ASSEMBLY con una descripción válida.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. Crear un tipo de tabla definido por el usuario  
  En el siguiente ejemplo se crea un tipo de tabla definido por el usuario con dos columnas. Para más información sobre cómo crear y usar parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [Trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

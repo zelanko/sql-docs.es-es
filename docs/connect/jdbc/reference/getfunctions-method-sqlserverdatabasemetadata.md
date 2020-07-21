@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cafef140d505197bfe1993f65ef17d4cb53e19f5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67982956"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920328"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>Método getFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getFunctions especifica este método getFunctions en la interfaz java.sql.DatabaseMetaData.  
   
  Este método devuelve solamente las funciones de usuario y del sistema que coinciden con el nombre de esquema y de función especificados.  
@@ -64,11 +64,11 @@ public ResultSet getFunctions(java.lang.String catalog,
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Nombre de la base de datos en que reside la función.|  
 |FUNCTION_SCHEM|**String**|Nombre del esquema de datos en que reside la función.|  
-|FUNCTION_NAME|**String**|Nombre de la función.|  
+|FUNCTION_NAME|**String**|El nombre de la función.|  
 |NUM_INPUT_PARAMS|**int**|Se reserva para su uso futuro, actualmente devuelve un valor -1.|  
 |NUM_OUTPUT_PARAMS|**int**|Se reserva para su uso futuro, actualmente devuelve un valor -1.|  
 |NUM_RESULT_SETS|**int**|Se reserva para su uso futuro, actualmente devuelve un valor -1.|  
-|REMARKS|**String**|Comentarios acerca de la función.|  
+|COMENTARIOS|**String**|Comentarios acerca de la función.|  
 |FUNCTION_TYPE|**short**|Tipo de la función. Puede ser uno de los siguientes valores:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  Todas las descripciones en el conjunto de resultados devuelto se ordenan según FUNCTION_CAT, FUNCTION_SCHEM, FUNCTION_NAME y SPECIFIC_NAME.  

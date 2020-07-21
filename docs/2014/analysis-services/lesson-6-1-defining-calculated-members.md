@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 9be99e5f5107491e2bac14c3a1590ccb1e1c778f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542847"
 ---
 # <a name="defining-calculated-members"></a>Definir miembros calculados
   Los miembros calculados son miembros de una dimensión o un grupo de medida que se definen según una combinación de datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado que calcule la suma de dos medidas físicas en el cubo. Las definiciones de miembros calculados se almacenan en cubos pero sus valores se calculan en el momento de la consulta.  
@@ -32,7 +31,7 @@ ms.locfileid: "69493884"
   
      La siguiente imagen muestra la pestaña **Cálculos** del Diseñador de cubos.  
   
-     ![Pestaña cálculos del diseñador de cubos](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Pestaña cálculos del diseñador de cubos")  
+     ![Pestaña Cálculos del Diseñador de cubos](../../2014/tutorials/media/l6-calculatedmembers-1.gif "Pestaña Cálculos del Diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
@@ -40,9 +39,9 @@ ms.locfileid: "69493884"
   
      La siguiente imagen muestra el formulario que aparece en el panel de las **expresiones de cálculo** al hacer clic en **Nuevo miembro calculado**.  
   
-     ![Formulario de panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Formulario de panel de expresiones de cálculo")  
+     ![Formulario del panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Formulario del panel de expresiones de cálculo")  
   
-3.  En el cuadro **nombre** , cambie el nombre de la medida calculada `[Total Sales Amount]`a.  
+3.  En el cuadro **nombre** , cambie el nombre de la medida calculada a `[Total Sales Amount]` .  
   
      Si el nombre de un miembro calculado contiene un espacio, dicho nombre deberá ir entre corchetes.  
   
@@ -57,11 +56,11 @@ ms.locfileid: "69493884"
   
 5.  Arrastre **Internet Sales-Sales Amount** de la pestaña **Metadatos** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel de las **expresiones de cálculo** .  
   
-6.  En el cuadro **expresión** , escriba un signo más (`+`) después de **[Measures]. [ Internet sales-Sales amount]** .  
+6.  En el cuadro **Expresión** , escriba un signo más (`+`) después de **[Measures].[Internet Sales-Sales Amount]**.  
   
 7.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Venta del distribuidor**y, después, arrastre **Reseller Sales-Sales Amount** al cuadro **Expresión** del panel de las **expresiones de cálculo** después del signo más (+).  
   
-8.  En la lista **Cadena de formato** , seleccione **"Moneda"** .  
+8.  En la lista **cadena de formato** , seleccione **"moneda".**  
   
 9. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "69493884"
   
      La siguiente imagen muestra el panel de las **expresiones de cálculo** llenado con la configuración especificada en los pasos anteriores.  
   
-     ![Panel de expresiones de cálculo] rellenadas (../../2014/tutorials/media/l6-calculatedmembers-03.gif "Panel de expresiones de cálculo") rellenadas  
+     ![Panel de expresiones de cálculo rellenado](../../2014/tutorials/media/l6-calculatedmembers-03.gif "Panel de expresiones de cálculo rellenado")  
   
 10. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script**y revise el script de cálculo en el panel de las **expresiones de cálculo** .  
   
@@ -85,15 +84,15 @@ ms.locfileid: "69493884"
   
      ![Scripts en el panel de expresiones de cálculo](../../2014/tutorials/media/l6-calculatedmembers-04.gif "Scripts en el panel de expresiones de cálculo")  
   
-12. En la barra de herramientas de la pestaña **cálculos** , haga clic en vista `[Total Sales Amount]` de **formulario**, compruebe que está seleccionado en el panel **organizador de script** y, a continuación, haga clic en **nuevo miembro calculado**.  
+12. En la barra de herramientas de la pestaña **cálculos** , haga clic en **vista de formulario**, compruebe que `[Total Sales Amount]` está seleccionado en el panel **organizador de script** y, a continuación, haga clic en **nuevo miembro calculado**.  
   
-13. Cambie el nombre de este nuevo miembro calculado `[Total Product Cost]`a y, a continuación, cree la siguiente expresión en el cuadro **expresión** :  
+13. Cambie el nombre de este nuevo miembro calculado a `[Total Product Cost]` y, a continuación, cree la siguiente expresión en el cuadro **expresión** :  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. En la lista **Cadena de formato** , seleccione **"Moneda"** .  
+14. En la lista **Cadena de formato** , seleccione **"Moneda"**.  
   
 15. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Total Product Cost** y **Reseller Sales-Total Product Cost**y haga clic en **Aceptar**.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "69493884"
   
 1.  Compruebe que `[Total Product Cost]` está seleccionado en el panel **organizador de script** y, a continuación, haga clic en **nuevo miembro calculado** en la barra de herramientas de la pestaña **cálculos** .  
   
-2.  En el cuadro **nombre** , cambie el nombre de esta nueva medida calculada `[Internet GPM]`a.  
+2.  En el cuadro **nombre** , cambie el nombre de esta nueva medida calculada a `[Internet GPM]` .  
   
 3.  En el cuadro **Expresión** , cree la siguiente expresión MDX:  
   
@@ -113,13 +112,13 @@ ms.locfileid: "69493884"
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
+4.  En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
   
 5.  En la lista **Comportamiento si no está vacío** , active la casilla **Internet Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 6.  En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-7.  En el cuadro **nombre** , cambie el nombre de esta nueva medida calculada `[Reseller GPM]`a.  
+7.  En el cuadro **nombre** , cambie el nombre de esta nueva medida calculada a `[Reseller GPM]` .  
   
 8.  En el cuadro **Expresión** , cree la siguiente expresión MDX:  
   
@@ -129,13 +128,13 @@ ms.locfileid: "69493884"
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
+9. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
   
 10. En la lista **Comportamiento si no está vacío** , active la casilla **Reseller Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 11. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-12. En el cuadro **nombre** , cambie el nombre de esta medida calculada `[Total GPM]`a.  
+12. En el cuadro **nombre** , cambie el nombre de esta medida calculada a `[Total GPM]` .  
   
 13. En el cuadro **Expresión** , cree la siguiente expresión MDX:  
   
@@ -147,7 +146,7 @@ ms.locfileid: "69493884"
   
      Observe que este miembro calculado hace referencia a otros miembros calculados. Como este miembro calculado se calculará después de los miembros calculados a los que hace referencia, se tratará de un miembro calculado válido.  
   
-14. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
+14. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
   
 15. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -167,11 +166,11 @@ ms.locfileid: "69493884"
   
 1.  En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de formulario**.  
   
-2.  En el panel **organizador de script** , `[Total GPM]`seleccione y, a continuación, haga clic en **nuevo miembro calculado** en la barra de herramientas de la pestaña **cálculos** .  
+2.  En el panel **organizador de script** , seleccione `[Total GPM]` y, a continuación, haga clic en **nuevo miembro calculado** en la barra de herramientas de la pestaña **cálculos** .  
   
      Si hace clic en el miembro calculado final del panel **Organizador de script** antes de hacer clic en **Nuevo miembro calculado** se asegurará de que el nuevo miembro calculado se escribe al final del script. Los scripts se ejecutan en el orden en el que aparecen en el panel **Organizador de script** .  
   
-3.  Cambie el nombre de este nuevo miembro calculado `[Internet Sales Ratio to All Products]`a.  
+3.  Cambie el nombre de este nuevo miembro calculado a `[Internet Sales Ratio to All Products]` .  
   
 4.  Escriba la siguiente expresión en el cuadro **Expresión** :  
   
@@ -188,13 +187,13 @@ ms.locfileid: "69493884"
   
      Esta expresión MDX calcula la contribución al total de ventas por Internet de cada producto. La instrucción Case junto con la función IS EMPTY garantiza que no se produzca un error de división por cero cuando un producto no tiene ventas.  
   
-5.  En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
+5.  En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
   
 6.  En la lista **Comportamiento si no está vacío** , active la casilla **Internet Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 7.  En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-8.  Cambie el nombre de este miembro calculado `[Reseller Sales Ratio to All Products]`a.  
+8.  Cambie el nombre de este miembro calculado a `[Reseller Sales Ratio to All Products]` .  
   
 9. Escriba la siguiente expresión en el cuadro **Expresión** :  
   
@@ -209,13 +208,13 @@ ms.locfileid: "69493884"
         End  
     ```  
   
-10. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
+10. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
   
 11. En la lista **Comportamiento si no está vacío** , active la casilla **Reseller Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 12. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-13. Cambie el nombre de este miembro calculado `[Total Sales Ratio to All Products]`a.  
+13. Cambie el nombre de este miembro calculado a `[Total Sales Ratio to All Products]` .  
   
 14. Escriba la siguiente expresión en el cuadro **Expresión** :  
   
@@ -230,7 +229,7 @@ ms.locfileid: "69493884"
         End  
     ```  
   
-15. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
+15. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
   
 16. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -272,7 +271,7 @@ ms.locfileid: "69493884"
   
      Observe que el margen de beneficio bruto para la venta del distribuidor es notablemente inferior al de las ventas a través de Internet, como se muestra en la imagen siguiente.  
   
-     ![Panel datos que muestra las ventas del distribuidor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Panel datos que muestra las ventas del distribuidor")  
+     ![Panel Datos en el que se muestran las ventas del distribuidor](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "Panel Datos en el que se muestran las ventas del distribuidor")  
   
 9. Agregue las medidas **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**y **Reseller Sales Ratio to All Products** al área Valores.  
   
@@ -289,7 +288,7 @@ ms.locfileid: "69493884"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir conjuntos con nombre](lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Cálculos en modelos multidimensionales](multidimensional-models/calculations-in-multidimensional-models.md)   
  [Crear miembros calculados](multidimensional-models/create-calculated-members.md)  

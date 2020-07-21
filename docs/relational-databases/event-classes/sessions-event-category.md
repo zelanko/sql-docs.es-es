@@ -14,15 +14,15 @@ ms.assetid: 61881d22-381d-407e-8c43-a07ba94389f6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c8c9685865bc3430bd3b991e5cf8f4dd0bd99bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce6ae26b4c11e77e6ff51671cbe9758ab77c2863
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727355"
 ---
 # <a name="sessions-event-category"></a>Sesiones (categoría de eventos)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La categoría de eventos **Sesiones** contiene la clase de eventos **ExistingConnection** .  
   
 ## <a name="in-this-section"></a>En esta sección  

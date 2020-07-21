@@ -18,10 +18,10 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71293798"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
@@ -55,7 +55,7 @@ ms.locfileid: "71293798"
   
  Muchos métodos de servicio web no usan parámetros de entrada. Por ejemplo, un método de servicio web que obtiene los nombres de los presidentes nacidos en el mes en curso no requiere un parámetro de entrada porque el servicio web puede determinar localmente cuál es el mes en curso.  
   
- Los resultados del método de servicio web se pueden escribir en una variable o un archivo. El administrador de conexiones Archivo se utiliza para especificar el archivo o para proporcionar el nombre de la variable en la que se deben escribir los resultados. Para obtener más información, vea [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) y [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+ Los resultados del método de servicio web se pueden escribir en una variable o un archivo. El administrador de conexiones Archivo se utiliza para especificar el archivo o para proporcionar el nombre de la variable en la que se deben escribir los resultados. Para más información, vea [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Mensajes de registro personalizados disponibles en la tarea Servicio web  
  La siguiente tabla contiene las entradas del registro personalizadas que puede habilitar para la tarea Servicio web. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -133,7 +133,7 @@ ms.locfileid: "71293798"
   Use la página **Entrada** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar el servicio web, el método web y los valores que se deben proporcionar como entrada para el método web. Los valores se pueden proporcionar mediante la especificación directa de cadenas o la selección de variables en la columna Valor.  
   
 ### <a name="options"></a>Opciones  
- **ssNoVersion**  
+ **Servicio**  
  Seleccione en la lista un servicio web para ejecutar el método web.  
   
  **Método**  
@@ -154,7 +154,7 @@ ms.locfileid: "71293798"
  **Variable**  
  Active las casillas para utilizar variables que proporcionen entradas.  
   
- **Value**  
+ **Valor**  
  Si las casillas de Variable están activadas, seleccione las variables de la lista para proporcionar entradas; en caso contrario, escriba los valores que se usarán en las entradas.  
   
 ## <a name="web-service-task-editor-output-page"></a>Editor de la tarea Servicio web (página Salida)
@@ -164,7 +164,7 @@ ms.locfileid: "71293798"
  **OutputType**  
  Seleccione el tipo de almacenamiento que desea usar para almacenar los resultados. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Almacene los resultados en un archivo. Si selecciona este valor, se mostrará la opción dinámica **Archivo**.|  
 |**Variable**|Almacene los resultados en una variable. Si selecciona este valor, se mostrará la opción dinámica **Variable**.|  

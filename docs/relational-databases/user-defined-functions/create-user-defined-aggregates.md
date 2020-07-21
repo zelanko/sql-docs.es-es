@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e4291cbe79bf0eea51fdf10e2c13fea7f1e23a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d66db5586f5f80f8f0e8954d041befbcd4c5eba4
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138350"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053641"
 ---
 # <a name="create-user-defined-aggregates"></a>Crear funciones de agregado definidas por el usuario
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
   Es posible crear en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un objeto de base de datos programado en un ensamblado CLR. Los objetos de base de datos que pueden aprovechar el completo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
   
  Al igual que las funciones de agregado integradas que proporciona [!INCLUDE[tsql](../../includes/tsql-md.md)], las funciones de agregado definidas por el usuario realizan un cálculo en un conjunto de valores y devuelven un único valor.  

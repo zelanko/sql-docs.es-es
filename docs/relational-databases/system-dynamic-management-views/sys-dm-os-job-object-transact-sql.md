@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs
+title: Sys. dm_os_job_object (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 06/03/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,41 +19,42 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900136"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754158"
 ---
-# <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+# <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Devuelve una sola fila que describe la configuración del objeto de trabajo que administra el proceso de SQL Server, así como ciertas estadísticas de consumo de recursos en el nivel de objeto de trabajo. Devuelve un conjunto vacío si no se está ejecutando SQL Server en un objeto de trabajo. 
+Devuelve una sola fila que describe la configuración del objeto de trabajo que administra el proceso de SQL Server, así como ciertas estadísticas de consumo de recursos en el nivel de objeto de trabajo. Devuelve un conjunto vacío si SQL Server no se está ejecutando en un objeto de trabajo.
 
-Un objeto de trabajo es una construcción de Windows que implementa la regulación de recursos de CPU, memoria y E/S en el nivel de sistema operativo. Para obtener más información acerca de los objetos de trabajo, consulte [objetos de trabajo](/windows/desktop/ProcThread/job-objects). 
+Un objeto de trabajo es una construcción de Windows que implementa la CPU, la memoria y el gobierno de recursos de e/s en el nivel del sistema operativo. Para obtener más información sobre los objetos de trabajo, vea [objetos de trabajo](/windows/desktop/ProcThread/job-objects).
   
 |Columnas|Tipo de datos|Descripción|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|Especifica la parte de los ciclos de procesador que pueden usar los subprocesos de SQL Server durante cada intervalo de programación. El valor se notifica como un porcentaje de ciclos disponibles dentro de un intervalo de programación de ciclo de 10000. Por ejemplo, el valor 100 significa que subprocesos pueden usar núcleos de CPU es su máxima capacidad.|
-|cpu_affinity_mask|**bigint**|Una máscara de bits que describe qué procesadores lógicos del proceso de SQL Server puede usar en el grupo de procesadores. Por ejemplo, cpu_affinity_mask 255 (1111 1111 en formato binario) significa que los ocho primeros se pueden usar procesadores lógicos.|
-|cpu_affinity_group|**int**|El número del grupo de procesadores que se usa SQL Server.|
-|memory_limit_mb|**bigint**|La cantidad máxima de memoria confirmada, en MB, que todos los procesos en el objeto de trabajo, incluido SQL Server, pueden usar de manera acumulativa.| 
-|process_memory_limit_mb |**bigint**|La cantidad máxima de memoria confirmada, en MB, que un solo proceso en el objeto de trabajo, como SQL Server, puede usar.|
-|workingset_limit_mb |**bigint**|La cantidad máxima de memoria, en MB, que puede usar el espacio de trabajo de SQL Server.|
-|non_sos_mem_gap_mb|**bigint**|La cantidad de memoria en MB, se reservan para las pilas de subprocesos, los archivos DLL y otras asignaciones de memoria que no sean de SOS. Memoria de destino de SOS es la diferencia entre `process_memory_limit_mb` y `non_sos_mem_gap_mb`.| 
-|low_mem_signal_threshold_mb|**bigint**|Umbral de memoria, en MB. Cuando la cantidad de memoria disponible para el objeto de trabajo está por debajo del umbral, se envía una señal de notificación de memoria insuficiente para el proceso de SQL Server. |
-|total_user_time|**bigint**|El número total de tics de 100 ns que los subprocesos dentro del objeto de trabajo ha empleado en modo de usuario, desde que se creó el objeto de trabajo. |
-|total_kernel_time |**bigint**|El número total de tics de 100 ns que los subprocesos dentro del objeto de trabajo ha empleado en modo de núcleo, desde que se creó el objeto de trabajo. |
-|write_operation_count |**bigint**|El número total de operaciones de E/S de discos locales emitidas por SQL Server desde que se creó el objeto de trabajo de escritura. |
-|read_operation_count |**bigint**|El número total de operaciones de E/S de lectura de discos locales emitidas por SQL Server desde que se creó el objeto de trabajo. |
-|peak_process_memory_used_mb|**bigint**|La cantidad máxima de memoria, en MB, que un único proceso en el objeto de trabajo, como SQL Server, se ha usado desde que se creó el objeto de trabajo.| 
-|peak_job_memory_used_mb|**bigint**|La cantidad máxima de memoria, en MB, que todos los procesos en el objeto de trabajo han utilizado de manera acumulativa puesto que el objeto de trabajo se creó.|
+|cpu_rate|**int**|Especifica la parte de los ciclos del procesador que SQL Server subprocesos pueden utilizar durante cada intervalo de programación. El valor se muestra como un porcentaje de los ciclos disponibles dentro de un intervalo de programación del ciclo 10000, multiplicado por el número de CPU lógicas. Por ejemplo, el valor 800 en una instancia de SQL Server con 8 CPU lógicas significa que los subprocesos pueden usar CPU tienen toda su capacidad.|
+|cpu_affinity_mask|**bigint**|Máscara de bits que describe qué procesadores lógicos puede utilizar el SQL Server proceso en el grupo de procesadores. Por ejemplo, cpu_affinity_mask 255 (1111 1111 en binario) significa que se pueden usar los primeros ocho procesadores lógicos. <br /><br />Esta columna se proporciona por compatibilidad con versiones anteriores. No notifica el grupo de procesadores y el valor notificado puede ser incorrecto cuando un grupo de procesadores contiene más de 64 procesadores lógicos. Use la `process_physical_affinity` columna para determinar la afinidad del procesador en su lugar.|
+|cpu_affinity_group|**int**|El número del grupo de procesadores que usa SQL Server.|
+|memory_limit_mb|**bigint**|Cantidad máxima de memoria asignada, en MB, que todos los procesos del objeto de trabajo, incluido SQL Server, pueden usar de manera acumulativa.| 
+|process_memory_limit_mb |**bigint**|La cantidad máxima de memoria asignada, en MB, que un único proceso en el objeto de trabajo, como SQL Server, puede usar.|
+|workingset_limit_mb |**bigint**|Cantidad máxima de memoria, en MB, que puede usar el espacio de trabajo de SQL Server.|
+|non_sos_mem_gap_mb|**bigint**|Cantidad de memoria, en MB, reservada para pilas de subprocesos, archivos dll y otras asignaciones de memoria no SOS. La memoria de destino de SOS es la diferencia entre `process_memory_limit_mb` y `non_sos_mem_gap_mb` .| 
+|low_mem_signal_threshold_mb|**bigint**|Umbral de memoria, en MB. Cuando la cantidad de memoria disponible para el objeto de trabajo está por debajo de este umbral, se envía una señal de notificación de memoria baja al proceso de SQL Server. |
+|total_user_time|**bigint**|El número total de 100 pasos NS que los subprocesos del objeto de trabajo han pasado en modo de usuario, desde que se creó el objeto de trabajo. |
+|total_kernel_time |**bigint**|El número total de 100 pasos NS que los subprocesos del objeto de trabajo han pasado en modo kernel, desde que se creó el objeto de trabajo. |
+|write_operation_count |**bigint**|El número total de operaciones de e/s de escritura en los discos locales emitidos por SQL Server desde que se creó el objeto de trabajo. |
+|read_operation_count |**bigint**|El número total de operaciones de e/s de lectura en discos locales emitidos por SQL Server desde que se creó el objeto de trabajo. |
+|peak_process_memory_used_mb|**bigint**|Cantidad máxima de memoria, en MB, que un único proceso en el objeto de trabajo, como SQL Server, ha usado desde que se creó el objeto de trabajo.| 
+|peak_job_memory_used_mb|**bigint**|Cantidad máxima de memoria, en MB, que todos los procesos del objeto de trabajo han utilizado de manera acumulativa desde que se creó el objeto de trabajo.|
+|process_physical_affinity|**nvarchar (a.**|Máscaras de bits que describen qué procesadores lógicos puede utilizar el SQL Server proceso en cada grupo de procesadores. El valor de esta columna está formado por uno o varios pares de valores, cada uno entre llaves. En cada par, el primer valor es el número de grupo del procesador y el segundo valor es la máscara de bits de afinidad para ese grupo de procesadores. Por ejemplo, el valor `{{0,a}{1,2}}` significa que la máscara de afinidad para el grupo de procesadores `0` es `a` ( `1010` en binario, lo que indica que se usan los procesadores 2 y 4) y la máscara de afinidad para el grupo de procesadores `1` es `2` ( `10` en binario, lo que indica que se usa el procesador 2).|
   
 ## <a name="permissions"></a>Permisos  
-Base de datos de instancia administrada de SQL, requiere `VIEW SERVER STATE` permiso. En SQL Database, se requiere el permiso `VIEW DATABASE STATE` en la base de datos.  
+En Instancia administrada de SQL Database, requiere el `VIEW SERVER STATE` permiso. En SQL Database, se requiere el permiso `VIEW DATABASE STATE` en la base de datos.  
  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
-Para obtener información sobre instancias administradas, vea [instancia administrada de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Para obtener información acerca de las instancias administradas, consulte [instancia administrada de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

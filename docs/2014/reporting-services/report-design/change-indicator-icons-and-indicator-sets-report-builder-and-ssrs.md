@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37f3b93019a837ac5521c52e9ceb5f58f3e39b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106373"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Cambiar iconos de indicador y conjuntos de indicadores (Generador de informes y SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona conjuntos de indicadores preconfigurados, que podrían no siempre eficazmente los datos ni funcionar bien en el informe resultante. En este tema se ofrecen procedimientos para cambiar la apariencia de los iconos de indicador y cambiar los conjuntos de indicadores para que contengan más o menos iconos, o iconos distintos.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]proporciona conjuntos de indicadores preconfigurados, que es posible que no siempre representen los datos de manera eficaz y funcionen bien en el informe entregado. En este tema se ofrecen procedimientos para cambiar la apariencia de los iconos de indicador y cambiar los conjuntos de indicadores para que contengan más o menos iconos, o iconos distintos.  
   
  Opciones como los colores se pueden establecer mediante expresiones. Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66106373"
   
      Si hace clic en **Más colores**, se abre el cuadro de diálogo **Seleccionar color** , en el que puede elegir entre muchos colores. Para obtener más información sobre las opciones, vea [Cuadro de diálogo Seleccionar color &#40;Generador de informes y SSRS&#41;](../select-color-dialog-box-report-builder-and-ssrs.md). Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Seleccionar color** .  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ### <a name="to-change-the-icon"></a>Para cambiar el icono  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106373"
   
      Si quiere, haga clic en el botón **Expresión** (*fx*) para modificar la expresión que establece el valor de la opción **Icono** .  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ### <a name="to-use-a-custom-image-as-an-indicator-icon"></a>Para usar una imagen personalizada como icono de indicador  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66106373"
   
     -   Para usar una imagen que está en una base de datos, en la lista **Usar este campo** , seleccione el campo en la lista y, a continuación, en la lista **Usar este tipo MIME** , seleccione el tipo MIME de la imagen.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ### <a name="to-add-an-icon-to-the-indicator-set"></a>Para agregar un icono al conjunto de indicadores  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66106373"
   
      Configure el indicador de forma que use el icono y el color que desee. En procedimientos anteriores de este tema se describe cómo hacerlo.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ### <a name="to-delete-an-icon-to-the-indicator-set"></a>Para eliminar un icono del conjunto de indicadores  
   
@@ -91,9 +91,9 @@ ms.locfileid: "66106373"
   
 3.  Seleccione el icono que desea eliminar y haga clic en **Eliminar**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Indicadores &#40;Generador de informes y SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

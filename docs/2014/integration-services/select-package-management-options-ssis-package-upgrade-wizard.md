@@ -1,5 +1,5 @@
 ---
-title: Seleccionar opciones de administración de paquetes (Asistente actualización del paquete SSIS) | Microsoft Docs
+title: Seleccionar opciones de Administración de paquetes (Asistente para actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bb9102551c56d82bc3cf32ca31e02f7eed4625
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66056028"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422002"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Seleccionar opciones de administración de paquetes (Asistente para actualización del paquete SSIS)
   Utilice la página **Seleccionar opciones de administración de paquetes** con el fin de especificar las opciones para actualizar paquetes.  
@@ -74,7 +73,7 @@ ms.locfileid: "66056028"
   
  Para más información, vea [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

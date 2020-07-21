@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a597d1f8f3b5720f2f7a688fdf2aabc7941a0ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940306"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Especificar información de origen (Asistente para particiones)
   Use la página **Especificar información de origen** para seleccionar el grupo de medida en el que desea crear la partición, así como la vista del origen de datos y las tablas de filtros de la partición.  
@@ -29,7 +28,7 @@ ms.locfileid: "66068169"
  **Grupo de medida**  
  Seleccione un grupo de medida para la partición.  
   
- **Look in**  
+ **Buscar en**  
  Seleccione el origen de datos o la vista del origen de datos que contiene las tablas de origen para la partición. La vista del origen de datos utilizada por el grupo de medida aparece seleccionada de forma predeterminada.  
   
  **Tablas de filtros**  
@@ -48,7 +47,7 @@ ms.locfileid: "66068169"
 > [!NOTE]  
 >  Si selecciona más de una tabla, no podrá mostrarse la página **Restringir filas** y no podrán restringirse las filas para las particiones creadas a partir de las tablas seleccionadas. Para restringir filas en las particiones, ejecute el Asistente para particiones para cada tabla en la que desea crear una partición.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

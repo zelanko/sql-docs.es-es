@@ -1,5 +1,5 @@
 ---
-title: Propiedades del Administrador de bloqueos | Microsoft Docs
+title: Propiedades del administrador de bloqueos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 15fe9ead-825b-4ac3-9191-7a07caa2861b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 607654924a9f7e2d071bbce1ee4797792cb760c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d10927f1c549f00625b8affb801ec7b0831827c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940666"
 ---
 # <a name="lock-manager-properties"></a>Propiedades del administrador de bloqueos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor del administrador de bloqueos que aparecen en la siguiente tabla. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** Modo de servidor multidimensional y Tabular  
+ **Se aplica a:** modo de servidor multidimensional y tabular  
   
 ## <a name="properties"></a>Propiedades  
  `DefaultLockTimeoutMS`  
@@ -39,7 +38,7 @@ ms.locfileid: "66068936"
  `DeadlockDetectionGranularityMS`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

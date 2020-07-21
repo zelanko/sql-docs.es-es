@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076445"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899901"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permite a un miembro del rol fijo de servidor **sysadmin** o al propietario de una base de datos suplantar a otro usuario.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68076445"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
@@ -51,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Especifica que las instrucciones SETUSER siguientes (que no especifican *username*) no deben restablecer la identidad del usuario como administrador del sistema o propietario de la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los miembros del rol fijo de servidor **sysadmin** o el propietario de una base de datos pueden usar la identidad de otro usuario con el fin de probar los permisos de ese usuario. No basta con pertenecer al rol fijo de base de datos db_owner.  
   
  Solo se debe utilizar SETUSER con usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER no se admite con usuarios de Windows. Cuando se ha utilizado SETUSER para asumir la identidad de otro usuario, los objetos que crea el usuario que realiza la suplantación serán propiedad del usuario suplantado. Por ejemplo, si el propietario de la base de datos adopta la identidad de la usuaria **Margaret** y crea una tabla llamada **orders**, la propietaria de la tabla **orders** será **Margaret**, en lugar del administrador del sistema.  
@@ -67,7 +67,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra cómo el propietario de la base de datos puede adoptar la identidad de otro usuario. La usuaria `mary` ha creado una tabla llamada `computer_types`. Mediante SETUSER, el propietario de la base de datos suplanta a `mary` para garantizar al usuario `joe` el acceso a la tabla `computer_types` y, a continuación, restablece su propia identidad.  
   
-```  
+```sql
 SETUSER 'mary';  
 GO  
 GRANT SELECT ON computer_types TO joe;  

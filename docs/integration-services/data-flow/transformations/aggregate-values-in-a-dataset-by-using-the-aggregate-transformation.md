@@ -1,5 +1,5 @@
 ---
-title: Agregar valores en un conjunto de datos mediante la transformación Agregado | Microsoft Docs
+title: Adición de valores en un conjunto de datos mediante la transformación Agregado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 805ca71b22a0c5f280c6e3475ba21133bef6dd6e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 6b6f11ac0a41b52f6b8e197b21279a22df46703d
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298031"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "77903758"
 ---
-# <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores en un conjunto de datos mediante la transformación Agregado
+# <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>Adición de valores en un conjunto de datos mediante la transformación Agregado
 
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "71298031"
   
 13. También puede hacer clic en la pestaña **Avanzado** y establecer los atributos que se aplican a la optimización de todas las operaciones que realiza la transformación Agregado.  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
 15. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   

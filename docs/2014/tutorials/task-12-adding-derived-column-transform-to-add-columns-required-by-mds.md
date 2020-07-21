@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 12: Agregar transformación columna derivada para agregar columnas necesarias en MDS | Microsoft Docs'
+title: 'Tarea 12: agregar la transformación columna derivada para agregar las columnas requeridas por MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,54 +9,53 @@ ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eac057177032892ac99f557aa9d18ce497b7b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054293"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarea 12: Adición de la transformación Columna derivada para agregar las columnas necesarias en MDS
-  En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agregar dos columnas derivadas, **ImportType** y **BatchTag**, a los registros pasados a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de ensayo de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md) para obtener más detalles.  
+  En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agrega dos columnas derivadas, **ImportType** y **BatchTag**, a los registros que se pasan a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de almacenamiento provisional de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md) para obtener más detalles.  
   
-1.  Arrastrar y colocar **transformación columna derivada** desde **común** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** ficha.  
+1.  Arrastre y coloque la **transformación columna derivada** desde la sección **común** del **cuadro de herramientas de SSIS** hasta la pestaña flujo de **datos** .  
   
-2.  Haga clic en **columna derivada** transformar en el **de flujo de datos** ficha y haga clic en **cambiar el nombre**. Tipo **agregar columnas necesarias en MDS** y presione **ENTRAR**.  
+2.  Haga clic con el botón secundario en transformación de **columna derivada** en la pestaña **flujo de datos** y haga clic en **cambiar nombre**. Escriba **Add Columns required by MDS** y presione **entrar**.  
   
-3.  Conectar **filtrar duplicados** a **agregar columnas necesarias en MDS** mediante el conector azul. Debería ver el **selección de entrada y salida** cuadro de diálogo.  
+3.  Conecte **filtros duplicados** para **Agregar las columnas requeridas por MDS** mediante el conector azul. Debería ver el cuadro de diálogo **selección de entrada y salida** .  
   
-4.  En el **selección de entrada y salida** cuadro de diálogo, seleccione **registros únicos**y haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **selección de salida de entrada** , seleccione **Registros únicos**y haga clic en **Aceptar**.  
   
-     ![Cuadro de diálogo de selección de salida de entrada](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "salida cuadro de diálogo de selección de entrada")  
+     ![Cuadro de diálogo Selección de entrada y salida](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-01.jpg "Cuadro de diálogo Selección de entrada y salida")  
   
-5.  Haga clic en **SSIS** en la barra de menú y haga clic en **Variables**.  
+5.  Haga clic en **SSIS** en la barra de menús y haga clic en **variables**.  
   
-6.  En el **Variables** ventana, haga clic en **agregar Variable** en la barra de herramientas.  
+6.  En la ventana **variables** , haga clic en el botón **Agregar variable** de la barra de herramientas.  
   
-     ![Ventana de Variables SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "ventana de Variables SSIS")  
+     ![Ventana Variables de SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "Ventana Variables de SSIS")  
   
-7.  Tipo **ImportType** para el **nombre** y **2** para el **valor**. Debe especificar el valor 2 porque desea agregar dos miembros nuevos a una entidad en MDS. Para obtener más información acerca de este parámetro, vea [tabla de ensayo de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md).  
+7.  Escriba **ImportType** para el **nombre** y **2** para el **valor**. Debe especificar el valor 2 porque desea agregar dos miembros nuevos a una entidad en MDS. Para obtener más información sobre este parámetro, consulte [tabla de almacenamiento provisional de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
-8.  Haga clic en **agregar Variable** nuevo botón de barra de herramientas.  
+8.  Haga clic de nuevo en el botón **Agregar variable** de la barra de herramientas.  
   
-9. Tipo **BatchTag** para el **nombre**, seleccione **cadena** para el **tipo de datos**, y **EIMBatch** para el **Valor**. **BatchTag** es simplemente un nombre único para el lote que se va a enviar a MDS.  
+9. Escriba **BatchTag** para el **nombre**, seleccione **cadena** para el **tipo de datos**y **EIMBatch** para el **valor**. **BatchTag** es simplemente un nombre único para el lote que se va a enviar a MDS.  
   
-10. En el **de flujo de datos** , haga doble clic **agregar columnas necesarias en MDS**.  
+10. En la pestaña **flujo de datos** , haga doble clic en **Agregar columnas requeridas por MDS**.  
   
-11. En el **Editor de transformación columna derivada** cuadro de diálogo el **cuadro de lista en el panel inferior**, tipo **ImportType** para el **nombre de columna derivada**.  
+11. En el cuadro de diálogo **Editor de transformación columna derivada** , en el **cuadro de lista del panel inferior**, escriba **ImportType** para el nombre de la **columna derivada**.  
   
-12. Expanda **Variables y parámetros** en el panel superior izquierdo, arrastrar y colocar **User:: importtype** a la **expresión** columna.  
+12. Expanda **variables y parámetros** en el panel superior izquierdo, arrastre y coloque **User:: ImportType** a la columna **Expression** .  
   
-     ![Derivado de Editor de transformación columna](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "derivados de Editor de transformación de columna")  
+     ![Columna derivada, editor de transformación](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-03.jpg "Columna derivada, editor de transformación")  
   
-13. Tipo **BatchTag** en la siguiente fila de la **nombre de columna derivada**.  
+13. Escriba **BatchTag** en la siguiente fila del nombre de la **columna derivada**.  
   
-14. Arrastrar y colocar **User:: batchtag** desde **Variables y parámetros** a la **expresión** columna.  
+14. Arrastre y coloque **User:: BatchTag** desde **variables y parámetros** a la columna **Expression** .  
   
-15. Haga clic en **Aceptar** para cerrar el **transformación columna derivada** cuadro de diálogo.  
+15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **transformación columna derivada** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 13: Agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 13: Adición del destino de OLE DB para escribir datos en la tabla de ensayo de MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

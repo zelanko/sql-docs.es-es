@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General) de ejecución de consultas de Analysis Services | Microsoft Docs
+title: Analysis Services las opciones de ejecución de consulta (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c534a0e2-5c35-46c2-a7e8-b1964850bd0e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe91495b5e73bad0687b675ab73a8c49ad538170
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937306"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Opciones de ejecución de consultas de Analysis Services (página General)
   Utilice esta página para especificar las opciones de visualización de los resultados de una consulta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

@@ -1,5 +1,6 @@
 ---
 title: Obtener acceso a FileTables con Transact-SQL | Microsoft Docs
+description: Obtenga información sobre el funcionamiento de los comandos del lenguaje de manipulación de datos (DML) de Transact-SQL con FileTables. Vea qué restricciones definidas por el sistema se aplican durante las operaciones DML.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6b0b0d1f7dd6467487266206756af8f82c66bf4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018894"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85744393"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Obtener acceso a FileTables con Transact-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describe el funcionamiento de los comandos del lenguaje de manipulación de datos (DML) de [!INCLUDE[tsql](../../includes/tsql-md.md)] con FileTables.  
   
-##  <a name="BasicsInsert"></a> Operaciones INSERT en FileTables  
+##  <a name="insert-operations-on-filetables"></a><a name="BasicsInsert"></a> Operaciones INSERT en FileTables  
  Las consideraciones siguientes se aplican a las operaciones **INSERT** en FileTables:  
   
 -   Todas las columnas de atributos de archivo tienen restricciones NOT NULL. Si los valores no se establecen de forma explícita, se proporcionan los valores predeterminados adecuados.  
@@ -32,23 +33,23 @@ ms.locfileid: "68018894"
   
 -   La aplicación puede obtener el valor de **path_locator** de un archivo o un directorio si proporciona la ruta de acceso al sistema de archivos a la función [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md).  
   
-##  <a name="BasicsUpdate"></a> Operaciones UPDATE en FileTables  
+##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> Operaciones UPDATE en FileTables  
  Las consideraciones siguientes se aplican a las operaciones **UPDATE** en FileTables:  
   
 -   Se permiten actualizaciones en los datos definidos por el usuario.  
   
--   Se aplican las restricciones definidas por el sistema si la instrucción INSERT establece los atributos **name**, **path_locator**, **parent_path_locator**o file.  
+-   Se aplican las restricciones definidas por el sistema si la instrucción INSERT establece los atributos **name**, **path_locator**, **parent_path_locator** o file.  
   
 -   Las actualizaciones pueden realizarse en los datos FILESTREAM de la columna **file_stream** sin que se vea afectada ninguna de las demás columnas, incluidas las marcas de tiempo.  
   
-##  <a name="BasicsDelete"></a> Operaciones DELETE en FileTables  
+##  <a name="delete-operations-on-filetables"></a><a name="BasicsDelete"></a> Operaciones DELETE en FileTables  
  Las consideraciones siguientes se aplican a las operaciones **DELETE** en FileTables:  
   
 -   Al eliminar una fila, también se quita el archivo o directorio correspondiente del sistema de archivos.  
   
 -   Al eliminar una fila se produce un error si la fila corresponde a un directorio que contiene otros archivos o directorios.  
   
-##  <a name="BasicsConstraints"></a> Restricciones que se aplican a operaciones DML en FileTables  
+##  <a name="constraints-that-are-enforced-for-dml-operations-on-filetables"></a><a name="BasicsConstraints"></a> Restricciones que se aplican a operaciones DML en FileTables  
  Las restricciones definidas por el sistema garantizan que las acciones DML no comprometan la integridad de la jerarquía del espacio de nombres de archivo. Las restricciones que se aplican incluyen las siguientes:  
   
 -   Al establecer o cambiar el **nombre** del archivo o del directorio:  
@@ -71,7 +72,7 @@ ms.locfileid: "68018894"
   
 ## <a name="see-also"></a>Consulte también  
  [Cargar archivos en FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Obtener acceso a FileTables con API de entrada-salida de archivo](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   
  [DDL de FileTable, funciones, procedimientos almacenados y vistas](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

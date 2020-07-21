@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63255226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005736"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página Descripción
   Utilice este cuadro de diálogo para agregar una descripción e información adicional a una directiva de administración basada en directivas.  
@@ -48,7 +47,7 @@ ms.locfileid: "63255226"
  **Modificado por**  
  Inicio de sesión que hizo el cambio más reciente en la directiva.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

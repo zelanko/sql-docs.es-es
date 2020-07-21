@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d3377cb5ed4afd4577462e0b436bb16d2fee
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 26331e3864940b9c7f2a2588e3d3cbfa9944c900
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060352"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar asignaciones de tipos de datos para un publicador de Oracle
   En este tema se describe cómo especificar asignaciones de tipos de datos para un publicador de Oracle en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Aunque se proporciona un conjunto de asignaciones de tipo de datos predeterminado para los publicadores de Oracle, es posible que sea necesario especificar las diferentes asignaciones para una publicación determinada.  
@@ -32,16 +31,16 @@ ms.locfileid: "68941097"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Especifique asignaciones de tipos de datos en la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>** . Está disponible en la página **Artículos** del Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Especifique las asignaciones de tipos de datos en la pestaña **asignación de datos** del cuadro de diálogo **propiedades del artículo: \<Article> ** . Está disponible en la página **artículos** del Asistente para nueva publicación y en el cuadro de diálogo **propiedades de la \<Publication> publicación:** . Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Para especificar una asignación de tipos de datos  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla y luego haga clic en **Propiedades del artículo**.  
+1.  En la página **artículos** del Asistente para nueva publicación o en el cuadro de diálogo **propiedades de la publicación \<Publication> :** , seleccione una tabla y, a continuación, haga clic en **propiedades del artículo**.  
   
 2.  Haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , seleccione las asignaciones de la columna **Tipo de datos del suscriptor**:  
+3.  En la pestaña **asignación de datos** del cuadro de diálogo Propiedades del **artículo: \<Article> ** , seleccione asignaciones en la columna tipo de datos del **suscriptor** :  
   
     -   Para algunos tipos de datos, solo hay una asignación posible, en cuyo caso la columna de la cuadrícula de propiedades es de solo lectura.  
   
@@ -49,38 +48,38 @@ ms.locfileid: "68941097"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- Puede especificar asignaciones de tipo de datos personalizadas mediante programación con los procedimientos almacenados de la replicación. También puede establecer las asignaciones predeterminadas que se usan al asignar los tipos de datos entre [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y un sistema de administración de bases de datos (DBMS) que no sea de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para más información, consulte [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
+ Puede especificar asignaciones de tipo de datos personalizadas mediante programación con los procedimientos almacenados de la replicación. También puede establecer las asignaciones predeterminadas que se utilizan al asignar tipos de datos entre [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y un sistema de administración de bases de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (DBMS) que no es de. Para más información, consulte [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Para definir las asignaciones de tipo de datos personalizadas al crear un artículo que pertenece a una publicación de Oracle  
   
 1.  Si aún no existe ninguna, cree una publicación de Oracle.  
   
-2.  En el distribuidor, ejecute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Especifique un valor de **0** para  **\@use_default_datatypes**. Para más información, consulte [Define an Article](define-an-article.md).  
+2.  En el distribuidor, ejecute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Especifique un valor de **0** para **\@use_default_datatypes**. Para más información, consulte [Define an Article](define-an-article.md).  
   
 3.  En el distribuidor, ejecute [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) para ver la asignación existente de una columna en un artículo publicado.  
   
-4.  En el distribuidor, ejecute [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Especifique el nombre del publicador de Oracle  **\@** para el publicador,  **\@** así como  **\@** la publicación,  **\@** el artículo y la columna para definir la columna publicada. Especifique el nombre del tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de datos al que se va a asignar para  **\@el tipo**, así  **\@** como  **\@la longitud**, la precisión y  **\@la escala**, si procede.  
+4.  En el distribuidor, ejecute [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Especifique el nombre del publicador de Oracle para el ** \@ publicador**, así como la ** \@ publicación**, el ** \@ artículo**y la ** \@ columna** para definir la columna publicada. Especifique el nombre del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos al que se va a asignar para el ** \@ tipo**, así como la ** \@ longitud**, la ** \@ precisión**y la ** \@ escala**, si procede.  
   
 5.  En el distribuidor, ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Esto crea la vista usada para generar la instantánea de la publicación de Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Para especificar una asignación como la asignación predeterminada de un tipo de datos  
   
-1.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). **Especifique\@source_dbms** **, source_type\@** **, destination_dbms\@** **, destination_versionycualquierotroparámetronecesariopara\@** identificar el DBMS de origen. Se devuelve información acerca del tipo de datos asignado actualmente en el DBMS de destino mediante los parámetros de salida.  
+1.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Especifique ** \@ source_dbms**, ** \@ source_type**, ** \@ destination_dbms**, ** \@ destination_version**y cualquier otro parámetro necesario para identificar el DBMS de origen. Se devuelve información acerca del tipo de datos asignado actualmente en el DBMS de destino mediante los parámetros de salida.  
   
-2.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique source_dbms y cualquier otro parámetro necesario para filtrar el conjunto de resultados.  **\@** Tenga en cuenta el valor de **mapping_id** para la asignación deseada en el conjunto de resultados.  
+2.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique ** \@ source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados. Tenga en cuenta el valor de **mapping_id** para la asignación deseada en el conjunto de resultados.  
   
 3.  En cualquier base de datos del distribuidor, ejecute [sp_setdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql).  
   
-    -   Si conoce el valor deseado de **mapping_id** obtenido en el paso 2, especifíquelo para  **\@mapping_id**.  
+    -   Si conoce el valor deseado de **mapping_id** obtenido en el paso 2, especifíquelo para **\@mapping_id**.  
   
-    -   Si no conoce **mapping_id**, especifique los parámetros  **\@source_dbms**,  **\@source_type**,  **\@destination_dbms**,  **\@destination_type**y cualquier otro parámetros necesarios para identificar una asignación existente.  
+    -   Si no conoce **mapping_id**, especifique los parámetros **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_type** y cualquier otro parámetro necesario para identificar una asignación existente.  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>Para buscar los tipos de datos válidos para un tipo de datos de Oracle determinado  
   
-1.  En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique un valor de **Oracle** para  **\@source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados.  
+1.  En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique un valor de **Oracle** para ** \@ source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se cambia una columna con un tipo de datos de Oracle NUMBER, de modo que se asigna al tipo de datos `numeric`(38,38) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en lugar del tipo de datos predeterminado `float`.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
@@ -93,10 +92,10 @@ ms.locfileid: "68941097"
   
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
-## <a name="see-also"></a>Vea también  
- [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Replicación de bases de datos heterogéneas](../non-sql/heterogeneous-database-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asignación de tipos de datos para publicadores de Oracle](../non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Replicación de base de datos heterogénea](../non-sql/heterogeneous-database-replication.md)   
+ [Conceptos de procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)   
  [Configurar un publicador de Oracle](../non-sql/configure-an-oracle-publisher.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Características y tareas de Analysis Services | Microsoft Docs
+title: Analysis Services características y tareas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80eddefc7b4bafb28a1f4e4f166bfac1169632c2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062538"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528051"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Características y tareas de Analysis Services
   La documentación básica de Analysis Services está organizada por modelado y modo de servidor para que pueda centrarse únicamente en las herramientas, tareas y características disponibles en el modo que tiene instalado. Las tareas de administración de servidores que abarcan varios modos se encuentran en instancias de servidor.  
@@ -27,7 +26,7 @@ ms.locfileid: "66062538"
   
  [Administración de una instancia de Analysis Services](instances/analysis-services-instance-management.md)  
   
- [Modelado tabular &#40;Tabular de SSAS&#41;](tabular-models/tabular-models-ssas.md)  
+ [Modelado tabular &#40;&#41;tabular de SSAS](tabular-models/tabular-models-ssas.md)  
   
  [Modelado multidimensional &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   

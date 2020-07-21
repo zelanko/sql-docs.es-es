@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: d0d93259d8acdeb6d548d18971bba2843b61bab7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: c086fa93025d9c6263f14b7f1c1b0ea865f66c56
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720852"
 ---
 # <a name="publication-type"></a>Tipo de publicación
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La replicación proporciona los siguientes tipos de publicaciones:  
   
 -   Publicación de instantáneas  
@@ -38,6 +38,6 @@ ms.locfileid: "68769921"
   
 ## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md) (Creación de una publicación)  
   
   

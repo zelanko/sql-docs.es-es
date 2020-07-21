@@ -11,10 +11,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296117"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lección 1-2: Adición y configuración de un administrador de conexiones de archivos planos
@@ -85,7 +85,7 @@ De manera predeterminada, las cuatro columnas están inicialmente establecidas e
     |--------------------|------------------|----------------------|--------------------|  
     |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
-    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Date|  
+    |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
   
     El tipo de datos sugerido para la columna **CurrencyID** no es compatible con el tipo de datos del campo de la tabla de destino. Como el tipo de datos de `DimCurrency.CurrencyAlternateKey` es nchar(3), **CurrencyID** debe cambiarse de cadena [DT_STR] a cadena Unicode [DT_WSTR]. Además, el campo `DimDate.FullDateAlternateKey` está definido como un tipo de datos de fecha, por lo que se debe cambiar **CurrencyDate** del tipo fecha [DT_Date] al tipo fecha de base de datos [DT_DBDATE].  
@@ -99,7 +99,7 @@ De manera predeterminada, las cuatro columnas están inicialmente establecidas e
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 3: Adición y configuración de un administrador de conexiones OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Administrador de conexiones de archivos planos](../integration-services/connection-manager/flat-file-connection-manager.md)  
 [Tipos de datos de Integration Services](../integration-services/data-flow/integration-services-data-types.md)  
   

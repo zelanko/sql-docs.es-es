@@ -17,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b761d0e056037c134a3be837be04cba9395d9273
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094831"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900032"
 ---
-# <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra las expresiones de condiciones que se ejecutaron, los destinos de las expresiones, el resultado de cada ejecución y detalles sobre los errores, si se produjo alguno. En la tabla siguiente se describen las columnas de la vista syspolicy_execution_history_details.  
   
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Identificador de este registro. Cada registro representa el intento para evaluar o exigir una expresión de condición en una directiva. Si se aplica a varios destinos, cada condición tendrá un registro de detalle para cada uno.|  
-|history_id|**bigint**|Identificador del evento del historial. Cada evento del historial representa un intento de ejecutar una directiva. Dado que una condición puede tener varias expresiones de condiciones y varios destinos, un identificador history_id puede crear varios registros de detalle. Utilice la columna history_id para unir esta vista a la [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) vista.|  
+|history_id|**bigint**|Identificador del evento del historial. Cada evento del historial representa un intento de ejecutar una directiva. Dado que una condición puede tener varias expresiones de condiciones y varios destinos, un identificador history_id puede crear varios registros de detalle. Utilice la columna history_id para unir esta vista a la vista de [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
 |target_query_expression|**nvarchar(max)**|Destino de la directiva y vista syspolicy_policy_execution_history.|  
 |execution_date|**datetime**|Fecha y hora cuando se creó este registro de detalle.|  
 |resultado|**bit**|Corrección o error de este destino y evaluación de la expresión de condición:<br /><br /> 0 (correcto) o 1 (error).|  
@@ -68,8 +68,8 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar servidores mediante la administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

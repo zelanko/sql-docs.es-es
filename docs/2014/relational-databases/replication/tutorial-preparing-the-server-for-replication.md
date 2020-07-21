@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bc070d34bdc580eecb7f2ce0c35d277545f1281
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049072"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Tutorial: Preparar el servidor para la replicación
   Es importante planificar la seguridad antes de configurar la topología de replicación. En este tutorial se muestra cómo proteger una topología de replicación y cómo configurar la distribución, que es el primer paso en la replicación de datos. Debe finalizar este tutorial antes que cualquiera de los otros tutoriales.  
@@ -39,16 +38,16 @@ ms.locfileid: "63199069"
   
 ## <a name="lessons-in-this-tutorial"></a>Lecciones de este tutorial  
   
--   [Lección 1: Creación de Windows de cuentas para la replicación](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Lección 1: Creación de cuentas de Windows para replicación](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [Lección 2: Preparación de la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md)  
+-   [Lección 2: Preparar la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md)  
   
 -   [Lección 3: Configurar la distribución](lesson-3-configuring-distribution.md)  
   
- [Iniciar el tutorial](lesson-1-creating-windows-accounts-for-replication.md)  
+ [Inicio del tutorial](lesson-1-creating-windows-accounts-for-replication.md)  
   
-## <a name="see-also"></a>Vea también  
- [Configurar distribución](configure-distribution.md)   
- [Seguridad de replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar la distribución](configure-distribution.md)   
+ [Seguridad de Replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

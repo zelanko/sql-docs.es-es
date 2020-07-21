@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e1a4d6a9d55caa910a0a7de5349dd06dd60269
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 055599b3aba3fb84c3b3e2c5e3d710ac32a434f4
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122277"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159753"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Termina un proceso de usuario basado en el identificador de sesión o la unidad de trabajo (UOW). Si el identificador de sesión o UOW especificado tiene que deshacer muchas operaciones, puede que la instrucción KILL tarde en completarse. El proceso tarda más tiempo en completarse especialmente cuando implique revertir una transacción larga.  
   
@@ -52,13 +52,13 @@ KILL termina una conexión normal, que detiene internamente las transacciones as
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 KILL { session ID | UOW } [ WITH STATUSONLY ]   
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 KILL 'session_id'  
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Se aplica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 Identifica el identificador de unidad de trabajo (UOW) de las transacciones distribuidas. _UOW_ es un GUID que puede obtenerse desde la columna request_owner_guid de la vista de administración dinámica sys.dm_tran_locks. _UOW_ también puede obtenerse desde el registro de errores o a través del monitor MS DTC. Para obtener más información sobre cómo supervisar transacciones distribuidas, consulte la documentación de MS DTC.  
   
@@ -87,7 +87,7 @@ Use KILL _UOW_ para detener transacciones distribuidas huérfanas. Estas transac
 WITH STATUSONLY  
 Genera un informe de progreso sobre un argumento _session ID_ o _UOW_ especificado que se está revirtiendo a causa de una instrucción KILL anterior. KILL WITH STATUSONLY no termina el argumento _session ID_ o _UOW_ ni lo revierte. El comando solo muestra el progreso actual de la reversión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 KILL se utiliza normalmente para terminar un proceso que está bloqueando otros procesos importantes mediante bloqueos. KILL también se puede usar para detener un proceso que está ejecutando una consulta que usa los recursos necesarios del sistema. Los procesos del sistema y los procesos que ejecutan un procedimiento almacenado extendido no se pueden terminar.  
   
 Use KILL con cuidado, especialmente cuando se estén ejecutando procesos críticos. No puede eliminar sus propios procesos. Tampoco debe eliminar los siguientes procesos:  

@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000864"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892926"
 ---
-# <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina la definición de un tipo de recopilador.  
   
@@ -41,20 +41,20 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collector_type_uid = ] 'collector_type_uid'` Es el GUID para el tipo de recopilador. *collector_type_uid* es **uniqueidentifier** y debe tener un valor si *nombre* es NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'`Es el GUID del tipo de recopilador. *collector_type_uid* es de tipo **uniqueidentifier** y debe tener un valor si *el nombre* es NULL.  
   
-`[ @name = ] 'name'` Es el nombre del tipo de recopilador. *nombre* es **sysname** y debe tener un valor si *collector_type_uid* es NULL.  
+`[ @name = ] 'name'`Es el nombre del tipo de recopilador. *Name* es de **tipo sysname** y debe tener un valor si *collector_type_uid* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Cualquier *collector_type_uid* o *nombre* debe tener un valor, no puede ser NULL.  
+ *Collector_type_uid* o *Name* deben tener un valor, ambos no pueden ser null.  
   
  Este procedimiento mostrará un error si existen elementos de recopilación con este tipo de recopilador.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **dc_admin** (con permiso EXECUTE) rol fijo de base de datos para ejecutar este procedimiento.  
+ Requiere la pertenencia al rol fijo de base de datos **dc_admin** (con permiso Execute) para ejecutar este procedimiento.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo elimina el tipo de recopilador de consultas T-SQL genérico.  
@@ -65,7 +65,7 @@ GO
 EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   

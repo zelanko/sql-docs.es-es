@@ -1,5 +1,5 @@
 ---
-title: Funciones ODBC y la biblioteca de cursores | Microsoft Docs
+title: Funciones ODBC y biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,20 +8,20 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100665"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304346"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Funciones ODBC y biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Cuando la biblioteca de cursores ODBC está habilitada para una conexión, el Administrador de controladores llama a funciones en la biblioteca de cursores en lugar de en el controlador. La biblioteca de cursores ejecuta la función o lo llama en el controlador especificado.  
+ Cuando la biblioteca de cursores ODBC está habilitada para una conexión, el administrador de controladores llama a las funciones de la biblioteca de cursores en lugar de hacerlo en el controlador. La biblioteca de cursores ejecuta la función o la llama en el controlador especificado.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,6 +1,7 @@
 ---
-title: Configurar la base de datos de distribución de SQL Server en un grupo de disponibilidad | Microsoft Docs
-ms.custom: ''
+title: Configuración de la base de datos de distribución en un grupo de disponibilidad
+description: Configure la base de datos de distribución para la replicación de SQL Server con un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908476"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159833"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se explica cómo configurar una base de datos de distribución de replicación de SQL Server en un grupo de disponibilidad (AG) AlwaysOn.
 
@@ -73,7 +74,7 @@ Después de configurar una base de datos de distribución en el AG según los pa
    >[!NOTE]
    >Antes de ejecutar cualquiera de los procedimientos almacenados de replicación (por ejemplo, `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb` o `sp_adddistpublisher`) en la réplica secundaria, asegúrese de que la réplica esté totalmente sincronizada.
 
-- Todas las réplicas secundarias de un AG de base de datos de distribución deben ser legibles.
+- Todas las réplicas secundarias de un AG de base de datos de distribución deben ser legibles. Si una réplica secundaria no es legible, no se puede acceder a las propiedades del distribuidor en SQL Server Management Studio en dicha réplica secundaria, pero esta continuará funcionando correctamente. 
 - Todos los nodos del AG de base de datos de distribución deben usar la misma cuenta de dominio para ejecutar el Agente SQL Server. Además, esta cuenta de dominio debe tener los mismos privilegios en cada nodo.
 - Si cualquiera de los agentes de replicación se ejecutan en una cuenta de proxy, esta debe existir en todos los nodos del AG de base de datos de distribución y deben tener los mismos privilegios en cada nodo.
 - Efectúe cambios en las propiedades de base de datos del distribuidor o de la distribución en todas las réplicas que participan en un AG de base de datos de distribución.
@@ -116,12 +117,18 @@ En este ejemplo se configura un distribuidor y un publicador nuevos y se coloca 
 
    El valor de `@working_directory` debería ser una ruta de acceso de red independiente de DIST1, DIST2 y DIST3.
 
-1. En DIST2 y DIST3, ejecute lo siguiente:  
+1. En DIST2 y DIST3, si la réplica es legible como secundaria, ejecute lo siguiente:  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Si una réplica no es legible como secundaria, realice la conmutación por error de modo que se convierta en la principal y ejecute lo siguiente: 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    El valor de `@working_directory` debería ser el mismo que en el paso anterior.
 
 ### <a name="publisher-workflow"></a>Flujo de trabajo del publicador
@@ -195,12 +202,18 @@ En este ejemplo se agrega un distribuidor nuevo a una configuración de replicac
    sp_adddistributiondb 'distribution'
    ```
 
-4. En DIST3, ejecute lo siguiente: 
+4. En DIST3, si la réplica es legible como secundaria, ejecute lo siguiente: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Si la réplica no es legible como secundaria, realice la conmutación por error de modo que se convierta en la principal y ejecute lo siguiente:
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    El valor de `@working_directory` debe ser el mismo que se especificó para DIST1 y DIST2.
 
 4. En DIST3, debe volver a crear servidores vinculados a los suscriptores.
@@ -371,7 +384,7 @@ WITH IP
 ((N'10.0.0.8', N'255.255.255.0')) , PORT=1500);
 GO
 
--- STEP 5 - Enable SQLNode1 also as a Distributor
+-- STEP 5 - Enable SQLNode2 also as a Distributor
 :CONNECT SQLNODE2
 EXEC sp_adddistributiondb @database = 'DistributionDB', @security_mode = 1;
 GO

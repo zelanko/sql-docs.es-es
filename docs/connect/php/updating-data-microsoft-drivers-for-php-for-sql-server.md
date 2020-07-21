@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014840"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926847"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Actualización de datos (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,8 @@ Los pasos para utilizar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md
   
 |Tema|Descripción|  
 |---------|---------------|  
-|[Cómo realizar consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)|Describe cómo realizar consultas con parámetros.|  
-|[Cómo enviar datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
+|[Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)|Describe cómo realizar consultas con parámetros.|  
+|[Envío de datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
 |[Realización de transacciones](../../connect/php/how-to-perform-transactions.md)|Describe cómo utilizar las funciones de **sqlsrv** para realizar transacciones.|  
   
 ## <a name="see-also"></a>Consulte también  

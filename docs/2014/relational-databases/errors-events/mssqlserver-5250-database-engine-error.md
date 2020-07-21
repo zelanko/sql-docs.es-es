@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92d14b196d3237f1eb9812b8b5eece42cdad2037
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62867949"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551240"
 ---
-# <a name="mssqlserver5250"></a>MSSQLSERVER_5250
+# <a name="mssqlserver_5250"></a>MSSQLSERVER_5250
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|5250|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|5250|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Texto del mensaje|Error de base de datos: PAGE_TYPE página P_ID de la base de datos 'NAME' (DB_ID Id. de base de datos) no es válida. Este error no se puede reparar. Debe restaurar una copia de seguridad.|  
+|Texto del mensaje|Error de base de datos: PAGE_TYPE página P_ID de la base de datos 'NAME' (id. de base de datos DB_ID) no válido. Este error no se puede reparar. Debe restaurar una copia de seguridad.|  
   
 ## <a name="explanation"></a>Explicación  
  Hay una página de encabezado de archivo o página de arranque dañada en la base de datos especificada.  

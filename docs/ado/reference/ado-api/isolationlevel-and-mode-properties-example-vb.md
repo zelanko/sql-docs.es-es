@@ -1,5 +1,5 @@
 ---
-title: Ejemplo IsolationLevel y Mode propiedades (VB) | Microsoft Docs
+title: Ejemplo de las propiedades IsolationLevel y MODE (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918413"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758681"
 ---
-# <a name="isolationlevel-and-mode-properties-example-vb"></a>Ejemplo IsolationLevel y Mode propiedades (VB)
-Este ejemplo se usa el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad para abrir una conexión exclusiva y el [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propiedad para abrir una transacción que se lleva a cabo de forma aislada de otras transacciones.  
+# <a name="isolationlevel-and-mode-properties-example-vb"></a>Ejemplo de las propiedades IsolationLevel y MODE (VB)
+En este ejemplo se usa la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) para abrir una conexión exclusiva y la propiedad [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) para abrir una transacción que se lleva a cabo en el aislamiento de otras transacciones.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -115,7 +115,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propiedad IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Propiedad Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

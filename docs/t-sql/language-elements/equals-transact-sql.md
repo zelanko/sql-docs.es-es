@@ -21,15 +21,15 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 641604c814ce6494834e6cc382bef590c534a2d0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075269"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004991"
 ---
 # <a name="-equals-transact-sql"></a>= (Igual a) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Compara la igualdad de dos expresiones (un operador de comparación) en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -48,7 +48,7 @@ expression = expression
 ## <a name="result-types"></a>Tipos de resultado  
  Boolean  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al comparar mediante una expresión NULL, el resultado depende de la configuración de `ANSI_NULLS`:  
   
 -   Si `ANSI_NULLS` se establece en ON, el resultado de las comparaciones con NULL es UNKNOWN, según la convención ANSI de que NULL es un valor desconocido y no se puede comparar con ningún otro, incluidos otros valores NULL.  

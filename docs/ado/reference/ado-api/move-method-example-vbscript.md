@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VBScript) del método Move | Microsoft Docs
+title: Ejemplo del método move (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,23 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918163"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762486"
 ---
 # <a name="move-method-example-vbscript"></a>Ejemplo del método Move (VBScript)
-Este ejemplo se usa el [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero de registro, en función de entrada del usuario.  
+En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro, en función de los datos proporcionados por el usuario.  
   
- Utilice el siguiente ejemplo en una página Active Server (ASP). Para ver este ejemplo totalmente funcional, debe tener los datos de origen AdvWorks.mdb (instalado con el SDK) ubicado en C:\Program Files\Microsoft plataforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o editar la ruta de acceso del código de ejemplo para reflejar la ubicación real de este archivo. Se trata de un archivo de base de datos de Microsoft Access.  
+ Use el ejemplo siguiente en una página de Active Server (ASP). Para ver este ejemplo totalmente funcional, debe tener el origen de datos AdvWorks. mdb (instalado con el SDK) ubicado en C:\Archivos de Programa\microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o editar la ruta de acceso en el código de ejemplo para reflejar la ubicación real de este archivo. Este es un archivo de base de datos de Microsoft Access.  
   
- Usar **buscar** para localizar el archivo Adovbs.inc y colocarlo en el directorio que se va a usar. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **MoveVBS.asp**. Puede ver el resultado en cualquier explorador.  
+ Use **Buscar** para buscar el archivo adovbs. Inc y colóquelo en el directorio que piensa usar. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **MoveVBS. asp**. Puede ver el resultado en cualquier explorador.  
   
- Pruebe a escribir una letra o un no entera para ver el trabajo de control de errores.  
+ Intente escribir una letra o un valor no entero para ver el trabajo de control de errores.  
   
 ```  
 <!-- BeginMoveVBS -->  
@@ -182,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

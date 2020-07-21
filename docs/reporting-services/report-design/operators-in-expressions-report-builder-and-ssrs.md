@@ -1,5 +1,5 @@
 ---
-title: Usar operadores en expresiones (Generador de informes y SSRS) | Microsoft Docs
+title: Operadores en expresiones (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0cf32f32a375f998522ff689663ec0296a0b5be4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582234"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082589"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Usar operadores en expresiones (Generador de informes y SSRS)
   Un operador es un símbolo que representa las acciones que se aplican a uno o a varios términos de una expresión. En una expresión, se pueden usar las categorías de operadores siguientes: aritméticos, de comparación, de concatenación, lógicos o bit a bit, y de desplazamiento de bits.  
@@ -24,7 +24,7 @@ ms.locfileid: "65582234"
 ### <a name="arithmetic"></a>Aritméticos  
  Los operadores aritméticos realizan operaciones matemáticas entre dos términos numéricos de una expresión.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |^|Eleva un número a la potencia de otro número.|  
 |*|Multiplica dos números.|  
@@ -34,24 +34,24 @@ ms.locfileid: "65582234"
 |+|Suma dos números.|  
 |-|Devuelve la diferencia entre dos números o indica el valor negativo de un término numérico.|  
   
-### <a name="comparison"></a>Comparación  
+### <a name="comparison"></a>De comparación  
  Los operadores de comparación comprueban si dos expresiones son iguales.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |<|Menor que.|  
 |\<=|Menor o igual que.|  
 |>|Mayor que.|  
 |>=|Mayor o igual que.|  
 |=|Igual que.|  
-|<>|No es igual a.|  
-|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La tabla siguiente contiene una lista de los caracteres que se pueden usar como caracteres comodín:<br /><br /> %: cualquier cadena de cero o más caracteres.<br /><br /> _: cualquier carácter individual.<br /><br /> [ ]: cualquier carácter individual que se encuentre en el intervalo (por ejemplo, [a-f]) o en el conjunto (por ejemplo, [aeiou]) especificado.<br /><br /> [^]: cualquier carácter individual que no se encuentre en el intervalo (por ejemplo, [^a-f]) o en el conjunto (por ejemplo, [^aeiou]) especificado.|  
+|<>|Diferente de.|  
+|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La tabla siguiente contiene una lista de los caracteres que se pueden usar como caracteres comodín:<br /><br /> %: Cualquier cadena de cero o más caracteres.<br /><br /> _: Cualquier carácter individual.<br /><br /> [ ]: cualquier carácter individual que se encuentre en el intervalo (por ejemplo, [a-f]) o en el conjunto (por ejemplo, [aeiou]) especificado.<br /><br /> [^]: cualquier carácter individual que no se encuentre en el intervalo (por ejemplo, [^a-f]) o en el conjunto (por ejemplo, [^aeiou]) especificado.|  
 |Is|Compara dos referencias a objeto.|  
   
 ### <a name="string-concatenation"></a>Concatenación de cadenas  
  Los operadores de concatenación de cadenas anexan la segunda cadena a la primera en una expresión. Para las demás operaciones de cadena, use las funciones integradas.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |&|Concatena dos cadenas|  
 |+|Concatena dos cadenas|  
@@ -59,11 +59,11 @@ ms.locfileid: "65582234"
 ### <a name="logical-and-bitwise"></a>Lógicos y bit a bit  
  Los operadores lógicos y bit a bit realizan manipulaciones lógicas entre dos términos enteros de una expresión.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |And|Realiza una conjunción lógica entre dos expresiones booleanas o una conjunción bit a bit entre dos expresiones numéricas.|  
 |Not|Realiza una negación lógica de una expresión booleana o una negación bit a bit de una expresión numérica.|  
-|o bien|Realiza una disyunción lógica entre dos expresiones booleanas o una disyunción bit a bit entre dos valores numéricos.|  
+|Or|Realiza una disyunción lógica entre dos expresiones booleanas o una disyunción bit a bit entre dos valores numéricos.|  
 |Xor|Realiza una operación de exclusión lógica entre dos expresiones booleanas o una exclusión bit a bit entre dos expresiones numéricas.|  
 |AndAlso|Realiza una conjunción lógica entre dos expresiones.|  
 |OrElse|Realiza una disyunción lógica entre dos expresiones.|  
@@ -71,7 +71,7 @@ ms.locfileid: "65582234"
 ### <a name="bit-shift"></a>Desplazamiento de bits  
  Los operadores de desplazamiento de bits realizan manipulaciones de bits entre dos términos enteros de una expresión.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |<\<|Realiza un desplazamiento aritmético a la izquierda en un patrón de bits.|  
 |>>|Realiza un desplazamiento aritmético a la derecha en un patrón de bits.|  

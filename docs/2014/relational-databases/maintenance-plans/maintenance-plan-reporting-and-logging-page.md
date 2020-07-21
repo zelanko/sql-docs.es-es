@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82da951eb38ead64b154b98b138ffd6c0cfaa605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024266"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de mantenimiento (página de informes y registro)
   Use el cuadro de diálogo **Informes y registro** para configurar los informes y registros que se generan al ejecutar los planes de mantenimiento.  
@@ -44,13 +43,13 @@ ms.locfileid: "63186263"
  **Registrar en el servidor remoto**  
  Registra el historial del plan de mantenimiento en un servidor remoto.  
   
- **Conexión**  
+ **Connection**  
  Especifica la información de conexión que se va a usar al registrar en un servidor remoto.  
   
- **Nueva**  
+ **Nuevo**  
  Muestra el cuadro de diálogo **Propiedades de conexión** . Se usa para configurar información de conexión nueva para registrar en un servidor remoto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](maintenance-plans.md)   
  [Correo electrónico de base de datos](../database-mail/database-mail.md)  
   

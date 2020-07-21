@@ -1,6 +1,6 @@
 ---
 title: REPLACE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para la función REPLACE, que reemplaza todas las apariciones de un valor de cadena especificado con otro valor de cadena.
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecafa13363b558ba9d613591ed5bf0d942be80c8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944534"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003739"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Reemplaza todas las instancias de un valor de cadena especificado por otro valor de cadena.  
   
@@ -38,7 +38,7 @@ Reemplaza todas las instancias de un valor de cadena especificado por otro valor
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 REPLACE ( string_expression , string_pattern , string_replacement )  
 ```  
   
@@ -52,14 +52,14 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string\_replacement*  
  Es la cadena de reemplazo. *string_replacement* puede tener un tipo de datos de carácter o binario.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve **nvarchar** si uno de los argumentos de entrada tiene el tipo de datos **nvarchar**; de lo contrario, REPLACE devuelve **varchar**.  
   
  Devuelve NULL si alguno de los argumentos es NULL.  
   
  Si *string_expression* no es de tipo **varchar(max)** o **nvarchar(max), REPLACE** trunca el valor devuelto en 8000 bytes. Para devolver valores mayores de 8000 bytes, *string_expression* se debe convertir explícitamente en un tipo de datos de valores grandes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  REPLACE realiza comparaciones basándose en la intercalación de la entrada. Para realizar una comparación de una intercalación especificada, puede usar [COLLATE](~/t-sql/statements/collations.md) para aplicar una intercalación explícita a la entrada.  
   
  0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en REPLACE.  

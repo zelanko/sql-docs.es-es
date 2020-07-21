@@ -1,5 +1,6 @@
 ---
 title: Bases de datos | Microsoft Docs
+description: Obtenga información sobre las tablas, los grupos de archivos, los inicios de sesión, los roles y los esquemas de las bases de datos. Consulte cómo puede usar la herramienta SQL Server Management Studio para trabajar con bases de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109704"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630765"
 ---
 # <a name="databases"></a>Bases de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
   
 ## <a name="basic-information-about-databases"></a>Información básica sobre las bases de datos  
@@ -61,6 +62,6 @@ ms.locfileid: "68109704"
   
  [Vistas](../../relational-databases/views/views.md)  
   
- [Procedimientos almacenados &#40;Database Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ [Procedimientos almacenados &#40;motor de base de datos&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

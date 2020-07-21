@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d4f31448f9a8db6e516eff6b7cac079d9d46dfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68c8b655dbec3380ddad64199735d1c5b052c30f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066158"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Eliminar tabla (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo permite especificar la tabla de la que se desean eliminar registros. Aparece si se muestra más de una tabla en el panel Diagrama al cambiar el tipo de una consulta a una consulta DELETE.  
@@ -28,7 +27,7 @@ ms.locfileid: "63316108"
 > [!NOTE]  
 >  Una consulta DELETE quita filas completas de la tabla. Si desea borrar valores de columnas de datos individuales, utilice una consulta UPDATE. Si desea eliminar columnas de una definición de tabla, o eliminar la tabla, utilice el Diseñador de tablas o las herramientas de diseño de bases de datos apropiadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Quitar tablas de las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

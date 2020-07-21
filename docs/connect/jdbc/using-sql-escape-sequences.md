@@ -1,5 +1,6 @@
 ---
-title: Usar secuencias de escape de SQL | Microsoft Docs
+title: Uso de secuencias de escape de SQL en JDBC
+description: El controlador Microsoft JDBC Driver para SQL Server permite el uso de secuencias de escape SQL, según se define en la API JDBC.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 68b595c1901d010b798ebf1767e270e468fb9163
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69025891"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528190"
 ---
 # <a name="using-sql-escape-sequences"></a>Empleo de secuencias de escape de SQL
 
@@ -69,9 +70,9 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 En la tabla siguiente se muestran las diversas funciones que el controlador JDBC admite al usar un flujo de escape de funciones.  
   
-| Funciones de cadena                                                                                                                                                                                                                                                                                                                        | Funciones numéricas                                                                                                                                                                                                                                                                                                                                                                                                   | Funciones DateTime                                                                                                                                                                                                                                                                                                                                             | Funciones del sistema                             |
+| Funciones de cadena                                                                                                                                                                                                                                                                                                                        | Funciones numéricas                                                                                                                                                                                                                                                                                                                                                                                                   | Funciones de fecha y hora                                                                                                                                                                                                                                                                                                                                             | Funciones del sistema                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> REGISTRO<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> USER |
 
 > [!NOTE]  
 > Si intenta utilizar una función que la base de datos no admita, se producirá un error.  
@@ -88,7 +89,7 @@ donde `literal-type` es uno de los siguientes:
   
 | Tipo de literal | Descripción | Formato del valor               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | aaaa-mm-dd                 |
+| d            | Date        | aaaa-mm-dd                 |
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | aaaa-mm-dd hh:mm:ss[.f...] |
   
@@ -111,7 +112,7 @@ Un procedimiento almacenado es un objeto ejecutable almacenado en la base de dat
 
 donde `procedure-name` y `parameter` especifican el nombre y un parámetro de un procedimiento almacenado, respectivamente.  
   
-Para obtener más información sobre el `call` uso de la secuencia de escape con procedimientos almacenados, vea [usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Para obtener más información acerca de cómo usar la secuencia de escape `call` con los procedimientos almacenados, consulte [Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Combinaciones externas
 
@@ -159,6 +160,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 La sintaxis de escape tiene dos partes: \<*rows*> es obligatorio y especifica el número de filas que se devolverán. OFFSET y \<*row offset*> son opcionales y especifican el número de filas que se omiten antes de empezar a devolver filas. El controlador JDBC solo admite el elemento obligatorio al transformar la consulta para que use TOP en lugar de LIMIT. SQL Server no admite la cláusula de LIMIT. **El controlador JDBC no admite el argumento opcional \<row offset> y el controlador producirá una excepción si se usa**.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Empleo de instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

@@ -1,7 +1,7 @@
 ---
 title: Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da1688881523723206b03d7f7dec3abc2e518370
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0890fbce533a540300ebd6b7da37a1fc26572a52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296307"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768069"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server)
 
@@ -71,18 +71,18 @@ Son los valores **Uid** (id. de usuario) y **Pwd** (contraseña) para conectarse
 ### <a name="connection-string-format"></a>Formato de la cadena de conexión
 Este es el formato de una cadena de conexión típica. 
 
-    ```
-    Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>Escribir la cadena de conexión
 Escriba la cadena de conexión en el campo **ConnectionString** o escriba el nombre DSN en el campo **DSN**, que se encuentra en la página **Elegir un origen de datos** o **Elegir un destino**. Después de escribir la cadena de conexión, el asistente la analiza y muestra las propiedades individuales y sus valores en la lista.
 
 En el siguiente ejemplo se emplea esta cadena de conexión.
 
-    ```
-    Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
-    ```
+```console
+Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+```
 
 Esta es la pantalla que verá después de escribir la cadena de conexión.
 
@@ -91,7 +91,7 @@ Esta es la pantalla que verá después de escribir la cadena de conexión.
 ## <a name="other-data-providers-and-more-info"></a>Otros proveedores de datos y más información
 Para obtener más información sobre cómo conectarse a PostgreSQL con un proveedor de datos que no aparezca aquí, consulte [PostgreSQL connection strings (Cadenas de conexión de PostgreSQL)](https://www.connectionstrings.com/postgresql/). En este sitio de terceros también encontrará más información sobre los proveedores de datos y los parámetros de conexión que se describen en esta página.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

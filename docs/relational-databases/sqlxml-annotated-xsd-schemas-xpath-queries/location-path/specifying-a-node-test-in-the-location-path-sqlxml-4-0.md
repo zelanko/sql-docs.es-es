@@ -1,6 +1,6 @@
 ---
-title: Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML)
+description: Obtenga información sobre cómo especificar una prueba de nodo en la ruta de acceso de ubicación de una consulta XPath de SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,33 +15,34 @@ helpviewer_keywords:
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d0913a6066ddc0faec657a5e4857e206c227d5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0b7934b73589f71e5152bff33b2080c6eeb353e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649752"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, o **self**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >** . Para el **primario**, **secundarios**, y **self** ejes, el tipo de nodo principal es  **\<elemento >** .  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundario**, **primario**, **atributo**o **Self**) tiene un tipo de nodo principal. Para el eje de **atributo** , el tipo de nodo principal es **\<attribute>** . En el caso de los ejes **primario**, **secundario**y **propio** , el tipo de nodo principal es **\<element>** .  
   
 > [!NOTE]  
 >  La prueba de nodo de carácter comodín * (por ejemplo, `child::*`) no se admite.  
   
-## <a name="node-test-example-1"></a>Prueba de nodo: Ejemplo 1  
- La ruta de acceso de ubicación `child::Customer` selecciona  **\<cliente >** elementos secundarios del nodo de contexto.  
+## <a name="node-test-example-1"></a>Prueba de nodo: ejemplo 1  
+ La ruta de acceso `child::Customer` de ubicación selecciona elementos **\<Customer>** secundarios del nodo de contexto.  
   
- En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo. El tipo de nodo principal para el **secundarios** eje es  **\<elemento >** . Por lo tanto, la prueba de nodo es TRUE si el  **\<cliente >** nodo es un  **\<elemento >** nodo. Si el nodo de contexto no tiene ningún  **\<cliente >** elementos secundarios, se devuelve un conjunto de nodos vacío.  
+ En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo. El tipo de nodo principal para el eje **secundario** es **\<element>** . Por lo tanto, la prueba de nodo es TRUE si el **\<Customer>** nodo es un **\<element>** nodo. Si el nodo de contexto no tiene ningún **\<Customer>** elemento secundario, se devuelve un conjunto de nodos vacío.  
   
 ## <a name="node-test-example-2"></a>Prueba de nodo: Ejemplo 2  
- La ruta de acceso de ubicación `attribute::CustomerID` selecciona el **CustomerID** atributo del nodo de contexto.  
+ La ruta `attribute::CustomerID` de acceso de ubicación selecciona el atributo **CustomerID** del nodo de contexto.  
   
- En el ejemplo, `attribute` es el eje y `CustomerID` es la prueba de nodo. El tipo de nodo principal de la **atributo** eje es  **\<atributo >** . Por lo tanto, la prueba de nodo es TRUE si **CustomerID** es un  **\<atributo >** nodo. Si el nodo de contexto no tiene ningún **CustomerID**, se devuelve un conjunto de nodos vacío.  
+ En el ejemplo, `attribute` es el eje y `CustomerID` es la prueba de nodo. El tipo de nodo principal del eje de **atributo** es **\<attribute>** . Por lo tanto, la prueba de nodo es TRUE si **CustomerID** es un **\<attribute>** nodo. Si el nodo de contexto no tiene **CustomerID**, se devuelve un conjunto vacío de nodos.  
   
 > [!NOTE]  
->  En esta implementación de XPath, si un paso de ubicación hace referencia a un  **\<elemento >** o un  **\<atributo >** tipo que no se ha declarado en el esquema, se genera un error. Este comportamiento es diferente al de la implementación de XPath en MSXML, que devuelve un conjunto de nodos vacío.  
+>  En esta implementación de XPath, si un paso de ubicación hace referencia a un **\<element>** **\<attribute>** tipo o que no está declarado en el esquema, se genera un error. Este comportamiento es diferente al de la implementación de XPath en MSXML, que devuelve un conjunto de nodos vacío.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintaxis abreviada para los ejes  
  Se admite la sintaxis abreviada siguiente para la ruta de acceso de ubicación:  
@@ -52,7 +53,7 @@ ms.locfileid: "68073303"
   
 -   `child::` se puede omitir en un paso de ubicación.  
   
-     Por lo tanto, **secundarios** es el eje predeterminado. La ruta de acceso de ubicación `Customer/Order` es la misma que `child::Customer/child::Order`.  
+     Por lo tanto, **Child** es el eje predeterminado. La ruta de acceso de ubicación `Customer/Order` es la misma que `child::Customer/child::Order`.  
   
 -   `self::node()` se puede abreviar en un punto (.) y `parent::node()` se puede abreviar en dos puntos (..).  
   

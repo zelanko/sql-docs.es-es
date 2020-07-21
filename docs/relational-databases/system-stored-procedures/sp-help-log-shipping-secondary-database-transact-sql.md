@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066810"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893629"
 ---
-# <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Este procedimiento almacenado recupera la configuración de una o más bases de datos secundarias.  
   
@@ -43,9 +43,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @secondary_database = ] 'secondary_database'` Es el nombre de la base de datos secundaria. *secondary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @secondary_database = ] 'secondary_database'`Es el nombre de la base de datos secundaria. *secondary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @secondary_id = ] 'secondary_id'` El identificador para el servidor secundario en la configuración de trasvase de registros. *secondary_id* es **uniqueidentifier** y no puede ser NULL.  
+`[ @secondary_id = ] 'secondary_id'`El ID. del servidor secundario en la configuración del trasvase de registros. *secondary_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -55,7 +55,7 @@ sp_help_log_shipping_secondary_database
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**secondary_id**|Id. del servidor secundario en la configuración del trasvase de registros.|  
-|**primary_server**|El nombre de la instancia principal de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros.|  
+|**primary_server**|Nombre de la instancia principal del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros.|  
 |**primary_database**|Nombre de la base de datos principal en la configuración del trasvase de registros.|  
 |**backup_source_directory**|Directorio donde se almacenan los archivos de copia de seguridad de registros de transacciones del servidor principal.|  
 |**backup_destination_directory**|Directorio del servidor secundario donde se copian los archivos de copia de seguridad.|  
@@ -67,8 +67,8 @@ sp_help_log_shipping_secondary_database
 |**secondary_database**|Nombre de la base de datos secundaria en la configuración del trasvase de registros.|  
 |**restore_delay**|Cantidad de tiempo, en minutos, que espera el servidor secundario antes de restaurar un archivo de copia de seguridad dado. El valor predeterminado es 0 minutos.|  
 |**restore_all**|Si se establece en 1, el servidor secundario restaura todas las copias de seguridad disponibles del registro de transacciones cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo.|  
-|**restore_mode**|Modo de restauración para la base de datos secundaria.<br /><br /> 0 = Restaurar registro con NORECOVERY.<br /><br /> 1 = Restaurar registro con STANDBY.|  
-|**disconnect_users**|Si se establece en 1, los usuarios están desconectados de la base de datos secundaria cuando se realiza una operación de restauración. Valor predeterminado = 0.|  
+|**restore_mode**|Modo de restauración para la base de datos secundaria.<br /><br /> 0 = restore log with NORECOVERY.<br /><br /> 1 = Restaurar registro con STANDBY.|  
+|**disconnect_users**|Si se establece en 1, los usuarios se desconectarán de la base de datos secundaria cuando se realice una operación de restauración. Valor predeterminado = 0.|  
 |**block_size**|Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad.|  
 |**buffer_count**|Número total de búferes utilizados por la operación de copia de seguridad o restauración.|  
 |**max_transfer_size**|Tamaño, en bytes, de la solicitud de entrada o salida máxima emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo de copia de seguridad.|  
@@ -85,15 +85,15 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|Período de tiempo, en minutos, transcurrido desde que se creó la copia de seguridad de registros en el servidor primario hasta que se restauró en el servidor secundario.<br /><br /> El valor inicial es NULL.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si incluye el *secondary_database* parámetro, el conjunto de resultados contendrá información acerca de la base de datos secundaria; si incluye el *secondary_id* parámetro, que contendrá el conjunto de resultados información acerca de todas las bases de datos secundarias asociadas con ese Id. secundario.  
+ Si incluye el parámetro *secondary_database* , el conjunto de resultados contendrá información acerca de esa base de datos secundaria; Si incluye el parámetro *secondary_id* , el conjunto de resultados contendrá información acerca de todas las bases de datos secundarias asociadas a ese ID. secundario.  
   
- **sp_help_log_shipping_secondary_database** se debe ejecutar desde la **maestro** base de datos en el servidor secundario.  
+ **sp_help_log_shipping_secondary_database** se debe ejecutar desde la base de datos **maestra** en el servidor secundario.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
-## <a name="see-also"></a>Vea también  
- [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_help_log_shipping_secondary_primary &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

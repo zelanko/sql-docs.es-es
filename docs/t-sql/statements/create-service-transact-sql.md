@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: ade19ba855f4a11bcc354959865f9bc33416240e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745395"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881943"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un nuevo servicio. Un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un nombre para una tarea o un conjunto de tareas específicos. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utiliza el nombre del servicio para enrutar mensajes, entregar mensajes a la cola correcta en una base de datos y aplicar el contrato para una conversación.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "70745395"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -55,7 +55,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Establece el propietario del servicio en el usuario o el rol de base de datos especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permisos IMPERSONATE o el nombre de un rol al que pertenece el usuario actual.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Especifica la cola que recibe mensajes para el servicio. La cola debe existir en la misma base de datos que el servicio. Si no se proporciona *schema_name*, el valor es el esquema predeterminado del usuario que ejecuta la instrucción.  
   
  *contract_name*  
@@ -64,7 +64,7 @@ CREATE SERVICE service_name
  **[** DEFAULT **]**  
  Especifica que el servicio puede ser un destino para conversaciones que sigan el contrato DEFAULT. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. El contrato DEFAULT permite que los dos extremos de la conversación envíen mensajes del tipo DEFAULT. El tipo de mensajes DEFAULT utiliza la validación NONE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un servicio muestra la funcionalidad proporcionada por los contratos a los que está asociado, de modo que puedan usarlos otros servicios. Este servicio es destino de los contratos que se especifican en la instrucción `CREATE SERVICE`. Un servicio solo puede ser destino de conversaciones que utilizan los contratos especificados por el servicio. Un servicio que no especifica ningún contrato no muestra ninguna funcionalidad para otros servicios.  
   
  Las conversaciones iniciadas desde este servicio pueden utilizar cualquier contrato. Puede crear un servicio sin especificar contratos solo si el servicio inicia conversaciones.  

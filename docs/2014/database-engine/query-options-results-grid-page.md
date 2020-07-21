@@ -1,5 +1,5 @@
 ---
-title: Opciones de consulta (página de cuadrícula) resultados | Microsoft Docs
+title: Resultados de opciones de consulta (página cuadrícula) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17a331fff0a4405fb1c43210b9c7e43c2f457625
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929506"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados de Opciones de consulta (página Cuadrícula)
   Utilice esta página para especificar las opciones de visualización de un conjunto de resultados de consulta en formato de cuadrícula.  

@@ -10,10 +10,10 @@ ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285217"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Comenzar con este sencillo ejemplo del Asistente para importación y exportación
@@ -24,7 +24,7 @@ ms.locfileid: "71285217"
 Para obtener información acerca de lo que puede esperar del Asistente para importación y exportación de SQL Server, siga los pasos de este escenario común: importar datos desde una hoja de cálculo de Excel a una base de datos de SQL Server. Incluso si piensa utilizar un origen y un destino diferentes, este tema le muestra la mayoría de conocimientos necesarios para ejecutar el asistente.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Requisito previo: ¿Está instalado el asistente en el equipo?
-Si desea ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si quiere ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado en el equipo, puede instalar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instalación de SQL Server Data Tools (SSDT). Para obtener más información, vea [Descargar SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>Datos de origen de Excel para este ejemplo
 Estos son los datos de origen que se van a copiar: una pequeña tabla de dos columnas en la hoja de cálculo WizardWalkthrough del libro de Excel WizardWalkthrough.xlsx.
@@ -44,7 +44,7 @@ Inicie el asistente desde el grupo Microsoft SQL Server 2016 en el menú Inicio 
 > [!NOTE]
 > En este ejemplo, se selecciona el asistente de 32 bits porque está instalada la versión de 32 bits de Microsoft Office. Como resultado, debe usarse el proveedor de datos de 32 bits para conectarse a Excel. Para muchos otros orígenes de datos, normalmente puede usarse el asistente de 64 bits.
 >
-> Para usar la versión de 64 bits del Asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
+> Para usar la versión de 64 bits del asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 Para obtener más información, vea [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)(Iniciar el Asistente para importación y exportación de SQL Server).
 
@@ -68,11 +68,11 @@ Para obtener más información acerca de esta página del asistente, consulte [C
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>Paso 4: Seleccionar SQL Server como destino
 En la página siguiente, **Seleccionar un destino**, para elegir Microsoft SQL Server como destino, seleccione uno de los proveedores de datos en la lista que se conecte a SQL Server. Para este ejemplo, seleccione **Proveedor de datos de .NET Framework para SQL Server**.
 
-En la página se muestra una lista de propiedades del proveedor. Muchas de ellas aparecen con nombres y valores de configuración extraños. Afortunadamente, para conectarse a cualquier base de datos empresarial, normalmente, solo tendrá que proporcionar tres datos. Puede ignorar los valores predeterminados de las demás opciones.
+En la página se muestra una lista de propiedades del proveedor. Muchas de ellas aparecen con nombres y valores de configuración extraños. Afortunadamente, para conectarse a cualquier base de datos empresarial, normalmente, solo tendrá que proporcionar tres datos. Así que puede ignorar los valores predeterminados de las demás opciones.
 
 |Información requerida|Propiedad de Proveedor de datos de .NET Framework para SQL Server|
 |---|---|
-|Nombre del servidor|**Origen de datos**|
+|Nombre de servidor|**Data Source** (Origen de datos)|
 |Información de autenticación (inicio de sesión)|**Seguridad integrada**, o bien **Id. de usuario** y **Contraseña**<br/>Si quiere ver una lista desplegable de las bases de datos del servidor, primero debe proporcionar información de inicio de sesión válida.|
 |Nombre de la base de datos|**Catálogo original**|
 
@@ -126,7 +126,7 @@ Para obtener más información acerca de esta página del asistente, consulte [P
 ## <a name="step-10---yes-you-want-to-run-the-import-export-operation"></a>Paso 10: Ejecutar la operación de importación y exportación
 En la página siguiente, **Guardar y ejecutar el paquete**, mantenga habilitada la opción **Ejecutar inmediatamente** para copiar los datos en cuanto haga clic en **Finalizar** en la página siguiente. Alternativamente, para omitir la página siguiente, haga clic en **Finalizar** en la página **Guardar y ejecutar el paquete**.
 
-![Ejecución del paquete](../../integration-services/import-export-data/media/run-the-package.jpg)
+![Ejecutar el paquete](../../integration-services/import-export-data/media/run-the-package.jpg)
 
 Para obtener más información acerca de esta página del asistente, consulte [Save and Run Package](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md) (Guardar y ejecutar el paquete).
 

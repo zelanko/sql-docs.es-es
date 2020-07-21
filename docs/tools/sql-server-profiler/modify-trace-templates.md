@@ -1,27 +1,22 @@
 ---
-title: Modificar plantillas de seguimiento | Microsoft Docs
-ms.custom: ''
-ms.date: 07/12/2017
+title: Modificar plantillas de seguimiento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], SQL Server Profiler
-- Profiler [SQL Server Profiler], templates
-- trace templates [SQL Server]
-- modifying trace templates
-- SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55a7cdf539a675fd6d3c86ace8cc837ed1e92358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 07/12/2017
+ms.openlocfilehash: 71716d1a9a50a29e1f574fb292d078d21e34a9a6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074874"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307162"
 ---
 # <a name="modify-trace-templates"></a>Modificar plantillas de seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

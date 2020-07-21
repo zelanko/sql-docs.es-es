@@ -13,15 +13,15 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91bcaba1008ee0ca67de6562d681b81bcc5641e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2170d3a0f31fbeacc82e465743c1bc4c57427a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640333"
 ---
 # <a name="point"></a>Punto
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En los datos espaciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un **Punto** es un objeto no dimensional que representa una ubicación única y puede contener valores Z (elevación) y M (medida).  
   
 ## <a name="geography-data-type"></a>Tipo de datos geography  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50877c8abf0ba77f55f36297486dfdb3abeb7658
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714572"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067636"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Propiedades de proxy (pestaña Referencias)
-  Esta página de solo lectura presenta una lista de los pasos del trabajo que hacen referencia a una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  En esta página de solo lectura se enumeran los pasos de trabajo que hacen referencia a una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de proxy del agente.  
   
 ## <a name="options"></a>Opciones  
  **Nombre del trabajo**  
@@ -32,7 +31,7 @@ ms.locfileid: "62714572"
  **Subsistema**  
  Subsistema que usa esta cuenta de proxy.  
   
-## <a name="see-also"></a>Vea también  
- [Crear un proxy del Agente SQL Server](create-a-sql-server-agent-proxy.md)  
+## <a name="see-also"></a>Consulte también  
+ [Create a SQL Server Agent Proxy](create-a-sql-server-agent-proxy.md)  
   
   

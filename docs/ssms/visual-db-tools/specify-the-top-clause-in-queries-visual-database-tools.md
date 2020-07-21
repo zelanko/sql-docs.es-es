@@ -1,10 +1,9 @@
 ---
-title: Especificar la cláusula TOP en consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Especificar la cláusula TOP en las consultas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,14 @@ helpviewer_keywords:
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ad88b041167c8940a2243b5ce2dc32c1a58c7f2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7995bd9ac78595200f6ded5e23c0f0b40cf3ff66
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263532"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75254931"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>Especificar la cláusula TOP en consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

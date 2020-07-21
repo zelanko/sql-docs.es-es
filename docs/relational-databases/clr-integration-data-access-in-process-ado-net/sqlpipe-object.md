@@ -1,5 +1,6 @@
 ---
-title: Objeto SqlPipe | Microsoft Docs
+title: SqlPipe (objeto) | Microsoft Docs
+description: En el caso de los objetos de base de datos CLR que se ejecutan en SQL Server, puede enviar los resultados a la canalización conectada mediante los métodos SEND del objeto SqlPipe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765422"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]es muy común escribir un procedimiento almacenado (o un procedimiento almacenado extendido) que envía resultados o parámetros de salida al cliente que realiza la llamada.  
   
  En un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] , cualquier instrucción **SELECT** que devuelve cero o más filas envía los resultados a la "canalización" del autor de la llamada conectado.  
@@ -30,7 +31,7 @@ ms.locfileid: "67913556"
  En los objetos de base de datos de Common Language Runtime (CLR) que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede enviar los resultados a la canalización conectada mediante los métodos **Send** del objeto **SqlPipe** . Para obtener el objeto **Pipe** , debe obtener acceso a la propiedad **SqlContext** del objeto **SqlPipe** . La clase **SqlPipe** es conceptualmente similar a la clase **Response** incluida en ASP.NET. Para obtener más información, vea la documentación de referencia de la clase SqlPipe en el kit de desarrollo de software de .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
- **SqlPipe** incluye un método **Send** , que cuenta con tres sobrecargas. Estas sobrecargas son:  
+ **SqlPipe** incluye un método **Send** , que cuenta con tres sobrecargas. Son las siguientes:  
   
 -   `void Send(string message)`  
   
@@ -139,9 +140,9 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [SqlDataRecord, objeto](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+## <a name="see-also"></a>Consulte también  
+ [Objeto SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
+ [Procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Flujo de datos (página metadatos) del Editor de ruta de acceso | Microsoft Docs
+title: Editor de rutas de flujo de datos (página metadatos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 060933ad5e7be5d55ba0d44de1343668e9bd66e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059988"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432492"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>Editor de rutas de flujo de datos (página Metadatos)
   Utilice la página **Metadatos** del cuadro de diálogo **Editor de rutas de flujo de datos** para ver los metadatos de las columnas de rutas.  
@@ -28,7 +27,7 @@ ms.locfileid: "66059988"
  **Metadatos de ruta**  
  Muestra los metadatos de columna. Haga clic en los encabezados de columna para ordenar los datos de columna.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna.  
   
  **Tipo de datos**  
@@ -61,8 +60,8 @@ ms.locfileid: "66059988"
  **Copiar al Portapapeles**  
  Copia los metadatos de la columna al Portapapeles. De forma predeterminada, todas las filas de metadatos se copian en el orden mostrado actualmente.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de rutas de flujo de datos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de rutas de flujo de datos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de rutas de flujo de datos &#40;página visores de datos&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [Flujo de datos](data-flow/data-flow.md)   
  [Usar anotaciones en paquetes](use-annotations-in-packages.md)  

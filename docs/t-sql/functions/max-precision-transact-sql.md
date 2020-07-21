@@ -19,17 +19,17 @@ helpviewer_keywords:
 - '@@MAX_PRECISION function'
 - data types [SQL Server], precision
 ms.assetid: 9e7158a1-e503-422a-b326-3c9b06e181b2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 696b0a010a8267e42cd55bc123081add60090840
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c0119b35390958d29bf01442727d7e5513a34b3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681951"
 ---
-# <a name="x40x40maxprecision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el nivel de precisión usado por los tipos de datos **decimales** y **numéricos** según la configuración actual del servidor.  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68130315"
 @@MAX_PRECISION  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **tinyint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  De manera predeterminada, la precisión máxima devuelve 38.  
   
 ## <a name="examples"></a>Ejemplos  

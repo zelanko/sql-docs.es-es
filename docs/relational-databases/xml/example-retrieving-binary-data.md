@@ -1,7 +1,8 @@
 ---
 title: 'Ejemplo: Recuperación de datos binarios | Microsoft Docs'
+description: Vea un ejemplo de una consulta SQL que recupera datos binarios mediante las opciones RAW y BINARY BASE64 con la cláusula FOR XML.
 ms.custom: ''
-ms.date: 09/23/2019
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,19 +11,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: MightyPen
-ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: c168c76d33ac90bc658fad86404aea45b322d037
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+author: RothJa
+ms.author: jroth
+ms.openlocfilehash: 08010e294b1b143c941774912d661a53c021a6ab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632785"
 ---
 # <a name="example-retrieving-binary-data"></a>Ejemplo: Recuperación de datos binarios
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 La consulta siguiente devuelve la fotografía del producto almacenada en una columna de tipo **varbinary(max)** . En la consulta, se especifica la opción `BINARY BASE64` para devolver los datos binarios en formato codificado en base 64.
 

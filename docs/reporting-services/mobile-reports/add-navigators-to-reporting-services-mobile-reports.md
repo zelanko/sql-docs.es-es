@@ -1,5 +1,6 @@
 ---
 title: Agregar navegadores a informes móviles de Reporting Services
+description: En Publicador de informes móviles, agregue navegadores para filtrar los datos por hora o por selección. Los navegadores son similares a las segmentaciones en Power BI y las tablas dinámicas de Excel.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27060715a2d616dd99e294175163ad74b54a17b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 6749853bc1717077a4d65f4f27546c0fe260cdaf
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63317030"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79448200"
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 En el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)], se agregan *navegadores* para filtrar los datos de las visualizaciones por tiempo o por selección. 
@@ -119,9 +120,9 @@ Puede decidir qué visualizaciones del informe móvil filtrará un navegador:
   
 Los filtros también pueden actuar en cascada para que el valor seleccionado de uno filtre los valores disponibles en un segundo. Para que los filtros actúen en cascada, aplíquelos a la columna de clave como lo haría con un elemento de galería regular.  
 
-### <a name="see-also"></a>Vea también 
+### <a name="see-also"></a>Consulte también 
   
 * [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Visualizaciones de informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
-* [Agregar medidores a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
+* [Medidores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Agregar cuadrículas de datos a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  

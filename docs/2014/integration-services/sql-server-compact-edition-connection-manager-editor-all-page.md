@@ -1,5 +1,5 @@
 ---
-title: SQL Server Compact Edition Connection Manager Editor (página todo) | Microsoft Docs
+title: Editor del administrador de conexiones de SQL Server Compact Edition (página todos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4ddfebf9f606a717eabbeeccbcf9fd79742f60dc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66055467"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421262"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor del administrador de conexiones con SQL Server Compact Edition (página Todo)
   Use el cuadro de diálogo **Administrador de conexiones con SQL Server Compact Edition** para especificar las propiedades de conexiones a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
@@ -45,7 +44,7 @@ ms.locfileid: "66055467"
  **Max Buffer Size**  
  Especifique la cantidad máxima de memoria, en kilobytes, que usará [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact antes del vaciado de datos en el disco.  
   
- **Max Database Size**  
+ **Tamaño máximo de la base de datos**  
  Especifique el tamaño máximo, en megabytes, de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Modo**  
@@ -53,7 +52,7 @@ ms.locfileid: "66055467"
   
  La opción Modo tiene cuatro valores, tal como se describe en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Solo lectura**|Especifica acceso de solo lectura a la base de datos.|  
 |**Lectura y escritura**|Especifica permiso de lectura/escritura a la base de datos.|  
@@ -61,18 +60,18 @@ ms.locfileid: "66055467"
 |**Shared Read**|Especifica que otros usuarios pueden leer de la base de datos al mismo tiempo.|  
   
  **Persist Security Info**  
- Especifique si la información de seguridad será devuelta como parte de la cadena de conexión. El valor predeterminado de esta opción es **False**.  
+ Especifique si la información de seguridad será devuelta como parte de la cadena de conexión. El valor predeterminado de esta opción es **false**.  
   
  **Temp File Directory**  
  Especifique la ubicación del archivo de base de datos temporal de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Contraseña**  
  Escriba la contraseña de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   

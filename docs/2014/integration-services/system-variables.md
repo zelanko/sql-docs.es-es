@@ -13,15 +13,14 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6b791f8d7b777c05c966fb097b278a05e48c04c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62927237"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420932"
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
@@ -41,15 +40,15 @@ ms.locfileid: "62927237"
 |`ExecutionInstanceGUID`|String|Identificador exclusivo de la instancia de ejecución de un paquete.|  
 |`FailedConfigurations`|String|Nombres de las configuraciones de paquete que no se pudieron realizar.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indica si las configuraciones de paquete se omiten al cargar el paquete.|  
-|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en `True`. Si se ejecuta un paquete mediante el **DTExec** utilidad de símbolo del sistema, la propiedad se establece en `False`.|  
+|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en `True`. Si un paquete se ejecuta mediante la utilidad del símbolo del sistema **DTExec** , la propiedad se establece en `False` .|  
 |`LocaleId`|Int32|Configuración regional que usa el paquete.|  
 |**MachineName**|String|Nombre del equipo en el que se está ejecutando el paquete.|  
 |**OfflineMode**|Boolean|Indica si el paquete está en el modo sin conexión. El modo sin conexión no adquiere conexiones a orígenes de datos.|  
 |**PackageID**|String|Identificador único del paquete.|  
-|**PackageName**|String|Nombre del paquete.|  
+|**Nombredepaquete**|String|Nombre del paquete.|  
 |**StartTime**|DateTime|Hora a la que se inició la ejecución del paquete.|  
 |`ServerExecutionID`|Int64|Identificador de ejecución para el paquete que se ejecuta en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> El valor predeterminado es cero. El valor se cambia únicamente si el paquete lo ejecuta ISServerExec en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando hay un paquete secundario, el valor se pasa desde el paquete primario al paquete secundario.|  
-|**UserName**|String|Cuenta del usuario que inició el paquete. El nombre de usuario se encuentra calificado por el nombre de dominio.|  
+|**Nombre**|String|Cuenta del usuario que inició el paquete. El nombre de usuario se encuentra calificado por el nombre de dominio.|  
 |**VersionBuild**|Int32|Versión del paquete.|  
 |**VersionComment**|String|Comentarios acerca de la versión del paquete.|  
 |**VersionGUID**|String|Identificador único de la versión.|  
@@ -68,10 +67,10 @@ ms.locfileid: "62927237"
   
 |Variable del sistema|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|String|El nombre de la tarea.|  
+|**CreationName**|String|El nombre del servidor.|  
 |`LocaleId`|Int32|Configuración regional que usa la tarea.|  
 |**TaskID**|String|Identificador único de una instancia de tarea.|  
-|**TaskName**|String|Nombre de la instancia de tarea.|  
+|**Tarea**|String|Nombre de la instancia de tarea.|  
 |`TaskTransactionOption`|Int32|Opción de transacción que usa la tarea.|  
   
 ## <a name="system-variables-for-event-handlers"></a>Variables del sistema para los controladores de eventos  
@@ -89,7 +88,7 @@ ms.locfileid: "62927237"
 |**ProgressCountHigh**|Int32|Parte alta de un valor de 64 bits que indica la cantidad total de operaciones procesadas por el evento OnProgress.|Controlador de eventos OnProgress|  
 |`ProgressCountLow`|Int32|Parte baja de un valor de 64 bits que indica la cantidad total de operaciones procesadas por el evento OnProgress.|Controlador de eventos OnProgress|  
 |**ProgressDescription**|String|Descripción del progreso.|Controlador de eventos OnProgress|  
-|`Propagate`|Boolean|Indica si el evento se propaga a un controlador de eventos de nivel más alto.<br /><br /> Nota: El valor de la `Propagate` variable se descarta durante la validación del paquete.<br /><br /> Si establece `Propagate` en `False` en un paquete secundario, ello no evita que un evento se propague hasta el paquete primario.|Todos los controladores de eventos|  
+|`Propagate`|Boolean|Indica si el evento se propaga a un controlador de eventos de nivel más alto.<br /><br /> Nota: El valor de la variable `Propagate` se descarta durante la validación del paquete.<br /><br /> Si establece `Propagate` en `False` en un paquete secundario, ello no evita que un evento se propague hasta el paquete primario.|Todos los controladores de eventos|  
 |`SourceDescription`|String|Descripción del ejecutable en el controlador de eventos que provocó el evento.|Todos los controladores de eventos|  
 |`SourceID`|String|Descripción del identificador único del ejecutable en el controlador de eventos que provocó el evento.|Todos los controladores de eventos|  
 |**SourceName**|String|Nombre del ejecutable en el controlador de eventos que provocó el evento.|Todos los controladores de eventos|  

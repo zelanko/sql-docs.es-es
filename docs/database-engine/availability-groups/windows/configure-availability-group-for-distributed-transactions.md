@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: c6f7f07070842dbdc9903d7654cea3d76c2e0a8e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713267"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896112"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] admite todas las transacciones distribuidas, incluidas las bases de datos de un grupo de disponibilidad. En este artículo se explica cómo configurar un grupo de disponibilidad para las transacciones distribuidas.  
 
@@ -41,7 +41,7 @@ En una transacción distribuida, las aplicaciones cliente funcionan con Microsof
 
 DTC no interviene en el procesamiento de grupos de disponibilidad a menos que una base de datos también sea miembro de un clúster de conmutación por error. Dentro de un grupo de disponibilidad, la coherencia entre las réplicas se mantiene mediante la lógica del grupo de disponibilidad: La principal no completará la confirmación ni reconocerá la confirmación en el autor de la llamada hasta que la secundaria haya reconocido que ha conservado las entradas de registro en el almacenamiento duradero. Solo entonces la principal declarará que la transacción se ha completado. En el modo asincrónico, no se espera el reconocimiento por parte de la réplica secundaria, y hay una posibilidad explícita de que se pierda una pequeña cantidad de datos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Antes de configurar un grupo de disponibilidad que admita transacciones distribuidas, debe cumplir los siguientes requisitos previos:
 
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transacciones distribuidas: conceptos técnicos
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>Transacciones distribuidas: conceptos técnicos
 
 Una transacción distribuida abarca dos o más bases de datos. Como administrador de transacciones, DTC coordina la transacción entre las instancias de SQL Server y otros orígenes de datos. Cada instancia del motor de base de datos de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] puede funcionar como un administrador de recursos. Cuando un grupo de disponibilidad se configura con `DTC_SUPPORT = PER_DB`, las bases de datos pueden actuar como administradores de recursos. Para obtener más información, consulte la documentación de MS DTC.
 
@@ -195,7 +195,7 @@ Después de confirmar o revertir la transacción, puede usar `ALTER DATABASE` pa
 
 Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](https://technet.microsoft.com/library/cc754134.aspx) (Resolver transacciones manualmente).
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 
 [Transacciones distribuidas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
@@ -205,4 +205,4 @@ Para más información sobre cómo resolver transacciones dudosas, vea [Resolve 
 
 [Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Compatibilidad con las transacciones XA)
 
-[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)
+[Cómo funciona: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)

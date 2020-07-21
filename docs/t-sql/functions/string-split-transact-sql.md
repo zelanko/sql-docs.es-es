@@ -1,6 +1,6 @@
 ---
 title: STRING_SPLIT (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para la función STRING_SPLIT. Esta función con valores de tabla divide una cadena en subcadenas según un delimitador de caracteres.
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afbd05a22b40cfa24fd1eaef18d9aa63aa095be9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714814"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -41,7 +41,7 @@ Para cambiar el nivel de compatibilidad de una base de datos, vea [Ver o cambiar
   
 ## <a name="syntax"></a>Sintaxis  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
@@ -53,15 +53,17 @@ STRING_SPLIT ( string , separator )
  *separator*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de carácter único de cualquier tipo de caracteres (por ejemplo, **nvarchar(1)** , **varchar(1)** , **nchar(1)** o **char(1)** ) que se usa como separador para subcadenas concatenadas.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 
 Devuelve una tabla de una sola columna cuyas filas son las subcadenas. El nombre de la columna es **value**. Devuelve **nvarchar** si cualquiera de los argumentos de entrada es **nvarchar** o **nchar**. De lo contrario, devuelve **varchar**. La longitud del tipo de valor devuelto es igual a la longitud del argumento de cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 **STRING_SPLIT** introduce una cadena que tiene subcadenas delimitadas y un carácter que se usará como el delimitador o el separador. STRING_SPLIT da como resultado una tabla de una sola columna cuyas filas contienen las subcadenas. El nombre de la columna de resultados es **value**.
 
 Las filas de salida pueden estar en cualquier orden. _No_ se garantiza que el orden coincida con el de las subcadenas de la cadena de entrada. Puede invalidar el orden final usando una cláusula ORDER BY en la instrucción SELECT (`ORDER BY value`).
+
+0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en STRING_SPLIT.
 
 Las subcadenas vacías de longitud cero están presentes cuando la cadena de entrada contiene dos o más repeticiones consecutivas del carácter delimitador. Las subcadenas vacías se tratan de la misma forma que las subcadenas sin formato. Puede filtrar las filas que contienen la subcadena vacía usando la cláusula WHERE (`WHERE value <> ''`). Si la cadena de entrada es NULL, la función con valores de tabla STRING_SPLIT devuelve una tabla vacía.  
 
@@ -121,7 +123,7 @@ FROM Product
 |ProductId|Nombre|value|  
 |---------------|----------|-----------|  
 |1|Guantes|clothing|  
-|1|Guantes|road|  
+|1|Guantes|carreteras|  
 |1|Guantes|touring|  
 |1|Guantes|bike|  
 |2|Auriculares LL|bike|  
@@ -187,10 +189,10 @@ WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';
 
 ## <a name="see-also"></a>Consulte también
 
-[LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
-[Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)
+- [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)
+- [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)
+- [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)
+- [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)
+- [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)
+- [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

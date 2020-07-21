@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997083"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Crear un proyecto de Visual C# SMO en Visual Studio .NET
   En esta sección se describe cómo generar una aplicación de consola SMO simple.  
   
- En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Usarlo cuando se escribe un programa que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
+ En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Úselo cuando esté escribiendo un programa que use el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Crear un proyecto de Visual C# SMO en Visual Studio.NET  
   
@@ -30,15 +29,15 @@ ms.locfileid: "63131644"
   
 2.  En el menú **Archivo**, haga clic en **Nuevo proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En **tipos de proyecto** cuadro de diálogo, seleccione **Visual C#** y, a continuación, seleccione **Windows**. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel Plantillas instaladas, seleccione **aplicación Windows**.  
+3.  En el cuadro de diálogo **tipos de proyecto** , seleccione **Visual C#** y, a continuación, seleccione **Windows**. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel Plantillas instaladas, seleccione **aplicación para Windows**.  
   
-4.  (Opcional) En el **nombre** , escriba el nombre de la nueva aplicación  
+4.  Opta En el campo **nombre** , escriba el nombre de la nueva aplicación.  
   
-5.  Seleccione el tipo de aplicación de Visual C#. Los ejemplos que siguen, seleccione **aplicación de consola**.  
+5.  Seleccione el tipo de aplicación de Visual C#. En los ejemplos siguientes, seleccione **aplicación de consola**.  
   
 6.  En el menú **Proyecto**, seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-7.  Haga clic en **examinar**, busque los ensamblados SMO en los [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] carpeta y, a continuación, seleccione los siguientes archivos. Son los archivos mínimos necesarios para generar una aplicación SMO:  
+7.  Haga clic en **examinar**, busque los ensamblados SMO en la [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] carpeta y, a continuación, seleccione los archivos siguientes. Son los archivos mínimos necesarios para generar una aplicación SMO:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63131644"
   
 9. Haga clic en **Abrir**.  
   
-10. En el **vista** menú, haga clic en **código**. - o bien seleccione el Windows Program1.cs [Diseño] y haga doble clic en el formulario windows Forms para mostrar la ventana de código.  
+10. En el menú **Ver** , haga clic en **código**.-o bien, seleccione las ventanas Program1.CS [diseño] y haga doble clic en Windows Forms para mostrar la ventana de código.  
   
 11. En el código, antes de la instrucción de espacio de nombres, escriba las instrucciones `using` siguientes para certificar los tipos en el espacio de nombres de SMO:  
   

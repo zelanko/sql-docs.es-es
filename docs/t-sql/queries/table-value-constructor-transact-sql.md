@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b12ad1dcc054f7c59f52b3aee23d5d6368f1459b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948255"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705964"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Constructor con valores de tabla (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Especifica un conjunto de expresiones de valores de fila que se va a construir en una tabla. El constructor de valor de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite que se especifiquen varias filas de datos en una sola instrucción DML. El constructor del valor de la tabla se puede especificar como la cláusula VALUES de una instrucción INSERT ... VALUES o como una tabla derivada en la cláusula USING de la instrucción MERGE o en la cláusula FROM.
   
@@ -33,7 +33,7 @@ ms.locfileid: "67948255"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 VALUES ( <row value expression list> ) [ ,...n ]   
   
@@ -59,7 +59,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Cuando se usa como una tabla derivada, no hay ningún límite en el número de filas.  
  
- Cuando se usa como la cláusula VALUES de una instrucción INSERT ... VALUES, el límite es de 1000 filas. Si el número de filas supera el máximo, se devuelve el error 10738. Para insertar más de 1000 filas, use uno de los métodos siguientes:  
+ Cuando se usa como la cláusula VALUES de una instrucción INSERT ... VALUES, el límite es de 1000 filas. Si el número de filas supera el máximo, se devuelve el error 10738. Para insertar más de 1000 filas, use uno de los métodos siguientes:  
   
 - Crear varias instrucciones INSERT  
   
@@ -93,7 +93,7 @@ VALUES ('Helmet', 25.50),
 GO  
 ```  
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  Los valores especificados en una instrucción INSERT de varias filas siguen las propiedades de conversión de tipos de datos de la sintaxis de UNION ALL. Esto produce la conversión implícita de tipos no coincidentes al tipo de [precedencia](../../t-sql/data-types/data-type-precedence-transact-sql.md) superior. Si la conversión no es una conversión implícita admitida, se devuelve un error. Por ejemplo, la instrucción siguiente inserta un valor entero y un valor de carácter en una columna de tipo **char**.  
   
 ```sql

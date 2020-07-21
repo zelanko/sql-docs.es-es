@@ -12,14 +12,14 @@ helpviewer_keywords:
 - state transition checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7dc1ddc126a2d652dfdb038cbb0e510f9735d7b0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107283"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299710"
 ---
 # <a name="state-transition-checks"></a>Comprobaciones de transición de estado
-El Administrador de controladores comprueba que el estado del entorno, la conexión o la instrucción es adecuado para la función que se llama. Por ejemplo, una conexión debe estar en un asignado estado cuando **SQLConnect** se denomina; debe ser una instrucción en un preparada estado cuando **SQLExecute** se llama. El Administrador de controladores, se devuelve SQL_ERROR si hay errores de transición de estado.
+El administrador de controladores comprueba que el estado del entorno, la conexión o la instrucción es adecuado para la función a la que se llama. Por ejemplo, una conexión debe estar en un estado asignado cuando se llama a **SQLConnect** ; una instrucción debe estar en estado preparado cuando se llama a **SQLExecute** . El administrador de controladores devuelve SQL_ERROR para los errores de transición de estado.

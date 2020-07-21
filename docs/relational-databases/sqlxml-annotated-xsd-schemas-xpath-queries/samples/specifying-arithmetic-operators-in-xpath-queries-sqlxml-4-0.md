@@ -1,6 +1,6 @@
 ---
-title: Especificar operadores aritméticos en consultas XPath (SQLXML 4,0) | Microsoft Docs
-ms.custom: ''
+title: Usar operadores aritméticos en consultas XPath (SQLXML)
+description: Obtenga información sobre cómo especificar operadores aritméticos en consultas SQLXML 4,0 XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,28 +15,29 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa1bf6dd7d5652e33eb5fa7c75a86268f31129a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d2115d00f8b51fa16452eba3a41483c499bf9fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907770"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649367"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores aritméticos en consultas XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En el ejemplo siguiente se muestra cómo se especifican los operadores aritméticos en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado &#40;para&#41;XPath ejemplos SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
+  En el ejemplo siguiente se muestra cómo se especifican los operadores aritméticos en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Especificar el operador aritmético *  
- Esta consulta XPath devuelve **\<OrderDetail >** elementos que cumplen el predicado especificado:  
+ Esta consulta XPath devuelve **\<OrderDetail>** los elementos que satisfacen el predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un **nodo de elemento de\<** , porque el **elemento de\<** nodo es el nodo principal del eje **secundario** ). Para todos los nodos de elemento **\<OrderDetail >** , se aplica la prueba del predicado y solo se devuelven los nodos que satisfacen la condición.  
+ En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (true si **OrderDetail** es **\<element node>** , porque el **\<element>** nodo es el nodo principal del eje **secundario** ). En todos los **\<OrderDetail>** nodos de elemento, se aplica la prueba del predicado y solo se devuelven los nodos que satisfacen la condición.  
   
 > [!NOTE]  
 >  Los números en XPath son números de punto flotante de precisión doble y la comparación de números de punto flotante, como los del ejemplo, hace que éstos se redondeen.  

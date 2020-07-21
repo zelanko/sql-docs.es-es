@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b08bd61a0150b0e3711219eea783985f80ffd72f
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: e0e9e6a6d8e0f4b976775271532fc61b03b199fa
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745308"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381179"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia las propiedades de un tipo de mensaje.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "70745308"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
@@ -46,11 +46,14 @@ ALTER MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *message_type_name*  
  Es el nombre del tipo de mensaje que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
- VALIDATION   
+ VALIDATION  
  Especifica cómo [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida el cuerpo del mensaje para mensajes de este tipo.  
   
  Ninguno  
@@ -59,13 +62,13 @@ ALTER MESSAGE TYPE message_type_name
  EMPTY  
  El cuerpo del mensaje debe tener un valor NULL.  
   
- WELL_FORMED_XML   
+ WELL_FORMED_XML  
  El cuerpo del mensaje debe contener XML correcto.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
  El cuerpo del mensaje debe contener XML que cumpla con el esquema de la colección de esquemas especificada. *schema_collection_name* debe ser el nombre de una colección de esquemas XML existente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El cambio de la validación de un tipo de mensaje no afecta a los mensajes que ya se han entregado a una cola.  
   
  Para modificar AUTHORIZATION para un tipo de mensaje, utilice la instrucción ALTER AUTHORIZATION.  

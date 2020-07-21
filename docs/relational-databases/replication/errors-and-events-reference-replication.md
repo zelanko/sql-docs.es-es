@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 273caba1a25efbfd30bb856f6ebaf157b9bf5a03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652986"
 ---
 # <a name="errors-and-events-reference-replication"></a>Referencia de errores y eventos (replicación)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Esta sección de la documentación contiene información sobre la causa y la resolución de una serie de errores relacionados con la replicación.  
   
-|Error|de mensaje|  
+|Error|Message|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|No se puede insertar una fila de claves duplicadas en el objeto "%.*ls" con índice único "%.\*ls".|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Infracción de la restricción '%.*ls'. No se puede insertar una clave duplicada en el objeto "%.\*ls".|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|No se puede insertar una fila de clave duplicada en el objeto '%.*ls' con índice único '%.\*ls'.|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|Infracción de la restricción '%.*ls'. No se puede insertar una fila de clave duplicada en el objeto '%.\*ls'.|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|La base de datos '%ls' se restauró. Sin embargo, se encontró un error al restaurar o quitar la replicación. Se ha dejado la base de datos sin conexión. Vea el tema MSSQL_ENG003165 en los Libros en pantalla de SQL Server.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|No se puede %1! %2! '%3!' porque se está utilizando para la replicación.|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|No se puede modificar el %1! '%2!' porque se está publicando para replicación.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68768503"
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Asegúrese de que el agente de mezcla se está ejecutando y cumple con el requisito esperado.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Asegúrese de que el agente de mezcla se está ejecutando y cumple con el requisito esperado.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|Se ha establecido el umbral [%s:%s] para la publicación [%s]. Asegúrese de que el agente de mezcla se está ejecutando y cumple con el requisito esperado.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Error de inicio de sesión del usuario "%.*ls".%.\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|Error de inicio de sesión del usuario '%.*ls'.%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|El Agente de registro del LOG y los procedimientos relacionados con el registro (sp_repldone, sp_replcmds y sp_replshowcmds) solamente pueden conectarse a la base de datos de uno en uno. Si ejecutó un procedimiento relacionado con el registro, quite la conexión mediante la cual se ejecutó el procedimiento o ejecute sp_replflush en esa conexión antes de iniciar el Agente de registro del LOG o de ejecutar otro procedimiento relacionado con el registro.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|El agente de replicación no ha registrado un mensaje de progreso en %ld minutos. Esto podría indicar que un agente no responde o una gran actividad en el sistema. Compruebe que se están replicando los registros en el destino y que las conexiones al suscriptor, publicador y distribuidor están activas.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|Cierre del agente. Para obtener más información, vea el trabajo '%s' en el historial de trabajos del Agente SQL Server.|  
@@ -78,7 +78,7 @@ ms.locfileid: "68768503"
 |MSSQL_ENG021642. Consulte [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Los publicadores heterogéneos requieren un servidor vinculado. Ya existe uno con el nombre '%1!s!'. Quítelo o elija otro nombre de publicador.|  
 |MSSQL_ENG021663. Consulte [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|No se encuentra ninguna clave principal válida para la tabla de origen [%s].[%s].|  
 |MSSQL_ENG021684. Consulte [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Los permisos asociados con el inicio de sesión de administrador del publicador de Oracle '%s' no son suficientes.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|"%s" debe ser un inicio de sesión de Windows válido en el formato: "MACHINE\Login" o "DOMAIN\Login". Vea la documentación de '%s'.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' debe ser un inicio de sesión válido en Windows con el formato: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Debe agregar el trabajo de agente '%s' a través de '%s' antes de continuar. Vea la documentación de '%s'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|El proceso no pudo ejecutar '%1' en '%2'.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|El proceso de mezcla no pudo cambiar el historial de generación en '%1'. Para solucionar el problema, reinicie la sincronización con registro de historial detallado y especifique un archivo de salida para escribir en él.|  

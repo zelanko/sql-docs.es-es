@@ -18,10 +18,10 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70e53f37056357fbaff315d6cd432b2171eb478b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295063"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Herramientas para solucionar problemas de conectividad entre paquetes
@@ -74,6 +74,6 @@ ms.locfileid: "71295063"
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas de la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

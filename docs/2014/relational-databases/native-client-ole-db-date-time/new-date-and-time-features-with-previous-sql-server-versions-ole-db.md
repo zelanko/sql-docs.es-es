@@ -1,5 +1,5 @@
 ---
-title: Fecha y nuevas características de tiempo con versiones anteriores de SQL Server (OLE DB) | Documentos de Microsoft
+title: Nuevas características de fecha y hora con versiones anteriores de SQL Server (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,40 +9,39 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056294"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuevas características de fecha y hora con versiones de SQL Server anteriores (OLE DB)
-  Este tema describe el comportamiento esperado cuando una aplicación cliente que utiliza fecha mejorada y funciones de tiempo se comunica con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y cuando un cliente compilado con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envía comandos a un servidor que admite mejora las funciones de fecha y hora.  
+  En este tema se describe el comportamiento esperado cuando una aplicación cliente que usa las características mejoradas de fecha y hora se comunica con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , y cuando un cliente compilado con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envía comandos a un servidor que admite características mejoradas de fecha y hora.  
   
 ## <a name="down-level-client-behavior"></a>Comportamiento del cliente de nivel inferior  
- Las aplicaciones cliente que usan una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ver los tipos de fecha y hora nueva como `nvarchar` columnas. El contenido de las columnas son representaciones de literales. Para obtener más información, consulte la "formatos de datos: Sección de cadenas y literales"de [compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora](data-type-support-for-ole-db-date-and-time-improvements.md). El tamaño de columna es la longitud máxima del literal para la precisión especificada para la columna.  
+ Las aplicaciones cliente que usan una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ven los nuevos tipos de fecha y hora como `nvarchar` columnas. El contenido de las columnas son representaciones de literales. Para obtener más información, vea la sección "formatos de datos: cadenas y literales" de [compatibilidad con tipos de datos para obtener OLE DB mejoras de fecha y hora](data-type-support-for-ole-db-date-and-time-improvements.md). El tamaño de columna es la longitud máxima del literal para la precisión especificada para la columna.  
   
  Las API de catálogo devolverán metadatos coherentes con el código del tipo de datos de nivel inferior que se devuelve al cliente (por ejemplo, `nvarchar`) y la representación asociada de nivel inferior (por ejemplo, el formato de literal adecuado). Sin embargo, el nombre del tipo de datos devuelto será el nombre del tipo real de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Cuando se ejecuta una aplicación de cliente de nivel inferior con un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) en los cambios de esquema a la fecha y hora se han realizado los tipos de servidor, el comportamiento esperado es como sigue:  
+ Cuando una aplicación cliente de nivel inferior se ejecuta en un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] servidor (o posterior) en el que se han realizado cambios de esquema en los tipos de fecha y hora, el comportamiento esperado es el siguiente:  
   
-|Tipo de cliente OLE DB|Tipo de SQL Server 2005|Tipo de 2008 (o posterior) de SQL Server|Conversión del resultado (servidor a cliente)|Conversión de parámetros (cliente a servidor)|  
+|Tipo de cliente OLE DB|Tipo de SQL Server 2005|SQL Server tipo 2008 (o posterior)|Conversión del resultado (servidor a cliente)|Conversión de parámetros (cliente a servidor)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DateTime|date|Aceptar|Aceptar|  
-|DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Si el campo de hora no es cero, se producirá un error de IRowsetChange debido al truncamiento de las cadenas.|  
+|DBTYPE_DBDATE|Datetime|Date|Aceptar|Aceptar|  
+|DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si el campo de hora es distinto de cero.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
-|DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Si las fracciones de segundo son distintos de cero, se producirá un error de IRowsetChange debido al truncamiento de las cadenas.<br /><br /> Se omite la fecha.|  
-|DBTYPE_DBTIME||Time(7)|Se produce un error - literal de hora no válido.|Aceptar|  
-|DBTYPE_DBTIMESTAMP|||Se produce un error - literal de hora no válido.|Aceptar|  
-|DBTYPE_DBTIMESTAMP||Datetime2(3)|Aceptar|Aceptar|  
-|DBTYPE_DBTIMESTAMP||datetime2 (7)|Aceptar|Aceptar|  
-|DBTYPE_DBDATE|Smalldatetime|date|Aceptar|Aceptar|  
-|DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Si el campo de hora no es cero, se producirá un error de IRowsetChange debido al truncamiento de las cadenas.|  
+|DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si las fracciones de segundo son distintas de cero.<br /><br /> Se omite la fecha.|  
+|DBTYPE_DBTIME||Time(7)|Error: literal de hora no válido.|Aceptar|  
+|DBTYPE_DBTIMESTAMP|||Error: literal de hora no válido.|Aceptar|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|Aceptar|Aceptar|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|Aceptar|Aceptar|  
+|DBTYPE_DBDATE|Smalldatetime|Date|Aceptar|Aceptar|  
+|DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si el campo de hora es distinto de cero.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
-|DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Si las fracciones de segundo son distintos de cero, se producirá un error de IRowsetChange debido al truncamiento de las cadenas.<br /><br /> Se omite la fecha.|  
+|DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si las fracciones de segundo son distintas de cero.<br /><br /> Se omite la fecha.|  
 |DBTYPE_DBTIMESTAMP||Datetime2(0)|Aceptar|Aceptar|  
   
  OK significa que si ha funcionado con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], también debería funcionar con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
@@ -55,13 +54,13 @@ ms.locfileid: "63233079"
   
 -   Cambio a `datetime2` porque se trata del tipo de datos preferido para la fecha y hora.  
   
- Las aplicaciones que utilizan los metadatos de servidor obtenido a través de conjuntos de filas de esquema o ICommandWithParameters:: GetParameterInfo para establecer la información de tipo de parámetro a través de ICommandWithParameters:: SetParameterInfo producirán errores durante las conversiones de cliente donde la cadena representación de un tipo de origen es mayor que la representación de cadena del tipo de destino. Por ejemplo, si un enlace de cliente usa DBTYPE_DBTIMESTAMP y la columna del servidor es la fecha, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client convertirá el valor a "aaaa-mm-dd fff", pero los metadatos del servidor se devolverán como `nvarchar(10)`. El desbordamiento resultante produce DBSTATUS_E_CATCONVERTVALUE. Problemas similares surgen con las conversiones de datos por IRowsetChange, ya que los metadatos del conjunto de filas se establece desde los metadatos del conjunto de resultados.  
+ Las aplicaciones que utilizan metadatos de servidor obtenidos a través de ICommandWithParameters:: GetParameterInfo o conjuntos de filas de esquema para establecer la información de tipo de parámetro mediante ICommandWithParameters:: SetParameterInfo producirán errores durante las conversiones de cliente en las que la representación de cadena de un tipo de origen es mayor que la representación de cadena del tipo de destino. Por ejemplo, si un enlace de cliente utiliza DBTYPE_DBTIMESTAMP y la columna Server es Date, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client convertirá el valor a "YYYY-dd-mm HH: mm: SS. fff", pero los metadatos del servidor se devolverán como `nvarchar(10)` . El desbordamiento resultante produce DBSTATUS_E_CATCONVERTVALUE. Se producen problemas similares con las conversiones de datos de IRowsetChange, ya que los metadatos del conjunto de filas se establecen a partir de los metadatos del conjunto de resultados.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas  
- Esta sección describe los metadatos de los parámetros, columnas de resultados y conjuntos de filas de esquema para los clientes que se compiló con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ En esta sección se describen los metadatos de los parámetros, las columnas de resultados y los conjuntos de filas de esquema para los clientes que se compilan con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- La estructura DBPARAMINFO devuelve la siguiente información a través de la *prgParamInfo* parámetro:  
+ La estructura DBPARAMINFO devuelve la siguiente información a través del parámetro *prgParamInfo* :  
   
 |Tipo de parámetro|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
@@ -69,8 +68,8 @@ ms.locfileid: "63233079"
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
+|datetime2|DBTYPE_WSTR|19, 21.. 27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
   
  Observe que algunos de estos intervalos de valores no son continuos; por ejemplo, en el intervalo 8,10..16 falta el 9. Esto se debe a la adición de un separador decimal cuando la precisión fraccionaria es mayor que cero.  
   
@@ -83,8 +82,8 @@ ms.locfileid: "63233079"
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
+|datetime2|DBTYPE_WSTR|19, 21.. 27|NULL|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|NULL|NULL|  
   
 #### <a name="columnsinfogetcolumninfo"></a>ColumnsInfo::GetColumnInfo  
  La estructura DBCOLUMNINFO devuelve la siguiente información:  
@@ -95,11 +94,11 @@ ms.locfileid: "63233079"
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
+|datetime2|DBTYPE_WSTR|19, 21.. 27|~0|~0|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Conjuntos de filas de esquema  
- En esta sección se describen los metadatos para los parámetros, columnas de resultados y conjuntos de filas de esquema de los nuevos tipos de datos. Esta información es útil es tener un proveedor de cliente desarrollado con herramientas anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ En esta sección se describen los metadatos para los parámetros, columnas de resultados y conjuntos de filas de esquema de los nuevos tipos de datos. Esta información es útil si tiene un proveedor de cliente desarrollado con herramientas anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 #### <a name="columns-rowset"></a>Conjunto de filas COLUMNS  
  Para los tipos de fecha y hora se devuelven los siguientes valores de columna:  
@@ -107,28 +106,28 @@ ms.locfileid: "63233079"
 |Tipo de columna|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
 |date|DBTYPE_WSTR|10|20|NULL|  
-|time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
+|time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
-|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
+|datetime2|DBTYPE_WSTR|19, 21.. 27|38, 42.. 54|NULL|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|52, 56.. 68|NULL|  
   
-#### <a name="procedureparameters-rowset"></a>Conjunto de filas PROCEDURE_PARAMETERS  
+#### <a name="procedure_parameters-rowset"></a>Conjunto de filas PROCEDURE_PARAMETERS  
  Para los tipos de fecha y hora se devuelven los siguientes valores de columna:  
   
 |Tipo de columna|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
 |date|DBTYPE_WSTR|10|20|date|  
-|time|DBTYPE_WSTR|8, 10..16|16,20..32|time|  
+|time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  
-|datetime2|DBTYPE_WSTR|19,21..27|38,42..54|datetime2|  
-|datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
+|datetime2|DBTYPE_WSTR|19, 21.. 27|38, 42.. 54|datetime2|  
+|datetimeoffset|DBTYPE_WSTR|26, 28.. 34|52, 56.. 68|datetimeoffset|  
   
-#### <a name="providertypes-rowset"></a>Conjunto de filas PROVIDER_TYPES  
+#### <a name="provider_types-rowset"></a>Conjunto de filas PROVIDER_TYPES  
  Para los tipos de fecha y hora se devuelven las siguientes filas:  
   
-|Tipo -><br /><br /> columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  
@@ -153,19 +152,19 @@ ms.locfileid: "63233079"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Comportamiento de un servidor de nivel inferior  
- Cuando se conecta a un servidor de una versión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cualquier intento de usar los nuevos nombres de tipo de servidor (por ejemplo, con ICommandWithParameters:: SetParameterInfo o ITableDefinition:: CreateTable) dará lugar a DB_E_BADTYPENAME.  
+ Cuando se conecta a un servidor de una versión anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , cualquier intento de usar los nuevos nombres de tipo de servidor (por ejemplo, con ICommandWithParameters:: SetParameterInfo o ITableDefinition:: CreateTable) dará como resultado DB_E_BADTYPENAME.  
   
  Si los nuevos tipos se enlazan en parámetros o resultados sin usar un nombre de tipo y el nuevo tipo se usa para especificar implícitamente el tipo de servidor, o no hay ninguna conversión válida del tipo de servidor al tipo de cliente, se devuelve DB_E_ERRORSOCCURRED, y DBBINDSTATUS_UNSUPPORTED_CONVERSION se establece como estado de enlace para el descriptor de acceso que se usó en Execute.  
   
- Si hay una conversión de cliente compatible del tipo de búfer al tipo de servidor para la versión del servidor en la conexión, pueden usarse todos los tipos de búfer del cliente. En este contexto, *tipo de servidor* : el tipo especificado por ICommandWithParameters:: SetParameterInfo o implícita en el tipo de búfer si no se ha llamado ICommandWithParameters:: SetParameterInfo. Esto significa que DBTYPE_DBTIME2 y DBTYPE_DBTIMESTAMPOFFSET pueden usarse con servidores de nivel inferior, o cuando DataTypeCompatibility=80, si la conversión del cliente a un tipo de servidor compatible se realiza correctamente. Es evidente que si el tipo de servidor es incorrecto, el servidor todavía podría notificar un error si no puede realizar una conversión implícita al tipo de servidor real.  
+ Si hay una conversión de cliente compatible del tipo de búfer al tipo de servidor para la versión del servidor en la conexión, pueden usarse todos los tipos de búfer del cliente. En este contexto, *tipo de servidor* significa el tipo especificado por ICommandWithParameters:: SetParameterInfo, o implícito por el tipo de búfer si no se ha llamado a ICommandWithParameters:: SetParameterInfo. Esto significa que DBTYPE_DBTIME2 y DBTYPE_DBTIMESTAMPOFFSET pueden usarse con servidores de nivel inferior, o cuando DataTypeCompatibility=80, si la conversión del cliente a un tipo de servidor compatible se realiza correctamente. Es evidente que si el tipo de servidor es incorrecto, el servidor todavía podría notificar un error si no puede realizar una conversión implícita al tipo de servidor real.  
   
-## <a name="sspropinitdatatypecompatibility-behavior"></a>Comportamiento de SSPROP_INIT_DATATYPECOMPATIBILITY  
- Cuando SSPROP_INIT_DATATYPECOMPATIBILITY se establece en SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, los tipos de fecha y hora nuevas y los metadatos asociados aparecen en los clientes en que aparecen para los clientes de nivel inferior, como se describe en [cambios de copia masiva Mejorado de tipos de fecha y hora &#40;de OLE DB y ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="ssprop_init_datatypecompatibility-behavior"></a>Comportamiento de SSPROP_INIT_DATATYPECOMPATIBILITY  
+ Cuando SSPROP_INIT_DATATYPECOMPATIBILITY se establece en SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, los nuevos tipos de fecha y hora y los metadatos asociados aparecen en los clientes tal y como aparecen en los clientes de nivel inferior, tal y como se describe en [cambios de copia masiva para tipos de fecha y hora mejorados &#40;OLE DB y ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
 ## <a name="comparability-for-irowsetfind"></a>Comparaciones en IRowsetFind  
  Se permiten todos los operadores de comparación para los nuevos tipos de fecha y hora, debido a que aparecen como tipos de cadena en lugar de tipos de fecha y hora.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

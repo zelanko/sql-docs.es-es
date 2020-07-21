@@ -1,5 +1,5 @@
 ---
-title: Parameter and Result Metadata | Documentos de Microsoft
+title: Metadatos de parámetro y resultado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 94cce7c3debc467d2c06f97d9a390455245f5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020153"
 ---
 # <a name="parameter-and-result-metadata"></a>Metadatos de parámetros y resultados
   En este tema se describe la información que se devuelve en los campos descriptor de parámetros de implementación (IPD) y descriptor de filas de implementación (IRD) para los tipos de datos de fecha y hora.  
@@ -30,9 +29,9 @@ ms.locfileid: "63032339"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQL_CODE_DATE|0|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|SQL_DESC_LENGTH|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_OCTET_LENGTH|6|12|4|8|16|20|  
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
 |SQL_DESC_SCALE|0|0..7|0|3|0..7|0..7|  
@@ -48,7 +47,7 @@ ms.locfileid: "63032339"
   
  SQL_CA_SS_VARIANT_SQL_TYPE es un nuevo campo descriptor. Este campo se agregó a IRD e IPD para permitir que las aplicaciones especificasen el tipo de valor asociado a las columnas y parámetros `sqlvariant` (SQL_SSVARIANT).  
   
- SQL_CA_SS_SERVER_TYPE es un nuevo campo solo IPD que permite a las aplicaciones controlar la forma en que se envían al servidor los valores para parámetros enlazados como SQL_TYPE_TYPETIMESTAMP (o como SQL_SS_VARIANT con un tipo C SQL_C_TYPE_TIMESTAMP). Si SQL_DESC_CONCISE_TYPE es SQL_TYPE_TIMESTAMP (o es SQL_SS_VARIANT y el tipo C es SQL_C_TYPE_TIMESTAMP) cuando se llama a SQLExecute o SQLExecDirect, el valor de SQL_CA_SS_SERVER_TYPE determina el tipo de (TDS) del valor del parámetro de secuencia de los datos tabulares , como se indica a continuación:  
+ SQL_CA_SS_SERVER_TYPE es un nuevo campo solo IPD que permite a las aplicaciones controlar la forma en que se envían al servidor los valores para parámetros enlazados como SQL_TYPE_TYPETIMESTAMP (o como SQL_SS_VARIANT con un tipo C SQL_C_TYPE_TIMESTAMP). Si SQL_DESC_CONCISE_TYPE es SQL_TYPE_TIMESTAMP (o es SQL_SS_VARIANT y el tipo C es SQL_C_TYPE_TIMESTAMP) cuando se llama a SQLExecute o SQLExecDirect, el valor de SQL_CA_SS_SERVER_TYPE determina el tipo de flujo TDS del valor del parámetro, como se indica a continuación:  
   
 |Valor de SQL_CA_SS_SERVER_TYPE|Valores válidos para SQL_DESC_PRECISION|Valores válidos para SQL_DESC_LENGTH|Tipo de TDS|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -62,11 +61,11 @@ ms.locfileid: "63032339"
   
 -   En tiempo de preparación o ejecución (cuando se llama a SQLExecute, SQLExecDirect, SQLSetPos o SQLBulkOperations).  
   
--   Cuando una fuerza de la aplicación una preparación no aplazada llamando SQLPrepare con aplaza preparar a deshabilitado, o mediante una llamada a SQLNumResultCols, SQLDescribeCol o SQLDescribeParam para una instrucción que se prepara pero no ejecutado.  
+-   Cuando una aplicación fuerza una preparación no aplazada llamando a SQLPrepare con la preparación diferida deshabilitada o llamando a SQLNumResultCols, SQLDescribeCol o SQLDescribeParam para una instrucción preparada pero no ejecutada.  
   
  Cuando SQL_CA_SS_SERVER_TYPE se establece mediante una llamada a SQLSetDescField, su valor debe ser SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME o SQL_SS_TYPE_DATETIME. En caso contrario, se devuelve SQL_ERROR y se registra un error de diagnóstico con SQLState HY092 y el mensaje "Identificador de opción o atributo o no válido".  
   
- El atributo SQL_CA_SS_SERVER_TYPE pueden utilizarlo las aplicaciones que dependen de la funcionalidad compatible con `datetime` y `smalldatetime`, pero no con `datetime2`. Por ejemplo, `datetime2` requiere el uso de la `dateadd` y **datediif** funciones, mientras que `datetime` y `smalldatetime` también permiten operadores aritméticos. La mayoría de las aplicaciones no necesitarán usar este atributo, y debe evitarse su uso.  
+ El atributo SQL_CA_SS_SERVER_TYPE pueden utilizarlo las aplicaciones que dependen de la funcionalidad compatible con `datetime` y `smalldatetime`, pero no con `datetime2`. Por ejemplo, `datetime2` requiere el uso de las `dateadd` funciones y **datediif** , mientras que `datetime` y `smalldatetime` también permiten operadores aritméticos. La mayoría de las aplicaciones no necesitarán usar este atributo, y debe evitarse su uso.  
   
 ## <a name="information-returned-in-ird-fields"></a>Información que se devuelve en los campos IRD  
  La siguiente información se devuelve en los campos IRD:  
@@ -77,10 +76,10 @@ ms.locfileid: "63032339"
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQL_CODE_DATE|0|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|0|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|10|8,10..16|16|23|19, 21..27|26, 28..34|  
-|SQL_DESC_DISPLAY_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
+|SQL_DESC_DISPLAY_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
-|SQL_DESC_LENGTH|10|8,10..16|16|2|19, 21..27|26, 28..34|  
+|SQL_DESC_LENGTH|10|8, 10.. 16|16|2|19, 21..27|26, 28..34|  
 |SQL_DESC_LITERAL_PREFIX|'|'|'|'|'|'|  
 |SQL_DESC_LITERAL_SUFFIX|'|'|'|'|'|'|  
 |SQL_DESC_LOCAL_TYPE_NAME|`date`|`time`|`smalldatetime`|`datetime`|`datetime2`|datetimeoffset|  
@@ -92,7 +91,7 @@ ms.locfileid: "63032339"
 |SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime`|`datetime`|`datetime2`|datetimeoffset|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
-## <a name="see-also"></a>Vea también  
- [Metadatos &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Metadatos &#40;&#41;ODBC](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

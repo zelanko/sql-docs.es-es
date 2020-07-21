@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: Prueba de concepto de la conexión a SQL con Node.js | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante Node.js'
+description: Este ejemplo debe considerarse una prueba de concepto que muestra cómo conectarse a SQL mediante node.js y se ha simplificado para mayor claridad.
 ms.custom: ''
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,26 +9,26 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e7bc243bbcfe0f132cebe73df18d52ee769ec77e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419257"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528919"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: prueba de concepto de la conexión a SQL mediante Node.js
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante Node.js
 
-![Download-flecha abajo: círculo](../../ssdt/media/download.png)[para descargar el controlador SQL de node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para descargar un controlador de SQL para Node.js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Este ejemplo solo debe considerarse una prueba de concepto.  El código de ejemplo se simplifica para mayor claridad y no representa necesariamente las prácticas recomendadas recomendadas por Microsoft. Otros ejemplos que usan las mismas funciones cruciales están disponibles en github:
+Solo debe considerarse a este ejemplo una prueba de concepto.  El código de ejemplo se simplifica para mayor claridad y no representa necesariamente los procedimientos recomendados por Microsoft. Otros ejemplos que usan las mismas funciones cruciales están disponibles en GitHub:
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>Paso 1: conexión  
+## <a name="step-1-connect"></a>Paso 1: Conectar  
   
-La **nueva** función de conexión se utiliza para conectarse a SQL Database.  
+La función **new Connection** se utiliza para conectarse a SQL Database.  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -53,10 +54,10 @@ La **nueva** función de conexión se utiliza para conectarse a SQL Database.
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>Paso 2: Ejecutar una consulta  
+## <a name="step-2--execute-a-query"></a>Paso 2:  Ejecutar una consulta  
   
   
-Todas las instrucciones SQL se ejecutan mediante la **nueva función Request ()** . Si la instrucción devuelve filas, como una instrucción SELECT, puede recuperarlas mediante la función **request. on ()** . Si no hay ninguna fila, la función request. on () devuelve listas vacías.  
+Todas las instrucciones SQL se ejecutan utilizando la función **new Request()** . Si la instrucción devuelve filas, como una instrucción select, se podrán recuperar mediante la función **request.on()** . Si no hay ninguna fila, la función request.on() devuelve listas vacías.  
   
   
 ```javascript  
@@ -111,9 +112,9 @@ Todas las instrucciones SQL se ejecutan mediante la **nueva función Request ()*
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>Paso 3: insertar una fila  
+## <a name="step-3-insert-a-row"></a>Paso 3: Inserción de una fila  
   
-En este ejemplo verá cómo ejecutar una instrucción [Insert](../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación del valor de [inyección de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
+En este ejemplo se muestra cómo ejecutar una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros que protejan la aplicación de los valores de [inyección de código SQL](../../relational-databases/security/sql-injection.md).    
   
   
 ```javascript  

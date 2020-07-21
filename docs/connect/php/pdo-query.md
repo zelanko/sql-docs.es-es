@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 809ced4a32081375ebd98c61f7429c22e06cb90a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936209"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919162"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,14 +40,14 @@ Si la llamada se realiza correctamente, PDO::query devuelve un objeto PDOStateme
 ## <a name="exceptions"></a>Excepciones  
 PDOException.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Una consulta ejecutada con PDO::query puede ejecutar una instrucción preparada o directa, en función de la configuración de PDO::SQLSRV_ATTR_DIRECT_QUERY. Para obtener más información, vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT también afecta al comportamiento de PDO::exec; vea [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Puede especificar las siguientes opciones para $*fetch_style*.  
   
-|style|Descripción|  
+|Estilo|Descripción|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Consultas de datos de la columna especificada. La primera columna de la tabla es 0.|  
 |PDO::FETCH_CLASS, "*NombreDeClase*", array( *listaArgumentos* )|Crea una instancia de una clase y asigna nombres de columna a las propiedades de la clase. Si el constructor de clase toma uno o varios parámetros, también se puede transmitir un objeto *arglist*.|  

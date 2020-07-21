@@ -1,5 +1,6 @@
 ---
 title: Comparar opciones para almacenar objetos Blob (SQL Server) | Microsoft Docs
+description: SQL Server puede almacenar datos de objetos binarios grandes (BLOB) que las aplicaciones Windows usan. Compare las opciones de esta base de datos relacional para almacenar datos no estructurados.
 ms.custom: ''
 ms.date: 03/04/2019
 ms.prod: sql
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b0faae244963957eadb1bd894f90a88736427b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768052"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Explica y compara las opciones que están disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas
+## <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas
 
 Un porcentaje alto de los datos empresariales no se estructuran por naturaleza y se suelen almacenar como archivos y documentos en los sistemas de archivos. Las aplicaciones que tienen acceso a los archivos a través de las API de Windows generan, administran y consumen la mayor parte de los datos. Las empresas suelen mantener estos datos en el sistema de archivos, mientras que almacenan los metadatos relacionados de los archivos en una base de datos relacional.
 
@@ -40,15 +41,15 @@ Por lo general, no ha sido muy cómodo almacenar los datos no estructurados en u
 
 Años atrás, SQL Server no ofrecía ninguna forma de almacenar datos no estructurados en una base de datos relacional, pero en la actualidad sí proporciona varios métodos para almacenarlos.
 
-## <a name="Filestream"></a> FILESTREAM
+## <a name="filestream"></a><a name="Filestream"></a> FILESTREAM
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya incluye la característica FILESTREAM, que proporciona almacenamiento, administración y transmisión de datos eficaces de los datos no estructurados almacenados como archivos en el sistema de archivos. Sin embargo, una solución FILESTREAM requiere la programación personalizada y no satisface el requisito de compatibilidad completa de las aplicaciones Windows descrito anteriormente.
 
-## <a name="FileTables"></a> FileTables
+## <a name="filetables"></a><a name="FileTables"></a> FileTables
 
 La característica FileTable se basa en las capacidades de FILESTREAM existentes. La característica FileTable permite a los clientes empresariales almacenar datos de archivos no estructurados y jerarquías de directorios en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta característica aborda los requisitos de acceso no transaccional y compatibilidad de aplicaciones Windows de los datos basados en archivos.
 
-## <a name="CompareFileTable"></a> Comparar FILESTREAM y FileTable
+## <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Comparar FILESTREAM y FileTable
 
 |Característica|Servidor de archivos y solución de base de datos|Solución de FILESTREAM|Solución de FileTable|
 |:------|:--------------------------------|:------------------|:-----------------|
@@ -60,11 +61,11 @@ La característica FileTable se basa en las capacidades de FILESTREAM existentes
 |**Compatibilidad con aplicaciones Windows**|Sí|No|**Sí**|
 |**Acceso relacional a los atributos de archivo**|No|No|**Sí**|
 
-## <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)
+## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)
 
 Otra opción para almacenar datos no estructurados conlleva el uso de un Almacén remoto de blobs (RBS). Para obtener más información, vea [Almacén remoto de blobs (RBS) (SQL Server)](remote-blob-store-rbs-sql-server.md).
 
-## <a name="more"></a> Más información
+## <a name="more-information"></a><a name="more"></a> Más información
 
 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)  

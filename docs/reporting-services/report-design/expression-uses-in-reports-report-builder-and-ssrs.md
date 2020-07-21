@@ -1,5 +1,5 @@
 ---
-title: Usar expresiones en informes (Generador de informes y SSRS) | Microsoft Docs
+title: Usos de expresiones en informes (Generador de informes) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd0b847ba4ebaa2d669927abe0665b18a2d517bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: e781df6f5ccbdbb427de7e8b68c9dbc06522be71
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579177"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080271"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
 En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , las expresiones se usan durante la definición de informe para especificar o calcular valores para parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes, y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expression...>** .  
@@ -27,7 +27,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Simple"></a> Usar expresiones simples  
+##  <a name="using-simple-expressions"></a><a name="Simple"></a> Usar expresiones simples  
  Las expresiones simples aparecen en la superficie de diseño y en los cuadros de diálogo entre corchetes, por ejemplo, un campo de conjunto de datos aparece como `[ProductID]`. Este tipo de expresiones se crea automáticamente cuando se arrastra un campo desde un conjunto de datos hasta un cuadro de texto. Se crea un marcador de posición y la expresión define el valor subyacente. También puede escribir directamente las expresiones en una celda o en un cuadro de texto de la región de datos, tanto en la superficie de diseño como en un cuadro de diálogo (por ejemplo, `[ProductID]`).  
   
  En la tabla siguiente, se muestran ejemplos de cómo se pueden usar las expresiones simples. En la tabla se describe la funcionalidad, la propiedad que se va a establecer, el cuadro de diálogo que se usa normalmente para establecerla y el valor de la propiedad. Puede escribir la expresión simple directamente en la superficie de diseño, en un cuadro de diálogo o en el panel de propiedades, o puede modificarla en el cuadro de dialogo Expresión, tal y como lo haría con cualquier expresión.  
@@ -46,7 +46,7 @@ En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnove
 |Vincular un parámetro de consulta a un parámetro de informe.|Colección de parámetros del conjunto de datos. Use **Propiedades del conjunto de datos (cuadro de diálogo), Parámetros**.|`[@Category]`<br /><br /> `[@Category]`|  
 |Pasar un parámetro de un informe principal a un subinforme.|Colección de parámetros del subinforme. Use **Propiedades del subinforme (cuadro de diálogo), Parámetros**.|`[@Category]`<br /><br /> `[@Category]`|  
   
-##  <a name="Complex"></a> Usar expresiones complejas  
+##  <a name="using-complex-expressions"></a><a name="Complex"></a> Usar expresiones complejas  
  Las expresiones complejas pueden contener varias referencias integradas, operadores y llamadas a función, y aparecen en la superficie de diseño como `<<Expr>>`. Para ver o cambiar el texto de la expresión, debe abrir el cuadro de diálogo **Expresión** o escribir directamente en el panel Propiedades. En la tabla siguiente, se muestran las formas más habituales de usar una expresión compleja para mostrar u organizar datos o para cambiar el aspecto de un informe, incluida la propiedad que se va a establecer, el cuadro de diálogo que se usa normalmente para establecerla y el valor de la propiedad. Puede escribir una expresión directamente en un cuadro de diálogo, en la superficie de diseño o en el panel de propiedades.  
   
 |Funcionalidad|Propiedad, contexto y cuadro de diálogo|Valor de la propiedad|  

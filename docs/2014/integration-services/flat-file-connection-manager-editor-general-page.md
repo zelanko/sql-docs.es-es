@@ -1,5 +1,5 @@
 ---
-title: Flat File Connection Manager Editor (página General) | Microsoft Docs
+title: Editor del administrador de conexiones de archivos planos (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058752"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425662"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para seleccionar un archivo y un formato de datos. Las conexiones de archivos planos permiten que un paquete se conecte con un archivo de texto.  
@@ -48,10 +47,10 @@ ms.locfileid: "66058752"
  **Página de códigos**  
  Especifique la página de códigos para el texto no Unicode.  
   
- **Formato**  
+ **Format**  
  Indique si el archivo utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores, que se especifican en la página **Columnas** .|  
 |Ancho fijo|Las columnas tienen un ancho fijo.|  
@@ -66,14 +65,14 @@ ms.locfileid: "66058752"
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
+|**COMPRA**|La fila de encabezado está delimitada por un retorno de carro.|  
 |**{LF}**|La fila de encabezado está delimitada por un avance de línea.|  
 |**Punto y coma {;}**|La fila de encabezado está delimitada por un punto y coma.|  
 |**Dos puntos {:}**|La fila de encabezado está delimitada por dos puntos.|  
-|**Coma {,}**|La fila de encabezado está delimitada por una coma.|  
+|**Unas{,}**|La fila de encabezado está delimitada por una coma.|  
 |**Tabulación {t}**|La fila de encabezado está delimitada por una tabulación.|  
 |**Barra vertical {&#124;}**|La fila de encabezado está delimitada por una barra vertical.|  
   
@@ -83,10 +82,10 @@ ms.locfileid: "66058752"
  **Nombres de columna de la primera fila de datos**  
  Indica si deben esperarse o deben especificarse nombres de columna en la primera fila de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [Página opciones avanzadas del editor del administrador de conexiones de archivos planos &#40;&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

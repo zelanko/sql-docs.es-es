@@ -1,5 +1,6 @@
 ---
 title: 'Ejemplo: Consulta de columnas de tipo XML | Microsoft Docs'
+description: Vea un ejemplo de cómo consultar las columnas del tipo de datos XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5e28c3b6a68e765287cfcc2934c06fb25270f5d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633122"
 ---
 # <a name="example-querying-xmltype-columns"></a>Ejemplo: Consulta de columnas de tipo XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   La consulta siguiente incluye columnas de tipo **xml** . La consulta recupera el identificador, el nombre y los pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo **xml** .  
   
 ## <a name="example"></a>Ejemplo  
@@ -49,7 +50,7 @@ GO
  </ProductModelData>  
 ```  
   
- Si la consulta especifica un nombre de columna para el XML devuelto por la consulta XQuery, como se especifica en la siguiente instrucción `SELECT`, los pasos de fabricación se incluyen en el elemento que tiene el nombre especificado.  
+ Si la consulta especifica un nombre de columna para el XML devuelto por la consulta XQuery, como se especifica en la siguiente instrucción `SELECT` , los pasos de fabricación se incluyen en el elemento que tiene el nombre especificado.  
   
 ```  
 USE AdventureWorks2012;  

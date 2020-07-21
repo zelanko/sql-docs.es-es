@@ -10,15 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.ispackageprop.general.f1
 - sql12.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76f1c8e33bf8675e6306857b8a6ec9f5220c2985
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62836344"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439072"
 ---
 # <a name="package-properties-dialog-box"></a>Propiedades del paquete, cuadro de diálogo
   Utilice el cuadro de diálogo **Propiedades del paquete** para ver las propiedades de los paquetes almacenados en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -31,7 +30,7 @@ ms.locfileid: "62836344"
   
 -   [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Propiedades del paquete  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Propiedades del paquete  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -45,12 +44,12 @@ ms.locfileid: "62836344"
   
 5.  Haga clic con el botón derecho en el paquete y, después, seleccione **Propiedades**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurar las opciones  
  Utilice la página **General** para ver las propiedades del paquete seleccionado.  
   
  Todas las propiedades que aparecen en la página **General** son de solo lectura.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del paquete.  
   
  **Identificador**  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 632663b813db9a8b9a5b425c717613c24fa58ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a9b24f4f8d0481ebf127a1619968b2c88c9e1d0
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993261"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919287"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ array PDO::getAvailableDrivers ();
 ## <a name="return-value"></a>Valor devuelto  
 Una matriz con la lista de controladores de PDO.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 El nombre del controlador de PDO se utiliza en PDO::__construct para crear una instancia de PDO.  
   
 No se requiere implementar PDO::getAvailableDrivers mediante los controladores PHP. Para obtener más información sobre este método, consulte la documentación de PHP.  

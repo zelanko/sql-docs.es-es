@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfedde2b9bdeff831029f2f3916f28bec480d659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106396"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Referencias a las colecciones de variables de informe y de grupo (Generador de informes y SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66106396"
   
 -   **Uso de lectura y escritura** Configure un valor una vez y serialícelo dentro de una sesión del informe. La opción de lectura y escritura para las variables es más aconsejable que el uso de una variable estática en el bloque de código de la definición de informe.  
   
-     Si elimina el **de sólo lectura** opción para una variable, la propiedad Writable de la variable se establece en `true`. Para actualizar el valor desde una expresión, use el método SetValue, por ejemplo, `=Variables!MyVariable.SetValue("123")`.  
+     Al desactivar la opción de **solo lectura** para una variable, la propiedad de escritura de la variable se establece en `true`. Para actualizar el valor desde una expresión, use el método SetValue, por ejemplo, `=Variables!MyVariable.SetValue("123")`.  
   
     > [!NOTE]  
     >  El momento en que el procesador de informes inicializa una variable o evalúa una expresión que actualiza una variable no se puede controlar. El orden de ejecución para la inicialización de variables no está definido.  
@@ -71,7 +71,7 @@ ms.locfileid: "66106396"
   
  Para hacer referencia a la variable en una expresión, use la sintaxis de colección global, por ejemplo, `=Variables!GroupDescription.Value`. En la superficie de diseño, el valor aparece en un cuadro de texto como `<<Expr>>`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  

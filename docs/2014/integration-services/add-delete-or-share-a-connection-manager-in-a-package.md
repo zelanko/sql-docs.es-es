@@ -10,15 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a44a97ce85fc78a115d89a488aea8d170ef3b36
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66062011"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439722"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Agregar, eliminar o compartir un administrador de conexiones en un paquete
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye varios tipos de administradores de conexiones para conectar con diferentes orígenes de datos, como bases de datos relacionales, bases de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y archivos en formatos CSV Y XML. Se puede crear un administrador de conexiones en el nivel de paquete o en el nivel de proyecto. El administrador de conexiones creado en el nivel de proyecto está disponible para todos los paquetes del proyecto. En tanto que el administrador de conexiones creado en el nivel de paquete está disponible para ese paquete específico.  
@@ -38,19 +37,19 @@ ms.locfileid: "66062011"
   
 -   [Para agregar un administrador de conexiones en el nivel de proyecto](#project)  
   
--   [Para crear un parámetro para una propiedad del Administrador de conexiones](#parameter)  
+-   [Para crear un parámetro para una propiedad de administrador de conexiones](#parameter)  
   
 -   [Para eliminar un administrador de conexiones de un paquete](#DeletePackageLevel)  
   
--   [Para eliminar un administrador de conexiones compartido (Administrador de conexiones de nivel de proyecto)](#DeleteProjectLevel)  
+-   [Para eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)](#DeleteProjectLevel)  
   
-##  <a name="wizard"></a> Para agregar un administrador de conexiones al crear un paquete  
+##  <a name="to-add-a-connection-manager-when-creating-a-package"></a><a name="wizard"></a>Para agregar un administrador de conexiones al crear un paquete  
   
 -   Use el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
      Además de crear y configurar un administrador de conexiones, el asistente también ayuda a crear y configurar los orígenes y destinos que utilizan el administrador de conexiones. Para obtener más información, vea [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md).  
   
-##  <a name="package"></a> Para agregar un administrador de conexiones a un paquete existente  
+##  <a name="to-add-a-connection-manager-to-an-existing-package"></a><a name="package"></a>Para agregar un administrador de conexiones a un paquete existente  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66062011"
   
     -   Haga clic en el tipo de administrador de conexiones que desee agregar al paquete.  
   
-         -o bien-  
+         o bien  
   
     -   Si no aparece el tipo que desea agregar, haga clic en **Nueva conexión** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione un tipo de administrador de conexiones y haga clic en **Aceptar**.  
   
@@ -73,17 +72,17 @@ ms.locfileid: "66062011"
     |[Administrador de conexiones ADO](connection-manager/ado-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](configure-ole-db-connection-manager.md)|  
     |[Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)|[Configurar el administrador de conexiones ADO.NET](configure-ado-net-connection-manager.md)|  
     |[Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)|[Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)|[Editor del administrador de conexiones con Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
+    |[Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)|[Editor de Administrador de conexiones con Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)|[Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Administrador de conexiones de varios archivos](connection-manager/multiple-files-connection-manager.md)|[Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de archivos](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Administrador de conexiones de archivos planos](connection-manager/flat-file-connection-manager.md)|[Editor del administrador de conexiones de archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
     |[Administrador de conexiones de varios archivos planos](connection-manager/multiple-flat-files-connection-manager.md)|[Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[Administrador de conexiones FTP](connection-manager/ftp-connection-manager.md)|[Editor del administrador de conexiones FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
     |[Administrador de conexiones HTTP](connection-manager/http-connection-manager.md)|[Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
-    |[Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md)|[Editor del administrador de conexiones MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
+    |[Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md)|[administrador de conexiones MSMQ, editor del](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md)|[Referencia de la interfaz de usuario del administrador de conexiones ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](configure-ole-db-connection-manager.md)|  
-    |[Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)|[Editor del administrador de conexiones SMO](../../2014/integration-services/smo-connection-manager-editor.md)|  
+    |[Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)|[administrador de conexiones SMO, editor del](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[Administrador de conexiones SMTP](connection-manager/smtp-connection-manager.md)|[Editor del administrador de conexiones SMTP](../../2014/integration-services/smtp-connection-manager-editor.md)|  
     |[Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[Administrador de conexiones WMI](connection-manager/wmi-connection-manager.md)|[Editor del administrador de conexiones WMI](../../2014/integration-services/wmi-connection-manager-editor.md)|  
@@ -94,7 +93,7 @@ ms.locfileid: "66062011"
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** en el menú **Archivo** .  
   
-##  <a name="project"></a> Para agregar un administrador de conexiones en el nivel de proyecto  
+##  <a name="to-add-a-connection-manager-at-the-project-level"></a><a name="project"></a>Para agregar un administrador de conexiones en el nivel de proyecto  
   
 1.  Abra el proyecto de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -109,17 +108,17 @@ ms.locfileid: "66062011"
     |[Administrador de conexiones ADO](connection-manager/ado-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](configure-ole-db-connection-manager.md)|  
     |[Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)|[Configurar el administrador de conexiones ADO.NET](configure-ado-net-connection-manager.md)|  
     |[Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)|[Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)|[Editor del administrador de conexiones con Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
+    |[Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)|[Editor de Administrador de conexiones con Excel](../../2014/integration-services/excel-connection-manager-editor.md)|  
     |[Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)|[Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)|  
     |[Administrador de conexiones de varios archivos](connection-manager/multiple-files-connection-manager.md)|[Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de archivos](connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Administrador de conexiones de archivos planos](connection-manager/flat-file-connection-manager.md)|[Editor del administrador de conexiones de archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)|  
     |[Administrador de conexiones de varios archivos planos](connection-manager/multiple-flat-files-connection-manager.md)|[Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)|  
     |[Administrador de conexiones FTP](connection-manager/ftp-connection-manager.md)|[Editor del administrador de conexiones FTP](../../2014/integration-services/ftp-connection-manager-editor.md)|  
     |[Administrador de conexiones HTTP](connection-manager/http-connection-manager.md)|[Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)<br /><br /> [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)|  
-    |[Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md)|[Editor del administrador de conexiones MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)|  
+    |[Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md)|[administrador de conexiones MSMQ, editor del](../../2014/integration-services/msmq-connection-manager-editor.md)|  
     |[Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md)|[Referencia de la interfaz de usuario del administrador de conexiones ODBC](../../2014/integration-services/odbc-connection-manager-ui-reference.md)|  
     |[Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)|[Configurar el administrador de conexiones OLE DB](configure-ole-db-connection-manager.md)|  
-    |[Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)|[Editor del administrador de conexiones SMO](../../2014/integration-services/smo-connection-manager-editor.md)|  
+    |[Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)|[administrador de conexiones SMO, editor del](../../2014/integration-services/smo-connection-manager-editor.md)|  
     |[Administrador de conexiones SMTP](connection-manager/smtp-connection-manager.md)|[Editor del administrador de conexiones SMTP](../../2014/integration-services/smtp-connection-manager-editor.md)|  
     |[Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)|[Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Conexión&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
     |[Administrador de conexiones WMI](connection-manager/wmi-connection-manager.md)|[Editor del administrador de conexiones WMI](../../2014/integration-services/wmi-connection-manager-editor.md)|  
@@ -129,15 +128,15 @@ ms.locfileid: "66062011"
 4.  Si quiere, haga clic con el botón derecho en el administrador de conexiones de la ventana **Explorador de soluciones** en el nodo **Administradores de conexiones** o en la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS** , haga clic en **Cambiar nombre**y, después, modifique el nombre predeterminado del administrador de conexiones.  
   
     > [!NOTE]  
-    >  En la pestaña **Administradores de conexiones** de la ventana **Diseñador SSIS**, no podrá sobrescribir el prefijo **(proyecto)** del nombre del administrador de conexiones. es así por diseño.  
+    >  En la pestaña **administradores de conexiones** de la ventana **Diseñador SSIS** , no podrá sobrescribir el prefijo **(proyecto)** del nombre del administrador de conexiones. Esto es intencionado.  
   
-##  <a name="parameter"></a> Para crear un parámetro para una propiedad del Administrador de conexiones  
+##  <a name="to-create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a>Para crear un parámetro para una propiedad de administrador de conexiones  
   
 1.  En el área de **Administradores de conexiones** , haga clic con el botón derecho en el administrador de conexiones para el que quiere crear un parámetro y haga clic en **Parametrizar**.  
   
 2.  Configure los valores de parámetro en el cuadro de diálogo **Parametrizar** . Para más información, consulte [Parameterize Dialog Box](../../2014/integration-services/parameterize-dialog-box.md).  
   
-##  <a name="DeletePackageLevel"></a> Para eliminar un administrador de conexiones de un paquete  
+##  <a name="to-delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a>Para eliminar un administrador de conexiones de un paquete  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -157,7 +156,7 @@ ms.locfileid: "66062011"
   
 5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-##  <a name="DeleteProjectLevel"></a> Para eliminar un administrador de conexiones compartido (Administrador de conexiones de nivel de proyecto)  
+##  <a name="to-delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a>Para eliminar un administrador de conexiones compartido (Administrador de conexiones de nivel de proyecto)  
   
 1.  Para eliminar un administrador de conexiones de nivel de proyecto, haga clic con el botón derecho en el administrador de conexiones en el nodo **Administradores de conexiones** de la ventana del **Explorador de soluciones** y haga clic en **Eliminar**. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] muestra el siguiente mensaje de advertencia:  
   
@@ -169,8 +168,8 @@ ms.locfileid: "66062011"
     > [!NOTE]  
     >  También puede eliminar un administrador de conexiones de nivel de proyecto en la pestaña **Administrador de conexiones** de la ventana **Diseñador SSIS** abierta para los paquetes del proyecto. Para ello, haga clic con el botón derecho en el administrador de conexiones en la pestaña y después haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
- [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;SSIS&#41; conexiones](connection-manager/integration-services-ssis-connections.md)   
  [Establecer las propiedades de un administrador de conexiones](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Insertar fragmentos de código de Transact-SQL para rodear | Microsoft Docs
-ms.custom: ''
+title: Insertar fragmentos de código de Transact-SQL para rodear
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2afb9294fa75926b6f6a78ec8b889a2e38a851a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c421a21210dda44f48512ecc2475b8d84fa8fdfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063445"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insertar fragmentos de código de Transact-SQL para rodear
   Un fragmento de código rodea con es una plantilla que puede utilizar como punto inicial al agregar un conjunto de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque BEGIN, IF o WHILE.  
@@ -43,7 +42,7 @@ ms.locfileid: "66090339"
   
 3.  Seleccione el nombre del fragmento de código (BEGIN, IF o WHILE) en la lista utilizando el mouse o escribiendo el nombre del fragmento de código y presionando TAB o ENTRAR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Insertar fragmentos de código de Transact-SQL](insert-transact-sql-snippets.md)  
   
   

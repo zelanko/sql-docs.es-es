@@ -13,66 +13,66 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926567"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761593"
 ---
-# <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usar ADO con Microsoft Visual Basic y Visual Basic para aplicaciones
-Cómo configurar un proyecto de ADO y escribir código de ADO son similar si usa Visual Basic o Visual Basic para aplicaciones. En este tema se aborda el uso de ADO con Visual Basic y Visual Basic para aplicaciones y destaca las diferencias.
+# <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicaciones
+La configuración de un proyecto de ADO y la escritura de código ADO es similar si se utiliza Visual Basic o Visual Basic para Aplicaciones. En este tema se trata el uso de ADO con Visual Basic y Visual Basic para Aplicaciones y se indica cualquier diferencia.
 
-## <a name="referencing-the-ado-library"></a>Hacer referencia a la biblioteca ADO
- El proyecto debe hacer referencia a la biblioteca ADO.
+## <a name="referencing-the-ado-library"></a>Referencia a la biblioteca de ADO
+ El proyecto debe hacer referencia a la biblioteca de ADO.
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>Para hacer referencia a ADO desde Microsoft Visual Basic
 
-1.  En Visual Basic, desde el **proyecto** menú, seleccione **referencias...** .
+1.  En Visual Basic, en el menú **proyecto** , seleccione **referencias..**..
 
-2.  Seleccione **biblioteca Microsoft ActiveX Data Objects x.x** en la lista. Compruebe que al menos también se seleccionan las siguientes bibliotecas:
+2.  Seleccione **Microsoft objetos de datos ActiveX biblioteca x. x** de la lista. Compruebe que también están seleccionadas al menos las siguientes bibliotecas:
 
-    -   Aplicaciones para Visual Studio
+    -   Visual Basic para Aplicaciones
 
-    -   Procedimientos y objetos en tiempo de ejecución de Visual Basic
+    -   Objetos y procedimientos en tiempo de ejecución de Visual Basic
 
-    -   Procedimientos y objetos en Visual Basic
+    -   Visual Basic objetos y procedimientos
 
     -   OLE Automation
 
-3.  Haga clic en **Aceptar**.
+3.  Haga clic en **OK**.
 
- Puede utilizar ADO fácilmente con Visual Basic para aplicaciones, mediante el uso de Microsoft Access, por ejemplo.
+ Puede usar ADO con la misma facilidad con Visual Basic para Aplicaciones, por ejemplo, con Microsoft Access.
 
 #### <a name="to-reference-ado-from-microsoft-access"></a>Para hacer referencia a ADO desde Microsoft Access
 
-1.  En Microsoft Access, seleccione o cree un módulo desde la **módulos** pestaña en el **base de datos** ventana.
+1.  En Microsoft Access, seleccione o cree un módulo en la pestaña **módulos** de la ventana **base de datos** .
 
-2.  En el **herramientas** menú, seleccione **referencias...** .
+2.  En el menú **herramientas** , seleccione **referencias.**...
 
-3.  Seleccione **biblioteca Microsoft ActiveX Data Objects x.x** en la lista. Compruebe que al menos también se seleccionan las siguientes bibliotecas:
+3.  Seleccione **Microsoft objetos de datos ActiveX biblioteca x. x** de la lista. Compruebe que también están seleccionadas al menos las siguientes bibliotecas:
 
-    -   Aplicaciones para Visual Studio
+    -   Visual Basic para Aplicaciones
 
-    -   Biblioteca de objetos de Microsoft Access 8.0 (o posterior)
+    -   Biblioteca de objetos de Microsoft Access 8,0 (o posterior)
 
-    -   Biblioteca de objetos de Microsoft DAO 3.5 (o posterior)
+    -   Biblioteca de objetos de Microsoft DAO 3,5 (o posterior)
 
-4.  Haga clic en **Aceptar**.
+4.  Haga clic en **OK**.
 
-## <a name="creating-ado-objects-in-visual-basic"></a>Creación de objetos ADO en Visual Basic
- Para crear una variable de automation y una instancia de un objeto para esa variable, puede usar dos métodos: **Dim** o **CreateObject**.
+## <a name="creating-ado-objects-in-visual-basic"></a>Crear objetos ADO en Visual Basic
+ Para crear una variable de Automation y una instancia de un objeto para esa variable, puede usar dos métodos: **Dim** o **CreateObject**.
 
 ### <a name="dim"></a>Dim
- Puede usar el **New** palabra clave with **Dim** para declarar y crear instancias de objetos ADO en un solo paso:
+ Puede usar la palabra clave **New** con **Dim** para declarar y crear instancias de objetos de ADO en un solo paso:
 
 ```
 Dim conn As New ADODB.Connection
 ```
 
- Como alternativa, el **Dim** creación de instancias de declaración y el objeto de instrucción puede constar de dos pasos:
+ Como alternativa, la declaración de la instrucción **Dim** y la creación de instancias de objeto también pueden ser dos pasos:
 
 ```
 Dim conn As ADODB.Connection
@@ -80,10 +80,10 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  No es necesario utilizar explícitamente la `ADODB` progid con el **Dim** instrucción, suponiendo que ha hecho referencia correctamente a la biblioteca ADO en el proyecto. Sin embargo, usarlo garantiza que no habrá conflictos de nomenclatura con otras bibliotecas.
+>  No es necesario usar explícitamente el `ADODB` ProgID con la instrucción **Dim** , suponiendo que se haya hecho referencia correctamente a la biblioteca de ADO en el proyecto. Sin embargo, el uso de ti garantiza que no se producirán conflictos de nomenclatura con otras bibliotecas.
 
 > [!NOTE]
->  Por ejemplo, si se incluyen referencias a ADO y DAO en el mismo proyecto, debe incluir un calificador para especificar qué modelo de objetos para usar al crear instancias **Recordset** objetos, como se muestra en el código siguiente:
+>  Por ejemplo, si incluye referencias a ADO y a DAO en el mismo proyecto, debe incluir un calificador para especificar el modelo de objetos que se va a utilizar al crear instancias de objetos de **conjunto de registros** , como en el código siguiente:
 
 ```
 Dim adoRS As ADODB.Recordset
@@ -91,28 +91,28 @@ Dim daoRS As DAO.Recordset
 ```
 
 ### <a name="createobject"></a>CreateObject
- Con el **CreateObject** creación de instancias de método, la declaración y el objeto debe ser de dos pasos diferenciados:
+ Con el método **CreateObject** , la declaración y la creación de instancias de objeto deben ser dos pasos discretos:
 
 ```
 Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Instancias de los objetos con **CreateObject** están enlazadas, lo que significa que no están fuertemente tipadas y finalización de la línea de comandos está deshabilitada. Sin embargo, le permiten omitir la referencia a la biblioteca ADO desde el proyecto y le permite crear instancias de versiones específicas de objetos. Por ejemplo:
+ Los objetos con instancias de **CreateObject** están enlazados en tiempo de ejecución, lo que significa que no tienen establecimiento inflexible de tipos y la finalización de la línea de comandos está deshabilitada. Sin embargo, permite omitir la referencia a la biblioteca de ADO del proyecto y permite crear instancias de versiones específicas de los objetos. Por ejemplo:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ```
 
- También podría hacerlo si específicamente crear una referencia a la biblioteca de tipos 2.0 de la versión de ADO y crear el objeto.
+ También puede lograr esto mediante la creación específica de una referencia a la biblioteca de tipos de ADO versión 2,0 y la creación del objeto.
 
- Crear instancias de objetos mediante el uso de la **CreateObject** método es normalmente más lento que el uso de la **Dim** instrucción.
+ La creación de instancias de objetos mediante el método **CreateObject** suele ser más lenta que la utilización de la instrucción **Dim** .
 
-## <a name="handling-events"></a>Control de eventos
- Con el fin de controlar los eventos de ADO en Microsoft Visual Basic, debe declarar una variable nivel de módulo mediante la **WithEvents** palabra clave. La variable se puede declarar únicamente como parte de un módulo de clase y se debe declarar en el nivel de módulo. Para obtener una explicación más exhaustiva de control de eventos de ADO, vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md).
+## <a name="handling-events"></a>Controlar eventos
+ Para controlar los eventos de ADO en Microsoft Visual Basic, debe declarar una variable de nivel de módulo mediante la palabra clave **WithEvents** . La variable solo se puede declarar como parte de un módulo de clase y se debe declarar en el nivel de módulo. Para obtener una explicación más detallada sobre el control de eventos de ADO, vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md).
 
 ## <a name="visual-basic-examples"></a>Ejemplos de Visual Basic
- Muchos ejemplos de Visual Basic se incluyen en la documentación de ADO. Para obtener más información, consulte [ejemplos de código ADO en Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
+ En la documentación de ADO se incluyen muchos ejemplos de Visual Basic. Para obtener más información, vea [ejemplos de código ADO en Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## <a name="see-also"></a>Vea también
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [usar ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [usar ADO con lenguajes de Scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+## <a name="see-also"></a>Consulte también
+ [Microsoft objetos de datos ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [usar ado con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [usar ado con lenguajes de scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

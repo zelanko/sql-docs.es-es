@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108849"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
@@ -35,23 +35,23 @@ ms.locfileid: "66108849"
 |Parte|Descripción|  
 |----------|-----------------|  
 |Nombre de host|Una red TCP/IP utiliza una dirección IP para identificar de forma única un dispositivo en la red. Hay una dirección IP física para cada tarjeta adaptadora de red que esté instalada en un equipo. Si la dirección IP se resuelve como un encabezado de host, puede especificar el encabezado de host. Si está implementando el servidor de informes en una red corporativa, puede utilizar el nombre de red del equipo.|  
-|Puerto|Un puerto TCP es un extremo en el dispositivo. El servidor de informes escuchará las solicitudes en un puerto designado.|  
+|Port|Un puerto TCP es un extremo en el dispositivo. El servidor de informes escuchará las solicitudes en un puerto designado.|  
 |Directorio virtual|Varios servicios web o aplicaciones a menudo comparten un puerto. Por esta razón, la dirección URL de un servidor de informes siempre incluye un directorio virtual que corresponde a la aplicación que obtiene la solicitud. Debe especificar nombres de directorio virtual únicos para cada aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que escuche en la misma dirección IP y puerto.|  
 |Configuración SSL|Las direcciones URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden configurar para utilizar un certificado SSL existente que se instalara anteriormente en el equipo. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 ## <a name="default-urls"></a>Direcciones URL predeterminadas  
  Al tener acceso a un servidor de informes o al Administrador de informes a través de su dirección URL, ésta debería incluir el nombre de host y no la dirección IP. En una red TCP/IP, la dirección IP se resolverá como un nombre de host (o el nombre de red del equipo). Si usó los valores predeterminados para configurar las direcciones URL, debería poder tener acceso al servicio web del servidor de informes mediante direcciones URL que especifiquen el nombre de equipo u host local como el nombre de host:  
   
--   http://\<computername>/reportserver  
+-   http://\<NombreDeEquipo>/ReportServer  
   
 -   http://localhost/reportserver  
   
  La configuración que hace que estas direcciones URL estén disponibles aparece en la tabla siguiente. En esta tabla se muestran los valores predeterminados que habilitan una conexión del servidor de informes a través de direcciones URL que incluyan un nombre de host:  
   
-|Parte|Valor|Explicación|  
+|Parte|Value|Explicación|  
 |----------|-----------|-----------------|  
 |Dirección IP|Todas asignadas|El servicio de nombres de dominio de la red resuelve el nombre de host de la dirección URL como la dirección IP del equipo. Siempre que la dirección IP se especifique en la dirección URL que defina, una solicitud que se envíe a un host concreto alcanzará su destino pretendido.|  
-|Puerto|80|El puerto 80 es el predeterminado para las conexiones TCP/IP en un equipo. Dado que el servidor de informes escucha en el puerto 80, puede omitir el número de puerto de la dirección URL. Si especifica otro puerto, debe especificarlo en la dirección URL.|  
+|Port|80|El puerto 80 es el predeterminado para las conexiones TCP/IP en un equipo. Dado que el servidor de informes escucha en el puerto 80, puede omitir el número de puerto de la dirección URL. Si especifica otro puerto, debe especificarlo en la dirección URL.|  
 |Directorio virtual|ReportServer|Observe que las dos direcciones URL del ejemplo incluyen el nombre del directorio virtual. A menos que personalice la definición de dirección URL, siempre debe especificar en la dirección URL el nombre del directorio virtual de la aplicación.|  
   
 > [!NOTE]  
@@ -79,8 +79,8 @@ ms.locfileid: "66108849"
  [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Al instalar varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un único equipo, aumenta la probabilidad de encontrar direcciones URL duplicadas al registrar una dirección URL. Para evitar estos errores, siga las recomendaciones de este tema para crear reservas de direcciones URL específicas de una instancia.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
- [Dirección URL del servicio Web &#40;modo nativo de SSRS&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar una dirección URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Dirección URL del servicio Web &#40;el modo nativo de SSRS&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

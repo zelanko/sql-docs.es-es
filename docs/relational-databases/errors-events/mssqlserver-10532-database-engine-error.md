@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: adf10542f09e4515020b46d7843e773e5995ca33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781455"
 ---
 # <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10532|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10532|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_NO_ELIGIBLE_STMT|  
 |Texto del mensaje|No se puede crear la guía de plan "%.\*ls", porque el lote o módulo especificado por **\@plan_handle** no contiene una instrucción válida para una guía de plan. Especifique un valor distinto para **\@plan_handle**.|  

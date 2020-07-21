@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 125584fd3ad858a4242f6d85e755b3ec04e50ab1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 474e50964628d7361f40ec9d5d296f8b410d7e52
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979643"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920447"
 ---
 # <a name="getsqlxml-method-javalangstring"></a>Método getSQLXML (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public final java.sql.SQLXML getSQLXML(java.lang.String parameterName)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getSQLXML especifica este método getSQLXML en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

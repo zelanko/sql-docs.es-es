@@ -1,10 +1,9 @@
 ---
-title: Bases de datos de desarrollo, pruebas y producción (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Bases de datos de desarrollo, pruebas y producción
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,14 @@ helpviewer_keywords:
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f667fd107935eb0373e7d3ee0c1fcaa2711b8776
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2b055385ca5ee06b0fba1c87376835b16695ef57
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254808"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251824"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de datos de desarrollo, pruebas y producción (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

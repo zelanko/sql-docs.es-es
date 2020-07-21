@@ -1,5 +1,5 @@
 ---
-title: Agregar modelos de minería de datos a una estructura (Analysis Services - minería de datos) | Microsoft Docs
+title: Agregar modelos de minería de datos a una estructura (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1284d160ca828f75ec39112d614640fcb3ab1cb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66086250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525703"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Agregar modelos de minería de datos a una estructura (Analysis Services - Minería de datos)
   Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  
@@ -28,7 +27,7 @@ ms.locfileid: "66086250"
  Si utiliza el Asistente para minería de datos para crear un nuevo modelo de minería de datos, de forma predeterminada, primero siempre debe crear una estructura de minería de datos. El asistente le ofrece la posibilidad de agregar un modelo de minería de datos inicial a la estructura. Sin embargo, no es necesario crear un modelo de manera inmediata. Si solo crea la estructura, no necesita tomar una decisión sobre qué columna debe utilizar como atributo de predicción, o sobre cómo utilizar los datos en un modelo determinado. En su lugar, solo tiene que establecer la estructura de datos general que desea utilizar en el futuro; más adelante puede utilizar [Data Mining Designer](data-mining-designer.md) para agregar nuevos modelos de minería de datos basados en dicha estructura.  
   
 > [!NOTE]  
->  En DMX, la instrucción CREATE MINING MODEL comienza con el modelo de minería de datos. Es decir, debe definir la opción de modelo de minería de datos que desee y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará automáticamente la estructura subyacente. Más adelante puede seguir agregando nuevos modelos de minería de datos a esa estructura, mediante el uso de la instrucción ALTER STRUCTURE... ADD MODEL.  
+>  En DMX, la instrucción CREATE MINING MODEL comienza con el modelo de minería de datos. Es decir, debe definir la opción de modelo de minería de datos que desee y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará automáticamente la estructura subyacente. Más adelante puede seguir agregando nuevos modelos de minería de datos a esa estructura, mediante el uso de la instrucción ALTER STRUCTURE... Instrucción ADD MODEL.  
   
 ## <a name="choosing-an-algorithm"></a>Elegir un algoritmo  
  Si agrega un modelo nuevo a una estructura existente, en primer lugar debe seleccionar un algoritmo de minería de datos para utilizarlo en el modelo. Elegir el algoritmo es importante porque cada algoritmo realiza un tipo diferente de análisis y tiene requisitos diferentes.  
@@ -57,8 +56,8 @@ ms.locfileid: "66086250"
 ## <a name="specifying-column-content"></a>Especificar el contenido de las columnas  
  Para algunas columnas, también puede ser necesario especificar el *contenido de la columna*. En la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la propiedad Tipo de contenido de cada columna de datos indica al algoritmo cómo debe procesar los datos de esa columna. Por ejemplo, si los datos tienen una columna Ingresos , debe especificar que la columna contiene números continuos estableciendo el tipo de contenido en Continuous. Sin embargo, también puede especificar que los números de la columna Ingresos se agrupen en cubos estableciendo el tipo de contenido en Discretized y, opcionalmente, especificando el número exacto de cubos. Puede crear distintos modelos que procesen las columnas de manera diferente: por ejemplo, puede probar un modelo que agrupe clientes en tres cubos en función de la edad, y otro modelo que los agrupe en 10 cubos en función de la edad.  
   
-## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
  [Crear una estructura de minería de datos relacional](create-a-relational-mining-structure.md)   
  [Propiedades del modelo de minería de datos](mining-model-properties.md)   
  [Columnas del modelo de minería de datos](mining-model-columns.md)  

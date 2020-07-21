@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298597"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
-  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
+  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento Extension de representación de archivos de configuración  
  Una vez compilada una extensión de representación en una .DLL, agregue una entrada al archivo rsreportserver.config. De forma predeterminada, la ubicación es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer. El elemento primario es \<Render>. Bajo el elemento Render hay un elemento Extension para cada extensión de representación. El elemento `Extension` contiene dos atributos, Name y Type.  
   
- En la tabla siguiente se describe los atributos para el `Extension` (elemento) para las extensiones de representación:  
+ En la tabla siguiente se describen los atributos `Extension` del elemento para las extensiones de representación:  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|**Name**|Nombre único de la extensión. La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas dentro del elemento **Extensions** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
+|**Nombre**|Nombre único de la extensión. La longitud máxima para el atributo **Name** es de 255 caracteres. El nombre debe ser único entre todas las entradas dentro del elemento **Extensions** del archivo de configuración. Si hay un nombre duplicado, el servidor de informes devuelve un error.|  
 |**Tipo**|Lista separada por comas que incluye el espacio de nombres completo junto con el nombre del ensamblado.|  
 |**Visible**|El valor `false` indica que la extensión de representación no debería estar visible en las interfaces de usuario. Si el atributo no está incluido, el valor predeterminado es `true`.|  
 |**LogAllExecutionRequests**|Un valor `false` indica que una entrada solo se registra para la primera ejecución de un informe en una sesión. Si el atributo no está incluido, el valor predeterminado es `true`.<br /><br /> Por ejemplo, este valor de configuración determina si se ha de registrar una entrada solo para la primera página representada en un informe (en el caso de `false`) o una entrada para cada página representada en el informe (en el caso de `true`).|  
@@ -44,7 +44,7 @@ ms.locfileid: "63298597"
   
 1.  Copie el ensamblado de la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de representación. La ubicación predeterminada del directorio Bin del servidor de informes es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer\Bin.  
   
-2.  Una vez copiado el archivo de ensamblado, abra el archivo rsreportserver.config. El archivo rsreportserver.config también se encuentra en el directorio bin del servidor de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión. Puede abrir el archivo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto simple.  
+2.  Una vez copiado el archivo de ensamblado, abra el archivo rsreportserver.config. El archivo rsreportserver.config también se encuentra en el directorio bin del servidor de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión. Puede abrir el archivo con [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un simple editor de texto.  
   
      Para más información, consulte [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md).  
   
@@ -64,12 +64,12 @@ ms.locfileid: "63298597"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     El valor de **Name** es el nombre único de la extensión de representación. El valor de **Type** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la implementación de <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo, el Administrador de informes, agregue un **Visible** atributo a la `Extension` elemento y establézcalo en `false`.  
+     El valor de **Name** es el nombre único de la extensión de representación. El valor de **Type** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la implementación de <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>, seguida del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de representación están visibles. Para ocultar una extensión de las `Extension` interfaces de usuario, como administrador de informes, agregue un atributo `false` **visible** al elemento y establézcalo en.  
   
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede abrir también el Administrador de informes y comprobar que la extensión está incluida en la lista de tipos de exportación disponibles para un informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de representación](implementing-a-rendering-extension.md)   
  [Información general de las extensiones de representación](rendering-extensions-overview.md)   
  [Implementar la interfaz IRenderingExtension](implementing-the-irenderingextension-interface.md)   

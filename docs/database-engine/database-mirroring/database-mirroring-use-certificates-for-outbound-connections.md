@@ -1,5 +1,6 @@
 ---
 title: 'Creación de reflejo de la base de datos: usar certificados en las conexiones salientes | Microsoft Docs'
+description: Obtenga información sobre cómo configurar instancias del servidor para que usen certificados a fin de autenticar conexiones entrantes para la creación de reflejo de la base de datos, después de configurar conexiones de salida.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 2837bcba7069f3259b23446137aa6162b2443189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754687"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Creación de reflejo de la base de datos: usar certificados en las conexiones salientes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describen los pasos necesarios para configurar instancias de servidor que utilicen certificados para autenticar conexiones salientes en la creación de un reflejo de base de datos. La configuración de conexiones salientes se debe realizar antes de que se puedan configurar conexiones entrantes.  
   
 > [!NOTE]  

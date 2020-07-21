@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3adcba99280331fd604cf71544d85a87f996109
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6dcca3cbe67a6cdfba4ffd24418fb5ac0fe23cab
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767911"
 ---
-# <a name="mssqlserver7934"></a>MSSQLSERVER_7934
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7934|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7934|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
 |Texto del mensaje|Error de tabla: no se encontró el id. de directorio FILESTREAM F_ID para el id. de objeto O_ID, id. de índice I_ID e id. de partición PN_ID.|  

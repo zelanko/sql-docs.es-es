@@ -1,5 +1,5 @@
 ---
-title: Obtención del volcado de memoria completo para solucionar problemas de SQL Server Management Studio (SSMS)
+title: Obtención de un volcado de memoria completo para solucionar problemas de SSMS
 Description: Solución de problemas de un bloqueo de SSMS mediante la recopilación de un volcado de memoria completo
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -9,14 +9,14 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: dineth, sstein
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95beb87d72295f4f5ea10b5bb33476d4d27af628
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266720"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75247169"
 ---
 # <a name="get-full-memory-dump"></a>Obtención de un volcado de memoria completo
 

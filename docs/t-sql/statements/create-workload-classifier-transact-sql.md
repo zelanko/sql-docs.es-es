@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2019
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,29 +20,37 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b5566230f1739fd1d19d7ffa9dd34ce07caf1fa4
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 89ee76f44006227500cdb9e160256800e6a62929
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951651"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634584"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Crea un clasificador de administración de cargas de trabajo.  El clasificador asigna las solicitudes entrantes a un grupo de cargas de trabajo y asigna una importancia según los parámetros especificados en la definición de la instrucción del clasificador.  Los clasificadores se evalúan con cada solicitud enviada.  Si una solicitud no coincide con un clasificador, se asigna al grupo de cargas de trabajo predeterminado.  El grupo de cargas de trabajo predeterminado es la clase de recurso smallrc.  
-  
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+Crea un objeto clasificador para su uso en la administración de cargas de trabajo.  El clasificador asigna las solicitudes entrantes a un grupo de cargas de trabajo según los parámetros especificados en la definición de la instrucción del clasificador.  Los clasificadores se evalúan con cada solicitud enviada.  Si una solicitud no coincide con un clasificador, se asigna al grupo de cargas de trabajo predeterminado.  El grupo de cargas de trabajo predeterminado es la clase de recurso smallrc.
+
+> [!NOTE]
+> El clasificador de cargas de trabajo ocupa el lugar de la asignación de clase de recursos sp_addrolemember.  Después de crear los clasificadores de carga de trabajo, ejecute sp_droprolemember para quitar las asignaciones de clases de recursos redundantes.
+
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    ( WORKLOAD_GROUP = 'name'  
-     ,MEMBERNAME = 'security_account'
- [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL (default) | ABOVE_NORMAL | HIGH }])
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
+  
+[ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
 ```
 
@@ -51,24 +59,67 @@ WITH
  *classifier_name*  
  Especifica el nombre por el que se identifica el clasificador de carga de trabajo.  "classifier_name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser único en la instancia.
 
-WORKLOAD_GROUP = *"name"* : si se cumplen las condiciones en las reglas de clasificador, "name" asigna la solicitud a un grupo de cargas de trabajo.  "name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser un nombre de grupo de cargas de trabajo válido en el momento de crear el clasificador.
+ *WORKLOAD_GROUP* =  *'name'*    
+ Si se cumplen las condiciones en las reglas de clasificador, "name" asigna la solicitud a un grupo de cargas de trabajo.  "name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser un nombre de grupo de cargas de trabajo válido en el momento de crear el clasificador.
 
-WORKLOAD_GROUP debe asignarse a una clase de recursos existente:
+ Los grupos de cargas de trabajo disponibles se pueden encontrar en la vista de catálogo [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md).
 
-|Clases de recursos estáticos|Clases de recursos dinámicos|
-|------------------------|-----------------------|
-|staticrc10|smallrc|
-|staticrc20|mediumrc|
-|staticrc30|largerc|
-|staticrc40|xlargerc|
-|staticrc50||
-|staticrc60||
-|staticrc70||
-|staticrc80||
+ *MEMBERNAME* =  *"cuenta_de_seguridad"*     
+ Cuenta de seguridad que se usa para la clasificación.  "Security_account" es un elemento "sysname" y no tiene ningún valor predeterminado. "Security_account" puede ser un usuario o un rol de base de datos, el inicio de sesión de Azure Active Directory o un grupo de Azure Active Directory.
+ 
+ *WLM_LABEL*   
+ Especifica el valor de etiqueta con el que se puede clasificar una solicitud.  La etiqueta es un parámetro opcional de tipo nvarchar(255).  Use [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) en la solicitud para que coincida con la configuración del clasificador.
 
-MEMBERNAME = *"security_account"* : se trata de la cuenta de seguridad que se va a agregar al rol.  "Security_account" es un elemento "sysname" y no tiene ningún valor predeterminado. "Security_account" puede ser un usuario o un rol de base de datos, el inicio de sesión de Azure Active Directory o un grupo de Azure Active Directory.
+Ejemplo:
 
-IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } especifica la importancia relativa de una solicitud.  IMPORTANCE puede ser es uno de los siguientes valores:
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,WLM_LABEL      = 'dimension_loads' )
+
+SELECT COUNT(*) 
+  FROM DimCustomer
+  OPTION (LABEL = 'dimension_loads')
+```
+
+*WLM_CONTEXT*  
+Especifica el valor de contexto de sesión con el que se puede clasificar una solicitud.  El contexto es un parámetro opcional de tipo nvarchar(255).  Use [sys.sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest) con el nombre de la variable igual a `wlm_context` antes de enviar una solicitud para establecer el contexto de la sesión.
+
+Ejemplo:
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcDataLoad WITH  
+( WORKLOAD_GROUP = 'wgDataLoad'
+ ,MEMBERNAME     = 'ELTRole'
+ ,WLM_CONTEXT    = 'dim_load' )
+ 
+--set session context
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = 'dim_load'
+
+--run multiple statements using the wlm_context setting
+SELECT COUNT(*) FROM stg.daily_customer_load
+SELECT COUNT(*) FROM stg.daily_sales_load
+
+--turn off the wlm_context session setting
+EXEC sys.sp_set_session_context @key = 'wlm_context', @value = null
+```
+
+*START_TIME* y *END_TIME*  
+Especifica el valor de hora de inicio y fin con el que se puede clasificar una solicitud.  Tanto start_time como end_time tienen el formato HH:MM en la zona horaria UTC.  Start_time y end_time deben especificarse juntos.
+
+Ejemplo:
+
+```sql
+CREATE WORKLOAD CLASSIFIER wcELTLoads WITH  
+( WORKLOAD_GROUP = 'wgDataLoads'
+ ,MEMBERNAME     = 'ELTRole'  
+ ,START_TIME     = '22:00'
+ ,END_TIME       = '02:00' )
+```
+
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+Especifica la importancia relativa de una solicitud.  IMPORTANCE puede ser es uno de los siguientes valores:
 
 - LOW
 - BELOW_NORMAL
@@ -76,9 +127,40 @@ IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } especifica la
 - ABOVE_NORMAL
 - HIGH  
 
-"Importance" influye en el orden en el que se programan las solicitudes, lo que da el primer acceso a los recursos y bloqueos.
+Si no se especifica la importancia, se usa la configuración de importancia del grupo de cargas de trabajo.  La importancia predeterminada del grupo de cargas de trabajo es Normal.  La importancia influye en el orden en el que se programan las solicitudes, lo que da el primer acceso a los recursos y bloqueos.
 
-Si un usuario es miembro de varios roles con diferentes clases de recursos asignados o coincidentes en varios clasificadores, el usuario tiene la asignación de clase de recursos más alta. Para obtener más información, vea la [clasificación de las cargas de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)
+## <a name="classification-parameter-weighting"></a>Ponderación de los parámetros de clasificación
+
+Una solicitud puede coincidir con varios clasificadores.  Existe una ponderación en los parámetros de clasificadores.  El clasificador de mayor peso coincidente se usa para asignar un grupo de cargas de trabajo y una importancia.  La ponderación es como se indica a continuación:
+
+|Parámetro clasificador |Peso   |
+|---------------------|---------|
+|USER                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
+
+Tenga en cuenta las siguientes configuraciones de clasificador.
+
+```sql
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
+( WORKLOAD_GROUP = 'wgDashboards'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = HIGH
+ ,WLM_LABEL      = 'salereport' )
+
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
+( WORKLOAD_GROUP = 'wgUserQueries'  
+ ,MEMBERNAME     = 'userloginA'
+ ,IMPORTANCE     = LOW
+ ,START_TIME     = '18:00'
+ ,END_TIME       = '07:00' )
+```
+
+El `userloginA` del usuario está configurado para ambos clasificadores.  Si userloginA ejecuta una consulta con una etiqueta igual a `salesreport` entre las 18:00 y las 07:00 UTC, la solicitud se clasificará en el grupo de cargas de trabajo wgDashboards con importancia ALTA.  Puede que la expectativa fuese clasificar la solicitud en wgUserQueries con importancia BAJA para los informes fuera de las horas de trabajo, pero el peso de WLM_LABEL es superior a START_TIME/END_TIME.  La ponderación de classifierA es 80 (64 para el usuario, más 16 para WLM_LABEL).  La ponderación de classifierB es 68 (64 para el usuario, 4 para START_TIME/END_TIME).  En este caso, puede agregar WLM_LABEL a classifierB.
+
+ Para obtener más información, vea la [ponderación de las cargas de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting).
 
 ## <a name="permissions"></a>Permisos
 

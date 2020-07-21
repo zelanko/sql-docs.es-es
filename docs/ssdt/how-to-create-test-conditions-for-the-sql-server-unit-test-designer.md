@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creación de condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 75d65bb7b30a8a48a35ada0c929ddf4698ad8408
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911788"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241479"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedimientos: Creación de condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Cómo: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
+
 Puede usar la clase extensible [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para crear nuevas condiciones de prueba. Por ejemplo, puede crear una nueva condición de prueba que compruebe el número de columnas o los valores de un conjunto de resultados.  
   
 ## <a name="to-create-a-test-condition"></a>Para crear una condición de prueba  
@@ -48,7 +49,7 @@ En este procedimiento se explica cómo crear una condición de prueba de manera 
   
 10. Derive la clase de la clase [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Firme el ensamblado con un nombre seguro. Para más información, vea: [Cómo: Firmar un ensamblado con un nombre seguro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Firme el ensamblado con un nombre seguro. Para más información, consulte [Cómo: Firmar un ensamblado con un nombre seguro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Compile la biblioteca de clases.  
   

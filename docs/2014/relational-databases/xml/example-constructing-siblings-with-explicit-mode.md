@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT | Microsoft Docs'
+title: 'Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 740e132845a738101a38248da41fc0b53d1acecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067868"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT
   Suponga que desea crear XML para obtener información sobre pedidos. Observe que los elementos <`SalesPerson`> y <`OrderDetail`> son del mismo nivel. Cada pedido tiene un elemento <`OrderHeader`>, un elemento <`SalesPerson`> y uno o más elementos <`OrderDetail`>.  
   
 ```  
@@ -109,7 +108,7 @@ FOR XML EXPLICIT;
   
  `</OrderHeader>`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

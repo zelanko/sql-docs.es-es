@@ -1,5 +1,5 @@
 ---
-title: Trazar datos en un eje secundario (Generador de informes y SSRS) | Microsoft Docs
+title: Trazado de datos en un eje secundario (Generador de informes) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86d73f2ab16bdb7ee801e333f3a75c96a2a1c360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b53f514104032f55dcdbc88986f8e2679ecd5700
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578191"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082375"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Trazar datos en un eje secundario (Generador de informes y SSRS)
 

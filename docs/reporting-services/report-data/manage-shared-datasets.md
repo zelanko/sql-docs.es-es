@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67220586"
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
@@ -25,7 +25,7 @@ ms.locfileid: "67220586"
   
 -   Generador de informes. Use el modo de diseño de conjunto de datos compartidos y guarde el conjunto de datos compartido en un servidor de informes o sitio de SharePoint.  
   
--   Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio para crear conjuntos de datos compartidos en la carpeta de conjuntos de datos en el Explorador de soluciones. Para publicar un conjunto de datos compartido, impleméntelo en un servidor de informes o sitio de SharePoint.  
+-   Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] / Visual Studio para crear conjuntos de datos compartidos en la carpeta Conjunto de datos en el Explorador de soluciones. Para publicar un conjunto de datos compartido, impleméntelo en un servidor de informes o sitio de SharePoint.  
   
 -   Cargar un archivo de definición de conjuntos de datos compartidos (.rsd): puede cargar un archivo al servidor de informes o sitio de SharePoint. En un sitio de SharePoint. Un archivo cargado no se valida con el esquema hasta que el conjunto de datos compartido esté almacenado en memoria caché o se use en un informe.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67220586"
  Para utilizar un conjunto de datos compartido en un informe, abra una aplicación como el Generador de informes, busque el servidor de informes o el sitio de SharePoint y seleccione el conjunto de datos compartido. De este modo, agrega una instancia del conjunto de datos compartido al informe. En el informe, no puede ver ni cambiar la consulta o el origen de datos compartido para el conjunto de datos compartido. Puede especificar un conjunto adicional de valores de propiedad del conjunto de datos que se apliquen a la instancia en el informe. Por ejemplo, puede agregar un filtro o cambiar opciones de datos como la distinción entre mayúsculas y minúsculas. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="managing-shared-datasets"></a>Administración de conjuntos de datos compartidos  
- Para administrar las propiedades de un conjunto de datos compartido publicado, puede usar el portal web de un servidor de informes en modo nativo, o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
+ Para administrar las propiedades de un conjunto de datos compartido publicado, puede usar el portal web de un servidor de informes en modo nativo, o las páginas de aplicación de un sitio de SharePoint, si implementó el servidor de informes en el modo integrado de SharePoint. Las tareas que puede realizar en un conjunto de datos compartido dependen de sus asignaciones de roles y de los permisos del nivel de sitio y de elemento, incluidos los permisos de la carpeta, si la herencia de permisos está en vigor. La seguridad en el nivel de elemento de los conjuntos de datos compartidos sigue el mismo modelo que la de los informes. Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
   
  Puede administrar las propiedades de elementos de conjuntos de datos compartidas, incluido el origen de datos compartido que se utilizará, independientemente del informe que use el conjunto de datos compartido o el origen de datos compartido del que dependa. Para cambiar la consulta u otras propiedades de conjunto de datos que forman parte de la definición del conjunto de datos compartido, debe modificar la definición.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "67220586"
   
 |Tarea      |Herramienta      |Vínculo      |  
 |----------|----------|----------|  
-|Agregue un conjunto de datos compartido o cambie las propiedades de definición del conjunto de datos compartido.|Guardar en el Generador de informes.<br /><br /> Implementar en el Diseñador de informes.<br /><br /> Cargar un archivo .rsd en el portal web|[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Carga de un archivo o un informe en el servidor de informes](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Si carga un conjunto de datos compartido antes de que se publique el origen de datos compartido del que depende, debe enlazar manualmente el conjunto de datos compartido al origen de datos compartido. Para obtener más información, consulte [... /.. /Reporting-Services/Work con conjuntos de datos compartidos: portal web](../work-with-shared-datasets-web-portal.md).|  
+|Agregue un conjunto de datos compartido o cambie las propiedades de definición del conjunto de datos compartido.|Guardar en el Generador de informes.<br /><br /> Implementar en el Diseñador de informes.<br /><br /> Cargar un archivo .rsd en el portal web.|[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)]<br /><br /> [Carga de un archivo o un informe en el servidor de informes](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)<br /><br /> Si carga un conjunto de datos compartido antes de que se publique el origen de datos compartido del que depende, debe enlazar manualmente el conjunto de datos compartido al origen de datos compartido. Para más información, vea [../../reporting-services/Trabajo con conjuntos de recursos compartidos: portal web](../work-with-shared-datasets-web-portal.md).|  
 |Cambiar las propiedades de elemento del conjunto de datos compartido.|portal web|[Trabajar con conjuntos de datos compartidos: portal web](../../reporting-services/work-with-shared-datasets-web-portal.md)|  
 |Especificar propiedades de conjunto de datos compartido adicionales para una instancia del conjunto de datos compartido en un informe.|Diseñador de informes del Generador de informes|[Propiedades del conjunto de datos (cuadro de diálogo), Consulta (Generador de informes)](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md)|  
 |Enlazar a un origen de datos compartido diferente para un conjunto de datos compartido.|portal web|[Configuración de propiedades de origen de datos para un informe paginado: SSRS](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
@@ -112,7 +112,7 @@ ms.locfileid: "67220586"
   
 -   Siguen las mismas reglas para especificar los valores de parámetros que las suscripciones.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Conexión mediante IPv6 | Microsoft Docs
-ms.custom: ''
+title: Conectar utilizando IPv6
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 52a2fff098698c945cde23fac13eec7ad78b63c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: e49366559b1e9af122b712aa2f2658f4814a75f7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010193"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75306483"
 ---
 # <a name="connecting-using-ipv6"></a>Conectar utilizando IPv6
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

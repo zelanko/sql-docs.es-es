@@ -11,10 +11,10 @@ ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7f765d232ed9b913cc502525bed4632088be1dc1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298881"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Servicio de captura de datos modificados para Oracle de Attunity (Ayuda de F1)

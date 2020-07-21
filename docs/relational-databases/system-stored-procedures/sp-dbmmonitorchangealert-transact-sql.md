@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c5c520ff4b3e54f027f6afa5ca203c412f3f6291
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108147"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85866617"
 ---
-# <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega o cambia el umbral de advertencia de una métrica de rendimiento de creación de reflejo especificada.  
 
@@ -59,15 +59,15 @@ sp_dbmmonitorchangealert database_name
 |4|Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
 |5|Período de retención|Metadatos que controlan cómo se conservan las filas largas en la tabla de estado de la creación de reflejo de la base de datos.|  
   
- Para obtener información acerca de los identificadores de evento correspondientes a las advertencias, vea [los umbrales de advertencia de uso y las alertas en métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obtener información acerca de los identificadores de eventos correspondientes a las advertencias, consulte [usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
  *alert_threshold*  
  Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la métrica de rendimiento.  
   
 > [!NOTE]  
->  Para ver los valores actuales, ejecute el [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimiento almacenado.  
+>  Para ver los valores actuales, ejecute el procedimiento almacenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .  
   
- *enabled*  
+ *activó*  
  ¿Está habilitada la advertencia?  
   
  0 = La advertencia está deshabilitada.  
@@ -92,9 +92,9 @@ sp_dbmmonitorchangealert database_name
 |*alert_id*|Métrica de rendimiento|Umbral de advertencia|¿Está habilitada la advertencia?|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
 |1|Transacción no enviada más antigua|30 minutos|Sí|  
-|2|Registro sin enviar|10 000 KB|Sí|  
-|3|Registro sin restaurar|10 000 KB|Sí|  
-|4|Sobrecarga de confirmación del servidor reflejado|1\.000 milisegundos|Sin|  
+|2|Registro sin enviar|10.000 KB|Sí|  
+|3|Registro sin restaurar|10.000 KB|Sí|  
+|4|Sobrecarga de confirmación del servidor reflejado|1.000 milisegundos|No|  
 |5|Período de retención|8 horas|Sí|  
   
 ```  
@@ -105,9 +105,9 @@ EXEC sp_dbmmonitorchangealert AdventureWorks2012, 4, 1000, 0 ;
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 5, 8, 1 ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
+ [sp_dbmmonitorhelpalert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)  
   
   

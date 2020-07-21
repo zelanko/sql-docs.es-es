@@ -17,18 +17,18 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2baf7dd62a949dadbaaa5ff1f867c84fb097ed75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0acbc4f5244852f988047e9ec1798201fefc30e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059889"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008822"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve el logaritmo natural de la expresión **float** especificada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,14 +36,14 @@ ms.locfileid: "68059889"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
--- Syntax for SQL Server  
+```syntaxsql
+-- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
-```  
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  
 ```  
@@ -55,17 +55,17 @@ LOG ( float_expression )
  *base*  
  Argumento entero opcional que establece la base del logaritmo.  
   
-**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **float**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  De forma predeterminada, **LOG()** devuelve el logaritmo natural. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede cambiar la base del logaritmo por otro valor mediante el parámetro *base* opcional.  
   
  El logaritmo natural es el logaritmo en base **e**, donde **e** es una constante irracional aproximadamente igual a 2,718281828.  
   
- El logaritmo natural del valor exponencial de un número es el propio número: LOG( EXP( *n* ) ) = *n*. Y el valor exponencial del logaritmo natural de un número es el propio número: EXP( LOG( *n* ) ) = *n*.  
+ El logaritmo natural del valor exponencial de un número es el propio número: LOG( EXP( *n* ) ) = *n*. Asimismo, el valor exponencial del logaritmo natural de un número es el propio número: EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -73,8 +73,8 @@ LOG ( float_expression )
  En el ejemplo siguiente se calcula el `LOG` de la expresión **float** especificada.  
   
 ```  
-DECLARE @var float = 10;  
-SELECT 'The LOG of the variable is: ' + CONVERT(varchar, LOG(@var));  
+DECLARE @var FLOAT = 10;  
+SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
 ```  
   
@@ -88,7 +88,7 @@ The LOG of the variable is: 2.30259
 ```  
   
 ### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>B. Calcular el logaritmo del exponente de un número  
- En el ejemplo siguiente se calcula el `LOG` del exponente de un número.  
+ En el ejemplo siguiente se calcula el valor de `LOG` del exponente de un número.  
   
 ```  
 SELECT LOG (EXP (10));  
@@ -103,7 +103,7 @@ SELECT LOG (EXP (10));
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. Calcular el logaritmo de un número  
  En el ejemplo siguiente se calcula el `LOG` de la expresión **float** especificada.  

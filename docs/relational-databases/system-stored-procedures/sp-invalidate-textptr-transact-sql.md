@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_invalidate_textptr
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 269a49f76bd583c2233cf3720818590ca132c6a3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113193"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899400"
 ---
-# <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Invalida el puntero de texto consecutivo especificado en la transacción, o todos ellos. **sp_invalidate_textptr** puede usarse solo en punteros de texto consecutivos. Estos punteros son de tablas que tienen el **texto en fila** opción habilitada.  
+  Invalida el puntero de texto consecutivo especificado en la transacción, o todos ellos. **sp_invalidate_textptr** solo se puede usar en punteros de texto consecutivos. Estos punteros son de tablas que tienen habilitada la opción **Text in row** .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,23 +39,23 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @TextPtrValue = ] textptr_value` Es el puntero de texto consecutivo que va a invalidarse. *textptr_value* es **varbinary (** 16 **)** , su valor predeterminado es null. Si es NULL, **sp_invalidate_textptr** invalida todos los punteros de texto consecutivos en la transacción.  
+`[ @TextPtrValue = ] textptr_value`Es el puntero de texto consecutivo que se va a invalidar. *textptr_value* es de tipo **varbinary (** 16 **)** y su valor predeterminado es NULL. Si es NULL, **sp_invalidate_textptr** invalida todos los punteros de texto consecutivos de la transacción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un máximo de 1.024 punteros de texto consecutivos activos y válidos por transacción y base de datos; sin embargo, una transacción que comprenda más de una base de datos puede disponer de 1.024 punteros de texto consecutivos en cada una. **sp_invalidate_textptr** puede utilizarse para invalidar los punteros de texto consecutivos y, por lo tanto, liberar más espacio para los punteros de texto en fila adicional.  
+## <a name="remarks"></a>Observaciones  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un máximo de 1.024 punteros de texto consecutivos activos y válidos por transacción y base de datos; sin embargo, una transacción que comprenda más de una base de datos puede disponer de 1.024 punteros de texto consecutivos en cada una. **sp_invalidate_textptr** se puede usar para invalidar los punteros de texto consecutivos y, por tanto, espacio libre para los punteros de texto consecutivos adicionales.  
   
- Para obtener más información acerca de la opción text in row, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
+ Para más información sobre la opción text in row, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
   

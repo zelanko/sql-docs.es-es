@@ -1,5 +1,5 @@
 ---
-title: Contenido para los modelos de asociación del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083691"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521592"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66083691"
  Nombres de los atributos que corresponden a este nodo.  
   
  NODE_NAME  
- Nombre del nodo. Para un modelo de asociación, esta columna contendrá el mismo valor que NODE_UNIQUE_NAME.  
+ El nombre del nodo. Para un modelo de asociación, esta columna contendrá el mismo valor que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo.  
@@ -63,7 +62,7 @@ ms.locfileid: "66083691"
 |Identificador del tipo de nodo|Tipo|  
 |------------------|----------|  
 |1 (Modelo)|Raíz o nodo primario.|  
-|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o Administrador de configuración de<br /><br /> `Gender = Male`.|  
+|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o<br /><br /> `Gender = Male`.|  
 |8 (Regla)|Regla que define cómo se relacionan entre sí los elementos.<br /><br /> Ejemplo:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -86,7 +85,7 @@ ms.locfileid: "66083691"
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario del nodo.  
   
- **Nodo primario** : siempre NULL.  
+ **Nodo primario** Siempre es NULL.  
   
  **Nodo de conjunto de elementos o de regla** : siempre 0.  
   
@@ -103,10 +102,10 @@ ms.locfileid: "66083691"
 |MAX_SUPPORT|Soporte máximo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Tamaño del conjunto de elementos más pequeño, representado como recuento de elementos.<br /><br /> Un valor de 0 indica que el estado `Missing` se trató como un elemento independiente.<br /><br /> **Nota** El valor predeterminado del parámetro *MINIMUM_ITEMSET_SIZE* es 1.|  
 |MAX_ITEMSET_SIZE|Indica el tamaño del conjunto de elementos más grande que se encontró.<br /><br /> **Nota** Este valor está restringido por el valor establecido para el parámetro *MAX_ITEMSET_SIZE* al crear el modelo. Este tamaño nunca puede superar dicho valor; sin embargo, puede ser menor. El valor predeterminado es 3.|  
-|MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0.400390625<br /><br /> **Nota** En los conjuntos de elementos, este valor es siempre mayor que el establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
+|MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0,400390625<br /><br /> **Nota** En los conjuntos de elementos, este valor es siempre mayor que el establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
 |MAX_PROBABILITY|Probabilidad máxima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 1<br /><br /> **Nota** : no hay ningún parámetro para restringir la probabilidad máxima de los conjuntos de elementos. Si quiere eliminar los elementos que son demasiado frecuentes, use el parámetro *MAXIMUM_SUPPORT* en su lugar.|  
-|MIN_LIFT|Cantidad mínima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 0.14309369632511<br /><br /> Nota: Conocer la elevación mínima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
-|MAX_LIFT|Cantidad máxima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 1,95758227647523 **Nota** conocer la elevación máxima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
+|MIN_LIFT|Cantidad mínima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 0,14309369632511<br /><br /> Nota: Conocer la elevación mínima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
+|MAX_LIFT|Cantidad máxima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 1,95758227647523 **Nota** : conocer la elevación máxima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
   
  **Nodo de conjunto de elementos** Los nodos de conjunto de elementos contienen una lista de los elementos, mostrados como una cadena de texto separada por comas.  
   
@@ -192,9 +191,9 @@ ms.locfileid: "66083691"
  MSOLAP_NODE_SHORT_CAPTION  
  : en blanco.  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo de Asociación de Microsoft](microsoft-association-algorithm.md)   
  [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)  
   
   

@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80417c720258833850f07eb67f83f5c47f487ad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063140"
 ---
 # <a name="permissions-or-securables-page"></a>Página Permisos o Elementos protegibles
   Utilice la página **Permisos** o la página **Elementos protegibles** para ver o establecer los permisos de los elementos protegibles. Esta página se puede abrir desde varias ubicaciones. El contenido de la página puede cambiar ligeramente, dependiendo de cómo se abra la página y de su contenido. La cuadrícula superior de la página puede estar rellena al abrir la página, o bien puede estar vacía. Para agregar elementos a la cuadrícula superior, haga clic en **Buscar**. En la cuadrícula superior, seleccione un elemento y luego establezca los permisos apropiados en la pestaña **Explícito** . Para ver los permisos agregados, use la pestaña **Vigente** .  
@@ -34,7 +33,7 @@ ms.locfileid: "63284547"
 ## <a name="upper-grid"></a>Cuadrícula superior  
  La cuadrícula superior contiene uno o más elementos para los que se pueden establecer permisos. Este cuadro de diálogo incluye el botón **Buscar** para seleccionar los objetos o entidades de seguridad que se desean agregar a la cuadrícula superior. El nombre de la cuadrícula puede mostrar **Elementos protegibles** o uno o varios tipos de elementos protegibles o entidades de seguridad. Las columnas mostradas en la cuadrícula superior varían dependiendo de la entidad de seguridad o el elemento protegible.  
   
- **Name**  
+ **Nombre**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  
   
  **Tipo**  
@@ -55,7 +54,7 @@ ms.locfileid: "63284547"
  **WITH GRANT**  
  Refleja el estado de la opción WITH GRANT para el permiso indicado. Este cuadro es de solo lectura. Para aplicar este permiso, use la instrucción [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Denegar**  
+ **Deny**  
  Active esta casilla para denegar el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
  **Permisos de columna**  
@@ -70,8 +69,8 @@ ms.locfileid: "63284547"
  **Columna**  
  Los nombres de las columnas afectadas por el permiso.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Roles de nivel de base de datos](authentication-access/database-level-roles.md)   
- [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

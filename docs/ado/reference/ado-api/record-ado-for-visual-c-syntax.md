@@ -1,5 +1,5 @@
 ---
-title: Registro (ADO para la sintaxis de Visual C++) | Microsoft Docs
+title: Record (ADO para la sintaxis de Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Record collection [ADO], ADO for Visual C++ syntax
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: df62de2c5c51680047270d320ecc7c461bc47c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6899059b58ef755e8561bdf26973e7ef7b0d6253
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931436"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754225"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Registro (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  
@@ -52,5 +52,5 @@ putref_Source(IDispatch *Source)
 get_State(ObjectStateEnum *pState)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

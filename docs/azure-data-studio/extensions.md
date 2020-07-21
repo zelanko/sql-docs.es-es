@@ -1,28 +1,26 @@
 ---
 title: Incorporación de extensiones
-titleSuffix: Azure Data Studio
 description: Agregue extensiones de Extensions Marketplace a Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
-ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
+ms.openlocfilehash: 7e74d0dd7b904cba5b332eb20163c96237ac6d6e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72166706"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774620"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Ampliación de la funcionalidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-of-azure-data-studio"></a>Extensión de la funcionalidad de Azure Data Studio
 
-Las extensiones de [!INCLUDE[name-sos](../includes/name-sos-short.md)] proporcionan una manera sencilla de agregar más funcionalidad a la instalación base de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. 
+Las extensiones de Azure Data Studio proporcionan una manera sencilla de agregar más funcionalidad a la instalación base de Azure Data Studio.
 
 Las extensiones las proporciona el equipo de Azure Data Studio (Microsoft), así como la comunidad de terceros (los usuarios). Para más información sobre la creación de extensiones, vea [Creación de extensiones](extension-authoring.md).
-
 
 ## <a name="add-azure-data-studio-extensions"></a>Incorporación de extensiones de Azure Data Studio
 

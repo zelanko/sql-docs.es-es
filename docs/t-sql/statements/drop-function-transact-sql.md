@@ -1,7 +1,7 @@
 ---
 title: DROP FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2017
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e7754da5821f3531ac8db359ae95668681f94b0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044226"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636060"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,22 +40,22 @@ ms.locfileid: "68044226"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
  -- SQL Server, Azure SQL Database 
 
 DROP FUNCTION [ IF EXISTS ] { [ schema_name. ] function_name } [ ,...n ]   
 [;]
 ```
 
-```  
+```syntaxsql
  -- Azure SQL Data Warehouse, Parallel Data Warehouse 
 
-DROP FUNCTION [ schema_name. ] function_name
+DROP FUNCTION [IF EXISTS] [ schema_name. ] function_name
 [;] 
 ```  
    
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
  *IF EXISTS*    
  Quita la función condicionalmente solo si ya existe. Disponible a partir de [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 y en [!INCLUDE[sssds_md](../../includes/sssds-md.md)].
   
@@ -65,7 +65,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  Es el nombre de la función definida por el usuario que se va a quitar. Especificar el nombre del esquema es opcional. No se pueden especificar el nombre del servidor ni el nombre de la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  DROP FUNCTION no funcionará correctamente si existen vistas o funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la base de datos que hacen referencia a esta función y que fueron creadas con SCHEMABINDING; tampoco funcionará si existen columnas calculadas o restricciones CHECK o DEFAULT que hacen referencia a la función.  
   
  DROP FUNCTION no funcionará correctamente si existen columnas calculadas que hacen referencia a esta función y que han sido indizadas.  

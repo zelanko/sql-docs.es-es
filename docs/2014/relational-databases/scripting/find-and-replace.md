@@ -1,6 +1,6 @@
 ---
-title: Buscar y reemplazar | Microsoft Docs
-ms.custom: ''
+title: Buscar y reemplazar
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4fa77ecd50631224b366eb3f5aca98593d56cbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9acaab4b152cf97e3e55e665c33bf51e5115fba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090458"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049060"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
   Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  
@@ -39,7 +38,7 @@ ms.locfileid: "66090458"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Buscar** , estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se elige un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Buscar** .  
   
-## <a name="replace-with"></a>Reemplazar con  
+## <a name="replace-with"></a>Reemplazar por  
  Estos controles le permiten especificar qué debe insertarse en lugar de la cadena o expresión coincidente.  
   
  **Replace with**  
@@ -51,7 +50,7 @@ ms.locfileid: "66090458"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Reemplazar con** estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se hace clic un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Reemplazar con** .  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en el cuadro **Buscar** por la cadena especificada en el cuadro **Reemplazar con** y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Reemplazar todo**  
@@ -66,7 +65,7 @@ ms.locfileid: "66090458"
  Esta opción estará disponible cuando el valor especificado en **Buscar en** incluya varios archivos. Haga clic en este botón si no desea realizar búsquedas en el archivo actual o si no desea modificarlo. La búsqueda continuará en el siguiente archivo de la lista de **Buscar en**.  
   
 ## <a name="look-in"></a>Buscar en  
- **Buscar en**  
+ **Look in**  
  Seleccione la ubicación donde debe buscarse el texto especificado en **Buscar**. Las opciones son **Documento actual**, que busca en la ventana de documento que estaba seleccionada al abrir el cuadro de diálogo, y **Todos los documentos abiertos**, que busca en todas las ventanas de documentos abiertas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-options"></a>Opciones de búsqueda  
@@ -84,7 +83,7 @@ ms.locfileid: "66090458"
  **Buscar en texto oculto**  
  Busca instancias del texto que están ocultas y texto contraído.  
   
- **Usar**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
  **Regular Expressions**  
@@ -96,7 +95,7 @@ ms.locfileid: "66090458"
  **Buscar siguiente**  
  Comienza a buscar el texto del cuadro **Buscar** .  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con**y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Replace All**  
@@ -120,5 +119,5 @@ ms.locfileid: "66090458"
  **Reemplazar en archivos**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Reemplazar en archivos** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

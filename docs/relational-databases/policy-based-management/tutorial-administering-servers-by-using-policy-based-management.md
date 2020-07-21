@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Administrar servidores mediante administración basada en directivas | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Administración de servidores mediante la administración basada en directivas'
+description: En este tutorial aprenderá a crear y aplicar una directiva Desactivado de forma predeterminada y una directiva de convenciones de nomenclatura.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d98e1f1332d75514887858a11087e94bca4caf32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8261ca7bb48d932305e9fd9197328358bbcc8293
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727283"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administración de servidores mediante la administración basada en directivas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-managing-servers-using-policy-based-management"></a>Tutorial: Administración de servidores mediante la administración basada en directivas
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Éste es el tutorial Administrar servidores mediante administración basada en directivas. Este tutorial está destinado a los usuarios que conocen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero que no tienen experiencia con la administración basada en directivas.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  

@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 63338587-7dd3-40e6-b70e-d8ae18fff47b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fb60bfa05e75c06b7da04042aa1abfbd42b756c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff26dbe89f4d364fcdf7fc2eca1c4d483afc68bf
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761906"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553272"
 ---
-# <a name="mssqlserver7915"></a>MSSQLSERVER_7915
+# <a name="mssqlserver_7915"></a>MSSQLSERVER_7915
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7915|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7915|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_REPAIR_IAM_CHAIN_REBUILT|  
-|Texto del mensaje|Reparación: Cadena IAM del objeto ID O_ID, ID. de partición PN_ID, unidad de asignación A_ID (tipo TYPE), de índice se ha truncado antes de la página P_ID y se volverá a generar.|  
+|Texto del mensaje|Reparación: la cadena de IAM para el id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE), se ha truncado antes de la página P_ID y se volverá a generar.|  
   
 ## <a name="explanation"></a>Explicación  
  Se trata de un mensaje informativo enviado por REPAIR que indica que la cadena IAM (Mapa de asignación de índices) especificada se revisó para que pudiera volver a generarse. Esta revisión puede haber necesitado de la asignación de un nuevo encabezado de la cadena IAM o de la eliminación de las páginas erróneas de la cadena.  

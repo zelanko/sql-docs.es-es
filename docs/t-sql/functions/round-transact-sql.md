@@ -16,18 +16,18 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 9224ae75d28a9373cf3c039d0f0d2642bf4d1b28
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041229"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003699"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Devuelve un valor numérico, redondeado a la longitud o precisión especificadas.  
   
@@ -50,7 +50,7 @@ ROUND ( numeric_expression , length [ ,function ] )
  *function*  
  Es el tipo de operación que se va a realizar. *function* debe ser **tinyint**, **smallint** o **int**. Si *function* se omite o tiene el valor 0 (predeterminado), *numeric_expression* se redondea. Si se especifica un valor distinto de 0, *numeric_expression* se trunca.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve los tipos de datos siguientes.  
   
 |Resultado de la expresión|Tipo de valor devuelto|  
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |Categorías **money** y **smallmoney**|**money**|  
 |Categorías **float** y **real**|**float**|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ROUND siempre devuelve un valor. Si *length* es un valor negativo y mayor que el número de dígitos anteriores al separador decimal, ROUND devuelve 0.  
   
 |Ejemplo|Resultado|  

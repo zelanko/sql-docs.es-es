@@ -13,14 +13,14 @@ helpviewer_keywords:
 - GROUP BY clause [ODBC]
 - SQL grammar [ODBC], GROUP BY clause
 ms.assetid: eafcc668-9244-4e1e-a857-d9bd2585ed0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0197edbc2280b5df9ca91567ad56afc4a68d80df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44d3581f7a70c344cfa94faedcc5d279e50c7827
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81291085"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY con GROUP BY
-ORDER BY se pueden realizar en cualquier expresión en la cláusula GROUP BY *expression-list* o cualquier conjunto de columnas en el resultado.
+ORDER BY se puede realizar en cualquier expresión de la *lista de expresiones* de Group by o de cualquier columna del conjunto de resultados.

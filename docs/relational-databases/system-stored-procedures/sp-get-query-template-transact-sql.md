@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124081"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881646"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Devuelve el formato con parámetros de una consulta. Los resultados devueltos simulan el formato con parámetros de un consulta resultante cuando se utiliza la parametrización forzada. sp_get_query_template se utiliza principalmente al crear guías de plan TEMPLATE.  
+  Devuelve el formato con parámetros de una consulta. Los resultados devueltos simulan el formato con parámetros de un consulta resultante cuando se utiliza la parametrización forzada. sp_get_query_template se utiliza principalmente al crear guías de plan de plantilla.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,22 +43,22 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumentos  
  '*query_text*'  
- Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe ir entre comillas simples y precedida por el especificador Unicode n. N'*query_text*' es el valor asignado a la @querytext parámetro. Se trata del tipo **nvarchar (max)** .  
+ Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe ir entre comillas simples e ir precedida del especificador Unicode N. N '*query_text*' es el valor asignado al @querytext parámetro. Es de tipo **nvarchar (Max)**.  
   
  @templatetext  
- Es un parámetro de salida de tipo **nvarchar (max)** , suministrado como se indica, para recibir la forma con parámetros de *query_text* como un literal de cadena.  
+ Es un parámetro de salida de tipo **nvarchar (Max)**, proporcionado como se indica, para recibir la forma parametrizada de *query_text* como un literal de cadena.  
   
  @parameters  
- Es un parámetro de salida de tipo **nvarchar (max)** , suministrado como se indica, para recibir un literal de cadena de los tipos de datos y los nombres de parámetro con parámetros en @templatetext.  
+ Es un parámetro de salida de tipo **nvarchar (Max)**, proporcionado como se indica, para recibir un literal de cadena de los nombres de parámetro y los tipos de datos con parámetros en @templatetext .  
   
 ## <a name="remarks"></a>Comentarios  
  sp_get_query_template devuelve un error cuando se produce lo siguiente:  
   
--   No se parametriza ningún valor literal constante en *query_text*.  
+-   No parametriza ningún valor literal constante en *query_text*.  
   
--   *query_text* es NULL, no una cadena de Unicode, no es válida sintácticamente o no se puede compilar.  
+-   *query_text* es null, no una cadena Unicode, no es válido sintácticamente o no se puede compilar.  
   
- Si sp_get_query_template devuelve un error, no modifica los valores de la @templatetext y @parameters parámetros de salida.  
+ Si sp_get_query_template devuelve un error, no modifica los valores de los parámetros de @templatetext @parameters salida y.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol de base de datos public.  
@@ -112,9 +112,9 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  El orden y el nombre de los parámetros en la salida de sp_get_query_template puede variar en la ingeniería de corrección rápida, el Service Pack y las actualizaciones de versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las actualizaciones también pueden hacer que se parametrice un conjunto distinto de literales constantes para la misma consulta y que se aplique un espaciado diferente a los resultados de ambos parámetros de salida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Área funcional de Administración de versiones (Master Data Manager) | Microsoft Docs
+title: Área funcional de Administración de versiones
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac5d1cee329f1de8c838aede004cb44f03cc0d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7ae4fa3f7249c604acaf9df1387282a4d459dce
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813191"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Área funcional de Administración de versiones (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En el área funcional de Administración de versiones, los administradores pueden validar datos, revisar e invertir transacciones, crear copias de versiones de datos y marcar versiones de datos para sistemas de suscripción. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68017330"
   
  [Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

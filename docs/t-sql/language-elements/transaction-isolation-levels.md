@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1532197e46e0ad6ea314ec83acb46b841ed7b72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072202"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731378"
 ---
 # <a name="transaction-isolation-levels"></a>Niveles de aislamiento de transacción
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no garantiza que se respeten las sugerencias de bloqueo en consultas que tengan acceso a metadatos por medio de vistas de catálogo, vistas de compatibilidad, vistas del esquema de información y funciones integradas de emisión de metadatos.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68072202"
   
  En la siguiente tabla se proporciona un resumen de acceso a metadatos en distintos niveles de aislamiento.  
   
-|Nivel de aislamiento|Admitida|Respetado|  
+|Nivel de aislamiento|Compatible|Respetado|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|No|Sin garantizar|  
 |READ COMMITTED|Sí|Sí|  

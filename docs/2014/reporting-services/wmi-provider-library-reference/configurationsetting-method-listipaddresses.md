@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098322"
 ---
-# <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Método ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
+# <a name="listipaddresses-method-wmi-msreportserver_configurationsetting"></a>Método ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Enumera las direcciones IP para el equipo del servidor de informes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -55,15 +55,15 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente; un código de error indica que la llamada no se realizó correctamente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las cadenas de*IPVersion* son V4 y V6.  
   
- Si *IsDhcpEnabled* es `True`, *IPAddress* es dinámico. No se debe usar para enlaces SSL.  
+ Si *IsDhcpEnabled* es `True`, la *dirección IP* es dinámica. No se debe usar para enlaces SSL.  
   
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

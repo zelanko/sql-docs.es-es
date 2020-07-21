@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: dd8390f3-0f77-4fb2-ba94-631a56e42bc6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dbb5a12fdcb3c326957d719882feec4fe948190c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a94e95b6714876649664ff732323c9efc484db3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761845"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553330"
 ---
-# <a name="mssqlserver7911"></a>MSSQLSERVER_7911
+# <a name="mssqlserver_7911"></a>MSSQLSERVER_7911
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7911|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7911|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_REPAIR_PAGE_DEALLOCATED|  
-|Texto del mensaje|Reparación: La página P_ID se ha desasignado de objeto ID O_ID, index ID. de partición PN_ID, unidad de asignación A_ID (tipo TYPE).|  
+|Texto del mensaje|Reparación: se ha cancelado la asignación de la página P_ID del id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicación  
  Se trata de un mensaje informativo de REPAIR en el que se indica que se ha cancelado la asignación de una página de la matriz de espacios asignados en una página IAM (Mapa de asignación de índices).  

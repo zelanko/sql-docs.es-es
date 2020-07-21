@@ -1,10 +1,8 @@
 ---
-title: Name (DTA, elemento de Column) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Name (DTA, elemento de Column)
+description: En la utilidad DTA, el elemento Name de Column establece el nombre de una columna en una configuración especificada por el usuario.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a185c94dabf2efdcfa4e29c4a79d0b27f9032b93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: d926b887790b66eccef08c6cae861d88ec646c5a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034755"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826739"
 ---
 # <a name="name-element-for-column-dta"></a>Name (DTA, elemento de Column)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica el nombre de una columna de índice en una configuración especificada por el usuario.  
+
+Especifica el nombre de una columna de índice en una configuración especificada por el usuario.  
   
 ## <a name="syntax"></a>Sintaxis  
   

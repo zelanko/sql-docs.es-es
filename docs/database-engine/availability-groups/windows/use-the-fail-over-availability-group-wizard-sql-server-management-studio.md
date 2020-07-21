@@ -1,6 +1,7 @@
 ---
-title: Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Conmutación por error de un grupo de disponibilidad
+description: En este tema se describe cómo realizar una conmutación por error manual forzada o planeada de un grupo de disponibilidad Always On mediante SQL Server Management Studio, Transact-SQL o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,36 +20,36 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5010c559ffc7e1f89ebce87129c0b16a6853753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013524"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882405"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo realizar una conmutación por error manual planeada o conmutación por error manual forzada (conmutación por error forzada) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Si se realiza una conmutación por error a una réplica secundaria en el estado SYNCHRONIZED, el asistente realiza una conmutación por error manual planeada (sin pérdida de datos). Si se realiza una conmutación por error a una réplica secundaria en el estado UNSYNCHRONIZED o NOT SYNCHRONIZING, el asistente realiza una conmutación por error manual forzada, también denominada *conmutación por error forzada* (con posible pérdida de datos). En ambas formas de conmutación por error manual tiene lugar la transición a la réplica secundaria a la que se está conectado al rol principal. Una conmutación por error manual planeada actualmente realiza transacciones de la réplica principal anterior al rol secundario. Después de una conmutación por error forzada, cuando la réplica principal pasa a estar en línea, realiza la transición al rol secundario.  
 
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Antes de la primera conmutación por error manual planeada, consulte la sección "Antes de comenzar" de [Realizar una conmutación por error manual planeada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md).  
   
  Antes de realizar la primera conmutación por error forzada, vea las secciones "Antes de empezar" y "Seguimiento: tareas esenciales después de una conmutación por error forzada" de [Realizar una conmutación por error manual forzada de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Un comando de conmutación por error realiza la devolución en cuanto la réplica secundaria de destino haya aceptado el comando. Sin embargo, la recuperación de la base de datos se produce de forma asincrónica cuando el grupo de disponibilidad ha terminado la conmutación por error.  
     
-###  <a name="Prerequisites"></a> Requisitos previos para utilizar el Asistente para conmutación por error del grupo de disponibilidad  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> Requisitos previos para utilizar el Asistente para conmutación por error del grupo de disponibilidad  
   
 -   Debe estar conectado a la instancia del servidor que hospeda una réplica de disponibilidad que esté actualmente disponible.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para usar el Asistente para conmutación por error del grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospede una réplica secundaria del grupo de disponibilidad que necesita ser objeto de conmutación por error y expanda el árbol.  
@@ -92,7 +93,7 @@ ms.locfileid: "68013524"
   
  Las otras páginas de este asistente comparten la ayuda con uno o varios de los otros asistentes Grupos de disponibilidad AlwaysOn y se documentan en los temas de la Ayuda F1 independientes.  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  En esta sección se describen las opciones de la página de **Seleccionar la nueva réplica principal** . Utilice esta página para seleccionar la réplica secundaria (destino de conmutación por error) para la que el grupo de disponibilidad realizará la conmutación por error. Esta réplica se convertirá en la nueva réplica principal.  
   
 #### <a name="page-options"></a>Opciones de página  
@@ -105,7 +106,7 @@ ms.locfileid: "68013524"
  **Estado de quórum**  
  Para el tipo de clúster WSFC, muestra uno de los siguientes estados de cuórum de la réplica de disponibilidad:  
   
-   |Valor|Descripción|  
+   |Value|Descripción|  
    |-----------|-----------------|  
    |**Quórum normal**|El clúster se ha iniciado con quórum normal.|  
    |**Quórum forzado**|El clúster se ha iniciado con quórum forzado.|  
@@ -127,7 +128,7 @@ ms.locfileid: "68013524"
  **Modo de disponibilidad**  
  Muestra el modo de disponibilidad de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Confirmación sincrónica**|En modo de confirmación sincrónica, antes de la confirmación de transacciones, una réplica principal de confirmación sincrónica espera a que una réplica secundaria de confirmación sincrónica notifique que ha terminado de proteger el registro. El modo de confirmación sincrónica asegura que, una vez que una base de datos secundaria se sincroniza con la base de datos principal, las transacciones confirmadas queden totalmente protegidas.|  
 |**Confirmación asincrónica**|En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la notificación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.|  
@@ -137,17 +138,17 @@ ms.locfileid: "68013524"
  **Modo de conmutación por error**  
  Muestra el modo de conmutación por error de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Automática**|Una réplica secundaria que está configurada para la conmutación automática por error también admite la conmutación por error manual planeada, siempre que la réplica secundaria esté sincronizada con la réplica principal.|  
+|**Automático**|Una réplica secundaria que está configurada para la conmutación automática por error también admite la conmutación por error manual planeada, siempre que la réplica secundaria esté sincronizada con la réplica principal.|  
 |**Manual**|Existen dos tipos de conmutación por error manual: planeada (sin pérdida de datos) y forzada (con posible pérdida de datos). Para una réplica secundaria determinada, solo se admite una de ellas, dependiendo del modo de disponibilidad y, para el modo de confirmación sincrónica, el estado de sincronización de la réplica secundaria. Para determinar qué forma de conmutación por error manual admite actualmente una réplica secundaria determinada, vea la columna **Preparación para la conmutación por error** de esta cuadrícula.|  
   
- Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Preparación para la conmutación por error**  
  Muestra la preparación para la conmutación por error de la réplica secundaria, una de las siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**No se produce pérdida de datos**|Esta réplica secundaria actualmente admite la conmutación por error planeada. Este valor solo aparece cuando una réplica secundaria en modo de confirmación sincrónica está sincronizada con la réplica principal.|  
 |**Pérdida de datos, Advertencias(** _#_ **)**|Esta réplica secundaria admite actualmente conmutación por error forzada (con posible pérdida de datos). Este valor tiene lugar siempre que la réplica secundaria no esté sincronizada con la réplica principal. Haga clic en el vínculo de advertencias de la pérdida de datos para obtener información sobre la posible pérdida de datos.|  
@@ -158,7 +159,7 @@ ms.locfileid: "68013524"
  **Cancelar**  
  Haga clic en esta opción para finalizar el asistente. Al cancelar el asistente se sale de la página **Seleccionar la nueva réplica principal** sin realizar ninguna acción.  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  Esta sección describe las opciones de la página **Confirmar la posible pérdida de datos** , que se muestra solo si se realiza una conmutación por error forzada. Este tema solo lo usa [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Utilice esta página para indicar si está dispuesto a arriesgar una posible pérdida de datos a fin de forzar el grupo de disponibilidad para realizar una conmutación por error.  
   
 #### <a name="confirm-potential-data-loss-options"></a>Opciones para confirmar la posible pérdida de datos  
@@ -170,7 +171,7 @@ ms.locfileid: "68013524"
  **Cancelar**  
  Haga clic en esta opción para finalizar el asistente. Al cancelar el asistente se sale de la página **Confirmar la posible pérdida de datos** sin realizar ninguna acción.  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  En esta sección se describen las opciones de la página **Conectar a la réplica** de [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]. Esta página solo se muestra si no hay conexión con la réplica secundaria de destino. Utilice esta página para conectarse a la réplica secundaria que está seleccionada como la nueva réplica principal.  
   
 #### <a name="page-options"></a>Opciones de página  
@@ -181,7 +182,7 @@ ms.locfileid: "68013524"
  **Conectado como**  
  Muestra la cuenta que está conectada a la instancia de servidor, una vez que se ha establecido la conexión. Si esta columna muestra "**Sin conectar**" para una instancia de servidor determinada, deberá hacer clic en el botón **Conectar** .  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí si esta instancia de servidor se ejecuta en una cuenta diferente a las de otras instancias de servidor a las que necesite conectarse.  
   
  **Cancelar**  

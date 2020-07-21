@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: fb012bc8-5105-438a-afcc-74264ebae035
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dc5d248339fb84ee8db079615fa910ccd8cbc4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934636"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>Conectar al servidor (página Inicio de sesión de Analysis Services)
-  Use esta pestaña para ver o especificar las siguientes opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Use esta pestaña para ver o especificar las siguientes opciones al conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -30,12 +29,12 @@ ms.locfileid: "62808766"
  Seleccione la instancia de servidor a la que va a conectarse. De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
- Se admiten los siguientes modos de autenticación al conectarse a una instancia de Analysis Services: [!INCLUDE[msCoName](../includes/msconame-md.md)] Autenticación de Windows.  
+ Cuando se conecta a una instancia de Analysis Services, se admiten los siguientes modos de autenticación: autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
  **Modo de autenticación de Windows (autenticación de Windows)**  
  Windows permite al usuario conectarse mediante una cuenta de usuario de Windows.  
   
- **Connect**  
+ **Conexión**  
  Se conecta al servidor seleccionado anteriormente.  
   
  **Opciones**  

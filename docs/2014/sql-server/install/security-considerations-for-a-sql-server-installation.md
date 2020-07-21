@@ -25,18 +25,17 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a5e45d7dd1dda907d15d7d825abda5f3c59cd87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058975"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Consideraciones de seguridad para una instalación de SQL Server
   La seguridad es importante para todos los productos y negocios. Si aplica las siguientes prácticas recomendadas de seguridad, puede evitar muchas vulnerabilidades de seguridad. En este tema se tratan algunas prácticas recomendadas de seguridad que deben tenerse en cuenta antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y después de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En los temas de referencia para estas características se incluyen directrices de seguridad para características específicas.  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-ssnoversion"></a>Antes de instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Siga estas prácticas recomendadas cuando configure el entorno del servidor.  
   
 -   [Mejorar la seguridad física](#physical_security)  
@@ -51,7 +50,7 @@ ms.locfileid: "63127890"
   
 -   [Instalar SQL Server en un controlador de dominio](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md#Install_DC)  
   
-###  <a name="physical_security"></a> Enhance Physical Security  
+###  <a name="enhance-physical-security"></a><a name="physical_security"></a> Enhance Physical Security  
  El aislamiento físico y lógico constituye la base de la seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para mejorar la seguridad física de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , realice las siguientes tareas:  
   
 -   Coloque el servidor en una sala que solo sea accesible a personas autorizadas.  
@@ -62,7 +61,7 @@ ms.locfileid: "63127890"
   
 -   Realice periódicamente copias de seguridad de todos los datos y manténgalas protegidas en una ubicación fuera de las instalaciones.  
   
-###  <a name="firewalls"></a> Use Firewalls  
+###  <a name="use-firewalls"></a><a name="firewalls"></a> Use Firewalls  
  Los firewalls son importantes para ayudar a proteger la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los firewalls serán más efectivos si sigue estas instrucciones:  
   
 -   Instale un firewall entre el servidor e Internet. Habilite el firewall. Si el firewall está desactivado, actívelo. Si el firewall está activado, no lo desactive.  
@@ -77,12 +76,12 @@ ms.locfileid: "63127890"
   
  Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-###  <a name="isolated_services"></a> Isolate Services  
+###  <a name="isolate-services"></a><a name="isolated_services"></a> Isolate Services  
  El aislamiento de servicios reduce el riesgo de que se utilice un servicio cuya seguridad se haya vulnerado para vulnerar la seguridad de otros servicios. Para aislar los servicios, tenga en cuenta estas instrucciones:  
   
 -   Ejecute los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado en distintas cuentas de Windows. Siempre que sea posible, utilice derechos de Windows independientes y bajos, o cuentas de usuario local para cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
+###  <a name="configure-a-secure-file-system"></a><a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Si se usa el sistema de archivos correcto, se aumenta la seguridad. En las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debería hacer lo siguiente:  
   
 -   Usar el sistema de archivos NTFS. NTFS es el sistema de archivos preferido para las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque es más estable y recuperable que los sistemas de archivos FAT. NTFS también habilita opciones de seguridad como las listas de control de acceso de directorios (ACL, Access Control List) y archivos, y el cifrado de archivos del Sistema de archivos de cifrado (EFS, Encrypting File System). Durante la instalación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecerá las ACL adecuadas en las claves del Registro y archivos si detecta NTFS. No se deberían cambiar estos permisos. Puede que las versiones futuras de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admitan la instalación en equipos con sistemas de archivos FAT.  
@@ -92,7 +91,7 @@ ms.locfileid: "63127890"
   
 -   Utilice una matriz redundante de discos independientes (RAID) para los archivos de datos esenciales.  
   
-###  <a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
+###  <a name="disable-netbios-and-server-message-block"></a><a name="disabled_protocols"></a> Disable NetBIOS and Server Message Block  
  Los servidores de la red perimetral deben tener deshabilitados todos los protocolos innecesarios, incluidos NetBIOS y Bloque de mensajes de servidor (SMB).  
   
  NetBIOS utiliza los siguientes puertos:  
@@ -111,7 +110,7 @@ ms.locfileid: "63127890"
   
  Los servidores web y los servidores del Sistema de nombres de dominio (DNS) no requieren NetBIOS o SMB. En estos servidores, deshabilite los dos protocolos para reducir la amenaza de enumeración de usuarios.  
   
-###  <a name="Install_DC"></a> Instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio  
+###  <a name="installing-ssnoversion-on-a-domain-controller"></a><a name="Install_DC"></a> Instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio  
  Por razones de seguridad, se recomienda que no se instale [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un controlador de dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no bloqueará la instalación en un equipo que sea un controlador de dominio, pero se aplican las limitaciones siguientes:  
   
 -   No puede ejecutar los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio bajo una cuenta del servicio local.  
@@ -120,11 +119,11 @@ ms.locfileid: "63127890"
   
 -   Una vez instalado en un equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no puede cambiar el equipo de un controlador de dominio a un miembro de dominio. Debe desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de cambiar el equipo host a un miembro de dominio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admiten en el caso en que los nodos de clúster sean controladores de dominio.  
+-   Las instancias del clúster de conmutación por error de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admiten si los nodos de clúster son controladores de dominio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación no puede crear grupos de seguridad ni suministrar cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio de solo lectura. En este escenario, se producirá un error de instalación.  
+-   El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear grupos de seguridad ni suministrar cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio de solo lectura. En este escenario, se producirá un error de instalación.  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>Durante o después de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-ssnoversion"></a>Durante o después de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Tras la instalación, puede mejorar la seguridad de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si sigue estas prácticas recomendadas relativas a las cuentas y los modos de autenticación:  
   
  **Cuentas de servicio**  
@@ -152,9 +151,9 @@ ms.locfileid: "63127890"
 > [!IMPORTANT]  
 >  Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se agrega un inicio de sesión para el grupo BUILTIN\Users. Esto permite que todos los usuarios autenticados del equipo tengan acceso a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como un miembro del rol public. El inicio de sesión BUILTIN\Users se pueden quitar de manera segura para restringir el acceso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] a los usuarios de equipos que tienen inicios de sesión individuales o son miembros de otros grupos de Windows con inicios de sesión.  
   
-## <a name="see-also"></a>Vea también  
- [Requisitos de hardware y Software para instalar SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Requisitos de hardware y software para la instalación de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Protocolos de red y bibliotecas de red](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)   
- [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+ [Registrar un nombre principal de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   
   

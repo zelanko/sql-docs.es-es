@@ -22,12 +22,12 @@ ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d150082120cde1b09d3437a27b2345b036daf8b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a610546822965def77ff5dcc973c77c0dbb292e9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929023"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634341"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
 
@@ -47,11 +47,11 @@ ms.locfileid: "67929023"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 SET FMTONLY { ON | OFF }   
 ```  
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cuando `FMTONLY` se establece en `ON`, se devuelve un conjunto de filas con los nombres de columna, pero sin ninguna fila de datos.
 

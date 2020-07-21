@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8d0fbe116eb10d89d52e1ec5ebdf7ada16ef53dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914353"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737962"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve un valor que contiene un mapa de bits que indica los permisos del usuario actual sobre una instrucción, objeto o columna.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67914353"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
@@ -54,10 +54,10 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  **'** *column* **'**  
  Es el nombre opcional de la columna cuya información de permisos se devuelve. Debe ser un nombre de columna válido de la tabla especificada con *objectid*.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se puede utilizar PERMISSIONS para determinar si el usuario actual cuenta con los permisos necesarios para ejecutar una instrucción o para otorgar, con GRANT, un permiso a otro usuario.  
   
  La información de permisos devuelta es un mapa de bits de 32 bits.  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|Reservado|  
+|256|0x100|Reserved|  
   
  En la siguiente tabla se indican los bits usados para los permisos de objetos que se devuelven cuando solo se especifica *objectid*.  
   
@@ -148,6 +148,6 @@ ELSE
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

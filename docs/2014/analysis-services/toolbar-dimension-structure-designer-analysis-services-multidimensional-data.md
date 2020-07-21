@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña estructura de dimensión, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña estructura de dimensión, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938416"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la barra de herramientas para realizar operaciones comunes en la página **Estructura de dimensión** del **Diseñador de dimensiones**.  
@@ -24,17 +23,17 @@ ms.locfileid: "66066050"
  **Agregar Business Intelligence**  
  Muestra el **Asistente de Business Intelligence** para agregar características de Business Intelligence.  
   
- **Procesar**  
+ **Process**  
  Muestra el cuadro de diálogo **Proceso** para procesar el objeto.  
   
  **Mostrar los atributos como**  
  Haga clic para alternar la vista del panel **Atributos** entre los siguientes modos:  
   
--   Lista  
+-   List  
   
-     Muestra una lista de atributos para la dimensión actual. Ésta es la opción predeterminada.  
+     Muestra una lista de atributos para la dimensión actual. Este es el valor predeterminado.  
   
--   trEE  
+-   Árbol  
   
      Muestra una vista de árbol de atributos de la dimensión actual, con las propiedades del miembro de un atributo determinado mostradas como una nota subordinada de ese atributo.  
   

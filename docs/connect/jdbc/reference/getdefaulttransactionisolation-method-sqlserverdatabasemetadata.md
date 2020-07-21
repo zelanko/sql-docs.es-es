@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e2349dbe193834385869f86f87fe4284a967284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 58be916063f1bd0893285c6c893241e3ec4e699f
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67983691"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80917720"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public int getDefaultTransactionIsolation()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getDefaultTransactionIsolation se especifica mediante el método getDefaultTransactionIsolation en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ Este método getDefaultTransactionIsolation se especifica mediante el método getDefaultTransactionIsolation en la interfaz java.sql.DatabaseMetaData.  
   
  Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve un valor TRANSACTION_READ_COMMITTED o el valor **int** 2.  
   

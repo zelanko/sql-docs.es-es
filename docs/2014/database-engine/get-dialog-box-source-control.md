@@ -1,5 +1,5 @@
 ---
-title: Obtiene el cuadro de diálogo (Control de código fuente) | Microsoft Docs
+title: Cuadro de diálogo obtener (control de código fuente) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8b9f5968cf68762178602ced64078248f3badb0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932936"
 ---
 # <a name="get-dialog-box-source-control"></a>Cuadro de diálogo Obtener (Control de código fuente)
   Recupera una copia de solo lectura del elemento seleccionado de la base de datos de control de código fuente a la carpeta de trabajo, o bien a otra carpeta que especifique.  
@@ -43,7 +42,7 @@ ms.locfileid: "62779012"
  **Hora de modificación**  
  Muestra la hora a la que se modificó el elemento.  
   
- **Name**  
+ **Nombre**  
  Muestra los nombres de los elementos que se van a recuperar. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea recuperar un elemento en concreto, desactive su casilla.  
   
  **Opciones**  
@@ -55,8 +54,8 @@ ms.locfileid: "62779012"
  **Vista de árbol**  
  Muestra la jerarquía de carpetas y archivos de los elementos que se están recuperando.  
   
-## <a name="see-also"></a>Vea también  
- [Recuperar archivos](../../2014/database-engine/retrieve-files.md)   
+## <a name="see-also"></a>Consulte también  
+ [Recuperación de archivos](../../2014/database-engine/retrieve-files.md)   
  [Control de código fuente del Explorador de soluciones](../../2014/database-engine/solution-explorer-source-control.md)  
   
   

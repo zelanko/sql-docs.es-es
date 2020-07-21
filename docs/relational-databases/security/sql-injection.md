@@ -1,5 +1,6 @@
 ---
 title: Inyección de código SQL | Microsoft Docs
+description: Obtenga información sobre cómo funcionan los ataques por inyección de código SQL. Mitigue estos ataques validando la entrada y revisando el código para la inyección de código SQL en SQL Server.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e1cffa7f2d8c388b391a3bcb8cbe51ebd6ff1c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126855"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001031"
 ---
 # <a name="sql-injection"></a>Inyección de código SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La inyección de código SQL es un ataque en el cual se inserta código malintencionado en las cadenas que posteriormente se pasan a una instancia de SQL Server para su análisis y ejecución. Todos los procedimientos que generan instrucciones SQL deben revisarse en busca de vulnerabilidades de inyección de código, ya que SQL Server ejecutará todas las consultas recibidas que sean válidas desde el punto de vista sintáctico. Un atacante cualificado y con determinación puede manipular incluso os datos con parámetros.  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+  La inyección de código SQL es un ataque en el que se inserta código malintencionado en cadenas que posteriormente se pasan a una instancia de SQL Server para su análisis y ejecución. Todos los procedimientos que generan instrucciones SQL deben revisarse en busca de vulnerabilidades de inyección de código, ya que SQL Server ejecutará todas las consultas recibidas que sean válidas desde el punto de vista sintáctico. Un atacante cualificado y con determinación puede manipular incluso os datos con parámetros.  
   
 ## <a name="how-sql-injection-works"></a>Funcionamiento de la inyección de código SQL  
  La forma principal de inyección de código SQL consiste en la inserción directa de código en variables especificadas por el usuario que se concatenan con comandos SQL y se ejecutan. Existe un ataque menos directo que inyecta código dañino en cadenas que están destinadas a almacenarse en una tabla o como metadatos. Cuando las cadenas almacenadas se concatenan posteriormente en un comando SQL dinámico, se ejecuta el código dañino.  
@@ -92,7 +93,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |Carácter de entrada|Significado en Transact-SQL|  
 |---------------------|------------------------------|  
 |**;**|Delimitador de consultas.|  
-|**'**|Delimitador de cadenas de datos de caracteres.|  
+|**"**|Delimitador de cadenas de datos de caracteres.|  
 |**--**|Delimitador de cadenas de datos de caracteres.<br />.|  
 |**/\*** ... **\*/**|Delimitadores de comentarios. El servidor no evalúa el texto incluido entre **/\*** y **\*/** .|  
 |**xp_**|Se usa al principio del nombre de procedimientos almacenados extendidos de catálogo, como `xp_cmdshell`.|  

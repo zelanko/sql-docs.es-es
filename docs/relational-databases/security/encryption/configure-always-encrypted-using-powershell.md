@@ -1,39 +1,42 @@
 ---
 title: Configurar Always Encrypted con PowerShell | Microsoft Docs
+description: Obtenga información sobre cómo importar y usar el módulo SqlServer PowerShell, que proporciona cmdlets para configurar Always Encrypted en Azure SQL Database y SQL Server.
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 93cc3ccad555d366593632b3fc9975d070a67a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765120"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-En el módulo SqlServer PowerShell se proporcionan cmdlets para configurar [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en Azure SQL Database y SQL Server 2016.
+En el módulo SqlServer PowerShell se proporcionan cmdlets para configurar [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
-Los cmdlets de Always Encrypted del módulo SqlServer funcionan con claves o información confidencial, por lo que es importante que ejecute los cmdlets en un equipo seguro. Cuando administre Always Encrypted, ejecute los cmdlets en un equipo diferente del que hospeda la instancia de SQL Server.
+## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>Consideraciones de seguridad al usar PowerShell para configurar Always Encrypted
 
 Dado que el objetivo principal de Always Encrypted es garantizar la seguridad de la información confidencial cifrada, incluso si el sistema de base de datos está en peligro, la ejecución de un script de PowerShell que procese las claves o la información confidencial en el equipo con SQL Server puede reducir o anular las ventajas de la característica. Para obtener más recomendaciones relacionadas con la seguridad, vea [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Consideraciones de seguridad para la administración de claves).
 
-Los vínculos a los artículos de cmdlet están al [final de esta página](#aecmdletreference).
+Puede usar PowerShell para administrar claves de Always Encrypted con y sin separación de roles, lo que proporciona control sobre quién tiene acceso a las claves de cifrado reales del almacén de claves y quién tiene acceso a la base de datos.
 
-## <a name="prerequisites"></a>Prerequisites
+ Para obtener más recomendaciones, vea [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Consideraciones de seguridad para la administración de claves).
+
+## <a name="prerequisites"></a>Requisitos previos
 
 Instale el [módulo SqlServer](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) en un equipo seguro distinto del equipo que hospeda la instancia de SQL Server. El módulo se puede instalar directamente desde la Galería de PowerShell.  Vea las instrucciones de [descarga](../../../ssms/download-sql-server-ps-module.md) para obtener más información.
 
 
-## <a name="importsqlservermodule"></a> Importar el módulo SqlServer 
+## <a name="importing-the-sqlserver-module"></a><a name="importsqlservermodule"></a> Importar el módulo SqlServer 
 
 Para cargar el módulo SqlServer:
 
@@ -47,17 +50,46 @@ En este ejemplo se carga el módulo SqlServer.
 Import-Module "SqlServer" 
 ```
 
-## <a name="connectingtodatabase"></a> Conectar a una base de datos
+## <a name="connecting-to-a-database"></a><a name="connectingtodatabase"></a> Conectar a una base de datos
 
 Algunos de los cmdlets de Always Encrypted funcionan con datos o metadatos de la base de datos y requieren que se conecte primero a la base de datos. Hay dos métodos recomendados para conectarse a una base de datos al configurar Always Encrypted con el módulo SqlServer: 
-1. Conectarse mediante SQL Server PowerShell.
-2. Conectarse mediante Objetos de administración de SQL Server (SMO).
+1. Conéctese con el cmdlet **Get-SqlDatabase**.
+2. Conéctese con el proveedor de SQL Server PowerShell.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+### <a name="using-get-sqldatabase"></a>Uso de Get-SqlDatabase
+El cmdlet **Get-SqlDatabase** le permite conectarse a una base de datos en SQL Server o en Azure SQL Database. Devuelve un objeto de base de datos, que luego se puede pasar con el parámetro **InputObject** de un cmdlet que se conecta a la base de datos. 
 
 ### <a name="using-sql-server-powershell"></a>Usar SQL Server PowerShell
 
-Este método solo funciona para SQL Server (no se admite en Base de datos SQL de Azure).
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
 
-Con SQL Server PowerShell, puede navegar por las rutas de acceso mediante alias de Windows PowerShell similares a los comandos que se usan normalmente para navegar por las rutas de acceso al sistema de archivos. Una vez que se haya desplazado a la instancia de destino y la base de datos, los cmdlets posteriores tendrán como destino esa base de datos, como se muestra en el ejemplo siguiente:
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+También puede usar la canalización:
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### <a name="using-sql-server-powershell-provider"></a>Uso del proveedor de SQL Server PowerShell
+El [proveedor de SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md) expone la jerarquía de objetos de SQL Server en rutas similares a las rutas de acceso al sistema de archivos. Con SQL Server PowerShell, puede navegar por las rutas de acceso mediante alias de Windows PowerShell similares a los comandos que se usan normalmente para navegar por las rutas de acceso al sistema de archivos. Una vez que se haya desplazado a la instancia de destino y la base de datos, los cmdlets posteriores tendrán como destino esa base de datos, como se muestra en el ejemplo siguiente. 
+
+> [!NOTE]
+> Este método de conexión a una base de datos solo funciona para SQL Server (no se admite en Base de datos SQL de Azure).
 
 ```
 # Import the SqlServer module.
@@ -79,46 +111,14 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### <a name="using-smo"></a>Mediante SMO
-
-Este método funciona para Base de datos SQL de Azure y SQL Server.
-Con SMO, puede crear un objeto de la [clase Database](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx)y pasar dicho objeto mediante el parámetro **InputObject** de un cmdlet que se conecte a la base de datos.
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-También puede usar la canalización:
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## <a name="always-encrypted-tasks-using-powershell"></a>Tareas de Always Encrypted mediante PowerShell
 
-- [Configure Always Encrypted Keys using PowerShell (Configurar claves de Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurar el cifrado de columna con PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [Cifrado, recifrado o descifrado de columnas con Always Encrypted mediante PowerShell](configure-column-encryption-using-powershell.md)
 
 
-##  <a name="aecmdletreference"></a> Referencia de cmdlets de Always Encrypted
+##  <a name="always-encrypted-cmdlet-reference"></a><a name="aecmdletreference"></a> Referencia de cmdlets de Always Encrypted
 
 Los siguientes cmdlets de PowerShell están disponibles para Always Encrypted:
 
@@ -145,11 +145,9 @@ Los siguientes cmdlets de PowerShell están disponibles para Always Encrypted:
 
 
 
-## <a name="additional-resources"></a>Recursos adicionales
+## <a name="see-also"></a>Consulte también
 
-- [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Uso de Always Encrypted con el proveedor de datos .NET Framework para SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
-- [Configurar Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Información general sobre la administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Configuración de Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
+- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)

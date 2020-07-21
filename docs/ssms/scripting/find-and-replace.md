@@ -1,6 +1,6 @@
 ---
-title: Buscar y reemplazar | Microsoft Docs
-ms.custom: ''
+title: Buscar y reemplazar
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ddfadb13d2c1882b0c489f8e0567ea26dd2165
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6598fafd54ba3b5e517e39869c45b3fd7ad7f47b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265509"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "78261883"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68265509"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Buscar** , estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se elige un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Buscar** .  
   
-## <a name="replace-with"></a>Reemplazar con  
+## <a name="replace-with"></a>Reemplazar por  
  Estos controles le permiten especificar qué debe insertarse en lugar de la cadena o expresión coincidente.  
   
  **Replace with**  
@@ -53,7 +53,7 @@ ms.locfileid: "68265509"
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Reemplazar con** estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se hace clic un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Reemplazar con** .  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en el cuadro **Buscar** por la cadena especificada en el cuadro **Reemplazar con** y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Reemplazar todo**  
@@ -68,7 +68,7 @@ ms.locfileid: "68265509"
  Esta opción estará disponible cuando el valor especificado en **Buscar en** incluya varios archivos. Haga clic en este botón si no desea realizar búsquedas en el archivo actual o si no desea modificarlo. La búsqueda continuará en el siguiente archivo de la lista de **Buscar en**.  
   
 ## <a name="look-in"></a>Buscar en  
- **Buscar en**  
+ **Look in**  
  Seleccione la ubicación donde debe buscarse el texto especificado en **Buscar**. Las opciones son **Documento actual**, que busca en la ventana de documento que estaba seleccionada al abrir el cuadro de diálogo, y **Todos los documentos abiertos**, que busca en todas las ventanas de documentos abiertas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-options"></a>Opciones de búsqueda  
@@ -86,7 +86,7 @@ ms.locfileid: "68265509"
  **Buscar en texto oculto**  
  Busca instancias del texto que están ocultas y texto contraído.  
   
- **Usar**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
  **Regular Expressions**  
@@ -98,7 +98,7 @@ ms.locfileid: "68265509"
  **Buscar siguiente**  
  Comienza a buscar el texto del cuadro **Buscar** .  
   
- **Reemplazar**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con**y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Replace All**  
@@ -123,4 +123,4 @@ ms.locfileid: "68265509"
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Reemplazar en archivos** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

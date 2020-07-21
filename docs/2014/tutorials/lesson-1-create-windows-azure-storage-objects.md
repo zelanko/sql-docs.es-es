@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Crear Azure Storage objetos | Microsoft Docs'
+title: 'Lección 1: crear objetos de Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 9f580b1b7c6cb1127ac9feecf5e767c467e710bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039968"
 ---
 # <a name="lesson-1-create-azure-storage-objects"></a>Lección 1: Crear objetos de Azure Storage
   Para poder crear copias de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el almacenamiento en la nube, debe crear primero una cuenta de almacenamiento y después un contenedor de blobs. La lección 1 le guía por los pasos necesarios para iniciar sesión en Azure Portal de administración, crear una cuenta de almacenamiento y un contenedor de blobs.  
   
-## <a name="create-a-storage-account"></a>Crear una cuenta de almacenamiento  
+## <a name="create-a-storage-account"></a>Creación de una cuenta de almacenamiento  
  Para crear una cuenta de almacenamiento desde Azure Portal de administración, siga estos pasos:  
   
 1.  Inicie sesión en el Portal de administración de Azure con su cuenta. Si no tiene una cuenta de Azure, [visite la versión de evaluación gratuita de 3 meses de Azure](https://go.microsoft.com/fwlink/?LinkId=271927).  
@@ -34,7 +33,7 @@ ms.locfileid: "70176110"
      ![Captura de pantalla de claves de cuenta de Azure Storage](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Captura de pantalla de claves de cuenta de Azure Storage")  
   
     > [!NOTE]  
-    >  También puede crear una cuenta de almacenamiento mediante programación con las API de REST. Para obtener más información, consulte [crear una cuenta de almacenamiento](https://go.microsoft.com/fwlink/?LinkId=271928).  
+    >  También puede crear una cuenta de almacenamiento mediante programación con las API de REST. Para obtener más información, vea [Crear cuenta de almacenamiento](https://go.microsoft.com/fwlink/?LinkId=271928).  
   
 ### <a name="create-a-blob-container"></a>Crear un contenedor de blobs  
  Los contenedores proporcionan una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores, pero debe tener al menos un contenedor. Un contenedor puede almacenar un número ilimitado de blobs.  
@@ -43,7 +42,7 @@ ms.locfileid: "70176110"
   
 1.  Seleccione la cuenta de almacenamiento, haga clic en la pestaña **contenedores** y haga clic en **Agregar contenedor** en la parte inferior de la pantalla, que abre un cuadro de diálogo nuevo.  
   
-     ![Crear un contenedor en el portal de administración](../../2014/tutorials/media/backuptocloud.gif "Crear un contenedor en el portal de administración")  
+     ![Creación de un contenedor en el portal de administración](../../2014/tutorials/media/backuptocloud.gif "Creación de un contenedor en el portal de administración")  
   
 2.  Escriba el nombre del contenedor. Anote el nombre de contenedor que especificó. Esta información se usa en la dirección URL (ruta de acceso al archivo de copia de seguridad) en las instrucciones T-SQL de las lecciones 3 y 4.  
   
@@ -57,6 +56,6 @@ ms.locfileid: "70176110"
     >  También puede crear un contenedor mediante programación con las API de REST. Para obtener más información, vea [crear contenedor](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Cree una credencial](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)de SQL Server.  
+ [Lección 2: crear una credencial de SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
   

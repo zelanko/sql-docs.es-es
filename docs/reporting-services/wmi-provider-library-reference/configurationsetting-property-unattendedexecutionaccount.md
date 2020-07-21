@@ -16,10 +16,10 @@ ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7df8794f3205feebc49495d27b4bd78a254a4638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65570198"
 ---
 # <a name="configurationsetting-property---unattendedexecutionaccount"></a>Propiedad de ConfigurationSetting: UnattendedExecutionAccount

@@ -22,11 +22,11 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71282607"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79287389"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Ejecutar paquetes de Integration Services (SSIS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "71282607"
   
  Para almacenar un paquete en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , utilice el modelo de implementación del proyecto para implementar el proyecto en el servidor. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Package](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
   
- Para almacenar un paquete en el almacén de paquetes SSIS, la base de datos msdb o en el sistema de archivos, utilice el modelo de implementación de paquetes. Para más información, vea [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ Para almacenar un paquete en el almacén de paquetes SSIS, la base de datos msdb o en el sistema de archivos, utilice el modelo de implementación de paquetes. Para obtener más información, vea [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 |Herramienta|Paquetes que están almacenados en el servidor de Integration Services|Paquetes que están almacenados en el almacén de paquetes SSIS o en la base de datos msdb|Paquetes que están almacenados en el sistema de archivos, fuera de la ubicación que forma parte del almacén de paquetes SSIS|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
@@ -50,15 +50,15 @@ ms.locfileid: "71282607"
 |**SQL Server Management Studio, cuando está conectado a una instancia del motor de base de datos que hospeda el servidor de Integration Services**<br /><br /> Para obtener más información, consulte [Execute Package Dialog Box](#execute_package_dialog).|Sí|No<br /><br /> Sin embargo, puede importar un paquete al servidor desde estas ubicaciones.|No<br /><br /> Sin embargo, puede importar un paquete al servidor desde el sistema de archivos.|
 |**SQL Server Management Studio, cuando está conectado a una instancia del motor de base de datos que hospeda el servidor de Integration Services que está habilitado como patrón de escalado horizontal**<br /><br /> Para obtener más información, consulte [Ejecutar paquetes en el escalado horizontal](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).|Sí|No|No|
 |**SQL Server Management Studio, cuando está conectado al servicio Integration Services que administra el almacén de paquetes SSIS**|No|Sí|No<br /><br /> Sin embargo, puede importar un paquete al almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] desde el sistema de archivos.|  
-|**dtexec**<br /><br /> Para más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).|Sí|Sí|Sí|  
+|**dtexec**<br /><br /> Para obtener más información, consulte [utilidad dtexec](../../integration-services/packages/dtexec-utility.md).|Sí|Sí|Sí|  
 |**dtexecui**<br /><br /> Para más información, vea [Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes &#40;DtExecUI&#41;](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md)|No|Sí|Sí|  
 |**Agente SQL Server**<br /><br /> Use un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar un paquete.<br /><br /> Para más información, consulte [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Sí|Sí|Sí|  
 |**Procedimiento almacenado integrado**<br /><br /> Para más información, vea [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)|Sí|No|No|  
-|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|No|No|  
-|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Dts.Runtime>|No actualmente|Sí|Sí|  
+|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Management.IntegrationServices>|Sí|No|No|  
+|**API administrada, con tipos y miembros del espacio de nombres**  <xref:Microsoft.SqlServer.Dts.Runtime>|No actualmente|Sí|Sí|  
 
 ## <a name="execution-and-logging"></a>Ejecución y registro  
- Los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se pueden habilitar para el registro y el usuario puede capturar la información en tiempo de ejecución de los archivos de registro. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Los paquetes de[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se pueden habilitar para el registro y el usuario puede capturar la información en tiempo de ejecución de los archivos de registro. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
  Puede supervisar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se implementan y se ejecutan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante informes de operación. Los informes están disponibles en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, consulte [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -107,11 +107,11 @@ ms.locfileid: "71282607"
   
 5.  Haga clic en **Aceptar** para ejecutar el paquete.  
   
-     -O bien-  
+     O bien  
   
      Utilice procedimientos almacenados para ejecutar el paquete. Haga clic en **Script** para generar la instrucción Transact-SQL que crea una instancia de la ejecución y la inicia. La instrucción incluye una llamada a los procedimientos almacenados catalog.create_execution, catalog.set_execution_parameter_value y catalog.start_execution. Para obtener más información sobre estos procedimientos almacenados, vea [catalog.create_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) y [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).  
 
-## <a name="execute_package_dialog"></a> Execute Package Dialog Box
+## <a name="execute-package-dialog-box"></a><a name="execute_package_dialog"></a> Execute Package Dialog Box
   Use el cuadro de diálogo **Ejecutar paquete** para ejecutar un paquete que está almacenado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede contener parámetros que hagan referencia a valores almacenados en variables de entorno. Antes de ejecutar este tipo de paquete, debe especificar qué referencia del entorno se utilizará para proporcionar los valores de la variable de entorno. Un proyecto puede contener varios entornos, pero se puede utilizar solo un entorno para enlazar los valores de variable de entorno en el momento de la ejecución. Si no se usan variables de entorno en el paquete, no se requiere un entorno.  
@@ -130,7 +130,7 @@ ms.locfileid: "71282607"
   
 -   [Scripting de las opciones del cuadro de diálogo Ejecutar paquete](#script)  
   
-###  <a name="open_dialog"></a> Abrir el cuadro de diálogo Ejecutar paquete  
+###  <a name="open-the-execute-package-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Ejecutar paquete  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -144,16 +144,16 @@ ms.locfileid: "71282607"
   
 5.  Haga clic con el botón derecho en el paquete y, después, haga clic en **Ejecutar**.  
   
-###  <a name="general"></a> Establecer las opciones de la página General  
+###  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  Seleccione **Entorno** para especificar el entorno que se aplica cuando se ejecuta el paquete.  
   
-###  <a name="parameters"></a> Establecer las opciones de la pestaña Parámetros  
+###  <a name="set-the-options-on-the-parameters-tab"></a><a name="parameters"></a> Establecer las opciones de la pestaña Parámetros  
  Utilice la pestaña **Parámetros** para modificar los valores de parámetro que se utilizan cuando se ejecuta el paquete.  
   
-###  <a name="connection"></a> Establecer las opciones de la pestaña Administradores de conexiones  
+###  <a name="set-the-options-on-the-connection-managers-tab"></a><a name="connection"></a> Establecer las opciones de la pestaña Administradores de conexiones  
  Utilice la pestaña Administradores de conexiones para establecer las propiedades de los administradores de conexiones del paquete.  
   
-###  <a name="advanced"></a> Establecer las opciones de la pestaña Avanzadas  
+###  <a name="set-the-options-on-the-advanced-tab"></a><a name="advanced"></a> Establecer las opciones de la pestaña Avanzadas  
  Utilice la pestaña Avanzadas para administrar propiedades y otra configuración del paquete.  
   
  **Agregar**, **Editar**, **Quitar**  
@@ -168,11 +168,11 @@ ms.locfileid: "71282607"
  **Tiempo de ejecución de 32 bits**  
  Especifique que el paquete se ejecutará en un sistema de 32 bits.  
   
-###  <a name="script"></a> Scripting de las opciones del cuadro de diálogo Ejecutar paquete  
+###  <a name="scripting-the-options-in-the-execute-package-dialog-box"></a><a name="script"></a> Scripting de las opciones del cuadro de diálogo Ejecutar paquete  
  Mientras está en el cuadro de diálogo **Ejecutar paquete** , también puede utilizar el botón **Script** de la barra de herramientas para escribir código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El script generado realiza una llamada a los procedimientos almacenados [catalog.start_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) con las mismas opciones que ha seleccionado en el cuadro de diálogo **Ejecutar paquete**. El script aparece en una nueva ventana de script en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
 ## <a name="see-also"></a>Consulte también  
  [dtexec (utilidad)](../../integration-services/packages/dtexec-utility.md)   
-[Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
+[Iniciar el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   

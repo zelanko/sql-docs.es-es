@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault versión de ejemplo 6.0.0 | Microsoft Docs
+title: Versión de ejemplo de Azure Key Vault 6.0.0 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -7,22 +7,22 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 20ca1afc5261c2a03a10b2f146cb9aad9b67a315
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bd33097d1024e7fc98574e35f34f0aa96a1d292a
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028469"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922646"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Versión de ejemplo de Azure Key Vault 6.0.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Aplicación de ejemplo que usa Azure Key Vault característica
+## <a name="sample-application-using-azure-key-vault-feature"></a>Aplicación de ejemplo que usa la característica de Azure Key Vault
 
-Esta aplicación se ejecuta mediante el controlador JDBC 6.0.0 y Azure-keyvault (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias.  Las dependencias subyacentes se pueden resolver agregando estas bibliotecas al archivo archivo POM del proyecto como se describe [aquí](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Esta aplicación se puede ejecutar mediante el controlador JDBC 6.0.0 y Azure-Keyvault (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias.  Las dependencias subyacentes se pueden resolver agregando estas bibliotecas al archivo POM del proyecto como se describe [aquí](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;
@@ -225,7 +225,7 @@ public class AKV_600 {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Versión de ejemplo de Azure Key Vault 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Versión de ejemplo de Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

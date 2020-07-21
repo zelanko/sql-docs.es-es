@@ -1,5 +1,6 @@
 ---
 title: Restaurar base de datos (página Opciones) | Microsoft Docs
+description: Al restaurar una base de datos en SQL Server, utilice la página Opciones del cuadro de diálogo Restaurar base de datos para modificar el comportamiento y el resultado de la operación de restauración.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f68337ee44e052c838b29d0051631c7be495a478
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737718"
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice la página **Opciones** del cuadro de diálogo **Restaurar base de datos** para modificar el comportamiento y el resultado de la operación de restauración.  
   
  **Para utilizar SQL Server Management Studio a fin de restaurar una copia de seguridad de base de datos**  
@@ -93,13 +94,13 @@ ms.locfileid: "68041572"
  **Archivo de copia de seguridad**  
  Especifica un archivo de copia de seguridad del final del registro. Puede buscar el archivo de copia de seguridad o escribir su nombre directamente en el cuadro de texto.  
   
-### <a name="server-connections"></a>Conexiones al servidor  
+### <a name="server-connections"></a>Conexiones con el servidor  
  Permite cerrar las conexiones de base de datos existentes.  
   
  **Cerrar conexiones existentes**  
  Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   
-### <a name="prompt"></a>Pedir datos  
+### <a name="prompt"></a>Prompt  
  **Preguntar antes de restaurar cada copia de seguridad**  
  Especifica que, después de que se restaure cada copia de seguridad, se mostrará el cuadro de diálogo **Continuar con la restauración** para preguntar si quiere continuar con la secuencia de restauración. En este cuadro de diálogo se muestra el nombre del siguiente conjunto de medios (si se conoce) junto con el nombre y la descripción del siguiente conjunto de copia de seguridad.  
   

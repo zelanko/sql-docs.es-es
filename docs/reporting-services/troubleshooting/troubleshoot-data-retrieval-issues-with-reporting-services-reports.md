@@ -1,5 +1,6 @@
 ---
-title: Solución de problemas de recuperación de datos de informes de Reporting Services | Microsoft Docs
+title: Solución de problemas de recuperación de datos de informes de Reporting Services
+description: En este artículo, diagnosticará y solucionará los problemas que se producen al recuperar datos de informe mediante la obtención de una vista previa de un informe localmente o su ejecución en el servidor de informes.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: d62cff71d6967203ab3980624b1f7b192fb89906
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574427"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664450"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solución de problemas de recuperación de datos de informes de Reporting Services
 El primer paso durante el procesamiento de informes es recuperar los datos del informe para cada conjunto de datos ejecutando la consulta del conjunto de datos. Al obtener una vista previa de un informe localmente, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el equipo. Al ejecutar un informe en el servidor de informes, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el servidor de informes. Utilice este tema como ayuda para solucionar los problemas de la recuperación de datos del informe.   
   
 ## <a name="i-cannot-create-a-connection-to-a-data-source"></a>No puedo crear una conexión a un origen de datos.  
-Al crear un origen de datos, ejecutar una consulta del conjunto de datos u ofrecer una vista previa de un informe, podría obtener el mensaje siguiente: No se puede crear una conexión al origen de datos `<data source name>`.   
+Al crear un origen de datos, ejecutar una consulta del conjunto de datos u obtener una vista previa de un informe, es posible que obtenga el mensaje siguiente: No se puede crear una conexión al origen de datos `<data source name>`.   
     
 ### <a name="data-source-is-not-available"></a>El origen de datos no está disponible.  
 El origen de datos está sin conexión o no está disponible por alguna otra razón.   
@@ -57,7 +58,7 @@ Al definir una consulta en el cuadro de diálogo Propiedades del conjunto de dat
 Para rellenar la colección de campos de conjunto de datos, haga lo siguiente:  
 * Asegúrese de que dispone de permisos para recuperar la información de los campos de la base de datos. En algunos orígenes de datos, puede que tenga permiso para obtener acceso al origen de datos pero no a la tabla o a la columna. Puede que disponga del permiso para tener acceso a una vista pero no de los permisos para ejecutar los procedimientos almacenados que crean la vista. Para validar su acceso a tablas o columnas concretas en una base de datos, compruebe los resultados de la consulta en una aplicación independiente como SQL Server Management Studio utilizando los mismos permisos que para el informe. Si no puede ver los resultados que desea para la consulta, trabaje con el administrador del sistema para ajustar sus permisos a los datos.   
 * Ejecute la consulta en el panel de consulta del cuadro de diálogo **Propiedades del conjunto de datos** . Para más información, consulte [Conjuntos de datos de informe (Generador de informes 3.0 y SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
-* Agregue campos manualmente. Para más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe (Generador de informes 3.0 y SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
+* Agregue campos manualmente. Para más información, vea: [Cómo: Agregar, editar y actualizar campos en el panel Datos de informe (Generador de informes 3.0 y SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
 ## <a name="see-also"></a>Consulte también  
 [Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

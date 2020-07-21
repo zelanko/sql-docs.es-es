@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la forma de datos | Microsoft Docs
+title: Ejemplo de forma de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f5f4095cc8c6d3d70bdb5d1e388532cefb7e76a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925662"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763636"
 ---
 # <a name="data-shaping-example"></a>Ejemplo de la forma de datos
-El siguientes comando de la forma de datos muestra cómo generar un jerárquica **Recordset** desde el **clientes** y **pedidos** tablas en la base de datos Northwind.  
+El siguiente comando de forma de datos muestra cómo generar un conjunto de **registros** jerárquico a partir de las tablas **Customers** y **Orders** de la base de datos Northwind.  
   
 ```  
 SHAPE {SELECT CustomerID, ContactName FROM Customers}   
@@ -28,23 +28,23 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Cuando se usa este comando para abrir un **Recordset** objeto (como se muestra en [ejemplo Visual Basic de forma de datos](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), crea un capítulo (**chapOrders**) para cada registro devuelto desde el **clientes** tabla. Este capítulo consta de un subconjunto de la **Recordset** devuelto desde el **pedidos** tabla. El **chapOrders** capítulo contiene toda la información solicitada sobre los pedidos realizados por un cliente determinado. En este ejemplo, el capítulo consta de tres columnas: **OrderID**, **OrderDate**, y **CustomerID**.  
+ Cuando este comando se usa para abrir un objeto de **conjunto de registros** (como se muestra en [Visual Basic ejemplo de forma de datos](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), crea un capítulo (**chapOrders**) para cada registro devuelto de la tabla **Customers** . Este capítulo consta de un subconjunto del **conjunto de registros** devuelto de la tabla **Orders** . El capítulo **chapOrders** contiene toda la información solicitada sobre los pedidos realizados por el cliente determinado. En este ejemplo, el capítulo consta de tres columnas: **OrderID**, **OrderDate**y **CustomerID**.  
   
- Las dos primeras entradas de la resultante en forma de **Recordset** son los siguientes:  
+ Las dos primeras entradas del **conjunto de registros** con forma resultante son las siguientes:  
   
 |CustomerID|ContactName|OrderID|OrderDate|CustomerID|  
 |----------------|-----------------|-------------|---------------|----------------|  
-|ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
+|ALFKI|Maria Anders|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- En un comando SHAPE, APPEND se utiliza para crear un elemento secundario **Recordset** relacionados con el elemento primario **Recordset** (tal como lo devuelve el comando específico del proveedor inmediatamente después de la palabra clave de forma que se ha analizado más adelante) mediante la cláusula RELATE. Los primarios y secundarios normalmente tienen al menos una columna en común: El valor de la columna en una fila del elemento primario es el mismo que el valor de la columna en todas las filas del elemento secundario.  
+ En un comando SHAPE, APPEND se usa para crear un **conjunto de registros** secundario relacionado con el **conjunto de registros** primario (tal y como se devuelve desde el comando específico del proveedor inmediatamente después de la palabra clave Shape que se explicó anteriormente) por la cláusula Relate. Los elementos primarios y secundarios suelen tener al menos una columna en común: el valor de la columna en una fila del elemento primario es el mismo que el valor de la columna en todas las filas del elemento secundario.  
   
- Hay una segunda forma de usar comandos de forma: es decir, para generar un elemento primario **Recordset** desde un elemento secundario **Recordset**. Los registros en el elemento secundario **Recordset** se agrupan, normalmente mediante la cláusula BY y una fila se agrega al elemento primario **Recordset** para cada grupo resultante en el elemento secundario. Si se omite la cláusula BY, el elemento secundario **Recordset** le formulario de un solo grupo y el elemento primario **Recordset** contendrá exactamente una fila. Esto es útil para calcular agregados de "total general" en todo el secundario **Recordset**.  
+ Hay una segunda manera de usar comandos de forma: es decir, para generar un **conjunto de registros** primario a partir de un **conjunto de registros**secundario. Los registros del conjunto de **registros** secundario se agrupan, normalmente mediante la cláusula by, y se agrega una fila al conjunto de **registros** primario para cada grupo resultante en el elemento secundario. Si se omite la cláusula BY, el **conjunto de registros** secundario formará un solo grupo y el **conjunto de registros** primario contendrá exactamente una fila. Esto resulta útil para calcular agregados "totales generales" en todo el **conjunto de registros**secundario.  
   
- La construcción de comando de forma también le permite crear mediante programación una forma **Recordset**. A continuación, puede tener acceso a los componentes de la **Recordset** mediante programación o a través de un control visual adecuado. Se emite un comando de forma similar a cualquier otro texto de comando ADO. Para obtener más información, consulte [comandos de forma General](../../../ado/guide/data/shape-commands-in-general.md).  
+ La construcción de comandos SHAPE también permite crear un **conjunto de registros**con forma mediante programación. A continuación, puede tener acceso a los componentes del **conjunto de registros** mediante programación o a través de un control visual adecuado. Un comando de forma se emite como cualquier otro texto de comando de ADO. Para obtener más información, vea [comandos Shape en general](../../../ado/guide/data/shape-commands-in-general.md).  
   
- Independientemente de qué manera el elemento primario **Recordset** está formado, contiene una columna de capítulo se usa para relacionarla con un elemento secundario **Recordset**. Si lo desea, el elemento primario **Recordset** también se puede tener columnas que contienen agregados (SUM, MIN, MAX etc.) a través de las filas secundarias. El elemento primario y secundario **Recordset** pueden tener columnas que contienen una expresión en la fila de la **Recordset**, así como las columnas que son nuevos e inicialmente vacía.  
+ Independientemente de la forma en que se forme el **conjunto de registros** principal, contendrá una columna de capítulo que se utiliza para relacionarla con un **conjunto de registros**secundario. Si lo desea, el **conjunto de registros** primario también puede tener columnas que contengan agregados (SUM, min, Max, etc.) en las filas secundarias. Tanto el **conjunto de registros** primario como el secundario pueden tener columnas que contengan una expresión en la fila del **conjunto de registros**, así como columnas nuevas e inicialmente vacías.  
   
- En esta sección se continúa con el siguiente tema.  
+ Esta sección continúa con el siguiente tema.  
   
 -   [Ejemplo de Visual Basic de forma de datos](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)

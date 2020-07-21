@@ -1,5 +1,5 @@
 ---
-title: Propiedades del catálogo de texto completo (página General) | Microsoft Docs
+title: Propiedades del catálogo de texto completo (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933026"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
   En esta sección se muestran las opciones y funciones disponibles en la página **General** del cuadro de diálogo **Propiedades del catálogo de texto completo** .  
@@ -34,7 +33,7 @@ ms.locfileid: "62779668"
  **Estado del rellenado**  
  Indica el estado del catálogo. Los valores posibles son:  
   
--   **Idle**  
+-   **Inactivo**  
   
 -   **Rastreo en curso**  
   
@@ -42,17 +41,17 @@ ms.locfileid: "62779668"
   
 -   **Limitado**  
   
--   **Recovering**  
+-   **Realizar la recuperación.**  
   
--   **Apagado**  
+-   **Apagar**  
   
 -   **Rellenado incremental en curso**  
   
 -   **Generando índice**  
   
--   **El disco está en pausa el completo**  
+-   **El disco está lleno en pausa**  
   
--   **Change tracking**  
+-   **Seguimiento de cambios**  
   
  **Número de elementos**  
  Muestra el número de elementos de texto completo del catálogo.  
@@ -60,17 +59,17 @@ ms.locfileid: "62779668"
  **Tamaño del catálogo**  
  Muestra el tamaño del catálogo de texto completo en megabytes.  
   
- **Name**  
+ **Nombre**  
  Nombre del catálogo de texto completo.  
   
  **Distinguir acentos**  
- Vea o modifique si el catálogo distingue las marcas diacríticas, como la tilde ( **~** ), el acento agudo ( **'** ) o la diéresis (**¨**). Los valores válidos son:  
+ Permite ver o modificar si el catálogo es sensible a las marcas diacríticas, como una tilde ( **~** ), un signo de acento agudo (**'**) o umlaut (**̈**). Los valores válidos son:  
   
 -   **No**  
   
 -   **Sí**  
   
--   Para obtener información acerca de las marcas diacríticas, vea [diacrítico](https://www.merriam-webster.com/dictionary/diacritic) en el diccionario Merriam Webster.  
+-   Para obtener información sobre las marcas diacríticas, vea [diacríticos](https://www.merriam-webster.com/dictionary/diacritic) en el diccionario Merriam-Webster.  
   
  **Fecha del último rellenado**  
  Muestra la fecha de la última vez que se rellenó el catálogo.  
@@ -85,12 +84,12 @@ ms.locfileid: "62779668"
   
 |||  
 |-|-|  
-|**Ninguno**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
+|**None**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
 |**Optimizar catálogo**|Optimiza el uso de espacio del catálogo y mejora el rendimiento de las consultas. También mejora la precisión de la clasificación de los aciertos de los resultados de las búsquedas.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
-|**Volver a crear catálogo**|Elimina el catálogo de texto completo y lo genera de nuevo. Esta operación debe realizarse si se modifica una propiedad básica del catálogo, como la distinción de acentos.<br /><br /> Para que el catálogo se genere correctamente, el grupo de archivos en el que reside el catálogo de texto completo debe estar en línea o tener el acceso de lectura y escritura activado. Después de la regeneración, se volverá a llenar el índice de texto completo.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
+|**Volver a generar el catálogo**|Elimina el catálogo de texto completo y lo genera de nuevo. Esta operación debe realizarse si se modifica una propiedad básica del catálogo, como la distinción de acentos.<br /><br /> Para que el catálogo se genere correctamente, el grupo de archivos en el que reside el catálogo de texto completo debe estar en línea o tener el acceso de lectura y escritura activado. Después de la regeneración, se volverá a llenar el índice de texto completo.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Volver a llenar el catálogo**|Actualiza el catálogo con los cambios recientes realizados en los datos. Para esta opción, el catálogo debe estar inactivo.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
   

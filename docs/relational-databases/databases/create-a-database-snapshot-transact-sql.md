@@ -1,5 +1,6 @@
 ---
 title: Creación de una instantánea de base de datos (Transact-SQL) | Microsoft Docs
+description: Obtenga información sobre cómo crear una instantánea de base de datos de SQL Server mediante Transact-SQL. Obtenga información sobre los requisitos previos y los procedimientos recomendados para crear instantáneas.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 232b3af50be2c00cc1685e031b335c1b798a42b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708287"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763547"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El único modo de crear una instantánea de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en usar [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite la creación de instantáneas de base de datos.  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  La base de datos de origen, que puede usar cualquier modelo de recuperación, debe cumplir los siguientes requisitos previos:  
   
 -   La instancia del servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de bases de datos. Para obtener más información sobre la compatibilidad con la creación de instantáneas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -42,7 +43,7 @@ ms.locfileid: "71708287"
 > [!IMPORTANT]
 > Para obtener información sobre otras consideraciones importantes, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  En esta sección se describen los procedimientos recomendados siguientes:  
   
 -   [Procedimiento recomendado: Asignar nombres a instantáneas de base de datos](#Naming)  
@@ -51,7 +52,7 @@ ms.locfileid: "71708287"
   
 -   [Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos](#Client_Connections)  
   
-####  <a name="Naming"></a> Procedimiento recomendado: Asignar nombres a instantáneas de base de datos  
+####  <a name="best-practice-naming-database-snapshots"></a><a name="Naming"></a> Procedimiento recomendado: Asignar nombres a instantáneas de base de datos  
  Antes de crear instantáneas, es importante pensar cómo asignarles un nombre. Cada instantánea de base de datos necesita un nombre de base de datos único. Para facilitar la administración, el nombre de una instantánea puede incorporar información que identifique la base de datos, por ejemplo:  
   
 -   Nombre de la base de datos de origen.  
@@ -76,21 +77,21 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Procedimiento recomendado: Limitar el número de instantáneas de base de datos  
+#### <a name="best-practice-limiting-the-number-of-database-snapshots"></a><a name="Limiting_Number"></a> Procedimiento recomendado: Limitar el número de instantáneas de base de datos  
  La creación de una serie de instantáneas a lo largo del tiempo permite capturar instantáneas secuenciales de la base de datos de origen. Cada instantánea se conserva hasta que se quite de manera explícita. Las instantáneas siguen creciendo a medida que se actualizan las páginas originales, por lo que seguramente querrá ahorrar espacio en el disco eliminando una instantánea más antigua después de crear una nueva instantánea.  
   
 
 **Nota:** Para volver a una instantánea de base de datos, debe eliminar cualquier otra instantánea de esa base de datos.  
   
-####  <a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos  
+####  <a name="best-practice-client-connections-to-a-database-snapshot"></a><a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos  
  Para usar una instantánea de base de datos, los clientes deben saber dónde encontrarla. Los usuarios pueden leer de una instantánea de base de datos mientras se crea o elimina otra. Sin embargo, si sustituye una nueva instantánea por otra ya existente, debe redirigir a los clientes a la nueva instantánea. Los usuarios pueden conectarse manualmente a una instantánea de base de datos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sin embargo, para admitir un entorno de producción, debe crear una solución programática que dirija de un modo transparente a los clientes de escritura de informes a la instantánea de base de datos más reciente de la base de datos.  
   
 
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Todos los usuarios que pueden crear una base de datos pueden crear una instantánea de base de datos; sin embargo, para crear una instantánea de una base de datos reflejada, es necesario ser miembro del rol fijo de servidor **sysadmin** .  
   
-##  <a name="TsqlProcedure"></a> Cómo crear una instantánea de base de datos (con Transact-SQL)  
+##  <a name="how-to-create-a-database-snapshot-using-transact-sql"></a><a name="TsqlProcedure"></a> Cómo crear una instantánea de base de datos (con Transact-SQL)  
  **Para crear una instantánea de base de datos**  
   
 >  Para obtener un ejemplo de este procedimiento, vea [Ejemplos (Transact-SQL)](#TsqlExample), más adelante en esta sección.  
@@ -101,7 +102,7 @@ AdventureWorks_snapshot_evening
 
      CREATE DATABASE *nombre_de_instantánea_de_base_de_datos*  
   
-     ON  
+     ACTIVAR  
   
      (  
   
@@ -120,18 +121,18 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  Cuando se crea una instantánea de base de datos, no se permite la presencia de archivos de registro, archivos sin conexión, archivos de restauración e inactivos en la instrucción CREATE DATABASE.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
   
 > [!NOTE]  
 >  La extensión `.ss` que se usa en los ejemplos es arbitraria.  
   
- Esta sección contiene los siguientes ejemplos:  
+ En esta sección se incluyen los ejemplos siguientes:  
   
 -   A. [Crear una instantánea de la base datos AdventureWorks](#Creating_on_AW)  
   
 -   B. [Crear una instantánea de la base datos Sales](#Creating_on_Sales)
   
-####  <a name="Creating_on_AW"></a> A. Crear una instantánea de la base datos AdventureWorks  
+####  <a name="a-creating-a-snapshot-on-the-adventureworks-database"></a><a name="Creating_on_AW"></a> A. Crear una instantánea de la base datos AdventureWorks  
  En este ejemplo se crea una instantánea de base datos `AdventureWorks` . El nombre de la instantánea, `AdventureWorks_dbss_1800`, y el nombre de archivo de su archivo disperso, `AdventureWorks_data_1800.ss`, indican la hora de creación: 6 P.M (1800 horas).  
   
 ```  
@@ -142,7 +143,7 @@ AS SNAPSHOT OF AdventureWorks;
 GO  
 ```  
   
-####  <a name="Creating_on_Sales"></a> B. Crear una instantánea de la base datos Sales  
+####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> B. Crear una instantánea de la base datos Sales  
  En este ejemplo se crea una instantánea de base datos, `sales_snapshot1200`, en la base de datos `Sales` . Esta base de datos se creó en el ejemplo "Crear una base de datos con grupos de archivos", en [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ```  
@@ -165,7 +166,7 @@ AS SNAPSHOT OF Sales;
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Ver una instantánea de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
@@ -175,7 +176,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+ [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
 

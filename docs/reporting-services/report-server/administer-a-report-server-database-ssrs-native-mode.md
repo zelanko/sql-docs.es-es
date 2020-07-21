@@ -1,5 +1,5 @@
 ---
-title: Administrar una base de datos del servidor de informes (Modo nativo de SSRS) | Microsoft Docs
+title: Administración de una base de datos del servidor de informes (Modo nativo) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c24b7fa919b1a9abead4e6204b8d9eae001d0446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 63456df52690b25605bce4f279283f608644f553
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575500"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77079108"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
   Una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dos bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenamiento interno. De manera predeterminada, las bases de datos tienen los nombres ReportServer y ReportServerTempdb. ReportServerTempdb se crea con la base de datos principal del servidor de informes y se usa para almacenar datos temporales, información de sesión e informes almacenados en caché.  
@@ -29,7 +29,7 @@ ms.locfileid: "65575500"
   
  Para administrar las bases de datos del servidor de informes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una amplia variedad de herramientas.  
   
--   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, se puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
+-   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, consulte [Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
 -   Para copiar el contenido de una base de datos existente en otra base de datos del servidor de informes, puede adjuntar una copia de una base de datos del servidor de informes y utilizarla con una instancia distinta del servidor de informes. También puede crear y ejecutar un script que utilice llamadas SOAP para volver a crear contenido del servidor de informes en una nueva base de datos. Puede usar la utilidad **rs** para ejecutar el script.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65575500"
  Este error se debe a que el nombre ReportServerTempdb se almacena internamente y lo utilizan los procedimientos almacenados para realizar operaciones internas. Si se cambia el nombre de la base de datos temporal, no funcionarán correctamente los procedimientos almacenados.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Habilitar el aislamiento de instantánea en la base de datos del servidor de informes  
- No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si se activa el aislamiento de instantánea, encontrará el error siguiente: "El informe seleccionado no está listo para su visualización. Aún se está representando o no hay disponible una instantánea de informe".  
+ No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si está activado el aislamiento de instantánea, se producirá el siguiente error: "El informe seleccionado no está listo para su visualización. Aún se está representando o no hay disponible una instantánea de informe".  
   
  Si no habilitó explícitamente el aislamiento de instantánea, puede que el atributo lo estableciera otra aplicación o que la base de datos **modelo** tenga el aislamiento de instantánea habilitado, haciendo que todas las bases de datos nuevas heredaran el valor.  
   

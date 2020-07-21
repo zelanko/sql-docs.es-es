@@ -1,5 +1,5 @@
 ---
-title: Configurar la salida de Error | Microsoft Docs
+title: Configurar la salida de errores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee37cae5e0d6d9d0f95ca5b9f71eec04742f94e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060636"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438422"
 ---
 # <a name="configure-error-output"></a>Configurar la salida de errores
   Use el cuadro de diálogo **Configurar la salida de errores** para configurar las opciones de control de errores para las transformaciones de flujo de datos que admiten salida de errores.  
@@ -50,7 +49,7 @@ ms.locfileid: "66060636"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

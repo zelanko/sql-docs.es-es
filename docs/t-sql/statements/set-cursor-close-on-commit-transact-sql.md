@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7226b42823ff51a00a22124b1fd1851c1943b97c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765838"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Controla el comportamiento de la instrucción COMMIT TRANSACTION de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El valor predeterminado de esta configuración es OFF. Indica que el servidor no cerrará los cursores cuando se confirme una transacción.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "67929109"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si SET CURSOR_CLOSE_ON_COMMIT es ON, este valor cierra cualquier cursor abierto al confirmar o revertir de conformidad con ISO. Si SET CURSOR_CLOSE_ON_COMMIT es OFF, no se cierra el cursor cuando se confirma una transacción.  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  Para ver la configuración actual de este valor, ejecute la consulta siguiente.  
   
-```  
+```sql
 DECLARE @CURSOR_CLOSE VARCHAR(3) = 'OFF';  
 IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';  
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
@@ -74,7 +74,7 @@ SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se define un cursor en una transacción y se intenta utilizar después de confirmar la transacción.  
   
-```  
+```sql
 -- SET CURSOR_CLOSE_ON_COMMIT  
 -------------------------------------------------------------------------------  
 SET NOCOUNT ON;  

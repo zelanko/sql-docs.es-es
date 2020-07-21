@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58202b7246acf2a958523cfb874b8ce25bd13bdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 565610826f704274724ea05d821205a5b3391060
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066018"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>Crear una guía de plan para consultas parametrizadas
   Una guía de plan TEMPLATE compara consultas independientes que se parametrizan en un formulario especificado.  

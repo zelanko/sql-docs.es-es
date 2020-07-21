@@ -11,29 +11,29 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f0ad5eb99009a6f9f980edc062c10a5c98831984
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907721"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780232"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|701|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|701|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|NOSYSMEM|  
 |Texto del mensaje|Memoria de sistema insuficiente para ejecutar esta consulta.|  
   
 ## <a name="explanation"></a>Explicación  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido asignar suficiente memoria para ejecutar la consulta. Esto puede deberse a diversos motivos, incluidos la configuración del sistema operativo, la disponibilidad de memoria física o los límites de memoria de la carga de trabajo actual. En la mayoría de los casos, la transacción errónea no es la causa de este error.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido asignar suficiente memoria para ejecutar la consulta. Esto puede deberse a varios motivos, entre los que se incluye la configuración del sistema operativo, la disponibilidad de la memoria física o los límites de la memoria en la carga de trabajo actual. En la mayoría de los casos, la transacción que no se ha realizado no es la causa de este error.  
   
 Las consultas de diagnóstico, como las instrucciones DBCC, pueden generar un error porque el servidor no tiene suficiente memoria.  
   

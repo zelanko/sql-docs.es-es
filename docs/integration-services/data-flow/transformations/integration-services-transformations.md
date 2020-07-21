@@ -22,10 +22,10 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297910"
 ---
 # <a name="integration-services-transformations"></a>Transformaciones de Integration Services
@@ -72,7 +72,7 @@ ms.locfileid: "71297910"
 |[Transformación Muestreo de porcentaje](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)|Transformación que crea un conjunto de datos de ejemplo mediante un porcentaje para especificar el tamaño del ejemplo.|  
 |[Transformación Muestreo de fila](../../../integration-services/data-flow/transformations/row-sampling-transformation.md)|Transformación que crea un conjunto de datos de ejemplo especificando la cantidad de filas en la muestra.|  
 |[Transformación dinámica](../../../integration-services/data-flow/transformations/pivot-transformation.md)|Transformación que crea una versión menos normalizada de una tabla normalizada.|  
-|[Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|Transformación que crea una versión más normalizada de una tabla no normalizada.|  
+|[Transformación Anular dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md)|Transformación que crea una versión más normalizada de una tabla no normalizada.|  
   
 ## <a name="split-and-join-transformations"></a>Transformaciones de división y combinación  
  Las siguientes transformaciones distribuyen filas a diferentes salidas, crean copias de las entradas de transformación, combinan varias entradas en una salida y realizan operaciones de búsqueda.  
@@ -86,7 +86,7 @@ ms.locfileid: "71297910"
 |[Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)|Transformación que combina dos conjuntos de datos mediante una combinación FULL, LEFT o INNER.|  
 |[Transformación Búsqueda](../../../integration-services/data-flow/transformations/lookup-transformation.md)|Transformación que busca valores en una tabla de referencia con una coincidencia exacta.|  
 |[Transformación de caché](../../../integration-services/data-flow/transformations/cache-transform.md)|La transformación que escribe los datos procedentes de un origen de datos conectado del flujo de datos en un administrador de conexiones de caché que guarda los datos en un archivo caché. La transformación de búsqueda realiza búsquedas en los datos del archivo caché.|  
-|[Transformación Balanced Data Distributor](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|La transformación distribuye uniformemente los búferes de filas entrantes entre los resultados de subprocesos independientes para mejorar el rendimiento de los paquetes de SSIS que se ejecutan en servidores con varios núcleos y varios procesadores.|  
+|[Transformación Distribuidor de datos equilibrado](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|La transformación distribuye uniformemente los búferes de filas entrantes entre los resultados de subprocesos independientes para mejorar el rendimiento de los paquetes de SSIS que se ejecutan en servidores con varios núcleos y varios procesadores.|  
   
 ## <a name="auditing-transformations"></a>Auditar transformaciones  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye las transformaciones siguientes para agregar filas de recuento e información.  

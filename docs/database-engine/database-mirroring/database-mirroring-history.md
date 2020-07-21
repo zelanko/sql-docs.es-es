@@ -1,5 +1,6 @@
 ---
 title: Historial de creación de reflejo de la base de datos | Microsoft Docs
+description: Obtenga información sobre cómo ver el historial del estado de creación de reflejo de una base de datos reflejada en una instancia del servidor especificada en SQL Server Management Studio.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2fd21c91577d2e2db1773bbbcbff942842cf043
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751896"
 ---
 # <a name="database-mirroring-history"></a>Historial de creación de reflejo de la base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice este cuadro de diálogo para ver el historial del estado de creación de reflejo de una base de datos reflejada en una instancia del servidor especificada.  
   
  **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
@@ -66,11 +67,11 @@ ms.locfileid: "68006425"
  **Historial**  
  Muestra la lista del historial. Si se hace clic en el encabezado de columna, se ordena la cuadrícula por esa columna. La lista contiene las columnas siguientes:  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**Hora de registro**|Marca de tiempo de la fila de historial.|  
 |**Rol**|Rol de creación de reflejo actual de la instancia del servidor para esta base de datos, ya sea principal o reflejado.|  
-|**Estado de creación de reflejo**|Estado de la base de datos:<br /><br /> Desconectado<br /><br /> Conmutación por error pendiente<br /><br /> Suspendida<br /><br /> Sincronizado<br /><br /> Sincronizando<br /><br /> Desconocido|  
+|**Estado de creación de reflejo**|Estado de la base de datos:<br /><br /> Escenario desconectado<br /><br /> Conmutación por error pendiente<br /><br /> Suspended<br /><br /> Sincronizado<br /><br /> Sincronizando<br /><br /> Desconocido|  
 |**Conexión del testigo**|Estado de la conexión del testigo en la sesión de creación de reflejo de la base de datos, ya sea Conectado o Desconectado. Si no hay testigo, el valor es NULL.|  
 |**Registro sin enviar**|Tamaño, en kilobytes (KB), del registro sin enviar en la cola de envío de la instancia del servidor principal.|  
 |**Hora de envío**|Cantidad aproximada de tiempo que la instancia del servidor principal necesitará para enviar el registro (actualmente en la cola de envío) a la instancia del servidor reflejado ( *tasa de envío*). Puesto que la velocidad de las transacciones entrantes puede variar de forma significativa, el registro de la hora de envío es estimativo. Sin embargo, la tasa de envío puede resultar útil para estimar de forma aproximativa el tiempo requerido para una conmutación por error manual.|  
@@ -85,6 +86,6 @@ ms.locfileid: "68006425"
 ## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

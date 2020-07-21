@@ -1,5 +1,5 @@
 ---
-title: Administrador de controladores&#39;s rol en el proceso de conexión | Microsoft Docs
+title: Rol&#39;s del administrador de controladores en el proceso de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0227a4063573cb05ecaa9434605ba35f2811bd06
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046943"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305806"
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Administrador de controladores&#39;s rol en el proceso de conexión
-Recuerde que las aplicaciones no llame a las funciones del controlador directamente. En su lugar, llaman a funciones de administrador de controladores con el mismo nombre y el Administrador de controladores, llama a las funciones de controlador. Normalmente, esto ocurre casi inmediatamente. Por ejemplo, la aplicación llama a **SQLExecute** en el Administrador de controladores y después algunas comprobaciones de errores, el Administrador de controladores se llama a **SQLExecute** en el controlador.  
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Rol&#39;s del administrador de controladores en el proceso de conexión
+Recuerde que las aplicaciones no llaman directamente a las funciones de controlador. En su lugar, llaman a las funciones del administrador de controladores con el mismo nombre y el administrador de controladores llama a las funciones del controlador. Normalmente, esto sucede casi inmediatamente. Por ejemplo, la aplicación llama a **SQLExecute** en el administrador de controladores y después de algunas comprobaciones de error, el administrador de controladores llama a **SQLExecute** en el controlador.  
   
- El proceso de conexión es diferente. Cuando la aplicación llama **SQLAllocHandle** con las opciones de SQL_HANDLE_ENV y SQL_HANDLE_DBC, la función asigna identificadores solo en el Administrador de controladores. El Administrador de controladores no llama a esta función en el controlador porque no sabe qué controlador para llamar a. De forma similar, si la aplicación pasa el identificador de una conexión no conectado a **SQLSetConnectAttr** o **SQLGetConnectAttr**, solo el Administrador de controladores se ejecuta la función. Almacena u Obtiene el valor del atributo de su conexión a controlar y devuelve SQLSTATE 08003 (conexión no abierta) al obtener el valor de un atributo que no se ha establecido y para qué ODBC no define un valor predeterminado.  
+ El proceso de conexión es diferente. Cuando la aplicación llama a **SQLAllocHandle** con las opciones SQL_HANDLE_ENV y SQL_HANDLE_DBC, la función asigna solo identificadores en el administrador de controladores. El administrador de controladores no llama a esta función en el controlador porque no sabe a qué controlador debe llamar. Del mismo modo, si la aplicación pasa el identificador de una conexión desconectada a **SQLSetConnectAttr** o **SQLGetConnectAttr**, solo el administrador de controladores ejecuta la función. Almacena u obtiene el valor de atributo de su identificador de conexión y devuelve SQLSTATE 08003 (conexión no abierta) al obtener un valor para un atributo que no se ha establecido y para el que ODBC no define un valor predeterminado.  
   
- Cuando la aplicación llama **SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**, en primer lugar, el Administrador de controladores determina qué controlador usar. A continuación, se comprueba para determinar si un controlador está cargado actualmente en la conexión:  
+ Cuando la aplicación llama a **SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**, el administrador de controladores determina primero el controlador que se va a usar. A continuación, comprueba para determinar si un controlador está cargado actualmente en la conexión:  
   
--   Si no se carga ningún controlador en la conexión, el Administrador de controladores comprueba si se ha cargado el controlador especificado en la otra en el mismo entorno. Si no, el Administrador de controladores carga el controlador en la conexión y las llamadas **SQLAllocHandle** en el controlador con la opción de SQL_HANDLE_ENV.  
+-   Si no se carga ningún controlador en la conexión, el administrador de controladores comprueba si el controlador especificado está cargado en otra conexión del mismo entorno. De lo contrario, el administrador de controladores carga el controlador en la conexión y llama a **SQLAllocHandle** en el controlador con la opción SQL_HANDLE_ENV.  
   
-     El Administrador de controladores, a continuación, llama a **SQLAllocHandle** o no en el controlador con la opción de SQL_HANDLE_DBC, se acaba de cargar. Si la aplicación establece los atributos de conexión, el Administrador de controladores se llama a **SQLSetConnectAttr** en el controlador; si se produce un error, función de conexión del Administrador de controladores devuelve SQLSTATE IM006 (conductor  **SQLSetConnectAttr** error). Por último, el Administrador de controladores llama a la función de conexión en el controlador.  
+     A continuación, el administrador de controladores llama a **SQLAllocHandle** en el controlador con la opción SQL_HANDLE_DBC, independientemente de que se haya cargado o no. Si la aplicación establece cualquier atributo de conexión, el administrador de controladores llama a **SQLSetConnectAttr** en el controlador; Si se produce un error, la función de conexión del administrador de controladores devuelve SQLSTATE IM006 (error de **SQLSetConnectAttr** del controlador). Por último, el administrador de controladores llama a la función de conexión en el controlador.  
   
--   Si se carga el controlador especificado en la conexión, el Administrador de controladores llama sólo la función de conexión en el controlador. En este caso, el controlador debe asegurarse de que todos los atributos de conexión en la conexión conserven su configuración actual.  
+-   Si el controlador especificado está cargado en la conexión, el administrador de controladores solo llama a la función de conexión del controlador. En este caso, el controlador debe asegurarse de que todos los atributos de conexión de la conexión mantienen su configuración actual.  
   
--   Si se carga un controlador diferente en la conexión, el Administrador de controladores se llama a **SQLFreeHandle** en el controlador para liberar la conexión. Si no hay ninguna otra conexión que usan el controlador, el Administrador de controladores se llama a **SQLFreeHandle** en el controlador para liberar el entorno y descarga el controlador. El Administrador de controladores, a continuación, realiza las mismas operaciones que cuando un controlador no está cargado en la conexión.  
+-   Si se carga un controlador diferente en la conexión, el administrador de controladores llama a **SQLFreeHandle** en el controlador para liberar la conexión. Si no hay otras conexiones que usen el controlador, el administrador de controladores llama a **SQLFreeHandle** en el controlador para liberar el entorno y descargar el controlador. A continuación, el administrador de controladores realiza las mismas operaciones que cuando no se carga un controlador en la conexión.  
   
- El Administrador de controladores se bloqueará el identificador de entorno (*henv*) antes de llamar a un controlador **SQLAllocHandle** y **SQLFreeHandle** cuando *HandleType* está establecido en **SQL_HANDLE_DBC**.  
+ El administrador de controladores bloqueará el identificador de entorno (*HENV*) antes de llamar al método **SQLAllocHandle** y **SQLFreeHandle** de un controlador cuando *HandleType* está establecido en **SQL_HANDLE_DBC**.  
   
- Cuando la aplicación llama **SQLDisconnect**, las llamadas del Administrador de controladores **SQLDisconnect** en el controlador. Sin embargo, deja el controlador cargado en caso de que la aplicación se vuelve a conectar el controlador. Cuando la aplicación llama **SQLFreeHandle** con la opción de SQL_HANDLE_DBC, llama el Administrador de controladores **SQLFreeHandle** en el controlador. Si el controlador no se usa por cualquier otra conexión, el Administrador de controladores, a continuación, llama a **SQLFreeHandle** en el controlador con el SQL_HANDLE_ENV opción y se descarga el controlador.
+ Cuando la aplicación llama a **SQLDisconnect**, el administrador de controladores llama a **SQLDisconnect** en el controlador. Sin embargo, deja el controlador cargado en caso de que la aplicación vuelva a conectarse al controlador. Cuando la aplicación llama a **SQLFreeHandle** con la opción SQL_HANDLE_DBC, el administrador de controladores llama a **SQLFreeHandle** en el controlador. Si el controlador no lo usa ninguna otra conexión, el administrador de controladores llama a **SQLFreeHandle** en el controlador con la opción SQL_HANDLE_ENV y descarga el controlador.

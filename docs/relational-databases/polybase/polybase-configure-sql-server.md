@@ -1,6 +1,8 @@
 ---
-title: Configurar PolyBase para acceder a datos externos en SQL Server | Microsoft Docs
-ms.date: 04/23/2019
+title: 'Acceso a datos externos: SQL Server: PolyBase'
+description: Aprenda a usar PolyBase en una instancia de SQL Server para consultar datos externos en otra instancia de SQL Server. Cree tablas externas para hacer referencia a datos externos.
+ms.date: 12/13/2019
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
@@ -8,20 +10,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: df3b8fb47e232b62bfd485c366f6b1e3acf7dcca
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 3bb2528613bc4e13cf5c3559e8d257e64e276fd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85741320"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar PolyBase para acceder a datos externos en SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en otra instancia de SQL Server.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos. Una vez instalado, asegúrese también de [habilitar PolyBase.](polybase-installation.md#enable)
 

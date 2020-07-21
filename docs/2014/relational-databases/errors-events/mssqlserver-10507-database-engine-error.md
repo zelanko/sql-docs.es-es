@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 810419dede861e7447bfda9d50aea22ce8b2cf53
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916304"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552390"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10507|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10507|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_STMT_DOES_NOT_MATCH|  
-|Texto del mensaje|No se puede crear la Guía de plan ' %. \*ls' porque la instrucción especificada por `@stmt` y `@module_or_batch`, o por `@plan_handle` y `@statement_start_offset`, no coincide con ninguna instrucción del módulo especificado o lote. Modifique los valores para que coincidan con una instrucción del módulo o lote.|  
+|Texto del mensaje|No se puede crear la guía de plan '%.\*ls' porque la instrucción especificada por `@stmt` y `@module_or_batch`, o por `@plan_handle` y `@statement_start_offset`, no coincide con ninguna instrucción del módulo o lote especificado. Modifique los valores para que coincidan con una instrucción del módulo o lote.|  
   
 ## <a name="explanation"></a>Explicación  
  Una instrucción en el módulo o lote especificado no se pudo hacer coincidir con la instrucción o valor de desplazamiento de instrucción especificados.  
@@ -38,7 +37,7 @@ ms.locfileid: "62916304"
 ## <a name="user-action"></a>Acción del usuario  
  Modifique los valores de los parámetros especificados para que coincidan con una instrucción del módulo o lote.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guías de plan](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  

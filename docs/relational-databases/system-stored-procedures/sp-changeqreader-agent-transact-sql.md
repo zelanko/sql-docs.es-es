@@ -13,17 +13,17 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e3ecfc002a04cb499898b63976e7a094b4a05fd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099138"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871374"
 ---
-# <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia propiedades de seguridad de un Agente de lectura de cola. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución o en el publicador de la base de datos de publicaciones.  
   
@@ -39,11 +39,11 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'` Es el inicio de sesión para el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows cuenta con la que se ejecuta el agente. *job_login* es **nvarchar (257)** , su valor predeterminado es null.  
+`[ @job_login = ] 'job_login'`Es el inicio de sesión de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
   
-`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows que se ejecuta el agente. *job_password* es **sysname**, su valor predeterminado es null.  
+`[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @frompublisher = ] frompublisher` Indica si el procedimiento se ejecuta en el publicador. *frompublisher* es de tipo bit, con un valor predeterminado de **0**. Un valor de **1** significa que el procedimiento se ejecuta en el publicador de la base de datos de publicación.  
+`[ @frompublisher = ] frompublisher`Es si el procedimiento se ejecuta en el publicador. *frompublisher* es de bit y su valor predeterminado es **0**. Un valor de **1** significa que el procedimiento se ejecuta desde el publicador en la base de datos de publicación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -51,15 +51,15 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="remarks"></a>Comentarios  
  **sp_changeqreader_agent** se utiliza en la replicación transaccional.  
   
- **sp_changeqreader_agent** se usa para cambiar la cuenta de Windows que se ejecuta un agente de lectura de cola. Puede cambiar la contraseña de un inicio de sesión de Windows existente o proporcionar una contraseña y un inicio de sesión de Windows nuevos.  
+ **sp_changeqreader_agent** se utiliza para cambiar la cuenta de Windows con la que se ejecuta un agente de lectura de cola. Puede cambiar la contraseña de un inicio de sesión de Windows existente o proporcionar una contraseña y un inicio de sesión de Windows nuevos.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changeqreader_agent**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changeqreader_agent**.  
   
-## <a name="see-also"></a>Vea también  
- [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
+## <a name="see-also"></a>Consulte también  
+ [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addqreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   
   

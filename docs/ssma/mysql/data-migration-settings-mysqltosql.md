@@ -10,47 +10,47 @@ ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67896370"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Configuración de la migración de datos (MySQLToSQL)
   
 ## <a name="data-migration-settings"></a>Configuración de la migración de datos  
-**Configuración de la migración de datos** permite al usuario escribir consultas personalizadas para la migración de datos.  
+La **configuración de migración de datos** permite al usuario escribir consultas personalizadas para la migración de datos.  
   
--   Esta pestaña está disponible cuando **opciones de migración de datos ampliado** está establecido en **mostrar** y se oculta cuando el valor se establece en **ocultar** en configuración del proyecto. Para obtener más información acerca de la configuración del proyecto de migración, consulte [configuración del proyecto (migración)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
+-   Esta pestaña está disponible cuando **Opciones de migración de datos extendidos** está establecida en **Mostrar** y está oculta cuando el valor está establecido en **ocultar** en la configuración del proyecto. Para obtener más información sobre la configuración de la migración de proyectos, vea [configuración del proyecto (migración)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9) .  
   
--   Análisis de instrucciones SQL personalizada que se implementará en **configuración de migración de datos** ficha del nodo de la tabla.  
+-   El análisis de instrucciones SQL personalizadas se implementará en la pestaña **configuración de migración de datos** del nodo de tabla.  
   
--   Estos son las dos casillas de verificación disponibles en el **configuración de migración de datos** viz.:  
+-   A continuación se muestran las dos casillas disponibles en la **configuración de migración de datos** , es decir:  
   
-    1.  Truncar la tabla de SQL Server  
+    1.  Truncar SQL Server tabla  
   
-    2.  Seleccione uso personalizado  
+    2.  Usar selección personalizada  
   
-1.  **Puede truncar la tabla de SQL Server:**  
-     Esta opción permite al usuario que tiene una visión clara de los datos migrados en la base de datos de destino.  
+1.  **Truncar SQL Server tabla:**  
+     Esta opción permite que el usuario tenga una vista clara de los datos migrados en la base de datos de destino.  
   
-    -   De forma predeterminada, este cuadro de texto está activada.  
+    -   De forma predeterminada, este cuadro de texto está activado.  
   
-    -   Si este cuadro de texto está desactivada, se agregarán los datos que se migren a los datos existentes en la base de datos de destino.  
+    -   Si este cuadro de texto está desactivado, los datos migrados se agregarán a los datos existentes en la base de datos de destino.  
   
-2.  **Seleccione uso personalizado:**  
-     Esta opción permite al usuario modificar el **seleccione** instrucción presente (**seleccione** instrucción permite a los usuarios seleccionar los datos que se muestra en la base de datos de destino).  
+2.  **Usar selección personalizada:**  
+     Esta opción permite al usuario modificar la instrucción **Select** (la instrucción**Select** permite a los usuarios seleccionar los datos que se van a mostrar en la base de datos de destino).  
   
-    1.  De forma predeterminada, este cuadro de texto está desactivada.  
+    1.  De forma predeterminada, este cuadro de texto está desactivado.  
   
-    2.  Si este cuadro de texto está activada, permite a los usuarios modificar la **seleccione** instrucción presente.  
+    2.  Si este cuadro de texto está activado, permite a los usuarios modificar la instrucción **Select** .  
   
-Hay dos botones que presentes viz.:  
+Hay dos botones presentes:  
   
--   **Se aplican:** Haga clic en **aplicar** para aplicar la configuración que han cambiado.  
+-   **Aplicar:** Haga clic en **aplicar** para aplicar la configuración que ha cambiado.  
   
--   **Cancelar:** Haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
+-   **Cancelar:** Haga clic en **Cancelar** para restaurar la configuración presente antes de que se realizaran los cambios.  
   
-## <a name="see-also"></a>Vea también  
-[Migrar datos de MySQL a SQL Server o SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
+## <a name="see-also"></a>Consulte también  
+[Migración de datos de MySQL a SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

@@ -1,5 +1,5 @@
 ---
-title: Con la obtención de detalles en datos de estructura (Tutorial de minería de datos básicos) | Microsoft Docs
+title: Usar la obtención de detalles en datos de estructura (tutorial básico de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745546"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Usar la obtención de detalles en datos de estructura (Tutorial básico de minería de datos)
@@ -28,7 +28,7 @@ ms.locfileid: "62745546"
   
 3.  En la pestaña Modelos de minería de datos, haga clic con el botón secundario en el modelo y seleccione **Procesar modelo**.  
   
- Para obtener más información, consulte [consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ Para obtener más información, vea [consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Para ver los datos de obtención de detalles de un modelo de minería de datos  
   
@@ -36,22 +36,22 @@ ms.locfileid: "62745546"
   
 2.  Seleccione el modelo **TM_Decision_Tree** en la lista **Modelo de minería de datos** .  
   
-3.  Cambiar el **en segundo plano** valor `1`. De esta forma, se muestra solo la parte del modelo que está relacionada con los clientes que compraron bicicletas.  
+3.  Cambie el **Background** valor de fondo `1`a. De esta forma, se muestra solo la parte del modelo que está relacionada con los clientes que compraron bicicletas.  
   
-4.  En la lista **Visor** , seleccione Visor de árboles de Microsoft. De esta manera, se forzará la actualización del visor con las condiciones de filtro. A continuación, busque el **Age > = 34 y < 41** con el botón secundario en el nodo y el nodo.  
+4.  En la lista **Visor** , seleccione Visor de árboles de Microsoft. De esta manera, se forzará la actualización del visor con las condiciones de filtro. A continuación, busque el nodo **Age >= 34 y <41** y haga clic con el botón secundario en el nodo.  
   
 5.  Seleccione **Obtener detalles**y después **Columnas de modelo y estructura** para abrir la ventana **Obtener detalles** .  
   
 6.  Desplácese a la columna **Structure.Date First Purchase** para ver la fecha de compra de las bicicletas anteriores.  
   
-7.  Para copiar los datos en el Portapapeles, haga clic con el botón secundario en cualquier fila de la tabla y seleccione **Copiar todo.**  
+7.  Para copiar los datos en el Portapapeles, haga clic con el botón derecho en cualquier fila de la tabla y seleccione **Copiar todo**.  
   
  Felicidades, ha completado el Tutorial básico de minería de datos. Ahora que conoce más las herramientas de minería de datos, recomendamos que también complete el Tutorial intermedio de minería de datos, que demuestra cómo crear modelos de pronóstico, análisis de la cesta de la compra y agrupación en clústeres de secuencia.  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
  [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una consulta de predicción con el Generador de consultas de predicción](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

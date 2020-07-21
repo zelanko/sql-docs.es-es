@@ -33,15 +33,16 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be4e5d401bd9269c3cedc0264648423259b7d948
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116477"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197443"
 ---
-# <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 DBCC SHOW_STATISTICS muestra las estadísticas de optimización de consulta actuales de una tabla o vista indizada. El optimizador de consultas utiliza las estadísticas para estimar la cardinalidad o el número de filas del resultado de la consulta, lo que hace posible que el optimizador de consultas pueda crear un plan de consulta de alta calidad. Por ejemplo, el optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador index seek en lugar del operador index scan en el plan de consulta, lo que mejoraría el rendimiento de las consultas al evitar el examen de índices con una gran cantidad de recursos.
   
@@ -49,13 +50,13 @@ El optimizador de consultas almacena las estadísticas de una tabla o vista indi
   
 DBCC SHOW_STATISTICS muestra el encabezado, el histograma y el vector de densidad en función de los datos guardados en el objeto de estadísticas. La sintaxis le permite especificar una tabla o vista indizada junto con un nombre del índice de destino, un nombre de las estadísticas o un nombre de columna. En este tema se describe cómo se muestran las estadísticas y cómo se interpretan los resultados mostrados.
   
-Para obtener más información, vea [Statistics](../../relational-databases/statistics/statistics.md).
+Para más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-## <a name="syntax"></a>Sintaxis  
-  
-```
+## <a name="syntax"></a>Sintaxis
+
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )   
@@ -64,37 +65,40 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
     STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM  
 ```  
   
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
     [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
-[;]  
-```  
-  
-## <a name="arguments"></a>Argumentos  
+[;]
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+
  *table_or_indexed_view_name*  
  Nombre de la tabla o de la vista indizada cuya información de estadísticas se va a presentar.  
   
  *table_name*  
  Nombre de la tabla que contiene las estadísticas que mostrar. La tabla no puede ser una tabla externa.  
   
- *destino*  
+ *Destino*  
  Nombre del índice, estadística o columna cuya información de estadísticas se va a presentar. *target* se incluye entre paréntesis, entre comillas simples, entre comillas dobles o sin comillas. Si *target* es el nombre de un índice o estadística existentes en una tabla o vista indizada, se devuelve la información de estadísticas acerca de este destino. Si *target* es el nombre de una columna existente y dicha columna contiene una estadística creada automáticamente, se devuelve información sobre dicha estadística. Si una estadística creada automáticamente no existe para el destino de una columna, se devuelve el mensaje de error 2767.  
  En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], *target* no puede ser un nombre de columna.  
   
  NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
- La especificación de una o varias de estas opciones limita los conjuntos de resultados devueltos por la instrucción a la opción u opciones especificadas. Si no se especifican opciones, se devuelve información de todas las estadísticas.  
-  
+ STAT_HEADER \| DENSITY_VECTOR \| HISTOGRAM \| STATS_STREAM [ **,** _n_ ] La especificación de una o varias de estas opciones limita los conjuntos de resultados que devuelve la instrucción a la opción u opciones especificadas. Si no se especifican opciones, se devuelve información de todas las estadísticas.  
+
  STATS_STREAM es [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-## <a name="result-sets"></a>Conjuntos de resultados  
+## <a name="result-sets"></a>Conjuntos de resultados
+
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica STAT_HEADER.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |Nombre|Nombre del objeto de estadísticas.|  
 |Actualizado|Fecha y hora de la última actualización de las estadísticas. La función [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) constituye otro modo de recuperar esta información. Para más información, vea la sección [Comentarios](#Remarks) en esta página.|  
@@ -110,7 +114,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
   
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica DENSITY_VECTOR.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |Toda la densidad|La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefijo (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5)|  
 |Promedio de longitud|Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.|  
@@ -118,7 +122,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
   
 En la tabla siguiente se describen las columnas devueltas en el conjunto de resultados si se especifica la opción HISTOGRAM.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |---|---|
 |RANGE_HI_KEY|Valor de columna límite superior de un paso del histograma. El valor de columna también se denomina valor de clave.|  
 |RANGE_ROWS|Número calculado de filas cuyo valor de columna está comprendido en un paso del histograma, sin incluir el límite superior.|  
@@ -126,18 +130,19 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 |DISTINCT_RANGE_ROWS|Número calculado de filas que tienen un valor de columna distinto en un paso del histograma, sin incluir el límite superior.|  
 |AVG_RANGE_ROWS|Promedio de filas con valores de columna duplicados en un paso del histograma, sin incluir el límite superior. Cuando DISTINCT_RANGE_ROWS es mayor que 0, AVG_RANGE_ROWS se calcula dividiendo RANGE_ROWS por DISTINCT_RANGE_ROWS. Cuando DISTINCT_RANGE_ROWS es 0, AVG_RANGE_ROWS devuelve 1 para el paso del histograma.| 
   
-## <a name="Remarks"></a> Comentarios 
+## <a name="remarks"></a><a name="Remarks"></a> Comentarios 
 
 La fecha de actualización de estadísticas se almacena en el [objeto BLOB de estadísticas](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) junto con el [histograma](#histogram) y el [vector de densidad](#density), pero no en los metadatos. Cuando no se lee ningún dato con el que generar datos de estadísticas, el BLOB de estadísticas no se crea, la fecha no está disponible y la columna *updated* es NULL. Esto sucede en las estadísticas filtradas, en las que el predicado no devuelve ninguna fila, o en las tablas nuevas vacías.
   
-## <a name="histogram"></a> Histograma  
+## <a name="histogram"></a><a name="histogram"></a> Histograma
+
 Un histograma mide la frecuencia de aparición de cada valor distinto en un conjunto de datos. El optimizador de consultas calcula un histograma de los valores de la primera columna de clave del objeto de estadísticas; para ello, selecciona los valores de la columna tomando una muestra estadística de las filas o realizando un análisis completo de todas las filas de la tabla o vista. Si el histograma se crea a partir de muestras de un conjunto de filas, los totales almacenados para el número de filas y el número de valores distintos son las estimaciones y no es necesario que sean números enteros.
   
 Para crear el histograma, el optimizador de consultas ordena los valores de columna, calcula el número de valores que coinciden con cada valor de columna distinto y, a continuación, agrupa los valores de columna en un máximo de 200 pasos de histograma contiguos. Cada paso incluye un intervalo de valores de columna seguido de un valor de columna de límite superior. El intervalo incluye todos los valores de columna posibles comprendidos entre los valores límite (sin incluir los propios valores límite). El valor de columna ordenado más pequeño es el valor del límite superior del primer paso del histograma.
   
 En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.
   
-![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
+![Histograma](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")
   
 En cada paso del histograma:
 -   La línea gruesa representa el valor de límite superior (RANGE_HI_KEY) y el número de veces que tiene lugar (EQ_ROWS).  
@@ -146,7 +151,7 @@ En cada paso del histograma:
   
 El optimizador de consultas define los pasos del histograma en función de su importancia estadística. Utiliza un algoritmo de diferencias máximas para minimizar el número de pasos del histograma a la vez que minimiza las diferencias entre los valores límite. El número máximo de pasos es 200. El número de pasos del histograma puede ser menor que el número de valores distintos, incluso para las columnas con menos de 200 puntos de límite. Por ejemplo, una columna con 100 valores distintos puede tener un histograma con menos de 100 puntos de límite.
   
-## <a name="density"></a> Vector de densidad  
+## <a name="density-vector"></a><a name="density"></a> Vector de densidad  
 El optimizador de consultas utiliza las densidades para mejorar las estimaciones de cardinalidad de las consultas que devuelven varias columnas de la misma tabla o vista indizada. El vector de densidad contiene una densidad para cada prefijo de columnas del objeto de estadísticas. Por ejemplo, si un objeto de estadísticas tiene las columnas de clave `CustomerId`, `ItemId` y `Price`, la densidad se calcula en cada uno de los siguientes prefijos de columna.
   
 |Prefijo de columna|Densidad calculada en|  
@@ -155,31 +160,34 @@ El optimizador de consultas utiliza las densidades para mejorar las estimaciones
 |(IdCliente, IdArtículo)|Filas con valores que se corresponden con IdCliente e IdArtículo|  
 |(IdCliente, IdArtículo, Precio)|Filas con valores que se corresponden con IdCliente, IdArtículo y Precio|  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  DBCC SHOW_STATISTICS no proporciona estadísticas de índices de almacén de columnas optimizadas en memoria xVelocity o espaciales.  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 modifica las restricciones de permisos y permite que los usuarios que disponen del permiso SELECT puedan usar este comando. Tenga en cuenta los siguientes requisitos para que los permisos SELECT sean suficientes para ejecutar el comando:
+## <a name="permissions-for-ssnoversion-and-sssds"></a>Permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+Para ver el objeto de estadísticas, el usuario debe tener el permiso SELECT en la tabla.
+Tenga en cuenta los siguientes requisitos para que los permisos SELECT sean suficientes para ejecutar el comando:
 -   Los usuarios deben tener permisos en todas las columnas del objeto de estadísticas  
 -   Los usuarios deben tener permiso en todas las columnas de una condición de filtro (si existe alguna)  
--   La tabla no puede tener una directiva de seguridad de nivel de fila.  
+-   La tabla no puede tener una directiva de seguridad de nivel de fila.
+-   Si alguna de las columnas de un objeto de estadísticas se enmascara con reglas de Enmascaramiento dinámico de datos, además del permiso SELECT, el usuario debe tener el permiso UNMASK
+
+En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, o bien de los roles fijos de base de datos `db_owner` o `db_ddladmin`.
+
+ > [!NOTE]
+ > Para volver a cambiar el comportamiento al anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, use la marca de seguimiento 9485.
   
-Para deshabilitar este comportamiento, use la marca de seguimiento 9485.
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Permisos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="permissions-for-sssdw-and-sspdw"></a>Permisos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS requiere el permiso SELECT en la tabla o pertenecer a uno de los siguientes roles:
 -   rol fijo de servidor sysadmin  
 -   rol fijo de base de datos db_owner  
 -   rol fijo de base de datos db_ddladmin  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS muestra las estadísticas almacenadas en la base de datos de shell en el nivel del nodo de control. No muestra las estadísticas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea automáticamente en los nodos de ejecución.
   
 DBCC SHOW_STATISTICS no se admite en tablas externas.
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>Ejemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>Ejemplos: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. Devolver información de todas las estadísticas  
 En el siguiente ejemplo se muestra toda la información de estadísticas del índice `AK_Address_rowguid` de la tabla `Person.Address` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
@@ -196,7 +204,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. Mostrar el contenido de un objeto de estadísticas  
  En el siguiente ejemplo se muestra el contenido de las estadísticas de Customer_LastName en la tabla DimCustomer.  
   
@@ -215,7 +223,7 @@ Los resultados muestran el encabezado, el vector de densidad y parte del histogr
 ![Resultados de DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "Resultados de DBCC SHOW_STATISTICS")
   
 ## <a name="see-also"></a>Consulte también  
-[Estadísticas](../../relational-databases/statistics/statistics.md)  
+[estadísticas](../../relational-databases/statistics/statistics.md)  
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)  
 [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  

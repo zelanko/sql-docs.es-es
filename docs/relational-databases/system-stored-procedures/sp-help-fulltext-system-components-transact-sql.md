@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72304883"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827659"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,19 +45,19 @@ sp_help_fulltext_system_components
  'all'  
  Devuelve información para todos los componentes de texto completo.  
   
-`[ @component_type = ] component_type` especifica el tipo de componente. *component_type* puede ser uno de los siguientes:  
+`[ @component_type = ] component_type`Especifica el tipo de componente. *component_type* puede ser una de las siguientes:  
   
--   **wordbreaker**  
+-   **separador**  
   
 -   **filter**  
   
--   **controlador de protocolo**  
+-   **protocol handler**  
   
--   **fullpath**  
+-   **FullPath**  
   
  Si se especifica una ruta de acceso completa, también se debe especificar *param* con la ruta de acceso completa del archivo DLL del componente; de lo contrario, se devuelve un mensaje de error.  
   
-`[ @param = ] param` dependiendo del tipo de componente, es uno de los siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa al archivo DLL del componente.  
+`[ @param = ] param`Dependiendo del tipo de componente, es uno de los siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa al archivo DLL del componente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -65,20 +65,20 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para los componentes del sistema, se devuelve el siguiente conjunto de resultados.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentName**|**sysname**|Nombre del componente.|  
-|**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
-|**fullpath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el autor de la llamada no es miembro del rol fijo de servidor **ServerAdmin** .|  
+|**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
+|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el autor de la llamada no es miembro del rol fijo de servidor **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|Versión del componente.|  
-|**manufacturer**|**sysname**|Nombre del fabricante del componente.|  
+|**le**|**sysname**|Nombre del fabricante del componente.|  
   
  El siguiente conjunto de resultados se devuelve solo si existe uno o más de un catálogo de texto completo que usa *component_type*.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**dbid**|**int**|Identificador de la base de datos.|  
+|**DBID**|**int**|Identificador de la base de datos.|  
 |**ftcatid**|**int**|Id. del catálogo de texto completo.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -97,7 +97,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>b. Mostrar separadores de palabras  
+### <a name="b-listing-word-breakers"></a>B. Mostrar separadores de palabras  
  En el ejemplo siguiente se muestran todos los separadores de palabras registrados en la instancia del servicio.  
   
 ```  
@@ -106,7 +106,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Determinar si un separador de palabras concreto está registrado  
- El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro, **\@component_type** y **\@param**.  
+ El ejemplo siguiente mostrará el separador de palabras del idioma turco (LCID = 1055) si se ha instalado en el sistema y si está registrado en la instancia del servicio. Este ejemplo especifica los nombres de parámetro, ** \@ component_type** y ** \@ param**.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -135,10 +135,10 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Ver o cambiar filtros registrados y](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)separadores de palabras    
+## <a name="see-also"></a>Consulte también  
+ [Ver o cambiar los filtros y separadores de palabras registrados](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
- [Procedimientos &#40;almacenados de búsqueda semántica y búsqueda de texto completo de TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Configurar y administrar filtros para la búsqueda](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
+ [Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

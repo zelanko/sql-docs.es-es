@@ -11,14 +11,14 @@ helpviewer_keywords:
 - retrieving data, as a character stream
 - streaming data
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3b4a0fd48809d53cda18f2ceb4eaf1f435210e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a4dfdc85256a5f9e85f8ee4ac5b090a4088e90a9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936413"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916271"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ La recuperación de datos como un flujo solo está disponible en el controlador 
 El controlador SQLSRV aprovecha las ventajas de las secuencias de PHP para recuperar grandes cantidades de datos del servidor. En el ejemplo de este tema se muestra cómo recuperar datos de caracteres como una secuencia.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se recupera una fila de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. El campo *Comments* de la fila devuelta se recupera como una secuencia y se muestra mediante la función PHP [fpassthru](https://php.net/manual/function.fpassthru.php) .  
+En el ejemplo siguiente se recupera una fila de la tabla *Production.ProductReview* de la base de datos de AdventureWorks. El campo *Comments* de la fila devuelta se recupera como un flujo y se muestra mediante la función PHP [fpassthru](https://php.net/manual/function.fpassthru.php).  
   
 El proceso de recuperación de los datos como una secuencia se realiza utilizando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) y [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con el tipo de valor devuelto como una secuencia de caracteres. El tipo de valor devuelto se especifica mediante la constante **SQLSRV_PHPTYPE_STREAM**. Para obtener información sobre las constantes **sqlsrv**, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   

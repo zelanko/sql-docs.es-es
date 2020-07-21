@@ -12,15 +12,14 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 232cc046667c6d31cb9657a7abdc862204507d23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63193266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059413"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar el modo AUTO con FOR XML
   Tal como se describe en [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  
@@ -121,7 +120,7 @@ FOR XML AUTO, ELEMENTS
 ...  
 ```  
   
- En esta consulta, los valores CustomerID de una fila se comparan con los de la siguiente al crear elementos \<Cust>, porque CustomerID es la clave principal de la tabla. Si no se identifica CustomerID como clave principal de la tabla, todos los valores de columna (CustomerID, CustomerType en esta consulta) de una fila se comparan con los de la siguiente. Si los valores difieren, se agrega un nuevo elemento \<Cust> al XML.  
+ En esta consulta, los valores CustomerID se comparan de una fila con la siguiente en la creación de los \<Cust> elementos, porque CustomerID es la clave principal de la tabla. Si no se identifica CustomerID como clave principal de la tabla, todos los valores de columna (CustomerID, CustomerType en esta consulta) de una fila se comparan con los de la siguiente. Si los valores difieren, \<Cust> se agrega un nuevo elemento al XML.  
   
  Cuando se comparan estos valores de columna, si algunas de las columnas que se comparan son de tipo **text**, **ntext**, **image**o **xml**, FOR XML asume que los valores son diferentes y no los compara, incluso si son los mismos. Esto se debe a que no se admite la comparación de objetos grandes. Se agregan elementos al resultado para cada fila seleccionada. Tenga en cuenta que se comparan las columnas de **(n)varchar(max)** y **varbinary(max)** .  
   
@@ -136,9 +135,9 @@ FOR XML AUTO, ELEMENTS
   
 -   [Heurística del modo AUTO para dar forma al XML devuelto](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Ejemplos: Uso del modo AUTO](examples-using-auto-mode.md)  
+-   [Ejemplos: Usar el modo AUTO](examples-using-auto-mode.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   

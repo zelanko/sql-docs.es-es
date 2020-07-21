@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931976"
 ---
 # <a name="upgrade-database-engine"></a>Actualizar el motor de base de datos
   Este tema proporciona información que necesitará para preparar y comprender el proceso de actualización; incluye:  
@@ -37,13 +36,13 @@ ms.locfileid: "62774986"
 -   Tareas y consideraciones posteriores a la actualización.  
   
 ## <a name="known-upgrade-issues"></a>Problemas conocidos de actualización  
- Antes de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../sql-server-database-engine-backward-compatibility.md). Para más información sobre escenarios de actualización admitidos y problemas conocidos de actualización, vea [Actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md). Para obtener información sobre compatibilidad con versiones anteriores de otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Compatibilidad con versiones anteriores](../../getting-started/backward-compatibility.md).  
+ Antes de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], vea [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md). Para más información sobre escenarios de actualización admitidos y problemas conocidos de actualización, vea [Actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md). Para obtener información sobre compatibilidad con versiones anteriores de otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Backward Compatibility](../../getting-started/backward-compatibility.md).  
   
 > [!IMPORTANT]  
 >  Antes de actualizar de una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra, compruebe que las funciones que actualmente utiliza son compatibles con la edición a la que desea actualizar.  
   
 > [!NOTE]  
->  Cuando se actualiza a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, elija entre Enterprise Edition: Las licencias basadas en núcleo y Enterprise Edition. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, vea [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Al actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, elija entre “Enterprise Edition: Licencia Core” y “Enterprise Edition”. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Lista de comprobación previa a la actualización  
  El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la actualización a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde una versión anterior. También puede migrar las bases de datos de las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores. La migración puede ser de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra instancia del mismo equipo, o desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otro equipo. Las opciones de migración incluyen el uso del Asistente para copiar bases de datos, la funcionalidad Copia de seguridad y restauración, el uso del Asistente para importar y exportar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los métodos de importación en bloque y exportación masiva.  
@@ -62,7 +61,7 @@ ms.locfileid: "62774986"
   
 -   Revise [Emplear Distributed Replay Utility para preparar las actualizaciones](../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md).  
   
--   Revise [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../sql-server-database-engine-backward-compatibility.md).  
+-   Vea [SQL Server Database Engine Backward Compatibility](../sql-server-database-engine-backward-compatibility.md).  
   
 -   Revise [Migrar los planes de consulta](change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
@@ -76,7 +75,7 @@ ms.locfileid: "62774986"
   
 -   Ejecute los comandos de consola de datos (DBCC) en las bases de datos que vaya a actualizar para asegurarse de que se encuentran en un estado coherente.  
   
--   Calcule el espacio en disco necesario para actualizar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como las bases de datos de usuario. Para obtener el espacio en disco necesario para los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Calcule el espacio en disco necesario para actualizar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como las bases de datos de usuario. Para obtener el espacio en disco necesario para los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   Asegúrese de que las bases de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (maestra, de modelos, msdb y tempdb) existentes están configuradas para el crecimiento automático; asegúrese también de que tienen suficiente espacio disponible en disco duro.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62774986"
  Puede actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] con el Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Nivel de compatibilidad de la base de datos después de la actualización  
- Los niveles de compatibilidad de la `tempdb`, `model`, `msdb` y **recursos** bases de datos se establecen en 120 después de la actualización. La base de datos del sistema `master` conserva el nivel de compatibilidad que tenía antes de la actualización.  
+ Los niveles de compatibilidad de `tempdb` las `model` bases de datos de `msdb` **recursos** , y se establecen en 120 después de la actualización. La base de datos del sistema `master` conserva el nivel de compatibilidad que tenía antes de la actualización.  
   
  Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad era 90 antes de la actualización, en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -115,7 +114,7 @@ ms.locfileid: "62774986"
 > [!IMPORTANT]  
 >  Una base de datos que tenga el mismo nombre en los servidores de origen y de destino no se puede mover ni copiar. En este caso, aparecerá como "Ya existe".  
   
- Para obtener más información, vea [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
+ Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="after-upgrading-the-database-engine"></a>Después de actualizar el Motor de base de datos  
  Después de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], complete las siguientes tareas:  
@@ -134,7 +133,7 @@ ms.locfileid: "62774986"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cambia la manera en la que se procesan las consultas en las tablas e índices con particiones. Las consultas en los objetos con particiones que usan la sugerencia USE PLAN para un plan generado por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] podrían contener un plan que no se pueda usar en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Recomendamos que siga estos procedimientos después de actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-     **Cuando se especifica la sugerencia USE PLAN directamente en una consulta:**  
+     **Cuando la sugerencia de USE PLAN se especifica en una consulta directamente:**  
   
     1.  Quite la sugerencia de USE PLAN de la consulta.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62774986"
   
     3.  Si el optimizador no selecciona un plan adecuado, ajuste la consulta y, a continuación, considere especificar la sugerencia de USE PLAN con el plan de consulta deseado.  
   
-     **Cuando se especifica la sugerencia USE PLAN en una guía de plan:**  
+     **Cuando la sugerencia de USE PLAN se especifica en una guía de plan:**  
   
     1.  Utilice la función sys.fn_validate_plan_guide para comprobar la validez de la guía de plan. O bien, puede comprobar si hay planes no válidos mediante el evento Guía de plan incorrecto de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -162,7 +161,7 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md)   
  [Trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Compatibilidad con versiones anteriores](../../getting-started/backward-compatibility.md)   

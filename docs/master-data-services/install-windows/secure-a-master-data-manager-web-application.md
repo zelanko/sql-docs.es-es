@@ -1,24 +1,25 @@
 ---
-title: Proteger una aplicación web de Master Data Manager | Microsoft Docs
+title: Proteger una aplicación web Master Data Services
+description: En SQL Server, puede proteger la aplicación Web de Master Data Manager con HTTPS. Debe ser un administrador y MDS debe estar instalado en el servidor Web.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028801"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279381"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger una aplicación web Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Puede proteger la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] con HTTPS.  
   
@@ -31,20 +32,24 @@ ms.locfileid: "69028801"
 -   Debe ser administrador en el servidor web donde está instalado [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
 -   MDS debe estar instalado en el servidor web y debe existir una aplicación web. Para obtener más información, vea [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) y [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
-  
+
+- La [protección ampliada de IIS para la autenticación de Windows](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/) no debe estar habilitada. 
+
+- Configure el servidor web para que escuche en todas las direcciones IP disponibles. No configure el servidor web para que escuche en una dirección IP específica. 
+
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>Para proteger la aplicación web Administrador de datos maestros con HTTP  
   
 1.  Después de confirmar que la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] está configurada correctamente con HTTP, cree un certificado en IIS. Para obtener más información, vea [Configurar certificados de servidor en IIS 7](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  
   
 2.  En el panel **Conexiones** , debajo de **Sitios**, haga clic en en el sitio que hospeda la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
-3.  En el panel **Acciones** , haga clic en **Enlaces**.  
+3.  En el panel **Acciones**, haga clic en **Enlaces**.  
   
 4.  Haga clic en **Agregar**.  
   
 5.  En la lista, seleccione **https**.  
   
-6.  Seleccione el certificado SSL.  
+6.  Seleccione el certificado TLS/SSL.  
   
 7.  Haga clic en **Aceptar**.  
   
@@ -61,10 +66,10 @@ ms.locfileid: "69028801"
 
 12. Cambie `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` por `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que puedan aparecer en el cliente de Silverlight.
 
-13. Guarde el archivo y ciérrelo. Si obtiene un error, podría deberse a que ha habilitado UAC. Ahora los usuarios deben poder usar HTTPS para tener acceso al sitio.  
+13. Guarde y cierre el archivo. Si obtiene un error, podría deberse a que ha habilitado UAC. Ahora los usuarios deben poder usar HTTPS para tener acceso al sitio.  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Banner (ssbdiagnose) elemento | Microsoft Docs
+title: Elemento banner (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006789"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Elemento Banner (ssbdiagnose)
   Identifica la utilidad que generó el archivo de salida XML de **ssbdiagnose** .  
@@ -36,7 +35,7 @@ ms.locfileid: "63186866"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`title`|Identifica la utilidad que generó el archivo de salida XML de **ssbdiagnose** .|  
 |`product`|Identifica el producto que generó el archivo de salida XML de **ssbdiagnose** .|  
@@ -64,7 +63,7 @@ ms.locfileid: "63186866"
 <Banner title="Service Broker Diagnostics Utility" product="Microsoft SQL Server" version="10.0.1073.0" />  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Utilidad ssbdiagnose &#40;Service Broker&#41;](ssbdiagnose-utility-service-broker.md)  
   
   

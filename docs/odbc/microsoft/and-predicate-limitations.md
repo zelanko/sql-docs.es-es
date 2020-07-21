@@ -1,5 +1,5 @@
 ---
-title: Y las limitaciones de predicado | Microsoft Docs
+title: Y limitaciones de predicados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, AND predicate limitations
 - AND predicate limitations [ODBC]
 ms.assetid: b9f363af-a60a-40f0-9c22-28aa7b159e06
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 00cd6c597c79b639b1437e21cbe7f858c100f691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3d490dfa6466442532a7d3a35da031f4ed2dd4f0
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138222"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304676"
 ---
 # <a name="and-predicate-limitations"></a>Y las limitaciones de predicado
 Se admite un máximo de 40.

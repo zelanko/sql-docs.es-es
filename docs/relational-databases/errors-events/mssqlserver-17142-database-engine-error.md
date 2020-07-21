@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 83a53507-ac76-4cb9-b116-daf6f42aea1f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b11a405708d2a388fca9847e01ef3026044a946e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd9f95d863c101b2b8bdc0d502fcafe5773d589f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780854"
 ---
-# <a name="mssqlserver17142"></a>MSSQLSERVER_17142
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_17142"></a>MSSQLSERVER_17142
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|17142|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|17142|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|INIT_SRVC_PAUSED|  
 |Texto del mensaje|Se puso en pausa el servicio SQL Server. No se permitirán nuevas conexiones. Para reanudar el servicio, utilice SQL Computer Manager o la aplicación Servicios del Panel de control.|  

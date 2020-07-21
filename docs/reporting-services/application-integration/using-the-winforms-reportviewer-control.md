@@ -1,23 +1,25 @@
 ---
-title: Usar el control ReportViewer de WinForms | Microsoft Docs
+title: Uso del control ReportViewer de WinForms
+description: Para ver los informes implementados en un servidor de informes o en un sistema de archivos local, puede usar el control ReportViewer de WinForms para representarlos en una aplicación Windows.
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 8ae42ea326af05bd715b9380b794384d6690fdb7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195265"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198448"
 ---
-# <a name="using-the-winforms-reportviewer-control"></a>Usar el control ReportViewer de WinForms
+# <a name="use-the-winforms-reportviewer-control"></a>Uso del control ReportViewer de WinForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WinForms para representarlos en una aplicación Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Para agregar el control ReportViewer a una aplicación Windows  
@@ -28,9 +30,9 @@ ms.locfileid: "63195265"
   
      Abra un proyecto de aplicación Windows existente y agregue un nuevo formulario.  
   
-2.  Busque el control ReportViewer en **Cuadro de herramientas**. Si el **cuadro de herramientas** no es visible, puede obtener acceso a él desde el menú **Ver** si selecciona **Cuadro de herramientas**.  
+2.  Busque el control ReportViewer en **Cuadro de herramientas**. Si el **Cuadro de herramientas** no es visible, puede acceder a él desde el menú **Ver** si selecciona **Cuadro de herramientas**.  
   
-     ![Seleccionar control ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Seleccionar control ReportViewer")  
+     ![Selección del control ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Seleccionar control ReportViewer")  
   
 3.  Arrastre el control ReportViewer a la superficie de diseño de Windows Form.  
   
@@ -159,7 +161,7 @@ End Class
   
      ![Informe de detalles de pedido de ventas](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Informe de detalles de pedido de ventas")  
   
-5.  Haga clic con el botón secundario en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **Cambiar nombre**. Cambie el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
+5.  Haga clic con el botón derecho en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **Cambiar nombre**. Cambie el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
   
      Si el Explorador de soluciones no está visible, puede abrirlo en el menú **Ver** seleccionando **Explorador de soluciones**.  
   

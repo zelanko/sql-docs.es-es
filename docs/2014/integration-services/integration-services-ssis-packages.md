@@ -17,24 +17,23 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f2a7c3c1e70e8d402bcd73add2be04d93d182fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767697"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436502"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
-  Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
+  Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas de diseño gráfico proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
   
  Al crear por primera vez un paquete, es un objeto vacío que no hace nada. Para agregar funcionalidad a un paquete, debe agregarle un flujo de control y, opcionalmente, uno o más flujos de datos.  
   
  El siguiente diagrama muestra un paquete individual que contiene un flujo de control con una tarea Flujo de datos que, a su vez, contiene un flujo de datos.  
   
- ![Un paquete con un flujo de control y flujo de datos](media/ssis-package.gif "A package with a control flow and a data flow")  
+ ![Paquete con flujo de control y flujo de datos](media/ssis-package.gif "Paquete con flujo de control y flujo de datos")  
   
  Una vez creado el paquete básico, puede agregarle características avanzadas como registro y variables para extender su funcionalidad. Para obtener más información, vea la sección Objetos que extienden la funcionalidad de un paquete.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62767697"
   
  Cuando se crea un paquete por primera vez, ya sea mediante programación o mediante el Diseñador SSIS, se agrega un GUID a su propiedad `ID` y un nombre a su propiedad `Name`. Si crea un nuevo paquete mediante la copia de un paquete existente o mediante una plantilla de paquetes, también se copian el nombre y GUID del paquete existente. Esto puede ser un problema si se está realizando el registro, dado que el nombre y GUID del paquete se escriben en los registros para identificar el paquete al que pertenece la información registrada. Por lo tanto, debe actualizar el nombre y GUID de los nuevos paquetes para diferenciarlos entre sí y del paquete del que se copiaron en los datos de registro.  
   
- Para cambiar el GUID del paquete, debe volver a generar un GUID en la propiedad `ID` y en la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para cambiar el nombre del paquete, puede actualizar el valor de la propiedad `Name` en la ventana Propiedades. También puede utilizar el símbolo del sistema **dtutil** o actualizar el nombre y el GUID mediante programación. Para obtener más información, vea [Establecer las propiedades de paquetes](set-package-properties.md) y [dtutil (utilidad)](dtutil-utility.md).  
+ Para cambiar el GUID del paquete, debe volver a generar un GUID en la propiedad `ID` y en la ventana Propiedades de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para cambiar el nombre del paquete, puede actualizar el valor de la propiedad `Name` en la ventana Propiedades. También puede utilizar el símbolo del sistema **dtutil** o actualizar el nombre y el GUID mediante programación. Para más información, vea [Establecer las propiedades de paquetes](set-package-properties.md) y [dtutil (utilidad)](dtutil-utility.md).  
   
 ## <a name="objects-that-extend-package-functionality"></a>Objetos que extienden la funcionalidad de un paquete  
  Los paquetes pueden incluir objetos adicionales que proporcionan características avanzadas o extienden la funcionalidad existente, como controladores de eventos, configuraciones, registro y variables.  
@@ -74,7 +73,7 @@ ms.locfileid: "62767697"
  Las variables de nivel de paquete incluyen las variables del sistema predefinidas disponibles para un paquete y las variables definidas por el usuario con el ámbito del paquete. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ### <a name="parameters"></a>Parámetros  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permiten asignar valores a propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo. Para obtener más información, vea [Paquete de Integration Services &#40;SSIS&#41; y los parámetros del proyecto](integration-services-ssis-package-and-project-parameters.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permiten asignar valores a propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *los parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo. Para obtener más información, vea [Paquete de Integration Services &#40;SSIS&#41; y los parámetros del proyecto](integration-services-ssis-package-and-project-parameters.md).  
   
 ## <a name="package-properties-that-support-extended-features"></a>Propiedades de paquete que ofrecen características extendidas  
  Se puede configurar el objeto de paquete para que admita características como reiniciar el paquete en puntos de comprobación, firmar el paquete con un certificado digital, establecer el nivel de protección del paquete y garantizar la integridad de los datos mediante transacciones.  
@@ -86,15 +85,15 @@ ms.locfileid: "62767697"
  Un paquete puede firmarse con una firma digital y cifrarse con una contraseña o una clave de usuario. Una firma digital autentica el origen del paquete. Sin embargo, también se debe configurar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para que compruebe la firma digital al cargar el paquete. Para obtener más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md) y [Control del acceso a la información confidencial en paquetes](security/access-control-for-sensitive-data-in-packages.md).  
   
 ### <a name="supporting-transactions"></a>Compatibilidad con las transacciones  
- Si se establece un atributo de transacción en el paquete, las tareas, los contenedores y las conexiones del paquete podrán unirse a la transacción. Los atributos de transacción garantizan que el paquete y sus elementos se ejecuten correctamente o no como una unidad (todos o ninguno). Los paquetes también pueden ejecutar otros paquetes e inscribir otros paquetes en transacciones, de forma que se pueden ejecutar varios paquetes como una sola unidad de trabajo. Para obtener más información, consulte [Transacciones de Integration Services](integration-services-transactions.md).  
+ Si se establece un atributo de transacción en el paquete, las tareas, los contenedores y las conexiones del paquete podrán unirse a la transacción. Los atributos de transacción garantizan que el paquete y sus elementos se ejecuten correctamente o no como una unidad (todos o ninguno). Los paquetes también pueden ejecutar otros paquetes e inscribir otros paquetes en transacciones, de forma que se pueden ejecutar varios paquetes como una sola unidad de trabajo. Para más información, vea [Transacciones de Integration Services](integration-services-transactions.md).  
   
 ## <a name="custom-log-entries-available-on-the-package"></a>Entradas del registro personalizadas disponibles en el paquete  
  La siguiente tabla contiene las entradas del registro personalizadas para paquetes. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../../2014/integration-services/custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`PackageStart`|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
-|`PackageEnd`|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|`PackageStart`|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|`PackageEnd`|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
 |`Diagnostic`|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.|  
   
 ## <a name="configuration-of-packages"></a>Configuración de paquetes  

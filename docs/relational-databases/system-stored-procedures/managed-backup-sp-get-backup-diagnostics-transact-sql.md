@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_get_backup_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942045"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053501"
 ---
-# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Devuelve los eventos extendidos registrados por Smart Admin.  
   
- Utilice este procedimiento almacenado para supervisar los eventos extendidos registrados por Smart Admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] eventos se registran en este sistema y se pueden revisar y supervisar mediante este procedimiento almacenado.  
+ Utilice este procedimiento almacenado para supervisar los eventos extendidos registrados por Smart admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]los eventos se registran en este sistema y se pueden revisar y supervisar mediante este procedimiento almacenado.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,32 +41,32 @@ ms.locfileid: "67942045"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @xevent_channel  
- Tipo de evento extendido. El valor predeterminado se establece para devolver todos los eventos registrados durante los 30 minutos anteriores. Los eventos registrados dependen del tipo de Eventos extendidos habilitados. Puede utilizar este parámetro para filtrar el procedimiento almacenado para mostrar solo los eventos de un tipo determinado. Puede especificar el nombre completo del evento o especifique una subcadena como: **'Admin'** , **'Analytic'** , **'Operational'** , y **'Debug'** . El @event_channel es **VARCHAR (255)** .  
+ Tipo de evento extendido. El valor predeterminado se establece para devolver todos los eventos registrados durante los 30 minutos anteriores. Los eventos registrados dependen del tipo de Eventos extendidos habilitados. Puede utilizar este parámetro para filtrar el procedimiento almacenado para mostrar solo los eventos de un tipo determinado. Puede especificar el nombre de evento completo o especificar una subcadena como: **' admin**', ' **Analytics '**, **' Operational '** y **' Debug '**. @event_channelEs **VARCHAR (255)**.  
   
- Para obtener una lista de eventos habilitados actualmente tipos uso el **managed_backup.fn_get_current_xevent_settings** función.  
+ Para obtener una lista de tipos de eventos habilitados actualmente, use la función **managed_backup. fn_get_current_xevent_settings** .  
   
  [@begin_time  
- El inicio del período de tiempo cuyos eventos se deben mostrar. El @begin_time parámetro es DateTime y su valor predeterminado es null. Si esto no se especifica, se muestran los eventos de los últimos 30 minutos.  
+ El inicio del período de tiempo cuyos eventos se deben mostrar. El @begin_time parámetro es de tipo DateTime y su valor predeterminado es NULL. Si esto no se especifica, se muestran los eventos de los últimos 30 minutos.  
   
  @end_time  
- El fin del período de tiempo cuyos eventos se deben mostrar. El @end_time parámetro es DateTime con un valor predeterminado es NULL.  Si esto no se especifica, se muestran los eventos hasta la hora actual.  
+ El fin del período de tiempo cuyos eventos se deben mostrar. El @end_time parámetro es de fecha y hora con un valor predeterminado de NULL.  Si esto no se especifica, se muestran los eventos hasta la hora actual.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
  Este procedimiento almacenado devuelve una tabla con la siguiente información:  
   
 ||||  
 |-|-|-|  
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |event_type|NVARCHAR (512)|Tipo de evento extendido.|  
 |Evento|NVARCHAR (512)|Resumen de los registros de eventos.|  
-|Timestamp|TIMESTAMP|Marca de tiempo de evento que muestra si el evento se ha producido.|  
+|Timestamp|timestamp|Marca de tiempo de evento que muestra si el evento se ha producido.|  
   
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere **EXECUTE** permisos en el procedimiento almacenado. También requiere **VIEW SERVER STATE** permisos desde que llama internamente a otros objetos del sistema que requieren este permiso.  
+ Requiere permisos **Execute** en el procedimiento almacenado. También requiere permisos **View Server State** , ya que internamente llama a otros objetos del sistema que requieren este permiso.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve todos los eventos registrados durante los últimos 30 minutos  

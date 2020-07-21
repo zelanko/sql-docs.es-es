@@ -11,14 +11,14 @@ helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
 ms.assetid: 8e052213-ca6f-44ca-917e-054ecb3eb0e5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88993a80fa629c2f4cdc8448483fc8a65a6f2adf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 97615b04861c02d4319e7a301043bb9f3c17e8c3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087822"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304794"
 ---
 # <a name="visual-foxpro-language-reference"></a>Referencia del lenguaje Visual FoxPro
 Esta sección contiene los temas siguientes.  

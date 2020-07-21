@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001467"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  Devuelve una cadena con formato de expresiones multidimensionales MDX que corresponde a un miembro especificado.  
+  Devuelve una cadena con formato de expresiones multidimensionales (MDX) que corresponde a un miembro especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,11 +31,11 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
- Esta función devuelve una cadena que contiene el nombre único de un miembro. Normalmente se usa para pasar el nombre único de un miembro a una función externa.  
+## <a name="remarks"></a>Observaciones  
+ Esta función devuelve una cadena que contiene el nombre único de un miembro. Normalmente se usa para pasar el UniqueName de un miembro a una función externa.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente devuelve la cadena [Geography]. [Geography]. [Country]. & [United States]:  
+ En el ejemplo siguiente se devuelve la cadena [Geography]. [Geografía]. [País]. & [Estados Unidos]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   
@@ -45,7 +45,7 @@ MemberToStr(Member_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

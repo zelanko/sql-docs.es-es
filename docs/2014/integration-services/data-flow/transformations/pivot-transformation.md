@@ -15,15 +15,14 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30564343b6d43bbb9ec861f90b22cd799eb98038
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770351"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437582"
 ---
 # <a name="pivot-transformation"></a>Dinámica, transformación
   La transformación dinámica transforma un conjunto de datos normalizado en una versión menos normalizada pero más compacta dinamizando los datos de entrada en un valor de columna. Por ejemplo, un conjunto de datos **Orders** normalizado que enumera el nombre del cliente, el producto y la cantidad comprada normalmente tiene varias filas para cualquier cliente que compró varios productos, donde cada fila para ese cliente muestra los detalles de pedido de un producto diferente. Al dinamizar el conjunto de datos en la columna de producto, la transformación dinámica puede obtener un conjunto de datos con una sola fila por cliente. Esa única fila enumera todas las compras realizadas por el cliente, con los nombres de los productos representados como nombres de columnas, y la cantidad indicada como un valor en la columna de producto. Dado que no todos los clientes compran todos los productos, muchas columnas pueden contener valores NULL.  
@@ -45,7 +44,7 @@ ms.locfileid: "62770351"
   
  Los datos de entrada pueden contener filas duplicadas, que darán lugar a que no funcione la transformación Dinamización. "Filas duplicadas" significa filas que tienen los mismos valores en las columnas de clave fija y las columnas dinámicas. Para evitar este error, puede configurar la transformación para que redirija las filas que causan el error hacia una salida de error, o bien agregar previamente valores para garantizar que no haya filas duplicadas.  
   
-##  <a name="options"></a> Opciones del cuadro de diálogo Dinamización  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> Opciones del cuadro de diálogo Dinamización  
  Configure la operación de dinamizar, para lo cual se configuran las opciones en el cuadro de diálogo **Dinamización** . Para abrir el cuadro de diálogo **Dinamización** , agregue la transformación dinámica al paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
  En la lista siguiente, se describen las opciones en el cuadro de diálogo **Dinamización** .  
@@ -93,7 +92,7 @@ ms.locfileid: "62770351"
   
  En la tabla siguiente se muestra un conjunto de datos antes de dinamizar los datos en la columna **Year** .  
   
-|Year|Nombre del producto|Total|  
+|Year|Nombre de producto|Total|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -131,9 +130,9 @@ ms.locfileid: "62770351"
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Para más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para obtener más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Anulación de dinamización](pivot-transformation.md)   
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  

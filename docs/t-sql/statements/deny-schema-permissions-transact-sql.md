@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd439e528cc30c0971d1b4c824ab2375856d26e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f5a86fc5eccf214828e969865cdedbc4379dc9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114790"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766665"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY (permisos de esquema de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Deniega permisos en un esquema.  
   
 
-![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -75,7 +75,7 @@ Especifica una entidad de seguridad de la que la entidad de seguridad que ejecut
 -   Usuario de la base de datos asignado a una clave asimétrica  
 -   Usuario de la base de datos no asignado a una entidad de seguridad de servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Un esquema es un elemento protegible de nivel de base de datos. Se incluye en la base de datos que es su entidad primaria en la jerarquía de permisos. En la tabla siguiente se muestran los permisos más específicos y limitados que se pueden denegar en un esquema. En la tabla se muestran los permisos más generales que los incluyen por implicación.  
   
 |Permiso del esquema|Implícito en el permiso del esquema|Implícito en el permiso de base de datos|  

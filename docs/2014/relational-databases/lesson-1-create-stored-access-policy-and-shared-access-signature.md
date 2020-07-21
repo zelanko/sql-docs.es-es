@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9efb23d15b4f72375077f4bbf1450d8c47fddf4
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 73056d9d70b66a519074e06d4e9420173fb1b190
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025050"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lección 2: Crear una directiva en el contenedor y generar una clave de firma de acceso compartido (SAS)
   En esta lección, aprenderá a crear una directiva en el contenedor de blobs y también a generar una clave SAS.  
@@ -24,7 +23,7 @@ ms.locfileid: "70153845"
   
  Puede crear una directiva y una firma de acceso compartido mediante uno de los métodos siguientes:  
   
--   Operaciones de la API de REST de Azure: [Crear contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx), [establecer la ACL del contenedor](https://msdn.microsoft.com/library/azure/dd179391.aspx)y [obtener la ACL del contenedor](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Operaciones de la API de REST de Azure: [crear contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx), [establecer ACL del contenedor](https://msdn.microsoft.com/library/azure/dd179391.aspx)y [obtener ACL del contenedor](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [Método CloudBlobContainer. GetSharedAccessSignature](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) en el SDK de Azure.  
   
@@ -40,10 +39,9 @@ ms.locfileid: "70153845"
   
     ```  
   
--   Una herramienta de Azure Explorer de terceros, como [Explorador de Azure Storage](http://azurestorageexplorer.codeplex.com/).  
+-   Una herramienta de Azure Explorer de terceros, como [Explorador de Azure Storage](https://azurestorageexplorer.codeplex.com/).  
   
  **Lección siguiente:**  
   
  [Lección 3: Crear una credencial de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
   

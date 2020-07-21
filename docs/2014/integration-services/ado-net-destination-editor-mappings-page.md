@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e77b1aabeebdec6c5b5744f8a331b9709bfcef7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061752"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439592"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor de destinos de ADO NET (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destinos de ADO NET** para asignar columnas de entrada a columnas de destino.  
@@ -40,12 +39,12 @@ ms.locfileid: "66061752"
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
   
  **Columna de entrada**  
- Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones, seleccione **\<ignore>** con el fin de excluir columnas de la salida.  
+ Permite ver las columnas de entrada seleccionadas. Puede quitar las asignaciones seleccionando **\<ignore>** excluir columnas de la salida.  
   
  **Columna de destino**  
  Muestra todas las columnas de destino disponibles, tanto si están asignadas como si no lo están.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de destinos de ADO NET &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
  [Editor de destinos de ADO NET &#40;página Salida de error&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   

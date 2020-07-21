@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 740c45266a1512b14954286d9926b6ee837678af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937626"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acceso a datos para las operaciones de DQS
   Para usar los datos de origen para las operaciones del [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) y exportar los datos procesados, puede realizar una de las acciones siguientes:  
@@ -30,7 +29,7 @@ ms.locfileid: "65480520"
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor apropiado (como securityadmin, serveradmin o sysadmin) en la instancia del motor de base de datos para conceder o modificar el acceso al inicio de sesión de SQL en las bases de datos.  
   
-### <a name="to-grant-readwrite-access-to-a-user-on-the-dqsstagingdata-database"></a>Para conceder acceso de lectura y escritura a un usuario en la base de datos DQS_STAGING_DATA  
+### <a name="to-grant-readwrite-access-to-a-user-on-the-dqs_staging_data-database"></a>Para conceder acceso de lectura y escritura a un usuario en la base de datos DQS_STAGING_DATA  
   
 1.  Inicie Microsoft SQL Server Management Studio.  
   
@@ -40,11 +39,11 @@ ms.locfileid: "65480520"
   
 4.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en la página **Asignación de usuarios** en el panel izquierdo.  
   
-5.  En el panel derecho, active la casilla de la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de la base de datos para: Panel DQS_STAGING_DATA**:  
+5.  En el panel derecho, seleccione la casilla en la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de base de datos para: DQS_STAGING_DATA** :  
   
-    -   **db_datareader**: leer datos de tablas o vistas.  
+    -   **db_datareader**: leer datos de las tablas y de las vistas.  
   
-    -   **db_datawriter**: agregar, eliminar o cambiar datos en tablas.  
+    -   **db_datawriter**: agregar, eliminar o cambiar los datos de las tablas.  
   
     -   **db_ddladmin**: crear, modificar o eliminar las tablas o vistas.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "65480520"
 ## <a name="next-steps"></a>Pasos siguientes  
  Intente realizar operaciones de DQS que obtengan acceso a la base de datos como origen de datos para la operación de DQS, y después exporte los datos procesados a la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Data Quality Services](install-data-quality-services.md)  
   
   

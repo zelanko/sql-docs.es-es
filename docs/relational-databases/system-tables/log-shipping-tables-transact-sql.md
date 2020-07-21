@@ -1,5 +1,5 @@
 ---
-title: Trasvase de registros (Transact-SQL) de tablas | Microsoft Docs
+title: Tablas de trasvase de registros (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - log shipping [SQL Server], system tables
 - system tables [SQL Server], log shipping
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a6e34caa87f529edcac10ea77bf3346d3f276fc5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095739"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890095"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Tablas de trasvase de registros (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Los temas siguientes describen las tablas del sistema que almacenan información utilizada por las operaciones de trasvase de registros.  
+  En los temas siguientes se describen las tablas del sistema que almacenan la información utilizada por las operaciones de trasvase de registros.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)  

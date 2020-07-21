@@ -20,18 +20,18 @@ helpviewer_keywords:
 - LTRIM function
 - blank characters [SQL Server]
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f3e52b291c9a91e1135d41ab6843ef97f53d17d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d0f66102bd21a7d53b8fcc12083a12a2a2a26b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68130383"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010880"
 ---
 # <a name="ltrim-transact-sql"></a>LTRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve una expresión de caracteres tras quitar todos los espacios iniciales en blanco.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68130383"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 LTRIM ( character_expression )  
 ```  
   
@@ -47,7 +47,7 @@ LTRIM ( character_expression )
  *character_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos binarios o de caracteres. *character_expression* puede ser una constante, una variable o una columna. *character_expression* debe ser de un tipo de datos (excepto **text**, **ntext** e **image**) que se pueda convertir implícitamente a **varchar**. De lo contrario, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **varchar** o **nvarchar**  
   
 ## <a name="examples"></a>Ejemplos  

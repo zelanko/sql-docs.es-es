@@ -1,5 +1,5 @@
 ---
-title: Patrón de escalabilidad horizontal de SQL Server Integration Services (SSIS) | Microsoft Docs
+title: Patrón de escalabilidad horizontal | Microsoft Docs
 description: En este artículo se describe el componente Patrón de escalabilidad horizontal de Escalabilidad horizontal de SSIS.
 ms.custom: performance
 ms.date: 01/19/2019
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082126"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488138"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Patrón de escalado horizontal de Integration Services (SSIS)
 
@@ -55,7 +55,7 @@ Configure el Servicio principal de escalabilidad horizontal con el archivo `<dri
 |Configuración  |Descripción  |Valor predeterminado  |
 |---------|---------|---------|
 |PortNumber|Número de puerto de red usado para comunicarse con un trabajador de escalado horizontal.|8391|
-|SSLCertThumbprint|Huella digital del certificado SSL usado para proteger la comunicación con un trabajador de escalado horizontal.|Huella digital del certificado SSL especificado durante la instalación del patrón de escalado horizontal|
+|SSLCertThumbprint|Huella digital del certificado TLS/SSL usado para proteger la comunicación con un trabajo de escalabilidad horizontal.|Huella digital del certificado SSL especificado durante la instalación del patrón de escalabilidad horizontal|
 |SQLServerName|Es el nombre de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que contiene el catálogo SSISDB. Por ejemplo, NombreServidor\\NombreInstancia.|Es el nombre del servidor de SQL Server que se instala con el patrón de escalabilidad horizontal.|
 |CleanupCompletedJobsIntervalInMs|Intervalo de limpieza de los trabajos de ejecución terminados en milisegundos.|43200000|
 |DealWithExpiredTasksIntervalInMs|Intervalo para tratar con los trabajos de ejecución terminados en milisegundos.|300000|

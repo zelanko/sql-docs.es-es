@@ -3,7 +3,7 @@ title: + (Signo unario más) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -20,19 +20,20 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b9fdb56b503c98581a045f2da064984fa6b3349b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086154"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925294"
 ---
 # <a name="unary-operators---positive"></a>Operadores unarios: positivo
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Devuelve el valor de una expresión numérica (un operador unario). Los operadores unarios realizan una operación sobre una única expresión de cualquiera de los tipos de datos de la categoría del tipo de datos numérico.   
   
-|Operador|Significado|  
+|Operator|Significado|  
 |--------------|-------------|  
 |[+ (Positivo)](../../t-sql/language-elements/unary-operators-positive.md)|El valor numérico es positivo.|  
 |[- (Negativo)](../../t-sql/language-elements/unary-operators-negative.md)|El valor numérico es negativo.|  
@@ -44,7 +45,7 @@ Devuelve el valor de una expresión numérica (un operador unario). Los operador
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 + numeric_expression  
 ```  
@@ -56,7 +57,7 @@ Devuelve el valor de una expresión numérica (un operador unario). Los operador
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos de *numeric_expression*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Aunque una suma unaria puede aparecer antes de cualquier expresión numérica, no realiza ninguna operación en el valor devuelto de la expresión. En concreto, no devolvería el valor positivo de una expresión negativa. Para devolver el valor positivo de una expresión negativa, use la función [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
@@ -104,7 +105,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  (Operadores [Transact-SQL])  
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

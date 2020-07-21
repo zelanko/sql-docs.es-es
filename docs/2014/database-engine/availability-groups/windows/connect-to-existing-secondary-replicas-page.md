@@ -1,5 +1,5 @@
 ---
-title: Conectarse a una página de réplicas secundarias existentes (Asistente para agregar réplica y agregar bases de datos) | Microsoft Docs
+title: Página conectar a réplicas secundarias existentes (Asistente para agregar réplica y Asistente para agregar bases de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46b6553e03d25523f8938a3428270c0763405da0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936963"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Conectarse a la página Réplicas secundarias existentes (Asistente para agregar réplica/Asistente para agregar bases de datos)
-  En este tema de Ayuda se describen las opciones de la página **Conectar con réplicas secundarias existentes** . Este tema se usa en [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   En este tema de Ayuda se describen las opciones de la página **Conectar con réplicas secundarias existentes**. Este tema se usa en [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  **Columnas de cuadrícula:**  
  **Instancia del servidor**  
@@ -30,7 +29,7 @@ ms.locfileid: "62792025"
  **Conectado como**  
  Muestra la cuenta que está conectada a la instancia de servidor, una vez que se ha establecido la conexión. Si esta columna muestra “**No conectado**” para una instancia de servidor determinada, deberá hacer clic en el botón **Conectar** o **Conectar todo** .  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí si esta instancia de servidor se ejecuta en una cuenta diferente a las de otras instancias de servidor a las que necesite conectarse.  
   
  **Conectar todo**  
@@ -41,7 +40,7 @@ ms.locfileid: "62792025"
   
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62792025"
   
 
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

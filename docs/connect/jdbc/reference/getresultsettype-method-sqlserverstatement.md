@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 260da35f-ddf6-4111-8519-69956ea3072e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7a0293a48a354bba911a11ecf91a17211a9f8a12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7303524c0e94fb317fb04271cbf5c748856f8731
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67980301"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80921815"
 ---
 # <a name="getresultsettype-method-sqlserverstatement"></a>Método getResultSetType (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public final int getResultSetType()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getResultSetType se especifica mediante el método getResultSetType en la interfaz java. SQL. Statement.  
+## <a name="remarks"></a>Observaciones  
+ El método getResultSetType especifica este método getResultSetType en la interfaz java.sql.Statement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

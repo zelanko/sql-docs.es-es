@@ -1,5 +1,5 @@
 ---
-title: Utilizar parámetros de datos en ejecución (ODBC) | Documentos de Microsoft
+title: Usar parámetros de datos en ejecución (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a2018b038c76c745c1a81e11e713547a7b10dcce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68206805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043950"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Usar parámetros de datos en ejecución (ODBC)
     
@@ -25,7 +24,7 @@ ms.locfileid: "68206805"
   
 1.  Cuando llame a [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) para enlazar un búfer de programa al parámetro de instrucción:  
   
-    -   Para el último parámetro, use SQL_LEN_DATA_AT_EXEC (*longitud*) donde *longitud* es la longitud total de la `text`, `ntext`, o `image` datos del parámetro en bytes.  
+    -   Para el último parámetro, use SQL_LEN_DATA_AT_EXEC (*longitud*) donde *longitud* es la longitud total de los `text` `ntext` datos de parámetro, o `image` en bytes.  
   
     -   Use un `rgbValue` (octavo parámetro) de un identificador de parámetros definido por el programa.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "68206805"
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, se muestra cómo leer datos de caracteres variables SQL_LONG mediante SQLParamData y SQLPutData. Este ejemplo no es compatible con IA64.  
   
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
@@ -221,7 +220,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Administración de temas de procedimientos sobre las columnas de texto e imagen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de administración de columnas de texto e imagen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

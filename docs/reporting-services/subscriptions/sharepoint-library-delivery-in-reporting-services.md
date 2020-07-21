@@ -1,5 +1,6 @@
 ---
 title: Entrega de la biblioteca de SharePoint en Reporting Services | Microsoft Docs
+description: Aprenda a usar la extensión de entrega de biblioteca de SharePoint en Reporting Services mediante una suscripción de la página de una aplicación en un sitio de SharePoint.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 354f36006ce98fa1359c5ad8faa58bf2641b167c
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578066"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742235"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de la biblioteca de SharePoint en Reporting Services
   Un servidor de informes que se configura para la integración de SharePoint incluye una extensión de entrega que usted puede utilizar para enviar un informe a una biblioteca de SharePoint.  
@@ -68,10 +69,10 @@ ms.locfileid: "65578066"
  Nombre y extensión de archivo  
  Especifique el nombre y la extensión de archivo del informe como desea que aparezca en la biblioteca de destino. Si no especifica ninguna extensión de archivo, el servidor de informes crea una basada en el formato de salida del informe. Este valor es necesario. El nombre de archivo no debe incluir los siguientes caracteres: : \ / * ? " < > | # { } %  
   
- Title  
+ Título  
  Especifica una propiedad **Title** opcional para el informe en la biblioteca de destino. Es una propiedad estándar para todos los elementos almacenados en una biblioteca. Los usuarios pueden especificar si se va a mostrar u ocultar esta propiedad al ver el contenido de la biblioteca en un sitio de SharePoint.  
   
- Ruta de acceso  
+ Path  
  Especifica una dirección URL completa a la biblioteca de SharePoint, incluidos la aplicación web y el sitio de SharePoint. Por ejemplo: `https://mySharePointWeb/MySite/MyDocLib`, donde `https://mySharePointWeb` indica la aplicación web, "MySite" es el sitio de SharePoint y "MyDocLib" es la biblioteca de SharePoint en la que se entrega el informe.  
   
  No puede especificar una página, un sitio o una lista. El contenedor de destino debe ser una biblioteca en el mismo sitio o conjunto de servidores.  

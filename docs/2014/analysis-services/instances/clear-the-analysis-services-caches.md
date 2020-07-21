@@ -1,5 +1,5 @@
 ---
-title: Desactive las de Analysis Services las memorias caché | Microsoft Docs
+title: Borre el Analysis Services cachés | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bf3dbf1658686738403bc9bfe4a5dd8941c75a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080300"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544080"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
   Analysis Services almacena los datos en memoria caché para mejorar el rendimiento de las consultas. En este tema se proporcionan recomendaciones para usar el comando ClearCache de XMLA con el fin de borrar las memorias caché creadas en respuesta a una consulta MDX. Los efectos de ejecutar ClearCache varían dependiendo de que se use un modelo tabular o multidimensional.  
@@ -46,13 +45,13 @@ ms.locfileid: "66080300"
   
  La acción de borrar la memoria caché requiere proporcionar un identificador de objeto a la instrucción `ClearCache` en una consulta XMLA. En el primer paso de este tema se explica cómo obtener un identificador de objeto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Paso 1: Obtener el identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Paso 1: obtener el identificador de objeto  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un objeto, seleccione **Propiedades**y copie el valor de la propiedad ID en el panel **Propiedades** . Este enfoque funciona para una base de datos, cubo, dimensión o tabla.  
   
 2.  Para obtener el identificador de grupo de medida, haga clic con el botón derecho en el grupo de medida y seleccione **Incluir grupo de medidas como**. Elija **Crear** o **Modificar**y envíe la consulta a una ventana. El identificador del grupo de medida estará visible en la definición del objeto. Copie el identificador de la definición del objeto.  
   
-#### <a name="step-2-run-the-query"></a>Paso 2: Ejecute la consulta  
+#### <a name="step-2-run-the-query"></a>Paso 2: ejecutar la consulta  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en una base de datos, señale **Nueva consulta**y seleccione **XMLA**.  
   
@@ -87,8 +86,8 @@ ms.locfileid: "66080300"
     </return>  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Supervisión de una instancia de Analysis Services](monitor-an-analysis-services-instance.md)  
+ [Monitor an Analysis Services Instance](monitor-an-analysis-services-instance.md)  
   
   

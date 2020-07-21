@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Anulación de dinamización | Microsoft Docs
+title: Editor de transformación anulación de dinamización | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45aeb428f0905b7bf96900b6d592ff11963d8f4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054837"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420322"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor de transformación Anulación de dinamización
   Use el cuadro de diálogo **Editor de transformación Anulación de dinamización** para seleccionar las columnas que se van a dinamizar en filas y especificar la columna de datos y la nueva columna de salida del valor dinámico.  
   
 > [!NOTE]  
->  Este tema usa el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](data-flow/transformations/unpivot-transformation.md) para mostrar el uso de las opciones.  
+>   Este tema utiliza el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) para ilustrar el uso de las opciones.  
   
  Para obtener más información acerca de la transformación Anulación de dinamización, vea [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66054837"
  **Columnas de entrada disponibles**  
  Especifique las columnas que deben pasar a ser filas mediante las casillas.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna de entrada disponible.  
   
  **Paso a través**  
@@ -61,7 +60,7 @@ ms.locfileid: "66054837"
   
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), el Nombre de la columna del valor de clave dinámica es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformación dinámica](data-flow/transformations/pivot-transformation.md)  
   

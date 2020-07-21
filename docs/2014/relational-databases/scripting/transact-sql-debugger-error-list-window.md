@@ -1,6 +1,6 @@
 ---
-title: Lista de errores (ventana, Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Ventana de lista de errores
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,18 +12,17 @@ helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e204585892fd71ff807361c75e703afcc6208d98
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063353"
 ---
 # <a name="error-list-window-management-studio"></a>Ventana Lista de errores (Management Studio)
-  La ventana [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+  La ventana [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Lista de errores**de** muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="features-of-the-error-list"></a>Características de la ventana Lista de errores  
  La ventana **Lista de errores** proporciona la funcionalidad siguiente:  
@@ -67,7 +66,7 @@ ms.locfileid: "66063442"
 > [!NOTE]  
 >  En **Lista de errores** solo se muestran los errores del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; no se muestran los errores de los editores MDX, DMX ni XML/A. Todos los errores de MDX, DMX y XML/A se muestran en la pestaña **Mensajes** de dichos editores.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Cuando está abierta la ventana **Lista de errores** , la información se muestra en las columnas siguientes:  
   
  **Orden predeterminado**  

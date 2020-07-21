@@ -1,5 +1,5 @@
 ---
-title: La propiedad ActiveCommand (ADO) | Microsoft Docs
+title: Propiedad ActiveCommand (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,33 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921675"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747479"
 ---
 # <a name="activecommand-property-ado"></a>Propiedad ActiveCommand (ADO)
-Indica el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que crea el asociado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) que creó el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) asociado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un **Variant** que contiene un **comando** objeto. Valor predeterminado es una referencia de objeto nulo.  
+ Devuelve un **valor de tipo Variant** que contiene un objeto **Command** . El valor predeterminado es una referencia de objeto null.  
   
 ## <a name="remarks"></a>Comentarios  
- El **ActiveCommand** propiedad es de solo lectura.  
+ La propiedad **ActiveCommand** es de solo lectura.  
   
- Si un **comando** no se utilizó para crear el actual objeto **Recordset**, un **Null** se devuelve la referencia de objeto.  
+ Si un objeto de **comando** no se utilizó para crear el **conjunto de registros**actual, se devuelve una referencia de objeto **null** .  
   
- Utilice esta propiedad para encontrar el asociado **comando** objeto cuando se proporcionan solo resultante **Recordset** objeto.  
+ Utilice esta propiedad para buscar el objeto de **comando** asociado cuando solo se le proporciona el objeto de **conjunto de registros** resultante.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad ActiveCommand (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
  [Ejemplo de la propiedad ActiveCommand (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [Ejemplo de la propiedad ActiveCommand (VC ++)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
+ [Ejemplo de la propiedad ActiveCommand (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

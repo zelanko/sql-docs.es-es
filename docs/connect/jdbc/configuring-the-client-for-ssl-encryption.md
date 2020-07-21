@@ -1,5 +1,6 @@
 ---
-title: Configuración del cliente para el cifrado | Microsoft Docs
+title: Configuración del cliente para el cifrado
+description: Obtenga información sobre el cifrado del lado cliente y la confianza de certificados para garantizar la seguridad de los clientes mediante Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -8,14 +9,14 @@ ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7265bfb8666d99b8676b4bd4ec221b0a55f47a07
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713286"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728486"
 ---
 # <a name="configuring-the-client-for-encryption"></a>Configuración del cliente para el cifrado
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "71713286"
   
  Si la propiedad **trustStore** no se ha especificado o se ha establecido en null, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se basará en el proveedor de seguridad subyacente de JVM, la Extensión de sockets seguros de Java (SunJSSE, Java Secure Socket Extension). El proveedor de SunJSSE proporciona un TrustManager predeterminado, que se utiliza para validar los certificados X.509 que devuelve SQL Server con el material de confianza que se proporciona en un almacén de confianza.  
   
- El TrustManager intenta encontrar el trustStore predeterminado en el siguiente orden de búsqueda:  
+ El TrustManager intenta buscar el trustStore predeterminado en el orden de búsqueda siguiente:  
   
 -   Si la propiedad del sistema "javax.net.ssl.trustStore" está definida, TrustManager intenta buscar el archivo trustStore predeterminado con el nombre de archivo que especifica dicha propiedad del sistema.  
   
@@ -83,6 +84,6 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. Haga clic en Siguiente y, a continuación, haga clic en Finalizar para exportar el certificado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Uso de cifrado](../../connect/jdbc/using-ssl-encryption.md)   
  [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con características de informes de Access (SSRS) | Microsoft Docs
+title: Características de informes de Access admitidas (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100574"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Compatibilidad con características de informes de Access (SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66100574"
 ## <a name="importing-access-reports"></a>Importar informes de Access  
  Algunas consultas contienen código específico de Access. El código de Access no se importa con el informe. Asimismo, si una consulta contiene cadenas incrustadas, es posible que el informe no se importe correctamente. Para solucionar este problema, sustituya las cadenas por un código de carácter. Por ejemplo, sustituya el carácter de la coma (,) por CHAR(34).  
   
- El proceso de importación no pasa correctamente el punto y coma (;) o caracteres de marcado XML (\<, >, etc.) en la información de la cadena de conexión. Si una cadena de conexión contiene un punto y coma, o un carácter de marcación XML, tendrá que establecer manualmente la contraseña en el nuevo informe una vez importado.  
+ El proceso de importación no pasa correctamente el punto y coma (;) o caracteres de marcado XML\<(, >, etc.) en la información de la cadena de conexión. Si una cadena de conexión contiene un punto y coma, o un carácter de marcación XML, tendrá que establecer manualmente la contraseña en el nuevo informe una vez importado.  
   
  En el proceso de importación no se importa la configuración de conexión o de tiempo de espera general de la cadena de conexión. Posiblemente tenga que ajustar esta configuración después de importar el informe.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "66100574"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite los orígenes de datos OLE DB, como [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si va a importar informes de un archivo de proyecto de Access (.adp), la cadena de conexión del origen de datos se toma de la cadena de conexión del archivo .adp. Si va a importar informes de un archivo de base de datos de Access (.mdb o .accdb), la cadena de conexión podría apuntar a la base de datos de Access y es posible que deba corregirla después de la importación. Si el origen de datos del informe de Access es una consulta, la información de la misma se guarda sin modificar en el archivo RDL. Si el origen de datos del informe de Access es una tabla, en el proceso de conversión se crea una consulta basada en el nombre de la tabla y de los campos de la misma.  
   
 ## <a name="reports-with-custom-modules"></a>Informes con módulos personalizados  
- Si no hay personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] código contenida dentro de los módulos, no se convierte. Si el Diseñador de informes encuentra código durante el proceso de importación, se genera una advertencia y se muestra en el **lista de tareas** ventana.  
+ Si hay código personalizado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] incluido en los módulos, no se convierte. Si Diseñador de informes encuentra código durante el proceso de importación, se genera una advertencia y se muestra en la ventana de **lista de tareas** .  
   
 ## <a name="report-controls"></a>Controles de informe  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite los siguientes controles de Access y los incluye en las definiciones de informe convertidas:  
   
 |||||  
 |-|-|-|-|  
-|Image|Etiqueta|Línea|Rectángulo|  
-|SubForm|SubReport<br /><br /> **Tenga en cuenta** mientras que un control SubReport se convierte en el informe principal, el subinforme propiamente dicho se convierte de forma independiente.|TextBox||  
+|Imagen|Etiqueta|Línea|Rectángulo|  
+|SubForm|SubReport<br /><br /> **Nota:** Mientras se convierte un control de subinforme en el informe principal, el subinforme se convierte por separado.|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite los controles siguientes:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66100574"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- Si el Diseñador de informes encuentra alguno de estos controles durante el proceso de importación, se genera una advertencia y se muestra en el **lista de tareas** ventana.  
+ Si Diseñador de informes encuentra alguno de estos controles durante el proceso de importación, se genera una advertencia y se muestra en la ventana de **lista de tareas** .  
   
  Otros controles, como ActiveX y Office Web Components, no se importan. Por ejemplo, si un informe de Access contiene un control Chart de OWC, no se convertirá al importar el informe.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "66100574"
 |-|-|-|-|  
 |BackColor|BackStyle|BorderColor|BorderStyle|  
 |BorderWidth|BottomMargin|CanGrow (textbox)|CanShrink (textbox)|  
-|Título|FontBold|FontItalic|FontName|  
+|Caption|FontBold|FontItalic|FontName|  
 |FontSize|FontUnderline|FontWeight|ForceNewPage|  
 |ForeColor|Alto|HideDuplicates|Hyperlink|  
-|IsHyperlink|IsVisible|KeepTogether (group)|Izquierda|  
+|IsHyperlink|IsVisible|KeepTogether (group)|Left|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
 |Páginas|Picture|PictureTiling (report)|ReadingOrder|  
@@ -99,7 +99,7 @@ ms.locfileid: "66100574"
 |PictureSizeMode|PictureTiling (image)|ScrollBars|SpecialEffect|  
 |Vertical||||  
   
-## <a name="grouping"></a>Agrupar  
+## <a name="grouping"></a>Agrupación  
  Access define un nivel de grupo mediante una combinación de tres propiedades: la expresión de grupo, la propiedad `GroupOn` y la propiedad `GroupInterval`. Un grupo que no tiene un encabezado o pie de grupo se combina con el grupo que contiene. Si el grupo no contiene otro grupo, se ordena la sección detallada y se quita el grupo.  
   
 ## <a name="expressions"></a>Expresiones  
@@ -140,7 +140,7 @@ ms.locfileid: "66100574"
   
 |||||  
 |-|-|-|-|  
-|CreateReport|GetObject|HyperlinkPart|Partición|  
+|CreateReport|GetObject|HyperlinkPart|Partition|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite las funciones de base de datos siguientes:  
   
@@ -156,12 +156,12 @@ ms.locfileid: "66100574"
   
 |||||  
 |-|-|-|-|  
-|date|Date$|DateAdd|DateDiff|  
-|DatePart|DateSerial|DateValue|Day|  
-|Hour|Minute|Month|MonthName|  
-|Ahora|Second|Time|Time$|  
-|Timer|TimeSerial|TimeValue|Weekday|  
-|WeekdayName|Year|||  
+|Fecha|Date$|DateAdd|DateDiff|  
+|DatePart|DateSerial|DateValue|Día|  
+|Hour|Minute|Mes|MonthName|  
+|Ahora|Segundo|Tiempo|Time$|  
+|Timer|TimeSerial|TimeValue|Día de la semana|  
+|WeekdayName|Año|||  
   
 #### <a name="ddeole-functions"></a>Funciones DDE y OLE  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite las funciones de DDE y OLE siguientes:  
@@ -198,7 +198,7 @@ ms.locfileid: "66100574"
 |-|-|-|-|  
 |DDB|FV|IPmt|IRR|  
 |MIRR|NPer|NPV|Pmt|  
-|PPmt|PV|Rate|SLN|  
+|PPmt|PV|Tarifa|SLN|  
 |SYD||||  
   
 #### <a name="interaction-functions"></a>Funciones de interacción  
@@ -218,7 +218,7 @@ ms.locfileid: "66100574"
   
 |||||  
 |-|-|-|-|  
-|DoEvents|Entrada|Entrada|Input$|  
+|DoEvents|En|Entrada|Input$|  
   
 #### <a name="inspection-functions"></a>Funciones de inspección  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite las funciones de inspección siguientes:  
@@ -239,8 +239,8 @@ ms.locfileid: "66100574"
 |||||  
 |-|-|-|-|  
 |Abs|Atn|Cos|Exp|  
-|Fix|int|Log|Rnd|  
-|Redondear|Sgn|Sin|Sqr|  
+|Fix|Int|Log|Rnd|  
+|Round|Sgn|Sin|Sqr|  
 |Tan||||  
   
 #### <a name="message-functions"></a>Funciones de mensajes  
@@ -272,9 +272,9 @@ ms.locfileid: "66100574"
 |||||  
 |-|-|-|-|  
 |Formato|Format$|InStr|InStrRev|  
-|LCase|LCase$|Izquierda|Left$|  
+|LCase|LCase$|Left|Left$|  
 |Len|LTrim|LTrim$|Mid|  
-|Mid$|Reemplazar|Derecha|Right$|  
+|Mid$|Replace|Right|Right$|  
 |RTrim|Space|Space$|StrComp|  
 |StrConv|String|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
@@ -294,7 +294,7 @@ ms.locfileid: "66100574"
  En una definición de informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los rectángulos pueden contener otros elementos de informe. Un rectángulo de mayor tamaño que el elemento de informe y que solape más del 90 por ciento de su área se convierte en un contenedor del elemento de informe.  
   
 ## <a name="bitmaps"></a>Mapas de bits  
- Todos los mapas de bits incrustados en un informe se convierten al formato .bmp cuando se importa el informe, independientemente de su formato inicial. Por ejemplo, si el informe contiene archivos .jpg y .gif, los recursos finales importados con el informe son archivos .bmp. Los mapas de bits se guardan como imágenes incrustadas en el informe. Para obtener información sobre las imágenes incrustadas, vea [imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
+ Todos los mapas de bits incrustados en un informe se convierten al formato .bmp cuando se importa el informe, independientemente de su formato inicial. Por ejemplo, si el informe contiene archivos .jpg y .gif, los recursos finales importados con el informe son archivos .bmp. Los mapas de bits se guardan como imágenes incrustadas en el informe. Para obtener información sobre las imágenes incrustadas, consulte [imágenes &#40;generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md).  
   
 ## <a name="other-considerations"></a>Otras consideraciones  
  Además de los elementos anteriores, también cabe destacar lo siguiente en relación con los informes importados desde Access:  

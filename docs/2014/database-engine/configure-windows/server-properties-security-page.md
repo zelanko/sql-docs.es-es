@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f45c0a04a0d7cc627901d8de24175f1d63a99fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934896"
 ---
 # <a name="server-properties-security-page"></a>Propiedades del servidor (página Seguridad)
   Utilice esta página para ver o modificar las opciones de seguridad del servidor.  
@@ -36,7 +35,7 @@ ms.locfileid: "62809009"
 >  El cambio de la configuración de seguridad requiere reiniciar el servicio. Cuando se cambia la Autenticación de servidor al modo de autenticación de Windows y SQL Server, la cuenta SA no se habilita automáticamente. Para utilizar la cuenta SA, ejecute [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) con la opción ENABLE.  
   
 ## <a name="login-auditing"></a>Auditoría de inicio de sesión  
- **Ninguno**  
+ **None**  
  Desactiva la auditoría de inicio de sesión.  
   
  **Solo inicios de sesión erróneos**  
@@ -71,7 +70,7 @@ ms.locfileid: "62809009"
  **Encadenamiento de propiedad entre bases de datos**  
  Seleccione esta opción para permitir que la base de datos pueda ser el origen o destino de una cadena de propiedad entre bases de datos. Para obtener más información, vea [cross db ownership chaining (opción de configuración del servidor)](cross-db-ownership-chaining-server-configuration-option.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

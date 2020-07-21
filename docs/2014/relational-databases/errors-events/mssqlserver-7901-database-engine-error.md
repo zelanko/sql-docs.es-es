@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: 2d0d19b9-947b-4474-9ff8-7e03019ab93d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: faf43de11a0c1779f043c6dd854e361c0396dc6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dd4d2721967049295f3fcf5fc8b38807268879a
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913573"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551062"
 ---
-# <a name="mssqlserver7901"></a>MSSQLSERVER_7901
+# <a name="mssqlserver_7901"></a>MSSQLSERVER_7901
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7901|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7901|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_DATABASE_IN_EMERGENCY_MODE|  
 |Texto del mensaje|Instrucción de reparación no procesada. No se permite este nivel de reparación cuando la base de datos está en modo de emergencia.|  

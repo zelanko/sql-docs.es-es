@@ -1,5 +1,5 @@
 ---
-title: GO (Transact-SQL) | Microsoft Docs
+title: 'Instrucciones de utilidades de SQL Server: GO | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48bca691f10822176c5169cf6bf9a052d7675478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd28aae90386501e49513551def97e3fea8f5574
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072303"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892113"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instrucciones de utilidades de SQL Server: GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona comandos que no son instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], pero que las utilidades **sqlcmd** y **osql**, y el Editor de código de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sí reconocen. Estos comandos se pueden usar para facilitar la legibilidad y la ejecución de lotes y scripts.  
   
@@ -42,10 +42,10 @@ GO [count]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Recuento*  
+ *count*  
  Es un entero positivo. El lote que precede a GO se ejecutará el número especificado de veces.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  GO no es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], sino un comando reconocido por las utilidades **sqlcmd** y **osql**, así como por el Editor de código de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Las utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretan GO como una señal de que deben enviar el lote actual de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El lote actual de instrucciones está formado por todas las instrucciones especificadas desde el último comando GO o desde el comienzo de la sesión o script ad hoc si se trata del primer comando GO.  

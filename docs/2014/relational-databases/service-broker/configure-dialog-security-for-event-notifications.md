@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62630727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996564"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad de diálogo se debe configurar manualmente según el modelo de seguridad de diálogo completa de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El modelo de seguridad completa habilita el cifrado y el descifrado de los mensajes que se envían a servidores remotos o desde los mismos. Aunque las notificaciones de eventos se envían en una dirección, otros mensajes, como los errores, también se devuelven en la dirección opuesta.  
@@ -28,11 +27,11 @@ ms.locfileid: "62630727"
 > [!IMPORTANT]  
 >  Todos los certificados deben crearse con fechas de inicio y de expiración válidas.  
   
- **Paso 1: Establecer un nombre de servicio de destino y de número de puerto TCP.**  
+ **Paso 1: establezca un número de puerto TCP y un nombre del servicio de destino.**  
   
  Establezca un puerto TCP en el que tanto el servidor de origen como el de destino recibirán los mensajes. Asimismo, debe determinar el nombre del servicio de destino.  
   
- **Paso 2: Configure el cifrado y certificados compartidos para la autenticación de nivel de base de datos.**  
+ **Paso 2: configure el cifrado y los certificados compartidos para la autenticación en la base de datos.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62630727"
 |[Realice una copia de seguridad del certificado](/sql/t-sql/statements/backup-certificate-transact-sql) en un archivo al que se pueda obtener acceso a través del servidor de destino.|Realice una copia de seguridad del certificado en un archivo al que se pueda obtener acceso a través del servidor de origen.|  
 |[Cree un usuario](/sql/t-sql/statements/create-user-transact-sql), especificando el usuario de la base de datos de destino y WITHOUT LOGIN. El usuario será el propietario del certificado de la base de datos de destino que se creará a partir del archivo de la copia de seguridad. No es necesario que el usuario esté asignado a un inicio de sesión, puesto que el único propósito del usuario es poseer el certificado de la base de datos de destino creado en el paso 3 que viene a continuación.|Cree un usuario, especificando el usuario de la base de datos de origen y WITHOUT LOGIN. El usuario será el propietario del certificado de la base de datos de origen que se creará a partir del archivo de la copia de seguridad. No es necesario que el usuario esté asignado a un inicio de sesión, puesto que el único propósito del usuario es poseer el certificado de la base de datos de origen creado en el paso 3 que viene a continuación.|  
   
- **Paso 3: Comparta los certificados y conceda permisos para la autenticación de nivel de base de datos.**  
+ **Paso 3: comparta los certificados y conceda permisos para la autenticación en la base de datos.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62630727"
 ||[Conceda el permiso SEND](/sql/t-sql/statements/grant-transact-sql) para el servicio de destino al usuario de la base de datos de origen.|  
 |Proporcione el identificador de Service Broker de la base de datos de origen al servidor de destino. Este identificador se puede obtener realizando una consulta en la columna **service_broker_guid** de la vista de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) . En caso de una notificación de eventos en el servidor, use el identificador de Service Broker de **msdb**.|Proporcione el identificador de Service Broker de la base de datos de destino al servidor de origen.|  
   
- **Paso 4: Cree rutas y configurar la autenticación de nivel de servidor.**  
+ **Paso 4: cree rutas y establezca la autenticación en el servidor.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62630727"
 |[Conceda el permiso CONNECT](/sql/t-sql/statements/grant-transact-sql) para el extremo al inicio de sesión del autenticador de destino.|Conceda el permiso CONNECT para el extremo al inicio de sesión del autenticador de origen.|  
 |[Cree un usuario](/sql/t-sql/statements/create-user-transact-sql)y especifique el inicio de sesión del autenticador de destino.|Cree un usuario y especifique el inicio de sesión del autenticador de origen.|  
   
- **Paso 5: Comparta certificados para la autenticación de nivel de servidor y cree la notificación de eventos.**  
+ **Paso 5: comparta certificados para la autenticación en el servidor y cree la notificación de eventos.**  
   
  Complete las siguientes acciones en el servidor de origen y en el de destino.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62630727"
 |Cambie a la base de datos de origen en la que va a crear la notificación de eventos y, si todavía no está conectado como usuario de la base de datos de origen, hágalo ahora.|Cambie a la base de datos de destino para recibir los mensajes de notificación de eventos.|  
 |[Cree la notificación de eventos](/sql/t-sql/statements/create-event-notification-transact-sql)y especifique el Service Broker y el identificador de la base de datos de origen.||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

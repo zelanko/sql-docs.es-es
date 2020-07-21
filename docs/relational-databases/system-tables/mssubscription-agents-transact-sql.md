@@ -15,43 +15,43 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7b70a0b6356a4b9a862c2a89178068ef6ec2c4af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889357"
 ---
-# <a name="mssubscriptionagents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **MSsubscription_agents** tabla se utiliza al agente de distribución y los desencadenadores de suscripciones actualizables para realizar un seguimiento de las propiedades de suscripción. Esta tabla se almacena en la base de datos de suscripción.  
+  La tabla **MSsubscription_agents** se usa en agente de distribución y desencadenadores de suscripciones actualizables para realizar el seguimiento de las propiedades de la suscripción. Esta tabla se almacena en la base de datos de suscripciones.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de la fila.|  
-|**publicador**|**sysname**|El nombre del publicador.|  
-|**publisher_db**|**sysname**|El nombre de la base de datos de publicación.|  
-|**publicación**|**sysname**|Nombre de la publicación.|  
+|**publisher**|**sysname**|El nombre del publicador.|  
+|**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
+|**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> 0 = Inserción.<br /><br /> 1 = Extracción<br /><br /> 2 = Extracción anónima|  
-|**queue_id**|**sysname**|El identificador de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cola en el publicador de mensajes. *queue_id* está establecido en **SQL** para basado en SQL de actualización en cola.|  
-|**update_mode**|**tinyint**|El tipo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.<br /><br /> **2** = actualización en cola mediante Message Queue Server.<br /><br /> **3** = inmediato actualizar con actualización en cola como conmutación por error mediante Message Queue Server.<br /><br /> **4** = actualización en cola mediante la cola de SQL Server.<br /><br /> **5** = actualización inmediata con conmutación por error de actualización en cola, mediante la cola de SQL Server.|  
-|**failover_mode**|**bit**|Si se selecciona un tipo de actualización por conmutación por error, se elige este tipo de conmutación por error:<br /><br /> **0** = inmediato se utiliza la actualización. No se habilita la conmutación por error.<br /><br /> **1** = en cola se utiliza la actualización. Se habilita la conmutación por error. La cola que se usa para la conmutación por error se especifica en el *update_mode* valor.|  
-|**spid**|**int**|Id. del proceso de sistema para la conexión que utiliza el Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
+|**queue_id**|**sysname**|IDENTIFICADOR de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cola de mensajes en el publicador. *queue_id* está establecido en **SQL** para la actualización en cola basada en SQL.|  
+|**update_mode**|**tinyint**|El tipo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.<br /><br /> **2** = actualización en cola mediante Message Queue Server.<br /><br /> **3** = actualización inmediata con actualización en cola como conmutación por error mediante Message Queue Server.<br /><br /> **4** = actualización en cola mediante la cola de SQL Server.<br /><br /> **5** = actualización inmediata con conmutación por error de actualización en cola mediante SQL Server cola.|  
+|**failover_mode**|**bit**|Si se selecciona un tipo de actualización por conmutación por error, se elige este tipo de conmutación por error:<br /><br /> **0** = se utiliza la actualización inmediata. No se habilita la conmutación por error.<br /><br /> **1** = se está utilizando la actualización en cola. Se habilita la conmutación por error. La cola que se utiliza para la conmutación por error se especifica en el valor *update_mode* .|  
+|**identificador**|**int**|Id. del proceso de sistema para la conexión que utiliza el Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
 |**login_time**|**datetime**|La fecha y la hora de la conexión del Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
 |**allow_subscription_copy**|**bit**|Especifica si se permite o no la capacidad de copiar de la base de datos de suscripciones.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**attach_version**|**binary (16)**|Identificador único que representa la versión de una suscripción adjunta.|  
-|**last_sync_status**|**int**|El último estado del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **1** = iniciado.<br /><br /> **2** = se ha realizado correctamente.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
-|**last_sync_summary**|**sysname**|El último mensaje del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **Se inició.**<br /><br /> **Se ha realizado correctamente.**<br /><br /> **En curso.**<br /><br /> **Inactivo.**<br /><br /> **Vuelva a intentar.**<br /><br /> **Un error.**|  
-|**last_sync_time**|**datetime**|La fecha y hora en que expirarán el *last_sync_summary* y *last_sync_status* se actualizaron las columnas. Los Agentes de distribución anónimos o de extracción que se ejecutan como trabajos del servicio del Agente SQL Server no actualizan estas columnas. En su lugar, la información del historial se registra en la tabla del historial de trabajos en ese caso.|  
+|**attach_version**|**binario (16)**|Identificador único que representa la versión de una suscripción adjunta.|  
+|**last_sync_status**|**int**|El último estado del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **1** = iniciado.<br /><br /> **2** = correcto.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = Reintentar.<br /><br /> **6** = error.|  
+|**last_sync_summary**|**sysname**|El último mensaje del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **Introducción.**<br /><br /> **Completa.**<br /><br /> **En curso.**<br /><br /> **Activos.**<br /><br /> **Realizar.**<br /><br /> **Puedan.**|  
+|**last_sync_time**|**datetime**|Fecha y hora en que se actualizaron las columnas *last_sync_summary* y *last_sync_status* . Los Agentes de distribución anónimos o de extracción que se ejecutan como trabajos del servicio del Agente SQL Server no actualizan estas columnas. En su lugar, la información del historial se registra en la tabla del historial de trabajos en ese caso.|  
 |**queue_server**|**sysname**|Exclusivamente para uso interno.|  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
+ [sp_helppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
   
   

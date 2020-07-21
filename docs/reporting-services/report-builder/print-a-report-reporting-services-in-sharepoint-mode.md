@@ -1,5 +1,6 @@
 ---
 title: Imprimir un informe (Reporting Services en el modo de SharePoint) | Microsoft Docs
+description: Si un servidor de informes se ejecuta en modo de SharePoint, puede imprimir un informe desde una aplicación web o un sitio de SharePoint, un explorador o una aplicación de destino.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: eb3511714f893e4513c8a5ba1c215807003e6534
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65875210"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80290816"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir un informe (Reporting Services en el modo de SharePoint)
   Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, existen tres formas de imprimir un informe desde una aplicación web de SharePoint:  

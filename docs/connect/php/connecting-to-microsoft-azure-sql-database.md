@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6ff612b0d4682726f559e0a1eff41b96bd2a84f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: df827223baa67f71d13115971ac4068e07e31268
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993735"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907301"
 ---
 # <a name="connecting-to-microsoft-azure-sql-database"></a>Conexión a Microsoft Azure SQL Database
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para obtener más información sobre cómo conectarse a bases de datos SQL de Azure, consulte [Cómo obtener acceso a Azure SQL Database desde PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
+Para más información sobre cómo conectarse a instancias de Azure SQL Database, consulte [cómo acceder a Azure SQL Database desde PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
   

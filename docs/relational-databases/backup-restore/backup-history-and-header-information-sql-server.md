@@ -1,7 +1,8 @@
 ---
-title: Historial de copias de seguridad e información de encabezados (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: Encabezado e historial de copias de seguridad | Microsoft Docs
+description: La base de datos msdb almacena el historial de operaciones de copia de seguridad y restauración de SQL Server de una instancia de servidor. Obtenga información sobre las instrucciones Transact-SQL que tienen acceso al historial de copias de seguridad.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -33,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9d88540aa6c4d3ada8af6808713405829a3e352e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bcec97642ead8a53c0703cdcfafbbe59cc4bbe1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728482"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **se almacena un historial completo de todas las operaciones de copia de seguridad y restauración de** de una instancia de servidor. En este tema se describen las tablas del historial de copias de seguridad y restauración, así como las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se usan para tener acceso al historial de copias de seguridad. En el tema también se explica cuándo resulta útil la lista de archivos de base de datos y de registro de transacciones, y cuándo se debe usar la información de encabezado de medios con respecto a cuándo se debe usar la información de encabezado de copia de seguridad.  
   
 > [!IMPORTANT]  
@@ -65,7 +66,7 @@ ms.locfileid: "68081461"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BnRHistoryTables"></a> Tablas del historial de copias de seguridad y restauración  
+##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Tablas del historial de copias de seguridad y restauración  
  En esta sección se presentan las tablas del historial que almacenan metadatos de copias de seguridad y restauración en la base de datos del sistema **msdb** .  
   
 |Tabla del historial|Descripción|  
@@ -82,7 +83,7 @@ ms.locfileid: "68081461"
 > [!NOTE]  
 >  Cuando se realiza una restauración, se modifican las tablas del historial de copias de seguridad y las del historial de restauraciones.  
   
-##  <a name="TsqlStatementsForBackupHistory"></a> Instrucciones Transact-SQL para tener acceso al historial de copias de seguridad  
+##  <a name="transact-sql-statements-for-accessing-backup-history"></a><a name="TsqlStatementsForBackupHistory"></a> Instrucciones Transact-SQL para tener acceso al historial de copias de seguridad  
  Las instrucciones de información de la restauración corresponden a información almacenada en ciertas tablas del historial de copias de seguridad.  
   
 > [!IMPORTANT]  
@@ -94,7 +95,7 @@ ms.locfileid: "68081461"
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Obtiene la información del encabezado sobre todos los conjuntos de copias de seguridad de un dispositivo determinado. El resultado de la ejecución de RESTORE HEADERONLY es un conjunto de resultados.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de copia de seguridad" más adelante en este tema.|  
 |[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|Devuelve un conjunto de resultados que contiene información acerca del medio de copia de seguridad de un dispositivo de copia de seguridad especificado.<br /><br /> Para obtener más información, vea "Ver la información de encabezado de medios" más adelante en este tema.|  
   
-##  <a name="ListDbTlogFiles"></a> Archivos de base de datos y de registro de transacciones  
+##  <a name="database-and-transaction-log-files"></a><a name="ListDbTlogFiles"></a> Archivos de base de datos y de registro de transacciones  
  La información que se muestra al enumerar los archivos de base de datos y del registro de transacciones de una copia de seguridad incluye el nombre lógico, nombre físico, tipo de archivo (base de datos o registro), pertenencia a grupos de archivos, tamaño del archivo (en bytes), máximo tamaño de archivo permitido y tamaño de crecimiento de archivos predefinido (en bytes). Esta información es útil, en las situaciones siguientes, para determinar los nombres de los archivos de una copia de seguridad de base de datos antes de restaurarla cuando:  
   
 -   Ha perdido una unidad de disco que contiene uno o más archivos de una base de datos.  
@@ -105,7 +106,7 @@ ms.locfileid: "68081461"
   
      Enumerar los archivos de la copia de seguridad le permite determinar los archivos afectados. Por ejemplo, la copia de seguridad contiene un archivo que es necesario restaurar en la unidad E, pero el servidor de destino no tiene una unidad E. Es necesario cambiar el archivo a otra ubicación, por ejemplo, la unidad Z, cuando se restaure.  
   
-##  <a name="MediaHeader"></a> Información de encabezado de medios  
+##  <a name="media-header-information"></a><a name="MediaHeader"></a> Información de encabezado de medios  
  La información de encabezado de medios muestra información acerca del propio medio y no de las copias de seguridad del medio. La información de encabezado de medios mostrada incluye el nombre del medio, la descripción, el nombre del software que lo creó y la fecha en que se escribió.  
   
 > [!NOTE]  
@@ -113,7 +114,7 @@ ms.locfileid: "68081461"
   
  Para obtener más información, vea [Comparación de la información del encabezado de medios y del encabezado de copias de seguridad](#CompareMediaHeaderBackupHeader), más adelante en este tema.  
   
-##  <a name="BackupHeader"></a> Información de encabezado de copia de seguridad  
+##  <a name="backup-header-information"></a><a name="BackupHeader"></a> Información de encabezado de copia de seguridad  
  En el encabezado de copia de seguridad se muestra información sobre todos los conjuntos de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el medio. La información mostrada incluye los tipos de dispositivos de copia de seguridad utilizados, los tipos de copia de seguridad (por ejemplo, base de datos, transacción, archivo o diferencial de la base de datos) así como información acerca de la fecha y hora inicial y final de la copia de seguridad. Esta información es útil cuando se necesita determinar el conjunto de copia de seguridad que se va a restaurar en la cinta o las copias de seguridad que contiene el medio.  
   
 > [!NOTE]  
@@ -124,14 +125,14 @@ ms.locfileid: "68081461"
 ### <a name="which-backup-set-to-restore"></a>Qué conjunto de copia de seguridad se debe restaurar  
  Puede usar información en el encabezado de copia de seguridad para identificar qué conjunto de copia de seguridad se va a restaurar. El Motor de base de datos numera cada conjunto de copia de seguridad en los medios de copia de seguridad. Esto permite identificar el conjunto de copia de seguridad que desea restaurar mediante su posición en los medios. Por ejemplo, el siguiente medio contiene tres conjuntos de copia de seguridad.  
   
- ![Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server")  
+ ![Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server")  
   
  Para restaurar un conjunto de copia de seguridad específico, especifique el número de posición de ese conjunto. Por ejemplo, para restaurar el segundo conjunto de copia de seguridad, especifique 2 como el conjunto de copia de seguridad para restaurar.  
   
-##  <a name="CompareMediaHeaderBackupHeader"></a> Comparación de la información del encabezado de medios y del encabezado de copia de seguridad  
+##  <a name="comparison-of-media-header-and-backup-header-information"></a><a name="CompareMediaHeaderBackupHeader"></a> Comparación de la información del encabezado de medios y del encabezado de copia de seguridad  
  En la siguiente ilustración se muestra un ejemplo de las diferencias entre ver la información del encabezado de la copia de seguridad y del encabezado del medio. Obtener el encabezado de medios requiere que se recupere solo la información del principio de la cinta. Obtener el encabezado de copia de seguridad requiere examinar la cinta completa para ver el encabezado de cada conjunto de copia de seguridad.  
   
- ![Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server](../../relational-databases/backup-restore/media/bnr-media-label.gif "Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server")  
+ ![Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server](../../relational-databases/backup-restore/media/bnr-media-label.gif "Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server")  
   
 > [!NOTE]  
 >  Si se utilizan conjuntos de medios con varias familias de medios, el encabezado de medios y el conjunto de copia de seguridad se escriben en todas las familias de medios. Por tanto, solo es necesario proporcionar una sola familia de medios para estas operaciones de generación de informes.  
@@ -140,10 +141,10 @@ ms.locfileid: "68081461"
   
  Para obtener información sobre cómo ver la información del encabezado de copia de seguridad de todos los conjuntos de copia de seguridad de un dispositivo, vea "Ver la información de encabezado de copia de seguridad" anteriormente en este tema.  
   
-##  <a name="Verification"></a> Comprobación de copia de seguridad  
+##  <a name="backup-verification"></a><a name="Verification"></a> Comprobación de copia de seguridad  
  Aunque no es obligatoria, la práctica de comprobar una copia de seguridad resulta útil. La comprobación de una copia de seguridad comprueba que esté intacta físicamente, para asegurar que todos los archivos de la copia de seguridad se puedan leer y restaurar, y que se pueda restaurar la copia de seguridad en caso de necesidad. Es importante entender que la comprobación de una copia de seguridad no comprueba la estructura de los datos en la copia de seguridad. Sin embargo, si la copia de seguridad se creó usando WITH CHECKSUMS, la comprobación de la copia de seguridad usando WITH CHECKSUMS puede proporcionar un buen indicativo de la confiabilidad de los datos de la copia de seguridad.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para eliminar filas antiguas de las tablas del historial de copias de seguridad y restauración**  
   
 -   [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  

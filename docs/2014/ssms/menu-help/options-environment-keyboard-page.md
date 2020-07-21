@@ -1,5 +1,5 @@
 ---
-title: Opciones (página entorno teclado) | Microsoft Docs
+title: Opciones (entorno-página teclado) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2237c11e848d25a4b081f68a1969a2b496b3dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662076"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062074"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
-  El cuadro de diálogo **Opciones** le permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
+  El cuadro de diálogo **Opciones** permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
   
  La lista desplegable **Esquema de teclado** proporciona las colecciones disponibles de teclas de método abreviado. Para cargar un esquema específico, selecciónelo en la lista. Cuando esté preparado para dejar el cuadro de diálogo **Opciones** , haga clic en **Aceptar**. El esquema que haya seleccionado se cargará en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **Standard**  
+ **Estándar**  
  El esquema Estándar es el esquema predeterminado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se parece bastante a las teclas de método abreviado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio.  
   
  Utilice la cuadrícula **Accesos directos de consulta** para asociar un procedimiento almacenado a un método abreviado de teclado.  

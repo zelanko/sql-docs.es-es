@@ -16,21 +16,21 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1ff2329d0070d554f87e405a6030b744e98d23a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124918"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896756"
 ---
-# <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Proporciona información sobre un tipo de recopilador para un elemento de recopilación.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|GUID de un tipo de recopilador. No admite valores NULL.|  
 |**name**|**sysname**|Nombre del tipo de recopilador. No admite valores NULL.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68124918"
 |**upload_package_id**|**uniqueidentifer**|GUID del paquete de carga. No admite valores NULL.|  
 |**upload_package_path**|**nvarchar(4000)**|Proporciona la ruta de acceso al paquete de carga. Acepta valores NULL.|  
 |**upload_package_name**|**sysname**|Nombre del paquete de carga. No admite valores NULL.|  
-|**is_system**|**bit**|Activado (1) u off (0) para indicar si el tipo de recopilador se distribuyó con el recopilador de datos o si se agregó más tarde por medio del **dc_admin**. Éste podría ser un tipo personalizado desarrollado internamente o por terceros. No admite valores NULL.|  
+|**is_system**|**bit**|Está activado (1) o desactivado (0) para indicar si el tipo de recopilador se envió con el recopilador de datos o si se agregó más tarde mediante el **dc_admin**. Éste podría ser un tipo personalizado desarrollado internamente o por terceros. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere SELECT para **dc_operator**, **dc_proxy**.  
@@ -51,13 +51,13 @@ ms.locfileid: "68124918"
   
 |Contenido actualizado|  
 |---------------------|  
-|Actualizar **collection_type_uid** nombre de columna para **collector_type_uid**.|  
-|Se ha corregido la descripción para el **parameter_schema** columna para indicar que el valor que acepta valores NULL.|  
-|Agrega el **parameter_formatter** columna.|  
-|Se corrige el tipo de datos para el **collection_package_path** columna y se ha actualizado la descripción para indicar que el valor que acepta valores NULL.|  
-|Se corrige el tipo de datos para el **upload_package_path** columna y se ha actualizado la descripción para indicar que el valor que acepta valores NULL.|  
+|Se actualizó **collection_type_uid** nombre de la columna a **collector_type_uid**.|  
+|Se corrigió la descripción de la columna **parameter_schema** para indicar que el valor admite valores NULL.|  
+|Se ha agregado la columna **parameter_formatter** .|  
+|Se ha corregido el tipo de datos de la columna **collection_package_path** y se ha actualizado la descripción para indicar que el valor admite valores NULL.|  
+|Se ha corregido el tipo de datos de la columna **upload_package_path** y se ha actualizado la descripción para indicar que el valor admite valores NULL.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Vistas del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  

@@ -1,10 +1,9 @@
 ---
-title: Elegir tabla de destino para el cuadro de diálogo Insertar valores | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Elegir tabla de destino para Insertar valores
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bce90ddd0f84a389770fcd3b98f17151ffad1b35
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 83d6eb87f7a51a916d2d90e21692e0d7fc899252
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263657"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255538"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Elegir tabla de destino para Insertar valores (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

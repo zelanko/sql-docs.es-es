@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca32ef4936f31ca5c75dfc2df1eb965d17f7b039
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060384"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar un solucionador de artículos de mezcla
   En este tema se describe cómo especificar un solucionador de artículos de mezcla en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -36,17 +35,17 @@ ms.locfileid: "68212095"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   La replicación de mezcla admite los siguientes tipos de solucionadores de artículos:  
   
     -   El solucionador predeterminado. El comportamiento del solucionador predeterminado depende de si se trata de una suscripción de cliente o de servidor. Para más información sobre cómo especificar el tipo de suscripción, vea [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md) (Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;).  
   
-    -   Un solucionador personalizado, escrito por el usuario, que puede ser un controlador de lógica de negocios (escrito en código administrado) o un solucionador personalizado basado en COM. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si necesita implementar lógica personalizada que se ejecute para cada fila replicada, no solo para filas con conflictos, vea [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Un solucionador personalizado, escrito por el usuario, que puede ser un controlador de lógica de negocios (escrito en código administrado) o un solucionador personalizado basado en COM. Para obtener más información, vea [detección y resolución de conflictos de replicación de mezcla avanzada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si necesita implementar lógica personalizada que se ejecute para cada fila replicada, no solo para filas con conflictos, vea [Implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Un solucionador estándar basado en COM, incluido con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+    -   Un solucionador estándar basado en COM, que se incluye con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Para utilizar un solucionador distinto del predeterminado, debe copiarlo en el equipo en el que se ejecuta el Agente de mezcla y registrarlo (si utiliza un controlador de lógica de negocios, también debe registrarlo en el publicador). El Agente de mezcla se ejecuta en:  
   
@@ -56,16 +55,16 @@ ms.locfileid: "68212095"
   
     -   El servidor con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS), para una suscripción de extracción que utilice la sincronización web.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Una vez registrado el solucionador, especifique que un artículo debe utilizar el solucionador en la pestaña **Resolución** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , que está disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Una vez registrado el solucionador, especifique que un artículo debe utilizar el solucionador en la pestaña **solucionador** del cuadro de diálogo **propiedades del artículo: \<Article> ** , que está disponible en el Asistente para nueva publicación y en el cuadro **de diálogo \<Publication> propiedades de la publicación:** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Para especificar un solucionador  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla.  
+1.  En la página **artículos** del Asistente para nueva publicación o en el cuadro de diálogo **propiedades de la publicación \<Publication> :** , seleccione una tabla.  
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la página **Propiedades del artículo: \<artículo>** , haga clic en la pestaña **Resolución**.  
+3.  En la página **propiedades del \<Article> artículo-** , haga clic en la pestaña **solucionador** .  
   
 4.  Seleccione **Usar un solucionador personalizado (registrado en el distribuidor)** y después, en la lista, haga clic en el solucionador.  
   
@@ -75,22 +74,22 @@ ms.locfileid: "68212095"
   
 7.  Repita este proceso para cada artículo que necesite un solucionador.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Para registrar un solucionador de conflictos personalizado  
   
 1.  Si piensa registrar su propio solucionador de conflictos personalizado, cree uno de los tipos siguientes:  
   
-    -   Solucionador basado en código administrado como un controlador de lógica de negocios. Para más información, consulte [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Solucionador basado en código administrado como un controlador de lógica de negocios. Para obtener más información, vea [implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Solucionador basado en procedimientos almacenados y solucionador basado en COM. Para más información, consulte [Implement a Custom Conflict Resolver for a Merge Article](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
+    -   Solucionador basado en procedimientos almacenados y solucionador basado en COM. Para más información, consulte [Implementación de un solucionador de conflictos personalizado para un artículo de mezcla](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
 2.  Para determinar si el solucionador deseado ya está registrado, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) en el publicador en cualquier base de datos. Esto muestra una descripción del solucionador personalizado así como del identificador de clase (CLSID) de cada solucionador basado en COM registrado en el distribuidor o información sobre el ensamblado administrado de cada controlador de lógica de negocios registrado en el distribuidor.  
   
-3.  Si el solucionador personalizado aún no está registrado, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) en el distribuidor. Especifique un nombre para el solucionador en **@article_resolver** ; para un controlador de lógica de negocios, éste es el nombre descriptivo del ensamblado. Para los solucionadores basados en COM, especifique el CLSID de la DLL para **@resolver_clsid** y para un controlador de lógica de negocios, especifique un valor de `true` para **@is_dotnet_assembly** , el nombre del ensamblado **@dotnet_assembly_name** y el nombre completo de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name** .  
+3.  Si el solucionador personalizado aún no está registrado, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) en el distribuidor. Especifique un nombre para la resolución de **@article_resolver** ; para un controlador de lógica de negocios, éste es el nombre descriptivo del ensamblado. En el caso de los solucionadores basados en COM, especifique el CLSID de la DLL para **@resolver_clsid** y para un controlador de lógica de negocios, especifique un valor de `true` para **@is_dotnet_assembly** , el nombre del ensamblado para **@dotnet_assembly_name** y el nombre completo de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Si no hay implementado un ensamblado de controlador de lógica de negocios en el mismo directorio que la aplicación ejecutable de Combinación Agente, en el mismo directorio que la aplicación que inicia el Agente de mezcla de forma sincrónica, o en la caché de ensamblados global (GAC), debe especificar la ruta de acceso completa con el nombre del ensamblado para **@dotnet_assembly_name** .  
+    >  Si un ensamblado de controlador de lógica de negocios no está implementado en el mismo directorio que el Agente de mezcla ejecutable, en el mismo directorio que la aplicación que inicia de forma sincrónica el Agente de mezcla o en la caché de ensamblados global (GAC), debe especificar la ruta de acceso completa con el nombre de ensamblado para **@dotnet_assembly_name** .  
   
 4.  Si el solucionador es un solucionador basado en COM:  
   
@@ -105,7 +104,7 @@ ms.locfileid: "68212095"
         regsvr32 ssradd.dll  
         ```  
   
-5.  Si el solucionador es un controlador de lógica de negocios, implemente el ensamblado en la misma carpeta que la aplicación ejecutable del Agente de mezcla (replmerg.exe), en la misma carpeta que la aplicación que invoca el Agente de mezcla o en la carpeta especificada para el parámetro **@dotnet_assembly_name** del paso 3.  
+5.  Si el solucionador es un controlador de lógica de negocios, implemente el ensamblado en la misma carpeta que el Agente de mezcla ejecutable (replmerg.exe), en la misma carpeta que una aplicación que invoca el Agente de mezcla o en la carpeta especificada para el **@dotnet_assembly_name** parámetro en el paso 3.  
   
     > [!NOTE]  
     >  La ubicación de instalación predeterminada de la aplicación ejecutable de Agente de mezcla es [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM.  
@@ -116,7 +115,7 @@ ms.locfileid: "68212095"
   
 2.  En el publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) y tenga en cuenta el nombre del solucionador personalizado deseado en el campo **value** del conjunto de resultados.  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique el nombre del solucionador del paso 2 para **@article_resolver** y cualquier entrada necesaria para el solucionador personalizado utilizando el parámetro **@resolver_info** . Para los solucionadores personalizados basados en un procedimiento almacenado, **@resolver_info** es el nombre del procedimiento almacenado. Para más información sobre la entrada requerida por solucionadores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vea [Solucionadores basados en Microsoft COM](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+3.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique el nombre del solucionador del paso 2 para **@article_resolver** y cualquier entrada necesaria para el solucionador personalizado utilizando el **@resolver_info** parámetro. En el caso de los solucionadores personalizados basados en un procedimiento almacenado, **@resolver_info** es el nombre del procedimiento almacenado. Para más información sobre la entrada requerida por solucionadores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vea [Solucionadores basados en Microsoft COM](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 #### <a name="to-specify-or-change-a-custom-resolver-for-an-existing-merge-article"></a>Para especificar o cambiar un solucionador personalizado para un artículo de mezcla existente  
   
@@ -124,9 +123,9 @@ ms.locfileid: "68212095"
   
 2.  En el publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) y tenga en cuenta el nombre del solucionador personalizado deseado en el campo **value** del conjunto de resultados.  
   
-3.  En el publicador de la base de datos de publicación, ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique el valor **article_resolver**, incluso la ruta de acceso completa para los controladores de lógica de negocios, para **@property** y el nombre del solucionador personalizado deseado del paso 2 para **@value** .  
+3.  En el publicador de la base de datos de publicación, ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique el valor **article_resolver**, incluso la ruta de acceso completa para los controladores de lógica de negocios, para **@property**y el nombre del solucionador personalizado deseado del paso 2 para **@value**.  
   
-4.  Para cambiar alguna entrada necesaria para el solucionador personalizado, ejecute de nuevo [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique el valor **resolver_info** para **@property** y cualquier entrada necesaria para el solucionador personalizado para **@value** . Para los solucionadores personalizados basados en un procedimiento almacenado, **@resolver_info** es el nombre del procedimiento almacenado. Para más información sobre la entrada requerida, vea [Solucionadores basados en Microsoft COM](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+4.  Para cambiar alguna entrada necesaria para el solucionador personalizado, ejecute de nuevo [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique el valor **resolver_info** para **@property** y cualquier entrada necesaria para el solucionador personalizado para **@value**. En el caso de los solucionadores personalizados basados en un procedimiento almacenado, **@resolver_info** es el nombre del procedimiento almacenado. Para más información sobre la entrada requerida, vea [Solucionadores basados en Microsoft COM](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 #### <a name="to-unregister-a-custom-conflict-resolver"></a>Para eliminar del registro un solucionador de conflictos personalizado  
   
@@ -134,7 +133,7 @@ ms.locfileid: "68212095"
   
 2.  Ejecute [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) en el distribuidor. Especifique el nombre completo del solucionador personalizado del paso 1 para **@article_resolver** .  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se crea un nuevo artículo y se especifica que se utilice el Solucionador de conflictos de cálculo de media de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para calcular la media de la columna **UnitPrice** cuando se produzcan conflictos.  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  
@@ -143,8 +142,8 @@ ms.locfileid: "68212095"
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_changemerge_resolver)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Detección y resolución de conflictos de replicación de mezcla avanzada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

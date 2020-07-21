@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bb97a2468c42c8f4cd0b427c6b79d736000fc02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63022546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060639"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Asistente para nueva suscripción (referencia de IU)
   En esta sección se ofrece información sobre las siguientes páginas del Asistente para nueva suscripción:  
@@ -42,8 +41,8 @@ ms.locfileid: "63022546"
   
 -   [Valores de HOST_NAME](host-name-values.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)   
 

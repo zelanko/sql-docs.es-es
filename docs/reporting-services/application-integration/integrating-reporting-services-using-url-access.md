@@ -1,9 +1,11 @@
 ---
-title: Integrar Reporting Services utilizando un acceso URL | Microsoft Docs
+title: Integración mediante el acceso URL
+description: Una solicitud URL permite tener acceso a un servidor de informes concreto así como a los informes, recursos y otros elementos en la base de datos del servidor de informes.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - URL access [Reporting Services], about URL access
@@ -11,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: f1014f7d-fafa-4aa8-8bd2-5bdba835d9b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9609802daff2f5040974deaa5793e7bceb8fcbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ef7e673e9002e2144cef37c6d01284888ed483
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660520"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74796835"
 ---
-# <a name="integrating-reporting-services-using-url-access"></a>Integrar Reporting Services utilizando un acceso URL
+# <a name="integrate-reporting-services-using-url-access"></a>Integración de Reporting Services con el acceso URL
   Con el acceso URL, el acceso a los informes se realiza a través de una dirección URL del servidor de informes. Una solicitud URL permite tener acceso a un servidor de informes concreto así como a los informes, recursos y otros elementos en la base de datos del servidor de informes. También puede personalizar la experiencia de visualización y navegación en los informes para los usuarios. La cadena de consulta de la dirección URL contiene la configuración de la información de los dispositivos, así como los parámetros de informe de destino del informe y la salida de representación elegida. La manera en el servidor de informes administra las solicitudes URL depende de los parámetros, los prefijos de parámetro y el tipo de elemento al que está teniendo acceso a través de la dirección URL.  
   
  Puede utilizar el acceso URL para incrustar hipervínculos a los informes y otros elementos del servidor de informes en las aplicaciones que desarrolle, ya sea en un entorno web o de Windows.  

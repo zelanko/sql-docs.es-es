@@ -1,5 +1,5 @@
 ---
-title: Ver la página, los informes (Administrador de informes) | Microsoft Docs
+title: Página ver, informes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098740"
 ---
 # <a name="view-page-reports-report-manager"></a>Ver la página, informes (Administrador de informes)
@@ -35,9 +35,9 @@ Barra de herramientas de informe
  Un informe con parámetros es un informe que contiene campos de entrada y un botón **Ver informe** . Para ver un informe con parámetros, es posible que deba suministrar los valores que se utilizan para ejecutar el informe.  
   
 > [!NOTE]  
->  Las instantáneas de ejecución de informes y algunos formatos de exportación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+>  Las instantáneas de ejecución de informes y algunos formatos de exportación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

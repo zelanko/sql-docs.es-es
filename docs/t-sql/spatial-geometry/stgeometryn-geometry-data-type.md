@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8eb3644652d826744b50b6980b0dbe0a42ae2d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a733fdd692a1a6af724a73ed5ff442594d61629e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762505"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una geometría especificada en una **colección de geometría**.
   
@@ -40,12 +40,12 @@ Devuelve una geometría especificada en una **colección de geometría**.
  *expression*  
  Expresión **int** entre 1 y el número de instancias de **geometry** en la colección **geometrycollection**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método devuelve **null** si el parámetro es mayor que el resultado de `STNumGeometries()` y producirá una excepción **ArgumentOutOfRangeException** si el parámetro *expresión* es menor que 1.  
   
 ## <a name="examples"></a>Ejemplos  

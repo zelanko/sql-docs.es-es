@@ -8,22 +8,16 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68974469"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002809"
 ---
 # <a name="sql-server-monitoring-partners"></a>Asociados de supervisión de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para supervisar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector. En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de supervisión compatibles con Microsoft SQL Server.
-
-<!--
-
-|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
-
--->
 
 ## <a name="microsoft-monitoring-partners"></a>Asociados de supervisión de Microsoft
 
@@ -41,7 +35,7 @@ Para supervisar los servicios de SQL Server, elija entre una amplia variedad de 
 Para más información sobre otros asociados, vea los artículos sobre [asociados de alta disponibilidad y recuperación ante desastres][hadr_partners], [asociados de administración][management_partners] y [asociados de desarrollo][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
 [2]: ./media/partner-hadr-sql-server/sentryone.png
 [3]: ./media/partner-hadr-sql-server/quest.png
 [4]: ./media/partner-hadr-sql-server/redgate.png
@@ -55,7 +49,7 @@ Para más información sobre otros asociados, vea los artículos sobre [asociado
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager
-[sentryone_website]:https://www.sentryone.com 
+[sentryone_website]:https://www.sentryone.com
 [quest_website]:https://www.quest.com/products/spotlight-on-sql-server-enterprise
 [redgate_website]:https://www.red-gate.com/products/dba/sql-monitor/
 [solarwinds_website]:https://www.solarwinds.com/database-performance-analyzer

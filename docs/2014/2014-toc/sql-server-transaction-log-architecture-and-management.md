@@ -1,5 +1,5 @@
 ---
-title: Arquitectura del registro de transacciones de SQL Server y la administración | Microsoft Docs
+title: Arquitectura y administración de registros de transacciones de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-author: craigg-msft
-ms.author: craigg
-manager: craigg
-ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b2a152178a525c7bc4ddd559713cf063376128f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62512768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528402"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>Arquitectura y administración de registros de transacciones de SQL Server
 
@@ -24,7 +23,7 @@ ms.locfileid: "62512768"
   Todas las bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tienen un registro de transacciones que graba todas las transacciones y las modificaciones que cada transacción realiza en la base de datos. El registro de transacciones es un componente esencial de la base de datos y, si se produce un error del sistema, podría ser necesario para volver a poner la base de datos en un estado coherente. Esta guía proporciona información acerca de la arquitectura física y lógica del registro de transacciones. Comprender la arquitectura puede mejorar la eficacia en la administración de registros de transacciones.  
 
   
-##  <a name="Logical_Arch"></a> Arquitectura lógica del registro de transacciones  
+##  <a name="transaction-log-logical-architecture"></a><a name="Logical_Arch"></a>Arquitectura lógica del registro de transacciones  
 
  El registro de transacciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funciona desde el punto de vista lógico como si fuese una cadena de entradas de registro. Cada entrada del registro está identificada por un número de flujo de registro (LSN, Log Sequence Number). Las nuevas entradas del registro se escriben al final lógico del registro con un LSN mayor que el de las entradas anteriores. Las entradas del registro se almacenan en la secuencia en la que se crean. Cada entrada del registro contiene el Id. de la transacción a la que pertenece. Por cada transacción, las entradas del registro asociadas a dicha transacción se vinculan individualmente en una cadena con punteros hacia atrás, para acelerar así la reversión de la transacción.  
   
@@ -56,9 +55,9 @@ ms.locfileid: "62512768"
   
  También se registran las operaciones de reversión. Cada transacción reserva espacio en el registro de transacciones para asegurarse de que existe suficiente espacio de registro para admitir una reversión provocada por una instrucción de reversión explícita o cuando se produce un error. La cantidad de espacio reservado depende de las operaciones realizadas en la transacción, pero normalmente equivale a la cantidad de espacio empleado para registrar cada operación. Este espacio reservado se libera cuando se completa la transacción.  
   
- La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El número de secuencia de registro (LSN) de este primer registro se denomina el LSN de recuperación mínimo (*MinLSN*).  
+  La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El número de secuencia de registro (LSN) de este primer registro se denomina el LSN de recuperación mínimo (*MinLSN*).  
   
-##  <a name="physical_arch"></a> Arquitectura física del registro de transacciones  
+##  <a name="transaction-log-physical-architecture"></a><a name="physical_arch"></a> Arquitectura física del registro de transacciones  
 
  El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
   
@@ -68,11 +67,11 @@ ms.locfileid: "62512768"
   
  El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro archivos de registros virtuales. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
   
- ![Archivo de registro se divide en cuatro archivos de registro virtuales](media/tranlog3.gif "archivo de registro se divide en cuatro archivos de registro virtuales")  
+ ![Archivo de registro dividido en cuatro archivos de registro virtuales](media/tranlog3.gif "Archivo de registro dividido en cuatro archivos de registro virtuales")  
   
  Cuando el final del registro lógico llega al final del archivo de registro físico, las nuevas entradas del registro se escriben al principio del archivo de registro físico.  
   
- ![Entradas de registro encapsulado alrededor al principio del archivo de registro](media/tranlog4.gif "entradas del registro de ajustan alrededor para el inicio del archivo de registro")  
+ ![Las entradas de registro saltan al inicio del archivo de registro](media/tranlog4.gif "Las entradas de registro saltan al inicio del archivo de registro")  
   
  El ciclo se repite indefinidamente, siempre que el final del registro lógico no alcance el inicio del registro lógico. Si las entradas antiguas se truncan con la frecuencia suficiente para disponer siempre de espacio para todas las nuevas entradas de registro que se van a crear hasta el próximo punto de comprobación, el registro no se llena nunca. Sin embargo, si el final del registro lógico llega al principio del registro lógico, se produce una de estas dos situaciones:  
   
@@ -88,11 +87,11 @@ ms.locfileid: "62512768"
   
  En la siguiente ilustración se muestra un registro de transacciones antes y después del truncamiento. En la primera ilustración se muestra un registro de transacciones que no se ha truncado nunca. El registro lógico tiene actualmente cuatro archivos de registro virtuales en uso. El registro lógico comienza al principio del primer archivo de registro virtual y finaliza en el registro virtual 4. El registro de MinLSN está en el registro virtual 3. Los registros virtuales 1 y 2 solo contienen entradas de registro inactivas. Estas entradas pueden truncarse. El registro virtual 5 no se utiliza aún y no forma parte del registro lógico actual.  
   
- ![Registro de transacciones con cuatro registros virtuales](media/tranlog2.gif "registro de transacciones con cuatro registros virtuales")  
+ ![Registro de transacciones con cuatro registros virtuales](media/tranlog2.gif "Registro de transacciones con cuatro registros virtuales")  
   
  En la segunda ilustración se muestra el registro después del truncamiento. Se han liberado los registros virtuales 1 y 2 para su reutilización. El registro lógico comienza ahora al principio del registro virtual 3. El registro virtual 5 no se utiliza aún y no forma parte del registro lógico actual.  
   
- ![Archivo de registro se divide en cuatro archivos de registro virtuales](media/tranlog3.gif "archivo de registro se divide en cuatro archivos de registro virtuales")  
+ ![Archivo de registro dividido en cuatro archivos de registro virtuales](media/tranlog3.gif "Archivo de registro dividido en cuatro archivos de registro virtuales")  
   
  El truncamiento del registro se produce automáticamente después de los eventos siguientes, excepto cuando se retrasa por alguna razón:  
   
@@ -100,9 +99,9 @@ ms.locfileid: "62512768"
   
 -   Bajo el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, después de una copia de seguridad del registro, si un punto de comprobación ha producirse desde la copia de seguridad anterior.  
   
- El truncamiento del registro se puede retrasar por diferentes factores. En caso de un retraso largo en el truncamiento del registro, el registro de transacciones se puede llenar. Para obtener información, consulte [Factores que pueden ralentizar el truncamiento del registro](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) y [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
+ El truncamiento del registro se puede retrasar por diferentes factores. En caso de un retraso largo en el truncamiento del registro, el registro de transacciones se puede llenar. Para obtener más información, vea [factores que pueden retrasar el truncamiento del registro](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) y [solucionar problemas de un registro de transacciones lleno &#40;SQL Server Error 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
   
-##  <a name="WAL"></a> Registro de transacciones de escritura anticipada  
+##  <a name="write-ahead-transaction-log"></a><a name="WAL"></a>Registro de transacciones de escritura previa  
 
  En esta sección se describe el rol que desempeña el registro de transacciones de escritura anticipada en la grabación de modificaciones de datos en disco. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa un registro de escritura anticipada (WAL) que garantiza que ninguna modificación de datos se escribe en el disco antes que la entrada de registro asociada. Así se mantienen las propiedades ACID para una transacción.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62512768"
   
  A la escritura en el disco de una página de datos modificada desde la caché del búfer se le llama vaciar la página. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una lógica que evita que una página desfasada se vacíe antes de que se escriba la entrada del registro asociada. Las entradas de registro se escriben en el disco cuando las transacciones se confirman.  
   
-##  <a name="Backups"></a> Copias de seguridad de registros de transacciones  
+##  <a name="transaction-log-backups"></a><a name="Backups"></a>Copias de seguridad del registro de transacciones  
 
  En esta sección se presentan conceptos acerca de cómo realizar copias de seguridad y restaurar (aplicar) registros de transacciones. En los modelos de recuperación completa y de recuperación optimizada para cargas masivas de registros, es necesario realizar copias de seguridad periódicas de los registros de transacciones (*copias de seguridad de registros*) para recuperar datos. Puede realizar una copia de seguridad del registro mientras se está ejecutando cualquier copia de seguridad completa. Para obtener más información sobre modelos de recuperación, consulte [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62512768"
   
 ### <a name="the-log-chain"></a>La cadena de registros  
 
- Una secuencia continua de copias de seguridad de registros se denomina *cadena de registros*. Una cadena de registros empieza con una copia de seguridad completa de la base de datos. Normalmente, una cadena de registro nueva solo empieza cuando se realiza la primera copia de seguridad de la base de datos o después de que se cambie del modelo de recuperación simple al modelo de recuperación completa o al modelo de recuperación optimizado para cargas masivas de registros. A menos que se elija sobrescribir los conjuntos de copia de seguridad existentes al crear una copia de seguridad completa de la base de datos, la cadena de registros existente permanece intacta. Con la cadena de registros intacta, se puede restaurar la base de datos a partir de cualquier copia de seguridad completa de la base de datos del conjunto de medios, seguida de todas las copias de seguridad de los registros subsiguientes hasta el punto de recuperación. El punto de recuperación puede ser el final de la última copia de seguridad de registros o un punto de recuperación concreto de cualquiera de las copias de seguridad de registros. Para obtener más información, consulte [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+ Una secuencia continua de copias de seguridad de registros se denomina *cadena de registros*. Una cadena de registros empieza con una copia de seguridad completa de la base de datos. Normalmente, una cadena de registro nueva solo empieza cuando se realiza la primera copia de seguridad de la base de datos o después de que se cambie del modelo de recuperación simple al modelo de recuperación completa o al modelo de recuperación optimizado para cargas masivas de registros. A menos que se elija sobrescribir los conjuntos de copia de seguridad existentes al crear una copia de seguridad completa de la base de datos, la cadena de registros existente permanece intacta. Con la cadena de registros intacta, se puede restaurar la base de datos a partir de cualquier copia de seguridad completa de la base de datos del conjunto de medios, seguida de todas las copias de seguridad de los registros subsiguientes hasta el punto de recuperación. El punto de recuperación puede ser el final de la última copia de seguridad de registros o un punto de recuperación concreto de cualquiera de las copias de seguridad de registros. Para obtener más información, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Para restaurar una base de datos al momento del error, es preciso que la cadena de registros esté intacta. De esta forma, es necesario que una secuencia ininterrumpida de las copias de seguridad del registro de transacciones se extienda hasta el momento del error. El lugar en el que esta secuencia de registros debe comenzar depende del tipo de copias de seguridad de datos que esté restaurando: de base de datos, parcial o de archivos. En las copias de seguridad de base de datos o parciales, la secuencia de copias de seguridad de registros debe extenderse desde el final de la copia de seguridad de base de datos o parcial. En un conjunto de copia de seguridad de archivos, la secuencia de copias de seguridad de registros debe comenzar desde el principio del conjunto completo de copias de seguridad de archivos. Para obtener más información, vea [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   

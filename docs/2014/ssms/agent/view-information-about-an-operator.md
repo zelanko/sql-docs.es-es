@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 680b90401f800a9c435bdae33b8e55385541cc4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064416"
 ---
 # <a name="view-information-about-an-operator"></a>Ver información acerca de un operador
-  En este tema se describe el modo de ver infomación acerca de un operado del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo ver información sobre un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operador del agente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **En este tema**  
   
@@ -39,11 +38,11 @@ ms.locfileid: "68188744"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -54,7 +53,7 @@ ms.locfileid: "68188744"
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](sql-server-agent-fixed-database-roles.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-operator"></a>Para ver información acerca de un operador  
   
@@ -68,15 +67,15 @@ ms.locfileid: "68188744"
   
      Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo _nombre_operador_**Propiedades** , consulte:  
   
-    -   [Propiedades del operador y operador New &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propiedades del operador y nuevo operador &#40;página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propiedades del operador: Operador new &#40;página notificaciones&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Propiedades de operador: nuevo operador &#40;página notificaciones&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [Propiedades del operador &#40;Página Historial&#41;](operator-properties-history-page.md)  
   
-5.  Cuando termine, haga clic en **Aceptar**.  
+5.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-information-about-an-operator"></a>Para ver información acerca de un operador  
   
@@ -97,6 +96,6 @@ ms.locfileid: "68188744"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_help_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
+ Para obtener más información, vea [sp_help_operator &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
   
   

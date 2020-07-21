@@ -11,23 +11,22 @@ helpviewer_keywords:
 ms.assetid: ac71e2e1-5857-4115-a720-7dae08769926
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a8ab505f27bcbd271ef5d68e050545662d5b518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77538c63ea764f60f9e3b37e4069e1c062867e4e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62870052"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553900"
 ---
-# <a name="mssqlserver12300"></a>MSSQLSERVER_12300
+# <a name="mssqlserver_12300"></a>MSSQLSERVER_12300
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Atributo|Value|  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12300|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12300|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_COMPUTED_COLUMNS|  
 |Texto del mensaje|No se admiten columnas calculadas con '*construct*'.|  
@@ -35,7 +34,7 @@ ms.locfileid: "62870052"
 ## <a name="user-action"></a>Acción del usuario  
  No se admiten columnas calculadas con tablas optimizadas de memoria.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

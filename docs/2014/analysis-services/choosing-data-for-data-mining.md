@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527591"
 ---
 # <a name="choosing-data-for-data-mining"></a>Elegir datos para minería de datos
-  Al comenzar la minería de datos, podría preguntar "¿cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a Mis datos?"  
+  Al iniciar la minería de datos, podría preguntar "¿Cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a mis datos?"  
   
  En concreto, las personas sin experiencia en minería de datos suelen tener problemas con los datos de Excel, como la necesidad de dar formato a los datos de forma coherente dentro de las columnas, limpiar los valores ausentes o discretizar números. En esta sección también se muestran los requisitos de datos para determinados tipos de modelos.  
   
  [Elegir los datos](#bkmk_ChoosingData)  
   
- [Problemas comunes de datos](#bkmk_CommonDataProblems)  
+ [Problemas frecuentes de los datos](#bkmk_CommonDataProblems)  
   
  [Otros requisitos de datos](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a> Elegir los datos  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>Elegir datos  
  La selección de los datos empleados para el análisis es quizás la parte importante del proceso de minería de datos, más incluso que la selección de un algoritmo. El motivo es que la minería de datos no suele estar controlada por hipótesis, sino por datos. En lugar de seleccionar y probar variables de antemano, como podría hacer con el modelo estadístico tradicional, la minería de datos puede tomar datos y detectar nuevas correlaciones (o no detectar ningún patrón). La calidad y la cantidad de los datos pueden tener un efecto significativo sobre los resultados.  
   
  En general, tenga en cuenta las reglas siguientes:  
@@ -68,11 +67,11 @@ ms.locfileid: "66088031"
 ### <a name="how-much-data-do-i-need"></a>¿Cuántos datos necesito?  
  Una regla general es no tener nunca menos de 50-100 filas de datos para los tipos y escenarios de modelos más simples. Por ejemplo, si va a predecir un solo atributo mediante un modelo Bayes naive y el conjunto de datos es correcto, es posible que pueda generar predicciones bastante precisas con 50-100 filas de datos.  
   
- Para los modelos de asociación, normalmente se necesitan muchos más datos, mil filas no podrían ser suficiente si va a analizar muchos atributos, como las asociaciones entre productos. Si el conjunto de datos es demasiado grande o demasiado pequeño, a veces puede conseguir mejores resultados si contrae las filas en categorías. Por ejemplo, en lugar de analizar las asociaciones entre productos individuales, puede categorizar los productos.  
+ En el caso de los modelos de asociación, normalmente se necesitan muchos más datos; puede que mil filas no sean suficientes si va a analizar muchos atributos, como asociaciones entre productos. Si el conjunto de datos es demasiado grande o demasiado pequeño, a veces puede conseguir mejores resultados si contrae las filas en categorías. Por ejemplo, en lugar de analizar las asociaciones entre productos individuales, puede categorizar los productos.  
   
  Si tiene un conjunto de datos de un tamaño razonable, céntrese más en la calidad de los datos que en agregar cada vez más datos. Llegado a un punto, se habrán encontrado todos los patrones que son estadísticamente válidos y el hecho de agregar más datos no mejora su validez. Por el contrario, a medida que se agregan más datos en ocasiones se pueden introducir correlaciones accidentales.  
   
-### <a name="discrete-vs-continuous-numbers"></a>Números discretos frente a. Números continuos  
+### <a name="discrete-vs-continuous-numbers"></a>Números discretos frente a Números continuos  
  Una columna *discreta* contiene un número finito de valores. Por ejemplo, el texto siempre se trata como valor discreto.  
   
  Hay algunos atributos importantes para los valores discretos. Por ejemplo, si se trata los números como discretos, no se implica ningún orden entre ellos y no se puede calcular el promedio o sumar los números. Los códigos de área telefónicos son un buen ejemplo de datos numéricos discretos que nunca usaría para realizar operaciones matemáticas.  
@@ -83,7 +82,7 @@ ms.locfileid: "66088031"
   
  Los datos numéricos*continuos* pueden incluir un número de valores fraccionales infinito. Una columna de ingresos es un ejemplo de una columna de atributos continua. Si especifica que una columna es numérica, cada valor de esa columna debe ser un número, excepto los valores NULL. Tenga en cuenta que, en Excel, se pueden considerar las marcas de tiempo y cualquier otra representación de fecha y hora que se pueda convertir a un tipo de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Convertir números en Variables de categorías**  
+ **Convertir números en variables de categorías**  
   
  Solo porque una columna contiene números no significa que debe tratarlos como números continuos. La*discretización* proporciona muchas ventajas para el análisis. Una es que el problema de espacio se reduce. Other es que a veces los números no son la forma adecuada de expresar un resultado.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66088031"
   
  No es posible crear un modelo de minería de datos con datos continuos y después tratar la columna como discreta. Los dos conjuntos de datos deben procesarse de forma diferente y se tratan en el back-end como estructuras de minería de datos independientes. Si no está seguro de la forma adecuada de tratar los datos, debe crear modelos independientes que controlen los datos de forma diferente. En cualquier caso, es conveniente obtener una perspectiva distinta de los datos y quizás resultados diferentes.  
   
- **Convertir números en texto**  
+ **Convertir números a texto**  
   
  Con mucha frecuencia, valores que deberían ser discretos, como Hombre y Mujer, se representan como datos numéricos mediante las etiquetas 1 y 2. Normalmente, esta codificación se realiza para simplificar la entrada de datos o ahorrar espacio de almacenamiento en una base de datos, pero puede llevar a ambigüedad acerca de la naturaleza o del significando de los valores. Es más, dado que los valores discretos se almacenan como números, al mover datos de una aplicación a otra podría hallar errores de conversión de tipo de datos, y los valores podrían calcularse o, por el contrario, ser tratados como continuos. Para evitar estos problemas, antes de comenzar la minería de datos, debería volver a convertir las etiquetas numéricas en etiquetas de texto discretas.  
   
@@ -109,10 +108,10 @@ ms.locfileid: "66088031"
   
 -   Aproximando valores a una media central o a un valor representativo.  
   
-##  <a name="bkmk_CommonDataProblems"></a> Problemas comunes de datos  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>Problemas comunes de datos  
   
 ### <a name="excel-number-formats"></a>Formatos de números de Excel  
- Excel es una herramienta fácil de usar porque es permisiva;: puede colocar cualquier tipo de datos en cualquier lugar. Sin embargo, antes de empezar a buscar patrones y analizar correlaciones, debe imponer alguna estructura o restricciones en los datos.  
+ Excel es una herramienta fácil de usar porque es permisivo. puede colocar prácticamente cualquier tipo de datos en cualquier lugar. Sin embargo, antes de empezar a buscar patrones y analizar correlaciones, debe imponer alguna estructura o restricciones en los datos.  
   
  De forma predeterminada, cuando se importan datos numéricos en [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel, los números se almacenan en un formato decimal con dos posiciones decimales. Si este no es un formato de número adecuado, debería cambiar a otro formato numérico o modificar el número de decimales.  
   
@@ -145,28 +144,28 @@ ms.locfileid: "66088031"
   
  Si tiene dificultades a la hora de trabajar con fechas y desea analizar fechas mediante agrupaciones comunes como mes o día, puede usar las funciones DATE de Excel para extraer el año, el mes o el día en una columna independiente y, posteriormente, usar esa columna para la clasificación.  
   
-##  <a name="bkmk_OtherRequirements"></a> Otros requisitos de datos  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>Otros requisitos de datos  
   
 ### <a name="requirements-by-algorithm-type"></a>Requisitos por tipo de algoritmo  
  Algunos de los algoritmos que se emplean en los complementos requieren determinados tipos de datos o de contenido para crear un modelo.  
   
- **Modelos Naïve Bayes**  
+ **Modelos Bayes Naïve**  
   
 -   El algoritmo Bayes naive de [!INCLUDE[msCoName](../includes/msconame-md.md)] no puede usar columnas continuas como entrada. Esto significa que debe discretizar los números, o si hay muy pocos valores, tratarlos como valores discretos.  
   
 -   Este tipo de modelo tampoco puede predecir valores continuos. Por tanto, si desea predecir un número continuo como los ingresos (por ejemplo) primero debe discretizar los valores en rangos significativos. Si no está seguro de cuáles son los intervalos adecuados, puede usar el algoritmo de clústeres para identificar los grupos de números en los datos.  
   
--   Cuando se usa un asistente basado en este algoritmo (como [analizar Influenciadores clave &#40;herramientas de análisis de tabla para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), las columnas que son continuas se discretizarán por el asistente le.  
+-   Cuando se usa un asistente basado en este algoritmo (como [analizar influenciadores clave &#40;herramientas de análisis de tabla para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)), las columnas que son continuas serán discretizan por el asistente.  
   
--   Si compila un modelo Bayes Naive utilizando la [avanzadas de modelado &#40;complementos minería de datos para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opción, las columnas numéricas se quitarán del modelo. Si desea evitar este problema, utilice el [cambiar etiquetas &#40;complementos de minería de datos de SQL Server&#41; ](relabel-sql-server-data-mining-add-ins.md) herramienta para crear una nueva columna con valores discretizados.  
+-   Si crea un modelo Bayes Naive mediante la opción de [modelado avanzado &#40;complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md) , se quitarán las columnas de número del modelo. Si desea evitar esto, use la herramienta cambiar [etiquetas &#40;SQL Server complementos de minería de datos&#41;](relabel-sql-server-data-mining-add-ins.md) para crear una nueva columna con valores discretizan.  
   
  **Modelos de agrupación en clústeres**  
   
--   Las herramientas de agrupación en clústeres ([Asistente para clúster &#40;complementos minería de datos para Excel&#41; ](cluster-wizard-data-mining-add-ins-for-excel.md) y [detectar categorías &#40;herramientas de análisis de tabla para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) también no se puede usar continua números, pero ambas herramientas discretizarán automáticamente las columnas numéricas para usted.  
+-   Las herramientas de agrupación en clústeres ([Asistente para clúster &#40;complementos de minería de datos para excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) y [detectar categorías &#40;herramientas de análisis de tabla para Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)) tampoco pueden usar números continuos, pero ambas herramientas incluirán automáticamente las columnas numéricas.  
   
 -   Ambas herramientas le ofrecen la opción de elegir el número de categorías de salida en los resultados, pero si desea controlar la manera en la que se agrupan los valores de columnas individuales, debe crear una nueva columna con la agrupación que desee.  
   
- **Los modelos de pronóstico**  
+ **Modelos de predicción**  
   
 -   Todas las herramientas de pronóstico requieren que se prediga un número continuo. No puede predecir un número que se ha guardado como texto.  
   
@@ -179,7 +178,7 @@ ms.locfileid: "66088031"
   
  Por ejemplo, si una columna contiene números que se repiten en un intervalo concreto para indicar los días de la semana, podría especificar el tipo de contenido de esa columna como `Cyclical`.  
   
- No tiene que preocuparse sobre los tipos de contenido si utiliza los asistentes y herramientas proporcionadas en este complemento. Sin embargo, si usa el [Agregar modelo a estructura &#40;complementos minería de datos para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opción para agregar un nuevo modelo a los datos existentes de modelado, podría obtener un error relacionado con los tipos de contenido.  
+ No tiene que preocuparse de los tipos de contenido si utiliza los asistentes y las herramientas que se proporcionan en este complemento. Sin embargo, si usa la opción [Agregar modelo a estructura &#40;minería de datos para Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md) modelado para agregar un nuevo modelo a los datos existentes, es posible que reciba un error relacionado con los tipos de contenido.  
   
  El motivo es que algunos tipos de modelo requieren una clase determinada de datos (como una marca de tiempo). Las herramientas procesan estas columnas según requisitos específicos y también agregan una propiedad de tipo de contenido. Por tanto, si reutiliza los datos con un algoritmo completamente diferente, necesitará cambiar el tipo de datos o el tipo de contenido.  
   
@@ -196,35 +195,35 @@ ms.locfileid: "66088031"
  El tipo de contenido `Continuous` se puede utilizar con los siguientes tipos de datos: `Date`, `Double` y `Long`.  
   
  `Discretized`  
- La columna contiene valores que representan grupos de valores que se han derivado de una columna continua. Los cubos se tratan como si fueran valores **ordenados** y discretos.  
+ La columna contiene valores que representan grupos de valores que se han derivado de una columna continua. Los depósitos se tratan como valores **ordenados** y discretos.  
   
  El tipo de contenido `Discretized` se puede utilizar con los siguientes tipos de datos: `Date`, `Double` y `Long`.  
   
- **Key**  
+ **Clave**  
  La columna identifica una fila de forma única.  
   
  Normalmente, la columna de clave es un identificador numérico o de texto que no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros. Las excepciones son las claves de serie temporal y las claves de secuencia.  
   
- Las**claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información sobre las tablas anidadas, vea [ https://msdn.microsoft.com/library/ms175659.aspx ](https://msdn.microsoft.com/library/ms175659.aspx):  
+ Las**claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información acerca de las tablas anidadas, vea [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) :  
   
  Este tipo de contenido se puede utilizar con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
- **Secuencia de teclas**  
+ **Key Sequence**  
  La columna contiene valores que representan una secuencia de eventos. Los valores están ordenados y no tienen que estar separados por una distancia equivalente.  
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long`, `Text` y `Date`.  
   
- **Clave temporal**  
+ **Key Time**  
  La columna contiene valores que se ordenan y representan una escala de tiempo. Solo puede utilizar el tipo de contenido Key Time si el modelo es un modelo de serie temporal o un modelo de agrupación en clústeres de secuencia.  
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long` y `Date`.  
   
- **Table**  
+ **Tabla**  
  Este tipo de contenido también se utiliza únicamente al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Lo que significa es que cada fila de datos contiene realmente una tabla de datos anidada, con una o más columnas y una o más filas.  
   
- Las tablas anidadas son muy útiles, pero se puede utilizar solo con el [avanzadas de modelado &#40;complementos minería de datos para Excel&#41; ](advanced-modeling-data-mining-add-ins-for-excel.md) opciones de modelado. Por ejemplo, los datos de ejemplo para el [Asistente asociar &#40;cliente de minería de datos para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) asistente y [análisis de cesta de la compra &#40;herramientas de análisis de tabla para Excel&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md) herramienta contiene los datos que se han aplanado de una tabla anidada.  
+ Las tablas anidadas son muy útiles, pero solo se pueden usar con el [modelado avanzado &#40;complementos de minería de datos para Excel&#41;opciones de](advanced-modeling-data-mining-add-ins-for-excel.md) modelado. Por ejemplo, los datos de ejemplo para el Asistente para la Asociación &#40;el Asistente para la [&#41;de datos de Data Mining para Excel](associate-wizard-data-mining-client-for-excel.md) y el análisis de la [cesta de compras &#40;tabla análisis para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) Tool contiene datos que se han simplificado de una tabla anidada.  
 
   
   

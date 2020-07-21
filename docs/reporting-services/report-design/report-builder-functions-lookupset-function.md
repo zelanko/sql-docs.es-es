@@ -1,5 +1,5 @@
 ---
-title: Función LookupSet (Generador de informes y SSRS) | Microsoft Docs
+title: Función LookupSet (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30c2747a384a49282be0208e28d6153570299c7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577410"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081221"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funciones del Generador de informes: función LookupSet
   Devuelve el conjunto de valores coincidentes para el nombre especificado de un conjunto de datos que contiene pares nombre/valor.  
@@ -41,10 +41,10 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "ContactInformation".  
   
-## <a name="return"></a>Devolución  
+## <a name="return"></a>Valor devuelto  
  Devuelve **VariantArray**o **Nothing** si no hay ninguna coincidencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use **LookupSet** para recuperar un conjunto de valores del conjunto de datos especificado correspondiente a un par nombre-valor donde hay una relación de uno a varios. Por ejemplo, para un identificador de cliente en una tabla, puede usar **LookupSet** para recuperar todos los números de teléfono asociados a ese cliente de un conjunto de datos que no está enlazado a la región de datos.  
   
  **LookupSet** realiza las operaciones siguientes:  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Para recuperar un único valor de un conjunto de datos con pares nombre-valor para un nombre especificado donde hay una relación de uno a uno, use la [función Lookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Para llamar a **Lookup** para un conjunto de valores, use la [función Multilookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Se aplican las siguientes restricciones:  
+ Se aplican las restricciones que se indican a continuación:  
   
 -   Se evalúa**LookupSet** después de aplicar todas las expresiones de filtro.  
   

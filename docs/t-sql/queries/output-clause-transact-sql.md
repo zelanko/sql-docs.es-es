@@ -1,7 +1,7 @@
 ---
 title: OUTPUT (cláusula de Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 01/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706032"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT (cláusula de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información de las filas afectadas por una instrucción INSERT, UPDATE, DELETE o MERGE, o expresiones basadas en esas filas. Estos resultados se pueden devolver a la aplicación de procesamiento para que los utilice en mensajes de confirmación, archivado y otros requisitos similares de una aplicación. Los resultados también se pueden insertar en una tabla o variable de tabla. Además, puede capturar los resultados de una cláusula OUTPUT en una instrucción anidada INSERT, UPDATE, DELETE o MERGE, e insertar los resultados en una tabla de destino o vista.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67901872"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -138,15 +138,15 @@ DELETE Sales.ShoppingCartItem
  $action  
  Solo está disponible para la instrucción MERGE. Especifica una columna de tipo **nvarchar(10)** en la cláusula OUTPUT de una instrucción MERGE que devuelve uno de los tres valores para cada fila: 'INSERT', 'UPDATE' o 'DELETE', según la acción realizada en esa fila.  
   
-## <a name="remarks"></a>Notas  
- Las cláusulas OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } se pueden definir en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
+## <a name="remarks"></a>Observaciones  
+ Las cláusulas OUTPUT \<dml_select_list> y OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } se pueden definir en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  A menos que se indique lo contrario, las referencias a la cláusula OUTPUT se refieren tanto a la cláusula OUTPUT como a la cláusula OUTPUT INTO.  
   
  La cláusula OUTPUT puede ser útil para recuperar el valor de las columnas de identidad o calculadas después de una operación con INSERT o UPDATE.  
   
- Cuando se incluye una columna calculada en \<lista_de_selección_dml>, la columna correspondiente de la tabla de salida o la variable de tabla no es una columna calculada. Los valores de la nueva columna son los que se calcularon en el momento en que se ejecutó la instrucción.  
+ Cuando se incluye una columna calculada en \<dml_select_list>, la columna correspondiente de la tabla de salida o la variable de tabla no es una columna calculada. Los valores de la nueva columna son los que se calcularon en el momento en que se ejecutó la instrucción.  
   
  No se garantiza que coincidan el orden en que se aplican los cambios en la tabla y el orden en que se insertan las filas en la tabla de salida o variable de tabla.  
   
@@ -209,9 +209,9 @@ DELETE Sales.ShoppingCartItem
   
 -   Las notificaciones de consulta tratan la instrucción como una entidad única, y el tipo de cualquier mensaje creado es el del DML anidado, aunque el cambio significativo provenga de la propia instrucción INSERT externa.  
   
--   En la cláusula \<dml_table_source>, las cláusulas SELECT y WHERE no pueden incluir subconsultas, funciones de agregado, funciones de categoría, predicados de texto completo, funciones definidas por el usuario que realicen accesos a datos, ni la función TEXTPTR.  
+-   En la cláusula \<dml_table_source>, las cláusulas SELECT y WHERE no pueden incluir subconsultas, funciones de agregado, funciones de categoría, predicados de texto completo, funciones definidas por el usuario que realicen accesos a datos ni la función TEXTPTR.  
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>Paralelismo
  Una cláusula OUTPUT que devuelve resultados al cliente siempre usará un plan en serie.
 
 En el contexto de una base de datos configurada en el nivel de compatibilidad 130 o superior, si en una operación INSERT…SELECT se usa una sugerencia WITH (TABLOCK) para la instrucción SELECT y también OUTPUT…INTO para insertar en una tabla temporal o de usuario, la tabla de destino para la instrucción INSERT…SELECT será apta para el paralelismo según el costo de subárbol.  La tabla de destino a la que se hace referencia en la cláusula OUTPUT INTO no será apta para el paralelismo. 
@@ -225,7 +225,7 @@ En el contexto de una base de datos configurada en el nivel de compatibilidad 13
   
  Si se establece la opción disallow results from triggers de sp_configure, una cláusula OUTPUT sin una cláusula INTO hará que la instrucción genere un error cuando se llame desde un desencadenador.  
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  La cláusula OUTPUT admite los tipos de datos de objetos grandes: **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** y **xml**. Cuando se usa la cláusula .WRITE en la instrucción UPDATE para modificar una columna de tipo **nvarchar(max)** , **varchar(max)** o **varbinary(max)** , se devuelven las imágenes anterior y posterior completas de los valores si se hace referencia a ellas. La función TEXTPTR() no puede aparecer como parte de una expresión en una columna de tipo **text**, **ntext** o **image** en la cláusula OUTPUT.  
   
 ## <a name="queues"></a>Colas  
@@ -307,9 +307,9 @@ DROP TABLE dbo.table1;
 >  Use la sugerencia de tabla READPAST en las instrucciones UPDATE y DELETE si el escenario permite que varias aplicaciones realicen una lectura destructiva de una tabla. De esta forma se impide que surjan problemas de bloqueo si otra aplicación ya está leyendo el primer registro de la tabla que reúne los requisitos.  
   
 ## <a name="permissions"></a>Permisos  
- Se requieren permisos SELECT en las columnas recuperadas a través de \<lista_de_selección_dml> o usadas en \<expresión_escalar>.  
+ Se requieren permisos SELECT en las columnas recuperadas mediante \<dml_select_list> o usadas en \<scalar_expression>.  
   
- Se requieren permisos INSERT en las tablas especificadas en \<tabla_de_salida>.  
+ Se requieren permisos INSERT en las tablas especificadas en \<output_table>.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. Usar OUTPUT INTO con from_table_name en una instrucción UPDATE  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. Usar OUTPUT INTO con from_table_name en una instrucción UPDATE  
  En el ejemplo siguiente se actualiza la columna `ScrapReasonID` de la tabla `WorkOrder` para todas las órdenes de trabajo en las que se especifique `ProductID` y `ScrapReasonID`. La cláusula `OUTPUT INTO` devuelve los valores de la tabla que se actualiza (`WorkOrder`) y de la tabla `Product`. La tabla `Product` se utiliza en la cláusula `FROM` para especificar las filas que se van a actualizar. Dado que la tabla `WorkOrder` tiene definido un desencadenador `AFTER UPDATE`, se requiere la palabra clave `INTO`.  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. Usar OUTPUT INTO con from_table_name en una instrucción DELETE  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. Usar OUTPUT INTO con from_table_name en una instrucción DELETE  
  En el ejemplo siguiente se eliminan las filas de la tabla `ProductProductPhoto` según los criterios de búsqueda definidos en la cláusula `FROM` de la instrucción `DELETE`. La cláusula `OUTPUT` devuelve columnas de la tabla que se elimina (`deleted.ProductID`, `deleted.ProductPhotoID`) y de la tabla `Product`. La tabla se utiliza en la cláusula `FROM` para especificar las filas que se van a eliminar.  
   
 ```  
@@ -576,9 +576,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

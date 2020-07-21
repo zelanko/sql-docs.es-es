@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52b569ba68e6693c5b720e118a4500e2e768b3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5618ae2d935fdf0e78cd24b7bb9f0f2f6881940f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058006"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>Especificar criterios de búsqueda (Visual Database Tools)
   Puede utilizar criterios de búsqueda para restringir el número de filas devueltas por una consulta.  
@@ -75,10 +74,10 @@ ms.locfileid: "63277120"
  Explica cómo se crean subconsultas o consultas anidadas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
+ [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
  Proporciona vínculos a temas en los que se explican los pasos necesarios para realizar las tareas de consulta más comunes.  
   
- [Tipos de consultas &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
+ [Tipos de consultas (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
  Proporciona vínculos a temas en los que se explican los tipos de consultas admitidos.  
   
  [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  

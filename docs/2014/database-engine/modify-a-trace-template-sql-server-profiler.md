@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d953bdeeae8ca6701bd0b30d2f59eec55f81e80d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090000"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930686"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Modificar una plantilla de seguimiento (SQL Server Profiler)
   En este tema se explica cómo modificar una plantilla de seguimiento mediante [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66090000"
   
 2.  En el cuadro de diálogo **Propiedades de la plantilla de seguimiento** , en la pestaña **General** , modifique el tipo de servidor y el nombre de la plantilla si es necesario o elija una plantilla predeterminada para el tipo de servidor.  
   
-3.  En el menú **Selección de eventos**, utilice el control de cuadrículas para agregar o quitar eventos y columnas de datos del archivo de seguimiento tal como se indica a continuación.  
+3.  En la pestaña **selección de eventos**, utilice el control de cuadrícula para agregar o quitar eventos y columnas de datos del archivo de seguimiento como se indica a continuación.  
   
     -   Para agregar un evento, expanda la categoría de evento correspondiente en la columna **Eventos** y seleccione el nombre del evento.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66090000"
   
 4.  Haga clic en **Guardar**o bien en **Guardar As**si desea guardar la plantilla de seguimiento con otro nombre.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un archivo o tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   

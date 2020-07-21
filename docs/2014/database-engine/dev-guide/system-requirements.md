@@ -1,5 +1,5 @@
 ---
-title: Requisitos del sistema | Documentos de Microsoft
+title: Requisitos del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a27b6093fc7fae78d2181dd2358e7f070df75903
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62781954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933296"
 ---
 # <a name="system-requirements"></a>Requisitos del sistema
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO) usa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` controlador de objetos para conectarse y comunicarse con instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) utilizan el [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` controlador de objeto para conectarse a instancias de y comunicarse con ellas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Los clientes SMO requieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que está incluido con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
- Para desarrollar las aplicaciones utilizando SMO, debe tener instalado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008.  
+ Para desarrollar aplicaciones mediante SMO, debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] instalado 2008.  
   
-## <a name="see-also"></a>Vea también  
- [Información general de la instalación de SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Información general sobre la instalación de SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

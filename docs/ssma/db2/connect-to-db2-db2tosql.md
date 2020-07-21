@@ -1,5 +1,5 @@
 ---
-title: Conectar con DB2 (DB2ToSQL) | Microsoft Docs
+title: Conectarse a DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,66 +10,66 @@ ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141094"
 ---
-# <a name="connect-to-db2-db2tosql"></a>Conectar con DB2 (DB2ToSQL)
-Use la **conectar con DB2** cuadro de diálogo para conectarse a la base de datos de DB2 que se va a migrar.  
+# <a name="connect-to-db2-db2tosql"></a>Conectarse a DB2 (DB2ToSQL)
+Utilice el cuadro de diálogo **conectar con DB2** para conectarse a la base de datos DB2 que desea migrar.  
   
-Para obtener acceso a este cuadro de diálogo, en el **archivo** menú, seleccione **conectar con DB2**. Si se ha conectado anteriormente, el comando es **volver a conectar a DB2**.  
+Para obtener acceso a este cuadro de diálogo, en el menú **archivo** , seleccione **conectarse a DB2**. Si ya se ha conectado, el comando se **vuelve a conectar a DB2**.  
   
 ## <a name="options"></a>Opciones  
 **Proveedor**  
-Seleccione el proveedor de acceso a datos para la conexión a la base de datos DB2. Los proveedores disponibles son el proveedor de cliente de DB2 y el proveedor OLE DB. El valor predeterminado es el proveedor de cliente de DB2.  
+Seleccione el proveedor de acceso a datos para la conexión a la base de datos DB2. Los proveedores disponibles son el proveedor de cliente DB2 y el proveedor de OLE DB. El valor predeterminado es proveedor de cliente de DB2.  
   
 **Modo**  
-Seleccione modo estándar, TNSNAME o cadena de conexión.  
+Seleccione estándar, TNSNAME o modo de cadena de conexión.  
   
--   En el modo estándar, escriba o seleccione valores para el proveedor, nombre del servidor, puerto del servidor, el SID de DB2, nombre de usuario y contraseña.  
+-   En el modo estándar, escriba o seleccione los valores del proveedor, el nombre del servidor, el puerto del servidor, el SID de DB2, el nombre de usuario y la contraseña.  
   
--   En el modo TNSNAME, escriba el identificador de conexión (alias TNS) de la base de datos DB2, nombre de usuario y contraseña.  
+-   En el modo TNSNAME, escriba el identificador de conexión (alias TNS) de la base de datos DB2, el nombre de usuario y la contraseña.  
   
--   En el modo de cadena de conexión, proporcione una cadena de conexión.  
+-   En el modo de cadena de conexión, se proporciona una cadena de conexión.  
   
     > [!IMPORTANT]  
-    > No se recomienda que use el modo de cadena de conexión porque el texto puede incluir las contraseñas, y se envía como texto no cifrado.  
+    > No se recomienda usar el modo de cadena de conexión porque el texto podría incluir contraseñas y se envía como texto sin cifrar.  
   
 El valor predeterminado es el modo estándar.  
   
 **Nombre del servidor**  
-Escriba el nombre del servidor DB2. El nombre del servidor predeterminado es el mismo que el nombre del equipo. Esta es una opción de modo estándar.  
+Escriba el nombre del servidor DB2. El nombre del servidor predeterminado es el mismo que el nombre del equipo. Se trata de una opción de modo estándar.  
   
-**Puerto del servidor**  
-Si usa un número de puerto distinto 1521 (valor predeterminado) para las conexiones a DB2, escriba el número de puerto. Esta es una opción de modo estándar.  
+**Puerto de servidor**  
+Si usa un número de puerto distinto de 1521 (predeterminado) para las conexiones a DB2, escriba el número de puerto. Se trata de una opción de modo estándar.  
   
 **Identificador de conexión**  
-Escriba DB2 connect identificador. Éste es el alias de la base de datos tal como se define en el archivo tnsnames.ora local.  
+Escriba el identificador de la conexión de DB2. Este es el alias de la base de datos tal y como se define en el archivo archivo tnsnames. ora local.  
   
-Esta es una opción de modo TNSNAME.  
+Se trata de una opción de modo TNSNAME.  
   
-**DB2 SID**  
-Escriba al SID de la base de datos. El SID es un identificador que distingue de la base de datos de DB2 en un equipo. El valor predeterminado de SID para una base de datos es que los ocho primeros caracteres del nombre de base de datos.  
+**SID DE DB2**  
+Escriba el SID para la base de datos. El SID es un identificador que distingue la base de datos DB2 en un equipo. El SID predeterminado de una base de datos de son los ocho primeros caracteres del nombre de la base de datos.  
   
-Esta es una opción de modo estándar.  
+Se trata de una opción de modo estándar.  
   
-**Nombre de usuario.**  
-Escriba el nombre de usuario que va a usar para conectarse a la base de datos DB2 SSMA.  
+**Nombre de usuario**  
+Escriba el nombre de usuario que SSMA usará para conectarse a la base de datos DB2.  
   
 **Contraseña**  
 Escriba la contraseña del nombre de usuario.  
   
 **Cadena de conexión**  
 > [!IMPORTANT]  
-> No se recomienda que use el modo de cadena de conexión porque el texto puede incluir las contraseñas, y se envía como texto no cifrado.  
+> No se recomienda usar el modo de cadena de conexión porque el texto podría incluir contraseñas y se envía como texto sin cifrar.  
   
 Si usa el modo de cadena de conexión, escriba la cadena de conexión completa para la conexión a DB2.  
   
 Las cadenas de conexión constan de pares de nombre y valor de parámetro.  
   
--   Para información de la cadena de conexión de OLE DB, consulte [proveedor Microsoft OLE DB para DB2](https://go.microsoft.com/fwlink/?LinkId=85640) artículo en MSDN Library.  
+-   Para obtener OLE DB información de la cadena de conexión, vea [proveedor OLE DB de Microsoft para DB2](https://go.microsoft.com/fwlink/?LinkId=85640) artículo en MSDN Library.  
   
-SSMA cadenas de conexión, siempre que incluya el parámetro de proveedor. Además, asegúrese de incluir el parámetro de puerto cuando se conecta a DB2.  
+En el caso de las cadenas de conexión de SSMA, incluya siempre el parámetro Provider. Además, asegúrese de incluir el parámetro de puerto al conectarse a DB2.  
   

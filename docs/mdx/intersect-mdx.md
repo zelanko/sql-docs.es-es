@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105357"
 ---
 # <a name="intersect-mdx"></a>Intersect (MDX)
@@ -34,10 +34,10 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- El **Intersect** función devuelve la intersección de dos conjuntos. De manera predeterminada, la función quita los duplicados de ambos conjuntos antes de su intersección. Los dos conjuntos especificados deben tener la misma dimensionalidad.  
+## <a name="remarks"></a>Observaciones  
+ La función **Intersect** devuelve la intersección de dos conjuntos. De manera predeterminada, la función quita los duplicados de ambos conjuntos antes de su intersección. Los dos conjuntos especificados deben tener la misma dimensionalidad.  
   
- El elemento opcional **todas** marca conserva los duplicados. Si **todas** se especifica, el **Intersect** función intersecta intersecta elementos como de costumbre y también intersecta cada duplicado del primer conjunto que tenga un duplicado coincidente en el segundo conjunto. Los dos conjuntos especificados deben tener la misma dimensionalidad.  
+ La marca **All** opcional conserva los duplicados. Si se especifica **All** , la función **Intersect** forma una intersección con los elementos no duplicados como de costumbre y también intersecta cada duplicado del primer conjunto que tiene un duplicado coincidente en el segundo conjunto. Los dos conjuntos especificados deben tener la misma dimensionalidad.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta siguiente devuelve los años 2003 y 2004, los dos miembros que aparecen en los dos conjuntos especificados:  
@@ -72,7 +72,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
   
  `[Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

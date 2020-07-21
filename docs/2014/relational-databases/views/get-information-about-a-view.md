@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4277aad4c1de0140606575c7ba437408518b3c8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061496"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
   Puede obtener información sobre la definición o las propiedades de una vista de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la vista para entender cómo derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  
@@ -46,14 +45,14 @@ ms.locfileid: "68211646"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La utilización de `sp_helptext` para devolver la definición de una vista requiere la pertenencia al rol **público** . La utilización de `sys.sql_expression_dependencies` para buscar todas las dependencias de una vista requiere el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en `sys.sql_expression_dependencies` para la base de datos. Las definiciones de objeto del sistema, como las que se devuelven en SELECT OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
@@ -69,13 +68,13 @@ ms.locfileid: "68211646"
      **Server**  
      Nombre de la instancia de servidor actual.  
   
-     **Usuario**  
+     **User**  
      Nombre del usuario de esta conexión.  
   
      **Fecha de creación**  
      Muestra la fecha en la que se creó la vista.  
   
-     **Name**  
+     **Nombre**  
      Nombre de la vista actual.  
   
      **Esquema**  
@@ -109,7 +108,7 @@ ms.locfileid: "68211646"
      **(Nombre)**  
      Nombre de la vista actual.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Nombre de la base de datos que contiene esta vista.  
   
      **Descripción**  
@@ -118,7 +117,7 @@ ms.locfileid: "68211646"
      **Esquema**  
      Muestra el esquema al que pertenece la vista.  
   
-     **Nombre del servidor**  
+     **Nombre de servidor**  
      Nombre de la instancia de servidor actual.  
   
      **Enlace a esquema**  
@@ -145,7 +144,7 @@ ms.locfileid: "68211646"
      **(Superior)**  
      Especifica que la vista incluirá una cláusula TOP, que solo devuelve las primeras n filas o el primer n por cierto de filas en el conjunto de resultados. De forma predeterminada, la vista devolverá las diez primeras filas en el conjunto de resultados. Use esto para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente.  
   
-     **Expresión**  
+     **Expression**  
      Muestra qué porcentaje (si **Porcentaje** está establecido en **Sí**) o registros (si **Porcentaje** está establecido en **No**) devolverá la vista.  
   
      **Porcentaje**  
@@ -175,7 +174,7 @@ ms.locfileid: "68211646"
   
 4.  Seleccione **Objetos de los que depende [nombre de vista]** para mostrar los objetos a los que hace referencia la vista.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obtener la definición y propiedades de una vista  
   

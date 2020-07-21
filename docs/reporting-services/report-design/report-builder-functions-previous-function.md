@@ -1,5 +1,5 @@
 ---
-title: Función Previous (Generador de informes y SSRS) | Microsoft Docs
+title: Función Previous (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3a54bd68b1bac51581329224aa7e9405cee8e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 882a098aaabcd4610fc6623e9741f7eeaa4f53ec
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577196"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081179"
 ---
 # <a name="report-builder-functions---previous-function"></a>Funciones del Generador de informes: función Previous
   Devuelve el valor o el valor agregado especificado para la instancia anterior de un elemento dentro del ámbito especificado.  
@@ -32,13 +32,13 @@ Previous(expression, scope)
  *expression*  
  (**Variant** o **Binary**). Expresión que se usa para identificar los datos cuyo valor anterior se quiere recuperar (por ejemplo, `Fields!Fieldname.Value` o `Sum(Fields!Fieldname.Value)`).  
   
- *ámbito*  
+ *scope*  
  (**String**) Opcional. Nombre de un grupo o una región de datos, o bien un valor NULL (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el ámbito para el que se recuperará el valor anterior especificado con *expression*.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un valor **Variant** o **Binary**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **Previous** devuelve el valor anterior para la expresión evaluada en el ámbito especificado después de aplicar todos los filtros y la configuración de ordenación.  
   
  Si *expression* no contiene un agregado, la función **Previous** tiene como valor predeterminado el ámbito actual del elemento de informe.  
@@ -61,7 +61,7 @@ Previous(expression, scope)
 ### <a name="description"></a>Descripción  
  Cuando se coloca en la fila de datos predeterminada de una región de datos, el ejemplo de código siguiente proporciona el valor para el campo `LineTotal` de la fila anterior.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 =Previous(Fields!LineTotal.Value)  
@@ -72,7 +72,7 @@ Previous(expression, scope)
   
  Por ejemplo, para una región de datos con un grupo primario denominado `Year`, su grupo secundario se denomina `Month`y su grupo secundario se denomina `Day` (3 niveles anidados). Si se sitúa la expresión `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` en una fila asociada al grupo `Day` , devuelve el valor de las ventas correspondiente al mismo día y mes del año anterior.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 =Sum(Fields!Sales.Value) & " " & Previous(Sum(Fields!Sales.Value,"GroupbyDay"),"GroupbyYear")  

@@ -1,5 +1,5 @@
 ---
-title: Mostrar el cuadro de diálogo de tabla (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Mostrar tabla (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c174dd70611d39a4938146480583615e09ad3914
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940516"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Mostrar tabla (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Mostrar tabla** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para incluir tablas de la vista del origen de datos asociada con una dimensión, un cubo o una estructura de minería de datos. Para mostrar este cuadro de diálogo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
@@ -41,9 +40,9 @@ ms.locfileid: "66068658"
  **Filter**  
  Escriba el filtro usado para restringir los objetos enumerados y, después, haga clic en el botón para filtrar las tablas que aparecen en **Select additional tables to be shown**(Seleccione tablas adicionales para mostrar).  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Vista del origen de datos &#40;pestaña estructura de dimensión, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [Vista del origen de datos &#40;pestaña estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Vista del origen de datos &#40;pestaña estructura de dimensión, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Vista del origen de datos &#40;pestaña estructura de cubo, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

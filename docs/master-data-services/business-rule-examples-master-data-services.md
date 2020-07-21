@@ -1,5 +1,6 @@
 ---
-title: Ejemplos de reglas de negocios (Master Data Services) | Microsoft Docs
+title: Ejemplos de reglas de negocios
+description: Revise estos ejemplos de reglas de negocios para Master Data Services. Estos ejemplos se encuentran en los modelos de ejemplo que se incluyen con la instalación de Master Data Services.
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 93bbed557f18c847d62dec3e700023f87324e594
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813718"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ejemplos de reglas de negocios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 En este artículo se muestran ejemplos de reglas de negocios para [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Encontrará estos ejemplos en los modelos de ejemplo que se incluyen con la instalación de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
@@ -76,7 +77,7 @@ Else
   
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-------------  
-Producto     |Product         |Required fields| Especifica los atributos necesarios para los miembros de la entidad de producto.           
+Producto     |Producto         |Campos obligatorios| Especifica los atributos necesarios para los miembros de la entidad de producto.           
 En la siguiente regla de negocio, en todas las condiciones se realiza la `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Los valores de atributo no pueden ser NULL ni estar en blanco.  
 ```  
 If  
@@ -136,7 +137,7 @@ Else
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
 Producto     | Producto        |  Default Name| Especifica el nombre predeterminado del producto según los valores de los atributos Color y Class. Cuando el valor del atributo Color no es YLO y el atributo Class no es NA, el nombre predeterminado es Yellow NA.         
-En la siguiente regla de negocio, si los atributos Color y Class no cumplen la condición de regla `is equal` , la `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
+En la siguiente regla de negocio, si los atributos Color y Class no cumplen la condición de regla `is equal` , la `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) se aplica al atributo Name.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  

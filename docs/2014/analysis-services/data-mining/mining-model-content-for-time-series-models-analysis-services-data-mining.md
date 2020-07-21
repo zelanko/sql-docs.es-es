@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo para los modelos de serie temporal de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc9186b0250f0bdb8dd5ad91cc7e84782218bbc2
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66083532"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468910"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
   Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Para obtener una explicación del contenido general del modelo de minería de datos que se aplica a todos los tipos de modelos, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para obtener una explicación del contenido general del modelo de minería de datos que se aplica a todos los tipos de modelos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
- Al revisar este tema, puede resultarle útil explorar al mismo tiempo el contenido de un modelo de serie temporal. Puede crear un modelo de serie temporal completando el Tutorial básico de minería de datos. El modelo que se crea en el tutorial es un modelo mixto que entrena los datos utilizando los algoritmos ARIMA y ARTXP. Para obtener más información, consulte [crear una estructura de previsión y un modelo &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Para más información sobre cómo visualizar el contenido de un modelo de minería de datos, vea [Visores de modelos de minería de datos](data-mining-model-viewers.md).  
+ Al revisar este tema, puede resultarle útil explorar al mismo tiempo el contenido de un modelo de serie temporal. Puede crear un modelo de serie temporal completando el Tutorial básico de minería de datos. El modelo que se crea en el tutorial es un modelo mixto que entrena los datos utilizando los algoritmos ARIMA y ARTXP. Para obtener más información, vea [crear una estructura de pronóstico y un modelo &#40;tutorial intermedio de minería de datos&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md). Para más información sobre cómo visualizar el contenido de un modelo de minería de datos, vea [Visores de modelos de minería de datos](data-mining-model-viewers.md).  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>Descripción de la estructura de un modelo de serie temporal  
  Un modelo de serie temporal tiene un nodo primario único que representa el modelo y sus metadatos. Debajo ese nodo primario, hay uno o dos árboles de serie temporal, según el algoritmo que se haya utilizado para crearlo.  
@@ -35,7 +34,7 @@ ms.locfileid: "66083532"
   
  En el siguiente diagrama se muestra un ejemplo de un modelo de minería de datos de serie temporal creado con la configuración predeterminada (modelo mixto). Para que pueda comparar más fácilmente las diferencias entre los dos modelos, en este caso se muestra el modelo ARTXP en el lado izquierdo del diagrama y el modelo ARIMA en el lado derecho.  Si bien ARTXP es una estructura de árbol que se divide bifurcaciones cada vez más pequeñas, la estructura creada por el algoritmo ARIMA se parece más a una pirámide erigida a partir de componentes más pequeños.  
   
- ![Estructura del contenido del modelo para los modelos de serie temporal](../media/modelcontentstructure-ts.gif "estructura del contenido del modelo para los modelos de serie temporal")  
+ ![Estructura del contenido del modelo para los modelos de serie temporal](../media/modelcontentstructure-ts.gif "Estructura del contenido del modelo para los modelos de serie temporal")  
   
  Lo que es importante recordar es que la información está organizada dentro de los árboles ARTXP y ARIMA de maneras completamente diferentes, de modo que los dos árboles se deben considerar relacionados exclusivamente en el nodo raíz. Aunque las dos representaciones se presentan en un solo modelo por comodidad, se deben tratar como dos modelos independientes. ARTXP representa una estructura de árbol real; en cambio, ARIMA, no.  
   
@@ -51,19 +50,19 @@ ms.locfileid: "66083532"
  Las siguientes secciones explican cómo se organizan los nodos dentro de cada uno de estos tipos de modelo.  
   
 ### <a name="structure-of-an-artxp-model"></a>Estructura de un modelo ARTXP  
- El algoritmo ARTXP crea un modelo similar a un modelo de árboles de decisión. Agrupa atributos de predicción y los divide siempre que se encuentran diferencias significativas. Por consiguiente, cada modelo ARTXP contiene una bifurcación independiente para cada atributo de predicción. Por ejemplo, en el Tutorial básico de minería de datos se crea un modelo que predice la cantidad de ventas para varias regiones. En este caso, **[Amount]** es el atributo de predicción y se crea una bifurcación independiente para cada región. Si tuviera dos atributos de predicción, **[Amount]** y **[Quantity]** , se crearía una bifurcación independiente para cada combinación de atributo y región.  
+ El algoritmo ARTXP crea un modelo similar a un modelo de árboles de decisión. Agrupa atributos de predicción y los divide siempre que se encuentran diferencias significativas. Por consiguiente, cada modelo ARTXP contiene una bifurcación independiente para cada atributo de predicción. Por ejemplo, en el Tutorial básico de minería de datos se crea un modelo que predice la cantidad de ventas para varias regiones. En este caso, **[Amount]** es el atributo de predicción y se crea una bifurcación independiente para cada región. Si tuviera dos atributos de predicción, **[Amount]** y **[Quantity]**, se crearía una bifurcación independiente para cada combinación de atributo y región.  
   
  El nodo superior de la bifurcación ARTXP contiene la misma información que hay en el nodo raíz de un árbol de decisión. Esto incluye el número de elementos secundarios para ese nodo (CHILDREN_CARDINALITY), el número de casos que cumplen las condiciones de este nodo (NODE_SUPPORT), y diversas estadísticas descriptivas (NODE_DISTRIBUTION).  
   
  Si el nodo no tiene ningún elemento secundario, es porque no se ha encontrado ninguna condición significativa que justifique dividir los casos en más subgrupos. La bifurcación finaliza en este punto y el nodo se denomina *nodo hoja*. El nodo de hoja contiene los atributos, coeficientes y valores que son los bloques de creación de la fórmula ARTXP.  
   
- Algunas bifurcaciones pueden tener más divisiones, al igual que sucede en los modelos de árboles de decisión. Por ejemplo, la bifurcación del árbol que representa las ventas para la región de Europa divide en dos bifurcaciones. Se produce una bifurcación cuando existe una condición que da lugar a una diferencia significativa entre los dos grupos. El nodo primario indica el nombre del atributo que ha provocado la división, como [Amount] y la cantidad de casos que hay en el nodo primario. Los nodos hoja proporcionan más detalles: el valor del atributo, como [Sales] > 10.000 en lugar de [Sales] \< 10.000), el número de casos que admiten cada condición y la fórmula ARTXP.  
+ Algunas bifurcaciones pueden tener más divisiones, al igual que sucede en los modelos de árboles de decisión. Por ejemplo, la bifurcación del árbol que representa las ventas para la región de Europa divide en dos bifurcaciones. Se produce una bifurcación cuando existe una condición que da lugar a una diferencia significativa entre los dos grupos. El nodo primario indica el nombre del atributo que ha provocado la división, como [Amount] y la cantidad de casos que hay en el nodo primario. Los nodos hoja proporcionan más detalles: el valor del atributo, como [sales] >10.000 frente a [sales] \< 10.000), el número de casos que admite cada condición y la fórmula ARTXP.  
   
 > [!NOTE]  
 >  Si desea ver las fórmulas, encontrará la fórmula de regresión completa en el nivel del nodo de hoja, pero no en los nodos intermedios o raíz.  
   
 ### <a name="structure-of-an-arima-model"></a>Estructura de un modelo ARIMA  
- El algoritmo ARIMA crea un único fragmento de información para cada combinación de una serie de datos (como **[Región]** ) y un atributo de predicción (como **[Sales Amount]** )-la ecuación que describe el cambio del atributo predecible con el tiempo.  
+ El algoritmo ARIMA crea un único fragmento de información para cada combinación de una serie de datos (como **[Region]**) y un atributo de predicción (como **[sales amount]**), la ecuación que describe el cambio del atributo de predicción a lo largo del tiempo.  
   
  La ecuación para cada serie se deriva de varios componentes, uno para cada estructura periódica encontrada en los datos. Por ejemplo, si tiene datos de ventas que se recopilan mensualmente, el algoritmo podría detectar estructuras mensuales, trimestrales o anuales.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66083532"
 ## <a name="model-content-for-time-series"></a>Contenido del modelo para series temporales  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos de series temporales.  
   
- Para información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, o para obtener una explicación de la terminología del modelo de minería de datos, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Para información sobre las columnas de uso general en el conjunto de filas de esquema, como MODEL_CATALOG y MODEL_NAME, o para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nombre de la base de datos en la que se almacena el modelo.  
@@ -94,18 +93,18 @@ ms.locfileid: "66083532"
  Atributo predecible para la serie de datos representada en el nodo. (El mismo valor que para MSOLAP_MODEL_COLUMN.)  
   
  NODE_NAME  
- Nombre del nodo.  
+ El nombre del nodo.  
   
  Actualmente, esta columna contiene el mismo valor que NODE_UNIQUE_NAME, aunque esto podría cambiar en versiones futuras.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo. El nodo primario del modelo siempre se denomina **TS**.  
   
- **ARTXP:** Cada nodo se representa mediante TS seguido por un valor numérico hexadecimal. El orden de los nodos carece de relevancia.  
+ **ARTXP:** cada nodo se representa mediante TS seguido de un valor numérico hexadecimal. El orden de los nodos carece de relevancia.  
   
  Por ejemplo, los nodos ARTXP que figuran directamente bajo el árbol TS podrían llevar los números TS00000001-TS0000000b.  
   
- **ARIMA:** Cada nodo en un árbol ARIMA se representa mediante TA seguido por un valor numérico hexadecimal. Los nodos secundarios contienen el nombre único del nodo primario seguido por otro número hexadecimal que indica la secuencia dentro del nodo.  
+ **ARIMA:** cada nodo de un árbol ARIMA se representa mediante TA seguido por un valor numérico hexadecimal. Los nodos secundarios contienen el nombre único del nodo primario seguido por otro número hexadecimal que indica la secuencia dentro del nodo.  
   
  Todos los árboles ARIMA están estructurados exactamente igual. Cada raíz contiene los nodos y la convención de nomenclatura cuyo ejemplo se muestra en la siguiente tabla:  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66083532"
 |16 (árbol de serie temporal)|Raíz de árbol ARTXP que corresponde a un atributo y serie de predicción.|  
 |15 (serie temporal)|Nodo de hoja en árbol ARTXP.|  
   
- **ARIMA:**  
+ **Arima**  
   
 |Identificador del tipo de nodo|Descripción|  
 |------------------|-----------------|  
@@ -142,9 +141,9 @@ ms.locfileid: "66083532"
   
  Esta propiedad se usa principalmente para la presentación.  
   
- **ARTXP:** Contiene la condición de división del nodo, mostrada como una combinación de atributo y rango de valores.  
+ **ARTXP:** contiene la condición de división del nodo, mostrada como una combinación de atributo y rango de valores.  
   
- **ARIMA:** Contiene la forma abreviada de la ecuación ARIMA.  
+ **ARIMA:** contiene la forma abreviada de la ecuación ARIMA.  
   
  Para obtener información sobre el formato de la ecuación ARIMA, vea [Leyenda de minería de datos para ARIMA](#bkmk_ARIMA_2).  
   
@@ -157,33 +156,33 @@ ms.locfileid: "66083532"
  NODE_DESCRIPTION  
  Descripción en el texto de las reglas, divisiones o fórmulas del nodo actual.  
   
- **ARTXP:** Para obtener más información, consulte [descripción del árbol ARTXP](#bkmk_ARTXP_1).  
+ **ARTXP:** para obtener más información, vea [Descripción del árbol ARTXP](#bkmk_ARTXP_1).  
   
- **ARIMA:** Para obtener más información, consulte [descripción del árbol ARIMA](#bkmk_ARIMA_1).  
+ **ARIMA:** para obtener más información, vea [Descripción del árbol ARIMA](#bkmk_ARIMA_1).  
   
  NODE_RULE  
  Descripción XML de las reglas, divisiones o fórmulas del nodo actual.  
   
  **ARTXP:** NODE_RULE suele corresponder a NODE_CAPTION.  
   
- **ARIMA:** Para obtener más información, consulte [descripción del árbol ARIMA](#bkmk_ARIMA_1).  
+ **ARIMA:** para obtener más información, vea [Descripción del árbol ARIMA](#bkmk_ARIMA_1).  
   
  MARGINAL_RULE  
  Descripción XML de la división o del contenido que es específico de ese nodo.  
   
  **ARTXP:** MARGINAL_RULE suele corresponder a NODE_DESCRIPTION.  
   
- **ARIMA:** Siempre está en blanco; Use NODE_RULE en su lugar.  
+ **ARIMA:** siempre en blanco; use NODE_RULE en su lugar.  
   
  NODE_PROBABILITY  
- **ARTXP:** Para los nodos de árbol, siempre es 1. Para los nodos de hoja, la probabilidad de alcanzar el nodo a partir del nodo raíz del modelo.  
+ **ARTXP:** para los nodos de árbol, siempre 1. Para los nodos de hoja, la probabilidad de alcanzar el nodo a partir del nodo raíz del modelo.  
   
- **ARIMA:** Siempre es 0.  
+ **ARIMA:** siempre 0.  
   
  MARGINAL_PROBABILITY  
- **ARTXP:** Para los nodos de árbol, siempre es 1. Para los de nodos hoja, la probabilidad de alcanzar el nodo a partir del nodo primario inmediato.  
+ **ARTXP:** para los nodos de árbol, siempre 1. Para los de nodos hoja, la probabilidad de alcanzar el nodo a partir del nodo primario inmediato.  
   
- **ARIMA:** Siempre es 0.  
+ **ARIMA:** siempre 0.  
   
  NODE_DISTRIBUTION  
  Tabla que contiene el histograma de probabilidad del nodo. En un modelo de serie temporal, esta tabla anidada contiene todos los componentes necesarios para ensamblar la fórmula de regresión real.  
@@ -197,11 +196,11 @@ ms.locfileid: "66083532"
  NODE_SUPPORT  
  Número de casos que admiten este nodo.  
   
- **ARTXP:** Para el **(All)** nodo, indica el número total de intervalos de tiempo incluidos en la bifurcación.  
+ **ARTXP:** para el nodo **(All)** , indica el número total de intervalos de tiempo incluidos en la bifurcación.  
   
  Para los nodos terminales, indica el número de intervalos de tiempo que están incluidos en el intervalo descrito por NODE_CAPTION. El número de intervalos de tiempo de los nodos terminales siempre se suma al valor de NODE_SUPPORT del nodo de bifurcación **(All)** .  
   
- **ARIMA:** Recuento de casos que soportan la estructura periódica actual. El valor del soporte se repite en todos los nodos de la estructura periódica actual.  
+ **ARIMA:** recuento de casos que soportan la estructura periódica actual. El valor del soporte se repite en todos los nodos de la estructura periódica actual.  
   
  MSOLAP_MODEL_COLUMN  
  Atributo predecible para la serie de datos representada en el nodo. (El mismo valor que para ATTRIBUTE_NAME.)  
@@ -209,18 +208,18 @@ ms.locfileid: "66083532"
  MSOLAP_NODE_SCORE  
  Valor numérico que caracteriza el valor de información del árbol o de la división.  
   
- **ARTXP:** Valor siempre es 0,0 para los nodos no tienen ninguna división. Para los nodos con una división, el valor representa la puntuación de grado de interés de la división.  
+ **ARTXP:** el valor siempre es 0,0 para los nodos que no tienen ninguna división. Para los nodos con una división, el valor representa la puntuación de grado de interés de la división.  
   
  Para más información sobre los métodos de puntuación, vea [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md).  
   
- **ARIMA:**  La puntuación Bayesian Information Criterion (BIC) del modelo ARIMA. La misma puntuación se establece en todos los nodos ARIMA relacionados con la ecuación.  
+ **ARIMA:**  la puntuación Bayesian Information Criterion (BIC) del modelo ARIMA. La misma puntuación se establece en todos los nodos ARIMA relacionados con la ecuación.  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTXP:**  Misma información que NODE_DESCRIPTION.  
+ **ARTXP:**  la misma información que NODE_DESCRIPTION.  
   
- **ARIMA:** Misma información que NODE_CAPTION: es decir, la forma abreviada de la ecuación ARIMA.  
+ **ARIMA:** la misma información que NODE_CAPTION, es decir, la forma abreviada de la ecuación ARIMA.  
   
-##  <a name="bkmk_ARTXP_1"></a> Descripción del árbol ARTXP  
+##  <a name="understanding-the-artxp-tree"></a><a name="bkmk_ARTXP_1"></a>Descripción del árbol ARTXP  
  El modelo ARTXP separa claramente las áreas de los datos que son lineales de las áreas de los datos que se dividen en función de algún otro factor. Siempre que los cambios del atributo de predicción se puedan representar directamente como una función de las variables independientes, se calcula una fórmula de regresión para representar esa relación  
   
  Por ejemplo, si hay una correlación directa entre el tiempo y las ventas para la mayoría de las series de datos, cada serie estaría incluida en un árbol de serie temporal (NODE_TYPE = 16) que no tendría ningún nodo secundario para cada serie de datos, sino únicamente una ecuación de regresión. Sin embargo, si la relación no es lineal, un árbol de serie temporal ARTXP se puede dividir en nodos secundarios para cada condición, exactamente igual que sucede en un modelo de árbol de decisión. Viendo el contenido del modelo en el **Visor de árbol de contenido genérico de Microsoft** , se puede apreciar dónde se producen las divisiones y cómo esto afecta a la línea de tendencia.  
@@ -251,7 +250,7 @@ ms.locfileid: "66083532"
  La siguiente sección presenta una ecuación de ejemplo y explica los términos básicos.  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>Leyenda de minería de datos de una fórmula ARTXP  
- En el siguiente ejemplo se muestra la fórmula ARTXP de una parte del modelo, tal y como aparece en la **Leyenda de minería de datos**. Para ver esta fórmula, abra el modelo [Forecasting] que creó en el Tutorial básico de minería de datos en el Visor de serie temporal de Microsoft, haga clic en el **modelo** pestaña y seleccione el árbol de la R250: Serie de datos de Europa.  
+ En el siguiente ejemplo se muestra la fórmula ARTXP de una parte del modelo, tal y como aparece en la **Leyenda de minería de datos**. Para ver esta fórmula, abra el modelo [Forecasting] que creó en el Tutorial básico de minería de datos en el Visor de series temporales de Microsoft, haga clic en la pestaña **Modelo** y seleccione el árbol de la serie de datos R250: Europa.  
   
  Para ver la ecuación utilizada para este ejemplo, haga clic en el nodo que representa la serie de fecha correspondiente al día 7/5/2003 o después.  
   
@@ -259,30 +258,30 @@ ms.locfileid: "66083532"
   
  Quantity = 21.322  
   
- -0.293 * cantidad (R250 North America,-7) + 0.069 \* cantidad (R250 Europe,-1) + 0.023 \*  
+ -0,293 * quantity (R250 Norteamérica,-7) + 0,069 \* quantity (R250 Europe,-1) + 0,023\*  
   
- Quantity(R250 Europe,-3) -0.142 * Quantity(R750 Europe,-8)  
+ Quantity(R250 Europa,-3) -0.142 * Quantity(R750 Europa,-8)  
   
  En este caso, el valor 21.322 representa el valor que se predice para Quantity como una función de los siguientes elementos de la ecuación.  
   
- Por ejemplo, un elemento es la cantidad (R250 América del Norte,-7). Esta notación halla la media de la cantidad correspondiente a la región de Norteamérica en t-7, o siete intervalos de tiempo antes del intervalo de tiempo actual. El valor de esta serie de datos se multiplica por el coeficiente -0.293. El coeficiente de cada elemento se obtiene durante el proceso de entrenamiento y se basa en las tendencias halladas en los datos.  
+ Por ejemplo, un elemento es quantity (R250 Norteamérica,-7). Esta notación halla la media de la cantidad correspondiente a la región de Norteamérica en t-7, o siete intervalos de tiempo antes del intervalo de tiempo actual. El valor de esta serie de datos se multiplica por el coeficiente -0.293. El coeficiente de cada elemento se obtiene durante el proceso de entrenamiento y se basa en las tendencias halladas en los datos.  
   
  Hay varios elementos en esta ecuación porque el modelo ha calculado que la cantidad del modelo del R250 en la región de Europa depende de los valores de varias series de datos más.  
   
 #### <a name="model-content-for-an-artxp-formula"></a>Contenido del modelo para una fórmula ARTXP  
  La siguiente tabla muestra la misma información para la fórmula, usando el contenido del nodo pertinente como se muestra en [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|varianza|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Quantity(R250 Europe,y-intercept)|21.3223433563772|11|0|1.65508795539661|11 (intersección)|  
-|Quantity(R250 Europe,-1)|0.0691694140876526|0|0|0|7 (coeficiente)|  
-|Quantity(R250 Europe,-1)|20.6363635858123|0|0|182.380682874818|9 (estadísticas)|  
-|Quantity(R750 Europe,-8)|-0.1421203048299|0|0|0|7 (coeficiente)|  
-|Quantity(R750 Europe,-8)|22.5454545333019|0|0|104.362130048408|9 (estadísticas)|  
-|Quantity(R250 Europe,-3)|0.0234095979448281|0|0|0|7 (coeficiente)|  
-|Quantity(R250 Europe,-3)|24.8181818883176|0|0|176.475304989169|9 (estadísticas)|  
-|Quantity(R250 North America,-7)|-0.292914186039869|0|0|0|7 (coeficiente)|  
-|Quantity(R250 North America,-7)|10.36363640433|0|0|701.882534898676|9 (estadísticas)|  
+|Quantity(R250 Europa,y-intercept)|21.3223433563772|11|0|1.65508795539661|11 (intersección)|  
+|Quantity(R250 Europa,-1)|0.0691694140876526|0|0|0|7 (coeficiente)|  
+|Quantity(R250 Europa,-1)|20.6363635858123|0|0|182.380682874818|9 (estadísticas)|  
+|Quantity(R750 Europa,-8)|-0.1421203048299|0|0|0|7 (coeficiente)|  
+|Quantity(R750 Europa,-8)|22.5454545333019|0|0|104.362130048408|9 (estadísticas)|  
+|Quantity(R250 Europa,-3)|0.0234095979448281|0|0|0|7 (coeficiente)|  
+|Quantity(R250 Europa,-3)|24.8181818883176|0|0|176.475304989169|9 (estadísticas)|  
+|Quantity(R250 Norteamérica,-7)|-0.292914186039869|0|0|0|7 (coeficiente)|  
+|Quantity(R250 Norteamérica,-7)|10.36363640433|0|0|701.882534898676|9 (estadísticas)|  
   
  Como puede comprobar al comparar estos ejemplos, el contenido del modelo de minería de datos incluye la misma información que está disponible en la **Leyenda de minería de datos**, pero con columnas adicionales para la *varianza* y el *soporte*. El valor del soporte indica el recuento de casos que admiten la tendencia descrita por esta ecuación.  
   
@@ -308,10 +307,10 @@ FROM Forecasting.CONTENT
 WHERE NODE_TYPE = 15  
 ```  
   
-##  <a name="bkmk_ARIMA_1"></a> Descripción del árbol ARIMA  
+##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> Descripción del árbol ARIMA  
  Cada estructura en un modelo ARIMA se corresponde con una *periodicidad* o *estructura periódica*. Una estructura periódica es un patrón de datos que se repite a lo largo de la serie de datos. Se permite alguna variación secundaria en el patrón, dentro de los límites estadísticos. La periodicidad se mide según las unidades de tiempo predeterminadas que se utilizaron en los datos de entrenamiento. Por ejemplo, si los datos de entrenamiento proporcionan datos de ventas para cada día, la unidad de tiempo predeterminada será un día, y todas las estructuras periódicas se definirán como un número concreto de días.  
   
- Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo creará dos estructuras periódicas en el modelo terminado: uno para el período diario predeterminado, que se indica como {1}, y otra para las semanas, indicado por {7}.  
+ Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo creará dos estructuras periódicas en el modelo finalizado: una para el período diario predeterminado, que se {1} indica como, y otra para las semanas, indicado por {7} .  
   
  Por ejemplo, la siguiente consulta devuelve todas las estructuras ARIMA de un modelo de minería de datos.  
   
@@ -321,27 +320,27 @@ FROM Forecasting.CONTENT
 WHERE NODE_TYPE = 27  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |MODEL_NAME|ATTRIBUTE_NAME|NODE_NAME|NODE_TYPE|NODE_CAPTION|  
 |-----------------|---------------------|----------------|----------------|-------------------|  
-|Forecasting|M200 Europe:Quantity|TA00000000|27|ARIMA (1,0,1)|  
-|Forecasting|M200 North America:Quantity|TA00000001|27|ARIMA (1,0,4) X (1,1,4)(6)|  
-|Forecasting|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
-|Forecasting|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
-|Forecasting|R250 Europe:Quantity|TA00000003|27|ARIMA (1,0,7)|  
-|Forecasting|R250 North America:Quantity|TA00000004|27|ARIMA (1,0,2)|  
-|Forecasting|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
-|Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
-|Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
-|Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Previsión|M200 Europa:Quantity|TA00000000|27|ARIMA (1,0,1)|  
+|Previsión|M200 Norteamérica:Quantity|TA00000001|27|ARIMA (1,0,4) X (1,1,4)(6)|  
+|Previsión|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
+|Previsión|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
+|Previsión|R250 Europa:Quantity|TA00000003|27|ARIMA (1,0,7)|  
+|Previsión|R250 Norteamérica:Quantity|TA00000004|27|ARIMA (1,0,2)|  
+|Previsión|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
+|Previsión|R750 Europa:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
+|Previsión|T1000 Europa:Quantity|TA00000009|27|ARIMA (1,0,1)|  
+|Previsión|T1000 Norteamérica:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
+|Previsión|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
  A partir de estos resultados, que también se pueden examinar mediante el [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md), se puede deducir de un vistazo qué series son completamente lineales, cuáles tienen varias estructuras periódicas y qué periodicidades se han detectado.  
   
- Por ejemplo, la forma abreviada de la ecuación ARIMA para la serie M200 Europe indica que únicamente se ha detectado el ciclo predeterminado, o diario. La forma abreviada de la ecuación se proporciona en la columna NODE_CAPTION.  
+ Por ejemplo, la forma abreviada de la ecuación ARIMA para la serie M200 Europa indica que únicamente se ha detectado el ciclo predeterminado, o diario. La forma abreviada de la ecuación se proporciona en la columna NODE_CAPTION.  
   
- Sin embargo, para la serie M200 North America, se encontró una estructura periódica más. El nodo TA00000001 tiene dos nodos secundarios, uno con la ecuación (1,0,4) y otro con la ecuación (1,1,4)(6). Estas ecuaciones se concatenan y presentan en el nodo primario.  
+ Sin embargo, para la serie M200 Norteamérica, se encontró una estructura periódica más. El nodo TA00000001 tiene dos nodos secundarios, uno con la ecuación (1,0,4) y otro con la ecuación (1,1,4)(6). Estas ecuaciones se concatenan y presentan en el nodo primario.  
   
  Para cada estructura periódica, el contenido del modelo proporciona también el *orden* y la *media móvil* como nodos secundarios. Por ejemplo, la siguiente consulta recupera los nodos secundarios de uno de los nodos enumerados en el ejemplo anterior. Observe que la columna, PARENT_UNIQUE_NAME, debe ir entre corchetes para distinguirla de la palabra clave reservada con la misma denominación.  
   
@@ -361,14 +360,14 @@ WHERE [MSOLAP_MODEL_COLUMN] ='M200 North America:Quantity'
 AND (NODE_TYPE = 29 or NODE_TYPE = 30)  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |MODEL_NAME|ATTRIBUTE_NAME|NODE_UNIQUE_NAME|NODE_TYPE|NODE_CAPTION|  
 |-----------------|---------------------|------------------------|----------------|-------------------|  
-|Forecasting|M200 North America:Quantity|TA00000001000000010|29|ARIMA {1,0.961832044807041}|  
-|Forecasting|M200 North America:Quantity|TA00000001000000011|30|ARIMA {1,-3.51073103693271E-02,2.15731642954099,-0.220314343327742,-1.33151478258758}|  
-|Forecasting|M200 North America:Quantity|TA00000001000000000|29|ARIMA {1,0.643565911081657}|  
-|Forecasting|M200 North America:Quantity|TA00000001000000001|30|ARIMA {1,1.45035399809581E-02,-4.40489283927752E-02,-0.19203901352577,0.242202497643993}|  
+|Previsión|M200 Norteamérica:Quantity|TA00000001000000010|29|ARIMA {1,0.961832044807041}|  
+|Previsión|M200 Norteamérica:Quantity|TA00000001000000011|30|ARIMA {1,-3.51073103693271E-02,2.15731642954099,-0.220314343327742,-1.33151478258758}|  
+|Previsión|M200 Norteamérica:Quantity|TA00000001000000000|29|ARIMA {1,0.643565911081657}|  
+|Previsión|M200 Norteamérica:Quantity|TA00000001000000001|30|ARIMA {1,1.45035399809581E-02,-4.40489283927752E-02,-0.19203901352577,0.242202497643993}|  
   
  Estos ejemplos muestran que cuanto más se profundiza en el árbol ARIMA, más detalles se revelan, pero la información importante se combina y presenta también en el nodo primario.  
   
@@ -379,28 +378,28 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  En esta sección se presenta una ecuación de ejemplo y se explican los términos básicos.  
   
-####  <a name="bkmk_ARIMA_2"></a> Leyenda de minería de datos para la fórmula ARIMA  
- En el siguiente ejemplo se muestra la fórmula ARIMA para una parte del modelo, tal y como aparece en la Leyenda de minería de datos. Para ver esta fórmula, abra el **Forecasting** modelos utilizando la **Visor de Series temporales de Microsoft**, haga clic en el **modelo** pestaña, seleccione el árbol de la **R250: Europa** series de datos y, a continuación, haga clic en el nodo que representa la serie de fecha en o después de 7/5/2003. La leyenda de minería de datos organiza todas las constantes en un formato legible, que se muestra en este ejemplo:  
+####  <a name="mining-legend-for-arima-formula"></a><a name="bkmk_ARIMA_2"></a> Leyenda de minería de datos para la fórmula ARIMA  
+ En el siguiente ejemplo se muestra la fórmula ARIMA para una parte del modelo, tal y como aparece en la Leyenda de minería de datos. Para ver esta fórmula, abra el modelo **Forecasting** en el **Visor de series temporales de Microsoft**, haga clic en la pestaña **Modelo** , seleccione el árbol de la serie de datos **R250: Europa** y luego haga clic en el nodo que representa la serie de fecha correspondiente al día 7/5/2003 o después. La leyenda de minería de datos organiza todas las constantes en un formato legible, que se muestra en este ejemplo:  
   
  Ecuación ARIMA:  
   
- ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889  
+ ARIMA ( {1,1} ,0, {1, 1.49791920964142, 1.10640053499397, 0.888873034670339,-5.05429403071953 e-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept: 56.8888888888889  
   
- Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7}, donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica el orden de diferencia de términos y 7 indica el número de coeficientes.  
+ Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7} , donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica el orden de diferencia de los términos y 7 indica el número de coeficientes.  
   
 > [!NOTE]  
 >  Analysis Services calcula una constante para hallar la varianza, pero la constante en sí no se muestra en la interfaz de usuario. Sin embargo, puede ver la varianza correspondiente a cualquier punto de la serie como una función de esta constante; para ello, seleccione **Mostrar desviaciones** en la vista **Gráfico** . La Información sobre herramientas para cada serie de datos muestra la varianza correspondiente a un punto predicho concreto.  
   
 #### <a name="model-content-for-arima-formula"></a>Contenido del modelo para la fórmula ARIMA  
- Un modelo ARIMA sigue una estructura estándar, donde la información diferente está contenida en nodos de tipos distintos. Para ver el contenido del modelo para el modelo ARIMA, cambie el Visor de la **Visor de árbol de contenido genérico de Microsoft**y, a continuación, expanda el nodo que tiene el nombre del atributo, **R250 Europe: Cantidad**.  
+ Un modelo ARIMA sigue una estructura estándar, donde la información diferente está contenida en nodos de tipos distintos. Para ver el contenido del modelo correspondiente al modelo ARIMA, cambie al **Visor de árbol de contenido genérico de Microsoft**y, a continuación, expanda el nodo cuyo nombre de atributo es **R250 Europa: Quantity**.  
   
  Un modelo ARIMA para un serie de datos contiene la ecuación periódica básica en cuatro formatos diferentes, entre los que se puede elegir, según la aplicación.  
   
- **NODE_CAPTION:** Muestra el formato abreviado de la ecuación. El formato abreviado indica cuántas estructuras periódicas se representan y cuántos coeficientes tienen. Por ejemplo, si el formato abreviado de la ecuación es {4,0,6}, el nodo representa una estructura periódica con 6 coeficientes. Si el formato abreviado es algo parecido a {2,0,8} x {1,0,0}(4), el nodo contiene dos estructuras periódicas.  
+ **NODE_CAPTION:** muestra el formato abreviado de la ecuación. El formato abreviado indica cuántas estructuras periódicas se representan y cuántos coeficientes tienen. Por ejemplo, si el formato abreviado de la ecuación es {4,0,6}, el nodo representa una estructura periódica con 6 coeficientes. Si el formato abreviado es similar a {2,0,8} x {1,0,0} (4), el nodo contiene dos estructuras periódicas.  
   
- **DESCRIPCIÓN DEL NODO:** Muestra el formato largo de la ecuación, que también es la forma de la ecuación que aparece en el **leyenda de minería de datos**. La forma larga de la ecuación es similar a la forma abreviada, con la salvedad de que se muestran los valores reales de los coeficientes, en lugar contarse.  
+ **NODE DESCRIPTION:** muestra el formato largo de la ecuación, que también es la forma de la ecuación que aparece en la **Leyenda de minería de datos**. La forma larga de la ecuación es similar a la forma abreviada, con la salvedad de que se muestran los valores reales de los coeficientes, en lugar contarse.  
   
- **NODE_RULE:** Muestra una representación XML de la ecuación. Según el tipo de nodo, la representación XML puede incluir una o varias estructuras periódicas. En la siguiente tabla se muestra cómo se acumlan los nodos XML en niveles más altos del modelo ARIMA.  
+ **NODE_RULE:** muestra una representación XML de la ecuación. Según el tipo de nodo, la representación XML puede incluir una o varias estructuras periódicas. En la siguiente tabla se muestra cómo se acumlan los nodos XML en niveles más altos del modelo ARIMA.  
   
 |Tipo de nodo|Contenido XML|  
 |---------------|-----------------|  
@@ -409,22 +408,22 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (Regresión automática ARIMA)|Enumera los términos para una estructura periódica única.|  
 |30 (Media móvil ARIMA)|Enumera los coeficientes para una estructura periódica única.|  
   
- **NODE_DISTRIBUTION:** Muestra los términos de la ecuación en una tabla anidada, que se puede consultar para obtener términos concretos. La tabla de distribución de nodos sigue la misma estructura jerárquica que las reglas XML. Es decir, el nodo raíz de la serie ARIMA (NODE_TYPE = 27) contiene el valor de intersección y las periodicidades de toda la ecuación, que puede incluir varias periodicidades; por su parte, los nodos secundarios contienen únicamente información específica de una estructura periódica determinada o de los nodos secundarios de esa estructura periódica.  
+ **NODE_DISTRIBUTION:** muestra los términos de la ecuación en una tabla anidada, que se puede consultar para obtener términos concretos. La tabla de distribución de nodos sigue la misma estructura jerárquica que las reglas XML. Es decir, el nodo raíz de la serie ARIMA (NODE_TYPE = 27) contiene el valor de intersección y las periodicidades de toda la ecuación, que puede incluir varias periodicidades; por su parte, los nodos secundarios contienen únicamente información específica de una estructura periódica determinada o de los nodos secundarios de esa estructura periódica.  
   
-|Tipo de nodo|Attribute|Tipo de valor|  
+|Tipo de nodo|Atributo|Tipo de valor|  
 |---------------|---------------|----------------|  
 |27 (Raíz ARIMA)|Interceptar<br /><br /> Periodicidad|11|  
-|28 (Estructura periódica ARIMA)|periodicidad<br /><br /> Orden de regresión automática<br /><br /> orden de diferencia<br /><br /> Orden de media móvil|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
+|28 (Estructura periódica ARIMA)|Periodicidad<br /><br /> Orden de regresión automática<br /><br /> Orden de diferencia<br /><br /> Orden de media móvil|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (Regresión automática ARIMA)|Coeficiente<br /><br /> (complemento de coeficiente)|7|  
-|30 (Media móvil ARIMA)|Valor en t<br /><br /> Valor en t-1<br /><br /> …<br /><br /> Valor en t-n|7|  
+|30 (Media móvil ARIMA)|Valor en t<br /><br /> Valor en t-1<br /><br /> ...<br /><br /> Valor en t-n|7|  
   
- El valor del *orden de media móvil* indica el número de medias móviles de una serie. Suele ser la media móvil calculada n-1 veces si hay n términos en una serie, pero se puede reducir el número para facilitar el cálculo.  
+ El valor del *orden de media móvil* indica el número de medias móviles de una serie. Por lo general, la media móvil se calcula n-1 veces si hay n términos en una serie, pero el número se puede reducir para facilitar el cálculo.  
   
  El valor del *orden de regresión automática* indica la cantidad de series de regresión automática.  
   
  El valor de *orden de diferencia* indica cuántas veces se comparan, o diferencian, las series.  
   
- Para obtener una lista de los tipos de valores posibles, vea <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Para obtener una enumeración de los tipos de valor posibles, vea [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="using-the-arima-tree-information"></a>Utilizar la información del árbol ARIMA  
  Si utiliza predicciones basadas en el algoritmo ARIMA en una solución empresarial, puede ser conveniente pegar la ecuación en un informe para mostrar el método utilizado para crear la predicción. Puede utilizar la leyenda para presentar las fórmulas en formato abreviado, o la descripción para presentar las fórmulas en formato largo.  
@@ -433,17 +432,17 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Si conoce el identificador del nodo que contiene la serie que desea, dispone de dos opciones para recuperar los componentes de la ecuación:  
   
--   Formato de tabla anidada: Utilice una consulta DMX o a través del cliente OLEDB.  
+-   Formato de tabla anidada: utilice una consulta DMX o realice la consulta mediante el cliente de OLEDB.  
   
--   Representación XML: Utilice una consulta XML.  
+-   Representación XML: utilice una consulta XML.  
   
 ## <a name="remarks"></a>Comentarios  
  Puede resultar complicado recuperar información de un árbol ARTXP, porque la información correspondiente a cada división se encuentra en un lugar diferente dentro del árbol. Por consiguiente, con un modelo ARTXP, debe obtener todas las piezas y, a continuación, procesarlas de alguna forma para reconstituir la fórmula completa. Recuperar una ecuación a partir de un modelo ARIMA es más fácil, porque el árbol pone la fórmula a su disposición en distintos puntos. Para obtener información sobre cómo crear una consulta que recupere esta información, vea [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md).  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)   
- [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)  
+ [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)  
   
   

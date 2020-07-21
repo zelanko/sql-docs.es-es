@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (dBASE controlador) | Microsoft Docs
+title: SQLConfigDataSource (dBASE driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - DBase driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], dBASE Driver
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 18c6721b4f34772e8c3cd8e4f515233f80566fb3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054100"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283975"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE controlador)
 > [!NOTE]  
->  Este tema proporciona información específica del controlador de dBASE. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de dBASE. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- El **SQLConfigDataSource** función que se usa para agregar, modificar o eliminar un origen de datos usa dinámicamente las siguientes palabras clave.  
+ La función **SQLConfigDataSource** que se utiliza para agregar, modificar o eliminar un origen de datos utiliza de forma dinámica las siguientes palabras clave.  
   
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|La secuencia en la que se ordenan los campos.<br /><br /> La secuencia puede ser: ASCII (valor predeterminado) o internacional.<br /><br /> Esto establece la misma opción como **secuencia de intercalación** en el cuadro de diálogo programa de instalación.|  
-|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
-|DELETED|Para el controlador de dBASE, especifica si se pueden recuperar o colocadas en las filas que se han marcado como eliminado. Si se establece en 1, las filas eliminadas no se muestra. Si se establece en 0, filas eliminadas se trata igual que las filas no eliminados.<br /><br /> Esto establece la misma opción como **mostrar filas eliminadas** en el cuadro de diálogo programa de instalación.|  
-|DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
-|DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
-|DRIVERID|Un identificador entero para el controlador.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5.0)|  
-|FIL|Archivo de tipo dBase III, dBase IV o dBase 5|  
-|PAGETIMEOUT|Especifica el período de tiempo, en décimas de segundo, que permanece una página (si no usa) en el búfer antes de eliminarse. El valor predeterminado es 600 décimas de segundo (60 segundos). Tenga en cuenta que esta opción se aplica a todos los orígenes de datos que usan el controlador ODBC.<br /><br /> Esto establece la misma opción como **Page Timeout** en el cuadro de diálogo programa de instalación.|  
-|READONLY|TRUE para que el archivo de solo lectura. FALSE para que el archivo no sea de sólo lectura.<br /><br /> Esto establece la misma opción como **de sólo lectura** en el cuadro de diálogo programa de instalación.|  
-|STATISTICS|Para el controlador de dBASE, determina si se aproximan las estadísticas de tamaño de tabla. Tenga en cuenta que esta opción se aplica a todos los orígenes de datos que usan el controlador ODBC.<br /><br /> Esto establece la misma opción como **recuento de filas aproximado** en el cuadro de diálogo programa de instalación.|  
-|SUBPROCESOS|El número de subprocesos en segundo plano para el motor para usar. Este valor es 3 y no se puede cambiar.<br /><br /> Esto establece la misma opción como **subprocesos** en el cuadro de diálogo programa de instalación.|
+|COLLATINGSEQUENCE|Secuencia en la que se ordenan los campos.<br /><br /> La secuencia puede ser: ASCII (valor predeterminado) o internacional.<br /><br /> Esto establece la misma opción que la **secuencia de intercalación** en el cuadro de diálogo de instalación.|  
+|DEFAULTDIR|Especificación de la ruta de acceso al directorio.|  
+|DELETED|En el caso del controlador dBASE, especifica si las filas que se han marcado como eliminadas se pueden recuperar o colocar en. Si se establece en 1, las filas eliminadas no se muestran; Si se establece en 0, las filas eliminadas se tratan igual que las filas no eliminadas.<br /><br /> Esto establece la misma opción que **mostrar filas eliminadas** en el cuadro de diálogo de configuración.|  
+|DESCRIPTION|Descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción que la **Descripción** en el cuadro de diálogo de configuración.|  
+|DRIVER|Especificación de la ruta de acceso al archivo DLL del controlador.|  
+|DRIVERID|IDENTIFICADOR entero para el controlador.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5,0)|  
+|FIL|Tipo de archivo dBase III, dBase IV o dBase 5|  
+|PAGETIMEOUT|Especifica el período de tiempo, en décimas de segundo, que una página (si no se usa) permanece en el búfer antes de quitarse. El valor predeterminado es 600 décimas de segundo (60 segundos). Tenga en cuenta que esta opción se aplica a todos los orígenes de datos que utilizan el controlador ODBC.<br /><br /> Esto establece la misma opción que el **tiempo de espera de página** en el cuadro de diálogo de instalación.|  
+|READONLY|TRUE para hacer que el archivo sea de solo lectura; FALSE para que el archivo no sea de solo lectura.<br /><br /> Esto establece la misma opción que **solo lectura** en el cuadro de diálogo de instalación.|  
+|STATISTICS|En el caso del controlador dBASE, determina si se aproximan las estadísticas de tamaño de tabla. Tenga en cuenta que esta opción se aplica a todos los orígenes de datos que utilizan el controlador ODBC.<br /><br /> Esto establece la misma opción que el **recuento aproximado de filas** en el cuadro de diálogo de instalación.|  
+|THREADPOOL|Número de subprocesos en segundo plano que va a usar el motor. Este valor es 3 y no se puede cambiar.<br /><br /> Esto establece la misma opción que los **subprocesos** en el cuadro de diálogo de instalación.|

@@ -13,22 +13,21 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fecb8f996ddfcaede83cdb330e9c82bffdce5819
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953048"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Programación de procedimientos almacenados extendidos de motor de base de datos
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR. Para obtener más información, consulte [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
- La API Procedimiento almacenado extendido de [!INCLUDE[msCoName](../includes/msconame-md.md)] proporciona una interfaz de programación de aplicaciones (API) basada en servidor para extender la funcionalidad de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La API está compuesta de funciones y macros de C y C++ que se utilizan para crear aplicaciones de las siguientes categorías: procedimientos almacenados extendidos y aplicaciones de puerta de enlace.  
+ La [!INCLUDE[msCoName](../includes/msconame-md.md)] API de procedimientos almacenados extendidos proporciona una interfaz de programación de aplicaciones (API) basada en servidor para extender la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funcionalidad. La API está compuesta de funciones y macros de C y C++ que se utilizan para crear aplicaciones de las siguientes categorías: procedimientos almacenados extendidos y aplicaciones de puerta de enlace.  
   
  Los procedimientos almacenados extendidos permiten crear rutinas externas propias en un lenguaje de programación como C. Estos procedimientos se muestran ante los usuarios como procedimientos almacenados típicos y se ejecutan del mismo modo. Es posible pasar parámetros a los procedimientos almacenados extendidos y estos pueden devolver resultados y estados.  
   

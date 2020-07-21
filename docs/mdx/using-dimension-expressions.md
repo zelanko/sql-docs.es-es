@@ -1,5 +1,5 @@
 ---
-title: Usar expresiones de dimensiones | Microsoft Docs
+title: Usar expresiones de dimensión | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097175"
 ---
 # <a name="using-dimension-expressions"></a>Usar expresiones de dimensiones
@@ -20,7 +20,7 @@ ms.locfileid: "68097175"
 
   Las expresiones de dimensiones y jerarquía se usan normalmente al pasar parámetros a funciones MDX (Expresiones multidimensionales) para devolver miembros, conjuntos o tuplas de una jerarquía.  
   
- Las expresiones de dimensiones solo pueden ser expresiones simples porque son identificadores de objetos. Consulte [expresiones &#40;MDX&#41; ](../mdx/expressions-mdx.md) para obtener una explicación de las expresiones simples y complejas.  
+ Las expresiones de dimensiones solo pueden ser expresiones simples porque son identificadores de objetos. Vea [expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md) para obtener una explicación de las expresiones simples y complejas.  
   
 ## <a name="dimension-expressions"></a>Expresiones de dimensiones  
  Una expresión de dimensión contiene un identificador de dimensión o una función de dimensión.  
@@ -37,7 +37,7 @@ ms.locfileid: "68097175"
   
  `FROM [Adventure Works]`  
   
- Aparece un identificador de dimensión como *Dimension_Name* en la notación BNF que se usa para describir las instrucciones MDX.  
+ Un identificador de dimensión aparece como *Dimension_Name* en la notación BnF que se utiliza para describir las instrucciones MDX.  
   
 ## <a name="hierarchy-expressions"></a>Expresiones de jerarquías  
  Del mismo modo, las expresiones de jerarquía contienen un identificador de jerarquía o una función de jerarquía. En el ejemplo siguiente se muestra el uso de la expresión de jerarquía [Date].[Calendar], junto con las funciones .Levels y .Count, para devolver el número de niveles de la jerarquía Calendar de la dimensión Date:  
@@ -58,9 +58,9 @@ ms.locfileid: "68097175"
   
  `FROM [Adventure Works]`  
   
- Un identificador de jerarquía aparece como *Dimension_Name.Hierarchy_Name* en la notación BNF que se usa para describir las instrucciones MDX.  
+ Un identificador de jerarquía aparece como *Dimension_Name. Hierarchy_Name* en la notación BnF que se utiliza para describir las instrucciones MDX.  
   
-## <a name="see-also"></a>Vea también  
- [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)  
   
   

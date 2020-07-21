@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547457"
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
   El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
@@ -82,7 +81,7 @@ ms.locfileid: "68811049"
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  
- El Asistente para generar esquemas omite los tipos de datos en todos los casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto para las columnas que usan el tipo de `wchar` datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
+ El Asistente para generar esquemas omite los tipos de datos en todos los casos, excepto para las columnas que usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
   
  Si un elemento de datos, como el enlace de un atributo, no posee una longitud especificada, se utilizará en la columna la longitud predeterminada que se muestra en la siguiente tabla.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "68811049"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de la generación incremental](understanding-incremental-generation.md)   
  [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](manage-changes-to-data-source-views-and-data-sources.md)  
   

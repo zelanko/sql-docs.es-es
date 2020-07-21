@@ -13,44 +13,44 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectModeEnum enumeration [ADO]
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933457"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762616"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Especifica los permisos disponibles para modificar datos en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md), abra un [registro](../../../ado/reference/ado-api/record-object-ado.md), o especificar valores para el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad de la  **Registro** y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  
+Especifica los permisos disponibles para modificar los datos de una [conexión](../../../ado/reference/ado-api/connection-object-ado.md), abrir un [registro](../../../ado/reference/ado-api/record-object-ado.md)o especificar valores para la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) de los objetos **Record** y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adModeRead**|1|Indica los permisos de solo lectura.|  
-|**adModeReadWrite**|3|Indica los permisos de lectura/escritura.|  
-|**adModeRecursive**|0x400000|Usar junto con las demás *\*ShareDeny\** valores (**adModeShareDenyNone**, **adModeShareDenyWrite**, o **adModeShareDenyRead**) para propagar restricciones de uso compartido a todos los registros secundarios del elemento actual **registro**. No tiene ningún efecto si la **registro** no tiene ningún elemento secundario. Se genera un error de tiempo de ejecución si se usa con **adModeShareDenyNone** solo. Sin embargo, puede utilizarse con **adModeShareDenyNone** cuando se combina con otros valores. Por ejemplo, puede usar "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
-|**adModeShareDenyNone**|16|Permite a otros usuarios abrir una conexión con los permisos. No se puede negar a los demás el acceso de lectura ni el de escritura.|  
-|**adModeShareDenyRead**|4|Impide que otros usuarios abrir una conexión con permisos de lectura.|  
-|**adModeShareDenyWrite**|8|Impide que otros usuarios abrir una conexión con permisos de escritura.|  
-|**adModeShareExclusive**|12|Impide que otros usuarios abrir una conexión.|  
-|**adModeUnknown**|0|Predeterminado: Indica que los permisos no se ha establecido o no se puede determinar.|  
-|**adModeWrite**|2|Indica los permisos de solo escritura.|  
+|**adModeRead**|1|Indica permisos de solo lectura.|  
+|**adModeReadWrite**|3|Indica permisos de lectura y escritura.|  
+|**adModeRecursive**|0x400000|Se usa junto con los demás valores de * \* ShareDeny \* * (**adModeShareDenyNone**, **adModeShareDenyWrite**o **adModeShareDenyRead**) para propagar las restricciones de uso compartido a todos los subregistros del **registro**actual. No tiene ningún efecto si el **registro** no tiene ningún elemento secundario. Si solo se usa con **adModeShareDenyNone** , se genera un error en tiempo de ejecución. Sin embargo, se puede usar con **adModeShareDenyNone** cuando se combina con otros valores. Por ejemplo, puede usar "**adModeRead** o **adModeShareDenyNone** o **adModeRecursive**".|  
+|**adModeShareDenyNone**|16|Permite que otros usuarios abran una conexión con cualquier permiso. No se puede negar a los demás el acceso de lectura ni el de escritura.|  
+|**adModeShareDenyRead**|4|Impide que otros abran una conexión con permisos de lectura.|  
+|**adModeShareDenyWrite**|8|Impide que otros abran una conexión con permisos de escritura.|  
+|**adModeShareExclusive**|12|Impide que otros abran una conexión.|  
+|**adModeUnknown**|0|Predeterminada. Indica que los permisos todavía no se han establecido o no se pueden determinar.|  
+|**adModeWrite**|2|Indica permisos de solo escritura.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.ConnectMode.READ|  
-|AdoEnums.ConnectMode.READWRITE|  
-|(No hay ningún equivalente de AdoEnums.ConnectMode.RECURSIVE)|  
-|AdoEnums.ConnectMode.SHAREDENYNONE|  
-|AdoEnums.ConnectMode.SHAREDENYREAD|  
-|AdoEnums.ConnectMode.SHAREDENYWRITE|  
-|AdoEnums.ConnectMode.SHAREEXCLUSIVE|  
-|AdoEnums.ConnectMode.UNKNOWN|  
-|AdoEnums.ConnectMode.WRITE|  
+|AdoEnums. ConnectMode. READ|  
+|AdoEnums. ConnectMode. READWRITE|  
+|(No hay ningún equivalente de AdoEnums. ConnectMode. RECURSIVE)|  
+|AdoEnums. ConnectMode. SHAREDENYNONE|  
+|AdoEnums. ConnectMode. SHAREDENYREAD|  
+|AdoEnums. ConnectMode. SHAREDENYWRITE|  
+|AdoEnums. ConnectMode. SHAREEXCLUSIVE|  
+|AdoEnums. ConnectMode. UNKNOWN|  
+|AdoEnums. ConnectMode. WRITE|  
   
 ## <a name="applies-to"></a>Se aplica a  
   

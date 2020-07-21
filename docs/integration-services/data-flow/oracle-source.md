@@ -1,5 +1,5 @@
 ---
-title: Origen de Oracle | Microsoft Docs
+title: Origen de Oracle
 ms.custom: ''
 ms.date: 08/14/2019
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: eced263351bc6c9add5fbd46894c08ccc65fb2be
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545071"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196100"
 ---
 # <a name="oracle-source"></a>Origen de Oracle
 
@@ -52,9 +52,9 @@ Las propiedades personalizadas del origen de Oracle son las siguientes. Todas la
 |Nombre de propiedad|Tipo de datos|Descripción|
 |:-|:-|:-|
 |AccessMode|Integer (enumeración)|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **Nombre de tabla** y **Comando SQL**. El valor predeterminado es **Nombre de tabla**.|
-|BatchSize|Integer|Tamaño de lote para la carga masiva. Es el número de registros extraídos como matriz. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
-|DefaultCodePage|Integer|La página de códigos que se usa cuando el origen de datos no tiene información de página de códigos. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
-|PreFetchCount|Integer|El número de filas capturadas previamente. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
+|BatchSize|Entero|Tamaño de lote para la carga masiva. Es el número de registros extraídos como matriz. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
+|DefaultCodePage|Entero|La página de códigos que se usa cuando el origen de datos no tiene información de página de códigos. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
+|PreFetchCount|Entero|El número de filas capturadas previamente. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
 |SqlCommand|String|Comando SQL que se va a ejecutar cuando AccessMode se establece en SQL Command.|
 |TableName|String|El nombre de la tabla con los datos que se van a usar cuando AccessMode esté establecido en Nombre de tabla.|
 
@@ -70,7 +70,7 @@ Para más información, consulte una de estas secciones:
 - [Editor de origen de Oracle (página Columnas)](#oracle-source-editor-columns-page)
 - [Editor de origen de Oracle (página Salida de error)](#oracle-source-editor-error-output-page)
 
-![](media/oracle-source.png)
+![Origen de Oracle](media/oracle-source.png)
 
 El cuadro de diálogo **Editor avanzado** contiene las propiedades que se pueden establecer mediante programación.
 
@@ -95,7 +95,7 @@ En la página **Administrador de conexiones**, el cuadro de diálogo **Editor de
 
 Seleccione un administrador de conexiones existente de la lista o haga clic en **Nuevo** para crear un nuevo administrador de conexiones de Oracle.
 
-**Nueva**
+**Nuevo**
 
 Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Editor del administrador de conexiones de Oracle** donde puede crear un administrador de conexiones.
 
@@ -108,7 +108,7 @@ Elija el método para la selección de datos desde el origen. Las opciones se mu
 |Tabla o vista|Recupera datos de una tabla o vista del origen de datos de Oracle. Cuando esta opción esté seleccionada, seleccione una tabla o vista disponible en la lista para **Nombre de la tabla o la vista**.|
 |Comando SQL|Recupera datos del origen de datos de Oracle mediante una consulta SQL. Cuando seleccione esta opción, escriba una consulta de una de las siguientes maneras: <br>Escriba el texto de la consulta SQL en el campo de **Texto de comando SQL** . <br>Haga clic en **Examinar** para cargar la consulta SQL desde un archivo de texto. <br>Haga clic en **Analizar consulta** para comprobar la sintaxis del texto de la consulta.|
 
-**Vista previa**
+**Versión preliminar**
 
 Haga clic en **Vista previa** para ver hasta las 200 primeras filas de los datos extraídos de la tabla o la vista seleccionada.
 
@@ -161,7 +161,7 @@ Use la página **Salida de error** del cuadro de diálogo **Editor de origen de 
 **Comportamiento de error**
 
 Seleccione la forma en la que el origen de Oracle debe controlar los errores de un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.
-**Sección relacionada**: [Control de errores en los datos](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Sección relacionada**: [Control de errores en los datos](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Truncamiento**
 

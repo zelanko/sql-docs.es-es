@@ -1,5 +1,5 @@
 ---
-title: Conjunto de RDS. Servidor de control de datos y enlazar a tabla HTML (VBScript) | Microsoft Docs
+title: Establezca RDS. DataControl y enlazar a la tabla HTML (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - SortColumn property [RDS], VBScript example
 - FilterValue property [ADO], VBScript example
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8703641b25f7e5956fe4204db9775b0ada90cba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53bc8926ea400f2ba73a2bbe412c284aec2273c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964134"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752123"
 ---
-# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>FilterColumn, FilterCriterion, FilterValue, SortColumn y propiedades SortDirection y ejemplo del método Reset (VBScript)
+# <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>Ejemplo de las propiedades FilterColumn, FilterCriterion, FilterValue, SortColumn y SortDirection y el método Reset (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- El código siguiente muestra cómo establecer el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** parámetro en tiempo de diseño y enlazarlo a una HTML basadas en datos de tabla mediante un origen de datos. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **FilterColumnVBS.asp**.  
+ En el código siguiente se muestra cómo establecer el [objeto RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Parámetro del **servidor** DataControl en designtime y enlazarlo a una tabla HTML compatible con datos mediante un origen de datos. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **FilterColumnVBS. asp**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -203,12 +203,12 @@ End Sub
 <!-- EndFilterColumnVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Propiedad FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Propiedad FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
+ [FilterColumn (propiedad, RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
+ [FilterCriterion (propiedad, RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [Propiedad FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Reset (método) (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
+ [Método Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
  [Propiedad SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [Propiedad SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 

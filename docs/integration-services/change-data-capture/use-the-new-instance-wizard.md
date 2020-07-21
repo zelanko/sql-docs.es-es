@@ -11,10 +11,10 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d964639bbcf7679c71191d4b3a8e2a455a4635e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298556"
 ---
 # <a name="use-the-new-instance-wizard"></a>Usar el Asistente para nueva instancia
@@ -38,7 +38,7 @@ ms.locfileid: "71298556"
   
 -   [Generar y ejecutar el Script de registro complementario ](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
--   [Generar tablas reflejadas e instancias de captura CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+-   [Generar tablas reflejadas e instancias de captura CDC ](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
 -   [Finalizar](../../integration-services/change-data-capture/finish.md)  
   

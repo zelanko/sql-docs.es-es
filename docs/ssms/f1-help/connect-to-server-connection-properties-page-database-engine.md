@@ -1,6 +1,6 @@
 ---
-title: Conectarse al servidor (página Propiedades de conexión del motor de base de datos) | Microsoft Docs
-ms.custom: ''
+title: Conectar al servidor (página Propiedades de conexión del motor de base de datos)
+ms.custom: seo-lt-2019
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 93c9069cf3a52cbbfa961737350976c3beda4304
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: cb62bd419c08b1562a6b636685e360501f574ae3
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265102"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245011"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use esta pestaña para ver o especificar opciones cuando se conecte a una enstancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
+Use esta pestaña para ver o especificar opciones cuando se conecte a una instancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Conectar con base de datos**  
 Seleccione en la lista una base de datos a la que conectarse. Si selecciona **<default>** , se conectará a la base de datos predeterminada del servidor. Si selecciona **<Browse server>** , podrá buscar el servidor de la base de datos a la que se conecta.  
@@ -61,13 +61,13 @@ Al conectar con la autenticación de **Active Directory - Universal compatible c
 **Restablecer todo**  
 Reemplaza todos los valores de las propiedades de conexión especificadas manualmente por los valores predeterminados.  
   
-**Conectar**  
+**Conexión**  
 Intenta establecer una conexión utilizando los valores de la lista.  
   
 **Opciones**  
 Haga clic aquí para modificar el cuadro de diálogo y ocultar las opciones adicionales de conexión al servidor, como recordar la contraseña.  
   
-**Probar**  
+**Test**  
 Al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**, haga clic para probar la conexión.  
   
 **Guardar**  

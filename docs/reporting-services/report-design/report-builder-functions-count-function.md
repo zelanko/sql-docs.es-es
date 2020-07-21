@@ -1,5 +1,5 @@
 ---
-title: Función Count (Generador de informes y SSRS) | Microsoft Docs
+title: Función Count (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579718"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081302"
 ---
 # <a name="report-builder-functions---count-function"></a>Funciones del Generador de informes: función Count
   Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.  
@@ -32,16 +32,16 @@ Count(expression, scope, recursive)
  *expression*  
  (**Variant** o **Binario**) Expresión en la que se lleva a cabo la agregación, por ejemplo, `=Fields!FieldName.Value`.  
   
- *ámbito*  
+ *scope*  
  (**String**) Nombre de un conjunto de datos, grupo o región de datos que contiene los elementos de informe donde se aplicará la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
- *recursivos*  
+ *recursive*  
  (**Tipo enumerado**) Opcional. **Simple** (valor predeterminado) o **RdlRecursive**. Especifica si se debe realizar la agregación de forma recursiva.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un **Integer**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de *scope* debe ser una constante de cadena y no puede ser una expresión. Para los agregados exteriores o los que no especifican a otros agregados, *scope* debe hacer referencia al ámbito actual o a un ámbito de contenido. Para los agregados de agregados, los agregados anidados pueden especificar un ámbito secundario.  
   
  *Expression* puede contener las llamadas a las funciones de agregados anidados con las siguientes excepciones y condiciones:  
@@ -61,12 +61,12 @@ Count(expression, scope, recursive)
  Ejemplo  
   
 ## <a name="description"></a>Descripción  
- El ejemplo de código siguiente muestra una expresión que calcula el número de valores no NULL de `Size` para el ámbito predeterminado y para un ámbito de grupo primario. La expresión se agrega a una celda de una fila que pertenece al grupo secundario `GroupbySubcategory`. El grupo primario es `GroupbyCategory`. La expresión muestra los resultados para `GroupbySubcategory` (el ámbito predeterminado) y, después, para `GroupbyCategory` (el ámbito del grupo primario).  
+ El ejemplo de código siguiente muestra una expresión que calcula el número de valores no NULL de `Size` para el ámbito predeterminado y para un ámbito de grupo primario. La expresión se agrega a una celda de una fila que pertenece al grupo secundario `GroupbySubcategory`. El grupo primario es `GroupbyCategory`. La expresión muestra los resultados para `GroupbySubcategory` (el ámbito predeterminado) y, después, para `GroupbyCategory` (el ámbito de grupo primario).  
   
 > [!NOTE]  
 >  Las expresiones no deben contener retornos de carro ni saltos de línea reales; en el ejemplo se han incluido para posibilitar la compatibilidad con los representadores de documentación. Si copia el ejemplo siguiente, quite los retornos de carro de todas las líneas.  
   
-## <a name="code"></a>código  
+## <a name="code"></a>Código  
   
 ```  
 ="Count (Subcategory): " & Count(Fields!Size.Value) &   

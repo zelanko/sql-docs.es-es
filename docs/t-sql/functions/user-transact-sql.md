@@ -20,18 +20,18 @@ helpviewer_keywords:
 - names [SQL Server], database users
 - database usernames [SQL Server]
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cdead9d5b6f84072dae454eced8301add4b3c31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0e27b87af8d8a1409225c3c3b576012923a94c2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927613"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004068"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Permite insertar en una tabla un valor proporcionado por el sistema para el nombre de usuario actual de la base de datos cuando no se especifica ningún valor predeterminado.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "67927613"
 USER  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
- **char**  
+## <a name="return-types"></a>Tipos de valor devuelto  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  USER ofrece la misma funcionalidad que la función del sistema USER_NAME.  
   
  Puede utilizar USER con restricciones DEFAULT en las instrucciones CREATE TABLE o ALTER TABLE, o bien utilizarla como cualquier función estándar.  

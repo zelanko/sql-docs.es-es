@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49364423-6aa9-40f3-914a-eca37be12b88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ba973e51a7d3c86b9f1a15075b0a86ac94502cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d9db95a016fe9eda1c6128bac54847f717e6378
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053033"
 ---
 # <a name="deprecation-event-category"></a>degradación [categoría de eventos]
   La categoría de evento de **degradación** contiene eventos de degradación generales.  

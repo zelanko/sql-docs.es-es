@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profile_sp
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4bd7f90688d61f9ecee487d553393e38bed82e3
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211281"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891012"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea un nuevo perfil de Correo electrónico de base de datos.  
   
@@ -44,7 +44,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 `[ @profile_name = ] 'profile\_name'`Nombre del nuevo perfil. *profile_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
  
    > [!NOTE]
-   > El nombre de perfil que usa Azure SQL Instancia administrada Agente SQL debe llamarse **AzureManagedInstance_dbmail_profile**
+   > Se debe llamar al nombre de perfil que usa Azure SQL Instancia administrada Agente SQL **AzureManagedInstance_dbmail_profile**
   
 `[ @description = ] 'description'`Descripción opcional del nuevo perfil. la *Descripción* es de tipo **nvarchar (256)** y no tiene ningún valor predeterminado.  
   
@@ -54,7 +54,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Un perfil de Correo electrónico de base de datos contiene cualquier número de cuentas de Correo electrónico de base de datos. Los procedimientos almacenados de Correo electrónico de base de datos pueden hacer referencia a un perfil por el nombre o por el Id. del perfil generado por este procedimiento. Para obtener más información sobre cómo agregar una cuenta a un perfil, vea [sysmail_add_profileaccount_sp &#40;Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
+ Un perfil de Correo electrónico de base de datos contiene cualquier número de cuentas de Correo electrónico de base de datos. Los procedimientos almacenados de Correo electrónico de base de datos pueden hacer referencia a un perfil por el nombre o por el Id. del perfil generado por este procedimiento. Para obtener más información sobre cómo agregar una cuenta a un perfil, vea [sysmail_add_profileaccount_sp &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md).  
   
  El nombre y la descripción del perfil se pueden cambiar con el procedimiento almacenado **sysmail_update_profile_sp**, mientras que el ID. de perfil permanece constante para la vida del perfil.  
   
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
        @description = 'Profile used for administrative mail.' ;  
 ```  
   
- **B. Crear un nuevo perfil y guardar el identificador de perfil en una variable**  
+ **B. Crear un nuevo perfil y guardar el Id. del perfil en una variable**  
   
  En el ejemplo siguiente se crea un nuevo perfil de Correo electrónico de base de datos denominado `AdventureWorks Administrator`. En el ejemplo se almacena el Id. del perfil en la variable `@profileId` y se devuelve un conjunto de resultados que contiene el Id. del nuevo perfil.  
   
@@ -91,10 +91,10 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 SELECT @profileId ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procedimientos &#40;almacenados de correo electrónico de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

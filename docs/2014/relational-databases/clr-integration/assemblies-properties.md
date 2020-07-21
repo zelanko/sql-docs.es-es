@@ -1,5 +1,5 @@
 ---
-title: Propiedades del ensamblado (página General) | Microsoft Docs
+title: Propiedades del ensamblado (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68f2bff1458cdbb134aaeb7e64ec959fe111fdb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62919290"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953945"
 ---
 # <a name="assembly-properties-general-page"></a>Propiedades del ensamblado (página General)
   Utilice esta página para ver o modificar propiedades del ensamblado.  
@@ -30,9 +29,9 @@ ms.locfileid: "62919290"
  Escriba el nombre del propietario o del esquema, o bien selecciónelo en la lista.  
   
  **Conjunto de permisos**  
- Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Seguro**, **acceso externo**, y **Unsafe** acceso.  
+ Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Safe**, **external Access**y **Unsafe** Access.  
   
- **Ruta de acceso al ensamblado**  
+ **Ruta al ensamblado**  
  Escriba la ruta de acceso al archivo de ensamblado.  
   
  **Examinar**  
@@ -43,12 +42,12 @@ ms.locfileid: "62919290"
  Muestra la fecha de creación o registro del ensamblado.  
   
  **Nombre seguro**  
- Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no lo ha firmado digitalmente.  
+ Muestra **true** si el ensamblado está firmado digitalmente, **false** si no se ha firmado digitalmente.  
   
  **Versión**  
  Muestra el número de versión del ensamblado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

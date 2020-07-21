@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81b33843ccf0096453fe1cabbde4a1741f89aff2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960165"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ejecutar los pasos Windows PowerShell del Agente SQL Server
   Use el Agente SQL Server para ejecutar scripts de SQL Server PowerShell en momentos programados.  
@@ -31,12 +30,12 @@ ms.locfileid: "62922904"
   
 2.  Usar un paso de trabajo de símbolo del sistema para ejecutar PowerShell.exe y especificar un script que importa el módulo `sqlps`.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
   
 > [!CAUTION]  
 >  Cada paso de trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta PowerShell con el módulo `sqlps` inicia un proceso que consume aproximadamente 20 MB de memoria. Si ejecuta muchos pasos de trabajo de Windows PowerShell simultáneos, el rendimiento se puede ver afectado adversamente.  
   
-##  <a name="PShellJob"></a> Crear un paso de trabajo de PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a>Crear un paso de trabajo de PowerShell  
  **Para crear un paso de trabajo de PowerShell**  
   
 1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "62922904"
   
 7.  Haga clic en la página **Avanzadas** para establecer las siguientes opciones de paso de trabajo: acción que se llevará a cabo si el paso de trabajo progresa o no, número de veces que el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe intentar ejecutar el paso de trabajo y frecuencia de los intentos.  
   
-##  <a name="CmdExecJob"></a> Crear un paso de trabajo del símbolo del sistema  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a>Crear un paso de trabajo del símbolo del sistema  
  **Para crear un paso de trabajo de CmdExec**  
   
 1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "62922904"
   
 3.  En el cuadro de diálogo **Nuevo paso de trabajo** , escriba un nombre para el paso de trabajo en **Nombre del paso**.  
   
-4.  En la lista **Tipo** , elija **Sistema operativo (CmdExec)** .  
+4.  En la lista **Tipo** , elija **Sistema operativo (CmdExec)**.  
   
 5.  En la lista **Ejecutar como** , seleccione la cuenta e proxy con las credenciales que utilizará el trabajo. De forma predeterminada, los pasos de trabajo de CmdExec se ejecutan en el contexto de la cuenta de servicio de Agente SQL Server.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "62922904"
   
 8.  Haga clic en la página **Avanzadas** para configurar las opciones del paso de trabajo como, por ejemplo: la acción que se realizará si el paso de trabajo es correcto o si es erróneo, el número de veces que Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] intentará ejecutar el paso de trabajo y el archivo en el que Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede escribir la salida del paso de trabajo. Solo los miembros del rol fijo de servidor **sysadmin** pueden escribir la salida de paso de trabajo en un archivo del sistema operativo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

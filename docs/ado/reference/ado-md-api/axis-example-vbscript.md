@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de Axis (VBScript) | Microsoft Docs
+title: Ejemplo de eje (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 53e27109028204739a9de245d28909405cf939e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947390"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765196"
 ---
 # <a name="axis-example-vbscript"></a>Ejemplo de Axis (VBScript)
-Esta página Active Server muestra datos OLAP de una cadena de consulta MDX y escribe el conjunto de celdas resultante en una estructura de tabla HTML.  
+En esta página de Active Server se muestran los datos OLAP de una cadena de consulta MDX y se escribe el decuadro de celdas resultante en una estructura de tabla HTML.  
   
 ```  
 <%@ Language=VBScript %>  

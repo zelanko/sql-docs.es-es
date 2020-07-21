@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 286e318eed678eda21259d87d477829d5704e8d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077821"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757214"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (motor de base de datos)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve true si *this* es descendiente del elemento primario.
   
@@ -45,12 +45,12 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 *parent*  
 El nodo **hierarchyid** para el que se debe realizar la prueba IsDescendantOf.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **Tipo de valor devuelto de SQL Server:bit**
   
 **Tipo de valor devuelto de CLR:SqlBoolean**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Devuelve true para todos los nodos del subárbol con la raíz en el elemento primario y false para todos los demás nodos.
   
 El elemento primario se considera su propio descendiente.
@@ -97,7 +97,7 @@ En el fragmento de código siguiente se llama al método `IsDescendantOf()`.
 this.IsDescendantOf(Parent)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

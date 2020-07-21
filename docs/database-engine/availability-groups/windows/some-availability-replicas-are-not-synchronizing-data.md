@@ -1,6 +1,7 @@
 ---
-title: Algunas réplicas de disponibilidad no sincronizan datos | Microsoft Docs
-ms.custom: ''
+title: Réplicas de disponibilidad que no sincronizan datos
+description: Posibles causas y soluciones para cuando una o varias réplicas de disponibilidad de un grupo de disponibilidad AlwaysOn no están sincronizando datos con la réplica principal.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f026decc6463e477f95fe86bdda234c1d5d09c2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b4c07e6a275d1208d553fb49b38e3c27a584bf7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883120"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Algunas réplicas de disponibilidad no sincronizan datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Introducción  
   
@@ -29,7 +30,7 @@ ms.locfileid: "68014104"
 |-|-|  
 |**Nombre de directiva**|Estado de sincronización de datos de las réplicas de disponibilidad|  
 |**Problema**|Algunas réplicas de disponibilidad no sincronizan datos.|  
-|**Categoría**|**Advertencia**|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
 |**Faceta**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -40,7 +41,7 @@ ms.locfileid: "68014104"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas de disponibilidad no sincronizan datos](https://go.microsoft.com/fwlink/p/?LinkId=220852) de la wiki de TechNet.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  En este grupo de disponibilidad, al menos una réplica secundaria tiene un estado de sincronización NOT SYNCHRONIZING y no recibe datos de la réplica principal.  
   
 ## <a name="possible-solution"></a>Solución posible  

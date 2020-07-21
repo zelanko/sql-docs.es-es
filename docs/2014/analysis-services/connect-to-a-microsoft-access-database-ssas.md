@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7044a7b0c8b563a266cfbed9c7df44d5c79a55
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087298"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527211"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Conectarse a una base de datos de Microsoft Access (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectarse con una base de datos de Microsoft Access. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087298"
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar un archivo en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer el archivo seleccionado.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66087298"
  **Examinar**  
  Navegue a una ubicación donde haya un archivo de base de datos de Microsoft Access.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario para la conexión con la base de datos.  
   
  **Contraseña**  
@@ -49,7 +48,7 @@ ms.locfileid: "66087298"
  **Avanzadas**  
  Establezca las propiedades de conexión adicionales con el cuadro de diálogo **Establecer propiedades avanzadas** .  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

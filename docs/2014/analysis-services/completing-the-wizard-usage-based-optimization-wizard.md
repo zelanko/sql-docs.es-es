@@ -1,5 +1,5 @@
 ---
-title: Finalización del asistente (Asistente para optimización basada en uso) | Microsoft Docs
+title: Finalización del asistente (Asistente para optimización basada en el uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3faf5983b452f436b4d3071fa542bfb2ccdd382e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087562"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527291"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Finalización del asistente (Asistente para optimización basada en el uso)
   Use la página **Finalización del asistente** para guardar el diseño de agregaciones y asignarlo a las particiones seleccionadas. Opcionalmente, también puede procesar las particiones seleccionadas cuando el Asistente para optimización basada en el uso termine de diseñar y guardar las agregaciones.  
@@ -35,8 +34,8 @@ ms.locfileid: "66087562"
  **Procesar particiones inmediatamente**  
  Procesa las particiones seleccionadas después de que se complete el asistente.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para optimización basada en uso](usage-based-optimization-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para optimización basada en el uso (ayuda F1)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

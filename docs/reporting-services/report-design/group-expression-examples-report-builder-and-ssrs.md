@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de expresión de grupo (Generador de informes y SSRS) | Microsoft Docs
+title: Ejemplos de expresiones de grupo (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: abfb9f445b52550caf63cc440143e6b008df1d62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580266"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77082101"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresión de grupo (Generador de informes y SSRS)
   En una región de datos, puede agrupar los datos por un solo campo o crear expresiones más complejas que identifiquen los datos por los que se debe realizar la agrupación. Las expresiones complejas incluyen referencias a varios campos o parámetros, instrucciones condicionales o código personalizado. Al definir un grupo para una región de datos, debe agregar estas expresiones a las propiedades del **Grupo** . Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "65580266"
 ## <a name="examples-of-group-expressions"></a>Ejemplos de expresiones de grupo  
  En la siguiente tabla, se incluyen ejemplos de expresiones de grupo que se pueden usar para definir un grupo.  
   
-|Descripción|Expresión|  
+|Descripción|Expression|  
 |-----------------|----------------|  
 |Agrupar por el campo `Region` .|`=Fields!Region.Value`|  
 |Agrupar por apellidos y nombre.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

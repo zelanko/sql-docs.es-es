@@ -1,6 +1,6 @@
 ---
-title: Exportar información de servidores registrados (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Exportar información de servidores registrados
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c753a997b1d65c5691eb33e7d3fe61f720b29c20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048668"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar información de servidores registrados (SQL Server Management Studio)
   En este tema se describe cómo guardar y exportar información de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]para distribuirla a otros empleados o servidores. Puede utilizar esta característica de exportación para crear una interfaz de usuario coherente en varios equipos.  
@@ -56,7 +55,7 @@ ms.locfileid: "63298108"
     > [!IMPORTANT]  
     >  Los archivos de exportación están cifrados; sin embargo, si se incluyen nombres de usuario y contraseñas para la autenticación de SQL Server, el acceso al archivo debe controlarse cuidadosamente. De manera predeterminada, los nombres de usuario y las contraseñas se excluyen del archivo de exportación.  
   
-## <a name="see-also"></a>Vea también  
- [Importar información de servidores registrados &#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [crear un servidor registrado &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](import-registered-server-information-sql-server-management-studio.md) [crear un nuevo servidor registrado &#40;SQL Server Management Studio](create-a-new-registered-server-sql-server-management-studio.md)&#41;  
   
   

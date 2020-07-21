@@ -1,5 +1,6 @@
 ---
 title: Crear un usuario de base de datos | Microsoft Docs
+description: Obtenga información sobre cómo crear los tipos más comunes de usuarios de base de datos mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,21 +25,21 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c65d0a8f7e435bb82bcbce43aa1fc27523e006cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094971"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005689"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  En este tema se describe cómo crear los tipos más comunes de usuarios de base de datos. Hay once tipos de usuarios. La lista completa se proporciona en el tema [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Todas las variedades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten usuarios de base de datos, pero no necesariamente todos los tipos de usuarios.  
+  En este tema se describe cómo crear los tipos más comunes de usuarios de base de datos. Hay 11 tipos de usuarios. La lista completa se proporciona en el tema [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Todas las variedades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten usuarios de base de datos, pero no necesariamente todos los tipos de usuarios.  
   
  Puede crear un usuario de base de datos mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="Understanding"></a> Descripción de los tipos de usuarios  
+##  <a name="understanding-the-types-of-users"></a><a name="Understanding"></a> Descripción de los tipos de usuarios  
  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ofrece 6 opciones a la hora de crear un usuario de base de datos. En el gráfico siguiente se muestran las 6 opciones en el recuadro verde y se indica lo que representan.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
@@ -56,17 +57,17 @@ ms.locfileid: "68094971"
   
 > **SUGERENCIA** Para las personas de dentro de su organización, la autenticación de Windows es una opción más acertada. De este modo, no tienen que recordar otra contraseña y, además, la autenticación de Windows ofrece características de seguridad adicionales, como Kerberos.  
   
-##  <a name="Restrictions"></a> Información previa  
+##  <a name="background"></a><a name="Restrictions"></a> Información previa  
  Un usuario es una entidad de seguridad de la base de datos. Los inicios de sesión deben estar asignados a un usuario de base de datos para poder conectarse a una base de datos. Un inicio de sesión se puede asignar a bases de datos diferentes como usuarios diferentes pero solo se puede asignar como un usuario en cada base de datos. En una base de datos parcialmente independiente, puede crearse un usuario que no tenga un inicio de sesión. Para obtener más información sobre los usuarios de la base de datos independiente, vea [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md). Si el usuario invitado de una base de datos está habilitado, un inicio de sesión que no esté asignado a un usuario de la base de datos puede entrar en la base de datos como el usuario invitado.  
   
 > **IMPORTANTE:** El usuario invitado suele estar deshabilitado. No habilite al usuario invitado a menos que sea necesario.  
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe tener el permiso **ALTER ANY USER** para la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Crear un usuario con SSMS  
+##  <a name="create-a-user-with-ssms"></a><a name="SSMSProcedure"></a> Crear un usuario con SSMS  
   
  
 1.  En el Explorador de objetos, expanda la carpeta **Bases de datos** .  
@@ -91,7 +92,7 @@ ms.locfileid: "68094971"
   
 5.  Cuando se selecciona una opción, las demás opciones del cuadro de diálogo podrían cambiar. Algunas opciones solo se aplican a tipos específicos de usuarios de base de datos. Algunas opciones pueden dejarse en blanco y usarán un valor predeterminado.  
   
-     **Nombre de usuario.**  
+     **Nombre de usuario**  
      Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
      **Nombre de inicio de sesión**  
@@ -140,7 +141,7 @@ ms.locfileid: "68094971"
      **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  
   
-##  <a name="TsqlProcedure"></a> Crear un usuario con T-SQL  
+##  <a name="create-a-user-using-t-sql"></a><a name="TsqlProcedure"></a> Crear un usuario con T-SQL  
     
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

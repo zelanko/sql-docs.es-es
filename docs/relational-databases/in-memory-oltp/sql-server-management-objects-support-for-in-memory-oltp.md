@@ -1,7 +1,7 @@
 ---
-title: Compatibilidad de objetos de administración de SQL Server con OLTP en memoria | Microsoft Docs
+title: 'Compatibilidad de Objetos de administración de SQL Server: OLTP en memoria'
 description: Describe los elementos de Objetos de administración de SQL Server (SMO) que admiten el OLTP en memoria.
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 08/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,15 +12,15 @@ ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbf25218547548bf48c6eaf7c57c0a000e84c85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 429077aaa011b0de85af351d748baa5484c6e5e1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734995"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 En este tema se describen los elementos de Objetos de administración de SQL Server (SMO) que admiten el OLTP en memoria.  
 
 ## <a name="smo-types-and-members"></a>Tipos y miembros de SMO
@@ -41,7 +41,7 @@ Los tipos y miembros siguientes forman parte del espacio de nombres **Microsoft.
 - Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (propiedad)
 - UserDefinedTableType. **<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (propiedad)
 
-## <a name="c-code-example"></a>Ejemplo de código C#
+## <a name="c-code-example"></a>Ejemplo de código de C#
 
 #### <a name="assemblies-referenced-by-the-compiled-code-example"></a>Ensamblados a los que hace referencia el ejemplo de código compilado
 
@@ -162,7 +162,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 - [Compatibilidad de SQL Server con OLTP en memoria](sql-server-support-for-in-memory-oltp.md)
 - [Introducción a SMO](../server-management-objects-smo/overview-smo.md)

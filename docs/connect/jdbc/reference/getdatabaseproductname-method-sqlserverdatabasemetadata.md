@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 548bd099-019f-487c-87cc-6f0b665f164d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62677c494f4f613846fb6ea621fb143f27098267
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0525c5de9d3c94f7674edebacc521c1b6d600d76
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984097"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80923208"
 ---
 # <a name="getdatabaseproductname-method-sqlserverdatabasemetadata"></a>Método getDatabaseProductName (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,8 +40,8 @@ public java.lang.String getDatabaseProductName()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getDatabaseProductName se especifica mediante el método getDatabaseProductName en la interfaz java. SQL. DatabaseMetaData.  
+## <a name="remarks"></a>Observaciones  
+ El método getDatabaseProductName especifica este método getDatabaseProductName en la interfaz java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

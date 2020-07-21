@@ -1,5 +1,5 @@
 ---
-title: Método Connect (SQLServerDriver) | Microsoft Docs
+title: Método connect (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a182f62796d70fe50f646f39d1afb7058d46fd8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67955417"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927727"
 ---
 # <a name="connect-method-sqlserverdriver"></a>Método connect (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,8 +50,8 @@ public java.sql.Connection connect(java.lang.String Url,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método de conexión se especifica mediante el método Connect en la interfaz java. SQL. driver.  
+## <a name="remarks"></a>Observaciones  
+ El método connect especifica este método connect en la interfaz java.sql.Driver.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

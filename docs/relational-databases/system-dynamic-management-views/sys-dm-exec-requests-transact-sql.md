@@ -1,10 +1,9 @@
 ---
-title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,36 +18,37 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da029be5a4fa7a02cdab27ec48edd4d55f1b9580
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734688"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Devuelve información sobre cada solicitud que se está ejecutando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre las solicitudes, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
+Devuelve información sobre cada una de las solicitudes que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre las solicitudes, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
    
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identificador de la sesión con la que está relacionada esta solicitud. No admite valores NULL.|  
-|request_id|**int**|IDENTIFICADOR de la solicitud. Es único en el contexto de la sesión. No admite valores NULL.|  
+|request_id|**int**|Id. de la solicitud. Es único en el contexto de la sesión. No admite valores NULL.|  
 |start_time|**datetime**|Marca de tiempo de la llegada de la solicitud. No admite valores NULL.|  
-|status|**nvarchar(30)**|Estado de la solicitud. Puede ser uno de los siguientes:<br /><br /> Información previa<br />En ejecución<br />Ejecutable<br />En espera<br />Suspendida<br /><br /> No admite valores NULL.|  
-|comando|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />SUPRIMIR<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
-|sql_handle|**varbinary(64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.|  
-|statement_start_offset|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que se inicia la instrucción que se está ejecutando actualmente. Se puede utilizar junto con la función de administración dinámica sql_handle, statement_end_offset y sys.dm_exec_sql_text para recuperar la instrucción de ejecución actual para la solicitud. Acepta valores NULL.|  
-|statement_end_offset|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que finaliza la instrucción que se está ejecutando actualmente. Se puede utilizar junto con la función de administración dinámica sql_handle, statement_end_offset y sys.dm_exec_sql_text para recuperar la instrucción de ejecución actual para la solicitud. Acepta valores NULL.|  
-|plan_handle|**varbinary(64)**|Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se está ejecutando actualmente. Acepta valores NULL.|  
+|status|**nvarchar(30)**|Estado de la solicitud. Este puede ser uno de los siguientes:<br /><br /> Fondo<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
+|.|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
+|sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.| 
+|statement_start_offset|**int**|Indica, en bytes, empezando por 0, la posición inicial de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle` , `statement_end_offset` y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
+|statement_end_offset|**int**|Indica, en bytes, empezando por 0, la posición final de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle` , `statement_start_offset` y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
+|plan_handle|**varbinary (64)**|Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se está ejecutando actualmente. Acepta valores NULL.|  
 |database_id|**smallint**|Identificador de la base de datos en la que se ejecuta la solicitud. No admite valores NULL.|  
 |user_id|**int**|Identificador del usuario que envió la solicitud. No admite valores NULL.|  
 |connection_id|**uniqueidentifier**|Identificador de la conexión a la que ha llegado la solicitud. Acepta valores NULL.|  
 |blocking_session_id|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL o es igual a 0, la solicitud no está bloqueada o la información de sesión de la sesión de bloqueo no está disponible (o no se puede identificar).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el identificador de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado de dicho bloqueo.|  
-|wait_type|**nvarchar(60)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el tipo de espera. Acepta valores NULL.<br /><br /> Para obtener información sobre los tipos de esperas, vea [Sys. &#40;DM _ _OS_WAIT_STATS&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el tipo de espera. Acepta valores NULL.<br /><br /> Para obtener información sobre los tipos de esperas, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Si la solicitud está actualmente bloqueada, esta columna devuelve la duración en milisegundos de la espera actual. No admite valores NULL.|  
 |last_wait_type|**nvarchar(60)**|Si esta solicitud se ha bloqueado anteriormente, esta columna devuelve el tipo de la última espera. No admite valores NULL.|  
 |wait_resource|**nvarchar(256)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el recurso por el que está esperando la solicitud actualmente. No admite valores NULL.|  
@@ -61,13 +61,13 @@ Devuelve información sobre cada solicitud que se está ejecutando en [!INCLUDE[
 |cpu_time|**int**|Tiempo de CPU en milisegundos utilizado por la solicitud. No admite valores NULL.|  
 |total_elapsed_time|**int**|Tiempo total transcurrido en milisegundos desde que llegó la solicitud. No admite valores NULL.|  
 |scheduler_id|**int**|Identificador del programador que programa esta solicitud. No admite valores NULL.|  
-|task_address|**varbinary(8)**|Dirección de memoria asignada a la tarea asociada con esta solicitud. Acepta valores NULL.|  
-|reads|**bigint**|Número de lecturas realizadas por esta solicitud. No admite valores NULL.|  
-|writes|**bigint**|Número de escrituras realizadas por esta solicitud. No admite valores NULL.|  
+|task_address|**varbinary(8**|Dirección de memoria asignada a la tarea asociada con esta solicitud. Acepta valores NULL.|  
+|Lecturas|**bigint**|Número de lecturas realizadas por esta solicitud. No admite valores NULL.|  
+|Escrituras|**bigint**|Número de escrituras realizadas por esta solicitud. No admite valores NULL.|  
 |logical_reads|**bigint**|Número de lecturas lógicas realizadas por la solicitud. No admite valores NULL.|  
 |text_size|**int**|Valor de TEXTSIZE para esta solicitud. No admite valores NULL.|  
-|language|**nvarchar(128)**|Configuración de idioma para esta solicitud. Acepta valores NULL.|  
-|date_format|**nvarchar(3)**|Valor de DATEFORMAT para esta solicitud. Acepta valores NULL.|  
+|lenguaje|**nvarchar(128)**|Configuración de idioma para esta solicitud. Acepta valores NULL.|  
+|date_format|**nvarchar (3)**|Valor de DATEFORMAT para esta solicitud. Acepta valores NULL.|  
 |date_first|**smallint**|Valor de DATEFIRST para esta solicitud. No admite valores NULL.|  
 |quoted_identifier|**bit**|1 = El valor de QUOTED_IDENTIFIER es ON para la solicitud. De lo contrario, es 0.<br /><br /> No admite valores NULL.|  
 |arithabort|**bit**|1 = El valor de ARITHABORT es ON para la solicitud. De lo contrario, es 0.<br /><br /> No admite valores NULL.|  
@@ -88,23 +88,26 @@ Devuelve información sobre cada solicitud que se está ejecutando en [!INCLUDE[
 |group_id|**int**|Identificador del grupo de cargas de trabajo al que pertenece esta consulta. No admite valores NULL.|  
 |query_hash|**Binary(8**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
 |query_plan_hash|**Binary(8**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.|  
-|statement_sql_handle|**varbinary(64)**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|statement_context_id|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La clave externa opcional para sys. query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|dop |**int** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Grado de paralelismo de la consulta. |  
-|parallel_worker_count |**int** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
-|external_script_request_id |**uniqueidentifier** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
-|is_resumable |**bit** |**Se aplica a**: desde [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
-|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la columna `wait_resource` contiene una página. Para obtener más información, vea [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
-|page_server_reads|**bigint**|**Se aplica a**: Hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
+|statement_sql_handle|**varbinary (64)**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
+|statement_context_id|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La clave externa opcional para sys. query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
+|dop |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
+|parallel_worker_count |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
+|external_script_request_id |**uniqueidentifier** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
+|is_resumable |**bit** |**Válido para** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
+|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_server_reads|**bigint**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Comentarios 
 Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente. Los valores de tiempo que devuelve esta vista de administración dinámica no incluyen el tiempo transcurrido en modo preferente.
 
-Al ejecutar solicitudes paralelas en [modo de fila](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un subproceso de trabajo para coordinar los subprocesos de trabajo responsables de completar las tareas asignadas. En esta DMV solo el subproceso de coordinador es visible para la solicitud. Las columnas **Reads**, **writes**, **logical_reads**y **ROW_COUNT** **no se actualizan** para el subproceso de coordinador. Las columnas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**y **granted_query_memory** solo se **actualizan** para el subproceso de coordinador. Para obtener más información, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
+Al ejecutar solicitudes paralelas en [modo de fila](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un subproceso de trabajo para coordinar los subprocesos de trabajo responsables de completar las tareas asignadas. En esta DMV solo el subproceso de coordinador es visible para la solicitud. Las columnas **Read**, **writes**, **logical_reads**y **ROW_COUNT** **no se actualizan** para el subproceso de coordinador. Las columnas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**y **granted_query_memory** solo se **actualizan** para el subproceso de coordinador. Para más información, consulte la [guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Permisos
-Si el usuario tiene el permiso `VIEW SERVER STATE` en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual. no se puede conceder `VIEW SERVER STATE` en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] para que @no__t 2 esté siempre limitado a la conexión actual.
+Si el usuario tiene `VIEW SERVER STATE` permiso en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de lo contrario, el usuario solo verá la sesión actual. `VIEW SERVER STATE`no se puede conceder en Azure SQL Database por lo que `sys.dm_exec_requests` siempre está limitado a la conexión actual.
+
+En escenarios de AlwaysOn, si la réplica secundaria se establece en **solo intención de lectura**, la conexión a la secundaria debe especificar su intención de aplicación en los parámetros de cadena de conexión agregando `applicationintent=readonly` . De lo contrario, la comprobación de acceso para `sys.dm_exec_requests` no pasará para las bases de datos del grupo de disponibilidad, aunque el `VIEW SERVER STATE` permiso esté presente.
+
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -124,16 +127,16 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>b. Buscar todos los bloqueos que mantiene un lote en ejecución
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Buscar todos los bloqueos que mantiene un lote en ejecución
 
-En el ejemplo siguiente se consulta **Sys. DM _ _exec_requests** para buscar el lote interesante y copiar su `transaction_id` de la salida.
+En el ejemplo siguiente se consulta **Sys. dm_exec_requests** para buscar el lote interesante y copiar su `transaction_id` desde la salida.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-A continuación, para buscar información de bloqueo, use el `transaction_id` copiado con la función del sistema **Sys. DM _ _tran_locks**.  
+A continuación, para buscar información de bloqueo, use el copiado `transaction_id` con la función del sistema **sys. dm_tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -144,7 +147,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>C. Buscar todas las solicitudes bloqueadas actualmente
 
-En el ejemplo siguiente se consulta **Sys. DM _ _exec_requests** para buscar información sobre las solicitudes bloqueadas.  
+En el ejemplo siguiente se consulta **Sys. dm_exec_requests** para buscar información sobre las solicitudes bloqueadas.  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -183,14 +186,14 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones y vistas de administración dinámica](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Funciones y vistas de administración dinámica relacionadas con la ejecución](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
-[Sys. DM _ _os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
-[Sys. DM _ _os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
-[Sys. DM _ _exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
-[Sys. DM _ _exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[Sys. DM _ _exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
-[SQL Server, objeto de estadísticas SQL](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
+[Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     
+[Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)     
+[Sys. dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[Sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
+[SQL Server, objeto SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)      (Guía de arquitectura de procesamiento de consultas)  
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)    

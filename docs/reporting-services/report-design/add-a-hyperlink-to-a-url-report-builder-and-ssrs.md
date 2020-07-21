@@ -1,5 +1,5 @@
 ---
-title: Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS) | Microsoft Docs
+title: Adición de un hipervínculo a una dirección URL (Generador de informes) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574829"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77080721"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
 Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráficos y medidores en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Los vínculos pueden ir a otros informes, a los marcadores de un informe o a direcciones URL estáticas o dinámicas. 
@@ -26,7 +26,7 @@ Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráf
  
  *  Y puede **agregar un marcador a un lugar específico** en el mismo informe. 
   
-Intente agregar hipervínculos con los datos de ejemplo incluidos en [Tutorial: Dar formato a texto &#40;(Generador de informes)&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Pruebe a agregar hipervínculos con los datos de ejemplo del [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Los vínculos que se enlazan a los campos de conjunto de datos pueden ser vulnerables a la alteración con fines malintencionados. Para obtener más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  

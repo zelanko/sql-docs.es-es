@@ -1,5 +1,5 @@
 ---
-title: Acceso URL (SSRS) | Microsoft Docs
+title: Acceso URL | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 59f183a3a5063b894bfa8a52a5334bb377119794
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574247"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77078941"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
   El acceso URL del servidor de informes de SQL Server Reporting Services (SSRS) permite enviar comandos a un servidor de informes a través de una solicitud URL. Por ejemplo, puede personalizar la representación de un informe en una biblioteca de SharePoint o un servidor de informes en modo nativo. Es posible que haya visto el informe usando un conjunto específico de valores de parámetro de informe o tal vez haya consultado una determina página de su interés. Puede encapsular esta información en la dirección URL usando los parámetros de acceso URL predefinidos. Puede personalizar más el modo en el que el servidor de informes procesa el informe incorporando parámetros sobre los formatos de representación o sobre la apariencia del visor de informes. Puede pegar esta dirección URL directamente en un mensaje de correo electrónico o una página web para permitir que otras personas tengan acceso al informe del mismo modo en el explorador.  
@@ -108,13 +108,13 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Descripciones de las tareas|Vínculos|  
 |-----------------------|-----------|  
-|Acceder a los elementos del servidor de informes, como informes, orígenes de datos compartidos y recursos.|[Acceder a elementos del servidor de informes mediante el acceso URL](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Pasar parámetros de informe a un informe.|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Establecer la configuración regional de los parámetros de informe de la cadena de acceso URL, que define las interpretaciones de las fechas, divisas, etc. específicas de la configuración regional.|[Establecer el idioma para los parámetros de informe en una dirección URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Enviar valores específicos para la extensión de representación que personalicen cómo se va a representar el informe.|[Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|Exportar un informe directamente a un formato de archivo sin verlo en el explorador.|[Exportar un informe mediante el acceso URL](../reporting-services/export-a-report-using-url-access.md)|  
-|Abrir un informe y navegar directamente a la ubicación de una cadena.|[Buscar un informe mediante un acceso URL](../reporting-services/search-a-report-using-url-access.md)|  
-|Representar una instantánea específica del historial de informes.|[Representar instantáneas del historial de informes mediante acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Acceder a los elementos del servidor de informes, como informes, orígenes de datos compartidos y recursos.|[Acceso a elementos del servidor de informes mediante el acceso URL](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Pasar parámetros de informe a un informe.|[Paso de un parámetro de informe en una dirección URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Establecer la configuración regional de los parámetros de informe de la cadena de acceso URL, que define las interpretaciones de las fechas, divisas, etc. específicas de la configuración regional.|[Establecimiento del idioma para los parámetros de informe en una dirección URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Enviar valores específicos para la extensión de representación que personalicen cómo se va a representar el informe.|[Especificación de la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Exportar un informe directamente a un formato de archivo sin verlo en el explorador.|[Exportación de un informe con el acceso URL](../reporting-services/export-a-report-using-url-access.md)|  
+|Abrir un informe y navegar directamente a la ubicación de una cadena.|[Búsqueda de un informe con el acceso URL](../reporting-services/search-a-report-using-url-access.md)|  
+|Representar una instantánea específica del historial de informes.|[Representación de una instantánea del historial de informes con el acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef84f7d95644c552d90f137e9f6edab980acfba9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736028"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (tipo de datos Geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Método que proporciona una forma rápida de intersección solo para índices con la que se puede determinar si una instancia de **geometry** forma intersección con otra instancia de **geometry**, siempre y cuando haya un índice disponible.
   
@@ -45,12 +45,12 @@ En los casos en los que no haya ningún índice disponible o que no se use, el m
  *other_geometry*  
  Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca Filter().  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método no es determinista y no es preciso.  
   
 ## <a name="examples"></a>Ejemplos  

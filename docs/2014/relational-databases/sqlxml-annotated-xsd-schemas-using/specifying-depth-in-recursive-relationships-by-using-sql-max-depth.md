@@ -1,5 +1,5 @@
 ---
-title: Especificar la profundidad en relaciones recursivas utilizando SQL-profundidad | Microsoft Docs
+title: 'Especificar la profundidad en relaciones recursivas mediante SQL: Max-Depth | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,14 @@ helpviewer_keywords:
 - sql:max-depth
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6dfbb6c237c63d3a6d7b8e324bde42d4e8851abe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66013657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003024"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
   En las bases de datos relacionales, cuando una tabla se relaciona consigo misma, este tipo de relación recibe el nombre de relación recursiva. Por ejemplo, en una relación supervisor-supervisado, una tabla que almacena los registros de empleados se relaciona consigo misma. En este caso, la tabla de empleados desempeña un rol de supervisor en uno de los lados de la relación y un rol de supervisado en el otro lado.  
@@ -42,7 +41,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  En esta tabla, la columna ReportsTo almacena el identificador de empleado del director.  
   
- Supongamos que desea crear una jerarquía XML de empleados en la que el empleado director se sitúa en la parte superior de la jerarquía y los empleados que son subordinados directos de ese director aparecen en la jerarquía correspondiente tal y como se muestra en el siguiente fragmento XML de ejemplo. Este fragmento que se muestra es el *árbol recursivo* del empleado 1.  
+ Supongamos que desea crear una jerarquía XML de empleados en la que el empleado director se sitúa en la parte superior de la jerarquía y los empleados que son subordinados directos de ese director aparecen en la jerarquía correspondiente tal y como se muestra en el siguiente fragmento XML de ejemplo. Lo que muestra este fragmento es el *árbol recursivo* del empleado 1.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -59,7 +58,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  En este fragmento, el empleado 5 es subordinado directo del empleado 4, el empleado 4 es subordinado directo del empleado 3 y los empleados 3 y 2 son subordinados directos del empleado 1.  
   
- Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un  **\<Emp >** elemento de tipo EmployeeType, que consta de un  **\<Emp >** elemento secundario del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un  **\<SQL: Relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este  **\<SQL: Relationship >** , Emp es el elemento primario y la tabla secundaria.  
+ Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un **\<Emp>** elemento de tipo EmployeeType, que consta de un **\<Emp>** elemento secundario del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema utiliza **\<sql:relationship>** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que **\<sql:relationship>** , en este, EMP es la tabla primaria y la secundaria.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -96,12 +95,12 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Dado que la relación es recursiva, necesita algún modo de especificar la profundidad de recursión del esquema. De lo contrario, el resultado será una recursión sin fin (empleado subordinado directo de empleado subordinado directo de empleado, etc.). La anotación `sql:max-depth` permite especificar la profundidad de la recursión. En este ejemplo en concreto, para especificar un valor para `sql:max-depth`, debe conocer la profundidad de la jerarquía de dirección de la compañía.  
   
 > [!NOTE]  
->  El esquema especifica la anotación `sql:limit-field`, pero no especifica la anotación `sql:limit-value`. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL). Especificar `sql:limit-field` y no especificar `sql:limit-value` (cuyo valor predeterminado es null) anotación lleva a cabo. Si desea que el código XML resultante incluya todos los árboles de informes posibles (el árbol de informes de cada empleado de la tabla), quite la anotación `sql:limit-field` del esquema.  
+>  El esquema especifica la anotación `sql:limit-field`, pero no especifica la anotación `sql:limit-value`. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (Reportto es NULL). Si `sql:limit-field` se especifica y no se especifica `sql:limit-value` (que tiene como valor predeterminado NULL), la anotación logra esto. Si desea que el código XML resultante incluya todos los árboles de informes posibles (el árbol de informes de cada empleado de la tabla), quite la anotación `sql:limit-field` del esquema.  
   
 > [!NOTE]  
 >  El siguiente procedimiento usa la base de datos tempdb.  
   
-#### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+#### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Cree una tabla de ejemplo denominada Emp en la base de datos tempdb a la que apunta la raíz virtual.  
   
@@ -144,9 +143,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
     mapping-schema="C:\MyDir\maxDepth.xml"  
     ```  
   
-5.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla. Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+5.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla. Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -169,7 +168,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Para crear distintas profundidades de jerarquías en el resultado, cambie el valor de la anotación `sql:max-depth` en el esquema y vuelva a ejecutar la plantilla después de cada cambio.  
   
- En el esquema anterior, todas las  **\<Emp >** elementos tenían exactamente el mismo conjunto de atributos (**EmployeeID**, **FirstName**, y  **LastName**). El siguiente esquema se ha modificado ligeramente para que devuelva más **ReportsTo** atributo para todos los  **\<Emp >** elementos que se comunican con un administrador de.  
+ En el esquema anterior, todos los **\<Emp>** elementos tenían exactamente el mismo conjunto de atributos (**EmployeeID**, **FirstName**y **LastName**). El esquema siguiente se ha modificado ligeramente para devolver un atributo **Reportto** adicional para todos los **\<Emp>** elementos que informan a un administrador.  
   
  Por ejemplo, este fragmento XML muestra los subordinados del empleado 1:  
   
@@ -229,10 +228,10 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ## <a name="sqlmax-depth-annotation"></a>Anotación sql:max-depth  
  En un esquema compuesto de relaciones recursivas, la profundidad de recursión debe especificarse de forma explícita en el esquema. Esto es necesario para generar correctamente la consulta FOR XML EXPLICIT correspondiente que devuelve los resultados solicitados.  
   
- Use la anotación `sql:max-depth` en el esquema para especificar la profundidad de recursión de una relación recursiva que se describa en el esquema. El valor de la `sql:max-depth` anotación es un entero positivo (de 1 a 50) que indica el número de recursiones:  Un valor de 1 detiene la recursión en el elemento para el que el `sql:max-depth` anotación se especifica; un valor de 2 detiene la recursión en el siguiente nivel del elemento en el que `sql:max-depth` se especifica; y así sucesivamente.  
+ Use la anotación `sql:max-depth` en el esquema para especificar la profundidad de recursión de una relación recursiva que se describa en el esquema. El valor de la anotación `sql:max-depth` es un número entero positivo (de 1 a 50) que indica el número de recursiones: un valor de 1 detiene la recursión en el elemento para el que se especifica la anotación `sql:max-depth`; un valor de 2 detiene la recursión en el siguiente nivel del elemento en el que se especifica `sql:max-depth`; y así sucesivamente.  
   
 > [!NOTE]  
->  En la implementación subyacente, una consulta XPath que se especifica en un esquema de asignación se convierte en una instrucción SELECT... Consulta FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para `sql:max-depth`, mayor será la consulta FOR XML EXPLICIT que se genere. Esto puede ralentizar el tiempo de recuperación.  
+>  En la implementación subyacente, una consulta XPath que se especifica en un esquema de asignación se convierte en una consulta SELECT ... FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para `sql:max-depth`, mayor será la consulta FOR XML EXPLICIT que se genere. Esto puede ralentizar el tiempo de recuperación.  
   
 > [!NOTE]  
 >  Los diagramas de actualización y la carga masiva XML omiten la anotación max-depth. Esto significa que se llevarán a cabo inserciones o actualizaciones recursivas independientemente del valor que se especifique para max-depth.  
@@ -241,7 +240,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  La anotación `sql:max-depth` puede especificarse en cualquier elemento de contenido complejo.  
   
 ### <a name="recursive-elements"></a>Elementos recursivos  
- Si se especifica `sql:max-depth` tanto en el elemento primario como en el elemento secundario de una relación recursiva, la anotación `sql:max-depth` especificada en el elemento primario tiene prioridad. Por ejemplo, en el esquema siguiente, la anotación `sql:max-depth` se especifica tanto en el elemento de empleado primario como en el secundario. En este caso, `sql:max-depth=4`, especificado en el  **\<Emp >** elemento primario (que desempeña el rol de supervisor) tiene prioridad. El `sql:max-depth` especificado en el elemento secundario  **\<Emp >** se omite el elemento (que desempeña un rol de supervisado).  
+ Si se especifica `sql:max-depth` tanto en el elemento primario como en el elemento secundario de una relación recursiva, la anotación `sql:max-depth` especificada en el elemento primario tiene prioridad. Por ejemplo, en el esquema siguiente, la anotación `sql:max-depth` se especifica tanto en el elemento de empleado primario como en el secundario. En este caso, `sql:max-depth=4` el parámetro especificado en el **\<Emp>** elemento primario (que desempeña un rol de supervisor) tiene prioridad. `sql:max-depth`Se omite el especificado en el **\<Emp>** elemento secundario (que desempeña un rol de supervisado).  
   
 #### <a name="example-b"></a>Ejemplo B  
   
@@ -278,12 +277,12 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- Para probar este esquema, siga los pasos indicados para un ejemplo, anteriormente en este tema.  
+ Para probar este esquema, siga los pasos proporcionados para el ejemplo A, anteriormente en este tema.  
   
 ### <a name="nonrecursive-elements"></a>Elementos no recursivos  
- Si la anotación `sql:max-depth` se especifica en un elemento del esquema que no presenta ninguna recursión, se omite. En el siguiente esquema, un  **\<Emp >** elemento consta de un  **\<constante >** elemento secundario, que, a su vez, tiene un  **\<Emp >** elemento secundario.  
+ Si la anotación `sql:max-depth` se especifica en un elemento del esquema que no presenta ninguna recursión, se omite. En el esquema siguiente, un **\<Emp>** elemento consta de un **\<Constant>** elemento secundario, que, a su vez, tiene un **\<Emp>** elemento secundario.  
   
- En este esquema, el `sql:max-depth` la anotación especificada en el  **\<constante >** se omite el elemento porque no hay ninguna recursión entre el  **\<Emp >** primario y el  **\<constante >** elemento secundario. Pero hay recursión entre el  **\<Emp >** antecesor y  **\<Emp >** secundarios. El esquema especifica la anotación `sql:max-depth` en ambos elementos. Por lo tanto, el `sql:max-depth` anotación que se especifica en el antecesor ( **\<Emp >** en el rol de supervisor) tiene prioridad.  
+ En este esquema, la `sql:max-depth` anotación especificada en el **\<Constant>** elemento se omite porque no hay ninguna recursividad entre el **\<Emp>** elemento primario y el **\<Constant>** elemento secundario. Pero hay recursividad entre el **\<Emp>** antecesor y el **\<Emp>** secundario. El esquema especifica la anotación `sql:max-depth` en ambos elementos. Por lo tanto, la `sql:max-depth` anotación que se especifica en el antecesor ( **\<Emp>** en el rol supervisor) tiene prioridad.  
   
 #### <a name="example-c"></a>Ejemplo C  
   
@@ -327,11 +326,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Para probar este esquema, siga los pasos que se proporcionaron para el Ejemplo A anteriormente en este tema.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Tipos complejos derivados por restricción  
- Si tiene una derivación de tipo complejo por  **\<restricción >** , elementos de tipo complejo base correspondiente no se pueden especificar el `sql:max-depth` anotación. En estos casos, la anotación `sql:max-depth` puede agregarse al elemento del tipo derivado.  
+ Si tiene una derivación de tipo complejo por **\<restriction>** , los elementos del tipo complejo base correspondiente no pueden especificar la `sql:max-depth` anotación. En estos casos, la anotación `sql:max-depth` puede agregarse al elemento del tipo derivado.  
   
- Por otro lado, si tiene una derivación de tipo complejo por  **\<extensión >** , pueden especificar los elementos de tipo complejo base correspondiente el `sql:max-depth` anotación.  
+ Por otro lado, si tiene una derivación de tipo complejo por **\<extension>** , los elementos del tipo complejo base correspondiente pueden especificar la `sql:max-depth` anotación.  
   
- Por ejemplo, el siguiente esquema XSD genera un error porque la anotación `sql:max-depth` se especifica en el tipo base. Esta anotación no se admite en un tipo que se deriva por  **\<restricción >** de otro tipo. Para corregir este problema, debe cambiar el esquema y especificar la anotación `sql:max-depth` en un elemento del tipo derivado.  
+ Por ejemplo, el siguiente esquema XSD genera un error porque la anotación `sql:max-depth` se especifica en el tipo base. Esta anotación no se admite en un tipo derivado **\<restriction>** de desde otro tipo. Para corregir este problema, debe cambiar el esquema y especificar la anotación `sql:max-depth` en un elemento del tipo derivado.  
   
 #### <a name="example-d"></a>Ejemplo D  
   
@@ -375,7 +374,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- En el esquema, `sql:max-depth` se especifica en un tipo `CustomerBaseType` complejo. El esquema también especifica un  **\<cliente >** elemento de tipo `CustomerType`, que se deriva de `CustomerBaseType`. Una consulta XPath especificada en un esquema de este tipo generará un error, puesto que `sql:max-depth` no se admite en un elemento que se define en un tipo base de restricción.  
+ En el esquema, `sql:max-depth` se especifica en un tipo `CustomerBaseType` complejo. El esquema también especifica un **\<Customer>** elemento de tipo `CustomerType` , que se deriva de `CustomerBaseType` . Una consulta XPath especificada en un esquema de este tipo generará un error, puesto que `sql:max-depth` no se admite en un elemento que se define en un tipo base de restricción.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Esquemas con una jerarquía profunda  
  Puede tener un esquema que incluya una jerarquía profunda en la que un elemento contiene un elemento secundario, que a su vez contiene otro elemento secundario, y así sucesivamente. Si la anotación `sql:max-depth` especificada en un esquema de este tipo genera un documento XML que incluye una jerarquía de más de 500 niveles (con el elemento de nivel superior en el nivel 1, su elemento secundario en el nivel 2, etc.), se devuelve un error.  

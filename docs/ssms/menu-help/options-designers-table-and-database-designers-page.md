@@ -1,6 +1,6 @@
 ---
-title: Opciones (Diseñadores - página Diseñadores de tablas y bases de datos) | Microsoft Docs
-ms.custom: ''
+title: Opciones (Diseñadores - Página Diseñadores de tablas y bases de datos)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04204d6d6c83411d1a47caa8f573bdbc2601d9f0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09df28c2bcd304733250a90813773ede3a29c2ed
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262753"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75245710"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Opciones (Diseñadores - Página Diseñadores de tablas y bases de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Evita que un usuario realice modificaciones que requieran volver a crear la tabl
 **Vista de tabla predeterminada**  
 Seleccione la forma en que desea ver las tablas en los diseñadores:  
   
--   **Standard**  
+-   **Estándar**  
   
     Muestra el encabezado de tablas, todos los nombres de columna, tipos de datos y la configuración Permitir valores NULL.  
   
@@ -66,7 +66,7 @@ Seleccione la forma en que desea ver las tablas en los diseñadores:
   
     Muestra los nombres de columna.  
   
--   **Key**  
+-   **Clave**  
   
     Muestra el encabezado de tabla y las columnas de clave principal.  
   
@@ -74,7 +74,7 @@ Seleccione la forma en que desea ver las tablas en los diseñadores:
   
     Solo muestra el encabezado de tabla con su nombre.  
   
--   **Personalizado**  
+-   **Personalizada**  
   
     Permite elegir las columnas que se muestran.  
   

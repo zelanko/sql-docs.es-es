@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5ebc7284b6d51f17bcddde24a0934827466e02c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960565"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Página Configuración web (Master Data Services)
   Use la página **Configuración web** para crear un nuevo sitio web o una aplicación web. Una vez haya seleccionado una aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , puede especificar la base de datos de la aplicación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y habilitar Data Quality Services.  
@@ -44,10 +43,10 @@ ms.locfileid: "65481209"
 |------------------|-----------------|  
 |**Habilitar la integración con Data Quality Services**|Seleccione esta opción para habilitar la funcionalidad de Data Quality disponible en el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Para obtener más información, consulte [Habilitar la integración de Data Quality Services con Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).|  
   
-## <a name="see-also"></a>Vea también  
- [Configurar la base de datos y el sitio Web de Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Requisitos de aplicaciones Web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [MDS 2014 y el Error "Servicio no disponible"](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar la base de datos y el sitio web para Master Data Services](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Requisitos de la aplicación web &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Cree una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [MDS 2014 y el error "servicio no disponible"](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

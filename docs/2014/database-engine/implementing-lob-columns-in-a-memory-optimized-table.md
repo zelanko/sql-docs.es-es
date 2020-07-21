@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62778926"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885993"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementar columnas LOB en una tabla con optimización para memoria
-  Las tablas optimizadas para memoria no tienen almacenamiento consecutivos o de objetos grandes (LOB) (esta limitación se ha quitado en SQL Server 2016 y versiones posteriores de - vea [tipos de datos admitidos para OLTP en memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), y el límite de tamaño de fila es de 8060 bytes. El almacenamiento de valores binarios o de cadenas de caracteres grandes se puede realizar de dos maneras:  
+  Las tablas con optimización para memoria no tienen almacenamiento de objeto no consecutivo o grande (LOB) (esta limitación se ha eliminado en SQL Server 2016 y versiones posteriores; consulte los [tipos de datos admitidos para OLTP en memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)) y el límite de tamaño de fila es de 8060 bytes. El almacenamiento de valores binarios o de cadenas de caracteres grandes se puede realizar de dos maneras:  
   
 -   Dividiendo los valores de LOB en varias filas.  
   
@@ -26,7 +25,7 @@ ms.locfileid: "62778926"
   
  En el ejemplo siguiente se divide un valor de LOB binario en varias filas y se insertan estas en una tabla optimizada para memoria:  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -76,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  También puede definir una tabla basada en disco para las columnas LOB. Cada una de las filas de la tabla optimizada para memoria tendrá una fila correspondiente en la tabla basada en disco con todos los valores de LOB para esa fila. En el ejemplo siguiente, los datos sobre los empleados se almacenan en una tabla optimizada para memoria, mientras que la fotografía de cada uno de ellos se almacena en una tabla basada en disco.  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

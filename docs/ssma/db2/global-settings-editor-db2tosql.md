@@ -1,5 +1,5 @@
 ---
-title: Configuración global (Editor) (DB2ToSQL) | Microsoft Docs
+title: Configuración global (editor) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,20 +10,20 @@ ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 45c4f7b9d3c997db98e3a570136b5bf24b4d8e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989612"
 ---
-# <a name="global-settings-editor-db2tosql"></a>Configuración global (Editor) (DB2ToSQL)
-Utilice la página del Editor de la **configuración Global** cuadro de diálogo para especificar la configuración de ventanas del editor de código.  
+# <a name="global-settings-editor-db2tosql"></a>Configuración global (editor) (DB2ToSQL)
+Use la página editor del cuadro de diálogo **configuración global** para especificar la configuración de las ventanas del editor de código.  
   
-Para obtener acceso a la configuración del editor, en el **herramientas** menú, seleccione **configuración Global**, haga clic en **GUI** en la parte inferior del panel izquierdo y a continuación, seleccione **Editor**.  
+Para obtener acceso a la configuración del editor, en el menú **herramientas** , seleccione **configuración global**, haga clic en **GUI** en la parte inferior del panel izquierdo y, a continuación, seleccione **Editor**.  
   
 ## <a name="options"></a>Opciones  
 **Mostrar números de línea**  
-Para mostrar números de línea en las ventanas del editor de código, seleccione **True**.  
+Para mostrar los números de línea en las ventanas del editor de código, seleccione **true**.  
   
-Si se selecciona una ventana del editor de código cuando se cambia esta configuración, deberá volver a seleccionar el objeto actual para actualizar la pantalla.  
+Si se selecciona una ventana del editor de código al cambiar esta configuración, es posible que tenga que volver a seleccionar el objeto actual para actualizar la pantalla.  
   

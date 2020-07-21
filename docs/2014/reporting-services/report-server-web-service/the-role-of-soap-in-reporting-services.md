@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519210"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>El rol de SOAP en Reporting Services
@@ -41,7 +41,7 @@ ms.locfileid: "62519210"
 </soap:Envelope>  
 ```  
   
- El propio SOAP requiere que los mensajes se coloquen en un elemento `Envelope`, con la mayoría del mensaje dentro de un elemento `Body`. En este ejemplo, el cuerpo contiene una llamada al método <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, que acepta un parámetro de cadena que representa la ruta de acceso al elemento que se va a eliminar. Puede crear una clase de proxy de cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que encapsule todas las operaciones SOAP en métodos. El método de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] siguiente representa el ejemplo de SOAP proporcionado anteriormente.  
+ El propio SOAP requiere que los mensajes se coloquen en un elemento `Envelope`, con la mayoría del mensaje dentro de un elemento `Body`. En este ejemplo, el cuerpo contiene una llamada al método <xref:ReportService2010.ReportingService2010.DeleteItem%2A>, que acepta un parámetro de cadena que representa la ruta de acceso al elemento que se va a eliminar. Puede crear una clase [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de proxy de cliente que encapsule todas las operaciones SOAP en métodos. El método [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] siguiente representa el ejemplo de SOAP proporcionado anteriormente.  
   
 ```  
 public void DeleteItem(string item);  
@@ -59,10 +59,10 @@ public void DeleteItem(string item);
   
  El método <xref:ReportService2010.ReportingService2010.DeleteItem%2A> no devuelve ningún valor, de modo que se devuelve una respuesta vacía.  
   
-## <a name="see-also"></a>Vea también  
- [Acceso a la API de SOAP](accessing-the-soap-api.md)   
+## <a name="see-also"></a>Consulte también  
+ [Obtener acceso a la API de SOAP](accessing-the-soap-api.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Servidor de informes de Reporting Services](../reporting-services-report-server.md)   
+ [Reporting Services servidor de informes](../reporting-services-report-server.md)   
  [Servicio web del servidor de informes](report-server-web-service.md)  
   
   

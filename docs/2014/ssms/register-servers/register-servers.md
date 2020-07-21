@@ -1,6 +1,6 @@
 ---
-title: Registrar servidores | Microsoft Docs
-ms.custom: ''
+title: Registrar servidores
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c6008c1d719fa7c452bb64c51fa573432e0ce4c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058407"
 ---
 # <a name="register-servers"></a>Registrar servidores
   Registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite almacenar la información de conexión del servidor para futuras conexiones. Hay tres formas de registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -62,7 +61,7 @@ ms.locfileid: "63049321"
 ## <a name="related-tasks"></a>Related Tasks  
  Use los temas siguientes para empezar a trabajar con servidores registrados:  
   
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |---------------------|---------------|  
 |Registrar instancias de servidores locales|[Registrar un servidor conectado &#40;SQL Server Management Studio&#41;](register-a-connected-server-sql-server-management-studio.md)|  
 |Registrar un servidor|[Crear un servidor registrado &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)|  
@@ -80,7 +79,7 @@ ms.locfileid: "63049321"
 |Crear un servidor de administración central y un grupo de servidores|[Crear un servidor de administración central y un grupo de servidores &#40;SQL Server Management Studio&#41;](create-a-central-management-server-and-server-group.md)|  
 |Ejecutar instrucciones en varios servidores simultáneamente|[Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](execute-statements-against-multiple-servers-simultaneously.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidores remotos](../../database-engine/configure-windows/remote-servers.md)  
   
   

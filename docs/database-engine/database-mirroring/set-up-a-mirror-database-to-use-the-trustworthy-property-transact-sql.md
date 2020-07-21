@@ -1,6 +1,7 @@
 ---
-title: Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Habilitación de la propiedad Trustworthy en una base de datos reflejada
+description: Obtenga información sobre cómo habilitar la propiedad de base de datos TRUSTWORTHY en una base de datos recientemente reflejada mediante Transact-SQL en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aa56d674393087bdde1d8ada61f4ef920e4d6f75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c187be44a25edd24c3e9f8f7e91ae52a55ff925
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735181"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Configurar una base de datos reflejada para usar la propiedad Trustworthy (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cuando se realiza una copia de seguridad de una base de datos, la propiedad TRUSTWORTHY de la base de datos se establece en OFF. Por lo tanto, TRUSTWORTHY siempre está en OFF en una nueva base de datos reflejada. Si la base de datos necesita marcarse como de confianza después de una conmutación por error, es necesario realizar pasos adicionales de configuración después de iniciar la creación de reflejo.  
   
 > [!NOTE]  

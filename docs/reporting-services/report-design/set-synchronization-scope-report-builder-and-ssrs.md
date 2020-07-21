@@ -1,5 +1,5 @@
 ---
-title: Establecer el ámbito de sincronización (Generador de informes y SSRS) | Microsoft Docs
+title: Establecimiento del ámbito de sincronización (Generador de informes) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b2064bcedaf2271745f09cf7e8a8647f81849b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b5c844bf2ad09ee29dbcda1773e20d93eeb069d1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576813"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081009"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>Establecer el ámbito de sincronización (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores transmiten los valores de datos sincronizando el intervalo de los valores de datos del indicador que están en un ámbito especificado.   
@@ -26,7 +26,7 @@ ms.locfileid: "65576813"
   
 ## <a name="to-change-the-synchronization-scope-of-an-indicator"></a>Para cambiar el ámbito de sincronización de un indicador  
   
-1.  Haga clic con el botón derecho en el indicador que quiere cambiar y seleccione **Propiedades de indicador**.  
+1.  Haga clic con el botón derecho en el indicador que quiera cambiar y seleccione **Propiedades de indicador**.  
   
 2.  Haga clic en **Valores y estados** en el panel izquierdo.  
   

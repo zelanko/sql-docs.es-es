@@ -11,18 +11,18 @@ helpviewer_keywords:
 - tracing options [ODBC], dynamic
 - dynamic tracing [ODBC]
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8420589761a1f8cb1f9cf8a3022842863fd30758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8cbd2dbae4f4b437f45845ce2791f4a9b0aa8c8b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046888"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305775"
 ---
 # <a name="dynamic-tracing"></a>Seguimiento dinámico
-El seguimiento se puede habilitar o deshabilitar en cualquier momento en una ejecución de la aplicación. Esto permite que una aplicación para realizar un seguimiento de cualquier número de llamadas de función.  
+El seguimiento se puede habilitar o deshabilitar en cualquier momento de la ejecución de una aplicación. Esto permite que una aplicación pueda realizar un seguimiento de cualquier número de llamadas de función.  
   
- La variable **ODBCSharedTraceFlag** se establece para habilitar el seguimiento de forma dinámica. Esta variable se comparte entre todas las copias de ejecución del Administrador de controladores. Si cualquier aplicación establece esta variable, el seguimiento está habilitado para todas las aplicaciones ODBC que se está ejecutando actualmente. Para desactivar el seguimiento desactivado cuando está habilitado el seguimiento dinámico, una aplicación llama a **SQLSetConnectAttr** establecer SQL_ATTR_TRACE en SQL_TRACE_OFF. Esta llamada se activará el seguimiento desactivado para esa aplicación solo. Las aplicaciones que están vinculadas con Odbc32.lib pueden modificar el uso de esta variable. Datos de seguimiento pueden mostrarse en una ventana en tiempo real, en lugar del archivo de seguimiento, que se debe abrir después de la sesión ODBC. Pueden agregarse controles en pantalla de la aplicación para activar o desactivar el seguimiento en le.  
+ La variable **ODBCSharedTraceFlag** se establece para habilitar el seguimiento de forma dinámica. Esta variable se comparte entre todas las copias en ejecución del administrador de controladores. Si alguna aplicación establece esta variable, el seguimiento se habilita para todas las aplicaciones ODBC que se están ejecutando actualmente. Para desactivar el seguimiento cuando se habilita el seguimiento dinámico, una aplicación llama a **SQLSetConnectAttr** para establecer SQL_ATTR_TRACE en SQL_TRACE_OFF. Esta llamada activará el seguimiento solo para esa aplicación. Las aplicaciones que están vinculadas con odbc32. lib pueden modificar el uso de esta variable. Los datos de seguimiento se pueden mostrar en una ventana en tiempo real, en lugar del archivo de seguimiento, que se debe abrir después de la sesión ODBC. Se pueden agregar controles a la pantalla de una aplicación para activar o desactivar el seguimiento en.  
   
- El seguimiento de la DLL se incluye con ODBC 3 *.x* no es segura para subprocesos. No se garantiza que el archivo de registro se escribe correctamente si se habilita el seguimiento global (la variable **ODBCSharedTraceFlag** está establecido) y más de una aplicación escribe en el archivo de seguimiento al mismo tiempo. Esta condición no devuelve un error.
+ La DLL de seguimiento suministrada con ODBC 3 *. x* no es segura para subprocesos. No se garantiza que el archivo de registro se escriba correctamente si está habilitado el seguimiento global (se establece la variable **ODBCSharedTraceFlag** ) y más de una aplicación escribe en el archivo de seguimiento al mismo tiempo. Esta condición no devuelve un error.

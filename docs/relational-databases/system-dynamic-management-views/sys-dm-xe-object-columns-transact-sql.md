@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xe_object_columns (Transact-SQL) | Microsoft Docs
+title: Sys. dm_xe_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,36 +17,36 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898600"
 ---
-# <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la información del esquema para todos los objetos.  
   
 > [!NOTE]  
 >  Los objetos de eventos ofrecen esquemas fijos para los datos de solo lectura y de escritura.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|Nombre de la columna. nombre es único dentro del objeto. No admite valores NULL.|  
-|column_id|**int**|El identificador de la columna. column_id es único dentro del objeto cuando se utiliza con column_type. No admite valores NULL.|  
-|object_name|**nvarchar(256)**|Nombre del objeto al que pertenece esta columna. Hay una relación de varios a uno con sys.dm_xe_objects.id. No admite valores NULL.|  
+|name|**nvarchar(256)**|Nombre de la columna. Name es único en el objeto. No admite valores NULL.|  
+|column_id|**int**|Identificador de la columna. column_id es único dentro del objeto cuando se usa con column_type. No admite valores NULL.|  
+|object_name|**nvarchar(256)**|Nombre del objeto al que pertenece esta columna. Hay una relación de varios a uno con sys. dm_xe_objects. ID. No acepta valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
 |type_name|**nvarchar(256)**|Nombre del tipo de esta columna. No admite valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que contiene el tipo de datos de la columna. No admite valores NULL.|  
-|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. COLUMN_TYPE puede ser uno de los siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> data. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: Al cambiar este valor puede modificar el comportamiento del objeto.|  
+|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. column_type puede ser una de las siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> data. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: al cambiar este valor se puede modificar el comportamiento del objeto.|  
 |column_value|**nvarchar(256)**|Muestra los valores estáticos asociados con la columna de objetos. Acepta valores NULL.|  
 |capabilities|**int**|Un mapa de bits que describe las capacidades de la columna. Acepta valores NULL.|  
 |capabilities_desc|**nvarchar(256)**|Una descripción de las capacidades de esta columna de objetos. Este valor puede ser uno de los siguientes:<br /><br /> Mandatory. Se debe establecer el valor al enlazar el objeto primario a una sesión de eventos.<br /><br /> Acepta valores NULL.|  
-|description|**nvarchar(3072)**|Descripción de esta columna de objetos. Acepta valores NULL.|  
+|description|**nvarchar (a.**|Descripción de esta columna de objetos. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
@@ -58,7 +58,7 @@ ms.locfileid: "68090285"
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Varios a uno|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Varios a uno|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

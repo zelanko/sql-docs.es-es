@@ -1,5 +1,5 @@
 ---
-title: Base de datos (tabular) | Microsoft Docs
+title: Representación de base de datos (tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c327e07685e98e6fa9f992025510e869d909e5ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940096"
 ---
 # <a name="database-representationtabular"></a>Representación de la base de datos (tabular)
   En el modo tabular, la base de datos es el contenedor de todos los objetos del modelo tabular.  
@@ -53,7 +52,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>Base de datos en AMO  
  Cuando se usa AMO para administrar un objeto de base de datos, comience con un objeto <xref:Microsoft.AnalysisServices.Server>. Después, busque la base de datos en la colección de bases de datos o cree una nueva base de datos agregando una a la colección.  
   
- El fragmento de código siguiente muestra los pasos para conectarse a un servidor y crear una base de datos vacía, después de comprobar la base de datos no existe:  
+ En el siguiente fragmento de código se muestran los pasos para conectarse a un servidor y crear una base de datos vacía, después de comprobar que la base de datos no existe:  
   
 ```  
   
@@ -86,6 +85,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Para tener un conocimiento práctico sobre cómo usar AMO para crear y manipular representaciones de la base de datos, vea el código fuente del ejemplo AMO 2012 Tabular; en concreto, compruebe en el siguiente archivo fuente: Database.cs. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
+ Para saber de forma práctica cómo usar AMO para crear y tratar representaciones de bases de datos, vea el código fuente del ejemplo AMO 2012 tabular; en concreto, examine el siguiente archivo de código fuente: Database.cs. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
   
   

@@ -1,10 +1,9 @@
 ---
-title: Cuadro de diálogo Elegir nombre (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Seleccionar nombre
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +13,14 @@ f1_keywords:
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a655754e516f496fdbcfc0bed497493ef4c7a7af
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 6b4cd862310c0b53a1bda9bf5a563ed2977e1ed2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263655"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255508"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Elegir nombre (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

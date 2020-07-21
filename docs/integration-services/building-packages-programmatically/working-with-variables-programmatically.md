@@ -23,10 +23,10 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f69f0553eecb8ebe13dc23f50982ac09ef63e5a0
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71299081"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
@@ -166,7 +166,7 @@ End Module
   
  Las variables del sistema que están disponibles difieren en función del tipo de contenedor. Para obtener una lista de variables del sistema disponibles para paquetes, contenedores, tareas y controladores de eventos, vea [Variables del sistema](../../integration-services/system-variables.md).  
   
-## <a name="value"></a>Valor  
+## <a name="value"></a>Value  
  El valor de una variable personalizada puede ser un literal o una expresión:  
   
 -   Si desea que la variable contenga un valor literal, establezca el valor de su propiedad <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  

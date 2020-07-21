@@ -1,5 +1,5 @@
 ---
-title: FileStream y el sistema FileTable (Transact-SQL) de procedimientos almacenados | Microsoft Docs
+title: Procedimientos almacenados del sistema FileStream y FileTable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ebcaf4659d7be880f0f0e901b2eadcc9002b2d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0c7697c6c65f6d39de4d5f52ea2fdb85ea4e218
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731790"
 ---
-# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>(Transact-SQL) de procedimientos almacenados del sistema de FileStream y FileTable
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Procedimientos almacenados del sistema FileStream y FileTable (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Esta sección describen los procedimientos almacenados del sistema para la característica FileTable y Filestream.  
+  En esta sección se describen los procedimientos almacenados del sistema para la característica FileTable y FileStream.  
 
-## <a name="filestream-and-filetable-system-stored-procedures"></a>Procedimientos almacenados del sistema de FileStream y Filetable
+## <a name="filestream-and-filetable-system-stored-procedures"></a>Procedimientos almacenados del sistema FileStream y Filetable
   [sp_filestream_force_garbage_collection (Transact-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
 
    Fuerza la ejecución del recolector de elementos no utilizados de FILESTREAM eliminando los archivos FILESTREAM innecesarios.

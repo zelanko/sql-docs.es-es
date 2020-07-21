@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c4b791e77ceea4de4a39245adcaf95cc37aec62
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117132"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392933"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuevo rol de servidor definido por el usuario.  
   
@@ -44,14 +44,16 @@ ms.locfileid: "68117132"
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *role_name*  
  Es el nombre del rol de servidor que se va a crear.  
   
  AUTHORIZATION *server_principal*  
  Es el inicio de sesión que será propietario del nuevo rol de servidor. Si no se especifica un inicio de sesión, el rol de servidor será propiedad del inicio de sesión que ejecute CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los roles de servidor son elementos protegibles en el nivel de servidor. Después de crear un rol de servidor, configure los permisos de nivel de servidor del rol utilizando GRANT, DENY y REVOKE. Para agregar inicios de sesión a un rol de servidor y quitarlos, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Para quitar un rol de servidor, utilice [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Para obtener más información, vea [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Puede ver los roles de servidor consultando las vistas de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) y [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  

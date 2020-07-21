@@ -1,6 +1,7 @@
 ---
-title: 'Lección 1: Crear un proyecto de servidor de informes (Reporting Services) | Microsoft Docs'
-ms.date: 05/01/2019
+title: 'Lección 1: Creación de un proyecto de servidor de informes | Microsoft Docs'
+description: En esta lección, creará un proyecto de servidor de informes y un archivo de definición de informe (.rdl) con el Diseñador de informes.
+ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095858"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75244324"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
+# <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lección 1: Creación de un proyecto de servidor de informes (Reporting Services)
 
 En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* con el *Diseñador de informes*.
 
@@ -37,7 +38,7 @@ Al crear informes con el Diseñador de informes, se crea un proyecto de servidor
     > [!IMPORTANT]
     > Para VS, si no ve Reporting Services en la columna izquierda, agregue el Diseñador de informes mediante la instalación de la carga de trabajo SSDT. En el menú **Herramientas**, seleccione **Obtener herramientas y características...** y, después, **SQL Server Data Tools** en las cargas de trabajo mostradas. Si no ve los objetos de los servicios de informes en la columna central, agregue las extensiones de Reporting Services. En el menú **Herramientas**, seleccione **Extensiones y actualizaciones** > **En línea**. En la columna central, seleccione **Proyectos de Microsoft Reporting Services** > **Descargar** en las extensiones mostradas. Para SSDT, ea [Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-3. Seleccione el icono de **Proyecto de servidor de informes** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;en la columna central del cuadro de diálogo **Nuevo proyecto**.
+3. Seleccione el icono de **Proyecto de servidor de informes**&nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;en la columna central del cuadro de diálogo **Nuevo proyecto**.
 
 4. En el cuadro de texto **Nombre**, escriba “Tutorial” para el nombre del proyecto. De forma predeterminada, en el cuadro de texto **Ubicación**, se muestra la ruta de acceso a la carpeta "Documents\Visual Studio 20xx\Projects\". El Diseñador de informes crea una carpeta denominada Tutorial debajo de esta ruta de acceso y crea el proyecto Tutorial en esta carpeta. Si el proyecto no pertenece a una solución de VS, entonces VS también crea un archivo de solución (.sln).
 
@@ -67,4 +68,4 @@ Hasta ahora, ha creado el proyecto de informe Tutorial y el informe Sales Orders
 - Crear un conjunto de datos a partir del origen de datos
 - Diseñar el informe y dar formato a dicho diseño
 
-Continúe con la [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Continúe con la [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

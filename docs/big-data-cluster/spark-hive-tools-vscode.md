@@ -1,20 +1,21 @@
 ---
-title: Ejecución de trabajos de Spark con Spark & Hive Tools para VS Code en un clúster de macrodatos de SQL Server
-titleSuffix: SQL Server big data clusters
+title: 'Ejecutar trabajos: Herramientas de Spark y Hive para VS Code'
+titleSuffix: SQL Server Big Data Clusters
 description: Envíe trabajos de Spark con Spark & Hive Tools para Visual Studio Code en un clúster de macrodatos de SQL Server.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653728"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255918"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Envío de trabajos de Spark en un clúster de macrodatos de SQL Server en Visual Studio Code
 
@@ -23,15 +24,15 @@ Obtenga información sobre cómo usar Spark & Hive Tools para Visual Studio Code
 Spark & Hive Tools se puede instalar en las plataformas compatibles con Visual Studio Code, que son Windows, Linux y macOS. A continuación, encontrará los requisitos previos para las diferentes plataformas.
 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Los elementos siguientes son necesarios para completar los pasos indicados en este artículo:
 
 - Un clúster de macrodatos de SQL Server. Vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono solo es necesario para Linux y macOS.
-- [Configuración del entorno interactivo de PySpark para Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
-- Un directorio local denominado **SQLBDCexample**.  En este artículo se usa **C:\SQLBDC\SQLBDCexample**.
+- [Configure el entorno de PySpark interactivo para Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment).
+- Un directorio local llamado **SQLBDCexample**.  En este artículo se usa **C:\SQLBDC\SQLBDCexample**.
 
 ## <a name="install-spark--hive-tools"></a>Instalar Spark & Hive Tools
 
@@ -51,11 +52,11 @@ Después de completar los requisitos previos, puede instalar Spark & Hive Tools 
 
 ## <a name="open-work-folder"></a>Abrir la carpeta de trabajo
 
-Complete los pasos siguientes para abrir una carpeta de trabajo y cree un archivo en Visual Studio Code:
+Siga este procedimiento para abrir una carpeta de trabajo y crear un archivo en Visual Studio Code:
 
-1. En la barra de menús, vaya a **archivo** > **Abrir carpeta...** C:\SQLBDC\SQLBDCexample y, a continuación, seleccione el botón **Seleccionar carpeta** .  >  La carpeta aparece en la vista **Explorador** a la izquierda.
+1. En la barra de menús, vaya a **Archivo** > **Abrir carpeta…**  > **C:\SQLBDC\SQLBDCexample** y, después, haga clic en el botón **Seleccionar carpeta**. La carpeta se mostrará en la vista **Explorador** de la parte izquierda.
 
-2. En la vista **Explorador** , seleccione la carpeta **SQLBDCexample**y, a continuación, el icono **nuevo archivo** situado junto a la carpeta de trabajo.
+2. En la vista **Explorador**, seleccione la carpeta **SQLBDCexample** y, después, haga clic en el icono de **Nuevo archivo** junto a la carpeta de trabajo.
 
    ![Nuevo archivo](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -114,9 +115,9 @@ Antes de enviar scripts a los clústeres desde Visual Studio Code, necesita vinc
 
     ![Establecer una configuración de clúster predeterminado](./media/spark-hive-tools-vscode/list-cluster-result.png)
 
-## <a name="set-default-cluster"></a>Establecer el clúster predeterminado
+## <a name="set-default-cluster"></a>Establecer un clúster predeterminado
 
-1. Vuelva a abrir la carpeta **SQLBDCexample** creada [anteriormente](#open-work-folder) si está cerrada.  
+1. Vuelva a abrir la carpeta **SQLBDCexample** creada [anteriormente](#open-work-folder) (si está cerrada).  
 
 2. Seleccione el archivo **HelloWorld.py** que ha creado [anteriormente](#open-work-folder) para abrirlo en el editor de scripts.
 
@@ -124,7 +125,7 @@ Antes de enviar scripts a los clústeres desde Visual Studio Code, necesita vinc
 
 4. Haga clic con el botón derecho en el editor de scripts y seleccione **Spark/Hive: Set Default Cluster** (establecer clúster predeterminado).   
 
-5. Seleccione un clúster como clúster predeterminado del archivo de script actual. Las herramientas actualizan automáticamente el archivo de configuración **.VSCode\settings.json**. 
+5. Seleccione un clúster como el clúster predeterminado para el archivo de script actual. Las herramientas actualizan automáticamente el archivo de configuración **.VSCode\settings.json**. 
 
    ![Establecer la configuración del clúster predeterminado](./media/spark-hive-tools-vscode/set-default-cluster-configuration.png)
 
@@ -132,7 +133,7 @@ Antes de enviar scripts a los clústeres desde Visual Studio Code, necesita vinc
 
 Para enviar consultas de PySpark interactivas, siga este procedimiento:
 
-1. Vuelva a abrir la carpeta **SQLBDCexample** creada [anteriormente](#open-work-folder) si está cerrada.  
+1. Vuelva a abrir la carpeta **SQLBDCexample** creada [anteriormente](#open-work-folder) (si está cerrada).  
 
 2. Seleccione el archivo **HelloWorld.py** que ha creado [anteriormente](#open-work-folder) para abrirlo en el editor de scripts.
 
@@ -157,9 +158,9 @@ Para enviar consultas de PySpark interactivas, siga este procedimiento:
    > ![extensión de Python de PySpark Interactive deshabilitada](./media/spark-hive-tools-vscode/pyspark-interactive-python-extension-disabled.png)
 
 
-## <a name="submit-pyspark-batch-job"></a>Envío de un trabajo por lotes de PySpark
+## <a name="submit-pyspark-batch-job"></a>Enviar trabajo por lotes de PySpark
 
-1. Vuelva a abrir la carpeta **SQLBDCexample** creada [anteriormente](#open-work-folder) si está cerrada.  
+1. Vuelva a abrir la carpeta **SQLBDCexample** creada [anteriormente](#open-work-folder) (si está cerrada).  
 
 2. Seleccione el archivo **HelloWorld.py** que ha creado [anteriormente](#open-work-folder) para abrirlo en el editor de scripts.
 
@@ -167,21 +168,21 @@ Para enviar consultas de PySpark interactivas, siga este procedimiento:
 
 4. Haga clic con el botón derecho en el editor de scripts y, después, seleccione **Spark: PySpark Batch** (lote de PySpark), o bien use el método abreviado de teclado **Ctrl + Alt + H**. 
 
-5. Si aún no ha especificado un clúster predeterminado, seleccione el clúster. Después de enviar trabajo de Python, los registros de envío se muestran en la ventana de **SALIDA** en Visual Studio Code. También se muestran la **dirección URL de interfaz de usuario de Spark** y la **dirección URL de interfaz de usuario de Yarn**. Para realizar un seguimiento del estado del trabajo, puede abrir la URL en un explorador web.
+5. Si aún no ha especificado un clúster predeterminado, seleccione el clúster. Después de enviar trabajo de Python, los registros de envío se muestran en la ventana de **SALIDA** en Visual Studio Code. También se muestran la **URL de la interfaz de usuario de Spark** y la **URL de la interfaz de usuario de Yarn**. Para realizar un seguimiento del estado del trabajo, puede abrir la URL en un explorador web.
 
    ![Enviar el resultado de un trabajo de Python](./media/spark-hive-tools-vscode/submit-pythonjob-result.png) 
 
 ## <a name="apache-livy-configuration"></a>Configuración de Apache Livy
 
-Se admite la configuración de [Apache Livy](https://livy.incubator.apache.org/), que puede configurarse en el archivo **.VSCode\settings.json** de la carpeta del área de trabajo. Actualmente, la configuración de Livy solo admite scripts de Python. Para obtener más información, vea [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ) (LÉAME de Livy).
+Se admite la configuración de [Apache Livy](https://livy.incubator.apache.org/), que puede configurarse en el archivo **.VSCode\settings.json** de la carpeta del área de trabajo. En la actualidad, la configuración de Livy solo admite el script de Python. Para obtener más información, vea [Livy README](https://github.com/cloudera/livy/blob/master/README.rst ) (LÉAME de Livy).
 
-### <a id="triggerlivyconf"></a>**Procedimiento para desencadenar la configuración de Livy**
+### <a name="how-to-trigger-livy-configuration"></a><a id="triggerlivyconf"></a>**Cómo activar la configuración de Livy**
 
 #### <a name="method-1"></a>Método 1
 
 1. En la barra de menús, vaya a **Archivo** > **Preferencias** > **Configuración**.  
-2. En el cuadro de texto **Configuración de la búsqueda** escriba **HDInsight Job Sumission: Livy Conf**. (Envío de trabajo de HDInsight: Livy Conf).  
-3. Seleccione **Edit in settings.json** (Editar en settings.json) para el resultado de búsqueda pertinente.
+2. En el cuadro de texto **Configuración de búsqueda**, escriba **Envío de trabajo de HDInsight: configuración de Livy**.  
+3. Seleccione **Editar en settings.json** para el resultado de la búsqueda relevante.
 
 #### <a name="method-2"></a>Método 2
 
@@ -189,7 +190,7 @@ Envíe un archivo; la carpeta `.vscode` se agregará automáticamente a la carpe
 
 + Configuración del proyecto:
 
-    ![Configuración de Livy](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
+    ![configuración de Livy](./media/spark-hive-tools-vscode/hdi-livyconfig.png)
 
 >[!NOTE]
 >En el caso de las opciones **driverMomory** y **executorMomry**, establezca el valor con una unidad (por ejemplo, “1g” o “1024m”). 
@@ -200,36 +201,36 @@ Envíe un archivo; la carpeta `.vscode` se agregará automáticamente a la carpe
 
 **Cuerpo de la solicitud**
 
-| name | description | Tipo |
+| name | description | type |
 | :- | :- | :- |
-| file | Archivo que contiene la aplicación para ejecutar | ruta de acceso (obligatorio) |
-| proxyUser | Usuario para suplantar cuando se ejecuta el trabajo | string |
-| className | Clase principal de Spark o Java de la aplicación | string |
+| archivo | Archivo que contiene la aplicación que se ejecutará | ruta (obligatorio) |
+| proxyUser | Usuario que se suplantará al ejecutar el trabajo | string |
+| className | Clase principal de Java/Spark de la aplicación | string |
 | args | Argumentos de la línea de comandos para la aplicación | lista de cadenas |
-| jars | Archivos JAR que se usarán en esta sesión | Lista de cadenas |
-| pyFiles | Archivos Python que se usarán en esta sesión | Lista de cadenas |
+| jars | Archivos jar que se usarán en esta sesión | Lista de cadenas |
+| pyFiles | Archivos de Python que se usarán en esta sesión | Lista de cadenas |
 | files | Archivos que se usarán en esta sesión | Lista de cadenas |
-| driverMemory | Cantidad de memoria que se usará para el proceso de controlador | string |
-| driverCores | Número de núcleos que se usarán para el proceso de controlador | int |
-| executorMemory | Cantidad de memoria que se usará por proceso ejecutor | string |
-| executorCores | Número de núcleos que se usarán para cada ejecutor | int |
-| numExecutors | Número de ejecutores para iniciar en esta sesión | int |
+| driverMemory | Cantidad de memoria que se usará para el proceso del controlador | string |
+| driverCores | Número de núcleos que se usarán para el proceso del controlador | int |
+| executorMemory | Cantidad de memoria que se usará por proceso de ejecutor | string |
+| executorCores | Número de núcleos que se usará para cada ejecutor | int |
+| numExecutors | Número de ejecutores que se iniciarán para esta sesión | int |
 | archives | Archivos que se usarán en esta sesión | Lista de cadenas |
-| queue | El nombre de la cola YARN a la que se envió | string |
+| cola | Nombre de la cola de YARN al que se realizará el envío | string |
 | name | Nombre de esta sesión | string |
-| conf | Propiedades de configuración de Spark. | Asignación de clave = val |
+| conf | Propiedades de configuración de Spark | Mapa de clave=valor |
 
 #### <a name="response-body"></a>Cuerpo de la respuesta
 
 Objeto por lotes creado.
 
-| name | description | Tipo |
+| name | description | type |
 | :- | :- | :- |
-| id | Identificador de sesión | int |
-| appId | Identificador de la aplicación de esta sesión | string |
-| appInfo | Información detallada de la aplicación | Asignación de clave = val |
+| id | Identificador de la sesión | int |
+| appId | Identificador de aplicación de esta sesión | String |
+| appInfo | Información detallada sobre la aplicación | Mapa de clave=valor |
 | log | Líneas de registro | lista de cadenas |
-| state | Estado de lote | string |
+| state | Estado del lote | string |
 
 >[!NOTE]
 >La configuración de Livy asignada se mostrará en el panel de resultados al enviar el script.
@@ -238,11 +239,11 @@ Objeto por lotes creado.
 
 Spark & Hive para Visual Studio Code admite las características siguientes:
 
-- **Autocompletar de IntelliSense**. Emergen sugerencias para la palabra clave, los métodos, las variables, etc. Se representan diferentes tipos de objetos con distintos iconos.
+- **Autocompletar de IntelliSense**. Se muestran sugerencias emergentes de palabras clave, métodos, variables, etc. Se representan diferentes tipos de objetos con distintos iconos.
 
     ![Tipos de objetos de IntelliSense en Spark & Hive Tools para Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-auto-complete-objects.png)
-- **Marcador de error de IntelliSense**. El servicio de lenguaje subraya los errores de edición del script de Hive.     
-- **Aspectos destacados de la sintaxis**. El servicio de lenguaje usa distintos colores para diferenciar variables, palabras clave, tipos de datos, funciones, etc. 
+- **Marcador de error de IntelliSense**. El servicio de lenguaje subraya los errores de edición en el script de Hive.     
+- **Sintaxis resaltada**. El servicio de lenguaje usa distintos colores para diferenciar variables, palabras clave, tipos de datos, funciones, etc. 
 
     ![Sintaxis resaltada de Spark & Hive Tools para Visual Studio Code](./media/spark-hive-tools-vscode/hdinsight-for-vscode-syntax-highlights.png)
 
@@ -250,9 +251,9 @@ Spark & Hive para Visual Studio Code admite las características siguientes:
 
 1. En la barra de menús, vaya a **Ver** > **Paleta de comandos…** y escriba **Spark/Hive: desvincular un clúster**.  
 
-2. Seleccione el clúster que desea desvincular.  
+2. Seleccione el clúster que quiera desvincular.  
 
 3. Revise la vista **SALIDA**.  
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre SQL Server clúster de macrodatos y escenarios relacionados [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions), vea.
+Para obtener más información sobre los clústeres de macrodatos de SQL Server y los escenarios relacionados, vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).

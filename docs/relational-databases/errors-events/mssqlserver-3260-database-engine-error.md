@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b523cd8519bbbb6affce403ca14695a4c18a603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f46cc40798261737e354e5afc4c027c4f1355c3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027939"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723616"
 ---
-# <a name="mssqlserver3260"></a>MSSQLSERVER_3260
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_3260"></a>MSSQLSERVER_3260
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|3260|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|3260|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DMPIO_BUFFER_OVERFLOW|  
 |Texto del mensaje|Se llenó un búfer interno.|  
@@ -36,5 +36,5 @@ ms.locfileid: "68027939"
 El servidor no tiene suficiente memoria.  
   
 ## <a name="user-action"></a>Acción del usuario  
-Intente de nuevo la operación. Si se vuelve a producir el error, póngase en contacto con su proveedor de soporte técnico.  
+Vuelva a intentar la operación. Si se vuelve a producir el error, póngase en contacto con su proveedor de soporte técnico.  
   

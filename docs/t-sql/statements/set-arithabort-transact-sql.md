@@ -27,15 +27,15 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22c0829185c92587153039e5e3cf1a6cdad5ef29
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064614"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999442"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Termina una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución.  
   
@@ -43,19 +43,19 @@ Termina una consulta cuando se produce un error de desbordamiento o división po
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ARITHABORT { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Establezca siempre ARITHABORT en ON en las sesiones de inicio de sesión. Establecer ARITHABORT en OFF puede afectar negativamente a la optimización de consultas, lo que produce problemas de rendimiento.  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ Si SET ARITHABORT y SET ANSI WARNINGS son OFF y se produce uno de estos errores,
 > [!NOTE]  
 >  Si ni SET ARITHABORT ni SET ARITHIGNORE son ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL y muestra un mensaje de advertencia después de ejecutar la consulta.  
   
-Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior. Si el nivel de compatibilidad de la base de datos está establecido en 80 o en un nivel inferior, debe configurarse explícitamente la opción ARITHABORT en ON.  
+Cuando ANSI_WARNINGS tiene el valor ON y el nivel de compatibilidad de la base de datos se establece en 90 o superior, ARITHABORT se establece en ON implícitamente, independientemente de su configuración de valor. Si el nivel de compatibilidad de la base de datos está establecido en 80 o en un nivel inferior, debe configurarse explícitamente la opción ARITHABORT en ON.  
   
 Si al evaluar una expresión con SET ARITHABORT en OFF, una instrucción INSERT, DELETE o UPDATE encuentra un error aritmético, desbordamiento, división por cero o error de dominio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserta o actualiza un valor NULL. Si la columna de destino no acepta valores NULL, no se puede efectuar la acción de inserción o actualización y el usuario recibe un error.  
   

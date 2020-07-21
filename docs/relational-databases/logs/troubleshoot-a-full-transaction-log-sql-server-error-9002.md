@@ -1,6 +1,6 @@
 ---
-title: Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Solución de problemas de un registro de transacciones lleno 9002
+description: Obtenga información sobre las posibles respuestas a un registro de transacciones lleno en SQL Server y cómo evitar el problema en el futuro.
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,18 +18,19 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc956cf14419a1d65ed0ebc39928b39c6c7b63fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083935"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006540"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se tratan las posibles respuestas a un registro de transacciones lleno y se sugiere cómo evitar esta situación en el futuro. 
   
-  Cuando el registro de transacciones se llena, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **error 9002**. El registro se puede llenar cuando la base de datos está en línea o en recuperación. Si el registro se llena cuando la base de datos está en línea, la base de datos seguirá en conexión, pero solo se puede leer y no actualizar. Si el registro se llena durante la recuperación, [!INCLUDE[ssDE](../../includes/ssde-md.md)] marca la base de datos como RESOURCE PENDING. En ambos casos, es necesaria la intervención del usuario para proporcionar espacio de registro.  
+  Cuando el registro de transacciones se llena, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] genera un **error 9002**. El registro se puede llenar cuando la base de datos está en línea o en recuperación. Si el registro se llena mientras la base de datos está en línea, la base de datos permanece en línea, pero solo se puede leer, no se puede actualizar. Si el registro se llena durante la recuperación, [!INCLUDE[ssDE](../../includes/ssde-md.md)] marca la base de datos como RESOURCE PENDING. En ambos casos, es necesaria la intervención del usuario para proporcionar espacio de registro.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Respuesta a un registro de transacciones lleno  
  La respuesta apropiada a un registro de transacciones lleno depende en parte de la condición o condiciones que han causado que el registro se llene. 
@@ -110,8 +111,8 @@ Esta instrucción permite identificar el Id. de usuario del propietario de la tr
 ### <a name="kill-a-transaction"></a>Terminar una transacción
 Hay veces en que simplemente tiene que finalizar el proceso; puede que tenga que usar la instrucción [KILL](../../t-sql/language-elements/kill-transact-sql.md) . Use esta instrucción con sumo cuidado, especialmente cuando se estén ejecutando procesos críticos que no desea terminar. Para más información, consulte [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
-## <a name="see-also"></a>Vea también  
-[Artículo de soporte técnico de KB: Un registro de transacciones crece de manera inesperada o se llena en SQL Server](https://support.microsoft.com/kb/317375) [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

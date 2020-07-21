@@ -1,5 +1,5 @@
 ---
-title: Miembros de SQLServerException | Microsoft Docs
+title: Miembros SQLServerException | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7df5cc4b13ed8896cdd140195bdecc10ea304b40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7860cacc25c9af9ffec45e33cfb57aae7069c3b5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67971000"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80902368"
 ---
 # <a name="sqlserverexception-members"></a>Miembros SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67971000"
 |----------|-----------------|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Inicializa una nueva instancia de la clase SQLServerException.|  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

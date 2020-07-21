@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141233"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896008"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se documentan los argumentos descritos en las secciones "Sintaxis" de la instrucción RESTORE {DATABASE|LOG} y del conjunto de instrucciones auxiliares asociado: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY y RESTORE VERIFYONLY. Solo un subconjunto de estas seis instrucciones admite la mayoría de los argumentos. En la descripción del argumento se indica si éste está admitido.  
   
@@ -52,7 +52,7 @@ En este tema se documentan los argumentos descritos en las secciones "Sintaxis" 
   
  En el caso de una base de datos que utilice el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere en la mayoría de los casos que realice una copia de seguridad de registros después del error antes de restaurar la base de datos. Restaurar una base de datos sin hacer primero una copia del final del registro produce un error, a menos que la instrucción RESTORE DATABASE contenga una cláusula WITH REPLACE o WITH STOPAT, que deben especificar un tiempo o una transacción producidos después de finalizar la copia de seguridad de los datos. Para obtener más información sobre las copias del final del registro, vea [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
- LOG  
+ REGISTRO  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica que se va a aplicar una copia de seguridad de registros de transacciones a esta base de datos. Los registros de transacciones deben aplicarse en orden secuencial. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba el registro de transacciones del que se ha realizado la copia de seguridad para asegurarse de que las transacciones se cargan en la base de datos y en la secuencia correctas. Para aplicar varios registros de transacciones, utilice la opción NORECOVERY en todas las operaciones de restauración, excepto en la última.  
@@ -116,15 +116,15 @@ PAGE
  [ **,** ...*n* ]  
  Es un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos y páginas en una lista separada por comas. El número es ilimitado.  
   
-FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } Normalmente especifica los dispositivos de copia de seguridad desde los que se restaurará la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } Normalmente, especifica los dispositivos de copia de seguridad desde los que se restaura la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
   
  Si se omite la cláusula FROM, no se produce la restauración de la copia de seguridad. En su lugar, se recupera la base de datos. Esto permite recuperar una base de datos restaurada con la opción NORECOVERY o cambiar a un servidor en espera. Si se omite la cláusula FROM, se debe especificar NORECOVERY, RECOVERY o STANDBY en la cláusula WITH.  
   
- \<backup_device> [ **,** ...*n* ] Especifica los dispositivos de copia de seguridad físicos o lógicos que se usarán para la operación de restauración.  
+ \<backup_device> [ **,** ...*n* ] Especifica los dispositivos de copia de seguridad físicos o lógicos que se usan para la operación de restauración.  
   
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<backup_device>::= Especifica el dispositivo de copia de seguridad físico o lógico que se va a usar en la operación de copia de seguridad, así:  
+ \<backup_device>::= Especifica un dispositivo de copia de seguridad físico o lógico que se va a usar para la operación de copia de seguridad de la manera siguiente:  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  Es el nombre lógico, que debe seguir las reglas de los identificadores, de los dispositivos de copia de seguridad creados por **sp_addumpdevice** desde los que se restaura la base de datos. Si se proporciona como una variable ( **@** _logical\_backup\_device\_name\_var_), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Especifica que la operación de restauración cargará la información en las tablas de historial de **msdb**. La opción LOADHISTORY carga en las tablas de historial de copias de seguridad y restauración de la base de datos **msdb** la información sobre las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenadas en el conjunto de medios para el conjunto de copia de seguridad que se comprueba. Para más información sobre las tablas de historial, vea [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md) (Tablas del sistema [Transact-SQL]).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Las opciones generales de WITH son todas compatibles con las instrucciones RESTORE DATABASE y RESTORE LOG. Algunas de estas opciones también son compatibles con una o varias instrucciones auxiliares, tal y como se indica aquí.  
   
 ##### <a name="restore-operation-options"></a>Opciones de la operación de restauración  
@@ -238,7 +238,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
   
  Cuando se utiliza con RESTORE LOG, la opción MOVE se puede utilizar solo para reubicar los archivos agregados durante la restauración del registro. Por ejemplo, si la copia de seguridad de registros contiene una operación para agregar el archivo `file23`, este archivo se puede reubicar utilizando la opción MOVE en RESTORE LOG.  
   
- Cuando se usa con la copia de seguridad de instantánea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción MOVE solo se puede usar para reubicar archivos en un blob de Azure dentro de la misma cuenta de almacenamiento que el blob original. La opción MOVE no se puede usar para restaurar la copia de seguridad de instantánea en un archivo local o en otra cuenta de almacenamiento.  
+ Cuando se usa con la copia de seguridad de instantáneade [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción MOVE solo se puede usar para reubicar archivos en un blob de Azure dentro de la misma cuenta de almacenamiento que el blob original. La opción MOVE no se puede usar para restaurar la copia de seguridad de instantánea en un archivo local o en otra cuenta de almacenamiento.  
   
  Si se utiliza la instrucción RESTORE VERIFYONLY cuando se tiene previsto reubicar una base de datos en el mismo servidor o copiarla en uno diferente, puede que sea necesario utilizar la opción MOVE para comprobar si hay espacio suficiente disponible en el destino y para identificar los posibles conflictos con los archivos existentes.  
   
@@ -247,12 +247,12 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y versiones posteriores
   
  Se usa solo al restaurar una copia de seguridad desde el servicio Microsoft Azure Blob Storage.  
   
 > [!NOTE]  
->  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], las restauraciones solo se pueden realizar desde un único dispositivo al restaurar desde una dirección URL. Para restaurar desde varios dispositivos cuando se restaure desde una dirección URL, hay que usar desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) y, asimismo, usar tokens de Firma de acceso compartido (SAS). Para más información, vea [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
+>  Con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], las restauraciones solo se pueden realizar desde un único dispositivo al restaurar desde una dirección URL. Para restaurar desde varios dispositivos cuando se restaure desde una dirección URL, hay que usar desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)) y, asimismo, usar tokens de Firma de acceso compartido (SAS). Para más información, vea [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).  
   
  REPLACE  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  Un nombre de directorio compatible con Windows. Este nombre debe ser único entre todos los nombres de directorio de FILESTREAM de base de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparación de unicidad se realiza sin distinción entre mayúsculas y minúsculas, independientemente de la configuración de intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Especifica que, tras la operación RESTORE, la cinta permanece cargada en la unidad de cinta.  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  Esta opción solo es pertinente si la base de datos se replicó cuando se creó la copia de seguridad.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
 -   El nombre del servidor en espera semiactiva debe cambiarse de manera que sea igual que el del servidor principal.  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  Esta opción solo es pertinente si la base de datos se habilitó para la captura de datos modificados cuando se creó la copia de seguridad.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  Para más información sobre cómo usar la captura de datos modificados con la creación de reflejo de la base de datos, vea [Captura de datos modificados y otras características de SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### \<service_broker_WITH_options>  
  Activa o desactiva la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o establece un nuevo identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Esta opción solo es pertinente si [!INCLUDE[ssSB](../../includes/sssb-md.md)] se habilitó (activó) para la base de datos cuando se creó la copia de seguridad.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
  NEW_BROKER  
  Especifica que se asigne a la base de datos un nuevo identificador de Service Broker. Dado que la base de datos se considera como un nuevo Service Broker, todas las conversaciones existentes en la base de datos se quitan inmediatamente sin generar mensajes de fin de diálogo. Cualquier ruta que haga referencia al identificador de Service Broker anterior debe volverse a crear con el nuevo identificador.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **Compatible con:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) y solo en los modelos de recuperación completa o recuperación optimizada para cargas masivas de registros.  
   
  Puede restaurar una base de datos hasta un momento concreto o transacción especificando el punto de recuperación de destino en una cláusula STOPAT, STOPBEFOREMARK o STOPATMARK. Un momento o transacción especificada siempre se restaura a partir de una copia de seguridad de registros. En cada instrucción RESTORE LOG de la secuencia de restauración, debe especificar el momento o la transacción de destino en una cláusula STOPAT, STOPBEFOREMARK o STOPATMARK idéntica.  
@@ -541,7 +541,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para comprobar las notas adicionales, vea los siguientes temas:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

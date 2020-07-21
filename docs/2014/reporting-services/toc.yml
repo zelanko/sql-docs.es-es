@@ -18,7 +18,7 @@
   href: reporting-services-concepts-ssrs.md
 - name: Elegir herramientas de análisis e informes de Microsoft
   href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
-- name: Planeamiento
+- name: Planificación
   href: planning-for-reporting-services.md
   items:
     - name: Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
@@ -43,7 +43,7 @@
       items:
         - name: RSReportServer Configuration File
           href: report-server/rsreportserver-config-configuration-file.md
-        - name: Archivo de configuración ReportingServicesService
+        - name: archivo de configuración ReportingServicesService
           href: report-server/reportingservicesservice-configuration-file.md
         - name: archivo de configuración RSReportDesigner
           href: report-server/rsreportdesigner-configuration-file.md
@@ -79,7 +79,7 @@
       href: what-s-new-in-report-builder-for-sql-server-2014.md
     - name: Iniciar el Generador de informes
       href: report-builder/start-report-builder.md
-    - name: 'Tutorial: Creación de un informe de gráfico rápido sin conexión'
+    - name: 'Tutorial: Crear un informe de gráfico rápido sin conexión'
       href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Planear un informe
       href: report-design/planning-a-report-report-builder.md
@@ -90,7 +90,7 @@
       href: report-builder/report-design-view-report-builder.md
     - name: Vista de diseño de conjunto de datos compartido
       href: report-builder/shared-dataset-design-view-report-builder.md
-    - name: Métodos abreviados de teclado
+    - name: Métodos abreviados de teclado.
       href: report-builder/keyboard-shortcuts-report-builder.md
     - name: Conceptos de creación de informes
       href: report-design/report-authoring-concepts-report-builder-and-ssrs.md

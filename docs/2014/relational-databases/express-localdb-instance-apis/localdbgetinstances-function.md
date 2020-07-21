@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 92aa65bd2d3aad71f2467efaa7a09f75f20d8f63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c691495631fd3d39aca464f8f6343f5690af6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027750"
 ---
 # <a name="localdbgetinstances-function"></a>Función LocalDBGetInstances
   Devuelve todas las instancias de SQL Server Express LocalDB con la versión indicada.  
@@ -40,12 +39,12 @@ HRESULT LocalDBGetInstances(
   
 ## <a name="parameters"></a>Parámetros  
  *pInstanceNames*  
- [Salida] Cuando esta función devuelve, contiene los nombres de ambos denominado y predeterminada de las instancias de LocalDB en la estación de trabajo del usuario.  
+ Genere Cuando esta función devuelve un valor, contiene los nombres de las instancias de LocalDB con nombre y predeterminadas en la estación de trabajo del usuario.  
   
  *lpdwNumberOfInstances*  
- [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encuentra en la estación de trabajo del usuario.  
+ [Entrada/Salida] En la entrada, contiene el número de zonas para los nombres de instancia en el búfer de *pInstanceNames* . En la salida, contiene el número de instancias de LocalDB que se encuentran en la estación de trabajo del usuario.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -68,12 +67,12 @@ HRESULT LocalDBGetInstances(
  Una configuración de instancia está dañada.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -1,0 +1,2 @@
+> [!Note]
+> Para ver la sintaxis de Transact-SQL para SQL Server 2014 y versiones anteriores, consulte [Versiones anteriores de la documentación](../sql-server/previous-versions-sql-server.md#offline-documentation).

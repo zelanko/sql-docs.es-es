@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09adf678236a636cfe0fbdfa581c094be1e7e619
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2d5403f6099b7097ea5c68629f5a2880caef0ede
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953004"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924527"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>Método getClob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

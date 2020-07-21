@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009189"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
   En este tema se describe cómo crear relaciones de clave externa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se asocian filas de una tabla con filas de otra tabla, se crea una relación entre las dos tablas.  
@@ -30,15 +29,15 @@ ms.locfileid: "62761612"
   
      [Seguridad](#Security)  
   
--   **Para crear relaciones de clave externa mediante el uso de:**  
+-   **Para crear relaciones de clave externa mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   No es necesario que una restricción de clave externa esté vinculada únicamente a una restricción de clave principal de otra tabla; también puede definirse para que haga referencia a las columnas de una restricción UNIQUE de otra tabla.  
   
@@ -56,34 +55,34 @@ ms.locfileid: "62761612"
   
 -   Las restricciones FOREIGN KEY no se exigen en tablas temporales.  
   
--   Si la clave externa se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario. Para obtener más información, consulte [CLR User-Defined Types](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+-   Si la clave externa se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 -   Una columna de tipo `varchar(max)` puede participar en una restricción FOREIGN KEY solo si la clave principal a la que hace referencia se define también como tipo `varchar(max)`.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La creación de una tabla nueva con una clave externa requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla.  
   
  La creación de una clave externa en una tabla existente requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-foreign-key-relationship-in-table-designer"></a>Para crear una relación de clave externa en el Diseñador de tablas  
   
-1.  En el Explorador de objetos, haga clic con el botón secundario en la tabla que va a estar en el lado de la clave externa de la relación y, a continuación, haga clic en **Diseño**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en la tabla que va a estar en el lado de la clave externa de la relación y, después, haga clic en **Diseño**.  
   
-     La tabla se abre en el **Diseñador de tablas**.  
+     La tabla se abre en **Diseñador de tablas**.  
   
 2.  En el menú **Diseñador de tablas** , haga clic en **Relaciones**.  
   
 3.  En el cuadro de diálogo **Relaciones de clave externa** , haga clic en **Agregar**.  
   
-     La relación aparece en la lista **Relación seleccionada** con un nombre proporcionado por el sistema con el formato FK_\<*tablename*>_\<*tablename*>, donde *tablename* es el nombre de la tabla de clave externa.  
+     La relación aparece en la lista **relación seleccionada** con un nombre proporcionado por el sistema con el formato FK_ \<*tablename*> _ \<*tablename*> , donde *TableName* es el nombre de la tabla de clave externa.  
   
 4.  Haga clic en la relación en la lista **Relación seleccionada** .  
   
-5.  Haga clic en **Especificaciones de tablas y columnas** en la cuadrícula situada a la derecha y, después, haga clic en los puntos suspensivos ( **...** ) situados a la derecha de la propiedad.  
+5.  Haga clic en **Especificaciones de tablas y columnas** en la cuadrícula situada a la derecha y, después, haga clic en los puntos suspensivos (**...**) situados a la derecha de la propiedad.  
   
 6.  En el cuadro de diálogo **Tablas y columnas** , en la lista desplegable **Clave principal** , elija la tabla que estará en el lado de la clave principal de la relación.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62761612"
   
 8.  Elija **Aceptar** para crear la relación.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-foreign-key-in-a-new-table"></a>Para crear una clave externa en una tabla nueva  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62761612"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. El ejemplo crea una clave externa en la columna `TempID` que hace referencia a la columna `SalesReasonID` de la tabla `Sales.SalesReason`.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. El ejemplo crea una clave externa en la columna `TempID` que hace referencia a la columna `SalesReasonID` de la tabla `Sales.SalesReason` .  
   
     ```  
     USE AdventureWorks2012;  

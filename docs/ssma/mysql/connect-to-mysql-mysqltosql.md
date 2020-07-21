@@ -1,5 +1,5 @@
 ---
-title: Conectarse a MySQL (MySQLToSQL) | Microsoft Docs
+title: Conexión a MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,37 +10,37 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103230"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Conectarse a MySQL (MySQLToSQL)
-Use la **conectar con MySQL** cuadro de diálogo para conectarse a la base de datos MySQL que se va a migrar.  
+Utilice el cuadro de diálogo **conectar con MySQL** para conectarse a la base de datos MySQL que desea migrar.  
   
-Para obtener acceso a este cuadro de diálogo, en el **archivo** menú, seleccione **conectar con MySQL**. Si se ha conectado anteriormente, el comando es **volver a conectar con MySQL**.  
+Para obtener acceso a este cuadro de diálogo, en el menú **archivo** , seleccione **conectarse a MySQL**. Si ya se ha conectado, el comando se **vuelve a conectar a MySQL**.  
   
 ## <a name="options"></a>Opciones  
 **Proveedor**  
   
-Proveedor de MySQL disponible es ODBC de MySQL 5.1 Driver (de confianza).  
+El proveedor de MySQL disponible es el controlador de MySQL ODBC 5,1 (de confianza).  
   
 **Modo**  
   
-El modo predeterminado es el modo estándar. En modo estándar escriba o seleccione valores para el MySQL nombre del servidor, puerto del servidor, nombre de usuario y contraseña.  
+El modo predeterminado es el modo estándar. En el modo estándar, escriba o seleccione valores para MySQL, el nombre del servidor, el puerto del servidor, el nombre de usuario y la contraseña.  
   
 **Nombre del servidor**  
   
-Escriba el nombre del servidor MySQL. Esta es una opción de modo estándar.  
+Escriba el nombre del servidor MySQL. Se trata de una opción de modo estándar.  
   
-**Puerto del servidor**  
+**Puerto de servidor**  
   
-Escriba el puerto del servidor. El puerto de servidor predeterminado es 3306. Esta es una opción de modo estándar.  
+Escriba el puerto del servidor. El puerto del servidor predeterminado es 3306. Se trata de una opción de modo estándar.  
   
-**Nombre de usuario.**  
+**Nombre de usuario**  
   
-Escriba el nombre de usuario que va a usar para conectarse a la base de datos MySQL SSMA.  
+Escriba el nombre de usuario que SSMA usará para conectarse a la base de datos MySQL.  
   
 **Contraseña**  
   
@@ -48,24 +48,24 @@ Escriba la contraseña del nombre de usuario.
   
 **SSL**  
   
-Si desea conectarse de forma segura a MySQL, asegúrese de utilizar capa de sockets seguros (SSL) al comprobar la **SSL** casilla de verificación.  
+Si desea conectarse de forma segura a MySQL, haga uso de la capa de sockets seguros (SSL). para ello, active la casilla **SSL** .  
   
-**Configurar**  
+**Configuración**  
   
 Proporciona una opción para configurar la conexión a MySQL a través de la capa de sockets seguros (SSL).  
   
 > [!NOTE]  
-> Para habilitar **configurar**, SSL debe establecerse en **True**.  
+> Para habilitar **configurar**, SSL debe establecerse en **true**.  
   
-Al hacer clic en el botón "Configurar", aparece un cuadro de diálogo. Para usar el cifrado mientras se conecta a la base de datos MySQL, ruta de acceso a los siguientes archivos de tres certificado presentes en el cuadro de diálogo debe ser definido [privacidad mejorada correo certificados (PEM)]:  
+Al hacer clic en el botón "configurar", aparece un cuadro de diálogo. Para usar el cifrado al conectarse a la base de datos MySQL, se debe definir la ruta de acceso a los tres archivos de certificado siguientes presentes en el cuadro de diálogo [certificados de correo mejorado de privacidad (PEM)]:  
   
--   **Entidad emisora de certificados SSL:** Especifica la ruta de acceso a un archivo con una lista de confianza de entidades emisoras de certificados SSL.  
+-   **Entidad de certificación SSL:** Especifica la ruta de acceso a un archivo con una lista de entidades de certificación SSL de confianza.  
   
--   **Certificado SSL:** Especifica el nombre del archivo de certificado SSL que se utilizará para establecer una conexión segura.  
+-   **Certificado SSL:** Especifica el nombre del archivo de certificado SSL que se va a usar para establecer una conexión segura.  
   
--   **CLAVE SSL:** Especifica el nombre del archivo de clave SSL que se utilizará para establecer una conexión segura.  
+-   **clave SSL:** Especifica el nombre del archivo de clave SSL que se va a usar para establecer una conexión segura.  
   
 > [!NOTE]  
-> -   El **Aceptar** botón se habilita cuando se ha proporcionado la información necesaria. Si cualquiera de las rutas de acceso de archivo son válida, el botón "Aceptar" permanecerá deshabilitado.  
-> -   El **cancelar** botón cierra el cuadro de diálogo y **desactiva** la opción SSL desde el formulario principal de la conexión.  
+> -   El botón **Aceptar** está habilitado cuando se ha proporcionado la información necesaria. Si alguna de las rutas de acceso de archivo no es válida, el botón "Aceptar" permanecerá deshabilitado.  
+> -   El botón **Cancelar** cierra el cuadro de diálogo y **desactiva** la opción SSL del formulario de conexión principal.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfc9107b47db312778502191560ce7920c96a37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63163952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000835"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Especificar condiciones de búsqueda (Visual Database Tools)
   Puede especificar las filas de datos que aparecen en la consulta mediante condiciones de búsqueda. Por ejemplo, si realiza una consulta en una tabla `employee` , puede especificar que se busquen solo los empleados que trabajan en una determinada región.  
@@ -46,8 +45,8 @@ ms.locfileid: "63163952"
   
  El Diseñador de consultas y vistas actualiza la instrucción SQL en el [panel SQL](sql-pane-visual-database-tools.md) agregando o modificando la cláusula WHERE.  
   
-## <a name="see-also"></a>Vea también  
- [Reglas para especificar los valores de búsqueda &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Reglas para especificar valores de búsqueda &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [Especificar criterios de búsqueda (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tareas específicas de programación | Microsoft Docs
+title: Programar tareas específicas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e600048088dbc9e5c459f976720f1e626dcf5e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063087"
 ---
 # <a name="programming-specific-tasks"></a>Tareas específicas de programación
   La programación de tareas específicas con objetos SMO incluye temas complejos que solo son necesarios en programas con una función concreta, como copia de seguridad, supervisión de estadísticas, replicación, administración de objetos de instancia y establecimiento de opciones de configuración.  
@@ -32,21 +31,21 @@ ms.locfileid: "63158710"
 |-----------|-----------------|  
 |[Utilizar servidores vinculados en SMO](using-linked-servers-in-smo.md)|Describe cómo SMO utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> para vincular servidores OLE-DB.|  
 |[Configurar SQL Server en SMO](configuring-sql-server-in-smo.md)|Describe cómo ver y modificar la configuración de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en SMO.|  
-|[Usar particiones de tabla e índice](using-table-and-index-partitioning.md)|Describe cómo utilizar particiones de índice y tabla en SMO.|  
-|[Usar grupos de archivos y archivos para almacenar datos](using-filegroups-and-files-to-store-data.md)|Describe cómo utilizar grupos de archivos en SMO.|  
-|[Administrar servicios y configuración de red mediante el proveedor WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Describe varias maneras de realizar el seguimiento de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> que representa el proveedor WMI de administración de configuración.|  
+|[Utilizar particiones de tabla e índice](using-table-and-index-partitioning.md)|Describe cómo utilizar particiones de índice y tabla en SMO.|  
+|[Utilizar grupos de archivos y archivos para almacenar datos](using-filegroups-and-files-to-store-data.md)|Describe cómo utilizar grupos de archivos en SMO.|  
+|[Administrar servicios y configuración de red utilizando el proveedor WMI](managing-services-and-network-settings-by-using-wmi-provider.md)|Describe varias maneras de realizar el seguimiento de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> que representa el proveedor WMI de administración de configuración.|  
 |[Trabajar con objetos de bases de datos](creating-altering-and-removing-database-objects.md)|Describe cómo crear clases de instancia que representan objetos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[Administrar usuarios, roles e inicios de sesión](managing-users-roles-and-logins.md)|Describe cómo utilizar los roles de seguridad en SMO.|  
 |[Conceder, revocar y denegar permisos](granting-revoking-and-denying-permissions.md)|Describe cómo utilizar SMO para conceder, revocar y denegar permisos a usuarios o miembros de un rol.|  
-|[Utilizar el cifrado](using-encryption.md)|Describe cómo proteger los datos mediante el cifrado en SMO.|  
+|[Uso del cifrado](using-encryption.md)|Describe cómo proteger los datos mediante el cifrado en SMO.|  
 |[Programar tareas administrativas automáticas en el Agente SQL Server](../../../ssms/agent/sql-server-agent.md)|Describe cómo utilizar el Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para supervisar, generar informes y programar trabajos en SMO.|  
 |[Realizar copias de seguridad y restaurar bases de datos y registros de transacciones](backing-up-and-restoring-databases-and-transaction-logs.md)|Describe cómo realizar copias de seguridad y restaurar bases de datos y registros de transacciones en SMO.|  
 |[Scripting](scripting.md)|Describe cómo crear script de objetos y detectar dependencias entre objetos en SMO.|  
 |[Transferir datos](transferring-data.md)|Describe cómo transferir datos en SMO.|  
-|[Usar el correo electrónico de base de datos](using-database-mail.md)|Describe cómo SMO utiliza los servicios de correo electrónico.|  
+|[Utilizar el correo electrónico de base de datos](using-database-mail.md)|Describe cómo SMO utiliza los servicios de correo electrónico.|  
 |[Administrar Service Broker](managing-service-broker.md)|Describe cómo configurar Service Broker con SMO.|  
-|[Usar esquemas XML](using-xml-schemas.md)|Describe cómo utilizar el tipo de datos XML en SMO.|  
-|[Utilizar sinónimos](using-synonyms.md)|Describe cómo crear sinónimos en SMO.|  
+|[Utilizar esquemas XML](using-xml-schemas.md)|Describe cómo utilizar el tipo de datos XML en SMO.|  
+|[Usar sinónimos](using-synonyms.md)|Describe cómo crear sinónimos en SMO.|  
 |[Usar mensajes](using-messages.md)|Describe cómo utilizar los mensajes del sistema y cómo definir sus propios mensajes definidos por el usuario.|  
 |[Implementar la búsqueda de texto completo](implementing-full-text-search.md)|Describe cómo implementar los catálogos e índices de búsqueda de texto completo en SMO.|  
 |[Implementar extremos](implementing-endpoints.md)|Describe cómo crear puntos finales para controlar las cargas útiles de creación de reflejos de base de datos, solicitudes SOAP y Service Broker.|  

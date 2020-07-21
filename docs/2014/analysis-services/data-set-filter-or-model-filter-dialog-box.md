@@ -1,5 +1,5 @@
 ---
-title: Filtro de conjunto de datos o el cuadro de diálogo de filtro de modelo | Microsoft Docs
+title: Cuadro de diálogo filtro de conjunto de datos o filtro de modelo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbc9c9b7a09b0d7f06db624be9d94978ab996621
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082610"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529021"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Cuadro de diálogo Filtro de conjunto de datos o Filtro de modelo
   Este cuadro de diálogo le ayuda a generar los filtros que puede aplicar a un conjunto de datos.  El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas, o los datos del caso para un modelo de minería. El nombre del cuadro de diálogo cambia en función de si el filtro está destinado a un conjunto de datos externo o a un modelo de minería.  
@@ -29,35 +28,35 @@ ms.locfileid: "66082610"
 -   La cuadrícula **Condiciones** contiene las columnas en las que puede especificar un nombre de columna o de tabla, un operador y los valores deseados. Mediante esta cuadrícula, básicamente está creando una cláusula WHERE.  
   
 > [!TIP]  
->  Para probar la exactitud en un subconjunto de los datos de aprendizaje originales, puede agregar la vista del origen de datos que se usó para definir el conjunto de aprendizaje como datos de prueba externos y, después, agregar las condiciones en la cuadrícula **Filtro de conjunto de datos**.  
+>   Para probar la exactitud en un subconjunto de los datos de entrenamiento originales, puede agregar la vista del origen de datos que se usó para definir el conjunto de entrenamiento como datos de prueba externos y, a continuación, agregar las condiciones en la cuadrícula **Filtro de conjunto de datos** .  
   
- **Para obtener más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
  **Condiciones**  
  Muestra los nombres de tabla, seguidos de los nombres de columna y las condiciones.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Y/O**|Elija un operador para unir varias condiciones.|  
-|**Columna de estructura de minería de datos**|Haga clic para seleccionar un origen de datos y, a continuación, haga clic en las líneas sucesivas en la cuadrícula para agregar las columnas del origen de datos.<br /><br /> La primera línea de la cuadrícula especifica la vista del origen de datos. Después de seleccionar una vista del origen de datos, **Columna de la estructura de minería de datos** muestra un icono de tabla y el campo **Valor** muestra la combinación de todos los criterios que ha definido para este origen de datos.<br /><br /> Después de haber seleccionado un origen de datos, el cuadro **Columna de la estructura de minería de datos** proporciona una lista desplegable de columnas individuales del origen de datos.|  
+|**Y/o**|Elija un operador para unir varias condiciones.|  
+|**Columna de la estructura de minería de datos**|Haga clic para seleccionar un origen de datos y, a continuación, haga clic en las líneas sucesivas en la cuadrícula para agregar las columnas del origen de datos.<br /><br /> La primera línea de la cuadrícula especifica la vista del origen de datos. Después de seleccionar una vista del origen de datos, **Columna de la estructura de minería de datos** muestra un icono de tabla y el campo **Valor** muestra la combinación de todos los criterios que ha definido para este origen de datos.<br /><br /> Después de haber seleccionado un origen de datos, el cuadro **Columna de la estructura de minería de datos** proporciona una lista desplegable de columnas individuales del origen de datos.|  
 |**Operador**|Seleccione un operador de la lista.|  
-|**Valor**|Para las tablas, el campo **Valor** muestra la combinación de todos los filtros que se aplican al origen de datos. También puede hacer clic en la compilación **(...)**  situado a la derecha del cuadro de texto para abrir el **filtro** cuadro de diálogo y generar una condición.|  
+|**Valor**|Para las tablas, el campo **Valor** muestra la combinación de todos los filtros que se aplican al origen de datos. También puede hacer clic en el botón compilar **(...)** que se encuentra a la derecha del cuadro de texto para abrir el cuadro de diálogo **filtro** y generar una condición.|  
   
- **Expresión**  
+ **Expression**  
  Muestra el conjunto de criterios que generó con la cuadrícula.  
   
  **Editar consulta**  
  Cambia el modo de edición de filtro para que pueda escribir directamente una expresión de filtro en el cuadro de texto **Expresión** .  
   
 > [!NOTE]  
->  Después de haber realizado cambios en la expresión de filtro, no puede volver al modo de edición en la cuadrícula, incluso después de haber guardado la expresión en el cuadro **Expresión de filtro** en la pestaña **Selección de entrada** . Si desea generar una expresión con la cuadrícula, debe eliminar la expresión de filtro existente y volver a comenzar.  
+>  Una vez realizados los cambios manuales en la expresión de filtro, no puede volver al modo de edición de cuadrícula, incluso después de haber guardado la expresión en el cuadro **expresión de filtro** en la pestaña **selección de entrada** . Si desea crear una expresión con la cuadrícula, debe eliminar la expresión de filtro existente y empezar de nuevo.  
   
  **Revertir modificaciones de consulta**  
  Restaura la cuadrícula a su estado anterior y cancela cualquier cambio que realizara en la expresión de filtro.  
   
-## <a name="see-also"></a>Vea también  
- [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)  
   
   

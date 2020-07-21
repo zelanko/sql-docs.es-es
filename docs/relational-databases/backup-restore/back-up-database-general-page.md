@@ -1,5 +1,6 @@
 ---
 title: Copia de seguridad de base de datos (página General) | Microsoft Docs
+description: En SQL Server, use la página General del cuadro de diálogo Copia de seguridad de base de datos para ver o modificar la configuración de origen y destino de una operación de copia de seguridad de la base de datos.
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
@@ -12,21 +13,21 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d47d3f31533dc7cabd4195ad585068474fe446eb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940925"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719972"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
   
  Para obtener más información sobre los conceptos básicos de copias de seguridad, vea [Información general de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) correspondiente si hace clic en el botón **Script** y luego selecciona un destino para el script.  
   
  **Para utilizar SQL Server Management Studio a fin de crear una copia de seguridad**  
   
@@ -39,7 +40,7 @@ ms.locfileid: "67940925"
   
  **Para crear una copia de seguridad parcial**  
   
--   Para crear una copia de seguridad parcial, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) de con la opción PARTIAL.  
+-   En el caso de una copia de seguridad parcial, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) con la opción PARTIAL.  
   
 ## <a name="options"></a>Opciones  
   
@@ -55,7 +56,7 @@ ms.locfileid: "67940925"
  **Tipo de copia de seguridad**  
  Seleccione el tipo de copia de seguridad que desea realizar para la base de datos especificada.  
   
-|Tipo de copia de seguridad|Disponible para|Restrictions|  
+|Tipo de copia de seguridad|Disponible para|Restricciones|  
 |-----------------|-------------------|------------------|  
 |Completo|Bases de datos, archivos y grupos de archivos|En la base de datos **maestra** , solo son posibles copias de seguridad completas.<br /><br /> En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
 |Diferencial|Bases de datos, archivos y grupos de archivos|En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
@@ -77,7 +78,7 @@ ms.locfileid: "67940925"
 |**Base de datos**|Especifica que se realizará una copia de seguridad de toda la base de datos.|  
 |**Archivos y grupos de archivos**|Especifica que se realizará una copia de seguridad de los archivos y grupos de archivos indicados.<br /><br /> Al seleccionar esta opción, se abre el cuadro de diálogo **Seleccionar archivos y grupos de archivos** . Después de seleccionar los grupos de archivos o los archivos que quiere incluir en la copia de seguridad y hacer clic en **Aceptar**, las selecciones aparecen en el cuadro **Archivos y grupos de archivos** .|  
   
-### <a name="destination"></a>Destino  
+### <a name="destination"></a>Destination  
  Las opciones del panel **Destino** permiten especificar el tipo de dispositivo de copia de seguridad para la operación de copia de seguridad y buscar un dispositivo de copia de seguridad lógico o físico existente.  
   
 > [!NOTE]  
@@ -90,19 +91,19 @@ ms.locfileid: "67940925"
 |-|-|  
 |**Disco**|Hace la copia de seguridad en disco. Puede tratarse de un archivo de sistema o un dispositivo de copia de seguridad basado en disco creado para la base de datos. Los discos seleccionados actualmente aparecerán en la lista **Copia de seguridad en** . Puede seleccionar hasta 64 dispositivos de disco para la operación de copia de seguridad.|  
 |**Cinta**|Hace la copia de seguridad en cinta. Puede tratarse de una unidad de cinta local o un dispositivo de copia de seguridad basado en cinta creado para la base de datos. Las cintas seleccionadas actualmente aparecerán en la lista **Copia de seguridad en** . El número máximo es 64. Si no hay dispositivos de cinta conectados al servidor, esta opción no estará activada. Las cintas que seleccione aparecerán en la lista **Copia de seguridad en** .<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
-|**Dirección URL**|Hace la copia de seguridad del almacenamiento de blobs de Microsoft Azure.|  
+|**URL**|Hace la copia de seguridad del almacenamiento de blobs de Microsoft Azure.|  
   
  El siguiente conjunto de las opciones que aparecen depende del tipo de destino seleccionado. Si selecciona Disco o Cinta, se muestran las siguientes opciones.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un archivo o un dispositivo a la lista **Copia de seguridad en** . Puede hacer copias de seguridad de hasta 64 dispositivos simultáneamente en un disco remoto o local. Para especificar un archivo en un disco remoto, utilice el nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
  
  
   
- **Quitar**  
+ **Remove**  
  Quita uno o más dispositivos seleccionados actualmente de la lista **Copia de seguridad en** .  
   
- **Contenido**  
+ **Contents**  
 Muestra el contenido del medio del dispositivo seleccionado, si existe.  El botón no realiza una función cuando se especifica una dirección **URL** . 
    
 Cuadro de diálogo**Seleccionar destino de la copia de seguridad** . El cuadro de diálogo **Seleccionar destino de la copia de seguridad** aparece después de seleccionar **Agregar**.   El conjunto de las opciones que aparecen depende del tipo de destino seleccionado. 

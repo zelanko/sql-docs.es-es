@@ -1,5 +1,6 @@
 ---
 title: Instalación de PolyBase en Windows | Microsoft Docs
+description: Aprenda a instalar PolyBase como un solo nodo o grupo de escalado horizontal de PolyBase. Puede usar un asistente para la instalación o un símbolo del sistema. Por último, habilite PolyBase.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -10,20 +11,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cb70f4f5746bace6f4f7ad097a852853fea6c3ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908669"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901288"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Evaluaciones](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
    
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
    
 - Edición SQL Server Evaluation (64 bits).  
    
@@ -33,7 +34,7 @@ Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Eval
    
 - Espacio mínimo disponible en disco duro: 2 GB.
   
-- Recomendaciones: Un mínimo de 16 GB de RAM.
+- Se recomienda: Un mínimo de 16 GB de RAM.
    
 - TCP/IP debe estar habilitado para que PolyBase funcione correctamente. TCP/IP está habilitado de manera predeterminada en todas las ediciones de SQL Server, excepto en las ediciones Developer y Express de SQL Server. Para que PolyBase funcione correctamente en las ediciones Developer y Express, debe habilitar la conectividad TCP/IP. Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -95,7 +96,7 @@ Después de instalar PolyBase de forma independiente o en un grupo de escalado h
    > Después de la instalación, debe [habilitar la característica PolyBase](#enable).
 
 
-##  <a name="installing"></a> Usar un símbolo del sistema
+##  <a name="use-a-command-prompt"></a><a name="installing"></a> Usar un símbolo del sistema
 
 Use los valores de esta tabla para crear scripts de instalación. Los servicios Motor de SQL Server PolyBase y Movimiento de datos de SQL Server PolyBase deben ejecutarse en la misma cuenta. En un grupo de escalado horizontal de PolyBase, se deben ejecutar con la misma cuenta de dominio los servicios de PolyBase en todos los nodos.  
    
@@ -104,8 +105,8 @@ Use los valores de esta tabla para crear scripts de instalación. Los servicios 
 
 |Componente de SQL Server|Parámetro y valores|Descripción|  
 |--------------------------|--------------------------|-----------------|  
-|Control del programa de instalación de SQL Server|**Necesario**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
-|motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
+|Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio Movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
@@ -151,7 +152,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
    
 ```  
 
-## <a id="enable"></a> Habilitar PolyBase
+## <a name="enable-polybase"></a><a id="enable"></a> Habilitar PolyBase
 
 Tras la instalación, se debe habilitar PolyBase para acceder a sus características. Use el siguiente comando de Transact-SQL. Las instancias de SQL 2019 implementadas durante la instalación del Clúster de macrodatos tienen esta opción habilitada de forma predeterminada.
 
@@ -166,7 +167,7 @@ RECONFIGURE;
 
 PolyBase instala tres bases de datos de usuario: DWConfiguration, DWDiagnostics y DWQueue. Estas bases de datos son para uso de PolyBase. No las modifique ni las elimine.  
    
-### <a id="confirminstall"></a> Cómo confirmar la instalación  
+### <a name="how-to-confirm-installation"></a><a id="confirminstall"></a> Cómo confirmar la instalación  
 
 Ejecute el siguiente comando: Si PolyBase está instalado, el valor devuelto es 1. De lo contrario, es 0.  
 
@@ -178,9 +179,9 @@ SELECT SERVERPROPERTY ('IsPolyBaseInstalled') AS IsPolyBaseInstalled;
 
 El programa de instalación de SQL Server PolyBase crea las siguientes reglas de firewall en el equipo:  
    
-- SQL Server PolyBase - Motor de base de datos - \<nombreDeInstanciaDeSQLServer> (TCP de entrada)  
+- SQL Server PolyBase - Motor de base de datos: \<SQLServerInstanceName> (TCP de entrada)  
    
-- SQL Server PolyBase -> Servicios de PolyBase - \<nombreDeInstanciaDeSQLServer> (TCP de entrada)  
+- SQL Server PolyBase -> Servicios de PolyBase: \<SQLServerInstanceName> (TCP de entrada)  
 
 - SQL Server PolyBase -> SQL Browser -> (UDP de entrada)  
    

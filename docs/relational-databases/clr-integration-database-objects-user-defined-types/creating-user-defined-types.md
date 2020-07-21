@@ -1,5 +1,6 @@
 ---
-title: Creación de un tipo definido por el usuario | Microsoft Docs
+title: Crear un tipo definido por el usuario | Microsoft Docs
+description: Para crear un UDT para instalarlo en SQL Server, cree primero una clase en un lenguaje de programación de .NET Framework, que se ajuste a las especificaciones para crear UDT.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a3b9a924292152fbe049e42624f60a554bd6ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727795"
 ---
 # <a name="creating-user-defined-types"></a>Crear tipos definidos por el usuario
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
   
- La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El CLR puede habilitarse mediante la **sp_configure** procedimiento almacenado del sistema como se muestra en la siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones:  
+ La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR puede habilitarse mediante el **sp_configure** procedimiento almacenado del sistema, como se muestra en las siguientes [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +41,9 @@ Reconfigure
  Muestra las técnicas de codificación implicadas en la creación de tipos definidos por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
- La lista de código siguiente define el UDT Point, que se describe en detalle en [codificación de tipos](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ La siguiente lista de código define el UDT Point, que se describe en detalle en [codificación de tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones acerca de cómo instalar estos ejemplos, consulte [ejemplos de motor de base de datos de SQL Server](https://msftengprodsamples.codeplex.com/).  
+ Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones sobre cómo instalar estos ejemplos, vea [ejemplos de motor de base de datos de SQL Server](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -84,7 +85,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +234,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -330,7 +331,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tipos CLR definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

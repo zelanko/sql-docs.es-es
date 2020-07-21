@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d080cfc68ebab00a7b699d427be064ef4a49ecaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca0fb62ccb32ce244e1087281997dcd9929df89c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066613"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>Claves simétricas en bases de datos de usuario
   Esta regla comprueba si las claves que tienen una longitud de menos de 128 bytes no utilizan el algoritmo de cifrado RC2 o RC4.  
@@ -28,7 +27,7 @@ ms.locfileid: "63253413"
 ## <a name="for-more-information"></a>Para obtener más información  
  [Elegir un algoritmo de cifrado](../security/encryption/choose-an-encryption-algorithm.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

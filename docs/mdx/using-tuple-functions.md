@@ -1,5 +1,5 @@
 ---
-title: Usar funciones de tupla | Microsoft Docs
+title: Usar las funciones de tupla | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037978"
 ---
 # <a name="using-tuple-functions"></a>Usar funciones de tupla
@@ -22,7 +22,7 @@ ms.locfileid: "68037978"
   
  Las funciones de tupla, al igual que las funciones de miembro y de conjunto, son esenciales para negociar las estructuras multidimensionales de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Hay tres funciones de tupla en MDX, [actual &#40;MDX&#41;](../mdx/current-mdx.md), [elemento &#40;tupla&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) y [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). En la consulta de ejemplo siguiente se muestra el modo de usar cada una de estas funciones:  
+ Hay tres funciones de tupla en MDX, [Current &#40;mdx&#41;](../mdx/current-mdx.md), [Item &#40;tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md) y [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). En la consulta de ejemplo siguiente se muestra el modo de usar cada una de estas funciones:  
   
  `WITH`  
   
@@ -46,9 +46,9 @@ ms.locfileid: "68037978"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;sintaxis de MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Uso de funciones de miembro](../mdx/using-member-functions.md)   
- [Uso de funciones de conjuntos](../mdx/using-set-functions.md)  
+ [Usar funciones miembro](../mdx/using-member-functions.md)   
+ [Usar funciones de conjuntos](../mdx/using-set-functions.md)  
   
   

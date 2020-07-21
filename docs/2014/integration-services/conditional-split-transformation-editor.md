@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación División condicional | Microsoft Docs
+title: Editor de transformación división condicional | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405d20ce5711f3e3378b0037b6d4c1f753a8f09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060885"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434922"
 ---
 # <a name="conditional-split-transformation-editor"></a>División condicional, editor de transformación
   Use el cuadro de diálogo **Editor de transformación División condicional** para crear expresiones, establecer el orden de evaluación de expresiones y asignar un nombre a los resultados de una división condicional. Este cuadro de diálogo incluye operadores y funciones matemáticas, de cadenas y de fecha y hora que puede utilizar para generar expresiones. La primera condición evaluada como True determinará la salida a la que se dirigirá una fila.  
@@ -30,18 +29,18 @@ ms.locfileid: "66060885"
  Para más información sobre la transformación División condicional, vea [Transformación División condicional](data-flow/transformations/conditional-split-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Pedido de**  
+ **Pedido**  
  Seleccione una fila y utilice las teclas de dirección de la derecha para cambiar el orden de evaluación de las expresiones.  
   
- **Nombre de salida**  
+ **Nombre de archivo de salida**  
  Escriba un nombre de salida. El valor predeterminado es una lista numerada de casos, pero puede elegir cualquier nombre descriptivo único.  
   
- **Condición**  
+ **Condition**  
  Escriba una expresión o genere una arrastrándola de la lista de columnas, variables, funciones y operadores disponibles.  
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Temas relacionados: **  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](expressions/functions-ssis-expression.md)  
   
  **Nombre de salida predeterminado**  
  Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  
@@ -49,7 +48,7 @@ ms.locfileid: "66060885"
  **Configurar la salida de errores**  
  Especifique cómo quiere controlar los errores mediante el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Dividir un conjunto de datos usando la transformación División condicional](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

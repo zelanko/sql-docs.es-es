@@ -1,5 +1,5 @@
 ---
-title: Vistas de actualización de ejemplo del método (VB) | Microsoft Docs
+title: Ejemplo del método de actualización de vistas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX]
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c4b807bbadb5a9b4c8278be8ae895cd6ce4309c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67964734"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752933"
 ---
 # <a name="views-refresh-method-example-vb"></a>Ejemplo de método Refresh de vistas (VB)
-El código siguiente muestra cómo actualizar el [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de [vista](../../../ado/reference/adox-api/view-object-adox.md) objetos desde el **catálogo** se puede tener acceso.  
+En el código siguiente se muestra cómo actualizar la colección [views](../../../ado/reference/adox-api/views-collection-adox.md) de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de que se pueda tener acceso a los objetos de [vista](../../../ado/reference/adox-api/view-object-adox.md) del **Catálogo** .  
   
 ```  
 ' BeginViewsRefreshVB  
@@ -55,6 +55,6 @@ End Sub
 ' EndViewsRefreshVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Actualizar (método) (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Refresh (método) (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

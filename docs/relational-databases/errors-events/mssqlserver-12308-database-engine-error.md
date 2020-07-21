@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: b8a8a2d7-eda5-409c-8cc3-7ba32f0d4fd7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7cb77675e92d0b459ff553d7e99587b5604069a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03ea686c82a820c1c8c6f9007df3826b667c22cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781120"
 ---
-# <a name="mssqlserver12308"></a>MSSQLSERVER_12308
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_12308"></a>MSSQLSERVER_12308
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|12308|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|12308|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|HK_UNSUPPORTED_TABLE_VALUED_FUNCTIONS|  
 |Texto del mensaje|No se admiten funciones con valores de tabla con '*construct*'.|  

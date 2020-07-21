@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51272dad57558cdb771f9b98a2f5e5b3da7609cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055366"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
   En este tema se describe cómo crear un rol de aplicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Los roles de aplicación limitan el acceso de los usuarios a una base de datos excepto a través de aplicaciones específicas. Los roles de aplicación no tienen usuarios, de modo que no aparece la lista **Miembros del rol** cuando se selecciona **Rol de aplicación** .  
@@ -39,14 +38,14 @@ ms.locfileid: "63011948"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-an-application-role"></a>Para crear un rol de aplicación  
   
@@ -62,20 +61,20 @@ ms.locfileid: "63011948"
   
 6.  En el cuadro **Esquema predeterminado** , determine el esquema al que pertenecerán los objetos creados por este rol especificando los nombres de objeto. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Buscar esquema**.  
   
-7.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo rol. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
+7.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo rol. Vuelva a escribir esa contraseña en el cuadro **Confirmar contraseña** .  
   
 8.  En **Esquemas propiedad de este rol**, seleccione o vea los esquemas que pertenecerán a este rol. Un esquema solo puede ser propiedad de otro esquema o de un rol.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El **rol de aplicación - nuevo** cuadro de diálogo también proporciona opciones en dos páginas adicionales: **Elementos protegibles** y **propiedades extendidas**.  
+ En el cuadro de diálogo **Rol de aplicación - Nuevo** también se proporcionan opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   
 -   La página **Propiedades extendidas** permite agregar propiedades personalizadas a los usuarios de base de datos.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-an-application-role"></a>Para crear un rol de aplicación  
   

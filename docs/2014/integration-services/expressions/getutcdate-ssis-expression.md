@@ -12,15 +12,14 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 946d728d57210149b84850ca640edb4cafa57195
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5e8c8dbdee729b01ed4b49e5a38ff989c80fbc20
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62898070"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428632"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (expresión de SSIS)
   Devuelve la fecha actual del sistema en hora UTC (horario universal coordinado u hora del meridiano de Greenwich) usando un formato DT_DBTIMESTAMP. La función GETUTCDATE no tiene argumentos.  
@@ -57,7 +56,7 @@ DATEDIFF("dd",ModifiedDate,GETUTCDATE())
 DATEADD("Month",3,GETUTCDATE())  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [GETDATE &#40;expresión de SSIS&#41;](getdate-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   

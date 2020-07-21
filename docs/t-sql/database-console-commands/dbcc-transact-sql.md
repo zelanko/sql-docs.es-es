@@ -36,15 +36,15 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37dfa0e39a2c0f42def2fcb4d0b9256a69a9f835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040520"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85638328"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 El lenguaje de programación [!INCLUDE[tsql](../../includes/tsql-md.md)] proporciona instrucciones DBCC que actúan como comandos de consola de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -54,7 +54,7 @@ Las instrucciones de comandos de consola de base de datos se dividen en las sigu
 |---|---|
 |Mantenimiento|Tareas de mantenimiento en las bases de datos, los índices o los grupos de archivos.|  
 |Varios|Tareas varias como habilitar marcas de seguimiento o quitar una DLL de la memoria.|  
-|Informativa|Tareas que recopilan y muestran diversos tipos de información.|  
+|Informativo|Tareas que recopilan y muestran diversos tipos de información.|  
 |Validación|Operaciones de validación en una base de datos, tabla, índice, catálogo, grupo de archivos o asignación de páginas de base de datos.|  
   
 Los comandos DBCC reciben parámetros de entrada y devuelven valores. Todos los parámetros de los comandos DBCC pueden aceptar literales Unicode y DBCS.
@@ -143,6 +143,6 @@ La definición de una unidad de progreso depende de la fase actual de ejecución
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y versiones posteriores|  
   
   

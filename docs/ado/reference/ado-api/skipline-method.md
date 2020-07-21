@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Skipline method [ADO]
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f983646fd87be27fe9861f3a37b0e852a05ba06b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931045"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759881"
 ---
 # <a name="skipline-method"></a>Método SkipLine
-Omite una línea completa al leer un texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
+Omite una línea completa cuando se lee una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md)de texto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,10 +33,10 @@ Omite una línea completa al leer un texto [Stream](../../../ado/reference/ado-a
 Stream.SkipLine  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Se omiten todos los caracteres hasta e incluyendo el separador de la línea siguiente. De forma predeterminada, el [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) es **adCRLF**. Si intenta omitir [EOS](../../../ado/reference/ado-api/eos-property.md), la posición actual se mantendrá en **EOS**.  
+## <a name="remarks"></a>Observaciones  
+ Se omiten todos los caracteres hasta el separador de línea siguiente, incluido. De forma predeterminada, el valor de [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) es **adCRLF**. Si intenta omitir más allá de [EOS](../../../ado/reference/ado-api/eos-property.md), la posición actual permanecerá en **EOS**.  
   
- El **SkipLine** método se utiliza con secuencias de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**).  
+ El método **SkipLine** se usa con secuencias de texto (el[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

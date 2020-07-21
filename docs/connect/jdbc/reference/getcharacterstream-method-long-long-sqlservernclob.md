@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 69b626e84288764fbe1da34ac0a5e6430eaa8217
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80913151"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>Método getCharacterStream (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,8 +45,8 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método getCharacterStream se especifica mediante el método getCharacterStream en la interfaz java. SQL. NClob.  
+## <a name="remarks"></a>Observaciones  
+ El método getCharacterStream especifica este método getCharacterStream en la interfaz java.sql.NClob.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getCharacterStream &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

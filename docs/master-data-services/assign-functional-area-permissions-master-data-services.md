@@ -1,5 +1,5 @@
 ---
-title: Asignar permisos del área funcional (Master Data Services) | Microsoft Docs
+title: Asignar permisos del área funcional
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c868e9f574e9c38cdac287fa57f842854bbf06ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f7e4e7bc0118849f452d4bccbb7d07706a4c411
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812802"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Asignar permisos del área funcional (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Asigne el permiso de área funcional para conceder a los usuarios o grupos acceso a las áreas funcionales de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
@@ -51,8 +51,8 @@ ms.locfileid: "68047663"
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree un administrador de modelos &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Componentes comodín y validación del contenido | Microsoft Docs
+description: Obtenga información sobre cómo se usan los componentes de comodín Element y Attribute de XML para aumentar la flexibilidad con respecto a lo que se permite que aparezca en un modelo de contenido.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ba4e15016ca7b6ae3094b575ee87a1c7508b8aac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1fac8a7a0e7eafc4b3bb04809ad51ee2f1b970e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096949"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729823"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componentes comodín y validación del contenido
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Los componentes comodín se utilizan para aumentar la flexibilidad en cuanto a lo que se permite que aparezca en un modelo de contenido. El lenguaje XSD admite estos componentes de las formas siguientes:  
   
 -   Componentes de carácter comodín de elementos. Se representan mediante el elemento **\<xsd:any>** .  
   
 -   Componentes de carácter comodín de atributos. Se representan mediante el elemento **\<xsd:anyAttribute>** .  
   
- Ambos elementos de carácter comodín, **\<xsd:any>** y **\<xsd:anyAttribute>** , admiten el uso de un atributo **processContents**. Esto permite especificar un valor que indica el modo en que las aplicaciones XML controlan la validación del contenido de los documentos asociado a estos elementos de caracteres comodín. A continuación se exponen los distintos valores y su efecto:  
+ Los dos elementos de carácter comodín ( **\<xsd:any>** y **\<xsd:anyAttribute>** ) admiten el uso de un atributo **processContents**. Esto permite especificar un valor que indica el modo en que las aplicaciones XML controlan la validación del contenido de los documentos asociado a estos elementos de caracteres comodín. A continuación se exponen los distintos valores y su efecto:  
   
 -   El valor **strict** especifica que se valida totalmente el contenido.  
   

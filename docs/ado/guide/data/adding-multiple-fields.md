@@ -1,5 +1,5 @@
 ---
-title: Al agregar varios campos | Microsoft Docs
+title: Agregar varios campos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - editing data [ADO], adding multiple fields
 - editing data [ADO], AddNew method
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd5999d62056582d5739f50f415680b9b0dc8a3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926277"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761421"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Agregar varios campos y valores
-En ocasiones, podría ser más eficaz pasar una matriz de campos y sus valores correspondientes a la **AddNew** método, en lugar de la configuración **valor** varias veces para cada nuevo campo. Si *FieldList* es una matriz, *valores* también debe ser una matriz con el mismo número de miembros; de lo contrario, se produce un error. El orden de los nombres de campo debe coincidir con el orden de los valores de campo en cada matriz. El código siguiente pasa una matriz de campos y una matriz de valores para el **AddNew** método.
+En ocasiones, puede ser más eficaz pasar en una matriz de campos y sus valores correspondientes al método **AddNew** , en lugar de establecer el **valor** varias veces para cada nuevo campo. Si *FieldList* es una matriz, *los valores* también deben ser una matriz con el mismo número de miembros; de lo contrario, se produce un error. El orden de los nombres de campo debe coincidir con el orden de los valores de campo de cada matriz. En el código siguiente se pasa una matriz de campos y una matriz de valores al método **AddNew** .
 
 ```
 'BeginAddNew2

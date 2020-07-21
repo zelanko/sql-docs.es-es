@@ -1,5 +1,6 @@
 ---
 title: Métodos de administración de los espacios de nombres del servidor de informes | Microsoft Docs
+description: El servicio web de administración del servidor de informes contiene métodos que puede utilizar para administrar los informes, carpetas y recursos en la base de datos del servidor de informes.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ed5267303ad37d76b571c676b2010e8f04c8a09
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278297"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509813"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de administración de los espacios de nombres del servidor de informes
   El servicio web de administración del servidor de informes contiene métodos que puede utilizar para administrar los informes, carpetas y recursos en la base de datos del servidor de informes.  
@@ -28,7 +29,7 @@ ms.locfileid: "72278297"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Cancela la ejecución de un trabajo.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Agrega una carpeta a la base de datos del servidor de informes o a la biblioteca de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Agrega un nuevo elemento a una base de datos del servidor de informes o a la biblioteca de SharePoint. Este método se aplica a los tipos de elemento **Report**, **Model**, **Dataset**, **Component**, **Resource** y **DataSource**.|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession (System. String, System. String, System. Byte [], ReportService2010. WARNING [] @)|Crea una nueva sesión de edición de informes.|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String, System.String,System.Byte[],ReportService2010.Warning[]@)|Crea una nueva sesión de edición de informes.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Quita un elemento de la base de datos del servidor de informes o biblioteca de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Devuelve los elementos de la base de datos del servidor de informes o biblioteca de SharePoint que coinciden con el criterio de búsqueda especificado.|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|Desencadena un evento basado en los parámetros proporcionados.|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 593dd0cabd5c52102a1abf53b2d9dc8587e41130
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62873493"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970395"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
   Puede ver o cambiar las programaciones del conjunto de recopilación mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +48,7 @@ ms.locfileid: "62873493"
   
 2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo de almacenamiento en memoria caché, como **Estadísticas de consultas**y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
-3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos:  
+3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos.  
   
     1.  En el panel de detalles, haga doble clic en el número que se muestra para la columna **Frecuencia de recopilación (s)** en la tabla **Elementos de recopilación** .  
   
@@ -99,12 +98,12 @@ ms.locfileid: "62873493"
   
 6.  Haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo **Propiedades del conjunto de recopilación de datos** .  
   
-####  <a name="CollectionSet"></a> Cuadro de diálogo Propiedades del conjunto de recopilación de datos  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Cuadro de diálogo Propiedades del conjunto de recopilación de datos  
  **Página General**  
   
  Utilice esta página para configurar la recopilación y carga de datos, las programaciones y los períodos de retención de datos en el almacén de administración de datos. Esta página también proporciona información sobre los conjuntos de recopilación, como los tipos de recopilador y las frecuencias de recopilación, así como sobre los parámetros de entrada que se utilizan para un conjunto de recopilación.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del conjunto de recopilación al que hace referencia esta página.  
   
  **Recopilación y carga de datos**  
@@ -118,7 +117,7 @@ ms.locfileid: "62873493"
  **Elementos de recopilación**  
  Muestra los elementos de recopilación del conjunto de recopilación. Se proporciona la información siguiente para cada elemento de recopilación:  
   
--   **Name**  
+-   **Nombre**  
   
 -   **Tipo de recopilador**  
   
@@ -161,7 +160,7 @@ ms.locfileid: "62873493"
   
  Utilice esta página para ver una descripción del conjunto de recopilación al que hace referencia esta página de propiedades.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar la recopilación de datos](manage-data-collection.md)   
  [Recopilación de datos](data-collection.md)  
   

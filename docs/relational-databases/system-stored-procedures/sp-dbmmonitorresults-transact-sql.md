@@ -16,17 +16,17 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865667"
 ---
-# <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve filas de estado para una base de datos supervisada de la tabla de estado en la que está almacenado el historial de supervisión de la creación de reflejo de la base de datos y permite elegir si el procedimiento obtiene antes el estado más reciente.  
   
@@ -60,11 +60,11 @@ sp_dbmmonitorresults database_name
   
  5 = Filas devueltas los dos últimos días  
   
- 6 = 100 últimas filas  
+ 6 = últimas 100 filas  
   
- 7 = último 500 filas  
+ 7 = últimas 500 filas  
   
- 8 = último 1.000 filas  
+ 8 = últimas 1.000 filas  
   
  9 = Último millón de filas  
   
@@ -73,7 +73,7 @@ sp_dbmmonitorresults database_name
   
  0 = No actualiza el estado de la base de datos. Los resultados se calculan utilizando únicamente las dos últimas filas, cuya antigüedad depende de cuándo se actualizó la tabla de estado.  
   
- 1 = actualiza el estado de la base de datos mediante una llamada a **sp_dbmmonitorupdate** antes de calcular los resultados. Sin embargo, si se ha actualizado la tabla de estado dentro de los 15 segundos anteriores, o el usuario no es un miembro de la **sysadmin** rol fijo de servidor **sp_dbmmonitorresults** se ejecuta sin actualizar el estado.  
+ 1 = actualiza el estado de la base de datos mediante una llamada a **sp_dbmmonitorupdate** antes de calcular los resultados. Sin embargo, si la tabla de estado se ha actualizado en los 15 segundos anteriores o el usuario no es miembro del rol fijo de servidor **sysadmin** , **sp_dbmmonitorresults** se ejecuta sin actualizar el estado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -81,11 +81,11 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve el número solicitado de filas de estado del historial para la base de datos especificada. Cada fila contiene la siguiente información:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nombre de una base de datos reflejada.|  
 |**role**|**int**|Rol de creación de reflejos actual de la instancia del servidor:<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo|  
-|**mirroring_state**|**int**|Estado de la base de datos:<br /><br /> 0 = suspensión<br /><br /> 1 = desconectada<br /><br /> 2 = En proceso de sincronización<br /><br /> 3 = Pendiente de conmutación por error<br /><br /> 4 = Sincronizada|  
+|**mirroring_state**|**int**|Estado de la base de datos:<br /><br /> 0 = suspendido<br /><br /> 1 = desconectada<br /><br /> 2 = En proceso de sincronización<br /><br /> 3 = Pendiente de conmutación por error<br /><br /> 4 = Sincronizada|  
 |**witness_status**|**int**|El estado de conexión del testigo en la sesión de creación de reflejo de la base de datos puede ser:<br /><br /> 0 = Desconocido<br /><br /> 1 = Conectado<br /><br /> 2 = Desconectado|  
 |**log_generation_rate**|**int**|Cantidad (en kilobytes/seg.) de registro generado desde la actualización anterior del estado de la creación de reflejos de esta base de datos.|  
 |**unsent_log**|**int**|Tamaño (en kilobytes) del registro no enviado en la cola de envío del servidor principal.|  
@@ -100,13 +100,13 @@ sp_dbmmonitorresults database_name
 |**local_time**|**datetime**|Hora del reloj del sistema en la instancia local del servidor a la que se actualizó esta fila.|  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_dbmmonitorresults** se puede ejecutar solo en el contexto de la **msdb** base de datos.  
+ **sp_dbmmonitorresults** solo se puede ejecutar en el contexto de la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** rol fijo de servidor o en el **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos. El **dbm_monitor** rol permite a sus miembros ver el estado, la creación de reflejo de la base de datos, pero no actualizarlo, pero no ver o configurar los eventos de creación de reflejo de la base de datos.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** . El rol **dbm_monitor** permite a sus miembros ver el estado de la creación de reflejo de la base de datos, pero no actualizarlo, pero no ver ni configurar eventos de creación de reflejo de la base de datos.  
   
 > [!NOTE]  
->  La primera vez que **sp_dbmmonitorupdate** se ejecuta, crea el **dbm_monitor** rol fijo de base de datos en el **msdb** base de datos. Los miembros de la **sysadmin** rol fijo de servidor puede agregar a cualquier usuario la **dbm_monitor** rol fijo de base de datos.  
+>  La primera vez que se ejecuta **sp_dbmmonitorupdate** , se crea el rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** . Los miembros del rol fijo de servidor **sysadmin** pueden agregar cualquier usuario al rol fijo de base de datos **dbm_monitor** .  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo devuelve las filas registradas durante las dos horas anteriores sin actualizar el estado de la base de datos.  
@@ -116,12 +116,12 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f020dd812b53e531a3f4634ccba0d2cba980b89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103799"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
@@ -59,7 +59,7 @@ ms.locfileid: "66103799"
 ## <a name="reporting-services-performance-objects"></a>Objetos de rendimiento en Reporting Services  
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] incluye los objetos de rendimiento siguientes:  
   
--   **MSRS 2011 Web Service** y `MSRS 2011 SharePoint Mode Web Service` para supervisar el rendimiento del servidor de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
+-   **Servicio Web de MSRS 2011** y `MSRS 2011 SharePoint Mode Web Service` para supervisar el rendimiento del servidor de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
   
 -   `MSRS 2011 Windows Service` y `MSRS 2011 Windows Service SharePoint Mode` para supervisar las operaciones programadas y la entrega de informes. Estos objetos de rendimiento incluyen una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe.  
   
@@ -79,10 +79,10 @@ ms.locfileid: "66103799"
  Además de los objetos de rendimiento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , también puede configurar eventos de SharePoint si está ejecutando un servidor de informes en modo integrado de SharePoint y ha configurado el entorno de informes para utilizar un producto de SharePoint. En esta sección, utilice Eventos para un servidor de informes en modo integrado de SharePoint para revisar los eventos de diagnóstico que pueden proporcionar información útil si el entorno de informes está integrado en SharePoint.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service &#40;modo nativo&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [Contadores de rendimiento para los objetos de rendimiento del servicio Web de MSRS 2014 y el servicio de Windows de MSRS 2014 &#40;modo nativo&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
  Describe los contadores de rendimiento que utiliza el servicio web del servidor de informes.  
   
- [Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2014 Web Service y SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  Describe los contadores de rendimiento que utiliza el servicio de Windows del servidor de informes.  
   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  
@@ -91,7 +91,7 @@ ms.locfileid: "66103799"
  Eventos para un servidor de informes en modo integrado de SharePoint  
  Describe los útiles eventos de diagnóstico que se registran cuando se ejecuta un entorno de informes con un producto de SharePoint.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Herramientas de Reporting Services](../tools/reporting-services-tools.md)  

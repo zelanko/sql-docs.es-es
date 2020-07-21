@@ -14,26 +14,26 @@ f1_keywords:
 helpviewer_keywords:
 - EOS property
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9199563f2a5d6ce594b88577cfb69766cf311492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67918927"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765536"
 ---
 # <a name="eos-property"></a>Propiedad EOS
 Indica si la posición actual está al final de la [secuencia](../../../ado/reference/ado-api/stream-object-ado.md).  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **booleano** valor que indica si la posición actual está al final de la secuencia. **EOS** devuelve **True** si no hay ningún byte más en la secuencia; devuelve **False** si hay más bytes de la posición actual.  
+ Devuelve un valor **booleano** que indica si la posición actual está al final de la secuencia. **EOS** devuelve **true** si no hay más bytes en la secuencia; Devuelve **false** si hay más bytes después de la posición actual.  
   
- Para establecer el final de la secuencia, use el [SetEOS](../../../ado/reference/ado-api/seteos-method.md) método. Para determinar la posición actual, use el [posición](../../../ado/reference/ado-api/position-property-ado.md) propiedad.  
+ Para establecer el final de la posición de la secuencia, use el método [seteos](../../../ado/reference/ado-api/seteos-method.md) . Para determinar la posición actual, use la propiedad [Position](../../../ado/reference/ado-api/position-property-ado.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [EOS y LineSeparator propiedades y ejemplo del método SkipLine (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades EOS y LineSeparator y el método SkipLine (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

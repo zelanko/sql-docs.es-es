@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65a5c846313ad6d7d840c272c23c16698530547f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770695"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437562"
 ---
 # <a name="script-component"></a>Componente de script
   El componente de script hospeda el script y permite a un paquete incluir y ejecutar código personalizado de script. Puede usar el componente de script en paquetes para los siguientes fines:  
@@ -105,7 +104,7 @@ ms.locfileid: "62770695"
 ### <a name="configuring-the-script-component-programmatically"></a>Configurar el componente de script mediante programación  
  Para obtener más información sobre las propiedades que se pueden establecer en la ventana **Propiedades** o mediante programación, haga clic en uno de los siguientes temas:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

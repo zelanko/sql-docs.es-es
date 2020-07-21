@@ -1,5 +1,5 @@
 ---
-title: Campo (ADO para la sintaxis de Visual C++) | Microsoft Docs
+title: Field (ADO para la sintaxis de Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Field collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2d5b70e1c00b34c4f1a32822b7896b088d62376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 732181ecdeb50d8201e1b6d07e3b1c6d8116408b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67932772"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757101"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Campo (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  
@@ -53,5 +53,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT Val)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)

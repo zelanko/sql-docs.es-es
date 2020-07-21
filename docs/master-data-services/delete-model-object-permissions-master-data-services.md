@@ -1,5 +1,5 @@
 ---
-title: Eliminar permisos de objeto de modelo (Master Data Services) | Microsoft Docs
+title: Eliminar permisos de objeto de modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fcf00249c322b754fef545ce03a730f127ed79fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a1705e9d94a8b5c4dccb2634fe643dc45624a62
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906280"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811980"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Eliminar permisos de objeto de modelo (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine los permisos del objeto de modelo para quitar las asignaciones que se hayan realizado.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67906280"
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-model-object-permissions"></a>Eliminar permisos de objeto de modelo  
   
@@ -54,10 +54,10 @@ ms.locfileid: "67906280"
   
 8.  Haga clic en el nodo de árbol y, en el menú contextual, haga clic en **Borrar acceso**.  
   
-9. Haga clic en **Guardar**.  
+9. Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

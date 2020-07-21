@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 616707bfb11b48b170fc8f0e8872076d2cd09d1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060363"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tablas e índices con particiones
   La creación de particiones facilita el uso de tablas o índices grandes, ya que permite administrar y tener acceso a subconjuntos de datos de forma rápida y eficaz, y mantener la integridad de una recopilación de datos al mismo tiempo. Para obtener más información, vea [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La replicación es compatible con la creación de particiones al proporcionar un conjunto de propiedades que especifican cómo se deben tratar las tablas y los índices con particiones.  
@@ -37,7 +36,7 @@ ms.locfileid: "67793291"
   
  El primer conjunto de propiedades relacionadas con la creación de particiones son las opciones de esquema de artículo que determinan si las particiones de los objetos se deben copiar en el suscriptor. Estas opciones de esquema se pueden establecer de varias maneras:  
   
--   En la página **Propiedades del artículo** del Asistente para nueva publicación o en el cuadro de diálogo Propiedades de la publicación. Para copiar los objetos enumerados en la tabla anterior, especifique un valor de `true` para las propiedades **Copiar esquemas de particiones de tabla** y **Copiar esquemas de particiones de índice**. Para obtener más información sobre cómo acceder a la página **Propiedades del artículo**, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+-   En la página **Propiedades del artículo** del Asistente para nueva publicación o en el cuadro de diálogo Propiedades de la publicación. Para copiar los objetos enumerados en la tabla anterior, especifique un valor de `true` para las propiedades **copiar esquemas de particionamiento de tabla** y **copiar esquemas de particionamiento de índice**. Para obtener más información sobre cómo acceder a la página **Propiedades del artículo**, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 -   Utilizando el parámetro *schema_option* de uno de los procedimientos almacenados siguientes:  
   
@@ -49,7 +48,7 @@ ms.locfileid: "67793291"
   
  La replicación copia los objetos en el suscriptor durante la sincronización inicial. Si el esquema de partición utiliza grupos de archivos distintos del archivo de grupos PRIMARY, esos grupos de archivos deben existir en el suscriptor antes de la sincronización inicial.  
   
- Una vez inicializado el suscriptor, los cambios de los datos se propagan al suscriptor y se aplican a las particiones adecuadas. Sin embargo, no se admiten cambios en el esquema de partición. Replicación transaccional y de mezcla no admiten la replicación de los siguientes comandos: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME o la instrucción REBUILD WITH PARTITION de ALTER INDEX.  Los cambios asociados a ellos no se replicarán automáticamente al suscriptor. Es responsabilidad del usuario realizar modificaciones similares en el suscriptor de forma manual.  
+ Una vez inicializado el suscriptor, los cambios de los datos se propagan al suscriptor y se aplican a las particiones adecuadas. Sin embargo, no se admiten cambios en el esquema de partición. Las replicaciones transaccional y de mezcla no admiten la replicación de los comandos siguientes: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ni la instrucción REBUILD WITH PARTITION de ALTER INDEX.  Los cambios asociados a ellos no se replicarán automáticamente al suscriptor. Es responsabilidad del usuario realizar modificaciones similares en el suscriptor de forma manual.  
   
 ## <a name="replication-support-for-partition-switching"></a>Compatibilidad de la replicación con la modificación de particiones  
  Una de las ventajas principales de crear particiones en una tabla es la posibilidad de mover rápida y eficazmente subconjuntos de datos entre particiones. Los datos se mueven utilizando el comando SWITCH PARTITION. De forma predeterminada, cuando en una tabla se habilita la replicación, las operaciones SWITCH PARTITION se bloquean por las razones siguientes:  
@@ -70,13 +69,13 @@ ms.locfileid: "67793291"
 ### <a name="enabling-partition-switching"></a>Habilitar la modificación de particiones  
  Las propiedades siguientes de las publicaciones transaccionales permiten a los usuarios controlar el comportamiento de la modificación de particiones en un entorno replicado:  
   
--   **\@allow_partition_switch**, cuando se establece en `true`, SWITCH PARTITION se puede ejecutar en la base de datos de publicación.  
+-   ** \@ allow_partition_switch**, cuando se establece en `true` , se puede ejecutar switch Partition en la base de datos de publicación.  
   
--   **\@replicate_partition_switch** determina si la instrucción SWITCH PARTITION de DDL se debe replicar en suscriptores. Esta opción solo es válido cuando  **\@allow_partition_switch** está establecido en `true`.  
+-   ** \@ replicate_partition_switch** determina si la instrucción switch Partition de DDL se debe replicar en los suscriptores. Esta opción solo es válida cuando ** \@ allow_partition_switch** está establecida en `true` .  
   
  Puede establecer estas propiedades utilizando [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) cuando se crea la publicación, o usando [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) después de crearla. Según se indicaba anteriormente, la replicación de mezcla no admite la modificación de particiones. Para ejecutar SWITCH PARTITION en una tabla en la que está habilitada la replicación de mezcla, quite la tabla de la publicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  
   
   

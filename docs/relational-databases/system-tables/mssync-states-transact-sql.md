@@ -15,30 +15,30 @@ dev_langs:
 helpviewer_keywords:
 - MSsync_states system table
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bc81e41299041b50e53074cd4a133c6bd9c0cf9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 240dca8f2f8eb330d22c16b928d27d4e19b237b2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016509"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889313"
 ---
-# <a name="mssyncstates-transact-sql"></a>MSsync_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El **MSsync_states** tabla pistas de qué publicación sigue estando en modo de instantáneas simultáneas. Esta tabla se almacena en la base de datos de distribución.  
+  En la tabla **MSsync_states** se realiza un seguimiento de qué publicación sigue en modo de instantánea simultánea. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Id. del publicador.|  
-|**publisher_db**|**sysname**|El nombre de la base de datos de publicación.|  
+|**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
 |**publication_id**|**int**|Id. de la publicación.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Tablas de Integration Services &#40;Transact-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
- [Copia de seguridad y restaurar tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Tablas de Integration Services &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
+ [Copias de seguridad y restauración de tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [Tablas de trasvase de registros &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   
   

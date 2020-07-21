@@ -1,29 +1,28 @@
 ---
-title: Exportar una plantilla de seguimiento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Exportar una plantilla de seguimiento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- templates [SQL Server], traces
-- trace templates [SQL Server]
-- exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60218ad4bd1d50c95764f0191bb42860b1e06107
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 82e3bab1f7042029462e3d50b3c7e550fe9eba86
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930022"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75307269"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportar una plantilla de seguimiento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para exportar una plantilla de seguimiento existente y guardarla como un archivo de plantilla (.tdf). Si exporta una plantilla de seguimiento y la guarda como un archivo, puede utilizar la plantilla con otra instancia de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para exportar una plantilla de seguimiento existente y guardarla como un archivo de plantilla (.tdf). Si exporta una plantilla de seguimiento y la guarda como un archivo, puede utilizar la plantilla con otra instancia de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-export-a-trace-template"></a>Para exportar una plantilla de seguimiento  
   

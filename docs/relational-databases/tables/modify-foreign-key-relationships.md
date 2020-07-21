@@ -17,15 +17,15 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139600"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007090"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Puede modificar el lado de clave externa de una relación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar los cambios de clave externa de una tabla cuyas columnas están relacionadas con las columnas de la tabla de clave principal.  
   
@@ -43,9 +43,9 @@ ms.locfileid: "68139600"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  La nueva columna de clave externa debe tener el mismo tipo de datos y el mismo tamaño que la columna de clave principal con la que está relacionada, con las siguientes excepciones:  
   
 -   Se puede asociar una columna de tipo **char** o **sysname** a una columna de tipo **varchar** .  
@@ -54,12 +54,12 @@ ms.locfileid: "68139600"
   
 -   Se puede asociar un tipo de datos de alias a su tipo básico.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Para modificar una clave externa  
   
@@ -72,10 +72,10 @@ ms.locfileid: "68139600"
      **Relación seleccionada**  
      Muestra las relaciones existentes. Seleccione una relación para mostrar sus propiedades en la cuadrícula situada a la derecha. Si la lista está vacía, no se han definido relaciones para la tabla.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Crea una nueva relación. Debe definir **Especificación de tablas y columnas** para que la relación sea válida.  
   
-     **Delete**  
+     **Eliminar**  
      Elimina la relación seleccionada en la lista **Relaciones seleccionadas** . Para cancelar la adición de una relación, utilice este botón para eliminar la relación.  
   
      **Categoría General**  
@@ -103,7 +103,7 @@ ms.locfileid: "68139600"
      Se expande para mostrar los campos de propiedades de **Nombre** y **Descripción**.  
   
      **Nombre**  
-     Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Este nombre se puede cambiar en cualquier momento.  
+     Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Puede cambiar el nombre en cualquier momento.  
   
      **Descripción**  
      Describe la relación. Para escribir una descripción más detallada, haga clic en **Descripción** y luego en los puntos suspensivos **(...)** que aparecen a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -111,7 +111,7 @@ ms.locfileid: "68139600"
      **Categoría Diseñador de tablas**  
      Se expande para mostrar la información de **Comprobar datos existentes al crear o al habilitar de nuevo** y **Exigir para replicación**.  
   
-     **Enforce For Replication**  
+     **Exigir para replicación**  
      Indica si se exigirá la restricción cuando un agente de replicación realice una inserción, actualización o eliminación en esta tabla.  
   
      **Exigir restricción de clave externa**  
@@ -144,7 +144,7 @@ ms.locfileid: "68139600"
   
 4.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar una clave externa**  
   
  Para modificar una restricción FOREIGN KEY mediante Transact-SQL, primero debe eliminar la restricción FOREIGN KEY existente y, a continuación, vuelva a crearla con la nueva definición. Para obtener más información, consulte [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) y [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md).  

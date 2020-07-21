@@ -1,5 +1,5 @@
 ---
-title: Objeto de vistas de catálogo (Transact-SQL) | Microsoft Docs
+title: Vistas de catálogo de objetos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - object catalog views [SQL Server]
 - catalog views [SQL Server], objects
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: daa9064feb59ab7052077d9d67701630ee7fcef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: daa8c79e9216785ef0e1433f501ae05ee2c22957
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68220352"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897982"
 ---
 # <a name="object-catalog-views-transact-sql"></a>Vistas de catálogo de objetos (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Esta sección contiene vínculos a las siguientes vistas de catálogo.
 
@@ -52,8 +51,8 @@ Esta sección contiene vínculos a las siguientes vistas de catálogo.
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de catálogo del sistema](catalog-views-transact-sql.md) [vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo](catalog-views-transact-sql.md) del sistema vistas [del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

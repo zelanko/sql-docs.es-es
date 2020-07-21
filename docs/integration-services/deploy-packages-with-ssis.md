@@ -21,10 +21,10 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71290725"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implementar paquetes con SSIS
@@ -52,7 +52,7 @@ El objetivo de este tutorial es simular la complejidad de los problemas reales d
 La mejor forma de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usándolas. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.    
     
 ## <a name="prerequisites"></a>Prerequisites    
-Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor los conceptos básicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que usará en este tutorial, puede resultarle útil completar primero el siguiente tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [Tutorial de SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor los conceptos básicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que usará en este tutorial, puede resultarle útil completar primero el siguiente tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Tutorial de SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>En el equipo de origen
 
@@ -92,10 +92,10 @@ Si planea implementar paquetes en el mismo equipo en el que va a crear el paquet
 [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 En esta lección, se preparará para implementar una solución ETL creando un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y agregando los paquetes y otros archivos necesarios al proyecto.    
     
-[Lección 2: Creación del paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Lección 2: Crear el paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 En esta lección, generará una utilidad de implementación y comprobará que el paquete de implementación incluye los archivos necesarios.    
     
-[Lección 3: Instalación de paquetes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Lección 3: Instalar los paquetes de SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 En esta lección, copiará el paquete de implementación en el equipo de destino, instalará los paquetes y, a continuación, los ejecutará.    
     
 

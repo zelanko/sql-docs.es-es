@@ -12,15 +12,14 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a33b3f99ff143b4c81de46a068bf088337ba204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62711470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020569"
 ---
 # <a name="cursor-properties"></a>Propiedades de cursor
   Las características generales de un cursor se determinan estableciendo comportamientos de los tipos de cursores al estilo de ODBC o de cursores de SQL 92/ISO. En los temas siguientes se describen los atributos de conexión y de instrucción adicionales que afectan al comportamiento de un cursor.  
@@ -29,9 +28,9 @@ ms.locfileid: "62711470"
   
 -   [Cursor Concurrency &#40;ODBC&#41;](cursor-concurrency-odbc.md) (Simultaneidad de cursor [ODBC])  
   
--   [Nivel de aislamiento de transacción de cursor](cursor-transaction-isolation-level.md)  
+-   [Nivel de aislamiento de las transacciones de cursores](cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>Vea también  
- [Uso de cursores &#40;ODBC&#41;](../using-cursors-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Usar cursores &#40;&#41;ODBC](../using-cursors-odbc.md)  
   
   

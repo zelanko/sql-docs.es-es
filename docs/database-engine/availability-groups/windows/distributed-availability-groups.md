@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907276"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894507"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/sql/sql-server/index.yml) existente.
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/sql/sql-server/) existente.
 
 > [!NOTE]
 > "DAG" no es la abreviatura oficial de *grupo de disponibilidad distribuido*, porque esa abreviatura ya se usa para hacer referencia a la característica de grupo de disponibilidad de base de datos de Exchange. Esta característica de Exchange no tiene relación alguna con los grupos de disponibilidad de SQL Server ni con los grupos de disponibilidad distribuidos.
@@ -45,7 +45,7 @@ El movimiento de datos en los grupos de disponibilidad distribuidos se puede con
 
 ![Grupo de disponibilidad distribuido y movimiento de datos](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-La única manera de que la réplica principal de AG 2 acepte inserciones, actualizaciones y eliminaciones es conmutar por error el grupo de disponibilidad distribuido de AG 1 manualmente. En la imagen anterior, como AG 1 contiene la copia de la base de datos de escritura, cuando se realiza una conmutación por error, AG 2 se convierte en el grupo de disponibilidad que puede controlar las inserciones, actualizaciones y eliminaciones. Para más información sobre cómo realizar una conmutación por error de un grupo de disponibilidad distribuido a otro, vea [Conmutación por error a un grupo de disponibilidad secundario]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups).
+La única manera de que la réplica principal de AG 2 acepte inserciones, actualizaciones y eliminaciones es conmutar por error el grupo de disponibilidad distribuido de AG 1 manualmente. En la imagen anterior, como AG 1 contiene la copia de la base de datos de escritura, cuando se realiza una conmutación por error, AG 2 se convierte en el grupo de disponibilidad que puede controlar las inserciones, actualizaciones y eliminaciones. Para más información sobre cómo realizar una conmutación por error de un grupo de disponibilidad distribuido a otro, vea [Conmutación por error a un grupo de disponibilidad secundario](configure-distributed-availability-groups.md#failover).
 
 > [!NOTE]
 > En los grupos de disponibilidad distribuidos de SQL Server 2016, la conmutación por error de un grupo de disponibilidad a otro solo puede realizarse a través de la opción FORCE_FAILOVER_ALLOW_DATA_LOSS.
@@ -55,7 +55,7 @@ La única manera de que la réplica principal de AG 2 acepte inserciones, actual
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>Requisitos de versión y edición de SQL Server de los grupos de disponibilidad distribuidos
 
-Los grupos de disponibilidad distribuidos en SQL Server 2017 o una versión posterior pueden mezclar versiones principales de SQL Server en el mismo grupo de disponibilidad distribuido. El grupo de disponibilidad que contiene el principal de lectura y escritura puede tener la misma versión (o una inferior) que los demás grupos de disponibilidad que participan en el grupo de disponibilidad distribuido. Los otros grupos de disponibilidad pueden tener la misma versión o versiones posteriores. Este escenario está dirigido a escenarios de actualización y migración. Por ejemplo, si el grupo de disponibilidad que contiene la réplica principal de lectura y escritura es SQL Server 2016, pero quiere actualizar o migrar a SQL Server 2017 o versiones posteriores, el otro grupo de disponibilidad que participa en el grupo de disponibilidad distribuido se puede configurar con SQL Server 2017.
+Los grupos de disponibilidad distribuidos de SQL Server 2017 o una versión posterior pueden mezclar versiones principales de SQL Server en el mismo grupo de disponibilidad distribuido. El grupo de disponibilidad que contiene el principal de lectura y escritura puede tener la misma versión (o una inferior) que los demás grupos de disponibilidad que participan en el grupo de disponibilidad distribuido. Los otros grupos de disponibilidad pueden tener la misma versión o versiones posteriores. Este escenario está dirigido a escenarios de actualización y migración. Por ejemplo, si el grupo de disponibilidad que contiene la réplica principal de lectura y escritura es SQL Server 2016, pero quiere actualizar o migrar a SQL Server 2017 o versiones posteriores, el otro grupo de disponibilidad que participa en el grupo de disponibilidad distribuido se puede configurar con SQL Server 2017.
 
 Dado que la característica de grupos de disponibilidad distribuidos no existía en SQL Server 2012 ni en 2014, los grupos de disponibilidad que se crearon con esas versiones no pueden participar en grupos de disponibilidad distribuidos. 
 
@@ -140,7 +140,7 @@ Dicho de otro modo, una réplica principal puede participar en dos grupos de dis
 
 ![Escalar lecturas horizontalmente con grupos de disponibilidad distribuidos](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
-En la ilustración siguiente se muestra AG 1 como la réplica principal para dos grupos de disponibilidad distribuidos diferentes: Grupo de disponibilidad distribuido 1 (compuesto por Grupo de disponibilidad 1 y Grupo de disponibilidad 2) y Grupo de disponibilidad distribuido 2 (compuesto por Grupo de disponibilidad 1 y Grupo de disponibilidad 3).
+En la siguiente imagen, AG 1 es la réplica principal de dos grupos de disponibilidad distribuidos diferentes: Distributed AG 1 (compuesto por AG 1 y AG 2) y Distributed AG 2 (compuesto por AG 1 y AG 3).
 
 
 ![Otro ejemplo de escalado horizontal de lecturas con grupos de disponibilidad distribuidos]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
@@ -148,7 +148,7 @@ En la ilustración siguiente se muestra AG 1 como la réplica principal para dos
 
 En los dos ejemplos anteriores, puede haber hasta 27 réplicas en total entre los tres grupos de disponibilidad, y todas ellas se pueden usar para consultas de solo lectura. 
 
-El [enrutamiento de solo lectura]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) no funciona completamente con los grupos de disponibilidad distribuidos. Más específicamente:
+El [enrutamiento de solo lectura]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) no funciona completamente con los grupos de disponibilidad distribuidos. Más concretamente:
 
 1. El enrutamiento de solo lectura se puede configurar, y funcionará con el grupo de disponibilidad principal del grupo de disponibilidad distribuido. 
 2. El enrutamiento de solo lectura se puede configurar, pero no funcionará con el grupo de disponibilidad secundario del grupo de disponibilidad distribuido. Todas las consultas, si usan el agente de escucha para conectarse al grupo de disponibilidad secundario, irán a la réplica principal del grupo de disponibilidad secundario. Si no, tendrá que configurar cada réplica para permitir todas las conexiones como una réplica secundaria y tener acceso a ellas directamente. A pesar de ello, el enrutamiento de solo lectura funcionará si el grupo de disponibilidad secundario se convierte en principal tras una conmutación por error. Este comportamiento podría cambiar en una actualización de SQL Server 2016 o en una versión futura de SQL Server.

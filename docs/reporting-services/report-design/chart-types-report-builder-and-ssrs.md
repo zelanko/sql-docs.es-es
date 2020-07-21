@@ -1,5 +1,5 @@
 ---
-title: Tipos de gráficos (Generador de informes y SSRS) | Microsoft Docs
+title: Tipos de gráficos (Generador de informes) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9c041a300e9d64e5446f43a68f675f2290dd8963
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: b2d1d58a5a37078021e8ef6c30ed387fe1f2c406
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581645"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "77081727"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Tipos de gráficos (Generador de informes y SSRS)
 

@@ -20,17 +20,17 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: e7d813bf74f1779a2f9c04a2f78988cbab121c61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784374"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Genera un número de secuencia a partir del objeto de secuencia especificado.  
   
@@ -59,10 +59,10 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  *over_order_by_clause*  
  Determina el orden en el que se asigna el valor de secuencia a las filas de una partición. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve un número utilizando el tipo de la secuencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **NEXT VALUE FOR** se puede usar en procedimientos almacenados y en desencadenadores.  
   
  Cuando la función **NEXT VALUE FOR** se usa en una consulta o restricción predeterminada, si se usa más de una vez el mismo objeto de secuencia, o si se usa el mismo objeto de secuencia en la instrucción que proporciona los valores y en una restricción predeterminada que se está ejecutando, se devolverá el mismo valor para todas las columnas que hagan referencia a la misma secuencia dentro de una fila del conjunto de resultados.  
@@ -163,7 +163,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   Si la restricción predeterminada y el objeto de secuencia no son propiedad del mismo usuario, se necesitan permisos en el objeto de secuencia aunque la llamada se haga mediante la restricción predeterminada.  
   
-### <a name="audit"></a>Auditar  
+### <a name="audit"></a>Auditoría  
  Para auditar la función **NEXT VALUE FOR** supervise SCHEMA_OBJECT_ACCESS_GROUP.  
   
 ## <a name="examples"></a>Ejemplos  

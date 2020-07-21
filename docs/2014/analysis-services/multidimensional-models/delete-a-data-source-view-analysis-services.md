@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24b587e8d8961161ea803915c31d117c11f7cf2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66075432"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546927"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Eliminar una vista del origen de datos (Analysis Services)
   Si ha dejado de usar una vista del origen de datos (DSV) en un proyecto de OLAP, puede eliminarla del proyecto en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
@@ -30,9 +29,9 @@ ms.locfileid: "66075432"
   
  Si elimina una DSV, invalidará otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que dependen de ella, de modo que, antes de eliminar la DSV, verá la lista de objetos que quedarían invalidados cuando se quite la DSV. Revise esta lista con atención para asegurarse de que no contiene objetos que todavía espera usar.  
   
- ![Eliminar el cuadro de diálogo objetos](../media/ssas-olapdsv-deleteobjects.gif "cuadro de diálogo Eliminar objetos")  
+ ![Eliminar objetos, cuadro de diálogo](../media/ssas-olapdsv-deleteobjects.gif "Eliminar objetos, cuadro de diálogo")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
  [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   

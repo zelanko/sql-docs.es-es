@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 092c2a56af6ed607b565f6a489f834136ccdb789
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000130"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrar seguimientos con SQL Server Profiler
   Puede definir filtros en las columnas de datos de los eventos de seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar información únicamente de los eventos que le interesan. Los filtros de seguimiento reducen el impacto de supervisar el rendimiento del sistema porque se capturan menos eventos en el seguimiento. Los filtros también facilitan la lectura de la salida porque hay que buscar en menos eventos.  
@@ -31,7 +30,7 @@ ms.locfileid: "63035254"
   
  [Filtrar eventos en un seguimiento &#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

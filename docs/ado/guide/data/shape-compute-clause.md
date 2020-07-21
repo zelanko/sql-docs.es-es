@@ -1,5 +1,5 @@
 ---
-title: Cláusula COMPUTE de forma | Microsoft Docs
+title: Shape Compute (cláusula) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67924142"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760851"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
-Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al elemento secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar las funciones de agregado en el elemento secundario **Recordset** o un previamente formados **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
+Una cláusula COMPUTE Shape genera un conjunto de **registros**primario cuyas columnas constan de una referencia al **conjunto de registros**secundario; columnas opcionales cuyo contenido es el capítulo, el nuevo o las columnas calculadas, o el resultado de la ejecución de funciones de agregado en el **conjunto de registros** secundario o en un **conjunto de registros**con forma anterior; y cualquier columna del conjunto de **registros** secundario incluido en la cláusula opcional by.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,33 +33,33 @@ SHAPE child-command [AS] child-alias
 ```  
   
 ## <a name="description"></a>Descripción  
- Las partes de esta cláusula son los siguientes:  
+ Las partes de esta cláusula son las siguientes:  
   
- *child-command*  
- Consta de uno de los siguientes:  
+ *comando secundario*  
+ Consta de uno de los siguientes elementos:  
   
--   Un comando de consulta entre llaves ("{}") que devuelve un elemento secundario **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinada.  
+-   Un comando de consulta entre llaves (" {} ") que devuelve un objeto secundario de **conjunto de registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
--   El nombre de una existente en forma de **Recordset**.  
+-   Nombre de un **conjunto de registros**con forma existente.  
   
--   Comando de otra forma.  
+-   Otro comando de forma.  
   
--   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
+-   La palabra clave TABLE, seguida del nombre de una tabla en el proveedor de datos.  
   
- *child-alias*  
- Un alias que se usa para hacer referencia a la **Recordset** devuelto por la *comando secundario.* El *alias secundario* se requiere en la lista de columnas en la cláusula COMPUTE y define la relación entre los primarios y secundarios **Recordset** objetos.  
+ *alias secundario*  
+ Alias que se usa para hacer referencia al **conjunto de registros** devuelto por el *comando secundario.* El *alias secundario* se requiere en la lista de columnas de la cláusula COMPUTE y define la relación entre los objetos de **conjunto de registros** primario y secundario.  
   
  *appended-column-list*  
- Una lista en la que cada elemento define una columna en el objeto primario generado. Cada elemento contiene una columna de capítulo, una nueva columna, una columna calculada o un valor resultante de una función de agregado en el elemento secundario **Recordset**.  
+ Lista en la que cada elemento define una columna en el elemento primario generado. Cada elemento contiene una columna de capítulo, una nueva columna, una columna calculada o un valor resultante de una función de agregado en el **conjunto de registros**secundario.  
   
- *grp-field-list*  
- Una lista de columnas de los primarios y secundarios **Recordset** objetos que especifica cómo se deben agrupar filas en el elemento secundario.  
+ *lista de campos de GRP*  
+ Una lista de columnas de los objetos de **conjunto de registros** primario y secundario que especifica cómo se deben agrupar las filas en el elemento secundario.  
   
- Para cada columna de la *grp lista de campos,* hay una columna correspondiente en los primarios y secundarios **Recordset** objetos. Para cada fila en el elemento primario **Recordset**, el *lista de campos agrupados* columnas tienen valores únicos y el elemento secundario **Recordset** al que hace referencia el elemento primario fila se compone únicamente de secundarios las filas cuya *lista de campos agrupados* columnas tienen los mismos valores que la fila primaria.  
+ Para cada columna de la *lista de campos de GRP,* hay una columna correspondiente en los objetos de conjunto de **registros** primario y secundario. Para cada fila del conjunto de **registros**primario, las columnas *GRP-Field-List* tienen valores únicos, y el **conjunto de registros** secundario al que hace referencia la fila primaria consta únicamente de filas secundarias cuyas columnas *GRP-Field-List* tienen los mismos valores que la fila primaria.  
   
- Si se incluye, la cláusula BY secundario **Recordset**de filas se agruparán en función de las columnas en la cláusula COMPUTE. El elemento primario **Recordset** contendrá una fila por cada grupo de filas en el elemento secundario **Recordset**.  
+ Si se incluye la cláusula BY, las filas del **conjunto de registros**secundario se agruparán en función de las columnas de la cláusula COMPUTE. El **conjunto de registros** primario contendrá una fila por cada grupo de filas del **conjunto de registros**secundario.  
   
- Si se omite la cláusula BY, todo el secundario **Recordset** se trata como un solo grupo y el elemento primario **Recordset** contendrá exactamente una fila. Esa fila hará referencia a todo el secundario **Recordset**. Si se omite la cláusula BY, podrá calcular agregados de "total general" en todo el secundario **Recordset**.  
+ Si se omite la cláusula BY, todo el **conjunto de registros** secundario se trata como un único grupo y el **conjunto de registros** primario contendrá exactamente una fila. Esa fila hará referencia a todo el **conjunto de registros**secundario. La omisión de la cláusula BY permite calcular agregados "total general" sobre todo el conjunto de **registros**secundario.  
   
  Por ejemplo:  
   
@@ -67,26 +67,26 @@ SHAPE child-command [AS] child-alias
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Independientemente de qué manera el elemento primario **Recordset** se forma (mediante COMPUTE o APPEND), contendrá una columna de capítulo se usa para relacionarla con un elemento secundario **Recordset**. Si lo desea, el elemento primario **Recordset** también puede contener columnas que contienen agregados (SUM, MIN, MAX etc.) a través de las filas secundarias. El elemento primario y secundario **Recordset** pueden contener columnas que contienen una expresión en la fila de la **Recordset**, así como las columnas que son nuevos e inicialmente vacía.  
+ Independientemente de la forma en que se crea el **conjunto de registros** primario (mediante compute o con append), contiene una columna Chapter que se utiliza para relacionarla con un **conjunto de registros**secundario. Si lo desea, el **conjunto de registros** primario también puede contener columnas que contengan agregados (SUM, min, Max, etc.) en las filas secundarias. Tanto el **conjunto de registros** primario como el secundario pueden contener columnas que contengan una expresión en la fila del **conjunto de registros**, así como columnas nuevas e inicialmente vacías.  
   
 ## <a name="operation"></a>Operación  
- El *comando secundario* se emite al proveedor, que devuelve un elemento secundario **Recordset**.  
+ El *comando secundario* se emite al proveedor, que devuelve un **conjunto de registros**secundario.  
   
- La cláusula COMPUTE especifica las columnas del elemento primario **Recordset**, que puede ser una referencia al elemento secundario **Recordset**, uno o varios agregados, una expresión calculada o columnas nuevas. Si hay una cláusula BY, las columnas que define también se anexan con el elemento primario **Recordset**. La cláusula BY especifica cómo las filas del elemento secundario **Recordset** se agrupan.  
+ La cláusula COMPUTE especifica las columnas del **conjunto de registros**primario, que puede ser una referencia al conjunto de **registros**secundario, uno o varios agregados, una expresión calculada o nuevas columnas. Si hay una cláusula BY, las columnas que define también se anexan al **conjunto de registros**primario. La cláusula BY especifica cómo se agrupan las filas del **conjunto de registros** secundario.  
   
- Por ejemplo, suponga que tiene una tabla denominada Demographics, que consta de los campos de ciudad, estado y el rellenado. (Los datos de población en la tabla se proporcionan únicamente como ejemplo).  
+ Por ejemplo, suponga que tiene una tabla, denominada demográficas, que consta de los campos estado, ciudad y población. (Las cifras de población de la tabla se proporcionan únicamente como ejemplo).  
   
-|Estado|City|Población|  
+|State|City|Población|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
-|WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|WA|Seattle|700.000|  
+|O BIEN|Medford|200 000|  
+|O BIEN|Portland|400.000|  
+|CA|Los Angeles|800.000|  
+|CA|San Diego|600.000|  
+|WA|Tacoma|500.000|  
+|O BIEN|Corvallis|300 000|  
   
- Ahora, ejecute este comando shape:  
+ Ahora, emita este comando de forma:  
   
 ```  
 rst.Open  "SHAPE {select * from demographics} AS rs "  & _  
@@ -94,52 +94,52 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Este comando abre una forma **Recordset** con dos niveles. El nivel primario es un generado **Recordset** con una columna agregada (`SUM(rs.population)`), una columna que hace referencia el elemento secundario **Recordset** (`rs`) y una columna para agrupar el elemento secundario **Recordset** (`state`). El nivel secundario es el **Recordset** devuelto por el comando de consulta (`select * from demographics`).  
+ Este comando abre un **conjunto de registros** con forma con dos niveles. El nivel primario es un **conjunto de registros** generado con una columna de agregado ( `SUM(rs.population)` ), una columna que hace referencia al **conjunto de registros** secundario ( `rs` ) y una columna para agrupar el **conjunto de registros** secundario ( `state` ). El nivel secundario es el **conjunto de registros** devuelto por el comando de consulta ( `select * from demographics` ).  
   
- El elemento secundario **Recordset** filas de detalles será agrupados por estado, pero en caso contrario, sin ningún orden determinado. Es decir, los grupos no estarán en orden alfabético o numérico. Si desea que el elemento primario **Recordset** para poder ordenarse, puede usar el **ordenación del conjunto de registros** para ordenar el elemento primario **Recordset**.  
+ Las filas de detalle del **conjunto de registros** secundario se agruparán por estado, pero de lo contrario no en ningún orden determinado. Es decir, los grupos no estarán en orden alfabético o numérico. Si desea que se ordene el **conjunto de registros** primario, puede utilizar el método de **ordenación del conjunto** de registros para ordenar el conjunto de **registros**primario.  
   
- Ahora puede desplazarse el primario abierto **Recordset** y tener acceso a los detalles del elemento secundario **Recordset** objetos. Para obtener más información, consulte [obtener acceso a filas en un conjunto de registros jerárquicos](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Ahora puede navegar por el conjunto de **registros** primario abierto y obtener acceso a los objetos de **conjunto de registros** de detalle secundarios. Para obtener más información, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="resultant-parent-and-child-detail-recordsets"></a>Primario resultante y conjuntos de registros de detalle de secundarios  
+## <a name="resultant-parent-and-child-detail-recordsets"></a>Conjuntos de registros de detalle primarios y secundarios resultantes  
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs. Llenado)|rs|Estado|  
+|SUM (RS. Llenado|rs|State|  
 |---------------------------|--------|-----------|  
-|1,300,000|Referencia a child1|CA|  
-|1,200,000|Referencia a child2|WA|  
-|1,100,000|Referencia a secundario3|OR|  
+|1,3 millones|Referencia a Child1|CA|  
+|1,2 millones|Referencia a child2|WA|  
+|1,1 millones|Referencia a child3|O BIEN|  
   
-## <a name="child1"></a>Child1  
+## <a name="child1"></a>Secundario1  
   
-|Estado|City|Población|  
+|State|City|Población|  
 |-----------|----------|----------------|  
-|CA|Los Angeles|800,000|  
-|CA|San Diego|600,000|  
+|CA|Los Angeles|800.000|  
+|CA|San Diego|600.000|  
   
-## <a name="child2"></a>Child2  
+## <a name="child2"></a>Secundario2  
   
-|Estado|City|Población|  
+|State|City|Población|  
 |-----------|----------|----------------|  
-|WA|Seattle|700,000|  
-|WA|Tacoma|500,000|  
+|WA|Seattle|700.000|  
+|WA|Tacoma|500.000|  
   
-## <a name="child3"></a>Child3  
+## <a name="child3"></a>Secundario3  
   
-|Estado|City|Población|  
+|State|City|Población|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|O BIEN|Medford|200 000|  
+|O BIEN|Portland|400.000|  
+|O BIEN|Corvallis|300 000|  
   
-## <a name="see-also"></a>Vea también  
- [Acceso a las filas en un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+## <a name="see-also"></a>Consulte también  
+ [Obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Información general sobre la forma de datos](../../../ado/guide/data/data-shaping-overview.md)   
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
+ [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
+ [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Proveedores deseados para dar forma a datos](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Cláusula APPEND Shape](../../../ado/guide/data/shape-append-clause.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)   
- [Valor (propiedad, ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
+ [Proveedores necesarios para el modelado de datos](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
+ [Comandos Shape en general](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Value (propiedad, ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Visual Basic para las funciones de aplicaciones](../../../ado/guide/data/visual-basic-for-applications-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: Configurar visor de datos (pestaña General) | Microsoft Docs
+title: Configurar visor de datos (pestaña general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c68f01425a94f139096ce85a0d12f2b18e0f9164
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060668"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438542"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar visor de datos (pestaña General)
   Un visor de datos muestra los datos como si se moviera por la ruta que conecta dos componentes de flujo de datos durante la ejecución de un paquete.  
@@ -27,7 +26,7 @@ ms.locfileid: "66060668"
  Utilice la pestaña **General** del cuadro de diálogo **Configurar visor de datos** para asignar un nombre al visor de datos y especificar el tipo de gráfico en el que se van a mostrar los datos.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para el visor de datos.  
   
  **Tipo**  
@@ -36,7 +35,7 @@ ms.locfileid: "66060668"
  **Descripción**  
  Muestra un gráfico de ejemplo y, a continuación, la descripción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar visor de datos &#40;pestaña gráfico de columnas&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Configurar visor de datos &#40;pestaña cuadrícula&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurar visor de datos &#40;pestaña histograma&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

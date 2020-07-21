@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 01d7b5277e0711f5297e00d7b08b12e105b7f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0a091906818ffea85a8b30b3678f75f02de3a886
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930366"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748742"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve un objeto geométrico que representa la unión de todos los puntos cuya distancia desde una instancia de **geometry** es menor o igual que un valor especificado.
   
@@ -40,12 +40,12 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  *distance*  
  Es un valor de tipo **float** (**double** en .NET Framework) que especifica la distancia desde la instancia de geometry en torno a la cual se puede calcular el búfer.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STBuffer()` calcula un búfer como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) mediante la especificación de *tolerance* = distance \* .001 y *relative* = **false**.  
   
  Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon**.  
@@ -70,7 +70,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Llamar a STBuffer() con parameter_value < 0 en una instancia de geometría dimensional  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. Llamar a STBuffer() con parameter_value < 0 en una instancia de geometría dimensional  
  En el siguiente ejemplo se devuelve una instancia de `GeometryCollection` vacía:  
   
 ```
@@ -78,7 +78,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Llamar a STBuffer() con parameter_value < 0 en una instancia de Polygon  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. Llamar a STBuffer() con parameter_value < 0 en una instancia de Polygon  
  En el siguiente ejemplo se devuelve una instancia de `Polygon` con un búfer negativo:  
   
 ```
@@ -86,7 +86,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Llamar a STBuffer() con parameter_value < 0 en una instancia de CurvePolygon  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. Llamar a STBuffer() con parameter_value < 0 en una instancia de CurvePolygon  
  En el siguiente ejemplo se devuelve una instancia de `Polygon` con un búfer negativo desde una instancia de `CurvePolygon`:  
   
 ```
@@ -107,7 +107,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
  Esta instrucción **SELECT** devuelve `GEOMETRYCOLLECTION EMPTY.`.  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Llamar a STBuffer() con parameter_value = 0  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. Llamar a STBuffer() con parameter_value = 0  
  En el siguiente ejemplo se devuelve una copia de la instancia de `geometry` que realiza la llamada:  
   
 ```
@@ -124,7 +124,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Llamar a STBuffer() con parameter_value > 0  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. Llamar a STBuffer() con parameter_value > 0  
  En el ejemplo siguiente se devuelve una instancia de `Polygon`:  
   
 ```

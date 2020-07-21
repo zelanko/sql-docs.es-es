@@ -18,15 +18,15 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0989fda3e2650843b24719e51cd0944713a9ac2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103423"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012241"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Puede crear estadísticas de optimización de consultas en una o más columnas de una tabla o vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para la mayoría de las consultas, el optimizador de consultas ya genera las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados es necesario crear estadísticas adicionales.  
   
  **En este tema**  
@@ -43,9 +43,9 @@ ms.locfileid: "68103423"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Antes de crear estadísticas con la instrucción CREATE STATISTICS, compruebe que la opción AUTO_CREATE_STATISTICS está establecida en la base de datos. De este modo se asegurará de que el optimizador de consultas continúe creando rutinariamente estadísticas de una sola columna para las columnas del predicado de la consulta.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68103423"
   
 -   No se puede quitar, modificar ni cambiar la definición de una columna de la tabla que se define en un predicado de estadísticas filtrado.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere que el usuario sea el propietario de la tabla o vista indexada o un miembro de uno de los roles siguientes: rol fijo de servidor **sysadmin** , rol fijo de base de datos **db_owner** o rol fijo de base de datos **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Para crear estadísticas  
   
@@ -96,10 +96,10 @@ ms.locfileid: "68103423"
      **Permitir valores NULL**  
      Indica si la columna acepta valores NULL.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Agregue columnas adicionales de la tabla a la cuadrícula de estadísticas.  
   
-     **Quitar**  
+     **Remove**  
      Quita la columna seleccionada de la cuadrícula de estadísticas.  
   
      **Subir**  
@@ -117,7 +117,7 @@ ms.locfileid: "68103423"
      La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre\_tabla_.  
   
      **Expresión de filtro**  
-     Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre\_tabla_, en la página **General** haga clic en **Agregar**.  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68103423"
      **Identidad**  
      Cuando se activa, indica una columna de identidad.  
   
-     **Allow NULLs**  
+     **Permitir valores NULL**  
      Indica si la columna acepta valores NULL.  
   
 6.  En el cuadro de diálogo **Seleccionar columnas** , active la casilla o casillas de cada columna para la que desee crear una estadística y haga clic en **Aceptar**.  
   
 7.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre\_tabla_, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Para crear estadísticas  
   

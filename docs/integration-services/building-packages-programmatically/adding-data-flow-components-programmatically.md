@@ -18,10 +18,10 @@ ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4e4c68d5c85f8e31837d24e9cd5e3074620bd303
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71294971"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Agregar componentes de flujo de datos mediante programación
@@ -151,10 +151,10 @@ End Module
   
  Llame al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A> para inicializar las columnas en las salidas de un componente de origen. Dado que los componentes no se conectan automáticamente a los orígenes de datos externos, llame al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.AcquireConnections%2A> antes de llamar <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReinitializeMetaData%2A>, para proporcionar el acceso de componente a su origen de datos externo y la capacidad de rellenar sus metadatos de columna. Finalmente, llame al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapperClass.ReleaseConnections%2A> para liberar la conexión.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Después de agregar y configurar el componente, el paso siguiente será crear rutas de acceso entre componentes, que se describe en el tema [Crear una ruta de acceso entre dos componentes](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el siguiente ejemplo de código se agrega el componente de origen de OLE DB a una tarea de flujo de datos, se crea una instancia en tiempo de diseño del componente y se configuran las propiedades del componente. En este ejemplo se requiere una referencia adicional al ensamblado Microsoft.SqlServer.DTSRuntimeWrap.  
   
 ```csharp  

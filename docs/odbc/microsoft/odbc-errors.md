@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - errors (ODBC desktop database drivers)
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7aa5d75b01fc30783505b2e149f3487b50f75150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 06ef8558ce8e4266cdd77736bdceae210658b14b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915835"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81298095"
 ---
 # <a name="odbc-errors"></a>Errores de ODBC
-Cuando se produce un error, los controladores de base de datos de escritorio de Microsoft ODBC devuelven el número de error nativo, el valor de SQLSTATE (un código de error ODBC) y un mensaje de error.  
+Cuando se produce un error, los controladores de base de datos de escritorio ODBC de Microsoft devuelven el número de error nativo, SQLSTATE (un código de error ODBC) y un mensaje de error.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -28,6 +28,6 @@ Cuando se produce un error, los controladores de base de datos de escritorio de 
   
 -   [SQLSTATE](../../odbc/microsoft/sqlstate.md)  
   
--   [Mensajes de error](../../odbc/microsoft/odbc-jet-error-messages.md)  
+-   [mensajes de error](../../odbc/microsoft/odbc-jet-error-messages.md)  
   
 -   [Errores aritméticos](../../odbc/microsoft/arithmetic-errors.md)

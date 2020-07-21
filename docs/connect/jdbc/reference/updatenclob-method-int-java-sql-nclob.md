@@ -1,5 +1,5 @@
 ---
-title: Método updateNClob (int, Java. SQL. NClob) | Microsoft Docs
+title: Método updateNClob (int, java.sql.NClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 6e9bca18-f64e-46a4-8541-2c9c39b393b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 702b754750b5c42c96d7f5a8d35a7212d824c1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fcc57f4b4bc826ccb8d4638b0d73f8586c7342ad
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998623"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903191"
 ---
 # <a name="updatenclob-method-int-javasqlnclob"></a>Método updateNClob (int, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,19 +33,19 @@ public void updateNClob(int columnIndex,
 #### <a name="parameters"></a>Parámetros  
  *columnIndex*  
   
- Valor **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *nClob*  
   
- Objeto NClob.  
+ Un objeto NClob.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateNClob especifica este método updateNClob en la interfaz java.sql.ResultSet.  
   
- Este método solo se admite en columnas **nvarchar (Max)** , **ntext**y **XML** . Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
+ Este método solo se admite en las columnas **nvarchar (Max)** , **ntext** y **xml**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

@@ -13,19 +13,19 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 87d7f85799524e3ac7c0e4d99608ce1d82b8f2fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 844f4574fa7a0a45c772a3ac3eff57bb91f23c3b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67979932"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925358"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>Método getServerPreparedStatementDiscardThreshold (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Devuelve el valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold** . Esta configuración controla el número de acciones de descarte de instrucciones preparada pendientes (sp_unprepare) que pueden quedar pendientes por conexión antes de que se ejecute una llamada para limpiar los controladores pendientes en el servidor. Si el valor es < = 1, las acciones de despreparar se ejecutan inmediatamente en el cierre de la instrucción preparada. Si se establece en > 1, estas llamadas se agrupan por lotes para evitar la sobrecarga de llamar a sp_unprepare con demasiada frecuencia. El valor predeterminado de esta opción se puede cambiar mediante una llamada a getDefaultServerPreparedStatementDiscardThreshold ().
+ Devuelve el valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold**. Este valor controla cuántas acciones de descarte de instrucción preparada pendientes (sp_unprepare) pueden estar pendientes por conexión antes de que se ejecute una llamada para limpiar los identificadores pendientes del servidor. Si el valor es <= 1, las acciones de cancelación de preparación se ejecutan inmediatamente en la instrucción preparada CLOSE. Si se establece en > 1, estas llamadas se procesan por lotes para evitar la sobrecarga resultante de llamar a sp_unprepare con demasiada frecuencia. El valor predeterminado de esta opción se puede cambiar llamando a getDefaultServerPreparedStatementDiscardThreshold().
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,13 +35,13 @@ public int getServerPreparedStatementDiscardThreshold()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- **Entero** que contiene el valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold** .
+ Un valor **int** que contiene el valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold**.
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notas  
- Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
+## <a name="remarks"></a>Observaciones  
+ Este método está disponible en la versión 6.4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

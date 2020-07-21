@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dd2fe9f5e4e2a5b41c9951b1a38dd819a15aa35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c2f030a0191596e40ef1ee9e2b0b2d4da34c773
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011453"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>Consideraciones para reproducir seguimientos (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] no puede reproducir los siguientes tipos de seguimientos:  
@@ -36,7 +35,7 @@ ms.locfileid: "63316040"
   
  Para obtener información acerca de los permisos necesarios para reproducir un seguimiento, vea [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../bcp-utility.md)   
  [Referencia de las clase de eventos de SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_getbindtoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql)   

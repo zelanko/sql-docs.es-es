@@ -1,5 +1,6 @@
 ---
-title: Cómo implementar un elemento de informe personalizado | Microsoft Docs
+title: 'Procedimientos: Implementación de un elemento de informe personalizado | Microsoft Docs'
+description: Obtenga información sobre cómo implementar un elemento de informe personalizado. Modificará los archivos de configuración del servidor de informes y copiará los ensamblados de componentes en las carpetas correspondientes.
 ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 31347efeda4805d4faffc993c164441cba1697c4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194143"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "80216927"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Cómo implementar un elemento de informe personalizado
+# <a name="how-to-deploy-a-custom-report-item"></a>Procedimientos: Implementación de un elemento de informe personalizado
   Para implementar un elemento de informe personalizado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe modificar los archivos de configuración del servidor de informes y copiar los ensamblados de componentes en tiempo de diseño y en tiempo de ejecución a las carpetas de aplicación correspondientes para el Diseñador de informes y el servidor de informes.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Para implementar un elemento de informe personalizado  

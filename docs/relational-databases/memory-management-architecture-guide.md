@@ -1,5 +1,6 @@
 ---
 title: Guía de arquitectura de administración de memoria | Microsoft Docs
+description: Obtenga información sobre la arquitectura de administración de memoria en SQL Server, incluidos los cambios en la administración de la memoria en versiones anteriores.
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115268"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012147"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 ## <a name="windows-virtual-memory-manager"></a>Administrador de memoria virtual de Windows  
 El Administrador de memoria virtual (VMM) de Windows asigna las regiones confirmadas de espacio de direcciones a la memoria física disponible.  
@@ -47,7 +48,7 @@ Uno de los principales objetivos de diseño de todo el software de base de datos
 > [!NOTE]
 > En un sistema con mucha carga y mucha presión de la memoria, las consultas con combinaciones de mezcla, orden y mapa de bits en el plan de consulta pueden quitar el mapa de bits si no obtienen la memoria mínima necesaria para dicho mapa de bits. Esto puede afectar al rendimiento de la consulta y, si el proceso de ordenación no cabe en la memoria, puede aumentar el uso de las tablas de trabajo en la base de datos tempdb, lo que hace que tempdb crezca. Para resolver este problema, agregue memoria física u optimice las consultas para que usen otro plan de consulta más rápido.
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>Proporcionar la cantidad máxima de memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>Proporcionar la cantidad máxima de memoria a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
 Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar las siguientes cantidades de memoria al Motor de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 
 
@@ -72,7 +73,7 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>Cambios en la administración de memoria a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 
 En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), la asignación de memoria se realizaba mediante cinco mecanismos diferentes:
 -  **Asignador de página única (SPA)** , que incluye solo las asignaciones de memoria menores o iguales a 8 KB en el proceso [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones de configuración *memoria de servidor máxima (MB)* y *memoria de servidor mínima (MB)* determinaban los límites de la memoria física que podía consumir el SPA. El grupo de búferes era el mecanismo para SPA y el mayor consumidor de asignaciones de página única.
@@ -96,7 +97,7 @@ En la tabla siguiente se indica si un tipo de asignación de memoria específico
 |Memoria de pilas de subprocesos|No|No|
 |Asignaciones directas de Windows|No|No|
 
-A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría asignar más memoria que el valor especificado en el valor de memoria de servidor máxima. Esto puede ocurrir cuando el valor de **_Memoria total del servidor (KB_** ) ya ha alcanzado la configuración de **_Memoria total del servidor (KB)_** (tal y como se especifica en la memoria de servidor máxima). Si no hay memoria libre contigua suficiente para atender a la demanda de solicitudes de memoria de varias páginas (más de 8 KB) debido a la fragmentación de memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar compromisos por encima de lo indicado en vez de rechazar las solicitudes de memoria. 
+A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría asignar más memoria que el valor especificado en el valor de memoria de servidor máxima. Esto puede ocurrir cuando el valor de **_Memoria total del servidor (KB_**) ya ha alcanzado la configuración de **_Memoria total del servidor (KB)_** (tal y como se especifica en la memoria de servidor máxima). Si no hay memoria libre contigua suficiente para atender a la demanda de solicitudes de memoria de varias páginas (más de 8 KB) debido a la fragmentación de memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar compromisos por encima de lo indicado en vez de rechazar las solicitudes de memoria. 
 
 En cuanto se realiza esta asignación, la tarea en segundo plano *Monitor de recursos* empieza a indicar a todos los consumidores de memoria que liberen la memoria asignada e intenta llevar el valor de *Memoria total del servidor (KB)* por debajo de la especificación de *Memoria total del servidor (KB)* . Por lo tanto, el uso de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría superar brevemente la configuración establecida por memoria de servidor máxima. En esta situación, la lectura del contador de rendimiento de *Memoria total del servidor (KB)* superará el valor de memoria de servidor máxima y de *Memoria total del servidor (KB)* .
 
@@ -107,10 +108,10 @@ Este comportamiento se observa normalmente durante las siguientes operaciones:
 -  Operaciones de seguimiento que tienen que almacenar parámetros de entrada grandes.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Cambios en "memory_to_reserve" a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>Cambios en "memory_to_reserve" a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 En versiones anteriores de SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), el administrador de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] reservaba una parte del espacio de direcciones virtuales (VAS) del proceso para que la usasen el **asignador de varias páginas (MPA)** , el **asignador de CLR**, las asignaciones de memoria para **pilas de subprocesos** en el proceso de SQL Server, y las **asignaciones de Windows directas (DWA)** . Esta parte del espacio de direcciones virtuales también se conoce como región "Mem-To-Leave" o "grupo sin búferes".
 
-El espacio de direcciones virtuales que está reservado para las asignaciones viene determinado por la opción de configuración _**memory\_to\_reserve**_ . El valor predeterminado que usa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es 256 MB. Para invalidar el valor predeterminado, use el parámetro de inicio *-g* de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*.
+El espacio de direcciones virtuales que está reservado para las asignaciones viene determinado por la opción de configuración _**memory\_to\_reserve**_. El valor predeterminado que usa [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es 256 MB. Para invalidar el valor predeterminado, use el parámetro de inicio *-g* de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*.
 
 Dado que a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] el nuevo asignador de páginas de cualquier tamaño también controla asignaciones superiores a 8 KB, el valor *memory_to_reserve* no incluye las asignaciones de varias páginas. A excepción de este cambio, todo lo demás sigue siendo igual con respecto a esta opción de configuración.
 
@@ -124,7 +125,7 @@ En la tabla siguiente se indica si un tipo específico de la asignación de memo
 |Memoria de pilas de subprocesos|Sí|Sí|
 |Asignaciones directas de Windows|Sí|Sí|
 
-## <a name="dynamic-memory-management"></a> Administración dinámica de memoria
+## <a name="dynamic-memory-management"></a><a name="dynamic-memory-management"></a> Administración dinámica de memoria
 El comportamiento predeterminado de administración de memoria del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] es adquirir toda la memoria que necesita sin provocar una escasez de memoria en el sistema. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] lo consigue mediante las API de notificación de memoria de Microsoft Windows.
 
 Cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la memoria de manera dinámica, realiza una consulta periódica en el sistema para determinar la cantidad de memoria libre. El mantenimiento de esta memoria libre evita la paginación en el sistema operativo (SO). Si hay menos memoria libre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libera memoria para el sistema operativo. Si hay más memoria libre, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede asignar más memoria. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrega memoria solo cuando su carga de trabajo así lo requiere; un servidor inactivo no aumenta el tamaño de su espacio de direcciones virtual.  
@@ -150,7 +151,7 @@ SELECT
 FROM sys.dm_os_process_memory;  
 ```  
  
-La <a name="stacksizes"></a>memoria para pilas de subprocesos<sup>1</sup>, CLR<sup>2</sup>, los archivos .dll de procedimientos extendidos, los proveedores de OLE DB a los que se hacen referencias en consultas distribuidas, los objetos de automatización a los que se hacen referencia en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] y cualquier otra memoria asignada por un DLL que no es de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **no** están controladas por la memoria de servidor máxima.
+La <a name="stacksizes"></a>memoria para pilas de subprocesos<sup>1</sup>, CLR<sup>2</sup>, los archivos .dll de procedimientos extendidos, los proveedores de OLE DB a los que se hacen referencias en consultas distribuidas, los objetos de automatización a los que se hacen referencia en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] y cualquier otra memoria asignada por un DLL que no es de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]**no** están controladas por la memoria de servidor máxima.
 
 <sup>1</sup> Consulte la página de documentación sobre cómo [Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) para obtener información sobre los subprocesos de trabajo predeterminados calculados para un determinado número de CPU con afinidad en el host actual. Los tamaños de pila de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] son los siguientes:
 
@@ -203,7 +204,7 @@ La opción *min memory per query* establece la cantidad mínima de memoria (en k
 >    
 > Para obtener recomendaciones sobre el uso de esta configuración, vea [Configurar la opción de configuración del servidor Memoria mínima por consulta](../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md#Recommendations).
 
-### <a name="memory-grant-considerations"></a>Consideraciones de concesión de memoria
+### <a name="memory-grant-considerations"></a><a name="memory-grant-considerations"></a>Consideraciones de concesión de memoria
 Para la **ejecución del modo de fila**, no se puede superar la concesión de memoria inicial bajo ninguna condición. Si se necesita más memoria que la concesión inicial para ejecutar operaciones de **hash** u **orden**, estas se desbordarán al disco. Una operación de hash que se desborda es compatible con un archivo de trabajo en TempDB, mientras que una operación de orden que se desborda es compatible con una [tabla de trabajo](../relational-databases/query-processing-architecture-guide.md#worktables).   
 
 Un desbordamiento que se produzca durante una operación de orden se conoce como una [advertencia antes de ordenar](../relational-databases/event-classes/sort-warnings-event-class.md). Las advertencias antes de ordenar indican que las operaciones de orden no caben en la memoria. Esto no incluye las operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula `ORDER BY` en una instrucción `SELECT`).

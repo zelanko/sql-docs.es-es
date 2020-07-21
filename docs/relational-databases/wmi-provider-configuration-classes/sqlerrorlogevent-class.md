@@ -1,5 +1,5 @@
 ---
-title: Clase SqlErrorLogEvent | Microsoft Docs
+title: SqlErrorLogEvent, clase
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e36d05c39fb3bc4fc19d2ea0c28def7cd626fbf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61769119b041f629884b99660a5937b72a83acbd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052524"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880677"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Proporciona las propiedades para ver los eventos en un archivo de registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,22 +43,22 @@ class SQLErrorLogEvent
   
 |||  
 |-|-|  
-|FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
-|InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Calificadores: Key<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
-|LogDate|Tipo de datos: **datetime**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Calificadores: Key<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
-|Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
-|ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
+|FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
+|InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
+|LogDate|Tipo de datos: **DateTime**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
+|Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
+|ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmproviderxpsp2up.mof|  
-|DLL|Sqlmgmprovider.dll|  
+|Archivo DLL|Sqlmgmprovider.dll|  
 |Espacio de nombres|\raíz\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo recuperar los valores para todos los eventos anotados en un archivo de registro especificado. Para ejecutar el ejemplo, reemplace \< *Instance_Name*> con el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo, 'Instancia1' y reemplace 'File_Name' por el nombre del archivo de registro de errores, como 'ERRORLOG.1'.  
+ En el siguiente ejemplo se muestra cómo recuperar los valores para todos los eventos anotados en un archivo de registro especificado. Para ejecutar el ejemplo, reemplace \<*Instance_Name*> por el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como ' Instance1 ', y reemplace ' File_Name ' por el nombre del archivo de registro de errores, como ' ERRORLOG. 1 '.  
   
 ```  
 on error resume next  
@@ -79,24 +79,24 @@ Next
 ```  
   
 ## <a name="comments"></a>Comentarios  
- Cuando *nombreDeInstancia* o *FileName* no se proporcionan en la instrucción WQL, la consulta devolverá información para la instancia predeterminada y la actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro. Por ejemplo, la siguiente instrucción WQL devolverá todos los eventos de registro desde el archivo de registro actual (ERRORLOG) en la instancia predeterminada (MSSQLSERVER).  
+ Cuando no se proporciona *InstanceName* o *filename* en la instrucción WQL, la consulta devolverá información para la instancia predeterminada y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro actual. Por ejemplo, la siguiente instrucción WQL devolverá todos los eventos de registro del archivo de registro actual (ERRORLOG) en la instancia predeterminada (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>Seguridad  
- Para conectarse a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro a través de WMI, debe tener los permisos siguientes en los equipos locales y remotos:  
+ Para conectarse a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de registro a través de WMI, debe tener los siguientes permisos en los equipos locales y remotos:  
   
--   Acceso de lectura a la **Root\Microsoft\SqlServer\ComputerManagement10** espacio de nombres WMI. De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta.  
+-   Acceso de lectura al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta.  
   
--   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, el error registros se encuentran en la siguiente ruta de acceso (donde \< *unidad >* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \< *nombreDeInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, los registros de errores se encuentran en la siguiente ruta de acceso (donde \<*Drive> * representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*InstanceName*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **\<Unidad >: \Program Files\Microsoft SQL Server\MSSQL13** **.\< NombreDeInstancia > \MSSQL\Log**  
+     ** \<Drive> : \Archivos de Programa\microsoft SQL Server\MSSQL13** **. \<InstanceName> \Mssql\log.**  
   
- Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota comenzando con Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota a partir de Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Clase SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  
   

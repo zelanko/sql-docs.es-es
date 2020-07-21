@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e71185e3ec9d68f6f9baedf8bcf83bda3918703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 60c62cfe6dc94e095672b70ea289e2e400e54697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85708118"
 ---
 # <a name="any-transact-sql"></a>ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compara un valor escalar con un conjunto de valores de una sola columna. Para obtener más información, vea [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   

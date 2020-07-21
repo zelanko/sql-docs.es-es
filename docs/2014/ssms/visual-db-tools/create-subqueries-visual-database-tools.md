@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e68809c7551e3c6711fadd9973c472dcb4e90307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 121d80cf0230be01cf81c09249d2797bb7ce5ae6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040796"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>Crear subconsultas (Visual Database Tools)
   Puede utilizar los resultados de una consulta como entrada para otra consulta. Puede usar los resultados de una subconsulta como una instrucción que utiliza la función IN( ), el operador EXISTS o la cláusula FROM.  
@@ -60,8 +59,8 @@ ms.locfileid: "63270618"
       WHERE (country = 'Sweden'))  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Tipos de consultas compatibles &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tipos de consultas admitidos &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Especificar criterios de búsqueda (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

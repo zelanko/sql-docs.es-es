@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb057c6deaec85ffae2c69fde0bf5f6419bedc88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096455"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037114"
 ---
 # <a name="cluster-resource-group"></a>Grupo de recursos de clúster
   Use la página Grupo de recursos de clúster para especificar el disco donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +28,7 @@ ms.locfileid: "66096455"
   
 -   Escriba el nombre del grupo que desea crear. Tenga en cuenta que el nombre "Available storage" no es un nombre de grupo válido.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Crear un nuevo clúster de conmutación por error SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
+## <a name="see-also"></a>Consulte también  
+ [Crear un nuevo clúster de conmutación por error de SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

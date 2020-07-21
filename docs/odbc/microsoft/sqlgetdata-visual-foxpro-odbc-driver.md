@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ee603023798638b7bd5c25a72d1018d379da2075
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 88a872ca15544c3dd6909cd210f98987d21a13dc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003321"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304116"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel 1  
+ Conformidad con la API de ODBC: nivel 1  
   
- Recupera el valor de un único campo en el registro actual del conjunto de resultados determinado.  
+ Recupera el valor de un campo único en el registro actual del conjunto de resultados especificado.  
   
- Para obtener más información, consulte [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md) en la *Referencia del programador de ODBC*.

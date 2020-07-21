@@ -1,5 +1,5 @@
 ---
-title: Agregar Variable | Microsoft Docs
+title: Agregar variable | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Variable dialog box
 ms.assetid: d09b5d31-433f-4f7c-8c68-9df3a97785d5
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6181b7f18027315a7f2162a5693493bcb595db4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061787"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439572"
 ---
 # <a name="add-variable"></a>Agregar variable
   Utilice el cuadro de diálogo **Agregar variable** para especificar las propiedades de una nueva variable.  
@@ -28,7 +27,7 @@ ms.locfileid: "66061787"
  **Contenedor**  
  Seleccione un contenedor de la lista. El contenedor define el ámbito de la variable. El contenedor puede ser el paquete o un ejecutable del mismo.  
   
- **Name**  
+ **Nombre**  
  Escriba el nombre de la variable.  
   
  **Espacio de nombres**  
@@ -43,9 +42,9 @@ ms.locfileid: "66061787"
  **Solo lectura**  
  Seleccione esta opción para cambiar la variable a solo lectura.  
   
-## <a name="see-also"></a>Vea también  
- [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
- [Tipos de datos de Integration Services](data-flow/integration-services-data-types.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;&#41; variables de SSIS](integration-services-ssis-variables.md)   
+ [Integration Services tipos de datos](data-flow/integration-services-data-types.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)  
   
   

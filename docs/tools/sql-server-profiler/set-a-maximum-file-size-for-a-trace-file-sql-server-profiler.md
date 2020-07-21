@@ -1,26 +1,26 @@
 ---
-title: Establecer un tamaño máximo de archivo para un archivo de seguimiento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Establecer un tamaño máximo de archivo para un archivo de seguimiento
+titleSuffix: SQL Server Profiler
+description: Descubra cómo limitar el tamaño del archivo de seguimiento en SQL Server Profiler y cómo especificar si el archivo se revierte cuando alcanza el tamaño máximo.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- maximum file size for traces
-- size [SQL Server], trace files
 ms.assetid: e86dc4ce-5aa3-4c0d-acb5-c9e8871ed963
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7eb97c28901f5f88c5e741d0d34b845bc40b93ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: b426b6eff3c8e8d561d6151f20fa32a294b43d45
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928730"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151685"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>Establecer un tamaño máximo de archivo para un archivo de seguimiento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilice el siguiente procedimiento para establecer el tamaño máximo de archivo para un archivo de seguimiento.  
   

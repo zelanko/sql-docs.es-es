@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0f415ffbc10b93cee2037da78daef3b7ee5aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069033"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
   La administración basada en directivas es un sistema para administrar una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando los administradores de directivas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan la administración basada en directivas, utilizan [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para crear directivas que permitan administrar las entidades en el servidor, como la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las bases de datos u otros objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,7 +52,7 @@ ms.locfileid: "63157107"
  En las directivas que no se cumplen, el Explorador de objetos indica una advertencia de estado crítico mediante un icono rojo junto al destino y los nodos superiores del árbol del Explorador de objetos.  
   
 > [!NOTE]  
->  Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, consulte: [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
+>  Cuando el sistema calcula el conjunto de objetos para una directiva, los objetos del sistema se excluyen de forma predeterminada.  Por ejemplo, si el conjunto de objetos de la directiva hace referencia a todas las tablas, la directiva no se aplicará a las tablas del sistema. Si los usuarios desean evaluar una directiva con los objetos del sistema, pueden agregar explícitamente objetos del sistema al conjunto de objetos. Sin embargo, aunque se admiten todas las directivas para el modo de evaluación **Comprobar en la programación** , por razones de rendimiento, no todas las directivas con conjuntos de objetos arbitrarios se admiten para el modo de evaluación **Comprobar en los cambios** . Para obtener más información, vea.[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Conceptos de la administración basada en directivas  
  La administración basada en directivas tiene tres componentes:  
@@ -123,7 +122,7 @@ ms.locfileid: "63157107"
 |----------------------|-----------|  
 |Describe cómo se guardan las directivas de administración basada en directivas.|Almacenamiento de la administración basada en directivas|  
 |Describe cómo se configuran alertas para notificar los errores de directiva a los administradores de directivas.|[Configurar alertas para notificar los errores de directiva a los administradores de directivas](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)|  
-|Describe cómo se crea, consulta, modifica y elimina una condición de la administración basada en directivas.|[Crear una nueva condición de administración basada en directivas](create-a-new-policy-based-management-condition.md)<br /><br /> [Eliminar una condición de administración basada en directivas](delete-a-policy-based-management-condition.md)<br /><br /> [Ver o modificar las propiedades de una condición de administración basada en directivas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+|Describe cómo se crea, consulta, modifica y elimina una condición de la administración basada en directivas.|[Crear una nueva condición de administración basada en directivas.](create-a-new-policy-based-management-condition.md)<br /><br /> [Eliminar una condición de administración basada en directivas](delete-a-policy-based-management-condition.md)<br /><br /> [Ver o modificar las propiedades de una condición de administración basada en directivas](view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
 |Describe cómo se crea, consulta, modifica y elimina una directiva de la administración basada en directivas.|[Crear una directiva de administración basada en directivas](create-a-policy-based-management-policy.md)<br /><br /> [Eliminar una directiva de administración basada en directivas](delete-a-policy-based-management-policy.md)<br /><br /> [Ver o modificar las propiedades de una directiva de administración basada en directivas](view-or-modify-the-properties-of-a-policy-based-management-policy.md)|  
 |Describe cómo se exporta e importa una directiva de la administración basada en directivas.|[Exportar una directiva de administración basada en directivas](export-a-policy-based-management-policy.md)<br /><br /> [Importar una directiva de administración basada en directivas](import-a-policy-based-management-policy.md)|  
 |Describe cómo se comprueba que una instancia de servidor, una base de datos, un objeto de servidor o un objeto de base de datos cumple la directiva.|[Evaluar una directiva de administración basada en directivas desde un objeto](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Evaluar una directiva de administración basada en directivas desde dicha directiva](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Evaluar una directiva de administración basada en directivas según una programación](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
@@ -131,7 +130,7 @@ ms.locfileid: "63157107"
 |Proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y describe cómo se evalúan las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos.|[Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Proporciona los temas de la Ayuda F1 para el nodo **Administración de directivas** del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

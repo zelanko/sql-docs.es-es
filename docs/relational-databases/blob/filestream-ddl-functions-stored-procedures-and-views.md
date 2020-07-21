@@ -1,7 +1,8 @@
 ---
-title: FILESTREAM DDL, funciones, procedimientos almacenados y vistas | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: FILESTREAM, funciones, procedimientos almacenados, vistas | Microsoft Docs
+description: FILESTREAM funciona con determinadas instrucciones Transact-SQL, API, funciones, procedimientos almacenados y vistas. Obtenga información sobre qué instrucciones y objetos admiten FILESTREAM.
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb3c99723396142a49f7eaea827a532e4454e052
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe2ed55cd68ee6852ab071a7ff8ca428150737d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85642690"
 ---
-# <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM DDL, funciones, procedimientos almacenados y vistas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="filestream-functions-stored-procedures-and-views"></a>FILESTREAM, funciones, procedimientos almacenados y vistas
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Enumera las instrucciones Transact-SQL y los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten FILESTREAM.  
   
  Para obtener la lista de objetos de base de datos que admiten la característica FileTable, vea [FileTable DDL, Functions, Stored Procedures, and Views](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md).  
   
-##  <a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
   
 -   [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
@@ -37,29 +38,29 @@ ms.locfileid: "68080020"
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
   
-##  <a name="func"></a> Funciones del sistema  
+##  <a name="system-functions"></a><a name="func"></a> Funciones del sistema  
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)  
   
 -   [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)  
   
-##  <a name="proc"></a> Procedimientos almacenados del sistema  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> Procedimientos almacenados del sistema  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
 -   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
   
-##  <a name="cat"></a> Vistas del sistema: vistas de catálogo  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> Vistas del sistema: vistas de catálogo  
   
 -   [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)  
   
-##  <a name="dmv"></a> Vistas del sistema: vistas de administración dinámica  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Vistas del sistema: vistas de administración dinámica  
   
 -   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql.md)  
   
 -   [sys.dm_filestream_file_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-requests-transact-sql.md)  
   
-##  <a name="api"></a> API de programación  
+##  <a name="programming-apis"></a><a name="api"></a> API de programación  
   
 -   [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

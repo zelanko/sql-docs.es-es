@@ -1,5 +1,5 @@
 ---
-title: Medidas (SSAS Tabular) | Microsoft Docs
+title: Medidas (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1ca545e081826f1b81117e377f370136a7b4998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c42809ab5057d4234b992ec81db0b6571c3e68c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067008"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938826"
 ---
 # <a name="measures-ssas-tabular"></a>Medidas (SSAS tabular)
   En los modelos tabulares, una medida es un cálculo creado usando una fórmula DAX para usarla en un cliente de informes. Las medidas se evalúan según los campos, filtros y segmentaciones de datos que los usuarios seleccionan en la aplicación cliente de informes.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067008"
   
 -   [Tareas relacionadas](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Ventajas  
  Las medidas pueden estar basadas en funciones de agregación estándar, como AVERAGE, COUNT o SUM, o puede definir su propia fórmula mediante DAX. Además de la fórmula, las medidas tienen propiedades definidas por el tipo de datos de la medida, como el nombre, los detalles de la tabla, el formato y las posiciones decimales.  
   
  Si se definen medidas en un modelo, los usuarios podrán agregarlas a un informe o a una tabla dinámica. Según las perspectivas y los roles, las medidas aparecen en la lista de campos con su tabla asociada y están disponibles para todos los usuarios del modelo. Normalmente, las medidas se crean en tablas de hechos; sin embargo, pueden ser independientes de la tabla con la que están asociadas.  
@@ -61,14 +60,14 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |Tv and Video|$946,989,702.51|  
 |**Total general**|**$4,691,673,731.53**|  
   
-##  <a name="bkmk_def_mg"></a> Definir medidas mediante la cuadrícula de medidas  
- Las medidas se crean en tiempo de diseño mediante la cuadrícula de medidas en el diseñador de modelos. Cada tabla tiene una cuadrícula de medidas. De forma predeterminada, la cuadrícula de medidas aparece debajo de cada tabla en el diseñador de modelos. También puede optar por no ver la cuadrícula de medidas de una determinada tabla. Para alternar la presentación de la cuadrícula de medidas de una tabla, haga clic en el **tabla** menú y, a continuación, haga clic en **Mostrar cuadrícula de medidas**.  
+##  <a name="defining-measures-by-using-the-measure-grid"></a><a name="bkmk_def_mg"></a>Definir medidas mediante la cuadrícula de medidas  
+ Las medidas se crean en tiempo de diseño mediante la cuadrícula de medidas en el diseñador de modelos. Cada tabla tiene una cuadrícula de medidas. De forma predeterminada, la cuadrícula de medidas aparece debajo de cada tabla en el diseñador de modelos. También puede optar por no ver la cuadrícula de medidas de una determinada tabla. Para alternar la presentación de la cuadrícula de medidas de una tabla, haga clic en el menú **tabla** y, a continuación, haga clic en **Mostrar cuadrícula de medidas**.  
   
  En la cuadrícula de medidas, puede crear medidas de las maneras siguientes:  
   
 -   Haga clic en una celda vacía de la cuadrícula de medidas y, a continuación, escriba una fórmula de DAX en la barra de fórmulas. Al hacer clic en ENTRAR para completar la fórmula, la medida aparecerá en la celda de la cuadrícula de medidas.  
   
--   Cree una medida mediante una función de agregación estándar; para ello, haga clic en una columna, haga clic en el botón de autosuma (∑) de la barra de herramientas y, por último, haga clic en una función de agregación estándar. Las agregaciones estándar son: SUM, Average, Count, DistinctCount, Max, Min. Las medidas creadas mediante el botón de autosuma siempre aparecerán directamente en la cuadrícula de medidas debajo de la columna.  
+-   Cree una medida mediante una función de agregación estándar; para ello, haga clic en una columna, haga clic en el botón de autosuma (∑) de la barra de herramientas y, por último, haga clic en una función de agregación estándar. Las agregaciones estándar son: Sum, Average, Count, DistinctCount, Max, Min. Las medidas creadas mediante el botón de autosuma siempre aparecerán directamente en la cuadrícula de medidas debajo de la columna.  
   
  De forma predeterminada, cuando se usa la autosuma, el nombre de la medida viene definido por el nombre de la columna asociada seguido de un signo de dos puntos y de la fórmula. Dicho nombre se puede cambiar en la barra de fórmulas o en el valor de la propiedad **Nombre de medida** en la ventana Propiedades. Al crear una medida mediante una fórmula personalizada, puede escribir un nombre en la barra de fórmulas, seguido de un signo de dos puntos y de la fórmula, o puede escribir un nombre en el valor de la propiedad **Nombre de medida** en la ventana Propiedades.  
   
@@ -79,30 +78,30 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Si se han definido perspectivas para el modelo, las medidas no se agregarán automáticamente a ninguna de ellas. Deberá agregarlas manualmente mediante el cuadro de diálogo Perspectivas. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_properties"></a> Propiedades de medidas  
+##  <a name="measure-properties"></a><a name="bkmk_properties"></a>Propiedades de la medida  
  Cada medida tiene propiedades que la definen. Las propiedades de las medidas, junto con las propiedades de las columnas asociadas, se pueden modificar en la ventana Propiedades. Las medidas tienen las propiedades siguientes:  
   
-|Property|Valor predeterminado|Descripción|  
+|Propiedad|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
 |**Descripción**|En blanco|Descripción de la medida. La descripción no aparecerá con la medida en un cliente de informes.|  
-|**Formato**|Se determina automáticamente a partir del tipo de datos de la columna a la que se hace referencia en la expresión de la fórmula.|El formato de la medida. Por ejemplo, moneda o porcentaje.|  
+|**Format**|Se determina automáticamente a partir del tipo de datos de la columna a la que se hace referencia en la expresión de la fórmula.|El formato de la medida. Por ejemplo, moneda o porcentaje.|  
 |**Fórmula**|La fórmula especificada en la barra de fórmulas al crear la medida.|La fórmula de la medida.|  
 |**Nombre de medida**|Si se usa la autosuma, el nombre de la medida estará precedido por el nombre de la columna seguido de un signo de dos puntos. Si se especifica una fórmula personalizada, escriba un nombre seguido de un signo de dos puntos y, a continuación, la fórmula.|El nombre de la medida tal como se muestra en la lista de campos de un cliente de informes.|  
   
-##  <a name="bkmk_KPI"></a> Usar una medida en un KPI  
+##  <a name="using-a-measure-in-a-kpi"></a><a name="bkmk_KPI"></a>Usar una medida en un KPI  
  Un KPI (indicador clave de rendimiento) viene definido por un valor *base* , definido a su vez por una medida, con respecto a un valor de *destino* , también definido por una medida o por un valor absoluto. Los KPI también incluyen un *estado*, un cálculo en el que se evalúa el valor base con respecto al valor de destino entre los umbrales, mostrado en formato gráfico. Los KPI los usan a menudo los profesionales de las empresas para identificar tendencias en métricas empresariales críticas.  
   
  Cualquier medida puede servir como medida base de un KPI. Para crear un KPI, haga clic con el botón derecho en una medida en la cuadrícula de medidas y, después, haga clic en **Crear KPI**. Aparecerá el cuadro de diálogo Indicador clave de rendimiento, donde podrá especificar un valor de destino (definido por una medida o un valor absoluto) y definir umbrales de estado, así como un tipo de gráfico. Para obtener más información, vea [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear y administrar medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)|Describe cómo crear y administrar medidas mediante la cuadrícula de medidas del diseñador de modelos.|  
   
-## <a name="see-also"></a>Vea también  
- [KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)   
- [Crear y administrar KPI &#40;SSAS tabular&#41;](create-and-manage-kpis-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [KPI &#40;&#41;tabular de SSAS](kpis-ssas-tabular.md)   
+ [Crear y administrar KPI &#40;&#41;tabular de SSAS](create-and-manage-kpis-ssas-tabular.md)   
  [Columnas calculadas &#40;SSAS tabular&#41;](ssas-calculated-columns.md)  
   
   

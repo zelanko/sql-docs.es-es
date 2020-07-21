@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897338"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   El rendimiento de los grupos de disponibilidad Always On es vital para mantener el contrato de nivel de servicio (SLA) de las bases de datos de críticas. La comprensión de cómo envían los registros los grupos de disponibilidad a las réplicas secundarias puede ayudar a estimar el objetivo de tiempo de recuperación (RTO) y el objetivo de punto de recuperación (RPO) de la implementación de disponibilidad y a identificar cuellos de botella en grupos de disponibilidad o réplicas con un mal rendimiento. En este artículo se explica el proceso de sincronización, se muestra cómo calcular algunas de las métricas clave y se proporcionan vínculos a algunos de los escenarios de solución de problemas de rendimiento comunes.  
    
 ##  <a name="data-synchronization-process"></a>Proceso de sincronización de datos  
  Para estimar el tiempo necesario para una sincronización completa e identificar el cuello de botella, debe comprender el proceso de sincronización. Un cuello de botella de rendimiento puede estar en cualquier fase del proceso; su detección puede ayudar a profundizar en los problemas subyacentes. En la ilustración y la tabla siguientes se muestra el proceso de sincronización de datos:  
   
- ![Sincronización de datos de grupo de disponibilidad](media/always-onag-datasynchronization.gif "Sincronización de datos de grupo de disponibilidad")  
+ ![Sincronización de datos del grupo de disponibilidad](media/always-onag-datasynchronization.gif "Sincronización de datos del grupo de disponibilidad")  
   
 |||||  
 |-|-|-|-|  
 |**Secuencia**|**Descripción del paso**|**Comentarios**|**Métricas de utilidad**|  
 |1|Generación de registro|Los datos del registro se vacían en el disco. Este registro se debe replicar en las réplicas secundarias. Las entradas del registro entran en la cola de envío.|[SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capturar|Los registros de cada base de datos se capturan y se envían a la cola de asociado correspondiente (uno por par de réplica de base de datos). Este proceso de captura se ejecuta de forma continua siempre que la réplica de disponibilidad esté conectada y no se suspenda el movimiento de datos por algún motivo; el par de réplica de base de datos se muestra como Sincronizando o Sincronizado. Si el proceso de captura no es capaz de examinar y poner en cola los mensajes con la suficiente rapidez, la cola de envío de registros se acumula.|[SQL Server: Réplica de disponibilidad > Bytes enviados a la réplica\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md), que es una agregación de la suma de todos los mensajes de la base de datos en cola para esa réplica de disponibilidad.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) y [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) en la réplica principal.|  
-|3|Send|Los mensajes de cada cola de réplica de base de datos se quitan de la cola y se envían a través de la conexión a la réplica secundaria correspondiente.|[SQL Server: réplica de disponibilidad > Bytes enviados al transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
+|3|Envío|Los mensajes de cada cola de réplica de base de datos se quitan de la cola y se envían a través de la conexión a la réplica secundaria correspondiente.|[SQL Server: réplica de disponibilidad > Bytes enviados al transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Recepción y almacenamiento en caché|Cada réplica secundaria recibe y almacena en caché el mensaje.|Contador de rendimiento [SQL Server: Réplica de disponibilidad > Bytes de registro recibidos/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Protección|El registro se vacía en la réplica secundaria para su protección. Tras el vaciado del registro, se envía una confirmación a la réplica principal.<br /><br /> Una vez protegido el registro, se evita la pérdida de datos.|Contador de rendimiento [SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo de espera [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Rehacer|Las páginas vaciadas se ponen al día en la réplica secundaria. Las páginas se mantienen en la cola de puesta al día mientras esperan.|[SQL Server: Réplica de base de datos > Bytes puestos al día/s](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) y [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo de espera [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -56,7 +56,7 @@ ms.locfileid: "68014681"
 ##  <a name="estimating-failover-time-rto"></a>Estimación del tiempo de conmutación por error (RTO)  
  El RTO del SLA depende del tiempo de conmutación por error de la implementación de Always On en un momento dado, que se puede expresar en la siguiente fórmula:  
   
- ![Cálculo de RTO de grupos de disponibilidad](media/always-on-rto.gif "Cálculo de RTO de grupos de disponibilidad")  
+ ![Cálculo de RTO de los grupos de disponibilidad](media/always-on-rto.gif "Cálculo de RTO de los grupos de disponibilidad")  
   
 > [!IMPORTANT]  
 >  Si un grupo de disponibilidad contiene más de una base de datos de disponibilidad, aquella con el valor Tfailover más alto se convierte en el valor límite para el cumplimiento del RTO.  
@@ -65,7 +65,7 @@ ms.locfileid: "68014681"
   
  Lo único que la réplica secundaria tiene que hacer para prepararse para una conmutación por error es que la fase de puesta al día alcance el final del registro. El tiempo de fase de puesta al día, Tredo, se calcula mediante la siguiente fórmula:  
   
- ![Cálculo de tiempo de fase de puesta al día de grupos de disponibilidad](media/always-on-redo.gif "Cálculo de tiempo de fase de puesta al día de grupos de disponibilidad")  
+ ![Cálculo de tiempo de la fase de puesta al día de los grupos de disponibilidad](media/always-on-redo.gif "Cálculo de la fase de puesta al día de los grupos de disponibilidad")  
   
  donde *redo_queue* es el valor de [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) y *redo_rate* es el valor de [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68014681"
 ## <a name="estimating-potential-data-loss-rpo"></a>Estimación de la posible pérdida de datos (RPO)  
  El RPO del SLA depende de la posible pérdida de datos de la implementación de Always On en un momento dado. Esta posible pérdida de datos se puede expresar en la siguiente fórmula:  
   
- ![Cálculo de RPO de grupos de disponibilidad](media/always-on-rpo.gif "Cálculo de RPO de grupos de disponibilidad")  
+ ![Cálculo de RPO de los grupos de disponibilidad](media/always-on-rpo.gif "Cálculo de RPO de los grupos de disponibilidad")  
   
  donde *log_send_queue* es el valor de [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) y *log generation rate* es el valor de [SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md).  
   
@@ -312,7 +312,7 @@ Se pueden consultar las DMV [sys.dm_hadr_database_replica_states](../../../relat
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervisión de RTO y RPO  
- En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI proporcionado en [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (El modelo de estado de Always On, parte 2: extensión del modelo de estado).  
+ En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI proporcionado en [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (El modelo de estado de Always On, parte 2: extensión del modelo de estado).  
   
  Se proporcionan elementos de los cálculos de tiempo de conmutación por error y de posible pérdida de datos de [Estimación del tiempo de conmutación por error (RTO)](#estimating-failover-time-rto) y [Estimación de la posible pérdida de datos (RPO)](#estimating-potential-data-loss-rpo) como métricas de rendimiento de la faceta de administración de directivas **Estado de réplica de base de datos** (vea [Ver las facetas de administración basada en directivas en un objeto de SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Puede supervisar estas dos métricas según una programación y recibir alertas cuando superen el RTO y el RPO, respectivamente.  
   
@@ -436,7 +436,7 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
  Puede ver el historial de trabajos para inspeccionar los resultados de la evaluación. Los errores de evaluación también se registran en el registro de aplicaciones de Windows (en el Visor de eventos) con el Id. de evento 34052. También puede configurar el Agente SQL Server para enviar alertas sobre los errores de directiva. Para obtener más información, vea [Configurar alertas para notificar los errores de directiva a los administradores de directivas](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md).  
   
-##  <a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas de rendimiento  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> Escenarios de solución de problemas de rendimiento  
  En la tabla siguiente se enumeran los escenarios de solución de problemas relacionados con el rendimiento comunes.  
   
 |Escenario|Descripción|  
@@ -445,15 +445,15 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
 |[Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)|Después de realizar una conmutación por error manual forzada, la pérdida de datos supera la RPO. O bien, al calcular la posible pérdida de datos de una réplica secundaria de confirmación asincrónica, descubre que supera la RPO.|  
 |[Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado.|  
   
-##  <a name="BKMK_XEVENTS"></a> Eventos extendidos de utilidad  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> Eventos extendidos de utilidad  
  Los siguientes eventos extendidos son útiles al solucionar problemas de réplicas en estado **Sincronizando**.  
   
-|Nombre del evento|Categoría|Canal|réplica de disponibilidad|  
+|Nombre del evento|Category|Canal|réplica de disponibilidad|  
 |----------------|--------------|-------------|--------------------------|  
-|redo_caught_up|transacciones|Depuración|Secundario|  
-|redo_worker_entry|transacciones|Depuración|Secundario|  
-|hadr_transport_dump_message|`alwayson`|Depuración|Principal|  
-|hadr_worker_pool_task|`alwayson`|Depuración|Principal|  
-|hadr_dump_primary_progress|`alwayson`|Depuración|Principal|  
-|hadr_dump_log_progress|`alwayson`|Depuración|Principal|  
+|redo_caught_up|transacciones|Depurar|Secundario|  
+|redo_worker_entry|transacciones|Depurar|Secundario|  
+|hadr_transport_dump_message|`alwayson`|Depurar|Principal|  
+|hadr_worker_pool_task|`alwayson`|Depurar|Principal|  
+|hadr_dump_primary_progress|`alwayson`|Depurar|Principal|  
+|hadr_dump_log_progress|`alwayson`|Depurar|Principal|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analíticos|Secundario|  

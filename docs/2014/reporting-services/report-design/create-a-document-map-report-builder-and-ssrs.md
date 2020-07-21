@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106165"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106165"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
  El mapa del documento está pensado para usarlo en la extensión de representación de HTML, por ejemplo, en la vista previa y el visor de informes. Otras extensiones de representación tienen diferentes formas de articular un mapa del documento:  
   
 -   PDF representa un mapa del documento como el panel Marcadores.  
@@ -48,7 +48,7 @@ ms.locfileid: "66106165"
     > [!NOTE]  
     >  Para seleccionar una región de datos Tablix, haga clic en cualquier celda para mostrar los identificadores de fila y de columna y, a continuación, haga clic en el controlador de tabla.  
   
-2.  En el panel Propiedades, escriba el texto que desea que aparezcan en el mapa del documento en el `DocumentMapLabel` propiedad, o escriba una expresión que se evalúa como una etiqueta. Por ejemplo, escriba **Gráfico de ventas**.  
+2.  En el panel Propiedades, escriba el texto que desea que aparezca en el mapa del documento en la `DocumentMapLabel` propiedad o escriba una expresión que se evalúe como una etiqueta. Por ejemplo, escriba **Gráfico de ventas**.  
   
     > [!NOTE]  
     >  Si no ve el panel de propiedades, en la pestaña **Vista** , en el grupo **Mostrar u ocultar** , seleccione **Propiedades**.  
@@ -66,7 +66,7 @@ ms.locfileid: "66106165"
   
 2.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo y, después, haga clic en **Editar grupo**. Se abre la página **General** del cuadro de diálogo **Propiedades de grupo de Tablix** .  
   
-3.  Haga clic en **Avanzado**.  
+3.  Haga clic en **Avanzadas**.  
   
 4.  En el cuadro de lista **Mapa del documento** , escriba o seleccione una expresión que coincida con la expresión de grupo.  
   
@@ -112,13 +112,13 @@ ms.locfileid: "66106165"
 4.  Pegue la dirección URL en el Administrador de informes y, a continuación, presione ENTRAR. El informe se ejecuta con el mapa del documento oculto.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>   Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
  
   
-## <a name="see-also"></a>Vea también  
- [Buscar y ver informes en el Administrador de informes &#40;generador de informes y SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Consulte también  
+ [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c77f6ce464540cd74f67af73d63a20f5d94fdfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9e8da49f665e92dbcb98f3b91370742c2e9eaf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721866"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064647"
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
   En esta sección se ofrece información acerca de las siguientes páginas del Asistente para configurar la distribución:  
@@ -28,7 +27,7 @@ ms.locfileid: "62721866"
 -   [Publicadores](publishers.md)  
 -   [Contraseña del distribuidor](distributor-password.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar distribución](configure-distribution.md)   
  [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)   
 

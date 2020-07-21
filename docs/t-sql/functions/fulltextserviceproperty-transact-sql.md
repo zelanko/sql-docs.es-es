@@ -18,17 +18,17 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 726b071c222580ec75091477dc68509cdb71e1e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 385bdc1eef159fab35808516f3b5f55626235bba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752377"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información relacionada con las propiedades del motor de búsqueda de texto completo. Estas propiedades se pueden establecer y recuperar usando **sp_fulltext_service**.  
   
@@ -46,9 +46,9 @@ FULLTEXTSERVICEPROPERTY ('property')
  Es una expresión que contiene el nombre de la propiedad del servicio de búsqueda en texto completo. La tabla presenta las propiedades y proporciona descripciones de la información que se devuelve.  
   
 > [!NOTE]
->  Las propiedades siguientes se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** y **ResourceUsage**. Evite el uso de estas propiedades en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
+>  Las propiedades siguientes se quitarán en una futura versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** y **ResourceUsage**. Evite el uso de estas propiedades en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |--------------|-----------|  
 |**ResourceUsage**|Devuelve 0. Se admite únicamente por compatibilidad con versiones anteriores.|  
 |**ConnectTimeout**|Devuelve 0. Se admite únicamente por compatibilidad con versiones anteriores.|  
@@ -57,7 +57,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**LoadOSResources**|Indica si los separadores de palabras y filtros del sistema operativo se registran y utilizan con esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De forma predeterminada, esta propiedad está deshabilitada para impedir cambios de comportamiento involuntarios por actualizaciones del sistema operativo. Habilitar el uso de recursos del sistema operativo proporciona acceso a recursos de idiomas y tipos de documento registrados en los Servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Index Server, pero que no tienen instalado un recurso específico de la instancia. Si habilita la carga de recursos del sistema operativo, asegúrese de que son binarios con firma de confianza; de lo contrario, no se pueden cargar cuando **VerifySignature** se establece en 1.<br /><br /> 0 = Utiliza solo los filtros y separadores de palabras específicos de esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Cargar filtros del sistema operativo y separadores de palabras.|  
 |**VerifySignature**|Especifica si el servicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search carga solo binarios con firma. De forma predeterminada, solo se cargan binarios con firma de confianza.<br /><br /> 0 = No comprueba si los binarios están firmados.<br /><br /> 1 = Comprueba que solo se cargan binarios con firma de confianza.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="examples"></a>Ejemplos  

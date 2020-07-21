@@ -1,5 +1,5 @@
 ---
-title: Los puntos de conexión de catálogo vistas (Transact-SQL) | Microsoft Docs
+title: Vistas de catálogo de extremos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - endpoints [SQL Server], catalog views
 - catalog views [SQL Server], endpoints
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98838772b53b5b650aa2d268049afde29443277e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d16b71e2136941196090be04e3a7d5deada42c3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897866"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>Vistas de catálogo de extremos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta sección contiene las siguientes vistas de catálogo.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68033034"
 |[sys.endpoint_webmethods](../../relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql.md)|[sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md)|  
 |[sys.http_endpoints](../../relational-databases/system-catalog-views/sys-http-endpoints-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

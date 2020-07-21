@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fbb47d9ec31d5c912c23e5afa6e04e4ea2e6f43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067296"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
   Utilice este cuadro de diálogo para especificar un filtro. Un filtro permite configurar el Explorador de objetos y el Explorador de la utilidad para mostrar únicamente los elementos que cumplen criterios específicos. Por ejemplo, puede utilizar un filtro para mostrar solo los trabajos con nombres que contienen la palabra "Mantenimiento". El encabezado del cuadro de diálogo **Configuración del filtro** contiene el nombre del servidor y puede contener el nombre de la base de datos.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Propiedad**  
  Muestra la propiedad que se va filtrar.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "63277082"
   
      El filtro muestra los elementos en los que la propiedad y el valor coinciden plenamente.  
   
--   **Contiene**  
+-   **Contains**  
   
      El filtro muestra los elementos en los que la propiedad contiene el valor. La propiedad puede contener otro texto.  
   
@@ -72,8 +71,8 @@ ms.locfileid: "63277082"
  **Borrar filtro**  
  Elimina toda la configuración actual del filtro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
- [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Utilidad de SQL Server características y tareas](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

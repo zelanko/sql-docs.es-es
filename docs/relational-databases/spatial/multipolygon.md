@@ -13,15 +13,15 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8522e65762e8c27ec65fb5fc4a56db0653b5f5c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b3f7ad93673d874c6627d495c23a89218fb7d08c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640380"
 ---
-# <a name="multipolygon"></a>MultiPolígono
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="multipolygon"></a>MultiPolygon
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una instancia de **MultiPolygon** es una colección de cero o más instancias de **Polygon** .  
   
 ## <a name="polygon-instances"></a>Instancias Polygon  

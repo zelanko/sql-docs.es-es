@@ -12,10 +12,10 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71285364"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Operación en curso (Asistente para importación y exportación de SQL Server)
@@ -28,12 +28,12 @@ Después de revisar las opciones que ha elegido en el asistente y de hacer clic 
 ## <a name="screen-shot---operation-in-progress"></a>Captura de pantalla: operación en curso 
  En la captura de pantalla siguiente se muestra la página **Realizando operación** del asistente mientras la operación aún está en curso.  
   
- ![Página Realizando operación del Asistente para importación y exportación](../../integration-services/import-export-data/media/performing-operation1.png "Performing operation page of the Import and Export Wizard")  
+ ![Página de operación en curso del Asistente para importar y exportar](../../integration-services/import-export-data/media/performing-operation1.png "Página de operación en curso del Asistente para importar y exportar")  
 
 ## <a name="screen-shot---operation-completed"></a>Captura de pantalla: operación completada 
  En la captura de pantalla siguiente se muestra la página **Realizando operación** del asistente después de completarse la operación. Haga clic en un elemento de la columna **Mensajes** para obtener más información sobre el paso correspondiente.  
   
- ![Página Realizando operación del Asistente para importación y exportación](../../integration-services/import-export-data/media/performing-operation2.png "Performing operation page of the Import and Export Wizard")  
+ ![Página de operación en curso del Asistente para importar y exportar](../../integration-services/import-export-data/media/performing-operation2.png "Página de operación en curso del Asistente para importar y exportar")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Observar el progreso de la operación
  **Acción**  
@@ -46,10 +46,10 @@ Después de revisar las opciones que ha elegido en el asistente y de hacer clic 
  Muestra mensajes de error y de información sobre el paso. Haga clic en un elemento de esta columna para obtener más información sobre el paso correspondiente.
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>Interrumpir la operación o guardar los resultados
- **Detener**  
+ **Detención**  
  Si es necesario, puede interrumpir la operación si hace clic en el botón **Detener** .  
   
- **Informe**  
+ **Report**  
  Permite ver un informe de los resultados, guardarlo en un archivo, copiarlo al portapapeles o enviarlo por correo electrónico.  
   
 ## <a name="whats-next"></a>¿Qué sigue?  
@@ -57,7 +57,7 @@ Después de revisar las opciones que ha elegido en el asistente y de hacer clic 
 -   Si ha ejecutado la operación inmediatamente, puede abrir el destino que ha seleccionado para revisar los datos que haya copiado el asistente.  
 -   Si ha guardado el paquete SSIS creado por la asistente, puede abrirlo en SQL Server Data Tools para personalizarlo y volverlo a usar. Para obtener información sobre cómo personalizar el paquete guardado y volverlo ejecutar posteriormente, vea [Guardar un paquete SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

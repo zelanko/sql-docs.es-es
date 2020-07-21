@@ -1,10 +1,9 @@
 ---
-title: Columnas de índice (Visual Database Tools, cuadro de diálogo) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Columnas del índice
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b66e60835d0f74c30752dfc6917098d7b0c29332
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d0e419703d83e0881912be76c58467db4bc83ceb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254147"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75258000"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Columnas de índice (Visual Database Tools, cuadro de diálogo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

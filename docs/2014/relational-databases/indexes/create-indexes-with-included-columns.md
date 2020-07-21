@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5a464f9791ea635236069555647229bf1f0d79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049986"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
   En este tema se describe cómo agregar columnas incluidas (o sin clave) para ampliar la funcionalidad de índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al incluir columnas sin clave, puede crear índices no clúster que abarcan más consultas. Esto se debe a que las columnas sin clave tienen las siguientes ventajas:  
@@ -55,15 +54,15 @@ ms.locfileid: "63156812"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="DesignRecs"></a> Recomendaciones de diseño  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>Recomendaciones de diseño  
   
 -   Rediseñe índices no clúster con un tamaño de las claves de índice grande para que solo las columnas utilizadas para búsquedas sean columnas de clave. Convierta todas las demás columnas que abarcan la consulta en columnas sin clave. De esta forma, tendrá todas las columnas necesarias para abarcar la consulta pero la clave de índice en sí será pequeña y eficaz.  
   
 -   Incluya columnas sin clave en un índice no clúster para evitar que se superen las limitaciones actuales de tamaño del índice de un máximo de 16 columnas de clave y un tamaño máximo de clave de índice de 900 bytes. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de las claves de índice.  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Las columnas sin clave solo pueden definirse en índices no clúster.  
   
@@ -81,12 +80,12 @@ ms.locfileid: "63156812"
   
     -   Aumentar la longitud de las columnas `varchar`, `nvarchar` o `varbinary`.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Para crear un índice con columnas sin clave  
   
@@ -96,25 +95,25 @@ ms.locfileid: "63156812"
   
 3.  Haga clic en el signo más para expandir la tabla en la que desea crear un índice con columnas sin clave.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+4.  Haga clic con el botón secundario en la carpeta **índices** , seleccione **nuevo índice**y seleccione **índice no clúster..**..  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
 6.  En la pestaña **Columnas de clave de índice**, haga clic en **Agregar...**.  
   
-7.  En el cuadro de diálogo **Seleccionar columnas de**_table_name_ , active las casillas de las columnas de tabla que se van a agregar al índice.  
+7.  En el cuadro de diálogo **seleccionar columnas de**_TABLE_NAME_ , active las casillas de las columnas de tabla que se van a agregar al índice.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En la pestaña **Columnas incluidas**, haga clic en **Agregar...**.  
   
-10. En el cuadro de diálogo **Seleccionar columnas de**_table_name_ , active las casillas de las columnas de tabla que se van a agregar al índice como columnas sin clave.  
+10. En el cuadro de diálogo **seleccionar columnas de**_TABLE_NAME_ , active las casillas de las columnas de tabla que se van a agregar al índice como columnas sin clave.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Para crear un índice con columnas sin clave  
   

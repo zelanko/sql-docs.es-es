@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e288a2691f99f8d879b9a1df25536087e8e2f81
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62771132"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435482"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Procesar inserciones, actualizaciones y eliminaciones
   En el flujo de datos de un paquete de Integration Services que realiza una carga incremental de datos modificados, la segunda tarea consiste en separar las inserciones, las actualizaciones y las eliminaciones. A continuación, puede utilizar los comandos adecuados para aplicarlos en el destino.  
@@ -64,13 +63,13 @@ select
   
     3.  Para las eliminaciones, escriba una línea con la condición `CDC_OPERATION == "D"` que dirija las filas eliminadas a la salida.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Una vez divididas las filas para su procesamiento, el paso siguiente consiste en aplicar los cambios en el destino.  
   
  **Tema siguiente:** [Aplicar los cambios al destino](apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>Vea también  
- [Transformación División condicional](../data-flow/transformations/conditional-split-transformation.md)   
- [Dividir un conjunto de datos usando la transformación División condicional](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+## <a name="see-also"></a>Consulte también  
+ [Conditional Split Transformation](../data-flow/transformations/conditional-split-transformation.md)   
+ [División de un conjunto de datos con la transformación División condicional](../data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

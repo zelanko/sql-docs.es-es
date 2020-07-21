@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d55f37f5401f60ddfeec340af1ae6d532eb6ad01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029777"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errores y advertencias (categoría de eventos del motor de base de datos)
   La categoría de eventos **Errores y advertencias** contiene eventos generales de errores y advertencias.  
@@ -46,7 +45,7 @@ ms.locfileid: "62662631"
 |[Sort Warnings (clase de eventos)](sort-warnings-event-class.md)|Indica que las operaciones de orden no caben en la memoria.|  
 |[User Error Message (clase de eventos)](user-error-message-event-class.md)|Muestra mensajes de error que ve el usuario.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

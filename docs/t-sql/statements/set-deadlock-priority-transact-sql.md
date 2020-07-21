@@ -24,14 +24,14 @@ ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e8eef3588b742e8e3b11d46b1bf3d95e11cae50
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929051"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634403"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Especifica la importancia relativa de que la sesión actual se siga procesando si existe un interbloqueo con otra sesión.  
@@ -40,7 +40,7 @@ ms.locfileid: "67929051"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var | @deadlock_intvar }  
   
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  Es una variable de entero que especifica la prioridad del interbloqueo. La variable se debe establecer en un valor entero en el intervalo (de -10 a 10).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los interbloqueos se producen cuando dos sesiones esperan a tener acceso a los recursos bloqueados por la otra sesión. Si una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta que dos sesiones están interbloqueadas, resuelve el interbloqueo mediante la elección de una de las sesiones como el sujeto de interbloqueo. La transacción actual del sujeto se revierte y se devuelve el mensaje de error de interbloqueo 1205 al cliente. De este modo, se desbloquea dicha sesión para que pueda continuar la otra sesión.  
   
  La selección de la sesión como sujeto de interbloqueo depende de la prioridad de interbloqueo de cada sesión:  
@@ -83,7 +83,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se utiliza una variable para establecer la prioridad de interbloqueo en `LOW`.  
   
-```  
+```sql
 DECLARE @deadlock_var NCHAR(3);  
 SET @deadlock_var = N'LOW';  
   
@@ -93,7 +93,7 @@ GO
   
  En el siguiente ejemplo se establece la prioridad de interbloqueo en `NORMAL`.  
   
-```  
+```sql
 SET DEADLOCK_PRIORITY NORMAL;  
 GO  
 ```  

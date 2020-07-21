@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f75065f38d47964ab3bbc07f22bb809061fb22d4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: bd993cc8729277a51b505b979bdb56d5dab21f17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737848"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (base de datos de SSISDB)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Establece el valor de un parámetro para una instancia de ejecución en el catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -65,22 +65,22 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  El parámetro *object_type* es de tipo **smallInt**.  
   
  [ @parameter_name = ] *parameter_name*  
- Nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
+ El nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
   
  [ @parameter_value = ] *parameter_value*  
- El valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
+ Valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para determinar los valores de parámetros usados para una ejecución determinada, consulte la vista catalog.execution_parameter_values.  
   
  Para especificar el ámbito de la información que se registra durante una ejecución de paquetes, establezca *parameter_name* en LOGGING_LEVEL y *parameter_value* en uno de los valores siguientes.  
   
  Establezca el parámetro *object_type* en 50.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|None<br /><br /> El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
-|1|Básico<br /><br /> Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
+|1|Básica<br /><br /> Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
 |2|Rendimiento<br /><br /> Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.|  
 |3|Verbose<br /><br /> Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico. <br />Los eventos personalizados incluyen los eventos registrados por las tareas de Integration Services. Para más información, vea [Mensajes personalizados para registro](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Linaje en tiempo de ejecución<br /><br /> Recopila los datos necesarios para realizar un seguimiento del linaje en el flujo de datos.|  
@@ -88,7 +88,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzca algún error durante la ejecución del paquete, establezca los siguientes valores de parámetro para una instancia de ejecución que no se haya ejecutado.  
   
-|Parámetro|Valor|  
+|Parámetro|Value|  
 |---------------|-----------|  
 |*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
@@ -97,7 +97,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Para especificar que el servidor de Integration Services genere archivos de volcado cuando se produzcan eventos durante la ejecución del paquete, establezca los siguientes valores de parámetro para una instancia de ejecución que no se haya ejecutado.  
   
-|Parámetro|Valor|  
+|Parámetro|Value|  
 |---------------|-----------|  
 |*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  
@@ -106,7 +106,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
  Para especificar los eventos durante la ejecución del paquete que causan que el servidor de Integration Services genere archivos de volcado, establezca los siguientes valores de parámetro para una instancia de ejecución que no se haya ejecutado. Separe los diversos códigos de evento mediante un punto y coma.  
   
-|Parámetro|Valor|  
+|Parámetro|Value|  
 |---------------|-----------|  
 |*execution_id*|Identificador único de la instancia de ejecución.|  
 |*object_type*|50|  

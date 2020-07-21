@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Ver y editar datos de una tabla | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Consulta y edición de datos de una tabla
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d6a59755f3c6675830324a314cbf364333e105c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140999"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75226759"
 ---
-# <a name="how-to-view-and-edit-data-in-a-table"></a>Procedimientos: Consulta y edición de datos de una tabla
+# <a name="how-to-view-and-edit-data-in-a-table"></a>Cómo: Ver y editar datos de una tabla
+
 Puede ver, editar y eliminar datos de una tabla existente mediante un Editor de datos visual.  
   
 > [!WARNING]  

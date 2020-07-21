@@ -1,5 +1,5 @@
 ---
-title: Reglas de pestaña (Visor de modelos de minería de datos) | Microsoft Docs
+title: Pestaña reglas (visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07617e2a49d784352911088f7c5e09bc727ab7d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070102"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539017"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Pestaña Reglas (Visor de modelos de minería de datos)
   Utilice el panel **Reglas** en un modelo de asociación para ver las reglas que el algoritmo extrajo de los datos. Las reglas describen cómo se relacionan los elementos entre sí, y se pueden utilizar para crear recomendaciones.  
@@ -27,16 +26,16 @@ ms.locfileid: "66070102"
 > [!WARNING]  
 >  De forma predeterminada, solo las reglas que están por encima del umbral de probabilidad definidas en **Probabilidad mínima** se muestran en el visor. No puede reducir más este valor utilizando el visor, porque el umbral de probabilidad del resultado de la regla se determina cuando se crea el modelo. Para más información, vea [Referencia técnica del algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opciones  
- **Actualizar el contenido del Visor**  
+ **Actualizar el contenido del visor**  
  Vuelva a cargar el modelo de minería de datos en el visor.  
   
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Viewer**  
+ **Visor**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de cada modelo de minería de datos o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Probabilidad mínima**  
@@ -45,7 +44,7 @@ ms.locfileid: "66070102"
  **Importancia mínima**  
  Cambie este valor para establecer la importancia mínima necesaria para que se muestre una regla en el visor. Si se aumenta el valor de importancia, se reducirá el número de reglas que se muestran.  
   
- **Regla de filtro**  
+ **Regla del filtro**  
  Especifique un valor de cadena para filtrar el número de reglas que aparece en el visor.  
   
  También puede escribir expresiones regulares .NET como criterios de filtro. Por ejemplo, la siguiente expresión devuelve todas las reglas que contienen 'Road Bottle Cage' en el lado izquierdo de la regla:  
@@ -81,14 +80,14 @@ ms.locfileid: "66070102"
   
  Puede hacer clic en el encabezado de columna para ordenar por importancia.  
   
- **Rule**  
+ **Regla**  
  Esta columna del gráfico muestra la descripción de texto de cada regla, según el formato especificado mediante las opciones **Mostrar** y **Mostrar nombre largo**.  
   
  Puede hacer clic en el encabezado de columna para ordenar por el texto de la regla.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   
   

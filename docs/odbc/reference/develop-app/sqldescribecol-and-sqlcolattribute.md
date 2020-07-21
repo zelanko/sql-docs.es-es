@@ -14,20 +14,20 @@ helpviewer_keywords:
 - retrieving result set meta data [ODBC]
 - metadata [ODBC], result set
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d602368475c6f1326cc615453116e898b1c1892f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107443"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81299765"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol y SQLColAttribute
-**SQLDescribeCol** y **SQLColAttribute** se usan para recuperar metadatos del conjunto de resultados. Es la diferencia entre estas dos funciones que **SQLDescribeCol** siempre devuelve el mismas cinco piezas de información (una columna nombre, tipo de datos, precisión, escala y la nulabilidad), mientras **SQLColAttribute** devuelve un solo dato solicitado por la aplicación. Sin embargo, **SQLColAttribute** puede devolver una selección mucho más completa de metadatos, incluidos la diferenciación de una columna, mostrar el tamaño, la posibilidad de actualización y funciones de búsqueda.  
+**SQLDescribeCol** y **SQLColAttribute** se usan para recuperar los metadatos del conjunto de resultados. La diferencia entre estas dos funciones es que **SQLDescribeCol** siempre devuelve los mismos cinco fragmentos de información (el nombre de una columna, el tipo de datos, la precisión, la escala y la nulabilidad), mientras que **SQLColAttribute** devuelve una única parte de la información solicitada por la aplicación. Sin embargo, **SQLColAttribute** puede devolver una selección mucho más rica de metadatos, como la distinción de mayúsculas y minúsculas de una columna, el tamaño de la pantalla, la actualización y la capacidad de búsqueda.  
   
- Muchas aplicaciones, especialmente aquellas que solo muestran datos, requieren solo los metadatos devueltos por **SQLDescribeCol**. Para estas aplicaciones, es más rápido utilizar **SQLDescribeCol** que **SQLColAttribute** porque la información se devuelve en una sola llamada. Otras aplicaciones, especialmente aquellas que actualizan datos, requieren los metadatos adicionales devueltos por **SQLColAttribute** y, por tanto, usar ambas funciones. Además, **SQLColAttribute** es compatible con los metadatos específicos del controlador; para obtener más información, consulte [los tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ Muchas aplicaciones, especialmente aquellas que solo muestran datos, requieren solo los metadatos devueltos por **SQLDescribeCol**. Para estas aplicaciones, es más rápido usar **SQLDescribeCol** que **SQLColAttribute** , ya que la información se devuelve en una sola llamada. Otras aplicaciones, especialmente las que actualizan datos, requieren los metadatos adicionales devueltos por **SQLColAttribute** y, por tanto, usan ambas funciones. Además, **SQLColAttribute** admite metadatos específicos del controlador; para obtener más información, vea [tipos de datos específicos del controlador, tipos de descriptores, tipos de información, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Una aplicación puede recuperar metadatos del conjunto de resultados en cualquier momento después de preparación o ejecución de una instrucción y antes del cursor sobre el resultado del conjunto se cierra. Muy pocas aplicaciones exigen que los metadatos del conjunto de resultados después de prepara la instrucción y antes de ejecutarlo. Si es posible, las aplicaciones deben esperar para recuperar metadatos hasta después de ejecutar la instrucción, ya que algunos orígenes de datos no pueden devolver metadatos para instrucciones preparadas y emular esta capacidad en el controlador a menudo es un proceso lento. Por ejemplo, el controlador podría generar un conjunto mediante la sustitución de resultados de fila cero la **donde** cláusula de una **seleccione** instrucción con la cláusula **WHERE 1 = 2** y ejecutar el instrucción resultante.  
+ Una aplicación puede recuperar los metadatos del conjunto de resultados en cualquier momento después de preparar o ejecutar una instrucción y antes de que se cierre el cursor sobre el conjunto de resultados. Muy pocas aplicaciones requieren metadatos del conjunto de resultados una vez preparada la instrucción y antes de que se ejecute. Si es posible, las aplicaciones deben esperar para recuperar los metadatos hasta que se ejecute la instrucción, porque algunos orígenes de datos no pueden devolver metadatos para las instrucciones preparadas y la emulación de esta funcionalidad en el controlador suele ser un proceso lento. Por ejemplo, el controlador puede generar un conjunto de resultados de cero filas reemplazando la cláusula **Where** de una instrucción **Select** por la cláusula **donde 1 = 2** y ejecutando la instrucción resultante.  
   
- A menudo son costoso recuperar del origen de datos de metadatos. Por este motivo, los controladores deben almacenar en caché los metadatos que recuperar del servidor y contener para siempre y cuando el cursor sobre el resultado establecido es abierto. Además, las aplicaciones deben solicitar solo los metadatos que necesitan realmente.
+ Los metadatos suelen ser caros de recuperar del origen de datos. Por este motivo, los controladores deben almacenar en caché los metadatos que recuperen del servidor y mantenerlos mientras esté abierto el cursor sobre el conjunto de resultados. Además, las aplicaciones deben solicitar solo los metadatos que realmente necesitan.

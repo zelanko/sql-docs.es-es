@@ -13,18 +13,17 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ab514b8d9e9a312b6d91d453235d99b837f6781
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62766198"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439902"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona visores de datos.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62766198"
   
 #### <a name="to-add-a-data-viewer"></a>Para agregar un visor de datos  
   
--   [agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)  
+-   [Agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>Recuentos de filas  
  La cantidad de filas que han pasado por una ruta aparece en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] junto a la ruta. La cantidad se actualiza periódicamente mientras los datos pasan por la ruta.  
@@ -68,7 +67,7 @@ ms.locfileid: "62766198"
 |Verde|Ejecución correcta.|  
 |rojo|Ejecución con errores.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
   
   

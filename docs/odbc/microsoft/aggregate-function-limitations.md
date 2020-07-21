@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de la función de agregado | Microsoft Docs
+title: Limitaciones de las funciones de agregado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], aggregate functions
 - ODBC desktop database drivers [ODBC], aggregate functions
 ms.assetid: f6e494ed-c7cb-4b1b-bf3b-c4361850b51a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cb0d006a6d380ed21cbe73f77abe3c2aa42a71f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 19a45f9f1f5d56075ceea3fe178a15285db2e6c4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901384"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81281405"
 ---
 # <a name="aggregate-function-limitations"></a>Limitaciones de la función de agregado
-No se utiliza una función de agregado y una referencia de columna que no sea de agregado como argumentos a una única instrucción SQL.
+Una función de agregado y una referencia de columna no agregada no se pueden usar como argumentos en una única instrucción SQL.

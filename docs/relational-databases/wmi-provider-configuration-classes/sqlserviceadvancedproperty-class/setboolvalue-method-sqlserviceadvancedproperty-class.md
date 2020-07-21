@@ -1,6 +1,6 @@
 ---
-title: Método SetBoolValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetBoolValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 077cd7adea70facc2033da2bcf54643f6188fda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e7d3363794d6e5a5a9a261df0eb4223073ca1ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042691"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888307"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (clase SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Establece el valor booleano de una propiedad.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,7 +51,7 @@ object.SetBoolValue [= value]
 ## <a name="remarks"></a>Comentarios  
  El tipo de valor de la propiedad debe ser booleano para establecer la propiedad en un valor booleano.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

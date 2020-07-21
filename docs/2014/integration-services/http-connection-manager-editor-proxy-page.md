@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones HTTP (página Proxy) | Microsoft Docs
+title: Editor del administrador de conexiones HTTP (página proxy) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71880421f9f692c3d2c33aa6439e409c84851293
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66058258"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436922"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Editor del administrador de conexiones HTTP (página Proxy)
   Utilice la pestaña **Proxy** del cuadro de diálogo **Editor del administrador de conexiones HTTP** para configurar el Administrador de conexiones HTTP para que utilice un servidor proxy. Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058258"
  **Utilizar proxy**  
  Especifique si desea que el Administrador de conexiones HTTP se conecte a través de un servidor proxy.  
   
- **Dirección URL de proxy**  
+ **Dirección URL del proxy**  
  Escriba la dirección URL para el servidor de proxy.  
   
  **No usar servidor proxy en el equipo local**  
@@ -39,7 +38,7 @@ ms.locfileid: "66058258"
  **Utilizar credenciales**  
  Especifique si desea que el Administrador de conexiones HTTP utilice credenciales de seguridad para el servidor proxy.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
   
  **Contraseña**  
@@ -51,13 +50,13 @@ ms.locfileid: "66058258"
  **Lista de omisión de proxy**  
  Lista de direcciones para la que desea omitir el servidor proxy.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Escriba una dirección para la que no desee utilizar el servidor proxy.  
   
  **Quitar**  
  Seleccione una dirección y quítela haciendo clic en **Quitar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   

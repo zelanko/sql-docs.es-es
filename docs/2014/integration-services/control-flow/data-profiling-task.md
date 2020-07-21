@@ -13,15 +13,14 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f17debb2b93711981f80c84b0166940f34e44057
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831904"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433382"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831904"
 |FunctionalDependencyProfile|Columnas de tipo `integer`, `char` y `datetime`|  
 |InclusionProfile|Columnas de tipo `integer`, `char` y `datetime`|  
   
- \* En la tabla anterior de tipos de datos válidos, el `integer`, `char`, `datetime`, y `numeric` incluyen los tipos de datos específicos siguientes:  
+ \*En la tabla anterior de tipos de datos válidos, los `integer` `char` tipos,, `datetime` y `numeric` incluyen los siguientes tipos de datos específicos:  
   
  Los tipos enteros incluyen `bit`, `tinyint`, `smallint`, `int` y `bigint`.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831904"
   
  Los tipos numéricos incluyen los tipos `integer` (excepto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` y `numeric`.  
   
- \*\* `image`, `text`, `XML`, `udt`, y `variant` no se admiten los tipos de perfiles que no sea el perfil de proporción de columnas nulas.  
+ \*\*`image` `text` `XML` los tipos,,, `udt` y `variant` no se admiten para los perfiles que no sean el perfil de proporción de columnas nulas.  
   
 ### <a name="valid-tables-and-columns"></a>Tablas y columnas válidas  
  Si la tabla o la columna está vacía, la tarea de generación de perfiles de datos realiza las acciones siguientes:  
@@ -109,7 +108,7 @@ ms.locfileid: "62831904"
 -   **Perfil rápido** You can select Perfil rápido to configure the task quickly. Un perfil rápido genera perfiles para una tabla o una vista mediante todos los perfiles y valores de configuración predeterminados.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Mensajes de registro personalizados disponibles en la tarea de generación de perfiles de datos  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea de generación de perfiles de datos. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea de generación de perfiles de datos. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  

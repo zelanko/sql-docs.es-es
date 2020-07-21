@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos compatibles (SSAS Tabular) | Microsoft Docs
+title: Orígenes de datos compatibles (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,35 +9,34 @@ ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7de3ea085b3e1d104f9d014317c52dce4585a2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939776"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Orígenes de datos compatibles (SSAS tabular)
   En este tema se describen los tipos de orígenes de datos que se pueden usar con los modelos tabulares.  
   
- Este artículo contiene las secciones siguientes:  
+ Este artículo contiene las siguientes secciones:  
   
--   [Orígenes de datos compatibles](#bkmk_supported_ds)  
+-   [Orígenes de datos admitidos](#bkmk_supported_ds)  
   
--   [Orígenes no compatibles](#bkmk_unsupported_ds)  
+-   [Orígenes no admitidos](#bkmk_unsupported_ds)  
   
 -   [Sugerencias para elegir los orígenes de datos](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a> Orígenes de datos compatibles  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Orígenes de datos admitidos  
  Puede importar datos de los siguientes orígenes de datos en la tabla siguiente. Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el programa de instalación no instala los proveedores enumerados para cada origen de datos. Algunos proveedores ya podrían estar instalados con otras aplicaciones en el equipo; en otros casos tendrá que descargar e instalar el proveedor.  
   
 |||||  
 |-|-|-|-|  
-|`Source`|Versiones|Tipo de archivo|Proveedores <sup>1</sup>|  
+|Source|Versiones|Tipo de archivo|Proveedores <sup>1</sup>|  
 |Bases de datos de Access|Microsoft Access 2003, 2007, 2010.|.accdb o .mdb|Proveedor OLE DB de ACE 14|  
-|Bases de datos relacionales de SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(no aplicable)|Proveedor OLE DB para SQL Server<br /><br /> Proveedor OLE DB de SQL Server Native Client<br /><br /> Proveedor OLE DB de SQL Server Native Client 10.0<br /><br /> Proveedor de datos de .NET Framework para SQL Client|  
-|Almacenamiento de datos paralelos de SQL Server (PDW) <sup>3</sup>|2008 R2|(no aplicable)|Proveedor OLE DB para SQL Server PDW|  
-|Bases de datos relacionales de Oracle|Oracle 9i, 10g, 11g.|(no aplicable)|Proveedor OLE DB de Oracle<br /><br /> Proveedor de datos de .NET Framework para cliente de Oracle<br /><br /> Proveedor de datos de .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
+|Bases de datos relacionales de SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2; SQL Server 2012, base de datos de Microsoft SQL Azure <sup>2</sup>|(no aplicable)|Proveedor OLE DB para SQL Server<br /><br /> Proveedor OLE DB de SQL Server Native Client<br /><br /> Proveedor OLE DB de SQL Server Native Client 10.0<br /><br /> Proveedor de datos de .NET Framework para SQL Client|  
+|SQL Server almacenamiento de datos paralelos (PDW) <sup>3</sup>|2008 R2|(no aplicable)|Proveedor OLE DB para SQL Server PDW|  
+|Bases de datos relacionales de Oracle|Oracle 9i, 10g, 11g.|(no aplicable)|Proveedor OLE DB de Oracle<br /><br /> Proveedor de datos de .NET Framework para cliente de Oracle<br /><br /> Proveedor de datos .NET Framework para SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Bases de datos relacionales de Teradata|Teradata V2R6, V12|(no aplicable)|Proveedor OLE DB TDOLEDB<br /><br /> Proveedor de datos .NET para Teradata|  
 |Bases de datos relacionales de Informix||(no aplicable)|Proveedor OLE DB de Informix|  
 |Bases de datos relacionales de IBM DB2|8.1|(no aplicable)|DB2OLEDB|  
@@ -50,20 +49,20 @@ ms.locfileid: "66067382"
 |Fuentes de distribución de datos<br /><br /> (se usa para importar datos de informes de Reporting Services, documentos de servicio de Atom, Microsoft Azure Marketplace DataMarket y fuentes de distribución de datos únicas)|Formato Atom 1.0<br /><br /> Cualquier base de datos o documento que se exponen como servicio de datos de Windows Communication Foundation (WCF) (antes ADO.NET Data Services).|.atomsvc para un documento de servicio que define una o más fuentes<br /><br /> .atom para un documento de fuente web de Atom|Proveedor de fuentes de distribución de datos de Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Proveedor de datos de fuentes de distribución de datos de .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Archivos de Office Database Connection||.odc||  
   
- <sup>1</sup> también puede usar el proveedor OLE DB para ODBC.  
+ <sup>1</sup> también puede utilizar el proveedor de OLE DB para ODBC.  
   
- <sup>2</sup> para obtener más información acerca de SQL Azure, consulte el sitio web [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> para obtener más información acerca de SQL Azure, vea el sitio Web [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> para obtener más información acerca de SQL Server PDW, vea el sitio web [almacenamiento de datos paralelos de SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> para obtener más información acerca de PDW de SQL Server, vea el sitio Web [SQL Server almacenamiento de datos paralelos 2008 R2](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> en algunos casos, mediante el proveedor OLE DB MSDAORA puede producir errores de conexión, especialmente con las versiones más recientes de Oracle. Si encuentra cualquier error, le recomendamos que use otro de los proveedores enumerados para Oracle.  
+ <sup>4</sup> en algunos casos, el uso del proveedor de OLE DB MSDAORA puede producir errores de conexión, especialmente con las versiones más recientes de Oracle. Si encuentra cualquier error, le recomendamos que use otro de los proveedores enumerados para Oracle.  
   
-##  <a name="bkmk_unsupported_ds"></a> Orígenes no compatibles  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>Orígenes no admitidos  
  El siguiente origen de datos no se admite actualmente:  
   
 -   Los documentos de servidor, como bases de datos de Access que ya se han publicado en SharePoint, no se pueden importar.  
   
-##  <a name="bkmk_tips"></a> Sugerencias para elegir los orígenes de datos  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>Sugerencias para elegir los orígenes de datos  
   
 1.  La importación de tablas desde bases de datos relacionales ahorra trabajo porque durante la importación se usan relaciones de *clave externa* para crear relaciones entre las tablas en el Diseñador de modelos.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66067382"
   
 4.  En ocasiones, los proveedores OLE DB pueden proporcionar un rendimiento más rápido para datos de mayor escala. Cuando deba elegir entre diferentes proveedores para el mismo origen de datos, pruebe en primer lugar el proveedor OLE DB.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Orígenes de datos &#40;SSAS tabular&#41;](../data-sources-ssas-tabular.md)   
  [Importar datos &#40;SSAS tabular&#41;](../import-data-ssas-tabular.md)  
   

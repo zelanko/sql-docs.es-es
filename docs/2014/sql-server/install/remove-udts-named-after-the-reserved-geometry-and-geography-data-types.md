@@ -1,5 +1,5 @@
 ---
-title: Quitar UDT con nombres de los tipos de datos GEOMETRY y GEOGRAPHY reservados | Microsoft Docs
+title: Quite los UDT con el nombre de los tipos de datos GEOMETRY y Geography reservados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5e7b5ed9d730eb51e9994a8bd068eefda9715a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4977d45d53e1114edc8e04ad504963bae0b9eb9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092941"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059119"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>Quitar UDT con nombre después de los tipos de datos GEOMETRY y GEOGRAPHY reservados
   El Asesor de actualizaciones detectó un tipo definido por el usuario (UDT) que se denomina después de un término reservado para los tipos de datos `geometry` o `geography`. Los tipos de datos `geometry` y `geography` son parte de la nueva característica de datos espaciales.  

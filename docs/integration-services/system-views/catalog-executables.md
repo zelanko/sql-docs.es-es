@@ -10,25 +10,25 @@ ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 080bd33f6864355dbd0f6eb58903b1796670ed26
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85673013"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En esta vista se muestra una fila para cada ejecutable en la ejecución especificada.  
   
  Un ejecutable es una tarea o un contenedor que se agrega al flujo de control de un paquete.  
   
-|Nombre de columna|**Data type**|Descripción|  
+|Nombre de la columna|**Tipo de datos**|Descripción|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|El identificador único para el ejecutable.|  
 |execution_id|**bigint**|Identificador único de la instancia de ejecución.|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296618"
 > [!NOTE]  
 >  Cuando se dispone de permiso para realizar una operación en el servidor, también se dispone de permiso para ver información sobre la operación. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   

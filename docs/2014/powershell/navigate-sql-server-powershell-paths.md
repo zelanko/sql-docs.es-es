@@ -9,30 +9,29 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960295"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar por las rutas de acceso de SQL Server PowerShell
   El proveedor de PowerShell de [!INCLUDE[ssDE](../includes/ssde-md.md)] expone el conjunto de objetos de una instancia de SQL Server en una estructura similar a una ruta de acceso del archivo. Puede usar los cmdlets de Windows PowerShell para navegar por la ruta de acceso del proveedor y crear las unidades personalizadas para acortar la ruta de acceso que tiene que escribir.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos compatible con un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual. Dado que los cmdlets se usan con frecuencia, tienen alias canónicos cortos. También hay un conjunto de alias que asigna los cmdlets a comandos del símbolo del sistema similares, y otro conjunto para los comandos shell de UNIX.  
   
  El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subconjunto de los cmdlets de proveedor, que se muestran en la tabla siguiente.  
   
-|Cmdlet|Alias canónico|Alias de cmd|Alias de shell de UNIX|Description|  
+|cmdlet|Alias canónico|Alias de cmd|Alias de shell de UNIX|Descripción|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtiene el nodo actual.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Cambia el nodo actual.|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|Enumera los objetos almacenados en el nodo actual.|  
+|**Get-ChildItem**|**gci**|**dir**|**LS**|Enumera los objetos almacenados en el nodo actual.|  
 |**Get-Item**|**gi**|||Devuelve las propiedades del elemento actual.|  
-|**Rename-Item**|**rni**|**rn**|**ren**|Cambia el nombre de un objeto.|  
-|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Quita un objeto.|  
+|**Rename-Item**|**rni**|**RN**|**ren**|Cambia el nombre de un objeto.|  
+|**Remove-Item**|**r**|**del, rd**|**rm, rmdir**|Quita un objeto.|  
   
 > [!IMPORTANT]  
 >  Algunos identificadores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (nombres de objeto) contienen caracteres que Windows PowerShell no admite en los nombres de ruta de acceso. Para obtener más información sobre cómo usar nombres que contengan estos caracteres, vea [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -43,8 +42,8 @@ ms.locfileid: "72797812"
 |Ubicación de la ruta de acceso|Resultados de Get-ChildItem|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Devuelve el nombre del equipo local. Si ha usado SMO o WMI para conectarse a las instancias de [!INCLUDE[ssDE](../includes/ssde-md.md)] en otros equipos, esos equipos también se enumeran.|  
-|SQLSERVER:\SQL\\*nombreDeEquipo*|Lista de instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo.|  
-|SQLSERVER:\SQL\\*nombreDeEquipo*\\*nombreDeInstancia*|Lista de tipos de objeto de nivel superior en la instancia, como Extremos, Certificados y Bases de datos.|  
+|SQLSERVER: \ SQL \\ *NombreDeEquipo*|Lista de instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo.|  
+|SQLServer: \ SQL \\ *NombreDeEquipo* \\ *nombreDeInstancia*|Lista de tipos de objeto de nivel superior en la instancia, como Extremos, Certificados y Bases de datos.|  
 |Nodo de clase de objeto, como Databases|Lista de objetos de ese tipo, como la lista de bases de datos: master, model, AdventureWorks2008R2.|  
 |Nodo de nombre de objeto, como AdventureWorks2012|Lista de los tipos de objeto contenidos en el objeto. Por ejemplo, una base de datos mostraría tipos de objeto como tablas y vistas.|  
   
@@ -130,8 +129,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
- [Trabajar con rutas acceso de SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
- [Convertir URN en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+## <a name="see-also"></a>Consulte también  
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Trabajar con rutas de acceso SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
+ [Convertir urn en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

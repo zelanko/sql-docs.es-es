@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106046"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular (Generador de informes y SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106046"
   
 5.  Establezca la propiedad **PieLabelStyle** en **Externa**.  
   
-6.  Establecer el `PieLineColor` propiedad **negro**. La propiedad PieLineColor define las líneas de llamada para cada etiqueta de punto de datos.  
+6.  Establezca la `PieLineColor` propiedad en **negro**. La propiedad PieLineColor define las líneas de llamada para cada etiqueta de punto de datos.  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>Para evitar que las etiquetas mostradas fuera de un gráfico circular se superpongan  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66106046"
   
 4.  Si quiere que el gráfico tenga más espacio para las etiquetas, pero que siga pareciendo bidimensional, establezca las propiedades **Rotation** e **Inclination** en **0**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos circulares &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Recopilar segmentos pequeños en un gráfico circular &#40;Generador de informes y SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  

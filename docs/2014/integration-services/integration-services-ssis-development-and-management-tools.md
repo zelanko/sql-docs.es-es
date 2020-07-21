@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) y entornos de estudio | Microsoft Docs
+title: Entornos de Integration Services (SSIS) y Studio | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c8f05c1b822cc3cad81ed910b71cb46621554eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65ee6741020d9d67f9b87ecea92022f47e6adc50
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62892469"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436542"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>Entornos de Studio e Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye dos estudios para trabajar con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
@@ -32,7 +31,7 @@ ms.locfileid: "62892469"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrar paquetes en un entorno de producción.  
   
-## <a name="sql-server-data-tools"></a>Herramientas de datos de SQL Server  
+## <a name="sql-server-data-tools"></a>SQL Server Data Tools  
  Al trabajar en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se pueden realizar las siguientes tareas:  
   
 -   Ejecutar el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para crear paquetes básicos que copian datos de un origen en un destino.  

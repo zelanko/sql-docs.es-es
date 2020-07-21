@@ -20,14 +20,14 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6359be0142896e79cdf9ebba275f523fcae5b5f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086714"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632022"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Indica si una entidad de seguridad de base de datos especificada es miembro del rol de base de datos especificado.  
@@ -36,7 +36,7 @@ ms.locfileid: "68086714"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
@@ -48,7 +48,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  **'** *database_principal* **'**  
  Nombre del usuario de la base de datos, rol de base de datos o rol de aplicación que se va a comprobar. *database_principal* es **sysname**, con un valor predeterminado NULL. Si no se especifica ningún valor, el resultado se basa en el contexto de ejecución actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 |Valor devuelto|Descripción|  
@@ -57,7 +57,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |1|*database_principal* es miembro de *role*.|  
 |NULL|*database_principal* o *role* no es válido o no tiene permiso para ver la pertenencia a roles.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Utilice IS_ROLEMEMBER para determinar si el usuario actual puede realizar una acción que necesite los permisos del rol de base de datos.  
   
  Si *database_principal* está basado en un inicio de sesión de Windows, como Contoso\Mary5, IS_ROLEMEMBER devuelve NULL, a menos que se haya concedido o denegado a *database_principal* el acceso directo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

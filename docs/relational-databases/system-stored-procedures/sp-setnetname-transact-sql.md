@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 87401c8f90f0351f797aa3572c7717bb02360e00
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881525"
 ---
-# <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Establece los nombres de red en **sys.servers** a sus nombres de equipo de red real para las instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este procedimiento puede utilizarse para habilitar la ejecución de llamadas a procedimientos almacenados remotos a equipos cuyos nombres de red contienen identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no válidos.  
+  Establece los nombres de red de **Sys. Servers** en sus nombres de equipo de red reales para las instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimiento puede utilizarse para habilitar la ejecución de llamadas a procedimientos almacenados remotos a equipos cuyos nombres de red contienen identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no válidos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@server = '** *server* **'**  
- Es el nombre del servidor remoto tal como se ha especificado en la sintaxis de llamada a procedimiento almacenado remoto codificada por el usuario. Exactamente una fila en **sys.servers** ya debe existir para poder usar este *server*. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
+ ** @server = '** *servidor* **'**  
+ Es el nombre del servidor remoto tal como se ha especificado en la sintaxis de llamada a procedimiento almacenado remoto codificada por el usuario. Ya debe existir exactamente una fila en **Sys.** servers para usar este *servidor*. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
- **@netname ='** *nombre_red* **'**  
- Es el nombre de red del equipo en el que se realizan las llamadas a procedimiento almacenado remoto. *nombre_red* es **sysname**, no tiene ningún valor predeterminado.  
+ ** @netname = '** *network_name* **'**  
+ Es el nombre de red del equipo en el que se realizan las llamadas a procedimiento almacenado remoto. *network_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  Este nombre debe coincidir con el nombre del equipo con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y puede incluir caracteres que no estén admitidos en los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,10 +55,10 @@ sp_setnetname
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Algunas llamadas a procedimientos almacenados remotos a equipos que ejecutan Windows pueden experimentar problemas si el nombre del equipo contiene identificadores no válidos.  
   
- Debido a que los servidores vinculados y los servidores remotos residen en el mismo espacio de nombres, no pueden tener el mismo nombre. Sin embargo, puede definir un servidor vinculado y un servidor remoto en un servidor especificado asignando nombres distintos y utilizando **sp_setnetname** para establecer el nombre de red de uno de ellos en el nombre de red del servidor subyacente.  
+ Debido a que los servidores vinculados y los servidores remotos residen en el mismo espacio de nombres, no pueden tener el mismo nombre. Sin embargo, puede definir un servidor vinculado y un servidor remoto en un servidor especificado asignando nombres diferentes y usando **sp_setnetname** para establecer el nombre de red de uno de ellos en el nombre de red del servidor subyacente.  
   
 ```  
 --Assume sqlserv2 is actual name of SQL Server   
@@ -71,10 +71,10 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 ```  
   
 > [!NOTE]  
->  Uso de **sp_setnetname** para que apunte a un servidor vinculado al servidor local no se admite. Los servidores a los que se hace referencia de esta forma no pueden participar en una transacción distribuida.  
+>  No se admite el uso de **sp_setnetname** para volver a apuntar un servidor vinculado al servidor local. Los servidores a los que se hace referencia de esta forma no pueden participar en una transacción distribuida.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** y **setupadmin** roles fijos de servidor.  
+ Requiere la pertenencia a los roles fijos de servidor **sysadmin** y **setupadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra una secuencia administrativa habitual que se utiliza en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para emitir la llamada a procedimiento almacenado remoto.  
@@ -87,10 +87,10 @@ EXEC sp_setnetname 'Win_1','Win-1';
 EXEC Win_1.master.dbo.sp_who;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_addlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

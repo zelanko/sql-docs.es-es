@@ -1,21 +1,20 @@
 ---
-title: Configurar editores (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Configurar editores
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4ff44ce522144ebac37a302ef0cb0f49e1a30ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 23967912b1f1f96ae1bebfa517399ece6fd2b7e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055525"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
   El funcionamiento de los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede personalizarse configurando las opciones de cada editor.  
@@ -39,7 +38,7 @@ ms.locfileid: "66090546"
 |----------------------|-----------|  
 |Describe cómo se especifica que un editor debe abrirse haciendo doble clic en un archivo con la extensión especificada en el Explorador de Windows.|[Asociar extensiones de archivo a un editor de código](associate-file-extensions-to-a-code-editor.md)|  
 |Describe cómo se personalizan las fuentes para mejorar la legibilidad del código y del texto.|[Cambiar el color, el tamaño y el estilo de la fuente](change-font-color-size-and-style.md)|  
-|Describe cómo se consultan las propiedades.|[Utilizar la ventana Propiedades en Management Studio](use-the-properties-window-in-management-studio.md)|  
+|Describe cómo se consultan las propiedades.|[Usar la ventana Propiedades en Management Studio](use-the-properties-window-in-management-studio.md)|  
 |Ubicación de las páginas de Ayuda F1 de los cuadros de diálogo de opciones de editores.|[Páginas de Opciones de consulta (Ayuda F1)](../../database-engine/query-options-pages-f1-help.md)|  
   
   

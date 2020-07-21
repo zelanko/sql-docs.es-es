@@ -1,5 +1,6 @@
 ---
-title: Instalar el Administrador de controladores (controlador ODBC para SQL Server) | Microsoft Docs
+title: Instalación del Administrador de controladores
+description: Este artículo contiene instrucciones para instalar el Administrador de controladores unixODBC para su uso con todas las versiones de Microsoft ODBC Driver for SQL Server en Linux y macOS.
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6fc46627dcbd10e4fc64a8520412105475e9c0a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba758f3c95ef3285424cafe676df46e5d3df7b34
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008796"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528249"
 ---
 # <a name="installing-the-driver-manager"></a>Instalación del Administrador de controladores
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,10 @@ En este artículo contiene instrucciones para instalar el Administrador de contr
 > Elimine los paquetes de Administrador de controladores instalados en el equipo antes de instalar el Administrador de controladores unixODBC. La instalación del Administrador de controladores unixODBC podría provocar un error en los Administradores de controladores existentes.  
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-13-131-and-17"></a>Instalación del Administrador de controladores para Microsoft ODBC Driver 13, 13.1 y 17
-La dependencia de administrador de controlador se resuelve automáticamente por el sistema de administración de paquetes cuando se instala Microsoft ODBC Driver 17 for SQL Server en Linux o macOS, 13.1 o 13 siguiendo las instrucciones de [instalar el controlador ODBC de Microsoft para SQL Server en Linux o macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+La dependencia de administrador de controlador la resuelve de forma automática el sistema de administración de paquetes cuando se instala Microsoft ODBC Driver 13, 13.1 o 17 for SQL Server en Linux o macOS siguiendo las instrucciones de los artículos siguientes:
+
+- [Instalación de Microsoft ODBC Driver for SQL Server en Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Instalación de Microsoft ODBC Driver for SQL Server en macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 
 ## <a name="installing-the-driver-manager-for-microsoft-odbc-driver-11-for-sql-server"></a>Instalación del Administrador de controladores para Microsoft ODBC Driver 11 for SQL Server  
 
@@ -57,7 +61,7 @@ Si el equipo no puede acceder a un sitio externo a través de FTP, obtenga `unix
 
 7.  Cuando termine de ejecutarse el script, siga las instrucciones que aparecen en la pantalla para instalar el Administrador de controladores unixODBC.
 
-De esta forma, estará preparado para instalar el controlador. Para obtener más información, consulte [instalación Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
+De esta forma, estará preparado para instalar el controlador. Para obtener más información, vea las instrucciones de instalación del controlador ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) o [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
 **Instalación manual**
 
@@ -71,7 +75,7 @@ Si el script de instalación no se puede completar, configure y compile manualme
   
 4.  Cambie al directorio unixODBC-2.3.0.  
   
-5.  En un símbolo del sistema, ejecute el comando: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"** .  
+5.  En un símbolo del sistema, ejecute el comando: **CPPFLAGS="-DSIZEOF_LONG_INT=8"** .  
   
 6.  En un símbolo del sistema, ejecute el comando: **export CPPFLAGS**.  
   
@@ -81,11 +85,10 @@ Si el script de instalación no se puede completar, configure y compile manualme
   
 9. En un símbolo del sistema (con una sesión iniciada con permisos de raíz), ejecute el comando: **make install**.  
 
-De esta forma, estará preparado para instalar el controlador. Para obtener más información, consulte [instalación Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
+De esta forma, estará preparado para instalar el controlador. Para obtener más información, vea las instrucciones de instalación del controlador ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) o [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
   
-## <a name="see-also"></a>Ver también
-[Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+## <a name="see-also"></a>Consulte también
 
-[Problemas conocidos en esta versión del controlador](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
-
-[Notas de la versión](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Instalación de Microsoft ODBC Driver for SQL Server en Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Instalación de Microsoft ODBC Driver for SQL Server en macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [Notas de la versión](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

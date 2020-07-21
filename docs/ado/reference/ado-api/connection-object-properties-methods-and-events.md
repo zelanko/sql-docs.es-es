@@ -1,5 +1,5 @@
 ---
-title: Los eventos, métodos y propiedades del objeto de conexión | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto de conexión | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eebe25e0950bcec0699160754c7be0b84e6b55e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919512"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760291"
 ---
-# <a name="connection-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto de conexión
-## <a name="propertiescollections"></a>Propiedades y colecciones  
+# <a name="connection-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Connection
+## <a name="propertiescollections"></a>Propiedades/colecciones  
  [Propiedad Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Propiedad CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
@@ -45,12 +45,12 @@ ms.locfileid: "67919512"
   
  [Propiedad State](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Propiedad de versión](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Propiedad Version](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [BeginTrans, CommitTrans y RollbackTrans métodos](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [Métodos BeginTrans, CommitTrans y RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
- [Cancel (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [CANCEL (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
  [Close (método)](../../../ado/reference/ado-api/close-method-ado.md)  
   
@@ -60,8 +60,8 @@ ms.locfileid: "67919512"
   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>Events  
- [BeginTransComplete, CommitTransComplete y RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+## <a name="events"></a>Eventos  
+ [Eventos BeginTransComplete, CommitTransComplete y RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [Eventos ConnectComplete y Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
@@ -73,5 +73,5 @@ ms.locfileid: "67919512"
   
  [Evento WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

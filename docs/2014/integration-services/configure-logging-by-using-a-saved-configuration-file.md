@@ -1,5 +1,5 @@
 ---
-title: Configurar el registro mediante el uso de un archivo de configuración guardado | Microsoft Docs
+title: Configurar el registro mediante un archivo de configuración guardado | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - containers [Integration Services], logs
 - logs [Integration Services], containers
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2199af4e88bbf13aecc9a0790ac7ecd625075ae2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060600"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438442"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Configurar el registro utilizando un archivo de configuración guardado
   Este procedimiento describe cómo configurar el registro para los contenedores nuevos de un paquete, cargando un archivo de configuración de registro previamente guardado.  
@@ -51,7 +50,7 @@ ms.locfileid: "66060600"
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

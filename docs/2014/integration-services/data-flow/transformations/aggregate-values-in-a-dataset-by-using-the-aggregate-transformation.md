@@ -11,15 +11,14 @@ helpviewer_keywords:
 - aggregate values [Integration Services]
 - datasets [Integration Services], aggregate values
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: db3e9ce939da2bace6d6e8e1c87669c9987dd0f8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62900958"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431162"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>Agregar valores en un conjunto de datos mediante la transformación Agregado
   Para agregar y configurar una transformación Agregado, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
@@ -54,7 +53,7 @@ ms.locfileid: "62900958"
     > [!NOTE]  
     >  Al proporcionar el número de valores distintos, sea exacto o aproximado, se optimiza el rendimiento, dado que la transformación puede asignar previamente una cantidad apropiada de memoria para realizar el trabajo.  
   
-12. Opcionalmente, haga clic en **Avanzado** y actualice el nombre de la salida de transformación Agregado. Si las agregaciones incluyen una `Group By` operación, puede seleccionar un recuento aproximado de agrupación de valores de clave en el **escala de claves** columna o especifique un número exacto de agrupar valores de clave en el **claves** columna.  
+12. Opcionalmente, haga clic en **Avanzado** y actualice el nombre de la salida de transformación Agregado. Si las agregaciones incluyen una `Group By` operación, puede seleccionar un recuento aproximado de los valores de clave de agrupación en la columna **escala de claves** o especificar un número exacto de valores de clave de agrupación en la columna **claves** .  
   
     > [!NOTE]  
     >  Al proporcionar el número de valores distintos, sea exacto o aproximado, se optimiza el rendimiento, dado que la transformación puede asignar previamente una cantidad apropiada de memoria para realizar el trabajo.  
@@ -64,11 +63,11 @@ ms.locfileid: "62900958"
   
 13. También puede hacer clic en la pestaña **Avanzado** y establecer los atributos que se aplican a la optimización de todas las operaciones que realiza la transformación Agregado.  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
 15. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Agregado](aggregate-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   

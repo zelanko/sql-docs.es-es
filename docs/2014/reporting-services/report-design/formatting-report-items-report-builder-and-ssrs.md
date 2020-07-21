@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105786"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Aplicar formato a los elementos de informe (Generador de informes y SSRS)
@@ -26,13 +26,13 @@ ms.locfileid: "66105786"
   
  A. Cuadro de texto con un borde de línea doble y varios estilos de formato, incluido un vínculo.  
   
- b. Cuadro de texto con un borde de línea discontinua, y con HTML sin formato y HTML representado.  
+ B. Cuadro de texto con un borde de línea discontinua, y con HTML sin formato y HTML representado.  
   
  C. Cuadro de texto con una etiqueta de texto y un marcador de posición.  
   
  Para cambiar las opciones de formato, solo tiene que seleccionar el elemento al que desea dar formato y, a continuación, abrir el cuadro de diálogo de propiedades del elemento. Por ejemplo, si quiere dar formato al contenido de un cuadro de texto completo o a una palabra seleccionada dentro de dicho cuadro, haga clic con el botón derecho en el elemento y seleccione **Propiedades de cuadro de texto**. A continuación, puede aplicar los estilos de formato que desee.  
   
- Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md).  
+ Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -53,7 +53,7 @@ ms.locfileid: "66105786"
  [Establecer la configuración regional de un informe o un cuadro de texto &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Describe cómo cambiar la configuración de los formatos de presentación de datos que difieren en función del idioma y de la región, como fecha, moneda y valores numéricos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

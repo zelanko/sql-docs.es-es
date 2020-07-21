@@ -1,5 +1,5 @@
 ---
-title: Método updateNClob (int, Java. IO. Reader, Long) | Microsoft Docs
+title: Método updateNClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93b6fca31afd24a8992e442096117d9479b52b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cfe43db246038c9c5569903d6fdac4122e47d1f4
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998647"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80903165"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>Método updateNClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,11 +34,11 @@ public void updateNClob(int columnIndex,
 #### <a name="parameters"></a>Parámetros  
  *columnIndex*  
   
- Valor **int** que indica el índice de columna.  
+ Valor **int** que indica el índice de la columna.  
   
  *reader*  
   
- Objeto de lector.  
+ Un objeto Reader.  
   
  *length*  
   
@@ -47,10 +47,10 @@ public void updateNClob(int columnIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateNClob especifica este método updateNClob en la interfaz java.sql.ResultSet.  
   
- Este método solo se admite en columnas **nvarchar (Max)** , **ntext**y **XML** . Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
+ Este método solo se admite en las columnas **nvarchar (Max)** , **ntext** y **xml**. Si se utiliza este método en cualquier otro tipo de datos, provocará una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateNClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

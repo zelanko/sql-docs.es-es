@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General del entorno) | Microsoft Docs
+title: Opciones (entorno-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f82a6ff79bfc9fbd1fb2d97036fa83c0b3f5d22b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68188502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067428"
 ---
 # <a name="options-environment-general-page"></a>Opciones (Entorno - Página General)
-  Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
+  Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Al iniciar**  
  Seleccione la acción que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] debe llevar a cabo una vez que se ha iniciado. Las opciones son:  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68188502"
   
 -   **Abrir entorno vacío** : abre [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sin ninguna ventana del Editor de consultas de SQL y sin conectar el Explorador de objetos a un servidor.  
   
- **Ocultar objetos del sistema en el Explorador de objetos**  
+ **Ocultar objetos del sistema en Explorador de objetos**  
  Seleccione esta casilla para eliminar de la vista de árbol del Explorador de objetos las bases de datos del sistema, las tablas del sistema, las vistas del sistema y los procedimientos almacenados del sistema. Las funciones del sistema y los tipos de datos del sistema no se ocultan. Esta opción solo se aplica a instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no afecta a los servidores que ya están conectados en el Explorador de objetos.  
   
 ## <a name="environment-layout"></a>Diseño del entorno  
@@ -51,7 +50,7 @@ ms.locfileid: "68188502"
  Si esta casilla está seleccionada, solo se cierra la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla está activada.  
   
  **El botón Ocultar automáticamente afecta solo a la pestaña activa**  
- Si esta casilla está seleccionada, solo se oculta automáticamente la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla no está activada.  
+ Si esta casilla está seleccionada, solo se oculta automáticamente la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla de verificación está desactivada.  
   
 ## <a name="display"></a>Pantalla  
  **Mostrar n archivos de la lista de archivos recientes**  

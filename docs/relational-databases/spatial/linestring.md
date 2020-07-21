@@ -13,21 +13,21 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57abfdd5679e4ab68f83959f44fce143056c2c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f739a8344eacaaa3e0057608b79bf60c88d1b29
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751061"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   **LineString** es un objeto unidimensional que representa una secuencia de puntos y los segmentos de línea que los conectan.  
   
 ## <a name="linestring-instances"></a>Instancias de LineString  
  En la ilustración siguiente se muestran ejemplos de instancias de **LineString** .  
   
- ![Ejemplos de instancias LineString de geometry](../../relational-databases/spatial/media/linestring.gif "Ejemplos de instancias LineString de geometry")  
+ ![Ejemplos de instancias de LineString de geometry](../../relational-databases/spatial/media/linestring.gif "Ejemplos de instancias de LineString de geometry")  
   
 Como se muestra en la ilustración:  
   

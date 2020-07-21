@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108027"
 ---
 # <a name="publish-reports"></a>Publicar informes
@@ -27,7 +27,7 @@ ms.locfileid: "66108027"
   
 ### <a name="to-publish-all-reports-in-a-project"></a>Para publicar todos los informes de un proyecto  
   
--   En el menú **Generar**, haga clic en **Implementar \<nombre del proyecto de informe>** . Como alternativa, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto de informe y, después, haga clic en **Implementar**. El estado del proceso de publicación se puede ver en la ventana Resultados.  
+-   En el menú **Generar**, haga clic en **Implementar \<nombre del proyecto de informe>**. Como alternativa, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto de informe y, después, haga clic en **Implementar**. El estado del proceso de publicación se puede ver en la ventana Resultados.  
   
     > [!NOTE]  
     >  Al implementar un proyecto del servidor de informes, también se implementan los orígenes de datos compartidos en el proyecto de informe.  
@@ -39,11 +39,11 @@ ms.locfileid: "66108027"
     > [!NOTE]  
     >  Al publicar un informe, también debe implementar los orígenes de datos compartidos que el informe utiliza.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar orígenes de datos e informes](reports/publishing-data-sources-and-reports.md)   
- [Obtener la vista previa de informes](reports/previewing-reports.md)   
- [Publicación de informes en un servidor de informes](reports/publishing-reports-to-a-report-server.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Obtener una vista previa de informes](reports/previewing-reports.md)   
+ [Publicar informes en un servidor de informes](reports/publishing-reports-to-a-report-server.md)   
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

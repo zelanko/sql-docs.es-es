@@ -1,6 +1,6 @@
 ---
-title: Administración de formato de código | Microsoft Docs
-ms.custom: ''
+title: Administrar formato de código
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -23,15 +23,14 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 12d93e72a3b7dabc05a6b34e4c671a8ce1da028e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009704"
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
   Con el editor, puede aplicar formato al código mediante sangrías, texto oculto, direcciones URL, etc. También se puede aplicar formato al código automáticamente a medida que se escribe mediante sangrías automáticas.  
@@ -51,9 +50,9 @@ ms.locfileid: "66090398"
   
 5.  Haga clic en una de las opciones siguientes:  
   
-    -   **Ninguna**. El cursor va al comienzo de la línea siguiente.  
+    -   **No**. El cursor va al comienzo de la línea siguiente.  
   
-    -   **Bloque**. El cursor alinea la línea siguiente con la anterior.  
+    -   **Bloqueo**. El cursor alinea la línea siguiente con la anterior.  
   
     -   **Inteligente** (valor predeterminado). El servicio de lenguaje determina el estilo de sangría adecuado.  
   

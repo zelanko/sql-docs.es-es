@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63234f9f337bd6427c4c5ed33c146e2ed3a714c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc5a4f189585cbafad4e59e46b6305eeb0dbefa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950327"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706631"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Cierra un cursor abierto mediante la liberación del conjunto de resultados actual y todos los bloqueos de cursor mantenidos en las filas en las que está colocado. `CLOSE` deja las estructuras de datos accesibles para que se puedan volver a abrir, pero las capturas y las actualizaciones colocadas no se permiten hasta que se vuelva a abrir el cursor. CLOSE tiene que ejecutarse en un cursor abierto; `CLOSE` no se permite en cursores que solo están declarados o que ya están cerrados.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67950327"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   

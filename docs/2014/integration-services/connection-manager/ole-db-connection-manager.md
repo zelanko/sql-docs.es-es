@@ -12,23 +12,22 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 98e9684e590493a21c9b0f526eb48bf4985c5d8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62833737"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434232"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB, administrador de conexiones
   Un administrador de conexiones OLE DB permite a un paquete conectarse a un origen de datos mediante un proveedor OLE DB. Por ejemplo, un administrador de conexiones OLE DB que se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 no admite las nuevas palabras clave de cadena de conexión (MultiSubnetFailover=True) para la agrupación en clústeres de conmutación por error de varias subredes. Para obtener más información, consulte el [notas de la versión de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) y la entrada de blog, [conmutación por error de AlwaysOn varias subredes y SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/), en www.mattmasson.com.  
+>  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 no admite las nuevas palabras clave de cadena de conexión (MultiSubnetFailover=True) para la agrupación en clústeres de conmutación por error de varias subredes. Para obtener más información, consulte las notas de la [versión de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) y la entrada de blog, [conmutación por error de múltiples subredes AlwaysOn y SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/), en www.mattmasson.com.  
   
- Varias tareas y componentes de flujo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usan un administrador de conexiones OLE DB. Por ejemplo, un origen de OLE DB y un destino de OLE DB usan este administrador de conexiones para extraer y cargar datos, y la tarea Ejecutar SQL puede usar este administrador de conexiones para conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar consultas.  
+ Varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tareas y componentes de flujo de datos usan un administrador de conexiones de OLE DB. Por ejemplo, un origen de OLE DB y un destino de OLE DB usan este administrador de conexiones para extraer y cargar datos, y la tarea Ejecutar SQL puede usar este administrador de conexiones para conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar consultas.  
   
  El administrador de conexiones OLE DB también se usa para obtener acceso a orígenes de datos OLE DB en tareas personalizadas escritas en código no administrado que usa un lenguaje como, por ejemplo, C++.  
   
@@ -58,10 +57,10 @@ ms.locfileid: "62833737"
   
 -   Artículo técnico, sobre [cadenas de conexión para proveedores OLE DB](https://go.microsoft.com/fwlink/?LinkId=220744), en carlprothman.net.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Origen de OLE DB](../data-flow/ole-db-source.md)   
  [Destino de OLE DB](../data-flow/ole-db-destination.md)   
- [Tarea Ejecutar SQL](../control-flow/execute-sql-task.md)   
+ [Tarea ejecutar SQL](../control-flow/execute-sql-task.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

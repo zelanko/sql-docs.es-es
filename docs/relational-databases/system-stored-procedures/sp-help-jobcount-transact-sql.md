@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobcount
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893679"
 ---
-# <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Proporciona el número de trabajos a los que se ha adjuntado una programación.  
   
@@ -41,9 +41,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id` El identificador de la programación a la lista. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
+`[ @schedule_id = ] schedule_id`Identificador de la programación que se va a mostrar. *schedule_id* es de **tipo int**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` El nombre de la programación a la lista. *schedule_name* es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
+`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a mostrar. *schedule_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -51,7 +51,7 @@ sp_help_jobcount
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve el siguiente conjunto de resultados:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|Número de trabajos para la programación especificada.|  
   
@@ -69,7 +69,7 @@ sp_help_jobcount
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros del **sysadmin** puede ver el número de trabajos que pertenecen a otros usuarios.  
+ Solo los miembros de **sysadmin** pueden ver los recuentos de los trabajos que son propiedad de otros usuarios.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra el número de trabajos adjuntos a la programación `NightlyJobs`.  
@@ -83,11 +83,11 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

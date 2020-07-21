@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105349"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
@@ -34,8 +34,8 @@ IsSibling(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
- El **IsSibling** función devuelve **true** si el primer miembro especificado está en un elemento relacionado del segundo miembro especificado. En caso contrario, devuelve la función **false**.  
+## <a name="remarks"></a>Observaciones  
+ La función **IsSibling** devuelve **true** si el primer miembro especificado es un elemento del mismo nivel que el segundo miembro especificado. De lo contrario, la función devuelve **false**.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo devuelve TRUE si el miembro actual en la jerarquía Fiscal de la dimensión Date es un elemento relacionado de julio 2002:  
@@ -50,7 +50,7 @@ IsSibling(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

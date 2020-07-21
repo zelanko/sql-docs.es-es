@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de propiedades de conexión (VC ++) | Microsoft Docs
+title: Ejemplo de propiedades de conexión (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d69cbde12b14a481e19856882f0b91844a1deb69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f70a5e98a34811af2b6d2b173da3f6c4215682d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67919456"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762646"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VC ++)
-Este ejemplo muestra diferentes formas de utilizar el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad para abrir un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) propiedad para establecer un período de tiempo de espera de conexión y el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad para comprobar el estado de las conexiones. La función GetState es necesaria ejecutar este procedimiento.  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VC + +)
+En este ejemplo se muestran distintas formas de usar la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) para abrir un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . También utiliza la propiedad [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) para establecer un tiempo de espera de conexión y la propiedad [State](../../../ado/reference/ado-api/state-property-ado.md) para comprobar el estado de las conexiones. La función GetState es necesaria para que este procedimiento se ejecute.  
   
 > [!NOTE]
->  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.  
   
 ```  
 // ConnectionStringSampleCpp.cpp  
@@ -166,8 +166,8 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ConnectionString (propiedad, ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Propiedad ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [Propiedad State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

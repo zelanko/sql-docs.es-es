@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3850cbd99eca927983731ad941f611901d26e6ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774195"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930201"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir el Diseñador de tablas (Visual Database Tools)
   El Diseñador de tablas es una herramienta visual que permite diseñar y visualizar tablas de bases de datos a las que se está conectado. Puede utilizar el Diseñador de tablas para crear, editar o eliminar tablas, columnas, claves, índices, relaciones y restricciones.  
@@ -42,7 +41,7 @@ ms.locfileid: "62774195"
   
      El menú **Diseñador de tablas** se agrega al menú principal y la tabla se abre en los paneles del diseñador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñar tablas &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Tablas](../relational-databases/tables/tables.md)  
   

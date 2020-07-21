@@ -10,15 +10,15 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a6250f45a50721d322bc29b1b2655b9d2d66edc4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751133"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Una **CompoundCurve** es una recopilación de cero o más instancias de **CircularString** o **LineString** de tipos de geometría o de geografía.  
   
 > [!IMPORTANT]  
@@ -193,5 +193,5 @@ El perímetro para el círculo dos es aproximadamente 4?, que es el valor real d
  [LineString](../../relational-databases/spatial/linestring.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [Punto](../../relational-databases/spatial/point.md)  
+ [Point](../../relational-databases/spatial/point.md)  
   

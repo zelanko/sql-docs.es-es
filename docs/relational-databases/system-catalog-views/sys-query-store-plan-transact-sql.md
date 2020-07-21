@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_plan (Transact-SQL) | Microsoft Docs
+title: Sys. query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -18,48 +18,48 @@ helpviewer_keywords:
 - query_store_plan catalog view
 - sys.query_store_plan catalog view
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1aee3dcdfe287e4d6db64be6c74edb7eb1362a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831442"
 ---
-# <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
+# <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Contiene información sobre cada plan de ejecución asociado con una consulta.  
+  Contiene información acerca de cada plan de ejecución asociado a una consulta.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Clave principal.|  
-|**query_id**|**bigint**|Clave externa. Se une a [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
-|**plan_group_id**|**bigint**|Id. de grupo del plan. Las consultas de cursor suele requieran varios (rellenar y capturar) planes. Rellenar y son los planes de recuperación que se compilan juntos en el mismo grupo.<br /><br /> 0 significa que el plan no está en un grupo.|  
-|**engine_version**|**nvarchar(32)**|Versión del motor usado para compilar el plan en **'principal.secundaria.compilación.revisión'** formato.|  
-|**compatibility_level**|**smallint**|Nivel de compatibilidad de base de datos de la base de datos al que hace referencia en la consulta.|  
-|**query_plan_hash**|**binary (8)**|Hash MD5 de los planes individuales.|  
-|**query_plan**|**nvarchar(max)**|SHOWPLAN XML del plan de consulta.|  
-|**is_online_index_plan**|**bit**|Plan utilizó durante la generación de índice en línea. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**is_trivial_plan**|**bit**|Plan es un plan trivial (salida en la etapa 0 del optimizador de consultas). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**is_parallel_plan**|**bit**|Plan es paralelo. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá uno (1).|  
-|**is_forced_plan**|**bit**|Plan está marcado como fuerza cuando el usuario ejecuta el procedimiento almacenado **sys.sp_query_store_force_plan**. Mecanismo de forzado *no garantiza* que se utilizará para la consulta hace referenciada exactamente a este plan **query_id**. Forzar el plan produce se vuelve a compilar la consulta y normalmente produce exactamente el plan iguales o similar para el plan al que hace referencia **plan_id**. Si no tiene éxito al forzar el plan, **force_failure_count** se incrementa y **last_force_failure_reason** se rellena con el motivo del error. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**is_natively_compiled**|**bit**|Plan incluye procedimientos compilados de forma nativa optimizados en memoria. (0 = FALSE, 1 = TRUE). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**force_failure_count**|**bigint**|Número de veces que forzar este plan ha fallado. Se puede incrementar solo cuando se vuelve a compilar la consulta (*no en cada ejecución*). Se restablece a 0 cada vez **is_plan_forced** se cambia de **FALSE** a **TRUE**. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**last_force_failure_reason**|**int**|Motivo de error de forzar el plan.<br /><br /> 0: ningún error, en caso contrario, número de error del error que provocó el forzado de un error<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<otro valor >: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**last_force_failure_reason_desc**|**nvarchar(128)**|Descripción textual del last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: consulta intenta modificar los datos mientras la tabla de destino tiene un índice que se está generando en línea<br /><br /> INVALID_STARJOIN: plan contiene la especificación de StarJoin no válida<br /><br /> TIME_OUT: Optimizador superado el número de operaciones permitidas durante la búsqueda del plan especificado por el plan forzado<br /><br /> NO_DB: Una base de datos especificada en el plan no existe.<br /><br /> HINT_CONFLICT: No se puede compilar la consulta porque el plan está en conflicto con una sugerencia de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: No se puede ejecutar la consulta porque el plan está en conflicto con el uso de la consulta distribuida u operaciones de texto completo.<br /><br /> NO_PLAN: Procesador de consultas no pudo producir el plan de consulta porque no se puede comprobar el plan forzado a ser válido para la consulta<br /><br /> NO_INDEX: El índice especificado en el plan ya no existe<br /><br /> VIEW_COMPILE_FAILED: No se pudo forzar el plan de consulta debido a un problema en una vista indizada que se hace referencia en el plan<br /><br /> GENERAL_FAILURE: error de forzar general (no se tratan con motivos anteriores) <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *NONE*.|  
-|**count_compiles**|**bigint**|Planee las estadísticas de compilación.|  
-|**initial_compile_start_time**|**datetimeoffset**|Planee las estadísticas de compilación.|  
-|**last_compile_start_time**|**datetimeoffset**|Planee las estadísticas de compilación.|  
-|**last_execution_time**|**datetimeoffset**|Último tiempo de ejecución hace referencia a la última hora de finalización del plan de consulta.|  
-|**avg_compile_duration**|**float**|Planee las estadísticas de compilación. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**last_compile_duration**|**bigint**|Planee las estadísticas de compilación. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**plan_forcing_type**|**int**|Tipo de forzar el plan.<br /><br />0: Ninguno<br /><br />1: MANUAL<br /><br />2: AUTO|  
-|**plan_forcing_type_desc**|**nvarchar(60)**|Descripción de texto de plan_forcing_type.<br /><br />NINGUNO: No forzar el plan<br /><br />MANUAL: Plan forzado por el usuario<br /><br />AUTO: Plan forzado por el ajuste automático|  
+|**query_id**|**bigint**|Clave externa. Combina con [Sys. query_store_query &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
+|**plan_group_id**|**bigint**|IDENTIFICADOR del grupo de planes. Las consultas de cursor suelen requerir varios planes (rellenar y capturar). Los planes de rellenado y captura que se compilan juntos se encuentran en el mismo grupo.<br /><br /> 0 significa que el plan no está en un grupo.|  
+|**engine_version**|**nvarchar(32)**|Versión del motor que se usa para compilar el plan en formato **' Major. minor. Build. revision '** .|  
+|**compatibility_level**|**smallint**|Nivel de compatibilidad de la base de datos a la que se hace referencia en la consulta.|  
+|**query_plan_hash**|**Binary(8**|Hash MD5 del plan individual.|  
+|**query_plan**|**nvarchar(max)**|SHOWPLAN XML para el plan de consulta.|  
+|**is_online_index_plan**|**bit**|El plan se usó durante una generación de índice en línea. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**is_trivial_plan**|**bit**|Plan es un plan trivial (salida en la fase 0 del optimizador de consultas). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**is_parallel_plan**|**bit**|El plan es paralelo. <br/>**Nota:** Azure SQL Data Warehouse devolverá siempre uno (1).|  
+|**is_forced_plan**|**bit**|El plan se marca como forzado cuando el usuario ejecuta el procedimiento almacenado **Sys. sp_query_store_force_plan**. Al forzar el mecanismo no se *garantiza* que se use exactamente este plan para la consulta a la que hace referencia **query_id**. Al forzar el plan, la consulta se vuelve a compilar y normalmente se produce exactamente el mismo plan o similar al plan al que hace referencia **plan_id**. Si el forzado del plan no se realiza correctamente, se incrementa **force_failure_count** y **last_force_failure_reason** se rellena con la razón del error. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**is_natively_compiled**|**bit**|El plan incluye procedimientos optimizados para memoria compilados de forma nativa. (0 = FALSE, 1 = TRUE). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**force_failure_count**|**bigint**|Número de veces que se ha producido un error al forzar este plan. Solo se puede incrementar cuando la consulta se vuelve a compilar (*no en cada ejecución*). Se restablece en 0 cada vez que se cambia **is_plan_forced** de **false** a **true**. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_force_failure_reason**|**int**|Motivo del error al forzar el plan.<br /><br /> 0: sin error; de lo contrario, número de error del error que ha provocado un error en la fuerza<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<otro valor>: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_force_failure_reason_desc**|**nvarchar(128)**|Descripción textual de last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: la consulta intenta modificar los datos mientras que la tabla de destino tiene un índice que se está generando en línea<br /><br /> INVALID_STARJOIN: el plan contiene una especificación StarJoin no válida<br /><br /> TIME_OUT: el optimizador superó el número de operaciones permitidas al buscar el plan especificado por el plan forzado<br /><br /> NO_DB: no existe una base de datos especificada en el plan<br /><br /> HINT_CONFLICT: no se puede compilar la consulta porque el plan entra en conflicto con una sugerencia de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: no se puede ejecutar la consulta porque el plan entra en conflicto con el uso de consultas distribuidas o operaciones de texto completo.<br /><br /> NO_PLAN: el procesador de consultas no pudo producir el plan de consulta porque no se pudo comprobar que el plan forzado no es válido para la consulta<br /><br /> NO_INDEX: el índice especificado en el plan ya no existe<br /><br /> VIEW_COMPILE_FAILED: no se pudo forzar el plan de consulta debido a un problema en una vista indizada a la que se hace referencia en el plan<br /><br /> GENERAL_FAILURE: error de fuerza general (no se trata con los motivos anteriores) <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *None*.|  
+|**count_compiles**|**bigint**|Planear estadísticas de compilación.|  
+|**initial_compile_start_time**|**datetimeoffset**|Planear estadísticas de compilación.|  
+|**last_compile_start_time**|**datetimeoffset**|Planear estadísticas de compilación.|  
+|**last_execution_time**|**datetimeoffset**|Última hora de ejecución hace referencia a la última hora de finalización de la consulta o el plan.|  
+|**avg_compile_duration**|**float**|Planear estadísticas de compilación. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_compile_duration**|**bigint**|Planear estadísticas de compilación. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**plan_forcing_type**|**int**|Tipo que fuerza el plan.<br /><br />0: NINGUNO<br /><br />1: MANUAL<br /><br />2: AUTO|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Descripción de texto de plan_forcing_type.<br /><br />NINGUNO: no se fuerza ningún plan<br /><br />MANUAL: Plan forzado por usuario<br /><br />AUTO: Plan forzado por ajuste automático|  
 
-## <a name="plan-forcing-limitations"></a>Limitaciones de forzar el plan
+## <a name="plan-forcing-limitations"></a>Limitaciones de forzar un plan
 El Almacén de consultas dispone de un mecanismo para obligar al optimizador de consultas a usar un determinado plan de ejecución. Pero existen algunas limitaciones que pueden evitar la aplicación de un plan. 
 
 En primer lugar, si el plan contiene las siguientes construcciones:
@@ -67,11 +67,11 @@ En primer lugar, si el plan contiene las siguientes construcciones:
 * Referencia a una tabla externa
 * Consulta distribuida u operaciones de texto completo
 * Uso de consultas globales 
-* Cursores keyset o dinámico 
+* Cursores dinámicos o de conjunto de claves 
 * Especificación de combinación en estrella no válida 
 
 > [!NOTE]
-> Azure SQL Database y SQL Server 2019 (versión preliminar) admiten el forzado de plan para los cursores estáticos y de avance rápido.
+> Azure SQL Database y SQL Server 2019 permiten el plan de soporte técnico para los cursores de avance rápido y estáticos.
 
 En segundo lugar, si los objetos en los que se basa el plan ya no están disponibles:
 * Base de datos (si la base de datos donde se originó el plan ya no existe)
@@ -83,18 +83,18 @@ Por último, problemas con el propio plan:
 * XML de plan formado incorrectamente
 
 ## <a name="permissions"></a>Permisos  
- Requiere el **VIEW DATABASE STATE** permiso.  
+ Requiere el permiso **View Database State** .  
   
-## <a name="see-also"></a>Vea también  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [Sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [Sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [Sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [Sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [Sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Procedimientos almacenados de Query Store &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

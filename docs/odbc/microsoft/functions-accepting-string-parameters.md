@@ -1,5 +1,5 @@
 ---
-title: Aceptar parámetros de cadena de funciones | Microsoft Docs
+title: Funciones que aceptan parámetros de cadena | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - functions [ODBC], string parameters
 - string parameters [ODBC]
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952485"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81286305"
 ---
 # <a name="functions-accepting-string-parameters"></a>Aceptar parámetros de cadena de funciones
-Todas las funciones que toman parámetros de cadena se convierten a Unicode. (Se exportará la forma "W" de la función.) Recuento de bytes se convierte al recuento de caracteres para las API de ODBC aplicable. Esto se aplica a las funciones siguientes:  
+Todas las funciones que toman parámetros de cadena se convertirán a Unicode. (Se exportará la forma "W" de la función). El recuento de bytes se convierte en el recuento de caracteres para las API de ODBC aplicables. Esto se aplica a las siguientes funciones:  
   
 -   **SQLConnect**  
   

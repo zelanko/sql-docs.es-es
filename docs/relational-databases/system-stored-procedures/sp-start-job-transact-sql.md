@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032832"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893012"
 ---
-# <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Indica al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecute un trabajo inmediatamente.  
   
@@ -45,15 +45,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` El nombre de la que se inicie el trabajo. Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo que se va a iniciar. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @job_id = ] job_id` El número de identificación de que se inicie el trabajo. Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo que se va a iniciar. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` El servidor de destino en el que se va a iniciar el trabajo. *nombre_servidor* es **nvarchar (128)** , su valor predeterminado es null. *nombre_servidor* debe ser uno de los servidores de destino al que el trabajo está destinado actualmente.  
+`[ @server_name = ] 'server_name'`El servidor de destino en el que se va a iniciar el trabajo. *SERVER_NAME* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. *SERVER_NAME* debe ser uno de los servidores de destino a los que está dirigido actualmente el trabajo.  
   
-`[ @step_name = ] 'step_name'` El nombre del paso en el que se va a comenzar la ejecución del trabajo. Solo se aplica a trabajos locales. *Step_name* es **sysname**, su valor predeterminado es null  
+`[ @step_name = ] 'step_name'`Nombre del paso en el que se va a iniciar la ejecución del trabajo. Solo se aplica a trabajos locales. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -63,8 +63,8 @@ sp_start_job
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Este procedimiento almacenado se encuentra en la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ Este procedimiento almacenado está en la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -77,7 +77,7 @@ sp_start_job
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** y **SQLAgentReaderRole** solo se puede iniciar los trabajos que les pertenecen. Los miembros de **SQLAgentOperatorRole** puede empezar a todos los trabajos locales, los que pertenecen a otros usuarios incluidos. Los miembros de **sysadmin** pueden iniciar todos los trabajos locales y multiservidor.  
+ Los miembros de **SQLAgentUserRole** y **SQLAgentReaderRole** solo pueden iniciar trabajos que les pertenezcan. Los miembros de **SQLAgentOperatorRole** pueden iniciar todos los trabajos locales, incluidos los que pertenecen a otros usuarios. Los miembros de **sysadmin** pueden iniciar todos los trabajos locales y multiservidor.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se inicia un trabajo llamado `Weekly Sales Data Backup`.  
@@ -90,11 +90,11 @@ EXEC dbo.sp_start_job N'Weekly Sales Data Backup' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_stop_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

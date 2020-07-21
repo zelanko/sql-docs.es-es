@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064523"
 ---
 # <a name="about-change-tracking-sql-server"></a>Acerca del seguimiento de cambios (SQL Server)
-  El seguimiento de cambios es una solución ligera que proporciona un mecanismo de seguimiento de cambios eficaz para las aplicaciones. Normalmente, para permitir que las aplicaciones consulten los cambios de los datos en una base de datos y tener acceso a la información relacionada con los mismos, los programadores de aplicaciones tenían que implementar mecanismos personalizados de seguimiento de cambios. Crear estos mecanismos normalmente implica mucho trabajo y, frecuentemente, conlleva el uso de una combinación de desencadenadores, `timestamp` columnas, tablas nuevas para almacenar información de seguimiento y procesos de limpieza personalizados.  
+  El seguimiento de cambios es una solución ligera que proporciona un mecanismo de seguimiento de cambios eficaz para las aplicaciones. Normalmente, para permitir que las aplicaciones consulten los cambios de los datos en una base de datos y tener acceso a la información relacionada con los mismos, los programadores de aplicaciones tenían que implementar mecanismos personalizados de seguimiento de cambios. La creación de estos mecanismos normalmente implica mucho trabajo y, frecuentemente, se usa una combinación de desencadenadores, `timestamp` columnas, tablas nuevas para almacenar información de seguimiento y procesos de limpieza personalizados.  
   
  Los diferentes tipos de aplicaciones tienen requisitos distintos en cuanto a la cantidad de información que necesitan sobre los cambios. Las aplicaciones pueden utilizar el seguimiento de cambios para responder a las preguntas siguientes sobre las modificaciones que se han realizado en una tabla de usuario:  
   
@@ -67,10 +66,10 @@ ms.locfileid: "62670937"
   
  La información sobre el cambio que se realizó en cada fila también se puede obtener utilizando el seguimiento de cambios. Por ejemplo, el tipo de operación de DML que produjo el cambio (inserción, actualización o eliminación) o las columnas que se cambiaron como parte de una operación de actualización.  
   
-## <a name="see-also"></a>Vea también  
- [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [Administrar el seguimiento de cambios &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Habilitar y deshabilitar Change Tracking &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Trabajar con Change Tracking &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [Administrar Change Tracking &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

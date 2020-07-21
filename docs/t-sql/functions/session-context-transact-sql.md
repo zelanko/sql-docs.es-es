@@ -18,13 +18,13 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2949c4bbf5e72fad99f6698287880ec2a2f97f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68067557"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+# <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Devuelve el valor de la clave especificada en el contexto de la sesión actual. El valor se establece con el procedimiento [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md).  
@@ -41,7 +41,7 @@ SESSION_CONTEXT(N'key')
  'key'  
  Clave (de tipo sysname) del valor que se va a recuperar.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **sql_variant**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -50,7 +50,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario puede leer el contexto de la sesión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El comportamiento de MARS en SESSION_CONTEXT es similar al de CONTEXT_INFO. Si un lote MARS establece un par clave-valor, el nuevo valor no se devolverá en otros lotes MARS en la misma conexión, a menos que dichos lotes se inicien después de que el lote que estableció el nuevo valor se haya completado. Si hay varios lotes MARS activos en una conexión, los valores no se pueden establecer en “read_only”. Esto evita que se produzcan condiciones de carrera y no determinismo sobre qué valor “gana”.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db28891a7e1bed887f3a8d58a5994734d65b9185
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705845"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (tipo de datos Geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una aproximación de la instancia de **geography** especificada que se genera al aplicar el algoritmo de Douglas-Peucker a la instancia con la tolerancia indicada.  
   
@@ -45,12 +45,12 @@ ms.locfileid: "68101767"
 |Término|Definición|  
 |*tolerance*|Es un valor de tipo **float**. *tolerance* es la tolerancia que se usa como entrada para el algoritmo de Douglas-Peucker. *tolerance* debe ser un número positivo.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para los tipos de colección, este algoritmo funciona independientemente en cada tipo **geography** contenido en la instancia. Este algoritmo no modifica las instancias de **Point**.  
   
  Este método intentará conservar los extremos de las instancias de **LineString**, pero es posible que no pueda hacerlo para mantener un resultado válido.  

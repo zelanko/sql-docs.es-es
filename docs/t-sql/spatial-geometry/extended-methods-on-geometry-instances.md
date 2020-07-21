@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 81b74eec0ea22cd6c88cc896af6537fa893ed925
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3904de5f819db856ceaa7a3bf8b8e62882f5d92c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081171"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85700332"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>Métodos extendidos en instancias de geometry
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios métodos extendidos en instancias de Geometry de Open Geospatial Consortium (OGC).  
   

@@ -1,5 +1,5 @@
 ---
-title: Asistente para minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Asistente para minería de datos (Analysis Services minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084738"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522853"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Asistente para minería de datos (Analysis Services - Minería de datos)
-  El Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
+  El Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se inicia cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
   
  En la fase final del asistente, si lo desea puede dividir los datos en conjuntos de entrenamiento y de prueba, y habilitar características como la obtención de detalles.  
   
@@ -36,25 +35,25 @@ ms.locfileid: "66084738"
   
 -   ¿Qué columnas o atributos desea utilizar para la predicción? ¿Qué columnas o atributos es apropiado utilizar como entrada para el análisis?  
   
--   ¿Qué algoritmo debe utilizar? Los algoritmos proporcionados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tienen características diferentes y generan resultados distintos. Por suerte, no está limitado a un modelo para cada conjunto de datos, de modo que puede experimentar agregando modelos diferentes.  
+-   ¿Qué algoritmo debe utilizar? Los algoritmos proporcionados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tienen características diferentes y generan resultados diferentes. Por suerte, no está limitado a un modelo para cada conjunto de datos, de modo que puede experimentar agregando modelos diferentes.  
   
 -   ¿Necesita poder probar sus modelos en un conjunto de datos unificado? Si es así, se recomienda utilizar la opción de apartar algunos datos para realizar pruebas. Puede elegir un porcentaje y limitarlo con un número especificado de filas, si lo desea.  
   
-##  <a name="BKMK_Using_DM_Wizard"></a> Iniciar el Asistente para minería de datos  
+##  <a name="starting-the-data-mining-wizard"></a><a name="BKMK_Using_DM_Wizard"></a> Iniciar el Asistente para minería de datos  
  Para utilizar el Asistente para minería de datos, debe haber iniciado una solución en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] que contenga al menos un proyecto OLAP o de minería de datos.  
   
 -   Si la solución está lista para la minería de datos, basta con que haga clic con el botón derecho en el nodo **Estructuras de minería de datos** en el explorador de soluciones y seleccione **Nueva estructura de minería de datos** para iniciar el asistente.  
   
--   Si la solución no contiene ningún proyecto existente, puede agregar un nuevo proyecto de minería de datos. En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**. Asegúrese de elegir la plantilla **Proyecto multidimensional y de minería de datos de Analysis Services**.  
+-   Si la solución no contiene ningún proyecto existente, puede agregar un nuevo proyecto de minería de datos. En el menú **Archivo**, seleccione **Nuevo** y, después, **Proyecto**. Asegúrese de elegir la plantilla **Proyecto multidimensional y de minería de datos de Analysis Services**.  
   
 -   También puede utilizar el Asistente para la importación de Analysis Services para obtener los metadatos de una solución de minería de datos existente. Sin embargo, no puede seleccionar objetos individuales para importarlos; se importa toda la base de datos, incluidos los cubos, las vistas del origen de datos, etc.). Observe también que la nueva solución que se crea mediante la importación se configura automáticamente para usar la base de datos predeterminada local. Deberá cambiar esto por otra instancia para poder procesar o examinar los objetos, y si va a importar desde una versión anterior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede que tenga que actualizar las referencias a los proveedores.  
   
  A continuación, creará un modelo de minería de datos asociado y la estructura de minería de datos. También puede crear solo la estructura de minería de datos y agregar modelos después, pero normalmente es más fácil crear un modelo de prueba primero.  
   
-###  <a name="BKMK_Relational"></a> Soluciones relacionales y. modelos OLAP de minería de datos  
+###  <a name="relational-vs-olap-mining-models"></a><a name="BKMK_Relational"></a> Soluciones relacionales y modelos OLAP de minería de datos  
  La siguiente opción importante que tiene es si se debe usar un origen de datos relacional o basar el modelo en los datos multidimensionales (OLAP).  
   
- El Asistente para minería de datos se bifurca en dos caminos en este momento, en función de si el origen de datos es relacional o está en un cubo. Todo lo demás, excepto el proceso de selección de datos es la misma, la elección del algoritmo, la capacidad de agregar un conjunto de datos de exclusión, seleccionar datos de cubo etc., pero están un poco más complejos que el uso de datos relacionales. (También obtiene algunas opciones adicionales al final si crea un modelo basado en un cubo).  
+ El Asistente para minería de datos se bifurca en dos caminos en este momento, en función de si el origen de datos es relacional o está en un cubo. Todo lo demás excepto el proceso de selección de datos es el mismo: la opción de algoritmo, la capacidad de agregar un conjunto de datos de exclusión, etc., pero la selección de los datos del cubo es un poco más compleja que el uso de datos relacionales. (También obtiene algunas opciones adicionales al final si crea un modelo basado en un cubo).  
   
  Vea los siguientes temas para obtener un tutorial de cada opción con más detalle:  
   
@@ -82,13 +81,13 @@ ms.locfileid: "66084738"
 ### <a name="additional-features"></a>Características adicionales  
  Para ayudarle a elegir los datos correctos y a configurar los orígenes de datos correctamente, el Asistente para minería de datos proporciona estas características adicionales:  
   
--   **Auto - detección de tipos de datos**: El asistente examinará la exclusividad y la distribución de valores de columna y, a continuación, recomendará el mejor tipo de datos y sugerirá un tipo de uso para los datos. Puede invalidar estas sugerencias seleccionando los valores de una lista.  
+-   **Detección automática de tipos de datos**: el asistente examinará la exclusividad y la distribución de los valores de columna y después recomendará el mejor tipo de datos, y sugerirá un tipo de uso para estos. Puede invalidar estas sugerencias seleccionando los valores de una lista.  
   
--   **Sugerencias para las variables**: Puede haga clic en un cuadro de diálogo e iniciar un analizador que calcule las correlaciones entre las columnas incluidas en el modelo y determina si las columnas son predicciones probables del atributo resultado, dada la configuración del modelo hasta ahora. Puede invalidar estas sugerencias escribiendo valores diferentes.  
+-   **Sugerencias para las variables**: puede hacer clic en un cuadro de diálogo e iniciar un analizador que calcule las correlaciones entre las columnas incluidas en el modelo y determine si las columnas son predicciones probables del atributo de resultados, dado el modelo hasta el momento. Puede invalidar estas sugerencias escribiendo valores diferentes.  
   
--   **Selección de características**: Mayoría de los algoritmos detectarán automáticamente las columnas que son adecuadas para la predicción y usará esas de forma preferente. En las columnas que contienen demasiados valores, se aplicará la *selección de características* para reducir la cardinalidad de los datos y mejorar las posibilidades de buscar un patrón significativo. Puede modificar el comportamiento de la selección de características mediante parámetros del modelo.  
+-   **Selección de características**: la mayoría de los algoritmos detectarán automáticamente las columnas que son adecuadas para la predicción y usará esas de forma preferente. En las columnas que contienen demasiados valores, se aplicará la *selección de características* para reducir la cardinalidad de los datos y mejorar las posibilidades de buscar un patrón significativo. Puede modificar el comportamiento de la selección de características mediante parámetros del modelo.  
   
--   **Segmentación automática del cubo**: Si el modelo de minería de datos se basa en un origen de datos OLAP, automáticamente se proporciona la capacidad para segmentar el modelo utilizando atributos de cubo. Es recomendable para los modelos de empaquetamiento basados en los subconjuntos de datos de cubo.  
+-   **Segmentación automática del cubo**: si el modelo de minería de datos se basa en un origen de datos OLAP, la capacidad para segmentar el modelo utilizando atributos de cubo se proporciona automáticamente. Es recomendable para los modelos de empaquetamiento basados en los subconjuntos de datos de cubo.  
   
 ### <a name="completing-the-wizard"></a>Finalizar el Asistente  
  El último paso del asistente es dar nombre a la estructura de minería de datos y al modelo asociado. Según el tipo de modelo que creó, podría tener las siguientes opciones importantes:  
@@ -116,7 +115,7 @@ ms.locfileid: "66084738"
   
  [Obtención de detalles en modelos de minería de datos](drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Restauración de bases de datos habilitadas para Stretch (Stretch Database) | Microsoft Docs
+title: Restore Stretch-enabled databases (Restauración de bases de datos habilitadas para Stretch)
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,12 +7,13 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 169d1d2dfe2ab36d5ae7541ee33912ea162f372f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136102"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "73843770"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restore Stretch-enabled databases (Restauración de bases de datos habilitadas para Stretch)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,12 +34,12 @@ Después de restaurar la base de datos de SQL Server, hay que ejecutar el proced
 ## <a name="restore-your-remote-azure-data"></a>Restaurar los datos de Azure remotos
 
 ### <a name="recover-a-live-azure-database"></a>Recuperar una base de datos de Azure dinámica
-El servicio SQL Server Stretch Database de Azure crea instantáneas de todos los datos dinámicos al menos cada 8 horas, para lo cual usa instantáneas de Almacenamiento de Azure. Estas instantáneas se conservan durante 7 días. Esto permite restaurar los datos a uno de al menos cualquiera de los 21 puntos en el tiempo en los últimos 7 días, hasta el momento en el que se tomó la última instantánea.
+El servicio SQL Server Stretch Database de Azure crea instantáneas de todos los datos activos cada 8 horas como mínimo mediante instantáneas de Azure Storage. Estas instantáneas se conservan durante 7 días. Esto permite restaurar los datos a uno de al menos cualquiera de los 21 puntos en el tiempo en los últimos 7 días, hasta el momento en el que se tomó la última instantánea.
 
 Haga lo siguiente para restaurar una base de datos de Azure dinámica a un momento anterior en el tiempo por medio del Portal de Azure.
 
-1. Inicie sesión en el [Portal de Azure][].
-2. En el lado izquierdo de la pantalla, seleccione **EXAMINAR** y, después, seleccione **Bases de datos SQL**.
+1. Inicie sesión en [Azure Portal][].
+2. En el lado izquierdo de la pantalla, seleccione **EXAMINAR** y, a continuación, **SQL Database**.
 3. Vaya a la base de datos y selecciónela.
 4. En la parte superior de la hoja de la base de datos, haga clic en **Restaurar**.
 5. Indique un **Nombre de la base de datos**nuevo, seleccione un **Punto de restauración** y, después, haga clic en **Crear**.
@@ -49,7 +50,7 @@ El servicio SQL Server Stretch Database de Azure toma una instantánea de base d
 
 Haga lo siguiente para restaurar una base de datos de Azure eliminada al momento en que se eliminó por medio del Portal de Azure.
 
-1. Inicie sesión en el [Portal de Azure][].
+1. Inicie sesión en [Azure Portal][].
 2. En el lado izquierdo de la pantalla, seleccione **EXAMINAR** y, después, seleccione **Servidores SQL**.
 3. Vaya al servidor y selecciónelo.
 4. Desplácese hacia abajo hasta Operaciones en la hoja del servidor y haga clic en el icono **Bases de datos eliminadas** .
@@ -57,7 +58,7 @@ Haga lo siguiente para restaurar una base de datos de Azure eliminada al momento
 5. Indique un **Nombre de la base de datos** nuevo y haga clic en **Crear**.
 6. Se iniciará el proceso de restauración de la base de datos, que puede supervisar con **NOTIFICACIONES**.
 
-## <a name="reconnect"></a>Restaurar la conexión entre la base de datos de SQL Server y la base de datos de Azure remota
+## <a name="restore-the-connection-between-the-sql-server-database-and-the-remote-azure-database"></a><a name="reconnect"></a>Restaurar la conexión entre la base de datos de SQL Server y la base de datos de Azure remota
 
 1.  Si se va a conectar a una base de datos de Azure restaurada con un nombre diferente o en una región distinta, ejecute el procedimiento almacenado [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) para desconectarse de la base de datos de Azure anterior.  
   
@@ -81,7 +82,7 @@ Haga lo siguiente para restaurar una base de datos de Azure eliminada al momento
  [Administrar y solucionar problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Copia de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
  
- [Portal de Azure]: https://portal.azure.com/
+ [Azure Portal]: https://portal.azure.com/
  

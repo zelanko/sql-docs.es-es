@@ -1,5 +1,5 @@
 ---
-title: Cumplimiento de la interfaz de núcleo | Microsoft Docs
+title: Conformidad con la interfaz principal | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,59 +12,59 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - core-level interface conformance levels [ODBC]
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002108"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81302137"
 ---
 # <a name="core-interface-conformance"></a>Conformidad de interfaz de núcleo
-Todos los controladores ODBC deben presentar como nivel básico al menos cumplimiento de la interfaz. Dado que las características en el nivel de núcleo son las necesarias en aplicaciones interoperables más genéricas, el controlador puede trabajar con dichas aplicaciones. Las características en el nivel de núcleo también corresponden a las características definidas en la especificación ISO CLI y a las características no opcionales definidas en la especificación de CLI de grupo abierto. Un controlador ODBC de función de la interfaz de nivel básico permite a la aplicación hacerlo siguiente:  
+Todos los controladores ODBC deben presentar al menos el cumplimiento de la interfaz de nivel básico. Dado que las características del nivel básico son las que requieren la mayoría de las aplicaciones interoperables genéricas, el controlador puede trabajar con estas aplicaciones. Las características del nivel básico también se corresponden con las características definidas en la especificación de la CLI ISO y con las características no opciones definidas en la especificación de la CLI Open Group. Un controlador ODBC compatible con la interfaz de nivel básico permite que la aplicación realice todas las acciones siguientes:  
   
--   Asignar y liberar todos los tipos de identificadores, mediante una llamada a **SQLAllocHandle** y **SQLFreeHandle**.  
+-   Asigne y libere todos los tipos de identificadores llamando a **SQLAllocHandle** y **SQLFreeHandle**.  
   
--   Usar todas las formas de la **SQLFreeStmt** función.  
+-   Usar todas las formas de la función **SQLFreeStmt** .  
   
--   Enlazar columnas del conjunto de resultados, mediante una llamada a **SQLBindCol**.  
+-   Enlazar columnas del conjunto de resultados mediante una llamada a **SQLBindCol**.  
   
--   Controlar los parámetros dinámicos, incluidas las matrices de parámetros, en la dirección de entrada solo, mediante una llamada a **SQLBindParameter** y **SQLNumParams**. (Los parámetros en la dirección de salida son características 203 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Controlar los parámetros dinámicos, incluidas las matrices de parámetros, solo en la dirección de entrada, llamando a **SQLBindParameter** y **SQLNumParams**. (Los parámetros de la dirección de salida son la característica 203 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).  
   
 -   Especifique un desplazamiento de enlace.  
   
--   Utilice el cuadro de diálogo de datos en ejecución, que implican las llamadas a **SQLParamData** y **SQLPutData**.  
+-   Utilice el cuadro de diálogo de datos en ejecución, que implica llamadas a **SQLParamData** y **SQLPutData**.  
   
--   Administra los cursores y los nombres de cursor, al llamar a **SQLCloseCursor**, **SQLGetCursorName**, y **SQLSetCursorName**.  
+-   Administre los cursores y los nombres de cursor llamando a **SQLCloseCursor**, **SQLGetCursorName**y **SQLSetCursorName**.  
   
--   Obtener acceso a la descripción (metadatos) de conjuntos de resultados, mediante una llamada a **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, y **SQLRowCount** . (Uso de estas funciones en la columna número 0 para recuperar los metadatos de marcador es característica 204 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Obtenga acceso a la descripción (metadatos) de los conjuntos de resultados mediante una llamada a **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**y **SQLRowCount**. (El uso de estas funciones en el número de columna 0 para recuperar los metadatos del marcador es la característica 204 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).  
   
--   Consultar el diccionario de datos, mediante una llamada a las funciones de catálogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, y **SQLTables**.  
+-   Consulte el Diccionario de datos llamando a las funciones de catálogo **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**y **SQLTables**.  
   
-     El controlador no es necesario para admitir nombres de tablas de base de datos y vistas de varias partes. (Para obtener más información, vea la característica 101 en [cumplimiento de la interfaz de nivel 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) y características 201 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) Sin embargo, ciertas características de la especificación de SQL-92, como nombres de índices y calificación de columna son sintácticamente comparables a la nomenclatura de varias partes. La lista de funciones ODBC no está pensada para introducir nuevas opciones en estos aspectos de SQL-92.  
+     No es necesario que el controlador admita nombres de varias partes de tablas y vistas de base de datos. (Para obtener más información, consulte la característica 101 del cumplimiento de la [interfaz de nivel 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) y la característica 201 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)). Sin embargo, algunas características de la especificación SQL-92, como la calificación de columnas y los nombres de los índices, son sintácticamente comparables con la denominación de varias partes. La lista actual de características ODBC no está diseñada para introducir nuevas opciones en estos aspectos de SQL-92.  
   
--   Administrar orígenes de datos y las conexiones, mediante una llamada a **SQLConnect**, **SQLDataSources**, **SQLDisconnect**, y **SQLDriverConnect**. Obtener información acerca de los controladores, independientemente de qué ODBC nivel que admiten, mediante una llamada a **SQLDrivers**.  
+-   Administrar orígenes de datos y conexiones, llamando a **SQLConnect**, **SQLDataSources**, **SQLDisconnect**y **SQLDriverConnect**. Obtenga información sobre los controladores, con independencia del nivel de ODBC que admitan, llamando a **SQLDrivers**.  
   
--   Preparar y ejecutar instrucciones SQL, mediante una llamada a **SQLExecDirect**, **SQLExecute**, y **SQLPrepare**.  
+-   Preparar y ejecutar instrucciones SQL, llamando a **SQLExecDirect**, **SQLExecute**y **SQLPrepare**.  
   
--   Capturar una fila del conjunto de resultados o varias filas, en la dirección de avance solo, mediante una llamada a **SQLFetch** o mediante una llamada a **SQLFetchScroll** con el *FetchOrientation* argumento se establece en SQL_FETCH_NEXT.  
+-   Recupera una fila de un conjunto de resultados o varias filas, solo en la dirección hacia delante, llamando a **SQLFetch** o llamando a **SQLFetchScroll** con el argumento *FetchOrientation* establecido en SQL_FETCH_NEXT.  
   
--   Obtener una columna independiente en partes, mediante una llamada a **SQLGetData**.  
+-   Obtenga una columna sin enlazar en elementos, llamando a **SQLGetData**.  
   
--   Obtener los valores actuales de todos los atributos, mediante una llamada a **SQLGetConnectAttr**, **SQLGetEnvAttr**, y **SQLGetStmtAttr**y establezca todos los atributos en sus valores predeterminados y establecer determinados atributos para los valores no predeterminados mediante una llamada a **SQLSetConnectAttr**, **SQLSetEnvAttr**, y **SQLSetStmtAttr**.  
+-   Obtenga los valores actuales de todos los atributos llamando a **SQLGetConnectAttr**, **SQLGetEnvAttr**y **SQLGetStmtAttr**, y establezca todos los atributos en sus valores predeterminados y establezca ciertos atributos en valores no predeterminados mediante una llamada a **SQLSetConnectAttr**, **SQLSetEnvAttr**y **SQLSetStmtAttr**.  
   
--   Manipular algunos de los campos de los descriptores, mediante una llamada a **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**, y **SQLSetDescRec**.  
+-   Manipular determinados campos de descriptores llamando a **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**y **SQLSetDescRec**.  
   
--   Obtener información de diagnóstico, mediante una llamada a **SQLGetDiagField** y **SQLGetDiagRec**.  
+-   Obtenga información de diagnóstico mediante una llamada a **SQLGetDiagField** y **SQLGetDiagRec**.  
   
--   Detectar las capacidades del controlador, mediante una llamada a **SQLGetFunctions** y **SQLGetInfo**. Además, detectar el resultado de cualquier texto sustituciones a una instrucción SQL antes de enviarse al origen de datos, mediante una llamada a **SQLNativeSql**.  
+-   Detecte las funcionalidades del controlador mediante una llamada a **SQLGetFunctions** y **SQLGetInfo**. Además, detecte el resultado de cualquier sustitución de texto realizada en una instrucción SQL antes de enviarla al origen de datos, llamando a **SQLNativeSql**.  
   
--   Use la sintaxis de **SQLEndTran** para confirmar una transacción. Un controlador de nivel básico no necesita admitir transacciones true; por lo tanto, la aplicación no puede especificar SQL_ROLLBACK ni SQL_AUTOCOMMIT_OFF para el atributo de conexión SQL_ATTR_AUTOCOMMIT. (Para obtener más información, vea la característica 109 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Use la sintaxis de **SQLEndTran** para confirmar una transacción. No es necesario que un controlador de nivel básico admita transacciones verdaderas; por lo tanto, la aplicación no puede especificar SQL_ROLLBACK ni SQL_AUTOCOMMIT_OFF para el atributo de conexión de SQL_ATTR_AUTOCOMMIT. (Para obtener más información, vea la característica 109 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).  
   
--   Llame a **SQLCancel** para cancelar el cuadro de diálogo de datos en ejecución y, en entornos multiproceso, para cancelar una función ODBC ejecutando en otro subproceso. Cumplimiento de la interfaz de nivel básico no impone la compatibilidad con la ejecución asincrónica de funciones, ni el uso de **SQLCancel** para cancelar una función ODBC que se ejecuta de forma asincrónica. La plataforma ni del controlador ODBC necesita ser multiproceso para el controlador para llevar a cabo actividades independientes al mismo tiempo. Sin embargo, en entornos multiproceso, el controlador ODBC debe ser seguro para subprocesos. Serialización de solicitudes de la aplicación es una manera de función para implementar esta especificación, aunque podrían crear problemas graves de rendimiento.  
+-   Llame a **SQLCancel** para cancelar el cuadro de diálogo de datos en ejecución y, en entornos multiproceso, para cancelar la ejecución de una función ODBC en otro subproceso. La conformidad con la interfaz de nivel básico no exige la compatibilidad con la ejecución asincrónica de funciones ni el uso de **SQLCancel** para cancelar una función ODBC que se ejecuta de forma asincrónica. Ni la plataforma ni el controlador ODBC deben ser multiproceso para que el controlador realice actividades independientes al mismo tiempo. Sin embargo, en entornos multiproceso, el controlador ODBC debe ser seguro para subprocesos. La serialización de solicitudes de la aplicación es una manera compatible de implementar esta especificación, aunque podría crear problemas de rendimiento graves.  
   
--   Obtener la columna que identifica la fila SQL_BEST_ROWID de tablas, mediante una llamada a **SQLSpecialColumns**. (Compatibilidad con SQL_ROWVER es característica 208 en [cumplimiento de la interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Obtenga la SQL_BEST_ROWID columna de identificación de filas de las tablas mediante una llamada a **SQLSpecialColumns**. (La compatibilidad con SQL_ROWVER es la característica 208 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).  
   
     > [!IMPORTANT]  
-    >  Controladores ODBC debe implementar las funciones en el nivel de conformidad de interfaz de núcleo.
+    >  Los controladores ODBC deben implementar las funciones en el nivel de conformidad de la interfaz principal.

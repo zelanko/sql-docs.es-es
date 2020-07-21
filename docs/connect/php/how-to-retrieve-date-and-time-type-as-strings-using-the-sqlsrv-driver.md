@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b8cd038579c471891e6e9ae0d81075b22016f6d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993532"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80916141"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Al usar el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]controlador SQLSRV para, puede recuperar tipos de fecha y hora (**smalldatetime**, **DateTime**, **Date**, **Time**, **datetime2**y **DateTimeOffset**) como cadenas especificando lo siguiente en la cadena de conexión o en el nivel de instrucción:
+Al usar el controlador SQLSRV para el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede recuperar tipos de fecha y hora (**smalldatetime**, **DateTime**, **Date**, **Time**, **datetime2** y **DateTimeOffset**) como cadenas que especifican la siguiente opción en la cadena de conexión o en el nivel de instrucción:
 
 ```
 'ReturnDatesAsStrings'=>true
@@ -30,7 +30,7 @@ Al usar el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]controlador 
 
 El valor predeterminado es **false**, lo que significa que los tipos **smalldatetime**, **datetime**, **date**, **time**, **datetime2** y **datetimeoffset** se devolverán como tipos de objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Si esta opción se establece en el nivel de instrucción, reemplaza la configuración del nivel de conexión.
 
-De forma predeterminada, el controlador PDO_SQLSRV devuelve los tipos de fecha y hora como cadenas. Para recuperarlos como objetos DateTime de PHP, consulte [Cómo: recuperar tipos de fecha y hora como objetos DateTime de PHP mediante PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+De forma predeterminada, el controlador PDO_SQLSRV devuelve los tipos de fecha y hora como cadenas. Para recuperarlos como objetos DateTime de PHP, consulte [ Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="example"></a>Ejemplo
 En el ejemplo siguiente se muestra la sintaxis que especifica cómo recuperar tipos de fecha y hora como cadenas.
@@ -194,4 +194,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>Consulte también
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
-[Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+[Cómo: Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

@@ -13,22 +13,22 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729332"
 ---
 # <a name="subscription-synchronization-history"></a>Suscripción, historial de sincronizaciones
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La pestaña **Historial de sincronizaciones** muestra información detallada sobre el Agente de mezcla, incluido el estado, las estadísticas de artículos, el historial, mensajes de información y mensajes de error.  
   
 ## <a name="options"></a>Opciones  
  Seleccione en el menú **Ver** las sesiones del Agente de mezcla que desea ver y después seleccione una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de mezcla**. En la cuadrícula con la etiqueta **Artículos procesados en la sesión seleccionada**se muestra información detallada sobre la sesión.  
   
- **Ver**  
+ **Vista**  
  Permite seleccionar las sesiones del Agente de mezcla que desea ver.  
   
  **Estado**  
@@ -36,7 +36,7 @@ ms.locfileid: "68769426"
   
 -   Error  
   
--   Completado  
+-   Completed  
   
 -   Intentando de nuevo  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68769426"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duración**  
+ **Duration**  
  Tiempo de ejecución del Agente de mezcla en una sesión. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Comandos cargados**  
@@ -76,7 +76,7 @@ ms.locfileid: "68769426"
  **% del total**  
  Porcentaje del tiempo total de procesamiento dedicado a cada fase en la sesión seleccionada.  
   
- **Duración**  
+ **Duration**  
  Tiempo dedicado a cada fase de procesamiento. Este tiempo representa el tiempo transcurrido si el Agente de mezcla se está ejecutando actualmente para la sesión y el tiempo total de ejecución si ya finalizó su ejecución.  
   
  **Inserts**  

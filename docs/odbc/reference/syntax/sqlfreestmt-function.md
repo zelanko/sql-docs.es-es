@@ -18,18 +18,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLFreeStmt function [ODBC]
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6141f3efe357bfb3f14c04aa2f6760e9470649a6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e252769c26a5491100094b1243b9c2c6bb67d94d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345147"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81285705"
 ---
 # <a name="sqlfreestmt-function"></a>Función SQLFreeStmt
 **Conformidad**  
- Versión introducida: Compatibilidad con los estándares de ODBC 1,0: ISO 92  
+ Versión introducida: compatibilidad con estándares de ODBC 1,0: ISO 92  
   
  **Resumen**  
  **SQLFreeStmt** detiene el procesamiento asociado con una instrucción específica, cierra cualquier cursor abierto asociado a la instrucción, descarta los resultados pendientes o, opcionalmente, libera todos los recursos asociados al identificador de instrucción.  
@@ -50,13 +50,13 @@ SQLRETURN SQLFreeStmt(
  *Opción*  
  Entradas Una de las siguientes opciones:  
   
- SQL_ CERRAR: Cierra el cursor asociado a *StatementHandle* (si se definió uno) y descarta todos los resultados pendientes. La aplicación puede volver a abrir este cursor más adelante mediante la ejecución de una instrucción **Select** de nuevo con los mismos valores de parámetro o distintos. Si no hay ningún cursor abierto, esta opción no tiene ningún efecto en la aplicación. También se puede llamar a **SQLCloseCursor** para cerrar un cursor. Para obtener más información, vea [cerrar el cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL_ CLOSE: cierra el cursor asociado a *StatementHandle* (si se definió uno) y descarta todos los resultados pendientes. La aplicación puede volver a abrir este cursor más adelante mediante la ejecución de una instrucción **Select** de nuevo con los mismos valores de parámetro o distintos. Si no hay ningún cursor abierto, esta opción no tiene ningún efecto en la aplicación. También se puede llamar a **SQLCloseCursor** para cerrar un cursor. Para obtener más información, vea [cerrar el cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- SQL_DROP: Esta función está en desuso. Una llamada a **SQLFreeStmt** con una *opción* de SQL_DROP se asigna en el administrador de controladores a [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ SQL_DROP: esta opción está en desuso. Una llamada a **SQLFreeStmt** con una *opción* de SQL_DROP está asignada en el administrador de controladores a [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
- SQL_UNBIND: Establece el campo SQL_DESC_COUNT de ARD en 0, liberando todos los búferes de columna enlazados por **SQLBindCol** para el *StatementHandle*determinado. Esto no desenlaza la columna de marcador; para ello, el campo SQL_DESC_DATA_PTR de ARD para la columna Bookmark se establece en NULL. Tenga en cuenta que si esta operación se realiza en un descriptor asignado explícitamente compartido por más de una instrucción, la operación afectará a los enlaces de todas las instrucciones que compartan el descriptor. Para obtener más información, vea [información general sobre la recuperación de resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ SQL_UNBIND: establece el campo de SQL_DESC_COUNT del ARD en 0, liberando todos los búferes de columna enlazados por **SQLBindCol** para el *StatementHandle*determinado. Esto no desenlaza la columna de marcador; para ello, el campo de SQL_DESC_DATA_PTR de ARD para la columna de marcador se establece en NULL. Tenga en cuenta que si esta operación se realiza en un descriptor asignado explícitamente compartido por más de una instrucción, la operación afectará a los enlaces de todas las instrucciones que compartan el descriptor. Para obtener más información, vea [información general sobre la recuperación de resultados (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
- SQL_RESET_PARAMS: Establece el campo SQL_DESC_COUNT de APD en 0, liberando todos los búferes de parámetros establecidos por **SQLBindParameter** para el *StatementHandle*determinado. Si esta operación se realiza en un descriptor asignado explícitamente compartido por más de una instrucción, esta operación afectará a los enlaces de todas las instrucciones que compartan el descriptor. Para obtener más información, vea [Binding](../../../odbc/reference/develop-app/binding-parameters-odbc.md)Parameters.  
+ SQL_RESET_PARAMS: establece el campo de SQL_DESC_COUNT del APD en 0, liberando todos los búferes de parámetros establecidos por **SQLBindParameter** para el *StatementHandle*determinado. Si esta operación se realiza en un descriptor asignado explícitamente compartido por más de una instrucción, esta operación afectará a los enlaces de todas las instrucciones que compartan el descriptor. Para obtener más información, vea [Binding Parameters](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -67,12 +67,12 @@ SQLRETURN SQLFreeStmt(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLFreeStmt** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función con la *opción* establecida en SQL_RESET_PARAMS antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSETPOS** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLFreeStmt** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función con la *opción* establecida en SQL_RESET_PARAMS antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY092|Tipo de opción fuera del intervalo|(DM) el valor especificado para la *opción* argument no era:<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
-|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|El controlador no admite esta función|(DM) el controlador asociado a *StatementHandle* no admite la función.|  
   
 ## <a name="comments"></a>Comentarios  
@@ -114,7 +114,7 @@ int main() {
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
 |Asignación de un identificador|[Función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Cancelar el procesamiento de instrucciones|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
@@ -122,6 +122,6 @@ int main() {
 |Liberar un identificador|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Establecer un nombre de cursor|[Función SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

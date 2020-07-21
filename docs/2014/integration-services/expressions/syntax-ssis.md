@@ -10,15 +10,14 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 97f50b2d3794a07cf953c6700e93cc12c2319c39
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62768841"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428032"
 ---
 # <a name="syntax-ssis"></a>Sintaxis (SSIS)
   La sintaxis de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es similar a la sintaxis de los lenguajes C y C#. Las expresiones incluyen elementos como identificadores (columnas y variables), literales, operadores y funciones. En este tema se resumen los requisitos únicos de la sintaxis del evaluador de expresiones cuando se aplican a distintos elementos de una expresión.  
@@ -26,7 +25,7 @@ ms.locfileid: "62768841"
 > [!NOTE]  
 >  En las versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], había un límite de 4000 caracteres para el resultado de la evaluación de una expresión cuando el resultado tenía el tipo de datos DT_WSTR o DT_STR de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se ha quitado este límite.  
   
- Para conocer las expresiones de ejemplo que usan funciones y operadores específicos, consulte el tema sobre cada operador y función en los temas: [Operadores &#40;expresión de SSIS&#41; ](operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
+ Para conocer expresiones de ejemplo que usen funciones y operadores específicos, vea el tema sobre cada operador y función en los temas: [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
   
  Para ver expresiones de ejemplo que usen varios operadores y funciones, así como identificadores y literales, vea [Ejemplos de expresiones avanzadas de Integration Services](examples-of-advanced-integration-services-expressions.md).  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62768841"
 ###### <a name="equality-operators"></a>Operadores de igualdad  
  La gramática del evaluador de expresiones proporciona el operador de igualdad ==. Este operador es el equivalente del operador = de Transact-SQL y el operador == de C#.  
   
-## <a name="functions"></a>Funciones  
+## <a name="functions"></a>Functions  
  El lenguaje de expresiones incluye funciones de fecha y hora, funciones matemáticas y funciones de cadena similares a las funciones de Transact-SQL y los métodos de C#.  
   
  Unas cuantas funciones se llaman igual que las funciones de Transact-SQL, pero tienen una funcionalidad ligeramente distinta en el evaluador de expresiones.  
@@ -76,7 +75,7 @@ ms.locfileid: "62768841"
  Para obtener más información, vea [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
+ [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

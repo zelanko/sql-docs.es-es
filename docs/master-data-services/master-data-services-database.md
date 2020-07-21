@@ -1,5 +1,6 @@
 ---
-title: Base de datos de Master Data Services | Microsoft Docs
+title: Base de datos de Master Data Services
+description: La base de datos de Master Data Services contiene toda la información del sistema de Master Data Services y es fundamental para una implementación de Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 159ab8c79be2cd27dba4db060b43a0e6b95290d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c7e24a7d519d787882ec587fc33f624f1eb6472
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062741"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811490"
 ---
 # <a name="master-data-services-database"></a>Base de datos de Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La base de datos contiene toda la información para el sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Es un punto central en una implementación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Las base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  
   
@@ -46,9 +47,9 @@ ms.locfileid: "68062741"
   
 -   [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crea una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
- [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+ [&#40;de seguridad de objetos de base de datos Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
  [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

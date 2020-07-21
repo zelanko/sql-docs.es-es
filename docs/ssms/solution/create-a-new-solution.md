@@ -1,6 +1,6 @@
 ---
-title: Crear una solución | Microsoft Docs
-ms.custom: ''
+title: Crear una nueva solución
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8f05d883896e4d027a34afb1d7849c8c9368b01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1988a31f085619604198b889138bb8e62eb8f28b
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258282"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75251925"
 ---
 # <a name="create-a-new-solution"></a>Crear una nueva solución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ Para obtener acceso al Explorador de soluciones, en el menú **Ver** , haga clic
   
 5.  También puede modificar el nombre de la solución en el cuadro de texto **Nombre de la solución** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ## <a name="see-also"></a>Consulte también  
-[Ver](../../ssms/solution/solution-explorer.md)  
+[Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Abrir soluciones desde el control de código fuente](https://msdn.microsoft.com/library/ms174216.aspx)  
   

@@ -1,5 +1,5 @@
 ---
-title: Ver los destinos de Extended Events para los paquetes registrados | Microsoft Docs
+title: Ver los destinos de eventos extendidos para los paquetes registrados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4985aa5f-ac99-49f6-852c-9d25916549e9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae927a281db54697bbda49e28a58ea4c6e60326a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e796d141ef943399fc2469c232b34b1956cef3b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66088729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927344"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>Ver los destinos de eventos extendidos de los paquetes registrados
   Antes de crear una sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events, es útil determinar qué destinos de eventos extendidos están disponibles. Esta tarea implica el uso del Editor de consultas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para realizar el procedimiento siguiente.  
@@ -43,9 +42,9 @@ ms.locfileid: "66088729"
     WHERE o.object_type = 'target'  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server destinos de eventos extendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Sys. dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   
   

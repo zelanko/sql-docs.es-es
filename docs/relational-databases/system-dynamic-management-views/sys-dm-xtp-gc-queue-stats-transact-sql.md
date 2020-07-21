@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -16,30 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76acad96bb43b23487490cab79072311906f7e8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648108"
 ---
-# <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Genera información y distintas estadísticas sobre cada cola de trabajador de recolección de elementos no utilizados en el servidor. Hay una cola por cada CPU lógica.  
   
  El subproceso principal de recolección de elementos no utilizados (el subproceso inactivo) hace un seguimiento de las filas actualizadas, eliminadas e insertadas de todas las transacciones completadas desde la última invocación del subproceso principal de recolección de elementos no utilizados. Cuando el subproceso de recolección de elementos no utilizados se reactiva, determina si la marca de tiempo de la transacción activa más antigua ha cambiado. Si la transacción activa más antigua ha cambiado, el subproceso inactivo pone en cola elementos de trabajo (en fragmentos de 16 filas) para las transacciones cuyos conjuntos de escritura no son ya necesarios. Por ejemplo, si elimina 1.024 filas, en la cola habrá 64 elementos de trabajo no utilizados recopilados, cada uno de los cuales contiene 16 filas eliminadas.  Una vez que una transacción de usuario se confirma, selecciona todos los elementos puestos en cola en su programador. Si no hay ningún elemento en cola en su programador, la transacción de usuario buscará en todas las colas del nodo NUMA actual.  
   
- Es posible determinar si la recolección de elementos no utilizados está liberando memoria para las filas eliminadas; para ello, ejecute sys.dm_xtp_gc_queue_stats para ver si el trabajo puesto en cola se está procesando. Si las entradas de current_queue_depth no se están procesando o si no hay nuevos elementos de trabajo se agregan a current_queue_depth, esto es un valor que indica que la recolección no está liberando memoria. Por ejemplo, la recolección de elementos no puede realizarse si hay una transacción de larga ejecución.  
+ Es posible determinar si la recolección de elementos no utilizados está liberando memoria para las filas eliminadas; para ello, ejecute sys.dm_xtp_gc_queue_stats para ver si el trabajo puesto en cola se está procesando. Si no se están procesando las entradas en el current_queue_depth o si no se están agregando nuevos elementos de trabajo al current_queue_depth, esto es una indicación de que la recolección de elementos no utilizados no está liberando memoria. Por ejemplo, no se puede realizar la recolección de elementos no utilizados si hay una transacción de larga ejecución.  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nombre de columna|Type|Descripción|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificador único de la cola.|  
 |total_enqueues|**bigint**|El número total de elementos de trabajo de la recolección de elementos no utilizados puestos en esta cola desde que se inició el servidor.|  
@@ -65,7 +65,7 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - read-only status for text driver [ODBC]
 - text file driver [ODBC], read-only status
 ms.assetid: 859580bb-4e69-4517-a4f1-460649dd06ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e253b3ad8144a75ca3c176c9d9fce94a7e4ec47f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 934d125b8e50d0c3d1c98fdb8b7ec1cdc7bc2e88
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988032"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81304866"
 ---
 # <a name="read-only-status-text-file-driver"></a>Estado de solo lectura (controlador de archivo de texto)
-Cuando se usa el controlador de texto, tablas de origen de datos son de solo lectura. Sin embargo, las aplicaciones pueden realizar inserciones para las tablas de texto.
+Cuando se utiliza el controlador de texto, las tablas del origen de datos son de solo lectura. Sin embargo, las aplicaciones pueden realizar inserciones en las tablas de texto.

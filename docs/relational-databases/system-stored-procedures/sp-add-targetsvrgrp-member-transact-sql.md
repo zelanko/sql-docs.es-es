@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_targetsvrgrp_member
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf0feb3b7747f7488c8688c902760e90cbe66838
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033020"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878239"
 ---
-# <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega el servidor de destino especificado al grupo de servidores de destino especificado.  
    
@@ -39,9 +39,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @group_name = ] 'group_name'` El nombre del grupo. *group_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @group_name = ] 'group_name'`Nombre del grupo. *group_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @server_name = ] 'server_name'` El nombre del servidor que se debe agregar al grupo especificado. *nombre_servidor* es **nvarchar (30)** , no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server_name'`Nombre del servidor que se debe agregar al grupo especificado. *SERVER_NAME* es de tipo **nvarchar (30)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -49,11 +49,11 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un servidor de destino puede ser miembro de varios grupos de servidores de destino.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se agrega el grupo `Servers Maintaining Customer Information` y se agrega el servidor `LONDON1` a ese grupo.  
@@ -68,8 +68,8 @@ EXEC dbo.sp_add_targetsvrgrp_member
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_targetsvrgrp_member &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_targetsvrgrp_member &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetsvrgrp-member-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

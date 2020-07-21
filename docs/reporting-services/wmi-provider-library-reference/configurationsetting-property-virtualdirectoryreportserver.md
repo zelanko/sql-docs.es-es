@@ -11,10 +11,10 @@ ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 162106619fce4a8868064abd42687041203221bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65569179"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>Propiedad de ConfigurationSetting: VirtualDirectoryReportServer

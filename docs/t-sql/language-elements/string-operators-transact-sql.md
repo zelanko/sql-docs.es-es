@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fe2fe0e18d480ec6ff094b2436e6368a47744f49
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706107"
 ---
 # <a name="string-operators-transact-sql"></a>Operadores de cadena (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona los operadores de cadena siguientes. Los operadores de concatenación de cadenas pueden combinar dos o más de los siguientes tipos de datos en una expresión: 
 * cadenas de caracteres o de binarios

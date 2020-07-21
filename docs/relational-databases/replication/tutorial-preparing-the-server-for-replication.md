@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Preparación para la replicación'
+description: En este tutorial, aprenderá a preparar el publicador, el distribuidor y el suscriptor para la replicación mediante la creación de cuentas de Windows, la preparación de la carpeta de instantáneas y la configuración de la distribución.
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4ae1dddb8ac5b84bea8a602264c43797b2b041e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726029"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Es importante planificar la seguridad antes de configurar la topología de replicación. Este tutorial le mostrará cómo asegurar mejor una topología de replicación. También muestra cómo configurar la distribución, que es el primer paso en la replicación de datos. Debe finalizar este tutorial antes que cualquiera de los otros tutoriales.  
   
 > [!NOTE]  
@@ -35,7 +36,7 @@ En este tutorial, aprenderá a:
 > * Preparar la carpeta de instantáneas
 > * Configurar la distribución
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 Este tutorial está pensado para usuarios que están familiarizados con las operaciones básicas de las bases de datos, pero que tienen una experiencia limitada en operaciones de replicación. 
 
 Para completar este tutorial, necesita tener SQL Server, SQL Server Management Studio (SSMS) y una base de datos de AdventureWorks:  
@@ -52,7 +53,7 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
 - Descargue la [base de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Para obtener instrucciones sobre cómo restaurar una base de datos en SSMS, vea [Restaurar una copia de seguridad de base de datos con SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
     
 >[!NOTE]
-> - La replicación no se admite entre instancias de SQL Server que estén separadas por más de dos versiones entre sí. Para más información, vea la entrada de blog [Supported SQL Server versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versiones de SQL Server admitidas en la topología de replicación).
+> - La replicación no se admite entre instancias de SQL Server que estén separadas por más de dos versiones entre sí. Para más información, vea la entrada de blog [Supported SQL Server versions in Replication Topology](replication-backward-compatibility.md) (Versiones de SQL Server admitidas en la topología de replicación).
 > - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 
@@ -61,10 +62,10 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
 ## <a name="create-windows-accounts-for-replication"></a>Creación de cuentas de Windows para replicación
 En esta sección, crea cuentas de Windows para ejecutar agentes de replicación. Va a crear distintas cuentas de Windows en el servidor local para los siguientes agentes:  
   
-|Agente|Ubicación|Nombre de cuenta|  
+|Agente|Location|Nombre de cuenta|  
 |---------|------------|----------------|  
-|Agente de instantáneas|publicador|<*nombreDeEquipo*>\repl_snapshot|  
-|Agente de registro del LOG|publicador|<*nombreDeEquipo*>\repl_logreader|  
+|Agente de instantáneas|Publicador|<*nombreDeEquipo*>\repl_snapshot|  
+|Agente de registro del LOG|Publicador|<*nombreDeEquipo*>\repl_logreader|  
 |Agente de distribución|Publicador y suscriptor|<*nombreDeEquipo*>\repl_distribution|  
 |Agente de mezcla|Publicador y suscriptor|<*nombreDeEquipo*>\repl_merge|  
   
@@ -116,9 +117,9 @@ En esta sección va a configurar la carpeta de instantáneas que se utiliza para
   
 3. Haga clic con el botón derecho en esta carpeta y seleccione **Propiedades**.  
   
-   A. En la pestaña **Compartir** del cuadro de diálogo **Propiedades de repldata**, seleccione **Uso compartido avanzado**.  
+   a. En la pestaña **Compartir** del cuadro de diálogo **Propiedades de repldata**, seleccione **Uso compartido avanzado**.  
   
-   B. En el cuadro de diálogo **Uso compartido avanzado**, seleccione **Compartir esta carpeta** y, después, seleccione **Permisos**.  
+   b. En el cuadro de diálogo **Uso compartido avanzado**, seleccione **Compartir esta carpeta** y, después, seleccione **Permisos**.  
 
    ![Selecciones para compartir la carpeta repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -180,15 +181,16 @@ En este tutorial no se contempla la configuración de un publicador con un distr
    ![Comando Configurar la distribución en el menú contextual](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > Si se ha conectado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante **localhost** en lugar del nombre real del servidor, aparecerá una advertencia indicando que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar con **localhost**. En el cuadro de diálogo de advertencia, seleccione **Aceptar**. En el cuadro de diálogo **Conectar al servidor**, cambie el **nombre del servidor** de **localhost** al nombre del servidor. A continuación, seleccione **Conectar**.  
-  
+   > - Si se ha conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante **localhost** en lugar del nombre real del servidor, aparece una advertencia que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar a **localhost o dirección IP**. En el cuadro de diálogo de advertencia, seleccione **Aceptar**. En el cuadro de diálogo **Conectar al servidor**, cambie **Nombre del servidor** de **localhost o dirección IP** al nombre del servidor. A continuación, seleccione **Conectar**.  
+   > - Actualmente hay un problema conocido con SQL Server Management Studio (SSMS) 18.0 (y versiones posteriores) que consiste en que _no_ se muestra un mensaje de advertencia al conectarse al distribuidor con la dirección IP, aunque esto sigue sin ser válido. Se debe usar el nombre real del servidor al conectarse al distribuidor. 
+   
    Se inicia el Asistente para configurar la distribución.  
   
 3. En la página **Distribuidor**, seleccione < *'NombreServidor'* >  **actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**. Luego, seleccione **Siguiente**.  
 
    ![Opción para que el servidor actúe como su propio distribuidor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Inicio del Agente**, seleccione **Sí[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y configure el servicio del Agente**  para que se inicie automáticamente. Seleccione **Siguiente**.  
+4. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Inicio del Agente**, seleccione **Sí[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y configure el servicio del Agente**  para que se inicie automáticamente. Seleccione **Next** (Siguiente).  
 
      
 5. Escriba la ruta de acceso \\\\<*Nombre_De_Equipo_Publicador*> **\repldata** en el cuadro de texto **Carpeta de instantáneas** y, después, seleccione **Siguiente**. Esta ruta de acceso debe coincidir con lo que vimos anteriormente en **Ruta de acceso a la red** de la carpeta de propiedades de repldata después de configurar las propiedades del recurso compartido. 
@@ -235,7 +237,7 @@ Si su instancia de SQL Server Management Studio se ejecuta con derechos administ
    ![Vista de las cuatro cuentas en el Explorador de objetos](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
   
-Para obtener más información, vea:
+Para más información, consulte:
 - [Configuración de la distribución](../../relational-databases/replication/configure-distribution.md) 
 - [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md)  
 

@@ -1,12 +1,14 @@
 ---
-title: Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor | Microsoft Docs
-ms.custom: ''
-ms.date: 08/24/2016
+title: Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
+ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
+author: stevestein
+ms.author: sstein
+ms.custom: seo-dt-2019
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -31,18 +33,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726446"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Este artículo es pertinente en las siguientes situaciones:  
   
 -   Configurar las réplicas de disponibilidad en un grupo de disponibilidad de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
@@ -57,9 +56,9 @@ ms.locfileid: "67940724"
   
  Algunas aplicaciones dependen de información, entidades u objetos que se encuentran fuera del ámbito de una base de datos de usuario único. Normalmente, una aplicación depende de las bases de datos **maestras** y **msdb** , así como de la base de datos del usuario. Cualquier elemento almacenado fuera de la base de datos de usuario que sea necesario para el funcionamiento correcto de dicha base de datos debe estar disponible en la instancia de servidor de destino. Por ejemplo, los inicios de sesión de una aplicación se almacenan como metadatos en la base de datos **maestra** y se deben volver a crear en el servidor de destino. Si una aplicación o un plan de mantenimiento de bases de datos dependen de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cuyos metadatos estén almacenados en la base de datos **msdb** , dichos trabajos se deben volver a crear en la instancia del servidor de destino. De forma similar, los metadatos de un desencadenador de servidor se almacenan en la base de datos **maestra**.  
   
- Si mueve la base de datos de una aplicación a otra instancia del servidor, debe volver a crear todos los metadatos de las entidades y objetos dependientes de las bases de datos **maestra** y **msdb** en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos **maestra** .  
+ Si mueve la base de datos de una aplicación a otra instancia de servidor, debe volver a crear todos los metadatos de las entidades y los objetos dependientes de las bases de datos **maestra** y **msdb** en la instancia de servidor de destino. Por ejemplo, si una aplicación de la base de datos usa desencadenadores de servidor, no basta con adjuntar o restaurar la base de datos en el nuevo sistema. La base de datos no funcionará según lo previsto a menos que se vuelvan a crear manualmente los metadatos para dichos desencadenadores en la base de datos **maestra** .  
   
-##  <a name="information_entities_and_objects"></a> Información, entidades y objetos almacenados fuera de las bases de datos de usuario  
+##  <a name="information-entities-and-objects-that-are-stored-outside-of-user-databases"></a><a name="information_entities_and_objects"></a> Información, entidades y objetos almacenados fuera de las bases de datos de usuario  
  En lo que queda de este artículo se resumen los posibles problemas que podrían afectar a una base de datos que se pone a disposición de otra instancia de servidor. Podría tener que volver a crear uno o varios de los tipos de información, entidades u objetos de la lista siguiente. Para ver un resumen, haga clic en el vínculo del elemento.  
   
 -   [Valores de configuración del servidor](#server_configuration_settings)  
@@ -82,11 +81,11 @@ ms.locfileid: "67940724"
   
 -   [Propiedades del motor de texto completo para SQL Server](#ifts_service_properties)  
   
--   [Jobs](#jobs)  
+-   [Trabajos](#jobs)  
   
 -   [Inicios de sesión](#logins)  
   
--   [Permissions](#permissions)  
+-   [Permisos](#permissions)  
   
 -   [Configuración de replicación](#replication_settings)  
   
@@ -96,13 +95,13 @@ ms.locfileid: "67940724"
   
 -   [Desencadenadores (en el nivel de servidor)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server-configuration-settings"></a><a name="server_configuration_settings"></a> Server Configuration Settings  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores instalan e inician servicios y características clave de forma selectiva. Esto ayuda a reducir el área de un sistema susceptible de recibir ataques. Con la configuración predeterminada de nuevas instalaciones, no se habilitan muchas de las características. Si la base de datos se basa en un servicio o característica desactivada de forma predeterminada, este servicio o característica debe habilitarse en la instancia de servidor de destino.  
   
  Para obtener más información sobre estos valores de configuración y su habilitación o deshabilitación, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
   
-##  <a name="credentials"></a> Credenciales  
+##  <a name="credentials"></a><a name="credentials"></a> Credenciales  
  Una credencial es un registro que contiene la información de autenticación necesaria para conectarse a un recurso fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La mayoría de las credenciales consta de un inicio de sesión de Windows y una contraseña.  
   
  Para obtener más información sobre esta característica, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
@@ -110,22 +109,22 @@ ms.locfileid: "67940724"
 > **NOTA:** Las cuentas de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
-##  <a name="cross_database_queries"></a> Cross-Database Queries  
+##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
  Las opciones de base de datos DB_CHAINING y TRUSTWORTHY se establecen, de forma predeterminada, en OFF. Si alguna de estas opciones se establece en ON para la base de datos original, es posible que deba habilitarlas en la base de datos de la instancia de servidor de destino. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
- Las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedad entre bases de datos. Para obtener información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
+ Las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedad entre bases de datos. Para obtener más información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
  Para obtener más información, vea también [Configurar una base de datos reflejada para usar la propiedad Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md).  
   
   
-##  <a name="database_ownership"></a> Database Ownership  
+##  <a name="database-ownership"></a><a name="database_ownership"></a> Database Ownership  
  Cuando se restaura una base de datos en otro equipo, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el usuario de Windows que inicia la operación de restauración se convierte automáticamente en el propietario de la nueva base de datos. Una vez restaurada la base de datos, el administrador del sistema o el nuevo propietario de la base de datos pueden cambiar la propiedad de la base de datos.  
   
-##  <a name="distributed_queries_and_linked_servers"></a> Consultas distribuidas y servidores vinculados  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Consultas distribuidas y servidores vinculados  
  Las aplicaciones OLE DB admiten las consultas distribuidas y los servidores vinculados. Las consultas distribuidas obtienen acceso a datos desde varios orígenes de datos heterogéneos del mismo equipo o diferentes equipos. Una configuración con servidores vinculados permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutar comandos en orígenes de datos OLE DB situados en servidores remotos. Para obtener más información sobre estas características, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
   
-##  <a name="encrypted_data"></a> Encrypted Data  
+##  <a name="encrypted-data"></a><a name="encrypted_data"></a> Encrypted Data  
  Si la base de datos que pasa a estar disponible en otra instancia de servidor contiene datos cifrados y la clave maestra de la base de datos está protegida por la clave maestra de servicio del servidor original, es posible que deba volver a crear el cifrado de la clave maestra de servicio. La *clave maestra de la base de datos* es una clave simétrica que se utiliza para proteger las claves privadas de certificados y las claves asimétricas de una base de datos cifrada. Al crearla, la clave maestra de la base de datos se cifra mediante el algoritmo Triple DES y una contraseña proporcionada por el usuario.  
   
  Para habilitar el cifrado automático de la clave maestra de una instancia de servidor, se cifra una copia de esta clave mediante la clave maestra de servicio. Esta copia cifrada se almacena en la base de datos y en **maestra**. Por lo general, la copia almacenada en la base de datos **maestra** se actualiza automáticamente al cambiar la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta primero descifrar la clave maestra de base de datos con la clave maestra de servicio de la instancia. Si ese descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales. Para abrir una clave maestra que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción OPEN MASTER KEY y una contraseña.  
@@ -143,11 +142,11 @@ ms.locfileid: "67940724"
 -   [Crear claves simétricas idénticas en dos servidores](../../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   
-##  <a name="user_defined_error_messages"></a> User-defined Error Messages  
+##  <a name="user-defined-error-messages"></a><a name="user_defined_error_messages"></a> User-defined Error Messages  
  Los mensajes de error definidos por el usuario residen en la vista de catálogo [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) . Esta vista se almacena en la base de datos **maestra**. Si una aplicación de la base de datos depende de los mensajes de error definidos por el usuario y la base de datos pasa a estar disponible en otra instancia del servidor, use [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) para agregar esos mensajes de error en la instancia de servidor de destino.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Las notificaciones de eventos y eventos de Windows Management Instrumentation (WMI) (en el nivel de servidor)  
+##  <a name="event-notifications-and-windows-management-instrumentation-wmi-events-at-server-level"></a><a name="event_notif_and_wmi_events"></a> Las notificaciones de eventos y eventos de Windows Management Instrumentation (WMI) (en el nivel de servidor)  
   
 ### <a name="server-level-event-notifications"></a>Notificaciones de eventos del servidor  
  Las notificaciones de eventos del servidor se almacenan en la base de datos **msdb**. Por lo tanto, si una aplicación de la base de datos depende de una notificación de eventos del servidor, la notificación de un evento debe volver a crearse en la instancia de servidor de destino. Para ver las notificaciones de eventos de una instancia del servidor, use la vista de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para más información, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
@@ -175,7 +174,7 @@ ms.locfileid: "67940724"
 -   Si el servicio iniciador está en la base de datos reflejada, el servicio de destino debe tener una ruta reflejada de vuelta al iniciador para entregar reconocimientos y respuestas. No obstante, el iniciador puede tener una ruta normal al destino.  
   
   
-##  <a name="extended_stored_procedures"></a> Extended Stored Procedures  
+##  <a name="extended-stored-procedures"></a><a name="extended_stored_procedures"></a> Extended Stored Procedures  
   
 > **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use la [integración con CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
@@ -189,7 +188,7 @@ ms.locfileid: "67940724"
  Para obtener más información, vea [GRANT &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) y [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
+##  <a name="full-text-engine-for-sql-server-properties"></a><a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Las propiedades se establecen en el motor de texto completo a través de [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md). Asegúrese de que la instancia de servidor de destino tiene la configuración necesaria para estas propiedades. Para obtener más información sobre estas propiedades, vea [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md).  
   
  Además, si el componente de [separadores de palabras y lematizadores](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) o el componente de [filtros de búsqueda de texto completo](../../relational-databases/search/configure-and-manage-filters-for-search.md) tiene versiones diferentes en las instancias del servidor original y de destino, los índices de texto completo y las consultas pueden tener un comportamiento diferente. Además, el [diccionario de sinónimos](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) se almacena en archivos específicos de la instancia. Se debe transferir una copia de esos archivos a una ubicación equivalente de la instancia de servidor de destino o volver a crearlos en la nueva instancia.  
@@ -198,12 +197,12 @@ ms.locfileid: "67940724"
   
  Para obtener más información, vea también:  
   
--   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   [Creación de reflejo de la base de datos y catálogos de texto completo &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
 
   
-##  <a name="jobs"></a> Jobs  
+##  <a name="jobs"></a><a name="jobs"></a> Jobs  
  Si la base de datos depende de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tendrá que volver a crearlos en la instancia de servidor de destino. Los trabajos dependen de sus entornos. Si tiene previsto volver a crear un trabajo existente en la instancia de servidor de destino, es posible que deba modificar esta instancia para que el entorno de ese trabajo coincida con la instancia de servidor original. Los siguientes factores del entorno son importantes:  
   
 -   El inicio de sesión que utiliza el trabajo  
@@ -251,13 +250,11 @@ ms.locfileid: "67940724"
   
 -   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
-  
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Prácticas recomendadas para usar un script para volver a crear un trabajo  
  Se recomienda empezar por la generación de un script para un trabajo simple; volver a crear el trabajo en el otro servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutarlo para ver si funciona como se espera. Esto le permitirá identificar las incompatibilidades e intentar resolverlas. Si el trabajo generado con el script no funciona como se espera en este nuevo entorno, se recomienda crear un trabajo equivalente que funcione de forma correcta en ese entorno.  
   
 
-##  <a name="logins"></a> Inicios de sesión  
+##  <a name="logins"></a><a name="logins"></a> Inicios de sesión  
  Para iniciar una sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se requiere un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Este inicio de sesión se utiliza en el proceso de autenticación que comprueba si la entidad de seguridad puede conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un usuario de base de datos cuyo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente está sin definir o se ha definido de forma incorrecta en una instancia de servidor no podrá iniciar una sesión en la instancia. Es lo que se denomina un *usuario huérfano* de la base de datos en esa instancia de servidor. También puede convertirse en huérfano si se restaura, adjunta o copia una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script** , configurar la opción **Incluir inicios de sesión en el script** en **True**.  
@@ -265,7 +262,7 @@ ms.locfileid: "67940724"
 > **NOTA:** Para información sobre cómo configurar los inicios de sesión de una base de datos reflejada, consulte [Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) y [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="permissions"></a> Permisos  
  Los siguientes tipos de permisos se podrían ver afectados cuando una base de datos se pone a disposición de otra instancia de servidor.  
   
 -   Permisos GRANT, REVOKE o DENY sobre los objetos del sistema  
@@ -275,15 +272,15 @@ ms.locfileid: "67940724"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Permisos GRANT, REVOKE o DENY sobre los objetos del sistema  
  Los permisos de los objetos del sistema como procedimientos almacenados, procedimientos almacenados extendidos, funciones y vistas, se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino.  
   
- Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script** , configurar la opción **Incluir permisos de objeto en el script** en **True**.  
+ Para generar un script de algunos o todos los objetos de la copia original de la base de datos, se puede usar el asistente Generar scripts y, en el cuadro de diálogo **Elegir opciones de script**, configurar la opción **Incluir permisos de objeto en el script** en **True**.  
   
    > [!IMPORTANT]
    > Si incluye inicios de sesión en el script, no se incluirán las contraseñas. Si tiene inicios de sesión que usan la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , deberá modificar el script en el destino.  
   
- Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos **maestra**. Para obtener información sobre las consultas de estas vistas de catálogo y la concesión de permisos de objetos del sistema, vea [GRANT &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obtener más información, vea [REVOKE &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
+ Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos **maestra** . Para obtener información sobre las consultas de estas vistas de catálogo y la concesión de permisos de objetos del sistema, vea [GRANT &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Para obtener más información, vea [REVOKE &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de sistema de Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>Permisos GRANT, REVOKE o DENY sobre la instancia de servidor  
- Los permisos en el ámbito del servidor se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino. Para obtener información sobre los permisos de servidor de una instancia de servidor, consulte la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md); para obtener información sobre las entidades de seguridad de servidor, consulte la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) y, para obtener información sobre la pertenencia a los roles de servidor, consulte la vista de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
+ Los permisos en el ámbito del servidor se almacenan en la base de datos **maestra** y se deben configurar en la instancia de servidor de destino. Para obtener información sobre los permisos de servidor de una instancia de servidor, consulte la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) ; para obtener información sobre las entidades de seguridad de servidor, consulte la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)y, para obtener información sobre la pertenencia a los roles de servidor, consulte la vista de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) .  
   
  Para obtener más información, vea [GRANT &#40;permisos de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md), [REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) y [DENY &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md).  
   
@@ -314,21 +311,21 @@ ms.locfileid: "67940724"
 La propiedad de base de datos TRUSTWORTHY sirve para indicar si esta instancia de SQL Server confía en la base de datos y en su contenido. Cuando se adjunta una base de datos, de forma predeterminada y por motivos de seguridad, esta opción se establece en OFF, incluso si se ha establecido en ON en el servidor original. Para más información sobre esta propiedad, vea [TRUSTWORTHY database property](../security/trustworthy-database-property.md) (Propiedad de base de datos TRUSTWORTHY). Para información sobre la activación de esta opción, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
 
-##  <a name="replication_settings"></a> Replication Settings  
+##  <a name="replication-settings"></a><a name="replication_settings"></a> Replication Settings  
  Si restaura una copia de seguridad de una base de datos replicada en otro servidor o base de datos, no se conservará la configuración de la replicación. En este caso, deberá volver a crear todas las publicaciones y suscripciones después de restaurar las copias de seguridad. Para facilitar este proceso, cree scripts para la configuración actual de la replicación y también para habilitar y deshabilitar la replicación. Para volver a crear los parámetros de la replicación, copie estos scripts y cambie las referencias del nombre de servidor para que funcionen con la instancia de servidor de destino.  
   
  Para obtener más información, vea [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md), [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md) y [Trasvase de registros y replicación &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
   
-##  <a name="sb_applications"></a> Service Broker Applications  
+##  <a name="service-broker-applications"></a><a name="sb_applications"></a> Service Broker Applications  
  Muchos aspectos de una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se mueven con la base de datos. No obstante, algunos aspectos deben volver a crearse o configurarse en la nueva ubicación.  De forma predeterminada, así como por motivos de seguridad, cuando se adjunta una base de datos desde otro servidor, las opciones de *is_broker_enabled* e *is_honoor_broker_priority_on* se establecen en OFF. Para información sobre cómo activar estas opciones, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
-##  <a name="startup_procedures"></a> Startup Procedures  
+##  <a name="startup-procedures"></a><a name="startup_procedures"></a> Startup Procedures  
  Un procedimiento de inicio es un procedimiento almacenado que se marca para su ejecución automática y se ejecuta cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la base de datos depende de algún procedimiento de inicio, se deben definir en la instancia de servidor de destino y configurarse para su ejecución automática durante el inicio.  
 
   
-##  <a name="triggers"></a> Triggers (at Server Level)  
+##  <a name="triggers-at-server-level"></a><a name="triggers"></a> Triggers (at Server Level)  
  Los desencadenadores DDL activan procedimientos almacenados en respuesta a una variedad de eventos del lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER y DROP. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  
   
  Para obtener más información acerca de esta característica, vea [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23f7df8267e4eba6adfde28f833f13d5e84a1efb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017240"
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
   El objeto **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la forma en que se obtiene acceso a los datos lógicos de una base de datos. El acceso físico a las páginas de base de datos en disco se supervisa mediante los contadores de **Buffer Manager** . La supervisión de los métodos que se utilizan para el acceso a los datos almacenados en la base de datos puede ayudar a determinar si se puede mejorar el rendimiento de las consultas al agregar o modificar índices, agregar o mover particiones, agregar archivos o grupos de archivos, desfragmentar índices o volver a escribir las consultas. Los contadores de **Access Methods** también se pueden utilizar para supervisar la cantidad de datos, los índices y el espacio disponible en la base de datos, con lo que se indica el volumen de datos y la fragmentación para cada instancia de servidor. Una fragmentación excesiva de los índices puede tener un efecto negativo sobre el rendimiento.  
@@ -41,7 +40,7 @@ ms.locfileid: "63251108"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql)  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** .  
+ En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access Methods**de**.  
   
 |Contadores de Access Methods de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "63251108"
 |**Tablas de trabajo creadas/seg.**|Número de tablas de trabajo creadas por segundo. Por ejemplo, las tablas de trabajo se pueden utilizar para almacenar los resultados temporales de una cola de consultas, variables lob, variables XML y cursores.|  
 |**Relación de tablas de trabajo desde caché**|Porcentaje de tablas de trabajo creadas donde las dos páginas iniciales de la tabla de trabajo no fueron asignadas pero estaban inmediatamente disponibles desde la caché de la tabla de trabajo. (Cuando se elimina una tabla de trabajo, dos páginas pueden permanecer asignadas y se devuelven a la caché de la tabla de trabajo. Esto aumenta el rendimiento.)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos&#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)  
   
   

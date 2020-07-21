@@ -14,45 +14,44 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544457"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrar el cubo de origen para una estructura de minería de datos
-  Cuando se crea una estructura de minería de datos que se basa en datos en un modelo multidimensional (un cubo OLAP), puede *segmento* el cubo que se basa la estructura de minería de datos. La segmentación permite crear subconjuntos de datos, como un tipo de filtro en los datos que se utilizan para entrenar el modelo de minería de datos.  
+  Al crear una estructura de minería de datos que se basa en los datos de un modelo multidimensional (un cubo OLAP), puede *segmentar* el cubo en el que se basa la estructura de minería de datos. La segmentación permite crear subconjuntos de datos, como un tipo de filtro en los datos que se utilizan para entrenar el modelo de minería de datos.  
   
 ### <a name="to-slice-a-cube"></a>Para segmentar un cubo  
   
-1.  En el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], seleccione el **Mining Structure** ficha o el **modelos de minería de datos** ficha.  
+1.  En el diseñador de minería de datos de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , seleccione la pestaña **estructura de minería** de datos o la pestaña **modelos de minería** de datos.  
   
-2.  En el **Mining Model** menú, seleccione **definir segmento de cubo de estructura de minería de datos**.  
+2.  En el menú **modelo de minería de datos** , seleccione **definir segmento de cubo de estructura de minería de datos**.  
   
-     El **segmentar el cubo** abre el cuadro de diálogo.  
+     Se abre el cuadro de diálogo **segmentar cubo** .  
   
-3.  En el **dimensión** columna de la **segmentar el cubo** cuadro de diálogo, seleccione la dimensión que desea filtrar.  
+3.  En la columna **dimensión** del cuadro de diálogo **segmentar el cubo** , seleccione la dimensión que desea filtrar.  
   
-4.  Seleccione un nivel de una jerarquía, con la lista en el **jerarquía** columna.  
+4.  Seleccione un nivel de una jerarquía mediante la lista de la columna **jerarquía** .  
   
-5.  Seleccione un operador en la lista en el **operador** columna desea utilizar para generar la condición de filtro.  
+5.  Seleccione un operador en la lista de la columna **operador** para usarlo en la creación de la condición de filtro.  
   
-6.  Haga clic en el cuadro el **filtro** columna.  
+6.  Haga clic en el cuadro de la columna **filtro** .  
   
      Se abre un cuadro de diálogo que contiene todos los miembros del nivel especificado de la jerarquía.  
   
 7.  Seleccione el miembro o los miembros en los que desee filtrar.  
   
-8.  Haga clic en **Aceptar** en el cuadro de diálogo de miembro.  
+8.  Haga clic en **Aceptar** en el cuadro de diálogo miembro.  
   
-9. Haga clic en **Aceptar** en el **segmentar el cubo** cuadro de diálogo.  
+9. Haga clic en **Aceptar** en el cuadro de diálogo **segmentar cubo** .  
   
      El cubo de origen se filtrará tal y como define el segmento del cubo.  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos de las estructuras de minería de datos](data-mining/mining-structure-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos de la estructura de minería de datos](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Crear una estructura de minería de datos OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   
   

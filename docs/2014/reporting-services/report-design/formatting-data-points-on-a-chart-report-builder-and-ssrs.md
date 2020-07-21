@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105817"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
@@ -72,7 +72,7 @@ ms.locfileid: "66105817"
 |#TOTAL|Total de todos los valores Y de la serie.|All|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|Texto correspondiente al texto del elemento de la leyenda.|All|None|  
 |#AVG|Promedio de todos los valores Y de la serie.|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|Mínimo de todos los valores Y de la serie.|Todos|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|Mínimo de todos los valores Y de la serie.|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Máximo de todos los valores Y de la serie.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|El primero de todos los valores Y de la serie.|All|`=First(Fields!MyDataField.Value)`|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66105817"
   
  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   

@@ -1,6 +1,6 @@
 ---
 title: Ediciones y características admitidas de SQL Server 2019 en Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,16 +24,16 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: d84f7a508d9ae6d46ba529d8139ecc8c0deaf3e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954997"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894037"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 En este artículo se proporcionan detalles de las características admitidas en las diversas ediciones de SQL Server 2019 en Linux. Para conocer las ediciones y las características admitidas de SQL Server en Windows, vea [SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
@@ -49,7 +49,7 @@ Para obtener una lista de las características de SQL Server no disponibles en L
     
 [Descarga de SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Ediciones de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
+## <a name="ssnoversion-editions"></a>Ediciones de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  En la siguiente tabla se describen las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Definición|  
@@ -60,11 +60,11 @@ Para obtener una lista de las características de SQL Server no disponibles en L
 |Desarrollador|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition permite a los desarrolladores compilar cualquier tipo de aplicación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Incluye toda la funcionalidad de la edición Enterprise, pero tiene licencias para usarse como sistema de prueba y desarrollo, no como un servidor de producción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer es una opción ideal para las personas que compilan y prueban aplicaciones.|  
 |Express edition|Express Edition es una base de datos gratuita para principiantes y es ideal para aprender a compilar pequeñas aplicaciones de servidor y de escritorio orientadas a datos. Es la mejor opción para los fabricantes de software independientes, los desarrolladores y los aficionados que compilan aplicaciones cliente. Si necesita características de base de datos más avanzadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express se puede actualizar sin problemas a otras versiones superiores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>Uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con aplicaciones cliente/servidor  
+## <a name="using-ssnoversion-with-clientserver-applications"></a>Uso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con aplicaciones cliente/servidor  
 
 Puede instalar solo los componentes de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo en el que se ejecuten aplicaciones cliente/servidor conectadas directamente a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Una instalación de componentes de cliente también es una buena opción si administra una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor de bases de datos, o si tiene pensado desarrollar aplicaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="ssnoversion-components"></a>Componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
 SQL Server 2019 en Linux es compatible con el motor de base de datos de SQL Server. En la tabla siguiente se indican las características del motor de base de datos.   
   
@@ -77,7 +77,7 @@ Para conocer las características admitidas en las ediciones Developer, Enterpri
 
 La edición Developer sigue siendo compatible con solo un cliente de [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md). 
   
-##  <a name="Cross-BoxScaleLimits"></a> Límites de escala  
+##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Límites de escala  
   
 |Característica|Enterprise|Estándar|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
@@ -90,7 +90,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 <sup>1</sup> La licencia basada en Enterprise Edition con licencia de servidor y acceso de cliente (CAL) (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por instancia de SQL Server. No hay ningún límite en el modelo de licencias de servidor basado en núcleos. Para obtener más información, vea [Límites de la capacidad de cálculo de cada edición de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
-##  <a name="RDBMSHA"></a> Alta disponibilidad de RDBMS  
+##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Alta disponibilidad de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
@@ -118,7 +118,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>3</sup> Standard Edition admite grupos de disponibilidad básica. Un grupo de disponibilidad básica admite dos réplicas, con una base de datos. Para más información sobre los grupos de disponibilidad básica, vea [Grupos de disponibilidad básica](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
-##  <a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS  
+##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Escalabilidad y rendimiento de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
@@ -143,7 +143,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 
 <sup>1</sup> El tamaño de los datos de OLTP en memoria y la memoria caché del segmento del almacén de columnas se limitan a la cantidad de memoria especificada por edición en la sección Límites de escala. Los grados de paralelismo máximos están limitados. El grado paralelismo (DOP) de la compilación de un índice se limita a 2 DOP para Standard Edition y 1 DOP para las ediciones Web y Express. Se refiere a los índices de almacén de columnas que se crean en tablas basadas en disco y en tablas optimizadas para memoria.
 
-##  <a name="RDBMSS"></a> Seguridad de RDBMS  
+##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Seguridad de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
@@ -152,12 +152,12 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Enmascaramiento de datos dinámicos|Sí|Sí|Sí|Sí|   
 |Auditoría básica|Sí|Sí|Sí|Sí| 
 |Auditoría específica|Sí|Sí|Sí|Sí| 
-|Cifrado de base de datos transparente|Sí|No|No|No|   
+|Cifrado de base de datos transparente|Sí|Sí|No|No|   
 |Roles definidos por el usuario|Sí|Sí|Sí|Sí| 
 |Bases de datos independientes|Sí|Sí|Sí|Sí| 
 |Cifrado para copias de seguridad|Sí|Sí|No|No|  
 
-##  <a name="RDBMSM"></a> Capacidad de administración de RDBMS  
+##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Capacidad de administración de RDBMS  
   
 |Característica|Enterprise|Estándar|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
@@ -176,7 +176,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Comprobación de coherencia en paralelo|Sí|No|No|No| 
 |Punto de control de la utilidad de SQL Server|Sí|No|No|No|    
 
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Característica|Enterprise|Estándar|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
@@ -192,16 +192,16 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|
 |Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|
 |Transact-SQL, extremos|Sí|Sí|Sí|No|
-|Gráfico|Sí|Sí|Sí|Sí|  
+|Grafo|Sí|Sí|Sí|Sí|  
 
 
 <sup>1</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
 
-## <a name="IS"></a> Integration Services
+## <a name="integration-services"></a><a name="IS"></a> Integration Services
 
 Para obtener información sobre las características de Integration Services (SSIS) compatibles con las ediciones de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], vea [Características de Integration Services compatibles con las ediciones de SQL Server](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="SLS"></a> Servicios espaciales y de ubicación  
+##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Servicios espaciales y de ubicación  
   
 |Nombre de la característica|Enterprise|Estándar|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
@@ -210,7 +210,7 @@ Para obtener información sobre las características de Integration Services (SS
 |Bibliotecas espaciales avanzadas|Sí|Sí|Sí|Sí|   
 |Importación y exportación de formatos de datos espaciales estándar del sector|Sí|Sí|Sí|Sí|   
 
-## <a name="Unsupported"></a> Características y servicios no admitidos
+## <a name="unsupported-features--services"></a><a name="Unsupported"></a> Características y servicios no admitidos
 
 Las siguientes características y servicios no están disponibles para SQL Server 2019 en Linux. La compatibilidad de estas características se incrementará con el tiempo.
 
@@ -225,9 +225,9 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
 | &nbsp; | Buffer Pool Extension |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
-| &nbsp; | Trabajos |
+| &nbsp; | Alertas |
 | &nbsp; | Copia de seguridad administrada |
-| **Alta disponibilidad** | Creación de reflejo de base de datos  |
+| **Alta disponibilidad** | Creación de reflejo de la base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 
 | &nbsp; | Autenticación de AD para grupos de disponibilidad | 

@@ -14,10 +14,10 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67947196"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarea de carga de Azure SQL DW
@@ -50,9 +50,9 @@ Campo|Descripción
 -----|-----------
 LocalDirectory|Especifica el directorio local que contiene los archivos de datos que se van a cargar.
 Recursively|Especifica si los subdirectorios se deben buscar de forma recursiva.
-FileName|Especifica un filtro de nombre para seleccionar archivos con un determinado patrón de nombre. Por ejemplo: MiHoja*.xsl\* incluirá archivos como MiHoja001.xsl y MiHojaABC.xslx.
+FileName|Especifica un filtro de nombre para seleccionar archivos con un determinado patrón de nombre. Por ejemplo, MiHoja*.xsl\* incluirá archivos como MiHoja001.xsl y MiHojaABC.xslx.
 RowDelimiter|Especifica los caracteres que marcan el final de cada fila.
-ColumnDelimiter|Especifica uno o más caracteres que marcan el final de cada columna. Por ejemplo: &#124; (barra vertical), \t (tabulación), ' (comilla simple), " (comilla doble) y 0x5c (barra diagonal inversa).
+ColumnDelimiter|Especifica uno o más caracteres que marcan el final de cada columna. Por ejemplo, &#124; (barra vertical), \t (tabulación), ' (comilla simple), " (comilla doble) y 0x5c (barra diagonal inversa).
 IsFirstRowHeader|Especifica si la primera fila de cada archivo de datos contiene nombres de columna en lugar de datos reales.
 AzureStorageConnection|Especifica un administrador de conexiones de Azure Storage.
 BlobContainer|Especifica el nombre del contenedor de blob en el que se cargarán los datos locales para retransmitirlos a Azure DW mediante PolyBase. Si no existe ningún contenedor, se creará uno.
@@ -73,7 +73,7 @@ AzureStorageConnection|Especifica un administrador de conexiones de Azure Storag
 BlobContainer|Especifica el nombre del contenedor de blob en el que residen los datos de origen.
 BlobDirectory|Especifica el directorio de blobs (estructura jerárquica virtual) en el que residen los datos de origen.
 RowDelimiter|Especifica los caracteres que marcan el final de cada fila.
-ColumnDelimiter|Especifica uno o más caracteres que marcan el final de cada columna. Por ejemplo: &#124; (barra vertical), \t (tabulación), ' (comilla simple), " (comilla doble) y 0x5c (barra diagonal inversa).
+ColumnDelimiter|Especifica uno o más caracteres que marcan el final de cada columna. Por ejemplo, &#124; (barra vertical), \t (tabulación), ' (comilla simple), " (comilla doble) y 0x5c (barra diagonal inversa).
 CompressionType|Especifica el formato de compresión que se usa para los datos de origen.
 AzureDwConnection|Especifica un administrador de conexión de ADO.NET para Azure SQL DW.
 TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree uno eligiendo **\<Nueva tabla ...>** .

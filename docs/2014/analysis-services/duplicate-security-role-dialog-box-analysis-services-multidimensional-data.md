@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de rol de seguridad (Analysis Services - datos multidimensionales) de duplicado de Analysis Services | Microsoft Docs
+title: Analysis Services cuadro de diálogo rol de seguridad duplicado (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66081499"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528471"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo de Rol de seguridad duplicado de Analysis Services (Analysis Services - Datos multidimensionales)
-  Use la **rol seguridad duplicada de Analysis Services - \<nombre de base de datos >- \<copia del nombre de rol >** cuadro de diálogo de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar un rol existente en un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos. Puede mostrar el cuadro de diálogo **Rol duplicado** si hace clic con el botón derecho en un rol del Explorador de objetos y selecciona **Duplicar**.  
+  Utilice el cuadro de diálogo **Analysis Services rol \<database name>  -  \<copy from role name> de seguridad duplicado-** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar un rol existente en una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos de. Puede mostrar el cuadro de diálogo **Rol duplicado** si hace clic con el botón derecho en un rol del Explorador de objetos y selecciona **Duplicar**.  
   
 ## <a name="options"></a>Opciones  
   
 |Término|Definición|  
 |----------|----------------|  
-|**Nuevo nombre de función**|Escriba el nombre del nuevo rol que se creará con los mismos miembros y permisos que los del rol seleccionado en el Explorador de objetos.|  
+|**Nuevo nombre de rol**|Escriba el nombre del nuevo rol que se creará con los mismos miembros y permisos que los del rol seleccionado en el Explorador de objetos.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Roles de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

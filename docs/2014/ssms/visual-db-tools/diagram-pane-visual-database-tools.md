@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c76911b19e48785dfc4d06a91708589c87e2acbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008608"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Panel Diagrama (Visual Database Tools)
   El panel Diagrama muestra una presentación gráfica de las tablas o de los objetos con valores de tabla que ha seleccionado en la conexión de datos. También muestra todas las relaciones de combinación entre ellos.  
@@ -53,7 +52,7 @@ ms.locfileid: "63126593"
   
 |Icono|Tipo de objeto|  
 |----------|-----------------|  
-|![Icono de Visual Database Tools](../../database-engine/media//dv3wbi1.gif "Icono de Visual Database Tools")|Table|  
+|![Icono de Visual Database Tools](../../database-engine/media//dv3wbi1.gif "Icono de Visual Database Tools")|Tabla|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbi2.gif "Icono de Visual Database Tools")|Consulta o vista|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbi3.gif "Icono de Visual Database Tools")|Tabla vinculada|  
 |![Icono de Visual Database Tools](../../database-engine/media//dvudficon.gif "Icono de Visual Database Tools")|Función definida por el usuario|  
@@ -95,8 +94,8 @@ ms.locfileid: "63126593"
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbin.gif "Icono de Visual Database Tools")|Combinación uno a varios|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbio.gif "Icono de Visual Database Tools")|El Diseñador de consultas y vistas no puede determinar el tipo de combinación|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Panel criterios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   

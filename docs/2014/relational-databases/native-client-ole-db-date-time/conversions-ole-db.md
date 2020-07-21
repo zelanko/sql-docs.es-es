@@ -11,15 +11,14 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 140be806cfb79996c68b7c413c7998fcc0c20ebe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043878"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Enlaces y conversiones (OLE DB)
   En esta sección se describe cómo convertir entre los valores `datetime` y `datetimeoffset`. OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
@@ -28,7 +27,7 @@ ms.locfileid: "62638212"
   
 -   El formato de las cadenas `datetime` y `datetimeoffset` es:  
   
-     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [?? *hh*:*mm*]]  
+     *AAAA* - *mm* - *DD*[ *HH*:*mm*:*SS*[.* 9999999*] [?? *HH*:*mm*]]  
   
 -   El formato de las cadenas `time` es:  
   
@@ -41,7 +40,7 @@ ms.locfileid: "62638212"
 > [!NOTE]  
 >  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. Como resultado, algunas conversiones realizadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 y posteriores difieren de la especificación OLE DB.  
   
- Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, consulte la "formatos de datos: Sección de cadenas y literales"en [compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora](data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "formatos de datos: cadenas y literales" en [compatibilidad con tipos de datos para obtener OLE DB mejoras de fecha y hora](data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  A continuación figuran las reglas de conversión generales:  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62638212"
  [Conversiones realizadas de servidor a cliente](conversions-performed-from-server-to-client.md)  
  Describe las conversiones de fecha y hora realizadas entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) y una aplicación cliente escrita con OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

@@ -1,8 +1,8 @@
 ---
-title: Instalar SQL Server con la configuración de estado deseado de PowerShell | Microsoft Docs
+title: 'Instalación: Configuración de estado deseado de PowerShell'
 description: Obtenga información sobre cómo instalar SQL Server con Desired State Configuration (DSC) de PowerShell.
-ms.custom: ''
-ms.date: 10/26/2018
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.devlang: PowerShell
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041058"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75258983"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar SQL Server con la configuración de estado deseado de PowerShell
 
@@ -38,7 +38,7 @@ Los siguientes elementos son necesarios para realizar este tutorial:
 - Medios de instalación de SQL Server 2017.
 - El recurso de DSC **SqlServerDsc**.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 En la mayoría de los casos, se usa DSC para controlar los requisitos previos. Pero para los fines de esta demostración, se van a controlar de forma manual.
 
@@ -143,7 +143,7 @@ Configuration SQLInstall
 }
 ```
 
-## <a name="build-and-deploy"></a>Compilar e implementar
+## <a name="build-and-deploy"></a>Compilación e implementación
 
 ### <a name="compile-the-configuration"></a>Compilar la configuración
 
@@ -187,7 +187,7 @@ PS C:\> Test-DscConfiguration
 True
 ```
 
-### <a name="services"></a>Services
+### <a name="services"></a>Servicios
 
 Ahora en la lista de servicios se devuelven los servicios de SQL Server:
 
@@ -211,7 +211,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 1> quit
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general sobre la configuración de estado deseado de Windows PowerShell](/powershell/scripting/dsc/overview/overview)
 

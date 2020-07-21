@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de datos de aprendizaje y pruebas | Microsoft Docs
+title: Conjuntos de datos de entrenamiento y pruebas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082738"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520351"
 ---
 # <a name="training-and-testing-data-sets"></a>Conjuntos de datos de entrenamiento y de prueba
   Separar los datos en conjuntos de entrenamiento y de prueba es una parte importante de la evaluación de los modelos de minería de datos. Normalmente, al dividir un conjunto de datos en un conjunto de entrenamiento y un conjunto de prueba, la mayoría de los datos se usan para el entrenamiento y una parte menor se emplea para las pruebas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestrea los datos de forma aleatoria para asegurarse de que los conjuntos de entrenamiento y de prueba son similares. Si usa datos similares para el entrenamiento y las pruebas, puede minimizar los efectos de las diferencias en los datos y comprender mejor las características del modelo.  
@@ -51,7 +50,7 @@ ms.locfileid: "66082738"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Modificar las propiedades de la estructura para crear un conjunto de datos de prueba  
  Si crea y procesa una estructura de minería de datos y, a continuación, decide que desea reservar un conjunto de datos de prueba, puede modificar las propiedades de la estructura de minería de datos. Para cambiar la manera en que se crean las particiones de los datos, modifique las propiedades siguientes:  
   
-|Property|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|Especifica el número máximo de casos que se van a incluir en el conjunto de pruebas.|  
 |`HoldoutMaxPercent`|Especifica el número de casos que se van a incluir en el conjunto de pruebas como porcentaje del conjunto de datos completo. Para no tener ningún conjunto de datos, especificaría 0.|  
@@ -101,13 +100,13 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |Temas|Vínculos|  
 |------------|-----------|  
-|Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)|  
+|Describe cómo interactúan los filtros de un modelo con los conjuntos de datos de entrenamiento y de prueba.|[Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)|  
 |Describe cómo afecta a la validación cruzada el uso de los datos de entrenamiento y de prueba.|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
 |Proporciona información sobre las interfaces de programación para trabajar con conjuntos de entrenamiento y de prueba en una estructura de minería de datos.|[Modelo de objetos y conceptos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Elemento MiningStructure &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
 |Proporciona la sintaxis DMX para crear conjuntos de datos de exclusión.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
-|Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Conjuntos de filas de esquema de minería de datos](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultar los conjuntos de filas de esquema de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-schema-rowsets-ssas.md)|  
+|Recupera información sobre los casos de los conjuntos de entrenamiento y de prueba.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Consultar los conjuntos de filas de esquema de minería de datos &#40;Analysis Services de minería de datos&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Conceptos de minería de datos](data-mining-concepts.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)   

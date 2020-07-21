@@ -1,5 +1,5 @@
 ---
-title: Ver datos de sesión de eventos | Microsoft Docs
+title: Ver datos de la sesión de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60fdb986e24c2fa682caaf56ad7209ca555c966
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67131794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927656"
 ---
 # <a name="view-event-session-data"></a>Ver datos de sesiones de eventos
   En este tema describe cómo usar la interfaz de usuario de presentación para ver y analizar datos de eventos extendidos:  
@@ -24,7 +23,7 @@ ms.locfileid: "67131794"
   
 -   Trabajar con datos  
   
-## <a name="view-target-data"></a>Ver los datos de destino  
+## <a name="view-target-data"></a>View Target Data (Ver datos de destino)  
  Puede mostrar los datos recopilados en el destino especificado en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-target-data"></a>View Target Data (Ver datos de destino)  
@@ -44,9 +43,9 @@ ms.locfileid: "67131794"
   
 -   Para un destino event_file, vea los datos del destino de archivo (archivo .XEL) mediante uno de los métodos siguientes:  
   
-    -   Usar el archivo -> Abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Use archivo > abrir en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .
     
-    -   Arrastre y coloque el archivo en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    -   Arrastre y coloque el archivo en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . 
     
     -   Haga doble clic en el archivo .XEL.  
     
@@ -54,11 +53,11 @@ ms.locfileid: "67131794"
     
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
     
-    -   Use Powershell lectura-SQLXevent en [SQLServer.XEvent módulo](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    -   Use PowerShell Read-SQLXevent en el [módulo SQLServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
     
-    -   Consumir XEvents mediante programación utilizando la [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    -   Consume XEvents mediante programación con [NuGet XELite](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
     
-    -   Puede ver más de uno. Archivo XEL seleccionando **combinar archivos de eventos extendidos** desde el archivo -> menú Abrir.
+    -   Puede ver más de una. Archivo XEL seleccionando **combinar archivos de eventos extendidos** en el menú archivo-> abrir.
 
 ### <a name="watching-live-data"></a>Observar datos en directo  
  Puede observar los datos en directo a medida que se capturan.  
@@ -73,7 +72,7 @@ ms.locfileid: "67131794"
   
      Los eventos normalmente se muestran en 30 segundos aproximadamente. Si desea cambiar el periodo de latencia, puede cambiar **Latencia máxima de envío** en la página **Opciones avanzadas** del cuadro de diálogo **Nueva sesión** .  
      
--    Datos activos se pueden transmitir mediante el [módulo de SqlServer.XEvent PowerShell](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+-    Los datos en directo se pueden transmitir mediante el [módulo de PowerShell SQLServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent).
      
 ### <a name="to-refresh-target-data"></a>Para actualizar los datos de destino  
  No se permite actualizar datos de destino para los destinos event_files:  
@@ -95,7 +94,7 @@ ms.locfileid: "67131794"
   
  Puede crear, modificar o eliminar columnas combinadas:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **Observar datos en directo**).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, después, seleccionar **observar datos en directo**).  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna y, a continuación, haga clic en **Elegir columnas**.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "67131794"
   
  Para crear un filtro:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **Observar datos en directo**).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, después, seleccionar **observar datos en directo**).  
   
 2.  En la ventana de resultados de seguimiento, seleccione los resultados que desee filtrar, y a continuación, en la barra de herramientas **Eventos extendidos** , haga clic en **Filtros**.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "67131794"
 ### <a name="sort-results"></a>Ordenar los resultados  
  Para ordenar los resultados en orden ascendente o descendente:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas).  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna que desea ordenar y haga clic en **Orden ascendente** u **Orden descendente**.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "67131794"
   
  Puede agrupar los resultados por una sola columna o por varias columnas.  
   
- Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas).  
+ Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas).  
   
  Para agrupar los resultados por una sola columna, haga clic con el botón secundario en el encabezado de columna en la ventana de resultados de seguimiento y haga clic en **Agrupar por esta columna**. Para deshacer la agrupación, seleccione una de las filas y haga clic en **Quitar todos los grupos**.  
   
@@ -145,9 +144,9 @@ ms.locfileid: "67131794"
 ### <a name="aggregate-results"></a>Agregar los resultados  
  Puede ver los resultados de seguimiento y, a continuación, analizar con mayor profundidad los datos del evento agregando columnas en los resultados. Los eventos extendidos admiten cinco funciones de agregación:  
   
--   sum  
+-   Sum  
   
--   min  
+-   min.  
   
 -   max  
   
@@ -159,7 +158,7 @@ ms.locfileid: "67131794"
   
  La agregación se realiza en un grupo, por lo que debe agrupar los resultados antes de realizar la agregación. Para agregar los resultados:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas).  
   
 2.  En la barra de herramientas **Eventos extendidos** , haga clic en el botón **Agregación** . En el cuadro de diálogo Agregación se mostrarán las columnas disponibles para la agregación.  
   
@@ -180,7 +179,7 @@ ms.locfileid: "67131794"
   
     -   Columnas de la tabla Utilice esta opción para buscar en todas las columnas visibles en la ventana de seguimiento.  
   
-    -   Detalles Utilice esta opción para buscar todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el **buscar en eventos extendidos** cuadro de diálogo.  
+    -   Detalles Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el cuadro **de diálogo Buscar en eventos extendidos** .  
   
     -   *Event_column_name*. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   

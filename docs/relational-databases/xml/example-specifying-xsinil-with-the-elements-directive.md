@@ -1,6 +1,6 @@
 ---
-title: 'Ejemplo: Especificación de XSINIL con la directiva ELEMENTS | Microsoft Docs'
-ms.custom: ''
+title: Especificación de XSINIL con la directiva ELEMENTS | Microsoft Docs
+description: Vea un ejemplo que especifica XSINIL con la directiva ELEMENTS para generar XML centrado en elementos a partir del resultado de la consulta.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b93c7b9acfc5a3e197709cf71ec0c7923fe7d91c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: ce76de4ec22727a99e2dbd7ad707fc3a861c315e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632306"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Ejemplo: Especificación de XSINIL con la directiva ELEMENTS
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En esta consulta se especifica la directiva `ELEMENTS` para generar XML centrado en elementos a partir del resultado de la consulta.  
   
 ## <a name="example"></a>Ejemplo  

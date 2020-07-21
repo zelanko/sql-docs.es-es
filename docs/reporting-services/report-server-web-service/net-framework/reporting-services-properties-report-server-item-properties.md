@@ -1,5 +1,6 @@
 ---
 title: Propiedades de los elementos del servidor de informes | Microsoft Docs
+description: Las propiedades de elemento son específicas de los elementos de la base de datos del servidor de informes. Los elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128823"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79509647"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propiedades de Reporting Services: propiedades de los elementos del servidor de informes
   Las propiedades de los elementos son específicas de los elementos de la base de datos del servidor de informes. Tales elementos incluyen informes, informes vinculados, carpetas, recursos, modelos y orígenes de datos.  
@@ -34,11 +35,11 @@ ms.locfileid: "63128823"
 |**CreationDate**|Fecha y hora cuando el elemento se agregó a la base de datos del servidor de informes.|  
 |**Descripción**|Descripción del elemento.|  
 |**Oculto**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
-|**ID**|Identificador de un elemento de la base de datos del servidor de informes.|  
+|**Id**|Identificador de un elemento de la base de datos del servidor de informes.|  
 |**ModifiedBy**|Nombre del usuario que modificó el elemento de la base de datos del servidor de informes en último lugar.|  
 |**ModifiedDate**|Fecha y hora cuando el usuario modificó el elemento por última vez.|  
 |**Nombre**|Nombre de un elemento de la base de datos del servidor de informes.|  
-|**Ruta de acceso**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
+|**Path**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
 |**Tamaño**|El tamaño, en bytes, de un elemento en la base de datos del servidor de informes.|  
 |**Tipo**|Tipo de un elemento de la base de datos del servidor de informes.|  
 |**VirtualPath**|Ruta de acceso virtual de un elemento de la base de datos del servidor de informes. El valor de la propiedad <xref:ReportService2010.CatalogItem.VirtualPath%2A> es la ruta de acceso en la que un usuario espera ver el elemento. Por ejemplo, un informe denominado informe1, que se encuentra en la carpeta personal Mis informes, tiene la ruta de acceso virtual /Mis informes. La ruta de acceso real del elemento es /Usuarios/nombredeusuario/Mis informes.|  

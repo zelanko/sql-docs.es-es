@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 166c9ddbd4b5c11b3c032a5a4ecf43c95f183473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a45711b4f3007f0f3c91f271542784386db99379
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67974531"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927535"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +41,16 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El formato de DateTimeOffset es "AAAA-MM-DD HH-MM-SS[.nnnnnnn] [+][-] HH:MM". Utilice la siguiente tabla a modo de referencia.  
   
-|Tipo de SQL|Insert|  
+|Tipo de SQL|Insertar|  
 |--------------|------------|  
-|DATETIME|Solo puede insertar: "AAAA-MM-DD hh:mm:ss[.nnn]"|  
+|datetime|Solo puede insertar: "AAAA-MM-DD hh:mm:ss[.nnn]"|  
 |smalldatetime|Solo puede insertar: "AAAA-MM-DD hh:mm:ss"|  
 |Time|Solo puede insertar: "hh:mm:ss[.nnnnnnn]"|  
-|date|Solo puede insertar: "AAAA-MM-DD"|  
-|datetime2|Solo puede insertar: "AAAA-MM-DD hh:mm:ss[.nnnnnnn]"|  
+|Date|Solo puede insertar: "AAAA-MM-DD"|  
+|DateTime2|Solo puede insertar: "AAAA-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
 ## <a name="see-also"></a>Consulte también  
  [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   

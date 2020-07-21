@@ -1,5 +1,5 @@
 ---
-title: Usar la creación de reflejo de la base de datos (JDBC) | Microsoft Docs
+title: Empleo de creación de reflejo de la base de datos (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9eaec8e30d96e2b4360b42eeafc21ae2e405a72b
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026435"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80924045"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Empleo de creación de reflejo de la base de datos (JDBC)
 
@@ -40,7 +40,7 @@ Cuando el servidor principal genera un error, la aplicación cliente recibe mens
 Si se ha establecido una conexión al inicio, el servidor principal envía la identidad de su asociado de conmutación por error al cliente que se va a usar al producirse la conmutación por error. Si la aplicación intenta establecer una conexión inicial con un servidor principal que ha generado un error, el cliente no conoce la identidad del asociado de conmutación por error. Para que los clientes puedan funcionar correctamente en este escenario, la propiedad de la cadena de conexión failoverPartner y, opcionalmente, el método de origen de datos [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) permiten al cliente especificar la identidad del asociado de conmutación por error por sí mismo. La propiedad del cliente se usa solo en este escenario; si el servidor principal está disponible, no se usa.
 
 > [!NOTE]  
-> Si se especifica failoverPartner en la cadena de conexión o con un objeto de origen de datos, la propiedad databaseName también se debe establecer para que no se inicie una excepción. Si failoverPartner y databaseName no se especifican explícitamente, la aplicación no intentará la conmutación por error cuando se produzcan errores en el servidor de base de datos principal. En otras palabras, la redirección transparente solo funciona para las conexiones que especifican explícitamente failoverPartner y databaseName. Para obtener más información sobre failoverPartner y otras propiedades de cadena de conexión, vea [establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
+> Si se especifica failoverPartner en la cadena de conexión o con un objeto de origen de datos, la propiedad databaseName también se debe establecer para que no se inicie una excepción. Si failoverPartner y databaseName no se especifican explícitamente, la aplicación no intentará la conmutación por error cuando se produzcan errores en el servidor de base de datos principal. En otras palabras, la redirección transparente solo funciona para las conexiones que especifican explícitamente failoverPartner y databaseName. Para obtener más información acerca de failoverPartner y de otras propiedades de la cadena de conexión, consulte [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
 
 Si el servidor asociado de conmutación por error suministrado por el cliente no hace referencia a un servidor que actúa como asociado de conmutación por error para la base de datos especificada, y si el servidor o la base de datos a los que se hace referencia está en una disposición de creación de reflejo de la base de datos, el servidor rechazará la conexión. Aunque la clase [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) proporciona el método [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), este método solo devuelve el nombre del asociado de conmutación por error especificado en la cadena de conexión o el método setFailoverPartner. Para recuperar el nombre del asociado de conmutación por error real usado actualmente, emplee la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:
 
@@ -108,6 +108,6 @@ public class ClientFailover {
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

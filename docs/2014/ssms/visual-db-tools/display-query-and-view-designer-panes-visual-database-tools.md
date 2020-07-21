@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b5ce13bc7456f337b1910779e0c7caa575de483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204975"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056529"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
   El Diseñador de consultas y vistas se compone de cuatro paneles diferentes: el panel Diagrama, el panel Criterios, el panel SQL y el panel Resultados. Por lo general, cuando se abre una vista o se crea una nueva consulta, se abren todas las ventanas, pero si es necesario abrir alguna de estas ventanas, podrá hacerlo siempre y cuando el Diseñador de consultas y vistas esté abierto.  
@@ -33,7 +32,7 @@ ms.locfileid: "63204975"
   
 2.  En el menú **Diseñador de consultas** , seleccione **Panel** y haga clic en el panel que desee abrir.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   

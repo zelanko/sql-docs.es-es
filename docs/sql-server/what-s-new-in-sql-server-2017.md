@@ -1,5 +1,6 @@
 ---
 title: Novedades de SQL Server 2017 | Microsoft Docs
+description: Descubra las novedades de SQL Server 2017, que aporta la eficacia de SQL Server a contenedores de Docker de Linux y basados en Linux, así como a Windows.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 55ed24599e3bed15a0478ce12ac316edb623f0cf
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874827"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662884"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +56,6 @@ SQL Server 2017 incluye muchas mejoras de rendimiento, perfeccionamiento y carac
 - **DATABASE SCOPED CREDENTIAL** es una nueva clase de protegible, que admite los permisos CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP y VIEW DEFINITION. ADMINISTER DATABASE BULK OPERATIONS ahora es visible en sys.fn_builtin_permissions. (CTP 1.0)
 - Se agregó **COMPATIBILITY_LEVEL 140** de base de datos. (CTP 1.0)  
 
-Para más información, consulte [Novedades de Motor de base de datos de SQL Server 2017](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md).
-
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - La nueva característica **Escalabilidad horizontal** de SSIS tiene las siguientes características nuevas y modificadas. Para más información, consulte [Novedades de Integration Services en SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md). (RC1)
     -   Patrón de escalabilidad horizontal ahora admite alta disponibilidad.
@@ -77,7 +76,7 @@ Para más información, consulte [Novedades de Integration Services en SQL Serve
 - Se ha mejorado el rendimiento al expandir la carpeta **Entidades** de la página **Administrar grupos** para asignar permisos de modelos. La página **Administrar grupos** se encuentra en la sección **Seguridad** de la aplicación web. Para obtener más información sobre las mejoras de rendimiento, vea [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview). Para más información sobre cómo asignar permisos, vea [Assign Model Object Permissions (Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md) [Asignar permisos de objeto de modelo (Master Data Services)].
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
-SQL Server Analysis Services 2017 presenta muchas mejoras para los modelos tabulares. Estos incluyen:
+SQL Server Analysis Services 2017 presenta muchas mejoras para los modelos tabulares. Entre ellas se incluyen las siguientes:
 - Modo tabular como opción de instalación predeterminada para Analysis Services. (CTP 2.0)
 - Seguridad de nivel de objeto para proteger los metadatos de los modelos tabulares. (CTP 2.0)
 - Relaciones de fecha para crear fácilmente relaciones basadas en los campos de fecha. (CTP 2.0)
@@ -115,7 +114,7 @@ Ahora, los desarrolladores de SQL Server tienen acceso a las bibliotecas ampliad
 - **Mejoras de rendimiento**: el procedimiento almacenado `sp_execute_external_script` se ha optimizado para admitir la ejecución en modo por lotes en los datos de almacén de columnas.
 
 
-Para más información, consulte [Novedades de SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md).
+Para más información, consulte [Novedades de SQL Server Machine Learning Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 - Consulte las [notas de la versión de SQL Server 2017](sql-server-2017-release-notes.md).

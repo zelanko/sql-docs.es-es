@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295608"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
@@ -31,7 +31,7 @@ Tiempo estimado para completar este tutorial: 30 minutos.
 ## <a name="requirements"></a>Requisitos  
 Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   
-## <a name="Setup"></a>1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices  
 En esta sección, creará un informe de tabla, un origen de datos y un conjunto de datos. Cuando distribuya la tabla, incluirá solo unos cuantos campos. Después de completar el asistente, agregará manualmente las columnas. El asistente facilita la distribución de la tabla.  
   
 > [!NOTE]  
@@ -56,7 +56,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
     > [!NOTE]  
     > El origen de datos que elija no es importante mientras tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -93,7 +93,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página **Organizar campos** , arrastre los campos siguientes, en el orden especificado, desde la lista **Campos disponibles** a la lista **Valores** .  
   
@@ -114,15 +114,15 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. Haga clic en **Siguiente**.  
+15. Haga clic en **Next**.  
   
 16. En la página **Elegir el diseño** , mantenga la configuración predeterminada y haga clic en **Siguiente**.  
 
     ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. Haga clic en **Finalizar**.  
+17. Haga clic en **Finalizar**  
   
-## <a name="UpdateNames"></a>2. Actualizar nombres predeterminados del origen de datos y el conjunto de datos  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. Actualizar nombres predeterminados del origen de datos y el conjunto de datos  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>Para actualizar el nombre predeterminado del origen de datos  
   
@@ -146,7 +146,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3. Mostrar First Initial y Last Name  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Mostrar First Initial y Last Name  
 En esta sección, usará la función **Left** y el operador **Concatenate** ( **&** ) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
   
 1.  Haga clic con el botón derecho en la columna **StateProvince** , seleccione **Insertar columna**y haga clic en **Izquierda**.  
@@ -191,7 +191,7 @@ En esta sección, usará la función **Left** y el operador **Concatenate** ( **
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
-## <a name="DateFormat"></a>(opcional) Dar formato a las columnas Date y Currency, y a la fila de encabezados  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(opcional) Dar formato a las columnas Date y Currency, y a la fila de encabezados  
 En esta sección, dará formato a la columna **Last Purchase** que contiene fechas, y a la columna YTDPurchase que contiene la moneda. También puede aplicar formato a la fila de encabezados.  
   
 ### <a name="to-format-the-date-column"></a>Para dar formato a la columna de fecha  
@@ -227,7 +227,7 @@ Aquí se muestra el informe hasta el momento con el formato en las fechas, moned
 ![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4. Usar color para mostrar el sexo de una persona  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4. Usar color para mostrar el sexo de una persona  
 En esta sección, agregará color para mostrar el sexo de una persona. Agregará una nueva columna para mostrar el color y, después, determinará el color que aparece en la columna según el valor del campo Gender.  
   
 Para mantener el color que ha aplicado en la celda de la tabla cuando crea un informe con bandas, agregue un rectángulo y, después, agréguele el color de fondo.  
@@ -309,7 +309,7 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5. Buscar el nombre CountryRegion  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5. Buscar el nombre CountryRegion  
 En esta sección, creará el conjunto de datos CountryRegion y usará la función **Lookup** para mostrar el nombre de un país o región en lugar del identificador del mismo.  
   
 ### <a name="to-create-the-countryregion-dataset"></a>Para crear el conjunto de datos CountryRegion  
@@ -379,7 +379,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
   
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="Count"></a>6. Recuento de días desde la última compra  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. Recuento de días desde la última compra  
 En esta sección, agregará una columna y, después, usará la función **Now** o la variable global integrada `ExecutionTime` para calcular el número de días desde hoy hasta la fecha en que un cliente ha realizado compras por última vez.  
   
 ### <a name="to-add-the-days-ago-column"></a>Para agregar la columna Días transcurridos  
@@ -419,7 +419,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
 
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-## <a name="Indicator"></a>7. Usar un indicador para mostrar la comparación de ventas  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Usar un indicador para mostrar la comparación de ventas  
 En esta sección agregará una nueva columna y usará un indicador para mostrar si las compras hasta la fecha de un usuario están por encima o por debajo del promedio de compras hasta la fecha. La función **Redondear** quita los decimales de los valores.  
   
 Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede saltarse el procedimiento "Para configurar el indicador" y copiar o pegar las expresiones completas de este tutorial en el cuadro de diálogo **Expresión**.  
@@ -514,7 +514,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
 
     ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8. Crear un informe con bandas  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8. Crear un informe con bandas  
 Cree un parámetro de forma que los lectores del informe puedan especificar el color que se aplicará a las filas alternativas del informe, convirtiéndolo en un informe con bandas.  
   
 ### <a name="to-add-a-parameter"></a>Para agregar un parámetro  
@@ -611,7 +611,7 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
     
     ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(Opcional) Agregar un título de informe  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(Opcional) Agregar un título de informe  
 Agregue un título al informe.  
   
 ### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
@@ -630,7 +630,7 @@ Agregue un título al informe.
   
 3.  Seleccione un color para las bandas que no son blancas del informe y haga clic en **Ver informe**.  
   
-## <a name="Save"></a>(Opcional) Guardar el informe  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(Opcional) Guardar el informe  
 Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo. Para obtener más información, consulte [Guardar informes &#40;Generador de informes&#41;](../reporting-services/report-builder/saving-reports-report-builder.md).  
   
 En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  

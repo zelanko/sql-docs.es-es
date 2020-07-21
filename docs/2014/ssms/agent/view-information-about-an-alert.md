@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee72512a507299e71f13fee689709a9403bb04e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058655"
 ---
 # <a name="view-information-about-an-alert"></a>Ver información acerca de una alerta
-  En este tema se describe el modo de ver infomación acerca de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo ver información acerca de las [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas del agente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **En este tema**  
   
@@ -38,14 +37,14 @@ ms.locfileid: "68211292"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ver información acerca de una alerta. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Para ver información acerca de una alerta  
   
@@ -59,17 +58,17 @@ ms.locfileid: "68211292"
   
      Para más información sobre las opciones disponibles presentes en el cuadro de diálogo _nombre_alerta_**Propiedades de la alerta** , consulte:  
   
-    -   [Propiedades de nueva alerta de alerta &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propiedades de alerta-nueva alerta &#40;página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propiedades de nueva alerta de alerta &#40;página de respuesta&#41;](alert-properties-new-alert-response-page.md)  
+    -   [Propiedades de alerta-nueva página de respuesta de &#40;de alerta&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [Propiedades de alerta: Nueva alerta &#40;página de opciones&#41;](alert-properties-new-alert-options-page.md)  
+    -   [Propiedades de alerta: nueva página de opciones de &#40;de alertas&#41;](alert-properties-new-alert-options-page.md)  
   
     -   [Propiedades de alerta &#40;Página Historial&#41;](alert-properties-history-page.md)  
   
-5.  Cuando termine, haga clic en **Aceptar**.  
+5.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Para ver información acerca de una alerta  
   
@@ -89,6 +88,6 @@ ms.locfileid: "68211292"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_help_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
+ Para obtener más información, vea [sp_help_alert &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql).  
   
   

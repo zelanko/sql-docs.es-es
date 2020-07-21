@@ -1,5 +1,5 @@
 ---
-title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
+title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2883be875b827cc38e0412ba8ca75851b11543e8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048141"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392693"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Declara uno o varios espacios de nombres XML.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68048141"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 WITH XMLNAMESPACES ( <XML namespace declaration item>  
 [ { , <XML namespace declaration item> }...] )   
@@ -48,26 +48,28 @@ WITH XMLNAMESPACES ( <XML namespace declaration item>
 <xml_namespace_uri> ::= <character string literal>  
 ```  
   
-```  
+```syntaxsql
   
 <xml_namespace_prefix> ::= <identifier>  
 ```  
   
-```  
+```syntaxsql
   
 <XML default namespace declaration item> ::=  
 DEFAULT <xml_namespace_uri>  
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *xml_namespace_uri*  
  Identificador uniforme de recursos (URI) que identifica el espacio de nombres XML que se va a declarar. *xml_namespace_uri* es una cadena de SQL.  
   
  *xml_namespace_prefix*  
  Especifica un prefijo que se va a asignar y asociar al valor URI del espacio de nombres especificado en *xml_namespace_uri*. *xml_namespace_prefix* debe ser un identificador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al utilizar la cláusula WITH XMLNAMESPACES en una instrucción que también incluye una expresión de tabla común, la cláusula WITH XMLNAMESPACES debe preceder a la expresión de tabla común en la instrucción.  
   
  Estas son las reglas generales de sintaxis que se aplican cuando se usa la cláusula WITH XMLNAMESPACES:  

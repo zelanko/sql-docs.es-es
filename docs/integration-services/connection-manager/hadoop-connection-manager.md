@@ -1,7 +1,7 @@
 ---
-title: 'Administrador de conexiones de Hadoop: SQL Server Integration Services | Microsoft Docs'
+title: Administrador de conexiones de Hadoop | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735115"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
 
@@ -60,7 +60,7 @@ ms.locfileid: "71298537"
   
     5.  Si selecciona la autenticación **Kerberos** , escriba los valores **Password** (Contraseña) y **Domain**(Dominio) del usuario.  
   
-5.  Haga clic en **Probar conexión**. (Solo se prueba la conexión habilitada).  
+5.  Seleccione **Test Connection** (Probar conexión). (Solo se prueba la conexión habilitada).  
   
 6.  Seleccione **Aceptar** para cerrar el cuadro de diálogo.  
 
@@ -69,7 +69,7 @@ Hay dos opciones para configurar el entorno local de forma que pueda usar la aut
 -   Opción 1: [Unir el equipo SSIS al dominio Kerberos](#kerberos-join-realm)
 -   Opción 2: [Habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Opción 1: Unir el equipo SSIS al dominio Kerberos
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Opción 1: Unir el equipo SSIS al dominio Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 
@@ -83,23 +83,23 @@ En el equipo SSIS:
 
     El equipo debe estar configurado como miembro de un grupo de trabajo, ya que un dominio Kerberos es diferente de un dominio de Windows. Establezca el dominio Kerberos y agregue un servidor KDC como se explica en el siguiente ejemplo. Reemplace `REALM.COM` por su dominio Kerberos propio correspondiente, según sea necesario.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
 
     Después de ejecutar estos comandos, reinicie el equipo.
 
-2.  Compruebe la configuración con el comando **Ksetup**. La salida debería ser similar a la del siguiente ejemplo:
+2.  Compruebe la configuración con el comando **Ksetup**. La salida debe tener un aspecto similar al siguiente ejemplo:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Opción 2: Habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos
+### <a name="option-2-enable-mutual-trust-between-the-windows-domain-and-the-kerberos-realm"></a><a name="kerberos-mutual-trust"></a>Opción 2: Habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 -   El equipo de puerta de enlace se debe unir a un dominio de Windows.
@@ -114,7 +114,7 @@ En el servidor KDC:
 
 1.  Edite la configuración del KDC en el archivo **krb5.conf**. Permita que KDC confíe en el dominio de Windows, haciendo referencia para ello a la siguiente plantilla de configuración. La configuración se encuentra de forma predeterminada en **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -152,7 +152,7 @@ En el servidor KDC:
 
     Reinicie el servicio KDC después de la configuración.
 
-2.  Prepare una entidad de seguridad denominada  **krbtgt/REALM.COM@AD.COM** en el servidor KDC. Use el siguiente comando:
+2.  Prepare una entidad de seguridad denominada **krbtgt/REALM.COM\@AD.COM** en el servidor KDC. Use el comando siguiente:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -162,12 +162,12 @@ En el controlador de dominio:
 
 1.  Ejecute los siguientes comandos **Ksetup** para agregar una entrada de dominio Kerberos:
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Establezca una confianza entre el dominio de Windows y el dominio Kerberos. En el siguiente ejemplo, `[password]` es la contraseña de la entidad de seguridad **krbtgt/REALM.COM@AD.COM** .
+2.  Establezca una confianza entre el dominio de Windows y el dominio Kerberos. En el ejemplo siguiente, `[password]` es la contraseña de la entidad de seguridad **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 
@@ -201,12 +201,12 @@ En el equipo de puerta de enlace:
 
 Ejecute los siguientes comandos **Ksetup** para agregar una entrada de dominio Kerberos.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea de Hive de Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Tarea de Pig con Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tarea Sistema de archivos de Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  

@@ -1,6 +1,6 @@
 ---
-title: Propiedad DisplayName (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Propiedad DisplayName (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a60ae08f500021d2c11dacbd4bcfd5a73395cf7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c63a1b6a1b9eab925cb841ea1ac451ea65184c6b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929696"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880633"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Propiedad DisplayName (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre para mostrar del servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -51,7 +51,7 @@ object.DisplayName [= value]
 mysqlservice.DisplayName = "Atdisk"  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

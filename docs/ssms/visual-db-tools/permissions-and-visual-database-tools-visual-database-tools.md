@@ -1,10 +1,9 @@
 ---
-title: Permisos y Visual Database Tools (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Permisos y Visual Database Tools
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,12 +11,14 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 139f0966c08e4ceafdb4ccf76d656d9462ab7b59
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: c3222a1ae0e951f2ee2a7fca7b2b08d6dda2669f
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266390"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255360"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permisos y Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

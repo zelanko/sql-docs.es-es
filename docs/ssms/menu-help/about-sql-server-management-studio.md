@@ -1,6 +1,6 @@
 ---
-title: Acerca de SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Acerca de SQL Server Management Studio
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b7026b90766cb98335f1cbb626357ddc9c50718
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: acb6ad109fb34641ab5661f48db8906cf4de1430
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265053"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253297"
 ---
 # <a name="about-sql-server-management-studio"></a>Acerca de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

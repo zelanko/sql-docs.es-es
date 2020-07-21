@@ -1,5 +1,5 @@
 ---
-title: Consideraciones sobre la programación de controlador de Microsoft Excel | Microsoft Docs
+title: Consideraciones de programación del controlador de Microsoft Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: adb76a40b9f8ed79af41fd122ac94f8a0d9ee7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e0eec3f6cfc8b4c0e761ec0eea9b1dfd42005df
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045040"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81283765"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Consideraciones sobre la programación de controlador de Microsoft Excel
 Esta sección contiene los temas siguientes.  

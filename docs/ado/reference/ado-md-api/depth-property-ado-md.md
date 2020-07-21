@@ -1,5 +1,5 @@
 ---
-title: Profundidad (propiedad, ADO MD) | Microsoft Docs
+title: Propiedad Depth (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Depth property [ADO MD]
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 146e845e7f0867f19ccd90e4260dd3abf01ba3ac
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952196"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764326"
 ---
 # <a name="depth-property-ado-md"></a>Profundidad (propiedad, ADO MD)
 Indica el número de niveles entre el [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) y la raíz de la jerarquía.  
@@ -30,10 +30,10 @@ Indica el número de niveles entre el [nivel](../../../ado/reference/ado-md-api/
  Devuelve un entero y es de solo lectura.  
   
 ## <a name="remarks"></a>Comentarios  
- Un **nivel** en la raíz de una jerarquía tiene un **profundidad** valor cero (0).  
+ Un **nivel** en la raíz de una jerarquía tiene un valor de **profundidad** de cero (0).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad LevelDepth (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)

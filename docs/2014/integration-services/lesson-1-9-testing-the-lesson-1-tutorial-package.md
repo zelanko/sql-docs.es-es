@@ -1,5 +1,5 @@
 ---
-title: 'Paso 9: Probar el paquete del Tutorial de la lección 1 | Microsoft Docs'
+title: 'Paso 9: Probar el paquete del tutorial de la lección 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7f26aa544bcda14428cfbf936015a601e7ab6b6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62767617"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440672"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Paso 9: Prueba del paquete del tutorial de la lección 1
   En esta lección, ha llevado a cabo las tareas siguientes:  
@@ -33,24 +32,24 @@ ms.locfileid: "62767617"
   
  **Flujo de control**  
   
- ![Flujo de control del paquete](../../2014/tutorials/media/task9lesson1control.gif "Control flow in package")  
+ ![Flujo de control del paquete](../../2014/tutorials/media/task9lesson1control.gif "Flujo de control del paquete")  
   
  **Flujo de datos**  
   
- ![Flujo de datos del paquete](../../2014/tutorials/media/task9lesson1data.gif "Data flow in package")  
+ ![Flujo de datos del paquete](../../2014/tutorials/media/task9lesson1data.gif "Flujo de datos del paquete")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Para ejecutar el paquete del tutorial de la lección 1  
   
-1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+1.  En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
      El paquete se ejecutará, dando lugar a la correcta inclusión de 1097 filas en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**.  
   
 2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar bucles](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Lección 2: Adición de bucles](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)  
   
   

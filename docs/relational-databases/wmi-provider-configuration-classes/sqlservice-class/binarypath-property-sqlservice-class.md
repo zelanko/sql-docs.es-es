@@ -1,5 +1,5 @@
 ---
-title: Propiedad BinaryPath (clase SqlService) | Microsoft Docs
+title: Propiedad BinaryPath (clase SqlService)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd5e74f67e43293f797ea18ecf8e6d5fe0a926d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c4d21dc11edce50cbff32161a7f30f460d7cb4f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880669"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>Propiedad BinaryPath (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene la ruta de acceso binaria del servicio.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -43,7 +43,7 @@ object.BinaryPath [= value]
   
 ## <a name="remarks"></a>Comentarios  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

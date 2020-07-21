@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña explorador, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña explorador, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,28 +9,27 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938446"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Barra de herramientas** para realizar operaciones habituales en la pestaña **Explorador** del **Diseñador de dimensiones**.  
   
 ## <a name="options"></a>Opciones  
- **Procesar**  
+ **Process**  
  Haga clic para abrir el cuadro de diálogo **Procesar** y procese la dimensión seleccionada.  
   
- **Reconnect**  
+ **Volver a conectar**  
  Haga clic para volver a conectar la pestaña **Explorador** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contienen la dimensión si la sesión de la pestaña **Explorador** se ha desconectado debido a una pérdida de la conexión o a un tiempo de espera excesivo.  
   
  **Actualizar**  
  Haga clic para volver a cargar la pestaña **Explorador** con los datos y metadatos de la dimensión.  
   
- **Propiedades de miembro**  
+ **Propiedades del miembro**  
  Haga clic para mostrar y seleccionar las propiedades del miembro que se visualizarán en el panel **Level and Members** (Nivel y miembros). Si selecciona **(Mostrar todos)** se muestran las propiedades de todos los miembros de la lista.  
   
  Cada una de las propiedades de miembro seleccionadas en **Propiedades del miembro** se muestra en **Nivel y miembros** como una columna independiente con el fin de permitir la edición de los valores de propiedad del miembro en el modo de reescritura.  
@@ -38,7 +37,7 @@ ms.locfileid: "66066155"
  **Filtrar miembros**  
  Haga clic para mostrar el cuadro de diálogo **Filtrar miembros** y filtre los miembros que aparecen en **Level and Members** (Nivel y miembros) para la jerarquía seleccionada.  
   
- **Writeback**  
+ **Reescritura**  
  Seleccione para establecer el panel **Level and Members** (Nivel y miembros) en el modo de reescritura de dimensiones.  
   
  **Disminuir sangría**  

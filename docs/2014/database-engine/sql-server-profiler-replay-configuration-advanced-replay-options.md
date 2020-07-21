@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - configuración de reproducción (Opciones avanzadas de reproducción) | Microsoft Docs
+title: Configuración de SQL Server Profiler-reproducción (opciones avanzadas de reproducción) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78ca3fc2d11b22d70c8a4e99d0961f793870bd53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66089732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928521"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler (Configuración de reproducción/página Opciones avanzadas de reproducción)
   En el cuadro de diálogo **Configuración de reproducción** , utilice la pestaña **Opciones avanzadas de reproducción** para especificar cómo reproducir un archivo de seguimiento.  
@@ -57,7 +56,7 @@ ms.locfileid: "66089732"
  **Intervalo de espera del monitor de procesos bloqueados (seg.)**  
  Configura la frecuencia con que el monitor de procesos bloqueados busca procesos bloqueados o de bloqueo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)  

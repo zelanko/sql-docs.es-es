@@ -1,6 +1,6 @@
 ---
-title: Buscar los objetos que han obtenido más bloqueos | Microsoft Docs
-ms.custom: ''
+title: Búsqueda de los objetos con más bloqueos mediante eventos extendidos
+description: En este artículo se muestra cómo buscar los objetos que han obtenido más bloqueos. Es posible que los administradores de bases de datos tengan que buscar los objetos que han obtenido más bloqueos para mejorar el rendimiento de la base de datos.
 ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1173afdae14e2c68d2aade38c938eecfe3bc25d7
-ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
+ms.openlocfilehash: 47299e7177a3be131c4ab22f47acebb13927dada
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727327"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>Buscar los objetos que han obtenido más bloqueos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A menudo, los administradores de bases de datos necesitan identificar el origen de bloqueos que reducen el rendimiento de la base de datos.  
   
@@ -110,7 +111,7 @@ Para ello, utilice el Editor de consultas de [!INCLUDE[ssManStudioFull](../../in
 
 Una vez finalizadas las instrucciones del script de Transact-SQL anterior, en la pestaña **Resultados** del Editor de consultas se mostrarán las columnas siguientes:
   
-- NAME
+- name
 - object_id
 - lock_count
   

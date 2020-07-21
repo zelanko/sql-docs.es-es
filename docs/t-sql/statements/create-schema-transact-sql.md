@@ -24,15 +24,15 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117300"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393003"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Crea un esquema en la base de datos actual. La transacción CREATE SCHEMA también puede crear tablas y vistas dentro del nuevo esquema, así como establecer la concesión, denegación o revocación (GRANT, DENY o REVOKE) de permisos en esos objetos.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68117300"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
@@ -59,13 +59,15 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *schema_name*  
  Es el nombre por el que se identifica al esquema en esta base de datos.  
   
@@ -87,7 +89,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Especifica una instrucción DENY que deniega permisos sobre cualquier elemento protegible, excepto el esquema nuevo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]  
 >  Las instrucciones que contienen CREATE SCHEMA AUTHORIZATION pero no especifican ningún nombre solo se admiten por razones de compatibilidad con versiones anteriores. La instrucción no provoca errores, pero no crea esquemas.  
@@ -112,7 +114,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **Esquema implícito y creación de usuario**  
   
- En algunos casos, un usuario puede usar una base de datos sin necesidad de tener una cuenta de usuario de base de datos (una entidad de seguridad de base de datos en la base de datos). Esto puede ocurrir en las siguientes situaciones:  
+ En algunos casos, un usuario puede usar una base de datos sin necesidad de tener una cuenta de usuario de base de datos (una entidad de seguridad de base de datos en la base de datos). El error puede ocurrir en las siguientes situaciones:  
   
 -   Un inicio de sesión tiene privilegios **CONTROL SERVER**.  
   
@@ -154,14 +156,14 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Crear un esquema y una tabla en el esquema  
  En el siguiente ejemplo se crea un esquema `Sales` y, luego, una tabla `Sales.Region` en ese esquema.  
   
 ```  
 CREATE SCHEMA Sales;  
-GO;  
+GO
   
 CREATE TABLE Sales.Region   
 (Region_id int NOT NULL,  

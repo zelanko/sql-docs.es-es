@@ -1,6 +1,7 @@
 ---
-title: Solución de problemas de índices de hash para tablas optimizadas para memoria | Microsoft Docs
-ms.custom: ''
+title: 'Solución de problemas de índices de hash: tablas optimizadas para memoria'
+description: Use esta información para solucionar problemas de índices de hash para tablas optimizadas para memoria en SQL Server y Azure SQL Database.
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 13117bad78c1cfc843bbe68caeb2abb5c5f64dff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909277"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723221"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solución de problemas de índices de hash para tablas optimizadas para memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 ## <a name="prerequisite"></a>Requisito previo  
   
@@ -113,8 +114,8 @@ El siguiente bloque de código de T-SQL constituye un sencillo método de compro
   
 1. Crea una tabla optimizada para memoria que tiene algunos índices hash.  
 2. Rellena la tabla con miles de filas.  
-    A. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
-    B. El bucle inserta 262,144 filas aproximadamente en un minuto.  
+    a. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
+    b. El bucle inserta 262,144 filas aproximadamente en un minuto.  
 3. PRINT imprime un mensaje pidiéndole que ejecute la instrucción SELECT anterior en **sys.dm_db_xtp_hash_index_stats**.  
 
 ```sql
@@ -232,6 +233,6 @@ Las cargas de trabajo de OLTP se centran en filas individuales. Los recorridos d
   - Aumento del tiempo necesario para un examen completo del índice de hash.  
   
 
-##  <a name="Additional_Reading"></a> Lecturas adicionales  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecturas adicionales  
  [Índices de hash para tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Índices no agrupados para tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)  

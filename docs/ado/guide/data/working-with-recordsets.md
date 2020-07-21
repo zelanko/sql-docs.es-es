@@ -10,121 +10,121 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748340"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
-El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados para buscar un registro específico en función de criterios que suministran e incluso a optimizar estas operaciones de búsqueda mediante índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos - como los de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad - la estructura del origen de datos propia.  
+El objeto de **conjunto de registros** tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, buscar un registro específico en función de los criterios proporcionados e incluso optimizar esas operaciones de búsqueda mediante índices. El uso de estas características depende del proveedor y, en algunos casos, como el de la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) , la estructura del propio origen de datos.  
   
 ## <a name="arranging-data"></a>Organizar datos  
- Con frecuencia, la manera más eficaz para ordenar los datos en su **Recordset** consiste en especificar una cláusula ORDER BY en el comando SQL utilizado para devolver los resultados. Sin embargo, es posible que deba cambiar el orden de los datos en un **Recordset** que ya se ha creado. Puede usar el **ordenación** propiedad para establecer el orden en que las filas de una **Recordset** se recorren. Además, el **filtro** propiedad determina qué filas son puede obtenerse al recorrer las filas.  
+ Con frecuencia, la manera más eficaz de ordenar los datos en el **conjunto de registros** es mediante la especificación de una cláusula ORDER BY en el comando SQL que se usa para devolver resultados. Sin embargo, es posible que tenga que cambiar el orden de los datos en un **conjunto de registros** que ya se ha creado. Puede utilizar la propiedad **Sort** para establecer el orden en el que se recorren las filas de un **conjunto de registros** . Además, la propiedad **Filter** determina las filas a las que se puede tener acceso al atravesar filas.  
   
- El **ordenación** propiedad establece o devuelve un **cadena** valor que indica el campo de nombres en el **conjunto de registros** en el que se va a ordenar. Cada nombre está separado por una coma y está seguido opcionalmente por un espacio y la palabra clave **ASC** (que ordena el campo en orden ascendente) o **DESC** (que ordena el campo en orden descendente). De forma predeterminada, si no se especifica ninguna palabra clave, el campo se ordena en orden ascendente.  
+ La propiedad **Sort** establece o devuelve un valor de **cadena** que indica los nombres de campo del **conjunto de registros** por los que se va a ordenar. Cada nombre está separado por una coma y, opcionalmente, sigue un espacio y la palabra clave **ASC** (que ordena el campo en orden ascendente) o **DESC** (que ordena el campo en orden descendente). De forma predeterminada, si no se especifica ninguna palabra clave, el campo se ordena en orden ascendente.  
   
- La operación de ordenación es eficaz porque los datos no se reorganizan físicamente, pero se tiene acceso en el orden especificado por un índice.  
+ La operación de ordenación es eficaz porque los datos no se reorganizan físicamente pero se obtiene acceso a ellos en el orden especificado por un índice.  
   
- El **ordenación** propiedad requiere la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad se establece en **adUseClient**. Se creará un índice temporal para cada campo especificado en el **ordenación** propiedad si no existe.  
+ La propiedad **Sort** requiere que la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) esté establecida en **adUseClient**. Se creará un índice temporal para cada campo especificado en la propiedad **Sort** si aún no existe un índice.  
   
- Establecer el **ordenación** restablecerá las filas a su orden original y eliminar índices temporales propiedad en una cadena vacía. No se eliminarán los índices existentes.  
+ Si establece la propiedad **Sort** en una cadena vacía, se restablecerán las filas a su orden original y se eliminarán los índices temporales. Los índices existentes no se eliminarán.  
   
- Supongamos que un **Recordset** contiene tres campos denominados *firstName*, *middleInitial*, y *lastName*. Establecer el **ordenación** propiedad a la cadena "`lastName DESC, firstName ASC`", que ordenará los **Recordset** por apellido en orden descendente y, a continuación, por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
+ Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el **conjunto de registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
   
- Ningún campo al que hace referencia en una cadena de criterios de ordenación puede denominarse "ASC" o "DESC" porque esos nombres en conflicto con las palabras clave **ASC** y **DESC**. Asigne a un campo que tiene un alias de un nombre en conflicto mediante la **AS** palabra clave en la consulta que devuelve el **Recordset**.  
+ Ningún campo al que se haga referencia en una cadena de criterios de ordenación puede denominarse "ASC" o "DESC", ya que esos nombres entran en conflicto con las palabras clave **ASC** y **DESC**. Asigne un alias a un campo que tenga un nombre en conflicto mediante la palabra clave **as** en la consulta que devuelve el **conjunto de registros**.  
   
- Para obtener más información acerca de **Recordset** filtrado, consulte "Filtrado de resultados de la" más adelante en este tema.  
+ Para obtener más información sobre el filtrado de **conjuntos de registros** , vea "filtrar los resultados" más adelante en este tema.  
   
 ## <a name="finding-a-specific-record"></a>Buscar un registro específico  
- ADO proporciona el [buscar](../../../ado/reference/ado-api/find-method-ado.md) y [Seek](../../../ado/reference/ado-api/seek-method.md) métodos para buscar un registro determinado en un **Recordset**. El **buscar** método es compatible con una variedad de proveedores, pero se limita a un criterio de búsqueda único. El **Seek** método permite realizar búsquedas en varios criterios, pero no es compatible con muchos proveedores.  
+ ADO proporciona los métodos [Find](../../../ado/reference/ado-api/find-method-ado.md) y [Seek](../../../ado/reference/ado-api/seek-method.md) para buscar un registro determinado en un **conjunto de registros**. El método **Find** es compatible con varios proveedores, pero está limitado a un único criterio de búsqueda. El método **Seek** admite la búsqueda en varios criterios, pero no es compatible con muchos proveedores.  
   
- Los índices de campos pueden mejorar considerablemente el rendimiento de la **buscar** método y **ordenación** y **filtro** propiedades de la **Recordset** objeto. Puede crear un índice interno para un **campo** objeto estableciendo sus dinámicos [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad. Esta propiedad se agrega a la **propiedades** colección de la **campo** objeto cuando se establece la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient**. Recuerde que este índice es interno a ADO: no se puede obtener acceso a él o utilizarlo para ningún otro propósito. Además, este índice es distinta de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad de la **Recordset** objeto.  
+ Los índices en los campos pueden mejorar en gran medida el rendimiento del método **Buscar** y las propiedades de **ordenación** y **filtrado** del objeto de **conjunto de registros** . Puede crear un índice interno para un objeto de **campo** estableciendo su propiedad [optimización](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dinámica. Esta propiedad dinámica se agrega a la colección **Properties** del objeto **Field** cuando se establece la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**. Recuerde que este índice es interno de ADO: no puede obtener acceso a él ni usarlo para ningún otro propósito. Además, este índice es diferente de la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) del objeto de **conjunto de registros** .  
   
- El **buscar** método busca rápidamente un valor dentro de una columna (campo) de un **Recordset**. Con frecuencia puede mejorar la velocidad de la **buscar** método en una columna mediante el **optimizar** propiedad para crear un índice en ella.  
+ El método **Find** busca rápidamente un valor dentro de una columna (campo) de un **conjunto de registros**. Con frecuencia, puede mejorar la velocidad del método **Find** en una columna mediante la propiedad **Optimize** para crear un índice en él.  
   
- El **buscar** método limita la búsqueda al contenido de un campo. El **Seek** método requiere un índice y tiene también otras limitaciones. Si debe buscar en varios campos que no son la base de un índice, o si el proveedor no admite índices, puede limitar los resultados mediante el uso de la **filtro** propiedad de la **Recordset** objeto.  
+ El método **Find** limita la búsqueda al contenido de un campo. El método **Seek** requiere que tenga un índice y también tenga otras limitaciones. Si tiene que buscar en varios campos que no son la base de un índice o si el proveedor no admite índices, puede limitar los resultados mediante la propiedad **Filter** del objeto de **conjunto de registros** .  
   
 ### <a name="find"></a>Buscar  
- El **buscar** búsquedas de los métodos un **Recordset** para la fila que cumple un criterio especificado. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumple el criterio, la posición de fila actual se establece en el registro se encuentra; en caso contrario, se establece la posición al final (o inicio) de la **Recordset**, en función de la dirección de búsqueda.  
+ El método **Find** busca en un **conjunto de registros** la fila que cumple un criterio especificado. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento de la fila inicial. Si se cumple el criterio, la posición de la fila actual se establece en el registro encontrado; de lo contrario, la posición se establece en el final (o en el inicio) del **conjunto de registros**, en función de la dirección de búsqueda.  
   
- Solo un nombre de columna única puede especificarse para el criterio. En otras palabras, este método no admite búsquedas de varias columnas.  
+ Solo se puede especificar un nombre de una sola columna para el criterio. En otras palabras, este método no admite búsquedas en varias columnas.  
   
- Puede ser el operador de comparación para el criterio" **>** "(mayor que)," **\<** " (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), " <> "(no igual a), o"LIKE"(coincidencia).  
+ El operador de comparación para el criterio puede ser " **>** " (mayor que), " **\<** " (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
   
- El valor del criterio puede ser una cadena, número de punto flotante o fecha. Los valores de cadena están delimitados con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #").  
+ El valor del criterio puede ser una cadena, un número de punto flotante o una fecha. Los valores de cadena se delimitan con comillas simples o "#" (signo de número) (por ejemplo, "State = ' WA '" o "State = #WA #"). Los valores de fecha se delimitan con marcas "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #").  
   
- Si el operador de comparación es "like", el valor de cadena puede contener un asterisco (*) para buscar una o más apariciones de cualquier carácter o subcadena. Por ejemplo, "state like'm\*'" encuentra Maine y Massachusetts. También puede utilizar asteriscos iniciales y finales para buscar una subcadena que se encuentra dentro de los valores. Por ejemplo, "estado como '\*como\*'" coincide con Alaska, Arkansas y Massachusetts.  
+ Si el operador de comparación es "like", el valor de cadena puede contener un asterisco (*) para buscar una o más apariciones de cualquier carácter o subcadena. Por ejemplo, "State like \* '" coincide con Maine y Massachusetts. También puede usar asteriscos iniciales y finales para buscar una subcadena incluida dentro de los valores. Por ejemplo, "State like ' \* as \* '" coincide con Alaska, Arkansas y Massachusetts.  
   
- Los asteriscos pueden usarse solo al final de una cadena de criterios o juntos al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como comodín inicial ('* str') o incrustados indicado anteriormente\*r'). Esto provocará un error.  
+ Los asteriscos solo se pueden usar al final de una cadena de criterios o juntos al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como carácter comodín inicial (' * str ') o carácter comodín incrustado ( \* r '). Esto producirá un error.  
   
-### <a name="seek-and-index"></a>Buscar e indizar  
- Use la **Seek** método junto con el **índice** propiedad si el proveedor subyacente admite índices en el **Recordset** objeto. Use la [admite](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** método para determinar si el proveedor subyacente admite **Seek**y el **Supports** método para determinar si el proveedor admite los índices. (Por ejemplo, el [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** y **índice**.)  
+### <a name="seek-and-index"></a>Búsqueda e índice  
+ Use el método de **búsqueda** junto con la propiedad de **Índice** si el proveedor subyacente admite índices en el objeto de **conjunto de registros** . Use el método [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** para determinar si el proveedor subyacente admite **Seek**y el método **Supports (adIndex)** para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** e **index**).  
   
- Si **Seek** hace que no se encontró la fila deseada, ningún error se produce y la fila se coloca al final de la **Recordset**. Establecer el **índice** propiedad en el índice deseado antes de ejecutar este método.  
+ Si **Seek** no encuentra la fila deseada, no se produce ningún error y la fila se coloca al final del conjunto de **registros**. Establezca la propiedad **index** en el índice deseado antes de ejecutar este método.  
   
- Este método solo se admite con cursores de servidor. Buscar no se admite cuando la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) valor de propiedad de la **Recordset** objeto es **adUseClient**.  
+ Este método solo se admite con los cursores del lado servidor. No se admite Seek cuando el valor de la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) del objeto de **conjunto de registros** es **adUseClient**.  
   
- Este método puede usarse solo cuando la **Recordset** objeto se ha abierto con un [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valor de **adCmdTableDirect**.  
+ Este método solo se puede usar cuando se ha abierto el objeto de **conjunto de registros** con el valor **adCmdTableDirect**de [commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) .  
   
 ## <a name="filtering-the-results"></a>Filtrar los resultados  
- El **buscar** método limita la búsqueda al contenido de un campo. El **Seek** método requiere un índice y tiene también otras limitaciones. Si debe buscar en varios campos que no son la base de un índice o si el proveedor no admite índices, puede limitar los resultados mediante el uso de la **filtro** propiedad de la **Recordset** objeto.  
+ El método **Find** limita la búsqueda al contenido de un campo. El método **Seek** requiere que tenga un índice y también tenga otras limitaciones. Si tiene que buscar en varios campos que no son la base de un índice o si el proveedor no admite índices, puede limitar los resultados mediante la propiedad **Filter** del objeto de **conjunto de registros** .  
   
- Use la **filtro** propiedad para ocultar selectivamente los registros en un **Recordset** objeto. El filtrado **Recordset** se convierte en el cursor actual, lo que significa que los registros que no cumple la **filtro** criterios no están disponibles en el **Recordset** hasta que el **Filtro** se quita. Otras propiedades que devuelven valores según el cursor actual se ven afectados, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**, y  **PageCount**. Esto es porque si se establece la **filtro** propiedad en un valor específico moverá el registro actual en el primer registro que satisface el nuevo valor.  
+ Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual, lo que significa que los registros que no cumplen los criterios de **filtro** no están disponibles en el **conjunto de registros** hasta que se quita el **filtro** . Otras propiedades que devuelven valores basados en el cursor actual se ven afectadas, como **AbsolutePosition**, **AbsolutePage**, **RecordCount**y **PageCount**. Esto se debe a que si se establece la propiedad **Filter** en un valor concreto, se moverá el registro actual al primer registro que cumpla el nuevo valor.  
   
- El **filtro** propiedad toma un argumento de tipo variant. Este valor representa uno de los tres métodos para usar el **filtro** propiedad: una cadena de criterios, un **FilterGroupEnum** constante o una matriz de marcadores. Para obtener más información, consulte el filtrado con una cadena de criterios, filtrar por una constante y filtrar por marcadores más adelante en este tema.  
+ La propiedad **Filter** toma un argumento Variant. Este valor representa uno de los tres métodos para usar la propiedad **Filter** : una cadena de criterios, una constante **FilterGroupEnum** o una matriz de marcadores. Para obtener más información, vea filtrar con una cadena de criterios, filtrar con una constante y filtrar con marcadores más adelante en este tema.  
   
 > [!NOTE]
->  Cuando sepa los datos que desea seleccionar, es normalmente más eficaz para abrir un **Recordset** con una instrucción SQL que filtra el conjunto de resultados, en lugar de depender de eficazmente la **filtro** propiedad.  
+>  Cuando conozca los datos que desea seleccionar, normalmente es más eficaz abrir un **conjunto de registros** con una instrucción SQL que filtre el conjunto de resultados, en lugar de confiar en la propiedad **Filter** .  
   
- Para quitar un filtro en un **Recordset**, utilice el **adFilterNone** constante. Establecer el **filtro** propiedad en una cadena de longitud cero ("") tiene el mismo efecto que usar el **adFilterNone** constante.  
+ Para quitar un filtro de un **conjunto de registros**, use la constante **adFilterNone** . Establecer la propiedad **Filter** en una cadena de longitud cero ("") tiene el mismo efecto que el uso de la constante **adFilterNone** .  
   
-### <a name="filtering-with-a-criteria-string"></a>Con una cadena de criterios de filtrado  
- La cadena de criterios consta de las cláusulas en el formulario *NombreCampo Operador valor* (por ejemplo, `"LastName = 'Smith'"`). Puede crear cláusulas compuestas concatenando cláusulas individuales con **AND** (por ejemplo, `"LastName = 'Smith' AND FirstName = 'John'"`) y **o** (por ejemplo, `"LastName = 'Smith' OR LastName = 'Jones'"`). Utilice las siguientes directrices para las cadenas de criterios:  
+### <a name="filtering-with-a-criteria-string"></a>Filtrar con una cadena de criterios  
+ La cadena de criterios consta de cláusulas con el formato de *operador de valor* de tipo (por ejemplo, `"LastName = 'Smith'"` ). Puede crear cláusulas compuestas mediante la concatenación de cláusulas individuales con **y** (por ejemplo, `"LastName = 'Smith' AND FirstName = 'John'"` ) y **o** (por ejemplo, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Utilice las siguientes directrices para las cadenas de criterios:  
   
--   *FieldName* debe ser un nombre de campo válido de la **Recordset**. Si el nombre del campo contiene espacios, debe incluir el nombre entre corchetes.  
+-   *FieldName* debe ser un nombre de campo válido del **conjunto de registros**. Si el nombre del campo contiene espacios, debe escribir el nombre entre corchetes.  
   
--   *Operador* debe ser uno de los siguientes: **\<** , **>** , **\< =** , **>=** , **<>** , **=** , o **como**.  
+-   El *operador* debe ser uno de los siguientes: **\<** , **>** , **\<=** , **>=** , **<>** , **=** o **like**.  
   
--   *Valor* es el valor con el que se compararán los valores de campo (por ejemplo, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilice las comillas simples (') con las cadenas y signos de número (`#`) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si *operador* es **como**, *valor* puede usar caracteres comodín. Solo el asterisco (\*) y signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. *Valor* no puede ser null.  
+-   *Value* es el valor con el que se comparan los valores de campo (por ejemplo,, `'Smith'` `#8/24/95#` , `12.345` o `$50.00` ). Use comillas simples (') con las cadenas y los signos de almohadilla ( `#` ) con las fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el *operador* es **like**, *Value* puede usar caracteres comodín. Solo el asterisco ( \* ) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. El *valor* no puede ser null.  
   
     > [!NOTE]
-    >  Para incluir las comillas simples (') en el filtro *valor*, utilice dos comillas simples para representar una. Por ejemplo, para filtrar según *o ' Malley*, debe ser la cadena de criterios `"col1 = 'O''Malley'"`. Para incluir las comillas simples al principio y al final del valor de filtro, incluya la cadena de signos de número (#). Por ejemplo, para filtrar según *'1'* , debe ser la cadena de criterios `"col1 = #'1'#"`.  
+    >  Para incluir comillas simples (') en el *valor*de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por *O'Malley*, la cadena de criterios debe ser `"col1 = 'O''Malley'"` . Para incluir comillas simples al principio y al final del valor de filtro, incluya la cadena entre signos de almohadilla (#). Por ejemplo, para filtrar por *' 1 '*, la cadena de criterios debe ser `"col1 = #'1'#"` .  
   
- No hay ninguna preferencia entre **AND** y **o**. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no se puede agrupar cláusulas combinadas por un **o** y, a continuación, unirse al grupo a otra cláusula mediante AND, como se indica a continuación.  
+ No hay ninguna prioridad entre **and** y **or**. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no puede agrupar las cláusulas Unidas por **o** y, a continuación, unir el grupo a otra cláusula con y, como se indica a continuación.  
   
 ```  
 (LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'  
 ```  
   
- En su lugar, debería crear el filtro como se indica a continuación.  
+ En su lugar, crearía este filtro como se indica a continuación.  
   
 ```  
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- En un **como** cláusula, puede usar un carácter comodín al principio y al final del patrón (por ejemplo, `LastName Like '*mit*'`) o solo al final del patrón (por ejemplo, `LastName Like 'Smit*'`).  
+ En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón (por ejemplo, `LastName Like '*mit*'` ) o solo al final del patrón (por ejemplo, `LastName Like 'Smit*'` ).  
   
-### <a name="filtering-with-a-constant"></a>Filtrar por una constante  
- Las constantes siguientes están disponibles para el filtrado **conjuntos de registros**.  
+### <a name="filtering-with-a-constant"></a>Filtrar con una constante  
+ Las constantes siguientes están disponibles para filtrar **conjuntos de registros**.  
   
 |Constante|Descripción|  
 |--------------|-----------------|  
-|**adFilterAffectedRecords**|Filtros para ver solo los registros afectados por la última **eliminar**, **Resync**, **UpdateBatch**, o **CancelBatch** llamar.|  
-|**adFilterConflictingRecords**|Filtros para ver los registros que no se pudo la última actualización por lotes.|  
-|**adFilterFetchedRecords**|Filtros para ver los registros en la memoria caché actual: es decir, los resultados de la última llamada para recuperar registros de la base de datos.|  
+|**adFilterAffectedRecords**|Filtros para ver solo los registros afectados por la llamada de última **eliminación**, **resincronización**, **UpdateBatch**o **CancelBatch** .|  
+|**adFilterConflictingRecords**|Filtros para ver los registros que dieron error en la última actualización por lotes.|  
+|**adFilterFetchedRecords**|Filtra para ver los registros en la caché actual; es decir, los resultados de la última llamada para recuperar los registros de la base de datos.|  
 |**adFilterNone**|Quita el filtro actual y restaura todos los registros para su visualización.|  
-|**adFilterPendingRecords**|Los filtros para ver solo los registros que han cambiado pero que no se han enviado al servidor. Solo es aplicable a modo de actualización por lotes.|  
+|**adFilterPendingRecords**|Filtros para ver solo los registros que han cambiado pero que todavía no se han enviado al servidor. Aplicable solo para el modo de actualización por lotes.|  
   
- Las constantes de filtro que sea más fácil resolver conflictos de registros individuales durante el modo de actualización por lotes, ya que permite ver, por ejemplo, los registros que se vieron afectados durante la última **UpdateBatch** llamada al método, como se muestra en el ejemplo siguiente.  
+ Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método **UpdateBatch** , tal como se muestra en el ejemplo siguiente.  
   
  `Attribute VB_Name = "modExaminingData"`  
   
-### <a name="filtering-with-bookmarks"></a>Filtrar por marcadores  
- Por último, puede pasar una matriz variant de marcadores para el **filtro** propiedad. El cursor resultante contendrá solo aquellos registros cuyo marcador se pasó a la propiedad. En el ejemplo de código siguiente se crea una matriz de los marcadores de los registros de un **Recordset** que tienen una "B" en el *ProductName* campo. A continuación, pasa la matriz a la **filtro** propiedad y muestra información sobre el resultado filtrado **Recordset**.  
+### <a name="filtering-with-bookmarks"></a>Filtrar con marcadores  
+ Por último, puede pasar una matriz variante de marcadores a la propiedad **Filter** . El cursor resultante contendrá solo los registros cuyo marcador se pasó a la propiedad. En el ejemplo de código siguiente se crea una matriz de marcadores a partir de los registros de un **conjunto de registros** que tienen una "B" en el campo *ProductName* . A continuación, pasa la matriz a la propiedad **Filter** y muestra información sobre el conjunto de **registros**filtrado resultante.  
   
 ```  
 'BeginFilterBkmk  
@@ -157,12 +157,12 @@ Loop
 ```  
   
 ## <a name="creating-a-clone-of-a-recordset"></a>Crear un clon de un conjunto de registros  
- Use la **clon** duplicar el método para crear varios **Recordset** objetos, especialmente si desea mantener más de un registro actual en un determinado conjunto de registros. Mediante el **clon** es más eficaz que crear y abrir un nuevo método **Recordset** objeto con la misma definición que el original.  
+ Utilice el método **Clone** para crear varios objetos **Recordset** duplicados, especialmente si desea mantener más de un registro actual en un conjunto determinado de registros. Usar el método **Clone** es más eficaz que crear y abrir un nuevo objeto de **conjunto de registros** con la misma definición que el original.  
   
- El registro actual de un clon recién creado se establece originalmente en el primer registro. El puntero de registro actual en un clonado **Recordset** no está sincronizada con el original, o viceversa. Puede navegar por separado en cada **Recordset**.  
+ El registro actual de un clon recién creado se establece originalmente en el primer registro. El puntero de registro actual de un **conjunto de registros** clonado no está sincronizado con el original ni viceversa. Puede navegar de forma independiente en cada **conjunto de registros**.  
   
- Cambios en uno **Recordset** objeto están visibles en todos sus clones, independientemente del tipo de cursor. Sin embargo, después de ejecutar [Requery](../../../ado/reference/ado-api/requery-method.md) en el original **Recordset**, los clones ya no se sincronizarán con el original.  
+ Los cambios que realice en un objeto de **conjunto de registros** serán visibles en todos sus clones, independientemente del tipo de cursor. Sin embargo, después de ejecutar [Requery](../../../ado/reference/ado-api/requery-method.md) en el **conjunto de registros**original, los clones ya no se sincronizarán con el original.  
   
- Cierre el original **Recordset** no cierra sus copias, ni tampoco cerrar cierre una copia del original, o cualquiera de las demás copias.  
+ Al cerrar el **conjunto de registros** original no se cierran sus copias, ni al cerrar una copia se cierra el original o cualquiera de las demás copias.  
   
- Puede clonar un **Recordset** objeto sólo si admite marcadores. Los valores de marcador son intercambiables; es decir, una referencia de marcador de un **Recordset** objeto hace referencia en el mismo registro en cualquiera de sus clones.
+ Puede clonar un objeto de **conjunto de registros** solo si admite marcadores. Los valores de marcador son intercambiables. es decir, una referencia de marcador de un objeto de **conjunto de registros** hace referencia al mismo registro en cualquiera de sus clones.

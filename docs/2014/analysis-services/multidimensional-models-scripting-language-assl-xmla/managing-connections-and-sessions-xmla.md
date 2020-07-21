@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62701993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544947"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Administrar conexiones y sesiones (XMLA)
-  *Disponibilidad de estados* es una condición durante el cual el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Dinamismo* es una condición durante el cual el servidor no recuerda la identidad y el contexto de un cliente después de que finalice una llamada al método.  
+  *Estados* es una condición en la que el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Estados* es una condición en la que el servidor no recuerda la identidad y el contexto de un cliente después de que finalice una llamada al método.  
   
- Para proporcionar disponibilidad de Estados, XML for Analysis (XMLA) admite *sesiones* que permiten una serie de instrucciones que se deben realizar juntos. Un ejemplo de este tipo de serie de instrucciones sería la creación de un miembro calculado que se vaya a utilizar en consultas posteriores.  
+ Para proporcionar Estados, XML for Analysis (XMLA) admite *sesiones* que permiten realizar una serie de instrucciones juntas. Un ejemplo de este tipo de serie de instrucciones sería la creación de un miembro calculado que se vaya a utilizar en consultas posteriores.  
   
  En general, en XMLA las sesiones se ajustan al comportamiento siguiente descrito por la especificación de OLE DB 2.6:  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62701993"
   
 -   Se pueden ejecutar varios comandos en el contexto de una sesión única.  
   
--   Compatibilidad con transacciones en el contexto XMLA es a través de los comandos específicos del proveedor enviados con el [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) método.  
+-   La compatibilidad con transacciones en el contexto XMLA se realiza a través de comandos específicos del proveedor que se envían con el método [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
  XMLA define una manera de admitir sesiones en un entorno web de modo similar al enfoque utilizado por el protocolo de creación y control de versiones distribuidas (DAV) para implementar el bloqueo en un entorno de acoplamiento flexible. Esta implementación se asemeja a DAV en que se permite al proveedor finalizar sesiones por distintas razones (por ejemplo, se supera un tiempo de espera o se produce un error de conexión). Cuando se admiten sesiones, los servicios web deben tenerlo en cuenta y estar listos para controlar conjuntos de comandos interrumpidos que se deben reiniciar.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62701993"
 |-----------------|-----------------|  
 |BeginSession|Este encabezado solicita al proveedor que cree una nueva sesión. El proveedor deber responder mediante la construcción de una nueva sesión y la devolución de su identificador de sesión como parte del encabezado Session en la respuesta SOAP.|  
 |SessionId|El área para valor contiene el identificador de sesión que se debe utilizar en cada llamada a método para el resto de la sesión. El proveedor de la respuesta SOAP envía esta etiqueta y el cliente también debe enviar este atributo con cada elemento de encabezado Session.|  
-|Session|Debe utilizarse este encabezado en cada una de las llamadas a método que tiene lugar en la sesión; además, el identificador de sesión debe incluirse en el área para valor del encabezado.|  
+|Sesión|Debe utilizarse este encabezado en cada una de las llamadas a método que tiene lugar en la sesión; además, el identificador de sesión debe incluirse en el área para valor del encabezado.|  
 |EndSession|Para finalizar la sesión, utilice este encabezado. El identificador de sesión debe incluirse en el área para valor.|  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "62701993"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  El mensaje de respuesta SOAP del proveedor incluye el identificador de sesión en el área de encabezado devuelto, el uso de la etiqueta de encabezado XMLA \<SessionId >.  
+2.  El mensaje de respuesta SOAP del proveedor incluye el identificador de sesión en el área de encabezado de devolución, utilizando la etiqueta de encabezado XMLA \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701993"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Una vez completada la sesión, el \<EndSession > etiqueta a la que se usa, que contiene el valor de Id. de sesión relacionado.  
+4.  Una vez completada la sesión, \<EndSession> se usa la etiqueta, que contiene el valor de identificador de sesión relacionado.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -105,7 +104,7 @@ ms.locfileid: "62701993"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Desarrollo con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Desarrollar con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

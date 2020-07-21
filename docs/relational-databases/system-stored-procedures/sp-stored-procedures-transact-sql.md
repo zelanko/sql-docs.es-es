@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac4bc1262eeb87aae42f11bf7c67ca0dc58848ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702781"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725641"
 ---
-# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
+# <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una lista de los procedimientos almacenados del entorno actual.  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
-`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el calificador es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_ **.** _esquema_ de **.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el calificador representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 `[ @fUsePattern = ] 'fUsePattern'`Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpreta como caracteres comodín. *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   
@@ -68,15 +68,15 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nombre del calificador del procedimiento. Esta columna puede ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nombre del propietario del procedimiento. Esta columna siempre devuelve un valor.|  
-|**PROCEDURE_NAME**|**nvarchar(134)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
+|**PROCEDURE_NAME**|**nvarchar (134)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
 |**NUM_INPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_RESULT_SETS**|**int**|Reservado para uso futuro.|  
-|**SECCIÓN**|**varchar(254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**COMENTARIOS**|**VARCHAR (254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -100,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>b. Devolver un solo procedimiento almacenado  
+### <a name="b-returning-a-single-stored-procedure"></a>B. Devolver un solo procedimiento almacenado  
  En el ejemplo siguiente se devuelve un conjunto de resultados para el procedimiento almacenado `uspLogError`.  
   
 ```  
@@ -109,8 +109,8 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos &#40;almacenados de catálogo de TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

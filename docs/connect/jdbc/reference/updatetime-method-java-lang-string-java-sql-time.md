@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2d0c97f49c4d865b5f0aa99b602e5524a0a97b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cad6f8b61c1f519b74141a05bb26819966ae5ec8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998191"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80919565"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>Método updateTime (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public void updateTime(java.lang.String columnName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateTime especifica este método updateTime en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

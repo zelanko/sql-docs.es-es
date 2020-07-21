@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 461a3a0e217fb2ad973830eaffc86ff048830b83
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953174"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80907641"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Método getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,8 +34,8 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Para obtener más información sobre el acceso a la información de diagnóstico en el registro de eventos extendidos, vea [acceso a la información de diagnóstico en el registro de eventos extendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
+## <a name="remarks"></a>Observaciones  
+ Para más información sobre el acceso a la información de diagnóstico en el registro de eventos extendidos, consulte [Acceso a información de diagnóstico en el registro de eventos extendidos](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  En el siguiente ejemplo se muestra cómo obtener el identificador de conexión:  
   
@@ -56,7 +56,7 @@ Connection cn = pcon.getConnection();
 UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();  
 ```  
   
- **getClientConnectionID** funciona independientemente de la versión del servidor a la que se conecte, pero los registros de eventos extendidos y la entrada de errores de búfer de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anillo de conectividad no estarán presentes en 2008 R2 y versiones anteriores.  
+ **getClientConnectionID** funciona independientemente de la versión del servidor a la que se conecte, pero los registros de eventos extendidos y la entrada en los errores de búfer de anillo de conectividad no estarán presentes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 y versiones anteriores.  
   
  Puede buscar el identificador de conexión en el registro de eventos extendidos para comprobar si el error se encontraba en el servidor si está habilitado el evento extendido para el registro del identificador de conexión. También puede buscar el identificador de conexión en el búfer de anillo de conexión ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://go.microsoft.com/fwlink/?LinkId=207752)) para determinados errores de conexión. Si el identificador de conexión no se encuentra en el búfer de anillo de conexión, se puede suponer que hay un error de red.  
   

@@ -1,5 +1,5 @@
 ---
-title: Implementar los paquetes mediante la utilidad de implementación | Microsoft Docs
+title: Implementar paquetes mediante la utilidad de implementación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,21 @@ helpviewer_keywords:
 - dependencies [Integration Services]
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e91890553cf06845ae35960f75120a87dbec68de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059622"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437502"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Implementar los paquetes mediante la utilidad de implementación
   Después de generar una utilidad de implementación para instalar paquetes de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un equipo distinto del que se utilizó para generar la utilidad, debe copiar la carpeta de implementación en el equipo de destino.  
   
  La ruta de acceso a la carpeta de implementación se especifica en la propiedad DeploymentOutputPath del proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para el que ha creado la utilidad de implementación. La ruta predeterminada es bin\Deployment, relativa al proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para más información, consulte [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md).  
   
- Para instalar los paquetes, puede utilizar el Asistente para la instalación de paquetes. Para iniciar el asistente, haga doble clic en el archivo de la utilidad de implementación una vez copiada la carpeta de implementación en el servidor. El archivo recibe el nombre \<nombre del proyecto>.SSISDeploymentManifest, y se puede buscar en la carpeta de implementación del equipo de destino.  
+ Para instalar los paquetes, puede utilizar el Asistente para la instalación de paquetes. Para iniciar el asistente, haga doble clic en el archivo de la utilidad de implementación una vez copiada la carpeta de implementación en el servidor. Este archivo se denomina \<project name> . SSISDeploymentManifest y se pueden encontrar en la carpeta de implementación del equipo de destino.  
   
 > [!NOTE]  
 >  Dependiendo de la versión del paquete que esté implementando, puede encontrar un error si tiene varias versiones diferentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en paralelo. Este error puede producirse porque la extensión de nombre de archivo .SSISDeploymentManifest es la misma para todas las versiones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Al hacer doble clic en el archivo, se llama al instalador (dtsinstall.exe) para la versión instalada más recientemente de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], que podría no ser la misma versión que la del archivo de la utilidad de implementación. Para evitar este problema, ejecute la versión correcta de dtsinstall.exe desde la línea de comandos y proporcione la ruta de acceso al archivo de la utilidad de implementación.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059622"
   
 1.  Abra la carpeta de implementación en el equipo de destino.  
   
-2.  Haga doble clic en el archivo de manifiesto \<nombre del proyecto>.SSISDeploymentManifest para iniciar el Asistente para la instalación de paquetes.  
+2.  Haga doble clic en el archivo de manifiesto, \<project name> . SSISDeploymentManifest, para iniciar el Asistente para la instalación de paquetes.  
   
 3.  En la página **Implementar paquetes SSIS** , seleccione la opción **Implementación en SQL Server** .  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66059622"
   
 8.  Si elige validar los paquetes después de la instalación, vea los resultados de la validación de los paquetes implementados.  
   
-## <a name="see-also"></a>Vea también  
- [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

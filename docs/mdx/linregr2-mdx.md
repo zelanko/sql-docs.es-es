@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905521"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
@@ -37,26 +37,26 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número que representa los valores del eje X.  
   
-## <a name="remarks"></a>Comentarios  
- La regresión lineal, que utiliza el método de mínimos cuadrados, calcula la ecuación de la recta de regresión (es decir, la de mejor ajuste para un conjunto de puntos). La recta de regresión tiene la siguiente ecuación, donde una es la pendiente y b es la intersección:  
+## <a name="remarks"></a>Observaciones  
+ La regresión lineal, que utiliza el método de mínimos cuadrados, calcula la ecuación de la recta de regresión (es decir, la de mejor ajuste para un conjunto de puntos). La línea de regresión tiene la siguiente ecuación, donde a es la pendiente y b es la intercepción:  
   
  y = ax+b  
   
- El **LinRegR2** función evalúa el setagainst especificada la primera expressionto numérico obtener los valores del eje y. A continuación, la función evalúa el conjunto especificado con la segunda expresión numérica, si se especifica, para obtener los valores del eje X. Si no especifica el segundo expressionis numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x. No se especifica el x-axisargument se suele usar con la dimensión de tiempo.  
+ La función **LinRegR2** evalúa el setagainst especificado en la primera expresión numérica para obtener los valores del eje y. A continuación, la función evalúa el conjunto especificado con la segunda expresión numérica, si se especifica, para obtener los valores del eje X. Si no se especifica la segunda expresión numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x. El no especificar el argumento del eje Xes habitual con la dimensión Time.  
   
- Después de obtener el conjunto de puntos, la **LinRegR2** función devuelve el R estadístico<sup>2</sup> que describe el ajuste de la ecuación lineal a los puntos.  
+ Después de obtener el conjunto de puntos, la función **LinRegR2** devuelve el R<sup>2</sup> estadístico que describe el ajuste de la ecuación lineal a los puntos.  
   
 > [!NOTE]  
->  El **LinRegR2** función la omite las celdas vacías o las celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
+>  La función **LinRegR2** omite las celdas vacías o las celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente devuelve el objeto estadístico R<sup>2</sup> que describe la adecuación de la ecuación de regresión lineal a los puntos de las ventas por unidad y las medidas de ventas de tienda.  
+ En el ejemplo siguiente se devuelve el R<sup>2</sup> estadístico que describe el tamaño de la ecuación de regresión lineal a los puntos de las medidas de ventas por unidad y ventas por tienda.  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

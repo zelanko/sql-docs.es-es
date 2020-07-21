@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_remoteoption
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 93e65bb7d72b15dcb29763a1c02845b6ff5faa01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 01f87d00c1f0a8cc9ff7ca492092738a96f98c06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68215933"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901409"
 ---
-# <a name="spremoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_remoteoption-transact-sql"></a>sp_remoteoption (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra o cambia las opciones de un inicio de sesión remoto definido en el servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,7 +50,7 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
   
  `The trusted option in remote login mapping is no longer supported.`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

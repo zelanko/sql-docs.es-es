@@ -1,5 +1,6 @@
 ---
 title: Creación de una suscripción de inserción | Microsoft Docs
+description: Obtenga información sobre cómo crear una suscripción de inserción en SQL Server mediante SQL Server Management Studio, Transact-SQL o Replication Management Objects.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,21 +18,21 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773952"
 ---
 # <a name="create-a-push-subscription"></a>Creación de una suscripción de inserción
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   En este tema se describe cómo crear una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Para más información sobre cómo crear una suscripción de inserción para un suscriptor que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
 Cree una suscripción de inserción en el publicador o en el suscriptor con el Asistente para nuevas suscripciones. Siga las páginas del asistente para:  
   
 - Especificar el publicador y la publicación.  
@@ -58,7 +59,7 @@ Cree una suscripción de inserción en el publicador o en el suscriptor con el A
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Para crear una suscripción de inserción desde el publicador  
   
-1. Conéctese al publicador en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1. Conéctese al publicador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y expanda el nodo de servidor.  
   
 2. Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -74,7 +75,7 @@ Cree una suscripción de inserción en el publicador o en el suscriptor con el A
   
 3. Haga clic con el botón secundario en la carpeta **Suscripciones locales** y, a continuación, seleccione **Nuevas suscripciones**.  
   
-4. En la página **Publicación** del Asistente para nuevas suscripciones, seleccione **\<Buscar publicador de SQL Server>** o **\<Buscar publicador de Oracle>** de la lista desplegable **Publicador**.  
+4. En la página **Publicación** del Asistente para nuevas suscripciones, seleccione **\<Find SQL Server Publisher>** o **\<Find Oracle Publisher>** en la lista desplegable **Publicador**.  
   
 5. Conéctese al publicador en el cuadro de diálogo **Conectar al servidor** .  
   
@@ -82,7 +83,7 @@ Cree una suscripción de inserción en el publicador o en el suscriptor con el A
   
 7. Complete las páginas del Asistente para nuevas suscripciones.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
 Las suscripciones de inserción se pueden crear mediante programación usando procedimientos almacenados de replicación. Los procedimientos almacenados que se usen dependerán del tipo de publicación a la que corresponda la suscripción.  
   
 > [!IMPORTANT]
@@ -107,7 +108,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
      > [!NOTE]
      > Las conexiones que se realicen a través de la Autenticación integrada de Windows siempre usarán las credenciales de Windows que especifican **\@job_login** y **\@job_password**. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-   - (Opcional) El valor **0** para **\@subscriber_security_mode** y la información de inicio de sesión [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **\@subscriber_login** y **\@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
+   - (Opcional) Un valor de **0** para **\@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@subscriber_login** y **\@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
   
    - Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Especificar programaciones de sincronización](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -150,7 +151,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
 > [!IMPORTANT]
 > Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente ejemplo crea una suscripción de inserción en una publicación transaccional. Los valores de inicio de sesión y contraseña se proporcionan en tiempo de ejecución a través de variables de scripting de **sqlcmd**.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_1.sql)]  
@@ -159,7 +160,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/create-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects  
+##  <a name="using-replication-management-objects"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects  
  Las suscripciones de inserción se pueden crear mediante programación usando Replication Management Objects (RMO). Las clases RMO que se utilizan para crear una suscripción de inserción dependen del tipo de publicación para el que se crea la suscripción.  
   
 > [!IMPORTANT]
@@ -177,7 +178,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
 5. Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
+6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
   
 7. Establezca las siguientes propiedades de la suscripción:  
   
@@ -217,7 +218,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
 5. Si la base de datos de suscripciones no existe, créela con la clase <xref:Microsoft.SqlServer.Management.Smo.Database> . Para obtener más información, consulte [Crear, modificar y eliminar bases de datos](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
-6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
+6. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
   
 7. Establezca las siguientes propiedades de la suscripción:  
   
@@ -245,7 +246,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
 > [!IMPORTANT]  
 > Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores proporcionados para todas las propiedades, incluido <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, se envían al distribuidor como texto simple. Debe cifrar la conexión entre el publicador y su distribuidor remoto antes de llamar al método <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> . Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  En este ejemplo se crea una suscripción de inserción para una publicación transaccional. Las credenciales de la cuenta de Windows utilizada para ejecutar el trabajo del Agente de distribución se pasan en tiempo de ejecución.  
   
  [!code-cs[HowTo#rmo_CreateTranPushSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_createtranpushsub)]  
@@ -258,7 +259,7 @@ Las suscripciones de inserción se pueden crear mediante programación usando pr
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades de una suscripción de inserción](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   

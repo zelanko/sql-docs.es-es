@@ -10,23 +10,23 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, using with ADO MD
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 591a10e8c91aa22f939ff48f341b376bbd8ebe1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923145"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748005"
 ---
 # <a name="using-ado-with-ado-md"></a>Uso de ADO con ADO MD
-ADO y ADO MD son modelos de objetos independientes pero relacionadas. ADO proporciona objetos para conectarse a orígenes de datos, ejecutar comandos, recuperar datos tabulares y metadatos de esquema en formato tabular y ver la información de error de proveedor. ADO MD proporciona objetos para recuperar datos multidimensionales y ver los metadatos de esquema multidimensional.  
+ADO y ADO MD están relacionados pero modelos de objetos independientes. ADO proporciona objetos para conectarse a orígenes de datos, ejecutar comandos, recuperar datos tabulares y metadatos de esquema en un formato tabular, y ver la información de error del proveedor. ADO MD proporciona objetos para recuperar datos multidimensionales y ver metadatos de esquema multidimensionales.  
   
- Cuando se trabaja con un MDP, puede elegir usar ADO, ADO MD o ambos con su aplicación. Haciendo referencia a las dos bibliotecas dentro de su proyecto, tendrá acceso completo a la funcionalidad proporcionada por su MDP.  
+ Cuando trabaja con un MDP, puede elegir usar ADO, ADO MD o ambos con su aplicación. Al hacer referencia a ambas bibliotecas dentro del proyecto, tendrá acceso completo a la funcionalidad proporcionada por el MDP.  
   
- Es útil con frecuencia para los usuarios obtener una vista de tabla de un conjunto de datos multidimensional. Puede hacerlo mediante el uso de la propiedad ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Especificar el origen de su [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) como el ***origen*** parámetro para el [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de un **Recordset**, en lugar de como el origen de un ADO MD **Cellset**.  
+ A menudo, resulta útil para los consumidores obtener una vista plana y tabular de un conjunto de información multidimensional. Puede hacerlo mediante el objeto de conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de ADO. Especifique el origen del conjunto de [celdas](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) como parámetro de ***origen*** para el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) de un conjunto de registros, en lugar de como el origen de un **conjunto**de **celdas**ADO MD.  
   
- También puede ser útil ver los metadatos de esquema en una vista tabular en lugar de como una jerarquía de objetos. ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método en el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto permite al usuario abrir un **Recordset** que contiene información de esquema. El ***QueryType*** parámetro de la **OpenSchema** método tiene varios [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valores que se refieren específicamente a los proveedores de datos multidimensionales. Estos valores son los siguientes:  
+ También puede ser útil ver los metadatos del esquema en una vista tabular en lugar de como una jerarquía de objetos. El método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) de ADO en el objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) permite al usuario abrir un **conjunto de registros** que contiene información del esquema. El parámetro ***QueryType*** del método **OpenSchema** tiene varios valores [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) que se relacionan específicamente con MDPS. Estos valores son los siguientes:  
   
 -   **adSchemaCubes**  
   
@@ -40,13 +40,13 @@ ADO y ADO MD son modelos de objetos independientes pero relacionadas. ADO propor
   
 -   **adSchemaMembers**  
   
- Para usar los valores de enumeración de ADO con ADO MD propiedades o métodos, el proyecto debe hacer referencia a bibliotecas de ADO y ADO MD. Por ejemplo, puede utilizar ADO **adState** valores de enumeración con el ADO MD [estado](../../../ado/reference/ado-md-api/state-property-ado-md.md) propiedad. Para obtener más información acerca de cómo establecer referencias a bibliotecas, consulte la documentación de la herramienta de desarrollo.  
+ Para usar valores de enumeración de ADO con ADO MD propiedades o métodos, el proyecto debe hacer referencia a las bibliotecas de ADO y ADO MD. Por ejemplo, puede usar los valores de enumeración de ADO **adState** con la propiedad ADO MD [State](../../../ado/reference/ado-md-api/state-property-ado-md.md) . Para obtener más información acerca de cómo establecer referencias a bibliotecas, consulte la documentación de la herramienta de desarrollo.  
   
- Para obtener más información sobre los métodos y objetos ADO, vea el [referencia de API de ADO](../../../ado/reference/ado-api/ado-api-reference.md).  
+ Para obtener más información sobre los objetos y métodos de ADO, vea la referencia de la [API de ADO](../../../ado/reference/ado-api/ado-api-reference.md).  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modelo de objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [Información general de los esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programar con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Trabajo con datos multidimensionales](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

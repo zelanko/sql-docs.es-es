@@ -20,16 +20,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c992148017f6a3ecb383e85ad5bbfcc3a3ec3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108909"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operaciones de copia de seguridad y restauración de Reporting Services
   En este tema se ofrece información general acerca de todos los archivos de datos que se usan en una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se describe cuándo y cómo se debe realizar una copia de seguridad de los mismos. La parte más importante de una estrategia de recuperación es desarrollar un plan de copias de seguridad y restauración de los archivos de base de datos del servidor de informes. Sin embargo, una estrategia de recuperación más completa incluiría copias de seguridad de las claves de cifrado, extensiones o ensamblados personalizados, archivos de configuración y archivos de origen para informes y modelos.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
  A menudo se usan operaciones de copias de seguridad y restauración para mover la totalidad o una parte de la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66108909"
 >  Si el servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está en modo de SharePoint, hay que tener en cuenta otras bases de datos adicionales, incluidas las bases de datos de configuración de SharePoint y la base de datos de alertas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En el modo de SharePoint, se crean tres bases de datos para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las bases de datos **reportserver**, **reportservertempdb**y **dataalerting** . Para obtener más información, vea [Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services](../backup-and-restore-reporting-services-sharepoint-service-applications.md).  
   
 ## <a name="backing-up-the-encryption-keys"></a>Realizar copias de seguridad de claves de cifrado  
- La primera vez que se configura una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , se recomienda realizar una copia de seguridad de las claves de cifrado. Asimismo, se debería realizar una copia de seguridad de las claves siempre que se cambie la identidad de las cuentas de servicio o se cambie el nombre del equipo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para los servidores de informes en modo de SharePoint, vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
+ La primera vez que se configura una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , se recomienda realizar una copia de seguridad de las claves de cifrado. Asimismo, se debería realizar una copia de seguridad de las claves siempre que se cambie la identidad de las cuentas de servicio o se cambie el nombre del equipo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md). Para los servidores de informes en modo de SharePoint, vea la sección "administración de claves" de [administrar una aplicación de servicio de SharePoint de Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
   
 ## <a name="backing-up-the-configuration-files"></a>Realizar copias de seguridad de archivos de configuración  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa archivos de configuración para almacenar la configuración de aplicación. Debe realizarse una copia de seguridad de estos archivos la primera vez que se configura el servidor y después de que se implementen extensiones personalizadas. Debe realizar una copia de seguridad de los siguientes archivos:  
@@ -82,12 +82,12 @@ ms.locfileid: "66108909"
   
  Compruebe que dispone de una copia de seguridad de las extensiones personalizadas y de los ensamblados personalizados que utilice.  
   
-## <a name="see-also"></a>Vea también  
- [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+## <a name="see-also"></a>Consulte también  
+ [Base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Archivos de configuración de Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Utilidad rskeymgmt &#40;SSRS&#41;](../tools/rskeymgmt-utility-ssrs.md)   
- [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Administrar una base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
+ [Copiar bases de datos con copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
+ [Administrar una base de datos del servidor de informes &#40;el modo nativo de SSRS&#41;](../report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

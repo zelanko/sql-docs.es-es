@@ -1,7 +1,8 @@
 ---
-title: 'Restaurar la base de datos en el punto de error: Recuperación completa | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restauración de la base de datos en el punto de error: recuperación completa'
+description: En este artículo se explica cómo restaurar una base de datos de SQL Server hasta el punto de error en las bases de datos que usan los modelos de recuperación completa u optimizados para cargas masivas de registros.
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a028fc4ee35caf1b4b0900a4042691188a05fb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e63d8c84b455fbcf991485486bb7bb197032827a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737710"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>Restaurar la base de datos en el punto de error: Recuperación completa
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   En este tema se explica cómo realizar una restauración hasta el momento del error. Este tema solo es relevante para las bases de datos que utilizan los modelos de recuperación completa u optimizado para cargas masivas de registros.  
   

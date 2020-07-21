@@ -1,5 +1,5 @@
 ---
-title: Destino del histograma | Microsoft Docs
+title: Destino de histograma | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb124ef949849561a6bca0ba4016b40c1343384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932846"
 ---
 # <a name="histogram-target"></a>Destino del histograma
   El destino del histograma agrupa las generaciones de un tipo de evento concreto en datos del evento. El recuento de las agrupaciones de eventos se realiza tomando como base una acción o columna de evento especificada. Puede utilizar el destino del histograma para solucionar problemas de rendimiento. Mediante la identificación de los eventos que se producen con más frecuencia, puede buscar "zonas activas" que indiquen la causa posible de un problema de rendimiento.  
@@ -29,9 +28,9 @@ ms.locfileid: "66064699"
 |Opción|Valores permitidos|Descripción|  
 |------------|--------------------|-----------------|  
 |slots|Un valor entero. Este valor es opcional.|Un valor especificado por el usuario que indica el número máximo de agrupaciones que se van a conservar. Cuando se alcanza este valor, se omiten los nuevos eventos que no pertenecen a los grupos existentes.<br /><br /> Tenga en cuenta que, para mejorar el rendimiento, el número de zona se redondea a la siguiente potencia de 2.|  
-|filtering_event_name|Cualquier evento presente en la sesión de eventos extendidos. Este valor es opcional.|Un valor especificado por el usuario que se utiliza para identificar una clase de eventos. Solamente se crean depósitos de las instancias del evento especificado. Todos los demás eventos se omiten.<br /><br /> Si especifica este valor, debe usar el formato: *package_name*.*event_name*, por ejemplo `'sqlserver.checkpoint_end'`. Puede identificar el nombre del paquete utilizando la consulta siguiente:<br /><br /> Seleccione p.name, se.event_name<br />DESDE se sys.dm_xe_session_events<br />Únase a p sys.dm_xe_packages<br />EN se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Si no especifica el valor filtering_event_name, source_type se debe establecer en 1 (valor predeterminado).|  
+|filtering_event_name|Cualquier evento presente en la sesión de eventos extendidos. Este valor es opcional.|Un valor especificado por el usuario que se utiliza para identificar una clase de eventos. Solamente se crean depósitos de las instancias del evento especificado. Todos los demás eventos se omiten.<br /><br /> Si especifica este valor, debe usar el formato: *package_name*.*event_name*, por ejemplo `'sqlserver.checkpoint_end'`. Puede identificar el nombre del paquete utilizando la consulta siguiente:<br /><br /> Seleccione p.name, se event_name<br />DESDE sys. dm_xe_session_events se<br />JOIN sys. dm_xe_packages p<br />EN se_event_package_guid = p. GUID<br />ORDER BY p.name, se event_name<br /><br /> <br /><br /> Si no especifica el valor filtering_event_name, source_type se debe establecer en 1 (valor predeterminado).|  
 |source_type|El tipo de objeto en el que se basa el depósito. Este valor es opcional y si no se especifica, tiene un valor predeterminado de 1.|Puede tener uno de los siguientes valores:<br /><br /> 0 para un evento<br /><br /> 1 para una acción|  
-|origen|Columna de evento o nombre de acción.|Columna de evento o nombre de acción que se usan como origen de datos.<br /><br /> Al especificar una columna de evento para el origen, debe especificar una columna del evento que se utiliza para el valor filtering_event_name. Puede identificar las columnas posibles utilizando la siguiente consulta:<br /><br /> Seleccione Nombre FROM sys.dm_xe_object_columns<br />Object_name WHERE = '\<eventname >'<br />Y column_type! = 'readonly'<br /><br /> Al especificar una columna de evento para el origen, no tiene que incluir el nombre del paquete en el valor de origen.<br /><br /> Al especificar un nombre de acción para el origen, debe utilizar una de las acciones que se configuran para la recopilación en la sesión de eventos para la que se utiliza este destino. Para buscar posibles valores para el nombre de acción, puede consultar la columna de action_name de la vista sys.dm_xe_sesssion_event_actions.<br /><br /> Si usa un nombre de acción como origen de datos, debe especificar el valor de origen mediante el formato: *package_name*.*action_name*.|  
+|source|Columna de evento o nombre de acción.|Columna de evento o nombre de acción que se usan como origen de datos.<br /><br /> Al especificar una columna de evento para el origen, debe especificar una columna del evento que se utiliza para el valor filtering_event_name. Puede identificar las columnas posibles utilizando la siguiente consulta:<br /><br /> Seleccione nombre en sys. dm_xe_object_columns<br />WHERE object_name = ' \<eventname> '<br />Y column_type! = ' readonly '<br /><br /> Al especificar una columna de evento para el origen, no tiene que incluir el nombre del paquete en el valor de origen.<br /><br /> Al especificar un nombre de acción para el origen, debe utilizar una de las acciones que se configuran para la recopilación en la sesión de eventos para la que se utiliza este destino. Para buscar posibles valores para el nombre de acción, puede consultar la columna de action_name de la vista sys.dm_xe_sesssion_event_actions.<br /><br /> Si usa un nombre de acción como origen de datos, debe especificar el valor de origen mediante el formato: *package_name*.*action_name*.|  
   
  En el ejemplo siguiente se muestra a un alto nivel cómo el destino del histograma recopila datos. En este ejemplo, desea utilizar el destino del histograma para realizar un recuento del número de esperas de cada tipo de espera que se han producido. Para ello, debe especificar las opciones siguientes al definir el destino del histograma:  
   
@@ -47,17 +46,17 @@ ms.locfileid: "66064699"
 |--------------------------|-------------------------|  
 |wait_info|file_io|  
 |wait_info|file_io|  
-|wait_info|red|  
-|wait_info|red|  
-|wait_info|en suspensión|  
+|wait_info|network|  
+|wait_info|network|  
+|wait_info|en reposo|  
   
  Los valores de tipo de espera se clasificarían en tres ranuras, con los valores y recuentos de ranura siguientes:  
   
-|Valor|Recuento de ranura|  
+|Value|Recuento de ranura|  
 |-----------|----------------|  
 |file_io|2|  
-|red|2|  
-|en suspensión|1|  
+|network|2|  
+|en reposo|1|  
   
  El destino del histograma solo conserva los datos del evento correspondientes al origen especificado. En algunos casos, es posible que los datos del evento sean demasiado grandes para conservarlos al completo, en cuyo caso se truncan los datos. Cuando se truncan los datos de eventos, el número de bytes se graba y se muestra como una salida XML.  
   
@@ -101,10 +100,10 @@ WHERE xe.name = 'session_name'
 </Slots>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [SQL Server destinos de eventos extendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo (Analysis Services - datos multidimensionales) de las columnas de clave | Microsoft Docs
+title: Cuadro de diálogo columnas de clave (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0758c814a7edce134be01ebf766a12832e942a61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079472"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543708"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Columnas de clave (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Columnas de clave** para cambiar la propiedad **KeyColumns** de un atributo. Para más información, vea [Modificar la propiedad KeyColumns de un atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
- **Para mostrar el cuadro de diálogo columnas de clave**  
+ **Para mostrar el cuadro de diálogo Columnas de clave**  
   
--   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], seleccione un atributo y, en la ventana **Propiedades** , haga clic en el botón de puntos suspensivos ( **…** ) asociado a la propiedad **KeyColumns** de dicho atributo.  
+-   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], seleccione un atributo y, en la ventana **Propiedades** , haga clic en el botón de puntos suspensivos (**…**) asociado a la propiedad **KeyColumns** de dicho atributo.  
   
 ## <a name="options"></a>Opciones  
  **Tabla de origen**  
@@ -60,7 +59,7 @@ ms.locfileid: "66079472"
  **<**  
  Haga clic para quitar la columna seleccionada de las columnas de la lista **Columnas de clave**.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

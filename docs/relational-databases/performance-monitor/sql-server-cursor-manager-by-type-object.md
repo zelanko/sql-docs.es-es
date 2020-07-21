@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a5d93f420ba40e71ee43cfbcd088bb97c839b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773162"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>Cursor Manager by Type (objeto de SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SQLServer:Cursor Manager by Type** proporciona contadores para supervisar cursores agrupados por tipo.  
   
  En la siguiente tabla se describen los contadores de **Cursor Manager by Type** de SQL Server.  
@@ -30,7 +30,7 @@ ms.locfileid: "67986695"
 |-------------------------------------|-----------------|  
 |**Cursores activos**|Número de cursores activos.|  
 |**Frecuencia de aciertos de caché**|Proporción entre los aciertos de caché y las búsquedas.|  
-|**Base de frecuencia de aciertos de caché**|Exclusivamente para uso interno.| 
+|**Base de frecuencia de aciertos de caché**|Solo para uso interno.| 
 |**Recuentos de cursores en caché**|Número de cursores de un tipo determinado en la caché.|  
 |**Recuentos de uso de caché de cursor/seg.**|Número de veces que se ha utilizado cada tipo de cursor en caché.|  
 |**Uso de memoria de cursores**|Cantidad de memoria consumida por los cursores en kilobytes (KB).|  

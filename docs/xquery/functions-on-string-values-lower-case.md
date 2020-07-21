@@ -1,5 +1,6 @@
 ---
-title: Función de letra minúscula (XQuery) | Microsoft Docs
+title: Función en minúsculas (XQuery) | Microsoft Docs
+description: Obtenga información sobre la función XQuery en minúsculas () que convierte cada carácter de una cadena especificada en su equivalente en minúsculas.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720062"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funciones usadas en valores de cadena: lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  La función de letra minúscula convierte cada carácter de *$arg* su minúsculas equivalente. La conversión de grafía binaria de Microsoft Windows para los puntos de código Unicode especifica cómo se convierten los caracteres a letra minúscula. Esta norma no es idéntica a la asignación para la norma de punto de código Unicode.  
+  La función en minúsculas convierte cada carácter de *$arg* en su equivalente en minúsculas. La conversión de grafía binaria de Microsoft Windows para los puntos de código Unicode especifica cómo se convierten los caracteres a letra minúscula. Esta norma no es idéntica a la asignación para la norma de punto de código Unicode.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +48,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Cambiar una cadena a letra mayúscula  
- En el ejemplo siguiente se cambia la cadena de entrada ' abcDEF! @4' a minúsculas.  
+ En el ejemplo siguiente se cambia la cadena de entrada ' abcDEF! @4 ' en minúsculas.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -58,7 +59,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>b. Buscar una cadena de caracteres específica  
+### <a name="b-search-for-a-specific-character-string"></a>B. Buscar una cadena de caracteres específica  
  En este ejemplo se muestra cómo utilizar la función de letra minúscula para realizar una búsqueda sin distinción entre mayúsculas y minúsculas.  
   
 ```  
@@ -122,7 +123,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

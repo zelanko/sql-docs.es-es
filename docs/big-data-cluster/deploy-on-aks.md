@@ -1,47 +1,48 @@
 ---
 title: Configurar Azure Kubernetes Service
-titleSuffix: SQL Server big data clusters
-description: Aprenda a configurar Azure Kubernetes Service (AKS) para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] las implementaciones.
+titleSuffix: SQL Server Big Data Clusters
+description: Obtenga información sobre cómo configurar Azure Kubernetes Service (AKS) para las implementaciones del clúster de macrodatos de SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
-ms.translationtype: MT
+ms.openlocfilehash: 6a725cdbc5424da3820e5cd404306465482b3d94
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016888"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606937"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar Azure Kubernetes Service para implementaciones de clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo configurar Azure Kubernetes Service (AKS) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para las implementaciones.
+En este artículo, se describe cómo configurar Azure Kubernetes Service (AKS) para las implementaciones del [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
 Con AKS, es fácil crear, configurar y administrar un clúster de máquinas virtuales preconfiguradas con un clúster de Kubernetes para ejecutar aplicaciones en contenedores. Esto le permite usar sus aptitudes existentes o aprovechar un amplio y creciente grupo de expertos de la comunidad para implementar y administrar aplicaciones basadas en contenedor en Microsoft Azure.
 
 En este artículo, se describen los pasos para implementar Kubernetes en AKS con la CLI de Azure. Si no tiene una suscripción de Azure, cree una cuenta gratuita antes de empezar.
 
 > [!TIP]
-> También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](deploy-notebooks.md) de Azure Data Studio.
+> También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](notebooks-deploy.md) de Azure Data Studio.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Implementar las herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
    - **CLI de Azure**
 
-- Versión mínima 1,13 para el servidor Kubernetes. Para AKS, necesita usar el parámetro `--kubernetes-version` para especificar una versión distinta de la predeterminada.
+- Versión mínima 1.13 para el servidor de Kubernetes. Para AKS, necesita usar el parámetro `--kubernetes-version` para especificar una versión distinta de la predeterminada.
 
 - Para garantizar una implementación correcta y una experiencia óptima al validar escenarios básicos en AKS, puede usar un solo nodo o un clúster de AKS de varios nodos, con estos recursos disponibles:
    - 8 CPU virtuales en todos los nodos
-   - 64 GB de memoria por máquina virtual
+   - 64 GB de memoria por VM
    - 24 o más discos conectados en todos los nodos
 
    > [!TIP]
@@ -67,6 +68,12 @@ Un grupo de recursos de Azure es un grupo lógico en el que se implementan y adm
 
    ```azurecli
    az account set --subscription <subscription id>
+   ```
+
+1. Use este comando para identificar la región de Azure en la que quiere implementar el clúster y los recursos:
+
+   ```azurecli
+   az account list-locations -o table
    ```
 
 1. Para crear un grupo de recursos, use el comando **az group create**. En el ejemplo siguiente, se crea un grupo de recursos denominado `sqlbdcgroup` en la ubicación `westus2`.
@@ -101,7 +108,7 @@ Antes de ejecutar el comando, actualice el script. Reemplace `<Azure data center
 
 Seleccione la versión disponible más reciente para el clúster. Anote el número de versión. Lo usará en el paso siguiente.
 
-## <a name="create-a-kubernetes-cluster"></a>Crear un clúster de Kubernetes
+## <a name="create-a-kubernetes-cluster"></a>Creación de un clúster de Kubernetes
 
 1. Para crear un clúster de Kubernetes en AKS, use el comando [az aks create](https://docs.microsoft.com/cli/azure/aks). En el ejemplo siguiente, se crea un clúster de Kubernetes denominado *kubcluster* con un nodo de agente de Linux del tamaño **Standard_L8s**.
 
@@ -131,7 +138,7 @@ Seleccione la versión disponible más reciente para el clúster. Anote el núme
    --kubernetes-version <version number>
    ```
 
-   Puede incrementar o disminuir el número de nodos del agente de Kubernetes; para hacerlo, cambie `--node-count <n>`, donde `<n>` es el número de nodos de agente que quiere usar. Esto no incluye el nodo de Kubernetes maestro, que se administra en segundo plano mediante AKS. En el ejemplo anterior, se usa un solo nodo con fines de evaluación.
+   Puede incrementar o disminuir el número de nodos del agente de Kubernetes; para hacerlo, cambie `--node-count <n>`, donde `<n>` es el número de nodos de agente que quiere usar. Esto no incluye el nodo de Kubernetes maestro, que se administra en segundo plano mediante AKS. En el ejemplo anterior, se usa un solo nodo con fines de evaluación. También puede cambiar el valor `--node-vm-size` para seleccionar un tamaño de máquina virtual adecuado que coincida con los requisitos de la carga de trabajo. Use el comando `az vm list-sizes --location westus2 -o table` para enumerar los tamaños de máquina virtual disponibles en la región.
 
    En unos minutos, terminará de ejecutarse el comando, que devuelve información con formato JSON sobre el clúster.
 
@@ -154,15 +161,16 @@ Seleccione la versión disponible más reciente para el clúster. Anote el núme
    kubectl get nodes
    ```
 
-## <a id="troubleshoot"></a> Solucionar problemas
+## <a name="troubleshooting"></a><a id="troubleshoot"></a> Solucionar problemas
 
 Si tiene problemas para crear una instancia de Azure Kubernetes Service con los comandos anteriores, pruebe las soluciones siguientes:
 
 - Asegúrese de que ha instalado la versión más reciente de la [CLI de Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Pruebe los mismos pasos con otro grupo de recursos y nombre de clúster.
+- Vea la [documentación de solución de problemas de AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Con los pasos de este artículo, ha configurado un clúster de Kubernetes en AKS. El paso siguiente es implementar un clúster de macrodatos de SQL Server 2019 en el clúster de Kubernetes de AKS. Para obtener más información sobre cómo implementar clústeres de macrodatos, vea el artículo siguiente:
 
-[Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes](deployment-guidance.md)
+[Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md)

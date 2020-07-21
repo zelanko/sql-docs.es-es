@@ -1,5 +1,5 @@
 ---
-title: Generación de perfiles de rendimiento del controlador ODBC | Microsoft Docs
+title: Generar perfiles del rendimiento del controlador ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,14 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7e2b1e0f8ba22eacff01929ed3364dcffe0cf815
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63143594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011114"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede generar perfiles de dos tipos de datos de rendimiento:  
@@ -41,7 +40,7 @@ ms.locfileid: "63143594"
   
 -   Conectándose a un origen de datos que especifique el registro.  
   
--   Una llamada a [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador de ese control de la generación de perfiles.  
+-   Llamar a [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) para establecer los atributos específicos del controlador que controlan la generación de perfiles.  
   
  Cada proceso de la aplicación obtiene su propia copia del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y los perfiles se generan de forma global para la combinación de una copia del controlador y un proceso de la aplicación. Cuando algo en la aplicación activa la generación de perfiles, el proceso de generación de perfiles registra información de todas las conexiones activas en el controlador de esa aplicación. Se incluyen incluso las conexiones que no llamaron específicamente para la generación de perfiles.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "63143594"
   
  Si una aplicación empieza a generar perfiles en un archivo de registro y una segunda aplicación intenta empezar a generar perfiles en el mismo archivo de registro, la segunda aplicación no puede registrar ningún dato de generación de perfiles. Si la segunda aplicación empieza a generar perfiles después de que la primera haya descargado su controlador, la segunda aplicación sobrescribirá el archivo de registro de la primera aplicación.  
   
- Si una aplicación se conecta a un origen de datos que tiene la generación de perfiles habilitada, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** , a continuación, devuelve lo siguiente:  
+ Si una aplicación se conecta a un origen de datos que tiene habilitada la generación de perfiles, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** devuelve lo siguiente:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -66,7 +65,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Conexión  
   
--   red  
+-   Red  
   
 -   Time  
   
@@ -74,17 +73,17 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Estadísticas de perfil de aplicación  
   
-|Campo SQLPERF|Descripción|  
+|Campo SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Resolución mínima de la hora del reloj del servidor en milisegundos. Normalmente se indica como 0 (cero) y solo debe considerarse si el número notificado es grande. Si la resolución mínima del reloj del servidor es mayor que el intervalo probable para algunas de las estadísticas basadas en temporizador, esas estadísticas se podrían exagerar.|  
 |SQLidu|Número de instrucciones INSERT, DELETE o UPDATE después de SQL_PERF_START.|  
 |SQLiduRows|Número de instrucciones INSERT, DELETE o UPDATE después de SQL_PERF_START.|  
 |SQLSelects|Número de instrucciones SELECT procesadas después de SQL_PERF_START.|  
 |SQLSelectRows|Número de filas seleccionadas después de SQL_PERF_START.|  
-|Transactions|Número de transacciones de usuario después de SQL_PERF_START, incluidas las reversiones. Cuando una aplicación ODBC se ejecuta con SQL_AUTOCOMMIT_ON, cada comando se considera una transacción.|  
-|SQLPrepares|Número de [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) llamadas después de SQL_PERF_START.|  
-|ExecDirects|Número de **SQLExecDirect** llamadas después de SQL_PERF_START.|  
-|SQLExecutes|Número de **SQLExecute** llamadas después de SQL_PERF_START.|  
+|Transacciones|Número de transacciones de usuario después de SQL_PERF_START, incluidas las reversiones. Cuando una aplicación ODBC se ejecuta con SQL_AUTOCOMMIT_ON, cada comando se considera una transacción.|  
+|SQLPrepares|Número de llamadas a la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) después de SQL_PERF_START.|  
+|ExecDirects|Número de llamadas **SQLExecDirect** después de SQL_PERF_START.|  
+|SQLExecutes|Número de llamadas **SQLExecute** después de SQL_PERF_START.|  
 |CursorOpens|Número de veces que el controlador ha abierto un cursor del servidor después de SQL_PERF_START.|  
 |CursorSize|Número de filas en los conjuntos de resultados abiertos por los cursores después de SQL_PERF_START.|  
 |CursorUsed|Número de filas recuperadas realmente mediante el controlador de los cursores después de SQL_PERF_START.|  
@@ -97,13 +96,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|Número de identificadores de instrucciones abiertos actualmente en todas las conexiones abiertas del controlador.|  
 |MaxOpenStmt|Número máximo de identificadores de instrucciones abiertos simultáneamente después de SQL_PERF_START.|  
 |SumOpenStmt|Número de identificadores de instrucciones que se han abierto después de SQL_PERF_START.|  
-|**Estadísticas de conexión:**||  
+|**Estadísticas de conexión**||  
 |CurrentConnectionCount|Número actual de controladores de conexiones activas que la aplicación ha abierto en el servidor.|  
 |MaxConnectionsOpened|Número máximo de controladores de conexiones simultáneas abiertos después de SQL_PERF_START.|  
 |SumConnectionsOpened|Suma del número de controladores de conexión abiertos después de SQL_PERF_START.|  
 |SumConnectionTime|Suma de la cantidad de tiempo que han estado abiertas todas las conexiones después de SQL_PERF_START. Por ejemplo, si una aplicación abrió 10 conexiones y mantuvo cada conexión durante 5 segundos, el valor de SumConnectionTime sería 50 segundos.|  
 |AvgTimeOpened|Igual que SumConnectionsOpened/SumConnectionTime.|  
-|**Estadísticas de red:**||  
+|**Estadísticas de red**||  
 |ServerRndTrips|Número de veces que el controlador envió comandos al servidor y obtuvo una respuesta.|  
 |BuffersSent|Número de paquetes de flujo TDS que el controlador ha enviado a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] después de SQL_PERF_START. Los comandos grandes pueden tomar varios búferes, de modo que si se envía un comando grande al servidor y llena seis paquetes, ServerRndTrips en uno y BuffersSent se incrementa en seis.|  
 |BuffersRec|Número de paquetes TDS recibidos por el controlador desde [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] después de que la aplicación empezase a utilizar el controlador.|  
@@ -112,13 +111,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Estadísticas de tiempo  
   
-|Campo SQLPERF|Descripción|  
+|Campo SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Cantidad acumulada de tiempo que ha dedicado el controlador al procesamiento después de SQL_PERF_START, incluido el tiempo que ha pasado esperando respuestas del servidor.|  
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
- [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

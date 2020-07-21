@@ -1,5 +1,5 @@
 ---
-title: (SSIS) parámetros de Integration Services | Microsoft Docs
+title: Parámetros de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 980f25c181556ee50a51bc57dce39b60cae322fc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62892267"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436392"
 ---
 # <a name="integration-services-ssis-parameters"></a>Parámetros de Integration Services (SSIS)
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
@@ -51,7 +50,7 @@ ms.locfileid: "62892267"
   
  Puede utilizar un único parámetro para asignar un valor a varias propiedades del paquete. A una propiedad del paquete se le puede asignar un valor solo de un único parámetro.  
   
-###  <a name="executions"></a> Ejecuciones y valores de parámetros  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> Ejecuciones y valores de parámetros  
  La *ejecución* es un objeto que representa una sola instancia de ejecución del paquete. Cuando se crea una ejecución, debe especificar todos los detalles para ejecutar un paquete como los valores de los parámetros de ejecución. También puede modificar los valores de parámetros para las ejecuciones existentes.  
   
  Cuando se establece explícitamente un valor de parámetro de ejecución, el valor solo es aplicable a esa instancia de ejecución concreta. El valor de ejecución se utiliza en lugar de un valor de servidor o de un valor de diseño. Si no establece explícitamente un valor de ejecución y se ha especificado un valor de servidor, se utiliza el valor del servidor.  
@@ -82,7 +81,7 @@ ms.locfileid: "62892267"
   
  También puede utilizar el cuadro de diálogo **Ejecutar paquete** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para modificar el valor de parámetro. Para obtener más información, vea [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- También puede utilizar la opción de `/Parameter` dtexec para modificar un valor de parámetro. Para más información, consulte [dtexec Utility](packages/dtexec-utility.md).  
+ También puede utilizar la opción de `/Parameter` dtexec para modificar un valor de parámetro. Para obtener más información, consulte [utilidad dtexec](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Validación de parámetros  
  Si los valores de parámetros no se pueden resolver, la ejecución del paquete correspondiente generará un error. Para ayudar a evitar errores, puede validar los proyectos y los paquetes mediante el cuadro de diálogo **Validar** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La validación permite confirmar que todos los parámetros tienen los valores necesarios o pueden resolver los valores necesarios con referencias de entorno específicas. La validación comprueba también otros problemas comunes del paquete.  
@@ -99,7 +98,7 @@ ms.locfileid: "62892267"
 ## <a name="related-tasks"></a>Related Tasks  
  [Crear parámetros](create-parameters.md)  
   
- [Establecimiento de valores de parámetro después de la implementación del proyecto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
+ [Establecer valores de parámetro después de la implementación del proyecto](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada de blog, [Sugerencia rápida de SSIS: parámetros necesarios](https://go.microsoft.com/fwlink/?LinkId=239781), en mattmasson.com.  

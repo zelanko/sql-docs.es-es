@@ -1,5 +1,5 @@
 ---
-title: Arquitectura de acceso a la base de datos | Microsoft Docs
+title: Arquitectura de acceso a bases de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1fba8cf4f3f3553fafd2296e294db3a9105de330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b0993dc9891d6ed74f6d149692dac2555346d3d1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135555"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81306506"
 ---
 # <a name="database-access-architecture"></a>Arquitectura de acceso a base de datos
-Una de las preguntas en el desarrollo de ODBC era qué parte de la arquitectura de acceso de base de datos a estandarizar. Las interfaces de programación de SQL que se describen en la sección anterior, SQL incrustado, los módulos SQL y CLI - son solo una parte de esta arquitectura. De hecho, dado que ODBC se diseñó principalmente para conectarse a aplicaciones basadas en el equipo personal para minicomputadoras y mainframe DBMS, también había una serie de componentes de red, algunas de las cuales podrían estar estandarizado.  
+Una de las preguntas del desarrollo de ODBC era la parte de la arquitectura de acceso a la base de datos que se va a normalizar. Las interfaces de programación de SQL descritas en la sección anterior, SQL modules y CLI, son solo una parte de esta arquitectura. De hecho, dado que ODBC se diseñó principalmente para conectar las aplicaciones personales basadas en equipos a DBMS de minicomputer y de mainframe, había también una serie de componentes de red, algunos de los cuales podrían estar normalizados.  
   
  Esta sección contiene los temas siguientes.  
   

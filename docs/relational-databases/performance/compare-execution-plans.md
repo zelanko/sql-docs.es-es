@@ -17,15 +17,15 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a7e1b2c3b56086e6b08e0f14c49505796921faeb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907666"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655737"
 ---
 # <a name="compare-execution-plans"></a>Comparación de los planes de ejecución
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En este tema se describe cómo comparar las similitudes y diferencias entre los planes de ejecución gráficos reales usando la función Comparación de planes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta característica está disponible a partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.
   
 > [!NOTE]
@@ -102,6 +102,6 @@ Cuando se comparan dos planes de ejecución, las regiones del plan que **hacen b
 
     ![Selección de dos planes en Almacén de consultas](../../relational-databases/performance/media/plancomparison-querystore.png "Selección de dos planes en Almacén de consultas")   
 
-3.  Use el botón **Compare the plans for the select query in a seperate window** (Comparar los planes de la consulta seleccionada en una ventana independiente) para iniciar la comparación de planes. Después, se aplican los pasos 4 al 6 de *Comparar los planes de ejecución*. 
+3.  Use el botón **Compare the plans for the select query in a separate window** (Comparar los planes de la consulta seleccionada en una ventana independiente) para iniciar la comparación de planes. Después, se aplican los pasos 4 al 6 de *Comparar los planes de ejecución*. 
 
     ![Comparación del plan de presentación en Almacén de consultas](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Comparación del plan de presentación en Almacén de consultas") 

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_get_rpo_duration (Transact-SQL) | Microsoft Docs
+title: Sys. sp_rda_get_rpo_duration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
-ms.translationtype: MT
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8e903c3b41a8a191122fdf8499ee6b4c82dbe308
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252062"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053049"
 ---
-# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_rda_get_rpo_duration-transact-sql"></a>Sys. sp_rda_get_rpo_duration (Transact-SQL)
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Obtiene el número de horas de datos migrados que SQL Server conserva en una tabla de ensayo para ayudar a garantizar una restauración completa de la base de datos remota de Azure, en caso de que sea necesaria una restauración a un momento dado. 
   
@@ -45,14 +44,14 @@ sp_rda_get_rpo_duration @durationinhours output
   Es el número de horas (valor entero no NULL) de los datos migrados que SQL Server conserva para la base de datos habilitada para Stretch actual.    
     
 ## <a name="permissions"></a>Permisos    
- Requiere permisos db_owner.    
+ Requiere permisos de db_owner.    
     
-## <a name="remarks"></a>Comentarios    
- Para cambiar el valor, ejecute [Sys. &#40;sp_rda_set_rpo_duration de Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
+## <a name="remarks"></a>Observaciones    
+ Cambie el valor ejecutando [Sys. sp_rda_set_rpo_duration &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>Vea también    
- [sys.sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
- [Restaurar bases de datos habilitadas para Stretch (stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
+## <a name="see-also"></a>Consulte también    
+ [Sys. sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [Restaurar bases de datos habilitadas para Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     
   

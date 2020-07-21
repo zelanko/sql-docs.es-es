@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91062864b77ba3c62a87d66b8ff93068f9c10c8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003870"
 ---
 # <a name="semantic-search-sql-server"></a>Búsqueda semántica (SQL Server)
   La búsqueda semántica estadística proporciona una visión general amplia de los documentos no estructurados almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la extracción e indización de *frases clave*estadísticamente pertinentes. Entonces también usa las frases clave para identificar e indizar *documentos que son similares o están relacionados*.  
   
  Estos índices semánticos se consultan usando tres funciones de conjuntos de filas de Transact-SQL para recuperar los resultados como datos estructurados.  
   
-##  <a name="whatcanido"></a> ¿Qué puedo hacer con la búsqueda semántica?  
+##  <a name="what-can-i-do-with-semantic-search"></a><a name="whatcanido"></a>¿Qué puedo hacer con la búsqueda semántica?  
  La búsqueda semántica se basa en la características de búsqueda de texto completo existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero habilita nuevos escenarios que van más allá de las búsquedas sintácticas de palabras clave. Mientras que la búsqueda de texto completo permite consultar las *palabras* de un documento, la búsqueda semántica permite consultar el *significado* del documento. Las soluciones que ahora son posibles incluyen la extracción automática de etiquetas, la detección de contenido relacionado y la navegación jerárquica en contenido similar. Por ejemplo, puede consultar el índice de frases clave para compilar la taxonomía de una organización o un corpus de documentos. O bien, puede consultar el índice de similitud de documentos para identificar currículos que coincidan con la descripción de un trabajo.  
   
  En los ejemplos siguientes se demuestran las capacidades de la búsqueda semántica.  
   
-###  <a name="find1"></a> Buscar las frases clave en un documento  
+###  <a name="find-the-key-phrases-in-a-document"></a><a name="find1"></a>Buscar las frases clave de un documento  
  La consulta siguiente obtiene las frases clave que se identificaron en el documento de ejemplo. Muestra los resultados en orden descendente por la puntuación que clasifica la importancia estadística de cada frase clave. Esta consulta llama a la función [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
 ```sql  
@@ -50,7 +49,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
   
-###  <a name="find2"></a> Buscar documentos similares o relacionados  
+###  <a name="find-similar-or-related-documents"></a><a name="find2"></a>Buscar documentos similares o relacionados  
  La consulta siguiente obtiene los documentos que se identificaron como similares al documento de ejemplo o relacionados con este. Muestra los resultados en orden descendente por la puntuación que clasifica la similitud de los 2 documentos. Esta consulta llama a la función [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
 ```vb  
@@ -70,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a> Buscar las frases clave que hacen los documentos similares o relacionados  
+###  <a name="find-the-key-phrases-that-make-documents-similar-or-related"></a><a name="find3"></a>Buscar las frases clave que hacen que los documentos sean similares o relacionados  
  La consulta siguiente obtiene las frases clave que hacen a los 2 documentos de ejemplo similares o relacionados entre sí. Muestra los resultados en orden descendente por la puntuación que clasifica el peso de cada frase clave. Esta consulta llama a la función [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
 ```sql  
@@ -89,7 +88,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="store"></a> Almacenar documentos en SQL Server  
+##  <a name="storing-documents-in-sql-server"></a><a name="store"></a>Almacenar documentos en SQL Server  
  Antes de poder indizar documentos con búsqueda semántica, tiene que almacenar los documentos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La característica FileTable de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , convierte los archivos y documentos no estructurados en objetos de primera clase de la base de datos relacional. Como resultado, los desarrolladores de bases de datos pueden manipular documentos junto con datos estructurados en operaciones basadas en conjuntos de Transact-SQL.  
@@ -98,7 +97,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="reltasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tareas relacionadas  
  [Instalar y configurar la búsqueda semántica](install-and-configure-semantic-search.md)  
  Describe los requisitos previos de la búsqueda semántica estadística y cómo instalarlos o comprobarlos.  
   
@@ -108,13 +107,13 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Buscar frases clave en documentos con la búsqueda semántica](find-key-phrases-in-documents-with-semantic-search.md)  
  Describe cómo buscar las frases clave en documentos o columnas de texto configurados para la indización semántica estadística.  
   
- [buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md)  
+ [Buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md)  
  Describe cómo buscar documentos o valores de texto similares e información acerca de su similitud o relación en columnas configuradas para la indización semántica estadística.  
   
  [Administrar y supervisar la búsqueda semántica](manage-and-monitor-semantic-search.md)  
  Describe el proceso de indización semántica y las tareas relacionadas con la supervisión y la administración de índices.  
   
-##  <a name="relcontent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="relcontent"></a> Contenido relacionado  
  [DDL de búsqueda semántica, funciones, procedimientos almacenados y vistas](../views/views.md)  
  Enumera las instrucciones Transact-SQL y los objetos de base de datos de SQL Server agregados o cambiados para admitir la búsqueda semántica estadística.  
   

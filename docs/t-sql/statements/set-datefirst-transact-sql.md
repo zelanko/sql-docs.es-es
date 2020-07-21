@@ -25,15 +25,15 @@ ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cf22c2c398678157c58ec9d013d74993a5bfe0aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041803"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999410"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Establece el primer día de la semana en un número del 1 al 7.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "68041803"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 SET DATEFIRST { number | @number_var }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET DATEFIRST 7 ;  
@@ -59,7 +59,7 @@ SET DATEFIRST 7 ;
  *number* |  **@** _number_var_  
  Es un entero que indica el primer día de la semana. Puede ser uno de los siguientes valores.  
   
-|Valor|Primer día de la semana:|  
+|Value|Primer día de la semana:|  
 |-----------|------------------------------|  
 |**1**|Lunes|  
 |**2**|Martes|  
@@ -69,7 +69,7 @@ SET DATEFIRST 7 ;
 |**6**|Sábado|  
 |**7** (predeterminado, Inglés (EE. UU.))|Domingo|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para ver el valor actual de SET DATEFIRST, use la función [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  La opción SET DATEFIRST se establece en tiempo de ejecución, no en tiempo de análisis.  
@@ -82,7 +82,7 @@ SET DATEFIRST 7 ;
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra el día de la semana correspondiente a un valor de fecha y se muestra el efecto de cambiar el valor de `DATEFIRST`.  
   
-```  
+```sql
 -- SET DATEFIRST to U.S. English default value of 7.  
 SET DATEFIRST 7;  
   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f5dfbc1ab2481afc1b4f4b152c7748f9ac5a03a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085894"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525071"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Cambiar la discretización de una columna en un modelo de minería de datos
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discretiza valores automáticamente: es decir, agrupa los datos de numérico columna en determinados escenarios. Por ejemplo, si la información contiene datos numéricos continuos y crea un modelo de árbol de decisión, cada columna de datos continuos se discretizará automáticamente según la distribución de los datos. Si desea controlar cómo se discretizan los datos, debe cambiar las propiedades en la columna de la estructura de minería de datos que controlan cómo se usan los datos en el modelo.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]discretiza los valores de forma automática, es decir, los datos en columnas numéricas, en ciertos escenarios. Por ejemplo, si la información contiene datos numéricos continuos y crea un modelo de árbol de decisión, cada columna de datos continuos se discretizará automáticamente según la distribución de los datos. Si desea controlar cómo se discretizan los datos, debe cambiar las propiedades en la columna de la estructura de minería de datos que controlan cómo se usan los datos en el modelo.  
   
  Para más información general sobre cómo configurar las propiedades de un modelo de minería de datos, vea [Columnas del modelo de minería de datos](mining-model-columns.md).  
   
@@ -39,14 +38,14 @@ ms.locfileid: "66085894"
   
 ### <a name="to-change-the-discretization-method"></a>Para cambiar el método de discretización  
   
-1.  En el **propiedades de minería de datos** ventana, haga clic en el cuadro de texto situado junto a **contenido**y seleccione `Discretized` en la lista desplegable.  
+1.  En la ventana **propiedades de minería de datos** , haga clic en el cuadro de texto situado junto a **contenido**y seleccione `Discretized` en la lista desplegable.  
   
      La ventana <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> y <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> ya están habilitadas.  
   
-2.  En el **propiedades** ventana, haga clic en el cuadro de texto situado junto a <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> y seleccione uno de los siguientes valores: `Automatic`, `EqualAreas`, o `Cluster`.  
+2.  En la ventana **propiedades** , haga clic en el cuadro de texto situado junto a <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> y seleccione uno de los siguientes valores: `Automatic` , `EqualAreas` o `Cluster` .  
   
     > [!NOTE]  
-    >  Si el uso de la columna se establece en `Ignore`, **propiedades** ventana para la columna está en blanco.  
+    >  Si el uso de la columna está establecido en `Ignore` , la ventana **propiedades** de la columna está en blanco.  
   
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66085894"
     > [!NOTE]  
     >  Si cambia estas propiedades, se debe volver a procesar la estructura, junto con cualquier modelo que desee que use el nuevo valor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)  
   
   

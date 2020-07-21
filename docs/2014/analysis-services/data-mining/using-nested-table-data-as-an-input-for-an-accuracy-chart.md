@@ -1,5 +1,5 @@
 ---
-title: Uso de datos de la tabla anidada como entrada para un gráfico de precisión | Microsoft Docs
+title: Usar datos de tabla anidada como entrada para un gráfico de precisión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31a3952e98c1d4a7f5dd1e42f6e34a86c0432d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66082727"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520142"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usar datos de tabla anidada como entrada para un gráfico de precisión
   Al probar la precisión de un modelo de minería de datos usando datos externos, si el modelo de minería de datos contiene tablas anidadas, los datos externos también deben contener una tabla de casos y una tabla anidada asociada.  
@@ -43,7 +42,7 @@ ms.locfileid: "66082727"
   
 3.  En **Seleccionar un conjunto de datos para usarlo en un gráfico de precisión**, seleccione la opción **Especificar otro conjunto de datos**.  
   
-4.  Haga clic en el botón Examinar **(...)**  para elegir el conjunto de datos externos en una lista de vistas del origen de datos en el servidor actual.  
+4.  Haga clic en el botón examinar **(...)** para elegir el conjunto de datos externos en una lista de vistas del origen de datos en el servidor actual.  
   
 5.  Haga clic en **Seleccionar tabla de casos**. En el cuadro de diálogo **Seleccionar tabla** , elija la tabla en la vista del origen de datos que contiene los datos de los casos y, a continuación, haga clic en **Aceptar**.  
   
@@ -53,8 +52,8 @@ ms.locfileid: "66082727"
   
      Si tiene que modificar la relación entre la tabla anidada y la tabla de casos, haga clic en **Modificar combinación** para abrir el cuadro de diálogo **Crear relación** .  
   
-## <a name="see-also"></a>Vea también  
- [Elegir y asignar datos de prueba para el modelo](choose-and-map-model-testing-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Elegir y asignar los datos de prueba del modelo](choose-and-map-model-testing-data.md)   
  [Aplicar filtros a los datos de prueba del modelo](apply-filters-to-model-testing-data.md)  
   
   

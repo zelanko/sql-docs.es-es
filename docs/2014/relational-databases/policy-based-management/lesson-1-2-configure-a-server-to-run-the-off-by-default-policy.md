@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f6a17e9cc6cd3beb0626c53f03c2d83edc7c4ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061692"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Configurar un servidor para ejecutar la directiva Desactivado de forma predeterminada
   Ahora hay una directiva denominada Desactivado de forma predeterminada. En esta tarea, comprobará si el servidor cumple los requisitos de la directiva Desactivado de forma predeterminada.  
@@ -43,6 +42,6 @@ ms.locfileid: "66090641"
 10. Cierre los cuadros de diálogo **Vista detallada de resultados** y **Evaluar directivas** .  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Creación y aplicación de una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lección 2: Creación y aplicación de una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

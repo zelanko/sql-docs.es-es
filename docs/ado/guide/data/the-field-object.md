@@ -10,81 +10,81 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67923986"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763096"
 ---
 # <a name="the-field-object"></a>El objeto de campo
-Cada **campo** objeto suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también se puede representar un puntero a otro **Recordset**, que se denomina capítulo. Las excepciones, como columnas de capítulo, se explicará más adelante en esta guía.  
+Cada objeto de **campo** suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también puede representar un puntero a otro **conjunto de registros**, denominado capítulo. Las excepciones, como las columnas de capítulo, se tratarán más adelante en esta guía.  
   
- Use la **valor** propiedad de **campo** objetos para establecer o devolver datos para el registro actual. Dependiendo de la funcionalidad expone el proveedor, algunas colecciones, métodos o propiedades de un **campo** objeto no esté disponible.  
+ Utilice la propiedad **Value** de los objetos de **campo** para establecer o devolver datos para el registro actual. Dependiendo de la funcionalidad que expone el proveedor, puede que algunas colecciones, métodos o propiedades de un objeto de **campo** no estén disponibles.  
   
- Con las colecciones, métodos y propiedades de un **campo** objeto, puede hacer lo siguiente:  
+ Con las colecciones, los métodos y las propiedades de un objeto de **campo** , puede hacer lo siguiente:  
   
--   Devolver el nombre de un campo utilizando el **nombre** propiedad.  
+-   Devuelve el nombre de un campo utilizando la propiedad **Name** .  
   
--   Ver o cambiar los datos en el campo utilizando el **valor** propiedad. **Valor** es la propiedad predeterminada de la **campo** objeto.  
+-   Ver o cambiar los datos del campo con la propiedad **valor** . **Value** es la propiedad predeterminada del objeto **Field** .  
   
--   Devolver las características básicas de un campo utilizando el **tipo**, **precisión**, y **NumericScale** propiedades.  
+-   Devuelve las características básicas de un campo mediante las propiedades **Type**, **Precision**y **NumericScale** .  
   
--   Devolver el tamaño declarado de un campo utilizando el **DefinedSize** propiedad.  
+-   Devuelve el tamaño declarado de un campo mediante la propiedad **DefinedSize** .  
   
--   Devolver el tamaño real de los datos en un campo determinado mediante la **ActualSize** propiedad.  
+-   Devuelve el tamaño real de los datos de un campo determinado mediante la propiedad **ActualSize** .  
   
--   Determinar qué tipos de funcionalidad se admiten para un campo dado mediante el uso de la **atributos** propiedad y **propiedades** colección.  
+-   Determine qué tipos de funcionalidad se admiten para un campo dado mediante la propiedad **attributes** y la colección **Properties** .  
   
--   Manipular los valores de los campos que contienen datos de caracteres largos o binarios largos utilizando el **AppendChunk** y **GetChunk** métodos.  
+-   Manipular los valores de los campos que contienen datos binarios largos o de caracteres largos mediante los métodos **AppendChunk** y **GetChunk** .  
   
- Solucionar discrepancias en los valores de campo durante la actualización por lotes utilizando el **OriginalValue** y **UnderlyingValue** propiedades, si el proveedor admite las actualizaciones por lotes.  
+ Resuelva las discrepancias en los valores de campo durante la actualización por lotes mediante las propiedades **OriginalValue** y **UnderlyingValue** , si el proveedor admite las actualizaciones por lotes.  
   
-## <a name="describing-a-field"></a>Que describe un campo  
- Los temas que siguen describen las propiedades de la [campo](../../../ado/reference/ado-api/field-object.md) objetos que representan la información que describe el **campo** propio objeto: es decir, los metadatos acerca del campo. Esta información puede usarse para determinar mucho sobre el esquema de la **Recordset**. Estas propiedades incluyen **tipo**, **DefinedSize** y **ActualSize**, **nombre**, y **NumericScale**y **precisión**.  
+## <a name="describing-a-field"></a>Descripción de un campo  
+ En los temas siguientes se explican las propiedades del objeto de [campo](../../../ado/reference/ado-api/field-object.md) que representan información que describe el propio objeto de **campo** , es decir, metadatos sobre el campo. Esta información se puede usar para determinar mucho sobre el esquema del **conjunto de registros**. Entre estas propiedades se incluyen **Type**, **DefinedSize** y **ActualSize**, **Name**y **NumericScale** y **Precision**.  
   
-### <a name="discovering-the-data-type"></a>Detectar el tipo de datos  
- El **tipo** propiedad indica el tipo de datos del campo. El tipo de datos que se describen las constantes enumeradas que son compatibles con ADO en [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) en el *referencia del programador de ADO*.  
+### <a name="discovering-the-data-type"></a>Detección del tipo de datos  
+ La propiedad **Type** indica el tipo de datos del campo. Las constantes enumeradas de tipo de datos que admite ADO se describen en [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) en la *Referencia del programador de ADO*.  
   
- Para tales tipos numéricos de punto flotante **adNumeric**, puede obtener más información. El **NumericScale** propiedad indica cuántos dígitos a la derecha del separador decimal se usará para representar los valores para el **campo**. El **precisión** propiedad especifica el número máximo de dígitos utilizados para representar valores para el **campo**.  
+ En el caso de los tipos numéricos de punto flotante, como **adNumeric**, puede obtener más información. La propiedad **NumericScale** indica cuántos dígitos a la derecha del separador decimal se utilizarán para representar valores para el **campo**. La propiedad **Precision** especifica el número máximo de dígitos que se usan para representar valores para el **campo**.  
   
-### <a name="determining-field-size"></a>Determinar el tamaño de campo  
- Use la **DefinedSize** propiedad para determinar la capacidad de datos de un **campo** objeto.  
+### <a name="determining-field-size"></a>Determinar el tamaño del campo  
+ Use la propiedad **DefinedSize** para determinar la capacidad de los datos de un objeto de **campo** .  
   
- Use la **ActualSize** propiedad para devolver la longitud real de un **campo** valor del objeto. Todos los campos, el **ActualSize** propiedad es de solo lectura. Si ADO no puede determinar la longitud de la **campo** valor del objeto, el **ActualSize** propiedad devuelve **adUnknown**.  
+ Use la propiedad **ActualSize** para devolver la longitud real del valor de un objeto de **campo** . En todos los campos, la propiedad **ActualSize** es de solo lectura. Si ADO no puede determinar la longitud del valor del objeto de **campo** , la propiedad **ActualSize** devuelve **adUnknown**.  
   
- El **DefinedSize** y **ActualSize** propiedades tienen propósitos diferentes. Por ejemplo, considere un **campo** objeto con un tipo declarado de **parámetros** y un **DefinedSize** valor de propiedad de 50, que contiene un único carácter. El **ActualSize** devuelve el valor de propiedad es la longitud en bytes del carácter único.  
+ Las propiedades **DefinedSize** y **ActualSize** tienen fines diferentes. Por ejemplo, considere un objeto de **campo** con un tipo declarado de **advarchar** y un valor de propiedad **DefinedSize** de 50, que contiene un solo carácter. El valor de la propiedad **ActualSize** que devuelve es la longitud en bytes del carácter único.  
   
 ### <a name="determining-field-contents"></a>Determinar el contenido del campo  
- El identificador de la columna del origen de datos está representado por la **nombre** propiedad de la **campo**. El **valor** propiedad de la **campo** objeto devuelve o establece el contenido de los datos reales del campo. Se trata de la propiedad predeterminada.  
+ El identificador de la columna del origen de datos se representa mediante la propiedad **nombre** del **campo**. La propiedad **Value** del objeto de **campo** devuelve o establece el contenido de datos real del campo. Esta es la propiedad predeterminada.  
   
- Para cambiar los datos en un campo, establezca la **valor** propiedad igual a un valor nuevo del tipo correcto. El tipo de cursor debe admitir actualizaciones para cambiar el contenido de un campo. Validación de la base de datos no se hace aquí en modo por lotes, por lo que deberá comprobar si hay errores al llamar a **UpdateBatch** en este caso. Algunos proveedores también admiten la propiedad ADO **campo** del objeto **UnderlyingValue** y **OriginalValue** propiedades para ayudarle a resolver los conflictos cuando se intenta realizar actualizaciones por lotes. Para obtener más información sobre cómo resolver estos conflictos, consulte [modificar datos](../../../ado/guide/data/editing-data.md).  
+ Para cambiar los datos de un campo, establezca la propiedad **Value** en un nuevo valor del tipo correcto. El tipo de cursor debe admitir las actualizaciones para cambiar el contenido de un campo. La validación de la base de datos no se realiza aquí en modo por lotes, por lo que tendrá que comprobar si hay errores al llamar a **UpdateBatch** en ese caso. Algunos proveedores también admiten las propiedades **UnderlyingValue** y **OriginalValue** del objeto de **campo** de ADO para ayudarle a resolver conflictos al intentar realizar actualizaciones por lotes. Para obtener más información sobre cómo resolver estos conflictos, vea [Editar datos](../../../ado/guide/data/editing-data.md).  
   
 > [!NOTE]
->  **Recordset Field** valores no se puede establecer al anexar nuevos **campos** a un **Recordset**. En su lugar, nueva **campos** se pueden anexar a un cerrado **Recordset**. El **Recordset** debe estar abierto y, a continuación, solo puede pueden asignar valores a estos **campos**.  
+>  No se pueden establecer los valores de los **campos del conjunto de registros** al anexar nuevos **campos** a un **conjunto de registros**. En su lugar, se pueden anexar nuevos **campos** a un **conjunto de registros**cerrado. A continuación, se debe abrir el **conjunto de registros** y solo se pueden asignar valores a estos **campos**.  
   
-### <a name="getting-more-field-information"></a>Obtener más información acerca de campo  
- Los objetos ADO tienen dos tipos de propiedades: integradas y dinámicas. En este punto, solo las propiedades integradas de la **campo** se han explicado los objetos.  
+### <a name="getting-more-field-information"></a>Obtener más información de campo  
+ Los objetos ADO tienen dos tipos de propiedades: integrado y dinámico. Hasta este momento, solo se han analizado las propiedades integradas del objeto de **campo** .  
   
- Las propiedades integradas son aquellas propiedades implementadas en ADO y disponibles inmediatamente para cualquier objeto nuevo, utilizando el `MyObject.Property` sintaxis. No aparecen como **propiedad** objetos en un objeto **propiedades** colección.  
+ Las propiedades integradas son aquellas que se implementan en ADO y que están inmediatamente disponibles para cualquier objeto nuevo, utilizando la `MyObject.Property` Sintaxis. No aparecen como objetos de **propiedad** en la colección de **propiedades** de un objeto.  
   
- Propiedades dinámicas se definen mediante el proveedor de datos subyacente y aparecen en la **propiedades** colección para el objeto ADO apropiado. Por ejemplo, una propiedad específica del proveedor puede indicar si un **Recordset** objeto admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como **propiedad** objetos en el que **Recordset** del objeto **propiedades** colección. Propiedades dinámicas se pueden hacer referencia únicamente a través de la colección, utilizando la sintaxis `MyObject.Properties(0)` o `MyObject.Properties("Name")`.  
+ El proveedor de datos subyacente define las propiedades dinámicas y aparecen en la colección de **propiedades** para el objeto ADO adecuado. Por ejemplo, una propiedad específica del proveedor puede indicar si un objeto de **conjunto de registros** admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como objetos de **propiedad** en la colección de **propiedades** del objeto de **conjunto de registros** . Solo se puede hacer referencia a las propiedades dinámicas a través de la colección utilizando la sintaxis `MyObject.Properties(0)` o `MyObject.Properties("Name")` .  
   
- No se puede eliminar cualquier tipo de propiedad.  
+ No se puede eliminar ningún tipo de propiedad.  
   
- Dinámico **propiedad** objeto tiene cuatro propiedades integradas de su propio:  
+ Un objeto de **propiedad** dinámica tiene cuatro propiedades integradas propias:  
   
--   El **nombre** propiedad es una cadena que identifica la propiedad.  
+-   La propiedad **Name** es una cadena que identifica la propiedad.  
   
--   El **tipo** propiedad es un entero que especifica el tipo de datos de propiedad.  
+-   La propiedad **Type** es un entero que especifica el tipo de datos de la propiedad.  
   
--   El **valor** propiedad es una variante que contiene el valor de propiedad. **Valor** es la propiedad predeterminada para un **propiedad** objeto.  
+-   La propiedad **Value** es una variante que contiene el valor de la propiedad. **Value** es la propiedad predeterminada de un objeto **Property** .  
   
--   El **atributos** propiedad es un **largo** valor que indica características de la propiedad específica del proveedor.  
+-   La propiedad **attributes** es un valor **largo** que indica las características de la propiedad específica del proveedor.  
   
- El **propiedades** recopilación para el **campo** objeto contiene metadatos adicionales acerca del campo. El contenido de esta colección varía dependiendo del proveedor. El siguiente ejemplo de código examina el **propiedades** colección del ejemplo **Recordset** presentó al principio de esta sección. En primer lugar examina el contenido de la colección. Este código usa el [proveedor OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), por lo que **propiedades** colección contiene información relativa a ese proveedor.  
+ La colección de **propiedades** para el objeto de **campo** contiene metadatos adicionales sobre el campo. El contenido de esta colección varía en función del proveedor. En el ejemplo de código siguiente se examina la colección de **propiedades** del **conjunto de registros** de ejemplo que se presentó al principio de esta sección. Primero examina el contenido de la colección. Este código utiliza el [proveedor de OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), por lo que la colección **Properties** contiene información relevante para ese proveedor.  
   
 ```  
 'BeginFieldProps  
@@ -101,20 +101,20 @@ Cada **campo** objeto suele corresponder a una columna de una tabla de base de d
 ```  
   
 ### <a name="dealing-with-binary-data"></a>Trabajar con datos binarios  
- Use la [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) método en un **campo** objeto para llenarlo con datos binarios largos o de caracteres. En situaciones donde se limita la memoria del sistema, puede usar el **AppendChunk** método para manipular los valores largos en partes, en lugar de en su totalidad.  
+ Use el método [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) en un objeto **Field** para rellenarlo con datos binarios o de caracteres largos. En situaciones en las que la memoria del sistema es limitada, puede utilizar el método **AppendChunk** para manipular valores largos en partes en lugar de en su totalidad.  
   
- Si el **adFldLong** bit en el **atributos** propiedad de un **campo** objeto se establece en **True**, puede usar el  **AppendChunk** método para ese campo.  
+ Si el **bit adFldLong** en la propiedad **attributes** de un objeto **Field** está establecido en **true**, puede usar el método **AppendChunk** para ese campo.  
   
- La primera **AppendChunk** llamar en un **campo** objeto escribe datos en el campo, sobrescribiendo los datos existentes. Posteriores **AppendChunk** agregan llamadas a los datos existentes. Si va a anexar datos a un campo y, a continuación, establecer o leer el valor de otro campo en el registro actual, ADO se da por supuesto que haya terminado de anexar datos al primer campo. Si se llama a la **AppendChunk** método en el primer campo de nuevo, ADO interpreta la llamada como un nuevo **AppendChunk** operación y sobrescribe los datos existentes. Obtener acceso a campos de otros **Recordset** objetos que no son clones del primer **Recordset** objeto, no se interrumpirán **AppendChunk** operaciones.  
+ La primera llamada a **AppendChunk** en un objeto de **campo** escribe datos en el campo, sobrescribiendo los datos existentes. Las llamadas posteriores a **AppendChunk** se agregan a los datos existentes. Si va a anexar datos a un campo y, a continuación, establece o lee el valor de otro campo en el registro actual, ADO supone que ha terminado de anexar los datos al primer campo. Si llama de nuevo al método **AppendChunk** en el primer campo, ADO interpreta la llamada como una nueva operación de **AppendChunk** y sobrescribe los datos existentes. El acceso a los campos de otros objetos de **conjunto de registros** que no son clones del primer objeto de **conjunto de registros** no interrumpirá las operaciones de **AppendChunk** .  
   
- Use la **GetChunk** método en un **campo** objeto para recuperar la totalidad o parte de sus datos de caracteres o binarios largos. En situaciones donde se limita la memoria del sistema, puede usar el **GetChunk** método para manipular los valores largos en partes, en lugar de en su totalidad.  
+ Use el método **GetChunk** en un objeto de **campo** para recuperar parte o todos los datos binarios o de caracteres largos. En situaciones en las que la memoria del sistema es limitada, puede utilizar el método **GetChunk** para manipular valores largos en partes, en lugar de en su totalidad.  
   
- Los datos que un **GetChunk** devoluciones de llamada se asigna a *variable*. Si *tamaño* es mayor que los datos restantes, el **GetChunk** método devuelve sólo los datos restantes sin relleno *variable* con espacios en blanco. Si el campo está vacío, el **GetChunk** método devuelve un valor null.  
+ Los datos que devuelve una llamada a **GetChunk** se asignan a la *variable*. Si el *tamaño* es mayor que el resto de los datos, el método **GetChunk** devuelve solo los datos restantes sin la *variable* padding con espacios vacíos. Si el campo está vacío, el método **GetChunk** devuelve un valor null.  
   
- Cada uno de ellos posteriores **GetChunk** llamada recupera datos a partir de dónde anterior **GetChunk** llamada lo dejó. Sin embargo, si está recuperando datos de un campo y, a continuación, establecer o leer el valor de otro campo en el registro actual, ADO supone que ha terminado de recuperar datos desde el primer campo. Si se llama a la **GetChunk** método en el primer campo de nuevo, ADO interpreta la llamada como un nuevo **GetChunk** operación y se inicia desde el principio de los datos de lectura. Obtener acceso a campos de otros **Recordset** objetos que no son clones del primer **Recordset** objeto, no se interrumpirán **GetChunk** operaciones.  
+ Cada llamada a **GetChunk** subsiguiente recupera datos a partir de donde se dejó la anterior llamada a **GetChunk** . Sin embargo, si va a recuperar datos de un campo y, a continuación, establece o lee el valor de otro campo en el registro actual, ADO supone que ha terminado de recuperar los datos del primer campo. Si llama de nuevo al método **GetChunk** en el primer campo, ADO interpreta la llamada como una nueva operación **GetChunk** y comienza a leer desde el principio de los datos. El acceso a los campos de otros objetos de **conjunto de registros** que no sean clones del primer objeto de **conjunto de registros** no interrumpirá las operaciones de **GetChunk** .  
   
- Si el **adFldLong** bit en el **atributos** propiedad de un **campo** objeto se establece en **True**, puede usar el **GetChunk**  método para ese campo.  
+ Si el **bit adFldLong** en la propiedad **attributes** de un objeto **Field** está establecido en **true**, puede utilizar el método **GetChunk** para ese campo.  
   
- Si no hay ningún registro actual cuando se usa el **GetChunk** o **AppendChunk** método en un **campo** objeto, se produce el error 3021 (no hay registro actual).  
+ Si no hay ningún registro actual al utilizar el método **GetChunk** o **AppendChunk** en un objeto de **campo** , se produce el error 3021 (no hay registro actual).  
   
- Para obtener un ejemplo del uso de estos métodos para manipular datos binarios, vea el [método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [método GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) ejemplos en los *referencia del programador de ADO*.
+ Para obtener un ejemplo del uso de estos métodos para manipular los datos binarios, vea los ejemplos de métodos [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) en la *Referencia del programador de ADO*.

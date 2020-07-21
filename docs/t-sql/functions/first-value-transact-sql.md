@@ -16,17 +16,17 @@ helpviewer_keywords:
 - FIRST_VALUE function
 - analytic functions, FIRST_VALUE
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5954a1b090be1749c07c09a83d4c2cfbf441f6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1eba52b9bd30a64ec6955501f4df7cf1e59cc56e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631574"
 ---
-# <a name="firstvalue-transact-sql"></a>FIRST_VALUE (Transact-SQL)
+# <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Devuelve el primer valor de un conjunto ordenado de valores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "68071383"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 FIRST_VALUE ( [scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
   
@@ -48,7 +48,7 @@ FIRST_VALUE ( [scalar_expression ] )
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. *rows_range_clause* limita aún más las filas de la partición, ya que especifica puntos de inicio y final. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Es el mismo tipo que *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Notas generales  
@@ -56,7 +56,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>A. Usar FIRST_VALUE sobre un conjunto de resultados de consulta  
+### <a name="a-using-first_value-over-a-query-result-set"></a>A. Usar FIRST_VALUE sobre un conjunto de resultados de consulta  
  En el ejemplo siguiente se usa FIRST_VALUE para devolver el nombre del producto menos costoso de una categoría de productos determinada.  
   
 ```  
@@ -88,7 +88,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>B. Usar FIRST_VALUE en particiones  
+### <a name="b-using-first_value-over-partitions"></a>B. Usar FIRST_VALUE en particiones  
  En el ejemplo siguiente se usa FIRST_VALUE para devolver el empleado con el menor número de horas de vacaciones en comparación con otros empleados del mismo puesto. La cláusula PARTITION BY divide los empleados por puesto y la función FIRST_VALUE se aplica a cada partición independientemente. La cláusula ORDER BY especificada en la cláusula OVER determina el orden lógico en el que se aplica la función FIRST_VALUE a las filas de cada partición. La cláusula ROWS UNBOUNDED PRECEDING especifica que el punto inicial de la ventana es la primera fila de cada partición.  
   
 ```  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7244984b869a1c68e597984a1cd03e16e53d0306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63067461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066247"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Restricción CHECK (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo aparece cuando se hace clic con el botón derecho en una cuadrícula de definición de tabla en el Diseñador de tablas y, a continuación, se hace clic en **Restricciones CHECK**. Este cuadro de diálogo contiene un conjunto de propiedades para las restricciones no UNIQUE anexadas a las tablas de la base de datos. Las propiedades que se aplican a las restricciones UNIQUE aparecen en el cuadro de diálogo **Índices o claves** .  
@@ -29,7 +28,7 @@ ms.locfileid: "63067461"
  **Restricciones CHECK seleccionadas**  
  Muestra las restricciones CHECK disponibles. Para ver las propiedades de una restricción, seleccione esta restricción en la lista.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea una nueva restricción en la tabla de base de datos seleccionada y proporciona el nombre predeterminado y otros valores para la restricción. La restricción no será válida hasta que se especifique una expresión en la restricción.  
   
  **Eliminar**  
@@ -38,13 +37,13 @@ ms.locfileid: "63067461"
  **Categoría General**  
  Se expande para mostrar el campo de la propiedad **Expresión** .  
   
- **Expresión**  
+ **Expression**  
  Muestra la expresión de la restricción CHECK seleccionada. En las restricciones nuevas, debe especificar la expresión antes de salir del cuadro. También puede editar las restricciones CHECK existentes. Para más información, consulte [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  **Categoría Identidad**  
  Se expande para mostrar las propiedades de **Nombre** y **Descripción**.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la restricción CHECK seleccionada. Para cambiar el nombre de esta restricción, escriba el texto directamente en el campo de propiedad.  
   
  **Descripción**  
@@ -62,8 +61,8 @@ ms.locfileid: "63067461"
  **Exigir para replicación**  
  Indica si se exigirá la restricción cuando un agente de replicación realice una inserción o actualización en esta tabla.  
   
-## <a name="see-also"></a>Vea también  
- [Restricciones UNIQUE y restricciones Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
- [Los índices y claves de cuadro de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+## <a name="see-also"></a>Consulte también  
+ [Restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+ [Cuadro de diálogo índices y claves &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

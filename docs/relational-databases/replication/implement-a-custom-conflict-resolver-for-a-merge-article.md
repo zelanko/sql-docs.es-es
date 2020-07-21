@@ -1,6 +1,7 @@
 ---
-title: Implementación de un solucionador de conflictos personalizado para un artículo de mezcla | Microsoft Docs
-ms.custom: ''
+title: Implementación de un solucionador de conflictos personalizado (combinación)
+description: Obtenga información sobre cómo implementar un solucionador de conflictos personalizado para una publicación de combinación en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8410ffdf38f8ae2d7dc5676debd13343c02c8f5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716825"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementación de un solucionador de conflictos personalizado para un artículo de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo implementar un solucionador de conflictos personalizado para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [solucionador personalizado basado en COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **En este tema**  
@@ -35,7 +36,7 @@ ms.locfileid: "72905115"
   
      [Un solucionador basado en COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede escribir su propio solucionador de conflictos personalizado como un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] en cada publicador. Durante la sincronización, este procedimiento almacenado se invoca cuando se encuentran conflictos en un artículo en el que se ha registrado el solucionador. El Agente de mezcla pasa información sobre la fila del conflicto a los parámetros necesarios del procedimiento. Los solucionadores de conflictos personalizados basados en el procedimiento almacenado siempre se crean en el publicador.  
   
 > [!NOTE]  
@@ -70,11 +71,11 @@ ms.locfileid: "72905115"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Para utilizar un solucionador de conflictos personalizado con un artículo de tabla existente  
   
-1.  Ejecute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, un valor de **article_resolver** para **\@property**, y un valor de **MicrosoftSQL** **Server Stored ProcedureResolver** para **\@value**.  
+1.  Ejecute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, el valor **article_resolver** para **\@property** y el valor **MicrosoftSQL** **Server Stored ProcedureResolver** para **\@value**.  
   
 2.  Ejecute [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), especificando **\@publication**, **\@article**, el valor **resolver_info** para **\@property** y el nombre del procedimiento almacenado que implementa la lógica de solucionador de conflictos para **\@value**.  
   
-##  <a name="COM"></a> Uso un solucionador personalizado basado en COM  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a> Uso un solucionador personalizado basado en COM  
  El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos y solucionar conflictos que se producen durante el proceso de sincronización de replicación de mezcla. Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). También puede escribir su propia lógica de negocios personalizada basada en código nativo para solucionar conflictos. Esta lógica está generada como componente COM y se compila en las bibliotecas de vínculo dinámico (DLL), usando productos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Este tipo de solucionador de conflictos personalizado basado en COM debe implementar la interfaz **ICustomResolver**, que está diseñada específicamente para la resolución de conflictos.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Para crear y registrar un solucionador de conflictos personalizado basado en COM  
@@ -122,7 +123,7 @@ ms.locfileid: "72905115"
 2.  Ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) especificando **\@publication**, **\@article**, un valor de **article_resolver** para **\@property** y el nombre descriptivo del solucionador de artículos del paso 1 para **\@value**.  
   
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replicación de mezcla avanzada: detección y resolución de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Conflictos de replicación de mezcla avanzada: solucionadores personalizados basados en COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a02d05f6-1072-4709-9ecc-e23e51c8c898
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b0209f3d8e77cfe893a0e462fc9ccf3761da8dfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15570e88d688fb80be7a8889d77fc403ee5c2462
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62911397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059629"
 ---
 # <a name="setstringvalue-method-sqlserviceadvancedproperty-class-"></a>Método SetStringValue (clase SqlServiceAdvancedProperty)
   Establece el valor de cadena de una propiedad.  
@@ -55,7 +54,7 @@ StrValue
 ## <a name="remarks"></a>Comentarios  
  El tipo de valor de la propiedad debe ser `string` para establecer la propiedad en un valor de cadena.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

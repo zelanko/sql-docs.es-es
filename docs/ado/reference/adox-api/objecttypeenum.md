@@ -13,24 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965653"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763796"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
-Especifica el tipo de objeto de base de datos que se va a establecer permisos o la propiedad.  
+Especifica el tipo de objeto de base de datos para el que se van a establecer permisos o propiedad.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|El objeto es una columna.|  
 |**adPermObjDatabase**|3|El objeto es una base de datos.|  
 |**adPermObjProcedure**|4|El objeto es un procedimiento.|  
-|**adPermObjProviderSpecific**|-1|El objeto es un tipo definido por el proveedor. Se producirá un error si el *ObjectType* parámetro es **adPermObjProviderSpecific** y un *valor de ObjectTypeId* no se proporciona.|  
+|**adPermObjProviderSpecific**|-1|El objeto es un tipo definido por el proveedor. Se producirá un error si el parámetro *objecttype* es **adPermObjProviderSpecific** y no se proporciona un *ObjectTypeId* .|  
 |**adPermObjTable**|1|El objeto es una tabla.|  
 |**adPermObjView**|5|El objeto es una vista.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
+title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905170"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891095"
 ---
-# <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la configuración de captura de datos del cambio para cada tabla habilitada para la captura de datos del cambio en la base de datos actual. Se pueden devolver hasta dos filas para cada tabla de origen, una fila para cada instancia de captura. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -46,25 +46,25 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_schema =] '*source_schema*'  
- Es el nombre del esquema al que pertenece la tabla de origen. *source_schema* es **sysname**, su valor predeterminado es null. Cuando *source_schema* se especifica, *source_name* también debe especificarse.  
+ Es el nombre del esquema al que pertenece la tabla de origen. *source_schema* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *source_schema* , se debe especificar también *source_name* .  
   
  Si no es NULL, *source_schema* debe existir en la base de datos actual.  
   
- Si *source_schema* es distinto de NULL, *source_name* también debe ser distinto de NULL.  
+ Si *source_schema* no es null, *source_name* también debe ser distinto de NULL.  
   
  [ @source_name =] '*source_name*'  
- Es el nombre de la tabla de origen. *source_name* es **sysname**, su valor predeterminado es null. Cuando *source_name* se especifica, *source_schema* también debe especificarse.  
+ Es el nombre de la tabla de origen. *source_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *source_name* , se debe especificar también *source_schema* .  
   
  Si no es NULL, *source_name* debe existir en la base de datos actual.  
   
- Si *source_name* es distinto de NULL, *source_schema* también debe ser distinto de NULL.  
+ Si *source_name* no es null, *source_schema* también debe ser distinto de NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nombre del esquema de la tabla de origen.|  
 |source_table|**sysname**|Nombre de la tabla de origen.|  
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|Lista de las columnas de origen capturadas.|  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando ambos *source_schema* y *source_name* NULL de forma predeterminada, o se establecen explícitamente en NULL, este procedimiento almacenado devuelve información para todos los de la base de datos de instancias de captura que ha seleccionado el llamador acceso a. Cuando *source_schema* y *source_name* son distintos de NULL, se devuelve información solo en la tabla habilitada con nombre específica.  
+ Cuando *source_schema* y *source_name* valor predeterminado en null, o se establecen explícitamente en null, este procedimiento almacenado devuelve información de todas las instancias de captura de base de datos a las que el autor de la llamada tiene acceso Select. Cuando *source_schema* y *SOURCE_NAME* no son NULL, solo se devuelve información sobre la tabla habilitada con nombre específica.  
   
 ## <a name="permissions"></a>Permisos  
  Cuando *source_schema* y *source_name* son NULL, la autorización del llamador determina qué tablas habilitadas se incluyen en el conjunto de resultados. Los autores de las llamadas deben tener el permiso SELECT en todas las columnas capturadas de la instancia de captura y también ser miembros de cualquier rol de acceso definido para la información de la tabla que se va a incluir. Los miembros del rol de la base de datos db_owner pueden ver información sobre todas las instancias de captura definidas. Cuando se solicita información para una tabla habilitada concreta, para la tabla con nombre se aplican los mismos criterios de pertenencia y SELECT.  
@@ -102,7 +102,7 @@ EXECUTE sys.sp_cdc_help_change_data_capture
 GO  
 ```  
   
-### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>b. Devolver la información de configuración de captura de datos de cambio para todas las tablas  
+### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>B. Devolver la información de configuración de captura de datos de cambio para todas las tablas  
  En el ejemplo siguiente se devuelve información de configuración para todas las tablas habilitadas en la base de datos que contiene los datos de cambios a los que el autor de las llamadas tiene autorizado el acceso.  
   
 ```  

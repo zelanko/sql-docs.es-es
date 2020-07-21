@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad de servidor (VBScript) | Microsoft Docs
+title: Ejemplo de la propiedad Server (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,20 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f7fee3011edc0db739518e5e3244fb6cbedc1f0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963486"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750997"
 ---
 # <a name="server-property-example-vbscript"></a>Ejemplo de la propiedad de servidor (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- El código siguiente muestra cómo establecer el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) parámetro en el diseño de tiempo y enlazarlo a un control de datos mediante el proveedor SQLOLEDB. Corte y pegue este código en un documento ASP normal y asígnele el nombre **ServerDesignVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
+ En el código siguiente se muestra cómo establecer el [objeto RDS. Parámetro DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) en tiempo de diseño y enlazarlo a un control compatible con datos mediante el proveedor SQLOLEDB. Corte y pegue este código en un documento ASP normal y asígnele el nombre **ServerDesignVBS. asp**. El script ASP identificará el servidor.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -89,7 +89,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- El ejemplo siguiente muestra cómo establecer los parámetros necesarios de **RDS. DataControl** en tiempo de ejecución. Para probar este ejemplo, cortar y pegar este código en un documento ASP normal y asígnele el nombre **ServerRuntimeVBS.asp**. Secuencia de comandos ASP identificará el servidor.  
+ En el ejemplo siguiente se muestra cómo establecer los parámetros necesarios de **RDS. DataControl** en tiempo de ejecución. Para probar este ejemplo, corte y pegue este código en un documento ASP normal y asígnele el nombre **ServerRuntimeVBS. asp**. El script ASP identificará el servidor.  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  
@@ -176,7 +176,7 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Propiedad del servidor (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
 

@@ -1,7 +1,7 @@
 ---
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,15 +22,15 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47df9b8bb3d6beb5706bff8869d92b351e855f5b
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044315"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380988"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Transfiere un elemento protegible entre esquemas.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68044315"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 ALTER SCHEMA schema_name   
@@ -51,7 +51,7 @@ ALTER SCHEMA schema_name
     }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER SCHEMA schema_name   
@@ -59,7 +59,10 @@ ALTER SCHEMA schema_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *schema_name*  
  Es el nombre de un esquema de la base de datos actual, al que se moverá el elemento protegible. No puede ser SYS ni INFORMATION_SCHEMA.  
   
@@ -69,7 +72,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  Es el nombre de una o dos partes de un elemento protegible en el ámbito de esquema que se va a mover al esquema.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Usuarios y esquemas están completamente separados.  
   
  ALTER SCHEMA solo se puede utilizar para mover elementos protegibles entre esquemas de la misma base de datos. Para cambiar o quitar un elemento protegible de un esquema, use la instrucción ALTER o DROP específica para ese elemento protegible.  
@@ -83,6 +86,8 @@ ALTER SCHEMA schema_name
  Mover un objeto como una tabla o una columna no hace que las referencias a ese objeto se actualicen automáticamente. Será necesario pues modificar de forma manual los objetos que hagan referencia al objeto que se ha movido. Por ejemplo, si se mueve una tabla y en un desencadenador existe una referencia a esa tabla, será necesario modificar el desencadenador para reflejar el nuevo nombre de esquema. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de moverlo.  
 
  Para cambiar el esquema de una tabla con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la tabla en el Explorador de objetos y, después, haga clic en **Diseño**. Presione **F4** para abrir la ventana Propiedades. En el cuadro **Esquema**, seleccione un nuevo esquema.  
+ 
+ ALTER SCHEMA usa un bloqueo de nivel de esquema.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -97,7 +102,7 @@ ALTER SCHEMA schema_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-transferring-ownership-of-a-table"></a>A. Transferir la propiedad de una tabla  
- En el siguiente ejemplo se modifica el esquema `HumanResources` transfiriendo la tabla `Address` del esquema `Person` al esquema.  
+ En el ejemplo siguiente se modifica el esquema `HumanResources` transfiriendo la tabla `Address` del esquema `Person` al esquema "HumanResources".  
   
 ```  
 USE AdventureWorks2012;  
@@ -135,7 +140,7 @@ SELECT sys.types.name, sys.types.schema_id, sys.schemas.name
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Transferir la propiedad de una tabla  
  En el siguiente ejemplo se crea una tabla `Region` en el esquema `dbo`, se crea un esquema `Sales` y, por último, se mueve la tabla `Region` desde el esquema `dbo` al esquema `Sales`.  

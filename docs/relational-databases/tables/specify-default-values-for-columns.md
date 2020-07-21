@@ -1,7 +1,7 @@
 ---
 title: Especificar valores predeterminados para las columnas | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2019
+ms.date: 03/17/2020
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,18 +14,18 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909877"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448480"
 ---
 # <a name="specify-default-values-for-columns"></a>Especificar valores predeterminados para las columnas
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar un valor predeterminado que se escribirá en la columna de tabla. Puede usar el Explorador de objetos de la interfaz de usuario o el control general para enviar [!INCLUDE[tsql](../../includes/tsql-md.md)].
+Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar un valor predeterminado que se escribirá en la columna de tabla. Puede establecer un valor predeterminado mediante el Explorador de objetos de la interfaz de usuario o mediante el envío de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
 Si no asigna un valor predeterminado a la columna y el usuario deja la columna en blanco, entonces:
 
@@ -33,7 +33,7 @@ Si no asigna un valor predeterminado a la columna y el usuario deja la columna e
 
 - Si no se establece la opción para permitir valores NULL, la columna permanecerá en blanco, pero el usuario no podrá guardar la fila hasta que especifique un valor para la columna.
 
-## <a name="Restrictions"></a> Limitaciones y restricciones
+## <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones
 
 Antes de comenzar, tenga en cuenta las siguientes limitaciones y restricciones:
 
@@ -45,11 +45,11 @@ Antes de comenzar, tenga en cuenta las siguientes limitaciones y restricciones:
 
 - Para especificar un objeto o función, escriba el nombre del objeto o función sin comillas.
 
-### <a name="Security"></a> Permisos de seguridad
+### <a name="security-permissions"></a><a name="Security"></a> Permisos de seguridad
 
 Las acciones descritas en este artículo requieren el permiso ALTER en la tabla.
 
-## <a name="SSMSProcedure"></a> Usar SSMS para especificar un valor predeterminado
+## <a name="use-ssms-to-specify-a-default"></a><a name="SSMSProcedure"></a> Usar SSMS para especificar un valor predeterminado
 
 Puede usar el Explorador de objetos para especificar un valor predeterminado de una columna de tabla.
 
@@ -64,9 +64,9 @@ Puede usar el Explorador de objetos para especificar un valor predeterminado de 
    > [!NOTE]
    > Para especificar un valor predeterminado numérico, escriba el número. Para un objeto o función, escriba su nombre. Para un valor predeterminado alfanumérico escriba el valor entre comillas simples.
 
-4. En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.
+4. En el menú **Archivo**, haga clic en **Guardar** _nombre de tabla_.
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL para especificar un valor predeterminado
+## <a name="use-transact-sql-to-specify-a-default"></a><a name="TsqlProcedure"></a> Usar Transact-SQL para especificar un valor predeterminado
 
 Existen diversas formas en que puede especificar un valor predeterminado de una columna, usando SSMS para enviar T-SQL.
 
@@ -84,7 +84,7 @@ Existen diversas formas en que puede especificar un valor predeterminado de una 
    INSERT INTO dbo.doc_exz (column_a) VALUES (7);
    GO
    ALTER TABLE dbo.doc_exz
-     ADD CONSTRAINT col_b_def
+     ADD CONSTRAINT DF_Doc_Exz_Column_B
      DEFAULT 50 FOR column_b;
    GO
    ```
@@ -106,7 +106,7 @@ The following two T-SQL code examples were offered by 'nycdotnet' (Steve) via pu
 ```sql
     CREATE TABLE dbo.doc_exz (
       column_a INT,
-      column_b INT CONSTRAINT DF_doc_exz_column_b DEFAULT 50);
+      column_b INT CONSTRAINT DF_Doc_Exz_Column_B DEFAULT 50);
 ```
 
 Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).

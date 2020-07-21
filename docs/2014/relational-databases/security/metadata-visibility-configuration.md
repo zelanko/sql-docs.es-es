@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5198dc4ba4e81bc1d7a8dd2411da59da81596102
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060216"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
   La visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tienen algún permiso. Por ejemplo, la siguiente consulta devuelve una fila si se ha concedido al usuario un permiso como SELECT o INSERT sobre la tabla `myTable`.  
@@ -43,7 +42,7 @@ GO
   
 |||  
 |-|-|  
-|Vistas de catálogo|Procedimientos almacenados **sp_help** de [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
+|Vistas de catálogo|Procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**de**|  
 |Funciones integradas que exponen metadatos|Vistas de esquema de información|  
 |Vistas de compatibilidad|Propiedades extendidas|  
   
@@ -63,7 +62,7 @@ GO
   
 -   Las funciones integradas que emiten metadatos, como OBJECTPROPERTYEX, pueden devolver NULL.  
   
--   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** pueden devolver únicamente un subconjunto de filas, o NULL.  
+-   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**de** pueden devolver únicamente un subconjunto de filas, o NULL.  
   
  Los módulos SQL, como procedimientos almacenados y desencadenadores, se ejecutan en el contexto de seguridad del autor de la llamada y, por tanto, tienen un acceso limitado a los metadatos. Por ejemplo, en el siguiente código, cuando el procedimiento almacenado intenta obtener acceso a los metadatos de la tabla `myTable` sobre la que el autor de la llamada no tienen ningún derecho, se devuelve un conjunto de resultados vacío. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se devuelve una fila.  
   
@@ -187,7 +186,7 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

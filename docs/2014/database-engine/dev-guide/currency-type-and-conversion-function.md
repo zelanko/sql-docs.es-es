@@ -1,5 +1,5 @@
 ---
-title: El tipo de moneda y función de conversión | Microsoft Docs
+title: Tipo de moneda y función de conversión | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753252"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933662"
 ---
 # <a name="currency-type-and-conversion-function"></a>Tipo moneda y función de conversión
   En este ejemplo se define un tipo de datos Currency definido por el usuario usando C#. Este tipo de datos definido por el usuario encapsula una cantidad y una referencia cultural que ayudan a determinar la forma correcta de representar la cantidad como valor de moneda en dicha referencia cultural. En este ejemplo se proporciona también una función de conversión de monedas que devuelve una instancia del tipo de datos Currency definido por el usuario. Si la base de datos AdventureWorks tiene una tasa de cambio de dólares estadounidenses (USD) con respecto a la moneda asociada con la referencia cultural específica, la función de conversión devuelve un tipo de datos Currency definido por el usuario con la tasa de cambio y la referencia cultural que coincide con la solicitada. En caso contrario, el tipo de datos Currency definido por el usuario se devuelve con la cantidad original, que debe estar en USD, con la referencia cultural `en-us`. En el ejemplo se muestra también cómo eliminar del Registro y registrar métodos y ensamblados de Common Language Runtime (CLR) usando Transact-SQL.  
@@ -26,7 +25,7 @@ ms.locfileid: "62753252"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62753252"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -494,7 +493,7 @@ DROP PROCEDURE [dbo].[usp_LookupConversionRate]
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Método updateDouble (Java. lang. String, Double) | Microsoft Docs
+title: Método updateDouble (java.lang.String, double) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15617e1d5dda6315547228e07853c373f9eb1a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9650d575a93af87bdcabb0b12e0878ebef692ece
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999033"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80927882"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>Método updateDouble (java.lang.String, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,13 +42,13 @@ public void updateDouble(java.lang.String columnName,
   
  *x*  
   
- Valor **Double** .  
+ Un valor **double**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
- Este método updateDouble se especifica mediante el método updateDouble de la interfaz java. SQL. ResultSet.  
+## <a name="remarks"></a>Observaciones  
+ Este método updateDouble se especifica mediante el método updateDouble de la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateDouble &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   

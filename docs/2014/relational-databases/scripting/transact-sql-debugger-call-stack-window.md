@@ -1,6 +1,6 @@
 ---
-title: Pila de llamadas (ventana) | Microsoft Docs
-ms.custom: ''
+title: Ventana de pila de llamadas
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed3fbddcf91fe63920b349224a0dde73141c6d75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063357"
 ---
 # <a name="call-stack-window"></a>Ventana de pila de llamadas
   La ventana **Pila de llamadas** muestra los módulos de la pila de llamadas y los tipos de datos y valores de los parámetros que se pasen a los módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] incluyen procedimientos almacenados, funciones y desencadenadores). Para mostrar la pila de llamadas, debe estar en modo de depuración.  
@@ -45,7 +44,7 @@ ms.locfileid: "66063519"
  Todas las expresiones de las ventanas **Variables locales**, **Inspección**e **Inspección rápida** se evalúan según el marco de pila actual. La ventana del Editor de consultas muestra el código para el marco actual. De forma predeterminada, este marco es el marco superior de la pila, en el que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] detuvo la ejecución. Al cambiar el marco de pila actual a otro marco, las expresiones en las ventanas **Variables locales**, **Inspección**e **Inspección rápida** se vuelven a evaluar en el contexto del nuevo marco y el código fuente del nuevo marco se muestra en la ventana del Editor de consultas.  
   
 ## <a name="columns"></a>Columnas  
- **Name**  
+ **Nombre**  
  Muestra información sobre un módulo en la pila de llamadas.  
   
  En la fila inferior de la pila de llamadas, **Nombre** muestra la ventana de código fuente del Editor de consultas y el número de línea de la primera llamada en la pila. Para las otras filas, **Nombre** tiene el formato **módulo (instancia.baseDeDatos) (listaDeParámetros) númeroDeLínea**.  
@@ -65,7 +64,7 @@ ms.locfileid: "66063519"
  **Lenguaje**  
  Muestra **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
- [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
+ [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
  [Avanzar paso a paso por el código Transact-SQL](step-through-transact-sql-code.md)  

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1792161b472e42c42ea2bfc895bf013802cb656c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0a92e671169fa375169a37ca01e1d55729167b1e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093782"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81295975"
 ---
 # <a name="introduction-to-odbc"></a>Introducción a ODBC
-Esta sección proporciona una breve historia de lenguaje de consulta estructurado y ODBC e incluye información conceptual acerca de la interfaz ODBC.  
+En esta sección se proporciona un breve historial de Lenguaje de consulta estructurado y ODBC, y se incluye información conceptual sobre la interfaz ODBC.  
   
  Esta sección contiene los siguientes temas:  
   

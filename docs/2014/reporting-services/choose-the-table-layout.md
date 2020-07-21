@@ -1,5 +1,5 @@
 ---
-title: Elegir el diseño de tabla | Microsoft Docs
+title: Elegir el diseño de la tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109849"
 ---
 # <a name="choose-the-table-layout"></a>Elegir el diseño de tabla
@@ -26,7 +26,7 @@ ms.locfileid: "66109849"
  **Escalonado**  
  Crea un informe que contiene una columna para cada campo y donde los campos de grupo aparecen en encabezados de grupo a la izquierda de las columnas de campos de detalles. Este tipo de tabla no tiene pies de grupo.  
   
- **Block**  
+ **Sin**  
  Crea un informe que contiene una columna para cada campo y donde los campos de grupo aparecen en la primera fila de detalles de cada grupo. Este tipo de tabla tiene pies de grupo solamente si también se selecciona **Incluir subtotales** .  
   
  **Incluir subtotales**  
@@ -35,7 +35,7 @@ ms.locfileid: "66109849"
  **Habilitar obtención de detalles**  
  Elija esta opción para ocultar los grupos internos del informe y habilitar un elemento para alternar la visibilidad, con lo que se genera un informe de obtención de detalles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda del Asistente para informes](../../2014/reporting-services/report-wizard-help.md)  
   
   

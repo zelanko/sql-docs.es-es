@@ -1,5 +1,5 @@
 ---
-title: Llamar a SQLColumns sobre una tabla con columnas dispersas | Documentos de Microsoft
+title: Llamar a SQLColumns en una tabla con columnas dispersas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6db2f6550d252e9ede6ddfbf39f460af563f2b20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f9c942b9b17ee544c645df3af6d9862e169bc96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019046"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Llamar a SQLColumns sobre una tabla con columnas dispersas
   En este ejemplo, se muestra cómo llamar a SQLColumns sobre una tabla con columnas dispersas definidas mediante ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

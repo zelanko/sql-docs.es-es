@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d56f2fd8e72e0cb00555f18288180f674645056e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63204529"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044153"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propiedades (de columna) de objeto con valores de tabla (Visual Database Tools)
   Estas propiedades aparecen cuando selecciona una columna en un objeto de valor de tabla en el panel **Diagrama** del Diseñador de vistas y de consultas.  
@@ -31,7 +30,7 @@ ms.locfileid: "63204529"
  **Categoría Identidad**  
  Se expande para mostrar la propiedad **Nombre** .  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna seleccionada.  
   
  **Categoría del Diseñador de consultas**  

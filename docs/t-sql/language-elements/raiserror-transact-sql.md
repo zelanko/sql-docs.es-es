@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252038"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630953"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> La instrucción **RAISERROR** no respeta **SET XACT_ABORT**. Las nuevas aplicaciones deben usar **THROW** en vez de **RAISERROR**.
 
   Genera un mensaje de error e inicia el procesamiento de errores de la sesión. RAISERROR puede hacer referencia a un mensaje definido por el usuario almacenado en la vista de catálogo sys.messages o puede generar un mensaje dinámicamente. El mensaje se devuelve como un mensaje de error de servidor a la aplicación que realiza la llamada o a un bloque CATCH asociado de una construcción TRY…CATCH. Las nuevas aplicaciones deben usar [THROW](../../t-sql/language-elements/throw-transact-sql.md) en su lugar.  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252038"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -82,7 +85,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Es un código que determina el espaciado y la justificación del valor sustituido.  
   
-|código|Prefijo o justificación|Descripción|  
+|Código|Prefijo o justificación|Descripción|  
 |----------|-----------------------------|-----------------|  
 |- (menos)|Justificado a la izquierda|Justifica a la izquierda el valor del argumento en el ancho de campo dado.|  
 |+ (más)|Prefijo de signo|Coloca el signo más (+) o menos (-) delante del valor del argumento, si el valor es de un tipo con signo.|  
@@ -120,7 +123,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  Estas especificaciones de tipo se basan en las definidas originalmente para la función **printf** de la biblioteca de C estándar. Las especificaciones de tipo usadas en las cadenas de mensajes RAISERROR se asignan a tipos de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)], mientras que las especificaciones usadas en **printf** se asignan a tipos de datos del lenguaje C. RAISERROR no admite las especificaciones de tipo usadas en **printf** cuando [!INCLUDE[tsql](../../includes/tsql-md.md)] no tiene un tipo de datos similar al tipo de datos de C asociado. Por ejemplo, RAISERROR no admite la especificación *%* para punteros porque [!INCLUDE[tsql](../../includes/tsql-md.md)] no tiene un tipo de datos de puntero.  
   
 > [!NOTE]  
->  Para convertir un valor al tipo de datos [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint**, especifique **%I64d**.  
+>  Para convertir un valor al tipo de datos [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint**, especifique **%I64d**.  
   
  *\@local_variable*  
  Es una variable de un tipo de datos de caracteres válido que contiene una cadena formateada de la misma forma que *msg_str*. *\@local_variable* debe ser **char** o **varchar**, o bien se debe poder convertir implícitamente a estos tipos de datos.  
@@ -147,7 +150,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  ```  
   
  *state*  
- Entero entre 0 y 255. Los valores negativos son 1 de forma predeterminada. No deben usarse valores mayores que 255. 
+ Entero entre 0 y 255. Los valores negativos son 1 de forma predeterminada. No deben usarsevalores mayores que 255. 
   
  Si se genera el mismo error definido por el usuario en varias ubicaciones, el uso de un único número de estado para cada ubicación puede ayudar a averiguar qué sección del código está generando los errores.  
   
@@ -157,13 +160,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Opción*  
  Es una opción personalizada del error. Puede tener uno de los valores de la tabla siguiente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|LOG|Guarda el error en el registro de errores y en el registro de aplicación de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los errores guardados en el registro de errores tienen un límite máximo de 440 bytes. Solo los miembros del rol fijo de servidor sysadmin o los usuarios con permisos ALTER TRACE pueden especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|REGISTRO|Guarda el error en el registro de errores y en el registro de aplicación de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los errores guardados en el registro de errores tienen un límite máximo de 440 bytes. Solo los miembros del rol fijo de servidor sysadmin o los usuarios con permisos ALTER TRACE pueden especificar WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Envía inmediatamente los mensajes al cliente.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Establece los valores de @@ERROR y ERROR_NUMBER en *msg_id* o 50000, independientemente del nivel de gravedad.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los errores generados por RAISERROR funcionan igual que los generados por el código del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las funciones del sistema ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE y @@ERROR informan de los valores especificados por RAISERROR. Cuando se ejecuta RAISERROR con un nivel de gravedad 11 o superior en un bloque TRY, transfiere el control al bloque CATCH asociado. El error se devuelve al autor de la llamada si RAISERROR se ejecuta:  
   
 -   Fuera del ámbito de cualquier bloque TRY.  

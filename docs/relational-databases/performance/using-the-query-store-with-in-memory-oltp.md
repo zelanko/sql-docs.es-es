@@ -13,15 +13,15 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: e8962776175617293c1acdc979852232dbca95c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737118"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso del almacén de consultas con OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El almacén de consultas permite supervisar el rendimiento del código compilado de forma nativa para cargas de trabajo que ejecuten OLTP en memoria.  
 Las estadísticas de compilación y de runtime se recopilan y exponen de la misma manera que en el caso de cargas de trabajo basadas en disco.   
@@ -47,7 +47,7 @@ Sin embargo, existen algunos aspectos específicos que los usuarios deben tener 
     
 -   Si ejecuta un almacén de consultas en una base de datos con una carga de trabajo mixta, podrá usar el campo **is_natively_compiled** de [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) para encontrar rápidamente los planes de consulta que haya generado la compilación de código nativa.  
   
--   El modo de captura del almacén de consultas no (el parámetro *QUERY_CAPTURE_MODE* de la instrucción **ALTER TABLE**) no afecta a las consultas de módulos compilados de forma nativa, ya que estas se capturan siempre, con independencia del valor configurado. Esto incluye la opción `QUERY_CAPTURE_MODE = NONE`.  
+-   El modo de captura del almacén de consultas no (el parámetro*QUERY_CAPTURE_MODE* de la instrucción **ALTER TABLE** ) no afecta a las consultas de módulos compilados de forma nativa, ya que estas se capturan siempre, con independencia del valor configurado. Esto incluye la opción `QUERY_CAPTURE_MODE = NONE`.  
   
 -   En la duración de la compilación de la consulta que captura el almacén de consultas se incluye únicamente el tiempo dedicado a la optimización de la consulta, antes de la generación del código nativo. Más concretamente, no incluye el tiempo de compilación de código de C y la generación de las estructuras internas necesarias para la generación de código de C.  
   
@@ -138,7 +138,7 @@ WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
+ [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Query Store Catalog Views (Vistas de catálogo del almacén de consultas) &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   

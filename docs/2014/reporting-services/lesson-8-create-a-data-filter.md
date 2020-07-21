@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108389"
 ---
-# <a name="lesson-8-create-a-data-filter"></a>Lección 8: Creación de un filtro de datos
+# <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
   Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  
   
  Puede crear un filtro basado en una tabla **o** un filtro de consulta para el informe de obtención de detalles. Esta lección proporciona instrucciones para ambas opciones.  
@@ -35,17 +35,17 @@ ms.locfileid: "66108389"
   
 1.  Abra el informe secundario.  
   
-2.  Seleccione un encabezado de columna del Tablix, haga clic en la celda atenuada que aparece sobre el encabezado de columna y, a continuación, haga clic en **propiedades de Tablix**.  
+2.  Seleccione un encabezado de columna en el Tablix, haga clic con el botón secundario en la celda gris que aparece encima del encabezado de columna y, a continuación, haga clic en **propiedades de Tablix**.  
   
-3.  Haga clic en el **filtros** página y, a continuación, haga clic en **agregar**.  
+3.  Haga clic en la página **filtros** y, a continuación, haga clic en **Agregar**.  
   
-4.  En el **expresión** archivado, haga clic en `ProductID` en la lista desplegable. Es la columna a la que se aplica el filtro.  
+4.  En la **expresión** presentada, haga `ProductID` clic en en la lista desplegable. Es la columna a la que se aplica el filtro.  
   
-5.  Haga clic en el igual ( **=** ) operador en el **operador** lista desplegable.  
+5.  Haga clic en el**=** operador igual () en la lista desplegable **operador** .  
   
-6.  Haga clic en el botón de expresión junto a la **valor** , a continuación, haga clic en **parámetros** en el **categoría** área y, a continuación, haga doble clic en `productid` en el  **Valores** área. El **Establecer expresión para: Valor** campo ahora debe contener una expresión similar a **= parámetros! productid. Valor**.  
+6.  Haga clic en el botón expresión situado junto al campo **valor** , haga clic en **parámetros** en el área **categoría** y, `productid` a continuación, haga doble clic en el área **valores** . El campo **Establecer expresión para: Valor** ahora debe contener una expresión similar a **=Parameters!productid.Value**.  
   
-7.  Haga clic en **Aceptar,** y **Aceptar** nuevo en el **propiedades de Tablix** cuadro de diálogo.  
+7.  Haga clic en **Aceptar** y en **Aceptar** de nuevo en el cuadro de diálogo **propiedades de Tablix** .  
   
 8.  Guarde el archivo .rdlc.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66108389"
   
 2.  Cree una nueva función que acepte un parámetro, `productid`, de tipo Integer y devuelva un objeto `datatable` y haga lo siguiente.  
   
-    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea una instancia del conjunto de datos `DataSet2`,, que se creó en el paso 2 de la [Lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Crear una conexión a la base de datos de SQL Server para ejecutar la consulta definida en **lección 4: Definir datos de una conexión y DataTable para el informe secundario**.  
+    2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
   
     3.  La consulta devolverá datos sin filtrar.  
   
@@ -105,11 +105,11 @@ ms.locfileid: "66108389"
   
 1.  Abra el archivo Default.aspx.  
   
-2.  A la derecha, haga clic en el control ReportViewer y, a continuación, haga clic en **propiedades.**  
+2.  Haga clic con el botón secundario en el control ReportViewer y, a continuación, haga clic en **propiedades.**  
   
-3.  En el **propiedades** página, haga clic en el **eventos** icono.  
+3.  En la página **propiedades** , haga clic en el icono **eventos** .  
   
-4.  Haga doble clic en el **obtención de detalles** eventos.  
+4.  Haga doble clic en el evento de **obtención de detalles** .  
   
      De este modo agregará una sección del controlador de eventos en el código, que será similar al bloque siguiente.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108389"
   
     1.  Capture la referencia al objeto de informe secundario del parámetro *DrillthroughEventArgs* .  
   
-    2.  Llame a la función, `GetPurchaseOrderDetail`  
+    2.  Llame a la función.`GetPurchaseOrderDetail`  
   
     3.  Enlace el DataTable `PurchaseOrderDetail` con el origen de datos de correspondiente del informe.  
   
@@ -165,9 +165,9 @@ ms.locfileid: "66108389"
   
 2.  Cree una nueva función que acepte un parámetro, `productid`, de tipo Integer, y devuelva un objeto `datatable` y haga lo siguiente.  
   
-    1.  Crea una instancia del conjunto de datos, `DataSet2`, que se creó en el paso 2 de [lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea una instancia del conjunto de datos `DataSet2`,, que se creó en el paso 2 de la [Lección 4: definir una conexión de datos y una tabla de datos para el informe secundario](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Crear una conexión a la base de datos de SQL Server para ejecutar la consulta definida **lección 4: Definir datos de una conexión y DataTable para el informe secundario**.  
+    2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
   
     3.  La consulta incluirá un parámetro, `productid`, para asegurarse de que los datos devueltos se filtran en función del `ProductID` seleccionado en el informe primario.  
   
@@ -216,11 +216,11 @@ ms.locfileid: "66108389"
   
 1.  Abra el archivo Default.aspx.  
   
-2.  Haga clic en el control ReportViewer y, a continuación, haga clic en **propiedades**.  
+2.  Haga clic con el botón secundario en el control ReportViewer y, a continuación, haga clic en **propiedades**.  
   
-3.  En el **propiedades** panel, haga clic en el **eventos** icono.  
+3.  En el panel **propiedades** , haga clic en el icono **eventos** .  
   
-4.  Haga doble clic en el **obtención de detalles** eventos.  
+4.  Haga doble clic en el evento de **obtención de detalles** .  
   
      De este modo agregará una sección del controlador de eventos en el código, que será similar a la siguiente.  
   
@@ -240,7 +240,7 @@ ms.locfileid: "66108389"
   
     4.  Llame a la función, `GetPurchaseOrderDetail`, y pase el valor del parámetro `ProductID`.  
   
-    5.  Enlazar el `PurchaseOrderDetail` DataTable con el informe correspondiente del origen de datos.  
+    5.  Enlazar `PurchaseOrderDetail` el DataTable con el origen de datos correspondiente del informe.  
   
          El código de controlador de eventos completo será similar al siguiente.  
   

@@ -1,5 +1,5 @@
 ---
-title: Pruebas con objetos de base de datos (OracleToSQL) migrados | Microsoft Docs
+title: Probar objetos de base de datos migrados (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,57 +11,57 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266479"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Pruebas con objetos de base de datos migrados (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle evaluador (SSMA evaluador) comprueba automáticamente la conversión del objeto de base de datos y la migración de datos realizadas por SSMA. Una vez finalizados todos los pasos de migración de SSMA, use el evaluador de SSMA para comprobar que los objetos convertidos funcionan del mismo modo, y que todos los datos se transfirió correctamente.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant for Oracle Tester (SSMA Tester) prueba automáticamente la conversión de objetos de base de datos y la migración de datos realizada por SSMA. Una vez finalizados todos los pasos de migración de SSMA, utilice SSMA Tester para comprobar que los objetos convertidos funcionan de la misma manera y que todos los datos se transfirieron correctamente.  
   
-Puede probar los siguientes tipos de objeto con SSMA evaluador:  
+Puede probar los siguientes tipos de objeto con el evaluador de SSMA:  
   
 -   Tablas  
   
 -   Procedimientos almacenados, incluidos los procedimientos empaquetados.  
   
--   Definido por el usuario funciones, incluidas las funciones empaquetadas.  
+-   Funciones definidas por el usuario, incluidas las funciones empaquetadas.  
   
 -   Vistas.  
   
 -   Instrucciones independientes.  
   
-SSMA Tester ejecuta los objetos seleccionados para realizar pruebas en Oracle y sus homólogos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de eso, comparan los resultados según los criterios siguientes:  
+SSMA Tester ejecuta los objetos seleccionados para las pruebas en Oracle y sus homólogos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después, compara los resultados según los criterios siguientes:  
   
--   ¿Son los cambios en los datos de la tabla idénticas?  
+-   ¿Los cambios en los datos de tabla son idénticos?  
   
--   ¿Son los valores de parámetros de salida para los procedimientos y funciones idénticas?  
+-   ¿Son los valores de parámetros de salida para procedimientos y funciones idénticos?  
   
 -   ¿Las funciones devuelven los mismos resultados?  
   
--   ¿Son que los conjuntos de resultados idénticos?  
+-   ¿Son idénticos los conjuntos de resultados?  
   
 > [!NOTE]  
-> ¡Atención! Nunca utilice SSMA evaluador en sistemas de producción. Durante la ejecución de la herramienta de comprobación se modifican el esquema de origen y los datos. Mientras tanto, la restauración completa del estado original puede ser imposible para algunos tipos de código probado.  
+> Centra! No utilice nunca el evaluador de SSMA en sistemas de producción. Durante la ejecución del evaluador, se modifican los datos y el esquema de origen. Mientras tanto, la restauración completa del estado original puede ser imposible para algunos tipos de código probado.  
   
-## <a name="prerequisites"></a>Requisitos previos  
-Si desea usar SSMA evaluador, instalar SSMA módulo de extensión de Oracle con el **instalar base de datos de evaluador** opción activada.  
+## <a name="prerequisites"></a>Prerrequisitos  
+Si desea usar SSMA Tester, instale SSMA Oracle Extension Pack con la opción **install test Database** activada.  
   
-Para habilitar la comparación de los datos resultantes de la tabla, establecer el **columna generar ROWID** opción **Sí** antes de inicia la conversión de esquema. SSMA agregará una columna ROWID a todas las tablas durante la ejecución de la **convertir esquema** comando.  
+Para habilitar la comparación de los datos de la tabla resultante, establezca la opción **generar columna ROWID** en **sí** antes de que se inicie la conversión del esquema. SSMA agregará una columna ROWID a todas las tablas durante la ejecución del comando **Convert Schema** .  
   
 Además, compruebe lo siguiente:  
   
--   Las herramientas de cliente de Oracle están instaladas en el equipo donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta.  
+-   Las herramientas de cliente de Oracle se instalan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo donde se ejecuta.  
   
--   Se ha habilitado la integración de Common Language Runtime (CLR) en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos.  
+-   Se ha habilitado la integración de Common Language Runtime (CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) en el motor de base de datos.  
   
-Tenga en cuenta que la versión actual de SSMA evaluador no admite la ejecución paralela por usuarios diferentes en el mismo servidor de origen o destino.  
+Tenga en cuenta que la versión actual de SSMA Tester no admite la ejecución en paralelo por parte de usuarios diferentes en el mismo servidor de origen o de destino.  
   
 ## <a name="getting-started"></a>Introducción  
 [Crear casos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Instalación de componentes de SSMA en SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [Configuración del proyecto &#40;conversión&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   

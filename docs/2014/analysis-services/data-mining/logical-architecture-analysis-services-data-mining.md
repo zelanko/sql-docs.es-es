@@ -1,5 +1,5 @@
 ---
-title: Arquitectura lógica (Analysis Services - minería de datos) | Microsoft Docs
+title: Arquitectura lógica (Analysis Services minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66084267"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522322"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
   La minería de datos es un proceso que implica la interacción de varios componentes.  
@@ -38,16 +37,16 @@ ms.locfileid: "66084267"
   
 
   
-##  <a name="bkmk_SourceData"></a> Datos de origen de la minería de datos  
+##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>Datos de origen de minería de datos  
  Los datos que se usan en la minería de datos no se almacenan en la solución de minería de datos; solo se almacenan los enlaces. Los datos podrían residir en una base de datos creada en una versión anterior de SQL Server, en un sistema CRM o incluso en un archivo plano. Cuando se entrena la estructura o el modelo mediante un proceso, se crea un resumen estadístico de los datos y se almacena en una memoria caché que puede conservarse para usarse en operaciones posteriores, o puede eliminarse después del procesamiento. Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información sobre cómo crear y usar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos y vistas del origen de datos, vea [Data Sources Supported &#40;Multidimensional de SSAS&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información acerca de la creación y el uso de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos y vistas del origen de datos, vea orígenes de datos [compatibles &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  También puede definir y modificar orígenes de datos y vistas del origen de datos utilizando AMO o XMLA. Para obtener más información sobre cómo trabajar con estos objetos mediante programación, vea [Información general de arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   
 
   
-##  <a name="bkmk_Structures"></a> Mining Structures  
+##  <a name="mining-structures"></a><a name="bkmk_Structures"></a>Estructuras de minería de datos  
  Una estructura de minería de datos es un contenedor de datos lógico que define el dominio de datos a partir del cual se generan los modelos de minería de datos. Una sola estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
  Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la propiedad `CacheMode` en el objeto de estructura de minería de datos por el valor `ClearAfterProcessing`. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
@@ -60,7 +59,7 @@ ms.locfileid: "66084267"
   
  
   
-##  <a name="bkmk_Models"></a> Mining Models  
+##  <a name="mining-models"></a><a name="bkmk_Models"></a>Modelos de minería de datos  
  Antes del procesamiento un modelo de minería de datos solo es una combinación de propiedades de metadatos. Estas propiedades especifican una estructura de minería de datos, especifican un algoritmo de minería de datos y definen una colección de parámetros y configuraciones de filtro que afectan al modo en que se procesan los datos. Para obtener más información, vea [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md).  
   
  Al procesar el modelo, los datos de entrenamiento que se almacenan en la memoria caché de la estructura de minería de datos se utilizan para generar los patrones, según las propiedades estadísticas de los datos y la heurística definida por el algoritmo y sus parámetros. Esto se conoce como *entrenar* el modelo.  
@@ -71,7 +70,7 @@ ms.locfileid: "66084267"
   
 
   
-##  <a name="bkmk_CustomObjects"></a> Objetos de minería de datos personalizados  
+##  <a name="custom-data-mining-objects"></a><a name="bkmk_CustomObjects"></a>Objetos de minería de datos personalizados  
  Otros objetos que se usan en el contexto de un proyecto de minería de datos, como los gráficos de precisión o las consultas de predicción, no se conservan en la solución, pero se pueden incluir en un script mediante ASSL o se pueden generar con AMO.  
   
  Además, puede ampliar los servicios y las características disponibles en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregando estos objetos personalizados:  
@@ -84,7 +83,7 @@ ms.locfileid: "66084267"
  **Procedimientos almacenados personalizados**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] La minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
   
- [Definición de procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Los procedimientos almacenados siguientes pueden usarse al realizar la validación cruzada.  
   
@@ -101,8 +100,8 @@ ms.locfileid: "66084267"
   
 
   
-## <a name="see-also"></a>Vea también  
- [Procesamiento de objetos de modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procesamiento de objetos del modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

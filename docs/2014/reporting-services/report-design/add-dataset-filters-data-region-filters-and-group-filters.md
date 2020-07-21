@@ -1,5 +1,5 @@
 ---
-title: Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (generador de informes y SSRS) | Microsoft Docs
+title: Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106631"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS)
@@ -27,12 +27,12 @@ ms.locfileid: "66106631"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Elegir cuándo se establecerá un filtro  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Elegir cuándo se establecerá un filtro  
  Cuando no pueda filtrar los datos en el origen, especifique filtros para los elementos de informe. Por ejemplo, use filtros de informe cuando el origen de datos no admita parámetros de consulta, cuando tenga que ejecutar procedimientos almacenados y no pueda modificar la consulta, o cuando una instantánea de informe con parámetros muestre datos personalizados para usuarios diferentes.  
   
  Puede filtrar datos de informe antes o después de recuperarlos para un conjunto de datos de informe. Para filtrar los datos antes de su recuperación, cambie la consulta de cada conjunto de datos. Cuando se filtran los datos de la consulta, se filtran los datos en el origen de datos, lo que reduce la cantidad de datos que es necesario recuperar y procesar en un informe. Para filtrar los datos después de su recuperación, cree expresiones de filtro en el informe. Puede establecer expresiones de filtro para un conjunto de datos, una región de datos o un grupo, incluidos los grupos de detalles. También puede incluir parámetros en las expresiones de filtro; esto proporciona una manera de filtrar datos de valores o usuarios específicos, por ejemplo, puede filtrar según un valor que identifica al usuario que ve el informe.  
   
-##  <a name="Where"></a> Elegir dónde se establecerá un filtro  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Elegir dónde se establecerá un filtro  
  Determine el lugar donde desea establecer un filtro basándose en el efecto que desea conseguir en el informe. En tiempo de ejecución, el procesador de informes aplica los filtros en el orden siguiente: en el conjunto de datos, a continuación, en la región de datos y, por último, en los grupos, comenzando en la parte superior de cada jerarquía de grupo. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series. Cuando el procesador de informes aplica el filtro, todas las ecuaciones de filtro se aplican en el orden en el que están definidas en la página **Filtro** del cuadro de diálogo **Propiedades** para cada elemento de informe; esto equivale a combinarlas con las operaciones Boolean AND.  
   
  En la lista siguiente, se compara el efecto de establecer filtros en elementos de informe diferentes:  
@@ -47,7 +47,7 @@ ms.locfileid: "66106631"
   
 -   **En los grupos de series o de categorías de una región de datos Gráfico** : establezca un filtro en un grupo de series o de categorías cuando desee incluir o excluir ciertos valores para que una expresión de grupo controle qué valores deben aparecer en el gráfico.  
   
-##  <a name="FilterEquations"></a> Descripción de una ecuación de filtro  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a>Descripción de una ecuación de filtro  
  En tiempo de ejecución, el procesador de informes convierte el valor en el tipo de datos especificado y, a continuación, usa al operador especificado para comparar la expresión y el valor. En la lista siguiente, se describe cada una de las partes de la ecuación de filtro:  
   
 -   **Expresión** : define lo que se va a filtrar. Normalmente, se trata de un campo de conjunto de datos.  
@@ -56,12 +56,12 @@ ms.locfileid: "66106631"
   
 -   **Operador** : define cómo comparar las dos partes de la ecuación de filtro.  
   
--   `Value` Define la expresión que se usará en la comparación.  
+-   `Value`Define la expresión que se va a usar en la comparación.  
   
  En las secciones siguientes, se describe cada una de las partes de la ecuación de filtro.  
   
-### <a name="expression"></a>Expresión  
- Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . El tipo de datos de la expresión que especifique para `Value` viene determinada por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los valores predeterminados. Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
+### <a name="expression"></a>Expression  
+ Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . Los [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] valores predeterminados determinan el tipo `Value` de datos de la expresión que se especifica para. Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de datos  
  Para que el procesador de informes pueda comparar dos valores, los tipos de datos deben ser los mismos. En la tabla siguiente, se especifica la asignación entre los tipos de datos CLR y los tipos de datos de la definición de informe. Los datos que recupere de un origen de datos pueden convertirse en un tipo de datos diferente cuando sean datos de informe.  
@@ -84,18 +84,18 @@ ms.locfileid: "66106631"
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara la expresión con un valor.|  
 |**TopN, BottomN**|Compara la expresión con un valor `Integer`.|  
 |**TopPercent, BottomPercent**|Compara la expresión con un valor `Integer` o `Float`.|  
-|**Entre**|Prueba si la expresión está entre dos valores, ambos inclusive.|  
-|**Entrada**|Prueba si la expresión está dentro de un conjunto de valores.|  
+|**Otro**|Prueba si la expresión está entre dos valores, ambos inclusive.|  
+|**De**|Prueba si la expresión está dentro de un conjunto de valores.|  
   
-### <a name="value"></a>Valor  
+### <a name="value"></a>Value  
  La expresión de valor especifica la parte final de la ecuación de filtro. El procesador de informes convierte la expresión evaluada en el tipo de datos que especificó y, a continuación, evalúa la ecuación de filtro completa para determinar si los datos especificados en Expresión pasan a través del filtro.  
   
  Para convertir en un tipo de datos que no es un tipo de datos CLR estándar, debe modificar la expresión para que realice la conversión de manera explícita. Puede usar las funciones de conversión del cuadro de diálogo **Expresión** comprendidas en la categoría **Funciones comunes**, **Conversión**. Por ejemplo, para un campo `ListPrice` que representa datos que están almacenados como un tipo de datos **money** en un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la extensión de procesamiento de datos devuelve el valor de campo como un tipo de datos <xref:System.Decimal> . Si desea establecer un filtro para usar solo valores mayores que **$50000.00** en la moneda del informe, convierta el valor en Decimal con la expresión `=CDec(50000.00)`.  
   
  Este valor también puede incluir una referencia de parámetro para permitir al usuario seleccionar de forma interactiva el valor por el que va a filtrarse.  
   
-## <a name="see-also"></a>Vea también  
- [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [La expresión usa en los informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

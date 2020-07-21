@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 645aee1374f7dbf3c290500bb35ca47115983670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fde3029cb170a45852e08b8073f9a66bb6179658
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62809573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935009"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opciones de configuración de servidor (SQL Server)
   Puede administrar y optimizar los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante opciones de configuración con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o el procedimiento almacenado del sistema sp_configure. Las opciones de configuración de servidores más utilizadas están disponibles mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]; es posible el acceso a todas las opciones de configuración mediante sp_configure. Antes de establecer estas opciones, debe considerar detenidamente los efectos en el sistema. Para obtener más información, vea [Ver o cambiar las propiedades del servidor &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "62809573"
   
 -   Inmediatamente después de establecer la opción y ejecutar la instrucción RECONFIGURE (o, en algunos casos, RECONFIGURE WITH OVERRIDE).  
   
-     -o bien-  
+     O bien  
   
 -   Después de realizar las acciones anteriores y reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62809573"
   
 -   SC = Opciones de configuración automática.  
   
-    |Opción de configuración|Valor mínimo|Valor máximo|Default|  
+    |Opción de configuración|Valor mínimo|Valor máximo|Valor predeterminado|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -72,7 +71,7 @@ ms.locfileid: "62809573"
     |[affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A, RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A, disponible solo en la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])|-2147483648|2147483647|0|  
     |[affinity mask](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
-    |[affinity64 mask](affinity64-mask-server-configuration-option.md) (A, RR), disponible solo en la versión de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
+    |[affinity64 Mask](affinity64-mask-server-configuration-option.md) (A, RR), disponible solo en la versión de 64 bits de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[Agent XPs](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> Cambia a 1 cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado es 0 si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece para que se inicie automáticamente durante la instalación.|  
     |[allow updates](allow-updates-server-configuration-option.md) (obsoleto. No debe usarse. Generará un error durante la reconfiguración).|0|1|0|  
     |[Valor predeterminado de la suma de comprobación de copia de seguridad](../backup-checksum-default.md)|0|1|0|  
@@ -87,7 +86,7 @@ ms.locfileid: "62809573"
     |[cursor threshold](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
     |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
     |[default full-text language](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|3082|  
-    |[default language](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
+    |[idioma predeterminado](configure-the-default-language-server-configuration-option.md)|0|9.999|0|  
     |[default trace enabled](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
@@ -105,7 +104,7 @@ ms.locfileid: "62809573"
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 es el máximo recomendado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y 2048 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.|0<br /><br /> Cero configura automáticamente el número máximo de subprocesos de trabajo dependientes del número de procesadores mediante la fórmula (256 + ( *\<procesadores>* -4) * 8) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y dos veces la misma fórmula para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.|  
+    |[max worker threads](configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 es el máximo recomendado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits, y 2048 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 64 bits.|0<br /><br /> Cero configura automáticamente el número máximo de subprocesos de trabajo en función del número de procesadores mediante la fórmula (256 + ( *\<processors>* -4) * 8) para 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y dos veces la misma para 64 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  
@@ -122,7 +121,7 @@ ms.locfileid: "62809573"
     |[recovery interval](configure-the-recovery-interval-server-configuration-option.md) (A, SC)|0|32767|0|  
     |[remote access](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
     |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1|0|  
-    |[remote login timeout](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
+    |[tiempo de espera de inicio de sesión remoto](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
     |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
     |[remote query timeout](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
     |[Opción Replication XPs](replication-xps-server-configuration-option.md) (A)|0|1|0|  
@@ -132,12 +131,12 @@ ms.locfileid: "62809573"
     |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1|0|  
     |[SMO y DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
     |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
-    |[two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
+    |[two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9.999|2049|  
     |[user connections](configure-the-user-connections-server-configuration-option.md) (A, RR, SC)|0|32767|0|  
-    |[user options](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
+    |[Opciones de usuario](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
     |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  
   

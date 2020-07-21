@@ -18,20 +18,20 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123510"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727072"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En este artículo se describe cómo crear índices en una vista. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar
 
 Para crear una vista indizada, es necesario seguir los pasos descritos a continuación, que son fundamentales para la correcta implementación de la vista indizada:
 
@@ -47,7 +47,7 @@ Para crear una vista indizada, es necesario seguir los pasos descritos a continu
 >
 > <sup>1</sup> Como las operaciones UPDATE, DELETE o INSERT.
 
-### <a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas
+### <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas
 
 La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET `CONCAT_NULL_YIELDS_NULL` en ON, la expresión `'abc' + NULL` devuelve el valor NULL `NULL`, aunque al establecer `CONCAT_NULL_YIELDS_NULL` en OFF, la misma expresión genera `'abc'`.
 
@@ -58,15 +58,15 @@ Para asegurar el correcto mantenimiento de las vistas y la generación de result
 - Se realiza una operación de inserción, actualización o eliminación en cualquier tabla que participa en la vista indizada. Este requisito incluye operaciones como copia masiva, replicación y consultas distribuidas.
 - El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.
 
-|Opciones SET|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|
+|Opciones de Set|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
-|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|ANSI_NULLS|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|ANSI_PADDING|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|ANSI_WARNINGS<sup>1</sup>|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|ARITHABORT|ACTIVAR|ACTIVAR|Apagado|Apagado|
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|NUMERIC_ROUNDABORT|Apagado|Apagado|Apagado|Apagado|
+|QUOTED_IDENTIFIER|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> Si se establece `ANSI_WARNINGS` en ON, `ARITHABORT` se establece implícitamente en ON.
@@ -92,12 +92,12 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
 - Cuando crea el índice, la opción `IGNORE_DUP_KEY` debe establecerse en OFF (configuración predeterminada).
 - En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, _esquema_ **.** _nombretabla_ .
 - Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción `WITH SCHEMABINDING`.
-- Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, _\<schema\>_ **.** _\<function\>_ .
+- Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista se deben usar nombres de dos partes, _\<schema\>_ **.** _\<function\>_ .
 - La propiedad de acceso a datos de una función definida por el usuario debe ser `NO SQL` y la propiedad de acceso externo debe ser `NO`.
 - Las funciones de Common Language Runtime (CLR) pueden aparecer en la lista de selección de la vista, pero no pueden formar parte de la definición de la clave de índice clúster. Las funciones CLR no pueden aparecer en la cláusula WHERE de la vista ni en la cláusula ON de una operación JOIN en la vista.
 - Los métodos y las funciones CLR de tipos definidos por el usuario CLR utilizados en la definición de la vista deben establecer las propiedades según se indica en la tabla siguiente.
 
-   |Propiedad|Nota|
+   |Propiedad|Nota:|
    |--------------|----------|
    |DETERMINISTIC = TRUE|Debe declararse de forma explícita como un atributo del método de Microsoft .NET Framework.|
    |PRECISE = TRUE|Debe declararse de forma explícita como un atributo del método de .NET Framework.|
@@ -131,13 +131,13 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
 > [!IMPORTANT]
 > No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula `FOR SYSTEM_TIME`).
 
-### <a name="Recommendations"></a> Recomendaciones
+### <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
 
 Cuando haga referencia a los literales de cadena **datetime** y **smalldatetime** de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Para obtener más información sobre las expresiones deterministas y no deterministas, consulte la sección [Consideraciones](#nondeterministic) de esta página.
 
 Al ejecutar DML (como `UPDATE`, `DELETE` or `INSERT`) en una tabla a la que hace referencia un gran número de vistas indexadas, o menos vistas indexadas pero muy complejas, dichas vistas indexadas deberán actualizarse igualmente durante la ejecución de DML. Como resultado, el rendimiento de la consulta DML se puede degradar notablemente o, en algunos casos, puede que tampoco se genere un plan de consulta. En estos casos, pruebe las consultas DML antes de usarlas en entornos de producción, analice el plan de consulta y ajuste o simplifique la instrucción DML.
 
-### <a name="Considerations"></a> Consideraciones
+### <a name="considerations"></a><a name="Considerations"></a> Consideraciones
 
 La configuración de la opción **large_value_types_out_of_row** de las columnas de una vista indexada se hereda de la configuración de la columna correspondiente de la tabla base. Este valor se establece mediante [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). La configuración predeterminada de las columnas formadas a partir de expresiones es 0. Esto significa que los tipos de valores grandes se almacenan de forma consecutiva.
 
@@ -151,13 +151,13 @@ Los índices de las tablas y las vistas se pueden deshabilitar. Cuando se deshab
 
 <a name="nondeterministic"></a> Las expresiones que implican la conversión implícita de cadenas de caracteres a **datetime** o **smalldatetime** se consideran no deterministas. Para obtener más información, vea [Conversión no determinista de las cadenas de fecha literales en valores DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
-### <a name="Security"></a> Seguridad
+### <a name="security"></a><a name="Security"></a> Seguridad
 
-#### <a name="Permissions"></a> Permisos
+#### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 Se necesita el permiso **CREATE VIEW** en la base de datos y el permiso **ALTER** en el esquema en que se crea la vista.
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL
 
 ### <a name="to-create-an-indexed-view"></a>Para crear una vista indizada
 

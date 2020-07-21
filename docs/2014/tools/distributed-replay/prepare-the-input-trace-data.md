@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fd6ab191e3838de7d461df0626168ff08ef9afa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064140"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar los datos de seguimiento de entrada
-  Para poder iniciar una repetición distribuida con la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe preparar la información de seguimiento de entrada iniciando la fase de preprocesamiento desde la herramienta de administración de reproducción distribuida. En la fase de preprocesamiento, el controlador de reproducción distribuida procesa la información de seguimiento y genera un archivo intermedio:  
+  Para poder iniciar una repetición distribuida con la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe preparar la información de seguimiento de entrada iniciando la fase de preprocesamiento desde la herramienta de administración Distributed Replay. En la fase de preprocesamiento, el controlador de reproducción distribuida procesa la información de seguimiento y genera un archivo intermedio:  
   
- ![Fase de preproceso de Distributed replay](../../database-engine/media/preprocess.gif "fase de preproceso de Distributed replay")  
+ ![Fase de preproceso de Distributed Replay](../../database-engine/media/preprocess.gif "Fase de preproceso de Distributed Replay")  
   
  Para obtener más información sobre la fase de preprocesamiento, vea [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
@@ -29,7 +28,7 @@ ms.locfileid: "63149989"
   
 ### <a name="to-prepare-the-input-trace-data"></a>Para preparar la información de seguimiento de entrada  
   
-1.  **(Opcional) Modificar opciones de configuración de preproceso**: Si desea modificar la configuración de preprocesamiento, por ejemplo, si para filtrar las sesiones del sistema o para configurar el tiempo de inactividad máximo, debe modificar el `<PreprocessModifiers>` elemento del archivo de configuración de preprocesamiento basado en XML, `DReplay.exe.preprocess.config`. Si modifica el archivo de configuración de preprocesamiento, se recomienda que modifique una copia en vez del original. Para modificar los valores de configuración, siga estos pasos:  
+1.  **(Opcional) Modificar los valores de configuración de preprocesamiento**: si quiere modificar los valores de configuración de preprocesamiento, por ejemplo, si se van a filtrar las sesiones del sistema o se va a configurar el tiempo máximo de inactividad, debe modificar el elemento `<PreprocessModifiers>` del archivo de configuración de preprocesamiento basado en XML, `DReplay.exe.preprocess.config`. Si modifica el archivo de configuración de preprocesamiento, se recomienda que modifique una copia en vez del original. Para modificar los valores de configuración, siga estos pasos:  
   
     1.  Haga una copia del archivo de configuración de preprocesamiento predeterminado, `DReplay.exe.preprocess.config`, y cambie el nombre del nuevo archivo. El archivo de configuración de preprocesamiento predeterminado se encuentra en la carpeta de instalación de la herramienta de administración.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "63149989"
   
      Para obtener más información sobre el archivo de configuración de preprocesamiento, vea [Configurar Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Iniciar la fase de preprocesamiento**: Para preparar los datos de seguimiento de entrada, debe ejecutar la herramienta de administración con el **preprocesar** opción. Para obtener más información, vea [Opción de preprocesamiento &#40;herramienta de administración Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Iniciar la fase de preprocesamiento**: para preparar la información de seguimiento de entrada, debe ejecutar la herramienta de administración con la opción de **preprocesamiento**. Para obtener más información, vea [Opción de preprocesamiento &#40;herramienta de administración Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Abra la utilidad de símbolo del sistema de Windows (`CMD.exe`) y navegue hasta la ubicación de instalación de la herramienta de administración de Distributed Replay (`DReplay.exe`).  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63149989"
   
 3.  Una vez completada la fase de preprocesamiento, el archivo intermedio se almacena en el directorio de trabajo del controlador. Para iniciar la fase de reproducción de eventos, debe ejecutar la herramienta de administración con la opción **replay** . Para obtener más información, vea [Reproducir datos de seguimiento](replay-trace-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](distributed-replay-requirements.md)   
  [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   

@@ -15,22 +15,21 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c69ded7b487168063109d1acb3f44f20e138e38f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033567"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055828"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es una API COM de bajo nivel que se utiliza para tener acceso a los datos. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se recomienda para desarrollar herramientas, utilidades o componentes de bajo nivel que necesitan alto rendimiento. El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es un proveedor nativo, de alto rendimiento con acceso directo al protocolo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Flujo TDS.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client proporciona compatibilidad con OLE DB a las aplicaciones que se conectan a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB es un proveedor compatible con 2.0 versión de OLE DB.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client es un proveedor compatible con la versión 2,0 de OLE DB.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -64,15 +63,15 @@ ms.locfileid: "63033567"
   
 -   [Errores](../../native-client-ole-db-errors/errors.md)  
   
--   [Nombres de entidad de seguridad de servicio &#40;SPN&#41; en conexiones de cliente &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Compatibilidad con columnas dispersas &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
--   [SQL Server Native Client &#40;OLE DB&#41; referencia](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [Referencia de SQL Server Native Client &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [Temas de procedimientos de OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

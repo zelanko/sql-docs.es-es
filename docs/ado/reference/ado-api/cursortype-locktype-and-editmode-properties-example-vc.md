@@ -1,5 +1,5 @@
 ---
-title: CursorType, LockType y ejemplo de las propiedades EditMode (VC ++) | Microsoft Docs
+title: Ejemplo de las propiedades CursorType, LockType y EditMode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26124aa4259ffa145cdbf0c42a559e89a5e2b766
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67933255"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763528"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType y ejemplo de las propiedades EditMode (VC ++)
-En este ejemplo se muestra cómo establecer el [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedades antes de abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la [EditMode](../../../ado/reference/ado-api/editmode-property.md) propiedad bajo diferentes condiciones. La función EditModeOutput es necesaria ejecutar este procedimiento.  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Ejemplo de las propiedades CursorType, LockType y EditMode (VC + +)
+Este ejemplo muestra cómo establecer las propiedades [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) antes de abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la propiedad [EditMode](../../../ado/reference/ado-api/editmode-property.md) en varias condiciones. La función EditModeOutput es necesaria para que este procedimiento se ejecute.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -155,14 +155,14 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **Después de AddNew:**    
+  **Después de AddNew:**   
  **EditMode = adEditAdd**  
-**Después de la actualización:**    
+**Después de la actualización:**   
  **EditMode = adEditNone**  
-**Después de editar:**    
+**Después de la edición:**   
  **EditMode = adEditInProgress**   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [Propiedad EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [Propiedad LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
+ [LockType (propiedad, ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

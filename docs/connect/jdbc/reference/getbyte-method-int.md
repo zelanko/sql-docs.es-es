@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61a2f61961808d63a66d5dd29c8b9387f51a688c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d767b27c3e34cccc503c97c1be6f802e9434214d
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67953479"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926320"
 ---
 # <a name="getbyte-method-int"></a>Método getByte (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ public byte getByte(int index)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *index*  
+ *índice*  
   
  Un valor **int** que indica el índice del parámetro.  
   
@@ -45,7 +45,7 @@ public byte getByte(int index)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getByte especifica este método getByte en la interfaz java.sql.CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  

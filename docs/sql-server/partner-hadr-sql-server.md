@@ -1,27 +1,25 @@
 ---
-title: Asociados de alta disponibilidad y recuperación ante desastres de SQL Server | Microsoft Docs
+title: Asociados de alta disponibilidad y recuperación ante desastres de SQL Server
 description: Listas de asociados externos que cuentan con soluciones para supervisar Server.
 services: sql-server
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 10b44f803da7b02ba95f8d6739a5bab9b85eba50
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 4d01deaf94e18fcf277e11e4a880f99a70693ead
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68132829"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75656980"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Asociados de alta disponibilidad y recuperación ante desastres de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para proporcionar alta disponibilidad y recuperación ante desastres para los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de alta disponibilidad y recuperación ante desastres compatibles con Microsoft SQL Server.
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>Asociados de alta disponibilidad y recuperación ante desastres
-<!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 - SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
--->
 
 | Asociado | Descripción | Vínculos | 
 | --- | --- | --- |
@@ -38,14 +36,14 @@ Para proporcionar alta disponibilidad y recuperación ante desastres para los se
 Para más información sobre otros asociados, vea las secciones sobre [asociados de supervisión][mon_partners], [asociados de administración][management_partners] y [asociados de desarrollo][dev_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/Veeam_green_logo.png
-[2]: ./media/partner-hadr-sql-server/dh2i_logo.png
-[3]: ./media/partner-hadr-sql-server/idera_logo.png
-[4]: ./media/partner-hadr-sql-server/hpe_pri_grn_pos_rgb.png
-[5]: ./media/partner-hadr-sql-server/azure_logo.png
-[6]: ./media/partner-hadr-sql-server/portworx_logo.png
-[7]: ./media/partner-hadr-sql-server/nec_logo.png
-[8]: ./media/partner-hadr-sql-server/sios_logo.png
+[1]: ./media/partner-hadr-sql-server/Veeam-green-logo.png
+[2]: ./media/partner-hadr-sql-server/dh2i-logo.png
+[3]: ./media/partner-hadr-sql-server/idera-logo.png
+[4]: ./media/partner-hadr-sql-server/hpe.png
+[5]: ./media/partner-hadr-sql-server/azure-logo.png
+[6]: ./media/partner-hadr-sql-server/portworx-logo.png
+[7]: ./media/partner-hadr-sql-server/nec-logo.png
+[8]: ./media/partner-hadr-sql-server/sios-logo.png
 
 <!--Article links-->
 [mon_partners]: ./partner-monitor-sql-server.md

@@ -12,15 +12,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 87924fccd112be6090d24e64826c72b79381e062
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72930273"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091759"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -40,7 +40,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  Las consultas de texto completo realizan las búsquedas lingüísticas en los datos de texto de los índices de texto completo sobre palabras y frases basándose en las reglas de un idioma determinado, como inglés o japonés. Las consultas de texto completo pueden contener palabras y frases sencillas, o formas diversas de una palabra o frase. Una consulta de texto completo devuelve todos los documentos que contienen por lo menos una coincidencia (también se conoce como *acierto*). Se produce una coincidencia cuando un documento de destino contiene todas las condiciones especificadas en la consulta de texto completo y cumple cualquier otra condición de búsqueda, como la distancia entre los términos que coinciden.    
   
-##  <a name="queries"></a> Consultas de búsqueda de texto completo  
+##  <a name="full-text-search-queries"></a><a name="queries"></a> Consultas de búsqueda de texto completo  
  Una vez agregadas las columnas a un índice de texto completo, los usuarios y aplicaciones pueden ejecutar las consultas de texto completo en el texto de las columnas. Estas consultas pueden buscar cualquiera de lo siguiente:  
   
 -   Una o varias palabras o frases específicas (*término simple*)  
@@ -78,10 +78,10 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  Para obtener más información, vea [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
-##  <a name="like"></a> Comparar las consultas de búsqueda de texto completo en el predicado LIKE
+##  <a name="compare-full-text-search-queries-to-the-like-predicate"></a><a name="like"></a> Comparar las consultas de búsqueda de texto completo en el predicado LIKE
  A diferencia de la búsqueda de texto completo, el predicado [LIKE](../../t-sql/language-elements/like-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona solamente en patrones de caracteres. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan.  
   
-##  <a name="architecture"></a> Arquitectura de la búsqueda de texto completo
+##  <a name="full-text-search-architecture"></a><a name="architecture"></a> Arquitectura de la búsqueda de texto completo
  La arquitectura de búsqueda de texto completo consta de los procesos siguientes:  
   
 -   Proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sqlserver.exe).  
@@ -94,7 +94,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  ![arquitectura de la búsqueda de texto completo](../../relational-databases/search/media/ifts-arch.gif "arquitectura de la búsqueda de texto completo")  
 
-###  <a name="sqlprocess"></a> Proceso de SQL Server  
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a> Proceso de SQL Server  
  El proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa los componentes siguientes para la búsqueda de texto completo:  
   
 -   **Tablas de usuario.** Esta tablas contienen los datos cuyo texto completo se indizará.  
@@ -116,7 +116,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
 -   **Administrador del demonio de filtro.** El administrador del demonio de filtro es responsable de supervisar el estado del host de demonio de filtro del motor de texto completo.  
   
-###  <a name="fdhostprocess"></a> Filter Daemon Host process  
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a> Filter Daemon Host process  
  El host de demonio de filtro es un proceso iniciado por el motor de texto completo. Ejecuta los componentes de búsqueda de texto completo siguientes, que son responsables de obtener acceso a los datos de las tablas, filtrarlos y separar las palabras de esos datos, así como de separar las palabras y lematizar la entrada de la consulta.  
   
  Los componentes del proceso de host de demonio de filtro son los siguientes:  
@@ -127,10 +127,10 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
 -   **Separadores de palabras y lematizadores.** Un separador de palabras es un componente específico del idioma que busca los límites de palabras según las reglas léxicas de un idioma determinado (*separación de palabras*). Cada separador de palabras está asociado a un componente de lematizador específico del idioma que conjuga los verbos y realiza las expansiones flexionales. Al realizar la indización, el host de demonio de filtro utiliza un separador de palabras y un lematizador para realizar el análisis lingüístico de los datos de texto de una columna de la tabla determinada. El lenguaje asociado a una columna de la tabla en el índice de texto completo determina qué separador de palabras y lematizador se utilizan para indizar la columna. Para obtener más información, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="processing"></a> Proceso de búsqueda de texto completo  
+##  <a name="full-text-search-processing"></a><a name="processing"></a> Proceso de búsqueda de texto completo  
  La búsqueda de texto completo se realiza gracias al motor de texto completo. El motor de texto completo desempeña dos roles: la indización y las consultas.  
   
-###  <a name="indexing"></a> Proceso de indización de texto completo  
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a> Proceso de indización de texto completo  
  Cuando se inicia un rellenado de texto completo (también conocido como rastreo), el motor de texto completo inserta lotes grandes de datos en la memoria y lo notifica al host de demonio de filtro. El host filtra y establece separaciones de palabras en los datos, y convierte los datos convertidos en las listas de palabras invertidas. A continuación, la búsqueda de texto completo extrae los datos convertidos de las listas de palabras, procesa los datos para quitar las palabras irrelevantes y conserva las listas de palabras para un lote en uno o varios índices invertidos.  
   
  Al indexar datos almacenados en una columna **varbinary(max)** o **image** , el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren que los datos de tipo **varbinary(max)** o **image** se escriban en la carpeta de filtro de datos, en lugar de insertarse en la memoria.  
@@ -141,7 +141,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  Cuando se completa un rellenado, se desencadena un proceso de combinación final que combina los fragmentos de índice en un solo índice de texto completo maestro. Esto permite mejorar el rendimiento de las consultas, ya que únicamente es necesario realizar consultas en el índice maestro, en lugar de hacerlo en varios fragmentos de índice, y se pueden utilizar mejores estadísticas de puntuación para obtener la clasificación por relevancia.  
   
-###  <a name="querying"></a> Proceso de consultas de texto completo  
+###  <a name="full-text-querying-process"></a><a name="querying"></a> Proceso de consultas de texto completo  
  El procesador de consultas pasa las partes de texto completo de una consulta al Motor de búsqueda de texto completo para procesarlas. El motor de búsqueda de texto completo realiza la separación de palabras y, opcionalmente, expansiones del diccionario de sinónimos, lematización y procesamiento de las palabras irrelevantes. A continuación, las partes de texto completo de la consulta se representan en forma de operadores de SQL, principalmente como funciones con valores de tabla de transmisión por secuencias (STVF). Durante la ejecución de la consulta, las STVF tienen acceso al índice invertido para recuperar los resultados correctos. Los resultados se devuelven en este punto al cliente o se siguen procesando antes de devolverse al cliente.  
 
 ## <a name="full-text-index-architecture"></a>Arquitectura de los índices de texto completo
@@ -151,12 +151,12 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
 Solo se permite un índice de texto completo por cada tabla. Para crear un índice de texto completo en una tabla, ésta debe tener una única columna que no contenga valores NULL. Puede crear un índice de texto completo en columnas de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**y **varbinary(max)** , que se pueden indexar para efectuar una búsqueda de texto completo. Si se crea un índice de texto completo en una columna cuyo tipo de datos es  **varbinary**, **varbinary(max)** , **image**o **xml** , deberá especificar una columna de tipo. Una *columna de tipo* es una columna de tabla en la que se almacena la extensión de archivo (.doc, .pdf, .xls, etc.) del documento en cada fila.  
 
-###  <a name="structure"></a> Estructura de los índices de texto completo  
+###  <a name="full-text-index-structure"></a><a name="structure"></a> Estructura de los índices de texto completo  
  Para comprender el funcionamiento del motor de texto completo, es necesario entender la estructura de un índice de texto completo. En este tema se utiliza el extracto siguiente de la tabla **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] como tabla de ejemplo. Este extracto muestra solo dos columnas, **DocumentID** y **Title** , y tres filas de la tabla.  
   
  En este ejemplo se presupone que se ha creado un índice de texto completo en la columna **Title** .  
   
-|DocumentID|Title|  
+|DocumentID|Título|  
 |----------------|-----------|  
 |1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
@@ -183,9 +183,9 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|Ensamblado|1|2|6|  
+|Assembly|1|2|6|  
 |3|1|2|7|  
-|Installation|1|3|4|  
+|Instalación|1|3|4|  
   
  La columna **Keyword** contiene una representación de un solo token extraído durante la indización. Los separadores de palabras determinan en qué consiste un token.  
   
@@ -195,10 +195,10 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
   
  La columna **Occurrence** contiene un valor entero. Para cada valor de DocId hay una lista de valores de repetición correspondientes a las posiciones relativas de una palabra clave determinada en DocId. Los valores de repetición son útiles para determinar las coincidencias de frases o de proximidad, por ejemplo, frases que tienen valores de repetición adyacentes. También son útiles para calcular las puntuaciones de importancia; por ejemplo, el número de repeticiones de una palabra clave en una columna DocId se puede utilizar para determinar la puntuación.   
   
-###  <a name="fragments"></a> Fragmentos de índices de texto completo  
+###  <a name="full-text-index-fragments"></a><a name="fragments"></a> Fragmentos de índices de texto completo  
  El índice de texto completo lógico normalmente se divide entre varias tablas internas. Cada tabla interna se conoce como un fragmento del índice de texto completo. Algunos de estos fragmentos podrían contener datos más recientes que otros. Por ejemplo, si un usuario actualiza la fila siguiente cuyo DocId es 3 y la tabla se somete automáticamente a seguimiento de los cambios, se crea un fragmento nuevo.  
   
-|DocumentID|Title|  
+|DocumentID|Título|  
 |----------------|-----------|  
 |3|Rear Reflector|  
   
@@ -227,7 +227,7 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|Ensamblado|1|2|6|  
+|Assembly|1|2|6|  
 |3|1|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>Diferencias entre los índices de texto completo y los índices normales de SQL Server:  
@@ -238,8 +238,8 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
 |La adición de datos a los índices de texto completo, operación que recibe el nombre de *rellenado*, puede solicitarse mediante una programación o una solicitud específica, o bien realizarse automáticamente al agregar nuevos datos.|Se actualizan automáticamente cuando se insertan, actualizan o eliminan los datos en los que están basados.|  
 |Se agrupan en la misma base de datos en uno o más catálogos de texto completo.|No se agrupan.|  
 
-##  <a name="components"></a> Compatibilidad con idiomas y componentes lingüísticos de la búsqueda de texto completo
- La búsqueda de texto completo admite casi 50 idiomas distintos, como inglés, español, chino, japonés, árabe, bengalí e hindi. Para obtener una lista completa de los idiomas de texto completo compatibles, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Cada una de las columnas incluidas en el índice de texto completo está asociada a un identificador de configuración regional (LCID) de Microsoft Windows que se corresponde con un idioma compatible con la búsqueda de texto completo. Por ejemplo, el LCID 1033 corresponde al inglés de Estados Unido y el LCID 2057 corresponde al inglés de Reino Unido. Para cada idioma de texto completo compatible, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona componentes lingüísticos que permiten indizar y consultar los datos de texto completo almacenados en ese idioma.  
+##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> Compatibilidad con idiomas y componentes lingüísticos de la búsqueda de texto completo
+ La búsqueda de texto completo admite casi 50 idiomas distintos, como inglés, español, chino, japonés, árabe, bengalí e hindi. Para obtener una lista completa de los idiomas de texto completo compatibles, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Cada una de las columnas incluidas en el índice de texto completo está asociada a un identificador de configuración regional (LCID) de Microsoft Windows que se corresponde con un idioma compatible con la búsqueda de texto completo. Por ejemplo, el LCID 1033 corresponde al inglés de Estados Unido y el LCID 2057 corresponde al inglés de Reino Unido. Para cada idioma de texto completo compatible, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona componentes lingüísticos que permiten indizar y consultar los datos de texto completo almacenados en ese idioma.  
   
  Entre los componentes específicos del idioma se incluyen los siguientes:  
   
@@ -254,4 +254,3 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
  Los separadores de palabras (y lematizadores) y los filtros se ejecutan en el proceso de host de demonio de filtro (fdhost.exe).  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-

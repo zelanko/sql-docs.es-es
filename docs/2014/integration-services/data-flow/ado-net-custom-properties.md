@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17332a2d70fd66e3229105ce5666bbf9c6de801b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62828658"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432432"
 ---
 # <a name="ado-net-custom-properties"></a>Propiedades personalizadas de ADO NET
   **Propiedades personalizadas de origen**  
@@ -40,15 +39,15 @@ ms.locfileid: "62828658"
   
  En la tabla siguiente se describen las propiedades personalizadas del destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] . Todas las propiedades son de lectura y escritura. Estas propiedades no están disponibles en el **Editor de destinos ADO NET**, pero se pueden establecer con el **Editor avanzado**.  
   
-|Property|Tipo de datos|Descripción|  
+|Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|BatchSize|Integer|Número de filas de un lote que se envía al servidor. El valor **0** indica que el tamaño del lote coincide con el tamaño del búfer interno. El valor predeterminado de esta propiedad es **0**.|  
-|CommandTimeOut|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
+|BatchSize|Entero|Número de filas de un lote que se envía al servidor. El valor **0** indica que el tamaño del lote coincide con el tamaño del búfer interno. El valor predeterminado de esta propiedad es **0**.|  
+|CommandTimeOut|Entero|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
 |TableOrViewName|String|Nombre de la tabla o vista de destino.|  
   
  Para más información, consulte [ADO NET Destination](ado-net-destination.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](../common-properties.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b26b05f41b23d1626fe3d9f7704d334bfe650098
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8222686084fc1d87d23edbf18f56e85f1f8aeec9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63070973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064313"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Mostrar propiedades del diagrama (Visual Database Tools)
   Puede mostrar las propiedades de un diagrama de base de datos en la ventana Propiedades.  
@@ -33,7 +32,7 @@ ms.locfileid: "63070973"
   
  Podrá ver las propiedades del diagrama en la ventana **Propiedades** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

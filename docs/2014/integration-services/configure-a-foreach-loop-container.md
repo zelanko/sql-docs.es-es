@@ -1,5 +1,5 @@
 ---
-title: Configurar un contenedor de bucles Foreach | Microsoft Docs
+title: Configurar un contenedor de bucles foreach | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,14 @@ helpviewer_keywords:
 - Foreach Loop containers
 - containers [Integration Services], Foreach Loop
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ef95ca29b9e502950326b095f56f26e1a508831
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060874"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434882"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurar un contenedor de bucles Foreach
   Este procedimiento describe cómo configurar un contenedor de bucles Foreach, incluyendo expresiones de propiedad en los niveles de enumerador y contenedor.  
@@ -65,14 +64,14 @@ ms.locfileid: "66060874"
   
     -   Para usar el Enumerador de SMO para Foreach, seleccione una conexión ADO.NET existente o haga clic en **Nueva conexión** en la lista **Conexión** y luego escriba la cadena que se debe usar o haga clic en **Examinar**. Si hace clic en **Examinar**, en el cuadro de diálogo **Seleccionar enumeración de SMO** , seleccione el tipo de objeto que se debe enumerar y el tipo de enumeración, y haga clic en **Aceptar**.  
   
-6.  También puede hacer clic en el botón Examinar ( **…** ) en el cuadro de texto **Expresiones** de la página **Colección** para crear expresiones que actualicen valores de propiedades. Para más información, vea [Agregar o cambiar una expresión de propiedad](expressions/add-or-change-a-property-expression.md).  
+6.  Opcionalmente, haga clic en el botón examinar **(...)** en el cuadro de texto **expresiones** de la página **colección** para crear expresiones que actualicen los valores de propiedad. Para más información, vea [Agregar o cambiar una expresión de propiedad](expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Las propiedades de la lista **Propiedad** varían según el enumerador.  
   
 7.  Opcionalmente, haga clic en **Asignaciones de variables** para asignar propiedades de objetos al valor de la colección y luego haga lo siguiente:  
   
-    1.  En la lista **Variables**, seleccione una variable o haga clic en **\<Nueva variable>** para crear una.  
+    1.  En la lista **variables** , seleccione una variable o haga clic en **\<New Variable>** para crear una nueva variable.  
   
     2.  Si agrega una nueva variable, establezca las propiedades de la variable en el cuadro de diálogo **Agregar variable** y haga clic en **Aceptar**.  
   
@@ -83,9 +82,9 @@ ms.locfileid: "66060874"
   
 8.  Opcionalmente, haga clic en **Expresiones** y, en la página **Expresiones** , cree expresiones de propiedades para las propiedades del contenedor de bucles Foreach. Para más información, vea [Agregar o cambiar una expresión de propiedad](expressions/add-or-change-a-property-expression.md).  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
- [Contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
+## <a name="see-also"></a>Consulte también  
+ [Contenedor Foreach Loop](control-flow/foreach-loop-container.md)  
   
   

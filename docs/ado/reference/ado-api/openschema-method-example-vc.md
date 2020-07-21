@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método OpenSchema (VC ++) | Microsoft Docs
+title: Ejemplo del método OpenSchema (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,17 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50228f2cf6f8564be500f671de797dfbff0aa7c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67931884"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762126"
 ---
 # <a name="openschema-method-example-vc"></a>Ejemplo del método OpenSchema (VC ++)
-Este ejemplo se usa el [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para mostrar el nombre y tipo de cada tabla de la ***Pubs*** base de datos.  
+En este ejemplo se usa el método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) para mostrar el nombre y el tipo de cada tabla en la base de datos ***pubs*** .  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -193,5 +193,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)

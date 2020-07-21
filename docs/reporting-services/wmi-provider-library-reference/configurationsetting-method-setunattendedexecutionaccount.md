@@ -16,10 +16,10 @@ ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aac5b7a237c5aa21b79c1204d7d4560736da56d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65580965"
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>Método ConfigurationSetting - SetUnattendedExecutionAccount
@@ -50,7 +50,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método SetUnattendedExecutionAccount no comprueba si el servidor de informes puede iniciar sesión como el usuario especificado.  
   
  No se puede usar el método SetUnattendedExecutionAccount para las ejecuciones desatendidas en el contexto del servicio Servidor de informes de Windows.  

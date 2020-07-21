@@ -1,5 +1,5 @@
 ---
-title: Páginas de códigos de servidor y los datos Unicode | Microsoft Docs
+title: Páginas de códigos de servidor y datos Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 027f46cc60aa065a98fc5b7736ff1707248d69bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62511830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050850"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Datos Unicode y páginas de códigos de servidor
     
@@ -28,20 +27,20 @@ ms.locfileid: "62511830"
   
  La API Procedimiento almacenado extendido está habilitada para los datos Unicode; sin embargo, no está habilitada para los metadatos Unicode. La directiva #define de Unicode no tiene ningún efecto en la API Procedimiento almacenado extendido.  
   
- Se supone que todos los metadatos que devuelve la API Procedimiento almacenado extendido o que la aplicación de procedimiento almacenado extendida le proporciona están en la página de códigos multibyte del servidor. La página de códigos predeterminada de una aplicación de servidor de API procedimiento almacenado extendido es la página de códigos ANSI del equipo donde se ejecuta la aplicación, que puede obtenerse mediante una llamada a **srv_pfield** con el parámetro de campo establecido en SRV_ SPROC_CODEPAGE.  
+ Se supone que todos los metadatos que devuelve la API Procedimiento almacenado extendido o que la aplicación de procedimiento almacenado extendida le proporciona están en la página de códigos multibyte del servidor. La página de códigos predeterminada de una aplicación de servidor de API de procedimiento almacenado extendido es la página de códigos ANSI del equipo en el que se ejecuta la aplicación, que se puede obtener llamando a **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE.  
   
  Si la aplicación de API Procedimiento almacenado extendido está habilitada para Unicode, debe convertir los nombres de columna de metadatos de Unicode, mensajes de error, etc., a datos multibyte antes de pasar estos datos a la API Procedimiento almacenado extendido.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Tenga en cuenta lo siguiente:  
+ El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Observe lo siguiente:  
   
--   Datos de columna se pasan como datos Unicode a **srv_describe** porque la columna se describe como srvnvarchar.  
+-   Los datos de columna se pasan como datos Unicode a **srv_describe** porque la columna se describe como SRVNVARCHAR.  
   
--   Metadatos de nombre de columna se pasan a **srv_describe** como datos multibyte.  
+-   Los metadatos de nombre de columna se pasan a **srv_describe** como datos multibyte.  
   
-     Las llamadas a procedimiento almacenado extendido **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos multibyte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     El procedimiento almacenado extendido llama a **srv_pfield** con el parámetro de campo establecido en SRV_SPROC_CODEPAGE para obtener la página de códigos multibyte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Los mensajes de error que se pasan a **srv_sendmsg** como datos multibyte.  
+-   Los mensajes de error se pasan a **srv_sendmsg** como datos multibyte.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -149,7 +148,7 @@ ms.locfileid: "62511830"
   
     ```  
   
-## <a name="see-also"></a>Vea también  
- [srv_wsendmsg &#40;API procedimiento almacenado extendido&#41;](../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Consulte también  
+ [srv_wsendmsg API de procedimiento almacenado extendido &#40;&#41;](../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

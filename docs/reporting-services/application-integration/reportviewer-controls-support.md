@@ -1,20 +1,21 @@
 ---
-title: Compatibilidad con versiones de rama actual del Visor de informes
+title: Compatibilidad con versiones del control del Visor de informes
+description: El control Microsoft Report Viewer es compatible con SQL Server Reporting Services y Power BI Report Server, que cumplen la directiva de ciclo de vida de soporte técnico moderna.
 author: maggiesMSFT
+ms.custom: ''
 ms.author: maggies
 ms.reviewer: jonhp
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: b67b62ae0155355d4bd13ce67880c6fa3c5ed002
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 671aacd4855afe4d4d5d0a8012fe5565420ff3e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266938"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "79198492"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>Compatibilidad con versiones de rama actual del Visor de informes
 

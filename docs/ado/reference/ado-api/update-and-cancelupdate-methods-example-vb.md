@@ -1,5 +1,5 @@
 ---
-title: Actualización de los métodos y CancelUpdate (VB) | Microsoft Docs
+title: Ejemplo de los métodos Update y CancelUpdate (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 92c65ce30010c4e1bc6943ba60dd1eee84478aa9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937833"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759541"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Ejemplo de los métodos Update y CancelUpdate (VB)
-Este ejemplo se muestra el [actualización](../../../ado/reference/ado-api/update-method.md) método junto con el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  
+En este ejemplo se muestra el método [Update](../../../ado/reference/ado-api/update-method.md) junto con el método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
 ```  
 'BeginUpdateVB  
@@ -114,13 +114,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- Este ejemplo se muestra el **actualización** método junto con el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método.  
+ En este ejemplo se muestra el método **Update** junto con el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) .  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CancelUpdate (método) (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update (método)](../../../ado/reference/ado-api/update-method.md)

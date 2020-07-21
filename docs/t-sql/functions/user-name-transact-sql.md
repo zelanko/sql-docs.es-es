@@ -24,19 +24,19 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 807bc30b54a645dd7cac356349015f1948a05310
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927595"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004087"
 ---
-# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve un nombre de usuario de base de datos a partir de un número de identificación especificado.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,15 +48,18 @@ USER_NAME ( [ id ] )
  *id*  
  Es el número de identificación asociado a un usuario de la base de datos. *id* es **int**. Es obligatorio utilizar paréntesis.  
   
-## <a name="return-types"></a>Tipos devueltos  
- **nvarchar(256)**  
+## <a name="return-types"></a>Tipos de valor devuelto  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se omite *id*, se supone que se trata del usuario actual en el contexto actual. Si el parámetro contiene la palabra NULL, se devolverá NULL. Cuando se llama a USER_NAME sin especificar un *id* después de una instrucción EXECUTE AS, USER_NAME devuelve el nombre del usuario representado. Si una entidad de seguridad de Windows ha tenido acceso a la base de datos en forma de miembro de un grupo, USER_NAME devuelve el nombre de la entidad de seguridad de Windows en vez del nombre del grupo.  
+ 
+> [!NOTE]
+> Aunque la función USER_NAME se admite en Azure SQL Database, no se admite el uso de *Ejecutar como* con USER_NAME. 
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-username"></a>A. Usar USER_NAME  
+### <a name="a-using-user_name"></a>A. Usar USER_NAME  
  En el siguiente ejemplo se devuelve el nombre de usuario del Id. de usuario `13`.  
   
 ```  
@@ -64,7 +67,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>B. Usar USER_NAME sin un identificador  
+### <a name="b-using-user_name-without-an-id"></a>B. Usar USER_NAME sin un identificador  
  En el siguiente ejemplo se busca el nombre del usuario actual sin especificar un identificador.  
   
 ```  
@@ -81,7 +84,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="c-using-username-in-the-where-clause"></a>C. Usar USER_NAME en la cláusula WHERE  
+### <a name="c-using-user_name-in-the-where-clause"></a>C. Usar USER_NAME en la cláusula WHERE  
  En el siguiente ejemplo se busca la fila en `sysusers` en la que el nombre sea igual al resultado de aplicar la función del sistema `USER_NAME` al número de identificador de usuario `1`.  
   
 ```  
@@ -99,7 +102,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. Llamar a USER_NAME durante la suplantación con EXECUTE AS  
+### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. Llamar a USER_NAME durante la suplantación con EXECUTE AS  
  En el siguiente ejemplo se muestra cómo se comporta `USER_NAME` durante la suplantación.  
   
 ```  
@@ -123,9 +126,9 @@ Zelig
 DBO
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username-without-an-id"></a>E. Usar USER_NAME sin un identificador  
+### <a name="e-using-user_name-without-an-id"></a>E. Usar USER_NAME sin un identificador  
  En el siguiente ejemplo se busca el nombre del usuario actual sin especificar un identificador.  
   
 ```  
@@ -139,7 +142,7 @@ SELECT USER_NAME();
 User7                              
 ```  
   
-### <a name="f-using-username-in-the-where-clause"></a>F. Usar USER_NAME en la cláusula WHERE  
+### <a name="f-using-user_name-in-the-where-clause"></a>F. Usar USER_NAME en la cláusula WHERE  
  En el siguiente ejemplo se busca la fila en `sysusers` en la que el nombre sea igual al resultado de aplicar la función del sistema `USER_NAME` al número de identificador de usuario `1`.  
   
 ```  
@@ -160,6 +163,6 @@ User7
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   

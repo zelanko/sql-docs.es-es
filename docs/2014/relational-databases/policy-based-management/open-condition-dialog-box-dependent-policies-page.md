@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 939e18e8a92ae9ac831b177b6fa8afd905d93a44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63182933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038489"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Abrir condición, página Directivas dependientes
   Use este cuadro de diálogo para mostrar una lista de las directivas que hacen referencia actualmente a esta condición de administración basada en directivas. Para obtener más información sobre cómo se relacionan las condiciones con las facetas y las directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Muestra el nombre de cada directiva que hace referencia a esta condición actual.  
   
  **Enabled**  
@@ -35,7 +34,7 @@ ms.locfileid: "63182933"
  **Creado**  
  Fecha de creación de la directiva.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

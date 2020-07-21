@@ -1,6 +1,7 @@
 ---
-title: 'Demostración: Demostración: mejora de rendimiento de OLTP en memoria | Microsoft Docs'
-ms.custom: ''
+title: Mejora de rendimiento de OLTP en memoria
+description: En este ejemplo de código, se muestra el rápido rendimiento de las tablas optimizadas para memoria con Transact-SQL interpretado y un procedimiento almacenado compilado de forma nativa.
+ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,15 +12,15 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cec13fc9bcfe30aa34f46afb23c7f8755f0c477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9d5cccaa99ae0343c3f6c99cd7f7bcfb249df0e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723256"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: Mejora de rendimiento de OLTP en memoria
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   En el ejemplo de código de este tema se muestra el rápido funcionamiento de las tablas optimizadas para memoria. La mejora del rendimiento es evidente cuando el acceso a los datos de una tabla optimizada para memoria se realiza desde [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional interpretado. Esta mejora del rendimiento es incluso mayor cuando el acceso a los datos de una tabla optimizada para memoria se realiza a través de un procedimiento almacenado compilado de forma nativa (NCSProc).  
  
@@ -32,8 +33,8 @@ Para una demostración más completa de las posibles mejoras de rendimiento de O
 ## <a name="code-example"></a>Ejemplo de código  
  En las siguientes subsecciones se describe cada paso.  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Paso 1a: requisito previo si se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Los pasos de la primera subsección solo se aplican si se está ejecutando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no si se está ejecutando en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Realice lo siguiente:  
+### <a name="step-1a-prerequisite-if-using-ssnoversion"></a>Paso 1a: requisito previo si se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Los pasos de la primera subsección solo se aplican si se está ejecutando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no si se está ejecutando en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Haga lo siguiente:  
   
 1.  Use SQL Server Management Studio (SSMS.exe) para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cualquier herramienta similar a SSMS.exe también está bien.  
   
@@ -58,8 +59,8 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Paso 1b: requisito previo si se usa [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- Esta subsección es válida solo si se está usando [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Realice lo siguiente:  
+### <a name="step-1b-prerequisite-if-using-sssdsfull"></a>Paso 1b: requisito previo si se usa [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+ Esta subsección es válida solo si se está usando [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Haga lo siguiente:  
   
 1.  Decida qué base de datos de prueba existente usará para el ejemplo de código.  
   
@@ -68,7 +69,7 @@ go
  Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas optimizadas para memoria y un NCSProc  
- En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Realice lo siguiente:  
+ En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Haga lo siguiente:  
   
 1.  Use SSMS.exe para conectarse a la nueva base de datos.  
   
@@ -118,7 +119,7 @@ go
 ```  
   
 ### <a name="step-3-run-the-code"></a>Paso 3: ejecutar el código  
- Ahora se pueden ejecutar las consultas que mostrarán el rendimiento de las tablas optimizadas para memoria. Realice lo siguiente:  
+ Ahora se pueden ejecutar las consultas que mostrarán el rendimiento de las tablas optimizadas para memoria. Haga lo siguiente:  
   
 1.  Use SSMS.exe para ejecutar el siguiente T-SQL en la base de datos.  
   

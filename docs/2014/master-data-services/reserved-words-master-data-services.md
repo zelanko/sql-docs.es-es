@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960585"
 ---
 # <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], al crear objetos del modelo o miembros, algunas palabras no se pueden usar. Su uso puede producir errores.  
@@ -36,22 +35,22 @@ ms.locfileid: "65482578"
   
 -   [Miembros](#members)  
   
-##  <a name="models"></a> Modelos  
- Si crea un modelo con el nombre establecido en **nombre**, no seleccione **crear entidad con el mismo nombre que el modelo** porque **nombre** no se puede usar para el nombre de una entidad.  
+##  <a name="models"></a><a name="models"></a>Modelos  
+ Si crea un modelo con el nombre establecido en **nombre**, no seleccione **crear entidad con el mismo nombre que el modelo** porque **el nombre no se puede** usar para el nombre de una entidad.  
   
-##  <a name="entities"></a> Entidades  
+##  <a name="entities"></a><a name="entities"></a>Jurídica  
  Para los nombres de entidad, no puede usar **Name** o **Code**.  
   
-##  <a name="exhierarchies"></a> Jerarquías explícitas  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Jerarquías explícitas  
  Para los nombres de jerarquía explícita, no puede utilizar **Name** o **Code**.  
   
-##  <a name="attributes"></a> Atributos  
+##  <a name="attributes"></a><a name="attributes"></a>Sus  
   
 -   **ID**  
   
--   **Code**  
+-   **Código**  
   
--   **Name**  
+-   **Nombre**  
   
 -   **EnterDTM**  
   
@@ -69,10 +68,10 @@ ms.locfileid: "65482578"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Miembros  
- Para los miembros, no puede usar **MDMMemberStatus** o **raíz** para el **código** valor del atributo.  
+##  <a name="members"></a><a name="members"></a>Registrados  
+ Para los miembros, no puede usar **MDMMemberStatus** o **root** para el valor del atributo **code** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a Master Data Services](master-data-services-overview-mds.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: e67c362ba45a7b70b252eb011ec0ee1e24e54888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85682434"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 En esta función se usa una clave simétrica para descifrar los datos.  
   
@@ -36,7 +36,7 @@ En esta función se usa una clave simétrica para descifrar los datos.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  
@@ -58,10 +58,10 @@ Los datos que se usaron como base para la generación del autenticador. Debe coi
 **\@authenticator**  
 Una variable que contiene datos a partir de los que se genera un autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *\@authenticator* tiene un tipo de datos **sysname**.  
 
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary**, con un tamaño máximo de 8 000 bytes. `DECRYPTBYKEY` devuelve NULL si la clave simétrica usada para el cifrado de los datos no está abierta o si *ciphertext* es NULL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DECRYPTBYKEY` usa una clave simétrica. La base de datos debe tener esta clave simétrica ya abierta. `DECRYPTBYKEY` permitirá varias claves abiertas a la vez. No es necesario abrir la clave inmediatamente antes de descifrar el texto cifrado.  
   
 El cifrado y descifrado simétricos suelen funcionar con relativa rapidez, y funcionan bien para las operaciones que implican grandes volúmenes de datos.  

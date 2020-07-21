@@ -1,10 +1,7 @@
 ---
-title: Cuadro de diálogo Agregar tabla (Diseñadores de consultas y vistas) (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Agregar tabla (Cuadro de diálogo, Diseñadores de consultas y vistas)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89058296254f4aae6d8e27a214416cb76c1f03f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263743"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75253396"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Agregar tabla (cuadro de diálogo, Diseñadores de consultas y vistas, Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este cuadro de diálogo permite agregar tablas, vistas, funciones definidas por el usuario o sinónimos a una consulta o una vista.  
   
@@ -43,7 +45,7 @@ Muestra los sinónimos que se pueden agregar al panel **Diagrama** . Para agrega
 **Actualizar**  
 Actualiza la lista para que incluya los cambios realizados en la base de datos desde la última vez que se recuperó la lista.  
   
-**Agregar**  
+**Add (Agregar)**  
 Agrega los elementos seleccionados.  
   
 ## <a name="see-also"></a>Consulte también  

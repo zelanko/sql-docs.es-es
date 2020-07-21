@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: ab91b9c4-a967-414f-b5d7-7a2a9f73cdc4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed702e63239bfd25e4cc0e93e898d9f009824c45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b977f0cdab9721c6a7aedd2d175e05703b4aaf1b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781044"
 ---
-# <a name="mssqlserver14265"></a>MSSQLSERVER_14265
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="mssqlserver_14265"></a>MSSQLSERVER_14265
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14265|  
-|Origen del evento|MSSQLSERVER|  
+| Atributo | Value |  
+| :-------- | :---- |  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14265|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum14265|  
 |Texto del mensaje|El servicio MSSQLServer terminó inesperadamente. Busque posibles causas en el registro de errores de SQL Server y los registros de eventos del sistema y de aplicación Windows.|  

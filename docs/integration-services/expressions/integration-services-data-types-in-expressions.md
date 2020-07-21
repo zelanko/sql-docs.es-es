@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297545"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
@@ -27,7 +27,7 @@ ms.locfileid: "71297545"
 
   El evaluador de expresiones utiliza tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cuando los datos entran por primera vez en un flujo de datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , el motor de flujo de datos convierte todos los datos de columna a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los datos de columna ya utilizados por una expresión a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las expresiones usadas en las transformaciones División condicional y Columna derivada pueden hacer referencia a columnas, ya que forman parte de un flujo de datos que incluye datos de columna.  
   
-## <a name="variables"></a>Variables  
+## <a name="variables"></a>variables  
  Las expresiones también pueden usar variables. Las variables tienen un tipo de datos Variant. El evaluador de expresiones convierte el tipo de datos de una variable de un subtipo Variant a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] antes de evaluar la expresión. Las variables solo pueden usar un subconjunto de los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Por ejemplo, una variable no puede usar un tipo de datos de Bloque de objetos binarios grandes (BLOB).  
   
  Para más información sobre tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y sobre la asignación de tipos de datos Variant a tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "71297545"
   
  Tenga en cuenta las expresiones en la siguiente captura de pantalla.  
   
- ![Tipos de datos String en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "String data types in SSIS expressions")  
+ ![Tipos de datos String en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Tipos de datos String en expresiones SSIS")  
   
 1.  La primera expresión se ejecuta sin error porque la función NULL(DT_STR,...) es en el nivel raíz de la expresión.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71297545"
   
  Los ejemplos siguientes muestran los efectos de la conversión.  
   
- ![Convertir cadenas en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Casting strings in SSIS expressions")  
+ ![Conversión de cadenas en expresiones de SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Conversión de cadenas en expresiones de SSIS")  
   
 1.  En la primera expresión, la conversión no es en el nivel raíz de la expresión. El evaluador de expresiones controla esta conversión de forma inteligente y convierte en DT_WSTR, no en DT_STR. La expresión devuelve DT_WSTR.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71297545"
   
  En el siguiente diagrama se muestra el tipo de resultado de las conversiones implícitas de las operaciones binarias. La intersección de la columna y la fila en esta tabla es el tipo de resultado de una operación binaria con operandos de los tipos izquierdo (From) y derecho (To).  
   
- ![Conversión de tipos de datos implícitos entre tipos de datos](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Implicit data type conversion between data types")  
+ ![Conversión implícita de tipo de datos entre tipos de datos](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Conversión implícita de tipo de datos entre tipos de datos")  
   
  La intersección de un entero con signo y un entero sin signo es un entero con signo posiblemente más grande que cualquiera de los argumentos.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297545"
 >   
 >  Para evitar errores o resultados inesperados, no debe escribirse código que se base en valores numéricos específicos para **True** y **False**. Siempre que sea posible, se debe restringir el uso de las variables booleanas a los valores lógicos para los que están diseñadas.  
   
- Para obtener más información, consulte los temas siguientes:  
+ Para obtener más información, vea los temas siguientes:  
   
 -   [== &#40;Igual&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "71297545"
  Los resultados de muchas operaciones y funciones tienen tipos de datos predeterminados. Pueden ser el tipo de datos del argumento o el tipo de datos al que el evaluador de expresiones convierte el resultado. Por ejemplo, el resultado de un operador lógico OR (||) es siempre un valor booleano, el resultado de la función ABS es el tipo de datos numérico del argumento y el resultado de la multiplicación es el tipo de datos numérico más pequeño que puede contener el resultado sin perder información. Para más información sobre los tipos de datos de los resultados, vea [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [utilizar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Usar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

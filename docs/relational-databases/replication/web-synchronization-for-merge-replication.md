@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfcb0ba165b7657a640bb509dc71dfaa441fd015
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136967"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720543"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronización web para la replicación de mezcla
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   La sincronización web para la replicación de mezcla permite replicar datos utilizando el protocolo HTTPS y es útil en los siguientes escenarios:  
   
 -   Sincronizar datos de usuarios móviles a través de Internet  
   
--   Sincronizar datos entre bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall corporativo  
+-   Sincronización de datos entre bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall corporativo.  
   
  Por ejemplo, un representante de ventas puede utilizar la sincronización web durante sus viajes. La empresa [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]tiene representantes de ventas que viajan para visitar varias tiendas y proveedores de su región. En viajes más largos, los representantes se hospedan en hoteles y necesitan una manera cómoda de cargar datos de ventas y descargar cualquier actualización de productos al final de cada día.  
   
- El departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] ha configurado cada equipo portátil con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ha habilitado la replicación de mezcla para que utilice la sincronización web. El Agente de mezcla de cada equipo portátil tiene una dirección URL de Internet que apunta a los componentes de replicación instalados en un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Estos componentes sincronizan el suscriptor con el publicador. Ahora cada representante se puede conectar a través de cualquier conexión de Internet disponible sin utilizar una conexión remota de acceso telefónico y puede cargar y descargar los datos que desee. La conexión de Internet utiliza SSL (Capa de sockets seguros), por lo que no es necesaria una red privada virtual (VPN).  
+ El departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] ha configurado cada equipo portátil con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ha habilitado la replicación de mezcla para que utilice la sincronización web. El Agente de mezcla de cada equipo portátil tiene una dirección URL de Internet que apunta a los componentes de replicación instalados en un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Estos componentes sincronizan el suscriptor con el publicador. Ahora cada representante se puede conectar a través de cualquier conexión de Internet disponible sin utilizar una conexión remota de acceso telefónico y puede cargar y descargar los datos que desee. La conexión de Internet utiliza la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL), por lo que no es necesaria una red privada virtual (VPN).  
   
  Para obtener información sobre cómo configurar los componentes necesarios para la sincronización web, consulte [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md), [Configurar IIS para la sincronización web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) y [Configurar IIS 7 para la sincronización web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68136967"
   
  En la siguiente ilustración se muestran algunos de los componentes que participan en la sincronización web para la replicación de mezcla.  
   
- ![Flujo de datos y componentes de la sincronización web](../../relational-databases/replication/media/web-sync01.gif "Flujo de datos y componentes de la sincronización web")  
+ ![Componentes y flujo de datos de sincronización web](../../relational-databases/replication/media/web-sync01.gif "Componentes y flujo de datos de sincronización web")  
   
  La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, utilice el parámetro **–InternetUrl** del Agente de mezcla.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "68136967"
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Topologías para la sincronización web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

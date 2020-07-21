@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100757"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100757"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  **En este tema:**  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66100757"
   
 -   [Administrar suscripciones inactivas](#bkmk_manage_inactive)  
   
-##  <a name="bkmk_native_mode"></a> Interfaz de usuario del modo nativo  
+##  <a name="native-mode-user-interface"></a><a name="bkmk_native_mode"></a> Interfaz de usuario del modo nativo  
  Los usuarios individuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden supervisar el estado de una suscripción en la página **Mis suscripciones** o la pestaña **Suscripciones** del Administrador de informes. Las páginas de suscripción incluyen columnas que indican cuándo se ejecutó la suscripción por última vez y su estado. Los mensajes de estado se actualizan cuando la suscripción esté programada para procesarse. Si no se activa el desencadenador (por ejemplo, si nunca se actualiza una instantánea de ejecución de informes o no se ejecuta una programación), no se actualizará el mensaje de estado.  
   
  En la siguiente tabla, se describen los posibles valores de la columna **Estado** .  
   
-|Estado|Descripción|  
+|Status|Descripción|  
 |------------|-----------------|  
-|Nueva suscripción|Aparece cuando crea la suscripción.|  
+|Suscripción nueva|Aparece cuando crea la suscripción.|  
 |Inactivo|Aparece cuando no se puede procesar una suscripción. Para obtener más información, vea "Administrar suscripciones inactivas" más adelante en este tema.|  
 |Hecho: \<*número*> procesados de un total de \<*número*>; \<*número*> errores.|Muestra el estado de la ejecución de una suscripción controlada por datos; este mensaje procede del Procesador de entrega y programación.|  
 |\<*número*> procesadas|El número de notificaciones que el Procesador de entrega y programación ha entregado correctamente o que ya no intenta entregar. Cuando se completa una entrega controlada por datos, el número de notificaciones procesadas debe ser igual al número total de notificaciones generadas.|  
@@ -61,14 +61,14 @@ ms.locfileid: "66100757"
 |Error al escribir el archivo \<nombreDeArchivo>: \<mensaje>|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
 |\<mensajes de estado personalizados>|Los mensajes de estado sobre entregas correctas o no realizadas, procedentes de las extensiones de entrega. Si usa una extensión de entrega personalizada o de terceros, pueden proporcionarse mensajes de estado adicionales.|  
   
- Los administradores del servidor de informes también pueden supervisar las suscripciones estándar que se estén procesando. No es posible supervisar las suscripciones controladas por datos. Para más información, vea [Administrar un proceso en ejecución](manage-a-running-process.md).  
+ Los administradores del servidor de informes también pueden supervisar las suscripciones estándar que se estén procesando. No es posible supervisar las suscripciones controladas por datos. Para obtener más información, vea [Administrar un proceso en ejecución](manage-a-running-process.md).  
   
  Si no se ha podido entregar una suscripción (por ejemplo, si el servidor de correo no estaba disponible), la extensión de entrega vuelve a intentarlo. Un valor de la configuración especifica el número de intentos que realizará. El valor predeterminado es ningún reintento. En algunos casos, es posible que se haya procesado el informe sin datos (por ejemplo, si el origen de datos se encuentra en modo sin conexión), en cuyo caso se proporciona texto al respecto en el cuerpo del mensaje.  
   
 ### <a name="native-mode-log-files"></a>Archivos de registro del modo nativo  
  Si se produce un error durante la entrega, se agrega una entrada al registro de seguimiento del servidor de informes.  
   
- Los administradores del servidor de informes pueden revisar los archivos **reportserverservice_\*.log** para determinar el estado de entrega de la suscripción. Para la entrega por correo electrónico, los archivos de registro del servidor de informes incluyen un registro del procesamiento y las entregas a cuentas de correo electrónico específicas. La ubicación predeterminada de los archivos de registro es la siguiente:  
+ Los administradores del servidor de informes pueden revisar los archivos **\*reportserverservice_. log** para determinar el estado de entrega de la suscripción. Para la entrega por correo electrónico, los archivos de registro del servidor de informes incluyen un registro del procesamiento y las entregas a cuentas de correo electrónico específicas. La ubicación predeterminada de los archivos de registro es la siguiente:  
   
  `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66100757"
   
  Este es un mensaje de error de ejemplo de un archivo de registro de seguimiento relacionado con las suscripciones:  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Error al enviar correo electrónico**. Excepción: System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o no se autenticó el cliente. La respuesta del servidor fue: 5.7.1 el cliente no se ha autenticado en System.Net.Mail.MailCommand.CheckResponse (SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Inicializando EnableExecutionLogging en 'True' según lo especificado en el sistema servidor properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **error al enviar correo**. Excepción: System.Net.Mail.SmtpException: el servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.1 No se autenticó el cliente en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  El archivo de registro no incluye información sobre si se ha abierto el informe o si se ha realizado la entrega correctamente. Una entrega correcta quiere decir que el Procesador de entrega y programación no generó ningún error y que el servidor de informes se conectó al servidor de correo. Si el mensaje de correo electrónico produce un error de mensaje que no se pudo entregar en el buzón del usuario, esta información no se incluirá en el archivo de registro. Para más información sobre los archivos de registro, vea [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint_mode"></a> Modo de SharePoint  
+##  <a name="sharepoint-mode"></a><a name="bkmk_sharepoint_mode"></a>Modo de SharePoint  
  Para supervisar una suscripción en el modo de SharePoint: el estado de la suscripción se puede supervisar desde la página **Administrar suscripciones** .  
   
 1.  vaya a la biblioteca de documentos que contiene el informe  
@@ -98,13 +98,13 @@ ms.locfileid: "66100757"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|Process|Área|Category|Nivel|Correlation|de mensaje|  
-|5/21/2014 14:34:06:15|Grupo de aplicaciones: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensión de correo electrónico del servidor de informes|Inesperado|(vacío)|**Error al enviar correo electrónico.** Excepción: System.Net.Mail.SmtpException: Buzón no disponible. La respuesta del servidor fue: 5.7.1 el cliente no tiene permisos para enviar como este remitente en System.Net.Mail.DataStopCommand.CheckResponse (SmtpStatusCode statusCode, String serverResponse) en System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) en System.Net.Mail.SmtpClient.Send (MailMessage message) en Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
+|Date|Proceso|Área|Category|Nivel|Correlation|Message|  
+|5/21/2014 14:34:06:15|Grupo de aplicaciones: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensión de correo electrónico del servidor de informes|Inesperado|(vacío)|**Error al enviar correo electrónico.** Excepción: System.Net.Mail.SmtpException: buzón no disponible. La respuesta del servidor fue: 5.7.1 El cliente no tiene permisos para enviar como este remitente en System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) en System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) en System.Net.Mail.SmtpClient.Send(MailMessage message) en Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
-##  <a name="bkmk_use_powershell"></a> Usar PowerShell para supervisar suscripciones  
+##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Usar PowerShell para supervisar suscripciones  
  Para ver scripts de PowerShell de ejemplo que puede utilizar para comprobar el estado del modo nativo o las suscripciones del modo de SharePoint, consulte [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md).  
   
-##  <a name="bkmk_manage_inactive"></a> Administrar suscripciones inactivas  
+##  <a name="managing-inactive-subscriptions"></a><a name="bkmk_manage_inactive"></a>Administrar suscripciones inactivas  
  Si una suscripción queda inactiva, debería eliminarla o reactivarla resolviendo las condiciones subyacentes que impiden que se procese. Las suscripciones pueden quedar inactivas si se producen condiciones que impidan su procesamiento. Entre estas condiciones, figuran:  
   
 -   Quitar o desinstalar la extensión de entrega especificada en la suscripción.  
@@ -119,7 +119,7 @@ ms.locfileid: "66100757"
   
  Si existen condiciones que causan que la suscripción quede inactiva, la suscripción refleja este hecho cuando el servidor de informes la ejecuta. Si una suscripción está programada para entregar un informe todos los viernes a las 2:00 a.m. y la extensión de entrega que utiliza se desinstaló el lunes a las 9:00 a.m., la suscripción no reflejará su estado inactivo hasta el viernes a las 2:00 a.m.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

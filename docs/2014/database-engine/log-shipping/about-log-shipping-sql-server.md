@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01abcbe81304d2bbc9a09c29f304a55945aae5ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931512"
 ---
 # <a name="about-log-shipping-sql-server"></a>Acerca del trasvase de registros (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El trasvase de registros permite enviar automáticamente copias de seguridad del registro de transacciones desde una *base de datos principal* de una instancia del *servidor principal* a una o varias *bases de datos secundarias* en instancias independientes del *servidor secundario* . Las copias de seguridad del registro de transacciones se aplican a cada una de las bases de datos secundarias de forma individual. En una tercera instancia de servidor opcional, denominado *servidor de supervisión*, se registra el historial y el estado de las operaciones de copias de seguridad y restauración y, opcionalmente, se activan alertas si estas operaciones no se producen según lo programado.  
@@ -47,7 +46,7 @@ ms.locfileid: "62774562"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="Benefits"></a> Ventajas  
   
 -   Proporciona una solución de recuperación ante desastres para una sola base de datos principal y una o más bases de datos secundarias, cada una en una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62774562"
   
 -   Permite un retraso especificado por el usuario entre el momento en que el servidor principal realiza una copia de seguridad del registro de la base de datos principal y el momento en que los servidores secundarios deben restaurar (aplicar) la copia de seguridad de registros. Un retraso más largo puede ser útil, por ejemplo, si los datos se cambian en la base de datos principal de manera accidental. Si se detecta rápidamente el cambio accidental, un retraso puede permitirle recuperar los datos aún sin modificar de una base de datos secundaria antes de que el cambio se refleje en ella.  
   
-##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Términos y definiciones  
  servidor principal  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que es el servidor de producción.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62774562"
 > [!TIP]  
 >  Para cada alerta, debe especificar un número de alerta. Además, asegúrese de configurar la alerta para notificar a un operador cuándo se activa una alerta.  
   
-##  <a name="ComponentsAndConcepts"></a> Información general de trasvase de registros  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Información general de trasvase de registros  
  El trasvase de registros consta de tres operaciones:  
   
 1.  Realizar una copia de seguridad del registro de transacciones en la instancia del servidor principal.  
@@ -125,10 +124,10 @@ ms.locfileid: "62774562"
   
  ![Configuración que muestra trabajos de copia de seguridad, copia y restauración](../media/ls-typical-configuration.gif "Configuración que muestra trabajos de copia de seguridad, copia y restauración")  
   
-##  <a name="Interoperability"></a> Interoperabilidad  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilidad  
  El trasvase de registros se puede usar con las siguientes características o componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [Requisitos previos para migrar de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
+-   [Requisitos previos para la migración desde el trasvase de registros a Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [Crear reflejo de la base de datos y trasvase de registros &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62774562"
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] y la creación de reflejo de la base de datos son mutuamente excluyentes. Una base de datos configurada para una de estas características no puede configurarse para la otra.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Actualizar el trasvase de registros a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -159,7 +158,7 @@ ms.locfileid: "62774562"
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

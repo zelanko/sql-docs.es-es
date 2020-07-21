@@ -1,5 +1,5 @@
 ---
-title: Creación de los archivos de conexión de servidor (SybaseToSQL) | Microsoft Docs
+title: Crear los archivos de conexión del servidor (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029359"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Creación de archivos de conexión del servidor (SybaseToSQL)
-Información del servidor puede especificarse en la sección de servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>`. Si el mismo identificador de servidor está presente en el archivo de script y el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
+La información del servidor se puede especificar en la sección servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión `-c <serverconnectionfile>`de servidor es,. Si el mismo identificador de servidor está presente en el archivo de script y en el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
   
 **Ejemplo:**  
   
@@ -102,11 +102,11 @@ Información del servidor puede especificarse en la sección de servidores del a
 ```  
   
 ## <a name="server-connection-file-validation"></a>Validación del archivo de conexión de servidor  
-El usuario puede validar fácilmente su archivo de conexión de servidor con el archivo de definición de esquema **S2SSConsoleScriptServersSchema.xsd** disponible en la carpeta "Esquemas".  
+El usuario puede validar fácilmente su archivo de conexión de servidor con el archivo de definición de esquema **S2SSConsoleScriptServersSchema. xsd** disponible en la carpeta ' schemas '.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en el funcionamiento de la consola es [ejecutando la consola de SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso en el funcionamiento de la consola es la [ejecución de la consola de SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Ejecución de la consola de SSMA](executing-the-ssma-console-sybasetosql.md)  
   

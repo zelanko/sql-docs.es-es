@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68131993"
 ---
 # <a name="views"></a>Vistas
@@ -50,7 +50,7 @@ ms.locfileid: "68131993"
 |Describe cómo modificar la definición de la vista.|[Modificar vistas](../../relational-databases/views/modify-views.md)|  
 |Describe cómo modificar datos mediante una vista.|[Modificar datos mediante una vista](../../relational-databases/views/modify-data-through-a-view.md)|  
 |Describe cómo eliminar una vista.|[Eliminar vistas](../../relational-databases/views/delete-views.md)|  
-|Describe cómo devolver información acerca de una vista, como la definición de la vista.|[Obtener información sobre una vista](../../relational-databases/views/get-information-about-a-view.md)|  
+|Describe cómo devolver información acerca de una vista, como la definición de la vista.|[Obtener información acerca de una vista](../../relational-databases/views/get-information-about-a-view.md)|  
 |Describe cómo cambiar el nombre de una vista.|[Cambiar el nombre de las vistas](../../relational-databases/views/rename-views.md)|  
   
 ## <a name="see-also"></a>Consulte también  

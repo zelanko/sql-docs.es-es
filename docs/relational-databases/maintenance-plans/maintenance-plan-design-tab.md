@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666975"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
@@ -69,7 +69,7 @@ ms.locfileid: "68115739"
   
  Después de que una tarea de mantenimiento se coloque en la superficie de diseño, sus propiedades pueden editarse cuando sea necesario. Por ejemplo, la base de datos específica de la que se va a hacer copia de seguridad en una tarea Copia de seguridad de la base de datos se especifica después de que la tarea se haya agregado al plan. Las tareas de la superficie de diseño que no se han configurado correctamente contienen un icono rojo con una x blanca.  
   
- Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, elija **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** . Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
+ Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, seleccione **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Vista**de**. Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
   
  Para eliminar una tarea de un plan, seleccione la tarea en la superficie del diseñador y pulse la tecla **SUPR** o haga clic con el botón derecho en la tarea y luego haga clic en **Eliminar**.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "68115739"
  **Agregar anotación**  
  Agrega una nota descriptiva al área de diseño.  
   
- **Editar**  
+ **Edición**  
  Abre el cuadro de diálogo de propiedades de la tarea.  
   
  **Deshabilitar**  
  De esta manera, la tarea no está disponible temporalmente.  
   
- **Habilitar**  
+ **Habilitación**  
  Restaura una tarea deshabilitada.  
   
  **Grupo**  

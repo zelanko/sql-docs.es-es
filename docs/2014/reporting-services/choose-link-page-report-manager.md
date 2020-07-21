@@ -1,5 +1,5 @@
 ---
-title: Página Elegir vínculo (Administrador de informes) | Microsoft Docs
+title: Página elegir vínculo (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109885"
 ---
 # <a name="choose-link-page-report-manager"></a>Elegir vínculo (página del Administrador de informes)
@@ -42,9 +42,9 @@ ms.locfileid: "66109885"
  **Vista de árbol**  
  Muestra todas las carpetas de la jerarquía de carpetas del servidor de informes. Si desea utilizar la vista de árbol para especificar el campo **Ubicación** , haga clic en el nombre del informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+ [Página nuevo informe vinculado &#40;Administrador de informes&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

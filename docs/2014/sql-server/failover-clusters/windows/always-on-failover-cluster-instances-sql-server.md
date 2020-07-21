@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71c5767bfc023cbe93e8026bb5e67e82fff8ee3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062592"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)
-  Como parte de la oferta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, las instancias de clúster de conmutación por error de Always On aprovechan la funcionalidad de Clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante la redundancia en el nivel de instancias de servidor, una *instancia de clúster de conmutación por error* (FCI). Una FCI es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se instala a través de los nodos de Clústeres de conmutación por error de Windows Server (WSFC) y, posiblemente, a través de varias subredes. En la red, una FCI aparece como una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecuta en un equipo individual, pero proporciona la conmutación por error entre nodos de WSFC si el nodo actual deja de estar disponible.  
+  Como parte de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferta de Always On, Always on instancias de clúster de conmutación por error aprovecha la funcionalidad de clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante redundancia en el nivel de instancia de servidor: una *instancia de clúster de conmutación por error* (FCI). Una FCI es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se instala a través de los nodos de Clústeres de conmutación por error de Windows Server (WSFC) y, posiblemente, a través de varias subredes. En la red, una FCI aparece como una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecuta en un equipo individual, pero proporciona la conmutación por error entre nodos de WSFC si el nodo actual deja de estar disponible.  
   
  Una FCI puede aprovechar las ventajas de los [Grupos de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) para proporcionar recuperación remota ante desastres en la base de datos. Para más información, vea [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
@@ -45,11 +44,11 @@ ms.locfileid: "62520487"
   
 -   [Elementos de una instancia de clúster de conmutación por error](#FCIelements)  
   
--   [Conceptos y tareas de conmutación por error de SQL Server](#ConceptsAndTasks)  
+-   [SQL Server de conceptos y tareas de conmutación por error](#ConceptsAndTasks)  
   
 -   [Temas relacionados](#RelatedTopics)  
   
-##  <a name="Benefits"></a> Ventajas de una instancia de clústeres de conmutación por error  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a> Ventajas de una instancia de clústeres de conmutación por error  
  Cuando hay un error de hardware o software de un servidor, las aplicaciones o los clientes que se conecten al servidor experimentarán tiempo de inactividad. Cuando una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para ser una FCI (en lugar de una instancia independiente), la alta disponibilidad de esa instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está protegida por la presencia de nodos redundantes en la FCI. Solo uno de los nodos de la FCI pertenece al grupo de recursos de WSFC cada vez. En caso de se produzca un error (errores de hardware, errores del sistema operativo o errores de aplicación o servicio) o se realice una actualización planeada, la propiedad del grupo de recursos se mueve a otro nodo de WSFC. Este proceso es transparente para el cliente o aplicación que se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y minimiza el tiempo de inactividad que la aplicación o los clientes experimentan durante un error. A continuación se enumeran algunas ventajas clave que las instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionan:  
   
 -   Protección a través de la redundancia en el nivel de instancia.  
@@ -73,10 +72,10 @@ ms.locfileid: "62520487"
   
 -   Uso acelerado de recursos durante las conmutaciones por error  
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  En un entorno de producción, recomendamos que use direcciones IP estáticas junto con la dirección IP virtual de una instancia de clúster de conmutación por error.  Recomendamos no usar DHCP en un entorno de producción. En caso de tiempo de inactividad, si expira el tiempo de concesión de la dirección de IP de DHCP, se necesitará un tiempo adicional para volver a registrar la nueva dirección IP de DHCP asociada al nombre DNS.  
   
-##  <a name="Overview"></a> Información general de las instancias de clúster de conmutación por error  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a>Introducción a la instancia de clúster de conmutación por error  
  Una FCI se ejecuta en un grupo de recursos de WSFC con uno o más nodos de WSFC. Cuando la FCI se inicia, uno de los nodos asume la propiedad del grupo de recursos y pone en línea la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Entre los recursos que pertenecen a este nodo se incluyen:  
   
 -   Nombre de red  
@@ -105,7 +104,7 @@ ms.locfileid: "62520487"
   
 5.  Las solicitudes de conexión de la aplicación cliente se dirigen automáticamente al nuevo nodo activo utilizando el mismo nombre de red virtual (VNN).  
   
- La FCI está en línea mientras el estado del quórum del clúster de WSFC subyacente sea bueno (la mayoría de los nodos de WSFC de quórum están disponibles como destinos de conmutación automática por error). Si el clúster de WSFC pierde su quórum, a causa de un error de hardware, de software o de red, o de una configuración de quórum incorrecta, todo el clúster de WSFC, junto con la FCI, se ponen en estado sin conexión. En este escenario de conmutación por error no planeada se requiere la intervención manual para restablecer el quórum en los nodos disponibles restantes con el fin de volver a poner en línea el clúster de WSFC y la FCI. Para más información, vea [Configuración de los votos y modos de quórum WSFC (SQL Server)](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+ La FCI está en línea mientras el estado del quórum del clúster de WSFC subyacente sea bueno (la mayoría de los nodos de WSFC de quórum están disponibles como destinos de conmutación automática por error). Si el clúster de WSFC pierde su quórum, a causa de un error de hardware, de software o de red, o de una configuración de quórum incorrecta, todo el clúster de WSFC, junto con la FCI, se ponen en estado sin conexión. En este escenario de conmutación por error no planeada se requiere la intervención manual para restablecer el quórum en los nodos disponibles restantes con el fin de volver a poner en línea el clúster de WSFC y la FCI. Para obtener más información, vea [modos de cuórum de WSFC y configuración de votación (; SQL Server);](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ### <a name="predictable-failover-time"></a>Tiempo de conmutación por error previsible  
  Dependiendo de cuándo la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] haya realizado por última vez una operación de punto de comprobación, puede haber una cantidad considerable de páginas desfasadas en la memoria caché del búfer. Por tanto, las conmutaciones por error duran el tiempo que lleve escribir las páginas desfasadas restantes en el disco, lo que puede dar lugar a un tiempo de conmutación por error prolongado e imprevisible. A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], la FCI puede usar puntos de comprobación indirectos para limitar la cantidad de páginas desfasadas que se mantienen en la memoria caché del búfer. Cuando este proceso utiliza recursos adicionales en una carga de trabajo normal, el tiempo de conmutación por error se hace más fácil de predecir y de configurar. Esto es muy útil cuando el acuerdo de servicio en su organización especifica el objetivo de tiempo de recuperación (RTO) para su solución de alta disponibilidad. Para obtener más información sobre puntos de comprobación indirectos, vea [Indirect Checkpoints](../../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt).  
@@ -119,9 +118,9 @@ ms.locfileid: "62520487"
   
 -   Los diagnósticos de componentes detallados también permiten una mejor solución de problemas de conmutaciones automáticas por error con carácter retroactivo. La información de diagnóstico se almacena los archivos de registro, que se colocan con los registros de errores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Puede cargarlos en el Visor de archivos de registro para inspeccionar los estados de los componentes que dan lugar a la conmutación por error para determinar la causa de dicha conmutación por error.  
   
- Para obtener más información, vea [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md).  
+ Para obtener más información, vea [Directiva de conmutación por error para instancias de clúster de conmutación por error](failover-policy-for-failover-cluster-instances.md)  
   
-##  <a name="FCIelements"></a> Elementos de una instancia de clúster de conmutación por error  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a>Elementos de una instancia de clúster de conmutación por error  
  Una FCI consta de un conjunto de servidores físicos (nodos) que contienen una configuración de hardware similar y una configuración de software idéntica que incluye la versión y el nivel de revisión del sistema operativo, así como la versión, el nivel de revisión, los componentes y el nombre de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es necesaria una configuración de software idéntica para garantizar que la FCI pueda estar totalmente funcional cuando realice la conmutación por error entre los nodos.  
   
  Grupo de recursos de WSFC  
@@ -130,7 +129,7 @@ ms.locfileid: "62520487"
  Binarios de SQL Server  
  Los archivos binarios del producto se instalan localmente en cada nodo de la FCI; es un proceso similar a las instalaciones independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sin embargo, durante el inicio, los servicios no se inician automáticamente sino que son administrados por WSFC.  
   
- Almacenamiento  
+ Storage  
  Al contrario que en el grupo de disponibilidad AlwaysOn, una FCI debe usar el almacenamiento compartido entre todos los nodos de la FCI para el almacenamiento de la base de datos y del registro. El almacenamiento compartido puede realizarse en forma de discos de clúster de WSFC, discos de una SAN o recursos compartidos de archivos en SMB. De esta manera, todos los nodos de la FCI tienen la misma vista de datos de instancia cada vez que se produce una conmutación por error. Sin embargo, esto significa que el almacenamiento compartido tiene la posibilidad de ser el punto de error único y la FCI depende de la solución de almacenamiento subyacente para garantizar la protección de datos.  
   
  Nombre de red  
@@ -139,21 +138,21 @@ ms.locfileid: "62520487"
  Direcciones IP virtuales  
  En el caso de una FCI de múltiples subredes, se asigna una dirección IP virtual a cada subred de la FCI. Durante una conmutación por error, la VNN en el servidor DNS se actualiza para señalar a la dirección IP virtual correspondiente a la subred respectiva. Las aplicaciones y los clientes pueden conectarse entonces a la FCI utilizando la misma VNN después de una conmutación por error de múltiples subredes.  
   
-##  <a name="ConceptsAndTasks"></a> Conceptos y tareas de conmutación por error de SQL Server  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a> Conceptos y tareas de conmutación por error de SQL Server  
   
 |Conceptos y tareas|Tema|  
 |------------------------|-----------|  
-|Describe el mecanismo de detección de errores y la directiva de conmutación por error flexible.|[Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)|  
+|Describe el mecanismo de detección de errores y la directiva de conmutación por error flexible.|[Directiva de conmutación por error para instancias de clúster de conmutación por error](failover-policy-for-failover-cluster-instances.md)|  
 |Describe los conceptos de la administración y el mantenimiento de la FCI.|[Administración y mantenimiento de la instancia de clúster de conmutación por error](failover-cluster-instance-administration-and-maintenance.md)|  
-|Describe la configuración y conceptos de varias subredes|[Clústeres de múltiples subredes SQL Server (";" SQL Server).](sql-server-multi-subnet-clustering-sql-server.md)|  
+|Describe la configuración y conceptos de varias subredes|[SQL Server agrupación en clústeres de varias subredes (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a> Temas relacionados  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a>Temas relacionados  
   
 |**Descripciones del tema**|**Tema**|  
 |----------------------------|---------------|  
-|Describe cómo instalar una nueva FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Crear un nuevo clúster de conmutación por error SQL Server (";" Programa de instalación);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|Describe cómo instalar una nueva FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Cree un nuevo clúster de conmutación por error de SQL Server (; Instalación);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Describe cómo actualizarse a un clúster de conmutación por error de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .|[Actualizar un clúster de conmutación por error de SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Describe los conceptos de clúster de conmutación por error de Windows y proporciona vínculos a las tareas relacionadas con el clúster de conmutación por error de Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Información general de clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Información general de clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177879)|  
-|Describe las distinciones de conceptos entre nodos de una FCI y réplicas de un grupo de disponibilidad y las consideraciones para utilizar una FCI de modo que hospede una réplica para un grupo de disponibilidad.|[Agrupación en clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
+|Describe los conceptos de clúster de conmutación por error de Windows y proporciona vínculos a las tareas relacionadas con el clúster de conmutación por error de Windows|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Información general de los clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Información general de los clústeres de conmutación por error](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Describe las distinciones de conceptos entre nodos de una FCI y réplicas de un grupo de disponibilidad y las consideraciones para utilizar una FCI de modo que hospede una réplica para un grupo de disponibilidad.|[Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

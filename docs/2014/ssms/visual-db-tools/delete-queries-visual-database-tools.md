@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b7cd5584485f12912f39ee940cdd960ab95b5bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62670478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061766"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Eliminar consultas (Visual Database Tools)
   Puede eliminar una consulta quitándola del proyecto y eliminándola permanentemente del sistema de archivos. Las consultas eliminadas mediante el procedimiento siguiente no se envían a la Papelera de reciclaje y no pueden recuperarse.  
@@ -38,10 +37,10 @@ ms.locfileid: "62670478"
 > [!NOTE]  
 >  Si desea quitar la consulta del proyecto sin eliminarla, haga clic en **Quitar**. A continuación, puede hacer clic en la carpeta de la consulta con el botón derecho y elegir **Agregar elemento** para buscar y volver a agregar la consulta más adelante.  
   
-## <a name="see-also"></a>Vea también  
- [Borrar los resultados de consulta &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Descartar los cambios realizados en consultas &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Borrar los resultados de una consulta &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Descartar los cambios realizados en las consultas &#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

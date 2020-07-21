@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Comprobación del paquete de implementación | Microsoft Docs'
+title: 'Paso 2: Comprobar el conjunto de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ba8767f4d1b4f8c38638dc1d12adb1a351511fc7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71283595"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lección 2-2: Comprobar el conjunto de implementación
@@ -59,7 +59,7 @@ En esta tarea, comprobará el contenido del paquete de implementación. El paque
 5.  Salga de Internet Explorer o del editor de texto.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 3: Instalación de paquetes SSIS](../integration-services/lesson-3-install-ssis-packages.md)  
+[Lección 3: Instalar paquetes](../integration-services/lesson-3-install-ssis-packages.md)  
   
   
   

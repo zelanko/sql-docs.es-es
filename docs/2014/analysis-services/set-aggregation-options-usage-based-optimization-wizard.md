@@ -1,5 +1,5 @@
 ---
-title: Establecer las opciones de agregaciones (Asistente para optimización basada en uso) | Microsoft Docs
+title: Establecer opciones de agregación (Asistente para optimización basada en el uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e5c59f3-5a2d-44de-b1ba-2c56b76d3c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 130070f029e6b4007ca12bd57f6b8fa05c035257
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66068762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940546"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Establecer las opciones de agregaciones (Asistente para optimización basada en el uso)
   Use la página **Establecer las opciones de agregaciones** para iniciar el proceso de diseño de agregaciones y especificar los límites de rendimiento o almacenamiento de las agregaciones generadas por el Asistente para optimización basada en el uso.  
@@ -35,14 +34,14 @@ ms.locfileid: "66068762"
  **Iniciar**  
  Empieza el proceso de diseño de agregaciones.  
   
- **Detener**  
+ **Detención**  
  Finaliza el proceso de diseño de agregaciones.  
   
  **Restablecer**  
  Restablece todas las opciones de agregaciones de esta página a sus valores predeterminados.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para optimización basada en uso](usage-based-optimization-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para optimización basada en el uso (ayuda F1)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

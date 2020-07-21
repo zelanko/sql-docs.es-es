@@ -1,5 +1,6 @@
 ---
 title: Servicio SQL Server Browser (Motor de base de datos y SSAS) | Microsoft Docs
+description: Obtenga información sobre SQL Server Browser. Este servicio escucha las solicitudes de recursos de SQL Server y proporciona información sobre las instancias de SQL Server instaladas.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57d41e12084ca4a9873abeaeb3275ee671ae45d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789755"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servicio SQL Server Browser (motor de base de datos y SSAS)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  El programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se ejecuta como un servicio de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información acerca de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser permite efectuar las siguientes acciones:  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  El programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser se ejecuta como un servicio de Windows. El Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información sobre las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser permite efectuar las siguientes acciones:  
   
 -   Examinar una lista de los servidores disponibles  
   
@@ -52,7 +53,7 @@ ms.locfileid: "68028631"
   
  En el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser se inicia y reclama el puerto UDP 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser lee el Registro, identifica todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo y registra los puertos y las canalizaciones con nombre que utilizan. Cuando un servidor tiene dos o más tarjetas de red, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser devuelve el primer puerto habilitado que encuentra para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser es compatible con Ipv6 e Ipv4.  
   
- Cuando los clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitan los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la biblioteca de red del cliente envía un mensaje UDP al servidor utilizando el puerto 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser responde con el puerto TCP/IP o con la canalización con nombre de la instancia solicitada. Entonces, la biblioteca de red en la aplicación cliente completa la conexión enviando una solicitud al servidor mediante el puerto o la canalización con nombre de la instancia deseada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no devuelve información de puerto de la instancia predeterminada.  
+ Cuando los clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitan los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la biblioteca de red del cliente envía un mensaje UDP al servidor utilizando el puerto 1434. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser responde con el puerto TCP/IP o con la canalización con nombre de la instancia solicitada. Entonces, la biblioteca de red en la aplicación cliente completa la conexión enviando una solicitud al servidor mediante el puerto o la canalización con nombre de la instancia deseada. 
   
  Para obtener información sobre cómo iniciar y detener el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, vea [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, el Agente SQL Server o el servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLCloseCursor function [ODBC], ODBC
 ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4d0f88d2d9eaba7d95ba887ffbe11e728320b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e1b61267d093e11bf7ea25158f5dc6a29ccba6a1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123380"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81296305"
 ---
-# <a name="sqlclosecursorodbc"></a>SQLCloseCursor_ODBC
+# <a name="sqlclosecursor_odbc"></a>SQLCloseCursor_ODBC
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLCloseCursor** función en la biblioteca de cursores. Para obtener información general sobre **SQLCloseCursor**, consulte [función SQLCloseCursor](../../../odbc/reference/syntax/sqlclosecursor-function.md).  
+ En este tema se describe el uso de la función **SQLCloseCursor** en la biblioteca de cursores. Para obtener información general sobre **SQLCloseCursor**, consulte la [función SQLCloseCursor](../../../odbc/reference/syntax/sqlclosecursor-function.md).  
   
- La biblioteca de cursores no se admite llamar a **SQLCloseCursor** sin un cursor abierto. Intentar esto devolverá SQLSTATE 24000 (estado de cursor no válido). Una llamada a **SQLFreeStmt** con un *opción* de SQL_CLOSE cuando el cursor no está abierto es compatible con la biblioteca de cursores.
+ La biblioteca de cursores no admite la llamada a **SQLCloseCursor** sin un cursor abierto. Si intenta hacerlo, se devolverá SQLSTATE 24000 (estado de cursor no válido). La llamada a **SQLFreeStmt** con una *opción* de SQL_CLOSE cuando no hay ningún cursor abierto es compatible con la biblioteca de cursores.

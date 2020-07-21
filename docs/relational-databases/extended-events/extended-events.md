@@ -1,6 +1,6 @@
 ---
-title: 'Introducción a XEvents: SQL Server | Microsoft Docs'
-ms.custom: ''
+title: 'Información general de XEvents: SQL Server'
+description: La arquitectura de eventos extendidos de SQL Server le permite recopilar los datos necesarios para identificar y solucionar problemas de rendimiento. Se puede configurar y escalar.
 ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,22 +15,22 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: fdca475c71f2f1b81dac9b2a37850cea697a4414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313697"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727343"
 ---
 # <a name="extended-events-overview"></a>Introducción a los eventos extendidos
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La arquitectura de Eventos extendidos permite a los usuarios recopilar tantos datos como sea necesario para solucionar o identificar un problema de rendimiento. Eventos extendidos es configurable y ofrece una muy buena escalabilidad.
 
 Encontrará más información sobre Eventos extendidos en [Inicio rápido: eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
 
 Eventos extendidos es un sistema ligero de supervisión de rendimiento que usa una cantidad mínima de recursos de rendimiento. Eventos extendidos proporciona dos interfaces de usuario gráficas para crear, modificar, mostrar y analizar los datos de la sesión. Estas interfaces se denominan:
 
@@ -68,7 +68,7 @@ Todas las aplicaciones tienen puntos de ejecución que son útiles tanto dentro 
   
 -   El motor de Extended Events es independiente del evento. El motor puede enlazar cualquier evento con cualquier destino, ya que el motor no está limitado por el contenido del evento. Para obtener más información sobre el motor de Extended Events, vea [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
--   Los eventos están separados de los consumidores de eventos, llamados *destinos* en Extended Events. Esto significa que cualquier destino puede recibir cualquier evento. Además, cualquier evento generado puede ser automáticamente utilizado por el destino, que puede registrar o proporcionar el contexto adicional del evento. Para obtener más información, vea [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
+-   Los eventos están separados de los consumidores de eventos, llamados *destinos* en Extended Events. Esto significa que cualquier destino puede recibir cualquier evento. Además, cualquier evento generado puede ser automáticamente utilizado por el destino, que puede registrar o proporcionar el contexto adicional del evento. Para más información, consulte [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 -   Los eventos son diferentes de la acción que se lleva a cabo cuando se produce un evento. Por lo tanto, puede asociarse cualquier acción a cualquier evento.  
   

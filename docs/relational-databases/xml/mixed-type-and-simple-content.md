@@ -1,5 +1,6 @@
 ---
 title: Tipo mixto y contenido simple | Microsoft Docs
+description: Vea un ejemplo en el que se muestra que SQL Server no admite la creación de un esquema XML que restringe un tipo mixto a un contenido simple.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b1a0fb6a72fde7ba871554abf4e3b40d6bb6c9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 990ead43919e80a910860ee15a3758a36e2a1f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715130"
 ---
 # <a name="mixed-type-and-simple-content"></a>Contenido simple y de tipo mixto
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite la restricción de un tipo mixto a un contenido simple.  
   
 ## <a name="example"></a>Ejemplo  

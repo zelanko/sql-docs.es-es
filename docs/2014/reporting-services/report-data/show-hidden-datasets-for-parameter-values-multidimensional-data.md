@@ -1,5 +1,5 @@
 ---
-title: Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (generador de informes y SSRS) | Microsoft Docs
+title: Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 92db49f8f6a112f8466fc81527b214bad7252f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107054"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (Generador de informes y SSRS)
@@ -35,10 +35,10 @@ ms.locfileid: "66107054"
   
 -   En el panel Datos de informe, haga clic con el botón derecho en la carpeta Conjuntos de datos y, después, haga clic en **Mostrar conjuntos de datos ocultos**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)   
  [Diseñadores de consultas de Reporting Services](../reporting-services-query-designers.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md)  
   
   

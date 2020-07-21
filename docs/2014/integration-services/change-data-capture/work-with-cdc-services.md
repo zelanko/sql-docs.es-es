@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 273784e4246b02780784f8467389b347fbb83abb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62835152"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435182"
 ---
 # <a name="work-with-cdc-services"></a>Trabajar con servicios CDC
   Puede usar la Consola de configuración del servicio CDC para crear un nuevo servicio CDC y para preparar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC.  
@@ -39,7 +38,7 @@ ms.locfileid: "62835152"
   
  Se abrirá el cuadro de diálogo Nuevo servicio CDC de Oracle.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo trabajar con servicios CDC](work-with-cdc-services.md)   
  [Crear y editar un servicio CDC de Oracle](create-and-edit-an-oracle-cdc-service.md)  
   

@@ -21,12 +21,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: d91954b0533a2af86a8afefdf54ea16ada28286d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742947"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625832"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instrucciones RESTORE: LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -39,7 +39,7 @@ ms.locfileid: "68742947"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 RESTORE LABELONLY   
 FROM <backup_device>   
@@ -78,7 +78,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Conjuntos de resultados  
  El conjunto de resultados de RESTORE LABELONLY está compuesto de una sola fila con esta información.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Nombre del medio.|  
 |**MediaSetId**|**uniqueidentifier**|Número de identificación único del conjunto de medios.|  

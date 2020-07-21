@@ -10,15 +10,15 @@ ms.author: mathoma
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68067586"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>Archivos de inclusión de SQL Server para el control de versiones y "applies-to"
 
-Las referencias de la documentación se pueden modificar fácilmente sin cambiar el texto real de los artículos individuales mediante archivos de inclusión en Markdown. Hay tres tipos de archivos de inclusión en el mundo del contenido de SQL: versión de SQL, applies-to y texto referencial. Los archivos de inclusión de **versión de SQL Server** se usan para indicar la versión de SQL que se está analizando, como SQL Server 2016 o 2017. Los archivos de inclusión **applies-to** indican a qué servicios y productos de SQL se aplica el documento, como SQL Server en Linux o Azure SQL Database. Los archivos de inclusión de **texto referencial** no se corresponden a las otras dos categorías, como el archivo de inclusión "Obtener ayuda", una lista de vínculos que los clientes pueden usar para obtener ayuda con SQL.
+Las referencias de la documentación se pueden modificar fácilmente sin cambiar el texto real de los artículos individuales mediante archivos de inclusión en Markdown. Hay tres tipos de archivos de inclusión en el mundo del contenido de SQL: de versión de SQL, applies-to y texto referencial. Los archivos de inclusión de **versión de SQL Server** se usan para indicar la versión de SQL que se está analizando, como SQL Server 2016 o 2017. Los archivos de inclusión **applies-to** indican a qué servicios y productos de SQL se aplica el documento, como SQL Server en Linux o Azure SQL Database. Los archivos de inclusión de **texto referencial** no se corresponden a las otras dos categorías, como el archivo de inclusión "Obtener ayuda", una lista de vínculos que los clientes pueden usar para obtener ayuda con SQL.
 
 Este artículo está pensado para usarse como punto de referencia solo para los dos primeros tipos de archivos de inclusión. Puede examinar la lista completa de los archivos de inclusión en el [repositorio sql-docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes).
 
@@ -44,7 +44,7 @@ Los escritores de contenido de SQL suelen tener que incluir el nombre del produc
 
 Estos archivos de inclusión applies-to omiten la versión de SQL Server.
 
-| Nombre de archivo| Ejemplo de Markdown |imagen|
+| Nombre de archivo| Ejemplo de Markdown |Imagen|
 | :-------------| :----------| :-------------------|
 | appliesto-ss-asdb-asdw-xxx-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)] |
 | appliesto-ss-asdb-asdw-pdw-md.md | `[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]` | [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] |
@@ -66,7 +66,7 @@ Estos archivos de inclusión applies-to omiten la versión de SQL Server.
 
 Estos archivos de inclusión applies-to especifican las versiones de SQL a las que se aplica la documentación.
 
-| Nombre de archivo| Ejemplo de Markdown |imagen|
+| Nombre de archivo| Ejemplo de Markdown |Imagen|
 | :-------------| :----------| :-------------------|
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
 | tsql-appliesto-ss2008-all-md.md | `[!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)]` | [!INCLUDE[tsql-appliesto-ss2008-all-md.md](../includes/tsql-appliesto-ss2008-all-md.md)] |
@@ -110,7 +110,7 @@ Estos archivos de inclusión applies-to especifican las versiones de SQL a las q
 
 Estos archivos de inclusión applies-to se usan con la documentación de Analysis Services.
 
-| Nombre de archivo| Ejemplo de Markdown |imagen|
+| Nombre de archivo| Ejemplo de Markdown |Imagen|
 | :-------------| :----------| :-------------------|
 | ssas-appliesto-sql2016.md | `[!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)]` | [!INCLUDE[ssas-appliesto-sql2016.md](../includes/ssas-appliesto-sql2016.md)] |
 | ssas-appliesto-sql2016-later.md | `[!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)]` | [!INCLUDE[ssas-appliesto-sql2016-later.md](../includes/ssas-appliesto-sql2016-later.md)] |
@@ -127,7 +127,7 @@ Estos archivos de inclusión applies-to se usan con la documentación de Analysi
 
 Estos archivos de inclusión applies-to se usan con la documentación de Reporting Services.
 
-| Nombre de archivo| Ejemplo de Markdown |imagen|
+| Nombre de archivo| Ejemplo de Markdown |Imagen|
 | :-------------| :----------| :-------------------|
 | ssrs-appliesto-2017-and-later.md | `[!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)]` | [!INCLUDE[ssrs-appliesto-2017-and-later.md](../includes/ssrs-appliesto-2017-and-later.md)] |
 | ssrs-appliesto-not-pbirs.md | `[!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)]` | [!INCLUDE[ssrs-appliesto-not-pbirs.md](../includes/ssrs-appliesto-not-pbirs.md)] |

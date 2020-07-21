@@ -1,5 +1,5 @@
 ---
-title: Los registros de diagnóstico | Microsoft Docs
+title: Registros de diagnóstico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90133b4a18876c52b9b6b6bffbe4c8c02c953e07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b564f2837bc76e04011170e191d00c08d10c119d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039882"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "81305186"
 ---
 # <a name="diagnostic-records"></a>Registros de diagnóstico
-Asociado con cada entorno, conexión, la instrucción y el identificador de descriptor son *los registros de diagnóstico*. Estos registros contienen información de diagnóstico sobre la última función denominada que usa un identificador determinado. Se reemplazan los registros solo cuando se llama a otra función con el mismo identificador. No hay ningún límite al número de registros de diagnóstico que se pueden almacenar en cualquier momento.  
+Asociados con cada entorno, conexión, instrucción y identificador de descriptor son *registros de diagnóstico*. Estos registros contienen información de diagnóstico sobre la última función denominada que usó un identificador determinado. Los registros solo se sustituyen cuando se llama a otra función con ese identificador. No hay ningún límite en el número de registros de diagnóstico que se pueden almacenar en un momento dado.  
   
- Hay dos tipos de registros de diagnóstico: una *registro de encabezado* y cero o más *registros de estado*. El registro de encabezado es 0; los registros de estado son registros 1 y versiones posteriores. Los registros de diagnóstico están formados por un número de campos independientes, que son diferentes para el registro de encabezado y los registros de estado. Además, los componentes de ODBC pueden definir sus propios campos de registro de diagnóstico.  
+ Hay dos tipos de registros de diagnóstico: un *registro de encabezado* y cero o más *registros de estado*. El registro del encabezado es el registro 0; los registros de estado son registros 1 y superior. Los registros de diagnóstico se componen de varios campos independientes, que son diferentes para el registro de encabezado y los registros de estado. Además, los componentes ODBC pueden definir sus propios campos de registro de diagnóstico.  
   
- Aunque los registros de diagnóstico pueden considerarse como estructuras, no hay ningún requisito para que sean realmente estructuras; cómo un controlador almacena la información de diagnóstico es específica del controlador.  
+ Aunque los registros de diagnóstico se pueden considerar como estructuras, no hay ningún requisito para que sean realmente estructuras; el modo en que un controlador almacena la información de diagnóstico es específico del controlador.  
   
- Campos de registros de diagnóstico se recuperan con **SQLGetDiagField**. Los campos de mensaje de diagnóstico de registros de estado, número de error nativo y SQLSTATE se pueden recuperar en una sola llamada con **SQLGetDiagRec**.  
+ Los campos de los registros de diagnóstico se recuperan con **SQLGetDiagField**. Los campos SQLSTATE, número de error nativo y mensaje de diagnóstico de los registros de estado se pueden recuperar en una única llamada con **SQLGetDiagRec**.  
   
  Esta sección contiene los temas siguientes.  
   

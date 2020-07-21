@@ -1,5 +1,5 @@
 ---
-title: Configurar registros SSIS, cuadro de diálogo | Microsoft Docs
+title: Cuadro de diálogo configurar registros de SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de63b2c4d438faa0dea8b8fdefa5f50d071c7e4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060592"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434812"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurar registros de SSIS, cuadro de diálogo
   Use el cuadro de diálogo **Configurar registros de SSIS** para definir las opciones de registro de un paquete.  
@@ -36,12 +35,12 @@ ms.locfileid: "66060592"
   
 4.  [Configurar las opciones en la pestaña Detalles](#detail)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar registros de SSIS  
+##  <a name="open-the-configure-ssis-logs-dialog-box"></a><a name="open_dialog"></a>Abrir el cuadro de diálogo configurar registros de SSIS  
  **Para abrir el cuadro de diálogo Configurar registros de SSIS**  
   
 -   En el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic en **Registro** en el menú **SSIS** .  
   
-##  <a name="container"></a> Configurar las opciones en el panel Contenedores  
+##  <a name="configure-the-options-in-the-containers-pane"></a><a name="container"></a>Configurar las opciones en el panel contenedores  
  Utilice el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** para habilitar el paquete y sus contenedores para registro.  
   
 ### <a name="options"></a>Opciones  
@@ -56,31 +55,31 @@ ms.locfileid: "66060592"
   
  Si un contenedor aparece atenuado y desea establecer opciones de registro en el contenedor, haga clic dos veces en la casilla. El primer clic desactiva la casilla y el segundo la activa para permitirle que elija los proveedores de registro que desea utilizar y para seleccionar la información que desea registrar.  
   
-##  <a name="provider"></a> Configurar las opciones en la pestaña Proveedores y registros  
+##  <a name="configure-the-options-on-the-providers-and-logs-tab"></a><a name="provider"></a>Configurar las opciones de la pestaña proveedores y registros  
  Use la pestaña **Proveedores y registros** del cuadro de diálogo **Configurar registros de SSIS** con el fin de crear y configurar registros para la captura de eventos en tiempo de ejecución.  
   
 ### <a name="options"></a>Opciones  
  **Tipo de proveedor**  
  Seleccione un tipo de proveedor de registro de la lista.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un registro del tipo especificado a la colección de proveedores de registro del paquete.  
   
- **Name**  
+ **Nombre**  
  Use las casillas para habilitar o deshabilitar registros para contenedores o tareas que se han seleccionado en el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** . El campo del nombre se puede modificar. Utilice el nombre predeterminado para el proveedor o escriba un nombre descriptivo único.  
   
  **Descripción**  
  El campo de la descripción se puede modificar. Haga clic en la descripción predeterminada del registro y, a continuación, modifíquela.  
   
  **Configuración**  
- Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
+ Seleccione un administrador de conexiones existente de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
   
- Temas relacionados: [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)  
+ Temas relacionados: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) , [File Connection Manager](connection-manager/file-connection-manager.md)  
   
  **Eliminar**  
  Seleccione un proveedor de registro y haga clic en **Eliminar**.  
   
-##  <a name="detail"></a> Configurar las opciones en la pestaña Detalles  
+##  <a name="configure-the-options-on-the-details-tab"></a><a name="detail"></a>Configurar las opciones de la pestaña detalles  
  Utilice la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS** para especificar los eventos que se van a habilitar para el registro y los detalles de información que se van a registrar. La información que selecciona se aplica a todos los proveedores de registro del paquete. Por ejemplo, no puede escribir cierta información en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e información diferente en un archivo de texto.  
   
 ### <a name="options"></a>Opciones  
@@ -93,9 +92,9 @@ ms.locfileid: "66060592"
  **Avanzadas**  
  Seleccione o borre eventos para el registro, y seleccione o borre información que se va a registrar para cada evento. Haga clic en **Básicas** para ocultar todos los detalles de registro a excepción de la lista de eventos. La información siguiente está disponible para el registro:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Computer**|Nombre del equipo en el que ha tenido lugar el evento registrado.|  
+|**Equipo**|Nombre del equipo en el que ha tenido lugar el evento registrado.|  
 |**Operador**|El nombre de usuario de la persona que ha iniciado el paquete.|  
 |**SourceName**|El nombre del paquete, contenedor o tarea en la que ha tenido lugar el evento registrado.|  
 |**SourceID**|El nombre del identificador único global (GUID) del paquete, la tarea o el contenedor en el que ha tenido lugar el evento registrado.|  
@@ -103,7 +102,7 @@ ms.locfileid: "66060592"
 |**MessageText**|Mensaje asociado a la entrada del registro.|  
 |**DataBytes**|Reservado para uso futuro.|  
   
- **Básicas**  
+ **Basic**  
  Seleccione o borre los eventos de registro. Esta opción oculta los detalles de registro a excepción de la lista de eventos. Si selecciona un evento, se seleccionan todos los detalles de registro para el evento de forma predeterminada. Haga clic en **Avanzadas** para mostrar los detalles de registro.  
   
  **Cargar**  

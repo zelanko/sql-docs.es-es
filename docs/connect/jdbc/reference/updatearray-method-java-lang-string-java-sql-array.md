@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d70293862bb147b7eab40862368709c338646fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fabe48fed129a4139dc5b2873cd81a6448972a3e
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985556"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80926060"
 ---
 # <a name="updatearray-method-javalangstring-javasqlarray"></a>Método updateArray (java.lang.String, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public void updateArray(java.lang.String columnName,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método updateArray especifica este método updateArray en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b1a820bc4f951fcbe294060825979d83a34f8969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f3e3296ec37048fbb2bf6ba20d75db0f3b46283
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762213"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (tipo de datos geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve un punto arbitrario situado en el interior de una instancia de **geometry**.
   
@@ -36,14 +36,14 @@ Devuelve un punto arbitrario situado en el interior de una instancia de **geomet
 .STPointOnSurface ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la instancia está vacía, este método devuelve NULL.  
   
 ## <a name="examples"></a>Ejemplos  

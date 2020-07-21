@@ -1,5 +1,5 @@
 ---
-title: Coincidencia automática de pares en la sintaxis | Microsoft Docs
+title: Coincidencia automática de pares en la sintaxis
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,12 +11,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0dae2e368fc4cba1a0276ed334cc8aece04cd0b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264881"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "74834236"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

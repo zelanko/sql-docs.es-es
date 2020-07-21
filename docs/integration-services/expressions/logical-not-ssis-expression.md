@@ -14,10 +14,10 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ce0a8e44a89dbac275b8c2df320a20e7bc14f14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297494"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Not lógico) (expresión de SSIS)
@@ -45,10 +45,10 @@ ms.locfileid: "71297494"
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Notas  
- La siguiente tabla muestra el resultado de la operación de publicación.  
+## <a name="remarks"></a>Observaciones  
+ La siguiente tabla muestra el resultado de la .  
   
-|Expresión booleana original|Después de aplicar ! como operador|  
+|Expresión booleana original|Después de aplicar ! como operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  

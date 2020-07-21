@@ -15,10 +15,10 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71297666"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (expresión de SSIS)
@@ -43,7 +43,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La expresión puede usar los tipos de datos DT_STR y DT_WSTR, o uno de los dos.  
   
  La concatenación de los tipos de datos DT_STR y DT_WSTR devuelve un resultado de tipo DT_WSTR. La longitud de la cadena es la suma de las longitudes de las cadenas originales expresadas en caracteres.  
@@ -52,7 +52,7 @@ character_expression1 + character_expression2
   
  Ambas expresiones deben tener el mismo tipo de datos o una expresión debe poder convertirse implícitamente al tipo de datos de la otra expresión. Por ejemplo, si se concatena la cadena "Order date is " y la columna **OrderDate** , los valores de **OrderDate** se convierten implícitamente a un tipo de datos de cadena. Para concatenar dos valores numéricos, ambos valores deben convertirse explícitamente a un tipo de datos de cadena.  
   
- Una concatenación puede utilizar solo un tipo de datos BLOB: DT_TEXT, DT_NTEXT o DT_IMAGE.  
+ En una concatenación solo se puede usar un tipo de datos BLOB: DT_TEXT, DT_NTEXT o DT_IMAGE.  
   
  Si alguno de los elementos es NULL, el resultado será NULL.  
   

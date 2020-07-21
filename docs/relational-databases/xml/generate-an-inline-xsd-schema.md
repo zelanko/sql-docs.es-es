@@ -1,5 +1,6 @@
 ---
 title: Generar un esquema XSD insertado | Microsoft Docs
+description: Obtenga información sobre cómo generar un esquema XSD insertado mediante la opción XMLSCHEMA de la cláusula FOR XML de una consulta SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3792243af5a25f2ef1b9c7acd023f78acbb3eb4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727029"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generar un esquema XSD insertado
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   En una cláusula FOR XML, se puede solicitar que una consulta devuelva un esquema insertado con los resultados de la consulta. Si se desea un esquema XDR, se utiliza la palabra clave XMLDATA en la cláusula FOR XML. Si se desea un esquema XSD, se utiliza la palabra clave XMLSCHEMA.  
   
  En este tema se describe la palabra clave XMLSCHEMA y se explica la estructura del esquema XSD insertado resultante. A continuación se indican las limitaciones que existen al solicitar esquemas insertados:  
@@ -465,7 +466,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Dado que Col2 y Col3 pueden ser NULL, la declaración del elemento <`Col`> especifica minOccurs como 0 y maxOccurs como 2.  
   
--   Como los dos elementos <`Col`> están en el mismo nivel, hay una sola declaración de elemento en el esquema. Por otra parte, como los dos elementos son de tipos simples, aunque diferentes, el tipo del elemento es `xsd:anySimpleType` en el esquema. En el resultado, cada tipo de instancia se identifica mediante el atributo `xsi:type`.  
+-   Como los dos elementos <`Col`> están en el mismo nivel, hay una sola declaración de elemento en el esquema. Por otra parte, como los dos elementos son de tipos simples, aunque diferentes, el tipo del elemento es `xsd:anySimpleType`en el esquema. En el resultado, cada tipo de instancia se identifica mediante el atributo `xsi:type` .  
   
 -   En el resultado, cada instancia del elemento <`Col`> hace referencia a su tipo de instancia por medio del atributo `xsi:type`.  
   

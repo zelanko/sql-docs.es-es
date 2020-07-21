@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf9eb027ba09042d5feaddb7d950bd85da920ff9
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977610"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80925839"
 ---
 # <a name="islast-method-sqlserverresultset"></a>Método isLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,12 +35,12 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true** si el cursor está en la última fila. **false** si el cursor está en cualquier otra posición o si el conjunto de resultados no contiene ninguna fila.  
+ **true** si el cursor está en la última fila. **false** si el cursor está en cualquier otra posición o si el conjunto de resultados no contiene filas.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método isLast se especifica en el método isLast en la interfaz java.sql.ResultSet.  
   
  Si este método se utiliza con cursores de avance y dinámicos, se producirá una excepción.  

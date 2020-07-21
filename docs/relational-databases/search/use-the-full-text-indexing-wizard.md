@@ -23,21 +23,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903820"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85628804"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   El Asistente para indización de texto completo de SSMS le guía por una serie de pasos diseñados para ayudarle a crear un índice de texto completo.  
   
 ## <a name="create-a--full-text-index"></a>Crear un índice de texto completo 
 
 1. En el Explorador de objetos, haga clic con el botón derecho en la tabla en la que quiere crear un índice de texto completo, seleccione **Índice de texto completo**y, luego, haga clic en **Definir índice de texto completo**. Esta acción inicia el Asistente en una ventana independiente.
-   Hacer clic en Siguiente 
+   Haga clic en Next (Siguiente). 
   
 2. **Índice único.**  Seleccione un índice de la lista desplegable. El índice deberá ser un índice de columna de una sola clave, único y que no admita valores NULL. Seleccione el índice de clave única más pequeño para la clave única de texto completo. Para obtener mejores resultados, se recomienda utilizar un índice clúster.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72903820"
   
 5.  **Columna Tipo.** Seleccione el nombre de la columna que incluye el tipo de documento de la columna que se va a incluir en el índice de texto completo.  
 
-> **NOTA:** La **columna Tipo** solo se habilita si la mencionada en la columna **Columnas disponibles** es del tipo **varbinary(max)** o **image**.  
+> **NOTA:** La  **Columna Tipo** solo se habilita cuando la columna mencionada en la columna **Columnas disponibles** es del tipo **varbinary(max)** o **image**.  
   
 6. **Semántica estadística.** Seleccione si desea habilitar la indización semántica para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -72,23 +72,23 @@ ms.locfileid: "72903820"
   
      Seleccione este botón de opción para iniciar un llenado completo tras la finalización correcta de este asistente. De esta forma, se creará la estructura del índice de texto completo en el catálogo y se llenará con los datos indizados de texto completo.  
      
-     Hacer clic en Siguiente
+     Haga clic en Next (Siguiente).
   
 ## <a name="catalog-index-filegroup-and-stoplist"></a>Catálogo, Grupo de archivos de índice y Lista de palabras irrelevantes   
   
 9.  **Seleccionar catálogo de texto completo**  
 
-     **Seleccionar un catálogo:** Seleccione un catálogo de texto completo de la lista. El catálogo predeterminado de la base de datos será el elemento seleccionado de manera predeterminada en la lista. Si no hay catálogos disponibles, la lista estará deshabilitada y la casilla **Crear un nuevo catálogo** estará activada y deshabilitada.  
+     **Seleccionar un catálogo:** seleccione un catálogo de texto completo de la lista. El catálogo predeterminado de la base de datos será el elemento seleccionado de manera predeterminada en la lista. Si no hay catálogos disponibles, la lista estará deshabilitada y la casilla **Crear un nuevo catálogo** estará activada y deshabilitada.  
   
   O BIEN
   
- 10. **Crear un nuevo catálogo**
+ 10. **Creación de un catálogo**
  - Seleccione un catálogo de texto completo.  
   
-    A. **Nombre**  
+    a. **Nombre**  
      Escriba un nombre para el nuevo catálogo de texto completo.  
   
-     B. **Establecer como catálogo predeterminado**  
+     b. **Establecer como catálogo predeterminado**  
      Seleccione esta opción para hacer que el catálogo sea el valor predeterminado para esta base de datos.  
   
      c. **Distinción de acentos**  
@@ -98,7 +98,7 @@ ms.locfileid: "72903820"
      Especifique el grupo de archivos en el que crear el índice de texto completo.  
   
      e. Seleccionar un valor:  
-      |Valor|Descripción|  
+      |Value|Descripción|  
       |-----------|-----------------|
       |**<default>**| Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|
       |**PRIMARY**|Seleccione este valor para usar el grupo de archivos principal para el nuevo índice de texto completo.|
@@ -112,13 +112,13 @@ ms.locfileid: "72903820"
   
      Seleccione uno de los siguientes valores:  
   
-   |Valor|Descripción|  
+   |Value|Descripción|  
     |-----------|-----------------|  
     |**<system>**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
     |**<off>**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
     |*user-defined-stoplist-name*|La lista muestra el nombre de cada lista de palabras irrelevantes definida por el usuario, si hay alguna, que se haya creado en la base de datos. Seleccione la lista de palabras irrelevantes definida por el usuario que desee para utilizarla para el nuevo índice de texto completo.|  
   
-  Hacer clic en Siguiente
+  Haga clic en Next (Siguiente).
   
 11. Opcionalmente, solo en SQL Server, defina la programación de rellenado. Las operaciones de indización comenzarán inmediatamente, a menos que se hayan programado para que se ejecuten posteriormente. Las programaciones se crearán inmediatamente, aunque no se ejecuten hasta la hora programada.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "72903820"
      **Nueva programación de catálogo**  
      Permite definir una programación de llenado para un catálogo de texto completo.  
   
-     **Editar**  
+     **Edición**  
      Permite editar una programación.  
   
      **Eliminar**  
@@ -136,10 +136,10 @@ ms.locfileid: "72903820"
   
 5.  Vea o controle el progreso del Asistente para indización de texto completo.  
   
-     **Detener**  
+     **Detención**  
      Interrumpe la operación actual e impide que el asistente lleve a cabo operaciones de texto completo posteriores durante esta sesión.  
   
-     **Informe**  
+     **Report**  
      Cuando finalice la ejecución de todas las operaciones, haga clic en este botón para obtener acceso a un informe sobre las operaciones efectuadas. Puede ver el informe, imprimirlo en un archivo, copiarlo al portapapeles o enviarlo por correo electrónico.  
   
   

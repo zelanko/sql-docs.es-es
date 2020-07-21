@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026739"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
     
-##  <a name="top"></a> Puede de forma masiva documentos XML de importación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos o de forma masiva exportarlos desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos. Este tema proporciona ejemplos de ambos casos.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Puede realizar una importación masiva de documentos XML en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de o exportarlos de forma masiva desde una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de. Este tema proporciona ejemplos de ambos casos.  
   
  Para importar datos de forma masiva de un archivo de datos a una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede utilizar lo siguiente:  
   
@@ -39,22 +38,22 @@ ms.locfileid: "66011969"
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Para obtener más información, consulte [importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) y [importación masiva de datos mediante BULK INSERT u OPENROWSET&#40;masiva... &#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
+ Para obtener más información, vea [importar y exportar datos en bloque con la utilidad bcp &#40;SQL Server&#41;](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md) e [importar datos en bloque mediante BULK INSERT o OPENROWSET&#40;bulk... &#41; &#40;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)SQL Server&#41;.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos son los siguientes:  
   
--   A. [Importación masiva de datos XML como una secuencia de bytes binario](#binary_byte_stream)  
+-   A. [Importar de forma masiva datos XML como un flujo de bytes binario](#binary_byte_stream)  
   
--   b. [Importación masiva de datos XML en una fila existente](#existing_row)  
+-   B. [Importar de forma masiva datos XML en una fila existente](#existing_row)  
   
--   C. [Importación masiva datos XML desde un archivo que contiene una DTD](#file_contains_dtd)  
+-   C. [Importar de forma masiva datos XML de un archivo que contiene una DTD](#file_contains_dtd)  
   
 -   D. [Especificar el terminador de campo explícitamente mediante un archivo de formato](#field_terminator_in_format_file)  
   
--   E. [Exportación masiva de datos XML](#bulk_export_xml_data)  
+-   E. [Exportar datos XML de forma masiva](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a> A. Importar de forma masiva datos XML como un flujo de bytes binario  
+###  <a name="a-bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a> A. Importar de forma masiva datos XML como un flujo de bytes binario  
  Cuando importa datos XML de forma masiva de un archivo que contiene una declaración de codificación que quiere aplicar, especifique la opción SINGLE_BLOB en la cláusula OPENROWSET(BULK...). La opción SINGLE_BLOB garantiza que el analizador de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa los datos según el esquema de codificación especificado en la declaración XML.  
   
 #### <a name="sample-table"></a>Tabla de ejemplo  
@@ -88,7 +87,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Comentarios  
+#### <a name="remarks"></a>Observaciones  
  Si usa SINGLE_BLOB en este caso, puede evitar una discrepancia entre la codificación del documento XML (especificada por la declaración de codificación XML) y la página de códigos de cadena establecida implícitamente por el servidor.  
   
  Si utiliza tipos de datos NCLOB o CLOB y se produce un conflicto de página de códigos o de codificación, deberá realizar una de las siguientes acciones:  
@@ -101,7 +100,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;Principio&#93;](#top)  
   
-###  <a name="existing_row"></a> B. Importar de forma masiva datos XML en una fila existente  
+###  <a name="b-bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> B. Importar de forma masiva datos XML en una fila existente  
  Este ejemplo utiliza el el proveedor de conjuntos de filas BULK `OPENROWSET` para agregar una instancia XML a una fila o filas existentes en la tabla de ejemplo `T`.  
   
 > [!NOTE]  
@@ -136,7 +135,7 @@ GO
   
  [&#91;Principio&#93;](#top)  
   
-###  <a name="file_contains_dtd"></a> C. Importar de forma masiva datos XML a partir de un archivo que contiene una DTD  
+###  <a name="c-bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> C. Importar de forma masiva datos XML a partir de un archivo que contiene una DTD  
   
 > [!IMPORTANT]  
 >  Se recomienda no habilitar la compatibilidad con definiciones de tipo de documento (DTD) si no es necesaria en el entorno XML. Si se activa la compatibilidad con DTD, se aumenta el área expuesta susceptible de ataques del servidor, que puede quedar expuesta a un ataque por denegación de servicio. En caso de que sea necesario habilitar la compatibilidad con DTD, este riesgo de seguridad puede reducirse procesando únicamente los documentos XML de confianza.  
@@ -182,7 +181,7 @@ INSERT T1
   
  [&#91;Principio&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a> D. Especificar el terminador de campo explícitamente mediante el uso de un archivo de formato  
+###  <a name="d-specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> D. Especificar el terminador de campo explícitamente mediante el uso de un archivo de formato  
  El ejemplo siguiente muestra cómo importar de forma masiva el siguiente documento XML, `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
@@ -245,7 +244,7 @@ GO
   
  [&#91;Principio&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a> E. Exportar de forma masiva datos XML  
+###  <a name="e-bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> E. Exportar de forma masiva datos XML  
  En el ejemplo siguiente se utiliza `bcp` para realizar la exportación masiva de datos XML a partir de la tabla creada en el ejemplo anterior con el mismo archivo de formato XML. En el siguiente comando `bcp` , `<server_name>` y `<instance_name>` representan los marcadores de posición que deben ser reemplazados con los valores adecuados:  
   
 ```  
@@ -257,7 +256,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
   
  [&#91;Principio&#93;](#top)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [SELECT &#40;cláusula de Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   

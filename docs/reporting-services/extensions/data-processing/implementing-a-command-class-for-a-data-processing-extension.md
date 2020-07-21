@@ -13,10 +13,10 @@ ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e415d9498c624aa3dcea443f2cdc3641dd7c8491
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63193944"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>Implementar una clase Command para una extensión de procesamiento de datos

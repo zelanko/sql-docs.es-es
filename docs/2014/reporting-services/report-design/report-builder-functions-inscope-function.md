@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105249"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>Función InScope (Generador de informes y SSRS)
@@ -30,14 +30,14 @@ InScope(scope)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (`String`). Nombre de un conjunto de datos, una región de datos o un grupo que especifica un ámbito.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un `Boolean`.  
   
-## <a name="remarks"></a>Comentarios  
- El `InScope` función comprueba el ámbito de la instancia actual de un elemento de informe pertenece al ámbito especificado por el *ámbito*parámetro.  
+## <a name="remarks"></a>Observaciones  
+ La `InScope` función prueba el ámbito de la instancia actual de un elemento de informe para su pertenencia en el ámbito especificado por el parámetro de *ámbito*.  
   
  *Scope* no puede ser una expresión.  
   
@@ -64,7 +64,7 @@ InScope(scope)
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   

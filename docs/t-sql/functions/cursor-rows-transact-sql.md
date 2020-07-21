@@ -18,17 +18,17 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 451050c2cb74431600913b250ffd1fb0974f1fb3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784602"
 ---
-# <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+# <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve el número de filas certificadas que se encuentran en el último cursor abierto en la conexión. Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede rellenar asincrónicamente los cursores estáticos y de conjunto de claves de gran tamaño. Se puede llamar a `@@CURSOR_ROWS` para determinar que el número de filas que cumplan las condiciones del cursor se recuperen en el momento en que se llama a @@CURSOR_ROWS.
   
@@ -52,7 +52,7 @@ Devuelve el número de filas certificadas que se encuentran en el último cursor
 |0|No se han abierto cursores, no hay filas calificadas para el último cursor abierto, o éste se ha cerrado o su asignación se ha cancelado.|  
 |*n*|El cursor está completamente relleno. El valor devuelto (*n*) es el número total de filas del cursor.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `@@CURSOR_ROWS` devuelve un número negativo si el último cursor se ha abierto de forma asincrónica. Los cursores controlados por conjunto de claves o cursores estáticos se abren de forma asincrónica si el valor umbral del cursor de sp_configure es mayor que 0 y el número de filas del conjunto de resultados del cursor es mayor que su valor umbral.
   
 ## <a name="examples"></a>Ejemplos  
@@ -90,7 +90,7 @@ Sanchez
 -1
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones del cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   

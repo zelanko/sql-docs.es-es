@@ -1,6 +1,7 @@
 ---
-title: Configurar cuentas de inicio de sesión - Creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: Configuración de las cuentas de inicio de sesión (creación de reflejos y grupos de disponibilidad)
+description: Configure las cuentas de inicio de sesión para que tengan acceso al punto de conexión de creación de reflejos de bases de datos de un reflejo de base de datos o un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d3612f2ef5a736ed2d676b5336ecdd48bdd10de6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6545a639b9bcdfafcc1bdfdd67930014beab00e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735132"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Configurar cuentas de inicio de sesión - Creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Para que dos instancias del servidor se conecten a [extremos de creación de reflejo de la base de datos](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) entre sí, la cuenta de inicio de sesión de cada instancia debe tener acceso a la otra instancia. Además, cada cuenta de inicio de sesión requiere permiso de conexión al extremo de creación de reflejo de la base de datos de la otra instancia.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68025222"
     > [!IMPORTANT]  
     >  Para crear un entorno más seguro, considere la posibilidad de usar cuentas de dominio diferentes para cada instancia de servidor.  
   
-##  <a name="CreateLogin"></a> Crear un inicio de sesión para una cuenta diferente  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a> Crear un inicio de sesión para una cuenta diferente  
  Si dos instancias del servidor se ejecutan como cuentas diferentes, el administrador del sistema debe utilizar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE LOGIN para crear un inicio de sesión para la cuenta de servicio de inicio de la instancia remota para cada instancia del servidor. Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   
 > [!IMPORTANT]  
@@ -51,10 +52,10 @@ ms.locfileid: "68025222"
 > [!NOTE]  
 >  Es posible conectarse a la cuenta de servicio de red mediante la cuenta del equipo en lugar de un usuario de dominio. Si se utiliza la cuenta de equipo, debe agregarse como un usuario en la otra instancia del servidor.  
   
-##  <a name="GrantConnect"></a> Conceder el permiso de conexión  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a> Conceder el permiso de conexión  
  Una vez creado un inicio de sesión en una instancia del servidor, debe concederse al inicio de sesión permiso para conectarse al extremo de creación de reflejo de la base de datos de la instancia del servidor. El administrador del sistema concede el permiso de conexión mediante una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Para obtener más información, vea [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un inicio de sesión](../../relational-databases/security/authentication-access/create-a-login.md)  
   

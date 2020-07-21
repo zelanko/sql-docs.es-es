@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 366cd986b9c707c6cef6d8b814204ce506afb601
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85704959"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (tipo de datos geography)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve un objeto geography que representa la unión de todos los puntos cuya distancia desde una instancia de **geography** es menor o igual que un valor especificado.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68042531"
   
  La distancia máxima del búfer no puede ser superior a 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 circunferencia terráquea) o todo el globo terráqueo.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  STBuffer() calcula un búfer de la misma forma que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), mediante la especificación de *tolerance* = abs(distance) \* 0,001 y *relative* = **false**.  
   
  Un búfer negativo quita todos los puntos que se encuentran dentro de la distancia especificada del límite de la instancia de **geography**.  

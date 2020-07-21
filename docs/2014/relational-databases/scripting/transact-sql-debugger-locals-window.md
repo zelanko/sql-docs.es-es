@@ -1,6 +1,6 @@
 ---
-title: Variables locales (ventana) | Microsoft Docs
-ms.custom: ''
+title: Ventana de locales
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -9,17 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 503a92349f7b7cfecdd4bd72de507da0a5835f7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f8f62eb69a50d7543af41dddb9c62c842d17151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063381"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063297"
 ---
-# <a name="locals-window"></a>Ventana de locales
+# <a name="locals-window"></a>Ventana Locales
   La ventana **Variables locales** muestra información sobre las expresiones locales en el ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El ámbito está establecido en el marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para mostrar las expresiones locales.  
   
 ## <a name="task-list"></a>Lista de tareas  
@@ -32,7 +31,7 @@ ms.locfileid: "66063381"
 -   Haga clic con el botón derecho en la expresión y, después, seleccione **Editar valor**.  
   
 ## <a name="columns"></a>Columnas  
- **Name**  
+ **Nombre**  
  Es el nombre de la expresión local. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] muestra las variables, los parámetros y las funciones de sistema cuyos nombres comienzan por @@.  
   
  **Valor**  
@@ -45,7 +44,7 @@ ms.locfileid: "66063381"
  **Tipo**  
  Muestra el tipo de datos de la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
  [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
  [Ventana de inspección](transact-sql-debugger-watch-window.md)   

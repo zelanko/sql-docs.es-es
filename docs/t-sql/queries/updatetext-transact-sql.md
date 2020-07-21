@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 43786561a88d970cc89587ed5a37adcc45c646d5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900105"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza un campo **text**, **ntext** o **image** existente. Use UPDATETEXT para cambiar solo una parte de una columna **text**, **ntext** o **image** existente. Use WRITETEXT para actualizar y reemplazar un campo **text**, **ntext** o **image** completo.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67948220"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }  
   { NULL | insert_offset }  
@@ -83,7 +83,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  El valor *scr_text_ptr* no debe ser igual que el valor *dest_text_ptr*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los datos recién insertados pueden ser una única constante *inserted_data*, un nombre de tabla, un nombre de columna o un puntero de texto.  
   
 |Acción de actualización|Parámetros de UPDATETEXT|  
@@ -94,7 +94,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  Para mejorar el rendimiento, se recomienda insertar o actualizar los datos **text**, **ntext** e **image** en fragmentos que sean múltiplos de 8.040 bytes.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que existan punteros de texto consecutivos a datos **text**, **ntext** o **image**, pero que no sean válidos. Para obtener más información sobre la opción "text in row", vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para obtener más información sobre cómo invalidar punteros de texto, vea [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que existan punteros de texto consecutivos a datos **text**, **ntext** o **image**, pero que no sean válidos. Para obtener más información sobre la opción "text in row", vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para más información sobre cómo invalidar punteros de texto, vea [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
  Para inicializar columnas **text** en NULL, use WRITETEXT; UPDATETEXT inicializa columnas **text** en una cadena vacía.  
   

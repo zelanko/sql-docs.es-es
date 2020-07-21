@@ -1,5 +1,5 @@
 ---
-title: Información general sobre objetos de comando | Microsoft Docs
+title: Información general sobre el objeto Command | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,36 +10,36 @@ ms.topic: conceptual
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0048765d3a5f5cb57419f9dbd755790c9931e218
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67925855"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761201"
 ---
 # <a name="command-object-overview"></a>Información general sobre objetos de comando
-Con un **comando** de objeto, puede hacer lo siguiente:  
+Con un objeto de **comando** , puede hacer lo siguiente:  
   
--   Definir el texto ejecutable del comando (por ejemplo, una instrucción SQL o un procedimiento almacenado) mediante el uso de la **CommandText** propiedad.  
+-   Defina el texto ejecutable del comando (por ejemplo, una instrucción SQL o un procedimiento almacenado) mediante la propiedad **CommandText** .  
   
--   Definir consultas parametrizadas o argumentos de procedimientos almacenados mediante **parámetro** objetos y el **parámetros** colección.  
+-   Defina consultas con parámetros o argumentos de procedimientos almacenados mediante el uso de objetos de **parámetro** y la colección de **parámetros** .  
   
--   Ejecutar un comando y devolver un **Recordset** objeto, si es necesario, mediante el uso de la **Execute** método.  
+-   Ejecutar un comando y devolver un objeto de **conjunto de registros** , si es necesario, mediante el método **Execute** .  
   
--   Especificar el tipo de comando mediante el **CommandType** propiedad antes de la ejecución para optimizar el rendimiento.  
+-   Especifique el tipo de comando mediante la propiedad **CommandType** antes de la ejecución para optimizar el rendimiento.  
   
--   Especificar información específica sobre el texto de comando mediante el **dialecto** propiedad de la **comando** objeto.  
+-   Especifique información específica sobre el texto del comando mediante la propiedad **Dialect** del objeto **Command** .  
   
--   Controlar si el proveedor guarda una versión preparada (o compilada) del comando antes de la ejecución mediante el uso de la **Prepared** propiedad.  
+-   Controlar si el proveedor guarda una versión preparada (o compilada) del comando antes de la ejecución mediante la propiedad **Prepared** .  
   
--   Establecer el número de segundos que esperará un proveedor para que un comando para ejecutar mediante la **CommandTimeout** propiedad.  
+-   Establezca el número de segundos que un proveedor esperará a que se ejecute un comando mediante la propiedad **CommandTimeout** .  
   
--   Asociar una conexión abierta con un **comando** objeto estableciendo sus **ActiveConnection** propiedad.  
+-   Asocie una conexión abierta a un objeto de **comando** estableciendo su propiedad **ActiveConnection** .  
   
--   Establecer el **nombre** propiedad para identificar el **comando** objeto como un método en el asociado **conexión** objeto.  
+-   Establezca la propiedad **nombre** para identificar el objeto de **comando** como un método en el objeto de **conexión** asociado.  
   
--   Pasar un **comando** de objeto para el **origen** propiedad de un **Recordset** con el fin de obtener los datos.  
+-   Pase un objeto de **comando** a la propiedad de **origen** de un **conjunto de registros** para obtener los datos.  
   
--   Pasar un **Stream** objeto que contiene un comando (por ejemplo, un comando XML) a un proveedor que lo admite.
+-   Pase un objeto de **flujo** que contenga un comando (por ejemplo, un comando XML) a un proveedor que lo admita.

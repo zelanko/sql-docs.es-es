@@ -8,19 +8,19 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4d2f63e094fa4ea4598163d419e221ad5a41b288
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67977448"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80920683"
 ---
 # <a name="isqlserverconnection-interface"></a>Interfaz de ISQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Representa una conexión JDBC a una base de datos de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta interfaz se agregó en el controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Representa una conexión JDBC a una base de datos de [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta interfaz se agregó en el controlador JDBC 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  **Paquete:** com.microsoft.sqlserver.jdbc  
   
@@ -33,7 +33,7 @@ ms.locfileid: "67977448"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta interfaz se implementa mediante la [clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
  Esta interfaz expone el siguiente campo específico del [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  

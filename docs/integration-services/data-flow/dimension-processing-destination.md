@@ -21,10 +21,10 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef381f9ff470422ed85b81832b1078d6c8767dcf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71292886"
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
@@ -32,7 +32,7 @@ ms.locfileid: "71292886"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  El destino de Procesamiento de dimensiones carga y procesa una dimensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  El destino de Procesamiento de dimensiones carga y procesa una dimensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
  El destino de Procesamiento de dimensiones incluye las siguientes características:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "71292886"
  **Connection manager**  
  Seleccione un administrador de conexiones existente de la lista, o haga clic en **Nuevo** para crear un nuevo administrador de conexiones.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Lista de dimensiones disponibles**  
@@ -73,11 +73,11 @@ ms.locfileid: "71292886"
  **Método de procesamiento**  
  En la lista, seleccione el método de procesamiento a aplicar a la dimensión seleccionada. El valor predeterminado de esta opción es **Completa**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Agregar (incremental)**|Realiza un procesamiento incremental de la dimensión.|  
 |**Completa**|Realiza un procesamiento completo de la dimensión.|  
-|**Update**|Realiza un procesamiento actualizado de la dimensión.|  
+|**Actualizar**|Realiza un procesamiento actualizado de la dimensión.|  
   
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de dimensiones (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para asignar columnas de entrada a columnas de dimensión.  
@@ -105,7 +105,7 @@ ms.locfileid: "71292886"
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convierte el valor de clave no aceptable en el valor **UnknownMember** .|  
 |**DiscardRecord**|Descarta el registro.|  
@@ -122,7 +122,7 @@ ms.locfileid: "71292886"
  **Acción ante el error**  
  Especifica la acción que se realizará cuando se alcance el umbral de error (si ha seleccionado **Detenerse ante errores**).  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71292886"
  **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -139,7 +139,7 @@ ms.locfileid: "71292886"
  **Clave duplicada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave duplicada. Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -148,7 +148,7 @@ ms.locfileid: "71292886"
  **Clave NULL convertida en desconocida**  
  Especifica la acción que se realizará cuando una clave NULL se convierta al valor **UnknownMember** . Este valor es **IgnoreError**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  
@@ -157,7 +157,7 @@ ms.locfileid: "71292886"
  **Clave NULL no permitida**  
  Especifica la acción que debe llevarse a cabo cuando no se permiten claves NULL y se encuentra una clave NULL. Este valor es **ReportAndContinue**de forma predeterminada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreError**|Omite el error y reanuda el procesamiento.|  
 |**ReportAndContinue**|Informa del error y reanuda el procesamiento.|  

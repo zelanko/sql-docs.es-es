@@ -1,21 +1,21 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117315"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627411"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "68117315"
   
  Para configurar el servidor remoto, vea "Copia de la tabla remota" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
@@ -60,7 +60,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  La cadena de conexión es una lista delimitada por puntos y coma de pares de clave y valor. En las palabras clave no se distingue entre mayúsculas y minúsculas. Se omiten los espacios entre los pares de clave y valor. Pero los valores pueden distinguir entre mayúsculas y minúsculas según el origen de datos.  
   
- *Origen de datos*  
+ *Data Source* (Origen de datos)  
  Parámetro que especifica el nombre o la dirección IP, y el número de puerto TCP, del servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP remoto.  
   
  *hostname* o *IP_address*  
@@ -84,7 +84,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  WITH *common_table_expression*  
  Especifica un conjunto de resultados temporal con nombre, conocido como expresión de tabla común (CTE). Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT \<select_criteria> Predicado de consulta que especifica qué datos van a llenar la nueva tabla remota. Para obtener más información sobre la instrucción SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria> Predicado de consulta que especifica qué datos van a rellenar la tabla remota nueva. Para obtener más información sobre la instrucción SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere:  
@@ -132,7 +132,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  La configuración de conexión permite conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP; SSL protege los datos de nombre de usuario y contraseña, pero los datos reales se envían sin cifrar en texto no cifrado. Cuando ocurre esto, un usuario malintencionado puede interceptar el texto de la instrucción CREATE REMOTE TABLE, que contiene el nombre de usuario y la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP. Para evitar este riesgo, use cifrado de datos en la conexión a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP.  
   
-##  <a name="Examples"></a> Ejemplos  
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos  
   
 ### <a name="a-creating-a-remote-table"></a>A. Crear una tabla remota  
  En este ejemplo se crea una tabla remota SMP de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominada `MyOrdersTable` en la base de datos `OrderReporting` y el esquema `Orders`. La base de datos `OrderReporting` está en un servidor denominado `SQLA` que escucha en el puerto predeterminado 1433. La conexión con el servidor usa las credenciales del usuario `David`, cuya contraseña es `e4n8@3`.  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Consultar la DMV sys.dm_pdw_dms_workers para obtener el estado de copia de tabla remota  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. Consultar la DMV sys.dm_pdw_dms_workers para obtener el estado de copia de tabla remota  
  Esta consulta muestra cómo ver el estado de copia de una copia de tabla remota.  
   
 ```  
@@ -152,7 +152,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ```  
   
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. Usar una sugerencia de combinación de consulta con CREATE REMOTE TABLE  
- Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con CREATE REMOTE TABLE. Una vez enviada la consulta al nodo de control, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se ejecuta en los nodos de proceso, se aplica la estrategia de combinación hash al generar el plan de consulta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+ Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con CREATE REMOTE TABLE. Una vez enviada la consulta al nodo de control, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se ejecuta en los nodos de proceso, se aplica la estrategia de combinación hash al generar el plan de consulta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```  
 USE ssawPDW;  

@@ -13,10 +13,10 @@ ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4dff74cd1e21ba743fa425bb632c736ee1cce158
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71295009"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabajar con administradores de conexiones mediante programación
@@ -65,7 +65,7 @@ ms.locfileid: "71295009"
 |MULTIFILE|administrador de conexiones de varios archivos|**System.String**|Ruta de acceso a uno de los archivos.|  
 |MULTIFLATFILE|administrador de conexiones de varios archivos planos|**System.String**|Ruta de acceso a uno de los archivos.|  
 |SMOServer|SMO, administrador de conexiones|**Microsoft.SqlServer.Management.Smo.Server**||  
-|SMTP|Administrador de conexiones SMTP|**System.String**|Por ejemplo, `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|Administrador de conexiones SMTP|**System.String**|Por ejemplo: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Administrador de conexiones WMI|**System.Management.ManagementScope**||  
 |SQLMOBILE|Administrador de conexiones de SQL Server Compact|**System.Data.SqlServerCe.SqlCeConnection**||  
   

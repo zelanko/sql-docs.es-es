@@ -23,15 +23,15 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 728d11420c1a91e581fa153020174f2d4339311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075063"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007358"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determina si un valor especificado coincide con algún valor de una subconsulta o una lista.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68075063"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   
@@ -66,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Los valores NULL que devuelve *subquery* o *expression* comparados con *test_expression* por medio de IN o NOT IN devuelven UNKNOWN. La utilización de valores NULL con IN o NOT IN puede provocar resultados inesperados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se incluye de manera explícita un número sumamente grande de valores (muchos miles de valores separados por comas) entre paréntesis en una cláusula IN, se pueden agotar los recursos y recibir los errores 8623 o 8632. Para evitar este problema, almacene los elementos de la lista IN en una tabla y use una subconsulta SELECT en una cláusula IN.  
   
  Error 8623:  
@@ -171,7 +171,7 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. Usar IN y NOT IN  
  En el siguiente ejemplo se encuentran todas las entradas de la tabla `FactInternetSales` que coinciden con los valores de `SalesReasonKey` de la tabla `DimSalesReason`.  

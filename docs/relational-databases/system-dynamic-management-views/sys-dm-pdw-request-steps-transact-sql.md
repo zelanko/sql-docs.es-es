@@ -1,7 +1,7 @@
 ---
-title: sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
+title: Sys. dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2017
+ms.date: 05/19/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,36 +12,36 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ae1a8aa94eebe6eae203c0b09641b13a18eca9d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899159"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196223"
 ---
-# <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+# <a name="sysdm_pdw_request_steps-transact-sql"></a>Sys. dm_pdw_request_steps (Transact-SQL)
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Contiene información sobre todos los pasos que componen una solicitud determinada o una consulta en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Muestra una fila por cada paso de consulta.  
+  Contiene información sobre todos los pasos que componen una solicitud o consulta determinada en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Muestra una fila por cada paso de consulta.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|request_id y step_index conforman la clave para esta vista.<br /><br /> Identificador numérico único asociado a la solicitud.|Vea request_id en [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|step_index|**int**|request_id y step_index conforman la clave para esta vista.<br /><br /> La posición de este paso en la secuencia de pasos que componen la solicitud.|de 0 a (n-1) para una solicitud de n pasos.|  
-|operation_type|**nvarchar(35)**|Tipo de operación representada por este paso.|**Operaciones de DMS query plan:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Operaciones de plan de consulta SQL:** 'OnOperation', 'RemoteOperation'<br /><br /> **Otras operaciones del plan de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operaciones externas para las lecturas:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operaciones externas de MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operaciones externas para operaciones de escritura:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obtener más información, vea "Descripción planes de consulta" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].|  
-|distribution_type|**nvarchar(32)**|Tipo de distribución que se someterá este paso.|'AllNodes', "AllDistributions", "AllComputeNodes", 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'No se especifica'|  
-|location_type|**nvarchar(32)**|Donde se ejecuta el paso.|'Compute', 'Control', 'DMS'|  
-|status|**nvarchar(32)**|Estado de este paso.|Pendiente, ejecución, completado, error, UndoFailed, PendingCancel, cancelado, deshacer, anulado|  
-|error_id|**nvarchar(36)**|Identificador único del error asociado con este paso, si procede.|Consulte error_id de [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Es NULL si se ha producido ningún error.|  
-|start_time|**datetime**|Hora en que inició el paso de ejecución.|Menor o igual a la hora actual y mayor o igual que end_compile_time de la consulta a la que pertenece este paso. Para obtener más información sobre las consultas, vea [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|end_time|**datetime**|Hora a la que este paso completado su ejecución, cancelado o error.|Menor o igual a la hora actual y mayor o igual que start_time. Establecer en NULL para conocer los pasos actualmente en ejecución o en cola.|  
-|total_elapsed_time|**int**|Cantidad total de tiempo que se ejecuta el paso de consulta, en milisegundos.|Entre 0 y la diferencia existente entre start_time y end_time. 0 para los pasos en cola.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, continuará total_elapsed_time sea el valor máximo. Esta condición generará la advertencia "se superó el valor máximo."<br /><br /> El valor máximo en milisegundos equivale a 24,8 días.|  
-|row_count|**bigint**|Número total de filas modificado o devuelto por esta solicitud.|0 para conocer los pasos que no cambie o devolver datos. En caso contrario, número de filas afectadas.|  
-|comando|**nvarchar(4000)**|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. NULL cuando la operación es del tipo MetaDataCreateOperation. Truncarse si supera los 4000 caracteres.|  
+|request_id|**nvarchar(32)**|request_id y step_index componen la clave para esta vista.<br /><br /> Identificador numérico único asociado a la solicitud.|Vea request_id en [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|step_index|**int**|request_id y step_index componen la clave para esta vista.<br /><br /> La posición de este paso en la secuencia de pasos que componen la solicitud.|de 0 a (n-1) para una solicitud con n pasos.|  
+|operation_type|**nvarchar(35)**|Tipo de operación representada por este paso.|**Operaciones del plan de consulta de DMS:** ' ReturnOperation ', ' PartitionMoveOperation ', ' MoveOperation ', ' BroadcastMoveOperation ', ' ShuffleMoveOperation ', ' TrimMoveOperation ', ' CopyOperation ', ' DistributeReplicatedTableMoveOperation '<br /><br /> **Operaciones del plan de consulta SQL:** ' Operación ', ' RemoteOperation '<br /><br /> **Otras operaciones del plan de consulta:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Operaciones externas para lecturas:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Operaciones externas para MapReduce:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Operaciones externas para Escrituras:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Para obtener más información, vea "Descripción de los planes de consulta" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un plan de consulta también puede verse afectado por la configuración de la base de datos.  Active [las opciones de ALTER DATABASE Set](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest) para obtener más información.|  
+|distribution_type|**nvarchar(32)**|Tipo de distribución que se va a someter a este paso.|' AllNodes ', ' AllDistributions ', ' AllComputeNodes ', ' ComputeNode ', ' Distribution ', ' SubsetNodes ', ' SubsetDistributions ', ' unespecifiqued '|  
+|location_type|**nvarchar(32)**|Dónde se está ejecutando el paso.|' Compute ', ' control ', ' DMS '|  
+|status|**nvarchar(32)**|Estado de este paso.|Pending, running, complete, failed, UndoFailed, PendingCancel, Canceled, Undone, Aborted|  
+|error_id|**nvarchar (36)**|Identificador único del error asociado a este paso, si existe.|Vea error_id de [Sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). ES NULL si no se ha producido ningún error.|  
+|start_time|**datetime**|Hora a la que se inició la ejecución del paso.|Menor o igual que la hora actual y mayor o igual que end_compile_time de la consulta a la que pertenece este paso. Para obtener más información sobre las consultas, vea [Sys. dm_pdw_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|end_time|**datetime**|Hora a la que se completó la ejecución de este paso, se canceló o dio error.|Menor o igual que la hora actual y mayor o igual que start_time. Se establece en NULL para los pasos que se encuentran actualmente en ejecución o en cola.|  
+|total_elapsed_time|**int**|Cantidad total de tiempo que se ha estado ejecutando el paso de la consulta, en milisegundos.|Entre 0 y la diferencia entre end_time y start_time. 0 para los pasos en cola.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo".<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
+|row_count|**bigint**|Número total de filas cambiadas o devueltas por esta solicitud.|Número de filas afectadas por el paso.  Mayor o igual que cero para los pasos de la operación de datos.  -1 para los pasos que no operan en los datos.|  
+|.|**nvarchar(4000)**|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. NULL cuando la operación es del tipo MetaDataCreateOperation. Se trunca si hay más de 4000 caracteres.|  
   
- Para obtener información sobre el número máximo de filas retenidas por esta vista, vea la sección de valores máximos de la vista del sistema en el "mínimo y máximo valores" en el [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección valores máximos de la vista del sistema en los valores mínimo y máximo de [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

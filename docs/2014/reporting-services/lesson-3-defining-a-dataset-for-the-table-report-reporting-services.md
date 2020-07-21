@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108460"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
   Después de definir el origen de datos, necesita definir un conjunto de datos. En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], los datos que usa en los informes proceden de un *conjunto de datos*. Un conjunto de datos incluye un puntero a un origen de datos y la consulta que usará para el informe, así como campos y variables calculados.  
   
- Puede usar el Diseñador de consultas del Diseñador de informes para diseñar la consulta. Para este tutorial, creará una consulta que recupera información de pedido de ventas desde la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008** base de datos.  
+ Puede usar el Diseñador de consultas del Diseñador de informes para diseñar la consulta. En este tutorial, creará una consulta que recupera información de pedidos de ventas de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]base de datos **2008** .  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>Para definir una consulta de Transact-SQL para los datos de informe  
   
-1.  En el panel **Datos de informe**, haga clic en **Nuevo** y después en **Conjunto de datos...** . Se abre el cuadro de diálogo **Propiedades del conjunto de datos** .  
+1.  En el panel **datos de informe** , haga clic en **nuevo**y, a continuación, haga clic en **DataSet...**. Se abrirá el cuadro de diálogo **propiedades del conjunto de propiedades** .  
   
 2.  En el cuadro **Nombre** , escriba **AdventureWorksDataset**.  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**.  
   
-4.  Asegúrese de que el nombre del origen de datos, AdventureWorks2012, está en el **origen de datos** cuadro de texto y que la **tipo de consulta** es **texto**.  
+4.  Asegúrese de que el nombre del origen de datos, AdventureWorks2012, se encuentra en el cuadro de texto **origen de datos** y que el **tipo de consulta** es **texto**.  
   
 5.  Escriba o copie y pegue la siguiente consulta de Transact-SQL en el cuadro **Consulta** .  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108460"
     HAVING ppc.Name = 'Clothing'  
     ```  
   
-6.  (Opcional) Haga clic en el botón **Diseñador de consultas** . La consulta se muestra en el Diseñador de consultas basado en texto. Puede cambiar al diseñador gráfico de consultas si hace clic en **Editar como texto**. Ver los resultados de la consulta haciendo clic en la ejecución **(!)**  botón en la barra de herramientas Diseñador de consultas.  
+6.  (Opcional) Haga clic en el botón **Diseñador de consultas** . La consulta se muestra en el Diseñador de consultas basado en texto. Puede cambiar al diseñador gráfico de consultas si hace clic en **Editar como texto**. Para ver los resultados de la consulta, haga clic en el botón ejecutar **(!)** de la barra de herramientas del diseñador de consultas.  
   
      Verá los datos procedentes de seis campos de cuatro tablas distintas de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . La consulta utiliza funcionalidad de Transact-SQL como los alias. Por ejemplo, la tabla SalesOrderHeader se denomina soh.  
   
@@ -68,11 +68,11 @@ ms.locfileid: "66108460"
      El conjunto de datos **AdventureWorksDataset** y los campos aparecen en el panel Datos de informe.  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Consulte [Lección 4: Adición de una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+ Ha especificado correctamente una consulta que recupera datos para su informe. A continuación, creará el diseño para el informe. Vea [Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas de diseño de herramientas de datos del servidor de informes SQL Diseñador de consultas &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
- [Tipo de conexión de SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+## <a name="see-also"></a>Consulte también  
+ [Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [Tipo de conexión SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [Tutorial: Escritura de instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

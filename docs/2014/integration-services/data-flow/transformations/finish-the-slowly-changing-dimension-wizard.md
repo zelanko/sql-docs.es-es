@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1efce0cbfe052827aea40fc529b11cad469b463e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62770371"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430582"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Finalizar el Asistente para dimensiones variables
   Utilice el cuadro de diálogo **Finalizar el Asistente para dimensiones variables** para comprobar las opciones antes de que el asistente admita las dimensiones de variación lenta.  
@@ -28,7 +27,7 @@ ms.locfileid: "62770371"
  **Se configurarán los resultados siguientes**  
  Confirme que la lista de resultados es la adecuada para sus fines.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar salidas mediante el Asistente para dimensión de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>Consulte también  
+ [Configuración de salidas con el Asistente para dimensiones de variación lenta](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

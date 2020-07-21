@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5154f002c5a35bc78e2eb6777f2cc7bb3d56b635
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010814"
 ---
 # <a name="define-filters"></a>Definir filtros
   El cuadro de diálogo **Definir filtros** permite definir filtros que posteriormente se aplican a conflictos de datos para obtener un subconjunto de conflictos en la cuadrícula. Para definir un filtro, elija un operador del cuadro de lista desplegable **Operador** y, a continuación, especifique un valor. Por ejemplo, si desea mostrar solamente los conflictos en los que el perdedor del conflicto es el servidor **ReplTest1**, seleccione **Igual a** en el cuadro de lista desplegable **Operador** y especifique **ReplTest1** en la primera columna **Valor** .  
@@ -31,10 +30,10 @@ ms.locfileid: "62721395"
  **Valor**  
  Escriba un valor para el filtro. La mayoría de los operadores solo requiere un valor en la primera columna **Valor** ; sin embargo, los operadores **Entre** y **No entre** requieren un valor en las dos columnas **Valor** .  
   
- **Desactivar**  
+ **Borrar**  
  Haga clic en este botón para borrar todos los filtros previamente definidos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Visor de conflictos de replicación de Microsoft &#40;Replicación de mezcla&#41;](microsoft-replication-conflict-viewer-merge-replication.md)   
  [Visor de conflictos de replicación de Microsoft &#40;Replicación transaccional&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: ba34b01a-6289-4eb8-8341-fa3d9ec87b3f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2d4a0acb4a099cc5d495b9c65865d550c29db07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934686"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Conectar con el servidor (página Parámetros de conexión adicionales)
-  El cuadro de diálogo **Conectar con[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de**  presenta los valores de cadena de conexión más comunes como opciones. Utilice la página **Parámetros de conexión adicionales** para agregar más parámetros de conexión a la cadena de conexión.  
+  El cuadro de diálogo **Conectar con[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de ** presenta los valores de cadena de conexión más comunes como opciones. Utilice la página **Parámetros de conexión adicionales** para agregar más parámetros de conexión a la cadena de conexión.  
   
 -   Los parámetros de conexión adicionales pueden ser cualquier parámetro de conexión ODBC.  
   
@@ -45,14 +44,14 @@ ms.locfileid: "62808686"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Ejemplo A: Conexión al Motor de base de datos  
+### <a name="example-a-connecting-to-the-database-engine"></a>Ejemplo A: conectarse al motor de base de datos  
  Para conectarse a la base de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] en un servidor denominado ACCOUNTING, escriba lo siguiente en la página **Parámetros de conexión adicionales** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Ejemplo B: Conectarse a Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Ejemplo B: conectarse a Analysis Services  
  Para conectarse a Analysis Services, hacer que todas las particiones que escuchan las notificaciones se consulten en tiempo real (omitiendo el almacenamiento en memoria caché) y establecer el valor de tiempo de espera de reescritura en 5, escriba lo siguiente en la página **Parámetros de conexión adicionales** :  
   
 ```  

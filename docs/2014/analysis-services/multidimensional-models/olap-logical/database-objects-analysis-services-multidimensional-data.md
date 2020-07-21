@@ -1,5 +1,5 @@
 ---
-title: Base de datos de objetos (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Objetos de base de datos (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d61e3213356146e1cf9e452e0b62e02c96bd4902
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62725661"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546047"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Objetos de base de datos (Analysis Services - Datos multidimensionales)
-  Un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia contiene objetos de base de datos y los ensamblados para su uso con procesamiento analítico en línea (OLAP) y minería de datos.  
+  Una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instancia de contiene objetos y ensamblados de base de datos para su uso con el procesamiento analítico en línea (OLAP) y la minería de datos.  
   
 -   Las bases de datos contienen objetos OLAP y de minería de datos como orígenes de datos, vistas del origen de datos, cubos, medidas, grupos de medida, dimensiones, atributos, jerarquías, estructuras de minería de datos, modelos de minería de datos y roles.  
   
@@ -66,8 +65,8 @@ ms.locfileid: "62725661"
 |[Roles de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](security-roles-analysis-services-multidimensional-data.md)|Describe un rol, el mecanismo de seguridad utilizado para controlar el acceso a objetos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Administración de ensamblados de modelos multidimensionales](../multidimensional-model-assemblies-management.md)|Describe un ensamblado, una colección de funciones definidas por el usuario utilizadas para ampliar los lenguajes MDX y DMX, en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
-## <a name="see-also"></a>Vea también  
- [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](../supported-data-sources-ssas-multidimensional.md)   
+## <a name="see-also"></a>Consulte también  
+ [Orígenes de datos admitidos &#40;&#41;de SSAS multidimensionales](../supported-data-sources-ssas-multidimensional.md)   
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
  [Soluciones de minería de datos](../../data-mining/data-mining-solutions.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b6380749b9e2aa37ea50d93ac4dec6f0e2e34db3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c67de4390b23055aaa5c62b735ae2a52bcb2188f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714729"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve el algoritmo de una clave simétrica creada a partir de un módulo EKM.  
   
@@ -45,7 +45,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
  **'** algorithm_desc **'**  
  Especifica que la salida devuelve la descripción del algoritmo de la clave simétrica. Solo está disponible para las claves simétricas creadas a partir de un módulo EKM.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sql_variant**  
   
 ## <a name="permissions"></a>Permisos  

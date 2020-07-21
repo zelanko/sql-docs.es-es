@@ -1,5 +1,5 @@
 ---
-title: Personalizar hojas de estilos para el Visor de HTML y el Administrador de informes | Microsoft Docs
+title: Personalizar hojas de estilos para el visor HTML y Administrador de informes | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "64568267"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizar hojas de estilos para el Visor HTML y el Administrador de informes
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ofrece estilos en cascada de forma predeterminada los archivos de hoja (.css) que definen estilos para el **informe** barra de herramientas en el Visor de HTML y para el Administrador de informes. Si es un programador web o tiene experiencia creando hojas de estilos en cascada, puede modificar los estilos predeterminados bajo su responsabilidad para cambiar los colores, las fuentes y el diseño de la barra de herramientas o el Administrador de informes. En esta versión no se documentan las hojas de estilos predeterminadas ni las instrucciones para modificarlas.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]proporciona archivos de hojas de estilos en cascada (. CSS) predeterminados que definen estilos para la barra de herramientas de **Informe** en el visor HTML y para Administrador de informes. Si es un programador web o tiene experiencia creando hojas de estilos en cascada, puede modificar los estilos predeterminados bajo su responsabilidad para cambiar los colores, las fuentes y el diseño de la barra de herramientas o el Administrador de informes. En esta versión no se documentan las hojas de estilos predeterminadas ni las instrucciones para modificarlas.  
   
  Modificar las hojas de estilos incorrectamente puede provocar errores al abrir los informes. Si no sabe cómo modificar las hojas de estilos, debe utilizar las hojas de estilos predeterminadas. Si decide personalizar las hojas de estilos, asegúrese de crear una copia de seguridad para todos los archivos .css personalizados antes de hacer cambios.  
   
@@ -35,16 +35,16 @@ ms.locfileid: "64568267"
 |ReportingServices.css|Define estilos para el Administrador de informes.|  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configurar Reporting Services para utilizar una hoja de estilos personalizada  
- La hoja de estilos debe tener un archivo válido de hoja de estilos en cascada (.css) y debe estar ubicado en la carpeta Styles. De forma predeterminada, la carpeta Styles se encuentra en \< *unidad*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  
+ La hoja de estilos debe tener un archivo válido de hoja de estilos en cascada (.css) y debe estar ubicado en la carpeta Styles. De forma predeterminada, la carpeta Styles se \<encuentra en la *unidad*>: \Archivos de programa\Microsoft SQL Server\Mssql. *n*\Reporting Services\ReportServer\Styles.  
   
  Para utilizar una hoja de estilos predeterminada para el Visor HTML en tiempo de ejecución, puede elegir los siguientes enfoques:  
   
--   Agregue el <`HTMLViewerStyleSheet`> Si se establece en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] archivo de configuración.  
+-   Agregue el valor `HTMLViewerStyleSheet` <> al archivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] de configuración.  
   
 -   Especifique la hoja de estilos en una dirección URL de informe.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Modificar el archivo RSReportServer.config  
- Puede modificar el archivo RSReportServer.config de modo que especifique una hoja de estilos personalizada para el Visor HTML. El <`HTMLViewerStyleSheet`> configuración no se incluye en el archivo de forma predeterminada. Debe escribirla en el <`Configuration`> selección de RSReportServer.config archivo y, a continuación, especifique la hoja de estilos que desea usar. No incluya la extensión de archivo .css al especificar la hoja de estilos.  
+ Puede modificar el archivo RSReportServer.config de modo que especifique una hoja de estilos personalizada para el Visor HTML. La configuración `HTMLViewerStyleSheet` de> de <no se incluye de forma predeterminada en el archivo. Debe escribirla en el <`Configuration`> selección del archivo Rsreportserver. config y, a continuación, especificar la hoja de estilos que desea utilizar. No incluya la extensión de archivo .css al especificar la hoja de estilos.  
   
  El ejemplo siguiente ilustra cómo debe especificar la hoja de estilos:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64568267"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>Especificar una hoja de estilos en una dirección URL de informe  
- Puede utilizar el parámetro de acceso URL `rc:StyleSheet` para especificar una hoja de estilos personalizada en la dirección URL de informe. Para obtener más información sobre cómo especificar parámetros de acceso URL, vea [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Puede utilizar el parámetro de acceso URL `rc:StyleSheet` para especificar una hoja de estilos personalizada en la dirección URL de informe. Para obtener más información sobre cómo especificar parámetros de acceso URL, vea [referencia de parámetros de acceso URL](url-access-parameter-reference.md).  
   
  El ejemplo siguiente ilustra cómo agregar estilos personalizados:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "64568267"
 http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs:Command=Render&rc:Stylesheet=MyStyleSheet  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visor HTML y la barra de herramientas de informe](html-viewer-and-the-report-toolbar.md)   
  [Archivo de configuración RSReportServer](report-server/rsreportserver-config-configuration-file.md)  

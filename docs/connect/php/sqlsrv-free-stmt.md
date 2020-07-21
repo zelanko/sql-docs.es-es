@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a6f062d1237cfc92c5697fa005b3f78268aa48f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fb937b9477be3a18f14960c3ed9d142aacbe7452
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992716"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80922762"
 ---
-# <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
+# <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Libera todos los recursos asociados con la instrucción especificada. La instrucción no se puede utilizar de nuevo después de llamar a esta función.  

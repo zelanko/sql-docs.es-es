@@ -1,5 +1,5 @@
 ---
-title: Usar las características mejoradas de fecha y hora (OLE DB) | Microsoft Docs
+title: Utilizar las características mejoradas de fecha y hora (OLE DB) | Microsoft Docs
 description: Usar las características mejoradas de fecha y hora (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68015529"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Utilizar las características mejoradas de fecha y hora (OLE DB)

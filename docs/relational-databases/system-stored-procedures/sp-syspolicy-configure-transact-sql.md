@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010497"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892752"
 ---
-# <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Configura los valores de la administración basada en directivas, por ejemplo si está habilitada.  
   
@@ -40,9 +40,9 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` Es el nombre de la configuración que desea configurar. *nombre* es **sysname**, es obligatorio y no puede ser NULL ni una cadena vacía.  
+`[ @name = ] 'name'`Es el nombre de la configuración que desea configurar. *Name* es de **tipo sysname**, es obligatorio y no puede ser null ni una cadena vacía.  
   
- *nombre* puede ser cualquiera de los siguientes valores:  
+ el *nombre* puede ser cualquiera de los siguientes valores:  
   
 -   'Enabled': determina si la administración basada en directivas está habilitada.  
   
@@ -50,17 +50,17 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess': especifica si la administración basada en directivas registra las evaluaciones de la directiva correctas.  
   
-`[ @value = ] value` Es el valor que está asociado con el valor especificado para *nombre*. *valor* es **sql_variant**y es necesario.  
+`[ @value = ] value`Es el valor que está asociado al valor especificado para *Name*. el *valor* es **sql_variant**y es obligatorio.  
   
--   Si especifica 'Enabled' para *nombre*, puede usar cualquiera de los siguientes valores:  
+-   Si especifica ' habilitado ' como *nombre*, puede usar cualquiera de los siguientes valores:  
   
     -   0 = Deshabilita la administración basada en directivas.  
   
     -   1 = Habilita la administración basada en directivas.  
   
--   Si especifica 'HistoryRententionInDays' para *nombre*, especifique el número de días como un valor entero.  
+-   Si especifica ' HistoryRententionInDays ' como *nombre*, especifique el número de días como valor entero.  
   
--   Si especifica 'LogOnSuccess' para *nombre*, puede usar cualquiera de los siguientes valores:  
+-   Si especifica ' LogOnSuccess ' para *el nombre*, puede usar cualquiera de los siguientes valores:  
   
     -   0 = Registra solo las evaluaciones de directiva con errores.  
   
@@ -78,7 +78,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Posible elevación de credenciales: Los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Posible elevación de credenciales: los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se habilita la administración basada en directivas.  
@@ -108,10 +108,10 @@ EXEC msdb.dbo.sp_syspolicy_configure @name = N'LogOnSuccess'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
+ [sp_syspolicy_set_config_enabled &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
+ [sp_syspolicy_set_config_history_retention &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_set_log_on_success &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  
   
   

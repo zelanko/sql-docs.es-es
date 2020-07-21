@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2905877f907e932be058a07ba3a9fbbd892e7ae6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db045eeb48bc04abb415bb5ac14a7872fc805b09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115695"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754533"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de mantenimiento (página de informes y registro)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use el cuadro de diálogo **Informes y registro** para configurar los informes y registros que se generan al ejecutar los planes de mantenimiento.  
   
 ## <a name="options"></a>Opciones  
@@ -45,10 +45,10 @@ ms.locfileid: "68115695"
  **Registrar en el servidor remoto**  
  Registra el historial del plan de mantenimiento en un servidor remoto.  
   
- **Conexión**  
+ **Connection**  
  Especifica la información de conexión que se va a usar al registrar en un servidor remoto.  
   
- **Nueva**  
+ **Nuevo**  
  Muestra el cuadro de diálogo **Propiedades de conexión** . Se usa para configurar información de conexión nueva para registrar en un servidor remoto.  
   
 ## <a name="see-also"></a>Consulte también  

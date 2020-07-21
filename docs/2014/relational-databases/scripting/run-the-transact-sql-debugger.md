@@ -1,6 +1,6 @@
 ---
-title: Ejecutar el depurador de Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Ejecutar el depurador de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -17,15 +17,14 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: MightyPen
-ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e53e2f756ad7161cc6df91b8146945e60b0c91c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7665894e3e7ce7a152631b584c35fcacbc8de707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090219"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009558"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ejecutar el depurador de Transact-SQL
   Puede iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] después de abrir una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A continuación, puede ejecutar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en modo de depuración hasta que se detenga el depurador. Puede establecer las opciones para personalizar cómo se ejecuta el depurador.  
@@ -33,7 +32,7 @@ ms.locfileid: "66090219"
 ## <a name="starting-and-stopping-the-debugger"></a>Iniciar y detener el depurador  
  Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] son los siguientes:  
   
--   Si el Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] está conectado a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en otro equipo, debe haber configurado el depurador para la depuración remota. Para obtener más información, consulte [configurar el depurador de Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md).  
+-   Si el Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] está conectado a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en otro equipo, debe haber configurado el depurador para la depuración remota. Para obtener más información, vea [configurar el depurador de Transact-SQL](configure-firewall-rules-before-running-the-tsql-debugger.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se debe ejecutar con una cuenta de Windows que sea miembro del rol fijo de servidor sysadmin.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66090219"
   
  La siguiente tabla muestra los comandos de menú, los botones de las barras de herramientas y los métodos abreviados de teclado del depurador.  
   
-|Comando del menú Depurar|Comando de método abreviado del editor|Botón de la barra de herramientas|Método abreviado de teclado|Acción|  
+|Comando del menú Depurar|Comando de método abreviado del editor|Botón de la barra de herramientas|Métodos abreviados de teclado|Acción|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Windows/Puntos de interrupción**|No disponible|**Puntos de interrupción**|CTRL+ALT+B|Mostrar la ventana **Puntos de interrupción** en la que puede ver y administrar los puntos de interrupción.|  
 |**Windows/Inspección/Inspección1**|No disponible|**Puntos de interrupción/Inspección/Inspección1**|CTRL+ALT+W, 1|Mostrar la ventana **Inspección1** .|  
@@ -87,14 +86,14 @@ ms.locfileid: "66090219"
 |**Continuar**|No disponible|**Continuar**|ALT+F5|Ejecutar un proceso hasta el siguiente punto de interrupción. La opción**Continuar** no está activa hasta que coloque el foco en una ventana del Editor de consultas que esté en el modo de depuración.|  
 |**Iniciar depuración**|No disponible|**Iniciar depuración**|ALT+F5|Poner una ventana del Editor de consultas en el modo de depuración y ejecutar hasta el primer punto de interrupción. Si el foco está en la ventana del Editor de consultas que está en el modo de depuración, la opción **Iniciar depuración** se reemplaza por **Continuar**.|  
 |**Interrumpir todos**|No disponible|**Interrumpir todos**|CTRL+ALT+INTERR|El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no usa esta característica.|  
-|**Detener depuración**|No disponible|**Detener depuración**|MAYÚS+F5|Sacar una ventana del Editor de consultas del modo de depuración y volver a ponerla en el modo normal.|  
+|**Detener la depuración**|No disponible|**Detener la depuración**|MAYÚS+F5|Sacar una ventana del Editor de consultas del modo de depuración y volver a ponerla en el modo normal.|  
 |**Desasociar todo**|No disponible|No disponible|No disponible|Detener el modo de depuración, pero se ejecutan las instrucciones restantes en la ventana del Editor de consultas.|  
-|**Paso a paso por instrucciones**|No disponible|**Paso a paso por instrucciones**|F11|Ejecutar la siguiente instrucción y, además, abrir una nueva ventana del Editor de consultas en el modo de depuración si la siguiente instrucción ejecuta un procedimiento almacenado, un desencadenador o una función.|  
-|**Paso a paso por procedimientos**|No disponible|**Paso a paso por procedimientos**|F10|Igual que **Paso a paso por instrucciones**, salvo que no se depuran las funciones, los procedimientos almacenados ni los desencadenadores.|  
-|**Paso a paso para salir**|No disponible|**Paso a paso para salir**|MAYÚS+F11|Ejecutar el resto del código de un desencadenador, función o procedimiento almacenado sin detenciones por puntos de interrupción. Se reanuda el modo de depuración normal cuando el control se devuelva al código que llamó al módulo.|  
+|**Depurar paso a paso por instrucciones**|No disponible|**Depurar paso a paso por instrucciones**|F11|Ejecutar la siguiente instrucción y, además, abrir una nueva ventana del Editor de consultas en el modo de depuración si la siguiente instrucción ejecuta un procedimiento almacenado, un desencadenador o una función.|  
+|**Depurar paso a paso por procedimientos**|No disponible|**Depurar paso a paso por procedimientos**|F10|Igual que **Paso a paso por instrucciones**, salvo que no se depuran las funciones, los procedimientos almacenados ni los desencadenadores.|  
+|**Depurar paso a paso para salir**|No disponible|**Depurar paso a paso para salir**|MAYÚS+F11|Ejecutar el resto del código de un desencadenador, función o procedimiento almacenado sin detenciones por puntos de interrupción. Se reanuda el modo de depuración normal cuando el control se devuelva al código que llamó al módulo.|  
 |No disponible|**Ejecutar hasta el cursor**|No disponible|CTRL+F10|Ejecutar todo el código desde la última ubicación de detención hasta la actual sin detenerse en ningún punto de interrupción.|  
 |**inspección rápida**|**inspección rápida**|No disponible|CTRL+ALT+Q|Mostrar la ventana **Inspección rápida** .|  
-|**Alternar puntos de interrupción**|**Punto de interrupción/Insertar punto de interrupción**|No disponible|F9|Colocar un punto de interrupción en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] actual o seleccionada.|  
+|**Alternar punto de interrupción**|**Punto de interrupción/Insertar punto de interrupción**|No disponible|F9|Colocar un punto de interrupción en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] actual o seleccionada.|  
 |No disponible|**Punto de interrupción/Eliminar punto de interrupción**|No disponible|No disponible|Eliminar el punto de interrupción de la línea seleccionada.|  
 |No disponible|**Punto de interrupción/Deshabilitar punto de interrupción**|No disponible|No disponible|Deshabilitar el punto de interrupción en la línea seleccionada. El punto de interrupción permanece en la línea de código, pero no detendrá la ejecución hasta que se rehabilite.|  
 |No disponible|**Punto de interrupción/Habilitar puntos de interrupción**|No disponible|No disponible|Habilitar el punto de interrupción en la línea seleccionada.|  
@@ -102,10 +101,10 @@ ms.locfileid: "66090219"
 |**Deshabilitar todos los puntos de interrupción**|No disponible|No disponible|No disponible|Deshabilitar todos los puntos de interrupción.|  
 |No disponible|**Agregar inspección**|No disponible|No disponible|Agregar la expresión seleccionada a la ventana **Inspección** .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
- [Avanzar paso a paso por el código Transact-SQL](step-through-transact-sql-code.md)   
- [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
+ [Recorrer el código de Transact-SQL](step-through-transact-sql-code.md)   
+ [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
  [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

@@ -9,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: janinezhang
-ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4cfd0c6a8e5383efcfa9f71d374bf7b1f6e260f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66057224"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424292"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de destino de ODBC (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de ODBC** para asignar columnas de entrada a columnas de destino.  
@@ -33,12 +32,12 @@ ms.locfileid: "66057224"
  Lista de columnas de destino disponibles. Arrastre y coloque una columna de destino en una columna de entrada disponible para asignar las columnas.  
   
 ### <a name="input-column"></a>Columna de entrada  
- Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones, seleccione **\<ignore>** con el fin de excluir columnas de la salida.  
+ Permite ver las columnas de entrada seleccionadas. Puede quitar las asignaciones seleccionando **\<ignore>** excluir columnas de la salida.  
   
 ### <a name="destination-column"></a>Columna de destino  
  Muestra todas las columnas de destino disponibles, tanto las asignadas como las no asignadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   

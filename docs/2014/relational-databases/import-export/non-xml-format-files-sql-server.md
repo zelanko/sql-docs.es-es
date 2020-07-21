@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bea7572d8281a525c8c3a3f874ff3b55071b717d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050499"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admiten dos tipos de archivos de formato para la importación y exportación masivas: *archivos de formato no XML* y *archivos de formato XML*.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011881"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Ventajas de los archivos de formato no XML  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Ventajas de los archivos de formato no XML  
   
 -   Puede crear automáticamente un archivo de formato no XML si especifica la opción **format** en un comando **bcp** .  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66011881"
 > [!NOTE]  
 >  Los archivos de formato XML ofrecen varias ventajas sobre los archivos con otro formato. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Estructura de los archivos de formato no XML  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Estructura de los archivos de formato no XML  
  Un archivo de formato no XML es un archivo de texto que tiene una estructura específica. El archivo de formato no XML contiene información sobre el tipo de almacenamiento de archivo, la longitud de prefijo, la longitud de campo y el terminador de campo de cada columna de tabla.  
   
  En la ilustración siguiente se muestran los campos de archivo de formato de un archivo de formato no XML de ejemplo.  
@@ -77,7 +76,7 @@ ms.locfileid: "66011881"
 > [!NOTE]  
 >  Puede modificar un archivo de formato de forma que le permita realizar una importación masiva desde un archivo de datos en el que el número o el orden de los campos difieran del número o el orden de las columnas de la tabla. Para obtener más información, vea la lista [Tareas relacionadas](#RelatedTasks) , más adelante en este tema.  
   
-##  <a name="Examples"></a> Ejemplo de archivo de formato no XML  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Ejemplo de archivo de formato no XML  
  En el ejemplo siguiente se muestra un archivo de formato no XML creado anteriormente (`myDepartmentIdentical-f-c.fmt`). Este archivo describe un campo de datos de caracteres para cada columna en la tabla `HumanResources.Department` de la base de datos de ejemplo `AdventureWorks2012` .  
   
  El archivo de formato generado, `myDepartmentIdentical-f-c.fmt`, contiene la siguiente información:  
@@ -94,7 +93,7 @@ ms.locfileid: "66011881"
 > [!NOTE]  
 >  Para ver una ilustración en la que se muestran los campos del archivo de formato en relación con este archivo de formato no XML de ejemplo, vea [Estructura de los archivos de formato no XML](#Structure)anteriormente en este tema.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66011881"
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

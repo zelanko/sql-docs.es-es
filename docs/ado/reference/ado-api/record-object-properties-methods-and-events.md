@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 156861996bc62e968c192fdd8687c7654e0d2b60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70737656"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754038"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Record
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -35,7 +35,7 @@ ms.locfileid: "70737656"
   
  [Propiedad Source (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
- [State (propiedad)](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Propiedad State](../../../ado/reference/ado-api/state-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  [CANCEL (método)](../../../ado/reference/ado-api/cancel-method-ado.md)  
@@ -46,14 +46,14 @@ ms.locfileid: "70737656"
   
  [DeleteRecord (método)](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
   
- [GetChildren (método)](../../../ado/reference/ado-api/getchildren-method-ado.md)  
+ [Método GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   
  [MoveRecord (método)](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

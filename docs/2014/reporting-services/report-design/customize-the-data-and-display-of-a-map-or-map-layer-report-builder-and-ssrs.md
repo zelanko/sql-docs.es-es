@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106096"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66106096"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Map"></a> Cambiar las opciones de un mapa  
+##  <a name="change-options-for-the-map"></a><a name="Map"></a> Cambiar las opciones de un mapa  
  En un elemento de informe de mapa, puede hacer lo siguiente:  
   
 -   Agregar varios títulos.  
@@ -73,7 +73,7 @@ ms.locfileid: "66106096"
   
  
   
-##  <a name="Viewport"></a> Cambiar las opciones de la ventanilla  
+##  <a name="change-options-for-the-viewport"></a><a name="Viewport"></a> Cambiar las opciones de la ventanilla  
  Utilice las opciones de la ventanilla para cambiar la vista del mapa que aparece en un informe.  
   
  El origen de datos espaciales podría proporcionar más espacio del que haya que mostrar en el informe. Puede utilizar la ventanilla para establecer el centro y el nivel de zoom, y para recortar el área del mapa.  
@@ -94,7 +94,7 @@ ms.locfileid: "66106096"
   
 
   
-##  <a name="Legends"></a> Cambiar las opciones de las leyendas  
+##  <a name="change-options-for-the-legends"></a><a name="Legends"></a> Cambiar las opciones de las leyendas  
  Las leyendas ayudan a los usuarios a interpretar los datos de un mapa.  
   
  De forma predeterminada, todas las reglas que especifique para una capa agregan elementos a la primera leyenda. Además, todas las reglas de color muestran valores en la escala de colores.  
@@ -107,7 +107,7 @@ ms.locfileid: "66106096"
   
 
   
-##  <a name="Layer"></a> Cambiar las opciones de la capa  
+##  <a name="change-options-for-the-layer"></a><a name="Layer"></a> Cambiar las opciones de la capa  
  Para mostrar las capas de un mapa, haga clic en él para seleccionarlo. Aparece el panel Mapa. Para cambiar las opciones de una capa, haga clic con el botón secundario en ella y utilice el menú contextual.  
   
  Una capa puede ser de uno de tres tipos en función de los datos espaciales que devuelva el origen de datos espaciales: una capa de polígono, una capa de línea o una capa de punto.  
@@ -124,16 +124,16 @@ ms.locfileid: "66106096"
   
  Para más información sobre capas, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-##  <a name="DataGrouping"></a> Cambiar la agrupación de datos para la capa  
+##  <a name="change-data-grouping-for-the-layer"></a><a name="DataGrouping"></a> Cambiar la agrupación de datos para la capa  
  Puede personalizar la forma de agregar datos espaciales para sus propias formas. Para establecer las propiedades de grupo de una capa, seleccione la capa en el panel Mapa y, en el panel de propiedades de la capa, haga clic en **Grupo**; luego, haga clic en los puntos suspensivos (...) para abrir las propiedades de grupo. En este cuadro de diálogo puede especificar expresiones de grupo, crear variables de grupo y filtrar datos que se usan para agrupar.  
   
  La expresión de grupo especifica cómo se agregan los datos analíticos que tienen relación con los datos espaciales para cada elemento de mapa de la capa. De forma predeterminada, la expresión de grupo es el conjunto de campos coincidentes que se especificó para la relación entre los datos espaciales y los datos analíticos. Por ejemplo, en un mapa de burbujas que muestra las ubicaciones de las ciudades y el tamaño de la población de un país o región, los campos coincidentes incluyen el nombre de la ciudad [City] y el nombre de la región [Region] porque puede haber varias ciudades con el mismo nombre. La expresión de grupo correspondiente incluye dos campos: [City ] y [Region].  
   
- Para obtener más información, consulte [Sugerencias sobre mapas: Cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obtener más información, vea [Sugerencias sobre mapas: cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   
-##  <a name="MapElements"></a> Cambiar las opciones de los elementos de mapa de la capa  
+##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Cambiar las opciones de los elementos de mapa de la capa  
  Los elementos de mapa son los puntos, líneas o polígonos de una capa que se basan en los datos espaciales. Se pueden establecer las opciones siguientes para los elementos de mapa. Estas opciones se aplican a todos los elementos de mapa de la capa, tanto si están incrustados como si no:  
   
 -   Etiquetas, visibilidad de etiquetas, desplazamiento de etiquetas y formato.  
@@ -142,7 +142,7 @@ ms.locfileid: "66106096"
   
 -   Acciones de obtención de detalles.  
   
--   Opciones de presentación.  
+-   Opciones de visualización.  
   
  Las opciones de presentación de los elementos de mapa siguen un orden de prioridad basado en la capa, el elemento de mapa, las reglas de los elementos de mapa y las opciones de invalidación de los elementos de mapa incrustados.  
   
@@ -150,14 +150,14 @@ ms.locfileid: "66106096"
   
 
   
-##  <a name="Precedence"></a> Descripción de la prioridad de las opciones de presentación  
+##  <a name="understanding-display-option-precedence"></a><a name="Precedence"></a> Descripción de la prioridad de las opciones de presentación  
  Si desea controlar la apariencia de la presentación de un punto, línea o polígono en una capa de mapa, debe saber dónde se pueden establecer las opciones de presentación y qué opciones tienen una prioridad mayor. Las opciones de presentación siguientes se muestran de menor a mayor. Las opciones de presentación superiores invalidan las inferiores de esta lista:  
   
 -   Opciones de las capas.  
   
 -   Opciones de puntos, líneas o polígonos de cada capa. Se aplican tanto si los elementos de mapa se recuperan dinámicamente al procesar el informe como si están incrustados en la definición de informe. Por ejemplo, especifique un color de relleno para todos los elementos de una capa.  
   
--   Reglas. Puede establecer reglas para controlar el color, el tamaño, el ancho o el tipo de marcador de todos los elementos de mapa de una capa. Las reglas que puede establecer dependen del tipo de elemento de mapa.  
+-   Las reglas. Puede establecer reglas para controlar el color, el tamaño, el ancho o el tipo de marcador de todos los elementos de mapa de una capa. Las reglas que puede establecer dependen del tipo de elemento de mapa.  
   
     -   Reglas de color. Se aplican a los marcadores para los puntos, líneas y polígonos, y a los marcadores para los puntos centrales de los polígonos.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "66106096"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 9a6b47b776c55abd86ce10617a5773c5f8397bb6
+ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294433"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80625570"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  Los paquetes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  
   
 -   Conectar con almacenes de datos de origen y destino tales como archivos de texto, archivos XML, libros de Excel y bases de datos relacionales para extraer y cargar datos.  
   
@@ -81,21 +81,21 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
 >  Para obtener más información sobre los dos modelos y sobre cómo convertir un proyecto en un modelo de implementación de proyectos, vea [Implementación de proyectos y paquetes de Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### <a name="built-in-connection-managers"></a>Administradores de conexión integrados  
- En la tabla siguiente se indican los tipos de administradores de conexión proporcionados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ En la tabla siguiente se indican los tipos de administradores de conexión proporcionados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 |Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
 |ADO|Se conecta a los objetos de Objetos de datos ActiveX (ADO).|[Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Se conecta a un origen de datos mediante un proveedor .NET.|[Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |CACHE|Lee los datos del flujo de datos o de un archivo caché (.caw) y puede guardar los datos en el archivo caché.|[Administrador de conexiones de caché](../../integration-services/connection-manager/cache-connection-manager.md)|  
-|DQS|Conecta a un servidor de Data Quality Services y una base de datos de Data Quality Services en el servidor.|[Administrador de conexiones de limpieza de DQS](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
-|EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones con Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|DQS|Conecta a un servidor de Data Quality Services y una base de datos de Data Quality Services en el servidor.|[Administrador de conexiones de Limpieza de DQS](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
+|EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones de Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |FILE|Se conecta a un archivo o carpeta.|[Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)|  
 |FLATFILE|Se conecta a los datos en un solo archivo plano.|[Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
 |FTP|Se conecta a un servidor FTP.|[Administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|Se conecta a un servidor web.|[Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ|Se conecta a una cola de mensajes.|[Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100|Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MSOLAP100|Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|Se conecta a varios archivos y carpetas.|[Administrador de conexiones de varios archivos](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Se conecta a varios archivos y carpetas de datos.|[Administrador de conexiones de varios archivos planos](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
 |OLEDB|Se conecta a un origen de datos mediante un proveedor OLE DB.|[Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -113,9 +113,9 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
 |Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
-|ORACLE|Se conecta a un servidor de Oracle \<información de versión\>.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Se conecta a un servidor de Teradata \<información de versión\>.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Se conecta a un servidor de Oracle \<información de versión\>.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
+|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|TERADATA|Se conecta a un servidor de Teradata \<información de versión\>.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=55179).|  
   
 ### <a name="custom-connection-managers"></a>Administradores de conexión personalizados  
  Puede crear también administradores de conexión personalizados. Para obtener más información, vea [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -134,7 +134,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
  El siguiente diagrama muestra el área **Administradores de conexión** en la pestaña **Flujo de control** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- ![Captura de pantalla del diseñador de flujo de control con paquete](../../integration-services/connection-manager/media/samplecontrolflow.gif "Screenshot of control flow designer with package")    
+ ![Captura de pantalla del diseñador de flujo de control con paquete](../../integration-services/connection-manager/media/samplecontrolflow.gif "Captura de pantalla del diseñador de flujo de control con paquete")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>Proveedores de 32 y 64 bits para administradores de conexión  
  Muchos de los proveedores que utilizan los administradores de conexión están disponibles en versiones de 32 y 64 bits. El entorno de diseño de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es un entorno de 32 bits; solamente verá proveedores de 32 bits al diseñar un paquete. Por lo tanto, solo se puede configurar un administrador de conexiones para que utilice un proveedor de 64 bits específico si también está instalada la versión de 32 bits del mismo proveedor.  
@@ -144,13 +144,13 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   Las dos versiones del proveedor tienen el mismo identificador. Para especificar si el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa una versión de 64 bits disponible del proveedor, establezca la propiedad Run64BitRuntime del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si la propiedad Run64BitRuntime se establece en **true**, el tiempo de ejecución busca y usa el proveedor de 64 bits; si Run64BitRuntime se establece en **false**, el tiempo de ejecución busca y usa el proveedor de 32 bits. Para más información sobre las propiedades que se pueden establecer en proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], consulte [Entornos de Studio e Integration Services (SSIS)](https://msdn.microsoft.com/library/ms140028.aspx).   
 
 ## <a name="add-a-connection-manager"></a>Agregar un administrador de conexiones
-###  <a name="wizard"></a> Agregar un administrador de conexiones al crear un paquete  
+###  <a name="add-a-connection-manager-when-you-create-a-package"></a><a name="wizard"></a> Agregar un administrador de conexiones al crear un paquete  
   
 -   Use el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Además de crear y configurar un administrador de conexiones, el asistente también ayuda a crear y configurar los orígenes y destinos que utilizan el administrador de conexiones. Para obtener más información, vea [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a> Agregar un administrador de conexiones a un paquete existente  
+###  <a name="add-a-connection-manager-to-an-existing-package"></a><a name="package"></a> Agregar un administrador de conexiones a un paquete existente  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -162,7 +162,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
     -   Haga clic en el tipo de administrador de conexiones que desee agregar al paquete.  
   
-         -O bien-  
+         O bien  
   
     -   Si no aparece el tipo que desea agregar, haga clic en **Nueva conexión** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione un tipo de administrador de conexiones y haga clic en **Aceptar**.  
   
@@ -194,7 +194,7 @@ Se puede crear un administrador de conexiones en el nivel de paquete o en el niv
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** en el menú **Archivo** .  
   
-###  <a name="project"></a> Agregar un administrador de conexiones en el nivel de proyecto  
+###  <a name="add-a-connection-manager-at-the-project-level"></a><a name="project"></a> Agregar un administrador de conexiones en el nivel de proyecto  
   
 1.  Abra el proyecto de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -240,17 +240,17 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
  **Tipo de administrador de conexiones**  
  Seleccione un tipo de conexión y haga clic en **Agregar**, o bien haga doble clic en un tipo de conexión para especificar las propiedades de conexión con el editor para cada tipo de conexión.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Especifique las propiedades de conexión mediante el editor para cada tipo de conexión.  
    
-##  <a name="parameter"></a> Crear un parámetro para una propiedad de administrador de conexiones  
+##  <a name="create-a-parameter-for-a-connection-manager-property"></a><a name="parameter"></a> Crear un parámetro para una propiedad de administrador de conexiones  
   
 1.  En el área de **Administradores de conexiones** , haga clic con el botón derecho en el administrador de conexiones para el que quiere crear un parámetro y haga clic en **Parametrizar**.  
   
 2.  Configure los valores de parámetro en el cuadro de diálogo **Parametrizar** . Para más información, consulte [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
 ## <a name="delete-a-connection-manager"></a>Eliminar un administrador de conexiones 
-###  <a name="DeletePackageLevel"></a> Eliminar un administrador de conexiones de un paquete  
+###  <a name="delete-a-connection-manager-from-a-package"></a><a name="DeletePackageLevel"></a> Eliminar un administrador de conexiones de un paquete  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
@@ -270,7 +270,7 @@ Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para 
   
 5.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-###  <a name="DeleteProjectLevel"></a> Eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)  
+###  <a name="delete-a-shared-connection-manager-project-level-connection-manager"></a><a name="DeleteProjectLevel"></a> Eliminar un administrador de conexiones compartido (administrador de conexiones de nivel de proyecto)  
   
 1.  Para eliminar un administrador de conexiones de nivel de proyecto, haga clic con el botón derecho en el administrador de conexiones en el nodo **Administradores de conexiones** de la ventana del **Explorador de soluciones** y haga clic en **Eliminar**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] muestra el siguiente mensaje de advertencia:  
   
@@ -299,7 +299,7 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
   
 5.  En la ventana **Propiedades** , modifique los valores de las propiedades. La ventana **Propiedades** proporciona acceso a algunas propiedades que no se pueden configurar en el editor estándar para un administrador de conexiones.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
@@ -345,6 +345,6 @@ Todos los administradores de conexión se pueden configurar en la ventana **Prop
   
 -   Artículo técnico [Extraer y cargar datos de SharePoint de SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826), en msdn.microsoft.com.  
   
--   El artículo técnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696) (Aparece el mensaje de error "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" al usar el administrador de conexiones de Oracle en SSIS), en support.microsoft.com.  
+-   El artículo técnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(Aparece el mensaje de error "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" al usar el administrador de conexiones de Oracle en SSIS), en support.microsoft.com.  
   
   

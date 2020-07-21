@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Requery method [ADO]
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c3626f91018714fa4d67304c92ce464d82fb5c8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 29b2d0cba996e3f41a12df93babe8d9b86a8fbeb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67917223"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756513"
 ---
 # <a name="requery-method"></a>Requery (método)
-Actualiza los datos en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto volviendo a ejecutar la consulta en el que se basa el objeto.  
+Actualiza los datos de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) volviendo a ejecutar la consulta en la que se basa el objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,21 +35,21 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>Parámetros  
  *Opciones*  
- Opcional. Máscara de bits que contiene [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) y [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valores que afectan a esta operación.  
+ Opcional. Máscara de máscara que contiene valores de [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) y [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) que afectan a esta operación.  
   
 > [!NOTE]
->  Si *opciones* está establecido en **adAsyncExecute**, esta operación se ejecutará de forma asincrónica y un [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) evento se emitirá cuando concluye. El **ExecuteOpenEnum** valores de **adExecuteNoRecords** o **adExecuteStream** no debe usarse con **Requery**.  
+>  Si *Options* se establece en **adAsyncExecute**, esta operación se ejecutará de forma asincrónica y se emitirá un evento [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) cuando finalice. Los valores **ExecuteOpenEnum** de **adExecuteNoRecords** o **adExecuteStream** no se deben usar con **Requery**.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **Requery** método para actualizar todo el contenido de un **Recordset** objeto desde el origen de datos al volver a emitir el comando original y recuperar los datos de una segunda vez. Llamar a este método equivale a llamar a la [cerrar](../../../ado/reference/ado-api/close-method-ado.md) y [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos en sucesión. Si está modificando el registro actual o agregando un nuevo registro, se produce un error.  
+ Use el método **Requery** para actualizar todo el contenido de un objeto de **conjunto de registros** desde el origen de datos, para lo que debe volver a emitir el comando original y recuperar los datos por segunda vez. Llamar a este método es equivalente a llamar a los métodos [Close](../../../ado/reference/ado-api/close-method-ado.md) y [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) en sucesión. Si está editando el registro actual o agregando un nuevo registro, se produce un error.  
   
- Mientras el **Recordset** objeto está abierto, las propiedades que definen la naturaleza del cursor ([CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md), [LockType](../../../ado/reference/ado-api/locktype-property-ado.md), [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) y así sucesivamente) son de solo lectura. Por lo tanto, el **Requery** método sólo puede actualizar el cursor actual. Para cambiar cualquiera de las propiedades del cursor y ver los resultados, debe usar el [cerrar](../../../ado/reference/ado-api/close-method-ado.md) método para que las propiedades vuelvan a ser de lectura/escritura. A continuación, puede cambiar la configuración de propiedades y llamar a la [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para volver a abrir el cursor.  
+ Mientras el objeto de **conjunto de registros** está abierto, las propiedades que definen la naturaleza del cursor ([CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md), [LockType](../../../ado/reference/ado-api/locktype-property-ado.md), [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md), etc.) son de solo lectura. Por lo tanto, el método **Requery** solo puede actualizar el cursor actual. Para cambiar cualquiera de las propiedades del cursor y ver los resultados, debe utilizar el método [Close](../../../ado/reference/ado-api/close-method-ado.md) para que las propiedades se vuelvan a leer y escribir. Después, puede cambiar la configuración de las propiedades y llamar al método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) para volver a abrir el cursor.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Execute, Requery y Clear métodos ejemplo (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [Execute, Requery y Clear métodos ejemplo (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [Execute, Requery y Clear métodos ejemplo (VC ++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de los métodos Execute, Requery y Clear (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
+ [Ejemplo de métodos Execute, Requery y Clear (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
+ [Ejemplo de los métodos Execute, Requery y Clear (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
  [Propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)

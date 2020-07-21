@@ -1,10 +1,9 @@
 ---
-title: Guardar consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Guardar consultas
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +12,14 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a5f3370f0dfa6fcd6a258a74f061cde800a2507
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d25aeb06239ac1f9a0087516771d13e797330adb
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266882"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75255096"
 ---
 # <a name="save-queries-visual-database-tools"></a>Guardar consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,10 +37,10 @@ Guarde su consulta si desea trabajar con ella más adelante. Observe que, al eje
 3.  La consulta se guardará en la carpeta Consulta del proyecto en el Explorador de soluciones.  
   
 ## <a name="see-also"></a>Consulte también  
-[Crear consultas (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[Ejecutar consultas (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[Descartar los cambios realizados en consultas (Visual Database Tools)](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[Tipos de consultas (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
-[Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[Crear consultas](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[Ejecutar consultas](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[Descartar cambios realizados en consultas](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[Temas de procedimientos de diseño de consultas y vistas](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[Tipos de consultas](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+[Realizar operaciones básicas con consultas](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

@@ -1,25 +1,26 @@
 ---
-title: 'Procedimientos: Navegar entre scripts | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Navegación entre scripts
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.editor.howto.navigate
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b5ff9e02b15c70d08151384bb46332e8b4ea550a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 910011609e928efe9180a3aa4f041aa063adbab4
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035157"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "75241378"
 ---
-# <a name="how-to-navigate-between-scripts"></a>Procedimientos: Navegación entre scripts
+# <a name="how-to-navigate-between-scripts"></a>Cómo: Navegar entre scripts
+
 El Editor de Transact\-SQL para el desarrollo sin conexión proporciona dos herramientas de navegación útiles que resultan familiares a los usuarios de Visual Studio: Ir a la definición y Buscar todas las referencias. Por ejemplo, puede hacer clic con el botón secundario en el nombre de una tabla y usar “Buscar todas las referencias” para enumerar todas las referencias a la tabla en el proyecto. Puede hacer doble clic en un resultado de la búsqueda para ir a ese archivo de código determinado. En este archivo, puede volver a hacer clic con el botón secundario en el nombre de tabla y elegir “Ir a la definición” para volver a la definición de la tabla.  
   
 > [!WARNING]  

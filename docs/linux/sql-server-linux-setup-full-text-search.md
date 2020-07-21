@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874766"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895282"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalación de Búsqueda de texto completo de SQL Server en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Los pasos siguientes sirven para instalar la [Búsqueda de texto completo de SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) en Linux. La búsqueda de texto completo permite ejecutar consultas de texto completo en datos basados en caracteres en las tablas de SQL Server. Para ver los problemas conocidos de esta versión, consulte las [Notas de la versión](sql-server-linux-release-notes.md).
 
@@ -30,7 +30,7 @@ Instale la búsqueda de texto completo de SQL Server para su plataforma:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">Instalación en RHEL</a>
+## <a name=""></a><a name="RHEL">Instalación en RHEL</a>
 
 Use los comandos siguientes para instalar **mssql-server-fts** en Red Hat Enterprise Linux. 
 
@@ -47,7 +47,7 @@ sudo yum update mssql-server-fts
 
 Si necesita una instalación sin conexión, busque la descarga del paquete Búsqueda de texto completo en las [Notas de la versión](sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="ubuntu">Instalación en Ubuntu</a>
+## <a name=""></a><a name="ubuntu">Instalación en Ubuntu</a>
 
 Use los comandos siguientes para instalar **mssql-server-fts** en Ubuntu. 
 
@@ -65,7 +65,7 @@ sudo apt-get install -y mssql-server-fts
 
 Si necesita una instalación sin conexión, busque la descarga del paquete Búsqueda de texto completo en las [Notas de la versión](sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](sql-server-linux-setup.md#offline).
 
-## <a name="SLES">Instalación en SLES</a>
+## <a name=""></a><a name="SLES">Instalación en SLES</a>
 
 Use los comandos siguientes para instalar **mssql-server-fts** en SUSE Linux Enterprise Server. 
 
@@ -88,7 +88,7 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 
 | Idioma | Id. de idioma |
 |---|---|
-| Neutro | 0 |
+| Neutra | 0 |
 | Árabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
@@ -100,13 +100,13 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 | Chinese (Macao SAR) | 5124 |
 | Chinese (Singapore) | 4100 |
 | Croata | 1050 |
-| Czech | 1029 |
-| Danish | 1030 |
+| Checo | 1029 |
+| Danés | 1030 |
 | Neerlandés | 1043 |
 | Inglés | 3082 |
 | Francés | 1036 |
-| German | 1031 |
-| Greek | 1032 |
+| Alemán | 1031 |
+| Griego | 1032 |
 | Gujarati | 1095 |
 | Hebreo | 1037 |
 | Hindi | 1081 |
@@ -123,11 +123,11 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 | Maratí | 1102 |
 | Polaco | 1045 |
 | Portugués | 2070 |
-| Punjabí | 1094 |
+| Punjabi | 1094 |
 | Rumano | 1048 |
 | Ruso | 1049 |
-| Serbian (Cyrillic) | 3098 |
-| Serbian (Latin) | 2074 |
+| Serbio (cirílico) | 3098 |
+| Serbio (latino) | 2074 |
 | Chino simplificado | 2052 |
 | Eslovaco | 1051 |
 | Esloveno | 1060 |
@@ -142,7 +142,7 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 | Urdu | 1056 |
 | Vietnamita | 1066 |
 
-## <a id="filters"></a> Filtros
+## <a name="filters"></a><a id="filters"></a> Filtros
 
 La búsqueda de texto completo también funciona con texto almacenado en archivos binarios. Sin embargo, en este caso se necesita instalar un filtro para procesar el archivo. Para obtener más información sobre los filtros, vea [Configurar y administrar filtros para búsquedas](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
